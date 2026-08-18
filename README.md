@@ -15,11 +15,17 @@ sanctions-lobbying reference document.
 ## Layout
 
 ```
-docs/index.html         the brief (GitHub Pages source once a remote exists)
-docs/images/             evidence photos referenced by the brief
-data/roymarket.db        local Telegram-post export (gitignored, regenerate
-                          with scripts/export_from_wb_watch.py)
-scripts/                 tag-balance checker, DB export script
-HANDOFF.md               full context for a new session — read this first
-CLAUDE.md                working rules
+docs/index.html          the brief (GitHub Pages source once a remote exists)
+docs/images/              evidence photos referenced by the brief
+data/roymarket.db         local Telegram-post DB (gitignored — own data, see below)
+tg/                        own Telethon client/scraper/storage, independent of wb_watch
+config/channels.txt        this investigation's own channel watchlist
+.env.example                copy to .env, fill in TG_API_ID/TG_API_HASH/TG_SESSION
+scripts/tg_login.py         one-time interactive Telegram auth
+scripts/tg_scan.py          scrape config/channels.txt into data/roymarket.db (live network job — see CLAUDE.md)
+scripts/mine_leads.py       entity/product/person extraction over data/roymarket.db (local, safe to rerun anytime)
+scripts/check_tag_balance.py   run after every docs/index.html edit
+scripts/export_from_wb_watch.py   historical bootstrap only, not the ongoing method
+HANDOFF.md                full context for a new session — read this first
+CLAUDE.md                 working rules
 ```

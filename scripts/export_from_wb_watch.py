@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-"""Regenerate data/roymarket.db from wb_watch's data/wb_watch.db.
+"""HISTORICAL BOOTSTRAP ONLY — this is how data/roymarket.db was seeded at
+migration time (2026-08-18), pulling the ~98,700 posts wb_watch's tg-scan
+had already collected across the channels this investigation uses.
 
-Data collection (Telegram scraping via wb-watch tg-scan) still happens in the
-wb_watch repo — see HANDOFF.md for why. Run this after any new tg-scan pull
-that touches one of the channels below, then commit nothing (the .db itself
-is gitignored — it's a local working copy, not source of truth; the source
-of truth is wb_watch's own data/wb_watch.db).
+Going forward, data collection uses THIS repo's own scraper — see
+scripts/tg_scan.py / tg/client.py / tg/scraper.py, with its own Telegram
+session (config in .env, not shared with wb_watch). Don't reach for this
+script for routine updates; run scripts/tg_scan.py instead. Keep this
+script around only in case wb_watch's older archive ever needs re-pulling
+for some reason (e.g. a channel history wb_watch scanned before this repo
+existed and this repo's own scraper hasn't caught up on yet).
 """
 import sqlite3
 import sys

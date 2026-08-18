@@ -21,9 +21,16 @@ primary sources, tag confidence levels, don't fold in unconfirmed leads).
 This was previously `wb_watch/research/roymarket-brief.html`, an "annex" to
 a separate Wildberries product-tracking project. It outgrew that framing —
 ~1,200 lines of narrative, 50+ resolved corporate entities, its own image
-evidence and source table — so it moved to this standalone repo. See
-`CLAUDE.md` for why data collection (Telegram scraping) still happens in
-`wb_watch` rather than being duplicated here.
+evidence and source table — so it moved to this standalone repo.
+
+**Data collection is now fully independent of `wb_watch` too** (a same-day
+correction to the original migration design — see `CLAUDE.md`'s "This repo
+has its own Telegram scraping pipeline" section for the full story). This
+repo has its own Telethon client/scraper/session (`tg/`), own
+`config/channels.txt`, and its own purpose-built lead-mining pass
+(`scripts/mine_leads.py`) that has nothing to do with wb_watch's WB/Ozon-
+link matching. `scripts/export_from_wb_watch.py` only did the one-time
+historical bootstrap at migration time and isn't the ongoing method.
 
 ## Current state
 
@@ -38,15 +45,27 @@ evidence and source table — so it moved to this standalone repo. See
   URL**, which will be stale and produce false "new finding" claims.
 - **`docs/images/`** — evidence photos (satellite views, production-floor
   frame grabs, screenshots) referenced by the brief.
-- **`data/roymarket.db`** — local SQLite copy of the ~98,700 Telegram posts
-  across the 11 channels this investigation actually uses (gitignored,
-  regenerate with `scripts/export_from_wb_watch.py` — source of truth is
-  `wb_watch`'s own DB).
+- **`data/roymarket.db`** — this repo's own SQLite DB (gitignored — it's a
+  local working copy, not committed history), currently holding the ~98,700
+  Telegram posts across the 11 channels this investigation uses. Seeded at
+  migration time from wb_watch's archive, now grown/refreshed via this
+  repo's own scraper (`scripts/tg_scan.py`) going forward.
+- **`tg/`** — this repo's own Telethon client/scraper/storage layer
+  (`client.py`, `scraper.py`, `db.py`) — independent auth session from
+  wb_watch, no WB/Ozon-item-matching logic (irrelevant here).
+- **`config/channels.txt`** — this repo's own watchlist.
+- **`scripts/tg_login.py`** — one-time interactive Telegram auth; prints a
+  session string to paste into `.env`.
+- **`scripts/tg_scan.py`** — the scraper entry point. **Live network job —
+  hand the exact command to the user, don't run it directly/in the
+  background**, same discipline as wb_watch always required for its
+  `tg-scan`.
 - **`scripts/check_tag_balance.py`** — run after every `docs/index.html`
   edit, before publishing. The file is large hand-edited HTML; a missing
   closing tag from a string-replace edit won't error, it'll just silently
   break rendering somewhere downstream.
-- **`scripts/export_from_wb_watch.py`** — regenerates `data/roymarket.db`.
+- **`scripts/export_from_wb_watch.py`** — historical bootstrap only, not
+  the ongoing collection method (see above).
 - **`scripts/mine_leads.py`** — this investigation's own entity/product/
   person extraction pass over `data/roymarket.db` (corporate-prefix regex,
   «quoted names», ИНН/ОГРН, role+name), UAV-relevance-scored and cross-
@@ -113,18 +132,21 @@ Highlights as of migration:
   quota.
 - TSG's bot-linked webshop catalog — JS-rendered SPA, not yet successfully
   extracted.
-- A pending `tg-scan --full --days 1500 --only projectArchangel`-style
-  extension may still be relevant if any other channel's history looks
-  truncated by the 730-day default lookback window (see "technique notes"
-  below) — check each channel's earliest `tg_posts.date` against when you'd
-  actually expect it to start.
+- A pending `python3 scripts/tg_scan.py --full --days 1500 --only
+  projectArchangel`-style extension may still be relevant if any other
+  channel's history looks truncated by the 730-day default lookback window
+  (see "technique notes" below) — check each channel's earliest
+  `tg_posts.date` against when you'd actually expect it to start. Needs a
+  working `.env` (`scripts/tg_login.py` run once) — this repo's own
+  session, not wb_watch's.
 - The investigator.org.ua YouTube video (flagged, never watched) — still
   outstanding if the «Архангел» adjacent-network thread gets revisited.
 
 ## Technique notes worth knowing before you hit the same wall
 
-- **`tg-scan --full` caps history at `--days` back (default 730 = 2
-  years), not the channel's actual creation date.** A scan that stops at a
+- **`scripts/tg_scan.py --full` caps history at `--days` back (default 730
+  = 2 years), not the channel's actual creation date** — inherited
+  deliberately from wb_watch's identical gotcha. A scan that stops at a
   suspiciously round "N years ago" date is hitting this default, not the
   channel's real start — rerun with a larger `--days` and `--only <handle>`
   to extend just that channel.
@@ -147,9 +169,9 @@ Highlights as of migration:
   bypass Cloudflare Turnstile challenges (informnapalm.org is behind one) —
   those need the user's own browser session, saved as `.mhtml` if you need
   the content badly enough to ask for it.
-- **Telethon**: `wb_watch/wb_watch/tg/client.py`'s `make_client()` returns a
-  `TelegramClient` synchronously — don't `await` the constructor itself,
-  use `async with client:`. Useful beyond message fetching: bot metadata via
+- **Telethon**: `tg/client.py`'s `make_client()` returns a `TelegramClient`
+  synchronously — don't `await` the constructor itself, use `async with
+  client:`. Useful beyond message fetching: bot metadata via
   `client(GetFullUserRequest(bot))` can surface a real URL hidden behind a
   bot's menu button that a plain landing-page fetch won't show.
 

@@ -6,25 +6,40 @@ out of the `wb_watch` project on 2026-08-18 once it outgrew "annex to a WB
 tracker" scope. Read `HANDOFF.md` first in any new session — it has full
 context, current state, and pending work that this file doesn't repeat.
 
-## Data collection stays in wb_watch — this repo does analysis + publication
+## This repo has its own Telegram scraping pipeline — separate from wb_watch
 
-Telegram scraping (`wb-watch tg-scan`) requires an authenticated Telegram
-session that lives in the `wb_watch` repo (`~/Downloads/wb_watch`), and that
-repo's `config/channels.txt` already has every channel this investigation
-uses. Don't set up a second scraping pipeline here. Instead:
+**Correction (2026-08-18, same day as migration):** the original design had
+data collection staying in `wb_watch` and this repo only exporting/
+analyzing. The user explicitly overrode that — this investigation needs its
+own scraping, independent of `wb_watch`'s WB-tracker-oriented one, both
+because the targets are different (corporate entities/UAV terminology, not
+WB/Ozon links) and because it shouldn't depend on another repo's auth
+session or channel list going forward.
 
-1. New channels/full-history pulls happen in `wb_watch` (add to its
-   `config/channels.txt`, hand the user the `tg-scan` command per *its*
-   CLAUDE.md rules — full crawls are never run directly by Claude there
-   either).
-2. After a scan lands in `wb_watch/data/wb_watch.db`, run
-   `scripts/export_from_wb_watch.py` here to pull the relevant channels'
-   posts into this repo's own `data/roymarket.db` (gitignored — it's a local
-   working copy regenerated on demand, not committed history).
-3. Analyze/query `data/roymarket.db` directly here.
+**How it actually works now:**
 
-If a channel is genuinely new to this investigation, add its ID to
-`CHANNEL_IDS` in `scripts/export_from_wb_watch.py` too.
+- `tg/client.py`, `tg/scraper.py`, `tg/db.py` — this repo's own Telethon
+  client, scraper, and storage layer, structurally modeled on wb_watch's
+  working patterns (same resolve/iterate/forward-resolution approach — no
+  reason to reinvent something that already works) but with its own
+  session/config and WITHOUT wb_watch's WB/Ozon-item-matching logic, which
+  is irrelevant here. Posts are stored raw; entity/product/person
+  extraction happens separately in `scripts/mine_leads.py` over the stored
+  text — scraping and mining are deliberately decoupled so mining patterns
+  can be iterated on without re-scraping.
+- `config/channels.txt` — this repo's own watchlist (currently the 11
+  channels already known to matter; add new ones as research finds them).
+- `.env` (from `.env.example`) — own `TG_API_ID`/`TG_API_HASH` (register a
+  fresh app at https://my.telegram.org, doesn't need to match wb_watch's)
+  and `TG_SESSION` (one-time `python3 scripts/tg_login.py`, interactive).
+- `scripts/tg_scan.py` — the actual scraper entry point. **This is a live
+  network job against a third-party service** — per the crawling-jobs
+  policy below, hand the user the exact command to run themselves, don't
+  execute it directly or in the background.
+- `scripts/export_from_wb_watch.py` — **historical bootstrap only**. This
+  is how `data/roymarket.db` got its initial ~98,700 posts at migration
+  time, pulled from wb_watch's already-scraped archive. Not the ongoing
+  collection method — don't reach for it for routine updates.
 
 ## Lead mining is purpose-built here, not inherited from wb_watch
 
@@ -56,8 +71,10 @@ Inline reconnaissance (single post lookups, one-off WebFetch/curl checks,
 EGRUL/БФО document reads) is fine to run directly. Anything that does real
 work at scale against a live third-party service must be handed to the user
 as an exact command to run themselves, never run in the background — this
-applies to `tg-scan` in `wb_watch` (see above) and to EGRUL/БФО pulls, which
-are user's own manual downloads due to daily rate limits.
+applies to `scripts/tg_scan.py` here (see above) and to EGRUL/БФО pulls,
+which are the user's own manual downloads due to daily rate limits.
+`scripts/mine_leads.py` is NOT covered by this — it's local processing over
+already-scraped data, no live network call, fine to run directly/repeatedly.
 
 ## Quotes: never paraphrase or invent
 
