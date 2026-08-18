@@ -26,6 +26,30 @@ uses. Don't set up a second scraping pipeline here. Instead:
 If a channel is genuinely new to this investigation, add its ID to
 `CHANNEL_IDS` in `scripts/export_from_wb_watch.py` too.
 
+## Lead mining is purpose-built here, not inherited from wb_watch
+
+`scripts/mine_leads.py` is this investigation's own extraction pass — it
+does NOT reuse wb_watch's tg-scan matching logic, which looks for
+wildberries.ru/ozon.ru links and has nothing to do with corporate-entity
+mapping. It instead mines already-collected post text for: corporate
+entities (legal-form prefix regex — АО/ООО/НПЦ/НПО/КБ/etc, quoted or bare),
+«guillemet-quoted» product/brand names, ИНН/ОГРН sequences, and named
+individuals with a role title (Генеральный директор/Учредитель/etc + name).
+It scores posts by UAV/military-industry keyword density to down-rank noise
+from broad general-news channels (mil_hub alone is 60k+ posts of mixed
+content), and cross-checks every candidate against `docs/index.html` so
+already-documented entities/people don't get reported as new.
+
+This is **local text processing over already-scraped data, not a live
+network job** — safe to run directly/repeatedly regardless of scale, unlike
+an actual Telegram scrape (see the crawling-jobs section below). Run it with
+`python3 scripts/mine_leads.py --out report.md` after any DB refresh, or
+without `--out` to print to stdout. Treat its output as a triage list, not
+a source — every candidate still needs the same primary-source verification
+(EGRUL, БФО, a real post read) before it goes anywhere near the brief. Adjust
+`UAV_TERMS`/`LEGAL_PREFIXES`/`ROLE_TITLES` at the top of the script as new
+terminology patterns turn up.
+
 ## Same crawling-jobs discipline as wb_watch
 
 Inline reconnaissance (single post lookups, one-off WebFetch/curl checks,

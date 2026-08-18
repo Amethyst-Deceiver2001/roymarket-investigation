@@ -47,6 +47,18 @@ evidence and source table — so it moved to this standalone repo. See
   closing tag from a string-replace edit won't error, it'll just silently
   break rendering somewhere downstream.
 - **`scripts/export_from_wb_watch.py`** — regenerates `data/roymarket.db`.
+- **`scripts/mine_leads.py`** — this investigation's own entity/product/
+  person extraction pass over `data/roymarket.db` (corporate-prefix regex,
+  «quoted names», ИНН/ОГРН, role+name), UAV-relevance-scored and cross-
+  checked against `docs/index.html` so it only surfaces genuinely new
+  candidates. Purpose-built — does not reuse wb_watch's WB/Ozon-link
+  matcher. See `CLAUDE.md` for the full design rationale. First run (2026-
+  08-18) already surfaced real candidates worth checking: named ЦБСТ
+  personnel not yet in the brief (Нина Яныкина, Дмитрий Рубинштейн — msg
+  refs in the tool's own output), and corporate leads like АО «ГЛОНАСС»,
+  АО «Обуховский завод», АО «Фазотрон-ВМЗ», НПЦ «Крылья Сахалина». Treat
+  all of it as a triage list — every candidate still needs EGRUL/БФО/
+  primary-source verification before going in the brief.
 
 ## Structure of the brief itself
 
