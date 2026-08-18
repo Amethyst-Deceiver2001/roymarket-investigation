@@ -68,6 +68,19 @@ a source — every candidate still needs the same primary-source verification
 `UAV_TERMS`/`LEGAL_PREFIXES`/`ROLE_TITLES` at the top of the script as new
 terminology patterns turn up.
 
+The extraction patterns themselves (entity/product/ИНН/ОГРН/role+name regex)
+live in `scripts/id_patterns.py`, shared between `mine_leads.py`'s DB scan
+and `scripts/extract_ids.py` — a general-purpose CLI over arbitrary text.
+**Use `extract_ids.py` whenever discovery work involves reading text that
+might contain an entity's own ИНН/ОГРН/legal name — not just Telegram
+posts.** Corporate "О компании"/"Контакты" pages routinely state this
+directly, and so do EGRUL extracts, БФО filing notes and founding-charter
+text. Pipe fetched/pasted text through it (`... | python3
+scripts/extract_ids.py`) instead of eyeballing it for these patterns by
+hand. Related: `scripts/check_egrul_flags.py` flags known EGRUL access-
+restriction/disavowal markers (ОгрДосСв, ПризнНедДанУчр, etc.) the same
+way, over the same kind of pasted extract text.
+
 ## Same crawling-jobs discipline as wb_watch
 
 Inline reconnaissance (single post lookups, one-off WebFetch/curl checks,
