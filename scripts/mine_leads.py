@@ -121,6 +121,7 @@ def main() -> None:
     products = defaultdict(lambda: {"display": None, "kind": "product", "hits": [], "score": 0})
     people = defaultdict(lambda: {"display": None, "kind": "person", "hits": [], "score": 0})
     inns = defaultdict(lambda: {"display": None, "kind": "inn", "hits": [], "score": 0})
+    ogrns = defaultdict(lambda: {"display": None, "kind": "ogrn", "hits": [], "score": 0})
 
     def record(bucket, key, display, channel_id, msg_id, date, weight):
         rec = bucket[key]
@@ -136,19 +137,26 @@ def main() -> None:
         score = uav_score(text)
         weight = 1 + score  # posts with more UAV-context terms count for more
 
+        # A post that names both an entity and its own ИНН/ОГРН is a much
+        # stronger candidate than a bare name mention — the identifier is
+        # already sitting right next to the name, no separate EGRUL lookup
+        # needed to pin it down. Boost entity weight in that case.
+        has_id = bool(RE_INN.search(text) or RE_OGRN.search(text))
+        entity_weight = weight * 2 if has_id else weight
+
         for m in RE_ENTITY_QUOTED.finditer(text):
             prefix, name = m.group(1), m.group(2).strip()
             key = norm(name)
             if len(key) < 2:
                 continue
-            record(entities, key, f"{prefix} «{name}»", row["channel_id"], row["msg_id"], row["date"], weight)
+            record(entities, key, f"{prefix} «{name}»", row["channel_id"], row["msg_id"], row["date"], entity_weight)
 
         for m in RE_ENTITY_BARE.finditer(text):
             prefix, name = m.group(1), m.group(2).strip()
             key = norm(name)
             if len(key) < 2:
                 continue
-            record(entities, key, f"{prefix} {name}", row["channel_id"], row["msg_id"], row["date"], weight)
+            record(entities, key, f"{prefix} {name}", row["channel_id"], row["msg_id"], row["date"], entity_weight)
 
         if score >= 1:  # only mine bare product names from UAV-relevant posts — too noisy otherwise
             for m in RE_QUOTED_NAME.finditer(text):
@@ -168,6 +176,10 @@ def main() -> None:
         for m in RE_INN.finditer(text):
             key = m.group(1)
             record(inns, key, key, row["channel_id"], row["msg_id"], row["date"], weight)
+
+        for m in RE_OGRN.finditer(text):
+            key = m.group(1)
+            record(ogrns, key, key, row["channel_id"], row["msg_id"], row["date"], weight)
 
     brief_text = load_brief_text()
     brief_words = set(brief_text.split())
@@ -222,6 +234,7 @@ def main() -> None:
     out.append(fmt_section("Product/brand names (« »)", rank(products, args.min_score), args.top))
     out.append(fmt_section("Named individuals (role + name)", rank(people, args.min_score), args.top))
     out.append(fmt_section("ИНН sightings", rank(inns, 1), args.top))
+    out.append(fmt_section("ОГРН sightings", rank(ogrns, 1), args.top))
 
     report = "\n".join(out)
     if args.out:
