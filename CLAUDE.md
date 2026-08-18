@@ -29,9 +29,12 @@ session or channel list going forward.
   can be iterated on without re-scraping.
 - `config/channels.txt` — this repo's own watchlist (currently the 11
   channels already known to matter; add new ones as research finds them).
-- `.env` (from `.env.example`) — own `TG_API_ID`/`TG_API_HASH` (register a
-  fresh app at https://my.telegram.org, doesn't need to match wb_watch's)
-  and `TG_SESSION` (one-time `python3 scripts/tg_login.py`, interactive).
+- `.env` — own `TG_API_ID`/`TG_API_HASH` (register a fresh app at
+  https://my.telegram.org, doesn't need to match wb_watch's) and
+  `TG_SESSION` (one-time `python3 scripts/tg_login.py`, interactive).
+  No `.env.example` template — removed as redundant once `.env` itself
+  held real credentials; if `.env` is ever missing, the two vars above
+  plus `TG_SESSION` are the whole schema.
 - `scripts/tg_scan.py` — the actual scraper entry point. **This is a live
   network job against a third-party service** — per the crawling-jobs
   policy below, hand the user the exact command to run themselves, don't
