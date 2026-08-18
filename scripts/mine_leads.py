@@ -170,6 +170,7 @@ def main() -> None:
             record(inns, key, key, row["channel_id"], row["msg_id"], row["date"], weight)
 
     brief_text = load_brief_text()
+    brief_words = set(brief_text.split())
 
     def rank(bucket, min_score):
         items = []
@@ -179,7 +180,17 @@ def main() -> None:
             relevance = rec["score"] * (1 + 0.5 * (n_channels - 1))
             if relevance < min_score:
                 continue
-            in_brief = bool(key) and key in brief_text
+            if bucket is people:
+                # People match on word-set, not substring: the brief writes
+                # full names with a patronymic ("Нина Олеговна Яныкина") but
+                # RE_ROLE_NAME only ever captures bare first+last, so a
+                # substring check never lines up. Order-independent whole-
+                # word membership catches this (and last-first orderings)
+                # at the cost of being slightly looser than exact-phrase.
+                words = [w for w in key.split() if len(w) > 1]
+                in_brief = bool(words) and all(w in brief_words for w in words)
+            else:
+                in_brief = bool(key) and key in brief_text
             items.append((relevance, freq, n_channels, in_brief, key, rec))
         items.sort(key=lambda x: -x[0])
         return items
