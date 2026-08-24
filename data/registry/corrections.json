@@ -2051,6 +2051,13 @@
     },
     "ao-ekolibri": {
       "set": {
+        "images": [
+          {
+            "path": "images/ekolibri_logo_rk2035.png",
+            "caption": "Company logo, as self-listed in rk.2035.university's curated БАС-industry showcase",
+            "source_id": "s1168"
+          }
+        ],
         "financials": [
           {
             "profit": 89000.0,
@@ -3969,6 +3976,13 @@
     },
     "npp-radar-mms": {
       "set": {
+        "images": [
+          {
+            "path": "images/radar-mms_logo_rk2035.jpg",
+            "caption": "Company logo, as self-listed in rk.2035.university's curated БАС-industry showcase",
+            "source_id": "s1168"
+          }
+        ],
         "trademarks": [
           {
             "expires": "20320602",
@@ -6273,6 +6287,13 @@
     },
     "ooo-kleverkopter": {
       "set": {
+        "images": [
+          {
+            "path": "images/kleverkopter_logo_rk2035.jpg",
+            "caption": "Company logo, as self-listed in rk.2035.university's curated БАС-industry showcase",
+            "source_id": "s1168"
+          }
+        ],
         "trademarks": [
           {
             "expires": "20320524",
@@ -14137,6 +14158,7 @@
     },
     "barakhtin-artem-vladimirovich": {
       "set": {
+        "photo": "images/barakhtin-artem-vladimirovich_portrait_leaderid.jpg",
         "roles": [
           {
             "entity_slug": "ooo-arkodim",
@@ -14182,7 +14204,8 @@
       },
       "why": [
         "2026-08-24: merged in 3 co-inventor patent roles (RU208483U1, RU209336U1, RU2782021C1) that had been scaffolded onto a duplicate record (barakhtin-artem-vladimirovich-2, now _merged_into this one) -- both matched the same leader-id.ru user_id 498457.",
-        "2026-08-24: leader-id.ru self-reports employer \"АРКОДИМ\", position \"Генеральный директор\", Казань -- corroborates the brief prose's own claim (\"50/50 owned by GD Барахтин Артём Владимирович и Соловьев Константин Юрьевич\") that Барахтин is a GD-level principal, not just a co-inventor. NOT promoted to entity-level `director` on ooo-arkodim: that field is currently sourced to a direct EGRUL pull (s0475) naming Соловьев as director -- see open_questions added to ooo-arkodim this same pass for the apparent conflict, which likely reflects Barakhtin/Solovyov each heading a different entity within the affiliated «Аркодим»/«Аркодим-ПРО»/«Аркодим+»/«Аркодим-М»/«Аркодим-2» Kazan group the brief prose already names, not a real discrepancy on one entity."
+        "2026-08-24: leader-id.ru self-reports employer \"АРКОДИМ\", position \"Генеральный директор\", Казань -- corroborates the brief prose's own claim (\"50/50 owned by GD Барахтин Артём Владимирович и Соловьев Константин Юрьевич\") that Барахтин is a GD-level principal, not just a co-inventor. NOT promoted to entity-level `director` on ooo-arkodim: that field is currently sourced to a direct EGRUL pull (s0475) naming Соловьев as director -- see open_questions added to ooo-arkodim this same pass for the apparent conflict, which likely reflects Barakhtin/Solovyov each heading a different entity within the affiliated «Аркодим»/«Аркодим-ПРО»/«Аркодим+»/«Аркодим-М»/«Аркодим-2» Kazan group the brief prose already names, not a real discrepancy on one entity.",
+        "2026-08-24: photo pulled directly from this leader-id.ru account (user_id 498457, GET /api/v4/users/498457, field `photo` -> v3.leader-id.ru/files/user_photo/498457/498457_200.jpg), the same account already ID-matched above via user_id. Professional headshot, consistent with the PII policy's photo-sourcing bound (subject's own professional/public presence, not private imagery)."
       ]
     },
     "korolev-dmitriy-mikhaylovich": {
@@ -14205,9 +14228,12 @@
       ]
     },
     "solovev-konstantin-yurevich": {
-      "set": {},
+      "set": {
+        "photo": "images/solovev-konstantin-yurevich_portrait_leaderid.jpg"
+      },
       "why": [
-        "2026-08-24: leader-id.ru self-reports employer \"ООО \\\"АРКОДИМ-Про\\\"\", position \"Генеральный директор\", Казань -- consistent with (and corroborating) the brief prose's claim he co-owns the «Аркодим» Kazan group 50/50 with Барахтин, but names a DIFFERENT entity (\"АРКОДИМ-Про\") than ooo-arkodim's own EGRUL-sourced director field (which also names him -- s0475). Left unresolved whether \"АРКОДИМ-Про\" is: the same legal entity referred to informally, a genuinely separate affiliated entity (the brief prose already names four affiliated Kazan «АРКОДИМ» entities: АРКОДИМ-ПРО, АРКОДИМ+, АРКОДИМ-М, АРКОДИМ-2), or a stale leader-id.ru self-entry. See ooo-arkodim open_questions for the flagged conflict."
+        "2026-08-24: leader-id.ru self-reports employer \"ООО \\\"АРКОДИМ-Про\\\"\", position \"Генеральный директор\", Казань -- consistent with (and corroborating) the brief prose's claim he co-owns the «Аркодим» Kazan group 50/50 with Барахтин, but names a DIFFERENT entity (\"АРКОДИМ-Про\") than ooo-arkodim's own EGRUL-sourced director field (which also names him -- s0475). Left unresolved whether \"АРКОДИМ-Про\" is: the same legal entity referred to informally, a genuinely separate affiliated entity (the brief prose already names four affiliated Kazan «АРКОДИМ» entities: АРКОДИМ-ПРО, АРКОДИМ+, АРКОДИМ-М, АРКОДИМ-2), or a stale leader-id.ru self-entry. See ooo-arkodim open_questions for the flagged conflict.",
+        "2026-08-24: photo pulled directly from this leader-id.ru account (user_id 1763366, GET /api/v4/users/1763366, field `photo` -> v3.leader-id.ru/files/user_photo/1763366/1763366_200.jpg), the same account already ID-matched above."
       ]
     },
     "tyutina-olga-anatolevna": {
@@ -14297,9 +14323,12 @@
       ]
     },
     "lysenko-andrey-olegovich-2": {
-      "set": {},
+      "set": {
+        "photo": "images/lysenko-andrey-olegovich-2_portrait_leaderid.jpg"
+      },
       "why": [
-        "2026-08-24: leader-id.ru self-reports employer \"Визионеро\", position \"Руководитель проекта\" (Project Lead), Пермь -- corroborates employment at ooo-vizionero (matches entity name exactly), a project-leadership role beyond bare co-inventor credit."
+        "2026-08-24: leader-id.ru self-reports employer \"Визионеро\", position \"Руководитель проекта\" (Project Lead), Пермь -- corroborates employment at ooo-vizionero (matches entity name exactly), a project-leadership role beyond bare co-inventor credit.",
+        "2026-08-24: photo pulled directly from this leader-id.ru account (user_id 658623, GET /api/v4/users/658623, field `photo` -> leader-id.storage.yandexcloud.net/upload/658623/...jpg), the same account already ID-matched above."
       ]
     }
   },
