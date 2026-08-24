@@ -11,33 +11,26 @@ of the brief itself" sections below describe the single-file brief as it was
 before that started — treat them as describing the frozen snapshot at
 `docs/_archive/index-2026-08-21.html`, not as the target state.
 
-The plan lives at `~/.claude/plans/spicy-beaming-kite.md`. Phases:
+**The plan lives at [`notes/rebuild_plan.md`](notes/rebuild_plan.md) — read
+that file for current phase status, not the summary that used to be here.**
+(Moved 2026-08-24 from `~/.claude/plans/spicy-beaming-kite.md`, a per-session
+location outside the repo, specifically so it can't go stale relative to a
+Claude session and can't disappear between sessions. That old external path
+now just holds a redirect stub — if a future session surfaces it via
+plan-mode tooling, treat `notes/rebuild_plan.md` as authoritative and update
+it, not the stub.) The phase-by-phase summary that used to be duplicated here
+was removed because it drifted out of sync with the real plan more than once;
+don't recreate it — link, don't copy.
 
-0. **Foundations — done.** `STYLE_GUIDE.md` written; `CLAUDE.md` PII policy
-   rewritten; all 24 `docs/images/` files put under version control (they were
-   untracked, so a Pages deploy would have rendered broken); `MANIFEST.md`
-   refreshed from 212 to 305 indexed files; brief snapshotted to
-   `docs/_archive/`.
-1. **Registry — scaffolded, not yet verified.**
-   `data/registry/` now holds 130 entities (114 with an ИНН, all tiered),
-   147 people, 19 quotes, 304 sources and 44 open questions, extracted from
-   the frozen snapshot by `scripts/extract_registry.py` and validated by
-   `scripts/check_registry.py` (currently 0 errors, 0 warnings).
-   **Every record is still `_verified: false`.** What remains: check records
-   against primary documents in `data/sources/`; fill `financials`,
-   `cbst_tie` and `director` from the preserved `_raw` prose; attribute the
-   46 ИНН in `_scaffold_leads.json` that no company could be tied to; split
-   the two catch-all table rows into per-entity open questions; and add
-   Latin-script names. Corrections go in `corrections.json`, never into a
-   generated record.
-2. **Screening** — OpenSanctions, OCCRP Aleph, ФНС, press, trademarks/patents,
-   and foreign-component research (war-sanctions.gur.gov.ua plus others). Four
-   API keys in `.env` are currently unused by any script.
-3. **Imagery** — a new `scripts/tg_media.py`; the scraper stores post text only,
-   so there is no media in `data/roymarket.db`.
-4. **Build** — `scripts/build_site.py` → recap + dossier + ~40 company profiles,
-   EN and RU.
-5. **Prose** — written to `STYLE_GUIDE.md`, EN and RU independently.
+As of 2026-08-24 (end of that day's session): Phases 0–2 are essentially
+closed (registry built, 147/148 entities verified, screening swept
+full-roster), the entire `data/registry/` tree is now committed to git (it
+was untracked before — see the plan's "Things to fix" §2), and Phase 3
+(imagery) has a first small batch of real assets. **One real blocker remains
+before any publish**: a regression left `ooo-trimiks-bulat-3mx`'s
+`wb_overlap` at `none_found` when it should be `confirmed_reseller` — the
+registry and the live brief currently contradict each other on the project's
+headline claim. See the plan's "Things to fix" §1.
 
 Two known defects in the old file, both fixed by the rebuild rather than in
 place: the manufacturers table is malformed (an unclosed `<td colspan="3">`
