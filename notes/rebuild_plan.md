@@ -1368,19 +1368,60 @@ first-person «мы» permitted, and the engine is dry registry lexis («ОКВ�
   intact (`opensanctions_screened_at`, `aleph_screened_at`, `wb_screened_at`,
   `securing_measures_checked_at`) — the carry-forward regression test.
 
+## MVP publication (2026-08-25) — a deliberate, scoped-down interim step
+
+Before the multi-session program below resumes, a bounded MVP shipped: the
+Тримикс `wb_overlap` regression is **fixed** (`b06d9f1` — registry and brief
+now agree; `docs/index.html`'s prose and summary-table row both state the
+overlap is reseller-mediated, not a direct manufacturer storefront), and 5
+new manufacturer profiles/supplements were hand-written into `docs/index.html`
+from already-collected registry evidence that had never been published
+(`d84c60c`): full new profiles for АО «НИИ «Вектор»» and АО «НПЦ «ЭЛВИС»»
+(both Rostec/Роселектроника subsidiaries, sanctioned, with on-topic
+counter-drone/anti-UAV patents), plus supplements to the existing Ushkuynik
+(GUR teardown contradicting Chadaev's own "domestic components" claim),
+КРАВТ (a newly-confirmed sanction, and clarifying that the parent's own IP
+is water-treatment equipment while the UAV power-supply patent sits at the
+subsidiary КРАВТ УДМУРТИЯ) and Экспломет (a 20-patent EOD/metal-detector
+portfolio) sections. `check_tag_balance.py` and `check_registry.py` both
+clean throughout.
+
+**Decision behind this scoping** (full reasoning in the session that
+produced it, condensed here): building the full Jinja generator
+(`scripts/build_site.py`, Phase 4 below) was explicitly deferred rather than
+started now, because standing it up before a narrow `check_registry.py`
+overwrite-guard exists would risk automating a repeat of the exact Тримикс
+bug — a generator that faithfully re-renders whatever a future bulk sweep
+writes has the same blind spot that caused this regression, just automated.
+The MVP instead used the lowest-risk lever available: hand-editing the
+existing file with data that was already sitting, fully sourced, unused in
+the registry (72% of manufacturers have at least one substantive evidence
+block). This is explicitly an interim step, not a replacement for Phase 4 —
+**Option B (the real generator) is still the eventual target**, gated on the
+overwrite-guard, and should cover `wb_overlap`, `sanctions`, `trademarks`,
+`patents`, `okved_mismatch` and `financials` at minimum once built.
+
+**Not done by this MVP, still open**: the rest of Phase 3.5's hardening
+backlog, Phase 1b people verification, and the other ~62 evidenced-but-
+unwritten manufacturers beyond the 5 chosen here (a reasonable next batch,
+once this round is reviewed).
+
 ## Sequencing note
 
 This is a multi-session program, not one pass. **Revised order as of
-2026-08-24 (later in this session)**, given that Phases 0–2 are essentially
-closed and Phase 3.5's commit step is now done:
+2026-08-25**, given that the MVP above has now landed on top of the
+2026-08-24 state (Phases 0–2 essentially closed, Phase 3.5's commit step
+done, the Тримикс regression fixed):
 
-1. **Fix the Тримикс `wb_overlap` regression first — still the single
-   outstanding blocker.** Everything else in Phase 3.5 (item 8, commit) is
-   done; this one (item 1) is not. Small, and it protects the project's
-   headline claim from self-contradiction.
-2. **The rest of Phase 3.5** — the overwrite guard, type-instability
-   normalization, `_merged_into`, the reverse source index, unifying the three
-   open-question stores, generalizing `check_tag_balance.py`.
+1. **Review and, once satisfied, publish the MVP** — per
+   `roymarket_no_per_fold_publish`, Artifact republishing is a user-called
+   cutoff, not something to do unprompted even when a plan names it as a
+   step. Confirm with the user before updating the live Artifact.
+2. **The rest of Phase 3.5** — the overwrite guard (now the literal
+   prerequisite for starting Phase 4's generator, not just good practice),
+   type-instability normalization, `_merged_into`, the reverse source index,
+   unifying the three open-question stores, generalizing
+   `check_tag_balance.py`.
 3. **Phase 1b** — the people-verification gate (user-chosen). This is the
    largest remaining research pass and the one that most constrains what Phase 4
    may publish. (Barashkov's PII enrichment this session is one data point
@@ -1391,19 +1432,21 @@ closed and Phase 3.5's commit step is now done:
 5. **Phase 3** (imagery) and **Phase 4** (generator) — Phase 3 has started
    (a first small batch of leader-id/rk.2035.university assets, see above) and
    enriches profiles but does not block the build, so Phase 4 can start once
-   3.5 and 1b are done.
+   3.5's overwrite-guard and Phase 1b are done. Phase 4 supersedes this MVP's
+   hand-written content once it exists — the manual additions become a
+   content draft the generator later formalizes, not wasted work.
 6. **Phase 5** (prose) last, as designed.
 
-Checkpoints to stop for review: **after the Тримикс fix** (the registry and
-brief agree again), **after the rest of Phase 3.5** (data is generator-safe),
+Checkpoints to stop for review: **after MVP publish** (or the decision not
+to, yet), **after the rest of Phase 3.5** (data is generator-safe),
 **after Phase 1b** (the publish gate for person data), and at **first build**
 in Phase 4.
 
 **Artifact cutoff.** Per `roymarket_no_per_fold_publish` the Artifact only
 republishes at an explicit user-called cutoff. A great deal has landed since the
 last one — 58 sanctioned entities, 28 sanctioned people, a new OFAC-designated
-entity, the full trademark sweep, the wb_overlap results, the full registry now
-committed to git, and a first batch of real imagery. Worth calling a cutoff once
-the Тримикс regression is fixed and the brief and registry agree again. **Do not
-publish before that fix** — the live brief and the registry currently contradict
-each other on the project's headline claim.
+entity, the full trademark sweep, the wb_overlap fix, the full registry now
+committed to git, a first batch of real imagery, and now 5 new manufacturer
+profiles/supplements. **The registry/brief contradiction that previously
+blocked any publish is now resolved** — the remaining gate is just the
+user's explicit go-ahead, not an outstanding correctness issue.
