@@ -2771,6 +2771,10 @@
           {
             "question": "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found. Sole founder (Потапов И.В.), only ₽10,000 charter capital -- classic thin-shell registration profile despite the self-declared \"Беспилотные авиационные технологии\" name and confirmed ЦБСТ participation. Consistent with this registry's already-flagged НПП БАТ dormant-shell tension.",
             "source_id": null
+          },
+          {
+            "question": "rospatent full-roster patent sweep (2026-08-24): 5 of 6 are unrelated (wood/ball manufacturing, furniture, an empty patentee) -- clear noise. The 6th, RU233454U1 \"Многопульный патрон\" (multi-bullet cartridge), has a truncated patentee string (\"Акционерное общество «Научно-производственное предприятие»\", missing the rest of this entity's own name) -- genuinely ambiguous, not resolved either way, flagged as an open question rather than promoted or dismissed.",
+            "source_id": "s1170"
           }
         ],
         "wb_overlap": "none_found"
@@ -2780,7 +2784,8 @@
         "full EGRUL extract pulled directly 23.08.2026 (ul-1237700769701-20260823122725.pdf). АО (joint-stock) — shareholders/registrar block did not extract cleanly (same layout quirk as other АО records in this batch), founders left unresolved. Full legal name spells out \"Беспилотные авиационные технологии\" (Unmanned Aviation Technologies) directly in the registered name — an explicit, self-declared UAV-industry entity, unlike several others in this batch whose names are opaque.",
         "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
         "cbst_tie UPGRADED 23.08.2026 with a direct primary citation found by querying this project's own scraped @ANO_CBST Telegram archive (data/roymarket.db, channel_id 2159491523) — not a data/sources/ document, so no s#### id; channel/post-id/date is the citation, per this project's existing convention for TG-sourced claims.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9718238013). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9718238013). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, 5 of 6 are unrelated (wood/ball manufacturing, furniture, an empty patentee) -- clear noise. The 6th, RU233454U1 \"Многопульный патрон\" (multi-bullet cartridge), has a truncated patentee string (\"Акционерное общество «Научно-производственное предприятие»\", missing the rest of this entity's own name) -- genuinely ambiguous, not resolved either way, flagged as an open question rather than promoted or dismissed."
       ]
     },
     "ao-pk-azimut": {
@@ -3042,7 +3047,8 @@
       "why": [
         "Full signed ЕГРЮЛ extract read end-to-end (s0009, 7704097425_20082026.pdf, pulled 20.08.2026). Full legal name is АО «Радиоэлектронные и оптические спецсистемы» — 'radio-electronic and optical special systems'. Registered 25.06.1992 with the Moscow Registration Chamber, i.e. a genuine Soviet-successor entity, not a war-era startup. Confirms address, GD Максимов Ю.А. (personal ИНН 770402705540, in post since 01.12.2017), ₽1m charter capital; as an АО, shareholders are not published — only registrar АО «НРК Р.О.С.Т.». CLASSIC ОКВЭД MISMATCH: the declared PRIMARY activity is 26.40 «Производство бытовой электроники» — CONSUMER electronics — while its own secondary codes include 26.30.16, communications equipment and software «обеспечивающее выполнение установленных действий при проведении оперативно-розыскных мероприятий» (SORM lawful-interception capability), and 26.70.6 «Производство оптических прицелов и приборов определения координат целей» — optical WEAPON SIGHTS and target-coordinate devices, added 05.02.2021. Licences corroborate: Minpromtorg aviation-technology development/production/testing/repair (2022) and an FSB cryptographic-means licence (2025). Name recorded only from 05.02.2021 — renamed at that point; the predecessor name is not in this extract.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7704097425). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person."
+        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 20+ candidates with usable patentee data are unrelated (watch brand \"Bell & Ross\", agricultural-equipment firm \"Агроцентр\", assorted individuals named Ross from NZ/US/AU/CA/UA) -- common-word/surname collision, not this entity."
       ]
     },
     "ao-seym-agro": {
@@ -3957,7 +3963,8 @@
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7733393203). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
         "2026-08-24: user asked whether searchplatform.rospatent.gov.ru's /trademarks section had been checked. It turned out not to be a trademark endpoint at all (the guessed /search/tm and /search/trademarks routes both hit the site's ПрЭВМ/computer-program index, dataset 'prevm' -- a genuinely new, previously unscreened IP registry). A handful of registry product-name queries against it surfaced this real, on-topic hit.",
-        "2026-08-24 web-search follow-up on the entity's own ПрЭВМ software co-inventor (Черепков А.А.): rusprofile/companium/spark-interfax listings agree he holds 93.3% of ООО НПО «Кайсант» (Черепкова Н.С., already in this registry as director, holds the remainder or the GD role only -- not fully disambiguated). source_id left null -- rusprofile blocked the archive attempt (403) and companium/synapsenet either rate-limited or didn't render the fact server-side; this is AGGREGATOR-sourced only, not yet confirmed against a primary EGRUL extract. Treat as a strong lead, not a confirmed ownership stake."
+        "2026-08-24 web-search follow-up on the entity's own ПрЭВМ software co-inventor (Черепков А.А.): rusprofile/companium/spark-interfax listings agree he holds 93.3% of ООО НПО «Кайсант» (Черепкова Н.С., already in this registry as director, holds the remainder or the GD role only -- not fully disambiguated). source_id left null -- rusprofile blocked the archive attempt (403) and companium/synapsenet either rate-limited or didn't render the fact server-side; this is AGGREGATOR-sourced only, not yet confirmed against a primary EGRUL extract. Treat as a strong lead, not a confirmed ownership stake.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 10 candidates -- all belong to an unrelated individual (Черепкова Нина Сергеевна) or an unrelated company (ООО «Аргус-М»), both disinfection/lighting equipment, not this entity's own name."
       ]
     },
     "npp-radar-mms": {
@@ -4607,7 +4614,8 @@
             "source_id": null
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "open_questions": []
       },
       "verified_against": null,
       "why": [
@@ -4615,7 +4623,8 @@
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 5 fiscal year(s) with revenue/profit data.",
         "Full signed ЕГРЮЛ extract read end-to-end (ul-5157746074272-20260823120422.pdf, pulled 23.08.2026). CONFIRMED PARENT-SUBSIDIARY LINK: 100% owned by ООО «ОРИЕНТ СИСТЕМС» (ИНН 7743939185) — already a registry entity, read the same day (see below). Same individual, Лебедев Сергей Александрович (личный ИНН 561408287508), is GD of BOTH companies — controls the subsidiary directly as its manager while co-owning the parent. ОКВЭД 72.19 R&D primary; 26.51 measuring/testing instruments among secondaries.",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): confirmed via orsyst.ru footer (exact legal-name match) as the brand entity behind 4GNSS, already catalogued under ooo-orient-sistems.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7743128980). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7743128980). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 20 candidates -- same unrelated-noise set as ooo-orient-sistems (appears to be a shared/duplicate query result), no connection to this entity's own name."
       ]
     },
     "ooo-aeromaks": {
@@ -4787,7 +4796,8 @@
         "Full signed ЕГРЮЛ extract read end-to-end (s0218, ul-1177746007900-20260820195721.pdf, 28pp, pulled 20.08.2026). Confirms ОГРН, registration 09.01.2017, address, GD Бессонов С.Н. (personal ИНН 644914040799, in post 11.09.2025), and charter capital of ₽3,177,522,000 — ₽3.18bn, orders of magnitude above the typical roster entity and a fact the brief did not carry. Ownership is unredacted: 100% held by ООО «ГК «Аэромакс»» (ИНН 7710974353, ОГРН 1147748024269), which is itself already a registry entity — so this is a confirmed internal parent-subsidiary edge, recorded in both founders[] and parents[]. LICENCE FINDING: holds Rosreestr licence Л036-00116-77/00129950 (16.04.2018) for geodetic and cartographic work whose scope explicitly includes creating STATE topographic maps and geodetic networks and 'установление, изменение и уточнение прохождения Государственной границы Российской Федерации' — establishing and altering the Russian state border, plus boundaries between federal subjects. For a sanctions dossier that is a materially different fact from 'aerial survey company': it is state-border cartography under federal licence.",
         "Full product catalog extracted from https://www.aeromax-group.ru/produkciya/ (23.08.2026, site sweep).",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0780).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7725347482). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7725347482). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 7 candidates -- all unrelated medical/dental patents (a different, unrelated \"Путь Сергей Анатольевич\")."
       ]
     },
     "ooo-aeroplatformy": {
@@ -5416,14 +5426,21 @@
         ],
         "ogrn": "1247700414631",
         "registered": "05.06.2024",
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "open_questions": [
+          {
+            "question": "rospatent full-roster patent sweep (2026-08-24) found 5 \"Авирон\"-patentee candidates: 2 belong to an unrelated 1990s-2000s US biotech (\"Aviron\", gp350/EBV vaccine patents, clearly a different country/company) and 3 belong to a Russian \"ООО «Авирон»\" holding 2021 COVID-19 antiviral-treatment patents -- pharmaceutical subject matter with no plausible connection to this entity's presumed UAV/military-industry basis for registry inclusion. Not promoted: no ИНН to confirm whether this is the same legal entity under a coincidentally identical name, or a genuinely unrelated Russian pharma company -- flagged rather than either promoted or dismissed.",
+            "source_id": "s1170"
+          }
+        ]
       },
       "verified_against": null,
       "why": [
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1247700414631-20260823120635.pdf, pulled 23.08.2026). Same Сокол district address zone as ООО «ОРИЕНТ СИСТЕМС» and ООО «4ГНСС» (see above) — not confirmed as the identical building, just the same district, so not claimed as a shared-suite finding the way the Нарышкинская cluster was; worth a closer address comparison if this entity gets deeper research. Majority owner and GD Лапин Игорь Николаевич (63.2%); minority co-founder ООО «Производство обучающих систем и технологий» (36.8%) — an 'educational-systems production' entity as co-owner of a company presumably UAV-related is a name mismatch worth noting, not yet explained.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7743451768). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7743451768). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- NOT promoted despite an exact name match, due to wildly implausible subject matter (COVID-19 antivirals) with no ИНН available to confirm same-entity identity; logged as an open question instead."
       ]
     },
     "ooo-boevye-tekhnologii": {
@@ -5565,7 +5582,8 @@
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1207700030493-20260823132102.pdf). Sole founder = sole director. Registered address field did not extract cleanly from this PDF (same layout quirk noted on other files this session) — left null rather than guessed.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0816).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9724002908). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9724002908). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, both candidates belong to unrelated foreign companies (an Italian and a German firm both abbreviated \"ДСГ\") -- common-abbreviation collision."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -5710,7 +5728,47 @@
             "source_id": null
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "patents": [
+          {
+            "reg_number": "SU1807922A3",
+            "type": "unknown",
+            "title": "Способ сварки плавящимся электродом",
+            "published": "1993.04.07",
+            "holder": "БАРАШКОВ АЛЕКСАНДР СЕРГЕЕВИЧ",
+            "inventors": [
+              "БАРАШКОВ АЛЕКСАНДР СЕРГЕЕВИЧ"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2792246C1",
+            "type": "invention",
+            "title": "Способ и система плазменной сварки плавящимся электродом",
+            "published": "2023.03.21",
+            "holder": "Барашков Александр Сергеевич (RU)",
+            "inventors": [
+              "Барашков Александр Сергеевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "SU1834764A3",
+            "type": "unknown",
+            "title": "Головка для сварки плавящимся электродом",
+            "published": "1993.08.15",
+            "holder": "БАРАШКОВ АЛЕКСАНДР СЕРГЕЕВИЧ",
+            "inventors": [
+              "БАРАШКОВ АЛЕКСАНДР СЕРГЕЕВИЧ",
+              "ТКАЧУК КОНСТАНТИН КОНСТАНТИНОВИЧ",
+              "РЫМАРЬ ВАЛЕРИЙ ГРИГОРЬЕВИЧ"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          }
+        ]
       },
       "verified_against": null,
       "why": [
@@ -5718,7 +5776,8 @@
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1232300051235-20260823120320.pdf, pulled 23.08.2026). GD and majority (50.5%) owner Барашков Александр Сергеевич — already documented elsewhere in this project's material as GD/founder of the same name; confirms personal ИНН 252201766438. Co-founder Александров Алексей Витальевич 49.5%.",
         "Full product catalog extracted from gagaring.ru (23.08.2026, site sweep).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (2312321660). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (2312321660). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: promoted 3 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: all patents are personal filings by Барашков Александр Сергеевич, this entity's confirmed director/50.5%-owner -- welding technology."
       ]
     },
     "ooo-garant-klub": {
@@ -5856,12 +5915,27 @@
             "source_id": null
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "patents": [
+          {
+            "reg_number": "RU191888U1",
+            "type": "utility_model",
+            "title": "КАРТОЧКА БИОМЕТРИЧЕСКОЙ ИДЕНТИФИКАЦИИ ПО УЧЕТУ РАБОЧЕГО ВРЕМЕНИ",
+            "published": "2019.08.26",
+            "holder": "Общество с ограниченной ответственностью \"Гаскар Интеграция\" (RU)",
+            "inventors": [
+              "Саитов Ренат Фаритович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          }
+        ]
       },
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-5147746074196-20260823133346.pdf, 25pp — the longest, oldest-registered entity in this batch). See ooo-gaskar-tekhnologii's why-note for the cross-link: same director/founder as that entity.",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): confirmed match, gaskar.group -- IT/UAV integrator arm of the «Аметист Групп» holding, part of the same \"Гаскар\" brand family as the already-verified ooo-gaskar (\"Гаскар Групп\"). Catalog also lists cameras/electronics, ground robotic platforms, remote controls, comms systems, software, electric motors/batteries beyond the named product lines above.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7733894200). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7733894200). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: promoted 1 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -5999,7 +6073,8 @@
             "source_id": "s0814"
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "open_questions": []
       },
       "verified_against": null,
       "why": [
@@ -6009,7 +6084,8 @@
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1237700265846-20260823120511.pdf, pulled 23.08.2026). Sole owner and GD Козлов Дмитрий Сергеевич — one-person operation, ₽10,000 charter capital. ОКВЭД 46.43 wholesale household electronics as primary — worth checking against this entity's actual product/trademark line (already has 3 trademarks and multi-year financials in this registry from earlier sweeps) for a possible declared/actual mismatch.",
         "Fixed a real scaffold mis-attribution: «Яким» (ЦБСТ's own air-threat-monitoring system, actually made by КБ «Синергия» — see ooo-konstruktorskoe-byuro-sinergiya) had been auto-parsed into THIS entity's products[] list from prose that was actually quoting Гоудрон COMMENTING ON «Яким», not making it. Removed «Яким» from products, added the underlying quote as this entity's own cbst_tie instead — the quote is real evidence, just of a different fact (a ЦБСТ working relationship) than what it had been filed under.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0814).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9721203814). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9721203814). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 15 candidates -- mix of empty-patentee filings and clearly unrelated holders (Samsung Electronics, a university LETI, a Ural metals plant, an animal hospice)."
       ]
     },
     "ooo-intek-bespilotnye-sistemy": {
@@ -6083,7 +6159,8 @@
         "full EGRUL extract pulled directly 23.08.2026 (ul-1247000000488-20260823132000.pdf, 11pp). 25th listed secondary ОКВЭД is explicitly 25.40 \"Производство оружия и боеприпасов\" (arms and ammunition manufacture) — a direct, unambiguous defence-industrial code, alongside 30.30 (aircraft manufacture) — among the most explicit ОКВЭД profiles found in this registry so far, not requiring the \"declared vs actual\" inference this project usually has to make.",
         "Two 50/50 legal-entity founders, both new to this registry: ООО «Информационные технологии» (ИНН 5501278775, Omsk-numbered) and ООО «ИНТЭК» (ИНН 7017236286, Tomsk — likely the namesake parent given the shared \"ИНТЭК\" brand) — worth a follow-up pull on both.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0758).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7000013316). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7000013316). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, the sole candidate belongs to an unrelated company, \"ООО «ИННОДРАЙВ»\"."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -6482,13 +6559,285 @@
             "source_id": "s0794"
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "patents": [
+          {
+            "reg_number": "RU2473378C2",
+            "type": "invention",
+            "title": "СИСТЕМА НЕЙТРАЛИЗАЦИИ ЛЕГКИХ И ТЯЖЕЛЫХ ТОКСИЧНЫХ ГАЗОВ В УСЛОВИЯХ ОПАСНОСТИ РАЗГЕРМЕТИЗАЦИИ ИСПОЛЬЗУЕМОЙ ДЛЯ ИХ ХРАНЕНИЯ ТАРЫ",
+            "published": "2013.01.27",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Баранов Андрей Анатольевич (RU)",
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2358794C2",
+            "type": "invention",
+            "title": "ХЛОРАТОР",
+            "published": "2009.06.20",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие КРАВТ\" (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU128608U1",
+            "type": "utility_model",
+            "title": "МОДУЛЬНАЯ СТАНЦИЯ ВОДОПОДГОТОВКИ С КОМПЛЕКСНЫМ ОБЕЗЖЕЛЕЗИВАНИЕМ И РЕЗЕРВУАРОМ ЧИСТОЙ ВОДЫ",
+            "published": "2013.05.27",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)",
+              "Баранов Андрей Анатольевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU90854U1",
+            "type": "utility_model",
+            "title": "СИСТЕМА НЕЙТРАЛИЗАЦИИ АВАРИЙНЫХ ВЫБРОСОВ ГАЗООБРАЗНОГО ХЛОРА С РАСТВОРНЫМ БЛОКОМ",
+            "published": "2010.01.20",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Баранов Андрей Анатольевич (RU)",
+              "Петросян Ованес Петрович (RU)",
+              "Кожевников Александр Борисович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2414433C1",
+            "type": "invention",
+            "title": "УЛОВИТЕЛЬ-ИСПАРИТЕЛЬ ЖИДКОГО ХЛОРА ДЛЯ ХЛОРАТОРА",
+            "published": "2011.03.20",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Петросян Ованес Петрович (RU)",
+              "Кожевников Александр Борисович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2856195C1",
+            "type": "invention",
+            "title": "Автоматическая система запирания с электрическим приводом",
+            "published": "2026.02.11",
+            "holder": "Общество с ограниченной ответственностью \"КРАВТ-ПРЕМИУМ\" (RU)",
+            "inventors": [
+              "Петросян Ованес Петрович (RU)",
+              "Кузьмин Дмитрий Геннадьевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU66944S",
+            "type": "industrial_design",
+            "title": "ХЛОРАТОР (два варианта)",
+            "published": "2008.06.16",
+            "holder": "Общество с ограниченной ответственностью Фирменное специализированное предприятие КРАВТ (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU84989U1",
+            "type": "utility_model",
+            "title": "АНАЛИЗАТОР СПИСКА ПАРАМЕТРОВ ВОДЫ ПЛАВАТЕЛЬНОГО БАССЕЙНА",
+            "published": "2009.07.20",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Петросян Ованес Петрович (RU)",
+              "Кожевников Александр Борисович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU87161U1",
+            "type": "utility_model",
+            "title": "СТАНЦИЯ ХЛОРИРОВАНИЯ ВОДЫ",
+            "published": "2009.09.27",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Петросян Ованес Петрович (RU)",
+              "Кожевников Александр Борисович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU101703U1",
+            "type": "utility_model",
+            "title": "СИСТЕМА НЕЙТРАЛИЗАЦИИ АВАРИЙНЫХ ВЫБРОСОВ ЖИДКИХ ВСПЛЫВАЮЩИХ РЕАГЕНТОВ ПРИ ИХ ТРАНСПОРТИРОВАНИИ ПО ДНУ ВОДОЕМА ИЛИ ХРАНЕНИИ НА ДНЕ ВОДОЕМА (СИСТЕМА КРАВТ)",
+            "published": "2011.01.27",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)",
+              "Баранов Андрей Анатольевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU73084S",
+            "type": "industrial_design",
+            "title": "ЭЖЕКТОР (три варианта)",
+            "published": "2009.11.16",
+            "holder": "Общество с ограниченной ответственностью Фирменное специализированное предприятие КРАВТ (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU90784U1",
+            "type": "utility_model",
+            "title": "ИСПАРИТЕЛЬ ЖИДКОГО ХЛОРА",
+            "published": "2010.01.20",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Баранов Андрей Анатольевич (RU)",
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU108445U1",
+            "type": "utility_model",
+            "title": "СИСТЕМА ВОДОПОДГОТОВКИ ПЛАВАТЕЛЬНОГО БАССЕЙНА",
+            "published": "2011.09.20",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)",
+              "Баранов Андрей Анатольевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU139649U1",
+            "type": "utility_model",
+            "title": "АВТОМАТИЧЕСКАЯ МОДУЛЬНАЯ СТАНЦИЯ ВОДОПОДГОТОВКИ С СИСТЕМОЙ РОЗЛИВА И ПРОДАЖИ ПИТЬЕВОЙ ВОДЫ УЛУЧШЕННОГО ВКУСОВОГО КАЧЕСТВА",
+            "published": "2014.04.20",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Парамонов Сергей Сергеевич (RU)",
+              "Петросян Анастасия Ованесовна (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU65078S",
+            "type": "industrial_design",
+            "title": "ХЛОРАТОР",
+            "published": "2007.12.16",
+            "holder": "Общество с ограниченной ответственностью Фирменное специализированное предприятие КРАВТ (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU77075S",
+            "type": "industrial_design",
+            "title": "ЭЖЕКТОР",
+            "published": "2010.12.16",
+            "holder": "Общество с ограниченной ответственностью Фирменное специализированное предприятие КРАВТ (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)",
+              "Баранов Андрей Анатольевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU74117S",
+            "type": "industrial_design",
+            "title": "АНАЛИЗАТОР СОДЕРЖАНИЯ ХЛОРА В ВОДЕ АСХВ",
+            "published": "2010.02.16",
+            "holder": "Общество с ограниченной ответственностью Фирменное специализированное предприятие КРАВТ (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2367506C2",
+            "type": "invention",
+            "title": "СПОСОБ НЕЙТРАЛИЗАЦИИ АВАРИЙНЫХ ВЫБРОСОВ ГАЗООБРАЗНОГО ХЛОРА",
+            "published": "2009.09.20",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2367508C1",
+            "type": "invention",
+            "title": "ЭЖЕКТОР ДЛЯ ДОЗИРОВАНИЯ ГАЗООБРАЗНОГО ХЛОРА В ВОДУ",
+            "published": "2009.09.20",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU97365U1",
+            "type": "utility_model",
+            "title": "АВТОМАТИЧЕСКАЯ ХЛОРАТОРНАЯ ДЛЯ ОБЕЗЗАРАЖИВАНИЯ ВОДЫ ГАЗООБРАЗНЫМ ХЛОРОМ",
+            "published": "2010.09.10",
+            "holder": "Общество с ограниченной ответственностью \"Фирменное специализированное предприятие \"КРАВТ\" (RU)",
+            "inventors": [
+              "Кожевников Александр Борисович (RU)",
+              "Петросян Ованес Петрович (RU)",
+              "Баранов Андрей Анатольевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          }
+        ]
       },
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1197847166560-20260823122436.pdf, 12pp). Sole founder = sole director (Королев Д.М.), registered 14.08.2019. Registered address field did not extract cleanly from this PDF (known pdftotext layout quirk, seen on 2 of this batch's 13 files) — left null rather than guessed; would need a manual/OCR re-check if the address becomes load-bearing for a claim.",
         "Full product catalog extracted from https://kravt-studio.ru/ (23.08.2026, site sweep).",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0794).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7802693899). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7802693899). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: promoted 20 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: subject matter is water-treatment/chlorination equipment (this entity's actual core business), unrelated to UAVs directly -- but confirms ООО «КРАВТ» is a real, long-operating industrial equipment manufacturer, consistent with the already-established fact that it separately holds a UAV power-supply patent under its own name (RU2858174C1, currently recorded on the subsidiary ooo-kravt-udmurtiya's record) -- i.e. a real diversified company, not a shell."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -6971,7 +7320,249 @@
           "marketplace_listings": [],
           "other": []
         },
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "patents": [
+          {
+            "reg_number": "RU216907U1",
+            "type": "utility_model",
+            "title": "ДАТЧИК МЕТАЛЛОИСКАТЕЛЯ С ФОНАРЕМ ПОДСВЕТКИ ПОВЕРХНОСТИ",
+            "published": "2023.03.07",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2772406C1",
+            "type": "invention",
+            "title": "УНИВЕРСАЛЬНЫЙ СЕЛЕКТИВНЫЙ ИНДУКЦИОННЫЙ МЕТАЛЛОИСКАТЕЛЬ",
+            "published": "2022.05.19",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU236030U1",
+            "type": "utility_model",
+            "title": "КОНДЕНСАТОРНАЯ ПОДРЫВНАЯ МАШИНКА",
+            "published": "2025.07.22",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU139308S",
+            "type": "industrial_design",
+            "title": "КОНДЕНСАТОРНАЯ БАТАРЕЙНАЯ ПОДРЫВНАЯ МАШИНКА",
+            "published": "2023.11.17",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU129860S",
+            "type": "industrial_design",
+            "title": "РЕГУЛИРУЕМОЕ УГЛОВОЕ СОЕДИНЕНИЕ",
+            "published": "2022.03.16",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU133844S",
+            "type": "industrial_design",
+            "title": "БЛОК КОНТРОЛЛЕРА УПРАВЛЕНИЯ АРОЧНОГО МЕТАЛЛОИСКАТЕЛЯ",
+            "published": "2022.11.01",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU129078S",
+            "type": "industrial_design",
+            "title": "МЕТАЛЛОИСКАТЕЛЬ",
+            "published": "2021.12.23",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU133553S",
+            "type": "industrial_design",
+            "title": "ЭЛЕКТРОННЫЙ БЛОК УПРАВЛЕНИЯ МЕТАЛЛОИСКАТЕЛЯ",
+            "published": "2022.10.13",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU129375S",
+            "type": "industrial_design",
+            "title": "ЭЛЕКТРОННЫЙ БЛОК УПРАВЛЕНИЯ МЕТАЛЛОИСКАТЕЛЯ",
+            "published": "2022.01.17",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU133556S",
+            "type": "industrial_design",
+            "title": "СКЛАДНОЙ ГЕРМЕТИЧНЫЙ РУЧНОЙ МЕТАЛЛОИСКАТЕЛЬ",
+            "published": "2022.10.13",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2805004C1",
+            "type": "invention",
+            "title": "Металлоискатель с бесконтактной связью с измерительным датчиком",
+            "published": "2023.10.10",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2817510C1",
+            "type": "invention",
+            "title": "Двухканальный пропорционально-дифференциальный феррозонд",
+            "published": "2024.04.16",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU243071U1",
+            "type": "utility_model",
+            "title": "Портативный металлодетектор",
+            "published": "2026.04.24",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU137171S",
+            "type": "industrial_design",
+            "title": "СУМКА МЕТАЛЛОИСКАТЕЛЯ ТАКТИЧЕСКАЯ МНОГОФУНКЦИОНАЛЬНАЯ",
+            "published": "2023.06.14",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU137704S",
+            "type": "industrial_design",
+            "title": "ДАТЧИК МЕТАЛЛОИСКАТЕЛЯ УСИЛЕННЫЙ",
+            "published": "2023.07.25",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU133843S",
+            "type": "industrial_design",
+            "title": "ГЕРМЕТИЧНЫЙ РУЧНОЙ МЕТАЛЛОИСКАТЕЛЬ СО СКРЕБКОМ И ФОНАРЕМ",
+            "published": "2022.11.01",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU128899S",
+            "type": "industrial_design",
+            "title": "ДАТЧИК МЕТАЛЛОИСКАТЕЛЯ",
+            "published": "2021.12.17",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU138138S",
+            "type": "industrial_design",
+            "title": "ТАКТИЧЕСКИЙ СКЛАДНОЙ ГЕРМЕТИЧНЫЙ МЕТАЛЛОИСКАТЕЛЬ",
+            "published": "2023.08.22",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU136888S",
+            "type": "industrial_design",
+            "title": "НАБОР СТРАНИЦ ГРАФИЧЕСКОГО ИНТЕРФЕЙСА ПОЛЬЗОВАТЕЛЯ (изделие в целом) и СТРАНИЦА ГРАФИЧЕСКОГО ИНТЕРФЕЙСА (самостоятельная часть)",
+            "published": "2023.05.26",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU129079S",
+            "type": "industrial_design",
+            "title": "ПОИСКОВЫЙ ЭЛЕМЕНТ МЕТАЛЛОИСКАТЕЛЯ",
+            "published": "2021.12.23",
+            "holder": "Фоминых Алексей Михайлович (RU)",
+            "inventors": [
+              "Фоминых Алексей Михайлович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          }
+        ]
       },
       "verified_against": null,
       "why": [
@@ -6979,7 +7570,8 @@
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 4 fiscal year(s) with revenue/profit data.",
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1211200001650-20260823120350.pdf, pulled 23.08.2026). Sole owner and GD Фоминых Алексей Михайлович (100%, ₽250,000) — one-person operation. Йошкар-Ола, Republic of Mari El — a region with no other entities yet in this registry.",
         "Full product catalog extracted from https://альфамарин.рф/ (23.08.2026, site sweep).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (1215235283). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (1215235283). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: promoted 20 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: all patents are personal filings by Фоминых Алексей Михайлович, this entity's confirmed sole director/100% founder -- metal detectors and mine-clearance equipment, directly on-topic for a defense-technology investigation."
       ]
     },
     "ooo-orient-sistems": {
@@ -7130,7 +7722,8 @@
           "marketplace_listings": [],
           "other": []
         },
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "open_questions": []
       },
       "verified_against": null,
       "why": [
@@ -7139,7 +7732,8 @@
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 5 fiscal year(s) with revenue/profit data.",
         "Full signed ЕГРЮЛ extract read end-to-end (ul-5147746083491-20260823120436.pdf, pulled 23.08.2026). Owns ООО «4ГНСС» (ИНН 7743128980) 100% — confirmed both directions. Two 50/50 owners: Лебедев Сергей Александрович (личный ИНН 561408287508, also GD of both companies) and Шелаев Денис Владимирович (личный ИНН 672601959163). Moscow, Сокол district — same district as ООО «Авирон» (see below), worth a proximity check if addresses turn out to be genuinely close, not just same-district.",
         "Full product catalog extracted from https://orsyst.ru/ (23.08.2026, site sweep).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7743939185). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7743939185). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 20 candidates -- old Soviet-era filings with no patentee data, plus several clearly unrelated companies/institutes."
       ]
     },
     "ooo-orion": {
@@ -7330,7 +7924,8 @@
       },
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1244200002970-20260823135624.pdf). Sole founder = sole director. Kemerovo region (Kuzbass), Novokuznetsk — same region as ООО «Дрономир» in this batch, worth a light regional-cluster note.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (4217210280). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (4217210280). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all patentees are unrelated (\"Саратовское ОАО Завод Проммаш\", \"Артемовский машиностроительный завод «Проммаш»\" -- Ukrainian) -- common-word factory-name collision, not this entity."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -7369,11 +7964,152 @@
             "source_id": null
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "patents": [
+          {
+            "reg_number": "RU2263653C1",
+            "type": "invention",
+            "title": "ГРАНУЛИРОВАННЫЙ ВЗРЫВЧАТЫЙ СОСТАВ",
+            "published": "2005.11.10",
+            "holder": "Федеральное государственное унитарное предприятие \"Государственный научно-исследовательский институт \"Кристалл\" (RU)",
+            "inventors": [
+              "Колганов Е.В. (RU)",
+              "Любаков П.Н. (RU)",
+              "Тарасов В.А. (RU)",
+              "Илюхин В.С. (RU)",
+              "Уткин С.А. (RU)",
+              "Батрин Ю.Д. (RU)",
+              "Страхов А.Г. (RU)",
+              "Соснин В.А. (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2661519C2",
+            "type": "invention",
+            "title": "УСТРОЙСТВО ДЛЯ ЗАГРУЗКИ СЫПУЧЕГО МАТЕРИАЛА (ВАРИАНТЫ)",
+            "published": "2018.07.17",
+            "holder": "Общество с ограниченной ответственностью \"ПромСинтез\" (ООО \"ПромСинтез\") (RU)",
+            "inventors": [
+              "Пискайкин Сергей Петрович (RU)",
+              "Пимерзин Андрей Алексеевич (RU)",
+              "Никульшин Павел Анатольевич (RU)",
+              "Шутова Анастасия Андреевна (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU36506U1",
+            "type": "utility_model",
+            "title": "Шашка-детонатор",
+            "published": "2004.03.10",
+            "holder": "Открытое акционерное общество \"Промсинтез\"",
+            "inventors": [
+              "Бойцов В.И.",
+              "Любаков П.Н.",
+              "Гороховцев А.Г.",
+              "Ильин В.П.",
+              "Шамсутдинова Г.Х.",
+              "Авдеев В.И.",
+              "Уткин С.А.",
+              "Батрин Ю.Д.",
+              "Тарасов В.А.",
+              "Печенев Ю.Г."
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU41514U1",
+            "type": "utility_model",
+            "title": "ШАШКА-ДЕТОНАТОР",
+            "published": "2004.10.27",
+            "holder": "Открытое акционерное общество \"Промсинтез\" (RU)",
+            "inventors": [
+              "Шамсутдинова Г.Х. (RU)",
+              "Гороховцев А.Г. (RU)",
+              "Любаков П.Н. (RU)",
+              "Ильин В.П. (RU)",
+              "Батрин Ю.Д. (RU)",
+              "Уткин С.А. (RU)",
+              "Печенев Ю.Г. (RU)",
+              "Бойцов В.И. (RU)",
+              "Авдеев В.И. (RU)",
+              "Тарасов В.А. (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2277523C2",
+            "type": "invention",
+            "title": "ЭМУЛЬСИОННЫЙ ВЗРЫВЧАТЫЙ СОСТАВ И СПОСОБ ЕГО ПОЛУЧЕНИЯ",
+            "published": "2006.06.10",
+            "holder": "Федеральное государственное унитарное предприятие \"Государственный научно-исследовательский институт \"Кристалл\" (RU)",
+            "inventors": [
+              "Колганов Евгений Васильевич (RU)",
+              "Батрин Юрий Дмитриевич (RU)",
+              "Любаков Петр Николаевич (RU)",
+              "Соснин Вячеслав Александрович (RU)",
+              "Уткин Сергей Анатольевич (RU)",
+              "Илюхин Виктор Сергеевич (RU)",
+              "Тарасов Владимир Андреевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU165927U1",
+            "type": "utility_model",
+            "title": "УСТРОЙСТВО ДЛЯ ЗАГРУЗКИ СЫПУЧЕГО МАТЕРИАЛА",
+            "published": "2016.11.10",
+            "holder": "Общество с ограниченной ответственностью \"ПромСинтез\" (ООО \"ПромСинтез\") (RU)",
+            "inventors": [
+              "Пискайкин Сергей Петрович (RU)",
+              "Никульшин Павел Анатольевич (RU)",
+              "Пимерзин Андрей Алексеевич (RU)",
+              "Шутова Анастасия Андреевна (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2658850C2",
+            "type": "invention",
+            "title": "УСТАНОВКА ДЛЯ РЕГЕНЕРАЦИИ КАТАЛИЗАТОРА ГИДРООБРАБОТКИ И СПОСОБ С ЕЕ ПРИМЕНЕНИЕМ",
+            "published": "2018.06.25",
+            "holder": "Федеральное государственное бюджетное образовательное учреждение высшего профессионального образования \"Самарский государственный технический университет\" (СамГТУ) (RU)",
+            "inventors": [
+              "Пимерзин Андрей Алексеевич (RU)",
+              "Никульшин Павел Анатольевич (RU)",
+              "Пискайкин Сергей Петрович (RU)",
+              "Шутова Анастасия Андреевна (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU19320U1",
+            "type": "utility_model",
+            "title": "ШАШКА-ДЕТОНАТОР",
+            "published": "2001.08.20",
+            "holder": "Открытое акционерное общество \"Промсинтез\"",
+            "inventors": [
+              "Гороховцев А.Г.",
+              "Ильин В.П.",
+              "Бойцов В.И."
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          }
+        ]
       },
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1073435002013-20260823133829.pdf). Registered address field and full founders list did not extract cleanly from this PDF (same layout quirk noted elsewhere this session).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (3435084957). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (3435084957). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: promoted 8 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: subject matter is industrial explosives/chemicals manufacturing (detonators, blasting compositions), unrelated to UAVs directly -- included as genuine corporate IP history; explosives/munitions-adjacent business may still be worth a dedicated look given this project's scope."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -7716,12 +8452,14 @@
           "source_id": null,
           "confidence": "t-doc"
         },
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "open_questions": []
       },
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1163525102619-20260823131946.pdf). Confirms and upgrades sourcing for the already-documented СуперХроно scale-mismatch finding (₽3.38m revenue against a 810th Naval Infantry Brigade deployment per the existing brief) — sole founder=director since 2016, ОКВЭД is electronic-component manufacture, a plausible fit for a small specialist supplier rather than contradicting the existing finding.",
         "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (3525389520). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (3525389520). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, the sole candidate has no patentee data at all -- unusable."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -7938,7 +8676,23 @@
             "source_id": "s0800"
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "patents": [
+          {
+            "reg_number": "RU2830813C1",
+            "type": "invention",
+            "title": "Жидкий герметик для пневмошин транспортных средств и способ его получения",
+            "published": "2024.11.26",
+            "holder": "Общество с ограниченной ответственностью \"Титан - Северо-Запад\" (RU)",
+            "inventors": [
+              "Сутягинский Михаил Александрович (RU)",
+              "Красковский Вячеслав Александрович (RU)",
+              "Душин Александр Алексеевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          }
+        ]
       },
       "verified_against": null,
       "why": [
@@ -7948,7 +8702,8 @@
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1077847345179-20260823120701.pdf, pulled 23.08.2026). Registered 2007 — an old entity. 100% owned by ЗАО «Группа компаний «Титан»» (unredacted). ОКВЭД MISMATCH: primary declared activity is 70.22 business/management consulting, but secondary codes are genuinely industrial — 26.51 measuring/testing/navigation instruments, 27.20 electric batteries/accumulators, 27.51/27.90 electrical appliances and other electrical equipment — a manufacturing profile hidden behind a consulting-firm primary classification.",
         "Product catalog expanded from эгеон.рус (23.08.2026, site sweep) — added logger product lines beyond the previously-recorded ПЗС charging-station cases.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0800).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7838380755). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7838380755). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: promoted 1 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: subject matter (tire sealant) is unrelated to any established UAV/military-industry tie for this entity -- included for IP-profile completeness, not as UAV-relevant evidence."
       ]
     },
     "ooo-trimiks-bulat-3mx": {
@@ -8280,14 +9035,16 @@
             "source_id": "s0820"
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "open_questions": []
       },
       "why": [
         "REAL INSTITUTIONAL LINK: ЦУГАМ is 100%-owned by Фонд «Московский инновационный кластер» (ИНН 9710075695) — a Moscow City Government innovation-cluster fund, a state entity. This is a direct city-government ownership stake in a UAV-manufacture-coded entity, a stronger and more explicit state tie than most of this registry's ownership chains, which rely on inference from address/personnel overlap.",
         "full EGRUL extract pulled directly 23.08.2026 (ul-1227700378553-20260823135803.pdf).",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no standalone company site -- operates as a joint Moscow Инновационный кластер/Фонд «Сколково» drone-testing-zone program (~400 hectares, flights to 100m), covered via tadviser.ru/cnews.ru/MIK press releases rather than its own domain. UAV-relevance confirmed; not a shell, just not consumer-facing.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0820).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9731094770). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9731094770). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 20 candidates -- a scattershot mix of unrelated old filings, a jam-label company, and unrelated individuals."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -8361,12 +9118,44 @@
             "note": "Found the same way as the КАЙСАНТ hit above. Exact patentee-name match, own registered software. Low military relevance on its face (a general multimedia-presentation program) but genuine own IP -- kept for completeness.",
             "source_id": "s1054"
           }
+        ],
+        "patents": [
+          {
+            "reg_number": "RU135106S",
+            "type": "industrial_design",
+            "title": "НАБОР СТРАНИЦ ГРАФИЧЕСКОГО ИНТЕРФЕЙСА ПРИЛОЖЕНИЯ ДЛЯ УПРАВЛЕНИЯ И ИНТЕГРАЦИИ СИСТЕМ АУДИОВИЗУАЛЬНОГО ВЫВОДА",
+            "published": "2023.01.30",
+            "holder": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ВИЗИОНЕРО (RU)",
+            "inventors": [
+              "Городничин Дмитрий Александрович (RU)",
+              "Лысенко Андрей Олегович (RU)",
+              "Абдулов Александр Алексеевич (RU)",
+              "Пьянков Илья Сергеевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2783486C1",
+            "type": "invention",
+            "title": "МОБИЛЬНЫЙ МУЛЬТИМЕДИЙНЫЙ КОМПЛЕКС",
+            "published": "2022.11.14",
+            "holder": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВИЗИОНЕРО\" (RU)",
+            "inventors": [
+              "Лысенко Андрей Олегович (RU)",
+              "Городничин Дмитрий Александрович (RU)",
+              "Самильянов Антон Владиславович (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          }
         ]
       },
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1195958038902-20260823131741.pdf). Sole founder = sole director; the fresh director-appointment record is dated 21.04.2026, four months before this pull.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5902056314). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24: same ПрЭВМ-index discovery as npo-kaysant (see its correction entry for the full explanation of how this was found)."
+        "2026-08-24: same ПрЭВМ-index discovery as npo-kaysant (see its correction entry for the full explanation of how this was found).",
+        "2026-08-24: promoted 2 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -8878,13 +9667,15 @@
             "source_id": "s0815"
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "open_questions": []
       },
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1237700463032-20260823122931.pdf). АО (joint-stock) — shareholders not published in EGRUL by design, only a share registrar; the registrar block did not extract cleanly from this PDF (same layout quirk as ooo-kravt's address field), so founders/registrar left unresolved rather than guessed. Primary declared activity is software development, not manufacturing — worth a relevance recheck.",
         "Full product catalog extracted from https://areasystems.tech/ (23.08.2026, site sweep).",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0815).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9723203841). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9723203841). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all patentees are an unrelated retail company (\"Торговая площадь\") -- common-word name collision."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -8988,7 +9779,8 @@
         "REAL CROSS-LINK, not just a routine pull: ООО «Гаскар» (already documented in the brief prose at docs/index.html:412 as EU-sanctioned, address a few doors from ООО «НПО Рустехдрон» on ул. Пехорская) is 100%-owned by ООО «Сибирская навигационная компания» (ИНН 4205376019) — the SAME entity already hand-verified earlier this session (ooo-sibirskaya-navigatsionnaya-kompaniya, in the prior 14-entity manufacturer batch). And Гаскар's own director, Константинов Евгений Александрович (ИНН 263114465785), is independently confirmed as the 26.25% minority founder of that same parent company (Сибирская навигационная компания) — so this is not merely a shell-subsidiary relationship, the sanctioned company's own director is a direct personal owner of its parent. Ties two previously-separate registry records together via a verified primary-document chain.",
         "cbst_tie UPGRADED 23.08.2026 with a direct primary citation found by querying this project's own scraped @ANO_CBST Telegram archive (data/roymarket.db, channel_id 2159491523) — not a data/sources/ document, so no s#### id; channel/post-id/date is the citation, per this project's existing convention for TG-sourced claims.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0809).",
-        "2026-08-24 wb_overlap check: direct ИНН match against wb_watch.db's own sellers table (this project's sister investigation, its own separate scrape of the Wildberries marketplace) — same ИНН as 8 WB-listed item(s), 8/8 of them military-flagged by wb_watch's own classifier. Seller «ООО \"ГАСКАР\"», WB supplier_id 250148061, trademark «ГАСКАР» — FPV components (GPS/compass modules, FPV cameras, motors, power connectors)."
+        "2026-08-24 wb_overlap check: direct ИНН match against wb_watch.db's own sellers table (this project's sister investigation, its own separate scrape of the Wildberries marketplace) — same ИНН as 8 WB-listed item(s), 8/8 of them military-flagged by wb_watch's own classifier. Seller «ООО \"ГАСКАР\"», WB supplier_id 250148061, trademark «ГАСКАР» — FPV components (GPS/compass modules, FPV cameras, motors, power connectors).",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, the one candidate with a real patentee (RU191888U1) belongs to the separate, already-correctly-attributed ooo-gaskar-integratsiya, not this entity; the other 20 have no usable patentee data."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -9117,7 +9909,8 @@
       "why": [
         "REAL CROSS-LINK: sole owner/director Дзема Вадим Вадимович (ИНН 771877750402) matches the same person already named in this project's own plan document as co-inventor on ООО «НПО Рустехдрон»'s patents RU218475U1 and RU220486 — worth confirming that patent-registry name match against Роспатент's inventor field directly (not yet done), but the ИНН-level identity here is a primary-document fact, not a guess.",
         "full EGRUL extract pulled directly 23.08.2026 (ul-1187746574696-20260823132132.pdf).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7728432295). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7728432295). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 5 candidates are patents already correctly attributed to the separate, unrelated ooo-npo-rustekhdron entity (a distinct registry manufacturer) -- a search-artifact collision, not a real match for this entity."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -9272,7 +10065,8 @@
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 — see director_history and open_questions for a genuine discrepancy against the pre-existing scaffold that this pass could not resolve. Left as an open question rather than silently overwriting the brief's original attribution.",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): medium-high confidence match via nppelvo.ru. Real operating company (2025 revenue ~₽113.8M, 18 employees). Site does not explicitly claim drone/defense work -- \"transport electronics\" is the only UAV-adjacent line; treat as medium relevance pending firmer confirmation.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7810918592). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7810918592). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED. 9 candidates belong to an unrelated 1990s Soviet-era \"Акционерное общество открытого типа «ЭЛВО»\" (high-voltage disconnectors/transformer substations, predating this entity by decades) and the remaining candidates belong to an unrelated university (ОрелГТУ, temperature sensors/regulators) -- common-abbreviation collision, not this entity."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -9354,14 +10148,16 @@
           "source_id": null,
           "confidence": "t-doc"
         },
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "open_questions": []
       },
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1247700255208-20260823131811.pdf). Sole founder = sole director, registered 2024.",
         "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
         "cbst_tie UPGRADED 23.08.2026 with a direct primary citation found by querying this project's own scraped @ANO_CBST Telegram archive (data/roymarket.db, channel_id 2159491523) — not a data/sources/ document, so no s#### id; channel/post-id/date is the citation, per this project's existing convention for TG-sourced claims.",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found via search -- does not affect the already-confirmed cbst_tie (Запад-2025 exercises).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9715478320). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9715478320). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 13 candidates -- all empty-patentee old/unrelated filings (bullets, telephone sets, internet-data-provision methods) with no connection to this entity's own name."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -9538,7 +10334,8 @@
       },
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1247700607450-20260823133853.pdf). Sole founder = sole director, registered 2024. ОКВЭД is a direct, explicit UAV-manufacture code — no declared/actual gap, unlike most of this registry.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9725168367). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9725168367). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 14 candidates -- all unrelated food-science patents (an unrelated \"Гуревич Андрей Владимирович\" and a federal nutrition research institute)."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -10065,14 +10862,16 @@
             "source_id": "s0819"
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "open_questions": []
       },
       "why": [
         "REAL CROSS-LINK: sole founder/director Афанасьев Игорь Константинович (ИНН 420504290983) is the SAME person as ООО «Гаскар Интеграция»'s sole founder/director in this same batch — one individual personally controls both \"Гаскар Технологии\" and \"Гаскар Интеграция\", a third and fourth entity in the \"Гаскар\" brand family alongside the already-verified ООО «Гаскар» (100%-owned by ООО «Сибирская навигационная компания», directed by Константинов Е.А.) from an earlier batch this session. No ownership link confirmed between Афанасьев's two entities and Константинов's Гаскар/Сибирская навигационная pair — same brand, different individuals, not yet shown to be the same ownership chain.",
         "full EGRUL extract pulled directly 23.08.2026 (ul-1207700344037-20260823133402.pdf).",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no distinct website found -- likely an internal group vehicle within the \"Гаскар\" brand family rather than a customer-facing entity (this record's own founders note already establishes its director/founder, Афанасьев И.К., is distinct from the Гаскар Групп/Сибирская навигационная ownership chain -- same brand, different individual, relationship unresolved). No products attached pending further evidence.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0819).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9731070264). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9731070264). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 2 candidates (an unrelated food-industry university patent and an empty-patentee Soviet-era filing)."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -10667,7 +11466,8 @@
         "full EGRUL extract pulled directly 23.08.2026 (ul-1207800035079-20260823135654.pdf). Founders section did not resolve to a clean name/share row in this extraction pass — left unset rather than guessed.",
         "REVERTED an over-eager site-sweep attachment (23.08.2026): AURA/instechno.ru product data had been written directly onto this entity's products[] field without confirming the legal-entity match — the entity's own pre-existing okved_mismatch note already flagged this as uncertain. Moved to an open_question instead of an asserted fact.",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): second independent attempt to confirm the instechno.ru match also failed -- no ИНН/legal-name self-disclosure found on the site.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7842179810). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7842179810). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 21 candidates belong to an unrelated company, ОАО «Информационные технологии и коммуникационные системы» (ИНФОТЕКС) -- a word-order collision on \"информационные системы/технологии\" already flagged in an earlier pass; confirmed again here."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -10709,17 +11509,20 @@
         "full EGRUL extract pulled directly 23.08.2026 (ul-1245100006799-20260823141101.pdf).",
         "CONFIRMS the brief's original prose attribution exactly: sole founder/director Шаповалов Сергей Михайлович matches \"Шаповалов С.М.\" already named in the brief's compound НПП «ЭЛВО»/«Кольская верфь» row. This resolves HALF of the open discrepancy logged on npp-elvo-kolskaya-verf this session (that record's director came back as Петрова Ольга Сергеевна, not matching the brief's \"Петров В.А.\") — Кольская верфь's half of the original compound attribution checks out against a primary document, so the mismatch is specific to the ЭЛВО side, not a wholesale scaffold error affecting both companies.",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found (ЕГРЮЛ lists none). Confirmed OKVED is recreational/sport-vessel shipbuilding (30.12) -- consistent with this registry's existing БЭК hydrofoil USV note (joint project with НПП «ЭЛВО»), not a mismatch.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5190102381). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5190102381). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 4 candidates -- old, empty-patentee construction-panel filings with no connection to this entity's own name."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026 (ul-1245100006799-20260823141101.pdf)"
     },
     "ooo-kb-sinergiya": {
       "set": {
         "_verified": true,
-        "_merged_into": "ooo-konstruktorskoe-byuro-sinergiya"
+        "_merged_into": "ooo-konstruktorskoe-byuro-sinergiya",
+        "open_questions": []
       },
       "why": [
-        "Duplicate scaffold of ooo-konstruktorskoe-byuro-sinergiya (same company, ИНН 7842219445) — see that record for all facts. Marked verified/merged rather than left as an open unverified duplicate."
+        "Duplicate scaffold of ooo-konstruktorskoe-byuro-sinergiya (same company, ИНН 7842219445) — see that record for all facts. Marked verified/merged rather than left as an open unverified duplicate.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among the 3 candidates (2 have no patentee data, 1 is an unrelated Ukrainian institute)."
       ],
       "verified_against": "See ooo-konstruktorskoe-byuro-sinergiya"
     },
@@ -10968,12 +11771,39 @@
         "okved_code": "30.30",
         "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
         "_verified": true,
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "patents": [
+          {
+            "reg_number": "RU190200U1",
+            "type": "utility_model",
+            "title": "ЛЕТАЮЩАЯ АМФИБИЯ-ТРАНСФОРМИРУЮЩЕЕСЯ ТРАНСПОРТНОЕ СРЕДСТВО",
+            "published": "2019.06.24",
+            "holder": "Бегак Александр Аркадьевич (RU)",
+            "inventors": [
+              "Бегак Александр Аркадьевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          },
+          {
+            "reg_number": "RU2692311C1",
+            "type": "invention",
+            "title": "ТРАНСФОРМИРУЮЩЕЕСЯ ГИБРИДНОЕ ТРАНСПОРТНОЕ СРЕДСТВО",
+            "published": "2019.06.24",
+            "holder": "Бегак Александр Аркадьевич (RU)",
+            "inventors": [
+              "Бегак Александр Аркадьевич (RU)"
+            ],
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
+            "source_id": "s1170"
+          }
+        ]
       },
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1202600009919-20260823145414.pdf). Sole founder = sole director, registered 2020. Registered address field did not extract cleanly from this PDF (recurring layout quirk this session).",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found (ЕГРЮЛ lists none); only a bare 2GIS map listing. Single-founder company (Бегак А.А., matches surname), no product info found anywhere -- thin/dormant footprint.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (2632116476). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (2632116476). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: promoted 2 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: personal filings by Бегак Александр Аркадьевич, this entity's confirmed director/founder -- a transforming flying-amphibious vehicle, directly on-topic."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026 (ul-1202600009919-20260823145414.pdf)"
     },
@@ -11162,11 +11992,13 @@
     "kb-germes": {
       "set": {
         "_verified": true,
-        "_merged_into": "npo-kaysant"
+        "_merged_into": "npo-kaysant",
+        "open_questions": []
       },
       "why": [
         "Duplicate of npo-kaysant (already fully EGRUL-verified, same ИНН 7733393203, same director Черепкова Н.С.) — the brief scaffolded this ИНН twice under two different names (КБ «Гермес» here, НПО «Кайсант» there). Merging into npo-kaysant, the richer record.",
-        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person."
+        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all patentees are an unrelated \"Научно-исследовательский институт «Гермес»\" (industrial/chemical research institute) -- common-word name collision."
       ],
       "verified_against": "See npo-kaysant — same entity."
     },
@@ -11323,7 +12155,8 @@
         "ООО «Решение» fully verified via full EGRUL extract (ul-1151001003230-20260823183108.pdf, s0552): Petrozavodsk/Karelia registration, sole founder/director Ляшенко И.В. confirmed, OKVED mismatch (declared software house, added hardware-manufacture codes 20.06.2025 same week as an address change) matches this project's recurring \"officially X, in fact Y\" pattern.",
         "БФО micro-enterprise filings for FY2021-2025 (s0553-s0557) pulled directly: revenue ₽1.88m (2021) -> ₽2.16m (2022) -> ₽1.75m (2023) -> ₽5.97m (2024) -> ₽36.5m (2025), a 6.1x jump in the same year the group started the regional civil-air-defense pitch circuit. Scale-mismatch/pivot pattern worth flagging in any future profile — this is a genuinely tiny company by revenue relative to the scope of its regional pitching (400+ Дикобраз units claimed fielded, 1,000+ SVO deployments claimed via b95.ru).",
         "Founding-documents bundle (UD_1996300.zip, s0550) contains TWO custom (non-typовой) charter versions — original 23.03.2015 and an amendment approved 17.09.2018 — but NOT the most recent version; the EGRUL extract's own record shows a switch to Типовой устав №20 on 31.03.2025, which per this project's convention is boilerplate carrying no entity-specific content and not separately archived as evidence.",
-        "2026-08-24 ПрЭВМ-index sweep: an on-brand name hit that does NOT resolve to this entity, logged as an open question rather than silently discarded."
+        "2026-08-24 ПрЭВМ-index sweep: an on-brand name hit that does NOT resolve to this entity, logged as an open question rather than silently discarded.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, patentees are an unrelated wine-trading firm (\"Производственная Фирма «Логос»\"/\"Винный дом Логос\") -- common-word name collision."
       ],
       "verified_against": "TRANSCRIPT_20260401_gk-logos-spp-spb-rebrus-pvo-presentation.pdf (s0546); рэб.рус read directly 23.08.2026; b95.ru press coverage read via WebSearch 23.08.2026. Also: s0547 (srro.ru Rostov round table, 26.05.2026). Also: full EGRUL extract s0552; founding docs s0550; БФО FY2021-2025 (s0553, s0554, s0555, s0556, s0557)."
     },
@@ -11892,7 +12725,8 @@
         "wb_overlap": "none_found"
       },
       "why": [
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7735565264). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7735565264). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 20 candidates are unrelated foreign pharmaceutical/chemical companies using \"Prime\" in their own name (Canadian, US, Japanese) -- common-word collision, not this entity."
       ],
       "verified_against": null
     },
@@ -11967,7 +12801,8 @@
       },
       "why": [
         "2026-08-24 Rospatent full-roster trademark sweep (own ИНН 4800013729, s0945): trademark №1086620 («Капюшон», filed 2024-04-19) is registered under THIS entity's own ИНН per Rospatent's official bulk data — NOT ooo-npo-kilovatt-shestopalov's ИНН (4800016776), even though a certificate for the same reg. number was downloaded from kilowat48.ru (the Шестопалов-directed sister site) and already recorded on that entity's own trademarks[] (source s0539). Both facts are kept on record rather than one silently overwriting the other: Rospatent's own registry data says the legal right-holder is this entity (Гаврилов-directed); the Шестопалов entity's own site nonetheless displays/uses the mark operationally. Consistent with the already-established common-ownership finding (same founder Шестопалов С.А. on both entities) — most likely an ordinary intra-group trademark holding structure, not a contradiction, but recorded explicitly rather than assumed.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (4800013729). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (4800013729). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 17 candidates -- old Soviet-era cutting-tool patents with no patentee data, predating this entity."
       ]
     },
     "ooo-ayaks-tekhnologii": {
@@ -12026,7 +12861,8 @@
       },
       "why": [
         "2026-08-24 direct egrul.nalog.ru lookup by ОГРН (1245000068774): ИНН resolved as 5038189259, GD Цыганов Вадим Борисович, registered 13.06.2024. Closes the previously-open \"ИНН not yet pulled\" gap.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5038189259). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5038189259). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 4 candidates belong to distinct, differently-named legal entities that merely contain \"Покров\" as part of a longer name (АОЗТ «Покров» -- different legal form, agricultural chemicals, German co-patentee; ООО «Фарма-Покров»; ООО Инвестиционная Группа «Покров») -- none is this entity, ООО «Покров» (ИНН 5038189259)."
       ],
       "verified_against": "egrul.nalog.ru open API, 2026-08-24"
     },
