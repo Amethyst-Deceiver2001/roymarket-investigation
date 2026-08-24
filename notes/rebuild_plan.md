@@ -451,16 +451,48 @@ errors. Phase 3.5 adds the guards it still lacks.
 **Chosen 2026-08-24 at user direction: verify people first, rather than shipping
 hedged or partial person data.**
 
-The entity pass is done; people were never given the equivalent treatment, and
-the numbers are stark:
+**Status update (2026-08-24, later in this session): first real dent made in
+the `_candidate` backlog, via exactly the bulk EGRUL-snapshot approach item 1
+below recommends.** Cross-checked every `_candidate` role link's entity_name
+against the linked entity's own already-sourced `director`/`founder` field
+(local data only, no network calls) — 28 of 111 role links (27 people)
+resolved cleanly on an exact name match, `_candidate` dropped, the entity's
+own `source_id` reused (not fabricated). The other 83 stay unresolved,
+correctly: 35 because the candidate's entity name doesn't normalize to a
+unique registry entity (one-off holding companies never separately profiled,
+ambiguous legal-form variants), 48 because the entity resolved but its
+director/founder field names a *different* person — informative in its own
+right (several people hold candidate roles at more than one company and only
+one is usually real) but not something to guess at. Also, separately, a full
+review of the ~123 previously-unreviewed leader-id.ru candidates against
+entity director fields (not just prose role text, which the first promotion
+pass had used) found: 1 real duplicate-person bug (a second Лысенко Андрей
+Олегович record, tombstoned), 1 missing `entity_slug` filled on an existing
+correct role (Андрей Безруков → ЦБСТ itself), 1 misattributed candidate role
+corrected (Чадаев А.В. was pointed at the wrong «Ушкуйник» entity), several
+corroboration-only notes where leader-id's self-report matches an existing
+sourced director field, and 2 real director-field *conflicts* flagged as open
+questions rather than resolved either way (ЭйАрТэк, Смарт Текнолоджис — see
+their entity records). `check_registry.py`: 0 errors throughout both passes.
+This closes a meaningful slice of item 1 below but does **not** close Phase
+1b — most of the remaining `_candidate` links and most `_verified: false`
+records still need individual research (EGRUL pulls, web search, primary
+documents), not just cross-checking against data already in the registry.
 
-| Measure | People | (Entities, for contrast) |
+The entity pass is done; people were never given the equivalent treatment, and
+the registry has also grown (305 people now, up from the 153 these original
+counts were taken against, following a broader ИНН/ОГРН/entity-extraction
+pass earlier the same day) — so these are stale as exact fractions, but the
+*shape* of the gap they describe is still accurate and worth keeping as the
+baseline this phase is measured against:
+
+| Measure | People (baseline, 153) | (Entities, for contrast) |
 |---|---|---|
 | `_verified: true` | **5 / 153** | 147 / 148 |
-| Role links flagged `_candidate: true` | **120 / 153** | — |
+| Role links flagged `_candidate: true` | **120 / 153** (now 83, post-resolution, against a larger 305-person roster — not directly comparable) | — |
 | Has `dob` | 23 / 153 | — |
 | Has `inn_personal` | 17 / 153 | — |
-| Has a photo | 1 / 153 | — |
+| Has a photo | 1 / 153 (now 4, see Phase 3) | — |
 
 Phase 4's company-profile block 3 renders "People — full ФИО + Latin + role +
 photo" per company. Against this data that block would present overwhelmingly
