@@ -4510,6 +4510,10 @@
       {
         "question": "rospatent full-roster patent sweep (2026-08-24) found 5 \"Авирон\"-patentee candidates: 2 belong to an unrelated 1990s-2000s US biotech (\"Aviron\", gp350/EBV vaccine patents, clearly a different country/company) and 3 belong to a Russian \"ООО «Авирон»\" holding 2021 COVID-19 antiviral-treatment patents -- pharmaceutical subject matter with no plausible connection to this entity's presumed UAV/military-industry basis for registry inclusion. Not promoted: no ИНН to confirm whether this is the same legal entity under a coincidentally identical name, or a genuinely unrelated Russian pharma company -- flagged rather than either promoted or dismissed.",
         "source_id": "s1170"
+      },
+      {
+        "question": "2026-08-24: leader-id.ru self-report shows Лапин Игорь Николаевич as Директор of \"ООО Авирон\" -- an EXACT name match to this entity's own already-sourced director field (Лапин Игорь Николаевич, EGRUL as of 2024-09-04, s0460), but the leader-id profile lists his city as Екатеринбург, not Москва (this entity's registered address). A same-person director-name match doesn't by itself resolve which \"Авирон\" this is -- a person can legally direct a Moscow-registered company while personally based elsewhere, so the city mismatch is not strong evidence either way, and leader-id's profile carries no subject-matter/industry field that could help distinguish drone-maker from pharma. Still unresolved; noted as a data point, not a resolution.",
+        "source_id": null
       }
     ],
     "sources": [],
@@ -10574,6 +10578,10 @@
       {
         "question": "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found, no EGRUL contact info, no UAV/defense signal of any kind. Ulyanovsk software-dev OKVED, ₽16,000 capital -- plausible generic shop or shell, relevance to this network unconfirmed either way.",
         "source_id": null
+      },
+      {
+        "question": "2026-08-24: leader-id.ru self-report shows Капустин Павел Евгеньевич as Генеральный директор, Ульяновск -- exact company-name/city match, but CONFLICTS with the director field on file (Жуков Андрей Викторович, sourced to a direct EGRUL pull as of 2024-02-12, s0485, also sole founder). Not resolved either way: could be a director change since the 2024 EGRUL snapshot (worth a fresh EGRUL pull), a title leader-id mislabeled (e.g. a non-GD role self-reported as GD), or an unrelated same-name collision. Do not treat either name as more authoritative than the other without a fresh primary-source check.",
+        "source_id": null
       }
     ],
     "sources": [],
@@ -12830,7 +12838,12 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "question": "2026-08-24: leader-id.ru self-report shows Ефремов Антон Вениаминович as Генеральный директор, Москва -- exact company-name/city match, but CONFLICTS with the director field on file (Кот Олег Петрович, sourced to EGRUL as of 2025-11-11, s0450, more recent than most other director pulls in this registry). Not resolved either way: could be a leader-id self-report gone stale, a title mismatch (a non-GD role self-reported as GD), or a director change more recent than the 2025-11-11 EGRUL snapshot. Do not treat either name as more authoritative than the other without a fresh primary-source check.",
+        "source_id": null
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": true,
@@ -23345,6 +23358,10 @@
       {
         "question": "Featured in rk.2035.university's curated БАС-industry showcase for environmental-monitoring drones -- catalog text labels it \"ООО «Эколибри»\" though this registry has it as АО «Эколибри» (ИНН 7714473012); flagged as a minor legal-form discrepancy in the source text rather than assumed to be a different entity, given the identical distinctive name and matching business description.",
         "source_id": "s1168"
+      },
+      {
+        "question": "2026-08-24: leader-id.ru self-report shows Павлова Татьяна Викторовна as Генеральный директор, Москва -- exact company-name/city match, and the `director` field is otherwise empty here because the full EGRUL extract's shareholders/registrar block didn't extract cleanly (see below). A plausible lead for the missing director field, but NOT promoted directly -- leader-id self-report alone isn't sufficient sourcing for a primary identity field per this registry's standing discipline. Needs a clean EGRUL re-read or re-OCR to confirm before setting `director`.",
+        "source_id": null
       }
     ],
     "sources": [],

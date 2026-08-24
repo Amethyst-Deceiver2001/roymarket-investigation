@@ -103,7 +103,7 @@
     "inn_personal": null,
     "roles": [
       {
-        "entity_slug": null,
+        "entity_slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
         "title": "Chairman of the Board (правление), ЦБСТ",
         "body": "ЦБСТ Supervisory Board",
         "from": null,
@@ -137,7 +137,8 @@
       "note": "The organisation’s public voice; makes the technopark and РОЙ.МАРКЕТ announcements personally. Primary doc"
     },
     "_corrected": [
-      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+      "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\", position \"Председатель Правления\" -- this is ЦБСТ's own full legal name (ano-tsbst-centre-for-unmanned-systems-technologies), and \"Председатель Правления\" is an exact-title match to this record's already-documented Chairman-of-the-Board role. Filled in the previously-null `entity_slug` on that existing role using this corroboration -- the role text itself was already correct, it just wasn't linked to a specific registry entity_slug before now."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -1752,7 +1753,8 @@
       "of ГК «Деловой альянс». A significant gap given she's the sitting",
       "head of the core entity.",
       "Phase 1 verification pass, 2026-08-22: independently re-confirmed via ЦБСТ's own full signed EGRUL extract (s0231) — ИНН 780158807980 and 16.12.2025 start date both match exactly what was already on file. Promoted to _verified: true.",
-      "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0793)."
+      "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0793).",
+      "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\" (ЦБСТ's own full legal name), position \"Генеральный директор\" -- exact match on both employer and title to the already-EGRUL-confirmed role above. Independent corroboration, not new information."
     ],
     "_verified_against": "s0231 — ЦБСТ's own full signed ЕГРЮЛ extract, pulled 15.08.2026",
     "opensanctions_matches": [
@@ -4936,6 +4938,10 @@
         "an incoming threat. Corporately, КоптерЛаб is 80% owned by АО «АУРИН» (ИНН 9705214590, registered 15.12.2023, OKVED 70.22 — management consulting, not manufacturing) with the remaining 20% held by GD Федукович Кирилл Олегович personally. АО «АУРИН»'s own EGRUL record carries a significant red flag: its sole listed founder, Михайлова Ирина Валериевна, is marked with \"ПризнНедДанУчр\" — \"сведения недостоверны (заявление физического лица о недостоверности свед"
       ]
     },
+    "_corrected": [
+      "2026-08-24: leader-id.ru self-reports employer \"ООО «Коптерлаб»\", position \"Генеральный директор\" (two separate leader-id accounts, user_id 6053095 and 6764108, agree) -- exact name/title match to ooo-kopterlab's own already-EGRUL-sourced `director` field (Федукович Кирилл Олегович). Independent corroboration, not new information."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [
@@ -5202,13 +5208,12 @@
     "inn_personal": null,
     "roles": [
       {
-        "entity_slug": null,
+        "entity_slug": "ooo-vizionero",
         "entity_name": "ООО «Визионеро»",
-        "title": null,
+        "title": "co-inventor (ПрЭВМ RU2023613722)",
         "from": null,
         "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s1054"
       },
       {
         "entity_slug": null,
@@ -5228,7 +5233,7 @@
     "subsidiary_liability_hits": [],
     "subsidiary_liability_checked_at": null,
     "social": [],
-    "photo": null,
+    "photo": "images/lysenko-andrey-olegovich-2_portrait_leaderid.jpg",
     "notes": null,
     "sources": [],
     "mentions": 2,
@@ -5240,6 +5245,12 @@
         "авел ЕвгеньевичAlternative navigation system + BAS operator trainer, shown alongside СКБ Пиранья at HeliRussia. 4 co-founders at 25% each, 7 employees, ₽61.9m declared income. ООО «Визионеро» (Moscow)Лысенко Андрей Олегович\"IT company\" resident, no named product. 16 employees. 37.5% owner's stake pledged to the Moscow Venture Fund. ООО «КБ «Синергия»» (St. Petersburg)Некрасов Александр Викторович«Яким» air-threat monitoring/interceptor-coordination system,"
       ]
     },
+    "_corrected": [
+      "2026-08-24: merged in the co-inventor role (ПрЭВМ RU2023613722, source s1054) and leader-id-sourced photo from the now-tombstoned duplicate lysenko-andrey-olegovich-2 -- same person, confirmed via identical leader-id.ru user_id 658623 shared across both records.",
+      "2026-08-24: leader-id.ru self-reports employer \"Визионеро\", position \"Руководитель проекта\" (Project Lead), Пермь -- upgrades this from a bare co-inventor credit to a project-leadership role at ooo-vizionero, entity-name match exact. Left the co-inventor role's structured `title`/`source_id` as the citable primary source rather than overwriting it with the uncited leader-id job title; the leadership detail is recorded here as corroboration only, per this registry's standing rule that a leader-id self-report alone doesn't source a structured field.",
+      "The КБ «Синергия» role stays `_candidate`: no leader-id or other corroboration found for it this pass."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [
@@ -6040,6 +6051,10 @@
         "orage/sale/disposal of ammunition — plus resident status in the Сколково innovation-center program since 10.10.2023 (with an associated VAT exemption). Sole owner and beneficiary, per the same notes: Фоминых Алексей Михайлович, 100%; no dividends paid in 2025. Its own FY2022–25 БФО filings (pulled directly, units confirmed as Тыс. руб.) show a volatile but genuinely operating manufacturer: revenue of ₽48.3m (2022), ₽716.8m (2023), ₽210.5m (2024) and ₽782.4"
       ]
     },
+    "_corrected": [
+      "2026-08-24: leader-id.ru self-reports employer \"ООО «Метаскан»\", position \"генеральный конструктор\" (Chief Designer), Йошкар-Ола -- exact entity-name match. NOT a conflict with ooo-metaskan's own already-sourced `director` field (Поспехов Иван Александрович): Chief Designer and General Director are different positions that can coexist. This is a previously-undocumented second senior role for this person (already on file elsewhere as director of ooo-opkb-eksplomet via personal-patent matching), at a different company -- worth noting he may hold roles at multiple entities in this network, not yet independently sourced beyond the leader-id self-report."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [
@@ -8524,6 +8539,10 @@
         "АрТэк» (ИНН 7300000540, Ulyanovsk, reg. 07.04.2022, software-development OKVED) — four co-founders at 25% each (Жуков Андрей Викторович, Фомин Александр Николаевич, Перекатов Сергей Сергеевич, and GD Капустин Павел Евгеньевич), 7 employees, ₽61.9m declared income for the year through 01.01.2026. «Визионеро», named by ЦБСТ as an “IT-компания” resident (06.01.2026, GD quoted discussing early-stage scaling) without a named product, is ООО «Визионеро» (ИНН 590"
       ]
     },
+    "_corrected": [
+      "2026-08-24: leader-id.ru self-reports employer \"ООО ЭйАрТэк\", position \"Генеральный директор\", Ульяновск -- exact company-name/city match, but CONFLICTS with ooo-eyartek's own director field (Жуков Андрей Викторович, EGRUL as of 2024-02-12, s0485). See the open_questions entry added to ooo-eyartek this same pass. Not promoted to a role on this person -- the conflict needs a fresh primary-source check, not a guess at which name is current."
+    ],
+    "_verified_against": null,
     "aleph_matches": [
       {
         "entity_id": "60bb9b5a832039689b7148ccdc8c23acb79df3ca.ae05470a5e70d13a54f32d84086ece7d6642a852",
@@ -9651,13 +9670,12 @@
     "inn_personal": null,
     "roles": [
       {
-        "entity_slug": null,
-        "entity_name": "ООО «Ушкуйник»",
+        "entity_slug": "ano-npts-ushkuynik",
+        "entity_name": "АНО «НПЦ «Ушкуйник»»",
         "title": null,
         "from": null,
         "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s0947"
       }
     ],
     "sanctions": [],
@@ -9679,6 +9697,10 @@
         "ounder identity was restricted in EGRUL on 04.07.2025; only one БФО filing found, FY2023, indexed 25.03.2024, with no revenue figure disclosed — typical for a nonprofit sports АНО). Ushkuynik's GD is Чадаев Алексей Викторович — a well-known Russian political technologist and publicist, in post since 14.02.2024. A separate commercial arm, ООО «Ушкуйник» (ИНН 5300013923, wholesale trade OKVED, reg. 18.04.2024), had its own founder/director identity restricte"
       ]
     },
+    "_corrected": [
+      "2026-08-24: the pre-existing `_candidate` role on this person pointed at the wrong entity -- \"ООО «Ушкуйник»\" (npts-ushkuynik, the flagship UAV maker itself, whose own `director` field is null) rather than \"АНО «НПЦ «Ушкуйник»»\" (ano-npts-ushkuynik, a separate registry entity whose `director` field already reads \"Чадаев Алексей Викторович\", sourced to an EGRUL pull s0947). Corrected the entity_slug/entity_name to the АНО and attached that same s0947 source, dropping `_candidate` since it now matches an independently EGRUL-sourced field exactly. Corroborated further by leader-id.ru, which self-reports the same employer (full legal name match) and position \"Генеральный директор\", Москва. NOT the same person as «Чадаев Ю.А.» (leader of АНО «НПЦ БАС «ТулаДрон»», per the parked npc_bas_technopark_network memory) -- different patronymic, different organization."
+    ],
+    "_verified_against": null,
     "aleph_matches": [
       {
         "entity_id": "e24907776cc26bf3d29dcdc76e7d4d1a36c08ebc.e4858ff7c9bca3e54855e802b86b4f5ef1f4bf2d",
@@ -9776,6 +9798,10 @@
         "rector of Development, С.С. Шандобыло, and Элиарс's (ИНН 7735140825, Zelenograd) General Director, С.Н. Атливанчик — a name-to-EGRUL match independently confirmed, since Rusprofile's own record lists Атливанчик Сергей Николаевич as Элиарс's director — real, named people from an independent conference-programme source, standing in useful contrast to Тримикс's own EGRUL record, where both GD and founder are access-restricted. Separately, Chadaev's channel in"
       ]
     },
+    "_corrected": [
+      "2026-08-24: leader-id.ru self-reports employer \"ООО «ЭЛИАРС»\", position \"Генеральный директор\", Санкт-Петербург -- exact name/title/city match to ooo-eliars's own already-EGRUL-sourced `director` field (Атливанчик Сергей Николаевич). Independent corroboration, not new information."
+    ],
+    "_verified_against": null,
     "aleph_matches": [
       {
         "entity_id": "ru-inn-773514103490.1370797e993b4b31efc19d460bab45ed52b38619",
@@ -9873,6 +9899,10 @@
         "icture: Rogozin's own current role, per the FY2025 notes' own governance disclosure, is a seat on the Board of Directors (Совет директоров), not merely an advisory-council chairmanship — alongside GD Павлова Татьяна Викторовна, Виталий Александрович Жук (a name matching this brief's already-documented Котлин-Новатор GD/chief designer — flagged as a possible cross-network connection, not independently confirmed as the same person), Алексей Николаевич Басов "
       ]
     },
+    "_corrected": [
+      "2026-08-24: leader-id.ru self-reports employer \"ООО «ЭКОЛИБРИ»\", position \"Генеральный директор\", Москва -- exact company-name/city match to ao-ekolibri, which has no `director` on file (the field didn't extract cleanly from that entity's EGRUL PDF). See the open_questions entry added to ao-ekolibri this same pass -- a plausible lead for the missing field, not promoted directly since leader-id self-report alone isn't sufficient sourcing for a primary identity field."
+    ],
+    "_verified_against": null,
     "aleph_matches": [
       {
         "entity_id": "3d64bc5c67071a90c30267da9b104cfba27f729d.dc71467439c83e41f3bcdd0a5b17db29a882f96b",
@@ -10028,6 +10058,10 @@
         "integrator/reseller revenue-and-margin profile (thin single-digit margins on billions in throughput), not a boutique consultancy. Its FY2025 related-party note names the ultimate beneficial owners as Ефремов Антон Вениаминович (50%) and Кот Олег Петрович (50%), controlling indirectly through АО «УК СМАРТ»; GD at the time of that filing was Гончаренко Антон Александрович — a different person from Кот, who EGRUL shows becoming GD himself only later, 11.11.20"
       ]
     },
+    "_corrected": [
+      "2026-08-24: leader-id.ru self-reports employer \"ООО «Смарт Текнолоджис»\", position \"Генеральный директор\", Москва -- exact company-name/city match, but CONFLICTS with ooo-smart-teknolodzhis's own director field (Кот Олег Петрович, EGRUL as of 2025-11-11, s0450). See the open_questions entry added to ooo-smart-teknolodzhis this same pass. Not promoted to a role on this person -- the conflict needs a fresh primary-source check, not a guess at which name is current."
+    ],
+    "_verified_against": null,
     "leader_id_matches": [
       {
         "query": "Ефремов Антон Вениаминович",
@@ -10939,6 +10973,10 @@
         "f, a named ultimate-beneficial-ownership structure for a flagship ЦБСТ resident: of 15,000 total shares, АО «Хоук Холдинг» holds 51% (100% ultimately owned by Ястребов Сергей Владимирович), former GD Бежанов Иван Валериевич holds 37.2% directly, АО «АИН» holds 6%, technical director Махнёв Александр Игоревич holds 4.5%, and Назаров Олег Рамилевич holds 1.3%; the notes name all four — Ястребов, Бежанов, Махнёв, Назаров — explicitly as \"конечные бенефициары\""
       ]
     },
+    "_corrected": [
+      "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Основатель\" (Founder), Moscow -- a previously-undocumented company link for this person (existing `_candidate` roles are АО «Хоук Холдинг» and АО «АИН», neither Стратим) and a previously-undocumented founder for ao-stratim (whose `founders[]` is currently empty). Not promoted to a structured role or to ao-stratim's `founders[]` -- leader-id self-report alone isn't sufficient sourcing for either field per this registry's standing discipline. Worth an EGRUL/founding-document check to confirm."
+    ],
+    "_verified_against": null,
     "aleph_matches": [
       {
         "entity_id": "3147bd994b7fd10821de3a4da7e0004cd7ed251b.88b81f8ef246daed6aac5e7de04965eb3de2d878",
@@ -11208,6 +11246,10 @@
         "др Игоревич holds 4.5%, and Назаров Олег Рамилевич holds 1.3%; the notes name all four — Ястребов, Бежанов, Махнёв, Назаров — explicitly as \"конечные бенефициары\" (ultimate beneficiaries). Current GD Костюнин Павел Андреевич (since 03.05.2024) holds no disclosed equity but is also GD of a related entity, АО «Стратим-Тех», which transacted ₽1.83m in purchases with АО «Стратим» in 2025. A separate, similarly-named ООО «Стратим» (ИНН 5260494520, 25% owned by "
       ]
     },
+    "_corrected": [
+      "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Генеральный директор\", Москва -- exact name/title match to ao-stratim's own already-sourced `director` field (Костюнин Павел Андреевич), resolving one of the three pre-existing `_candidate` role links on this person (АО «Стратим») via corroboration, though not upgraded to a sourced `source_id` on the role itself -- leader-id self-report alone isn't sufficient sourcing for that per this registry's standing discipline. The other two candidate roles (АО «Стратим-Тех», ООО «Стратим») remain unreviewed."
+    ],
+    "_verified_against": null,
     "leader_id_matches": [
       {
         "query": "Костюнин Павел Андреевич",
@@ -12826,6 +12868,10 @@
         "); Андрей Иванов (chief designer)«Овод», «Провод»/«Овод-Про» heavy FPV — serial deliveries confirmed to MoD warehouses. Cherezov shot three times in Tula, 29 July 2026, survived. ООО «Авирон» (Moscow)Лапин Игорь Николаевич«Чебурашка» (first Russian single-board FPV), «Кощей 2.0» heavy transport, «Сокол» 18″ strike drone, «Пеппа» comms. Naval ground control station in use by army and navy. ИНН 7743451768, OKVED 26.51.2. Its own FY2024–25 filings independent"
       ]
     },
+    "_corrected": [
+      "2026-08-24: leader-id.ru self-reports employer \"ООО «Авирон»\", position \"Директор\" -- exact name match to ooo-aviron's own already-EGRUL-sourced `director` field (Лапин Игорь Николаевич, s0460), though leader-id lists his city as Екатеринбург against the entity's Москва registered address (not necessarily a conflict -- a director's personal city and a company's registered address routinely differ). Added as a data point to ooo-aviron's existing open question about which \"Авирон\" this is (UAV-network entity vs. an unrelated Russian pharma company found in the earlier patent sweep) -- a director-name match alone doesn't resolve that, since leader-id carries no industry/subject-matter field."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [
@@ -13656,6 +13702,10 @@
         "вки в нужную локацию и сброса БпЛА, планирующих авиабомб, военных грузов\" (\"such craft can be used to deliver and drop UAVs, glide bombs, military cargo\") to any point up to two days' flight away. GD Власов Артём Аркадьевич; founders are Власов (51%), АО «Стратолинк» (35%, director Оксман Николас Николаевич, same individual as a 14% minority founder here), and Оксман himself (14%). The director is now primary-source confirmed — a direct query of ФНС's own "
       ]
     },
+    "_corrected": [
+      "2026-08-24: leader-id.ru self-reports employer \"ООО «АЭРОПЛАТФОРМЫ»\", position \"Генеральный директор\", Москва -- exact name/title/city match to ooo-aeroplatformy's own already-EGRUL-sourced `director` field (Власов Артём Аркадьевич). Independent corroboration, not new information."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [
@@ -25642,7 +25692,7 @@
     "subsidiary_liability_hits": [],
     "subsidiary_liability_checked_at": null,
     "social": [],
-    "photo": "images/lysenko-andrey-olegovich-2_portrait_leaderid.jpg",
+    "photo": null,
     "notes": "New person, found only via searchplatform.rospatent.gov.ru's ПрЭВМ (registered computer program) index, 2026-08-24 -- co-inventor (ПрЭВМ RU2023613722). No other identifying detail available from this source -- left null per PII sourcing discipline.",
     "sources": [
       "s1054"
@@ -25652,9 +25702,9 @@
     "_raw": {},
     "_verified_against": null,
     "_corrected": [
-      "2026-08-24: leader-id.ru self-reports employer \"Визионеро\", position \"Руководитель проекта\" (Project Lead), Пермь -- corroborates employment at ooo-vizionero (matches entity name exactly), a project-leadership role beyond bare co-inventor credit.",
-      "2026-08-24: photo pulled directly from this leader-id.ru account (user_id 658623, GET /api/v4/users/658623, field `photo` -> leader-id.storage.yandexcloud.net/upload/658623/...jpg), the same account already ID-matched above."
+      "2026-08-24: DUPLICATE of lysenko-andrey-olegovich (same person, scaffolded twice -- this record from a rospatent ПрЭВМ co-inventor find, the other from brief prose). Confirmed same person by an exact leader-id.ru user_id match (658623) shared across both records' leader_id_matches -- the same identity-collision pattern already caught once this session (barakhtin-artem-vladimirovich / -2). Tombstoned; roles and photo merged onto the canonical (non-suffixed, prose-sourced, higher-mentions) record. See that record for the consolidated why-notes."
     ],
+    "_merged_into": "lysenko-andrey-olegovich",
     "leader_id_matches": [
       {
         "query": "Лысенко Андрей Олегович",
