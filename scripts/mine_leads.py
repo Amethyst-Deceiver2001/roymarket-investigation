@@ -37,18 +37,21 @@ from pathlib import Path
 
 from id_patterns import (
     RE_ENTITY_BARE, RE_ENTITY_QUOTED, RE_INN, RE_OGRN, RE_QUOTED_NAME,
-    RE_ROLE_NAME, norm, uav_score,
+    RE_ROLE_NAME, is_noise_quote, load_known_text, norm, uav_score,
 )
 
 REPO = Path(__file__).resolve().parent.parent
 DB = REPO / "data" / "roymarket.db"
-BRIEF = REPO / "docs" / "index.html"
 
 
 def load_brief_text() -> str:
-    if not BRIEF.exists():
-        return ""
-    return norm(BRIEF.read_text(encoding="utf-8"))
+    """Everything already documented, for the 'is this actually new?' check.
+
+    Reads `data/registry/*.json` plus the brief — see
+    `id_patterns.load_known_text`. Previously this grepped `docs/index.html`
+    alone, which the move to a generated site would have quietly broken.
+    """
+    return load_known_text(REPO)
 
 
 def main() -> None:
@@ -110,6 +113,8 @@ def main() -> None:
         if score >= 1:  # only mine bare product names from UAV-relevant posts — too noisy otherwise
             for m in RE_QUOTED_NAME.finditer(text):
                 name = m.group(1).strip()
+                if is_noise_quote(name):
+                    continue
                 key = norm(name)
                 if len(key) < 2 or key.isdigit():
                     continue

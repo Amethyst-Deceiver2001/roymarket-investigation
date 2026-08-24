@@ -1,0 +1,45 @@
+{
+  "_README": [
+    "Reference table for Russia's government-issued generic model charters",
+    "(Типовые уставы №1-36, Приказ Минэкономразвития России от 01.08.2018",
+    "№411) — the boilerplate text a company adopts INSTEAD OF filing a",
+    "custom charter. A copy of the template's own text carries ZERO",
+    "entity-specific information (no names, no capital, no address, no",
+    "founder disclosure) — do not try to extract facts from it, and do not",
+    "attribute it to a single entity in sources.json's per-source 'entities'",
+    "list the way an actual company-specific Устав bundle is.",
+    "",
+    "What IS evidentially useful: WHICH template number a specific entity",
+    "adopted, and WHEN (a registration-time choice, or a later switch away",
+    "from a custom charter). A switch to a generic template is itself a",
+    "fact worth recording on the entity — it's how a company stops",
+    "disclosing founders/capital in its own public charter text without",
+    "technically going dark. Record that fact on the entity (see",
+    "known_users below, cross-referenced from entities.json's own",
+    "_raw/notes text), not by treating the template file as that entity's",
+    "primary source."
+  ],
+
+  "20": {
+    "file": "data/sources/Устав №20.pdf",
+    "source_id": "s0313",
+    "legal_basis": "Приказ Минэкономразвития России от 01.08.2018 №411",
+    "form": "ООО (типовой устав для общества с ограниченной ответственностью)",
+    "known_users": [
+      {
+        "entity_slug": "ooo-titan-severo-zapad",
+        "inn": "7838380755",
+        "note": "Registered 25.04.2007 (long-established, not a wartime shell); operates under this template — no bespoke founder disclosure in its own charter text.",
+        "adopted": null,
+        "source_id": null
+      },
+      {
+        "entity_slug": "ooo-zavolzhskoe",
+        "inn": "3705066020",
+        "note": "Switched from a custom charter to this generic model charter on 19.09.2023 — a later adoption, not a registration-time default. By design carries zero company-specific text after the switch.",
+        "adopted": "2023-09-19",
+        "source_id": null
+      }
+    ]
+  }
+}

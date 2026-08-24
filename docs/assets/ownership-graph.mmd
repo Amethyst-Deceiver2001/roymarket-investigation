@@ -1,0 +1,65 @@
+flowchart TD
+  MIK["Leonid Mikhelson 78.29%<br/>Leonid Simanovsky 21.71%"]:::soft
+  LEV["ООО «Левит»<br/>INN 6330030244<br/>222.2M NOVATEK shares · ₽264.6bn<br/>₽15.88bn dividends 2025"]:::soft
+  ELI["Ilya Eliseev<br/>chairs ДАР board<br/>US/UK/CA/AU/NZ/UA sanctioned"]:::sanc
+  DAR["Фонд «ДАР»<br/>INN 7705517400 · ₽25.1bn assets<br/>₽1.213bn to Наша Правда"]:::sanc
+  GRAD["Фонд «Градислава»<br/>INN 7704278421 · reg. 2011<br/>same office as Наша Правда"]:::sanc
+  MED["Dmitry Medvedev<br/>alleged beneficiary (FBK / sanctions)<br/>«стоял у истоков» ЦБСТ"]:::open
+  UR["United Russia<br/>political sponsor"]:::soft
+  NP["Фонд «Наша Правда»<br/>INN 9705196180 · reg. 21.03.2023<br/>Kotelnicheskaya nab. 25 · office 18"]:::sanc
+  INV["ООО «Инвестментс»<br/>INN 9707004743 · 100% NP end-2024, 90.91% end-2025<br/>~₽133m lent to affiliates 2023–25 (incl. ХК Гумич, now 75% Ростех-owned)<br/>sole creditor: ФКК, ₽122.2m<br/>equity −₽56.7m after merger"]:::open
+  BOREI["АО «Борей»<br/>weapons/ammo OKVED · Rostec registrar<br/>₽0 revenue vs ₽55m costs<br/>absorbed into Инвестментс 26.12.2025"]:::open
+  ORION["ООО «Орион»<br/>100% ДАР · ex-founder Левит"]:::soft
+  ZAVOLZH["ООО «Заволжское»<br/>99% Градислава · founder Рубцов<br/>г. Плес, Ивановская обл.<br/>2011–13 addr = NP's office 18"]:::soft
+  ORION2["Орион: ~1,800 ha leased,<br/>«охотничье хозяйство»<br/>benef. owner Давыдов (ДАР's dir.)"]:::open
+  GARANT["ООО «Гарант Клуб»<br/>1% Орион / 99% ФКК"]:::soft
+  FKK["ООО «Финконсалтингк»<br/>100% owned by Olympic fund"]:::soft
+  OLYMP["Фонд поддержки зимних олимпийских<br/>видов спорта · ₽42.9bn assets<br/>same office as NP/Градислава<br/>dir. Бровченко С.Р. (Бровченко А.Р.'s brother)"]:::sanc
+  PSB["ПАО «Банк ПСБ»<br/>defence-procurement bank<br/>co-founder reg. 01.04.2025"]:::soft
+  CBST["АНО «ЦБСТ»<br/>INN 9702064851 · reg. 27.02.2024<br/>Bannyy per. 3"]:::sanc
+  SUB["Unnamed ЦБСТ subsidiary<br/>manages ₽12bn PSB fund"]:::open
+  SPECI["АО «Спецтех Инвестиции»<br/>+ АО «Спецтех Первый»<br/>100% ЦБСТ · dir. Rubinstein<br/>Rostec registrar"]:::soft
+  SYSINT["ООО «Системный интегратор»<br/>100% ЦБСТ · Kursk<br/>radar/EW/comms OKVED"]:::soft
+  MPTM["ООО «МПТМ»<br/>INN 9714068459<br/>ownership sealed 15.07.2026<br/>FY25: ₽1.0m rev, gross loss"]:::core
+  ROY["РОЙ.МАРКЕТ<br/>роймаркет.рф · roimarket.ru"]:::core
+  MOD["MoD financial infrastructure<br/>integrated since 12.2024<br/>all ТЭЧ by 01.09.2026"]:::core
+  RES["525 resident enterprises<br/>rev. ₽81.8bn (2025)<br/>10+ EU-sanctioned, 6 named<br/>(17th &amp; 20th packages)"]:::soft
+  TP["Technopark network<br/>&gt;100,000 m² · &gt;₽25bn"]:::soft
+
+  MIK --> LEV
+  LEV -->|founder| DAR
+  LEV -.ex-founder.-> ORION
+  DAR -->|100%| ORION
+  ORION -.-> ORION2
+  ORION -->|1%| GARANT
+  FKK -->|99%| GARANT
+  OLYMP -->|100%| FKK
+  OLYMP -.same office + brother of dir..-> NP
+  ELI -.chairs.-> DAR
+  MED -.alleged beneficiary.-> DAR
+  MED -.alleged beneficiary.-> GRAD
+  DAR -->|founder| NP
+  GRAD -->|founder| NP
+  GRAD -->|99%| ZAVOLZH
+  NP -->|90.91%| INV
+  FKK -->|₽122.2m loans 2023–24| INV
+  INV -.absorbed.-> BOREI
+  MED -.-> CBST
+  UR -.sponsors.-> CBST
+  NP -->|co-founder, per NP called subsidiary| CBST
+  PSB -->|co-founder| CBST
+  CBST -->|100% owner, sealed| MPTM
+  CBST --> SUB
+  CBST -->|100%| SPECI
+  CBST -->|100%| SYSINT
+  PSB -.anchor investor.-> SUB
+  MPTM -->|operator| ROY
+  PSB -.settlement account.-> MPTM
+  CBST --> RES
+  CBST --> TP
+  ROY --> MOD
+
+  classDef core fill:#17456b,stroke:#0d2c47,color:#ffffff
+  classDef sanc fill:#8a3030,stroke:#5e1f1f,color:#ffffff
+  classDef soft fill:#e3e6ea,stroke:#a9b3bd,color:#12161b
+  classDef open fill:#f0e7cf,stroke:#b99b48,color:#12161b

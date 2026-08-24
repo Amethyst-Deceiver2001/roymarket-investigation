@@ -3,6 +3,49 @@
 Read this first in a new session. It's the entry point — detail lives in the
 files it points to, not duplicated here.
 
+## ⚠ A rebuild is in progress (started 2026-08-22)
+
+`docs/index.html` is being replaced by a **generated multi-page publication**
+built from a structured registry. Much of the "Current state" and "Structure
+of the brief itself" sections below describe the single-file brief as it was
+before that started — treat them as describing the frozen snapshot at
+`docs/_archive/index-2026-08-21.html`, not as the target state.
+
+The plan lives at `~/.claude/plans/spicy-beaming-kite.md`. Phases:
+
+0. **Foundations — done.** `STYLE_GUIDE.md` written; `CLAUDE.md` PII policy
+   rewritten; all 24 `docs/images/` files put under version control (they were
+   untracked, so a Pages deploy would have rendered broken); `MANIFEST.md`
+   refreshed from 212 to 305 indexed files; brief snapshotted to
+   `docs/_archive/`.
+1. **Registry — scaffolded, not yet verified.**
+   `data/registry/` now holds 130 entities (114 with an ИНН, all tiered),
+   147 people, 19 quotes, 304 sources and 44 open questions, extracted from
+   the frozen snapshot by `scripts/extract_registry.py` and validated by
+   `scripts/check_registry.py` (currently 0 errors, 0 warnings).
+   **Every record is still `_verified: false`.** What remains: check records
+   against primary documents in `data/sources/`; fill `financials`,
+   `cbst_tie` and `director` from the preserved `_raw` prose; attribute the
+   46 ИНН in `_scaffold_leads.json` that no company could be tied to; split
+   the two catch-all table rows into per-entity open questions; and add
+   Latin-script names. Corrections go in `corrections.json`, never into a
+   generated record.
+2. **Screening** — OpenSanctions, OCCRP Aleph, ФНС, press, trademarks/patents,
+   and foreign-component research (war-sanctions.gur.gov.ua plus others). Four
+   API keys in `.env` are currently unused by any script.
+3. **Imagery** — a new `scripts/tg_media.py`; the scraper stores post text only,
+   so there is no media in `data/roymarket.db`.
+4. **Build** — `scripts/build_site.py` → recap + dossier + ~40 company profiles,
+   EN and RU.
+5. **Prose** — written to `STYLE_GUIDE.md`, EN and RU independently.
+
+Two known defects in the old file, both fixed by the rebuild rather than in
+place: the manufacturers table is malformed (an unclosed `<td colspan="3">`
+spanning lines 1026–1051 with galleries and a 51,007-character unclosed
+paragraph inside it — do not DOM- or regex-edit that region), and the Mermaid
+ownership diagram at lines 500–568 has never rendered on Pages because the
+document loads no JavaScript.
+
 ## What this is
 
 An OSINT corporate-genealogy investigation into ЦБСТ (Центр беспилотных
@@ -45,6 +88,18 @@ historical bootstrap at migration time and isn't the ongoing method.
   URL**, which will be stale and produce false "new finding" claims.
 - **`docs/images/`** — evidence photos (satellite views, production-floor
   frame grabs, screenshots) referenced by the brief.
+- **`data/sources/`** — primary-source documents backing the brief's EGRUL/
+  БФО claims: `ul-*.pdf` (EGRUL extracts), `РЕСУРС_БФО_*.zip` (annual
+  accounts filings), `UD_*.zip` (founding Устав bundles), plus a handful of
+  one-off press/OSINT captures (ТАСС Безруков interview HTML, the
+  InformNapalm Архангел dossier html/mhtml). Gitignored (424MB, well past
+  GitHub's 100MB single-file limit for some bundles) — local working copy
+  only, not committed history. Populated 2026-08-18 from everything the
+  user had downloaded to `~/Downloads` from 2026-08-14 onward; going
+  forward, save new EGRUL/БФО pulls directly here rather than leaving them
+  in `~/Downloads`. **Check here before re-downloading or re-requesting a
+  document from the user** — most of what's cited in the brief already has
+  its source file sitting in this folder.
 - **`data/roymarket.db`** — this repo's own SQLite DB (gitignored — it's a
   local working copy, not committed history), currently holding the ~98,700
   Telegram posts across the 11 channels this investigation uses. Seeded at
@@ -128,8 +183,6 @@ Highlights as of migration:
   Asel Labs, «Аэроплатформы», several bare product names with no
   manufacturer yet, etc.) — see the memory file for the full list and why
   each is stuck (no EGRUL match, ambiguous OKVED, quota exhaustion).
-- НПЦ БАСиРТК founding docs (Устав) — blocked on the user's daily EGRUL
-  quota.
 - TSG's bot-linked webshop catalog — JS-rendered SPA, not yet successfully
   extracted.
 - A pending `python3 scripts/tg_scan.py --full --days 1500 --only

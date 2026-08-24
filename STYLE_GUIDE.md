@@ -1,0 +1,395 @@
+# Style guide — РОЙ.МАРКЕТ / ЦБСТ investigation
+
+Standing rules for every word and every page this project publishes: the
+narrative recap, the dossier, the company profiles, the methodology and
+provenance pages, captions, and both language versions of all of them.
+
+Adopted 2026-08-22, at the start of the rebuild of `docs/index.html` into a
+generated multi-page publication.
+
+**Where this file lives, and why not in `docs/`.** `docs/` becomes the published
+site. This is an internal working document — it contains an analysis of the
+author's own voice, which is a tool for drafting, not something the audience
+needs. Keep it at the repo root. (The presentation half of it derives from a
+guide that *is* published in the sibling `mariupol-property-seizures` project;
+the voice half was deliberately kept private there. That split is preserved
+here.)
+
+**Read before drafting anything.** A draft in generic register is not a draft
+that needs editing — it needs rewriting, which wastes the whole pass.
+
+---
+
+## Part I — Voice
+
+The prose is written in the voice of **Alexey Kovalev** (independent journalist,
+ex-Meduza investigations editor; Foreign Policy, NYT, Guardian, openDemocracy;
+OSINT and expert-witness consultant for The Docket and The Reckoning Project).
+He is a professional writer and judges generic AI prose harshly. Matching the
+voice is what makes a draft usable.
+
+### 1.1 Mode selection — which register for which page
+
+Do not write everything in one voice. Pick the mode from what the section is
+*doing*.
+
+| Page / section | Mode | Why |
+|---|---|---|
+| `index` narrative recap | **Investigative** | It reports findings, not an argument |
+| Company profiles | **Expert-witness / forensic** | Must survive a hostile lawyer |
+| `methodology`, `sources`, "what is not established" | **Expert-witness / forensic**, flattest register | Every sentence quotable out of context without losing accuracy |
+| "Why this matters" / afterword / synthesis | **FP-analysis** | It argues a thesis |
+| Closing call to action, if there is one | **Campaigning**, sparingly | One barbed aside at most |
+| Anything at all | **Never academic mode** | It is the control case for suppressed voice |
+
+### 1.2 Shared DNA — applies in every mode, both languages
+
+- **Euphemism autopsy.** Take the perpetrator's sanitising word and dissect it.
+  In EN: italicise and gloss. In RU: «scare-quote» and unpack. Never let the
+  regime's terminology stand unmarked. See §5.1 for this project's specific list.
+- **Self-incrimination as method.** Let their own documents convict them.
+  Editorialise by juxtaposition, not by adjective.
+- **Named specificity. Hedge and source every number.** "at least 145,000",
+  "(a figure exceeding even the highest independent assessments)".
+- **"Not an isolated incident but a policy"** reframe; historical anchoring.
+- **Rule of three.**
+- **Hard aphoristic kicker** to close an argument — one turned sentence,
+  antithesis or callback. (Not for findings pieces — see 1.3.)
+
+### 1.3 Investigative mode — the recap and case write-ups
+
+- **Headline is the finding, stated flat.** No hedge in the head; earn it after.
+- **Deadpan accumulation over commentary.** Put two facts side by side and stop.
+  Let the gap work. **Do not explain the irony.**
+- **Officials get rope, not adjectives.** Quote the evasive non-answer verbatim
+  and let it stand as the characterisation.
+- **Bureaucratic and technical detail is evidence, not texture** — contract sums,
+  ОКВЭД codes, frequencies, headcounts exist to prove systematicity.
+- **Methodology-first debunking.** Don't argue a claim is wrong; go find what is
+  actually behind its numbers and let it collapse on its own.
+- **Anticlimactic, non-resolving endings are valid.** A findings piece can just
+  stop. The system absorbing exposure and continuing *is* the point. Use this
+  instead of a kicker when the piece reports rather than argues.
+
+### 1.4 Expert-witness / forensic mode — profiles, methodology, provenance
+
+The most important mode in this project. It is the register the evidentiary
+backbone must be written in.
+
+- **"Officially X, but actually Y" is the organising unit**, repeated for every
+  entity and every actor. In this investigation that maps directly onto the
+  ОКВЭД-mismatch pattern: a drone manufacturer registered as a provider of
+  professional training; a naval-drone yard registered for *sport* shipbuilding.
+  Make it structural, not an aside.
+- **Epistemic hedging calibrated to evidentiary weight.** "it is not clear
+  whether", "likely", "it is equally possible that". Never let suspicion read as
+  established fact.
+- **Every claim sourced to a named origin.** Nothing floats as bare assertion.
+- **Chain-of-command and ownership mapping is the actual content** — who owns
+  whom, who appoints whom, whose money arrives where.
+- **Self-incrimination tracked temporally.** Dating precisely when a claim
+  *preceded* the thing it later explained is a verification technique, not a
+  rhetorical one.
+- **Zero flourish, zero humour, no kicker.** Flatter than academic prose.
+
+### 1.5 FP-analysis mode — synthesis and afterword
+
+Cold-open on one named human (name, age, place, date), then zoom to the system.
+Thesis as contrarian inversion by paragraph two or three. Appositive
+identification of every actor — title, and subscriber count where it is a
+channel. Concrete physical metaphor only. Generous credit to other journalists by
+name. First person rare, and only evidentiary. Shorter, clipped sentences.
+
+### 1.6 Campaigning mode — use sparingly, and only where marked
+
+Cold open with direct intimate address to the reader. Sarcasm as connective
+tissue, but always sitting *next to* a document citation, never replacing one.
+Numbers as punchlines — set up the official figure, drop the real one after.
+Register-mixing: registry codes in the same paragraph as slang. Sentence-rhythm
+extremes. Breaks the fourth wall at the close.
+
+In this project: at most a closing call to action, or one aside where an
+official's claim is absurd enough to deserve a jab instead of silent
+juxtaposition.
+
+### 1.7 EN and RU are written separately
+
+**RU pages are written, never translated from the EN.** The registers are
+genuinely different, and a translated RU page reads as translationese.
+
+**RU register:** long periodic sentences built on colon-then-elaboration and
+chained тире — do **not** chop them into short sentences. Тире carries the main
+beat. Anaphora for the climax. **First person «я»/«мы» is welcome** where EN
+suppresses it. **Direct address to the reader** is available («Попробуйте
+представить»). Native idiom — «без обиняков», «хотя бы видимость», «хотелось бы
+надеяться». The engine is the collision of dry bureaucratic-legal lexis
+(«отчуждение», «учредитель», «уставный капитал», «ОКВЭД 26.11») against visceral
+moral nouns.
+
+### 1.8 Avoid, in every mode
+
+Cheap intensifiers — *horrific*, *shocking*, *brutal*, *chilling*. Unsourced
+numbers. Abstract or decorative metaphor. Choppy translationese in RU.
+Explaining the irony. Hedging that reads as padding rather than as calibration.
+
+---
+
+## Part II — Language and naming
+
+### 2.1 The core rule: English is the language of analysis, Russian is the language of evidence
+
+The existing brief already follows this almost mechanically, and it is correct.
+Codified:
+
+- **English**: headings, narrative, argument, table column headers, `alt` text,
+  captions, glosses.
+- **Russian, untranslated**: legal-entity names, ФИО, product names, addresses,
+  official titles, registry terminology (ЕГРЮЛ, ГИР БО, Устав, Наблюдательный
+  совет, «сведения недостоверны», «Ограничение доступа к сведениям»), and every
+  block quotation.
+- **The hybrid sentence is the norm**: Russian phrase in guillemets, then a
+  parenthetical English gloss.
+
+**In the RU pages this split collapses.** The parenthetical English glosses
+disappear, the transliteration layer (§2.2) disappears entirely, and quotations
+simply sit in the prose.
+
+### 2.2 Transliteration — EN pages only
+
+Latin script is the primary visible text for personal names and toponyms; the
+Cyrillic original stays available.
+
+- **Personal names**: conventional English order, given name first —
+  "Vladimir Yakushev", not "Yakushev V.V." and not a mechanical letter-by-letter
+  rendering of initials. Pair with the **full Cyrillic ФИО**.
+  - **Profile cards, list items, captions**: show the Cyrillic ФИО as visible
+    text directly below the Latin name, smaller and muted (`.person-fio`). The
+    point of a profile is to show both at once — do not hide it in a tooltip.
+  - **Link contexts**: put the full ФИО in `title=`; a click-popup nested in a
+    link conflicts with the link.
+- **The same person must not appear in Cyrillic in one section and Latin in
+  another.** The current brief does this and it has to be fixed in extraction —
+  the registry holds both forms and the template picks.
+- **Never fabricate** a given name or patronymic to complete a form. "Surname
+  I.O." is an honest fallback where the source gives no more.
+
+### 2.3 Legal-entity names — transliterate the legal form, never translate it
+
+**The legal-form abbreviation is part of the registered name and stays
+transliterated everywhere — OOO, AO, ZAO, PAO — never rendered as LLC/JSC/CJSC.**
+This is not a style preference; it is what makes the text useful for its stated
+purpose. OFAC's SDN list, EU sanctions annexes, and OCCRP/Bellingcat all render
+Russian entities this way, because a screening analyst matching this document
+against ЕГРЮЛ needs the string that actually appears in the registry. "LLC
+«Tekhnodron»" matches nothing in a company-registry search; "OOO «Tekhnodron»"
+does. Translating also implies a false equivalence — "ООО" and "LLC" are not the
+same liability regime, and a hostile lawyer can use that gap.
+
+**Which form each page tier takes:**
+
+- **Dossier and company-profile pages**: transliterated form only, everywhere —
+  `OOO «Tekhnodron»`, `AO «Stratim»` — with the functional English meaning
+  available as a `title=` hover tooltip ("limited liability company"), never as
+  inline prose translation.
+- **Narrative recap page** (general audience): a single functional gloss in
+  parentheses on the *very first* mention of the pattern in the whole document —
+  "a Russian LLC (OOO)" — is permitted once, to orient a lay reader, then never
+  repeated. Every individual company name after that still uses the
+  transliterated form (`OOO «Tekhnodron»`), not a translated one.
+
+| Abbreviation | Transliterated form (always) | Functional meaning (tooltip only) |
+|---|---|---|
+| ООО | OOO | limited liability company |
+| АО | AO | joint-stock company |
+| ПАО | PAO | public joint-stock company |
+| ЗАО | ZAO | closed joint-stock company (pre-2015 form) |
+| АНО | ANO | autonomous non-profit organisation |
+| Фонд | Fond | foundation |
+| ИП | IP | sole proprietor |
+| НПЦ | NPTs | research and production centre |
+| НПО / НПП | NPO / NPP | research and production association / enterprise |
+| КБ | KB | design bureau |
+| ГК | GK | group of companies |
+| ФГУП | FGUP | federal state unitary enterprise |
+
+The proper name inside «» is transliterated the same way — never translated,
+never left in bare Cyrillic in EN prose.
+
+### 2.4 Identifiers
+
+- ИНН and ОГРН are always given as bare digits with the label:
+  `ИНН 9704241986`, `ОГРН 1237700218612`. Never reformatted with spaces or
+  separators — they must be copy-pasteable into a registry search.
+- Both labels stay in Cyrillic in EN text; they are the search key, and "TIN"
+  will not find anything.
+- On first mention of an entity in the dossier or its profile, give ИНН and ОГРН
+  together. In the narrative recap, give neither unless the number is itself the
+  point — the recap links to the profile.
+
+---
+
+## Part III — Evidence and sourcing
+
+### 3.1 Quotes: never paraphrase, never invent
+
+Any quoted material is the original text only — verbatim, punctuation and typos
+preserved. A quote that cannot be verified against a primary source does not get
+used.
+
+- Draft quotes **from the original Russian**, never back-translated from the EN
+  page's own prose. A single added or dropped word turns evidence into a misquote.
+- Preserve a grammatical quirk or apparent typo and mark it `[так в оригинале]`
+  rather than silently fixing it. The exception: an obvious ASR mistranscription
+  in a transcript may be corrected silently — fidelity is owed to the speaker,
+  not to the transcription tool.
+- Never attribute someone's paraphrase of an unseen document to that document's
+  author. Quote the paraphraser's own words and attribute them to the paraphraser.
+- Never assert a real name behind a channel handle unless it is sourced.
+- Quotes live in `data/registry/quotes.json` so the EN and RU pages render the
+  same string rather than two hand-copied ones that drift.
+- **Direct quotation** attributed to a speaker or document is wrapped in `<em>`.
+  **Scare-quotes** marking a euphemism in our own prose stay plain «» and are not
+  italicised. A document's own *title* in guillemets stays plain.
+
+### 3.2 The "own" marker
+
+The brief uses "its **own** filing", "ЦБСТ's **own** channel", "Градислава's
+**own** accounts" throughout, to separate a self-incriminating primary source
+from a third-party claim. This is self-incrimination-as-method working correctly
+at sentence level. **Keep it.** Do not smooth it away as repetition.
+
+### 3.3 Confidence vocabulary
+
+Every sourced claim carries one of three levels, inherited from the existing
+brief's tag classes and stored in the registry:
+
+| Level | Means |
+|---|---|
+| `doc` | Backed by a primary document — EGRUL, БФО, Устав, court filing, the subject's own post |
+| `press` | Reported by a named outlet, not independently verified here |
+| `open` | Asserted, plausible, or partially evidenced — not established |
+
+Render as a visible chip. This vocabulary is not internal notation; a reader
+running a sanctions submission needs it. But **never write the class name
+(`t-doc`) in prose** — see §3.5.
+
+### 3.4 Where sourcing goes
+
+No hashes, file paths or capture dates in narrative prose or captions. State once
+that every artefact is sourced from the original and hashed, and put the full
+chain-of-custody catalogue — hash, source URL, capture date — on the provenance
+page, framed for readers with a professional or legal interest in independent
+verification.
+
+**No research-process dates in prose.** Drop "found 21.08.2026", "pulled
+directly", "read on". A date stays only if it is a fact the narrative needs — a
+filing's own date, a post's publication date, a deadline named in the source.
+Test: would a reader who knows nothing about how this was researched need this
+date to understand the claim?
+
+Link to the original wherever a URL exists — `t.me/<channel>/<id>`, a filing PDF,
+a press page — with short visible link text, never a bare URL in body text. If no
+public URL exists, say so rather than silently linking nothing.
+
+### 3.5 No internal notation
+
+Never surface database column names, script names, registry field names, tag
+class names, or internal jargon in published prose. `mine_leads.py`,
+`source_id`, `t-doc`, `wb_overlap`, `tier: adjacent` — all of these belong in the
+registry and in this repo's markdown, never on a page.
+
+### 3.6 Trace before correcting
+
+Before flagging any existing claim as mistaken or unconfirmed, trace it to its
+origin — `grep` the scraped corpus and the `wb_watch` history for the specific
+distinguishing terms together, not one of them. A plausible alternative
+explanation is not the same as finding the claim's source. Declare something
+mistaken only after an actual source search comes up empty or contradictory.
+
+---
+
+## Part IV — People
+
+### 4.1 Identifying detail
+
+Full identifying detail is published for network principals — see the PII section
+of `CLAUDE.md`, which is authoritative and was rewritten 2026-08-22. Summary:
+name, ФИО, DOB, birthplace, address and personal ИНН are in scope for PEPs,
+principals, owners, directors and comparable public actors, because the output
+feeds sanctions screening. Every such field carries its own source or is left
+null. People who are not principals are **not** in scope — ask first.
+
+### 4.2 Photographs
+
+Sourced from the subject's public or professional presence: their own channel,
+their company's site, press coverage, an official event. Not private or family
+imagery. Every photograph carries its source and date in the caption data.
+
+### 4.3 Depth is bounded by significance
+
+Spend real effort on the figures a reader will actually focus on — the
+supervisory board, the manufacturer principals, the money layer. Do not burn
+effort chasing a patronymic for every name in a long roster. An honest
+initials-only entry beats a guessed one.
+
+---
+
+## Part V — Project-specific standing rules
+
+### 5.1 Euphemism list — never let these stand unmarked
+
+| Term | What it actually denotes |
+|---|---|
+| «резидент» | A supplier admitted to a state-convened defence-procurement network — the word borrows the innocuous vocabulary of technology parks |
+| «гуманитарная миссия» / «гуманитарная помощь» | Delivery of military equipment to combat units |
+| «безвозмездная передача войсковым частям» | Free transfer of matériel to units at the front, stated in a foundation's own accounts |
+| «народный ОПК» | Nominally grassroots weapons manufacturing, convened and funded by the state |
+| «закрытая платформа инженерного снабжения» | A military procurement marketplace, described so as to avoid saying so |
+| «спецоперация» / «СВО» | The invasion of Ukraine — retain in quotation when quoting, never adopt in our own prose |
+
+Add to this table whenever a new sanitising term turns up.
+
+### 5.2 Bold conventions
+
+Bold a named individual or entity on **first mention** in a document; plain
+thereafter. If an entity is bolded once in a section, bold it at every mention in
+that section — never bold-then-plain for the same entity. Bolding used for
+numeric emphasis is unaffected and does not have to carry through.
+
+### 5.3 Open questions belong to the thing they are about
+
+Unresolved items attach to the entity, person or product they concern, in the
+registry, and the build renders the lists. Do not create a standing prose
+catch-all list — the project has had one rot and be re-reported as current
+before. Resolving something in the registry must strike it from every page at
+once.
+
+### 5.4 Adjacent-but-not-core entities
+
+An entity with no confirmed ЦБСТ tie gets `tier: adjacent` and at most a
+one-line disambiguation. It does not get a profile page and it does not enter the
+narrative. Full detail stays in project memory.
+
+### 5.5 Cross-linking
+
+Every named entity that has a profile page is a link at its first mention on any
+page. Every named individual links to their entry in the person index. From a RU
+page, link to the RU version of the target.
+
+---
+
+## Checklist before publishing
+
+- [ ] Every section is in the mode Part I assigns it — no forensic prose in the
+      recap, no FP flourish in a profile.
+- [ ] RU pages were written, not translated.
+- [ ] No cheap intensifiers. No unsourced number. No explained irony.
+- [ ] Every person name: Latin primary, full Cyrillic ФИО shown, consistent
+      across all pages.
+- [ ] Every entity: legal form glossed on first mention, transliterated after.
+- [ ] Every quote verified character-for-character against the original.
+- [ ] Every claim carries a confidence level and a resolvable source.
+- [ ] No internal notation, no research-process dates, no hashes in prose.
+- [ ] `python3 scripts/check_registry.py` passes.
+- [ ] `python3 scripts/check_tag_balance.py` passes on every generated file.
+- [ ] Artifact is **not** republished — only at an explicit user-called cutoff.

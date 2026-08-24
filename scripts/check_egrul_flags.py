@@ -17,10 +17,23 @@ from pathlib import Path
 # (marker regex, what it means)
 FLAGS = [
     (r"Ограничение доступа к сведениям", "access to this field is restricted"),
+    (
+        r"Доступ\s+к\s+сведениям[^\n]{0,15}ограничен",
+        "access to this field is restricted (director/founder — the most common "
+        "EGRUL redaction phrasing, distinct from the shorter 'Ограничение доступа' "
+        "form above; catches this even when field content wraps across a line)",
+    ),
     (r"ОгрДосСв", "access-restriction flag (short form)"),
     (
-        r"ПризнНедДанУчр|сведения недостоверны",
+        r"ПризнНедДанУчр",
         "individual has disavowed being recorded as owner (possible nominee/strawman)",
+    ),
+    (
+        r"сведения недостоверны",
+        "reliability flag on SOME field (address/director/founder — check which "
+        "one from context; ФНС uses this generic phrase for any failed "
+        "verification, not owner-disavowal specifically — don't assume nominee/"
+        "strawman without confirming the flagged field is the founder/owner one",
     ),
     (r"доступ ограничен", "access restricted (founder/director field)"),
 ]

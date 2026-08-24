@@ -18,7 +18,7 @@ from pathlib import Path
 
 from id_patterns import (
     RE_ENTITY_BARE, RE_ENTITY_QUOTED, RE_INN, RE_OGRN, RE_QUOTED_NAME,
-    RE_ROLE_NAME,
+    RE_ROLE_NAME, is_noise_quote,
 )
 
 
@@ -29,7 +29,10 @@ def scan(text: str) -> dict[str, list[str]]:
     for m in RE_ENTITY_BARE.finditer(text):
         entities.append(f"{m.group(1)} {m.group(2).strip()}")
 
-    products = [f"«{m.group(1).strip()}»" for m in RE_QUOTED_NAME.finditer(text)]
+    products = [
+        f"«{m.group(1).strip()}»" for m in RE_QUOTED_NAME.finditer(text)
+        if not is_noise_quote(m.group(1))
+    ]
     people = [m.group(1).strip() for m in RE_ROLE_NAME.finditer(text)]
     inns = [m.group(1) for m in RE_INN.finditer(text)]
     ogrns = [m.group(1) for m in RE_OGRN.finditer(text)]
