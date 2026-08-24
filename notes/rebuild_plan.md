@@ -106,7 +106,7 @@ Three further gaps this rebuild closes:
 |---|---|
 | 0 — Foundations | **Done.** Both remaining items closed: the Mermaid flowchart is now a static inlined `<svg>` (zero `<pre class="mermaid">` left), and the `[data-theme]` toggle has a working inline script. Verified in headless Chrome; `check_tag_balance.py` clean. |
 | 1 — Registry (entities) | **Done.** 147/148 entities `_verified` (only `krams-brand-unresolved` open — genuinely unresolved, correctly left so). 141 with ИНН, 140 with ОГРН. `check_registry.py`: 0 errors. |
-| 1 — Registry (people) | **Not done — the neglected half.** 148/153 people are `_verified: false`, and **120 of 153 role links carry `_candidate: true`** (~78% of person→entity claims unconfirmed). See new **Phase 1b**. |
+| 1 — Registry (people) | **Not done — the neglected half.** Re-counted 2026-08-24 (later session) against the now-305-person roster: 146 `_verified: false`, 83 role links still `_candidate: true` (down from 111 earlier this session via a bulk EGRUL cross-check). Raw fractions against the grown roster are misleading — see Phase 1b's reframing: the real gap is a specific 147-person legacy cohort, not the roster as a whole. See **Phase 1b**. |
 | **1b — People verification** | **NEW.** Gates Phase 4's People block. User-chosen over shipping hedged person data. |
 | 1.5 — Source triage / typology | **Partial.** Files typed, but `facility_type` is populated on **3 of 148** entities — 1.5b is effectively unstarted. |
 | 2 — Screening | **Substantially done**, 4 blockers documented below. OpenSanctions, Aleph and Rospatent trademarks all swept full-roster. **People-side OpenSanctions cross-reference now also done** (2026-08-24) — see below. |
@@ -117,9 +117,11 @@ Three further gaps this rebuild closes:
 | 4 — Generator | Not started. New prerequisites identified — see **Phase 3.5**. |
 | 5 — Prose | Not started. Thesis framing has changed — see revised Phase 5. |
 
-**Registry now holds:** 148 entities (93 manufacturers, 28 money-layer, 14
-plumbing, 9 cbst-core, 4 adjacent), 154 people, 977 sources, 19 quotes.
-58 entities and **33 people** now carry `sanctions[]` entries (27 → 33 this
+**Registry now holds (re-counted 2026-08-24, later session):** 149 entities
+(93 manufacturers, 28 money-layer, 15 plumbing, 9 cbst-core, 4 adjacent), 305
+people (up sharply from 154 — see Phase 1b's reframing below for why this
+isn't 151 new unverified records), 1168 sources, 19 quotes. 58 entities and
+**33 people** now carry `sanctions[]` entries (27 → 33 this
 session, via a full triage of all people with `opensanctions_matches[]` but no
 promoted `sanctions[]` yet — 6 promoted on exact score-1.0 identifier match, 2
 flagged as open questions rather than promoted due to a genuine two-candidate
@@ -555,11 +557,16 @@ unstarted.**
   and `t-press`, so it should be scheduled, not left as reference-library
   housekeeping.
 
-**Broader source-catalogue health** (new numbers, 951 sources):
-`type` null on **392** (overwhelmingly the machine-harvested `ALEPH_*` /
-`OPENSANCTIONS_*` JSON dumps the typing logic never covered — a known shape, not
-a random gap); `as_of` null on **426**; `url` empty on **all 951**; `entities`
-empty on **all 951**; `_verified: false` on **all 951**.
+**Broader source-catalogue health** (re-counted 2026-08-24, later session,
+against 1168 sources — up from 951 when first measured): `type` null on
+**589** (overwhelmingly the machine-harvested `ALEPH_*` / `OPENSANCTIONS_*`
+JSON dumps the typing logic never covered — a known shape, not a random gap;
+grew proportionally with source count, ~41-45% both times); `as_of` null on
+**630**; `url` empty on **all 1168**; `entities` empty on **all 1168**;
+`_verified: false` on **all 1168**. The percentages are essentially unchanged
+from the original measurement — this is stalled at the same rate the count
+has grown, not improving or worsening in relative terms. See Phase 3.5 §5
+above for the same finding stated against `entities[].sources[]`.
 
 Added 2026-08-22, after a full logging/hashing audit of `data/sources/`
 (all 418 files now have a `sources.json` entry and a `sha256` — see
@@ -1005,63 +1012,137 @@ scripts and dozens of correction batches. A Jinja template consuming it today
 would break, render duplicates, or silently omit blocks. This is the cleanup
 that makes the data generator-safe. All of it is local, verifiable work.
 
+**Data-shape re-audit, 2026-08-24 (later in this session).** Re-ran the counts
+behind every item below directly against the live `data/registry/*.json` (149
+entities, 305 people, 1168 sources now — up from 148/154/977 when this section
+was first written) rather than trusting the numbers as last recorded. Headline:
+**item 8 is done; items 3, 5, 6 and 7 have not moved AT ALL** despite a great
+deal of other work landing in between — they've been consistently skipped in
+favor of content work, not because anyone tried and failed. Item 1 turns out to
+be a bigger gap than previously described (see below — the redesigned field
+doesn't exist in code yet, not just the one regression). Item 4's tombstone
+count has grown (more reason to fix it, not less). These are re-flagged here so
+a future session doesn't have to re-derive current numbers from scratch again.
+
 **1. Fix the `wb_overlap` regression and split raw from curated** *(user
-decision: raw + curated)*
+decision: raw + curated)* — **STILL FULLY OPEN, and bigger than "one
+regression."** Direct check of `entities.json` (2026-08-24, later session)
+confirms: `ooo-trimiks-bulat-3mx` is still `none_found`. But also: **no entity
+in the registry uses the planned `confirmed_direct`/`confirmed_reseller` split
+at all** — the two entities the split's own example text names, ООО «ГАСКАР»
+and ООО «АСЕЛ ЛАБС», both carry the bare literal value `"confirmed"`, an enum
+value that was never actually part of any documented design. `wb_matches[]` is
+`None`/absent on every single entity, and `scripts/screen_wb.py` **does not
+exist** (`ls scripts/ | grep wb` finds only `export_from_wb_watch.py`, the
+historical bootstrap script, unrelated). In short: the raw/curated split is a
+decision recorded in this plan, not yet a line of code or a schema field
+anywhere. Current `wb_overlap` distribution: `none_found` 84, `not_checked` 63,
+`confirmed` 2 (the two above), `confirmed_reseller`/`confirmed_direct` 0.
 
-- Restore `ooo-trimiks-bulat-3mx` to `confirmed` — with the reseller evidence
-  attached, not despite it.
-- Move the machine sweep into `scripts/screen_wb.py` writing `wb_matches[]` +
-  `wb_screened_at`; `wb_overlap` becomes a **human-set conclusion only**.
-- Values: `confirmed_direct` (own ИНН is a WB seller — ООО «ГАСКАР», ООО «АСЕЛ
-  ЛАБС»), `confirmed_reseller` (brand on WB via reseller accounts, maker's ИНН
-  absent — Тримикс/«Булат»), `none_found`, `not_checked`.
-- Add the field to the carry-forward block (`extract_registry.py:1279-1330`) in
-  the same change, or the next regeneration wipes it.
+- Restore `ooo-trimiks-bulat-3mx` to `confirmed_reseller` — with the reseller
+  evidence attached, not despite it.
+- Reclassify the two existing bare-`"confirmed"` entities (ГАСКАР, АСЕЛ ЛАБС)
+  to `confirmed_direct` at the same time — they're already-known direct cases,
+  just sitting under a value the schema doesn't actually define.
+- Write `scripts/screen_wb.py` writing `wb_matches[]` + `wb_screened_at`;
+  `wb_overlap` becomes a **human-set conclusion only**, values `confirmed_direct
+  | confirmed_reseller | none_found | not_checked`.
+- Add the field to the carry-forward block in the same change, or the next
+  regeneration wipes it (same lesson as every other screening field this
+  project has added).
 
-**2. Guard against machine-overwrites-human generally.** `check_registry.py`
-gains a check that fails, not warns, when a curated conclusion field
-(`wb_overlap`, `sanctions[]`, `cbst_tie`, `tier`) is downgraded from a
-human-verified value by a bulk write without an explicit override. This class of
-bug has now happened once and is silent by construction.
+**2. Guard against machine-overwrites-human generally.** Still absent —
+`scripts/check_registry.py` (2026-08-24 re-check) has no function or check
+referencing `wb_overlap`, `_merged_into`, or any overwrite-protection logic at
+all; it validates ИНН/ОГРН checksums, duplicates and orphan source ids only.
+This class of bug has now happened once (the Тримикс regression, still
+unfixed above) and remains silent by construction.
 
-**3. Normalize type instabilities** — each of these will break a template:
+**3. Normalize type instabilities** — **UNCHANGED since this table was first
+written**, confirmed by direct re-count 2026-08-24 (later session). Zero
+progress on any of these despite substantial other work in between — worth
+treating as genuinely stalled, not just "not yet reached":
 
-| Field | Problem |
+| Field | Problem (re-confirmed 2026-08-24) |
 |---|---|
-| `charter_capital` | 29 int, 1 float, **1 string** |
-| `okved_mismatch` | 7 booleans and 15 long free-text explanations under one key |
-| entity `open_questions[]` | 79 dicts `{question, source_id}` + **4 bare strings**; 3 also carry `status` |
-| people `_corrected` | list on 39, **bare string on 2**, null on 4 (always a list on entities) |
-| `_verified_against` vs `verified_against` | accidental key split — 147 records vs 5 |
-| `sanctions[].regime` | free text, ~20 distinct spellings incl. `(program code not returned)`. Needs a `regime` enum + a `regime_raw` passthrough if the site is to group by jurisdiction |
+| `charter_capital` | 118 null, 29 int, 1 float, **1 string** — identical counts to the original audit |
+| `okved_mismatch` | 127 null, 7 booleans, 15 long free-text explanations under one key |
+| entity `open_questions[]` | now 101 dicts `{question, source_id}` + **3 bare strings** (grew from 79+4, still mixed shape — every addition this session used the dict shape, which is progress of a kind, but the 3 legacy bare strings were never cleaned up) |
+| people `_corrected` | 94 list, **1 bare string**, 210 null — the null count grew a lot (more people added overall), the string-vs-list inconsistency itself is unchanged |
+| `_verified_against` vs `verified_against` | accidental key split — now 148 vs 5 (was 147 vs 5) — the typo'd key is still what 96% of records actually use |
+| `sanctions[].regime` | now **41 distinct spellings** on entities alone (was ~20) — this got measurably worse as the sanctions sweep grew from 27→58 entities, not better |
 
 Encode each as a `check_registry.py` assertion afterwards so it cannot regress.
 
-**4. Make `_merged_into` real.** 3 entities (`kb-germes`, `ooo-sibnk`,
-`ooo-kb-sinergiya`) and 1 person (`brovchenko-aleksandr-rufinovich`) are
-tombstones. **Nothing in the codebase reads the key** — it is purely
-documentary, so a generator will emit them as real, duplicate entities.
+**4. Make `_merged_into` real.** Now **3 entities** (`kb-germes`, `ooo-sibnk`,
+`ooo-kb-sinergiya`, unchanged) and **3 people** (`brovchenko-aleksandr-
+rufinovich`, plus two new ones from this session's duplicate-cleanup work —
+`barakhtin-artem-vladimirovich-2` and `lysenko-andrey-olegovich-2`) are
+tombstones — up from 1 person when this item was first written. **Nothing in
+the codebase reads the key** — confirmed still true, it is purely documentary,
+so a generator will emit them as real, duplicate entities/people. The dedup
+work happening in parallel this session (finding and merging duplicates via
+leader-id `user_id` cross-checks) makes this fix *more* urgent, not less — it's
+the mechanism now being used to record every such finding, and none of them
+take effect anywhere except in this plan and in `corrections.json`'s own text.
 `check_registry.py` must validate the target slug exists; `build_site.py` must
-filter them; counts reported to readers should say 145 live entities / 152 live
-people, not 148 / 153.
+filter them; counts reported to readers should currently say roughly 146 live
+entities / 302 live people (not raw 149 / 305) once this is wired up.
 
-**5. Build the reverse source index.** `entities[].sources[]` is **empty on all
-148** — provenance actually runs the other way, via `sources.json.inns`. Phase
-4's per-entity §14 "Sources" block and `check_citations.py` both assume forward
-linkage. Build the reverse map at build time from `sources.json.inns` rather
-than duplicating data. Also: `sources[].url` is empty on all 951, so nothing
-links out to an original document yet.
+**5. Build the reverse source index.** Still **effectively untouched**:
+`entities[].sources[]` is non-empty on exactly **1 of 149** entities (a single
+one-off correction, not a systemic fill), `sources[].url` is empty on
+**all 1168**, `sources[].entities` is empty on **all 1168** — the scale grew
+(951→1168 sources) but the coverage percentage is identical (0%). Provenance
+still actually runs the other way, via `sources.json.inns`. Phase 4's
+per-entity §14 "Sources" block and `check_citations.py` both assume forward
+linkage that doesn't exist yet. Build the reverse map at build time from
+`sources.json.inns` rather than duplicating data.
 
-**6. Unify the three open-question stores** into one shape (see Phase 1
-status) so the build renders a single list per entity plus a global set.
+**6. Unify the three open-question stores** into one shape. Still three
+separate, unlinked stores, and the global one is now *worse* on the metric
+that matters: `open_questions.json` (44 items, was 44) still has
+**`entity_slug: null` on all 44 of them** — completely unchanged since first
+measured, while the per-entity stores have grown to 104 items (101 dict + 3
+string) and a new per-person store now holds 3 items (was 1). The unification
+work hasn't started; the volume it needs to unify keeps growing.
 
-**7. Generalize `check_tag_balance.py`.** It hardcodes
-`docs/index.html` (`scripts/check_tag_balance.py:12`) and hard-exits unless the
-file contains literal `<div class="wrap">` and `</body>` markers. Phase 4 needs
-it to accept paths/globs and to not assume that wrapper.
+**7. Generalize `check_tag_balance.py`.** Still hardcodes `docs/index.html`
+(confirmed unchanged, `scripts/check_tag_balance.py:12` still reads
+`PATH = ... / "docs" / "index.html"`) and hard-exits unless the file contains
+literal `<div class="wrap">` and `</body>` markers. Phase 4 needs it to accept
+paths/globs and to not assume that wrapper.
 
-**8. Commit everything.** `data/` is untracked; the entire registry exists only
-in the working tree. Do this first, not last.
+**8. Commit everything.** ✅ **DONE** (see "Things to fix" §2 above,
+2026-08-24) — `data/registry/`, `STYLE_GUIDE.md`, `docs/_archive/`,
+`docs/assets/`, all screening scripts and the plan itself (this file) are now
+tracked across five commits. The only item in this phase that's actually
+closed.
+
+**New finding this pass, not previously documented — orphan role links.** 20
+of `people.json`'s non-`_candidate` role links (i.e., roles treated as
+resolved/confirmed) have `entity_slug: null` — mostly high-profile named
+figures whose role is described as free text without a formal entity link
+(Медведев, Турчак, Песков, Фрадков, Осадчук, Рубинштейн, and others — a mix of
+ЦБСТ-adjacent officials and money-layer figures). Some of these may be
+correctly unlinked — a role like "associate of the ДАР fund network" doesn't
+always map onto one legal entity — but the set has never been individually
+triaged to confirm that, versus just being an extraction gap. Worth a pass
+before Phase 4 renders per-entity People blocks, since a null `entity_slug` on
+a *non-candidate* role currently reads as "resolved, nothing to link" rather
+than "needs review."
+
+**Reframing for Phase 1b, not a Phase 3.5 item but worth stating here since
+it came out of the same audit:** the people roster has grown from 153 to 305
+since Phase 1b's headline numbers were taken, and the growth is NOT uniform
+unverified backlog — of the 158 people added via `corrections:add_entities`
+(patent co-inventors, GUR/rk.2035.university/leader-id finds, EGRUL directors,
+etc.), **154 are already `_verified: true`**, because they were added with
+sourcing attached at creation time. The real unresolved gap is concentrated in
+the original **147 prose/table-scaffolded records, of which only 5 are
+verified** — a narrower, more specific target than "148/305 unverified" makes
+it look. Phase 1b's actual job is verifying that legacy 147, not the newer
+158, which are mostly already in good shape.
 
 ---
 
@@ -1073,12 +1154,25 @@ before this plan. `requirements.txt` has 3 entries (telethon, python-dotenv,
 openpyxl) — **jinja2 is not among them and appears nowhere in the repo**.
 `docs/assets/ownership-graph.svg` now exists (Phase 0).
 
-**Render only what the data supports.** Every profile block is conditional, and
-the current coverage says several would be near-empty: `facility_type` 3/148
-(§8), `patents` 1/148 (§11), `foreign_components` 0/148 (§10), `images` 0/148,
-`litigation` 0/148, `financials` 52/148 (§5), `cbst_tie` 15/148. Decide per
-block whether to render-if-present, show an explicit "not established" state, or
-drop it — an empty block that looks like an answer is worse than an absent one.
+**Render only what the data supports.** Every profile block is conditional.
+Coverage re-counted directly 2026-08-24 (later session) against the current
+149-entity registry, since several of these numbers had drifted a lot since
+first written: `facility_type` still 3/149 (§8, unmoved), `patents` **25/149**
+(§11 — up sharply from 1/148, this session's two patent-promotion passes),
+`foreign_components` 3/149 (§10 — up from 1/148), `images` **3/149** (up from
+0/148 — see Phase 3's first small imagery batch), `litigation` still 0/149
+(§9, unmoved), `financials` 52/149 (§5, essentially unmoved), `cbst_tie`
+16/149 (essentially unmoved), `confidence` 26/149 (§— unmoved, still ~83%
+absent — see Phase 1's "Confidence" note, also stalled), `trademarks` 41/149,
+`sanctions` 58/149 (well-populated now — see Phase 2 status). Decide per block
+whether to render-if-present, show an explicit "not established" state, or
+drop it — an empty block that looks like an answer is worse than an absent
+one. The pattern worth noting: blocks fed by a *screening sweep* (patents,
+sanctions, trademarks) have grown a lot; blocks that need *individual human
+reading* per entity (facility_type, confidence tagging, litigation) haven't
+moved at all across several sessions of otherwise-substantial progress — that
+asymmetry is worth planning around rather than assuming steady progress on
+everything.
 
 Add `jinja2` to `requirements.txt`. New `scripts/build_site.py` renders
 `data/registry/*.json` + prose partials into `docs/`.
@@ -1116,9 +1210,13 @@ blocks, each rendering only when the registry has data:
    as "professional training"; СКБ Пиранья as software; Кольская верфь as *sport*
    shipbuilding). It becomes a standing profile block, not a buried aside.
 3. **People** — full ФИО + Latin + role + photo, linked to the person index.
-   **Gated on Phase 1b.** Do not render this block from the current data: 148 of
-   153 people are unverified and 120 of 153 role links are `_candidate: true`.
-   Only 1 person has a photo.
+   **Gated on Phase 1b.** Do not render this block from the current data.
+   Re-counted 2026-08-24 (later session) against the now-305-person registry:
+   146/305 people are unverified and 83/305 role links are `_candidate: true` —
+   see Phase 1b's reframing above for why raw counts against the grown roster
+   overstate the remaining gap (most of the growth is already-verified
+   corrections-added records; the real target is a specific 147-person legacy
+   cohort). 4 people have a photo (up from 1 — see Phase 3).
 4. **Products** — name, description, imagery, and **which units received them**.
 5. **Money** — multi-year revenue/profit/headcount from БФО, charter capital,
    and the scale-mismatch flag where reach and revenue contradict (СуперХроно's
