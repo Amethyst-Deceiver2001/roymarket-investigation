@@ -768,6 +768,13 @@ SOURCE_TYPE_PATTERNS = [
     # own filed professional-qualification/КИМ content on a sectoral platform
     # (e.g. rk.2035.university) -- entity-specific evidence of what it
     # actually teaches/trains, not a cross-entity template like a Устав.
+    (re.compile(r"^HimeraSearch-"), "osint_leak_aggregator"),  # a Химера-style
+    # person dossier assembled from breached/leaked Russian consumer, courier,
+    # banking, Rosreestr and tax-service datasets — not a government registry
+    # or a primary filing. Individual fields (ИНН, DOB, address) are still
+    # citable once cross-checked against an independent identifier already on
+    # the person's record, same discipline as any other secondary aggregator
+    # (OpenSanctions, Aleph) — but the source itself is never `t-doc` tier.
 ]
 
 RE_FILENAME_DATE = re.compile(r"_(\d{8})(?:_|\.)")

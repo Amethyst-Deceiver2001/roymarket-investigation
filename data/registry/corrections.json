@@ -13183,7 +13183,13 @@
     },
     "barashkov-aleksandr-sergeevich": {
       "set": {
-        "inn_personal": "252201766438"
+        "inn_personal": "252201766438",
+        "dob": "1979-11-03",
+        "birthplace": "Хабаровск / Khabarovsk",
+        "address": "г. Краснодар, ул. Черкасская, д. 97, кв. 25 (current, per multiple 2023–2024 records — Росреестр, ОСАГО policy, ФССП debtor record; earlier registered address through ~2019 was Приморский край, Октябрьский р-н, с. Покровка, ул. Энгельса, 13, кв. 1, matching the registry's existing note on his ОГРНИП's original 2013 Приморье registration)",
+        "sources": [
+          "s1171"
+        ]
       },
       "verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
       "why": [
@@ -13192,7 +13198,8 @@
         "registry). Own ЕГРИП/reestr-МСП extract confirms ОГРНИП",
         "313251103800105, originally registered 07.02.2013 in Приморский",
         "край (МИФНС №9), tax jurisdiction later moved to Краснодар.",
-        "2026-08-24 OpenSanctions screening: both returned candidates have a DIFFERENT surname from this registry's Барашков — \"Baranov Aleksandr Sergeevich\" (Wagner PMC member, DOB 1978-08-29) and \"Александр Сергеевич Карташков\" (bare name). Neither carries any of this registry's own «Гагаринг»/«АКР Бегак»/КБ «Око» company context. REJECTED as a false positive — surname collision (Барашков vs Баранов/Карташков), not the same person."
+        "2026-08-24 OpenSanctions screening: both returned candidates have a DIFFERENT surname from this registry's Барашков — \"Baranov Aleksandr Sergeevich\" (Wagner PMC member, DOB 1978-08-29) and \"Александр Сергеевич Карташков\" (bare name). Neither carries any of this registry's own «Гагаринг»/«АКР Бегак»/КБ «Око» company context. REJECTED as a false positive — surname collision (Барашков vs Баранов/Карташков), not the same person.",
+        "2026-08-24: user-supplied HimeraSearch OSINT-leak-aggregator dossier (s1171, a Химера-style compilation of breached Russian consumer/courier/banking/Rosreestr/tax records, NOT a government registry) matches this person on an EXACT identifier — ИНН 252201766438, the same personal ИНН already on this record — across every one of its ~40 constituent leaked-dataset entries, all under the same DOB (03.11.1979). Confirms dob and adds birthplace (Хабаровск, consistent across three independent Росреестр pulls dated 2022–2024) and current address (Краснодар, ул. Черкасская 97-25, consistent across a 2024 ФССП debtor record, a 2024 ОСАГО policy and multiple 2024 Росреестр vehicle-registration entries). Employment history in the dossier — director/владелец of ИП Барашков Александр Сергеевич and multiple SDEK Krasnodar courier-franchise entities, 2018–2023, before the shift to «Гагаринг» — corroborates the registry's own existing note that this is a \"гаражники\"-era startup founder, and independently confirms the Приморье→Краснодар address move already inferred from the ОГРНИП/tax-jurisdiction record. One dossier entry (LEADER-ID.RU ПОЛЬЗОВАТЕЛИ 2023, no user_id given, photo file 145752.jpg, address Краснодар, occupation «Предприниматель») is a plausible third leader-id.ru account for this person, distinct from the two non-matching accounts already recorded in leader_id_matches (a Nerekhta schoolboy and a blank Moscow account) — not promoted here since the dossier gives no leader-id user_id to cross-check, left as an open lead only. NOT promoting the dossier's passport numbers, SNILS, phone numbers or vehicle/insurance detail into the registry — out of scope for what a company-profile record needs; ИНН/dob/birthplace/address already give sanctions screening a workable identifier set. Also noted but not acted on: a debt record (ФССП, Прикубанский округ Краснодара, ₽132,554, 2023) — ordinary consumer debt, not evidence of anything relevant to this investigation."
       ]
     },
     "baygutlina-irina-anatolevna": {
