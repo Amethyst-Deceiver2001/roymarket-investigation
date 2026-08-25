@@ -156,14 +156,27 @@ inside the document itself — grep it for what's still unnamed.
   actually been opened** — a homepage-only pass on TSG Group's site missed
   a real brand-name collision («Стрибог») that only surfaced on a full
   re-scan.
-- **PII discipline**: default to name+role only (EGRUL-sourced), no
-  addresses/passport numbers, *unless* the user explicitly asks for full
-  detail on a specific case (happened once, for the InformNapalm
-  «Архангел» dossier — treat as an exception, not the default).
+- **PII discipline (revised 2026-08-22 — supersedes the old default)**:
+  named individuals get **full identifying detail** (DOB, place of birth,
+  address, personal ИНН, photo) where sourced — this investigation feeds
+  sanctions screening, where DOB is often what makes a match legally usable.
+  Every field still needs its own `source_id`; never inferred or filled from
+  a plausible namesake. Only applies to PEPs/network principals (owners,
+  directors, officials) — not to incidental resellers or people mentioned in
+  passing. See `CLAUDE.md`'s "PII handling" section for the full rule.
 - **Adjacent-not-core networks** (same industry/event/name, no confirmed
   ЦБСТ tie) get one disambiguation line in the brief, full detail parked in
-  memory. Two on record already: the national НПЦ БАС/Технопарк program,
-  and two of the three «Архангел»-branded entities.
+  memory. On record: the national НПЦ БАС/Технопарк program, two of the
+  three «Архангел»-branded entities, and (2026-08-25) unrelated Chinese
+  resellers surfacing under the "Набат" brand name on WB/Ozon.
+- **VK/TG as primary source, marketing copy scanned verbatim (2026-08-25)**:
+  no official site is not a dead end for `products[]` — a VK/TG catalog is a
+  valid primary source in its place. Any marketing copy scan (site, listing,
+  brochure) must be grepped for and quote verbatim any self-incriminating
+  СВО/military-use language, not just note the adjacent commercial fact (a
+  discount tier, a spec sheet). See the seeded
+  `roymarket_vk_tg_as_primary_source` and
+  `roymarket_capture_self_incriminating_marketing_copy` memory files.
 
 ## Pending / open work
 

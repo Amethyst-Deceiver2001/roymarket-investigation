@@ -1002,6 +1002,28 @@ file:
 - Person photographs per the Phase 0 bound — the 3 pulled this session are
   professional leader-id.ru profile photos, consistent with that bound (not
   private/family imagery).
+- **2026-08-25 (later session, HAR-driven marketplace pass)**: a new source
+  class for this phase — user-supplied HAR captures of Ozon/WB/Yandex Maps
+  sessions, processed via `scripts/har_tools.py` (salvages truncated HAR
+  JSON — promoted from a `/tmp` scratch file this session). Confirmed
+  `ooo-gaskar`'s Ozon storefront
+  via matching ОГРН (`s1385`); resolved `ooo-pokrov`'s site and the "Макс 911"
+  Ozon dealer's real identity (ИП Коровкин, via egrul.nalog.ru open API,
+  `s1387`/`s1388`); for `ooo-goudron`, confirmed/corrected two Ozon seller
+  leads (one is actually a different legal entity, ООО «ИНВИЖН ТРЕЙД» —
+  caught before misattribution), archived its own product site (набат.рф,
+  `s1393`) including the self-incriminating "СВО" tagline, and pulled 4
+  showroom photos + customer-review quotes from a Yandex Maps HAR (`s1396`)
+  — most notably an official-account photo of wall signage reading "СВОих не
+  бросаем" and a customer review confirming a combat-zone purchase. Two new
+  standing rules came out of this pass, now in memory: VK/TG counts as a
+  primary source when no official site exists
+  (`roymarket_vk_tg_as_primary_source`), and marketing copy must be scanned
+  for and quote verbatim any self-incriminating СВО/military language, not
+  just paraphrased around (`roymarket_capture_self_incriminating_marketing_copy`).
+  Open: only 50/120 Yandex reviews and 4/48 gallery photos pulled (more
+  available on request); the smaller "GD" Ozon seller for `ooo-goudron`
+  remains unresolved (legal-info modal never captured with content).
 
 ---
 
