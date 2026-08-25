@@ -15786,11 +15786,13 @@
             "to": null,
             "source_id": "s0074"
           }
-        ]
+        ],
+        "photo": "images/kostyunin-pavel-andreevich_portrait_leaderid.jpg"
       },
       "why": [
         "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Генеральный директор\", Москва -- exact name/title match to ao-stratim's own already-sourced `director` field (Костюнин Павел Андреевич), resolving one of the three pre-existing `_candidate` role links on this person (АО «Стратим») via corroboration, though not upgraded to a sourced `source_id` on the role itself -- leader-id self-report alone isn't sufficient sourcing for that per this registry's standing discipline. The other two candidate roles (АО «Стратим-Тех», ООО «Стратим») remain unreviewed.",
-        "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. АО «Стратим» -> ao-stratim, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0111). ООО «Стратим» -> ooo-stratim, confirmed Ликвидатор via egrul_batch_pull.py snapshot (s0074)."
+        "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. АО «Стратим» -> ao-stratim, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0111). ООО «Стратим» -> ooo-stratim, confirmed Ликвидатор via egrul_batch_pull.py snapshot (s0074).",
+        "2026-08-25: photo pulled from leader-id.ru profile page https://leader-id.ru/users/6040137 (user_id 6040137, avatar field -> leader-id.storage.yandexcloud.net/upload/6040137/0255b3ed-e645-4f8c-8e7c-0479c67db6ea_360.jpg), the account already ID-matched above (see leader_id_matches). This is the SECOND leader_id_matches entry for this person (user_id 6040137, no employer/position populated by the search API), not the first (user_id 6188775, employer/position populated). The public profile page for 6040137 confirms the same person (АО «Стратим» Генеральный директор 2022-present) and adds stated interests (biotech, UAV, low-earth-orbit spacecraft) but no contact details or other social links -- profile has no public email/phone/social fields, and resume/education sections are marked hidden by the user."
       ]
     },
     "fominykh-aleksey-mikhaylovich": {
