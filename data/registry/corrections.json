@@ -15109,13 +15109,15 @@
         ],
         "inn_personal": "636501708070",
         "address": "Самарская область, с. Большая Черниговка, ул. Железнодорожников, д. 14, кв. 3",
-        "notes": "Паспорт 3608 869401. Тел. +7 921 570-67-88. Email: posenses@gmail.ru, info@prounit.info (указан один раз для Яндекс.Еды, не перепроверено)."
+        "notes": "Паспорт 3608 869401. Тел. +7 921 570-67-88. Email: posenses@gmail.ru, info@prounit.info (указан один раз для Яндекс.Еды, не перепроверено).",
+        "photo": "images/shagiakhmetov-ayrat-fatkhutdinovich_portrait_vimaivivs.jpg"
       },
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
         "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2826668C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
-        "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+        "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text.",
+        "2026-08-25: photo + corroborating public appearance from @vimaivivs (ВИМАИВиВС, St. Petersburg Military Artillery Museum) post 3195, 17.12.2025 (t.me/vimaivivs/3195, s1409) — ceremony where ООО «Тримикс» handed the museum a «Булат» v.4 detector and a «Таир» individual-warning device, and signed a cooperation agreement with the Михайловская военная артиллерийская академия, with Шагиахметов personally awarding certificates (благодарственные письма) to cadets — same genre as other roster entities' cadet/unit recognition events. Confirms his GD role and personal public-facing promotion of the product line in a military-institutional setting."
       ],
       "verified_against": null
     },
