@@ -15295,13 +15295,26 @@
             "source_id": "s0822"
           }
         ],
-        "notes": "Full name Александр Геннадьевич Сидякин, b. 17.11.1977, Segezha, Karelian ASSR (confirmed: duma.gov.ru, ru/en.wikipedia.org, tass.ru/encyclopedia) -- matches DOB already on file. Law degree, Tver State University 1999; PhD in law. State Duma deputy since 2011 (United Russia); 2018-2021 head of the Administration of the Head of Bashkiria; now Deputy Secretary-General of United Russia / head of its Central Executive Committee. No personal ИНН or corporate directorship found on rusprofile/list-org under his name -- appears to have no direct corporate footprint (not confirmed absence, just nothing found). declarator.org holds an income-declaration filing history (person/439): 2020 declared income ₽4,982,756.02; 2017 declared income ₽13,568,373.45, 2,814 m² real estate -- not yet independently re-verified by direct fetch, treat as a lead. Photo: official United Russia party portrait (er.ru/person/38909bda-9562-4ccf-9d44-944b09b47c74). No personal VK/Telegram/Instagram independently verified — a Twitter handle @a_sidyakin and VK vk.ru/sizyakin surfaced in search but are NOT confirmed as his (spelling drift risk, not opened/verified) — do not use without confirming.",
-        "photo": "images/aleksandr-sidyakin_portrait_erru.jpg"
+        "notes": "Full name Александр Геннадьевич Сидякин, b. 17.11.1977, Segezha, Karelian ASSR (confirmed: duma.gov.ru, ru/en.wikipedia.org, tass.ru/encyclopedia) -- matches DOB already on file. Law degree, Tver State University 1999; PhD in law. State Duma deputy since 2011 (United Russia); 2018-2021 head of the Administration of the Head of Bashkiria; now Deputy Secretary-General of United Russia / head of its Central Executive Committee. No personal ИНН or corporate directorship found on rusprofile/list-org under his name -- appears to have no direct corporate footprint (not confirmed absence, just nothing found). declarator.org holds an income-declaration filing history (person/439): 2020 declared income ₽4,982,756.02; 2017 declared income ₽13,568,373.45, 2,814 m² real estate -- not yet independently re-verified by direct fetch, treat as a lead. Photo: official United Russia party portrait (er.ru/person/38909bda-9562-4ccf-9d44-944b09b47c74). No personal VK/Telegram/Instagram independently verified — a Twitter handle @a_sidyakin and VK vk.ru/sizyakin surfaced in search but are NOT confirmed as his (spelling drift risk, not opened/verified) — do not use without confirming. Personal Telegram channel confirmed: t.me/asidyakin (bio: \"Руководитель ЦИК партии Единая Россия, координатор проекта Историческая память, Депутат Госдумы\", plus links to vk.com/a_sidyakin and max.ru/asidyakin) — resolves the earlier unconfirmed vk.ru/sizyakin candidate; vk.com/a_sidyakin is the real one, not that spelling variant.",
+        "photo": "images/aleksandr-sidyakin_portrait_erru.jpg",
+        "social": [
+          {
+            "platform": "Telegram",
+            "url": "https://t.me/asidyakin",
+            "source_id": null
+          },
+          {
+            "platform": "VK",
+            "url": "https://vk.com/a_sidyakin",
+            "source_id": null
+          }
+        ]
       },
       "why": [
         "2026-08-24 OpenSanctions screening (score 0.92): \"Member of the State Duma... responsible for political and legal support of the aggressive war against Ukraine\" — consistent with, though not identical to, this registry's own role (Secretary of ЦБСТ's Supervisory Board; Head of United Russia's Central Executive Committee) and with the already-archived TRANSCRIPT_20250421_peregovorka-cbst-er-sidyakin-bezrukov.txt, in which this same Сидякин speaks alongside Bezrukov on ЦБСТ's own United Russia podcast. PLAUSIBLE, not personal-ИНН-confirmed — no idNumber returned by OpenSanctions for this match.",
         "2026-08-25: OSINT research pass -- confirms bio/DOB, adds declared-income lead and notes absence of found corporate footprint.",
-        "2026-08-25: photo/social-media OSINT research pass."
+        "2026-08-25: photo/social-media OSINT research pass.",
+        "2026-08-25: personal Telegram/VK confirmed via t.me/asidyakin's own bio — added to social[]."
       ],
       "verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text"
     },
