@@ -30956,16 +30956,24 @@
       "telegram": [],
       "vk": [],
       "youtube": [],
-      "marketplace_listings": [],
+      "marketplace_listings": [
+        {
+          "url": "https://www.wildberries.ru/seller/250130605",
+          "note": "Official WB seller storefront, ИНН/ОГРН confirmed exact match (9718278129 / 1257700126958) via user-supplied browser HAR capture 2026-08-25 (s1380) -- self-declared trademark on WB is \"ASEL LABS - Производитель\". 65 items for sale, rating 4.7/9 reviews, WB-registered 2026-04-14."
+        },
+        {
+          "url": "https://www.wildberries.ru/catalog/967207094/detail.aspx",
+          "note": "Детектор дронов aSel Labs H231b -- matches products[] entry exactly."
+        },
+        {
+          "url": "https://www.wildberries.ru/catalog/985476680/detail.aspx",
+          "note": "Детектор дронов aSel Labs H233 -- matches products[] entry exactly."
+        }
+      ],
       "other": []
     },
     "images": [],
-    "open_questions": [
-      {
-        "question": "wb_overlap is 'confirmed' but web.marketplace_listings is empty and a direct Wildberries search for the H231b product (2026-08-25) found no live listing under the aSel Labs / asellabs name -- worth re-checking what the original 'confirmed' status was based on. Separately found asellabs.ru, which self-identifies as an \"официальный оптово-розничный дистрибьютор\" (official wholesale-retail distributor) of aSel Labs products since 2023, offices in SPb/Moscow -- NOT the manufacturer itself (that's asellabs.com, already on file), so not added to web.sites; may be where the WB/marketplace presence actually lives if one exists, under the distributor's own listing rather than the manufacturer's.",
-        "source_id": null
-      }
-    ],
+    "open_questions": [],
     "sources": [],
     "confidence": null,
     "_verified": true,
@@ -30977,7 +30985,8 @@
       "full EGRUL extract pulled directly 23.08.2026 (ul-1257700126958-20260823135721.pdf). Sole founder = sole director.",
       "Full product catalog extracted from https://asellabs.com/ (23.08.2026, site sweep).",
       "2026-08-24 wb_overlap check: direct ИНН match against wb_watch.db's own sellers table (this project's sister investigation, its own separate scrape of the Wildberries marketplace) — same ИНН as 5 WB-listed item(s), 5/5 of them military-flagged by wb_watch's own classifier. Seller «ООО \"АСЕЛ ЛАБС\"», WB supplier_id 250130605, trademark «ASEL LABS - Производитель» — drone detectors (aSel Labs H231b/H233), sold directly under the manufacturer's own name.",
-      "Web search 2026-08-25 to fill the marketplace_listings gap found a distributor site instead of a direct WB listing; flagged rather than guessed at."
+      "Web search 2026-08-25 to fill the marketplace_listings gap found a distributor site instead of a direct WB listing; flagged rather than guessed at.",
+      "Resolved via user-supplied browser HAR capture of the seller's own WB storefront (2026-08-25, s1380) -- ИНН/ОГРН exact match confirms this is genuinely the manufacturer's own WB presence, not a reseller's. Supersedes the earlier open_question flagging 'no listing found' from a name-based search, which had simply missed the storefront (WB search doesn't surface all seller pages the same way product search does)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
