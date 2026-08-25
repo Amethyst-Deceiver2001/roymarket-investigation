@@ -5684,8 +5684,8 @@
     "name_latin": null,
     "dob": "1988-03-17",
     "birthplace": null,
-    "address": null,
-    "inn_personal": null,
+    "address": "Самарская область, с. Большая Черниговка, ул. Железнодорожников, д. 14, кв. 3",
+    "inn_personal": "636501708070",
     "roles": [
       {
         "entity_slug": "ooo-trimiks-bulat-3mx",
@@ -5712,7 +5712,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "Паспорт 3608 869401. Тел. +7 921 570-67-88. Email: posenses@gmail.ru, info@prounit.info (указан один раз для Яндекс.Еды, не перепроверено).",
     "sources": [],
     "mentions": 2,
     "_verified": false,
@@ -5726,7 +5726,8 @@
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
       "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2826668C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -9422,10 +9423,10 @@
     "slug": "beloglazova-lyudmila-aleksandrovna",
     "fio_ru": "Белоглазова Людмила Александровна",
     "name_latin": null,
-    "dob": null,
+    "dob": "1983-10-18",
     "birthplace": null,
-    "address": null,
-    "inn_personal": null,
+    "address": "Самарская область, г. Самара, ул. Парижской Коммуны, д. 23, кв. 126; также Самарская область, Большечерниговский р-н, с. Большая Черниговка, ул. Чапаевская, д. 17, кв. 2",
+    "inn_personal": "636501893256",
     "roles": [],
     "sanctions": [],
     "other_entities": [],
@@ -9434,9 +9435,30 @@
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
     "subsidiary_liability_checked_at": null,
-    "social": [],
+    "social": [
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/id16068782",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "Facebook",
+        "url": "https://www.facebook.com/lyudmila.beloglazova.12",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/lyudmilaalexandrovna_/",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/lyudmilaalexandrovna/",
+        "source_id": "s1408"
+      }
+    ],
     "photo": null,
-    "notes": null,
+    "notes": "Паспорт 3610 307685. Тел. +7 927 745-28-47. Email: meshkova-lyudmil@mail.ru. Родом из с. Большая Черниговка — того же села, что и Шагиахметов и Кузнецов Руслан (per dossier).",
     "sources": [],
     "mentions": 1,
     "_verified": false,
@@ -9446,6 +9468,10 @@
         "founder data before it was hidden. Multiple independent aggregators (RBC Companies, Rusprofile, Zachestnyibiznes) agree on three founders, matching the three redacted participant records found above: Белоглазова Людмила Александровна, Шагиахметов Айрат Фатхутдинович and Шахматов Иван Анатольевич — charter capital ₽200,000 across all sources, matching the EGRUL figure exactly. Аggregator snapshots disagree on who currently holds the GD role (some show Шагиа"
       ]
     },
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ],
+    "_verified_against": null,
     "aleph_matches": [
       {
         "entity_id": "e637ece7b3a2cd4add029bea34b2744ec8ec127c.d900cd1056c3fd541ca04e137551bccddea5adca",
@@ -9508,10 +9534,10 @@
     "slug": "shakhmatov-ivan-anatolevich",
     "fio_ru": "Шахматов Иван Анатольевич",
     "name_latin": null,
-    "dob": null,
+    "dob": "1986-05-06",
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "471010513778",
     "roles": [],
     "sanctions": [],
     "other_entities": [],
@@ -9520,9 +9546,15 @@
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
     "subsidiary_liability_checked_at": null,
-    "social": [],
+    "social": [
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/id954705",
+        "source_id": "s1408"
+      }
+    ],
     "photo": null,
-    "notes": null,
+    "notes": "Тел. +7 911 979-00-00. Email: vano0606@list.ru.",
     "sources": [],
     "mentions": 1,
     "_verified": false,
@@ -9532,6 +9564,10 @@
         "C Companies, Rusprofile, Zachestnyibiznes) agree on three founders, matching the three redacted participant records found above: Белоглазова Людмила Александровна, Шагиахметов Айрат Фатхутдинович and Шахматов Иван Анатольевич — charter capital ₽200,000 across all sources, matching the EGRUL figure exactly. Аggregator snapshots disagree on who currently holds the GD role (some show Шагиахметов, one shows Белоглазова) and on Шагиахметов's stake, reported as "
       ]
     },
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ],
+    "_verified_against": null,
     "aleph_matches": [
       {
         "entity_id": "4119b78aca110723e09022dd08d4645b182ac39c.db733cdccd975a3f2e3bf9349f27318db9e6c794",
@@ -26351,6 +26387,1210 @@
     "_corrected": [
       "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only.",
       "2026-08-25: leader-id.ru public profile page (https://leader-id.ru/users/6169979) read directly (no auth) for headshot/contact/social -- profile gives position \"CV-engineer\" at АО «Стратим»; avatar is a generic placeholder, not a real photo; no contact fields, social links, city, or education/resume displayed -- user has hidden that information."
+    ]
+  },
+  {
+    "slug": "shandobylo-sergey-sergeevich",
+    "fio_ru": "Шандобыло Сергей Сергеевич",
+    "name_latin": "Shandabyla Siarhei",
+    "dob": "1991-06-24",
+    "birthplace": null,
+    "address": "г. Санкт-Петербург, пр-кт. Товарищеский, д. 16, корп. 1, кв. 253; также Ленинградская обл., Всеволожский р-н, п. Мурино, ул. Шувалова, д. 17, кв. 181",
+    "inn_personal": "781154619843",
+    "roles": [
+      {
+        "entity_slug": "ooo-trimiks-bulat-3mx",
+        "entity_name": "ООО «Тримикс»",
+        "title": "Директор по развитию",
+        "from": null,
+        "to": null,
+        "source_id": "s1408"
+      },
+      {
+        "entity_slug": "ip-shandobylo-sergey-sergeevich",
+        "entity_name": "ИП Шандобыло Сергей Сергеевич",
+        "title": "Индивидуальный предприниматель",
+        "from": null,
+        "to": null,
+        "source_id": "s1408"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/sergei_shandobilo",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Директор по развитию ООО «Тримикс»/3MX. Ранее управлял собственным ИП (ip-shandobylo-sergey-sergeevich), продававшим устройства для отключения мочевины (SCR emissions-defeat devices) через onediag.ru. Тел. +7 951 663-49-09, +7 966 755-33-77. Email: onediag.ru@gmail.com, 79516634909@ya.ru. Упомянут в TASS: https://tass.ru/armiya-i-opk/27680479",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ]
+  },
+  {
+    "slug": "kuznetsov-ruslan-nikolaevich",
+    "fio_ru": "Кузнецов Руслан Николаевич",
+    "name_latin": null,
+    "dob": "1996-04-01",
+    "birthplace": null,
+    "address": "г. Санкт-Петербург, ул. Тамбасова, д. 3, корп. 1, кв. 17; также Самарская область, с. Большая Черниговка, ул. Железнодорожников, д. 14, кв. 3",
+    "inn_personal": "637592279701",
+    "roles": [
+      {
+        "entity_slug": "ooo-trimiks-bulat-3mx",
+        "entity_name": "ООО «Тримикс»",
+        "title": "Сотрудник",
+        "from": null,
+        "to": null,
+        "source_id": "s1408"
+      },
+      {
+        "entity_slug": "ip-kuznetsov-ruslan-nikolaevich",
+        "entity_name": "ИП Кузнецов Руслан Николаевич",
+        "title": "Индивидуальный предприниматель",
+        "from": null,
+        "to": null,
+        "source_id": "s1408"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/id47482624",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/id357392286",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/r.k16320/",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Сотрудник 3MX; продаёт «Булат» через собственное ИП на сайте 921921.ru. Указан соседом Шагиахметова Айрата по адресу в с. Большая Черниговка. Паспорт 3609 198642. Тел. +7 931 006-93-94, +7 981 194-42-32. Email: r.k163@yandex.ru, s920.920@yandex.ru.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ]
+  },
+  {
+    "slug": "fedorov-pavel-romanovich",
+    "fio_ru": "Федоров Павел Романович",
+    "name_latin": null,
+    "dob": "1998-08-31",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [
+      {
+        "entity_slug": "ooo-trimiks-bulat-3mx",
+        "entity_name": "ООО «Тримикс»",
+        "title": "Сотрудник",
+        "from": null,
+        "to": null,
+        "source_id": "s1408"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": null,
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ]
+  },
+  {
+    "slug": "safieva-viktoriya-zufarovna",
+    "fio_ru": "Сафиева Виктория Зуфаровна",
+    "name_latin": null,
+    "dob": "1985-01-28",
+    "birthplace": null,
+    "address": "г. Санкт-Петербург, ул. Щербакова, д. 23, лит. А, кв. 34; также г. Москва, ул. Мосфильмовская, д. 17/25, кв. 15",
+    "inn_personal": null,
+    "roles": [
+      {
+        "entity_slug": "ooo-trimiks-bulat-3mx",
+        "entity_name": "ООО «Тримикс»",
+        "title": "Сотрудник",
+        "from": null,
+        "to": null,
+        "source_id": "s1408"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/victoriasafieva/",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "Facebook",
+        "url": "https://www.facebook.com/profile.php?id=100001781383146",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Сотрудник 3MX. Тел. +7 911 201-55-11. Email: vsafieva205@mail.ru.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ]
+  },
+  {
+    "slug": "kirtok-aleksandr-sergeevich",
+    "fio_ru": "Кирток Александр Сергеевич",
+    "name_latin": null,
+    "dob": "1995-10-21",
+    "birthplace": null,
+    "address": "г. Санкт-Петербург, ш. Революции, д. 21, корп. 2, кв. 12; также г. Санкт-Петербург, пр-кт Энтузиастов, д. 30, корп. 2, кв. 173 (адрес доставки)",
+    "inn_personal": "511500997610",
+    "roles": [
+      {
+        "entity_slug": "ooo-trimiks-bulat-3mx",
+        "entity_name": "ООО «Тримикс»",
+        "title": "Сотрудник",
+        "from": null,
+        "to": null,
+        "source_id": "s1408"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Сотрудник 3MX. Тел. +7 999 203-92-18. Email: mr.kirtok95@gmail.com.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ]
+  },
+  {
+    "slug": "shvetov-artemiy-andreevich",
+    "fio_ru": "Шветов Артемий Андреевич",
+    "name_latin": null,
+    "dob": "1999-06-04",
+    "birthplace": null,
+    "address": "Новгородская область, Великий Новгород, ул. Морозовская, д. 6, кв. 29",
+    "inn_personal": "531500409942",
+    "roles": [
+      {
+        "entity_slug": "ooo-trimiks-bulat-3mx",
+        "entity_name": "ООО «Тримикс»",
+        "title": "Сотрудник",
+        "from": null,
+        "to": null,
+        "source_id": "s1408"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/artemyshvetov/",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/artemyshvetov",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Сотрудник 3MX. Тел. +7 911 625-23-22. Email: shvetaa@inbox.ru, shvetaa04061999@gmail.ru, 9116252322@mail.ru.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ]
+  },
+  {
+    "slug": "petrov-aleksey-aleksandrovich",
+    "fio_ru": "Петров Алексей Александрович",
+    "name_latin": null,
+    "dob": "1994-04-20",
+    "birthplace": null,
+    "address": "Ленинградская область, Мурино, Воронцовский бульвар, д. 20, корп. 2, кв. 306",
+    "inn_personal": "290140368319",
+    "roles": [
+      {
+        "entity_slug": "ooo-trimiks-bulat-3mx",
+        "entity_name": "ООО «Тримикс»",
+        "title": "Сотрудник (не окончательно подтверждено)",
+        "from": null,
+        "to": null,
+        "source_id": "s1408",
+        "_candidate": true
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/id557110968",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "X",
+        "url": "https://x.com/ptrvlx",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/ptrvlx/",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Возможно сотрудник 3MX (per dossier — статус не окончательно установлен, \"возможно один из сотрудников\"), разработчик; также делал доставку через свой номер телефона в ООО «Радиофид Системы». Тел. +7 999 231-45-05. Email: therealrollexx@mail.ru.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ]
+  },
+  {
+    "slug": "mikhaylov-konstantin-denisovich",
+    "fio_ru": "Михайлов Константин Денисович",
+    "name_latin": null,
+    "dob": "1997-02-17",
+    "birthplace": null,
+    "address": "г. Москва, Сумской проезд, д. 12, корп. 3, кв. 971",
+    "inn_personal": "772032838410",
+    "roles": [
+      {
+        "entity_slug": "ooo-trimiks-bulat-3mx",
+        "entity_name": "ООО «Тримикс»",
+        "title": "Дилер (Москва, Мариуполь)",
+        "from": null,
+        "to": null,
+        "source_id": "s1408"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "На сайте 3MX указан телефоном дилера в Москве и Мариуполе; на него оформлено много заказов СДЭК под именем «Отдел продаж»/«ИМ-РФ-ОВВ-33». Тел. +7 800 444-76-10, +7 977 828-00-98. Email: mikhailovkostya@gmail.com.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ]
+  },
+  {
+    "slug": "tsyganov-vadim-borisovich",
+    "fio_ru": "Цыганов Вадим Борисович",
+    "name_latin": null,
+    "dob": "1963-05-30",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "504405055721",
+    "roles": [
+      {
+        "entity_slug": "ooo-pokrov",
+        "entity_name": "ООО «ПОКРОВ»",
+        "title": "Генеральный директор / основной участник (80-100%)",
+        "from": "2024-06-13",
+        "to": null,
+        "source_id": "s1408"
+      },
+      {
+        "entity_slug": "ip-tsyganov-vadim-borisovich",
+        "entity_name": "ИП Цыганов Вадим Борисович",
+        "title": "Индивидуальный предприниматель",
+        "from": "2018-10-01",
+        "to": null,
+        "source_id": "s1408"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Тел. +7 903 969-51-71. Email: vadimts@inbox.ru.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ]
+  },
+  {
+    "slug": "neznamov-aleksandr-vasilevich",
+    "fio_ru": "Незнамов Александр Васильевич",
+    "name_latin": null,
+    "dob": "1981-04-24",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "472005543641",
+    "roles": [
+      {
+        "entity_slug": "ooo-radiofid-sistemy",
+        "entity_name": "ООО «Радиофид Системы»",
+        "title": "Учредитель и генеральный директор",
+        "from": "2010-01-22",
+        "to": null,
+        "source_id": "s1408"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Тел. +7 905 223-09-99. Email: 2404@radiofid.ru.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+    ]
+  },
+  {
+    "slug": "shandobylo-miloslava-igorevna",
+    "fio_ru": "Шандобыло Милослава Игоревна",
+    "name_latin": null,
+    "dob": "1992-06-26",
+    "birthplace": null,
+    "address": "г. Санкт-Петербург, пр-кт. Товарищеский, д. 16, корп. 1, кв. 253; также Ленинградская обл., Всеволожский р-н, п. Мурино, ул. Шувалова, д. 17, кв. 181",
+    "inn_personal": "781152210830",
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/milka_kota",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/mi_sha_bones/",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Указан(а) в досье как жена Шандобыло Сергея Сергеевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант. Паспорт 4015 405452. Тел. +7 951 663-49-66. Email: milka-kota@yandex.ru, 79516634966@yandex.ru.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "shandobylo-lyudmila-aleksandrovna-mat",
+    "fio_ru": "Шандобыло Людмила Александровна",
+    "name_latin": null,
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/shandi.lily/",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/liudmila_shandi/",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Указан(а) в досье как мать Шандобыло Сергея Сергеевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант. Тел. +375 29 607-19-35, +375 29 238-06-23 (Беларусь).",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "shandobylo-aleksandr-otets",
+    "fio_ru": "Шандобыло Александр",
+    "name_latin": null,
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/sergeishandobylo/",
+        "source_id": "s1408"
+      },
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/id832192245",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Указан(а) в досье как предположительно отец Шандобыло Сергея Сергеевича — точное родство не установлено, DOB известен частично (06.05, год неизвестен), per dossier's own \"установить кто\" flag. принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "shandobylo-tatyana-rodstvennitsa",
+    "fio_ru": "Шандобыло Татьяна",
+    "name_latin": null,
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/id55933132",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Указан(а) в досье как предположительно родственница Шандобыло Сергея Сергеевича — точное родство не установлено, DOB известен частично (08.05, год неизвестен), per dossier's own \"установить кто\" flag. принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "shandobylo-yuliya-rodstvennitsa",
+    "fio_ru": "Шандобыло Юлия",
+    "name_latin": null,
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/rakassa",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Указан(а) в досье как предположительно родственница Шандобыло Сергея Сергеевича — точное родство не установлено, DOB известен частично (28.06, год неизвестен), per dossier's own \"установить кто\" flag. принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "shakhmatov-anatoliy-aleksandrovich",
+    "fio_ru": "Шахматов Анатолий Александрович",
+    "name_latin": null,
+    "dob": "1963-10-20",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как отец Шахматова Ивана Анатольевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "shakhmatova-olga-petrovna",
+    "fio_ru": "Шахматова Ольга Петровна",
+    "name_latin": null,
+    "dob": "1960-08-28",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как мать Шахматова Ивана Анатольевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "shakhmatova-tatyana-anatolevna",
+    "fio_ru": "Шахматова Татьяна Анатольевна",
+    "name_latin": null,
+    "dob": "1989-03-28",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как сестра Шахматова Ивана Анатольевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "meshkov-aleksandr-petrovich",
+    "fio_ru": "Мешков Александр Петрович",
+    "name_latin": null,
+    "dob": "1957-12-11",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как отец Белоглазовой (Мешковой) Людмилы Александровны принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "meshkova-nadezhda-filippovna",
+    "fio_ru": "Мешкова Надежда Филипповна",
+    "name_latin": null,
+    "dob": "1954-10-08",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как мать Белоглазовой (Мешковой) Людмилы Александровны принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "meshkova-kristina-andreevna",
+    "fio_ru": "Мешкова Кристина Андреевна",
+    "name_latin": null,
+    "dob": "2005-03-29",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как родство не установлено окончательно — досье помечает как \"чья-то дочь\" в семье Мешковых, вероятно связана с Белоглазовой (Мешковой) Людмилой Александровной. принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "shagiakhmetova-alisa-ayratovna",
+    "fio_ru": "Шагиахметова Алиса Айратовна",
+    "name_latin": null,
+    "dob": "2015-04-05",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как дочь Шагиахметова Айрата Фатхутдиновича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "kuznetsova-menizhegan-khantimirovna",
+    "fio_ru": "Кузнецова Менижеган Хантимировна",
+    "name_latin": null,
+    "dob": "1966-08-01",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "VK",
+        "url": "https://vk.ru/id275830750",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Указан(а) в досье как мать Кузнецова Руслана Николаевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "fedorova-polina-gennadevna",
+    "fio_ru": "Федорова Полина Геннадьевна",
+    "name_latin": null,
+    "dob": "1976-09-26",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "470200877524",
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как мать Федорова Павла Романовича принципала сети «Тримикс»/3MX, не самостоятельный фигурант. Тел. +7 950 009-76-16.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "batanova-olga-gennadevna",
+    "fio_ru": "Батанова Ольга Геннадьевна",
+    "name_latin": null,
+    "dob": "1955-07-06",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как бабушка Федорова Павла Романовича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "petrov-viktor-vitalevich",
+    "fio_ru": "Петров Виктор Витальевич",
+    "name_latin": null,
+    "dob": "1965-04-24",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "292700110340",
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как родство с Петровым Алексеем Александровичем указано в досье без явной пометки (в отличие от других записей) — вероятно дядя (общее отчество \"Витальевич\" с записью \"Петров Александр Витальевич\", предположительно братья, сыновья Петрова Виталия Павлиновича 1931 г.р.), не подтверждено явно. принципала сети «Тримикс»/3MX, не самостоятельный фигурант. Тел. +7 911 551-20-79. Email: victorpetrov1965@yandex.ru.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "petrov-aleksandr-vitalevich",
+    "fio_ru": "Петров Александр Витальевич",
+    "name_latin": null,
+    "dob": "1959-09-14",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как отец Петрова Алексея Александровича (запись дублируется в досье дважды — один раз без DOB с телефоном, один раз с DOB 14.09.1959 и явной пометкой «отец»; объединено в одну запись). принципала сети «Тримикс»/3MX, не самостоятельный фигурант. Тел. +7 964 300-55-09.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "petrova-darya-aleksandrovna",
+    "fio_ru": "Петрова Дарья Александровна",
+    "name_latin": null,
+    "dob": "1996-04-30",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/aimjkeeee1337/",
+        "source_id": "s1408"
+      }
+    ],
+    "photo": null,
+    "notes": "Указан(а) в досье как сестра Петрова Алексея Александровича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "petrova-marina-vladimirovna",
+    "fio_ru": "Петрова Марина Владимировна",
+    "name_latin": null,
+    "dob": "1961-08-17",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как мать Петрова Алексея Александровича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "petrova-natalya-viktorovna",
+    "fio_ru": "Петрова Наталья Викторовна",
+    "name_latin": null,
+    "dob": "1975-10-19",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как родство с Петровым Алексеем Александровичем не помечено в досье явно (возможно родственница по линии Петрова Виктора Витальевича, общее отчество \"Викторовна\"/\"Виктор\") — не подтверждено. принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "petrov-vitaliy-pavlinovich",
+    "fio_ru": "Петров Виталий Павлинович",
+    "name_latin": null,
+    "dob": "1931-05-01",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как вероятно дед Петрова Алексея Александровича (общая фамилия и отчество \"Витальевич\" у двух других записей — Петров Виктор Витальевич и Петров Александр Витальевич), не подтверждено явно. принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "tsyganova-viktoriya-yurevna",
+    "fio_ru": "Цыганова Виктория Юрьевна",
+    "name_latin": null,
+    "dob": "1963-10-28",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как жена Цыганова Вадима Борисовича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "neznamova-olga-viktorovna",
+    "fio_ru": "Незнамова Ольга Викторовна",
+    "name_latin": null,
+    "dob": "1977-08-22",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как жена Незнамова Александра Васильевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант. Тел. +7 911 283-33-37. Email: o.neznamowa2012@yandex.ru.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "neznamova-anastasiya-vasilevna",
+    "fio_ru": "Незнамова Анастасия Васильевна",
+    "name_latin": null,
+    "dob": "1982-06-07",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как сестра Незнамова Александра Васильевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "neznamov-vasiliy-aleksandrovich",
+    "fio_ru": "Незнамов Василий Александрович",
+    "name_latin": null,
+    "dob": "1959-02-08",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как отец Незнамова Александра Васильевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+    ]
+  },
+  {
+    "slug": "neznamova-lyudmila-viktorovna",
+    "fio_ru": "Незнамова Людмила Викторовна",
+    "name_latin": null,
+    "dob": "1956-08-20",
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Указан(а) в досье как мать Незнамова Александра Васильевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
     ]
   }
 ]

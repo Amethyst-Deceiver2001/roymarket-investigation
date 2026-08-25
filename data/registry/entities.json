@@ -12391,19 +12391,49 @@
     "director": "— (EGRUL-restricted)",
     "director_history": [
       {
+        "value": "Белоглазова (Мешкова) Людмила Александровна",
+        "as_of": "2024-08-22",
+        "source_id": "s1408",
+        "note": "Pre-restriction directorship per dossier, 21.07.2023 – 22.08.2024 (company's own incorporation date through the handover to Шагиахметов)."
+      },
+      {
+        "value": "Шагиахметов Айрат Фатхутдинович",
+        "as_of": "2024-10-31",
+        "source_id": "s1408",
+        "note": "Pre-restriction directorship per dossier, 23.08.2024 – 31.10.2024 (took over from Белоглазова, held role through the EGRUL restriction date)."
+      },
+      {
+        "value": "— (EGRUL-restricted)",
         "as_of": "2024-11-01",
-        "note": "Доступ к сведениям ограничен, ГРН 2247802369637, 01.11.2024 — Federal Law 129-FZ restriction, not a data gap",
         "source_id": "s0225",
-        "value": "— (EGRUL-restricted)"
+        "note": "Доступ к сведениям ограничен, ГРН 2247802369637, 01.11.2024 — Federal Law 129-FZ restriction, not a data gap"
       }
     ],
     "founders": [],
     "founders_history": [
       {
+        "value": "15% Шахматов Иван Анатольевич",
+        "as_of": "2024-10-31",
+        "source_id": "s1408",
+        "note": "Pre-restriction ownership per dossier, 28.02.2024 – 31.10.2024."
+      },
+      {
+        "value": "15% Шагиахметов Айрат Фатхутдинович",
+        "as_of": "2024-10-31",
+        "source_id": "s1408",
+        "note": "Pre-restriction ownership per dossier, 23.08.2024 – 31.10.2024."
+      },
+      {
+        "value": "70-100% Белоглазова (Мешкова) Людмила Александровна",
+        "as_of": "2024-10-31",
+        "source_id": "s1408",
+        "note": "Pre-restriction ownership per dossier, 21.07.2023 – 31.10.2024 (the day before EGRUL access was restricted)."
+      },
+      {
+        "value": "3 participants, all EGRUL-restricted",
         "as_of": "2024-11-01",
-        "note": "Corrects brief's prior text (which named only the GD as restricted) — the full extract shows THREE separate redacted participant records, not one. ГРН 2247802369637, 01.11.2024.",
         "source_id": "s0225",
-        "value": "3 participants, all EGRUL-restricted"
+        "note": "Доступ к сведениям ограничен, ГРН 2247802369637, 01.11.2024 — Federal Law 129-FZ restriction, not a data gap"
       }
     ],
     "charter_capital": 200000,
@@ -12423,7 +12453,14 @@
         "value": "194352, Санкт-Петербург, вн.тер.г. муниципальный округ Сергиевское, аллея Придорожная, д. 8, литера А, помещ. №707"
       }
     ],
-    "name_history": [],
+    "name_history": [
+      {
+        "value": "ООО «3мх»",
+        "as_of": "2023-08-02",
+        "source_id": "s1408",
+        "note": "Original registered name 21.07.2023 – 02.08.2023, per dossier, before renaming to «Тримикс»."
+      }
+    ],
     "facility_type": null,
     "facility_type_history": [],
     "parents": [],
@@ -12623,7 +12660,8 @@
       "User pointed to 3mx's own dealer page, confirming the WB reseller (madro) as an official dealer rather than just a self-declared WB claim; also surfaced 2 more dealers not yet checked for their own WB presence.",
       "User-supplied browser HAR capture 2026-08-25 of an Ozon search session (\"asel labs\", \"детектор дронов\") surfaced a 3MX-branded «Марс» product listing on Ozon -- a marketplace not previously checked for this entity. No seller-info API call was captured, so the listing's own account is not yet ID-confirmed to the manufacturer's ИНН; recorded as a listing lead with that caveat, same tier as the unresolved dealer identities above.",
       "User-supplied browser HAR capture 2026-08-25 (www.911.har) of «Макс 911»'s own Ozon seller page (recovered from a truncated/corrupted HAR file by salvaging the 654 of 655 fully-written entries) resolved that dealer's Ozon storefront: self-declared title \"МАКС 911- офиц. дилер 3mx\", sells 3mx/«Булат»-branded detectors -- matches the manufacturer's own dealer-page claim. Legal ИНН/ОГРН still unresolved (sellerTransparency widget not captured).",
-      "User asked to scan dji911.com directly (2026-08-25). Homepage (s1389) had no legal identifiers; /contacts (s1388, direct curl archive) did: \"Продажу оборудования 3MX на маркетплейсах осуществляет ИП Коровкин А.А. ИНН 780223272953\" -- checksum-valid. Full name and ОГРНИП resolved via egrul.nalog.ru open API (s1387): Коровкин Александр Анатольевич, ОГРНИП 323784700072451 (active since 07.03.2023). Closes the last of the 3 dealer-identity leads from 3mx's own dealer page (s0558) -- Мэдро and Покров were resolved earlier the same day."
+      "User asked to scan dji911.com directly (2026-08-25). Homepage (s1389) had no legal identifiers; /contacts (s1388, direct curl archive) did: \"Продажу оборудования 3MX на маркетплейсах осуществляет ИП Коровкин А.А. ИНН 780223272953\" -- checksum-valid. Full name and ОГРНИП resolved via egrul.nalog.ru open API (s1387): Коровкин Александр Анатольевич, ОГРНИП 323784700072451 (active since 07.03.2023). Closes the last of the 3 dealer-identity leads from 3mx's own dealer page (s0558) -- Мэдро and Покров were resolved earlier the same day.",
+      "2026-08-25: pre-restriction ownership/directorship timeline added from third-party OSINT dossier (s1408) — fills a gap EGRUL itself can no longer answer directly (access restricted since 01.11.2024). Corroborates the founder identities already established via aggregator cross-check (see people records' own _corrected notes) with exact stake percentages and date ranges. Not independently re-verified against EGRUL/primary sources; same caution as the rest of this dossier's data applies."
     ],
     "_verified_against": "s0225 — ООО «Тримикс»'s own full signed ЕГРЮЛ extract, pulled 18.08.2026",
     "related_entities": [
@@ -37500,5 +37538,340 @@
     "_corrected": null,
     "wb_matches": [],
     "wb_screened_at": "2026-08-25"
+  },
+  {
+    "slug": "ooo-radiofid-sistemy",
+    "name_ru": "ООО «Радиофид Системы»",
+    "name_latin": null,
+    "legal_form": "ООО",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "7802491148",
+    "ogrn": null,
+    "extra_ids": null,
+    "registered": "22.01.2010",
+    "address": null,
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "Незнамов Александр Васильевич",
+    "director_history": [
+      {
+        "value": "Незнамов Александр Васильевич",
+        "as_of": "2024-11-01",
+        "source_id": "s1408",
+        "note": "100% owner and director, per dossier, 22.01.2010 – 01.11.2024 (dossier's date range, cutoff reason not stated — compare to Тримикс's own 01.11.2024 EGRUL-restriction date, possibly the same access-restriction event, not confirmed)."
+      }
+    ],
+    "founders": [],
+    "founders_history": [
+      {
+        "value": "100% Незнамов Александр Васильевич",
+        "as_of": "2024-11-01",
+        "source_id": "s1408",
+        "note": "22.01.2010 – 01.11.2024, per dossier."
+      }
+    ],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": null,
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [
+      {
+        "regime": [
+          "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+          "EU (Ukraine-related restrictive measures)"
+        ],
+        "date": null,
+        "note": "Per dossier: US-sanctioned since 23.08.2024, EU-sanctioned since 24.10.2025. NOT independently confirmed against OFAC/EU primary sources or OpenSanctions yet — needs the same ID-confirmation pass already done for other roster entities before citing in brief narrative text.",
+        "source_id": "s1408"
+      }
+    ],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s1408",
+        "text": "Link to ООО «Тримикс»/3MX not yet established beyond circumstantial detail in the dossier (a phone number matching Тримикс founder Шагиахметов's Альфа-Банк account records, and a delivery address match for Кузнецов Руслан). Worth an EGRUL/ownership-history check for a formal corporate link (shared founder, address, or registered agent) before treating this as a confirmed part of the same network rather than an adjacent sanctioned entity."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "city": "St Petersburg",
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text, per this registry's standing discipline."
+    ]
+  },
+  {
+    "slug": "ip-kuznetsov-ruslan-nikolaevich",
+    "name_ru": "ИП Кузнецов Руслан Николаевич",
+    "name_latin": null,
+    "legal_form": "ИП",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "637592279701",
+    "ogrn": null,
+    "extra_ids": null,
+    "registered": null,
+    "address": null,
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": null,
+    "director_history": [],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": null,
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text, per this registry's standing discipline. Active per dossier. Sells «Булат» via 921921.ru, per site's own stated payment details."
+    ]
+  },
+  {
+    "slug": "ip-shandobylo-sergey-sergeevich",
+    "name_ru": "ИП Шандобыло Сергей Сергеевич",
+    "name_latin": null,
+    "legal_form": "ИП",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "781154619843",
+    "ogrn": null,
+    "extra_ids": null,
+    "registered": null,
+    "address": null,
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": null,
+    "director_history": [],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": null,
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text, per this registry's standing discipline. Dissolved (per dossier status flag). Historically developed/sold SCR-urea-dosing defeat devices (onediag.ru) before joining 3MX as Director of Development."
+    ]
+  },
+  {
+    "slug": "ip-tsyganov-vadim-borisovich",
+    "name_ru": "ИП Цыганов Вадим Борисович",
+    "name_latin": null,
+    "legal_form": "ИП",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "504405055721",
+    "ogrn": null,
+    "extra_ids": null,
+    "registered": "01.10.2018",
+    "address": null,
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": null,
+    "director_history": [],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": null,
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text, per this registry's standing discipline. Active. Sells 3MX/«Покров» products; per dossier won two ~₽30m government contracts (supply of «Покров» and «Булат» systems) in one year — customers ФГКУ «ЦСООР «ЛИДЕР»» (ИНН 5003008102) and ГУ МЧС России по Курской области. Likely used for a lower tax rate alongside ООО «ПОКРОВ» (same person is that entity's director)."
+    ]
+  },
+  {
+    "slug": "ip-sidorov-andrey-sergeevich",
+    "name_ru": "ИП Сидоров Андрей Сергеевич",
+    "name_latin": null,
+    "legal_form": "ИП",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": null,
+    "ogrn": null,
+    "extra_ids": null,
+    "registered": null,
+    "address": null,
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": null,
+    "director_history": [],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": null,
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text, per this registry's standing discipline. Active. Also supplies «Булат» devices; shares a phone number with ИП Цыганов Вадим Борисович (+7 905 519-71-01) per dossier — possible informal affiliation, not otherwise established."
+    ]
   }
 ]
