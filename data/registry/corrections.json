@@ -14536,11 +14536,40 @@
             "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (644914040799) against the designation record's own idNumber field — 2026-08-24 screening. Topics: sanction. Not yet independently read against the underlying primary designation document.",
             "source_id": "s0754"
           }
+        ],
+        "roles": [
+          {
+            "entity_slug": null,
+            "entity_name": "ООО «ГК «Аэромакс»»",
+            "title": null,
+            "from": null,
+            "to": null,
+            "source_id": null,
+            "_candidate": true
+          },
+          {
+            "entity_slug": null,
+            "entity_name": "ООО «Группа компаний «Аэромакс»»",
+            "title": null,
+            "from": null,
+            "to": null,
+            "source_id": null,
+            "_candidate": true
+          },
+          {
+            "entity_slug": "ooo-aeromaks",
+            "entity_name": "ООО «Аэромакс»",
+            "title": "Генеральный директор",
+            "from": null,
+            "to": null,
+            "source_id": "s0113"
+          }
         ]
       },
       "why": [
         "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0754).",
-        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person."
+        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
+        "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «Аэромакс» -> ooo-aeromaks, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0113)."
       ],
       "verified_against": null
     },
@@ -15277,9 +15306,30 @@
       "verified_against": "Rospatent bulk patent dump (s0952), 2026-08-24"
     },
     "baranova-olga-vladimirovna": {
-      "set": {},
+      "set": {
+        "roles": [
+          {
+            "entity_slug": null,
+            "entity_name": "ООО «АКР «Бегак»»",
+            "title": null,
+            "from": null,
+            "to": null,
+            "source_id": null,
+            "_candidate": true
+          },
+          {
+            "entity_slug": "ooo-praym",
+            "entity_name": "ООО «Прайм»",
+            "title": "Генеральный директор",
+            "from": null,
+            "to": null,
+            "source_id": "s0120"
+          }
+        ]
+      },
       "why": [
-        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person."
+        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
+        "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «Прайм» -> ooo-praym, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0120)."
       ],
       "verified_against": "Rospatent bulk patent dump (s0952), 2026-08-24"
     },
@@ -15709,9 +15759,38 @@
       ]
     },
     "kostyunin-pavel-andreevich": {
-      "set": {},
+      "set": {
+        "roles": [
+          {
+            "entity_slug": null,
+            "entity_name": "АО «Стратим-Тех»",
+            "title": null,
+            "from": null,
+            "to": null,
+            "source_id": null,
+            "_candidate": true
+          },
+          {
+            "entity_slug": "ao-stratim",
+            "entity_name": "АО «Стратим»",
+            "title": "Генеральный директор",
+            "from": null,
+            "to": null,
+            "source_id": "s0111"
+          },
+          {
+            "entity_slug": "ooo-stratim",
+            "entity_name": "ООО «Стратим»",
+            "title": "Ликвидатор",
+            "from": null,
+            "to": null,
+            "source_id": "s0074"
+          }
+        ]
+      },
       "why": [
-        "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Генеральный директор\", Москва -- exact name/title match to ao-stratim's own already-sourced `director` field (Костюнин Павел Андреевич), resolving one of the three pre-existing `_candidate` role links on this person (АО «Стратим») via corroboration, though not upgraded to a sourced `source_id` on the role itself -- leader-id self-report alone isn't sufficient sourcing for that per this registry's standing discipline. The other two candidate roles (АО «Стратим-Тех», ООО «Стратим») remain unreviewed."
+        "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Генеральный директор\", Москва -- exact name/title match to ao-stratim's own already-sourced `director` field (Костюнин Павел Андреевич), resolving one of the three pre-existing `_candidate` role links on this person (АО «Стратим») via corroboration, though not upgraded to a sourced `source_id` on the role itself -- leader-id self-report alone isn't sufficient sourcing for that per this registry's standing discipline. The other two candidate roles (АО «Стратим-Тех», ООО «Стратим») remain unreviewed.",
+        "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. АО «Стратим» -> ao-stratim, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0111). ООО «Стратим» -> ooo-stratim, confirmed Ликвидатор via egrul_batch_pull.py snapshot (s0074)."
       ]
     },
     "fominykh-aleksey-mikhaylovich": {
@@ -16250,6 +16329,67 @@
       },
       "why": [
         "2026-08-25: folded in the co-inventor role (ООО «Визионеро», s1054) from the duplicate record gorodnichin-dmitriy-aleksandrovich-2, now merged into this one."
+      ]
+    },
+    "nekrasov-aleksandr-viktorovich": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": "ooo-konstruktorskoe-byuro-sinergiya",
+            "entity_name": "ООО «Конструкторское бюро «Синергия»»",
+            "title": "Генеральный директор",
+            "from": null,
+            "to": null,
+            "source_id": "s0138"
+          },
+          {
+            "entity_slug": null,
+            "entity_name": "ООО «Визионеро»",
+            "title": null,
+            "from": null,
+            "to": null,
+            "source_id": null,
+            "_candidate": true
+          },
+          {
+            "entity_slug": null,
+            "entity_name": "ООО «КБ «Синергия»»",
+            "title": null,
+            "from": null,
+            "to": null,
+            "source_id": null,
+            "_candidate": true
+          },
+          {
+            "entity_slug": null,
+            "entity_name": "ООО «Метаскан»",
+            "title": null,
+            "from": null,
+            "to": null,
+            "source_id": null,
+            "_candidate": true
+          }
+        ]
+      },
+      "why": [
+        "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «Конструкторское бюро «Синергия»» -> ooo-konstruktorskoe-byuro-sinergiya, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0138)."
+      ]
+    },
+    "chichkov-aleksandr-yurevich": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": "ooo-dronomir",
+            "entity_name": "ООО «ДРОНОМИР»",
+            "title": "Генеральный директор",
+            "from": null,
+            "to": null,
+            "source_id": "s0063"
+          }
+        ]
+      },
+      "why": [
+        "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «ДРОНОМИР» -> ooo-dronomir, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0063)."
       ]
     }
   },

@@ -554,6 +554,35 @@ not duplicates; no action taken on those. Live people count: 302 → 299.
 the roster is now clean going into the rest of Phase 1b's verification
 work.
 
+**Bulk `_candidate` resolution against `egrul_batch_pull.py`'s snapshot,
+2026-08-25 — 6 role links resolved.** Cross-checked every remaining
+`_candidate` role link's `entity_name` against the full-roster director
+snapshot `egrul_batch_pull.py` already pulled (138 `EGRULAPI_*.json` files
+on disk, each carrying the queried entity's own `ГЕНЕРАЛЬНЫЙ ДИРЕКТОР:`/
+`ЛИКВИДАТОР:` field as of 2026-08-22) — a different, more current data
+source than the "already-sourced director field on the registry entity"
+check the first resolution pass used, and one that reaches entities whose
+`director` field on `entities.json` was never separately populated. Of 81
+candidate links: 38 didn't normalize-match to any registry entity slug
+(one-off/ambiguous names, same shape as before), 3 matched an entity with
+no batch-pull snapshot on file, 34 matched an entity with a known director
+who is a **different person** than the candidate (left alone, per the
+standing discipline — informative on its own, not something to guess at),
+and **6 resolved on an exact full-ФИО match**: Бессонов С.Н. → ООО
+«Аэромакс» (ГД), Некрасов А.В. → ООО «КБ «Синергия»» (ГД), Костюнин П.А. →
+**both** АО «Стратим» (ГД) and ООО «Стратим» (Ликвидатор — a real, useful
+finding: the same person holds different roles at the two same-named
+Стратим entities), Чичков А.Ю. → ООО «ДРОНОМИР» (ГД), Баранова О.В. → ООО
+«Прайм» (ГД). Each got its own `source_id` from the batch-pull snapshot,
+`_candidate` dropped, other still-unresolved candidate roles on the same
+people left untouched. `_candidate` count: 81 → 75. `check_registry.py`:
+0 errors. The 34 director-mismatch cases are a natural next target — not
+fixed here, since "which of two plausible people is the real one" needs
+individual judgment, not a bulk pass — but worth a closer look, since a
+meaningful fraction may be resolvable the same way the earlier session's
+Чадаев/«Ушкуйник» correction was (candidate pointed at the wrong same-named
+entity, fixable once the right one is identified).
+
 ---
 
 ## Phase 1.5 — Source triage (5 untyped files) + physical-footprint typology

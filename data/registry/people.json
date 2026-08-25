@@ -3477,13 +3477,12 @@
         "_candidate": true
       },
       {
-        "entity_slug": null,
+        "entity_slug": "ooo-aeromaks",
         "entity_name": "ООО «Аэромакс»",
-        "title": null,
+        "title": "Генеральный директор",
         "from": null,
         "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s0113"
       }
     ],
     "sanctions": [
@@ -3559,7 +3558,8 @@
     },
     "_corrected": [
       "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0754).",
-      "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person."
+      "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
+      "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «Аэромакс» -> ooo-aeromaks, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0113)."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -5389,13 +5389,12 @@
     "inn_personal": null,
     "roles": [
       {
-        "entity_slug": null,
+        "entity_slug": "ooo-konstruktorskoe-byuro-sinergiya",
         "entity_name": "ООО «Конструкторское бюро «Синергия»»",
-        "title": null,
+        "title": "Генеральный директор",
         "from": null,
         "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s0138"
       },
       {
         "entity_slug": null,
@@ -5445,6 +5444,10 @@
         "come. ООО «Визионеро» (Moscow)Лысенко Андрей Олегович\"IT company\" resident, no named product. 16 employees. 37.5% owner's stake pledged to the Moscow Venture Fund. ООО «КБ «Синергия»» (St. Petersburg)Некрасов Александр Викторович«Яким» air-threat monitoring/interceptor-coordination system, shown at ПМЭФ-2026. 58 employees, ₽227.7m declared income. ООО «Метаскан» (Kazan)Поспехов Иван Александрович«Арена 5М» demining detonator, delivered to Kursk-direction s"
       ]
     },
+    "_corrected": [
+      "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «Конструкторское бюро «Синергия»» -> ooo-konstruktorskoe-byuro-sinergiya, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0138)."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-781627958891",
@@ -11319,22 +11322,20 @@
         "_candidate": true
       },
       {
-        "entity_slug": null,
+        "entity_slug": "ao-stratim",
         "entity_name": "АО «Стратим»",
-        "title": null,
+        "title": "Генеральный директор",
         "from": null,
         "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s0111"
       },
       {
-        "entity_slug": null,
+        "entity_slug": "ooo-stratim",
         "entity_name": "ООО «Стратим»",
-        "title": null,
+        "title": "Ликвидатор",
         "from": null,
         "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s0074"
       }
     ],
     "sanctions": [],
@@ -11357,7 +11358,8 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Генеральный директор\", Москва -- exact name/title match to ao-stratim's own already-sourced `director` field (Костюнин Павел Андреевич), resolving one of the three pre-existing `_candidate` role links on this person (АО «Стратим») via corroboration, though not upgraded to a sourced `source_id` on the role itself -- leader-id self-report alone isn't sufficient sourcing for that per this registry's standing discipline. The other two candidate roles (АО «Стратим-Тех», ООО «Стратим») remain unreviewed."
+      "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Генеральный директор\", Москва -- exact name/title match to ao-stratim's own already-sourced `director` field (Костюнин Павел Андреевич), resolving one of the three pre-existing `_candidate` role links on this person (АО «Стратим») via corroboration, though not upgraded to a sourced `source_id` on the role itself -- leader-id self-report alone isn't sufficient sourcing for that per this registry's standing discipline. The other two candidate roles (АО «Стратим-Тех», ООО «Стратим») remain unreviewed.",
+      "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. АО «Стратим» -> ao-stratim, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0111). ООО «Стратим» -> ooo-stratim, confirmed Ликвидатор via egrul_batch_pull.py snapshot (s0074)."
     ],
     "_verified_against": null,
     "leader_id_matches": [
@@ -14044,13 +14046,12 @@
     "inn_personal": null,
     "roles": [
       {
-        "entity_slug": null,
+        "entity_slug": "ooo-dronomir",
         "entity_name": "ООО «ДРОНОМИР»",
-        "title": null,
+        "title": "Генеральный директор",
         "from": null,
         "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s0063"
       }
     ],
     "sanctions": [],
@@ -14072,6 +14073,10 @@
         "кие, и соответствующего оборудования\") and ООО «ДРОНОМИР» (ИНН 4214047363, ОГРН 1264200005530, Кемеровская область, registered 05.06.2026 — a very recent entity, no БФО filings yet), both directed by Чичков Александр Юрьевич (egrul.nalog.ru, 21.08.2026). «ПромМаш»'s founding Устав (Протокол №1, 22.02.2024, charter capital ₽10,000) is a generic template with no drone-specific activity clause, but its ОКВЭД code and Novokuznetsk address (adjacent to Kiselyov"
       ]
     },
+    "_corrected": [
+      "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «ДРОНОМИР» -> ooo-dronomir, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0063)."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [
@@ -14559,13 +14564,12 @@
         "_candidate": true
       },
       {
-        "entity_slug": null,
+        "entity_slug": "ooo-praym",
         "entity_name": "ООО «Прайм»",
-        "title": null,
+        "title": "Генеральный директор",
         "from": null,
         "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s0120"
       }
     ],
     "sanctions": [],
@@ -14588,7 +14592,8 @@
       ]
     },
     "_corrected": [
-      "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person."
+      "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
+      "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «Прайм» -> ooo-praym, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0120)."
     ],
     "_verified_against": "Rospatent bulk patent dump (s0952), 2026-08-24",
     "opensanctions_matches": [
