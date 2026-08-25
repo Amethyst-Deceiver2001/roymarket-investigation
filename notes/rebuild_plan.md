@@ -1180,11 +1180,22 @@ time, so this needed no hand-editing and nothing to maintain going forward).
 `entity_slug`/`person_slug` referential integrity, and reports the
 attribution count in its coverage output.
 
-**7. Generalize `check_tag_balance.py`.** Still hardcodes `docs/index.html`
-(confirmed unchanged, `scripts/check_tag_balance.py:12` still reads
-`PATH = ... / "docs" / "index.html"`) and hard-exits unless the file contains
-literal `<div class="wrap">` and `</body>` markers. Phase 4 needs it to accept
-paths/globs and to not assume that wrapper.
+**7. Generalize `check_tag_balance.py`.** **Done (2026-08-25).** Now accepts
+zero or more file-path/glob arguments (`python3 scripts/check_tag_balance.py
+"docs/companies/*.html"`), defaulting to `docs/index.html` alone when none
+are given so the existing single-page workflow/instructions in `HANDOFF.md`
+and the seeded memory keep working unchanged. Scoping is now a three-step
+fallback instead of a hard requirement: `<div class="wrap">...</body>`
+(the current file's own convention) → generic `<body>...</body>` (any other
+page) → the whole file, printed as a loud warning rather than a silent
+choice, since checking unscoped reopens the JS-literal false-positive risk
+scoping exists to avoid. Multi-file runs print a per-file section plus a
+summary line (`N/M file(s) OK`) and a non-zero exit if any file mismatches
+or any requested path doesn't exist. Verified against `docs/index.html`
+itself (identical 18/18 OK result to the pre-change version), a synthetic
+`<body>`-only file (correctly used the fallback scope), and a synthetic
+file with no wrapper at all and a real, deliberate `<p>` mismatch (correctly
+fell back to whole-file scope and caught the mismatch).
 
 **8. Commit everything.** ✅ **DONE** (see "Things to fix" §2 above,
 2026-08-24) — `data/registry/`, `STYLE_GUIDE.md`, `docs/_archive/`,
