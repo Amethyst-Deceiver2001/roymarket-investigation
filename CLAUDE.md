@@ -193,6 +193,33 @@ most recent founding-document amendment (DATE), per SOURCE" instead of an
 undated assertion a later pull could silently overwrite. A history entry
 with no `source_id` is a placeholder, not evidence — `check_registry.py`
 flags it as a warning so it surfaces as verification work.
+
+### Entity profile fields added 2026-08-25 (company-profile checklist gap-fill)
+
+Six new arrays on every entity, defaulting empty, populated by hand via
+`corrections.json` like any other human-conclusion field:
+- `government_contracts[]` — госзакупки/госконтракт records (customer,
+  contract number/value/date, `source_id`).
+- `workforce_history[]` — `{count, as_of, source_id, note}`, same dated-array
+  shape as `financials[]`. Use `note` for self-reported production-scale
+  claims (units/day, assembly lines) when no headcount figure exists.
+- `state_programs[]` — grant/association/residency participation (Сколково,
+  АТР grants, АЭРОНЕКСТ, rk.2035.university, etc.) — corroborates legitimacy
+  claims and gives cross-reference IDs into other public registries.
+- `marketing_claims[]` — `{text_ru, text_en, context, source_id, as_of}`,
+  verbatim self-incriminating marketing copy (see the capture-verbatim rule
+  under [[roymarket_capture_self_incriminating_marketing_copy]] in memory) —
+  a structured home for what used to get buried in prose `why[]` notes.
+- `battlefield_evidence[]` — combat-footage/downed-unit sightings that
+  independently confirm a product is fielded, distinct from the
+  manufacturer's own marketing claims.
+- `domain_history[]` — WHOIS registrant history where pre-privacy-shield
+  records reveal a founder's name/email/phone.
+
+None of these get a `check_registry.py` shape check yet, matching the
+existing (also-unvalidated) `litigation[]`/`licences[]` fields — add one only
+if a real malformed-data incident calls for it, not preemptively.
+
 - `corrections.json` — **hand-made fixes, each with its reasoning and the
   source it was checked against.** Applied last by the extractor, so
   regenerating never silently reverts a verified correction. Add corrections
