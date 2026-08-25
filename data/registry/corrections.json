@@ -2875,7 +2875,7 @@
         },
         "open_questions": [
           {
-            "question": "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found. Sole founder (Потапов И.В.), only ₽10,000 charter capital -- classic thin-shell registration profile despite the self-declared \"Беспилотные авиационные технологии\" name and confirmed ЦБСТ participation. Consistent with this registry's already-flagged НПП БАТ dormant-shell tension.",
+            "question": "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found. Sole founder (Потапов И.В.), only ₽10,000 charter capital -- classic thin-shell registration profile despite the self-declared \"Беспилотные авиационные технологии\" name and confirmed ЦБСТ participation. Consistent with this registry's already-flagged НПП БАТ dormant-shell tension. 2026-08-25 follow-up: also checked for a VK/TG presence in lieu of a site (per project's own VK/TG-as-primary-source rule) -- nothing found either, only registry/business-directory listings. Reinforces the shell-registration read rather than resolving it; products[] stays empty.",
             "source_id": null
           },
           {
@@ -10419,6 +10419,10 @@
           {
             "question": "A separate, same-named entity -- ООО «Архангел», ИНН 9500026652 (occupied Kherson/Zaporizhzhia, GD Тимофеев В.С., no confirmed ЦБСТ tie -- see roymarket_archangel_adjacent_network memory) -- is the one that posts vacancies on rk.2035.university's БАС job board (3 of 31 platform-wide, third-most-active poster). The earlier note here conflated the two same-named entities; corrected 2026-08-24 after confirming via a direct rk.2035.university org-profile lookup that org_id 019a493f-... (the only «Архангел» profile on the platform) carries ИНН 9500026652, not this entity's 9714079108. This EU-sanctioned Moscow entity (9714079108) itself has no confirmed rk.2035.university presence.",
             "source_id": "s1164"
+          },
+          {
+            "question": "2026-08-25 attempt at VK/TG product-line enrichment (per project's own VK/TG-as-primary-source rule) surfaced ONLY the other, already-disambiguated «Архангел» (ИНН 9500026652's @projectArchangel TG channel, 21.3K subs) and the Kalashnikov FPV-drone joint-production coverage tied to THAT entity -- correctly NOT attributed here per the existing note above. No VK/TG or product data found for this entity (9714079108) itself; products[] stays empty.",
+            "source_id": null
           }
         ],
         "wb_overlap": "none_found"
@@ -10749,7 +10753,12 @@
           "confidence": "t-doc"
         },
         "wb_overlap": "none_found",
-        "open_questions": []
+        "open_questions": [
+          {
+            "question": "2026-08-25 attempt at VK/TG product-line enrichment (per project's own VK/TG-as-primary-source rule, in lieu of a site) -- web search returned no results connecting this entity to any VK/TG channel or product line at all. products[] stays empty; needs a more targeted search (e.g. against the Запад-2025 exercise context already cited in cbst_tie) if pursued further.",
+            "source_id": null
+          }
+        ]
       },
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1247700255208-20260823131811.pdf). Sole founder = sole director, registered 2024.",
