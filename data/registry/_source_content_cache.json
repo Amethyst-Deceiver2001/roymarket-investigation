@@ -11143,5 +11143,13 @@
     "as_of_method": null,
     "sha256": "ae64e6c6b7d704e0ade54c6b45c7986bd5b052bbc34aa59a5163b452d4eb55f1",
     "sample": "{\n \"captured_via\": \"user-provided browser HAR captures, 2026-08-25 (two files: Ozon search/seller-page for the 'GD' seller and its Nabat-battery product; Wildberries search results for 'набат детектор')\",\n \"conclusion\": \"Sparse/absent on both marketplaces for ooo-goudron's own «Набат» detector line -- no ID-confirmed presence on either platform.\",\n \"wildberries\": {\n \"search_query\": \"набат детектор"
+  },
+  "OZON_9721203814_20260825_godrone-3980614-big-seller.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "07c8a8b88a7bcfbfd0aa55c039689d5afddec2305eacb0c7d20c670016f4cf17",
+    "sample": "{\n \"captured_via\": \"user-provided browser HAR capture, 2026-08-25 (Ozon search for 'гоудрон' -- the entity's own legal name, not just the GoDrone brand)\",\n \"seller\": {\n \"url\": \"https://www.ozon.ru/seller/godrone-3980614/\",\n \"ozon_seller_id\": 3980614,\n \"display_name\": \"GoDrone\",\n \"brand_page\": \"https://www.ozon.ru/brand/gd-100937145/\",\n \"rating\": \"4.8\",\n \"reviews\": 3358,\n \"note\": \"A DIFFERENT, larg"
   }
 }

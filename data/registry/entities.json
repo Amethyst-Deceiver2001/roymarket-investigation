@@ -15880,6 +15880,10 @@
         {
           "url": "https://www.ozon.ru/seller/gd-2520832/",
           "note": "Ozon seller \"GD\" -- plausible GoDrone match (catalog includes a directly GoDrone-branded item and a Nabat-compatible battery), but legal identity NOT ID-confirmed to this entity's ИНН/ОГРН in this capture (2026-08-25, s1390) -- see open_questions. Catalog is a general electronics/power-tool wholesale mix, not the detector unit itself."
+        },
+        {
+          "url": "https://www.ozon.ru/seller/godrone-3980614/",
+          "note": "A SECOND, much larger Ozon seller account explicitly titled \"GoDrone\" (seller_id 3980614, distinct from the \"GD\" account above) -- 4.8 rating, 3,358 reviews, genuine commercial scale. Confirmed via user-supplied HAR capture 2026-08-25 (s1391) of a search for \"гоудрон\" (the entity's own legal name). Catalog sample: DJI Mavic chargers/batteries, ToolkitRC accessories, and again a Nabat V3-compatible battery -- not the detector unit itself in this capture. STILL NOT ID-confirmed to this entity's own ИНН/ОГРН -- the legal-info modal was referenced but never triggered with content in this session either."
         }
       ],
       "other": [
@@ -15892,8 +15896,8 @@
     "images": [],
     "open_questions": [
       {
-        "question": "Ozon seller \"GD\" (seller_id 2520832) sells a GoDrone-branded item (\"Аккумулятор для электроинструмента GoDrone 21V 2600 mAh\") and a Nabat-compatible battery, consistent with this entity's ОКВЭД 46.43 (wholesale electronics) -- plausible match, but NOT ID-confirmed to this entity's own ИНН/ОГРН: the sellerLegalInformation modal wasn't captured in the 2026-08-25 HAR session, and a direct curl attempt at the same endpoint was blocked by Ozon's antibot (307). Needs a HAR capture of the seller's \"О магазине\" modal specifically to resolve.",
-        "source_id": "s1390"
+        "question": "TWO distinct GoDrone-branded Ozon sellers found, neither ID-confirmed to this entity's own ИНН/ОГРН: \"GD\" (seller_id 2520832, small) and \"GoDrone\" (seller_id 3980614, 4.8 rating/3,358 reviews -- genuine commercial scale). Both plausible on branding and product mix (ОКВЭД 46.43 wholesale electronics), but the sellerLegalInformation modal has not been captured for either across two HAR sessions (2026-08-25), and a direct curl attempt at the modal endpoint was blocked by Ozon's antibot (307). Needs a HAR capture that specifically opens the seller's \"О магазине\" info panel (not just the storefront page) to resolve either one.",
+        "source_id": "s1391"
       }
     ],
     "sources": [],
@@ -15915,7 +15919,8 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9721203814). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 15 candidates -- mix of empty-patentee filings and clearly unrelated holders (Samsung Electronics, a university LETI, a Ural metals plant, an animal hospice).",
       "web.sites was empty. Web search 2026-08-25, confirmed via director name and product name match, not just company-name similarity.",
-      "User-supplied browser HAR captures 2026-08-25 (Ozon search/seller page for \"GD\", Wildberries search for \"набат детектор\") answered the standing wb_overlap question with much more specific evidence than the earlier ИНН-only check. WB: all 4 search results independently ID-checked via wbbasket.ru's own supplier-by-id endpoint -- every one is an unrelated Chinese cross-border seller (Fujian/Henan/Tianjin trading companies), none is this entity. Confirms wb_overlap=none_found rather than just leaving it unexplained. Ozon: a seller display-named \"GD\" sells a directly GoDrone-branded item plus a Nabat-compatible battery -- plausible but not ID-confirmed (legal-info modal not captured, direct curl blocked by antibot) -- logged as an open_question rather than promoted as confirmed."
+      "User-supplied browser HAR captures 2026-08-25 (Ozon search/seller page for \"GD\", Wildberries search for \"набат детектор\") answered the standing wb_overlap question with much more specific evidence than the earlier ИНН-only check. WB: all 4 search results independently ID-checked via wbbasket.ru's own supplier-by-id endpoint -- every one is an unrelated Chinese cross-border seller (Fujian/Henan/Tianjin trading companies), none is this entity. Confirms wb_overlap=none_found rather than just leaving it unexplained. Ozon: a seller display-named \"GD\" sells a directly GoDrone-branded item plus a Nabat-compatible battery -- plausible but not ID-confirmed (legal-info modal not captured, direct curl blocked by antibot) -- logged as an open_question rather than promoted as confirmed.",
+      "User pointed to a second, much larger Ozon seller (2026-08-25, s1391): \"GoDrone\" (seller_id 3980614, distinct from \"GD\" above), 4.8 rating, 3,358 reviews -- genuine commercial scale, consistent with \"godrone is a big seller on Ozon.\" Same identity gap as the smaller account: no sellerLegalInformation content captured for either across two separate HAR sessions. Recorded as a second brand-match marketplace_listings lead, not promoted to confirmed."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
