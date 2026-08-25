@@ -574,13 +574,57 @@ def parse_global_open_questions(lines: list[str], text: str) -> list[dict]:
         for i, li in enumerate(re.findall(r"<li>(.*?)</li>", sec[1], re.S), 1):
             out.append({"id": f"oq{i:03d}", "scope": "global",
                         "text": strip_tags(li), "entity_slug": None,
+                        "person_slug": None,
                         "_origin": "brief:what-is-not-established"})
     for i, card in enumerate(re.findall(
             r'<div class="card"><h4>(.*?)</h4><p>(.*?)</p></div>', text, re.S), 1):
         out.append({"id": f"src{i:03d}", "scope": "unmined-source",
                     "text": f"{strip_tags(card[0])} — {strip_tags(card[1])}",
-                    "entity_slug": None, "_origin": "brief:data-sources-still-unmined"})
+                    "entity_slug": None, "person_slug": None,
+                    "_origin": "brief:data-sources-still-unmined"})
     return out
+
+
+def attribute_open_questions(open_qs: list[dict], entities: list[dict],
+                              people: list[dict]) -> None:
+    """Best-effort, conservative entity_slug/person_slug attribution for the
+    global open_questions.json store, run once entities/people are final.
+
+    Only ever sets a slug on an UNAMBIGUOUS match — a guillemet-quoted entity
+    name («Инвестментс») or a full Cyrillic ФИО substring, each checked
+    against every entity/person so a match that hits more than one record
+    (e.g. «Азимут», which genuinely names two different registry entities)
+    is left unset rather than guessed. This mirrors the project's standing
+    discipline elsewhere (wb_overlap, reverse_source_index) of only ever
+    recording a match strength the data actually supports — a null here is
+    honest ("not established which one"), not a gap in the tooling.
+
+    Deliberately does NOT attempt transliterated-name matching (English
+    "Medvedev" against Cyrillic "Медведев") — a surname-only match across
+    scripts is exactly the kind of guess this project's PII/attribution
+    discipline exists to prevent (a namesake risk, not a resolved reference).
+    """
+    guillemet_re = re.compile(r"«([^»]+)»")
+    entity_names: dict[str, list[str]] = {}
+    for e in entities:
+        for name in guillemet_re.findall(e.get("name_ru") or ""):
+            entity_names.setdefault(name, []).append(e["slug"])
+    person_names: dict[str, list[str]] = {}
+    for p in people:
+        fio = p.get("fio_ru")
+        if fio:
+            person_names.setdefault(fio, []).append(p["slug"])
+
+    for oq in open_qs:
+        text = oq.get("text") or ""
+        entity_hits = {slug for name, slugs in entity_names.items()
+                       if name in text for slug in slugs}
+        person_hits = {slug for name, slugs in person_names.items()
+                       if name in text for slug in slugs}
+        if len(entity_hits) == 1 and not person_hits:
+            oq["entity_slug"] = next(iter(entity_hits))
+        elif len(person_hits) == 1 and not entity_hits:
+            oq["person_slug"] = next(iter(person_hits))
 
 
 RE_REGDATE = re.compile(
@@ -1430,6 +1474,8 @@ def main() -> int:
     carry_forward_screening_fields(
         people, prev_people, PEOPLE_CARRY_FORWARD_FIELDS
     )
+
+    attribute_open_questions(open_qs, entities, people)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     payloads = {

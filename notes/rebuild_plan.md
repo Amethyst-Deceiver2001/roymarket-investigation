@@ -1154,13 +1154,31 @@ this item was never actually about — most `data/sources/` files are PDFs/
 zips with no meaningful single URL, so this field may simply not apply to
 most rows; worth a decision, not a mechanical fix, if it's ever needed.
 
-**6. Unify the three open-question stores** into one shape. Still three
-separate, unlinked stores, and the global one is now *worse* on the metric
-that matters: `open_questions.json` (44 items, was 44) still has
-**`entity_slug: null` on all 44 of them** — completely unchanged since first
-measured, while the per-entity stores have grown to 104 items (101 dict + 3
-string) and a new per-person store now holds 3 items (was 1). The unification
-work hasn't started; the volume it needs to unify keeps growing.
+**6. Unify the three open-question stores.** **Done, in the form that
+turned out to matter (2026-08-25).** Re-checking on the way in: the field
+`scope` (`global` vs `unmined-source`) was already correctly distinguishing
+the two kinds of item inside `open_questions.json` — an earlier reading of
+this table item overstated that as unfixed. The two real defects were: (a)
+the two embedded per-entity/per-person stores used key `question` where the
+global store used `text` — now unified, all 116 embedded entries renamed to
+`text` via `corrections.json` (`check_registry.py` now validates the `text`
+key on all three, plus a `person_slug` shape check newly added for people);
+(b) `entity_slug` was null on all 44 global rows with no `person_slug` field
+at all. Added `attribute_open_questions()` to `extract_registry.py`, run
+once entities/people are final: it sets `entity_slug`/`person_slug` ONLY on
+an unambiguous match (a guillemet-quoted entity name or a full Cyrillic ФИО
+appearing in the question text, and appearing in exactly one record —
+«Азимут», which genuinely names two different entities, correctly stays
+unset rather than guessed). Deliberately does not attempt transliterated
+matching (English "Medvedev" vs Cyrillic "Медведев") — a surname-only
+cross-script match is exactly the kind of guess this project's attribution
+discipline exists to prevent. Result: **16 of 44 rows now resolve to a
+specific entity or person**, up from 0, entirely from data already on file
+(fully deterministic — re-running the scaffold reproduces the same 16 every
+time, so this needed no hand-editing and nothing to maintain going forward).
+`check_registry.py` now validates `open_questions.json`'s `scope` enum and
+`entity_slug`/`person_slug` referential integrity, and reports the
+attribution count in its coverage output.
 
 **7. Generalize `check_tag_balance.py`.** Still hardcodes `docs/index.html`
 (confirmed unchanged, `scripts/check_tag_balance.py:12` still reads

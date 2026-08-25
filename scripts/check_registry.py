@@ -128,6 +128,7 @@ def main() -> int:
     people = load("people.json")
     sources = load("sources.json")
     quotes = load("quotes.json")
+    global_open_qs = load("open_questions.json")
 
     if entities is None:
         print("error: data/registry/entities.json not found — run "
@@ -262,11 +263,39 @@ def main() -> int:
                               f"a list of jurisdiction strings or null (not a "
                               f"semicolon-joined string, not a bare "
                               f"OpenSanctions topic code), got {regime!r}")
+        for i, oq in enumerate(p.get("open_questions") or []):
+            if not isinstance(oq, dict) or "text" not in oq:
+                errors.append(f"{p['fio_ru']}: open_questions[{i}] must be "
+                              f"{{'text': str, 'source_id': str|null}} — same "
+                              f"field name as the global open_questions.json "
+                              f"store, got {oq!r}")
 
     for q in quotes or []:
         sid = q.get("source_id")
         if sid and sid not in source_ids:
             errors.append(f"quote {q.get('id')}: unknown source_id '{sid}'")
+
+    OQ_SCOPES = {"global", "unmined-source"}
+    for oq in global_open_qs or []:
+        oid = oq.get("id", "?")
+        if "text" not in oq:
+            errors.append(f"open_questions.json {oid}: missing 'text' — same "
+                          f"field name as entity/person open_questions[]")
+        if oq.get("scope") not in OQ_SCOPES:
+            errors.append(f"open_questions.json {oid}: unknown scope "
+                          f"'{oq.get('scope')}' (valid: {sorted(OQ_SCOPES)})")
+        es = oq.get("entity_slug")
+        if es and es not in entity_slugs:
+            errors.append(f"open_questions.json {oid}: entity_slug "
+                          f"references unknown entity slug '{es}'")
+        ps = oq.get("person_slug")
+        if ps and ps not in people_slugs:
+            errors.append(f"open_questions.json {oid}: person_slug "
+                          f"references unknown person slug '{ps}'")
+        if es and ps:
+            errors.append(f"open_questions.json {oid}: has both entity_slug "
+                          f"and person_slug set — should be attributed to "
+                          f"exactly one, or neither")
 
     # --- 6. history arrays -------------------------------------------------
     HISTORY_KEYS = ["director_history", "charter_capital_history",
@@ -300,10 +329,11 @@ def main() -> int:
             errors.append(f"{e['name_ru']}: okved_mismatch must be null or "
                           f"{{'mismatch': bool, 'note': str|null}}, got {om!r}")
         for i, oq in enumerate(e.get("open_questions") or []):
-            if not isinstance(oq, dict) or "question" not in oq:
+            if not isinstance(oq, dict) or "text" not in oq:
                 errors.append(f"{e['name_ru']}: open_questions[{i}] must be "
-                              f"{{'question': str, 'source_id': str|null}}, "
-                              f"got {oq!r}")
+                              f"{{'text': str, 'source_id': str|null}} — same "
+                              f"field name as the global open_questions.json "
+                              f"store, got {oq!r}")
         for i, s in enumerate(e.get("sanctions") or []):
             regime = s.get("regime")
             if regime is not None and not (
@@ -424,6 +454,10 @@ def main() -> int:
               f"entity/person ИНН, reaching {len(entity_sources)} entities + "
               f"{len(person_sources)} people (see scripts/reverse_source_index.py)")
         print(f"quotes                {len(quotes or [])}")
+        oq_attributed = sum(1 for oq in (global_open_qs or [])
+                            if oq.get("entity_slug") or oq.get("person_slug"))
+        print(f"open_questions.json   {len(global_open_qs or [])} global "
+              f"({oq_attributed} attributed to a specific entity/person)")
 
     print()
     print(f"{len(errors)} error(s), {len(warnings)} warning(s)")
