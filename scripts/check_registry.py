@@ -160,6 +160,10 @@ def main() -> int:
         inn = p.get("inn_personal")
         if inn and not inn_valid(inn):
             errors.append(f"personal ИНН checksum FAILED: {inn} on {p.get('fio_ru')}")
+        corrected = p.get("_corrected")
+        if corrected is not None and not isinstance(corrected, list):
+            errors.append(f"{p.get('fio_ru')}: _corrected must be a list of "
+                          f"note strings or null, got {type(corrected).__name__}")
 
     # --- 4. duplicates ---------------------------------------------------
     by_inn = defaultdict(list)
@@ -246,6 +250,15 @@ def main() -> int:
                 errors.append(f"{p['fio_ru']}: _merged_into chains to another "
                               f"tombstone ('{merged}') — point directly at the "
                               f"final live record instead")
+        for i, s in enumerate(p.get("sanctions") or []):
+            regime = s.get("regime")
+            if regime is not None and not (
+                isinstance(regime, list) and all(isinstance(r, str) for r in regime)
+            ):
+                errors.append(f"{p['fio_ru']}: sanctions[{i}].regime must be "
+                              f"a list of jurisdiction strings or null (not a "
+                              f"semicolon-joined string, not a bare "
+                              f"OpenSanctions topic code), got {regime!r}")
 
     for q in quotes or []:
         sid = q.get("source_id")
@@ -271,6 +284,32 @@ def main() -> int:
         if wbo and wbo not in WB_OVERLAP_VALUES:
             errors.append(f"{e['name_ru']}: unknown wb_overlap value '{wbo}' "
                           f"(valid: {sorted(WB_OVERLAP_VALUES)})")
+        cc = e.get("charter_capital")
+        if cc is not None and (isinstance(cc, bool) or not isinstance(cc, (int, float))):
+            errors.append(f"{e['name_ru']}: charter_capital must be a number "
+                          f"or null, got {type(cc).__name__} ({cc!r})")
+        om = e.get("okved_mismatch")
+        if om is not None and (not isinstance(om, dict)
+                                or set(om) - {"mismatch", "note"}
+                                or not isinstance(om.get("mismatch"), bool)
+                                or (om.get("note") is not None
+                                    and not isinstance(om.get("note"), str))):
+            errors.append(f"{e['name_ru']}: okved_mismatch must be null or "
+                          f"{{'mismatch': bool, 'note': str|null}}, got {om!r}")
+        for i, oq in enumerate(e.get("open_questions") or []):
+            if not isinstance(oq, dict) or "question" not in oq:
+                errors.append(f"{e['name_ru']}: open_questions[{i}] must be "
+                              f"{{'question': str, 'source_id': str|null}}, "
+                              f"got {oq!r}")
+        for i, s in enumerate(e.get("sanctions") or []):
+            regime = s.get("regime")
+            if regime is not None and not (
+                isinstance(regime, list) and all(isinstance(r, str) for r in regime)
+            ):
+                errors.append(f"{e['name_ru']}: sanctions[{i}].regime must be "
+                              f"a list of jurisdiction strings or null (not a "
+                              f"semicolon-joined string, not a bare "
+                              f"OpenSanctions topic code), got {regime!r}")
         for h in e.get("facility_type_history") or []:
             v = h.get("value")
             if v and v not in FACILITY_TYPES:

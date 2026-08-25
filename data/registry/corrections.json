@@ -150,7 +150,7 @@
       ]
     },
     {
-      "charter_capital": "500000",
+      "charter_capital": 500000,
       "director": "Байгутлина Ирина Анатольевна",
       "facility_type": "purpose_built_technopark_sez",
       "facility_type_history": [
@@ -234,7 +234,10 @@
       "inn": "9724066980",
       "name_ru": "АНО «Центр развития транспортных технологий»",
       "open_questions": [
-        "Function of this entity within the network is not yet established beyond Рогозин's directorship — worth a closer read."
+        {
+          "question": "Function of this entity within the network is not yet established beyond Рогозин's directorship — worth a closer read.",
+          "source_id": null
+        }
       ],
       "slug": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
       "tier": "plumbing",
@@ -321,7 +324,10 @@
       "name_ru": "ООО «РТ-Развитие бизнеса»",
       "ogrn": "1147746392200",
       "open_questions": [
-        "Confirm/add АО «ХК Гумич» (ИНН 9726051114) already has this shareholding recorded in its own founders_history."
+        {
+          "question": "Confirm/add АО «ХК Гумич» (ИНН 9726051114) already has this shareholding recorded in its own founders_history.",
+          "source_id": null
+        }
       ],
       "slug": "ooo-rt-razvitie-biznesa",
       "tier": "money-layer",
@@ -404,7 +410,10 @@
       "notes": "Full name: Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (\"Association of Developers of Advanced ELINT/EW/Comms Systems\"). Self-identified by an author in a January 2025 РЭБ how-to guide already in this project's scraped database. list-org.com resolves the ОГРН to this real legal entity; no ИНН was stated in the brief's passage — left null pending a direct lookup.",
       "ogrn": "1242300011469",
       "open_questions": [
-        "Confirm ИНН via a direct lookup — not stated in the source passage."
+        {
+          "question": "Confirm ИНН via a direct lookup — not stated in the source passage.",
+          "source_id": null
+        }
       ],
       "registered": "01.03.2024",
       "slug": "ano-arrs-krasnodar",
@@ -989,13 +998,17 @@
       "_verified": true,
       "sanctions": [
         {
-          "regime": "US (OFAC, EO 14024)",
+          "regime": [
+            "US (OFAC, EO 14024)"
+          ],
           "date": "SDN list entry last updated 2026-08-20 (established/listed org date 08.02.2023)",
           "note": "Directly designated under Executive Order 14024 as \"CENTER FOR UNMANNED SYSTEMS OF THE TULA REGION\" (aliases \"OOO TSENTR BESPILOTNYKH SISTEM\", \"TSBS\"), Tula address matching this entity's ЕГРЮЛ address exactly, ИНН 7100032961 and ОГРН 1237100001467 stated explicitly on the OFAC listing itself — independently cross-checked against a direct egrul.nalog.ru pull, exact match on both identifiers, not reliant on OpenSanctions' aggregation alone.",
           "source_id": "s0573"
         },
         {
-          "regime": "Canada (SEMA) / Australia / Ukraine (war-sanctions.gur.gov.ua) — UNVERIFIED",
+          "regime": [
+            "Canada (SEMA) / Australia / Ukraine (war-sanctions.gur.gov.ua) — UNVERIFIED"
+          ],
           "date": null,
           "note": "OpenSanctions' merged profile also lists programIds CA-SEMA, AU-RUSSIA and UA-WS-MILIND/UA-SA1644 for this entity family, but war-sanctions.gur.gov.ua returned HTTP 403 to a direct fetch attempt and the Canada/Australia listings were not independently opened — flagged as PROBABLE but not yet primary-source-confirmed the way the OFAC listing is. Do not cite these three without independent verification.",
           "source_id": "s0572"
@@ -1625,7 +1638,10 @@
         "ogrn": "1237700218612",
         "okved_code": "88.99",
         "okved_label": "Предоставление прочих социальных услуг без обеспечения проживания, не включенных в другие группировки",
-        "okved_mismatch": true,
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": null
+        },
         "open_questions": [
           {
             "question": "Who are Фонд «Наша Правда»'s founders? The brief attributes it to Фонд «ДАР» and Фонд «Градислава», but this is NOT confirmed by the fund's own ЕГРЮЛ extract — a Фонд's учредители are simply not published in ЕГРЮЛ (the extract has no учредители section at all, which is a structural property of the legal form, not a redaction). Resolving this needs the fund's Устав or a Минюст filing, not another ЕГРЮЛ pull.",
@@ -1742,7 +1758,14 @@
         "notes": "Sibling entity within the «Ушкуйник» group, same brand/leadership umbrella as the product-bearing entity npts-ushkuynik (ООО «Ушкуйник» — «Князь Вандал Новгородский» drone). Not independently manufacturing a separate product line — no products[] expected here; verify against npts-ushkuynik for the group's actual catalog rather than treating an empty products[] on this record as a gap.",
         "sanctions": [
           {
-            "regime": "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); Switzerland (SECO, Ukraine-related measures); Canada (Special Economic Measures Act); Ukraine (Presidential sanctions decree/list); Ukraine (war-sanctions.gur.gov.ua, military-industry listing); EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Canada (Special Economic Measures Act)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "Ukraine (war-sanctions.gur.gov.ua, military-industry listing)",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 5300010714 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Autonomous non-profit Organisation “Scientific and Production Center for Testing and Competence in the Field of Development of Unmanned Aircraft Systems and Means of Protection Against their Illegal Use ‘Ushkuynik’”\". Topics: poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0695; https://war-sanctions.gur.gov.ua/en/sanctions/companies/14954; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0936; https://war-sanctions.gur.gov.ua/en/components/companies/14954; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0748"
@@ -1862,7 +1885,9 @@
         ],
         "sanctions": [
           {
-            "regime": "Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7703469180 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Автономна некомерційна організація \"Платформа Національної технологічної ініціативи\"\". Topics: sanction. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0765"
@@ -1921,7 +1946,7 @@
         "registered": "24.05.2023",
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 5300008970 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"ЦЕНТР СТРЕЛКОВОГО И АВИАЦИОННОГО СПОРТА \"ДЕМЯНСК\"\". Topics: sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0747"
@@ -1932,7 +1957,8 @@
       "why": [
         "Partial read of the organization's own «Отчет о деятельности некоммерческой организации за 2025 г.», filed with Минюст (Управление по Новгородской области, form УН000Х, pulled 23.08.2026) — NOT marked _verified, since the income-source breakdown and executive-body identity weren't fully resolved in this pass (see open question). Confirms address, ОКВЭД 93.12 (спортивные клубы, matching the earlier ЕГРЮЛ-derived note), a FOUNDING NAME different from the current one (АНО «Стрелковый спортивный клуб «Демянск»», per the director's own appointment record), and высший орган members Татарицкий Сергей Иванович and Попов Михаил Владимирович (appointed 10.01.2025, term to 09.01.2030, per Наблюдательный совет 'Демянск' protocol) — no DOB/ИНН given.",
         "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=5300008970, file cited as source s0570). Director not resolved by this lookup method — see open_questions.",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0747)."
+        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0747).",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ]
     },
     "ano-tsentr-razvitiya-transportnykh-tekhnologiy": {
@@ -1984,7 +2010,9 @@
         ],
         "sanctions": [
           {
-            "regime": "Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9724066980 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Автономна некомерційна організація \"Центр розвитку транспортних технологій\"\". Topics: sanction. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0817"
@@ -2444,7 +2472,13 @@
         },
         "sanctions": [
           {
-            "regime": "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); Switzerland (SECO, Ukraine-related measures); Ukraine (Presidential sanctions decree/list); Ukraine (war-sanctions.gur.gov.ua, military-industry listing); EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "Ukraine (war-sanctions.gur.gov.ua, military-industry listing)",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7811075899 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"JSC ”Kotlin-Novator”\". Topics: poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/sanctions/companies/10214; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0509; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8846; https://war-sanctions.gur.gov.ua/en/uav/companies/10214; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026D0504. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0796"
@@ -2672,7 +2706,14 @@
         },
         "sanctions": [
           {
-            "regime": "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); Switzerland (SECO, Ukraine-related measures); Ukraine (Presidential sanctions decree/list); Ukraine (war-sanctions.gur.gov.ua, military-industry listing); US-BIS-EL; EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "Ukraine (war-sanctions.gur.gov.ua, military-industry listing)",
+              "US-BIS-EL",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 6730046954 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Joint Stock Company “Research Institute of Modern Telecommunication Technologies”\". Topics: export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202501476; https://war-sanctions.gur.gov.ua/en/components/companies/8229; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0394; https://war-sanctions.gur.gov.ua/en/uav/companies/8229; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8275. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0756"
@@ -3008,7 +3049,13 @@
         ],
         "sanctions": [
           {
-            "regime": "Canada (Special Economic Measures Act); Switzerland (SECO, Ukraine-related measures); US-BIS-EL; NZ-RSA2022; Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Canada (Special Economic Measures Act)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "US-BIS-EL",
+              "NZ-RSA2022",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7701583410 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Rostekh – Azimuth\". Topics: export.control, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0931; https://permid.org/1-5037967356; https://www.meti.go.jp/policy/external_economy/trade_control/02_export/17_russia/250912_list_russia_tokutei.pdf; https://eur-lex.europa.eu/eli/reg/2023/2878; https://war-sanctions.gur.gov.ua/en/sanctions/companies/155. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0763"
@@ -3163,7 +3210,10 @@
         "ogrn": "1027700135957",
         "okved_code": "26.40",
         "okved_label": "Производство бытовой электроники",
-        "okved_mismatch": true,
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": null
+        },
         "registered": "25.06.1992",
         "registrar": {
           "as_of": "2019-01-28",
@@ -3302,7 +3352,7 @@
         },
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9703244871 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"АКЦИОНЕРНОЕ ОБЩЕСТВО \"СПЕЦТЕХ ПЕРВЫЙ\"\". Topics: export.control.linked, sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0805"
@@ -3318,7 +3368,8 @@
         "GD Рубинштейн Дмитрий Владимирович — matching the brief's stated ИНН,",
         "registration date and director exactly.",
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1267700128376-20260823014943.pdf, 7pp, pulled 23.08.2026). Structurally identical to АО «Спецтех Инвестиции»: same 100% ЦБСТ ownership as единственный акционер, same director Рубинштейн Д.В., same address (пер. Капранова), same ₽100,000 capital, same ОКВЭД 64.30/64.20 investment-holding profile, same registrar. TWO ЦБСТ-owned АО financial shells run by the same person, registered four and a half months apart (27.11.2025 and 10.04.2026) — reads as a template entity, not an independent operation.",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0805)."
+        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0805).",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ]
     },
     "ao-stratim": {
@@ -3345,7 +3396,13 @@
         },
         "sanctions": [
           {
-            "regime": "US (OFAC, Russia Harmful Foreign Activities Sanctions); EU (Ukraine-related restrictive measures); Switzerland (SECO, Ukraine-related measures); Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "EU (Ukraine-related restrictive measures)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7720901379 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Joint Stock Company Stratim\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0931; https://permid.org/1-5090595171; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8130; https://war-sanctions.gur.gov.ua/en/uav/companies/13729. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0779"
@@ -3496,7 +3553,19 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "GB-RUS; NZ-RSA2022; Switzerland (SECO, Ukraine-related measures); Australia (Autonomous Sanctions, Russia); US-UKRRUS-REL; Canada (Special Economic Measures Act); Ukraine (Presidential sanctions decree/list); US-SSI; Ukraine (war-sanctions.gur.gov.ua, military-industry listing); US-BIS-EL; EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "GB-RUS",
+              "NZ-RSA2022",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Australia (Autonomous Sanctions, Russia)",
+              "US-UKRRUS-REL",
+              "Canada (Special Economic Measures Act)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "US-SSI",
+              "Ukraine (war-sanctions.gur.gov.ua, military-industry listing)",
+              "US-BIS-EL",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7719265496 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Joint Stock Company Tekhnodinamika\". Topics: corp.disqual, debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://permid.org/1-5001239326; https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402455; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=18774; https://war-sanctions.gur.gov.ua/en/rostec/4664; https://war-sanctions.gur.gov.ua/en/components/companies/4664. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0778"
@@ -3544,7 +3613,10 @@
         "ogrn": "1247700354175",
         "okved_code": "30.30.6",
         "okved_label": "Производство беспилотных авиационных систем",
-        "okved_mismatch": false,
+        "okved_mismatch": {
+          "mismatch": false,
+          "note": null
+        },
         "registered": "03.05.2024",
         "registrar": {
           "as_of": "2024-05-03",
@@ -3561,7 +3633,12 @@
         },
         "sanctions": [
           {
-            "regime": "Switzerland (SECO, Ukraine-related measures); Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); EU (Ukraine-related restrictive measures); Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "EU (Ukraine-related restrictive measures)",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9704241986 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"JSC Technodron\". Topics: poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0509; https://war-sanctions.gur.gov.ua/en/uav/companies/14303; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8910; https://war-sanctions.gur.gov.ua/en/sanctions/companies/14303; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026D0504. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0806"
@@ -3680,7 +3757,9 @@
         "tier_basis": "Self-declared ₽309.87m (2024) in receipts, explicitly funds БПЛА/РЭБ procurement and «Дронница» — a real money-flow node, not incidental infrastructure. Reclassified from plumbing.",
         "sanctions": [
           {
-            "regime": "Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 4707039070 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Асоціація благодійної допомоги \"Взаємодопомога\"\". Topics: sanction. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0737"
@@ -3744,7 +3823,10 @@
         "ogrn": "1067799028923",
         "okved_code": "64.99",
         "okved_label": "Предоставление прочих финансовых услуг, кроме услуг по страхованию и пенсионному обеспечению, не включенных в другие группировки",
-        "okved_mismatch": true,
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": null
+        },
         "registered": "03.11.2006"
       },
       "verified_against": "s0214 — Фонд «ДАР»'s own full signed ЕГРЮЛ extract, pulled 15.08.2026",
@@ -3795,7 +3877,10 @@
         "ogrn": "1117799007050",
         "okved_code": "64.99",
         "okved_label": "Предоставление прочих финансовых услуг, кроме услуг по страхованию и пенсионному обеспечению, не включенных в другие группировки",
-        "okved_mismatch": true,
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": null
+        },
         "registered": "22.04.2011"
       },
       "verified_against": "s0216 — Фонд «Градислава»'s own full signed ЕГРЮЛ extract, pulled 14.08.2026",
@@ -4048,7 +4133,17 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "Canada (Special Economic Measures Act); US-UKRRUS-REL; US-SSI; Switzerland (SECO, Ukraine-related measures); US-BIS-EL; GB-RUS; NZ-RSA2022; AU-UKRAINE; Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Canada (Special Economic Measures Act)",
+              "US-UKRRUS-REL",
+              "US-SSI",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "US-BIS-EL",
+              "GB-RUS",
+              "NZ-RSA2022",
+              "AU-UKRAINE",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7704274402 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"State Corporation Rostec\". Topics: corp.disqual, debarment, export.control, export.risk, sanction. Primary source URLs cited by OpenSanctions: https://home.treasury.gov/news/press-releases/jy2700; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0931; https://ror.org/00ahm5y33; https://war-sanctions.gur.gov.ua/en/sanctions/companies/16; https://www.unitedagainstnucleariran.com/node/10889. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0767"
@@ -4177,7 +4272,11 @@
         ],
         "sanctions": [
           {
-            "regime": "NZ-RSA2022; Ukraine (Presidential sanctions decree/list); US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+            "regime": [
+              "NZ-RSA2022",
+              "Ukraine (Presidential sanctions decree/list)",
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7733393203 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LIMITED LIABILITY COMPANY NAUCHNO PROIZVODSTVENNOE OBYEDINENIE KAISANT\". Topics: debarment, export.control, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/sanctions/companies/14048; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=50741. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0784"
@@ -4366,7 +4465,18 @@
         ],
         "sanctions": [
           {
-            "regime": "GB-RUS; NZ-RSA2022; US (OFAC, Russia Harmful Foreign Activities Sanctions); Australia (Autonomous Sanctions, Russia); Switzerland (SECO, Ukraine-related measures); Canada (Special Economic Measures Act); Ukraine (Presidential sanctions decree/list); Ukraine (war-sanctions.gur.gov.ua, military-industry listing); US-BIS-EL; EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "GB-RUS",
+              "NZ-RSA2022",
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Australia (Autonomous Sanctions, Russia)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Canada (Special Economic Measures Act)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "Ukraine (war-sanctions.gur.gov.ua, military-industry listing)",
+              "US-BIS-EL",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7814027653 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Joint Stock Company Research and Production Enterprise Radar MMS\". Topics: corp.disqual, debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0695; https://find-and-update.company-information.service.gov.uk/disqualified-officers/corporate/qQkQ5j-ulgV3MHmaSm-Onp3Cd1g; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=7286; https://war-sanctions.gur.gov.ua/en/sanctions/companies/3333; https://permid.org/1-4298529803. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0798"
@@ -4494,7 +4604,13 @@
         ],
         "sanctions": [
           {
-            "regime": "US (OFAC, Russia Harmful Foreign Activities Sanctions); Canada (Special Economic Measures Act); Switzerland (SECO, Ukraine-related measures); US-BIS-EL; Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Canada (Special Economic Measures Act)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "US-BIS-EL",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7735582816 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ELVEES R AND D CENTER JSC\". Topics: debarment, export.control, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0931; https://war-sanctions.gur.gov.ua/en/sanctions/companies/336; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=39179; https://www.meti.go.jp/policy/external_economy/trade_control/02_export/17_russia/250912_list_russia_tokutei.pdf; https://eur-lex.europa.eu/eli/reg/2023/2878. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0789"
@@ -5106,7 +5222,12 @@
         },
         "sanctions": [
           {
-            "regime": "US (OFAC, Russia Harmful Foreign Activities Sanctions); EU (Ukraine-related restrictive measures); Ukraine (Presidential sanctions decree/list); Switzerland (SECO, Ukraine-related measures)",
+            "regime": [
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "EU (Ukraine-related restrictive measures)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "Switzerland (SECO, Ukraine-related measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7725347482 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LIMITED LIABILITY COMPANY AEROMAKS\". Topics: debarment, export.control, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0509; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=50772; https://war-sanctions.gur.gov.ua/en/sanctions/companies/1534; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8841; https://permid.org/1-5079708540. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0780"
@@ -5722,7 +5843,13 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "Canada (Special Economic Measures Act); EU (Ukraine-related restrictive measures); Switzerland (SECO, Ukraine-related measures); Ukraine (war-sanctions.gur.gov.ua, military-industry listing); Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Canada (Special Economic Measures Act)",
+              "EU (Ukraine-related restrictive measures)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Ukraine (war-sanctions.gur.gov.ua, military-industry listing)",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 6154165878 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LLC “ATLANT AERO”\". Topics: poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/sanctions/companies/15599; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0509; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8912; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026D0504; https://permid.org/1-6000114941. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0750"
@@ -5940,7 +6067,10 @@
         ],
         "okved_code": "93.19",
         "okved_label": "Деятельность в области спорта прочая",
-        "okved_mismatch": "Registered as a sports-activity company, not manufacturing — consistent with drone-racing/sport-drone framing rather than defence production; relevance to this registry's core network not yet independently established beyond the entity having been scaffolded as manufacturer-tier.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Registered as a sports-activity company, not manufacturing — consistent with drone-racing/sport-drone framing rather than defence production; relevance to this registry's core network not yet independently established beyond the entity having been scaffolded as manufacturer-tier."
+        },
         "_verified": true,
         "open_questions": [
           {
@@ -5950,7 +6080,9 @@
         ],
         "sanctions": [
           {
-            "regime": "Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9724002908 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Товариство з обмеженою відповідальністю \"ДСГ\"\". Topics: sanction. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0816"
@@ -6481,7 +6613,9 @@
         },
         "sanctions": [
           {
-            "regime": "Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9721203814 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Товариство з обмеженою відповідальністю \"Гоудрон\"\". Topics: sanction. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0814"
@@ -6631,7 +6765,7 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7000013316 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ\"\". Topics: sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0758"
@@ -6645,7 +6779,8 @@
         "Two 50/50 legal-entity founders, both new to this registry: ООО «Информационные технологии» (ИНН 5501278775, Omsk-numbered) and ООО «ИНТЭК» (ИНН 7017236286, Tomsk — likely the namesake parent given the shared \"ИНТЭК\" brand) — worth a follow-up pull on both.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0758).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7000013316). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, the sole candidate belongs to an unrelated company, \"ООО «ИННОДРАЙВ»\"."
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, the sole candidate belongs to an unrelated company, \"ООО «ИННОДРАЙВ»\".",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -6741,7 +6876,7 @@
         "registered": "07.08.2023",
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9707004743 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНВЕСТМЕНТС\"\". Topics: sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0808"
@@ -6753,7 +6888,8 @@
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 4 fiscal year(s) with revenue/profit data.",
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 4 fiscal year(s) with revenue/profit data.",
         "Full signed ЕГРЮЛ extract read end-to-end (s0223, ul-1237700523895-20260815163505.pdf, 10pp, pulled 15.08.2026). KEY OWNERSHIP FINDING: ООО «Инвестментс» is 90.91% owned by ФОНД «НАША ПРАВДА» (ИНН 9705196180, ОГРН 1237700218612) — the ЦБСТ-core fund — with the remaining 9.09% held by Григорьев Дмитрий Евгеньевич (personal ИНН 772023793184), who is also its general director. Both stakes recorded 20.01.2026, unredacted. This is a direct, primary-source ЦБСТ-core→money-layer ownership edge stated in the subsidiary's own extract, not inferred. English legal name INVESTMENTS LIMITED LIABILITY COMPANY; ₽11,000 charter capital; relocated to Сущёвская 27 стр. 2 on 04.05.2026. NOTE for the open A40-119451/26 question: this confirms the corporate parentage of «Инвестментс», but says nothing about the ₽83.27m arbitration figure or the ООО «АФК» defendant discrepancy — that stays open.",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0808)."
+        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0808).",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ]
     },
     "ooo-kleverkopter": {
@@ -6843,7 +6979,11 @@
         ],
         "sanctions": [
           {
-            "regime": "EU (Ukraine-related restrictive measures); Ukraine (Presidential sanctions decree/list); Switzerland (SECO, Ukraine-related measures)",
+            "regime": [
+              "EU (Ukraine-related restrictive measures)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "Switzerland (SECO, Ukraine-related measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 5257183517 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LLC “KLEVERCOPTER”\". Topics: sanction. Primary source URLs cited by OpenSanctions: https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8861; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0509; https://war-sanctions.gur.gov.ua/en/sanctions/companies/16050; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026D0504; https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0744"
@@ -6924,7 +7064,10 @@
         ],
         "okved_code": "62.01",
         "okved_label": "Разработка компьютерного программного обеспечения",
-        "okved_mismatch": "Declared activity is software development, not UAV manufacture — name (\"КоптерЛаб\") suggests drone-adjacent work (flight-control software, ground-control-station apps) rather than airframe production; consistent with, not contradicting, a software-focused registration.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Declared activity is software development, not UAV manufacture — name (\"КоптерЛаб\") suggests drone-adjacent work (flight-control software, ground-control-station apps) rather than airframe production; consistent with, not contradicting, a software-focused registration."
+        },
         "_verified": true,
         "wb_overlap": "none_found",
         "web": {
@@ -7064,7 +7207,7 @@
         },
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7802693899 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАВТ\"\". Topics: sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0794"
@@ -7348,7 +7491,8 @@
         "Full product catalog extracted from https://kravt-studio.ru/ (23.08.2026, site sweep).",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0794).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7802693899). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24: promoted 20 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: subject matter is water-treatment/chlorination equipment (this entity's actual core business), unrelated to UAVs directly -- but confirms ООО «КРАВТ» is a real, long-operating industrial equipment manufacturer, consistent with the already-established fact that it separately holds a UAV power-supply patent under its own name (RU2858174C1, currently recorded on the subsidiary ooo-kravt-udmurtiya's record) -- i.e. a real diversified company, not a shell."
+        "2026-08-24: promoted 20 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: subject matter is water-treatment/chlorination equipment (this entity's actual core business), unrelated to UAVs directly -- but confirms ООО «КРАВТ» is a real, long-operating industrial equipment manufacturer, consistent with the already-established fact that it separately holds a UAV power-supply patent under its own name (RU2858174C1, currently recorded on the subsidiary ooo-kravt-udmurtiya's record) -- i.e. a real diversified company, not a shell.",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -7395,7 +7539,7 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 6330030244 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛЕВИТ\"\". Topics: sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0752"
@@ -7407,7 +7551,8 @@
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 4 fiscal year(s) with revenue/profit data.",
         "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=6330030244, file cited as source s0083). Director confirmed: Шуликин Николай Константинович.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0752).",
-        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person."
+        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0083)"
     },
@@ -7465,7 +7610,12 @@
         },
         "sanctions": [
           {
-            "regime": "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); Ukraine (Presidential sanctions decree/list); EU (Ukraine-related restrictive measures); Switzerland (SECO, Ukraine-related measures)",
+            "regime": [
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "EU (Ukraine-related restrictive measures)",
+              "Switzerland (SECO, Ukraine-related measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 5003155499 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LLC NPO Rustecdrone\". Topics: poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/sanctions/companies/14300; https://war-sanctions.gur.gov.ua/en/uav/companies/14300; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8112; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933; https://permid.org/1-5095328060. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0738"
@@ -8497,7 +8647,10 @@
         ],
         "okved_code": "46.75.2",
         "okved_label": "Торговля оптовая промышленными химикатами",
-        "okved_mismatch": "Registered as industrial-chemicals wholesale trade, oldest ОГРН in this batch (2007) — no drone/UAV signal at all in the declared activity; worth a relevance recheck on why this ИНН was scaffolded into the manufacturer tier.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Registered as industrial-chemicals wholesale trade, oldest ОГРН in this batch (2007) — no drone/UAV signal at all in the declared activity; worth a relevance recheck on why this ИНН was scaffolded into the manufacturer tier."
+        },
         "_verified": true,
         "open_questions": [
           {
@@ -8724,7 +8877,11 @@
         "registered": "09.04.2014",
         "sanctions": [
           {
-            "regime": "NZ-RSA2022; US (OFAC, Russia Harmful Foreign Activities Sanctions); Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "NZ-RSA2022",
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7704861136 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"RT-Business Development\". Topics: debarment, export.control.linked, sanction. Primary source URLs cited by OpenSanctions: https://sanctionssearch.ofac.treas.gov/Details.aspx?id=37792; https://permid.org/1-5046276123; https://home.treasury.gov/news/press-releases/jy0838; https://war-sanctions.gur.gov.ua/en/sanctions/companies/5973. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0768"
@@ -8809,7 +8966,7 @@
         ],
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 4205376019 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИБИРСКАЯ НАВИГАЦИОННАЯ КОМПАНИЯ\"\". Topics: sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0734"
@@ -8848,7 +9005,8 @@
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1184205024849-20260823120210.pdf, pulled 23.08.2026). Despite the 'Сибирская' (Siberian) name, registered address is Moscow, not Siberia — worth noting as a naming/location mismatch. Ступников А.Г. is both GD and majority (73.75%) owner; Константинов Е.А. holds 26.25%.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0734).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (4205376019). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here."
+        "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ]
     },
     "ooo-smart-teknolodzhis": {
@@ -9131,7 +9289,10 @@
         ],
         "okved_code": "72.19",
         "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
-        "okved_mismatch": "Declared R&D, but secondary OKVED codes are concrete hardware manufacture: 25.11/25.61/25.99 (metalworking), 26.30.5/26.30.17 (radio/TV transmitting equipment and parts), 26.51 (measurement/testing/navigation instruments) — consistent with an actual production profile, not a pure research shop.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Declared R&D, but secondary OKVED codes are concrete hardware manufacture: 25.11/25.61/25.99 (metalworking), 26.30.5/26.30.17 (radio/TV transmitting equipment and parts), 26.51 (measurement/testing/navigation instruments) — consistent with an actual production profile, not a pure research shop."
+        },
         "wb_overlap": "none_found"
       },
       "verified_against": "Full EGRUL extract read end-to-end (ul-1233200001066-20260823120457.pdf, s0456, 17pp).",
@@ -9201,7 +9362,10 @@
         "ogrn": "1077847345179",
         "okved_code": "70.22",
         "okved_label": "Консультирование по вопросам коммерческой деятельности и управления",
-        "okved_mismatch": true,
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": null
+        },
         "registered": "25.04.2007",
         "trademarks": [
           {
@@ -9246,7 +9410,7 @@
         ],
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7838380755 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТИТАН - СЕВЕРО-ЗАПАД\"\". Topics: sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0800"
@@ -9279,7 +9443,8 @@
         "Product catalog expanded from эгеон.рус (23.08.2026, site sweep) — added logger product lines beyond the previously-recorded ПЗС charging-station cases.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0800).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7838380755). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24: promoted 1 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: subject matter (tire sealant) is unrelated to any established UAV/military-industry tie for this entity -- included for IP-profile completeness, not as UAV-relevant evidence."
+        "2026-08-24: promoted 1 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: subject matter (tire sealant) is unrelated to any established UAV/military-industry tie for this entity -- included for IP-profile completeness, not as UAV-relevant evidence.",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ]
     },
     "ooo-trimiks-bulat-3mx": {
@@ -9335,7 +9500,10 @@
         "ogrn": "1237800084235",
         "okved_code": "46.52",
         "okved_label": "Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями",
-        "okved_mismatch": false,
+        "okved_mismatch": {
+          "mismatch": false,
+          "note": null
+        },
         "trademarks": [
           {
             "reg_number": "1125967",
@@ -9474,7 +9642,12 @@
         },
         "sanctions": [
           {
-            "regime": "Switzerland (SECO, Ukraine-related measures); EU (Ukraine-related restrictive measures); US (OFAC, Russia Harmful Foreign Activities Sanctions); Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Switzerland (SECO, Ukraine-related measures)",
+              "EU (Ukraine-related restrictive measures)",
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7802942873 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Limited Liability Company Trimix\". Topics: debarment, export.control, sanction. Primary source URLs cited by OpenSanctions: https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=7930; https://war-sanctions.gur.gov.ua/en/sanctions/companies/12685; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0695; https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=47713. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0795"
@@ -9548,7 +9721,14 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "US (OFAC, Russia Harmful Foreign Activities Sanctions); EU (Ukraine-related restrictive measures); Switzerland (SECO, Ukraine-related measures); Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); US-BIS-EL; Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "EU (Ukraine-related restrictive measures)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "US-BIS-EL",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 5040176793 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"COMPLEX UNMANNED SOLUTIONS CENTER LTD\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/uav/companies/12829; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8159; https://home.treasury.gov/news/press-releases/jy2318; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R1494. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0742"
@@ -9645,7 +9825,13 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); Switzerland (SECO, Ukraine-related measures); Canada (Special Economic Measures Act); Ukraine (Presidential sanctions decree/list); EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Canada (Special Economic Measures Act)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9731094770 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LLC “UAMOC”\". Topics: poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/uav/companies/14306; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R2035; https://war-sanctions.gur.gov.ua/en/sanctions/companies/14306; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8623; https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202502035. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0820"
@@ -9828,7 +10014,10 @@
         ],
         "okved_code": "70.10",
         "okved_label": "Деятельность головных офисов",
-        "okved_mismatch": "Name references the Zabaykalsk-Manzhouli (China border) crossing and registers as head-office/holding activity — no manufacturing, UAV or defence signal anywhere in this record. Genuinely unclear why this ИНН was scaffolded into the manufacturer tier; flagging for a relevance recheck rather than treating this as a confirmed network member.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Name references the Zabaykalsk-Manzhouli (China border) crossing and registers as head-office/holding activity — no manufacturing, UAV or defence signal anywhere in this record. Genuinely unclear why this ИНН was scaffolded into the manufacturer tier; flagging for a relevance recheck rather than treating this as a confirmed network member."
+        },
         "_verified": true,
         "open_questions": [
           {
@@ -9894,7 +10083,10 @@
         ],
         "sanctions": [
           {
-            "regime": "US (OFAC, Russia Harmful Foreign Activities Sanctions); Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+            "regime": [
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7100046925 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LIMITED LIABILITY COMPANY VOZDUSHNYI TRAKTAT\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/uav/companies/14072; https://war-sanctions.gur.gov.ua/en/sanctions/companies/14072; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=50791. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0760"
@@ -10089,7 +10281,17 @@
         "trademarks_summary": "187 trademark filings on record, earliest 19960212 — see s0433 for full list, not enumerated individually as noise for this investigation's purpose.",
         "sanctions": [
           {
-            "regime": "AU-UKRAINE; Canada (Special Economic Measures Act); Switzerland (SECO, Ukraine-related measures); SG-MAS; US (OFAC, Russia Harmful Foreign Activities Sanctions); GB-RUS; EU (Ukraine-related restrictive measures); NZ-RSA2022; Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "AU-UKRAINE",
+              "Canada (Special Economic Measures Act)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "SG-MAS",
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "GB-RUS",
+              "EU (Ukraine-related restrictive measures)",
+              "NZ-RSA2022",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7744000912 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Promsvyazbank Public Joint Stock Company\". Topics: corp.disqual, corp.public, debarment, export.control, fin.bank, sanction. Primary source URLs cited by OpenSanctions: https://permid.org/1-5096913982; https://war-sanctions.gur.gov.ua/en/sanctions/companies/32; https://home.treasury.gov/news/press-releases/jy0602; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D1895; https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402455. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0792"
@@ -10153,7 +10355,10 @@
         "address": "Новгородская область, г. Великий Новгород",
         "okved_code": "46.90",
         "okved_label": "Торговля оптовая неспециализированная",
-        "okved_mismatch": "Secondary code 26.51.6 (Производство прочих приборов, датчиков, аппаратуры и инструментов для измерения, контроля и испытаний) sits oddly against a wholesale-trade primary registration — consistent with the brief's existing read of this and Ушкуйник-СП as commercial/holding shells adjacent to the operating АНО, not the actual manufacturing site.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Secondary code 26.51.6 (Производство прочих приборов, датчиков, аппаратуры и инструментов для измерения, контроля и испытаний) sits oddly against a wholesale-trade primary registration — consistent with the brief's existing read of this and Ушкуйник-СП as commercial/holding shells adjacent to the operating АНО, not the actual manufacturing site."
+        },
         "tier": "manufacturer",
         "related_entities": [
           {
@@ -10311,7 +10516,13 @@
         },
         "sanctions": [
           {
-            "regime": "US (OFAC, Russia Harmful Foreign Activities Sanctions); Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); Switzerland (SECO, Ukraine-related measures); Ukraine (Presidential sanctions decree/list); EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9723203841 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"AREA JOINT STOCK COMPANY\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202501476; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8286; https://war-sanctions.gur.gov.ua/en/uav/companies/13912; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D1478; https://war-sanctions.gur.gov.ua/en/sanctions/companies/13912. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0815"
@@ -10362,7 +10573,13 @@
         ],
         "sanctions": [
           {
-            "regime": "US (OFAC, Russia Harmful Foreign Activities Sanctions); Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); Switzerland (SECO, Ukraine-related measures); Ukraine (Presidential sanctions decree/list); EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 2700012608 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Limited Liability Company Aero-HIT\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0509; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=49193; https://home.treasury.gov/news/press-releases/jy2404; https://war-sanctions.gur.gov.ua/en/sanctions/companies/13164; https://war-sanctions.gur.gov.ua/en/uav/companies/13164. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0729"
@@ -10410,7 +10627,9 @@
         },
         "sanctions": [
           {
-            "regime": "Canada (Special Economic Measures Act)",
+            "regime": [
+              "Canada (Special Economic Measures Act)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9710112989 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LIMITED LIABILITY COMPANY \"EVR\"\". Topics: sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/sanctions/companies/16112. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0809"
@@ -10494,7 +10713,10 @@
         ],
         "okved_code": "85.30",
         "okved_label": "Обучение профессиональное",
-        "okved_mismatch": "Registered as professional training (85.30) — this is the ЦБСТ-network «Архангел» already discussed in the brief text quoted at docs/index.html:412 in relation to Рустехдрон's address proximity; a training-services registration for an entity in that cluster is consistent with the brief's general pattern of declared-vs-actual ОКВЭД mismatches, not yet independently explained here.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Registered as professional training (85.30) — this is the ЦБСТ-network «Архангел» already discussed in the brief text quoted at docs/index.html:412 in relation to Рустехдрон's address proximity; a training-services registration for an entity in that cluster is consistent with the brief's general pattern of declared-vs-actual ОКВЭД mismatches, not yet independently explained here."
+        },
         "_verified": true,
         "cbst_tie": {
           "claim": "EU-sanctioned as one of six named ЦБСТ residents in the EU's 20th sanctions package, per ЦБСТ's own coverage of the listing.",
@@ -10549,7 +10771,10 @@
         ],
         "okved_code": "46.42",
         "okved_label": "Торговля оптовая одеждой и обувью",
-        "okved_mismatch": "Primary registration is wholesale clothing/footwear trade — worth checking against whatever brought this ИНН into scope as \"«ЯРЛ»\" in the first place; the declared activity shows no drone/defence-industrial signal at all.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Primary registration is wholesale clothing/footwear trade — worth checking against whatever brought this ИНН into scope as \"«ЯРЛ»\" in the first place; the declared activity shows no drone/defence-industrial signal at all."
+        },
         "_verified": true,
         "wb_overlap": "none_found"
       },
@@ -10583,7 +10808,10 @@
         ],
         "okved_code": "73.11",
         "okved_label": "Деятельность рекламных агентств",
-        "okved_mismatch": "Registered as an advertising agency — no drone/aviation ОКВЭД at all, despite the name.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Registered as an advertising agency — no drone/aviation ОКВЭД at all, despite the name."
+        },
         "_verified": true,
         "open_questions": [
           {
@@ -10678,7 +10906,7 @@
         ],
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7710974353 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРУППА КОМПАНИЙ \"КРОНШТАДТ\"\". Topics: sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0772"
@@ -10690,7 +10918,8 @@
         "full EGRUL extract pulled directly 23.08.2026 (ul-1147748024269-20260823132014.pdf, 38-page extract — the longest in this batch, consistent with an older/more-amended holding entity). \"Деятельность головных офисов\" (head-office/holding activity) fits a \"Группа компаний\" (group of companies) self-description. All founders redacted as of 19.08.2026, four days before this pull — a coordinated recent redaction worth tracking if a pattern emerges across other entities redacted the same week.",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): MAJOR IDENTITY FINDING -- this ИНН (7710974353) is the former holding company ГК «Кронштадт», maker of the \"Orion\" heavy strike/recon drone, \"Sirius\" and \"Grom\" -- completed a rename to «Аэромакс» in April 2026 after ownership passed to ЗПИФ «Технофонд» (УК «Мой капитал»), ending АФК «Система»'s prior ownership. Director Скорятин Георгий Андреевич matches between this registry's record and press coverage of the Kronshtadt→Aeromax rename (Kommersant). Per that reporting, the reorganized group now comprises АО «Кронштадт», civilian-drone producer ooo-aeromaks (this holding company's subsidiary, ИНН 7725347482, already fully catalogued in this registry -- B-120/B-200/B-700/A-5/A-50 line), and a management company «ИКАР». The subsidiary's own site (aeromax-group.ru) represents the group but is registered to ooo-aeromaks's ИНН, not this holding company's -- no separate site/products added directly to this record. Group reported ₽4.5bn 2025 losses amid the civilian-drone pivot.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0772).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7710974353). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7710974353). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -10794,7 +11023,7 @@
         ],
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 5261138034 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПЕХТРА\"\". Topics: export.control.linked, sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0746"
@@ -10805,7 +11034,8 @@
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1245200032406-20260823132846.pdf if applicable / actually 131828). ООО «Пехтра» is 100%-owned by ООО «Стартап-студия университета Лобачевского» (ИНН 5261135844) — Lobachevsky University's (Nizhny Novgorod) own startup incubator vehicle. A genuine university-technology-transfer link, distinct from the government/ЦБСТ-adjacent incubator pattern seen elsewhere in this registry (cf. Ушкуйник/Платформа НТИ) — worth tracking as a third institutional-sponsorship type if more university-owned entities turn up.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0746).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5261138034). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5261138034). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -10980,11 +11210,20 @@
         ],
         "okved_code": "62.01",
         "okved_label": "Разработка компьютерного программного обеспечения",
-        "okved_mismatch": "Registered as software development — matches this project's own plan document, which already flags \"СКБ Пиранья as software\" as one of the standing declared-vs-actual ОКВЭД mismatch examples (see notes/okved_mismatches.md).",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Registered as software development — matches this project's own plan document, which already flags \"СКБ Пиранья as software\" as one of the standing declared-vs-actual ОКВЭД mismatch examples (see notes/okved_mismatches.md)."
+        },
         "_verified": true,
         "sanctions": [
           {
-            "regime": "US (OFAC, Russia Harmful Foreign Activities Sanctions); Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); Switzerland (SECO, Ukraine-related measures); Ukraine (Presidential sanctions decree/list); EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7300024069 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"SKB PIRANYA\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0509; https://permid.org/1-5090595169; https://war-sanctions.gur.gov.ua/en/uav/companies/13798; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=49943; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8896. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0761"
@@ -11095,7 +11334,17 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "Ukraine (war-sanctions.gur.gov.ua, military-industry listing); Australia (Autonomous Sanctions, Russia); Switzerland (SECO, Ukraine-related measures); US (OFAC, Russia Harmful Foreign Activities Sanctions); GB-RUS; US-BIS-EL; EU (Ukraine-related restrictive measures); NZ-RSA2022; Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Ukraine (war-sanctions.gur.gov.ua, military-industry listing)",
+              "Australia (Autonomous Sanctions, Russia)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "GB-RUS",
+              "US-BIS-EL",
+              "EU (Ukraine-related restrictive measures)",
+              "NZ-RSA2022",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7813491943 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"AO NII Vektor\". Topics: corp.disqual, debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://find-and-update.company-information.service.gov.uk/disqualified-officers/corporate/n3m2e2vAnJyhwxVfM-AUnY3auf0; https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1216; https://war-sanctions.gur.gov.ua/en/components/companies/428; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=6768; https://war-sanctions.gur.gov.ua/en/sanctions/companies/428. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0797"
@@ -11556,7 +11805,7 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9731070264 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАСКАР ТЕХНОЛОГИИ\"\". Topics: sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0819"
@@ -11571,7 +11820,8 @@
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no distinct website found -- likely an internal group vehicle within the \"Гаскар\" brand family rather than a customer-facing entity (this record's own founders note already establishes its director/founder, Афанасьев И.К., is distinct from the Гаскар Групп/Сибирская навигационная ownership chain -- same brand, different individual, relationship unresolved). No products attached pending further evidence.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0819).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9731070264). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 2 candidates (an unrelated food-industry university patent and an empty-patentee Soviet-era filing)."
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 2 candidates (an unrelated food-industry university patent and an empty-patentee Soviet-era filing).",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -11685,7 +11935,12 @@
         ],
         "sanctions": [
           {
-            "regime": "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); Ukraine (Presidential sanctions decree/list); EU-RUS; Switzerland (SECO, Ukraine-related measures)",
+            "regime": [
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "EU-RUS",
+              "Switzerland (SECO, Ukraine-related measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7838044584 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Товариство з обмеженою відповідальністю \"СПДББК\"\". Topics: poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/uav/companies/14308; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024D3187; https://war-sanctions.gur.gov.ua/en/sanctions/companies/14308; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0931. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0799"
@@ -11830,7 +12085,10 @@
         ],
         "okved_code": "62.02",
         "okved_label": "Деятельность консультативная и работы в области компьютерных технологий",
-        "okved_mismatch": "IT-consulting registration, no manufacturing/UAV ОКВЭД signal — worth a relevance recheck on why this ИНН was scaffolded into the manufacturer tier.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "IT-consulting registration, no manufacturing/UAV ОКВЭД signal — worth a relevance recheck on why this ИНН was scaffolded into the manufacturer tier."
+        },
         "_verified": true,
         "products": [
           {
@@ -12021,7 +12279,13 @@
         ],
         "sanctions": [
           {
-            "regime": "US (OFAC, Russia Harmful Foreign Activities Sanctions); EU-RUS; Switzerland (SECO, Ukraine-related measures); Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "EU-RUS",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 5260494520 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"STRATIM LIMITED LIABILITY COMPANY\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0931; https://war-sanctions.gur.gov.ua/en/uav/companies/13560; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=50274; https://war-sanctions.gur.gov.ua/en/sanctions/companies/13560; https://permid.org/1-5090595168. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0745"
@@ -12115,7 +12379,13 @@
         },
         "sanctions": [
           {
-            "regime": "US (OFAC, Russia Harmful Foreign Activities Sanctions); Switzerland (SECO, Ukraine-related measures); Ukraine (Presidential sanctions decree/list); US-BIS-EL; EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Switzerland (SECO, Ukraine-related measures)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "US-BIS-EL",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7735140825 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Limited Liability Company Eliars\". Topics: debarment, export.control, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/sanctions/companies/8970; https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389; https://permid.org/1-5086506824; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=7884; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=48496. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0787"
@@ -12148,7 +12418,10 @@
         ],
         "okved_code": "43.21",
         "okved_label": "Производство электромонтажных работ",
-        "okved_mismatch": "Registered as electrical-installation contracting — no manufacturing/UAV ОКВЭД signal; full legal name (\"Информационные системы и технологии\") is broader than the \"Инстех\" shorthand used in this registry — worth a relevance recheck.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Registered as electrical-installation contracting — no manufacturing/UAV ОКВЭД signal; full legal name (\"Информационные системы и технологии\") is broader than the \"Инстех\" shorthand used in this registry — worth a relevance recheck."
+        },
         "_verified": true,
         "open_questions": [
           {
@@ -12195,7 +12468,10 @@
         ],
         "okved_code": "30.12",
         "okved_label": "Строительство прогулочных и спортивных судов",
-        "okved_mismatch": "Registered as recreational/sport-vessel shipbuilding — already flagged in the brief's original scaffold as a notable purpose mismatch given the entity's joint hydrofoil unmanned-surface-vessel (БЭК) project with НПП «ЭЛВО»; this fresh pull confirms the ОКВЭД exactly as already documented, not a new finding.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Registered as recreational/sport-vessel shipbuilding — already flagged in the brief's original scaffold as a notable purpose mismatch given the entity's joint hydrofoil unmanned-surface-vessel (БЭК) project with НПП «ЭЛВО»; this fresh pull confirms the ОКВЭД exactly as already documented, not a new finding."
+        },
         "_verified": true,
         "open_questions": [
           {
@@ -12256,19 +12532,28 @@
         "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
         "sanctions": [
           {
-            "regime": "US (OFAC)",
+            "regime": [
+              "US (OFAC)"
+            ],
             "date": "2024",
             "note": "Per TheInsider reporting (theins.ru/news/295478); primary US designation document not yet archived — see sanctions_legal_basis convention in CLAUDE.md.",
             "source_id": "s0526"
           },
           {
-            "regime": "EU",
+            "regime": [
+              "EU"
+            ],
             "date": "2026-07",
             "note": "Sanctioned by EU days before the 29.07.2026 assassination attempt on Черезов. Primary EU Council Decision text not yet archived.",
             "source_id": "s0526"
           },
           {
-            "regime": "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing); US (OFAC, Russia Harmful Foreign Activities Sanctions); Ukraine (Presidential sanctions decree/list); EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Ukraine (Presidential sanctions decree/list)",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7100027464 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LIMITED LIABILITY COMPANY RUSSKAYA LABORATORIYA VOZDUSHNOGO TRANSPORTA\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1843; https://war-sanctions.gur.gov.ua/en/sanctions/companies/14059; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1848; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=9130; https://war-sanctions.gur.gov.ua/en/uav/companies/14059. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0759"
@@ -12322,7 +12607,12 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "Switzerland (SECO, Ukraine-related measures); EU (Ukraine-related restrictive measures); US (OFAC, Russia Harmful Foreign Activities Sanctions); Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Switzerland (SECO, Ukraine-related measures)",
+              "EU (Ukraine-related restrictive measures)",
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 6671284030 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Limited Liability Company Uraldronzavod\". Topics: debarment, export.control, sanction. Primary source URLs cited by OpenSanctions: https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=7810; https://war-sanctions.gur.gov.ua/en/sanctions/companies/13813; https://permid.org/1-5090595387; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=49954; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202403183. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0755"
@@ -12559,40 +12849,56 @@
         ],
         "okved_code": "27.40",
         "okved_label": "Производство электрических ламп и осветительного оборудования",
-        "okved_mismatch": "Registered as electric-lamp/lighting-equipment manufacture — no drone/UAV ОКВЭД at all, despite being the confirmed maker of the «Алёша» FPV drone under the «Аляска» project name.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Registered as electric-lamp/lighting-equipment manufacture — no drone/UAV ОКВЭД at all, despite being the confirmed maker of the «Алёша» FPV drone under the «Аляска» project name."
+        },
         "sanctions": [
           {
-            "regime": "EU",
+            "regime": [
+              "EU"
+            ],
             "date": "2026-06-15",
             "note": "Asset freeze.",
             "source_id": "s0531"
           },
           {
-            "regime": "Switzerland",
+            "regime": [
+              "Switzerland"
+            ],
             "date": "2026-08-11",
             "note": "Asset freeze.",
             "source_id": "s0531"
           },
           {
-            "regime": "France",
+            "regime": [
+              "France"
+            ],
             "date": null,
             "note": null,
             "source_id": "s0531"
           },
           {
-            "regime": "Monaco",
+            "regime": [
+              "Monaco"
+            ],
             "date": null,
             "note": null,
             "source_id": "s0531"
           },
           {
-            "regime": "Ukraine",
+            "regime": [
+              "Ukraine"
+            ],
             "date": null,
             "note": null,
             "source_id": "s0531"
           },
           {
-            "regime": "Switzerland (SECO, Ukraine-related measures); EU (Ukraine-related restrictive measures)",
+            "regime": [
+              "Switzerland (SECO, Ukraine-related measures)",
+              "EU (Ukraine-related restrictive measures)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 6168719068 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LLC “IONOS”\". Topics: sanction. Primary source URLs cited by OpenSanctions: https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=9012; https://war-sanctions.gur.gov.ua/en/sanctions/companies/16085; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026D1364. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0751"
@@ -12658,7 +12964,10 @@
         "address": "440008, Пензенская обл., г. Пенза (per ЕГРИП, УФНС по Пензенской области)",
         "okved_code": "47.59.1",
         "okved_label": "Торговля розничная мебелью в специализированных магазинах",
-        "okved_mismatch": "Full ЕГРИП extract (pulled 23.08.2026, fl-316784700156711-20260823182427.pdf) confirms sole declared activity is FURNITURE RETAIL (primary 47.59.1) plus generic retail/wholesale/IT/design secondary codes (46.47.1, 46.69, 46.90, 47.19/.1/.2/.3, 47.91.4, 62.09, 74.10) added 14.06.2024 and 22.08.2024 -- none names REB/defence-electronics dealing specifically. No basis in her own registration record for the Kilovatt/«Капюшон» association carried in the original scaffold.",
+        "okved_mismatch": {
+          "mismatch": true,
+          "note": "Full ЕГРИП extract (pulled 23.08.2026, fl-316784700156711-20260823182427.pdf) confirms sole declared activity is FURNITURE RETAIL (primary 47.59.1) plus generic retail/wholesale/IT/design secondary codes (46.47.1, 46.69, 46.90, 47.19/.1/.2/.3, 47.91.4, 62.09, 74.10) added 14.06.2024 and 22.08.2024 -- none names REB/defence-electronics dealing specifically. No basis in her own registration record for the Kilovatt/«Капюшон» association carried in the original scaffold."
+        },
         "products": [],
         "tier": "adjacent",
         "tier_basis": "Downgraded from manufacturer 23.08.2026: this ИП's own products[] were a mis-attribution -- the REB catalog belongs to ooo-npo-kilovatt-shestopalov (ООО НПО «Киловатт», ИНН 4800016776), which independently carries the full, better-sourced product list. Kept in the registry only because the original scaffold flagged a Кайсант/Kilovatt-adjacent name; not established as a REB dealer or reseller herself.",
@@ -13038,7 +13347,7 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9714004945 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Акционерное общество \"Техноимпульс Инвест\"\". Topics: sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0811"
@@ -13047,7 +13356,8 @@
       },
       "why": [
         "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=9714004945, file cited as source s0152). Director confirmed: Митенков Борис Юрьевич.",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0811)."
+        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0811).",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0152)"
     },
@@ -13131,7 +13441,7 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7706809928 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЭС-2\"\". Topics: sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0770"
@@ -13140,7 +13450,8 @@
       },
       "why": [
         "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=7706809928, file cited as source s0100). Director confirmed: Голоунин Олег Борисович.",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0770)."
+        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0770).",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0100)"
     },
@@ -13266,7 +13577,7 @@
         "_verified": true,
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 6330037352 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕСТВЕННОСТЬЮ \"НОВА\"\". Topics: sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0753"
@@ -13276,7 +13587,8 @@
       "why": [
         "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=6330037352, file cited as source s0084). Director confirmed: Кайденко Анна Викторовна.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0753).",
-        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person."
+        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0084)"
     },
@@ -13335,7 +13647,13 @@
         ],
         "sanctions": [
           {
-            "regime": "US (OFAC, Russia Harmful Foreign Activities Sanctions); Canada (Special Economic Measures Act); Australia (Autonomous Sanctions, Russia); Ukraine (war-sanctions.gur.gov.ua, military-industry listing); Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
+              "Canada (Special Economic Measures Act)",
+              "Australia (Autonomous Sanctions, Russia)",
+              "Ukraine (war-sanctions.gur.gov.ua, military-industry listing)",
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9702064851 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"CENTER FOR UNMANNED SYSTEMS OF THE TULA REGION\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/rostec/11711; https://permid.org/1-5086926362; https://war-sanctions.gur.gov.ua/en/sanctions/companies/11711; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=50778; https://war-sanctions.gur.gov.ua/en/sanctions/companies/15947. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0574"
@@ -13368,7 +13686,7 @@
       "set": {
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 4632306583 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИСТЕМНЫЙ ИНТЕГРАТОР\"\". Topics: export.control.linked, sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0736"
@@ -13376,7 +13694,8 @@
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0736)."
+        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0736).",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": null
     },
@@ -13384,7 +13703,7 @@
       "set": {
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7708407413 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"АКЦИОНЕРНОЕ ОБЩЕСТВО \"АЭРОМАКС\"\". Topics: export.control.linked, sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0771"
@@ -13429,7 +13748,8 @@
       "why": [
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0771).",
         "2026-08-24 direct egrul.nalog.ru lookup: ОГРН, registration date and management structure confirmed. Managed by ООО «Кронштадт-Техник» (a management company, not a named individual) — a further, direct corporate tie to the Кронштадт group, consistent with this session's earlier finding that ГК «Аэромакс» is the former ГК «Кронштадт». Tier remains adjacent pending confirmation this specific АО (distinct from ГК «Аэромакс» / ООО «Аэромакс») has its own manufacturer role, not just a shared brand name.",
-        "2026-08-24: added 3 products from this entity's own rk.2035.university self-listing (s1169) -- previously had no products[] on file."
+        "2026-08-24: added 3 products from this entity's own rk.2035.university self-listing (s1169) -- previously had no products[] on file.",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": "egrul.nalog.ru open API, 2026-08-24"
     },
@@ -13437,7 +13757,7 @@
       "set": {
         "sanctions": [
           {
-            "regime": "(regime code not returned by OpenSanctions for this match)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9703232234 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"АКЦИОНЕРНОЕ ОБЩЕСТВО \"СПЕЦТЕХ ИНВЕСТИЦИИ\"\". Topics: export.control.linked, sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0804"
@@ -13445,7 +13765,8 @@
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0804)."
+        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0804).",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": null
     },
@@ -13453,7 +13774,9 @@
       "set": {
         "sanctions": [
           {
-            "regime": "Ukraine (Presidential sanctions decree/list)",
+            "regime": [
+              "Ukraine (Presidential sanctions decree/list)"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9705196180 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Некомерційний фонд підтримки патріотичних ініціатив \"Наша правда\"\". Topics: sanction. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "source_id": "s0575"
@@ -13485,7 +13808,9 @@
       "set": {
         "sanctions": [
           {
-            "regime": "OCCRP Aleph 'Global Sanctions Database' aggregation — specific regime/list not yet identified",
+            "regime": [
+              "OCCRP Aleph 'Global Sanctions Database' aggregation — specific regime/list not yet identified"
+            ],
             "date": null,
             "note": "CONFIRMED via exact ИНН match (4800016776) between Aleph's own record and this entity's independently EGRUL/site-document-verified ИНН. Aleph returned no source_urls for this record — the underlying designation list/regime needs a follow-up visit to the Aleph UI link (https://aleph.occrp.org/entities/ff1066bf63e714c48fc2456d0452e8e2d18c7f52.9c29c30184c278b3ca09925fe0f1637ae989d2bc) before citing a specific regime.",
             "source_id": "s0592"
@@ -13971,7 +14296,7 @@
         "inn_personal": "501105677892",
         "sanctions": [
           {
-            "regime": "(program code not returned)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (501105677892) against the designation record's own idNumber field — 2026-08-24 screening. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
             "source_id": "s0739"
@@ -13989,7 +14314,8 @@
         "prose-extraction pass, Имя Отчество Фамилия vs Фамилия Имя",
         "Отчество) — not merged here, flagged as a real dedup gap worth a",
         "dedicated fix rather than folded silently into this correction.",
-        "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0739)."
+        "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0739).",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ]
     },
     "barashkov-aleksandr-sergeevich": {
@@ -14107,7 +14433,9 @@
           }
         ]
       },
-      "why": "Signed the association's own 2024 Минюст filing as Председатель, 14.04.2025."
+      "why": [
+        "Signed the association's own 2024 Минюст filing as Председатель, 14.04.2025."
+      ]
     },
     "nina-olegovna-yanykina": {
       "set": {
@@ -14125,7 +14453,7 @@
         ],
         "sanctions": [
           {
-            "regime": "(program code not returned)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (780158807980) against the designation record's own idNumber field — 2026-08-24 screening. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
             "source_id": "s0793"
@@ -14142,7 +14470,8 @@
         "head of the core entity.",
         "Phase 1 verification pass, 2026-08-22: independently re-confirmed via ЦБСТ's own full signed EGRUL extract (s0231) — ИНН 780158807980 and 16.12.2025 start date both match exactly what was already on file. Promoted to _verified: true.",
         "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0793).",
-        "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\" (ЦБСТ's own full legal name), position \"Генеральный директор\" -- exact match on both employer and title to the already-EGRUL-confirmed role above. Independent corroboration, not new information."
+        "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\" (ЦБСТ's own full legal name), position \"Генеральный директор\" -- exact match on both employer and title to the already-EGRUL-confirmed role above. Independent corroboration, not new information.",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ]
     },
     "zamyatin-aleksandr-yurevich": {
@@ -14200,7 +14529,9 @@
       "set": {
         "sanctions": [
           {
-            "regime": "EU-UKR",
+            "regime": [
+              "EU-UKR"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (644914040799) against the designation record's own idNumber field — 2026-08-24 screening. Topics: sanction. Not yet independently read against the underlying primary designation document.",
             "source_id": "s0754"
@@ -14217,7 +14548,7 @@
       "set": {
         "sanctions": [
           {
-            "regime": "(program code not returned)",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (673103142483) against the designation record's own idNumber field — 2026-08-24 screening. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
             "source_id": "s0757"
@@ -14244,7 +14575,8 @@
       },
       "why": [
         "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0757).",
-        "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2637799C1, RU2663193C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles."
+        "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2637799C1, RU2663193C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": null
     },
@@ -14253,9 +14585,9 @@
         "dob": "1960-08-30",
         "sanctions": [
           {
-            "regime": "sanction",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: their sanctions notes: \"Russian spy\" — consistent with the publicly known KGB/SVR illegals-program background of Андрей Безруков, who chairs ЦБСТ's board per this registry. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: their sanctions notes: \"Russian spy\" — consistent with the publicly known KGB/SVR illegals-program background of Андрей Безруков, who chairs ЦБСТ's board per this registry. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ],
@@ -14272,7 +14604,8 @@
       },
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-        "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\", position \"Председатель Правления\" -- this is ЦБСТ's own full legal name (ano-tsbst-centre-for-unmanned-systems-technologies), and \"Председатель Правления\" is an exact-title match to this record's already-documented Chairman-of-the-Board role. Filled in the previously-null `entity_slug` on that existing role using this corroboration -- the role text itself was already correct, it just wasn't linked to a specific registry entity_slug before now."
+        "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\", position \"Председатель Правления\" -- this is ЦБСТ's own full legal name (ano-tsbst-centre-for-unmanned-systems-technologies), and \"Председатель Правления\" is an exact-title match to this record's already-documented Chairman-of-the-Board role. Filled in the previously-null `entity_slug` on that existing role using this corroboration -- the role text itself was already correct, it just wasn't linked to a specific registry entity_slug before now.",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14281,15 +14614,16 @@
         "dob": "1975-12-20",
         "sanctions": [
           {
-            "regime": "role.pol; sanction; debarment; poi",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Secretary of United Russia's General Council, later Head of the Altai Republic — matches this registry's existing two-stage role description precisely. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: role.pol; sanction; debarment; poi. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Secretary of United Russia's General Council, later Head of the Altai Republic — matches this registry's existing two-stage role description precisely. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14298,7 +14632,7 @@
         "dob": "1975-04-13",
         "sanctions": [
           {
-            "regime": "(see note)",
+            "regime": null,
             "date": null,
             "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: name matches exactly (rare full name); OpenSanctions record carries no notes/positions to independently corroborate role — DOB only, not role-corroborated. Lower confidence than the other Tier-A entries. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
@@ -14306,7 +14640,8 @@
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
       ],
       "verified_against": null
     },
@@ -14315,15 +14650,16 @@
         "dob": "1965-12-19",
         "sanctions": [
           {
-            "regime": "corp.disqual; debarment; sanction; role.rca; poi",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently describes him as chairman of Фонд «ДАР»'s наблюдательный совет and Medvedev's asset-holding confidant — matches this registry's own ДАР ownership-chain findings (finding 08/13) exactly, from an independent source. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: corp.disqual; debarment; sanction; role.rca; poi. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently describes him as chairman of Фонд «ДАР»'s наблюдательный совет and Medvedev's asset-holding confidant — matches this registry's own ДАР ownership-chain findings (finding 08/13) exactly, from an independent source. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14332,15 +14668,16 @@
         "dob": "1986-04-19",
         "sanctions": [
           {
-            "regime": "role.pol",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Deputy Minister of Industry and Trade since October 2022. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: role.pol. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Deputy Minister of Industry and Trade since October 2022. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14349,15 +14686,16 @@
         "dob": "1955-08-11",
         "sanctions": [
           {
-            "regime": "corp.disqual; role.oligarch; sanction; role.rca; poi",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions' own sanctions notes cite the exact ₽33bn/2006 ДАР charter-capital contribution with Симановский already documented in this registry's finding 15 and ownership diagram — independent confirmation of a core registry finding, not just an identity match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: corp.disqual; role.oligarch; sanction; role.rca; poi. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions' own sanctions notes cite the exact ₽33bn/2006 ДАР charter-capital contribution with Симановский already documented in this registry's finding 15 and ownership diagram — independent confirmation of a core registry finding, not just an identity match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14366,15 +14704,16 @@
         "dob": "1973-01-23",
         "sanctions": [
           {
-            "regime": "sanction",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role AND product match: OpenSanctions independently names her as GD of \"LLC UAMOC\" (= this registry's ООО «ЦУГАМ») producing FPV drones \"Kort\"/\"Brus-1\"/\"Osa\"/\"Boomerang\" — new product names not yet in this registry's ooo-tsugam record, worth folding in separately. Personal ИНН given in notes: 500905260513. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role AND product match: OpenSanctions independently names her as GD of \"LLC UAMOC\" (= this registry's ООО «ЦУГАМ») producing FPV drones \"Kort\"/\"Brus-1\"/\"Osa\"/\"Boomerang\" — new product names not yet in this registry's ooo-tsugam record, worth folding in separately. Personal ИНН given in notes: 500905260513. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14383,15 +14722,16 @@
         "dob": "1978-02-07",
         "sanctions": [
           {
-            "regime": "sanction; debarment; role.pep; corp.disqual; export.control",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Chairman/CEO of Promsvyazbank (ПАО «Банк ПСБ»). Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction; debarment; role.pep; corp.disqual; export.control. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Chairman/CEO of Promsvyazbank (ПАО «Банк ПСБ»). Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14400,15 +14740,16 @@
         "dob": "1984-02-01",
         "sanctions": [
           {
-            "regime": "sanction",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him GD of \"LLC Gumich\" (= this registry's АО «ХК Гумич», already tied to the Инвестментс/Борей chain) — and adds NEW information: Gumich owns \"LLC Gumich RTK,\" maker of \"Impulse-M\" robot platforms field-tested by Russian forces since summer 2024. Personal ИНН given in notes context but not directly labeled — worth a follow-up EGRUL check. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him GD of \"LLC Gumich\" (= this registry's АО «ХК Гумич», already tied to the Инвестментс/Борей chain) — and adds NEW information: Gumich owns \"LLC Gumich RTK,\" maker of \"Impulse-M\" robot platforms field-tested by Russian forces since summer 2024. Personal ИНН given in notes context but not directly labeled — worth a follow-up EGRUL check. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14417,9 +14758,9 @@
         "dob": "1974-06-29",
         "sanctions": [
           {
-            "regime": "sanction",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him founder/co-owner of \"LLC Center for Integrated Unmanned Solutions\" — this registry's already ИНН-confirmed ООО «ЦКБР» (Complex Unmanned Solutions Center Ltd), Zhukovsky, full-cycle FPV production. Personal ИНН given in notes: 501306766736. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him founder/co-owner of \"LLC Center for Integrated Unmanned Solutions\" — this registry's already ИНН-confirmed ООО «ЦКБР» (Complex Unmanned Solutions Center Ltd), Zhukovsky, full-cycle FPV production. Personal ИНН given in notes: 501306766736. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ],
@@ -14446,7 +14787,8 @@
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
         "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU236504U1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
-        "2026-08-24 cleanup: dropped a stale prose-extracted _candidate role for ООО «ЦКБР», now superseded by the resolved co-inventor role added from the patent sweep (same entity, now with entity_slug/title/source_id)."
+        "2026-08-24 cleanup: dropped a stale prose-extracted _candidate role for ООО «ЦКБР», now superseded by the resolved co-inventor role added from the patent sweep (same entity, now with entity_slug/title/source_id).",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14455,9 +14797,9 @@
         "dob": "1984-05-09",
         "sanctions": [
           {
-            "regime": "sanction",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him director/founder of \"SDB Piranya\" (Simbirsk Design Bureau Пиранья) — matches this registry's existing СКБ «Пиранья» okved_mismatch note. Personal ИНН given in notes: 732508747179; passport 7304202860. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him director/founder of \"SDB Piranya\" (Simbirsk Design Bureau Пиранья) — matches this registry's existing СКБ «Пиранья» okved_mismatch note. Personal ИНН given in notes: 732508747179; passport 7304202860. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ],
@@ -14483,7 +14825,8 @@
       },
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-        "2026-08-24: resolved this person's `_candidate` role at ООО «СКБ Пиранья» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-skb-piranya, source s0487) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+        "2026-08-24: resolved this person's `_candidate` role at ООО «СКБ Пиранья» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-skb-piranya, source s0487) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14492,15 +14835,16 @@
         "dob": "1972-04-25",
         "sanctions": [
           {
-            "regime": "sanction",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names her as founder of \"SDB Piranya\" alongside Чернышов — same entity, same registry tie. Personal ИНН given in notes: 732703148651; passport 7317205966. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names her as founder of \"SDB Piranya\" alongside Чернышов — same entity, same registry tie. Personal ИНН given in notes: 732703148651; passport 7317205966. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14517,7 +14861,9 @@
         "inn_personal": "770301599800",
         "sanctions": [
           {
-            "regime": "UA-NSDC + role.pep",
+            "regime": [
+              "UA-NSDC + role.pep"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (770301599800) — 2026-08-24 screening. OpenSanctions Q16692250 (Wikidata-linked), datasets: ua_nsdc_sanctions, wd_categories, ext_ru_egrul, wikidata, ru_acf_bribetakers, ann_pep_positions. Topics: poi, sanction, role.pep, role.rca. Publicly known figure (son of Dmitry Rogozin, ex-Roscosmos head); ownership tie already recorded to ao-ekolibri in this registry. Not yet independently read against the underlying primary designation document.",
             "source_id": "s0861"
@@ -14535,9 +14881,9 @@
         "dob": "1988-03-17",
         "sanctions": [
           {
-            "regime": "sanction",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: consistent with this registry's already-documented personal-naming-pattern finding (exited 3mx/Тримикс founder whose surname matches jammer product names «Айрат 100»/«Алия 350» sold via Мэдро) — OpenSanctions record carries no notes to independently corroborate beyond the name/DOB match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: consistent with this registry's already-documented personal-naming-pattern finding (exited 3mx/Тримикс founder whose surname matches jammer product names «Айрат 100»/«Алия 350» sold via Мэдро) — OpenSanctions record carries no notes to independently corroborate beyond the name/DOB match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ],
@@ -14554,7 +14900,8 @@
       },
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-        "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2826668C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles."
+        "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2826668C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14562,15 +14909,16 @@
       "set": {
         "sanctions": [
           {
-            "regime": "sanction.linked",
+            "regime": null,
             "date": null,
-            "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: name matches this registry's already ИНН-confirmed ooo-gk-aeromaks/Kronshtadt director exactly — OpenSanctions record carries no DOB or notes, name-match only but low collision risk given the specific already-established corporate role. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction.linked. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: name matches this registry's already ИНН-confirmed ooo-gk-aeromaks/Kronshtadt director exactly — OpenSanctions record carries no DOB or notes, name-match only but low collision risk given the specific already-established corporate role. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
         ]
       },
       "why": [
-        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+        "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": null
     },
@@ -14631,7 +14979,9 @@
         "dob": "1962-11-17",
         "sanctions": [
           {
-            "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+            "regime": [
+              "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+            ],
             "date": null,
             "note": "CONFIRMED — exact role/title match (GUIR head, Unit 74455 commander) independently corroborated by this registry's own pre-existing MoD-press-sourced identification, not just an OpenSanctions name match. Not yet independently read against the underlying primary designation document.",
             "source_id": "s0821"
@@ -14648,7 +14998,9 @@
         "dob": "1965-09-14",
         "sanctions": [
           {
-            "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+            "regime": [
+              "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+            ],
             "date": null,
             "note": "CONFIRMED — unambiguous public figure, role/title match exact, no ID cross-check needed given public notoriety. Not yet independently read against each underlying primary designation document.",
             "source_id": "s0831"
@@ -14664,7 +15016,11 @@
       "set": {
         "sanctions": [
           {
-            "regime": "Ukraine (GUR war-sanctions register); EU (Regulation 2023/1216); France (Trésor gels-avoirs)",
+            "regime": [
+              "Ukraine (GUR war-sanctions register)",
+              "EU (Regulation 2023/1216)",
+              "France (Trésor gels-avoirs)"
+            ],
             "date": null,
             "note": "CONFIRMED — role/title match independently corroborated by this registry's own separately-sourced Kronstadt-chairman finding. Underlying designation documents (GUR profile 5316, EU reg 2023/1216, French Trésor registry) not yet individually pulled and read — see source_urls in archived match.",
             "source_id": "s0823"
@@ -14691,7 +15047,9 @@
         "dob": "1977-11-17",
         "sanctions": [
           {
-            "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+            "regime": [
+              "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+            ],
             "date": null,
             "note": "PLAUSIBLE match via OpenSanctions screening (score 0.92) — corroborated by this registry's own role finding and the already-archived Sidyakin/Bezrukov ЦБСТ podcast transcript, but NOT personal-ИНН-confirmed.",
             "source_id": "s0822"
@@ -14710,7 +15068,9 @@
         "inn_personal": "054403029570",
         "sanctions": [
           {
-            "regime": "Ukraine (NAZK \"War & Sanctions\" register, profile 16429)",
+            "regime": [
+              "Ukraine (NAZK \"War & Sanctions\" register, profile 16429)"
+            ],
             "date": null,
             "note": "CONFIRMED via exact personal-ИНН match (054403029570) between OpenSanctions' own match_id and this registry's pre-existing, independently NAZK-sourced note.",
             "source_id": "s0862"
@@ -14727,7 +15087,9 @@
         "dob": "1983-10-02",
         "sanctions": [
           {
-            "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+            "regime": [
+              "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+            ],
             "date": null,
             "note": "PLAUSIBLE — exact name+DOB match, no notes/context text from OpenSanctions itself; corroborated only circumstantially via this person's ЦКБР tie. NOT personal-ИНН-confirmed.",
             "source_id": "s0842"
@@ -14744,7 +15106,9 @@
         "dob": "1998-12-11",
         "sanctions": [
           {
-            "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+            "regime": [
+              "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+            ],
             "date": null,
             "note": "PLAUSIBLE — exact name+DOB match, no notes/context text; corroborated only circumstantially via this person's АО «Площадь» tie. NOT personal-ИНН-confirmed.",
             "source_id": "s0853"
@@ -14772,7 +15136,9 @@
         "dob": "1986-03-12",
         "sanctions": [
           {
-            "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+            "regime": [
+              "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+            ],
             "date": null,
             "note": "PLAUSIBLE — exact name+DOB match, no notes/context text; corroborated only circumstantially via this person's ГОУДРОН tie. Common surname raises collision risk. NOT personal-ИНН-confirmed.",
             "source_id": "s0849"
@@ -14799,7 +15165,9 @@
       "set": {
         "sanctions": [
           {
-            "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+            "regime": [
+              "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+            ],
             "date": null,
             "note": "PLAUSIBLE — exact name match, corroborated only via surname/patronymic family tie to Михельсон Л.В. Returned DOB (1993-01-01) looks like a placeholder, not a verified date — do not treat as confirmed. NOT personal-ИНН-confirmed.",
             "source_id": "s0856"
@@ -14974,7 +15342,7 @@
         "inn_personal": "500310216204",
         "sanctions": [
           {
-            "regime": "sanction.linked",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (500310216204) against the designation record's own idNumber field — 2026-08-24 screening. Datasets: ext_ru_egrul, ann_graph_topics. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
             "source_id": "s0865"
@@ -14984,7 +15352,8 @@
       "why": [
         "2026-08-24: the «НИПП «Рустехдрон»» candidate role is CONFIRMED via direct patent co-authorship on RU218475U1/RU220486U1 (same filing as Дзема В.В. and Свистунов М.В.) — this closes one of this session's own earlier 'zero corroboration, left unconfirmed' cases from the OpenSanctions 'check 33' pass. The separate ООО «ДСГ» role tie is UNCHANGED and remains a candidate — no evidence connecting the two roles has been found; do not assume they corroborate each other.",
         "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
-        "2026-08-24: added director roles at both ooo-npo-rustekhdron and the newly-added ooo-rtd-zashchita, alongside the existing verified co-inventor role. The ООО «ДСГ» candidate role remains unresolved and unrelated (per this record's own existing _corrected note: ДСГ's director carries a different patronymic, Никита Дмитриевич, treated as a same-surname coincidence, not this Соколов)."
+        "2026-08-24: added director roles at both ooo-npo-rustekhdron and the newly-added ooo-rtd-zashchita, alongside the existing verified co-inventor role. The ООО «ДСГ» candidate role remains unresolved and unrelated (per this record's own existing _corrected note: ДСГ's director carries a different patronymic, Никита Дмитриевич, treated as a same-surname coincidence, not this Соколов).",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ],
       "verified_against": "fips.ru direct lookup, RUPM 218475 and RUPM 220486, 2026-08-24"
     },
@@ -14993,7 +15362,9 @@
         "inn_personal": "781422806104",
         "sanctions": [
           {
-            "regime": "sanction.linked",
+            "regime": [
+              "sanction.linked"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (781422806104) against the designation record's own idNumber field — 2026-08-24 screening. Datasets: ext_ru_egrul, ann_graph_topics. Topics: sanction.linked (graph-proximity to a sanctioned entity, not itself a primary designation). Not yet independently read against the underlying primary designation document.",
             "source_id": "s0868"
@@ -15030,7 +15401,7 @@
         "inn_personal": "583502178630",
         "sanctions": [
           {
-            "regime": "sanction.linked",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (583502178630) against the designation record's own idNumber field — 2026-08-24 screening. Datasets: ext_ru_egrul, ann_graph_topics. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
             "source_id": "s0851"
@@ -15039,7 +15410,8 @@
       },
       "verified_against": [],
       "why": [
-        "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked."
+        "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ]
     },
     "sokolov-nikita-dmitrievich": {
@@ -15047,7 +15419,7 @@
         "inn_personal": "780633823516",
         "sanctions": [
           {
-            "regime": "sanction.linked",
+            "regime": null,
             "date": null,
             "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (780633823516) against the designation record's own idNumber field — 2026-08-24 screening. Datasets: ext_ru_egrul, ann_graph_topics. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
             "source_id": "s0866"
@@ -15067,7 +15439,8 @@
       "verified_against": [],
       "why": [
         "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
-        "2026-08-24: resolved this person's `_candidate` role at ООО «ДСГ» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-dsg, source s0482) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+        "2026-08-24: resolved this person's `_candidate` role at ООО «ДСГ» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-dsg, source s0482) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ]
     },
     "klimov-maksim-aleksandrovich": {
@@ -15075,7 +15448,9 @@
         "inn_personal": "695004552407",
         "sanctions": [
           {
-            "regime": "UA-NSDC",
+            "regime": [
+              "UA-NSDC"
+            ],
             "date": null,
             "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (695004552407) — 2026-08-24 screening. OpenSanctions id ua-nsdc-34189-klimov-maksim-oleksandrovic, dataset: ua_nsdc_sanctions (Ukraine's National Security and Defense Council sanctions list). Topics: sanction. Name given in Ukrainian transliteration on the source record (Климов Максим Олександрович) — same person, spelling variant confirmed by exact ИНН match. Not yet independently read against the underlying primary NSDC decree.",
             "source_id": "s0845"

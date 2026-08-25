@@ -113,9 +113,9 @@
     ],
     "sanctions": [
       {
-        "regime": "sanction",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: their sanctions notes: \"Russian spy\" — consistent with the publicly known KGB/SVR illegals-program background of Андрей Безруков, who chairs ЦБСТ's board per this registry. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: their sanctions notes: \"Russian spy\" — consistent with the publicly known KGB/SVR illegals-program background of Андрей Безруков, who chairs ЦБСТ's board per this registry. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -138,7 +138,8 @@
     },
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-      "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\", position \"Председатель Правления\" -- this is ЦБСТ's own full legal name (ano-tsbst-centre-for-unmanned-systems-technologies), and \"Председатель Правления\" is an exact-title match to this record's already-documented Chairman-of-the-Board role. Filled in the previously-null `entity_slug` on that existing role using this corroboration -- the role text itself was already correct, it just wasn't linked to a specific registry entity_slug before now."
+      "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\", position \"Председатель Правления\" -- this is ЦБСТ's own full legal name (ano-tsbst-centre-for-unmanned-systems-technologies), and \"Председатель Правления\" is an exact-title match to this record's already-documented Chairman-of-the-Board role. Filled in the previously-null `entity_slug` on that existing role using this corroboration -- the role text itself was already correct, it just wasn't linked to a specific registry entity_slug before now.",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -361,7 +362,9 @@
     ],
     "sanctions": [
       {
-        "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+        "regime": [
+          "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+        ],
         "date": null,
         "note": "PLAUSIBLE match via OpenSanctions screening (score 0.92) — corroborated by this registry's own role finding and the already-archived Sidyakin/Bezrukov ЦБСТ podcast transcript, but NOT personal-ИНН-confirmed.",
         "source_id": "s0822"
@@ -512,9 +515,9 @@
     ],
     "sanctions": [
       {
-        "regime": "sanction; debarment; role.pep; corp.disqual; export.control",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Chairman/CEO of Promsvyazbank (ПАО «Банк ПСБ»). Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: sanction; debarment; role.pep; corp.disqual; export.control. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Chairman/CEO of Promsvyazbank (ПАО «Банк ПСБ»). Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -536,7 +539,8 @@
       "note": "Named the ₽12bn fund and the ₽35bn-to-2030 financing plan. Primary doc"
     },
     "_corrected": [
-      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -906,9 +910,9 @@
     ],
     "sanctions": [
       {
-        "regime": "role.pol",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Deputy Minister of Industry and Trade since October 2022. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: role.pol. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Deputy Minister of Industry and Trade since October 2022. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -930,7 +934,8 @@
       "note": "Ministerial representation on the board. Primary doc"
     },
     "_corrected": [
-      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -1316,7 +1321,9 @@
     ],
     "sanctions": [
       {
-        "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+        "regime": [
+          "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+        ],
         "date": null,
         "note": "CONFIRMED — exact role/title match (GUIR head, Unit 74455 commander) independently corroborated by this registry's own pre-existing MoD-press-sourced identification, not just an OpenSanctions name match. Not yet independently read against the underlying primary designation document.",
         "source_id": "s0821"
@@ -1439,9 +1446,9 @@
     ],
     "sanctions": [
       {
-        "regime": "sanction",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role AND product match: OpenSanctions independently names her as GD of \"LLC UAMOC\" (= this registry's ООО «ЦУГАМ») producing FPV drones \"Kort\"/\"Brus-1\"/\"Osa\"/\"Boomerang\" — new product names not yet in this registry's ooo-tsugam record, worth folding in separately. Personal ИНН given in notes: 500905260513. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role AND product match: OpenSanctions independently names her as GD of \"LLC UAMOC\" (= this registry's ООО «ЦУГАМ») producing FPV drones \"Kort\"/\"Brus-1\"/\"Osa\"/\"Boomerang\" — new product names not yet in this registry's ooo-tsugam record, worth folding in separately. Personal ИНН given in notes: 500905260513. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -1463,7 +1470,8 @@
       "note": "Identified via bo.nalog.gov.ru's search index (ИНН 9731094770, ОГРН 1227700378553, Moscow) — OKVED 30.30.39, an aircraft/spacecraft-manufacturing subclass. Entered \"reorganization\" status 29.06.2026, weeks before this pull. Its FY2025 filing (indexed 30.03.2026) shows a large declared gain figure whose unit (thousands vs. whole rubles) is not yet confirmed against the source document — treat as directional pending a direct pull. Not yet EGRUL-checked for ownership/GD detail. Open"
     },
     "_corrected": [
-      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -1722,7 +1730,7 @@
     ],
     "sanctions": [
       {
-        "regime": "(program code not returned)",
+        "regime": null,
         "date": null,
         "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (780158807980) against the designation record's own idNumber field — 2026-08-24 screening. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
         "source_id": "s0793"
@@ -1754,7 +1762,8 @@
       "head of the core entity.",
       "Phase 1 verification pass, 2026-08-22: independently re-confirmed via ЦБСТ's own full signed EGRUL extract (s0231) — ИНН 780158807980 and 16.12.2025 start date both match exactly what was already on file. Promoted to _verified: true.",
       "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0793).",
-      "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\" (ЦБСТ's own full legal name), position \"Генеральный директор\" -- exact match on both employer and title to the already-EGRUL-confirmed role above. Independent corroboration, not new information."
+      "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\" (ЦБСТ's own full legal name), position \"Генеральный директор\" -- exact match on both employer and title to the already-EGRUL-confirmed role above. Independent corroboration, not new information.",
+      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
     ],
     "_verified_against": "s0231 — ЦБСТ's own full signed ЕГРЮЛ extract, pulled 15.08.2026",
     "opensanctions_matches": [
@@ -1861,7 +1870,7 @@
     ],
     "sanctions": [
       {
-        "regime": "(see note)",
+        "regime": null,
         "date": null,
         "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: name matches exactly (rare full name); OpenSanctions record carries no notes/positions to independently corroborate role — DOB only, not role-corroborated. Lower confidence than the other Tier-A entries. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
@@ -1885,7 +1894,8 @@
       "note": "The apparent registry “conflict” between aggregators is resolved: this was a real succession, not a data error. Rubinstein appears as sitting CEO through at least Sept 2025 (PMEF, Minpromtorg award, ЭКСПЛОМЕТ agreement). Primary doc"
     },
     "_corrected": [
-      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -1990,7 +2000,7 @@
     ],
     "sanctions": [
       {
-        "regime": "(program code not returned)",
+        "regime": null,
         "date": null,
         "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (501105677892) against the designation record's own idNumber field — 2026-08-24 screening. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
         "source_id": "s0739"
@@ -2023,7 +2033,8 @@
       "prose-extraction pass, Имя Отчество Фамилия vs Фамилия Имя",
       "Отчество) — not merged here, flagged as a real dedup gap worth a",
       "dedicated fix rather than folded silently into this correction.",
-      "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0739)."
+      "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0739).",
+      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
     ],
     "_verified_against": "docs/index.html Executives table",
     "opensanctions_matches": [
@@ -2451,7 +2462,9 @@
     ],
     "sanctions": [
       {
-        "regime": "Ukraine (NAZK \"War & Sanctions\" register, profile 16429)",
+        "regime": [
+          "Ukraine (NAZK \"War & Sanctions\" register, profile 16429)"
+        ],
         "date": null,
         "note": "CONFIRMED via exact personal-ИНН match (054403029570) between OpenSanctions' own match_id and this registry's pre-existing, independently NAZK-sourced note.",
         "source_id": "s0862"
@@ -2567,7 +2580,9 @@
     ],
     "sanctions": [
       {
-        "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+        "regime": [
+          "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+        ],
         "date": null,
         "note": "CONFIRMED — unambiguous public figure, role/title match exact, no ID cross-check needed given public notoriety. Not yet independently read against each underlying primary designation document.",
         "source_id": "s0831"
@@ -2849,9 +2864,9 @@
     ],
     "sanctions": [
       {
-        "regime": "role.pol; sanction; debarment; poi",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Secretary of United Russia's General Council, later Head of the Altai Republic — matches this registry's existing two-stage role description precisely. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: role.pol; sanction; debarment; poi. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Secretary of United Russia's General Council, later Head of the Altai Republic — matches this registry's existing two-stage role description precisely. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -2873,7 +2888,8 @@
       "note": "Delivered fund-purchased equipment to units on at least seven occasions from Jun 2023; the channel tracks his move to Altai in real time. Primary doc"
     },
     "_corrected": [
-      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -3445,7 +3461,9 @@
     ],
     "sanctions": [
       {
-        "regime": "EU-UKR",
+        "regime": [
+          "EU-UKR"
+        ],
         "date": null,
         "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (644914040799) against the designation record's own idNumber field — 2026-08-24 screening. Topics: sanction. Not yet independently read against the underlying primary designation document.",
         "source_id": "s0754"
@@ -3989,9 +4007,9 @@
     "roles": [],
     "sanctions": [
       {
-        "regime": "corp.disqual; debarment; sanction; role.rca; poi",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently describes him as chairman of Фонд «ДАР»'s наблюдательный совет and Medvedev's asset-holding confidant — matches this registry's own ДАР ownership-chain findings (finding 08/13) exactly, from an independent source. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: corp.disqual; debarment; sanction; role.rca; poi. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently describes him as chairman of Фонд «ДАР»'s наблюдательный совет and Medvedev's asset-holding confidant — matches this registry's own ДАР ownership-chain findings (finding 08/13) exactly, from an independent source. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -4016,7 +4034,8 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -4140,9 +4159,9 @@
     ],
     "sanctions": [
       {
-        "regime": "sanction",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him director/founder of \"SDB Piranya\" (Simbirsk Design Bureau Пиранья) — matches this registry's existing СКБ «Пиранья» okved_mismatch note. Personal ИНН given in notes: 732508747179; passport 7304202860. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him director/founder of \"SDB Piranya\" (Simbirsk Design Bureau Пиранья) — matches this registry's existing СКБ «Пиранья» okved_mismatch note. Personal ИНН given in notes: 732508747179; passport 7304202860. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -4167,7 +4186,8 @@
     },
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-      "2026-08-24: resolved this person's `_candidate` role at ООО «СКБ Пиранья» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-skb-piranya, source s0487) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ООО «СКБ Пиранья» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-skb-piranya, source s0487) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -4298,9 +4318,9 @@
     ],
     "sanctions": [
       {
-        "regime": "sanction",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him founder/co-owner of \"LLC Center for Integrated Unmanned Solutions\" — this registry's already ИНН-confirmed ООО «ЦКБР» (Complex Unmanned Solutions Center Ltd), Zhukovsky, full-cycle FPV production. Personal ИНН given in notes: 501306766736. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him founder/co-owner of \"LLC Center for Integrated Unmanned Solutions\" — this registry's already ИНН-confirmed ООО «ЦКБР» (Complex Unmanned Solutions Center Ltd), Zhukovsky, full-cycle FPV production. Personal ИНН given in notes: 501306766736. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -4326,7 +4346,8 @@
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
       "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU236504U1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
-      "2026-08-24 cleanup: dropped a stale prose-extracted _candidate role for ООО «ЦКБР», now superseded by the resolved co-inventor role added from the patent sweep (same entity, now with entity_slug/title/source_id)."
+      "2026-08-24 cleanup: dropped a stale prose-extracted _candidate role for ООО «ЦКБР», now superseded by the resolved co-inventor role added from the patent sweep (same entity, now with entity_slug/title/source_id).",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -4446,7 +4467,9 @@
     ],
     "sanctions": [
       {
-        "regime": "sanction.linked",
+        "regime": [
+          "sanction.linked"
+        ],
         "date": null,
         "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (781422806104) against the designation record's own idNumber field — 2026-08-24 screening. Datasets: ext_ru_egrul, ann_graph_topics. Topics: sanction.linked (graph-proximity to a sanctioned entity, not itself a primary designation). Not yet independently read against the underlying primary designation document.",
         "source_id": "s0868"
@@ -4699,7 +4722,7 @@
     ],
     "sanctions": [
       {
-        "regime": "sanction.linked",
+        "regime": null,
         "date": null,
         "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (500310216204) against the designation record's own idNumber field — 2026-08-24 screening. Datasets: ext_ru_egrul, ann_graph_topics. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
         "source_id": "s0865"
@@ -4727,7 +4750,8 @@
     "_corrected": [
       "2026-08-24: the «НИПП «Рустехдрон»» candidate role is CONFIRMED via direct patent co-authorship on RU218475U1/RU220486U1 (same filing as Дзема В.В. and Свистунов М.В.) — this closes one of this session's own earlier 'zero corroboration, left unconfirmed' cases from the OpenSanctions 'check 33' pass. The separate ООО «ДСГ» role tie is UNCHANGED and remains a candidate — no evidence connecting the two roles has been found; do not assume they corroborate each other.",
       "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
-      "2026-08-24: added director roles at both ooo-npo-rustekhdron and the newly-added ooo-rtd-zashchita, alongside the existing verified co-inventor role. The ООО «ДСГ» candidate role remains unresolved and unrelated (per this record's own existing _corrected note: ДСГ's director carries a different patronymic, Никита Дмитриевич, treated as a same-surname coincidence, not this Соколов)."
+      "2026-08-24: added director roles at both ooo-npo-rustekhdron and the newly-added ooo-rtd-zashchita, alongside the existing verified co-inventor role. The ООО «ДСГ» candidate role remains unresolved and unrelated (per this record's own existing _corrected note: ДСГ's director carries a different patronymic, Никита Дмитриевич, treated as a same-surname coincidence, not this Соколов).",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": "fips.ru direct lookup, RUPM 218475 and RUPM 220486, 2026-08-24",
     "opensanctions_matches": [
@@ -5644,9 +5668,9 @@
     ],
     "sanctions": [
       {
-        "regime": "sanction",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: consistent with this registry's already-documented personal-naming-pattern finding (exited 3mx/Тримикс founder whose surname matches jammer product names «Айрат 100»/«Алия 350» sold via Мэдро) — OpenSanctions record carries no notes to independently corroborate beyond the name/DOB match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: consistent with this registry's already-documented personal-naming-pattern finding (exited 3mx/Тримикс founder whose surname matches jammer product names «Айрат 100»/«Алия 350» sold via Мэдро) — OpenSanctions record carries no notes to independently corroborate beyond the name/DOB match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -5671,7 +5695,8 @@
     },
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-      "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2826668C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles."
+      "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2826668C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -6673,9 +6698,9 @@
     "roles": [],
     "sanctions": [
       {
-        "regime": "sanction",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names her as founder of \"SDB Piranya\" alongside Чернышов — same entity, same registry tie. Personal ИНН given in notes: 732703148651; passport 7317205966. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names her as founder of \"SDB Piranya\" alongside Чернышов — same entity, same registry tie. Personal ИНН given in notes: 732703148651; passport 7317205966. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -6698,7 +6723,8 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -7016,7 +7042,9 @@
     ],
     "sanctions": [
       {
-        "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+        "regime": [
+          "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+        ],
         "date": null,
         "note": "PLAUSIBLE — exact name+DOB match, no notes/context text from OpenSanctions itself; corroborated only circumstantially via this person's ЦКБР tie. NOT personal-ИНН-confirmed.",
         "source_id": "s0842"
@@ -7426,7 +7454,7 @@
     "roles": [],
     "sanctions": [
       {
-        "regime": "sanction.linked",
+        "regime": null,
         "date": null,
         "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (583502178630) against the designation record's own idNumber field — 2026-08-24 screening. Datasets: ext_ru_egrul, ann_graph_topics. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
         "source_id": "s0851"
@@ -7451,7 +7479,8 @@
       ]
     },
     "_corrected": [
-      "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked."
+      "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": [],
     "opensanctions_matches": [
@@ -7556,7 +7585,9 @@
     ],
     "sanctions": [
       {
-        "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+        "regime": [
+          "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+        ],
         "date": null,
         "note": "PLAUSIBLE — exact name+DOB match, no notes/context text; corroborated only circumstantially via this person's АО «Площадь» tie. NOT personal-ИНН-confirmed.",
         "source_id": "s0853"
@@ -7674,7 +7705,7 @@
     ],
     "sanctions": [
       {
-        "regime": "sanction.linked",
+        "regime": null,
         "date": null,
         "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (780633823516) against the designation record's own idNumber field — 2026-08-24 screening. Datasets: ext_ru_egrul, ann_graph_topics. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
         "source_id": "s0866"
@@ -7700,7 +7731,8 @@
     },
     "_corrected": [
       "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
-      "2026-08-24: resolved this person's `_candidate` role at ООО «ДСГ» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-dsg, source s0482) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ООО «ДСГ» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-dsg, source s0482) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": [],
     "opensanctions_matches": [
@@ -11437,7 +11469,9 @@
         "— the EGRUL address (обл. Ленинградская, м.р-н Сланцевский, с.п. Старопольское, д. Шакицы, д.14) matches the site's disclosed operator address exactly. Its Председатель (chairman) since 26.03.2021 is Любимов Александр Сергеевич — the same person, EGRUL-confirmed rather than inferred; as an association, EGRUL records no separate founder list. Дронница's own site also discloses direct crowdfunding rails: a Sberbank card (2202205080218883, recipient \"Майя Вла"
       ]
     },
-    "_corrected": "Signed the association's own 2024 Минюст filing as Председатель, 14.04.2025.",
+    "_corrected": [
+      "Signed the association's own 2024 Минюст filing as Председатель, 14.04.2025."
+    ],
     "_verified_against": null,
     "aleph_matches": [
       {
@@ -11952,9 +11986,9 @@
     ],
     "sanctions": [
       {
-        "regime": "corp.disqual; role.oligarch; sanction; role.rca; poi",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions' own sanctions notes cite the exact ₽33bn/2006 ДАР charter-capital contribution with Симановский already documented in this registry's finding 15 and ownership diagram — independent confirmation of a core registry finding, not just an identity match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: corp.disqual; role.oligarch; sanction; role.rca; poi. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions' own sanctions notes cite the exact ₽33bn/2006 ДАР charter-capital contribution with Симановский already documented in this registry's finding 15 and ownership diagram — independent confirmation of a core registry finding, not just an identity match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -11977,7 +12011,8 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -12069,7 +12104,9 @@
     "roles": [],
     "sanctions": [
       {
-        "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+        "regime": [
+          "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+        ],
         "date": null,
         "note": "PLAUSIBLE — exact name match, corroborated only via surname/patronymic family tie to Михельсон Л.В. Returned DOB (1993-01-01) looks like a placeholder, not a verified date — do not treat as confirmed. NOT personal-ИНН-confirmed.",
         "source_id": "s0856"
@@ -12292,9 +12329,9 @@
     ],
     "sanctions": [
       {
-        "regime": "sanction",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him GD of \"LLC Gumich\" (= this registry's АО «ХК Гумич», already tied to the Инвестментс/Борей chain) — and adds NEW information: Gumich owns \"LLC Gumich RTK,\" maker of \"Impulse-M\" robot platforms field-tested by Russian forces since summer 2024. Personal ИНН given in notes context but not directly labeled — worth a follow-up EGRUL check. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him GD of \"LLC Gumich\" (= this registry's АО «ХК Гумич», already tied to the Инвестментс/Борей chain) — and adds NEW information: Gumich owns \"LLC Gumich RTK,\" maker of \"Impulse-M\" robot platforms field-tested by Russian forces since summer 2024. Personal ИНН given in notes context but not directly labeled — worth a follow-up EGRUL check. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -12317,7 +12354,8 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -13008,7 +13046,9 @@
     ],
     "sanctions": [
       {
-        "regime": "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)",
+        "regime": [
+          "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
+        ],
         "date": null,
         "note": "PLAUSIBLE — exact name+DOB match, no notes/context text; corroborated only circumstantially via this person's ГОУДРОН tie. Common surname raises collision risk. NOT personal-ИНН-confirmed.",
         "source_id": "s0849"
@@ -13412,7 +13452,7 @@
     ],
     "sanctions": [
       {
-        "regime": "(program code not returned)",
+        "regime": null,
         "date": null,
         "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (673103142483) against the designation record's own idNumber field — 2026-08-24 screening. Topics: sanction.linked. Not yet independently read against the underlying primary designation document.",
         "source_id": "s0757"
@@ -13449,7 +13489,8 @@
     },
     "_corrected": [
       "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0757).",
-      "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2637799C1, RU2663193C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles."
+      "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2637799C1, RU2663193C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
+      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -14725,7 +14766,9 @@
     "roles": [],
     "sanctions": [
       {
-        "regime": "UA-NSDC",
+        "regime": [
+          "UA-NSDC"
+        ],
         "date": null,
         "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (695004552407) — 2026-08-24 screening. OpenSanctions id ua-nsdc-34189-klimov-maksim-oleksandrovic, dataset: ua_nsdc_sanctions (Ukraine's National Security and Defense Council sanctions list). Topics: sanction. Name given in Ukrainian transliteration on the source record (Климов Максим Олександрович) — same person, spelling variant confirmed by exact ИНН match. Not yet independently read against the underlying primary NSDC decree.",
         "source_id": "s0845"
@@ -15515,7 +15558,11 @@
     ],
     "sanctions": [
       {
-        "regime": "Ukraine (GUR war-sanctions register); EU (Regulation 2023/1216); France (Trésor gels-avoirs)",
+        "regime": [
+          "Ukraine (GUR war-sanctions register)",
+          "EU (Regulation 2023/1216)",
+          "France (Trésor gels-avoirs)"
+        ],
         "date": null,
         "note": "CONFIRMED — role/title match independently corroborated by this registry's own separately-sourced Kronstadt-chairman finding. Underlying designation documents (GUR profile 5316, EU reg 2023/1216, French Trésor registry) not yet individually pulled and read — see source_urls in archived match.",
         "source_id": "s0823"
@@ -15652,9 +15699,9 @@
     ],
     "sanctions": [
       {
-        "regime": "sanction.linked",
+        "regime": null,
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: name matches this registry's already ИНН-confirmed ooo-gk-aeromaks/Kronshtadt director exactly — OpenSanctions record carries no DOB or notes, name-match only but low collision risk given the specific already-established corporate role. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: sanction.linked. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: name matches this registry's already ИНН-confirmed ooo-gk-aeromaks/Kronshtadt director exactly — OpenSanctions record carries no DOB or notes, name-match only but low collision risk given the specific already-established corporate role. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "source_id": null
       }
     ],
@@ -15677,7 +15724,8 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check)."
+      "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -15766,7 +15814,9 @@
     ],
     "sanctions": [
       {
-        "regime": "UA-NSDC + role.pep",
+        "regime": [
+          "UA-NSDC + role.pep"
+        ],
         "date": null,
         "note": "Confirmed via OpenSanctions API, EXACT personal ИНН match (770301599800) — 2026-08-24 screening. OpenSanctions Q16692250 (Wikidata-linked), datasets: ua_nsdc_sanctions, wd_categories, ext_ru_egrul, wikidata, ru_acf_bribetakers, ann_pep_positions. Topics: poi, sanction, role.pep, role.rca. Publicly known figure (son of Dmitry Rogozin, ex-Roscosmos head); ownership tie already recorded to ao-ekolibri in this registry. Not yet independently read against the underlying primary designation document.",
         "source_id": "s0861"

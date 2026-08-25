@@ -1087,21 +1087,24 @@ previous-run check or an explicit "downgrade requires justification" rule —
 not built yet, and probably not worth building until it recurs; the
 concrete fix this time was re-establishing the correct value, not tooling.
 
-**3. Normalize type instabilities** — **UNCHANGED since this table was first
-written**, confirmed by direct re-count 2026-08-24 (later session). Zero
-progress on any of these despite substantial other work in between — worth
-treating as genuinely stalled, not just "not yet reached":
+**3. Normalize type instabilities** — **DONE (2026-08-25).** All six rows
+fixed and each now has a `check_registry.py` assertion guarding it (all
+pass clean: 0 errors on full regeneration):
 
-| Field | Problem (re-confirmed 2026-08-24) |
+| Field | Fix applied |
 |---|---|
-| `charter_capital` | 118 null, 29 int, 1 float, **1 string** — identical counts to the original audit |
-| `okved_mismatch` | 127 null, 7 booleans, 15 long free-text explanations under one key |
-| entity `open_questions[]` | now 101 dicts `{question, source_id}` + **3 bare strings** (grew from 79+4, still mixed shape — every addition this session used the dict shape, which is progress of a kind, but the 3 legacy bare strings were never cleaned up) |
-| people `_corrected` | 94 list, **1 bare string**, 210 null — the null count grew a lot (more people added overall), the string-vs-list inconsistency itself is unchanged |
-| `_verified_against` vs `verified_against` | accidental key split — now 148 vs 5 (was 147 vs 5) — the typo'd key is still what 96% of records actually use |
-| `sanctions[].regime` | now **41 distinct spellings** on entities alone (was ~20) — this got measurably worse as the sanctions sweep grew from 27→58 entities, not better |
+| `charter_capital` | The 1 stray string (`ooo-npts-basirtk`, in its `add_entities` scaffold entry, both the flat field and its one `charter_capital_history` entry) cast to `int`. The 1 float (`pao-bank-psb`, kopeck-precision) left as-is — float is a legitimate numeric type, not a bug. New check: must be `int`/`float`/`null`. |
+| `okved_mismatch` | Normalized all 22 non-null values (7 bools, 15 explanation strings) to one shape: `{"mismatch": bool, "note": str\|null}` — bools became `{mismatch: <bool>, note: null}`, strings became `{mismatch: true, note: "<original text>"}` (every string case was describing a confirmed mismatch). New check: must match that shape or be `null`. |
+| entity `open_questions[]` | The 3 remaining bare strings converted to `{"question": "<text>", "source_id": null}`, matching the other 101 entries. New check: every entry must be a dict with a `question` key. |
+| people `_corrected` | The 1 bare string (`lyubimov-aleksandr-sergeevich`, from a `"why"` field in `corrections.json` that had been written as a plain string instead of a list) wrapped in a 1-element list; confirmed no other bare-string `"why"` values exist anywhere in `corrections.json`. New check: must be a `list` or `null`. |
+| `_verified_against` vs `verified_against` | **Already resolved before this pass** — direct count found 238 uses of `_verified_against` and zero of the bare typo'd key anywhere in `people.json`, so no migration was needed; a past session evidently already normalized this and the plan's own count had gone stale. |
+| `sanctions[].regime` | The real bug turned out to be bigger than spelling drift: 16 entries (all on people, e.g. `andrey-bezrukov`, `andrey-turchak`, `mikhelson-leonid-viktorovich`) had an OpenSanctions **topic** code (`"sanction"`, `"role.pol"`, `"corp.disqual"`, etc.) sitting in the `regime` field, which isn't a jurisdiction at all — nulled `regime` on those and, where the topics value wasn't already stated in the entry's own `note`, prepended it there so the information wasn't lost. A further 21 entries used one of three placeholder-text spellings for "not known" (`"(see note)"`, `"(regime code not returned by OpenSanctions for this match)"`, etc.) — normalized to `null`, the registry's existing convention for "not known" elsewhere. The remaining 62 real, legitimate multi-jurisdiction semicolon-joined strings (`"US (OFAC...); Canada (...); EU (...)"`) were split into an actual `list[str]`, one element per jurisdiction, wording preserved exactly — no jurisdiction-name spelling was touched or harmonized, since that's a content-accuracy judgment call, not a type-shape bug, and collapsing e.g. "Canada (Special Economic Measures Act)" and "Canada (SEMA)" into one canonical spelling risks obscuring what a given source actually said. New check on both entities and people: `regime` must be `list[str]` or `null` — a bare string (semicolon-joined or not) now fails the build. |
 
-Encode each as a `check_registry.py` assertion afterwards so it cannot regress.
+All fixes applied directly in `data/registry/corrections.json` (the only
+place any of these six fields originate — none are scaffolded by
+`extract_registry.py`), each with a `why[]` note explaining the change was
+a labeling/shape fix, not new evidence. Verified surviving a full
+`extract_registry.py` regeneration.
 
 **4. Make `_merged_into` real.** **Partially done (2026-08-25) — the
 check_registry.py half is complete; the build-time filter is still blocked on
