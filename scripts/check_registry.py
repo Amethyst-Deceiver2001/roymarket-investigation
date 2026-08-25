@@ -15,12 +15,17 @@ Checks:
   4. Duplicates — by ИНН, and by normalised name (case-folded, legal-form
      prefix stripped, ё→е), which catches the ООО «X» / «X» / OOO "X"
      variants that plain string comparison misses.
-  5. Referential integrity — every source_id resolves, every entity_slug on a
-     person or product exists, slugs are unique.
+  5. Referential integrity — recursive, not a fixed field list: every
+     source_id and every entity/person slug reference found ANYWHERE inside
+     an entity or person record must resolve, however deeply nested (a
+     trademarks[]/patents[]/images[] entry is checked the same as
+     director_history). is_brand_of resolves against ИНН (that field uses
+     ИНН, not slug); _merged_into resolves against the same file's own
+     slugs. Slugs are unique.
   6. History arrays (director_history, charter_capital_history, financials,
-     etc.) — entries are date-ordered, and any source_id they cite resolves.
-     A history entry with a null source_id is a placeholder, not evidence —
-     flagged as a warning so it surfaces as verification work, not silently.
+     etc.) — entries are date-ordered. A history entry with a null
+     source_id is a placeholder, not evidence — flagged as a warning so it
+     surfaces as verification work, not silently.
   7. Coverage report — how much of the registry is still unverified, and
      which high-priority records are missing key fields.
 
@@ -80,6 +85,22 @@ def ogrn_valid(ogrn: str) -> bool:
     body, check = ogrn[:-1], int(ogrn[-1])
     divisor = 11 if len(ogrn) == 13 else 13
     return int(body) % divisor % 10 == check
+
+
+def find_refs(obj, key_names: set[str], path: str = ""):
+    """Recursively yield (field_path, value) for every string-valued key in
+    key_names found anywhere inside obj, at any nesting depth. Used to catch
+    a source_id/slug reference wherever a record happens to carry one,
+    instead of only in the handful of fields a human remembered to list."""
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            new_path = f"{path}.{k}" if path else k
+            if k in key_names and isinstance(v, str) and v:
+                yield (new_path, v)
+            yield from find_refs(v, key_names, new_path)
+    elif isinstance(obj, list):
+        for i, item in enumerate(obj):
+            yield from find_refs(item, key_names, f"{path}[{i}]")
 
 
 def normalise_name(name: str) -> str:
@@ -166,19 +187,45 @@ def main() -> int:
             warnings.append(f"duplicate person slug '{slug}' x{n}")
 
     # --- 5. referential integrity ----------------------------------------
+    # Generic and recursive: catches a source_id/slug reference anywhere in
+    # a record, not just the fields a human remembered to enumerate here —
+    # a bare per-field list has repeatedly missed new nested arrays (e.g.
+    # trademarks[], patents[], images[]) as the schema grew.
     source_ids = {s["id"] for s in sources or []}
     entity_slugs = {e["slug"] for e in entities}
+    entity_inns = {e["inn"] for e in entities if e.get("inn")}
+    people_slugs = {p.get("slug") for p in (people or [])}
 
     for e in entities:
         for sid in e.get("sources", []):
             if sid not in source_ids:
                 errors.append(f"{e['name_ru']}: unknown source_id '{sid}'")
+        for path, sid in find_refs(e, {"source_id"}):
+            if sid not in source_ids:
+                errors.append(f"{e['name_ru']}: {path} cites unknown source_id '{sid}'")
+        for path, val in find_refs(e, {"slug", "entity_slug"}):
+            if path == "slug":
+                continue  # the record's own identity, not a reference
+            if val not in entity_slugs:
+                errors.append(f"{e['name_ru']}: {path} references unknown entity slug '{val}'")
+        brand_of = e.get("is_brand_of")
+        if brand_of and brand_of not in entity_inns:
+            errors.append(f"{e['name_ru']}: is_brand_of references unknown ИНН '{brand_of}'")
+        merged = e.get("_merged_into")
+        if merged and merged not in entity_slugs:
+            errors.append(f"{e['name_ru']}: _merged_into references unknown entity slug '{merged}'")
+
     for p in people or []:
-        for role in p.get("roles", []):
-            es = role.get("entity_slug")
-            if es and es not in entity_slugs:
-                errors.append(f"{p['fio_ru']}: role references unknown entity "
-                              f"slug '{es}'")
+        for path, sid in find_refs(p, {"source_id"}):
+            if sid not in source_ids:
+                errors.append(f"{p['fio_ru']}: {path} cites unknown source_id '{sid}'")
+        for path, es in find_refs(p, {"entity_slug"}):
+            if es not in entity_slugs:
+                errors.append(f"{p['fio_ru']}: {path} references unknown entity slug '{es}'")
+        merged = p.get("_merged_into")
+        if merged and merged not in people_slugs:
+            errors.append(f"{p['fio_ru']}: _merged_into references unknown person slug '{merged}'")
+
     for q in quotes or []:
         sid = q.get("source_id")
         if sid and sid not in source_ids:
@@ -213,11 +260,11 @@ def main() -> int:
                 errors.append(f"{e['name_ru']}: '{key}' entries are not "
                               f"date-ordered ({stamps})")
             for h in hist:
-                sid = h.get("source_id")
-                if sid and sid not in source_ids:
-                    errors.append(f"{e['name_ru']}: '{key}' entry cites "
-                                  f"unknown source_id '{sid}'")
-                elif not sid:
+                # resolution already checked generically above; this pass
+                # only counts unsourced placeholders, which is specific to
+                # history-style fields (a trademark/patent with no source_id
+                # is just incomplete, not a "placeholder awaiting a fact")
+                if not h.get("source_id"):
                     unsourced_history += 1
     if unsourced_history:
         warnings.append(f"{unsourced_history} history entries have no "
