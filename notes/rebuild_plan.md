@@ -1050,38 +1050,42 @@ count has grown (more reason to fix it, not less). These are re-flagged here so
 a future session doesn't have to re-derive current numbers from scratch again.
 
 **1. Fix the `wb_overlap` regression and split raw from curated** *(user
-decision: raw + curated)* — **STILL FULLY OPEN, and bigger than "one
-regression."** Direct check of `entities.json` (2026-08-24, later session)
-confirms: `ooo-trimiks-bulat-3mx` is still `none_found`. But also: **no entity
-in the registry uses the planned `confirmed_direct`/`confirmed_reseller` split
-at all** — the two entities the split's own example text names, ООО «ГАСКАР»
-and ООО «АСЕЛ ЛАБС», both carry the bare literal value `"confirmed"`, an enum
-value that was never actually part of any documented design. `wb_matches[]` is
-`None`/absent on every single entity, and `scripts/screen_wb.py` **does not
-exist** (`ls scripts/ | grep wb` finds only `export_from_wb_watch.py`, the
-historical bootstrap script, unrelated). In short: the raw/curated split is a
-decision recorded in this plan, not yet a line of code or a schema field
-anywhere. Current `wb_overlap` distribution: `none_found` 84, `not_checked` 63,
-`confirmed` 2 (the two above), `confirmed_reseller`/`confirmed_direct` 0.
+decision: raw + curated)* — **DONE (2026-08-25).** `ooo-trimiks-bulat-3mx` was
+already `confirmed_reseller` going into this pass (fixed in `b06d9f1`, an
+earlier session). This pass closed the rest: wrote `scripts/screen_wb.py`
+(reads the sibling `wb_watch` repo's already-scraped `sellers` table — 4385
+sellers with an ИНН on file — and joins on each registry entity's own ИНН;
+2 direct matches, both already known: ГАСКАР and АСЕЛ ЛАБС), which writes
+`wb_matches[]` + `wb_screened_at` directly onto `entities.json` per the
+carry-forward rule; added both fields to `ENTITY_CARRY_FORWARD_FIELDS` in
+`extract_registry.py` (verified surviving a regen); reclassified ГАСКАР and
+АСЕЛ ЛАБС's stale bare `"confirmed"` to `confirmed_direct` via
+`corrections.json`, and cleaned up a third stale bare `"confirmed"` sitting
+in an already-superseded ИНН-keyed correction block for Тримикс (harmless in
+practice — a later slug-keyed correction already won — but an invalid enum
+value nonetheless). Current distribution: `none_found` 83, `not_checked` 63,
+`confirmed_direct` 2, `confirmed_reseller` 1. `wb_overlap` itself remains
+**human-set only**, via `corrections.json` — `screen_wb.py` only finds a
+seller trading under an entity's *own* ИНН; a reseller relationship (the
+Тримикс/Макс 911 pattern) still needs the brand-name-search + primary-source
+verification this project already does by hand.
 
-- Restore `ooo-trimiks-bulat-3mx` to `confirmed_reseller` — with the reseller
-  evidence attached, not despite it.
-- Reclassify the two existing bare-`"confirmed"` entities (ГАСКАР, АСЕЛ ЛАБС)
-  to `confirmed_direct` at the same time — they're already-known direct cases,
-  just sitting under a value the schema doesn't actually define.
-- Write `scripts/screen_wb.py` writing `wb_matches[]` + `wb_screened_at`;
-  `wb_overlap` becomes a **human-set conclusion only**, values `confirmed_direct
-  | confirmed_reseller | none_found | not_checked`.
-- Add the field to the carry-forward block in the same change, or the next
-  regeneration wipes it (same lesson as every other screening field this
-  project has added).
-
-**2. Guard against machine-overwrites-human generally.** Still absent —
-`scripts/check_registry.py` (2026-08-24 re-check) has no function or check
-referencing `wb_overlap`, `_merged_into`, or any overwrite-protection logic at
-all; it validates ИНН/ОГРН checksums, duplicates and orphan source ids only.
-This class of bug has now happened once (the Тримикс regression, still
-unfixed above) and remains silent by construction.
+**2. Guard against machine-overwrites-human generally.** **Partially done
+(2026-08-25).** Added a `wb_overlap` enum validator to `check_registry.py`
+(rejects any value outside `confirmed_direct`/`confirmed_reseller`/
+`none_found`/`not_checked`) — this alone would have caught the ГАСКАР/АСЕЛ
+ЛАБС bare-`"confirmed"` mislabeling immediately instead of it sitting
+unnoticed for a session. `_merged_into` was already validated for referential
+integrity (resolves to an existing slug) before this pass, just not flagged
+as such here. What's still genuinely missing: neither check catches a
+*silent regression* — a value that was correct, then got overwritten to
+something else-but-still-valid by a bad bulk edit (the actual Тримикс
+mechanism: a correction sweep set `none_found` over a previously-correct
+`confirmed_reseller`, and both are valid enum members, so no validator alone
+would have flagged it). Catching that class needs either a diff-against-
+previous-run check or an explicit "downgrade requires justification" rule —
+not built yet, and probably not worth building until it recurs; the
+concrete fix this time was re-establishing the correct value, not tooling.
 
 **3. Normalize type instabilities** — **UNCHANGED since this table was first
 written**, confirmed by direct re-count 2026-08-24 (later session). Zero

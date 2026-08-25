@@ -1043,6 +1043,7 @@ ENTITY_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("gur_components_matches", "gur_components_screened_at"),
     ("rospatent_director_matches", "rospatent_director_screened_at"),
     ("rk2035_matches", "rk2035_screened_at"),
+    ("wb_matches", "wb_screened_at"),
 ]
 PEOPLE_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("other_entities", "other_entities_checked_at"),

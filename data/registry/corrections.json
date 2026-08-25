@@ -1391,14 +1391,15 @@
         "brand_ru": "«Булат» / 3mx",
         "name_ru": "ООО «Тримикс»",
         "tier": "manufacturer",
-        "wb_overlap": "confirmed"
+        "wb_overlap": "confirmed_reseller"
       },
       "why": [
         "Compound row split; the «Булат»/3mx half is a brand, not a company.",
         "wb_overlap set to confirmed: the brief records 64 Wildberries",
         "listings, 63 classified strict_military — the first confirmed",
         "WB ↔ РОЙ.МАРКЕТ crossover and the worked example for the whole",
-        "supplier-overlap thesis."
+        "supplier-overlap thesis.",
+        "2026-08-25: cleaned up a stale bare \"confirmed\" value in this (older, ИНН-keyed) correction block -- superseded in practice by a later slug-keyed correction that already sets confirmed_reseller, but left here in an invalid enum state that would trip the new wb_overlap validator if this block were ever the one applied last. No new evidence, consistency fix only."
       ]
     },
     "7805728050": {
@@ -5667,7 +5668,7 @@
           ],
           "other": []
         },
-        "wb_overlap": "confirmed",
+        "wb_overlap": "confirmed_direct",
         "open_questions": []
       },
       "why": [
@@ -5676,7 +5677,8 @@
         "2026-08-24 wb_overlap check: direct ИНН match against wb_watch.db's own sellers table (this project's sister investigation, its own separate scrape of the Wildberries marketplace) — same ИНН as 5 WB-listed item(s), 5/5 of them military-flagged by wb_watch's own classifier. Seller «ООО \"АСЕЛ ЛАБС\"», WB supplier_id 250130605, trademark «ASEL LABS - Производитель» — drone detectors (aSel Labs H231b/H233), sold directly under the manufacturer's own name.",
         "Web search 2026-08-25 to fill the marketplace_listings gap found a distributor site instead of a direct WB listing; flagged rather than guessed at.",
         "Resolved via user-supplied browser HAR capture of the seller's own WB storefront (2026-08-25, s1380) -- ИНН/ОГРН exact match confirms this is genuinely the manufacturer's own WB presence, not a reseller's. Supersedes the earlier open_question flagging 'no listing found' from a name-based search, which had simply missed the storefront (WB search doesn't surface all seller pages the same way product search does).",
-        "User-supplied browser HAR capture 2026-08-25 of an Ozon search session surfaced the same H231B detector listed on Ozon as a second marketplace, brand-matched but not yet seller-ИНН-confirmed."
+        "User-supplied browser HAR capture 2026-08-25 of an Ozon search session surfaced the same H231B detector listed on Ozon as a second marketplace, brand-matched but not yet seller-ИНН-confirmed.",
+        "2026-08-25: reclassified bare wb_overlap value \"confirmed\" (not a value the schema actually defines) to \"confirmed_direct\", the Phase 3.5 §1 raw/curated enum this entity always matched in substance (own-ИНН WB storefront, not a reseller) -- no new evidence, a labeling fix so check_registry.py's new wb_overlap enum validator accepts it."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -10414,7 +10416,7 @@
             "source_id": "s0809"
           }
         ],
-        "wb_overlap": "confirmed",
+        "wb_overlap": "confirmed_direct",
         "products": [
           "СИБНК",
           {
@@ -10464,7 +10466,8 @@
         "2026-08-24 wb_overlap check: direct ИНН match against wb_watch.db's own sellers table (this project's sister investigation, its own separate scrape of the Wildberries marketplace) — same ИНН as 8 WB-listed item(s), 8/8 of them military-flagged by wb_watch's own classifier. Seller «ООО \"ГАСКАР\"», WB supplier_id 250148061, trademark «ГАСКАР» — FPV components (GPS/compass modules, FPV cameras, motors, power connectors).",
         "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, the one candidate with a real patentee (RU191888U1) belongs to the separate, already-correctly-attributed ooo-gaskar-integratsiya, not this entity; the other 20 have no usable patentee data.",
         "Web search 2026-08-25 for a Wildberries listing (to fill the marketplace_listings gap on a wb_overlap=confirmed record) surfaced a likely product/entity-name conflation instead of a URL.",
-        "User-supplied browser HAR captures 2026-08-25 (search results, brand-storefront category page, product page, and seller page) resolved the marketplace_listings gap directly: manufacturer's own Ozon storefront (ОГРН exact match, s1385) plus one directly-confirmed product (PY3115 1300KV FPV motor). Confirms wb_overlap's underlying evidence -- FPV components under brand «ГАСКАР» -- independently on a second marketplace."
+        "User-supplied browser HAR captures 2026-08-25 (search results, brand-storefront category page, product page, and seller page) resolved the marketplace_listings gap directly: manufacturer's own Ozon storefront (ОГРН exact match, s1385) plus one directly-confirmed product (PY3115 1300KV FPV motor). Confirms wb_overlap's underlying evidence -- FPV components under brand «ГАСКАР» -- independently on a second marketplace.",
+        "2026-08-25: reclassified bare wb_overlap value \"confirmed\" (not a value the schema actually defines) to \"confirmed_direct\", the Phase 3.5 §1 raw/curated enum this entity always matched in substance (own-ИНН WB storefront, not a reseller) -- no new evidence, a labeling fix so check_registry.py's new wb_overlap enum validator accepts it."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },

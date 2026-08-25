@@ -239,11 +239,17 @@ def main() -> int:
                       "purpose_built_technopark_sez",
                       "generic_registered_address",
                       "claimed_future_secure_technopark", "unknown"}
+    WB_OVERLAP_VALUES = {"confirmed_direct", "confirmed_reseller",
+                          "none_found", "not_checked"}
     unsourced_history = 0
     for e in entities:
         ft = e.get("facility_type")
         if ft and ft not in FACILITY_TYPES:
             errors.append(f"{e['name_ru']}: unknown facility_type '{ft}'")
+        wbo = e.get("wb_overlap")
+        if wbo and wbo not in WB_OVERLAP_VALUES:
+            errors.append(f"{e['name_ru']}: unknown wb_overlap value '{wbo}' "
+                          f"(valid: {sorted(WB_OVERLAP_VALUES)})")
         for h in e.get("facility_type_history") or []:
             v = h.get("value")
             if v and v not in FACILITY_TYPES:
