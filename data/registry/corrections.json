@@ -14627,9 +14627,33 @@
    ]
   },
   "ip-tsyganov-vadim-borisovich": {
-   "set": {},
+   "set": {
+    "government_contracts": [
+     {
+      "customer": "ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ ПО КУРСКОЙ ОБЛАСТИ (ИНН 4632047480)",
+      "contract_number": "130 (реестровый № 1463204748024000101)",
+      "value": 16192000,
+      "date": "2024-10-29",
+      "subject_ru": "Поставка детекторов беспилотных летательных аппаратов Булат v.4",
+      "note": "Sole-supplier procurement (44-ФЗ ст. 93 ч.1 п.9 — emergency/disaster-response grounds), concluded 29.10.2024 — during the active Kursk-oblast incursion. Delivery: г. Курск, ул. Можаевская, 6.",
+      "source_id": "s1416"
+     },
+     {
+      "customer": "ФГКУ «ЦСООР «ЛИДЕР»» (ИНН 5003008102)",
+      "contract_number": "ЕП 3-25 (реестровый № 1500300810225000152)",
+      "value": 11984000,
+      "date": "2025-09-18",
+      "subject_ru": "Комплекс противодействия БПЛА «Покров» ВЦ5 АЛЬФА",
+      "note": "Sole-supplier procurement (44-ФЗ ст. 93 ч.1 п.9), 30% advance (₽3,595,200). Delivery to ФГКУ «ЦСООР «Лидер»»'s own address, Москва, Мосрентген. Contract card also lists supplier contact +7 926 215-30-15 / vipochka@bk.ru.",
+      "source_id": "s1417"
+     }
+    ],
+    "address": "141580, Московская обл., Солнечногорский р-н (Химки), д. Мышецкое, ул. Дорожная, д. 13",
+    "tier_basis": "Confirmed via zakupki.gov.ru contract registry (supplierTitle=ИНН search): two sole-supplier 44-ФЗ contracts, ₽28.176m combined, both counter-UAV systems branded «Булат»/«Покров» sold to МЧС-system customers."
+   },
    "why": [
-    "Verification attempt 2026-08-25: pulled zakupki.gov.ru notice regNumber 0348100057526000101 (user-supplied) directly — a ФГКУ «ЦСООР «Лидер»» (МЧС, ИНН 5003008102) 44-ФЗ auction for a single Supercam S150 centre-wing fuselage part, ₽220,000, failed with zero bids, no contract. Following up on this dossier record's claim of ~₽30m Покров/Булат contracts with this same customer: browsed the customer's full public 44-ФЗ notice history (searchString scan, 16 UAV-related notices found, reg-number prefix 0348100057) — every one is a small-value (₽19.5k–998k range seen; this customer's own scale tops out well under ₽1m per notice) Supercam consumable/spare-part purchase, none naming «Покров» or «Булат» or reaching anywhere near ₽30m. Also searched the public contract registry by ИП Цыганов's own ИНН (504405055721) directly — zero results — and by name variants ('Цыганов Вадим Борисович', 'ИП Цыганов В.Б.') — the only hits were unrelated surname/toponym collisions (a school named after a different Цыганов, library book titles). Also searched for the claimed ГУ МЧС России по Курской области contract — found only an unrelated 2019 ZALA-421 maintenance contract, no Покров/Булат match. None of this disproves the dossier claim (44-ФЗ full-text search is unreliable for entity names and the actual contract could be under a different legal name, a closed/single-source procurement track not indexed this way, or simply post-dates/predates what these searches covered) but it is a real negative-verification result, not yet independently confirmed positively anywhere."
+    "Verification attempt 2026-08-25: pulled zakupki.gov.ru notice regNumber 0348100057526000101 (user-supplied) directly — a ФГКУ «ЦСООР «Лидер»» (МЧС, ИНН 5003008102) 44-ФЗ auction for a single Supercam S150 centre-wing fuselage part, ₽220,000, failed with zero bids, no contract. Following up on this dossier record's claim of ~₽30m Покров/Булат contracts with this same customer: browsed the customer's full public 44-ФЗ notice history (searchString scan, 16 UAV-related notices found, reg-number prefix 0348100057) — every one is a small-value (₽19.5k–998k range seen; this customer's own scale tops out well under ₽1m per notice) Supercam consumable/spare-part purchase, none naming «Покров» or «Булат» or reaching anywhere near ₽30m. Also searched the public contract registry by ИП Цыганов's own ИНН (504405055721) directly — zero results — and by name variants ('Цыганов Вадим Борисович', 'ИП Цыганов В.Б.') — the only hits were unrelated surname/toponym collisions (a school named after a different Цыганов, library book titles). Also searched for the claimed ГУ МЧС России по Курской области contract — found only an unrelated 2019 ZALA-421 maintenance contract, no Покров/Булат match. None of this disproves the dossier claim (44-ФЗ full-text search is unreliable for entity names and the actual contract could be under a different legal name, a closed/single-source procurement track not indexed this way, or simply post-dates/predates what these searches covered) but it is a real negative-verification result, not yet independently confirmed positively anywhere.",
+    "CONFIRMED 2026-08-25 (upgrades the earlier unverified dossier claim to doc-tier): user supplied a DevTools HAR capture of zakupki.gov.ru's contract-registry search using the real \"supplierTitle\" query parameter (reverse-engineered from the capture — prior attempts guessing param names like customerInn/supplierInn either returned the unfiltered ~42M-record registry or zero/false-positive results). Search by this entity's own ИНН (504405055721) returns exactly 2 contracts, both sole-supplier under 44-ФЗ ст.93 ч.1 п.9 (emergency/disaster-response grounds): (1) ГУ МЧС России по Курской области, №130, 29.10.2024, ₽16,192,000, \"Детектор беспилотных летательных аппаратов Булат v.4\" — concluded during the active Kursk-oblast incursion; (2) ФГКУ «ЦСООР «Лидер»», №ЕП 3-25, 18.09.2025, ₽11,984,000, \"Комплекс противодействия БПЛА «Покров» ВЦ5 АЛЬФА\". Combined ₽28,176,000 — close to but not exactly the dossier's \"~30m\" figure, now independently confirmed at the primary-source level rather than taken on the dossier's word. Both contract cards fetched live (reestrNumber known from the search hit) and give a registered/postal address (141580, Московская обл., Химки/Мышецкое, ул. Дорожная, 13) and, on the second, a phone/email (+7 926 215-30-15 / vipochka@bk.ru) — added under this project's PII policy since this ИП is now a confirmed government-contract principal supplying counter-UAV hardware, not an incidental retail dealer."
    ]
   }
  },
