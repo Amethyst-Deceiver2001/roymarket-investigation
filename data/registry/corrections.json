@@ -9326,14 +9326,14 @@
             "source_id": "s0558"
           },
           {
-            "slug": null,
-            "relationship": "Named dealer, per 3mx.ru/dilery/: «Покров» (Pokrov) — pokrovsystem.ru, Moscow. Telegram @pokrov_sales. No matching EGRUL entity found by name search — legal entity unresolved.",
-            "source_id": "s0558"
+            "slug": "ooo-pokrov",
+            "relationship": "Named dealer, per 3mx.ru/dilery/: «Покров» (Pokrov) — pokrovsystem.ru, Khimki (Moscow Oblast). Telegram @pokrov_sales. Legal entity RESOLVED 2026-08-24 (cross-link fixed 2026-08-25 -- was already a standalone registry entity, `ooo-pokrov`, ИНН 5038189259/ОГРН 1245000068774, just not linked from here): NOT a pure reseller like Мэдро -- sells its own branded EW jammer line (Покров ВЦА «Алёша», ВЦ4/ВЦ5 «Альфа») alongside resold 3mx detector products (Булат v.4, Марс).",
+            "source_id": "s1386"
           }
         ],
         "open_questions": [
           {
-            "question": "3mx's dealer page (s0558, 23.08.2026) originally flagged all 3 named dealers as unmatched to a legal entity. Мэдро is now resolved (2026-08-25, via WB seller HAR capture): ИП Артемьева Виктория Михайловна, ИНН 350102453754, ОГРНИП 325784700034333. Макс 911's Ozon storefront is now located (2026-08-25, s1384) but its legal ИНН/ОГРН is still unresolved -- the sellerTransparency widget wasn't captured. Покров (pokrovsystem.ru, Moscow) remains a fully unmatched lead; worth the same seller-page HAR-capture approach if pursued, this time scrolling to/opening the seller's legal-info block before saving.",
+            "question": "3mx's dealer page (s0558, 23.08.2026) originally flagged all 3 named dealers as unmatched to a legal entity. Мэдро is now resolved (2026-08-25, via WB seller HAR capture): ИП Артемьева Виктория Михайловна, ИНН 350102453754, ОГРНИП 325784700034333. Покров is now cross-linked (2026-08-25, was actually already resolved 2026-08-24 as a standalone registry entity, just not linked from this record): ООО «ПОКРОВ», ИНН 5038189259/ОГРН 1245000068774, own EW jammer line + resold 3mx products. Remaining open: Макс 911's Ozon storefront is located (2026-08-25, s1384) but its legal ИНН/ОГРН is still unresolved -- the sellerTransparency widget wasn't captured; worth the same seller-page HAR-capture approach if pursued.",
             "source_id": "s0558"
           }
         ],
@@ -13561,12 +13561,63 @@
             "note": "per egrul.nalog.ru open-API lookup, 2026-08-24"
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "products": [
+          {
+            "name_ru": "Покров ВЦА «Алёша»",
+            "description": "4-6 km range, 10-channel circular video-frequency suppression, 1050-6200 MHz.",
+            "source_id": "s1386"
+          },
+          {
+            "name_ru": "Покров ВЦ4 «Альфа»",
+            "description": "10 channels, 360° 40cm antennas, 400-5900 MHz, up to 500m radius.",
+            "source_id": "s1386"
+          },
+          {
+            "name_ru": "Покров ВЦ5 «Альфа»",
+            "description": "12 channels, 360° 40cm antennas, 400-5900 MHz, backpack design.",
+            "source_id": "s1386"
+          },
+          {
+            "name_ru": "Детектор «Булат» v.4 (3MX)",
+            "description": "Resold 3mx product — detection range 1.5 km, 300-7200 MHz.",
+            "source_id": "s1386"
+          },
+          {
+            "name_ru": "Часы «Таир»",
+            "description": "Wearable notification device paired with the Булат v.4 detector.",
+            "source_id": "s1386"
+          },
+          {
+            "name_ru": "Детектор «Марс»",
+            "description": "Resold 3mx product — detector of digital video links and ELRS remote controls.",
+            "source_id": "s1386"
+          }
+        ],
+        "web": {
+          "sites": [
+            {
+              "url": "https://pokrovsystem.ru/",
+              "note": "Contact: sales@pokrovsystem.ru, +7 495 799-7101 / +7 905 519-7101. Re-confirmed 2026-08-25 (s1386, direct curl archive) -- ОГРН 1245000068774 matches exactly."
+            }
+          ],
+          "telegram": [
+            {
+              "handle": "@pokrov_sales",
+              "source_id": "s1386"
+            }
+          ],
+          "vk": [],
+          "youtube": [],
+          "marketplace_listings": [],
+          "other": []
+        }
       },
       "why": [
         "2026-08-24 direct egrul.nalog.ru lookup by ОГРН (1245000068774): ИНН resolved as 5038189259, GD Цыганов Вадим Борисович, registered 13.06.2024. Closes the previously-open \"ИНН not yet pulled\" gap.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5038189259). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 4 candidates belong to distinct, differently-named legal entities that merely contain \"Покров\" as part of a longer name (АОЗТ «Покров» -- different legal form, agricultural chemicals, German co-patentee; ООО «Фарма-Покров»; ООО Инвестиционная Группа «Покров») -- none is this entity, ООО «Покров» (ИНН 5038189259)."
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 4 candidates belong to distinct, differently-named legal entities that merely contain \"Покров\" as part of a longer name (АОЗТ «Покров» -- different legal form, agricultural chemicals, German co-patentee; ООО «Фарма-Покров»; ООО Инвестиционная Группа «Покров») -- none is this entity, ООО «Покров» (ИНН 5038189259).",
+        "2026-08-25: user asked to scan pokrovsystem.ru directly. WebFetch summary matched the existing record exactly (same ОГРН, address, product line, contacts) -- re-confirmed via a direct curl archive (s1386) rather than trusting the WebFetch summary alone, since this entity's products[] entries had never carried a source_id before. Also fixed a stale cross-link: ooo-trimiks-bulat-3mx's related_entities still described this dealer as \"legal entity unresolved\" even though it had already been resolved as this standalone entity on 2026-08-24 -- linked slug + source_id there."
       ],
       "verified_against": "egrul.nalog.ru open API, 2026-08-24"
     },
