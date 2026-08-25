@@ -3408,13 +3408,20 @@
             "source_id": "s0779"
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "open_questions": [
+          {
+            "source_id": null,
+            "text": "Leader-ID org profile (org #2358296, https://leader-id.ru/organizations/2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) self-reports ИНН 7453059968 for \"АО «Стратим»\" — this is checksum-VALID but returns 0 results in egrul.nalog.ru's own open search (queried 2026-08-25, no legal entity found under this ИНН). Does NOT match this record's own EGRUL-verified ИНН (7720901379, s0459). The Leader-ID org record's ОГРН/юр.адрес/руководитель fields are also all explicitly \"Данных нет\" (empty, not just hidden) in the API response, and the org carries 5 stored aliases including \"ОКБ Стратим\" (×2, one with trailing space) alongside the plain \"Стратим\"/\"АО Стратим\" variants — suggesting the profile was edited/renamed at some point, possibly starting life as a differently-registered entity before becoming this one, or the ИНН field is simply a self-entry error/placeholder never corrected by the org owner (owner_id 6040137, Костюнин П.А., who created this Leader-ID org 2024-05-22). Not resolved: whether \"ОКБ Стратим\" / ИНН 7453059968 refers to a genuinely separate predecessor entity, or is just platform noise. Needs a primary-source check (ФНС name history) before treating as a real corporate-genealogy fact."
+          }
+        ]
       },
       "verified_against": null,
       "why": [
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1237700447324-20260823120407.pdf, pulled 23.08.2026). As an АО, shareholders unpublished (registrar АО «НРК Р.О.С.Т.», same registrar used by several other roster АО entities — possibly a shared corporate-services provider worth tracking). Primary ОКВЭД 30.30 aircraft manufacture, but secondary codes are unexpected: 01.61 crop-production services and 02.40 forestry services — plausibly agricultural-drone spraying/forestry-survey work, not necessarily a mismatch, but a distinct profile from the roster's usual military-adjacent codes; worth checking product line if this entity gets deeper research.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0779).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7720901379). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7720901379). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-25: recorded Leader-ID org #2358296's self-reported ИНН/alias data as an open question rather than a correction to the entity's own EGRUL-sourced fields (inn stays 7720901379) — the Leader-ID ИНН failed an independent egrul.nalog.ru open-search lookup (0 results, 2026-08-25), so it is flagged as unresolved/likely-unreliable self-entry, not adopted as fact."
       ]
     },
     "ao-tekhnodinamika": {
@@ -15787,12 +15794,14 @@
             "source_id": "s0074"
           }
         ],
-        "photo": "images/kostyunin-pavel-andreevich_portrait_leaderid.jpg"
+        "photo": "images/kostyunin-pavel-andreevich_portrait_leaderid.jpg",
+        "notes": "Contact per АО «Стратим» Leader-ID org profile (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25): phone +7 981 796-88-05 (stored as +89817968805), email pablo.88@mail.ru. Note the org record's own hide_phone/hide_email flags are both true, yet the API payload returns both fields anyway — a platform privacy-control bug, not an intentional public disclosure by the subject."
       },
       "why": [
         "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Генеральный директор\", Москва -- exact name/title match to ao-stratim's own already-sourced `director` field (Костюнин Павел Андреевич), resolving one of the three pre-existing `_candidate` role links on this person (АО «Стратим») via corroboration, though not upgraded to a sourced `source_id` on the role itself -- leader-id self-report alone isn't sufficient sourcing for that per this registry's standing discipline. The other two candidate roles (АО «Стратим-Тех», ООО «Стратим») remain unreviewed.",
         "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. АО «Стратим» -> ao-stratim, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0111). ООО «Стратим» -> ooo-stratim, confirmed Ликвидатор via egrul_batch_pull.py snapshot (s0074).",
-        "2026-08-25: photo pulled from leader-id.ru profile page https://leader-id.ru/users/6040137 (user_id 6040137, avatar field -> leader-id.storage.yandexcloud.net/upload/6040137/0255b3ed-e645-4f8c-8e7c-0479c67db6ea_360.jpg), the account already ID-matched above (see leader_id_matches). This is the SECOND leader_id_matches entry for this person (user_id 6040137, no employer/position populated by the search API), not the first (user_id 6188775, employer/position populated). The public profile page for 6040137 confirms the same person (АО «Стратим» Генеральный директор 2022-present) and adds stated interests (biotech, UAV, low-earth-orbit spacecraft) but no contact details or other social links -- profile has no public email/phone/social fields, and resume/education sections are marked hidden by the user."
+        "2026-08-25: photo pulled from leader-id.ru profile page https://leader-id.ru/users/6040137 (user_id 6040137, avatar field -> leader-id.storage.yandexcloud.net/upload/6040137/0255b3ed-e645-4f8c-8e7c-0479c67db6ea_360.jpg), the account already ID-matched above (see leader_id_matches). This is the SECOND leader_id_matches entry for this person (user_id 6040137, no employer/position populated by the search API), not the first (user_id 6188775, employer/position populated). The public profile page for 6040137 confirms the same person (АО «Стратим» Генеральный директор 2022-present) and adds stated interests (biotech, UAV, low-earth-orbit spacecraft) but no contact details or other social links -- profile has no public email/phone/social fields, and resume/education sections are marked hidden by the user.",
+        "2026-08-25: added phone/email from АО «Стратим» Leader-ID org page backend API — see ao-stratim's open_questions for the same capture's ИНН/alias discrepancy note."
       ]
     },
     "fominykh-aleksey-mikhaylovich": {
