@@ -6491,6 +6491,26 @@
     "_origin": "manifest"
   },
   {
+    "id": "s1392",
+    "type": "egrul_api",
+    "path": "data/sources/EGRULAPI_7720907532_20260825_ooo-invizhn-treyd-godrone-ozon-reseller.json",
+    "url": null,
+    "captured_date": "2026-08-25",
+    "fiscal_year": null,
+    "as_of": "2026-08-25",
+    "as_of_method": "egrul_api:pull-date",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "7720907532",
+      "9721203814"
+    ],
+    "entities": [],
+    "sha256": "64d288690ee2ddce9a1bde09a293523543d6753140a77a997a3609e366a5853f",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s0112",
     "type": "egrul_api",
     "path": "data/sources/EGRULAPI_7720925267_20260822_ooo-kopterlab.json",

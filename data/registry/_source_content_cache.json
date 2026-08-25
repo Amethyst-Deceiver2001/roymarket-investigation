@@ -11151,5 +11151,13 @@
     "as_of_method": null,
     "sha256": "07c8a8b88a7bcfbfd0aa55c039689d5afddec2305eacb0c7d20c670016f4cf17",
     "sample": "{\n \"captured_via\": \"user-provided browser HAR capture, 2026-08-25 (Ozon search for 'гоудрон' -- the entity's own legal name, not just the GoDrone brand)\",\n \"seller\": {\n \"url\": \"https://www.ozon.ru/seller/godrone-3980614/\",\n \"ozon_seller_id\": 3980614,\n \"display_name\": \"GoDrone\",\n \"brand_page\": \"https://www.ozon.ru/brand/gd-100937145/\",\n \"rating\": \"4.8\",\n \"reviews\": 3358,\n \"note\": \"A DIFFERENT, larg"
+  },
+  "EGRULAPI_7720907532_20260825_ooo-invizhn-treyd-godrone-ozon-reseller.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "64d288690ee2ddce9a1bde09a293523543d6753140a77a997a3609e366a5853f",
+    "sample": "{\n \"captured_via\": \"user-supplied text from the Ozon seller's own \\\"О магазине\\\" legal-info modal (seller_id 3980614, https://www.ozon.ru/seller/godrone-3980614/), 2026-08-25 -- the modal that two prior automated HAR captures failed to trigger with content\",\n \"ozon_legal_text_verbatim\": \"ООО \\\"ИНВИЖН ТРЕЙД\\\"\\n105118, Россия, г. Москва, ш. Энтузиастов, д. 34, помещ. 14/1\\n1237700616614\\nРежим работ"
   }
 }
