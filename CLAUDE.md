@@ -102,6 +102,36 @@ but the full-roster batch was handed to the user as an exact command — a
 systematic loop of 100+ automated calls is exactly the "real work at scale"
 case this policy exists for, even against an unauthenticated open API.
 
+**`scripts/tg_media_pull.py`** (added 2026-08-25, generalized from a manual
+pull done for СКБ «Пиранья»/`@piranhafpv`) pulls photo/video-still evidence
+out of posts a channel scrape already found, in two steps:
+
+- `candidates --channel <username> [--top N] [--min-score N]` — LOCAL scan
+  over `data/roymarket.db`, scoring each post by UAV/battlefield-language
+  density (reuses `id_patterns.uav_score` plus its own
+  `BATTLEFIELD_TERMS` list — уничтож/поражен/сбит/боевое применение/
+  благодарствен/etc). No network call, safe to run directly/repeatedly like
+  `mine_leads.py`.
+- `fetch --channel <username> --inn <ИНН> --msg-ids 300,355,384 [--out FILE]`
+  — for a human-picked msg_id list, fetches each post's public
+  `t.me/s/<channel>/<id>` preview (no auth), parses any photo/video-thumb
+  URLs out of the grouped-album HTML, downloads them to `data/sources/` as
+  `TGMEDIA_<ИНН>_<YYYYMMDD>_<channel>-post<id>-<n>.jpg`, and prints a JSON
+  scaffold (Russian text verbatim from the DB, English/context/`source_id`
+  left `TODO` for a human) ready to hand-paste into `corrections.json`'s
+  `battlefield_evidence[]`. Capped at 15 posts per invocation — these are
+  single-post lookups (same category as a one-off WebFetch, fine to run
+  directly per the policy above), not a scripted loop at scale; a bigger
+  batch should be split into multiple runs rather than raising the cap.
+  After `fetch`, still run `inventory_sources.py` → `extract_registry.py`
+  to get real `sNNNN` source ids for the new files (set `as_of` on the new
+  cache entries by hand — see the dated-history convention above), then fill
+  the scaffold's `TODO` fields before adding it to `corrections.json`.
+
+Does not do a live Telegram scrape itself — that's still `tg_scan.py`'s job,
+handed to the user per the policy above. This script only re-fetches public
+preview HTML for posts a scrape already found in the local DB.
+
 ## Primary-source documents: check `data/sources/` before re-downloading
 
 `data/sources/` (gitignored — local working copy, ~424MB) holds the EGRUL
