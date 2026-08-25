@@ -8,6 +8,26 @@ Confirmed working 2026-08-24 (OPENSANCTIONS_API_KEY in .env, tested inline
 against Osadchuk — returned an exact, high-confidence match reproducing this
 project's own already-cited DOB/sourceUrl data).
 
+**Quota (2026-08-25): the key is a non-commercial `journalist` grant, 150
+requests/month, no expiration.** Each /match/default call below — one batch
+of up to 20 records — counts as ONE request against that cap regardless of
+batch size, so batching large is what makes the quota workable at all
+(a full 149-entity + ~300-person sweep is ~23 requests at BATCH=20, not
+450). Still, this script now refuses to run past `--budget` (default 100,
+leaving headroom for the month's other usage) without `--force-budget` —
+see `estimate_requests()` below. Don't raise BATCH past 20 without checking
+OpenSanctions' own current limit for /match/default.
+
+**Licensing (CC BY-NC, per OpenSanctions' 2026-08-25 reply):** quoting a
+match in the published brief with attribution is fine under this key;
+republishing the dataset itself, or a file derived from it, as a public
+download or in a repository requires a commercial license. The archived
+snapshots below land in `data/sources/`, which is gitignored — never commit
+one directly, and don't fold raw OpenSanctions response bodies into any file
+that IS committed (docs/index.html, data/registry/*.json already only ever
+carry the hand-curated `matches[]` summary — caption/score/topics/source
+URL — not the full response object; keep it that way).
+
 **Live network job against a third-party API — per CLAUDE.md's crawling-jobs
 policy, tested inline on a handful of records first (ordinary
 reconnaissance), but the full-roster sweep should be run by you, not
@@ -41,6 +61,8 @@ Usage:
     python3 scripts/screen_opensanctions.py --kind people      # people only (default: both)
     python3 scripts/screen_opensanctions.py --kind entities
     python3 scripts/screen_opensanctions.py --force            # re-screen even if already done today
+    python3 scripts/screen_opensanctions.py --budget 30         # cap this run's spend below the default 100
+    python3 scripts/screen_opensanctions.py --force-budget      # run past --budget anyway (explicit override)
 """
 from __future__ import annotations
 
@@ -65,6 +87,8 @@ ENV_FILE = REPO / ".env"
 API_URL = "https://api.opensanctions.org/match/default?algorithm=best"
 MATCH_THRESHOLD_ARCHIVE = 0.7  # OpenSanctions' own "likely match" cutoff
 DELAY_SECONDS = 0.5  # batch endpoint is generous, but still a shared service
+BATCH = 20  # one /match/default call, however many records it holds, is 1 request against the monthly quota
+DEFAULT_BUDGET = 100  # requests this run may spend; the key's monthly cap is 150 total
 
 
 def load_api_key() -> str:
@@ -124,31 +148,49 @@ def build_person_query(p: dict) -> dict:
     return {"schema": "Person", "properties": props}
 
 
-def process(records: list, kind: str, api_key: str, today: str, force: bool) -> int:
-    field_screened = "opensanctions_screened_at"
-    field_matches = "opensanctions_matches"
-
+def pending_targets(records: list, kind: str, today: str, force: bool) -> list:
     targets = []
     for r in records:
+        field_screened = "opensanctions_screened_at"
         if not force and r.get(field_screened) == today:
             continue
         q = build_entity_query(r) if kind == "entities" else build_person_query(r)
         if q is None:
             continue
         targets.append((r, q))
+    return targets
+
+
+def requests_needed(n_targets: int) -> int:
+    return (n_targets + BATCH - 1) // BATCH if n_targets else 0
+
+
+def process(records: list, kind: str, api_key: str, today: str, force: bool) -> int:
+    field_screened = "opensanctions_screened_at"
+    field_matches = "opensanctions_matches"
+
+    targets = pending_targets(records, kind, today, force)
 
     if not targets:
         print(f"  [{kind}] nothing to do (all already screened today, use --force to re-screen)")
         return 0
 
-    print(f"  [{kind}] screening {len(targets)} record(s) ...")
+    print(f"  [{kind}] screening {len(targets)} record(s) in {requests_needed(len(targets))} request(s) ...")
     hit_count = 0
-    BATCH = 20
     for start in range(0, len(targets), BATCH):
         chunk = targets[start:start + BATCH]
         queries = {f"q{i}": q for i, (_, q) in enumerate(chunk)}
         try:
             resp = match_batch(api_key, queries)
+        except urllib.error.HTTPError as ex:
+            if ex.code == 429:
+                body = ex.read().decode("utf-8", errors="replace")
+                sys.exit(f"    batch {start}-{start+len(chunk)}: HTTP 429 — {body}\n"
+                         f"    This is the monthly quota, not a burst limit — retrying won't help until "
+                         f"it resets. Stopping (already-screened records from earlier batches were saved).")
+            print(f"    batch {start}-{start+len(chunk)} FAILED: HTTP {ex.code}: {ex.reason}")
+            time.sleep(DELAY_SECONDS)
+            continue
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as ex:
             print(f"    batch {start}-{start+len(chunk)} FAILED: {ex}")
             time.sleep(DELAY_SECONDS)
@@ -196,23 +238,41 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--kind", choices=["entities", "people", "both"], default="both")
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--budget", type=int, default=DEFAULT_BUDGET,
+                     help=f"max /match/default requests this run may spend (default {DEFAULT_BUDGET}; "
+                          "the key's monthly cap is 150 total, shared with any other use of it)")
+    ap.add_argument("--force-budget", action="store_true",
+                     help="run even if the estimated request count exceeds --budget")
     args = ap.parse_args()
 
     api_key = load_api_key()
     today = date.today().isoformat()
 
+    entities = json.loads(ENTITIES.read_text(encoding="utf-8")) if args.kind in ("entities", "both") else []
+    people = json.loads(PEOPLE.read_text(encoding="utf-8")) if args.kind in ("people", "both") else []
+
+    entity_targets = (entities if args.limit is None else entities[:args.limit]) if entities else []
+    people_targets = (people if args.limit is None else people[:args.limit]) if people else []
+
+    n_entity_req = requests_needed(len(pending_targets(entity_targets, "entities", today, args.force))) if entity_targets else 0
+    n_people_req = requests_needed(len(pending_targets(people_targets, "people", today, args.force))) if people_targets else 0
+    estimated = n_entity_req + n_people_req
+
+    print(f"Estimated requests this run: {estimated} (entities {n_entity_req} + people {n_people_req}), "
+          f"budget {args.budget}, monthly cap 150.")
+    if estimated > args.budget and not args.force_budget:
+        sys.exit(f"Refusing to run: estimated {estimated} requests exceeds --budget {args.budget}. "
+                  f"Re-run with a higher --budget or --force-budget if this is intentional, "
+                  f"or narrow scope with --limit/--kind.")
+
     total_hits = 0
 
-    if args.kind in ("entities", "both"):
-        entities = json.loads(ENTITIES.read_text(encoding="utf-8"))
-        targets = entities if args.limit is None else entities[:args.limit]
-        total_hits += process(targets, "entities", api_key, today, args.force)
+    if entity_targets:
+        total_hits += process(entity_targets, "entities", api_key, today, args.force)
         ENTITIES.write_text(json.dumps(entities, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    if args.kind in ("people", "both"):
-        people = json.loads(PEOPLE.read_text(encoding="utf-8"))
-        targets = people if args.limit is None else people[:args.limit]
-        total_hits += process(targets, "people", api_key, today, args.force)
+    if people_targets:
+        total_hits += process(people_targets, "people", api_key, today, args.force)
         PEOPLE.write_text(json.dumps(people, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print(f"\nDone. {total_hits} record(s) with a likely match (score >= {MATCH_THRESHOLD_ARCHIVE}) archived to data/sources/.")
