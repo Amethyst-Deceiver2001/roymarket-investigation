@@ -137,29 +137,55 @@ manual pull that confirmed ИП Цыганов's ₽28.176m «Булат»/«П�
 contracts) searches zakupki.gov.ru's contract registry for every ИНН already
 in `entities.json`/`people.json`, using the `supplierTitle` param
 reverse-engineered from a user-supplied DevTools HAR capture — see the
-seeded memory `zakupki_gov_ru_contract_search_api`. Two steps, same shape as
-`tg_media_pull.py`:
+seeded memory `zakupki_gov_ru_contract_search_api`. Three steps:
 
 - `scan [--limit N] [--inn X] [--kind entity|person] [--force]` — one search
-  per ИНН (186 as of 2026-08-25: 146 entity + 40 personal). A hit count above
-  200 is treated as a broken filter (the `customerInn`/`supplierInn` trap
-  documented in the memory file silently returns the whole ~42M-record
-  registry), not a finding, and isn't saved. Zero-hit ИНН are logged to
-  `data/registry/_zakupki_scan_log.json` (bookkeeping, not `data/sources/`)
-  so a re-run skips them by default; any real hit gets its raw search page
-  archived as `data/sources/ZAKUPKI_<ИНН>_<YYYYMMDD>_supplier-search.html`
-  and printed with its `regNumber`(s).
-- `fetch-contracts --inn X` (reads that ИНН's cached scan hits) or
-  `--reg-numbers A,B,C` — pulls each contract's full `common-info.html`
-  card live, archived as `data/sources/ZAKUPKI_contract_<regNumber>_
-  <YYYYMMDD>.html`. Capped at 50 regNumbers per invocation.
+  per ИНН (186 as of 2026-08-25: 146 entity + 40 personal), paginated
+  (50/page) until every `regNumber` the hit count promises is collected —
+  the first version only ever fetched page 1 (silently truncating a
+  160-contract ИНН to ~10) and extracted reg numbers with a blanket
+  `№ \d+` regex that also matched unrelated ИКЗ/plan-position codes on the
+  page; fixed to read only each result card's own `common-info.html` link.
+  A hit count above 5000 is treated as a broken filter (the
+  `customerInn`/`supplierInn` trap documented in the memory file silently
+  returns the whole ~42M-record registry), not a finding — large state
+  defense primes legitimately run into the hundreds (confirmed against a
+  real 160-contract ИНН), so the ceiling sits well above that. Zero-hit
+  ИНН are logged to `data/registry/_zakupki_scan_log.json` (bookkeeping,
+  not `data/sources/`) so a re-run skips them by default; any real hit
+  gets its raw search page archived as `data/sources/ZAKUPKI_<ИНН>_
+  <YYYYMMDD>_supplier-search.html` and printed with its `regNumber`(s).
+- `fetch-contracts --inn X` / `--reg-numbers A,B,C` / `--all-hits` — pulls
+  each contract's full `common-info.html` card live, archived as
+  `data/sources/ZAKUPKI_contract_<regNumber>_<YYYYMMDD>.html`. Capped at
+  50 regNumbers per invocation; skips a regNumber already archived.
+- `fetch-documents` (same `--inn`/`--reg-numbers`/`--all-hits` selectors,
+  plus `--max-contracts` to raise the default-50 cap) — the actual "incl.
+  docs" pull: reuses the contract card (or fetches it), extracts
+  `contractInfoId`, hits the card's "Вложения" tab, and downloads every
+  attachment — the signed contract PDF, payment orders, delivery acts,
+  sole-supplier justification — from zakupki's filestore
+  (`44fz/filestore/public/1.0/download/rgk2/file.html?uid=...`), named
+  `data/sources/ZAKUPKI_ATTACH_<ИНН-or-regNumber>_<regNumber>_<label-slug>_
+  <uid8>.<ext>` with the real extension read off each response's
+  `Content-Disposition` header (`resp.headers`, not a `dict()`-ified copy —
+  the server sends lowercase `Content-disposition`, and a plain `dict()`
+  lookup on the capitalized name silently misses it and everything falls
+  back to `.bin`; caught on the first test run, see the script's own
+  comment). Confirmed end-to-end against the two known Цыганов contracts:
+  17 attachments, 42.1MB, correct pdf/xml/html/rar/docx/zip extensions.
 
-Both steps are live network jobs at scale — handed to the user, not run
-directly or in background, per the policy above (tested inline on a handful
-of ИНН first, same as `egrul_batch_pull.py`'s precedent). A hit is a lead,
-not yet a citable fact — hand-verify each contract card and wire confirmed
-ones into `government_contracts[]` via `corrections.json`, the same way the
-Цыганов contracts were added, before treating it as established.
+All three steps are live network jobs at scale — handed to the user, not
+run directly or in background, per the policy above (tested inline on a
+handful of ИНН/contracts first, same as `egrul_batch_pull.py`'s
+precedent). A hit is a lead, not yet a citable fact — hand-verify each
+contract card (and its attachments, once pulled) and wire confirmed ones
+into `government_contracts[]` via `corrections.json`, the same way the
+Цыганов contracts were added, before treating it as established. Many
+hits will belong to large, already-well-documented state defense primes
+(Ростех, НИИ «Вектор», Технодинамика, ...) whose zakupki footprint is
+enormous by nature — triage for what's actually new to this investigation
+before spending a `fetch-documents` pass on it.
 
 ## Primary-source documents: check `data/sources/` before re-downloading
 
