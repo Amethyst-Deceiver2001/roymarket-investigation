@@ -21565,7 +21565,8 @@
       ],
       "leader_id_screened_at": "2026-08-25",
       "why": [
-        "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only."
+        "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only.",
+        "2026-08-25: leader-id.ru public profile page (https://leader-id.ru/users/487737) read directly (no auth) for headshot/contact/social -- employer/position, resume, education, and activity are all explicitly hidden by the user (\"Пользователь скрыл информацию\"); avatar is the platform's generic placeholder, not a real photo; no contact fields or social links displayed. Nothing to add beyond the org-staff-listing entry already sourced."
       ]
     },
     {
@@ -21580,13 +21581,19 @@
         {
           "entity_slug": "ao-stratim",
           "entity_name": "АО «Стратим»",
-          "title": "Сотрудник (Leader-ID org staff listing, role/title not specified)",
+          "title": "Руководитель отдела (Department Head)",
           "from": null,
           "to": null,
           "source_id": null
         }
       ],
-      "social": [],
+      "social": [
+        {
+          "platform": "VK",
+          "url": "https://vk.com/id146777736",
+          "source_id": null
+        }
+      ],
       "notes": null,
       "_verified": false,
       "leader_id_matches": [
@@ -21605,8 +21612,10 @@
       ],
       "leader_id_screened_at": "2026-08-25",
       "why": [
-        "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only."
-      ]
+        "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only.",
+        "2026-08-25: leader-id.ru public profile page (https://leader-id.ru/users/4696253) read directly (no auth) for headshot/contact/social -- profile publicly gives position \"Department Head\" at АО «Стратим», a photo (saved to docs/images/), and a linked VK profile (vk.com/id146777736, not yet independently opened/read). Stated interests: AI/ML, UAV architecture, onboard equipment, data-transmission systems. No email/phone displayed. Education/resume not shared."
+      ],
+      "photo": "images/tsarkov-daniil-dmitrievich_portrait_leaderid.jpg"
     },
     {
       "slug": "shtrek-igor-aleksandrovich",
@@ -21620,14 +21629,14 @@
         {
           "entity_slug": "ao-stratim",
           "entity_name": "АО «Стратим»",
-          "title": "Сотрудник (Leader-ID org staff listing, role/title not specified)",
+          "title": "Инженер (Engineer), с 2021",
           "from": null,
           "to": null,
           "source_id": null
         }
       ],
       "social": [],
-      "notes": null,
+      "notes": "Per own leader-id.ru profile: education КВЛУ ГА (Хабаровское высшее военное авиационное училище гражданской авиации), specialty штурман (navigation engineer), 1984-1988, full-time study on a government scholarship -- implies birth year roughly mid-1960s, not an exact DOB, not entered into `dob`. Employed at АО «Стратим» as an Engineer since 2021.",
       "_verified": false,
       "leader_id_matches": [
         {
@@ -21645,7 +21654,8 @@
       ],
       "leader_id_screened_at": "2026-08-25",
       "why": [
-        "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only."
+        "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only.",
+        "2026-08-25: leader-id.ru public profile page (https://leader-id.ru/users/6123622) read directly (no auth) for headshot/contact/social -- profile gives position \"Engineer\" at АО «Стратим» since 2021 and an education history entry (see notes); avatar is a generic placeholder, not a real photo; no contact fields or social links displayed."
       ]
     },
     {
@@ -21660,7 +21670,7 @@
         {
           "entity_slug": "ao-stratim",
           "entity_name": "АО «Стратим»",
-          "title": "Сотрудник (Leader-ID org staff listing, role/title not specified)",
+          "title": "CV-инженер (computer-vision engineer)",
           "from": null,
           "to": null,
           "source_id": null
@@ -21685,7 +21695,8 @@
       ],
       "leader_id_screened_at": "2026-08-25",
       "why": [
-        "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only."
+        "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only.",
+        "2026-08-25: leader-id.ru public profile page (https://leader-id.ru/users/6169979) read directly (no auth) for headshot/contact/social -- profile gives position \"CV-engineer\" at АО «Стратим»; avatar is a generic placeholder, not a real photo; no contact fields, social links, city, or education/resume displayed -- user has hidden that information."
       ]
     }
   ]
