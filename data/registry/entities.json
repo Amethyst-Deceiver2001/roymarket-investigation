@@ -218,7 +218,12 @@
     "patents": [],
     "foreign_components": [],
     "web": {
-      "sites": [],
+      "sites": [
+        {
+          "url": "https://cbst.ru/",
+          "note": "Confirmed via convergent third-party business registries (Kontur.Focus, RBC Companies) all citing ИНН 9702064851/ОГРН 1247700190430/GD Яныкина Нина Олеговна against this domain; cbst.ru's own /about page doesn't self-state ИНН (checked directly), so this rests on registry-aggregator corroboration rather than the site's own text."
+        }
+      ],
       "telegram": [],
       "vk": [],
       "youtube": [],
@@ -249,7 +254,8 @@
       "2026-08-24: OpenSanctions screening surfaced a sanctions-adjacent lead requiring careful disambiguation — see open_questions and the new ooo-tsentr-bespilotnykh-sistem-tula record.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0574).",
       "Found via GUR's components catalogue while pulling the confirmed npts-ushkuynik (Knyaz Vandal Novgorodsky) hit — both \"Delta (CBTS.611000)\" entries appeared adjacent in the same weapon-item filter list. Pulled in full to check the CBTS naming coincidence properly rather than leave it as a guess; found nothing attributing it to this or any other registry entity, so recorded as an explicit open question, not a fact.",
-      "CORRECTION 2026-08-24: user flagged that CBTS is not a valid transliteration of ЦБСТ (Ц transliterates as Ts, not C). Withdrew the implied ЦБСТ connection from the open_question wording above — the CBTS.611000 component set remains on file as a pulled-and-read but unattributed record, not a lead pointing at ЦБСТ."
+      "CORRECTION 2026-08-24: user flagged that CBTS is not a valid transliteration of ЦБСТ (Ц transliterates as Ts, not C). Withdrew the implied ЦБСТ connection from the open_question wording above — the CBTS.611000 component set remains on file as a pulled-and-read but unattributed record, not a lead pointing at ЦБСТ.",
+      "web.sites was entirely empty for the investigation's own namesake org. Web search 2026-08-25."
     ],
     "_verified_against": "war-sanctions.gur.gov.ua/en/components (weapon items witem-4835, witem-4800), archived as s0970/s0971",
     "related_entities": [
@@ -2748,7 +2754,12 @@
     "patents": [],
     "foreign_components": [],
     "web": {
-      "sites": [],
+      "sites": [
+        {
+          "url": "https://www.psbank.ru/",
+          "note": "Bank's own domain, confirmed via psbank.ru/bank and psbank.ru/llm-info self-description pages; matches 2025 rename from Промсвязьбанк to «Банк ПСБ»."
+        }
+      ],
       "telegram": [],
       "vk": [],
       "youtube": [],
@@ -2786,7 +2797,8 @@
       "Correction 2026-08-22: an earlier version of this correction block accidentally dropped the tier/tier_basis fields set by a prior correction when it was replaced wholesale instead of merged — restored here. Same session, caught immediately by re-checking the regenerated entities.json against what was expected.",
       "Full signed ЕГРЮЛ extract read end-to-end (ul-1027739019142-20260823014925.pdf, 94pp, pulled 23.08.2026 — the longest document read this session). Bank dates to registration with the Central Bank of Russia on 16.07.2001, pre-dating its current 'Банк ПСБ' name (name change record ГРН 2257600659150, 01.04.2025). CONFIRMS: 100% owned by the RUSSIAN FEDERATION itself, acting through Росимущество (Федеральное агентство по управлению государственным имуществом, ИНН 7710723134) as единственный акционер since 04.06.2021 — direct sovereign ownership, unredacted. Chairman Фрадков Пётр Михайлович (personal ИНН 770200967631) since 19.09.2018 — publicly known figure, already head of Промсвязьбанк/PSB group. Charter capital ₽427,076,526,755.75 — ₽427 BILLION, several orders of magnitude above every other entity in this registry, consistent with PSB's role as the designated defence-sector settlement bank. Registered address moved to Yaroslavl (ГРН matching the current Республиканская address); registrar АО «РДЦ Паритет».",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0792).",
-      "2026-08-24 Rospatent full-roster trademark sweep (own ИНН, s0945): 187 trademark records reviewed (retail-banking/consumer brand portfolio — e.g. «Авиапрофлизинг», an aviation-leasing subsidiary brand, not drone/defense-related). Not individually catalogued — none bear on this investigation beyond the bank's already-documented sanctions status."
+      "2026-08-24 Rospatent full-roster trademark sweep (own ИНН, s0945): 187 trademark records reviewed (retail-banking/consumer brand portfolio — e.g. «Авиапрофлизинг», an aviation-leasing subsidiary brand, not drone/defense-related). Not individually catalogued — none bear on this investigation beyond the bank's already-documented sanctions status.",
+      "web.sites was empty despite being a major public bank. Web search 2026-08-25."
     ],
     "_verified_against": "egrul.nalog.ru open-API lookup, 22.08.2026 (one-off, ordinary reconnaissance) + cross-confirmed via s0231",
     "opensanctions_matches": [
@@ -6227,7 +6239,12 @@
     "patents": [],
     "foreign_components": [],
     "web": {
-      "sites": [],
+      "sites": [
+        {
+          "url": "https://copterlab.ru/",
+          "note": "From rk.2035.university's БАС-industry company directory (ИНН-confirmed match), s1165."
+        }
+      ],
       "telegram": [],
       "vk": [],
       "youtube": [],
@@ -6250,7 +6267,8 @@
     ],
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1247700198734-20260823122742.pdf). Sole founder = sole director, registered 2024 — one of the youngest entities in this batch.",
-      "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7720925267). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+      "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7720925267). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+      "web.sites was empty; rk2035_matches (already screened, ИНН-confirmed) had the site all along, just never promoted."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -6903,6 +6921,10 @@
       {
         "question": "rk.2035.university lists 4 product models (БВС Сибиряк, Сибиряк мини, Сибирь-1, Сибирь-2) under manufacturer «ГК \"Гаскар Групп\"» (s1169) -- a group/trading name distinct from any of this registry's three separately-registered Гаскар entities (ooo-gaskar, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii). Not attributed to any one of the three pending a direct check of which entity actually holds this product line.",
         "source_id": "s1169"
+      },
+      {
+        "question": "products[] lists a single bare entry \"СИБНК\" -- this looks like it may actually be an abbreviation of the 100%-owning founder, ООО «Сибирская навигационная компания», mis-recorded as a product name rather than an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats \"ООО «СИБНК»\" as its own distinct entity name, adding to the confusion. Web search for \"СИБНК\" as a Wildberries product (2026-08-25, to fill the marketplace_listings gap given wb_overlap=confirmed) found nothing -- consistent with this not being a real searchable product name. Needs a human to resolve what wb_overlap=confirmed was actually based on and correct products[] accordingly; marketplace_listings left empty rather than guessed.",
+        "source_id": null
       }
     ],
     "sources": [],
@@ -6923,7 +6945,8 @@
       "cbst_tie UPGRADED 23.08.2026 with a direct primary citation found by querying this project's own scraped @ANO_CBST Telegram archive (data/roymarket.db, channel_id 2159491523) — not a data/sources/ document, so no s#### id; channel/post-id/date is the citation, per this project's existing convention for TG-sourced claims.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0809).",
       "2026-08-24 wb_overlap check: direct ИНН match against wb_watch.db's own sellers table (this project's sister investigation, its own separate scrape of the Wildberries marketplace) — same ИНН as 8 WB-listed item(s), 8/8 of them military-flagged by wb_watch's own classifier. Seller «ООО \"ГАСКАР\"», WB supplier_id 250148061, trademark «ГАСКАР» — FPV components (GPS/compass modules, FPV cameras, motors, power connectors).",
-      "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, the one candidate with a real patentee (RU191888U1) belongs to the separate, already-correctly-attributed ooo-gaskar-integratsiya, not this entity; the other 20 have no usable patentee data."
+      "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, the one candidate with a real patentee (RU191888U1) belongs to the separate, already-correctly-attributed ooo-gaskar-integratsiya, not this entity; the other 20 have no usable patentee data.",
+      "Web search 2026-08-25 for a Wildberries listing (to fill the marketplace_listings gap on a wb_overlap=confirmed record) surfaced a likely product/entity-name conflation instead of a URL."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -10202,7 +10225,12 @@
     ],
     "foreign_components": [],
     "web": {
-      "sites": [],
+      "sites": [
+        {
+          "url": "https://www.arkodimpro.ru/",
+          "note": "From rk.2035.university's БАС-industry company directory (ИНН-confirmed match), s1165."
+        }
+      ],
       "telegram": [],
       "vk": [],
       "youtube": [],
@@ -10229,7 +10257,8 @@
       "full EGRUL extract pulled directly 23.08.2026 (ul-1101690020959-20260823131713.pdf). Sole founder = sole director since 2010 — a genuinely long-running robotics manufacturer, not a recently-spun-up shell like most of this batch. Registered address field did not extract cleanly from this PDF (same layout quirk as several others this session) — left null rather than guessed.",
       "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no direct site for this ИНН; press profile of founder Барахтин А.В. names ООО «Аркодим» (matches this entity's registration year, 2010) as the company behind the «Братишка» evacuation UGV -- real lead, press-sourced only, flagged accordingly.",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (1659101884). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-      "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here."
+      "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
+      "web.sites was empty; rk2035_matches (already screened, ИНН-confirmed) had the site all along, just never promoted."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -12242,7 +12271,20 @@
       "telegram": [],
       "vk": [],
       "youtube": [],
-      "marketplace_listings": [],
+      "marketplace_listings": [
+        {
+          "url": "https://www.wildberries.ru/catalog/241450767/detail.aspx",
+          "note": "«Булат» v.3 portable drone detector, confirmed live listing 2026-08-25."
+        },
+        {
+          "url": "https://www.wildberries.ru/catalog/418185835/detail.aspx",
+          "note": "«Булат» v.4 portable drone detector, confirmed live listing 2026-08-25."
+        },
+        {
+          "url": "https://www.wildberries.ru/brands/311445014-3mx/detektory-dronov",
+          "note": "Brand storefront page listing the full 3mx/Булат detector line on Wildberries."
+        }
+      ],
       "other": []
     },
     "images": [],
@@ -12281,7 +12323,8 @@
       "2026-08-24 wb_overlap supplementary check (items.brand field, not just sellers.trademark): FOUR separate ИП (individual entrepreneur) seller accounts on WB list items under brand «БУЛАТ» — none sharing this entity's own ИНН (checked each against egrul.nalog.ru), so these are resellers, not the manufacturer's own storefront. All 10 of their combined listed items are military-flagged by wb_watch's own classifier. Widens, rather than changes, the already-confirmed overlap: the «Булат» brand reaches WB through a reseller network, not only this entity's direct presence.",
       "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
       "2026-08-24: individually pulled RU1125967's FIPS application (RUTMAP) and registration (RUTM) records plus the wordmark image (data/sources/TRADEMARK_RU1125967_20251219_ooo-trimiks*), confirming wordmark text \"3mx\" and adding goods-class detail the earlier bulk-CSV sweep (s0433) couldn't carry. Also surfaced an address discrepancy worth a future address_history entry -- the Dec 2023 filing's correspondence address doesn't match the entity's current EGRUL address.",
-      "2026-08-25 REGRESSION FIX: `wb_overlap` had been sitting at `none_found` since the 2026-08-24 automated sweep above (line 'no seller ... carries this entity's own ИНН') -- an ИНН-keyed check correctly found nothing under this entity's OWN ИНН, but a bulk write then turned that absence into a flat `none_found` conclusion, silently overwriting this record's own earlier hand-verified `confirmed` finding and directly contradicting docs/index.html's own prose (\"this brief's first confirmed overlap between the РОЙ.МАРКЕТ/ЦБСТ network and Wildberries itself\" -- 64 active listings, 63 classified strict_military, sold across at least eight distinct seller accounts including two branded \"официальный дилер 3mx\"). The very next why-note above (the four-ИП items.brand check) already documents the correct read -- reseller-mediated, not absent -- it just never got reflected in the `set` value two lines above it. Corrected `wb_overlap` from `none_found` to `confirmed_reseller`: the «Булат» brand reaches Wildberries through reseller/ИП storefronts, not this manufacturer's own ИНН, which is exactly why the ИНН-keyed sweep found nothing -- absence of the maker's own ИНН is not evidence of absence from the marketplace. No new evidence gathered this pass; this is a correction of a prior mis-set field against evidence already on file in this same record."
+      "2026-08-25 REGRESSION FIX: `wb_overlap` had been sitting at `none_found` since the 2026-08-24 automated sweep above (line 'no seller ... carries this entity's own ИНН') -- an ИНН-keyed check correctly found nothing under this entity's OWN ИНН, but a bulk write then turned that absence into a flat `none_found` conclusion, silently overwriting this record's own earlier hand-verified `confirmed` finding and directly contradicting docs/index.html's own prose (\"this brief's first confirmed overlap between the РОЙ.МАРКЕТ/ЦБСТ network and Wildberries itself\" -- 64 active listings, 63 classified strict_military, sold across at least eight distinct seller accounts including two branded \"официальный дилер 3mx\"). The very next why-note above (the four-ИП items.brand check) already documents the correct read -- reseller-mediated, not absent -- it just never got reflected in the `set` value two lines above it. Corrected `wb_overlap` from `none_found` to `confirmed_reseller`: the «Булат» brand reaches Wildberries through reseller/ИП storefronts, not this manufacturer's own ИНН, which is exactly why the ИНН-keyed sweep found nothing -- absence of the maker's own ИНН is not evidence of absence from the marketplace. No new evidence gathered this pass; this is a correction of a prior mis-set field against evidence already on file in this same record.",
+      "wb_overlap was already 'confirmed_reseller' but web.marketplace_listings was empty -- no actual URL had been recorded. Web search 2026-08-25 found the live listings directly."
     ],
     "_verified_against": "s0225 — ООО «Тримикс»'s own full signed ЕГРЮЛ extract, pulled 18.08.2026",
     "related_entities": [
@@ -15777,12 +15820,22 @@
     "patents": [],
     "foreign_components": [],
     "web": {
-      "sites": [],
+      "sites": [
+        {
+          "url": "https://godrone.ru/",
+          "note": "GoDrone -- confirmed via exact director-name match (Козлов Дмитрий Сергеевич) and product match (site describes СТМ детектор дронов «НАБАТ», entity's own products[] lists «Набат v3»)."
+        }
+      ],
       "telegram": [],
       "vk": [],
       "youtube": [],
       "marketplace_listings": [],
-      "other": []
+      "other": [
+        {
+          "url": "https://partner.gdrone.ru/",
+          "note": "Wholesale/partner portal for the same GoDrone product line."
+        }
+      ]
     },
     "images": [],
     "open_questions": [],
@@ -15803,7 +15856,8 @@
       "Fixed a real scaffold mis-attribution: «Яким» (ЦБСТ's own air-threat-monitoring system, actually made by КБ «Синергия» — see ooo-konstruktorskoe-byuro-sinergiya) had been auto-parsed into THIS entity's products[] list from prose that was actually quoting Гоудрон COMMENTING ON «Яким», not making it. Removed «Яким» from products, added the underlying quote as this entity's own cbst_tie instead — the quote is real evidence, just of a different fact (a ЦБСТ working relationship) than what it had been filed under.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0814).",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9721203814). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-      "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 15 candidates -- mix of empty-patentee filings and clearly unrelated holders (Samsung Electronics, a university LETI, a Ural metals plant, an animal hospice)."
+      "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 15 candidates -- mix of empty-patentee filings and clearly unrelated holders (Samsung Electronics, a university LETI, a Ural metals plant, an animal hospice).",
+      "web.sites was empty. Web search 2026-08-25, confirmed via director name and product name match, not just company-name similarity."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -30906,7 +30960,12 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "question": "wb_overlap is 'confirmed' but web.marketplace_listings is empty and a direct Wildberries search for the H231b product (2026-08-25) found no live listing under the aSel Labs / asellabs name -- worth re-checking what the original 'confirmed' status was based on. Separately found asellabs.ru, which self-identifies as an \"официальный оптово-розничный дистрибьютор\" (official wholesale-retail distributor) of aSel Labs products since 2023, offices in SPb/Moscow -- NOT the manufacturer itself (that's asellabs.com, already on file), so not added to web.sites; may be where the WB/marketplace presence actually lives if one exists, under the distributor's own listing rather than the manufacturer's.",
+        "source_id": null
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": true,
@@ -30917,7 +30976,8 @@
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1257700126958-20260823135721.pdf). Sole founder = sole director.",
       "Full product catalog extracted from https://asellabs.com/ (23.08.2026, site sweep).",
-      "2026-08-24 wb_overlap check: direct ИНН match against wb_watch.db's own sellers table (this project's sister investigation, its own separate scrape of the Wildberries marketplace) — same ИНН as 5 WB-listed item(s), 5/5 of them military-flagged by wb_watch's own classifier. Seller «ООО \"АСЕЛ ЛАБС\"», WB supplier_id 250130605, trademark «ASEL LABS - Производитель» — drone detectors (aSel Labs H231b/H233), sold directly under the manufacturer's own name."
+      "2026-08-24 wb_overlap check: direct ИНН match against wb_watch.db's own sellers table (this project's sister investigation, its own separate scrape of the Wildberries marketplace) — same ИНН as 5 WB-listed item(s), 5/5 of them military-flagged by wb_watch's own classifier. Seller «ООО \"АСЕЛ ЛАБС\"», WB supplier_id 250130605, trademark «ASEL LABS - Производитель» — drone detectors (aSel Labs H231b/H233), sold directly under the manufacturer's own name.",
+      "Web search 2026-08-25 to fill the marketplace_listings gap found a distributor site instead of a direct WB listing; flagged rather than guessed at."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -32517,7 +32577,12 @@
     "foreign_components": [],
     "web": {
       "sites": [],
-      "telegram": [],
+      "telegram": [
+        {
+          "url": "https://t.me/UAS_development",
+          "note": "Channel title \"НПЦ БАСиРТК\", description \"Канал Научно-производственного центра беспилотных авиационных систем и робототехнических комплексов (Москва - Санкт-Петербург)\" -- matches entity's full name exactly. Caveat: description states Moscow-SPb, entity's registered address is Ковров (Владимирская обл.) -- common for a young R&D entity to operate from a different city than its legal registration, but not independently confirmed as the same legal entity beyond the name match. Contact listed as @azflight."
+        }
+      ],
       "vk": [],
       "youtube": [],
       "marketplace_listings": [],
@@ -32542,7 +32607,8 @@
       "Both prior open_questions on this record are now resolved. Promoted",
       "to _verified: true.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
-      "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data."
+      "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
+      "web fields entirely empty. Web search 2026-08-25 found a plausible Telegram channel; flagged with a location caveat rather than treated as fully confirmed."
     ],
     "_verified_against": "s0009 — this entity's own full signed ЕГРЮЛ extract, pulled 17.08.2026",
     "opensanctions_matches": [
@@ -36515,11 +36581,11 @@
     "images": [],
     "open_questions": [
       {
-        "question": "Rospatent trademark №1074859 (filed 2024-03-27) names the right-holder as \"ООО «Конструкторское бюро «Центр беспилотных систем»»\" — a fuller name than the OFAC SDN listing or EGRUL both use. Resolve before publishing: former name, filing-form quirk, or a related-but-distinct entity?",
+        "question": "Rospatent trademark №1074859 (filed 2024-03-27) names the right-holder as \"ООО «Конструкторское бюро «Центр беспилотных систем»»\" -- a fuller name than the OFAC SDN listing or EGRUL both use. Resolve before publishing: former name, filing-form quirk, or a related-but-distinct entity?",
         "source_id": "s0945"
       },
       {
-        "question": "NOT the same as \"КБ ЦБС\" in rk.2035.university's curated БАС-industry showcase (2026-08-24) -- initial automated name-normalization matching flagged \"КБ ЦБС\" as a possible hit on this entity, but the catalog's own text expands \"ЦБС\" there as \"Конструкторское бюро цифровых беспилотных систем\" (Design Bureau of Digital Unmanned Systems) -- a different company with a coincidentally identical abbreviation, not this entity (whose own name expands to \"Центр беспилотных систем\"). Logged as a rejected false positive so a future automated sweep doesn't re-surface the same collision as a new finding.",
+        "question": "NOT the same as \"КБ ЦБС\" in rk.2035.university's curated БАС-industry showcase (2026-08-24) -- initial automated name-normalization matching flagged \"КБ ЦБС\" as a possible hit on this entity, but the catalog's own text expands \"ЦБС\" there as \"Конструкторское бюро цифровых беспилотных систем\" (Design Bureau of Digital Unmanned Systems) -- a different company with a coincidentally identical abbreviation, not this entity (whose own name expands to \"Центр беспилотных систем\"). Logged as a rejected false positive so a future automated sweep doesn't re-surface the same collision as a new finding. UPDATE 2026-08-25: web search for this entity's own website turned up the same collision again from a different angle -- cbs-tech.ru's own footer self-identifies as \"OOO КБ «ЦБС»\", confirmed via rusprofile/spark-interfax as a genuinely distinct legal entity, ИНН 7100046812 (vs this entity's 7100032961). Two independent confirmations now that cbs-tech.ru belongs to the OTHER Tula «ЦБС»-abbreviated company, not this OFAC-designated one -- do not cite cbs-tech.ru as this entity's site.",
         "source_id": "s1168"
       }
     ],
@@ -36537,7 +36603,8 @@
     ],
     "verified_against": "sanctionssearch.ofac.treas.gov/Details.aspx?id=50778 (read directly 2026-08-24, s0573); egrul.nalog.ru open-API pull, 2026-08-24 (s0572)",
     "_corrected": [
-      "2026-08-24 Rospatent full-roster trademark sweep (own ИНН 7100032961, s0945): trademark №1074859 (filed 2024-03-27) is held under the name \"ООО «Конструкторское бюро «Центр беспилотных систем»»\" — a FULLER name than this registry's current name_ru (\"ООО «Центр беспилотных систем»\"), which itself matches both the OFAC SDN listing text and a direct egrul.nalog.ru pull exactly. Flagging as an open question rather than editing name_ru: unclear whether this is (a) a former/alternate legal name that was later shortened, (b) a self-reporting variation on this one Rospatent filing, or (c) evidence of a DIFFERENT-but-related entity under the same ИНН at filing time. Do not conflate with the OFAC designation's own name until resolved."
+      "2026-08-24 Rospatent full-roster trademark sweep (own ИНН 7100032961, s0945): trademark №1074859 (filed 2024-03-27) is held under the name \"ООО «Конструкторское бюро «Центр беспилотных систем»»\" — a FULLER name than this registry's current name_ru (\"ООО «Центр беспилотных систем»\"), which itself matches both the OFAC SDN listing text and a direct egrul.nalog.ru pull exactly. Flagging as an open question rather than editing name_ru: unclear whether this is (a) a former/alternate legal name that was later shortened, (b) a self-reporting variation on this one Rospatent filing, or (c) evidence of a DIFFERENT-but-related entity under the same ИНН at filing time. Do not conflate with the OFAC designation's own name until resolved.",
+      "Web search for this OFAC-designated entity's website (2026-08-25) found no confirmed site of its own, but re-surfaced and strengthened the existing КБ ЦБС name-collision flag with a confirmed ИНН for the other entity."
     ],
     "_verified_against": null,
     "aleph_matches": [
