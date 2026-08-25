@@ -1127,15 +1127,32 @@ any future generator still need to actually filter tombstones out, which
 needs `build_site.py` (Phase 4) to exist first. Counts reported to readers
 in prose should use the live numbers above.
 
-**5. Build the reverse source index.** Still **effectively untouched**:
-`entities[].sources[]` is non-empty on exactly **1 of 149** entities (a single
-one-off correction, not a systemic fill), `sources[].url` is empty on
-**all 1168**, `sources[].entities` is empty on **all 1168** — the scale grew
-(951→1168 sources) but the coverage percentage is identical (0%). Provenance
-still actually runs the other way, via `sources.json.inns`. Phase 4's
-per-entity §14 "Sources" block and `check_citations.py` both assume forward
-linkage that doesn't exist yet. Build the reverse map at build time from
-`sources.json.inns` rather than duplicating data.
+**5. Build the reverse source index.** **Done, in the form the plan itself
+specified (2026-08-25)** — "build the reverse map at build time... rather
+than duplicating data" turned out to mean this doesn't need Phase 4 to
+exist first. New `scripts/reverse_source_index.py`: a pure `build_index()`
+function (importable by the eventual `build_site.py`) that derives
+`entity_slug -> [source_id]`, `person_slug -> [source_id]` and
+`source_id -> [(kind, slug)]` by matching each source's own `inns[]`
+(every ИНН/ОГРН `inventory_sources.py` found in the document text) against
+the registry's own `inn`/`inn_personal` fields — no static duplication
+written into `entities.json`/`sources.json` at all. Run standalone for a
+coverage report, or as of this pass it's wired into `check_registry.py`'s
+own coverage output on every run. Actual coverage: **74/142 entities and
+16/23 people reach at least one source this way** (249 of 1392 sources
+have a matching ИНН) — a real result, not a placeholder, and a large jump
+over the old static field's 1/149. The 68 entities-with-an-ИНН that still
+resolve to zero sources are printed by the script as a work list (either
+their backing sources haven't been ИНН-extracted yet, or their evidence is
+prose-only with no ИНН-bearing document on file) — not fixed this pass,
+since closing that gap is itself a sourcing task, not a normalization one.
+`entities[].sources[]`/`sources[].entities` themselves were left as they
+were (still ~unused) rather than backfilled, per the plan's own "don't
+duplicate" instruction — the computed index is the reverse map now, full
+stop. `sources[].url` (empty on all 1392) is a separate, still-open gap
+this item was never actually about — most `data/sources/` files are PDFs/
+zips with no meaningful single URL, so this field may simply not apply to
+most rows; worth a decision, not a mechanical fix, if it's ever needed.
 
 **6. Unify the three open-question stores** into one shape. Still three
 separate, unlinked stores, and the global one is now *worse* on the metric

@@ -42,6 +42,9 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from reverse_source_index import build_index  # noqa: E402
+
 REPO = Path(__file__).resolve().parent.parent
 REG = REPO / "data" / "registry"
 
@@ -415,6 +418,11 @@ def main() -> int:
         print(f"  typed               {sum(1 for s in (sources or []) if s.get('type'))}")
         print(f"  with captured_date  {sum(1 for s in (sources or []) if s.get('captured_date'))}")
         print(f"  with as_of          {sum(1 for s in (sources or []) if s.get('as_of'))}")
+        entity_sources, person_sources, source_refs = build_index(
+            entities, people or [], sources or [])
+        print(f"  reverse-indexed     {len(source_refs)} sources cite a known "
+              f"entity/person ИНН, reaching {len(entity_sources)} entities + "
+              f"{len(person_sources)} people (see scripts/reverse_source_index.py)")
         print(f"quotes                {len(quotes or [])}")
 
     print()

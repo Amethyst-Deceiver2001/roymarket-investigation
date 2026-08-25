@@ -34,6 +34,7 @@ scripts/extract_ids.py      general-purpose entity/ИНН/ОГРН scan over arb
 scripts/scan_sources.py     same extraction over every file in data/sources/, writes MANIFEST.md
 scripts/har_tools.py        load_har() salvages truncated HAR captures (marketplace/site network traces)
 scripts/screen_wb.py        joins registry ИНН against wb_watch's scraped WB sellers, writes wb_matches[]
+scripts/reverse_source_index.py  derives entity/person <-> source citation map from sources.json's inns[], no duplicated storage
 scripts/check_egrul_flags.py   flags EGRUL access-restriction/disavowal markers in pasted extract text
 scripts/inventory_sources.py   reads data/sources/ once, caches doc type + as_of date (local, cached, rerun after new files)
 scripts/extract_registry.py    one-time scaffold of data/registry/ from the frozen brief snapshot
