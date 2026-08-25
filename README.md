@@ -33,6 +33,7 @@ scripts/id_patterns.py      shared extraction regex, used by mine_leads.py/extra
 scripts/extract_ids.py      general-purpose entity/ИНН/ОГРН scan over arbitrary pasted/fetched text
 scripts/scan_sources.py     same extraction over every file in data/sources/, writes MANIFEST.md
 scripts/har_tools.py        load_har() salvages truncated HAR captures (marketplace/site network traces)
+scripts/screen_wb.py        joins registry ИНН against wb_watch's scraped WB sellers, writes wb_matches[]
 scripts/check_egrul_flags.py   flags EGRUL access-restriction/disavowal markers in pasted extract text
 scripts/inventory_sources.py   reads data/sources/ once, caches doc type + as_of date (local, cached, rerun after new files)
 scripts/extract_registry.py    one-time scaffold of data/registry/ from the frozen brief snapshot
