@@ -1005,8 +1005,11 @@ file:
 - **2026-08-25 (later session, HAR-driven marketplace pass)**: a new source
   class for this phase — user-supplied HAR captures of Ozon/WB/Yandex Maps
   sessions, processed via `scripts/har_tools.py` (salvages truncated HAR
-  JSON — promoted from a `/tmp` scratch file this session). Confirmed
-  `ooo-gaskar`'s Ozon storefront
+  JSON — promoted from a `/tmp` scratch file this session, later given a
+  `list`/`grep`/`extract` CLI so large captures can be triaged/extracted to
+  files by the user without routing full response bodies through the
+  assistant's context — see the `roymarket_har_token_efficient_workflow`
+  memory). Confirmed `ooo-gaskar`'s Ozon storefront
   via matching ОГРН (`s1385`); resolved `ooo-pokrov`'s site and the "Макс 911"
   Ozon dealer's real identity (ИП Коровкин, via egrul.nalog.ru open API,
   `s1387`/`s1388`); for `ooo-goudron`, confirmed/corrected two Ozon seller
