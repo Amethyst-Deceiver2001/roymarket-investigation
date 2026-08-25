@@ -4707,7 +4707,8 @@
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
       "Full signed ЕГРЮЛ extract read end-to-end (ul-1247700414631-20260823120635.pdf, pulled 23.08.2026). Same Сокол district address zone as ООО «ОРИЕНТ СИСТЕМС» and ООО «4ГНСС» (see above) — not confirmed as the identical building, just the same district, so not claimed as a shared-suite finding the way the Нарышкинская cluster was; worth a closer address comparison if this entity gets deeper research. Majority owner and GD Лапин Игорь Николаевич (63.2%); minority co-founder ООО «Производство обучающих систем и технологий» (36.8%) — an 'educational-systems production' entity as co-owner of a company presumably UAV-related is a name mismatch worth noting, not yet explained.",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7743451768). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-      "2026-08-24: rospatent full-roster patent sweep second-triage pass -- NOT promoted despite an exact name match, due to wildly implausible subject matter (COVID-19 antivirals) with no ИНН available to confirm same-entity identity; logged as an open question instead."
+      "2026-08-24: rospatent full-roster patent sweep second-triage pass -- NOT promoted despite an exact name match, due to wildly implausible subject matter (COVID-19 antivirals) with no ИНН available to confirm same-entity identity; logged as an open question instead.",
+      "2026-08-25: found as a listed member of Ассоциация «АЭРОНЕКСТ» (aeronext.aero), the national UAV-industry employer association, via its open backend API (component.aeronext.aero/s_cm_api/catalog.ashx). Full member card confirms ИНН/ОГРН/address exactly and corroborates the director already on file (Лапин Игорь Николаевич) via the card's own «ФИО Руководителя» field (s1406). Not a ЦБСТ/РОЙ.МАРКЕТ link -- national industry-association membership, same category as other adjacent programs already noted."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -6395,7 +6396,8 @@
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1247700198734-20260823122742.pdf). Sole founder = sole director, registered 2024 — one of the youngest entities in this batch.",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7720925267). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-      "web.sites was empty; rk2035_matches (already screened, ИНН-confirmed) had the site all along, just never promoted."
+      "web.sites was empty; rk2035_matches (already screened, ИНН-confirmed) had the site all along, just never promoted.",
+      "2026-08-25: found as a listed member of Ассоциация «АЭРОНЕКСТ» (aeronext.aero), the national UAV-industry employer association, via its open backend API (component.aeronext.aero/s_cm_api/catalog.ashx). Full member card confirms ИНН/ОГРН/address exactly and corroborates the director already on file (Федукович Кирилл Олегович) via the card's own «ФИО Руководителя» field (s1404). Not a ЦБСТ/РОЙ.МАРКЕТ link -- national industry-association membership, same category as other adjacent programs already noted."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -10111,7 +10113,8 @@
       "User pointed out searchplatform.rospatent.gov.ru's field-scoped query syntax (PE_RU=\"...\") works where plain free text doesn't, then supplied a HAR capture of their own browser session showing the exact unauthenticated POST /search request. Reproducing it directly (no auth/session needed) against PE_RU=\"...РУСТЕХДРОН...\" returned 5 total hits, not the 2 utility models already on file -- 3 previously unknown промышленный образец (industrial design) filings covering the UAV's and payload-device's physical appearance, same 3 inventors and same patent-attorney correspondence address as the known utility models.",
       "2026-08-24: web-searched the three patent co-inventors (Дзема, Свистунов, Соколов) after re-confirming RU220486U1's inventor list via FIPS. Found Соколов Герман Олегович is actually the entity's Генеральный директор (per checko.ru/rusprofile/spark-interfax aggregators), not merely a co-inventor -- set as director. Also found he directs a second, related entity (ООО «РТД-Защита», ex-«НИПП Рустехдрон», ИНН 5003153526) already flagged in this record's own notes as \"do not conflate\" but never added as its own registry entry -- now added as ooo-rtd-zashchita (tier: plumbing), linked via common director.",
       "2026-08-24: archived iStories' 2024-01-19 \"Дрон Инферно\" investigation (s1163), previously only cited in this entity's notes text, never structurally promoted. Adds: the \"Инферно\" product name and its exact specs; founders[] with percentages (Орджоникидзе 21%, Галаев 29.5%); and rich biographical detail on both -- promoted to people.json as ordzhonikidze-aleksey-grigorevich and galaev-ilya-viktorovich.",
-      "2026-08-24: added 6 declared-civilian product names from this entity's own rk.2035.university product-catalog self-listing (s1169) -- a clean example of the same officially-X/actually-Y pattern the GUR teardown already established for this entity's real FPV-kamikaze line (К10/К8/4М/Инферно): the company's own national-registry self-listing shows only civilian monitoring/telecom/agriculture models, none of the GUR-documented military variants."
+      "2026-08-24: added 6 declared-civilian product names from this entity's own rk.2035.university product-catalog self-listing (s1169) -- a clean example of the same officially-X/actually-Y pattern the GUR teardown already established for this entity's real FPV-kamikaze line (К10/К8/4М/Инферно): the company's own national-registry self-listing shows only civilian monitoring/telecom/agriculture models, none of the GUR-documented military variants.",
+      "2026-08-25: found as a listed member of Ассоциация «АЭРОНЕКСТ» (aeronext.aero), the national UAV-industry employer association, via its open backend API (component.aeronext.aero/s_cm_api/catalog.ashx). Full member card confirms ИНН/ОГРН/address exactly and corroborates the director already on file (Соколов Герман Олегович) via the card's own «ФИО Руководителя» field (s1402). Not a ЦБСТ/РОЙ.МАРКЕТ link -- national industry-association membership, same category as other adjacent programs already noted."
     ],
     "_verified_against": "searchplatform.rospatent.gov.ru live search API (IN_RU/PE_RU field-scoped query, discovered via user-supplied HAR capture 2026-08-24), archived as s0973/s0974/s0975",
     "opensanctions_matches": [
@@ -18320,7 +18323,8 @@
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0780).",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7725347482). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 7 candidates -- all unrelated medical/dental patents (a different, unrelated \"Путь Сергей Анатольевич\").",
-      "2026-08-25: appears on the Agency for Technological Development's (АТР, atr.gov.ru) federal grant program \"Комплектующие для БАС\" (208.atr.gov.ru/bas) -- «Реестр потенциальных исполнителей», exact ИНН match. These are dated snapshot PDFs (производители 30.06.2026, исполнители 14.07.2026, per the page's own labels) pulled 2026-08-25 and archived at data/sources/. This is a state-recognized potential-supplier listing for the national UAV-components grant program, not itself a ЦБСТ/РОЙ.МАРКЕТ link -- corroborates the entity's UAV/components industry footprint, does not establish any relationship to the ЦБСТ network specifically."
+      "2026-08-25: appears on the Agency for Technological Development's (АТР, atr.gov.ru) federal grant program \"Комплектующие для БАС\" (208.atr.gov.ru/bas) -- «Реестр потенциальных исполнителей», exact ИНН match. These are dated snapshot PDFs (производители 30.06.2026, исполнители 14.07.2026, per the page's own labels) pulled 2026-08-25 and archived at data/sources/. This is a state-recognized potential-supplier listing for the national UAV-components grant program, not itself a ЦБСТ/РОЙ.МАРКЕТ link -- corroborates the entity's UAV/components industry footprint, does not establish any relationship to the ЦБСТ network specifically.",
+      "2026-08-25: found as a listed member of Ассоциация «АЭРОНЕКСТ» (aeronext.aero), the national UAV-industry employer association, via its open backend API (component.aeronext.aero/s_cm_api/catalog.ashx). Full member card confirms ИНН/ОГРН/address exactly and corroborates the director already on file (Бессонов Сергей Николаевич) via the card's own «ФИО Руководителя» field (s1405). Not a ЦБСТ/РОЙ.МАРКЕТ link -- national industry-association membership, same category as other adjacent programs already noted."
     ],
     "_verified_against": "s0218 — ООО «Аэромакс»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -21868,8 +21872,15 @@
     "okved_code": "26.11.9",
     "okved_label": "Производство частей электронных ламп, трубок и прочих электронных компонентов, не включенных в другие группировки",
     "okved_mismatch": null,
-    "director": null,
-    "director_history": [],
+    "director": "Анцев Георгий Владимирович",
+    "director_history": [
+      {
+        "value": "Анцев Георгий Владимирович",
+        "as_of": "2026-08-25",
+        "source_id": "s1407",
+        "note": "Per АЭРОНЕКСТ member-catalog card («ФИО Руководителя» field, «Должность руководителя»: Генеральный директор-Генеральный конструктор), captured_date basis -- as_of is the capture date, not independently confirmed against EGRUL yet."
+      }
+    ],
     "founders": [],
     "founders_history": [],
     "charter_capital": null,
@@ -22109,7 +22120,8 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7814027653). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
       "2026-08-24: split the previously-unsourced combined \"БВС ВТ-45 / ВТ-440М / ВТ-30Е\" entry into 3 individually sourced products (s1169), and confirmed the entity's own listing uses \"НПП\" (matching this registry), resolving the s1168 open question in favour of НПП over the showcase blurb's \"Концерн\" wording.",
-      "2026-08-25: appears on the Agency for Technological Development's (АТР, atr.gov.ru) federal grant program \"Комплектующие для БАС\" (208.atr.gov.ru/bas) -- «Реестр потенциальных производителей» (item 59) AND «Реестр потенциальных исполнителей» (item 222), exact ИНН match. These are dated snapshot PDFs (производители 30.06.2026, исполнители 14.07.2026, per the page's own labels) pulled 2026-08-25 and archived at data/sources/. This is a state-recognized potential-supplier listing for the national UAV-components grant program, not itself a ЦБСТ/РОЙ.МАРКЕТ link -- corroborates the entity's UAV/components industry footprint, does not establish any relationship to the ЦБСТ network specifically."
+      "2026-08-25: appears on the Agency for Technological Development's (АТР, atr.gov.ru) federal grant program \"Комплектующие для БАС\" (208.atr.gov.ru/bas) -- «Реестр потенциальных производителей» (item 59) AND «Реестр потенциальных исполнителей» (item 222), exact ИНН match. These are dated snapshot PDFs (производители 30.06.2026, исполнители 14.07.2026, per the page's own labels) pulled 2026-08-25 and archived at data/sources/. This is a state-recognized potential-supplier listing for the national UAV-components grant program, not itself a ЦБСТ/РОЙ.МАРКЕТ link -- corroborates the entity's UAV/components industry footprint, does not establish any relationship to the ЦБСТ network specifically.",
+      "2026-08-25: director previously null -- filled from Ассоциация «АЭРОНЕКСТ» member card (component.aeronext.aero/s_cm_api/catalog.ashx), which also confirmed ИНН/ОГРН/address exactly. Not yet cross-checked against an independent EGRUL pull -- association self-reported data, treat with the same caution as any single-source self-report until corroborated."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "opensanctions_matches": [
@@ -24100,8 +24112,15 @@
     "okved_code": "72.19",
     "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
     "okved_mismatch": null,
-    "director": null,
-    "director_history": [],
+    "director": "Павлова Татьяна Викторовна",
+    "director_history": [
+      {
+        "value": "Павлова Татьяна Викторовна",
+        "as_of": "2026-08-25",
+        "source_id": "s1403",
+        "note": "Per АЭРОНЕКСТ member-catalog card («ФИО Руководителя» field, «Должность руководителя»: Генеральный директор), captured_date basis -- as_of is the capture date, not independently confirmed against EGRUL yet."
+      }
+    ],
     "founders": [],
     "founders_history": [],
     "charter_capital": null,
