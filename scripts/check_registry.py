@@ -196,6 +196,9 @@ def main() -> int:
     entity_inns = {e["inn"] for e in entities if e.get("inn")}
     people_slugs = {p.get("slug") for p in (people or [])}
 
+    tombstone_entity_slugs = {e["slug"] for e in entities if e.get("_merged_into")}
+    tombstone_people_slugs = {p.get("slug") for p in (people or []) if p.get("_merged_into")}
+
     for e in entities:
         for sid in e.get("sources", []):
             if sid not in source_ids:
@@ -208,12 +211,21 @@ def main() -> int:
                 continue  # the record's own identity, not a reference
             if val not in entity_slugs:
                 errors.append(f"{e['name_ru']}: {path} references unknown entity slug '{val}'")
+            elif not e.get("_merged_into") and val in tombstone_entity_slugs:
+                warnings.append(f"{e['name_ru']}: {path} references '{val}', which is "
+                                f"itself tombstoned (_merged_into) — should probably "
+                                f"point at its merge target instead")
         brand_of = e.get("is_brand_of")
         if brand_of and brand_of not in entity_inns:
             errors.append(f"{e['name_ru']}: is_brand_of references unknown ИНН '{brand_of}'")
         merged = e.get("_merged_into")
-        if merged and merged not in entity_slugs:
-            errors.append(f"{e['name_ru']}: _merged_into references unknown entity slug '{merged}'")
+        if merged:
+            if merged not in entity_slugs:
+                errors.append(f"{e['name_ru']}: _merged_into references unknown entity slug '{merged}'")
+            elif merged in tombstone_entity_slugs:
+                errors.append(f"{e['name_ru']}: _merged_into chains to another "
+                              f"tombstone ('{merged}') — point directly at the "
+                              f"final live record instead")
 
     for p in people or []:
         for path, sid in find_refs(p, {"source_id"}):
@@ -222,9 +234,18 @@ def main() -> int:
         for path, es in find_refs(p, {"entity_slug"}):
             if es not in entity_slugs:
                 errors.append(f"{p['fio_ru']}: {path} references unknown entity slug '{es}'")
+            elif es in tombstone_entity_slugs:
+                warnings.append(f"{p['fio_ru']}: {path} references '{es}', which is "
+                                f"itself tombstoned (_merged_into) — should probably "
+                                f"point at its merge target instead")
         merged = p.get("_merged_into")
-        if merged and merged not in people_slugs:
-            errors.append(f"{p['fio_ru']}: _merged_into references unknown person slug '{merged}'")
+        if merged:
+            if merged not in people_slugs:
+                errors.append(f"{p['fio_ru']}: _merged_into references unknown person slug '{merged}'")
+            elif merged in tombstone_people_slugs:
+                errors.append(f"{p['fio_ru']}: _merged_into chains to another "
+                              f"tombstone ('{merged}') — point directly at the "
+                              f"final live record instead")
 
     for q in quotes or []:
         sid = q.get("source_id")
@@ -336,7 +357,10 @@ def main() -> int:
     if not args.quiet:
         print()
         print("--- coverage ---")
-        print(f"entities              {len(entities)}")
+        live_entity_count = len(entities) - len(tombstone_entity_slugs)
+        live_people_count = len(people or []) - len(tombstone_people_slugs)
+        print(f"entities              {len(entities)} raw / {live_entity_count} live "
+              f"({len(tombstone_entity_slugs)} merged into another record)")
         print(f"  verified            {len(entities) - len(unverified)}")
         print(f"  unverified          {len(unverified)}")
         print(f"  without ИНН         {len(no_inn)}")
@@ -345,7 +369,8 @@ def main() -> int:
         print(f"  with financials     {sum(1 for e in manufacturers if e.get('financials'))}")
         print(f"  with a ЦБСТ tie     {sum(1 for e in manufacturers if e.get('cbst_tie'))}")
         print(f"  wb_overlap checked  {sum(1 for e in manufacturers if e.get('wb_overlap') != 'not_checked')}")
-        print(f"people                {len(people or [])}")
+        print(f"people                {len(people or [])} raw / {live_people_count} live "
+              f"({len(tombstone_people_slugs)} merged into another record)")
         print(f"  with DOB            {sum(1 for p in (people or []) if p.get('dob'))}")
         print(f"sources               {len(sources or [])}")
         print(f"  typed               {sum(1 for s in (sources or []) if s.get('type'))}")

@@ -1103,20 +1103,26 @@ treating as genuinely stalled, not just "not yet reached":
 
 Encode each as a `check_registry.py` assertion afterwards so it cannot regress.
 
-**4. Make `_merged_into` real.** Now **3 entities** (`kb-germes`, `ooo-sibnk`,
-`ooo-kb-sinergiya`, unchanged) and **3 people** (`brovchenko-aleksandr-
-rufinovich`, plus two new ones from this session's duplicate-cleanup work —
-`barakhtin-artem-vladimirovich-2` and `lysenko-andrey-olegovich-2`) are
-tombstones — up from 1 person when this item was first written. **Nothing in
-the codebase reads the key** — confirmed still true, it is purely documentary,
-so a generator will emit them as real, duplicate entities/people. The dedup
-work happening in parallel this session (finding and merging duplicates via
-leader-id `user_id` cross-checks) makes this fix *more* urgent, not less — it's
-the mechanism now being used to record every such finding, and none of them
-take effect anywhere except in this plan and in `corrections.json`'s own text.
-`check_registry.py` must validate the target slug exists; `build_site.py` must
-filter them; counts reported to readers should currently say roughly 146 live
-entities / 302 live people (not raw 149 / 305) once this is wired up.
+**4. Make `_merged_into` real.** **Partially done (2026-08-25) — the
+check_registry.py half is complete; the build-time filter is still blocked on
+Phase 4 not existing yet.** Current tombstones unchanged: 3 entities
+(`kb-germes`, `ooo-sibnk`, `ooo-kb-sinergiya`) and 3 people
+(`brovchenko-aleksandr-rufinovich`, `barakhtin-artem-vladimirovich-2`,
+`lysenko-andrey-olegovich-2`). `_merged_into` target resolution was already
+validated (confirmed pre-existing, not new this pass); this pass added: (a)
+a chain check — `_merged_into` erroring if it points at *another* tombstone
+instead of the final live record (none found — all 6 existing tombstones
+point directly at a live record); (b) a stale-incoming-reference warning —
+any other record's `entity_slug`/`slug` pointing at an entity that is itself
+tombstoned (none found — checked directly against the current registry,
+zero stale refs exist today, so this is a regression guard for future
+merges, not a fix for an existing problem); (c) the coverage report now
+prints both raw and live counts (`149 raw / 146 live`, `305 raw / 302 live`)
+instead of only the raw figure. **Still open**: nothing outside
+`check_registry.py` reads `_merged_into` yet — `docs/index.html` itself and
+any future generator still need to actually filter tombstones out, which
+needs `build_site.py` (Phase 4) to exist first. Counts reported to readers
+in prose should use the live numbers above.
 
 **5. Build the reverse source index.** Still **effectively untouched**:
 `entities[].sources[]` is non-empty on exactly **1 of 149** entities (a single
