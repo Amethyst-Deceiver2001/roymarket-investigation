@@ -2071,6 +2071,24 @@
         "from": null,
         "to": null,
         "source_id": null
+      },
+      {
+        "entity_slug": null,
+        "entity_name": "АО «Фабрика им. Советской Армии»",
+        "title": null,
+        "from": null,
+        "to": null,
+        "source_id": null,
+        "_candidate": true
+      },
+      {
+        "entity_slug": null,
+        "entity_name": "Фонд «Наша Правда»",
+        "title": null,
+        "from": null,
+        "to": null,
+        "source_id": null,
+        "_candidate": true
       }
     ],
     "sanctions": [],
@@ -2091,6 +2109,10 @@
       "position": "General Director, Фонд поддержки зимних олимпийских видов спорта, since 11.11.2014",
       "note": "Named as the Olympic Fund's own sole beneficial owner in its FY2023–25 filings. Documented brother of Наша Правда's Александр Руфинович Бровченко per investigator.org.ua, independent of the shared-patronymic match found in the filings. Primary doc"
     },
+    "_corrected": [
+      "2026-08-25: folded in 2 _candidate role links (АО «Фабрика им. Советской Армии», Фонд «Наша Правда») from the duplicate record brovchenko-sergey-rufinovich, now merged into this one -- still _candidate, not yet independently verified."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [
@@ -3364,6 +3386,11 @@
         "0% owner of ФКК. Registered Котельническая наб. 25, стр.1, офис 16 — same building as Наша Правда and Градислава (office 18). Landlord АО «Фабрика им. Советской Армии». Director/sole beneficial owner Бровченко Сергей Руфинович, documented brother of Наша Правда's own director. ₽42.9bn total assets (2025), more than doubled since 2023; withholds related-party detail citing the same accounting exemption ДАР uses for its board. Its own Minjust filing (pulled "
       ]
     },
+    "_merged_into": "sergey-rufinovich-brovchenko",
+    "_corrected": [
+      "2026-08-25: DUPLICATE -- same person scaffolded twice under two ФИО word-order slugs (the exact bug the Phase 1b plan flagged as a known risk before verification starts). Same full name, no dob/inn_personal on either record to contradict, complementary (non-conflicting) role info on both. Canonical kept: sergey-rufinovich-brovchenko (has a sourced notes field on Olympic Fund beneficial ownership); its 2 _candidate role links folded into the canonical record."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [
@@ -6629,6 +6656,11 @@
         "димирович Елисеев (no employer listed — the same sanctioned individual who chairs ДАР's board, here holding a direct seat one level closer to the fund that actually procures and transfers equipment), Иван Игоревич Карабинский (Градислава), Дмитрий Владимирович Устратов («Фонд Поддержки нац. морских проектов» — a fourth foundation in this network, since independently confirmed via its own Minjust filing as the same Устратов Дмитрий Владимирович, GD since 30"
       ]
     },
+    "_merged_into": "ivan-igorevich-karabinskiy",
+    "_corrected": [
+      "2026-08-25: DUPLICATE -- same person scaffolded twice under two ФИО word-order slugs (the exact bug the Phase 1b plan flagged as a known risk before verification starts). Same full name, no dob/inn_personal on either record to contradict, complementary (non-conflicting) role info on both. Canonical kept: ivan-igorevich-karabinskiy (has the sourced General Director role; the duplicate had none)."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [
@@ -8676,7 +8708,16 @@
     "birthplace": null,
     "address": null,
     "inn_personal": null,
-    "roles": [],
+    "roles": [
+      {
+        "entity_slug": "ooo-vizionero",
+        "entity_name": "ООО «Визионеро»",
+        "title": "co-inventor (ПрЭВМ RU2023613722)",
+        "from": null,
+        "to": null,
+        "source_id": "s1054"
+      }
+    ],
     "sanctions": [],
     "other_entities": [],
     "other_entities_checked_at": null,
@@ -8696,6 +8737,10 @@
         "неро» (ИНН 5902056314, Moscow, reg. 27.11.2019) — GD Лысенко Андрей Олегович, 16 employees, mixed film/video-production and software OKVEDs (no drone/defence-specific code declared); one 37.5%-owner, Городничин Дмитрий Александрович, has his stake pledged as loan collateral to the Московский венчурный фонд (Moscow Venture Fund, a city-government-linked VC), a pledge recorded just weeks before this pull (29.06.2026) — the first instance in this brief of a Ц"
       ]
     },
+    "_corrected": [
+      "2026-08-25: folded in the co-inventor role (ООО «Визионеро», s1054) from the duplicate record gorodnichin-dmitriy-aleksandrovich-2, now merged into this one."
+    ],
+    "_verified_against": null,
     "aleph_matches": [
       {
         "entity_id": "1531206af0c6b9d970eb55f89876f7193c53a0e7.488c8d066f70d17c560e7f91baee11afb552ad39",
@@ -25762,8 +25807,11 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_verified_against": "searchplatform.rospatent.gov.ru ПрЭВМ record, source s1054",
-    "_corrected": null,
+    "_verified_against": null,
+    "_corrected": [
+      "2026-08-25: DUPLICATE -- same person scaffolded twice under two ФИО word-order slugs (the exact bug the Phase 1b plan flagged as a known risk before verification starts). Same full name, no dob/inn_personal on either record to contradict, complementary (non-conflicting) role info on both. Canonical kept: gorodnichin-dmitriy-aleksandrovich (the unsuffixed slug, matching the convention already used for the other two duplicate-cleanup merges this project has made); its co-inventor role folded into the canonical record."
+    ],
+    "_merged_into": "gorodnichin-dmitriy-aleksandrovich",
     "leader_id_matches": [],
     "leader_id_screened_at": "2026-08-24"
   },

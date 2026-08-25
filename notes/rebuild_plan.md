@@ -533,6 +533,27 @@ normalized-name dedup pass (`roymarket_fuzzy_dedup` approach, ФИО word-set
 comparison rather than substring) across all 153 before verifying, so the same
 person isn't verified twice under two slugs.
 
+**Dedup pass run, 2026-08-25 (start of Phase 1b work) — 3 more duplicates
+found and merged**, on top of the 3 already fixed earlier (`lysenko-*`,
+`barakhtin-*`, `brovchenko-aleksandr-rufinovich`/`aleksandr-rufinovich-
+brovchenko`). Exact-ФИО-word-set comparison across all 302 then-live people
+found: `sergey-rufinovich-brovchenko`/`brovchenko-sergey-rufinovich` (kept
+the former — it carries a sourced notes field on Olympic Fund beneficial
+ownership; the latter's 2 unresolved `_candidate` role links were folded
+into the canonical record, not discarded), `ivan-igorevich-karabinskiy`/
+`karabinskiy-ivan-igorevich` (kept the former, which has the sourced
+General Director role; the latter was empty), `gorodnichin-dmitriy-
+aleksandrovich`/`-2` (kept the unsuffixed slug per the naming convention
+the two earlier merges already established; folded in the `-2` record's
+co-inventor role). A looser first-name+patronymic-only check (deliberately
+ignoring surname) turned up ~16 more coincidental groups — all confirmed as
+genuinely different people who happen to share a common Russian given-name/
+patronymic combination (e.g. several different "Дмитрий Александрович"s),
+not duplicates; no action taken on those. Live people count: 302 → 299.
+`check_registry.py`: 0 errors. This closes the "Watch for" prerequisite —
+the roster is now clean going into the rest of Phase 1b's verification
+work.
+
 ---
 
 ## Phase 1.5 — Source triage (5 untyped files) + physical-footprint typology

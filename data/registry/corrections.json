@@ -16175,6 +16175,82 @@
       "why": [
         "2026-08-24: resolved this person's `_candidate` role at НПО «НЕБО» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-npo-nebo, source s0517) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
       ]
+    },
+    "brovchenko-sergey-rufinovich": {
+      "set": {
+        "_merged_into": "sergey-rufinovich-brovchenko"
+      },
+      "why": [
+        "2026-08-25: DUPLICATE -- same person scaffolded twice under two ФИО word-order slugs (the exact bug the Phase 1b plan flagged as a known risk before verification starts). Same full name, no dob/inn_personal on either record to contradict, complementary (non-conflicting) role info on both. Canonical kept: sergey-rufinovich-brovchenko (has a sourced notes field on Olympic Fund beneficial ownership); its 2 _candidate role links folded into the canonical record."
+      ]
+    },
+    "sergey-rufinovich-brovchenko": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": null,
+            "title": "General Director, Фонд поддержки зимних олимпийских видов спорта, since 11.11.2014",
+            "body": null,
+            "from": null,
+            "to": null,
+            "source_id": null
+          },
+          {
+            "entity_slug": null,
+            "entity_name": "АО «Фабрика им. Советской Армии»",
+            "title": null,
+            "from": null,
+            "to": null,
+            "source_id": null,
+            "_candidate": true
+          },
+          {
+            "entity_slug": null,
+            "entity_name": "Фонд «Наша Правда»",
+            "title": null,
+            "from": null,
+            "to": null,
+            "source_id": null,
+            "_candidate": true
+          }
+        ]
+      },
+      "why": [
+        "2026-08-25: folded in 2 _candidate role links (АО «Фабрика им. Советской Армии», Фонд «Наша Правда») from the duplicate record brovchenko-sergey-rufinovich, now merged into this one -- still _candidate, not yet independently verified."
+      ]
+    },
+    "karabinskiy-ivan-igorevich": {
+      "set": {
+        "_merged_into": "ivan-igorevich-karabinskiy"
+      },
+      "why": [
+        "2026-08-25: DUPLICATE -- same person scaffolded twice under two ФИО word-order slugs (the exact bug the Phase 1b plan flagged as a known risk before verification starts). Same full name, no dob/inn_personal on either record to contradict, complementary (non-conflicting) role info on both. Canonical kept: ivan-igorevich-karabinskiy (has the sourced General Director role; the duplicate had none)."
+      ]
+    },
+    "gorodnichin-dmitriy-aleksandrovich-2": {
+      "set": {
+        "_merged_into": "gorodnichin-dmitriy-aleksandrovich"
+      },
+      "why": [
+        "2026-08-25: DUPLICATE -- same person scaffolded twice under two ФИО word-order slugs (the exact bug the Phase 1b plan flagged as a known risk before verification starts). Same full name, no dob/inn_personal on either record to contradict, complementary (non-conflicting) role info on both. Canonical kept: gorodnichin-dmitriy-aleksandrovich (the unsuffixed slug, matching the convention already used for the other two duplicate-cleanup merges this project has made); its co-inventor role folded into the canonical record."
+      ]
+    },
+    "gorodnichin-dmitriy-aleksandrovich": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": "ooo-vizionero",
+            "entity_name": "ООО «Визионеро»",
+            "title": "co-inventor (ПрЭВМ RU2023613722)",
+            "from": null,
+            "to": null,
+            "source_id": "s1054"
+          }
+        ]
+      },
+      "why": [
+        "2026-08-25: folded in the co-inventor role (ООО «Визионеро», s1054) from the duplicate record gorodnichin-dmitriy-aleksandrovich-2, now merged into this one."
+      ]
     }
   },
   "people_add_entities": [
