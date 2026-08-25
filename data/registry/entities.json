@@ -7662,7 +7662,14 @@
     "charter_capital": null,
     "charter_capital_history": [],
     "address_history": [],
-    "name_history": [],
+    "name_history": [
+      {
+        "value": "Симбирское Конструкторское Bюро «Пиранья»",
+        "as_of": "2026-08-25",
+        "source_id": "s1410",
+        "note": "Full brand name (СКБ = Симбирское Конструкторское Бюро, i.e. \"Simbirsk Design Bureau\" — Simbirsk being Ulyanovsk's pre-Soviet name), per the company's own July 2026 product catalog cover page. Resolves the СКБ abbreviation."
+      }
+    ],
     "facility_type": null,
     "facility_type_history": [],
     "parents": [],
@@ -7717,10 +7724,39 @@
     "patents": [],
     "foreign_components": [],
     "web": {
-      "sites": [],
-      "telegram": [],
-      "vk": [],
-      "youtube": [],
+      "sites": [
+        {
+          "url": "https://piranhafpv.ru/",
+          "note": "Main site, captured 2026-08-25.",
+          "source_id": "s1411"
+        }
+      ],
+      "telegram": [
+        {
+          "url": "https://t.me/Rus_Piranha",
+          "note": "Per site footer.",
+          "source_id": "s1411"
+        },
+        {
+          "url": "https://t.me/piranhafpv",
+          "note": "~4.85K subscribers per prior research pass — sales/support channel, no founder identification.",
+          "source_id": null
+        }
+      ],
+      "vk": [
+        {
+          "url": "https://vk.com/piranhafpv",
+          "note": "Per site footer link (/piranhafpv). Not independently opened — VK blocked automated fetch.",
+          "source_id": null
+        }
+      ],
+      "youtube": [
+        {
+          "url": "https://youtube.com/@piranhafpv",
+          "note": "Per site footer.",
+          "source_id": "s1411"
+        }
+      ],
       "marketplace_listings": [],
       "other": []
     },
@@ -7735,11 +7771,7 @@
     "confidence": null,
     "_verified": true,
     "_origin": "brief:manufacturers-table:line-996",
-    "_raw": {
-      "company": "ООО «СКБ Пиранья» (Ulyanovsk)",
-      "principal": "Чернышов Павел Алексеевич",
-      "notes": "«Пиранья 15»/«20» cargo-strike drones, up to 6kg/32km. 23 employees, ₽895.4m declared income. EU-sanctioned, 20th pkg, Apr 2026."
-    },
+    "_raw": {},
     "_origin_extra": [
       "brief:prose"
     ],
