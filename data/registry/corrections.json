@@ -9322,7 +9322,7 @@
           },
           {
             "slug": null,
-            "relationship": "Named dealer, per 3mx.ru/dilery/: «Макс 911» (Max 911) — dji911.com, Moscow. Telegram @dji911_operator. No matching EGRUL entity found by name search — legal entity unresolved. CONFIRMED via dji911.com itself (23.08.2026): explicitly states \"официальный дилер\" for 3mx and sells «Булат V.4» (\"Булат-4\"), «Марс», «Инкубатор» (remote antenna) and its own «Neobooster» DJI signal-amplifier accessory. No ИНН/ОГРН/legal name found on the site itself — legal entity still unresolved.",
+            "relationship": "Named dealer, per 3mx.ru/dilery/: «Макс 911» (Max 911) — dji911.com, Moscow. Telegram @dji911_operator. No matching EGRUL entity found by name search — legal entity unresolved. CONFIRMED via dji911.com itself (23.08.2026): explicitly states \"официальный дилер\" for 3mx and sells «Булат V.4» (\"Булат-4\"), «Марс», «Инкубатор» (remote antenna) and its own «Neobooster» DJI signal-amplifier accessory. No ИНН/ОГРН/legal name found on the site itself — legal entity still unresolved. ALSO has an Ozon storefront (2026-08-25, user-supplied browser HAR capture, s1384): https://www.ozon.ru/seller/maks-911-4233382/, self-declared page title \"МАКС 911- офиц. дилер 3mx\", lists 3mx/«Булат»-branded detectors -- confirms the Ozon presence but the sellerTransparency (legal-info) widget wasn't captured, so ИНН/ОГРН still unresolved on this marketplace too.",
             "source_id": "s0558"
           },
           {
@@ -9333,7 +9333,7 @@
         ],
         "open_questions": [
           {
-            "question": "3mx's dealer page (s0558, 23.08.2026) originally flagged all 3 named dealers as unmatched to a legal entity. Мэдро is now resolved (2026-08-25, via WB seller HAR capture): ИП Артемьева Виктория Михайловна, ИНН 350102453754, ОГРНИП 325784700034333. The other two -- Макс 911 (dji911.com, Moscow) and Покров (pokrovsystem.ru, Moscow) -- remain unmatched leads; worth the same WB-seller-lookup approach if pursued.",
+            "question": "3mx's dealer page (s0558, 23.08.2026) originally flagged all 3 named dealers as unmatched to a legal entity. Мэдро is now resolved (2026-08-25, via WB seller HAR capture): ИП Артемьева Виктория Михайловна, ИНН 350102453754, ОГРНИП 325784700034333. Макс 911's Ozon storefront is now located (2026-08-25, s1384) but its legal ИНН/ОГРН is still unresolved -- the sellerTransparency widget wasn't captured. Покров (pokrovsystem.ru, Moscow) remains a fully unmatched lead; worth the same seller-page HAR-capture approach if pursued, this time scrolling to/opening the seller's legal-info block before saving.",
             "source_id": "s0558"
           }
         ],
@@ -9405,6 +9405,10 @@
             {
               "url": "https://www.ozon.ru/product/mars-detektor-dronov-3mx-videolinkov-i-pultov-elrs-do-1-5-km-5525752932/",
               "note": "«Марс» digital video-link/ELRS-control detector listed under the 3MX brand on Ozon -- a different marketplace than WB. Confirmed via user-supplied browser HAR capture 2026-08-25 (s1383). No seller/company-info API call was captured in that session, so the listing's own seller account is not ID-confirmed to this entity's ИНН -- same reseller-vs-manufacturer caveat as the WB listings until a seller-info pull is done."
+            },
+            {
+              "url": "https://www.ozon.ru/seller/maks-911-4233382/",
+              "note": "«Макс 911» dealer's own Ozon storefront -- confirmed via user-supplied browser HAR capture 2026-08-25 (s1384). Self-declared page title \"МАКС 911- офиц. дилер 3mx\", lists 3mx/«Булат»-branded detectors, matching the manufacturer's own dealer-page claim (3mx.ru/dilery/, s0558). Legal entity (ИНН/ОГРН) still unresolved -- the sellerTransparency widget wasn't captured in this session."
             }
           ],
           "other": [
@@ -9457,7 +9461,8 @@
         "wb_overlap was already 'confirmed_reseller' but web.marketplace_listings was empty -- no actual URL had been recorded. Web search 2026-08-25 found the live listings directly.",
         "Second HAR capture (2026-08-25) found a large third-party 3mx dealer account, corroborating wb_overlap=confirmed_reseller with real scale (34 SKUs, 6127 items).",
         "User pointed to 3mx's own dealer page, confirming the WB reseller (madro) as an official dealer rather than just a self-declared WB claim; also surfaced 2 more dealers not yet checked for their own WB presence.",
-        "User-supplied browser HAR capture 2026-08-25 of an Ozon search session (\"asel labs\", \"детектор дронов\") surfaced a 3MX-branded «Марс» product listing on Ozon -- a marketplace not previously checked for this entity. No seller-info API call was captured, so the listing's own account is not yet ID-confirmed to the manufacturer's ИНН; recorded as a listing lead with that caveat, same tier as the unresolved dealer identities above."
+        "User-supplied browser HAR capture 2026-08-25 of an Ozon search session (\"asel labs\", \"детектор дронов\") surfaced a 3MX-branded «Марс» product listing on Ozon -- a marketplace not previously checked for this entity. No seller-info API call was captured, so the listing's own account is not yet ID-confirmed to the manufacturer's ИНН; recorded as a listing lead with that caveat, same tier as the unresolved dealer identities above.",
+        "User-supplied browser HAR capture 2026-08-25 (www.911.har) of «Макс 911»'s own Ozon seller page (recovered from a truncated/corrupted HAR file by salvaging the 654 of 655 fully-written entries) resolved that dealer's Ozon storefront: self-declared title \"МАКС 911- офиц. дилер 3mx\", sells 3mx/«Булат»-branded detectors -- matches the manufacturer's own dealer-page claim. Legal ИНН/ОГРН still unresolved (sellerTransparency widget not captured)."
       ]
     },
     "ooo-tskbr": {
