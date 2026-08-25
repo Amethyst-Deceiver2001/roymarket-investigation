@@ -1,0 +1,198 @@
+# {{ display_name }}{% if name_ru and name_ru != display_name %} — {{ name_ru }}{% endif %}
+
+{% if brand %}**Brand:** {{ brand }}
+{% endif %}{% if chips %}{% for chip in chips %}`{{ chip.label }}` {% endfor %}
+
+{% endif %}{% if inn %}ИНН {{ inn }}{% endif %}{% if ogrn %} · ОГРН {{ ogrn }}{% endif %}{% if city %} · {{ city }}{% endif %}
+
+## At a glance
+
+{% for item in meta_grid %}- **{{ item.label }}:** {{ item.value_plain }}
+{% endfor %}
+{% if okved_mismatch_note %}
+> **Declared vs. actual activity.** {{ okved_mismatch_note }}
+{% endif %}
+{% if history_tables %}
+## Ownership & corporate history
+
+{% for t in history_tables %}
+### {{ t.title }}
+
+| Value | As of | Note |
+|---|---|---|
+{% for row in t.rows %}| {{ row.value }} | {{ row.as_of or "—" }} | {{ row.note or "" }}{% if row.source %} [{{ row.source }}]{% endif %} |
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% if products %}
+## Products
+
+{% for pr in products %}- **{{ pr.name }}**{% if pr.description %} — {{ pr.description }}{% endif %}{% if pr.source %} [{{ pr.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+{% if financials %}
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+{% for f in financials %}| {{ f.year }} | {{ f.revenue }} | {{ f.profit }} | {% if f.source %}[{{ f.source }}]{% endif %} |
+{% endfor %}
+{% endif %}
+{% if government_contracts %}
+## Government contracts
+
+{% for gc in government_contracts %}- {{ gc.text }}{% if gc.source %} [{{ gc.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+{% if state_programs %}
+## State-program participation
+
+{% for sp in state_programs %}- {{ sp.text }}{% if sp.source %} [{{ sp.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+{% if workforce_history %}
+## Workforce & production scale
+
+| Headcount | As of | Note |
+|---|---|---|
+{% for w in workforce_history %}| {{ w.count or "—" }} | {{ w.as_of or "—" }} | {{ w.note or "" }}{% if w.source %} [{{ w.source }}]{% endif %} |
+{% endfor %}
+{% endif %}
+{% if marketing_claims %}
+## Self-reported marketing claims
+
+{% for m in marketing_claims %}> *{{ m.ru }}*
+> {{ m.en or "" }}
+>
+> — {{ m.context or "" }}{% if m.as_of %} ({{ m.as_of }}){% endif %}{% if m.source %} [{{ m.source }}]{% endif %}
+
+{% endfor %}
+{% endif %}
+{% if battlefield_evidence %}
+## Battlefield evidence
+
+{% for b in battlefield_evidence %}> *{{ b.ru }}*
+> {{ b.en or "" }}
+>
+> — {{ b.context or "" }}{% if b.as_of %} ({{ b.as_of }}){% endif %}{% if b.source %} [{{ b.source }}]{% endif %}
+{% if b.image_path %}
+![{{ b.context or "battlefield evidence" }}]({{ b.image_path }})
+{% endif %}
+{% endfor %}
+{% endif %}
+{% if trademarks %}
+## Trademarks
+
+| Mark | Reg. no. | Filed | Registered | Classes |
+|---|---|---|---|---|
+{% for tm in trademarks %}| {{ tm.title or "—" }} | {{ tm.reg_number or "—" }} | {{ tm.filed or "—" }} | {{ tm.registered or "—" }} | {{ tm.classes or "" }} |
+{% endfor %}
+{% endif %}
+{% if patents %}
+## Patents
+
+| Title | Reg. no. | Filed | Inventors |
+|---|---|---|---|
+{% for pt in patents %}| {{ pt.title or "—" }} | {{ pt.reg_number or "—" }} | {{ pt.filed or "—" }} | {{ pt.inventors or "" }} |
+{% endfor %}
+{% endif %}
+{% if litigation %}
+## Litigation
+
+{% for l in litigation %}- {{ l.text }}{% if l.source %} [{{ l.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+{% if licences %}
+## Licences
+
+{% for l in licences %}- {{ l.text }}{% if l.source %} [{{ l.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+{% if foreign_components %}
+## Foreign components
+
+{% for f in foreign_components %}- {{ f.text }}{% if f.source %} [{{ f.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+{% if sanctions %}
+## Sanctions & screening
+
+{% for s in sanctions %}**{{ s.regimes }}**{% if s.note %} — {{ s.note }}{% endif %}{% if s.source %} [{{ s.source }}]{% endif %}
+
+{% endfor %}
+{% endif %}
+{% if screening_summary %}
+{% for line in screening_summary %}- {{ line }}
+{% endfor %}
+{% endif %}
+{% if egrul_flags %}
+## Registry flags
+
+{% for e in egrul_flags %}- {{ e }}
+{% endfor %}
+{% endif %}
+{% if securing_measures %}
+### Securing measures
+
+{% for s in securing_measures %}- {{ s }}
+{% endfor %}
+{% endif %}
+{% if web_groups %}
+## Web & social presence
+
+{% for g in web_groups %}
+### {{ g.label }}
+
+{% for item in g.links %}- <{{ item.url }}>{% if item.note %} — {{ item.note }}{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% if images_gallery %}
+## Images
+
+{% for img in images_gallery %}- ![{{ img.caption or display_name }}]({{ img.md_path }}){% if img.caption %} — {{ img.caption }}{% endif %}{% if img.source %} [{{ img.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+
+## Principals & persons of interest
+
+{% if principals %}
+{% for p in principals %}
+### {{ p.display_name }}{% if p.fio_ru and p.fio_ru != p.display_name %} — {{ p.fio_ru }}{% endif %}
+
+{% if p.photo_md_path %}![{{ p.display_name }}]({{ p.photo_md_path }})
+{% endif %}{% if p.dob %}- **DOB:** {{ p.dob }}
+{% endif %}{% if p.birthplace %}- **Birthplace:** {{ p.birthplace }}
+{% endif %}{% if p.address %}- **Address:** {{ p.address }}
+{% endif %}{% if p.inn_personal %}- **ИНН:** {{ p.inn_personal }}
+{% endif %}{% for r in p.roles %}- {{ r }}
+{% endfor %}{% if p.sanctions_chip %}- `{{ p.sanctions_chip.label }}`
+{% endif %}{% for s in p.social %}- <{{ s }}>
+{% endfor %}
+{% endfor %}
+{% else %}
+_No named principals linked to this entity yet._
+{% endif %}
+{% if related_entities %}
+## Corporate links
+
+{% for r in related_entities %}- **{{ r.label }}** — {{ r.relationship }}{% if r.source %} [{{ r.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+{% if open_questions %}
+## Open questions
+
+{% for q in open_questions %}- {{ q.text }}{% if q.source %} [{{ q.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+{% if sources_table %}
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+{% for s in sources_table %}| {{ s.id }} | {{ s.type or "—" }} | {{ s.locator_md }} | {{ s.captured_date or "—" }} | {{ s.as_of or "—" }} |
+{% endfor %}
+{% endif %}
+
+---
+_Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

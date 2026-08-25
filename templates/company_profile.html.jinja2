@@ -1,0 +1,335 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ display_name }} — company profile — РОЙ.МАРКЕТ</title>
+<link rel="stylesheet" href="../assets/profile.css">
+</head><body>
+<div class="wrap">
+
+  <header class="mast">
+    <button id="theme-toggle" type="button" aria-pressed="false" style="float:right;background:var(--panel-2);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:.35em .7em;font:inherit;font-size:.85em;cursor:pointer;">☾/☀ theme</button>
+    <p class="kicker">Company profile · РОЙ.МАРКЕТ investigation</p>
+    <div class="profile-head">
+      {% if logo_url %}<img class="entity-logo" src="{{ logo_url }}" alt="{{ display_name }} logo">{% endif %}
+      <div class="profile-head-text">
+        <h1{% if legal_form_gloss %} title="{{ legal_form_gloss }}"{% endif %}>{{ display_name }}</h1>
+        {% if name_ru and name_ru != display_name %}<span class="name-ru">{{ name_ru }}</span>{% endif %}
+        {% if brand %}<span class="name-ru">Brand: {{ brand }}</span>{% endif %}
+        <div class="chip-row">
+          {% for chip in chips %}<span class="tag {{ chip.cls }}">{{ chip.label }}</span>{% endfor %}
+        </div>
+        <p class="meta">
+          {% if inn %}<span>ИНН {{ inn }}</span>{% endif %}
+          {% if ogrn %}<span>ОГРН {{ ogrn }}</span>{% endif %}
+          {% if city %}<span>{{ city }}</span>{% endif %}
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section id="at-a-glance">
+    <p class="eyebrow">At a glance</p>
+    <div class="meta-grid">
+      {% for item in meta_grid %}
+      <div><dt>{{ item.label }}</dt><dd>{{ item.value | safe }}</dd></div>
+      {% endfor %}
+    </div>
+    {% if okved_mismatch_note %}
+    <div class="callout">
+      <span class="lbl">Declared vs. actual activity</span>
+      <p>{{ okved_mismatch_note }}</p>
+    </div>
+    {% endif %}
+  </section>
+
+  {% if history_tables %}
+  <section id="ownership-history">
+    <p class="eyebrow">Ownership &amp; corporate history</p>
+    {% for t in history_tables %}
+    <h3>{{ t.title }}</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
+      <tbody>
+        {% for row in t.rows %}
+        <tr><td>{{ row.value }}</td><td class="num">{{ row.as_of or "—" }}</td><td>{{ row.note or "" }} {% if row.source %}<span class="id">[{{ row.source }}]</span>{% endif %}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if products %}
+  <section id="products">
+    <p class="eyebrow">Products</p>
+    <div class="cards">
+      {% for pr in products %}
+      <div class="card">
+        <h4>{{ pr.name }}</h4>
+        {% if pr.description %}<p>{{ pr.description }}</p>{% endif %}
+        {% if pr.source %}<span class="q">{{ pr.source }}</span>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if financials %}
+  <section id="financials">
+    <p class="eyebrow">Financials</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Year</th><th>Revenue</th><th>Profit</th><th>Source</th></tr></thead>
+      <tbody>
+        {% for f in financials %}
+        <tr><td>{{ f.year }}</td><td class="num">{{ f.revenue }}</td><td class="num">{{ f.profit }}</td><td>{% if f.source %}<span class="id">[{{ f.source }}]</span>{% endif %}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+  </section>
+  {% endif %}
+
+  {% if government_contracts %}
+  <section id="government-contracts">
+    <p class="eyebrow">Government contracts</p>
+    <ul class="plain">
+      {% for gc in government_contracts %}<li>{{ gc.text }} {% if gc.source %}<span class="id">[{{ gc.source }}]</span>{% endif %}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if state_programs %}
+  <section id="state-programs">
+    <p class="eyebrow">State-program participation</p>
+    <ul class="plain">
+      {% for sp in state_programs %}<li>{{ sp.text }} {% if sp.source %}<span class="id">[{{ sp.source }}]</span>{% endif %}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if workforce_history %}
+  <section id="workforce">
+    <p class="eyebrow">Workforce &amp; production scale</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Headcount</th><th>As of</th><th>Note</th></tr></thead>
+      <tbody>
+        {% for w in workforce_history %}
+        <tr><td class="num">{{ w.count or "—" }}</td><td class="num">{{ w.as_of or "—" }}</td><td>{{ w.note or "" }} {% if w.source %}<span class="id">[{{ w.source }}]</span>{% endif %}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+  </section>
+  {% endif %}
+
+  {% if marketing_claims %}
+  <section id="marketing-claims">
+    <p class="eyebrow">Self-reported marketing claims</p>
+    {% for m in marketing_claims %}
+    <blockquote><em>{{ m.ru }}</em>{% if m.en %}<span class="en-gloss">{{ m.en }}</span>{% endif %}
+      <cite>{{ m.context or "" }} {% if m.as_of %}— {{ m.as_of }}{% endif %} {% if m.source %}<span class="id">[{{ m.source }}]</span>{% endif %}</cite>
+    </blockquote>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if battlefield_evidence %}
+  <section id="battlefield-evidence">
+    <p class="eyebrow">Battlefield evidence</p>
+    {% for b in battlefield_evidence %}
+    <blockquote><em>{{ b.ru }}</em>{% if b.en %}<span class="en-gloss">{{ b.en }}</span>{% endif %}
+      <cite>{{ b.context or "" }} {% if b.as_of %}— {{ b.as_of }}{% endif %} {% if b.source %}<span class="id">[{{ b.source }}]</span>{% endif %}</cite>
+    </blockquote>
+    {% if b.image_url %}
+    <div class="gallery"><figure><img src="{{ b.image_url }}" alt="{{ b.context or 'Battlefield evidence photo' }}"><figcaption>{{ b.context or "" }}<span class="src">{{ b.as_of or "" }}{% if b.source %} — {{ b.source }}{% endif %}</span></figcaption></figure></div>
+    {% endif %}
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if trademarks or patents %}
+  <section id="ip">
+    <p class="eyebrow">Intellectual property</p>
+    {% if trademarks %}
+    <h3>Trademarks</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Mark</th><th>Reg. no.</th><th>Filed</th><th>Registered</th><th>Classes</th></tr></thead>
+      <tbody>
+        {% for tm in trademarks %}
+        <tr><td>{{ tm.title or "—" }}</td><td class="num">{{ tm.reg_number or "—" }}</td><td class="num">{{ tm.filed or "—" }}</td><td class="num">{{ tm.registered or "—" }}</td><td>{{ tm.classes or "" }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+    {% endif %}
+    {% if patents %}
+    <h3>Patents</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Title</th><th>Reg. no.</th><th>Filed</th><th>Inventors</th></tr></thead>
+      <tbody>
+        {% for pt in patents %}
+        <tr><td>{{ pt.title or "—" }}</td><td class="num">{{ pt.reg_number or "—" }}</td><td class="num">{{ pt.filed or "—" }}</td><td>{{ pt.inventors or "" }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if litigation or licences or foreign_components %}
+  <section id="legal-supply-chain">
+    <p class="eyebrow">Litigation, licences &amp; foreign components</p>
+    {% if litigation %}<h3>Litigation</h3><ul class="plain">{% for l in litigation %}<li>{{ l.text }} {% if l.source %}<span class="id">[{{ l.source }}]</span>{% endif %}</li>{% endfor %}</ul>{% endif %}
+    {% if licences %}<h3>Licences</h3><ul class="plain">{% for l in licences %}<li>{{ l.text }} {% if l.source %}<span class="id">[{{ l.source }}]</span>{% endif %}</li>{% endfor %}</ul>{% endif %}
+    {% if foreign_components %}<h3>Foreign components</h3><ul class="plain">{% for f in foreign_components %}<li>{{ f.text }} {% if f.source %}<span class="id">[{{ f.source }}]</span>{% endif %}</li>{% endfor %}</ul>{% endif %}
+  </section>
+  {% endif %}
+
+  {% if sanctions or screening_summary %}
+  <section id="sanctions">
+    <p class="eyebrow">Sanctions &amp; screening</p>
+    {% for s in sanctions %}
+    <div class="callout">
+      <span class="lbl">{{ s.regimes }}</span>
+      {% if s.note %}<p>{{ s.note }} {% if s.source %}<span class="id">[{{ s.source }}]</span>{% endif %}</p>
+      {% elif s.source %}<p><span class="id">[{{ s.source }}]</span></p>{% endif %}
+    </div>
+    {% endfor %}
+    {% if screening_summary %}
+    <ul class="plain">
+      {% for line in screening_summary %}<li class="footnote" style="border:none;margin:0;padding:0;">{{ line }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if egrul_flags or securing_measures %}
+  <section id="egrul-flags">
+    <p class="eyebrow">Registry flags</p>
+    {% if egrul_flags %}<ul class="plain">{% for e in egrul_flags %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+    {% if securing_measures %}<h3>Securing measures</h3><ul class="plain">{% for s in securing_measures %}<li>{{ s }}</li>{% endfor %}</ul>{% endif %}
+  </section>
+  {% endif %}
+
+  {% if web_groups %}
+  <section id="web">
+    <p class="eyebrow">Web &amp; social presence</p>
+    {% for g in web_groups %}
+    <h3>{{ g.label }}</h3>
+    <ul class="link-list">
+      {% for item in g.links %}
+      <li><a href="{{ item.url }}">{{ item.url }}</a>{% if item.note %}<br><span class="note">{{ item.note }}</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if images_gallery %}
+  <section id="images">
+    <p class="eyebrow">Images</p>
+    <div class="gallery">
+      {% for img in images_gallery %}
+      <figure><img src="{{ img.url }}" alt="{{ img.caption or display_name }}">
+        <figcaption>{{ img.caption or "" }}{% if img.source %}<span class="src">{{ img.source }}</span>{% endif %}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section id="principals">
+    <p class="eyebrow">Principals &amp; persons of interest</p>
+    {% if principals %}
+    <div class="principal-grid">
+      {% for p in principals %}
+      <div class="person-card">
+        {% if p.photo_url %}<img class="person-photo" src="{{ p.photo_url }}" alt="{{ p.display_name }}">
+        {% else %}<div class="person-photo placeholder">no photo</div>{% endif %}
+        <div class="person-body">
+          <h4>{{ p.display_name }}</h4>
+          {% if p.fio_ru and p.fio_ru != p.display_name %}<span class="person-fio">{{ p.fio_ru }}</span>{% endif %}
+          <dl>
+            {% if p.dob %}<dt>DOB</dt><dd>{{ p.dob }}</dd>{% endif %}
+            {% if p.birthplace %}<dt>Birthplace</dt><dd>{{ p.birthplace }}</dd>{% endif %}
+            {% if p.address %}<dt>Address</dt><dd>{{ p.address }}</dd>{% endif %}
+            {% if p.inn_personal %}<dt>ИНН</dt><dd>{{ p.inn_personal }}</dd>{% endif %}
+          </dl>
+          {% if p.roles %}
+          <ul class="plain" style="margin-top:.6rem;">
+            {% for r in p.roles %}<li>{{ r }}</li>{% endfor %}
+          </ul>
+          {% endif %}
+          {% if p.sanctions_chip %}<span class="tag {{ p.sanctions_chip.cls }}">{{ p.sanctions_chip.label }}</span>{% endif %}
+          {% if p.social %}
+          <ul class="link-list" style="margin-top:.6rem;">
+            {% for s in p.social %}<li><a href="{{ s }}">{{ s }}</a></li>{% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-note">No named principals linked to this entity yet.</p>
+    {% endif %}
+  </section>
+
+  {% if related_entities %}
+  <section id="related">
+    <p class="eyebrow">Corporate links</p>
+    <ul class="plain">
+      {% for r in related_entities %}
+      <li>{% if r.profile_url %}<a href="{{ r.profile_url }}">{{ r.label }}</a>{% else %}<strong>{{ r.label }}</strong>{% endif %} — {{ r.relationship }} {% if r.source %}<span class="id">[{{ r.source }}]</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if open_questions %}
+  <section id="open-questions">
+    <p class="eyebrow">Open questions</p>
+    <ul class="plain">
+      {% for q in open_questions %}<li>{{ q.text }} {% if q.source %}<span class="id">[{{ q.source }}]</span>{% endif %}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if sources_table %}
+  <section id="sources">
+    <p class="eyebrow">Sources cited in this profile</p>
+    <div class="scroll"><table>
+      <thead><tr><th>ID</th><th>Type</th><th>Locator</th><th>Captured</th><th>As of</th></tr></thead>
+      <tbody>
+        {% for s in sources_table %}
+        <tr><td class="id">{{ s.id }}</td><td>{{ s.type or "—" }}</td><td>{% if s.url %}<a href="{{ s.url }}">{{ s.url }}</a>{% else %}{{ s.locator }}{% endif %}</td><td class="num">{{ s.captured_date or "—" }}</td><td class="num">{{ s.as_of or "—" }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+  </section>
+  {% endif %}
+
+  <p class="footnote">Generated from this investigation's registry (<code>data/registry/</code>) by <code>scripts/build_company_profile.py</code>. Not a substitute for reading the underlying primary sources listed above.</p>
+
+</div>
+<script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  var stored = null;
+  try { stored = localStorage.getItem('roymarket-theme'); } catch (e) {}
+  function apply(theme) {
+    if (theme === 'dark' || theme === 'light') { root.setAttribute('data-theme', theme); }
+    else { root.removeAttribute('data-theme'); }
+    if (btn) btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+  }
+  apply(stored);
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var currentlyDark = current === 'dark' || (!current && systemDark);
+      var next = currentlyDark ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem('roymarket-theme', next); } catch (e) {}
+    });
+  }
+})();
+</script>
+</body></html>
