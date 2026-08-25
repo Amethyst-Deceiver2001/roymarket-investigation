@@ -6520,6 +6520,10 @@
             {
               "url": "https://partner.gdrone.ru/",
               "note": "Wholesale/partner portal for the same GoDrone product line."
+            },
+            {
+              "url": "https://yandex.com/maps/org/godrone/218650100504/",
+              "note": "Independent third-party (not manufacturer-controlled) Yandex Maps business listing, user-supplied 2026-08-25, archived s1395, direct curl. Confirms the Большой Симоновский переулок, 2 storefront address exactly (matches the Street View confirmation, s1394). Yandex's own category classification: \"Drones and quadrocopters\" (Дроны и квадрокоптеры) -- an independent categorization, not the manufacturer's own framing. Rating 5.0, 120 reviews, 48-photo gallery -- a real, actively-reviewed business, not a shell listing. Two additional phone numbers not seen elsewhere: +7 495 191-26-02 (landline) and +7 999 444-50-59 (mobile), distinct from both godrone.ru's and набат.рф's contact numbers -- a third contact channel."
             }
           ]
         }
@@ -6540,7 +6544,8 @@
         "User then supplied the seller's own \"О магазине\" legal text directly (2026-08-25, s1392): ООО «ИНВИЖН ТРЕЙД», ОГРН 1237700616614. Cross-checked via egrul.nalog.ru open API: ИНН 7720907532, GD Курдий Людмила, registered 18.09.2023 -- a COMPLETELY DIFFERENT legal entity from ооо-goudron (ИНН 9721203814). Corrected the marketplace_listings note to make clear this large seller's scale/reviews belong to a third-party reseller, not this entity -- avoids a sanctions-relevant misattribution.",
         "User pointed to a dedicated product site, набат.рф (punycode, 2026-08-25, s1393, direct curl archive). Added full pricing/spec detail to products[] -- notably an explicit discounted 'military buyer' price tier (100,000-106,000₽ vs 115,000-120,000₽ standard/legal-entity pricing), a stronger and more concrete signal than the general ЦБСТ-working-relationship quote already on file. Also surfaced a marketing comparison against ooo-trimiks-bulat-3mx's «Булат» detector by a self-described military-affairs blogger/«Соловьёв LIVE» host -- recorded as the site's own paraphrase, not verified against the blogger's original content, per this project's verbatim-quote discipline.",
         "User reminded to also capture self-incriminating marketing copy verbatim, not just paraphrase around it. Re-checked набат.рф's raw HTML for СВО/воен mentions beyond the pricing table already recorded: the site's own hero-section tagline reads verbatim \"Защита техники и личного состава в условиях СВО\" -- added to products[] as a direct quote, since it explicitly markets the detector for combat use in the war rather than as generic security equipment.",
-        "User supplied a Street View screenshot (2026-08-25, s1394) confirming the набат.рф site's Большой Симоновский переулок, 2 address is a genuine physical storefront, not a fake/placeholder address -- signage \"GODRONE\"/\"Gd Home\", with a militarized soldier-silhouette decal on the door. Not added to address_history (that field tracks the EGRUL-registered office over time, not an additional retail/showroom location) -- documented in the web.sites note instead."
+        "User supplied a Street View screenshot (2026-08-25, s1394) confirming the набат.рф site's Большой Симоновский переулок, 2 address is a genuine physical storefront, not a fake/placeholder address -- signage \"GODRONE\"/\"Gd Home\", with a militarized soldier-silhouette decal on the door. Not added to address_history (that field tracks the EGRUL-registered office over time, not an additional retail/showroom location) -- documented in the web.sites note instead.",
+        "User pointed to GoDrone's Yandex Maps business listing (2026-08-25, s1395, direct curl archive). Independent (non-manufacturer-controlled) third-party corroboration: same Большой Симоновский переулок, 2 address, Yandex's own \"Drones and quadrocopters\" category classification, 5.0 rating/120 reviews/48-photo gallery, plus two more phone numbers not seen on either godrone.ru or набат.рф."
       ]
     },
     "ooo-intek-bespilotnye-sistemy": {
