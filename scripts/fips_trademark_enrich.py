@@ -43,6 +43,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import html as html_lib
 import json
 import re
 import time
@@ -55,9 +56,9 @@ SOURCES_DIR = REPO / "data" / "sources"
 BASE = "https://www.fips.ru/registers-doc-view/fips_servlet"
 USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
               "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
-DELAY_SECONDS = 3.0
-RETRY_BACKOFF_SECONDS = 20.0
-MAX_RETRIES = 3
+DELAY_SECONDS = 8.0
+RETRY_BACKOFF_SECONDS = 30.0
+MAX_RETRIES = 5
 
 
 def slugify_date(d: str | None) -> str:
@@ -127,12 +128,12 @@ def last_holder(flat: str) -> str | None:
     )
     if not matches:
         return None
-    return re.sub(r"\s+", " ", matches[-1]).strip(" |")
+    return html_lib.unescape(re.sub(r"\s+", " ", matches[-1]).strip(" |"))
 
 
 def goods_classes(flat: str) -> list[str]:
     m = re.search(
-        r"Классы МКТУ и перечень товаров.{0,40}?\|\s*(.*?)\s*(?:Делопроизводство|Извещения|$)",
+        r"Классы МКТУ и перечень товаров.{0,40}?\|\s*(.*?)\s*(?:Делопроизводство|Извещения|\(function|$)",
         flat,
         re.S,
     )
@@ -141,24 +142,25 @@ def goods_classes(flat: str) -> list[str]:
     block = m.group(1)
     # classes are separated by " | NN - text | " runs; split on the class-number pattern
     parts = re.split(r"\|\s*(?=\d\d\s*-\s)", block)
-    return [re.sub(r"\s+", " ", p).strip(" |") for p in parts if re.match(r"\s*\d\d\s*-", p)]
+    return [html_lib.unescape(re.sub(r"\s+", " ", p).strip(" |"))
+            for p in parts if re.match(r"\s*\d\d\s*-", p)]
 
 
 def extract_image_url(html: str) -> str | None:
-    m = re.search(r'\(540\).*?<a href="([^"]+\.jpg)"', html, re.S)
+    m = re.search(r'\(540\).*?<a href="([^"]+\.(?:jpg|JPG))"', html, re.S)
     return m.group(1) if m else None
 
 
 def parse_record(html: str) -> dict:
     flat = flatten(html)
     return {
-        "reg_number": field(flat, r"Номер\s+регистрации:"),
+        "reg_number": field(flat, r"Номер\s+(?:государственной\s+)?регистрации:"),
         "application_number": field(flat, r"Номер заявки:"),
         "priority_date": field(flat, r"(?:Дата приоритета|Приоритет):"),
         "filed": field(flat, r"Дата подачи заявки:"),
         "registered": field(flat, r"Дата (?:государственной )?регистрации:"),
         "expires": field(flat, r"Дата истечения срока действия (?:регистрации|исключительного права):"),
-        "mark_type": field(flat, r"вида знака.{0,40}?характеристики", value_pattern=r"([^|]+)"),
+        "mark_type": field(flat, r"вид[уа] знака.{0,40}?характеристики", value_pattern=r"([^|]+)"),
         "holder": last_holder(flat),
         "goods_classes": goods_classes(flat),
         "has_image": extract_image_url(html) is not None,
@@ -172,32 +174,36 @@ def main() -> None:
     args = ap.parse_args()
 
     targets = collect_targets()
+    pending = []
+    for t in targets:
+        date_slug = slugify_date(t.get("filed"))
+        base_name = f"TRADEMARK_RU{t['reg_number']}_{date_slug}_{t['slug']}"
+        if not (SOURCES_DIR / f"{base_name}.json").exists():
+            pending.append(t)
     if args.limit is not None:
-        targets = targets[: args.limit]
+        pending = pending[: args.limit]
 
-    print(f"processing {len(targets)} trademark record(s) ...")
+    print(f"{len(targets) - len(pending)} already archived, "
+          f"processing {len(pending)} pending record(s) ...")
     ok, failed = 0, []
-    for i, t in enumerate(targets, 1):
+    for i, t in enumerate(pending, 1):
         reg = t["reg_number"]
         slug = t["slug"]
         date_slug = slugify_date(t.get("filed"))
         base_name = f"TRADEMARK_RU{reg}_{date_slug}_{slug}"
         json_path = SOURCES_DIR / f"{base_name}.json"
-        if json_path.exists():
-            print(f"  [{i}/{len(targets)}] {base_name}: already have JSON, skipping")
-            continue
 
         url = f"{BASE}?DB=RUTM&DocNumber={reg}&TypeFile=html"
         try:
             html = fetch(url)
         except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as ex:
-            print(f"  [{i}/{len(targets)}] {base_name}: FAILED {ex}")
+            print(f"  [{i}/{len(pending)}] {base_name}: FAILED {ex}")
             failed.append((base_name, url))
             time.sleep(DELAY_SECONDS)
             continue
 
         if "Товарные знаки" not in html and "товарного знака" not in html:
-            print(f"  [{i}/{len(targets)}] {base_name}: unexpected content, skipping (manual check needed)")
+            print(f"  [{i}/{len(pending)}] {base_name}: unexpected content, skipping (manual check needed)")
             failed.append((base_name, url))
             time.sleep(DELAY_SECONDS)
             continue
@@ -217,7 +223,7 @@ def main() -> None:
                 print(f"    (image fetch failed: {ex})")
 
         json_path.write_text(json.dumps(parsed, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"  [{i}/{len(targets)}] {base_name}: wrote html+json"
+        print(f"  [{i}/{len(pending)}] {base_name}: wrote html+json"
               f"{'+jpg' if img_url else ''} -- {parsed.get('mark_type') or '?'}")
         ok += 1
         time.sleep(DELAY_SECONDS)
