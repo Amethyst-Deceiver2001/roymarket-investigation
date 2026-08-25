@@ -15789,7 +15789,7 @@
     "products": [
       {
         "name_ru": "«Набат v3»",
-        "description": "Drone detector, third iteration, tested 04.08.2026 — 200-8800 MHz detection range, also intercepts analog video signal. Per the entity's own dedicated product site (набат.рф, s1393): detection radius up to 2 km, tracks up to 7 drones simultaneously, 1.8\" display, 2x removable 6800 mAh batteries, IP66, 5-9h battery life. Pricing tiers: retail 115,000₽; bank transfer (военным/\"to military\") 100,000₽; card/SBP standard 115,000₽; card/SBP military 106,000₽; legal entities 120,000₽ incl. VAT -- an explicit discounted military-buyer price tier, not just a generic bulk discount. SELF-INCRIMINATING MARKETING COPY, verbatim from the site's own hero-section tagline: \"Защита техники и личного состава в условиях СВО\" (\"Protection of equipment and personnel in the conditions of the SVO [Russia's official euphemism for its war on Ukraine]\") -- the product is marketed directly and explicitly for combat use in that war, not framed as generic/dual-use civilian security equipment.",
+        "description": "Drone detector, third iteration, tested 04.08.2026 — 200-8800 MHz detection range, also intercepts analog video signal. Per the entity's own dedicated product site (набат.рф, s1393): detection radius up to 2 km, tracks up to 7 drones simultaneously, 1.8\" display, 2x removable 6800 mAh batteries, IP66, 5-9h battery life. Pricing tiers: retail 115,000₽; bank transfer (военным/\"to military\") 100,000₽; card/SBP standard 115,000₽; card/SBP military 106,000₽; legal entities 120,000₽ incl. VAT -- an explicit discounted military-buyer price tier, not just a generic bulk discount. SELF-INCRIMINATING MARKETING COPY, verbatim from the site's own hero-section tagline: \"Защита техники и личного состава в условиях СВО\" (\"Protection of equipment and personnel in the conditions of the SVO [Russia's official euphemism for its war on Ukraine]\") -- the product is marketed directly and explicitly for combat use in that war, not framed as generic/dual-use civilian security equipment. INDEPENDENTLY CONFIRMED by real-world customer testimony -- Yandex Maps review by \"Антон М.\" (5★, 20.02.2025, s1396): \"Заказывал систему Набат для наших военнослужащих в зоне СВО. Сервис на высшем уровне. Проконсультировали и помогли с выбор. Быстро оплатил и быстро получил. К устройству нареканий нет, свои задачи выполняет.\" (\"Ordered the Nabat system for our servicemen in the SVO zone... No complaints about the device, it performs its tasks.\") -- a customer, not the manufacturer, directly confirming combat-zone end use. Two more reviews (s1396) describe the same store fulfilling urgent purchases \"для фронта\"/\"на СВО\" of other equipment (a thermal-imaging DJI Mavic 3T; a discount granted specifically because funds were crowdfunded \"для СВО\"), and the showroom's own wall signage (photographed, see images[]) reads \"СВОих не бросаем\" -- a wordplay on \"СВО\" embedded in \"своих\" (\"our own\"), displayed physically in-store.",
         "source_id": "s1393"
       }
     ],
@@ -15901,7 +15901,28 @@
         }
       ]
     },
-    "images": [],
+    "images": [
+      {
+        "path": "images/ooo-goudron_showroom_svoih-ne-brosaem-slogan.jpg",
+        "caption": "GoDrone showroom interior, official \"Marketing GoDrone\" Yandex Maps upload. Wall signage reads \"СВОих не бросаем\" -- a wordplay embedding \"СВО\" (Russia's official euphemism for its war on Ukraine) inside \"своих\" (\"our own/ours\"), roughly \"We don't abandon our own [in the SVO]\". Self-incriminating physical-showroom marketing from the store's own official account, not a customer upload.",
+        "source_id": "s1396"
+      },
+      {
+        "path": "images/ooo-goudron_storefront_exterior.jpg",
+        "caption": "Storefront exterior, Большой Симоновский переулок, 2 -- customer photo, matches the independently-confirmed Street View location.",
+        "source_id": "s1396"
+      },
+      {
+        "path": "images/ooo-goudron_showroom_overview.jpg",
+        "caption": "General showroom interior, official \"Marketing GoDrone\" upload -- professional retail buildout.",
+        "source_id": "s1396"
+      },
+      {
+        "path": "images/ooo-goudron_product_display_wall.jpg",
+        "caption": "Product display wall, customer photo -- mostly DJI consumer drone stock, confirming the broader consumer-electronics retail operation alongside the Nabat/counter-drone line.",
+        "source_id": "s1396"
+      }
+    ],
     "open_questions": [
       {
         "question": "Two GoDrone-branded Ozon sellers found. The larger one (\"GoDrone\", seller_id 3980614) is RESOLVED as a different legal entity (ООО «ИНВИЖН ТРЕЙД», ИНН 7720907532 -- see marketplace_listings note) -- a third-party reseller, not this entity itself. The smaller \"GD\" account (seller_id 2520832) remains genuinely unresolved -- its sellerLegalInformation modal has still never been captured with content, and a direct curl attempt at the endpoint was blocked by Ozon's antibot (307).",
@@ -15933,7 +15954,8 @@
       "User pointed to a dedicated product site, набат.рф (punycode, 2026-08-25, s1393, direct curl archive). Added full pricing/spec detail to products[] -- notably an explicit discounted 'military buyer' price tier (100,000-106,000₽ vs 115,000-120,000₽ standard/legal-entity pricing), a stronger and more concrete signal than the general ЦБСТ-working-relationship quote already on file. Also surfaced a marketing comparison against ooo-trimiks-bulat-3mx's «Булат» detector by a self-described military-affairs blogger/«Соловьёв LIVE» host -- recorded as the site's own paraphrase, not verified against the blogger's original content, per this project's verbatim-quote discipline.",
       "User reminded to also capture self-incriminating marketing copy verbatim, not just paraphrase around it. Re-checked набат.рф's raw HTML for СВО/воен mentions beyond the pricing table already recorded: the site's own hero-section tagline reads verbatim \"Защита техники и личного состава в условиях СВО\" -- added to products[] as a direct quote, since it explicitly markets the detector for combat use in the war rather than as generic security equipment.",
       "User supplied a Street View screenshot (2026-08-25, s1394) confirming the набат.рф site's Большой Симоновский переулок, 2 address is a genuine physical storefront, not a fake/placeholder address -- signage \"GODRONE\"/\"Gd Home\", with a militarized soldier-silhouette decal on the door. Not added to address_history (that field tracks the EGRUL-registered office over time, not an additional retail/showroom location) -- documented in the web.sites note instead.",
-      "User pointed to GoDrone's Yandex Maps business listing (2026-08-25, s1395, direct curl archive). Independent (non-manufacturer-controlled) third-party corroboration: same Большой Симоновский переулок, 2 address, Yandex's own \"Drones and quadrocopters\" category classification, 5.0 rating/120 reviews/48-photo gallery, plus two more phone numbers not seen on either godrone.ru or набат.рф."
+      "User pointed to GoDrone's Yandex Maps business listing (2026-08-25, s1395, direct curl archive). Independent (non-manufacturer-controlled) third-party corroboration: same Большой Симоновский переулок, 2 address, Yandex's own \"Drones and quadrocopters\" category classification, 5.0 rating/120 reviews/48-photo gallery, plus two more phone numbers not seen on either godrone.ru or набат.рф.",
+      "User asked to collect visuals and review quotes to enrich the profile (2026-08-25). HAR capture of the Yandex Maps reviews/photos tabs (s1396, 50 of 120 total reviews, 48 photos) surfaced strong independent corroboration of combat-zone end use: a customer review directly confirming a «Набат» purchase \"для наших военнослужащих в зоне СВО\", two more reviews describing urgent purchases \"для фронта\"/\"на СВО\" of other equipment, and -- most significant -- the showroom's own official-account photo showing wall signage reading \"СВОих не бросаем\", a deliberate СВО/своих wordplay physically displayed in-store, not just online marketing copy. Added the quotes to products[] and 4 selected photos to images[]/docs/images/ (exterior, the slogan wall, general showroom, product display)."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
