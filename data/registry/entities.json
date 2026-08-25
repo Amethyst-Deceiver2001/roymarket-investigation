@@ -15789,8 +15789,8 @@
     "products": [
       {
         "name_ru": "«Набат v3»",
-        "description": "Drone detector, third iteration, tested 04.08.2026 — 200-8800 MHz detection range, also intercepts analog video signal.",
-        "source_id": null
+        "description": "Drone detector, third iteration, tested 04.08.2026 — 200-8800 MHz detection range, also intercepts analog video signal. Per the entity's own dedicated product site (набат.рф, s1393): detection radius up to 2 km, tracks up to 7 drones simultaneously, 1.8\" display, 2x removable 6800 mAh batteries, IP66, 5-9h battery life. Pricing tiers: retail 115,000₽; bank transfer (военным/\"to military\") 100,000₽; card/SBP standard 115,000₽; card/SBP military 106,000₽; legal entities 120,000₽ incl. VAT -- an explicit discounted military-buyer price tier, not just a generic bulk discount.",
+        "source_id": "s1393"
       }
     ],
     "financials": [
@@ -15871,6 +15871,10 @@
         {
           "url": "https://godrone.ru/",
           "note": "GoDrone -- confirmed via exact director-name match (Козлов Дмитрий Сергеевич) and product match (site describes СТМ детектор дронов «НАБАТ», entity's own products[] lists «Набат v3»)."
+        },
+        {
+          "url": "https://xn--80aac0c2a.xn--p1ai/",
+          "note": "набат.рф -- dedicated single-product site for «Набат v3» (punycode Cyrillic domain), user-supplied 2026-08-25, archived s1393. Lists address \"Большой Симоновский переулок, 2\", Москва -- DIFFERENT from the entity's EGRUL address (111677, Некрасовка); not yet reconciled (could be a retail/showroom location distinct from the registered office). Includes a third-party comparison: the site paraphrases (not a direct quote) a comparison by Кирилл Фёдоров -- self-described \"российский блогер и военный эксперт\", host on «Соловьёв LIVE» -- of «Набат» against «Булат» (ooo-trimiks-bulat-3mx's own detector), concluding «Набат» is more compact/waterproof/impact-resistant and tracks more drones simultaneously. Marketing copy, not verified against Фёдоров's own original content -- treat as the manufacturer's own claim about a third party's opinion, not a confirmed independent endorsement."
         }
       ],
       "telegram": [],
@@ -15921,7 +15925,8 @@
       "web.sites was empty. Web search 2026-08-25, confirmed via director name and product name match, not just company-name similarity.",
       "User-supplied browser HAR captures 2026-08-25 (Ozon search/seller page for \"GD\", Wildberries search for \"набат детектор\") answered the standing wb_overlap question with much more specific evidence than the earlier ИНН-only check. WB: all 4 search results independently ID-checked via wbbasket.ru's own supplier-by-id endpoint -- every one is an unrelated Chinese cross-border seller (Fujian/Henan/Tianjin trading companies), none is this entity. Confirms wb_overlap=none_found rather than just leaving it unexplained. Ozon: a seller display-named \"GD\" sells a directly GoDrone-branded item plus a Nabat-compatible battery -- plausible but not ID-confirmed (legal-info modal not captured, direct curl blocked by antibot) -- logged as an open_question rather than promoted as confirmed.",
       "User pointed to a second, much larger Ozon seller (2026-08-25, s1391): \"GoDrone\" (seller_id 3980614, distinct from \"GD\" above), 4.8 rating, 3,358 reviews -- genuine commercial scale, consistent with \"godrone is a big seller on Ozon.\" Same identity gap as the smaller account: no sellerLegalInformation content captured for either across two separate HAR sessions. Recorded as a second brand-match marketplace_listings lead, not promoted to confirmed.",
-      "User then supplied the seller's own \"О магазине\" legal text directly (2026-08-25, s1392): ООО «ИНВИЖН ТРЕЙД», ОГРН 1237700616614. Cross-checked via egrul.nalog.ru open API: ИНН 7720907532, GD Курдий Людмила, registered 18.09.2023 -- a COMPLETELY DIFFERENT legal entity from ооо-goudron (ИНН 9721203814). Corrected the marketplace_listings note to make clear this large seller's scale/reviews belong to a third-party reseller, not this entity -- avoids a sanctions-relevant misattribution."
+      "User then supplied the seller's own \"О магазине\" legal text directly (2026-08-25, s1392): ООО «ИНВИЖН ТРЕЙД», ОГРН 1237700616614. Cross-checked via egrul.nalog.ru open API: ИНН 7720907532, GD Курдий Людмила, registered 18.09.2023 -- a COMPLETELY DIFFERENT legal entity from ооо-goudron (ИНН 9721203814). Corrected the marketplace_listings note to make clear this large seller's scale/reviews belong to a third-party reseller, not this entity -- avoids a sanctions-relevant misattribution.",
+      "User pointed to a dedicated product site, набат.рф (punycode, 2026-08-25, s1393, direct curl archive). Added full pricing/spec detail to products[] -- notably an explicit discounted 'military buyer' price tier (100,000-106,000₽ vs 115,000-120,000₽ standard/legal-entity pricing), a stronger and more concrete signal than the general ЦБСТ-working-relationship quote already on file. Also surfaced a marketing comparison against ooo-trimiks-bulat-3mx's «Булат» detector by a self-described military-affairs blogger/«Соловьёв LIVE» host -- recorded as the site's own paraphrase, not verified against the blogger's original content, per this project's verbatim-quote discipline."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
