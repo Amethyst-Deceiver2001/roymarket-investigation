@@ -1,9 +1,9 @@
 [
   {
     "slug": "vladimir-vadimovich-yakushev",
-    "fio_ru": "Владимир Вадимович Якушев",
+    "fio_ru": "Владимир Владимирович Якушев",
     "name_latin": null,
-    "dob": null,
+    "dob": "1968-06-14",
     "birthplace": null,
     "address": null,
     "inn_personal": null,
@@ -26,7 +26,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": "The most senior figure in the structure. Per Sidyakin's own account (United Russia's \"Переговорка\" podcast, published 21.04.2025, referencing \"2 months ago\"), he took the Supervisory Board chair around February 2025 — not previously dated in this brief. Primary doc",
+    "notes": "Corrected patronymic 2026-08-25: was recorded as \"Вадимович\", but every independent source found (ru.wikipedia.org/wiki/Якушев,_Владимир_Владимирович, council.gov.ru, TASS encyclopedia tass.ru/encyclopedia/person/yakushev-vladimir-vladimirovich, er.ru) gives \"Владимирович\" -- likely an original transcription/OCR slip, not a different person (the role/title already on file, \"First Deputy Chairman of the Federation Council\", matches this Yakushev exactly). b. 14.06.1968, Neftekamsk, Bashkir ASSR. Career: Tyumen governor 2005-2018, Minister of Construction/Housing 2018-2020, presidential envoy to the Urals Federal District 2020-2024, now First Deputy Chairman of the Federation Council / acting Secretary of United Russia's General Council. ЦБСТ role confirmed independently via United Russia's own site (er.ru/activity/news/vladimir-yakushev-predstavil-iniciativy-po-razvitiyu-voennyh-i-dvojnyh-tehnologij-na-baze-centra-bespilotnyh-sistem): presented military/dual-use tech development initiatives at ЦБСТ. A Nov 2024 MK Tambov piece (tambov.mk.ru) shows him visiting a drone-production project (\"Тамбовский рой\") already, predating the claimed early-2025 chairmanship date -- his UAV-industry involvement may have started earlier than previously dated.",
     "sources": [],
     "_verified": false,
     "_origin": "brief:supervisory_board-table",
@@ -35,6 +35,10 @@
       "position": "Chairman of the Supervisory Board; Secretary of United Russia’s General Council; First Deputy Chairman of the Federation Council",
       "note": "The most senior figure in the structure. Per Sidyakin's own account (United Russia's \"Переговорка\" podcast, published 21.04.2025, referencing \"2 months ago\"), he took the Supervisory Board chair around February 2025 — not previously dated in this brief. Primary doc"
     },
+    "_corrected": [
+      "2026-08-25: patronymic correction + DOB fill via OSINT research pass -- resolves the biggest identifying-detail gap on the network's most senior figure."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [
@@ -95,9 +99,9 @@
   },
   {
     "slug": "andrey-bezrukov",
-    "fio_ru": "Андрей Безруков",
+    "fio_ru": "Андрей Анатольевич Безруков",
     "name_latin": null,
-    "dob": "1960-08-30",
+    "dob": null,
     "birthplace": null,
     "address": null,
     "inn_personal": null,
@@ -127,7 +131,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": "The organisation’s public voice; makes the technopark and РОЙ.МАРКЕТ announcements personally. Primary doc",
+    "notes": "IDENTITY FLAG: the DOB previously on file (1960-08-30) traces to OpenSanctions match Q24963220 — but that record is for a DIFFERENT Андрей Безруков: Андрей Олегович Безруков, b. 1960, a former SVR 'illegal' who operated in North America under the alias Donald Heathfield for 20+ years before being exposed and deported in the 2010 US-Russia spy swap (ru.wikipedia.org/wiki/Безруков,_Андрей_Олегович; russkie.org). Press bios of the actual ЦБСТ chairman (TASS: tass.ru/ekonomika/24803745, tass.ru/interviews/22535029; Cyclopedia, sourced from Wikidata) instead describe him as Андрей Анатольевич Безруков, b. 29.07.1986, Leningrad — SPbGU economics 2008, GS Group 2016-19, GD of АО «Рутек» since 2019, Deputy Head of Federation Council Apparatus 2021-2024, ЦБСТ chairman since 2024. Different patronymic, 26-year DOB gap, no press link between the 1986-born executive and any KGB/SVR background. DOB removed pending a primary-source (EGRUL/passport-level) confirmation of which Андрей Безруков is correct -- do not restore 1960-08-30 without checking this note first. The OpenSanctions match itself is left on record below as raw screening evidence (per corrections.json's carry-forward-field rule) but should be treated as a LIKELY NAMESAKE MISMATCH, not a confirmed personal sanction, until resolved.",
     "sources": [],
     "_verified": false,
     "_origin": "brief:supervisory_board-table",
@@ -139,7 +143,8 @@
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
       "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\", position \"Председатель Правления\" -- this is ЦБСТ's own full legal name (ano-tsbst-centre-for-unmanned-systems-technologies), and \"Председатель Правления\" is an exact-title match to this record's already-documented Chairman-of-the-Board role. Filled in the previously-null `entity_slug` on that existing role using this corroboration -- the role text itself was already correct, it just wasn't linked to a specific registry entity_slug before now.",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-08-25: OSINT research pass flagged a likely identity mismatch between this record's DOB (inherited from an OpenSanctions match) and the actual ЦБСТ chairman's press-reported biography. See notes field for full reasoning. This is exactly the kind of error the project's ИНН/ОГРН-checksum discipline exists to catch for corporate identifiers -- same seriousness applies to a misattributed personal identity."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -378,7 +383,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": "Announced the military marketplace in Dec 2024 and stated the MoD payment integration. Primary doc",
+    "notes": "Full name Александр Геннадьевич Сидякин, b. 17.11.1977, Segezha, Karelian ASSR (confirmed: duma.gov.ru, ru/en.wikipedia.org, tass.ru/encyclopedia) -- matches DOB already on file. Law degree, Tver State University 1999; PhD in law. State Duma deputy since 2011 (United Russia); 2018-2021 head of the Administration of the Head of Bashkiria; now Deputy Secretary-General of United Russia / head of its Central Executive Committee. No personal ИНН or corporate directorship found on rusprofile/list-org under his name -- appears to have no direct corporate footprint (not confirmed absence, just nothing found). declarator.org holds an income-declaration filing history (person/439): 2020 declared income ₽4,982,756.02; 2017 declared income ₽13,568,373.45, 2,814 m² real estate -- not yet independently re-verified by direct fetch, treat as a lead.",
     "sources": [],
     "_verified": false,
     "_origin": "brief:supervisory_board-table",
@@ -388,7 +393,8 @@
       "note": "Announced the military marketplace in Dec 2024 and stated the MoD payment integration. Primary doc"
     },
     "_corrected": [
-      "2026-08-24 OpenSanctions screening (score 0.92): \"Member of the State Duma... responsible for political and legal support of the aggressive war against Ukraine\" — consistent with, though not identical to, this registry's own role (Secretary of ЦБСТ's Supervisory Board; Head of United Russia's Central Executive Committee) and with the already-archived TRANSCRIPT_20250421_peregovorka-cbst-er-sidyakin-bezrukov.txt, in which this same Сидякин speaks alongside Bezrukov on ЦБСТ's own United Russia podcast. PLAUSIBLE, not personal-ИНН-confirmed — no idNumber returned by OpenSanctions for this match."
+      "2026-08-24 OpenSanctions screening (score 0.92): \"Member of the State Duma... responsible for political and legal support of the aggressive war against Ukraine\" — consistent with, though not identical to, this registry's own role (Secretary of ЦБСТ's Supervisory Board; Head of United Russia's Central Executive Committee) and with the already-archived TRANSCRIPT_20250421_peregovorka-cbst-er-sidyakin-bezrukov.txt, in which this same Сидякин speaks alongside Bezrukov on ЦБСТ's own United Russia podcast. PLAUSIBLE, not personal-ИНН-confirmed — no idNumber returned by OpenSanctions for this match.",
+      "2026-08-25: OSINT research pass -- confirms bio/DOB, adds declared-income lead and notes absence of found corporate footprint."
     ],
     "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
     "opensanctions_matches": [
@@ -1337,7 +1343,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": "Confirmed, not a namesake — see finding 18. Same ГУИР/Major-General title independently documented under his name since Aug 2022 (MoD's own «Патриот» press material); OpenSanctions lists this exact title as the current role of Aleksandr Vladimirovich Osadchuk, FBI-wanted former commander of GRU Unit 74455 (2018 DNC-hack/Guccifer 2.0/DCLeaks indictment), sanctioned by US OFAC, UK FCDO, New Zealand and Ukraine. DOB 17.11.1962, Obninsk. Primary doc",
+    "notes": "Identity confirmed independently (OpenSanctions gives DOB 17.11.1962, Obninsk, Kaluga Oblast -- exact match). Original 2018 US OFAC SDN designation (CAATSA §224, effective 19.12.2018) stems from a US DOJ indictment naming him -- then a Colonel -- as commanding officer of GRU Unit 74455, publicly tracked as \"Sandworm\", tied to 2016 US election-interference/hacking activity (co-indicted: Aleksey Potemkin, Anatoliy Kovalev). By 2022 press appearances (function.mil.ru, tvzvezda.ru) he holds the rank Major-General as \"Начальник ГУИР\" (Head of the Main Directorate for Innovative Development), briefing on UAV/AI topics at Army-2022 -- ГУИР is the connection to this network's ministerial representation. Also listed under UK Cyber Activity sanctions (18.07.2025), New Zealand Russia Sanctions Act (20.02.2026), US Trade CSL/SAM exclusions (30.03.2026), and Ukraine's GUR register (war-sanctions.gur.gov.ua/en/sanctions/persons/1717, page itself 403'd, existence confirmed via search index). One unverified secondary-source claim of a later promotion to Lieutenant-General (2023) -- single low-quality snippet, do not cite without a primary source.",
     "sources": [],
     "_verified": false,
     "_origin": "brief:supervisory_board-table",
@@ -1347,7 +1353,8 @@
       "note": "Confirmed, not a namesake — see finding 18. Same ГУИР/Major-General title independently documented under his name since Aug 2022 (MoD's own «Патриот» press material); OpenSanctions lists this exact title as the current role of Aleksandr Vladimirovich Osadchuk, FBI-wanted former commander of GRU Unit 74455 (2018 DNC-hack/Guccifer 2.0/DCLeaks indictment), sanctioned by US OFAC, UK FCDO, New Zealand and Ukraine. DOB 17.11.1962, Obninsk. Primary doc"
     },
     "_corrected": [
-      "2026-08-24 OpenSanctions screening returned an exact-title match (Head of ГУИР/MoD Innovative Development Directorate, Colonel, commanding officer GRU Unit 74455) for a person this registry's own notes already independently confirmed via MoD's own Aug-2022 «Патриот» press material — DOB and sanctions[] now formalized to match that standing conclusion."
+      "2026-08-24 OpenSanctions screening returned an exact-title match (Head of ГУИР/MoD Innovative Development Directorate, Colonel, commanding officer GRU Unit 74455) for a person this registry's own notes already independently confirmed via MoD's own Aug-2022 «Патриот» press material — DOB and sanctions[] now formalized to match that standing conclusion.",
+      "2026-08-25: OSINT research pass -- confirms identity via DOB, adds GRU Unit 74455/Sandworm/DOJ-indictment background and sanctions-regime detail."
     ],
     "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
     "opensanctions_matches": [
@@ -2474,9 +2481,17 @@
     "inn_personal": "054403029570",
     "roles": [
       {
-        "entity_slug": null,
-        "title": "General Director of both Azimut companies",
-        "body": null,
+        "entity_slug": "ao-pk-azimut",
+        "entity_name": "АО ПК «Азимут»",
+        "title": "Генеральный директор — sanctions designation attaches here (radar/radionavigation production activity description matches this entity, not the holding company)",
+        "from": null,
+        "to": null,
+        "source_id": null
+      },
+      {
+        "entity_slug": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
+        "entity_name": "АО УК «Азимут»",
+        "title": "Генеральный директор; 44% shareholder (Ростех is a co-shareholder of this holding company)",
         "from": null,
         "to": null,
         "source_id": null
@@ -2500,7 +2515,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": "b. 22.10.1982, Khasavyurt, Dagestan; INN 054403029570. Listed on Ukraine’s NAZK “War & Sanctions” register (profile 16429). Which Azimut entity the EU/Swiss/Canadian/NZ designations attach to is unresolved — two same-named companies. Open",
+    "notes": "RESOLVED 2026-08-25: NAZK sanctions profile (sanctions.nazk.gov.ua/ru/sanction-person/16429/, DNS-blocked in our sandbox, read via Google's cached index) describes his company as engaged in \"production of radar, radio navigation equipment and remote control radio equipment\" — this matches АО ПК «Азимут» (Производственная компания, ИНН 7701583410, 548 employees, ₽3.9bn 2021 revenue per checko.ru), NOT АО УК «Азимут» (Управляющая компания, ИНН 7714390623), which is a pure holding vehicle with no production activity. The '44% shareholder, Rostech co-shareholder' fact is real but attaches to the HOLDING company specifically — both facts are genuine, they just describe different entities/roles. checko.ru independently confirms him as GD of both. New lead, not yet added: a brother, Саидов Адиль Абукович, appears on NAZK profile 17771 as a board member of \"JSC AZIMUT\" — which entity not yet confirmed. Personal ИНН cross-reference: rusprofile.ru/person/saidov-ak-054403029570.",
     "sources": [],
     "_verified": false,
     "_origin": "brief:executives-table",
@@ -2510,7 +2525,8 @@
       "note": "b. 22.10.1982, Khasavyurt, Dagestan; INN 054403029570. Listed on Ukraine’s NAZK “War & Sanctions” register (profile 16429). Which Azimut entity the EU/Swiss/Canadian/NZ designations attach to is unresolved — two same-named companies. Open"
     },
     "_corrected": [
-      "2026-08-24 OpenSanctions screening returned match_id \"ru-inn-054403029570\" — this IS the exact personal ИНН (054403029570) already stated in this registry's own pre-existing note, itself sourced to Ukraine's NAZK \"War & Sanctions\" register profile 16429. An identifier match, not a name/score match — formalizing dob/birthplace/inn_personal fields from that same pre-existing, already-sourced note text. Which of the two same-named «Азимут» entities the Western designations attach to remains unresolved (see existing open question)."
+      "2026-08-24 OpenSanctions screening returned match_id \"ru-inn-054403029570\" — this IS the exact personal ИНН (054403029570) already stated in this registry's own pre-existing note, itself sourced to Ukraine's NAZK \"War & Sanctions\" register profile 16429. An identifier match, not a name/score match — formalizing dob/birthplace/inn_personal fields from that same pre-existing, already-sourced note text. Which of the two same-named «Азимут» entities the Western designations attach to remains unresolved (see existing open question).",
+      "2026-08-25: OSINT research pass resolves which Azimut entity the sanctions designation attaches to — АО ПК «Азимут» (production), distinct from his ownership stake in АО УК «Азимут» (holding)."
     ],
     "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
     "opensanctions_matches": [
@@ -4200,7 +4216,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "Role/DOB/ИНН/sanctions all independently corroborated (checko.ru, OpenSanctions match NK-noHRu6gRFtR4BRvsJBrtB3 score 1.0, co-designee Корчагина Ольга Александровна same EU package). New press background: per The Insider (via OCCRP republication), before end of 2022 he worked in currency trading; mid-2023 changed his Telegram avatar to \"Пиранья\" and joined FPV-drone-owner chats (Autel owners, \"Движение ZV Ульяновск\"). Izvestia (cited secondhand) reported СКБ «Пиранья» had supplied 8,000+ drones to the front since winter -- not independently verified against the original Izvestia piece.",
     "sources": [],
     "mentions": 2,
     "_verified": false,
@@ -4214,7 +4230,8 @@
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
       "2026-08-24: resolved this person's `_candidate` role at ООО «СКБ Пиранья» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-skb-piranya, source s0487) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-08-25: OSINT research pass -- adds press background (currency trader to FPV-drone community) and an unverified 8,000+ drone supply claim."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -4323,7 +4340,7 @@
     "dob": "1974-06-29",
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "501306766736",
     "roles": [
       {
         "entity_slug": null,
@@ -4359,7 +4376,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "Founding Генеральный директор of ООО «ЦКБР», 20.01.2022 - 20.05.2025, succeeded by Косолапов Олег Юрьевич; separately учредитель/co-founder since 13.12.2023 (~25% stake, alongside Мазалова Виктория 26%, ООО «Инвестпроектгрупп» 25%, Фонд содействия развитию науки/инноваций/технологий 24%, per audit-it.ru/checko.ru). Personal ИНН not yet checksum-validated independently -- treat as high-confidence lead pending that step.",
     "sources": [],
     "mentions": 2,
     "_verified": false,
@@ -4374,7 +4391,8 @@
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
       "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU236504U1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
       "2026-08-24 cleanup: dropped a stale prose-extracted _candidate role for ООО «ЦКБР», now superseded by the resolved co-inventor role added from the patent sweep (same entity, now with entity_slug/title/source_id).",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-08-25: OSINT research pass -- personal ИНН + GD succession/founder-date detail, audit-it.ru/checko.ru."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -5712,7 +5730,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": "images/shagiakhmetov-ayrat-fatkhutdinovich_portrait_vimaivivs.jpg",
-    "notes": "Паспорт 3608 869401. Тел. +7 921 570-67-88. Email: posenses@gmail.ru, info@prounit.info (указан один раз для Яндекс.Еды, не перепроверено).",
+    "notes": "Паспорт 3608 869401. Тел. +7 921 570-67-88. Email: posenses@gmail.ru, info@prounit.info (указан один раз для Яндекс.Еды, не перепроверено). Prior individual-entrepreneur registration: ИП «Шагиахметов Айрат Фатхутдинович», ОГРНИП 314637508500045, registered 26.03.2014, liquidated 30.08.2022 — declared activity \"дополнительное профессиональное образование\" (unrelated to electronics/counter-UAV), registered address с. Большая Черниговка, Самарская обл. (matches known hometown). rusprofile.ru/person/shagiakhmetov-af-636501708070 — exact ИНН match, high confidence. checko.ru confirms Тримикс's director/founder data is now fully FL-129-ФЗ-restricted at the aggregator level too (not just raw EGRUL), consistent with post-sanctions info suppression.",
     "sources": [],
     "mentions": 2,
     "_verified": false,
@@ -5728,7 +5746,8 @@
       "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2826668C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
       "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
       "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text.",
-      "2026-08-25: photo + corroborating public appearance from @vimaivivs (ВИМАИВиВС, St. Petersburg Military Artillery Museum) post 3195, 17.12.2025 (t.me/vimaivivs/3195, s1409) — ceremony where ООО «Тримикс» handed the museum a «Булат» v.4 detector and a «Таир» individual-warning device, and signed a cooperation agreement with the Михайловская военная артиллерийская академия, with Шагиахметов personally awarding certificates (благодарственные письма) to cadets — same genre as other roster entities' cadet/unit recognition events. Confirms his GD role and personal public-facing promotion of the product line in a military-institutional setting."
+      "2026-08-25: photo + corroborating public appearance from @vimaivivs (ВИМАИВиВС, St. Petersburg Military Artillery Museum) post 3195, 17.12.2025 (t.me/vimaivivs/3195, s1409) — ceremony where ООО «Тримикс» handed the museum a «Булат» v.4 detector and a «Таир» individual-warning device, and signed a cooperation agreement with the Михайловская военная артиллерийская академия, with Шагиахметов personally awarding certificates (благодарственные письма) to cadets — same genre as other roster entities' cadet/unit recognition events. Confirms his GD role and personal public-facing promotion of the product line in a military-institutional setting.",
+      "2026-08-25: OSINT research pass — adds prior (unrelated-industry, now-liquidated) ИП registration."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -7609,7 +7628,7 @@
     "dob": "1998-12-11",
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "771541815944",
     "roles": [
       {
         "entity_slug": "ao-ploshchad",
@@ -7638,7 +7657,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "Only one other registration found under his name: a same-industry (software development) ИП, registered 25.11.2021, voluntarily liquidated 26.07.2023 -- almost exactly when АО «Площадь» was founded (10.07.2023) and shortly before his GD appointment there (04.10.2023). No other founder/shareholder roles found anywhere (rusprofile/checko/Aleph/OpenSanctions). This is a clean single-entity profile, not a multi-company nominee-director pattern -- leans AGAINST a front-man theory, though his young age (b.1998) for a defense-sector GD remains independently worth noting as atypical.",
     "sources": [],
     "mentions": 1,
     "_verified": false,
@@ -7650,7 +7669,8 @@
     },
     "_corrected": [
       "2026-08-24 OpenSanctions screening (score 1.0, exact name match, DOB returned but no notes/context text). PLAUSIBLE only: this registry independently ties a Маслак Никита Юрьевич to АО «Площадь» (ao-ploshchad, already ИНН-confirmed sanctioned this same sweep), circumstantially consistent but not itself identity proof. No personal ИНН cross-check possible.",
-      "2026-08-24: resolved this person's `_candidate` role at АО «Площадь» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-ploshchad, source s0472) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at АО «Площадь» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-ploshchad, source s0472) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-08-25: OSINT research pass -- personal ИНН + corporate-history check for nominee-director pattern (result: none found)."
     ],
     "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
     "opensanctions_matches": [
@@ -13119,7 +13139,7 @@
     "dob": "1986-03-12",
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "502727680236",
     "roles": [
       {
         "entity_slug": "ooo-goudron",
@@ -13148,7 +13168,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "DOB (1986-03-12) independently confirmed via OpenSanctions' own entity page (opensanctions.org/entities/NK-V3f3RiNNYKaoEriEX9zuRy/), not just the aggregate match_id already in this record -- upgrades this from a circumstantial (ГОУДРОН-tie-only) DOB match to a directly source-confirmed one. Same OpenSanctions page supplied the personal ИНН above.",
     "sources": [],
     "mentions": 1,
     "_verified": false,
@@ -13160,7 +13180,8 @@
     },
     "_corrected": [
       "2026-08-24 OpenSanctions screening (score 1.0, exact name match, DOB returned but no notes/context text). PLAUSIBLE only: this registry independently ties a Козлов Дмитрий Сергеевич to ООО «ГОУДРОН» (ooo-goudron, already ИНН-confirmed sanctioned this same sweep) — circumstantially consistent but not itself identity proof, and Козлов is a common surname. A second candidate (Дмитрий Евгеньевич Козлов, score 0.88) was returned and discarded as a different patronymic.",
-      "2026-08-24: resolved this person's `_candidate` role at ООО «ГОУДРОН» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-goudron, source s0458) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ООО «ГОУДРОН» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-goudron, source s0458) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-08-25: OSINT research pass -- personal ИНН + direct DOB confirmation via OpenSanctions entity page."
     ],
     "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
     "opensanctions_matches": [
@@ -26826,14 +26847,15 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": "Тел. +7 905 223-09-99. Email: 2404@radiofid.ru.",
+    "notes": " Sanctions mechanism clarified: designated 23.08.2024 by US State Dept as part of Maxim Marchenko's illicit procurement network, alongside Türkiye-based Kayra Elektronik Limited Sirketi and Hong Kong-based Alice Components Co Ltd — Alice Components shipped >$475,000 of Common High Priority List (CHPL) microelectronics to Russia-based firms in Jan 2024 alone, and Radiofid received at least $475,000 of that. Source: US State Dept press release \"New Measures to Degrade Russia's Wartime Economy\" (2024-08-23), 2021-2025.state.gov/new-measures-to-degrade-russias-wartime-economy/. rusprofile.ru/id/2709548 shows Незнамов flagged as \"former\" руководитель, leadership data concealed since 02.11.2026 per 129-ФЗ — standard sanctioned-entity concealment, not confirmed as an actual departure; needs a fresh EGRUL pull to settle current status.",
     "sources": [],
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
-    ]
+      "2026-08-25: OSINT research pass — adds the specific designation mechanism (Marchenko procurement network / Alice Components CHPL microelectronics) and a leadership-status caveat."
+    ],
+    "_verified_against": null
   },
   {
     "slug": "shandobylo-miloslava-igorevna",
