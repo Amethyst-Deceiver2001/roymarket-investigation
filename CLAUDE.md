@@ -132,6 +132,35 @@ Does not do a live Telegram scrape itself — that's still `tg_scan.py`'s job,
 handed to the user per the policy above. This script only re-fetches public
 preview HTML for posts a scrape already found in the local DB.
 
+**`scripts/zakupki_batch_pull.py`** (added 2026-08-25, generalized from the
+manual pull that confirmed ИП Цыганов's ₽28.176m «Булат»/«Покров» government
+contracts) searches zakupki.gov.ru's contract registry for every ИНН already
+in `entities.json`/`people.json`, using the `supplierTitle` param
+reverse-engineered from a user-supplied DevTools HAR capture — see the
+seeded memory `zakupki_gov_ru_contract_search_api`. Two steps, same shape as
+`tg_media_pull.py`:
+
+- `scan [--limit N] [--inn X] [--kind entity|person] [--force]` — one search
+  per ИНН (186 as of 2026-08-25: 146 entity + 40 personal). A hit count above
+  200 is treated as a broken filter (the `customerInn`/`supplierInn` trap
+  documented in the memory file silently returns the whole ~42M-record
+  registry), not a finding, and isn't saved. Zero-hit ИНН are logged to
+  `data/registry/_zakupki_scan_log.json` (bookkeeping, not `data/sources/`)
+  so a re-run skips them by default; any real hit gets its raw search page
+  archived as `data/sources/ZAKUPKI_<ИНН>_<YYYYMMDD>_supplier-search.html`
+  and printed with its `regNumber`(s).
+- `fetch-contracts --inn X` (reads that ИНН's cached scan hits) or
+  `--reg-numbers A,B,C` — pulls each contract's full `common-info.html`
+  card live, archived as `data/sources/ZAKUPKI_contract_<regNumber>_
+  <YYYYMMDD>.html`. Capped at 50 regNumbers per invocation.
+
+Both steps are live network jobs at scale — handed to the user, not run
+directly or in background, per the policy above (tested inline on a handful
+of ИНН first, same as `egrul_batch_pull.py`'s precedent). A hit is a lead,
+not yet a citable fact — hand-verify each contract card and wire confirmed
+ones into `government_contracts[]` via `corrections.json`, the same way the
+Цыганов contracts were added, before treating it as established.
+
 ## Primary-source documents: check `data/sources/` before re-downloading
 
 `data/sources/` (gitignored — local working copy, ~424MB) holds the EGRUL
