@@ -10362,13 +10362,43 @@
           }
         ],
         "wb_overlap": "confirmed",
+        "products": [
+          "СИБНК",
+          {
+            "name_ru": "Мотор PY3115 1300KV бесколлекторный FPV",
+            "description": "Brushless FPV motor for heavy FPV drones/Long Range/cinelifters, 9-10 inch propeller class.",
+            "source_id": "s1385"
+          },
+          {
+            "name_ru": "Пропеллеры 10 дюймов 3 лопасти FPV (совместимость 3115 900KV)",
+            "description": "10-inch 3-blade FPV propellers, 889 руб, 2CW+2CCW set of 4.",
+            "source_id": "s1385"
+          }
+        ],
+        "web": {
+          "sites": [],
+          "telegram": [],
+          "vk": [],
+          "youtube": [],
+          "marketplace_listings": [
+            {
+              "url": "https://www.ozon.ru/seller/gaskargroup/",
+              "note": "Manufacturer's own Ozon storefront -- ОГРН exact match (1237700273744) confirmed via user-supplied browser HAR capture 2026-08-25 (s1385), independently repeated on the seller page's sellerLegalInformation widget AND the motor product page's own about-seller tooltip. Seller_id 4848816, 5/5 rating, 29 reviews, 94 orders, Premium-shop badge, registered on Ozon ~3 months as of capture."
+            },
+            {
+              "url": "https://www.ozon.ru/product/motor-py3115-1300kv-beskollektornyy-fpv-5183531962/",
+              "note": "PY3115 1300KV brushless FPV motor -- confirmed as this entity's own product via JSON-LD brand field (\"ГАСКАР\") on the product page itself, not just a listing on the storefront."
+            }
+          ],
+          "other": []
+        },
         "open_questions": [
           {
             "question": "rk.2035.university lists 4 product models (БВС Сибиряк, Сибиряк мини, Сибирь-1, Сибирь-2) under manufacturer «ГК \"Гаскар Групп\"» (s1169) -- a group/trading name distinct from any of this registry's three separately-registered Гаскар entities (ooo-gaskar, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii). Not attributed to any one of the three pending a direct check of which entity actually holds this product line.",
             "source_id": "s1169"
           },
           {
-            "question": "products[] lists a single bare entry \"СИБНК\" -- this looks like it may actually be an abbreviation of the 100%-owning founder, ООО «Сибирская навигационная компания», mis-recorded as a product name rather than an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats \"ООО «СИБНК»\" as its own distinct entity name, adding to the confusion. Web search for \"СИБНК\" as a Wildberries product (2026-08-25, to fill the marketplace_listings gap given wb_overlap=confirmed) found nothing -- consistent with this not being a real searchable product name. Needs a human to resolve what wb_overlap=confirmed was actually based on and correct products[] accordingly; marketplace_listings left empty rather than guessed.",
+            "question": "products[] carries a single bare entry \"СИБНК\" -- this looks like it may actually be an abbreviation of the 100%-owning founder, ООО «Сибирская навигационная компания», mis-recorded as a product name rather than an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats \"ООО «СИБНК»\" as its own distinct entity name, adding to the confusion. Web search for \"СИБНК\" as a Wildberries product (2026-08-25) found nothing. RESOLVED (partially) 2026-08-25: wb_overlap=confirmed's actual basis is now independently corroborated on Ozon too -- the entity trades FPV components (motors, propellers) under the brand «ГАСКАР», not «СИБНК». \"СИБНК\" itself remains unexplained and is left as-is pending a human decision on whether to remove it as a mis-recorded entry.",
             "source_id": null
           }
         ]
@@ -10380,7 +10410,8 @@
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0809).",
         "2026-08-24 wb_overlap check: direct ИНН match against wb_watch.db's own sellers table (this project's sister investigation, its own separate scrape of the Wildberries marketplace) — same ИНН as 8 WB-listed item(s), 8/8 of them military-flagged by wb_watch's own classifier. Seller «ООО \"ГАСКАР\"», WB supplier_id 250148061, trademark «ГАСКАР» — FPV components (GPS/compass modules, FPV cameras, motors, power connectors).",
         "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, the one candidate with a real patentee (RU191888U1) belongs to the separate, already-correctly-attributed ooo-gaskar-integratsiya, not this entity; the other 20 have no usable patentee data.",
-        "Web search 2026-08-25 for a Wildberries listing (to fill the marketplace_listings gap on a wb_overlap=confirmed record) surfaced a likely product/entity-name conflation instead of a URL."
+        "Web search 2026-08-25 for a Wildberries listing (to fill the marketplace_listings gap on a wb_overlap=confirmed record) surfaced a likely product/entity-name conflation instead of a URL.",
+        "User-supplied browser HAR captures 2026-08-25 (search results, brand-storefront category page, product page, and seller page) resolved the marketplace_listings gap directly: manufacturer's own Ozon storefront (ОГРН exact match, s1385) plus one directly-confirmed product (PY3115 1300KV FPV motor). Confirms wb_overlap's underlying evidence -- FPV components under brand «ГАСКАР» -- independently on a second marketplace."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
