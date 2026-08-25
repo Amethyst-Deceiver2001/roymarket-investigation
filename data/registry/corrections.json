@@ -9322,8 +9322,8 @@
           },
           {
             "slug": null,
-            "relationship": "Named dealer, per 3mx.ru/dilery/: «Макс 911» (Max 911) — dji911.com, Moscow. Telegram @dji911_operator. No matching EGRUL entity found by name search — legal entity unresolved. CONFIRMED via dji911.com itself (23.08.2026): explicitly states \"официальный дилер\" for 3mx and sells «Булат V.4» (\"Булат-4\"), «Марс», «Инкубатор» (remote antenna) and its own «Neobooster» DJI signal-amplifier accessory. No ИНН/ОГРН/legal name found on the site itself — legal entity still unresolved. ALSO has an Ozon storefront (2026-08-25, user-supplied browser HAR capture, s1384): https://www.ozon.ru/seller/maks-911-4233382/, self-declared page title \"МАКС 911- офиц. дилер 3mx\", lists 3mx/«Булат»-branded detectors -- confirms the Ozon presence but the sellerTransparency (legal-info) widget wasn't captured, so ИНН/ОГРН still unresolved on this marketplace too.",
-            "source_id": "s0558"
+            "relationship": "Named dealer, per 3mx.ru/dilery/: «Макс 911» (Max 911) — dji911.com. Telegram @dji911_operator. CONFIRMED via dji911.com itself (23.08.2026): explicitly states \"официальный дилер\" for 3mx and sells «Булат V.4» (\"Булат-4\"), «Марс», «Инкубатор» (remote antenna) and its own «Neobooster» DJI signal-amplifier accessory. LEGAL ENTITY RESOLVED 2026-08-25 (dji911.com/contacts, s1388, direct curl archive): \"Продажу оборудования 3MX на маркетплейсах осуществляет ИП Коровкин А.А. ИНН 780223272953\" -- full name confirmed via egrul.nalog.ru open API (s1387): ИП Коровкин Александр Анатольевич, ОГРНИП 323784700072451 (active, registered 07.03.2023; a prior ОГРНИП 319784700120061 under the same ИНН was terminated 29.12.2022). Checksum-valid ИНН. Incidental retail dealer, not a network principal -- not otherwise PII-profiled per project policy (same treatment as Мэдро's ИП). Also has an Ozon storefront (2026-08-25, user-supplied browser HAR capture, s1384): https://www.ozon.ru/seller/maks-911-4233382/, self-declared page title \"МАКС 911- офиц. дилер 3mx\" -- not independently ИНН-confirmed to Коровкин on that marketplace (sellerTransparency widget not captured there), but consistent given the matching branding.",
+            "source_id": "s1388"
           },
           {
             "slug": "ooo-pokrov",
@@ -9333,7 +9333,7 @@
         ],
         "open_questions": [
           {
-            "question": "3mx's dealer page (s0558, 23.08.2026) originally flagged all 3 named dealers as unmatched to a legal entity. Мэдро is now resolved (2026-08-25, via WB seller HAR capture): ИП Артемьева Виктория Михайловна, ИНН 350102453754, ОГРНИП 325784700034333. Покров is now cross-linked (2026-08-25, was actually already resolved 2026-08-24 as a standalone registry entity, just not linked from this record): ООО «ПОКРОВ», ИНН 5038189259/ОГРН 1245000068774, own EW jammer line + resold 3mx products. Remaining open: Макс 911's Ozon storefront is located (2026-08-25, s1384) but its legal ИНН/ОГРН is still unresolved -- the sellerTransparency widget wasn't captured; worth the same seller-page HAR-capture approach if pursued.",
+            "question": "3mx's dealer page (s0558, 23.08.2026) originally flagged all 3 named dealers as unmatched to a legal entity. ALL THREE now resolved: Мэдро (2026-08-25, via WB seller HAR capture) -- ИП Артемьева Виктория Михайловна, ИНН 350102453754, ОГРНИП 325784700034333. Покров (2026-08-25, cross-link fix -- was already resolved 2026-08-24, just not linked from this record) -- ООО «ПОКРОВ», ИНН 5038189259/ОГРН 1245000068774. Макс 911 (2026-08-25, dji911.com/contacts + egrul.nalog.ru) -- ИП Коровкин Александр Анатольевич, ИНН 780223272953, ОГРНИП 323784700072451. No further open leads on this dealer roster.",
             "source_id": "s0558"
           }
         ],
@@ -9408,7 +9408,7 @@
             },
             {
               "url": "https://www.ozon.ru/seller/maks-911-4233382/",
-              "note": "«Макс 911» dealer's own Ozon storefront -- confirmed via user-supplied browser HAR capture 2026-08-25 (s1384). Self-declared page title \"МАКС 911- офиц. дилер 3mx\", lists 3mx/«Булат»-branded detectors, matching the manufacturer's own dealer-page claim (3mx.ru/dilery/, s0558). Legal entity (ИНН/ОГРН) still unresolved -- the sellerTransparency widget wasn't captured in this session."
+              "note": "«Макс 911» dealer's own Ozon storefront -- confirmed via user-supplied browser HAR capture 2026-08-25 (s1384). Self-declared page title \"МАКС 911- офиц. дилер 3mx\", lists 3mx/«Булат»-branded detectors, matching the manufacturer's own dealer-page claim (3mx.ru/dilery/, s0558). Legal entity is now resolved via dji911.com/contacts itself (ИП Коровкин Александр Анатольевич, ИНН 780223272953, s1388) -- not independently re-confirmed against this specific Ozon storefront's own sellerTransparency widget (not captured), but the same dealer per the matching branding."
             }
           ],
           "other": [
@@ -9462,7 +9462,8 @@
         "Second HAR capture (2026-08-25) found a large third-party 3mx dealer account, corroborating wb_overlap=confirmed_reseller with real scale (34 SKUs, 6127 items).",
         "User pointed to 3mx's own dealer page, confirming the WB reseller (madro) as an official dealer rather than just a self-declared WB claim; also surfaced 2 more dealers not yet checked for their own WB presence.",
         "User-supplied browser HAR capture 2026-08-25 of an Ozon search session (\"asel labs\", \"детектор дронов\") surfaced a 3MX-branded «Марс» product listing on Ozon -- a marketplace not previously checked for this entity. No seller-info API call was captured, so the listing's own account is not yet ID-confirmed to the manufacturer's ИНН; recorded as a listing lead with that caveat, same tier as the unresolved dealer identities above.",
-        "User-supplied browser HAR capture 2026-08-25 (www.911.har) of «Макс 911»'s own Ozon seller page (recovered from a truncated/corrupted HAR file by salvaging the 654 of 655 fully-written entries) resolved that dealer's Ozon storefront: self-declared title \"МАКС 911- офиц. дилер 3mx\", sells 3mx/«Булат»-branded detectors -- matches the manufacturer's own dealer-page claim. Legal ИНН/ОГРН still unresolved (sellerTransparency widget not captured)."
+        "User-supplied browser HAR capture 2026-08-25 (www.911.har) of «Макс 911»'s own Ozon seller page (recovered from a truncated/corrupted HAR file by salvaging the 654 of 655 fully-written entries) resolved that dealer's Ozon storefront: self-declared title \"МАКС 911- офиц. дилер 3mx\", sells 3mx/«Булат»-branded detectors -- matches the manufacturer's own dealer-page claim. Legal ИНН/ОГРН still unresolved (sellerTransparency widget not captured).",
+        "User asked to scan dji911.com directly (2026-08-25). Homepage (s1389) had no legal identifiers; /contacts (s1388, direct curl archive) did: \"Продажу оборудования 3MX на маркетплейсах осуществляет ИП Коровкин А.А. ИНН 780223272953\" -- checksum-valid. Full name and ОГРНИП resolved via egrul.nalog.ru open API (s1387): Коровкин Александр Анатольевич, ОГРНИП 323784700072451 (active since 07.03.2023). Closes the last of the 3 dealer-identity leads from 3mx's own dealer page (s0558) -- Мэдро and Покров were resolved earlier the same day."
       ]
     },
     "ooo-tskbr": {

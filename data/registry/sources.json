@@ -6780,6 +6780,23 @@
     "_origin": "manifest"
   },
   {
+    "id": "s1387",
+    "type": "egrul_api",
+    "path": "data/sources/EGRULAPI_780223272953_20260825_max911-korovkin.json",
+    "url": null,
+    "captured_date": "2026-08-25",
+    "fiscal_year": null,
+    "as_of": "2026-08-25",
+    "as_of_method": "egrul_api:pull-date",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "2d0f8a9ceeb9e089aeb77d97aedfd4f3c3979b75b158dbc338fdcef65021a5b5",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s0127",
     "type": "egrul_api",
     "path": "data/sources/EGRULAPI_7802693899_20260822_ooo-kravt.json",
@@ -12645,6 +12662,42 @@
     "inns": [],
     "entities": [],
     "sha256": "bd749aaacf9de7a924d42048d445f0949299005c9f61fc8f37ad4f63745e45b5",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s1388",
+    "type": null,
+    "path": "data/sources/SITE_780223272953_20260825_max911-dji911-com-contacts.html",
+    "url": null,
+    "captured_date": "2026-08-25",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "780223272953"
+    ],
+    "entities": [],
+    "sha256": "695a96ab7a90b02adc16334984d4f741ee8d7787ffa06848bf9db73278e3001f",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s1389",
+    "type": null,
+    "path": "data/sources/SITE_780223272953_20260825_max911-dji911-com-homepage.html",
+    "url": null,
+    "captured_date": "2026-08-25",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "284063c12f34c07623f2143b5e10a623ed8537a8daba44cf64cf094bbcdf9ac5",
     "_verified": false,
     "_origin": "manifest"
   },
