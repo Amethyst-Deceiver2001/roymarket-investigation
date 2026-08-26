@@ -21623,7 +21623,14 @@
         "note": "from brief:prose, unverified"
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "Москва, Строительный проезд, 7Ак28",
+        "as_of": "2026-08-25",
+        "source_id": "s2641",
+        "note": "Physical/operating address per a 2026-08-25 job posting (nesiditsa.ru), NOT the registered EGRUL legal address (125362, Москва, вн.тер.г. муниципальный округ Южное Тушино, already on file as `address`) -- kept separate, not overwriting the legal address."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -21758,6 +21765,10 @@
       {
         "source_id": null,
         "text": "germesfpv.ru/fpvdroni (the actual FPV drone model line under the «Гермес» brand) was not retrievable via WebFetch (23.08.2026, likely JS-rendered) — only the comms/mast/receiver line was extracted. A direct browser visit is needed to complete this catalog."
+      },
+      {
+        "source_id": "s2641",
+        "text": "2026-08-25 job posting (Менеджер по работе с маркетплейсами) explicitly requires managing \"6-8 маркетплейсов, включая специализированные площадки, связанные с тематикой БПЛА\" (6-8 marketplaces including specialized UAV-topic platforms) -- corroborates the multi-marketplace sales pattern already documented (Ozon, налетай.рф via the ИП Черепкова storefront -- see web.marketplace_listings[]). Posting also names ВсеИнструменты.ру and Avito as marketplaces the company has experience with, alongside Ozon/Яндекс.Маркет -- not yet checked for this entity's own listings on those platforms."
       }
     ],
     "sources": [],
@@ -21797,7 +21808,8 @@
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 10 candidates -- all belong to an unrelated individual (Черепкова Нина Сергеевна) or an unrelated company (ООО «Аргус-М»), both disinfection/lighting equipment, not this entity's own name.",
       "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block.",
       "2026-08-26: new product line found via налетай.рф catalog (ip-cherepkova seller listing, s2627) -- ГУСЬ-7 kinetic interceptor, not previously in products[].",
-      "2026-08-26: product photo pulled from налетай.рф CDN for the newly-documented ГУСЬ-7 product."
+      "2026-08-26: product photo pulled from налетай.рф CDN for the newly-documented ГУСЬ-7 product.",
+      "2026-08-27: nesiditsa.ru job vacancy #136610779 (posted 2026-08-25, s2641) for a marketplace-manager role -- confirms operating address distinct from EGRUL legal address, and directly corroborates the multi-marketplace sales strategy (explicit mention of UAV-specialized platforms) already documented via the налетай.рф/Ozon findings. Verified via raw fetch, not just WebFetch summary, per this project's webfetch_hallucination_on_blocked_fips caution."
     ],
     "_verified_against": " Also: germesfpv.ru read directly 23.08.2026.",
     "_egrul_crosschecked": "2026-08-22",
