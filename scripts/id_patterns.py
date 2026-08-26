@@ -51,8 +51,16 @@ def is_noise_quote(name: str) -> bool:
     return False
 
 
-# ИНН (10 or 12 digits) / ОГРН (13 or 15 digits), anchored to a label
-RE_INN = re.compile(r'\bИНН[:\s]*([0-9]{10}|[0-9]{12})\b')
+# ИНН (10 or 12 digits) / ОГРН (13 or 15 digits), anchored to a label.
+# Official letterheads routinely write the combined "ИНН/КПП 7701356086/
+# 770301001" form (found live OCR'ing a Moscow-government default-notice
+# PDF) — a bare `ИНН[:\s]*` stops at the "/КПП" text and never reaches the
+# digits at all, silently returning zero ИНН hits on a document whose own
+# letterhead states one in plain sight. `(?:/КПП)?` absorbs that label
+# variant before the digits, and the trailing `(?:/\d{9})?` absorbs the
+# КПП's own digits after the slash — a bare "ИНН: 12345..." with no КПП
+# suffix still matches exactly as before.
+RE_INN = re.compile(r'\bИНН(?:/КПП)?[:\s]*([0-9]{10}|[0-9]{12})(?:/\d{9})?\b')
 RE_OGRN = re.compile(r'\bОГРН[:\s]*([0-9]{13}|[0-9]{15})\b')
 # Role title + a 2-3 word Capitalized name
 ROLE_TITLES = [

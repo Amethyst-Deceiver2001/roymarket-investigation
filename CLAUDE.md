@@ -309,6 +309,14 @@ if a real malformed-data incident calls for it, not preemptively.
   source it was checked against.** Applied last by the extractor, so
   regenerating never silently reverts a verified correction. Add corrections
   here rather than editing generated records in place.
+  **Split 2026-08-26** into `corrections_entities.json` (`entities`,
+  `add_entities`) and `corrections_people.json` (`people`,
+  `people_add_entities`) — the single file had grown to 23k lines/1.5MB.
+  Same shape, same semantics, just two files instead of one; "corrections.json"
+  below and elsewhere in this doc/memory refers to that mechanism generically,
+  not a literal remaining file. `extract_registry.py`'s `load_corrections()`
+  reads both and merges by key — add a fix to whichever file's `entities`/
+  `people` section matches what you're correcting.
   **Exception — cannot be used for raw screening fields.** Any field listed in
   `extract_registry.py`'s `ENTITY_CARRY_FORWARD_FIELDS`/
   `PEOPLE_CARRY_FORWARD_FIELDS` (`gur_matches`, `opensanctions_matches`,

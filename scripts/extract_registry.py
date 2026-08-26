@@ -42,6 +42,28 @@ REPO = Path(__file__).resolve().parent.parent
 SNAPSHOT = REPO / "docs" / "_archive" / "index-2026-08-21.html"
 OUT_DIR = REPO / "data" / "registry"
 
+
+def load_corrections(*keys: str) -> dict:
+    """Load correction data for the given top-level keys.
+
+    corrections.json was split 2026-08-26 (23k lines / 1.5MB in one file)
+    into corrections_entities.json (entities, add_entities) and
+    corrections_people.json (people, people_add_entities) — same content,
+    just no single file dominating the registry directory. Each split file
+    is self-contained (only holds the keys relevant to it), so this just
+    reads whichever files exist and merges the requested keys out of them.
+    """
+    result: dict = {}
+    for fname in ("corrections_entities.json", "corrections_people.json"):
+        path = OUT_DIR / fname
+        if not path.exists():
+            continue
+        data = json.loads(path.read_text(encoding="utf-8"))
+        for key in keys:
+            if key in data:
+                result[key] = data[key]
+    return result
+
 # Line ranges (1-indexed, inclusive) of each table in the snapshot. Hardcoded
 # because the snapshot is frozen — it will never move. Verified against the
 # structural survey of 2026-08-22.
@@ -1251,10 +1273,8 @@ def main() -> int:
     # Bug found 2026-08-22: a proximity-matching bug attaches a nearby
     # person's ИНН to two different names in the same paragraph; fixing it
     # by editing people.json directly silently reverted on the next run.
-    corr_path_people = OUT_DIR / "corrections.json"
-    if corr_path_people.exists():
-        corr_people = json.loads(corr_path_people.read_text(encoding="utf-8"))
-
+    corr_people = load_corrections("people", "people_add_entities")
+    if corr_people:
         # people.add_entities: same principle as entities.add_entities above
         # — a person who exists ONLY in a freshly-read primary document (e.g.
         # a Минюст filing's governing-body roster) was never scaffolded from
@@ -1384,13 +1404,11 @@ def main() -> int:
 
     # Hand-made corrections are applied last and always win. They exist so
     # that regenerating the scaffold never silently reverts a fix that was
-    # verified against a primary source — see data/registry/corrections.json,
+    # verified against a primary source — see data/registry/corrections_entities.json,
     # which records the reasoning for each one.
     corrections_applied = 0
-    corr_path = OUT_DIR / "corrections.json"
-    if corr_path.exists():
-        corr = json.loads(corr_path.read_text(encoding="utf-8"))
-
+    corr = load_corrections("entities", "add_entities")
+    if corr:
         # add_entities MUST run before the by_key/'set' loop below — a 'set'
         # correction targeting a record that only exists via add_entities
         # (e.g. the second company in a compound table row) would silently
@@ -1459,7 +1477,7 @@ def main() -> int:
           f"{len(prose_recs)} prose)")
     print(f"  with ИНН       {sum(1 for e in entities if e['inn']):>4}")
     print(f"  enriched       {enriched:>4}  (prose filled a table row's gaps)")
-    print(f"  corrected      {corrections_applied:>4}  (from corrections.json)")
+    print(f"  corrected      {corrections_applied:>4}  (from corrections_entities/people.json)")
     print(f"  unverified     {sum(1 for e in entities if not e['_verified']):>4}")
     print(f"people           {len(people):>4}  "
           f"({len(people) - people_added} from tables + {people_added} from prose)")

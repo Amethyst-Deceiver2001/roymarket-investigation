@@ -200,6 +200,15 @@ Highlights as of migration:
   session, not wb_watch's.
 - The investigator.org.ua YouTube video (flagged, never watched) — still
   outstanding if the «Архангел» adjacent-network thread gets revisited.
+- **Aleph screening/RuPEP enrichment (2026-08-26)** — full-roster
+  `screen_aleph.py` sweep done (419/508 hits) and fully triaged via the new
+  `scripts/aleph_followup.py`; personal ИНН coverage went 51→101 people.
+  RuPEP.org added as a source (blocked for scripts, works for the user's
+  browser — see memory `rupep_org_cloudflare_blocked`); Якушев and Сидякин
+  done, Безруков checked-negative, a downloaded Песков PDF still
+  unprocessed, 6 more candidates (Фрадков, Лысогорский, Кузнецов, Осадчук,
+  Турчак, Рогозин) not yet looked up. Full detail: `notes/rebuild_plan.md`'s
+  "Aleph screening + RuPEP identity enrichment workstream" section.
 
 ## Technique notes worth knowing before you hit the same wall
 

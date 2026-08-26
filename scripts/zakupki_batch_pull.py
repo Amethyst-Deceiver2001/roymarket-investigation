@@ -192,11 +192,22 @@ def parse_reg_numbers(html: str) -> list[str]:
 
 def fetch_all_reg_numbers(inn: str, hit_count: int) -> list[str]:
     """Paginate through supplierTitle=<inn> results until every reg number
-    the hit count promises is collected (or a page returns nothing new)."""
+    the hit count promises is collected (or a page returns nothing new).
+
+    Network errors on page 2+ are swallowed, not raised — a transient
+    connection reset here used to crash the whole scan batch (only page 1's
+    fetch, in cmd_scan's own loop, was wrapped in a try/except); now it just
+    stops paginating and returns whatever was collected so far, so one flaky
+    page degrades to an incomplete-but-recoverable result instead of killing
+    every ИНН still queued behind it."""
     all_regs: list[str] = []
     page = 1
     while len(all_regs) < hit_count:
-        html = http_get(search_url(inn, page)).decode("utf-8", errors="replace")
+        try:
+            html = http_get(search_url(inn, page)).decode("utf-8", errors="replace")
+        except (urllib.error.URLError, TimeoutError, OSError) as ex:
+            print(f"      (page {page} failed: {ex} — using {len(all_regs)}/{hit_count} collected so far)")
+            break
         page_regs = parse_reg_numbers(html)
         if not page_regs:
             break
@@ -289,8 +300,9 @@ def cmd_scan(args) -> int:
                 reg_numbers = fetch_all_reg_numbers(inn, count)
         else:
             reg_numbers = []
+        incomplete = len(reg_numbers) < count
         log[inn] = {"date": today, "kind": t["kind"], "slug": t["slug"], "name": t["name"],
-                    "hit_count": count, "reg_numbers": reg_numbers}
+                    "hit_count": count, "reg_numbers": reg_numbers, "incomplete": incomplete}
 
         if count == 0:
             zero += 1
@@ -299,7 +311,8 @@ def cmd_scan(args) -> int:
             out_path = SOURCES / f"ZAKUPKI_{inn}_{today}_supplier-search.html"
             out_path.write_text(html, encoding="utf-8")
             shown = ", ".join(reg_numbers[:5]) + (f", +{len(reg_numbers) - 5} more" if len(reg_numbers) > 5 else "")
-            print(f"  [{i}/{len(targets)}] HIT      {inn}  {t['name'][:40]}  — {count} contract(s): {shown}")
+            flag = "  [INCOMPLETE — pagination failed partway, re-run scan --force]" if incomplete else ""
+            print(f"  [{i}/{len(targets)}] HIT      {inn}  {t['name'][:40]}  — {count} contract(s): {shown}{flag}")
 
         ok += 1
         if i % 25 == 0 or i == len(targets):
@@ -330,9 +343,14 @@ def resolve_reg_numbers(args) -> list[tuple[str, str | None]]:
         if not entry or not entry.get("reg_numbers"):
             print(f"no cached scan hits for ИНН {args.inn} — run `scan --inn {args.inn}` first", file=sys.stderr)
             return []
+        if entry.get("incomplete"):
+            print(f"warning: {args.inn}'s scan is INCOMPLETE ({len(entry['reg_numbers'])}/{entry['hit_count']} — a page failed) — re-run `scan --inn {args.inn} --force` for the full set", file=sys.stderr)
         return [(r, args.inn) for r in entry["reg_numbers"]]
 
     if getattr(args, "all_hits", False):
+        incomplete_inns = [inn for inn, entry in log.items() if entry.get("incomplete")]
+        if incomplete_inns:
+            print(f"warning: {len(incomplete_inns)} ИНН have INCOMPLETE scans (a page failed mid-pagination): {', '.join(incomplete_inns)} — re-run `scan --force` for those before trusting --all-hits as complete", file=sys.stderr)
         out = []
         for inn, entry in log.items():
             for r in entry.get("reg_numbers", []):

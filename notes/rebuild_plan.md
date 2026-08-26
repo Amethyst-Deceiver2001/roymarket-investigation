@@ -1584,3 +1584,90 @@ committed to git, a first batch of real imagery, and now 5 new manufacturer
 profiles/supplements. **The registry/brief contradiction that previously
 blocked any publish is now resolved** — the remaining gate is just the
 user's explicit go-ahead, not an outstanding correctness issue.
+
+## zakupki.gov.ru mining workstream (started 2026-08-25, parallel to the phases above)
+
+A separate track from the phased rebuild above — government-contract
+mining, not registry-generator work. Status as of 2026-08-26:
+
+- `scripts/zakupki_batch_pull.py` (scan/fetch-contracts/fetch-documents) and
+  `scripts/mine_zakupki.py` (extraction pipeline) are both built and mature
+  — contract-XML, payment-order (XML+HTML), contract-card HTML, docx,
+  neustойка-PDF, and RAR-archive parsing, non-performance flagging,
+  amendment tracking. See memory `zakupki_b2g_document_conventions` and
+  `russian_b2g_legislation` for the domain-knowledge glossary this
+  produced.
+- `mine_zakupki.py` just gained `--depth {scan,deep}` and `--diff` (see
+  memory `housekeeping_bundle_after_pulls` for the adjacent local-processing
+  convention) — a cheap whole-corpus scan tier plus an incremental
+  new-since-last-run diff, specifically to make bulk mining
+  token-affordable instead of reading every contract's full detail every
+  pass.
+- **Deep-dived so far**: ИП Цыганов Вадим Борисович (17 files, full
+  «Булат»/«Покров» war-emergency justification chain, 10 new named
+  officials wired into the registry), ООО «Центр беспилотных систем»
+  (Tula, the strongest confirmed `cbst-core` entity with a zakupki
+  footprint — one fully-paid ₽3.072m contract, a director-field conflict
+  surfaced and recorded as a dated `director_history` entry).
+- **In progress**: АО «Центр-Телко» (ИНН 7729150663) — cap-table entity in
+  the Аэромакс/Кронштадт holding restructuring, 20 zakupki contracts,
+  fetch commanded but not yet mined.
+- **Queued, not yet started**: a `--depth scan --diff` sweep of the full
+  38-hit-ИНН corpus (running in the user's terminal as of 2026-08-26,
+  `requirements.txt` needed a `beautifulsoup4` addition first) — once that
+  lands, pick further `--depth deep` targets from whatever it flags
+  (largest-value contracts, non-performance flags, strongest `cbst_tie`).
+  Two large unexplored high-volume ИНН from the original random-5 sample
+  remain untouched: АО «ПМЦ «Авангард»» (91 contracts, open
+  industry-mismatch question — perimeter security vs UAV) and АО ПК
+  «Азимут» (77 contracts).
+- **Not started**: RNP (Реестр недобросовестных поставщиков) blacklist
+  check for any entity with confirmed non-performance findings (Гаскар
+  Интеграция is the current candidate, per `russian_b2g_legislation`'s
+  ст.104 note) — parked, not yet requested by the user.
+
+## Aleph screening + RuPEP identity enrichment workstream (2026-08-26)
+
+Another parallel track — PEP/identity screening, not the registry-generator
+work above.
+
+- **`corrections.json` split** into `corrections_entities.json` /
+  `corrections_people.json` (23k lines / 1.5MB had gotten unwieldy).
+  `extract_registry.py`'s `load_corrections()` reads both and merges;
+  verified byte-identical output before/after. `corrections.json` itself
+  removed. See `CLAUDE.md`'s `data/registry/` section for the split.
+- **`scripts/screen_aleph.py`** (Aleph/OCCRP free-text screening) ran its
+  first full unscoped sweep this session — 419 of ~508 registry records
+  came back with ≥1 hit, every one now carrying `aleph_matches[]` +
+  `aleph_screened_at` directly on `entities.json`/`people.json` (a carry-
+  forward field, not correction-settable — see `CLAUDE.md`).
+- **`scripts/aleph_followup.py`** (new, this session) triages that noisy
+  match list locally (name-token overlap, tier priority, dedup) and fetches
+  full entity detail for hand-picked ids in batches (network job, ≤30
+  ids/invocation, handed to the user each time per the crawling-jobs
+  policy). Full triage of the post-sweep candidate pool (cbst-core through
+  unclassified tiers) is now complete: **people with a personal ИНН went
+  from 51 to 101** (checksum-valid, each with a `source_id` + `why[]` entry
+  citing the specific Aleph EGRUL/OGRN record), plus 3 entity ИНН
+  confirmed. Two recurring false-positive candidates
+  (`gorodnichin-dmitriy-aleksandrovich-2` — a `_merged_into` duplicate,
+  `kalinovskiy-nikita-vladislavovich` — caption-only match, not
+  EGRUL-direct) were deliberately excluded from every wiring pass.
+  `check_registry.py`: 0 errors throughout.
+- **RuPEP.org** (Russian PEP biography database) added as a source this
+  session — blocked for scripted access (Cloudflare JS challenge, see
+  memory `rupep_org_cloudflare_blocked`) but works for the user's own
+  browser; hybrid workflow (user downloads profile PDF → I extract text/
+  headshot/dob/birthplace/ИНН, decline family-member detail per PII scope,
+  wire via corrections). Completed for **Якушев** (`s2452`) and **Сидякин**
+  (`s2535`, headshot at `docs/images/aleksandr-sidyakin_portrait_rupep.jpg`,
+  flagged an unverified "Батальон «Дубай»" Navalny-team dossier link as an
+  open question). Checked-and-negative for **Безруков** (not on RuPEP,
+  recorded so it isn't re-tried). **Not yet processed**: a downloaded
+  Песков PDF sitting in `data/sources/` unprocessed. **Not yet started**:
+  Фрадков, Лысогорский, Кузнецов, Осадчук, Турчак, Рогозин — the rest of
+  the original 10-candidate RuPEP list.
+- **`notes/commands.md`** (new) — copy-paste reference for every recurring
+  command in this project (housekeeping bundle, Aleph screen/triage/fetch,
+  zakupki scan/mine/pull, profile rebuild, tag-balance check), so they
+  don't need re-deriving each session.
