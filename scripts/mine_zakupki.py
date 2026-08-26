@@ -981,23 +981,48 @@ def build_report(result: dict, known_text: str, depth: str = "deep", baseline: d
             # triage isn't lost in scan mode — only the per-contract prose
             # narrative is skipped, not the signal that drives a deep pass
         if depth == "deep":
-            if cf.get("subject"):
-                lines.append(f"- Subject: {cf['subject']}")
-            if cf.get("price_total"):
-                lines.append(f"- Price: {cf['price_total']} RUB")
+            # Same card_fields fallback scan-depth already has above (see its
+            # comment) — most of this corpus's contracts carry no attached
+            # cpElectronicContract XML at all, which left contract_fields (cf/
+            # cust/supp) empty and every one of these deep-mode lines silently
+            # skipped, rendering a near-blank report for those contracts even
+            # though the HTML card scrape (card_fields) has the same facts.
+            card = rec.get("card_fields", {})
+            subject = cf.get("subject") or card.get("Предмет контракта")
+            if subject:
+                lines.append(f"- Subject: {subject}")
+            price_total = cf.get("price_total") or card.get("Цена контракта")
+            if price_total:
+                lines.append(f"- Price: {price_total} RUB")
             if cf.get("placing_way"):
                 lines.append(f"- Placing way: {cf['placing_way']}")
             if cf.get("amendments"):
                 dates = ", ".join(f"#{a['ordinal']}" + (f" ({a['sign_date']})" if a.get("sign_date") else " (unsigned)")
                                    for a in cf["amendments"])
                 lines.append(f"- Amendments ({len(cf['amendments'])}): {dates}")
-            basis = rec.get("card_fields", {}).get("Основание заключения контракта с единственным поставщиком")
+            basis = card.get("Основание заключения контракта с единственным поставщиком")
             if basis:
                 lines.append(f"- Sole-supplier basis: {basis}")
-            if cust.get("full_name"):
-                lines.append(f"- Customer: {cust['full_name']} (ИНН {cust.get('inn')})")
+            customer_name = cust.get("full_name") or card.get("Полное наименование заказчика") \
+                or card.get("Сокращенное наименование заказчика")
+            if customer_name:
+                lines.append(f"- Customer: {customer_name} (ИНН {cust.get('inn') or card.get('ИНН')})")
             if supp.get("full_name"):
                 lines.append(f"- Supplier: {supp['full_name']} (ИНН {supp.get('inn')})")
+            elif rec.get("card_suppliers_table"):
+                # No contract_fields XML supplier block on this contract —
+                # fall back to the HTML card's own supplier-party table
+                # (parse_contract_card_html's suppliers_table, preserved as
+                # card_suppliers_table above), which carries ИНН/КПП/address/
+                # contact even when the structured XML supplier record is
+                # missing entirely.
+                for row in rec["card_suppliers_table"]:
+                    org = row.get("Организация", "")
+                    addr = row.get("Адрес места нахождения") or row.get("Почтовый адрес")
+                    contact = row.get("Телефон, электронная почта")
+                    bits = [b for b in (org, addr, contact) if b]
+                    if bits:
+                        lines.append(f"- Supplier (from card table): {' — '.join(bits)}")
             if supp.get("director_name"):
                 lines.append(f"  - Director: {supp['director_name']} (ИНН {supp.get('director_inn')}, {supp.get('director_position')})")
             if cf.get("items"):
