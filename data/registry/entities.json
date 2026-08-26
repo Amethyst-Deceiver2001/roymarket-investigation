@@ -7418,6 +7418,11 @@
         {
           "url": "https://www.ozon.ru/product/motor-py3115-1300kv-beskollektornyy-fpv-5183531962/",
           "note": "PY3115 1300KV brushless FPV motor -- confirmed as this entity's own product via JSON-LD brand field (\"ГАСКАР\") on the product page itself, not just a listing on the storefront."
+        },
+        {
+          "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/gackar",
+          "note": "Official partner/seller profile on Налетай.рф (налетай.рф), the state-backed civilian UAV marketplace created by АО «ГТЛК» (Государственная транспортная лизинговая компания), operated by ООО «ЦТП» (ИНН 9714054618). Legal-info block on the page gives Название ООО «ГАСКАР», ИНН 9710112989, КПП 772001001, address г. Москва, ул. Пехорская, д.1Д стр.1 -- exact ИНН match to this record. 57 products listed as of 2026-08-26 (flight controllers, motors, propellers, cameras/thermal, batteries, receivers, antennas, modems, frames, cables/mounts) -- same FPV/UAV-components line already documented via this entity's Ozon storefront. Captured via a user-supplied browser HAR (buyer account, s2610); catalog listing API response archived separately (s2609, totalCount=57). Notable: this Canada-sanctioned ЦБСТ-resident entity sells openly through a marketplace built and backed by a Russian state-owned company (ГТЛК), distinct from and in addition to its Ozon presence.",
+          "source_id": "s2610"
         }
       ],
       "other": []
@@ -7454,7 +7459,8 @@
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, the one candidate with a real patentee (RU191888U1) belongs to the separate, already-correctly-attributed ooo-gaskar-integratsiya, not this entity; the other 20 have no usable patentee data.",
       "Web search 2026-08-25 for a Wildberries listing (to fill the marketplace_listings gap on a wb_overlap=confirmed record) surfaced a likely product/entity-name conflation instead of a URL.",
       "User-supplied browser HAR captures 2026-08-25 (search results, brand-storefront category page, product page, and seller page) resolved the marketplace_listings gap directly: manufacturer's own Ozon storefront (ОГРН exact match, s1385) plus one directly-confirmed product (PY3115 1300KV FPV motor). Confirms wb_overlap's underlying evidence -- FPV components under brand «ГАСКАР» -- independently on a second marketplace.",
-      "2026-08-25: reclassified bare wb_overlap value \"confirmed\" (not a value the schema actually defines) to \"confirmed_direct\", the Phase 3.5 §1 raw/curated enum this entity always matched in substance (own-ИНН WB storefront, not a reseller) -- no new evidence, a labeling fix so check_registry.py's new wb_overlap enum validator accepts it."
+      "2026-08-25: reclassified bare wb_overlap value \"confirmed\" (not a value the schema actually defines) to \"confirmed_direct\", the Phase 3.5 §1 raw/curated enum this entity always matched in substance (own-ИНН WB storefront, not a reseller) -- no new evidence, a labeling fix so check_registry.py's new wb_overlap enum validator accepts it.",
+      "2026-08-26: user-supplied HAR capture of their own налетай.рф buyer-account session confirms ООО «Гаскар» (ИНН 9710112989, exact match) is a listed partner/seller on налетай.рф -- the ГТЛК-backed state civilian UAV marketplace -- with 57 products (FPV components), full legal info matching this record. Added as a second web.marketplace_listings[] entry alongside the existing Ozon storefront."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
