@@ -1609,9 +1609,17 @@ mining, not registry-generator work. Status as of 2026-08-26:
   (Tula, the strongest confirmed `cbst-core` entity with a zakupki
   footprint — one fully-paid ₽3.072m contract, a director-field conflict
   surfaced and recorded as a dated `director_history` entry).
-- **In progress**: АО «Центр-Телко» (ИНН 7729150663) — cap-table entity in
-  the Аэромакс/Кронштадт holding restructuring, 20 zakupki contracts,
-  fetch commanded but not yet mined.
+- **Done**: АО «Центр-Телко» (ИНН 7729150663, `ao-tsentr-telko`) — cap-table
+  entity in the Аэромакс/Кронштадт holding restructuring. All 10 zakupki
+  contracts (2012-2016, civilian radio-comms services for Moscow city
+  bodies/ГФС России, unrelated to its UAV-holding-structure significance)
+  identity-confirmed and wired into `government_contracts[]`; performance-
+  flag hits hand-checked and found to be boilerplate, not real
+  non-performance. Director Синельщиков А.В.'s passport (from a contract
+  signature block) recorded on his person record per PEP policy. (This
+  correction was originally filed under the raw ИНН as its
+  `corrections_entities.json` key instead of the slug — found and merged
+  into the canonical `ao-tsentr-telko` block 2026-08-26.)
 - **Queued, not yet started**: a `--depth scan --diff` sweep of the full
   38-hit-ИНН corpus (running in the user's terminal as of 2026-08-26,
   `requirements.txt` needed a `beautifulsoup4` addition first) — once that

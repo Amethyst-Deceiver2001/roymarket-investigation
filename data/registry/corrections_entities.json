@@ -1420,110 +1420,6 @@
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13729) ID-confirmed via ИНН 7720901379 — exact match, screen_gur.py sweep, 2026-08-24. GUR's own page cross-lists ООО «Стратим» (ИНН 5260494520) as a \"related company\" — see related_entities."
       ]
     },
-    "7729150663": {
-      "set": {
-        "tier": "plumbing",
-        "tier_basis": "cap-table entity in the Аэромакс holding structure (see director_history/founders note); also an independently-operating pre-war radio-communications services contractor for Moscow city bodies (ГБУ ДСЗМ sporting events, ГБУ «Система 112») and ГФС России, 2012-2016, unrelated to UAV/ЦБСТ — its zakupki footprint is entirely this civilian comms-services business, not weapons-adjacent. Kept as plumbing tier: its investigative significance here is the Кронштадт/Аэромакс cap-table role, not this contract history.",
-        "government_contracts": [
-          {
-            "customer": "Государственная фельдъегерская служба РФ (ГФС России)",
-            "contract_number": "0173100012414000189",
-            "reg_number": "0173100012414000131",
-            "date": "2014-11-07",
-            "basis": "Электронный аукцион",
-            "value_rub": null,
-            "source_id": "s1934"
-          },
-          {
-            "customer": "ГБУ г. Москвы «Дирекция спортивных и зрелищных мероприятий» (ДСЗМ)",
-            "contract_number": null,
-            "reg_number": "0373200001913000011",
-            "date": "2012-12-28",
-            "basis": "Открытый конкурс",
-            "value_rub": null,
-            "source_id": "s1441"
-          },
-          {
-            "customer": "ГБУ ДСЗМ",
-            "contract_number": null,
-            "reg_number": "0373200001913000103",
-            "date": "2013-03-12",
-            "basis": "Открытый конкурс",
-            "value_rub": null,
-            "source_id": "s1441"
-          },
-          {
-            "customer": "ГБУ ДСЗМ",
-            "contract_number": "0У3/304/14/4МБК",
-            "reg_number": "0373200001914000222",
-            "date": "2014-06-02",
-            "basis": "Открытый конкурс, лот №13",
-            "value_rub": 1491300,
-            "items": "Радиотехническое коммуникационное сопровождение Чемпионата мира по гребле на байдарках и каноэ 2014 — organizing/comms support services, not goods",
-            "note": "Signed by Генеральный директор А.В. Синельщиков; performance-flag hits on this contract are report-form boilerplate categories, not factual non-performance admissions.",
-            "source_id": "s1937"
-          },
-          {
-            "customer": "ГБУ ДСЗМ",
-            "contract_number": null,
-            "reg_number": "0373200001914000415",
-            "date": "2014-12-15",
-            "basis": "Открытый конкурс",
-            "value_rub": 568500,
-            "source_id": "s1441"
-          },
-          {
-            "customer": "ГБУ г. Москвы «Система 112»",
-            "contract_number": null,
-            "reg_number": "0373200608013000007",
-            "date": "2013-09-13",
-            "basis": "Открытый аукцион в электронной форме",
-            "value_rub": null,
-            "source_id": "s1441"
-          },
-          {
-            "customer": "ГФС России",
-            "contract_number": null,
-            "reg_number": "1770913382115000052",
-            "date": "2015-05-13",
-            "basis": "Электронный аукцион",
-            "value_rub": 178035.84,
-            "source_id": "s1441"
-          },
-          {
-            "customer": "ГБУ ДСЗМ",
-            "contract_number": null,
-            "reg_number": "2770818645015000149",
-            "date": "2015-05-07",
-            "basis": "Открытый конкурс",
-            "value_rub": 874000,
-            "source_id": "s1441"
-          },
-          {
-            "customer": "ГБУ ДСЗМ",
-            "contract_number": null,
-            "reg_number": "2770818645016000044",
-            "date": "2016-03-21",
-            "basis": "Открытый конкурс",
-            "value_rub": 3280000,
-            "source_id": "s1441"
-          },
-          {
-            "customer": "ГБУ г. Москвы «Система 112»",
-            "contract_number": null,
-            "reg_number": "2771376023015000009",
-            "date": "2015-05-26",
-            "basis": "Электронный аукцион",
-            "value_rub": 7792200,
-            "source_id": "s1441"
-          }
-        ]
-      },
-      "why": [
-        "Named only as part of a post-reorganisation ownership structure.",
-        "2026-08-26: resolved open question — confirmed the zakupki.gov.ru ИНН 7729150663 hit set (10 contracts, 2012-2016) is genuinely this entity (attachment filenames read literally 'zao-tsentr-telko'/'ao-tsentr-telko', and the 2014 ГБУ ДСЗМ contract text names ЗАО «ЦЕНТР-ТЕЛКО» ОГРН 1027739038590 directly, matching exactly). All 10 contracts are civilian radio-communications services for Moscow city bodies and ГФС России, entirely pre-dating and unrelated to the Аэромакс/Кронштадт UAV holding-structure role this entity is otherwise notable for. Performance-flag regex hits on two ДСЗМ contracts checked by hand (OCR of the 2014-06-02 contract, s1937) and are report-form boilerplate categories/liability-clause text, not factual non-performance admissions — no compliance issue found. Director Синельщиков А.В. personally signed the 2014-06-02 contract; his passport (45 00 309096, выдан 2 ОВД р-на Хамовники УВД ЦАО г. Москвы, 11.10.2000, к/п 773-004) appears in the signature block — recorded on his person record per the full-identifying-detail PEP policy."
-      ]
-    },
     "7735565264": {
       "set": {
         "brand_latin": "Prime Radar",
@@ -13969,10 +13865,108 @@
             "note": "per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract)."
           }
         ],
-        "_verified": true
+        "_verified": true,
+        "tier": "plumbing",
+        "tier_basis": "cap-table entity in the Аэромакс holding structure (see director_history/founders note); also an independently-operating pre-war radio-communications services contractor for Moscow city bodies (ГБУ ДСЗМ sporting events, ГБУ «Система 112») and ГФС России, 2012-2016, unrelated to UAV/ЦБСТ — its zakupki footprint is entirely this civilian comms-services business, not weapons-adjacent. Kept as plumbing tier: its investigative significance here is the Кронштадт/Аэромакс cap-table role, not this contract history.",
+        "government_contracts": [
+          {
+            "customer": "Государственная фельдъегерская служба РФ (ГФС России)",
+            "contract_number": "0173100012414000189",
+            "reg_number": "0173100012414000131",
+            "date": "2014-11-07",
+            "basis": "Электронный аукцион",
+            "value_rub": null,
+            "source_id": "s1934"
+          },
+          {
+            "customer": "ГБУ г. Москвы «Дирекция спортивных и зрелищных мероприятий» (ДСЗМ)",
+            "contract_number": null,
+            "reg_number": "0373200001913000011",
+            "date": "2012-12-28",
+            "basis": "Открытый конкурс",
+            "value_rub": null,
+            "source_id": "s1441"
+          },
+          {
+            "customer": "ГБУ ДСЗМ",
+            "contract_number": null,
+            "reg_number": "0373200001913000103",
+            "date": "2013-03-12",
+            "basis": "Открытый конкурс",
+            "value_rub": null,
+            "source_id": "s1441"
+          },
+          {
+            "customer": "ГБУ ДСЗМ",
+            "contract_number": "0У3/304/14/4МБК",
+            "reg_number": "0373200001914000222",
+            "date": "2014-06-02",
+            "basis": "Открытый конкурс, лот №13",
+            "value_rub": 1491300,
+            "items": "Радиотехническое коммуникационное сопровождение Чемпионата мира по гребле на байдарках и каноэ 2014 — organizing/comms support services, not goods",
+            "note": "Signed by Генеральный директор А.В. Синельщиков; performance-flag hits on this contract are report-form boilerplate categories, not factual non-performance admissions.",
+            "source_id": "s1937"
+          },
+          {
+            "customer": "ГБУ ДСЗМ",
+            "contract_number": null,
+            "reg_number": "0373200001914000415",
+            "date": "2014-12-15",
+            "basis": "Открытый конкурс",
+            "value_rub": 568500,
+            "source_id": "s1441"
+          },
+          {
+            "customer": "ГБУ г. Москвы «Система 112»",
+            "contract_number": null,
+            "reg_number": "0373200608013000007",
+            "date": "2013-09-13",
+            "basis": "Открытый аукцион в электронной форме",
+            "value_rub": null,
+            "source_id": "s1441"
+          },
+          {
+            "customer": "ГФС России",
+            "contract_number": null,
+            "reg_number": "1770913382115000052",
+            "date": "2015-05-13",
+            "basis": "Электронный аукцион",
+            "value_rub": 178035.84,
+            "source_id": "s1441"
+          },
+          {
+            "customer": "ГБУ ДСЗМ",
+            "contract_number": null,
+            "reg_number": "2770818645015000149",
+            "date": "2015-05-07",
+            "basis": "Открытый конкурс",
+            "value_rub": 874000,
+            "source_id": "s1441"
+          },
+          {
+            "customer": "ГБУ ДСЗМ",
+            "contract_number": null,
+            "reg_number": "2770818645016000044",
+            "date": "2016-03-21",
+            "basis": "Открытый конкурс",
+            "value_rub": 3280000,
+            "source_id": "s1441"
+          },
+          {
+            "customer": "ГБУ г. Москвы «Система 112»",
+            "contract_number": null,
+            "reg_number": "2771376023015000009",
+            "date": "2015-05-26",
+            "basis": "Электронный аукцион",
+            "value_rub": 7792200,
+            "source_id": "s1441"
+          }
+        ]
       },
       "why": [
-        "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=7729150663, file cited as source s0115). Director confirmed: Синельщиков Андрей Валентинович."
+        "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=7729150663, file cited as source s0115). Director confirmed: Синельщиков Андрей Валентинович.",
+        "Named only as part of a post-reorganisation ownership structure.",
+        "2026-08-26: resolved open question — confirmed the zakupki.gov.ru ИНН 7729150663 hit set (10 contracts, 2012-2016) is genuinely this entity (attachment filenames read literally 'zao-tsentr-telko'/'ao-tsentr-telko', and the 2014 ГБУ ДСЗМ contract text names ЗАО «ЦЕНТР-ТЕЛКО» ОГРН 1027739038590 directly, matching exactly). All 10 contracts are civilian radio-communications services for Moscow city bodies and ГФС России, entirely pre-dating and unrelated to the Аэромакс/Кронштадт UAV holding-structure role this entity is otherwise notable for. Performance-flag regex hits on two ДСЗМ contracts checked by hand (OCR of the 2014-06-02 contract, s1937) and are report-form boilerplate categories/liability-clause text, not factual non-performance admissions — no compliance issue found. Director Синельщиков А.В. personally signed the 2014-06-02 contract; his passport (45 00 309096, выдан 2 ОВД р-на Хамовники УВД ЦАО г. Москвы, 11.10.2000, к/п 773-004) appears in the signature block — recorded on his person record per the full-identifying-detail PEP policy."
       ],
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0115)"
     },
