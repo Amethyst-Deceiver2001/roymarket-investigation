@@ -533,7 +533,7 @@
     "fio_ru": "Пётр Фрадков",
     "name_latin": null,
     "dob": "1978-02-07",
-    "birthplace": null,
+    "birthplace": "Москва (Moscow)",
     "address": null,
     "inn_personal": null,
     "roles": [
@@ -561,7 +561,7 @@
     "subsidiary_liability_hits": [],
     "subsidiary_liability_checked_at": null,
     "social": [],
-    "photo": null,
+    "photo": "images/fradkov-petr-mikhaylovich_portrait_rupep.jpg",
     "notes": "Named the ₽12bn fund and the ₽35bn-to-2030 financing plan. Primary doc",
     "sources": [],
     "_verified": false,
@@ -571,9 +571,16 @@
       "position": "Chairman, ПАО «Банк ПСБ»",
       "note": "Named the ₽12bn fund and the ₽35bn-to-2030 financing plan. Primary doc"
     },
+    "open_questions": [
+      {
+        "source_id": "s2602",
+        "text": "rupep.org profile gives ИНН as '77020096763' -- only 11 digits, a checksum-invalid length for a personal ИНН (must be 12). Likely a transcription/OCR gap in RuPEP's own source data (confirmed the PDF's own text layer has only 11 digits, not a pdftotext extraction artifact). Not wired as inn_personal pending a second source or a corrected RuPEP profile."
+      }
+    ],
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-08-26: rupep.org profile (s2602) confirms dob 07.02.1978 (already on file), adds birthplace Moscow and headshot. RuPEP's stated ИНН (77020096763) is only 11 digits -- checksum-invalid, logged as an open question instead of wired. Family/associate detail on the RuPEP page not wired per PII scope."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -661,10 +668,10 @@
     "slug": "dmitriy-peskov",
     "fio_ru": "Дмитрий Песков",
     "name_latin": null,
-    "dob": null,
-    "birthplace": null,
+    "dob": "1975-12-26",
+    "birthplace": "Воронеж (Voronezh)",
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "772919018611",
     "roles": [
       {
         "entity_slug": null,
@@ -683,7 +690,7 @@
     "subsidiary_liability_hits": [],
     "subsidiary_liability_checked_at": null,
     "social": [],
-    "photo": null,
+    "photo": "images/peskov-dmitriy-nikolaevich_portrait_rupep.jpg",
     "notes": "Not the Kremlin press secretary. This is Dmitry Nikolayevich Peskov, the innovation-policy official — a name collision that will cause errors if unflagged. Primary doc",
     "sources": [],
     "_verified": false,
@@ -700,7 +707,8 @@
       }
     ],
     "_corrected": [
-      "2026-08-24: OpenSanctions match explicitly checked and rejected — name collision with Kremlin press secretary Dmitry Peskov."
+      "2026-08-24: OpenSanctions match explicitly checked and rejected — name collision with Kremlin press secretary Dmitry Peskov.",
+      "2026-08-26: rupep.org profile (s2606) for this registry's Дмитрий Песков (Presidential special representative for digital/technological development, CEO АНО «Платформа НТИ») -- role text matches this RuPEP profile exactly, and RuPEP's own career table lists both roles verbatim. This is a DIFFERENT person from the Kremlin press secretary Dmitry Sergeevich Peskov already correctly rejected in this record's open_questions[] (b.1967, Moscow) -- RuPEP gives dob 26.12.1975, birthplace Voronezh, ИНН 772919018611, none of which match the press secretary. Confirms the earlier rejection was correct rather than resolving it away."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -928,9 +936,9 @@
     "fio_ru": "Кирилл Лысогорский",
     "name_latin": null,
     "dob": "1986-04-19",
-    "birthplace": null,
+    "birthplace": "Ванадзор, Армения (Vanadzor, Armenia)",
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "772705212594",
     "roles": [
       {
         "entity_slug": null,
@@ -956,7 +964,7 @@
     "subsidiary_liability_hits": [],
     "subsidiary_liability_checked_at": null,
     "social": [],
-    "photo": null,
+    "photo": "images/lysogorskiy-kirill-alekseevich_portrait_rupep.jpg",
     "notes": "Ministerial representation on the board. Primary doc",
     "sources": [],
     "_verified": false,
@@ -968,7 +976,8 @@
     },
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-08-26: rupep.org profile (s2604) confirms dob 19.04.1986 (already on file), adds birthplace Vanadzor/Armenia, personal ИНН 772705212594, headshot. RuPEP tags him 'Война с Украиной'. Family detail not wired per PII scope."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -1083,7 +1092,8 @@
       "note": "Primary doc"
     },
     "_corrected": [
-      "2026-08-24 OpenSanctions screening returned TWO distinct same-scored candidates for \"Михаил Кузнецов\" — (a) Sovcomflot board-of-directors member, DOB 1979-06-20, director-disqualification sanctioned 2025-09-04; (b) authorized representative for Putin's 2024 presidential campaign, DOB 1979-08-18. NEITHER candidate's notes text mentions ОНФ (this registry's own role for him: Head of the Executive Committee, Popular Front). Left UNCONFIRMED rather than guessing which DOB belongs to this person — common name, genuine ambiguity."
+      "2026-08-24 OpenSanctions screening returned TWO distinct same-scored candidates for \"Михаил Кузнецов\" — (a) Sovcomflot board-of-directors member, DOB 1979-06-20, director-disqualification sanctioned 2025-09-04; (b) authorized representative for Putin's 2024 presidential campaign, DOB 1979-08-18. NEITHER candidate's notes text mentions ОНФ (this registry's own role for him: Head of the Executive Committee, Popular Front). Left UNCONFIRMED rather than guessing which DOB belongs to this person — common name, genuine ambiguity.",
+      "2026-08-26: rupep.org has a profile for Кузнецов Михаил Евгеньевич (s2603, dob 20.06.1979, born Samara, UK-sanctioned, career: MSU lecturer, ООО «ЦКР» gen. dir., АО «Корпорация «ВНИИЭМ», ФАНУ «Востокгосплан» director, ПАО «Совкомфлот» revision-commission chair 2021) -- dob matches candidate (a) from the 2026-08-24 OpenSanctions ambiguity note (Sovcomflot board member, DOB 1979-06-20, director-disqualification sanctioned) exactly, likely resolving THAT ambiguity. But RuPEP's own career table still does not mention ОНФ (this registry's role for him: Head of the Executive Committee, Popular Front) at any point -- still not confirmed to be the same person as this record. Left UNCONFIRMED, not wired, pending a source that ties the ОНФ role to this specific dob/ИНН."
     ],
     "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
     "opensanctions_matches": [
@@ -1339,9 +1349,9 @@
     "fio_ru": "Александр Осадчук",
     "name_latin": null,
     "dob": "1962-11-17",
-    "birthplace": null,
+    "birthplace": "Обнинск, Калужская область (Obninsk, Kaluga Oblast)",
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "772027207786",
     "roles": [
       {
         "entity_slug": null,
@@ -1383,7 +1393,8 @@
       "2026-08-24 OpenSanctions screening returned an exact-title match (Head of ГУИР/MoD Innovative Development Directorate, Colonel, commanding officer GRU Unit 74455) for a person this registry's own notes already independently confirmed via MoD's own Aug-2022 «Патриот» press material — DOB and sanctions[] now formalized to match that standing conclusion.",
       "2026-08-25: OSINT research pass -- confirms identity via DOB, adds GRU Unit 74455/Sandworm/DOJ-indictment background and sanctions-regime detail.",
       "2026-08-25: photo/social-media OSINT research pass.",
-      "2026-08-25: photo confirmed via user-supplied nashaoborona.ru URL, nameplate-verified."
+      "2026-08-25: photo confirmed via user-supplied nashaoborona.ru URL, nameplate-verified.",
+      "2026-08-26: rupep.org profile (s2605) confirms dob 17.11.1962 and birthplace Obninsk/Kaluga Oblast (both already independently confirmed via OpenSanctions per this record's existing notes), adds personal ИНН 772027207786. Existing photo (source: nashaoborona) kept as primary per existing sourcing precedent (see aleksandr-sidyakin); RuPEP headshot pulled but not set as the display photo. RuPEP flags family members (daughter, wife, son-in-law, granddaughter) -- not wired per PII scope."
     ],
     "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
     "opensanctions_matches": [
@@ -2976,9 +2987,9 @@
     "fio_ru": "Андрей Турчак",
     "name_latin": null,
     "dob": "1975-12-20",
-    "birthplace": null,
+    "birthplace": "Санкт-Петербург (Saint Petersburg)",
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "781002279818",
     "roles": [
       {
         "entity_slug": null,
@@ -3004,7 +3015,7 @@
     "subsidiary_liability_hits": [],
     "subsidiary_liability_checked_at": null,
     "social": [],
-    "photo": null,
+    "photo": "images/turchak-andrey-anatolevich_portrait_rupep.jpg",
     "notes": "Delivered fund-purchased equipment to units on at least seven occasions from Jun 2023; the channel tracks his move to Altai in real time. Primary doc",
     "sources": [],
     "_verified": false,
@@ -3016,7 +3027,8 @@
     },
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-08-26: rupep.org profile (s2608) confirms dob 20.12.1975 (already on file), adds birthplace Saint Petersburg, personal ИНН 781002279818, headshot."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -16080,7 +16092,7 @@
     "slug": "rogozin-aleksey-dmitrievich",
     "fio_ru": "Рогозин Алексей Дмитриевич",
     "name_latin": null,
-    "dob": null,
+    "dob": "1983-09-21",
     "birthplace": null,
     "address": null,
     "inn_personal": "770301599800",
@@ -16108,7 +16120,7 @@
     "subsidiary_liability_hits": [],
     "subsidiary_liability_checked_at": null,
     "social": [],
-    "photo": null,
+    "photo": "images/rogozin-aleksey-dmitrievich_portrait_rupep.jpg",
     "notes": null,
     "sources": [],
     "mentions": 1,
@@ -16127,7 +16139,8 @@
     ],
     "_corrected": [
       "GUR independently states Эколибри's advisory board is \"headed by the son of the former head of Roscosmos, Alexei Rogozin\" — a second, independent confirmation alongside the existing press-sourced note, sufficient to move this role out of _candidate/unverified status.",
-      "2026-08-24 opensanctions people cross-reference pass: score-1.0 exact match, well-corroborated public figure, explicit 'sanction' topic (not just linked)."
+      "2026-08-24 opensanctions people cross-reference pass: score-1.0 exact match, well-corroborated public figure, explicit 'sanction' topic (not just linked).",
+      "2026-08-26: rupep.org profile (s2607) confirms inn_personal 770301599800 already on file (source s0000-series OpenSanctions match), adds dob 21.09.1983 and headshot. RuPEP categorizes him 'Член семьи' (family member -- of Dmitry Rogozin) rather than a PEP in his own right; no birthplace given on the profile."
     ],
     "_verified_against": "war-sanctions.gur.gov.ua/en/uav/companies/14291 (s0962), corroborating the prior Vedomosti press mention already in _raw",
     "opensanctions_matches": [
