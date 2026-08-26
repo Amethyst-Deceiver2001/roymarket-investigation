@@ -96,6 +96,7 @@ it.
 from __future__ import annotations
 
 import argparse
+import http.client
 import json
 import re
 import ssl
@@ -205,7 +206,7 @@ def fetch_all_reg_numbers(inn: str, hit_count: int) -> list[str]:
     while len(all_regs) < hit_count:
         try:
             html = http_get(search_url(inn, page)).decode("utf-8", errors="replace")
-        except (urllib.error.URLError, TimeoutError, OSError) as ex:
+        except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException) as ex:
             print(f"      (page {page} failed: {ex} — using {len(all_regs)}/{hit_count} collected so far)")
             break
         page_regs = parse_reg_numbers(html)
@@ -275,7 +276,7 @@ def cmd_scan(args) -> int:
 
         try:
             html = http_get(search_url(inn)).decode("utf-8", errors="replace")
-        except (urllib.error.URLError, TimeoutError, OSError) as ex:
+        except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException) as ex:
             print(f"  [{i}/{len(targets)}] FAILED   {inn}  {t['name'][:40]}  ({ex})")
             failed += 1
             time.sleep(DELAY_SECONDS)
@@ -413,7 +414,7 @@ def cmd_fetch_contracts(args) -> int:
         url = f"{BASE}/epz/contract/contractCard/common-info.html?reestrNumber={reg}"
         try:
             html = http_get(url).decode("utf-8", errors="replace")
-        except (urllib.error.URLError, TimeoutError, OSError) as ex:
+        except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException) as ex:
             print(f"  [{i}/{len(reg_numbers)}] FAILED  {reg}  ({ex})")
             time.sleep(DELAY_SECONDS)
             continue
@@ -464,7 +465,7 @@ def cmd_fetch_documents(args) -> int:
         else:
             try:
                 html = http_get(f"{BASE}/epz/contract/contractCard/common-info.html?reestrNumber={reg}").decode("utf-8", errors="replace")
-            except (urllib.error.URLError, TimeoutError, OSError) as ex:
+            except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException) as ex:
                 print(f"  [{i}/{len(by_reg)}] FAILED card  {reg}  ({ex})")
                 time.sleep(DELAY_SECONDS)
                 continue
@@ -479,7 +480,7 @@ def cmd_fetch_documents(args) -> int:
         doc_url = f"{BASE}/epz/contract/contractCard/document-info.html?reestrNumber={reg}&contractInfoId={contract_info_id}"
         try:
             doc_html = http_get(doc_url).decode("utf-8", errors="replace")
-        except (urllib.error.URLError, TimeoutError, OSError) as ex:
+        except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException) as ex:
             print(f"  [{i}/{len(by_reg)}] FAILED docs  {reg}  ({ex})")
             time.sleep(DELAY_SECONDS)
             continue
@@ -501,7 +502,7 @@ def cmd_fetch_documents(args) -> int:
                 continue
             try:
                 data, headers = http_get_with_headers(att["url"])
-            except (urllib.error.URLError, TimeoutError, OSError) as ex:
+            except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException) as ex:
                 print(f"      [{j}/{len(attachments)}] FAILED  {att['label'][:40]}  ({ex})")
                 time.sleep(DELAY_SECONDS)
                 continue
