@@ -6689,11 +6689,15 @@
             "note": "OpenSanctions topics: corp.disqual; role.oligarch; sanction; role.rca; poi. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions' own sanctions notes cite the exact ₽33bn/2006 ДАР charter-capital contribution with Симановский already documented in this registry's finding 15 and ownership diagram — independent confirmation of a core registry finding, not just an identity match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
-        ]
+        ],
+        "birthplace": "Каспийск, Дагестан (Kaspiysk, Dagestan)",
+        "inn_personal": "773600432474",
+        "photo": "images/mikhelson-leonid-viktorovich_portrait_rupep.jpg"
       },
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+        "2026-08-27: rupep.org profile (pending source_id) confirms dob 11.08.1955, birthplace Kaspiysk/Dagestan, personal ИНН 773600432474, headshot. Sanctioned by Australia/Canada/Ukraine/UK/New Zealand. RuPEP categorizes him 'Связанное лицо' (related person) rather than a PEP in his own right. Confirms his existing tie to this registry: 100% personal owner of ООО «НОВА» (ИНН 6330037352, already sanctioned/money-layer tier). Family/associate detail not wired per PII scope."
       ],
       "verified_against": null
     },
@@ -6707,11 +6711,63 @@
             "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role AND product match: OpenSanctions independently names her as GD of \"LLC UAMOC\" (= this registry's ООО «ЦУГАМ») producing FPV drones \"Kort\"/\"Brus-1\"/\"Osa\"/\"Boomerang\" — new product names not yet in this registry's ooo-tsugam record, worth folding in separately. Personal ИНН given in notes: 500905260513. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "source_id": null
           }
+        ],
+        "inn_personal": "500905260513",
+        "birthplace": "Бишкек, Кыргызстан (Bishkek, Kyrgyzstan)",
+        "photo": "images/sokolova-olga-mikhaylovna_portrait_rupep.jpg",
+        "open_questions": [
+          {
+            "source_id": "s2710",
+            "text": "DOB CONFLICT: this record's existing dob (1973-01-23) came from the 2026-08-24 OpenSanctions screening match (no source_id, not independently verified). rupep.org's profile for the same ИНН (500905260513 -- both sources agree on this) gives a different dob, 03.01.1976. Kept the existing OpenSanctions-derived dob rather than silently overwriting with RuPEP's, since neither has been checked against a primary document (EGRUL/passport) -- flagging for resolution rather than picking one aggregator over another."
+          }
+        ],
+        "roles": [
+          {
+            "entity_slug": null,
+            "title": "Генеральный директор",
+            "body": "АО «НПО «Молния»» (2017-2021)",
+            "from": "2017-04-06",
+            "to": "2021-11-10",
+            "source_id": "s2710"
+          },
+          {
+            "entity_slug": null,
+            "title": "Генеральный директор / Президент",
+            "body": "АО «ТМЗ» / ЗАО «Корпорация «ТМЗ»» (Тушинский машиностроительный завод, 2016-2018)",
+            "from": "2016-05-16",
+            "to": "2018-06-29",
+            "source_id": "s2710"
+          },
+          {
+            "entity_slug": null,
+            "title": "Генеральный директор",
+            "body": "АО «780 РЗ ТСК» (military repair plant, 2022-2024)",
+            "from": "2022-02-16",
+            "to": "2024-04-09",
+            "source_id": "s2710"
+          },
+          {
+            "entity_slug": null,
+            "title": "Генеральный директор",
+            "body": "ООО «ПТЕРО» (since 2023-10-18)",
+            "from": "2023-10-18",
+            "to": null,
+            "source_id": "s2710"
+          },
+          {
+            "entity_slug": null,
+            "title": "Генеральный директор",
+            "body": "ООО «РБС ГАРПИЯ» (since 2025-12-03, her stated \"last position\" on RuPEP)",
+            "from": "2025-12-03",
+            "to": null,
+            "source_id": "s2710"
+          }
         ]
       },
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+        "2026-08-27: rupep.org profile (s2710) confirms this record's ИНН lead (500905260513, previously only mentioned in the OpenSanctions sanctions[].note prose) as her formal inn_personal, adds birthplace (Bishkek, Kyrgyzstan), headshot, and a rich director-for-hire career chain across major Russian aerospace-defense enterprises: АО «НПО «Молния»» (Buran-shuttle developer), АО «ТМЗ»/ЗАО «Корпорация «ТМЗ»» (Тушинский машиностроительный завод), АО «780 РЗ ТСК» (a military repair plant), then this registry's own ООО «ЦУГАМ» (2023, already on file), then ООО «ПТЕРО» (2023) and ООО «РБС ГАРПИЯ» (2025, her current/last-listed position). A genuine dob conflict between this record's existing OpenSanctions-derived value and RuPEP's own value logged as an open question, not silently resolved -- see open_questions[]. RuPEP categorizes her 'Лицо под санкциями' with EU/France/Switzerland/Monaco listed."
       ],
       "verified_against": null
     },
@@ -7050,10 +7106,13 @@
             "note": "CONFIRMED — unambiguous public figure, role/title match exact, no ID cross-check needed given public notoriety. Not yet independently read against each underlying primary designation document.",
             "source_id": "s0831"
           }
-        ]
+        ],
+        "birthplace": "Санкт-Петербург (Saint Petersburg, then Leningrad)",
+        "photo": "images/medvedev-dmitriy-anatolevich_portrait_rupep.jpg"
       },
       "why": [
-        "2026-08-24 OpenSanctions screening: top match (score 1.0) is unambiguously the former Russian President — \"Former Russian Prime Minister, former Russian President, and head of the United Russia party\" — matches this registry's own role (Chairman United Russia; Deputy Chairman Security Council). A second, unrelated намесake (\"ДМИТРИЙ ВЛАДИМИРОВИЧ МЕДВЕДЕВ\", score 0.92) was returned and discarded."
+        "2026-08-24 OpenSanctions screening: top match (score 1.0) is unambiguously the former Russian President — \"Former Russian Prime Minister, former Russian President, and head of the United Russia party\" — matches this registry's own role (Chairman United Russia; Deputy Chairman Security Council). A second, unrelated намесake (\"ДМИТРИЙ ВЛАДИМИРОВИЧ МЕДВЕДЕВ\", score 0.92) was returned and discarded.",
+        "2026-08-27: rupep.org profile (pending source_id) confirms dob 14.09.1965, birthplace Leningrad/Saint Petersburg, headshot. No personal ИНН published on the profile (a very high-profile PEP; RuPEP does not list one). Family/associate detail not wired per PII scope."
       ],
       "verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text"
     },
@@ -7086,10 +7145,15 @@
             "text": "Aleph (Russian Central Bank Leak, 2022) indexes a leaked PDF (2838_01.07.18_7.PDF) whose peopleMentioned list includes both this person and \"Алёшин Дмитрий Борисович\" (likely relative — same surname/patronymic-initial pattern, unconfirmed) alongside several banking entities (ООО «БиМод», ПФИ Банк, ООО КБ «СИНКО-БАНК», etc). The underlying PDF has not been opened/read — only Aleph metadata (entity-mention list) has been checked. Worth opening the source PDF directly (via the Aleph file endpoint) if a family/business-network angle on this Аэромакс-adjacent figure becomes relevant.",
             "source_id": "s1966"
           }
-        ]
+        ],
+        "dob": "1955-03-03",
+        "birthplace": "Москва (Moscow)",
+        "inn_personal": "770802770590",
+        "photo": "images/aleshin-boris-sergeevich_portrait_rupep.jpg"
       },
       "why": [
-        "2026-08-24 OpenSanctions screening (score 1.0): matched record's own note — \"Chairman of the Board of Directors of the Kronstadt industrial complex, adviser to the General-Director of United Aircraft Corporation\" — is an EXACT independent match to this registry's own pre-existing prose note (sourced from Kommersant/CNews/AEX.ru/ВПК.name, 19.08.2026) that he \"chair[ed] Кронштадт's board of directors until his 2023 departure.\" Two independent source chains naming the same role is strong corroboration. Archived match carries real primary source_urls: war-sanctions.gur.gov.ua/en/sanctions/persons/5316, EU regulation 2023/1216 (eur-lex.europa.eu), and the French Treasury's gels-avoirs asset-freeze registry — not yet independently opened and read, but this is a real multi-regime designation, not a bare aggregator guess. No DOB returned by OpenSanctions for this match."
+        "2026-08-24 OpenSanctions screening (score 1.0): matched record's own note — \"Chairman of the Board of Directors of the Kronstadt industrial complex, adviser to the General-Director of United Aircraft Corporation\" — is an EXACT independent match to this registry's own pre-existing prose note (sourced from Kommersant/CNews/AEX.ru/ВПК.name, 19.08.2026) that he \"chair[ed] Кронштадт's board of directors until his 2023 departure.\" Two independent source chains naming the same role is strong corroboration. Archived match carries real primary source_urls: war-sanctions.gur.gov.ua/en/sanctions/persons/5316, EU regulation 2023/1216 (eur-lex.europa.eu), and the French Treasury's gels-avoirs asset-freeze registry — not yet independently opened and read, but this is a real multi-regime designation, not a bare aggregator guess. No DOB returned by OpenSanctions for this match.",
+        "2026-08-27: rupep.org profile (pending source_id) confirms dob 03.03.1955, birthplace Moscow, personal ИНН 770802770590, headshot. Owns real estate in Finland per profile. Sanctioned by EU/Ukraine/France/Monaco/New Zealand/Switzerland, tagged 'Война с Украиной'. Career since leaving ГК «Кронштадт»'s board (2023): ФГУП «ЦАГИ» scientific director/supervisory board chair, RAS academician. Family/associate detail not wired per PII scope."
       ],
       "verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text"
     },
@@ -7280,10 +7344,19 @@
             "note": "PLAUSIBLE — exact name match, corroborated only via surname/patronymic family tie to Михельсон Л.В. Returned DOB (1993-01-01) looks like a placeholder, not a verified date — do not treat as confirmed. NOT personal-ИНН-confirmed.",
             "source_id": "s0856"
           }
+        ],
+        "dob": "1993-01-01",
+        "inn_personal": "772984313656",
+        "open_questions": [
+          {
+            "source_id": "s2709",
+            "text": "rupep.org confirms she is Леонид Викторович Михельсон's daughter (RuPEP category 'Член семьи') and owns ООО «Оптима» (ИНН 7729487530, 100%) and co-owns ООО «ГЭС-2» (ИНН 7706809928, 0.01% -- an unrelated Moscow contemporary-art venue, not a UAV/defense entity). No connection to ЦБСТ/РОЙ.МАРКЕТ or any registry entity found on this profile -- the original Aleph NGO-affiliates-registry lead that flagged her (charity affiliation) remains the only tie, still unconfirmed. Checked and not strengthened; not a network principal in her own right per PII scope, so no further detail wired."
+          }
         ]
       },
       "why": [
-        "2026-08-24 OpenSanctions screening (score 1.0, exact name match, no notes/context text). PLAUSIBLE only, via the surname+patronymic tie to the already-confirmed Михельсон Леонид Викторович (father, per patronymic) — but the returned birthDate (1993-01-01) has the shape of a placeholder/unknown-date convention (Jan 1), not a verified real DOB, so it is deliberately NOT written into the dob field. Flagging rather than silently trusting a suspicious date."
+        "2026-08-24 OpenSanctions screening (score 1.0, exact name match, no notes/context text). PLAUSIBLE only, via the surname+patronymic tie to the already-confirmed Михельсон Леонид Викторович (father, per patronymic) — but the returned birthDate (1993-01-01) has the shape of a placeholder/unknown-date convention (Jan 1), not a verified real DOB, so it is deliberately NOT written into the dob field. Flagging rather than silently trusting a suspicious date.",
+        "2026-08-27: rupep.org profile (pending source_id) checked per this session's PEP-candidate list -- confirms identity (dob 01.01.1993, ИНН 772984313656, daughter of Леонид Михельсон) but surfaces no new network tie. Logged as a checked-negative result, not deep-wired, since she is not herself a confirmed network principal."
       ],
       "verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text"
     },
