@@ -2314,7 +2314,13 @@
           "telegram": [],
           "vk": [],
           "youtube": [],
-          "marketplace_listings": [],
+          "marketplace_listings": [
+            {
+              "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/ekolibri",
+              "note": "Official partner/seller profile on Налетай.рф, the ГТЛК-backed state civilian UAV marketplace. Legal-info block confirms exact ИНН match. Direct manufacturer storefront (sells under its own name, not a reseller). 2 products listed (Р-75, Р-5 -- fixed-wing UAVs, Р-75 priced from ₽13,000,000).",
+              "source_id": "s2617"
+            }
+          ],
           "other": []
         },
         "products": [
@@ -2375,7 +2381,8 @@
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): confirmed match, exact ИНН on-site. Also offers certification/lifecycle/maintenance services for its own systems. \"Безопасная и экологичная авиация\" (safe and ecological aviation) positioning.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7714473012). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-24: confirmed 2 existing product names against this entity's own rk.2035.university self-listing (s1169) and added 3 newly-surfaced models (Р-30, Р-5, Р-55).",
-        "2026-08-25: director previously null -- filled from Ассоциация «АЭРОНЕКСТ» member card (component.aeronext.aero/s_cm_api/catalog.ashx), which also confirmed ИНН/ОГРН/address exactly. Not yet cross-checked against an independent EGRUL pull -- association self-reported data, treat with the same caution as any single-source self-report until corroborated."
+        "2026-08-25: director previously null -- filled from Ассоциация «АЭРОНЕКСТ» member card (component.aeronext.aero/s_cm_api/catalog.ashx), which also confirmed ИНН/ОГРН/address exactly. Not yet cross-checked against an independent EGRUL pull -- association self-reported data, treat with the same caution as any single-source self-report until corroborated.",
+        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -4370,7 +4377,13 @@
           "telegram": [],
           "vk": [],
           "youtube": [],
-          "marketplace_listings": [],
+          "marketplace_listings": [
+            {
+              "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/ip-cherepkova",
+              "note": "Products bearing the \"НПО КАЙСАНТ\" manufacturer attribute (ГЕРМЕС-7 radio receiver/transmitter line, and a \"Кинетический FPV дрон-перехватчик ГУСЬ-7\" -- kinetic FPV interceptor drone) are sold on Налетай.рф NOT under this entity's own name, but through a personal-ИП storefront: \"ИП Черепкова Нина Сергеевна\" (seller slug ip-cherepkova, ИНН 773376903806) -- this registry's own record for Черепкова Н.С. already identifies her as НПО «Кайсант»'s founder/sole owner/GD (since 07.10.2022), whose EGRUL access was restricted (\"доступ ограничен\") just three weeks before this listing was captured (2026-08-03). Routing the company's own products through the owner's personal ИП rather than a corporate storefront on a state-backed marketplace, timed close to an EGRUL restriction, reads as a deliberate visibility-reduction pattern rather than routine reselling. 5 products total under that ИП listing.",
+              "source_id": "s2619"
+            }
+          ],
           "other": []
         },
         "cbst_tie": {
@@ -4435,7 +4448,8 @@
         "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
         "2026-08-24: user asked whether searchplatform.rospatent.gov.ru's /trademarks section had been checked. It turned out not to be a trademark endpoint at all (the guessed /search/tm and /search/trademarks routes both hit the site's ПрЭВМ/computer-program index, dataset 'prevm' -- a genuinely new, previously unscreened IP registry). A handful of registry product-name queries against it surfaced this real, on-topic hit.",
         "2026-08-24 web-search follow-up on the entity's own ПрЭВМ software co-inventor (Черепков А.А.): rusprofile/companium/spark-interfax listings agree he holds 93.3% of ООО НПО «Кайсант» (Черепкова Н.С., already in this registry as director, holds the remainder or the GD role only -- not fully disambiguated). source_id left null -- rusprofile blocked the archive attempt (403) and companium/synapsenet either rate-limited or didn't render the fact server-side; this is AGGREGATOR-sourced only, not yet confirmed against a primary EGRUL extract. Treat as a strong lead, not a confirmed ownership stake.",
-        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 10 candidates -- all belong to an unrelated individual (Черепкова Нина Сергеевна) or an unrelated company (ООО «Аргус-М»), both disinfection/lighting equipment, not this entity's own name."
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 10 candidates -- all belong to an unrelated individual (Черепкова Нина Сергеевна) or an unrelated company (ООО «Аргус-М»), both disinfection/lighting equipment, not this entity's own name.",
+        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
       ]
     },
     "npp-radar-mms": {
@@ -4548,7 +4562,13 @@
           "telegram": [],
           "vk": [],
           "youtube": [],
-          "marketplace_listings": [],
+          "marketplace_listings": [
+            {
+              "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/radar-mms",
+              "note": "Official partner/seller profile on Налетай.рф, the ГТЛК-backed state civilian UAV marketplace. Legal-info block confirms exact ИНН match. Direct manufacturer storefront (sells under its own name, not a reseller). 3 products: БВС ВТ-440м (helicopter-type UAV, from ₽80,000,000), БВС ВТ-30Е (from ₽15,000,000), and a mobile automated dronoport (from ₽26,000,000) -- high-value military-grade hardware sold openly.",
+              "source_id": "s2622"
+            }
+          ],
           "other": []
         },
         "products": [
@@ -4668,7 +4688,8 @@
         "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
         "2026-08-24: split the previously-unsourced combined \"БВС ВТ-45 / ВТ-440М / ВТ-30Е\" entry into 3 individually sourced products (s1169), and confirmed the entity's own listing uses \"НПП\" (matching this registry), resolving the s1168 open question in favour of НПП over the showcase blurb's \"Концерн\" wording.",
         "2026-08-25: appears on the Agency for Technological Development's (АТР, atr.gov.ru) federal grant program \"Комплектующие для БАС\" (208.atr.gov.ru/bas) -- «Реестр потенциальных производителей» (item 59) AND «Реестр потенциальных исполнителей» (item 222), exact ИНН match. These are dated snapshot PDFs (производители 30.06.2026, исполнители 14.07.2026, per the page's own labels) pulled 2026-08-25 and archived at data/sources/. This is a state-recognized potential-supplier listing for the national UAV-components grant program, not itself a ЦБСТ/РОЙ.МАРКЕТ link -- corroborates the entity's UAV/components industry footprint, does not establish any relationship to the ЦБСТ network specifically.",
-        "2026-08-25: director previously null -- filled from Ассоциация «АЭРОНЕКСТ» member card (component.aeronext.aero/s_cm_api/catalog.ashx), which also confirmed ИНН/ОГРН/address exactly. Not yet cross-checked against an independent EGRUL pull -- association self-reported data, treat with the same caution as any single-source self-report until corroborated."
+        "2026-08-25: director previously null -- filled from Ассоциация «АЭРОНЕКСТ» member card (component.aeronext.aero/s_cm_api/catalog.ashx), which also confirmed ИНН/ОГРН/address exactly. Not yet cross-checked against an independent EGRUL pull -- association self-reported data, treat with the same caution as any single-source self-report until corroborated.",
+        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -6062,7 +6083,16 @@
             "source_id": null,
             "text": "2026-08-24: leader-id.ru self-report shows Лапин Игорь Николаевич as Директор of \"ООО Авирон\" -- an EXACT name match to this entity's own already-sourced director field (Лапин Игорь Николаевич, EGRUL as of 2024-09-04, s0460), but the leader-id profile lists his city as Екатеринбург, not Москва (this entity's registered address). A same-person director-name match doesn't by itself resolve which \"Авирон\" this is -- a person can legally direct a Moscow-registered company while personally based elsewhere, so the city mismatch is not strong evidence either way, and leader-id's profile carries no subject-matter/industry field that could help distinguish drone-maker from pharma. Still unresolved; noted as a data point, not a resolution."
           }
-        ]
+        ],
+        "web": {
+          "marketplace_listings": [
+            {
+              "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/aviron",
+              "note": "Official partner/seller profile on Налетай.рф, the ГТЛК-backed state civilian UAV marketplace. Legal-info block confirms exact ИНН match. Direct manufacturer storefront (sells under its own name, not a reseller). 9 products, radio-control/comms modules for the \"Пеппа\" system.",
+              "source_id": "s2620"
+            }
+          ]
+        }
       },
       "verified_against": null,
       "why": [
@@ -6071,7 +6101,8 @@
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1247700414631-20260823120635.pdf, pulled 23.08.2026). Same Сокол district address zone as ООО «ОРИЕНТ СИСТЕМС» and ООО «4ГНСС» (see above) — not confirmed as the identical building, just the same district, so not claimed as a shared-suite finding the way the Нарышкинская cluster was; worth a closer address comparison if this entity gets deeper research. Majority owner and GD Лапин Игорь Николаевич (63.2%); minority co-founder ООО «Производство обучающих систем и технологий» (36.8%) — an 'educational-systems production' entity as co-owner of a company presumably UAV-related is a name mismatch worth noting, not yet explained.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7743451768). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-24: rospatent full-roster patent sweep second-triage pass -- NOT promoted despite an exact name match, due to wildly implausible subject matter (COVID-19 antivirals) with no ИНН available to confirm same-entity identity; logged as an open question instead.",
-        "2026-08-25: found as a listed member of Ассоциация «АЭРОНЕКСТ» (aeronext.aero), the national UAV-industry employer association, via its open backend API (component.aeronext.aero/s_cm_api/catalog.ashx). Full member card confirms ИНН/ОГРН/address exactly and corroborates the director already on file (Лапин Игорь Николаевич) via the card's own «ФИО Руководителя» field (s1406). Not a ЦБСТ/РОЙ.МАРКЕТ link -- national industry-association membership, same category as other adjacent programs already noted."
+        "2026-08-25: found as a listed member of Ассоциация «АЭРОНЕКСТ» (aeronext.aero), the national UAV-industry employer association, via its open backend API (component.aeronext.aero/s_cm_api/catalog.ashx). Full member card confirms ИНН/ОГРН/address exactly and corroborates the director already on file (Лапин Игорь Николаевич) via the card's own «ФИО Руководителя» field (s1406). Not a ЦБСТ/РОЙ.МАРКЕТ link -- national industry-association membership, same category as other adjacent programs already noted.",
+        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
       ]
     },
     "ooo-boevye-tekhnologii": {
@@ -7091,7 +7122,13 @@
           "telegram": [],
           "vk": [],
           "youtube": [],
-          "marketplace_listings": [],
+          "marketplace_listings": [
+            {
+              "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/kleverkopter",
+              "note": "Official partner/seller profile on Налетай.рф, the ГТЛК-backed state civilian UAV marketplace. Legal-info block confirms exact ИНН match. Direct manufacturer storefront (sells under its own name, not a reseller). 3 products: БАС Курьер-30 and БАС Патруль-30 (multirotor delivery/patrol platforms) plus a LiPo battery.",
+              "source_id": "s2615"
+            }
+          ],
           "other": []
         },
         "products": [
@@ -7167,7 +7204,8 @@
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0744).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5257183517). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
-        "2026-08-24: added 2 new products (Аэромедик, Аэромедик MINI) from this entity's own rk.2035.university self-listing (s1169); flagged a spec discrepancy on the existing Курьер-30 entry rather than silently overwriting it."
+        "2026-08-24: added 2 new products (Аэромедик, Аэромедик MINI) from this entity's own rk.2035.university self-listing (s1169); flagged a spec discrepancy on the existing Курьер-30 entry rather than silently overwriting it.",
+        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -7224,7 +7262,13 @@
           "telegram": [],
           "vk": [],
           "youtube": [],
-          "marketplace_listings": [],
+          "marketplace_listings": [
+            {
+              "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/copterlab",
+              "note": "Official partner/seller profile on Налетай.рф, the ГТЛК-backed state civilian UAV marketplace. Legal-info block confirms exact ИНН match. Direct manufacturer storefront (sells under its own name, not a reseller). 3 products including \"Программно-аппаратный комплекс «ФОРПОСТ»\" (counter-drone complex, from ₽10,000,000) -- confirms this entity as the manufacturer of that system.",
+              "source_id": "s2618"
+            }
+          ],
           "other": []
         }
       },
@@ -7232,7 +7276,8 @@
         "full EGRUL extract pulled directly 23.08.2026 (ul-1247700198734-20260823122742.pdf). Sole founder = sole director, registered 2024 — one of the youngest entities in this batch.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7720925267). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "web.sites was empty; rk2035_matches (already screened, ИНН-confirmed) had the site all along, just never promoted.",
-        "2026-08-25: found as a listed member of Ассоциация «АЭРОНЕКСТ» (aeronext.aero), the national UAV-industry employer association, via its open backend API (component.aeronext.aero/s_cm_api/catalog.ashx). Full member card confirms ИНН/ОГРН/address exactly and corroborates the director already on file (Федукович Кирилл Олегович) via the card's own «ФИО Руководителя» field (s1404). Not a ЦБСТ/РОЙ.МАРКЕТ link -- national industry-association membership, same category as other adjacent programs already noted."
+        "2026-08-25: found as a listed member of Ассоциация «АЭРОНЕКСТ» (aeronext.aero), the national UAV-industry employer association, via its open backend API (component.aeronext.aero/s_cm_api/catalog.ashx). Full member card confirms ИНН/ОГРН/address exactly and corroborates the director already on file (Федукович Кирилл Олегович) via the card's own «ФИО Руководителя» field (s1404). Not a ЦБСТ/РОЙ.МАРКЕТ link -- national industry-association membership, same category as other adjacent programs already noted.",
+        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -7347,7 +7392,13 @@
           "telegram": [],
           "vk": [],
           "youtube": [],
-          "marketplace_listings": [],
+          "marketplace_listings": [
+            {
+              "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/kravt",
+              "note": "Official partner/seller profile on Налетай.рф, the ГТЛК-backed state civilian UAV marketplace. Legal-info block confirms exact ИНН match. Direct manufacturer storefront (sells under its own name, not a reseller). 3 products, FPV/UAV batteries.",
+              "source_id": "s2621"
+            }
+          ],
           "other": []
         },
         "sanctions": [
@@ -7638,7 +7689,8 @@
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7802693899). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-24: promoted 20 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: subject matter is water-treatment/chlorination equipment (this entity's actual core business), unrelated to UAVs directly -- but confirms ООО «КРАВТ» is a real, long-operating industrial equipment manufacturer, consistent with the already-established fact that it separately holds a UAV power-supply patent under its own name (RU2858174C1, currently recorded on the subsidiary ooo-kravt-udmurtiya's record) -- i.e. a real diversified company, not a shell.",
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
-        "2026-08-25: appears on the Agency for Technological Development's (АТР, atr.gov.ru) federal grant program \"Комплектующие для БАС\" (208.atr.gov.ru/bas) -- «Реестр потенциальных исполнителей», exact ИНН match. These are dated snapshot PDFs (производители 30.06.2026, исполнители 14.07.2026, per the page's own labels) pulled 2026-08-25 and archived at data/sources/. This is a state-recognized potential-supplier listing for the national UAV-components grant program, not itself a ЦБСТ/РОЙ.МАРКЕТ link -- corroborates the entity's UAV/components industry footprint, does not establish any relationship to the ЦБСТ network specifically."
+        "2026-08-25: appears on the Agency for Technological Development's (АТР, atr.gov.ru) federal grant program \"Комплектующие для БАС\" (208.atr.gov.ru/bas) -- «Реестр потенциальных исполнителей», exact ИНН match. These are dated snapshot PDFs (производители 30.06.2026, исполнители 14.07.2026, per the page's own labels) pulled 2026-08-25 and archived at data/sources/. This is a state-recognized potential-supplier listing for the national UAV-components grant program, not itself a ЦБСТ/РОЙ.МАРКЕТ link -- corroborates the entity's UAV/components industry footprint, does not establish any relationship to the ЦБСТ network specifically.",
+        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
@@ -12554,7 +12606,13 @@
           ],
           "vk": [],
           "youtube": [],
-          "marketplace_listings": [],
+          "marketplace_listings": [
+            {
+              "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/rokot-tex",
+              "note": "Official partner/seller profile on Налетай.рф, the ГТЛК-backed state civilian UAV marketplace. Legal-info block confirms exact ИНН match. Direct manufacturer storefront (sells under its own name, not a reseller). 3 products, FPV propellers.",
+              "source_id": "s2616"
+            }
+          ],
           "other": []
         },
         "products": [
@@ -12575,7 +12633,8 @@
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1247600010954-20260823135127.pdf). Sole founder = sole director. Yaroslavl — one of the technopark cities already named in the npc_bas_technopark_network memory's shortlist, not independently confirmed as that specific residency here.",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): confirmed match, exact ИНН/ОГРН on-site. Domestic import-substitute plastic propeller manufacturer, newly registered (Nov 2024) but active production with press coverage as of 2025 -- not a shell.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7606140961). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7606140961). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
       ],
       "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },

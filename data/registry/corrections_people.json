@@ -8921,10 +8921,18 @@
     },
     "cherepkova-nina-sergeevna": {
       "set": {
-        "inn_personal": "773376903806"
+        "inn_personal": "773376903806",
+        "roles": [
+          {
+            "entity_slug": "npo-kaysant",
+            "title": "Founder / sole owner / Генеральный директор (also operates a personal ИП storefront selling the company's products on Налетай.рф under her own name rather than the company's)",
+            "source_id": "s2619"
+          }
+        ]
       },
       "why": [
-        "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2540)."
+        "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2540).",
+        "2026-08-26: confirmed via налетай.рф (ГТЛК state UAV marketplace) that НПО «Кайсант»'s ГЕРМЕС-7/ГУСЬ-7 products are sold under her personal ИП (ip-cherepkova, ИНН 773376903806 -- exact match to inn_personal already on file), not the company's own name -- see npo-kaysant's marketplace_listings[] note for the full reasoning on why this looks like a deliberate visibility-reduction pattern."
       ]
     },
     "stupnikov-andrey-genadevich": {
