@@ -34726,6 +34726,126 @@
     "wb_screened_at": "2026-08-25"
   },
   {
+    "slug": "ooo-tstp-tsifrovaya-transportnaya-platforma",
+    "name_ru": "ООО «ЦТП» (Цифровая транспортная платформа)",
+    "name_latin": "OOO TsTP (Digital Transport Platform)",
+    "legal_form": "ООО",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "9714054618",
+    "ogrn": "1247700498660",
+    "extra_ids": null,
+    "registered": "17.07.2024",
+    "address": "125284, Москва, Ленинградский проспект, д. 31А, стр. 1, оф. 2/3",
+    "okved_code": "63.11",
+    "okved_label": "Деятельность по созданию и использованию баз данных и информационных ресурсов (веб-порталы) -- primary code; 22 secondary codes per its own EGRUL extract.",
+    "okved_mismatch": null,
+    "director": "Фандеев Дмитрий Александрович",
+    "director_history": [
+      {
+        "as_of": "2024-07-17",
+        "note": "GD from incorporation, personal ИНН 525710331193.",
+        "source_id": "s2852",
+        "value": "Фандеев Дмитрий Александрович"
+      }
+    ],
+    "founders": [
+      {
+        "name": "ООО «АКВАМАРИН-4523»",
+        "share": "99%"
+      },
+      {
+        "name": "ООО «САПФИР-7452»",
+        "share": "1%"
+      }
+    ],
+    "founders_history": [
+      {
+        "as_of": "2024-07-17",
+        "note": "Two-tier corporate founder structure -- ownership and management are split (GD Фандеев is not a founder).",
+        "source_id": "s2852",
+        "value": "ООО «АКВАМАРИН-4523» (99%), ООО «САПФИР-7452» (1%)"
+      }
+    ],
+    "charter_capital": 100000,
+    "charter_capital_history": [
+      {
+        "value": 100000,
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "plumbing",
+    "tier_basis": "operator of налетай.рф, a state-backed UAV marketplace (built by АО «ГТЛК») independently confirmed to carry live product listings from 9 of this brief's manufacturers -- see docs/index.html's Digital and operational infrastructure section",
+    "cbst_tie": false,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [
+      {
+        "count": 0,
+        "as_of": "2024",
+        "source_id": "s2852",
+        "note": null
+      },
+      {
+        "count": 3,
+        "as_of": "2025",
+        "source_id": "s2852",
+        "note": null
+      }
+    ],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [
+        {
+          "url": "https://xn--80aaorhk2b.xn--p1ai/",
+          "note": "налетай.рф -- public unauthenticated catalog API, see docs/index.html"
+        }
+      ],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "text": "The ЦТП-operates-налетай.рф attribution was established via the site's technical/domain footprint during initial 2026-08-26 exploration, not from a single archived document naming both together explicitly -- ГТЛК's own press release (s2851) confirms it built and launched the marketplace, and ЦТП's own EGRUL/rusprofile record (s2852) independently confirms the corporate entity, but no single source directly states \"ЦТП operates налетай.рф\" in one sentence. Worth a follow-up pull of налетай.рф's own Terms of Service/Privacy Policy page (typically names the operating legal entity directly) to close this gap with a document that says so explicitly.",
+        "source_id": null
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-08-28: added during a full docs/index.html-vs-registry reconciliation pass -- this entity was named and cited with real corporate detail in the brief's налетай.рф marketplace section (added 2026-08-26) but had never been promoted to its own entities.json record. rusprofile.ru (s2852) and ГТЛК's own press release (s2851) archived and cited above."
+    ]
+  },
+  {
     "slug": "ao-spetstekh-perviy",
     "name_ru": "АО «Спецтех Первый»",
     "name_latin": null,
