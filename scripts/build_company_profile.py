@@ -163,11 +163,19 @@ class ProfileBuilder:
             return None
         return f"../{rel_path}"
 
-    def battlefield_image(self, source_id):
-        """A battlefield_evidence source usually only lives in data/sources/
-        (gitignored, unpublished). Only return an HTML-usable URL if a
-        docs/images/ copy with the same stem already exists; otherwise None
-        so the template shows the text citation without a broken <img>."""
+    def battlefield_image(self, source_id, image_path=None):
+        """A battlefield_evidence entry may name its own docs/images/ photo
+        directly via image_path (e.g. a letter scan or product still pulled
+        separately from the cited source document) -- preferred when present.
+        Otherwise fall back to the old heuristic: a battlefield_evidence
+        source usually only lives in data/sources/ (gitignored, unpublished),
+        so guess a docs/images/ copy by matching filename stem. Returns None
+        if neither resolves, so the template shows the text citation without
+        a broken <img>."""
+        if image_path:
+            html_url = self.docs_image_url(image_path)
+            if html_url:
+                return html_url, image_path
         s = self.src_by_id.get(source_id)
         if not s:
             return None, None
@@ -251,8 +259,13 @@ class ProfileBuilder:
             history_table("facility_type_history", "Facility type"),
         ] if t]
 
-        products = [{"name": p.get("name_ru"), "description": p.get("description"),
-                     "source": self.source_label(p.get("source_id"))} for p in e.get("products", [])]
+        products = [
+            {"name": p.get("name_ru"), "description": p.get("description"),
+             "source": self.source_label(p.get("source_id"))}
+            if isinstance(p, dict) else
+            {"name": p, "description": None, "source": None}
+            for p in e.get("products", [])
+        ]
 
         financials = [{"year": f.get("year"),
                        "revenue": f"₽{f['revenue']:,.0f}" if f.get("revenue") else "—",
@@ -291,7 +304,7 @@ class ProfileBuilder:
 
         battlefield_evidence = []
         for b in e.get("battlefield_evidence", []):
-            html_url, md_path = self.battlefield_image(b.get("source_id"))
+            html_url, md_path = self.battlefield_image(b.get("source_id"), b.get("image_path"))
             battlefield_evidence.append({
                 "ru": b.get("text_ru"), "en": b.get("text_en"),
                 "context": b.get("context"), "as_of": b.get("as_of"),
@@ -342,12 +355,16 @@ class ProfileBuilder:
         seen_person_slugs = set()
         for p in self.people:
             for r in p.get("roles", []):
+                if not isinstance(r, dict):
+                    continue
                 if r.get("entity_slug") == slug and p["slug"] not in seen_person_slugs:
                     seen_person_slugs.add(p["slug"])
                     photo_url = self.docs_image_url(p.get("photo"))
                     photo_md = f"../{p['photo']}" if p.get("photo") and (REPO / 'docs' / p['photo']).exists() else None
                     roles_text = []
                     for role in p.get("roles", []):
+                        if not isinstance(role, dict):
+                            continue
                         if role.get("entity_slug") == slug and role.get("title"):
                             span = ""
                             if role.get("from") or role.get("to"):
@@ -380,10 +397,32 @@ class ProfileBuilder:
                 "label": label, "profile_url": profile_url,
                 "relationship": relationship, "source": self.source_label(r.get("source_id")),
             })
+        def linked_entity_entry(item, default_relationship):
+            """parents[]/subsidiaries[] hold either a bare slug string (older
+            scaffold shape) or a structured dict (slug/name/inn/share_percent/
+            role/source_id -- the shape most entries actually use). Handle
+            both rather than assuming the simpler shape, which crashed here
+            on every entity using the structured form."""
+            if isinstance(item, dict):
+                rel_slug = item.get("slug")
+                name = item.get("name")
+                label = name or (self.by_slug[rel_slug]["name_latin"] or self.by_slug[rel_slug]["name_ru"] if rel_slug and rel_slug in self.by_slug else rel_slug) or "Unresolved entity"
+                share = item.get("share_percent")
+                relationship = item.get("relationship") or item.get("role") or default_relationship
+                if share is not None:
+                    relationship = f"{relationship} ({share}%)"
+                return {
+                    "label": label,
+                    "profile_url": f"{rel_slug}.html" if rel_slug and rel_slug in self.by_slug else None,
+                    "relationship": relationship,
+                    "source": self.source_label(item.get("source_id")),
+                }
+            return {"label": item, "profile_url": f"{item}.html" if item in self.by_slug else None, "relationship": default_relationship, "source": None}
+
         for p in e.get("parents", []):
-            related_entities.append({"label": p, "profile_url": f"{p}.html" if p in self.by_slug else None, "relationship": "Parent entity", "source": None})
+            related_entities.append(linked_entity_entry(p, "Parent entity"))
         for s in e.get("subsidiaries", []):
-            related_entities.append({"label": s, "profile_url": f"{s}.html" if s in self.by_slug else None, "relationship": "Subsidiary", "source": None})
+            related_entities.append(linked_entity_entry(s, "Subsidiary"))
 
         open_questions = [{"text": q.get("text"), "source": self.source_label(q.get("source_id"))} for q in e.get("open_questions", [])]
 

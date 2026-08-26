@@ -1,0 +1,115 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ООО «Кольская верфь» — company profile — РОЙ.МАРКЕТ</title>
+<link rel="stylesheet" href="../assets/profile.css">
+</head><body>
+<div class="wrap">
+
+  <header class="mast">
+    <button id="theme-toggle" type="button" aria-pressed="false" style="float:right;background:var(--panel-2);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:.35em .7em;font:inherit;font-size:.85em;cursor:pointer;">☾/☀ theme</button>
+    <p class="kicker">Company profile · РОЙ.МАРКЕТ investigation</p>
+    <div class="profile-head">
+      <div class="profile-head-text">
+        <h1>ООО «Кольская верфь»</h1>
+        <div class="chip-row">
+<span class="tag t-open">manufacturer</span>        </div>
+        <p class="meta">
+<span>ИНН 5190102381</span><span>ОГРН 1245100006799</span>        </p>
+      </div>
+    </div>
+  </header>
+
+  <section id="at-a-glance">
+    <p class="eyebrow">At a glance</p>
+    <div class="meta-grid">
+      <div><dt>Registered</dt><dd>25.12.2024</dd></div>
+      <div><dt>Address</dt><dd>Мурманская область, г. Мурманск</dd></div>
+      <div><dt>Director</dt><dd>Шаповалов Сергей Михайлович</dd></div>
+      <div><dt>ОКВЭД</dt><dd>30.12 — Строительство прогулочных и спортивных судов</dd></div>
+      <div><dt>Wildberries overlap</dt><dd>none_found</dd></div>
+    </div>
+    <div class="callout">
+      <span class="lbl">Declared vs. actual activity</span>
+      <p>Registered as recreational/sport-vessel shipbuilding — already flagged in the brief&#39;s original scaffold as a notable purpose mismatch given the entity&#39;s joint hydrofoil unmanned-surface-vessel (БЭК) project with НПП «ЭЛВО»; this fresh pull confirms the ОКВЭД exactly as already documented, not a new finding.</p>
+    </div>
+  </section>
+
+  <section id="ownership-history">
+    <p class="eyebrow">Ownership &amp; corporate history</p>
+    <h3>Director</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Шаповалов Сергей Михайлович</td><td class="num">2026-03-18</td><td>personal ИНН 511005152619; also sole founder <span class="id">[s0512]</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section id="sanctions">
+    <p class="eyebrow">Sanctions &amp; screening</p>
+    <ul class="plain">
+<li class="footnote" style="border:none;margin:0;padding:0;">1 OpenSanctions match(es) (screened 2026-08-24).</li>    </ul>
+  </section>
+
+
+
+
+  <section id="principals">
+    <p class="eyebrow">Principals &amp; persons of interest</p>
+    <p class="empty-note">No named principals linked to this entity yet.</p>
+  </section>
+
+
+  <section id="open-questions">
+    <p class="eyebrow">Open questions</p>
+    <ul class="plain">
+<li>2026-08-24 OpenSanctions full-roster screening: OpenSanctions&#39; name-similarity match for this entity was CHECKED and REJECTED — the designation record it returned (Товариство з обмеженою відповідальністю &#34;Керченська морська верф «Фрегат»&#34; (Ukraine, unrelated Kerch shipyard), ИНН/tax number 9111003660) does not match this entity&#39;s own ИНН. Recorded explicitly so this false lead is not mistaken for a real hit in a future pass. </li>    </ul>
+  </section>
+
+  <section id="sources">
+    <p class="eyebrow">Sources cited in this profile</p>
+    <div class="scroll"><table>
+      <thead><tr><th>ID</th><th>Type</th><th>Locator</th><th>Captured</th><th>As of</th></tr></thead>
+      <tbody>
+        <tr><td class="id">s0512</td><td>EGRUL extract</td><td>EGRUL extract (ul-1245100006799-20260823141101.pdf)</td><td class="num">—</td><td class="num">2026-08-23</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <p class="footnote">Generated from this investigation's registry (<code>data/registry/</code>) by <code>scripts/build_company_profile.py</code>. Not a substitute for reading the underlying primary sources listed above.</p>
+
+</div>
+<script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  var stored = null;
+  try { stored = localStorage.getItem('roymarket-theme'); } catch (e) {}
+  function apply(theme) {
+    if (theme === 'dark' || theme === 'light') { root.setAttribute('data-theme', theme); }
+    else { root.removeAttribute('data-theme'); }
+    if (btn) btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+  }
+  apply(stored);
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var currentlyDark = current === 'dark' || (!current && systemDark);
+      var next = currentlyDark ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem('roymarket-theme', next); } catch (e) {}
+    });
+  }
+})();
+</script>
+</body></html>

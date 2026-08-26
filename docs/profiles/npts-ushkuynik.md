@@ -1,0 +1,69 @@
+# Ushkuynik LLC — ООО «Ушкуйник»
+
+`manufacturer` 
+
+ИНН 5300013923 · ОГРН 1245300001650
+
+## At a glance
+
+- **Legal form:** NPTs (research and production centre)
+- **Registered:** 18.04.2024
+- **Address:** Новгородская область, г. Великий Новгород
+- **ОКВЭД:** 46.90 — Торговля оптовая неспециализированная
+- **Wildberries overlap:** none_found
+
+> **Declared vs. actual activity.** Secondary code 26.51.6 (Производство прочих приборов, датчиков, аппаратуры и инструментов для измерения, контроля и испытаний) sits oddly against a wholesale-trade primary registration — consistent with the brief's existing read of this and Ушкуйник-СП as commercial/holding shells adjacent to the operating АНО, not the actual manufacturing site.
+
+## Ownership & corporate history
+
+### Director
+
+| Value | As of | Note |
+|---|---|---|
+| None | 2025-09-15 | Director identity access-restricted in EGRUL as of 15.09.2025 (Federal Law 129-FZ). Confirmed by full 8-page EGRUL extract pulled 23.08.2026 (matches brief text already documenting this redaction date). [s0470] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| access-restricted | 2025-09-15 | Founder/participant identity access-restricted in EGRUL as of 15.09.2025, per full 8-page extract pulled 23.08.2026. [s0470] |
+
+## Products
+
+- **Князь Вандал Новгородский**
+
+## Foreign components
+
+- Camera sensor — marked SSC637X0-XXXK / SSC328Q / SSC335X — made by Sigmastar Technology Ltd., China [s0969]
+- Memory chip — marked Puya PX25Q128HA 3CIT350 — made by Purui Semiconductor (Shanghai) Co., Ltd., China [s0969]
+- Processor — marked SSC30KD FK12CD8E 2446F — made by Sigmastar Technology Ltd., China [s0969]
+- Transistor — marked 1AMs — made by Not identified [s0969]
+- Reversible Motor Driver — marked UTC PKAG BA6208G- — made by Unisonic Technologies, Taiwan [s0969]
+- Laser driver — marked GN25L95 25L95 2349 63702 — made by Semtech Corporation, United States [s0969]
+- Media Converter — marked RTL8213B 08DS6P1 G035 — made by Realtek, Taiwan [s0969]
+- Monochrome display driver — marked AT7456E EKG4C1N — made by Hangzhou Zhongke Microelectronics Co., Ltd., China [s0969]
+- Electrolytic capacitor — marked 330 63V PX157 — made by CapXon International Electronic Co., Ltd., China [s0969]
+- Memory chip — made by Winbond Electronics Corporation, Taiwan [s0969]
+- Gyroscope/accelerometer — marked ICM HC?AGI — made by Not identified [s0969]
+- Microcontroller 32-bit — marked STM32F405RGT6 GQ24M VQ CHN GQ 440 — made by STMicroelectronics, Switzerland [s0969]
+
+- 1 OpenSanctions match(es) (screened 2026-08-24).
+
+## Principals & persons of interest
+
+_No named principals linked to this entity yet._
+
+## Corporate links
+
+- **АНО «НПЦ «Ушкуйник»»** — shares "Ушкуйник" brand/name; NOT the same legal entity — АНО is the operating nonprofit (director Чадаев А.В., confirmed), this ООО is a separate commercial-form entity with its own redacted founders/director. No documented common ownership beyond the shared name and Novgorod address cluster. [s0470]
+- **ООО «Ушкуйник-СП»** — same commercial-shell pattern (also EGRUL-redacted director/founders, also no БФО filings on record), address on the same Большая Санкт-Петербургская street a few doors down [s0470]
+
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+| s0470 | EGRUL extract | EGRUL extract (ul-1245300001650-20260823122617.pdf) | — | 2026-08-23 |
+| s0969 | GUR war-sanctions record | GUR war-sanctions record (GUR_5300013923_20260824_npts-ushkuynik-components.html) | 2026-08-24 | — |
+
+---
+_Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

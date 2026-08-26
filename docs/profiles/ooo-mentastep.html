@@ -1,0 +1,116 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ООО «Ментастеп» — company profile — РОЙ.МАРКЕТ</title>
+<link rel="stylesheet" href="../assets/profile.css">
+</head><body>
+<div class="wrap">
+
+  <header class="mast">
+    <button id="theme-toggle" type="button" aria-pressed="false" style="float:right;background:var(--panel-2);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:.35em .7em;font:inherit;font-size:.85em;cursor:pointer;">☾/☀ theme</button>
+    <p class="kicker">Company profile · РОЙ.МАРКЕТ investigation</p>
+    <div class="profile-head">
+      <div class="profile-head-text">
+        <h1 title="limited liability company">ООО «Ментастеп»</h1>
+        <div class="chip-row">
+<span class="tag t-open">manufacturer</span>        </div>
+        <p class="meta">
+<span>ИНН 9715478320</span><span>ОГРН 1247700255208</span><span>Moscow</span>        </p>
+      </div>
+    </div>
+  </header>
+
+  <section id="at-a-glance">
+    <p class="eyebrow">At a glance</p>
+    <div class="meta-grid">
+      <div><dt>Legal form</dt><dd>OOO (limited liability company)</dd></div>
+      <div><dt>Registered</dt><dd>21.03.2024</dd></div>
+      <div><dt>Address</dt><dd>г. Москва</dd></div>
+      <div><dt>Director</dt><dd>Радченко Михаил Юрьевич</dd></div>
+      <div><dt>ОКВЭД</dt><dd>72.19 — Научные исследования и разработки в области естественных и технических наук прочие</dd></div>
+      <div><dt>ЦБСТ tie</dt><dd>Named ЦБСТ resident; its tactical-footwear product was shown at the «Запад-2025» strategic exercises alongside other resident hardware.</dd></div>
+      <div><dt>Wildberries overlap</dt><dd>none_found</dd></div>
+    </div>
+  </section>
+
+  <section id="ownership-history">
+    <p class="eyebrow">Ownership &amp; corporate history</p>
+    <h3>Director</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Радченко Михаил Юрьевич</td><td class="num">2024-03-21</td><td>personal ИНН 771587495422; also sole founder <span class="id">[s0491]</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="principals">
+    <p class="eyebrow">Principals &amp; persons of interest</p>
+    <div class="principal-grid">
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4>Радченко Михаил Юрьевич</h4>
+          <dl>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="open-questions">
+    <p class="eyebrow">Open questions</p>
+    <ul class="plain">
+<li>2026-08-25 attempt at VK/TG product-line enrichment (per project&#39;s own VK/TG-as-primary-source rule, in lieu of a site) -- web search returned no results connecting this entity to any VK/TG channel or product line at all. products[] stays empty; needs a more targeted search (e.g. against the Запад-2025 exercise context already cited in cbst_tie) if pursued further. </li>    </ul>
+  </section>
+
+  <section id="sources">
+    <p class="eyebrow">Sources cited in this profile</p>
+    <div class="scroll"><table>
+      <thead><tr><th>ID</th><th>Type</th><th>Locator</th><th>Captured</th><th>As of</th></tr></thead>
+      <tbody>
+        <tr><td class="id">s0491</td><td>EGRUL extract</td><td>EGRUL extract (ul-1247700255208-20260823131811.pdf)</td><td class="num">—</td><td class="num">2026-08-23</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <p class="footnote">Generated from this investigation's registry (<code>data/registry/</code>) by <code>scripts/build_company_profile.py</code>. Not a substitute for reading the underlying primary sources listed above.</p>
+
+</div>
+<script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  var stored = null;
+  try { stored = localStorage.getItem('roymarket-theme'); } catch (e) {}
+  function apply(theme) {
+    if (theme === 'dark' || theme === 'light') { root.setAttribute('data-theme', theme); }
+    else { root.removeAttribute('data-theme'); }
+    if (btn) btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+  }
+  apply(stored);
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var currentlyDark = current === 'dark' || (!current && systemDark);
+      var next = currentlyDark ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem('roymarket-theme', next); } catch (e) {}
+    });
+  }
+})();
+</script>
+</body></html>

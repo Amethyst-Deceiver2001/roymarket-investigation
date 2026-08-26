@@ -1,0 +1,82 @@
+# ООО «Аэроплатформы»
+
+`manufacturer` 
+
+ИНН 5027293811 · ОГРН 1215000018650
+
+## At a glance
+
+- **Legal form:** OOO (limited liability company)
+- **Registered:** 26.02.2021
+- **Address:** Московская область, г.о. Люберцы, пгт. Малаховка
+- **Director:** Власов Артём Аркадьевич
+- **ОКВЭД:** 30.30.2 — Производство аэростатов, дирижаблей, планеров, дельтапланов и прочих безмоторных летательных аппаратов
+- **Wildberries overlap:** none_found
+
+## Ownership & corporate history
+
+### Director
+
+| Value | As of | Note |
+|---|---|---|
+| Власов Артём Аркадьевич | 2025-10-21 | personal ИНН 502771850254; also sole founder [s0501] |
+
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | — | ₽-40,000 | [s0274] |
+| 2022 | — | ₽2,000 | [s0275] |
+| 2023 | ₽102,000 | ₽58,000 | [s0276] |
+| 2024 | — | — | [s0277] |
+| 2025 | ₽5,305,000 | ₽2,189,000 | [s0278] |
+
+## Patents
+
+| Title | Reg. no. | Filed | Inventors |
+|---|---|---|---|
+| Мобильная аэроплатформа | RU2779484C1 | 2021.12.06 | Макаров Евгений Владимирович (RU), Лощилов Антон Геннадьевич (RU), Батожаргалов Буянто Баторович (RU), Савин Андрей Дмитриевич (RU), Батожаргалова Саяна Эрдынеевна (RU) |
+
+- 1 OCCRP Aleph match(es) (screened 2026-08-26).
+
+## Principals & persons of interest
+
+### Batozhargalov Buyanto Batorovich — Батожаргалов Буянто Баторович
+
+- **ИНН:** 800102095959
+- co-inventor (patent RU2779484C1)
+
+### Batozhargalova Sayana Erdyneevna — Батожаргалова Саяна Эрдынеевна
+
+- co-inventor (patent RU2779484C1)
+
+### Loshchilov Anton Gennadevich — Лощилов Антон Геннадьевич
+
+- **ИНН:** 701737935046
+- co-inventor (patent RU2779484C1)
+
+### Makarov Evgeniy Vladimirovich — Макаров Евгений Владимирович
+
+- co-inventor (patent RU2779484C1)
+
+### Savin Andrey Dmitrievich — Савин Андрей Дмитриевич
+
+- co-inventor (patent RU2779484C1)
+
+## Open questions
+
+- No standalone company website found; only a Sколково navigator profile (navigator.sk.ru/orn/1123846), itself unreachable (expired SSL cert). Press coverage (unconfirmed against a primary company source) describes stratospheric aerostat platforms -- polymer-shell stratostats, tethered kite balloons, payload-drop/self-destruct capability -- with recent reporting tying the company to testing aerostats for delivering drones/munitions in the SVO zone. NOTE: a distinct company, «Аэродромаш» (Novgorod), built a similarly-described "Барраж-1" stratospheric platform jointly with Bauman MSTU -- do not conflate the two.
+
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+| s0274 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2021_20260820.zip) | 2026-08-20 | 2021-12-31 |
+| s0275 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2022_20260820.zip) | 2026-08-20 | 2022-12-31 |
+| s0276 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2023_20260820.zip) | 2026-08-20 | 2023-12-31 |
+| s0277 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2024_20260820.zip) | 2026-08-20 | 2024-12-31 |
+| s0278 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2025_20260820.zip) | 2026-08-20 | 2025-12-31 |
+| s0501 | EGRUL extract | EGRUL extract (ul-1215000018650-20260823135334.pdf) | — | 2026-08-23 |
+
+---
+_Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

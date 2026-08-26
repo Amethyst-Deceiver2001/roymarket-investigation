@@ -1,0 +1,64 @@
+# ООО «4ГНСС»
+
+`manufacturer` 
+
+ИНН 7743128980 · ОГРН 5157746074272
+
+## At a glance
+
+- **Legal form:** OOO (limited liability company)
+- **Registered:** 23.11.2015
+- **Address:** 121205, Москва, вн.тер.г. муниципальный округ Можайский
+- **Director:** Лебедев Сергей Александрович
+- **Charter capital:** ₽10,000
+- **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
+- **Wildberries overlap:** none_found
+
+## Ownership & corporate history
+
+### Director
+
+| Value | As of | Note |
+|---|---|---|
+| Лебедев Сергей Александрович | 2015-11-23 | личный ИНН 561408287508 — GD since registration [s0462] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | — | from brief:prose, unverified |
+
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽65,624,000 | ₽13,326,000 | [s0342] |
+| 2022 | ₽96,664,000 | ₽42,875,000 | [s0343] |
+| 2023 | ₽131,959,000 | ₽47,208,000 | [s0344] |
+| 2024 | ₽152,244,000 | ₽48,005,000 | [s0345] |
+| 2025 | ₽134,064,000 | ₽23,347,000 | [s0346] |
+
+- 2 OCCRP Aleph match(es) (screened 2026-08-26).
+
+## Principals & persons of interest
+
+_No named principals linked to this entity yet._
+
+## Corporate links
+
+- **ООО «ОРИЕНТ СИСТЕМС»** — orsyst.ru (already the registered site for ooo-orient-sistems, which carries the full 4GNSS catalog) footer explicitly states "© ООО «4ГНСС»" -- this entity appears to be the brand/legal vehicle for the 4GNSS product line within the Orient Systems group, not a separately operating manufacturer. Products live on ooo-orient-sistems's record; not duplicated here.
+- **ООО «ОРИЕНТ СИСТЕМС»** — Parent entity (100%) [s0462]
+
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+| s0342 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2021_20260821.zip) | 2026-08-21 | 2021-12-31 |
+| s0343 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2022_20260821.zip) | 2026-08-21 | 2022-12-31 |
+| s0344 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2023_20260821.zip) | 2026-08-21 | 2023-12-31 |
+| s0345 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
+| s0346 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
+| s0462 | EGRUL extract | EGRUL extract (ul-5157746074272-20260823120422.pdf) | — | 2026-08-23 |
+
+---
+_Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -95,7 +95,7 @@
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
 - 2 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-24).
+- 5 OCCRP Aleph match(es) (screened 2026-08-26).
 
 ## Web & social presence
 

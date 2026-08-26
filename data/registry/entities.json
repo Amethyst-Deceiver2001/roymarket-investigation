@@ -35374,9 +35374,12 @@
     "extra_ids": null,
     "registered": "31.01.2024",
     "address": "602251, Владимирская обл., г.о. округ Муром, г. Муром, ш. Карачаровское, д. 5",
-    "okved_code": null,
-    "okved_label": null,
-    "okved_mismatch": null,
+    "okved_code": "72.19",
+    "okved_label": "Научные исследования и разработки в области естественных и технических наук (R&D, primary code); secondary codes explicitly include 25.40 «Производство оружия и боеприпасов» (weapons/ammunition manufacturing) and 84.22 «Деятельность, связанная с обеспечением военной безопасности» (military-security-related activity) — most network entities register under vaguer software/electronics codes and leave the weapons link implicit; this one states it directly.",
+    "okved_mismatch": {
+      "mismatch": false,
+      "note": "Unusual in this network for the OPPOSITE reason most flagged entities are — the declared activity matches the actual military-industrial business rather than obscuring it."
+    },
     "director": "Байгутлина Ирина Анатольевна",
     "director_history": [
       {
@@ -35436,10 +35439,17 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "cbst-core",
-    "tier_basis": "one of the brief's most thoroughly documented case studies (docs/index.html 450-466) — full EGRUL, БФО, physical facility at Технопарк Муроммаш, personnel — but had fallen through table-based extraction into _scaffold_leads.json instead of being promoted to a full record",
+    "tier_basis": "own OKVED codes explicitly declare weapons/ammunition manufacturing (25.40) and military-security-related activity (84.22) alongside R&D (72.19); its own channel documents direct front-line FPV-drone supply to the 106th Guards Airborne Division and two MoD-stamped commendation letters from the commander of the «Добровольческий корпус»",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
-    "products": [],
+    "products": [
+      {
+        "name_ru": "«Ковровец»",
+        "name_latin": "Kovrovets",
+        "description": "Low-cost, largely field-assembled FPV drone (cardboard airframe, off-the-shelf motors), supplied directly to the 106th Guards Airborne Division (Tula) -- including handing over raw components for troops to self-manufacture in the field, with a stated local-production arrangement through the Tula Suvorov Military School.",
+        "source_id": null
+      }
+    ],
     "financials": [
       {
         "profit": -181000.0,
@@ -35464,10 +35474,34 @@
     "patents": [],
     "foreign_components": [],
     "government_contracts": [],
-    "workforce_history": [],
+    "workforce_history": [
+      {
+        "count": 2,
+        "as_of": "2025",
+        "source_id": null,
+        "note": "RMSP status: микропредприятие (micro-enterprise), 2 employees (average headcount, prior year, per the entity's own БФО filing) -- a company this small should not, on paper, carry the revenue this brief's financials[] shows for the same period."
+      }
+    ],
     "state_programs": [],
     "marketing_claims": [],
-    "battlefield_evidence": [],
+    "battlefield_evidence": [
+      {
+        "text_ru": "Благодарственное письмо адресовано Замятину А.Ю. (технический директор — главный конструктор), подписано генерал-майором Д. Барило, командиром Добровольческого корпуса, войсковая часть — полевая почта 71474.",
+        "text_en": "MoD-stamped thank-you letter addressed to Zamyatin A.Yu. (technical director / chief designer), signed by Major-General D. Barilo, commander of the Volunteer Corps, military unit — field post 71474.",
+        "context": "First of two thank-you letters, 16 months apart, from the same unit and commander -- confirms a sustained, not one-off, supply relationship.",
+        "source_id": "s0232",
+        "as_of": "2024-12-01",
+        "image_path": "images/uas_barilo_letter_zamyatin.jpg"
+      },
+      {
+        "text_ru": "Благодарственное письмо адресовано Сухоненковой Н.А. (Административный директор), подписано тем же генерал-майором Д. Барило, тот же войсковая часть — полевая почта 71474.",
+        "text_en": "The same letter format and signatory, addressed to Sukhonenkova N.A. (Administrative Director) 16 months later -- confirming the supply relationship with this specific unit was sustained, not a single delivery.",
+        "context": "Second of two thank-you letters from the same unit/commander; recipient here is the entity's Административный директор Сухоненкова Надежда Андреевна, not yet a separate person record.",
+        "source_id": null,
+        "as_of": "2026-04-05",
+        "image_path": "images/uas_barilo_letter_sukhonenkova.jpg"
+      }
+    ],
     "domain_history": [],
     "web": {
       "sites": [],
@@ -35482,8 +35516,38 @@
       "marketplace_listings": [],
       "other": []
     },
-    "images": [],
-    "open_questions": [],
+    "images": [
+      {
+        "path": "images/uas_murommash_satellite.jpg",
+        "caption": "Satellite imagery (2026) of the entity's confirmed physical facility at 55.5606614732459, 42.05605953940559 -- a large, recently-built industrial building with visible roof ventilation units and active construction debris nearby, inside Промышленный технопарк «Муроммаш».",
+        "source_id": null
+      },
+      {
+        "path": "images/uas_kovrovets_106_division.jpg",
+        "caption": "«Ковровец» FPV drone components supplied to the 106th Guards Airborne Division, per the entity's own channel.",
+        "source_id": null
+      },
+      {
+        "path": "images/uas_stupor_antidrone.jpg",
+        "caption": "«Ступор» branded counter-drone RF hardware, from a targeting-demonstration post the entity's own channel participated in (16.10.2024).",
+        "source_id": null
+      },
+      {
+        "path": "images/uas_kindyakov_speech.jpg",
+        "caption": "Генерал-лейтенант Андрей Андреевич Киндяков, заместитель начальника ГУ Генерального штаба ВС РФ по военно-политической работе (GRU deputy chief for military-political work) -- signatory of a separate formal commendation to this entity's technical director, photographed at an unrelated public event (Кубанский казачий хор concert). Included for identification of the signatory, not as evidence about this entity directly.",
+        "source_id": null
+      }
+    ],
+    "open_questions": [
+      {
+        "text": "Сухоненкова Надежда Андреевна (Административный директор) is named as a commendation-letter recipient in this entity's own channel but has no person record yet -- not yet wired per the PII-scope rule (principal/officer-level role, should qualify once a DOB/ИНН lead surfaces).",
+        "source_id": null
+      },
+      {
+        "text": "«Ступор» counter-drone RF system participation (16.10.2024 post) and the second Благодарственное письмо (to Сухоненкова, 05.04.2026) have no archived primary-source file yet -- only the first letter (Замятину, s0232) has been pulled and archived. Worth an archival pass on the entity's own channel (t.me/UAS_development) for these specific posts.",
+        "source_id": null
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": true,
