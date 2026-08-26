@@ -3349,6 +3349,19 @@
           "ogrn": "1027739216757",
           "source_id": "s0009"
         },
+        "government_contracts": [
+          {
+            "customer": "Региональное таможенное управление радиоэлектронной безопасности объектов таможенной инфраструктуры (РТУ РЭБОТИ), ФТС России, ИНН 7708098645",
+            "contract_number": "0373100020120000045_108231",
+            "reg_number": "1770809864520000158",
+            "date": "2020-11-10",
+            "value_rub": 31500000,
+            "basis": "Единственная заявка на участие в электронном аукционе (пункт 25 части 1 статьи 93 Закона №44-ФЗ)",
+            "items": "Поставка телевизионной системы наблюдения ИК-диапазона (IR-band television surveillance system) — ОКПД 2 26.40.33.110",
+            "source_id": "s2846",
+            "note": "Two subsequent соглашения (s2849, s2850) only adjust the ИКЗ code and reaffirm the delivery deadline (20.12.2020) — no substantive change to price or subject. Delivery акт (s2845) and its payment order (s2848) also archived, confirming the contract was fully executed, not merely awarded."
+          }
+        ],
         "open_questions": [
           {
             "source_id": null,
@@ -3359,6 +3372,7 @@
       },
       "verified_against": "s0009 — АО «РОСС»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
       "why": [
+        "2026-08-26: zakupki.gov.ru scan/fetch-contracts/fetch-documents pass (contract 1770809864520000158) -- ₽31.5M single-source contract with ФТС's radio-electronic security customs directorate for IR surveillance equipment, 2020. Full signed государственный контракт docx (s2846) confirms GD Максимов Ю.А. signed personally, legal address at the time was ул. Авиамоторная, д. 26 (Moscow) -- differs from the current EGRUL address on file (ул. 2-я Машиностроения, as of 2023 per s0009); left as a single-snapshot data point rather than promoted to address_history since only one historical address (this contract) is confirmed, not a dated sequence. Also scanned this ИНН's other 18 zakupki hits: mostly small-value (sub-₽10M) supply contracts to ФСБ units (Москва/Моск.область, Kaliningrad border institute, Crimea border directorate), Минобороны войсковые части (35533, 45185, 52295, 55056), МЧС and МГУ -- none individually large enough or specific enough to warrant its own fetch-documents pass; this one contract was the standout by value and subject specificity.",
         "Full signed ЕГРЮЛ extract read end-to-end (s0009, 7704097425_20082026.pdf, pulled 20.08.2026). Full legal name is АО «Радиоэлектронные и оптические спецсистемы» — 'radio-electronic and optical special systems'. Registered 25.06.1992 with the Moscow Registration Chamber, i.e. a genuine Soviet-successor entity, not a war-era startup. Confirms address, GD Максимов Ю.А. (personal ИНН 770402705540, in post since 01.12.2017), ₽1m charter capital; as an АО, shareholders are not published — only registrar АО «НРК Р.О.С.Т.». CLASSIC ОКВЭД MISMATCH: the declared PRIMARY activity is 26.40 «Производство бытовой электроники» — CONSUMER electronics — while its own secondary codes include 26.30.16, communications equipment and software «обеспечивающее выполнение установленных действий при проведении оперативно-розыскных мероприятий» (SORM lawful-interception capability), and 26.70.6 «Производство оптических прицелов и приборов определения координат целей» — optical WEAPON SIGHTS and target-coordinate devices, added 05.02.2021. Licences corroborate: Minpromtorg aviation-technology development/production/testing/repair (2022) and an FSB cryptographic-means licence (2025). Name recorded only from 05.02.2021 — renamed at that point; the predecessor name is not in this extract.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7704097425). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",

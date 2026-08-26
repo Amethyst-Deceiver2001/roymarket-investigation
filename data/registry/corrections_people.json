@@ -6816,14 +6816,35 @@
       ],
       "verified_against": null
     },
+    "ordzhonikidze-aleksey-grigorevich": {
+      "set": {
+        "dob": "1977-08-08",
+        "birthplace": "Москва (Moscow)",
+        "inn_personal": "770605353044",
+        "notes": "RuPEP.org profile (2026-08-26 download, s2789) lists him under category \"Член семьи\" (family member of a PEP), not as a PEP in his own right: mother Орджоникидзе Елена Георгиевна is a MID Russia ambassador-at-large and executive secretary of Russia's UNESCO commission; father Орджоникидзе Григорий Эдуардович and sister Орджоникидзе Этери Григорьевна also listed (relation inferred by RuPEP from leaked government-database analysis, not independently confirmed here). Personal ИНН independently corroborated via rusprofile.ru (770605353044, s2790, archived 2026-08-26) -- checksum-valid, matches exactly. Per this project's PII/family-member scope rule, the mother's official role is recorded here as context for HIS PEP-adjacency, not wired in as her own registry entry, since she has no independent tie to this investigation's network.",
+        "photo": null
+      },
+      "why": [
+        "2026-08-24: extracted from iStories 2024-01-19 article (s1163) as a 21% owner of ООО «НПО Рустехдрон» and of an unnamed holding firm.",
+        "2026-08-26: user downloaded RuPEP.org profile PDF (s2789) -- confirms DOB/birthplace, and surfaces the family-of-PEP category (mother is a serving MID ambassador-at-large) as corroborating context, not a new network tie. rusprofile.ru (s2790) independently corroborates personal ИНН via a live business-registry lookup."
+      ],
+      "verified_against": null
+    },
     "kuzyakin-dmitriy-vasilevich": {
       "set": {
         "dob": "1974-06-29",
+        "birthplace": "Рига, Латвия (Riga, Latvia)",
         "sanctions": [
+          {
+            "regime": ["Ukraine", "European Union", "Switzerland"],
+            "date": null,
+            "note": "CONFIRMED via RuPEP.org profile (category: \"Лицо под санкциями\"), which independently states personal ИНН 501306766736 -- an EXACT match to this record's already-established ИНН from the OpenSanctions/audit-it.ru cross-reference. This closes the gap the earlier PLAUSIBLE-tier note (below, preserved for its corroborating detail) flagged as needing a primary-source read: RuPEP lists him under sanctions from Ukraine, the EU, and Switzerland. RuPEP itself is an aggregator, not the primary designation instrument, so treat this as CONFIRMED-by-independent-ИНН-match rather than a primary-source read of the underlying EU/CH/UA legal act.",
+            "source_id": "s2788"
+          },
           {
             "regime": null,
             "date": null,
-            "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him founder/co-owner of \"LLC Center for Integrated Unmanned Solutions\" — this registry's already ИНН-confirmed ООО «ЦКБР» (Complex Unmanned Solutions Center Ltd), Zhukovsky, full-cycle FPV production. Personal ИНН given in notes: 501306766736. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check at the time), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him founder/co-owner of \"LLC Center for Integrated Unmanned Solutions\" — this registry's already ИНН-confirmed ООО «ЦКБР» (Complex Unmanned Solutions Center Ltd), Zhukovsky, full-cycle FPV production. Personal ИНН given in notes: 501306766736. Superseded in confidence tier by the RuPEP-confirmed entry above, kept for its independent corroboration detail.",
             "source_id": null
           }
         ],
@@ -6856,7 +6877,8 @@
         "2026-08-24 cleanup: dropped a stale prose-extracted _candidate role for ООО «ЦКБР», now superseded by the resolved co-inventor role added from the patent sweep (same entity, now with entity_slug/title/source_id).",
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
         "2026-08-25: OSINT research pass -- personal ИНН + GD succession/founder-date detail, audit-it.ru/checko.ru.",
-        "2026-08-25: photo/social-media OSINT research pass."
+        "2026-08-25: photo/social-media OSINT research pass.",
+        "2026-08-26: user downloaded RuPEP.org profile PDF (data/sources/PEP_ Кузякин ....pdf, s2788) -- confirms sanctions status (Ukraine/EU/Switzerland), matching ИНН, birthplace, and full career history (ВТБ24 director 2011-2017, Ренессанс Страхование VP 2018-2019, МФТИ). Upgraded sanctions confidence tier from PLAUSIBLE to CONFIRMED-by-independent-ИНН-match; added birthplace."
       ],
       "verified_against": null
     },

@@ -42,6 +42,13 @@ scripts/extract_registry.py    one-time scaffold of data/registry/ from the froz
 scripts/check_registry.py      schema + ИНН/ОГРН checksums + duplicates; run before any build
 scripts/check_tag_balance.py   run after every docs/index.html edit
 scripts/export_from_wb_watch.py   historical bootstrap only, not the ongoing method
+scripts/build_company_profile.py  generates docs/profiles/<slug>.{html,md} from data/registry/ (local, safe to rerun)
+scripts/egrul_batch_pull.py    scripted EGRUL open-API pull across every registry ИНН (live network job — see CLAUDE.md)
+scripts/screen_aleph.py        full-roster Aleph/OCCRP free-text screening, writes aleph_matches[] directly (live)
+scripts/aleph_followup.py      triages screen_aleph.py's noisy matches, fetches full detail for picked ids (live)
+scripts/zakupki_batch_pull.py  scan/fetch-contracts/fetch-documents against zakupki.gov.ru per registry ИНН (live)
+scripts/mine_zakupki.py        extraction pass over already-pulled zakupki contract cards/attachments (local, safe to rerun)
+scripts/tg_media_pull.py       pulls photo/video-still evidence from posts a channel scrape already found (single-post lookups, safe)
 HANDOFF.md                full context for a new session — read this first
 CLAUDE.md                 working rules
 STYLE_GUIDE.md            voice + presentation rules — read before drafting prose

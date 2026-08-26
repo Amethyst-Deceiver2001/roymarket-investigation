@@ -1620,15 +1620,44 @@ mining, not registry-generator work. Status as of 2026-08-26:
   correction was originally filed under the raw ИНН as its
   `corrections_entities.json` key instead of the slug — found and merged
   into the canonical `ao-tsentr-telko` block 2026-08-26.)
-- **Queued, not yet started**: a `--depth scan --diff` sweep of the full
-  38-hit-ИНН corpus (running in the user's terminal as of 2026-08-26,
-  `requirements.txt` needed a `beautifulsoup4` addition first) — once that
-  lands, pick further `--depth deep` targets from whatever it flags
-  (largest-value contracts, non-performance flags, strongest `cbst_tie`).
-  Two large unexplored high-volume ИНН from the original random-5 sample
-  remain untouched: АО «ПМЦ «Авангард»» (91 contracts, open
-  industry-mismatch question — perimeter security vs UAV) and АО ПК
-  «Азимут» (77 contracts).
+- **Done (2026-08-26)**: `npp-radar-mms` (ИНН 7814027653) — full scan/
+  fetch-contracts/fetch-documents pass, 75 contracts, top-10 by value
+  fully document-verified (77 attachments, 42MB). 72-contract
+  `government_contracts[]` wired (~₽1.37B total: 8 direct Минобороны
+  contracts, 27 Минпромторг, scientific-institute customers, a confirmed
+  БАС ВТ-ПСС maintenance contract for St. Petersburg SAR). A deep-mine
+  re-pass over the 77 attachments afterward surfaced no new facts beyond
+  the contract cards — confirms this is a fully-mined entity, not a gap.
+  Two real bugs found and fixed along the way: `_zakupki_scan_log.json`
+  contamination (25/38 entries had stale `reg_numbers` from before an
+  already-documented regex fix — corrected via local re-parse) and
+  `mine_zakupki.py` deep-mode's missing `card_fields` fallback (rendered
+  near-blank reports for modern XML-less contracts — fixed, matching
+  scan-mode's existing fallback). `zakupki_batch_pull.py`'s
+  `fetch-documents` also crashed on `http.client.IncompleteRead` — fixed
+  (commit bdf15db).
+- **Done (2026-08-26)**: `ao-ross` (ИНН 7704097425) — full scan (19
+  contracts) + one targeted fetch-documents pull on the standout ₽31.5M
+  ФТС contract (IR-band surveillance system, fully executed with delivery
+  act + payment order). Remaining 18 contracts triaged as sub-₽10M supply
+  to ФСБ/Минобороны units — none individually warranting their own
+  documents pass. Closes the long-standing "unresolved EGRUL lead" flag
+  this entity carried since before the rebuild.
+- **Done (2026-08-26)**: same pagination-contamination bug flagged 9 more
+  registry ИНН with truncated `reg_numbers` (АО ПК «Азимут» 77, ООО
+  «Смарт Технолоджис» 41, АО «Технодинамика» 44, АО «ПМЦ «Авангард»» 91,
+  АО «НИИ «Вектор»» 160, АО «НПЦ «ЭЛВИС»» 33, АО «НИИ СТТ» 86, АО «Росс»
+  19 — see above, «Радиофид Системы» 26) — all re-scanned clean.
+  «Радиофид Системы» triaged at contract-card level: routine municipal/
+  МВД telecom procurement (routers/modems), no UAV/ЦБСТ angle, not worth
+  a documents pass. **Not yet triaged at contract-card level**: НПЦ
+  «ЭЛВИС», «Смарт Технолоджис», «Технодинамика», and the two large primes
+  «ПК Азимут»/«ПМЦ Авангард» (91 contracts, open industry-mismatch
+  question — perimeter security vs UAV) — `fetch-contracts` not yet run
+  for these five. АО «НИИ «Вектор»» (160 contracts) not yet even
+  fetch-contracts'd — likely a large, already-well-documented state
+  defense institute per the "don't over-invest in expected primes"
+  caution below; scan first, triage before committing to a full pull.
 - **Not started**: RNP (Реестр недобросовестных поставщиков) blacklist
   check for any entity with confirmed non-performance findings (Гаскар
   Интеграция is the current candidate, per `russian_b2g_legislation`'s
@@ -1667,14 +1696,52 @@ work above.
   memory `rupep_org_cloudflare_blocked`) but works for the user's own
   browser; hybrid workflow (user downloads profile PDF → I extract text/
   headshot/dob/birthplace/ИНН, decline family-member detail per PII scope,
-  wire via corrections). Completed for **Якушев** (`s2452`) and **Сидякин**
-  (`s2535`, headshot at `docs/images/aleksandr-sidyakin_portrait_rupep.jpg`,
-  flagged an unverified "Батальон «Дубай»" Navalny-team dossier link as an
-  open question). Checked-and-negative for **Безруков** (not on RuPEP,
-  recorded so it isn't re-tried). **Not yet processed**: a downloaded
-  Песков PDF sitting in `data/sources/` unprocessed. **Not yet started**:
-  Фрадков, Лысогорский, Кузнецов, Осадчук, Турчак, Рогозин — the rest of
-  the original 10-candidate RuPEP list.
+  wire via corrections). **11 people processed as of 2026-08-26**:
+  Якушев (`s2452`), Сидякин (`s2535`, headshot at
+  `docs/images/aleksandr-sidyakin_portrait_rupep.jpg`, flagged an
+  unverified "Батальон «Дубай»" Navalny-team dossier link as an open
+  question), Фрадков (ИНН dropped for checksum failure, logged as an open
+  question instead), Лысогорский, Осадчук, Песков, Турчак, Рогозин,
+  Алёшин, Медведев, оба Михельсона (Виктория checked-negative — no new
+  network tie, just confirmed the family link), Соколова (DOB conflict
+  vs. existing OpenSanctions value logged as an open question, not
+  silently overwritten). Two standout results: **Кузякин Д.В.** (`s2788`)
+  — RuPEP independently confirms his personal ИНН and lists him under
+  active Ukraine/EU/Switzerland sanctions, upgrading his sanctions note
+  from OpenSanctions-PLAUSIBLE to RuPEP-CONFIRMED; **Орджоникидзе А.Г.**
+  (`s2789`, ИНН cross-corroborated via rusprofile.ru `s2790`) — RuPEP
+  files him as family-of-PEP (mother is a serving MID ambassador-at-large
+  and UNESCO-commission secretary), not wired as a network tie since the
+  mother has no independent connection to this investigation.
+  Checked-and-negative for **Безруков** (not on RuPEP — the correct
+  1986-born ЦБСТ chairman, distinct from the 1960-born SVR-illegal
+  namesake his DOB was originally misattributed from) and, as a full
+  batch, for the fund-director/АНО cluster: Скорятин, Яныкина, Рубинштейн,
+  Бровченко А.Р. and С.Р., Давыдов, Карабинский, Устратов, Маслак, Козлов
+  — **none of these 9 are on RuPEP**. Combined with Безруков, this
+  suggests RuPEP's coverage of this specific network is close to
+  exhausted; further identity-enrichment candidates should come from a
+  different signal (EGRUL, court filings, press) rather than more blind
+  RuPEP tries against people with no independent government/political
+  role in their existing role text.
+- **налетай.рф marketplace mining (2026-08-26)** — user has a buyer ИП
+  account; explored via a supplied HAR capture. Public catalog API
+  (`api.xn--80aaorhk2b.xn--p1ai/api/v1/...`) is fully unauthenticated —
+  `/catalog/listing` (per-seller products, plus a 302-manufacturer facet
+  list when unfiltered) and `/products/<slug>` (full detail + gallery
+  images). Cross-referenced the 302-name facet list against the registry
+  by exact ИНН, confirming 9 sellers: ao-ekolibri, npo-kaysant,
+  npp-radar-mms, ooo-aviron, ooo-gaskar, ooo-kleverkopter, ooo-kopterlab,
+  ooo-kravt, ooo-rokot-tekh — each wired with a `web.marketplace_listings[]`
+  entry (source_ids s2615-s2627), several with new `products[]`/
+  `images[]` pulled from product-detail pages. No company/brand logos
+  found on the platform for any of the 9. Standout: НПО «Кайсант»
+  (confirmed `cbst_tie`, sanctioned) sells its kinetic FPV interceptor
+  drone through a personal ИП storefront under its own founder/GD's name
+  (Черепкова Н.С.) rather than the company's — flagged as a plausible
+  deliberate visibility-reduction pattern, not yet proven. Two tempting
+  false positives (ЗАО «Росси» vs `ao-ross`; a substring collision with
+  `ooo-nova`) were checked and explicitly rejected rather than force-wired.
 - **`notes/commands.md`** (new) — copy-paste reference for every recurring
   command in this project (housekeeping bundle, Aleph screen/triage/fetch,
   zakupki scan/mine/pull, profile rebuild, tag-balance check), so they

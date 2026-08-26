@@ -185,10 +185,13 @@ The single most current source for this is the seeded
 section — read that directly rather than trusting this list to stay fresh.
 Highlights as of migration:
 
-- Long tail of unresolved EGRUL/БФО leads (АО «Росс», «Динарус», «Инстех»+
-  Asel Labs, «Аэроплатформы», several bare product names with no
-  manufacturer yet, etc.) — see the memory file for the full list and why
-  each is stuck (no EGRUL match, ambiguous OKVED, quota exhaustion).
+- Long tail of unresolved EGRUL/БФО leads («Динарус», «Инстех»+ Asel Labs,
+  «Аэроплатформы», several bare product names with no manufacturer yet,
+  etc.) — see the memory file for the full list and why each is stuck (no
+  EGRUL match, ambiguous OKVED, quota exhaustion). (АО «Росс» — previously
+  listed here — was fully resolved 2026-08-26: EGRUL-verified, licences
+  read, and a ₽31.5M ФТС IR-surveillance-system contract wired via zakupki;
+  no longer an open lead.)
 - TSG's bot-linked webshop catalog — JS-rendered SPA, not yet successfully
   extracted.
 - A pending `python3 scripts/tg_scan.py --full --days 1500 --only
@@ -204,11 +207,63 @@ Highlights as of migration:
   `screen_aleph.py` sweep done (419/508 hits) and fully triaged via the new
   `scripts/aleph_followup.py`; personal ИНН coverage went 51→101 people.
   RuPEP.org added as a source (blocked for scripts, works for the user's
-  browser — see memory `rupep_org_cloudflare_blocked`); Якушев and Сидякин
-  done, Безруков checked-negative, a downloaded Песков PDF still
-  unprocessed, 6 more candidates (Фрадков, Лысогорский, Кузнецов, Осадчук,
-  Турчак, Рогозин) not yet looked up. Full detail: `notes/rebuild_plan.md`'s
-  "Aleph screening + RuPEP identity enrichment workstream" section.
+  browser — see memory `rupep_org_cloudflare_blocked`); hybrid workflow
+  (user downloads a profile PDF, I extract/wire it) has now processed 11
+  people: Якушев, Сидякин, Фрадков, Лысогорский, Кузнецов (Михаил, ОНФ —
+  likely-but-unconfirmed DOB match), Осадчук, Песков, Турчак, Рогозин,
+  Алёшин, Медведев, оба Михельсона, Соколова, and — the two most
+  consequential — **Кузякин Д.В.** (RuPEP confirms active Ukraine/EU/
+  Switzerland sanctions, upgrading an earlier OpenSanctions PLAUSIBLE match
+  to CONFIRMED) and **Орджоникидзе А.Г.** (RuPEP flags him as family-of-PEP:
+  mother is a serving MID ambassador-at-large). Безруков checked-and-
+  negative (correct 1986-born ЦБСТ chairman not on RuPEP, unlike the
+  namesake 1960-born SVR-illegal his DOB was originally misattributed
+  from). A further ~8-candidate fund-director/АНО batch (Скорятин,
+  Яныкина, Рубинштейн, Бровченко×2, Давыдов, Карабинский, Устратов,
+  Маслак, Козлов) was checked and came back **negative across the board** —
+  none are on RuPEP. This suggests RuPEP's coverage of this network is
+  now close to exhausted; further candidates should come from a different
+  signal (EGRUL/court filings) rather than more blind RuPEP tries. Full
+  detail: `notes/rebuild_plan.md`'s "Aleph screening + RuPEP identity
+  enrichment workstream" section.
+- **налетай.рф marketplace (2026-08-26)** — explored via the user's buyer
+  account + a supplied HAR capture. Public catalog API
+  (`api.xn--80aaorhk2b.xn--p1ai/api/v1/...`) is fully unauthenticated;
+  cross-referenced its 302-manufacturer facet list against the registry and
+  confirmed 9 sellers by exact ИНН match (ao-ekolibri, npo-kaysant,
+  npp-radar-mms, ooo-aviron, ooo-gaskar, ooo-kleverkopter, ooo-kopterlab,
+  ooo-kravt, ooo-rokot-tekh), each wired with a `web.marketplace_listings[]`
+  entry, several with new `products[]`/`images[]` entries pulled from
+  product-detail pages. Standout finding: НПО «Кайсант» (confirmed
+  `cbst_tie`, sanctioned) sells its kinetic FPV interceptor drone through a
+  personal ИП storefront belonging to its own founder/GD (Черепкова Н.С.),
+  a pattern worth watching as a possible deliberate visibility-reduction
+  move. No company/brand logos found on the platform for any of the 9.
+- **zakupki tooling bugfixes (2026-08-26)** — two real bugs found and
+  fixed: `_zakupki_scan_log.json` had stale contaminated `reg_numbers` in
+  25/38 entries from before an already-documented regex fix (corrected via
+  local re-parse, no network calls needed); `mine_zakupki.py`'s deep mode
+  had no `card_fields`/`card_suppliers_table` fallback (unlike scan mode),
+  rendering near-blank reports for the many modern contracts with no
+  attached XML — fixed. `zakupki_batch_pull.py`'s `fetch-documents` also
+  crashed on `http.client.IncompleteRead`, which isn't a subclass of the
+  script's caught exception types — fixed (commit bdf15db).
+  `npp-radar-mms` got a full 72-contract `government_contracts[]` wire-in
+  (~₽1.37B total, incl. 8 direct Минобороны contracts and a confirmed БАС
+  ВТ-ПСС maintenance contract for St. Petersburg's search-and-rescue
+  service) — a deep-mine of its 77 attachment documents afterward
+  surfaced no further new facts beyond what the contract cards already
+  gave. `ao-ross` got one ₽31.5M ФТС contract wired (IR surveillance
+  system, fully executed with delivery act + payment order archived).
+  9 more registry ИНН (АО ПК «Азимут», ООО «Смарт Технолоджис», АО
+  «Технодинамика», АО «ПМЦ «Авангард»», АО «НИИ «Вектор»» — 160 hits,
+  АО «НПЦ «ЭЛВИС»», АО «НИИ СТТ», ООО «Радиофид Системы») were flagged
+  with incomplete pagination from the same bug and re-scanned clean;
+  `ooo-radiofid-sistemy`'s footprint triaged as routine municipal/МВД
+  telecom procurement, not worth a documents pass. The rest
+  (npts-elvis, ooo-smart-teknolodzhis, ao-tekhnodinamika, and the two
+  large primes ao-pk-azimut/ao-pmts-avangard/ao-nii-vektor) are scanned
+  but not yet triaged at the contract-card level — pick up there next.
 
 ## Technique notes worth knowing before you hit the same wall
 
