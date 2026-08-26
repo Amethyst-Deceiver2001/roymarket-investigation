@@ -6654,8 +6654,16 @@
     "cbst_tie": null,
     "wb_overlap": "none_found",
     "products": [
-      "Форпост",
-      "АУРИН"
+      {
+        "name_ru": "Дрон-конструктор «Колобок»",
+        "description": "Educational/hobby drone-building kit (multirotor), от ₽75,000.",
+        "source_id": "s2626"
+      },
+      {
+        "name_ru": "Дрон-конструктор «Кузнечик»",
+        "description": "Educational/hobby drone-building kit (multirotor), от ₽87,000.",
+        "source_id": "s2626"
+      }
     ],
     "financials": [
       {
@@ -6705,7 +6713,13 @@
       ],
       "other": []
     },
-    "images": [],
+    "images": [
+      {
+        "path": "images/ooo-kopterlab_forpost-naletay.jpg",
+        "caption": "Программно-аппаратный комплекс «Форпост» -- ruggedized counter-drone control console, product photo from its Налетай.рф listing.",
+        "source_id": "s2626"
+      }
+    ],
     "open_questions": [],
     "sources": [],
     "confidence": null,
@@ -6724,7 +6738,9 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7720925267). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "web.sites was empty; rk2035_matches (already screened, ИНН-confirmed) had the site all along, just never promoted.",
       "2026-08-25: found as a listed member of Ассоциация «АЭРОНЕКСТ» (aeronext.aero), the national UAV-industry employer association, via its open backend API (component.aeronext.aero/s_cm_api/catalog.ashx). Full member card confirms ИНН/ОГРН/address exactly and corroborates the director already on file (Федукович Кирилл Олегович) via the card's own «ФИО Руководителя» field (s1404). Not a ЦБСТ/РОЙ.МАРКЕТ link -- national industry-association membership, same category as other adjacent programs already noted.",
-      "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
+      "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block.",
+      "2026-08-26: two new products (Колобок, Кузнечик drone-construction kits) found via налетай.рф catalog (s2626), not previously in products[]. «Форпост» counter-drone complex (already documented) also confirmed listed there, от ₽10,000,000.",
+      "2026-08-26: product photo pulled from налетай.рф CDN for «Форпост» (already-documented product, first image on file for it)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -21657,6 +21673,11 @@
         "name_ru": "Проводной ретранслятор",
         "description": "Wired repeater, 30-300m extension, directional antenna. 33,000 руб.",
         "source_id": null
+      },
+      {
+        "name_ru": "Кинетический FPV дрон-перехватчик «ГУСЬ-7»",
+        "description": "Kinetic FPV interceptor drone (multirotor class), от ₽103,700. Sold on Налетай.рф via the ИП Черепкова storefront (see marketplace_listings note) alongside the ГЕРМЕС-7 comms line. Not previously documented in this registry under any name.",
+        "source_id": "s2627"
       }
     ],
     "financials": [
@@ -21726,7 +21747,13 @@
       ],
       "other": []
     },
-    "images": [],
+    "images": [
+      {
+        "path": "images/npo-kaysant_gus7-naletay.jpg",
+        "caption": "«ГУСЬ-7» kinetic FPV interceptor drone -- product photo from its Налетай.рф listing (sold via the ИП Черепкова storefront, see marketplace_listings).",
+        "source_id": "s2627"
+      }
+    ],
     "open_questions": [
       {
         "source_id": null,
@@ -21768,7 +21795,9 @@
       "2026-08-24: user asked whether searchplatform.rospatent.gov.ru's /trademarks section had been checked. It turned out not to be a trademark endpoint at all (the guessed /search/tm and /search/trademarks routes both hit the site's ПрЭВМ/computer-program index, dataset 'prevm' -- a genuinely new, previously unscreened IP registry). A handful of registry product-name queries against it surfaced this real, on-topic hit.",
       "2026-08-24 web-search follow-up on the entity's own ПрЭВМ software co-inventor (Черепков А.А.): rusprofile/companium/spark-interfax listings agree he holds 93.3% of ООО НПО «Кайсант» (Черепкова Н.С., already in this registry as director, holds the remainder or the GD role only -- not fully disambiguated). source_id left null -- rusprofile blocked the archive attempt (403) and companium/synapsenet either rate-limited or didn't render the fact server-side; this is AGGREGATOR-sourced only, not yet confirmed against a primary EGRUL extract. Treat as a strong lead, not a confirmed ownership stake.",
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 10 candidates -- all belong to an unrelated individual (Черепкова Нина Сергеевна) or an unrelated company (ООО «Аргус-М»), both disinfection/lighting equipment, not this entity's own name.",
-      "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
+      "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block.",
+      "2026-08-26: new product line found via налетай.рф catalog (ip-cherepkova seller listing, s2627) -- ГУСЬ-7 kinetic interceptor, not previously in products[].",
+      "2026-08-26: product photo pulled from налетай.рф CDN for the newly-documented ГУСЬ-7 product."
     ],
     "_verified_against": " Also: germesfpv.ru read directly 23.08.2026.",
     "_egrul_crosschecked": "2026-08-22",
@@ -23101,6 +23130,11 @@
         "name_ru": "«Метеосервер»",
         "description": "Hydrometeorological monitoring system.",
         "source_id": null
+      },
+      {
+        "name_ru": "Автоматизированная док-станция (мобильный дронопорт)",
+        "description": "Mobile automated dronoport/dock station, от ₽26,000,000. Listed alongside БВС ВТ-440м and БВС ВТ-30Е on this entity's налетай.рф storefront; not previously in products[].",
+        "source_id": "s2630"
       }
     ],
     "financials": [],
@@ -23287,6 +23321,11 @@
         "path": "images/radar-mms_logo_rk2035.jpg",
         "caption": "Company logo, as self-listed in rk.2035.university's curated БАС-industry showcase",
         "source_id": "s1168"
+      },
+      {
+        "path": "images/npp-radar-mms_vt440m-naletay.jpg",
+        "caption": "БВС ВТ-440М helicopter-type UAV -- product photo from its Налетай.рф listing, branded with the manufacturer's own radar-mms.com site and callsign «ДРАКОН».",
+        "source_id": "s2630"
       }
     ],
     "open_questions": [
@@ -23315,7 +23354,9 @@
       "2026-08-24: split the previously-unsourced combined \"БВС ВТ-45 / ВТ-440М / ВТ-30Е\" entry into 3 individually sourced products (s1169), and confirmed the entity's own listing uses \"НПП\" (matching this registry), resolving the s1168 open question in favour of НПП over the showcase blurb's \"Концерн\" wording.",
       "2026-08-25: appears on the Agency for Technological Development's (АТР, atr.gov.ru) federal grant program \"Комплектующие для БАС\" (208.atr.gov.ru/bas) -- «Реестр потенциальных производителей» (item 59) AND «Реестр потенциальных исполнителей» (item 222), exact ИНН match. These are dated snapshot PDFs (производители 30.06.2026, исполнители 14.07.2026, per the page's own labels) pulled 2026-08-25 and archived at data/sources/. This is a state-recognized potential-supplier listing for the national UAV-components grant program, not itself a ЦБСТ/РОЙ.МАРКЕТ link -- corroborates the entity's UAV/components industry footprint, does not establish any relationship to the ЦБСТ network specifically.",
       "2026-08-25: director previously null -- filled from Ассоциация «АЭРОНЕКСТ» member card (component.aeronext.aero/s_cm_api/catalog.ashx), which also confirmed ИНН/ОГРН/address exactly. Not yet cross-checked against an independent EGRUL pull -- association self-reported data, treat with the same caution as any single-source self-report until corroborated.",
-      "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
+      "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block.",
+      "2026-08-26: new product (mobile dronoport) found via налетай.рф catalog (s2630), not previously in products[]. БВС ВТ-440м/ВТ-30Е (already documented) also confirmed listed there at ₽80M/₽15M respectively.",
+      "2026-08-26: product photo pulled from налетай.рф CDN for БВС ВТ-440М (already-documented product, first image on file for it)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "opensanctions_matches": [
@@ -25484,6 +25525,11 @@
         "path": "images/ekolibri_logo_rk2035.png",
         "caption": "Company logo, as self-listed in rk.2035.university's curated БАС-industry showcase",
         "source_id": "s1168"
+      },
+      {
+        "path": "images/ao-ekolibri_r75-naletay.jpg",
+        "caption": "Р-75 VTOL fixed-wing UAV -- product photo from its Налетай.рф listing.",
+        "source_id": "s2625"
       }
     ],
     "open_questions": [
