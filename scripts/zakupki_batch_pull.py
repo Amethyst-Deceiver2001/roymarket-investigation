@@ -399,8 +399,9 @@ def cmd_fetch_contracts(args) -> int:
         return 1
     reg_numbers = list(dict.fromkeys(r for r, _ in pairs))
 
-    if len(reg_numbers) > 50:
-        print(f"refusing: {len(reg_numbers)} contracts requested in one run — split into smaller batches (use --limit-style slicing on --reg-numbers, or run per --inn)", file=sys.stderr)
+    if len(reg_numbers) > args.max_contracts:
+        print(f"refusing: {len(reg_numbers)} contracts requested, cap is --max-contracts {args.max_contracts} "
+              f"— split into smaller batches or raise --max-contracts deliberately", file=sys.stderr)
         return 1
 
     today = date.today().strftime("%Y%m%d")
@@ -548,6 +549,8 @@ def main() -> int:
     ap_f.add_argument("--inn", default=None, help="use this ИНН's cached scan-log hits")
     ap_f.add_argument("--reg-numbers", default=None, help="comma-separated regNumber list")
     ap_f.add_argument("--all-hits", action="store_true", help="every regNumber across every ИНН in the scan log")
+    ap_f.add_argument("--max-contracts", type=int, default=50,
+                      help="safety cap on contracts per invocation (default 50; raise deliberately, e.g. for a single --inn with 86 hits)")
     ap_f.set_defaults(func=cmd_fetch_contracts)
 
     ap_d = sub.add_parser("fetch-documents",
