@@ -35,6 +35,13 @@
 | 2021 | ₽1,543,189,000 | ₽14,837,000 | [s0368] |
 | 2022 | ₽1,275,728,000 | ₽29,004,000 | [s0369] |
 
+## Government contracts
+
+- customer: ФГКУ «Дирекция по строительству и эксплуатации объектов Росграницы» (Росгранстрой); reg_number: 1770982726625001602; date: 2025-12-08; value_rub: 2969227175; items: Техническое оснащение комплексами технических средств безопасности, связи и специального контроля для государственных контрольных органов автомобильного пункта пропуска через государственную границу РФ «Хасан» -- state border-crossing security/communications/special-control equipment. Status as of this pull: Исполнение (in progress), already amended 4 times. [s3054]
+- customer: Санкт-Петербургский филиал ФГКУ «Росгранстрой»; reg_number: 1770982726623000834; value_rub: 214862173; items: Оснащение оборудованием автомобильного пункта пропуска через государственную границу РФ «Ивангород» для государственных контрольных органов (пограничный, таможенный контроль), монтажные и пусконаладочные работы. [s3049]
+- customer: Государственная корпорация по атомной энергии «Росатом»; reg_number: 1770641334823000111; date: 2023; value_rub: 151427994; items: Строительство объекта «Терминал сжиженного природного газа и стабильного газового конденсата «Утренний»» -- техническое дооснащение пункта пропуска системами связи, безопасности и специального контроля (Arctic LNG terminal border-crossing security systems). [s3043]
+- customer: Санкт-Петербургское ГКУ «Дирекция по организации дорожного движения Санкт-Петербурга»; reg_number: 2780137972123000041; date: 2023; value_rub: 157173645; items: Развитие технической инфраструктуры фотовидеофиксации нарушений ПДД на перекрёстках в Центральном районе Санкт-Петербурга -- civilian traffic-camera infrastructure, unrelated to the border-security work above. [s3102]
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -58,6 +65,10 @@ _No named principals linked to this entity yet._
 | s0368 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7804302798_2021_20260817.zip) | 2026-08-17 | 2021-12-31 |
 | s0369 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7804302798_2022_20260817.zip) | 2026-08-17 | 2022-12-31 |
 | s0448 | EGRUL extract | EGRUL extract (ul-1047855051892-20260823120305.pdf) | — | 2026-08-23 |
+| s3043 | Zakupki | Zakupki (ZAKUPKI_contract_1770641334823000111_20260829.html) | 2026-08-29 | — |
+| s3049 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726623000834_20260829.html) | 2026-08-29 | — |
+| s3054 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001602_20260829.html) | 2026-08-29 | — |
+| s3102 | Zakupki | Zakupki (ZAKUPKI_contract_2780137972123000041_20260829.html) | 2026-08-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

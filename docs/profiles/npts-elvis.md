@@ -17,6 +17,19 @@
 - **ELIoT SoC** — IoT-oriented system-on-chip.
 - **PSIM NEST / Senesys-M / Sylph** — AI/computer-vision security systems.
 
+## Government contracts
+
+- customer: Министерство промышленности и торговли Российской Федерации; reg_number: 1770559633924000207; date: 2024-12-03; value_rub: 5592211234; items: ОКР «Разработка гетерогенного процессора для интегрированной модульной авионики боевых комплексов», шифр «Процессор-ИМА-БК» -- heterogeneous processor for integrated modular avionics of combat systems. [s2925]
+- customer: Министерство промышленности и торговли Российской Федерации; reg_number: 1770559633917000816; date: 2017-12-11; value_rub: 1587000000; items: ОКР «Разработка и освоение серийного производства микропроцессора цифровой обработки изображений и сигналов», шифр «Базис-Б3». [s2919]
+- customer: Министерство промышленности и торговли Российской Федерации; reg_number: 1770559633917000811; date: 2017-12-11; value_rub: 860000000; items: ОКР «Разработка и изготовление многокристального модуля для идентификации и контроля беспилотных летательных аппаратов с использованием сетей передачи данных и навигации», шифр «Сложность-БПЛА» -- a UAV identification/control chip module, directly relevant to this brief's core subject rather than general defense electronics. [s2918]
+- customer: Министерство промышленности и торговли Российской Федерации; reg_number: 1770559633916001223; date: 2016-12-06; value_rub: 574960000; items: ОКР «Разработка и освоение серийного производства микросхем для создания модуля ввода-вывода бортовой цифровой вычислительной машины», шифр «Сложность-И4». [s2912]
+- customer: Министерство промышленности и торговли Российской Федерации; reg_number: 1770559633916001183; date: 2016-11-29; value_rub: 550300000; items: ОКР «Разработка и освоение серийного производства комплекта радиационно-стойких микросхем для создания бортовых вычислительных комплексов космического назначения», шифр «Обработка-И1» -- radiation-hardened chipset for spacecraft onboard computers. [s2911]
+- customer: Министерство промышленности и торговли Российской Федерации; reg_number: 1770559633917000583; date: 2017-11-23; value_rub: 523400000; items: ОКР «Разработка и освоение серийного производства мультиконтроллера видеоинтерфейсов SDTV/RGB/SD/HD/3G-SDI/ARINC-818/CameraLink/GbE с системным интерфейсом PCI Express 2.0», шифр «Базис-Б5». [s2916]
+- customer: Министерство промышленности и торговли Российской Федерации; reg_number: 1770559633917000767; date: 2017-12-06; value_rub: 450000000; items: ОКР «Разработка и освоение серийного производства микросхемы, обеспечивающей передачу данных со скоростью до 5 Гбит/с, для встраиваемых сетевых применений», шифр «Интерфейс-11». [s2917]
+- customer: Министерство промышленности и торговли Российской Федерации; reg_number: 1770559633921000206; date: 2021-11-09; value_rub: 390600000; items: ОКР «Разработка СБИС СнК навигационного приемника ГЛОНАСС/GPS/Galileo/BeiDou, совмещенного с малопотребляющим радиоканалом передачи данных (NB IoT, LPWAN)», шифр «Веста-У». [s2923]
+- customer: Министерство промышленности и торговли Российской Федерации; reg_number: 0173100009514000226; date: 2014-03-06; value_rub: 246000000; items: ОКР «Разработка и освоение производства на отечественном предприятии монолитного приемопередающего модуля цифровой адаптивной фазированной антенной решетки с цифровым интерфейсом передачи данных и управления», шифр «Многоцветник-41». [s2876]
+- customer: Федеральное государственное бюджетное учреждение "Национальный исследовательский центр "Институт имени Н.Е. Жуковского"; reg_number: 1504013620820000010; date: 2020-10-30; value_rub: 3000000; items: НИР «Исследования по обоснованию ключевых требований к элементам доверенной экосистемы БАС для безопасного применения БАС в воздушном пространстве Российской Федерации», шифр «Кибербезопасность - БАС» -- UAV (БАС) trusted-ecosystem cybersecurity requirements research, directly on this brief's core subject. [s2892]
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -298,6 +311,16 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0789 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7735582816_20260824_npts-elvis.json) | 2026-08-24 | — |
+| s2876 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009514000226_20260827.html) | 2026-08-27 | — |
+| s2892 | Zakupki | Zakupki (ZAKUPKI_contract_1504013620820000010_20260827.html) | 2026-08-27 | — |
+| s2911 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633916001183_20260827.html) | 2026-08-27 | — |
+| s2912 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633916001223_20260827.html) | 2026-08-27 | — |
+| s2916 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000583_20260827.html) | 2026-08-27 | — |
+| s2917 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000767_20260827.html) | 2026-08-27 | — |
+| s2918 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000811_20260827.html) | 2026-08-27 | — |
+| s2919 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000816_20260827.html) | 2026-08-27 | — |
+| s2923 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633921000206_20260827.html) | 2026-08-27 | — |
+| s2925 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633924000207_20260827.html) | 2026-08-27 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
