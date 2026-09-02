@@ -4030,7 +4030,7 @@
     "inn": "5300013923",
     "ogrn": "1245300001650",
     "registered": "18.04.2024",
-    "address": "Новгородская область, г. Великий Новгород",
+    "address": "173003, Новгородская область, г. Великий Новгород, Большая Санкт-Петербургская ул., д. 64, офис 12",
     "city": null,
     "okved_code": "46.90",
     "okved_label": "Торговля оптовая неспециализированная",
@@ -4045,6 +4045,12 @@
         "as_of": "2025-09-15",
         "source_id": "s0470",
         "note": "Director identity access-restricted in EGRUL as of 15.09.2025 (Federal Law 129-FZ). Confirmed by full 8-page EGRUL extract pulled 23.08.2026 (matches brief text already documenting this redaction date)."
+      },
+      {
+        "value": "Гаврилов Даниил Дмитриевич (ИНН 771539239732), Котельников Денис Николаевич (ИНН 744408918180), Кузовлев Андрей Анатольевич (ИНН 744513968543) — succession of директоров prior to the 15.09.2025 EGRUL director-redaction date already on file",
+        "as_of": "2026-09-02",
+        "source_id": "s5289",
+        "note": "rusprofile.ru's history section names three successive pre-redaction directors, each with a personal ИНН, not previously in the registry. Order/dates of succession not given by rusprofile, only that all three preceded the redaction."
       }
     ],
     "founders": [],
@@ -4054,11 +4060,24 @@
         "as_of": "2025-09-15",
         "source_id": "s0470",
         "note": "Founder/participant identity access-restricted in EGRUL as of 15.09.2025, per full 8-page extract pulled 23.08.2026."
+      },
+      {
+        "value": "ООО «Статус 53» (ИНН 5300006098) — named as a founder/right-to-act-without-power-of-attorney party per rusprofile's history log",
+        "as_of": "2026-09-02",
+        "source_id": "s5289",
+        "note": "See new add_entities record for ooo-status-53 below — same founder also appears on ooo-ushkuynik-sp's record, i.e. a shared corporate parent across both Ushkuynik commercial-shell entities."
       }
     ],
     "charter_capital": null,
     "charter_capital_history": [],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "173003, Новгородская область, г. Великий Новгород, Большая Санкт-Петербургская ул., д. 64, офис 12",
+        "as_of": "2026-09-02",
+        "source_id": "s5289",
+        "note": "rusprofile.ru. Same street/building number as the 'закупочная комиссия' (procurement-commission) address the smolin.info article (s5288) separately gives for ano-npts-ushkuynik -- independent cross-corroboration of that address via a second, EGRUL-derived source."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -4207,6 +4226,10 @@
         "relationship": "same commercial-shell pattern (also EGRUL-redacted director/founders, also no БФО filings on record), address on the same Большая Санкт-Петербургская street a few doors down",
         "source_id": "s0470"
       }
+    ],
+    "why": [
+      "2026-09-02: rusprofile.ru pull (s5289) for ООО «Ушкуйник» (npts-ushkuynik) recovers pre-redaction director history and registered address, cross-corroborating the smolin.info article's separately-sourced procurement-commission address (both give Большая Санкт-Петербургская, 64). Also identifies a shared corporate founder, ООО «Статус 53», common to both npts-ushkuynik and ooo-ushkuynik-sp.",
+      "2026-09-02: nspd.gov.ru (Rosreestr's cadastral map, via its geoportal search API) cross-check of the registered address (Большая Санкт-Петербургская, 64, офис 12): the building is a large 37-unit subdivided commercial/office center (24 separately cadastred помещения ranging 18-3560 m², all private ownership). 'Офис 12' corresponds to помещ. 12н, cad. 53:23:8223601:611, only 29.3 m² — a nominal registered-address office, not a production facility. Consistent with the smolin.info-sourced Старая Русса site being the entity group's actual production location, not this address."
     ],
     "_corrected": [
       "CORRECTED SCAFFOLD MISLABEL: this record (slug npts-ushkuynik, ИНН 5300013923) was previously named/described as \"НПЦ «Ушкуйник»\" — the same name as the separate АНО at ИНН 5300010714 (ano-npts-ushkuynik) — and carried that АНО's director (Чадаев А.В.) as if it were this entity's own. It is not: this is ООО «Ушкуйник» (LLC, commercial form, reg. 18.04.2024), a distinct legal entity already documented in the brief prose (docs/index.html:441) as a redacted commercial arm sharing only the brand name with the operating nonprofit. Confirmed by full 8-page EGRUL extract pulled directly 23.08.2026 (ul-1245300001650-20260823122617.pdf): director and founders are both access-restricted, matching the brief's already-noted 15.09.2025 redaction date exactly — no new institutional link found, this fixes a data-quality bug rather than adding a finding.",
@@ -8569,6 +8592,9 @@
     },
     "_origin_extra": [
       "brief:prose"
+    ],
+    "why": [
+      "2026-09-02: smolin.info (s5291) describes ooo-geron (Novgorod) as this entity de facto Novgorod branch producing up to 6,000 drones/month, and documents ooo-geron announcing Ushkuynik residency 25.06.2025 -- ties this already-sanctioned entity into the Ushkuynik orbit via ooo-geron. See ooo-geron for the direct link."
     ],
     "_corrected": [
       "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13164) ID-confirmed via ИНН 2700012608 — exact match, screen_gur.py full-roster sweep, 2026-08-24.",
@@ -13424,7 +13450,8 @@
       "User-supplied browser HAR capture 2026-08-25 of an Ozon search session (\"asel labs\", \"детектор дронов\") surfaced a 3MX-branded «Марс» product listing on Ozon -- a marketplace not previously checked for this entity. No seller-info API call was captured, so the listing's own account is not yet ID-confirmed to the manufacturer's ИНН; recorded as a listing lead with that caveat, same tier as the unresolved dealer identities above.",
       "User-supplied browser HAR capture 2026-08-25 (www.911.har) of «Макс 911»'s own Ozon seller page (recovered from a truncated/corrupted HAR file by salvaging the 654 of 655 fully-written entries) resolved that dealer's Ozon storefront: self-declared title \"МАКС 911- офиц. дилер 3mx\", sells 3mx/«Булат»-branded detectors -- matches the manufacturer's own dealer-page claim. Legal ИНН/ОГРН still unresolved (sellerTransparency widget not captured).",
       "User asked to scan dji911.com directly (2026-08-25). Homepage (s1389) had no legal identifiers; /contacts (s1388, direct curl archive) did: \"Продажу оборудования 3MX на маркетплейсах осуществляет ИП Коровкин А.А. ИНН 780223272953\" -- checksum-valid. Full name and ОГРНИП resolved via egrul.nalog.ru open API (s1387): Коровкин Александр Анатольевич, ОГРНИП 323784700072451 (active since 07.03.2023). Closes the last of the 3 dealer-identity leads from 3mx's own dealer page (s0558) -- Мэдро and Покров were resolved earlier the same day.",
-      "2026-08-25: pre-restriction ownership/directorship timeline added from third-party OSINT dossier (s1408) — fills a gap EGRUL itself can no longer answer directly (access restricted since 01.11.2024). Corroborates the founder identities already established via aggregator cross-check (see people records' own _corrected notes) with exact stake percentages and date ranges. Not independently re-verified against EGRUL/primary sources; same caution as the rest of this dossier's data applies."
+      "2026-08-25: pre-restriction ownership/directorship timeline added from third-party OSINT dossier (s1408) — fills a gap EGRUL itself can no longer answer directly (access restricted since 01.11.2024). Corroborates the founder identities already established via aggregator cross-check (see people records' own _corrected notes) with exact stake percentages and date ranges. Not independently re-verified against EGRUL/primary sources; same caution as the rest of this dossier's data applies.",
+      "2026-09-03: checked via fedresurs.ru's company-lookup API (GUID ba5a068e-cf1f-4537-8a4a-9c52b8ed21bb). Clean -- no bankruptcy filings, no encumbrances/leases, no publications, no unreliable-info flags on file."
     ],
     "_verified_against": "s0225 — ООО «Тримикс»'s own full signed ЕГРЮЛ extract, pulled 18.08.2026",
     "related_entities": [
@@ -22440,10 +22467,34 @@
     "charter_capital_history": [],
     "address_history": [
       {
+        "value": "173003, Новгородская обл., г. Великий Новгород, ул. Большая Санкт-Петербургская, д.64 -- закупочная комиссия (место открытия доступа к заявкам и рассмотрения/оценки заявок), 17.12.2025",
+        "as_of": "2025-12-17",
+        "source_id": "s5302",
+        "note": "PRIMARY SOURCE, not per-source-only: this is the entity's own 223-ФЗ tender notice (Извещение, еис № 32515497957, published on utp.sberbank-ast.ru, PDF/DOC obtained directly from smolin.info's own embedded evidence files and independently re-downloaded/archived here). Confirms the address exactly. Supersedes the earlier 'per smolin.info, not independently corroborated' caveat."
+      },
+      {
+        "value": "Новгородская обл., г. Старая Русса, ул. Минеральная, д.24 -- место поставки товара (3D-принтеры, SDM-монтажные линии и др.), per the same tender documents",
+        "as_of": "2025-12-17",
+        "source_id": "s5302",
+        "note": "PRIMARY SOURCE: same 223-ФЗ tender notice, item 8 ('Место поставки товара'). Confirmed by a second document, the evaluation Протокол (s5303, 17.12.2025): sole bidder Степанов Дмитрий Александрович (ИНН 164809949104, г. Зеленодольск, Татарстан) won the ₽6,332,500 contract for SDM-mounting equipment (банк питателей, трафаретный принтер, резчик печатных плат, миксер для паяльной пасты), delivery deadline 31.03.2026; signed by чадаев А.В. (chair), Живова Е.В. (secretary), Елисеев Д.Н. (member) -- confirms all three named leadership figures' committee roles directly, in their own signatures. Supersedes the earlier 'per smolin.info, not independently corroborated' caveat."
+      },
+      {
         "value": "173003, Новгородская область, г.о. Великий Новгород, г. Великий Новгород, ул. Лазаревская, д. 11, помещ. 105",
         "as_of": "2025-12-18",
         "source_id": "s3786",
         "note": "factAddress per contract XML (regNumber 2532103798925000183). Cross-checked against rusprofile.ru (s3930, captured 2026-08-30): matches this entity's current юридический (registered) address exactly -- corroboration, not a distinct facility. Fills a previously-empty address field for this entity."
+      },
+      {
+        "value": "Новгородская обл., г. Старая Русса, ул. Минеральная, д. 24 — производственная площадка на территории бывшего Старорусского приборостроительного завода ('центр коллективного доступа')",
+        "as_of": "2026-06-08",
+        "source_id": "s5288",
+        "note": "Per smolin.info investigation (s5288), NOT independently corroborated against ЕГРН/satellite imagery yet. Distinct from the registered ул. Лазаревская, 11 address — a genuine second production site if confirmed."
+      },
+      {
+        "value": "Новгородская обл., г. Великий Новгород, ул. Большая Санкт-Петербургская, д. 64 — адрес закупочной комиссии",
+        "as_of": "2026-06-08",
+        "source_id": "s5288",
+        "note": "Per smolin.info investigation (s5288), procurement-commission address, distinct from registered address. Not independently corroborated."
       }
     ],
     "name_history": [],
@@ -22475,7 +22526,18 @@
         "source_id": "s0748"
       }
     ],
-    "litigation": [],
+    "litigation": [
+      {
+        "case_number": "А65-30723/2025",
+        "court": "Арбитражный суд Республики Татарстан (упрощённое производство)",
+        "parties": "АНО «НПЦ «Ушкуйник»» (истец) против ООО «Энергополис», г.Иннополис (ОГРН 1171690026970, ИНН 1615013341) (ответчик)",
+        "claim_amount_rub": 100565.97,
+        "subject": "Взыскание основного долга по договору №13-а от 10.07.2024 (76,458.92 руб.) и неустойки (24,107.05 руб.) — предположительно аренда/оказание услуг (условия договора №13-а не раскрыты полностью в доступных актах).",
+        "status": "Иск удовлетворён в полном объёме решением от 27.10.2025 (упрощённое производство, ст.229 АПК РФ): взыскано 76,458.02 руб. долга + 24,107.05 руб. неустойки + 10,028 руб. госпошлины с ООО «Энергополис» в пользу Ушкуйника.",
+        "source_id": "s5285",
+        "note": "Единственное известное судебное дело Ушкуйника — здесь Ушкуйник выступает истцом (в отличие от типичного паттерна ответчика по неустойкам у АО «НИИ СТТ»/АО «НПП Радар ммс»), взыскивая относительно небольшую сумму (~100.6 тыс. руб.) с контрагента в Иннополисе. Не установлена связь предмета договора №13-а с профильной (БАС/оборонной) деятельностью Ушкуйника — сумма и упрощённый порядок производства указывают на рутинный хозяйственный спор (возможно, аренда офиса/имущества в Иннополисе), не на профильный контракт. Три акта архивированы: s5285 (принятие иска, 01.09.2025), s5286 (уточнение исковых требований, 22.09.2025), s5287 (решение, 27.10.2025)."
+      }
+    ],
     "licences": [],
     "trademarks": [],
     "patents": [],
@@ -22496,13 +22558,166 @@
         "value_rub": 3110000,
         "items": "Поставка беспилотных летательных аппаратов и станций для их управления для нужд проведения специальной военной операции и выполнения специальных задач по обеспечению обороны и безопасности государства.",
         "source_id": "s3403"
+      },
+      {
+        "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
+        "reg_number": "SBR003-250735849400016.1",
+        "date": "05.12.2025",
+        "value_rub": 6332500,
+        "items": "Оборудование для SDM монтажа для оснащения Центра коллективного пользования (установщик SMD-компонентов, питатели лент, миксер для паяльной пасты, резчик печатных плат, ручной принтер трафаретной печати и др.)",
+        "note": "Sberbank-AST internal PurchaseId 3644005; статус закупки: Не состоялся(-ась) | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515497957, real EIS contract registration № 55300010714260000070000, actual SIGNED contract price ₽4998900.00 (vs. original NMC/notice price ₽6332500), signed 29 дек. 2025, published to EIS contract registry 13 янв. 2026.",
+        "source_id": "s5313",
+        "signed_value_rub": 4998900.0,
+        "eis_contract_number": "55300010714260000070000",
+        "eis_notice_number_confirmed": "32515497957"
+      },
+      {
+        "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
+        "reg_number": "SBR003-250735849400015.1",
+        "date": "05.12.2025",
+        "value_rub": 7559182.67,
+        "items": "Компрессорное оборудование для оснащения Центра коллективного пользования (осушители, ресивер, фильтры, компрессоры 2-37 кВт)",
+        "note": "Sberbank-AST internal PurchaseId 3643527; статус закупки: Не состоялся(-ась) | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515497898, real EIS contract registration № 55300010714260000100000, actual SIGNED contract price ₽6585000.00 (vs. original NMC/notice price ₽7559182.67), signed 29 дек. 2025, published to EIS contract registry 15 янв. 2026.",
+        "source_id": "s5313",
+        "signed_value_rub": 6585000.0,
+        "eis_contract_number": "55300010714260000100000",
+        "eis_notice_number_confirmed": "32515497898"
+      },
+      {
+        "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
+        "reg_number": "SBR003-250735849400014.1",
+        "date": "03.12.2025",
+        "value_rub": 7751360,
+        "items": "Окрасочно-сушильный комплекс для оснащения Центра коллективного пользования",
+        "note": "Sberbank-AST internal PurchaseId 3634198; статус закупки: Завершен(-а) | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515486203, real EIS contract registration № 55300010714260000080000, actual SIGNED contract price ₽7446080.00 (vs. original NMC/notice price ₽7751360), signed 29 дек. 2025, published to EIS contract registry 13 янв. 2026.",
+        "source_id": "s5313",
+        "signed_value_rub": 7446080.0,
+        "eis_contract_number": "55300010714260000080000",
+        "eis_notice_number_confirmed": "32515486203"
+      },
+      {
+        "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
+        "reg_number": "SBR003-250735849400013.1",
+        "date": "28.11.2025",
+        "value_rub": 20825392.83,
+        "items": "Оборудование для лаборатории Центра коллективного пользования: ультразвуковой/акустический дефектоскопы, лазерный спектрометр, анализаторы металлических порошков, твердомеры (Виккерса/Роквелла/Бринелля), шлифовально-полировальный станок и др. -- materials-testing/metallurgy lab",
+        "note": "Sberbank-AST internal PurchaseId 3615709; статус закупки: Не состоялся(-ась) | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515468629, real EIS contract registration № 55300010714260000090000, actual SIGNED contract price ₽20825392.83 (vs. original NMC/notice price ₽20825392.83), signed 29 дек. 2025, published to EIS contract registry 15 янв. 2026. | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515199120, real EIS contract registration № 55300010714250000060000, actual SIGNED contract price ₽14070510.01 (vs. original NMC/notice price ₽20825392.83), signed 10 окт. 2025, published to EIS contract registry 13 окт. 2025.",
+        "source_id": "s5313",
+        "signed_value_rub": 14070510.01,
+        "eis_contract_number": "55300010714250000060000",
+        "eis_notice_number_confirmed": "32515199120"
+      },
+      {
+        "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
+        "reg_number": "SBR003-250735849400012.1",
+        "date": "10.09.2025",
+        "value_rub": 17168171.4,
+        "items": "Оборудование для участка листовой обработки: станок удаления грата, листогибочный пресс с ЧПУ, установка лазерной резки металла, станок лазерной сварки 4-в-1",
+        "note": "Sberbank-AST internal PurchaseId 3399056; статус закупки: Завершен(-а) | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515202911, real EIS contract registration № 55300010714250000070000, actual SIGNED contract price ₽16910648.82 (vs. original NMC/notice price ₽17168171.4), signed 22 окт. 2025, published to EIS contract registry 22 окт. 2025.",
+        "source_id": "s5313",
+        "signed_value_rub": 16910648.82,
+        "eis_contract_number": "55300010714250000070000",
+        "eis_notice_number_confirmed": "32515202911"
+      },
+      {
+        "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
+        "reg_number": "SBR003-250735849400008.1",
+        "date": "09.09.2025",
+        "value_rub": 8330533.34,
+        "items": "Электроэрозионные станки для эрозионного участка: копировально-прошивочный и проволочно-вырезной",
+        "note": "Sberbank-AST internal PurchaseId 3396113; статус закупки: Завершен(-а) | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515199159, real EIS contract registration № 55300010714250000080000, actual SIGNED contract price ₽8100000.00 (vs. original NMC/notice price ₽8330533.34), signed 23 окт. 2025, published to EIS contract registry 23 окт. 2025.",
+        "source_id": "s5313",
+        "signed_value_rub": 8100000.0,
+        "eis_contract_number": "55300010714250000080000",
+        "eis_notice_number_confirmed": "32515199159"
+      },
+      {
+        "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
+        "reg_number": "SBR003-250735849400007.1",
+        "date": "09.09.2025",
+        "value_rub": 15276045.91,
+        "items": "Шлифовальные станки для шлифовального участка: плоскошлифовальные FSG-3063R/FSG-60120 (или экв.), круглошлифовальный М1332В/1000 (или экв.)",
+        "note": "Sberbank-AST internal PurchaseId 3396096; статус закупки: Завершен(-а)",
+        "source_id": "s5313"
+      },
+      {
+        "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
+        "reg_number": "SBR003-250735849400006.1",
+        "date": "09.09.2025",
+        "value_rub": 7727878,
+        "items": "Трубогибочный автоматический дорновый станок для трубогибочного участка",
+        "note": "Sberbank-AST internal PurchaseId 3396085; статус закупки: Завершен(-а) | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515199109, real EIS contract registration № 55300010714250000050000, actual SIGNED contract price ₽6950000.00 (vs. original NMC/notice price ₽7727878), signed 10 окт. 2025, published to EIS contract registry 13 окт. 2025.",
+        "source_id": "s5313",
+        "signed_value_rub": 6950000.0,
+        "eis_contract_number": "55300010714250000050000",
+        "eis_notice_number_confirmed": "32515199109"
+      },
+      {
+        "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
+        "reg_number": "SBR003-250735849400005.1",
+        "date": "09.09.2025",
+        "value_rub": 13915600,
+        "items": "Установка гидроабразивной резки с ЧПУ для участка гидроабразивной резки",
+        "note": "Sberbank-AST internal PurchaseId 3396076; статус закупки: Завершен(-а) | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515199084, real EIS contract registration № 55300010714250000040000, actual SIGNED contract price ₽11700000.00 (vs. original NMC/notice price ₽13915600), signed 9 окт. 2025, published to EIS contract registry 9 окт. 2025.",
+        "source_id": "s5313",
+        "signed_value_rub": 11700000.0,
+        "eis_contract_number": "55300010714250000040000",
+        "eis_notice_number_confirmed": "32515199084"
+      },
+      {
+        "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
+        "reg_number": "SBR003-250735849400004.1",
+        "date": "22.08.2025",
+        "value_rub": 11688922.15,
+        "items": "Серво-гидравлическая инжекционно-литьевая машина для участка термопластавтоматов (производство изделий из полимеров)",
+        "note": "Sberbank-AST internal PurchaseId 3351853; статус закупки: Завершен(-а)",
+        "source_id": "s5313"
+      },
+      {
+        "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
+        "reg_number": "SBR003-250735849400003.1",
+        "date": "22.08.2025",
+        "value_rub": 83596500,
+        "items": "Оборудование для механообрабатывающего участка: 2х вертикальный фрезерный обрабатывающий центр с ЧПУ и токарный обрабатывающий центр с ЧПУ, для обработки высоколегированных сталей и цветных сплавов",
+        "note": "Sberbank-AST internal PurchaseId 3351237; статус закупки: Завершен(-а)",
+        "source_id": "s5313"
       }
     ],
     "workforce_history": [],
-    "state_programs": [],
-    "marketing_claims": [],
+    "state_programs": [
+      {
+        "name_ru": "Программа экспериментального правового режима в сфере цифровых инноваций по эксплуатации БАС и тестированию систем обнаружения/защиты от противоправного применения БАС (Новгородская область)",
+        "name_en": "Federal experimental legal regime (EPR) program for UAS operation and detection/counter-UAS testing, Novgorod Oblast",
+        "role": "Named operator (Оператор опытных районов) of the regime, per Postanovleniye Pravitel'stva RF; conducts testing of UAS AND electronic-warfare (РЭБ/radio-suppression) equipment across designated test districts covering the whole region",
+        "source_id": "s5301",
+        "as_of": "2025-04-07"
+      }
+    ],
+    "marketing_claims": [
+      {
+        "text_ru": "Обеспечение передовых технологических и нормативно-правовых решений в области гражданского беспилотия и противодронной защиты",
+        "text_en": "Provision of advanced technological and regulatory solutions in the field of civil unmanned aviation and counter-drone protection.",
+        "context": "Site mission statement (nvgushkuynik.ru homepage). Framed entirely as civilian/regulatory — no СВО/оборона/военный language anywhere on the main site, consistent with this entity's established dual-use civilian-incubator branding pattern.",
+        "source_id": null,
+        "as_of": "2026-09-02"
+      },
+      {
+        "text_ru": "30+ резидентов из 10 регионов России; 2500 м² производственных площадей; 140000 м² площадь летно-испытательного полигона; 10+ стартапов выходят на серийное производство ежегодно",
+        "text_en": "30+ residents from 10 Russian regions; 2,500 m² of production space; 140,000 m² flight-test range; 10+ startups reach serial production annually.",
+        "context": "Site 'Цифры и факты' (numbers/facts) block, nvgushkuynik.ru homepage — same figures already cited in prose in docs/index.html, now captured structurally.",
+        "source_id": null,
+        "as_of": "2026-09-02"
+      }
+    ],
     "battlefield_evidence": [],
-    "domain_history": [],
+    "domain_history": [
+      {
+        "value": "nvgushkuynik.ru registered 2024-09-02 via REGRU-RU (ns1/ns2.reg.ru); registrant identity shielded (standard post-2019 .ru privacy default, no org/taxpayer-id disclosed) — WHOIS carries no usable PII for this domain.",
+        "as_of": "2026-09-02",
+        "source_id": null,
+        "note": "whois -h whois.tcinet.ru nvgushkuynik.ru, run 2026-09-02. No historical pre-privacy-shield window exists since the domain was registered well after the 2019 shield became mandatory — dead end for a registrant identity via WHOIS."
+      }
+    ],
     "web": {
       "sites": [],
       "telegram": [],
@@ -22533,11 +22748,24 @@
       }
     ],
     "notes": "HEADLINE FINDING: this entity is a direct, sole-source government supplier of drones the contract itself states are for the war. Two zakupki.gov.ru contracts (reg 2532103798924000157, ₽4.25m, 21.11.2024; reg 2532103798925000183, ₽3.11m, 18.12.2025) with a Новгородская область regional civil-defence agency state the contract subject verbatim: \"Поставка беспилотных летательных аппаратов ... для нужд проведения специальной военной операции и выполнения специальных задач по обеспечению обороны и безопасности государства\" -- not press paraphrase, the government contract document's own operative language. Both are sole-supplier awards under 44-ФЗ ст.93 ч.1 п.2 (supplier designated by presidential decree/order, not competitively selected). This is the strongest single piece of documentary evidence in this investigation that a named ЦБСТ-network entity is a government-acknowledged war supplier -- see docs/index.html main Ushkuynik section for full framing.\n\nSibling entity within the «Ушкуйник» group, same brand/leadership umbrella as the product-bearing entity npts-ushkuynik (ООО «Ушкуйник» — «Князь Вандал Новгородский» drone). Not independently manufacturing a separate product line — no products[] expected here; verify against npts-ushkuynik for the group's actual catalog rather than treating an empty products[] on this record as a gap.",
+    "website": "https://nvgushkuynik.ru/",
+    "why": [
+      "2026-09-02: full site scan of nvgushkuynik.ru (single Tilda one-pager: home/О нас/Гранты/EPR popup) — no product catalog or images beyond generic stock graphics found; site links to two sister/partner sites (demyansksc.ru = АНО «ЦСАСД» Демянск, already tracked at ano-tsasd-demyansk; i-valday.ru = ИНТЦ «Интеллектуальная электроника — Валдай», NOT yet in registry, see add_entities below). EPR (экспериментальный правовой режим) page confirms TWO testing zones: Zone 1 (general Novgorod Oblast, cargo/aerial-work UAVs 0.1-1500kg) and Zone 2 (Demyansky district specifically, radio-electronic-countermeasure/detection testing + >30kg UAV EW-resilience testing) — Zone 2 is the more military-relevant one and maps directly onto ano-tsasd-demyansk's site content (see that entity's own update).",
+      "2026-09-02: smolin.info investigative article (archived s5288, TRANSCRIPT_20260608) names Ushkuynik's leadership beyond already-known GD Чадаев А.В.: Владимирский М.Ю. (зам. ГД, procurement), Виноградов Ю.А. (зам. ГД), Елисеев Д.Н. (начальник производства), Живова Е.В. (главбух) — see people.json additions. Also names a cluster of affiliated companies controlled by the same leadership (ООО «БТР», ООО «Спецмат», ООО «НПК «ЦПТ»», АНО «НЦНС») — see add_entities below. Spot-checked 6 of the article's corporate claims (director names, ОГРН, registration dates) directly against egrul.nalog.ru live lookup 2026-09-02: 5 of 6 matched exactly; ООО «Спецмат» (7801738089) GD is currently 'Малевич Елена Юрьевна' per live EGRUL vs. the article's 'Елисеева Елена Юрьевна' (b.1972) — plausible post-marriage name change (a Малевич П.В. is also a co-shareholder per the article) rather than a source error, but flagged, not resolved. This level of corroboration on checkable facts raises confidence in the article's uncheckable claims but border-crossing/SIM-card/occupied-territory allegations against several individuals remain PER-SOURCE ONLY, not independently verified — treat as investigative leads requiring separate corroboration before any sanctions-submission use, per PII sourcing discipline.",
+      "2026-09-02: nspd.gov.ru cadastral check on Старая Русса, ул. Минеральная, 24 (per smolin.info, s5288): a real building/parcel exists at that exact address (помещение 802.3 m², cad. quarter 53:24:0030121, private ownership; plus separate 'корп. 1'/'корп. 3' land-parcel records nearby). Owner name not disclosed at this open search tier (would need a paid ЕГРН extract), but existence and scale (802 m², larger than the 29.3 m² 'офис 12' registered address) corroborates this as a plausible real production site rather than a fabricated claim.",
+      "2026-09-02: smolin.info companion article (s5291) documents ooo-geron (Novgorod, alleged 6,000 drones/month, GD Христюк В.В.) announcing Ushkuynik residency status on 25.06.2025 -- a second, independent smolin.info piece naming a resident/affiliate beyond the leadership-cluster article (s5288). See ooo-geron and its supply-chain entities (ooo-skay-avia-grupp, ooo-aero-khit, ooo-npk-geron, ooo-akatsiya-avia, ooo-aero-khit-servis, ooo-aero-khit-m) for the full traced network.",
+      "2026-09-02: retraced smolin.info's own citations for the closed-procurement/address claims -- the article embeds downloadable primary documents (223-ФЗ извещение + протокол, several EGRUL/EGRN extracts, the Demyansk aerodrome postanovlenie, and the Novgorod BAS regional program) rather than asserting facts on its own authority. All 12 files independently re-downloaded from smolin.info's own CDN and archived here (s5292-s5303) -- this converts several previously per-source-only facts (addresses, personal ИНН for the leadership cluster, the occupied-Donetsk shell entity) to directly primary-sourced government/procurement documents."
+    ],
     "_corrected": [
       "User-flagged 2026-08-23: sibling/admin company to main npts-ushkuynik, not a separate product line.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0748).",
       "2026-08-24 direct egrul.nalog.ru lookup: GD confirmed as Чадаев Алексей Викторович. Note: the parked npc_bas_technopark_network memory records a DIFFERENT Чадаев (Ю.А., initials only) leading the unrelated АНО «НПЦ БАС «ТулаДрон»» program — different patronymic, flagged only to prevent a future session conflating the two on surname alone, no link asserted or found.",
-      "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5300010714). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
+      "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5300010714). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+      "2026-09-02: added first known litigation record for Ushkuynik (А65-30723/2025, plaintiff role, Энергополис/Иннополис, simplified proceedings, full award) from user-supplied kad.arbitr.ru PDFs.",
+      "2026-09-02: OCR'd the Minpromtorg-approved Novgorod Oblast BAS development program (s5301, scanned 24pp, no text layer -- tesseract rus). Confirms: (1) Ushkuynik holds official Minpromtorg-conferred status as a national testing/competency center for UAS tech; (2) Demyansk aerodrome (600m runway, hangars) was built/restored specifically for testing detection, jamming (подавление) and control-interception (перехват управления) equipment -- corroborates ano-tsasd-demyansk's function beyond the postanovleniye 838 decree; (3) Ushkuynik is the named Operator of a federal-government-approved experimental legal regime letting UAS be flown region-wide under simplified rules AND letting counter-UAS/РЭБ systems be tested at a dedicated range; (4) 38 resident companies under the NPTs umbrella, 2 having won NTI Foundation R&D grants.",
+      "2026-09-02: found via HAR capture of utp.sberbank-ast.ru + a live re-query of its search API (POST https://www.sberbank-ast.ru/api/Processing/main, windowCode /EsOpenUnitedPurchaseList, an Elasticsearch-backed full-text search over purchName/OrgName -- unauthenticated, no cookies needed; see notes/source_expansion_methodology.md). Searching \"Ушкуйник\" returned 11 procurement notices totalling ~₽200.17M (Aug-Dec 2025), of which only 1 (the SDM equipment purchase, already on file separately) was previously known -- the other 10, totalling ~₽193.8M, were completely undocumented. Together these describe a full manufacturing-facility buildout for the “Центр коллективного пользования”: CNC milling/turning (₽83.6M alone), injection molding, waterjet cutting, EDM machining, laser cutting/welding, a paint-drying complex, a materials-testing/metallurgy lab, and compressed-air infrastructure -- consistent with serious in-house component manufacturing capability, not just assembly. All 11 archived in one search-response JSON (s5313); individual PurchaseView pages not yet pulled per-notice (would need 11 separate live fetches -- the search response itself already carries name/amount/date/status/itemized-products for each, sufficient for a government_contracts entry; a deeper per-notice pull is a good next step if item-level technical specs are needed).",
+      "2026-09-02: HAR capture of www.rts-tender.ru (an aggregator that mirrors 44-ФЗ/223-ФЗ/615-ПП tenders across ALL platforms, not just its own -- confirmed here indexing Sberbank-AST-run Ushkuynik procedures) surfaced its own organizer-lookup feature: the search filter body supports a direct `innOrganizers` field (unlike Sberbank-AST's free-text-only search), and an organizer page at /poisk/organizator/<ИНН>-<КПП>/ lists every tender. The captured page (10 results, likely paginated -- page 2 not yet captured) gave the actual SIGNED contract price for 9 of the 11 already-known equipment purchases, each lower than the opening NMC/notice price captured earlier from Sberbank-AST (competitive-bidding discounts), plus the real ЕИС closing-notice numbers and 20-digit EIS contract registration numbers neither Sberbank-AST's search response nor the original tender documents gave us directly. The термопластавтоматы (₽11,688,922.15, notice dated 22.08.2025) purchase did not appear on this page -- likely on a second page (list appears date-sorted descending, earliest shown here is 09.10.2025) -- a page-2 capture (skip:10 in the same search filter) would confirm and complete the picture.",
+      "2026-09-02: HAR capture of www.rts-tender.ru (an aggregator that mirrors 44-ФЗ/223-ФЗ/615-ПП tenders across ALL platforms, not just its own -- confirmed here indexing Sberbank-AST-run Ushkuynik procedures) surfaced its own organizer-lookup feature: the search filter body supports a direct `innOrganizers` field (unlike Sberbank-AST's free-text-only search), and an organizer page at /poisk/organizator/<ИНН>-<КПП>/ lists every tender. The captured page (10 results, likely paginated -- page 2 not yet captured) gave the actual SIGNED contract price for 9 of the 11 already-known equipment purchases, each lower than the opening NMC/notice price captured earlier from Sberbank-AST (competitive-bidding discounts, up to ₽15.7M less on the largest machining-center purchase), plus the real ЕИС closing-notice numbers and 20-digit EIS contract registration numbers neither Sberbank-AST's search response nor the original tender documents gave us directly. The термопластавтоматы purchase (₽11,688,922.15 NMC, notice dated 22.08.2025) did not appear on this page -- likely on a second page (list appears date-sorted descending, earliest shown here is 09.10.2025) -- a page-2 capture (skip:10 in the same search filter) would confirm and complete the picture."
     ],
     "_verified_against": "egrul.nalog.ru open API, 2026-08-24",
     "opensanctions_matches": [
@@ -22861,18 +23089,45 @@
     "inn": "5300015906",
     "ogrn": "1245300003827",
     "registered": "2024-09-04",
-    "address": null,
+    "address": "173001, Новгородская область, г. Великий Новгород, ул. Даньславля, д. 9а",
     "city": null,
     "okved_code": null,
     "okved_label": null,
     "okved_mismatch": null,
     "director": null,
-    "director_history": [],
+    "director_history": [
+      {
+        "value": "Кузовлев Андрей Анатольевич (ИНН 744513968543) — pre-redaction director",
+        "as_of": "2026-09-02",
+        "source_id": "s5290",
+        "note": "Same individual also appears as a former director of npts-ushkuynik (ООО «Ушкуйник») — a direct personnel overlap between the two commercial-shell entities."
+      }
+    ],
     "founders": [],
-    "founders_history": [],
+    "founders_history": [
+      {
+        "value": "ООО «Статус 53» (ИНН 5300006098)",
+        "as_of": "2026-09-02",
+        "source_id": "s5290",
+        "note": "Same corporate founder as npts-ushkuynik."
+      }
+    ],
     "charter_capital": null,
     "charter_capital_history": [],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "173003, Новгородская область, г. Великий Новгород, Великая ул., д. 18а (former address, per rusprofile's history log)",
+        "as_of": "2024-09-04",
+        "source_id": "s5290",
+        "note": "SAME street address (ул. Великая, 18А) independently found 2026-09-02 as the site of АО УК ИНТЦ «Интеллектуальная электроника — Валдай» / i-valday.ru (see ano-npts-ushkuynik's site-scan notes) — a confirmed physical overlap between the Ушкуйник commercial-shell cluster and the Валдай innovation-center site, not just a website hyperlink relationship."
+      },
+      {
+        "value": "173001, Новгородская область, г. Великий Новгород, ул. Даньславля, д. 9а (current per rusprofile 2026-09-02)",
+        "as_of": "2026-09-02",
+        "source_id": "s5290",
+        "note": "rusprofile.ru current registered address."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -22924,6 +23179,9 @@
       }
     ],
     "notes": "Sibling entity within the «Ушкуйник» group, same brand/leadership umbrella as the product-bearing entity npts-ushkuynik (ООО «Ушкуйник» — «Князь Вандал Новгородский» drone). Not independently manufacturing a separate product line — no products[] expected here; verify against npts-ushkuynik for the group's actual catalog rather than treating an empty products[] on this record as a gap.",
+    "why": [
+      "2026-09-02: rusprofile.ru pull (s5290) recovers this entity's current and former registered addresses and pre-redaction director. The former address (ул. Великая, 18А) matches the physical site of АО УК ИНТЦ «Интеллектуальная электроника — Валдай» found independently the same session via nvgushkuynik.ru's own site links — confirms a real, not merely hyperlink-based, connection between the Ушкуйник group and the Валдай innovation-center cluster."
+    ],
     "_corrected": [
       "User-flagged 2026-08-23: sibling/admin company to main npts-ushkuynik, not a separate product line.",
       "2026-08-24 direct egrul.nalog.ru lookup: ОГРН and registration date confirmed. Director not returned in this lookup's summary row — a full EGRUL extract would be needed for that specific field, not pursued further given this entity's already-established role (JV/admin arm of the Ушкуйник group, no separate product catalog expected — see existing related_entities note).",
@@ -23468,7 +23726,38 @@
         "source_id": "s0798"
       }
     ],
-    "litigation": [],
+    "litigation": [
+      {
+        "case_number": "А40-211563/2022",
+        "court": "Арбитражный суд г. Москвы (первая инстанция); Девятый арбитражный апелляционный суд; Арбитражный суд Московского округа (кассация)",
+        "parties": "Министерство обороны Российской Федерации (истец) против АО «НПП Радар ммс» (ответчик)",
+        "claim_amount_rub": 3477889.56,
+        "subject": "Взыскание неустойки за просрочку поставки по государственному контракту от 18.12.2019 №1922187100412412209207625 (₽73,075,909.53) на изготовление и поставку береговых автоматизированных метеорологических станций ПИГМА-3 с ППИ-2 комплекса «Якорь» для гидрографических служб Северного и Тихоокеанского флотов; просрочка 363 дня по партии 2021 года (₽22,388,470.79).",
+        "status": "Итог: иск Минобороны отклонён в полном объёме. Первая инстанция (21.12.2022) первоначально взыскала ₽787,855.42 (пересчитано по методике \"неустойка на партию, а не на весь контракт\", со ссылкой на Президиум ВАС РФ №5467/14 — контракт содержал 9 самостоятельных обязательств поставки в разные воинские части/регионы); апелляция (18.04.2023) оставила решение без изменений по обеим апелляционным жалобам. Кассация (24.08.2023) отменила оба акта и направила дело на новое рассмотрение. При новом рассмотрении суд первой инстанции (15.12.2023) отказал Минобороны в иске полностью; апелляция (25.03.2024) и кассация (24.07.2024) оставили отказ без изменений. Основание: согласно Постановлению Правительства РФ №783 от 04.07.2018 (в ред. ПП №340 от 10.03.2022), заказчик обязан списать начисленную неустойку, если она не превышает 5% цены соответствующего этапа контракта — пересчитанные ₽787,855.42 составляли менее 5% от ₽3,653,795.48 (цена партии), то есть Минобороны было обязано списать неустойку, а не взыскивать её через суд. Определением от 02.09.2024 суд удовлетворил заявление АО «НПП Радар ммс» о повороте исполнения (возврат средств, уплаченных по отменённому решению).",
+        "source_id": "s5266",
+        "note": "Полный четырёхлетний цикл (2022–2024): первая инстанция → апелляция → кассационная отмена → новое рассмотрение → отказ в иске → апелляция и кассация подтвердили отказ → поворот исполнения. Представитель истца в заседании 02.09.2024: Пашаев Р.М. (доверенность от 12.10.2022). Судья первой инстанции на всех этапах — Ласкина С.О. В отличие от пассивной модели ответчика, видимой в делах АО «НИИ СТТ», АО «НПП Радар ммс» демонстрирует реальную способность вести многоуровневую апелляционно-кассационную защиту и добилось полного освобождения от неустойки, а также подавало (неуспешно, отклонён к совместному рассмотрению) встречный иск к Минобороны о взыскании собственной задолженности. Хронология по всем 15 файлам дела архивирована в data/sources/A40-211563-2022_*.pdf (s5266–s5280); не все 15 файлов прочитаны построчно, но итоговая траектория подтверждена финальным определением от 02.09.2024 (s5280), которое пересказывает все промежуточные акты."
+      },
+      {
+        "case_number": "А56-17609/2026",
+        "court": "Арбитражный суд города Санкт-Петербурга и Ленинградской области",
+        "parties": "АО «НПП Радар ммс» против ПАО «Информационные телекоммуникационные технологии» (ИТТ)",
+        "claim_amount_rub": null,
+        "subject": "Спор между АО «НПП Радар ммс» и ПАО «Информационные телекоммуникационные технологии»; предмет по раскрытым (нерассекреченным) документам не установлен однозначно.",
+        "status": "Часть материалов дела была раскрыта до перехода к закрытому судебному заседанию (по мотивам, не раскрытым в доступных документах) — последующие акты недоступны.",
+        "source_id": "s5282",
+        "note": "ПАО «Информационные телекоммуникационные технологии» не числится в реестре — не проверено через ЕГРЮЛ. Три доступных акта архивированы: s5282 (21.02.2026), s5283 (22.03.2026), s5284 (02.06.2026). Дело закрыто для дальнейшего доступа судом (закрытое заседание) после этих трёх документов — статья 11 АПК РФ (гостайна/оборонная классификация либо ходатайство стороны о коммерческой/служебной тайне, конкретное основание не установлено из доступных текстов)."
+      },
+      {
+        "case_number": "А54-3359/2026",
+        "court": "Арбитражный суд Рязанской области",
+        "parties": "Не установлены — определение полностью деперсонализировано/отредактировано в раскрытой копии.",
+        "claim_amount_rub": null,
+        "subject": "Не установлен — единственный доступный документ (Определение от 17.04.2026) практически полностью зачернён/отредактирован, включая наименования сторон.",
+        "status": "Нерешённый вопрос: связь с АО «НПП Радар ммс» не подтверждена и не опровергнута; пользователь указал на возможную связь с «Рязанским конструкторским бюро «Глобус»» (упоминание которого не найдено ни в одном локальном источнике этого расследования — data/registry/*.json, docs/index.html, MANIFEST.md, база Telegram-постов проверены безрезультатно).",
+        "source_id": "s5281",
+        "note": "Открытый вопрос, а не подтверждённая связь. Документ архивирован (s5281), но информационная ценность близка к нулю из-за полной редакции текста. Не привязывать к АО «НПП Радар ммс» без независимого подтверждения имён сторон."
+      }
+    ],
     "licences": [],
     "trademarks": [
       {
@@ -24343,7 +24632,8 @@
       "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block.",
       "2026-08-26: new product (mobile dronoport) found via налетай.рф catalog (s2630), not previously in products[]. БВС ВТ-440м/ВТ-30Е (already documented) also confirmed listed there at ₽80M/₽15M respectively.",
       "2026-08-26: product photo pulled from налетай.рф CDN for БВС ВТ-440М (already-documented product, first image on file for it).",
-      "2026-08-27: full zakupki.gov.ru government_contracts[] wire-in, 72 contracts spanning 2009-2026 (fetched via zakupki_batch_pull.py fetch-contracts, mined via mine_zakupki.py after fixing a deep-mode bug where card_fields wasn't used as a fallback for contract_fields on contracts with no attached XML -- see the script's own comments). Customer roster: 8 direct Минобороны РФ contracts (₽21.9M/₽96.4M/₽80M, dates 2014-2017), 27 Минпромторг РФ contracts (multiple in the ₽40-227M range, 2013-2017 -- large state-industrial funding, not retail sales), plus a long tail of scientific-institute/geological-survey/Antarctic-expedition/Northern-Sea-Route customers (Курчатовский институт, ВНИИ Геологический институт им. Карпинского, ИЯИ РАН, ААНИИ, ФГУП Гидрографическое предприятие) buying magnetometry/aeromagnetic survey hardware, plus a St.Petersburg city government IT-systems contractor role (unrelated line of business) and one confirmed БАС ВТ-ПСС maintenance contract for St.Petersburg's search-and-rescue service (2022) -- operational confirmation of the VT-series UAV being fielded by a government end-user, not just sold. 39/72 contracts have a parsed value; total of parsed values ≈ ₽1,370,386,781. Not yet independently read past the card-scrape level (no attachment-document deep read) -- treat as a confirmed customer/value roster, not yet a fully verified compliance record."
+      "2026-08-27: full zakupki.gov.ru government_contracts[] wire-in, 72 contracts spanning 2009-2026 (fetched via zakupki_batch_pull.py fetch-contracts, mined via mine_zakupki.py after fixing a deep-mode bug where card_fields wasn't used as a fallback for contract_fields on contracts with no attached XML -- see the script's own comments). Customer roster: 8 direct Минобороны РФ contracts (₽21.9M/₽96.4M/₽80M, dates 2014-2017), 27 Минпромторг РФ contracts (multiple in the ₽40-227M range, 2013-2017 -- large state-industrial funding, not retail sales), plus a long tail of scientific-institute/geological-survey/Antarctic-expedition/Northern-Sea-Route customers (Курчатовский институт, ВНИИ Геологический институт им. Карпинского, ИЯИ РАН, ААНИИ, ФГУП Гидрографическое предприятие) buying magnetometry/aeromagnetic survey hardware, plus a St.Petersburg city government IT-systems contractor role (unrelated line of business) and one confirmed БАС ВТ-ПСС maintenance contract for St.Petersburg's search-and-rescue service (2022) -- operational confirmation of the VT-series UAV being fielded by a government end-user, not just sold. 39/72 contracts have a parsed value; total of parsed values ≈ ₽1,370,386,781. Not yet independently read past the card-scrape level (no attachment-document deep read) -- treat as a confirmed customer/value roster, not yet a fully verified compliance record.",
+      "2026-09-02: added 3 kad.arbitr.ru litigation entries (А40-211563/2022 full trajectory incl. поворот исполнения; А56-17609/2026 partial, closed session; А54-3359/2026 redacted, connection unconfirmed) from user-supplied case PDFs."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "opensanctions_matches": [
@@ -34662,7 +34952,8 @@
       "Full signed ЕГРЮЛ extract read end-to-end (ul-1232300051235-20260823120320.pdf, pulled 23.08.2026). GD and majority (50.5%) owner Барашков Александр Сергеевич — already documented elsewhere in this project's material as GD/founder of the same name; confirms personal ИНН 252201766438. Co-founder Александров Алексей Витальевич 49.5%.",
       "Full product catalog extracted from gagaring.ru (23.08.2026, site sweep).",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (2312321660). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-      "2026-08-24: promoted 3 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: all patents are personal filings by Барашков Александр Сергеевич, this entity's confirmed director/50.5%-owner -- welding technology."
+      "2026-08-24: promoted 3 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: all patents are personal filings by Барашков Александр Сергеевич, this entity's confirmed director/50.5%-owner -- welding technology.",
+      "2026-09-03: checked via fedresurs.ru's company-lookup API (GUID c513d65c-bade-475f-ac96-316547fd6ce8). No bankruptcy filings, no unreliable-info flags. Four vehicle-leasing fact-messages (all passenger cars, 2024-2025, contracts 18248-КРД-24-АМ-Л / 13646-РНД-25-АМ-Л / 13749-РНД-25-АМ-Л / 49258/2025) -- s5331, s5327, s5329, s5332. In every single one, the LESSOR's identity is redacted citing Постановление Правительства РФ №5 от 12.01.2018 (the decree shielding defense-industry/gosoboronzakaz entities from public disclosure) and Fedresurs flags both parties isPublisherInSanctionList/isParticipantInSanctionList:true -- identical pattern to ooo-geron's single leasing record found the same day. Two independent ЦБСТ-adjacent entities both leasing vehicles through the same category of sanctions-shielded lessor is worth tracking as a recurring signature, not coincidence -- flagged here as Fedresurs's own classification, not independently verified against a primary sanctions list, and the lessor's specific identity is unknown in both cases (shielded). Also found: ООО «Гагаринг» underwent a MANDATORY statutory audit for FY2025 (s5330, auditor ООО «БСК Аудит», clean/unqualified opinion dated 04.06.2026) -- a mandatory-audit requirement under Russian law implies the company crosses a revenue/asset-size threshold, i.e. this is a real production-scale entity, not a shell. The full audited financial statements (bukhgalterskaya otchetnost') are attached as a PDF on Fedresurs (doc guid 32b96297-8592-4630-b8c6-140dee4fe2dd) -- not yet downloaded, would need a fresh HAR/browser session on the publication page to find the document-download endpoint; a strong candidate for real revenue/asset figures if pulled."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -36405,7 +36696,14 @@
     "founders_history": [],
     "charter_capital": null,
     "charter_capital_history": [],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "175310, Новгородская область, Демянский район, р.п. Демянск, ул. Черняховского, д. 7 (site-stated operating address, distinct from the EGRUL-registered ул. Сосновского, зд. 14, помещ. 1)",
+        "as_of": "2026-09-02",
+        "source_id": null,
+        "note": "demyansksc.ru homepage states this as the club's physical address, separate from its EGRUL registration address on ул. Сосновского. A genuine actual-vs-registered address discrepancy — not yet corroborated against a satellite image or third-party source."
+      }
+    ],
     "name_history": [
       {
         "as_of": "2023-05-03",
@@ -36485,7 +36783,13 @@
       "Partial read of the organization's own «Отчет о деятельности некоммерческой организации за 2025 г.», filed with Минюст (Управление по Новгородской области, form УН000Х, pulled 23.08.2026) — NOT marked _verified, since the income-source breakdown and executive-body identity weren't fully resolved in this pass (see open question). Confirms address, ОКВЭД 93.12 (спортивные клубы, matching the earlier ЕГРЮЛ-derived note), a FOUNDING NAME different from the current one (АНО «Стрелковый спортивный клуб «Демянск»», per the director's own appointment record), and высший орган members Татарицкий Сергей Иванович and Попов Михаил Владимирович (appointed 10.01.2025, term to 09.01.2030, per Наблюдательный совет 'Демянск' protocol) — no DOB/ИНН given.",
       "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=5300008970, file cited as source s0570). Director not resolved by this lookup method — see open_questions.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0747).",
-      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
+      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
+      "2026-09-02: verified postanovleniye 838/15.09.2023 (s5300) against the actual originating platform, not just smolin.info's re-hosted copy, per user instruction to check sberbank-ast/local-govt sources directly. The district's official site is demadmin.gosuslugi.ru (a real, live gosuslugi-hosted municipal portal, confirmed via WebFetch -- 10,113-document normative-act archive under /ofitsialno/dokumenty/postanovleniya/, organized by year including postanovleniya-2023-goda/). Document itself is digitally signed (cert serial 07FC71FBD0E958D12254F84B9CF62082, signer Сапогов Андрей Николаевич, глава района, signed 15.09.2023 09:58) and self-cites its own publication requirement ('Опубликовать постановление в Информационном Бюллетене Демянского муниципального района и разместить на официальном сайте'). Could not pin an exact deep-link to this specific document via scripted pagination in the time available (the archive's pagination did not respond to a ?page= param through WebFetch) -- site and category confirmed genuine and consistent with the document, but the direct URL is not yet located. smolin.info's re-hosted PDF (s5300) remains the working citation; a manual browser search of demadmin.gosuslugi.ru/ofitsialno/dokumenty/postanovleniya/postanovleniya-2023-goda/ for №838 would close this out."
+    ],
+    "why": [
+      "2026-09-02: demyansksc.ru site scan (linked from nvgushkuynik.ru as the EPR Zone 2 partner facility) — publicly frames itself as a 'Центр стрелкового и авиационного спорта' (shooting & aviation sports club) offering civilian/sport/military weapons training and explicit 'военно-учетные специальности' (military-conscription-specialty) preparation for youth — same dual-use civilian/military-patriotic-education framing pattern seen elsewhere in this investigation. Contact: +7 903 127 35 87, stclubdemyansk@yandex.ru. This is the operational site for Ushkuynik's EPR Zone 2 (radio-electronic-countermeasure and >30kg UAV EW-resilience testing) — the actual testing activity is more militarily significant than the sports-club framing suggests.",
+      "2026-09-02: nspd.gov.ru cadastral check on both Demyansk addresses. Черняховского, 7 (site-stated operating address): TWO real buildings on record, cad. 53:05:0010218:16 (586.5 m²) and :14 (478.2 m²), both MUNICIPAL ownership. Сосновского, зд. 14М (EGRUL-registered address, помещ. 1): ONE building, cad. 53:05:0000000:1290, 406.6 m², PRIVATE ownership. So the entity's actual/operating site sits on municipally-owned buildings while its formal registration sits in a privately-owned one a few doors down — consistent with a state-founded sports/youth-education org (municipal building use) formally registered through a private landlord's address, not necessarily suspicious on its own but a genuine actual-vs-registered ownership-type split worth keeping in mind.",
+      "2026-09-02: the Демянск aerodrome cited in the EPR Zone 2 material (cadastral 53:05:0000000:1285, checked directly via nspd.gov.ru) is precisely located at 'д. Новое Подсосонье, ул. Лесная, соор. 1' (a distinct village within Демянский район, not п. Демянск itself), category 'Сооружения'/'Посадочная площадка' (landing strip), built-up area 11,757.4 m², built 2002, registered 2012-07-05, ownership type MUNICIPAL (not privately or Ushkuynik-owned) — consistent with the smolin.info-cited Постановление администрации Демянского района №838 (15.09.2023) being an operational-use grant over municipal land, not a transfer of ownership."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0570)",
     "opensanctions_matches": [
@@ -41411,5 +41715,979 @@
       }
     ],
     "aleph_screened_at": "2026-08-26"
+  },
+  {
+    "slug": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
+    "name_ru": "ООО «Беспилотные технологические решения» (БТР)",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "7813680637",
+    "ogrn": "1247800059980",
+    "extra_ids": null,
+    "registered": "14.06.2024",
+    "address": "г. Санкт-Петербург, наб. Мартынова, д. 12, лит. А",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
+    "director_history": [
+      {
+        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [
+      {
+        "name": "Владимирский М.Ю.",
+        "share": "50% (per source, unverified)"
+      },
+      {
+        "name": "Руденко Д.А.",
+        "share": "50% (per source, unverified)"
+      }
+    ],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "Co-owned (per source, unverified) by Ushkuynik's own deputy GD Владимирский М.Ю. and shareholder Руденко Д.А.; GD is Ushkuynik's начальник производства Елисеев Д.Н. — a direct personnel-overlap tie to Ushkuynik leadership.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: added from smolin.info investigation (s5288). Director/ОГРН/registration date corroborated directly against egrul.nalog.ru live lookup 2026-09-02 (exact match). OKVED per source: technical testing, military-vehicle/aircraft/electronic-equipment production (22 activities registered) — not independently re-verified. Ownership split (Владимирский/Руденко 50/50, per source) not independently re-verified — EGRUL open-search API doesn't expose founder data."
+    ]
+  },
+  {
+    "slug": "ooo-spetsmat-spetsialnye-materialy",
+    "name_ru": "ООО «Специальные материалы» (Спецмат)",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "7801738089",
+    "ogrn": "1247800116464",
+    "extra_ids": null,
+    "registered": "22.11.2024",
+    "address": "г. Санкт-Петербург",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (per live EGRUL 2026-09-02): Малевич Елена Юрьевна — differs from source article's stated GD 'Елисеева Елена Юрьевна' (b.1972); plausible post-marriage name change given co-shareholder Малевич П.В., not resolved.",
+    "director_history": [
+      {
+        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (per live EGRUL 2026-09-02): Малевич Елена Юрьевна — differs from source article's stated GD 'Елисеева Елена Юрьевна' (b.1972); plausible post-marriage name change given co-shareholder Малевич П.В., not resolved.",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [
+      {
+        "name": "Руденко Д.А.",
+        "share": "50% (per source, unverified)"
+      },
+      {
+        "name": "Малевич П.В.",
+        "share": "50% (per source, unverified)"
+      }
+    ],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "Co-owned (per source, unverified) by Руденко Д.А. and Малевич П.В.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: added from smolin.info investigation (s5288). ОГРН/registration date corroborated directly against egrul.nalog.ru live lookup 2026-09-02 (exact match); GD name has a discrepancy, see director field. OKVED per source: technical testing, military combat-vehicle production (15 activities registered) — not independently re-verified."
+    ]
+  },
+  {
+    "slug": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
+    "name_ru": "ООО «НПК «Центр перспективных технологий»» (ЦПТ)",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "5300022741",
+    "ogrn": "1265300000470",
+    "extra_ids": null,
+    "registered": "19.01.2026",
+    "address": "Новгородская область",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
+    "director_history": [
+      {
+        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [
+      {
+        "name": "Владимирский М.Ю.",
+        "share": "50% (per source, unverified)"
+      },
+      {
+        "name": "Елисеев Д.Н.",
+        "share": "50% (per source, unverified)"
+      }
+    ],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "Co-owned (per source, unverified) 50/50 by Владимирский М.Ю. and Елисеев Д.Н. (also GD).",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: added from smolin.info investigation (s5288). Director/ОГРН/registration date corroborated directly against egrul.nalog.ru live lookup 2026-09-02 (exact match). Registered in Novgorod Oblast (Ushkuynik's own region) just 19.01.2026 — newest of the affiliate cluster. OKVED per source: 35 activities, primary = UAV production — not independently re-verified."
+    ]
+  },
+  {
+    "slug": "ano-ntsns-nevskiy-tsentr-nauchnogo-sotrudnichestva",
+    "name_ru": "АНО «Невский центр научного сотрудничества» (НЦНС)",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "7840290315",
+    "ogrn": "1127800002175",
+    "extra_ids": null,
+    "registered": "02.03.2012",
+    "address": "г. Санкт-Петербург",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ДИРЕКТОР: Руденко Дмитрий Александрович (с 20.03.2023, per source; confirmed live via egrul.nalog.ru 2026-09-02, title 'ДИРЕКТОР')",
+    "director_history": [
+      {
+        "value": "ДИРЕКТОР: Руденко Дмитрий Александрович (с 20.03.2023, per source; confirmed live via egrul.nalog.ru 2026-09-02, title 'ДИРЕКТОР')",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": null,
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: added from smolin.info investigation (s5288). ОГРН/director/registration date corroborated directly against egrul.nalog.ru live lookup 2026-09-02 (exact match). Predates the Ushkuynik cluster (registered 2012); director Руденко Д.А. only took over 20.03.2023 per source, coinciding with the Ushkuynik-affiliate buildup. OKVED per source: natural/technical-science research (3 activities) — not independently re-verified. Tiered 'adjacent' pending confirmation this org does anything beyond hold Руденко's directorship."
+    ]
+  },
+  {
+    "slug": "ooo-status-53",
+    "name_ru": "ООО «Статус 53»",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "5300006098",
+    "ogrn": null,
+    "extra_ids": null,
+    "registered": null,
+    "address": null,
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Захаров Сергей Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
+    "director_history": [
+      {
+        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Захаров Сергей Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "plumbing",
+    "tier_basis": "Corporate founder common to both npts-ushkuynik (ООО «Ушкуйник») and ooo-ushkuynik-sp (ООО «Ушкуйник-СП») per rusprofile.ru pulls (s5289, s5290) — a shared parent/holding vehicle across the Ushkuynik commercial-shell cluster, not yet independently characterized beyond that role.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: added as the shared founder identified on both npts-ushkuynik and ooo-ushkuynik-sp's rusprofile.ru records. Director confirmed live via egrul.nalog.ru lookup 2026-09-02. Address, incorporation date, and full activity profile not yet pulled."
+    ]
+  },
+  {
+    "slug": "ooo-geron",
+    "name_ru": "ООО «Герон»",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "7802893898",
+    "ogrn": "1217800073545",
+    "extra_ids": null,
+    "registered": "06.05.2021",
+    "address": "174406, Новгородская область, м.о. Боровичский, г. Боровичи, ул. Красноармейская, д. 71, стр. 1",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Владимир Владимирович (confirmed live via egrul.nalog.ru 2026-09-02)",
+    "director_history": [
+      {
+        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Владимир Владимирович (confirmed live via egrul.nalog.ru 2026-09-02)",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [
+      {
+        "value": "174406, Новгородская область, м.о. Боровичский, г. Боровичи, ул. Красноармейская, д. 71, стр. 1",
+        "as_of": "2026-03-29",
+        "source_id": "s5308",
+        "note": "2026-09-02: precise address from EGRUL extract s5308 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"Новгородская область\". ГРН 2255300168836 dated 07.02.2025."
+      }
+    ],
+    "name_history": [
+      {
+        "value": "ООО «Герон-Авиа»",
+        "as_of": "2024-10-17",
+        "source_id": "s5314",
+        "note": "same ИНН/ОГРН as ООО «Герон» -- appears as the lessee name on a 2024 vehicle-leasing fact-message on Fedresurs. Ties directly to the geronavia.ru site already linked to this entity."
+      }
+    ],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "Per smolin.info (s5291): described as producing \"up to 6,000 military drones monthly\" as a de facto Novgorod branch of ООО «Аэро-хит» (Khabarovsk). Announced Ushkuynik residency status 25.06.2025 — the direct documented link to ano-npts-ushkuynik.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [
+      {
+        "case_number": null,
+        "court": "Арбитражный суд Новгородской области (код А44)",
+        "parties": "УФНС России по Новгородской области (заявитель) против ООО «Герон» (должник)",
+        "subject": "Заявление уполномоченного органа (налоговой службы) о признании ООО «Герон» несостоятельным (банкротом)",
+        "status": "Заявление направлено в суд 17.02.2026 (опубликовано на Федресурсе 18.02.2026)",
+        "source_id": "s5310",
+        "as_of": "2026-02-17"
+      },
+      {
+        "case_number": null,
+        "court": null,
+        "parties": "ПАО Сбербанк (ИНН 7707083893) against ООО «Герон»",
+        "subject": "Уведомление кредитора о намерении обратиться в суд с заявлением о признании ООО «Герон» банкротом (первое уведомление)",
+        "status": "Опубликовано 06.03.2026",
+        "source_id": "s5323",
+        "as_of": "2026-03-06"
+      },
+      {
+        "case_number": null,
+        "court": null,
+        "parties": "ПАО Сбербанк (ИНН 7707083893) against ООО «Герон»",
+        "subject": "Уведомление кредитора о намерении обратиться в суд с заявлением о признании ООО «Герон» банкротом (второе уведомление)",
+        "status": "Опубликовано 28.04.2026",
+        "source_id": "s5324",
+        "as_of": "2026-04-28"
+      }
+    ],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: precise address from EGRUL extract s5308 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"Новгородская область\". ГРН 2255300168836 dated 07.02.2025.",
+      "2026-09-02: found via HAR capture of fedresurs.ru (Федресурс fact-message backend API discovered: GET https://fedresurs.ru/backend/sfact-messages/<GUID>, no auth needed, just a Referer header -- see notes/source_expansion_methodology.md). УФНС России по Новгородской области filed a bankruptcy petition against ООО «Герон» with the Novgorod Oblast Arbitration Court, court notification dated 17.02.2026. Significant given ooo-geron was only added to the registry this session (via the smolin.info retrace) as part of the Ushkuynik-adjacent Аэро-Хит/Владимирский cluster.",
+      "2026-09-02: HAR capture of fedresurs.ru's main-site search (GET /backend/companies?searchString=<ИНН> -> GUID, then /backend/companies/<GUID>/{main,bankruptcy,publications,networth,licenses,encumbrances} -- a full universal company-lookup API, reusable for any entity, not just bankruptcy checks; see notes/source_expansion_methodology.md) surfaced a materially worse financial picture than the single УФНС filing already on file: (1) ПАО Сбербанк itself filed TWO separate creditor bankruptcy-intent notices against ООО «Герон» (06.03.2026 and 28.04.2026), on top of the tax authority's 18.02.2026 filing -- three separate creditors circling within 10 weeks. (2) EGRUL itself flagged ООО «Герон»'s registered information as unreliable (\"Недостоверность сведений\", record 11.03.2026, published 12.03.2026, per УФНС России по Новгородской области's own verification check) -- s5322, often a precursor to forced ЕГРЮЛ exclusion. (3) A 2024 vehicle-leasing fact-message (s5314) names the lessee as \"ООО «Герон-Авиа»\" -- same ИНН/ОГРН, confirming this as an alternate/trading name tied to geronavia.ru. Notably, this same message has BOTH isPublisherInSanctionList:true and isParticipantInSanctionList:true set by Fedresurs's own system, and the LESSOR's identity is fully redacted citing \"Постановление Правительства РФ от 12.01.2018 №5\" -- a real, well-documented Russian government decree used specifically to shield defense-industry/gosoboronzakaz-participating entities' EGRUL/Fedresurs footprint from public disclosure. This is flagged here as Fedresurs's own classification, NOT independently verified against a primary international sanctions list (OFAC/EU/UK) or confirmed which sanctions list is meant -- but the shielding decree itself is a strong, independently-verifiable signal that the (unnamed) leasing counterparty is treated as defense-industry-sensitive by the Russian state. No bidding/pledged-asset/networth/license records exist yet (all empty) -- consistent with the bankruptcy still being at the pre-trustee petition stage, per the earlier torgi.gov.ru/bankrot.fedresurs.ru null result."
+    ],
+    "_verified_against": null
+  },
+  {
+    "slug": "ooo-skay-avia-grupp",
+    "name_ru": "ООО «Скай авиа групп»",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "7802865058",
+    "ogrn": "1147847241464",
+    "extra_ids": null,
+    "registered": "08.07.2014",
+    "address": "198510, г. Санкт-Петербург, вн.тер.г. город Петергоф, ул. Константиновская, д. 8, литера А, помещ. 1-Н",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Екатерина Валерьевна (confirmed live via egrul.nalog.ru 2026-09-02, per source since 24.11.2023)",
+    "director_history": [
+      {
+        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Екатерина Валерьевна (confirmed live via egrul.nalog.ru 2026-09-02, per source since 24.11.2023)",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [
+      {
+        "value": "198510, г. Санкт-Петербург, вн.тер.г. город Петергоф, ул. Константиновская, д. 8, литера А, помещ. 1-Н",
+        "as_of": "2026-03-29",
+        "source_id": "s5307",
+        "note": "2026-09-02: precise address from EGRUL extract s5307 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"г. Санкт-Петербург\". ГРН 2267800128253 dated 28.01.2026."
+      }
+    ],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "Per smolin.info (s5291): drone-assembly operation in Великий Новгород despite СПб registration; assembler Прокофьев М.В. convicted of failing to report terrorism (несообщение о преступлении) per source. Founded/formerly directed by Христюк В.В. (also GD of ooo-geron); current GD Христюк Е.В. (his relative, per source) since 24.11.2023.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: precise address from EGRUL extract s5307 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"г. Санкт-Петербург\". ГРН 2267800128253 dated 28.01.2026."
+    ],
+    "_verified_against": null
+  },
+  {
+    "slug": "ooo-npk-geron",
+    "name_ru": "ООО НПК «Герон»",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "7814748285",
+    "ogrn": "1187847365750",
+    "extra_ids": null,
+    "registered": "06.12.2018",
+    "address": "г. Санкт-Петербург",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Мушкевич Павел (confirmed live via egrul.nalog.ru 2026-09-02)",
+    "director_history": [
+      {
+        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Мушкевич Павел (confirmed live via egrul.nalog.ru 2026-09-02)",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "Per smolin.info (s5291): a distinct, earlier-registered (2018) St. Petersburg entity sharing the «Герон» brand with ooo-geron (2021, Novgorod) but a different director (Мушкевич Павел) — relationship between the two 'Герон' entities not established by the source beyond shared branding; treat as a lead, not a confirmed affiliate.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: added from smolin.info (s5291). Director/ОГРН/registration date corroborated live via egrul.nalog.ru 2026-09-02 (exact match)."
+    ]
+  },
+  {
+    "slug": "ooo-akatsiya-avia",
+    "name_ru": "ООО «Акация-авиа»",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "7802145959",
+    "ogrn": "1027801572820",
+    "extra_ids": null,
+    "registered": "09.12.2002",
+    "address": "г. Санкт-Петербург",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Иванов Андрей Георгиевич (confirmed live via egrul.nalog.ru 2026-09-02)",
+    "director_history": [
+      {
+        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Иванов Андрей Георгиевич (confirmed live via egrul.nalog.ru 2026-09-02)",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": "Per smolin.info (s5291): named as a related aviation entity in the same network; role in the supply chain not detailed by the source beyond the name association.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: added from smolin.info (s5291). ОГРН/registration date corroborated live via egrul.nalog.ru 2026-09-02 (exact match). Oldest entity in this cluster by far (registered 2002) -- role unclear, flagged for follow-up rather than asserted."
+    ]
+  },
+  {
+    "slug": "ooo-aero-khit-servis",
+    "name_ru": "ООО «Аэро-хит сервис»",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "9704220859",
+    "ogrn": "1237700611455",
+    "extra_ids": null,
+    "registered": "14.09.2023",
+    "address": "г. Москва",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Истомин Лев Львович (confirmed live via egrul.nalog.ru 2026-09-02)",
+    "director_history": [
+      {
+        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Истомин Лев Львович (confirmed live via egrul.nalog.ru 2026-09-02)",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": "Per smolin.info (s5291): named as part of the Аэро-хит orbit.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: added from smolin.info (s5291). ОГРН/registration date corroborated live via egrul.nalog.ru 2026-09-02 (exact match; NOTE: source article's stated 'February 2026' registration date actually matches the sibling entity ooo-aero-khit-m, not this one -- likely a source/summarization mix-up between the two similarly-named 'Аэро-хит' Moscow entities, flagged not resolved)."
+    ]
+  },
+  {
+    "slug": "ooo-aero-khit-m",
+    "name_ru": "ООО «Аэро-хит М»",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "9718293790",
+    "ogrn": "1267700066006",
+    "extra_ids": null,
+    "registered": "27.02.2026",
+    "address": "г. Москва",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Жигулин Алексей Михайлович (confirmed live via egrul.nalog.ru 2026-09-02)",
+    "director_history": [
+      {
+        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Жигулин Алексей Михайлович (confirmed live via egrul.nalog.ru 2026-09-02)",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": "Per smolin.info (s5291): directed by Жигулин Алексей Михайлович, alleged by source to be a member of a DNR-linked organization -- PER SOURCE ONLY, not independently verified.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: added from smolin.info (s5291). Director/ОГРН/registration date corroborated live via egrul.nalog.ru 2026-09-02 (exact match -- this is the entity actually registered 27.02.2026, per live EGRUL, matching the source's stated Feb-2026 date more precisely than ooo-aero-khit-servis)."
+    ]
+  },
+  {
+    "slug": "ooo-btr-donetsk",
+    "name_ru": "ООО «Беспилотные технологические решения — Донецк» (БТР-Д)",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "9309028512",
+    "ogrn": "1249300018582",
+    "extra_ids": null,
+    "registered": "02.11.2024",
+    "address": "283004, ДНР, г. Донецк, ул. Зинина, д. 19А (occupied territory)",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Руденко Дмитрий Александрович (ИНН 780401121651)",
+    "director_history": [
+      {
+        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Руденко Дмитрий Александрович (ИНН 780401121651)",
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "founders": [
+      {
+        "name": "ООО «БТР»",
+        "inn": "7813680637",
+        "share": "100%"
+      }
+    ],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": "100% subsidiary of ooo-btr-bespilotnye-tekhnologicheskie-resheniya (ИНН 7813680637), per the entity's own official ЕГРЮЛ extract (s5299, not merely per-source) -- OKVED includes 30.40 'Производство военных боевых машин' (military combat vehicle production) among 21 registered activity codes. Registered on occupied Donetsk territory via a DNR-administered tax authority (МИФНС №1 по ДНР), a jurisdiction Russia's own registry apparatus treats as domestic.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-02: added from an OFFICIAL ЕГРЮЛ extract (s5299, generated 29.04.2026 via egrul.nalog.ru's own extract service, digitally signed by МИФНС по ЦОД), independently re-downloaded from smolin.info's embedded evidence file, not merely the article's prose claim. Excluded from ЕГРЮЛ 25.12.2025 for 'недостоверные сведения' (unreliable/false registration data) -- a common fate for occupied-territory shell registrations. Director Руденко Д.А. (ИНН 780401121651) is the same individual already tracked as a co-owner of ooo-btr-bespilotnye-tekhnologicheskie-resheniya and ooo-spetsmat-spetsialnye-materialy, and director of ano-ntsns-nevskiy-tsentr-nauchnogo-sotrudnichestva -- this is the most serious documented tie yet given the explicit occupied-territory registration and military-vehicle-production OKVED code, ON TOP of the still-unverified border-crossing/militant allegations from the other smolin.info piece."
+    ]
   }
 ]

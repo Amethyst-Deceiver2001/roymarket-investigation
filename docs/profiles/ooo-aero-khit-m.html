@@ -1,0 +1,101 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ООО «Аэро-хит М» — company profile — РОЙ.МАРКЕТ</title>
+<link rel="stylesheet" href="../assets/profile.css">
+</head><body>
+<div class="wrap">
+
+  <header class="mast">
+    <button id="theme-toggle" type="button" aria-pressed="false" style="float:right;background:var(--panel-2);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:.35em .7em;font:inherit;font-size:.85em;cursor:pointer;">☾/☀ theme</button>
+    <p class="kicker">Company profile · РОЙ.МАРКЕТ investigation</p>
+    <div class="profile-head">
+      <div class="profile-head-text">
+        <h1>ООО «Аэро-хит М»</h1>
+        <div class="chip-row">
+<span class="tag t-open">adjacent</span><span class="tag t-press">WB: not_checked</span>        </div>
+        <p class="meta">
+<span>ИНН 9718293790</span><span>ОГРН 1267700066006</span>        </p>
+      </div>
+    </div>
+  </header>
+
+  <section id="at-a-glance">
+    <p class="eyebrow">At a glance</p>
+    <div class="meta-grid">
+      <div><dt>Registered</dt><dd>27.02.2026</dd></div>
+      <div><dt>Address</dt><dd>г. Москва</dd></div>
+      <div><dt>Director</dt><dd>ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Жигулин Алексей Михайлович (confirmed live via egrul.nalog.ru 2026-09-02)</dd></div>
+      <div><dt>Wildberries overlap</dt><dd>not_checked</dd></div>
+    </div>
+  </section>
+
+  <section id="ownership-history">
+    <p class="eyebrow">Ownership &amp; corporate history</p>
+    <h3>Director</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Жигулин Алексей Михайлович (confirmed live via egrul.nalog.ru 2026-09-02)</td><td class="num">—</td><td>from corrections:add_entities, unverified </td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="principals">
+    <p class="eyebrow">Principals &amp; persons of interest</p>
+    <div class="principal-grid">
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4>Жигулин Алексей Михайлович</h4>
+          <dl>
+          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Генеральный директор</li>          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <p class="footnote">Generated from this investigation's registry (<code>data/registry/</code>) by <code>scripts/build_company_profile.py</code>. Not a substitute for reading the underlying primary sources listed above.</p>
+
+</div>
+<script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  var stored = null;
+  try { stored = localStorage.getItem('roymarket-theme'); } catch (e) {}
+  function apply(theme) {
+    if (theme === 'dark' || theme === 'light') { root.setAttribute('data-theme', theme); }
+    else { root.removeAttribute('data-theme'); }
+    if (btn) btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+  }
+  apply(stored);
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var currentlyDark = current === 'dark' || (!current && systemDark);
+      var next = currentlyDark ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem('roymarket-theme', next); } catch (e) {}
+    });
+  }
+})();
+</script>
+</body></html>

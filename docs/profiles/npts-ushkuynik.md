@@ -8,7 +8,7 @@
 
 - **Legal form:** NPTs (research and production centre)
 - **Registered:** 18.04.2024
-- **Address:** Новгородская область, г. Великий Новгород
+- **Address:** 173003, Новгородская область, г. Великий Новгород, Большая Санкт-Петербургская ул., д. 64, офис 12
 - **ОКВЭД:** 46.90 — Торговля оптовая неспециализированная
 - **Wildberries overlap:** none_found
 
@@ -21,12 +21,20 @@
 | Value | As of | Note |
 |---|---|---|
 | None | 2025-09-15 | Director identity access-restricted in EGRUL as of 15.09.2025 (Federal Law 129-FZ). Confirmed by full 8-page EGRUL extract pulled 23.08.2026 (matches brief text already documenting this redaction date). [s0470] |
+| Гаврилов Даниил Дмитриевич (ИНН 771539239732), Котельников Денис Николаевич (ИНН 744408918180), Кузовлев Андрей Анатольевич (ИНН 744513968543) — succession of директоров prior to the 15.09.2025 EGRUL director-redaction date already on file | 2026-09-02 | rusprofile.ru's history section names three successive pre-redaction directors, each with a personal ИНН, not previously in the registry. Order/dates of succession not given by rusprofile, only that all three preceded the redaction. [s5289] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
 | access-restricted | 2025-09-15 | Founder/participant identity access-restricted in EGRUL as of 15.09.2025, per full 8-page extract pulled 23.08.2026. [s0470] |
+| ООО «Статус 53» (ИНН 5300006098) — named as a founder/right-to-act-without-power-of-attorney party per rusprofile's history log | 2026-09-02 | See new add_entities record for ooo-status-53 below — same founder also appears on ooo-ushkuynik-sp's record, i.e. a shared corporate parent across both Ushkuynik commercial-shell entities. [s5289] |
+
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 173003, Новгородская область, г. Великий Новгород, Большая Санкт-Петербургская ул., д. 64, офис 12 | 2026-09-02 | rusprofile.ru. Same street/building number as the 'закупочная комиссия' (procurement-commission) address the smolin.info article (s5288) separately gives for ano-npts-ushkuynik -- independent cross-corroboration of that address via a second, EGRUL-derived source. [s5289] |
 
 ## Products
 
@@ -51,7 +59,20 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Гаврилов Даниил Дмитриевич
+
+- **ИНН:** 771539239732
+- Генеральный директор (former, pre-redaction)
+
+### Котельников Денис Николаевич
+
+- **ИНН:** 744408918180
+- Директор (former, pre-redaction)
+
+### Кузовлев Андрей Анатольевич
+
+- **ИНН:** 744513968543
+- Директор (former, pre-redaction)
 
 ## Corporate links
 
@@ -64,6 +85,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0470 | EGRUL extract | EGRUL extract (ul-1245300001650-20260823122617.pdf) | — | 2026-08-23 |
 | s0969 | GUR war-sanctions record | GUR war-sanctions record (GUR_5300013923_20260824_npts-ushkuynik-components.html) | 2026-08-24 | — |
+| s5289 | Rusprofile | Rusprofile (RUSPROFILE_5300013923_20260902_ooo-ushkuynik.html) | 2026-09-02 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

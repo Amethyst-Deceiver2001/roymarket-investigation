@@ -1,0 +1,55 @@
+# ООО «Скай авиа групп»
+
+`manufacturer` `WB: not_checked` 
+
+ИНН 7802865058 · ОГРН 1147847241464
+
+## At a glance
+
+- **Registered:** 08.07.2014
+- **Address:** 198510, г. Санкт-Петербург, вн.тер.г. город Петергоф, ул. Константиновская, д. 8, литера А, помещ. 1-Н
+- **Director:** ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Екатерина Валерьевна (confirmed live via egrul.nalog.ru 2026-09-02, per source since 24.11.2023)
+- **Wildberries overlap:** not_checked
+
+## Ownership & corporate history
+
+### Director
+
+| Value | As of | Note |
+|---|---|---|
+| ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Екатерина Валерьевна (confirmed live via egrul.nalog.ru 2026-09-02, per source since 24.11.2023) | — | from corrections:add_entities, unverified |
+
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 198510, г. Санкт-Петербург, вн.тер.г. город Петергоф, ул. Константиновская, д. 8, литера А, помещ. 1-Н | 2026-03-29 | 2026-09-02: precise address from EGRUL extract s5307 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse "г. Санкт-Петербург". ГРН 2267800128253 dated 28.01.2026. [s5307] |
+
+## Principals & persons of interest
+
+### Прокофьев Михаил Васильевич
+
+- **DOB:** 2003-08-01
+- **ИНН:** 532120471505
+- сборщик (assembler)
+
+### Христюк Владимир Владимирович
+
+- **DOB:** 1994-04-20
+- **ИНН:** 472587795349
+- учредитель (former)
+
+### Христюк Екатерина Валерьевна
+
+- **DOB:** 1980-06-17
+- **ИНН:** 434500103450
+- Генеральный директор (2023-11-24–present)
+
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+| s5307 | EGRUL extract | EGRUL extract (EGRUL_7802865058_20260608_ooo-skay-avia-grupp.pdf) | 2026-06-08 | 2026-03-29 |
+
+---
+_Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -19,6 +19,12 @@
 |---|---|---|
 | Директор (единоличный исполнительный орган) | 2023-05-03 | Term 03.05.2023–02.05.2028, appointed by Решение №1 Учредителя — individual name not captured in this pass, needs a closer read [s0442] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 175310, Новгородская область, Демянский район, р.п. Демянск, ул. Черняховского, д. 7 (site-stated operating address, distinct from the EGRUL-registered ул. Сосновского, зд. 14, помещ. 1) | 2026-09-02 | demyansksc.ru homepage states this as the club's physical address, separate from its EGRUL registration address on ул. Сосновского. A genuine actual-vs-registered address discrepancy — not yet corroborated against a satellite image or third-party source. |
+
 ### Legal name
 
 | Value | As of | Note |

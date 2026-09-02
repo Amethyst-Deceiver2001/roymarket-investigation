@@ -34,7 +34,9 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Яценко Виктор Вячеславович
+
+- Генеральный директор
 
 ## Open questions
 
