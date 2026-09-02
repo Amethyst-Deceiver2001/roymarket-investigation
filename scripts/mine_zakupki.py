@@ -93,6 +93,12 @@ government_contracts[]/bank details via corrections.json.
 Local file processing only — no network calls — safe to run directly and
 repeatedly, same category as scan_sources.py/mine_leads.py.
 
+After touching any parsing function (parse_contract_card_html, etc.), run
+`python3 tests/test_zakupki_parser.py` before trusting a full corpus
+re-mine — it catches DOM-shape regressions (see the 2026-08-29 price-div bug)
+in under a second instead of requiring a multi-minute full run plus a human
+noticing the gap in the output.
+
 Usage:
     python3 scripts/mine_zakupki.py                          # report to stdout
     python3 scripts/mine_zakupki.py --out report.md
@@ -120,6 +126,16 @@ REPO = Path(__file__).resolve().parent.parent
 SOURCES = REPO / "data" / "sources"
 DEFAULT_JSON_OUT = REPO / "data" / "registry" / "_zakupki_mined.json"
 MINE_CACHE_PATH = REPO / "data" / "registry" / "_zakupki_mine_cache.json"
+
+# scan_sources.py's OCR fallback defaults to 5 pages (right for the short
+# scanned documents ITS OWN callers hold — thank-you letters, press
+# captures). zakupki attachments run much longer (full contracts, specs,
+# appendices) — a confirmed real miss: an 11-page scanned spec attachment's
+# item table lived on pages 6-11, invisible to the default cap, only found
+# by a human manually re-running OCR with no page limit. 25 gives ~2x
+# headroom over that case without letting a runaway multi-hundred-page dump
+# attachment hang a mining pass.
+ZAKUPKI_OCR_PAGE_CAP = 25
 
 def id_scan(text: str) -> dict:
     """Wraps extract_ids.scan() with a whitespace collapse first — a raw
@@ -418,6 +434,106 @@ def parse_neustoika(text: str):
     }
 
 
+PRETENZIYA_TITLE_RE = re.compile(r'ПРЕТЕНЗИЯ\s*\n*\s*о взыскании пени', re.IGNORECASE)
+PRETENZIYA_CONTRACT_RE = re.compile(
+    r'государственного\s+контракта\s*от\s*(\d{2}\.\d{2}\.\d{4})\s*№\s*(\S+)', re.DOTALL)
+PRETENZIYA_DUE_DATE_RE = re.compile(
+    r'срок сдачи.*?предусмотрен\s*(\d{2}\.\d{2}\.\d{4})', re.DOTALL)
+PRETENZIYA_ACTUAL_DATE_RE = re.compile(
+    r'фактическая дата выполнения работ\s*[–-]\s*(\d{2}\.\d{2}\.\d{4})')
+PRETENZIYA_AMOUNT_RE = re.compile(
+    r'неустойка в размере\s*([\d\s]+)\s*\([^)]*\)\s*рублей\s*(\d{2})\s*копей')
+PRETENZIYA_STAGE_PRICE_RE = re.compile(
+    r'Цена\s+\d+\s+этапа государственного контракта\s*[–-]\s*([\d\s]+[.,]\d{2})')
+# ".*?" not "[^\d]*" — the label is followed by a from/to date range
+# ("с 02.06.2025 по 19.08.2025") before the day-count this regex targets,
+# so excluding digits entirely stops the match before it ever reaches them.
+PRETENZIYA_DAYS_LATE_RE = re.compile(
+    r'Количество дней просрочки.*?[–-]\s*(\d+)\s*дн')
+
+
+def parse_pretenziya(text: str):
+    """Freeform "ПРЕТЕНЗИЯ о взыскании пени" letterhead demand (a customer
+    agency's own penalty claim for late contract performance) — the OTHER
+    kind of document parse_neustoika's docstring flags as falling back to
+    plain id_scan (no fixed PIK-generated Label:\\nValue structure). Found
+    live 2026-08-29 reading a fetch-documents attachment by hand for
+    npts-elvis's flagship "Процессор-ИМА-БК" contract: Минпромторг
+    demanding ₽49,127,400.04 for a 78-day-late Stage 1 delivery — a
+    genuinely new negative-performance signal a manual read caught that
+    the automated pipeline (card-only + PIK-format-only neustoika parsing)
+    missed entirely. Returns None for any other freeform letter shape."""
+    if not PRETENZIYA_TITLE_RE.search(text):
+        return None
+    contract = PRETENZIYA_CONTRACT_RE.search(text)
+    due = PRETENZIYA_DUE_DATE_RE.search(text)
+    actual = PRETENZIYA_ACTUAL_DATE_RE.search(text)
+    amount = PRETENZIYA_AMOUNT_RE.search(text)
+    stage_price = PRETENZIYA_STAGE_PRICE_RE.search(text)
+    days_late = PRETENZIYA_DAYS_LATE_RE.search(text)
+    return {
+        "contract_date": contract.group(1) if contract else None,
+        "contract_number": contract.group(2) if contract else None,
+        "due_date": due.group(1) if due else None,
+        "actual_date": actual.group(1) if actual else None,
+        "fine_rub": (re.sub(r"\s+", "", amount.group(1)) + "." + amount.group(2)) if amount else None,
+        "stage_price_rub": stage_price.group(1).replace(" ", "").replace(",", ".") if stage_price else None,
+        "days_late": days_late.group(1) if days_late else None,
+    }
+
+
+# Generic contract-subject/шифр extractor — the gap identified 2026-08-30
+# after mine_zakupki.py's OCR fallback was confirmed working on a plain
+# scanned "ГОСУДАРСТВЕННЫЙ КОНТРАКТ ... на выполнение опытно-конструкторской
+# работы «X», шифр «Y»" document but nothing captured the subject text: only
+# parse_neustoika/parse_pretenziya (penalty-letter genres) existed. Validated
+# against 3 real documents this session: «Микрос-ИЗ», «Рэбум-м», «Модуль-
+# Перегруз» (all Минпромторг ОКР contracts). No leading-verb anchor (e.g.
+# "на выполнение"/"обязуется выполнить") — the 3 confirmed examples don't
+# consistently share one, but "опытно-конструкратск(ую работу|ой работы)
+# «X»" alone is already highly discriminating 44-ФЗ boilerplate.
+CONTRACT_SUBJECT_OKR_RE = re.compile(
+    r'опытно-конструкторск(?:ую\s+работу|ой\s+работы)\s*[«"]([^»"]{5,300})[»"]'
+    r'(?:\s*,\s*шифр\s*[«"]([^»"]{1,80})[»"])?',
+    re.IGNORECASE,
+)
+# Supply-contract variant — NOT yet confirmed against a real document in
+# this corpus (only inferred from 44-ФЗ boilerplate conventions). Tagged
+# "supply-unconfirmed" in output so it's never silently blended with the
+# higher-confidence OKR-genre result until a real hit validates it, per
+# this project's don't-trust-unconfirmed-patterns discipline (parse_neustoika/
+# parse_pretenziya were both only added after a real hand-verified match).
+CONTRACT_SUBJECT_SUPPLY_RE = re.compile(
+    r'(?:на\s+поставку|обязуется\s+поставить)\s+[«"]([^»"]{5,300})[»"]',
+    re.IGNORECASE,
+)
+
+
+def parse_contract_subject(text: str):
+    """Best-effort extraction of a plain contract's subject/шифр line —
+    the field that was previously only available via contract-xml's own
+    structured `subject` field or contract-card-html's "Предмет контракта"
+    section, meaning every scanned-PDF/docx contract (the majority of the
+    pre-2015 corpus) had zero subject extraction even after OCR succeeded.
+    Returns None if neither pattern matches (most files — penalty letters,
+    payment orders, acts, etc. don't contain this phrase at all)."""
+    m = CONTRACT_SUBJECT_OKR_RE.search(text)
+    if m:
+        return {
+            "contract_type": "okr",
+            "subject": re.sub(r"\s+", " ", m.group(1)).strip(),
+            "cipher": m.group(2).strip() if m.group(2) else None,
+        }
+    m = CONTRACT_SUBJECT_SUPPLY_RE.search(text)
+    if m:
+        return {
+            "contract_type": "supply-unconfirmed",
+            "subject": re.sub(r"\s+", " ", m.group(1)).strip(),
+            "cipher": None,
+        }
+    return None
+
+
 def parse_payment_order_html(path: Path):
     """Some `платежное поручение` attachments render as a full ОКУД 0401060
     bank-form page (bootstrap HTML) rather than the FAM_PaymOrderCr XML
@@ -500,6 +616,20 @@ def parse_contract_card_html(path: Path):
         if key and val:
             fields[key] = val
 
+    # cardMainInfo__title/content pairs (older contract-card template, seen
+    # on pre-~2015 archived cards) — a separate DOM shape from section__title
+    # above; "Цена контракта" in particular lives here as div.price's own
+    # title/content spans, never in the section__title blocks, so contracts
+    # using only this older template previously mined with no price at all.
+    for title_el in soup.select("span.cardMainInfo__title"):
+        content_el = title_el.find_next_sibling(class_="cardMainInfo__content")
+        if not content_el:
+            continue
+        key = title_el.get_text(" ", strip=True)
+        val = content_el.get_text(" ", strip=True)
+        if key and val and key not in fields:
+            fields[key] = val
+
     suppliers = []
     table = soup.select_one("div.participantsInnerHtml table")
     if table:
@@ -562,7 +692,7 @@ def rar_text(path: Path) -> str:
                     continue
                 chunks.append(f"--- {member.relative_to(tmp)} ---")
                 if member.suffix.lower() == ".pdf":
-                    chunks.append(pdf_text(member))
+                    chunks.append(pdf_text(member, max_pages=ZAKUPKI_OCR_PAGE_CAP))
                 elif member.suffix.lower() in (".txt", ".xml"):
                     chunks.append(member.read_text(encoding="utf-8", errors="ignore"))
                 # .sig/.sign attachment-integrity signatures alongside the
@@ -585,14 +715,134 @@ SIGNATORY_RE = re.compile(
     # on this preamble shape and the whole signatory silently drops instead
     # of just truncating.
     r'действующ\w*\s+на\s+основании\s+(.{3,150}?)'
-    r'(?=,\s*с\s+(?:одной|другой)\s+сторон|\.\s+[А-ЯЁ]|\n|$)', re.UNICODE,
+    # An individual-entrepreneur supplier has no delegated authority to cite
+    # ("действующего на основании ОГРНИП <n>, именуемое в дальнейшем
+    # «Поставщик»") -- the role label sits right where a legal-entity
+    # supplier's clause would just end, so it must stop the capture too or
+    # it gets glued into authority_basis (confirmed on ИП Цыганов's own
+    # contract, reg 1500300810225000152) instead of being read by
+    # PARTY_LABEL_RE as this clause's own self-declared role (see below).
+    # The comma before "с одной/другой стороны" is sometimes just missing
+    # (a double-space instead, e.g. "...Устава  с одной стороны...") --
+    # found live on reg 3343590157418000007, where the missing comma broke
+    # the boundary match and let the SUPPLIER's own "Поставщик" label leak
+    # into the CUSTOMER clause's self-label window, misclassifying ООО
+    # «Радиофид Системы»'s actual customer (a municipal enterprise's own
+    # director, "по Уставу" same as any real supplier signatory) as if he
+    # were Радиофид's own officer. Made the comma optional here and in
+    # _CLAUSE_BOUNDARY_RE below for the same reason.
+    r'(?=,?\s*с\s+(?:одной|другой)\s+сторон|,?\s*именуем\w*\s+в\s+дальнейшем|\.\s+[А-ЯЁ]|\n|$)', re.UNICODE,
 )
+
+# A standard dual-party government-contract preamble names each side's role
+# right before that side's "в лице ФИО, действующего на основании..." clause
+# ("...именуемое в дальнейшем «Заказчик», в лице ... Иванова И.И., действующего
+# на основании..."), quotes optional and sometimes omitted entirely. Without
+# tracking this, SIGNATORY_RE above matches BOTH parties' representatives
+# indiscriminately -- confirmed 2026-08-31 against real contract text: a
+# "по Уставу" hit that looked like a plausible new АО «НИИ СТТ» director
+# (Аравин В.В., reg 1501200927915000237) turned out to be the customer's own
+# "руководитель Учреждения" (Войсковая часть 35533), not an АО «НИИ СТТ»
+# officer at all. Every "по Уставу"/"по доверенности" hit is customer- or
+# supplier-side until this label resolves it -- do not treat an unresolved
+# ("unknown") party as supplier-side evidence for director_history.
+PARTY_LABEL_RE = re.compile(
+    # A qualifier word routinely precedes the core role noun ("Головной
+    # исполнитель", "Единственный поставщик") -- classifying on the LAST
+    # word only (see _party_for_role) instead of requiring an exact phrase
+    # match handles any such qualifier without having to enumerate them.
+    # Found live: "Головной исполнитель" (ООО «Радиофид Системы» as prime
+    # contractor to МВД) was falling through as unmatched under the old
+    # exact-phrase list, silently defaulting the whole clause to "unknown".
+    # The connector also has a second, less common word order -- "далее
+    # именуемое «Заказчик»" (found live on an АО НПЦ «ЭЛВИС» Минпромторг
+    # contract, reg 1770559633924000207) instead of "именуемое в дальнейшем
+    # «Заказчик»" -- both mean "hereinafter referred to as", so both need
+    # matching or the customer-side label goes unfound and its signatory
+    # falls through as an unresolved "unknown" instead of "customer".
+    # "именуем\w*" is sometimes followed by a parenthetical gender-ending
+    # blob before the required whitespace -- "именуемое(ая,ый) в
+    # дальнейшем «Заказчик»" (found live, ООО «Гаскар Интеграция»
+    # доп.соглашение № 3, reg 2502412952426000007) -- which used to break
+    # the match entirely (\w* doesn't cross the "(", so "\s+" right after
+    # never matched), silently costing BOTH signatories' role labels in
+    # that document, not just this one's.
+    r'(?:именуем\w*(?:\([^)]{0,20}\))?\s+в\s+дальнейшем|далее\s+именуем\w*)\s*[«"\']?\s*'
+    r'((?:[А-ЯЁа-яё]+\s+){0,2}[А-ЯЁа-яё]+)\s*[»"\']?',
+    re.UNICODE,
+)
+_CUSTOMER_ROLES = {"заказчик", "покупатель", "арендатор"}
+_SUPPLIER_ROLES = {"поставщик", "исполнитель", "подрядчик", "продавец", "арендодатель"}
+
+
+def _party_for_role(role_text: str) -> str:
+    last_word = role_text.strip().lower().split()[-1] if role_text.strip() else ""
+    if last_word in _CUSTOMER_ROLES:
+        return "customer"
+    if last_word in _SUPPLIER_ROLES:
+        return "supplier"
+    return "unknown"
+
+
+_SELF_LABEL_WINDOW = 40  # "именуем..." typically starts within ~15-25 chars of
+                          # the trimmed authority_basis's own end (a comma
+                          # plus the role phrase) -- generous but bounded so
+                          # it (usually) can't reach into the NEXT clause's
+                          # own label; the "с одной/другой стороны" boundary
+                          # check below is what actually guarantees that.
+_CLAUSE_BOUNDARY_RE = re.compile(r',?\s*с\s+(?:одной|другой)\s+сторон', re.UNICODE)
+
+
+def find_signatories(text: str) -> list[dict]:
+    """SIGNATORY_RE hits, each labelled "customer"/"supplier"/"unknown" via
+    PARTY_LABEL_RE -- see the disambiguation note above SIGNATORY_RE for why
+    this matters. Two label positions are possible relative to a signatory's
+    own clause: normally the label precedes it ("...именуемое в дальнейшем
+    «Заказчик», в лице ... Иванова И.И., действующего на основании...");
+    for an individual-entrepreneur supplier (no delegated authority to cite)
+    the label instead follows immediately ("...действующего на основании
+    ОГРНИП <n>, именуемое в дальнейшем «Поставщик»"). A label found right
+    after this clause's own end is trusted over one merely preceding it,
+    since it's self-declared for this exact clause rather than inherited
+    from whichever party's label happened to appear last."""
+    role_matches = list(PARTY_LABEL_RE.finditer(text))
+
+    def _party_for(m: re.Match) -> str:
+        # This clause's own "с одной/другой стороны" hand-off (if any) --
+        # a self-declared label must fall before it, or it actually belongs
+        # to the NEXT party's clause ("...Устава, с одной стороны, и ЗАО
+        # «...», именуемое в дальнейшем «Поставщик»" -- that "Поставщик"
+        # is the other side's label, not this signatory's own, even though
+        # it can land inside _SELF_LABEL_WINDOW chars of this clause's end).
+        boundary_m = _CLAUSE_BOUNDARY_RE.search(text, m.end(), m.end() + _SELF_LABEL_WINDOW)
+        self_label_end = boundary_m.start() if boundary_m else m.end() + _SELF_LABEL_WINDOW
+        for rm in role_matches:
+            if m.end() <= rm.start() <= self_label_end:
+                # A joint "совместно именуемые «Стороны»" label sits in this
+                # same window on a single-role-per-side preamble ("...Устава,
+                # совместно именуемые в дальнейшем «Стороны»...") -- it
+                # resolves to "unknown" itself and must NOT short-circuit the
+                # real per-side label search below (found live: this was
+                # swallowing "Мирошниченко Павел Александрович"'s correct
+                # preceding «Поставщик» label into a false "unknown").
+                resolved = _party_for_role(rm.group(1))
+                if resolved != "unknown":
+                    return resolved
+        party = "unknown"
+        for rm in role_matches:
+            if rm.start() >= m.start():
+                break
+            party = _party_for_role(rm.group(1))
+        return party
+
+    return [{"name": m.group(1).strip(), "authority_basis": m.group(2).strip(),
+              "party": _party_for(m)}
+            for m in SIGNATORY_RE.finditer(text)]
 
 
 def mine_docx(path: Path) -> dict:
     text = docx_text(path)
-    signatories = [{"name": m.group(1).strip(), "authority_basis": m.group(2).strip()}
-                   for m in SIGNATORY_RE.finditer(text)]
+    signatories = find_signatories(text)
     flags = scan_text_for_flags(text)
     # docx runs are concatenated with no inter-clause whitespace (see
     # docx_text's newline-only-at-</w:p> handling), so a Cyrillic word
@@ -612,6 +862,7 @@ def mine_docx(path: Path) -> dict:
     # lowercase abbreviation with no case boundary (e.g. "...groupitc") —
     # accepted as a rare residual case, not worth a domain allowlist for.
     emails = sorted(set(re.findall(r'[A-Za-z0-9._+-]+@[a-z0-9-]+\.[a-z]{2,}(?:\.[a-z]{2,})?', text)))
+    subject = parse_contract_subject(text)
     return {
         "text_len": len(text),
         "signatories": signatories,
@@ -619,6 +870,7 @@ def mine_docx(path: Path) -> dict:
         "performance_flags": flags["performance_flags"],
         "emails_found": emails,
         "id_scan": id_scan(text),
+        **({"contract_subject": subject} if subject else {}),
     }
 
 
@@ -655,22 +907,32 @@ def classify_and_mine(path: Path) -> dict:
         return {"kind": "docx", **mine_docx(path)}
 
     if suf == ".pdf":
-        text = pdf_text(path)
+        text = pdf_text(path, max_pages=ZAKUPKI_OCR_PAGE_CAP)
         neustoika = parse_neustoika(text)
         if neustoika is not None:
             return {"kind": "neustoika", "fields": neustoika, "id_scan": id_scan(text)}
+        pretenziya = parse_pretenziya(text)
+        if pretenziya is not None:
+            return {"kind": "pretenziya", "fields": pretenziya, "id_scan": id_scan(text)}
+        subject = parse_contract_subject(text)
         return {"kind": "pdf", "text_len": len(text), "id_scan": id_scan(text),
-                "uav_score": uav_score(text), **scan_text_for_flags(text)}
+                "uav_score": uav_score(text), **scan_text_for_flags(text),
+                **({"contract_subject": subject} if subject else {})}
 
     if suf == ".zip":
-        text = zip_text(path)
+        text = zip_text(path, max_pages=ZAKUPKI_OCR_PAGE_CAP)
         # The неустойка penalty-demand PDF this whole zip-attachment family
         # sometimes carries (see parse_neustoika's docstring) — checked here
         # too since most of these attachments arrive zipped, not bare.
         neustoika = parse_neustoika(text)
         if neustoika is not None:
             return {"kind": "neustoika", "fields": neustoika, "id_scan": id_scan(text)}
-        return {"kind": "zip", "text_len": len(text), "id_scan": id_scan(text), **scan_text_for_flags(text)}
+        pretenziya = parse_pretenziya(text)
+        if pretenziya is not None:
+            return {"kind": "pretenziya", "fields": pretenziya, "id_scan": id_scan(text)}
+        subject = parse_contract_subject(text)
+        return {"kind": "zip", "text_len": len(text), "id_scan": id_scan(text), **scan_text_for_flags(text),
+                **({"contract_subject": subject} if subject else {})}
 
     if suf == ".txt":
         # Some EDI attachments (счет-фактура detail, "ON_DIT1084NSCHF...")
@@ -693,7 +955,14 @@ def classify_and_mine(path: Path) -> dict:
     if suf == ".xlsx":
         try:
             import openpyxl
-            wb = openpyxl.load_workbook(path, data_only=True)
+            # read_only=True streams rows instead of building the full styled
+            # object model — without it, a large itemized-parts sheet (seen
+            # live: a 5.4MB uncompressed sheet1.xml on a Хасан border-crossing
+            # equipment-list attachment, 2026-08-29) makes load_workbook slow
+            # enough to look hung. We only read values (data_only=True
+            # already drops formulas), so nothing is lost by not loading
+            # styles/formatting.
+            wb = openpyxl.load_workbook(path, data_only=True, read_only=True)
             rows = []
             for ws in wb.worksheets:
                 for row in ws.iter_rows(values_only=True):
@@ -783,6 +1052,12 @@ def merge_contract_record(rec: dict, mined: dict, fname: str) -> None:
         if not any((p.get("doc_number"), p.get("doc_date")) == dup_key for p in existing):
             existing.append({"file": fname, **fields})
 
+    # contract_subject (see parse_contract_subject) can turn up on the pdf/
+    # zip/docx kinds — first-wins is fine, a single contract has one
+    # subject/шифр regardless of which attached file it's read from.
+    if mined.get("contract_subject") and not rec.get("contract_subject"):
+        rec["contract_subject"] = mined["contract_subject"]
+
     # Technical-spec and non-performance line flags apply to every text-
     # bearing kind (docx/pdf/zip/txt/xml-other), not just docx — a
     # Спецификация table or a "работы не выполнялись" admission can equally
@@ -825,9 +1100,17 @@ def reg_numbers_for_inn(inn: str) -> set[str] | None:
     return set(entry.get("reg_numbers", []))
 
 
+_SCRIPT_VERSION = f"{int(Path(__file__).stat().st_mtime)}"  # see _mine_cache_key
+
+
 def _mine_cache_key(path: Path) -> str:
+    """Includes this script's own mtime so an edit to a parsing function
+    (e.g. the 2026-08-29 price-parsing fix) invalidates every cached entry
+    automatically — previously the cache was keyed on the source file alone,
+    so a parser bugfix silently kept serving pre-fix results from cache
+    until someone thought to `rm -f` it by hand."""
     st = path.stat()
-    return f"{st.st_size}:{int(st.st_mtime)}"
+    return f"{st.st_size}:{int(st.st_mtime)}:{_SCRIPT_VERSION}"
 
 
 def load_mine_cache() -> dict:
@@ -969,7 +1252,9 @@ def build_report(result: dict, known_text: str, depth: str = "deep", baseline: d
             card = rec.get("card_fields", {})
             n_pen = len(rec.get("penalties", []))
             n_flag = len(rec.get("performance_flags", []))
-            items_summary = "; ".join(it.get("name", "") for it in cf.get("items", [])[:3]) or cf.get("subject", "")
+            csubj = rec.get("contract_subject") or {}
+            items_summary = ("; ".join(it.get("name", "") for it in cf.get("items", [])[:3])
+                              or cf.get("subject", "") or csubj.get("subject", ""))
             customer_name = cust.get("full_name") or card.get("Полное наименование заказчика") \
                 or card.get("Сокращенное наименование заказчика")
             price = cf.get("price_total") or card.get("Цена контракта")
@@ -988,9 +1273,13 @@ def build_report(result: dict, known_text: str, depth: str = "deep", baseline: d
             # skipped, rendering a near-blank report for those contracts even
             # though the HTML card scrape (card_fields) has the same facts.
             card = rec.get("card_fields", {})
-            subject = cf.get("subject") or card.get("Предмет контракта")
+            csubj = rec.get("contract_subject") or {}
+            subject = cf.get("subject") or card.get("Предмет контракта") or csubj.get("subject")
             if subject:
                 lines.append(f"- Subject: {subject}")
+            if csubj.get("cipher"):
+                lines.append(f"- Шифр (cipher): {csubj['cipher']}"
+                              + (" [unconfirmed genre]" if csubj.get("contract_type") == "supply-unconfirmed" else ""))
             price_total = cf.get("price_total") or card.get("Цена контракта")
             if price_total:
                 lines.append(f"- Price: {price_total} RUB")
@@ -1025,6 +1314,25 @@ def build_report(result: dict, known_text: str, depth: str = "deep", baseline: d
                         lines.append(f"- Supplier (from card table): {' — '.join(bits)}")
             if supp.get("director_name"):
                 lines.append(f"  - Director: {supp['director_name']} (ИНН {supp.get('director_inn')}, {supp.get('director_position')})")
+            # factAddress is the supplier's actual/physical address, distinct
+            # from postAddress (mailing) and from the юридический адрес on
+            # file in EGRUL -- a real office/facility lead, not boilerplate.
+            # Was extracted into contract_fields all along but never printed.
+            if supp.get("fact_address") and supp["fact_address"] != supp.get("post_address"):
+                lines.append(f"  - Fact address (факт. адрес, per XML): {supp['fact_address']}")
+            elif supp.get("fact_address"):
+                lines.append(f"  - Fact/post address (per XML): {supp['fact_address']}")
+            # Same never-surfaced-but-extracted gap as fact_address above,
+            # found 2026-08-31 while re-checking extract_contract_fields()
+            # for anything else silently dropped before the next full
+            # re-mine: supplier email/phone (a contact lead independent of
+            # docx-mined emails) and deliveryPlaceInfo (the actual delivery
+            # destination -- can differ from both customer and supplier
+            # addresses, e.g. a field unit or a separate warehouse/depot).
+            if supp.get("email") or supp.get("phone"):
+                lines.append(f"  - Supplier contact (per XML): {supp.get('email') or '—'} / {supp.get('phone') or '—'}")
+            if cf.get("delivery_place"):
+                lines.append(f"- Delivery place (per XML): {cf['delivery_place']}")
             if cf.get("items"):
                 lines.append(f"- Items ({len(cf['items'])}):")
                 for it in cf["items"][:10]:

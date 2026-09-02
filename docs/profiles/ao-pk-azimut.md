@@ -39,6 +39,10 @@
 |---|---|---|
 | АО Производственная компания «Азимут» | 2024-12-24 | ГРН 2247713421129, 24.12.2024 — current name recorded 2024; entity dates from 2005, so an earlier name existed. Predecessor not stated in this extract. [s0212] |
 
+## Government contracts
+
+- customer: Министерство обороны Российской Федерации; reg_number: 1770425226115000899; date: 2015; value_rub: 789200; items: Only mil-relevant contract among this entity's 76 zakupki hits (₽431.7m total, overwhelmingly civilian) — a small direct МО supply; entity is tracked here as a money-layer node, not primarily as a hardware supplier. [s3042]
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -69,6 +73,7 @@
 ![Саидов Аскер Казбекович](../images/saidov-asker-kazbekovich_portrait_tadviser.jpg)
 - **DOB:** 1982-10-22
 - **Birthplace:** Хасавюрт, Дагестан / Khasavyurt, Dagestan
+- **Address:** г. Москва, Петровско-Разумовский проезд, д. 16, кв. 125; г. Москва, ул. Минская, д. 1Г, корп. 2, кв. 217
 - **ИНН:** 054403029570
 - Генеральный директор — sanctions designation attaches here (radar/radionavigation production activity description matches this entity, not the holding company)
 - `sanctions lead`
@@ -79,6 +84,7 @@
 |---|---|---|---|---|
 | s0212 | EGRUL extract | EGRUL extract (ul-1057746261605-20260814234906.pdf) | — | 2026-08-14 |
 | s0763 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7701583410_20260824_ao-pk-azimut.json) | 2026-08-24 | — |
+| s3042 | Zakupki | Zakupki (ZAKUPKI_contract_1770425226115000899_20260829.html) | 2026-08-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

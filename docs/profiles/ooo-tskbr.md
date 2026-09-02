@@ -50,6 +50,7 @@
 ![Кузякин Дмитрий Васильевич](../images/kuzyakin-dmitriy-vasilevich_portrait_cyclowiki.jpg)
 - **DOB:** 1974-06-29
 - **Birthplace:** Рига, Латвия (Riga, Latvia)
+- **Address:** Московская обл., г. Жуковский, ул. Гудкова, д. 5, кв. 37; Московская обл., п. Кратово, ул. Орджоникидзе, д. 41А
 - **ИНН:** 501306766736
 - co-inventor (patent RU236504U1)
 - `sanctions lead`

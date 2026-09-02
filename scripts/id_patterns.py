@@ -136,6 +136,17 @@ def load_known_text(repo_root=None) -> str:
     registry = repo / "data" / "registry"
     if registry.is_dir():
         for path in sorted(registry.glob("*.json")):
+            # Underscore-prefixed files are raw scan/mine staging caches
+            # (_zakupki_mined.json, _scan_sources_cache.json, etc.) — pre-
+            # triage candidate data, not confirmed registry facts. Including
+            # them made "already known?" self-referential: any name that
+            # ever landed in a mine cache read back as "already documented"
+            # forever, silently suppressing it as a new lead even before a
+            # human ever saw it (caught 2026-08-29 building
+            # zakupki_signatory_diff.py — two real signatory names came back
+            # 0 new because their own mined JSON entry satisfied this glob).
+            if path.name.startswith("_"):
+                continue
             try:
                 chunks.append(path.read_text(encoding="utf-8"))
             except OSError:

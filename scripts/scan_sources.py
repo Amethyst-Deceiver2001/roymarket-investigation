@@ -45,21 +45,28 @@ SOURCES = REPO / "data" / "sources"
 CACHE = REPO / "data" / "registry" / "_scan_sources_cache.json"
 
 
-def ocr_pdf_text(path: Path) -> str:
+def ocr_pdf_text(path: Path, max_pages: int | None = 5) -> str:
     """OCR fallback for scanned PDFs with no text layer — same pdftoppm +
     tesseract -l rus pattern already established for ФНС УД_*.zip founding
     docs (see egrul_founding_doc_extraction memory), extended here to any
     scanned PDF in data/sources/ (press captures, thank-you letters, etc).
-    Only the first 5 pages are OCR'd — enough for the kind of short scanned
-    documents this repo actually holds, and keeps a bad/huge PDF from
-    hanging the batch scan."""
+    Only the first `max_pages` pages are OCR'd (default 5, this module's own
+    short-document callers keep that default) — enough for the kind of short
+    scanned documents this repo actually holds, and keeps a bad/huge PDF from
+    hanging the batch scan. A caller expecting longer documents (zakupki
+    contract/spec attachments — see mine_zakupki.py's ZAKUPKI_OCR_PAGE_CAP)
+    can pass a higher cap; a confirmed real miss (an 11-page scanned spec
+    attachment with its item table on pages 6-11, invisible to the default
+    5-page cap) is why this became a parameter instead of staying hardcoded."""
     import tempfile
     try:
         with tempfile.TemporaryDirectory() as tmp:
             prefix = str(Path(tmp) / "page")
+            cmd = ["pdftoppm", "-r", "300", "-png", str(path), prefix]
+            if max_pages is not None:
+                cmd[3:3] = ["-l", str(max_pages)]
             subprocess.run(
-                ["pdftoppm", "-r", "300", "-png", "-l", "5", str(path), prefix],
-                capture_output=True, timeout=120,
+                cmd, capture_output=True, timeout=max(120, (max_pages or 5) * 10),
             )
             pages = sorted(Path(tmp).glob("page-*.png"))
             chunks = []
@@ -74,7 +81,7 @@ def ocr_pdf_text(path: Path) -> str:
         return f"[ocr failed: {e}]"
 
 
-def pdf_text(path: Path) -> str:
+def pdf_text(path: Path, max_pages: int | None = 5) -> str:
     try:
         r = subprocess.run(
             ["pdftotext", "-layout", str(path), "-"],
@@ -88,7 +95,7 @@ def pdf_text(path: Path) -> str:
     # caught on Благодарность.pdf, a thank-you letter scan pdftotext
     # returned zero characters for).
     if len(text.strip()) < 20:
-        ocr = ocr_pdf_text(path)
+        ocr = ocr_pdf_text(path, max_pages=max_pages)
         if ocr.strip():
             return ocr
     return text
@@ -120,7 +127,7 @@ def ocr_image_bytes(data: bytes, suffix: str) -> str:
         return f"[ocr failed: {e}]"
 
 
-def pdf_bytes_text(data: bytes) -> str:
+def pdf_bytes_text(data: bytes, max_pages: int | None = 5) -> str:
     """pdftotext (+ OCR fallback) for a PDF held only as in-memory bytes —
     an inner document inside a zip, not a file on disk."""
     import tempfile
@@ -128,18 +135,19 @@ def pdf_bytes_text(data: bytes) -> str:
         with tempfile.NamedTemporaryFile(suffix=".pdf") as tmp:
             tmp.write(data)
             tmp.flush()
-            return pdf_text(Path(tmp.name))
+            return pdf_text(Path(tmp.name), max_pages=max_pages)
     except Exception as e:
         return f"[pdf extract failed: {e}]"
 
 
-def zip_text(path: Path, _depth: int = 0) -> str:
+def zip_text(path: Path, _depth: int = 0, max_pages: int | None = 5) -> str:
     """Recursively extracts text from a zip's members, including nested
     zips (ФНС УД_*.zip founding-document bundles are a zip containing
     another zip containing scanned TIFF pages or PDFs — see
     egrul_founding_doc_extraction memory). `_depth` guards against a
     pathological zip bomb; founding-doc bundles are at most 2 levels deep
-    in practice."""
+    in practice. `max_pages` threads through to any inner PDF's OCR
+    fallback — see ocr_pdf_text's docstring."""
     if _depth > 4:
         return "[zip nesting too deep, stopped]"
     chunks = []
@@ -157,7 +165,10 @@ def zip_text(path: Path, _depth: int = 0) -> str:
                     try:
                         import io
                         import openpyxl
-                        wb = openpyxl.load_workbook(io.BytesIO(data), data_only=True)
+                        # read_only=True — see mine_zakupki.py's xlsx handler
+                        # for why (a large itemized-parts sheet can otherwise
+                        # make load_workbook slow enough to look hung).
+                        wb = openpyxl.load_workbook(io.BytesIO(data), data_only=True, read_only=True)
                         for ws in wb.worksheets:
                             for row in ws.iter_rows(values_only=True):
                                 chunks.append(" ".join(str(c) for c in row if c is not None))
@@ -167,7 +178,7 @@ def zip_text(path: Path, _depth: int = 0) -> str:
                     chunks.append(data.decode("utf-8", errors="ignore"))
                 elif lower.endswith(".pdf"):
                     chunks.append(f"--- {name} ---")
-                    chunks.append(pdf_bytes_text(data))
+                    chunks.append(pdf_bytes_text(data, max_pages=max_pages))
                 elif lower.endswith((".tiff", ".tif")):
                     chunks.append(f"--- {name} (OCR) ---")
                     chunks.append(ocr_image_bytes(data, Path(name).suffix or ".tiff"))
@@ -177,7 +188,7 @@ def zip_text(path: Path, _depth: int = 0) -> str:
                         with zipfile.ZipFile(io.BytesIO(data)) as _:
                             pass
                         chunks.append(f"--- nested zip {name} ---")
-                        chunks.append(_zip_bytes_text(data, _depth + 1))
+                        chunks.append(_zip_bytes_text(data, _depth + 1, max_pages))
                     except Exception as e:
                         chunks.append(f"[nested zip read failed for {name}: {e}]")
     except Exception as e:
@@ -185,12 +196,12 @@ def zip_text(path: Path, _depth: int = 0) -> str:
     return "\n".join(chunks)
 
 
-def _zip_bytes_text(data: bytes, depth: int) -> str:
+def _zip_bytes_text(data: bytes, depth: int, max_pages: int | None = 5) -> str:
     import tempfile
     with tempfile.NamedTemporaryFile(suffix=".zip") as tmp:
         tmp.write(data)
         tmp.flush()
-        return zip_text(Path(tmp.name), depth)
+        return zip_text(Path(tmp.name), depth, max_pages)
 
 
 def extract_text(path: Path) -> str:

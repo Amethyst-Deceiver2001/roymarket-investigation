@@ -19,6 +19,7 @@
 | Value | As of | Note |
 |---|---|---|
 | Саитов Ренат Фаритович | 2019-05-31 | Генеральный директор per the signature block of Государственный контракт № 26/06/19 (действующего на основании Устава) — predates the current director Афанасьев Игорь Константинович. Same person already named as inventor on this entity's patent RU191888U1 (s1170), previously unexplained; this contract supplies the link. [s1548] |
+| Бауер Пётр Роландович | 2020-05-28 | Signed contract 2254020256620000035 (Информационно-технологический центр Приморского края) "действующий на основании Устава" — no доверенность number given, the standard indicator of the единоличный исполнительный орган at time of signing. Surfaced via scripts/zakupki_signatory_diff.py. Fills the previously-undocumented gap between Саитов Ренат Фаритович (as_of 2019-05-31) and Афанасьев Игорь Константинович (as_of 2025-08-29) in this entity's director_history. [s3391] |
 | Афанасьев Игорь Константинович | 2025-08-29 | personal ИНН 420504290983; also sole founder; entity registered 2014, older than Гаскар Технологии [s0520] |
 
 ### Address
@@ -80,6 +81,7 @@ _No named principals linked to this entity yet._
 | s1503 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7733894200_2502412952426000007_elektronnyy-kon-25024129524260000070005_4f85e59e.xml) | — | 2026-05-14 |
 | s1534 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7733894200_2770135608619000037_30-12-2020-65-0-27701356086190000370030_bb9812a7.pdf) | — | 2020-12-30 |
 | s1548 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7733894200_2770135608619000037_gk-26-06-19-017-27701356086190000370002_8a684764.docx) | — | 2019-05-31 |
+| s3391 | Zakupki | Zakupki (ZAKUPKI_contract_2254020256620000035_20260829.html) | 2026-08-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -10,7 +10,10 @@ Local file processing only — no network calls, safe to run directly/
 repeatedly.
 
 ```
-python3 scripts/scan_sources.py --out data/sources/MANIFEST.md --leads-out /tmp/scan_leads.md && python3 scripts/inventory_sources.py && python3 scripts/extract_registry.py && python3 scripts/check_registry.py
+python3 scripts/mine_zakupki.py --json data/registry/_zakupki_mined.json --out /tmp/zakupki_mine.md && python3 scripts/zakupki_coverage.py --gaps-only && python3 scripts/zakupki_signatory_diff.py
+
+python3 scripts/mine_zakupki.py --json data/registry/_zakupki_mined.json --out /tmp/zakupki_mine.md && python3 scripts/zakupki_coverage.py --gaps-only && python3 scripts/zakupki_customer_clusters.py --all && python3 scripts/zakupki_signatory_diff.py
+
 ```
 
 ## Aleph full-roster re-screen (live network job — run this yourself)

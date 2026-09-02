@@ -40,6 +40,11 @@
 |---|---|---|
 | 117105, Москва, вн.тер.г. муниципальный округ Донской, ш. Варшавское, д. 9, стр. 1, помещ. 664 | 2022-11-28 | ГРН 1227700802878, 28.11.2022 [s0219] |
 
+## Government contracts
+
+- Install location: Респ. Северная Осетия — Алания, Верхний Ларс — Russia's border checkpoint into Georgia. A vehicle-queue-control/border-crossing-management system, not UAV hardware, but confirms this ЦБСТ-network entity does state border-infrastructure work for the federal border-construction directorate. [s5217]
+- Follow-on/expansion contract to reg 1770982726625001086 at the same Верхний Ларс border-crossing site, same customer, ~5 months later. [s5218]
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
@@ -49,6 +54,8 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0219 | EGRUL extract | EGRUL extract (ul-1227700802878-20260814212230.pdf) | — | 2026-08-14 |
+| s5217 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001086_20260831.html) | 2026-08-31 | — |
+| s5218 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001743_20260831.html) | 2026-08-31 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

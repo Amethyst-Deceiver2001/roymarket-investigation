@@ -388,15 +388,31 @@ def main() -> int:
     # twice) rather than a real second source — worth a human glance, not
     # an error, since a legitimate case exists (e.g. an identical zero-diff
     # egrul_api re-pull, already handled separately via supersedes chains).
+    # Fix 2026-09-02: this used to emit one warning line per duplicate-hash
+    # group — with the zakupki corpus alone serving the same attachment
+    # under several filenames, that was 546 of 549 total warnings, burying
+    # the handful of warnings that actually need a human look. Collapse to
+    # one summary line (still lists every path, for anyone who greps the
+    # full output) plus up-front visibility into which groups are the
+    # expected zakupki-attachment case vs. something else worth a glance.
     by_hash: dict[str, list[str]] = {}
     for s in sources or []:
         h = s.get("sha256")
         if h:
             by_hash.setdefault(h, []).append(s["path"])
-    for h, paths in by_hash.items():
-        if len(paths) > 1:
-            warnings.append(f"identical file content under {len(paths)} "
-                            f"names: {', '.join(paths)}")
+    dup_groups = {h: paths for h, paths in by_hash.items() if len(paths) > 1}
+    zakupki_dup_groups = {h: p for h, p in dup_groups.items()
+                          if all("ZAKUPKI" in path for path in p)}
+    other_dup_groups = {h: p for h, p in dup_groups.items() if h not in zakupki_dup_groups}
+    if zakupki_dup_groups:
+        warnings.append(
+            f"{len(zakupki_dup_groups)} byte-identical zakupki attachment group(s) "
+            f"under multiple filenames (expected — zakupki.gov.ru itself serves the "
+            f"same document under several names; not a data-quality issue). Full list: "
+            + " | ".join(f"[{', '.join(p)}]" for p in zakupki_dup_groups.values()))
+    for h, paths in other_dup_groups.items():
+        warnings.append(f"identical file content under {len(paths)} "
+                        f"names (non-zakupki — worth a look): {', '.join(paths)}")
 
     # --- source version chains --------------------------------------------
     for s in sources or []:

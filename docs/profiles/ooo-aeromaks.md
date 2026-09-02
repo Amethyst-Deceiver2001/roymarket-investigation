@@ -20,6 +20,10 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Чижов Максим Сергеевич | 2021-03-16 | Signed «действующего на основании Устава» on a zakupki government contract (reg 2770422175322000063) as ООО «Аэромакс»'s own director. [s4515] |
+| Рыков Андрей Игоревич | 2022-11-08 | Signed on a zakupki government contract (reg 2526029455221000021) as ООО «Аэромакс»'s own supplier-side representative, по доверенности. [s4534] |
+| Шевченко Андрей Юрьевич | 2023-08-02 | Signed «действующего на основании Устава» on a zakupki government contract (reg 1772231995223000867) as ООО «Аэромакс»'s own director. [s4482] |
+| Сазанова Алиса Алексеевна | 2024-09-06 | Signed «действующего на основании Устава» on a zakupki government contract (reg 1772231995224000778) as ООО «Аэромакс»'s own director. [s4499] |
 | Бессонов Сергей Николаевич | 2025-09-11 | Генеральный директор, личный ИНН 644914040799, ГРН 2257721375239, 11.09.2025 [s0218] |
 
 ### Founders / ownership
@@ -97,6 +101,10 @@
 |---|---|---|---|---|
 | s0218 | EGRUL extract | EGRUL extract (ul-1177746007900-20260820195721.pdf) | — | 2026-08-20 |
 | s0780 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7725347482_20260824_ooo-aeromaks.json) | 2026-08-24 | — |
+| s4482 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7725347482_1772231995223000867_kontrakt-ea-0-17722319952230008670003_014f9d47.docx) | — | — |
+| s4499 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7725347482_1772231995224000778_kontrakt-ea-0-17722319952240007780002_20b8606a.docx) | — | — |
+| s4515 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7725347482_2526029455221000021_kontrakt-aeroma-25260294552210000210002_bde2d3ea.docx) | — | — |
+| s4534 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7725347482_2770422175322000063_gk-1440-docx-27704221753220000630002_ed2c3cee.docx) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

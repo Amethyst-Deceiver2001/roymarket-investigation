@@ -1283,6 +1283,36 @@ def main() -> int:
         blank_p = {k: ([] if isinstance(v, list) else ({} if isinstance(v, dict) else None))
                    for k, v in (people[0].items() if people else [])}
         for extra in (corr_people.get("people_add_entities") or []):
+            existing = people_by_slug.get(extra.get("slug"))
+            if existing is not None:
+                # Bug fixed 2026-09-02: this branch used to unconditionally
+                # append a new record and only repoint people_by_slug at it,
+                # leaving the original prose-derived record sitting in the
+                # `people` list too — two dicts, same slug, both surviving
+                # to people.json (caught by check_registry.py's duplicate-
+                # slug warning on sinelshchikov-andrey-valentinovich and
+                # saidov-adil-abukovich). Merge into the existing record
+                # instead: fill blank scalar/dict fields, concatenate list
+                # fields (roles, sources, open_questions) without
+                # duplicating identical entries, append notes rather than
+                # overwrite.
+                for k, v in extra.items():
+                    if k in ("why", "slug"):
+                        continue
+                    if isinstance(v, list):
+                        cur = existing.get(k) or []
+                        for item in v:
+                            if item not in cur:
+                                cur.append(item)
+                        existing[k] = cur
+                    elif k == "notes":
+                        old = existing.get("notes") or ""
+                        if v and v not in old:
+                            existing["notes"] = (old + "\n\n" + v) if old else v
+                    elif not existing.get(k):
+                        existing[k] = v
+                existing["_corrected"] = extra.get("why")
+                continue
             rec = dict(blank_p)
             rec.update({"_verified": False, "_origin": "corrections:add_entities"})
             rec.update({k: v for k, v in extra.items() if k != "why"})

@@ -20,6 +20,7 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Галкин Вадим Сергеевич | 2014-10-29 | Signed «действующего на основании Устава» as ЗАО «НИИ СТТ»s own Генеральный директор on a zakupki government contract (reg 0335100011714000162) — earliest known director on record, predating the existing 2016-05-19 Богомолов Андрей Владимирович entry. [s4253] |
 | Богомолов Андрей Владимирович | 2016-05-19 | Генеральный директор since ГРН 2166733235568, 19.05.2016; personal ИНН 673103142483 recorded ГРН 2226700421528, 21.09.2022 [s0211] |
 
 ### Charter capital
@@ -38,6 +39,16 @@
 
 - **Скарабей-БН (Skarabey-BN)**
 - **Merlin-VR**
+
+## Government contracts
+
+- customer: ФГКУ «Войсковая часть 35533» (FSB-affiliated special-purpose unit); reg_number: multiple (~30 contracts, 2013-2020; see mine_zakupki.py --inn 6730046954 triage / data/registry/_zakupki_mined.json); date: 2013-2020; value_rub: 126467572; items: Поставка специальных технических средств — supply of 'special technical means' (covert-surveillance equipment per НИИ СТТ's ФСБ licence); largest customer by far across this ИНН's 84 zakupki hits, but no individual contract card names equipment beyond the generic term. [s3330]
+- customer: ГУ МВД России по Кемеровской области; reg_number: 1420701353220000089, 1420701353222000036; date: 2020-2022; value_rub: 2430000; items: Поставка специальных технических средств, sole-supplier basis explicitly citing ОРД (operational-search activity) funding (п.46 ч.1 ст.93 44-ФЗ). [s3328]
+- customer: ФСКН России (Федеральная служба РФ по контролю за оборотом наркотиков, dissolved/merged into МВД 2016); reg_number: see mine_zakupki.py triage; date: unspecified; value_rub: 8500000; items: Специальные технические средства. [s3330]
+- customer: ФКУ ИК-1 УФСИН России по Костромской области; reg_number: 1440101710419000206; date: 2019; value_rub: 604096; items: Установка контроля магнитных параметров в производственных условиях. [s3330]
+- customer: ФГКУ «Войсковая часть 35533»; date: 2011-2022; value_rub: 178430146.96; items: AGGREGATE — 49 separate contracts with the same military customer, ФГКУ «Войсковая часть 35533», spanning 2011-2022, total value ₽178,430,146.96 (individual contracts ₽90,020–₽10,200,000). Found 2026-08-30 reading the 83 previously-unwired contract cards already archived from an earlier scan/fetch-contracts pass (only 4 of 86 total hits had been wired before this). Not wiring all 49 as separate rows to avoid registry bloat for a single recurring customer relationship — see data/sources/ZAKUPKI_contract_<regNumber>_*.html for the full regNumber list, archived under supplier ИНН 6730046954. Largest single contract (reg. 1501200927916000097, ₽10.2m, 06.05.2016) cited as source. в/ч 35533's specific mission/identity not independently verified — flagged for further research, not asserted. IDENTITY (per agentura.ru, an independent OSINT profile of Russian security-service institutions — not independently corroborated beyond this source): в/ч 35533 is identified as ФСБ's «Научно-исследовательское подразделение ФСБ №1» (НИИ-1 / Институт специальной техники), based in г. Балашиха, Московская обл., мкр. Павлино, originating from ЦНИИСТ (Центральный научно-исследовательский институт специальной техники), founded 1955 under KGB's Оперативно-техническое управление, previously operating under the cover name «завод «Прогресс»». Its stated research areas include digital signal processing, wireless-network equipment, encryption, and voice recognition/synthesis ("automatic recognition of individuals by voice" and voice-imitation methods) — FSB internal special-technology R&D, not a line combat unit. If this identification holds, АО «НИИ СТТ» has been a recurring 2011-2022 supplier to FSB's own internal surveillance/signals-technology institute, not merely "a military customer" in the generic sense — a materially different and more significant relationship for the sanctions case. [s3795] [s3342]
+- customer: Various regional МВД directorates (ГУ МВД/УМВД по субъектам РФ); date: 2011-2022; value_rub: 22351363.99; items: AGGREGATE — 18 separate contracts with regional police directorates across at least 10 different Russian regions (Новосибирская, Кемеровская, Воронежская, Самарская, Челябинская, Сахалинская обл., Респ. Хакасия, Респ. Бурятия, Приморский край, Еврейская АО), 2011-2022, total ₽22,351,363.99, individual values ₽75,500–₽1,610,000. Largest single contract (reg. 0173100014812000051, ₽8.33m, УМВД по Центральному ФО на транспорте) cited as source. Nationwide police-equipment/services supplier pattern found reading the same batch of unwired contract cards as the в/ч 35533 aggregate above. Not wiring individually; see data/sources/ZAKUPKI_contract_<regNumber>_*.html. [s3294]
+- reg_number: 0335100011713000056; customer: ФГКОУ ВПО «Калининградский пограничный институт ФСБ России»; value_rub: 1768000; date: 2013-2014 (5 contracts, 02.04.2013–29.10.2014); items: Aggregate of 5 contracts with the same FSB border-institute customer; subjects not captured in these older-era cards. Includes reg 0335100011714000162, the contract already independently reviewed for signatory attribution (Галкин В.С. confirmed as this entity's own director on it). [s5055]
 
 ## Trademarks
 
@@ -58,6 +69,19 @@
 | ОПТОЭЛЕКТРОННЫЙ СИГНАЛИЗАТОР ОБЛЕДЕНЕНИЯ ПЛАНЕРА БЕСПИЛОТНОГО ВОЗДУШНОГО СУДНА | RU2758565C1 | 2021.03.29 | Астахов Сергей Петрович (RU), Строев Николай Николаевич (RU), Власенкова Алина Александровна (RU), Сулимский Евгений Сергеевич (RU), Тимофеева Наталия Сергеевна (RU) |
 | ОПТОЭЛЕКТРОННЫЙ СИГНАЛИЗАТОР ОБЛЕДЕНЕНИЯ ПЛАНЕРА БЕСПИЛОТНОГО ВОЗДУШНОГО СУДНА | RU2758565C9 | 2021.03.29 | Тимофеева Наталия Сергеевна (RU), Астахов Сергей Петрович (RU), Власенкова Алина Александровна (RU), Строев Николай Николаевич (RU), Сулимский Евгений Сергеевич (RU) |
 | Помехоустойчивый оптоэлектронный сигнализатор обледенения планера беспилотного воздушного судна | RU2782475C1 | 2021.12.21 | Козенова Александра Олеговна (RU), Строев Николай Николаевич (RU), Власенкова Алина Александровна (RU), Сулимский Евгений Сергеевич (RU), Астахов Сергей Петрович (RU) |
+
+## Litigation
+
+- One of several МО/МВД penalty claims against this entity found via kad.arbitr.ru; small claim amount, routine contract-performance dispute. [s0029]
+- Claim amount not captured from the case-card-level filings pulled; only Определения (procedural orders) archived, not the full decision. [s0040]
+- A related МВД unit specializing in special equipment/communications, distinct from the main МВД claim above. [s0038]
+- Notable pairing: two separately EU-sanctioned entities (НИИ СТТ and Кронштадт, the latter tied to «Аэромакс» elsewhere in this brief) suing each other over money — see index.html narrative for full framing. [s0022]
+- Companion case to А40-204416/2025. [s0021]
+- case_number: А62-7648/2025; court: Арбитражный суд Смоленской области; parties: АО «НИИ СТТ» против ООО НПП «Новые технологии телекоммуникаций»; subject: Спор о расторжении договора с смоленским субподрядчиком (contract-termination dispute with a Smolensk-region subcontractor).; status: Определение вынесено 29.09.2025. [s0042]
+- 18 ЦНИИ is a Minoborony research institute overseeing telecommunications/EW standards — a real institutional customer link even though this specific filing was not substantively decided. [s0014]
+- A genuine FSB-НИИ СТТ contractual link, established via the case card even though the substance is redacted — consistent with routine redaction of FSB-counterparty commercial litigation, not something specific to this entity. [s0039]
+- NOT confirmed as an FSB or otherwise notable case — logged for completeness of the case-number list only. Do not cite as an FSB link. [s0020]
+- NOT confirmed as an FSB or otherwise notable case — logged for completeness of the case-number list only. [s0026]
 
 ## Licences
 
@@ -215,8 +239,24 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| s0014 | arbitration court filing | arbitration court filing (A40-119204-2019_20190520_Opredelenie.pdf) | 2019-05-20 | 2019-05-20 |
+| s0020 | arbitration court filing | arbitration court filing (A40-168087-2019_20191120_Opredelenie.pdf) | 2019-11-20 | — |
+| s0021 | arbitration court filing | arbitration court filing (A40-186273-2026_20260706_Opredelenie.pdf) | 2026-07-06 | 2026-07-06 |
+| s0022 | arbitration court filing | arbitration court filing (A40-204416-2025_20250813_Opredelenie.pdf) | 2025-08-13 | 2025-08-13 |
+| s0026 | arbitration court filing | arbitration court filing (A40-209485-2024_20241216_Reshenija_i_postanovlenija.pdf) | 2024-12-16 | 2024-12-16 |
+| s0029 | arbitration court filing | arbitration court filing (A40-257028-2021_20211202_Opredelenie.pdf) | 2021-12-02 | 2021-12-02 |
+| s0038 | arbitration court filing | arbitration court filing (A40-269303-2025_20251229_Reshenija_i_postanovlenija.pdf) | 2025-12-29 | 2025-12-29 |
+| s0039 | arbitration court filing | arbitration court filing (A40-74708-2020_20210615_Opredelenie.pdf) | 2021-06-15 | 2021-06-15 |
+| s0040 | arbitration court filing | arbitration court filing (A40-85482-2020_20200526_Opredelenie.pdf) | 2020-05-26 | 2020-05-26 |
+| s0042 | arbitration court filing | arbitration court filing (A62-7648-2025_20250929_Opredelenie.pdf) | 2025-09-29 | 2025-09-29 |
 | s0211 | EGRUL extract | EGRUL extract (ul-1026701461160-20260820233705.pdf) | — | 2026-08-20 |
 | s0756 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_6730046954_20260824_ao-nii-stt.json) | 2026-08-24 | — |
+| s3294 | Zakupki | Zakupki (ZAKUPKI_contract_0173100014812000051_20260829.html) | 2026-08-29 | — |
+| s3328 | Zakupki | Zakupki (ZAKUPKI_contract_1420701353220000089_20260829.html) | 2026-08-29 | — |
+| s3330 | Zakupki | Zakupki (ZAKUPKI_contract_1440101710419000206_20260829.html) | 2026-08-29 | — |
+| s3342 | Zakupki | Zakupki (ZAKUPKI_contract_1501200927916000097_20260829.html) | 2026-08-29 | — |
+| s4253 | Zakupki | Zakupki (ZAKUPKI_ATTACH_6730046954_0335100011714000162_gk-03351000117140001620002_06a0c038.docx) | — | — |
+| s5055 | Zakupki | Zakupki (ZAKUPKI_contract_0335100011713000056_20260831.html) | 2026-08-31 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -21,6 +21,12 @@
 |---|---|---|
 | Маслак Никита Юрьевич | 2023-10-04 | personal ИНН 771541815944 [s0472] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 129085, Москва, вн.тер.г. муниципальный округ Останкинский, б-р Звёздный, д. 19, стр. 1 | 2026-07-01 | factAddress per contract XML (regNumber 1780601211726000023) matches the registered address on file (bare 'г. Москва') at street level — fills in the specific street address for the first time. [s3748] |
+
 ## Products
 
 - **ПАК «Площадь.Р»** — Программно-аппаратный комплекс для автоматического поиска целей.
@@ -28,6 +34,10 @@
 - **«Микроб 10с»** — Autopilot / machine-vision system for the Микроб UAV, developed within the "Kulibin Club" of the Народный фронт movement, per GUR profile. [s0967]
 - **«Микроб 13с»** — Autopilot / machine-vision system, per GUR profile. [s0967]
 - **«Площадь-К»** — FPV kamikaze drone, per GUR profile — distinct from the existing ПАК «Площадь.Р»/«Площадь.К» software systems (this is the drone itself, not the targeting software). [s0967]
+
+## Government contracts
+
+- customer: ФГБОУ ВО «Российский государственный гидрометеорологический университет»; reg_number: 1780601211726000023; date: 2026; value_rub: 12000000; items: НИР «Разработка моделей и методов обработки данных в рамках эскизно-технического проекта демонстратора технологии интеллектуального управления и ситуационного моделирования групповых действий БВС в условиях единого информационно-управляющего поля» — swarm-UAV group-control R&D, entity's only zakupki hit. [s3389]
 
 ## Sanctions & screening
 
@@ -48,6 +58,7 @@
 ### Маслак Никита Юрьевич
 
 - **DOB:** 1998-12-11
+- **Address:** г. Москва, ул. Абрамцевская, д. 9, корп. 1, кв. 44
 - **ИНН:** 771541815944
 - `sanctions lead`
 
@@ -58,6 +69,8 @@
 | s0472 | EGRUL extract | EGRUL extract (ul-1237700463032-20260823122931.pdf) | — | 2026-08-23 |
 | s0815 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9723203841_20260824_ao-ploshchad.json) | 2026-08-24 | — |
 | s0967 | GUR war-sanctions record | GUR war-sanctions record (GUR_9723203841_20260824_ao-ploshchad.html) | 2026-08-24 | — |
+| s3389 | Zakupki | Zakupki (ZAKUPKI_contract_1780601211726000023_20260829.html) | 2026-08-29 | — |
+| s3748 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1780601211726000023_1780601211726000023_elektronnyy-kon-17806012117260000230004_3d1078c2.xml) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

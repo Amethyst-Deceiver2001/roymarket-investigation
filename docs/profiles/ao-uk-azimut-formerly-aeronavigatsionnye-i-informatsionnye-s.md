@@ -48,6 +48,7 @@
 ![Саидов Аскер Казбекович](../images/saidov-asker-kazbekovich_portrait_tadviser.jpg)
 - **DOB:** 1982-10-22
 - **Birthplace:** Хасавюрт, Дагестан / Khasavyurt, Dagestan
+- **Address:** г. Москва, Петровско-Разумовский проезд, д. 16, кв. 125; г. Москва, ул. Минская, д. 1Г, корп. 2, кв. 217
 - **ИНН:** 054403029570
 - Генеральный директор; 44% shareholder (Ростех is a co-shareholder of this holding company)
 - `sanctions lead`

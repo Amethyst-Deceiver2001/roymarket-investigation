@@ -998,8 +998,17 @@ re-screening later is a diff rather than a redo.
 
 ---
 
-## Phase 3 — Imagery
+## Phase 3 — Imagery (merged 2026-09-01 — see "Visual saturation" section below)
 
+Merged into the "Visual saturation" plan's own `#### Phase 3 — new
+standalone person/POI template + imagery` section, at the user's own
+observation that this and that plan's differently-numbered Phase 3 were
+doing overlapping work (imagery feeds the very page template that phase
+builds). Full status/history preserved there, not deleted — read it there,
+not here.
+
+<!-- original content below, superseded by the merge above -->
+<!--
 **Status (2026-08-24, later in this session): STARTED — a first small batch of
 real assets collected from already-harvested data, not a fresh scrape.**
 `scripts/tg_media.py` still doesn't exist. The 24 files pre-dating this plan in
@@ -1077,6 +1086,7 @@ file:
   Open: only 50/120 Yandex reviews and 4/48 gallery photos pulled (more
   available on request); the smaller "GD" Ozon seller for `ooo-goudron`
   remains unresolved (legal-info modal never captured with content).
+-->
 
 ---
 
@@ -1746,3 +1756,612 @@ work above.
   command in this project (housekeeping bundle, Aleph screen/triage/fetch,
   zakupki scan/mine/pull, profile rebuild, tag-balance check), so they
   don't need re-deriving each session.
+
+---
+
+## Visual saturation: landing page, company profiles, new POI profiles (started 2026-08-31)
+
+> **Moved here 2026-08-31** from `~/.claude/plans/spicy-beaming-kite.md`
+> (external, per-session, not git-tracked) for the same reason the phase-0-5
+> registry rebuild plan above was moved here on 2026-08-24: that path is
+> reused as a generic slug across unrelated planning sessions, which was
+> causing confusion. Read and update *this* section going forward. The
+> external file has been overwritten with a short redirect stub.
+
+### Context
+
+The investigation's data (`data/registry/*.json`) is far richer than what
+either published surface currently shows visually. Two Explore passes over
+`docs/index.html` and the profile-generation pipeline confirmed:
+
+- **`docs/index.html`** (1,189 lines, hand-authored) has a mature design-token
+  system (`--paper/--ink/--accent`, semantic `--ok/--mid/--low` confidence
+  colors, serif/sans/mono type system) and real component classes
+  (`.tag`, `.callout`, `.gallery`, `.cards`, `.scroll`+table, `.legend`), but
+  exactly **one diagram in the whole site** (a pre-rendered Mermaid ownership
+  graph) and **zero charts, zero maps, zero timelines** — despite the
+  registry already holding chart-ready dated arrays (`financials[]`,
+  `workforce_history[]`, `government_contracts[]`, `state_programs[]`). The
+  densest, most consequential section (the ДАР/Градислава/Наша
+  Правда/Olympic-Fund money-flow narrative) is pure prose plus one diagram.
+  61 real evidence photos sit in `docs/images/` (facility ground/satellite
+  pairs, product photos, portraits) with no unifying visual index.
+- **Company profiles** (`templates/company_profile.{html,md}.jinja2` →
+  `docs/profiles/*.{html,md}`, ~150 pages from one template) share the same
+  token system via `docs/assets/profile.css`, but the numerically dominant
+  sections — `government-contracts`, `state-programs`, litigation/licences/
+  foreign-components, egrul-flags, open-questions — are flat
+  `<ul class="plain">`, and financials/workforce/history are plain
+  `<table>`. One template edit regenerates all ~150 pages, making this the
+  highest-leverage surface to improve.
+- **People (PEPs)** have no standalone page at all today — they only appear
+  as `.person-card` blocks inside a company profile's `principals` section,
+  unless separately registered as an ИП entity (which then borrows the
+  company template). 359 people exist in `people.json` with no page of
+  their own.
+
+No chart/map JS library exists anywhere in the repo, and the user has
+chosen to keep it that way: **all new visuals are build-time-generated
+inline SVG/HTML+CSS**, matching the existing zero-runtime-dependency,
+archival-friendly static-HTML approach (same pattern as the one hand-baked
+Mermaid diagram) rather than a CDN-loaded chart library. The user also
+chose to sequence **landing page first, then the profile template**, and to
+add a **new standalone person/POI template** rather than only polishing the
+existing `.person-card`.
+
+The landing page scope grew through the planning conversation: the
+underlying facts are current (no content-accuracy problem), but the page's
+**visual structure, navigation, and prose delivery** are dated and need a
+full rebuild — including a **complete copy rewrite** in `STYLE_GUIDE.md`'s
+voice, and a **new opening**: a hook referencing the team's earlier
+Wildberries investigation (https://amethyst-deceiver2001.github.io/wb-watcher/
+— confirmed content: 7,666 military-item listings, 89% shipped through WB's
+own warehouses, 802 sellers, the «Ganza» case study) as established
+precedent, then the investigation's actual hypothesis stated flat: that
+рой.маркет's most likely vendors are residents of its parent project,
+ЦБСТ. The current "Eighteen findings" section is also confirmed too long
+for what should be a quick recap for a general audience before the reader
+descends into supporting detail — it needs tightening, not just restyling.
+It keeps the current design tokens (shared with all profile pages) and
+stays hand-authored rather than becoming registry-generated.
+
+**Editorial pivot (2026-08-31, explicit user instruction, supersedes the
+English-first drafting described below):** every section is now drafted in
+**natural Russian first**, grounded in the user's own personal voice
+examples — Alexey Kovalev's Noodleremover/Лапшеснималочная blog piece "Как
+мэрия Собянина обманывает москвичей за их же деньги", and two Meduza
+feature pieces — not translated from an English draft. This activates
+STYLE_GUIDE §1.7's already-stated rule ("RU pages are written, never
+translated from the EN") for the first time this project. Register notes
+from the examples: more first-person «мы»/direct-reader-address than the
+site's Investigative-mode restraint had been using, ironic/deflating
+character and euphemism framing, systems-failure argument structure
+(accumulated negligence over single-culprit blame), officials
+characterized by silence/evasion rather than adjectives, forward momentum
+over a hard kicker. **English translation happens only after the user
+approves each Russian draft, section by section.** Drafting proceeds
+section by section with a checkpoint (fully laid-out Artifact preview,
+using the site's real design tokens) before moving to the next section —
+first section drafted and previewed: the new hook + hypothesis opening
+(RU draft published to Artifact `a8b6fdea-e869-432c-84e9-7cc547d91778`,
+awaiting the user's review before being written into `docs/index.html` and
+before the next section — the "Eighteen findings" → quick-recap rewrite —
+is drafted).
+
+**Added constraint (2026-08-31, explicit user instruction):** no new visual
+element surfaces raw registry plumbing that carries no informational value
+to a reader — entity/person `slug` strings, `_verified` boolean flags, CSS
+custom-property/token names, or any other internal bookkeeping field.
+Every badge/chip/label introduced below must earn its place by telling the
+reader something substantive (a sourced fact, a confidence level, a count,
+a date) — not expose implementation detail as decoration. This sharpens
+STYLE_GUIDE §3.5's existing "no internal notation" rule rather than
+replacing it; apply it specifically when designing the Phase 2 badge-row /
+Phase 3 person-template chips, where registry fields like `_verified`
+could otherwise tempt a checkmark that doesn't actually inform.
+
+All work must respect existing hard constraints (already confirmed in
+exploration): `data/registry/*.json` is the source of truth (visuals must
+be data-driven, not hand-typed numbers); STYLE_GUIDE.md's confidence-chip
+vocabulary (`t-doc`/`t-press`/`t-open` → `--ok`/`--mid`/`--low`) must be the
+*only* semantic-status color system — new charts reuse it rather than
+inventing a fourth color scheme; no internal notation (`source_id`, field
+names) ever appears in visible prose/captions, only resolved `[sNNNN]`
+citations; RU-is-evidence/EN-is-analysis and the Latin-name+Cyrillic-ФИО
+dual format apply to any new labels; PII fields render only when
+independently sourced, and a person's freeform `notes` never renders;
+images render only when a `docs/images/` copy exists (graceful-degradation
+pattern via `.person-photo.placeholder` already established); every
+`docs/index.html` edit needs `scripts/check_tag_balance.py`; profile pages
+are generated — edits land in the Jinja2 templates + `build_company_profile.py`
+context, never on generated output; the HTML and `.md` outputs are one
+script/two-templates kept in sync — every new visual needs a plain-text
+equivalent in the `.md` template.
+
+### Status
+
+| Step | State |
+|---|---|
+| Phase 0 — palette sanity check | **Done.** `dataviz` skill's `validate_palette.js` found a real hard-fail (mid/low confidence-tag colors too close, ΔE 12 < the 15 normal-vision floor, in both light and dark mode). Fixed and reverified in both files: light `--ok` #1c6046→#0a7a53, `--mid` #7a5a10→#96700a (+ lighter `--mid-bg`/`--ok-bg` tints for contrast); dark `--mid` #d4b25f→#e0b23f, `--low` #e08c85→#ec7a95. Applied to `docs/index.html` and `docs/assets/profile.css` (6 blocks total — light `:root`, dark `@media`, dark `[data-theme]`, in each file). `check_tag_balance.py` clean. Profile pages link the stylesheet externally, so the fix reached all ~150 profiles with no regeneration needed. |
+| Phase 1, §1 — Hook + hypothesis (new opening section) | **Drafted in Russian, in Artifact preview, awaiting user approval.** Not yet written into `docs/index.html`. |
+| Phase 1, §2–12 | Not started — see "New section architecture" below. |
+| Phase 2 (company profile template) | Not started — sequenced after Phase 1. |
+| Phase 3 (new person/POI template) | Not started — sequenced after Phase 2. |
+| Quick fix, unrelated but done same session | `scripts/zakupki_coverage.py`'s `DEFENSE_KEYWORD_RE` extended to also match the abbreviated `в/ч <digits>` form, not just spelled-out `войсковая часть` (user correction — в/ч is the more common form in practice). Verified against real and negative test strings. |
+
+### Approach
+
+#### Phase 0 — palette sanity check (once, before building anything)
+
+**Done — see Status table.** Verification method for reference: run the
+`dataviz` skill's `scripts/validate_palette.js` against the `--ok`/`--mid`/
+`--low`/`--accent` hex values (light and dark), fix any FAIL before
+building anything else on top of the palette.
+
+#### Phase 1 — landing page (`docs/index.html`): full copy rewrite + structural redesign, hand-authored
+
+The page's facts are current, but its prose, its structure, and its
+navigation all need a full rebuild. This is one integrated pass — copy
+rewrite and structural redesign are done together, section by section,
+since the new architecture and the new voice are not separable (STYLE_GUIDE
+mode selection depends on what each section is *for*, which is exactly
+what the restructuring is also deciding). Design tokens
+(`--paper/--ink/--accent`, `--ok/--mid/--low`, serif/sans/mono) stay as-is
+— shared with ~150 profile pages, already confirmed solid — this phase
+redesigns structure, navigation, and prose, not the base palette/type
+system.
+
+**Current structural problem, confirmed by direct inspection**: the page's
+`<h2>`s are Eighteen findings → Defence Ministry origin → Physical
+infrastructure → **The entity map** → Who actually makes the goods →
+Digital/operational infrastructure → Data sources still unmined → Media
+sources → What is not established. But "The entity map" `<h2>` alone spans
+~400 lines (a third of the page) and, via nested `<h3>`s, actually contains
+the ownership diagram *and* the entire ДАР/Градислава/Наша Правда/Olympic
+Fund money narrative *and* the Legal entities table *and* the Supervisory
+Board *and* Executives — four distinct subjects mis-nested under one
+heading. Splitting these into their own top-level sections is itself a
+major navigability fix, independent of any visual styling.
+
+**New section architecture** (top-level, in order):
+
+1. **Hook + hypothesis** (new). Opens on the team's earlier Wildberries
+   investigation (wb-watcher: 7,666 military-item listings, 89% via WB's
+   own warehouses, 802 sellers, the «Ganza» case) as established precedent
+   — a marketplace already shown to enable military supply chains — then
+   states this investigation's actual hypothesis flat: рой.маркет's most
+   likely vendor base is residents of its parent project, ЦБСТ. **Drafted
+   in Russian, in the Artifact preview, awaiting approval** — see Status.
+   Real grounding used: of 155 ЦБСТ-linked entities mapped in the registry,
+   3 are confirmed-overlapping against the earlier Wildberries dataset
+   (ООО «Гаскар», ООО «АСЕЛ ЛАБС», ООО «Тримикс»), 69 not yet checked —
+   hedged honestly as an early, structural finding, not a closed case.
+2. **Quick findings recap** (rewrite of "Eighteen findings"). Confirmed too
+   long for its job — tighten to genuinely skimmable, general-audience
+   scope: deadpan accumulation, one fact-pair per item, no elaboration, no
+   explained irony. Every item still links to the deeper section that
+   substantiates it rather than trying to carry its own evidence inline.
+3. **In-page navigation** (new) — anchor links to every section below, so
+   the "quick recap → nitty gritty" structure the user asked for is
+   actually navigable rather than requiring a scroll.
+4. **"This was a Defence Ministry project from the start"** — kept, rewrite
+   pass for voice/tightness.
+5. **"Physical infrastructure"** — kept, rewrite pass; add the consolidated
+   facilities index (ground/satellite image pairs currently scattered here
+   and in "Who actually makes the goods", unified into one `.gallery` with
+   consistent city/region captions).
+6. **"The entity map"** — narrowed to just the diagram and the prose that
+   directly explains it, moved earlier in the reading order since it's the
+   page's one real piece of visual argument and the sections that follow
+   should read as unpacking a diagram the reader has already seen.
+7. **"The money behind the platform"** (new top-level section, split out
+   of the old mis-nested content) — the ДАР/Градислава/Наша
+   Правда/Olympic Fund narrative, rewritten for voice/tightness, plus a
+   new build-time inline SVG chart aggregating `government_contracts[]`
+   value-over-time (one hue, `--accent`, thin marks per the dataviz
+   skill's mark spec), with a plain data table alongside for
+   accessibility.
+8. **"Legal entities"** — promoted to its own top-level section (was
+   nested under "The entity map").
+9. **"People"** (Supervisory Board + Executives) — promoted to its own
+   top-level section, card/badge treatment consistent with the rest of the
+   redesign.
+10. **"Who actually makes the goods"** — kept, rewrite pass, `.cards`
+    treatment for manufacturer sub-sections.
+11. **"Digital and operational infrastructure"** — kept, rewrite pass.
+12. **Appendices** — "Data sources still unmined", "Media sources", "What
+    is not established" (this last one specifically Expert-witness/forensic
+    mode — flattest register, every sentence quotable out of context) —
+    made collapsible (`<details>`) to cut scroll fatigue without deleting
+    content.
+
+**Drafting discipline**: apply STYLE_GUIDE Part I's mode selection per
+section, Part II naming (transliterated legal forms, Latin-name+Cyrillic-
+ФИО, ИНН/ОГРН bare-digit format), Part III sourcing (confidence chips, no
+internal notation, no research-process dates, quotes verbatim from Russian
+originals), Part IV PII scope, and Part V (euphemism list,
+bold-on-first-mention, cross-linking) — **written in Russian per the
+editorial pivot above**, EN translation only after RU approval. Run the
+document's own "Checklist before publishing" at the end of the rewrite.
+
+New reusable low-level SVG/HTML component markup (bar chart, stat-tile,
+sticky-nav, collapsible-appendix) is authored once here, then ported into
+`docs/assets/profile.css` / the profile template in Phase 2.
+
+Verify: `python3 scripts/check_tag_balance.py docs/index.html` after every
+edit; a full browser read-through (light+dark, narrow+wide) for layout,
+nav-anchor correctness, and voice consistency; every fact re-traced to its
+existing registry source during the rewrite (a rewrite must not silently
+drop or alter a sourced claim — STYLE_GUIDE §3.6 trace-before-correcting
+applies to the rewrite itself); every new number in the chart/stat-tile
+traced to an actual query, never hand-typed; the STYLE_GUIDE checklist run
+once at the end of the phase.
+
+#### Phase 2 — company profile template (`templates/company_profile.{html,md}.jinja2`, `scripts/build_company_profile.py`, `docs/assets/profile.css`)
+
+One template/context change regenerates all ~150 pages, so land the
+expanded component vocabulary (bar-list, timeline, sparkline, badge-row)
+here once it's proven out on the landing page in Phase 1:
+
+1. **Risk/evidence badge row** near the masthead: compact colored-badge
+   summary (sanctions count, litigation count, foreign-components count,
+   egrul-flags count) using the existing `--ok/--mid/--low` tokens, above
+   the existing detail lists (which stay as lists for exact detail).
+2. **Government-contracts → sorted value-bar list**: `build_company_profile.py`
+   currently flattens `government_contracts[]` into `{text, source}` via
+   `simple_list()` (`scripts/build_company_profile.py:275-282`), discarding
+   `value_rub`/`date`/`customer`. Add a parallel context path that keeps
+   `value_rub` as a number, sorts descending, and computes each row's bar
+   width as a percentage of the entity's own max — rendered as a horizontal
+   bar-list component (reuse `.card`/new `.bar-row` class) instead of
+   `<ul class="plain">`. `state_programs`/litigation/licences/foreign-components
+   stay as lists (no natural magnitude to bar-chart) but get the badge-row
+   treatment from step 1 instead.
+3. **Unified history timeline**: `history_tables` (director/founders/
+   charter-capital/address/name histories) currently render as N separate
+   flat tables. Replace with one horizontal/vertical timeline component
+   (dated markers, each labeled with which field changed) built from the
+   same `history_tables` context data.
+4. **Financials/workforce sparkline**: when `financials[]` or
+   `workforce_history[]` has ≥2 dated points, add a small inline SVG
+   sparkline before the existing table (table stays for exact figures).
+5. **Evidence-tier chips on products**: tag each `products[]` card with the
+   same `t-doc`/`t-press`/`t-open` vocabulary reflecting its evidence tier
+   (self-marketing vs. patent-description vs. battlefield-confirmed —
+   consistent with the existing `rospatent_patent_description_evidence_tier`
+   distinction).
+6. Update `templates/company_profile.md.jinja2` in lockstep with every
+   change above — plain-text equivalents. Hard requirement, per the
+   one-script-two-templates invariant.
+7. Regenerate everything: `python3 scripts/build_company_profile.py --all`,
+   then `check_tag_balance.py` across all of `docs/profiles/*.html`.
+
+Verify: spot-check 3 real pages spanning the data-richness spectrum —
+`ao-nii-stt` (rich), `npp-radar-mms` (image-heavy, sparse contracts),
+`ip-tsyganov-vadim-borisovich` (sparsest, ИП-as-company) — for visual
+correctness and graceful degradation on missing data; confirm the `.md`
+output still reads sensibly as plain text.
+
+#### Phase 3 — new standalone person/POI template + imagery (merged 2026-09-01)
+
+**Merged with the original registry-rebuild "Phase 3 — Imagery" section**
+(previously tracked separately, further up this file) — the user's own
+observation, and correct: one gathers the photo/logo assets, the other
+builds the page template whose header field is specifically `people[].photo`
+/ `entities[].images[]`. Tracking them as two differently-numbered,
+differently-located "Phase 3"s was itself a source of confusion (the same
+class of problem as the external-plan-file slug collision fixed earlier)
+— now one phase, one status line. The original section's full work log
+(leader-id.ru headshots, rk.2035.university logos, the HAR-driven
+Ozon/WB/Yandex Maps imagery pass, the still-open `scripts/tg_media.py`
+build) is preserved below under "Imagery status/history" rather than
+rewritten — nothing lost, just relocated and no longer double-tracked.
+
+New `templates/person_profile.{html,md}.jinja2` + a `build_person_profile`
+mode (either a new script `scripts/build_person_profile.py` mirroring
+`ProfileBuilder`'s structure, or a second `Builder` class added alongside
+it — reuse `humanize_item`/`source_label`/`load_json` rather than
+duplicating them). Output goes to `docs/profiles/<person-slug>.html`/`.md`
+— confirmed zero slug collisions between `entities.json` (155 slugs) and
+`people.json` (359 slugs), so no path-clash risk.
+
+Content, following the same PII/sourcing rules already enforced in
+`.person-card` today (full detail only when independently sourced,
+`notes` never rendered raw):
+
+- Header: photo (or `.person-photo.placeholder` fallback), Latin name +
+  Cyrillic ФИО, DOB/birthplace/address/ИНН as a badge/meta-grid row (reuse
+  `.meta-grid`), sanctions status chip if applicable.
+- **Roles across entities**: every `roles[]` entry, cross-linked to that
+  entity's own profile page (`{{ entity_slug }}.html`) — this is the one
+  genuinely new piece of information a standalone page can show that a
+  `.person-card` snippet can't.
+- Quotes attributed to them (cross-reference `quotes.json`).
+- Screening evidence (`opensanctions_matches`, `aleph_matches`, etc.)
+  rendered as resolved, human-readable summary rows (count + top matches),
+  never a raw dump of the match JSON.
+- Sources-cited table, same pattern as company profiles.
+- Every company profile's `.person-card` gets a link to the person's new
+  standalone page (small addition to Phase 2's principals-section markup).
+
+Verify: build for 3 people spanning the range — a sitting officer with
+rich sourcing (Яныкина), a co-inventor with minimal data (Городничин), and
+someone with `sanctions`/`opensanctions_matches` populated — confirm PII
+fields only render when sourced, `notes` never leaks, and
+`check_tag_balance.py` passes.
+
+##### Imagery status/history (the former standalone "Phase 3 — Imagery")
+
+**Status as of 2026-08-25: STARTED — a small first batch of real assets,
+not a fresh scrape.** `scripts/tg_media.py` still doesn't exist. Current
+coverage (checked 2026-09-01): 7/155 entities have `images[]`, 23/361
+people have a `photo` — low in absolute terms, but not every entity/person
+needs one to be "done" (PII policy scopes full imagery to principals/PEPs,
+not every name in the registry).
+
+Sources already pulled from (all local reprocessing of already-harvested
+data, not new live scrapes):
+- **leader-id.ru POI headshots** (`docs/images/<slug>_portrait_leaderid.jpg`)
+  — gated to people whose leader-id account was already independently
+  ID-confirmed (never a raw name-only candidate match). 3 pulled this way:
+  Барахтин А.В., Соловьев К.Ю. (both «Аркодим»), Лысенко А.О. («Визионеро»).
+- **rk.2035.university company logos** (`docs/images/<name>_logo_rk2035.{jpg,png}`)
+  — 3 pulled (НПП «Радар ммс», «Клеверкоптер», АО «Эколибри») from the 5
+  entities already corroborated against that dataset; product-model
+  `avatar` fields are null on every record in that source, confirmed dead
+  end.
+- **HAR-driven Ozon/WB/Yandex Maps pass** (2026-08-25) — resolved several
+  seller identities (ООО «Гаскар»'s Ozon storefront, ООО «Покров»'s site,
+  the "Макс 911" Ozon dealer's real ИП owner), caught one misattribution
+  before it happened (a "GD" Ozon seller lead for `ooo-goudron` that turned
+  out to be a different legal entity), and pulled self-incriminating
+  marketing copy + showroom photos for `ooo-goudron` (a Yandex Maps HAR,
+  including an official photo of "СВОих не бросаем" wall signage). Two
+  standing rules came out of this: VK/TG counts as a primary source when no
+  official site exists, and marketing copy must be scanned for verbatim
+  self-incriminating СВО/military language, not paraphrased around (both
+  now in memory). Left incomplete: only 50/120 Yandex reviews and 4/48
+  gallery photos pulled for that one HAR; a smaller "GD" Ozon seller lead
+  remains unresolved.
+
+Still not built: **`scripts/tg_media.py`** — Telethon `download_media` over
+a channel/message-id range or a product/handover-keyword text match,
+writing `docs/images/tg/<channel>_<msgid>.<ext>` plus a sidecar JSON
+(channel, msg_id, date, post text, permalink) for chain-of-custody. **Live
+network job → hand the user the exact command**, same as every other
+scraping job in this project. The `«Благодарственное письмо»/«Почетная
+грамота»` genre marker is a high-yield keyword for handover-evidence posts
+that name the receiving unit. Also not yet run: VK avatar pulls via the
+existing `scripts/vk_fetch.py` for entities with a `web.vk[]` handle (script
+exists, never pointed at imagery specifically).
+
+The curation/user-supply conventions stand as before: for each manufacturer,
+select product/field-test/frontline-handover images and write captions to
+`entities[].images[]`; the user supplies satellite/ground facility views and
+press portraits (the pattern already used for the 24 pre-existing files);
+person photographs stay bounded to professional/public-presence sources
+(leader-id.ru profile photos, company sites, press), never private/family
+imagery, per the Phase 0 PII rule.
+
+### Critical files
+
+- `docs/index.html` — hand-authored landing page; `<style>` block holds the
+  design tokens (kept in sync with `docs/assets/profile.css` by hand).
+- `STYLE_GUIDE.md` — authoritative voice/naming/sourcing rules; read in
+  full before drafting any section.
+- https://amethyst-deceiver2001.github.io/wb-watcher/ — the prior
+  Wildberries investigation referenced in the new hook.
+- `docs/assets/profile.css` — shared token/component stylesheet for all
+  profile pages; new bar/timeline/sparkline/badge-row classes land here.
+- `templates/company_profile.html.jinja2` / `.md.jinja2` — sections to
+  convert: `#government-contracts` (line ~90), `#ownership-history`
+  (line ~44), `#financials`/`#workforce` (line ~76/108), `#products`
+  (line ~61).
+- `scripts/build_company_profile.py` — `ProfileBuilder.build_context()`,
+  `simple_list()` (line 275), `humanize_item()`, `source_label()`.
+- `templates/person_profile.html.jinja2` / `.md.jinja2` — new files.
+- `scripts/build_person_profile.py` (or an added class in
+  `build_company_profile.py`) — new.
+- `scripts/compute_landing_stats.py` — new, for Phase 1's stat strip.
+- `scripts/check_tag_balance.py` — run after every HTML edit/regeneration.
+
+### Verification
+
+- Phase 0: `node <dataviz-skill-path>/scripts/validate_palette.js
+  "<hex,hex,...>" --mode light` and `--mode dark` against the current
+  token values — done, see Status.
+- After Phase 1: `check_tag_balance.py docs/index.html`; full manual
+  browser read-through (light + dark, narrow + wide) for layout/overflow/
+  nav-anchor correctness and voice; every new stat/chart number traced to a
+  real `compute_landing_stats.py` query output, not typed by hand; every
+  rewritten claim re-traced to its existing registry source; STYLE_GUIDE.md's
+  own "Checklist before publishing" run against the finished page.
+- After Phase 2: `python3 scripts/build_company_profile.py --all`, then
+  `check_tag_balance.py` over all of `docs/profiles/*.html`; spot-check the
+  three data-richness-spectrum pages named above in both `.html` and `.md`.
+- After Phase 3: build the three named test people; confirm PII-sourcing
+  and `notes`-never-renders rules hold; `check_tag_balance.py` on the new
+  pages.
+- Throughout: no new visual introduces a source_id/internal field name into
+  visible text, no chart series color reuses the reserved `--ok/--mid/--low`
+  triad for a non-status purpose, and RU-evidence/EN-analysis + Latin+ФИО
+  formatting is preserved in every new label/caption.
+
+## zakupki mining: signatory disambiguation + extraction gap-fills (2026-08-31/09-01)
+
+### Context
+
+Follow-on to the "zakupki.gov.ru mining workstream" section above — this is
+a specific session's worth of parser hardening and gap-filling done via the
+existing `mine_zakupki.py` → `zakupki_coverage.py` / `zakupki_customer_clusters.py`
+/ `zakupki_signatory_diff.py` housekeeping chain, not a new phase. Triggered
+by trying to trust `zakupki_signatory_diff.py`'s "по Уставу" hits as
+director_history candidates and finding a real methodological gap:
+`docx_signatories` didn't distinguish which contract party (customer vs.
+supplier) a signatory belonged to, so a customer-side official (e.g. a
+"Войсковая часть 35533" commanding officer) could read as a plausible new
+director of the supplier entity.
+
+### What shipped
+
+- **`find_signatories()`** (new, `scripts/mine_zakupki.py`) labels every
+  `docx_signatories` entry `customer`/`supplier`/`unknown` by tracking the
+  "именуемое в дальнейшем «Роль»" preamble label nearest each signatory's
+  own clause. Five real regex gaps found and fixed by stress-testing against
+  the full ~1600-file `.docx` attachment corpus, each now covered by a
+  fixture in `tests/test_zakupki_parser.py` (16/16 pass):
+  1. Missing party disambiguation entirely (the original gap).
+  2. An individual-entrepreneur supplier's role label sits *after* its
+     authority clause ("...ОГРНИП <n>, именуемое в дальнейшем «Поставщик»"),
+     not before it like every legal-entity case.
+  3. A missing comma before "с одной/другой стороны" broke the clause-
+     boundary check, leaking one party's label into the other's window.
+  4. Compound role labels ("Головной исполнитель") and lowercase labels
+     («поставщик») weren't matched by the original exact-phrase list —
+     fixed by classifying on the label's last word instead.
+  5. A joint "совместно именуемые «Стороны»" label was short-circuiting the
+     real per-side label search; a reversed connector word order ("далее
+     именуемое «Роль»"); and a parenthetical gender-suffix blob
+     ("именуемое(ая,ый)") that broke the regex match entirely, costing
+     *both* signatories in an affected document.
+  - End state on the full corpus: 427 signatories, 8 `unknown` (1.9%), 1
+    residual same-party collision (a rare docx-glue text corruption,
+    documented not chased further).
+- **`zakupki_signatory_diff.py`** now reports two separate sections —
+  "supplier side" (real director_history candidates) vs. "customer side or
+  unresolved" (never officer evidence) — instead of one undifferentiated
+  list.
+- **New extracted-but-never-surfaced fields wired into the deep report**
+  (same class of bug as the pre-existing `fact_address` fix): supplier
+  `delivery_place` (the contract's actual delivery/install destination,
+  distinct from both parties' registered addresses) and supplier
+  `email`/`phone`.
+
+### What got wired from this pass
+
+- `director_history`: `ao-nii-stt` (Галкин В.С., 2014-10-29 — new earliest
+  director on record), `ooo-aeromaks` (a clean 4-name succession chain,
+  2021–2024, filling the gap before the existing 2025-09 entry), `npts-elvis`
+  (Семилетов А.Д., 2024-12-03 — this entity's **first-ever** director_history
+  entry, filling a real gap).
+- Flagged, not wired (documented in `notes` instead): two same-surname/
+  given-name-but-different-patronymic collisions (`ao-nii-stt`,
+  `ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya`) read as likely
+  transcription/OCR errors, not new people — per this project's standing
+  OCR-consistency discipline; and one `npp-radar-mms` доверенность-holder
+  correctly excluded as a non-officer representative.
+- `government_contracts[]`: ₽620.85M across 4 previously-unwired contracts
+  found via the new `delivery_place` field — 2 civilian regional-government
+  IT contracts (`ooo-gaskar-integratsiya`, `ooo-gaskar-tekhnologii`,
+  Krasnogorsk) and 2 notable ones: `ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya`
+  doing vehicle-queue/border-crossing security infrastructure at Верхний
+  Ларс (the Georgia crossing) for ФГКУ «Дирекция по строительству и
+  эксплуатации объектов Росграницы» — the same federal customer that
+  already has a confirmed ₽2.97bn contract with `ao-pmts-avangard` at the
+  Хасан crossing (China/NK border). Worth a cross-entity note if this
+  pattern (ЦБСТ-network entities separately contracted by Росгранстрой at
+  different border crossings) gets pursued further.
+
+### Still open
+
+1. **The three big unreviewed institutes** in `clusters_new.md`:
+   `ao-nii-vektor` (157 unwired cards), `ao-pmts-avangard` (87),
+   `ao-nii-stt` (85). Not started — this is a real session's worth of work
+   on its own, not a quick pass.
+2. **A clean final housekeeping re-mine is still needed** to get the true
+   post-fix signatory-diff/clusters report. The 2026-09-01 attempt
+   (`python3 scripts/mine_zakupki.py --json --out /tmp/zakupki_report.md`)
+   was run in the background here and got stuck — only 116/3076 files in
+   1h43m before being killed — almost certainly OCR-fallback (`tesseract`)
+   bottlenecking on a run of PDFs without a text layer. Per this project's
+   own crawling-jobs/long-local-job discipline, this needs to run in the
+   user's own terminal, watched live, not backgrounded again. If it's still
+   crawling after a few minutes, interrupt it and note the last
+   `[N/3076] <filename>` line — that pinpoints whether one specific file is
+   the bottleneck (worth a targeted fix) or it's just broadly OCR-heavy
+   (worth a `--depth scan`-only pass instead, or accepting the runtime).
+3. `gk-rostekh` / `ao-tekhnodinamika` / `pao-bank-psb` clusters remain
+   explicitly out of scope per the user's standing call (Rostec's own
+   footprint only matters via specific resident ties, already covered).
+
+## Full pipeline/evidence review + autonomous fixes (2026-09-02)
+
+Full review requested and delivered (methods/sources/claims/evidence-strength
+audit, plan status, index.html calibration). Findings and fixes below; see
+chat log for the full review text.
+
+**Findings, ranked:**
+1. **PII sourcing gap (critical)** — CLAUDE.md's own PII policy requires a
+   source_id on every identifying field; measured reality was DOB 6% sourced,
+   birthplace 12%, address 24%, inn_personal 38%, 96/140 PII-carrying people
+   with NO source at all. Evidence exists (18 RuPEP, 853 Aleph, 145
+   OpenSanctions files archived) — this was a linkage failure, not a research
+   gap.
+2. **litigation[] empty except npts-elvis** despite 10 arbitration case
+   numbers cited in index.html prose (all archived, s0014-s0042) — a Phase-4
+   generator would have silently dropped all 10.
+3. **73 uncommitted files**, 4 days since last commit.
+4. **8 orphan entities** (manufacturer-tier) with neither `cbst_tie` nor
+   `tier_basis` recorded, despite carrying real evidence elsewhere in their
+   own record.
+5. Checklist fields added 2026-08-25 never populated: `state_programs` (0),
+   `domain_history` (0), `marketing_claims` (1 entity/3 items despite a
+   standing memory instruction to capture this).
+
+**Fixed autonomously this session (no user input needed):**
+- Border-crossing count corrected 4→5 in index.html (Росморпорт maritime
+  crossing was already documented in prose but the summary sentence still
+  said four).
+- `litigation[]` backfilled for ao-nii-stt: all 10 arbitration cases
+  structured with case number/court/parties/amount/status/source_id, two
+  correctly flagged as unconfirmed-parties (А40-168087/2019, А40-209485/2024)
+  rather than asserted as FSB links.
+- `tier_basis` written for all 8 orphan entities (alyaska, va-technologies,
+  ooo-npo-kilovatt, ooo-radiofid-sistemy, 3 Тримикс-network ИП records,
+  krams-brand-unresolved), grounded in each entity's own already-sourced
+  data (sanctions designations, dossier citations, trademark records) — no
+  new research, just distilling what was already on file.
+- PII source-linkage pass (RuPEP batch): 13 people linked to their archived
+  rupep.org profile (s2452-s2710) after verifying DOB/birthplace/ИНН match
+  before linking. Caught and fixed one wrong unsourced DOB (olga-sokolova,
+  1973-01-23 → corrected 1976-01-03, same person confirmed via exact
+  personal-ИНН match to the RuPEP record). Correctly REJECTED linking a
+  same-surname RuPEP record to mikhail-kuznetsov (different person — an MSU
+  economist, not this registry's ОНФ executive — role/sanctions-regime
+  mismatch caught before linking). DOB-sourced 6%→26%, birthplace 12%→81%,
+  inn_personal 38%→48%. ~70 people remain PII-unsourced, mostly needing
+  per-person verification against already-recorded `aleph_matches` (can't be
+  bulk-linked — those matches are procurement/asset-declaration records, not
+  necessarily documents that state DOB/address, so each needs its underlying
+  document checked before linking, same discipline as the RuPEP batch).
+- **Root-cause bug fixed in `extract_registry.py`**: the `people_add_entities`
+  correction path unconditionally appended a new record and only repointed
+  the lookup dict, leaving the original prose-derived record in the output
+  list too — caused the two duplicate-person-slug warnings
+  (sinelshchikov-andrey-valentinovich, saidov-adil-abukovich). Fixed to merge
+  into the existing record (list fields concatenated without duplicating,
+  notes appended, scalar/dict fields filled only where blank) instead of
+  appending a second record. Verified: people count correctly dropped
+  361→359 live, both merged records retain all data from both sources.
+- **`check_registry.py` warning-noise fix**: 546 of 549 total warnings were
+  the same "identical file content" class, almost all zakupki.gov.ru serving
+  one attachment under multiple filenames (expected, benign) — this was
+  burying the 3 warnings that actually needed a human look. Collapsed the
+  zakupki-attachment case to one summary line (full path list still
+  included, just not one warning line each) and kept non-zakupki duplicates
+  as individually-flagged warnings. Total warning count: 549 → 9, of which 7
+  are now real (small, genuinely worth a glance) non-zakupki duplicate-file
+  cases and 27 (now visible instead of buried) unsourced history-entry
+  placeholders.
+
+**Left for user judgment, not attempted autonomously:**
+- Committing the 73 uncommitted files — CLAUDE.md's own git policy requires
+  an explicit user request, not inferred from "fix what you can."
+- Remaining ~70 PII-unsourced people (Aleph-match verification, one person
+  at a time — real work, not mechanical).
+- Whether to restructure index.html's opening around the Ushkuynik SVO
+  contract (currently documented in full but mid-paragraph, not in an
+  opening/hook position) — blocked on the still-undecided Phase 1 §1 hook
+  section (Russian draft sitting in an Artifact preview, not yet approved).
+- `state_programs[]`/`domain_history[]`/`marketing_claims[]` population —
+  needs actual research passes, not just registry hygiene.

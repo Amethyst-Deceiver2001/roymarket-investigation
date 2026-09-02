@@ -2966,6 +2966,7 @@
       "source_id": "s0434"
     },
     "trademarks_summary": "187 trademark filings on record, earliest 19960212 — see s0433 for full list, not enumerated individually as noise for this investigation's purpose.",
+    "notes": "zakupki supplierTitle-search footprint reviewed 2026-08-30 before committing to a 200-card fetch-contracts pull (861 hits, largest single card-coverage gap in the registry): sampled the archived search-results page (data/sources/ZAKUPKI_7744000912_20260829_supplier-search.html) rather than pulling cards — the visible customer/subject pattern is overwhelmingly regional/municipal government credit-facility contracts (\"Услуги по предоставлению кредита\"/\"Оказание финансовых услуг по предоставлению кредитных ресурсов\" to city/regional finance departments — Пенза, Карелия, Волгоградская обл., Ярославская обл., Якутск, etc.), i.e. PSB's routine public-sector lending business as a competitive-bid winner, not its ЦБСТ/defense-financing role. Deliberately NOT pursuing the full 200-card pull for this reason — same triage logic already applied to АО ПК «Азимут»'s facility-services footprint. A defense-relevant subset may still exist among the 811 unsampled hits; revisit if a specific need arises rather than blanket-completing this gap.",
     "_corrected": [
       "Phase 1 verification pass, 2026-08-22: this record had no ИНН/ОГРН at",
       "all (only a BIC). A one-off egrul.nalog.ru lookup by name resolves it",
@@ -3319,7 +3320,26 @@
     "trademarks": [],
     "patents": [],
     "foreign_components": [],
-    "government_contracts": [],
+    "government_contracts": [
+      {
+        "reg_number": "1770982726625001086",
+        "customer": "ФГКУ «Дирекция по строительству и эксплуатации объектов Росграницы»",
+        "value_rub": 227500000.0,
+        "date": "2025-07-18",
+        "items": "Оснащение подъездного участка автодороги к автомобильному пункту пропуска Верхний Ларс Комплексом инженерно-технического обеспечения контроля очередности проезда грузовых транспортных средств («Системы резервирования времени пересечения транспортными средствами государственной границы»)",
+        "note": "Install location: Респ. Северная Осетия — Алания, Верхний Ларс — Russia's border checkpoint into Georgia. A vehicle-queue-control/border-crossing-management system, not UAV hardware, but confirms this ЦБСТ-network entity does state border-infrastructure work for the federal border-construction directorate.",
+        "source_id": "s5217"
+      },
+      {
+        "reg_number": "1770982726625001743",
+        "customer": "ФГКУ «Дирекция по строительству и эксплуатации объектов Росграницы»",
+        "value_rub": 131350000.0,
+        "date": "2025-12-24",
+        "items": "Дооснащение Комплекса инженерно-технического обеспечения контроля очередности проезда грузовых транспортных средств на подъездном участке к пункту пропуска Верхний Ларс",
+        "note": "Follow-on/expansion contract to reg 1770982726625001086 at the same Верхний Ларс border-crossing site, same customer, ~5 months later.",
+        "source_id": "s5218"
+      }
+    ],
     "workforce_history": [],
     "state_programs": [],
     "marketing_claims": [],
@@ -3344,6 +3364,7 @@
       "ids": "1227700802878",
       "role": "Majority owner of Аэротехальянс. Wholly owned by ФГУП «ЗащитаИнфоТранс» (Ministry of Transport, 100%, ₽10k stake). Holds active FSB cryptography and FSTEC classified-information licences; OKVEDs cover transport-infrastructure vulnerability assessment and public-order activity. Its own FY2023–25 filings (pulled directly) show retained earnings growing ₽5.2m → ₽47.1m → ₽89.3m and headcount rising from 30 to 63 staff; its own FY2025 pояснительная записка states net profit rose 41.55% and reports opening two new field branches in 2025 — ОП «Верхний Ларс» and ОП «Тагиркент-Казмаляр», both sited at international land border checkpoints (Russia–Georgia and Russia–Azerbaijan respectively) — consistent with its stated transport-infrastructure-vulnerability-assessment OKVED and its classified-information licensing."
     },
+    "notes": "zakupki signatory review 2026-08-31/09-01: a new \"по Уставу\" hit dated 18.11.2024 gives the signatory as \"Мирошниченко Павел Алексеевич\" (patronymic Алексеевич), reg 1770982726624001098 -- but the existing 2022-11-28 director_history entry gives \"Мирошниченко Павел Александрович\" (patronymic Александрович). Same surname+given name, patronymic mismatch close in time -- read as a likely transcription/OCR error on one of the two records, not a second person, per the project standing OCR-consistency discipline. Not wired as a new director_history entry pending a raw-document recheck.\n\nРосгранстрой four-border cross-reference (2026-09-01): АО «ПМЦ «Авангард»» and ООО «ЗИТ.ЦИ» (Отраслевой центр импортозамещения) -- two separate ЦБСТ-network entities, no direct corporate ownership tie between them (ЗИТ.ЦИ is 100%-owned by ФГУП «ЗащитаИнфоТранс» Минтранса, source s0219) -- both hold direct government_contracts[] with the same federal customer, ФГКУ «Дирекция по строительству и эксплуатации объектов Росграницы» (Росгранстрой) or its regional branches, covering FOUR separate international/interregional border-crossing points:\n  1. Хасан (China/North Korea border) -- ao-pmts-avangard, reg 1770982726625001602, ₽2,969,227,175, dated 2025-12-08, \"Техническое оснащение комплексами технических средств безопасности, связи и специального контроля\" (security/communications/special-control equipment), status \"Исполнение\" (in progress), source s3054.\n  2. Ивангород (Estonia border) -- ao-pmts-avangard, reg 1770982726623000834, ₽214,862,173, Санкт-Петербургский филиал Росгранстроя.\n  3. Калининград/Храброво (air border, Kaliningrad -- EU/NATO-adjacent) -- ao-pmts-avangard, reg 1770982726619000830, ₽31,790,000, Калининградский филиал, \"в рамках ГОЗ\" (state defense order), source s3046.\n  4. Верхний Ларс (Georgia border) -- ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya, reg 1770982726625001086 (₽227,500,000) + reg 1770982726625001743 follow-on (₽131,350,000), same customer.\nSame federal customer, four geographically distinct borders (Northeast Asia, EU/Baltic, Kaliningrad exclave, South Caucasus), two ЦБСТ-network suppliers -- reads as a genuine institutional pattern (border-security-technology work is this segment of the network's actual specialty with the state), not a coincidence of overlapping bids. Worth its own cross-reference line in the published narrative (docs/index.html) rather than staying scattered across two separate entity profile pages -- not yet written into index.html, flagged here as the next step if/when that section gets drafted.",
     "_corrected": [
       "Full signed ЕГРЮЛ extract read end-to-end (s0219, ul-1227700802878-20260814212230.pdf, 13pp, pulled 14.08.2026). Full legal name ООО «Отраслевой центр импортозамещения», registered 28.11.2022, ₽10,000 charter capital, GD Мирошниченко Павел Александрович (personal ИНН 532117914080) since registration. OWNERSHIP FINDING: sole 100% participant is ФГУП «ЗащитаИнфоТранс Министерства транспорта Российской Федерации» (ИНН 7708083600, ОГРН 1027739499567) — a FEDERAL STATE UNITARY ENTERPRISE of the Russian Ministry of Transport, unredacted. This is a direct ministry-level state ownership edge, not a private holding: an 'industry import-substitution centre' wholly owned by the transport ministry's own information-security enterprise. Also fills this entity's previously missing ИНН (9726029133, read from the extract's tax-registration block, поз. 42; КПП 772601001).",
       "SELF-CORRECTION, same session: this entity's ИНН was first written as 9725085418, which was inferred rather than read off the document. The extract's tax-registration block states 9726029133. The wrong value was replaced before any downstream use. Logged rather than silently fixed — a wrong identifier in a sanctions submission is a serious defect, and the check that caught it (read the field, don't reconstruct it) is the one that matters."
@@ -3710,7 +3731,16 @@
     ],
     "patents": [],
     "foreign_components": [],
-    "government_contracts": [],
+    "government_contracts": [
+      {
+        "customer": "Министерство обороны Российской Федерации",
+        "reg_number": "1770425226115000899",
+        "date": "2015",
+        "value_rub": 789200,
+        "items": "Only mil-relevant contract among this entity's 76 zakupki hits (₽431.7m total, overwhelmingly civilian) — a small direct МО supply; entity is tracked here as a money-layer node, not primarily as a hardware supplier.",
+        "source_id": "s3042"
+      }
+    ],
     "workforce_history": [],
     "state_programs": [],
     "marketing_claims": [],
@@ -3742,6 +3772,7 @@
       "ogrn": "1037719000384",
       "source_id": "s0212"
     },
+    "notes": "zakupki footprint reviewed 2026-08-30: 76 of 77 supplierTitle-search hits already have contract cards archived (only 1 card, reg. 1504206041024000005, not yet fetched). Read all 75 unwired cards — customers are overwhelmingly municipal/civilian facility-type work: schools, kindergartens, regional health/education agencies (Калужская, Дагестан, Рязань), environmental-monitoring bodies (Приокское управление Ростехнадзора, ФГБУ «ЦЛАТИ»), and aviation-infrastructure customers (ФГУП «Госкорпорация по ОрВД» ₽77.8m 2017, Федеральное агентство воздушного транспорта ₽29.5m 2016, a flight college). Values range ₽64,535–₽107,100,000. No UAV/defense-specific language in any customer name or contract title. Confirms this entity's commercial activity is generic facility/logistics-services contracting, consistent with its money-layer tier (Azimut-group shareholding relevance, not a products/defense-contracting relevance) — not wiring all 75 as individual government_contracts[] rows since none add ЦБСТ-relevant signal beyond this summary; see data/sources/ZAKUPKI_contract_<regNumber>_*.html for any of the 75 regNumbers if a specific one needs checking later.",
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 5 trademark filing(s) matched by ИНН.",
       "Full signed ЕГРЮЛ extract read end-to-end (s0212, ul-1057746261605-20260814234906.pdf, pulled 14.08.2026). АО Производственная компания «Азимут», registered 16.02.2005, GD Саидов Аскер Казбекович (personal ИНН 054403029570) since 02.12.2014, charter capital ₽2,422,000. As an АО, shareholders are unpublished — registrar is АО «Новый регистратор» (ИНН 7719263354), notably NOT the НРК Р.О.С.Т. used by АО «РОСС», АО «НИИ СТТ» and АО «Технодрон». Primary ОКВЭД 26.20.1 computer manufacture (made primary 18.05.2026), with communications-switching equipment (26.30.11) among the secondaries. Current name recorded only from 24.12.2024 against a 2005 registration — renamed, predecessor name not in this extract. SHARED-ADDRESS FINDING (primary-source, both sides): АО ПК «Азимут» has been registered at 125167, Москва, ал. Нарышкинская, д. 5, стр. 2, помещ. Х ком. №15 этаж 2 since 20.02.2018 (ГРН 9187746144412). ООО «МПТМ», the РОЙ.МАРКЕТ operator, was registered on 22.01.2025 at the SAME building — ал. Нарышкинская, д. 5, стр. 2, помещ. 1/1. Different premises, same строение; each address comes from that entity's own signed ЕГРЮЛ extract. The marketplace operator was incorporated into a building already occupied for seven years by a money-layer entity of this network.",
@@ -4606,7 +4637,40 @@
     "trademarks": [],
     "patents": [],
     "foreign_components": [],
-    "government_contracts": [],
+    "government_contracts": [
+      {
+        "customer": "ФГБОУ ВО «Воронежский государственный технический университет»",
+        "reg_number": "1366202088625000035",
+        "date": "2025",
+        "value_rub": 29883878,
+        "items": "Поставка беспилотных авиационных систем мультироторного типа для проведения научно-исследовательских работ — largest of 3 similar VSTU contracts (also 1366202088624000018 ₽19.18m, 1366202088624000019 ₽10.59m) plus a 4th to Belgorod State Technological University (1312301779325000005, ₽12.99m, UAV-vehicle experimental components) — ₽72.6m total across 4 contracts.",
+        "source_id": "s3376"
+      },
+      {
+        "customer": "ФГБОУ ВО «Белгородский государственный технологический университет им. В.Г. Шухова»",
+        "reg_number": "1312301779325000005",
+        "date": "2025-01-14",
+        "value_rub": 12991860.65,
+        "items": "Routine university-supply contract, no UAV/defense-specific language.",
+        "source_id": "s3372"
+      },
+      {
+        "customer": "ФГБОУ ВО «Воронежский государственный технический университет»",
+        "reg_number": "1366202088624000018",
+        "date": "2024-11-25",
+        "value_rub": 19178947.02,
+        "items": "Routine university-supply contract, no UAV/defense-specific language.",
+        "source_id": "s3374"
+      },
+      {
+        "customer": "ФГБОУ ВО «Воронежский государственный технический университет»",
+        "reg_number": "1366202088624000019",
+        "date": "2024-11-26",
+        "value_rub": 10591051.86,
+        "items": "Routine university-supply contract, no UAV/defense-specific language.",
+        "source_id": "s3375"
+      }
+    ],
     "workforce_history": [],
     "state_programs": [],
     "marketing_claims": [],
@@ -10077,7 +10141,14 @@
     "founders_history": [],
     "charter_capital": null,
     "charter_capital_history": [],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "129085, Москва, вн.тер.г. муниципальный округ Останкинский, б-р Звёздный, д. 19, стр. 1",
+        "as_of": "2026-07-01",
+        "source_id": "s3748",
+        "note": "factAddress per contract XML (regNumber 1780601211726000023) matches the registered address on file (bare 'г. Москва') at street level — fills in the specific street address for the first time."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -10136,7 +10207,16 @@
     "trademarks": [],
     "patents": [],
     "foreign_components": [],
-    "government_contracts": [],
+    "government_contracts": [
+      {
+        "customer": "ФГБОУ ВО «Российский государственный гидрометеорологический университет»",
+        "reg_number": "1780601211726000023",
+        "date": "2026",
+        "value_rub": 12000000,
+        "items": "НИР «Разработка моделей и методов обработки данных в рамках эскизно-технического проекта демонстратора технологии интеллектуального управления и ситуационного моделирования групповых действий БВС в условиях единого информационно-управляющего поля» — swarm-UAV group-control R&D, entity's only zakupki hit.",
+        "source_id": "s3389"
+      }
+    ],
     "workforce_history": [],
     "state_programs": [],
     "marketing_claims": [],
@@ -13808,6 +13888,7 @@
       "principal": "—",
       "notes": "«Алёша» FPV. Shown to Putin personally at the Zapad-2025 exercise, Mulino range."
     },
+    "tier_basis": "EU-sanctioned (15.06.2026) and Switzerland-sanctioned (11.08.2026) as maker of the «Алёша» FPV drone (project name «Аляска»), shown to Putin personally at the Zapad-2025 exercise (Mulino range) — a direct presidential-level demonstration of a sanctioned entity's combat product, not merely a listed OKVED mismatch. GUR components teardown independently confirms an \"Autonomous signaling system\" component match. No documented institutional ЦБСТ tie (accelerator residency, ЦБСТ channel mention) found — included on the strength of the sanctions designation and product evidence alone, consistent with this registry's manufacturer tier generally.",
     "_corrected": [
       "MYSTERY SOLVED (user lead, OpenSanctions): the bare \"«Аляска»\" product-tier stub in this registry resolves to ООО «ИОНОС» (ИНН 6168719068), incorporated 2014, Rostov region -- confirmed via opensanctions.org/entities/NK-7CUX9TWR4j6CY4wVG3R6J2/ (EU sanctioned 15.06.2026, Switzerland 11.08.2026, also listed by France/Monaco/Ukraine) and cross-checked directly against a fresh EGRUL extract: sole founder/director Ионов Антон Александрович, personal ИНН 616899150213, matches exactly.",
       "full EGRUL extract pulled directly 23.08.2026 (ul-1146196001621-20260823145756.pdf).",
@@ -14069,6 +14150,7 @@
     "_origin_extra": [
       "brief:prose"
     ],
+    "notes": "zakupki footprint reviewed 2026-08-30 (flagged as a high-value candidate by zakupki_coverage.py's zero-wired heuristic): dominant cluster is ₽2.48bn/24 contracts with МОСКОВСКИЙ ГОРОДСКОЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ (Moscow city health-insurance fund) — civilian healthcare IT services, not ЦБСТ/defense-relevant. Resolves the high-value flag; not pursuing further zakupki work here.",
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 2 trademark filing(s) matched by ИНН.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
@@ -17524,6 +17606,7 @@
       "principal": "—",
       "notes": "«Сова» GPS/GNSS-denied autonomous navigation system for БпЛА, computer-vision-based, matches onboard camera imagery against satellite maps (03.08.2026). Not yet EGRUL-matched."
     },
+    "tier_basis": "«СОВА» is a GPS/GNSS-denied visual-navigation module for БпЛА; the entity's own pitch deck (s0565) names «Пиранья» (СКБ Пиранья, already ЦБСТ-network verified) and «БТ-Групп «Боевые Технологии»» as named partners — a direct named-partner link to a confirmed network resident, not yet promoted to a structured cbst_tie entry. Registered in the Сириус federal territory technopark (a purpose-built defence-tech SEZ), 25.11.2025.",
     "_corrected": [
       "User-identified lead confirmed: VA Technologies (va-technologies.ru) is the product/brand site for ООО «Конструкторское бюро СОВА» (ИНН 2378001237, ОГРН 1252300058515) — the site's own product, «СОВА», is a direct name+description match to the pitch deck's \"SOVA\" navigation module, and the EGRUL extract's sole founder/director, Сотов Артём Александрович, matches the pitch deck's named founder \"Артём Сотов\" exactly.",
       "Full EGRUL extract read directly (s0566, ul-1252300058515-20260823193453.pdf): confirms ИНН/ОГРН/100%-founder-director/address in the Сириус federal territory, matching the founder's own stated НТУ Сириус education background.",
@@ -18719,6 +18802,7 @@
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0778)."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0110)",
+    "notes": "zakupki footprint reviewed 2026-08-30 via zakupki_customer_clusters.py: ₽16.46bn (17 contracts, Минпромторг) + ₽1.63bn (18 contracts, Минобороны) among unwired cards — confirms this is a large, already-well-documented state defense prime with an enormous zakupki footprint by nature (already tier=plumbing). Not wiring individually per the established triage principle for entities of this scale.",
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
       {
@@ -19009,6 +19093,30 @@
     "okved_mismatch": null,
     "director": "Бессонов Сергей Николаевич",
     "director_history": [
+      {
+        "value": "Чижов Максим Сергеевич",
+        "as_of": "2021-03-16",
+        "source_id": "s4515",
+        "note": "Signed «действующего на основании Устава» on a zakupki government contract (reg 2770422175322000063) as ООО «Аэромакс»'s own director."
+      },
+      {
+        "value": "Рыков Андрей Игоревич",
+        "as_of": "2022-11-08",
+        "source_id": "s4534",
+        "note": "Signed on a zakupki government contract (reg 2526029455221000021) as ООО «Аэромакс»'s own supplier-side representative, по доверенности."
+      },
+      {
+        "value": "Шевченко Андрей Юрьевич",
+        "as_of": "2023-08-02",
+        "source_id": "s4482",
+        "note": "Signed «действующего на основании Устава» on a zakupki government contract (reg 1772231995223000867) as ООО «Аэромакс»'s own director."
+      },
+      {
+        "value": "Сазанова Алиса Алексеевна",
+        "as_of": "2024-09-06",
+        "source_id": "s4499",
+        "note": "Signed «действующего на основании Устава» on a zakupki government contract (reg 1772231995224000778) as ООО «Аэромакс»'s own director."
+      },
       {
         "as_of": "2025-09-11",
         "note": "Генеральный директор, личный ИНН 644914040799, ГРН 2257721375239, 11.09.2025",
@@ -19748,6 +19856,12 @@
     "director": "Синельщиков Андрей Валентинович",
     "director_history": [
       {
+        "value": "Абрамченков Николай Григорьевич",
+        "as_of": "2015-05-26",
+        "source_id": "s1965",
+        "note": "Signed contract 2771376023015000009 (ГБУ г. Москвы «Система 112») \"действующий на основании Устава\" — no доверенность number given, the standard indicator of the единоличный исполнительный орган at time of signing. Surfaced via scripts/zakupki_signatory_diff.py; predates the current director_history entry (Синельщиков Андрей Валентинович, as_of 2026-08-24 per egrul.nalog.ru) by ~11 years, no overlap conflict."
+      },
+      {
         "value": "Синельщиков Андрей Валентинович",
         "as_of": "2026-08-24",
         "source_id": "s0115",
@@ -19786,7 +19900,7 @@
         "reg_number": "0173100012414000131",
         "date": "2014-11-07",
         "basis": "Электронный аукцион",
-        "value_rub": null,
+        "value_rub": 472472,
         "source_id": "s1934"
       },
       {
@@ -19795,7 +19909,7 @@
         "reg_number": "0373200001913000011",
         "date": "2012-12-28",
         "basis": "Открытый конкурс",
-        "value_rub": null,
+        "value_rub": 6600000,
         "source_id": "s1441"
       },
       {
@@ -19804,7 +19918,7 @@
         "reg_number": "0373200001913000103",
         "date": "2013-03-12",
         "basis": "Открытый конкурс",
-        "value_rub": null,
+        "value_rub": 17020200,
         "source_id": "s1441"
       },
       {
@@ -19833,7 +19947,7 @@
         "reg_number": "0373200608013000007",
         "date": "2013-09-13",
         "basis": "Открытый аукцион в электронной форме",
-        "value_rub": null,
+        "value_rub": 13149372,
         "source_id": "s1441"
       },
       {
@@ -20598,6 +20712,12 @@
         "note": "Генеральный директор per the signature block of Государственный контракт № 26/06/19 (действующего на основании Устава) — predates the current director Афанасьев Игорь Константинович. Same person already named as inventor on this entity's patent RU191888U1 (s1170), previously unexplained; this contract supplies the link."
       },
       {
+        "value": "Бауер Пётр Роландович",
+        "as_of": "2020-05-28",
+        "source_id": "s3391",
+        "note": "Signed contract 2254020256620000035 (Информационно-технологический центр Приморского края) \"действующий на основании Устава\" — no доверенность number given, the standard indicator of the единоличный исполнительный орган at time of signing. Surfaced via scripts/zakupki_signatory_diff.py. Fills the previously-undocumented gap between Саитов Ренат Фаритович (as_of 2019-05-31) and Афанасьев Игорь Константинович (as_of 2025-08-29) in this entity's director_history."
+      },
+      {
         "value": "Афанасьев Игорь Константинович",
         "as_of": "2025-08-29",
         "source_id": "s0520",
@@ -20961,7 +21081,14 @@
     "founders_history": [],
     "charter_capital": null,
     "charter_capital_history": [],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "125171, Москва, вн.тер.г. муниципальный округ Войковский, ш. Ленинградское, д. 16А, стр. 3",
+        "as_of": "2025-08-25",
+        "source_id": "s1873",
+        "note": "factAddress per contract XML (regNumber 2502413084025000058) — fills a previously-empty address field for this entity; same building as ooo-gaskar-integratsiya's postAddress, suggesting a shared office between the two Гаскар entities."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -20989,7 +21116,17 @@
     "trademarks": [],
     "patents": [],
     "foreign_components": [],
-    "government_contracts": [],
+    "government_contracts": [
+      {
+        "reg_number": "2502413084025000058",
+        "customer": "ГКУ МО «Московский областной центр информационно-коммуникационных технологий»",
+        "value_rub": 25154400.0,
+        "date": "2025-11-01",
+        "items": "Оказание услуг по предоставлению неисключительных прав (лицензий) на ПО цифровизации объектов капитального строительства, его установке и настройке",
+        "note": "Delivery/install location: обл. Московская, г.о. Красногорск. Civilian regional-government IT licensing contract.",
+        "source_id": "s3399"
+      }
+    ],
     "workforce_history": [],
     "state_programs": [],
     "marketing_claims": [],
@@ -22301,7 +22438,14 @@
     "founders_history": [],
     "charter_capital": null,
     "charter_capital_history": [],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "173003, Новгородская область, г.о. Великий Новгород, г. Великий Новгород, ул. Лазаревская, д. 11, помещ. 105",
+        "as_of": "2025-12-18",
+        "source_id": "s3786",
+        "note": "factAddress per contract XML (regNumber 2532103798925000183). Cross-checked against rusprofile.ru (s3930, captured 2026-08-30): matches this entity's current юридический (registered) address exactly -- corroboration, not a distinct facility. Fills a previously-empty address field for this entity."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -22336,7 +22480,24 @@
     "trademarks": [],
     "patents": [],
     "foreign_components": [],
-    "government_contracts": [],
+    "government_contracts": [
+      {
+        "customer": "ГОКУ «Управление защиты населения от ЧС и по обеспечению пожарной безопасности Новгородской области»",
+        "reg_number": "2532103798924000157",
+        "date": "2024",
+        "value_rub": 4250000,
+        "items": "Поставка беспилотных летательных аппаратов для нужд проведения специальной военной операции и выполнения специальных задач по обеспечению обороны и безопасности государства — contract text explicitly states SVO purpose.",
+        "source_id": "s3402"
+      },
+      {
+        "customer": "ГОКУ «Управление защиты населения от ЧС и по обеспечению пожарной безопасности Новгородской области»",
+        "reg_number": "2532103798925000183",
+        "date": "2025",
+        "value_rub": 3110000,
+        "items": "Поставка беспилотных летательных аппаратов и станций для их управления для нужд проведения специальной военной операции и выполнения специальных задач по обеспечению обороны и безопасности государства.",
+        "source_id": "s3403"
+      }
+    ],
     "workforce_history": [],
     "state_programs": [],
     "marketing_claims": [],
@@ -22351,7 +22512,12 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "source_id": "s3403",
+        "text": "Красильников Павел Владимирович signed government contract 2532103798925000183 (ГОКУ «Управление защиты населения от ЧС... Новгородской области», 18.12.2025) \"действующий на основании Устава\" -- no доверенность number given, ordinarily the signature of the sole executive body. This does not necessarily mean a director change: this entity is an АНО, whose charter can name more than one officer (e.g. a separate president/executive director) with устав-level signing authority distinct from the director on file (Чадаев Алексей Викторович, as_of 2026-08-24 per egrul.nalog.ru). Not wired to director_history pending a dated EGRUL extract or the actual Устав text clarifying which office Красильников held. Surfaced via scripts/zakupki_signatory_diff.py."
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": true,
@@ -22366,7 +22532,7 @@
         "source_id": null
       }
     ],
-    "notes": "Sibling entity within the «Ушкуйник» group, same brand/leadership umbrella as the product-bearing entity npts-ushkuynik (ООО «Ушкуйник» — «Князь Вандал Новгородский» drone). Not independently manufacturing a separate product line — no products[] expected here; verify against npts-ushkuynik for the group's actual catalog rather than treating an empty products[] on this record as a gap.",
+    "notes": "HEADLINE FINDING: this entity is a direct, sole-source government supplier of drones the contract itself states are for the war. Two zakupki.gov.ru contracts (reg 2532103798924000157, ₽4.25m, 21.11.2024; reg 2532103798925000183, ₽3.11m, 18.12.2025) with a Новгородская область regional civil-defence agency state the contract subject verbatim: \"Поставка беспилотных летательных аппаратов ... для нужд проведения специальной военной операции и выполнения специальных задач по обеспечению обороны и безопасности государства\" -- not press paraphrase, the government contract document's own operative language. Both are sole-supplier awards under 44-ФЗ ст.93 ч.1 п.2 (supplier designated by presidential decree/order, not competitively selected). This is the strongest single piece of documentary evidence in this investigation that a named ЦБСТ-network entity is a government-acknowledged war supplier -- see docs/index.html main Ushkuynik section for full framing.\n\nSibling entity within the «Ушкуйник» group, same brand/leadership umbrella as the product-bearing entity npts-ushkuynik (ООО «Ушкуйник» — «Князь Вандал Новгородский» drone). Not independently manufacturing a separate product line — no products[] expected here; verify against npts-ushkuynik for the group's actual catalog rather than treating an empty products[] on this record as a gap.",
     "_corrected": [
       "User-flagged 2026-08-23: sibling/admin company to main npts-ushkuynik, not a separate product line.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0748).",
@@ -22821,7 +22987,14 @@
         "note": "from brief:prose, unverified"
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "195277, Санкт-Петербург, вн.тер.г. муниципальный округ Финляндский округ, ул. Чугунная, д. 14, литера П, помещ. 2-Н",
+        "as_of": "2025-12-29",
+        "source_id": "s3719",
+        "note": "factAddress per contract XML (regNumber 1770982726625001602) matches the registered address on file exactly — corroborates, no new facility."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -22900,6 +23073,80 @@
         "value_rub": 157173645,
         "items": "Развитие технической инфраструктуры фотовидеофиксации нарушений ПДД на перекрёстках в Центральном районе Санкт-Петербурга -- civilian traffic-camera infrastructure, unrelated to the border-security work above.",
         "source_id": "s3102"
+      },
+      {
+        "customer": "Федеральное бюджетное учреждение «Служба морской безопасности»",
+        "reg_number": null,
+        "date": "2011-02-22 to 2012-07-31",
+        "value_rub": 154516232,
+        "items": "AGGREGATE — 5 contracts, found 2026-08-30 via zakupki_customer_clusters.py among previously-unwired archived cards. Not wired individually.",
+        "source_id": "s3003"
+      },
+      {
+        "customer": "Федеральное государственное учреждение «Администрация морского порта»",
+        "reg_number": null,
+        "date": "2014-05-26 to 2014-06-02",
+        "value_rub": 116612464,
+        "items": "AGGREGATE — 5 contracts, found 2026-08-30 via zakupki_customer_clusters.py. Not wired individually.",
+        "source_id": "s3008"
+      },
+      {
+        "customer": "Администрация Губернатора Санкт-Петербурга",
+        "reg_number": null,
+        "date": "2013-03-01 to 2015-12-31",
+        "value_rub": 106072782,
+        "items": "AGGREGATE — 28 contracts, found 2026-08-30 via zakupki_customer_clusters.py. Not wired individually.",
+        "source_id": "s2975"
+      },
+      {
+        "customer": "Санкт-Петербургское ГКУ «Городской мониторинговый центр» (название уточняется)",
+        "reg_number": null,
+        "date": "2021-06-07 to 2021-08-17",
+        "value_rub": 31094302,
+        "items": "AGGREGATE — 3 contracts, found 2026-08-30 via zakupki_customer_clusters.py. Not wired individually.",
+        "source_id": "s3099"
+      },
+      {
+        "customer": "Служба охраны по Северо-Западному федеральному округу Федеральной службы охраны (ФСО)",
+        "reg_number": null,
+        "date": "2011-11-29 to 2014-12-01",
+        "value_rub": 29296929,
+        "items": "AGGREGATE — 13 contracts, found 2026-08-30 via zakupki_customer_clusters.py. FSO (federal protective service) customer relationship not previously documented for this entity — flagged as notable given Avangard's already-established border-security/в-ч-43753 profile. Not wired individually.",
+        "source_id": "s2967"
+      },
+      {
+        "reg_number": "1770982726619000830",
+        "customer": "ФГКУ «Дирекция по строительству и эксплуатации объектов Росграницы» (Калининградский филиал)",
+        "value_rub": 31790000.0,
+        "date": "2019",
+        "items": "Техническое перевооружение воздушного пункта пропуска через государственную границу Российской Федерации Калининград (Храброво) для нужд Калининградского филиала ФГКУ Росгранстрой (в рамках ГОЗ) -- technical re-equipment of Kaliningrad's Khrabrovo airport border checkpoint, explicitly within the state defense order (ГОЗ) framework.",
+        "note": "A THIRD Russian international border crossing this entity has done security/technical work at, alongside the already-wired ₽2.97bn Хасан (China/NK border) contract and (via ooo-zit-tsi, a different entity, same customer) the Верхний Ларс (Georgia border) contracts -- Kaliningrad/Khrabrovo is an air border checkpoint in an EU/NATO-adjacent exclave. Part of the same 5-contract, ₽82,674,782 combined Росгранстрой cluster (2024-12-02–2025-07-23 per the other 4 regs) -- this one specific reg is dated 2019 and pulled out for its distinctive, explicitly-ГОЗ-marked subject.",
+        "source_id": "s3046"
+      },
+      {
+        "reg_number": "1770982726625001093",
+        "customer": "ФГКУ «Дирекция по строительству и эксплуатации объектов Росграницы»",
+        "value_rub": 51208000.0,
+        "date": "2025",
+        "items": "Выполнение работ по разработке проектной документации на техническое оснащение объекта «Автомобильный пункт пропуска через государственную границу Российской Федерации Хасан, Приморский край» -- design-documentation work for the Хасан crossing's technical outfitting, i.e. the planning phase preceding (or a separate contract from) the already-wired ₽2.97bn Хасан equipment contract.",
+        "note": "Confirms ao-pmts-avangard's relationship with Росгранстрой at Хасан spans both design and equipment-delivery phases, not a single contract.",
+        "source_id": "s3053"
+      },
+      {
+        "customer": "ФГУП «Росморпорт»",
+        "reg_number": "1770235245417000408",
+        "date": "2017-08-02",
+        "value_rub": 129524912.4,
+        "items": "Выполнение работ по оснащению и обустройству морского пункта пропуска через государственную границу Российской Федерации -- outfitting/equipping a sea border checkpoint. A fifth distinct border-crossing-type contract for this entity (after Хасан, Ивангород, Храброво and, via ЗИТ.ЦИ, Верхний Ларс), and a fifth distinct federal customer for border-security work (Росморпорт, not Росгранстрой) -- confirms the border-security specialisation extends beyond the single Росгранстрой relationship already documented. Found 2026-09-01 via zakupki_customer_clusters.py non-recurring-tail review.",
+        "source_id": "s3041"
+      },
+      {
+        "customer": "Пограничное управление Федеральной службы безопасности Российской Федерации по городу Санкт-Петербургу и Ленинградской области",
+        "reg_number": null,
+        "date": "2011-2014 (3 contracts, 18.07.2011-08.07.2014)",
+        "value_rub": 36078918,
+        "items": "AGGREGATE -- 3 contracts (0372100000111000108 ₽30,252,500, КТРУ 7522000 \"Услуги в области обороны\"; 0372100000111000110 ₽2,587,000, КТРУ 7523070 \"Услуги, связанные с охраной государственных границ\"; 0372100000114000109 ₽3,239,418) with an FSB regional border-guard directorate directly, distinct from the civil-infrastructure Росгранстрой contracts documented elsewhere -- this is FSB Пограничные войска (border troops) procurement, explicitly coded as \"services related to protecting state borders\" on one of the three cards. Found 2026-09-01 via zakupki_customer_clusters.py non-recurring-tail review, not individually wired.",
+        "source_id": "s2997"
       }
     ],
     "workforce_history": [],
@@ -22920,6 +23167,10 @@
       {
         "source_id": null,
         "text": "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): confirmed match via avangard-pmc.ru (ИНН 7804302798/ОГРН 1047855051892 stated directly on the site's contacts page, matching registry exactly). INDUSTRY MISMATCH for UAV/EW specifically -- this is a physical/perimeter security-systems integrator (~₽3bn annual revenue) working with FSB/FSO facilities, Транснефть, Лукойл, seaports, nuclear-related sites, presidential residences, border checkpoints. Not radio-electronics or drones. Candidate for tier reclassification to adjacent (sensitive-sector contractor) unless a UAV-specific tie is separately established."
+      },
+      {
+        "text": "Хасан border-crossing contract's Technical Assignment (Приложение №1 к гос. контракту РГС03-146-02/25) names ФГКУ «Войсковая часть 43753» (FSB) as the 'экспертная организация' overseeing the project — not yet its own registry entry. Also references a SEPARATE, earlier contract № РГС05-62-02/25 (23.07.2025) under which Avangard produced the проектная документация (design docs) for this same Хасан project — not yet found/matched in our zakupki scan (may use a different notice number/registry search path than the construction contract). Project work window: contract signing through 31.03.2027. The TЗ also refers to the entity once as 'ЗАО «ПМЦ «Авангард»»' (old pre-2014 legal-form designation) rather than 'АО' — likely just boilerplate reuse in the document, not confirmed evidence of an actual legal-form/name change; flagged, not asserted.",
+        "source_id": "s3720"
       }
     ],
     "sources": [],
@@ -22933,6 +23184,7 @@
       "name": "АО ВТБ Регистратор",
       "source_id": "s0448"
     },
+    "notes": "zakupki footprint substantially broader than the border-security/в-ч-43753 profile previously documented: customer-cluster analysis 2026-08-30 surfaced ~₽519m across 6 additional recurring government customers (Служба морской безопасности, Администрация морского порта, Администрация Губернатора СПб, ФГКУ Дирекция по строительству, СПб городской мониторинговый центр, ФСО Северо-Западный округ) spanning 2011-2025 — this entity does substantial infrastructure/security-adjacent contracting across multiple federal/regional agencies, not just the one border-construction project already documented.\n\nzakupki cluster review 2026-09-01: remaining 87 unwired archived cards reviewed by customer cluster. Wired 6 aggregate/individual entries: Служба морской безопасности (₽154.5m), Новороссийск port administration (₽116.6m), SPb Governor's Administration incl. a Smolny CCTV-system contract (₽106.1m/28 contracts), two more Росгранстрой border-crossing contracts (Калининград/Храброво airport checkpoint, explicitly ГОЗ-marked, ₽31.79m; Хасан design-documentation phase, ₽51.2m -- on top of the already-wired ₽2.97bn Хасан equipment contract), and ФСО Северо-Запад (₽29.3m/13 contracts). Remaining ~25 non-recurring cards not individually wired.\n\nРосгранстрой four-border cross-reference (2026-09-01): АО «ПМЦ «Авангард»» and ООО «ЗИТ.ЦИ» (Отраслевой центр импортозамещения) -- two separate ЦБСТ-network entities, no direct corporate ownership tie between them (ЗИТ.ЦИ is 100%-owned by ФГУП «ЗащитаИнфоТранс» Минтранса, source s0219) -- both hold direct government_contracts[] with the same federal customer, ФГКУ «Дирекция по строительству и эксплуатации объектов Росграницы» (Росгранстрой) or its regional branches, covering FOUR separate international/interregional border-crossing points:\n  1. Хасан (China/North Korea border) -- ao-pmts-avangard, reg 1770982726625001602, ₽2,969,227,175, dated 2025-12-08, \"Техническое оснащение комплексами технических средств безопасности, связи и специального контроля\" (security/communications/special-control equipment), status \"Исполнение\" (in progress), source s3054.\n  2. Ивангород (Estonia border) -- ao-pmts-avangard, reg 1770982726623000834, ₽214,862,173, Санкт-Петербургский филиал Росгранстроя.\n  3. Калининград/Храброво (air border, Kaliningrad -- EU/NATO-adjacent) -- ao-pmts-avangard, reg 1770982726619000830, ₽31,790,000, Калининградский филиал, \"в рамках ГОЗ\" (state defense order), source s3046.\n  4. Верхний Ларс (Georgia border) -- ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya, reg 1770982726625001086 (₽227,500,000) + reg 1770982726625001743 follow-on (₽131,350,000), same customer.\nSame federal customer, four geographically distinct borders (Northeast Asia, EU/Baltic, Kaliningrad exclave, South Caucasus), two ЦБСТ-network suppliers -- reads as a genuine institutional pattern (border-security-technology work is this segment of the network's actual specialty with the state), not a coincidence of overlapping bids. Worth its own cross-reference line in the published narrative (docs/index.html) rather than staying scattered across two separate entity profile pages -- not yet written into index.html, flagged here as the next step if/when that section gets drafted.\n\nNon-recurring-tail review 2026-09-01: re-scanned all 85 remaining unwired archived cards. Wired two new findings: a ₽129.5m Росморпорт sea-border-checkpoint contract (a fifth border-crossing type/customer beyond the four already documented), and a ₽36.08m/3-contract aggregate with an FSB regional border-guard directorate (Пограничное управление ФСБ по СПб и ЛО), distinct from the civil-infrastructure Росгранстрой relationship. Remaining tail (Росморречфлот smaller contracts, СПб dorozhnoye dvizheniye, ФСО Кавказ, Далёкие Владивосток/Хабаровск Росграница filials, assorted river-basin-administration and municipal cards) stays small-value and routine, not individually wired.",
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 1 trademark filing(s) matched by ИНН.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
@@ -23130,6 +23382,12 @@
     "director": "Анцев Георгий Владимирович",
     "director_history": [
       {
+        "value": "Гоголинский Кирилл Валерьевич",
+        "as_of": "2017-10-02",
+        "source_id": "s3922",
+        "note": "Signed contract 1780902212017000210 (ФГУП ВНИИ метрологии им. Менделеева) \"действующий на основании Устава\" — no доверенность number given, the standard indicator of the единоличный исполнительный орган at time of signing. Surfaced via scripts/zakupki_signatory_diff.py, not yet cross-checked against a dated EGRUL extract; predates the current director_history entry (Анцев Георгий Владимирович, as_of 2026-08-25) by ~9 years, no overlap conflict."
+      },
+      {
         "value": "Анцев Георгий Владимирович",
         "as_of": "2026-08-25",
         "source_id": "s1407",
@@ -23180,6 +23438,11 @@
         "name_ru": "Автоматизированная док-станция (мобильный дронопорт)",
         "description": "Mobile automated dronoport/dock station, от ₽26,000,000. Listed alongside БВС ВТ-440м and БВС ВТ-30Е on this entity's налетай.рф storefront; not previously in products[].",
         "source_id": "s2630"
+      },
+      {
+        "name_ru": "«Характер-К»",
+        "description": "Корабельная гидрометеорологическая станция (naval shipboard hydrometeorological station), КОД 177166 — supplied to МО РФ under gov. contract № РК/1/04/3/0208/2014 (reg. 0173100004514000947, ₽96,393,305.55, 2014-2015). A военно-морской/naval-fit product line distinct from this entity's better-documented UAV/radar work — found only by reading the fetch-documents attachment in full.",
+        "source_id": "s2712"
       }
     ],
     "financials": [],
@@ -23343,7 +23606,7 @@
         "reg_number": "0173100009511000602",
         "date": "04.08.2009",
         "basis": "Открытый конкурс",
-        "value_rub": null,
+        "value_rub": 45500000,
         "source_id": "s2657"
       },
       {
@@ -23352,7 +23615,7 @@
         "reg_number": "0173100009511000410",
         "date": "09.10.2009",
         "basis": "Открытый конкурс",
-        "value_rub": null,
+        "value_rub": 48500000,
         "source_id": "s2656"
       },
       {
@@ -23361,7 +23624,7 @@
         "reg_number": "0173100009511000713",
         "date": "11.05.2010",
         "basis": "Открытый конкурс",
-        "value_rub": null,
+        "value_rub": 25000000,
         "source_id": "s2658"
       },
       {
@@ -23370,7 +23633,7 @@
         "reg_number": "0173100009511000929",
         "date": "18.05.2010",
         "basis": "Открытый конкурс",
-        "value_rub": null,
+        "value_rub": 103000000,
         "source_id": "s2659"
       },
       {
@@ -23379,7 +23642,7 @@
         "reg_number": "0173100009511000940",
         "date": "28.05.2010",
         "basis": "Открытый конкурс",
-        "value_rub": null,
+        "value_rub": 93000000,
         "source_id": "s2660"
       },
       {
@@ -23388,7 +23651,7 @@
         "reg_number": "0172200002011000053",
         "date": "18.04.2011",
         "basis": "Запрос котировок",
-        "value_rub": null,
+        "value_rub": 495000,
         "source_id": "s2644"
       },
       {
@@ -23397,7 +23660,7 @@
         "reg_number": "0173100004511001960",
         "date": "22.06.2011",
         "basis": "Закупка у единственного поставщика (подрядчика, исполнителя)",
-        "value_rub": null,
+        "value_rub": 19740800,
         "source_id": "s2648"
       },
       {
@@ -23406,7 +23669,7 @@
         "reg_number": "0173100009511001172",
         "date": "07.07.2011",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 154000000,
         "source_id": "s2661"
       },
       {
@@ -23415,7 +23678,7 @@
         "reg_number": "0172200001611000138",
         "date": "23.08.2011",
         "basis": "Запрос котировок",
-        "value_rub": null,
+        "value_rub": 498000,
         "source_id": "s2643"
       },
       {
@@ -23424,7 +23687,7 @@
         "reg_number": "0173100009511001305",
         "date": "26.08.2011",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 63000000,
         "source_id": "s2662"
       },
       {
@@ -23433,7 +23696,7 @@
         "reg_number": "0173100009511002205",
         "date": "18.11.2011",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 90000000,
         "source_id": "s2668"
       },
       {
@@ -23442,7 +23705,7 @@
         "reg_number": "0173100009511001978",
         "date": "28.11.2011",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 74000000,
         "source_id": "s2666"
       },
       {
@@ -23451,7 +23714,7 @@
         "reg_number": "0173100009511001827",
         "date": "02.12.2011",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 134000000,
         "source_id": "s2663"
       },
       {
@@ -23460,7 +23723,7 @@
         "reg_number": "0173100009511001841",
         "date": "05.12.2011",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 54000000,
         "source_id": "s2664"
       },
       {
@@ -23469,7 +23732,7 @@
         "reg_number": "0173100009511002057",
         "date": "06.12.2011",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 84000000,
         "source_id": "s2667"
       },
       {
@@ -23478,7 +23741,7 @@
         "reg_number": "0173100009511001929",
         "date": "07.12.2011",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 54000000,
         "source_id": "s2665"
       },
       {
@@ -23487,7 +23750,7 @@
         "reg_number": "0173100004512000181",
         "date": "24.02.2012",
         "basis": "Открытый аукцион в электронной форме",
-        "value_rub": null,
+        "value_rub": 23385420,
         "source_id": "s2649"
       },
       {
@@ -23496,7 +23759,7 @@
         "reg_number": "0173100009512000115",
         "date": "26.03.2012",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 50000000,
         "source_id": "s2669"
       },
       {
@@ -23505,7 +23768,7 @@
         "reg_number": "0172200002012000045",
         "date": "05.04.2012",
         "basis": "Запрос котировок",
-        "value_rub": null,
+        "value_rub": 490000,
         "source_id": "s2645"
       },
       {
@@ -23514,7 +23777,7 @@
         "reg_number": "0173100004512000279",
         "date": "13.04.2012",
         "basis": "Открытый аукцион в электронной форме",
-        "value_rub": null,
+        "value_rub": 28290000,
         "source_id": "s2650"
       },
       {
@@ -23523,7 +23786,7 @@
         "reg_number": "0173100009512000352",
         "date": "05.05.2012",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 102000000,
         "source_id": "s2672"
       },
       {
@@ -23532,7 +23795,7 @@
         "reg_number": "0173100009512000332",
         "date": "14.05.2012",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 104000000,
         "source_id": "s2670"
       },
       {
@@ -23541,7 +23804,7 @@
         "reg_number": "0173100009512000333",
         "date": "14.05.2012",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 117000000,
         "source_id": "s2671"
       },
       {
@@ -23550,7 +23813,7 @@
         "reg_number": "0372100009412000116",
         "date": "07.06.2012",
         "basis": "Открытый аукцион в электронной форме",
-        "value_rub": null,
+        "value_rub": 26750000,
         "source_id": "s2681"
       },
       {
@@ -23559,7 +23822,7 @@
         "reg_number": "0173100009512000766",
         "date": "16.07.2012",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 90000000,
         "source_id": "s2673"
       },
       {
@@ -23568,7 +23831,7 @@
         "reg_number": "0372100006212000015",
         "date": "24.09.2012",
         "basis": "Запрос котировок",
-        "value_rub": null,
+        "value_rub": 330000,
         "source_id": "s2680"
       },
       {
@@ -23578,7 +23841,8 @@
         "date": "28.02.2013",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
         "value_rub": 110000000.0,
-        "source_id": "s2674"
+        "source_id": "s2718",
+        "items": "ОКР «Разработка базовой технологии создания унифицированных электронных модулей обработки сигналов сенсоров веса и движения для большегрузных автомобилей», шифр «Модуль-Перегруз» (гос. контракт от 28.02.2013 № 13411.10068.99.11.017, доп. соглашение №4 sets 2015 funding at ₽64m budget + ₽38m внебюджетных средств). Weigh-in-motion sensor tech for heavy trucks — under Минпромторг Департамент радиоэлектронной промышленности funding, dual-use/civilian-framed application."
       },
       {
         "customer": "Комитет по промышленной политике и инновациям Санкт-Петербурга",
@@ -23586,7 +23850,7 @@
         "reg_number": "0172200006913000007",
         "date": "01.04.2013",
         "basis": "Запрос котировок",
-        "value_rub": null,
+        "value_rub": 490000,
         "source_id": "s2646"
       },
       {
@@ -23595,7 +23859,7 @@
         "reg_number": "0173100004513000376",
         "date": "05.04.2013",
         "basis": "Открытый аукцион в электронной форме",
-        "value_rub": null,
+        "value_rub": 27335329,
         "source_id": "s2651"
       },
       {
@@ -23622,7 +23886,7 @@
         "reg_number": "0173100005713000052",
         "date": "22.07.2013",
         "basis": "Открытый конкурс",
-        "value_rub": null,
+        "value_rub": 9000000,
         "source_id": "s2655"
       },
       {
@@ -23631,7 +23895,7 @@
         "reg_number": "0173100004513001187",
         "date": "04.10.2013",
         "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-        "value_rub": null,
+        "value_rub": 95149090,
         "source_id": "s2652"
       },
       {
@@ -23640,7 +23904,7 @@
         "reg_number": "0372100002113000487",
         "date": "12.11.2013",
         "basis": "Открытый аукцион в электронной форме",
-        "value_rub": null,
+        "value_rub": 352000,
         "source_id": "s2679"
       },
       {
@@ -23649,7 +23913,7 @@
         "reg_number": "0373100006614000002",
         "date": "27.12.2013",
         "basis": "Открытый аукцион в электронной форме",
-        "value_rub": null,
+        "value_rub": 1061000,
         "source_id": "s2682"
       },
       {
@@ -23685,7 +23949,7 @@
         "reg_number": "0172200006914000012",
         "date": "07.04.2014",
         "basis": "Запрос котировок",
-        "value_rub": null,
+        "value_rub": 490000,
         "source_id": "s2647"
       },
       {
@@ -23713,7 +23977,8 @@
         "date": "28.07.2014",
         "basis": "Электронный аукцион",
         "value_rub": 96393305.55,
-        "source_id": "s2654"
+        "source_id": "s2712",
+        "items": "Поставка корабельной гидрометеорологической станции «Характер-К» (КОД 177166) для нужд Министерства обороны РФ, 2014-2015 гг., в рамках гособоронзаказа. Sole-supplier basis п.25 ч.1 ст.93 44-ФЗ (single bid received on the electronic auction). Technical acceptance by 543 военное представительство МО РФ. Signed for the supplier by Заместитель генерального директора по экономике и финансам Нефедов Сергей Михайлович."
       },
       {
         "customer": "КОМИТЕТ ПО ПРОМЫШЛЕННОЙ ПОЛИТИКЕ И ИННОВАЦИЯМ САНКТ-ПЕТЕРБУРГА",
@@ -23731,7 +23996,8 @@
         "date": "14.11.2016",
         "basis": "Открытый конкурс",
         "value_rub": 128500000.0,
-        "source_id": "s2684"
+        "source_id": "s2773",
+        "items": "ОКР «Разработка и освоение серийного производства на отечественном предприятии электронного модуля измерения на основе сорбционно-емкостного датчика влажности и температуры», шифр «Микрос-ИЗ» (гос. контракт № КРИ 06, 2016). Под госпрограмму «Развитие оборонно-промышленного комплекса»."
       },
       {
         "customer": "МИНИСТЕРСТВО ОБОРОНЫ РОССИЙСКОЙ ФЕДЕРАЦИИ",
@@ -23758,7 +24024,8 @@
         "date": "06.12.2017",
         "basis": "Открытый конкурс",
         "value_rub": 165000000.0,
-        "source_id": "s2685"
+        "source_id": "s2780",
+        "items": "ОКР «Разработка базовых ресурсосберегающих и импортозамещающих технологий получения и применения современных композиционных материалов для производства базовых несущих конструкций и функциональных элементов бортовых радиоэлектронных комплексов нового поколения», шифр «Рэбум-м» (гос. контракт № 17208-4442018, 2017). Под подпрограмму 4 госпрограммы «Развитие оборонно-промышленного комплекса» — import-substitution composite-materials R&D for airborne radio-electronics housings."
       },
       {
         "customer": "КОМИТЕТ ПО ПРОМЫШЛЕННОЙ ПОЛИТИКЕ И ИННОВАЦИЯМ САНКТ-ПЕТЕРБУРГА",
@@ -24063,6 +24330,7 @@
     "_raw": {
       "context": "founder that same year, matching the founder-roster date already established via EGRUL. On 15.06.2025, Chadaev also reports the first demonstration flight of a heavy UAV built by АО «НПП «Радар ММС» (ИНН 7814027653, St Petersburg — a well-established Rostec-adjacent precision-guidance/avionics defence contractor, Ministry of Industry as its stated main customer) at Ushkuynik's own test range, timed to the Novgo"
     },
+    "notes": "zakupki signatory review 2026-08-31/09-01: reg 1780902212017000210 (02.10.2017) carries two supplier-side-classified signatures -- Борисов Юрий Иванович, по доверенности, and (separately already in director_history) Гоголинский Кирилл Валерьевич, по Уставу, same date. Борисов signs by delegated power of attorney, not as единоличный исполнительный орган -- reads as a mid-level representative, not an officer, per the PII policy not-a-principal carve-out. Not wired to director_history.",
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1027807560186-20260823133636.pdf). Director title captured as \"ГЕНЕРАЛЬНЫЙ ДИРЕКТОР-ГЕНЕРАЛЬНЫЙ КОНСТРУКТОР\" (combined CEO/Chief Designer title) — a real, recognisable Soviet/Russian defence-industry organisational pattern, consistent with НПП «Радар ММС» being a long-established St Petersburg radar-systems manufacturer, not a shell. АО — shareholders/registrar block and director name did not extract cleanly (same layout quirk); title captured but personal name was not.",
       "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): confirmed match, radar-mms.com. Well-established Soviet-legacy radar/precision-guidance institute; also lists magnetometric systems, power-grid/smart-city IoT, and high-speed vessels (with ЦКБ по СПК им. Р.Е. Алексеева) beyond the UAV/munitions lines above.",
@@ -24668,7 +24936,48 @@
         "note": "Description names this specific part as having the needed dynamic range for the patented sub-sampling receiver method."
       }
     ],
-    "government_contracts": [],
+    "government_contracts": [
+      {
+        "customer": "Министерство обороны Российской Федерации",
+        "reg_number": "1770425226115000509",
+        "date": "2015",
+        "value_rub": 92000000,
+        "items": "Largest of 7 direct МО/Минпромторг contracts found (out of 154 total zakupki hits, ₽437.06m aggregate, mostly routine/municipal); this is the mil-relevant subset — ₽338.92m across МО (₽232.87m) and Минпромторг (₽75m ОКР-style) contracts.",
+        "source_id": "s3214"
+      },
+      {
+        "customer": "Министерство обороны Российской Федерации",
+        "reg_number": "1770425226117000583",
+        "date": "2017",
+        "value_rub": 67633097,
+        "items": "Second-largest direct МО contract for this entity.",
+        "source_id": "s3217"
+      },
+      {
+        "customer": "Министерство обороны Российской Федерации",
+        "reg_number": "0173100004511002671",
+        "date": "2011",
+        "value_rub": 31260000,
+        "items": "Third direct МО contract; entity also has 4 smaller МО contracts (₽20.2m, ₽15.9m, ₽11.87m, ₽6.25m) and one ₽75m Минпромторг contract not itemized here — see mine_zakupki.py --inn 7813491943 for the full breakdown.",
+        "source_id": "s3146"
+      },
+      {
+        "customer": "Министерство обороны Российской Федерации",
+        "reg_number": null,
+        "date": "2013-2016 (9 contracts, 28.03.2013-14.10.2014)",
+        "value_rub": 73028219,
+        "items": "AGGREGATE -- 9 Минобороны contracts, 2013-2016, ₽73,028,219 combined, distinct from the already-itemized 7-contract/₽338.92m mil-relevant subset above. CORRECTED 2026-09-01: this entry was previously duplicated (two near-identical rows, one with reg_number null and one with reg_number 0173100004511002669) -- merged into one. The 0173100004511002669 reg_number was also wrong: that specific contract card is a real but unrelated 2011 Минобороны contract (₽15,900,000, \"Модернизация стационарного автоматизированного комплекса контроля безопасности связи радиолиний КВ диапазона Р-452С\"), already covered by the \"4 smaller МО contracts\" note on the 7-contract subset entry below -- its date (17.03.2011) never matched this aggregate's own claimed 2013-2016 range, which should have been caught at the time. A follow-up zakupki_customer_clusters.py re-scan (2026-09-01) found an 8-contract/₽57,128,219 unwired Минобороны cluster (14.10.2014-28.03.2013) that sums, to the ruble, with the mis-cited ₽15,900,000 contract to this entry's own total (57,128,219 + 15,900,000 = 73,028,219 exactly) -- strong evidence the \"8 new\" contracts are actually 8 of this same already-counted 9-contract cluster, not new money, and were not wired again to avoid double-counting. reg_number left null since no single contract represents the aggregate; the true 9-member reg-number list is not separately recorded.",
+        "source_id": "s3144"
+      },
+      {
+        "customer": "АО «Концерн «Моринформсистема-Агат»»",
+        "reg_number": "1772054420822000003",
+        "date": "2022-03-28",
+        "value_rub": 54900000,
+        "items": "Аппаратно-программный комплекс, моделирующий функционирование автоматизированного канала радиотехнической разведки (АПК) -- a hardware/software complex simulating an automated radio-technical reconnaissance (SIGINT) channel, supplied to Концерн «Моринформсистема-Агат», Russia's principal naval C4I/combat-systems integrator (part of the naval defence-electronics cluster) -- a defence-prime customer relationship, distinct from the routine regional/municipal government supply that makes up most of this entity's zakupki footprint. Found 2026-09-01 via zakupki_customer_clusters.py non-recurring-tail review.",
+        "source_id": "s3218"
+      }
+    ],
     "workforce_history": [],
     "state_programs": [],
     "marketing_claims": [],
@@ -24691,6 +25000,7 @@
     "_raw": {
       "context": " by АНО «НПЦ «Ушкуйник»», «RuDrones. Беспилотные технологии» and the ExpoUAV platform, drawing 60+ representatives from 40+ organisations — Chadaev's own post lists them, including АО «НИИ «Вектор»» (ИНН 7813491943, ГК «Ростех») — a second, direct Rostec-subsidiary participant in this network alongside Атлант Аэро's trust-managed stake, confirmed via Rostec's own site as part of its Роселектроника holding — АО "
     },
+    "notes": "zakupki cluster review 2026-09-01: 157 unwired archived cards reviewed by customer cluster. Wired 1 aggregate entry for the one genuinely large cluster (Минобороны РФ, 9 contracts/₽73.0m/2013-16). The rest of this entity's footprint is a long tail of small-value (thousands to low millions of rubles) routine supply to Leningrad-oblast regional/municipal government, customs posts (Себежская, Кингисеппская таможни) and prosecutors' offices -- consistent with a radio-electronics institute's ordinary communications-equipment business, no ЦБСТ-network-relevant signal found beyond the Минобороны cluster, not individually wired.\n\nNon-recurring-tail review 2026-09-01: re-scanned all 156 remaining unwired archived cards. Caught and fixed a duplicate/mis-cited Минобороны aggregate entry (see that entry's own note for detail). Wired one genuinely new defence-prime customer relationship (Концерн «Моринформсистема-Агат», ₽54.9m SIGINT-simulation complex, 2022). The rest of the tail remains routine Leningrad-oblast regional/municipal/customs/prosecutor supply, consistent with the prior characterisation -- not individually wired.",
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1117847020400-20260823133710.pdf). Command-and-control/monitoring communications-equipment ОКВЭД — a direct defence-electronics match. АО — shareholders/registrar block and director name did not extract cleanly (same layout quirk); the one appointment-record ГРН captured (8187847136425) looks anomalously long for a standard ГРН and may be an OCR/extraction artifact rather than a real registry number — not relied upon.",
       "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): high-confidence match via search cross-reference (nii-vektor.ru tied directly to ИНН 7813491943/ОГРН 1117847020400, director Скорых С.В., matching SPb address) -- direct WebFetch of the site failed, so no product/catalog content extracted, only the institutional self-description (\"выполнение заказов министерств и ведомств... для НИОКР и производства аппаратуры в различных направлениях радиотехники и радиоэлектроники\"). FLAG: registry snapshot shows status \"в процессе реорганизации с 14.05.2026\" -- current operating status needs separate verification.",
@@ -25175,12 +25485,26 @@
     "okved_label": "Производство интегральных электронных схем",
     "okved_mismatch": null,
     "director": null,
-    "director_history": [],
+    "director_history": [
+      {
+        "value": "Семилетов Антон Дмитриевич",
+        "as_of": "2024-12-03",
+        "source_id": "s3702",
+        "note": "First director_history entry for this entity -- signed \"действующего на основании Устава\" as АО НПЦ «ЭЛВИС»'s own Генеральный директор on a Минпромторг zakupki government contract (reg 1770559633924000207, an ОКР contract, шифр «Процессор-ИМА-БК»)."
+      }
+    ],
     "founders": [],
     "founders_history": [],
     "charter_capital": null,
     "charter_capital_history": [],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "124460, Москва, вн.тер.г. муниципальный округ Силино, г. Зеленоград, ул. Конструктора Лукина, д. 14, стр. 14, этаж 6, ком. 6.23",
+        "as_of": "2024-09-30",
+        "source_id": "s3701",
+        "note": "factAddress per contract XML (regNumber 1770559633924000207) — fills a previously-empty address field for this entity; matches its Зеленоград postAddress on the same contract."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -25230,7 +25554,16 @@
         "source_id": "s0789"
       }
     ],
-    "litigation": [],
+    "litigation": [
+      {
+        "type": "Претензия о взыскании пени (Минпромторг России)",
+        "date": "2025",
+        "parties": "Министерство промышленности и торговли РФ (заказчик) против АО «НПЦ «Элвис»» (исполнитель)",
+        "amount_rub": 49127400.04,
+        "description": "Stage 1 of the ₽5.59bn ОКР «Процессор-ИМА-БК» combat-avionics-processor contract (гос. контракт от 03.12.2024 № 2427020100952000000020323/24208.4420029.11.044) was due 02.06.2025; actual completion per the acceptance act was 19.08.2025 — 78 days late. Минпромторг demanded ₽49,127,400.04 in pени (calculated per contract п.10.3: (Stage-1 price ₽1,145,160,840 − ₽0 actually-accepted-at-the-time) × 78 days × 1/300 × 16.5% CBR key rate). Direct evidence of schedule slippage on this entity's flagship defense R&D contract, found only by reading the fetch-documents attachment in full — not captured by contract-card-only extraction.",
+        "source_id": "s3712"
+      }
+    ],
     "licences": [],
     "trademarks": [
       {
@@ -25657,6 +25990,14 @@
         "value_rub": 3000000,
         "items": "НИР «Исследования по обоснованию ключевых требований к элементам доверенной экосистемы БАС для безопасного применения БАС в воздушном пространстве Российской Федерации», шифр «Кибербезопасность - БАС» -- UAV (БАС) trusted-ecosystem cybersecurity requirements research, directly on this brief's core subject.",
         "source_id": "s2892"
+      },
+      {
+        "customer": "Министерство промышленности и торговли Российской Федерации",
+        "reg_number": null,
+        "date": "2013-04-05 to 2015-11-30",
+        "value_rub": 3754607000,
+        "items": "AGGREGATE — 17 separate Минпромторг contracts found 2026-08-30 via scripts/zakupki_customer_clusters.py among previously-unwired but already-archived contract cards, total ₽3,754,607,000 (05.04.2013-30.11.2015). Not wired individually to avoid registry bloat for one recurring customer relationship — see data/sources/ZAKUPKI_contract_<regNumber>_*.html, archived under supplier ИНН 7735582816. Representative contract (reg. 0173100009511001940) cited as source; full regNumber list recoverable via the customer-cluster tool's own output.",
+        "source_id": "s2864"
       }
     ],
     "workforce_history": [],
@@ -25685,6 +26026,13 @@
     "_origin": "brief:prose",
     "_raw": {
       "context": ") — a second, direct Rostec-subsidiary participant in this network alongside Атлант Аэро's trust-managed stake, confirmed via Rostec's own site as part of its Роселектроника holding — АО НПЦ «Элвис» (ИНН 7735582816, a long-established Zelenograd microelectronics/signal-processing firm, itself under active US/Japan/Canada/Switzerland/Ukraine sectoral sanctions), ООО «Тримикс» (3МХ) — explicit, independent corrob"
+    },
+    "bank_details": {
+      "bank": "ПАО «Промсвязьбанк», г. Москва",
+      "account": "40706810800000338887",
+      "corr_account": "30101810400000000555",
+      "bik": "044525555",
+      "source_id": "s3712"
     },
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1127746073510-20260823133724.pdf). Full registered name confirms the \"ЭЛВИС\" brand is an acronym: ЭЛектронные Вычислительно-Информационные Системы. Integrated-circuit-design ОКВЭД is a genuine, specific defence-electronics match — this is a real chip-design house, not a shell. АО — shareholders/registrar block and director name did not extract cleanly (same layout quirk).",
@@ -30680,6 +31028,12 @@
     "director": "Богомолов Андрей Владимирович",
     "director_history": [
       {
+        "value": "Галкин Вадим Сергеевич",
+        "as_of": "2014-10-29",
+        "source_id": "s4253",
+        "note": "Signed «действующего на основании Устава» as ЗАО «НИИ СТТ»s own Генеральный директор on a zakupki government contract (reg 0335100011714000162) — earliest known director on record, predating the existing 2016-05-19 Богомолов Андрей Владимирович entry."
+      },
+      {
         "as_of": "2016-05-19",
         "note": "Генеральный директор since ГРН 2166733235568, 19.05.2016; personal ИНН 673103142483 recorded ГРН 2226700421528, 21.09.2022",
         "source_id": "s0211",
@@ -30737,7 +31091,108 @@
         "source_id": "s0756"
       }
     ],
-    "litigation": [],
+    "litigation": [
+      {
+        "case_number": "А40-257028/2021",
+        "court": "Арбитражный суд г. Москвы",
+        "parties": "Министерство обороны Российской Федерации (истец) против АО «НИИ СТТ» (ответчик)",
+        "claim_amount_rub": 7502,
+        "subject": "Взыскание неустойки (пени) по государственному контракту от 04.12.2020.",
+        "status": "Решение и постановления вынесены (2022); дело прошло апелляцию.",
+        "source_id": "s0029",
+        "note": "One of several МО/МВД penalty claims against this entity found via kad.arbitr.ru; small claim amount, routine contract-performance dispute."
+      },
+      {
+        "case_number": "А40-85482/2020",
+        "court": "Арбитражный суд г. Москвы",
+        "parties": "МВД России (истец) против АО «НИИ СТТ» (ответчик)",
+        "claim_amount_rub": null,
+        "subject": "Взыскание неустойки по государственному контракту №1920188200102007708025358/12-2019/ЦСиСС.",
+        "status": "Определения вынесены (2020).",
+        "source_id": "s0040",
+        "note": "Claim amount not captured from the case-card-level filings pulled; only Определения (procedural orders) archived, not the full decision."
+      },
+      {
+        "case_number": "А40-269303/2025",
+        "court": "Арбитражный суд г. Москвы",
+        "parties": "ФКУ «НПО «Специальная техника и связь» МВД России» (истец) против АО «НИИ СТТ» (ответчик)",
+        "claim_amount_rub": 110687,
+        "subject": "Взыскание неустойки по государственному контракту.",
+        "status": "Решение вынесено 16.12.2025 в пользу истца.",
+        "source_id": "s0038",
+        "note": "A related МВД unit specializing in special equipment/communications, distinct from the main МВД claim above."
+      },
+      {
+        "case_number": "А40-204416/2025",
+        "court": "Арбитражный суд г. Москвы",
+        "parties": "АО «НИИ СТТ» (истец) против АО «Кронштадт» (ответчик)",
+        "claim_amount_rub": 220600000,
+        "subject": "Взыскание задолженности/неустойки — АО «НИИ СТТ» as plaintiff against another EU-sanctioned drone-industry entity, АО «Кронштадт».",
+        "status": "Определения вынесены на протяжении 2025-2026; multiple procedural orders archived, final outcome not confirmed from these alone.",
+        "source_id": "s0022",
+        "note": "Notable pairing: two separately EU-sanctioned entities (НИИ СТТ and Кронштадт, the latter tied to «Аэромакс» elsewhere in this brief) suing each other over money — see index.html narrative for full framing."
+      },
+      {
+        "case_number": "А40-186273/2026",
+        "court": "Арбитражный суд г. Москвы",
+        "parties": "АО «НИИ СТТ» (истец) против АО «Кронштадт» (ответчик)",
+        "claim_amount_rub": 38100000,
+        "subject": "Взыскание задолженности/неустойки — second, smaller suit by НИИ СТТ against Кронштадт.",
+        "status": "Определение вынесено 06.07.2026; case still in progress as of the pull date.",
+        "source_id": "s0021",
+        "note": "Companion case to А40-204416/2025."
+      },
+      {
+        "case_number": "А62-7648/2025",
+        "court": "Арбитражный суд Смоленской области",
+        "parties": "АО «НИИ СТТ» против ООО НПП «Новые технологии телекоммуникаций»",
+        "claim_amount_rub": null,
+        "subject": "Спор о расторжении договора с смоленским субподрядчиком (contract-termination dispute with a Smolensk-region subcontractor).",
+        "status": "Определение вынесено 29.09.2025.",
+        "source_id": "s0042",
+        "note": null
+      },
+      {
+        "case_number": "А40-119204/2019",
+        "court": "Арбитражный суд г. Москвы",
+        "parties": "ФГУП «18 Центральный научно-исследовательский институт» Минобороны России (истец, ОГРН 1037700091736) против АО «НИИ СТТ» (ответчик)",
+        "claim_amount_rub": 1230000,
+        "subject": "Взыскание неустойки по контракту 2017 года — filing returned for a procedural defect (missing contract copy), not decided on the merits.",
+        "status": "Оставлено без движения / возвращено по процессуальному основанию (не рассмотрено по существу).",
+        "source_id": "s0014",
+        "note": "18 ЦНИИ is a Minoborony research institute overseeing telecommunications/EW standards — a real institutional customer link even though this specific filing was not substantively decided."
+      },
+      {
+        "case_number": "А40-74708/2020",
+        "court": "Арбитражный суд г. Москвы",
+        "parties": "ФГКУ «Войсковая часть 68240» (истец — FSB's «Центр специальной техники», per its agentura.ru profile) против АО «НИИ СТТ» (ответчик)",
+        "claim_amount_rub": null,
+        "subject": "Underlying claim amount and subject not recoverable — every substantive document, including the Supreme Court's own determination, is redacted to header/caption text only (\"Судебный акт принят в закрытом судебном заседании\").",
+        "status": "Decided in part in plaintiff's favor at first instance (29.07.2020); upheld through cassation; further hearing refused by Supreme Court of the Russian Federation (Определение №305-ЭС21-8269, 15.06.2021).",
+        "source_id": "s0039",
+        "note": "A genuine FSB-НИИ СТТ contractual link, established via the case card even though the substance is redacted — consistent with routine redaction of FSB-counterparty commercial litigation, not something specific to this entity."
+      },
+      {
+        "case_number": "А40-168087/2019",
+        "court": "Арбитражный суд г. Москвы",
+        "parties": "Not confirmed from primary sources — parties unresolved; ₽7.59m figure per rusprofile's earlier summary only",
+        "claim_amount_rub": 7590000,
+        "subject": "Not established — case is redacted to bare header text, no case-card equivalent found.",
+        "status": "Unresolved — kad.arbitr.ru direct party-name query remains blocked (HTTP 451).",
+        "source_id": "s0020",
+        "note": "NOT confirmed as an FSB or otherwise notable case — logged for completeness of the case-number list only. Do not cite as an FSB link."
+      },
+      {
+        "case_number": "А40-209485/2024",
+        "court": "Арбитражный суд г. Москвы",
+        "parties": "Not confirmed from primary sources — parties unresolved",
+        "claim_amount_rub": null,
+        "subject": "Not established — three-instance history through July 2025, but all filings redacted to bare headers.",
+        "status": "Unresolved — kad.arbitr.ru direct party-name query remains blocked (HTTP 451).",
+        "source_id": "s0026",
+        "note": "NOT confirmed as an FSB or otherwise notable case — logged for completeness of the case-number list only."
+      }
+    ],
     "licences": [
       {
         "activity": "Разработка, производство, реализация и приобретение в целях продажи специальных технических средств, предназначенных для негласного получения информации",
@@ -30972,7 +31427,65 @@
       }
     ],
     "foreign_components": [],
-    "government_contracts": [],
+    "government_contracts": [
+      {
+        "customer": "ФГКУ «Войсковая часть 35533» (FSB-affiliated special-purpose unit)",
+        "reg_number": "multiple (~30 contracts, 2013-2020; see mine_zakupki.py --inn 6730046954 triage / data/registry/_zakupki_mined.json)",
+        "date": "2013-2020",
+        "value_rub": 126467572,
+        "items": "Поставка специальных технических средств — supply of 'special technical means' (covert-surveillance equipment per НИИ СТТ's ФСБ licence); largest customer by far across this ИНН's 84 zakupki hits, but no individual contract card names equipment beyond the generic term.",
+        "source_id": "s3330"
+      },
+      {
+        "customer": "ГУ МВД России по Кемеровской области",
+        "reg_number": "1420701353220000089, 1420701353222000036",
+        "date": "2020-2022",
+        "value_rub": 2430000,
+        "items": "Поставка специальных технических средств, sole-supplier basis explicitly citing ОРД (operational-search activity) funding (п.46 ч.1 ст.93 44-ФЗ).",
+        "source_id": "s3328"
+      },
+      {
+        "customer": "ФСКН России (Федеральная служба РФ по контролю за оборотом наркотиков, dissolved/merged into МВД 2016)",
+        "reg_number": "see mine_zakupki.py triage",
+        "date": "unspecified",
+        "value_rub": 8500000,
+        "items": "Специальные технические средства.",
+        "source_id": "s3330"
+      },
+      {
+        "customer": "ФКУ ИК-1 УФСИН России по Костромской области",
+        "reg_number": "1440101710419000206",
+        "date": "2019",
+        "value_rub": 604096,
+        "items": "Установка контроля магнитных параметров в производственных условиях.",
+        "source_id": "s3330"
+      },
+      {
+        "customer": "ФГКУ «Войсковая часть 35533»",
+        "reg_number": null,
+        "date": "2011-2022",
+        "value_rub": 178430146.96,
+        "items": "AGGREGATE — 49 separate contracts with the same military customer, ФГКУ «Войсковая часть 35533», spanning 2011-2022, total value ₽178,430,146.96 (individual contracts ₽90,020–₽10,200,000). Found 2026-08-30 reading the 83 previously-unwired contract cards already archived from an earlier scan/fetch-contracts pass (only 4 of 86 total hits had been wired before this). Not wiring all 49 as separate rows to avoid registry bloat for a single recurring customer relationship — see data/sources/ZAKUPKI_contract_<regNumber>_*.html for the full regNumber list, archived under supplier ИНН 6730046954. Largest single contract (reg. 1501200927916000097, ₽10.2m, 06.05.2016) cited as source. в/ч 35533's specific mission/identity not independently verified — flagged for further research, not asserted. IDENTITY (per agentura.ru, an independent OSINT profile of Russian security-service institutions — not independently corroborated beyond this source): в/ч 35533 is identified as ФСБ's «Научно-исследовательское подразделение ФСБ №1» (НИИ-1 / Институт специальной техники), based in г. Балашиха, Московская обл., мкр. Павлино, originating from ЦНИИСТ (Центральный научно-исследовательский институт специальной техники), founded 1955 under KGB's Оперативно-техническое управление, previously operating under the cover name «завод «Прогресс»». Its stated research areas include digital signal processing, wireless-network equipment, encryption, and voice recognition/synthesis (\"automatic recognition of individuals by voice\" and voice-imitation methods) — FSB internal special-technology R&D, not a line combat unit. If this identification holds, АО «НИИ СТТ» has been a recurring 2011-2022 supplier to FSB's own internal surveillance/signals-technology institute, not merely \"a military customer\" in the generic sense — a materially different and more significant relationship for the sanctions case. [s3795]",
+        "source_id": "s3342"
+      },
+      {
+        "customer": "Various regional МВД directorates (ГУ МВД/УМВД по субъектам РФ)",
+        "reg_number": null,
+        "date": "2011-2022",
+        "value_rub": 22351363.99,
+        "items": "AGGREGATE — 18 separate contracts with regional police directorates across at least 10 different Russian regions (Новосибирская, Кемеровская, Воронежская, Самарская, Челябинская, Сахалинская обл., Респ. Хакасия, Респ. Бурятия, Приморский край, Еврейская АО), 2011-2022, total ₽22,351,363.99, individual values ₽75,500–₽1,610,000. Largest single contract (reg. 0173100014812000051, ₽8.33m, УМВД по Центральному ФО на транспорте) cited as source. Nationwide police-equipment/services supplier pattern found reading the same batch of unwired contract cards as the в/ч 35533 aggregate above. Not wiring individually; see data/sources/ZAKUPKI_contract_<regNumber>_*.html.",
+        "source_id": "s3294"
+      },
+      {
+        "reg_number": "0335100011713000056",
+        "customer": "ФГКОУ ВПО «Калининградский пограничный институт ФСБ России»",
+        "value_rub": 1768000,
+        "date": "2013-2014 (5 contracts, 02.04.2013–29.10.2014)",
+        "items": "Aggregate of 5 contracts with the same FSB border-institute customer; subjects not captured in these older-era cards. Includes reg 0335100011714000162, the contract already independently reviewed for signatory attribution (Галкин В.С. confirmed as this entity's own director on it).",
+        "note": null,
+        "source_id": "s5055"
+      }
+    ],
     "workforce_history": [],
     "state_programs": [],
     "marketing_claims": [],
@@ -31007,6 +31520,7 @@
       "ogrn": "1027739216757",
       "source_id": "s0211"
     },
+    "notes": "zakupki signatory review 2026-08-31/09-01: a new \"по Уставу\" hit dated 24.11.2017 gives the signatory as \"Богомолов Андрей Борисович\" (patronymic Борисович), reg 1501200927917000402 -- but the existing 2016-05-19 director_history entry (source s0211, an EGRUL pull) gives \"Богомолов Андрей Владимирович\" (patronymic Владимирович), and a separate 2017-dated contract (reg 1501200927917000246) independently confirms \"Владимирович\" again. Treating \"Борисович\" as a transcription/OCR error on the one contract, not a second person or a director change -- not wired to director_history. Worth a raw-docx re-read of reg 1501200927917000402 specifically if this ever matters for a citation.\n\nzakupki cluster review 2026-09-01: 85 unwired archived cards reviewed by customer cluster (not individually). Wired 2 aggregate entries covering the two largest recurring-customer relationships (Войсковая часть 35533, 45 contracts/₽168.4m/2013-15; Калининградский пограничный институт ФСБ, 5 contracts/₽1.77m). Remaining clusters (МВД Новосибирск, ВНИИ Метрологии) and 25 non-recurring cards are small-value and read as routine radio-electronics-institute supply business, not individually wired.\n\nв/ч 35533 identification corroborated 2026-09-01: two independent sources beyond the earlier agentura.ru transcript (s3795) now support the earlier flag that Войсковая часть 35533 (the largest single customer cluster wired above, 45 contracts/₽168.4m/2013-15) is not a generic army unit. onlineecology.com (s5261, a Russian environmental/accreditation registry, independently confirms via ИНН 5012009279 -- ФГКУ \"Войсковая часть 35533\", Balashikha, accredited as a testing laboratory for two things: low-voltage/EMC equipment AND transport-security inspection systems/equipment. shieldandsword.mozohin.ru (s5260, a specialist KGB-directorate structural-history reference site) independently identifies в/ч 35533 as ЦНИИСТ (Центральный научно-исследовательский институт специальной техники), founded 1954/reorganized 1955 under KGB structure. Two unrelated sources -- a formal registry and a specialist history site -- now converge on \"в/ч 35533 = ЦНИИСТ, a KGB-lineage special-technology research/testing institute in Balashikha,\" not just the single earlier agentura.ru claim. Raises the ao-nii-stt relationship from routine radio-electronics supply to a decade-plus vendor relationship with a state security-service technical institute. Still worth independently confirming ЦНИИСТ still operates under FSB (successor to KGB) today, not just historically, before this goes into brief prose.\n\nThird corroborating naming (2026-09-01, user-supplied link, meshok.net item 295596225): a militaria/collectibles auction listing (published 2026-08-24 per page metadata) titled \"90 лет НИИ-1 ФСБ России, ФГКУ войсковая часть 35533, г. Железнодорожный, Моск. обл.\" -- a commemorative badge for the institute's 90th anniversary, explicitly pairing \"НИИ-1\" with \"ФСБ России\" and в/ч 35533, and naming Железнодорожный (the pre-2015 town later merged into Balashikha), consistent with s5261's Balashikha address. Caveat: the page is JS-rendered and could not be fetched beyond its URL-embedded title text (confirmed via r.jina.ai render attempt and raw curl, both returned only the loading shell, no item description/images) -- this is the auction listing's own title only, not independently verified against its description or image content, and marketplace-listing titles are lower-tier evidence than an official registry or a specialist reference site. Still, a third unrelated source (collector marketplace vs. environmental-registry vs. KGB-structure history site) independently converging on \"НИИ-1\" + FSB + в/ч 35533 + Balashikha/Zheleznodorozhny meaningfully raises confidence in the underlying identification.\n\nCurrent-FSB-subordination follow-up CLOSED (2026-09-01): the open question above (whether ЦНИИСТ/НИИ-1 still sits under FSB today, not just in its 1950s-70s KGB history) is resolved. Two fresh, dated pulls: spark-interfax.ru (s5263) lists the entity's ОКОГУ (governing-body classifier) field as \"Федеральная служба безопасности Российской Федерации (федеральная служба)\" -- a structured registry field, not a text mention, confirmed directly on the archived raw HTML (grep-verified, not WebFetch-summarized). saby.ru (s5262) independently confirms the entity's status as \"действует на 1 сентября 2026 года\" (active as of 2026-09-01, i.e. today), same director (Угольников Юрий Германович) and registration date (20.04.2005) as the open egrul.nalog.ru API lookup run the same day. Combined with the two 2026-09-01 sources above (s5260 mozohin.ru KGB-history site, s5261 onlineecology.com registry) and the meshok.net auction-title corroboration, the в/ч 35533 = ЦНИИСТ/НИИ-1 = active FSB-subordinate institute identification now rests on five independent sources spanning a formal registry classifier field, a specialist history site, two commercial corporate-data aggregators, and a collector marketplace listing. Safe to state in brief prose now (with the ОКОГУ field as the lead citation) rather than flagged as needing further check.\n\nlitigation[] backfilled 2026-09-02: structured all 10 arbitration cases already cited in the docs/index.html narrative (previously only in prose, absent from the registry — a gap caught in a full-pipeline review). Two cases (А40-168087/2019, А40-209485/2024) have unconfirmed parties -- logged for completeness but NOT to be cited as FSB-linked; only А40-74708/2020 (Войсковая часть 68240) is a confirmed FSB case.",
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 2 trademark filing(s) matched by ИНН.",
       "Full signed ЕГРЮЛ extract read end-to-end (s0211, ul-1026701461160-20260820233705.pdf, 25pp, pulled 20.08.2026). Confirms ОГРН, registration 26.12.2002 (one of the oldest entities in the roster), Smolensk address, GD Богомолов А.В. (personal ИНН 673103142483, in post since 19.05.2016) and ₽5m charter capital. As an АО its shareholders are not in ЕГРЮЛ — only the share registrar, АО «НРК Р.О.С.Т.» (ИНН 7726030449) — so ownership stays unresolved by this document. TWO findings that materially change how this entity reads. (1) ОКВЭД: it DECLARES 25.40 «Производство оружия и боеприпасов» — weapons and ammunition manufacture — added 13.02.2024. That is not an okved_mismatch; it is the opposite, an explicit self-declaration. (2) NINE licences, an unusually complete state-security portfolio: TWO separate ФСБ Smolensk licences for «специальных технических средств, предназначенных для негласного получения информации» (covert information-gathering equipment, 2011 and 2015), an ФСБ cryptographic-means licence (2019), a Minpromtorg licence covering development/production/testing/repair/disposal AND SALE of вооружение и военная техника (2013) plus a second Minpromtorg licence for servicing weapons and military equipment (2022), and a Roscosmos SPACE ACTIVITY licence (2017). Covert-surveillance manufacture, military-equipment production and space activity under one roof is a materially stronger designation basis than the roster's typical drone-assembler profile.",
@@ -35430,7 +35944,14 @@
         "note": "from corrections:add_entities, unverified"
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "241020, Брянская область, г.о. город Брянск, г. Брянск, пр-кт Московский, д. 67А",
+        "as_of": "2025-05-16",
+        "source_id": "s3758",
+        "note": "factAddress per contract XML (regNumber 2320000296325000067) matches the registered address on file exactly — corroborates, no new facility."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -35526,7 +36047,16 @@
     ],
     "patents": [],
     "foreign_components": [],
-    "government_contracts": [],
+    "government_contracts": [
+      {
+        "customer": "СГУП «Центр специального назначения «Защита» Брянской области»",
+        "reg_number": "2320000296325000067",
+        "date": "2025",
+        "value_rub": 20235000,
+        "items": "Поставка средств радиоэлектронной борьбы — largest of this ИНН's 3 zakupki hits; customer is a regional counter-drone/EW response unit in a border region (Bryansk).",
+        "source_id": "s3396"
+      }
+    ],
     "workforce_history": [],
     "state_programs": [],
     "marketing_claims": [],
@@ -36056,6 +36586,11 @@
         "name_ru": "«Лис-А»",
         "description": "РЛС/radar product.",
         "source_id": null
+      },
+      {
+        "name_ru": "«ПАРС-4»",
+        "description": "Носимое устройство противодействия беспилотным воздушным судам (wearable counter-UAV jammer). Per the МВД contract № 497 (22.11.2023) specification: mass ≤5.2 kg (≤11.5 kg in transport case), ready-to-use in ≤15 s, jams GPS/GLONASS (1520-1620 MHz) + 2395-2500/5150-5350/5720-5920 MHz bands, blocking range 500-1000m depending on channel (navigation/control/data), IP65 rugged plastic housing with rifle-stock form factor and collimator-sight mount, 3h continuous operation, -25 to +40°C rated. Unit price ₽6,550,000; this contract supplied 12 units for ₽78,650,000 total. 100% Russian-origin declared.",
+        "source_id": "s3686"
       }
     ],
     "financials": [],
@@ -36081,7 +36616,16 @@
     "trademarks": [],
     "patents": [],
     "foreign_components": [],
-    "government_contracts": [],
+    "government_contracts": [
+      {
+        "customer": "ФКУ «Северо-Кавказское окружное управление материально-технического снабжения МВД России»",
+        "reg_number": "1616303058823000546",
+        "date": "2023",
+        "value_rub": 78650000,
+        "items": "Носимое устройство противодействия беспилотным воздушным судам — wearable counter-UAV jamming device, entity's only zakupki hit but a substantial single contract.",
+        "source_id": "s3382"
+      }
+    ],
     "workforce_history": [],
     "state_programs": [],
     "marketing_claims": [],
@@ -36123,6 +36667,13 @@
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0787).",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7735140825). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
     ],
+    "bank_details": {
+      "bank": "ПАО Сбербанк, г. Москва",
+      "account": "40702810738150008739",
+      "corr_account": "30101810400000000225",
+      "bik": "044525225",
+      "source_id": "s3686"
+    },
     "_verified_against": "egrul.nalog.ru open-API name search \"ЭЛИАРС\" and direct ИНН search \"7735140825\", both 23.08.2026 (single unambiguous match); eliars.ru read directly 23.08.2026.",
     "opensanctions_matches": [
       {
@@ -38777,7 +39328,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": null,
+    "tier_basis": "Maker of «Капюшон», REB (radio-electronic warfare) jamming stations against FPV drones, Rospatent trademark №1086620 confirmed to this ИНН. related_entities links it to npo-kilobatt, a reseller/storefront ИП already in this registry — a documented commercial link to an existing network entry, not yet promoted to a structured cbst_tie entry. No independent sanctions or ЦБСТ-accelerator evidence found; included on product + related-entity grounds.",
     "cbst_tie": null,
     "wb_overlap": "none_found",
     "products": [
@@ -39566,7 +40117,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": null,
+    "tier_basis": "A documented FPV-drone brand (models «КРАМС 7», «КРАМС 9») with an active product site (krams.pro) and Telegram presence, covered in regional press including a Kuzbass governor visit — but the underlying legal entity has NOT been identified (explicitly not ooo-krams, ИНН 9701247080, already confirmed as an unrelated Moscow entity — see open_questions). This is a placeholder brand-level record pending entity resolution, not yet an established ЦБСТ-network tie of any kind; do not cite as a confirmed network member.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [
@@ -39648,10 +40199,8 @@
     "_raw": {},
     "city": "Kemerovo Oblast (per krams.pro / Kuzbass governor visit coverage)",
     "verified_against": null,
-    "_corrected": [
-      "Full product catalog extracted from krams.pro (23.08.2026, site sweep) — kept as a standalone brand record rather than mistakenly attached to ooo-krams (a confirmed-unrelated Moscow shell company with the same bare name) or force-attached to either unconfirmed Kemerovo candidate entity.",
-      "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): negative-finding re-check, still unresolved."
-    ],
+    "_corrected": [],
+    "_verified_against": [],
     "aleph_matches": [],
     "aleph_screened_at": "2026-08-26",
     "gur_matches": [],
@@ -39674,7 +40223,7 @@
     "ogrn": "1245000068774",
     "extra_ids": null,
     "registered": "2024-06-13",
-    "address": "Московская область, г. Химки, д. Мышецкое",
+    "address": "141204, Московская область, г. Пушкино, ул. Тургенева, д. 1, помещ. 2, ком. 4Д",
     "okved_code": null,
     "okved_label": null,
     "okved_mismatch": null,
@@ -39691,7 +40240,14 @@
     "founders_history": [],
     "charter_capital": null,
     "charter_capital_history": [],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "141204, Московская область, г.о. Пушкинский, г. Пушкино, ул. Тургенева, д. 1, помещ. 2, ком. 4Д",
+        "as_of": "2025-06-09",
+        "source_id": "s3669",
+        "note": "factAddress per contract XML (regNumber 1500300810225000157). Cross-checked against rusprofile.ru (s3929, captured 2026-08-30): this IS the entity's current юридический (registered) address, not a distinct undocumented facility as first assumed -- supersedes the unsourced 'Химки, д. Мышецкое' value previously carried in this entity's scalar 'address' field (no source_id, likely inherited from the founder ИП Цыганов's own address at scaffold time)."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -39743,7 +40299,24 @@
     "trademarks": [],
     "patents": [],
     "foreign_components": [],
-    "government_contracts": [],
+    "government_contracts": [
+      {
+        "customer": "ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz)",
+        "reg_number": "1500300810225000157",
+        "date": "2025",
+        "value_rub": 2314200,
+        "items": "Поставка средств ПОДАВЛЕНИЯ беспилотных аппаратов (не обнаружения — corrected per the sole-supplier notice's own text, which the contract-card-only extraction had mis-parsed as detection). Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ, justified in the notice by reference to МЧС letters МЧС России от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного каталога средств противодействия», explicitly tied to equipping personnel deployed for «поиск, обезвреживание и уничтожение взрывоопасных предметов на территории Курской области» (ordnance-disposal operations in Kursk region) with counter-UAV detection equipment for their own force protection.",
+        "source_id": "s3680"
+      },
+      {
+        "customer": "Администрация Белгородского муниципального округа",
+        "reg_number": "3310005025826000052",
+        "date": "2026",
+        "value_rub": 495000,
+        "items": "Поставка мониторинговых устройств «Булат» — same «Булат» product line as the earlier ИП Цыганов contracts (see corrections entry for that person).",
+        "source_id": "s3424"
+      }
+    ],
     "workforce_history": [],
     "state_programs": [],
     "marketing_claims": [],
@@ -39811,7 +40384,7 @@
     ],
     "aleph_screened_at": "2026-08-26",
     "gur_matches": [],
-    "gur_screened_at": "2026-08-24",
+    "gur_screened_at": "2026-08-29",
     "gur_components_matches": [],
     "gur_components_screened_at": "2026-08-24",
     "rospatent_director_matches": [
@@ -40220,7 +40793,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": null,
+    "tier_basis": "US (OFAC) and EU sanctioned per a third-party dossier (s1408); commercial product line is legitimate industrial GSM/telemetry equipment, not itself drone-specific. The dossier's own claimed link to ООО «Тримикс»/3MX (a confirmed ЦБСТ-network resident) rests on circumstantial detail only (a phone-number match) and is EXPLICITLY FLAGGED UNCONFIRMED in this entity's own open_questions — inclusion rests on the sanctions designation alone; the network tie itself is not yet established and should not be asserted as fact.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -40366,7 +40939,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": null,
+    "tier_basis": "Recorded per a third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) as part of ООО «Тримикс»/3MX's (a confirmed ЦБСТ-network resident) corporate and personnel network. No independent primary source or sanctions designation found beyond the dossier itself — treat the network tie as dossier-sourced, not independently corroborated.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -40401,9 +40974,8 @@
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text, per this registry's standing discipline. Active per dossier. Sells «Булат» via 921921.ru, per site's own stated payment details."
-    ],
+    "_corrected": [],
+    "_verified_against": [],
     "aleph_matches": [],
     "aleph_screened_at": "2026-08-26"
   },
@@ -40435,7 +41007,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": null,
+    "tier_basis": "Recorded per the same third-party OSINT dossier (s1408) as part of ООО «Тримикс»/3MX's corporate/personnel network. Aleph independently returns a matching \"Shandobylo Serhii Serhiiovych\" entity — a second, independent corroboration beyond the dossier alone, stronger than the other two Тримикс-network ИП entries. Also independently named as Тримикс's Director of Development (С.С. Шандобыло) at a 12.04.2024 ExpoUAV conference, per the main narrative — a real, named-individual link, not just a dossier row.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -40470,9 +41042,8 @@
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text, per this registry's standing discipline. Dissolved (per dossier status flag). Historically developed/sold SCR-urea-dosing defeat devices (onediag.ru) before joining 3MX as Director of Development."
-    ],
+    "_corrected": [],
+    "_verified_against": [],
     "aleph_matches": [
       {
         "entity_id": "55f4c65a1dc265a7ffc357f493ecfaabcce7f740.9daadd3de480c33e4bbc17a1ab96128261e7d79c",
@@ -40508,7 +41079,14 @@
     "founders_history": [],
     "charter_capital": null,
     "charter_capital_history": [],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "141580, Московская область, г. Химки, д. Мышецкое, ул. Дорожная, д. 13",
+        "as_of": "2025-06-09",
+        "source_id": "s1466",
+        "note": "factAddress per contract XML (regNumber 1500300810225000152) matches the registered address on file exactly — corroborates, no new facility."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -40555,6 +41133,14 @@
         "note": "Sole-supplier procurement (44-ФЗ ст. 93 ч.1 п.9), 30% advance (₽3,595,200). Delivery to ФГКУ «ЦСООР «Лидер»»'s own address, Москва, Мосрентген. Contract card also lists supplier contact +7 926 215-30-15 / vipochka@bk.ru. «Уведомление ФАС о заключении контракта с единственным поставщиком» (source s1474, 19.09.2025, signed by Начальник отдела организации контрактной работы капитан К.Ю. Гребенькова) states the procurement was ordered per classified (ДСП — для служебного пользования) MCHS directives (письма от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного каталога средств противодействия») for personnel deployed to Курская область on demining/UXO clearance duty amid the active war — the text explicitly cites \"атаки со стороны вооруженных сил Украины\" and the federal-level Kursk emergency (09.08.2024). Deployed unit strength: 5 отрядов, 53 человека, 13 единиц техники, 2 робототехнических средства. The SAME procurement batch also bought, from OTHER (unidentified) suppliers: 3x «Зонтик» ЕТНЦ.464327.001 universal detectors, 3x EGVS «Марс» portable video-link detectors, and 15x «АСК» РЭБ complexes — see open_questions. Акт № 1 от 25.12.2025 (source s1464, approved/УТВЕРЖДАЮ by Начальник ФГКУ «ЦСООР «Лидер» генерал-майор А.А. Саввин) names Цыганов explicitly as \"Производитель\" (manufacturer), not merely supplier/reseller — confirms manufacturing responsibility, not just resale. Acceptance committee: председатель полковник А.Н. Кудяков (already documented), члены комиссии майор С.А. Кулагин, майор В.С. Кузнецов, майор Е.Д. Зайцев, капитан Р.С. Устимов, капитан Е.А. Григорян; материально-ответственное лицо С.Н. Скабелин.",
         "source_id": "s1417",
         "value_rub": 11984000
+      },
+      {
+        "customer": "Главное управление МЧС России по Курской области",
+        "reg_number": "1463204748024000101",
+        "date": "2024-10-29",
+        "value_rub": 16192000,
+        "items": "Оперативная закупка детекторов беспилотных летательных аппаратов (дальность обнаружения до 1,5 км) для оснащения личного состава пожарно-спасательной группировки Курской области. Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ — federal-level emergency status declared for Kursk region от 07.08.2024, justification citing МЧС Минстра Куренкова's directive and explicitly attributing the emergency to «неизбирательные террористические атаки ВСУ» (official-framing quote, verbatim from the justification document, not this investigation's own characterization).",
+        "source_id": "s1460"
       }
     ],
     "workforce_history": [],
@@ -40596,6 +41182,7 @@
       "2026-08-26: full manual OCR of ZAKUPKI_ATTACH_504405055721_1463204748024000101_kontrakt-130-14632047480240001010003_d64c5892.pdf (source s1459) beyond this project's standard 5-page cap — this document is 11 pages and the Спецификация table with unit count/price/full technical spec is on pages 10-11, which the automated pipeline never reached. Adds the unit count (184 @ ₽88,000), the customer signatory (Лунев Иван Иванович), and a full verbatim technical-spec products[] entry for «Булат» v.4.",
       "2026-08-26: full document deep-dive on all 17 zakupki attachments for both confirmed contracts (обоснование justifications, УПД delivery documents, акты, FAS notice bundled with МЧС troop-rotation orders extracted from RAR archives via bsdtar — see scripts/mine_zakupki.py's new rar_text()). Adds: full legal/operational justification chain for both contracts (explicit war-nexus language, federal emergency declarations, MCHS command-chain decision), confirmation of \"Производитель\" (manufacturer) status, 10 new named customer-side officials across both contracts (a generalmajor among them), and 3 new unidentified-manufacturer product leads (Зонтик, Марс, АСК) procured in the same batch for the same Kursk deployment."
     ],
+    "notes": "zakupki cluster review 2026-08-31: 1 remaining unwired archived card beyond the already-wired Булат/Покров contracts, non-recurring, no new signal. Not wired. Closed.",
     "_verified_against": null,
     "aleph_matches": [
       {
@@ -40649,7 +41236,60 @@
         "ui_link": "https://aleph.occrp.org/entities/2b62ac65b8d186edfaea44f235e48ae930f39753.0b5c87f214d3a857618dccedc6987aa1140339b3"
       }
     ],
-    "aleph_screened_at": "2026-08-26"
+    "aleph_screened_at": "2026-08-26",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/786",
+        "caption": "BELOUSOV Vadim Vladimirovich",
+        "own_tin": "745303048492",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/781",
+        "caption": "DENISENKO Vadim Ivanovich",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/780",
+        "caption": "SHADURA Vadim Evgenievich",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/777",
+        "caption": "BULAVINOV Vadim Evgenievich",
+        "own_tin": "526300626117",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/776",
+        "caption": "LUKASHEVICH Vadim Anatolyevich",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-08-29"
   },
   {
     "slug": "ip-sidorov-andrey-sergeevich",
@@ -40679,7 +41319,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": null,
+    "tier_basis": "Recorded per the same third-party OSINT dossier (s1408) as part of ООО «Тримикс»/3MX's corporate/personnel network. Aleph match found is a low-confidence table-schema hit (score ~39), not a clean entity match — weakest-sourced of the three Тримикс-network ИП entries; treat as a dossier-only lead pending independent verification.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -40714,9 +41354,8 @@
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text, per this registry's standing discipline. Active. Also supplies «Булат» devices; shares a phone number with ИП Цыганов Вадим Борисович (+7 905 519-71-01) per dossier — possible informal affiliation, not otherwise established."
-    ],
+    "_corrected": [],
+    "_verified_against": [],
     "aleph_matches": [
       {
         "entity_id": "33dca094ae55960f2ce637d43286e100cda4d865.0f07b1007ab1e7b0d267b6b381ff456a2550ff41",

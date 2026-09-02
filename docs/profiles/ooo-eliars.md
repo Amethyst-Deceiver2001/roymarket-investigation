@@ -30,6 +30,10 @@
 - **«Лори»** — РЛС/radar product.
 - **«Лис-А»** — РЛС/radar product.
 
+## Government contracts
+
+- customer: ФКУ «Северо-Кавказское окружное управление материально-технического снабжения МВД России»; reg_number: 1616303058823000546; date: 2023; value_rub: 78650000; items: Носимое устройство противодействия беспилотным воздушным судам — wearable counter-UAV jamming device, entity's only zakupki hit but a substantial single contract. [s3382]
+
 ## Sanctions & screening
 
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), Switzerland (SECO, Ukraine-related measures), Ukraine (Presidential sanctions decree/list), US-BIS-EL, EU (Ukraine-related restrictive measures)** [s0787]
@@ -57,6 +61,7 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0787 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7735140825_20260824_ooo-eliars.json) | 2026-08-24 | — |
+| s3382 | Zakupki | Zakupki (ZAKUPKI_contract_1616303058823000546_20260829.html) | 2026-08-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

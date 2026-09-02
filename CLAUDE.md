@@ -187,6 +187,37 @@ hits will belong to large, already-well-documented state defense primes
 enormous by nature — triage for what's actually new to this investigation
 before spending a `fetch-documents` pass on it.
 
+## Local extraction jobs: sample before a full corpus run, don't background a slow one
+
+"No network call" (`mine_leads.py`, `scan_sources.py`, `mine_zakupki.py`,
+`extract_registry.py`) means safe to *run*, not safe to run *blind* — two
+failure modes this project has actually hit:
+
+- **A parser bug can survive a full run silently.** The 2026-08-29
+  `mine_zakupki.py` price-parsing bug (an older zakupki.gov.ru contract-card
+  layout puts "Цена контракта" in a `<div class="price">` block, a different
+  DOM shape from the `section__title`/`section__info` blocks the parser
+  otherwise read) went undetected through 32 contracts (₽1.72bn) across two
+  full corpus mines before a human-noticed "why is this null" question
+  caught it. After changing anything in a parser
+  (`mine_zakupki.py`/`mine_leads.py`/`scan_sources.py`), run
+  `python3 tests/test_zakupki_parser.py` (fixtures for both known contract-
+  card layouts, plus a no-price-section case) before trusting a full re-run —
+  it catches this class of regression in under a second instead of requiring
+  a multi-minute full mine plus a human spotting the gap in the output.
+  Extend that fixture file (or add a sibling one) when a new layout variant
+  or extraction gotcha turns up, the same instinct that produced
+  `docs/registry/ustav_templates.json` for charter-template variants.
+- **A local job can still be slow enough to want the user's own terminal.**
+  A full `mine_zakupki.py` re-mine of the ~1289-file `data/sources/` corpus
+  (needed after any parser change, since its own file-mtime cache doesn't
+  know the code changed) took long enough that a backgrounded run had to be
+  killed and hand-restarted in 2026-08-29. Before backgrounding any local
+  job touching 100+ files or expected to run past ~2 minutes, say so and
+  either let the user run it in their own terminal instead, or make clear
+  you're starting a background task they'll be notified about — don't
+  silently launch it in the background and go quiet.
+
 ## Primary-source documents: check `data/sources/` before re-downloading
 
 `data/sources/` (gitignored — local working copy, ~424MB) holds the EGRUL
