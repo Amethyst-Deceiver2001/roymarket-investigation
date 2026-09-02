@@ -38458,5 +38458,77 @@
     "_corrected": [
       "2026-09-02: added from smolin.info investigation (s5291, TRANSCRIPT_20260608, companion piece to s5288)."
     ]
+  },
+  {
+    "slug": "voronin-aleksandr-andreevich",
+    "fio_ru": "Воронин Александр Андреевич",
+    "name_latin": null,
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [
+      {
+        "entity_slug": "ooo-intel-dron",
+        "entity_name": "ООО «Интел Дрон»",
+        "title": "Генеральный директор",
+        "from": "2024-09-13",
+        "to": null,
+        "source_id": "s5333"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Found via ООО «Гагаринг»'s FY2025 audit report related-party note naming Интел Дрон as a 50%-owned affiliate; confirmed live via egrul.nalog.ru 2026-09-03.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-03: identified as ГД of ooo-intel-dron, surfaced via s5333."
+    ]
+  },
+  {
+    "slug": "plykina-ekaterina-viktorovna",
+    "fio_ru": "Плыкина Екатерина Викторовна",
+    "name_latin": null,
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [
+      {
+        "entity_slug": "ooo-npo-eyler",
+        "entity_name": "ООО «НПО Эйлер»",
+        "title": "Директор",
+        "from": "2025-10-28",
+        "to": null,
+        "source_id": "s5333"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Found via ООО «Гагаринг»'s FY2025 audit report related-party note naming НПО Эйлер (aircraft/UAV-production OKVED, Tula) as a 50%-owned affiliate; confirmed live via egrul.nalog.ru 2026-09-03.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-03: identified as director of ooo-npo-eyler, surfaced via s5333."
+    ]
   }
 ]

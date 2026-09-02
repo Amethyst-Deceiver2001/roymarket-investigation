@@ -43,6 +43,10 @@
 | 2024 | ₽84,503,000 | ₽20,945,000 | [s0242] |
 | 2025 | ₽2,159,046,000 | ₽664,188,000 | [s0243] |
 
+## State-program participation
+
+- name_ru: Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ); name_en: Association of developers of advanced electronic-reconnaissance, electronic-warfare, and communications systems; role: член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure); as_of: 2025-12-31 [s5333]
+
 ## Patents
 
 | Title | Reg. no. | Filed | Inventors |
@@ -66,6 +70,13 @@
 - **Address:** г. Краснодар, ул. Черкасская, д. 97, кв. 25 (current, per multiple 2023–2024 records — Росреестр, ОСАГО policy, ФССП debtor record; earlier registered address through ~2019 was Приморский край, Октябрьский р-н, с. Покровка, ул. Энгельса, 13, кв. 1, matching the registry's existing note on his ОГРНИП's original 2013 Приморье registration)
 - **ИНН:** 252201766438
 
+## Corporate links
+
+- **ООО «Авирон»** — доля участия 36,8% [s5333]
+- **ООО «Интел Дрон»** — доля участия 50% [s5333]
+- **ООО «НПО Эйлер»** — доля участия 50% [s5333]
+- **АНО ДПО «Образовательный центр Гагаринг»** — учредитель [s5333]
+
 ## Open questions
 
 - Гагаринг sells a "Видеоприемник выносной «СОВА»" — same brand name «СОВА» as va-technologies (ООО «Конструкторское бюро СОВА»), but a genuinely different product (video receiver vs. GPS-denied navigation module) from a different, unrelated company. Pure brand-name collision — flagged so it is never conflated in future prose.
@@ -78,6 +89,7 @@
 | s0242 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_2312321660_2024_20260819.zip) | 2026-08-19 | 2024-12-31 |
 | s0243 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_2312321660_2025_20260819.zip) | 2026-08-19 | 2025-12-31 |
 | s0455 | EGRUL extract | EGRUL extract (ul-1232300051235-20260823120320.pdf) | — | 2026-08-23 |
+| s5333 | Fedresurs | Fedresurs (FEDRESURS_939B297414FA48A4A4B3497315AF3659_20260903_gagaring-audit-report-2025fy-full.pdf) | 2026-09-03 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

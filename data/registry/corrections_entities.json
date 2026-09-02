@@ -1461,6 +1461,34 @@
       "why": [
         "2026-09-02: added from an OFFICIAL ЕГРЮЛ extract (s5299, generated 29.04.2026 via egrul.nalog.ru's own extract service, digitally signed by МИФНС по ЦОД), independently re-downloaded from smolin.info's embedded evidence file, not merely the article's prose claim. Excluded from ЕГРЮЛ 25.12.2025 for 'недостоверные сведения' (unreliable/false registration data) -- a common fate for occupied-territory shell registrations. Director Руденко Д.А. (ИНН 780401121651) is the same individual already tracked as a co-owner of ooo-btr-bespilotnye-tekhnologicheskie-resheniya and ooo-spetsmat-spetsialnye-materialy, and director of ano-ntsns-nevskiy-tsentr-nauchnogo-sotrudnichestva -- this is the most serious documented tie yet given the explicit occupied-territory registration and military-vehicle-production OKVED code, ON TOP of the still-unverified border-crossing/militant allegations from the other smolin.info piece."
       ]
+    },
+    {
+      "slug": "ooo-intel-dron",
+      "name_ru": "ООО «Интел Дрон»",
+      "inn": "7448259249",
+      "ogrn": "1247400026246",
+      "registered": "13.09.2024",
+      "address": "456940, Челябинская область, м.о. Кусинский, г. Куса, ул. Михаила Бубнова, д. 20, кв. 16",
+      "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Воронин Александр Андреевич (confirmed live via egrul.nalog.ru 2026-09-03)",
+      "tier": "manufacturer",
+      "tier_basis": "50% owned by ООО «Гагаринг» per Гагаринг's own FY2025 audited financial statements, related-party disclosure (source s5333, p.18/35 of the 55-page scan). OKVED: научные исследования и разработки в области естественных и технических наук прочие (R&D, natural/technical sciences). Гагаринг extended a ₽1,100,000 loan to Интел Дрон during 2025, outstanding at year-end.",
+      "why": [
+        "2026-09-03: found in ООО «Гагаринг»'s FY2025 audit report (fedresurs.ru, s5333) related-party-transactions note ('Информация о связанных сторонах'), which states Гагаринг holds a 50% stake. Independently confirmed via fedresurs.ru company search and a live egrul.nalog.ru lookup (ИНН/ОГРН/director match exact)."
+      ]
+    },
+    {
+      "slug": "ooo-npo-eyler",
+      "name_ru": "ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер»)",
+      "inn": "7100069249",
+      "ogrn": "1257100008560",
+      "registered": "28.10.2025",
+      "address": "300013, Тульская область, г.о. город Тула, г. Тула, ул. Московская, д. 19",
+      "director": "ДИРЕКТОР: Плыкина Екатерина Викторовна (confirmed live via egrul.nalog.ru 2026-09-03)",
+      "tier": "manufacturer",
+      "tier_basis": "50% owned by ООО «Гагаринг» per Гагаринг's own FY2025 audited financial statements, related-party disclosure (source s5333, p.18/35 of the 55-page scan). OKVED: производство летательных аппаратов, включая космические, и соответствующего оборудования (production of aircraft, including spacecraft, and related equipment) -- a direct aircraft/UAV-production classification. Registered only 28.10.2025, ~2 months before the audit's FY-end date -- very newly formed. Located in Tula, a well-known Russian defense-industrial region. Гагаринг extended a ₽10,000,000 loan to НПО Эйлер during 2025, outstanding at year-end.",
+      "why": [
+        "2026-09-03: found in ООО «Гагаринг»'s FY2025 audit report (fedresurs.ru, s5333) related-party-transactions note. Independently confirmed via fedresurs.ru company search and a live egrul.nalog.ru lookup (ИНН/ОГРН/director match exact). Given the direct aircraft-production OKVED, Tula location, and Гагаринг's substantial loan to it, this is a high-priority entity for further deep-dive."
+      ]
     }
   ],
   "entities": {
@@ -7874,7 +7902,8 @@
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7743451768). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-24: rospatent full-roster patent sweep second-triage pass -- NOT promoted despite an exact name match, due to wildly implausible subject matter (COVID-19 antivirals) with no ИНН available to confirm same-entity identity; logged as an open question instead.",
         "2026-08-25: found as a listed member of Ассоциация «АЭРОНЕКСТ» (aeronext.aero), the national UAV-industry employer association, via its open backend API (component.aeronext.aero/s_cm_api/catalog.ashx). Full member card confirms ИНН/ОГРН/address exactly and corroborates the director already on file (Лапин Игорь Николаевич) via the card's own «ФИО Руководителя» field (s1406). Not a ЦБСТ/РОЙ.МАРКЕТ link -- national industry-association membership, same category as other adjacent programs already noted.",
-        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block."
+        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block.",
+        "2026-09-03: ООО «Гагаринг» (ooo-gagaring) discloses a 36.8% ownership stake in this entity, per Гагаринг's own FY2025 audit report related-party note (s5333)."
       ]
     },
     "ooo-boevye-tekhnologii": {
@@ -8088,26 +8117,6 @@
             "value": "Барашков Александр Сергеевич"
           }
         ],
-        "financials": [
-          {
-            "profit": -514000.0,
-            "revenue": 1248000.0,
-            "source_id": "s0241",
-            "year": "2023"
-          },
-          {
-            "profit": 20945000.0,
-            "revenue": 84503000.0,
-            "source_id": "s0242",
-            "year": "2024"
-          },
-          {
-            "profit": 664188000.0,
-            "revenue": 2159046000.0,
-            "source_id": "s0243",
-            "year": "2025"
-          }
-        ],
         "founders": [
           {
             "inn_personal": "231015713057",
@@ -8212,6 +8221,70 @@
             "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (or, for ooo-opkb-eksplomet/ooo-gagaring/ooo-akr-begak, confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done.",
             "source_id": "s1170"
           }
+        ],
+        "workforce_history": [],
+        "financials": [
+          {
+            "profit": -514000.0,
+            "revenue": 1248000.0,
+            "source_id": "s0241",
+            "year": "2023"
+          },
+          {
+            "profit": 20945000.0,
+            "revenue": 84503000.0,
+            "source_id": "s0242",
+            "year": "2024"
+          },
+          {
+            "profit": 664188000.0,
+            "revenue": 2159046000.0,
+            "source_id": "s0243",
+            "year": "2025"
+          }
+        ],
+        "subsidiaries": [
+          {
+            "name": "ООО «Авирон»",
+            "slug": "ooo-aviron",
+            "inn": "7743451768",
+            "role": "доля участия 36,8%",
+            "as_of": "2025-12-31",
+            "source_id": "s5333"
+          },
+          {
+            "name": "ООО «Интел Дрон»",
+            "slug": "ooo-intel-dron",
+            "inn": "7448259249",
+            "role": "доля участия 50%",
+            "as_of": "2025-12-31",
+            "source_id": "s5333"
+          },
+          {
+            "name": "ООО «НПО Эйлер»",
+            "slug": "ooo-npo-eyler",
+            "inn": "7100069249",
+            "role": "доля участия 50%",
+            "as_of": "2025-12-31",
+            "source_id": "s5333"
+          },
+          {
+            "name": "АНО ДПО «Образовательный центр Гагаринг»",
+            "slug": null,
+            "inn": null,
+            "role": "учредитель",
+            "as_of": "2025-12-31",
+            "source_id": "s5333"
+          }
+        ],
+        "state_programs": [
+          {
+            "name_ru": "Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ)",
+            "name_en": "Association of developers of advanced electronic-reconnaissance, electronic-warfare, and communications systems",
+            "role": "член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure)",
+            "source_id": "s5333",
+            "as_of": "2025-12-31"
+          }
         ]
       },
       "verified_against": null,
@@ -8222,7 +8295,9 @@
         "Full product catalog extracted from gagaring.ru (23.08.2026, site sweep).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (2312321660). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-24: promoted 3 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: all patents are personal filings by Барашков Александр Сергеевич, this entity's confirmed director/50.5%-owner -- welding technology.",
-        "2026-09-03: checked via fedresurs.ru's company-lookup API (GUID c513d65c-bade-475f-ac96-316547fd6ce8). No bankruptcy filings, no unreliable-info flags. Four vehicle-leasing fact-messages (all passenger cars, 2024-2025, contracts 18248-КРД-24-АМ-Л / 13646-РНД-25-АМ-Л / 13749-РНД-25-АМ-Л / 49258/2025) -- s5331, s5327, s5329, s5332. In every single one, the LESSOR's identity is redacted citing Постановление Правительства РФ №5 от 12.01.2018 (the decree shielding defense-industry/gosoboronzakaz entities from public disclosure) and Fedresurs flags both parties isPublisherInSanctionList/isParticipantInSanctionList:true -- identical pattern to ooo-geron's single leasing record found the same day. Two independent ЦБСТ-adjacent entities both leasing vehicles through the same category of sanctions-shielded lessor is worth tracking as a recurring signature, not coincidence -- flagged here as Fedresurs's own classification, not independently verified against a primary sanctions list, and the lessor's specific identity is unknown in both cases (shielded). Also found: ООО «Гагаринг» underwent a MANDATORY statutory audit for FY2025 (s5330, auditor ООО «БСК Аудит», clean/unqualified opinion dated 04.06.2026) -- a mandatory-audit requirement under Russian law implies the company crosses a revenue/asset-size threshold, i.e. this is a real production-scale entity, not a shell. The full audited financial statements (bukhgalterskaya otchetnost') are attached as a PDF on Fedresurs (doc guid 32b96297-8592-4630-b8c6-140dee4fe2dd) -- not yet downloaded, would need a fresh HAR/browser session on the publication page to find the document-download endpoint; a strong candidate for real revenue/asset figures if pulled."
+        "2026-09-03: checked via fedresurs.ru's company-lookup API (GUID c513d65c-bade-475f-ac96-316547fd6ce8). No bankruptcy filings, no unreliable-info flags. Four vehicle-leasing fact-messages (all passenger cars, 2024-2025, contracts 18248-КРД-24-АМ-Л / 13646-РНД-25-АМ-Л / 13749-РНД-25-АМ-Л / 49258/2025) -- s5331, s5327, s5329, s5332. In every single one, the LESSOR's identity is redacted citing Постановление Правительства РФ №5 от 12.01.2018 (the decree shielding defense-industry/gosoboronzakaz entities from public disclosure) and Fedresurs flags both parties isPublisherInSanctionList/isParticipantInSanctionList:true -- identical pattern to ooo-geron's single leasing record found the same day. Two independent ЦБСТ-adjacent entities both leasing vehicles through the same category of sanctions-shielded lessor is worth tracking as a recurring signature, not coincidence -- flagged here as Fedresurs's own classification, not independently verified against a primary sanctions list, and the lessor's specific identity is unknown in both cases (shielded). Also found: ООО «Гагаринг» underwent a MANDATORY statutory audit for FY2025 (s5330, auditor ООО «БСК Аудит», clean/unqualified opinion dated 04.06.2026) -- a mandatory-audit requirement under Russian law implies the company crosses a revenue/asset-size threshold, i.e. this is a real production-scale entity, not a shell. The full audited financial statements (bukhgalterskaya otchetnost') are attached as a PDF on Fedresurs (doc guid 32b96297-8592-4630-b8c6-140dee4fe2dd) -- not yet downloaded, would need a fresh HAR/browser session on the publication page to find the document-download endpoint; a strong candidate for real revenue/asset figures if pulled.",
+        "2026-09-03: full financial-statement extraction from the FY2025 audit report (fedresurs.ru, s5333, 55-page scanned PDF, OCR'd at 300dpi -- readable despite the user's low-resolution warning). Source figures are in тыс. руб. (thousand rubles, confirmed on the balance-sheet header) -- multiplied by 1000 for storage as actual rubles, per project convention (see memory 'verify_bfo_units_against_known_figure'). KEY FIGURES: Revenue ₽2,159,046,000 (2025) vs ₽84,503,000 (2024) -- a ~25x increase. Net profit ₽664,188,000 (2025) vs ₽15,361,000 (2024). Total balance-sheet assets ₽1,041,448,000 (2025) vs ₽306,283,000 (2024) vs just ₽1,510,000 (2023) -- essentially from near-nothing to over a billion rubles in two years. Fixed assets (machinery/equipment) ₽66,312,000 (2025) vs ₽12,630,000 (2024). Company transacts in Chinese yuan (CNY exchange-rate table present in the notes) -- consistent with importing electronic components from China. RELATED-PARTY STRUCTURE (Section 5, 'Информация о связанных сторонах'): Гагаринг holds a 36.8% stake in ooo-aviron (already on file), a 50% stake in the newly-added ooo-intel-dron, and a 50% stake in the newly-added ooo-npo-eyler (aircraft/UAV-production OKVED, Tula). Гагаринг is also the founding participant (учредитель) of АНО ДПО «Образовательный центр Гагаринг» and has ties to ИП Барашков А.С. (the director's own sole-proprietorship). ООО «Дальсвязь» is named as affiliated with Александров А.В. (Гагаринг's co-founder/co-ultimate-beneficiary, already on file as aleksandrov-aleksey-vitalevich -- this audit independently corroborates his co-beneficiary status via a different primary source than the one already cited). **Гагаринг is listed as a member of the «Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи» (Association of developers of advanced electronic-reconnaissance, electronic-warfare, and communications systems)** -- a direct, named tie to the REB/electronic-warfare industry, not previously on file for this entity. RELATED-PARTY TRANSACTIONS in 2025 (note: these particular figures appear to be in full rubles, not thousands, based on kopeck-level precision e.g. '154,078,198.96' -- flagged for a human to double check against the source PDF page 19/35 before treating as fully certain): Барашков А.С.'s own ИП sold ~₽154.1M in goods/services to Гагаринг during 2025, with ~₽49.0M still payable at year-end; Александров sold ~₽22.4M (fully settled); Гагаринг extended a ₽105.8M interest-free loan to its own educational-center affiliate (matches the balance sheet's 'беспроцентные займы' line exactly), a ₽10M loan to ooo-npo-eyler, and a ₽1.1M loan to ooo-intel-dron, all outstanding at year-end. Also noted: the balance-sheet cover form's own checkbox states 'Бухгалтерская отчетность подлежит обязательному аудиту: НЕТ' (mandatory audit: NO) -- apparently inconsistent with the fact that a statutory/mandatory audit was in fact performed and published (per Fedresurs's own message type 'StatutoryAuditResults'); not resolved, flagged as an internal document inconsistency, not investigated further. Headcount/среднесписочная численность was not located in the pages sampled (accounting-policy boilerplate and a subset of the ~55-page notes were reviewed, not the full document) -- if needed, a fuller page-by-page pass would be required.",
+        "2026-09-03: cross-checked the pre-existing financials[] (s0241/s0242/s0243, presumably an earlier БФО pull) against the FY2025 audit report (s5333). 2025 revenue (₽2,159,046,000) and 2025 net profit (₽664,188,000) match exactly -- strong cross-source confirmation. 2024 net profit does NOT match: existing record shows ₽20,945,000 (s0242) vs the audit report's ₽15,361,000 (s5333, read directly off the Отчёт о финансовых результатах, код 2400). Likely explained by a restatement -- the audit report's own 'Важные обстоятельства' section states 'данная бухгалтерская отчетность является исправленной' (this financial statement has been corrected/restated), and separately its Отчёт об изменениях капитала shows a 2024 opening-balance correction line ('исправление ошибок'). Not resolved which figure is authoritative; flagged here rather than silently overwriting -- the original БФО filing (pre-restatement) and this later audited/restated filing may both be legitimately 'true' for their respective vintage. Left the existing financials[] array as the display record; this note is the correction trail."
       ]
     },
     "ooo-garant-klub": {
