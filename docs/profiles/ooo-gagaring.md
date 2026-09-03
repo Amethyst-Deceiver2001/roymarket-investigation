@@ -85,6 +85,12 @@
 
 - <https://gagaring.ru/>
 
+## Images
+
+- ![ул. им. Фадеева, д. 429/3, Краснодар — ООО «Гагаринг»'s registered legal address: an ordinary residential building entrance.](../images/gagaring_hq_krasnodar_residential.jpg) — ул. им. Фадеева, д. 429/3, Краснодар — ООО «Гагаринг»'s registered legal address: an ordinary residential building entrance.
+- ![ул. Цезаря Куникова, 24к2, Краснодар — the «Гагаринг» training centre's licensed address (АНО ДПО «Образовательный центр Гагаринг», лицензия Л035-01218-23/02689789): a two-storey commercial annex at the base of a residential tower.](../images/gagaring_school_kunikova_annex.jpg) — ул. Цезаря Куникова, 24к2, Краснодар — the «Гагаринг» training centre's licensed address (АНО ДПО «Образовательный центр Гагаринг», лицензия Л035-01218-23/02689789): a two-storey commercial annex at the base of a residential tower. [s5385]
+- ![Барашков Александр Сергеевич, GD/co-founder of ООО «Гагаринг», at what appears to be one of the «Гагаринг» training-centre's field courses (t.me/my_el_lab/4210, one of six images in the post's gallery).](../images/gagaring_barashkov_portrait.jpg) — Барашков Александр Сергеевич, GD/co-founder of ООО «Гагаринг», at what appears to be one of the «Гагаринг» training-centre's field courses (t.me/my_el_lab/4210, one of six images in the post's gallery). [s5387]
+
 ## Principals & persons of interest
 
 ### Барашков Александр Сергеевич
@@ -121,6 +127,8 @@
 | s5333 | Fedresurs | Fedresurs (FEDRESURS_939B297414FA48A4A4B3497315AF3659_20260903_gagaring-audit-report-2025fy-full.pdf) | 2026-09-03 | — |
 | s5335 | Proverki | Proverki (PROVERKI_2312321660_20260903_gagaring-rkn-inspection-26154827.json) | 2026-09-03 | 2024-11-15 |
 | s5345 | Gisp | Gisp (GISP_2312321660_20260903_atlas-promyshlennosti-company-record.json) | 2026-09-03 | 2026-09-03 |
+| s5385 | Islod | Islod (ISLOD_2310240630_20260903_licence-branch-detail.html) | 2026-09-03 | 2025-07-17 |
+| s5387 | Tgpost | Tgpost (TGPOST_my_el_lab_4210_20260803.txt) | 2026-08-03 | 2026-08-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

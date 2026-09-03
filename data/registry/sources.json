@@ -20379,6 +20379,42 @@
     "_origin": "manifest"
   },
   {
+    "id": "s5385",
+    "type": "obrnadzor_licence_registry_record",
+    "path": "data/sources/ISLOD_2310240630_20260903_licence-branch-detail.html",
+    "url": null,
+    "captured_date": "2026-09-03",
+    "fiscal_year": null,
+    "as_of": "2025-07-17",
+    "as_of_method": "manual",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "1f4374726c52fc053505f7b942be53fe882bcf69bef8d925e17e4e362094a3d1",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5386",
+    "type": "obrnadzor_licence_registry_record",
+    "path": "data/sources/ISLOD_2310240630_20260903_licence-record.html",
+    "url": null,
+    "captured_date": "2026-09-03",
+    "fiscal_year": null,
+    "as_of": "2025-07-17",
+    "as_of_method": "manual",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "2310240630"
+    ],
+    "entities": [],
+    "sha256": "561f7a4348f9280ffe03efea93323fd43834da1da6b97ccd00f0e5d4caa03569",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s5339",
     "type": "kad_arbitr_search_screenshot",
     "path": "data/sources/KAD_6730046954_20260903_participant-search-page2-of2.png",
@@ -26712,6 +26748,23 @@
     "inns": [],
     "entities": [],
     "sha256": "7c04f0bbd950c7c3a91dafbb2e5f3c8e8566fff75695c7ef3c1de13b3389139d",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5387",
+    "type": "telegram_post",
+    "path": "data/sources/TGPOST_my_el_lab_4210_20260803.txt",
+    "url": null,
+    "captured_date": "2026-08-03",
+    "fiscal_year": "4210",
+    "as_of": "2026-08-03",
+    "as_of_method": "manual",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "5b353b0e1f0a03160d38bd75c453ea4f1f7baae33b9a35253f98ca858936dd46",
     "_verified": false,
     "_origin": "manifest"
   },

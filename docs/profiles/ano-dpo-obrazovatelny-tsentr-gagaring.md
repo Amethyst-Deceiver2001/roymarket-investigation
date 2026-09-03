@@ -8,6 +8,7 @@
 
 - **Legal form:** ANO (autonomous non-profit organisation)
 - **Registered:** 26.05.2025
+- **Address:** 350020, Краснодарский край, г. Краснодар, ул. Коммунаров, д. 268, помещ. 54
 - **Director:** Безроднова Анна Сергеевна
 - **ЦБСТ tie:** confirmed
 - **Wildberries overlap:** not_checked
@@ -26,6 +27,13 @@
 |---|---|---|
 | ООО «Гагаринг» (ИНН 2312321660) — учредитель, per Гагаринг's own FY2025 audit report | 2025-12-31 |  [s5333] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 350020, Краснодарский край, г. Краснодар, ул. Коммунаров, д. 268, помещ. 54 (место нахождения организации / registered legal address) | 2025-07-17 | Per ИСЛОД (Информационная система лицензирования образовательной деятельности) licence record Л035-01218-23/02689789. [s5386] |
+| 350020, Краснодарский край, г. Краснодар, ул. им. Цезаря Куникова, 24, корпус №2, помещ. 44-46 (место осуществления образовательной деятельности / actual licensed training-activity site) | 2025-07-17 | Per ИСЛОД licence branch detail — this is the officially licensed physical location where the ДПО training activity is conducted, distinct from the legal mailbox address above. Independently matches a claim already present in docs/index.html ("ул. Цезаря Куникова, 24к2, Краснодар — the «Гагаринг» training centre's address", with a photo, images/gagaring_school_kunikova_annex.jpg) that predates this registry entity and had no traceable source_id — this ИСЛОД record is the first solid primary-source confirmation of that pre-existing claim. [s5385] |
+
 ## Images
 
 - ![Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading approximately «УДАРНАЯ СПЕЦНАЗ...» and text visually resembling «АРХАНГЕЛ» (not OCR-confirmed).](../images/gagaring-training-graduation-mask-crop.png) — Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading approximately «УДАРНАЯ СПЕЦНАЗ...» and text visually resembling «АРХАНГЕЛ» (not OCR-confirmed). [s5382]
@@ -36,7 +44,7 @@ _No named principals linked to this entity yet._
 
 ## Open questions
 
-- Physical location of the training center not yet confirmed by an independent source (cadastral/NSPD, local press, or a geolocated photo). s5378 (24.02.2026 opening post) names no address; s5380 (01.03.2026) separately names "школа «Архангел» в Туапсе" visited by the same team days later — plausibly the same facility, not confirmed. s5613/s5597/s5605/s5606 (Feb 2026 posts) establish it is explicitly the training center of the 51-я Гвардейская Общевойсковая Армия, opened with «Архангел Легион» fund, «проект Архангел», КБ «Ветер» and «Рубикон» present at a 21.02.2026 coordination meeting (s5375) — none of those organizations besides Гагаринг are yet profiled in this registry. Гагаринг's own YouTube channel (s5383/s5382/s5384, uploaded 2026-08-04, same graduation ceremony as s5372) confirms Гагаринг itself produced and published video of the event, but the background is a plain corrugated-metal wall with no identifiable landmarks — user-confirmed geolocation is not feasible from this frame. Graduates' face-buffs carry a circular emblem reading approximately "УДАРНАЯ СПЕЦНАЗ..." with stacked text visually resembling "АРХАНГЕЛ" (s5382, not OCR-confirmed at available resolution) — a possible additional branding link to the Архангел network beyond the timing/personnel overlap already noted, but not a confirmed one. Full video not retrievable from this session's sandboxed network (YouTube CDN 403s without a browser session); only the thumbnail was archived. [s5378]
+- RESOLVED (2026-09-03): the ИСЛОД (Rosobrnadzor) licence registry (Л035-01218-23/02689789, issued 17.07.2025, бессрочная/indefinite, issuing authority Министерство образования, науки и молодежной политики Краснодарского края) states the licensed training-activity site as ул. им. Цезаря Куникова, 24, корпус №2, помещ. 44-46, г. Краснодар (s5385) — an official government record, not a Telegram claim. This is a two-storey commercial annex at the base of a residential tower per a pre-existing (previously unsourced) docs/index.html photo caption. The «школа «Архангел» в Туапсе» mention (s5380, 01.03.2026) is very likely a SEPARATE facility/event the same team visited on a trip, not this entity's own licensed training site — the Krasnodar/Куникова address is now the primary-sourced answer to "where is Гагаринг's training center", and the 51st Army/Архангел connection (s5372, s5374-s5379) describes an operational/personnel relationship, not necessarily a shared physical address. [s5378]
 - Full EGRUL extract not yet pulled (only the egrul.nalog.ru open-API summary result, s5371) — a proper extract would give the registered legal address, which may itself only be a Krasnodar mailbox rather than the training site, per the established Гагаринг address pattern.
 
 ## Sources cited in this profile
@@ -47,6 +55,8 @@ _No named principals linked to this entity yet._
 | s5371 | EGRUL extract | EGRUL extract (EGRUL_2310240630_20260903_open-api-search-result.json) | 2026-09-03 | 2026-09-03 |
 | s5378 | Tgpost | Tgpost (TGPOST_projectArchangel_9613_20260224.txt) | 2026-02-24 | 2026-02-24 |
 | s5382 | Youtube | Youtube (YOUTUBE_20260804_gagaring-vypusk-shkoly-fpv-mask-crop.png) | 2026-08-04 | 2026-08-04 |
+| s5385 | Islod | Islod (ISLOD_2310240630_20260903_licence-branch-detail.html) | 2026-09-03 | 2025-07-17 |
+| s5386 | Islod | Islod (ISLOD_2310240630_20260903_licence-record.html) | 2026-09-03 | 2025-07-17 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
