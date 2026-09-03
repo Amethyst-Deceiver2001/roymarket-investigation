@@ -107,6 +107,10 @@
 - customer: КОМИТЕТ ПО ПРОМЫШЛЕННОЙ ПОЛИТИКЕ, ИННОВАЦИЯМ И ТОРГОВЛЕ САНКТ-ПЕТЕРБУРГА; contract_number: 6/26/ГК; reg_number: 2783848285226000007; date: 10.03.2026; basis: Электронный аукцион; value_rub: 1954867.5; items: Оказание услуг по организации и проведению Всероссийской юношеской научно-практической конференции «Будущее сильной России - в высоких технологиях» [s2638]
 - customer: ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ ЦЕНТР "КУРЧАТОВСКИЙ ИНСТИТУТ"; contract_number: 105-2-26-44-333; reg_number: 1773411103526000181; date: 04.05.2026; basis: Электронный аукцион; value_rub: 2283700.0; items: Поставка измерителя гидрологических параметров [s2634]
 
+## State-program participation
+
+- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.11.9 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -291,6 +295,7 @@
 | s5266 | arbitration court filing | arbitration court filing (A40-211563-2022_20221109_Opredelenie.pdf) | 2022-11-09 | 2022-11-09 |
 | s5281 | arbitration court filing | arbitration court filing (A54-3359-2026_20260417_Opredelenie.pdf) | 2026-04-17 | 2026-04-17 |
 | s5282 | arbitration court filing | arbitration court filing (A56-17609-2026_20260221_Opredelenie.pdf) | 2026-02-21 | 2026-02-21 |
+| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

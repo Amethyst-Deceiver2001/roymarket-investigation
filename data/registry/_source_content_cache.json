@@ -42178,5 +42178,21 @@
     "as_of_method": "manual",
     "sha256": "b9b690fc25b9f3179b9a86ac994e52c3f491a231fed98067ccbd08d4ed2d26f7",
     "sample": "{\n \"id\": 20052703,\n \"fields\": {\n \"fullname\": \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \\\"ГАГАРИНГ\\\"\",\n \"region_value\": \"Краснодарский край\",\n \"ogrn\": \"1232300051235\",\n \"inn\": \"2312321660\",\n \"okved2main\": \"26.11\",\n \"industry_value\": \"Радиоэлектронная промышленность\",\n \"address_full\": \"350912, КРАСНОДАРСКИЙ КРАЙ, КРАСНОДАР Г., УЛ. ИМ. ФАДЕЕВА (ПАШКОВСКИЙ ЖИЛОЙ МАССИВ ТЕР.), Д. 429/3, ПОМЕЩ. 11\",\n \"c"
+  },
+  "GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json": {
+    "type": "gisp_atlas_bulk_export",
+    "type_method": "manual",
+    "as_of": "2026-09-03",
+    "as_of_method": "manual",
+    "sha256": "9d0926c4b65587e3868dfe88e84bc0f003eeea54df83a28511522a5d46c39971",
+    "sample": "[{\"id\":7,\"fields\":{\"fullname\":\"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \\\"ВОРКМАН\\\"\",\"region_value\":\"Нижегородская область\",\"ogrn\":\"1185275059771\",\"inn\":\"5252043837\",\"okved2main\":\"14.12\",\"industry_value\":null,\"address_full\":\"606108, НИЖЕГОРОДСКАЯ ОБЛАСТЬ, ПАВЛОВСКИЙ Р-Н, ПАВЛОВО Г., ПЕР. СУВОРОВА, Д. 5, КВ. 7\",\"site\":\"Нет\"},\"geom\":{\"type\":\"Point\",\"coordinates\":[43.088573,55.974816]}},{\"id\":11,\"fie"
+  },
+  "GISP_20260903_atlas-region-industry-discovery-candidates-109.json": {
+    "type": "gisp_atlas_bulk_export",
+    "type_method": "manual",
+    "as_of": "2026-09-03",
+    "as_of_method": "manual",
+    "sha256": "849badbc7b37483f8bdd7ccf99e1f3c2c6eef5e63709f2b4f84bb8d6e3daba06",
+    "sample": "[\n {\n \"fullname\": \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \\\"АКВА МАРКЕТ+\\\"\",\n \"region_value\": \"Ростовская область\",\n \"ogrn\": \"1156181002350\",\n \"inn\": \"6102063554\",\n \"okved2main\": \"27.51\",\n \"industry_value\": \"Радиоэлектронная промышленность\",\n \"address_full\": \"347871, РОСТОВСКАЯ ОБЛАСТЬ, ГУКОВО Г., УЛ. КОЛЬЦЕВАЯ, Д. 132А\",\n \"site\": \"https://aqua-work.ru/\"\n },\n {\n \"fullname\": \"ОБЩЕСТВО С ОГРАНИЧЕН"
   }
 }

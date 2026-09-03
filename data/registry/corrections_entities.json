@@ -12094,103 +12094,16 @@
     },
     "ooo-tskbr": {
       "set": {
-        "address": "Московская область, г.о. Жуковский, г. Жуковский",
-        "inn": "5040176793",
-        "name_ru": "ООО «ЦКБР»",
-        "ogrn": "1225000003458",
-        "director": "Кузякин Дмитрий Васильевич",
-        "director_history": [
+        "state_programs": [
           {
-            "value": "Кузякин Дмитрий Васильевич",
-            "as_of": "2025-05-20",
-            "source_id": "s0465",
-            "note": "personal ИНН 501306766736"
-          }
-        ],
-        "founders": [
-          {
-            "name": "Кузякин Дмитрий Васильевич",
-            "inn_personal": "501306766736",
-            "share_percent": null,
-            "source_id": "s0465"
-          }
-        ],
-        "okved_code": "30.30",
-        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
-        "_verified": true,
-        "sanctions": [
-          {
-            "regime": [
-              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
-              "EU (Ukraine-related restrictive measures)",
-              "Switzerland (SECO, Ukraine-related measures)",
-              "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
-              "US-BIS-EL",
-              "Ukraine (Presidential sanctions decree/list)"
-            ],
-            "date": null,
-            "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 5040176793 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"COMPLEX UNMANNED SOLUTIONS CENTER LTD\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/uav/companies/12829; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8159; https://home.treasury.gov/news/press-releases/jy2318; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R1494. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
-            "source_id": "s0742"
-          }
-        ],
-        "wb_overlap": "none_found",
-        "products": [
-          {
-            "name_ru": "Джокер"
-          },
-          {
-            "name_ru": "«Ультиматум»",
-            "name_latin": "Ultimatum",
-            "description": "FPV drone, per GUR profile.",
-            "source_id": "s0957"
-          },
-          {
-            "name_ru": "перехватчик (interceptor drone)",
-            "description": "Interceptor-drone line, per GUR profile — model name not given.",
-            "source_id": "s0957"
-          },
-          {
-            "name_ru": "«Лодырь»",
-            "name_latin": "Lodyr",
-            "description": "False drone-operator complex, designed to distract air/missile defense systems, per GUR profile.",
-            "source_id": "s0957"
-          },
-          {
-            "name_ru": "«Вышка»",
-            "name_latin": "Tower",
-            "description": "Antenna complex, per GUR profile.",
-            "source_id": "s0957"
-          },
-          {
-            "name_ru": "«Апокалипсис» / Doomsday",
-            "description": "FPV drone for monitoring radiation levels in the event of a nuclear attack, per GUR profile.",
-            "source_id": "s0957"
-          }
-        ],
-        "patents": [
-          {
-            "reg_number": "RU236504U1",
-            "type": "utility_model",
-            "title": "Мультикоптерное устройство для отпугивания птиц",
-            "filed": "2024.06.30",
-            "published": "2025.08.11",
-            "holder": "Общество с ограниченной ответственностью \"Центр Комплексных Беспилотных Решений\" (RU)",
-            "inventors": [
-              "Кузякин Дмитрий Васильевич (RU)"
-            ],
-            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24; own-name patentee/holder match, archived and read in full.",
-            "source_id": "s1000"
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
           }
         ]
-      },
-      "verified_against": "full EGRUL extract pulled directly 23.08.2026",
-      "why": [
-        "full EGRUL extract pulled directly 23.08.2026 (ul-1225000003458-20260823122846.pdf). Sole founder = sole director. Located in Zhukovsky — Russia's primary flight-test/aerospace-R&D town (LII Gromov, MAKS airshow site) — a genuine aerospace-industrial address, not a generic registration. Declared ОКВЭД is a direct aircraft-manufacture match.",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0742).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5040176793). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "GUR (war-sanctions.gur.gov.ua/en/uav/companies/12829) ID-confirmed via ИНН 5040176793 — exact match, screen_gur.py sweep, 2026-08-24. This is the same entity behind ЦКБР's earlier-recorded «Джокер»; GUR adds a much wider declared product line and states the center cooperates with the russian MoD and in 2023 examined captured American-made FPV drones.",
-        "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here."
-      ]
+      }
     },
     "ooo-tsugam": {
       "set": {
@@ -15400,178 +15313,16 @@
     },
     "uraldronzavod": {
       "set": {
-        "name_ru": "ООО «Уралдронзавод»",
-        "ogrn": "1236600057011",
-        "inn": "6671284030",
-        "address": "Свердловская область, г. Екатеринбург",
-        "director": "Ткачук Владимир",
-        "founders": [],
-        "founders_history": [
+        "state_programs": [
           {
-            "value": "access-restricted (2 founders, both withheld)",
-            "as_of": "2026-06-16",
-            "source_id": "s0527",
-            "note": "Both founder rows \"Доступ к сведениям ограничен\" (Federal Law 129-FZ), dated 16.06.2026 -- roughly seven weeks before the 05.08.2026 car-bomb attack near Yekaterinburg that critically injured Ткачук Владимир (per the brief's existing scaffold) and killed his driver-bodyguard. Worth noting the redaction predates the attack, not a reaction to it."
-          }
-        ],
-        "okved_code": "30.30.39",
-        "okved_label": "Производство прочих летательных аппаратов",
-        "_verified": true,
-        "sanctions": [
-          {
-            "regime": [
-              "Switzerland (SECO, Ukraine-related measures)",
-              "EU (Ukraine-related restrictive measures)",
-              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
-              "Ukraine (Presidential sanctions decree/list)"
-            ],
-            "date": null,
-            "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 6671284030 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Limited Liability Company Uraldronzavod\". Topics: debarment, export.control, sanction. Primary source URLs cited by OpenSanctions: https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=7810; https://war-sanctions.gur.gov.ua/en/sanctions/companies/13813; https://permid.org/1-5090595387; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=49954; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202403183. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
-            "source_id": "s0755"
-          }
-        ],
-        "trademarks": [
-          {
-            "reg_number": "1143103",
-            "application_number": "2023815688",
-            "title": "УПЫРЬ",
-            "type": "word_mark",
-            "filed": "2023-11-24",
-            "registered": "2025-08-27",
-            "expires": "2033-11-24",
-            "holder": "Общество с ограниченной ответственностью \"УралДронЗавод\"",
-            "goods_classes_summary": "09 (antennas, servo controllers, transmitters), 12 (\"дроны военного назначения; дроны гражданского назначения; дроны грузовые; дроны для фотосъемки\" -- military/civilian/cargo/photography drones, named explicitly), 28 (toy drones)",
-            "source_id": "s1094",
-            "note": "Plain wordmark \"УПЫРЬ\" (\"Ghoul\"/\"Vampire\") -- the entity's combat-drone product brand, matches products[] entry already on file. Filed jointly with 1143104 (combined color-badge variant) same day."
-          },
-          {
-            "reg_number": "1143104",
-            "application_number": "2023815807",
-            "title": "УПЫРЬ (combined mark)",
-            "type": "combined_mark",
-            "filed": "2023-11-24",
-            "registered": "2025-08-27",
-            "expires": "2033-11-24",
-            "holder": "Общество с ограниченной ответственностью \"УралДронЗавод\"",
-            "colors": "черный, зеленовато-желтый, зеленовато-серый, серый, белый, красный",
-            "goods_classes_summary": "same as 1143103 (09/12/28, drones named explicitly)",
-            "source_id": "s1097",
-            "note": "Combined mark: a bat-winged FPV/quadcopter drone silhouette with glowing red eyes and fangs over a crescent-moon backdrop, unit-patch style, with \"УПЫРЬ\" in stylized lettering below. See data/sources/TRADEMARK_RU1143104_20231124_uraldronzavod.jpg. Filed jointly with 1143103 (plain wordmark variant) same day."
-          },
-          {
-            "reg_number": "1208395",
-            "application_number": "2025719239",
-            "type": "figurative_mark",
-            "filed": "2025-02-28",
-            "registered": "2026-04-06",
-            "expires": "2035-02-28",
-            "holder": "Общество с ограниченной ответственностью \"УралДронЗавод\"",
-            "goods_classes_summary": "Same 11-class full-spectrum filing as the companion word-mark application 2025719245 (07/09/12/28/35/37/39/40/41/42/45), UAV-explicit throughout class 07/09.",
-            "source_id": "s1103",
-            "note": "Figurative mark: a stylized quadcopter-drone silhouette icon (no text). Filed the same day (28.02.2025) as the pending word-mark application 2025719245 (\"УРАЛДРОНЗАВОД\") -- companion filings, one figurative and one word, both part of the same brand-protection push. See data/sources/TRADEMARK_RU1208395_20250228_uraldronzavod.jpg."
-          },
-          {
-            "application_number": "2025719245",
-            "title": "УРАЛДРОНЗАВОД",
-            "type": "word_mark",
-            "filed": "2025-02-28",
-            "status": "pending (Экспертиза заявленного обозначения / substantive examination, as of last change 17.03.2025)",
-            "applicant": "Общество с ограниченной ответственностью \"УралДронЗавод\"",
-            "representative": "Александров Евгений Борисович (рег. № 1319), ООО \"Юридическая фирма Городисский и партнеры\"",
-            "goods_classes_summary": "11 МКТУ classes (07, 09, 12, 28, 35, 37, 39, 40, 41, 42, 45) -- full-spectrum filing. Classes 07 and 09 explicitly and repeatedly name \"беспилотные летательные аппараты\" (UAVs) throughout: UAV engines/motors, antennas, GPS apparatus, remote-control systems, thermal cameras for UAV mounting, navigation modules, onboard-computer memory, UAV software/firmware.",
-            "source_id": "s1153",
-            "note": "User-supplied FIPS link, 2026-08-24. Applicant's own name and address match the entity exactly; same patent-attorney firm (Городисский и Партнеры) as the entity's confirmed registered marks. Wordmark image confirms exact text \"УРАЛДРОНЗАВОД\" (data/sources/TRADEMARK_RU2025719245_20250228_uraldronzavod.jpg). Correspondence log also shows a pending \"Заявление об изменении наименования заявителя\" (change-of-applicant-name request, logged 13.03.2026) -- not yet investigated, flagged as an open question."
-          },
-          {
-            "reg_number": "738742",
-            "type": null,
-            "application_number": "2018708230",
-            "filed": "02.03.2018",
-            "registered": "11.12.2019",
-            "expires": "02.03.2028",
-            "holder": "Акционерное общество Холдинговая компания \"Абсолют\", 107023, Москва, вн. тер. г. муниципальный округ Соколиная Гора, пер. Медовый, д. 5, стр. 1, эт./кабинет 1/2, 16 (RU)",
-            "goods_classes_summary": "11 (broad catch-all filing, no UAV/defense-specific items); 12 (broad catch-all filing, no UAV/defense-specific items); 14 (broad catch-all filing, no UAV/defense-specific items); 16 (broad catch-all filing, no UAV/defense-specific items); 18 (broad catch-all filing, no UAV/defense-specific items); 20 (broad catch-all filing, no UAV/defense-specific items); 22 (broad catch-all filing, no UAV/defense-specific items); 28 (UAV/defense terms present: воздушн, дрон, оружи, робот)",
-            "source_id": "s1125",
-            "note": "Enriched from FIPS doc-view page 2026-08-25. Image at TRADEMARK_RU738742_20180302_uraldronzavod.jpg."
-          },
-          {
-            "reg_number": "925634",
-            "type": null,
-            "application_number": "2022737513",
-            "filed": "08.06.2022",
-            "registered": "02.03.2023",
-            "expires": "08.06.2032",
-            "holder": "Общество с ограниченной ответственность \"СМАРТ\", 430034, Республика Мордовия, г.о. Саранск, г. Саранск, ул. Промышленная 1-я, д.19, офис 334 (RU)",
-            "goods_classes_summary": "03 (broad catch-all filing, no UAV/defense-specific items); 05 (broad catch-all filing, no UAV/defense-specific items); 10 (broad catch-all filing, no UAV/defense-specific items)",
-            "source_id": "s1149",
-            "note": "Enriched from FIPS doc-view page 2026-08-25. Image at TRADEMARK_RU925634_20220608_uraldronzavod.jpg."
-          }
-        ],
-        "open_questions": [
-          {
-            "source_id": "s0945",
-            "text": "CLOSED 2026-08-24, negative result: the bulk-sweep-derived \"brand predates the entity\" claim (marks filed by АО ХК «Абсолют» 2018 and ООО «СМАРТ» 2022 before УралДронЗавод itself started filing in 2023) is FALSE. Both individually verified against FIPS: reg. 738742 is \"Skipy\" (baby goods, МКТУ 11/12, held by Абсолют, no connection); reg. 925634 is an unrelated intimate-hygiene/sexual-wellness mark (МКТУ 03/05/10, held by a Mordovia company, no connection). Both were bulk-CSV-sweep false positives on holder-name text, now removed from trademarks[]. УралДронЗавод's earliest confirmed trademark filing is 1143103/1143104 (24.11.2023), consistent with the entity's own registration date -- no evidence of an earlier, pre-entity brand history."
-          },
-          {
-            "source_id": "s1153",
-            "text": "Application 2025719245 (word mark \"УРАЛДРОНЗАВОД\", filed 28.02.2025, still under examination as of 17.03.2025) shows a pending \"Заявление об изменении наименования заявителя\" (change-of-applicant-name request) logged 13.03.2026 in its correspondence history. Not yet investigated -- could be a routine rename or could signal an ownership/structure change worth checking against EGRUL."
-          }
-        ],
-        "wb_overlap": "none_found",
-        "director_history": [
-          {
-            "value": "Ткачук Владимир",
-            "as_of": "2026-08-04",
-            "source_id": "s1052",
-            "note": "Named as director of Uraldronzavod by Militarnyi in coverage of a car-bomb attack on him near Yekaterinburg (Bolshoy Istok), evening 2026-08-04 — a Mercedes-Benz parked near his residence was destroyed by an explosive device; Tkachuk was hospitalized in critical condition, the driver/security guard was killed at the scene. Tkachuk is also named as author of the \"Obsessed With War\" Telegram propaganda channel. Not yet cross-checked against an EGRUL extract — registry previously had no director on file for this entity at all."
-          }
-        ],
-        "foreign_components": [
-          {
-            "part": "GPS module with iFlight compass (M8Q-5883 V2.0)",
-            "manufacturer": "iFlight",
-            "country": null,
-            "found_in_product": "Упырь (Upyr) FPV strike drone",
-            "source_id": "s1053",
-            "confidence": "press",
-            "note": "Reported by Militarnyi; used for flight/spatial orientation."
-          },
-          {
-            "part": "SAW filter, model TA1090EC",
-            "manufacturer": "Tai-Saw Technology",
-            "country": "Taiwan",
-            "found_in_product": "Упырь (Upyr) FPV strike drone",
-            "source_id": "s1053",
-            "confidence": "press",
-            "note": "Blocks reception outside 1.075-1.095 GHz, described as EW-interference protection. Reported by Militarnyi."
-          }
-        ],
-        "address_history": [
-          {
-            "value": "620105, Свердловская обл., г.о. город Екатеринбург, г. Екатеринбург, пр-кт Академика Сахарова, д. 41, кв. 118",
-            "as_of": "2023-11-24",
-            "source_id": "s1158",
-            "note": "Address on the entity's earliest trademark filings (applications 2023815688/2023815807, filed 24.11.2023)."
-          },
-          {
-            "value": "620902, Свердловская обл., г.о. город Екатеринбург, г. Екатеринбург, тракт Полевской, стр. 16/7Г",
-            "as_of": "2025-08-27",
-            "source_id": "s1094",
-            "note": "Address as of the 1143103/1143104 registration date (27.08.2025) and the 1208395 registration (06.04.2026) -- differs from the 2023 filing address above. entities.json's flat `address` field (\"Свердловская область, г. Екатеринбург\") is generic and doesn't reflect either specific address; worth updating to the latest (Полевской) once independently confirmed against EGRUL."
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30.39 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
           }
         ]
-      },
-      "why": [
-        "full EGRUL extract pulled directly 23.08.2026 (ul-1236600057011-20260823143348.pdf). Director page in this extract shows only the certifying tax-service signature block, not a name row -- consistent with, but not independently confirmed as, a redacted director (same ambiguity flagged on other entities this session). Confirms Yekaterinburg address and UAV-manufacture ОКВЭД already implicit in the brief's existing «Упырь» FPV / car-bomb narrative.",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0755).",
-        "2026-08-24 Rospatent full-roster trademark sweep (own ИНН, s0945): the UralDronZavod trademark family has THREE distinct prior/co-existing right-holders on record before the current filings — АО ХК «Абсолют...» (filed 2018-03-02, №738742), ООО «СМАРТ» (filed 2022-06-08, №925634), then finally ООО «УралДрон...» itself (3 marks, 2023–2025). This traces a real brand lineage predating this entity's own registration — dates the project's actual inception years earlier than the current legal entity's own EGRUL registration date. Not yet investigated further (who АО ХК «Абсолют» and ООО «СМАРТ» are, whether either is otherwise connected to this network) — flagged as an open question.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (6671284030). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24 external research pass (foreign-components follow-up, excluding already-widely-covered platforms like Shahed/Zala/Kinzhal): Militarnyi coverage of a car-bomb attack on the company's director named him for the first time in this registry, and a separate Militarnyi piece on Upyr's design named two foreign components with manufacturer/country. Press-sourced only — not yet corroborated against a primary document (EGRUL for the director; a GUR/teardown record for the components) — flagged 'press' confidence accordingly, not 'doc'.",
-        "2026-08-24: individually verified reg_number 738742 against FIPS (data/sources/TRADEMARK_RU738742_20180302_uraldronzavod.html/.jpg) and REJECTED it -- wordmark is \"Skipy\" (a baby/children's-goods brand: bicycles, baby carriages, bathtubs, lamps; МКТУ classes 11/12), held throughout its full history by ЗАО/АО ХК \"Абсолют\" at an unrelated Moscow address, with zero mention of УралДронЗавод anywhere in the document. This was a false positive from the bulk CSV sweep (s0945) -- removed from trademarks[]. The Phase 2b plan note claiming \"UralDronZavod's brand was filed by two prior holders (АО ХК Абсолют 2018, ООО СМАРТ 2022) before the entity began filing in 2023\" is WRONG for the Абсолют half and UNVERIFIED for the СМАРТ half (925634 has not yet been individually pulled) -- do not repeat that claim until 925634 is checked the same way.",
-        "2026-08-24: individually verified reg. 925634 against FIPS (data/sources/TRADEMARK_RU925634_20220608_uraldronzavod.html/.json) and REJECTED it -- an unrelated intimate-hygiene/sexual-wellness trademark (МКТУ 03/05/10: condoms, lubricants, vibrators), held by ООО \"СМАРТ\" in Saransk, Mordovia, with no connection to УралДронЗавод anywhere in the record. Combined with the 738742/\"Skipy\" rejection above, this closes out the open question: both halves of the bulk-sweep \"brand predates the entity\" claim were false positives, not real brand-lineage evidence.",
-        "2026-08-24: individually pulled all 3 confirmed УралДронЗавод trademarks (1143103, 1143104, 1208395) plus companion application data from FIPS, filling in wordmark/goods-class detail the bulk sweep (s0945) couldn't carry. Major find: 1143103/1143104 are the \"УПЫРЬ\" (\"Ghoul\") brand -- the entity's already-known combat-drone product name -- registered explicitly for \"дроны военного назначения\" (military-purpose drones) among other drone categories, with 1143104 being a bat-winged FPV-drone unit-patch-style badge logo. Also surfaced a real address change between the 2023 filings and the 2025-2026 registrations, recorded in address_history."
-      ],
-      "verified_against": "full EGRUL extract pulled directly 23.08.2026"
+      }
     },
     "ooo-akr-begak": {
       "set": {
@@ -15635,136 +15386,16 @@
     },
     "alyaska": {
       "set": {
-        "name_ru": "ООО «ИОНОС»",
-        "name_latin": "IONOS LLC",
-        "brand_ru": "«Аляска» (проект) / «Алёша» (продукт)",
-        "brand_latin": "Alaska (project) / Alyosha (product)",
-        "inn": "6168719068",
-        "ogrn": "1146196001621",
-        "address": "Ростовская область, п. Кулузаево, ул. Ленина, 68Б",
-        "director": "Ионов Антон Александрович",
-        "director_history": [
+        "state_programs": [
           {
-            "value": "Ионов Антон Александрович",
-            "as_of": "2015-04-13",
-            "source_id": "s0531",
-            "note": "personal ИНН 616899150213; also sole founder since incorporation"
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 27.40 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
           }
-        ],
-        "founders": [
-          {
-            "name": "Ионов Антон Александрович",
-            "inn_personal": "616899150213",
-            "share_percent": 100.0,
-            "source_id": "s0531"
-          }
-        ],
-        "okved_code": "27.40",
-        "okved_label": "Производство электрических ламп и осветительного оборудования",
-        "okved_mismatch": {
-          "mismatch": true,
-          "note": "Registered as electric-lamp/lighting-equipment manufacture — no drone/UAV ОКВЭД at all, despite being the confirmed maker of the «Алёша» FPV drone under the «Аляска» project name."
-        },
-        "sanctions": [
-          {
-            "regime": [
-              "EU"
-            ],
-            "date": "2026-06-15",
-            "note": "Asset freeze.",
-            "source_id": "s0531"
-          },
-          {
-            "regime": [
-              "Switzerland"
-            ],
-            "date": "2026-08-11",
-            "note": "Asset freeze.",
-            "source_id": "s0531"
-          },
-          {
-            "regime": [
-              "France"
-            ],
-            "date": null,
-            "note": null,
-            "source_id": "s0531"
-          },
-          {
-            "regime": [
-              "Monaco"
-            ],
-            "date": null,
-            "note": null,
-            "source_id": "s0531"
-          },
-          {
-            "regime": [
-              "Ukraine"
-            ],
-            "date": null,
-            "note": null,
-            "source_id": "s0531"
-          },
-          {
-            "regime": [
-              "Switzerland (SECO, Ukraine-related measures)",
-              "EU (Ukraine-related restrictive measures)"
-            ],
-            "date": null,
-            "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 6168719068 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LLC “IONOS”\". Topics: sanction. Primary source URLs cited by OpenSanctions: https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=9012; https://war-sanctions.gur.gov.ua/en/sanctions/companies/16085; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026D1364. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
-            "source_id": "s0751"
-          }
-        ],
-        "products": [
-          {
-            "name_ru": "«Алёша»",
-            "name_latin": "Alyosha",
-            "description": "FPV drone developed under project name «Аляска» (\"Alaska\"), reportedly used by Russian forces in Ukraine for reconnaissance, strike, and kamikaze operations.",
-            "source_id": "s0531"
-          }
-        ],
-        "_verified": true,
-        "trademarks": [
-          {
-            "reg_number": "1159964",
-            "filed": "2024-12-23",
-            "registered": "28.10.2025",
-            "expires": "2034-12-23",
-            "holder": "Общество с ограниченной ответственностью \"ИОНОС\", 346741, Ростовская обл., Азовский р-н, х. Колузаево, ул. Ленина, д. 68Б (RU)",
-            "representative": "610035, Кировская обл., г. Киров, ул. Воровского, д. 107, ТЦ \"Баско\", центральный вход, 4 этаж, правое крыло, оф. 4000ПБ, Патентное бюро \"Железно\", Морозова Александра Николаевна",
-            "source_id": "s1100",
-            "type": null,
-            "application_number": "2024844193",
-            "goods_classes_summary": "11 (UAV/defense terms present: воздушн, летательн)",
-            "note": "Enriched from FIPS doc-view page 2026-08-25. Image at TRADEMARK_RU1159964_20241223_alyaska.jpg."
-          },
-          {
-            "reg_number": "1240511",
-            "filed": "2025-08-15",
-            "registered": "06.07.2026",
-            "expires": "2035-08-15",
-            "holder": "Общество с ограниченной ответственностью \"ИОНОС\", 346741, Ростовская обл., Азовский р-н, х. Колузаево, ул. Ленина, д. 68Б (RU)",
-            "representative": "610035, Кировская обл., г. Киров, ул. Воровского, д. 107, ТЦ \"Баско\", центральный вход, 4 этаж, правое крыло, оф. 4000ПБ, Патентное бюро \"Железно\", Морозова Александра Николаевна",
-            "source_id": "s1109",
-            "type": "figurative_mark",
-            "application_number": "2025787334",
-            "goods_classes_summary": "12 (UAV/defense terms present: беспилот, робот, летательн, радиоуправляем, коптер, дрон, военн, воздушн)",
-            "note": "Enriched from FIPS doc-view page 2026-08-25. Image at TRADEMARK_RU1240511_20250815_alyaska.jpg."
-          }
-        ],
-        "wb_overlap": "none_found",
-        "tier_basis": "EU-sanctioned (15.06.2026) and Switzerland-sanctioned (11.08.2026) as maker of the «Алёша» FPV drone (project name «Аляска»), shown to Putin personally at the Zapad-2025 exercise (Mulino range) — a direct presidential-level demonstration of a sanctioned entity's combat product, not merely a listed OKVED mismatch. GUR components teardown independently confirms an \"Autonomous signaling system\" component match. No documented institutional ЦБСТ tie (accelerator residency, ЦБСТ channel mention) found — included on the strength of the sanctions designation and product evidence alone, consistent with this registry's manufacturer tier generally."
-      },
-      "why": [
-        "MYSTERY SOLVED (user lead, OpenSanctions): the bare \"«Аляска»\" product-tier stub in this registry resolves to ООО «ИОНОС» (ИНН 6168719068), incorporated 2014, Rostov region -- confirmed via opensanctions.org/entities/NK-7CUX9TWR4j6CY4wVG3R6J2/ (EU sanctioned 15.06.2026, Switzerland 11.08.2026, also listed by France/Monaco/Ukraine) and cross-checked directly against a fresh EGRUL extract: sole founder/director Ионов Антон Александрович, personal ИНН 616899150213, matches exactly.",
-        "full EGRUL extract pulled directly 23.08.2026 (ul-1146196001621-20260823145756.pdf).",
-        "ОКВЭД mismatch is stark even by this registry's standards: registered for lighting-equipment manufacture, not remotely aviation-adjacent, while OpenSanctions independently confirms it as the maker of the «Алёша» FPV drone.",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0751).",
-        "2026-08-24 Rospatent full-roster trademark sweep (own ИНН, s0945): two ООО «ИОНОС» trademarks (filed 2024-12-23 and 2025-08-15) added, no anomaly.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (6168719068). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
-      ],
-      "verified_against": "opensanctions.org/entities/NK-7CUX9TWR4j6CY4wVG3R6J2/, read directly 23.08.2026; full EGRUL extract pulled directly 23.08.2026 (ul-1146196001621-20260823145756.pdf)"
+        ]
+      }
     },
     "npo-kilobatt": {
       "set": {
@@ -17223,6 +16854,15 @@
             "description": "FPV kamikaze UAV, per GUR profile — likely the same as the existing «Скворец ВМФ» naval variant.",
             "source_id": "s0966"
           }
+        ],
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30.6 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
         ]
       },
       "verified_against": "war-sanctions.gur.gov.ua/en/uav/companies/14303, archived as s0966",
@@ -17511,6 +17151,164 @@
             "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
             "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase (orbis_id 20052703), classified under industry 'Радиоэлектронная промышленность' (radio-electronics industry) with primary ОКВЭД 26.11 — independently corroborates the entity's ИНН/ОГРН/address (matches EGRUL exactly) and its declared radio-electronics/UAV-component industry classification via a second, unrelated federal data source. Geolocated point (39.128152, 45.032572) falls within the registered Пашковский жилой массив address area of Краснодар. Record also confirms no official company website (site: 'Нет').",
             "source_id": "s5345",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
+    },
+    "7701583410": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.20.1 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
+    },
+    "6154165878": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
+    },
+    "7811075899": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry 'Радиоэлектронная промышленность' with primary ОКВЭД 26.51.2 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
+    },
+    "1659101884": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 28.99.5 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
+    },
+    "4205376019": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
+        ],
+        "okved_code": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования"
+      }
+    },
+    "7814027653": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.11.9 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
+    },
+    "7813491943": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.30.13 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
+    },
+    "7735582816": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.11.3 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
+    },
+    "9725168367": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30.6 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
+    },
+    "4217210280": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
+    },
+    "2632116476": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
+    },
+    "7704097425": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry 'Радиоэлектронная промышленность' with primary ОКВЭД 26.40 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346",
             "as_of": "2026-09-03"
           }
         ]

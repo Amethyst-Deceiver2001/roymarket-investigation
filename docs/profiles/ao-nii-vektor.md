@@ -18,6 +18,10 @@
 - customer: Министерство обороны Российской Федерации; date: 2013-2016 (9 contracts, 28.03.2013-14.10.2014); value_rub: 73028219; items: AGGREGATE -- 9 Минобороны contracts, 2013-2016, ₽73,028,219 combined, distinct from the already-itemized 7-contract/₽338.92m mil-relevant subset above. CORRECTED 2026-09-01: this entry was previously duplicated (two near-identical rows, one with reg_number null and one with reg_number 0173100004511002669) -- merged into one. The 0173100004511002669 reg_number was also wrong: that specific contract card is a real but unrelated 2011 Минобороны contract (₽15,900,000, "Модернизация стационарного автоматизированного комплекса контроля безопасности связи радиолиний КВ диапазона Р-452С"), already covered by the "4 smaller МО contracts" note on the 7-contract subset entry below -- its date (17.03.2011) never matched this aggregate's own claimed 2013-2016 range, which should have been caught at the time. A follow-up zakupki_customer_clusters.py re-scan (2026-09-01) found an 8-contract/₽57,128,219 unwired Минобороны cluster (14.10.2014-28.03.2013) that sums, to the ruble, with the mis-cited ₽15,900,000 contract to this entry's own total (57,128,219 + 15,900,000 = 73,028,219 exactly) -- strong evidence the "8 new" contracts are actually 8 of this same already-counted 9-contract cluster, not new money, and were not wired again to avoid double-counting. reg_number left null since no single contract represents the aggregate; the true 9-member reg-number list is not separately recorded. [s3144]
 - customer: АО «Концерн «Моринформсистема-Агат»»; reg_number: 1772054420822000003; date: 2022-03-28; value_rub: 54900000; items: Аппаратно-программный комплекс, моделирующий функционирование автоматизированного канала радиотехнической разведки (АПК) -- a hardware/software complex simulating an automated radio-technical reconnaissance (SIGINT) channel, supplied to Концерн «Моринформсистема-Агат», Russia's principal naval C4I/combat-systems integrator (part of the naval defence-electronics cluster) -- a defence-prime customer relationship, distinct from the routine regional/municipal government supply that makes up most of this entity's zakupki footprint. Found 2026-09-01 via zakupki_customer_clusters.py non-recurring-tail review. [s3218]
 
+## State-program participation
+
+- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.30.13 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+
 ## Patents
 
 | Title | Reg. no. | Filed | Inventors |
@@ -308,6 +312,7 @@
 | s3214 | Zakupki | Zakupki (ZAKUPKI_contract_1770425226115000509_20260829.html) | 2026-08-29 | — |
 | s3217 | Zakupki | Zakupki (ZAKUPKI_contract_1770425226117000583_20260829.html) | 2026-08-29 | — |
 | s3218 | Zakupki | Zakupki (ZAKUPKI_contract_1772054420822000003_20260829.html) | 2026-08-29 | — |
+| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

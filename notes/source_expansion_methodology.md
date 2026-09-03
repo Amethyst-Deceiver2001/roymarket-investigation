@@ -651,3 +651,89 @@ two unrelated official federal sources now converge on the same
 not-yet-catalogued company. Worth a proper EGRUL/БФО pull and full
 entity write-up next session rather than treating this as just another
 line in the 146.
+
+## Ninth pass (2026-09-03): GISP's OTHER dataset — Атлас промышленности
+
+The user surfaced a second, unrelated GISP service by pasting a live
+`gisp.gov.ru/gisip/#/sections/map/...?object=prom.companies.20052703` URL:
+**Атлас промышленности** — a federal industrial-facility geodatabase (not
+the product catalog from the eighth pass), covering **40,281 companies**
+nationwide with ИНН/ОГРН, ОКВЭД, GISP's own industry-sector label,
+geolocated coordinates, and a `site` flag. Same access pattern as before
+(real browser session, no login needed for this layer) — found the
+underlying API (`GET /gisip/orbismap/api/2.8/oms_gisip_docker/prom/
+layers/companies/objects/`) via the already-open map page's network
+requests, confirmed the `?object=` id in the URL is the layer's own `id`
+field (not `orbis_id` as first guessed), and that a single unfiltered
+`fjson` request returns the **entire** 40,281-row layer in one call — no
+pagination, no `where`-clause server-side filtering (tested; ignored
+silently). So a one-shot bulk pull is the efficient approach here, not a
+per-company query loop.
+
+The pasted URL itself resolved to id 20052703 = **ООО «Гагаринг»** —
+confirmed ИНН/ОГРН/address against EGRUL exactly, gave a first-ever
+sourced ОКВЭД-code confirmation (26.11, already on file from s5333 but now
+independently corroborated) and a geolocation pin landing inside the
+registered Пашковский-массив address area. Archived as `s5345`
+(`GISP_2312321660_20260903_atlas-promyshlennosti-company-record.json`),
+wired into `ooo-gagaring`'s `state_programs[]`, profile rebuilt.
+
+**Then asked "any use beyond corroboration" and pulled the full 40,281-row
+layer** (`s5346`, `GISP_20260903_atlas-promyshlennosti-full-dump-40281-
+companies.json`) to check three angles:
+
+- **Bulk cross-check against the whole registry** — 21 of 166 registry
+  entities have an exact-ИНН match in the atlas (9 were already covered by
+  s5344's product catalog; the other 16 — `ao-pk-azimut`,
+  `uraldronzavod`, `ao-tekhnodron`, `ooo-atlant-aero`, `ooo-tskbr`,
+  `ao-kotlin-novator`, `ooo-arkodim`, `alyaska`,
+  `ooo-sibirskaya-navigatsionnaya-kompaniya`, `npp-radar-mms`,
+  `ao-nii-vektor`, `npts-elvis`, `ooo-kingpro`, `ooo-prommash`,
+  `ooo-akr-begak`, `ao-ross` — got a fresh `state_programs[]` entry citing
+  `s5346`). All 16 ОКВЭД codes matched what was already on file except
+  one genuine gap-fill: `ooo-sibirskaya-navigatsionnaya-kompaniya` had no
+  `okved_code` at all — atlas supplied `30.30` (aircraft/spacecraft
+  manufacturing), set directly via `corrections_entities.json`.
+  **Gotcha**: 3 of the 16 (`uraldronzavod`, `ooo-tskbr`, `alyaska`)
+  initially failed to apply — `extract_registry.py`'s correction `by_key`
+  map is built from the freshly-rebuilt scaffold *before* corrections run,
+  and these three are among the "3 merged into another record" entities
+  noted in every `check_registry.py` summary line
+  (`169 raw / 166 live`) — their raw ИНН key doesn't survive into `by_key`
+  post-merge, only their slug does. Fixed by keying those three corrections
+  by slug instead of ИНН (same fix pattern already documented in the
+  script's own kolskaya-verf comment, just the ИНН-vs-slug axis of it
+  rather than the ordering axis). **Takeaway for next time**: if a
+  `corrections_entities.json` key silently fails with "matches no record"
+  and `check_registry.py` reports any merged entities, try the slug key
+  before assuming the ИНН itself is wrong.
+- **Address colocation** (shell-company-at-one-building pattern) —
+  normalized and matched every registry entity's `address` field against
+  the atlas's `address_full` for all 40,281 rows. First pass produced 6
+  "hits," all false positives from region-only address strings on both
+  sides colliding (e.g. two unrelated Ивановская область IPs matching two
+  unrelated registry entities that only have a bare region name on file,
+  not a street address). Re-ran restricted to full street addresses
+  (>40 stripped chars on both sides): **zero real hits**. Null result,
+  not a gap — worth re-trying only once more registry entities carry full
+  street addresses rather than region-only placeholders.
+- **Region + industry discovery** — filtered the 40,281 rows to
+  Краснодарский край / Ростовская область / Белгородская область (core
+  ЦБСТ geography) with either GISP's own "Радиоэлектронная промышленность"
+  label or an ОКВЭД prefix in `{26.11, 26.30, 26.51, 30.30, 25.4, 27.4,
+  28.99.5}`, excluding anything already in the registry: **109 candidates**
+  (`s5347`, `GISP_20260903_atlas-region-industry-discovery-candidates-
+  109.json`). Overwhelmingly noise — Ростов patron/armor-repair plants,
+  lighting-fixture makers, auto-parts shops that happen to share a
+  radio-electronics ОКВЭД bucket. **Not bulk-added — this filter is far too
+  coarse to be evidence on its own** (industry+region alone, no name/
+  product signal). A handful of names are worth a human look purely from
+  the name itself: ООО «Воздушные беспилотные системы» (2304079750, name
+  literally means "Airborne UAV Systems"), ООО «Модульные авиационные
+  системы» (2372033176), ООО «Инновационные авиасистемы» (6162090898),
+  ООО «Цифровые авиационные решения» (6155094852), ООО «НПЦ Аэромехмаш»
+  (2304084341), ООО «НСТР Ракетные технологии» (3123393540), and the
+  СИНС АВИА / СИНСЭВИЭЙШЕН pair (2311282810 / 2309153101 — same brand
+  root, two different legal entities, worth checking if related). None of
+  these are asserted as ЦБСТ-tied — they are unverified name-pattern leads
+  only, parked here for a future triage pass, not the registry.

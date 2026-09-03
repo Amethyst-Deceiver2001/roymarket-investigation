@@ -45,6 +45,10 @@
 - customer: Федеральное государственное бюджетное учреждение "Национальный исследовательский центр "Институт имени Н.Е. Жуковского"; reg_number: 1504013620820000010; date: 2020-10-30; value_rub: 3000000; items: НИР «Исследования по обоснованию ключевых требований к элементам доверенной экосистемы БАС для безопасного применения БАС в воздушном пространстве Российской Федерации», шифр «Кибербезопасность - БАС» -- UAV (БАС) trusted-ecosystem cybersecurity requirements research, directly on this brief's core subject. [s2892]
 - customer: Министерство промышленности и торговли Российской Федерации; date: 2013-04-05 to 2015-11-30; value_rub: 3754607000; items: AGGREGATE — 17 separate Минпромторг contracts found 2026-08-30 via scripts/zakupki_customer_clusters.py among previously-unwired but already-archived contract cards, total ₽3,754,607,000 (05.04.2013-30.11.2015). Not wired individually to avoid registry bloat for one recurring customer relationship — see data/sources/ZAKUPKI_contract_<regNumber>_*.html, archived under supplier ИНН 7735582816. Representative contract (reg. 0173100009511001940) cited as source; full regNumber list recoverable via the customer-cluster tool's own output. [s2864]
 
+## State-program participation
+
+- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.11.3 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -344,6 +348,7 @@
 | s3701 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_elektronnyy-kon-17705596339240002070004_33d7453e.xml) | — | — |
 | s3702 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_kontrakt-2420-17705596339240002070002_032cbeeb.docx) | — | — |
 | s3712 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_protsessor-ima-b-17705596339240002070038_33887297.pdf) | 3388-72-97 | 2024-12-03 |
+| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

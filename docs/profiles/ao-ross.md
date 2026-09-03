@@ -43,6 +43,10 @@
 
 - Two subsequent соглашения (s2849, s2850) only adjust the ИКЗ code and reaffirm the delivery deadline (20.12.2020) — no substantive change to price or subject. Delivery акт (s2845) and its payment order (s2848) also archived, confirming the contract was fully executed, not merely awarded. [s2846]
 
+## State-program participation
+
+- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry 'Радиоэлектронная промышленность' with primary ОКВЭД 26.40 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+
 ## Licences
 
 - Разработка, производство, испытание и ремонт авиационной техники [s0009]
@@ -66,6 +70,7 @@
 |---|---|---|---|---|
 | s0009 | document | document (7704097425_20082026.pdf) | 2008-20-26 | 2026-08-20 |
 | s2846 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770809864520000158_1770809864520000158_gk-045-17708098645200001580003_b3bb1612.docx) | — | — |
+| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

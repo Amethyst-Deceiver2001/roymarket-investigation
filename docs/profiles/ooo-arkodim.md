@@ -23,6 +23,10 @@
 
 - **«Братишка»** — Tracked ground robot (UGV) for casualty/cargo evacuation, up to 150kg payload (people, ammunition, medical kits). PRESS-SOURCED ONLY (business-gazeta.ru profile of founder Барахтин А.В., not this entity's own site -- this entity has no confirmed website). In low-volume, volunteer/charity-funded production per the same source. Do not confuse with the SISTER company's own site, arkodimpro.ru (ООО «Аркодим-Про», a DIFFERENT ИНН, 1658146106, same founder) -- that site shows only civilian industrial robotics/CNC services, no military content.
 
+## State-program participation
+
+- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 28.99.5 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -96,6 +100,7 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0475 | EGRUL extract | EGRUL extract (ul-1101690020959-20260823131713.pdf) | — | 2026-08-23 |
+| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

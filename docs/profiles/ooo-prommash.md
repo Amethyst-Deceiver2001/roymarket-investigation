@@ -28,6 +28,10 @@
 | 2024 | ₽6,504,000 | ₽32,000 | [s0264] |
 | 2025 | ₽5,884,000 | ₽-113,000 | [s0265] |
 
+## State-program participation
+
+- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -51,6 +55,7 @@ _No named principals linked to this entity yet._
 | s0264 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_4217210280_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
 | s0265 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_4217210280_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
 | s0510 | EGRUL extract | EGRUL extract (ul-1244200002970-20260823135624.pdf) | — | 2026-08-23 |
+| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

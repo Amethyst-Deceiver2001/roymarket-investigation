@@ -43,6 +43,10 @@
 
 - customer: Министерство обороны Российской Федерации; reg_number: 1770425226115000899; date: 2015; value_rub: 789200; items: Only mil-relevant contract among this entity's 76 zakupki hits (₽431.7m total, overwhelmingly civilian) — a small direct МО supply; entity is tracked here as a money-layer node, not primarily as a hardware supplier. [s3042]
 
+## State-program participation
+
+- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.20.1 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -85,6 +89,7 @@
 | s0212 | EGRUL extract | EGRUL extract (ul-1057746261605-20260814234906.pdf) | — | 2026-08-14 |
 | s0763 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7701583410_20260824_ao-pk-azimut.json) | 2026-08-24 | — |
 | s3042 | Zakupki | Zakupki (ZAKUPKI_contract_1770425226115000899_20260829.html) | 2026-08-29 | — |
+| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
