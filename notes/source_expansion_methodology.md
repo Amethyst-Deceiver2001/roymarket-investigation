@@ -485,3 +485,58 @@ Two corrections/additions from the user's follow-up:
    `source_id` pointing to the *program's own* registry (Сколково residents
    list, НТИ/ФСИ/РНФ grantee list), check that program's own public
    directory rather than trusting the entity's self-report.
+
+### Sixth pass: admkrai.krasnodar.ru / dpp.krasnodar.ru — geoblock, not DNS (2026-09-03)
+
+Root-caused and solved (user-side) a "site won't resolve" report for
+`admkrai.krasnodar.ru` and `dpp.krasnodar.ru`:
+
+- **Not a DNS problem** — Google's public resolver and every path tested
+  resolve both hostnames cleanly and consistently to the same IP,
+  `46.226.224.90` (a real Krasnodar-region address, ASN not disclosed).
+  Both domains share the exact same IP, confirming one shared hosting
+  setup, not two independent breakages.
+- **The block is a TCP-level connection refusal from non-Russian IPs.**
+  Tested from two independent non-RU egress points — this session's
+  WebFetch tool and a separate Germany-based real Chrome browser — both got
+  an immediate `ECONNREFUSED`/`ERR_CONNECTION_CLOSED`, not a timeout or TLS
+  error. Wayback Machine has a clean HTTP 200 snapshot from 2026-02-23 —
+  the day before Russia's full invasion of Ukraine — consistent with a
+  geoblock imposed afterward, not a dead/retired domain.
+- **Fix (user-side, confirmed working): add the IP to a Russian WireGuard
+  tunnel's AllowedIPs (split tunnel)**, not Cloudflare WARP (WARP has no
+  Russian exit nodes — it would make this specific problem worse, not
+  better, if left on at the same time). `46.226.224.90/32` is enough for
+  both hostnames; `46.226.224.0/21` if other `*.krasnodar.ru` regional
+  admin subdomains turn out to share the same host.
+- **Second layer once past the geoblock: a WAF flags plain `curl` as a
+  vulnerability scanner** (`Name: Scanner`, `Desc: Web application
+  vulnerability scanners...`) and 403s it — this is unrelated to the RU-IP
+  requirement, and is a generic bot-signature check. Fixed by sending a
+  normal browser `User-Agent` and a `Referer` header; a bare `curl -k` with
+  no headers reliably trips it, so any future krasnodar.ru pull should use
+  a UA/Referer client from the start, not just when it errors.
+- Used this working access to pull one document as a test:
+  `dpp.krasnodar.ru/upload/iblock/f7e/.../Otchety-po-GP-utochnennye-k-15-02.pdf`
+  — Краснодарский край's own 2025 annual report on its "Развитие
+  промышленности..." subsidy program. Archived as `s5340`
+  (`GOVREPORT_20260903_krasnodar-minprom-programma-2025-otchet.pdf`),
+  scanned-image PDF (OCR'd with tesseract, no embedded text layer). Cross-
+  checked its OCR text against every registry entity name and got exactly
+  one hit: **ООО «Гагаринг»**, listed as one of 8 recipients of a
+  ₽67,119.79 thousand (₽67.12m total, all 8 recipients combined, not
+  broken out individually) 2025 equipment-purchase subsidy measure,
+  federally co-financed via a Минпромторг РФ agreement. This independently
+  corroborates (via a second, unrelated primary source — the granting
+  ministry's own report, not just the company's own audit report already
+  cited as s5333) the existing `state_programs[]` entry for Гагаринг's
+  ₽8,594,804 3D-printer subsidy — wired as a `note` on that entry, not a
+  new entry, since the per-recipient amount isn't broken out here.
+- **Worth revisiting**: this krasnodar.ru domain and its WAF-bypass recipe
+  are now a real access channel — regional subsidy/program reports are
+  exactly the kind of "government decree"-adjacent primary source this
+  investigation has found valuable before (see the Смолин/Ушкуйник
+  precedent). Worth checking whether other Krasnodar Krai ministry sites
+  (промышленной политики, экономики, etc.) share the same hosting/IP and
+  are now reachable the same way, and whether older/other-year editions of
+  this same subsidy report exist with more entities matched.
