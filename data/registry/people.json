@@ -3402,6 +3402,12 @@
         "harter version reviewed above. The FY2025 balance sheet shows total assets of ₽1.041 billion (inventory ₽347.8m, receivables ₽345.1m, cash ₽162.3m) against retained earnings of ₽679.0m, all signed by Барашков Александр Сергеевич as руководитель. This scale of growth is consistent with — and gives hard financial confirmation to — the company's own public narrative above of rapid wartime-driven expansion from a \"гаражники\"-era startup. A later June 2026 post"
       ]
     },
+    "open_questions": [
+      {
+        "text": "Второй ИП Барашкова А.С. (ОГРНИП 305251108300364, зарегистрирован 24.03.2005 по данным egrul.nalog.ru) — в Приморском крае (Дальний Восток), а не в Краснодаре, где он основал Гагаринг. Долгосрочный (не действующий на сегодня) — возможный факт биографии/происхождения до переезда в Краснодар; не установлено, что именно за бизнес это был (rusprofile.ru отдаёт эту деталь ненадёжно — см. память rusprofile_ru_decoy_content_anti_scraping, доверять можно только заголовку страницы, который подтвердил регион).",
+        "source_id": "s5426"
+      }
+    ],
     "_corrected": [
       "Found unattributed in _scaffold_leads.json. Барашков Александр",
       "Сергеевич — GD of ООО «Гагаринг» and of АРРС (both already in the",
@@ -38397,6 +38403,12 @@
         "note": "former surname (per a creditor bankruptcy-intent notice on Федресурс, discovered via fedresurs.ru backend API): same ИНН (434500103450) and same DOB (17.06.1980) as the confirmed Христюк Е.В. record -- strongly indicates a post-marriage surname change from Шевцова to Христюк between mid-2023 and her Nov-2023 appointment as GD of ооо-скай-авиа-групп under the Христюк surname. Birthplace given as гор. Киров in this notice, not yet cross-checked elsewhere.",
         "source_id": "s5309",
         "value": "Шевцова Екатерина Валерьевна"
+      },
+      {
+        "value": "Мирошина Екатерина Валерьевна (вероятно девичья фамилия)",
+        "as_of": "2005-01-01",
+        "source_id": "s5426",
+        "note": "Более старая (2005) ИП-регистрация под этим же личным ИНН (434500103450) числится в ЕГРИП на фамилию «Мирошина», не «Христюк» — прямое совпадение по уникальному персональному ИНН в открытом поиске egrul.nalog.ru (не rusprofile.ru, чьи «премиум»-виджеты в этом же исследовании оказались недостоверны — см. память rusprofile_ru_decoy_content_anti_scraping). Вероятная девичья фамилия / фамилия до замужества; независимого второго источника пока нет."
       }
     ],
     "_verified_against": null

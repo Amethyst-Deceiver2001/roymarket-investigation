@@ -8058,14 +8058,16 @@
     },
     "ip-kuznetsov-ruslan-nikolaevich": {
       "set": {
-        "tier_basis": "Recorded per a third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) as part of ООО «Тримикс»/3MX's (a confirmed ЦБСТ-network resident) corporate and personnel network. No independent primary source or sanctions designation found beyond the dossier itself — treat the network tie as dossier-sourced, not independently corroborated."
+        "tier_basis": "Recorded per a third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) as part of ООО «Тримикс»/3MX's (a confirmed ЦБСТ-network resident) corporate and personnel network. No independent primary source or sanctions designation found beyond the dossier itself — treat the network tie as dossier-sourced, not independently corroborated.",
+        "ogrn": "320631300042842"
       },
       "verified_against": [],
       "why": []
     },
     "ip-shandobylo-sergey-sergeevich": {
       "set": {
-        "tier_basis": "Recorded per the same third-party OSINT dossier (s1408) as part of ООО «Тримикс»/3MX's corporate/personnel network. Aleph independently returns a matching \"Shandobylo Serhii Serhiiovych\" entity — a second, independent corroboration beyond the dossier alone, stronger than the other two Тримикс-network ИП entries. Also independently named as Тримикс's Director of Development (С.С. Шандобыло) at a 12.04.2024 ExpoUAV conference, per the main narrative — a real, named-individual link, not just a dossier row."
+        "tier_basis": "Recorded per the same third-party OSINT dossier (s1408) as part of ООО «Тримикс»/3MX's corporate/personnel network. Aleph independently returns a matching \"Shandobylo Serhii Serhiiovych\" entity — a second, independent corroboration beyond the dossier alone, stronger than the other two Тримикс-network ИП entries. Also independently named as Тримикс's Director of Development (С.С. Шандобыло) at a 12.04.2024 ExpoUAV conference, per the main narrative — a real, named-individual link, not just a dossier row.",
+        "ogrn": "320784700272511"
       },
       "verified_against": [],
       "why": []
@@ -8140,7 +8142,8 @@
             "source_id": "s1459"
           }
         ],
-        "tier_basis": "Confirmed via zakupki.gov.ru contract registry (supplierTitle=ИНН search): two sole-supplier 44-ФЗ contracts, ₽28.176m combined, both counter-UAV systems branded «Булат»/«Покров» sold to МЧС-system customers. Акт № 1 (source s1464) for the second contract explicitly names Цыганов \"Производитель\" (manufacturer), not a reseller."
+        "tier_basis": "Confirmed via zakupki.gov.ru contract registry (supplierTitle=ИНН search): two sole-supplier 44-ФЗ contracts, ₽28.176m combined, both counter-UAV systems branded «Булат»/«Покров» sold to МЧС-system customers. Акт № 1 (source s1464) for the second contract explicitly names Цыганов \"Производитель\" (manufacturer), not a reseller.",
+        "ogrn": "318500700040208"
       },
       "why": [
         "Verification attempt 2026-08-25: pulled zakupki.gov.ru notice regNumber 0348100057526000101 (user-supplied) directly — a ФГКУ «ЦСООР «Лидер»» (МЧС, ИНН 5003008102) 44-ФЗ auction for a single Supercam S150 centre-wing fuselage part, ₽220,000, failed with zero bids, no contract. Following up on this dossier record's claim of ~₽30m Покров/Булат contracts with this same customer: browsed the customer's full public 44-ФЗ notice history (searchString scan, 16 UAV-related notices found, reg-number prefix 0348100057) — every one is a small-value (₽19.5k–998k range seen; this customer's own scale tops out well under ₽1m per notice) Supercam consumable/spare-part purchase, none naming «Покров» or «Булат» or reaching anywhere near ₽30m. Also searched the public contract registry by ИП Цыганов's own ИНН (504405055721) directly — zero results — and by name variants ('Цыганов Вадим Борисович', 'ИП Цыганов В.Б.') — the only hits were unrelated surname/toponym collisions (a school named after a different Цыганов, library book titles). Also searched for the claimed ГУ МЧС России по Курской области contract — found only an unrelated 2019 ZALA-421 maintenance contract, no Покров/Булат match. None of this disproves the dossier claim (44-ФЗ full-text search is unreliable for entity names and the actual contract could be under a different legal name, a closed/single-source procurement track not indexed this way, or simply post-dates/predates what these searches covered) but it is a real negative-verification result, not yet independently confirmed positively anywhere.",

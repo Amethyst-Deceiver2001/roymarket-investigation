@@ -42810,5 +42810,13 @@
     "as_of_method": null,
     "sha256": "fd0102c71aa0c9d4b0ca90fcf1049ddbc1255d07d1844510450f7b40226055f0",
     "sample": "\n \n \n \n В Краснодаре разработали решения для навигации в условиях потери сигнала. Инвестиционный портал Краснодарского края \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n "
+  },
+  "EGRUL_OPEN_multi_20260904_egrip-poi-sweep.txt": {
+    "type": "egrul_open_search",
+    "type_method": null,
+    "as_of": "2026-09-04",
+    "as_of_method": null,
+    "sha256": "f2f2fec9c8ab63be15acd71fa1b81cea11d83f396a556c2b61644b51f5cfd67a",
+    "sample": "egrul.nalog.ru open ЕГРИП search — raw results captured 2026-09-04\nTwo-step token flow (see memory egrul_nalog_ru_open_api / egrip_scan_log):\n POST https://egrul.nalog.ru/ (body: query=<personal ИНН>) -> {\"t\": \"<token>\"}\n GET https://egrul.nalog.ru/search-result/<token> -> {\"rows\": [...]}\n\nThis capture backs a small set of specific POI facts pulled during the\n2026-09-04 126-person ЕГРИП sweep (scr"
   }
 }
