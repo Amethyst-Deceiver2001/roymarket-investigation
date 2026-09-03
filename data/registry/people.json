@@ -15224,7 +15224,7 @@
     "_corrected": null,
     "_verified_against": null,
     "opensanctions_matches": [],
-    "opensanctions_screened_at": "2026-08-24",
+    "opensanctions_screened_at": "2026-09-03",
     "aleph_matches": [],
     "aleph_screened_at": "2026-08-26",
     "leader_id_matches": [],
@@ -38793,7 +38793,9 @@
     "_raw": {},
     "_corrected": [
       "User request 2026-09-03: widen the Гагаринг network search — surfaced via re-reading the already-archived s5378 (projectArchangel/9613) in full for named individuals, which hadn't been done in the prior instructor-logging pass."
-    ]
+    ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-09-03"
   },
   {
     "slug": "galushko-aleksandr",
@@ -38837,7 +38839,9 @@
     "_raw": {},
     "_corrected": [
       "User request 2026-09-03: widen the Гагаринг network search — surfaced via re-reading the already-archived s5378 (projectArchangel/9613) in full for named individuals, which hadn't been done in the prior instructor-logging pass."
-    ]
+    ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-09-03"
   },
   {
     "slug": "timofeev-vladimir-sergeevich",
@@ -38875,13 +38879,24 @@
     "_raw": {},
     "_corrected": [
       "2026-09-03: promoted alongside the entity record as part of the Архангел-family disambiguation push (user request to widen the Гагаринг network search)."
-    ]
+    ],
+    "opensanctions_matches": [
+      {
+        "match_id": "ru-inn-343704095632",
+        "caption": "ВЛАДИМИР СЕРГЕЕВИЧ ТИМОФЕЕВ",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-09-03"
   },
   {
     "slug": "kusumov-vakhid-abdulovich",
     "fio_ru": "Кусумов Вахид Абдулович",
     "name_latin": "Vakhid Abdulovich Kusumov",
-    "dob": null,
+    "dob": "1973-02-26",
     "birthplace": null,
     "address": null,
     "inn_personal": "202902196209",
@@ -38895,7 +38910,16 @@
         "to": null
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": null,
+        "note": "Confirmed via OpenSanctions API, exact personal ИНН match (202902196209) — 2026-09-03 screening (s5413). Dataset: ua_nsdc_sanctions (Ukraine's National Security and Defense Council sanctions list), referent ua-nsdc-29644-kusumov-vahid-abdulovic. Sole founder (100%) of ooo-arkhangel-zaporizhzhie.",
+        "regime": [
+          "UA-NSDC"
+        ],
+        "source_id": "s5413"
+      }
+    ],
     "other_entities": [],
     "other_entities_checked_at": null,
     "disqualification_hits": [],
@@ -38904,16 +38928,31 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": "Sole founder (100% share, nominal ₽10,000) of ООО «Архангел» (ИНН 9500026652), a UAV-mechanic training operator registered and licensed in Russian-occupied Zaporizhzhia/Kherson oblast territory of Ukraine.",
+    "notes": "Sole founder (100% share, nominal ₽10,000) of ООО «Архангел» (ИНН 9500026652), a UAV-mechanic training operator registered and licensed in Russian-occupied Zaporizhzhia/Kherson oblast territory of Ukraine. DOB (26.02.1973) now sourced via OpenSanctions ext_ru_egrul dataset (s5413, same batch that confirmed his UA-NSDC sanctions listing).",
     "sources": [
-      "s0229"
+      "s0229",
+      "s5413"
     ],
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-03: promoted alongside the entity record as part of the Архангел-family disambiguation push (user request to widen the Гагаринг network search)."
-    ]
+      "2026-09-03: promoted alongside the entity record as part of the Архангел-family disambiguation push (user request to widen the Гагаринг network search).",
+      "2026-09-03: OpenSanctions screening confirmed a real sanctions listing (Ukraine NSDC) via exact ИНН match, plus sourced his previously-null DOB."
+    ],
+    "opensanctions_matches": [
+      {
+        "match_id": "NK-oBYVfFUeLqr6jZQKCbpReZ",
+        "caption": "Кусумов Вахід Абдулович",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [
+          "sanction"
+        ],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-09-03"
   },
   {
     "slug": "bezrodnova-anna-sergeevna",
@@ -38952,7 +38991,9 @@
     "_raw": {},
     "_corrected": [
       "2026-09-03: promoted per the Гагаринг wide-net push (Thread C — named individuals never promoted to people.json)."
-    ]
+    ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-09-03"
   },
   {
     "slug": "arkhangelskiy-gennadiy-evgenevich",
@@ -38991,7 +39032,9 @@
     "_raw": {},
     "_corrected": [
       "2026-09-03: promoted per the Гагаринг wide-net push (Thread C)."
-    ]
+    ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-09-03"
   },
   {
     "slug": "tashmatov-ilya-sergeevich",
@@ -39029,7 +39072,9 @@
     "_raw": {},
     "_corrected": [
       "2026-09-03: promoted per the Гагаринг wide-net push (Thread C)."
-    ]
+    ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-09-03"
   },
   {
     "slug": "filippov-mikhail-gennadevich",
@@ -39085,6 +39130,8 @@
     "_corrected": [
       "2026-09-03: promoted from the parked roymarket_archangel_adjacent_network memory per the Гагаринг wide-net push (Thread C) — flagged as needing real primary sourcing, not treated as fully verified.",
       "2026-09-03: full-text-read the already-archived OSINT Bees dossier (s0234/s0235) for the first time this pass — it independently confirms and sources the DOB/address the parked memory had carried unsourced, plus his real channel handle (@arhangel76) and a construction-business tie (ООО «МЛ КОНСТРАКШНС»)."
-    ]
+    ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-09-03"
   }
 ]

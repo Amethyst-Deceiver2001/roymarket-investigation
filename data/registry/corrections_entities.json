@@ -1777,6 +1777,10 @@
         {
           "source_id": "s1166",
           "text": "Licensed training-site address (Геническ, Херсонская область) is in Russian-occupied Ukrainian territory under a Russian-issued licence — the same 'illegally registered/licensed in occupied Ukraine' pattern already documented for Ushkuynik's ООО «Беспилотные технологические решения — Донецк» (see smolin_source_catalogue.md / ooo-btr-donetsk in the Ushkuynik network)."
+        },
+        {
+          "source_id": "s5413",
+          "text": "OpenSanctions carries this entity with topics sanction.linked/sanction.control (exact ИНН/ОГРН match, s5413) — but the underlying datasets are ext_ru_egrul + ann_graph_topics (a GRAPH-INFERRED relationship, not a direct designation dataset like ooo-arkhangel-tsentr's — see that entity's sanctions[] for the contrast). NOT promoted to sanctions[] on that basis alone; flagged as an open question pending a clearer read of what specifically links/controls it."
         }
       ],
       "sources": [
@@ -1814,7 +1818,7 @@
         }
       ],
       "tier": "adjacent",
-      "tier_basis": "Sixth distinct \"Архангел\"-branded organization surfaced in this investigation. Legal name is actually \"Архангел-ЦЕНТР\", not bare \"Архангел\" as the earlier parked memory (roymarket_archangel_adjacent_network) initially framed it, though that memory does correctly carry the full detail: a commercial paid combat-training school (archangel-center.ru), ₽28,000-48,000 courses (UAV operator, sniper, artillery, tactical medicine), explicitly self-branded \"под руководством ветеранов ЧВК Вагнер\" (led by Wagner PMC veterans) — a real, distinctive Wagner tie, unlike the other Архангел organizations. That self-description is website-sourced, not yet independently archived as a dated primary source this pass (site unreachable from this sandbox this session). No drone-manufacturing OKVED, no ЦБСТ tie found — confirmed unrelated to the other 5 \"Архангел\"-branded organizations in this investigation.",
+      "tier_basis": "Sixth distinct \"Архангел\"-branded organization surfaced in this investigation. Legal name \"Архангел-ЦЕНТР\", corrected from the earlier parked memory's bare \"Архангел\" framing. A commercial Russian military-training organisation (general military training, tactical training, sniper instruction, UAV operation, artillery, reconnaissance) — see sanctions[] for the full designation narrative. CONFIRMED MULTI-JURISDICTION SANCTIONED (EU/UA/FR/CH/BE/MC, exact ИНН/ОГРН match, s5413) as of 2026-04-23, independent of this investigation and independent of any ЦБСТ tie — no drone-manufacturing OKVED, no ЦБСТ connection found, and no tie established to any of the other 5 \"Архангел\"-branded organizations in this investigation (including Гагаринг's own Архангел Легион/ano-arkhangel relationship).",
       "cbst_tie": {
         "claim": null,
         "evidence": null,
@@ -1823,22 +1827,38 @@
       },
       "open_questions": [
         {
-          "source_id": null,
-          "text": "Only an egrul.nalog.ru open-API summary pulled so far (director name, registration date, region) — no full EGRUL extract, no founder info, no БФО. The Wagner-branding/course-pricing detail is carried from a prior project memory (self-description on archangel-center.ru) but that site could not be reached this pass to archive it as a dated primary source — worth a retry, or a manual pull, next time this thread is picked up."
+          "source_id": "s5413",
+          "text": "Only an OpenSanctions match and an egrul.nalog.ru open-API summary pulled so far — no full EGRUL extract, no founder info beyond director Закелов А.А., no БФО. Given the confirmed multi-jurisdiction sanctions status, this entity now merits the same full-extract treatment as ooo-arkhangel-zaporizhzhie, not a thin stub."
         },
         {
           "source_id": null,
-          "text": "No confirmed tie established to any of the other 5 'Архангел'-branded organizations in this investigation."
+          "text": "No confirmed tie established to any of the other 5 'Архангел'-branded organizations in this investigation, including Гагаринг's own Архангел Легион relationship — despite both being combat/UAV-training organizations under the same brand name, no shared personnel, address or cross-posted content found."
         }
       ],
       "sources": [
-        "s5410"
+        "s5410",
+        "s5413"
       ],
       "why": [
         "2026-09-03: user requested the same wide-net rigor applied to Ushkuynik be applied to Гагаринг's network — surfaced as one of 6 distinct 'Архангел'-branded organizations needing disambiguation. Given only a stub record here (single open-API lookup) since deeper primary sources aren't yet on file — flagged as thin/needs more work rather than promoted to full confidence."
       ],
       "_verified": false,
-      "confidence": "open"
+      "confidence": "open",
+      "sanctions": [
+        {
+          "date": "2026-04-23",
+          "note": "MULTI-JURISDICTION SANCTIONED — confirmed via OpenSanctions batch match (s5413, 2026-09-03), exact ИНН (5032379630) + ОГРН (1245000058489) match, score 1.0. Designated across at least 6 regimes: Ukraine (NSDC sanctions + war-sanctions.gur.gov.ua companies/16034), EU (Council Regulation/Decision, CELEX 32026R0509 / 32026D0504, UN-style designation date 2026-04-23), France (Trésor gels d'avoirs, idRegistre 8911), Switzerland (SECO sanctions), Belgium (FOD sanctions), Monaco (fund freezes). Full EU/UA designation narrative: \"The Archangel Center is a Russian military training organisation that provides a wide range of tactical and combat preparation programs for military personnel... general military training, tactical training, sniper instruction, UAV operation, self-defense, knife combat, artillery, and reconnaissance... trained Russian soldiers and paramilitary units in artillery and reconnaissance operations to carry out tasks in combat zones within Ukraine. The center advertises discounts for those participating in combat in Ukraine and collaborates with state security structures.\" This substantially upgrades the entity from the earlier \"Wagner-branded, unverified\" characterization (from a parked project memory) to an ALREADY primary-sanctioned target across multiple Western jurisdictions — the strongest sanctions confirmation found on any entity in the Гагаринг/Архангел-family disambiguation push.",
+          "regime": [
+            "EU",
+            "UA-NSDC",
+            "FR",
+            "CH-SECO",
+            "BE-FOD",
+            "MC"
+          ],
+          "source_id": "s5413"
+        }
+      ]
     }
   ],
   "entities": {

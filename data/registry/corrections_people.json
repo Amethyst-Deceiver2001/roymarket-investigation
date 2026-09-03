@@ -10041,11 +10041,11 @@
       "_verified": false,
       "address": null,
       "birthplace": null,
-      "dob": null,
+      "dob": "1973-02-26",
       "fio_ru": "Кусумов Вахид Абдулович",
       "inn_personal": "202902196209",
       "name_latin": "Vakhid Abdulovich Kusumov",
-      "notes": "Sole founder (100% share, nominal ₽10,000) of ООО «Архангел» (ИНН 9500026652), a UAV-mechanic training operator registered and licensed in Russian-occupied Zaporizhzhia/Kherson oblast territory of Ukraine.",
+      "notes": "Sole founder (100% share, nominal ₽10,000) of ООО «Архангел» (ИНН 9500026652), a UAV-mechanic training operator registered and licensed in Russian-occupied Zaporizhzhia/Kherson oblast territory of Ukraine. DOB (26.02.1973) now sourced via OpenSanctions ext_ru_egrul dataset (s5413, same batch that confirmed his UA-NSDC sanctions listing).",
       "roles": [
         {
           "entity_name": "ООО «Архангел» (Запорожье/Мелитополь)",
@@ -10059,10 +10059,22 @@
       "slug": "kusumov-vakhid-abdulovich",
       "social": [],
       "sources": [
-        "s0229"
+        "s0229",
+        "s5413"
       ],
       "why": [
-        "2026-09-03: promoted alongside the entity record as part of the Архангел-family disambiguation push (user request to widen the Гагаринг network search)."
+        "2026-09-03: promoted alongside the entity record as part of the Архангел-family disambiguation push (user request to widen the Гагаринг network search).",
+        "2026-09-03: OpenSanctions screening confirmed a real sanctions listing (Ukraine NSDC) via exact ИНН match, plus sourced his previously-null DOB."
+      ],
+      "sanctions": [
+        {
+          "date": null,
+          "note": "Confirmed via OpenSanctions API, exact personal ИНН match (202902196209) — 2026-09-03 screening (s5413). Dataset: ua_nsdc_sanctions (Ukraine's National Security and Defense Council sanctions list), referent ua-nsdc-29644-kusumov-vahid-abdulovic. Sole founder (100%) of ooo-arkhangel-zaporizhzhie.",
+          "regime": [
+            "UA-NSDC"
+          ],
+          "source_id": "s5413"
+        }
       ]
     },
     {
