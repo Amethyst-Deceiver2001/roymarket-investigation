@@ -44179,7 +44179,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": "UAV-mechanic training operator: holds a Rosobrnadzor licence (№ Л035-00115-95/01431042, issued 09.10.2024) for professional training in UAV technical maintenance (\"Механик авиационный по технической эксплуатации беспилотных авиационных систем\"). Registered and licensed in Russian-occupied Zaporizhzhia/Kherson oblast territory of Ukraine. FY2025 БФО filing shows all revenue (₽55.77M) tagged \"Образовательные услуги\" (educational services) — confirms training, not hardware manufacturing, is the actual business. One of at least 6 distinct \"Архангел\"-branded organizations identified in this investigation; disambiguated from ano-arkhangel (Архангел Легион, Новороссийск, ИНН 2315233718, tied to Гагаринг's training center) and ooo-arkhangel (EU-sanctioned ЦБСТ resident, Moscow, ИНН 9714079108) — no confirmed tie to either found in this pass.",
+    "tier_basis": "UAV-mechanic training operator: holds a Rosobrnadzor licence (№ Л035-00115-95/01431042, issued 09.10.2024) for professional training in UAV technical maintenance. Registered and licensed in Russian-occupied Zaporizhzhia/Kherson oblast territory of Ukraine. FY2025 БФО filing shows all revenue (₽55.77M) tagged \"Образовательные услуги\" (educational services) — confirms training, not hardware manufacturing, is the actual business, despite a UAV-production OKVED. GUR (Ukrainian military intelligence, exact ИНН/ОГРН match, s5412) independently describes this as a NATIONAL network — training centres across 20 cities in Russia and occupied Ukraine, a Sevastopol branch funded by \"Putin's fund for the Young UAV Operator course\", direct training of the BARS-32/\"Sudoplatov's battalion\" unit from July 2023, and self-described via Russian MoD's Zvezda TV as the country's largest training network — a materially larger operation than the single Melitopol legal entity alone suggests. No sanctions currently applied by any of the 9 jurisdictions GUR lists it against. One of at least 6 distinct \"Архангел\"-branded organizations identified in this investigation; disambiguated from ano-arkhangel (Архангел Легион, Новороссийск, ИНН 2315233718, tied to Гагаринг's training center) and ooo-arkhangel (EU-sanctioned ЦБСТ resident, Moscow, ИНН 9714079108) — no confirmed tie to either found in this pass.",
     "cbst_tie": {
       "claim": null,
       "evidence": null,
@@ -44248,7 +44248,8 @@
       "s1166",
       "s1167",
       "s0380",
-      "s0381"
+      "s0381",
+      "s5412"
     ],
     "confidence": "doc",
     "_verified": false,
@@ -44257,7 +44258,25 @@
     "kpp": "900101001",
     "_corrected": [
       "2026-09-03: user requested the same wide-net rigor applied to Ushkuynik be applied to Гагаринг's network — this entity was one of 6 distinct 'Архангел'-branded organizations flagged by the registry survey as needing disambiguation. Promoted from bare sources/notes to a full entity record using already-archived EGRUL extract (s0229), Rosobrnadzor licence (s1166) and qualification-standard (s1167) sources, plus a fresh БФО read this session."
-    ]
+    ],
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14297",
+        "caption": "ARCHANGEL LIMITED LIABILITY COMPANY",
+        "own_tin": "9500026652",
+        "own_reg_number": "1249500004181",
+        "inn_match": true,
+        "ogrn_match": true,
+        "products": [
+          "FPV-drones"
+        ],
+        "related_companies": [],
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan Ukraine",
+        "has_confirmed_listing_language": false,
+        "note": "GUR (Ukrainian military intelligence) profile, exact ИНН/ОГРН match. Substantially expands what's known: describes a NATIONAL training-center network across 20 cities in Russia and occupied Ukraine, not just the Melitopol-registered entity; a Sevastopol branch funded by \"Putin's fund for the Young UAV Operator course\"; direct training of the BARS-32/\"Sudoplatov's battalion\" unit starting July 2023; and a self-description via Russian MoD's Zvezda TV as \"the largest [training network] in the country\". No sanctions currently applied by any of the 9 listed jurisdictions despite the listing. Sevastopol-branch detail is a possible (NOT confirmed) point of overlap with the separately-found Sevastopol training-camp location for Гагаринг's own «Последний рубеж» project (s5404) — different organizations, same city, flagged as a lead only."
+      }
+    ],
+    "gur_screened_at": "2026-09-03"
   },
   {
     "slug": "ooo-arkhangel-tsentr",
