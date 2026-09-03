@@ -47,6 +47,10 @@
 | Беспилотный летательный аппарат-перехватчик | RU2860540C1 | 2025.12.04 | Анкудинова Вероника Сергеевна (RU), Петкау Олег Гергардович (RU), Гоцко Иван Иванович (RU), Кондратьев Алексей Дмитриевич (RU), Борисов Евгений Геннадьевич (RU) |
 | Способ и устройство пеленгования источников радиоизлучений беспилотными летательными аппаратами, совершающими согласованный полет по окружности | RU2861850C1 | 2025.10.02 | Борисов Евгений Геннадьевич (RU), Гоцко Иван Иванович (RU), Белов Евгений Сергеевич (RU), Петкау Олег Гергардович (RU) |
 
+## Licences
+
+- Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент станкостроения и инвестиционного машиностроения. Статус: утратило силу 2021-04-21. [s5370]
+
 ## Foreign components
 
 - Patent's own description lists this as one of several 'currently available devices' ('доступных на данный момент устройств') the proposed device can be built from -- an explicit reference implementation, not a prior-art citation. [s1051]
@@ -313,6 +317,7 @@
 | s3217 | Zakupki | Zakupki (ZAKUPKI_contract_1770425226117000583_20260829.html) | 2026-08-29 | — |
 | s3218 | Zakupki | Zakupki (ZAKUPKI_contract_1772054420822000003_20260829.html) | 2026-08-29 | — |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| s5370 | document | document (PP719_7813491943_20200422_zaklyuchenie-28088-05.pdf) | 2020-04-22 | 2020-04-22 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

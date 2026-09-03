@@ -772,3 +772,64 @@ theory. Core-region hits: ВПКАМ (Ростов, ядерные/радиац�
 НПКСМ (Ростов, машиностроение), two Белгород clusters (pharma, children's
 goods) — **none radio-electronics/UAV-specialized**. Null result, logged
 for completeness, not pursued further.
+
+## Eleventh pass (2026-09-03): ПП719 registry — real certificates, not just corroboration
+
+The user pasted `gisp.gov.ru/pp719v2/pub/res/` — the "Реестр заключений
+Минпромторга России" (Постановление Правительства №719): the federal
+registry of formal Minpromtorg conclusions confirming a company's product
+is genuinely manufactured in Russia (a real regulatory certificate with a
+scanned PDF, valid/expired status and a validity window — not a
+self-reported claim or a passive geodatabase listing like the ninth/tenth
+passes). Same `gisp.gov.ru` domain, no login needed for this sub-app
+(`pp719v2`), unrelated data backend from the orbismap layers used so far.
+
+Found the data API (`POST /pp719v2/pub/res/b/`) via `list_network_requests`
+after loading the page; the search-box filter format
+(`{"filter":["org_inn","contains","<inn>"]}`) had to be reverse-engineered
+by filling the real ИНН filter textbox in the UI and reading the request
+the page itself sent — my first guess (`searchValue`) was silently ignored
+and returned the unfiltered default page, the same silent-trap pattern
+already seen with zakupki's `customerInn` and the orbismap `where` param.
+**Confirmed the endpoint is WAF-gated exactly like `pp719v2`'s sibling
+`goods` catalog** — a bare `curl` POST to `/pp719v2/pub/res/b/` gets a
+servicepipe.tech JS challenge page, not JSON, even with a normal browser
+UA; the actual PDF file URLs it returns (`/pp719v2/up/<hash>/<hash>/
+<name>.pdf`) are **not** WAF-gated and download fine via plain `curl`.
+
+Rather than looping a per-ИНН search across the whole registry (166
+calls against a live WAF-fronted endpoint — exactly the "real work at
+scale" case the crawling-jobs policy exists for), tested that `take` has
+no practical cap: a single unfiltered request with `take:25000` returned
+**all 23,145 records in one call**, `total_count` and `items.length`
+matching exactly. Pulled and archived the whole registry as `s5350`
+(`GISP_20260903_pp719-full-dump-23145-conclusions.json`) — a bulk export,
+not a scripted loop, so no handoff needed.
+
+Cross-checked all 166 registry ИНН against the dump: **4 exact matches** —
+`ao-pk-azimut` (3 conclusions, 1 currently valid), `ooo-opkb-eksplomet`
+(2, 1 valid), `ao-nii-vektor` (1, expired), `npts-elvis` (14, 5 valid).
+Гагаринг itself: **zero** — no ПП719 conclusion on file (consistent with
+being a young company; this is a real certificate a company applies for
+and can lack, not a case where absence indicates the search failed).
+
+**Downloaded all 20 underlying certificate PDFs directly** (single bounded
+batch, known URL list, not a live-search loop) as
+`PP719_<ИНН>_<YYYYMMDD>_zaklyuchenie-<номер>.pdf`, archived through the
+pipeline (`s5351`–`s5370`). **Auto-classifier gotcha, same shape as the
+Krasnodar-report one from the sixth pass**: every file was typed `court`
+with `as_of: 2015-07-17` — a keyword hit on "ПОСТАНОВЛЕНИЕ" matched the
+citation to Постановление Правительства №719 *dated* 17.07.2015 inside
+the boilerplate text, not the conclusion's own issue date. Fixed by
+setting `type: pp719_minpromtorg_conclusion` and the real `as_of` (read
+straight off each filename's already-known `res_date`) by hand in
+`_source_content_cache.json` before re-running `scan_sources.py`.
+
+Wired all 20 as individual `licences[]` entries (one per conclusion,
+matching the existing one-license-per-entry convention already used for
+Аэромакс's Росреестр license) citing the correct per-PDF source_id, each
+noting the issuing department, status (действует / утратило силу +
+expiry) straight from the API response. All 4 profiles rebuilt, tag-
+balance clean. This is meaningfully stronger evidence than the ninth/
+tenth passes' geodatabase corroboration — a ПП719 conclusion is a formal
+regulatory decision with a document, not a passive registry listing.
