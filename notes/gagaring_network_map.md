@@ -40,9 +40,10 @@ surname is plausibly the origin of the brand), co-founder Ташматов Ил�
 Сергеевич. Co-runs, alongside Гагаринг, a training relationship with the
 51st Guards Combined Arms Army — recruitment posts name two individual
 contacts (Артём/@Dark_GAA, Александр Галушко/@Alexande_galushko) offering
-₽3.4M signing bonuses. A visit to a separate "школа «Архангел»" in Туапсе
-(01.03.2026) was initially ambiguous but confirmed this session to be a
-distinct site the group *visited*, not their own facility.
+₽3.4M signing bonuses. A "школа «Архангел»" in Туапсе is mentioned on the
+same channel — initially misread as a third-party site the group merely
+visited, corrected below (#3) once the fuller post history was checked:
+it's actually проект Архангел's own school, not this entity's.
 
 **#2 — Архангел Спецназа (@arx_spn).** The org behind the branded face
 masks seen on a Гагаринг training-center graduation video — resolved this
@@ -63,7 +64,15 @@ left uncatalogued, same "doxxing-scale apparatus" discipline already
 established for the Ushkuynik network. He separately co-presented at a
 Rostov industry round table alongside an active-duty EW officer and
 «ГК Логос» — a materially stronger signal than a brand mention, but still
-not a confirmed ЦБСТ tie.
+not a confirmed ЦБСТ tie. проект Архангел turns out to be an actively
+operating **multi-city training network**, not just Филиппов's Telegram
+presence — its Туапсе "school" (a mountain/river-side camp in Krasnodar
+krai's foothills, recurring free 3-week residential courses, no street
+address) is one of several regional nodes, alongside a school "в
+Запорожье." That decentralized multi-city structure is strikingly similar
+to GUR's independent "20 cities" description of the *unrelated* entity #5
+below — an unconfirmed lead worth checking next time this thread is
+picked up, not an established connection.
 
 **#4 — ООО «Архангел» (`ooo-arkhangel`, Moscow).** Already a confirmed,
 independently-verified EU-sanctioned ЦБСТ resident (20th sanctions
@@ -104,9 +113,13 @@ discounts to war participants.
   incorporated entities #1/#4/#5/#6.
 - No confirmed institutional tie found between any of #3/#4/#5/#6 and the
   Гагаринг-connected #1/#2, despite the shared brand and overlapping
-  activity (UAV/combat training). A city-level coincidence (#5's Sevastopol
-  branch vs. Гагаринг's own Sevastopol training-camp use) is flagged as a
-  lead, not asserted as a connection.
+  activity (UAV/combat training). Two structural echoes are flagged as
+  leads, not established connections: a city-level coincidence (#5's
+  Sevastopol branch vs. Гагаринг's own Sevastopol training-camp use), and
+  a decentralized multi-city network structure shared between #3 (проект
+  Архангел, with nodes in Туапсе and Запорожье) and #5 (GUR's independent
+  "20 cities" description of ooo-arkhangel-zaporizhzhie) — both leads, not
+  asserted as connections.
 - #5 and #6 both still rest on thin primary-source coverage (open-API
   summaries, not full signed EGRUL extracts) relative to Гагаринг's own
   55-page audited financials.
