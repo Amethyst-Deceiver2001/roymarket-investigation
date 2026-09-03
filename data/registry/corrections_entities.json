@@ -5268,55 +5268,6 @@
     },
     "npo-kaysant": {
       "set": {
-        "_verified": true,
-        "address": "125362, Москва, вн.тер.г. муниципальный округ Южное Тушино",
-        "charter_capital": 150000,
-        "director": "Черепкова Нина Сергеевна",
-        "director_history": [
-          {
-            "as_of": "2022-10-07",
-            "note": "личный ИНН 773376903806 — GD since registration",
-            "source_id": "s0454",
-            "value": "Черепкова Нина Сергеевна"
-          }
-        ],
-        "egrul_flags": [
-          "Доступ к сведениям ограничен (оба участника)"
-        ],
-        "financials": [
-          {
-            "profit": 1023000.0,
-            "revenue": 6689000.0,
-            "source_id": "s0339",
-            "year": "2023"
-          },
-          {
-            "profit": 10911000.0,
-            "revenue": 194116000.0,
-            "source_id": "s0340",
-            "year": "2024"
-          },
-          {
-            "profit": 890678000.0,
-            "revenue": 1812579000.0,
-            "source_id": "s0341",
-            "year": "2025"
-          }
-        ],
-        "founders_history": [
-          {
-            "as_of": null,
-            "note": "ГРН 2267706645182 — TWO separate «Доступ к сведениям ограничен» participant records, both dated identically",
-            "source_id": "s0454",
-            "value": "2 участника, оба EGRUL-restricted"
-          }
-        ],
-        "ogrn": "1227700641805",
-        "okved_code": "72.19",
-        "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
-        "registered": "07.10.2022",
-        "brand_ru": "«Гермес»",
-        "brand_latin": "Germes",
         "products": [
           {
             "name_ru": "«ГЕРМЕС связь»",
@@ -5357,123 +5308,26 @@
             "name_ru": "Кинетический FPV дрон-перехватчик «ГУСЬ-7»",
             "description": "Kinetic FPV interceptor drone (multirotor class), от ₽103,700. Sold on Налетай.рф via the ИП Черепкова storefront (see marketplace_listings note) alongside the ГЕРМЕС-7 comms line. Not previously documented in this registry under any name.",
             "source_id": "s2627"
-          }
-        ],
-        "web": {
-          "sites": [
-            {
-              "url": "https://germesfpv.ru/",
-              "note": "Product brand site; legal-entity name \"Кайсант\" surfaces only in the email domain (info@kaysant.ru) and legal-policy links, not on the product pages themselves."
-            }
-          ],
-          "telegram": [],
-          "vk": [],
-          "youtube": [],
-          "marketplace_listings": [
-            {
-              "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/ip-cherepkova",
-              "note": "Products bearing the \"НПО КАЙСАНТ\" manufacturer attribute (ГЕРМЕС-7 radio receiver/transmitter line, and a \"Кинетический FPV дрон-перехватчик ГУСЬ-7\" -- kinetic FPV interceptor drone) are sold on Налетай.рф NOT under this entity's own name, but through a personal-ИП storefront: \"ИП Черепкова Нина Сергеевна\" (seller slug ip-cherepkova, ИНН 773376903806) -- this registry's own record for Черепкова Н.С. already identifies her as НПО «Кайсант»'s founder/sole owner/GD (since 07.10.2022), whose EGRUL access was restricted (\"доступ ограничен\") just three weeks before this listing was captured (2026-08-03). Routing the company's own products through the owner's personal ИП rather than a corporate storefront on a state-backed marketplace, timed close to an EGRUL restriction, reads as a deliberate visibility-reduction pattern rather than routine reselling. 5 products total under that ИП listing.",
-              "source_id": "s2619"
-            }
-          ],
-          "other": []
-        },
-        "cbst_tie": {
-          "claim": "ЦБСТ residency directly sourced via ЦБСТ's own channel.",
-          "evidence": "Found by searching the BRAND name «Гермес», not the legal entity name «Кайсант» (which returns zero hits) — confirms the brands-not-legal-names search pattern. ЦБСТ's own channel, post 2159491523:546, 18.03.2025: \"Система связи «Гермес»\" listed as one of nine flagship ЦБСТ resident developments shown at a Госдума «Сколково: 15 лет инноваций» exhibition, 18.03.2025 — \"даже если вокруг глушилки и радиочастотный хаос, связь будет.\"",
-          "source_id": null,
-          "confidence": "t-doc"
-        },
-        "open_questions": [
-          {
-            "source_id": null,
-            "text": "germesfpv.ru/fpvdroni (the actual FPV drone model line under the «Гермес» brand) was not retrievable via WebFetch (23.08.2026, likely JS-rendered) — only the comms/mast/receiver line was extracted. A direct browser visit is needed to complete this catalog."
           },
           {
-            "source_id": "s2641",
-            "text": "2026-08-25 job posting (Менеджер по работе с маркетплейсами) explicitly requires managing \"6-8 маркетплейсов, включая специализированные площадки, связанные с тематикой БПЛА\" (6-8 marketplaces including specialized UAV-topic platforms) -- corroborates the multi-marketplace sales pattern already documented (Ozon, налетай.рф via the ИП Черепкова storefront -- see web.marketplace_listings[]). Posting also names ВсеИнструменты.ру and Avito as marketplaces the company has experience with, alongside Ozon/Яндекс.Маркет -- not yet checked for this entity's own listings on those platforms."
-          }
-        ],
-        "sanctions": [
+            "name_ru": "Дрон-перехватчик",
+            "description": "Interceptor drone (GISP nameEn: \"Interceptor drone\"), found via GISP goods-catalog exact company_ogrn search (ОГРН 1227700641805) under a generic (unbranded) listing — NOT confirmed to be the same product as the already-documented «ГУСЬ-7» above; GISP describes a passive/semi-active homing, platform/tube-launched interceptor (cruise 270 km/h, max 380 km/h, range 10 km, engages targets at 1000-3000m altitude up to 250 km/h target speed) versus «ГУСЬ-7»'s description as a kinetic multirotor FPV interceptor — the guidance/launch mechanism described differs enough that this may be a second, distinct interceptor model; flagged for verification rather than merged. GOST Р 59518-2021 cited. Production address per GISP: 125362, Москва, Строительный проезд, д.7А корп.28, помещ.224 — matches this entity's registered address.",
+            "source_id": "s5390"
+          },
           {
-            "regime": [
-              "NZ-RSA2022",
-              "Ukraine (Presidential sanctions decree/list)",
-              "US (OFAC, Russia Harmful Foreign Activities Sanctions)"
-            ],
-            "date": null,
-            "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7733393203 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LIMITED LIABILITY COMPANY NAUCHNO PROIZVODSTVENNOE OBYEDINENIE KAISANT\". Topics: debarment, export.control, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/sanctions/companies/14048; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=50741. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
-            "source_id": "s0784"
-          }
-        ],
-        "wb_overlap": "none_found",
-        "computer_programs": [
+            "name_ru": "FPV Дрон «Артемида 10»",
+            "description": "FPV combat/strike drone (GISP nameEn: \"FPV Drone Artemis 10\"). Operates on 4 frequency bands simultaneously, 25km range without a relay / 100km with relay, factory-fitted with the «Гермес» control channel, up to 4kg payload. GOST Р 59518-2021 cited. Found via GISP goods-catalog exact company_ogrn search.",
+            "source_id": "s5390"
+          },
           {
-            "reg_number": "RU2025669326ПрЭВМ",
-            "type": "computer_program_registration",
-            "title": "Программное обеспечение комплектов связи для беспилотных летательных аппаратов (FPV-дронов) «Гермес»",
-            "filed": null,
-            "published": "2025.07.24",
-            "holder": "Общество с ограниченной ответственностью Научно-производственное объединение «КАЙСАНТ» (RU)",
-            "inventors": [
-              "Черепков Александр Александрович (RU)"
-            ],
-            "note": "Found via searchplatform.rospatent.gov.ru's ПрЭВМ (registered computer program) index, 2026-08-24 -- a distinct Rospatent registry from patents/trademarks, not previously screened by any script in this project. Exact patentee-name match; software is explicitly named as FPV-drone communications-kit software under the entity's own «Гермес» brand -- directly on-topic. Contact data on the filing: 84991123968, info@kaysant.ru.",
-            "source_id": "s1055"
-          }
-        ],
-        "founders": [
-          {
-            "name": "Черепков Александр Александрович",
-            "inn_personal": null,
-            "share_percent": 93.3,
-            "source_id": null
-          }
-        ],
-        "images": [
-          {
-            "path": "images/npo-kaysant_gus7-naletay.jpg",
-            "caption": "«ГУСЬ-7» kinetic FPV interceptor drone -- product photo from its Налетай.рф listing (sold via the ИП Черепкова storefront, see marketplace_listings).",
-            "source_id": "s2627"
-          }
-        ],
-        "address_history": [
-          {
-            "value": "Москва, Строительный проезд, 7Ак28",
-            "as_of": "2026-08-25",
-            "source_id": "s2641",
-            "note": "Physical/operating address per a 2026-08-25 job posting (nesiditsa.ru), NOT the registered EGRUL legal address (125362, Москва, вн.тер.г. муниципальный округ Южное Тушино, already on file as `address`) -- kept separate, not overwriting the legal address."
-          }
-        ],
-        "state_programs": [
-          {
-            "name_ru": "Каталог продукции ГИСП — отрасль БАС",
-            "name_en": "GISP (State Industrial Information System) product catalog — БАС industry listing",
-            "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
-            "source_id": "s5344",
-            "as_of": "2026-09-03"
+            "name_ru": "Радиоуправляемая тележка «Аргус»",
+            "description": "Remote-controlled ground cart/trolley — distinct product line from the «Гермес» comms family and the interceptor/FPV drones above. Found via GISP goods-catalog exact company_ogrn search (list-view hit only, no detail record pulled).",
+            "source_id": "s5389"
           }
         ]
       },
       "verified_against": " Also: germesfpv.ru read directly 23.08.2026.",
-      "why": [
-        "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
-        "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
-        "Full signed ЕГРЮЛ extract read end-to-end (ul-1227700641805-20260823120336.pdf, pulled 23.08.2026). CONFIRMS the redaction pattern already noted in project memory ('EGRUL-access-restricted since 01.11.2024 — same redaction pattern as Kaysant/Ушкуйник-СП') with the actual primary document: TWO separate участники/учредители records, both «Доступ к сведениям ограничен», no names. GD Черепкова Н.С. is unredacted. ОКВЭД mixes R&D (72.19, primary) with structural metalwork (25.11) as secondary — a genuine industrial-adjacent profile, not obviously a shell.",
-        "Brand identified: НПО «Кайсант» trades its tactical-comms product line under the brand «ГЕРМЕС» (germesfpv.ru, checked 23.08.2026) — «ГЕРМЕС связь», «ГЕРМЕС мачты», ПО «Гермес». The scaffold had this ИНН duplicated under a separate \"КБ «Гермес»\" entry (merged in, see kb-germes correction), which is how the brand/entity link was found.",
-        "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
-        "Product catalog expanded from germesfpv.ru (23.08.2026, site sweep) — partial, drone-model sub-page not retrievable.",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0784).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7733393203). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
-        "2026-08-24: user asked whether searchplatform.rospatent.gov.ru's /trademarks section had been checked. It turned out not to be a trademark endpoint at all (the guessed /search/tm and /search/trademarks routes both hit the site's ПрЭВМ/computer-program index, dataset 'prevm' -- a genuinely new, previously unscreened IP registry). A handful of registry product-name queries against it surfaced this real, on-topic hit.",
-        "2026-08-24 web-search follow-up on the entity's own ПрЭВМ software co-inventor (Черепков А.А.): rusprofile/companium/spark-interfax listings agree he holds 93.3% of ООО НПО «Кайсант» (Черепкова Н.С., already in this registry as director, holds the remainder or the GD role only -- not fully disambiguated). source_id left null -- rusprofile blocked the archive attempt (403) and companium/synapsenet either rate-limited or didn't render the fact server-side; this is AGGREGATOR-sourced only, not yet confirmed against a primary EGRUL extract. Treat as a strong lead, not a confirmed ownership stake.",
-        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 10 candidates -- all belong to an unrelated individual (Черепкова Нина Сергеевна) or an unrelated company (ООО «Аргус-М»), both disinfection/lighting equipment, not this entity's own name.",
-        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block.",
-        "2026-08-26: new product line found via налетай.рф catalog (ip-cherepkova seller listing, s2627) -- ГУСЬ-7 kinetic interceptor, not previously in products[].",
-        "2026-08-26: product photo pulled from налетай.рф CDN for the newly-documented ГУСЬ-7 product.",
-        "2026-08-27: nesiditsa.ru job vacancy #136610779 (posted 2026-08-25, s2641) for a marketplace-manager role -- confirms operating address distinct from EGRUL legal address, and directly corroborates the multi-marketplace sales strategy (explicit mention of UAV-specialized platforms) already documented via the налетай.рф/Ozon findings. Verified via raw fetch, not just WebFetch summary, per this project's webfetch_hallucination_on_blocked_fips caution."
-      ]
+      "why": "GISP goods-catalog exact company_ogrn search (2026-09-03) surfaced two new weapon-adjacent products (a possibly-distinct second drone-interceptor, and FPV strike drone «Артемида 10») plus a ground cart «Аргус», beyond the previously-documented «Гермес» comms line and «ГУСЬ-7» interceptor."
     },
     "npp-radar-mms": {
       "set": {
@@ -7937,90 +7791,20 @@
     },
     "ooo-aviron": {
       "set": {
-        "_verified": true,
-        "address": "125080, Москва, вн.тер.г. муниципальный округ Сокол",
-        "charter_capital": 27174,
-        "director": "Лапин Игорь Николаевич",
-        "director_history": [
+        "products": [
+          "Чебурашка",
+          "Кощей 2.0",
+          "Сокол",
+          "Пеппа",
           {
-            "as_of": "2024-09-04",
-            "note": "личный ИНН 432909192423",
-            "source_id": "s0460",
-            "value": "Лапин Игорь Николаевич"
-          }
-        ],
-        "financials": [
-          {
-            "profit": -3209000.0,
-            "revenue": 24010000.0,
-            "source_id": "s0353",
-            "year": "2024"
-          },
-          {
-            "profit": 75378000.0,
-            "revenue": 273923000.0,
-            "source_id": "s0354",
-            "year": "2025"
-          }
-        ],
-        "founders": [
-          {
-            "inn_personal": "432909192423",
-            "name": "Лапин Игорь Николаевич",
-            "nominal_value": 17174,
-            "share_percent": 63.2,
-            "source_id": "s0460"
-          },
-          {
-            "name": "ООО «Производство обучающих систем и технологий»",
-            "nominal_value": 10000,
-            "share_percent": 36.8,
-            "source_id": "s0460"
-          }
-        ],
-        "ogrn": "1247700414631",
-        "registered": "05.06.2024",
-        "wb_overlap": "none_found",
-        "open_questions": [
-          {
-            "source_id": "s1170",
-            "text": "rospatent full-roster patent sweep (2026-08-24) found 5 \"Авирон\"-patentee candidates: 2 belong to an unrelated 1990s-2000s US biotech (\"Aviron\", gp350/EBV vaccine patents, clearly a different country/company) and 3 belong to a Russian \"ООО «Авирон»\" holding 2021 COVID-19 antiviral-treatment patents -- pharmaceutical subject matter with no plausible connection to this entity's presumed UAV/military-industry basis for registry inclusion. Not promoted: no ИНН to confirm whether this is the same legal entity under a coincidentally identical name, or a genuinely unrelated Russian pharma company -- flagged rather than either promoted or dismissed."
-          },
-          {
-            "source_id": null,
-            "text": "2026-08-24: leader-id.ru self-report shows Лапин Игорь Николаевич as Директор of \"ООО Авирон\" -- an EXACT name match to this entity's own already-sourced director field (Лапин Игорь Николаевич, EGRUL as of 2024-09-04, s0460), but the leader-id profile lists his city as Екатеринбург, not Москва (this entity's registered address). A same-person director-name match doesn't by itself resolve which \"Авирон\" this is -- a person can legally direct a Moscow-registered company while personally based elsewhere, so the city mismatch is not strong evidence either way, and leader-id's profile carries no subject-matter/industry field that could help distinguish drone-maker from pharma. Still unresolved; noted as a data point, not a resolution."
-          }
-        ],
-        "web": {
-          "marketplace_listings": [
-            {
-              "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/aviron",
-              "note": "Official partner/seller profile on Налетай.рф, the ГТЛК-backed state civilian UAV marketplace. Legal-info block confirms exact ИНН match. Direct manufacturer storefront (sells under its own name, not a reseller). 9 products, radio-control/comms modules for the \"Пеппа\" system.",
-              "source_id": "s2620"
-            }
-          ]
-        },
-        "state_programs": [
-          {
-            "name_ru": "Каталог продукции ГИСП — отрасль БАС",
-            "name_en": "GISP (State Industrial Information System) product catalog — БАС industry listing",
-            "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
-            "source_id": "s5344",
-            "as_of": "2026-09-03"
+            "name_ru": "«Дори» (комплект: береговой пульт ДУ + бортовой блок управления/передачи информации)",
+            "description": "Two-item BПЛА control pair, found via GISP goods-catalog exact company_ogrn search (ОГРН 1247700414631). Production/facility address per GISP product record: 125212, Москва, Ленинградское ш., д.22, помещ.3/1 — distinct from this entity's legal address (125080, Волоколамское ш., д.1 стр.1, помещ.54/2) already on file.",
+            "source_id": "s5390"
           }
         ]
       },
       "verified_against": null,
-      "why": [
-        "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
-        "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
-        "Full signed ЕГРЮЛ extract read end-to-end (ul-1247700414631-20260823120635.pdf, pulled 23.08.2026). Same Сокол district address zone as ООО «ОРИЕНТ СИСТЕМС» and ООО «4ГНСС» (see above) — not confirmed as the identical building, just the same district, so not claimed as a shared-suite finding the way the Нарышкинская cluster was; worth a closer address comparison if this entity gets deeper research. Majority owner and GD Лапин Игорь Николаевич (63.2%); minority co-founder ООО «Производство обучающих систем и технологий» (36.8%) — an 'educational-systems production' entity as co-owner of a company presumably UAV-related is a name mismatch worth noting, not yet explained.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7743451768). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- NOT promoted despite an exact name match, due to wildly implausible subject matter (COVID-19 antivirals) with no ИНН available to confirm same-entity identity; logged as an open question instead.",
-        "2026-08-25: found as a listed member of Ассоциация «АЭРОНЕКСТ» (aeronext.aero), the national UAV-industry employer association, via its open backend API (component.aeronext.aero/s_cm_api/catalog.ashx). Full member card confirms ИНН/ОГРН/address exactly and corroborates the director already on file (Лапин Игорь Николаевич) via the card's own «ФИО Руководителя» field (s1406). Not a ЦБСТ/РОЙ.МАРКЕТ link -- national industry-association membership, same category as other adjacent programs already noted.",
-        "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block.",
-        "2026-09-03: ООО «Гагаринг» (ooo-gagaring) discloses a 36.8% ownership stake in this entity, per Гагаринг's own FY2025 audit report related-party note (s5333)."
-      ]
+      "why": "GISP goods-catalog exact company_ogrn search (2026-09-03) surfaced a «Дори» shore-control/onboard-unit pair not previously documented; existing Чебурашка/Кощей entries left untouched."
     },
     "ooo-boevye-tekhnologii": {
       "set": {
@@ -15046,14 +14830,6 @@
     },
     "ooo-eliars": {
       "set": {
-        "_verified": true,
-        "name_ru": "ООО «ЭЛИАРС»",
-        "inn": "7735140825",
-        "ogrn": "1157746097629",
-        "registered": "2015-02-12",
-        "address": "г. Москва (per egrul.nalog.ru open-API match); физический адрес per own site: г. Зеленоград, ул. Конструктора Гуськова, д. 8, стр. 1",
-        "director": "Атливанчик Сергей Николаевич",
-        "okved_label": "разработка и производство высокоинтегрированной СВЧ-аппаратуры (microwave equipment)",
         "products": [
           {
             "name_ru": "«МОПС»",
@@ -15086,9 +14862,9 @@
             "source_id": null
           },
           {
-            "name_ru": "«Лори»",
-            "description": "РЛС/radar product.",
-            "source_id": null
+            "name_ru": "«Лори» ЛУБА.464412.002",
+            "description": "РЛС/radar product. Model/drawing code confirmed via GISP goods-catalog exact company_ogrn search (ОГРН 1157746097629), listed there as \"Станция радиолокационная «Лори»\".",
+            "source_id": "s5389"
           },
           {
             "name_ru": "«Лис-А»",
@@ -15099,71 +14875,15 @@
             "name_ru": "«ПАРС-4»",
             "description": "Носимое устройство противодействия беспилотным воздушным судам (wearable counter-UAV jammer). Per the МВД contract № 497 (22.11.2023) specification: mass ≤5.2 kg (≤11.5 kg in transport case), ready-to-use in ≤15 s, jams GPS/GLONASS (1520-1620 MHz) + 2395-2500/5150-5350/5720-5920 MHz bands, blocking range 500-1000m depending on channel (navigation/control/data), IP65 rugged plastic housing with rifle-stock form factor and collimator-sight mount, 3h continuous operation, -25 to +40°C rated. Unit price ₽6,550,000; this contract supplied 12 units for ₽78,650,000 total. 100% Russian-origin declared.",
             "source_id": "s3686"
-          }
-        ],
-        "open_questions": [
-          {
-            "source_id": null,
-            "text": "RESOLVED: the earlier ИНН mismatch was a search-result error, not a real two-entity ambiguity. The egrul.nalog.ru name search for \"ЭЛИАРС\" returns two distinct historical entities: this one, ООО «ЭЛИАРС» (ИНН 7735140825, ОГРН 1157746097629, registered 12.02.2015, active), and a SEPARATE, LIQUIDATED predecessor, ЗАО «ЭЛИАРС» (ИНН 7735587250, ОГРН 1127746619813, liquidated the SAME day, 12.02.2015 — consistent with a ЗАО-to-ООО re-registration of the same underlying business, GD changed from Криштопов А.В. to Атливанчик С.Н.). The original scaffold ИНН (7735140825) was correct all along; the earlier session's pull had matched the wrong (liquidated ЗАО) row."
           },
           {
-            "source_id": null,
-            "text": "Full signed EGRUL extract not yet pulled (only the open-API summary match, no founders/full address/ОКВЭД code confirmed) — worth a full pull to complete the record."
+            "name_ru": "Прибор Активации Режимов Самоспасения (ПАРС-5)",
+            "description": "Counter-UAV device — forces a remote-controlled civilian \"дрон\" into a self-rescue mode (forced landing or return-to-launch) via remote signal, without damaging it, per GISP product description. Distinct model from the МВД-contract-sourced ПАРС-4 above; same counter-UAV product family. OKPD2 26.51.20.130 (Радиоаппаратура дистанционного управления). Production address per GISP: 124460, Москва, Зеленоград, ул. Конструктора Гуськова, д.8 стр.1 — matches this entity's already-known физический адрес. Found via GISP goods-catalog exact company_ogrn search.",
+            "source_id": "s5390"
           }
-        ],
-        "web": {
-          "sites": [
-            {
-              "url": "https://eliars.ru/",
-              "note": "СВЧ-equipment specialization confirmed: phased-array antennas, transceivers, low-noise satellite receivers 1.7-50+ GHz."
-            }
-          ],
-          "telegram": [],
-          "vk": [],
-          "youtube": [],
-          "marketplace_listings": [],
-          "other": []
-        },
-        "sanctions": [
-          {
-            "regime": [
-              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
-              "Switzerland (SECO, Ukraine-related measures)",
-              "Ukraine (Presidential sanctions decree/list)",
-              "US-BIS-EL",
-              "EU (Ukraine-related restrictive measures)"
-            ],
-            "date": null,
-            "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7735140825 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Limited Liability Company Eliars\". Topics: debarment, export.control, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/sanctions/companies/8970; https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389; https://permid.org/1-5086506824; https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=7884; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=48496. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
-            "source_id": "s0787"
-          }
-        ],
-        "wb_overlap": "none_found",
-        "government_contracts": [
-          {
-            "customer": "ФКУ «Северо-Кавказское окружное управление материально-технического снабжения МВД России»",
-            "reg_number": "1616303058823000546",
-            "date": "2023",
-            "value_rub": 78650000,
-            "items": "Носимое устройство противодействия беспилотным воздушным судам — wearable counter-UAV jamming device, entity's only zakupki hit but a substantial single contract.",
-            "source_id": "s3382"
-          }
-        ],
-        "bank_details": {
-          "bank": "ПАО Сбербанк, г. Москва",
-          "account": "40702810738150008739",
-          "corr_account": "30101810400000000225",
-          "bik": "044525225",
-          "source_id": "s3686"
-        }
+        ]
       },
-      "why": [
-        "RESOLVED an ИНН discrepancy flagged in an earlier session: egrul.nalog.ru name search for \"ЭЛИАРС\" returns two distinct entities, and the earlier pull had matched the wrong one — a liquidated predecessor ЗАО «ЭЛИАРС» (ИНН 7735587250), not the active ООО. Re-searched by the original scaffolded ИНН (7735140825) directly, which returns exactly ONE match: ООО «ЭЛИАРС», ОГРН 1157746097629, registered 12.02.2015 (the same date the ЗАО predecessor was liquidated — a re-registration, not two unrelated companies), ГД Атливанчик Сергей Николаевич.",
-        "eliars.ru (checked directly 23.08.2026, /dron-detector and /contacts pages): confirms the legal name ООО \"ЭЛИАРС\", physical address Zelenograd (г. Зеленоград, ул. Конструктора Гуськова, д.8, стр.1 — a well-known Moscow microelectronics/defense-industrial district), and the product — \"МОПС\" counter-drone RF detector, DJI/Autel-class detection to 1000m. No ИНН/ОГРН published on the site itself; matched by name+legal-form to the EGRUL record.",
-        "Full product catalog extracted from https://eliars.ru/ (23.08.2026, site sweep).",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0787).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7735140825). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
-      ],
+      "why": "GISP goods-catalog exact company_ogrn search (2026-09-03) sourced the previously-unsourced «Лори» entry and added a new ПАРС-5 model distinct from the already-documented МВД-contract ПАРС-4.",
       "verified_against": "egrul.nalog.ru open-API name search \"ЭЛИАРС\" and direct ИНН search \"7735140825\", both 23.08.2026 (single unambiguous match); eliars.ru read directly 23.08.2026."
     },
     "ooo-instekh": {
