@@ -42818,5 +42818,13 @@
     "as_of_method": null,
     "sha256": "f2f2fec9c8ab63be15acd71fa1b81cea11d83f396a556c2b61644b51f5cfd67a",
     "sample": "egrul.nalog.ru open ЕГРИП search — raw results captured 2026-09-04\nTwo-step token flow (see memory egrul_nalog_ru_open_api / egrip_scan_log):\n POST https://egrul.nalog.ru/ (body: query=<personal ИНН>) -> {\"t\": \"<token>\"}\n GET https://egrul.nalog.ru/search-result/<token> -> {\"rows\": [...]}\n\nThis capture backs a small set of specific POI facts pulled during the\n2026-09-04 126-person ЕГРИП sweep (scr"
+  },
+  "PBNALOG_UPRUCHR_multi_20260904_gagaring-poi-sweep.txt": {
+    "type": "pb_nalog_upr_uchr",
+    "type_method": null,
+    "as_of": "2026-09-04",
+    "as_of_method": null,
+    "sha256": "1b22d6fa1bcfebb57a00787324f0564289d8e5b61468987d218514af2fdbdb24",
+    "sample": "pb.nalog.ru (ФНС «Прозрачный бизнес» / search-proc.json, \"рso\"/upr-uchr director-\nand-founder cross-reference) — raw results captured 2026-09-04 via\nscripts/screen_upr_uchr.py --slug <person-slug>, run inline for three\nГагаринг-network principals as part of the POI-sweep continuation.\n\n=== Барашков Александр Сергеевич (ИНН 252201766438) ===\n7 director/founder roles found across 5 distinct legal en"
   }
 }

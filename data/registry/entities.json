@@ -43803,7 +43803,15 @@
     "_raw": {},
     "_corrected": [
       "2026-09-03: found in ООО «Гагаринг»'s FY2025 audit report (fedresurs.ru, s5333) related-party-transactions note ('Информация о связанных сторонах'), which states Гагаринг holds a 50% stake. Independently confirmed via fedresurs.ru company search and a live egrul.nalog.ru lookup (ИНН/ОГРН/director match exact)."
-    ]
+    ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-09-04",
+    "aleph_matches": [],
+    "aleph_screened_at": "2026-09-04",
+    "gur_matches": [],
+    "gur_screened_at": "2026-09-04",
+    "rk2035_matches": [],
+    "rk2035_screened_at": "2026-09-04"
   },
   {
     "slug": "ooo-npo-eyler",
@@ -43884,7 +43892,20 @@
       "2026-09-03: found in ООО «Гагаринг»'s FY2025 audit report (fedresurs.ru, s5333) related-party-transactions note. Independently confirmed via fedresurs.ru company search and a live egrul.nalog.ru lookup (ИНН/ОГРН/director match exact). Given the direct aircraft-production OKVED, Tula location, and Гагаринг's substantial loan to it, this is a high-priority entity for further deep-dive."
     ],
     "opensanctions_matches": [],
-    "opensanctions_screened_at": "2026-09-03"
+    "opensanctions_screened_at": "2026-09-03",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14307",
+        "caption": "NPO AVIABAS LIMITED LIABILITY COMPANY",
+        "own_tin": "7802943980",
+        "own_reg_number": "1237800098315",
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan Ukraine",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-09-04"
   },
   {
     "slug": "ano-dpo-obrazovatelny-tsentr-gagaring",
@@ -44023,6 +44044,10 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": "New entity, established 2026-09-03 during a follow-up on Гагаринг's АНО ДПО founder relationship (already flagged in its own state_programs/subsidiaries per s5333). ИНН/ОГРН/director confirmed via egrul.nalog.ru open API (s5371, exact single match). Physical training-center activity and its MoD/51st Army/Архангел connections confirmed via primary-source Telegram posts already in the local scraped archive (projectArchangel channel), newly archived as individual TGPOST_ text sources (s5372-s5381) rather than left as unsourced DB rows. Mask-branding lead from the 2026-08-04 graduation video resolved 2026-09-03 via a primary-source Telegram post from @arx_spn itself (s5392) confirming an active joint project with Гагаринг — see images[] and open_questions. «Архангел Легион» identified 2026-09-03 as @arkhangelfront ('Фонд Архангел «Легион»', s5393) — confirmed distinct from «Архангел Спецназа» @arx_spn (s5392); three separate Архангел brands now distinguished in this entity's record.",
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-09-04",
+    "aleph_matches": [],
+    "aleph_screened_at": "2026-09-04",
     "gur_matches": [],
     "gur_screened_at": "2026-09-03"
   },
@@ -44133,6 +44158,22 @@
       }
     ],
     "_corrected": "New entity, 2026-09-03: user identified «Архангел Легион» (already referenced via ano-dpo-obrazovatelny-tsentr-gagaring's tier_basis) as Telegram @arkhangelfront, and then supplied its rusprofile.ru legal-entity record (ИНН 2315233718, ОГРН 1242300005640) — full legal name matches @arkhangelfront's own channel bio verbatim, confirming this ИНН/ОГРН as the legal identity behind the brand.",
+    "opensanctions_matches": [
+      {
+        "match_id": "ru-inn-1500026680",
+        "caption": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ПОДДЕРЖКИ ЗАЩИТНИКОВ ОТЕЧЕСТВА И ПАТРИОТИЧЕСКОГО ВОСПИТАНИЯ НАСЕЛЕНИЯ \"ФАБРИКА-КУХНЯ ВЛАДИКАВКАЗ\"",
+        "schema": "Company",
+        "score": 0.7115384615384616,
+        "topics": [
+          "sanction.linked",
+          "sanction.control"
+        ],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-09-04",
+    "aleph_matches": [],
+    "aleph_screened_at": "2026-09-04",
     "gur_matches": [],
     "gur_screened_at": "2026-09-03"
   },
@@ -44447,5 +44488,84 @@
     "opensanctions_screened_at": "2026-09-03",
     "gur_matches": [],
     "gur_screened_at": "2026-09-03"
+  },
+  {
+    "slug": "np-diskretno-innovatsionny-klaster-maloy-aviatsii",
+    "name_ru": "НЕКОММЕРЧЕСКОЕ ПАРТНЕРСТВО «ДИСКРЕТНО-ИННОВАЦИОННЫЙ КЛАСТЕР МАЛОЙ АВИАЦИИ»",
+    "name_latin": "NP Discrete-Innovation Cluster of Small Aviation",
+    "legal_form": "Некоммерческое партнёрство",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "2632811832",
+    "ogrn": "1142651011788",
+    "extra_ids": null,
+    "registered": "08.05.2014",
+    "address": null,
+    "okved_code": "70.22",
+    "okved_label": "Консультирование по вопросам коммерческой деятельности и управления",
+    "okved_mismatch": null,
+    "director": "Бегак Александр Аркадьевич",
+    "director_history": [
+      {
+        "value": "Бегак Александр Аркадьевич",
+        "as_of": "2026-09-04",
+        "source_id": "s5427",
+        "note": "per ФНС «Прозрачный бизнес» (pb.nalog.ru) director/founder cross-reference on his personal ИНН."
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "plumbing",
+    "tier_basis": "A small-aviation industry nonprofit partnership (ОКВЭД 70.22, consulting), not itself a manufacturer -- Бегак (director/founder of the already-known ooo-akr-begak, tied to Гагаринг's network via АРРС/АКР «Бегак») is its director. Registered 08.05.2014, Ставропольский край -- predates ooo-akr-begak (2020) by six years, an earlier industry-association tie for the same principal.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "text": "Newly discovered 2026-09-04 via a ФНС «Прозрачный бизнес» director cross-reference on Бегак's personal ИНН -- no EGRUL extract, no website/member roster pulled yet.",
+        "source_id": "s5427"
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-04: found via scripts/screen_upr_uchr.py run against Бегак Александр Аркадьевич -- his personal ИНН is on file as this partnership's director."
+    ]
   }
 ]
