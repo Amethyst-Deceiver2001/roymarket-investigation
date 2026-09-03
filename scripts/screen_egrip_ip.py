@@ -17,7 +17,6 @@ Usage:
 """
 import argparse
 import json
-import sys
 import time
 import urllib.request
 from pathlib import Path
@@ -54,9 +53,23 @@ def query_inn(inn: str) -> list[dict]:
 
 
 def hits_from_rows(rows: list[dict]) -> list[dict]:
+    """A real ИП hit is any row with k=='fl' carrying an ОГРНИП ('o') — NOT
+    a check on 'tot'/'cnt', which are pagination metadata attached
+    inconsistently (only to some rows, e.g. the first of several ИП
+    registrations under one ИНН) and NOT a per-row validity flag. The
+    'sprav-fl' kind with tot=0 is the real "no results" sentinel, and is a
+    distinct k value from 'fl' — it can appear ALONGSIDE real 'fl' hits in
+    the same response, not just in place of them.
+
+    Bug history: the original version filtered on
+    `r.get("tot", "0") != "0"`, which silently dropped any 'fl' row that
+    lacked a 'tot' field — true for every registration after the first when
+    a person has 2+ ИП records under one ИНН (caught cross-referencing
+    Барашков's known 2-registration case against rusprofile.ru, which showed
+    the 2005 registration this filter had dropped from the logged hits)."""
     out = []
     for r in rows:
-        if r.get("k") == "fl" and str(r.get("tot", "0")) != "0":
+        if r.get("k") == "fl" and r.get("o"):
             out.append({
                 "ogrnip": r.get("o"),
                 "name": r.get("n"),
@@ -70,6 +83,9 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--slug", type=str, default=None, help="single person slug (inline reconnaissance)")
     ap.add_argument("--limit", type=int, default=None, help="cap the roster (for a smoke-test batch)")
+    ap.add_argument("--force", action="store_true",
+                     help="re-scan slugs already in the log (needed once after the hits_from_rows "
+                          "undercount fix — a prior full run may have missed a person's 2nd+ ИП record)")
     args = ap.parse_args()
 
     people = json.loads(PEOPLE_PATH.read_text(encoding="utf-8"))
@@ -87,7 +103,7 @@ def main() -> None:
     for i, p in enumerate(roster, 1):
         slug = p["slug"]
         inn = p["inn_personal"]
-        if slug in log and not args.slug:
+        if slug in log and not args.slug and not args.force:
             continue  # already scanned in a prior run
         try:
             rows = query_inn(inn)
