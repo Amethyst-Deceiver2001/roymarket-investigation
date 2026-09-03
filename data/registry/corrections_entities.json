@@ -1521,7 +1521,7 @@
       "open_questions": [
         {
           "source_id": "s5378",
-          "text": "Physical location of the training center not yet confirmed by an independent source (cadastral/NSPD, local press, or a geolocated photo). s5378 (24.02.2026 opening post) names no address; s5380 (01.03.2026) separately names \"школа «Архангел» в Туапсе\" visited by the same team days later — plausibly the same facility, not confirmed. s5613/s5597/s5605/s5606 (Feb 2026 posts) establish it is explicitly the training center of the 51-я Гвардейская Общевойсковая Армия, opened with «Архангел Легион» fund, «проект Архангел», КБ «Ветер» and «Рубикон» present at a 21.02.2026 coordination meeting (s5375) — none of those organizations besides Гагаринг are yet profiled in this registry."
+          "text": "Physical location of the training center not yet confirmed by an independent source (cadastral/NSPD, local press, or a geolocated photo). s5378 (24.02.2026 opening post) names no address; s5380 (01.03.2026) separately names \"школа «Архангел» в Туапсе\" visited by the same team days later — plausibly the same facility, not confirmed. s5613/s5597/s5605/s5606 (Feb 2026 posts) establish it is explicitly the training center of the 51-я Гвардейская Общевойсковая Армия, opened with «Архангел Легион» fund, «проект Архангел», КБ «Ветер» and «Рубикон» present at a 21.02.2026 coordination meeting (s5375) — none of those organizations besides Гагаринг are yet profiled in this registry. Гагаринг's own YouTube channel (s5383/s5382/s5384, uploaded 2026-08-04, same graduation ceremony as s5372) confirms Гагаринг itself produced and published video of the event, but the background is a plain corrugated-metal wall with no identifiable landmarks — user-confirmed geolocation is not feasible from this frame. Graduates' face-buffs carry a circular emblem reading approximately \"УДАРНАЯ СПЕЦНАЗ...\" with stacked text visually resembling \"АРХАНГЕЛ\" (s5382, not OCR-confirmed at available resolution) — a possible additional branding link to the Архангел network beyond the timing/personnel overlap already noted, but not a confirmed one. Full video not retrievable from this session's sandboxed network (YouTube CDN 403s without a browser session); only the thumbnail was archived."
         },
         {
           "source_id": null,
@@ -1529,20 +1529,30 @@
         }
       ],
       "sources": [
-        "s5371",
-        "s5333",
-        "s5372",
-        "s5373",
-        "s5374",
-        "s5375",
         "s5376",
+        "s5372",
+        "s5381",
+        "s5373",
         "s5377",
-        "s5378",
+        "s5383",
+        "s5333",
         "s5379",
+        "s5384",
+        "s5374",
+        "s5378",
+        "s5382",
         "s5380",
-        "s5381"
+        "s5371",
+        "s5375"
       ],
-      "why": "New entity, established 2026-09-03 during a follow-up on Гагаринг's АНО ДПО founder relationship (already flagged in its own state_programs/subsidiaries per s5333). ИНН/ОГРН/director confirmed via egrul.nalog.ru open API (s5371, exact single match). Physical training-center activity and its MoD/51st Army/Архангел connections confirmed via primary-source Telegram posts already in the local scraped archive (projectArchangel channel), newly archived as individual TGPOST_ text sources (s5372-s5381) rather than left as unsourced DB rows."
+      "why": "New entity, established 2026-09-03 during a follow-up on Гагаринг's АНО ДПО founder relationship (already flagged in its own state_programs/subsidiaries per s5333). ИНН/ОГРН/director confirmed via egrul.nalog.ru open API (s5371, exact single match). Physical training-center activity and its MoD/51st Army/Архангел connections confirmed via primary-source Telegram posts already in the local scraped archive (projectArchangel channel), newly archived as individual TGPOST_ text sources (s5372-s5381) rather than left as unsourced DB rows.",
+      "images": [
+        {
+          "path": "images/gagaring-training-graduation-mask-crop.png",
+          "caption": "Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading approximately «УДАРНАЯ СПЕЦНАЗ...» and text visually resembling «АРХАНГЕЛ» (not OCR-confirmed).",
+          "source_id": "s5382"
+        }
+      ]
     }
   ],
   "entities": {
