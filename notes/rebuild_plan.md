@@ -2433,4 +2433,37 @@ merged.
 `notes/smolin_source_catalogue.md`, summarizing the resolved Архангел-
 family relationship map — this is the concrete "same wide-net rigor" ask.
 
-**Status**: not started — plan just approved, work begins this session.
+**Status (2026-09-03): substantially DONE.** All threads worked:
+
+- **Архангел-family disambiguation (A)**: 2 of 6 orgs promoted to full
+  entity records (`ooo-arkhangel-zaporizhzhie`, `ooo-arkhangel-tsentr`);
+  fresh EGRUL confirmations on `ano-arkhangel`/training center; checko.ru
+  and myrotvorets.center tried on the remaining 2 undocumented brands
+  (both negative/blocked). **Headline finding**: `ooo-arkhangel-tsentr` is
+  already sanctioned across 6 jurisdictions (EU/UA/FR/CH/BE/MC) — found via
+  a single OpenSanctions batch call, previously only a thin
+  Wagner-branding-unverified stub. GUR also confirmed
+  `ooo-arkhangel-zaporizhzhie` is a 20-city national training network, not
+  a single Melitopol operator.
+- **Training-center location (B)**: Туапсе confirmed as a separate visited
+  site, not the same facility. Одесская 48/3 building-pin attempt came back
+  negative (public directory search, inconclusive).
+- **Named individuals (C)**: 7 new people promoted (Безроднова, 2×
+  Архангел-Легион founders, Филиппов, 2× 51st-Army recruitment contacts,
+  Тимофеев+Кусумов for entity #5) + 2 misattributed АРРС founder roles
+  fixed.
+- **Telegram DB leads (D)**: Sevastopol training site, Kursk-lab open
+  question, УЦ «Шершень» cooperation, personal Чадаев–Барашков tie.
+- **EGRUL/устав gaps (E)**: fresh extracts pulled; устав OCR surfaced a
+  sole-founder-at-inception fact and state-secret/education activity
+  clauses; full-text-mined the previously-skimmed OSINT Bees dossier
+  (resolved Филиппов's unsourced DOB).
+- **НПО Эйлер (F)**: negative-result pull (no БФО yet, no zakupki hits) —
+  documented, not left unchecked.
+- **Screening (G)**: GUR + OpenSanctions run inline (single-lookup/small-
+  batch, not full-roster) against the new roster.
+
+Deliverable written: `notes/gagaring_network_map.md`. Not done: full EGRUL
+extracts (vs. open-API summaries) for entities #5/#6, and no legal entity
+ever identified for «Архангел Спецназа» (#2) or confirmed for «проект
+Архангел» (#3) — left as genuinely open, not chased further this pass.
