@@ -284,6 +284,49 @@ rather than via a user HAR capture, with results:
   (1 vs. 23) is itself a fast first signal before drilling into any
   individual building's designation.
 
+### Second pass: testing the JS-challenge-blocked backlog directly (2026-09-03)
+
+With the browser confirmed working, ran it against the sites specifically
+flagged earlier as JS-challenge/captcha-blocked (not IP-blocked) — these are
+exactly the class of block a real browser session should clear.
+
+- **navigator.sk.ru is retired, not blocked.** Every path under it —
+  including the specific `/orn/1123846` deep link an existing open-question
+  cited as "unreachable (expired SSL cert)" — 301-redirects straight to the
+  sk.ru homepage. The stale-cert note (already flagged as wrong last session)
+  is now confirmed wrong for a different reason: it's not a cert issue or a
+  JS challenge, the resident-directory subdomain has simply been retired and
+  folded into the main sk.ru site sometime before 2026-09. **Corrected the
+  `ooo-aeroplatformy` open question accordingly** — no working replacement
+  URL found yet; sk.ru's own nav only links back to the same dead
+  navigator.sk.ru address, so a Сколково-residency check for the 9 entities
+  that cite it needs a different approach (site search on sk.ru itself, or
+  a fresh support/reestr endpoint) not yet identified.
+- **kad.arbitr.ru's DDoS-Guard/fingerprint (fp.js + WASM) challenge is
+  solved transparently by a real Chrome session** — confirmed via a working
+  `POST /Suggest/GetSidesByName` call returning real `server: ddos-guard`
+  response headers with valid JSON, no captcha, no block page. This is a
+  genuine unlock of the site's front door. **However, the search UX itself
+  needs more work**: raw-ИНН search (`ao-nii-stt`, ИНН 6730046954) returned
+  zero suggestion matches, and clicking "Найти" without a selected
+  suggestion doesn't submit a search at all (confirmed via network log —
+  no case-search POST fires). Name-substring search does trigger real
+  (if irrelevant) suggestions. Two live possibilities not yet distinguished:
+  either this specific entity genuinely has no kad.arbitr.ru-indexed cases
+  (meaning the registry's "10 litigation" claim for `ao-nii-stt` traces to
+  a different, non-kad.arbitr.ru source — worth checking what `source_id`
+  those litigation entries actually cite), or the search needs the entity's
+  exact registered legal name rather than ИНН-only matching. A stale/deleted
+  case-card GUID (`Card/2d9eda64-...`, from the smolin catalogue) also hung
+  indefinitely rather than resolving — inconclusive on its own, but worth
+  retrying with a case number known to still be current.
+- **Net assessment**: kad.arbitr.ru access is a genuine capability unlock
+  worth pursuing further (next session: figure out the exact suggest/search
+  sequence, ideally by capturing what a successful in-browser search's
+  network calls look like), but not yet a working end-to-end lookup tool —
+  don't report a kad.arbitr.ru case as "checked, nothing found" without
+  confirming the search actually executed (empty result ≠ empty search).
+
 ## Recommended next steps (not yet started)
 
 1. **HAR-capture torgi.gov.ru and fedresurs.ru** the same way zakupki's
