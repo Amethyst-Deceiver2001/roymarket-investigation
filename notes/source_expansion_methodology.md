@@ -540,3 +540,64 @@ Root-caused and solved (user-side) a "site won't resolve" report for
   (промышленной политики, экономики, etc.) share the same hosting/IP and
   are now reachable the same way, and whether older/other-year editions of
   this same subsidy report exist with more entities matched.
+
+### Seventh pass: minpromtorg.gov.ru — federal ministry site, and its scope split (2026-09-03)
+
+User asked to chase down minpromtorg.gov.ru (Russia's federal Ministry of
+Industry and Trade — the same ministry that co-finances the Krasnodar
+regional subsidy program above). Two distinct access outcomes on the same
+domain family, worth keeping straight:
+
+- **minpromtorg.gov.ru itself needed no fix at all** — reachable from this
+  session's own tools (WebFetch, and a real Chrome browser both on a
+  Germany-based IP) with zero blocking, the whole session. The "give me an
+  IP for WireGuard" exercise turned out to be unnecessary for the main
+  ministry site specifically — worth not assuming every `*.gov.ru` domain
+  shares the same geoblock the krasnodar.ru sites and kad.arbitr.ru do.
+- **gisp.gov.ru (the actual industrial-product registry the ministry links
+  to) is geoblocked the same way krasnodar.ru was** — confirmed via both
+  WebFetch and the chrome-devtools browser, same "Forbidden... IP
+  79.243.9.101" page. **Critically: this block cannot be fixed by the
+  user's own WireGuard tunnel** — that only routes the user's own machine's
+  traffic, not any tool in this session (which all run in a separate
+  sandboxed environment with its own, unrelated network path). For
+  gisp.gov.ru and frprf.ru specifically, the user needs to check them
+  directly in their own browser and share results — same pattern as
+  kad.arbitr.ru case cards. IPs handed to the user for reference:
+  `gisp.gov.ru` → `155.212.235.66`, `frprf.ru` → `91.215.42.91`,
+  `minpromtorg.gov.ru` → `212.164.138.11`/`212.164.138.13` (this last one
+  turned out unnecessary, per above).
+- **What minpromtorg.gov.ru's own pages yielded**: its "Национальные
+  проекты" section has a dedicated «Беспилотные авиационные системы» page
+  (`/projects/bespilotnye-aviacionnye-sistemy`) linking three PDF decks —
+  national-project overview, support-measures catalogue, and the НПЦ
+  (regional research-production center) network structure. Archived as
+  `s5341`-`s5343`. The overview deck (`s5342`) turned out to be the
+  valuable one: page 2 is an official БАС product-classification chart
+  naming specific manufacturer/model pairs as the ministry's own reference
+  examples per weight/type class — e.g. «ВТ-30Е (Радар ММС)», «SH-750
+  (Аэромакс)», «Орион (Кронштадт)», «421-16Е5G (Zala Aero)», «Gemini
+  (Геоскан)». Cross-checked against every registry entity: `npp-radar-mms`
+  matched directly (ВТ-30Е already in its `products[]`) and got this wired
+  as independent ministry-level corroboration. `ooo-gk-aeromaks` (the
+  Аэромакс holding entity, already flagged as sitting downstream of the
+  Kronshtadt/Orion heavy-UAV lineage) got a new open_question for "SH-750"
+  — doesn't match any currently-catalogued Aeromaks model name, possibly a
+  rename of the already-noted "B-700, in development" entry, not asserted
+  as a match without checking the brand's own current product pages.
+  Кронштадт, ZALA Aero, and Геоскан themselves are NOT in the registry at
+  all — deliberately not creating fresh entity records for them here, since
+  they read as large, already-widely-covered state-linked primes without a
+  demonstrated ЦБСТ tie (the same call made for other adjacent-not-core
+  networks — see `roymarket_adjacent_networks` memory), not because they're
+  unimportant.
+- **Bigger lead noted, not yet chased**: the overview deck states a
+  «Единый реестр российских производителей БАС и комплектующих» (Unified
+  Registry of Russian BAS/UAV-component Manufacturers) exists as a tracked
+  national-project metric (target: 120 registered manufacturers by 2030,
+  only 1 as of 2024) but gives no direct URL. This is very likely hosted on
+  gisp.gov.ru given that's the ministry's standing product-registry
+  platform — worth searching for once gisp.gov.ru access is sorted out via
+  the user's own browser. A clean manufacturer roster naming itself as
+  "БАС production" would be a higher-signal entity-discovery source than
+  almost anything else this investigation has tried.

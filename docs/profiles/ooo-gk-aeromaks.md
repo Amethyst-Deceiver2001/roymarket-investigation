@@ -40,6 +40,7 @@ _No named principals linked to this entity yet._
 ## Open questions
 
 - One of Russia's most prominent heavy military-UAV manufacturer lineages (Orion/Sirius/Grom) sits directly upstream of an already-catalogued registry entity via 100% ownership (see ooo-aeromaks founders[]) -- worth a dedicated deeper pass on the Kronshtadt→Aeromax corporate history and any residual military-drone production continuing under either entity, separate from the civilian pivot the press coverage emphasizes.
+- Минпромторг России's national БАС-classification chart (s5342, «О реализации национального проекта «Беспилотные авиационные системы» в период до 2030 года», p.2) lists «SH-750 (Аэромакс)» as the representative example product for the вертолетный тип / тяжелый (более 500 кг) UAV category — the heaviest helicopter-type class. "SH-750" doesn't match any model currently in products[] on any of the three Аэромакс-named entities (ao-aeromaks: AS-32-10/AS-32-8/Д-12К fixed-wing/VTOL; ooo-aeromaks: B-120/B-200/B-700 helicopter-type, А-5/А-5 М/Л/A-50 aircraft/multicopter-type; ooo-gk-aeromaks: none listed). Given ooo-aeromaks already carries the B-series helicopter line and B-700 is noted as "in development — no dedicated page yet", SH-750 may be a renamed/rebranded designation for B-700 or a newer heavy model entirely — needs checking against the group's current product pages (aeromaks brand site/VK/Rosteh press) before wiring to any specific entity's products[]. [s5342]
 
 ## Sources cited in this profile
 
@@ -47,6 +48,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0476 | EGRUL extract | EGRUL extract (ul-1147748024269-20260823132014.pdf) | — | 2026-08-23 |
 | s0772 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7710974353_20260824_ooo-gk-aeromaks.json) | 2026-08-24 | — |
+| s5342 | Minpromtorg | Minpromtorg (MINPROMTORG_BAS_20260903_nacproekt-obzor.pdf) | 2026-09-03 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -19749,6 +19749,10 @@
       {
         "source_id": null,
         "text": "One of Russia's most prominent heavy military-UAV manufacturer lineages (Orion/Sirius/Grom) sits directly upstream of an already-catalogued registry entity via 100% ownership (see ooo-aeromaks founders[]) -- worth a dedicated deeper pass on the Kronshtadt→Aeromax corporate history and any residual military-drone production continuing under either entity, separate from the civilian pivot the press coverage emphasizes."
+      },
+      {
+        "source_id": "s5342",
+        "text": "Минпромторг России's national БАС-classification chart (s5342, «О реализации национального проекта «Беспилотные авиационные системы» в период до 2030 года», p.2) lists «SH-750 (Аэромакс)» as the representative example product for the вертолетный тип / тяжелый (более 500 кг) UAV category — the heaviest helicopter-type class. \"SH-750\" doesn't match any model currently in products[] on any of the three Аэромакс-named entities (ao-aeromaks: AS-32-10/AS-32-8/Д-12К fixed-wing/VTOL; ooo-aeromaks: B-120/B-200/B-700 helicopter-type, А-5/А-5 М/Л/A-50 aircraft/multicopter-type; ooo-gk-aeromaks: none listed). Given ooo-aeromaks already carries the B-series helicopter line and B-700 is noted as \"in development — no dedicated page yet\", SH-750 may be a renamed/rebranded designation for B-700 or a newer heavy model entirely — needs checking against the group's current product pages (aeromaks brand site/VK/Rosteh press) before wiring to any specific entity's products[]."
       }
     ],
     "sources": [],
@@ -23671,7 +23675,8 @@
       {
         "name_ru": "БВС ВТ-30Е",
         "description": "Multi-purpose single-rotor helicopter-type UAS with tail rotor. Manufacturer field on this listing: АО \"НПП \"Радар ммс\" -- confirms this registry's “НПП” name over the separate rk.2035.university showcase blurb's “Концерн” wording (see open_questions).",
-        "source_id": "s1169"
+        "source_id": "s1169",
+        "note": "Independently corroborated 2026-09-03: Минпромторг России's own national БАС-classification chart (s5342, from the ministry's «Беспилотные авиационные системы» national-project page) lists «ВТ-30Е (Радар ММС)» as the representative example product for the вертолетный тип / средний (30-500 кг) UAV category — the ministry's own reference example for that entire weight class, not just a self-reported product listing."
       },
       {
         "name_ru": "БВС ВТ-45",
