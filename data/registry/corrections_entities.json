@@ -17487,6 +17487,34 @@
         "2026-09-02: found via HAR capture of fedresurs.ru (Федресурс fact-message backend API discovered: GET https://fedresurs.ru/backend/sfact-messages/<GUID>, no auth needed, just a Referer header -- see notes/source_expansion_methodology.md). УФНС России по Новгородской области filed a bankruptcy petition against ООО «Герон» with the Novgorod Oblast Arbitration Court, court notification dated 17.02.2026. Significant given ooo-geron was only added to the registry this session (via the smolin.info retrace) as part of the Ushkuynik-adjacent Аэро-Хит/Владимирский cluster.",
         "2026-09-02: HAR capture of fedresurs.ru's main-site search (GET /backend/companies?searchString=<ИНН> -> GUID, then /backend/companies/<GUID>/{main,bankruptcy,publications,networth,licenses,encumbrances} -- a full universal company-lookup API, reusable for any entity, not just bankruptcy checks; see notes/source_expansion_methodology.md) surfaced a materially worse financial picture than the single УФНС filing already on file: (1) ПАО Сбербанк itself filed TWO separate creditor bankruptcy-intent notices against ООО «Герон» (06.03.2026 and 28.04.2026), on top of the tax authority's 18.02.2026 filing -- three separate creditors circling within 10 weeks. (2) EGRUL itself flagged ООО «Герон»'s registered information as unreliable (\"Недостоверность сведений\", record 11.03.2026, published 12.03.2026, per УФНС России по Новгородской области's own verification check) -- s5322, often a precursor to forced ЕГРЮЛ exclusion. (3) A 2024 vehicle-leasing fact-message (s5314) names the lessee as \"ООО «Герон-Авиа»\" -- same ИНН/ОГРН, confirming this as an alternate/trading name tied to geronavia.ru. Notably, this same message has BOTH isPublisherInSanctionList:true and isParticipantInSanctionList:true set by Fedresurs's own system, and the LESSOR's identity is fully redacted citing \"Постановление Правительства РФ от 12.01.2018 №5\" -- a real, well-documented Russian government decree used specifically to shield defense-industry/gosoboronzakaz-participating entities' EGRUL/Fedresurs footprint from public disclosure. This is flagged here as Fedresurs's own classification, NOT independently verified against a primary international sanctions list (OFAC/EU/UK) or confirmed which sanctions list is meant -- but the shielding decree itself is a strong, independently-verifiable signal that the (unnamed) leasing counterparty is treated as defense-industry-sensitive by the Russian state. No bidding/pledged-asset/networth/license records exist yet (all empty) -- consistent with the bankruptcy still being at the pre-trustee petition stage, per the earlier torgi.gov.ru/bankrot.fedresurs.ru null result."
       ]
+    },
+    "2312321660": {
+      "set": {
+        "state_programs": [
+          {
+            "name_ru": "Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ)",
+            "name_en": "Association of developers of advanced electronic-reconnaissance, electronic-warfare, and communications systems",
+            "role": "член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure)",
+            "source_id": "s5333",
+            "as_of": "2025-12-31"
+          },
+          {
+            "name_ru": "Субсидия на возмещение затрат, связанных с приобретением оборудования",
+            "name_en": "Cost-reimbursement subsidy for equipment purchase",
+            "role": "Получатель субсидии в размере 8 594 804,00 руб. на возмещение затрат, связанных с приобретением «Установки послойного селективного лазерного сплавления металлических порошков 3DLAM Mid.», дата ввода в эксплуатацию 18.07.2025г. (metal-powder selective laser melting / metal 3D-printing machine)",
+            "source_id": "s5333",
+            "as_of": "2025-12-31",
+            "note": "Independently corroborated by a second, unrelated primary source: the Краснодарский край Министерство промышленной политики's own 2025 annual program report (s5340, GOVREPORT_20260903_krasnodar-minprom-programma-2025-otchet.pdf), which lists ООО «Гагаринг» as one of 8 recipients of the region's «предоставление субсидий промышленным предприятиям на возмещение части затрат, связанных с приобретением нового оборудования» measure (₽67,119.79 thousand total across all 8 recipients in 2025, federally co-financed via a Минпромторг РФ agreement; per-recipient amounts not broken out in this report, so the ₽8,594,804 figure itself still traces only to s5333, but the fact of the subsidy and its equipment-purchase purpose is now confirmed by both the company's own audit report and the granting ministry's own report — not just a self-reported claim."
+          },
+          {
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase (orbis_id 20052703), classified under industry 'Радиоэлектронная промышленность' (radio-electronics industry) with primary ОКВЭД 26.11 — independently corroborates the entity's ИНН/ОГРН/address (matches EGRUL exactly) and its declared radio-electronics/UAV-component industry classification via a second, unrelated federal data source. Geolocated point (39.128152, 45.032572) falls within the registered Пашковский жилой массив address area of Краснодар. Record also confirms no official company website (site: 'Нет').",
+            "source_id": "s5345",
+            "as_of": "2026-09-03"
+          }
+        ]
+      }
     }
   }
 }

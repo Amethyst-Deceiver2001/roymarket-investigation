@@ -61,6 +61,7 @@
 
 - name_ru: Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ); name_en: Association of developers of advanced electronic-reconnaissance, electronic-warfare, and communications systems; role: член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure); as_of: 2025-12-31 [s5333]
 - Independently corroborated by a second, unrelated primary source: the Краснодарский край Министерство промышленной политики's own 2025 annual program report (s5340, GOVREPORT_20260903_krasnodar-minprom-programma-2025-otchet.pdf), which lists ООО «Гагаринг» as one of 8 recipients of the region's «предоставление субсидий промышленным предприятиям на возмещение части затрат, связанных с приобретением нового оборудования» measure (₽67,119.79 thousand total across all 8 recipients in 2025, federally co-financed via a Минпромторг РФ agreement; per-recipient amounts not broken out in this report, so the ₽8,594,804 figure itself still traces only to s5333, but the fact of the subsidy and its equipment-purchase purpose is now confirmed by both the company's own audit report and the granting ministry's own report — not just a self-reported claim. [s5333]
+- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase (orbis_id 20052703), classified under industry 'Радиоэлектронная промышленность' (radio-electronics industry) with primary ОКВЭД 26.11 — independently corroborates the entity's ИНН/ОГРН/address (matches EGRUL exactly) and its declared radio-electronics/UAV-component industry classification via a second, unrelated federal data source. Geolocated point (39.128152, 45.032572) falls within the registered Пашковский жилой массив address area of Краснодар. Record also confirms no official company website (site: 'Нет').; as_of: 2026-09-03 [s5345]
 
 ## Workforce & production scale
 
@@ -119,6 +120,7 @@
 | s0455 | EGRUL extract | EGRUL extract (ul-1232300051235-20260823120320.pdf) | — | 2026-08-23 |
 | s5333 | Fedresurs | Fedresurs (FEDRESURS_939B297414FA48A4A4B3497315AF3659_20260903_gagaring-audit-report-2025fy-full.pdf) | 2026-09-03 | — |
 | s5335 | Proverki | Proverki (PROVERKI_2312321660_20260903_gagaring-rkn-inspection-26154827.json) | 2026-09-03 | 2024-11-15 |
+| s5345 | Gisp | Gisp (GISP_2312321660_20260903_atlas-promyshlennosti-company-record.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
