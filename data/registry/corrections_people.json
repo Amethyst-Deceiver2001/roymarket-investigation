@@ -511,7 +511,8 @@
     },
     "begak-aleksandr-arkadevich": {
       "set": {
-        "inn_personal": "263202438639"
+        "inn_personal": "263202438639",
+        "notes": "The direct '_candidate' role at ООО «Гагаринг» itself is scaffold noise from text proximity, not a distinct fact — his real, sourced connection is as director of ООО «АКР «Бегак»» (ИНН 2632116476, Пятигорск), a fellow co-founder of АРРС (ano-arrs-krasnodar) alongside Гагаринг itself and Барашков (АРРС's GD). No separate evidence of a personal role at Гагаринг beyond that association-level connection."
       },
       "why": [
         "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2566)."
@@ -3029,6 +3030,14 @@
         "notes": "Individual co-founder of АРРС alongside ООО «Гагаринг», ООО «АКР «Бегак»» and ООО «Прайм» (per ano-arrs-krasnodar's own founders[] list). The originally-scaffolded role incorrectly pointed at ООО «Прайм» itself as employer/entity — corrected 2026-09-03: he is a co-founder of the ASSOCIATION, not of Прайм.",
         "why": [
           "2026-09-03: corrected during the Гагаринг-network wide-net push — the scaffolded _candidate role misattributed this person's founder role to ООО «Прайм» rather than ano-arrs-krasnodar, the actual entity his name appears as a founder of."
+        ]
+      }
+    },
+    "kurteev-aleksandr-sergeevich": {
+      "set": {
+        "notes": "LIKELY SPURIOUS role, not confirmed: this ИНН (434540800305, ИП Куртеев Александр Сергеевич, ОГРНИП 307434525600161, Сочи/Дагомыс) surfaced only as a leftover populated field in gagaring-school.ru's blank offer-agreement (/oferta) template — plausibly a reused/copied template from an unrelated business, not evidence this person has any actual role at Гагаринг or its training center. No other mention connects him to Барашков or Гагаринг anywhere in this investigation. Kept as an open candidate pending independent confirmation, not treated as an established network member in notes/gagaring_network_map.md.",
+        "why": [
+          "2026-09-03: re-checked while scoping gagaring_network_map.md to confirmed network only — this role's own _raw context explicitly says the name is 'not otherwise connected to ООО «Гагаринг» or Барашков anywhere else', so it should not be presented as an established connection."
         ]
       }
     }

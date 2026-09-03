@@ -29,17 +29,21 @@ material) — rather than as a narrative-only writeup.
 | ООО «НПО Эйлер» (`ooo-npo-eyler`, ИНН 7100069249, Тула) | Subsidiary, 50% owned | Плыкина Е.В. | Same source; aircraft/spacecraft OKVED, flagged for its own deep-dive |
 | АРРС — Ассоциация разработчиков перспективных систем РЭР/РЭБ/связи (`ano-arrs-krasnodar`) | Industry association | Барашков А.С. (same GD as Гагаринг) | Co-founded by Гагаринг, АКР «Бегак», Прайм + two individual founders |
 | ООО «АКР «Бегак»» (`ooo-akr-begak`) | Fellow АРРС co-founder | Бегак А.А. | Via АРРС; also an unresolved `_candidate` role at Гагаринг itself for both Бегак and Куртеев — unverified, needs a source before treating as a direct Гагаринг tie |
-| ООО «Прайм» (`ooo-praym`) | Fellow АРРС co-founder | Степаева М.И. | Via АРРС |
+| ООО «Прайм» (`ooo-praym`) | Fellow АРРС co-founder | Баранова О.В. (director as of at least 2026-08-22, per live EGRUL; predecessor Степаева М.И. per an earlier 2025-09-11 snapshot) | Via АРРС |
 | Архангел Легион / АНО «Архангел» (`ano-arkhangel`, ИНН 2315233718, Новороссийск) | Co-runs 51st Army training relationship | Архангельский Г.Е. (co-founder Ташматов И.С.) | Confirmed — joint 51st Guards Combined Arms Army recruitment/training |
 | Архангел Спецназа (@arx_spn, 1.02M subs) | Informal partner | No legal entity identified | Confirmed informal — mask branding on a Гагаринг graduation video, joint drone-retraining project (10.08.2026) |
 
-Not yet resolved into this table: the two `_candidate` roles (Куртеев
-Александр Сергеевич, Бегак Александр Аркадьевич both have an unsourced
-`_candidate: true` role at "ООО «Гагаринг»" itself, separate from Бегак's
-sourced АРРС/АКР «Бегак» tie) — scaffold leftovers from text extraction,
-not yet verified against a primary source. Worth resolving before the
-profile build: check whether these are real roles at Гагаринг itself or
-just co-founder-of-the-same-association noise.
+**Resolved (2026-09-03), dropped from the network:** the two `_candidate`
+roles placing Куртеев Александр Сергеевич and Бегак Александр Аркадьевич
+directly at "ООО «Гагаринг»" itself were checked against their source
+context and found not to hold up. Куртеев's ИНН only ever surfaced as a
+leftover populated field in gagaring-school.ru's blank offer-agreement
+template — the source text itself says the name is "not otherwise
+connected to ООО «Гагаринг» or Барашков anywhere else" — likely a reused
+template artifact, not a real role; kept as an unconfirmed lead, not part
+of this network. Бегак's direct-Гагаринг role was scaffold noise from text
+proximity — his real, sourced connection is the АРРС/АКР «Бегак» tie
+already in the table above; no separate personal role at Гагаринг found.
 
 ## People — Гагаринг's own network
 
@@ -91,8 +95,6 @@ just co-founder-of-the-same-association noise.
 
 ## What's still open (Гагаринг-network scope only)
 
-- The two unresolved `_candidate` roles (Куртеев, Бегак-at-Гагаринг-itself)
-  need a real source before being treated as established.
 - Одесская 48/3 — which specific building in the 23-building industrial
   complex Гагаринг's production subdivision (КПП 231045001) occupies is
   still unidentified; needs an EGRN pull keyed to that КПП, not a
