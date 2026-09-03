@@ -35839,26 +35839,10 @@
     ],
     "state_programs": [
       {
-        "as_of": "2025-12-31",
-        "name_en": "Association of developers of advanced electronic-reconnaissance, electronic-warfare, and communications systems",
-        "name_ru": "Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ)",
-        "role": "член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure)",
-        "source_id": "s5333"
-      },
-      {
-        "as_of": "2025-12-31",
-        "name_en": "Cost-reimbursement subsidy for equipment purchase",
-        "name_ru": "Субсидия на возмещение затрат, связанных с приобретением оборудования",
-        "note": "Independently corroborated by a second, unrelated primary source: the Краснодарский край Министерство промышленной политики's own 2025 annual program report (s5340, GOVREPORT_20260903_krasnodar-minprom-programma-2025-otchet.pdf), which lists ООО «Гагаринг» as one of 8 recipients of the region's «предоставление субсидий промышленным предприятиям на возмещение части затрат, связанных с приобретением нового оборудования» measure (₽67,119.79 thousand total across all 8 recipients in 2025, federally co-financed via a Минпромторг РФ agreement; per-recipient amounts not broken out in this report, so the ₽8,594,804 figure itself still traces only to s5333, but the fact of the subsidy and its equipment-purchase purpose is now confirmed by both the company's own audit report and the granting ministry's own report — not just a self-reported claim.",
-        "role": "Получатель субсидии в размере 8 594 804,00 руб. на возмещение затрат, связанных с приобретением «Установки послойного селективного лазерного сплавления металлических порошков 3DLAM Mid.», дата ввода в эксплуатацию 18.07.2025г. (metal-powder selective laser melting / metal 3D-printing machine)",
-        "source_id": "s5333"
-      },
-      {
-        "as_of": "2026-09-03",
-        "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
-        "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
-        "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase (orbis_id 20052703), classified under industry 'Радиоэлектронная промышленность' (radio-electronics industry) with primary ОКВЭД 26.11 — independently corroborates the entity's ИНН/ОГРН/address (matches EGRUL exactly) and its declared radio-electronics/UAV-component industry classification via a second, unrelated federal data source. Geolocated point (39.128152, 45.032572) falls within the registered Пашковский жилой массив address area of Краснодар. Record also confirms no official company website (site: 'Нет').",
-        "source_id": "s5345"
+        "name": "Хакатон «Воронка инновационных стартапов» — партнёр (Фонд развития инноваций Краснодарского края)",
+        "as_of": "2026-06-30",
+        "source_id": "s5425",
+        "note": "Лаборатория электроники «Гагаринг» выступила партнёром призового фонда (500 тыс. руб.) хакатона по беспилотной навигации в условиях потери сигнала ГНСС, организованного Фондом развития инноваций Краснодарского края в рамках регионального проекта «Воронка инновационных стартапов» (часть нацпроекта «Эффективная и конкурентная экономика»). Первое подтверждённое участие Гагаринга в региональной инновационной госпрограмме Краснодарского края (отдельно от федеральных АЭРОНЕКСТ/Сколково связей, если такие есть)."
       }
     ],
     "marketing_claims": [],
@@ -35954,6 +35938,10 @@
       {
         "source_id": null,
         "text": "Additional registry checks (2026-09-04): (1) Minjust's NKO portal (nco.minjust.gov.ru, s5423) independently corroborates the existing registry entries for the training center, Архангел Легион and АРРС (name/ОГРН/date/address all match) — no new facts, but confirms them via a source distinct from egrul.nalog.ru; the training center's one filed 2025 activity report failed Minjust's check ('Проверка не пройдена', filed 10.04.2026). (2) Гагаринг has NO currently-valid entry in Минпромторг's Единый реестр российской радиоэлектронной продукции (ПП РФ 878, s5421) — despite making UAV comms/EW-adjacent electronics, it hasn't sought or hasn't received the state 'domestically-produced radio-electronics' designation that would confer procurement preference. (3) Гагаринг is NOT on Минцифры's accredited-IT-company registry (s5422), despite carrying OKVED 62.01 (software) alongside its primary electronics code. (4) gagaring.ru and gagaring-school.ru were both registered the same day (18.06.2025, 3 minutes apart) via Beget (s5424) — no registrant PII exposed under standard .ru WHOIS privacy, no pre-privacy-shield historical record found."
+      },
+      {
+        "text": "Региональные реестры Краснодарского края (2026-09-04): (1) rmsp.nalog.ru подтверждает статус «Микропредприятие» весь период 10.10.2023–10.07.2026, затем компания ВЫБЫЛА из реестра МСП 10.07.2026 (текущий статус: «Не является субъектом МСП») — причина невыяснена (рост выручки/штата сверх порогов микропредприятия — правдоподобно на фоне заявленного масштаба производства «Кузнечик», либо просрочка подачи налоговой отчётности приводит к автоматическому исключению; не установлено, требует проверки при следующей БФО-подаче). (2) rmsp-pp.nalog.ru (реестр получателей господдержки МСП): «Сведения не найдены» — Гагаринг никогда не получал финансовую/консультационную/образовательную господдержку МСП напрямую (отличается от найденного через investkuban.ru партнёрства с Фондом развития инноваций края, которое шло не через субъект МСП поддержки, а как призовой партнёр стороннего хакатона). (3) prom.krd.ru (реестр промышленных предприятий г. Краснодара) — сайт недоступен из песочницы (connection refused), не проверено, не «отрицательный результат». (4) technopark-krd.ru (Технопарк РЭП Краснодар, радиоэлектронный промышленный технопарк) — нет прямого упоминания на сайте и нет открытого каталога резидентов для проверки; неубедительно, не считать ни подтверждением, ни опровержением связи.",
+        "source_id": null
       }
     ],
     "sources": [],

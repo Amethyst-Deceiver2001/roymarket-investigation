@@ -214,6 +214,41 @@ has NOT sought/received, useful context for the profile (a company that's
 grown fast on defense-adjacent revenue without pursuing the state
 designations that would normally accompany that).
 
+### Regional (Краснодарский край) registry checks, 2026-09-04
+
+- **rmsp.nalog.ru** (federal SME registry, region-filterable) — confirms
+  Гагаринг held "Микропредприятие" (micro-enterprise) category for its
+  entire time on record, 10.10.2023–10.07.2026, then **dropped out of the
+  SME registry entirely on 10.07.2026** ("Не является субъектом МСП" as of
+  the current pull). Cause unestablished — could be organic (revenue/
+  headcount growth past the micro-enterprise threshold, plausible given
+  the self-reported 10,000+-unit «Кузнечик» production claim) or
+  administrative (a missed tax filing triggers automatic exclusion).
+  Worth re-checking against the next БФО filing once one is public.
+- **rmsp-pp.nalog.ru** (registry of MSP state-support recipients) —
+  negative: "Сведения не найдены." Гагаринг has never received financial,
+  consultative, or educational МСП support through this channel — distinct
+  from the investkuban.ru finding below, which is a hackathon sponsorship,
+  not a support disbursement to Гагаринг itself.
+- **investkuban.ru** (Krasnodar krai's own investment portal, new to this
+  repo) — found real substance: a 30.06.2026 news item names "Лаборатория
+  электроники «Гагаринг»" as the prize-fund partner (₽500k) for a
+  UAV-navigation hackathon ("determining aircraft position without stable
+  GNSS signal, using radio altimeter + digital terrain maps") run by the
+  **Фонд развития инноваций Краснодарского края** (Krasnodar Krai
+  Innovation Development Fund) under the regional project «Воронка
+  инновационных стартапов», itself part of the national project
+  «Эффективная и конкурентная экономика». First confirmed tie between
+  Гагаринг and a *regional* (not federal) state innovation program —
+  written up as a `state_programs[]` entry.
+- **prom.krd.ru/reestr** (City of Krasnodar's own industrial-enterprise
+  registry) — site unreachable from the sandbox (connection refused, not
+  a WAF block), genuinely untested rather than a negative result. Worth
+  a retry from a different network.
+- **technopark-krd.ru** (Технопарк РЭП Краснодар, a radio-electronics-
+  industry technopark) — no Гагаринг mention on the public site and no
+  open resident directory to search; inconclusive, not evidence either way.
+
 ### Product descriptions (from Гагаринг's own FY2025 audit + price list)
 
 - **«Кузнечик»** — UAV communications-system software, capitalized as an
