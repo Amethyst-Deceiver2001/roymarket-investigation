@@ -232,6 +232,58 @@ checko.ru's address search (item 3) is the highest-leverage single capture
 — unlocks facility-colocation checks for every address already in the
 registry, not just this one.
 
+### Findings from actually running this methodology (2026-09-03, via chrome-devtools MCP)
+
+With the `chrome-devtools-mcp` browser-automation server configured this
+session (see `claude mcp add chrome-devtools -- npx chrome-devtools-mcp@latest`
+— tools only load into a session started *after* the add, a mid-session add
+requires restarting Claude Code), items 1 and 3 above were run directly
+rather than via a user HAR capture, with results:
+
+- **rusprofile.ru's address search DOES work live** — the earlier bare-curl
+  403/404 was the JS-challenge pattern, not a hard block. The real endpoint:
+  `POST https://www.rusprofile.ru/ajax/search/advanced?cacheKey=<float>`,
+  body `{"action":"search_advanced","query":"<city> <street> <house>","state_1..5":false,"okved_strict":true}`,
+  needs an `x-csrf-token` header + session cookie obtained by first loading
+  any rusprofile.ru page in a real browser session — a `chrome-devtools-mcp`
+  page load handles this automatically (cookies/CSRF token come from the
+  DOM state, not something to script around manually).
+- **Both Гагаринг's HQ address (Фадеева 429/3) and Тримикс's HQ address
+  (Придорожная 8, St. Petersburg — NOT Krasnodar, ruling out literal
+  colocation with Гагаринг) turned out to be large, generic multi-tenant
+  business-park buildings** — 38 and 50+ unrelated small companies
+  respectively (textile wholesale, car parts, security firms, construction,
+  freight forwarding...), addressed by "литера"/"помещение"/"офис" unit
+  number. This is the standard cheap-юридический-адрес pattern for Russian
+  SMEs, not something distinctive to either entity — **a company search by
+  address alone does not confirm or refute a "secret facility" hypothesis**,
+  since ordinary shell-address buildings look identical in this data to
+  genuine shared industrial sites at the company-list level.
+- **pkk.rosreestr.ru now redirects to nspd.gov.ru** (the unified "Национальная
+  система пространственных данных" portal absorbed the old public cadastral
+  map). Its object-search API needs the same "load in a real browser first"
+  treatment as rusprofile — the search box fill+Enter works via
+  `chrome-devtools-mcp`, no captcha encountered. **This is what actually
+  distinguishes a mailbox address from a real facility**, not the company
+  list: querying Гагаринг's HQ address returned exactly one cadastral
+  object, "Назначение: Многоквартирный дом" (17-storey apartment building,
+  15,501.7 m², built 2008) — a mailbox address, full stop. Querying the
+  Одесская 48/3 subdivision address returned **23 separate cadastral
+  buildings** (plus 2 structures, 1 unfinished-construction object) sharing
+  that one street address — and the first one checked, `23:43:0302010:387`,
+  is explicitly named **"Производственный корпус"** (Production Building):
+  brick, 3 floors, 3,873.6 m², built 1972 (Soviet-era industrial), privately
+  owned. This corroborates a real former-industrial site at that address,
+  though which of the 23 buildings is Гагаринг's own subdivision is still
+  unidentified (the audit report gives no литер/building letter). Recorded
+  as an open question on `ooo-gagaring`, not yet resolved to a specific
+  building.
+- **Methodology correction**: check the cadastral "Назначение"/"Наименование"
+  field before the company-colocation list, not after — it's the field that
+  actually answers "mailbox or real site," and building-count-at-address
+  (1 vs. 23) is itself a fast first signal before drilling into any
+  individual building's designation.
+
 ## Recommended next steps (not yet started)
 
 1. **HAR-capture torgi.gov.ru and fedresurs.ru** the same way zakupki's
