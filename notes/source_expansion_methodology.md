@@ -432,15 +432,45 @@ This overturns the third pass's framing, not just one data point in it:
   useful as a fallback if a human browser genuinely isn't available, but
   it's the second-choice path now, not the primary one.
 
+### Fifth pass: pagination correction, and case-card access also confirmed broken (2026-09-03)
+
+Two corrections/additions from the user's follow-up:
+
+- **Pagination correction**: the fourth pass's screenshot (`s5336`) was
+  actually **page 1** of the `ao-nii-stt` search, not page 2 as assumed from
+  the pagination widget's styling. The user supplied the real page 2
+  (`s5339`) — only 3 rows (the oldest cases: А72-509/2018, А62-6361/2016,
+  А62-727/2013), fully visible. Since page 1 shows ~15-16 of its own ~25
+  rows (cut off by viewport height around the 25.05.2020 row) and page 2's
+  3 rows are now fully captured, there's still a **middle gap on page 1**
+  (~9-10 rows, roughly 2019 to mid-2020) not yet seen by either screenshot.
+- **Case-card direct access is also confirmed broken in the automated
+  session** — tested `https://kad.arbitr.ru/Card/0609a5cd-...` (a case GUID
+  the user asked about directly). Same failure signature as the search
+  flow: the page hangs indefinitely on DDoS-Guard's fp.js/wasm challenge
+  screen, never reaching the real SPA bundle (`Object.keys(window)` shows
+  only the challenge-page's own jQuery/UAParser/onwasm globals, none of the
+  real app's). Same `Uncaught (in promise)` console error as the broken
+  search. This is the second distinct case GUID to hang this way across two
+  sessions — not a fluke tied to one stale/deleted case. **Case cards are
+  now a third confirmed automated-session failure mode**, alongside search
+  submission and the earlier rate limit. All three point the same
+  direction: this class of PravoTech site (kad.arbitr.ru, ras.arbitr.ru)
+  should be worked through the user's own browser, not the automated one,
+  until/unless the automation-detection mechanism is better understood.
+
 ## Recommended next steps (not yet started)
 
-0. **For real kad.arbitr.ru/ras.arbitr.ru entity lookups, ask the user to
-   run the search in their own browser and share a screenshot** (per the
-   fourth pass above — this is the reliable path; the automated
-   chrome-devtools-mcp session has hit two separate failure modes there).
-   `ao-nii-stt` (ИНН 6730046954) has an open_question flagging page 1 of
-   its 28-case kad.arbitr.ru result as still uncaptured — a natural next
-   ask. `npp-radar-mms` is next after that.
+0. **For real kad.arbitr.ru/ras.arbitr.ru entity lookups AND case-card
+   reads, ask the user to do it in their own browser and share a
+   screenshot** (per the fourth and fifth passes above — the automated
+   chrome-devtools-mcp session has now failed three separate ways on these
+   two sites: broken search submission, a rate limit from working around
+   that, and an indefinitely-hanging case-card page). `ao-nii-stt`
+   (ИНН 6730046954) has an open_question flagging the still-missing middle
+   ~9-10 rows of its page-1 result, plus a handful of new case numbers
+   needing individual case-card verification. `npp-radar-mms` is next
+   after that.
 1. **HAR-capture torgi.gov.ru and fedresurs.ru** the same way zakupki's
    `supplierTitle` param was found (see `zakupki_gov_ru_contract_search_api`
    memory for that precedent) — these are real, reachable portals blocked
