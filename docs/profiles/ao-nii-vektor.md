@@ -10,6 +10,10 @@
 - **ОКВЭД:** 26.30.13 — Производство средств связи, выполняющих функцию систем управления и мониторинга
 - **Wildberries overlap:** none_found
 
+## Products
+
+- **Оптимизатор энергопотребления трёхфазный серии ОЭП 3** — Three-phase AC power-consumption optimizer line (ОЭП 3-060-01 through ОЭП 3-500-01/635-01, incl. -02 variants), ТУ 27.12.31-001-29250611-2018. Производится по адресу: г. Санкт-Петербург, Кантемировская ул., д. 10. [s5370]
+
 ## Government contracts
 
 - customer: Министерство обороны Российской Федерации; reg_number: 1770425226115000509; date: 2015; value_rub: 92000000; items: Largest of 7 direct МО/Минпромторг contracts found (out of 154 total zakupki hits, ₽437.06m aggregate, mostly routine/municipal); this is the mil-relevant subset — ₽338.92m across МО (₽232.87m) and Минпромторг (₽75m ОКР-style) contracts. [s3214]

@@ -39,6 +39,13 @@
 |---|---|---|
 | АО Производственная компания «Азимут» | 2024-12-24 | ГРН 2247713421129, 24.12.2024 — current name recorded 2024; entity dates from 2005, so an earlier name existed. Predecessor not stated in this extract. [s0212] |
 
+## Products
+
+- **Мобильный компьютер MIG T8X (x86)** — Ruggedized x86 mobile/handheld computer (артикул MGT8XPRO-R-46AL37Y1-50), ТРНМ.466453.005ТУ. Производится в г. Калуга, ул. Салтыкова-Щедрина, д. 141 (кадастровый номер 40:26:000358:914). [s5355]
+- **Плата материнская мобильного компьютера MIG T8X (x86)** — Motherboard for the MIG T8X ruggedized computer, ТРНМ.467483.001ТУ. [s5355]
+- **Плата клавиатуры мобильного компьютера MIG T8X (x86)** — Keyboard board for the MIG T8X ruggedized computer, ТРНМ.468381.020ТУ. [s5355]
+- **Мобильный термопринтер MIG КВ4** — Ruggedized mobile thermal printer, ТРНМ.162442.001ТУ. [s5354]
+
 ## Government contracts
 
 - customer: Министерство обороны Российской Федерации; reg_number: 1770425226115000899; date: 2015; value_rub: 789200; items: Only mil-relevant contract among this entity's 76 zakupki hits (₽431.7m total, overwhelmingly civilian) — a small direct МО supply; entity is tracked here as a money-layer node, not primarily as a hardware supplier. [s3042]

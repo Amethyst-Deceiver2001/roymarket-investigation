@@ -3623,7 +3623,28 @@
     "tier_basis": "brief section: The entity map (Legal entities table)",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
-    "products": [],
+    "products": [
+      {
+        "name_ru": "Мобильный компьютер MIG T8X (x86)",
+        "description": "Ruggedized x86 mobile/handheld computer (артикул MGT8XPRO-R-46AL37Y1-50), ТРНМ.466453.005ТУ. Производится в г. Калуга, ул. Салтыкова-Щедрина, д. 141 (кадастровый номер 40:26:000358:914).",
+        "source_id": "s5355"
+      },
+      {
+        "name_ru": "Плата материнская мобильного компьютера MIG T8X (x86)",
+        "description": "Motherboard for the MIG T8X ruggedized computer, ТРНМ.467483.001ТУ.",
+        "source_id": "s5355"
+      },
+      {
+        "name_ru": "Плата клавиатуры мобильного компьютера MIG T8X (x86)",
+        "description": "Keyboard board for the MIG T8X ruggedized computer, ТРНМ.468381.020ТУ.",
+        "source_id": "s5355"
+      },
+      {
+        "name_ru": "Мобильный термопринтер MIG КВ4",
+        "description": "Ruggedized mobile thermal printer, ТРНМ.162442.001ТУ.",
+        "source_id": "s5354"
+      }
+    ],
     "financials": [],
     "egrul_flags": [],
     "securing_measures": [
@@ -14990,18 +15011,38 @@
     "products": [
       {
         "name_ru": "АЛЬФАМАРИН 5000",
-        "description": "Тактический миноискатель (tactical mine detector).",
-        "source_id": null
+        "description": "Тактический миноискатель (tactical mine detector). Производится в г. Йошкар-Ола (ТУ 26.30.50-001-49608285-2021).",
+        "source_id": "s5352"
       },
       {
         "name_ru": "АЛЬФАМАРИН 5000 «Д»",
-        "description": "Подводный вариант (underwater variant).",
-        "source_id": null
+        "description": "Подводный вариант миноискателя (underwater variant).",
+        "source_id": "s5352"
       },
       {
         "name_ru": "АЛЬФАМАРИН 5000 «З»",
-        "description": "Катушка 10×11 (coil variant).",
-        "source_id": null
+        "description": "Катушка 10×11, вариант миноискателя (coil variant).",
+        "source_id": "s5352"
+      },
+      {
+        "name_ru": "АЛЬФАМАРИН 5000 У",
+        "description": "Вариант миноискателя (mine detector variant), per Минпромторг заключение №128052/11.",
+        "source_id": "s5352"
+      },
+      {
+        "name_ru": "АЛЬФАМАРИН 5000 М",
+        "description": "Вариант миноискателя (mine detector variant), per Минпромторг заключение №128052/11.",
+        "source_id": "s5352"
+      },
+      {
+        "name_ru": "АЛЬФАМАРИН",
+        "description": "Базовый миноискатель (base mine detector model), per Минпромторг заключение №128052/11.",
+        "source_id": "s5352"
+      },
+      {
+        "name_ru": "АЛЬФАМАРИН — миноискатель СИМ",
+        "description": "Вариант миноискателя (mine detector variant), per Минпромторг заключение №128052/11.",
+        "source_id": "s5352"
       },
       {
         "name_ru": "Киберскан 3000",
@@ -15020,8 +15061,8 @@
       },
       {
         "name_ru": "ARENA 5000PR",
-        "description": "Арочный металлодетектор, also thermal (t), thermal-imaging (tv/tvi) and folding variants.",
-        "source_id": null
+        "description": "Стационарный арочный металлодетектор (stationary arch metal detector), also thermal (t), thermal-imaging (tv/tvi) and folding variants. Производится в г. Йошкар-Ола (ТУ 26.30.050-010-49608285-2021, ГОСТ Р 53705-2009).",
+        "source_id": "s5351"
       },
       {
         "name_ru": "ARENA-F400ST",
@@ -24629,7 +24670,13 @@
     "tier_basis": "brief section: 525 residents, and how many of them are under EU sanctions",
     "cbst_tie": null,
     "wb_overlap": "none_found",
-    "products": [],
+    "products": [
+      {
+        "name_ru": "Оптимизатор энергопотребления трёхфазный серии ОЭП 3",
+        "description": "Three-phase AC power-consumption optimizer line (ОЭП 3-060-01 through ОЭП 3-500-01/635-01, incl. -02 variants), ТУ 27.12.31-001-29250611-2018. Производится по адресу: г. Санкт-Петербург, Кантемировская ул., д. 10.",
+        "source_id": "s5370"
+      }
+    ],
     "financials": [],
     "egrul_flags": [],
     "securing_measures": [],
@@ -25642,6 +25689,46 @@
         "name_ru": "PSIM NEST / Senesys-M / Sylph",
         "description": "AI/computer-vision security systems.",
         "source_id": null
+      },
+      {
+        "name_ru": "Микросхема интегральная 1657РУ1У",
+        "description": "Integrated circuit (memory), АЕЯР.431220.799ТУ.",
+        "source_id": "s5356"
+      },
+      {
+        "name_ru": "Микросхема интегральная 1892ВМ12АТ / 1892ВМ206 / 1892ВМ15АФ / 1288ПЛ1У",
+        "description": "Мультикор-family DSP/processor integrated circuits, per Минпромторг заключение №67615/11.",
+        "source_id": "s5357"
+      },
+      {
+        "name_ru": "Микросхема интегральная 1892ВМ10Я / 1892ВМ14Я",
+        "description": "Мультикор-family second-level integrated circuits, per Минпромторг заключение №82258/11.",
+        "source_id": "s5358"
+      },
+      {
+        "name_ru": "Микросхема интегральная 1892ВА018",
+        "description": "Мультикор-family integrated circuit, АЕНВ.431280.469ТУ.",
+        "source_id": "s5359"
+      },
+      {
+        "name_ru": "Модуль препроцессора ЕНОТ",
+        "description": "Preprocessor module, РАЯЖ.468172.005ТУ.",
+        "source_id": "s5361"
+      },
+      {
+        "name_ru": "Модуль процессорный ELV-MC03 (SMARC/CE/Q7/base)",
+        "description": "ELV-MC03 embedded processor module family (SMARC, CE and Q7 form-factor variants), РАЯЖ.467444 ТУ series. Производится по адресам: г. Москва, Зеленоград, ул. Конструктора Лукина, д. 14, стр. 14 и пр-д №4801, д. 7.",
+        "source_id": "s5362"
+      },
+      {
+        "name_ru": "Модуль процессорный Салют-ЭЛ24ПМ2",
+        "description": "Processor module, РАЯЖ.441461.031ТУ.",
+        "source_id": "s5364"
+      },
+      {
+        "name_ru": "Микросхема интегральная 1892ВМ268",
+        "description": "Мультикор-family integrated circuit, АЕНВ.431280.605ТУ.",
+        "source_id": "s5366"
       }
     ],
     "financials": [],

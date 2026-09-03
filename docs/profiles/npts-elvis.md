@@ -30,6 +30,14 @@
 - **Scythian SoC** — Mobile/navigation/multimedia system-on-chip.
 - **ELIoT SoC** — IoT-oriented system-on-chip.
 - **PSIM NEST / Senesys-M / Sylph** — AI/computer-vision security systems.
+- **Микросхема интегральная 1657РУ1У** — Integrated circuit (memory), АЕЯР.431220.799ТУ. [s5356]
+- **Микросхема интегральная 1892ВМ12АТ / 1892ВМ206 / 1892ВМ15АФ / 1288ПЛ1У** — Мультикор-family DSP/processor integrated circuits, per Минпромторг заключение №67615/11. [s5357]
+- **Микросхема интегральная 1892ВМ10Я / 1892ВМ14Я** — Мультикор-family second-level integrated circuits, per Минпромторг заключение №82258/11. [s5358]
+- **Микросхема интегральная 1892ВА018** — Мультикор-family integrated circuit, АЕНВ.431280.469ТУ. [s5359]
+- **Модуль препроцессора ЕНОТ** — Preprocessor module, РАЯЖ.468172.005ТУ. [s5361]
+- **Модуль процессорный ELV-MC03 (SMARC/CE/Q7/base)** — ELV-MC03 embedded processor module family (SMARC, CE and Q7 form-factor variants), РАЯЖ.467444 ТУ series. Производится по адресам: г. Москва, Зеленоград, ул. Конструктора Лукина, д. 14, стр. 14 и пр-д №4801, д. 7. [s5362]
+- **Модуль процессорный Салют-ЭЛ24ПМ2** — Processor module, РАЯЖ.441461.031ТУ. [s5364]
+- **Микросхема интегральная 1892ВМ268** — Мультикор-family integrated circuit, АЕНВ.431280.605ТУ. [s5366]
 
 ## Government contracts
 
