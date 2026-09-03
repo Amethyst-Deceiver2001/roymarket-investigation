@@ -43943,7 +43943,7 @@
       },
       {
         "source_id": "s5393",
-        "text": "RESOLVED (2026-09-03): «Архангел Легион» is @arkhangelfront ('Фонд Архангел «Легион»' / 'Организация Военно-Технической Поддержки Защитников Отечества и Патриотического Воспитания Населения «Архангел»', 22.8K subscribers, s5393) — CONFIRMED a separate, distinct Telegram channel/organization from «Архангел Спецназа» (@arx_spn, 1.02M subscribers, s5392, the drone-retraining project channel). Three distinct «Архангел»-branded entities are now on record in this investigation: (1) the parked roymarket_archangel_adjacent_network entities (Kalashnikov/Zaporizhzhia + Wagner/Odintsovo, no link found here), (2) «Архангел Спецназа» @arx_spn (mask branding + Гагаринг joint drone-retraining project), (3) «Архангел Легион» @arkhangelfront (co-runs this entity's 51st Guards Combined Arms Army training-center relationship, per tier_basis). No legal-entity ИНН/ОГРН identified yet for «Архангел Легион» itself — not a registry entity, only referenced via this relationship."
+        "text": "RESOLVED (2026-09-03): «Архангел Легион» is @arkhangelfront ('Фонд Архангел «Легион»' / 'Организация Военно-Технической Поддержки Защитников Отечества и Патриотического Воспитания Населения «Архангел»', 22.8K subscribers, s5393) — CONFIRMED a separate, distinct Telegram channel/organization from «Архангел Спецназа» (@arx_spn, 1.02M subscribers, s5392, the drone-retraining project channel). Three distinct «Архангел»-branded entities are now on record in this investigation: (1) the parked roymarket_archangel_adjacent_network entities (Kalashnikov/Zaporizhzhia + Wagner/Odintsovo, no link found here), (2) «Архангел Спецназа» @arx_spn (mask branding + Гагаринг joint drone-retraining project), (3) «Архангел Легион» @arkhangelfront (co-runs this entity's 51st Guards Combined Arms Army training-center relationship, per tier_basis). No legal-entity ИНН/ОГРН identified yet for «Архангел Легион» itself — not a registry entity, only referenced via this relationship. Legal entity now identified (2026-09-03): ИНН 2315233718 / ОГРН 1242300005640, АНО «...Архангел» (rusprofile.ru, s5394) — full legal name matches @arkhangelfront's own bio verbatim. See registry entity ano-arkhangel."
       }
     ],
     "sources": [
@@ -43971,5 +43971,109 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": "New entity, established 2026-09-03 during a follow-up on Гагаринг's АНО ДПО founder relationship (already flagged in its own state_programs/subsidiaries per s5333). ИНН/ОГРН/director confirmed via egrul.nalog.ru open API (s5371, exact single match). Physical training-center activity and its MoD/51st Army/Архангел connections confirmed via primary-source Telegram posts already in the local scraped archive (projectArchangel channel), newly archived as individual TGPOST_ text sources (s5372-s5381) rather than left as unsourced DB rows. Mask-branding lead from the 2026-08-04 graduation video resolved 2026-09-03 via a primary-source Telegram post from @arx_spn itself (s5392) confirming an active joint project with Гагаринг — see images[] and open_questions. «Архангел Легион» identified 2026-09-03 as @arkhangelfront ('Фонд Архангел «Легион»', s5393) — confirmed distinct from «Архангел Спецназа» @arx_spn (s5392); three separate Архангел brands now distinguished in this entity's record."
+  },
+  {
+    "slug": "ano-arkhangel",
+    "name_ru": "АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел»",
+    "name_latin": "ANO Voenno-tekhnicheskoy Podderzhki Zashchitnikov Otechestva i Patrioticheskogo Vospitaniya Naseleniya \"Arkhangel\" (also known as Фонд Архангел «Легион» / Archangel Legion Fund)",
+    "legal_form": "АНО",
+    "brand_ru": "Архангел Легион",
+    "brand_latin": null,
+    "inn": "2315233718",
+    "ogrn": "1242300005640",
+    "extra_ids": null,
+    "registered": "01.02.2024",
+    "address": "353917, Краснодарский край, г. Новороссийск, ул. Кутузовская, д. 117, помещ. 8",
+    "okved_code": "88.99",
+    "okved_label": "Предоставление прочих социальных услуг без обеспечения проживания",
+    "okved_mismatch": null,
+    "director": "Архангельский Геннадий Евгеньевич",
+    "director_history": [
+      {
+        "as_of": "2024-02-01",
+        "note": "в должности с регистрации (rusprofile.ru aggregator pull, not a primary EGRUL extract)",
+        "source_id": "s5394",
+        "value": "Архангельский Геннадий Евгеньевич"
+      }
+    ],
+    "founders": [
+      {
+        "inn_personal": "234503145734",
+        "name": "Ташматов Илья Сергеевич",
+        "source_id": "s5394"
+      },
+      {
+        "inn_personal": "615491317400",
+        "name": "Архангельский Геннадий Евгеньевич",
+        "source_id": "s5394"
+      }
+    ],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": null,
+    "tier_basis": "Not a UAV/defense manufacturer — a patriotic-education/veteran-support foundation (ОКВЭД 88.99). Relevance to this investigation is organizational: operates as «Архангел Легион» (Telegram @arkhangelfront, s5393), the brand already tied to ano-dpo-obrazovatelny-tsentr-gagaring's 51st Guards Combined Arms Army training-center relationship (a MoD-embedded UAV-operator training program co-run with Гагаринг). Not the same organization as «Архангел Спецназа» (@arx_spn, s5392) or the parked roymarket_archangel_adjacent_network entities — three separate «Архангел»-branded organizations now distinguished in this investigation.",
+    "cbst_tie": null,
+    "wb_overlap": "none_found",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "marketplace_listings": [],
+      "other": [],
+      "sites": [],
+      "telegram": [
+        {
+          "note": "22.8K subscribers at capture, s5393",
+          "url": "https://t.me/arkhangelfront"
+        }
+      ],
+      "vk": [],
+      "youtube": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s5394",
+        "text": "Identified via rusprofile.ru aggregator pull (2026-08-24 not yet confirmed against a primary EGRUL extract). Full ИНН/ОГРН extract not yet pulled — upgrade if this entity's role in the Гагаринг training-center relationship grows more central."
+      }
+    ],
+    "sources": [
+      "s5394",
+      "s5393"
+    ],
+    "confidence": "medium",
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "related_entities": [
+      {
+        "inn": "2310240630",
+        "relationship": "«Архангел Легион» co-runs this entity's 51st Guards Combined Arms Army UAV-operator training-center relationship, per that entity's own tier_basis.",
+        "slug": "ano-dpo-obrazovatelny-tsentr-gagaring",
+        "source_id": null
+      }
+    ],
+    "_corrected": "New entity, 2026-09-03: user identified «Архангел Легион» (already referenced via ano-dpo-obrazovatelny-tsentr-gagaring's tier_basis) as Telegram @arkhangelfront, and then supplied its rusprofile.ru legal-entity record (ИНН 2315233718, ОГРН 1242300005640) — full legal name matches @arkhangelfront's own channel bio verbatim, confirming this ИНН/ОГРН as the legal identity behind the brand."
   }
 ]
