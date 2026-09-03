@@ -26,7 +26,7 @@
 
 ## State-program participation
 
-- name_ru: Каталог продукции ГИСП — отрасль БАС; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.; as_of: 2026-09-03 [s5344]
+- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; name_ru: Каталог продукции ГИСП — отрасль БАС; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly. [s5344]
 
 ## Sanctions & screening
 
@@ -44,6 +44,7 @@
 
 ## Open questions
 
+- 2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found, no EGRUL-listed contact info. Leadership listed inconsistently across aggregator sources (Анисимов А.А. vs. a later "Яценко В." mention) -- not independently confirmed, flagged for verification. Note: this entity is directly named in ЦБСТ's own EU-20th-package sanctions post (see cbst_tie) alongside «Архангел», so relevance is confirmed even without a site.
 - GUR names "russian senator from the temporarily occupied Kherson region Konstantin Basyuk" as the Aero-Hit group's ultimate beneficiary — not yet independently verified or added as a person record here. [s0956]
 - GUR states Aero-Hit cooperates with Chinese manufacturer Autel Robotics on localizing Autel UAV production in Russia — a foreign-component/tech-transfer lead not yet independently corroborated. [s0956]
 

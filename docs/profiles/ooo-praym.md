@@ -51,6 +51,9 @@
 ## Open questions
 
 - 2026-08-24 OpenSanctions full-roster screening: OpenSanctions' name-similarity match for this entity was CHECKED and REJECTED — the designation record it returned (a different ООО «Прайм», ИНН/tax number 7704448137) does not match this entity's own ИНН. Recorded explicitly so this false lead is not mistaken for a real hit in a future pass.
+- ЦБСТ tie unverified — this entity surfaced via scripts/screen_rom.py (a securing-measures/tax-enforcement cross-check), not via any established ЦБСТ/РОЙ.МАРКЕТ link. Its 'manufacturer' tier came from prose extraction; confirm the actual basis before treating it as part of the network.
+- prime-radar.ru not yet archived as a primary source in data/sources/ — the brand/product identification above is sourced only to a live WebFetch (2026-08-22), not a captured document. Save a page capture before citing this anywhere formal.
+- Two active (uncancelled as of 2026-08-22) securing measures from 23.07.2026 on personal luxury vehicles (BMW X6, Mercedes-AMG GT) plus a June-2025 batch of 8 more (since cancelled via completed tax-penalty enforcement) covering more luxury vehicles AND one of the company's own ЕЖ-РМ-5 counter-drone units — a real financial-distress/scale-mismatch signal worth an EGRUL/БФО pull.
 
 ## Sources cited in this profile
 
