@@ -737,3 +737,38 @@ companies.json`) to check three angles:
   root, two different legal entities, worth checking if related). None of
   these are asserted as ЦБСТ-tied — they are unverified name-pattern leads
   only, parked here for a future triage pass, not the registry.
+
+## Tenth pass (2026-09-03): GISP parks/clusters layers — a real lead, one null
+
+Same "Атлас промышленности" map (see ninth pass), different layer: the user
+pasted a `.../sections/parks:2336/...` URL. `parks` is a virtual layer
+grouping several sub-layers — the actual data lives at
+`GET /gisip/orbismap/api/2.8/oms_gisip_docker/parks/layers/parks/objects/`
+(found via `list_network_requests`, same pattern as the companies layer).
+One unfiltered call returns all **532** industrial parks/technoparks —
+split by an `icon` field into `parks_ind_*`/`parks_tech_*` (industrial vs
+tech) × `acting`/`creating`/`planning` status (91+55+9 = **155
+technoparks** total). Archived as `s5349`
+(`GISP_20260903_atlas-parks-full-dump-532-parks.json`).
+
+Filtered to technoparks in the three core ЦБСТ regions (Краснодарский
+край / Ростовская / Белгородская): 6 hits, one worth flagging —
+**«Технопарк радиоэлектронной промышленности»**, Краснодарский край,
+status «Создается» (under construction), ОКВЭД 26 (computers/electronics/
+optics), coordinates (39.08772, 45.05721) — roughly 4.2km from Гагаринг's
+registered address, same city (Краснодар) but not colocated. No resident-
+company sublayer exists for parks (checked the full parks-layer-group
+listing — 26 layer codes, no `parks_items`/residents child layer the way
+`companies_items` exists for the prom companies layer), so **this is a
+regional-context fact, not an entity link** — nothing wired into
+`corrections_entities.json`, no claim that Гагаринг or any tracked entity
+is a resident. Worth revisiting once/if a resident list surfaces some
+other way (a press release, the park's own site).
+
+Also pulled the neighboring `clusters_gen_info` layer (industrial
+clusters, Minpromtorg register — 204 records, `s5348`,
+`GISP_20260903_atlas-clusters-full-dump-204-clusters.json`) on the same
+theory. Core-region hits: ВПКАМ (Ростов, ядерные/радиационные технологии),
+НПКСМ (Ростов, машиностроение), two Белгород clusters (pharma, children's
+goods) — **none radio-electronics/UAV-specialized**. Null result, logged
+for completeness, not pursued further.

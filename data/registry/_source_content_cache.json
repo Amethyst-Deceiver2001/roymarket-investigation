@@ -42194,5 +42194,21 @@
     "as_of_method": "manual",
     "sha256": "849badbc7b37483f8bdd7ccf99e1f3c2c6eef5e63709f2b4f84bb8d6e3daba06",
     "sample": "[\n {\n \"fullname\": \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \\\"АКВА МАРКЕТ+\\\"\",\n \"region_value\": \"Ростовская область\",\n \"ogrn\": \"1156181002350\",\n \"inn\": \"6102063554\",\n \"okved2main\": \"27.51\",\n \"industry_value\": \"Радиоэлектронная промышленность\",\n \"address_full\": \"347871, РОСТОВСКАЯ ОБЛАСТЬ, ГУКОВО Г., УЛ. КОЛЬЦЕВАЯ, Д. 132А\",\n \"site\": \"https://aqua-work.ru/\"\n },\n {\n \"fullname\": \"ОБЩЕСТВО С ОГРАНИЧЕН"
+  },
+  "GISP_20260903_atlas-clusters-full-dump-204-clusters.json": {
+    "type": "gisp_atlas_bulk_export",
+    "type_method": "manual",
+    "as_of": "2026-09-03",
+    "as_of_method": "manual",
+    "sha256": "99ef6be7c882d189f8c6014f8701329b8b29dd6c836016e3da53291d947e27e4",
+    "sample": "[{\"id\":1,\"fields\":{\"year_creation\":2014,\"number_participants\":65,\"number_employees\":4683,\"short_name\":\"Троицкий инновационный кластер\",\"subject_rf\":\"Москва\",\"key_specialization\":\"Новые материалы\",\"included_in_register_minpromtorg\":null,\"#year_creation\":\"2014\",\"#number_participants\":\"65\",\"#number_employees\":\"4683\"},\"geom\":{\"type\":\"Point\",\"coordinates\":[37.2963,55.4689]}},{\"id\":9,\"fields\":{\"year_cre"
+  },
+  "GISP_20260903_atlas-parks-full-dump-532-parks.json": {
+    "type": "gisp_atlas_bulk_export",
+    "type_method": "manual",
+    "as_of": "2026-09-03",
+    "as_of_method": "manual",
+    "sha256": "d06fe49f7c45a78ac1dae25b75be5b02609d25fcd4d9a36df2a461b0a265605e",
+    "sample": "[{\"id\":1,\"fields\":{\"icon\":\"parks_ind_acting.svg\",\"total_area\":1430.2,\"included_in_register_minpromtorg\":\"Да\",\"name\":\"Ворсино\",\"okved_2\":\"12 - Производство табачных изделий; 17 - Производство бумаги и бумажных изделий; 22 - Производство резиновых и пластмассовых изделий; 24 - Производство металлургическое; 26 - Производство компьютеров, электронных и оптических изделий; 31 - Производство мебели; 32"
   }
 }
