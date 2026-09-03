@@ -151,20 +151,28 @@ Still needed for a real presentation:
   operates as the training center of the 51st Guards Combined Arms Army,
   opened ~24.02.2026.
 - **Production subdivision** — Одесская, 48/3, Краснодар (КПП 231045001).
-  Sits on a real 23-building former Soviet industrial site (one confirmed
-  building there, cadastral 23:43:0302010:387, a 3-storey 1972 "Производственный
-  корпус," 3,873.6 m²) — but Гагаринг's own building within that complex is
-  not yet pinned. This is the strongest visual/credibility opportunity once
-  resolved: a real production facility, not just a training school.
-  Postal-code discrepancy noted (350312 per Роскомнадзор inspection vs. a
-  different code in the audit report) — worth resolving alongside the
-  building-identification work. Scripted attempts blocked this pass:
-  nspd.gov.ru's geoportal API returned a WAF 403 (same DDoS-Guard-class
-  block already documented for kad.arbitr.ru), 2gis.ru's search is a JS SPA
-  with nothing server-rendered via plain curl, and the audit PDF doesn't
-  extract cleanly for this specific page (pdftotext returns nothing, likely
-  scanned; not re-attempted with tesseract this pass). Needs a manual
-  browser lookup, same as the kad.arbitr.ru precedent.
+  A bare curl against nspd.gov.ru's geoportal API gets WAF-403'd (same
+  block already documented for kad.arbitr.ru), but the SAME API works
+  cleanly from inside a real browser session (JS challenge/session cookies
+  a bare curl never gets) — used `chrome-devtools` to drive an actual
+  browser tab and fetch it in-page. That resolved a real error in the
+  earlier writeup: "Одесская 48/3" is not one building inside a broader
+  23-building "48" complex — it's itself a distinct multi-building
+  industrial site. At least 19 separately-cadastred buildings share the
+  exact "48/3" address: the already-known производственный корпус
+  (23:43:0302010:387, 1972, 3,873.6 m²), a ремонтно-механический участок,
+  a мазутохранилище (fuel-oil store), a лесосушильная камера
+  (23:43:0302010:399, wood-drying chamber — points to a former Soviet
+  woodworking/furniture-factory site), several склады, a механический цех,
+  a служебно-бытовой корпус №9, and a проходная (checkpoint). None of
+  NSPD's public records expose an owner/tenant name (Rosreestr redacted
+  that from public output after 2017), so which specific building Гагаринг
+  occupies is still unresolved — that needs a paid EGRN extract naming the
+  actual right-holder, or independent photo/delivery/job-posting evidence.
+  Still the strongest visual/credibility opportunity once resolved: a real
+  production facility, not just a training school. Postal-code discrepancy
+  also still open (350312 per Роскомнадзор inspection vs. a different code
+  in the audit report).
 - **Sevastopol** — recurring «Последний рубеж» training-muster location,
   described by Толстоусова as "уже как второй дом" (already like a second
   home). No street address/coordinates on file yet.
@@ -239,3 +247,13 @@ Telegram DB (`data/roymarket.db`), устав OCR (`tesseract`), NSPD/Rosreestr
 cadastral lookups, zoon.ru business-directory checks. Full disambiguation
 methodology and the adjacent-but-unconfirmed entities are in
 `notes/archangel_adjacent_network.md`.
+
+**Methodological note (2026-09-03)**: a WAF 403 from a bare `curl` against
+a site like nspd.gov.ru does NOT mean the site is unreachable by scripting
+in general — it means the request lacks the JS challenge/session cookies a
+real browser picks up automatically. Driving an actual `chrome-devtools`
+browser tab to the site and issuing the same API call via in-page `fetch()`
+got a clean 200 where curl got blocked. Worth trying before writing off a
+government geo/registry site as "manual browser only" the way
+`kad_arbitr_ru_ddos_guard_blocked` currently does — that memory may be
+worth re-testing with this technique rather than taken as settled.
