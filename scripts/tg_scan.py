@@ -23,6 +23,23 @@ from tg import client as tg_client  # noqa: E402
 from tg import db, scraper  # noqa: E402
 
 
+def _normalize_ref(ref: str) -> str:
+    """Reduce a channel reference to a bare handle/invite-hash for matching
+    --only against config/channels.txt regardless of which form either side
+    is written in (@handle, t.me/handle, a full https://t.me/+HASH invite
+    link, or just the bare hash). Without this, --only +HASH silently
+    matched nothing against a channels.txt line stored as a full URL —
+    tg_scan.py would report success while quietly skipping that channel."""
+    ref = ref.strip()
+    if ref.startswith("https://") or ref.startswith("http://"):
+        ref = ref.split("://", 1)[1]
+    if ref.startswith("t.me/"):
+        ref = ref.split("t.me/", 1)[1]
+    if ref.startswith("joinchat/"):
+        ref = ref.split("joinchat/", 1)[1]
+    return ref.lstrip("@+").lower()
+
+
 def _load_channels(only: list[str] | None) -> list[str]:
     from tg import config
     if not config.CHANNELS_FILE.exists():
@@ -30,8 +47,8 @@ def _load_channels(only: list[str] | None) -> list[str]:
     lines = config.CHANNELS_FILE.read_text(encoding="utf-8").splitlines()
     channels = [ln.strip() for ln in lines if ln.strip() and not ln.startswith("#")]
     if only:
-        wanted = {ref.lstrip("@").lower() for ref in only}
-        channels = [c for c in channels if c.lstrip("@").lower() in wanted]
+        wanted = {_normalize_ref(ref) for ref in only}
+        channels = [c for c in channels if _normalize_ref(c) in wanted]
     return channels
 
 
