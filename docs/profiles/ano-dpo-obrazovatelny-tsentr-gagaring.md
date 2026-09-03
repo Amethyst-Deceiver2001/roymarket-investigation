@@ -36,7 +36,7 @@
 
 ## Images
 
-- ![Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading approximately «УДАРНАЯ СПЕЦНАЗ...» and text visually resembling «АРХАНГЕЛ» (not OCR-confirmed).](../images/gagaring-training-graduation-mask-crop.png) — Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading approximately «УДАРНАЯ СПЕЦНАЗ...» and text visually resembling «АРХАНГЕЛ» (not OCR-confirmed). [s5382]
+- ![Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading «УДАРНАЯ СПЕЦНАЗ...» and «АРХАНГЕЛ». RESOLVED (2026-09-03): this is the branding of «Архангел Спецназа» (@arx_spn, a 1.02M-subscriber VDV servicemembers' Telegram channel), which announced an active joint veteran drone-retraining project with Гагаринг's own БПЛА lab on 2026-08-10 (s5392) — confirms the mask branding directly, not a visual guess. NOT yet confirmed as the same brand as the «Архангел Легион»/«проект Архангел» already tied to this entity's own 51st Army training-center relationship (see this entity's tier_basis) — flagged separately below.](../images/gagaring-training-graduation-mask-crop.png) — Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading «УДАРНАЯ СПЕЦНАЗ...» and «АРХАНГЕЛ». RESOLVED (2026-09-03): this is the branding of «Архангел Спецназа» (@arx_spn, a 1.02M-subscriber VDV servicemembers' Telegram channel), which announced an active joint veteran drone-retraining project with Гагаринг's own БПЛА lab on 2026-08-10 (s5392) — confirms the mask branding directly, not a visual guess. NOT yet confirmed as the same brand as the «Архангел Легион»/«проект Архангел» already tied to this entity's own 51st Army training-center relationship (see this entity's tier_basis) — flagged separately below. [s5392]
 
 ## Principals & persons of interest
 
@@ -46,6 +46,7 @@ _No named principals linked to this entity yet._
 
 - RESOLVED (2026-09-03): the ИСЛОД (Rosobrnadzor) licence registry (Л035-01218-23/02689789, issued 17.07.2025, бессрочная/indefinite, issuing authority Министерство образования, науки и молодежной политики Краснодарского края) states the licensed training-activity site as ул. им. Цезаря Куникова, 24, корпус №2, помещ. 44-46, г. Краснодар (s5385) — an official government record, not a Telegram claim. This is a two-storey commercial annex at the base of a residential tower per a pre-existing (previously unsourced) docs/index.html photo caption. The «школа «Архангел» в Туапсе» mention (s5380, 01.03.2026) is very likely a SEPARATE facility/event the same team visited on a trip, not this entity's own licensed training site — the Krasnodar/Куникова address is now the primary-sourced answer to "where is Гагаринг's training center", and the 51st Army/Архангел connection (s5372, s5374-s5379) describes an operational/personnel relationship, not necessarily a shared physical address. [s5378]
 - Full EGRUL extract not yet pulled (only the egrul.nalog.ru open-API summary result, s5371) — a proper extract would give the registered legal address, which may itself only be a Krasnodar mailbox rather than the training site, per the established Гагаринг address pattern.
+- «Архангел Спецназа» (@arx_spn, 1.02M-subscriber VDV channel) announced 2026-08-10 an active joint veteran drone-retraining/employment project with Гагаринг's БПЛА lab, pilot launch in Краснодарский край — resolves the graduation-mask branding lead (see images[]) but does NOT establish whether @arx_spn is the same «Архангел» brand as the «Архангел Легион»/«проект Архангел» already tied to this entity's 51st Army training-center relationship, or a separate collaboration under the same generic name. Not reconciled; treat as two distinct Архангел ties until confirmed otherwise. [s5392]
 
 ## Sources cited in this profile
 
@@ -54,9 +55,9 @@ _No named principals linked to this entity yet._
 | s5333 | Fedresurs | Fedresurs (FEDRESURS_939B297414FA48A4A4B3497315AF3659_20260903_gagaring-audit-report-2025fy-full.pdf) | 2026-09-03 | — |
 | s5371 | EGRUL extract | EGRUL extract (EGRUL_2310240630_20260903_open-api-search-result.json) | 2026-09-03 | 2026-09-03 |
 | s5378 | Tgpost | Tgpost (TGPOST_projectArchangel_9613_20260224.txt) | 2026-02-24 | 2026-02-24 |
-| s5382 | Youtube | Youtube (YOUTUBE_20260804_gagaring-vypusk-shkoly-fpv-mask-crop.png) | 2026-08-04 | 2026-08-04 |
 | s5385 | Islod | Islod (ISLOD_2310240630_20260903_licence-branch-detail.html) | 2026-09-03 | 2025-07-17 |
 | s5386 | Islod | Islod (ISLOD_2310240630_20260903_licence-record.html) | 2026-09-03 | 2025-07-17 |
+| s5392 | Tgpost | Tgpost (TGPOST_20260810_arx-spn-30595-arkhangel-spetsnaza-gagaring-joint-project.txt) | 2026-08-10 | 2026-08-10 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

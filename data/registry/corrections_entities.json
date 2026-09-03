@@ -1526,9 +1526,9 @@
       ],
       "images": [
         {
-          "caption": "Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading approximately «УДАРНАЯ СПЕЦНАЗ...» and text visually resembling «АРХАНГЕЛ» (not OCR-confirmed).",
+          "caption": "Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading «УДАРНАЯ СПЕЦНАЗ...» and «АРХАНГЕЛ». RESOLVED (2026-09-03): this is the branding of «Архангел Спецназа» (@arx_spn, a 1.02M-subscriber VDV servicemembers' Telegram channel), which announced an active joint veteran drone-retraining project with Гагаринг's own БПЛА lab on 2026-08-10 (s5392) — confirms the mask branding directly, not a visual guess. NOT yet confirmed as the same brand as the «Архангел Легион»/«проект Архангел» already tied to this entity's own 51st Army training-center relationship (see this entity's tier_basis) — flagged separately below.",
           "path": "images/gagaring-training-graduation-mask-crop.png",
-          "source_id": "s5382"
+          "source_id": "s5392"
         }
       ],
       "inn": "2310240630",
@@ -1544,6 +1544,10 @@
         {
           "source_id": null,
           "text": "Full EGRUL extract not yet pulled (only the egrul.nalog.ru open-API summary result, s5371) — a proper extract would give the registered legal address, which may itself only be a Krasnodar mailbox rather than the training site, per the established Гагаринг address pattern."
+        },
+        {
+          "source_id": "s5392",
+          "text": "«Архангел Спецназа» (@arx_spn, 1.02M-subscriber VDV channel) announced 2026-08-10 an active joint veteran drone-retraining/employment project with Гагаринг's БПЛА lab, pilot launch in Краснодарский край — resolves the graduation-mask branding lead (see images[]) but does NOT establish whether @arx_spn is the same «Архангел» brand as the «Архангел Легион»/«проект Архангел» already tied to this entity's 51st Army training-center relationship, or a separate collaboration under the same generic name. Not reconciled; treat as two distinct Архангел ties until confirmed otherwise."
         }
       ],
       "registered": "26.05.2025",
@@ -1570,7 +1574,7 @@
       ],
       "tier": null,
       "tier_basis": "Separate legal entity co-founded by ООО «Гагаринг» (its GD Барашков А.С. personally hands diplomas at its graduations, per s5372) to run UAV-operator training. Physically operates as the training center of the 51-я Гвардейская Общевойсковая Армия (51st Guards Combined Arms Army), opened ~24.02.2026, run jointly with «Архангел Легион» fund and «проект Архангел» (see [[roymarket_archangel_adjacent_network]] memory) — a direct MoD-embedded military training relationship, not a civilian trade school. Legal registration is a Краснодар mailbox address (КПП 231001001); the actual training site is most likely Туапсе, Краснодарский край, per s5380 (\"школа «Архангел» в Туапсе\", visited by the same team in the same period) — NOT YET independently confirmed as the same physical facility as the 51st Army training center, flagged as an open question.",
-      "why": "New entity, established 2026-09-03 during a follow-up on Гагаринг's АНО ДПО founder relationship (already flagged in its own state_programs/subsidiaries per s5333). ИНН/ОГРН/director confirmed via egrul.nalog.ru open API (s5371, exact single match). Physical training-center activity and its MoD/51st Army/Архангел connections confirmed via primary-source Telegram posts already in the local scraped archive (projectArchangel channel), newly archived as individual TGPOST_ text sources (s5372-s5381) rather than left as unsourced DB rows."
+      "why": "New entity, established 2026-09-03 during a follow-up on Гагаринг's АНО ДПО founder relationship (already flagged in its own state_programs/subsidiaries per s5333). ИНН/ОГРН/director confirmed via egrul.nalog.ru open API (s5371, exact single match). Physical training-center activity and its MoD/51st Army/Архангел connections confirmed via primary-source Telegram posts already in the local scraped archive (projectArchangel channel), newly archived as individual TGPOST_ text sources (s5372-s5381) rather than left as unsourced DB rows. Mask-branding lead from the 2026-08-04 graduation video resolved 2026-09-03 via a primary-source Telegram post from @arx_spn itself (s5392) confirming an active joint project with Гагаринг — see images[] and open_questions."
     }
   ],
   "entities": {
