@@ -34923,8 +34923,8 @@
       },
       {
         "name": "АНО ДПО «Образовательный центр Гагаринг»",
-        "slug": null,
-        "inn": null,
+        "slug": "ano-dpo-obrazovatelny-tsentr-gagaring",
+        "inn": "2310240630",
         "role": "учредитель",
         "as_of": "2025-12-31",
         "source_id": "s5333"
@@ -43012,5 +43012,105 @@
     "_corrected": [
       "2026-09-03: found in ООО «Гагаринг»'s FY2025 audit report (fedresurs.ru, s5333) related-party-transactions note. Independently confirmed via fedresurs.ru company search and a live egrul.nalog.ru lookup (ИНН/ОГРН/director match exact). Given the direct aircraft-production OKVED, Tula location, and Гагаринг's substantial loan to it, this is a high-priority entity for further deep-dive."
     ]
+  },
+  {
+    "slug": "ano-dpo-obrazovatelny-tsentr-gagaring",
+    "name_ru": "АНО ДПО «Образовательный центр Гагаринг»",
+    "name_latin": "ANO DPO Obrazovatelny Tsentr Gagaring (Gagaring Educational Center, autonomous non-profit supplementary-professional-education org)",
+    "legal_form": "АНО",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "2310240630",
+    "ogrn": "1252300026208",
+    "extra_ids": null,
+    "registered": "26.05.2025",
+    "address": null,
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "Безроднова Анна Сергеевна",
+    "director_history": [
+      {
+        "value": "Безроднова Анна Сергеевна",
+        "as_of": "2026-09-03",
+        "source_id": "s5371",
+        "note": "per egrul.nalog.ru open-API search result"
+      }
+    ],
+    "founders": [],
+    "founders_history": [
+      {
+        "value": "ООО «Гагаринг» (ИНН 2312321660) — учредитель, per Гагаринг's own FY2025 audit report",
+        "as_of": "2025-12-31",
+        "source_id": "s5333"
+      }
+    ],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": null,
+    "tier_basis": "Separate legal entity co-founded by ООО «Гагаринг» (its GD Барашков А.С. personally hands diplomas at its graduations, per s5372) to run UAV-operator training. Physically operates as the training center of the 51-я Гвардейская Общевойсковая Армия (51st Guards Combined Arms Army), opened ~24.02.2026, run jointly with «Архангел Легион» fund and «проект Архангел» (see [[roymarket_archangel_adjacent_network]] memory) — a direct MoD-embedded military training relationship, not a civilian trade school. Legal registration is a Краснодар mailbox address (КПП 231001001); the actual training site is most likely Туапсе, Краснодарский край, per s5380 (\"школа «Архангел» в Туапсе\", visited by the same team in the same period) — NOT YET independently confirmed as the same physical facility as the 51st Army training center, flagged as an open question.",
+    "cbst_tie": "confirmed",
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s5378",
+        "text": "Physical location of the training center not yet confirmed by an independent source (cadastral/NSPD, local press, or a geolocated photo). s5378 (24.02.2026 opening post) names no address; s5380 (01.03.2026) separately names \"школа «Архангел» в Туапсе\" visited by the same team days later — plausibly the same facility, not confirmed. s5613/s5597/s5605/s5606 (Feb 2026 posts) establish it is explicitly the training center of the 51-я Гвардейская Общевойсковая Армия, opened with «Архангел Легион» fund, «проект Архангел», КБ «Ветер» and «Рубикон» present at a 21.02.2026 coordination meeting (s5375) — none of those organizations besides Гагаринг are yet profiled in this registry."
+      },
+      {
+        "source_id": null,
+        "text": "Full EGRUL extract not yet pulled (only the egrul.nalog.ru open-API summary result, s5371) — a proper extract would give the registered legal address, which may itself only be a Krasnodar mailbox rather than the training site, per the established Гагаринг address pattern."
+      }
+    ],
+    "sources": [
+      "s5371",
+      "s5333",
+      "s5372",
+      "s5373",
+      "s5374",
+      "s5375",
+      "s5376",
+      "s5377",
+      "s5378",
+      "s5379",
+      "s5380",
+      "s5381"
+    ],
+    "confidence": "medium",
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": "New entity, established 2026-09-03 during a follow-up on Гагаринг's АНО ДПО founder relationship (already flagged in its own state_programs/subsidiaries per s5333). ИНН/ОГРН/director confirmed via egrul.nalog.ru open API (s5371, exact single match). Physical training-center activity and its MoD/51st Army/Архангел connections confirmed via primary-source Telegram posts already in the local scraped archive (projectArchangel channel), newly archived as individual TGPOST_ text sources (s5372-s5381) rather than left as unsourced DB rows."
   }
 ]
