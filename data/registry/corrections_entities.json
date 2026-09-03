@@ -1620,8 +1620,12 @@
       "okved_label": "Предоставление прочих социальных услуг без обеспечения проживания",
       "open_questions": [
         {
-          "source_id": "s5394",
-          "text": "Identified via rusprofile.ru aggregator pull (2026-08-24 not yet confirmed against a primary EGRUL extract). Full ИНН/ОГРН extract not yet pulled — upgrade if this entity's role in the Гагаринг training-center relationship grows more central."
+          "source_id": "s5409",
+          "text": "A second, independent egrul.nalog.ru open-API lookup (2026-09-03, s5409) confirms director «Архангельский Геннадий Евгеньевич» and КПП 231501001 — corroborates the earlier rusprofile.ru pull (s5394) on a second, government-sourced channel. Still no full signed EGRUL extract (PDF) pulled — both sources so far are open-API summaries, not the full document. Upgrade if this entity's role in the Гагаринг training-center relationship grows more central."
+        },
+        {
+          "source_id": null,
+          "text": "ARCHANGEL-FAMILY DISAMBIGUATION STATUS (2026-09-03): at least 6 distinct \"Архангел\"-branded organizations are now on record. (1) THIS entity (Архангел Легион, ИНН 2315233718) — confirmed tied to Гагаринг's 51st Army training-center relationship. (2) «Архангел Спецназа» (@arx_spn, 1.02M subs, the mask-branding org with a separate joint drone-retraining project with Гагаринг) — checko.ru name search returned only noise (too many unrelated \"Архангел\"-named companies to disambiguate by name alone) and the channel's own t.me/s/ page carries no external link; NO legal entity identified for it in this pass. (3) «проект Архангел» / Филиппов Михаил Геннадьевич — myrotvorets.center (Cloudflare-blocked to scripts, confirmed again this pass) could not be checked; still only parked in memory (roymarket_archangel_adjacent_network), relationship to (1)/(2) unresolved. (4) ooo-arkhangel (EU-sanctioned ЦБСТ resident, Moscow, ИНН 9714079108, director Шатракова А.А.) — already confirmed unrelated to (1)-(3) in its own record. (5) ooo-arkhangel-zaporizhzhie (ИНН 9500026652, Мелитополь/occupied Zaporizhzhia, a UAV-mechanic TRAINING operator, not a hardware maker despite manufacturer-coded OKVED) — now a full entity record; no tie found to (1)-(4). (6) ooo-arkhangel-tsentr (ИНН 5032379630, «Архангел-ЦЕНТР», Odintsovo — note the real legal name has a -ЦЕНТР suffix, correcting the earlier parked memory's assumption of a bare \"Архангел\") — only a stub record (single open-API lookup), Wagner-branding claim from the parked memory NOT yet re-verified against this specific ИНН. Net: the name \"Архангел\" is being independently reused by at least 4 unrelated legal entities plus 2 informal Telegram brands in this space — a strong instance of the generic-patriotic-brand-name collision pattern documented elsewhere in this project."
         }
       ],
       "patents": [],
@@ -1660,6 +1664,170 @@
         "youtube": []
       },
       "why": "New entity, 2026-09-03: user identified «Архангел Легион» (already referenced via ano-dpo-obrazovatelny-tsentr-gagaring's tier_basis) as Telegram @arkhangelfront, and then supplied its rusprofile.ru legal-entity record (ИНН 2315233718, ОГРН 1242300005640) — full legal name matches @arkhangelfront's own channel bio verbatim, confirming this ИНН/ОГРН as the legal identity behind the brand."
+    },
+    {
+      "slug": "ooo-arkhangel-zaporizhzhie",
+      "inn": "9500026652",
+      "ogrn": "1249500004181",
+      "kpp": "900101001",
+      "legal_form": "ООО",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"",
+      "name_latin": "OOO \"Arkhangel\" (Zaporizhzhia)",
+      "brand_ru": "Архангел",
+      "registered": "2024-08-22",
+      "address": "272313, Запорожская область, г.о. Мелитополь, г. Мелитополь, ул. Гоголя, д. 91/1",
+      "address_history": [
+        {
+          "value": "275502, Херсонская область, м.о. Генический, г. Геническ, с-к Портовый, дом 6, помещение 14",
+          "as_of": "2025-12-30",
+          "source_id": "s1166",
+          "note": "Address on file in the Rosobrnadzor licence register at time of licensing (09.10.2024) — different from the registered legal address, an operational/training-site address in occupied Kherson oblast."
+        },
+        {
+          "value": "272313, Запорожская область, г.о. Мелитополь, г. Мелитополь, ул. Гоголя, д. 91/1",
+          "as_of": "2026-08-18",
+          "source_id": "s0229",
+          "note": "Registered legal address per EGRUL extract."
+        }
+      ],
+      "okved_code": "30.30.6",
+      "okved_label": "Производство беспилотных авиационных систем",
+      "director": "Тимофеев Владимир Сергеевич",
+      "director_history": [
+        {
+          "value": "Тимофеев Владимир Сергеевич",
+          "as_of": "2025-04-11",
+          "source_id": "s0229",
+          "note": "ИНН 343704095632, ГРН 2259500087086."
+        }
+      ],
+      "founders": [
+        {
+          "name": "Кусумов Вахид Абдулович",
+          "inn_personal": "202902196209",
+          "share_pct": 100,
+          "source_id": "s0229"
+        }
+      ],
+      "founders_history": [
+        {
+          "value": "Кусумов Вахид Абдулович (100%)",
+          "as_of": "2025-03-10",
+          "source_id": "s0229",
+          "note": "ГРН 2259500081751. Nominal share value ₽10,000 of ₽10,000 charter capital."
+        }
+      ],
+      "charter_capital": 10000,
+      "tier": "manufacturer",
+      "tier_basis": "UAV-mechanic training operator: holds a Rosobrnadzor licence (№ Л035-00115-95/01431042, issued 09.10.2024) for professional training in UAV technical maintenance (\"Механик авиационный по технической эксплуатации беспилотных авиационных систем\"). Registered and licensed in Russian-occupied Zaporizhzhia/Kherson oblast territory of Ukraine. FY2025 БФО filing shows all revenue (₽55.77M) tagged \"Образовательные услуги\" (educational services) — confirms training, not hardware manufacturing, is the actual business. One of at least 6 distinct \"Архангел\"-branded organizations identified in this investigation; disambiguated from ano-arkhangel (Архангел Легион, Новороссийск, ИНН 2315233718, tied to Гагаринг's training center) and ooo-arkhangel (EU-sanctioned ЦБСТ resident, Moscow, ИНН 9714079108) — no confirmed tie to either found in this pass.",
+      "cbst_tie": {
+        "claim": null,
+        "evidence": null,
+        "source_id": null,
+        "confidence": "not_established"
+      },
+      "financials": [
+        {
+          "year": 2024,
+          "revenue": 12959000,
+          "profit": 5497000,
+          "source_id": "s0380",
+          "note": "БФО filing, thousands of RUB in original (12,959 / 5,497), converted to whole rubles here."
+        },
+        {
+          "year": 2025,
+          "revenue": 55770000,
+          "profit": null,
+          "source_id": "s0381",
+          "note": "БФО filing (revenue only extracted this pass — full P&L not read to bottom line); thousands of RUB in original (55,770), converted to whole rubles here."
+        }
+      ],
+      "state_programs": [],
+      "government_contracts": [],
+      "workforce_history": [],
+      "images": [],
+      "web": {
+        "telegram": [
+          {
+            "handle": "projectArchangel",
+            "source_id": "s5378",
+            "note": "21.3K-subscriber channel per earlier survey; also used for the 51st Army recruitment-contact posts."
+          }
+        ]
+      },
+      "open_questions": [
+        {
+          "source_id": null,
+          "text": "No confirmed tie established yet to any of the other 5 \"Архангел\"-branded organizations in this investigation (Архангел Легион, Архангел Спецназа, проект Архангел, EU-sanctioned ooo-arkhangel, Архангел-Центр/Odintsovo) — worth re-checking if any of them surface a direct connection (shared personnel, shared address, cross-posted content) later."
+        },
+        {
+          "source_id": null,
+          "text": "FY2025 БФО filing's full profit/loss figure and balance sheet not fully extracted this pass — only top-line revenue read. A closer БФО read would give the same completeness as ooo-gagaring's own financials[] entries."
+        },
+        {
+          "source_id": "s1166",
+          "text": "Licensed training-site address (Геническ, Херсонская область) is in Russian-occupied Ukrainian territory under a Russian-issued licence — the same 'illegally registered/licensed in occupied Ukraine' pattern already documented for Ushkuynik's ООО «Беспилотные технологические решения — Донецк» (see smolin_source_catalogue.md / ooo-btr-donetsk in the Ushkuynik network)."
+        }
+      ],
+      "sources": [
+        "s0229",
+        "s1166",
+        "s1167",
+        "s0380",
+        "s0381"
+      ],
+      "why": [
+        "2026-09-03: user requested the same wide-net rigor applied to Ushkuynik be applied to Гагаринг's network — this entity was one of 6 distinct 'Архангел'-branded organizations flagged by the registry survey as needing disambiguation. Promoted from bare sources/notes to a full entity record using already-archived EGRUL extract (s0229), Rosobrnadzor licence (s1166) and qualification-standard (s1167) sources, plus a fresh БФО read this session."
+      ],
+      "_verified": false,
+      "confidence": "doc"
+    },
+    {
+      "slug": "ooo-arkhangel-tsentr",
+      "inn": "5032379630",
+      "ogrn": "1245000058489",
+      "kpp": "503201001",
+      "legal_form": "ООО",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ-ЦЕНТР\"",
+      "name_latin": "OOO \"Arkhangel-Tsentr\" (Odintsovo)",
+      "brand_ru": "Архангел-Центр",
+      "registered": "2024-05-17",
+      "address": "Московская область (Odintsovo district per prior parked memory — exact address not yet pulled)",
+      "director": "Закелов Александр Александрович",
+      "director_history": [
+        {
+          "value": "Закелов Александр Александрович",
+          "as_of": "2026-09-03",
+          "source_id": "s5410",
+          "note": "egrul.nalog.ru open-API summary result — full extract not yet pulled."
+        }
+      ],
+      "tier": "adjacent",
+      "tier_basis": "Sixth distinct \"Архангел\"-branded organization surfaced in this investigation. Legal name is actually \"Архангел-ЦЕНТР\", not bare \"Архангел\" as the earlier parked memory (roymarket_archangel_adjacent_network) assumed — a real, useful disambiguation. Odintsovo/Wagner-branding claim from the earlier parked memory NOT yet re-verified against this specific legal entity; only a bare open-API director/registration lookup has been done this pass, no EGRUL extract, no БФО, no source corroborating the Wagner-branding claim specifically for THIS ИНН. Kept at tier 'adjacent' (no confirmed ЦБСТ/Гагаринг/Архангел-family tie) pending a fuller pull.",
+      "cbst_tie": {
+        "claim": null,
+        "evidence": null,
+        "source_id": null,
+        "confidence": "not_established"
+      },
+      "open_questions": [
+        {
+          "source_id": null,
+          "text": "Only an egrul.nalog.ru open-API summary pulled so far (director name, registration date, region) — no full EGRUL extract, no founder info, no address beyond 'Московская область', no БФО, no corroboration of the earlier parked memory's 'Wagner-branded' characterization for this specific entity. Needs a proper EGRUL extract pull and a check of whether the Wagner-branding claim actually applies to this ИНН or to a different, unrelated 'Архангел' entity that was conflated with it."
+        },
+        {
+          "source_id": null,
+          "text": "No confirmed tie established to any of the other 5 'Архангел'-branded organizations in this investigation."
+        }
+      ],
+      "sources": [
+        "s5410"
+      ],
+      "why": [
+        "2026-09-03: user requested the same wide-net rigor applied to Ushkuynik be applied to Гагаринг's network — surfaced as one of 6 distinct 'Архангел'-branded organizations needing disambiguation. Given only a stub record here (single open-API lookup) since deeper primary sources aren't yet on file — flagged as thin/needs more work rather than promoted to full confidence."
+      ],
+      "_verified": false,
+      "confidence": "open"
     }
   ],
   "entities": {
