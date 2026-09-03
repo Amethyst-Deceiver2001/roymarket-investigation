@@ -45,10 +45,24 @@ CREATE TABLE IF NOT EXISTS tg_posts (
     fwd_channel_username TEXT,
     fwd_channel_title TEXT,
     fwd_msg_id      INTEGER,
-    fwd_date        TEXT
+    fwd_date        TEXT,
+    media_type      TEXT,
+    media_json      TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_posts_channel ON tg_posts(channel_id, msg_id);
 """
+
+# media_type/media_json were added after the original schema shipped — ALTER
+# TABLE is needed for any pre-existing data/roymarket.db, since CREATE TABLE
+# IF NOT EXISTS is a no-op on a table that already exists without them.
+_MEDIA_COLUMNS = ("media_type", "media_json")
+
+
+def _ensure_media_columns(conn: sqlite3.Connection) -> None:
+    existing = {row["name"] for row in conn.execute("PRAGMA table_info(tg_posts)")}
+    for col in _MEDIA_COLUMNS:
+        if col not in existing:
+            conn.execute(f"ALTER TABLE tg_posts ADD COLUMN {col} TEXT")
 
 
 def connect() -> sqlite3.Connection:
@@ -56,6 +70,7 @@ def connect() -> sqlite3.Connection:
     conn = sqlite3.connect(config.DB_PATH)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
+    _ensure_media_columns(conn)
     return conn
 
 
@@ -83,17 +98,20 @@ def add_post(conn: sqlite3.Connection, post: dict[str, Any]) -> None:
         """INSERT INTO tg_posts (
              id, channel_id, msg_id, date, text, views, forwards, links,
              edited_date, first_seen, is_forward, fwd_channel_id,
-             fwd_channel_username, fwd_channel_title, fwd_msg_id, fwd_date
-           ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), ?, ?, ?, ?, ?, ?)
+             fwd_channel_username, fwd_channel_title, fwd_msg_id, fwd_date,
+             media_type, media_json
+           ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), ?, ?, ?, ?, ?, ?, ?, ?)
            ON CONFLICT(id) DO UPDATE SET
              text=excluded.text, views=excluded.views, forwards=excluded.forwards,
-             links=excluded.links, edited_date=excluded.edited_date""",
+             links=excluded.links, edited_date=excluded.edited_date,
+             media_type=excluded.media_type, media_json=excluded.media_json""",
         (
             post_id, post["channel_id"], post["msg_id"], post["date"], post["text"],
             post.get("views"), post.get("forwards"), post.get("links"),
             post.get("edited_date"), int(post.get("is_forward", False)),
             post.get("fwd_channel_id"), post.get("fwd_channel_username"),
             post.get("fwd_channel_title"), post.get("fwd_msg_id"), post.get("fwd_date"),
+            post.get("media_type"), post.get("media_json"),
         ),
     )
 

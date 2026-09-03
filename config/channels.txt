@@ -59,3 +59,11 @@
 # on the site/catalog yet, checking for any in-channel mentions.
 @Rus_Piranha
 @piranhafpv
+# Архангел forum channel (forum-topic supergroup — plain scrape covers every
+# sub-forum, since forum topics share one channel-wide message-id space in
+# Telegram's data model; no per-topic looping needed). Requested 2026-09-03.
+@Archangel_Forum
+# Архангел members-only chat, invite-link only (no username) — user is
+# already a member. scraper.resolve_channel() now handles t.me/+HASH invite
+# links via CheckChatInviteRequest, added 2026-09-03 specifically for this.
+https://t.me/+7GbNlS1SJI83ZmQy

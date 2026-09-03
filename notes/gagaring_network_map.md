@@ -1,144 +1,219 @@
-# Гагаринг network map — the "Архангел" collision problem, resolved
+# Гагаринг network map — Гагаринг and its own network only
 
-Built 2026-09-03 in response to the user's request to apply the same
-wide-net rigor used on the Ushkuynik network (via smolin.info's dossiers,
-see `notes/smolin_source_catalogue.md`) to Гагаринг: explore all
-connections, all linked companies/POI, and identify what other sources/
-methods to bring to bear. Unlike the Ushkuynik push, no single dossier
-source did the work here — this was built from `egrul.nalog.ru`, GUR,
-OpenSanctions, checko.ru, myrotvorets.center, the local Telegram DB, two
-founding-устав OCR passes, and one already-archived-but-unmined OSINT Bees
-dossier.
+Scope tightened 2026-09-03 at the user's direction: this document is
+**Гагаринг and its confirmed network only** — its own subsidiaries and
+industry-association co-founders, the people who direct/found/instruct/
+recruit for them, and Барашков's personal friends/media appearances where
+sourced. Entities and people that turned up during the same wide-net push
+but only share a brand name or an unconfirmed adjacency (the other four
+"Архангел"-branded orgs, «проект Архангел»/Филиппов) have been moved to
+`notes/archangel_adjacent_network.md` — real leads, kept for later
+research, but not part of Гагаринг's own network until a real tie is
+confirmed.
 
-## The core finding: "Архангел" is reused by at least 6 unrelated organizations
+**Purpose**: this is the working draft for a future company-profile page
+(`docs/profiles/ooo-gagaring.html`, via `scripts/build_company_profile.py`)
+and a standalone presentation on Барашков personally. Sections below are
+organized to feed that build directly — entities/people first (the factual
+skeleton), then visuals/locations/products/quotes (the presentation
+material) — rather than as a narrative-only writeup.
 
-A recurring failure mode in this investigation (see `roymarket_fuzzy_dedup`,
-`roymarket_archangel_adjacent_network`) is generic patriotic brand names
-getting reused independently across the Russian military-industrial/
-training space. "Архангел" ("Archangel") is the worst case found so far:
+## Entities — Гагаринг's own network
 
-| # | Name | Legal entity | Status | Tie to Гагаринг |
-|---|------|-------------|--------|------------------|
-| 1 | Архангел Легион | `ano-arkhangel`, ИНН 2315233718, Новороссийск | Confirmed, EGRUL-corroborated | **CONFIRMED** — co-runs Гагаринг's 51st Guards Combined Arms Army training-center relationship |
-| 2 | Архангел Спецназа | @arx_spn (1.02M subs) — no legal entity found | Unresolved | **CONFIRMED (informal)** — joint drone-retraining project with Гагаринг, mask branding on a Гагаринг graduation video |
-| 3 | проект Архангел | Филиппов М.Г. (coordinator) — legal-entity status unclear | Parked/adjacent | Not established |
-| 4 | ООО «Архангел» (Moscow) | `ooo-arkhangel`, ИНН 9714079108 | EU-sanctioned ЦБСТ resident | **Confirmed unrelated** |
-| 5 | ООО «Архангел» (Мелитополь) | `ooo-arkhangel-zaporizhzhie`, ИНН 9500026652 | Full entity record; GUR: 20-city training network | Not established |
-| 6 | ООО «Архангел-Центр» (Одинцово) | `ooo-arkhangel-tsentr`, ИНН 5032379630 | **Multi-jurisdiction sanctioned (EU/UA/FR/CH/BE/MC)** | Not established |
+| Entity | Role | Director | Tie |
+|---|---|---|---|
+| ООО «Гагаринг» (`ooo-gagaring`, ИНН 2312321660?) | Core manufacturer | Барашков А.С. | — |
+| АНО ДПО «Образовательный центр Гагаринг» (`ano-dpo-obrazovatelny-tsentr-gagaring`) | Training arm | Безроднова А.С. | Co-founded by Гагаринг; Барашков personally hands diplomas at graduations (s5372) |
+| ООО «Авирон» (`ooo-aviron`, ИНН 7743451768) | Subsidiary, 36.8% owned | Лапин И.Н. | Per Гагаринг's FY2025 audit, related-party disclosure (s5333) |
+| ООО «Интел Дрон» (`ooo-intel-dron`, ИНН 7448259249) | Subsidiary, 50% owned | Воронин А.А. | Same source |
+| ООО «НПО Эйлер» (`ooo-npo-eyler`, ИНН 7100069249, Тула) | Subsidiary, 50% owned | Плыкина Е.В. | Same source; aircraft/spacecraft OKVED, flagged for its own deep-dive |
+| АРРС — Ассоциация разработчиков перспективных систем РЭР/РЭБ/связи (`ano-arrs-krasnodar`) | Industry association | Барашков А.С. (same GD as Гагаринг) | Co-founded by Гагаринг, АКР «Бегак», Прайм + two individual founders |
+| ООО «АКР «Бегак»» (`ooo-akr-begak`) | Fellow АРРС co-founder | Бегак А.А. | Via АРРС; also an unresolved `_candidate` role at Гагаринг itself for both Бегак and Куртеев — unverified, needs a source before treating as a direct Гагаринг tie |
+| ООО «Прайм» (`ooo-praym`) | Fellow АРРС co-founder | Степаева М.И. | Via АРРС |
+| Архангел Легион / АНО «Архангел» (`ano-arkhangel`, ИНН 2315233718, Новороссийск) | Co-runs 51st Army training relationship | Архангельский Г.Е. (co-founder Ташматов И.С.) | Confirmed — joint 51st Guards Combined Arms Army recruitment/training |
+| Архангел Спецназа (@arx_spn, 1.02M subs) | Informal partner | No legal entity identified | Confirmed informal — mask branding on a Гагаринг graduation video, joint drone-retraining project (10.08.2026) |
 
-Two of these (#1, #2) are genuinely part of Гагаринг's own network. The
-other four are independent organizations that happen to share the brand
-name — confirmed via identifier cross-checks (ИНН/ОГРН), not name matching,
-per this project's standing "verify by identifier, never by name"
-discipline.
+Not yet resolved into this table: the two `_candidate` roles (Куртеев
+Александр Сергеевич, Бегак Александр Аркадьевич both have an unsourced
+`_candidate: true` role at "ООО «Гагаринг»" itself, separate from Бегак's
+sourced АРРС/АКР «Бегак» tie) — scaffold leftovers from text extraction,
+not yet verified against a primary source. Worth resolving before the
+profile build: check whether these are real roles at Гагаринг itself or
+just co-founder-of-the-same-association noise.
 
-## What each entity actually is
+## People — Гагаринг's own network
 
-**#1 — Архангел Легион (`ano-arkhangel`).** АНО founded 01.02.2024,
-Новороссийск, director Архангельский Геннадий Евгеньевич (whose own
-surname is plausibly the origin of the brand), co-founder Ташматов Илья
-Сергеевич. Co-runs, alongside Гагаринг, a training relationship with the
-51st Guards Combined Arms Army — recruitment posts name two individual
-contacts (Артём/@Dark_GAA, Александр Галушко/@Alexande_galushko) offering
-₽3.4M signing bonuses. A "школа «Архангел»" in Туапсе is mentioned on the
-same channel — initially misread as a third-party site the group merely
-visited, corrected below (#3) once the fuller post history was checked:
-it's actually проект Архангел's own school, not this entity's.
+**Leadership / founders**
+- **Барашков Александр Сергеевич** — GD/co-founder (50.5%), b. 03.11.1979,
+  Хабаровск. Also GD of АРРС. A "гаражники"-era startup founder (prior
+  SDEK-Krasnodar courier-franchise/ИП history 2018–2023, per s1171)
+  turned into a company with ₽1.041bn in FY2025 total assets. Recurring
+  guest on Соловьёв LIVE's "На войне как на войне" (Vladislav Shurygin's
+  programme, at least 20.06.2025 and 25.07.2025), discussing the UAV/EW
+  industry — in his own words, "конкуренция в системе" (see Quotes below).
+- **Александров Алексей Витальевич** — co-founder (49.5%), ИНН
+  231015713057 (s0455). No further biographical detail on file yet.
 
-**#2 — Архангел Спецназа (@arx_spn).** The org behind the branded face
-masks seen on a Гагаринг training-center graduation video — resolved this
-investigation thread from a pure visual mystery to a sourced joint-project
-announcement (10.08.2026). No legal entity has been identified for it; a
-generic checko.ru name search returned only noise (dozens of unrelated
-"Архангел" companies) and the channel's own public page carries no
-external link.
+**Subsidiary/association directors**
+- Безроднова Анна Сергеевна — director, АНО ДПО Образовательный центр Гагаринг
+- Лапин Игорь Николаевич — director, ООО «Авирон»
+- Воронин Александр Андреевич — director, ООО «Интел Дрон»
+- Плыкина Екатерина Викторовна — director, ООО «НПО Эйлер»
+- Бегак Александр Аркадьевич — director, ООО «АКР «Бегак»»
+- Степаева Мария Ивановна — director, ООО «Прайм»
+- Сиразатдинов Никита Вадимович — АРРС founder (2024-03-01)
+- Климов Максим Александрович — АРРС founder (2024-03-01) — already carries
+  a confirmed exact-ИНН OpenSanctions sanctions match from an earlier
+  full-roster sweep, not yet connected to this АРРС role in prose before
+  this session.
 
-**#3 — проект Архангел (Филиппов М.Г.).** A drone-training/production
-group that predates all the legal entities above — an 02.08.2023 OSINT
-Bees (InformNapalm-affiliated) doxxing dossier named its coordinator,
-Филиппов Михаил Геннадиевич (b. 17.11.1976, Лыткарино), and ~9 more
-channel admins/activists with full PII. Only Филиппов was promoted to
-`people.json` (properly sourced this session, after an earlier attempt had
-to strip his DOB for lack of a source_id) — the other ~9 were deliberately
-left uncatalogued, same "doxxing-scale apparatus" discipline already
-established for the Ushkuynik network. He separately co-presented at a
-Rostov industry round table alongside an active-duty EW officer and
-«ГК Логос» — a materially stronger signal than a brand mention, but still
-not a confirmed ЦБСТ tie. проект Архангел turns out to be an actively
-operating **multi-city training network**, not just Филиппов's Telegram
-presence — its Туапсе "school" (a mountain/river-side camp in Krasnodar
-krai's foothills, recurring free 3-week residential courses, no street
-address) is one of several regional nodes, alongside a school "в
-Запорожье." That decentralized multi-city structure is strikingly similar
-to GUR's independent "20 cities" description of the *unrelated* entity #5
-below — an unconfirmed lead worth checking next time this thread is
-picked up, not an established connection.
+**Training-center instructors / recruiters** (АНО ДПО Образовательный
+центр Гагаринг, «Последний рубеж» program)
+- Толстоусов Артём
+- Толстоусова (Тараносова) Анна, callsign «Сайга» — first-person source
+  for the Sevastopol "сборы" description (s5404)
+- Смородин Александр
+- Иванкин Сергей
+- Паршиков Сергей, callsign «Лыня» — leads the Sevastopol training musters
+- Артём (Dark_GAA) — 51st Army recruitment contact, ₽3.4M signing bonus posts
+- Александр Галушко — 51st Army recruitment contact (same posts)
 
-**#4 — ООО «Архангел» (`ooo-arkhangel`, Moscow).** Already a confirmed,
-independently-verified EU-sanctioned ЦБСТ resident (20th sanctions
-package). Genuinely unrelated to the rest of this family — its own record
-already flagged this before this session began.
+**Архангел Легион (confirmed co-runner of the 51st Army relationship)**
+- Архангельский Геннадий Евгеньевич — director
+- Ташматов Илья Сергеевич — co-founder
 
-**#5 — ООО «Архангел» (`ooo-arkhangel-zaporizhzhie`, Мелитополь).**
-Registered in Russian-occupied Zaporizhzhia oblast, 22.08.2024. Officially
-a UAV-mechanic training operator (Rosobrnadzor licence
-№ Л035-00115-95/01431042) — its own БФО filing books 100% of revenue as
-"образовательные услуги." GUR's own profile (exact ИНН match) reveals it
-is materially larger than the single legal entity suggests: a training
-network across **20 cities** in Russia and occupied Ukraine, a Sevastopol
-branch funded by "Putin's fund for the Young UAV Operator course," and
-direct training of the BARS-32/"Sudoplatov's battalion" unit from July
-2023. No sanctions currently applied by any of the 9 jurisdictions GUR
-lists it against — a live gap. OpenSanctions carries it with
-`sanction.linked`/`sanction.control` topics, but on a graph-inferred basis
-(not a direct designation dataset) — flagged, not promoted to `sanctions[]`.
+**Friends / media**
+- Алексей Чадаев — GD, АНО «НПЦ «Ушкуйник»» (already an ЦБСТ-partner
+  registry principal in his own right); a 11.08.2026 post
+  (`chadayevru`, s5407) frames Барашков as a personal friend, not just a
+  business contact — worth quoting directly once the exact text is pulled
+  for the profile (see Quotes below).
 
-**#6 — ООО «Архангел-Центр» (`ooo-arkhangel-tsentr`, Одинцово).** The
-single biggest finding of this whole push. Registered 17.05.2024,
-self-branded a commercial combat-training school "под руководством
-ветеранов ЧВК Вагнер" (₽28,000–48,000 courses: UAV operator, sniper,
-artillery, tactical medicine). An OpenSanctions exact-identifier match
-revealed it is **already sanctioned across six jurisdictions** — EU
-(Council Regulation/Decision, CELEX 32026R0509/32026D0504), Ukraine NSDC,
-France (Trésor gels d'avoirs), Switzerland (SECO), Belgium (FOD) and
-Monaco, designated 2026-04-23. The full EU/UA designation narrative
-confirms it trains Russian soldiers for combat in Ukraine and offers
-discounts to war participants.
+## What's still open (Гагаринг-network scope only)
 
-## What's still open
+- The two unresolved `_candidate` roles (Куртеев, Бегак-at-Гагаринг-itself)
+  need a real source before being treated as established.
+- Одесская 48/3 — which specific building in the 23-building industrial
+  complex Гагаринг's production subdivision (КПП 231045001) occupies is
+  still unidentified; needs an EGRN pull keyed to that КПП, not a
+  business-directory search (already tried, negative).
+- Possible undocumented Курская область lab/field site (s5403, single
+  blogger post, no address) — flagged, not confirmed as a real third
+  location.
+- НПО Эйлер (Tula) — still only a bare EGRUL extract; flagged in its own
+  record as high-priority for a full deep-dive (БФО pull, zakupki scan).
+- No `marketing_claims[]` or `quotes.json` entries exist yet for Гагаринг
+  itself despite Барашков having multiple on-record public statements
+  (Соловьёв LIVE, Чадаев's post) — a real gap for the presentation build,
+  see Quotes below.
 
-- No legal entity identified for «Архангел Спецназа» (#2).
-- «проект Архангел»'s (#3) legal-entity status is still unclear — it may
-  not be a formally incorporated organization at all, distinct from the
-  incorporated entities #1/#4/#5/#6.
-- No confirmed institutional tie found between any of #3/#4/#5/#6 and the
-  Гагаринг-connected #1/#2, despite the shared brand and overlapping
-  activity (UAV/combat training). Two structural echoes are flagged as
-  leads, not established connections: a city-level coincidence (#5's
-  Sevastopol branch vs. Гагаринг's own Sevastopol training-camp use), and
-  a decentralized multi-city network structure shared between #3 (проект
-  Архангел, with nodes in Туапсе and Запорожье) and #5 (GUR's independent
-  "20 cities" description of ooo-arkhangel-zaporizhzhie) — both leads, not
-  asserted as connections.
-- #5 and #6 both still rest on thin primary-source coverage (open-API
-  summaries, not full signed EGRUL extracts) relative to Гагаринг's own
-  55-page audited financials.
-- Одесская 48/3 (Гагаринг's own production subdivision address) — which
-  specific building in the 23-building industrial complex it occupies
-  remains unidentified; a public business-directory check came back
-  negative (expected for a defense-adjacent site).
+---
 
-## Sources and methods used this push
+## Presentation-build notes (for the future website profile)
 
-New to this project this session: GUR's `/uav/companies` single-lookup
-search (already used for other entities, newly applied here), OpenSanctions
-batch `/match/default` (targeted at the new roster, 1 request against
-quota), checko.ru (tried, too noisy for a generic name), myrotvorets.center
-(tried, Cloudflare-blocked to scripts — same as before). Local: the
-Telegram DB (`data/roymarket.db`), устав OCR (`tesseract`), and a full
-re-read of an already-archived-but-previously-skimmed OSINT Bees capture.
+Everything below is planning material for
+`docs/profiles/ooo-gagaring.html` and a Барашков-focused presentation page
+— what exists, what's usable, what's still needed. Not itself a claim
+about the investigation; a production checklist.
 
-See also: `roymarket_archangel_adjacent_network` (memory, full historical
-detail), `smolin_source_catalogue.md` (the model this follows), and each
-entity's own `open_questions[]` in `data/registry/entities.json` for the
-underlying source citations.
+### Visuals
+
+On file (`entities.json` → `ooo-gagaring.images[]`):
+- `images/gagaring_hq_krasnodar_residential.jpg` — ул. им. Фадеева 429/3,
+  the registered legal address (an ordinary residential building entrance —
+  useful for the "letterbox address vs. real operation" contrast).
+- `images/gagaring_school_kunikova_annex.jpg` — ул. Цезаря Куникова 24к2,
+  the training-center's licensed address (commercial annex).
+- `images/gagaring_barashkov_portrait.jpg` — Барашков at what appears to be
+  a training-center event.
+
+Still needed for a real presentation:
+- A ground or satellite view of the Одесская 48/3 production subdivision
+  (blocked on identifying the specific building — see open questions).
+- Product photography — the ЮРКА detector line and «СОВА» video receiver
+  currently have price-list text only, no images on file.
+- Screenshots/stills from the Соловьёв LIVE appearances (broadcast video,
+  not yet pulled) — would give a second Барашков portrait source distinct
+  from the training-center photo.
+- A training-center graduation photo/video still showing the Архангел
+  Спецназа mask branding (already used as evidence of that tie; worth
+  reusing as a visual anchor for the partnership narrative).
+
+### Locations
+
+- **Legal HQ** — ул. им. Фадеева, 429/3, Краснодар. Cadastral object
+  23:43:0411055:29, a 17-storey apartment building (2008) — confirmed via
+  NSPD as a mailbox/office-suite address, not a production site.
+- **Training center** — ул. Цезаря Куникова, 24, корп. 2, помещ. 44-46,
+  Краснодар (licence Л035-01218-23/02689789, issued 17.07.2025). Physically
+  operates as the training center of the 51st Guards Combined Arms Army,
+  opened ~24.02.2026.
+- **Production subdivision** — Одесская, 48/3, Краснодар (КПП 231045001).
+  Sits on a real 23-building former Soviet industrial site (one confirmed
+  building there, cadastral 23:43:0302010:387, a 3-storey 1972 "Производственный
+  корпус," 3,873.6 m²) — but Гагаринг's own building within that complex is
+  not yet pinned. This is the strongest visual/credibility opportunity once
+  resolved: a real production facility, not just a training school.
+  Postal-code discrepancy noted (350312 per Роскомнадзор inspection vs. a
+  different code in the audit report) — worth resolving alongside the
+  building-identification work.
+- **Sevastopol** — recurring «Последний рубеж» training-muster location,
+  described by Толстоусова as "уже как второй дом" (already like a second
+  home). No street address/coordinates on file yet.
+- **Possible Kursk oblast site** — single unverified blogger mention, no
+  address. Flagged, not confirmed.
+
+### Product descriptions (from Гагаринг's own FY2025 audit + price list)
+
+- **«Кузнечик»** — UAV communications-system software, capitalized as an
+  intangible asset in the FY2025 audit (75–110 months remaining useful
+  life as of 31.12.2025). The clearest "we build real defense electronics"
+  anchor product for a presentation, and already has audited-financials
+  backing, not just marketing copy.
+- **«ЮРКА» portable detector line** — three SKUs: base (₽21,960), «1.2ВП»
+  with video interception (₽24,400), «1.2СК» with dry-contact EW
+  integration (₽23,180). A tiered product line — good for a "product
+  lineup" section.
+- **«СОВА» remote video receiver** (₽45,964–51,240) — note the brand
+  collision with an unrelated company's navigation module of the same
+  name (va-technologies' «Конструкторское бюро СОВА») — needs a clear
+  disclaimer if used in any public-facing material to avoid misattribution.
+
+Still needed: product-level marketing copy (current descriptions are audit-
+report/price-list text, not the company's own promotional language) and
+any available product photography.
+
+### Quotes (for direct citation, not yet in `quotes.json`)
+
+Two on-record statements worth pulling verbatim for `quotes.json` before
+the profile build, per this project's verbatim-quote discipline
+(`STYLE_GUIDE.md` §3.1 — never paraphrase):
+
+1. Барашков's own "конкуренция в системе" line from the Соловьёв LIVE
+   appearances (20.06.2025 and/or 25.07.2025) — currently only paraphrased
+   in the registry's `_raw` context field, not pulled as a full verbatim
+   quote with timestamp/episode citation.
+2. Чадаев's 11.08.2026 post (`chadayevru`, s5407) framing Барашков as a
+   personal friend — currently summarized as "friendship framing," not
+   quoted directly. A named ЦБСТ-partner principal publicly vouching for
+   Барашков is a strong credibility/network-proximity data point for the
+   presentation and should be quoted exactly, not summarized.
+3. Толстоусова's "уже как второй дом" (Sevastopol) line, already quoted
+   above — a good example of the kind of first-person operator testimony
+   worth surfacing directly rather than only as registry prose.
+
+None of these are in `marketing_claims[]` or `quotes.json` yet — both are
+empty for Гагаринг. Filling them (verbatim RU text, EN translation,
+context, source_id, as_of) is a concrete next step before drafting the
+actual profile page.
+
+## Sources and methods
+
+See each entity's own `sources[]`/`open_questions[]` in
+`data/registry/entities.json` and `data/registry/people.json` for full
+citations. Methods used this push: `egrul.nalog.ru` open API,
+`screen_gur.py`/`screen_opensanctions.py` single-lookup reuse, the local
+Telegram DB (`data/roymarket.db`), устав OCR (`tesseract`), NSPD/Rosreestr
+cadastral lookups, zoon.ru business-directory checks. Full disambiguation
+methodology and the adjacent-but-unconfirmed entities are in
+`notes/archangel_adjacent_network.md`.
