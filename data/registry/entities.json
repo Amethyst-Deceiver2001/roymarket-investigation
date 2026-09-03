@@ -43845,7 +43845,12 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "source_id": "s5411",
+        "text": "Deeper pull attempted 2026-09-03 (per the Гагаринг wide-net push): a fresh egrul.nalog.ru open-API lookup independently confirms director Плыкина Е.В. (second, government-sourced corroboration) but the open API does not return founder/participant info. No zakupki.gov.ru contracts found (single-ИНН scan, zero hits — expected for a firm registered only 28.10.2025). No БФО filing exists yet on bo.nalog.gov.ru (zero results — first fiscal year not yet closed/filed as of this check). Genuinely thin beyond the director name and Гагаринг's own audit-disclosed ₽10M loan — still worth revisiting once a first БФО filing or zakupki activity appears."
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": false,
@@ -44257,7 +44262,7 @@
     "ogrn": "1245000058489",
     "extra_ids": null,
     "registered": "2024-05-17",
-    "address": "Московская область (Odintsovo district per prior parked memory — exact address not yet pulled)",
+    "address": "Московская область, г. Одинцово, ул. Маршала Жукова, д. 32 (per parked project memory roymarket_archangel_adjacent_network — self-described commercial training-school address, not yet independently re-verified this pass; archangel-center.ru unreachable from this sandbox, HTTP connection failure)",
     "okved_code": null,
     "okved_label": null,
     "okved_mismatch": null,
@@ -44281,7 +44286,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "adjacent",
-    "tier_basis": "Sixth distinct \"Архангел\"-branded organization surfaced in this investigation. Legal name is actually \"Архангел-ЦЕНТР\", not bare \"Архангел\" as the earlier parked memory (roymarket_archangel_adjacent_network) assumed — a real, useful disambiguation. Odintsovo/Wagner-branding claim from the earlier parked memory NOT yet re-verified against this specific legal entity; only a bare open-API director/registration lookup has been done this pass, no EGRUL extract, no БФО, no source corroborating the Wagner-branding claim specifically for THIS ИНН. Kept at tier 'adjacent' (no confirmed ЦБСТ/Гагаринг/Архангел-family tie) pending a fuller pull.",
+    "tier_basis": "Sixth distinct \"Архангел\"-branded organization surfaced in this investigation. Legal name is actually \"Архангел-ЦЕНТР\", not bare \"Архангел\" as the earlier parked memory (roymarket_archangel_adjacent_network) initially framed it, though that memory does correctly carry the full detail: a commercial paid combat-training school (archangel-center.ru), ₽28,000-48,000 courses (UAV operator, sniper, artillery, tactical medicine), explicitly self-branded \"под руководством ветеранов ЧВК Вагнер\" (led by Wagner PMC veterans) — a real, distinctive Wagner tie, unlike the other Архангел organizations. That self-description is website-sourced, not yet independently archived as a dated primary source this pass (site unreachable from this sandbox this session). No drone-manufacturing OKVED, no ЦБСТ tie found — confirmed unrelated to the other 5 \"Архангел\"-branded organizations in this investigation.",
     "cbst_tie": {
       "claim": null,
       "evidence": null,
@@ -44318,7 +44323,7 @@
     "open_questions": [
       {
         "source_id": null,
-        "text": "Only an egrul.nalog.ru open-API summary pulled so far (director name, registration date, region) — no full EGRUL extract, no founder info, no address beyond 'Московская область', no БФО, no corroboration of the earlier parked memory's 'Wagner-branded' characterization for this specific entity. Needs a proper EGRUL extract pull and a check of whether the Wagner-branding claim actually applies to this ИНН or to a different, unrelated 'Архангел' entity that was conflated with it."
+        "text": "Only an egrul.nalog.ru open-API summary pulled so far (director name, registration date, region) — no full EGRUL extract, no founder info, no БФО. The Wagner-branding/course-pricing detail is carried from a prior project memory (self-description on archangel-center.ru) but that site could not be reached this pass to archive it as a dated primary source — worth a retry, or a manual pull, next time this thread is picked up."
       },
       {
         "source_id": null,

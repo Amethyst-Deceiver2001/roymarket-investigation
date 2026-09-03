@@ -10153,13 +10153,13 @@
     },
     {
       "_verified": false,
-      "address": null,
+      "address": "Московская область, г. Лыткарино, ул. Парковая, д. 4, кв. 52",
       "birthplace": null,
-      "dob": null,
+      "dob": "1976-11-17",
       "inn_personal": null,
       "fio_ru": "Филиппов Михаил Геннадьевич",
       "name_latin": "Mikhail Gennadevich Filippov",
-      "notes": "Head of «проект Архангел» — surfaced independently via a Rostov round-table co-presentation with ГК «Логос» alongside an active-duty EW official (Кудрявцев А.А., 4th Army); also listed as a \"key partner\" on a counter-UAV manufacturer's slide. This is the same «проект Архангел» parked in the roymarket_archangel_adjacent_network memory, which also recorded a DOB (17.11.1976) and birthplace (Лыткарино) for him with no source_id attached — per PII policy those stay OUT of this registry record until a real source_id is found (see [[roymarket_no_guessing_no_placeholders]]), not carried forward on memory's say-so alone. Relationship to ano-arkhangel (Архангел Легион) and «Архангел Спецназа» (@arx_spn) is NOT established — three informally-overlapping \"Архангел\"-branded projects with no confirmed institutional link found between them so far.",
+      "notes": "Head of «проект Архангел» — a self-described drone-manufacturing and operator-training group for Russian occupation forces, per a 02.08.2023 OSINT Bees doxxing dossier (s0234/s0235, InformNapalm-affiliated Ukrainian OSINT outlet) that names him directly as \"Координатор группы, власник каналу проекту «Архангел»\", Telegram @arhangel76 (id 249869145). DOB and address now sourced to that dossier (real primary-source ID, matching the DOB the earlier parked roymarket_archangel_adjacent_network memory had carried WITHOUT a source — now independently confirmed and properly sourced). Also owns ООО «МЛ КОНСТРАКШНС» (construction/renovation business, per the same dossier) — not yet cross-checked against this registry's entity list. The dossier separately names ~8 more channel admins/activists with full PII (DOB, address, phone, ИНН/СНИЛС) — deliberately NOT individually catalogued into people.json here, same discipline as smolin_source_catalogue.md's \"doxxing-scale apparatus\" rule: this is an adjacent, NOT-yet-ЦБСТ-confirmed network (see roymarket_archangel_adjacent_network memory), and full PII promotion is reserved for confirmed principals of the core investigation. Relationship to ano-arkhangel (Архангел Легион) and «Архангел Спецназа» (@arx_spn) is still NOT established — three informally-overlapping \"Архангел\"-branded projects with no confirmed institutional link found between them so far.",
       "roles": [
         {
           "entity_name": "«проект Архангел» (unclear legal-entity status)",
@@ -10171,10 +10171,30 @@
         }
       ],
       "slug": "filippov-mikhail-gennadevich",
-      "social": [],
-      "sources": [],
+      "social": [
+        {
+          "platform": "telegram",
+          "url": "https://t.me/arhangel76",
+          "source_id": "s0234"
+        },
+        {
+          "platform": "vk",
+          "url": "https://vk.com/id729012386",
+          "source_id": "s0234"
+        },
+        {
+          "platform": "ok.ru",
+          "url": "https://ok.ru/profile/568814443751",
+          "source_id": "s0234"
+        }
+      ],
+      "sources": [
+        "s0234",
+        "s0235"
+      ],
       "why": [
-        "2026-09-03: promoted from the parked roymarket_archangel_adjacent_network memory per the Гагаринг wide-net push (Thread C) — flagged as needing real primary sourcing, not treated as fully verified."
+        "2026-09-03: promoted from the parked roymarket_archangel_adjacent_network memory per the Гагаринг wide-net push (Thread C) — flagged as needing real primary sourcing, not treated as fully verified.",
+        "2026-09-03: full-text-read the already-archived OSINT Bees dossier (s0234/s0235) for the first time this pass — it independently confirms and sources the DOB/address the parked memory had carried unsourced, plus his real channel handle (@arhangel76) and a construction-business tie (ООО «МЛ КОНСТРАКШНС»)."
       ]
     }
   ]
