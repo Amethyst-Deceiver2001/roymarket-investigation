@@ -31476,12 +31476,12 @@
       {
         "case_number": "А40-209485/2024",
         "court": "Арбитражный суд г. Москвы",
-        "parties": "Not confirmed from primary sources — parties unresolved",
+        "parties": "Министерство обороны Российской Федерации (истец) против АО «НИИ СТТ» (ответчик)",
         "claim_amount_rub": null,
-        "subject": "Not established — three-instance history through July 2025, but all filings redacted to bare headers.",
-        "status": "Unresolved — kad.arbitr.ru direct party-name query remains blocked (HTTP 451).",
-        "source_id": "s0026",
-        "note": "NOT confirmed as an FSB or otherwise notable case — logged for completeness of the case-number list only."
+        "subject": "Subject not established — filings redacted to bare headers; parties now confirmed via a direct kad.arbitr.ru participant-search screenshot (2026-09-03) that lists Истец/Ответчик columns directly.",
+        "status": "Три инстанции пройдены по июль 2025; итог не установлен из имеющихся источников.",
+        "source_id": "s5336",
+        "note": "Parties corrected 2026-09-03 (previously logged unresolved, blocked by what turned out to be a rate-limit page misread as a hard 451 block — see open_questions and notes/source_expansion_methodology.md). Same МО РФ plaintiff pattern as А40-257028/2021 and А40-119204/2019 above."
       }
     ],
     "licences": [
@@ -31796,7 +31796,12 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "text": "A direct kad.arbitr.ru participant search on this entity's own ИНН (6730046954, screenshot 2026-09-03, source s5336) returns \"Найдено 28 дел\" — of which only 10 are currently structured in litigation[] above. The screenshot itself is page 2 of 2 (most recent ~15 cases are on page 1, not yet captured). New case numbers visible on page 2 alone, not yet individually verified via their own case cards: А62-9256/2025 (ООО «Авто-Исузу Сервис» истец), А62-6891/2025 (АО «НИИ СТТ» истец vs ООО «Проектно-монтажная фирма «Запсибэлектромонтаж» ответчик, name truncated in screenshot), А62-10864/2024 (Исмаилов Дамир Афганович, individual, истец), А40-145369/2024 (АО «НИИ СТТ» истец vs ООО «Атлант-Кран» ответчик), А62-1716/2024 (ЗАО «Смоленскаэротранс» / АО «Спецавтохозяйство», cross-listed as both истец and ответчик in the screenshot — this entity's own connection to the case is not visible in the truncated view and needs its own case-card check before assuming it belongs on this list at all), А62-8894/2023 (АО «НИИ СТТ» истец vs АО «Интеграл-Запад» ответчик), А62-3012/2022 (АО «НИИ СТТ» истец vs ООО «Инвестиционно-промышленный холдинг» ответчик), А56-5977/2022 (АО «Научные приборы» истец, St. Petersburg court). Next step: pull page 1 (or re-run the participant search) to see the remaining ~13-15 more recent cases, then verify each new case number's own card (subject, amount, status) before adding it to litigation[] — do not promote from the screenshot's truncated party names alone.",
+        "source_id": "s5336"
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": true,

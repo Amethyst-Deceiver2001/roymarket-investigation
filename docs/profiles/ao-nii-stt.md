@@ -81,7 +81,7 @@
 - 18 ЦНИИ is a Minoborony research institute overseeing telecommunications/EW standards — a real institutional customer link even though this specific filing was not substantively decided. [s0014]
 - A genuine FSB-НИИ СТТ contractual link, established via the case card even though the substance is redacted — consistent with routine redaction of FSB-counterparty commercial litigation, not something specific to this entity. [s0039]
 - NOT confirmed as an FSB or otherwise notable case — logged for completeness of the case-number list only. Do not cite as an FSB link. [s0020]
-- NOT confirmed as an FSB or otherwise notable case — logged for completeness of the case-number list only. [s0026]
+- Parties corrected 2026-09-03 (previously logged unresolved, blocked by what turned out to be a rate-limit page misread as a hard 451 block — see open_questions and notes/source_expansion_methodology.md). Same МО РФ plaintiff pattern as А40-257028/2021 and А40-119204/2019 above. [s5336]
 
 ## Licences
 
@@ -235,6 +235,10 @@
 - **ИНН:** 673004513585
 - co-inventor (patent RU134783S)
 
+## Open questions
+
+- A direct kad.arbitr.ru participant search on this entity's own ИНН (6730046954, screenshot 2026-09-03, source s5336) returns "Найдено 28 дел" — of which only 10 are currently structured in litigation[] above. The screenshot itself is page 2 of 2 (most recent ~15 cases are on page 1, not yet captured). New case numbers visible on page 2 alone, not yet individually verified via their own case cards: А62-9256/2025 (ООО «Авто-Исузу Сервис» истец), А62-6891/2025 (АО «НИИ СТТ» истец vs ООО «Проектно-монтажная фирма «Запсибэлектромонтаж» ответчик, name truncated in screenshot), А62-10864/2024 (Исмаилов Дамир Афганович, individual, истец), А40-145369/2024 (АО «НИИ СТТ» истец vs ООО «Атлант-Кран» ответчик), А62-1716/2024 (ЗАО «Смоленскаэротранс» / АО «Спецавтохозяйство», cross-listed as both истец and ответчик in the screenshot — this entity's own connection to the case is not visible in the truncated view and needs its own case-card check before assuming it belongs on this list at all), А62-8894/2023 (АО «НИИ СТТ» истец vs АО «Интеграл-Запад» ответчик), А62-3012/2022 (АО «НИИ СТТ» истец vs ООО «Инвестиционно-промышленный холдинг» ответчик), А56-5977/2022 (АО «Научные приборы» истец, St. Petersburg court). Next step: pull page 1 (or re-run the participant search) to see the remaining ~13-15 more recent cases, then verify each new case number's own card (subject, amount, status) before adding it to litigation[] — do not promote from the screenshot's truncated party names alone. [s5336]
+
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
@@ -243,7 +247,6 @@
 | s0020 | arbitration court filing | arbitration court filing (A40-168087-2019_20191120_Opredelenie.pdf) | 2019-11-20 | — |
 | s0021 | arbitration court filing | arbitration court filing (A40-186273-2026_20260706_Opredelenie.pdf) | 2026-07-06 | 2026-07-06 |
 | s0022 | arbitration court filing | arbitration court filing (A40-204416-2025_20250813_Opredelenie.pdf) | 2025-08-13 | 2025-08-13 |
-| s0026 | arbitration court filing | arbitration court filing (A40-209485-2024_20241216_Reshenija_i_postanovlenija.pdf) | 2024-12-16 | 2024-12-16 |
 | s0029 | arbitration court filing | arbitration court filing (A40-257028-2021_20211202_Opredelenie.pdf) | 2021-12-02 | 2021-12-02 |
 | s0038 | arbitration court filing | arbitration court filing (A40-269303-2025_20251229_Reshenija_i_postanovlenija.pdf) | 2025-12-29 | 2025-12-29 |
 | s0039 | arbitration court filing | arbitration court filing (A40-74708-2020_20210615_Opredelenie.pdf) | 2021-06-15 | 2021-06-15 |
@@ -257,6 +260,7 @@
 | s3342 | Zakupki | Zakupki (ZAKUPKI_contract_1501200927916000097_20260829.html) | 2026-08-29 | — |
 | s4253 | Zakupki | Zakupki (ZAKUPKI_ATTACH_6730046954_0335100011714000162_gk-03351000117140001620002_06a0c038.docx) | — | — |
 | s5055 | Zakupki | Zakupki (ZAKUPKI_contract_0335100011713000056_20260831.html) | 2026-08-31 | — |
+| s5336 | Kad | Kad (KAD_6730046954_20260903_participant-search-page2.png) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

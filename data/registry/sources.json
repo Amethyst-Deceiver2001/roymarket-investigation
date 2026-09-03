@@ -20226,6 +20226,23 @@
     "_origin": "manifest"
   },
   {
+    "id": "s5336",
+    "type": "kad_arbitr_search_screenshot",
+    "path": "data/sources/KAD_6730046954_20260903_participant-search-page2.png",
+    "url": null,
+    "captured_date": "2026-09-03",
+    "fiscal_year": null,
+    "as_of": "2026-09-03",
+    "as_of_method": "manual",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "7c5ea692ec7c00a511085f66c326b727bcd950d566b0453a577fd7c1b102f88c",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s1166",
     "type": "license_extract",
     "path": "data/sources/LICENSE_9500026652_20251230_ooo-arkhangel-zaporizhzhia-rosobrnadzor.pdf",
@@ -91636,6 +91653,46 @@
     "inns": [],
     "entities": [],
     "sha256": "0efee483a11fff480c581dd7cb16dc28ffcca713b1994a156473d60542d98ad0",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5337",
+    "type": "court",
+    "path": "data/sources/piev_45331949001131.pdf",
+    "url": null,
+    "captured_date": null,
+    "fiscal_year": null,
+    "as_of": "2026-09-03",
+    "as_of_method": "court:numeric-date",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "7704270863",
+      "772850224926"
+    ],
+    "entities": [],
+    "sha256": "89f8e587b577f4ef9dbeed744111d9a59edffccea4e630b29473be14eaa45f30",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5338",
+    "type": "court",
+    "path": "data/sources/piev_45331949001135.pdf",
+    "url": null,
+    "captured_date": null,
+    "fiscal_year": null,
+    "as_of": "2026-09-03",
+    "as_of_method": "court:numeric-date",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "7704270863",
+      "772850224926"
+    ],
+    "entities": [],
+    "sha256": "fe9df34fb8d9a56d993980e1e45379aa1bef266bd46e2d4ce2e1c90b85c4a14d",
     "_verified": false,
     "_origin": "manifest"
   },

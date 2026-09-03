@@ -388,17 +388,59 @@ same behaviour):
   site again this session — give the rate limit time to clear (unknown
   duration, no countdown was shown) before the next real lookup.
 
+### Fourth pass: user's manual search debunks the "site is broken" framing entirely (2026-09-03)
+
+The user ran the exact same participant search — bare ИНН `6730046954`
+(`ao-nii-stt`) typed into kad.arbitr.ru's participant field, no autocomplete
+suggestion selected — in their own ordinary browser, and got a clean result:
+**"Найдено 28 дел"**, a normal paginated case list, no captcha screen, no
+451, no console errors. Archived as `s5336`
+(`data/sources/KAD_6730046954_20260903_participant-search-page2.png`).
+
+This overturns the third pass's framing, not just one data point in it:
+
+- **kad.arbitr.ru's real-world search is not broken.** A normal human-driven
+  browser searches it successfully with zero friction — no captcha-bypass
+  trick needed, no rate limit hit. The `checkPravocaptchaCallback()` console
+  bypass "unlock" documented in the third pass was a workaround for a
+  problem that appears to be specific to the automated/CDP-controlled
+  chrome-devtools-mcp session, not a real property of the site. Most likely
+  explanation: the invisible-captcha widget detects automation (CDP
+  fingerprint, headless-adjacent signals) and refuses to resolve for that
+  session specifically, while resolving instantly for an ordinary browser.
+  This also reframes the DDoS-Guard 451/rate-limit hit at the end of the
+  third pass — that was very likely a consequence of the automated session
+  hammering the suggest endpoint dozens of times while working around its
+  own captcha problem, not something a normal single search run would ever
+  trigger.
+- **The "ao-nii-stt has zero cases" reading from the second pass was wrong**,
+  not just unresolved. The entity has at least 28 real, indexed cases. Ten
+  were already known and structured in `litigation[]`; the 2026-09-03
+  screenshot resolved one previously-unconfirmed case's parties
+  (А40-209485/2024: Минобороны РФ vs АО «НИИ СТТ») and surfaced 7-8 more
+  case numbers not yet individually verified (logged as an open_question on
+  the entity rather than promoted to `litigation[]` sight-unseen — see
+  `data/registry/corrections_entities.json`). The screenshot was page 2 of
+  2; page 1 (the more recent ~15 cases) hasn't been captured yet.
+- **Practical takeaway for future kad.arbitr.ru/ras.arbitr.ru lookups**:
+  prefer asking the user to run the search directly in their own browser
+  and share a screenshot (as happened here) over relying on the
+  chrome-devtools-mcp automated session, which has now demonstrably hit two
+  different failure modes (silent captcha-promise rejection, then a rate
+  limit from working around it) that a normal browser session doesn't
+  share. The console-bypass trick documented in the third pass may still be
+  useful as a fallback if a human browser genuinely isn't available, but
+  it's the second-choice path now, not the primary one.
+
 ## Recommended next steps (not yet started)
 
-0. **Once the DDoS-Guard rate limit clears**, use the now-known
-   kad.arbitr.ru/ras.arbitr.ru mechanism (suggest → select suggestion →
-   `window.checkPravocaptchaCallback()` in console → read the real
-   `/Kad/SearchInstances` or `/Ras/Search` response) for real entity
-   lookups — one at a time, with real gaps between them, not a testing
-   burst. Start with `ao-nii-stt` (ИНН 6730046954, the entity whose
-   zero-suggestion result last session is still unresolved — worth
-   confirming whether it's genuinely zero cases or an exact-name-match
-   issue) and `npp-radar-mms`.
+0. **For real kad.arbitr.ru/ras.arbitr.ru entity lookups, ask the user to
+   run the search in their own browser and share a screenshot** (per the
+   fourth pass above — this is the reliable path; the automated
+   chrome-devtools-mcp session has hit two separate failure modes there).
+   `ao-nii-stt` (ИНН 6730046954) has an open_question flagging page 1 of
+   its 28-case kad.arbitr.ru result as still uncaptured — a natural next
+   ask. `npp-radar-mms` is next after that.
 1. **HAR-capture torgi.gov.ru and fedresurs.ru** the same way zakupki's
    `supplierTitle` param was found (see `zakupki_gov_ru_contract_search_api`
    memory for that precedent) — these are real, reachable portals blocked
