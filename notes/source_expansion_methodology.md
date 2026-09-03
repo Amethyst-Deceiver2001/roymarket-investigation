@@ -601,3 +601,53 @@ domain family, worth keeping straight:
   the user's own browser. A clean manufacturer roster naming itself as
   "БАС production" would be a higher-signal entity-discovery source than
   almost anything else this investigation has tried.
+
+### Eighth pass: gisp.gov.ru actually works via a real browser — correction, and the БАС manufacturer catalog (2026-09-03)
+
+Prior sessions (and the seventh pass above) assumed gisp.gov.ru shared
+admkrai.krasnodar.ru's hard RU-IP-only block. **That assumption was wrong.**
+Retried with the chrome-devtools browser (still on the same Germany IP,
+no WireGuard involved) and it loaded cleanly — the earlier `curl`/WebFetch
+403 ("Forbidden... IP 79.243.9.101") was a bot/scanner-signature WAF check,
+the same class of block as kad.arbitr.ru's fp.js/wasm challenge, not an
+IP-geoblock. A real browser session clears it with no special handling.
+**Correction to the seventh pass's guidance**: gisp.gov.ru does not need the
+user's own browser after all — treat it like any other JS-challenge site
+this investigation has cracked before, not like krasnodar.ru.
+
+Found the actual «Единый реестр БАС» referenced in the Minpromtorg deck
+(`gisp.gov.ru/cooperation/pub/landing`, the dedicated БАС industry portal,
+links it) — it sits behind gisp's own SSO login
+(`gisp.gov.ru/bpm/service/erbas` redirects to an auth page), not publicly
+browsable. But the **public product catalog filtered to the БАС industry
+code** (`gisp.gov.ru/goods/#/?industry=68`, underlying API `industry_ids:
+[144]`) is the practical public equivalent — 595 БАС-category product
+listings from 155 unique manufacturer ИНН as of 2026-09-03, each with
+company name/ИНН/ОГРН/region directly in the JSON. Found the endpoint
+(`POST /mapm/api/product-list`) via `list_network_requests`, then pulled
+all 6 pages (100/page) with `evaluate_script` running `fetch()` inside the
+authenticated page context — reused the browser's own session cookies for
+free, no separate auth needed. Archived the full 155-company list as
+`s5344` (`GISP_20260903_bas-manufacturer-catalog-155-companies.json`).
+
+Cross-checked all 155 ИНН against every registry entity: **9 exact
+matches** — `ooo-aero-khit`, `ooo-gaskar`, `ooo-rokot-tekh`, `npo-kaysant`,
+`ooo-kopterlab`, `ovod`, `ooo-aviron`, `ooo-npo-rustekhdron`,
+`ao-ekolibri`. Each got a `state_programs[]` entry citing `s5344` — federal
+confirmation that these 9 are genuine, catalog-listed БАС manufacturers,
+not just self-reported/press-sourced. **The other 146 are not yet in the
+registry** — deliberately not bulk-added (this is the *national* catalog,
+not ЦБСТ-specific, and most of the 146 are likely legitimate unrelated
+regional manufacturers with no ЦБСТ tie); the full list stays archived in
+`s5344` for a future triage pass if a name/region look worth checking
+individually.
+
+**One name is worth flagging on its own**: **ООО «Транспорт Будущего»**
+(ИНН 3111006980, Белгородская область) appears in this catalog AND was
+independently named in the Minpromtorg classification chart (`s5342`,
+sixth pass above) as the reference manufacturer for the S-80 (средний
+вертолетного типа) and S700 (тяжелый мультироторного типа) UAV classes —
+two unrelated official federal sources now converge on the same
+not-yet-catalogued company. Worth a proper EGRUL/БФО pull and full
+entity write-up next session rather than treating this as just another
+line in the 146.

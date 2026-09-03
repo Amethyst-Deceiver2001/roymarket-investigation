@@ -41,6 +41,10 @@
 | 2024 | ₽24,010,000 | ₽-3,209,000 | [s0353] |
 | 2025 | ₽273,923,000 | ₽75,378,000 | [s0354] |
 
+## State-program participation
+
+- name_ru: Каталог продукции ГИСП — отрасль БАС; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.; as_of: 2026-09-03 [s5344]
+
 - 2 OpenSanctions match(es) (screened 2026-08-24).
 
 ## Web & social presence
@@ -68,6 +72,7 @@
 | s0354 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743451768_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s0460 | EGRUL extract | EGRUL extract (ul-1247700414631-20260823120635.pdf) | — | 2026-08-23 |
 | s1170 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rospatent-searchplatform-second-triage-batch.json) | 2026-08-24 | — |
+| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

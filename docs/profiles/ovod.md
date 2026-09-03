@@ -32,6 +32,10 @@
 - customer: ФГБОУ ВО «Воронежский государственный технический университет»; reg_number: 1366202088624000018; date: 2024-11-25; value_rub: 19178947.02; items: Routine university-supply contract, no UAV/defense-specific language. [s3374]
 - customer: ФГБОУ ВО «Воронежский государственный технический университет»; reg_number: 1366202088624000019; date: 2024-11-26; value_rub: 10591051.86; items: Routine university-supply contract, no UAV/defense-specific language. [s3375]
 
+## State-program participation
+
+- name_ru: Каталог продукции ГИСП — отрасль БАС; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.; as_of: 2026-09-03 [s5344]
+
 ## Sanctions & screening
 
 **US (OFAC)** [s0526]
@@ -58,6 +62,7 @@ _No named principals linked to this entity yet._
 | s3374 | Zakupki | Zakupki (ZAKUPKI_contract_1366202088624000018_20260829.html) | 2026-08-29 | — |
 | s3375 | Zakupki | Zakupki (ZAKUPKI_contract_1366202088624000019_20260829.html) | 2026-08-29 | — |
 | s3376 | Zakupki | Zakupki (ZAKUPKI_contract_1366202088625000035_20260829.html) | 2026-08-29 | — |
+| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

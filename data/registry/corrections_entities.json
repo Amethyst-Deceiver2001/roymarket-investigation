@@ -2947,6 +2947,15 @@
             "source_id": "s1403",
             "note": "Per АЭРОНЕКСТ member-catalog card («ФИО Руководителя» field, «Должность руководителя»: Генеральный директор), captured_date basis -- as_of is the capture date, not independently confirmed against EGRUL yet."
           }
+        ],
+        "state_programs": [
+          {
+            "name_ru": "Каталог продукции ГИСП — отрасль БАС",
+            "name_en": "GISP (State Industrial Information System) product catalog — БАС industry listing",
+            "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
+            "source_id": "s5344",
+            "as_of": "2026-09-03"
+          }
         ]
       },
       "why": [
@@ -5352,6 +5361,15 @@
             "as_of": "2026-08-25",
             "source_id": "s2641",
             "note": "Physical/operating address per a 2026-08-25 job posting (nesiditsa.ru), NOT the registered EGRUL legal address (125362, Москва, вн.тер.г. муниципальный округ Южное Тушино, already on file as `address`) -- kept separate, not overwriting the legal address."
+          }
+        ],
+        "state_programs": [
+          {
+            "name_ru": "Каталог продукции ГИСП — отрасль БАС",
+            "name_en": "GISP (State Industrial Information System) product catalog — БАС industry listing",
+            "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
+            "source_id": "s5344",
+            "as_of": "2026-09-03"
           }
         ]
       },
@@ -7899,7 +7917,16 @@
               "source_id": "s2620"
             }
           ]
-        }
+        },
+        "state_programs": [
+          {
+            "name_ru": "Каталог продукции ГИСП — отрасль БАС",
+            "name_en": "GISP (State Industrial Information System) product catalog — БАС industry listing",
+            "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
+            "source_id": "s5344",
+            "as_of": "2026-09-03"
+          }
+        ]
       },
       "verified_against": null,
       "why": [
@@ -9293,6 +9320,15 @@
             "caption": "Программно-аппаратный комплекс «Форпост» -- ruggedized counter-drone control console, product photo from its Налетай.рф listing.",
             "source_id": "s2626"
           }
+        ],
+        "state_programs": [
+          {
+            "name_ru": "Каталог продукции ГИСП — отрасль БАС",
+            "name_en": "GISP (State Industrial Information System) product catalog — БАС industry listing",
+            "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
+            "source_id": "s5344",
+            "as_of": "2026-09-03"
+          }
         ]
       },
       "why": [
@@ -9994,6 +10030,15 @@
             "as_of": "2026-08-24",
             "source_id": null,
             "note": "Aggregator-sourced (checko.ru, via WebSearch result summary, page itself Cloudflare-blocked to direct fetch) -- corroborated independently by Соколов's own listing as co-inventor on this entity's patents RU218475U1/RU220486U1 (source s0953) and by his directorship of the related ООО «РТД-Защита» (ex-«НИПП Рустехдрон», ИНН 5003153526, s1161), which shares this entity's director and \"РТД\" product-naming convention. Not yet confirmed against a full EGRUL PDF extract."
+          }
+        ],
+        "state_programs": [
+          {
+            "name_ru": "Каталог продукции ГИСП — отрасль БАС",
+            "name_en": "GISP (State Industrial Information System) product catalog — БАС industry listing",
+            "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
+            "source_id": "s5344",
+            "as_of": "2026-09-03"
           }
         ]
       },
@@ -13006,6 +13051,15 @@
         "wb_overlap": "none_found",
         "why": [
           "2026-09-02: smolin.info (s5291) describes ooo-geron (Novgorod) as this entity de facto Novgorod branch producing up to 6,000 drones/month, and documents ooo-geron announcing Ushkuynik residency 25.06.2025 -- ties this already-sanctioned entity into the Ushkuynik orbit via ooo-geron. See ooo-geron for the direct link."
+        ],
+        "state_programs": [
+          {
+            "name_ru": "Каталог продукции ГИСП — отрасль БАС",
+            "name_en": "GISP (State Industrial Information System) product catalog — БАС industry listing",
+            "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
+            "source_id": "s5344",
+            "as_of": "2026-09-03"
+          }
         ]
       },
       "why": [
@@ -13100,6 +13154,15 @@
           {
             "source_id": null,
             "text": "products[] carries a single bare entry \"СИБНК\" -- this looks like it may actually be an abbreviation of the 100%-owning founder, ООО «Сибирская навигационная компания», mis-recorded as a product name rather than an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats \"ООО «СИБНК»\" as its own distinct entity name, adding to the confusion. Web search for \"СИБНК\" as a Wildberries product (2026-08-25) found nothing. RESOLVED (partially) 2026-08-25: wb_overlap=confirmed's actual basis is now independently corroborated on Ozon too -- the entity trades FPV components (motors, propellers) under the brand «ГАСКАР», not «СИБНК». \"СИБНК\" itself remains unexplained and is left as-is pending a human decision on whether to remove it as a mis-recorded entry."
+          }
+        ],
+        "state_programs": [
+          {
+            "name_ru": "Каталог продукции ГИСП — отрасль БАС",
+            "name_en": "GISP (State Industrial Information System) product catalog — БАС industry listing",
+            "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
+            "source_id": "s5344",
+            "as_of": "2026-09-03"
           }
         ]
       },
@@ -14911,6 +14974,15 @@
             "source_id": null,
             "text": "wb_overlap check (2026-08-24): a WB seller (ИП Вихарев С.В., ИНН 745202549414, Chelyabinsk region, registered as sole trader 2020) sells 2 military-flagged items under brand «Рокот Тех» — a close match to this entity's own name but a different individual/region, not this entity's own ИНН. Possibly an authorized reseller, possibly coincidental — not confirmed either way."
           }
+        ],
+        "state_programs": [
+          {
+            "name_ru": "Каталог продукции ГИСП — отрасль БАС",
+            "name_en": "GISP (State Industrial Information System) product catalog — БАС industry listing",
+            "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
+            "source_id": "s5344",
+            "as_of": "2026-09-03"
+          }
         ]
       },
       "why": [
@@ -15303,6 +15375,15 @@
             "value_rub": 10591051.86,
             "items": "Routine university-supply contract, no UAV/defense-specific language.",
             "source_id": "s3375"
+          }
+        ],
+        "state_programs": [
+          {
+            "name_ru": "Каталог продукции ГИСП — отрасль БАС",
+            "name_en": "GISP (State Industrial Information System) product catalog — БАС industry listing",
+            "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
+            "source_id": "s5344",
+            "as_of": "2026-09-03"
           }
         ]
       },

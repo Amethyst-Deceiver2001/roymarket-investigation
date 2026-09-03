@@ -41,6 +41,10 @@
 - **РТД-Телеком** — Declared-civilian: tethered multi-rotor UAS, power supplied via cable from a ground station. [s1169]
 - **РТД-Агро20** — Declared-civilian: agricultural multi-rotor UAS, 20kg payload, ~25min endurance. [s1169]
 
+## State-program participation
+
+- name_ru: Каталог продукции ГИСП — отрасль БАС; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.; as_of: 2026-09-03 [s5344]
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -111,6 +115,7 @@
 | s1163 | press coverage | press coverage (PRESS_20240119_istories-dron-inferno-rustekhdron.html) | 2024-01-19 | — |
 | s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
 | s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
+| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -61,6 +61,10 @@
 | 2024 | ₽194,116,000 | ₽10,911,000 | [s0340] |
 | 2025 | ₽1,812,579,000 | ₽890,678,000 | [s0341] |
 
+## State-program participation
+
+- name_ru: Каталог продукции ГИСП — отрасль БАС; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.; as_of: 2026-09-03 [s5344]
+
 ## Sanctions & screening
 
 **NZ-RSA2022, Ukraine (Presidential sanctions decree/list), US (OFAC, Russia Harmful Foreign Activities Sanctions)** [s0784]
@@ -115,6 +119,7 @@
 | s0784 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7733393203_20260824_npo-kaysant.json) | 2026-08-24 | — |
 | s2627 | Naletay | Naletay (NALETAY_773376903806_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
 | s2641 | Nesiditsa | Nesiditsa (NESIDITSA_7733393203_20260827_vacancy-136610779.html) | 2026-08-27 | 2026-08-25 |
+| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -24,6 +24,10 @@
 
 - **«Велес»** — FPV kamikaze drone, per GUR profile. [s0956]
 
+## State-program participation
+
+- name_ru: Каталог продукции ГИСП — отрасль БАС; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.; as_of: 2026-09-03 [s5344]
+
 ## Sanctions & screening
 
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Switzerland (SECO, Ukraine-related measures), Ukraine (Presidential sanctions decree/list), EU (Ukraine-related restrictive measures)** [s0729]
@@ -50,6 +54,7 @@
 | s0466 | EGRUL extract | EGRUL extract (ul-1232700009398-20260823122822.pdf) | — | 2026-08-23 |
 | s0729 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_2700012608_20260824_ooo-aero-khit.json) | 2026-08-24 | — |
 | s0956 | GUR war-sanctions record | GUR war-sanctions record (GUR_2700012608_20260824_ooo-aero-khit.html) | 2026-08-24 | — |
+| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
