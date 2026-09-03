@@ -35912,6 +35912,14 @@
       {
         "source_id": null,
         "text": "NSPD/Rosreestr cadastral-map check (2026-09-03, live browser lookup, not yet archived as a dated source): the registered HQ address (Фадеева 429/3) is cadastral object 23:43:0411055:29, Назначение 'Многоквартирный дом' (17-storey apartment building, 15,501.7 m², built 2008) — confirms it is a mailbox/office-suite address, not a production site. The Одесская 48/3 subdivision address is a much larger complex: 23 separate cadastral buildings plus 2 structures plus 1 unfinished-construction object share that street address. One checked building there, 23:43:0302010:387, is explicitly named 'Производственный корпус' (Production Building) — brick, 3 floors, 3,873.6 m², built 1972 (Soviet-era industrial), privately owned. This corroborates the Одесская address sitting on a genuine former industrial site with real production buildings, not just office space — but which specific building/unit within the 23-building complex Гагаринг's own subdivision (КПП 231045001) occupies has NOT been identified; the audit report gives no литер/building-letter for it. Needs a follow-up NSPD/EGRN pull specifically keyed to Гагаринг's own premises once that detail is known."
+      },
+      {
+        "source_id": "s5403",
+        "text": "Possible undocumented Курская область (Kursk oblast) lab/field site: a blogger (@romanov_92) posted 14.12.2024 describing a visit to \"one of Гагаринг's labs\" with the DB's own address-extraction field reading \"Курская область, Россия\" — this predates the training center's registration and describes product-development/electronics-lab work (matches ooo-gagaring's own activity, incl. the «Кузнечик» product). No street address, building name or coordinates given, and this is a casual blogger post, not a registry/licence document — could describe the blogger's own location/travel rather than a precise Гагаринг facility address. FLAGGED, not asserted as a confirmed third location (distinct from the Krasnodar HQ and Одесская 48/3 subdivision) pending independent corroboration."
+      },
+      {
+        "source_id": "s5405",
+        "text": "A second training-center operator, callsign \"Пианист\" running \"УЦ «Шершень»\" (@pianist_svo), is confirmed cooperating directly with Барашков/Гагаринг as of 31.01.2026 (\"попутно налажено взаимодействие между Пианистом (УЦ «Шершень») и Александром Барашковым\"). No legal entity or real name identified for \"Пианист\" — callsign only. \"Шершень\" is heavily overloaded elsewhere in this corpus (an FPV drone model, a Ukrainian ЗРК, an unrelated assault-detachment callsign) — this instance is specifically a training-center name, disambiguated by the @pianist_svo handle. Worth a follow-up if \"Пианист\"'s real identity or УЦ «Шершень»'s legal status surfaces."
       }
     ],
     "sources": [],
@@ -43944,6 +43952,10 @@
       {
         "source_id": "s5393",
         "text": "RESOLVED (2026-09-03): «Архангел Легион» is @arkhangelfront ('Фонд Архангел «Легион»' / 'Организация Военно-Технической Поддержки Защитников Отечества и Патриотического Воспитания Населения «Архангел»', 22.8K subscribers, s5393) — CONFIRMED a separate, distinct Telegram channel/organization from «Архангел Спецназа» (@arx_spn, 1.02M subscribers, s5392, the drone-retraining project channel). Three distinct «Архангел»-branded entities are now on record in this investigation: (1) the parked roymarket_archangel_adjacent_network entities (Kalashnikov/Zaporizhzhia + Wagner/Odintsovo, no link found here), (2) «Архангел Спецназа» @arx_spn (mask branding + Гагаринг joint drone-retraining project), (3) «Архангел Легион» @arkhangelfront (co-runs this entity's 51st Guards Combined Arms Army training-center relationship, per tier_basis). No legal-entity ИНН/ОГРН identified yet for «Архангел Легион» itself — not a registry entity, only referenced via this relationship. Legal entity now identified (2026-09-03): ИНН 2315233718 / ОГРН 1242300005640, АНО «...Архангел» (rusprofile.ru, s5394) — full legal name matches @arkhangelfront's own bio verbatim. See registry entity ano-arkhangel."
+      },
+      {
+        "source_id": "s5404",
+        "text": "Sevastopol appears to be a RECURRING \"сборы\" (training-camp/muster) location for the «Последний рубеж» project — a 14.12.2025 first-person post signed \"Сайга\" (Анна Толстоусова, tolstousova-anna-saiga) describes Sevastopol as \"уже как второй дом\" (already like a second home) after returning from training there, under Паршиков (\"Лыня\")'s leadership and \"под покровительством Лаборатории Гагаринг\". Distinct from the licensed Куникова 24к2 training-center address (which reads as more of a base/administrative site) — no specific polygon name, address or coordinates given for the Sevastopol site. This post predates the training center's own formal registration (26.05.2025), showing «Последний рубеж» field training was already running under Гагаринг's informal patronage before the АНО ДПО entity existed."
       }
     ],
     "sources": [
@@ -43964,7 +43976,8 @@
       "s5373",
       "s5381",
       "s5384",
-      "s5380"
+      "s5380",
+      "s5404"
     ],
     "confidence": "medium",
     "_verified": false,

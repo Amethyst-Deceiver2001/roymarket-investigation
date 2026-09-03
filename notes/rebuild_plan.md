@@ -2365,3 +2365,72 @@ chat log for the full review text.
   section (Russian draft sitting in an Artifact preview, not yet approved).
 - `state_programs[]`/`domain_history[]`/`marketing_claims[]` population —
   needs actual research passes, not just registry hygiene.
+
+---
+
+## Гагаринг network deep-dive (started 2026-09-03)
+
+User request: apply the same wide-net rigor just used on the Ushkuynik
+network (via smolin.info's dossiers) to Гагаринг — explore all connections,
+all linked companies/POI, identify what other sources/methods to bring to
+bear. Full plan drafted in plan mode and approved 2026-09-03; kept in full
+at `~/.claude/plans/spicy-beaming-kite.md` per the redirect note at the top
+of this file (that external path is where plan-mode drafts land — this
+section is the durable summary/tracker).
+
+**Pre-existing state (survey, 2026-09-03):** Гагаринг itself is not thin —
+`ooo-gagaring` (ИНН 2312321660) has a 55-page audited FY2025 financials
+filing, Fedresurs corroboration, ~₽2.16bn revenue, and the training center
+(`ano-dpo-obrazovatelny-tsentr-gagaring`, ИНН 2310240630) has a
+licence-registry-confirmed address (ул. Цезаря Куникова 24к2, Краснодар).
+~73 sources already wired. The real gap is the network around it:
+
+- **The "Архангел" brand-name collision problem** — at least 6 distinct
+  orgs now on record sharing the name, only 2 with registry entries:
+  `ano-arkhangel` (Архангел Легион, ИНН 2315233718, rusprofile-only so
+  far), «Архангел Спецназа» (@arx_spn, no legal entity ID'd), «проект
+  Архангel»/Филиппов М.Г. (parked in memory), `ooo-arkhangel` (EU-sanctioned
+  ЦБСТ resident, ИНН 9714079108, already confirmed unrelated to the
+  others), ООО «Архангел» ИНН 9500026652 (Zaporizhzhia/Kalashnikov, sources
+  exist, no entity record), ООО «Архангел» ИНН 5032379630 (Odintsovo/
+  Wagner, barely developed). Disambiguating this is the single highest-
+  value task.
+- Two open training-center-location sub-threads: which building/unit at
+  Гагаринг's own Одесская 48/3, Краснодар обособленное подразделение
+  (23-building industrial complex, one candidate "Производственный
+  корпус" 1972), and whether Туапсе's «школа Архангел» is the same site as
+  the 51st Army training-center relationship or separate.
+- Named individuals never promoted to `people.json`: Безроднова А.С.
+  (training-center director), Архангельский Г.Е. + Ташматов И.С. (Архангел
+  Легион), Филиппов М.Г. (проект Архангел), Сиразатдинов Н.В. + Климов
+  М.А. (АРРС co-founders), Шатракова А.А. (sanctioned ooo-arkhangel).
+- Unmined local Telegram DB leads: a second training-center operator
+  («Пианист»/УЦ «Шершень»), a possible Kursk-region lab distinct from the
+  Krasnodar HQ, a Sevastopol training trip, named 51st Army recruitment
+  contacts (Галушко/Dark_GAA), and a `potapov_npp` video interview with
+  Барашков.
+- EGRUL/БФО gaps: `ano-arkhangel` and the training center both rest on
+  open-API/aggregator sourcing only; two archived-but-unread устав zips;
+  the OSINT Bees «проект Архангел» capture (s0234/s0235) is still
+  underexploited; НПО Эйлер (Tula, 50%-owned by Гагаринг) already flagged
+  in its own record as high-priority for a deeper pull.
+
+No `smolin.info`-equivalent dossier source exists for Гагаринг in this
+repo — unlike Ushkuynik, that specific technique is new ground here.
+checko.ru, myrotvorets.center and sudrf.ru are likewise not yet integrated
+anywhere in this project; worth trying as single inline lookups.
+
+**Execution discipline**: single EGRUL/checko.ru/myrotvorets/sudrf.ru
+lookups, single Telegram post reads, and single `screen_*.py --slug X`
+calls run inline; any full-roster batch pull is handed to the user as an
+exact command, never backgrounded — same split as every prior session.
+New entities via `corrections_entities.json`, new people via
+`corrections_people.json`; PII stays null without a source; disambiguation
+between same-named entities gets written explicitly, never silently
+merged.
+
+**Deliverable**: a `notes/gagaring_network_map.md` sibling to
+`notes/smolin_source_catalogue.md`, summarizing the resolved Архангел-
+family relationship map — this is the concrete "same wide-net rigor" ask.
+
+**Status**: not started — plan just approved, work begins this session.
