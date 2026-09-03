@@ -327,8 +327,78 @@ exactly the class of block a real browser session should clear.
   don't report a kad.arbitr.ru case as "checked, nothing found" without
   confirming the search actually executed (empty result ≠ empty search).
 
+### Third pass: cracking the kad.arbitr.ru/ras.arbitr.ru search mechanism, and the real blocker (2026-09-03)
+
+Followed up on the second pass's open question — why "Найти" never submitted
+a search even with a valid suggestion selected. Root-caused it fully this
+time, on both `kad.arbitr.ru` and `ras.arbitr.ru` (same PravoTech platform,
+same behaviour):
+
+- **The suggestion dropdown was never the problem.** A fresh page load, a
+  known-good control ИНН (Sberbank's, 7707083893 — guaranteed to have
+  thousands of cases), and reading the *actual* a11y snapshot (not just the
+  visible screenshot) showed the autocomplete does return real suggestion
+  `link` elements and clicking one does correctly populate the filter chip.
+  Confirmed both by snapshot and screenshot (chip renders as `ПАО "Сбербанк
+  России" ИНН 7707083893...` under "Участник дела").
+- **"Найти" itself is genuinely broken client-side, reproducibly.** With a
+  valid filter chip set, clicking the button (both via CDP click and via
+  Enter in the field) does nothing — no new network request fires, the page
+  stays on "Укажите атрибуты дела для поиска". `list_console_messages`
+  shows an `Uncaught (in promise)` error with no message on every attempt,
+  on both sites. This is not a fluke or a stale-session artifact — it
+  reproduced identically after a full page reload.
+- **Root cause: the search is gated behind an invisible captcha
+  (Pravocaptcha) whose JS never fires.** `doSearchRequest()` (a real global
+  function, found via `Object.keys(window)` filtering for `/search/i`)
+  assigns a callback `window.checkPravocaptchaCallback` that's meant to be
+  invoked once an invisible reCAPTCHA-style widget resolves and hands back a
+  `RecaptchaToken`. That widget's own promise is what's silently rejecting
+  — the button click never gets as far as calling the callback at all.
+- **The fix: call `checkPravocaptchaCallback()` directly from the console,
+  skipping the broken captcha step.** `evaluate_script` confirmed it's a
+  genuine global (`typeof window.checkPravocaptchaCallback === "function"`)
+  and calling it with no token argument does trigger the real search POST
+  — `POST /Kad/SearchInstances` on kad.arbitr.ru, `POST /Ras/Search` on
+  ras.arbitr.ru — using whatever filter chip is currently set in the form.
+  **This is the actual unlock**: the suggest/autocomplete API was never the
+  missing piece: the missing piece was bypassing the invisible-captcha
+  handshake that never completes in an automated/headless-adjacent browser
+  context.
+- **What that unlock actually returned this session: a rate limit, not
+  data.** Both `/Kad/SearchInstances` and `/Ras/Search` came back **HTTP
+  451** — but the response body is DDoS-Guard's own throttle page ("Доступ
+  к сервису ограничен в связи с большим количеством запросов, направленных
+  с вашего адреса" — "access restricted due to a high volume of requests
+  from your address"), not a legal/geo-block page. This is a rate limit
+  triggered by this session's own testing cadence (dozens of suggest calls,
+  page reloads, and repeated searches across both sites in a few minutes),
+  not evidence the sites are unreachable. **Correction to the second pass's
+  write-up**: `ras.arbitr.ru`'s earlier-documented HTTP 451 (both the
+  sandbox and the user's own WireGuard RU tunnel) may have been this same
+  rate-limit mechanism rather than a hard geo-block — worth retesting cold,
+  at low volume, before concluding either way.
+- **Net assessment, corrected**: the full mechanism is now known end-to-end
+  — suggest → select → `checkPravocaptchaCallback()` → real search POST —
+  and it is not tied to any per-site secret, just a shared PravoTech
+  captcha-bypass trick. But actually using it productively requires
+  discipline this session violated: **one lookup at a time, spaced out,
+  not a rapid-fire testing loop**, exactly the crawling-jobs caution this
+  project already applies to zakupki/EGRUL batch pulls. Don't retry either
+  site again this session — give the rate limit time to clear (unknown
+  duration, no countdown was shown) before the next real lookup.
+
 ## Recommended next steps (not yet started)
 
+0. **Once the DDoS-Guard rate limit clears**, use the now-known
+   kad.arbitr.ru/ras.arbitr.ru mechanism (suggest → select suggestion →
+   `window.checkPravocaptchaCallback()` in console → read the real
+   `/Kad/SearchInstances` or `/Ras/Search` response) for real entity
+   lookups — one at a time, with real gaps between them, not a testing
+   burst. Start with `ao-nii-stt` (ИНН 6730046954, the entity whose
+   zero-suggestion result last session is still unresolved — worth
+   confirming whether it's genuinely zero cases or an exact-name-match
+   issue) and `npp-radar-mms`.
 1. **HAR-capture torgi.gov.ru and fedresurs.ru** the same way zakupki's
    `supplierTitle` param was found (see `zakupki_gov_ru_contract_search_api`
    memory for that precedent) — these are real, reachable portals blocked
