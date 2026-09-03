@@ -32,6 +32,20 @@
 - **ТРЛЕ.Э60.01.00.0** — UAV battery, 13.1 Ah capacity.
 - **FootBot2** — Educational robotics/AI kit.
 - **Зарядная станция для электротранспорта** — EV charging station, 20-80% charge in 30 minutes.
+- **Система электроснабжения ТРЛЕ.566111.001 СЭС БВС** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства коммутационные и/или предохранительные для электрических цепей прочие, не включенные в другие группировки [s5391]
+- **Батарея аккумуляторная ТРЛЕ.563562.001 АИП 43-1550-NMC-HC** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Батареи аккумуляторные литий-ионные [s5391]
+- **Батарея аккумуляторная ТРЛЕ.563562.001-04 АИП 43-1550-NCA-LT-A** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Батареи аккумуляторные литий-ионные [s5391]
+- **Станция для зарядки электротранспорта постоянным током** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Преобразователи электрические статические [s5391]
+- **Модуль связи CCS Combo 2** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные [s5391]
+- **Модуль связи Type 2** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные [s5391]
+- **Модуль связи  CHAdeMO** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные [s5391]
+- **Модуль связи  GB/T** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные [s5391]
+- **Промышленный 3D-принтер для печати инженерными пластиками** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аддитивные установки струйного нанесения связующего [s5391]
+- **Батарея аккумуляторная АИП 14/28-276-А Li-ion ТРЛЕ.563561.004** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Батареи аккумуляторные прочие [s5391]
+- **Батарея аккумуляторная АИП 14-145-А Li-ion ТРЛЕ.563561.002 ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Батареи аккумуляторные прочие [s5391]
+- **Батарея аккумуляторная АИП 12-220-В Li-ion ТРЛЕ.563561.005** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Батареи аккумуляторные прочие [s5391]
+- **Батарея аккумуляторная АИП 26-331-А Li-ion ТРЛЕ.563561.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Батареи аккумуляторные прочие [s5391]
+- **Батарея аккумуляторная АИП 12-220-А Li-ion ТРЛЕ.563561.003** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Батареи аккумуляторные прочие [s5391]
 
 ## Financials
 
@@ -98,6 +112,7 @@ _No named principals linked to this entity yet._
 | s0366 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7802693899_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s0452 | EGRUL extract | EGRUL extract (ul-1197847166560-20260823120900.pdf) | — | 2026-08-23 |
 | s0794 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7802693899_20260824_ooo-kravt.json) | 2026-08-24 | — |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

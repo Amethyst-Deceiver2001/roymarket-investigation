@@ -40,6 +40,11 @@
 - **РТД-45** — Declared-civilian: multi-rotor UAS, up to 45kg payload, ~30min endurance. [s1169]
 - **РТД-Телеком** — Declared-civilian: tethered multi-rotor UAS, power supplied via cable from a ground station. [s1169]
 - **РТД-Агро20** — Declared-civilian: agricultural multi-rotor UAS, 20kg payload, ~25min endurance. [s1169]
+- **БПЛА РТД-К7** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 0,25 кг, но не более 4 кг [s5391]
+- **Дрон-конструктор "Колобок"** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 0,25 кг, но не более 4 кг [s5391]
+- **БПЛА РТД-КМ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 4 кг, но не более 30 кг [s5391]
+- **БПЛА РТД-Д** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 4 кг, но не более 30 кг [s5391]
+- **БПЛА РТД-1** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 0,25 кг, но не более 4 кг [s5391]
 
 ## State-program participation
 
@@ -116,6 +121,7 @@
 | s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
 | s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

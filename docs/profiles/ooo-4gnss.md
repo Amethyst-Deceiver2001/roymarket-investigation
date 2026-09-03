@@ -28,6 +28,19 @@
 |---|---|---|
 | 10000 | — | from brief:prose, unverified |
 
+## Products
+
+- **ГНСС-приемник 4GNSS FlyBox** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы геодезические; active ПП719 certificate flag on GISP listing [s5391]
+- **ГНСС-приемник 4GNSS DEKART-AG** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы геодезические; active ПП719 certificate flag on GISP listing [s5391]
+- **ГНСС-приемник 4GNSS ОС-113** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы геодезические; active ПП719 certificate flag on GISP listing [s5391]
+- **ГНСС-приемник 4GNSS ОС-213** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы геодезические; active ПП719 certificate flag on GISP listing [s5391]
+- **ГНСС-плата 4GNSS NPX** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы геодезические [s5391]
+- **ГНСС-плата 4GNSS NP2** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы геодезические [s5391]
+- **ГНСС-плата 4GNSS NP1** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы геодезические [s5391]
+- **ГНСС-плата 4GNSS NP3** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы геодезические [s5391]
+- **ГНСС-приемник 4GNSS Pro-D** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы геодезические [s5391]
+- **ГНСС-приемник 4GNSS Start** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы геодезические [s5391]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -59,6 +72,7 @@ _No named principals linked to this entity yet._
 | s0345 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
 | s0346 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
 | s0462 | EGRUL extract | EGRUL extract (ul-5157746074272-20260823120422.pdf) | — | 2026-08-23 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

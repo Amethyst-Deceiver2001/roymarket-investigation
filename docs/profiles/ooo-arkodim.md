@@ -22,6 +22,8 @@
 ## Products
 
 - **«Братишка»** — Tracked ground robot (UGV) for casualty/cargo evacuation, up to 150kg payload (people, ammunition, medical kits). PRESS-SOURCED ONLY (business-gazeta.ru profile of founder Барахтин А.В., not this entity's own site -- this entity has no confirmed website). In low-volume, volunteer/charity-funded production per the same source. Do not confuse with the SISTER company's own site, arkodimpro.ru (ООО «Аркодим-Про», a DIFFERENT ИНН, 1658146106, same founder) -- that site shows only civilian industrial robotics/CNC services, no military content.
+- **Гибкий кабельный канал ARKODIM стальной** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Изделия прочие из недрагоценных металлов, не включенные в другие группировки [s5391]
+- **Гибкий кабельный канал ARKODIM пластиковый ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Арматура электроизоляционная из пластмасс [s5391]
 
 ## State-program participation
 
@@ -101,6 +103,7 @@
 |---|---|---|---|---|
 | s0475 | EGRUL extract | EGRUL extract (ul-1101690020959-20260823131713.pdf) | — | 2026-08-23 |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

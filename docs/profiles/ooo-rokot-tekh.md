@@ -23,6 +23,10 @@
 ## Products
 
 - **Пластиковые пропеллеры для FPV-дронов** — 9" and 10" currently, 7"/13"/15" in development. Explicitly marketed for combat FPV drones (plastinfo.ru, sdelanounas.ru, ridus.ru coverage of the Yaroslavl production launch, 2025). Sold via Ozon/Avito plus direct/Telegram.
+- **Пропеллер для беспилотных авиационных систем RT1050** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Комплектующие (запасные части) беспилотных авиационных систем, не имеющие самостоятельных группировок; active ПП719 certificate flag on GISP listing [s5391]
+- **Пропеллер для беспилотных авиационных систем RT9045** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Комплектующие (запасные части) беспилотных авиационных систем, не имеющие самостоятельных группировок; active ПП719 certificate flag on GISP listing [s5391]
+- **Пропеллеры 9 дюймов для FPV дрона** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Комплектующие (запасные части) беспилотных авиационных систем, не имеющие самостоятельных группировок [s5391]
+- **Пропеллеры 10 дюймов для FPV дрона** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Комплектующие (запасные части) беспилотных авиационных систем, не имеющие самостоятельных группировок [s5391]
 
 ## State-program participation
 
@@ -59,6 +63,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0515 | EGRUL extract | EGRUL extract (ul-1247600010954-20260823135127.pdf) | — | 2026-08-23 |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

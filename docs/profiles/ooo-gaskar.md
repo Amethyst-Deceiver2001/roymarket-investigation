@@ -26,6 +26,12 @@
 - **СИБНК**
 - **Мотор PY3115 1300KV бесколлекторный FPV** — Brushless FPV motor for heavy FPV drones/Long Range/cinelifters, 9-10 inch propeller class. [s1385]
 - **Пропеллеры 10 дюймов 3 лопасти FPV (совместимость 3115 900KV)** — 10-inch 3-blade FPV propellers, 889 руб, 2CW+2CCW set of 4. [s1385]
+- **Беспилотная авиационная система "Шторм"** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном самолетного типа с максимальной взлетной массой свыше 1 кг, но не более 30 кг [s5391]
+- **Беспилотная авиационная система "Сибирячок-5"** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 4 кг, но не более 30 кг [s5391]
+- **Беспилотная авиационная система "Втулка"** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном самолетного типа с вертикальным взлетом и посадкой с максимальной взлетной массой свыше 1 кг, но не более 30 кг [s5391]
+- **Беспилотная авиационная система «Сибирь-2»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 4 кг, но не более 30 кг [s5391]
+- **Беспилотная авиационная система «Сибирь-1»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 4 кг, но не более 30 кг [s5391]
+- **Беспилотная авиационная система «Сибирячок с совмещенной камерой в видимом и инфракрасном диапазонах»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 0,25 кг, но не более 4 кг [s5391]
 
 ## State-program participation
 
@@ -64,6 +70,7 @@ _No named principals linked to this entity yet._
 | s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
 | s1385 | Ozon marketplace capture | Ozon marketplace capture (OZON_9710112989_20260825_gaskargroup-seller-storefront.json) | 2026-08-25 | — |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

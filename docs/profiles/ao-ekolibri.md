@@ -25,6 +25,10 @@
 - **ECOLIBRI eVTOL** — Electric VTOL aircraft.
 - **ECOLIBRI Р-75** — eVTOL variant.
 - **EM-01** — Electric motor.
+- **Эколибри Р-35** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном самолетного типа с максимальной взлетной массой свыше 30 кг, но не более 500 кг [s5391]
+- **Эколибри Р-30** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном самолетного типа с максимальной взлетной массой свыше 1 кг, но не более 30 кг [s5391]
+- **Эколибри Р-5** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 4 кг, но не более 30 кг [s5391]
+- **Эколибри Р-75** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном самолетного типа с вертикальным взлетом и посадкой с максимальной взлетной массой свыше 30 кг, но не более 500 кг [s5391]
 
 ## Financials
 
@@ -95,6 +99,7 @@
 | s1403 | АЭРОНЕКСТ member record | АЭРОНЕКСТ member record (AERONEXT_7714473012_20260825_ao-ekolibri.json) | 2026-08-25 | — |
 | s2625 | Naletay | Naletay (NALETAY_7714473012_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

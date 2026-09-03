@@ -29,6 +29,20 @@
 - **«Метеосервер»** — Hydrometeorological monitoring system.
 - **Автоматизированная док-станция (мобильный дронопорт)** — Mobile automated dronoport/dock station, от ₽26,000,000. Listed alongside БВС ВТ-440м and БВС ВТ-30Е on this entity's налетай.рф storefront; not previously in products[]. [s2630]
 - **«Характер-К»** — Корабельная гидрометеорологическая станция (naval shipboard hydrometeorological station), КОД 177166 — supplied to МО РФ under gov. contract № РК/1/04/3/0208/2014 (reg. 0173100004514000947, ₽96,393,305.55, 2014-2015). A военно-морской/naval-fit product line distinct from this entity's better-documented UAV/radar work — found only by reading the fetch-documents attachment in full. [s2712]
+- **Датчик метеорологической дальности видимости ДМДВ ИСАТ.416141.003** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы прочие; active ПП719 certificate flag on GISP listing [s5391]
+- **Датчик скорости и направления ветра ДСНВ ИСАТ.416136.005** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы прочие; active ПП719 certificate flag on GISP listing [s5391]
+- **Датчик метеорологических параметров ДМП ИСАТ.416311.002** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы прочие; active ПП719 certificate flag on GISP listing [s5391]
+- **Измеритель гидрологических параметров Вектор-3 /Модификация 6/** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы гидрологические [s5391]
+- **Услуга по гидрометеорологическому обеспечению ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Услуги по гидрометеорологическому обеспечению деятельности физических и юридических лиц [s5391]
+- **Измеритель гидрологических параметров Вектор-3 /Модификация 3/** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы гидрологические [s5391]
+- **Измеритель гидрологических параметров Вектор-3 /Модификация 2/** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы гидрологические [s5391]
+- **Измеритель гидрологических параметров Вектор-3 /Модификация 5/** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы гидрологические [s5391]
+- **Измеритель гидрологических параметров Вектор-3 /Модификация 4/** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы гидрологические [s5391]
+- **Измеритель гидрологических параметров Вектор-3 /Модификация 1/** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы гидрологические [s5391]
+- **Регулятор теплопотребления АРГОС** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Приборы автоматические регулирующие и контрольно-измерительные прочие [s5391]
+- **Датчик атмосферного давления ДАДС-1** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Барометры [s5391]
+- **Датчик влажности-температуры ДТВВ-01** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Гигрометры [s5391]
+- **Квантовый магнитометр** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы геофизические [s5391]
 
 ## Government contracts
 
@@ -296,6 +310,7 @@
 | s5281 | arbitration court filing | arbitration court filing (A54-3359-2026_20260417_Opredelenie.pdf) | 2026-04-17 | 2026-04-17 |
 | s5282 | arbitration court filing | arbitration court filing (A56-17609-2026_20260221_Opredelenie.pdf) | 2026-02-21 | 2026-02-21 |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

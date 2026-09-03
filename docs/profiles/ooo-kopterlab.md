@@ -27,6 +27,12 @@
 
 - **Дрон-конструктор «Колобок»** — Educational/hobby drone-building kit (multirotor), от ₽75,000. [s2626]
 - **Дрон-конструктор «Кузнечик»** — Educational/hobby drone-building kit (multirotor), от ₽87,000. [s2626]
+- **Программно-аппаратный комплекс «Форпост»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Бортовые системы и/или компоненты систем автоматического управления полетом беспилотных воздушных судов [s5391]
+- **Беспилотный летательный аппарат «Матка»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа [s5391]
+- **Беспилотный летательный аппарат «Синица»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 0,25 кг, но не более 4 кг [s5391]
+- **Беспилотный летательный аппарат Многоцелевая транспортная платформа КЛ-МТП-30** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 30 кг, но не более 500 кг [s5391]
+- **Беспилотный летательный аппарат Многоцелевая транспортная платформа КЛ-МТП-100** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 30 кг, но не более 500 кг [s5391]
+- **Наземная стация управления «Форпост»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Бортовые системы и/или компоненты систем автоматического управления полетом беспилотных воздушных судов [s5391]
 
 ## Financials
 
@@ -66,6 +72,7 @@ _No named principals linked to this entity yet._
 | s0473 | EGRUL extract | EGRUL extract (ul-1247700198734-20260823122742.pdf) | — | 2026-08-23 |
 | s2626 | Naletay | Naletay (NALETAY_7720925267_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

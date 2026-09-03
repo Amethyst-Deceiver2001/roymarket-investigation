@@ -24,6 +24,7 @@
 ## Products
 
 - **БПР ЯРЛ**
+- **Бронежилет для собак «Псы войны»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Изделия текстильные готовые прочие, не включенные в другие группировки; active ПП719 certificate flag on GISP listing [s5391]
 
 ## Principals & persons of interest
 
@@ -34,6 +35,7 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0471 | EGRUL extract | EGRUL extract (ul-1237700170311-20260823122944.pdf) | — | 2026-08-23 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

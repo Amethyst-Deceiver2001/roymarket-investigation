@@ -75,6 +75,11 @@
 - **«Ребус»** — Stationary EW complex (also «Ребус-2»).
 - **«Штора»** — Stationary EW station (also «Штора К12-700»).
 - **Сигнал-М2** — Drone detector — possibly an updated variant of the already-recorded bare "Сигнал" model.
+- **Радиоэлектронное средство, станция подавления БПЛА, тип "Капюшон", модель рюкзак ТП4-28А** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки [s5391]
+- **Радиоэлектронное средство, станция подавления БПЛА, тип "Капюшон", модель рюкзак ТП4-28Б** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки [s5391]
+- **Радиоэлектронное средство, станция подавления БПЛА, тип "Капюшон", модель рюкзак ТП4-50Б** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки [s5391]
+- **Радиоэлектронное средство, станция подавления БПЛА, тип "Капюшон", модель рюкзак ТП4-50А** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки [s5391]
+- **Радиоэлектронное средство, модуль для станции подавления БПЛА, тип "Капюшон", модель ФПВ-2/300** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки [s5391]
 
 ## Trademarks
 
@@ -123,6 +128,7 @@ _No named principals linked to this entity yet._
 | s0537 | certificate/licence record | certificate/licence record (CERT_4800016776_20260823_kilovatt-official-dealer-2106-2024.pdf) | 2026-08-23 | — |
 | s0540 | transcript | transcript (TRANSCRIPT_20260823_kilovatt-kapyushon-k12-test-report.pdf) | 2026-08-23 | — |
 | s0592 | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_4800016776_20260824_ooo-npo-kilovatt-shestopalov.json) | 2026-08-24 | — |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

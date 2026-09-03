@@ -38,6 +38,43 @@
 - **Модуль процессорный ELV-MC03 (SMARC/CE/Q7/base)** — ELV-MC03 embedded processor module family (SMARC, CE and Q7 form-factor variants), РАЯЖ.467444 ТУ series. Производится по адресам: г. Москва, Зеленоград, ул. Конструктора Лукина, д. 14, стр. 14 и пр-д №4801, д. 7. [s5362]
 - **Модуль процессорный Салют-ЭЛ24ПМ2** — Processor module, РАЯЖ.441461.031ТУ. [s5364]
 - **Микросхема интегральная 1892ВМ268** — Мультикор-family integrated circuit, АЕНВ.431280.605ТУ. [s5366]
+- **Микросхема интегральная 1892ВМ14Я** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing [s5391]
+- **Микросхема интегральная К1892ВМ21Я** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing [s5391]
+- **Микросхема интегральная К1892ВГ1Я** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing [s5391]
+- **Микросхема интегральная 1657РУ2У** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing [s5391]
+- **Микросхема интегральная 1892ВМ10Я АЕЯР.431280.823ТУ РАЯЖ.431282.012-00.02** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing [s5391]
+- **Модуль процессорный ELV-MC03-SMARC** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие [s5391]
+- **Модуль процессорный ELV-MC03-CE** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие; active ПП719 certificate flag on GISP listing [s5391]
+- **Модуль процессорный ELV-MC03-Q7** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие; active ПП719 certificate flag on GISP listing [s5391]
+- **Модуль отладочный ELV-SMARC-CB РАЯЖ.441461.049ТУ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing [s5391]
+- **Микросхема интегральная 1892ВМ28А8** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing [s5391]
+- **Микросхема интегральная 1892ВМ288** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing [s5391]
+- **Микросхема интегральная 1892ВМ10Я АЕЯР.431280.823ТУ РАЯЖ.431282.012-00.01** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing [s5391]
+- **Микросхема интегральная 1892ВМ8Я** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Микросхема интегральная 1892ВМ5АЯ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Микросхема интегральная 1892ВМ7Я** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Микросхема интегральная 1892ВМ2Я** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Микросхема интегральная 1892ВМ3Т** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Микросхема интегральная 1892КП1Я** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Микросхема интегральная 1508ПЛ9Т** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Микросхема интегральная 1508ПЛ8Т** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Микросхема интегральная 1288ПЛ1У** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Микросхема интегральная 1892ВМ15БФ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Микросхема интегральная 1892ХД4Ф** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Киберзащищенная IP-видеокамера ECAM03BL-8** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые [s5391]
+- **Киберзащищенная IP-видеокамера ECAM03D-2** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые [s5391]
+- **Киберзащищенная IP-видеокамера ECAM03BX-5** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые [s5391]
+- **Киберзащищенная IP-видеокамера ECAM03D-5** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые [s5391]
+- **Киберзащищенная IP-видеокамера ECAM03D-8** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые [s5391]
+- **Киберзащищенная IP-видеокамера ECAM03BX-2** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые [s5391]
+- **Киберзащищенная IP-видеокамера ECAM03BX-8** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые [s5391]
+- **Киберзащищенная IP-видеокамера ECAM03DM-5** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые [s5391]
+- **Киберзащищенная IP-видеокамера ECAM03BL-2** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые [s5391]
+- **Киберзащищенная IP-видеокамера ECAM03BL-5** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые [s5391]
+- **Киберзащищенная IP-видеокамера ECAM03DM-2** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые [s5391]
+- **Станция радиолокационная ЕНОТ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная [s5391]
+- **Микросхема интегральная 1892ВМ15АФ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
+- **Микросхема интегральная 1892ВМ206** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные [s5391]
 
 ## Government contracts
 
@@ -388,6 +425,7 @@
 | s5367 | document | document (PP719_7735582816_20240626_zaklyuchenie-66629-11.pdf) | 2024-06-26 | 2024-06-26 |
 | s5368 | document | document (PP719_7735582816_20240627_zaklyuchenie-66839-11.pdf) | 2024-06-27 | 2024-06-27 |
 | s5369 | document | document (PP719_7735582816_20240627_zaklyuchenie-66845-11.pdf) | 2024-06-27 | 2024-06-27 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -13,6 +13,11 @@
 ## Products
 
 - **Оптимизатор энергопотребления трёхфазный серии ОЭП 3** — Three-phase AC power-consumption optimizer line (ОЭП 3-060-01 through ОЭП 3-500-01/635-01, incl. -02 variants), ТУ 27.12.31-001-29250611-2018. Производится по адресу: г. Санкт-Петербург, Кантемировская ул., д. 10. [s5370]
+- **Универсальный преобразователь интерфейсов "УПИ-01"** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие [s5391]
+- **Modbus коммутатор "МБК-01"** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие [s5391]
+- **Обратимый бустер серии ОБ3 четырёхступенчатый** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Панели и прочие комплекты электрической аппаратуры коммутации или защиты на напряжение не более 1 кВ [s5391]
+- **Пассивный когерентный локационный комплекс "ПКЛ"** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная [s5391]
+- **Оптимизатор энергопотрбления ОЭП 3-200-01** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Машины электрические и аппаратура специализированные [s5391]
 
 ## Government contracts
 
@@ -322,6 +327,7 @@
 | s3218 | Zakupki | Zakupki (ZAKUPKI_contract_1772054420822000003_20260829.html) | 2026-08-29 | — |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5370 | document | document (PP719_7813491943_20200422_zaklyuchenie-28088-05.pdf) | 2020-04-22 | 2020-04-22 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -45,6 +45,54 @@
 - **Плата материнская мобильного компьютера MIG T8X (x86)** — Motherboard for the MIG T8X ruggedized computer, ТРНМ.467483.001ТУ. [s5355]
 - **Плата клавиатуры мобильного компьютера MIG T8X (x86)** — Keyboard board for the MIG T8X ruggedized computer, ТРНМ.468381.020ТУ. [s5355]
 - **Мобильный термопринтер MIG КВ4** — Ruggedized mobile thermal printer, ТРНМ.162442.001ТУ. [s5354]
+- **Комплекс средств автоматизации планирования использования воздушного пространства и управления воздушным движением «Галактика» АЕСФ.466451.032** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Программно-аппаратные комплексы и аналогичное оборудование, подключаемое к компьютеру или сети передачи данных [s5391]
+- **Сервер 2U общего назначения МЛТ-СХ ЛЕТР.466531.022** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Серверы хранения данных [s5391]
+- **Комплекс вычислительный  МЛТ-КВ ЛЕТР.466535.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Программно-аппаратные комплексы, созданные на серверах или устройствах, содержащие в своем составе один или более вычислительных узлов [s5391]
+- **Плата расширения дисковой корзины  U.2-12xLFF ЛЕТР.467239.002** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные [s5391]
+- **Плата расширения дисковой корзины TRI-2xSFF ЛЕТР.467239.003** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные [s5391]
+- **Персональный компьютер МЛТ-ПК ЛЕТР.466219.014** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Системные блоки [s5391]
+- **Плата материнская B760W-MX ЛЕТР.469535.002** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные [s5391]
+- **Программно-аппаратный комплекс биометрической идентификации и доступа «Киоск» АЕСФ.426479.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности [s5391]
+- **Программно-аппаратный комплекс идентификации по радужной оболочке глаза «ВЗОР-Пилон» АЕСФ.425729.002-02** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности [s5391]
+- **Программно-аппаратный комплекс биометрической идентификации и доступа «Киоск mini» АЕСФ.426479.002** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности [s5391]
+- **Оптический сканер папиллярного узора «Азимут А1» АЕСФ.468469.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры [s5391]
+- **Программно-аппаратный комплекс «ВЗОР-Считыватель» АЕСФ.425729.005** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры [s5391]
+- **Оптический сканер папиллярного узора «Азимут А2» АЕСФ.468469.002** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры [s5391]
+- **Оптический сканер папиллярного узора «Азимут А4» АЕСФ.468469.003** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры [s5391]
+- **Оптический сканер папиллярного узора «Азимут АР» АЕСФ.468469.004** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры [s5391]
+- **Программно-аппаратный комплекс идентификации по радужной оболочке глаза «ВЗОР-Пилон» АЕСФ.425729.002-03** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности [s5391]
+- **Analyzer 2700 АЕСФ.464345.004** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Приборы цифровые электроизмерительные прочие; active ПП719 certificate flag on GISP listing [s5391]
+- **Сервер 2U общего назначения МЛТ-С  ЛЕТР.466531.021** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Серверы; active ПП719 certificate flag on GISP listing [s5391]
+- **Плата расширения интерфейсов 3х16  ЛЕТР.468359.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing [s5391]
+- **Плата расширения дисковой корзины TRI-8XSFF ЛЕТР.467239.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing [s5391]
+- **Плата материнская серверная МЛ5 ЛЕТР.469555.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing [s5391]
+- **Сервер 2U общего назначения МЛТ  ЛЕТР.466531.021** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Серверы [s5391]
+- **Сканер микропрепаратов "OneCell Scan 3.0" по ЕНЦР.941119.003ТУ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Микроскопы оптические; active ПП719 certificate flag on GISP listing [s5391]
+- **Комплекс документирования и воспроизведения информации CDR 2700 АЕСФ.466451.031** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing [s5391]
+- **Система коммутации речевой связи(СКРС) VCS 2700 АЕСФ.466535.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации [s5391]
+- **Комплексный диспетчерский тренажёр АЕСФ.466948.002** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing [s5391]
+- **Плата клавиатуры мобильного компьютера MIG T8X(x86) ТРНМ.468381.020** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing [s5391]
+- **Приёмоответчик DME/N 2700 АЕСФ.461512.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing [s5391]
+- **Система посадки ILS 2700 АЕСФ.461511.029** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing [s5391]
+- **Азимутальный радиомаяк VOR 2700 АЕСФ.461512.002** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing [s5391]
+- **Радиомаяк азимутальный доплеровский  DVOR 2000 ВАИШ.461512.001-08** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing [s5391]
+- **Приёмоответчик DME/NL 2700 АЕСФ.461511.004-01** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing [s5391]
+- **Автоматический радиопеленгатор DF 2000 ВАИШ.462112.016-14** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная; active ПП719 certificate flag on GISP listing [s5391]
+- **Многопозиционная система наблюдения MAS 2700 АЕСФ.466453.058** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная; active ПП719 certificate flag on GISP listing [s5391]
+- **Аэродромный локатор S диапазона со встроенным вторичным каналом "АОРЛ-АМИ 2700" АЕСФ.461512.016** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная; active ПП719 certificate flag on GISP listing [s5391]
+- **Комплекс средств автоматизации управления воздушным движением (КСА УВД) "Галактика" АЕСФ.466451.003** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing [s5391]
+- **Командный пульт управления  П-166М КПУ УЯИД.466259.002** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing [s5391]
+- **Блок переключений универсальный П-166М БПРУ-03 УЯИД.468332.024** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing [s5391]
+- **Телекоммуникационный сервер П-166М ТКС УЯИД.465254.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing [s5391]
+- **Блок управления сиреной П-166М БУС УЯИД.468333.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing [s5391]
+- **Блок переключений универсальный П-166М БПРУ-02 УЯИД.468332.016** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Оборудование управления точками доступа, поддерживающими стандарт для беспроводных сетей 802.11хх; active ПП719 certificate flag on GISP listing [s5391]
+- **Специальное оконечное средство оповещения П-166М «СЗО-3» АЕСФ.468354.015** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing [s5391]
+- **Модуль речевого оповещения П-166М МРО УЯИД.468155.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing [s5391]
+- **Комплекс аппаратно-программный «Балка» АЕСФ.464965.005** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты, приборы и машины для измерения или контроля прочие, не включенные в другие группировки; active ПП719 certificate flag on GISP listing [s5391]
+- **Блок управления П-166М БУ УЯИД.466259.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации [s5391]
+- **Терминал управления П-166М УЯИД.469219.001** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации [s5391]
+- **Мобильный компьютер MIG S6 ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Ноутбуки, в том числе портативные в защищенном исполнении, предназначенные для работы в сложной среде эксплуатации [s5391]
+- **Тахограф цифровой «КАСБИ SMART»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Тахографы [s5391]
 
 ## Government contracts
 
@@ -106,6 +154,7 @@
 | s5353 | document | document (PP719_7701583410_20210629_zaklyuchenie-54118-11.pdf) | 2021-06-29 | 2021-06-29 |
 | s5354 | document | document (PP719_7701583410_20211221_zaklyuchenie-113235-11.pdf) | 2021-12-21 | 2021-12-21 |
 | s5355 | document | document (PP719_7701583410_20240604_zaklyuchenie-57277-11.pdf) | 2024-06-04 | 2024-06-04 |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

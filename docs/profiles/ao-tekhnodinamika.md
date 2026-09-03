@@ -11,6 +11,11 @@
 - **Address:** Г.Москва
 - **Wildberries overlap:** not_checked
 
+## Products
+
+- **Стартер-генератор трехкаскадный синхронный регулируемый ГСР-90/120 (8Е3.117.079)** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Комплектующие (запасные части) летательных аппаратов, не имеющие самостоятельных группировок [s5391]
+- **Стартер-генератор СТГ-9В (8Е3.116.018) АО "ТЕХНОДИНАМИКА" Россия** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Комплектующие (запасные части) летательных аппаратов, не имеющие самостоятельных группировок [s5391]
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -47,6 +52,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0110 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7719265496_20260822_ao-tekhnodinamika.json) | 2026-08-22 | 2026-08-22 |
 | s0778 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7719265496_20260824_ao-tekhnodinamika.json) | 2026-08-24 | — |
+| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
