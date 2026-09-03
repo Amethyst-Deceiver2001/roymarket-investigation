@@ -1332,6 +1332,29 @@ def main() -> int:
             target["_verified_against"] = spec.get("verified_against")
 
     quotes = parse_quotes(text)
+    # parse_quotes only reads <blockquote> tags out of the frozen
+    # docs/_archive snapshot — it can never pick up a quote sourced after
+    # that snapshot was taken. quotes_manual.json is the correction-file
+    # equivalent for quotes (entities/people get add_entities/corrections;
+    # quotes had no such mechanism until 2026-09-03), hand-maintained,
+    # never overwritten by this script.
+    quotes_manual_path = REPO / "data" / "registry" / "quotes_manual.json"
+    if quotes_manual_path.exists():
+        manual = json.loads(quotes_manual_path.read_text(encoding="utf-8"))
+        next_n = len(quotes) + 1
+        for q in manual:
+            rec = {
+                "id": f"q{next_n:03d}",
+                "text_ru": q.get("text_ru"),
+                "speaker": q.get("speaker"),
+                "source_id": q.get("source_id"),
+                "date": q.get("date"),
+                "translation_en": q.get("translation_en"),
+                "cite_raw": q.get("cite_raw"),
+                "_verified": q.get("_verified", False),
+            }
+            quotes.append(rec)
+            next_n += 1
     open_qs = parse_global_open_questions(lines, text)
     prose_recs, prose_leads = parse_prose_identifiers(text)
     ogrn_to_inn = {e["ogrn"]: e["inn"] for e in ents + mans

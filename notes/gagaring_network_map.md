@@ -158,7 +158,13 @@ Still needed for a real presentation:
   resolved: a real production facility, not just a training school.
   Postal-code discrepancy noted (350312 per Роскомнадзор inspection vs. a
   different code in the audit report) — worth resolving alongside the
-  building-identification work.
+  building-identification work. Scripted attempts blocked this pass:
+  nspd.gov.ru's geoportal API returned a WAF 403 (same DDoS-Guard-class
+  block already documented for kad.arbitr.ru), 2gis.ru's search is a JS SPA
+  with nothing server-rendered via plain curl, and the audit PDF doesn't
+  extract cleanly for this specific page (pdftotext returns nothing, likely
+  scanned; not re-attempted with tesseract this pass). Needs a manual
+  browser lookup, same as the kad.arbitr.ru precedent.
 - **Sevastopol** — recurring «Последний рубеж» training-muster location,
   described by Толстоусова as "уже как второй дом" (already like a second
   home). No street address/coordinates on file yet.
@@ -185,29 +191,43 @@ Still needed: product-level marketing copy (current descriptions are audit-
 report/price-list text, not the company's own promotional language) and
 any available product photography.
 
-### Quotes (for direct citation, not yet in `quotes.json`)
+### Quotes — now in `quotes.json` (added 2026-09-03)
 
-Two on-record statements worth pulling verbatim for `quotes.json` before
-the profile build, per this project's verbatim-quote discipline
-(`STYLE_GUIDE.md` §3.1 — never paraphrase):
+Four verbatim quotes pulled from the local Telegram DB and archived, via a
+new `data/registry/quotes_manual.json` correction file (`quotes.json` was
+previously only auto-extracted from a frozen HTML snapshot's `<blockquote>`
+tags — `parse_quotes()` in `extract_registry.py` now also merges this
+manual file on every regeneration, so these survive future rebuilds):
 
-1. Барашков's own "конкуренция в системе" line from the Соловьёв LIVE
-   appearances (20.06.2025 and/or 25.07.2025) — currently only paraphrased
-   in the registry's `_raw` context field, not pulled as a full verbatim
-   quote with timestamp/episode citation.
-2. Чадаев's 11.08.2026 post (`chadayevru`, s5407) framing Барашков as a
-   personal friend — currently summarized as "friendship framing," not
-   quoted directly. A named ЦБСТ-partner principal publicly vouching for
-   Барашков is a strong credibility/network-proximity data point for the
-   presentation and should be quoted exactly, not summarized.
-3. Толстоусова's "уже как второй дом" (Sevastopol) line, already quoted
-   above — a good example of the kind of first-person operator testimony
-   worth surfacing directly rather than only as registry prose.
+1. **Чадаев on Барашков** (s5407, 11.08.2026): "Саша Барашков из Гагаринга
+   — друг, товарищ и умница. Хорошо, что есть те, кто помнят, как что
+   было." A named ЦБСТ-partner principal (Ушкуйник's own GD) publicly
+   vouching for Барашков by first name — a real credibility/network-
+   proximity data point.
+2. **"Русский Инженер" repost, cross-posted by Чадаев** (s5418, same day):
+   credits Барашков with personally delivering "more than ten thousand"
+   «Кузнечик» comms kits in an alleged Kursk NPP defense episode. Strong
+   presentation material IF verified — flagged as an open_question on
+   `ooo-gagaring` since the underlying battlefield event and the unit count
+   have no independent corroboration yet; don't present as established
+   without checking further.
+3. **Broadcast topic list** (s5417, 25.10.2024, @my_el_lab msg 975,
+   cross-posted to @projectArchangel/@mil_hub): "конкуренция в системе
+   обороны государства - это жизненно необходимо... сейчас КБ может
+   возникнуть в любом гараже... служить надо родине, а не вышестоящему
+   начальнику" — the channel's own topic framing for a recorded interview,
+   not a transcript; treat as close paraphrase until the actual audio is
+   checked.
+4. **Толстоусова, "Сайга"** (s5404, 14.12.2025): "Севастополь уже как
+   второй дом... под теплым и надежным покровительством Лаборатории
+   Гагаринг" — first-person operator testimony, good presentation material
+   for the training-program section.
 
-None of these are in `marketing_claims[]` or `quotes.json` yet — both are
-empty for Гагаринг. Filling them (verbatim RU text, EN translation,
-context, source_id, as_of) is a concrete next step before drafting the
-actual profile page.
+Still empty: `marketing_claims[]` on `ooo-gagaring` itself — none of
+Гагаринг's own site/catalog copy has been captured verbatim yet (only
+audit-report and price-list text so far). A grep of gagaring.ru itself for
+СВО/military framing (per the project's standing capture-verbatim-
+marketing-copy discipline) hasn't been done this pass.
 
 ## Sources and methods
 

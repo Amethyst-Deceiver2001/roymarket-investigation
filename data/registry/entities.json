@@ -35928,6 +35928,14 @@
       {
         "source_id": null,
         "text": "Attempted to pin the specific building/unit at the Одесская 48/3 subdivision address via public business-directory listings (2026-09-03): zoon.ru's full tenant list for Одесская, 48 (bare address, ~22 organizations — newspaper, dental clinic, furniture store, insurance, construction firms, etc.) shows NO listing for Гагаринг or any electronics/UAV-related business. This is a negative result, not conclusive — the subdivision's actual address carries a \"/3\" building suffix not necessarily covered by this bare-\"48\" directory listing, and a defense-adjacent production subdivision would plausibly not publicize itself in a consumer business directory regardless. The specific building/unit within the 23-building complex remains unidentified; would need a targeted EGRN/Rosreestr pull keyed to the exact КПП 231045001 registration, not a business-directory search, to resolve."
+      },
+      {
+        "source_id": "s5418",
+        "text": "A 11.08.2026 «Русский Инженер» post (cross-posted by Чадаев, @chadayevru msg 5014) credits Барашков/Гагаринг with personally delivering 'more than ten thousand' «Кузнечик» comms kits that allegedly let Russian FPV drones overcome Ukrainian EW jamming during an alleged defense of a Kursk NPP incursion attempt. This is a third-party battlefield-scale claim (not Гагаринг's own marketing copy) — a strong candidate for battlefield_evidence[], but the underlying event (a claimed VSU push toward the Kursk NPP) is not independently corroborated here and the '10,000+' unit figure has no other source. Flagged for verification before promotion to battlefield_evidence[]."
+      },
+      {
+        "source_id": null,
+        "text": "Attempted to pin the Одесская 48/3 production-subdivision building via scripted lookups (2026-09-03): nspd.gov.ru's public geoportal API returned a WAF 403 (same blocking pattern already documented for kad.arbitr.ru — no scripting route from this sandbox), and 2gis.ru's Krasnodar search page is a JS single-page app with no server-rendered results reachable via plain curl. The original audit-report PDF (s5333) does not OCR/extract cleanly for this detail either (pdftotext returns no text for it, likely a scanned page — not re-attempted with tesseract this pass). Resolving this needs either a manual browser NSPD/2GIS/Rosreestr lookup (same class of manual-only source as kad.arbitr.ru) or a proper OCR pass on the audit PDF's relevant page."
       }
     ],
     "sources": [],
