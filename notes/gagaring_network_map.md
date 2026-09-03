@@ -173,11 +173,46 @@ Still needed for a real presentation:
   production facility, not just a training school. Postal-code discrepancy
   also still open (350312 per Роскомнадзор inspection vs. a different code
   in the audit report).
+- **Sales/legal office** — ул. Красная, 176/5, Краснодар. A FOURTH distinct
+  location, found 2026-09-04 via two live hh.ru job postings (Руководитель
+  отдела продаж В2В, published 25.08.2026; Юрист по договорной и судебной
+  работе, published 07.08.2026), both listing this as the actual work
+  address — reads as a commercial/admin office, distinct from HQ/training/
+  production. The lawyer posting is independently notable: it explicitly
+  requires ГОЗ (гособоронзаказ/State Defense Order, 275-ФЗ) experience — a
+  self-admission of state-defense-order legal work, not yet corroborated by
+  a public zakupki contract (a targeted ИНН scan came back zero hits,
+  consistent with 275-ФЗ contracts often being closed/ДСП rather than
+  published openly).
 - **Sevastopol** — recurring «Последний рубеж» training-muster location,
   described by Толстоусова as "уже как второй дом" (already like a second
   home). No street address/coordinates on file yet.
 - **Possible Kursk oblast site** — single unverified blogger mention, no
   address. Flagged, not confirmed.
+
+### Registry checks completed 2026-09-04 (in response to "what other
+databases/registries could we check")
+
+- **hh.ru** (new to this repo) — job postings, not just an aggregator: two
+  live vacancies surfaced the fourth office address above and the ГОЗ
+  self-admission. Worth checking again for any new posting.
+- **nco.minjust.gov.ru** (Minjust's own NKO information portal, new to this
+  repo) — independently corroborates the training center/Архангел Легион/
+  АРРС registry entries via a source distinct from egrul.nalog.ru.
+- **gisp.gov.ru's Единый реестр российской радиоэлектронной продукции**
+  (ПП РФ 878) — negative: Гагаринг has no currently-valid entry, despite
+  making UAV comms/EW-adjacent electronics.
+- **gosuslugi.ru/itorgs** (Минцифры IT-accreditation registry) — negative:
+  not accredited, despite OKVED 62.01 (software).
+- **WHOIS** (gagaring.ru, gagaring-school.ru) — both domains registered the
+  same day (18.06.2025) via Beget; no registrant PII exposed (standard .ru
+  privacy, not a special shield), no pre-privacy historical record found.
+
+The two negative results (radio-electronics registry, IT accreditation)
+aren't dead ends to re-check blindly — they're evidence of what Гагаринг
+has NOT sought/received, useful context for the profile (a company that's
+grown fast on defense-adjacent revenue without pursuing the state
+designations that would normally accompany that).
 
 ### Product descriptions (from Гагаринг's own FY2025 audit + price list)
 
@@ -244,7 +279,9 @@ See each entity's own `sources[]`/`open_questions[]` in
 citations. Methods used this push: `egrul.nalog.ru` open API,
 `screen_gur.py`/`screen_opensanctions.py` single-lookup reuse, the local
 Telegram DB (`data/roymarket.db`), устав OCR (`tesseract`), NSPD/Rosreestr
-cadastral lookups, zoon.ru business-directory checks. Full disambiguation
+cadastral lookups, zoon.ru business-directory checks, hh.ru job postings,
+nco.minjust.gov.ru, gisp.gov.ru's radio-electronics registry,
+gosuslugi.ru/itorgs, and WHOIS. Full disambiguation
 methodology and the adjacent-but-unconfirmed entities are in
 `notes/archangel_adjacent_network.md`.
 

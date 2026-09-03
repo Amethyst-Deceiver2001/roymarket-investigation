@@ -20094,6 +20094,44 @@
     "_origin": "manifest"
   },
   {
+    "id": "s5421",
+    "type": "registry_extract",
+    "path": "data/sources/GISP_2312321660_20260904_gagaring-radioelectronics-registry-negative.txt",
+    "url": null,
+    "captured_date": "2026-09-04",
+    "fiscal_year": null,
+    "as_of": "2026-09-04",
+    "as_of_method": "manual",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "2312321660"
+    ],
+    "entities": [],
+    "sha256": "cc9e10622f0d46c4b372ed9bac2574807ad6715c43ec10a7975a84207d98a7d5",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5422",
+    "type": "registry_extract",
+    "path": "data/sources/GOSUSLUGI_2312321660_20260904_gagaring-it-accreditation-negative.txt",
+    "url": null,
+    "captured_date": "2026-09-04",
+    "fiscal_year": null,
+    "as_of": "2026-09-04",
+    "as_of_method": "manual",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "2312321660"
+    ],
+    "entities": [],
+    "sha256": "237991a7eabef94855f529df685a35d4e69a3b162cd05e52091a3bb04b4fa92a",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s5340",
     "type": "govt_subsidy_program_report",
     "path": "data/sources/GOVREPORT_20260903_krasnodar-minprom-programma-2025-otchet.pdf",
@@ -20502,6 +20540,40 @@
     "_origin": "manifest"
   },
   {
+    "id": "s5419",
+    "type": "press",
+    "path": "data/sources/HHRU_2312321660_20260904_gagaring-vacancy-lawyer-goz-krasnaya176-5.txt",
+    "url": null,
+    "captured_date": "2026-09-04",
+    "fiscal_year": null,
+    "as_of": "2026-08-07",
+    "as_of_method": "manual",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "d53dc56271d3c1a29ef6d6a22a4641c59b5598f6a54e0afb15e5058a4ba84826",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5420",
+    "type": "press",
+    "path": "data/sources/HHRU_2312321660_20260904_gagaring-vacancy-sales-head-krasnaya176-5.txt",
+    "url": null,
+    "captured_date": "2026-09-04",
+    "fiscal_year": null,
+    "as_of": "2026-08-25",
+    "as_of_method": "manual",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "682bb10c751022053da45bb53f305831e8ee0b5f71bb669782e658bcc6b2f2c4",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s1171",
     "type": "osint_leak_aggregator",
     "path": "data/sources/HimeraSearch-58b2bce7-9bd9-46bb-99cd-80557655d347-633156a85ea7006646.pdf",
@@ -20634,6 +20706,23 @@
     ],
     "entities": [],
     "sha256": "ae64e6c6b7d704e0ade54c6b45c7986bd5b052bbc34aa59a5163b452d4eb55f1",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5423",
+    "type": "registry_extract",
+    "path": "data/sources/MINJUST_NKO_2312321660-family_20260904_gagaring-network-registry-check.txt",
+    "url": null,
+    "captured_date": "2026-09-04",
+    "fiscal_year": null,
+    "as_of": "2026-09-04",
+    "as_of_method": "manual",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "fcafe05bb461b052ab1576ffa4a3f095706195c678f0d7f6bd59ff24991d095b",
     "_verified": false,
     "_origin": "manifest"
   },
@@ -33211,6 +33300,23 @@
     "inns": [],
     "entities": [],
     "sha256": "6f8b82166a7cfc23528dc3f09026d9893db7df6bf208d2fca97bf07c47872a41",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5424",
+    "type": "registry_extract",
+    "path": "data/sources/WHOIS_2312321660_20260904_gagaring-domains.txt",
+    "url": null,
+    "captured_date": "2026-09-04",
+    "fiscal_year": null,
+    "as_of": "2026-09-04",
+    "as_of_method": "manual",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "0e5d01a5a1aa338994cab25ec90ad01608423da8d98c0f424bc6eb3c205659d6",
     "_verified": false,
     "_origin": "manifest"
   },

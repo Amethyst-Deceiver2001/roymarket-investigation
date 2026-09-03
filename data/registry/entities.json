@@ -35671,6 +35671,12 @@
         "note": "Юридический адрес per Гагаринг's own FY2025 audit report (Пояснения текстовые, п.1). Also operates a separate обособленное подразделение без выделения на отдельный баланс: 350020, Краснодар, г. о. Краснодар, ул. Одесская, д.48/3 (КПП 231045001, поставлено на учёт 01.12.2023).",
         "source_id": "s5333",
         "value": "350912, Краснодарский край, г.о. город Краснодар, г. Краснодар, тер. Пашковский Жилой Массив, ул. Им. Фадеева, дом 429/3, помещение 11, комната 4"
+      },
+      {
+        "value": "Краснодар, Красная улица, 176/5 (обособленное подразделение/office, per two live hh.ru job postings — not yet cross-checked against EGRUL as a formally registered обособленное подразделение)",
+        "as_of": "2026-08-25",
+        "source_id": "s5420",
+        "note": "A FOURTH distinct Гагаринг location, found via hh.ru job postings (2026-09-04) — Красная 176/5, Краснодар, distinct from the legal HQ (Фадеева 429/3), the training center (Куникова 24к2) and the production subdivision (Одесская 48/3). Two live vacancies (Руководитель отдела продаж В2В, published 25.08.2026; Юрист по договорной и судебной работе, published 07.08.2026) both list this as the work address — reads as a commercial/admin office (sales + legal functions), not production or training."
       }
     ],
     "name_history": [],
@@ -35940,6 +35946,14 @@
       {
         "source_id": null,
         "text": "REFINED (2026-09-03, via a real browser session — nspd.gov.ru's public search API returns clean JSON in-browser even though a bare curl request gets WAF-403'd, since the site's JS challenge/session cookies aren't present outside a real browser context): the address \"ул. Одесская, д. 48/3\" is NOT one building inside a broader 23-building \"48\" complex as earlier assumed — it is itself a distinct multi-building industrial site. A direct NSPD search for \"Краснодар Одесская 48/3\" returns at least 19 separately-cadastred buildings all sharing that exact address: производственный корпус (23:43:0302010:387, 1972, 3,873.6 m², the one already flagged), ремонтно-механический участок, мазутохранилище (fuel-oil store), лесосушильная камера (23:43:0302010:399, wood-drying chamber — suggests a former Soviet woodworking/furniture-factory site), неcколько складов, механический цех, служебно-бытовой корпус №9, проходная (checkpoint), плюс a combined-suite listing (\"д. 48, пом. 1,2,3...\"). None of NSPD's public building records expose an owner/tenant name (Rosreestr redacted this from public output after the 2017 privacy amendments — only 'Частная'/'Собственность' shows), so this still doesn't identify which specific building Гагаринг's КПП 231045001 subdivision actually occupies. Resolving that requires either a paid EGRN extract naming the actual right-holder for one of these cadastral numbers, or independent evidence (a photo/video, a delivery address, a job posting) pinning Гагаринг to one specific building within this complex."
+      },
+      {
+        "source_id": "s5419",
+        "text": "The 07.08.2026 'Юрист по договорной и судебной работе' vacancy (s5419) explicitly requires 'опыт работы в сфере ГОЗ не менее 2х лет' and 'Практический опыт работы с Федеральным Законом № 275-ФЗ (ГОЗ)' — Гагаринг's own job posting language self-identifies гособоронзаказ (State Defense Order) legal work as part of the role, alongside ordinary 44-ФЗ/223-ФЗ contract work. A targeted zakupki.gov.ru supplier-title scan for Гагаринг's own ИНН (2312321660) returned zero hits (2026-09-04) — consistent with 275-ФЗ ГОЗ contracts often being closed/ДСП and not published on the open 44-ФЗ/223-ФЗ portal, not evidence against a real ГОЗ relationship. This is a real self-admission worth pursuing further (e.g. a targeted search for Гагаринг as a subcontractor to a named prime, since the earlier Чадаев repost describes Барашков personally delivering comms kits rather than a public tender)."
+      },
+      {
+        "source_id": null,
+        "text": "Additional registry checks (2026-09-04): (1) Minjust's NKO portal (nco.minjust.gov.ru, s5423) independently corroborates the existing registry entries for the training center, Архангел Легион and АРРС (name/ОГРН/date/address all match) — no new facts, but confirms them via a source distinct from egrul.nalog.ru; the training center's one filed 2025 activity report failed Minjust's check ('Проверка не пройдена', filed 10.04.2026). (2) Гагаринг has NO currently-valid entry in Минпромторг's Единый реестр российской радиоэлектронной продукции (ПП РФ 878, s5421) — despite making UAV comms/EW-adjacent electronics, it hasn't sought or hasn't received the state 'domestically-produced radio-electronics' designation that would confer procurement preference. (3) Гагаринг is NOT on Минцифры's accredited-IT-company registry (s5422), despite carrying OKVED 62.01 (software) alongside its primary electronics code. (4) gagaring.ru and gagaring-school.ru were both registered the same day (18.06.2025, 3 minutes apart) via Beget (s5424) — no registrant PII exposed under standard .ru WHOIS privacy, no pre-privacy-shield historical record found."
       }
     ],
     "sources": [],
