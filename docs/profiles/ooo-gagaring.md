@@ -106,6 +106,7 @@
 - FY2024 net-profit discrepancy resolved: the FY2025 audit report is an ИСПРАВЛЕННАЯ (corrected/restated) version of an earlier unaudited report signed 31.03.2026. The corrected 2024 net profit (₽15,361 thousand) differs from the original unaudited figure (₽20,946 thousand) by a documented -₽5,585 thousand correction (also affecting inventories -₽6,932k, receivables -₽632k, total balance -₽7,564k) — per the audit report's own correction table (pp.7-9). Not an unreconciled discrepancy; the audited figure is authoritative. [s5333]
 - Related-party turnover disclosed with ООО «СДЭК-НОВА» (₽4.41M turnover, 2025) and ООО «СДЭК-КРАСНОДАР» (₽2.22M turnover, 2025) in the audit report's related-party note — nature of the relationship (common beneficiary vs. ordinary counterparty) not established; needs separate EGRUL/beneficiary check before treating as a network tie. [s5333]
 - Two individuals — Павловский Валерий Александрович (ИП) and Павловская Ирина Борисовна (ИП) — appear in the audit report's 'Обеспечения обязательств' (obligation guarantees) section as counterparties to given/received obeespecheniya. Role and connection to Гагаринг not established from this document alone; lead for future verification, not yet added to people.json. [s5333]
+- Postal-code discrepancy: a Роскомнадзор 152-ФЗ preventive-visit inspection record (proverki.gov.ru, KNM id 26154827, completed 15.11.2024, clean/no violations, Акт №А-23/351) gives the registered address's postal code as 350312, while the FY2025 audit report (s5333) and EGRUL both give 350912. Not reconciled — one of the two sources has a typo, unclear which. [s5335]
 
 ## Sources cited in this profile
 
@@ -116,6 +117,7 @@
 | s0243 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_2312321660_2025_20260819.zip) | 2026-08-19 | 2025-12-31 |
 | s0455 | EGRUL extract | EGRUL extract (ul-1232300051235-20260823120320.pdf) | — | 2026-08-23 |
 | s5333 | Fedresurs | Fedresurs (FEDRESURS_939B297414FA48A4A4B3497315AF3659_20260903_gagaring-audit-report-2025fy-full.pdf) | 2026-09-03 | — |
+| s5335 | Proverki | Proverki (PROVERKI_2312321660_20260903_gagaring-rkn-inspection-26154827.json) | 2026-09-03 | 2024-11-15 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

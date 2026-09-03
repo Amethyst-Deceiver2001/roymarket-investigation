@@ -148,6 +148,90 @@ to find the document-download endpoint (same shape as the sfact-message
 API, likely `/backend/sfact-messages/<guid>/docs/<doc-guid>` or similar,
 not yet confirmed).
 
+## Production-facility identification methodology (started 2026-09-03)
+
+Triggered by `ooo-gagaring`'s FY2025 audit report (`s5333`) disclosing a
+second physical address — 350020, Краснодар, ул. Одесская, д.48/3, an
+"обособленное подразделение без выделения на отдельный баланс" registered
+01.12.2023 — separate from the registered legal (HQ/mailing) address. The
+user flagged this as high-priority: an entity's registered legal address is
+routinely a mailbox/accountant's office, but a *second, industrial-zone*
+address disclosed only in an internal accounting document is a much
+stronger signal of an actual production site — especially for entities
+that are cagey about physical presence (Тримикс is the named comparison
+case). This is the same category of document as the founding
+Устав/EGRN/EGRUL extracts smolin.info cited for Ushkuynik — an official
+filing that incidentally reveals ground truth the entity wouldn't
+volunteer in marketing copy. **Standing instruction: whenever a
+subdivision/КПП/second address turns up in *any* future БФО filing, audit
+report, or founding document (not just Гагаринг), treat it the same way —
+log it explicitly, don't let it get buried in a citation note.**
+
+Sources to identify/confirm a facility once an address is in hand, roughly
+in order of how much they reveal vs. how hard they are to reach:
+
+1. **Публичная кадастровая карта** (`pkk.rosreestr.ru`) — free, no login,
+   satellite + cadastral-boundary view. Given an address (or approximate
+   coordinates), shows the cadastral number, plot area, and **land
+   category** (e.g. "земли промышленности" vs. residential/mixed) —
+   confirms "industrial area" claims visually and administratively rather
+   than by inference from the street name. Not yet tested this session for
+   scripted access; likely has its own tile/API layer worth a HAR capture
+   if the plain UI is JS-heavy.
+2. **EGRN extract (выписка из ЕГРН) for the specific plot/building** — the
+   authoritative registered-owner/lessee record for a piece of real estate,
+   same document type already used for Христюк/Прокофьев/etc. in the
+   Ushkuynik network (see `smolin_source_catalogue.md`). Pulled the same
+   way: `rosreestr.gov.ru`'s paid extract order, or a Ковристов-style
+   citizen-facing portal. Confirms *who legally holds* the building at
+   Одесская 48/3 — could be Гагаринг itself, a landlord entity, or a third
+   party the facility is shared with.
+3. **Company-search-by-address** (rusprofile.ru, checko.ru, list-org.com,
+   СБИС, DaData) — the single most useful cross-check for a shared
+   industrial site: lists *every* legal entity registered at a given
+   street address, which is exactly how a facility shared between Гагаринг,
+   Тримикс, and others (if that's the case) would surface. **Tested
+   2026-09-03: rusprofile.ru's search endpoint doesn't accept a plain query
+   param (404/no results via curl), list-org.com 403s a bare curl request**
+   — both look like the JS-challenge/session-cookie pattern already solved
+   for Sberbank-AST/RTS-Tender/Fedresurs this session, not a hard block.
+   **Needs a DevTools HAR capture of an address search on one of these
+   sites** (rusprofile.ru's "поиск по адресу" or checko.ru's equivalent) to
+   find the real API — same recipe as `zakupki_gov_ru_contract_search_api`.
+   This is the highest-value next capture: one working address-search API
+   would let every registry entity's known address be swept for
+   co-located, currently-undiscovered entities in one pass, not just
+   Тримикс.
+4. **2ГИС / Яндекс.Карты организации** — business-directory listings tied
+   to a street address; often surfaces companies operating from a location
+   without being registered there (a common gap company-registry lookups
+   alone miss — a production line can run under a landlord's or a
+   different legal entity's roof). Worth checking directly in a browser;
+   not yet tested for scripted access.
+5. **Krasnodar city/krai government decrees** — `krd.ru` (Краснодар city
+   administration's own portal, not gosuslugi-hosted) and
+   `admkrai.krasnodar.ru`/regional equivalents publish normative acts on
+   industrial-park/technopark designation, land allocation, and investment-
+   zone status — the krai-level analogue of the Demyansk district decree
+   smolin cited for the Ushkuynik network. Relevant if Одесская 48/3 turns
+   out to sit inside a designated industrial/technopark zone (would also
+   explain any subsidy/state_programs eligibility, like the 3DLAM Mid
+   equipment subsidy already found).
+6. **proverki.gov.ru** (реестр проверок — inspections registry) — logs
+   Rostrud/Rospozharnadzor/etc. inspections by legal entity and address;
+   an active production site is more likely to show up here than a mailbox
+   address, since safety/labor inspections target actual workplaces.
+7. Historical satellite imagery (Yandex/Google) for the coordinates, once
+   pinned via the cadastral map — useful for dating when a building
+   appeared/expanded, cross-checkable against `workforce_history[]` growth
+   (Гагаринг's own headcount jumped 34→105 in 2025, which a facility
+   expansion timeline could corroborate or contradict).
+
+**Immediate next action recommended**: a DevTools HAR of rusprofile.ru or
+checko.ru's address search (item 3) is the highest-leverage single capture
+— unlocks facility-colocation checks for every address already in the
+registry, not just this one.
+
 ## Recommended next steps (not yet started)
 
 1. **HAR-capture torgi.gov.ru and fedresurs.ru** the same way zakupki's
