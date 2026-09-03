@@ -185,5 +185,61 @@ def iter_posts(
             "edited_date": msg.edit_date.isoformat() if msg.edit_date else None,
             "media_type": media_type,
             "media_json": media_json,
+            "sender_id": getattr(msg, "sender_id", None),
             **fwd_info,
+        }
+
+
+_PHONE_RE = re.compile(r"(?:\+7|8)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}")
+
+
+def iter_participants(client: TelegramClient, entity: Any) -> Iterator[dict[str, Any]]:
+    """Enumerate every member of a forum/chat and catalog identity signal:
+    username, the account's phone field (only populated where the member's
+    privacy settings expose it — most won't), any phone number written into
+    the freeform bio itself (a much more common leak than the phone field),
+    and a profile-photo count (catalog only — see tg_media_pull.py's
+    candidates/fetch split for the human-curated download-and-review step
+    that follows, e.g. flagging a photo with an identifiable license plate
+    or location). Full user info (bio) needs one GetFullUserRequest per
+    member — fine for a single forum/chat's roster, not something to run
+    across every channel in config/channels.txt without cause."""
+    from telethon.tl.functions.users import GetFullUserRequest
+
+    for user in client.iter_participants(entity, aggressive=True):
+        bio = None
+        try:
+            full = client(GetFullUserRequest(user))
+            bio = getattr(full.full_user, "about", None)
+        except Exception:
+            pass
+        bio_phone = None
+        if bio:
+            m = _PHONE_RE.search(bio)
+            if m:
+                bio_phone = m.group(0)
+        photo_count = None
+        photo_ids: list[int] = []
+        try:
+            photos = client.get_profile_photos(user, limit=100)
+            photo_count = getattr(photos, "total", None) or len(photos)
+            photo_ids = [p.id for p in photos]
+        except Exception:
+            pass
+        yield {
+            "id": user.id,
+            "username": getattr(user, "username", None),
+            "first_name": getattr(user, "first_name", None),
+            "last_name": getattr(user, "last_name", None),
+            "phone": getattr(user, "phone", None),
+            "bio": bio,
+            "bio_phone": bio_phone,
+            "is_bot": getattr(user, "bot", False),
+            "is_verified": getattr(user, "verified", False),
+            "is_scam": getattr(user, "scam", False),
+            "is_fake": getattr(user, "fake", False),
+            "is_premium": getattr(user, "premium", False),
+            "profile_photo_count": photo_count,
+            "profile_photo_ids": json.dumps(photo_ids, ensure_ascii=False) if photo_ids else None,
+            "seen_in_channel_id": entity.id,
         }
