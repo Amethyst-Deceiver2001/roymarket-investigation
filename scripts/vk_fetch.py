@@ -5,8 +5,8 @@ Not a live-crawl job in the tg_scan.py sense (no continuous scraping, no
 per-channel backfill) — a single bounded API call per invocation, same
 class of thing as a WebFetch/curl one-off. Safe to run directly.
 
-Requires VK_API_TOKEN in .env (see HANDOFF.md / memory for how it was
-obtained — Standalone app, implicit-flow OAuth, read-only scope).
+Requires VK_API_TOKEN in .env (a VK Standalone app, implicit-flow OAuth,
+read-only scope — obtained by the user directly, no script for this).
 
 Usage:
     python3 scripts/vk_fetch.py search "резидент цбст" --days 365

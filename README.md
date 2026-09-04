@@ -7,9 +7,15 @@ sanctions-lobbying reference document.
 
 - **Read the brief**: `docs/index.html`, or the published Artifact
   (https://claude.ai/code/artifact/5450bf7e-7f7b-4788-93c0-761503dd5ea4 —
-  may lag the local file, see `HANDOFF.md`).
-- **New Claude Code session on this repo**: read `HANDOFF.md` first, then
-  `CLAUDE.md` for working rules.
+  only republished at an explicit investigation cutoff, so it lags the
+  local file; see `CLAUDE.md`'s "Publishing" section).
+- **New Claude Code session on this repo**: read `CLAUDE.md` for working
+  rules and pipeline discipline, then `notes/rebuild_plan.md` for current
+  workstream status (each section ends with its own "Still open"/"Status"
+  note — that's the up-to-date pending-work list, not a separate handoff
+  doc). `data/registry/*.json` is the source of truth for facts, not
+  `docs/index.html` — see CLAUDE.md's "`data/registry/` is the source of
+  truth" section.
 - **Migrated from** the `wb_watch` project on 2026-08-18.
 
 ## Layout
@@ -49,7 +55,6 @@ scripts/aleph_followup.py      triages screen_aleph.py's noisy matches, fetches 
 scripts/zakupki_batch_pull.py  scan/fetch-contracts/fetch-documents against zakupki.gov.ru per registry ИНН (live)
 scripts/mine_zakupki.py        extraction pass over already-pulled zakupki contract cards/attachments (local, safe to rerun)
 scripts/tg_media_pull.py       pulls photo/video-still evidence from posts a channel scrape already found (single-post lookups, safe)
-HANDOFF.md                full context for a new session — read this first
-CLAUDE.md                 working rules
+CLAUDE.md                 working rules and pipeline discipline — read this first
 STYLE_GUIDE.md            voice + presentation rules — read before drafting prose
 ```
