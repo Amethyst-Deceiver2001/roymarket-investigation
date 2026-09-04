@@ -43106,5 +43106,13 @@
     "as_of_method": null,
     "sha256": "207933809b5c79faf88cfd9d4f967c1faf39d9572ca731469d4f386251c3e9ac",
     "sample": "Cross-reference pass, 2026-09-04: distinct message-sender identities in the\nprivate \"Академия Противодействия БПЛА\" chat (channel_id 1859964206, 5,795\nposts), resolved against tg_users via each post's own sender_id — not via\nthe chat's own participant list (Telegram's API only exposes that chat's 3\nadmins to a non-admin scan; see the separate TGUSERS_20260904_academy-\nprivate-chat-1859964206-parti"
+  },
+  "TGPOST_multi_20231221-20260709_archangel-forum-close-read-batch1.txt": {
+    "type": "ustav",
+    "type_method": "keyword:\\bУСТАВ(?!Н)",
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "2f1cfbed08799a44da6c4941cbfcb5c002e7e34b180b78edab2145c79d9e1bf0",
+    "sample": "t.me/Archangel_Forum (channel_id 1814184028, \"Архангел. Форум\", 73,085\nposts) — first close-read pass, 2026-09-04. This forum is mostly a general\nwar-news aggregation channel (25.7% forwarded content from RVvoenkor,\nboris_rozhin, dva_majors, tass_agency, rian_ru, etc. — top-viewed posts are\ngeneric war-news reposts unrelated to Проект «Архангел» itself, confirmed\nby direct query). @arhangel76 (Фил"
   }
 }
