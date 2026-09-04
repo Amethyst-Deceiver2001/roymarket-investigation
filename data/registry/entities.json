@@ -44840,5 +44840,105 @@
     "_raw": {},
     "kpp": "502701001",
     "_corrected": null
+  },
+  {
+    "slug": "proekt-kb-arkhangel",
+    "name_ru": "Проект КБ «Архангел»",
+    "name_latin": "Project \"KB Arkhangel\"",
+    "legal_form": null,
+    "brand_ru": "Архангел",
+    "brand_latin": null,
+    "inn": null,
+    "ogrn": null,
+    "extra_ids": null,
+    "registered": null,
+    "address": null,
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": null,
+    "director_history": [],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "Self-styled \"КБ\" (design bureau) operating entirely through Telegram (@projectArchangel, @arhangel76, t.me/proekt_arhangel), run by Филиппов Михаил Геннадьевич (see people.json filippov-mikhail-gennadevich, named directly as \"руководитель проекта\" in s5454). NO confirmed legal-entity registration found for this specific operation — deliberately kept SEPARATE from `ooo-arkhangel-zaporizhzhie` (ИНН 9500026652, director Тимофеев В.С.), which shares the «Архангел» brand and drone-interceptor business but has no documented tie to Филиппов (see that entity's own open_questions, checked 2026-09-04). This record exists to hold Проект КБ «Архангел»'s own self-published product/technical claims without conflating them with the unrelated legal entity.",
+    "cbst_tie": {
+      "claim": "None found.",
+      "confidence": "none",
+      "evidence": null,
+      "source_id": null
+    },
+    "wb_overlap": "not_checked",
+    "products": [
+      {
+        "name_ru": "Дрон-ракета-перехватчик «Архангел»",
+        "description": "Self-described as \"по сути, управляемая ракета с вертикальным взлётом или возможностью размещения на самолёте-матке\" (in essence a guided rocket with vertical takeoff, or carriage on a mothership aircraft). Range up to 50km, max speed 340km/h, cruise 100-120km/h (33% power); 200+km/h needs 50% power at reduced 25-30km range. Intended use case: paired with air-defense radar (РЛС ПВО), operator guides the drone (fitted with a corner reflector) onto target by instruments. Full open-source build files (3D-printable PLA-CF airframe, Betaflight config, BOM) published publicly by the project's own channel for free self-assembly. B2B integration channel offered for aircraft/radar/ground-vehicle (БЭК) integration via @arhangel_channel_bot.",
+        "source_id": "s5454"
+      }
+    ],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [
+      {
+        "text_ru": "В боевой версии «Архангела» используется цилиндр с боевой частью (поражающие элементы — шарики или контргайки). Вес этого цилиндра должен быть 500 гр для правильной балансировки и курсовой устойчивости дрона.",
+        "text_en": "The combat version of \"Arkhangel\" uses a cylinder with a warhead (fragmentation elements — ball bearings or lock nuts). This cylinder must weigh 500g for correct balance and directional stability.",
+        "context": "Self-published, direct admission of a combat/fragmentation variant distinct from the civilian \"ram\" (таран) variant described in the same post — both offered as build options from the same open-source instructions.",
+        "source_id": "s5454",
+        "as_of": "2026-06-26"
+      },
+      {
+        "text_ru": "Гражданское применение: можно оснастить утяжелённой головкой и использовать как таран.",
+        "text_en": "Civilian application: can be fitted with a weighted nose and used as a ram.",
+        "context": "The project's own framing of a \"civilian\" (non-warhead) use case for the same airframe, immediately followed later in the same post by the combat-warhead admission above.",
+        "source_id": "s5454",
+        "as_of": "2026-06-26"
+      }
+    ],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s5454",
+        "text": "This post links two further, distinct, NOT-yet-scraped channels: t.me/proekt_arhangel (cited twice as a related/parent channel, distinct handle from @projectArchangel) and t.me/malyha_ww (video build instructions — \"малыха\" matches the BOM's \"Малая ДР\" naming for this small variant). Also confirms t.me/c/1859964206/110711 (the already-known private \"Академия Противодействия БПЛА\" chat) carries this project's own tuning content."
+      },
+      {
+        "source_id": "s5454",
+        "text": "BOM line item \"Связь: Гермес или аналоги\" (\"Hermes comms, or equivalent\") is a generic reference, not a specific vendor citation — plausibly, but NOT confirmed to be, the same «Гермес» tactical-comms brand sold commercially by `npo-kaysant` (ИНН 7733393203, see that entity's merged `kb-germes` alias). Left as an open lead, not merged."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": null
   }
 ]
