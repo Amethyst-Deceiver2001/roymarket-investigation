@@ -43002,5 +43002,21 @@
     "as_of_method": null,
     "sha256": "48d7023799e635ca64908ca3725852465d68de47c8080910b6cdf8398dd657cf",
     "sample": "egrul.nalog.ru open ЕГРЮЛ/ЕГРИП search — raw results captured 2026-09-04,\nfollowing up the \"ООО «Архангел Групп»\" entity name found in a\nprojectArchangel B2B pitch post (02.09.2026, s5448).\n\nQuery: \"Архангел Групп\" (broad name search, tot=117451 — the search API\ndoes a loose token match, not an exact-phrase match, so most returned rows\nare unrelated \"Архангел\"-named entities with no \"Групп\" in the"
+  },
+  "EGRUL_OPEN_5026016117_20260904_ml-konstrakshns-search.txt": {
+    "type": "press",
+    "type_method": "keyword:OSINT",
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "c8aced0d44f2743bd32549fd9f9636c03fba17e8ca017bf654f99ad7e0e3f062",
+    "sample": "egrul.nalog.ru open ЕГРЮЛ search — raw result captured 2026-09-04, following\nup Филиппов Михаил Геннадьевич's (person.slug filippov-mikhail-gennadevich)\nconstruction firm named in the 02.08.2023 OSINT Bees dossier (s0234/s0235),\nwhich had never been independently cross-checked against EGRUL.\n\nQuery: \"МЛ КОНСТРАКШНС\"\n\nResult (single relevant row, confirms the dossier exactly):\nООО \"МЛ КОНСТРАКШНС\" "
+  },
+  "EGRUL_OPEN_9702081286_20260904_arkhangel-grupp-followup.txt": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "36492eec512ff91b42402c34b559ebe3fd78c8c556d6a0fc09e812772a336b85",
+    "sample": "egrul.nalog.ru open ЕГРЮЛ search — raw result captured 2026-09-04, direct\nИНН follow-up on the \"Архангел Групп\" lead first surfaced 2026-09-03\n(s5449, broad name search), now scoped to a specific Филиппов Михаил\nГеннадьевич case-study check: does this entity's director/founder data show\nany tie to Филиппов?\n\nQuery: \"9702081286\" (direct ИНН lookup, single result)\n\nООО \"АРХАНГЕЛ ГРУПП\" — ИНН 9702081"
   }
 }
