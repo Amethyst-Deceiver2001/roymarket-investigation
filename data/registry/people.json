@@ -39299,5 +39299,46 @@
     ],
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-03"
+  },
+  {
+    "slug": "arkhangelskiy-gennadiy-weapons-engineer",
+    "fio_ru": "Архангельский Геннадий (patronymic unconfirmed)",
+    "name_latin": "Gennadiy Arkhangelskiy",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [
+      {
+        "entity_name": "Проект КБ «Архангел»",
+        "entity_slug": "proekt-kb-arkhangel",
+        "title": "Contributor — weapons/mount engineering (self-described)",
+        "from": null,
+        "to": null,
+        "source_id": "s5460"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      "t.me/arkhangelfront",
+      "max.ru/arkhangelfront"
+    ],
+    "photo": null,
+    "notes": "Identified only via a self-signed post naming himself \"Геннадий Архангельский\" — no patronymic given, no independent ID document found. Describes himself in first person handling procurement/fitting of ЯкБ-12.7mm four-barrel aviation machine guns (45kg, 4500rpm, 1500m sighted range) as vehicle-mounted armament for ten mobile counter-drone fire groups (МОГ) for an unnamed military customer. This is concrete evidence of weapons-system integration work happening under the «Архангел» brand, distinct from the drone-interceptor product line.",
+    "sources": [
+      "s5460"
+    ],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-04: surfaced in a scoped full-corpus mining pass over all Филиппов/Архангел-linked channels. Signs projectArchangel#9534 describing personal sourcing/installation of ten four-barrel ЯкБ-12.7mm aviation machine guns for a customer's mobile counter-UAV fire groups (МОГ), posting under the project's own channel with his own MAX/Telegram channel \"arkhangelfront\". Added as a distinct person record — NOT merged with the existing Архангельский Геннадий Евгеньевич (arkhangelskiy-gennadiy-evgenevich, director of the separate АНО «Архангел»/«Архангел Легион») despite the surname match — see the corresponding open_question on proekt-kb-arkhangel for why this is flagged as a possible-but-unconfirmed overlap, not a merge."
+    ]
   }
 ]

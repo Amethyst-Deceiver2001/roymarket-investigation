@@ -2011,10 +2011,102 @@
         {
           "source_id": "s5457",
           "text": "A Telegram channel named \"ГЕРМЕС - ППРЧ связь, мачты, защита от дронов\" is referenced by name (no handle) as the home channel for the «Гермес коллектив» system — not yet identified/scraped. May or may not be the same «Гермес» brand sold commercially by `npo-kaysant` (ИНН 7733393203)."
+        },
+        {
+          "source_id": "s5460",
+          "text": "Full-corpus scoped mining pass (2026-09-04) over all four Филиппов/Архангел-linked channels (Archangel_Forum 73,085 posts, projectArchangel 10,042, proekt_arhangel 1,073, the private Академия chat 5,795 — 65,454 non-empty posts scanned) confirms the project's own multi-platform contact roster from its own recurring signature block (msg projectArchangel#132, #9910): own training site bpla.archangel.school, VK (vk.com/id729012386 — appears 337-401x as the project's official VK link), MAX messenger (multiple join links, incl. a project-wide chat), plus named contact-handles for three distinct training-intake functions: @Coordinator_Archangel_Project (document intake — passport/military ID/СНИЛС/ИНН/bank details for enlistment), @VERA_consultant_Archangel (training program consultant), @Natalia_Archangel_Project (пункт: \"Набор добровольцев, оформление\" — volunteer recruitment processing). No full legal names attached to any of the three handles in the scanned text — not promoted to people.json pending a name. No Twitter/X, Instagram, Facebook, or Odnoklassniki presence found belonging to the project itself — the handful of Instagram/Facebook links in this 65k-post corpus are unrelated third-party equipment-sourcing references embedded in a single post (projectArchangel#3534), not the project's own accounts."
+        },
+        {
+          "source_id": "s5460",
+          "text": "«Малыха» (t.me/malyha_ww, referenced twice already as an unscraped build-video channel) is now fully resolved as a multi-platform training-video operation, per its own self-published contact block (projectArchangel#10301, 2026-06-14): Telegram t.me/malyha_ww + feedback bot @malyha_ww_bot, RuTube rutube.ru/channel/59281618, VK vk.com/malyha_ww. Still not scraped as a channel — a real next step if deeper build-instruction detail is wanted, since its Telegram content has never been pulled into this DB."
+        },
+        {
+          "source_id": "s5460",
+          "text": "t.me/sudoplatov_official identified (14 cross-posts in projectArchangel/Archangel_Forum, 2023-2024) as the rival \"Судоплатов\" network's own public channel — this is the network whose \"судоплатовских комплектующих (ВТ 40)\" component variant was offered alongside the standard «Архангел» build kit (see the still-open component-compatibility question logged 2026-09-04 from s5457). Not scraped yet — a future step for resolving that lead, not chased further this pass."
+        },
+        {
+          "source_id": "s5460",
+          "text": "«Ворон-оптоволокно» (t.me/voronoptovolokno) — per a direct self-published account (projectArchangel#9215, undated but positioned late Dec 2025/Jan 2026 in the feed), the founder of Проект «Архангел» personally visited the «Ворон» team, described as a field-repairable fiber-optic-cable manufacturer for FPV drones; the post states «Ворон» is relocating its fiber-optic production to Krasnodar Krai (the same region as Проект «Архангел»'s own Туапсе base) and the two projects plan joint operator training. No legal entity/ИНН resolved for «Ворон»/«Ворон-оптоволокно» yet — worth an EGRUL name search given the confirmed direct founder-to-founder relationship, distinct from a mere equipment mention."
+        },
+        {
+          "source_id": "s5460",
+          "text": "POSSIBLE cross-network overlap, NOT confirmed: projectArchangel#9534 (undated, positioned ~Feb 2026 in the feed) is signed \"Геннадий Архангельский\" and describes personally sourcing/mounting ten four-barrel ЯкБ-12.7mm aviation machine guns for a customer's mobile counter-UAV fire groups (МОГ), with his own MAX channel max.ru/arkhangelfront (also cross-posted as t.me/arkhangelfront, 11x). This surname is otherwise ONLY attached in this registry to Архангельский Геннадий Евгеньевич (`arkhangelskiy-gennadiy-evgenevich`), director/co-founder of the separate, Гагаринг-adjacent АНО «Архангел» / «Архангел Легион» (ИНН 2315233718) — also a Krasnodar Krai operation. The projectArchangel post gives no patronymic, so this CANNOT be treated as the same person without further verification (a namesake, or a shared surname/brand coincidence, is equally plausible). If confirmed, this would be the first direct personal link found between Филиппов's Проект «Архангел» and the Гагаринг-adjacent «Архангел Легион» network — flagged here specifically so it is not silently missed, but NOT merged or asserted as fact."
+        },
+        {
+          "source_id": "s5460",
+          "text": "КБ «Перит» (t.me/kbperit, 33 cross-posts) advertises an ОПУ (опорно-поворотное устройство, pan-tilt antenna mount) product \"Голова\" in the network's channels, with its own \"@kbperit_admin\" contact for \"Сотрудничество и реклама\" (cooperation and ADVERTISING) — reads as a paid cross-promotion, not a confirmed corporate partnership with Проект «Архангел». Noted, not investigated further; same treatment applies to ~50 other one-off legal-entity mentions (component/equipment vendors named in passing across the 65k-post scan) that were not individually triaged this pass — see the scoped mining report for the full list if a specific one becomes relevant later."
         }
       ],
       "director": null,
-      "name_history": []
+      "name_history": [],
+      "web": {
+        "sites": [
+          {
+            "url": "https://bpla.archangel.school",
+            "note": "Базовый онлайн-курс — self-hosted training site, s5460"
+          }
+        ],
+        "telegram": [
+          {
+            "url": "https://t.me/Archangel_Forum",
+            "note": "форум/волонтёрский канал, 73,085 posts scraped"
+          },
+          {
+            "url": "https://t.me/projectArchangel",
+            "note": "основной канал разработчиков/инженеров/пилотов, 10,042 posts scraped"
+          },
+          {
+            "url": "https://t.me/proekt_arhangel",
+            "note": "«Академия противодействия БПЛА», 1,073 posts scraped"
+          },
+          {
+            "url": "https://t.me/arhangel76",
+            "note": "Филиппов М.Г.'s own handle, self-identified \"руководитель проекта\""
+          },
+          {
+            "url": "https://t.me/arhangel_channel_bot",
+            "note": "feedback bot"
+          },
+          {
+            "url": "https://t.me/Coordinator_Archangel_Project",
+            "note": "document intake for enlistment (passport/military ID/СНИЛС/ИНН/bank details)"
+          },
+          {
+            "url": "https://t.me/VERA_consultant_Archangel",
+            "note": "training-program consultant contact"
+          },
+          {
+            "url": "https://t.me/Natalia_Archangel_Project",
+            "note": "\"Набор добровольцев, оформление\" — volunteer recruitment processing"
+          },
+          {
+            "url": "https://t.me/arhangel_study_bot",
+            "note": "training bot"
+          }
+        ],
+        "vk": [
+          {
+            "url": "https://vk.com/id729012386",
+            "note": "project's own stated \"Канал ВК\", appears 300+x in its own signature block"
+          },
+          {
+            "url": "https://vk.ru/pro_fpvdrons",
+            "note": "instructor \"Тина\"'s own VK training resource, cross-linked from the project's channels"
+          }
+        ],
+        "youtube": [],
+        "marketplace_listings": [],
+        "other": [
+          {
+            "url": "https://max.ru/join/DhptZoo2BqNt2jl2k1EG8tAKDGfc8vgVEz7YDwMNqhE",
+            "note": "MAX messenger project chat"
+          },
+          {
+            "url": "https://max.ru/arkhangelfront",
+            "note": "\"Геннадий Архангельский\"'s own MAX channel — see open_questions"
+          }
+        ]
+      }
     },
     {
       "slug": "ooo-arkhangel-shchit",
