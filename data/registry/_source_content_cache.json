@@ -43090,5 +43090,13 @@
     "as_of_method": null,
     "sha256": "88a10ccd576b6e58f8cbab8b04b01200761e644a4f02f36510e764782fd8ab8d",
     "sample": "t.me/projectArchangel — scoped full-corpus mining pass, 2026-09-04, over all\nfour Филиппов/Архангел-linked channels already in data/roymarket.db:\nArchangel_Forum (1814184028, 73,085 posts), projectArchangel (1711795532,\n10,042), proekt_arhangel (2394423882, 1,073), the private \"Академия\nПротиводействия БПЛА\" chat (1859964206, 5,795 posts) — 65,454 non-empty\nposts scanned in total. This pass ran a "
+  },
+  "TGUSERS_20260904_academy-private-chat-1859964206-participant-scan.txt": {
+    "type": "press",
+    "type_method": "keyword:OSINT",
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "a9bf803eb8e122ee6dc9f972e410d86c235b72c5c58c2cb916e627040c02f5d9",
+    "sample": "tg_scan_users.py participant scan of the private \"Академия Противодействия\nБПЛА\" chat (channel_id 1859964206, invite https://t.me/+7GbNlS1SJI83ZmQy),\nrun by the user 2026-09-03/2026-09-04. Only 3 participants returned by\nTelegram's GetParticipants for this non-admin scan — treated as the\nvisible-to-a-regular-member subset, not necessarily the chat's true full\nmembership (5,795 posts scraped from t"
   }
 }
