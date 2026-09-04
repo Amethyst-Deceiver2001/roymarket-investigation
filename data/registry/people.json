@@ -39998,5 +39998,41 @@
     "_corrected": [
       "2026-09-04: surfaced as a third, previously-undocumented owner (5% stake) of ООО «Архангел Групп» in the full signed EGRUL extract - a minority co-owner alongside Филиппов (80%) and director Крючков (15%). Nothing else about her known yet - no other role, entity, or public presence found in this pass; recorded per this investigation's PII policy (identifying fields sourced or left null, never guessed)."
     ]
+  },
+  {
+    "slug": "stepanov-dmitriy-aleksandrovich",
+    "fio_ru": "Степанов Дмитрий Александрович",
+    "name_latin": "Stepanov Dmitriy Aleksandrovich",
+    "dob": null,
+    "birthplace": null,
+    "address": "Республика Татарстан, г. Зеленодольск, ул. Большая Заводская, д. 20",
+    "inn_personal": "164809949104",
+    "roles": [
+      {
+        "entity_name": "АНО «НПЦ «Ушкуйник»",
+        "entity_slug": "ano-npts-ushkuynik",
+        "from": "2025-12-17",
+        "source_id": "s5303",
+        "title": "equipment supplier (sole proprietor / ИП) — SMD assembly-line equipment",
+        "to": null
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Sole proprietor (individual, not a legal entity) awarded a 223-ФЗ contract by АНО «НПЦ «Ушкуйник» on 17.12.2025 (₽4,998,900.00) to supply, install and commission SMD-mounting-line equipment (pick-and-place machine, tape feeders, paste mixer, PCB cutter, manual screen printer) for the entity’s new Центр коллективного пользования production facility. He was the sole bidder in the request-for-proposals procedure. Neither the tender notice nor the award protocol specifies equipment brand or country of manufacture (spec’d generically, «или эквивалент») — flagged as an open question, not yet resolved to a specific import channel or country of origin.",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "ZAKUPKI_5300010714_20251217_protokol-smd-oborudovanie-ushkuynik.pdf (s5303), award protocol read via OCR (tesseract, rus) 2026-09-04: names Степанов Дмитрий Александрович, ИНН 164809949104, as the sole bidder recognized and awarded the SMD-line supply contract."
+    ]
   }
 ]
