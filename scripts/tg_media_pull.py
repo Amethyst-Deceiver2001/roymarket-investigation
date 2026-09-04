@@ -66,12 +66,28 @@ def battlefield_score(text: str) -> int:
 def cmd_candidates(args) -> None:
     conn = sqlite3.connect(DB)
     c = conn.cursor()
-    placeholders = ",".join("?" for _ in args.channel)
+    # A private/invite-only channel (e.g. the Академия Противодействия БПЛА
+    # chat) has no public username in tg_channels — ch.username is "" or
+    # NULL, so matching only by username silently returns zero rows for it.
+    # Accept a bare numeric channel_id as an alternative --channel value
+    # (still local-DB-only, no network call) so `candidates` still works
+    # for a private chat even though `fetch` genuinely can't (it needs a
+    # public t.me/s/<username>/<id> preview URL, which a private chat has
+    # no equivalent of).
+    usernames = [ref for ref in args.channel if not ref.isdigit()]
+    channel_ids = [int(ref) for ref in args.channel if ref.isdigit()]
+    clauses, params = [], []
+    if usernames:
+        clauses.append(f"ch.username IN ({','.join('?' for _ in usernames)})")
+        params.extend(usernames)
+    if channel_ids:
+        clauses.append(f"ch.id IN ({','.join('?' for _ in channel_ids)})")
+        params.extend(channel_ids)
     c.execute(
         f"""SELECT p.channel_id, ch.username, p.msg_id, p.date, p.text
             FROM tg_posts p JOIN tg_channels ch ON ch.id = p.channel_id
-            WHERE ch.username IN ({placeholders})""",
-        args.channel,
+            WHERE {' OR '.join(clauses)}""",
+        params,
     )
     rows = c.fetchall()
     scored = []
@@ -181,7 +197,9 @@ def main() -> None:
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     ap_c = sub.add_parser("candidates", help="local DB scan, no network calls")
-    ap_c.add_argument("--channel", nargs="+", required=True, help="channel username(s), no @")
+    ap_c.add_argument("--channel", nargs="+", required=True,
+                       help="channel username(s), no @ — or a numeric channel_id for a "
+                            "private/invite-only channel with no public username")
     ap_c.add_argument("--top", type=int, default=40)
     ap_c.add_argument("--min-score", type=int, default=2)
     ap_c.set_defaults(func=cmd_candidates)
