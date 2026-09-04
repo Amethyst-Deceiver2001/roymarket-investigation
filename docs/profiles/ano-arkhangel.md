@@ -20,6 +20,8 @@
 |---|---|---|
 | Архангельский Геннадий Евгеньевич | 2024-02-01 | в должности с регистрации (rusprofile.ru aggregator pull, not a primary EGRUL extract) [s5394] |
 
+- 1 OpenSanctions match(es) (screened 2026-09-04).
+
 ## Web & social presence
 
 ### Telegram
@@ -28,7 +30,15 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Gennadiy Evgenevich Arkhangelskiy — Архангельский Геннадий Евгеньевич
+
+- **ИНН:** 615491317400
+- Директор / соучредитель (2024-02-01–present)
+
+### Ilya Sergeevich Tashmatov — Ташматов Илья Сергеевич
+
+- **ИНН:** 234503145734
+- Соучредитель (2024-02-01–present)
 
 ## Corporate links
 
@@ -36,13 +46,15 @@ _No named principals linked to this entity yet._
 
 ## Open questions
 
-- Identified via rusprofile.ru aggregator pull (2026-08-24 not yet confirmed against a primary EGRUL extract). Full ИНН/ОГРН extract not yet pulled — upgrade if this entity's role in the Гагаринг training-center relationship grows more central. [s5394]
+- A second, independent egrul.nalog.ru open-API lookup (2026-09-03, s5409) confirms director «Архангельский Геннадий Евгеньевич» and КПП 231501001 — corroborates the earlier rusprofile.ru pull (s5394) on a second, government-sourced channel. Still no full signed EGRUL extract (PDF) pulled — both sources so far are open-API summaries, not the full document. Upgrade if this entity's role in the Гагаринг training-center relationship grows more central. [s5409]
+- ARCHANGEL-FAMILY DISAMBIGUATION STATUS (2026-09-03): at least 6 distinct "Архангел"-branded organizations are now on record. (1) THIS entity (Архангел Легион, ИНН 2315233718) — confirmed tied to Гагаринг's 51st Army training-center relationship. (2) «Архангел Спецназа» (@arx_spn, 1.02M subs, the mask-branding org with a separate joint drone-retraining project with Гагаринг) — checko.ru name search returned only noise (too many unrelated "Архангел"-named companies to disambiguate by name alone) and the channel's own t.me/s/ page carries no external link; NO legal entity identified for it in this pass. (3) «проект Архангел» / Филиппов Михаил Геннадьевич — myrotvorets.center (Cloudflare-blocked to scripts, confirmed again this pass) could not be checked; still only parked in memory (roymarket_archangel_adjacent_network), relationship to (1)/(2) unresolved. (4) ooo-arkhangel (EU-sanctioned ЦБСТ resident, Moscow, ИНН 9714079108, director Шатракова А.А.) — already confirmed unrelated to (1)-(3) in its own record. (5) ooo-arkhangel-zaporizhzhie (ИНН 9500026652, Мелитополь/occupied Zaporizhzhia, a UAV-mechanic TRAINING operator, not a hardware maker despite manufacturer-coded OKVED) — now a full entity record; no tie found to (1)-(4). (6) ooo-arkhangel-tsentr (ИНН 5032379630, «Архангел-ЦЕНТР», Odintsovo — note the real legal name has a -ЦЕНТР suffix, correcting the earlier parked memory's assumption of a bare "Архангел") — only a stub record (single open-API lookup), Wagner-branding claim from the parked memory NOT yet re-verified against this specific ИНН. Net: the name "Архангел" is being independently reused by at least 4 unrelated legal entities plus 2 informal Telegram brands in this space — a strong instance of the generic-patriotic-brand-name collision pattern documented elsewhere in this project.
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s5394 | Rusprofile | Rusprofile (RUSPROFILE_2315233718_20260903_ano-arkhangel.txt) | 2026-09-03 | 2026-09-03 |
+| s5409 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_2315233718_20260903_ano-arkhangel.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
