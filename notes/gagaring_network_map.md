@@ -368,3 +368,76 @@ got a clean 200 where curl got blocked. Worth trying before writing off a
 government geo/registry site as "manual browser only" the way
 `kad_arbitr_ru_ddos_guard_blocked` currently does — that memory may be
 worth re-testing with this technique rather than taken as settled.
+
+### Profile review pass (2026-09-04)
+
+User asked for a review of the Гагаринг draft profile/network for gaps,
+plus a Yandex web search on Гагаринг/Барашков (Yandex itself returned only
+a SmartCaptcha wall to a scripted fetch — fell back to Google-indexed
+Russian-press search, which turned up plenty). Findings:
+
+- **Data-quality catch, fixed**: two of the three patents attributed to
+  `ooo-gagaring` via the 2026-08-24 Rospatent full-roster sweep were
+  Soviet-era (1993) welding patents under the name "Барашков Александр
+  Сергеевич" — but the confirmed director has a DOB of 1979-11-03, making
+  him 13-14 at either publication date. A namesake collision, not his own
+  patent (the name isn't rare) — removed from `patents[]`, kept only the
+  plausible 2023 filing. General lesson: any bare-name-string patent match
+  spanning decades needs a DOB check before being promoted to a display
+  field.
+- **Independent battlefield confirmation, previously missing entirely**:
+  `battlefield_evidence[]` was empty despite a flagged-but-unresolved
+  Чадаев-repost claim. Web search surfaced two much stronger sources: an
+  RT interview with Барашков himself (02.11.2024) confirming Гагаринг
+  deployed field labs in Курская область during the AFU incursion and
+  equipped "thousands" of FPV drones, striking "hundreds of units of
+  military equipment including heavy-armored Western-made examples"; and
+  an independent Народный фронт → ТАСС → vz.ru/ridus.ru wire (08.04.2025)
+  confirming military use while Барашков declines to give deployment
+  figures, calling them classified. Both now in `battlefield_evidence[]`;
+  the RT interview independently resolves the general Kursk-oblast-lab
+  open question (previously resting on one casual blogger post) without
+  resolving the separate, still-unconfirmed Чадаев claim (a specific
+  Kursk-NPP-defense episode + a "10,000+ units" figure) — kept distinct,
+  not conflated.
+- **Product catalog gap, filled**: a single Telegram post (msg 950,
+  Oct 2024) named a much wider product line than what had been captured —
+  two РЭБ jammers («Звезда 1»/«Звезда 2», a materially more sensitive
+  category than the comms/detector lines already on file), the «Нить»
+  FPV-transmitter remote unit, and a «ГОРН» drone detector Барашков says
+  the army rejected despite better specs than its incumbent supplier
+  ("бойцы привыкли к другим детекторам, угадайте с трёх раз к каким") —
+  now on record as `products[]` + an `open_questions[]` entry connecting
+  this procurement-favoritism friction to the standing zero-zakupki-hits
+  puzzle: frontline use plausibly runs through informal/volunteer channels
+  rather than official state contracts.
+- **Storefront-ownership question resolved**: the same post confirms
+  `t.me/gagaring_bot/shop` as Гагаринг's own official sales channel,
+  which resolves the earlier-flagged uncertainty over whether
+  `gagaring.it-shop-tg.ru` was a third-party mirror — it's Гагаринг's own
+  bot-generated storefront.
+- **New press appearance found**: a July 2025 Соловьёв LIVE interview
+  (Владислав Шурыгин's program) — Барашков directly criticizes army
+  procurement as monopolistic, references Ukrainian drone commander
+  "Мадяр" favorably for corporate-style management, and frames the
+  volunteer FPV-production ecosystem as "народный ВПК." Archived as a
+  source; not yet pulled as a video/transcript.
+- **The single biggest still-open question, explicitly tested and still
+  unresolved**: whether Гагаринг has any actual tie to РОЙ.МАРКЕТ itself
+  (`cbst_tie` is null) — this project's namesake platform. Fetched
+  роймаркет.рф directly: the live public page is a supplier-application
+  form, not a browsable/searchable vendor catalog (consistent with
+  Безруков's own on-record description of it as a gated pilot used by
+  specific military units, not a public storefront) — no mention of
+  Гагаринг on the application page, but this is inconclusive, not a
+  negative finding, since no catalog was actually searchable. No
+  screening script exists for this platform. A real answer needs a
+  buyer-side login this investigation doesn't have, or a future leak/press
+  piece naming actual vendors.
+- **Still genuinely unexplored, not attempted this pass**: a full pull of
+  the Соловьёв LIVE video/transcript itself (currently only the TG
+  channel's own chapter-summary post is archived); whether «Звезда 1/2»
+  jammers or the anti-thermal blankets/«Фата» inverter/«А35» antenna
+  accessories (named in the same product-catalog post but not yet added
+  individually) warrant their own `products[]` entries; a repeat check of
+  роймаркет.рф once/if a public catalog view becomes accessible.
