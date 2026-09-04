@@ -39,12 +39,14 @@
 
 - This post links two further, distinct, NOT-yet-scraped channels: t.me/proekt_arhangel (cited twice as a related/parent channel, distinct handle from @projectArchangel) and t.me/malyha_ww (video build instructions — "малыха" matches the BOM's "Малая ДР" naming for this small variant). Also confirms t.me/c/1859964206/110711 (the already-known private "Академия Противодействия БПЛА" chat) carries this project's own tuning content. [s5454]
 - BOM line item "Связь: Гермес или аналоги" ("Hermes comms, or equivalent") is a generic reference, not a specific vendor citation — plausibly, but NOT confirmed to be, the same «Гермес» tactical-comms brand sold commercially by `npo-kaysant` (ИНН 7733393203, see that entity's merged `kb-germes` alias). Left as an open lead, not merged. [s5454]
+- Self-description (23.10.2025, s5456): "Проект «Архангел» имеет: сеть своих учебных центров; профессиональные боевые расчеты; ... опыт подготовки дроноводов в зоне СВО, исчисляемый несколькими тысячами пилотов; производственные мощности; мощную партнерскую сеть предприятий" (a network of its own training centers, professional combat crews, experience training drone pilots in the SVO zone numbering several thousand, production capacity, and a strong partner network of enterprises) — the project's own claim of scale, not independently verified. [s5456]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s5454 | Tgpost | Tgpost (TGPOST_20260626_projectArchangel-10381-arhangel-rocket-build-instructions.txt) | 2026-06-26 | — |
+| s5456 | Tgpost | Tgpost (TGPOST_multi_20251009-20251023_proekt_arhangel-arkhangel-shchit-business-model.txt) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

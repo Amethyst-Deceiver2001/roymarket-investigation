@@ -1978,6 +1978,58 @@
         {
           "source_id": "s5454",
           "text": "BOM line item \"Связь: Гермес или аналоги\" (\"Hermes comms, or equivalent\") is a generic reference, not a specific vendor citation — plausibly, but NOT confirmed to be, the same «Гермес» tactical-comms brand sold commercially by `npo-kaysant` (ИНН 7733393203, see that entity's merged `kb-germes` alias). Left as an open lead, not merged."
+        },
+        {
+          "source_id": "s5456",
+          "text": "Self-description (23.10.2025, s5456): \"Проект «Архангел» имеет: сеть своих учебных центров; профессиональные боевые расчеты; ... опыт подготовки дроноводов в зоне СВО, исчисляемый несколькими тысячами пилотов; производственные мощности; мощную партнерскую сеть предприятий\" (a network of its own training centers, professional combat crews, experience training drone pilots in the SVO zone numbering several thousand, production capacity, and a strong partner network of enterprises) — the project's own claim of scale, not independently verified."
+        }
+      ],
+      "director": null,
+      "name_history": []
+    },
+    {
+      "slug": "ooo-arkhangel-shchit",
+      "inn": "5027339008",
+      "ogrn": "1255000059533",
+      "kpp": "502701001",
+      "legal_form": "ООО",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ ЩИТ\"",
+      "name_latin": "OOO \"Arkhangel Shchit\" (\"Arkhangel Shield\")",
+      "brand_ru": "Архангел",
+      "registered": "2025-06-24",
+      "address": "Московская область",
+      "director": "Хабибулин Владимир Игоревич",
+      "director_history": [
+        {
+          "value": "Хабибулин Владимир Игоревич",
+          "as_of": "2026-09-04",
+          "source_id": "s5456",
+          "note": "Current director per direct EGRUL search."
+        }
+      ],
+      "tier": "manufacturer",
+      "tier_basis": "Directly named by press (Mashnews, photo credit Дмитрий Матвеев, re-posted by @proekt_arhangel 09.10.2025, s5456) as the manufacturer of the «Архангел» interceptor drone shown at Expo.UAV 2025. A companion post from the same channel (23.10.2025, same source file) names ООО «Архангел Щит» twice more as the entity whose combat instructors and staff run the facility-defense contracting/training business described in that post — client personnel train specifically to \"replace\" this company's own employees. Director Хабибулин Владимир Игоревич does not match Филиппов, Тимофеев, Кусумов, or Крючков — the four other named individuals across this \"Архангел\"-brand entity cluster — so this is a genuinely distinct fifth vehicle, kept separate rather than merged with any of the others. Shares tax-district code КПП 502701001 with ООО «МЛ КОНСТРАКШНС» (Филиппов's own construction firm) — a weak coincidence, NOT treated as a confirmed link on its own.",
+      "cbst_tie": {
+        "claim": "None found.",
+        "confidence": "none",
+        "evidence": null,
+        "source_id": null
+      },
+      "products": [
+        {
+          "name_ru": "Дрон-перехватчик «Архангел»",
+          "description": "Same product line documented via @projectArchangel/10381 (see proekt-kb-arkhangel entity) — this press citation (Mashnews, Expo.UAV 2025) is the first third-party source directly naming a specific manufacturing legal entity for it.",
+          "source_id": "s5456"
+        }
+      ],
+      "open_questions": [
+        {
+          "source_id": "s5456",
+          "text": "Relationship to `proekt-kb-arkhangel` (Филиппов's own informal project/channel operation) is NOT established — director Хабибулин is a name not seen anywhere else in this investigation's Архангел-brand cluster. Plausible readings: a formal manufacturing shell for the informal project (registered 24.06.2025, well after the project's 2022 origin — consistent with a later formalization), a subcontractor, or an unrelated coincidence of branding. Treat as an open question, not a confirmed subsidiary of either Филиппов or ooo-arkhangel-zaporizhzhie."
+        },
+        {
+          "source_id": "s5456",
+          "text": "Same EGRUL search surfaced a SECOND, previously-unknown Zaporizhzhia \"Архангел\" entity: ООО \"АРХАНГЕЛ\", ИНН 9001027869, ОГРН 1249000005517, registered 10.06.2024 (i.e. before ooo-arkhangel-zaporizhzhie/ИНН 9500026652's 22.08.2024 registration) — ГЕНЕРАЛЬНЫЙ ДИРЕКТОР Кусумов Вахид Абдулович, the same person who is 100% founder of ooo-arkhangel-zaporizhzhie. Not investigated further this pass, flagged for Кусумов's own person record."
         }
       ]
     }
