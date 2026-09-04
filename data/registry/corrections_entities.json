@@ -1951,6 +1951,11 @@
           "name_ru": "Дрон-ракета-перехватчик «Архангел»",
           "description": "Self-described as \"по сути, управляемая ракета с вертикальным взлётом или возможностью размещения на самолёте-матке\" (in essence a guided rocket with vertical takeoff, or carriage on a mothership aircraft). Range up to 50km, max speed 340km/h, cruise 100-120km/h (33% power); 200+km/h needs 50% power at reduced 25-30km range. Intended use case: paired with air-defense radar (РЛС ПВО), operator guides the drone (fitted with a corner reflector) onto target by instruments. Full open-source build files (3D-printable PLA-CF airframe, Betaflight config, BOM) published publicly by the project's own channel for free self-assembly. B2B integration channel offered for aircraft/radar/ground-vehicle (БЭК) integration via @arhangel_channel_bot.",
           "source_id": "s5454"
+        },
+        {
+          "name_ru": "«Гермес коллектив»",
+          "description": "Multi-drone control architecture allowing an operator to deploy and switch between several drones from cover (\"высаживать и переключаться между ними... не выходя из укрытия\"). Developed for ambush-drone (засадные) tasking, self-described as also suited to ПВО/interceptor drones. Publicly endorsed on-record by an unnamed combat participant quoted in the announcement post.",
+          "source_id": "s5457"
         }
       ],
       "battlefield_evidence": [],
@@ -1968,6 +1973,13 @@
           "context": "The project's own framing of a \"civilian\" (non-warhead) use case for the same airframe, immediately followed later in the same post by the combat-warhead admission above.",
           "source_id": "s5454",
           "as_of": "2026-06-26"
+        },
+        {
+          "text_ru": "Тест патронов IGLA LEX 100 с дробью ВНЖ (вольфрам). Патрон не сертифицирован для гражданского оружия. Его делают для минобороны.",
+          "text_en": "Test of IGLA LEX 100 cartridges with tungsten-alloy shot. The cartridge is not certified for civilian firearms — it is made for the Ministry of Defense.",
+          "context": "Community member in the private \"Академия Противодействия БПЛА\" chat testing military-only ammunition as a warhead payload option for the «Архангел» interceptor, as part of a broader tungsten-vs-lead-vs-steel fragmentation-payload cost/effectiveness discussion (same thread, msgs 110701-110710). Not an official project product claim, but direct evidence of community-level weapons optimization around this drone with explicit awareness that the ammunition in question is restricted to military use.",
+          "source_id": "s5457",
+          "as_of": "2025-11-03"
         }
       ],
       "open_questions": [
@@ -1982,6 +1994,18 @@
         {
           "source_id": "s5456",
           "text": "Self-description (23.10.2025, s5456): \"Проект «Архангел» имеет: сеть своих учебных центров; профессиональные боевые расчеты; ... опыт подготовки дроноводов в зоне СВО, исчисляемый несколькими тысячами пилотов; производственные мощности; мощную партнерскую сеть предприятий\" (a network of its own training centers, professional combat crews, experience training drone pilots in the SVO zone numbering several thousand, production capacity, and a strong partner network of enterprises) — the project's own claim of scale, not independently verified."
+        },
+        {
+          "source_id": "s5457",
+          "text": "The private \"Академия Противодействия БПЛА\" chat (channel_id 1859964206, already scraped, 5795 posts) carries 387 \"Архангел\" mentions and 147 warhead/fragmentation-term mentions — only one specific thread (msgs 110701-110720) has been close-read so far. A full close-read of this chat is a real next step, likely to surface further weapons-development detail beyond the polished public-channel framing."
+        },
+        {
+          "source_id": "s5457",
+          "text": "A build variant using \"судоплатовских комплектующих (ВТ 40)\" (components from \"Судоплатов\"/\"НСУ 2.0\") is offered alongside the standard kit — the same rival network Проект Архангел publicly denied supplying in 2024 (see the parked roymarket_archangel_adjacent_network memory's \"Гермес comms\" note). Suggests a more complex relationship than pure rivalry — at minimum component-level compatibility. Not investigated further."
+        },
+        {
+          "source_id": "s5457",
+          "text": "A Telegram channel named \"ГЕРМЕС - ППРЧ связь, мачты, защита от дронов\" is referenced by name (no handle) as the home channel for the «Гермес коллектив» system — not yet identified/scraped. May or may not be the same «Гермес» brand sold commercially by `npo-kaysant` (ИНН 7733393203)."
         }
       ],
       "director": null,
