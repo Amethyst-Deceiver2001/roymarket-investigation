@@ -443,3 +443,73 @@ Russian-press search, which turned up plenty). Findings:
   accessories (named in the same product-catalog post but not yet added
   individually) warrant their own `products[]` entries; a repeat check of
   роймаркет.рф once/if a public catalog view becomes accessible.
+
+### Product/visual/testimony sweep of my_el_lab and Архангел channels (2026-09-04)
+
+User asked to check Гагаринг's own channel and Архангел's newly-downloaded
+channels (the private invite-only "Академия Противодействия БПЛА" chat had
+gone from 0 to 5,795 posts since it was last checked, and Archangel_Forum
+now has 6,996 members catalogued) for other products, visuals, and
+handover-video/field-testimony material.
+
+- **`ooo-gagaring`'s `products[]` roughly doubled (10 → 24 entries)**. A
+  systematic scan of all 31 "Новое изделие" (new product) announcement
+  posts on `@my_el_lab` surfaced a much wider own-brand catalogue than
+  previously captured: three reconnaissance/attack drone lines (СКАУТ-1
+  recon, СКАУТ-5 heavy survey/LIDAR platform at ₽11.44M, СКАУТ-10 sold
+  explicitly in a disposable-kamikaze configuration), «Секира» FPV strike
+  drones (up to 8kg payload), three unmanned ground platforms (Молот,
+  Молекула, and «Атом» — explicitly advertised as rated for mounting up to
+  300kg of weaponry), a cargo-delivery FPV drone, two more detectors
+  (Сонар-2, ДАРС — the latter can auto-trigger an external jammer), a
+  fiber-optic (jam-proof) extension for the «Сова» line, and two physical
+  anti-drone munitions: «РОСЯНКА 12х76» (a shotgun-cartridge muzzle device)
+  and «Дронобой» (an AK-74/AK-12/RPK-74 attachment that can also fire a
+  repurposed 23mm ЗУ-23-2 HE-fragmentation round). This meaningfully shifts
+  the picture from "comms/detection electronics maker" to a
+  vertically-integrated small-arms-adjacent/UGV/loitering-munition
+  supplier. Also found (in the shared "Академия Противодействия БПЛА"
+  chat, not Гагаринг's own channel): the origin story of «Кузнечик» —
+  first shown at Дронница 2023, with unnamed parties asking Гагаринг not
+  to publicize it or its frequencies for over a year before they
+  commercialized it themselves.
+- **`ooo-arkhangel-zaporizhzhie`'s `products[]` went from empty to 2
+  entries**, plus a new open question. A scan of `@projectArchangel`
+  (9,981 posts, previously unmined for own-products) found: «Дозор-1П», a
+  field UAV detector/jammer whose schematics/firmware are given FREE to
+  military units on a commander's written request (not sold); a
+  remote-control-extension device for drone operators (protects the
+  operator from RF-signature detection, tested at MoD ranges and in the
+  SVO zone, with kamikaze-drone remote control specifically in
+  development); and — a genuinely new finding for this entity — its own
+  "Опытно-производственная база «Архангел»" runs live-fire armor R&D,
+  testing vehicle up-armoring against AK-74M armor-piercing rounds and PKM
+  machine-gun fire. Also surfaced a second training location (Люберцы,
+  Moscow oblast) distinct from the Zaporizhzhia ground already on file,
+  and a Readovka-covered named field operator ("Радистка Катя," Орден
+  Мужества recipient, first female FPV pilot in the Russian army per that
+  coverage) who cross-references — via her callsign "Радистка" — with an
+  existing my_el_lab post crediting Гагаринг's own Кузнечик/Сова as her
+  tools. Not fully chased this pass (a lead for a future session, not a
+  confirmed identity).
+- **Visuals/media**: `my_el_lab` and `@projectArchangel` both have NO
+  `media_type` populated in `data/roymarket.db` for any post (blank for
+  every row) — meaning neither channel was scraped with the version of
+  `tg_scan.py` that records photo/video/document type, so there's
+  currently no way to identify which of their thousands of posts carry
+  pullable visual evidence without either a re-scrape or a manual
+  post-by-post check. `Archangel_Forum` and the private Academy chat DO
+  have `media_type` populated (10,831 photos + 10,059 videos on
+  Archangel_Forum; 968 photos + 823 videos on the Academy chat) — a real,
+  large pool of unreviewed visual evidence sitting in the DB, not yet
+  triaged with `tg_media_pull.py candidates`.
+- **Not attempted this pass, scale-limited**: this was a targeted keyword
+  sweep, not an exhaustive read — `Archangel_Forum` alone has 73,085 posts
+  and wasn't scanned for its own product/testimony content at all (its
+  6,996-member catalogue was reviewed in a prior session, not its message
+  content); the Academy chat's remaining ~5,700 posts beyond the Кузнечик
+  origin-story hit are unreviewed; `tg_media_pull.py candidates` was not
+  run against any of the four channels to formally triage handover-photo/
+  video candidates for a `fetch` pass into `battlefield_evidence[]`/
+  `images[]`. Good next-session starting point given the media-pool size
+  just surfaced above.
