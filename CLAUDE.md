@@ -187,6 +187,52 @@ hits will belong to large, already-well-documented state defense primes
 enormous by nature — triage for what's actually new to this investigation
 before spending a `fetch-documents` pass on it.
 
+**`scripts/tg_scan_users.py`** (added 2026-09-04, sibling to `tg_scan.py`)
+catalogs a channel's member/participant list rather than its message
+history — usernames, profile names, exposed phone numbers, and a flag for
+profile photos with identifiable features. Same live-network-job class as
+`tg_scan.py` — a full-channel member pull is handed to the user as an exact
+command (`--only <handle>`), never run directly/in background. Distinct
+from `tg_scan.py --full`, which only ever pulled message text/media, never
+membership — for an invite-only chat in particular, a "did we scrape this"
+question needs checking `tg_users` (membership) separately from `tg_posts`
+(content); a channel can have one populated and not the other.
+
+**`scripts/screen_egrip_ip.py`** (added 2026-09-04) checks a person's
+personal ИНН against egrul.nalog.ru's open ЕГРИП (individual-entrepreneur)
+search — the same no-captcha API `egrul_batch_pull.py` already uses, just
+keyed on people instead of entities. `--slug <person-slug>` is ordinary
+inline reconnaissance; a full-roster sweep (no `--slug`/`--limit`) is
+handed to the user. A real ИП hit is any row with `k=="fl"` carrying an
+`o` (ОГРНИП) field — NOT a check on `tot`/`cnt`, which are pagination
+metadata attached inconsistently and silently drop a person's 2nd+
+registration if used as the filter (bug found and fixed 2026-09-04, see
+the script's own docstring). **`scripts/enrich_egrip_hits.py`** takes the
+resulting ОГРНИП list to rusprofile.ru for status/OKVED/procurement
+detail — see the seeded memory `rusprofile_ru_decoy_content_anti_scraping`
+before trusting anything this script returns beyond the `<title>` tag;
+rusprofile serves randomized other-people's data in its gated widgets to
+repeat/automated traffic, confirmed by re-fetching the same URL three
+times and getting three different unrelated procurement summaries while
+the title stayed correct every time.
+
+**ФНС «Прозрачный бизнес» (pb.nalog.ru / nalog.gov.ru), added 2026-09-04**
+— three distinct person-level (not entity-level) cross-checks, all keyed
+on a person's `inn_personal`, each `--slug`-scoped for inline
+reconnaissance and hand-the-user'd for a full-roster sweep:
+`scripts/screen_disqualified.py` (реестр дисквалифицированных лиц —
+disqualified-director registry, via `pb.nalog.ru/search-proc.json`
+search-rdl mode), `scripts/screen_subsidiary.py` (subsidiary/liability
+cross-check by ИНН and ФИО, via `nalog.gov.ru/rn77/rso/Ajax.html` — no DOB
+field, so a namesake collision can't be fully ruled out by this registry
+alone), and `scripts/screen_upr_uchr.py` (director/founder cross-reference,
+same `search-proc.json` endpoint, different query mode — writes results to
+a person's `other_entities`/`other_entities_checked_at` fields, not a
+field named `upr_uchr_matches`). Genuinely productive on the first real
+run: surfaced business ties for the Гагаринг network's Барашков/Бегак that
+ФНС's own director/founder records had but nothing else in this project's
+toolkit had checked.
+
 ## Local extraction jobs: sample before a full corpus run, don't background a slow one
 
 "No network call" (`mine_leads.py`, `scan_sources.py`, `mine_zakupki.py`,

@@ -2467,3 +2467,57 @@ Deliverable written: `notes/gagaring_network_map.md`. Not done: full EGRUL
 extracts (vs. open-API summaries) for entities #5/#6, and no legal entity
 ever identified for «Архангел Спецназа» (#2) or confirmed for «проект
 Архангел» (#3) — left as genuinely open, not chased further this pass.
+
+### Continuation (2026-09-04)
+
+Four more sessions' worth of work on the same network, all folded into
+`notes/gagaring_network_map.md` and `CLAUDE.md` rather than kept here:
+
+- **Krasnodar-krai regional registries** — SME-registry exclusion event
+  and a hackathon-sponsor tie found for Гагаринг (see the entity's own
+  `open_questions[]`).
+- **A fourth Гагаринг office** (ул. Красная 176/5, sales/legal) and a ГОЗ
+  self-admission found via hh.ru job postings — a new source type for this
+  project.
+- **POI-wide ЕГРИП/ИП sweep** — every one of 126 people-of-interest with a
+  personal ИНН checked against egrul.nalog.ru's open ЕГРИП search
+  (`scripts/screen_egrip_ip.py`, new script). Caught and fixed a real
+  undercount bug (filtering on `tot` instead of `k=="fl" and o`) that had
+  silently dropped every 2nd+ ИП registration for anyone with multiple —
+  re-ran with `--force` after the fix, recovering 13 registrations (53→66
+  total across 53 people). Along the way, discovered and documented
+  rusprofile.ru's anti-scraping decoy-content behavior (see the seeded
+  memory `rusprofile_ru_decoy_content_anti_scraping`) — its gated
+  procurement/status widgets return randomized OTHER people's data to
+  repeat/bot traffic while the `<title>` tag stays accurate; nearly let a
+  fabricated "3rd government contract" for an already-confirmed principal
+  (Цыганов) into the registry before catching it.
+- **Screening-gap closure** — audited every known screening mechanism
+  (GUR, Aleph, OpenSanctions, rk2035, ФНС «Прозрачный бизнес») against the
+  9 Гагаринг-network entities + 3 key principals, found and closed the
+  real gaps (GUR had never been run against ANY person — no batch script
+  exists, so this used `screen_gur.py`'s internal functions directly per-
+  person). The ФНС director/founder cross-reference
+  (`scripts/screen_upr_uchr.py`, new) was the productive one: surfaced
+  pre-Гагаринг СДЭК ties (ООО «СДЭК Рекоммерс», ООО «СДЭК-Европа») and a
+  charitable fund (Игры вдолгую) for Барашков, and a new entity for Бегак
+  (НП «Дискретно-инновационный кластер малой авиации», added to
+  `entities.json`). Куртеев came back clean everywhere — reinforces the
+  existing suspicion his Гагаринг-role attribution is spurious.
+- **Open web search + postal-code verification** — a TASS-quoted
+  Volkswagen-engineer recruitment episode and Гагаринг's own Telegram
+  posts on the same campaign (explicit "sanctions backfired" framing)
+  captured into `marketing_claims[]`; a self-submitted press release
+  (re-port.ru) claims Барашков is assistant to State Duma deputy Vladislav
+  Даванков — recorded as an open question, NOT independently confirmed.
+  Resolved a standing postal-code discrepancy for the legal HQ (350912 is
+  correct per public index directories; 350312 was a Роскомнадзор filing
+  typo, not a competing valid code) and confirmed the new Красная 176/5
+  office's own postal code (350020).
+
+Still open from the original pass: full EGRUL for Архангел entities #5/#6,
+«Архангел Спецназа»/«проект Архангел» legal-entity ID, Barashkov's
+`screen_disqualified.py` check (returned HTTP 400, inconclusive — retry),
+the private Archangel chat (zero scraped message content, only 3/many
+members catalogued — commands handed to user, not yet run), НПО Эйлер deep
+dive, the Одесская 48/3 building pin.

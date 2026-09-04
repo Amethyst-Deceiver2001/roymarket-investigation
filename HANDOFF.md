@@ -32,6 +32,23 @@ before any publish**: a regression left `ooo-trimiks-bulat-3mx`'s
 registry and the live brief currently contradict each other on the project's
 headline claim. See the plan's "Things to fix" §1.
 
+**As of 2026-09-04**: the sections below (written 2026-08-24/26) describe
+that day's state and are stale on specifics — read
+[`notes/rebuild_plan.md`](notes/rebuild_plan.md)'s "Гагаринг network
+deep-dive" section (started 2026-09-03, continued 2026-09-04) for the most
+recent workstream: a full wide-net pass on the Гагаринг/Архангел network
+(regional registries, an ЕГРИП/ИП sweep across all 126 POI with a personal
+ИНН, screening-gap closure across GUR/Aleph/OpenSanctions/ФНС «Прозрачный
+бизнес», open-web press leads, postal-code verification), plus a real
+rusprofile.ru anti-scraping discovery (seeded memory
+`rusprofile_ru_decoy_content_anti_scraping` — its gated widgets serve
+randomized OTHER people's data to repeat/bot traffic; trust only the
+`<title>` tag from that site). New scripts from this window
+(`tg_scan_users.py`, `screen_egrip_ip.py`, `enrich_egrip_hits.py`, and the
+ФНС «Прозрачный бизнес» trio `screen_disqualified.py`/
+`screen_subsidiary.py`/`screen_upr_uchr.py`) are documented in `CLAUDE.md`'s
+crawling-jobs section, not repeated here.
+
 Two known defects in the old file, both fixed by the rebuild rather than in
 place: the manufacturers table is malformed (an unclosed `<td colspan="3">`
 spanning lines 1026–1051 with galleries and a 51,007-character unclosed
