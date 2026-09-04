@@ -44,6 +44,7 @@
 ## Open questions
 
 - Registered only 12.03.2026 (six months before this finding), status "Действующая организация" (active). No products, press coverage, website, or Telegram presence found yet under this specific legal name — unclear whether it's an operating manufacturer, a shell/holding vehicle for Филиппов's drone work, or something not yet active. Крючков Дмитрий Александрович (director) not yet cross-checked against any other entity/role in this registry. Worth a targeted zakupki/press/EGRUL-extract follow-up given the explicit aircraft-manufacturing OKVED and the confirmed Филиппов tie. [s5465]
+- Full screening battery run 2026-09-04, all clean: OpenSanctions (0 real matches — one name-similarity false positive against the already-known, already-sanctioned ooo-arkhangel-tsentr, dismissed on 0 ИНН/ОГРН match), OCCRP Aleph (0 results), GUR war-sanctions.gur.gov.ua persons/companies/components sections (0 hits — a free-text 'Архангел Групп' search surfaced only the already-known ooo-arkhangel-zaporizhzhie, TIN mismatch confirms it is not this entity), rk.2035.university БАС registry (0 hits), ФНС РОМ securing-measures registry (clean, 0 active measures). No adverse signal found anywhere yet on this newly-registered (12.03.2026) entity beyond the confirmed Филиппов founder tie and the aircraft-manufacturing OKVED itself. [s5465]
 
 ## Sources cited in this profile
 

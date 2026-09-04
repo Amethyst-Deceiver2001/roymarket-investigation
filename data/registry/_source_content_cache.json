@@ -43130,5 +43130,21 @@
     "as_of_method": null,
     "sha256": "4de77bd70e17b3193398bcdeec15e29713fefc636bb22afa7d383e7f926bcca7",
     "sample": "{\n \"step1_ack\": {\n \"id\": \"7be15509-37ed-47c8-923b-d251e69b01c5\",\n \"captchaRequired\": false\n },\n \"step2_summary\": {\n \"upr\": {\n \"data\": [],\n \"hasMore\": false,\n \"pageSize\": 50.0,\n \"rowCount\": 0.0,\n \"page\": 1.0\n },\n \"uchr\": {\n \"data\": [\n {\n \"ul_cnt\": \"1\",\n \"kind\": \"uchr\",\n \"inn\": \"502603133030\",\n \"name\": \"ФИЛИППОВ МИХАИЛ ГЕННАДИЕВИЧ\",\n \"type\": \"3\",\n \"token\": \"9141EE4ECC0C9FD9293A647B05E8163C7C73D12999"
+  },
+  "ALEPH_502603133030-9702081286-5026016117_20260904_filippov-companies-batch.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "33229c5ddb8a9021bcfd998a3ee25417b6287d2ff913d25bbf094a03dc953ac2",
+    "sample": "{\n \"filippov\": {\n \"query\": \"502603133030\",\n \"n_results\": 1,\n \"results\": [\n {\n \"id\": \"98b7c1bf4a4f0de26a83bc553b2aad3b21ee4845.69bb4b5a4969b5e24a1a9bd73a3fa064b4d7396b\",\n \"created_at\": \"\",\n \"mutable\": false,\n \"schema\": \"Person\",\n \"score\": 7.45002,\n \"shallow\": true,\n \"updated_at\": \"\",\n \"writeable\": false,\n \"collection\": {\n \"casefile\": false,\n \"category\": \"company\",\n \"count\": 0,\n \"countries\": [\n \"ru\""
+  },
+  "OPENSANCTIONS_502603133030-9702081286-5026016117_20260904_filippov-companies-batch.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "0af09e7eb9e1bca06d94ccb15b6627690556a05132fb5ffd3c760e91c64c3dd4",
+    "sample": "{\n \"queries\": {\n \"filippov\": {\n \"schema\": \"Person\",\n \"properties\": {\n \"name\": [\n \"Филиппов Михаил Геннадьевич\",\n \"Mikhail Gennadevich Filippov\"\n ],\n \"birthDate\": [\n \"1976-11-17\"\n ],\n \"idNumber\": [\n \"502603133030\"\n ],\n \"country\": [\n \"ru\"\n ]\n }\n },\n \"ml-konstrakshns\": {\n \"schema\": \"Company\",\n \"properties\": {\n \"name\": [\n \"ООО \\\"МЛ КОНСТРАКШНС\\\"\",\n \"OOO ML Konstrakshns\"\n ],\n \"innCode\": [\n \"5026016117\""
   }
 }
