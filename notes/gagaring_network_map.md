@@ -171,24 +171,63 @@ Still needed for a real presentation:
   actual right-holder, or independent photo/delivery/job-posting evidence.
   Still the strongest visual/credibility opportunity once resolved: a real
   production facility, not just a training school. Postal-code discrepancy
-  also still open (350312 per Роскомнадзор inspection vs. a different code
-  in the audit report).
-- **Sales/legal office** — ул. Красная, 176/5, Краснодар. A FOURTH distinct
-  location, found 2026-09-04 via two live hh.ru job postings (Руководитель
-  отдела продаж В2В, published 25.08.2026; Юрист по договорной и судебной
-  работе, published 07.08.2026), both listing this as the actual work
-  address — reads as a commercial/admin office, distinct from HQ/training/
-  production. The lawyer posting is independently notable: it explicitly
-  requires ГОЗ (гособоронзаказ/State Defense Order, 275-ФЗ) experience — a
-  self-admission of state-defense-order legal work, not yet corroborated by
-  a public zakupki contract (a targeted ИНН scan came back zero hits,
-  consistent with 275-ФЗ contracts often being closed/ДСП rather than
-  published openly).
+  RESOLVED 2026-09-04: cross-checked against public Почта России index
+  directories for ул. им. Фадеева (the legal-HQ street) — valid range is
+  350910/350911/350912, and no directory lists 350312 for this street at
+  all. 350912 (audit report/EGRUL) is correct; the Роскомнадзор inspection's
+  350312 is a filing typo.
+- **Sales/legal office** — 350020, ул. Красная, 176/5, Краснодар (postal
+  code confirmed 2026-09-04). A FOURTH distinct location, found 2026-09-04
+  via two live hh.ru job postings (Руководитель отдела продаж В2В, published
+  25.08.2026; Юрист по договорной и судебной работе, published 07.08.2026),
+  both listing this as the actual work address — reads as a commercial/admin
+  office, distinct from HQ/training/production. The lawyer posting is
+  independently notable: it explicitly requires ГОЗ (гособоронзаказ/State
+  Defense Order, 275-ФЗ) experience — a self-admission of state-defense-
+  order legal work, not yet corroborated by a public zakupki contract (a
+  targeted ИНН scan came back zero hits, consistent with 275-ФЗ contracts
+  often being closed/ДСП rather than published openly).
 - **Sevastopol** — recurring «Последний рубеж» training-muster location,
   described by Толстоусова as "уже как второй дом" (already like a second
   home). No street address/coordinates on file yet.
 - **Possible Kursk oblast site** — single unverified blogger mention, no
   address. Flagged, not confirmed.
+
+### Press/PR leads found 2026-09-04 (open web search on Гагаринг/Барашков)
+
+- **Volkswagen-engineer recruitment, independently reported by ТАСС**
+  (09.07.2026, s5428) — an on-record quote from Барашков ("Ваш опыт и
+  инженерная школа Volkswagen бесценны...") inviting laid-off VW engineers
+  to Гагаринг, pegged to VW's announced 100k-job/four-plant cuts. Gagaring's
+  own Telegram channel (@my_el_lab) ran the same campaign a week+ earlier
+  with harder framing: msg 3864 ("У нас заводы не закрывают, у нас заводы
+  строят") and msg 3931 — an explicitly geopolitical post arguing Western
+  sanctions "backfired" and let Russian firms "vacuum up" European
+  engineering talent being pushed out by deindustrialization. All captured
+  verbatim into `marketing_claims[]` on ooo-gagaring (s5428/s5430-32).
+- **Duma tie, self-described and UNCONFIRMED**: a 07.08.2026 press release
+  (re-port.ru, s5429 — a PR wire, self-submitted, credited to Гагаринг's own
+  Telegram channel, not independent journalism) describes Барашков as
+  "помощника депутата Государственной Думы Владислава Даванкова" (assistant
+  to State Duma deputy Vladislav Davankov, "Новые люди"). Not found on
+  duma.gov.ru, not found in a targeted search of @my_el_lab's own post
+  history for "Даванков"+"помощник". Recorded as an open question on
+  Барашков's own record (s5429) — a real PEP-adjacency lead if it checks
+  out, but not yet elevated to a confirmed fact.
+- **СДЭК-franchise background, self-corroborated**: the same press release
+  frames Барашков's pre-Гагаринг career as "управление одной из крупнейших
+  франшиз СДЭК в России" — consistent with (though not independent proof
+  of) the ФНС-sourced СДЭК Рекоммерс/СДЭК-Европа director/founder roles
+  found earlier this session via `screen_upr_uchr.py`.
+- **«Антифорбс» prize** — Барашков's own initiative, ranking entrepreneurs
+  by employee wages rather than personal wealth; first-person quotes pulled
+  directly from @my_el_lab (msgs 4297, 4336, s5433/s5434) rather than the
+  press paraphrase. Recorded as a personal open_question on his people.json
+  record, plus a marketing_claims[] entry on ooo-gagaring.
+- **gagaring.it-shop-tg.ru** — a second storefront domain selling the same
+  Кузнечик/Сова/Юрка catalogue at matching prices. Reads as a generic
+  Telegram-shop-bot mirror (the "-tg" platform naming pattern), not a new
+  legal entity or lead — flagged, not promoted.
 
 ### Registry checks completed 2026-09-04 (in response to "what other
 databases/registries could we check")
