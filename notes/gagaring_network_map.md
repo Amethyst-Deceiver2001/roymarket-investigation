@@ -513,3 +513,63 @@ handover-video/field-testimony material.
   video candidates for a `fetch` pass into `battlefield_evidence[]`/
   `images[]`. Good next-session starting point given the media-pool size
   just surfaced above.
+
+### Rescrape + full-week close read (2026-09-04, same day)
+
+User had `my_el_lab`/`projectArchangel` rescraped (`--full --days 1500`,
+backfilling `media_type` onto every existing post) and added a brand-new
+channel, `@tulaovod` (Овод's own channel — ЦБСТ's self-described "flagship
+resident," EU/US-sanctioned via owner Черезов А.П.). Also patched
+`tg_media_pull.py candidates` to accept a numeric `channel_id` so it can
+address the private Academy chat (`fetch` still can't — no public preview
+URL exists for a private chat). Then, per explicit request, read one FULL
+WEEK of every message (not keyword-filtered) from each of the three
+channels — my_el_lab and projectArchangel 2026-08-28 to 2026-09-04, tulaovod
+2026-07-29 to 2026-08-05 (a denser week for a otherwise low-volume
+channel). Confirms the method works: full reading surfaced several signals
+keyword search had missed entirely.
+
+- **`ooo-gagaring`**: on 2026-08-28 — 16 days after defunding the earlier
+  «Последний рубеж» training program — Гагаринг began actively recruiting
+  its own armed detachment, «отряд Гагаринг», via @gagaring_recruit_bot,
+  for МОГ (mobile fire group) work. This is a formally-structured БАРС
+  (Боевой армейский резерв страны) sub-unit legally scoped to territorial
+  counter-UAV defense of Краснодарский край, with полиграф screening;
+  over 1,000 applications in the first week; Барашков explicitly denies a
+  PMC/Wagner comparison while claiming state approval. Also: a quantified
+  (500-unit) third-party Кузнечик field acknowledgment from @RuFront, and
+  active cross-promotion of Архангел's interceptor-drone contracts on
+  Гагаринг's own channel the same week.
+- **`ovod`**: founder Андрей Черезов was shot three times in Tula
+  (29.07.2026, survived); Овод frames it (alongside a 05.08.2026 car-bomb
+  attack on «Упырь» drone-maker Владимир Ткачук, a new adjacent-network
+  lead not yet in this registry) as a pattern of attacks on Russian drone
+  developers. A forwarded post from journalist Анастасия Кашеварова claims
+  Алексей Дюмин personally helped Черезов while governor of Tula — a real
+  PEP-adjacency lead, explicitly NOT independently confirmed. New product:
+  «ДОВОД», an unmanned ground robot (with НРТК «Курьер») that delivers and
+  launches FPV drones up to 55km from the operator. New battlefield claim:
+  a $3M Western howitzer destroyed by ~$6,000 of Овод drones (БАРС-8,
+  third-party attributed).
+- **`ooo-arkhangel-zaporizhzhie`**: the «Архангел» interceptor drone is a
+  real, ~2-year-old, continuously-upgraded product now sold as a full B2B
+  facility-defense service (hardware + trained personnel + optional
+  regional-production tech transfer) to critical-infrastructure clients,
+  contracted through a named "ООО «Архангел Групп»" — followed up against
+  EGRUL (one live candidate found, ИНН 9702081286, registered 12.03.2026,
+  director name doesn't match anyone already on file — not confirmed).
+  Self-described training pipeline into «Рубикон» (Russia's state-level
+  drone-tech center), a named 51st Army regiment, and 205th Brigade, with
+  a ₽3M+ signing bonus and a referral system that bypasses normal military-
+  commissariat distribution — in substance a recruitment brokerage running
+  alongside the drone business. Confirmed cross-link: a named field
+  operator ("Радистка," previously found via my_el_lab, independently
+  covered by Readovka) has her own channel directly linked from Архангел's
+  own posts. Also spotted a same-named director (Тимофеев В.С.) on a
+  second, unconfirmed "Архангел"-branded Crimea entity via the same EGRUL
+  search — a lead, not merged.
+- **Still not done**: `Archangel_Forum` (73k posts) and the remaining
+  Academy-chat/tulaovod history are still keyword-swept only, not
+  full-week read; "Будни Радистки," "Упырь"/Ткачук, "Антидронин," "ПВО
+  Сова," and "Архангел Групп" are all real leads surfaced this pass with
+  no further investigation yet.

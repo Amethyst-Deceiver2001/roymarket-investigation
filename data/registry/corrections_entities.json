@@ -12104,6 +12104,10 @@
           {
             "source_id": "s5441",
             "text": "Кузнечик origin story, self-told (25.09.2024, in a shared community chat rather than their own channel): first shown at Дронница 2023, and for over a year afterward unnamed parties (\"нас просили не светить изделие и рабочие частоты\") asked Гагаринг NOT to publicize the product or its working frequencies, while promised interest from major BPLA manufacturers never materialized — Гагаринг decided to sell it publicly only after competing products emerged in the meantime. Suggests an informal/official-channel involvement or expectation of exclusivity that went unrewarded before commercialization. Names \"Флэш\" as an early combat tester who posted a public review shortly after — not identified against this project's people.json, a lead for a future pass."
+          },
+          {
+            "source_id": "s5447",
+            "text": "A new development, first appearing 2026-08-28 (16 days after defunding the earlier «Последний рубеж» training program, already on file): Гагаринг launched an active recruitment campaign for its own armed detachment, «отряд Гагаринг», via @gagaring_recruit_bot, for МОГ (Мобильные огневые группы/Mobile Fire Groups) work. Explicitly structured as a sub-unit of БАРС (Боевой армейский резерв страны — a real Russian Armed Forces reservist framework), legally scoped to territorial counter-UAV defense of Краснодарский край specifically (\"Служба на территории Краснодарского края\" per the contract wording), not frontline deployment — recruiting via Cossack-structure channels as well. Барашков/Гагаринг explicitly denies PMC/Wagner-comparison framing (\"Мы не создаем ЧВК\") while acknowledging others draw that comparison, and claims state approval (\"нам это одобрили\"). Over 1,000 applications received within the first week. Recruits women too, with a stated need for medics. This is a materially new development — Гагаринг standing up its own formal, legally-structured reservist detachment, not merely selling equipment to existing units — worth its own dedicated follow-up (confirm the БАРС sub-unit's formal registration/legal basis, track its actual deployment)."
           }
         ],
         "patents": [
@@ -12305,6 +12309,13 @@
             "context": "Independent confirmation via Народный фронт (ONF, a state-linked movement) → ТАСС → vz.ru/ridus.ru republication (08.04.2025), distinct from Гагаринг's own marketing copy. Notable self-admission: Барашков will make broad battlefield-effectiveness claims on record but explicitly declines to give verifiable deployment-scale figures, calling them classified.",
             "source_id": "s5436",
             "as_of": "2025-04-08"
+          },
+          {
+            "text_ru": "Выражаю огромную благодарность Товарищу Александру Сергеевичу и всему коллективу лаборатории «Гагаринг» за предоставленные «Кузнечики» в количестве 500 шт. Благодарим за постоянную поддержку!",
+            "text_en": "I express my deep gratitude to Comrade Aleksandr Sergeyevich and the whole Gagaring lab team for the 500 Kuznechik units provided. Thank you for your constant support!",
+            "context": "Field acknowledgment credited to channel @RuFront (30.08.2026) — a quantified (500 units), third-party-attributed confirmation of Кузнечик supply to a named front-line-adjacent channel, independent of Гагаринг's own marketing.",
+            "source_id": "s5447",
+            "as_of": "2026-08-30"
           }
         ],
         "cbst_tie": {
@@ -18469,6 +18480,11 @@
             "description": "Fiber-optic-guided heavy FPV strike drone variant. Press-reported (2026-08-23 web search) >40km range record in the SVO zone and destruction of a Ukrainian ammunition depot in Sumy region (Aug 2026 coverage) -- not yet cross-checked against a primary source.",
             "name_ru": "«Провод-15»",
             "source_id": null
+          },
+          {
+            "name_ru": "Роботизированный комплекс «ДОВОД»",
+            "description": "Наземный необитаемый робототехнический комплекс для безлюдной доставки и запуска FPV-дронов «ОВОД 10» в район выполнения боевой задачи. Совместная разработка ОВОДа и НРТК «Курьер». Действует на удалении до 20 км от операторов, запускает FPV-дроны с дальностью до 35 км — оператор может находиться на расстоянии до 55 км от цели. Успешно испытан в зоне СВО (30.07.2026). Планируется ИИ-управление.",
+            "source_id": "s5446"
           }
         ],
         "sanctions": [
@@ -18509,7 +18525,26 @@
             "source_id": "s5344"
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "battlefield_evidence": [
+          {
+            "text_ru": "Операторы БАРС-8 нашли и уничтожили самоходную гаубицу ВСУ западного образца стоимостью порядка 3 млн долларов четырьмя дронами ОВОД. Гаубица стоимостью до 3 млн долларов уничтожена дронами стоимостью порядка 6 тысяч долларов.",
+            "text_en": "БАРС-8 operators found and destroyed a Western-pattern self-propelled howitzer worth roughly $3M using four Ovod drones. A howitzer worth up to $3M destroyed by drones costing roughly $6,000 total.",
+            "context": "Third-party-attributed (named БАРС-8 reservist unit, not Овод's own marketing framing) cost-effectiveness battlefield claim, posted 05.08.2026.",
+            "source_id": "s5446",
+            "as_of": "2026-08-05"
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s5446",
+            "text": "On 29.07.2026 founder Андрей Черезов was shot three times in Tula by an unidentified attacker who fled; a criminal case was opened. Овод's own channel frames this as one of a pattern of attacks targeting leading Russian drone developers, alongside a car-bomb attack the same week (05.08.2026) that seriously injured Владимир Ткачук, described as developer of «Упырь» (\"Ghoul\") combat drones — «Упырь»/Ткачук is NOT currently in this registry, a genuinely new adjacent-network lead not yet investigated."
+          },
+          {
+            "source_id": "s5446",
+            "text": "PEP-adjacency lead, NOT independently confirmed: a 30.07.2026 forward on Овод's own channel, originally from war correspondent Анастасия Кашеварова's (@akashevarova) personal channel, claims Алексей Дюмин — while governor of Tula oblast — personally helped Черезов with his early drone development, before the enemy had comparable technology. This is a named, identifiable journalist's secondhand account, forwarded (not authored) by Овод itself — not corroborated by any Дюмин-side or Овод-official primary source in this pass. If confirmed, this would tie Овод's founding story directly to a now-senior federal security/defense-adjacent official; treat as an open lead requiring independent verification before use, not as an established fact."
+          }
+        ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026; TheInsider (theins.ru/news/295478), read directly 23.08.2026",
       "why": [
@@ -18807,12 +18842,37 @@
             "name_ru": "Вынос пульта управления БПЛА (совместно с «Военный Осведомитель»)",
             "description": "Удлинитель ВЧ-части пульта управления дроном на витой паре, сотни-тысячи метров без промежуточных усилителей — защищает оператора от обнаружения по излучению пульта. Испытан на полигонах МО РФ и в зоне СВО; готовится серийное производство на мощностях «Архангела». Также ведётся разработка выноса пульта для дронов-камикадзе.",
             "source_id": "s5443"
+          },
+          {
+            "name_ru": "Дрон-перехватчик «Архангел»",
+            "description": "Разработан ~2 года назад (т.е. ок. 2024), постоянно модернизируется (дальность, масса боевой части, скорость). Продаётся промышленным/корпоративным клиентам вместе с обученным персоналом (\"расчётами\") по контрактам на защиту объектов от БПЛА-угроз, с опционной передачей технологии и организацией регионального производства. Контрактующее юрлицо названо как «ООО «Архангел Групп»» — не сверено с ЕГРЮЛ в этом заходе.",
+            "source_id": "s5448"
           }
         ],
         "open_questions": [
           {
             "source_id": "s5443",
             "text": "Опытно-производственная база «Архангел» runs its own armor-materials R&D program: live-fire testing of vehicle up-armoring kits against AK-74M (5.45mm armor-piercing, индекс 7Н10) and a modernized PKM machine gun (7.62mm), for informal (\"народным путём\") up-armoring of SVO vehicles — composite-material testing planned next. Direct weapons-effectiveness/armor R&D activity, not just drone electronics. Also newly found: a \"Люберецкая школа БПЛА проекта «Архангел»\" (Lyubertsy, Moscow oblast) training location distinct from the Zaporizhzhia training ground already on file."
+          },
+          {
+            "source_id": "s5448",
+            "text": "«ООО «Архангел Групп»» named explicitly (02.09.2026 B2B pitch to critical-infrastructure facility heads) as the contracting entity behind the «Архангел» interceptor-drone/facility-defense business — offering R&D/production, mobile defense teams, personnel training, and (on request) technology transfer for regional production. NOT yet cross-checked against EGRUL — possibly the actual legal vehicle behind Проект «Архангел», or a distinct related entity. Real next step: EGRUL lookup for \"Архангел Групп\". FOLLOWED UP 2026-09-04 (s5449): an egrul.nalog.ru open search for \"Архангел Групп\" found one live (non-liquidated) candidate — ООО \"АРХАНГЕЛ ГРУПП\", ИНН 9702081286, ОГРН 1267700086081, Москва, registered 12.03.2026, ГЕНЕРАЛЬНЫЙ ДИРЕКТОР Крючков Дмитрий Александрович. Registration timing (2 months before the observed B2B push) is suggestive but the director name does not match any name already on file for Проект «Архангел» (Филиппов, Тимофеев, Кусумов) — NOT confirmed as the same entity, an open lead only. Two same-named \"Архангел-Групп\" entities are excluded/liquidated (2632109180 since 2021, 6311085784 since 2017) and are not candidates. Separately spotted in the same search: a second \"ООО «Архангел»\" (ИНН 9108131213, Республика Крым, registered 14.04.2025) with director Тимофеев Владимир Сергеевич — the SAME name as the Zaporizhzhia entity's own GD. Not confirmed as the same person (no personal-ИНН cross-check done) but consistent with the training network's self-described multi-region footprint including Crimea — a real lead, not merged into this record."
+          },
+          {
+            "source_id": "s5448",
+            "text": "Training pipeline into named state/elite units, self-described: graduates of the «Архангел» training center serve in «Рубикон» (Russia's state-level Center for Advanced Unmanned Technologies), \"78 полк БПС 51-ой армии,\" and \"205-я бригада.\" Recruitment includes a 1-year \"spec-contract\" with a stated ₽3M+ signing bonus, restricted to UAV (БПС) roles only, age limit ≤45, minor criminal records tolerated. Graduates reportedly bypass normal military-commissariat distribution via a formal \"отношение\" (referral document) placing them directly with named friendly commanders — in substance, Архангел operates as a private military-recruitment brokerage alongside its drone-manufacturing/training business, not merely a training school."
+          },
+          {
+            "source_id": "s5448",
+            "text": "Cross-reference confirmed (not merely speculative): a 03.09.2026 combat-results post from this channel directly links to a personal channel \"Будни Радистки,\" for the same \"Радистка\" callsign already found (my_el_lab msg 1242, 08.01.2025) crediting Гагаринг's own Кузнечик/Сова as her tools, and separately covered by Readovka (per this channel's own pinned post) as a decorated (Орден Мужества) female FPV operator. This is now a real, navigable cross-link between the Архангел and Гагаринг networks via a shared named field operator. \"Будни Радистки\" itself is NOT yet in config/channels.txt or scraped — a real next step if her identity/role is worth pursuing further."
+          },
+          {
+            "source_id": "s5448",
+            "text": "Adjacent product, cross-posted on this channel but NOT confirmed as this entity's own manufacture: \"Антидронин\" (29.08.2026 post) — a mount adapting thermal/night-vision sights onto ПЗРК Игла/Верба man-portable air-defense missile launchers, run via @antidroninbot, credited to a group signing as \"KORSAR_FPV.\" A MANPADS-accessory product is itself notable regardless of maker — flagged as an unresolved lead, not wired to any entity."
+          },
+          {
+            "source_id": "s5448",
+            "text": "Name-collision caution: \"Комплекс ПВО «СОВА»\" (a searchlight-based counter-drone tactics guide, contact @pvosova / +79896200218) was cross-posted on this channel 31.08.2026 — a THIRD distinct commercial use of the brand name «Сова» in this project's corpus, alongside Гагаринг's own video-receiver «Сова» and va-technologies' navigation-module «Сова» (already flagged). Not this entity's own product — do not conflate any of the three in future prose."
           }
         ]
       }

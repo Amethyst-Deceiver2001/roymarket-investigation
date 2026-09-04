@@ -19557,6 +19557,29 @@
     "_origin": "manifest"
   },
   {
+    "id": "s5449",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_OPEN_multi_20260904_arkhangel-grupp-search.txt",
+    "url": null,
+    "captured_date": "2026-09-04",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "2632109180",
+      "6311085784",
+      "9108131213",
+      "9500026652",
+      "9702081286"
+    ],
+    "entities": [],
+    "sha256": "48d7023799e635ca64908ca3725852465d68de47c8080910b6cdf8398dd657cf",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s5426",
     "type": "egrul",
     "path": "data/sources/EGRUL_OPEN_multi_20260904_egrip-poi-sweep.txt",
@@ -27745,6 +27768,61 @@
     "inns": [],
     "entities": [],
     "sha256": "8bc0df7a038098954fe0a3d4b3037419392cacb1e8a36e77bac4a3f641d9abe3",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5446",
+    "type": null,
+    "path": "data/sources/TGPOST_multi_20260729-20260805_tulaovod-week-assassination-dovod-barsclaim.txt",
+    "url": null,
+    "captured_date": null,
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "7100027464"
+    ],
+    "entities": [],
+    "sha256": "d5605a7f8b1ba3868d48e217f181d24c5084daaf9ac838f73e88f291fd2a229d",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5447",
+    "type": null,
+    "path": "data/sources/TGPOST_multi_20260828-20260904_my_el_lab-week-otryad-gagaring-recruitment.txt",
+    "url": null,
+    "captured_date": null,
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "67afbabfd0fe5457bc13cbbb36c837cb19cec1999cd3144e7d0aa4caa5669971",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5448",
+    "type": null,
+    "path": "data/sources/TGPOST_multi_20260828-20260904_projectArchangel-week-interceptor-business-rubikon.txt",
+    "url": null,
+    "captured_date": null,
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "9500026652"
+    ],
+    "entities": [],
+    "sha256": "787ad9665792b1b487b56c4aad94071e6f268d3f7e4428a2a8c3c45618c9c282",
     "_verified": false,
     "_origin": "manifest"
   },
