@@ -2180,6 +2180,54 @@
           "text": "Same EGRUL search surfaced a SECOND, previously-unknown Zaporizhzhia \"Архангел\" entity: ООО \"АРХАНГЕЛ\", ИНН 9001027869, ОГРН 1249000005517, registered 10.06.2024 (i.e. before ooo-arkhangel-zaporizhzhie/ИНН 9500026652's 22.08.2024 registration) — ГЕНЕРАЛЬНЫЙ ДИРЕКТОР Кусумов Вахид Абдулович, the same person who is 100% founder of ooo-arkhangel-zaporizhzhie. Not investigated further this pass, flagged for Кусумов's own person record."
         }
       ]
+    },
+    {
+      "slug": "ooo-arkhangel-grupp",
+      "inn": "9702081286",
+      "ogrn": "1267700086081",
+      "legal_form": "ООО",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ ГРУПП\"",
+      "name_latin": "OOO \"Arkhangel Grupp\"",
+      "brand_ru": "Архангел Групп",
+      "registered": "2026-03-12",
+      "address": "г. Москва",
+      "okved_code": "30.30",
+      "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+      "director": "Крючков Дмитрий Александрович",
+      "director_history": [
+        {
+          "value": "Крючков Дмитрий Александрович",
+          "as_of": "2026-09-04",
+          "source_id": "s5451",
+          "note": "Per direct egrul.nalog.ru ИНН lookup — open search-index API exposes only the current director field, not founders."
+        }
+      ],
+      "founders": [
+        "Филиппов Михаил Геннадьевич"
+      ],
+      "founders_history": [
+        {
+          "value": "Филиппов Михаил Геннадьевич (ИНН 502603133030)",
+          "as_of": "2026-09-04",
+          "source_id": "s5465",
+          "note": "Confirmed via a live pb.nalog.ru \"Участие в ЮЛ\" (upr-uchr) query keyed on his personal ИНН — returned as his sole \"учредитель\" (founder) entity, raw JSON archived."
+        }
+      ],
+      "tier": "manufacturer",
+      "tier_basis": "Newly-registered (12.03.2026) Moscow entity, OKVED 30.30 — aircraft/spacecraft-and-related-equipment manufacturing, directly UAV/aerospace-relevant. CONFIRMED founder tie to Филиппов Михаил Геннадьевич (proekt-kb-arkhangel/@arhangel76), via a live pb.nalog.ru founder-registry query keyed on his personal ИНН (502603133030) — see s5465. This resolves the previously-unconfirmed \"Архангел Групп\" lead from the 2026-09-03 Гагаринг wide-net Архангел-family disambiguation pass: an earlier direct ИНН lookup (s5451, 2026-09-04) found only the DIRECTOR field (Крючков Дмитрий Александрович, no Филиппов tie) because egrul.nalog.ru's open search-index API exposes current director only, not founders — the founder-level tie was invisible to that check by construction, not actually absent. Distinct from `proekt-kb-arkhangel` (his informal, no-ИНН Telegram-based operation) and from `ooo-arkhangel-zaporizhzhie`/`ooo-arkhangel`/`ooo-arkhangel-shchit`/`ano-arkhangel` — this is a SIXTH+ distinct \"Архангел\"-branded vehicle, and the FIRST one with a directly registry-confirmed Филиппов ownership tie (as opposed to brand-name association or press mention alone).",
+      "cbst_tie": {
+        "claim": "None found.",
+        "confidence": "none",
+        "evidence": null,
+        "source_id": null
+      },
+      "products": [],
+      "open_questions": [
+        {
+          "source_id": "s5465",
+          "text": "Registered only 12.03.2026 (six months before this finding), status \"Действующая организация\" (active). No products, press coverage, website, or Telegram presence found yet under this specific legal name — unclear whether it's an operating manufacturer, a shell/holding vehicle for Филиппов's drone work, or something not yet active. Крючков Дмитрий Александрович (director) not yet cross-checked against any other entity/role in this registry. Worth a targeted zakupki/press/EGRUL-extract follow-up given the explicit aircraft-manufacturing OKVED and the confirmed Филиппов tie."
+        }
+      ]
     }
   ],
   "entities": {

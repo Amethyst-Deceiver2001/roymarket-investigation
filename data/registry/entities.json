@@ -45178,5 +45178,96 @@
     "_raw": {},
     "kpp": "502701001",
     "_corrected": null
+  },
+  {
+    "slug": "ooo-arkhangel-grupp",
+    "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ ГРУПП\"",
+    "name_latin": "OOO \"Arkhangel Grupp\"",
+    "legal_form": "ООО",
+    "brand_ru": "Архангел Групп",
+    "brand_latin": null,
+    "inn": "9702081286",
+    "ogrn": "1267700086081",
+    "extra_ids": null,
+    "registered": "2026-03-12",
+    "address": "г. Москва",
+    "okved_code": "30.30",
+    "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+    "okved_mismatch": null,
+    "director": "Крючков Дмитрий Александрович",
+    "director_history": [
+      {
+        "value": "Крючков Дмитрий Александрович",
+        "as_of": "2026-09-04",
+        "source_id": "s5451",
+        "note": "Per direct egrul.nalog.ru ИНН lookup — open search-index API exposes only the current director field, not founders."
+      }
+    ],
+    "founders": [
+      "Филиппов Михаил Геннадьевич"
+    ],
+    "founders_history": [
+      {
+        "value": "Филиппов Михаил Геннадьевич (ИНН 502603133030)",
+        "as_of": "2026-09-04",
+        "source_id": "s5465",
+        "note": "Confirmed via a live pb.nalog.ru \"Участие в ЮЛ\" (upr-uchr) query keyed on his personal ИНН — returned as his sole \"учредитель\" (founder) entity, raw JSON archived."
+      }
+    ],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "Newly-registered (12.03.2026) Moscow entity, OKVED 30.30 — aircraft/spacecraft-and-related-equipment manufacturing, directly UAV/aerospace-relevant. CONFIRMED founder tie to Филиппов Михаил Геннадьевич (proekt-kb-arkhangel/@arhangel76), via a live pb.nalog.ru founder-registry query keyed on his personal ИНН (502603133030) — see s5465. This resolves the previously-unconfirmed \"Архангел Групп\" lead from the 2026-09-03 Гагаринг wide-net Архангел-family disambiguation pass: an earlier direct ИНН lookup (s5451, 2026-09-04) found only the DIRECTOR field (Крючков Дмитрий Александрович, no Филиппов tie) because egrul.nalog.ru's open search-index API exposes current director only, not founders — the founder-level tie was invisible to that check by construction, not actually absent. Distinct from `proekt-kb-arkhangel` (his informal, no-ИНН Telegram-based operation) and from `ooo-arkhangel-zaporizhzhie`/`ooo-arkhangel`/`ooo-arkhangel-shchit`/`ano-arkhangel` — this is a SIXTH+ distinct \"Архангел\"-branded vehicle, and the FIRST one with a directly registry-confirmed Филиппов ownership tie (as opposed to brand-name association or press mention alone).",
+    "cbst_tie": {
+      "claim": "None found.",
+      "confidence": "none",
+      "evidence": null,
+      "source_id": null
+    },
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s5465",
+        "text": "Registered only 12.03.2026 (six months before this finding), status \"Действующая организация\" (active). No products, press coverage, website, or Telegram presence found yet under this specific legal name — unclear whether it's an operating manufacturer, a shell/holding vehicle for Филиппов's drone work, or something not yet active. Крючков Дмитрий Александрович (director) not yet cross-checked against any other entity/role in this registry. Worth a targeted zakupki/press/EGRUL-extract follow-up given the explicit aircraft-manufacturing OKVED and the confirmed Филиппов tie."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": null
   }
 ]
