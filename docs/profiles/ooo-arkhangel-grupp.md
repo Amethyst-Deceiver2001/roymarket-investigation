@@ -9,7 +9,7 @@
 
 - **Legal form:** OOO (limited liability company)
 - **Registered:** 2026-03-12
-- **Address:** г. Москва
+- **Address:** 107031, г. Москва, вн.тер.г. муниципальный округ Мещанский, ул. Рождественка, д. 5/7 стр. 2, помещ. 4А/5
 - **Director:** Крючков Дмитрий Александрович
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **ЦБСТ tie:** None found.
@@ -21,13 +21,19 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Крючков Дмитрий Александрович | 2026-09-04 | Per direct egrul.nalog.ru ИНН lookup — open search-index API exposes only the current director field, not founders. [s5451] |
+| Крючков Дмитрий Александрович (ИНН 712900068586) | 2026-03-12 | Per full signed EGRUL extract - supersedes the earlier open-API-only director note (s5451), which lacked his personal ИНН. [s5474] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
-| Филиппов Михаил Геннадьевич (ИНН 502603133030) | 2026-09-04 | Confirmed via a live pb.nalog.ru "Участие в ЮЛ" (upr-uchr) query keyed on his personal ИНН — returned as his sole "учредитель" (founder) entity, raw JSON archived. [s5465] |
+| Филиппов Михаил Геннадьевич, ИНН 502603133030 - 80% (номинал 8,000 руб. из 10,000 руб. уставного капитала); Крючков Дмитрий Александрович, ИНН 712900068586 - 15% (1,500 руб.), он же генеральный директор; Казнова Татьяна Андреевна, ИНН 771501583221 - 5% (500 руб.). | 2026-03-12 | Full signed EGRUL extract - supersedes the earlier pb.nalog.ru upr-uchr partial finding (s5465), which established Филиппов as A founder but not his 80% MAJORITY stake, nor Казнова's existence as a third owner. He is the controlling owner of this entity, not merely one of several founders. [s5474] |
+
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 107031, г. Москва, ул. Рождественка, д. 5/7 стр. 2, помещ. 4А/5 | 2026-03-12 | Per full signed EGRUL extract (ЮЭ9965-26-173557981, generated 04.09.2026 by ФНС) - resolves the address gap the open search-index API left (region-level 'Г.Москва' only). [s5474] |
 
 ## Principals & persons of interest
 
@@ -36,10 +42,15 @@
 - **DOB:** 1976-11-17
 - **Address:** Московская область, г. Лыткарино, ул. Парковая, д. 4, кв. 52
 - **ИНН:** 502603133030
-- Учредитель (founder) (2026-03-12–present)
+- Учредитель, 80% доля (majority owner) (2026-03-12–present)
 - <https://t.me/arhangel76>
 - <https://vk.com/id729012386>
 - <https://ok.ru/profile/568814443751>
+
+### Kaznova Tatyana Andreevna — Казнова Татьяна Андреевна
+
+- **ИНН:** 771501583221
+- Учредитель, 5% доля (2026-03-12–present)
 
 ## Open questions
 
@@ -50,8 +61,8 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5451 | EGRUL extract | EGRUL extract (EGRUL_OPEN_9702081286_20260904_arkhangel-grupp-followup.txt) | 2026-09-04 | — |
 | s5465 | Fns | Fns (FNS_PB_UPR_UCHR_502603133030_20260904_filippov-raw.json) | 2026-09-04 | — |
+| s5474 | EGRUL extract | EGRUL extract (EGRUL_9702081286_20260904_arkhangel-grupp.pdf) | 2026-09-04 | 2026-09-04 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

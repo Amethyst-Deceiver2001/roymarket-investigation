@@ -45254,40 +45254,49 @@
     "ogrn": "1267700086081",
     "extra_ids": null,
     "registered": "2026-03-12",
-    "address": "г. Москва",
+    "address": "107031, г. Москва, вн.тер.г. муниципальный округ Мещанский, ул. Рождественка, д. 5/7 стр. 2, помещ. 4А/5",
     "okved_code": "30.30",
     "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
     "okved_mismatch": null,
     "director": "Крючков Дмитрий Александрович",
     "director_history": [
       {
-        "value": "Крючков Дмитрий Александрович",
-        "as_of": "2026-09-04",
-        "source_id": "s5451",
-        "note": "Per direct egrul.nalog.ru ИНН lookup — open search-index API exposes only the current director field, not founders."
+        "value": "Крючков Дмитрий Александрович (ИНН 712900068586)",
+        "as_of": "2026-03-12",
+        "source_id": "s5474",
+        "note": "Per full signed EGRUL extract - supersedes the earlier open-API-only director note (s5451), which lacked his personal ИНН."
       }
     ],
     "founders": [
-      "Филиппов Михаил Геннадьевич"
+      "Филиппов Михаил Геннадьевич (80%)",
+      "Крючков Дмитрий Александрович (15%)",
+      "Казнова Татьяна Андреевна (5%)"
     ],
     "founders_history": [
       {
-        "value": "Филиппов Михаил Геннадьевич (ИНН 502603133030)",
-        "as_of": "2026-09-04",
-        "source_id": "s5465",
-        "note": "Confirmed via a live pb.nalog.ru \"Участие в ЮЛ\" (upr-uchr) query keyed on his personal ИНН — returned as his sole \"учредитель\" (founder) entity, raw JSON archived."
+        "value": "Филиппов Михаил Геннадьевич, ИНН 502603133030 - 80% (номинал 8,000 руб. из 10,000 руб. уставного капитала); Крючков Дмитрий Александрович, ИНН 712900068586 - 15% (1,500 руб.), он же генеральный директор; Казнова Татьяна Андреевна, ИНН 771501583221 - 5% (500 руб.).",
+        "as_of": "2026-03-12",
+        "source_id": "s5474",
+        "note": "Full signed EGRUL extract - supersedes the earlier pb.nalog.ru upr-uchr partial finding (s5465), which established Филиппов as A founder but not his 80% MAJORITY stake, nor Казнова's existence as a third owner. He is the controlling owner of this entity, not merely one of several founders."
       }
     ],
     "charter_capital": null,
     "charter_capital_history": [],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "107031, г. Москва, ул. Рождественка, д. 5/7 стр. 2, помещ. 4А/5",
+        "as_of": "2026-03-12",
+        "source_id": "s5474",
+        "note": "Per full signed EGRUL extract (ЮЭ9965-26-173557981, generated 04.09.2026 by ФНС) - resolves the address gap the open search-index API left (region-level 'Г.Москва' only)."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": "Newly-registered (12.03.2026) Moscow entity, OKVED 30.30 — aircraft/spacecraft-and-related-equipment manufacturing, directly UAV/aerospace-relevant. CONFIRMED founder tie to Филиппов Михаил Геннадьевич (proekt-kb-arkhangel/@arhangel76), via a live pb.nalog.ru founder-registry query keyed on his personal ИНН (502603133030) — see s5465. This resolves the previously-unconfirmed \"Архангел Групп\" lead from the 2026-09-03 Гагаринг wide-net Архангел-family disambiguation pass: an earlier direct ИНН lookup (s5451, 2026-09-04) found only the DIRECTOR field (Крючков Дмитрий Александрович, no Филиппов tie) because egrul.nalog.ru's open search-index API exposes current director only, not founders — the founder-level tie was invisible to that check by construction, not actually absent. Distinct from `proekt-kb-arkhangel` (his informal, no-ИНН Telegram-based operation) and from `ooo-arkhangel-zaporizhzhie`/`ooo-arkhangel`/`ooo-arkhangel-shchit`/`ano-arkhangel` — this is a SIXTH+ distinct \"Архангел\"-branded vehicle, and the FIRST one with a directly registry-confirmed Филиппов ownership tie (as opposed to brand-name association or press mention alone).",
+    "tier_basis": "Newly-registered (12.03.2026) Moscow entity, OKVED 30.30 — aircraft/spacecraft-and-related-equipment manufacturing, directly UAV/aerospace-relevant. CONFIRMED founder tie to Филиппов Михаил Геннадьевич (proekt-kb-arkhangel/@arhangel76), via a live pb.nalog.ru founder-registry query keyed on his personal ИНН (502603133030) — see s5465. This resolves the previously-unconfirmed \"Архангел Групп\" lead from the 2026-09-03 Гагаринг wide-net Архангел-family disambiguation pass: an earlier direct ИНН lookup (s5451, 2026-09-04) found only the DIRECTOR field (Крючков Дмитрий Александрович, no Филиппов tie) because egrul.nalog.ru's open search-index API exposes current director only, not founders — the founder-level tie was invisible to that check by construction, not actually absent. Distinct from `proekt-kb-arkhangel` (his informal, no-ИНН Telegram-based operation) and from `ooo-arkhangel-zaporizhzhie`/`ooo-arkhangel`/`ooo-arkhangel-shchit`/`ano-arkhangel` — this is a SIXTH+ distinct \"Архангел\"-branded vehicle, and the FIRST one with a directly registry-confirmed Филиппов ownership tie (as opposed to brand-name association or press mention alone). FULL EGRUL EXTRACT PULLED 2026-09-04 (s5474, signed/certified, ЮЭ9965-26-173557981): resolves the address gap (real street address now on file) and substantially upgrades the ownership picture - Филиппов holds an 80% MAJORITY stake, not just 'a founder' as the earlier pb.nalog.ru partial check (s5465) established; director Крючков holds 15%; a third, previously undocumented owner, Казнова Татьяна Андреевна, holds 5% (new person - see people.json). ОКВЭД codes confirm this is explicitly registered for UAV production (30.30.6 'Производство беспилотных авиационных систем' is a dedicated additional code, not just the generic aircraft-manufacturing main code) alongside electronics wholesale/retail trade and, notably, supplementary/professional education codes (85.41/85.41.9/85.42), consistent with Проект Архангел's training-school activity being formally housed under this same legal entity. A staffing-agency OKVED cluster (78.10.9/78.20/78.30 - recruitment, temporary employment, personnel search) was added 15.04.2026, a month after founding - plausibly related to the network's ongoing instructor/volunteer recruitment, not yet confirmed by any specific activity.",
     "cbst_tie": {
       "claim": "None found.",
       "confidence": "none",
@@ -45336,6 +45345,68 @@
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "okved_additional": [
+      {
+        "code": "30.30.6",
+        "label": "Производство беспилотных авиационных систем",
+        "as_of": "2026-03-12"
+      },
+      {
+        "code": "30.30.39",
+        "label": "Производство прочих летательных аппаратов",
+        "as_of": "2026-03-12"
+      },
+      {
+        "code": "46.52",
+        "label": "Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями",
+        "as_of": "2026-03-12"
+      },
+      {
+        "code": "46.69",
+        "label": "Торговля оптовая прочими машинами и оборудованием",
+        "as_of": "2026-03-12"
+      },
+      {
+        "code": "47.42",
+        "label": "Торговля розничная телекоммуникационным оборудованием, включая розничную торговлю мобильными телефонами",
+        "as_of": "2026-03-12"
+      },
+      {
+        "code": "47.78",
+        "label": "Торговля розничная прочая в специализированных магазинах",
+        "as_of": "2026-03-12"
+      },
+      {
+        "code": "78.10.9",
+        "label": "Деятельность агентств по подбору персонала, прочая",
+        "as_of": "2026-04-15"
+      },
+      {
+        "code": "78.20",
+        "label": "Деятельность агентств по временному трудоустройству",
+        "as_of": "2026-04-15"
+      },
+      {
+        "code": "78.30",
+        "label": "Деятельность по подбору персонала прочая",
+        "as_of": "2026-04-15"
+      },
+      {
+        "code": "85.41",
+        "label": "Образование дополнительное детей и взрослых",
+        "as_of": "2026-03-12"
+      },
+      {
+        "code": "85.41.9",
+        "label": "Образование дополнительное детей и взрослых, не включенное в другие группировки",
+        "as_of": "2026-03-12"
+      },
+      {
+        "code": "85.42",
+        "label": "Образование профессиональное дополнительное",
+        "as_of": "2026-03-12"
+      }
+    ],
     "_corrected": null,
     "_verified_against": null,
     "opensanctions_matches": [],
