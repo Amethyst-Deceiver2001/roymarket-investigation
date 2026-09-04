@@ -43098,5 +43098,13 @@
     "as_of_method": null,
     "sha256": "a9bf803eb8e122ee6dc9f972e410d86c235b72c5c58c2cb916e627040c02f5d9",
     "sample": "tg_scan_users.py participant scan of the private \"Академия Противодействия\nБПЛА\" chat (channel_id 1859964206, invite https://t.me/+7GbNlS1SJI83ZmQy),\nrun by the user 2026-09-03/2026-09-04. Only 3 participants returned by\nTelegram's GetParticipants for this non-admin scan — treated as the\nvisible-to-a-regular-member subset, not necessarily the chat's true full\nmembership (5,795 posts scraped from t"
+  },
+  "TGUSERS_20260904_academy-private-chat-sender-crossref.txt": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "207933809b5c79faf88cfd9d4f967c1faf39d9572ca731469d4f386251c3e9ac",
+    "sample": "Cross-reference pass, 2026-09-04: distinct message-sender identities in the\nprivate \"Академия Противодействия БПЛА\" chat (channel_id 1859964206, 5,795\nposts), resolved against tg_users via each post's own sender_id — not via\nthe chat's own participant list (Telegram's API only exposes that chat's 3\nadmins to a non-admin scan; see the separate TGUSERS_20260904_academy-\nprivate-chat-1859964206-parti"
   }
 }

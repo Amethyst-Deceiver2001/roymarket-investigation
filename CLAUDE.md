@@ -544,11 +544,45 @@ Rules that still hold:
 - **Photographs** are sourced from the subject's public or professional
   presence — their own channel, their company's site, press coverage, an
   official event. Not private or family imagery.
-- **Individuals who are not PEPs or network principals** — a resident
-  mentioned in passing, a private person named in a court filing, a
-  chat participant — are not in scope for this treatment. Ask before
-  extending it to anyone who is not a principal, official, owner,
-  director or comparable public actor in the network.
+- **Individuals who are not PEPs, network principals, or affiliated
+  participants** — a resident mentioned in passing, a private person named
+  in a court filing unrelated to this network — are not in scope for this
+  treatment. Ask before extending it to anyone who doesn't fit an already-
+  established category below.
+
+**Policy amended 2026-09-04 at explicit user direction, to add a second
+in-scope category: confirmed participants of a network's own recruitment/
+training/operational apparatus** — course students, instructors, chat
+admins/moderators, named contacts — not just its owners/directors/officials.
+Rationale the user gave: for an operation like Проект «Архангел» that trains
+and equips people for combat drone operations feeding the war, a documented
+participant is not a bystander — they are plausibly someone who goes on to
+serve in the operations this investigation exists to document (see
+[[roymarket_project_goal]]), and identifying them is itself a legitimate
+finding, not incidental collateral. This is DISTINCT from indiscriminately
+cataloguing every name that surfaces near the network — the bar is a
+**confirmed** participation link (posted in the network's own chat, listed
+as a course student/instructor, tagged admin, etc.), sourced the same way
+any other identifying field is (see the sourcing-discipline bullet above).
+A name that only appears as a stray mention, forwarded content, or someone
+else's contact reference does NOT clear this bar on its own.
+
+**Photographs**, for this category specifically, may be sourced from a
+self-published Telegram/social profile picture in the network's own
+chat/channel — this is the person's own chosen public-facing image on a
+platform where the group itself has 1,000+ members, not private or family
+imagery, even though it isn't press-sourced. The existing rule (own
+channel/company site/press/official event) still governs PEPs and
+principals; this paragraph only widens what counts as "public presence"
+for confirmed affiliated participants.
+
+**Proportionality still applies.** Finding 500+ names in a single chat scan
+does not mean 500+ full person records — triage for a real signal (exposed
+phone number, distinctive photo, a named role/title in their own bio,
+cross-referenced elsewhere in the network) before promoting someone to
+people.json, the same judgment call already used for zakupki
+vendor-mention triage and press-lead triage elsewhere in this file. When in
+doubt on a specific name, it's fine to ask.
 
 The earlier logged exception (an InformNapalm OSINT dossier carrying full
 addresses and passport numbers) is no longer an exception; it is now
