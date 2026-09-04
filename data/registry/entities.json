@@ -9179,16 +9179,8 @@
     "_origin_extra": [
       "brief:prose"
     ],
-    "_corrected": [
-      "full EGRUL extract pulled directly 23.08.2026 (ul-1257700345407-20260823122710.pdf). Sole founder = sole director, registered 2025 — the youngest entity in this batch (ОГРН dated 2025). NAME-COLLISION CAUTION: unrelated to the separate «Архангел» Kalashnikov-partnered Zaporizhzhia entity already parked in roymarket_archangel_adjacent_network memory — this ООО «Архангел» (ИНН 9714079108, Moscow, reg. 2025) is a distinct legal entity, not that adjacent network.",
-      "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
-      "cbst_tie UPGRADED 23.08.2026 with a direct primary citation found by querying this project's own scraped @ANO_CBST Telegram archive (data/roymarket.db, channel_id 2159491523) — not a data/sources/ document, so no s#### id; channel/post-id/date is the citation, per this project's existing convention for TG-sourced claims.",
-      "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no dedicated website found via search (name is highly generic, many unrelated same-named ООО «Архангел» entities exist nationally). Does not affect the already-confirmed EGRUL/cbst_tie record -- just no product catalog available.",
-      "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9714079108). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-      "2026-08-24: user supplied a vacancies_csv.zip export from rk.2035.university's БАС-industry job board statistics module (31 total vacancies platform-wide, small scale). «Архангел» is the only registry entity among the top-10 vacancy-posters list; archived as s1164, corroborating note added as an open_question rather than a stronger claim since only aggregate counts were available, not vacancy content.",
-      "2026-08-24: corrected a misattribution -- the rk.2035.university vacancy-posting note (added 2026-08-24 from s1164) actually belongs to the separate, same-named, non-ЦБСТ «Архангел» (ИНН 9500026652, per roymarket_archangel_adjacent_network memory), confirmed by directly querying that org's rk.2035.university profile (org_id 019a493f-c674-7281-95e3-dd203c5f6c94) and finding ИНН 9500026652, not this entity's 9714079108. rk2035_matches[] on this entity already correctly carried inn_match:false/ogrn_match:false from the original screen -- only the prose open_questions note had drifted from that flag."
-    ],
-    "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
+    "_corrected": null,
+    "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
       {
@@ -45247,6 +45239,7 @@
     "_raw": {},
     "kpp": "502701001",
     "_corrected": null,
+    "_verified_against": null,
     "wb_matches": [],
     "wb_screened_at": "2026-09-04"
   },
@@ -45355,5 +45348,87 @@
     "rk2035_screened_at": "2026-09-04",
     "wb_matches": [],
     "wb_screened_at": "2026-09-04"
+  },
+  {
+    "slug": "ooo-arkhangel-istra",
+    "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"",
+    "name_latin": "OOO \"Arkhangel\" (Istra)",
+    "legal_form": "ООО",
+    "brand_ru": "Архангел",
+    "brand_latin": null,
+    "inn": "5017140245",
+    "ogrn": "1255000024487",
+    "extra_ids": null,
+    "registered": "2025-03-12",
+    "address": "143581, Московская обл., м.о. Истра, с. Павловская Слобода, ул. Озерная, д. 6, помещ. II",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "Аристархов Владимир Вячеславович",
+    "director_history": [
+      {
+        "value": "Аристархов Владимир Вячеславович",
+        "as_of": "2026-09-04",
+        "source_id": "s5469",
+        "note": "Per direct egrul.nalog.ru ИНН lookup, open search-index API (director field only)."
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "unclear",
+    "tier_basis": "SURFACED 2026-09-04 via a Rospatent trademark WebSocket search (--slug ooo-arkhangel-zaporizhzhie/--slug ooo-arkhangel both returned this as a same-brand-name false-positive-turned-real-lead — see s5472/s5473), then disambiguated to this specific ИНН via a region-scoped (Moscow oblast, region code 50) egrul.nalog.ru name search plus direct FIPS.ru document fetch (registered trademark 1183435, s5470, and pending application 2025814179, s5469 — both confirm the same 'Истра, с. Павловская Слобода' address as правообладатель/заявитель). An EIGHTH distinct 'Архангел'-branded legal entity in this investigation's corpus, registered 12.03.2025 — a full year before ooo-arkhangel-grupp's 12.03.2026 registration, same day-of-year, unclear if coincidental. Holds one REGISTERED trademark (№1183435, granted 2026-01-16, Class 09 — an extremely broad consumer-electronics/software goods list, no drone-specific terms) and one PENDING application (2025814179, filed 2025-10-10, Class 09 — AI/software-platform terms: 'обеспечение программное для систем искусственного интеллекта', 'программы прикладные... для интеграции искусственного интеллекта и машинного обучения'). Both filed via the same Kursk patent-attorney firm (ООО «Башук Чичканов», рег. поверенный Чичканов В.А., №2296) as the pending drone trademark filed by the EU-sanctioned ooo-arkhangel (ИНН 9714079108) 33 days later — a shared patent-attorney firm is weak circumstantial signal, not a confirmed corporate tie; the two entities have different ИНН, different registered addresses, and no other overlap found yet. Director Аристархов Владимир Вячеславович not yet cross-checked against any other role/entity in this registry — NOTE: this name coincides with a real, known Russian public figure (a former Deputy Minister of Culture, conservative/patriotic-cause commentator) but this is NOT confirmed to be the same person — flagged as an open question, not asserted.",
+    "cbst_tie": {
+      "claim": "None found.",
+      "confidence": "none",
+      "evidence": null,
+      "source_id": null
+    },
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s5470",
+        "text": "No press, website, Telegram, or zakupki presence found under this ИНН/brand yet (zakupki --inn scan same day: zero hits). No confirmed tie to any other 'Архангел'-family entity (ooo-arkhangel-grupp/Филиппов, the EU-sanctioned ooo-arkhangel/Шатракова, ano-arkhangel/Архангельский Г.Е., ooo-arkhangel-zaporizhzhie, ooo-arkhangel-shchit) beyond the shared brand word and a shared patent-attorney firm with the sanctioned entity. Whether 'Аристархов Владимир Вячеславович' is the known Russian public figure of that name is unconfirmed and should not be assumed without independent verification (DOB/passport match)."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": null
   }
 ]

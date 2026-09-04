@@ -2232,6 +2232,41 @@
           "text": "Full screening battery run 2026-09-04, all clean: OpenSanctions (0 real matches — one name-similarity false positive against the already-known, already-sanctioned ooo-arkhangel-tsentr, dismissed on 0 ИНН/ОГРН match), OCCRP Aleph (0 results), GUR war-sanctions.gur.gov.ua persons/companies/components sections (0 hits — a free-text 'Архангел Групп' search surfaced only the already-known ooo-arkhangel-zaporizhzhie, TIN mismatch confirms it is not this entity), rk.2035.university БАС registry (0 hits), ФНС РОМ securing-measures registry (clean, 0 active measures). No adverse signal found anywhere yet on this newly-registered (12.03.2026) entity beyond the confirmed Филиппов founder tie and the aircraft-manufacturing OKVED itself."
         }
       ]
+    },
+    {
+      "slug": "ooo-arkhangel-istra",
+      "inn": "5017140245",
+      "ogrn": "1255000024487",
+      "legal_form": "ООО",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"",
+      "name_latin": "OOO \"Arkhangel\" (Istra)",
+      "brand_ru": "Архангел",
+      "registered": "2025-03-12",
+      "address": "143581, Московская обл., м.о. Истра, с. Павловская Слобода, ул. Озерная, д. 6, помещ. II",
+      "director": "Аристархов Владимир Вячеславович",
+      "director_history": [
+        {
+          "value": "Аристархов Владимир Вячеславович",
+          "as_of": "2026-09-04",
+          "source_id": "s5469",
+          "note": "Per direct egrul.nalog.ru ИНН lookup, open search-index API (director field only)."
+        }
+      ],
+      "tier": "unclear",
+      "tier_basis": "SURFACED 2026-09-04 via a Rospatent trademark WebSocket search (--slug ooo-arkhangel-zaporizhzhie/--slug ooo-arkhangel both returned this as a same-brand-name false-positive-turned-real-lead — see s5472/s5473), then disambiguated to this specific ИНН via a region-scoped (Moscow oblast, region code 50) egrul.nalog.ru name search plus direct FIPS.ru document fetch (registered trademark 1183435, s5470, and pending application 2025814179, s5469 — both confirm the same 'Истра, с. Павловская Слобода' address as правообладатель/заявитель). An EIGHTH distinct 'Архангел'-branded legal entity in this investigation's corpus, registered 12.03.2025 — a full year before ooo-arkhangel-grupp's 12.03.2026 registration, same day-of-year, unclear if coincidental. Holds one REGISTERED trademark (№1183435, granted 2026-01-16, Class 09 — an extremely broad consumer-electronics/software goods list, no drone-specific terms) and one PENDING application (2025814179, filed 2025-10-10, Class 09 — AI/software-platform terms: 'обеспечение программное для систем искусственного интеллекта', 'программы прикладные... для интеграции искусственного интеллекта и машинного обучения'). Both filed via the same Kursk patent-attorney firm (ООО «Башук Чичканов», рег. поверенный Чичканов В.А., №2296) as the pending drone trademark filed by the EU-sanctioned ooo-arkhangel (ИНН 9714079108) 33 days later — a shared patent-attorney firm is weak circumstantial signal, not a confirmed corporate tie; the two entities have different ИНН, different registered addresses, and no other overlap found yet. Director Аристархов Владимир Вячеславович not yet cross-checked against any other role/entity in this registry — NOTE: this name coincides with a real, known Russian public figure (a former Deputy Minister of Culture, conservative/patriotic-cause commentator) but this is NOT confirmed to be the same person — flagged as an open question, not asserted.",
+      "cbst_tie": {
+        "claim": "None found.",
+        "confidence": "none",
+        "evidence": null,
+        "source_id": null
+      },
+      "products": [],
+      "open_questions": [
+        {
+          "source_id": "s5470",
+          "text": "No press, website, Telegram, or zakupki presence found under this ИНН/brand yet (zakupki --inn scan same day: zero hits). No confirmed tie to any other 'Архангел'-family entity (ooo-arkhangel-grupp/Филиппов, the EU-sanctioned ooo-arkhangel/Шатракова, ano-arkhangel/Архангельский Г.Е., ooo-arkhangel-zaporizhzhie, ooo-arkhangel-shchit) beyond the shared brand word and a shared patent-attorney firm with the sanctioned entity. Whether 'Аристархов Владимир Вячеславович' is the known Russian public figure of that name is unconfirmed and should not be assumed without independent verification (DOB/passport match)."
+        }
+      ]
     }
   ],
   "entities": {
@@ -19228,13 +19263,25 @@
       "tier_basis": "Unrelated construction/renovation business owned/directed by Филиппов Михаил Геннадьевич (see people.json filippov-mikhail-gennadevich), the coordinator of «проект Архангел»/@projectArchangel — recorded here to disambiguate his commercial footprint, not because this firm itself has any UAV/military-industry activity or ЦБСТ tie. Named in the 02.08.2023 OSINT Bees dossier (s0234/s0235) and independently confirmed against EGRUL 2026-09-04 (s5450). UPDATE 2026-09-04 (s5464, Himera Search leak-aggregator report): confirmed LIQUIDATED as of 05.06.2019 — this company no longer exists as an active legal entity. Its ЕГРЮЛ founder/director rows in that report (ИНН 502603133030, ОГРН 1115027014519, 100% ownership) match this registry's already-independently-confirmed EGRUL data exactly."
     },
     "2315233718": {
-      "tier_basis": "Director Архангельский Геннадий Евгеньевич — surname overlap with 'Архангел' brand family flagged as unresolved elsewhere; not yet confirmed a real tie to Проект «Архангел»/Филиппов. ADDRESS/SITE CHECK 2026-09-04: nspd.gov.ru (Rosreestr cadastral map) is unreachable from this project's sandbox for a scripted OR in-page-fetch browser approach (net::ERR_TIMED_OUT on a real chrome-devtools browser tab, not just curl) — the 2026-09-03 'untested lead' that a real browser session might bypass its block did NOT pan out; treat nspd.gov.ru as blocked the same as kad.arbitr.ru going forward, not worth re-trying without a genuine user-driven session. Fell back to Yandex Maps (reachable, no block) for the registered address instead: this is a generic mixed commercial/residential building — 'Businesses inside' lists unrelated tenants (household-chemicals wholesale, electrical goods, a housing complex) with no drone/UAV/production signature visible from the exterior or tenant list. Consistent with a registered-office address, not a manufacturing site."
+      "tier_basis": "Director Архангельский Геннадий Евгеньевич — surname overlap with 'Архангел' brand family flagged as unresolved elsewhere; not yet confirmed a real tie to Проект «Архангел»/Филиппов. ADDRESS/SITE CHECK 2026-09-04: nspd.gov.ru (Rosreestr cadastral map) is unreachable from this project's sandbox for a scripted OR in-page-fetch browser approach (net::ERR_TIMED_OUT on a real chrome-devtools browser tab, not just curl) — the 2026-09-03 'untested lead' that a real browser session might bypass its block did NOT pan out; treat nspd.gov.ru as blocked the same as kad.arbitr.ru going forward, not worth re-trying without a genuine user-driven session. Fell back to Yandex Maps (reachable, no block) for the registered address instead: this is a generic mixed commercial/residential building — 'Businesses inside' lists unrelated tenants (household-chemicals wholesale, electrical goods, a housing complex) with no drone/UAV/production signature visible from the exterior or tenant list. Consistent with a registered-office address, not a manufacturing site. SCREENING 2026-09-04: zakupki.gov.ru supplier-search (scoped --inn scan) returned zero contract hits. Rospatent patent-holder search (searchplatform.rospatent.gov.ru /search, patent_holders filter) returned zero hits for the entity name."
     },
     "9500026652": {
-      "tier_basis": " ADDRESS/SITE CHECK 2026-09-04: nspd.gov.ru (Rosreestr cadastral map) is unreachable from this project's sandbox for a scripted OR in-page-fetch browser approach (net::ERR_TIMED_OUT on a real chrome-devtools browser tab, not just curl) — the 2026-09-03 'untested lead' that a real browser session might bypass its block did NOT pan out; treat nspd.gov.ru as blocked the same as kad.arbitr.ru going forward, not worth re-trying without a genuine user-driven session. Fell back to Yandex Maps (reachable, no block) for the registered address instead: this is a generic mixed commercial/residential building — 'Businesses inside' lists unrelated tenants (a medical clinic (Евромед) and a driving school (Форвард плюс)) with no drone/UAV/production signature visible from the exterior or tenant list. Consistent with a registered-office address, not a manufacturing site."
+      "tier_basis": " ADDRESS/SITE CHECK 2026-09-04: nspd.gov.ru (Rosreestr cadastral map) is unreachable from this project's sandbox for a scripted OR in-page-fetch browser approach (net::ERR_TIMED_OUT on a real chrome-devtools browser tab, not just curl) — the 2026-09-03 'untested lead' that a real browser session might bypass its block did NOT pan out; treat nspd.gov.ru as blocked the same as kad.arbitr.ru going forward, not worth re-trying without a genuine user-driven session. Fell back to Yandex Maps (reachable, no block) for the registered address instead: this is a generic mixed commercial/residential building — 'Businesses inside' lists unrelated tenants (a medical clinic (Евромед) and a driving school (Форвард плюс)) with no drone/UAV/production signature visible from the exterior or tenant list. Consistent with a registered-office address, not a manufacturing site.",
+      "open_questions": [
+        {
+          "source_id": "s5468",
+          "text": "A trademark application (2024881195, filed 2024-10-10, mark text \"АРХАНГЕЛ АНГЕЛЫ НА НАШЕЙ СТОРОНЕ\" [Archangel — Angels Are On Our Side], image: black-and-white helmet with a Russian-tricolor accent, goods classes 12/25/35/41 — plausibly drones/apparel/training given the class spread) was filed by an \"ООО Архангел\" at 275502, Херсонская область, м.о. Генический, г. Геническ, с-к Портовый, д. 6, помещ. 14 — a Kherson-oblast address distinct from THIS entity's own Мелитополь/Запорожская область registration and from every other known 'Архангел'-family address. The application was WITHDRAWN (Решение о признании заявки отозванной, 28.04.2025) before any applicant-identity detail beyond the bare address rendered in the available FIPS record — the filer's ИНН was not resolved (an egrul.nalog.ru name search across the occupied-territory region codes tried did not surface a Kherson-region match). Not confirmed as this entity, ooo-arkhangel-grupp, or a still-undocumented 9th 'Архангел'-branded org — flagged as an unresolved lead, not merged into any existing record."
+        }
+      ]
     },
     "9702081286": {
-      "tier_basis": " ADDRESS GAP 2026-09-04: egrul.nalog.ru's open search-index API (no-captcha) exposes only region-level address ('Г.Москва') for this entity, not a street address — confirmed by direct query. A full signed EGRUL extract (manual pull, daily-rate-limited, same as other entities in this registry) would be needed to get the street-level registered address; not yet pulled. nspd.gov.ru cross-check attempted and found unreachable from this sandbox (see the ano-arkhangel/ooo-arkhangel-zaporizhzhie tier_basis notes for the same finding) — moot here anyway without a street address to search."
+      "tier_basis": " ADDRESS GAP 2026-09-04: egrul.nalog.ru's open search-index API (no-captcha) exposes only region-level address ('Г.Москва') for this entity, not a street address — confirmed by direct query. A full signed EGRUL extract (manual pull, daily-rate-limited, same as other entities in this registry) would be needed to get the street-level registered address; not yet pulled. nspd.gov.ru cross-check attempted and found unreachable from this sandbox (see the ano-arkhangel/ooo-arkhangel-zaporizhzhie tier_basis notes for the same finding) — moot here anyway without a street address to search. SCREENING 2026-09-04: zakupki.gov.ru supplier-search (scoped --inn scan) returned zero contract hits. Rospatent patent-holder search (searchplatform.rospatent.gov.ru /search, patent_holders filter) returned zero hits for the entity name."
+    },
+    "9714079108": {
+      "tier_basis": " NEW 2026-09-04 (Rospatent trademark WebSocket search, s5472/s5473, cross-verified against the filing's own FIPS.ru record, s5471): this EU-sanctioned entity filed trademark application 2025824328 on 2025-11-12, status 'Заявка' (pending, not yet examined), directly in the applicant's own name at its confirmed registered address (123290, Москва, 1-й Магистральный туп., д. 11 стр. 1, помещ. 1п — matches director Шатракова Анастасия Артёмовна's own name in the correspondence field). Goods/services explicitly include Class 12 'аппараты летательные; вертолеты радиоуправляемые с камерой; дроны военного назначения; дроны гражданского назначения; дроны с камерой' (aircraft; radio-controlled helicopters with camera; MILITARY-PURPOSE drones; civilian drones; camera drones) plus Class 25 apparel (jackets, caps, uniforms, sportswear — a merch/uniform line) and Class 35 (product demonstration/retail). This is the FIRST direct documentary evidence that this sanctioned shell (previously on file only as a bare 'ЦБСТ resident, no products found' stub) is actively pursuing a drone-branded product line under its own name, filed 10 months after the sanctions listing — not yet corroborated by any actual product, zakupki contract, or press coverage (a zakupki --inn scan the same day returned zero hits for this ИНН)."
+    },
+    "5027339008": {
+      "tier_basis": " SCREENING 2026-09-04: zakupki.gov.ru supplier-search (scoped --inn scan) returned zero contract hits. Rospatent patent-holder search (searchplatform.rospatent.gov.ru /search, patent_holders filter) returned zero hits for the entity name."
     }
   }
 }
