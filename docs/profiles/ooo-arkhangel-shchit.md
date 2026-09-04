@@ -24,7 +24,7 @@
 
 ## Products
 
-- **Дрон-перехватчик «Архангел»** — Same product line documented via @projectArchangel/10381 (see proekt-kb-arkhangel entity) — this press citation (Mashnews, Expo.UAV 2025) is the first third-party source directly naming a specific manufacturing legal entity for it. [s5456]
+- **Дрон-перехватчик «Архангел»** — Same product line documented via @projectArchangel/10381 (see proekt-kb-arkhangel entity) — this press citation (Mashnews, Expo.UAV 2025) is the first third-party source directly naming a specific manufacturing legal entity for it. Independently corroborated by the original Mashnews article (09.10.2025, s5458, not just the @proekt_arhangel repost): 50km range, 350km/h speed (vs. 340km/h in the project's own June 2026 spec sheet, s5454 — a minor discrepancy, not investigated), unit price 165,000 rubles. Филиппов is quoted (paraphrase, not verbatim) describing rising market popularity for this interceptor class. [s5456]
 
 ## Principals & persons of interest
 

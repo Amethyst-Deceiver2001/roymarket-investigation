@@ -1956,6 +1956,11 @@
           "name_ru": "«Гермес коллектив»",
           "description": "Multi-drone control architecture allowing an operator to deploy and switch between several drones from cover (\"высаживать и переключаться между ними... не выходя из укрытия\"). Developed for ambush-drone (засадные) tasking, self-described as also suited to ПВО/interceptor drones. Publicly endorsed on-record by an unnamed combat participant quoted in the announcement post.",
           "source_id": "s5457"
+        },
+        {
+          "name_ru": "«Слоненок»",
+          "description": "Unified airspace surveillance-and-strike complex combining radar/video detection with interceptor-drone engagement. 15km monitoring radius, AI-based automatic target engagement, capacity for 17 interceptor drones per unit; operator role reduced to a single switch-toggle at the engagement moment. Press-quoted (paraphrase, not verbatim — see s5459) description from Филиппов: the system can replace the work of several mobile fire groups (МОГ). Described as a collaboration between Проект «Архангел» specialists and unnamed colleagues in St. Petersburg.",
+          "source_id": "s5459"
         }
       ],
       "battlefield_evidence": [],
@@ -1989,7 +1994,7 @@
         },
         {
           "source_id": "s5454",
-          "text": "BOM line item \"Связь: Гермес или аналоги\" (\"Hermes comms, or equivalent\") is a generic reference, not a specific vendor citation — plausibly, but NOT confirmed to be, the same «Гермес» tactical-comms brand sold commercially by `npo-kaysant` (ИНН 7733393203, see that entity's merged `kb-germes` alias). Left as an open lead, not merged."
+          "text": "BOM line item \"Связь: Гермес или аналоги\" (\"Hermes comms, or equivalent\") is a generic reference, not a specific vendor citation — plausibly, but NOT confirmed to be, the same «Гермес» tactical-comms brand sold commercially by `npo-kaysant` (ИНН 7733393203, see that entity's merged `kb-germes` alias). Left as an open lead, not merged. RESOLVED 2026-09-04 (via a web search, then confirmed against the private Академия chat's own msg 110720, s5457): the channel named in that chat, \"ГЕРМЕС - ППРЧ связь, мачты, защита от дронов,\" is confirmed via its own Telegram title (\"...НПО КАЙСАНТ\") to be `npo-kaysant`'s (ИНН 7733393203) own commercial channel (@germesfpv). This IS the same «Гермес» brand referenced generically in the BOM."
         },
         {
           "source_id": "s5456",
@@ -2042,7 +2047,7 @@
       "products": [
         {
           "name_ru": "Дрон-перехватчик «Архангел»",
-          "description": "Same product line documented via @projectArchangel/10381 (see proekt-kb-arkhangel entity) — this press citation (Mashnews, Expo.UAV 2025) is the first third-party source directly naming a specific manufacturing legal entity for it.",
+          "description": "Same product line documented via @projectArchangel/10381 (see proekt-kb-arkhangel entity) — this press citation (Mashnews, Expo.UAV 2025) is the first third-party source directly naming a specific manufacturing legal entity for it. Independently corroborated by the original Mashnews article (09.10.2025, s5458, not just the @proekt_arhangel repost): 50km range, 350km/h speed (vs. 340km/h in the project's own June 2026 spec sheet, s5454 — a minor discrepancy, not investigated), unit price 165,000 rubles. Филиппов is quoted (paraphrase, not verbatim) describing rising market popularity for this interceptor class.",
           "source_id": "s5456"
         }
       ],
