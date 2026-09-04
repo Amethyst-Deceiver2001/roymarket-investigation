@@ -422,18 +422,20 @@ Russian-press search, which turned up plenty). Findings:
   "Мадяр" favorably for corporate-style management, and frames the
   volunteer FPV-production ecosystem as "народный ВПК." Archived as a
   source; not yet pulled as a video/transcript.
-- **The single biggest still-open question, explicitly tested and still
-  unresolved**: whether Гагаринг has any actual tie to РОЙ.МАРКЕТ itself
-  (`cbst_tie` is null) — this project's namesake platform. Fetched
-  роймаркет.рф directly: the live public page is a supplier-application
-  form, not a browsable/searchable vendor catalog (consistent with
-  Безруков's own on-record description of it as a gated pilot used by
-  specific military units, not a public storefront) — no mention of
-  Гагаринг on the application page, but this is inconclusive, not a
-  negative finding, since no catalog was actually searchable. No
-  screening script exists for this platform. A real answer needs a
-  buyer-side login this investigation doesn't have, or a future leak/press
-  piece naming actual vendors.
+- **`cbst_tie` RESOLVED (2026-09-04, user-supplied source)**: the user
+  pointed directly to t.me/ANO_CBST/2109 (02.05.2026) — ЦБСТ's OWN channel
+  names «Лаборатория Гагаринг» a "Резидент ЦБСТ" in its own headline/lede,
+  announcing a new comms-module feature («Подхват», a two-pilot relay
+  handoff mode doubling combat radius, added to `products[]`). Third-party
+  primary-source confirmation from the network's own coordinating body —
+  highest confidence tier (t-doc), same pattern already used for
+  gk-logos/ao-tekhnodron/ooo-gaskar/etc. This closes what had just been
+  flagged as the single biggest open question on this record. **Narrower
+  and still open**: whether Гагаринг specifically SELLS through
+  РОЙ.МАРКЕТ (the marketplace itself, as opposed to being a ЦБСТ resident
+  generally) — роймаркет.рф's live page is still a supplier-application
+  form, not a searchable catalog, so that specific question stays
+  untestable without a buyer-side login.
 - **Still genuinely unexplored, not attempted this pass**: a full pull of
   the Соловьёв LIVE video/transcript itself (currently only the TG
   channel's own chapter-summary post is archived); whether «Звезда 1/2»
