@@ -1,16 +1,20 @@
-# ООО «Боевые технологии»
+# ООО «Боевые технологии» (Военторг «ИРПТОРГ»)
 
-`manufacturer` 
+`money-layer` `WB: not_checked` 
 
-ИНН 5262393781 · ОГРН 1235200037610 · Nizhny Novgorod
+ИНН 5262393781 · Nizhny Novgorod
 
 ## At a glance
 
 - **Legal form:** OOO (limited liability company)
-- **Registered:** 21.12.2023
-- **Address:** 603057, Нижегородская область, г.о. город Нижний Новгород, г. Нижний Новгород
+- **Registered:** 2023-12-21
+- **Address:** 603057, Нижегородская область, г.о. город Нижний Новгород, г. Нижний Новгород, пр-кт Гагарина, д. 25В, помещ. 2А
 - **Director:** Потехин Владимир Александрович
-- **Wildberries overlap:** none_found
+- **Charter capital:** ₽30,000
+- **ОКВЭД:** 46.52 — Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями
+- **Wildberries overlap:** not_checked
+
+> **Declared vs. actual activity.** Registered OKVED is wholesale electronics trade (46.52); the entity's own site describes it as producing rations, clothing and drone/РЭБ equipment, and it separately retails FPV batteries.
 
 ## Ownership & corporate history
 
@@ -18,39 +22,30 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Потехин Владимир Александрович | 2025-11-12 | личный ИНН 521405416936, ГРН 2255202108181 — title Директор, not Генеральный директор [s0457] |
+| Потехин Владимир Александрович | 2023-12-21 | ГРН 2265200819464 от 25.08.2026. Также единственный учредитель (100% доли, номинал 30 000 руб.), личный ИНН 521405416936. [s5659] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
-| Потехина Светлана Алексеевна (100%, sole founder at incorporation) | 2023-12-18 | Founding charter names her as единственный учредитель. Surname match to current director Потехин Владимир Александрович suggests a family transfer, not an arm's-length sale — not independently confirmed, flagged as an open question. [s0182] |
-| Потехин Владимир Александрович (66.67%) + 33.33% company treasury shares | 2026-08-13 | Per full EGRUL extract (ul-1235200037610-20260823120648.pdf): treasury-share buyback ГРН 2265200802139, 13.08.2026. Consistent with a transfer out of Потехина С.А.'s original 100% stake, though the extract does not itself name the seller. [s0457] |
+| Потехин Владимир Александрович (100%, номинал 30 000 руб.) | 2025-12-24 | ГРН 2255202202176 от 24.12.2025. [s5659] |
 
 ### Charter capital
 
 | Value | As of | Note |
 |---|---|---|
-| 30000 | 2025-09-15 | Решение №3 от 15.09.2025 (charter amendment, same УД bundle): уставный капитал set to 30 000 руб. [s0182] |
-
-### Legal name
-
-| Value | As of | Note |
-|---|---|---|
-| ООО «Рационы питания» | 2023-12-18 | Founding charter (Устав, УТВЕРЖДЕН Решением №1 Единственного учредителя от 18.12.2023), signed by sole founder Потехина Светлана Алексеевна. Registered address Нижний Новгород. [s0182] |
-| ООО «Боевые технологии» | 2024-09-10 | Renamed by Решение единственного участника от 10.09.2024 (charter amendment in the same УД bundle) — п.1.1 Устава changed to «Боевые технологии». EGRUL name-change record ГРН 2245200611797 dated 17.09.2024 is the registration-lag date for the same event, not a separate rename. [s0182] |
+| 30000 | 2025-12-24 | ГРН 2255202202176. [s5659] |
 
 ## Products
 
-- **Рационы питания**
-- **Боевые технологии**
+- **Аккумулятор GAONENG GNB 6S 22.2В 6500мАч 50C LiPo XT90 (реселлер, не производитель)** [s5660]
 
-## Financials
+## Self-reported marketing claims
 
-| Year | Revenue | Profit | Source |
-|---|---|---|---|
-| 2024 | ₽26,783,000 | ₽3,062,000 | [s0279] |
-| 2025 | ₽164,733,000 | ₽88,000 | [s0280] |
+> *Аккумулятор Gaoneng, разработанный с учетом высоких требований военных и силовых структур.*
+> The Gaoneng battery, developed to meet the high requirements of military and security structures.
+>
+> — Product description on irptorg.ru's listing for a GAONENG GNB 6S 6500mAh LiPo battery — the same battery model (different capacity) a Moscow Arbitration Court judgment documents НПО «Рустехдрон» supplying to ООО «ДСГ» in 2023. The listing categorizes the product under «FPV Дроны и РЭБ» (FPV drones and electronic warfare). (2026-09-05) [s5660]
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
 
@@ -58,14 +53,16 @@
 
 _No named principals linked to this entity yet._
 
+## Open questions
+
+- Does ООО «ДСГ» (or НПО «Рустехдрон») have any actual purchasing relationship with this entity, or did the July 2023 GAONENG batteries come from one of the other five identified Russian retailers of this brand, or a non-retail import route entirely? No document currently ties the two together — this entity was found via a general market search for Russian GAONENG resellers, not via any reference in the ДСГ court filings themselves.
+
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0182 | Founding-Устав bundle | Founding-Устав bundle (UD_1235200037610_20260818_boevye-tekhnologii.zip) | 2026-08-18 | 2023-12-18 |
-| s0279 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5262393781_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0280 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5262393781_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s0457 | EGRUL extract | EGRUL extract (ul-1235200037610-20260823120648.pdf) | — | 2026-08-23 |
+| s5659 | EGRUL extract | EGRUL extract (EGRUL_5262393781_20260905_ooo-boevye-tekhnologii.pdf) | 2026-09-05 | 2026-09-05 |
+| s5660 | Tgfile | Tgfile (TGFILE_20260905_irptorg-gaoneng-product.html) | 2026-09-05 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

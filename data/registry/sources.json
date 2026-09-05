@@ -18080,7 +18080,7 @@
     "as_of": "2026-08-22",
     "as_of_method": "egrul_api:pull-date",
     "supersedes": null,
-    "superseded_by": null,
+    "superseded_by": "s5659",
     "inns": [],
     "entities": [],
     "sha256": "53f9eaddd250fcc6da29bbe53c5a6ba2938daa4a405dbf1beaf6746b032295aa",
@@ -20147,6 +20147,25 @@
     ],
     "entities": [],
     "sha256": "fe4948b737eaa6049f2a92bd5bd7b5133f7dcf99d9682123f19665d6ea12d0f2",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5659",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_5262393781_20260905_ooo-boevye-tekhnologii.pdf",
+    "url": null,
+    "captured_date": "2026-09-05",
+    "fiscal_year": null,
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": "s0076",
+    "superseded_by": null,
+    "inns": [
+      "521405416936"
+    ],
+    "entities": [],
+    "sha256": "dcbbfd82f03915401f99aafd455bcf3925d5069e71df49f46273bb61695b7019",
     "_verified": false,
     "_origin": "manifest"
   },
@@ -28786,6 +28805,23 @@
     "inns": [],
     "entities": [],
     "sha256": "b2ee2ee66aede881d2191f27762ca895e55192330fb514c6bd77b36652565b94",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5660",
+    "type": null,
+    "path": "data/sources/TGFILE_20260905_irptorg-gaoneng-product.html",
+    "url": null,
+    "captured_date": "2026-09-05",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": null,
     "_verified": false,
     "_origin": "manifest"
   },
