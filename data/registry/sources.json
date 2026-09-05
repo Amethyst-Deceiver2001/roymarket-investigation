@@ -19834,6 +19834,26 @@
     "_origin": "manifest"
   },
   {
+    "id": "s5538",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_5032226144_20260905_inn-5032226144.pdf",
+    "url": null,
+    "captured_date": "2026-09-05",
+    "fiscal_year": null,
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "503224086780",
+      "780411353348"
+    ],
+    "entities": [],
+    "sha256": "6cab60e0590c2722aac96b285ab9e7eb095b2c7836093e8f5993bd0d9f085fb6",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s5503",
     "type": "egrul",
     "path": "data/sources/EGRUL_5032379630_20260905_ooo-arkhangel-tsentr.pdf",
@@ -29005,6 +29025,23 @@
     "inns": [],
     "entities": [],
     "sha256": "2f1cfbed08799a44da6c4941cbfcb5c002e7e34b180b78edab2145c79d9e1bf0",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5539",
+    "type": null,
+    "path": "data/sources/TGPOST_multi_20240807-20260830_arhangel-crosschannel-mining.txt",
+    "url": null,
+    "captured_date": null,
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "ae1f773b231afe2b3f469ab2200e1a1bf6bc4831f8be1b43411673a38c8c70d4",
     "_verified": false,
     "_origin": "manifest"
   },
