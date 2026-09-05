@@ -152,12 +152,13 @@ were previously in this file.
 | 50 | reestr.mchs.gov.ru (fire-safety declarations registry, guessed) | NXDOMAIN — guessed hostname, never verified. `www.mchs.gov.ru` itself resolves and redirects fine; the actual declarations-registry subdomain still needs to be found from MCHS's own site nav. |
 | 51 | rosakkreditatsiya.gov.ru (guessed) | NXDOMAIN — **this is just the wrong name for pub.fsa.gov.ru**, already Tier A (source #40 above). Do not re-add as a separate source. |
 
-### New Tier D — genuine network-unreachable from this sandbox, tunnel candidates
+### New Tier D — genuinely network-unreachable, confirmed even from the sandbox (not just untested)
 
-DNS resolves fine for all of these (so not a hostname problem) but the TCP
-connection itself times out (`curl` returns `000`) — the same signature as
-the pre-tunnel Tier D batch, so these are plausible candidates for the same
-WireGuard fix, **not yet tested from behind the tunnel**:
+**Re-tested 2026-09-05 (second pass).** These four (#52-55) still time out
+(`curl` returns `000` after a 12s timeout) — the tunnel fix that resolved
+every other Tier D entry does NOT reach these. Genuinely dead from this
+sandbox; user should test directly from their own network before writing
+these off entirely, same caveat as `kad_arbitr_ru_ddos_guard_blocked`.
 
 | # | Source | IP | What it gives |
 |---|---|---|---|
@@ -165,9 +166,18 @@ WireGuard fix, **not yet tested from behind the tunnel**:
 | 53 | rosreestr.gov.ru | 217.77.104.150 | Property/ЕГРН — facility ownership, the long-flagged Rosreestr gap (see "Known gaps" section below) |
 | 54 | lk.rosreestr.ru | 217.77.104.136 | Rosreestr personal-cabinet subdomain — likely login-gated even once reachable, but untested |
 | 55 | nspd.gov.ru (Национальная система пространственных данных — the modern public cadastral map, Rosreestr's current public-facing replacement for the old egrp365-style lookup) | 95.167.134.88 | Same facility-ownership data as #53, more likely to be the actually-current public entry point |
-| 56 | br.fas.gov.ru (ФАС — реестр банковских гарантий) | 194.226.26.169 | Bank-guarantee registry — cross-checks the performance/security guarantees zakupki contracts require |
-| 57 | solutions.fas.gov.ru (ФАС — decisions/legal acts database) | 194.226.26.36 | Antitrust violation decisions — a citable negative (or a real hit) distinct from the debarment registry (RNP) already integrated |
-| 58 | www.gost.ru / gost.ru (Росстандарт — GOST certification body) | 212.164.138.14 | Product standard certification — same evidentiary category as Rosakkreditatsiya's declarations-of-conformity registry (#40), different body |
+
+**#56/57 corrected and merged — re-tested 2026-09-05, reachable.** These are
+**the same site**, not two: `solutions.fas.gov.ru` 302-redirects straight to
+`br.fas.gov.ru`. The original description of #56 ("реестр банковских
+гарантий") was also wrong — the page's own title is «База решений и правовых
+актов» (FAS decisions & legal-acts database, antitrust rulings), matching
+what #57 described. One entry, corrected:
+
+| # | Source | What it gives | Notes |
+|---|---|---|---|
+| 56 | **br.fas.gov.ru** (= solutions.fas.gov.ru, redirects here) — ФАС «База решений и правовых актов» | Antitrust-violation decisions/rulings — a citable negative (or a real hit) distinct from the debarment registry (RNP) already integrated | **Tier B, not A** — HTTP 200 on the root page (confirmed via curl), but it's a Django form (`GET /` with `text`/`type` params for full-text search) plus a separate `/ajax/organizations/` typeahead endpoint for filtering cases by named organization. The search-page HTML embeds per-load `django-select2` field IDs that look session-bound, so a scripted GET isn't confirmed reliable yet — needs a devtools capture of one real organization-filtered search before writing a `screen_*.py` for it. Worth doing: this is a clean citable-negative source in the same category as RNP. |
+| 58 | www.gost.ru / gost.ru (Росстандарт — GOST certification body) | Product standard certification — same evidentiary category as Rosakkreditatsiya's declarations-of-conformity registry (#40), different body | **Reachable, redirects to the real site**: `www.gost.ru` → `www.rst.gov.ru/portal/gost` (HTTP 200, confirmed 2026-09-05). Not yet checked for a per-company/per-product search function — homepage reachability only so far. |
 
 ---
 
