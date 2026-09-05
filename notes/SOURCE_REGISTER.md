@@ -32,6 +32,18 @@ sandbox. Tier D especially is environment-dependent — a timeout here is not
 proof the site is down for the user (cf. `kad_arbitr_ru_ddos_guard_blocked`,
 which *was* confirmed from both sides and is genuinely dead).
 
+**Full sweep re-run 2026-09-05 (later same day), after the user put this
+sandbox's egress behind a WireGuard tunnel.** Network-layer reachability
+changed for most former Tier D entries; captcha/WAF-layer blocks (the actual
+Tier C boundary) did not, because a tunnel changes the IP a request comes
+from, not whether a site's bot-defense or login wall lets that request
+through. One exception cuts the other way: **fedresurs.ru still hard-403s
+this sandbox specifically** (`IP: 94.242.50.158` in its own error page) even
+though the user's own browser opens it fine — my chrome-devtools browser
+runs on this sandbox's network, not through the user's tunnel, so a
+site-specific IP-reputation block on this exact address is not something a
+tunnel on the user's device can fix from here.
+
 ---
 
 ## Tier A — scripted, already integrated
@@ -57,46 +69,105 @@ which *was* confirmed from both sides and is genuinely dead).
 | 17 | Telegram | posts + membership | `tg_scan.py`, `tg_scan_users.py` | `web` |
 | 18 | component.aeronext.aero | АЭРОНЕКСТ member catalogue | (memory recipe, no script) | `state_programs` |
 
-## Tier A — confirmed reachable 2026-09-05, NOT yet integrated
+## Tier A — confirmed reachable, NOT yet integrated
 
 | # | Source | What it gives | Status | Priority |
 |---|---|---|---|---|
-| 19 | **zakupki.gov.ru РНП (44-ФЗ)** — реестр недобросовестных поставщиков | debarment record; a clean check is a **citable negative** | **Confirmed working via plain curl.** No-hit marker: `Поиск не дал результатов`. No script yet. | **High** — cheap, and debarment is directly material to a sanctions case |
-| 20 | zakupki.gov.ru РНП (223-ФЗ) and РНП ПП РФ 615 | same, other two sub-registries | Same page, separate tabs; same access | High |
-| 21 | sudact.ru | court decisions (general jurisdiction + arbitration text) | HTTP 200. Viable **substitute for the DDoS-Guard-blocked kad.arbitr.ru** | **High** — litigation is a real gap (`litigation[]` populated on 5/182) |
-| 22 | checko.ru | aggregator company card | HTTP 200 | Medium — aggregator, corroboration only |
-| 23 | audit-it.ru / sbis.ru | aggregator financials | HTTP 200 | Low — БФО is better and primary |
+| 19 | **zakupki.gov.ru РНП (44-ФЗ)** — реестр недобросовестных поставщиков | debarment record; a clean check is a **citable negative** | **Confirmed working via plain curl.** No-hit marker: `Поиск не дал результатов`. Now scripted — `screen_rnp.py`. | Done |
+| 20 | zakupki.gov.ru РНП (223-ФЗ) and РНП ПП РФ 615 | same, other two sub-registries | Same page, query flags (`fz223=on`, `ppRf615=on`); same script | Done |
+| 21 | sudact.ru | court decisions (general jurisdiction + arbitration text) | Plain curl HTTP 200, real content, no captcha markers (re-confirmed 2026-09-05). Viable **substitute for the DDoS-Guard-blocked kad.arbitr.ru** | **High** — litigation is a real gap (`litigation[]` populated on 5/182) |
+| 22 | checko.ru | aggregator company card | Plain curl HTTP 200, real content (re-confirmed 2026-09-05) | Medium — aggregator, corroboration only |
+| 23 | audit-it.ru (→ www.audit-it.ru) / sbis.ru (→ saby.ru, rebranded) | aggregator financials | HTTP 200 after redirect (re-confirmed 2026-09-05) | Low — БФО is better and primary |
+| 40 | **pub.fsa.gov.ru (Росаккредитация)** | Certificates/declarations of conformity — hard evidence of what a manufacturer actually makes | **Moved from Tier D 2026-09-05** — reachable both via curl (403 on bare root, but `/registry-catalog` loads) and confirmed via devtools with real registry content, once behind the WireGuard tunnel. Was a pure network-timeout block, not app-layer. | **High** |
+| 41 | reestr.digital.gov.ru (реестр российского ПО) | Russian-software registry — relevant to control-software claims | **Moved from Tier D 2026-09-05** — real content confirmed via devtools post-tunnel | Medium |
+| 42 | fstec.ru | ФСТЭК licence registry (defence-info-security licensing) | **Moved from Tier D 2026-09-05** — real content confirmed via devtools post-tunnel | Medium |
+| 43 | list-org.com | aggregator company card | **Moved from Tier D 2026-09-05** — bare domain still 403s, **use `https://www.list-org.com/`**, which loads clean | Low — aggregator, tier A primary sources exist |
+| 44 | zachestnyibiznes.ru | aggregator company card | **Moved from Tier D 2026-09-05** — real content confirmed post-tunnel, DDoS-Guard no longer triggering | Low — aggregator |
 
 ## Tier B — browser-assisted (chrome-devtools), one entity at a time
 
 | # | Source | What it gives | Notes |
 |---|---|---|---|
-| 24 | **fedresurs.ru** (company card) | **charter capital, current ЕГРЮЛ address, status, ОКВЭД, reg. date** | Qrator 401s plain curl; passes in a real browser. Backend API confirmed: `GET /backend/companies?searchString=<ИНН>&limit=5&offset=0` → guid; `GET /backend/companies/<guid>` → full card. **`offset` is mandatory** or it 400s. |
-| 25 | gisp.gov.ru (ГИСП) | industrial-product + company registries (ПП 719 / ПП 878) | WAF-blocks curl; browser fine. Company search is by legal name only, not director. |
-| 26 | rupep.org | PEP dossiers: DOB, birthplace, ИНН, family | Cloudflare-blocks scripts; browser fine. Cheap first check for PEP gaps. |
+| 24 | **fedresurs.ru** (company card) | **charter capital, current ЕГРЮЛ address, status, ОКВЭД, reg. date** | Qrator 401s plain curl; passes in a real browser — **except this sandbox specifically still hard-403s even post-tunnel** (re-confirmed 2026-09-05, `IP: 94.242.50.158` in Qrator's own error page — the tunnel is on the user's device, not this sandbox's browser, so it doesn't change my egress IP here). Works fine in the user's own browser. Backend API confirmed: `GET /backend/companies?searchString=<ИНН>&limit=5&offset=0` → guid; `GET /backend/companies/<guid>` → full card. **`offset` is mandatory** or it 400s. |
+| 25 | gisp.gov.ru (ГИСП) | industrial-product + company registries (ПП 719 / ПП 878) | WAF-blocks curl (403, re-confirmed 2026-09-05); browser loads real content fine. Company search is by legal name only, not director. |
+| 26 | rupep.org | PEP dossiers: DOB, birthplace, ИНН, family | **Cloudflare "Just a moment..." challenge confirmed still active 2026-09-05** even via devtools browser+tunnel (interstitial held after 6s wait) — this one may need an actual human solve, not just a browser context. Re-test with more wait time or the user's own browser before relying on it. |
+| 27 | **vestnik-gosreg.ru** (use `www.` — bare domain 502s) | Liquidation/reorganisation/bankruptcy notices; homepage news feed itself is a live source (`novosti_kompaniy`) | Re-tested 2026-09-05 via WireGuard tunnel — was Tier D (network timeout), now loads real content. Homepage/news feed readable directly, no gate. The ИНН/ОГРН **search box** is behind a Yandex SmartCaptcha checkbox — still Tier B, not scriptable. |
 
 ## Tier C — user-only (do not automate)
 
 | # | Source | Blocker | What we'd get |
 |---|---|---|---|
-| 27 | **fssp.gov.ru** (исполнительные производства) | **Captcha on search submit** — confirmed 2026-09-05 (page loads in browser, `captcha` present in the search response) | Enforcement proceedings = unpaid judgments/debts. Genuinely useful; needs the user. |
-| 28 | fedresurs.ru **publications** | **HTTP 451** (legal block) on `/backend/companies/<guid>/publications` | Bankruptcy/lien/pledge/net-asset notices. The company card (tier B) still works. |
-| 29 | kad.arbitr.ru | DDoS-Guard; confirmed dead from sandbox **and** user's own network | Arbitration case records |
-| 30 | vestnik-gosreg.ru | Captcha | Liquidation/reorganisation notices |
-| 31 | leader-id.ru | Login-gated (401 confirmed) | 412k-user event-participant directory |
-| 32 | reveng.ee | API key must be requested by the user (media/journalist tier) | Leaked Russian DB search |
-| 33 | rusprofile.ru | **Serves decoy data to automated traffic** — only `<title>` trustworthy | Nothing safely; avoid |
+| 28 | **fssp.gov.ru** (исполнительные производства) | **Captcha confirmed still present 2026-09-05** on `/iss/ip` even with the tunnel — page loads, `captcha` string present in the page itself, application-layer not network | Enforcement proceedings = unpaid judgments/debts. Genuinely useful; needs the user. |
+| 29 | fedresurs.ru **publications** | **HTTP 451** (legal block) on `/backend/companies/<guid>/publications` — a legal block is jurisdictional, not IP-based, so no tunnel fixes this one | Bankruptcy/lien/pledge/net-asset notices. The company card (tier B) still works. |
+| 30 | kad.arbitr.ru | **Re-tested 2026-09-05**: page itself now loads (DDoS-Guard no longer blocking at network level), but the search form's own captcha (`captcha` string present) still gates results — moved from "network-dead" to "app-layer captcha," net effect for us is the same: user-only | Arbitration case records — use `sudact.ru` (Tier A) as the scriptable substitute |
+| 31 | mos-gorsud.ru | **Re-tested 2026-09-05**: same pattern as kad.arbitr.ru — page loads now, `captcha` string confirmed present | Moscow court records |
+| 32 | leader-id.ru | **Re-tested 2026-09-05**: homepage loads real content now, but the actual user-directory function is still login-gated (401 confirmed on the API) — homepage reachability is not the same as the directory being usable | 412k-user event-participant directory |
+| 33 | reveng.ee | API key must be requested by the user (media/journalist tier); homepage itself loads fine (HTTP 200, re-confirmed) but the search API needs the key | Leaked Russian DB search |
+| 34 | rusprofile.ru | **Serves decoy data to automated traffic** — only `<title>` trustworthy | Nothing safely; avoid |
 
 ## Tier D — no route found from this sandbox (user should re-test)
 
-| # | Source | Symptom | Why we want it |
+All prior Tier D entries were re-tested 2026-09-05 once the sandbox's egress
+went through the user's WireGuard tunnel — **every one of them became
+reachable** (moved to Tier A/B above). Nothing remains in Tier D as a pure
+network-unreachability case as of this sweep, **except** the NAZK item below,
+whose problem isn't network routing at all:
+
+| # | Source | Status |
+|---|---|---|
+| 35 | sanctions.nazk.gov.ua (NAZK "War & Sanctions") | **Not a network problem — this hostname doesn't exist.** DNS lookup returns NXDOMAIN (confirmed via both Google and Cloudflare DoH, `Status:3`, no `Answer` section). The base domain `nazk.gov.ua` resolves fine (91.142.175.20). The subdomain was this investigation's own guess, never verified against NAZK's actual site structure — still needs the real current URL for their sanctions tool before this can be re-tried at all. Do not guess further subdomains; find the real one from NAZK's own navigation or ask the user. |
+
+---
+
+## Regional/lower-level registries and permit sources — surveyed 2026-09-05
+
+Prompted by the question "where else could our entities plausibly file for
+permits" — a different axis from the federal registries above. None of these
+were previously in this file.
+
+### New Tier A — reachable, real content, no captcha
+
+| # | Source | What it gives | Notes |
 |---|---|---|---|
-| 34 | **pub.fsa.gov.ru (Росаккредитация)** | Connection timeout — curl **and** browser | **Certificates/declarations of conformity.** High value: a drone/RЭБ manufacturer's certification record is hard evidence of what hardware it actually makes. Top of the re-test list. |
-| 35 | sanctions.nazk.gov.ua (NAZK "War & Sanctions") | Connection timeout | Ukrainian sanctions list **distinct from** GUR's — a separate designation source we currently don't check at all |
-| 36 | reestr.digital.gov.ru | Read timeout | Russian-software registry (relevant to control-software claims) |
-| 37 | fstec.ru | Connection timeout | ФСТЭК licence registry (defence-information-security licensing) |
-| 38 | list-org.com / zachestnyibiznes.ru | 403 / DDoS-Guard | Aggregators — low priority, tier A alternatives exist |
-| 39 | mos-gorsud.ru | Read timeout | Moscow court records |
+| 45 | **rmsp.nalog.ru** (Реестр МСП) | SME category (micro/small/medium), `is_active`, `is_hitech` flag, `has_licenses`/`has_contracts` booleans, headcount, registry in/out dates, self-reported product line (`СВЕДЕНИЯ О ПРОИЗВОДИМОЙ ПРОДУКЦИИ`) | **Confirmed scriptable.** `GET /search-proc.json?query=<ИНН>` — plain JSON, no captcha, no key. `is_hitech` is a genuinely new, unused data point for a UAV-industry investigation. No script yet — worth one. |
+| 46 | statreg.gks.ru (Росстат registry) | Would corroborate ГИР БО financials from a second body | **Reachable but useless as tested** — root URL just serves nginx's default page, meaning this is the wrong subdomain/path for the actual public lookup. Needs the real endpoint identified before this is actually Tier A. |
+
+### New Tier B — browser-only
+
+| # | Source | What it gives | Notes |
+|---|---|---|---|
+| 47 | rpn.gov.ru (Росприроднадзор) | Environmental permits / negative-impact-object registry (НВОС) — relevant for any entity with a physical production facility | Homepage loads fine, but the actual permit function lives on a separate login-gated sub-application (`lk.fsrpn.ru`), not a public per-entity search — this looks like an application portal, not a lookup registry. Needs more digging to find (or confirm the absence of) a public NVOS object search before this is worth wiring up. |
+
+### New Tier C — app-layer blocked
+
+| # | Source | Blocker | What we'd get |
+|---|---|---|---|
+| 48 | nostroy.ru (СРО builders registry — construction self-regulating org membership) | **DDoS-Guard confirmed** (devtools browser shows the DDoS-Guard interstitial directly, not real content) | SRO membership for any entity doing construction/installation work under a government contract (relevant — ГАСКАР Интеграция's construction-IT-services contracts, above) |
+| 49 | rosrid.ru (ЕГИСУ НИОКР — state R&D-results registry) | **TLS certificate mismatch** (`ERR_CERT_COMMON_NAME_INVALID` in a real browser) on top of an HTTP 401 via curl — this reads as a misconfigured or wrong-hostname server, not a clean app-layer gate like a captcha. Needs the real current hostname before ruling in or out. | Would show state-funded R&D contract results — relevant for any entity claiming government R&D grants |
+
+### New — wrong/dead hostnames (not network problems)
+
+| # | Source | Status |
+|---|---|---|
+| 50 | reestr.mchs.gov.ru (fire-safety declarations registry, guessed) | NXDOMAIN — guessed hostname, never verified. `www.mchs.gov.ru` itself resolves and redirects fine; the actual declarations-registry subdomain still needs to be found from MCHS's own site nav. |
+| 51 | rosakkreditatsiya.gov.ru (guessed) | NXDOMAIN — **this is just the wrong name for pub.fsa.gov.ru**, already Tier A (source #40 above). Do not re-add as a separate source. |
+
+### New Tier D — genuine network-unreachable from this sandbox, tunnel candidates
+
+DNS resolves fine for all of these (so not a hostname problem) but the TCP
+connection itself times out (`curl` returns `000`) — the same signature as
+the pre-tunnel Tier D batch, so these are plausible candidates for the same
+WireGuard fix, **not yet tested from behind the tunnel**:
+
+| # | Source | IP | What it gives |
+|---|---|---|---|
+| 52 | data.mos.ru (Moscow city open-data portal) | 212.11.155.167 | Open dataset of issued Moscow construction permits (Разрешения на строительство) — would show a facility build-out without needing Мосгорстройнадзор's own gated system |
+| 53 | rosreestr.gov.ru | 217.77.104.150 | Property/ЕГРН — facility ownership, the long-flagged Rosreestr gap (see "Known gaps" section below) |
+| 54 | lk.rosreestr.ru | 217.77.104.136 | Rosreestr personal-cabinet subdomain — likely login-gated even once reachable, but untested |
+| 55 | nspd.gov.ru (Национальная система пространственных данных — the modern public cadastral map, Rosreestr's current public-facing replacement for the old egrp365-style lookup) | 95.167.134.88 | Same facility-ownership data as #53, more likely to be the actually-current public entry point |
+| 56 | br.fas.gov.ru (ФАС — реестр банковских гарантий) | 194.226.26.169 | Bank-guarantee registry — cross-checks the performance/security guarantees zakupki contracts require |
+| 57 | solutions.fas.gov.ru (ФАС — decisions/legal acts database) | 194.226.26.36 | Antitrust violation decisions — a citable negative (or a real hit) distinct from the debarment registry (RNP) already integrated |
+| 58 | www.gost.ru / gost.ru (Росстандарт — GOST certification body) | 212.164.138.14 | Product standard certification — same evidentiary category as Rosakkreditatsiya's declarations-of-conformity registry (#40), different body |
 
 ---
 
