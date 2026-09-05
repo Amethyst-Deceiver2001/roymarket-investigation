@@ -154,30 +154,46 @@ were previously in this file.
 
 ### New Tier D — genuinely network-unreachable, confirmed even from the sandbox (not just untested)
 
-**Re-tested 2026-09-05 (second pass).** These four (#52-55) still time out
-(`curl` returns `000` after a 12s timeout) — the tunnel fix that resolved
-every other Tier D entry does NOT reach these. Genuinely dead from this
-sandbox; user should test directly from their own network before writing
-these off entirely, same caveat as `kad_arbitr_ru_ddos_guard_blocked`.
+**Re-tested 2026-09-05 (second pass, curl-only).** These four (#52-55) still
+time out via plain `curl` (`000` after a 12s timeout) — the tunnel fix that
+resolved every other Tier D entry does NOT reach these **via curl**.
 
-| # | Source | IP | What it gives |
-|---|---|---|---|
-| 52 | data.mos.ru (Moscow city open-data portal) | 212.11.155.167 | Open dataset of issued Moscow construction permits (Разрешения на строительство) — would show a facility build-out without needing Мосгорстройнадзор's own gated system |
-| 53 | rosreestr.gov.ru | 217.77.104.150 | Property/ЕГРН — facility ownership, the long-flagged Rosreestr gap (see "Known gaps" section below) |
-| 54 | lk.rosreestr.ru | 217.77.104.136 | Rosreestr personal-cabinet subdomain — likely login-gated even once reachable, but untested |
-| 55 | nspd.gov.ru (Национальная система пространственных данных — the modern public cadastral map, Rosreestr's current public-facing replacement for the old egrp365-style lookup) | 95.167.134.88 | Same facility-ownership data as #53, more likely to be the actually-current public entry point |
+**Third pass, same day, via the chrome-devtools browser: 2 of the 4 DO load
+real content in a real browser, even though curl still can't reach them.**
+This is a genuinely new distinction for this file — not "reachable vs not"
+but "reachable to a full browser client vs not to a bare TCP/TLS client,"
+plausibly a TLS-fingerprint or SNI/ALPN check rather than an IP-level block
+(consistent with the fedresurs.ru pattern above, where the browser and curl
+diverge for a different reason). Re-verify via curl from a real browser's
+network path before assuming these need Tier B treatment specifically:
 
-**#56/57 corrected and merged — re-tested 2026-09-05, reachable.** These are
-**the same site**, not two: `solutions.fas.gov.ru` 302-redirects straight to
-`br.fas.gov.ru`. The original description of #56 ("реестр банковских
-гарантий") was also wrong — the page's own title is «База решений и правовых
-актов» (FAS decisions & legal-acts database, antitrust rulings), matching
-what #57 described. One entry, corrected:
+| # | Source | curl result | Browser result | What it gives |
+|---|---|---|---|---|
+| 52 | data.mos.ru (Moscow city open-data portal) | Still times out (`000`) | **Loads real content** — homepage shows "1246 наборов" (datasets), a documented public API (`data.mos.ru/developers/documentation`), and one dataset is literally "Адресный реестр объектов недвижимости города Москвы" plus a "ТОП-30 предприятий по объемам выставленных штрафных санкций" (top-30 firms by fines) dataset — both directly relevant here. **Promote toward Tier A/B** — worth a proper API-docs read before writing a puller, since the developer portal implies a real documented endpoint, not scraping. |
+| 53 | rosreestr.gov.ru | Still times out (`000`) | Browser tab also shows `chrome-error` — genuinely dead in the browser too | Property/ЕГРН — facility ownership, the long-flagged Rosreestr gap (see "Known gaps" section below) |
+| 54 | lk.rosreestr.ru | Still times out (`000`) | Browser tab also shows `chrome-error` — genuinely dead in the browser too | Rosreestr personal-cabinet subdomain |
+| 55 | nspd.gov.ru (Национальная система пространственных данных — Rosreestr's modern public cadastral-map portal) | Still times out (`000`) | **Loads real content** — full working portal with a "Публичная кадастровая карта" tool and a cadastral-value search (`/cadastral-price/search`). **Promote toward Tier B** — this is the actually-current public entry point for facility-ownership lookups that #53/#54 can't reach at all, curl or browser. |
+
+**#56/57 corrected, merged, and upgraded to Tier A — re-tested 2026-09-05.**
+These are **the same site**, not two: `solutions.fas.gov.ru` 302-redirects
+straight to `br.fas.gov.ru`. The original description of #56 ("реестр
+банковских гарантий") was also wrong — the page's own title is «База
+решений и правовых актов» (FAS decisions & legal-acts database, antitrust
+rulings), matching what #57 described. **Confirmed scriptable via plain
+curl** (devtools capture done, then independently reproduced with bare
+curl — see `scripts/screen_fas_br.py`, added same day): `GET /?text=<name>&
+type=0` is a server-rendered full-text case search, no JS/cookies/session
+needed; the result page's "Всего: N" line gives a real hit count (tested:
+"Ростелеком" → 136, a small no-history entity → 0, identical in curl and
+browser). The org-ID-based filter (`/ajax/organizations/?term=...`) that
+looked more precise turned out to ignore its own `term` param entirely
+(returns an identical unfiltered page regardless of query) — abandoned in
+favor of the working free-text path. One entry, corrected and promoted:
 
 | # | Source | What it gives | Notes |
 |---|---|---|---|
-| 56 | **br.fas.gov.ru** (= solutions.fas.gov.ru, redirects here) — ФАС «База решений и правовых актов» | Antitrust-violation decisions/rulings — a citable negative (or a real hit) distinct from the debarment registry (RNP) already integrated | **Tier B, not A** — HTTP 200 on the root page (confirmed via curl), but it's a Django form (`GET /` with `text`/`type` params for full-text search) plus a separate `/ajax/organizations/` typeahead endpoint for filtering cases by named organization. The search-page HTML embeds per-load `django-select2` field IDs that look session-bound, so a scripted GET isn't confirmed reliable yet — needs a devtools capture of one real organization-filtered search before writing a `screen_*.py` for it. Worth doing: this is a clean citable-negative source in the same category as RNP. |
-| 58 | www.gost.ru / gost.ru (Росстандарт — GOST certification body) | Product standard certification — same evidentiary category as Rosakkreditatsiya's declarations-of-conformity registry (#40), different body | **Reachable, redirects to the real site**: `www.gost.ru` → `www.rst.gov.ru/portal/gost` (HTTP 200, confirmed 2026-09-05). Not yet checked for a per-company/per-product search function — homepage reachability only so far. |
+| 56 | **br.fas.gov.ru** (= solutions.fas.gov.ru, redirects here) — ФАС «База решений и правовых актов» | Antitrust-violation decisions/rulings — a citable negative (or a real hit) distinct from the debarment registry (RNP) already integrated | **Tier A, scripted** — `scripts/screen_fas_br.py`. Free-text name search only (a bare ИНН as `text` returns 0 even for entities with real cases — this indexes case prose, not a structured ИНН field), so every hit needs a human read of the actual case before use — a generic name ("Орион," tested, 78 hits) will pull in unrelated same-named companies. |
+| 58 | www.gost.ru / gost.ru (Росстандарт — GOST certification body) | Product standard certification — same evidentiary category as Rosakkreditatsiya's declarations-of-conformity registry (#40), different body | **Reachable, redirects to the real site**: `www.gost.ru` → `www.rst.gov.ru/portal/gost` (HTTP 200, confirmed 2026-09-05 via both curl and browser). Not yet checked for a per-company/per-product search function — homepage reachability only so far. |
 
 ---
 

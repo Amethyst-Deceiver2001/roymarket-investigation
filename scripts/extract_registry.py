@@ -1124,6 +1124,7 @@ ENTITY_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("wb_matches", "wb_screened_at"),
     ("rnp_matches", "rnp_screened_at"),
     ("rmsp_hit", "rmsp_checked_at"),
+    ("fas_br_hit_count", "fas_br_checked_at"),
 ]
 PEOPLE_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("other_entities", "other_entities_checked_at"),
