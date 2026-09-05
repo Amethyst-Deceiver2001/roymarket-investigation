@@ -34,6 +34,11 @@
 | 2022 | — | ₽104,426,000 | [s0292] |
 | 2023 | — | ₽864,725,000 | [s0293] |
 | 2024 | — | ₽926,485,000 | [s0294] |
+| 2025 | — | — | [s0295] |
+
+## Litigation
+
+- Trivial routine administrative matter, not a commercial dispute: ОСФР (Пенсионный фонд) sought a court order for a ₽4,000 fine over a late СЗВ-М filing for Nov 2022. The fund objected and the court cancelled its own судебный приказ on 27.07.2023 — a standard outcome for any first objection under АПК РФ, not a substantive finding for either side. Recorded for completeness so this pair of files isn't re-read as an open question later. [s5265]
 
 - 5 OCCRP Aleph match(es) (screened 2026-08-26).
 
@@ -49,6 +54,8 @@ _No named principals linked to this entity yet._
 | s0292 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2022_20260816.zip) | 2026-08-16 | 2022-12-31 |
 | s0293 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
 | s0294 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| s0295 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| s5265 | arbitration court filing | arbitration court filing (A40-106643-2023_20230728_Opredelenie.pdf) | 2023-07-28 | 2023-07-27 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
