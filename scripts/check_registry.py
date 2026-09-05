@@ -157,6 +157,25 @@ def main() -> int:
         except json.JSONDecodeError as ex:
             errors.append(f"{fname}: not valid JSON ({ex})")
             continue
+
+        # A duplicate key within one JSON object is legal JSON but json.load
+        # silently keeps only the last occurrence -- an earlier edit (e.g. a
+        # first "open_questions" array nested inside "set", a second one
+        # added later as a sibling of "set") vanishes with no error anywhere.
+        # Caught by hand on 2026-09-05 after an edit to ooo-boevye-tekhnologii
+        # silently dropped a freshly-added open_questions entry. Re-parse with
+        # object_pairs_hook to surface any object with a repeated key.
+        def _check_dupes(pairs, _fname=fname):
+            keys = [k for k, _ in pairs]
+            for k in set(keys):
+                if keys.count(k) > 1:
+                    errors.append(
+                        f"{_fname}: duplicate key \"{k}\" in one JSON object "
+                        f"— only the last occurrence survives json.load; the "
+                        f"other(s) are silently discarded")
+            return dict(pairs)
+        json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=_check_dupes)
+
         for key, spec in (data.get(block) or {}).items():
             if not isinstance(spec, dict):
                 errors.append(f"{fname}: {block}['{key}'] must be an object")
