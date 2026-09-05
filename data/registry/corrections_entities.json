@@ -5762,6 +5762,10 @@
      {
       "source_id": null,
       "text": "Same channel scan (@asidyakin, msg 680, 19.01.2026) also surfaced thermal sight brands «Кречет», «Аркон» and «Рубеж» delivered to БАРС-Курск brigade alongside UAZ vehicles — these are accessories/optics, not drones, and no manufacturer/ИНН given; unclear if these come from a ЦБСТ resident or a separate third-party defense-optics supplier. Not yet resolvable."
+     },
+     {
+      "source_id": "s0178",
+      "text": "The «Переговорка» transcript's ₽14bn Единая Россия 'front aid' figure (since 2024) is party-wide across all humanitarian/military aid categories, not a ЦБСТ-specific or drone-only figure -- do not cite it as ЦБСТ's own budget or as UAV-specific spending without re-reading the exact wording. Worth drafting into docs/index.html as a properly scoped quote once the narrative section is next revised."
      }
     ],
     "related_entities": [
@@ -5836,7 +5840,8 @@
     "Found via GUR's components catalogue while pulling the confirmed npts-ushkuynik (Knyaz Vandal Novgorodsky) hit — both \"Delta (CBTS.611000)\" entries appeared adjacent in the same weapon-item filter list. Pulled in full to check the CBTS naming coincidence properly rather than leave it as a guess; found nothing attributing it to this or any other registry entity, so recorded as an explicit open question, not a fact.",
     "CORRECTION 2026-08-24: user flagged that CBTS is not a valid transliteration of ЦБСТ (Ц transliterates as Ts, not C). Withdrew the implied ЦБСТ connection from the open_question wording above — the CBTS.611000 component set remains on file as a pulled-and-read but unattributed record, not a lead pointing at ЦБСТ.",
     "web.sites was entirely empty for the investigation's own namesake org. Web search 2026-08-25.",
-    "2026-08-25: @asidyakin channel scan (1199 posts) — surfaced 3 unnamed-manufacturer product leads (Локтар/Шорох/Грань) alongside corroboration of already-known residents."
+    "2026-08-25: @asidyakin channel scan (1199 posts) — surfaced 3 unnamed-manufacturer product leads (Локтар/Шорох/Грань) alongside corroboration of already-known residents.",
+    "2026-09-05: read a 1666-line broadcast transcript (s0177/s0178, «Переговорка» podcast, Единая Россия's own information project, 21.04.2025) -- a direct on-record interview with ЦБСТ chairman Андрей Безруков and party ЦИК head Александр Сидякин covering ЦБСТ's founding narrative (traced to 2014 Donetsk airport volunteer drone reconnaissance, the «Барс каскад» unit, formalised as ЦБСТ jointly with фонд «Наша Правда»), a party-wide (not ЦБСТ-specific) ₽14bn total for Единая Россия's 'front aid' procurement since 2024 (hundreds of recon drones, ~1,000 vehicles, medical supplies, night-vision, tourniquets -- a broader category than UAVs alone, stated twice in the transcript, at ~32:00 and ~45:51), Безруков's on-record criticism of 44/275-ФЗ state-defence-procurement law as too rigid and needing reform for faster acquisition, a mention of an accelerator programme working with Сколково, and passing references to a Hasselblad-branded optics maker (transcribed 'Helблад', likely a mishearing) and АО «Стратим»'s drones (already a known registry entity). High-value primary source for the entity's own founding story and policy-advocacy positioning -- not yet drafted into docs/index.html's narrative prose, which is a separate STYLE_GUIDE-governed task from this registry entry."
    ]
   },
   "ano-tsentr-razvitiya-transportnykh-tekhnologiy": {
@@ -13256,12 +13261,32 @@
      "74.90 Деятельность профессиональная научная и техническая прочая"
     ],
     "director": "Потехин Владимир Александрович",
+    "name_history": [
+     {
+      "value": "ООО «Рационы питания»",
+      "as_of": "2023-12-18",
+      "source_id": "s0542",
+      "note": "Original name at founding (решение единственного учредителя №1 от 18.12.2023, устав, e-signed by Потехина Светлана Алексеевна) -- matches the entity's own secondary ОКВЭД 10.89.7 «Производство рационов питания и продуктов их замены»."
+     },
+     {
+      "value": "ООО «Боевые технологии»",
+      "as_of": "2024-09-10",
+      "source_id": "s0542",
+      "note": "Renamed by решение единственного участника от 10.09.2024 (изменения в устав, пункт 1.1) -- amendment to a устав that was, at that point, still nominally «Рационы питания»'s. A further amendment (решение №3 от 15.09.2025, same zip) restates the ₽30,000 charter capital, matching charter_capital_history below."
+     }
+    ],
     "director_history": [
+     {
+      "value": "Потехина Светлана Алексеевна",
+      "as_of": "2023-12-18",
+      "source_id": "s0542",
+      "note": "E-signature certificate owner on the founding решение единственного учредителя №1 (18.12.2023) -- signed as the entity's sole founder at incorporation, under the original name «Рационы питания». Same surname as the currently-recorded director/owner, Потехин Владимир Александрович, suggesting a family transfer rather than an arm's-length sale, but no document establishing the relationship or the transfer date has been found -- see open_questions."
+     },
      {
       "value": "Потехин Владимир Александрович",
       "as_of": "2023-12-21",
       "source_id": "s5659",
-      "note": "ГРН 2265200819464 от 25.08.2026. Также единственный учредитель (100% доли, номинал 30 000 руб.), личный ИНН 521405416936."
+      "note": "ГРН 2265200819464 от 25.08.2026. Также единственный учредитель (100% доли, номинал 30 000 руб.), личный ИНН 521405416936. NOTE: despite the as_of date matching the entity's registration, this ГРН was itself only entered into EGRUL on 25.08.2026 -- it does not establish Потехин В.А. held this role from founding; see the founders_history entry below, whose own ГРН dates only to 24.12.2025, two years after incorporation."
      }
     ],
     "founders": [
@@ -13269,10 +13294,16 @@
     ],
     "founders_history": [
      {
+      "value": "Потехина Светлана Алексеевна (100%, sole founder at incorporation)",
+      "as_of": "2023-12-18",
+      "source_id": "s0542",
+      "note": "Founding решение единственного учредителя №1, 18.12.2023, e-signed by Потехина С.А. herself as the sole founder — the entity's actual founding document, distinct from the later EGRUL-recorded ownership below."
+     },
+     {
       "value": "Потехин Владимир Александрович (100%, номинал 30 000 руб.)",
       "as_of": "2025-12-24",
       "source_id": "s5659",
-      "note": "ГРН 2255202202176 от 24.12.2025."
+      "note": "ГРН 2255202202176 от 24.12.2025 -- the earliest EGRUL record of Потехин В.А.'s ownership, two years after Потехина С.А. founded the company. The transfer itself (date, instrument, consideration) is not documented in any source on file."
      }
     ],
     "charter_capital": 30000,
@@ -13324,6 +13355,10 @@
      {
       "text": "Does ООО «ДСГ» (or НПО «Рустехдрон») have any actual purchasing relationship with this entity, or did the July 2023 GAONENG batteries come from one of the other five identified Russian retailers of this brand, or a non-retail import route entirely? No document currently ties the two together — this entity was found via a general market search for Russian GAONENG resellers, not via any reference in the ДСГ court filings themselves.",
       "source_id": null
+     },
+     {
+      "source_id": "s0542",
+      "text": "The entity was founded 18.12.2023 as ООО «Рационы питания» by sole founder Потехина Светлана Алексеевна, renamed to «Боевые технологии» by her decision on 10.09.2024 -- but EGRUL's earliest record of the current owner, Потехин Владимир Александрович, dates only to 24.12.2025. Same surname suggests a family (likely spousal) transfer, but no document establishes the relationship, the transfer date, or whether Потехина С.А. remained involved after 2025. Worth a personal-ИНН lookup on Потехина С.А. if this entity's ownership history becomes load-bearing for a submission."
      }
     ]
    }
@@ -14632,6 +14667,15 @@
       "source_id": "s5324",
       "status": "Опубликовано 28.04.2026",
       "subject": "Уведомление кредитора о намерении обратиться в суд с заявлением о признании ООО «Герон» банкротом (второе уведомление)"
+     },
+     {
+      "as_of": "2024-10-29",
+      "case_number": null,
+      "court": null,
+      "parties": "Лизингодатель (личность скрыта по ПП РФ №5 от 12.01.2018) — ООО «Герон» (as \"ООО «ГЕРОН-АВИА»\", same ИНН/ОГРН, лизингополучатель)",
+      "source_id": "s5314",
+      "status": "Опубликовано 29.10.2024 на Федресурсе.",
+      "subject": "Договор финансовой аренды (лизинга) №AA047924462 от 17.10.2024 на легковой автотранспорт (не авиатехника, несмотря на \"ГЕРОН-АВИА\" в наименовании стороны), период 24.10.2024–30.09.2029. Сообщение помечено isPublisherInSanctionList/isParticipantInSanctionList=true, что и объясняет сокрытие личности лизингодателя -- не самостоятельное подтверждение санкционного статуса самого ООО «Герон», так как флаг может относиться к любой из сторон."
      }
     ],
     "name_history": [
