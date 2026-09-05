@@ -7246,14 +7246,14 @@
         "region": "МОСКВА Г."
       }
     ],
-    "other_entities_checked_at": "2026-08-22",
+    "other_entities_checked_at": "2026-09-05",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-08-22",
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": "2026-08-22",
+    "subsidiary_liability_checked_at": "2026-09-05",
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "Screening, 2026-09-05: ЕГРИП: no sole-proprietor registration found (checked 05.09.2026). ФНС «Прозрачный бизнес» director/founder cross-reference (05.09.2026) returns ООО «Архангел», ИНН 9714079108, and nothing else — she is not a serial director or nominee, which is the relevant negative for an EU-designated company whose ownership she halved on 23.06.2026.",
     "sources": [],
     "mentions": 1,
     "_verified": false,
@@ -7264,9 +7264,9 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: resolved this person's `_candidate` role at ООО «Архангел» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-arkhangel, source s0474) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "Establishes that the sole other-business check on the director of an EU-designated entity is clean — a negative worth recording so it is not re-run."
     ],
-    "_verified_against": null,
+    "_verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference via scripts/screen_upr_uchr.py, run 2026-09-05; scripts/screen_egrip_ip.py, run 2026-09-05",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [],
@@ -7290,25 +7290,65 @@
   {
     "slug": "galiev-ruslan-railovich",
     "fio_ru": "Галиев Руслан Раилович",
-    "name_latin": null,
+    "name_latin": "Galiev Ruslan Railovich",
     "dob": null,
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
-    "roles": [],
+    "inn_personal": "020403177846",
+    "roles": [
+      {
+        "entity_name": "ООО «Архангел»",
+        "entity_slug": "ooo-arkhangel",
+        "title": "co-founder (50%)",
+        "from": "2026-06-23",
+        "to": null,
+        "source_id": "s5507"
+      }
+    ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "5030107590",
+        "ogrn": "1245000093832",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДЖЕНЕРАЛ РОДЖЕР\"",
+        "role": "director",
+        "okved": "81.30",
+        "okved_label": "Деятельность по благоустройству ландшафта",
+        "registered": "19.08.2024",
+        "region": "МОСКОВСКАЯ ОБЛ."
+      },
+      {
+        "inn": "9714079108",
+        "ogrn": "1257700345407",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"",
+        "role": "founder",
+        "okved": "85.30",
+        "okved_label": "Обучение профессиональное",
+        "registered": "05.08.2025",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "5030107590",
+        "ogrn": "1245000093832",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДЖЕНЕРАЛ РОДЖЕР\"",
+        "role": "founder",
+        "okved": "81.30",
+        "okved_label": "Деятельность по благоустройству ландшафта",
+        "registered": "19.08.2024",
+        "region": "МОСКОВСКАЯ ОБЛ."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-05",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-05",
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "Equal 50% co-owner (₽5,000 of ₽10,000 charter capital) of ООО «Архангел», ИНН 9714079108 — the Moscow entity resident at ЦБСТ and already designated by the EU. Admitted as co-owner on 23.06.2026 (ГРН 2267705286407), reducing Шатракова А.А. from 100% to 50%. His existence was already recorded in this investigation's brief; what the full signed ЕГРЮЛ выписка of 05.09.2026 (s5507) newly establishes is his personal ИНН, 020403177846 — a field deliberately left null since 2026-08-22, when a prose proximity-matching bug had wrongly copied Шатракова's ИНН onto this record. ИНН region prefix 02 = Республика Башкортостан. No DOB, birthplace or address established — none is stated in the выписка and none has been sourced elsewhere. Identifying him is directly load-bearing for any sanctions submission naming ИНН 9714079108, since he holds half of a designated company.\n\nScreening, 2026-09-05: ЕГРИП: ACTIVE sole-proprietor registration ОГРНИП 322508100225320 from 26.04.2022, main ОКВЭД 81.30 «Деятельность по благоустройству ландшафта» (landscaping), 21 codes, none aerospace/electronics. Separately, an ФНС «Прозрачный бизнес» director/founder cross-reference on his personal ИНН (05.09.2026) returns one company besides ООО «Архангел»: ООО «ДЖЕНЕРАЛ РОДЖЕР», ИНН 5030107590, ОГРН 1245000093832, Московская область, registered 19.08.2024, ОКВЭД «Деятельность по благоустройству ландшафта» — he is both its генеральный директор and a founder. Both are landscaping businesses matching his ИП profile; neither shows any drone, electronics or training activity, so on present evidence his commercial life outside ООО «Архангел» is unrelated to it.",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -7316,19 +7356,9 @@
       ]
     },
     "_corrected": [
-      "extract_registry.py's prose-context ИНН matcher attaches the",
-      "nearest ИНН in a paragraph to every name mentioned nearby, not",
-      "just the name it actually belongs to. The Архангел ownership",
-      "passage names Шатракова А.А.'s ИНН (773126193790) once, then",
-      "mentions Галиев Р.Р. as 'a second 50% co-owner' a few dozen",
-      "characters later with no ИНН of his own stated — the matcher",
-      "wrongly duplicated Шатракова's ИНН onto this record too.",
-      "Found 2026-08-22 while pulling personal ИНН for a reverse",
-      "director/founder lookup (scripts/screen_upr_uchr.py) — feeding a",
-      "wrong ИНН into that search would have misattributed someone",
-      "else's directorships to Галиев."
+      "Recorded so the negative result is on the record: screening his other business activity was a real question once he was identified as a 50% owner of an EU-designated company, and the answer is that it is landscaping, not defence."
     ],
-    "_verified_against": "docs/index.html Архангел ownership passage, direct re-read of the surrounding text",
+    "_verified_against": "data/sources/EGRIP_322508100225320_20260905_galiev.pdf (s5514); ФНС «Прозрачный бизнес» director/founder cross-reference via scripts/screen_upr_uchr.py, run 2026-09-05; egrul.nalog.ru open lookup on ИНН 5030107590",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-645391939118",
@@ -38998,15 +39028,66 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "9500026652",
+        "ogrn": "1249500004181",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"",
+        "role": "director",
+        "okved": "30.30.6",
+        "okved_label": "Производство беспилотных авиационных систем",
+        "registered": "22.08.2024",
+        "region": "ЗАПОРОЖСКАЯ ОБЛ."
+      },
+      {
+        "inn": "9108131213",
+        "ogrn": "1259100005152",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"",
+        "role": "director",
+        "okved": "01.11",
+        "okved_label": "Выращивание зерновых (кроме риса), зернобобовых культур и семян масличных культур",
+        "registered": "14.04.2025",
+        "region": "КРЫМ РЕСП."
+      },
+      {
+        "inn": "5036163216",
+        "ogrn": "1165074059534",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТРТРАНС\"",
+        "role": "director",
+        "okved": "49.41",
+        "okved_label": "Деятельность автомобильного грузового транспорта",
+        "registered": "14.11.2016",
+        "region": "МОСКОВСКАЯ ОБЛАСТЬ"
+      },
+      {
+        "inn": "9108131213",
+        "ogrn": "1259100005152",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"",
+        "role": "founder",
+        "okved": "01.11",
+        "okved_label": "Выращивание зерновых (кроме риса), зернобобовых культур и семян масличных культур",
+        "registered": "14.04.2025",
+        "region": "КРЫМ РЕСП."
+      },
+      {
+        "inn": "5036163216",
+        "ogrn": "1165074059534",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТРТРАНС\"",
+        "role": "founder",
+        "okved": "49.41",
+        "okved_label": "Деятельность автомобильного грузового транспорта",
+        "registered": "14.11.2016",
+        "region": "МОСКОВСКАЯ ОБЛАСТЬ"
+      }
+    ],
+    "other_entities_checked_at": "2026-09-05",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-05",
     "social": [],
     "photo": null,
-    "notes": "Генеральный директор ООО «Архангел» (ИНН 9500026652), a UAV-mechanic training operator registered and licensed in Russian-occupied Zaporizhzhia/Kherson oblast territory of Ukraine (Rosobrnadzor licence Л035-00115-95/01431042, 09.10.2024).",
+    "notes": "Генеральный директор ООО «Архангел» (ИНН 9500026652), a UAV-mechanic training operator registered and licensed in Russian-occupied Zaporizhzhia/Kherson oblast territory of Ukraine (Rosobrnadzor licence Л035-00115-95/01431042, 09.10.2024).\n\nScreening, 2026-09-05: ЕГРИП: sole-proprietor registration ОГРНИП 319344300112860 (13.11.2019), TERMINATED 21.12.2023, main ОКВЭД 49.41 road freight — defunct and unrelated. ФНС «Прозрачный бизнес» director/founder cross-reference (05.09.2026) returns TWO companies besides the Melitopol ООО «Архангел» (ИНН 9500026652) he directs: ООО «ЦЕНТРТРАНС», ИНН 5036163216, Московская область, registered 14.11.2016, where he is генеральный директор; and — the significant one — a THIRD ООО «АРХАНГЕЛ», ИНН 9108131213, ОГРН 1259100005152, Судак, Республика Крым, registered 14.04.2025, where he is director and 50% owner. That entity is now a full registry record (ooo-arkhangel-crimea) and was found ONLY through this cross-reference: five earlier name-driven passes over the «Архангел» family missed it, because it was reachable through his personal ИНН rather than through the brand. His Crimean registration is dated three days after his appointment as генеральный директор of the Melitopol entity (11.04.2025).",
     "sources": [
       "s0229"
     ],
@@ -39014,8 +39095,9 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-03: promoted alongside the entity record as part of the Архангел-family disambiguation push (user request to widen the Гагаринг network search)."
+      "The single most productive screen of the 2026-09-05 pass: a person-level ФНС cross-reference surfaced an entire additional «Архангел» legal entity in Crimea that no brand-name search had found."
     ],
+    "_verified_against": "data/sources/EGRIP_319344300112860_20260905_timofeev.pdf (s5510); ФНС «Прозрачный бизнес» director/founder cross-reference via scripts/screen_upr_uchr.py, run 2026-09-05; data/sources/EGRUL_9108131213_20260905_ooo-arkhangel-crimea.pdf (s5508)",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-343704095632",
@@ -39069,10 +39151,10 @@
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-05",
     "social": [],
     "photo": null,
-    "notes": "Sole founder (100% share, nominal ₽10,000) of ООО «Архангел» (ИНН 9500026652), a UAV-mechanic training operator registered and licensed in Russian-occupied Zaporizhzhia/Kherson oblast territory of Ukraine. DOB (26.02.1973) now sourced via OpenSanctions ext_ru_egrul dataset (s5413, same batch that confirmed his UA-NSDC sanctions listing).",
+    "notes": "Sole founder (100% share, nominal ₽10,000) of ООО «Архангел» (ИНН 9500026652), a UAV-mechanic training operator registered and licensed in Russian-occupied Zaporizhzhia/Kherson oblast territory of Ukraine. DOB (26.02.1973) now sourced via OpenSanctions ext_ru_egrul dataset (s5413, same batch that confirmed his UA-NSDC sanctions listing).\n\nScreening, 2026-09-05: ЕГРИП: no sole-proprietor registration found (checked 05.09.2026). His ФНС «Прозрачный бизнес» director/founder cross-reference could not be completed — HTTP 400 on every attempt across three runs on 05.09.2026 — so his directorships beyond the two Melitopol «Архангел» entities remain UNCHECKED, not cleared. What IS now established from primary documents (s5504, s5505): he is 100% founder of BOTH ООО «Архангел» ИНН 9500026652 and ООО «Архангел» ИНН 9001027869, and генеральный директор of the latter; the two share one registered address in Мелитополь (ул. Гоголя, д. 91/1) and were registered two months apart in 2024.",
     "sources": [
       "s0229",
       "s5413"
@@ -39081,9 +39163,9 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-04: surfaced during the @proekt_arhangel channel scan (s5456), following up the 'Архангел Щит' EGRUL search."
+      "Confirms via signed primary documents that he controls two separate same-named entities at one address in occupied Melitopol, which the earlier other_entities lead only asserted."
     ],
-    "_verified_against": null,
+    "_verified_against": "scripts/screen_egrip_ip.py, run 2026-09-05; data/sources/EGRUL_9001027869_20260905_ooo-arkhangel-melitopol-2.pdf (s5504) and EGRUL_9500026652_20260905_ooo-arkhangel-zaporizhzhie.pdf (s5505)",
     "opensanctions_matches": [
       {
         "match_id": "NK-oBYVfFUeLqr6jZQKCbpReZ",
@@ -39158,15 +39240,36 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "2315233718",
+        "ogrn": "1242300005640",
+        "name": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ВОЕННО-ТЕХНИЧЕСКОЙ ПОДДЕРЖКИ ЗАЩИТНИКОВ ОТЕЧЕСТВА И ПАТРИОТИЧЕСКОГО ВОСПИТАНИЯ НАСЕЛЕНИЯ \"АРХАНГЕЛ\"",
+        "role": "director",
+        "okved": "88.99",
+        "okved_label": "Предоставление прочих социальных услуг без обеспечения проживания, не включенных в другие группировки",
+        "registered": "01.02.2024",
+        "region": "КРАСНОДАРСКИЙ КРАЙ"
+      },
+      {
+        "inn": "2315998065",
+        "ogrn": "1172375084364",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УПРАВЛЯЮЩАЯ КОМПАНИЯ \"ВРЕМЯ\"",
+        "role": "founder",
+        "okved": "68.32",
+        "okved_label": "Управление недвижимым имуществом за вознаграждение или на договорной основе",
+        "registered": "10.10.2017",
+        "region": "КРАСНОДАРСКИЙ КРАЙ"
+      }
+    ],
+    "other_entities_checked_at": "2026-09-05",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-05",
     "social": [],
     "photo": null,
-    "notes": "Director and co-founder of АНО «Архангел» / brand «Архангел Легион» (ИНН 2315233718), the org co-running Гагаринг training center's 51st Army relationship. Surname \"Архангельский\" is itself derived from \"Архангел\" — likely the origin of the org's brand name.",
+    "notes": "Director and co-founder of АНО «Архангел» / brand «Архангел Легион» (ИНН 2315233718), the org co-running Гагаринг training center's 51st Army relationship. Surname \"Архангельский\" is itself derived from \"Архангел\" — likely the origin of the org's brand name.\n\nScreening, 2026-09-05: ЕГРИП: no sole-proprietor registration found (checked 05.09.2026). ФНС «Прозрачный бизнес» director/founder cross-reference (05.09.2026) returns one company besides АНО «Архангел»: ООО «УПРАВЛЯЮЩАЯ КОМПАНИЯ «ВРЕМЯ», ИНН 2315998065, ОГРН 1172375084364, Краснодарский край, registered 10.10.2017, ОКВЭД «Управление недвижимым имуществом за вознаграждение или на договорной основе» — he is a FOUNDER, not its director (that is Серая Олеся Викторовна). A property-management company predating АНО «Архангел» by six years; no defence, training or UAV activity.",
     "sources": [
       "s5394",
       "s5409"
@@ -39175,8 +39278,9 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-03: promoted per the Гагаринг wide-net push (Thread C)."
+      "First business-ties screen ever run on the АНО «Архангел» director. Result is one unrelated property-management holding — recorded so the check is not repeated."
     ],
+    "_verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference via scripts/screen_upr_uchr.py, run 2026-09-05; scripts/screen_egrip_ip.py, run 2026-09-05; egrul.nalog.ru open lookup on ИНН 2315998065",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-03"
   },
@@ -39199,15 +39303,56 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "2315225234",
+        "ogrn": "1222300022471",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВОРОСЭНЕРГОРЕСУРС\"",
+        "role": "director",
+        "okved": "42.21",
+        "okved_label": "Строительство инженерных коммуникаций для водоснабжения и водоотведения, газоснабжения",
+        "registered": "29.04.2022",
+        "region": "КРАСНОДАРСКИЙ КРАЙ"
+      },
+      {
+        "inn": "2315235056",
+        "ogrn": "1242300023811",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПИТЧ\"",
+        "role": "director",
+        "okved": "62.01",
+        "okved_label": "Разработка компьютерного программного обеспечения",
+        "registered": "26.04.2024",
+        "region": "КРАСНОДАРСКИЙ КРАЙ"
+      },
+      {
+        "inn": "2315225234",
+        "ogrn": "1222300022471",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВОРОСЭНЕРГОРЕСУРС\"",
+        "role": "founder",
+        "okved": "42.21",
+        "okved_label": "Строительство инженерных коммуникаций для водоснабжения и водоотведения, газоснабжения",
+        "registered": "29.04.2022",
+        "region": "КРАСНОДАРСКИЙ КРАЙ"
+      },
+      {
+        "inn": "2315235056",
+        "ogrn": "1242300023811",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПИТЧ\"",
+        "role": "founder",
+        "okved": "62.01",
+        "okved_label": "Разработка компьютерного программного обеспечения",
+        "registered": "26.04.2024",
+        "region": "КРАСНОДАРСКИЙ КРАЙ"
+      }
+    ],
+    "other_entities_checked_at": "2026-09-05",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-05",
     "social": [],
     "photo": null,
-    "notes": "Co-founder of АНО «Архангел» / brand «Архангел Легион» (ИНН 2315233718), alongside Архангельский Г.Е.",
+    "notes": "Co-founder of АНО «Архангел» / brand «Архангел Легион» (ИНН 2315233718), alongside Архангельский Г.Е.\n\nScreening, 2026-09-05: ЕГРИП: sole-proprietor registration ОГРНИП 306231210900130 (19.04.2006), TERMINATED 15.06.2012, main ОКВЭД 92.7 «Прочая деятельность по организации отдыха и развлечений» — long defunct and unrelated. ФНС «Прозрачный бизнес» director/founder cross-reference (05.09.2026) returns two companies besides АНО «Архангел», both in Новороссийск and both with him as генеральный директор AND founder: ООО «НОВОРОСЭНЕРГОРЕСУРС», ИНН 2315225234, ОГРН 1222300022471, registered 29.04.2022, ОКВЭД «Строительство инженерных коммуникаций для водоснабжения и водоотведения, газоснабжения»; and ООО «ПИТЧ», ИНН 2315235056, ОГРН 1242300023811, registered 26.04.2024, ОКВЭД «Разработка компьютерного программного обеспечения». ООО «ПИТЧ» was registered three months after АНО «Архангел» (01.02.2024) by the same person in the same city — a software company standing up alongside the military-technical-support NKO is a coincidence worth resolving, not asserting.",
     "sources": [
       "s5394"
     ],
@@ -39215,8 +39360,9 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-03: promoted per the Гагаринг wide-net push (Thread C)."
+      "Two previously-unknown Новороссийск companies under the same principal as АНО «Архангел», one of them a software developer registered three months after the NKO. Logged as leads, not links."
     ],
+    "_verified_against": "data/sources/EGRIP_306231210900130_20260905_tashmatov.pdf (s5509); ФНС «Прозрачный бизнес» director/founder cross-reference via scripts/screen_upr_uchr.py, run 2026-09-05; egrul.nalog.ru open lookups on ИНН 2315225234 and 2315235056",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-03"
   },
@@ -39255,23 +39401,12 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [
-      {
-        "inn": "9702081286",
-        "ogrn": "1267700086081",
-        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ ГРУПП\"",
-        "role": "founder",
-        "okved": "30.30",
-        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
-        "registered": "12.03.2026",
-        "region": "МОСКВА Г."
-      }
-    ],
-    "other_entities_checked_at": "2026-09-04",
+    "other_entities": [],
+    "other_entities_checked_at": "2026-09-05",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": "2026-09-04",
+    "subsidiary_liability_checked_at": "2026-09-05",
     "social": [
       {
         "platform": "telegram",
@@ -39290,7 +39425,7 @@
       }
     ],
     "photo": null,
-    "notes": "Head of «проект Архангел» — a self-described drone-manufacturing and operator-training group for Russian occupation forces, per a 02.08.2023 OSINT Bees doxxing dossier (s0234/s0235, InformNapalm-affiliated Ukrainian OSINT outlet) that names him directly as \"Координатор группы, власник каналу проекту «Архангел»\", Telegram @arhangel76 (id 249869145). DOB and address now sourced to that dossier (real primary-source ID, matching the DOB the earlier parked roymarket_archangel_adjacent_network memory had carried WITHOUT a source — now independently confirmed and properly sourced). Also owns ООО «МЛ КОНСТРАКШНС» (construction/renovation business, per the same dossier) — not yet cross-checked against this registry's entity list. The dossier separately names ~8 more channel admins/activists with full PII (DOB, address, phone, ИНН/СНИЛС) — deliberately NOT individually catalogued into people.json here, same discipline as smolin_source_catalogue.md's \"doxxing-scale apparatus\" rule: this is an adjacent, NOT-yet-ЦБСТ-confirmed network (see roymarket_archangel_adjacent_network memory), and full PII promotion is reserved for confirmed principals of the core investigation. Relationship to ano-arkhangel (Архангел Легион) and «Архангел Спецназа» (@arx_spn) is still NOT established — three informally-overlapping \"Архангел\"-branded projects with no confirmed institutional link found between them so far. Additional detail (2026-09-03, s5414/s5415): «проект Архангел» runs an actively operating multi-city network of UAV-training schools (Туапсе — a mountain/river-side camp in Krasnodar krai's foothills, recurring free 3-week residential courses; also references a school \"в Запорожье\"), not just the single Лыткарино-coordinated channel presence — structurally similar in scale to GUR's independent \"20 cities\" description of the unrelated ooo-arkhangel-zaporizhzhie (ИНН 9500026652). No confirmed tie between the two networks found; flagged as a lead only. Case-study scoping check (2026-09-04): ООО «МЛ КОНСТРАКШНС» (ИНН 5026016117, ОГРН 1115027014519, Московская область, registered 18.11.2011) independently confirmed via direct EGRUL search (s5450) — Филиппов is genuinely its Генеральный директор, matching the 2023 dossier exactly; now added as a formal role rather than a prose-only mention. Two negative findings from the same pass, both worth keeping on record rather than re-checking later: (1) a direct EGRUL follow-up on the \"Архангел Групп\" lead (ИНН 9702081286, s5451) shows director Крючков Дмитрий Александрович — no Филиппов tie found; (2) a personal-name EGRUL search for \"Филиппов Михаил Геннадьевич\" returned a namesake collision at nationwide scale (490,000+ loosely-token-matched rows, no DOB shown in the search index) — his personal ИНН cannot be reliably picked out of that list without an independent DOB-matched source, so inn_personal stays null rather than guessed; this blocks running any of the screening scripts (opensanctions/gur/disqualified/subsidiary/upr_uchr) against him for now. Direct primary-source confirmation (2026-09-04, s5454): a 26.06.2026 @projectArchangel post publishing the full open-source build kit for the «Архангел» interceptor/attack drone explicitly names \"@arhangel76\" (Филиппов's own handle) as \"руководитель проекта\" — the strongest direct-primary-source tie yet between Филиппов personally and this drone's design/production, not just channel administration. The post also self-describes a combat warhead variant (fragmentation cylinder, 500g, ball bearings or lock nuts) alongside a \"civilian ram\" framing for the same airframe — both offered from the same instructions. Full product/marketing-claim detail now held on the new `proekt-kb-arkhangel` entity stub rather than this person record, to keep products/claims data properly typed. Two further findings from the @proekt_arhangel channel scan (2026-09-04): (1) s5455 confirms «Архангел» is Филиппов's personal позывной (callsign), not only a project/brand name — \"Михаил Филиппов, позывной «Архангел»\" (11.07.2025) — and shows the project self-upgrading its framing to \"Всероссийский Проект «Архангел»\" (All-Russian Project, 02.05.2026), plus a presence on MAX (the Russian state-promoted messenger) alongside Telegram; (2) the same scan surfaced ООО «Архангел Щит» (ИНН 5027339008, director Хабибулин В.И. — NOT Филиппов) as the press-named manufacturer of the «Архангел» interceptor and the entity whose staff/instructors run the B2B facility-defense business described in s5456 — added as its own entity record (`ooo-arkhangel-shchit`) rather than assumed to be Филиппов's, since no document ties him to it directly. Two further independent press citations found 2026-09-04: Mashnews (09.10.2025, s5458) quotes him directly at Expo.UAV on the «Архангел» interceptor's market popularity; vz.ru (15.04.2026, s5459) identifies him as \"founder and head of Проект «Архангел»\" presenting a new joint system, «Слоненок», developed with unnamed St. Petersburg collaborators. Neither source's exact wording has been re-pulled in raw form — both were captured via a summarizing fetch, so treat as paraphrase, not citable verbatim quotation, until a raw-text re-pull is done. Independently corroborated 2026-09-04 via a live tg_scan_users.py participant scan of the private \"Академия Противодействия БПЛА\" chat (s5461): Telegram user id 249869145 for @arhangel76 — the SAME id the 2023 OSINT Bees/InformNapalm dossier (s0234/s0235) already attributed to him — is confirmed live via Telegram's own API as a member of this chat, with a self-authored bio (\"Обучение. Изготовление. БПЛА.\") linking back to the chat's own invite, consistent with his documented \"руководитель проекта\" role. This is an independent corroboration of the identity link via a second, unrelated data source, not a repost of the original dossier. HIMERA SEARCH LEAK-AGGREGATOR BATCH (2026-09-04, s5464): SOURCE-CLASS CAVEAT: this batch of fields comes from a Himera Search (himera-search.net, tg bot @Himera_new2024_bot) leaked-database aggregator report (s5464) — a commercial Russian-market breach/leak aggregation service, not a primary government record. It compiles many independently-breached datasets (ФССП, ФНС/ЕГРЮЛ, ГИБДД, ЕМИАС, credit-bureau blacklists, mobile-carrier SIM registration, airline PNR, reg.ru account data, MO спецучёт) under one name+DOB match. Treat every individual field as leak-sourced, not primary-source verified, UNLESS independently cross-checked elsewhere in this registry (the ИНН/ОГРН/address for ООО «МЛ Констракшнс» already were, via direct EGRUL search, s5450 — this report's own ЕГРЮЛ-derived rows for that company match exactly). Internal consistency across many independently-dated snapshots (2007-2025) is itself corroborating signal, but is not the same as primary-source verification. Personal ИНН now resolved: 502603133030 (matches the ЕГРЮЛ founder/director records this report itself carries for ООО «МЛ Констракшнс», ОГРН 1115027014519 — internally consistent, unblocking the personal-ИНН-keyed screening scripts that were previously blocked by a 490,000-row namesake collision on a name-only EGRUL search). A second ИНН value, 502603774989, also recurs across several ФССП debtor rows tied to the same DOB/address/passport cluster — not resolved which is authoritative, or whether one is a data-entry artifact; kept on record as a candidate, not promoted to inn_personal. Two other addresses recur in this report, both flagged for confirmation rather than treated as fact: 'учреждение ЮЛ-34(-4)', п. Древзавод, Чебоксары, Чувашская Республика — an institutional/penal-facility address format tied directly to his СНИЛС (11499622784) across multiple 2015-2016 snapshots, corroborated by his 2007 Cheboksary-issued passport (see the criminal-record note below); and Ольминского проезд, д. 3А, Москва, per a single 2010-dated \"Жители Москвы\" snapshot, not cross-referenced elsewhere. His primary Лыткарино address is unchanged and already well-established. Vehicle: grey 2010 Mazda CX-7, plate У295ВН197, VIN JMZER893800214724, insured via SAO РЕСО-Гарантия in Lytkarino. Two personal emails: archangelrf23@gmail.com (reg.ru account, registered 16.12.2021, last login IP 213.24.135.140 on 25.01.2024) and mixail.filippov@list.ru (an nlstar.com — outdoor/tactical-gear retailer — dealer account, registered 2018-03-16). ООО «МЛ Констракшнс» (ogrn 1115027014519) is confirmed LIQUIDATED 05.06.2019 per this report's own ЕГРЮЛ-derived rows — not previously recorded as such in this registry; see the corresponding correction on ooo-ml-konstrakshns. MOST SIGNIFICANT AND MOST CAUTIOUSLY FLAGGED FINDING: a criminal-record flag (\"СУДИМ\"/\"СУДИМЫЕ\") recurs across at least six independently-dated database snapshots in this report (2009, 2010, 2011, 2013, 2014, 2015), every one of them citing the SAME two conviction years — \"судимость 2000\" and \"судимость 2006\" — and the SAME region, Чувашская Республика (Чебоксары), with a recorded \"дата занесения информации\" of 21.11.2007. This is NOT independently verified against a primary court record (no case number, court name, or statute cited anywhere in the report — just a repeated categorical flag), so it is recorded here as a lead requiring independent verification, not an established fact. The internal consistency (same two years, same region, across six separately-dated pulls) argues against a one-off database mixing error, and is corroborated by the Chuvashia-institutional address tied to the same СНИЛС and the 2007 Cheboksary-issued passport — but none of that substitutes for an actual court record. A separate 2012-dated \"МО СПЕЦУЧЕТ\" (Ministry of Defense special-registry) entry with an unexplained \"окраска: ВОР\" flag is noted but not interpreted, semantics unclear. RESOLVED 2026-09-04 (s5465, live pb.nalog.ru founder-registry query keyed on his now-known personal ИНН 502603133030): he IS a founder of ООО «Архангел Групп» (ИНН 9702081286, aircraft/spacecraft-manufacturing OKVED 30.30, registered 12.03.2026, Moscow), director Крючков Дмитрий Александрович. This reverses the earlier 'no tie found' framing from the same-day s5451 EGRUL check — that check only queried the open search-index's director field, which structurally cannot see founders; the founder-level tie was invisible to it, not actually absent. New entity record: ooo-arkhangel-grupp. FULL SCREENING BATTERY (2026-09-04, following personal-ИНН resolution): OpenSanctions (0 matches), OCCRP Aleph (1 benign match — a public-registry mirror confirming his own ИНН/name, no adverse content), GUR war-sanctions.gur.gov.ua persons section (11 loose name-token hits, none actually him — checked each individually by full name/TIN), screen_disqualified (ФНС API error, inconclusive), screen_subsidiary (0 hits), screen_egrip_ip (no ИП registration). Combined with the earlier screen_upr_uchr hit (Архангел Групп founder tie), this is now a reasonably complete screening pass — no sanctions/disqualification/subsidiary-liability signal found on him personally anywhere checked. OWNERSHIP CORRECTED 2026-09-04 (s5474, full signed EGRUL extract): he holds an 80% MAJORITY stake in ООО «Архангел Групп», not merely 'a founder' as the earlier pb.nalog.ru partial check (s5465) had established - he is the controlling owner. Two co-owners: director Крючков Дмитрий Александрович (15%) and Казнова Татьяна Андреевна (5%, new person - see her own record). MYROTVORETS/ASSASSINATION CORROBORATION 2026-09-04 (s5475): the project's own channel states directly (proekt_arhangel#382, 2025-07-16) that Ukrainian security services list him on Мирoтворец (Myrotvorets, the Ukrainian public-doxxing database) and that he had, by that date, survived three prior attacks, citing a smotrim.ru video and a Crimean-prosecutor criminal case opened against him. proekt_arhangel#739 (2025-12-22) marks the one-year anniversary of what it describes as an assassination attempt via a bomb concealed in an award certificate (\"грамота\") delivered by courier on 22.12.2024. These are the project's OWN self-reported claims, not independently verified against a primary Ukrainian-source record — recorded as a lead corroborating his Myrotvorets/high-threat-profile status, not as an independently confirmed fact. PRESS CORROBORATION 2026-09-04 (s5476/s5477, aviation21.ru/CNews, 27.08.2025): independently named by mainstream Russian defense press as \"основатель и руководитель проекта «Архангел»\" in coverage of the confirmed Kalashnikov concern manufacturing partnership — this is the first identification of him by name in press outside the project's own Telegram self-reporting, corroborating (not superseding) the identity already established via s5450/s5464/s5465. EARLIEST INDEPENDENT PRESS ID (2026-09-04, s5484): iStories (Роман Романовский), 'Народный ВПК. Кто стоит за «Упырем», «Владленом Татарским» и «Архангелом»', 2023-08-25 — the earliest independent press identification of him found to date, almost two years before the aviation21.ru/CNews Kalashnikov-partnership coverage (s5476/s5477) previously recorded as 'the first identification of him by name in press outside the project's own Telegram self-reporting' — that framing is now superseded; iStories was first. Quoted directly: 'Был у меня чат с умельцами, которые летают на [дронах] DJI по коммерческим съемкам, пытался сначала объединить их...Со временем чаты стали обрастать инженерами' — describes himself as a ремонтник (repairman) by main profession who previously did commercial DJI filming before organizing the volunteer-pilot network from Nov 2022. Financing admission directly contradicts the scale of later claims: as of Aug 2023 the project was funded by a single unnamed меценат (patron) and personally produced 'крайне мало' (extremely few) drones — i.e. two years before the Kalashnikov serial-production claim, Filippov himself told a journalist output was minimal. He did not respond to iStories' calls for comment. Article also surfaces a Lytkarino company, «Открытое небо», listed on the project's VK page as the pilot-school certificate issuer — see the corresponding proekt-kb-arkhangel open_questions entry (same source) for its co-owners (Клименко, Голикова) and the Клименко-Удодов-Мишустин employment chain; not repeated here to avoid duplicating unverified detail across two records.",
+    "notes": "Head of «проект Архангел» — a self-described drone-manufacturing and operator-training group for Russian occupation forces, per a 02.08.2023 OSINT Bees doxxing dossier (s0234/s0235, InformNapalm-affiliated Ukrainian OSINT outlet) that names him directly as \"Координатор группы, власник каналу проекту «Архангел»\", Telegram @arhangel76 (id 249869145). DOB and address now sourced to that dossier (real primary-source ID, matching the DOB the earlier parked roymarket_archangel_adjacent_network memory had carried WITHOUT a source — now independently confirmed and properly sourced). Also owns ООО «МЛ КОНСТРАКШНС» (construction/renovation business, per the same dossier) — not yet cross-checked against this registry's entity list. The dossier separately names ~8 more channel admins/activists with full PII (DOB, address, phone, ИНН/СНИЛС) — deliberately NOT individually catalogued into people.json here, same discipline as smolin_source_catalogue.md's \"doxxing-scale apparatus\" rule: this is an adjacent, NOT-yet-ЦБСТ-confirmed network (see roymarket_archangel_adjacent_network memory), and full PII promotion is reserved for confirmed principals of the core investigation. Relationship to ano-arkhangel (Архангел Легион) and «Архангел Спецназа» (@arx_spn) is still NOT established — three informally-overlapping \"Архангел\"-branded projects with no confirmed institutional link found between them so far. Additional detail (2026-09-03, s5414/s5415): «проект Архангел» runs an actively operating multi-city network of UAV-training schools (Туапсе — a mountain/river-side camp in Krasnodar krai's foothills, recurring free 3-week residential courses; also references a school \"в Запорожье\"), not just the single Лыткарино-coordinated channel presence — structurally similar in scale to GUR's independent \"20 cities\" description of the unrelated ooo-arkhangel-zaporizhzhie (ИНН 9500026652). No confirmed tie between the two networks found; flagged as a lead only. Case-study scoping check (2026-09-04): ООО «МЛ КОНСТРАКШНС» (ИНН 5026016117, ОГРН 1115027014519, Московская область, registered 18.11.2011) independently confirmed via direct EGRUL search (s5450) — Филиппов is genuinely its Генеральный директор, matching the 2023 dossier exactly; now added as a formal role rather than a prose-only mention. Two negative findings from the same pass, both worth keeping on record rather than re-checking later: (1) a direct EGRUL follow-up on the \"Архангел Групп\" lead (ИНН 9702081286, s5451) shows director Крючков Дмитрий Александрович — no Филиппов tie found; (2) a personal-name EGRUL search for \"Филиппов Михаил Геннадьевич\" returned a namesake collision at nationwide scale (490,000+ loosely-token-matched rows, no DOB shown in the search index) — his personal ИНН cannot be reliably picked out of that list without an independent DOB-matched source, so inn_personal stays null rather than guessed; this blocks running any of the screening scripts (opensanctions/gur/disqualified/subsidiary/upr_uchr) against him for now. Direct primary-source confirmation (2026-09-04, s5454): a 26.06.2026 @projectArchangel post publishing the full open-source build kit for the «Архангел» interceptor/attack drone explicitly names \"@arhangel76\" (Филиппов's own handle) as \"руководитель проекта\" — the strongest direct-primary-source tie yet between Филиппов personally and this drone's design/production, not just channel administration. The post also self-describes a combat warhead variant (fragmentation cylinder, 500g, ball bearings or lock nuts) alongside a \"civilian ram\" framing for the same airframe — both offered from the same instructions. Full product/marketing-claim detail now held on the new `proekt-kb-arkhangel` entity stub rather than this person record, to keep products/claims data properly typed. Two further findings from the @proekt_arhangel channel scan (2026-09-04): (1) s5455 confirms «Архангел» is Филиппов's personal позывной (callsign), not only a project/brand name — \"Михаил Филиппов, позывной «Архангел»\" (11.07.2025) — and shows the project self-upgrading its framing to \"Всероссийский Проект «Архангел»\" (All-Russian Project, 02.05.2026), plus a presence on MAX (the Russian state-promoted messenger) alongside Telegram; (2) the same scan surfaced ООО «Архангел Щит» (ИНН 5027339008, director Хабибулин В.И. — NOT Филиппов) as the press-named manufacturer of the «Архангел» interceptor and the entity whose staff/instructors run the B2B facility-defense business described in s5456 — added as its own entity record (`ooo-arkhangel-shchit`) rather than assumed to be Филиппов's, since no document ties him to it directly. Two further independent press citations found 2026-09-04: Mashnews (09.10.2025, s5458) quotes him directly at Expo.UAV on the «Архангел» interceptor's market popularity; vz.ru (15.04.2026, s5459) identifies him as \"founder and head of Проект «Архангел»\" presenting a new joint system, «Слоненок», developed with unnamed St. Petersburg collaborators. Neither source's exact wording has been re-pulled in raw form — both were captured via a summarizing fetch, so treat as paraphrase, not citable verbatim quotation, until a raw-text re-pull is done. Independently corroborated 2026-09-04 via a live tg_scan_users.py participant scan of the private \"Академия Противодействия БПЛА\" chat (s5461): Telegram user id 249869145 for @arhangel76 — the SAME id the 2023 OSINT Bees/InformNapalm dossier (s0234/s0235) already attributed to him — is confirmed live via Telegram's own API as a member of this chat, with a self-authored bio (\"Обучение. Изготовление. БПЛА.\") linking back to the chat's own invite, consistent with his documented \"руководитель проекта\" role. This is an independent corroboration of the identity link via a second, unrelated data source, not a repost of the original dossier. HIMERA SEARCH LEAK-AGGREGATOR BATCH (2026-09-04, s5464): SOURCE-CLASS CAVEAT: this batch of fields comes from a Himera Search (himera-search.net, tg bot @Himera_new2024_bot) leaked-database aggregator report (s5464) — a commercial Russian-market breach/leak aggregation service, not a primary government record. It compiles many independently-breached datasets (ФССП, ФНС/ЕГРЮЛ, ГИБДД, ЕМИАС, credit-bureau blacklists, mobile-carrier SIM registration, airline PNR, reg.ru account data, MO спецучёт) under one name+DOB match. Treat every individual field as leak-sourced, not primary-source verified, UNLESS independently cross-checked elsewhere in this registry (the ИНН/ОГРН/address for ООО «МЛ Констракшнс» already were, via direct EGRUL search, s5450 — this report's own ЕГРЮЛ-derived rows for that company match exactly). Internal consistency across many independently-dated snapshots (2007-2025) is itself corroborating signal, but is not the same as primary-source verification. Personal ИНН now resolved: 502603133030 (matches the ЕГРЮЛ founder/director records this report itself carries for ООО «МЛ Констракшнс», ОГРН 1115027014519 — internally consistent, unblocking the personal-ИНН-keyed screening scripts that were previously blocked by a 490,000-row namesake collision on a name-only EGRUL search). A second ИНН value, 502603774989, also recurs across several ФССП debtor rows tied to the same DOB/address/passport cluster — not resolved which is authoritative, or whether one is a data-entry artifact; kept on record as a candidate, not promoted to inn_personal. Two other addresses recur in this report, both flagged for confirmation rather than treated as fact: 'учреждение ЮЛ-34(-4)', п. Древзавод, Чебоксары, Чувашская Республика — an institutional/penal-facility address format tied directly to his СНИЛС (11499622784) across multiple 2015-2016 snapshots, corroborated by his 2007 Cheboksary-issued passport (see the criminal-record note below); and Ольминского проезд, д. 3А, Москва, per a single 2010-dated \"Жители Москвы\" snapshot, not cross-referenced elsewhere. His primary Лыткарино address is unchanged and already well-established. Vehicle: grey 2010 Mazda CX-7, plate У295ВН197, VIN JMZER893800214724, insured via SAO РЕСО-Гарантия in Lytkarino. Two personal emails: archangelrf23@gmail.com (reg.ru account, registered 16.12.2021, last login IP 213.24.135.140 on 25.01.2024) and mixail.filippov@list.ru (an nlstar.com — outdoor/tactical-gear retailer — dealer account, registered 2018-03-16). ООО «МЛ Констракшнс» (ogrn 1115027014519) is confirmed LIQUIDATED 05.06.2019 per this report's own ЕГРЮЛ-derived rows — not previously recorded as such in this registry; see the corresponding correction on ooo-ml-konstrakshns. MOST SIGNIFICANT AND MOST CAUTIOUSLY FLAGGED FINDING: a criminal-record flag (\"СУДИМ\"/\"СУДИМЫЕ\") recurs across at least six independently-dated database snapshots in this report (2009, 2010, 2011, 2013, 2014, 2015), every one of them citing the SAME two conviction years — \"судимость 2000\" and \"судимость 2006\" — and the SAME region, Чувашская Республика (Чебоксары), with a recorded \"дата занесения информации\" of 21.11.2007. This is NOT independently verified against a primary court record (no case number, court name, or statute cited anywhere in the report — just a repeated categorical flag), so it is recorded here as a lead requiring independent verification, not an established fact. The internal consistency (same two years, same region, across six separately-dated pulls) argues against a one-off database mixing error, and is corroborated by the Chuvashia-institutional address tied to the same СНИЛС and the 2007 Cheboksary-issued passport — but none of that substitutes for an actual court record. A separate 2012-dated \"МО СПЕЦУЧЕТ\" (Ministry of Defense special-registry) entry with an unexplained \"окраска: ВОР\" flag is noted but not interpreted, semantics unclear. RESOLVED 2026-09-04 (s5465, live pb.nalog.ru founder-registry query keyed on his now-known personal ИНН 502603133030): he IS a founder of ООО «Архангел Групп» (ИНН 9702081286, aircraft/spacecraft-manufacturing OKVED 30.30, registered 12.03.2026, Moscow), director Крючков Дмитрий Александрович. This reverses the earlier 'no tie found' framing from the same-day s5451 EGRUL check — that check only queried the open search-index's director field, which structurally cannot see founders; the founder-level tie was invisible to it, not actually absent. New entity record: ooo-arkhangel-grupp. FULL SCREENING BATTERY (2026-09-04, following personal-ИНН resolution): OpenSanctions (0 matches), OCCRP Aleph (1 benign match — a public-registry mirror confirming his own ИНН/name, no adverse content), GUR war-sanctions.gur.gov.ua persons section (11 loose name-token hits, none actually him — checked each individually by full name/TIN), screen_disqualified (ФНС API error, inconclusive), screen_subsidiary (0 hits), screen_egrip_ip (no ИП registration). Combined with the earlier screen_upr_uchr hit (Архангел Групп founder tie), this is now a reasonably complete screening pass — no sanctions/disqualification/subsidiary-liability signal found on him personally anywhere checked. OWNERSHIP CORRECTED 2026-09-04 (s5474, full signed EGRUL extract): he holds an 80% MAJORITY stake in ООО «Архангел Групп», not merely 'a founder' as the earlier pb.nalog.ru partial check (s5465) had established - he is the controlling owner. Two co-owners: director Крючков Дмитрий Александрович (15%) and Казнова Татьяна Андреевна (5%, new person - see her own record). MYROTVORETS/ASSASSINATION CORROBORATION 2026-09-04 (s5475): the project's own channel states directly (proekt_arhangel#382, 2025-07-16) that Ukrainian security services list him on Мирoтворец (Myrotvorets, the Ukrainian public-doxxing database) and that he had, by that date, survived three prior attacks, citing a smotrim.ru video and a Crimean-prosecutor criminal case opened against him. proekt_arhangel#739 (2025-12-22) marks the one-year anniversary of what it describes as an assassination attempt via a bomb concealed in an award certificate (\"грамота\") delivered by courier on 22.12.2024. These are the project's OWN self-reported claims, not independently verified against a primary Ukrainian-source record — recorded as a lead corroborating his Myrotvorets/high-threat-profile status, not as an independently confirmed fact. PRESS CORROBORATION 2026-09-04 (s5476/s5477, aviation21.ru/CNews, 27.08.2025): independently named by mainstream Russian defense press as \"основатель и руководитель проекта «Архангел»\" in coverage of the confirmed Kalashnikov concern manufacturing partnership — this is the first identification of him by name in press outside the project's own Telegram self-reporting, corroborating (not superseding) the identity already established via s5450/s5464/s5465. EARLIEST INDEPENDENT PRESS ID (2026-09-04, s5484): iStories (Роман Романовский), 'Народный ВПК. Кто стоит за «Упырем», «Владленом Татарским» и «Архангелом»', 2023-08-25 — the earliest independent press identification of him found to date, almost two years before the aviation21.ru/CNews Kalashnikov-partnership coverage (s5476/s5477) previously recorded as 'the first identification of him by name in press outside the project's own Telegram self-reporting' — that framing is now superseded; iStories was first. Quoted directly: 'Был у меня чат с умельцами, которые летают на [дронах] DJI по коммерческим съемкам, пытался сначала объединить их...Со временем чаты стали обрастать инженерами' — describes himself as a ремонтник (repairman) by main profession who previously did commercial DJI filming before organizing the volunteer-pilot network from Nov 2022. Financing admission directly contradicts the scale of later claims: as of Aug 2023 the project was funded by a single unnamed меценат (patron) and personally produced 'крайне мало' (extremely few) drones — i.e. two years before the Kalashnikov serial-production claim, Filippov himself told a journalist output was minimal. He did not respond to iStories' calls for comment. Article also surfaces a Lytkarino company, «Открытое небо», listed on the project's VK page as the pilot-school certificate issuer — see the corresponding proekt-kb-arkhangel open_questions entry (same source) for its co-owners (Клименко, Голикова) and the Клименко-Удодов-Мишустин employment chain; not repeated here to avoid duplicating unverified detail across two records.\n\nScreening, 2026-09-05: ЕГРИП: no sole-proprietor registration found (checked 05.09.2026) — notable for the principal of an operation that solicits funding, since it means no personal trading vehicle appears in the ЕГРИП register. His ФНС «Прозрачный бизнес» director/founder cross-reference could not be completed on 05.09.2026 (HTTP 400 across three runs); the 2026-09-04 run of the same check did complete and returned ООО «АРХАНГЕЛ ГРУПП», ИНН 9702081286, where he is a founder — now a full registry record (ooo-arkhangel-grupp) confirming his 80% controlling stake from the signed ЕГРЮЛ выписка (s5506).",
     "sources": [
       "s0234",
       "s0235",
@@ -39317,21 +39452,9 @@
     "_raw": {},
     "passport": "4621309711 (current, issued 03.10.2012, ГУ МВД России по Московской обл. / О-ние в г.о. Лыткарино, код подразделения 500-080). Passport history per s5464: 9703967888 (issued 2007-09-08, ОВД Калининского р-на г. Чебоксары), 4608490314, 4612934841, 4612964841.",
     "_corrected": [
-      "2026-09-03: promoted from the parked roymarket_archangel_adjacent_network memory per the Гагаринг wide-net push (Thread C) — flagged as needing real primary sourcing, not treated as fully verified.",
-      "2026-09-03: full-text-read the already-archived OSINT Bees dossier (s0234/s0235) for the first time this pass — it independently confirms and sources the DOB/address the parked memory had carried unsourced, plus his real channel handle (@arhangel76) and a construction-business tie (ООО «МЛ КОНСТРАКШНС»).",
-      "2026-09-03: user asked for more location detail on the Sevastopol/Tuapse training sites, which surfaced this network-scale correction after a fuller Telegram DB re-read.",
-      "2026-09-04: user asked to scope the planned Архангел case-study narrative to Филиппов specifically rather than all Архангел-branded entities — this pass verified his one confirmed company (МЛ Конструкшнс) and checked (and ruled out, on current evidence) a tie to ooo-arkhangel-zaporizhzhie and to the newly-surfaced \"Архангел Групп\" ИНН.",
-      "2026-09-04: user supplied a locally-downloaded build-file archive (\"Ракета Архангел,\" 3D-print STLs + BOM + flight-controller config) and confirmed its provenance as t.me/projectArchangel/10381 — this is now archived (s5452-s5454) and wired into a new `proekt-kb-arkhangel` entity record plus this person record.",
-      "2026-09-04: user asked to scan @proekt_arhangel (surfaced via s5454) — this yielded the callsign confirmation, a formal MO-cadet training-intake post (Запорожье/Крым), and the press-sourced «Архангел Щит» manufacturer identification.",
-      "2026-09-04: web search for further Филиппов press coverage surfaced the Mashnews original and the vz.ru «Слоненок» piece, plus resolved the standing Гермес/npo-kaysant open question via the @germesfpv channel title.",
-      "2026-09-04: a user-run tg_scan_users.py participant scan of the private Академия chat surfaced @arhangel76's Telegram id (249869145), matching the 2023 dossier's attribution exactly — logged as independent corroboration.",
-      "2026-09-04: user supplied a Himera Search leak-aggregator PDF report (62 pages) on Филиппов, read in full. Resolved his personal ИНН (unblocking screening scripts), surfaced a second employer, vehicle/email/phone detail, confirmed МЛ Констракшнс's 2019 liquidation, and surfaced a repeated-but-unverified criminal-record flag from Chuvashia (2000/2006 convictions) requiring independent corroboration before being treated as fact.",
-      "2026-09-04: with his personal ИНН now resolved (via the Himera Search leak-aggregator batch), ran screen_upr_uchr.py against him — surfaced a real, live ФНС-sourced founder tie to «Архангел Групп» that the earlier director-only EGRUL check could not have found.",
-      "2026-09-04: user supplied a full signed EGRUL extract for ООО «Архангел Групп» - corrected his stake from an unquantified 'founder' tie to a confirmed 80% controlling ownership, and resolved the entity's street address.",
-      "2026-09-04: full close-read of proekt_arhangel surfaced the project's own repeated claims of Myrotvorets listing and multiple assassination attempts against Филиппов, including a specific December 2024 bomb-in-award incident — logged as corroborating context for his threat profile, sourced but not independently verified.",
-      "2026-09-04: verified the Kalashnikov MOU claim against independent press (not just the project's own Telegram post) — found Филиппов named directly by CNews/aviation21.ru, corroborating his identity and role from an outside source.",
-      "2026-09-04: independently verified the 'no guessing' backlog by fetching and archiving the iStories 2023-08-25 article referenced in the projectArchangel channel's own early-history archive (msg 1913, 2023-09-07) rather than trusting the channel's characterization of it as 'враждебная пресса' (hostile press) at face value."
+      "Confirms from a primary document that the «Проект «Архангел»» principal controls 80% of a declared UAV manufacturer, upgrading what was previously an aggregator-sourced other_entities line."
     ],
+    "_verified_against": "scripts/screen_egrip_ip.py, run 2026-09-05; data/sources/EGRUL_9702081286_20260905_ooo-arkhangel-grupp.pdf (s5506)",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-04",
     "aleph_matches": [
@@ -39976,6 +40099,14 @@
         "from": "2026-03-12",
         "to": null,
         "source_id": "s5474"
+      },
+      {
+        "entity_name": "ООО «Архангел Групп»",
+        "entity_slug": "ooo-arkhangel-grupp",
+        "title": "co-founder (5%)",
+        "from": "2026-03-12",
+        "to": null,
+        "source_id": "s5506"
       }
     ],
     "sanctions": [],
@@ -39984,20 +40115,21 @@
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-05",
     "social": [],
     "photo": null,
-    "notes": "5% minority co-owner of ООО «Архангел Групп» (ИНН 9702081286), Филиппов Михаил Геннадьевич's confirmed UAV-manufacturing entity. No other tie to the «Архангел»/ЦБСТ network found yet - not cross-checked against any screening source in this pass.",
+    "notes": "5% minority co-owner of ООО «Архангел Групп» (ИНН 9702081286), Филиппов Михаил Геннадьевич's confirmed UAV-manufacturing entity. No other tie to the «Архангел»/ЦБСТ network found yet - not cross-checked against any screening source in this pass.\n\nMinority co-owner (5%, ₽500 of ₽10,000) of ООО «Архангел Групп», ИНН 9702081286 — the Moscow UAV-production company incorporated 12.03.2026 controlled 80% by Филиппов Михаил Геннадиевич of «Проект «Архангел»». New to this investigation as of 05.09.2026; holds no directorship in the entity. Personal ИНН region prefix 77 = Москва. No DOB, birthplace or address established. Recorded here because a founding shareholder of a declared UAV manufacturer is in scope under this project's PII policy, not because any independent role has been established for her.\n\nScreening, 2026-09-05: ЕГРИП: no sole-proprietor registration found (checked 05.09.2026). Her ФНС «Прозрачный бизнес» director/founder cross-reference could not be completed (HTTP 400 across three runs, 05.09.2026) — directorships beyond her 5% stake in ООО «Архангел Групп» remain UNCHECKED, not cleared.",
     "sources": [
       "s5474"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "passport": null,
     "_corrected": [
-      "2026-09-04: surfaced as a third, previously-undocumented owner (5% stake) of ООО «Архангел Групп» in the full signed EGRUL extract - a minority co-owner alongside Филиппов (80%) and director Крючков (15%). Nothing else about her known yet - no other role, entity, or public presence found in this pass; recorded per this investigation's PII policy (identifying fields sourced or left null, never guessed)."
-    ]
+      "Logged so the incomplete check is visible; she is a minor shareholder with no other established role and is not a priority to chase."
+    ],
+    "_verified_against": "scripts/screen_egrip_ip.py, run 2026-09-05"
   },
   {
     "slug": "stepanov-dmitriy-aleksandrovich",
@@ -40033,6 +40165,225 @@
     "_raw": {},
     "_corrected": [
       "ZAKUPKI_5300010714_20251217_protokol-smd-oborudovanie-ushkuynik.pdf (s5303), award protocol read via OCR (tesseract, rus) 2026-09-04: names Степанов Дмитрий Александрович, ИНН 164809949104, as the sole bidder recognized and awarded the SMD-line supply contract."
+    ]
+  },
+  {
+    "slug": "chapurin-viktor-viktorovich",
+    "fio_ru": "Чапурин Виктор Викторович",
+    "name_latin": "Chapurin Viktor Viktorovich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "910520449851",
+    "roles": [
+      {
+        "entity_name": "ООО «Архангел-Центр»",
+        "entity_slug": "ooo-arkhangel-tsentr",
+        "title": "co-founder (50%)",
+        "from": "2024-05-17",
+        "to": null,
+        "source_id": "s5503"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": "2026-09-05",
+    "social": [],
+    "photo": null,
+    "notes": "Equal 50% co-owner (₽10,000 of ₽20,000 charter capital) of ООО «Архангел-Центр», ИНН 5032379630 — the Odintsovo military-training operator designated on 23.04.2026 by the EU, Ukraine (NSDC and GUR), France, Switzerland, Belgium and Monaco. Previously unknown to this investigation; surfaced 05.09.2026 from the full signed ЕГРЮЛ выписка (s5503), which is the first primary document on file listing this entity's founders. Personal ИНН region prefix 91 = Республика Крым. No DOB, birthplace or address established. Two reasons he matters beyond the ownership fact: the designated entity is under an ФНС strike-off decision (№48858 of 31.08.2026, published 02.09.2026), so the individual owners rather than the ООО are the durable designation targets; and neither he nor his co-owner Закелов is currently designated in any jurisdiction on the record in this registry.\n\nScreening, 2026-09-05: ЕГРИП: ACTIVE sole-proprietor registration ОГРНИП 319911200033816 from 29.03.2019, main ОКВЭД 47.25.12 «Торговля розничная пивом в специализированных магазинах» (retail beer sales), 7 codes, nothing defence-related. Consistent with his Crimean personal ИНН (910520449851, region prefix 91). His ФНС «Прозрачный бизнес» director/founder cross-reference could not be completed — HTTP 400 on every attempt across three runs on 05.09.2026 — so his directorships beyond his 50% stake in ООО «Архангел-Центр» remain UNCHECKED, not cleared.",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "First screening of any kind on this person, identified the same day as a 50% owner of a six-jurisdiction-designated entity. The ЕГРИП result is mundane; the incomplete ФНС check is recorded as outstanding work."
+    ],
+    "_verified_against": "data/sources/EGRIP_319911200033816_20260905_chapurin.pdf (s5512)"
+  },
+  {
+    "slug": "zakelov-aleksandr-aleksandrovich",
+    "fio_ru": "Закелов Александр Александрович",
+    "name_latin": "Zakelov Aleksandr Aleksandrovich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "026105732534",
+    "roles": [
+      {
+        "entity_name": "ООО «Архангел-Центр»",
+        "entity_slug": "ooo-arkhangel-tsentr",
+        "title": "генеральный директор and co-founder (50%)",
+        "from": "2024-05-17",
+        "to": null,
+        "source_id": "s5503"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": "2026-09-05",
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": "2026-09-05",
+    "social": [],
+    "photo": null,
+    "notes": "Генеральный директор from incorporation (17.05.2024) and 50% co-owner (₽10,000 of ₽20,000) of ООО «Архангел-Центр», ИНН 5032379630 — the Odintsovo military-training operator designated on 23.04.2026 by the EU, Ukraine (NSDC and GUR), France, Switzerland, Belgium and Monaco for training Russian soldiers and paramilitary units in artillery, reconnaissance, sniper and UAV operations for the war in Ukraine. His name was already recorded as the entity's director in this registry, but he had no person record of his own until 05.09.2026 — a gap, given he directs the most heavily designated entity in the «Архангел» family. The full выписка (s5503) additionally establishes his 50% ownership, which the earlier sourcing did not. Personal ИНН region prefix 02 = Республика Башкортостан. No DOB, birthplace or address established. The entity is under an ФНС strike-off decision (№48858 of 31.08.2026, published 02.09.2026), which makes him — not the dissolving ООО — the durable target, and makes his ИНН worth monitoring for a successor registration.\n\nScreening, 2026-09-05: ЕГРИП: TWO sole-proprietor registrations, both in Уфа, Республика Башкортостан — ОГРНИП 322028000147631 (30.08.2022, TERMINATED 10.01.2025, main ОКВЭД 47.91 internet/mail-order retail) and ОГРНИП 325028000022918 (ACTIVE from 03.02.2025, main ОКВЭД 46.18.1 agency wholesale of pharmaceutical, medical, perfume and cosmetic goods, 22 codes). The second was opened three weeks after the first was closed. Neither shows defence, training or UAV activity, and both sit in Башкортостан while the company he directs — the six-jurisdiction-designated ООО «Архангел-Центр» — operates in Одинцово, Московская область. His ФНС «Прозрачный бизнес» director/founder cross-reference could not be completed: the endpoint returned HTTP 400 on every attempt across three separate runs on 05.09.2026 (the same endpoint answered normally for four other people earlier the same day), so his directorships beyond ООО «Архангел-Центр» remain UNCHECKED, not cleared.",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "Both ЕГРИП registrations are ordinary retail/wholesale trade, so nothing here corroborates the training operation. The unfinished ФНС cross-reference is logged explicitly rather than left as a silent gap — he directs the family's most heavily sanctioned entity and it is now under an ФНС strike-off decision, so his other directorships are exactly what a successor-vehicle check would need."
+    ],
+    "_verified_against": "data/sources/EGRIP_322028000147631_20260905_zakelov.pdf (s5513) and EGRIP_325028000022918_20260905_zakelov.pdf (s5515)"
+  },
+  {
+    "slug": "kryuchkov-dmitriy-aleksandrovich",
+    "fio_ru": "Крючков Дмитрий Александрович",
+    "name_latin": "Kryuchkov Dmitriy Aleksandrovich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "712900068586",
+    "roles": [
+      {
+        "entity_name": "ООО «Архангел Групп»",
+        "entity_slug": "ooo-arkhangel-grupp",
+        "title": "генеральный директор and co-founder (15%)",
+        "from": "2026-03-12",
+        "to": null,
+        "source_id": "s5506"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": "2026-09-05",
+    "social": [],
+    "photo": null,
+    "notes": "Генеральный директор and 15% co-owner (₽1,500 of ₽10,000) of ООО «Архангел Групп», ИНН 9702081286 — the Moscow UAV-production company incorporated 12.03.2026 in which Филиппов Михаил Геннадиевич, principal of «Проект «Архангел»», holds the controlling 80%. New to this investigation as of 05.09.2026. Personal ИНН region prefix 71 = Тульская область, the same region as НПО «Эйлер» and ООО «Центр беспилотных систем» already in this registry — a prefix coincidence to check, not a link to assert. No DOB, birthplace or address established.\n\nScreening, 2026-09-05: ЕГРИП: ACTIVE sole-proprietor registration ОГРНИП 319508100098991 from 20.05.2019, main ОКВЭД 33.19 «Ремонт прочего оборудования», 25 codes — a Московская область equipment-repair business, with no aerospace or electronics code in the list. His ФНС «Прозрачный бизнес» director/founder cross-reference could not be completed (HTTP 400 across three runs, 05.09.2026), so his directorships beyond ООО «Архангел Групп» remain UNCHECKED, not cleared.",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "First screening on the генеральный директор of Филиппов's new UAV-production vehicle. An equipment-repair ИП is the kind of adjacent trade that could be operationally relevant or entirely incidental — logged as a fact, not read either way."
+    ],
+    "_verified_against": "data/sources/EGRIP_319508100098991_20260905_kryuchkov.pdf (s5511)"
+  },
+  {
+    "slug": "kulemin-igor-aleksandrovich",
+    "fio_ru": "Кулемин Игорь Александрович",
+    "name_latin": "Kulemin Igor Aleksandrovich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "773772361667",
+    "roles": [
+      {
+        "entity_name": "ООО «Архангел Щит»",
+        "entity_slug": "ooo-arkhangel-shchit",
+        "title": "sole founder (100%)",
+        "from": "2025-06-24",
+        "to": null,
+        "source_id": "s5517"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Sole 100% owner (₽10,000 of ₽10,000) of ООО «Архангел Щит», ИНН 5027339008 — the entity named by Russian press (Mashnews, s5456) as the manufacturer of the «Архангел» interceptor drone exhibited at Expo.UAV 2025, and as the employer of the combat instructors running its facility-defence contracting and training business. Surfaced 05.09.2026 from the full signed ЕГРЮЛ выписка (s5517), which is the first ownership data ever held for that entity — the record previously rested on press attribution with no founder information at all. He holds no directorship there: the генеральный директор is Хабибулин Владимир Игоревич. Personal ИНН region prefix 77 = Москва. No DOB, birthplace or address established.",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "EGRUL_5027339008_20260905_ooo-arkhangel-shchit (s5517), full signed ЕГРЮЛ выписка read 05.09.2026: records КУЛЕМИН ИГОРЬ АЛЕКСАНДРОВИЧ, ИНН 773772361667, as участник with номинальная стоимость доли ₽10,000 and размер доли 100%."
+    ]
+  },
+  {
+    "slug": "khabibulin-vladimir-igorevich",
+    "fio_ru": "Хабибулин Владимир Игоревич",
+    "name_latin": "Khabibulin Vladimir Igorevich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "270400171723",
+    "roles": [
+      {
+        "entity_name": "ООО «Архангел Щит»",
+        "entity_slug": "ooo-arkhangel-shchit",
+        "title": "генеральный директор",
+        "from": "2025-06-24",
+        "to": null,
+        "source_id": "s5517"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Генеральный директор from incorporation (24.06.2025) of ООО «Архангел Щит», ИНН 5027339008 — the entity named by Russian press (s5456) as maker of the «Архангел» interceptor drone shown at Expo.UAV 2025. He holds no stake; the 100% owner is Кулемин Игорь Александрович. His name was already recorded as the entity's director from an open-API lookup, but he had no person record until 05.09.2026 and his personal ИНН was not held. Region prefix 27 = Хабаровский край, against an owner registered in Москва (77) and a company registered at a private flat in Лыткарино, Московская область — three regions across two people and a residential address.",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "EGRUL_5027339008_20260905_ooo-arkhangel-shchit (s5517), full signed ЕГРЮЛ выписка read 05.09.2026: records ХАБИБУЛИН ВЛАДИМИР ИГОРЕВИЧ, ИНН 270400171723, должность ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, as the лицо, имеющее право без доверенности действовать от имени юридического лица; he does not appear among the участники."
+    ]
+  },
+  {
+    "slug": "aristarkhov-vladimir-vyacheslavovich",
+    "fio_ru": "Аристархов Владимир Вячеславович",
+    "name_latin": "Aristarkhov Vladimir Vyacheslavovich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "773714258269",
+    "roles": [
+      {
+        "entity_name": "ООО «Архангел» (Истра, ИНН 5017140245)",
+        "entity_slug": "ooo-arkhangel-istra",
+        "title": "sole founder (100%) and генеральный директор",
+        "from": "2025-03-12",
+        "to": null,
+        "source_id": "s5516"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Sole owner (100%, ₽12,000) and генеральный директор of ООО «Архангел», ИНН 5017140245 (Истра, Павловская Слобода) — an entity that entered this investigation only as a same-brand-name trademark collision (Rospatent, s5472/s5473) and which the full ЕГРЮЛ выписка of 05.09.2026 (s5516) supports treating as a NAMESAKE rather than a network member: all 16 of its declared ОКВЭД codes are legal-services, software and information-services activities (main 69.10 «Деятельность в области права»), with nothing aerospace, UAV, electronics or training-related. Recorded here for the same reason the entity is kept in the registry — so the collision is documented and does not get re-investigated as a fresh lead. Personal ИНН region prefix 77 = Москва. No DOB, birthplace or address established, and none should be pursued unless a real tie to the network emerges.",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "EGRUL_5017140245_20260905_ooo-arkhangel-istra (s5516), full signed ЕГРЮЛ выписка read 05.09.2026: records АРИСТАРХОВ ВЛАДИМИР ВЯЧЕСЛАВОВИЧ, ИНН 773714258269, both as ГЕНЕРАЛЬНЫЙ ДИРЕКТОР and as sole участник with номинальная стоимость доли ₽12,000 and размер доли 100%."
     ]
   }
 ]

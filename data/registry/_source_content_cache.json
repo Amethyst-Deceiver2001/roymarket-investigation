@@ -43402,5 +43402,221 @@
     "as_of_method": null,
     "sha256": "cf9ddfdfa03e88587054166ed2c2a0686bcfd6ca8d961524d0c43732fb507d15",
     "sample": "\n \n \n \n \n \n \n Карточка закупки \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Официальный сайт Единой информационной системы в сфере закупок \n \n \n \n \n \n \n \n \n \n Мой регион: \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Личный кабинет \n \n \n \n \n \n \n \n \n \n \n Личный кабинет \n 44-Ф3 \n \n \n \n \n \n \n \n Личный кабинет \n 223-ФЗ \n \n \n \n \n \n \n \n Личн"
+  },
+  "EGRULAPI_9001027869_20260905_ooo-arkhangel-zaporizhzhie-2.json": {
+    "type": "egrul_api",
+    "type_method": "human read (egrul.nalog.ru open-lookup JSON, superseded by the same-day full выписка PDF for the same ИНН)",
+    "as_of": "2026-09-05",
+    "as_of_method": "human read (lookup performed 05.09.2026; the open API returns current-state data with no separate effective date)",
+    "sha256": "be473a7df6d2dc1d4edb43b50c9ecb04b72adafcefd60bcc5fd302613f3aea7d",
+    "sample": "{\n \"queried_inn\": \"9001027869\",\n \"queried_slug\": \"ooo-arkhangel-zaporizhzhie-2\",\n \"queried_name\": \"ООО «Архангел» (Запорожская область, ИНН 9001027869)\",\n \"pulled_date\": \"20260905\",\n \"raw\": {\n \"c\": \"ООО \\\"АРХАНГЕЛ\\\"\",\n \"g\": \"ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Кусумов Вахид Абдулович\",\n \"cnt\": \"1\",\n \"i\": \"9001027869\",\n \"k\": \"ul\",\n \"n\": \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \\\"АРХАНГЕЛ\\\"\",\n \"o\": \"124900000551"
+  },
+  "EGRULAPI_9702081286_20260905_ooo-arkhangel-grupp.json": {
+    "type": "egrul_api",
+    "type_method": "human read (egrul.nalog.ru open-lookup JSON, superseded by the same-day full выписка PDF for the same ИНН)",
+    "as_of": "2026-09-05",
+    "as_of_method": "human read (lookup performed 05.09.2026; the open API returns current-state data with no separate effective date)",
+    "sha256": "99b5a1bfae181a016c043c56827c794c3185139209d3b070b7832385908e626e",
+    "sample": "{\n \"queried_inn\": \"9702081286\",\n \"queried_slug\": \"ooo-arkhangel-grupp\",\n \"queried_name\": \"ООО «Архангел Групп»\",\n \"pulled_date\": \"20260905\",\n \"raw\": {\n \"c\": \"ООО \\\"АРХАНГЕЛ ГРУПП\\\"\",\n \"g\": \"ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Крючков Дмитрий Александрович\",\n \"cnt\": \"1\",\n \"i\": \"9702081286\",\n \"k\": \"ul\",\n \"n\": \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \\\"АРХАНГЕЛ ГРУПП\\\"\",\n \"o\": \"1267700086081\",\n \"p\": \"770201001\",\n"
+  },
+  "EGRUL_2315233718_20260905_ano-arkhangel.pdf": {
+    "type": "egrul",
+    "type_method": "keyword:ВЫПИСКА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ",
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "sha256": "50e0778719d5c7925e0e11b3b57f9fa1a2e3dc501e026b4611f986a53fc69e63",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра юридических лиц\n\n\n 05.09.2026 № ЮЭ9965-26-\n 173752895\n дата формирования выписки\n\n\nНастоящая выписка содержит сведения о юридическом лице\n АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ВОЕННО-ТЕХНИЧЕСКОЙ\n ПОДДЕРЖКИ ЗАЩИТНИКОВ ОТЕЧЕСТВА И ПАТРИОТИЧЕСКОГО ВОСПИТАНИЯ\n НАСЕЛЕНИЯ \"АРХАНГЕЛ\"\n полное наименование юридического лица\n\n\n ОГРН 1 2 4 2 3 0 0 0 0 5 6 4 0\nвк"
+  },
+  "EGRUL_5032379630_20260905_ooo-arkhangel-tsentr.pdf": {
+    "type": "egrul",
+    "type_method": "keyword:ВЫПИСКА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ",
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "sha256": "fe4948b737eaa6049f2a92bd5bd7b5133f7dcf99d9682123f19665d6ea12d0f2",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра юридических лиц\n\n\n 05.09.2026 № ЮЭ9965-26-\n 173759810\n дата формирования выписки\n\n\nНастоящая выписка содержит сведения о юридическом лице\n ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ-ЦЕНТР\"\n полное наименование юридического лица\n\n\n ОГРН 1 2 4 5 0 0 0 0 5 8 4 8 9\n\n ИНН 5 0 3 2 3 7 9 6 3 0\nвключенные в Единый государственный реестр юридических лиц"
+  },
+  "EGRUL_9001027869_20260905_ooo-arkhangel-zaporizhzhie-2.pdf": {
+    "type": "egrul",
+    "type_method": "keyword:ВЫПИСКА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ",
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "sha256": "9c4e9a514d654a9e542764749312f703c823c264136e2b143d4a51f0a6291226",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра юридических лиц\n\n\n 05.09.2026 № ЮЭ9965-26-\n 173752502\n дата формирования выписки\n\n\nНастоящая выписка содержит сведения о юридическом лице\n ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"\n полное наименование юридического лица\n\n\n ОГРН 1 2 4 9 0 0 0 0 0 5 5 1 7\nвключенные в Единый государственный реестр юридических лиц по состоянию на\n« 05 » сентября"
+  },
+  "EGRUL_9500026652_20260905_ooo-arkhangel-zaporizhzhie.pdf": {
+    "type": "egrul",
+    "type_method": "keyword:ВЫПИСКА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ",
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "sha256": "c45b1ed2fcd3d0b2adafc6be09bd9086e41c506c189bea5320e18ed5be72a8ed",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра юридических лиц\n\n\n 05.09.2026 № ЮЭ9965-26-\n 173752929\n дата формирования выписки\n\n\nНастоящая выписка содержит сведения о юридическом лице\n ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"\n полное наименование юридического лица\n\n\n ОГРН 1 2 4 9 5 0 0 0 0 4 1 8 1\n\n ИНН 9 5 0 0 0 2 6 6 5 2\nвключенные в Единый государственный реестр юридических лиц по со"
+  },
+  "EGRUL_9702081286_20260905_ooo-arkhangel-grupp.pdf": {
+    "type": "egrul",
+    "type_method": "keyword:ВЫПИСКА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ",
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "sha256": "c203b5b278ed11d6e73fd18736e91f80877bf219d860db080f56e557a5399b32",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра юридических лиц\n\n\n 05.09.2026 № ЮЭ9965-26-\n 173759449\n дата формирования выписки\n\n\nНастоящая выписка содержит сведения о юридическом лице\n ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ ГРУПП\"\n полное наименование юридического лица\n\n\n ОГРН 1 2 6 7 7 0 0 0 8 6 0 8 1\n\n ИНН 9 7 0 2 0 8 1 2 8 6\nвключенные в Единый государственный реестр юридических лиц"
+  },
+  "EGRUL_9714079108_20260905_ooo-arkhangel.pdf": {
+    "type": "egrul",
+    "type_method": "keyword:ВЫПИСКА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ",
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "sha256": "517497852de4b2e4cd8ef8304c0ccac885d8279ea243b333c1e02639ffaa2e5c",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра юридических лиц\n\n\n 05.09.2026 № ЮЭ9965-26-\n 173759737\n дата формирования выписки\n\n\nНастоящая выписка содержит сведения о юридическом лице\n ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"\n полное наименование юридического лица\n\n\n ОГРН 1 2 5 7 7 0 0 3 4 5 4 0 7\n\n ИНН 9 7 1 4 0 7 9 1 0 8\nвключенные в Единый государственный реестр юридических лиц по со"
+  },
+  "EGRUL_9108131213_20260905_ooo-arkhangel-crimea.pdf": {
+    "type": "egrul",
+    "type_method": "keyword:ВЫПИСКА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ",
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "sha256": "1aab85e47d89165eda948c51d1d5bb9b8ee44cb2bef8601040f3ff3c82b6e24b",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра юридических лиц\n\n\n 05.09.2026 № ЮЭ9965-26-\n 173762740\n дата формирования выписки\n\n\nНастоящая выписка содержит сведения о юридическом лице\n ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"\n полное наименование юридического лица\n\n\n ОГРН 1 2 5 9 1 0 0 0 0 5 1 5 2\n\n ИНН 9 1 0 8 1 3 1 2 1 3\nвключенные в Единый государственный реестр юридических лиц по со"
+  },
+  "EGRIP_306231210900130_20260905_tashmatov.pdf": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "9630ec4503bf07a114a7682174cf02d1da5f13285689fafe2e92e3f4f0abed82",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра индивидуальных предпринимателей\n\n\n 05.09.2026 № ИЭ9965-26-\n 105499952\n дата формирования выписки\n\n\n\nНастоящая выписка содержит сведения об индивидуальном предпринимателе\n ТАШМАТОВ ИЛЬЯ СЕРГЕЕВИЧ\n фамилия, имя и отчество (при наличии)\n\n\n ОГРНИП 3 0 6 2 3 1 2 1 0 9 0 0 1 3 0\nвключенные в Единый государственный реестр индивидуальных предпринимателей по\nсо"
+  },
+  "EGRIP_319344300112860_20260905_timofeev.pdf": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "e9ff9d2b3990d2d25c2a4df0952b9fe8a309843e40c4cd7743d99dc2b2f58339",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра индивидуальных предпринимателей\n\n\n 05.09.2026 № ИЭ9965-26-\n 105499972\n дата формирования выписки\n\n\n\nНастоящая выписка содержит сведения об индивидуальном предпринимателе\n ТИМОФЕЕВ ВЛАДИМИР СЕРГЕЕВИЧ\n фамилия, имя и отчество (при наличии)\n\n\n ОГРНИП 3 1 9 3 4 4 3 0 0 1 1 2 8 6 0\nвключенные в Единый государственный реестр индивидуальных предпринимателей п"
+  },
+  "EGRIP_319508100098991_20260905_kryuchkov.pdf": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "c99f851dc6867b98035ca94680acb1bf67197d5323c697be385b092a5ee81697",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра индивидуальных предпринимателей\n\n\n 05.09.2026 № ИЭ9965-26-\n 105491710\n дата формирования выписки\n\n\n\nНастоящая выписка содержит сведения об индивидуальном предпринимателе\n КРЮЧКОВ ДМИТРИЙ АЛЕКСАНДРОВИЧ\n фамилия, имя и отчество (при наличии)\n\n\n ОГРНИП 3 1 9 5 0 8 1 0 0 0 9 8 9 9 1\nвключенные в Единый государственный реестр индивидуальных предпринимателей"
+  },
+  "EGRIP_319911200033816_20260905_chapurin.pdf": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "7acba4cc2c9d87ca193ed141e1cb5517bec517bde11026f077e1a2460990a7f5",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра индивидуальных предпринимателей\n\n\n 05.09.2026 № ИЭ9965-26-\n 105500038\n дата формирования выписки\n\n\n\nНастоящая выписка содержит сведения об индивидуальном предпринимателе\n ЧАПУРИН ВИКТОР ВИКТОРОВИЧ\n фамилия, имя и отчество (при наличии)\n\n\n ОГРНИП 3 1 9 9 1 1 2 0 0 0 3 3 8 1 6\n\n ИНН 9 1 0 5 2 0 4 4 9 8 5 1\nвключенные в Единый государственный реестр индив"
+  },
+  "EGRIP_322028000147631_20260905_zakelov.pdf": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "9e589e74718be791ddc683a85b12ce8f1ed1787572ff9807c01de56e61351ca3",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра индивидуальных предпринимателей\n\n\n 05.09.2026 № ИЭ9965-26-\n 105500018\n дата формирования выписки\n\n\n\nНастоящая выписка содержит сведения об индивидуальном предпринимателе\n ЗАКЕЛОВ АЛЕКСАНДР АЛЕКСАНДРОВИЧ\n фамилия, имя и отчество (при наличии)\n\n\n ОГРНИП 3 2 2 0 2 8 0 0 0 1 4 7 6 3 1\nвключенные в Единый государственный реестр индивидуальных предпринимател"
+  },
+  "EGRIP_322508100225320_20260905_galiev.pdf": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "1fe0f577a2df003a255e2bbf54e122b4ca915794f4e2321c8bb9106a5dc15fe8",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра индивидуальных предпринимателей\n\n\n 05.09.2026 № ИЭ9965-26-\n 105499920\n дата формирования выписки\n\n\n\nНастоящая выписка содержит сведения об индивидуальном предпринимателе\n ГАЛИЕВ РУСЛАН РАИЛОВИЧ\n фамилия, имя и отчество (при наличии)\n\n\n ОГРНИП 3 2 2 5 0 8 1 0 0 2 2 5 3 2 0\nвключенные в Единый государственный реестр индивидуальных предпринимателей по\nсос"
+  },
+  "EGRIP_325028000022918_20260905_zakelov.pdf": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "2a954aa7f471e6037233997a54edc957e2ca7e9c7a803e11f2406ec4003237b4",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра индивидуальных предпринимателей\n\n\n 05.09.2026 № ИЭ9965-26-\n 105491633\n дата формирования выписки\n\n\n\nНастоящая выписка содержит сведения об индивидуальном предпринимателе\n ЗАКЕЛОВ АЛЕКСАНДР АЛЕКСАНДРОВИЧ\n фамилия, имя и отчество (при наличии)\n\n\n ОГРНИП 3 2 5 0 2 8 0 0 0 0 2 2 9 1 8\n\n ИНН 0 2 6 1 0 5 7 3 2 5 3 4\nвключенные в Единый государственный реестр"
+  },
+  "EGRUL_5017140245_20260905_ooo-arkhangel-istra.pdf": {
+    "type": "egrul",
+    "type_method": "keyword:ВЫПИСКА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ",
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "sha256": "d330b5387a470198c84c02f7a3d4ed0af89542370cfe8ab9e7162b56cbe8a1d0",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра юридических лиц\n\n\n 05.09.2026 № ЮЭ9965-26-\n 173764465\n дата формирования выписки\n\n\nНастоящая выписка содержит сведения о юридическом лице\n ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"\n полное наименование юридического лица\n\n\n ОГРН 1 2 5 5 0 0 0 0 2 4 4 8 7\nвключенные в Единый государственный реестр юридических лиц по состоянию на\n« 05 » сентября"
+  },
+  "EGRUL_5027339008_20260905_ooo-arkhangel-shchit.pdf": {
+    "type": "egrul",
+    "type_method": "keyword:ВЫПИСКА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ",
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "sha256": "e192faad55ce33961a7603ffe7b9930e9329b8b0ffd14342c81c4c90a386c710",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра юридических лиц\n\n\n 05.09.2026 № ЮЭ9965-26-\n 173764444\n дата формирования выписки\n\n\nНастоящая выписка содержит сведения о юридическом лице\n ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ ЩИТ\"\n полное наименование юридического лица\n\n\n ОГРН 1 2 5 5 0 0 0 0 5 9 5 3 3\n\n ИНН 5 0 2 7 3 3 9 0 0 8\nвключенные в Единый государственный реестр юридических лиц п"
+  },
+  "ALEPH_5032379630_20260905_ooo-arkhangel-tsentr.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "af5599983713a9a7dcbb3290dd2c034cd1461ee32a98a2bc581fde704199d91f",
+    "sample": "{\n \"query\": \"5032379630\",\n \"response\": {\n \"total_type\": \"eq\",\n \"total\": 4,\n \"page\": 1,\n \"pages\": 1,\n \"limit\": 5,\n \"offset\": 0,\n \"query_text\": \"5032379630 \",\n \"next\": null,\n \"previous\": null,\n \"status\": \"ok\",\n \"links\": {\n \"export\": \"https://aleph.occrp.org/api/2/search/export?limit=5&q=5032379630\"\n },\n \"results\": [\n {\n \"id\": \"3d08dd87e8ab762e64d4cda7e9a4bbd88b3b0c51.96fe22668602883c6c61f3bf46a47e33"
+  },
+  "ALEPH_9001027869_20260905_ooo-arkhangel-melitopol-2.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "ac10caefb972273d94c4d0ab9dcc036c4670fcefae96bbf2f8eea0edd962445e",
+    "sample": "{\n \"query\": \"9001027869\",\n \"response\": {\n \"total_type\": \"eq\",\n \"total\": 2,\n \"page\": 1,\n \"pages\": 1,\n \"limit\": 5,\n \"offset\": 0,\n \"query_text\": \"9001027869 \",\n \"next\": null,\n \"previous\": null,\n \"status\": \"ok\",\n \"links\": {\n \"export\": \"https://aleph.occrp.org/api/2/search/export?limit=5&q=9001027869\"\n },\n \"results\": [\n {\n \"id\": \"2a7f19244124b4ff8346d70906d1b3548260ea2e.ae7c1ad380c2d5cf3434c39e6324adf6"
+  },
+  "ALEPH_proekt-kb-arkhangel_20260905_proekt-kb-arkhangel.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "617be9fe8caa7962b6950cc2ac23ee80bb61f83a1483ad945e19b79e00c64f69",
+    "sample": "{\n \"query\": \"Проект КБ «Архангел»\",\n \"response\": {\n \"total_type\": \"eq\",\n \"total\": 62,\n \"page\": 1,\n \"pages\": 13,\n \"limit\": 5,\n \"offset\": 0,\n \"query_text\": \"Проект КБ «Архангел» \",\n \"next\": \"https://aleph.occrp.org/api/2/entities?limit=5&offset=5&q=%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82+%D0%9A%D0%91+%C2%AB%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%C2%BB\",\n \"previous\": null,\n \"status\": \"ok\",\n \"li"
+  },
+  "OPENSANCTIONS_5017140245_20260905_ooo-arkhangel-istra.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "fba5652179a12f19bf811a7191471789b235dcb1eaed79e2c6e16f21debe6227",
+    "sample": "{\n \"query\": {\n \"schema\": \"Company\",\n \"properties\": {\n \"name\": [\n \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \\\"АРХАНГЕЛ\\\"\",\n \"OOO \\\"Arkhangel\\\" (Istra)\"\n ],\n \"innCode\": [\n \"5017140245\"\n ],\n \"registrationNumber\": [\n \"1255000024487\"\n ],\n \"country\": [\n \"ru\"\n ]\n }\n },\n \"response\": {\n \"status\": 200,\n \"results\": [\n {\n \"id\": \"NK-AeHbFuxDQJGPaCNKycGUdz\",\n \"caption\": \"Товариство з обмеженою відповідальністю "
+  },
+  "OPENSANCTIONS_5027339008_20260905_ooo-arkhangel-shchit.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "8988480bbc19c813d81edfdb2b0d7f00351539de92b63548c2e79c736b59f718",
+    "sample": "{\n \"query\": {\n \"schema\": \"Company\",\n \"properties\": {\n \"name\": [\n \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \\\"АРХАНГЕЛ ЩИТ\\\"\",\n \"OOO \\\"Arkhangel Shchit\\\" (\\\"Arkhangel Shield\\\")\"\n ],\n \"innCode\": [\n \"5027339008\"\n ],\n \"registrationNumber\": [\n \"1255000059533\"\n ],\n \"country\": [\n \"ru\"\n ]\n }\n },\n \"response\": {\n \"status\": 200,\n \"results\": [\n {\n \"id\": \"NK-Gmfrw9dvwnyXtXUsjwdvYa\",\n \"caption\": \"Archangel Mili"
+  },
+  "OPENSANCTIONS_9001027869_20260905_ooo-arkhangel-melitopol-2.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "be8957a56d7d95c8f24f2b54d683bc2142c0eb1c59d412687f49d64304a147c8",
+    "sample": "{\n \"query\": {\n \"schema\": \"Company\",\n \"properties\": {\n \"name\": [\n \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \\\"АРХАНГЕЛ\\\"\",\n \"OOO \\\"Arkhangel\\\" (Melitopol, INN 9001027869)\"\n ],\n \"innCode\": [\n \"9001027869\"\n ],\n \"registrationNumber\": [\n \"1249000005517\"\n ],\n \"country\": [\n \"ru\"\n ]\n }\n },\n \"response\": {\n \"status\": 200,\n \"results\": [\n {\n \"id\": \"NK-AeHbFuxDQJGPaCNKycGUdz\",\n \"caption\": \"Товариство з обмежен"
+  },
+  "OPENSANCTIONS_9108131213_20260905_ooo-arkhangel-crimea.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "7e14a7d5ac19b03dc9d53c223949087b63ec38da404a0b137b24b3c585e0a7c7",
+    "sample": "{\n \"query\": {\n \"schema\": \"Company\",\n \"properties\": {\n \"name\": [\n \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \\\"АРХАНГЕЛ\\\"\",\n \"OOO \\\"Arkhangel\\\" (Crimea, Sudak)\"\n ],\n \"innCode\": [\n \"9108131213\"\n ],\n \"registrationNumber\": [\n \"1259100005152\"\n ],\n \"country\": [\n \"ru\"\n ]\n }\n },\n \"response\": {\n \"status\": 200,\n \"results\": [\n {\n \"id\": \"ru-inn-9500026652\",\n \"caption\": \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ"
+  },
+  "RK2035_9500026652_20260905_ooo-arkhangel-zaporizhzhie.json": {
+    "type": "registry_screen",
+    "type_method": "human read",
+    "as_of": "2026-09-05",
+    "as_of_method": "human read (rk.2035.university БАС registry profile, captured via screen_rk2035_bas_registry.py; the registry states no separate effective date, so as_of is the capture date)",
+    "sha256": "01ac3d3f44434b4b60f6b7ad83a0ea258324e503686a3785e55f1b8215c0bbc4",
+    "sample": "{\n \"entity_inn\": \"9500026652\",\n \"entity_slug\": \"ooo-arkhangel-zaporizhzhie\",\n \"pulled\": \"2026-09-05\",\n \"source\": \"rk.2035.university БАС registry via scripts/screen_rk2035_bas_registry.py\",\n \"matches\": [\n {\n \"query\": \"АРХАНГЕЛ\",\n \"org_id\": \"019a493f-c674-7281-95e3-dd203c5f6c94\",\n \"organization_name\": \"Общество с ограниченной ответственностью «АРХАНГЕЛ»\",\n \"short_name\": \"ООО \\\"АРХАНГЕЛ\\\"\",\n \"inn\": "
+  },
+  "WHOIS_proekt-arhangel-ru_20260905.txt": {
+    "type": "whois",
+    "type_method": "human read",
+    "as_of": "2026-09-05",
+    "as_of_method": "human read (TCI/.RU registry WHOIS response; its own \"Last updated on 2026-09-05T00:08:01Z\" line is the effective date)",
+    "sha256": "bb4ff21604cb0fe1d29183344c9028a47f0bc652a65c4c2a0b5b5ab8fc18dbb5",
+    "sample": "% TCI Whois Service. Terms of use:\n% https://tcinet.ru/documents/whois_ru_rf.pdf (in Russian)\n% https://tcinet.ru/documents/whois_su.pdf (in Russian)\n\ndomain: PROEKT-ARHANGEL.RU\nnserver: ns1.reg.ru.\nnserver: ns2.reg.ru.\nstate: REGISTERED, DELEGATED, UNVERIFIED\norg: \ntaxpayer-id: \nregistrar: REGRU-RU\nadmin-contact: http://www.reg.ru/whois/admin_contact\ncreated: 2025-07-16T05:57:23Z\npaid-till: 2027-"
   }
 }

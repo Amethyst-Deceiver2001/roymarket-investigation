@@ -51,6 +51,12 @@
 
 - **ИНН:** 771501583221
 - Учредитель, 5% доля (2026-03-12–present)
+- co-founder (5%) (2026-03-12–present)
+
+### Kryuchkov Dmitriy Aleksandrovich — Крючков Дмитрий Александрович
+
+- **ИНН:** 712900068586
+- генеральный директор and co-founder (15%) (2026-03-12–present)
 
 ## Open questions
 

@@ -33,14 +33,14 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 10000 | — | from corrections:add_entities, unverified |
+| 10000 | 2024-08-22 | Уставный капитал per ЕГРЮЛ выписка of 05.09.2026, replacing the earlier unverified corrections-derived value. [s5505] |
 
 ### Address
 
 | Value | As of | Note |
 |---|---|---|
 | 275502, Херсонская область, м.о. Генический, г. Геническ, с-к Портовый, дом 6, помещение 14 | 2025-12-30 | Address on file in the Rosobrnadzor licence register at time of licensing (09.10.2024) — different from the registered legal address, an operational/training-site address in occupied Kherson oblast. [s1166] |
-| 272313, Запорожская область, г.о. Мелитополь, г. Мелитополь, ул. Гоголя, д. 91/1 | 2026-08-18 | Registered legal address per EGRUL extract. [s0229] |
+| 272313, Запорожская область, г.о. Мелитополь, г. Мелитополь, ул. Гоголя, д. 91/1 | 2026-09-05 | Registered legal address re-confirmed against the full signed ЕГРЮЛ выписка of 05.09.2026 (previously sourced to s0229). IDENTICAL to the registered address of the separate ООО «Архангел» ИНН 9001027869 (ooo-arkhangel-melitopol-2). [s5505] |
 
 ## Products
 
@@ -58,12 +58,6 @@
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-03).
 - 1 OpenSanctions match(es) (screened 2026-09-03).
 
-## Web & social presence
-
-### Telegram
-
-- <None> — 21.3K-subscriber channel per earlier survey; also used for the 51st Army recruitment-contact posts.
-
 ## Principals & persons of interest
 
 ### Vladimir Sergeevich Timofeev — Тимофеев Владимир Сергеевич
@@ -78,8 +72,17 @@
 - Учредитель (100%) (2025-03-10–present)
 - `sanctions lead`
 
+## Corporate links
+
+- **OOO "Arkhangel" (Melitopol, INN 9001027869)** — None [s5505]
+
 ## Open questions
 
+- A trademark application (2024881195, filed 2024-10-10, mark text "АРХАНГЕЛ АНГЕЛЫ НА НАШЕЙ СТОРОНЕ" [Archangel — Angels Are On Our Side], image: black-and-white helmet with a Russian-tricolor accent, goods classes 12/25/35/41 — plausibly drones/apparel/training given the class spread) was filed by an "ООО Архангел" at 275502, Херсонская область, м.о. Генический, г. Геническ, с-к Портовый, д. 6, помещ. 14 — a Kherson-oblast address distinct from THIS entity's own Мелитополь/Запорожская область registration and from every other known 'Архангел'-family address. The application was WITHDRAWN (Решение о признании заявки отозванной, 28.04.2025) before any applicant-identity detail beyond the bare address rendered in the available FIPS record — the filer's ИНН was not resolved (an egrul.nalog.ru name search across the occupied-territory region codes tried did not surface a Kherson-region match). Not confirmed as this entity, ooo-arkhangel-grupp, or a still-undocumented 9th 'Архангел'-branded org — flagged as an unresolved lead, not merged into any existing record. [s5468]
+- A SECOND ООО «Архангел» exists at this entity's exact registered address (Мелитополь, ул. Гоголя, д. 91/1) — ИНН 9001027869 / ОГРН 1249000005517, registered 10.06.2024, i.e. ~2 months BEFORE this one, with the same owner Кусумов В.А. as both 100% founder and генеральный директор (s5504, s5505, 05.09.2026). Both are live; neither carries a liquidation, reorganisation or strike-off marker. Any claim attributing the «Архангел» Zaporizhzhia training/production operation to a specific ИНН must now say which of the two, and on what basis — the location inference alone no longer distinguishes them. See ooo-arkhangel-melitopol-2's own open_questions for the candidate structural explanations. [s5505]
+- The full выписка (s5505) records six substantive «Изменение сведений о юридическом лице» actions (10.03.2025, 11.04.2025, 19.06.2025, 26.09.2025, 11.11.2025, 04.03.2026) plus a tax-registration change on 04.03.2026. The director entry (Тимофеев В.С., 11.04.2025) and the founder entry (Кусумов В.А., 10.03.2025) account for only two of them; the subjects of the other four are not identifiable from the выписка's own record section. If this entity's timeline becomes material to a designation, pull the underlying Р13014 filings. [s5505]
+- OpenSanctions annotates ИНН 9500026652 with topics ['sanction.linked','sanction.control'] (dataset ann_graph_topics), confirmed 05.09.2026 on an exact ИНН+ОГРН basis (s5523, s5524). This is NOT a designation — the entity itself is not on any sanctions list — but it is a graph annotation stating that OpenSanctions considers it linked to, and under the control of, a designated party. The most likely basis is the entity registered at the same Melitopol address under the same owner, ООО «Архангел» ИНН 9001027869, which IS designated by Ukraine's NSDC (programId UA-SA1644). If that is the basis, then this record's existing statement that «no sanctions currently applied by any of the 9 jurisdictions GUR lists it against» is still literally true but materially incomplete: the entity sits one address and one owner away from a designated company. Confirm the annotation's basis before relying on it — ann_graph_topics is OpenSanctions' own inference layer, not a listing authority. [s5523]
+- «ПРОЕКТ АРХАНГЕЛ» TIE UPGRADED FROM PLAUSIBLE TO SELF-DECLARED, 05.09.2026. This entity's own profile in rk.2035.university's national БАС (UAV-industry) company registry — an ID-CONFIRMED match on both ИНН 9500026652 and ОГРН 1249500004181, not a name collision — lists its corporate contact email as astra@proekt-arhangel.ru and its phone as +7 990 126-85-50, alongside 12 personnel, the Геническ (Херсонская область) address already on file from its Rosobrnadzor licence, and declared activity types «Разработка», «Дополнительное [образование]» and «Корпоративный квалификационный центр». The domain proekt-arhangel.ru is the same string as the @proekt_arhangel Telegram channel through which «Проект «Архангел»» / Филиппов М.Г. publishes, and it was registered on 16.07.2025 — six weeks before the 27.08.2025 Kalashnikov cooperation memorandum this record already tracks. That is a materially stronger basis than the location inference this record previously rested on: the tie is now asserted by the company ITSELF, on its own entry in a Russian government-adjacent industry registry, rather than inferred from press that names only the informal project. Two caveats keep this short of proof that this ИНН is the press-named party: the domain's WHOIS registrant is privacy-shielded, so nothing independently ties the domain to Филиппов; and a shared domain shows shared branding and infrastructure, not a specific contracting party. Retrieve the domain's pre-privacy registrant if any historical WHOIS record exists, and treat «which Архангел entity signed the Kalashnikov MOU» as still formally open. [s5525]
 - Опытно-производственная база «Архангел» runs its own armor-materials R&D program: live-fire testing of vehicle up-armoring kits against AK-74M (5.45mm armor-piercing, индекс 7Н10) and a modernized PKM machine gun (7.62mm), for informal ("народным путём") up-armoring of SVO vehicles — composite-material testing planned next. Direct weapons-effectiveness/armor R&D activity, not just drone electronics. Also newly found: a "Люберецкая школа БПЛА проекта «Архангел»" (Lyubertsy, Moscow oblast) training location distinct from the Zaporizhzhia training ground already on file. [s5443]
 - «ООО «Архангел Групп»» named explicitly (02.09.2026 B2B pitch to critical-infrastructure facility heads) as the contracting entity behind the «Архангел» interceptor-drone/facility-defense business — offering R&D/production, mobile defense teams, personnel training, and (on request) technology transfer for regional production. NOT yet cross-checked against EGRUL — possibly the actual legal vehicle behind Проект «Архангел», or a distinct related entity. Real next step: EGRUL lookup for "Архангел Групп". FOLLOWED UP 2026-09-04 (s5449): an egrul.nalog.ru open search for "Архангел Групп" found one live (non-liquidated) candidate — ООО "АРХАНГЕЛ ГРУПП", ИНН 9702081286, ОГРН 1267700086081, Москва, registered 12.03.2026, ГЕНЕРАЛЬНЫЙ ДИРЕКТОР Крючков Дмитрий Александрович. Registration timing (2 months before the observed B2B push) is suggestive but the director name does not match any name already on file for Проект «Архангел» (Филиппов, Тимофеев, Кусумов) — NOT confirmed as the same entity, an open lead only. Two same-named "Архангел-Групп" entities are excluded/liquidated (2632109180 since 2021, 6311085784 since 2017) and are not candidates. Separately spotted in the same search: a second "ООО «Архангел»" (ИНН 9108131213, Республика Крым, registered 14.04.2025) with director Тимофеев Владимир Сергеевич — the SAME name as the Zaporizhzhia entity's own GD. Not confirmed as the same person (no personal-ИНН cross-check done) but consistent with the training network's self-described multi-region footprint including Crimea — a real lead, not merged into this record. [s5448]
 - Training pipeline into named state/elite units, self-described: graduates of the «Архангел» training center serve in «Рубикон» (Russia's state-level Center for Advanced Unmanned Technologies), "78 полк БПС 51-ой армии," and "205-я бригада." Recruitment includes a 1-year "spec-contract" with a stated ₽3M+ signing bonus, restricted to UAV (БПС) roles only, age limit ≤45, minor criminal records tolerated. Graduates reportedly bypass normal military-commissariat distribution via a formal "отношение" (referral document) placing them directly with named friendly commanders — in substance, Архангел operates as a private military-recruitment brokerage alongside its drone-manufacturing/training business, not merely a training school. [s5448]
@@ -99,6 +102,10 @@
 | s5443 | Tgpost | Tgpost (TGPOST_multi_20230224-20230704_projectArchangel-dozor-armor-remote-control.txt) | — | — |
 | s5448 | Tgpost | Tgpost (TGPOST_multi_20260828-20260904_projectArchangel-week-interceptor-business-rubikon.txt) | — | — |
 | s5451 | EGRUL extract | EGRUL extract (EGRUL_OPEN_9702081286_20260904_arkhangel-grupp-followup.txt) | 2026-09-04 | — |
+| s5468 | Rospatent record | Rospatent record (ROSPATENT_FIPS_2024881195_20260904_arkhangel-genichesk-withdrawn-app.html) | 2026-09-04 | 2025-04-28 |
+| s5505 | EGRUL extract | EGRUL extract (EGRUL_9500026652_20260905_ooo-arkhangel-zaporizhzhie.pdf) | 2026-09-05 | 2026-09-05 |
+| s5523 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9001027869_20260905_ooo-arkhangel-melitopol-2.json) | 2026-09-05 | — |
+| s5525 | document | document (RK2035_9500026652_20260905_ooo-arkhangel-zaporizhzhie.json) | 2026-09-05 | 2026-09-05 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

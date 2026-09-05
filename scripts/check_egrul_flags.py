@@ -36,6 +36,23 @@ FLAGS = [
         "strawman without confirming the flagged field is the founder/owner one",
     ),
     (r"доступ ограничен", "access restricted (founder/director field)"),
+    (
+        r"сведени\w*\s+о\s+недостоверности",
+        "ФНС has entered a недостоверность (unreliable-data) record against the "
+        "entity — the phrasing used in the ЕГРЮЛ record-history section ('Внесение "
+        "в ЕГРЮЛ сведений о недостоверности сведений о юридическом лице'), which "
+        "the shorter 'сведения недостоверны' pattern above does NOT match. Read "
+        "the surrounding record entry for its ГРН/date, and check which field the "
+        "flag attaches to before drawing any nominee/strawman conclusion",
+    ),
+    (
+        r"предстоящем\s+исключении\s+юридического\s+лица",
+        "ФНС has resolved to STRIKE THE ENTITY OFF the register as a "
+        "недействующее юридическое лицо — look for the decision number/date and "
+        "the «Вестник государственной регистрации» publication issue nearby. On a "
+        "sanctioned entity this is a material event (dissolution frequently "
+        "precedes re-registration under a fresh name)",
+    ),
 ]
 
 

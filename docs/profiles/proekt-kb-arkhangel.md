@@ -56,6 +56,8 @@
 >
 > — proekt_arhangel#1094, 2026-09-02 — a formal B2B outreach letter to critical-infrastructure enterprise managers, the first primary-source document explicitly naming ООО «Архангел Групп» (ИНН 9702081286, see ooo-arkhangel-grupp) as the designated commercial contracting entity for the whole informal "группа компаний «Архангел»" ecosystem. (2026-09-02) [s5475]
 
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+
 ## Web & social presence
 
 ### Website

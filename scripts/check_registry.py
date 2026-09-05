@@ -138,7 +138,35 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
 
-    # --- 1. schema -------------------------------------------------------
+    # --- 0. corrections files apply at all --------------------------------
+    # extract_registry.py reads ONLY spec["set"] for the entities{}/people{}
+    # blocks. A correction written as bare top-level fields is not an error
+    # anywhere — it is simply skipped, silently, for as long as it sits in
+    # the file. Six such entries were found on 2026-09-05 that had never
+    # applied since the day they were written (2026-09-04), including
+    # tier_basis text on three Архангел entities; they were only noticed
+    # because a same-day domain_history edit failed to reach a rebuilt
+    # profile. Fail loudly on the shape instead of trusting authorship.
+    for fname, block, key_label in (("corrections_entities.json", "entities", "ИНН/slug"),
+                                    ("corrections_people.json", "people", "slug")):
+        path = REG / fname
+        if not path.exists():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as ex:
+            errors.append(f"{fname}: not valid JSON ({ex})")
+            continue
+        for key, spec in (data.get(block) or {}).items():
+            if not isinstance(spec, dict):
+                errors.append(f"{fname}: {block}['{key}'] must be an object")
+            elif "set" not in spec:
+                errors.append(
+                    f"{fname}: {block}['{key}'] has no 'set' key — its fields "
+                    f"({', '.join(k for k in spec if not k.startswith('_'))[:80]}) "
+                    f"are SILENTLY IGNORED by extract_registry.py. Wrap the "
+                    f"changed fields in {{\"set\": {{...}}}}; 'why' and "
+                    f"'verified_against' stay alongside it.")
     for i, e in enumerate(entities):
         for k in ENTITY_REQUIRED:
             if k not in e:
