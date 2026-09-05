@@ -34440,6 +34440,14 @@
         "source_id": "s1163",
         "title": "40% owner (per iStories 2024-01-19; not independently EGRUL-confirmed)",
         "to": null
+      },
+      {
+        "entity_name": "Федерация гонок дронов (беспилотных воздушных судов) России (ФГДР)",
+        "entity_slug": "fgdr-federatsiya-gonok-dronov-rossii",
+        "from": "2022-06-03",
+        "source_id": "s5661",
+        "title": "Президент (EGRUL-confirmed, unchanged since the entity's own registration date)",
+        "to": null
       }
     ],
     "sanctions": [],
@@ -34460,7 +34468,8 @@
     "_raw": {},
     "_verified_against": null,
     "_corrected": [
-      "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2492)."
+      "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2492).",
+      "2026-09-05: added the ФГДР role directly from a fresh EGRUL pull (s5661), confirming and dating precisely what this person's own notes had already said in prose ('headed... the Russian Drone Racing Federation') -- promoted from a prose mention to a sourced role[] entry once the entity itself was added to the registry."
     ],
     "aleph_matches": [
       {

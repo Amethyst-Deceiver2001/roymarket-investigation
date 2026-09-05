@@ -19,6 +19,44 @@
  ],
  "add_entities": [
   {
+   "slug": "fgdr-federatsiya-gonok-dronov-rossii",
+   "name_ru": "Общероссийская физкультурно-спортивная общественная организация «Федерация гонок дронов (беспилотных воздушных судов) России»",
+   "name_en": "Russian Public Organisation of Physical Culture and Sports \"Drone Racing Federation of Russia\"",
+   "name_latin": "Drone Racing Federation of Russia (DRFR)",
+   "legal_form": "Общественная организация",
+   "brand_ru": "ФГДР",
+   "inn": "9709081670",
+   "ogrn": "1227700322190",
+   "registered": "03.06.2022",
+   "address": "101000, г. Москва, вн.тер.г. муниципальный округ Басманный, ул. Покровка, д. 14/2 стр. 1, этаж/помещ 1/VI, ком./офис 2/50",
+   "okved_code": "94.99",
+   "okved_label": "Деятельность прочих общественных организаций и некоммерческих организаций, кроме религиозных и политических организаций",
+   "okved_secondary": [
+    {"code": "85.30", "label": "Обучение профессиональное"}
+   ],
+   "director": "Галаев Илья Викторович",
+   "director_history": [
+    {
+     "value": "Галаев Илья Викторович (Президент)",
+     "as_of": "2022-06-03",
+     "source_id": "s5661",
+     "note": "ИНН 770475114490. Named President in EGRUL from the entity's own registration date, unchanged as of the 05.09.2026 pull."
+    }
+   ],
+   "financials": [
+    {"year": "2022", "revenue": null, "profit": -22000.0, "source_id": "s0397", "note": "Форма 0710096. Учреждена 03.06.2022 -- частичный год. revenue not disclosed in this filing."},
+    {"year": "2023", "revenue": 14097000.0, "profit": -3945000.0, "source_id": "s0398", "note": "Также ОЦИС: остаток на начало -22 тыс., поступило 41,281 тыс., использовано 45,214 тыс., остаток на конец -3,954 тыс. (тыс. руб.)."},
+    {"year": "2024", "revenue": 230677000.0, "profit": 9104000.0, "source_id": "s0399", "note": "ОЦИС: остаток на начало -3,954 тыс., поступило 60,939 тыс., использовано 51,505 тыс., остаток на конец 5,481 тыс. (тыс. руб.). Revenue up 16x on FY2023."},
+    {"year": "2025", "revenue": 358872000.0, "profit": 17552000.0, "source_id": "s0400", "note": "ОЦИС: остаток на начало 5,481 тыс., поступило 21,350 тыс., использовано 2,033 тыс., остаток на конец 24,798 тыс. (тыс. руб.). Revenue up another 56% on FY2024."}
+   ],
+   "tier": "adjacent",
+   "tier_basis": "Added 2026-09-05 via a БФО-pull residual-document sweep: this entity's own filings had sat in data/sources/ unmined since 2026-08-20, orphaned because it was never itself added to the registry (only its president, Галаев И.В., was). Галаев is already recorded in this registry (source s1163, iStories 2024-01-19) as one of two undisclosed real beneficial owners of ООО «НПО Рустехдрон» (29.5%) and its production affiliate ООО «РТД-Защита» (40%) -- the same iStories piece names him as having headed this exact federation. EGRUL directly confirms Галаев as ФГДР's sitting President since its 03.06.2022 registration (s5661), so the entity-to-person tie is primary-source confirmed, not press-only. No document yet ties ФГДР itself to any ЦБСТ/РОЙ.МАРКЕТ corporate structure, contract, or product -- it is adjacent via its president's other, separately-confirmed affiliation, not directly. Its revenue trajectory (₽14.1m FY2023 -> ₽230.7m FY2024 -> ₽358.9m FY2025, a ~25x rise over two years for a sports federation) is itself notable and worth a closer read of what specifically it now does at that scale, but that is an open question, not yet an established ЦБСТ link.",
+   "products": [],
+   "why": [
+    "2026-09-05: found while mining a residual batch of already-pulled БФО filings that had never been parsed into any entity's financials[] -- this ИНН (9709081670) had no registry entity at all, only appearing as a name match (Галаев's own bio note, already on file, mentioning he 'headed... the Russian Drone Racing Federation'). Pulled a fresh EGRUL extract (s5661) to confirm the entity-person tie directly rather than relying on the press citation alone, then ran the existing БФО parser (already fixed the same day for the non-profit ОЦИС sheet) against its 4 already-archived filings (s0397-s0400, pulled 2026-08-20)."
+   ]
+  },
+  {
    "address": "125284, Москва, Ленинградский проспект, д. 31А, стр. 1, оф. 2/3",
    "cbst_tie": false,
    "charter_capital": 100000,
@@ -12657,7 +12695,10 @@
       "text": "2026-08-25 attempt at VK/TG product-line enrichment (per project's own VK/TG-as-primary-source rule) surfaced ONLY the other, already-disambiguated «Архангел» (ИНН 9500026652's @projectArchangel TG channel, 21.3K subs) and the Kalashnikov FPV-drone joint-production coverage tied to THAT entity -- correctly NOT attributed here per the existing note above. No VK/TG or product data found for this entity (9714079108) itself; products[] stays empty."
      }
     ],
-    "wb_overlap": "none_found"
+    "wb_overlap": "none_found",
+    "financials": [
+     {"year": "2025", "revenue": null, "profit": null, "source_id": "s0408", "note": "Two independent filings for FY2025 (s0408 via bo.nalog.gov.ru zip, s5537 via bfo_pull.py signed PDF) both confirmed by hand: the «Отчет о финансовых результатах» section is present (форма 0710002/КНД 0710096) but contains no data rows at all under the section header — not a parser miss, verified via pdftotext -layout on the signed PDF directly. Consistent with a dormant shell used as a designated corporate vehicle rather than an operating business."}
+    ]
    },
    "verified_against": "full EGRUL extract pulled directly 23.08.2026",
    "why": [
@@ -13226,6 +13267,10 @@
       "source_id": "s5659",
       "note": "ГРН 2255202202176."
      }
+    ],
+    "financials": [
+     {"year": "2024", "revenue": 26783000.0, "profit": 3062000.0, "source_id": "s0279", "note": "Форма 0710096, тыс. руб."},
+     {"year": "2025", "revenue": 164733000.0, "profit": 88000.0, "source_id": "s0280", "note": "Форма 0710096, тыс. руб. Revenue up ~6x on FY2024 while net profit collapsed to near-zero — consistent with rapid scale-up on thin margins for a young (registered Dec 2023) retailer."}
     ],
     "tier": "money-layer",
     "tier_basis": "Not part of the ЦБСТ/РОЙ.МАРКЕТ network — found while tracing the retail supply chain for the GAONENG FPV drone battery a Moscow Arbitration Court judgment (s0043) documents НПО «Рустехдрон» delivering to ООО «ДСГ» in 2023 (see ooo-npo-rustekhdron litigation[]). Included on its own merits: a Russian military-goods retailer (trading as «Военторг ИРПТОРГ») that self-describes as producing rations, clothing, drone-countermeasure (РЭБ) systems and drones for the Russian Armed Forces, and that markets this exact battery model with explicit military/security-structure language. There is NO confirmed link between this entity and the specific ДСГ purchase — the battery is sold at open retail by at least six Russian shops and nothing ties ДСГ's 2023 purchase to any one of them. Recorded as an adjacent finding from the same court-filing thread, not as the resolved supply chain for that transaction.",
@@ -15263,7 +15308,15 @@
      {
       "source_id": null,
       "text": "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): UNCONFIRMED, real name-collision risk. kingpro.global (WebFetch failed twice, cert expired) plausibly matches via secondary sources (address, founder/director surname Королев) but there are AT LEAST TWO other same-named \"КИНГПРО\" LLCs in Moscow, including an unrelated e-commerce retailer (ИНН 9729049032, director Маркина С.Е., domain king-pro.ru). If kingpro.global IS this entity, secondary sources describe UAS resistant to EW, tested/approved for Russian armed forces use -- high relevance IF confirmed. Do NOT attach as a product until a direct ИНН-on-site confirmation is done (retry fetch, check archive.org/Google cache, or EGRUL cross-check)."
+     },
+     {
+      "source_id": "s0417",
+      "text": "2026-09-05, mining the previously-unparsed БФО filings: the FY2025 filing's own signature block reads 'руководитель Королев Дмитрий Алексеевич' — a different name from the registered director on file, 'Королев Алексей Александрович' (director_history, as_of 2024-09-10, s0516). Same surname, different given name/patronymic. Could be an undocumented directorship change (no EGRUL re-pull done since 23.08.2026) or a filing-side error; not resolved here — do not silently merge into director_history without a fresh EGRUL confirmation of which name is current."
      }
+    ],
+    "financials": [
+     {"year": "2024", "revenue": null, "profit": null, "source_id": "s0416", "note": "Форма 0710096. Полностью нулевая подача: и «Отчет о финансовых результатах» (P&L), и «Отчет о целевом использовании средств» (ОЦИС: 6100=6200=6300=6400=0) не содержат ненулевых значений."},
+     {"year": "2025", "revenue": null, "profit": null, "source_id": "s0417", "note": "Форма 0710099 (полная, не упрощённая). «Отчет о финансовых результатах» пропускает строки 2110/2100/2200/2300/2400 (выручка/прибыль) целиком -- присутствуют только вспомогательные строки 2340/2350/2510/2500, все со значением 0 или «-». Подписант — Королев Дмитрий Алексеевич (см. open_questions: расхождение с зарегистрированным директором)."}
     ],
     "wb_overlap": "none_found"
    },
@@ -15271,7 +15324,8 @@
    "why": [
     "full EGRUL extract pulled directly 23.08.2026 (ul-1247700607450-20260823133853.pdf). Sole founder = sole director, registered 2024. ОКВЭД is a direct, explicit UAV-manufacture code — no declared/actual gap, unlike most of this registry.",
     "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9725168367). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-    "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 14 candidates -- all unrelated food-science patents (an unrelated \"Гуревич Андрей Владимирович\" and a federal nutrition research institute)."
+    "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 14 candidates -- all unrelated food-science patents (an unrelated \"Гуревич Андрей Владимирович\" and a federal nutrition research institute).",
+    "2026-09-05: mined both previously-unparsed БФО filings (s0416, s0417) — both confirmed genuinely zero/blank, not a parser miss (checked by hand). Surfaced a director-name discrepancy in the FY2025 filing's signature block, recorded as an open question rather than resolved."
    ]
   },
   "ooo-kleverkopter": {
