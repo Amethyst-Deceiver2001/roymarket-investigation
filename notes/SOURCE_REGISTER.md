@@ -4,6 +4,12 @@
 answers *"which entities have we checked?"*; this file answers *"checked against
 **what**, and can we do it ourselves?"*
 
+The 2026-09-05 coverage audit that produced both — including case-study
+candidates, the manual-task queue and a staged cutoff plan — is published at
+https://claude.ai/code/artifact/8957e376-c07c-4c06-bddf-13bead303b99
+(a working document, not the `docs/index.html` brief companion, which still
+republishes only at an explicit investigation cutoff).
+
 **Why this exists.** Three times in one session (2026-09-05) an entity already
 fully covered in `data/registry/` was reported as an uncovered gap, because
 "have we checked X?" was answered from memory instead of from data. The
