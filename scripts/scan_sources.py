@@ -174,14 +174,33 @@ def zip_text(path: Path, _depth: int = 0, max_pages: int | None = 5) -> str:
                                 chunks.append(" ".join(str(c) for c in row if c is not None))
                     except Exception as e:
                         chunks.append(f"[xlsx parse failed for {name}: {e}]")
-                elif lower.endswith((".txt", ".xml")):
+                elif lower.endswith((".txt", ".xml", ".csv", ".md")):
                     chunks.append(data.decode("utf-8", errors="ignore"))
                 elif lower.endswith(".pdf"):
                     chunks.append(f"--- {name} ---")
                     chunks.append(pdf_bytes_text(data, max_pages=max_pages))
-                elif lower.endswith((".tiff", ".tif")):
+                elif lower.endswith((".tiff", ".tif", ".jpg", ".jpeg", ".png", ".webp")):
                     chunks.append(f"--- {name} (OCR) ---")
                     chunks.append(ocr_image_bytes(data, Path(name).suffix or ".tiff"))
+                elif lower.endswith((".docx", ".doc", ".rtf", ".odt", ".xls")):
+                    # 2026-09-05: a real zip member of exactly this shape
+                    # (a signed ГК docx sitting next to a .sign file) was
+                    # silently invisible before this branch existed — see
+                    # office_text/legacy_xls_text's own docstrings for why
+                    # this class of file turned out to matter.
+                    import tempfile
+                    chunks.append(f"--- {name} ---")
+                    suffix = Path(name).suffix or ".docx"
+                    try:
+                        with tempfile.NamedTemporaryFile(suffix=suffix) as tmpf:
+                            tmpf.write(data)
+                            tmpf.flush()
+                            if suffix == ".xls":
+                                chunks.append(legacy_xls_text(Path(tmpf.name)))
+                            else:
+                                chunks.append(office_text(Path(tmpf.name)))
+                    except Exception as e:
+                        chunks.append(f"[office extract failed for {name}: {e}]")
                 elif lower.endswith(".zip"):
                     import io
                     try:
@@ -204,6 +223,93 @@ def _zip_bytes_text(data: bytes, depth: int, max_pages: int | None = 5) -> str:
         return zip_text(Path(tmp.name), depth, max_pages)
 
 
+def office_text(path: Path) -> str:
+    """docx/doc/rtf/odt via macOS's built-in `textutil` — no new dependency,
+    handles all four formats through one converter. Added 2026-09-05 after
+    discovering 212 .docx + 35 .doc + 2 .rtf + 4 .odt files in data/sources/
+    had NEVER been text-extracted (extract_text had no branch for them at
+    all) — the first .docx checked this way turned out to be a full signed
+    ГОЗ contract (ГК «Характер-К», Минобороны РФ) sitting completely unmined."""
+    try:
+        r = subprocess.run(["textutil", "-convert", "txt", "-stdout", str(path)],
+                           capture_output=True, timeout=60)
+        return r.stdout.decode("utf-8", errors="ignore")
+    except Exception as e:
+        return f"[textutil failed: {e}]"
+
+
+def xlsx_text(path: Path) -> str:
+    """Same openpyxl approach zip_text already uses for an xlsx zip member,
+    applied to a standalone top-level .xlsx (also unhandled before 2026-09-05)."""
+    try:
+        import warnings
+        import openpyxl
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            wb = openpyxl.load_workbook(path, data_only=True, read_only=True)
+        chunks = []
+        for ws in wb.worksheets:
+            for row in ws.iter_rows(values_only=True):
+                chunks.append(" ".join(str(c) for c in row if c is not None))
+        return "\n".join(chunks)
+    except Exception as e:
+        return f"[xlsx parse failed: {e}]"
+
+
+def legacy_xls_text(path: Path) -> str:
+    """openpyxl can't read the old binary .xls format at all; LibreOffice
+    (already installed as `soffice`) converts it to csv headlessly. Slower
+    per-file (~2-4s LibreOffice startup) than the other extractors, but only
+    29 files hit this path and it's cached after the first run. First real
+    file converted this way was a Мин­обороны РФ государственный контракт
+    исполнения report — same pattern as the .docx gap, confirming this was
+    worth fixing rather than leaving as a known, accepted gap."""
+    import tempfile
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            r = subprocess.run(
+                ["soffice", "--headless", "--convert-to", "csv",
+                 "--outdir", tmp, str(path)],
+                capture_output=True, timeout=90,
+            )
+            outs = list(Path(tmp).glob("*.csv"))
+            if not outs:
+                return f"[soffice produced no output: {r.stderr.decode(errors='ignore')[:200]}]"
+            return outs[0].read_text(encoding="utf-8", errors="ignore")
+    except Exception as e:
+        return f"[soffice convert failed: {e}]"
+
+
+def image_ocr_text(path: Path) -> str:
+    """Top-level scanned image (jpg/png/tif/webp) — reuses ocr_image_bytes,
+    already relied on for TIFF pages found inside zip bundles, but never
+    called for a standalone image file before 2026-09-05."""
+    return ocr_image_bytes(path.read_bytes(), path.suffix)
+
+
+def rar_text(path: Path) -> str:
+    """.rar has no Python stdlib support; `bsdtar` (already on macOS) can
+    list and extract the rar3/4-era archives zakupki attachments actually
+    use (confirmed 2026-09-05 against a real ZAKUPKI_ATTACH_*.rar — bsdtar
+    extracted a nested .docx cleanly). Extracts to a temp dir and reuses
+    extract_text on each member, same recursive idea as zip_text's nested-zip
+    branch, so a docx/pdf/xlsx inside a rar gets the same handling as one
+    inside a zip."""
+    import tempfile
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            subprocess.run(["bsdtar", "-xf", str(path), "-C", tmp],
+                           capture_output=True, timeout=60)
+            chunks = []
+            for member in sorted(Path(tmp).rglob("*")):
+                if member.is_file():
+                    chunks.append(f"--- {member.relative_to(tmp)} ---")
+                    chunks.append(extract_text(member))
+            return "\n".join(chunks)
+    except Exception as e:
+        return f"[rar extract failed: {e}]"
+
+
 def extract_text(path: Path) -> str:
     suf = path.suffix.lower()
     if suf == ".pdf":
@@ -212,13 +318,23 @@ def extract_text(path: Path) -> str:
         text = html_text(path)
     elif suf == ".zip":
         text = zip_text(path)
-    elif suf in (".csv", ".txt"):
+    elif suf in (".csv", ".txt", ".xml", ".md"):
         text = path.read_text(encoding="utf-8", errors="ignore")
     elif suf == ".json":
         # scripts/egrul_batch_pull.py writes structured EGRULAPI_*.json
         # pulls here; flattening to a plain string lets the same ИНН/ОГРН/
         # entity-name regex pass over it as everything else.
         text = path.read_text(encoding="utf-8", errors="ignore")
+    elif suf in (".docx", ".doc", ".rtf", ".odt"):
+        text = office_text(path)
+    elif suf == ".xlsx":
+        text = xlsx_text(path)
+    elif suf == ".xls":
+        text = legacy_xls_text(path)
+    elif suf in (".jpg", ".jpeg", ".png", ".tif", ".tiff", ".webp"):
+        text = image_ocr_text(path)
+    elif suf == ".rar":
+        text = rar_text(path)
     else:
         return ""
     # pdftotext -layout pads column gaps with runs of spaces to preserve
@@ -250,18 +366,31 @@ def main() -> None:
     all_new_entities = {}  # key -> {display, files}
     all_new_people = {}
 
-    files = sorted(p for p in SOURCES.iterdir() if p.is_file())
-    to_process = [p for p in files if p.name not in cache]
+    # rglob, not iterdir: a manually-unzipped ZAKUPKI_ATTACH folder was found
+    # 2026-09-05 sitting one level deep, invisible to a top-level-only scan
+    # (2 files, never hashed/typed/mined). cache_key matches bare filename
+    # for top-level files (preserves every existing cache hit) and falls
+    # back to "subdir/filename" only for nested files, which were never
+    # cached under any key before.
+    files = sorted(p for p in SOURCES.rglob("*")
+                   if p.is_file() and p.name != ".DS_Store")
+
+    def cache_key(p: Path) -> str:
+        rel = p.relative_to(SOURCES)
+        return str(rel) if len(rel.parts) > 1 else rel.name
+
+    to_process = [p for p in files if cache_key(p) not in cache]
     print(f"{len(files)} files total, {len(cache)} already cached, "
           f"{len(to_process)} to (re)process", file=sys.stderr)
 
     for path in to_process:
         text = extract_text(path)
+        key = cache_key(path)
         if not text.strip():
-            cache[path.name] = {"kind": "?", "inns": [], "ogrns": [], "entities": [], "people": []}
+            cache[key] = {"kind": "?", "inns": [], "ogrns": [], "entities": [], "people": []}
             continue
         hits = scan(text)
-        cache[path.name] = {
+        cache[key] = {
             "kind": path.suffix.lstrip("."),
             "inns": hits["ИНН"],
             "ogrns": hits["ОГРН"],
@@ -273,24 +402,25 @@ def main() -> None:
     CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     for path in files:
-        entry = cache.get(path.name, {"kind": "?", "inns": [], "ogrns": [], "entities": [], "people": []})
+        key = cache_key(path)
+        entry = cache.get(key, {"kind": "?", "inns": [], "ogrns": [], "entities": [], "people": []})
         inns = entry["inns"]
         ogrns = entry["ogrns"]
         entities = entry["entities"]
         people = entry["people"]
-        manifest_rows.append((path.name, entry["kind"], inns, ogrns, entities))
+        manifest_rows.append((key, entry["kind"], inns, ogrns, entities))
 
         for e in entities:
-            key = norm(e)
-            if not key or key in brief_text:
+            ekey = norm(e)
+            if not ekey or ekey in brief_text:
                 continue
-            all_new_entities.setdefault(key, {"display": e, "files": set()})["files"].add(path.name)
+            all_new_entities.setdefault(ekey, {"display": e, "files": set()})["files"].add(key)
         for p in people:
-            key = norm(p)
-            words = [w for w in key.split() if len(w) > 1]
+            pkey = norm(p)
+            words = [w for w in pkey.split() if len(w) > 1]
             if not words or all(w in brief_text.split() for w in words):
                 continue
-            all_new_people.setdefault(key, {"display": p, "files": set()})["files"].add(path.name)
+            all_new_people.setdefault(pkey, {"display": p, "files": set()})["files"].add(key)
 
     # Manifest: filename -> what it's about, for sorting/lookup without renaming files.
     lines = [f"# data/sources/ manifest — {len(files)} files\n",

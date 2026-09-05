@@ -33,6 +33,13 @@
 |---|---|---|
 | 129110, Москва, пер. Банный, д. 3, помещ. 208 | 2024-02-27 |  [s0228] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | — | — | [s0384] |
+| 2025 | — | — | [s0387] |
+
 ## Sanctions & screening
 
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), Canada (Special Economic Measures Act), Australia (Autonomous Sanctions, Russia), Ukraine (war-sanctions.gur.gov.ua, military-industry listing), Ukraine (Presidential sanctions decree/list)** [s0574]
@@ -79,6 +86,8 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0228 | EGRUL extract | EGRUL extract (ul-1247700190430-20260815005804.pdf) | — | 2026-08-15 |
+| s0384 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| s0387 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s0572 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7100032961_20260824_ooo-tsentr-bespilotnykh-sistem-tula.json) | 2026-08-24 | 2026-08-24 |
 | s0574 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9702064851_20260824_ano-tsbst-centre-for-unmanned-systems-technologies.json) | 2026-08-24 | — |
 | s0970 | GUR war-sanctions record | GUR war-sanctions record (GUR_20260824_delta-cbts611000-sample1.html) | 2026-08-24 | — |

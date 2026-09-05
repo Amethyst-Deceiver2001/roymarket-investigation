@@ -187,6 +187,33 @@ hits will belong to large, already-well-documented state defense primes
 enormous by nature — triage for what's actually new to this investigation
 before spending a `fetch-documents` pass on it.
 
+**Record every zakupki triage decision in the structured `zakupki_review`
+field, not only in prose.** `scripts/zakupki_coverage.py` is the "are we
+done with zakupki?" report, and its zero-wired heuristic cannot by itself
+tell *nobody has read this* from *somebody read it and correctly decided
+not to wire anything* — and the second case is the common one (a generic
+small-supplier footprint; a state prime whose presence is enormous by
+nature; an academic-fee-scale personal ИНН). On 2026-09-05 that made **10
+of its 11 flagged "high-value candidates" false positives**, every one
+already triaged on 2026-08-30/31 and recorded as such in the record's own
+prose notes — an entire work session's worth of misdirection. So when a
+review closes, set on the entity/person via `corrections.json`:
+
+```json
+"zakupki_review": {"as_of": "YYYY-MM-DD",
+                   "outcome": "wired" | "partial" | "closed",
+                   "note": "what was read and why it was/wasn't wired"}
+```
+
+`closed` = reviewed and deliberately not wired. `partial` = some wired, a
+reviewed remainder deliberately left. The script treats this field as
+authoritative and drops such records from the candidate list; it also
+carries a prose backstop (`REVIEW_PROSE_RE`) that loudly flags a record
+whose notes say it was reviewed but which has no structured field, so a
+missing one fails visibly instead of silently re-flagging. Trust
+`--gaps-only` output over your own file counts — a gap list derived from
+counting files in `data/sources/` reproduces exactly this error.
+
 **`scripts/tg_scan_users.py`** (added 2026-09-04, sibling to `tg_scan.py`)
 catalogs a channel's member/participant list rather than its message
 history — usernames, profile names, exposed phone numbers, and a flag for
@@ -263,6 +290,46 @@ failure modes this project has actually hit:
   either let the user run it in their own terminal instead, or make clear
   you're starting a background task they'll be notified about — don't
   silently launch it in the background and go quiet.
+
+**An all-null result for one entity is a parser signal, not a finding.** When
+a parser returns nothing for *every* document belonging to a single record,
+suspect the parser before concluding the entity has no figures. Two distinct
+bugs in `parse_bfo_financials.py` were found this way on 2026-09-05, both
+having silently corrupted or suppressed real data across the whole registry:
+
+- **Non-profits file their money somewhere else.** An АНО/фонд filing form
+  0710096 has an «Отчет о финансовых результатах» sheet that is empty *by
+  construction* — an НКО reports no Выручка and no Чистая прибыль. The real
+  numbers live in the «Отчет о целевом использовании средств» (ОЦИС, ОКУД
+  0710003): line 6200 targeted funding received, 6300 used, 6100/6400
+  opening and closing balances. The parser read only the P&L, so every
+  non-profit in the registry came back `revenue=None profit=None`, which is
+  indistinguishable from "nothing on file". That hid ₽269.8m of FY2024
+  funding for АНО «ЦБСТ» — the investigation's own core entity — behind six
+  filings that had been sitting in `data/sources/` the whole time. These
+  figures are recorded under `funds_*` keys and **must never be presented as
+  revenue or turnover**: targeted non-profit funding is a different thing and
+  conflating them would be a factual error in a sanctions brief. Two gotchas
+  worth keeping: the ОЦИС sheet name is truncated to 31 chars by Excel
+  («Отчет о целевом использовании д»), so match a prefix; and line 6300 is
+  printed both bare (`98 047`) and parenthesised (`(275 587)`), so it must be
+  sign-normalised or the same quantity lands with opposite signs depending on
+  the filing. Every parsed row is now checked against the sheet's own
+  identity `6100 + 6200 − 6300 = 6400`.
+- **A filing's `inns` list is not ordered filer-first.** It includes related
+  parties, so picking the first entry that happens to be in the registry
+  attributes the filing to whichever related party sorts first — it credited
+  фонд «Градислава»'s FY2025 filing to ООО «Заволжское», a commercial LLC
+  that would then have carried another organisation's non-profit funding as
+  its own. The filename is authoritative (`РЕСУРС_БФО_<filer ИНН>_<year>_…`,
+  `BFO_<filer ИНН>_<year>_…`); read the filer off it and fall back to `inns`
+  only when the name carries none.
+
+`tests/test_bfo_parser.py` locks down both, plus the commercial path, the
+same way `tests/test_zakupki_parser.py` does for contract cards — run it
+after any change to `parse_one()`. A cheap independent check that
+attribution is right: consecutive filing years should chain, each year's
+6100 equalling the previous year's 6400.
 
 ## Primary-source documents: check `data/sources/` before re-downloading
 

@@ -7,8 +7,38 @@
 ## At a glance
 
 - **Legal form:** AO (joint-stock company)
+- **Registered:** 2011-01-26
+- **Address:** 197022, г. Санкт-Петербург, вн.тер.г. муниципальный округ Аптекарский остров, ул. Академика Павлова, д. 14А, литера А, офис 26-Н, помещ. 10
+- **Director:** Скорых Сергей Валерьевич
+- **Charter capital:** ₽1,161,309,000
 - **ОКВЭД:** 26.30.13 — Производство средств связи, выполняющих функцию систем управления и мониторинга
 - **Wildberries overlap:** none_found
+
+## Ownership & corporate history
+
+### Director
+
+| Value | As of | Note |
+|---|---|---|
+| Скорых Сергей Валерьевич | 2018-05-10 | Генеральный директор, личный ИНН 780212544531. ГРН 7187847631481 от 10.05.2018 for the person record; the ГРН carrying the ДОЛЖНОСТЬ «ГЕНЕРАЛЬНЫЙ ДИРЕКТОР» is 8187847136425 от 09.06.2018, and the most recent amendment to this person's entry is ГРН 2237803085177 от 11.11.2023. Still the sole лицо, имеющее право без доверенности действовать от имени юридического лица as of the extract date 23.08.2026. [s0495] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Не раскрыты в ЕГРЮЛ (акционерное общество) | 2026-08-23 | An АО does not list its shareholders in ЕГРЮЛ — the register only names the держатель реестра акционеров, here АО «РТ-Регистратор» (ОГРН 1025403189790, ИНН 5407175878, ГРН 2197847995365 от 12.03.2019). РТ-Регистратор is Ростех's own share registrar, so its appointment places this entity inside the Ростех perimeter — a structural indication, not a statement of who the shareholders are, which this document cannot establish. Recorded as an explicit not-disclosed entry rather than left empty, so the gap is visible as a document-type limitation and not as unread work. [s0495] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 1161309000 | 2022-12-09 | Уставный капитал ₽1,161,309,000, ГРН 2227805334854 от 09.12.2022. [s0495] |
+
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 197022, г. Санкт-Петербург, вн.тер.г. муниципальный округ Аптекарский остров, ул. Академика Павлова, д. 14А, литера А, офис 26-Н, помещ. 10 | 2024-02-14 | ГРН 2247800332030 от 14.02.2024. [s0495] |
 
 ## Products
 
@@ -21,15 +51,15 @@
 
 ## Government contracts
 
-- customer: Министерство обороны Российской Федерации; reg_number: 1770425226115000509; date: 2015; value_rub: 92000000; items: Largest of 7 direct МО/Минпромторг contracts found (out of 154 total zakupki hits, ₽437.06m aggregate, mostly routine/municipal); this is the mil-relevant subset — ₽338.92m across МО (₽232.87m) and Минпромторг (₽75m ОКР-style) contracts. [s3214]
-- customer: Министерство обороны Российской Федерации; reg_number: 1770425226117000583; date: 2017; value_rub: 67633097; items: Second-largest direct МО contract for this entity. [s3217]
-- customer: Министерство обороны Российской Федерации; reg_number: 0173100004511002671; date: 2011; value_rub: 31260000; items: Third direct МО contract; entity also has 4 smaller МО contracts (₽20.2m, ₽15.9m, ₽11.87m, ₽6.25m) and one ₽75m Минпромторг contract not itemized here — see mine_zakupki.py --inn 7813491943 for the full breakdown. [s3146]
-- customer: Министерство обороны Российской Федерации; date: 2013-2016 (9 contracts, 28.03.2013-14.10.2014); value_rub: 73028219; items: AGGREGATE -- 9 Минобороны contracts, 2013-2016, ₽73,028,219 combined, distinct from the already-itemized 7-contract/₽338.92m mil-relevant subset above. CORRECTED 2026-09-01: this entry was previously duplicated (two near-identical rows, one with reg_number null and one with reg_number 0173100004511002669) -- merged into one. The 0173100004511002669 reg_number was also wrong: that specific contract card is a real but unrelated 2011 Минобороны contract (₽15,900,000, "Модернизация стационарного автоматизированного комплекса контроля безопасности связи радиолиний КВ диапазона Р-452С"), already covered by the "4 smaller МО contracts" note on the 7-contract subset entry below -- its date (17.03.2011) never matched this aggregate's own claimed 2013-2016 range, which should have been caught at the time. A follow-up zakupki_customer_clusters.py re-scan (2026-09-01) found an 8-contract/₽57,128,219 unwired Минобороны cluster (14.10.2014-28.03.2013) that sums, to the ruble, with the mis-cited ₽15,900,000 contract to this entry's own total (57,128,219 + 15,900,000 = 73,028,219 exactly) -- strong evidence the "8 new" contracts are actually 8 of this same already-counted 9-contract cluster, not new money, and were not wired again to avoid double-counting. reg_number left null since no single contract represents the aggregate; the true 9-member reg-number list is not separately recorded. [s3144]
-- customer: АО «Концерн «Моринформсистема-Агат»»; reg_number: 1772054420822000003; date: 2022-03-28; value_rub: 54900000; items: Аппаратно-программный комплекс, моделирующий функционирование автоматизированного канала радиотехнической разведки (АПК) -- a hardware/software complex simulating an automated radio-technical reconnaissance (SIGINT) channel, supplied to Концерн «Моринформсистема-Агат», Russia's principal naval C4I/combat-systems integrator (part of the naval defence-electronics cluster) -- a defence-prime customer relationship, distinct from the routine regional/municipal government supply that makes up most of this entity's zakupki footprint. Found 2026-09-01 via zakupki_customer_clusters.py non-recurring-tail review. [s3218]
+- customer: Министерство обороны Российской Федерации; date: 2015; items: Largest of 7 direct МО/Минпромторг contracts found (out of 154 total zakupki hits, ₽437.06m aggregate, mostly routine/municipal); this is the mil-relevant subset — ₽338.92m across МО (₽232.87m) and Минпромторг (₽75m ОКР-style) contracts.; reg_number: 1770425226115000509; value_rub: 92000000 [s3214]
+- customer: Министерство обороны Российской Федерации; date: 2017; items: Second-largest direct МО contract for this entity.; reg_number: 1770425226117000583; value_rub: 67633097 [s3217]
+- customer: Министерство обороны Российской Федерации; date: 2011; items: Third direct МО contract; entity also has 4 smaller МО contracts (₽20.2m, ₽15.9m, ₽11.87m, ₽6.25m) and one ₽75m Минпромторг contract not itemized here — see mine_zakupki.py --inn 7813491943 for the full breakdown.; reg_number: 0173100004511002671; value_rub: 31260000 [s3146]
+- customer: Министерство обороны Российской Федерации; date: 2013-2016 (9 contracts, 28.03.2013-14.10.2014); items: AGGREGATE -- 9 Минобороны contracts, 2013-2016, ₽73,028,219 combined, distinct from the already-itemized 7-contract/₽338.92m mil-relevant subset above. CORRECTED 2026-09-01: this entry was previously duplicated (two near-identical rows, one with reg_number null and one with reg_number 0173100004511002669) -- merged into one. The 0173100004511002669 reg_number was also wrong: that specific contract card is a real but unrelated 2011 Минобороны contract (₽15,900,000, "Модернизация стационарного автоматизированного комплекса контроля безопасности связи радиолиний КВ диапазона Р-452С"), already covered by the "4 smaller МО contracts" note on the 7-contract subset entry below -- its date (17.03.2011) never matched this aggregate's own claimed 2013-2016 range, which should have been caught at the time. A follow-up zakupki_customer_clusters.py re-scan (2026-09-01) found an 8-contract/₽57,128,219 unwired Минобороны cluster (14.10.2014-28.03.2013) that sums, to the ruble, with the mis-cited ₽15,900,000 contract to this entry's own total (57,128,219 + 15,900,000 = 73,028,219 exactly) -- strong evidence the "8 new" contracts are actually 8 of this same already-counted 9-contract cluster, not new money, and were not wired again to avoid double-counting. reg_number left null since no single contract represents the aggregate; the true 9-member reg-number list is not separately recorded.; value_rub: 73028219 [s3144]
+- customer: АО «Концерн «Моринформсистема-Агат»»; date: 2022-03-28; items: Аппаратно-программный комплекс, моделирующий функционирование автоматизированного канала радиотехнической разведки (АПК) -- a hardware/software complex simulating an automated radio-technical reconnaissance (SIGINT) channel, supplied to Концерн «Моринформсистема-Агат», Russia's principal naval C4I/combat-systems integrator (part of the naval defence-electronics cluster) -- a defence-prime customer relationship, distinct from the routine regional/municipal government supply that makes up most of this entity's zakupki footprint. Found 2026-09-01 via zakupki_customer_clusters.py non-recurring-tail review.; reg_number: 1772054420822000003; value_rub: 54900000 [s3218]
 
 ## State-program participation
 
-- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.30.13 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.30.13 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
 
 ## Patents
 
@@ -317,6 +347,7 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| s0495 | EGRUL extract | EGRUL extract (ul-1117847020400-20260823133710.pdf) | — | 2026-08-23 |
 | s0797 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7813491943_20260824_ao-nii-vektor.json) | 2026-08-24 | — |
 | s1026 | Rospatent patent record | Rospatent patent record (PATENT_RU2763583C2_2026-08-24_ao-nii-vektor.json) | — | — |
 | s1051 | Rospatent patent record | Rospatent patent record (PATENT_RU2861850C1_2026-08-24_ao-nii-vektor.json) | — | — |

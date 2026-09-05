@@ -298,10 +298,19 @@ def main() -> int:
     if CACHE.exists() and not args.all:
         cache = json.loads(CACHE.read_text(encoding="utf-8"))
 
-    files = sorted(p for p in SOURCES.iterdir()
+    # rglob, not iterdir: a manually-unzipped ZAKUPKI_ATTACH folder was found
+    # 2026-09-05 sitting one level deep, invisible to a top-level-only scan.
+    # cache_key matches the bare filename for top-level files (preserves
+    # every existing cache hit) and only falls back to "subdir/filename" for
+    # nested files, which were never cached under any key before.
+    files = sorted(p for p in SOURCES.rglob("*")
                    if p.is_file() and p.name not in ("MANIFEST.md", ".DS_Store"))
 
-    to_process = [p for p in files if p.name not in cache]
+    def cache_key(p: Path) -> str:
+        rel = p.relative_to(SOURCES)
+        return str(rel) if len(rel.parts) > 1 else rel.name
+
+    to_process = [p for p in files if cache_key(p) not in cache]
     if args.limit:
         to_process = to_process[:args.limit]
 
@@ -311,14 +320,15 @@ def main() -> int:
     CACHE.parent.mkdir(parents=True, exist_ok=True)
     for i, path in enumerate(to_process, 1):
         t0 = time.monotonic()
+        key = cache_key(path)
         try:
-            cache[path.name] = process_file(path)
+            cache[key] = process_file(path)
         except Exception as e:
-            cache[path.name] = {"type": None, "type_method": None,
+            cache[key] = {"type": None, "type_method": None,
                                 "as_of": None, "as_of_method": None,
                                 "sha256": None, "sample": f"[error: {e}]"}
         elapsed = time.monotonic() - t0
-        print(f"  {i}/{len(to_process)}  {elapsed:5.1f}s  {path.name}")
+        print(f"  {i}/{len(to_process)}  {elapsed:5.1f}s  {key}")
         # Write after every file, not just at the end — a zip full of
         # scanned pages can take minutes per file; losing all of it to an
         # interrupt or a killed process would make this unsafe to run and
@@ -329,7 +339,7 @@ def main() -> int:
     # sha256 was added after most entries were first cached — backfill it
     # for anything already cached (a plain hash, not a re-extraction, so
     # this is cheap even across hundreds of PDFs/zips).
-    by_name = {p.name: p for p in files}
+    by_name = {cache_key(p): p for p in files}
     hashed = 0
     for name, entry in cache.items():
         if entry.get("sha256"):

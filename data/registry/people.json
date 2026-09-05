@@ -145,6 +145,11 @@
       "note": "The organisation’s public voice; makes the technopark and РОЙ.МАРКЕТ announcements personally. Primary doc"
     },
     "passport": "Russian passport 4007 084158",
+    "zakupki_review": {
+      "as_of": "2026-08-31",
+      "outcome": "closed",
+      "note": "1 unwired archived card, non-recurring, small value — incidental personal-capacity activity, not ЦБСТ-relevant."
+    },
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
       "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\", position \"Председатель Правления\" -- this is ЦБСТ's own full legal name (ano-tsbst-centre-for-unmanned-systems-technologies), and \"Председатель Правления\" is an exact-title match to this record's already-documented Chairman-of-the-Board role. Filled in the previously-null `entity_slug` on that existing role using this corroboration -- the role text itself was already correct, it just wasn't linked to a specific registry entity_slug before now.",
@@ -152,7 +157,8 @@
       "2026-08-25: OSINT research pass flagged a likely identity mismatch between this record's DOB (inherited from an OpenSanctions match) and the actual ЦБСТ chairman's press-reported biography. See notes field for full reasoning. This is exactly the kind of error the project's ИНН/ОГРН-checksum discipline exists to catch for corporate identifiers -- same seriousness applies to a misattributed personal identity.",
       "2026-08-25: photo/social-media OSINT research pass.",
       "2026-08-26 aleph_followup.py fetch pass: \"ИП Безруков Андрей Анатольевич\" (Russian companies OGRN-2016 dataset, exact full-ФИО match INCLUDING the patronymic Анатольевич) gives a personal ИНН directly (s2064). Worth noting for the identity-mismatch flag above: this record's patronymic matches the correct 1986-born ЦБСТ chairman, not the Олегович-patronymic 1960-born SVR-illegal namesake — corroborates (does not by itself prove DOB, since an ИП/OGRN record carries no birth date) that this is the right Андрей Безруков. A second customs-declarations hit for the same name (\"через Кащеева Александра Леонидовича\", Ульяновская обл. address) was NOT wired in — the address plausibly belongs to the customs broker/intermediary named in that record, not to Безруков himself, and does not cleanly attach to a specific field.",
-      "2026-08-26: user checked rupep.org directly for this person (the correct, 1986-born ЦБСТ chairman) -- NOT listed. Negative-verification result, worth recording so this isn't re-checked as if untried: RuPEP does not carry a profile for him as of this date, unlike Якушев (rupep.org/ru/person/63, see vladimir-vadimovich-yakushev)."
+      "2026-08-26: user checked rupep.org directly for this person (the correct, 1986-born ЦБСТ chairman) -- NOT listed. Negative-verification result, worth recording so this isn't re-checked as if untried: RuPEP does not carry a profile for him as of this date, unlike Якушев (rupep.org/ru/person/63, see vladimir-vadimovich-yakushev).",
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -716,9 +722,15 @@
         "text": "2026-08-24: OpenSanctions screening matched this name to a DIFFERENT, more famous person — Dmitriy Sergeevich Peskov, Vladimir Putin's Kremlin press secretary (b. 1967-10-17, Moscow) — whose OpenSanctions role description (press secretary, Crimea annexation commentary) does NOT match this registry's Дмитрий Песков (Presidential special representative for digital/technological development, CEO АНО «Платформа НТИ»). REJECTED as a match — same name, different real person. Do not attach this sanctions record to this person."
       }
     ],
+    "zakupki_review": {
+      "as_of": "2026-08-31",
+      "outcome": "closed",
+      "note": "6 unwired archived cards, all РАНХиГС, ₽728,220 combined 2023 — academic/consulting-fee scale, not procurement of substance."
+    },
     "_corrected": [
       "2026-08-24: OpenSanctions match explicitly checked and rejected — name collision with Kremlin press secretary Dmitry Peskov.",
-      "2026-08-26: rupep.org profile (s2606) for this registry's Дмитрий Песков (Presidential special representative for digital/technological development, CEO АНО «Платформа НТИ») -- role text matches this RuPEP profile exactly, and RuPEP's own career table lists both roles verbatim. This is a DIFFERENT person from the Kremlin press secretary Dmitry Sergeevich Peskov already correctly rejected in this record's open_questions[] (b.1967, Moscow) -- RuPEP gives dob 26.12.1975, birthplace Voronezh, ИНН 772919018611, none of which match the press secretary. Confirms the earlier rejection was correct rather than resolving it away."
+      "2026-08-26: rupep.org profile (s2606) for this registry's Дмитрий Песков (Presidential special representative for digital/technological development, CEO АНО «Платформа НТИ») -- role text matches this RuPEP profile exactly, and RuPEP's own career table lists both roles verbatim. This is a DIFFERENT person from the Kremlin press secretary Dmitry Sergeevich Peskov already correctly rejected in this record's open_questions[] (b.1967, Moscow) -- RuPEP gives dob 26.12.1975, birthplace Voronezh, ИНН 772919018611, none of which match the press secretary. Confirms the earlier rejection was correct rather than resolving it away.",
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -1915,6 +1927,11 @@
         "text": "Aleph name-matched a candidate personal ИНН (780158807980) for this person against the \"Russian Public Procurement Awards, Authorities, and Suppliers\" dataset, exact ФИО match. Not independently cross-verified (no shared document/contract confirming it beyond the name match) — per opensanctions_ru_inn_dataset_nuance discipline, treat as a lead not confirmed inn_personal until cross-checked."
       }
     ],
+    "zakupki_review": {
+      "as_of": "2026-08-30",
+      "outcome": "closed",
+      "note": "10 contracts, all small (₽65k–200k) purchases with СПбНИУ ИТМО dated 2011–2013 — predates the ЦБСТ role, ordinary academic-services footprint."
+    },
     "_corrected": [
       "Found unattributed in _scaffold_leads.json during the Phase 1",
       "verification pass, 2026-08-22. Яныкина Нина Олеговна is the",
@@ -1925,7 +1942,8 @@
       "Phase 1 verification pass, 2026-08-22: independently re-confirmed via ЦБСТ's own full signed EGRUL extract (s0231) — ИНН 780158807980 and 16.12.2025 start date both match exactly what was already on file. Promoted to _verified: true.",
       "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0793).",
       "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\" (ЦБСТ's own full legal name), position \"Генеральный директор\" -- exact match on both employer and title to the already-EGRUL-confirmed role above. Independent corroboration, not new information.",
-      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
+      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-30) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
     ],
     "_verified_against": "s0231 — ЦБСТ's own full signed ЕГРЮЛ extract, pulled 15.08.2026",
     "opensanctions_matches": [
@@ -9076,9 +9094,15 @@
         "неро» (ИНН 5902056314, Moscow, reg. 27.11.2019) — GD Лысенко Андрей Олегович, 16 employees, mixed film/video-production and software OKVEDs (no drone/defence-specific code declared); one 37.5%-owner, Городничин Дмитрий Александрович, has his stake pledged as loan collateral to the Московский венчурный фонд (Moscow Venture Fund, a city-government-linked VC), a pledge recorded just weeks before this pull (29.06.2026) — the first instance in this brief of a Ц"
       ]
     },
+    "zakupki_review": {
+      "as_of": "2026-08-31",
+      "outcome": "closed",
+      "note": "42 contracts under ИП Городничин Д.А., all regional/municipal cultural-education institutions; generic small-business supply, no UAV/defense/ЦБСТ subject matter."
+    },
     "_corrected": [
       "2026-08-25: folded in the co-inventor role (ООО «Визионеро», s1054) from the duplicate record gorodnichin-dmitriy-aleksandrovich-2, now merged into this one.",
-      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph Company/OGRN-2016 record (ИП registration, \"ИП ГОРОДНИЧИН ДМИТРИЙ АЛЕКСАНДРОВИЧ\") gives ИНН directly (s1972)."
+      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph Company/OGRN-2016 record (ИП registration, \"ИП ГОРОДНИЧИН ДМИТРИЙ АЛЕКСАНДРОВИЧ\") gives ИНН directly (s1972).",
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
     ],
     "_verified_against": null,
     "aleph_matches": [
@@ -9892,9 +9916,15 @@
         "тания на различных полигонах, включая Министерство Обороны Российской Федерации\" — successful testing completed at various ranges, including the Russian Ministry of Defense. Founder and sole owner is Черепкова Нина Сергеевна (also GD since the company's 07.10.2022 registration); her identity was flagged \"доступ ограничен\" in EGRUL on 03.08.2026 — a restriction applied only days before this pull. Its own FY2023–25 БФО filings (pulled directly) show explosiv"
       ]
     },
+    "zakupki_review": {
+      "as_of": "2026-08-31",
+      "outcome": "closed",
+      "note": "19 contracts across unrelated regional customers with no thematic or geographic connection to her ООО «НПО Кайсант» role; generic small-supplier contracting."
+    },
     "_corrected": [
       "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2540).",
-      "2026-08-26: confirmed via налетай.рф (ГТЛК state UAV marketplace) that НПО «Кайсант»'s ГЕРМЕС-7/ГУСЬ-7 products are sold under her personal ИП (ip-cherepkova, ИНН 773376903806 -- exact match to inn_personal already on file), not the company's own name -- see npo-kaysant's marketplace_listings[] note for the full reasoning on why this looks like a deliberate visibility-reduction pattern."
+      "2026-08-26: confirmed via налетай.рф (ГТЛК state UAV marketplace) that НПО «Кайсант»'s ГЕРМЕС-7/ГУСЬ-7 products are sold under her personal ИП (ip-cherepkova, ИНН 773376903806 -- exact match to inn_personal already on file), not the company's own name -- see npo-kaysant's marketplace_listings[] note for the full reasoning on why this looks like a deliberate visibility-reduction pattern.",
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
     ],
     "_verified_against": null,
     "aleph_matches": [
@@ -14752,7 +14782,7 @@
   {
     "slug": "chumakov-pavel-andreevich",
     "fio_ru": "Чумаков Павел Андреевич",
-    "name_latin": null,
+    "name_latin": "Chumakov Pavel Andreevich",
     "dob": null,
     "birthplace": null,
     "address": null,
@@ -14766,6 +14796,14 @@
         "to": null,
         "source_id": null,
         "_candidate": true
+      },
+      {
+        "entity_name": "ООО «Информационные системы и технологии» (ИНСТЕХ)",
+        "entity_slug": "ooo-instekh",
+        "title": "Генеральный директор",
+        "from": null,
+        "to": null,
+        "source_id": "s4818"
       }
     ],
     "sanctions": [],
@@ -14777,7 +14815,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "Signed as «генеральный директор Чумаков Павел Андреевич, действующий на основании Устава» on the entity's Belgorod-oblast public-warning-system contracts, including муниципальный контракт № 13 with Волоконовский район (s4818, 2024). No identifying detail beyond the name is sourced — DOB, birthplace, address and personal ИНН left null rather than inferred.",
     "sources": [],
     "mentions": 1,
     "_verified": false,
@@ -14787,6 +14825,9 @@
         "ing the address наб. Обводного канала, д.93А, Санкт-Петербург and phone +7 (812) 443-04-40 — matching, address-for-address, ООО «ИНСТЕХ» (ИНН 7842179810, ОГРН 1207800035079, registered 10.03.2020, GD Чумаков Павел Андреевич), independently confirmed via ФНС's own egrul.nalog.ru open search API. (A second, unrelated same-name company also surfaced during this search — ИНН 7807276480, a different Petersburg entity registered 2024 at a different address, Лени"
       ]
     },
+    "_corrected": [
+      "2026-09-05: surfaced while reading ООО «Информационные системы и технологии»'s previously-unwired zakupki attachment corpus. Director of a registry entity; recorded at name+role only, pending an EGRUL pull that would carry identifying detail."
+    ],
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-08-24",
     "aleph_matches": [
@@ -18937,8 +18978,14 @@
     "_verified_against": null,
     "_corrected": [
       "2026-08-24: leader-id.ru self-reports employer \"ОАО \\\"НПП \\\"Радар ммс\\\"\", position \"Исполнительный директор\" (Executive Director), Санкт-Петербург -- corroborates and upgrades this person from co-inventor to a named executive at npp-radar-mms, matching the entity's own name and city exactly.",
-      "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2477)."
+      "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2477).",
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate."
     ],
+    "zakupki_review": {
+      "as_of": "2026-08-31",
+      "outcome": "closed",
+      "note": "4 unwired archived cards, all БГТУ «Военмех» им. Устинова, ₽64,350 combined 2022–2026 — trivial-value academic engagement."
+    },
     "aleph_matches": [
       {
         "entity_id": "0397cac828bc86ece70ceda36d779feb1b3d3554.e68c75bc4e7e6a4bb84cae5db0a6c0765de56adc",
@@ -26853,8 +26900,14 @@
     "_raw": {},
     "_verified_against": null,
     "_corrected": [
-      "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2516)."
+      "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2516).",
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
     ],
+    "zakupki_review": {
+      "as_of": "2026-08-31",
+      "outcome": "closed",
+      "note": "33 contracts, entirely Kemerovo-region municipal customers; unrelated to her/his АО «НИИ Вектор» co-inventor role."
+    },
     "aleph_matches": [
       {
         "entity_id": "eee3f730ea8695574f9444a5b905ac07962fdad0.5ae67763496c9b4d072dbfb0a18794021e428318",
@@ -27173,8 +27226,14 @@
     "_raw": {},
     "_verified_against": null,
     "_corrected": [
-      "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2428)."
+      "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2428).",
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
     ],
+    "zakupki_review": {
+      "as_of": "2026-08-31",
+      "outcome": "closed",
+      "note": "18 contracts, entirely Lipetsk-region municipal customers; unrelated to the АО «НИИ СТТ» co-inventor role."
+    },
     "aleph_matches": [
       {
         "entity_id": "6a3edca19e7fcd672d17ce899a601e7c53ef72c3.08428415187c5460893a722ccbcfa3c732c68edb",
@@ -35449,7 +35508,14 @@
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_corrected": null,
+    "_corrected": [
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate."
+    ],
+    "zakupki_review": {
+      "as_of": "2026-08-31",
+      "outcome": "closed",
+      "note": "2 unwired archived cards, non-recurring, no ЦБСТ/UAV signal."
+    },
     "_verified_against": null,
     "aleph_matches": [
       {
@@ -35521,6 +35587,14 @@
         "source_id": "s1408",
         "title": "Учредитель и генеральный директор",
         "to": null
+      },
+      {
+        "entity_name": "ООО «Радиофид Системы»",
+        "entity_slug": "ooo-radiofid-sistemy",
+        "title": "Генеральный директор (signatory of record on госзакупки contracts)",
+        "from": "2012-05-02",
+        "to": "2022-11-01",
+        "source_id": "s4712"
       }
     ],
     "sanctions": [],
@@ -35534,7 +35608,7 @@
     "photo": null,
     "notes": "Sanctions mechanism clarified: designated 23.08.2024 by US State Dept as part of Maxim Marchenko's illicit procurement network, alongside Türkiye-based Kayra Elektronik Limited Sirketi and Hong Kong-based Alice Components Co Ltd — Alice Components shipped >$475,000 of Common High Priority List (CHPL) microelectronics to Russia-based firms in Jan 2024 alone, and Radiofid received at least $475,000 of that. Source: US State Dept press release \"New Measures to Degrade Russia's Wartime Economy\" (2024-08-23), 2021-2025.state.gov/new-measures-to-degrade-russias-wartime-economy/. rusprofile.ru/id/2709548 shows Незнамов flagged as \"former\" руководитель, leadership data concealed since 02.11.2026 per 129-ФЗ — standard sanctioned-entity concealment, not confirmed as an actual departure; needs a fresh EGRUL pull to settle current status. Checked 2026-08-25, no photo or social media found. radiofid.ru has no leadership bios/photos anywhere (only product images, department-level contact emails). The \"2404\" email-prefix (matching his 24.04 birthday) did not surface a matching social handle. Corporate aggregators (rusprofile/checko/list-org/sbis/rbc) confirm role, no imagery. [s3664] Phone +79052230999, email 2404@radiofid.ru (confirms ООО «Радиофид Системы» role).",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
@@ -36615,8 +36689,14 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2564)."
+      "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2564).",
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
     ],
+    "zakupki_review": {
+      "as_of": "2026-08-31",
+      "outcome": "closed",
+      "note": "44 contracts, entirely Kudymkar district/municipal customers; generic small-supplier footprint."
+    },
     "_verified_against": null,
     "aleph_matches": [
       {
@@ -40519,5 +40599,77 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": null
+  },
+  {
+    "slug": "sazanova-alisa-alekseevna",
+    "fio_ru": "Сазанова Алиса Алексеевна",
+    "name_latin": "Sazanova Alisa Alekseevna",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [
+      {
+        "entity_name": "ООО «Аэромакс»",
+        "entity_slug": "ooo-aeromaks",
+        "title": "Генеральный директор",
+        "from": null,
+        "to": null,
+        "source_id": "s4572"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Named as «генеральный директор Сазанова Алиса Алексеевна, действующего на основании Устава» signing государственный контракт № ГК 6401/24-4574 (₽268,916,478.58, ДИТ Москвы) on 27.09.2024. UNRESOLVED: the ЕГРЮЛ extract on file for ООО «Аэромакс» (s0218) records Бессонов С.Н. as director; the two records have not been reconciled and it is not established whether she held the post only during 2024 or the records simply carry different effective dates. See the entity's director_history. No identifying detail beyond the name is sourced.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-05: surfaced from the signature block of ООО «Аэромакс»'s largest documented contract while reading its previously-unwired zakupki attachment corpus. Officer of an OFAC/EU-designated drone manufacturer — a network principal, in PII scope; recorded at name+role only pending identifying detail."
+    ]
+  },
+  {
+    "slug": "nikiforov-anton-sergeevich",
+    "fio_ru": "Никифоров Антон Сергеевич",
+    "name_latin": "Nikiforov Anton Sergeevich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [
+      {
+        "entity_name": "ООО «Аэромакс»",
+        "entity_slug": "ooo-aeromaks",
+        "title": "Первый заместитель генерального директора",
+        "from": null,
+        "to": null,
+        "source_id": "s4571"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Signed the соглашение о расторжении terminating государственный контракт № ГК 6401/24-4574 with ДИТ Москвы for ООО «Аэромакс», acting under доверенность от 20.12.2024 № 15-09/92-ДИ (s4571). No identifying detail beyond the name and the power-of-attorney reference is sourced.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-05: surfaced from the signature block of the termination agreement for ООО «Аэромакс»'s largest documented contract. Officer of an OFAC/EU-designated drone manufacturer — a network principal, in PII scope; recorded at name+role only pending identifying detail."
+    ]
   }
 ]

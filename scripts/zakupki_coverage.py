@@ -64,6 +64,34 @@ DEFENSE_KEYWORD_RE = re.compile(
     re.IGNORECASE,
 )
 
+# The zero-wired heuristic above cannot tell "nobody has read this yet" from
+# "somebody read it and correctly decided not to wire anything" — and the
+# second case is common: a generic small-supplier footprint, or a state prime
+# whose zakupki presence is enormous by nature, is reviewed and closed without
+# a single government_contracts[] entry. On 2026-09-05 that made 10 of the 11
+# flagged candidates false positives, every one of them already triaged on
+# 2026-08-30/31 and recorded as such in the record's own prose notes.
+#
+# The authoritative signal is now the structured `zakupki_review` field:
+#   {"as_of": "YYYY-MM-DD", "outcome": "wired"|"closed"|"partial", "note": "..."}
+# `closed` means reviewed and deliberately not wired — the case that used to
+# be indistinguishable from unread. REVIEW_PROSE_RE is a backstop only: if a
+# record's prose says it was reviewed but carries no structured field, the
+# report says so loudly rather than silently re-flagging it as a candidate.
+REVIEW_PROSE_RE = re.compile(
+    r'zakupki[^.\n]{0,40}(?:footprint|search|cluster)[^.\n]{0,30}review|'
+    r'reviewed and closed, not wired',
+    re.IGNORECASE,
+)
+
+
+def review_state(rec):
+    """(outcome, as_of, stale_prose) for one entity/person record."""
+    rv = rec.get("zakupki_review")
+    if isinstance(rv, dict) and rv.get("outcome"):
+        return rv["outcome"], rv.get("as_of"), False
+    return None, None, bool(REVIEW_PROSE_RE.search(json.dumps(rec, ensure_ascii=False)))
+
 
 def sample_customer_keywords(reg_numbers: set, archived_regs: set, sample_size: int = 5) -> bool:
     """Cheap keyword scan over up to sample_size already-archived-but-unwired
@@ -96,12 +124,16 @@ def main() -> int:
     targets = []
     for e in entities:
         if e.get("inn"):
+            outcome, as_of, stale = review_state(e)
             targets.append({"inn": e["inn"], "slug": e.get("slug"), "kind": "entity",
-                             "name": e.get("name_ru"), "gc": e.get("government_contracts", [])})
+                             "name": e.get("name_ru"), "gc": e.get("government_contracts", []),
+                             "review": outcome, "reviewed_at": as_of, "stale_prose": stale})
     for p in people:
         if p.get("inn_personal"):
+            outcome, as_of, stale = review_state(p)
             targets.append({"inn": p["inn_personal"], "slug": p.get("slug"), "kind": "person",
-                             "name": p.get("fio_ru"), "gc": []})
+                             "name": p.get("fio_ru"), "gc": [],
+                             "review": outcome, "reviewed_at": as_of, "stale_prose": stale})
 
     archived_regs = archived_contract_regs()
     doc_keys = archived_document_keys()
@@ -139,11 +171,19 @@ def main() -> int:
         # exactly the entities most needing a first read. Raw hit_count
         # magnitude or a cheap keyword scan over a few already-archived
         # unwired cards substitutes for the missing wired-contract signal.
+        # A record already reviewed and deliberately closed is NOT a
+        # candidate, however few contracts it has wired — see REVIEW_PROSE_RE.
         high_value_candidate = False
-        if not wired_regs:
+        if not wired_regs and not t["review"]:
             high_value_candidate = (hit_count >= HIT_COUNT_PRIORITY_THRESHOLD
                                      or sample_customer_keywords(reg_numbers, archived_regs))
-        if high_value and not has_docs:
+        # A reviewed record is never counted as outstanding work, whichever
+        # branch it would otherwise land in — the summary counts must agree
+        # with the per-row flags, or the report re-creates the exact
+        # false-positive problem the review field was added to remove.
+        if t["review"]:
+            pass
+        elif high_value and not has_docs:
             n_no_docs_high_value += 1
         elif high_value_candidate and not has_docs:
             n_no_docs_high_value_candidate += 1
@@ -159,19 +199,31 @@ def main() -> int:
         else:
             _, status, hit_count, wired_count, has_docs, high_value, high_value_candidate = row
             flag = ""
-            if high_value and not has_docs:
+            is_gap = True  # does this row represent outstanding work?
+            if t["review"]:
+                flag = f"  [reviewed {t['reviewed_at'] or '?'}: {t['review']}]"
+                is_gap = False
+            elif t["stale_prose"]:
+                flag = ("  <-- PROSE says reviewed but no structured zakupki_review "
+                        "field — add one so this stops re-flagging")
+            elif high_value and not has_docs:
                 flag = "  <-- high-value, no fetch-documents yet"
             elif high_value_candidate and not has_docs:
                 flag = "  <-- high-value CANDIDATE (0 wired, raw hit_count/keyword) — needs a first read"
-            if not args.gaps_only or flag:
+            if not args.gaps_only or (flag and is_gap):
                 print(f"  {status:16} hits={hit_count:<4} wired={wired_count:<3} "
                       f"docs={'Y' if has_docs else 'N'}  {t['inn']:15} {t['slug']}{flag}")
 
-    print(f"\n--- summary ---")
+    n_reviewed = sum(1 for t in targets if t["review"])
+    n_stale = sum(1 for t in targets if t["stale_prose"])
+    print("\n--- summary ---")
     print(f"never scanned:                        {n_unscanned}")
     print(f"partial fetch-contracts:               {n_partial_fetch}")
     print(f"high-value, no documents:              {n_no_docs_high_value}")
     print(f"high-value candidate, no documents:    {n_no_docs_high_value_candidate}")
+    print(f"already reviewed (zakupki_review):     {n_reviewed}")
+    if n_stale:
+        print(f"prose-reviewed, field missing:         {n_stale}  <-- backfill these")
     return 0
 
 

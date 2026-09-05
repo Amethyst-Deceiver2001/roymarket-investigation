@@ -27,6 +27,11 @@
 |---|---|---|---|---|
 | — | 846761 | 20210706 | 12.01.2022 | 09 (UAV/defense terms present: навигацион); 12 (беспилотные воздушные суда и их запчасти, средства транспортные с дистанционным управлением, за исключением игрушек); 28 (аппараты для видео игр; игры, игрушки; товары гимнастические и спортивные); 41 (спортивные и культурно-просветительные мероприятия); 42 (научные и технологические услуги и относящиеся к ним научные исследования и разработки; разработка и развитие компьютеров и программного обеспечения) |
 
+## Litigation
+
+- MATERIALLY THE MOST IMPORTANT DOCUMENT IN THIS CLUSTER: the judgment itemises what was actually delivered under the УПД № 18 от 25.07.2023, and the goods are military. Two line items only: «Система сброса для гранаты типа «F1»» — a release/drop mechanism for an F1 fragmentation hand grenade — 30 units at ₽13,800 (₽414,000); and «Аккумулятор GAONENG GNB 1300MAH 14BV 100C XT60», 50 units at ₽6,000 (₽300,000). The second is a standard 4S FPV drone LiPo battery pack made by GAONENG (Shenzhen, China). A grenade-release mechanism plus FPV drone batteries is a munitions-dropping drone payload kit, and it is established here on the face of a Russian state arbitration court's own findings of fact, not on marketing copy or a Telegram claim. The delivery date (25.07.2023) puts it well inside the full-scale invasion. Recorded on both parties: НПО «Рустехдрон» as supplier, ООО «ДСГ» as buyer. [s0043]
+- A second, separate НПО «Рустехдрон» → ООО «ДСГ» claim running in parallel with the supply-contract debt above, this one on a LOAN. So the two entities are tied by both a goods supply and a lending relationship, and ДСГ defaulted on both — relevant to how tightly this pair is connected beyond an arm's-length sale. [s0045]
+
 ## Sanctions & screening
 
 **Ukraine (Presidential sanctions decree/list)** [s0816]
@@ -49,6 +54,8 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| s0043 | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-dsg-debt.pdf) | 2026-08-20 | 2025-12-25 |
+| s0045 | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-dsg-loan-motivated.pdf) | 2026-08-20 | 2025-10-16 |
 | s0482 | EGRUL extract | EGRUL extract (ul-1207700030493-20260823132102.pdf) | — | 2026-08-23 |
 | s0816 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9724002908_20260824_ooo-dsg.json) | 2026-08-24 | — |
 

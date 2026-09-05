@@ -42,6 +42,39 @@ SOURCES = REPO / "data" / "registry" / "sources.json"
 CODE_REVENUE = "2110"
 CODE_NET_PROFIT = "2400"
 
+# Non-profit filings (АНО/фонд, form 0710096) file a P&L that is empty by
+# construction -- an НКО has no Выручка and no Чистая прибыль -- and report
+# their actual money in the "Отчет о целевом использовании средств" (ОЦИС,
+# ОКУД 0710003) instead. Reading only the P&L therefore returned
+# revenue=None/profit=None for EVERY non-profit in the registry and looked
+# exactly like "this entity has no figures on file". Found 2026-09-05 on
+# АНО «ЦБСТ» itself -- the investigation's core entity -- whose six filings
+# all parsed to None while the ОЦИС sheet showed ₽269.8m received in 2024.
+#
+# These are NOT revenue and profit and must never be recorded as such: 6200
+# is targeted funding received (grants, contributions, state money), 6300 is
+# how much of it was spent. Kept under their own keys so a downstream reader
+# cannot silently conflate an НКО's funding inflow with commercial turnover.
+CODE_FUNDS_BALANCE_START = "6100"
+CODE_FUNDS_RECEIVED = "6200"
+CODE_FUNDS_USED = "6300"
+CODE_FUNDS_BALANCE_END = "6400"
+TARGET_CODES = {
+    CODE_FUNDS_BALANCE_START: "funds_balance_start",
+    CODE_FUNDS_RECEIVED: "funds_received",
+    CODE_FUNDS_USED: "funds_used",
+    CODE_FUNDS_BALANCE_END: "funds_balance_end",
+}
+# Line 6300 is a *use* of funds, and filings are inconsistent about how they
+# show that: some print "98 047", others "(275 587)". to_number() reads the
+# parenthesised form as negative, so the same quantity landed in the registry
+# with opposite signs depending on which filing it came from. The sign is
+# presentational, so it is normalised to a positive magnitude and the result
+# is checked against the sheet's own identity:
+#     6100 (opening) + 6200 (received) - 6300 (used) == 6400 (closing)
+# A filing that fails that identity is reported rather than silently trusted.
+SIGN_NORMALISED = ("funds_used",)
+
 NUM_RE = re.compile(r"^\(?-?[\d\s]+\)?$")
 
 
@@ -139,6 +172,12 @@ def parse_one(path: Path) -> dict | None:
                     units = str(cells[-1]).strip()
             break
 
+    def first_number_right(cells, i):
+        """The value(s) live somewhere to the right of the code cell."""
+        rest = [x for x in cells[i + 1:] if x is not None and str(x).strip() not in ("",)]
+        nums = [n for n in (to_number(x) for x in rest) if n is not None]
+        return nums[0] if nums else None
+
     revenue = net_profit = None
     for sn in wb.sheetnames:
         if "финансовых результат" not in sn.lower():
@@ -152,16 +191,43 @@ def parse_one(path: Path) -> dict | None:
                 code = str(c).strip()
                 if code not in (CODE_REVENUE, CODE_NET_PROFIT):
                     continue
-                # the value(s) live somewhere to the right of the code cell
-                rest = [x for x in cells[i + 1:] if x is not None and str(x).strip() not in ("",)]
-                nums = [to_number(x) for x in rest]
-                nums = [n for n in nums if n is not None]
-                val = nums[0] if nums else None
+                val = first_number_right(cells, i)
                 if code == CODE_REVENUE:
                     revenue = val
                 else:
                     net_profit = val
-    return {"units": units, "revenue": revenue, "net_profit": net_profit}
+
+    # Non-profit branch -- see TARGET_CODES. The sheet name is truncated to 31
+    # chars by Excel ("Отчет о целевом использовании д"), so match on a prefix
+    # short enough to survive that, not on the full form title.
+    targets = {}
+    for sn in wb.sheetnames:
+        if "целевом использовании" not in sn.lower():
+            continue
+        for row in wb[sn].iter_rows(values_only=True):
+            cells = list(row)
+            for i, c in enumerate(cells):
+                if c is None:
+                    continue
+                key = TARGET_CODES.get(str(c).strip())
+                if key and key not in targets:
+                    v = first_number_right(cells, i)
+                    if v is not None and key in SIGN_NORMALISED:
+                        v = abs(v)
+                    targets[key] = v
+
+    if targets:
+        got = {k: targets.get(k) for k in TARGET_CODES.values()}
+        if all(v is not None for v in got.values()):
+            lhs = (got["funds_balance_start"] + got["funds_received"]
+                   - got["funds_used"])
+            if abs(lhs - got["funds_balance_end"]) > 1:  # tolerate rounding
+                targets["funds_identity_check"] = (
+                    f"FAILED: 6100 {got['funds_balance_start']} + 6200 "
+                    f"{got['funds_received']} - 6300 {got['funds_used']} = {lhs}, "
+                    f"but 6400 reports {got['funds_balance_end']}")
+
+    return {"units": units, "revenue": revenue, "net_profit": net_profit, **targets}
 
 
 def main():
@@ -185,9 +251,26 @@ def main():
 
     for i, src in enumerate(bfo_sources, 1):
         path = REPO / src["path"]
-        # a filing's `inns` list can include related parties, not just the
-        # filer itself — pick the one that's actually the target entity's own
-        inn = next((i2 for i2 in src.get("inns", []) if i2 in target_inns), None)
+        # A filing's `inns` list can include related parties, not just the
+        # filer itself, and it is NOT ordered filer-first -- picking the first
+        # entry that happens to be in the registry attributes the filing to
+        # whichever related party sorts first. That silently credited фонд
+        # «Градислава»'s FY2025 filing (s0295, inns [3705066020, 7704278421,
+        # 7709278792, 7717094069]) to ООО «Заволжское» -- a commercial LLC that
+        # would then have carried another organisation's non-profit funding
+        # figures. Found 2026-09-05.
+        #
+        # The filename is authoritative: bo.nalog.gov.ru names every export
+        # РЕСУРС_БФО_<filer ИНН>_<year>_<pulled>.zip, and bfo_pull.py writes
+        # BFO_<filer ИНН>_<year>_<slug>.pdf. Read the filer off the name and
+        # only fall back to the inns list when the name carries no ИНН.
+        m_filer = re.search(r"(?:РЕСУРС_БФО|BFO)_(\d{10}|\d{12})_", path.name)
+        inn = m_filer.group(1) if m_filer else None
+        if inn is not None and inn not in target_inns:
+            # correctly-named filing for an entity outside this run's scope
+            inn = None if args.inn else inn
+        if inn is None:
+            inn = next((i2 for i2 in src.get("inns", []) if i2 in target_inns), None)
         if inn is None:
             print(f"  [{i}/{len(bfo_sources)}] {src['id']}: no target ИНН in this source's inns list, skip")
             continue
@@ -240,14 +323,19 @@ def main():
             print(f"  [{i}/{len(bfo_sources)}] {src['id']} {slug} FY{fy}: parse error {parsed.get('error') if parsed else '?'}")
             continue
 
-        results.setdefault(slug, []).append({
+        rec = {
             "fiscal_year": fy,
             "revenue": parsed["revenue"],
             "profit": parsed["net_profit"],
             "units": parsed["units"],
             "source_id": src["id"],
-        })
-        print(f"  [{i}/{len(bfo_sources)}] {src['id']} {slug} FY{fy}: revenue={parsed['revenue']} profit={parsed['net_profit']} ({parsed['units']})")
+        }
+        for k in list(TARGET_CODES.values()) + ["funds_identity_check"]:
+            if parsed.get(k) is not None:
+                rec[k] = parsed[k]
+        results.setdefault(slug, []).append(rec)
+        extra = "".join(f" {k}={rec[k]}" for k in list(TARGET_CODES.values()) + ["funds_identity_check"] if k in rec)
+        print(f"  [{i}/{len(bfo_sources)}] {src['id']} {slug} FY{fy}: revenue={parsed['revenue']} profit={parsed['net_profit']}{extra} ({parsed['units']})")
 
     out_path = REPO / args.out
     out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")

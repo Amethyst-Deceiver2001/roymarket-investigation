@@ -360,7 +360,9 @@
       "revenue": 11.0,
       "profit": -181.0,
       "units": "Тыс. руб.",
-      "source_id": "s0247"
+      "source_id": "s0247",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -422,21 +424,27 @@
       "revenue": null,
       "profit": -26617.0,
       "units": "Тыс. руб.",
-      "source_id": "s0255"
+      "source_id": "s0255",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2023",
       "revenue": null,
       "profit": -27348.0,
       "units": "Тыс. руб.",
-      "source_id": "s0256"
+      "source_id": "s0256",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2024",
       "revenue": 59.0,
       "profit": -31854.0,
       "units": "Тыс. руб.",
-      "source_id": "s0257"
+      "source_id": "s0257",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -444,13 +452,6 @@
       "profit": -39419.0,
       "units": "Тыс. руб.",
       "source_id": "s0258"
-    },
-    {
-      "fiscal_year": "2025",
-      "revenue": null,
-      "profit": 139654.0,
-      "units": "Тыс. руб.",
-      "source_id": "s0295"
     }
   ],
   "ooo-sibirskaya-navigatsionnaya-kompaniya": [
@@ -480,7 +481,9 @@
       "revenue": 2076962.0,
       "profit": 1199046.0,
       "units": "Тыс. руб.",
-      "source_id": "s0262"
+      "source_id": "s0262",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -512,21 +515,27 @@
       "revenue": 423314.0,
       "profit": -67770.0,
       "units": "Тыс. руб.",
-      "source_id": "s0266"
+      "source_id": "s0266",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2023",
       "revenue": 618094.0,
       "profit": 125213.0,
       "units": "Тыс. руб.",
-      "source_id": "s0267"
+      "source_id": "s0267",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2024",
       "revenue": 721360.0,
       "profit": 189864.0,
       "units": "Тыс. руб.",
-      "source_id": "s0268"
+      "source_id": "s0268",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -627,21 +636,33 @@
       "revenue": null,
       "profit": null,
       "units": "Тыс. руб.",
-      "source_id": "s0281"
+      "source_id": "s0281",
+      "funds_balance_start": 0.0,
+      "funds_received": 5073.0,
+      "funds_used": 2873.0,
+      "funds_balance_end": 2200.0
     },
     {
       "fiscal_year": "2024",
       "revenue": 8184.0,
       "profit": 3554.0,
       "units": "Тыс. руб.",
-      "source_id": "s0282"
+      "source_id": "s0282",
+      "funds_balance_start": 2200.0,
+      "funds_received": 33218.0,
+      "funds_used": 28416.0,
+      "funds_balance_end": 7002.0
     },
     {
       "fiscal_year": "2025",
       "revenue": 46840.0,
       "profit": -59519.0,
       "units": "Тыс. руб.",
-      "source_id": "s0283"
+      "source_id": "s0283",
+      "funds_balance_start": 6988.0,
+      "funds_received": 1046383.0,
+      "funds_used": 144856.0,
+      "funds_balance_end": 908514.0
     }
   ],
   "ooo-levit": [
@@ -712,21 +733,44 @@
       "revenue": null,
       "profit": 104426.0,
       "units": "Тыс. руб.",
-      "source_id": "s0292"
+      "source_id": "s0292",
+      "funds_balance_start": 1652852.0,
+      "funds_received": 1114966.0,
+      "funds_used": 1413589.0,
+      "funds_balance_end": 1354229.0
     },
     {
       "fiscal_year": "2023",
       "revenue": null,
       "profit": 864725.0,
       "units": "Тыс. руб.",
-      "source_id": "s0293"
+      "source_id": "s0293",
+      "funds_balance_start": 1354229.0,
+      "funds_received": 11864725.0,
+      "funds_used": 961920.0,
+      "funds_balance_end": 12257033.0
     },
     {
       "fiscal_year": "2024",
       "revenue": null,
       "profit": 926485.0,
       "units": "Тыс. руб.",
-      "source_id": "s0294"
+      "source_id": "s0294",
+      "funds_balance_start": 12257033.0,
+      "funds_received": 3426484.0,
+      "funds_used": 15065840.0,
+      "funds_balance_end": 617677.0
+    },
+    {
+      "fiscal_year": "2025",
+      "revenue": null,
+      "profit": 139654.0,
+      "units": "Тыс. руб.",
+      "source_id": "s0295",
+      "funds_balance_start": 617677.0,
+      "funds_received": 1139654.0,
+      "funds_used": 613617.0,
+      "funds_balance_end": 1143715.0
     }
   ],
   "fond-dar-fond-regionalnykh-nekommercheskikh-proektov": [
@@ -735,35 +779,55 @@
       "revenue": null,
       "profit": 416201.0,
       "units": "Тыс. руб.",
-      "source_id": "s0296"
+      "source_id": "s0296",
+      "funds_balance_start": 15904626.0,
+      "funds_received": 920636.0,
+      "funds_used": 805911.0,
+      "funds_balance_end": 16019351.0
     },
     {
       "fiscal_year": "2022",
       "revenue": null,
       "profit": 290113.0,
       "units": "Тыс. руб.",
-      "source_id": "s0297"
+      "source_id": "s0297",
+      "funds_balance_start": 16019351.0,
+      "funds_received": 2313797.0,
+      "funds_used": 2415850.0,
+      "funds_balance_end": 15917298.0
     },
     {
       "fiscal_year": "2023",
       "revenue": null,
       "profit": 715501.0,
       "units": "Тыс. руб.",
-      "source_id": "s0298"
+      "source_id": "s0298",
+      "funds_balance_start": 15917298.0,
+      "funds_received": 733804.0,
+      "funds_used": 950186.0,
+      "funds_balance_end": 15700916.0
     },
     {
       "fiscal_year": "2024",
       "revenue": null,
       "profit": 197422.0,
       "units": "Тыс. руб.",
-      "source_id": "s0299"
+      "source_id": "s0299",
+      "funds_balance_start": 15700916.0,
+      "funds_received": 8297492.0,
+      "funds_used": 676576.0,
+      "funds_balance_end": 23321832.0
     },
     {
       "fiscal_year": "2025",
       "revenue": null,
       "profit": 747707.0,
       "units": "Тыс. руб.",
-      "source_id": "s0300"
+      "source_id": "s0300",
+      "funds_balance_start": 23321832.0,
+      "funds_received": 1830707.0,
+      "funds_used": 1636596.0,
+      "funds_balance_end": 23515943.0
     }
   ],
   "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta": [
@@ -772,21 +836,33 @@
       "revenue": null,
       "profit": 772137.0,
       "units": "Тыс. руб.",
-      "source_id": "s0301"
+      "source_id": "s0301",
+      "funds_balance_start": 7813139.0,
+      "funds_received": 8772137.0,
+      "funds_used": 1400962.0,
+      "funds_balance_end": 15184314.0
     },
     {
       "fiscal_year": "2024",
       "revenue": null,
       "profit": 2463925.0,
       "units": "Тыс. руб.",
-      "source_id": "s0302"
+      "source_id": "s0302",
+      "funds_balance_start": 15184314.0,
+      "funds_received": 21896767.0,
+      "funds_used": 1125895.0,
+      "funds_balance_end": 35955186.0
     },
     {
       "fiscal_year": "2025",
       "revenue": null,
       "profit": 3591608.0,
       "units": "Тыс. руб.",
-      "source_id": "s0303"
+      "source_id": "s0303",
+      "funds_balance_start": 35955186.0,
+      "funds_received": 4211608.0,
+      "funds_used": 1067167.0,
+      "funds_balance_end": 39099627.0
     }
   ],
   "ooo-orion": [
@@ -795,14 +871,18 @@
       "revenue": 302525.0,
       "profit": -57833.0,
       "units": "Тыс. руб.",
-      "source_id": "s0304"
+      "source_id": "s0304",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2024",
       "revenue": 314714.0,
       "profit": -142027.0,
       "units": "Тыс. руб.",
-      "source_id": "s0305"
+      "source_id": "s0305",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -818,14 +898,18 @@
       "revenue": 40903.0,
       "profit": -941035.0,
       "units": "Тыс. руб.",
-      "source_id": "s0307"
+      "source_id": "s0307",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2024",
       "revenue": 120.0,
       "profit": 4094854.0,
       "units": "Тыс. руб.",
-      "source_id": "s0308"
+      "source_id": "s0308",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -841,35 +925,55 @@
       "revenue": null,
       "profit": null,
       "units": "Тыс. руб.",
-      "source_id": "s0310"
+      "source_id": "s0310",
+      "funds_balance_start": 273.0,
+      "funds_received": 2000.0,
+      "funds_used": 1460.0,
+      "funds_balance_end": 813.0
     },
     {
       "fiscal_year": "2022",
       "revenue": null,
       "profit": null,
       "units": "Тыс. руб.",
-      "source_id": "s0311"
+      "source_id": "s0311",
+      "funds_balance_start": 813.0,
+      "funds_received": 1500.0,
+      "funds_used": 1066.0,
+      "funds_balance_end": 1247.0
     },
     {
       "fiscal_year": "2023",
       "revenue": null,
       "profit": 85237.0,
       "units": "Тыс. руб.",
-      "source_id": "s0312"
+      "source_id": "s0312",
+      "funds_balance_start": 1247.0,
+      "funds_received": 2338236.0,
+      "funds_used": 86727.0,
+      "funds_balance_end": 2252757.0
     },
     {
       "fiscal_year": "2024",
       "revenue": null,
       "profit": 317505.0,
       "units": "Тыс. руб.",
-      "source_id": "s0313"
+      "source_id": "s0313",
+      "funds_balance_start": 2252756.0,
+      "funds_received": 2627505.0,
+      "funds_used": 591081.0,
+      "funds_balance_end": 4289180.0
     },
     {
       "fiscal_year": "2025",
       "revenue": null,
       "profit": 573316.0,
       "units": "Тыс. руб.",
-      "source_id": "s0314"
+      "source_id": "s0314",
+      "funds_balance_start": 4289180.0,
+      "funds_received": 576778.0,
+      "funds_used": 716129.0,
+      "funds_balance_end": 4149830.0
     }
   ],
   "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s": [
@@ -878,28 +982,36 @@
       "revenue": 0.0,
       "profit": 233002.0,
       "units": "Тыс. руб.",
-      "source_id": "s0315"
+      "source_id": "s0315",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2022",
       "revenue": null,
       "profit": 323141.0,
       "units": "Тыс. руб.",
-      "source_id": "s0316"
+      "source_id": "s0316",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2023",
       "revenue": null,
       "profit": 1476617.0,
       "units": "Тыс. руб.",
-      "source_id": "s0317"
+      "source_id": "s0317",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2024",
       "revenue": null,
       "profit": 1495590.0,
       "units": "Тыс. руб.",
-      "source_id": "s0318"
+      "source_id": "s0318",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -915,28 +1027,36 @@
       "revenue": null,
       "profit": null,
       "units": "Тыс. руб.",
-      "source_id": "s0320"
+      "source_id": "s0320",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2022",
       "revenue": 5692.0,
       "profit": 89.0,
       "units": "Тыс. руб.",
-      "source_id": "s0321"
+      "source_id": "s0321",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2023",
       "revenue": 19658.0,
       "profit": 327.0,
       "units": "Тыс. руб.",
-      "source_id": "s0322"
+      "source_id": "s0322",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2024",
       "revenue": 10930.0,
       "profit": 660.0,
       "units": "Тыс. руб.",
-      "source_id": "s0323"
+      "source_id": "s0323",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -966,14 +1086,18 @@
       "revenue": 2812994.0,
       "profit": 475281.0,
       "units": "Тыс. руб.",
-      "source_id": "s0327"
+      "source_id": "s0327",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2024",
       "revenue": 2919532.0,
       "profit": 33766.0,
       "units": "Тыс. руб.",
-      "source_id": "s0328"
+      "source_id": "s0328",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -996,7 +1120,9 @@
       "revenue": 27764.0,
       "profit": 2694.0,
       "units": "Тыс. руб.",
-      "source_id": "s0331"
+      "source_id": "s0331",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -1028,21 +1154,27 @@
       "revenue": 12485.0,
       "profit": -18478.0,
       "units": "Тыс. руб.",
-      "source_id": "s0335"
+      "source_id": "s0335",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2023",
       "revenue": 13456.0,
       "profit": -15821.0,
       "units": "Тыс. руб.",
-      "source_id": "s0336"
+      "source_id": "s0336",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2024",
       "revenue": 41476.0,
       "profit": -1796.0,
       "units": "Тыс. руб.",
-      "source_id": "s0337"
+      "source_id": "s0337",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -1118,14 +1250,18 @@
       "revenue": 102387.0,
       "profit": 3379.0,
       "units": "Тыс. руб.",
-      "source_id": "s0347"
+      "source_id": "s0347",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2024",
       "revenue": 65449.0,
       "profit": 3977.0,
       "units": "Тыс. руб.",
-      "source_id": "s0348"
+      "source_id": "s0348",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -1201,7 +1337,9 @@
       "revenue": 10950.0,
       "profit": 7524.0,
       "units": "Тыс. руб.",
-      "source_id": "s0361"
+      "source_id": "s0361",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -1231,7 +1369,9 @@
       "revenue": 172766.0,
       "profit": 3467.0,
       "units": "Тыс. руб.",
-      "source_id": "s0365"
+      "source_id": "s0365",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -1256,7 +1396,9 @@
       "revenue": 1543189.0,
       "profit": 14837.0,
       "units": "Тыс. руб.",
-      "source_id": "s0368"
+      "source_id": "s0368",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2022",
@@ -1330,7 +1472,9 @@
       "revenue": 28466.0,
       "profit": -9541.0,
       "units": "Тыс. руб.",
-      "source_id": "s0378"
+      "source_id": "s0378",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -1346,42 +1490,66 @@
       "revenue": null,
       "profit": null,
       "units": "Тыс. руб.",
-      "source_id": "s0382"
+      "source_id": "s0382",
+      "funds_balance_start": 0.0,
+      "funds_received": 269835.0,
+      "funds_used": 98047.0,
+      "funds_balance_end": 171788.0
     },
     {
       "fiscal_year": "2024",
       "revenue": null,
       "profit": null,
       "units": "Тыс. руб.",
-      "source_id": "s0383"
+      "source_id": "s0383",
+      "funds_balance_start": 0.0,
+      "funds_received": 269835.0,
+      "funds_used": 98047.0,
+      "funds_balance_end": 171788.0
     },
     {
       "fiscal_year": "2024",
       "revenue": null,
       "profit": null,
       "units": "Тыс. руб.",
-      "source_id": "s0384"
+      "source_id": "s0384",
+      "funds_balance_start": 0.0,
+      "funds_received": 269835.0,
+      "funds_used": 98047.0,
+      "funds_balance_end": 171788.0
     },
     {
       "fiscal_year": "2025",
       "revenue": null,
       "profit": null,
       "units": "Тыс. руб.",
-      "source_id": "s0385"
+      "source_id": "s0385",
+      "funds_balance_start": 171788.0,
+      "funds_received": 137105.0,
+      "funds_used": 275587.0,
+      "funds_balance_end": 33306.0
     },
     {
       "fiscal_year": "2025",
       "revenue": null,
       "profit": null,
       "units": "Тыс. руб.",
-      "source_id": "s0386"
+      "source_id": "s0386",
+      "funds_balance_start": 171788.0,
+      "funds_received": 137105.0,
+      "funds_used": 275587.0,
+      "funds_balance_end": 33306.0
     },
     {
       "fiscal_year": "2025",
       "revenue": null,
       "profit": null,
       "units": "Тыс. руб.",
-      "source_id": "s0387"
+      "source_id": "s0387",
+      "funds_balance_start": 171788.0,
+      "funds_received": 137105.0,
+      "funds_used": 275587.0,
+      "funds_balance_end": 33306.0
     }
   ],
   "fond-nasha-pravda": [
@@ -1397,14 +1565,22 @@
       "revenue": null,
       "profit": 14700.0,
       "units": "Тыс. руб.",
-      "source_id": "s0389"
+      "source_id": "s0389",
+      "funds_balance_start": 434400.0,
+      "funds_received": 1232513.0,
+      "funds_used": 1362206.0,
+      "funds_balance_end": 304707.0
     },
     {
       "fiscal_year": "2025",
       "revenue": null,
       "profit": 22320.0,
       "units": "Тыс. руб.",
-      "source_id": "s0390"
+      "source_id": "s0390",
+      "funds_balance_start": 304707.0,
+      "funds_received": 984892.0,
+      "funds_used": 982017.0,
+      "funds_balance_end": 307582.0
     }
   ],
   "ooo-investments": [
@@ -1413,14 +1589,36 @@
       "revenue": null,
       "profit": -366.0,
       "units": "Тыс. руб.",
-      "source_id": "s0391"
+      "source_id": "s0391",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2023",
       "revenue": null,
       "profit": -366.0,
       "units": "Тыс. руб.",
-      "source_id": "s0392"
+      "source_id": "s0392",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
+    },
+    {
+      "fiscal_year": "2024",
+      "revenue": null,
+      "profit": 22.0,
+      "units": "Тыс. руб.",
+      "source_id": "s0393",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
+    },
+    {
+      "fiscal_year": "2024",
+      "revenue": null,
+      "profit": 22.0,
+      "units": "Тыс. руб.",
+      "source_id": "s0394",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -1435,22 +1633,6 @@
       "profit": -1800.0,
       "units": "Тыс. руб.",
       "source_id": "s0396"
-    }
-  ],
-  "ao-borey-absorbed-no-longer-exists": [
-    {
-      "fiscal_year": "2024",
-      "revenue": null,
-      "profit": 22.0,
-      "units": "Тыс. руб.",
-      "source_id": "s0393"
-    },
-    {
-      "fiscal_year": "2024",
-      "revenue": null,
-      "profit": 22.0,
-      "units": "Тыс. руб.",
-      "source_id": "s0394"
     }
   ],
   "ooo-oupen-lodzhistiks": [
@@ -1569,7 +1751,9 @@
       "revenue": null,
       "profit": null,
       "units": "Тыс. руб.",
-      "source_id": "s0416"
+      "source_id": "s0416",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -1585,14 +1769,18 @@
       "revenue": 71037.0,
       "profit": 5831.0,
       "units": "Тыс. руб.",
-      "source_id": "s0418"
+      "source_id": "s0418",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2024",
       "revenue": 568567.0,
       "profit": 44490.0,
       "units": "Тыс. руб.",
-      "source_id": "s0419"
+      "source_id": "s0419",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
@@ -1608,14 +1796,18 @@
       "revenue": null,
       "profit": -2532.0,
       "units": "Тыс. руб.",
-      "source_id": "s0421"
+      "source_id": "s0421",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2024",
       "revenue": null,
       "profit": -43027.0,
       "units": "Тыс. руб.",
-      "source_id": "s0422"
+      "source_id": "s0422",
+      "funds_balance_start": 0.0,
+      "funds_balance_end": 0.0
     },
     {
       "fiscal_year": "2025",
