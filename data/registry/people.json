@@ -11956,7 +11956,7 @@
     "dob": null,
     "birthplace": null,
     "address": null,
-    "inn_personal": "711502654438",
+    "inn_personal": "772578663993",
     "roles": [],
     "sanctions": [],
     "other_entities": [],
@@ -11967,7 +11967,7 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "Sole shareholder and generальный директор of `ao-npp-bat` (АО «НПП БАТ», ИНН 9718238013) — confirmed via full signed ЕГРЮЛ выписка (s5541). Also the media-facing spokesperson ('официальный представитель', 'управляющий партнер') of a SEPARATE, more active company, `ao-npp-real` (ИНН 9722048270, whose actual registered short name is literally 'АО «НПП»') — he is not that entity's registered owner/director (Семенов Игорь Георгиевич is), but appears as co-inventor alongside Семенов on a shared utility patent (RU233454U1, 'Многопульный патрон') and is the named quoted source in every TASS/press citation of that company's products (Барьер, Перехват, Сигнал 2.0, Сковородка). Runs t.me/potapov_npp (6,164 posts) as a personal channel/brand spanning both roles. IMPORTANT: an earlier bulk aleph_followup.py pass had matched this auto-generated name-only record to a different ИНН (711502654438, Тульская обл. prefix) via a namesake OGRN/EGRUL record in OpenSanctions' Aleph mirror — that match is now superseded by the direct primary-source ЕГРЮЛ confirmation above (Moscow prefix, matching his confirmed address and role); the aleph_matches entry is left on record below for reference but should not be read as his personal ИНН.",
     "sources": [],
     "mentions": 1,
     "_verified": false,
@@ -11978,7 +11978,7 @@
       ]
     },
     "_corrected": [
-      "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2595)."
+      "2026-09-05: resolved during a follow-up on whether ao-npp-bat and the @potapov_npp channel's active РЭБ business are the same legal entity — they are not; see ao-npp-real's own tier_basis for the full chain of reasoning. Corrected the personal ИНН from an earlier bulk-Aleph namesake match to the EGRUL-confirmed value."
     ],
     "_verified_against": null,
     "aleph_matches": [
@@ -40483,5 +40483,41 @@
     "_corrected": [
       "EGRUL_5017140245_20260905_ooo-arkhangel-istra (s5516), full signed ЕГРЮЛ выписка read 05.09.2026: records АРИСТАРХОВ ВЛАДИМИР ВЯЧЕСЛАВОВИЧ, ИНН 773714258269, both as ГЕНЕРАЛЬНЫЙ ДИРЕКТОР and as sole участник with номинальная стоимость доли ₽12,000 and размер доли 100%."
     ]
+  },
+  {
+    "slug": "semenov-igor-georgievich",
+    "fio_ru": "Семенов Игорь Георгиевич",
+    "name_latin": null,
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "782617207400",
+    "roles": [
+      {
+        "entity_slug": "ao-npp-real",
+        "entity_name": "АО «Научно-производственное предприятие»",
+        "title": "Генеральный директор, единственный акционер",
+        "from": "2023-06-14",
+        "to": null,
+        "source_id": "s5543"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Sole shareholder/GD of `ao-npp-real` since its registration 14.06.2023 — the legal entity behind t.me/potapov_npp's active РЭБ/counter-UAV product line (Барьер, Перехват, Сигнал 2.0, Сковородка). Co-inventor alongside Потапов Игорь Владимирович on utility patent RU233454U1 ('Многопульный патрон', publ. 2025-04-21), which is what first surfaced his name — the patent's patentee field carries this company's own full legal name, initially misread as a truncated string on ao-npp-bat's record before this entity was identified. No public-facing/media role found for him — Потапов is the company's sole public spokesperson; Семенов appears only in registry documents and the shared patent.",
+    "sources": [
+      "s5543"
+    ],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": null
   }
 ]

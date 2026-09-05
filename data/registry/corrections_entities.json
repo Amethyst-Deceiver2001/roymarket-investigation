@@ -2948,6 +2948,41 @@
           "note": "БФО filing: zero revenue, zero profit. Balance sheet shows ₽3,100 thousand in fixed assets (Основные средства), exactly matching the ₽3,100 thousand charter capital — the company's only asset is apparently the capital contribution itself, no operating activity. Дело подписал уполномоченный представитель Свиридов Сергей Владимирович (authorized representative, NOT the director/founder already on file) — a new name, not yet cross-referenced; see open_questions."
         }
       ]
+    },
+    {
+      "slug": "ao-npp-real",
+      "name_ru": "Акционерное общество «Научно-производственное предприятие»",
+      "name_latin": "Joint Stock Company \"Scientific and Production Enterprise\"",
+      "legal_form": "АО",
+      "brand_ru": "АО «НПП»",
+      "inn": "9722048270",
+      "ogrn": "1237700409121",
+      "registered": "14.06.2023",
+      "address": "109316, г. Москва, вн.тер.г. муниципальный округ Южнопортовый, пр-кт Волгоградский, д. 28А",
+      "okved_code": "26.20",
+      "okved_label": "Производство компьютеров и периферийного оборудования",
+      "director": "Семенов Игорь Георгиевич",
+      "director_history": [
+        {
+          "value": "Семенов Игорь Георгиевич",
+          "as_of": "2023-06-14",
+          "source_id": "s5543",
+          "note": "ИНН 782617207400. Единственный акционер и генеральный директор с момента регистрации."
+        }
+      ],
+      "founders": [
+        {
+          "inn_personal": "782617207400",
+          "name": "Семенов Игорь Георгиевич",
+          "share_percent": 100,
+          "source_id": "s5543"
+        }
+      ],
+      "tier": "manufacturer",
+      "tier_basis": "RESOLVED 2026-09-05, closing the ao-npp-bat disambiguation question: this is the REAL legal entity behind the t.me/potapov_npp channel's active РЭБ/counter-UAV product line (Барьер, Перехват, Сигнал 2.0, Сковородка), NOT `ao-npp-bat` (ИНН 9718238013), the dormant single-employee shell that also happens to be named around \"АО «НПП»\" and is separately owned by the same Игорь Потапов. Its официальный ('сокращенное наименование') name IS LITERALLY 'АО «НПП»' — no fuller expansion exists in ЕГРЮЛ (full name: 'Акционерное общество «Научно-производственное предприятие»', with no further qualifying words) — confirming that even TASS's own editorial copy, which consistently uses only the bare 'АО «НПП»' across every article quoting Игорь Потапов (confirmed directly on the archived text of tass.ru/armiya-i-opk/22608317, 'Сковородка' REB jammer story), was not truncating or abbreviating anything — that is this company's actual registered short name. Found via its OKVED list (26.11/26.12/26.20/26.30-series electronics/comms/radiolocation production, plus 30.30 aircraft manufacturing) matching the channel's product line exactly, and via its sole shareholder/GD, Семенов Игорь Георгиевич — the SAME name that appears as co-inventor alongside Потапов Игорь Владимирович on the 'Многопульный патрон' utility patent (RU233454U1) already on file on ao-npp-bat's own record, where the patentee string 'Акционерное общество «Научно-производственное предприятие»' had been flagged as 'ambiguous, truncated' — it was not truncated, it is this entity's exact name. Потапов himself is not the registered owner or director here (Семенов is) — consistent with Потапов's own self-description as 'управляющий партнер' (managing partner), an operational/commercial role, and with his public role as the company's media-facing spokesperson (\"официальный представитель АО «НПП»\", per every TASS citation) rather than its legal principal. No БФО filing pulled yet for this entity — a real next step given the scale mismatch with the dormant ao-npp-bat.",
+      "why": [
+        "Confirmed via full signed ЕГРЮЛ выписка (s5543) after exhausting the ГИСП product-registry and company-catalog routes (both dead ends — no hit for 'Барьер' tied to any АО «НПП»-named company in either the general 719 or radio-electronics 878 registries), then pulling the archived TASS text on the 'Сковородка' story via Wayback (tass.ru blocks scripted access directly) and confirming it too uses only the bare 'АО «НПП»' designation — prompting a direct ЕГРЮЛ search for that literal quoted string, which found this entity on the first page of results."
+      ]
     }
   ],
   "entities": {
@@ -7308,7 +7343,7 @@
             "note": "Address as carried on the FY2025 БФО filing and confirmed current on the full ЕГРЮЛ выписка pulled 05.09.2026 (s5541) — a residential apartment, not a commercial/industrial address, despite the entity's self-declared UAV-manufacturing name."
           }
         ],
-        "tier_basis": "CONFIRMED 2026-09-05: the 'Игорь Потапов (АО «НПП»)' quoted at ЦБСТ's 26.03.2025 expanded-session post is this entity's sole founder/shareholder and generальный директор, Потапов Игорь Владимирович (ИНН 772578663993, confirmed единственный акционер per the full signed ЕГРЮЛ выписка, s5541) — not a namesake. Distinct from the popular Telegram commentator behind t.me/potapov_npp (\"Потапов. АО «НПП».\"), who publicly identifies as 'управляющий партнер АО «НПП»' and fronts a much larger, seemingly active РЭБ/counter-UAV product line («Барьер», «Перехват», «Сигнал 2.0») under the same bare 'АО «НПП»' brand — that legal entity's own ИНН/ОГРН has not been identified (the generic name defeats an EGRUL name search; a Минпромторг/ГИСП product-registry lookup by product name is the likely next step, not yet done). Do NOT conflate the two: this entity (ao-npp-bat, ИНН 9718238013) is confirmed via primary EGRUL/БФО documents to be a DORMANT SHELL — a single shareholder, a residential-apartment registered address (moved from a different Moscow address between FY2024 and FY2025 filings), zero revenue in every filed year, and a small negative balance (-₽4,000) — while the channel's actual product activity (if legally distinct) remains unidentified. This is a useful methodological counter-example for the wider investigation: a name/voice can carry a confirmed, on-the-record ЦБСТ tie while the specific legal entity behind that name has produced nothing — 'ЦБСТ resident' status alone, without independent financial/product confirmation, does not establish real operating capacity."
+        "tier_basis": "CONFIRMED 2026-09-05: the 'Игорь Потапов (АО «НПП»)' quoted at ЦБСТ's 26.03.2025 expanded-session post is this entity's sole founder/shareholder and generальный директор, Потапов Игорь Владимирович (ИНН 772578663993, confirmed единственный акционер per the full signed ЕГРЮЛ выписка, s5541) — not a namesake. RESOLVED 2026-09-05 (see `ao-npp-real`, ИНН 9722048270): the popular Telegram commentator behind t.me/potapov_npp (\"управляющий партнер АО «НПП»\", the actual РЭБ/counter-UAV product line — Барьер, Перехват, Сигнал 2.0, Сковородка) is the SAME Игорь Потапов, but that active business runs through a DIFFERENT, separate legal entity he does not own or direct (owner/GD is Семенов Игорь Георгиевич) — confirmed via a shared co-invention patent and a direct ЕГРЮЛ search on that company's literal registered short name, 'АО «НПП»'. This entity (ao-npp-bat) remains, independently, a confirmed dormant shell — a single shareholder, a residential-apartment registered address, zero revenue in every filed year, and a small negative balance (-₽4,000) — while the channel's real product activity sits entirely in the other entity."
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
