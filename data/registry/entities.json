@@ -11480,8 +11480,15 @@
     ],
     "founders": [],
     "founders_history": [],
-    "charter_capital": null,
-    "charter_capital_history": [],
+    "charter_capital": 112000,
+    "charter_capital_history": [
+      {
+        "value": 112000,
+        "as_of": "2025-11-11",
+        "source_id": "s0197",
+        "note": "Изменения №2 к Уставу (Протокол №6 внеочередного общего собрания акционеров от 10.11.2025, зарегистрированы 11.11.2025): «уставный капитал ... состоит из номинальной стоимости размещенных 1120 ... обыкновенных акций и составляет 112 000 рублей». Устав is approved by a plural Общее собрание акционеров, not a sole founder, so no individual founder name is recoverable from устав text — see founders[] left empty."
+      }
+    ],
     "address_history": [
       {
         "as_of": "2026-07-01",
@@ -46405,7 +46412,20 @@
     "charter_capital": null,
     "charter_capital_history": [],
     "address_history": [],
-    "name_history": [],
+    "name_history": [
+      {
+        "value": "ООО «Научно-исследовательское производственное предприятие РУСТЕХДРОН» (НИПИ «РУСТЕХДРОН»)",
+        "as_of": "2022-10-03",
+        "source_id": "s0195",
+        "note": "Устав at founding (Решение общего собрания учредителей, Протокол №1 от 26.09.2022, ГРН 1225000111313 от 03.10.2022) — original name at incorporation. Still under this name in a later устав (НОВАЯ РЕДАКЦИЯ №1, Протокол от 20.02.2025 №2/25, ГРН 2255004526104 от 27.02.2025) — confirms the «Рустехдрон» name lineage previously inferred only from name-similarity is real and primary-sourced."
+      },
+      {
+        "value": "ООО «РТД-Защита»",
+        "as_of": "2026-04-10",
+        "source_id": "s0195",
+        "note": "Устав under this name is dated «10» апреля 2026 г. № 1 (Решение единственного участника) — the rename happened sometime between 27.02.2025 (still «Рустехдрон») and this date; no document on file pins it closer. Also drops the plural «Общее собрание участников» language of the 2025 устав for «единственный участник» (sole owner) by 2026 — an ownership consolidation alongside the rename, not yet independently explained."
+      }
+    ],
     "facility_type": null,
     "facility_type_history": [],
     "parents": [],
@@ -46415,7 +46435,7 @@
     "cbst_tie": {
       "claim": "Same director (Соколов Герман Олегович) as ООО «НПО Рустехдрон» (ИНН 5003155499, this registry's confirmed manufacturer-tier entity with a Дронница/GUR-documented UAV product line). Formerly registered under a near-identical name, «ООО НИПП Рустехдрон», before renaming to «РТД-Защита» -- the \"РТД\" prefix matches the RTD-K10/RTD-K8/RTD-4M product-naming convention GUR's teardown catalogue already documents for the main Рустехдрон entity (see foreign_components[] / GUR screening on ooo-npo-rustekhdron).",
       "confidence": "press",
-      "evidence": "Common director + name lineage (НИПП Рустехдрон -> РТД-Защита) + shared \"РТД\" brand prefix. Not yet independently verified: what РТД-Защита actually produces/does (name suggests a protection/defense-systems angle, e.g. counter-drone or EW, but this is inference from the name only, not confirmed).",
+      "evidence": "Common director + name lineage (НИПП Рустехдрон -> РТД-Защита) + shared \"РТД\" brand prefix. Not yet independently verified: what РТД-Защита actually produces/does (name suggests a protection/defense-systems angle, e.g. counter-drone or EW, but this is inference from the name only, not confirmed). UPDATE 2026-09-05: the name lineage itself is now independently confirmed via primary устав documents (UD_1992856.zip, s0195), not just name-similarity inference — see name_history.",
       "source_id": "s1161"
     },
     "wb_overlap": "not_checked",
