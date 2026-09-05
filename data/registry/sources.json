@@ -18058,7 +18058,7 @@
     "as_of": "2026-08-22",
     "as_of_method": "egrul_api:pull-date",
     "supersedes": null,
-    "superseded_by": null,
+    "superseded_by": "s5544",
     "inns": [],
     "entities": [],
     "sha256": "2055e7514459126a2ccade91d9025e6f3cf0dac0286137f4600c3e859ee77714",
@@ -19947,6 +19947,25 @@
     ],
     "entities": [],
     "sha256": "df2485837b5534fbc89460539dc4a6e6bdf58af40376575514edd011b6ba00d7",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5544",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_7100046925_20260905_ooo-vozdushnyy-traktat.pdf",
+    "url": null,
+    "captured_date": "2026-09-05",
+    "fiscal_year": null,
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": "s0087",
+    "superseded_by": null,
+    "inns": [
+      "712802968839"
+    ],
+    "entities": [],
+    "sha256": "2cb31937ea92fb83e5146e1a3135845507a033b9a824884c2c30cd63fb794917",
     "_verified": false,
     "_origin": "manifest"
   },
