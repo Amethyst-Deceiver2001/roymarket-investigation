@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 import warnings
 import zipfile
 from pathlib import Path
@@ -63,6 +64,62 @@ def to_number(cell) -> float | None:
         except ValueError:
             return None
     return -v if neg else v
+
+
+def parse_pdf_filing(path: Path) -> dict | None:
+    """Parse a signed БФО PDF (what `bfo_pull.py` downloads).
+
+    Added 2026-09-05. The original parser only ever read the xlsx inside a
+    `РЕСУРС_БФО_*.zip`; `bfo_pull.py` (added the same day) downloads the
+    *signed PDF* from a different endpoint, so its output was invisible to
+    this script -- 16 freshly-pulled filings sat on disk contributing nothing
+    to `financials[]` until this branch existed. Same extraction contract as
+    parse_one(): returns {units, revenue, net_profit} in the filing's own
+    declared units, left for the caller to scale.
+
+    `pdftotext -layout` keeps the P&L as aligned columns, so a line reads:
+        Выручка7            2110      516 738       36 787
+    i.e. label, line code, THIS year, PRIOR year. Only the first number is
+    taken -- the second is the comparative prior-year figure, which arrives
+    on its own in that year's own filing and would double-count here.
+    """
+    try:
+        out = subprocess.run(
+            ["pdftotext", "-layout", str(path), "-"],
+            capture_output=True, timeout=120,
+        )
+        text = out.stdout.decode("utf-8", errors="replace")
+    except Exception as e:  # pdftotext missing, or a malformed PDF
+        return {"error": f"pdftotext: {e}"}
+    if not text.strip():
+        return {"error": "pdftotext produced no text (scanned/image-only PDF?)"}
+    # NOTE: the caller normalises the profit key to `profit` to match the xlsx
+    # path's output shape. Keep both paths emitting the same keys -- they were
+    # briefly divergent (`net_profit` here vs `profit` there) on 2026-09-05 and
+    # a downstream consumer silently dropped every xlsx-sourced profit figure.
+
+    units = None
+    m = re.search(r"Единица измерения\s+(.+)", text)
+    if m:
+        units = m.group(1).strip().split("  ")[0].strip()
+
+    revenue = net_profit = None
+    for line in text.splitlines():
+        for code, key in ((CODE_REVENUE, "revenue"), (CODE_NET_PROFIT, "net_profit")):
+            # anchor on the line code as a standalone token, then read the
+            # first number after it
+            mm = re.search(rf"\b{code}\b\s+(.+)", line)
+            if not mm:
+                continue
+            nums = [to_number(tok) for tok in re.findall(r"\(?-?[\d\s]{1,20}\)?", mm.group(1))]
+            nums = [n for n in nums if n is not None]
+            if not nums:
+                continue
+            if key == "revenue" and revenue is None:
+                revenue = nums[0]
+            elif key == "net_profit" and net_profit is None:
+                net_profit = nums[0]
+    return {"units": units, "revenue": revenue, "net_profit": net_profit}
 
 
 def parse_one(path: Path) -> dict | None:
@@ -136,6 +193,33 @@ def main():
             continue
         slug = slug_by_inn.get(inn, inn)
         fy = src.get("fiscal_year")
+
+        # `bfo_pull.py` output is a signed PDF, not a zip -- and it carries no
+        # `fiscal_year` in sources.json, so read it off the filename, whose
+        # shape (BFO_<ИНН>_<year>_<slug>.pdf) is fixed by that script.
+        if path.suffix.lower() == ".pdf":
+            if fy is None:
+                mfy = re.match(r"BFO_\d+_(\d{4})_", path.name)
+                fy = mfy.group(1) if mfy else None
+            parsed = parse_pdf_filing(path)
+            if not parsed or parsed.get("error"):
+                err = parsed.get("error") if parsed else "?"
+                print(f"  [{i}/{len(bfo_sources)}] {src['id']} {slug} FY{fy}: {err}")
+                continue
+            results.setdefault(slug, []).append({
+                "fiscal_year": fy,
+                "source_id": src["id"],
+                "path": src["path"],
+                "inn": inn,
+                "units": parsed.get("units"),
+                "revenue": parsed.get("revenue"),
+                # normalise to the xlsx path's key name
+                "profit": parsed.get("net_profit"),
+            })
+            print(f"  [{i}/{len(bfo_sources)}] {src['id']} {slug} FY{fy}: "
+                  f"revenue={parsed.get('revenue')} profit={parsed.get('net_profit')} "
+                  f"({parsed.get('units')})")
+            continue
 
         # БФО zips hold one xlsx member
         try:
