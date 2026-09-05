@@ -1127,6 +1127,8 @@ ENTITY_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("fas_br_hit_count", "fas_br_checked_at"),
     ("fsa_cert_hit_count", "fsa_checked_at"),
     ("fsa_decl_hit_count", "fsa_checked_at"),
+    ("checko_status", "checko_checked_at"),
+    ("checko_section_counts", "checko_checked_at"),
 ]
 PEOPLE_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("other_entities", "other_entities_checked_at"),
