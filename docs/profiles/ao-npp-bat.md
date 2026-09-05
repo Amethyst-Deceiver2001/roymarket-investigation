@@ -8,7 +8,7 @@
 
 - **Legal form:** AO (joint-stock company)
 - **Registered:** 10.11.2023
-- **Address:** г. Москва
+- **Address:** 115280, г. Москва, вн.тер.г. муниципальный округ Даниловский, ул. Автозаводская, д. 4, кв. 39
 - **Director:** Потапов Игорь Владимирович
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **ЦБСТ tie:** Named participant (АО «НПП», Игорь Потапов) at a 26.03.2025 ЦБСТ-hosted expanded session on developer support, alongside «Стратим», «Площадь» and «Овод».
@@ -22,10 +22,18 @@
 |---|---|---|
 | Потапов Игорь Владимирович | 2026-01-24 | personal ИНН 772578663993 [s0469] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 107113, г. Москва, вн.тер.г. муниципальный округ Сокольники, пл. Сокольническая, д. 4А, помещение 11/4 | 2024-12-31 | Address as carried on the FY2024 БФО filing. [s0410] |
+| 115280, г. Москва, вн.тер.г. муниципальный округ Даниловский, ул. Автозаводская, д. 4, кв. 39 | 2025-12-31 | Address as carried on the FY2025 БФО filing and confirmed current on the full ЕГРЮЛ выписка pulled 05.09.2026 (s5541) — a residential apartment, not a commercial/industrial address, despite the entity's self-declared UAV-manufacturing name. [s0411] |
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
 |---|---|---|---|
+| 2023 | — | — | [s0409] |
 | 2024 | — | ₽-6,000 | [s0410] |
 | 2025 | — | — | [s0411] |
 
@@ -42,6 +50,7 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| s0409 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9718238013_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
 | s0410 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9718238013_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | s0411 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9718238013_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s0469 | EGRUL extract | EGRUL extract (ul-1237700769701-20260823122725.pdf) | — | 2026-08-23 |

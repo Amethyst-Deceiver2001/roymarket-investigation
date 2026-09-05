@@ -19525,7 +19525,7 @@
     "as_of": "2026-08-22",
     "as_of_method": "egrul_api:pull-date",
     "supersedes": null,
-    "superseded_by": null,
+    "superseded_by": "s5541",
     "inns": [],
     "entities": [],
     "sha256": "7001c04bbb4e84e2cb75a58455fab729a705789a9cfc4c20fac19ec2c433f8d3",
@@ -19970,6 +19970,26 @@
     "_origin": "manifest"
   },
   {
+    "id": "s5540",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_7724453093_20260905_inn-7724453093.pdf",
+    "url": null,
+    "captured_date": "2026-09-05",
+    "fiscal_year": null,
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "711200853620",
+      "712900068586"
+    ],
+    "entities": [],
+    "sha256": "51c1d70152d1fd85277bbc446ce84ef8e79e461adc4156a28a8148e244d42e31",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s5307",
     "type": "egrul",
     "path": "data/sources/EGRUL_7802865058_20260608_ooo-skay-avia-grupp.pdf",
@@ -20204,6 +20224,46 @@
     ],
     "entities": [],
     "sha256": "517497852de4b2e4cd8ef8304c0ccac885d8279ea243b333c1e02639ffaa2e5c",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5541",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_9718238013_20260905_ao-npp-bat.pdf",
+    "url": null,
+    "captured_date": "2026-09-05",
+    "fiscal_year": null,
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": "s0431",
+    "superseded_by": null,
+    "inns": [
+      "7723103642",
+      "772578663993"
+    ],
+    "entities": [],
+    "sha256": "100cc21c37b9a9fc0367146e6f7d7a919f1fe50d812bc249943b816022f5fafc",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s5542",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_9725188003_20260905_inn-9725188003.pdf",
+    "url": null,
+    "captured_date": "2026-09-05",
+    "fiscal_year": null,
+    "as_of": "2026-09-05",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "026105732534",
+      "071401536275"
+    ],
+    "entities": [],
+    "sha256": "1aa7a8eadd2993f37031851d169fb03d932649d47c6f5f903a05b79c0f97db29",
     "_verified": false,
     "_origin": "manifest"
   },

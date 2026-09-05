@@ -7229,7 +7229,7 @@
     "ao-npp-bat": {
       "set": {
         "_verified": true,
-        "address": "г. Москва",
+        "address": "115280, г. Москва, вн.тер.г. муниципальный округ Даниловский, ул. Автозаводская, д. 4, кв. 39",
         "cbst_tie": {
           "claim": "Named participant (АО «НПП», Игорь Потапов) at a 26.03.2025 ЦБСТ-hosted expanded session on developer support, alongside «Стратим», «Площадь» and «Овод».",
           "confidence": "t-doc",
@@ -7247,14 +7247,25 @@
         ],
         "financials": [
           {
-            "profit": -6000.0,
-            "source_id": "s0410",
-            "year": "2024"
+            "year": 2023,
+            "revenue": 0,
+            "profit": 0,
+            "source_id": "s0409",
+            "note": "БФО filing: zero balance, entity newly registered (10.11.2023), no activity yet."
           },
           {
-            "profit": 0.0,
+            "year": 2024,
+            "revenue": 0,
+            "profit": -6000,
+            "source_id": "s0410",
+            "note": "БФО filing (thousands RUB in original: (6), converted to whole rubles here). Zero revenue; balance sheet total -₽4,000 (a negative balance, i.e. accumulated deficit exceeds assets) — a shell with essentially no real operating capacity."
+          },
+          {
+            "year": 2025,
+            "revenue": 0,
+            "profit": 0,
             "source_id": "s0411",
-            "year": "2025"
+            "note": "БФО filing: zero revenue/expenses, balance unchanged at -₽4,000 from FY2024 — still dormant a year later, despite the on-record ЦБСТ voice (see cbst_tie)."
           }
         ],
         "inn": "9718238013",
@@ -7274,7 +7285,30 @@
           }
         ],
         "registered": "10.11.2023",
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "founders": [
+          {
+            "inn_personal": "772578663993",
+            "name": "Потапов Игорь Владимирович",
+            "share_percent": 100,
+            "source_id": "s5541"
+          }
+        ],
+        "address_history": [
+          {
+            "value": "107113, г. Москва, вн.тер.г. муниципальный округ Сокольники, пл. Сокольническая, д. 4А, помещение 11/4",
+            "as_of": "2024-12-31",
+            "source_id": "s0410",
+            "note": "Address as carried on the FY2024 БФО filing."
+          },
+          {
+            "value": "115280, г. Москва, вн.тер.г. муниципальный округ Даниловский, ул. Автозаводская, д. 4, кв. 39",
+            "as_of": "2025-12-31",
+            "source_id": "s0411",
+            "note": "Address as carried on the FY2025 БФО filing and confirmed current on the full ЕГРЮЛ выписка pulled 05.09.2026 (s5541) — a residential apartment, not a commercial/industrial address, despite the entity's self-declared UAV-manufacturing name."
+          }
+        ],
+        "tier_basis": "CONFIRMED 2026-09-05: the 'Игорь Потапов (АО «НПП»)' quoted at ЦБСТ's 26.03.2025 expanded-session post is this entity's sole founder/shareholder and generальный директор, Потапов Игорь Владимирович (ИНН 772578663993, confirmed единственный акционер per the full signed ЕГРЮЛ выписка, s5541) — not a namesake. Distinct from the popular Telegram commentator behind t.me/potapov_npp (\"Потапов. АО «НПП».\"), who publicly identifies as 'управляющий партнер АО «НПП»' and fronts a much larger, seemingly active РЭБ/counter-UAV product line («Барьер», «Перехват», «Сигнал 2.0») under the same bare 'АО «НПП»' brand — that legal entity's own ИНН/ОГРН has not been identified (the generic name defeats an EGRUL name search; a Минпромторг/ГИСП product-registry lookup by product name is the likely next step, not yet done). Do NOT conflate the two: this entity (ao-npp-bat, ИНН 9718238013) is confirmed via primary EGRUL/БФО documents to be a DORMANT SHELL — a single shareholder, a residential-apartment registered address (moved from a different Moscow address between FY2024 and FY2025 filings), zero revenue in every filed year, and a small negative balance (-₽4,000) — while the channel's actual product activity (if legally distinct) remains unidentified. This is a useful methodological counter-example for the wider investigation: a name/voice can carry a confirmed, on-the-record ЦБСТ tie while the specific legal entity behind that name has produced nothing — 'ЦБСТ resident' status alone, without independent financial/product confirmation, does not establish real operating capacity."
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -7282,7 +7316,8 @@
         "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
         "cbst_tie UPGRADED 23.08.2026 with a direct primary citation found by querying this project's own scraped @ANO_CBST Telegram archive (data/roymarket.db, channel_id 2159491523) — not a data/sources/ document, so no s#### id; channel/post-id/date is the citation, per this project's existing convention for TG-sourced claims.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9718238013). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, 5 of 6 are unrelated (wood/ball manufacturing, furniture, an empty patentee) -- clear noise. The 6th, RU233454U1 \"Многопульный патрон\" (multi-bullet cartridge), has a truncated patentee string (\"Акционерное общество «Научно-производственное предприятие»\", missing the rest of this entity's own name) -- genuinely ambiguous, not resolved either way, flagged as an open question rather than promoted or dismissed."
+        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, 5 of 6 are unrelated (wood/ball manufacturing, furniture, an empty patentee) -- clear noise. The 6th, RU233454U1 \"Многопульный патрон\" (multi-bullet cartridge), has a truncated patentee string (\"Акционерное общество «Научно-производственное предприятие»\", missing the rest of this entity's own name) -- genuinely ambiguous, not resolved either way, flagged as an open question rather than promoted or dismissed.",
+        "User-supplied research (2026-09-05): confirmed founder-name match between ЦБСТ's quoted 'Игорь Потапов' and this entity's sole shareholder via EGRUL, and flagged the dormant-shell financial profile from the already-archived БФО filings (s0409/s0410/s0411) as a methodological counter-example. Verified against a freshly pulled full ЕГРЮЛ выписка (s5541) and the БФО filings' own balance-sheet/address detail before writing in."
       ]
     },
     "ao-pk-azimut": {
