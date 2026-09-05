@@ -11939,6 +11939,20 @@
       "source_id": "s0462"
      }
     ],
+    "name_history": [
+     {
+      "value": "ООО «КомНавРус»",
+      "as_of": "2015-11-23",
+      "source_id": "s0201",
+      "note": "Original name at founding — Решением №1 единственного учредителя от 30.10.2015, устав text confirms «КомНавРус» at incorporation (registered 23.11.2015). Still «КомНавРус» in a later устав filed under ГРН dated 30.11.2020, same bundle."
+     },
+     {
+      "value": "ООО «4ГНСС»",
+      "as_of": "2022-02-11",
+      "source_id": "s0201",
+      "note": "Earliest устав confirmed under this name (ГРН 2227701236002 от 11.02.2022, «Решением № 1/2022 единственного участника»). Rename happened sometime between the 30.11.2020 устав (still «КомНавРус») and this one — exact date not pinned closer than that window. Address given as г. Москва, тер. инновационного центра Сколково, consistent with the registry's existing Можайский-district address (Сколково sits within that district)."
+     }
+    ],
     "ogrn": "5157746074272",
     "okved_code": "72.19",
     "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
@@ -17724,8 +17738,29 @@
       "source_id": "s0461"
      }
     ],
+    "founders_history": [
+     {
+      "value": "Шелаев Денис Владимирович (100%, единственный участник)",
+      "as_of": "2015-09-28",
+      "source_id": "s0200",
+      "note": "Решение №2 единственного участника от 28.09.2015 (изменения в устав, п.6.2) is signed solely by Шелаев Денис Владимирович as «Единственный участник» — he held 100% at this point, not the current 50/50 split with Лебедев Сергей Александрович. The founding решение (08.09.2014) also references «единственный учредитель», consistent with a sole founder at incorporation, but the устав text itself doesn't name that founder — see open_questions."
+     }
+    ],
+    "charter_capital_history": [
+     {
+      "value": 20000,
+      "as_of": "2015-09-28",
+      "source_id": "s0200",
+      "note": "Решение №2 единственного участника от 28.09.2015, п.1: «Размер уставного капитала Общества составляет 20000 (двадцать тысяч) рублей 00 копеек» — replaces a prior unsourced 20000 placeholder carried from brief prose."
+     }
+    ],
     "ogrn": "5147746083491",
-    "open_questions": [],
+    "open_questions": [
+     {
+      "text": "Founding решение (08.09.2014) names a sole founder (единственный учредитель) but the устав text doesn't give that person's name. By 28.09.2015, Шелаев Денис Владимирович signs alone as the sole (100%) participant — plausibly the same original founder, but not confirmed. The transition to the current 50/50 Шелаев/Лебедев split (source s0461) is undated in any document on file.",
+      "source_id": "s0200"
+     }
+    ],
     "products": [
      {
       "description": "Комплекс оперативно-тактической связи (operational-tactical communications complex).",
