@@ -43,6 +43,12 @@
 |---|---|---|
 | 298000, Республика Крым, м.о. Судак, г. Судак, кв-л Асрет, д. 33 | 2026-05-28 | Current registered address. Two of the выписка's records (27.10.2025 ГРН 2259101005128 and 28.05.2026 ГРН 2269101165980) are «внесение изменений в связи с переименованием (переподчинением) адресных объектов» — administrative renaming of the address objects themselves, not a relocation by the company. [s5508] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2025 | — | — | [s5534] |
+
 - 4 OpenSanctions match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
@@ -60,6 +66,7 @@ _No named principals linked to this entity yet._
 - Чапурин Виктор Викторович, the 50% co-owner of the sanctioned ООО «Архангел-Центр», carries a Crimean personal ИНН (910520449851, region prefix 91) — the same region as this entity. That is a prefix coincidence to CHECK against this entity's departed co-founder, not a link to assert; nothing currently connects them beyond region.
 - No zakupki, GUR, OpenSanctions, Aleph or Rospatent screen has been run against ИНН 9108131213 — the entity did not exist in the registry at the time of the 2026-09-04 Архангел-family sweeps.
 - OpenSanctions screening on 05.09.2026 returned score-1.0 matches for this entity — they are NAME-ONLY FALSE POSITIVES and must not be read as designations. The 1.0 scores come entirely from name_match (literalMatch on «ооо архангел»); every identifier check returns «No identifier match», and the matched records carry ИНН 9001027869 and 9500026652 (both Melitopol), not this entity's own ИНН 9108131213. Recorded explicitly because a bare score-1.0 line in opensanctions_matches[] is exactly the shape of a finding that gets mistaken for one — the standing rule from this project's OpenSanctions notes is to check topics AND identifiers before calling a match a sanction. [s5524]
+- Свиридов Сергей Владимирович signed the 2025 БФО filing as 'уполномоченный представитель' (authorized representative), a role distinct from the registered director/founders. Not yet identified or cross-referenced against the rest of the Архангел family. [s5534]
 
 ## Sources cited in this profile
 
@@ -67,6 +74,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s5508 | EGRUL extract | EGRUL extract (EGRUL_9108131213_20260905_ooo-arkhangel-crimea.pdf) | 2026-09-05 | 2026-09-05 |
 | s5524 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9108131213_20260905_ooo-arkhangel-crimea.json) | 2026-09-05 | — |
+| s5534 | Bfo | Bfo (BFO_9108131213_2025_ooo-arkhangel-crimea.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

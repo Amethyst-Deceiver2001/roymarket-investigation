@@ -9202,7 +9202,7 @@
         "source_id": "s5507"
       },
       {
-        "text": "This entity's declared main activity is 85.30 «Обучение профессиональное» (professional training), but its additional ОКВЭД list includes 28.99.9 «Производство оборудования специального назначения» and 30.30.6 «Производство беспилотных авиационных систем» — a declared-vs-actual profile question of the same shape already tracked elsewhere in this registry. Which of the 16 codes reflects real activity is unestablished; no БФО filing has been pulled (first fiscal year 2025, registered 05.08.2025).",
+        "text": "This entity's declared main activity is 85.30 «Обучение профессиональное» (professional training), but its additional ОКВЭД list includes 28.99.9 «Производство оборудования специального назначения» and 30.30.6 «Производство беспилотных авиационных систем» — a declared-vs-actual profile question of the same shape already tracked elsewhere in this registry. Which of the 16 codes reflects real activity is unestablished; the first БФО filing (fiscal year 2025, s5537) was pulled 2026-09-05: form КНД 0710096 (simplified small-business balance sheet only, no P&L page) shows total assets of just ₽165 thousand (₽151 thousand of it a long-term loan, ₽10 thousand charter capital) — this is a functionally dormant shell, which does not by itself resolve which of the 16 ОКВЭД codes is real, since a shell with no revenue tells you nothing about actual vs. declared activity.",
         "source_id": "s5507"
       },
       {
@@ -44374,7 +44374,22 @@
     "cbst_tie": null,
     "wb_overlap": "none_found",
     "products": [],
-    "financials": [],
+    "financials": [
+      {
+        "year": 2024,
+        "revenue": 0,
+        "profit": 0,
+        "source_id": "s5527",
+        "note": "БФО filing (form 0710099): zero revenue, zero profit — dormant, consistent with this NKO's narrow 3-code declared-activity profile."
+      },
+      {
+        "year": 2025,
+        "revenue": 0,
+        "profit": 0,
+        "source_id": "s5528",
+        "note": "БФО filing: zero revenue, zero profit — still dormant a year later."
+      }
+    ],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": null,
@@ -44568,9 +44583,9 @@
       {
         "year": 2025,
         "revenue": 55770000,
-        "profit": null,
-        "source_id": "s0381",
-        "note": "БФО filing (revenue only extracted this pass — full P&L not read to bottom line); thousands of RUB in original (55,770), converted to whole rubles here."
+        "profit": 36095000,
+        "source_id": "s5536",
+        "note": "Full signed БФО filing pulled 2026-09-05 (supersedes s0381, which had revenue only, profit unread). Revenue up ~4.3x YoY (12,959 -> 55,770 thousand); net profit up ~6.6x (5,497 -> 36,095 thousand). The revenue breakdown explicitly itemizes \"Образовательные услуги\" (educational services) as a named revenue line — direct financial corroboration of this entity's training-school activity, not just self-reported marketing claims."
       }
     ],
     "egrul_flags": [],
@@ -44833,7 +44848,15 @@
     },
     "wb_overlap": "not_checked",
     "products": [],
-    "financials": [],
+    "financials": [
+      {
+        "year": 2024,
+        "revenue": 0,
+        "profit": 0,
+        "source_id": "s5531",
+        "note": "БФО filing: zero revenue, zero profit — dormant. Corroborates the ФНС strike-off decision already on this entity's record; a struck-off недействующее юридическое лицо typically shows no real financial activity."
+      }
+    ],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": null,
@@ -45684,7 +45707,15 @@
         "source_id": "s5456"
       }
     ],
-    "financials": [],
+    "financials": [
+      {
+        "year": 2025,
+        "revenue": 53558000,
+        "profit": 1542000,
+        "source_id": "s5530",
+        "note": "БФО filing (thousands RUB in original: 53,558 / 1,542, converted to whole rubles here). First filing on record for this entity — it is NOT dormant, unlike several other family members."
+      }
+    ],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": null,
@@ -45840,8 +45871,15 @@
         "note": "Full signed EGRUL extract - supersedes the earlier pb.nalog.ru upr-uchr partial finding (s5465), which established Филиппов as A founder but not his 80% MAJORITY stake, nor Казнова's existence as a third owner. He is the controlling owner of this entity, not merely one of several founders."
       }
     ],
-    "charter_capital": null,
-    "charter_capital_history": [],
+    "charter_capital": 10000,
+    "charter_capital_history": [
+      {
+        "value": 10000,
+        "as_of": "2026-03-12",
+        "source_id": "s5474",
+        "note": "Уставный капитал per full signed ЕГРЮЛ выписка; matches the founders_history split (Филиппов ₽8,000/80%, Крючков ₽1,500/15%, Казнова ₽500/5%)."
+      }
+    ],
     "address_history": [
       {
         "value": "107031, г. Москва, ул. Рождественка, д. 5/7 стр. 2, помещ. 4А/5",
@@ -46057,7 +46095,15 @@
     },
     "wb_overlap": "not_checked",
     "products": [],
-    "financials": [],
+    "financials": [
+      {
+        "year": 2025,
+        "revenue": 310000,
+        "profit": -894000,
+        "source_id": "s5529",
+        "note": "БФО filing (thousands RUB in original: 310 / (894), converted to whole rubles here). Minimal revenue, net loss — consistent with this entity being a small/marginal operation relative to ooo-arkhangel-shchit and -zaporizhzhie."
+      }
+    ],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": null,
@@ -46234,7 +46280,22 @@
     },
     "wb_overlap": "not_checked",
     "products": [],
-    "financials": [],
+    "financials": [
+      {
+        "year": 2024,
+        "revenue": 0,
+        "profit": -37000,
+        "source_id": "s5532",
+        "note": "БФО filing (thousands RUB in original: (37), converted to whole rubles here). Zero revenue, negligible loss — dormant shell despite carrying the confirmed UA-NSDC sanctions designation."
+      },
+      {
+        "year": 2025,
+        "revenue": 0,
+        "profit": 0,
+        "source_id": "s5533",
+        "note": "БФО filing: zero revenue, zero profit — still dormant."
+      }
+    ],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": null,
@@ -46494,7 +46555,15 @@
     },
     "wb_overlap": "not_checked",
     "products": [],
-    "financials": [],
+    "financials": [
+      {
+        "year": 2025,
+        "revenue": 0,
+        "profit": 0,
+        "source_id": "s5534",
+        "note": "БФО filing: zero revenue, zero profit. Balance sheet shows ₽3,100 thousand in fixed assets (Основные средства), exactly matching the ₽3,100 thousand charter capital — the company's only asset is apparently the capital contribution itself, no operating activity. Дело подписал уполномоченный представитель Свиридов Сергей Владимирович (authorized representative, NOT the director/founder already on file) — a new name, not yet cross-referenced; see open_questions."
+      }
+    ],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": null,
@@ -46539,6 +46608,10 @@
       {
         "text": "OpenSanctions screening on 05.09.2026 returned score-1.0 matches for this entity — they are NAME-ONLY FALSE POSITIVES and must not be read as designations. The 1.0 scores come entirely from name_match (literalMatch on «ооо архангел»); every identifier check returns «No identifier match», and the matched records carry ИНН 9001027869 and 9500026652 (both Melitopol), not this entity's own ИНН 9108131213. Recorded explicitly because a bare score-1.0 line in opensanctions_matches[] is exactly the shape of a finding that gets mistaken for one — the standing rule from this project's OpenSanctions notes is to check topics AND identifiers before calling a match a sanction.",
         "source_id": "s5524"
+      },
+      {
+        "text": "Свиридов Сергей Владимирович signed the 2025 БФО filing as 'уполномоченный представитель' (authorized representative), a role distinct from the registered director/founders. Not yet identified or cross-referenced against the rest of the Архангел family.",
+        "source_id": "s5534"
       }
     ],
     "sources": [],

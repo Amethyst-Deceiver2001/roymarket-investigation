@@ -42,6 +42,12 @@
 |---|---|---|
 | 143581, Московская обл., м.о. Истра, с. Павловская Слобода, ул. Озерная, д. 6, помещ. II | 2026-09-05 | Registered legal address re-confirmed against the full signed ЕГРЮЛ выписка of 05.09.2026. [s5516] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2025 | ₽310,000 | ₽-894,000 | [s5529] |
+
 - 4 OpenSanctions match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
@@ -65,6 +71,7 @@
 | s5470 | Rospatent record | Rospatent record (ROSPATENT_FIPS_5017140245_20260904_arkhangel-istra-tm1183435.html) | 2026-09-04 | — |
 | s5516 | EGRUL extract | EGRUL extract (EGRUL_5017140245_20260905_ooo-arkhangel-istra.pdf) | 2026-09-05 | 2026-09-05 |
 | s5521 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5017140245_20260905_ooo-arkhangel-istra.json) | 2026-09-05 | — |
+| s5529 | Bfo | Bfo (BFO_5017140245_2025_ooo-arkhangel-istra.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

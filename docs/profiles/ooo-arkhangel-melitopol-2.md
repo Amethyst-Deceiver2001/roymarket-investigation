@@ -41,6 +41,13 @@
 |---|---|---|
 | 272313, Запорожская область, г.о. Мелитополь, г. Мелитополь, ул. Гоголя, д. 91/1 | 2026-09-05 | Registered legal address per the full signed ЕГРЮЛ выписка of 05.09.2026. IDENTICAL to the registered address of ooo-arkhangel-zaporizhzhie (ИНН 9500026652) — see that record's own address_history. [s5504] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | — | ₽-37,000 | [s5532] |
+| 2025 | — | — | [s5533] |
+
 ## Sanctions & screening
 
 **UA-NSDC** [s5523]
@@ -70,6 +77,8 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s5504 | EGRUL extract | EGRUL extract (EGRUL_9001027869_20260905_ooo-arkhangel-zaporizhzhie-2.pdf) | 2026-09-05 | 2026-09-05 |
 | s5523 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9001027869_20260905_ooo-arkhangel-melitopol-2.json) | 2026-09-05 | — |
+| s5532 | Bfo | Bfo (BFO_9001027869_2024_ooo-arkhangel-melitopol-2.pdf) | — | — |
+| s5533 | Bfo | Bfo (BFO_9001027869_2025_ooo-arkhangel-melitopol-2.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

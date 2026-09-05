@@ -1932,7 +1932,16 @@
       ],
       "okved_code": "85.42.9",
       "okved_label": "Деятельность по дополнительному профессиональному образованию прочая, не включенная в другие группировки",
-      "status": "Регистрирующим органом принято решение о предстоящем исключении юридического лица из ЕГРЮЛ (недействующее юридическое лицо)"
+      "status": "Регистрирующим органом принято решение о предстоящем исключении юридического лица из ЕГРЮЛ (недействующее юридическое лицо)",
+      "financials": [
+        {
+          "year": 2024,
+          "revenue": 0,
+          "profit": 0,
+          "source_id": "s5531",
+          "note": "БФО filing: zero revenue, zero profit — dormant. Corroborates the ФНС strike-off decision already on this entity's record; a struck-off недействующее юридическое лицо typically shows no real financial activity."
+        }
+      ]
     },
     {
       "slug": "np-diskretno-innovatsionny-klaster-maloy-aviatsii",
@@ -2674,6 +2683,15 @@
       },
       "why": [
         "EGRUL_5017140245_20260905_ooo-arkhangel-istra (s5516) — full signed ЕГРЮЛ выписка pulled 05.09.2026: confirms ОГРН 1255000024487, registration 12.03.2025, the Истра/Павловская Слобода address, ₽12,000 charter capital, Аристархов В.В. as sole owner and генеральный директор, and the 16-code legal/IT ОКВЭД list with 69.10 as main."
+      ],
+      "financials": [
+        {
+          "year": 2025,
+          "revenue": 310000,
+          "profit": -894000,
+          "source_id": "s5529",
+          "note": "БФО filing (thousands RUB in original: 310 / (894), converted to whole rubles here). Minimal revenue, net loss — consistent with this entity being a small/marginal operation relative to ooo-arkhangel-shchit and -zaporizhzhie."
+        }
       ]
     },
     {
@@ -2784,6 +2802,22 @@
           "source_id": "s5523",
           "note": "SANCTIONED by Ukraine's National Security and Defence Council. Confirmed 05.09.2026 via OpenSanctions /match on an EXACT identifier basis, not a name match: inn_code_match «Matched INN: 9001027869» score 1.0 AND ogrn_code_match «Matched OGRN: 1249000005517» score 1.0, topics ['sanction'], target=true, programId UA-SA1644, datasets ['ua_nsdc_sanctions','ext_ru_egrul'], referent ua-nsdc-29694-tovaristvo-z-obmezenou-vidpovidalnistu-arhangel. OpenSanctions first_seen 2025-06-20, last_change 2026-06-18. Independently corroborated by an OCCRP Aleph query on the same ИНН (s5519), which returns the same entity in the Global Sanctions Database with innCode 9001027869, ogrnCode 1249000005517 and the Melitopol ул. Гоголя 91/1 address rendered in both Russian and Ukrainian ('тимчасово окупована територія Запорізької обл.'). The identifier match matters here because a plain name query on «ООО Архангел» returns score-1.0 hits against at least three DIFFERENT ИНН in this family — see the false-positive notes on ooo-arkhangel-crimea and ooo-arkhangel-istra. This designation was found on the same day the entity itself was first added to the registry: it had been sitting unexploited since 2026-09-04 as a bare other_entities line on Кусумов's person record."
         }
+      ],
+      "financials": [
+        {
+          "year": 2024,
+          "revenue": 0,
+          "profit": -37000,
+          "source_id": "s5532",
+          "note": "БФО filing (thousands RUB in original: (37), converted to whole rubles here). Zero revenue, negligible loss — dormant shell despite carrying the confirmed UA-NSDC sanctions designation."
+        },
+        {
+          "year": 2025,
+          "revenue": 0,
+          "profit": 0,
+          "source_id": "s5533",
+          "note": "БФО filing: zero revenue, zero profit — still dormant."
+        }
       ]
     },
     {
@@ -2884,10 +2918,23 @@
         {
           "text": "OpenSanctions screening on 05.09.2026 returned score-1.0 matches for this entity — they are NAME-ONLY FALSE POSITIVES and must not be read as designations. The 1.0 scores come entirely from name_match (literalMatch on «ооо архангел»); every identifier check returns «No identifier match», and the matched records carry ИНН 9001027869 and 9500026652 (both Melitopol), not this entity's own ИНН 9108131213. Recorded explicitly because a bare score-1.0 line in opensanctions_matches[] is exactly the shape of a finding that gets mistaken for one — the standing rule from this project's OpenSanctions notes is to check topics AND identifiers before calling a match a sanction.",
           "source_id": "s5524"
+        },
+        {
+          "text": "Свиридов Сергей Владимирович signed the 2025 БФО filing as 'уполномоченный представитель' (authorized representative), a role distinct from the registered director/founders. Not yet identified or cross-referenced against the rest of the Архангел family.",
+          "source_id": "s5534"
         }
       ],
       "why": [
         "EGRUL_9108131213_20260905_ooo-arkhangel-crimea (s5508) — full signed ЕГРЮЛ выписка pulled 05.09.2026 via scripts/egrul_vypiska_pull.py: confirms name, ОГРН 1259100005152, registration 14.04.2025, Судак address, ₽3,100,000 charter capital, Тимофеев В.С. as director and 50% owner with the other 50% held by the company itself since 11.09.2025, main ОКВЭД 01.11 within an 84-code list that includes the 85.23/85.30/85.41.x/85.42.x training block."
+      ],
+      "financials": [
+        {
+          "year": 2025,
+          "revenue": 0,
+          "profit": 0,
+          "source_id": "s5534",
+          "note": "БФО filing: zero revenue, zero profit. Balance sheet shows ₽3,100 thousand in fixed assets (Основные средства), exactly matching the ₽3,100 thousand charter capital — the company's only asset is apparently the capital contribution itself, no operating activity. Дело подписал уполномоченный представитель Свиридов Сергей Владимирович (authorized representative, NOT the director/founder already on file) — a new name, not yet cross-referenced; see open_questions."
+        }
       ]
     }
   ],
@@ -19966,6 +20013,22 @@
             "source_id": null,
             "text": "ARCHANGEL-FAMILY DISAMBIGUATION STATUS (2026-09-03): at least 6 distinct \"Архангел\"-branded organizations are now on record. (1) THIS entity (Архангел Легион, ИНН 2315233718) — confirmed tied to Гагаринг's 51st Army training-center relationship. (2) «Архангел Спецназа» (@arx_spn, 1.02M subs, the mask-branding org with a separate joint drone-retraining project with Гагаринг) — checko.ru name search returned only noise (too many unrelated \"Архангел\"-named companies to disambiguate by name alone) and the channel's own t.me/s/ page carries no external link; NO legal entity identified for it in this pass. (3) «проект Архангел» / Филиппов Михаил Геннадьевич — myrotvorets.center (Cloudflare-blocked to scripts, confirmed again this pass) could not be checked; still only parked in memory (roymarket_archangel_adjacent_network), relationship to (1)/(2) unresolved. (4) ooo-arkhangel (EU-sanctioned ЦБСТ resident, Moscow, ИНН 9714079108, director Шатракова А.А.) — already confirmed unrelated to (1)-(3) in its own record. (5) ooo-arkhangel-zaporizhzhie (ИНН 9500026652, Мелитополь/occupied Zaporizhzhia, a UAV-mechanic TRAINING operator, not a hardware maker despite manufacturer-coded OKVED) — now a full entity record; no tie found to (1)-(4). (6) ooo-arkhangel-tsentr (ИНН 5032379630, «Архангел-ЦЕНТР», Odintsovo — note the real legal name has a -ЦЕНТР suffix, correcting the earlier parked memory's assumption of a bare \"Архангел\") — only a stub record (single open-API lookup), Wagner-branding claim from the parked memory NOT yet re-verified against this specific ИНН. Net: the name \"Архангел\" is being independently reused by at least 4 unrelated legal entities plus 2 informal Telegram brands in this space — a strong instance of the generic-patriotic-brand-name collision pattern documented elsewhere in this project."
           }
+        ],
+        "financials": [
+          {
+            "year": 2024,
+            "revenue": 0,
+            "profit": 0,
+            "source_id": "s5527",
+            "note": "БФО filing (form 0710099): zero revenue, zero profit — dormant, consistent with this NKO's narrow 3-code declared-activity profile."
+          },
+          {
+            "year": 2025,
+            "revenue": 0,
+            "profit": 0,
+            "source_id": "s5528",
+            "note": "БФО filing: zero revenue, zero profit — still dormant a year later."
+          }
         ]
       },
       "why": [
@@ -20065,6 +20128,22 @@
             "source_id": "s5526",
             "note": "Domain registered 16.07.2025 through REGRU-RU (reg.ru), nameservers ns1/ns2.reg.ru, paid through 16.07.2027, registry state «REGISTERED, DELEGATED, UNVERIFIED»; the org and taxpayer-id WHOIS fields are blank, as is standard for a .RU privacy-shielded registration, so no registrant name is obtainable from WHOIS. As of 05.09.2026 the domain is PARKED at reg.ru and serves no site. Its significance is not the site but the address it carries — see this record's open_questions on the astra@proekt-arhangel.ru contact."
           }
+        ],
+        "financials": [
+          {
+            "year": 2024,
+            "revenue": 12959000,
+            "profit": 5497000,
+            "source_id": "s0380",
+            "note": "БФО filing, thousands of RUB in original (12,959 / 5,497), converted to whole rubles here."
+          },
+          {
+            "year": 2025,
+            "revenue": 55770000,
+            "profit": 36095000,
+            "source_id": "s5536",
+            "note": "Full signed БФО filing pulled 2026-09-05 (supersedes s0381, which had revenue only, profit unread). Revenue up ~4.3x YoY (12,959 -> 55,770 thousand); net profit up ~6.6x (5,497 -> 36,095 thousand). The revenue breakdown explicitly itemizes \"Образовательные услуги\" (educational services) as a named revenue line — direct financial corroboration of this entity's training-school activity, not just self-reported marketing claims."
+          }
         ]
       },
       "why": [
@@ -20073,6 +20152,15 @@
     },
     "9702081286": {
       "set": {
+        "charter_capital": 10000,
+        "charter_capital_history": [
+          {
+            "value": 10000,
+            "as_of": "2026-03-12",
+            "source_id": "s5474",
+            "note": "Уставный капитал per full signed ЕГРЮЛ выписка; matches the founders_history split (Филиппов ₽8,000/80%, Крючков ₽1,500/15%, Казнова ₽500/5%)."
+          }
+        ],
         "tier_basis": "Newly-registered (12.03.2026) Moscow entity, OKVED 30.30 — aircraft/spacecraft-and-related-equipment manufacturing, directly UAV/aerospace-relevant. CONFIRMED founder tie to Филиппов Михаил Геннадьевич (proekt-kb-arkhangel/@arhangel76), via a live pb.nalog.ru founder-registry query keyed on his personal ИНН (502603133030) — see s5465. This resolves the previously-unconfirmed \"Архангел Групп\" lead from the 2026-09-03 Гагаринг wide-net Архангел-family disambiguation pass: an earlier direct ИНН lookup (s5451, 2026-09-04) found only the DIRECTOR field (Крючков Дмитрий Александрович, no Филиппов tie) because egrul.nalog.ru's open search-index API exposes current director only, not founders — the founder-level tie was invisible to that check by construction, not actually absent. Distinct from `proekt-kb-arkhangel` (his informal, no-ИНН Telegram-based operation) and from `ooo-arkhangel-zaporizhzhie`/`ooo-arkhangel`/`ooo-arkhangel-shchit`/`ano-arkhangel` — this is a SIXTH+ distinct \"Архангел\"-branded vehicle, and the FIRST one with a directly registry-confirmed Филиппов ownership tie (as opposed to brand-name association or press mention alone). FULL EGRUL EXTRACT PULLED 2026-09-04 (s5474, signed/certified, ЮЭ9965-26-173557981): resolves the address gap (real street address now on file) and substantially upgrades the ownership picture - Филиппов holds an 80% MAJORITY stake, not just 'a founder' as the earlier pb.nalog.ru partial check (s5465) established; director Крючков holds 15%; a third, previously undocumented owner, Казнова Татьяна Андреевна, holds 5% (new person - see people.json). ОКВЭД codes confirm this is explicitly registered for UAV production (30.30.6 'Производство беспилотных авиационных систем' is a dedicated additional code, not just the generic aircraft-manufacturing main code) alongside electronics wholesale/retail trade and, notably, supplementary/professional education codes (85.41/85.41.9/85.42), consistent with Проект Архангел's training-school activity being formally housed under this same legal entity. A staffing-agency OKVED cluster (78.10.9/78.20/78.30 - recruitment, temporary employment, personnel search) was added 15.04.2026, a month after founding - plausibly related to the network's ongoing instructor/volunteer recruitment, not yet confirmed by any specific activity. UPDATE 2026-09-04 (s5475): proekt_arhangel#1094 (2026-09-02) is a formal B2B outreach letter to critical-infrastructure enterprise managers explicitly naming this entity as the designated commercial contact for \"группа компаний «Архангел»\" — the first primary-source document tying the registered legal entity directly to Филиппов's Telegram-run recruitment/sales operation as its commercial front, not merely a founder/ownership paper trail. ADDRESS GAP 2026-09-04: egrul.nalog.ru's open search-index API (no-captcha) exposes only region-level address ('Г.Москва') for this entity, not a street address — confirmed by direct query. A full signed EGRUL extract (manual pull, daily-rate-limited, same as other entities in this registry) would be needed to get the street-level registered address; not yet pulled. nspd.gov.ru cross-check attempted and found unreachable from this sandbox (see the ano-arkhangel/ooo-arkhangel-zaporizhzhie tier_basis notes for the same finding) — moot here anyway without a street address to search. SCREENING 2026-09-04: zakupki.gov.ru supplier-search (scoped --inn scan) returned zero contract hits. Rospatent patent-holder search (searchplatform.rospatent.gov.ru /search, patent_holders filter) returned zero hits for the entity name."
       }
     },
@@ -20147,7 +20235,7 @@
             "source_id": "s5507"
           },
           {
-            "text": "This entity's declared main activity is 85.30 «Обучение профессиональное» (professional training), but its additional ОКВЭД list includes 28.99.9 «Производство оборудования специального назначения» and 30.30.6 «Производство беспилотных авиационных систем» — a declared-vs-actual profile question of the same shape already tracked elsewhere in this registry. Which of the 16 codes reflects real activity is unestablished; no БФО filing has been pulled (first fiscal year 2025, registered 05.08.2025).",
+            "text": "This entity's declared main activity is 85.30 «Обучение профессиональное» (professional training), but its additional ОКВЭД list includes 28.99.9 «Производство оборудования специального назначения» and 30.30.6 «Производство беспилотных авиационных систем» — a declared-vs-actual profile question of the same shape already tracked elsewhere in this registry. Which of the 16 codes reflects real activity is unestablished; the first БФО filing (fiscal year 2025, s5537) was pulled 2026-09-05: form КНД 0710096 (simplified small-business balance sheet only, no P&L page) shows total assets of just ₽165 thousand (₽151 thousand of it a long-term loan, ₽10 thousand charter capital) — this is a functionally dormant shell, which does not by itself resolve which of the 16 ОКВЭД codes is real, since a shell with no revenue tells you nothing about actual vs. declared activity.",
             "source_id": "s5507"
           },
           {
@@ -20158,7 +20246,8 @@
             "source_id": null,
             "text": "2026-08-25 attempt at VK/TG product-line enrichment (per project's own VK/TG-as-primary-source rule) surfaced ONLY the other, already-disambiguated «Архангел» (ИНН 9500026652's @projectArchangel TG channel, 21.3K subs) and the Kalashnikov FPV-drone joint-production coverage tied to THAT entity -- correctly NOT attributed here per the existing note above. No VK/TG or product data found for this entity (9714079108) itself; products[] stays empty."
           }
-        ]
+        ],
+        "financials": []
       },
       "why": [
         "EGRUL_9714079108_20260905_ooo-arkhangel (s5507) — full signed ЕГРЮЛ выписка pulled 05.09.2026: confirms ОГРН 1257700345407, registration 05.08.2025, Moscow Хорошевский address, ₽10,000 charter capital, the 16-code ОКВЭД list (85.30 main, incl. 28.99.9 and 30.30.6), and dates the 50/50 Шатракова/Галиев ownership split to ГРН 2267705286407 of 23.06.2026 while supplying Галиев's personal ИНН 020403177846."
@@ -20166,7 +20255,16 @@
     },
     "5027339008": {
       "set": {
-        "tier_basis": "Directly named by press (Mashnews, photo credit Дмитрий Матвеев, re-posted by @proekt_arhangel 09.10.2025, s5456) as the manufacturer of the «Архангел» interceptor drone shown at Expo.UAV 2025. A companion post from the same channel (23.10.2025, same source file) names ООО «Архангел Щит» twice more as the entity whose combat instructors and staff run the facility-defense contracting/training business described in that post — client personnel train specifically to \"replace\" this company's own employees. Director Хабибулин Владимир Игоревич does not match Филиппов, Тимофеев, Кусумов, or Крючков — the four other named individuals across this \"Архангел\"-brand entity cluster — so this is a genuinely distinct fifth vehicle, kept separate rather than merged with any of the others. Shares tax-district code КПП 502701001 with ООО «МЛ КОНСТРАКШНС» (Филиппов's own construction firm) — a weak coincidence, NOT treated as a confirmed link on its own. CONFIRMED as a project-created legal entity by the project's own primary-source disclosure (proekt_arhangel#623, 2025-10-11, s5475): \"В конце лета нами создан проект и юридическое лицо 'Архангел-Щит'\" (created end-of-summer 2025) for civilian PVO-crew, volunteer, and private-security-staff training across Подмосковье, Запорожье, Крым and Краснодарский край — this matches and upgrades the earlier press-photo-credit-only sourcing (s5456) to a direct first-person project statement. SCREENING 2026-09-04: zakupki.gov.ru supplier-search (scoped --inn scan) returned zero contract hits. Rospatent patent-holder search (searchplatform.rospatent.gov.ru /search, patent_holders filter) returned zero hits for the entity name."
+        "tier_basis": "Directly named by press (Mashnews, photo credit Дмитрий Матвеев, re-posted by @proekt_arhangel 09.10.2025, s5456) as the manufacturer of the «Архангел» interceptor drone shown at Expo.UAV 2025. A companion post from the same channel (23.10.2025, same source file) names ООО «Архангел Щит» twice more as the entity whose combat instructors and staff run the facility-defense contracting/training business described in that post — client personnel train specifically to \"replace\" this company's own employees. Director Хабибулин Владимир Игоревич does not match Филиппов, Тимофеев, Кусумов, or Крючков — the four other named individuals across this \"Архангел\"-brand entity cluster — so this is a genuinely distinct fifth vehicle, kept separate rather than merged with any of the others. Shares tax-district code КПП 502701001 with ООО «МЛ КОНСТРАКШНС» (Филиппов's own construction firm) — a weak coincidence, NOT treated as a confirmed link on its own. CONFIRMED as a project-created legal entity by the project's own primary-source disclosure (proekt_arhangel#623, 2025-10-11, s5475): \"В конце лета нами создан проект и юридическое лицо 'Архангел-Щит'\" (created end-of-summer 2025) for civilian PVO-crew, volunteer, and private-security-staff training across Подмосковье, Запорожье, Крым and Краснодарский край — this matches and upgrades the earlier press-photo-credit-only sourcing (s5456) to a direct first-person project statement. SCREENING 2026-09-04: zakupki.gov.ru supplier-search (scoped --inn scan) returned zero contract hits. Rospatent patent-holder search (searchplatform.rospatent.gov.ru /search, patent_holders filter) returned zero hits for the entity name.",
+        "financials": [
+          {
+            "year": 2025,
+            "revenue": 53558000,
+            "profit": 1542000,
+            "source_id": "s5530",
+            "note": "БФО filing (thousands RUB in original: 53,558 / 1,542, converted to whole rubles here). First filing on record for this entity — it is NOT dormant, unlike several other family members."
+          }
+        ]
       }
     }
   }

@@ -46,6 +46,12 @@
 
 - **Дрон-перехватчик «Архангел»** — Same product line documented via @projectArchangel/10381 (see proekt-kb-arkhangel entity) — this press citation (Mashnews, Expo.UAV 2025) is the first third-party source directly naming a specific manufacturing legal entity for it. Independently corroborated by the original Mashnews article (09.10.2025, s5458, not just the @proekt_arhangel repost): 50km range, 350km/h speed (vs. 340km/h in the project's own June 2026 spec sheet, s5454 — a minor discrepancy, not investigated), unit price 165,000 rubles. Филиппов is quoted (paraphrase, not verbatim) describing rising market popularity for this interceptor class. [s5456]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2025 | ₽53,558,000 | ₽1,542,000 | [s5530] |
+
 - 1 OpenSanctions match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
@@ -77,6 +83,7 @@
 | s5456 | Tgpost | Tgpost (TGPOST_multi_20251009-20251023_proekt_arhangel-arkhangel-shchit-business-model.txt) | — | — |
 | s5517 | EGRUL extract | EGRUL extract (EGRUL_5027339008_20260905_ooo-arkhangel-shchit.pdf) | 2026-09-05 | 2026-09-05 |
 | s5522 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5027339008_20260905_ooo-arkhangel-shchit.json) | 2026-09-05 | — |
+| s5530 | Bfo | Bfo (BFO_5027339008_2025_ooo-arkhangel-shchit.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

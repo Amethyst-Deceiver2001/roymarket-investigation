@@ -42,6 +42,12 @@
 |---|---|---|
 | 143003, Московская область, г.о. Одинцовский, г. Одинцово, ул. Маршала Жукова, д. 32, помещ. 1, офис 410-415 | 2026-01-12 | Current registered address, entered by ГРН 2265000009096 on 12.01.2026. The выписка does not print the superseded prior address, so the pre-2026 address is not established from this document. [s5503] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | — | — | [s5531] |
+
 ## Sanctions & screening
 
 **EU, UA-NSDC, FR, CH-SECO, BE-FOD, MC** [s5413]
@@ -77,6 +83,7 @@
 | s5410 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5032379630_20260903_ooo-arkhangel-tsentr-odintsovo.json) | 2026-09-03 | 2026-09-03 |
 | s5413 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_archangel-family-batch_20260903.json) | 2026-09-03 | 2026-09-03 |
 | s5503 | EGRUL extract | EGRUL extract (EGRUL_5032379630_20260905_ooo-arkhangel-tsentr.pdf) | 2026-09-05 | 2026-09-05 |
+| s5531 | Bfo | Bfo (BFO_5032379630_2024_ooo-arkhangel-tsentr.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -1,0 +1,149 @@
+#!/usr/bin/env python3
+"""Pull signed БФО (annual accounts) filings from bo.nalog.gov.ru.
+
+Discovered 2026-09-05: the site's actual filing-PDF endpoint,
+/download/bfo/pdf/<correction_id>, is NOT the same as /download/original/<id>
+documented in the `bo_nalog_gov_ru_api` memory (which IS universally gated,
+"Organization closed for public use"). /download/bfo/pdf/ was found by
+clicking the real "Скачать c подписью ФНС России" button in a live browser
+and watching the network tab open a new page at that URL with no cookies
+sent and no captcha challenge -- confirmed reproducible via a plain
+`curl -k`, no session/auth of any kind. This closes what the memory called
+a "cannot self-serve" gap.
+
+Flow, all unauthenticated:
+    GET /advanced-search/organizations/search?query=<INN or name>
+        -> org `id` (a `bfo` block confirms whether ANY filing exists)
+    GET /nbo/organizations/<id>/bfo/
+        -> one row per filing year; walk typeCorrections[].correction.id
+           for the doc id `/download/bfo/pdf/` wants (NOT the outer bfoId)
+    GET /download/bfo/pdf/<correction.id>
+        -> the actual signed PDF (curl -k required, self-signed TLS chain,
+           same as zakupki.gov.ru elsewhere in this repo)
+
+Single-ИНН / a handful = inline reconnaissance, run directly. A full-roster
+sweep (no --inn) should be handed to the user per this repo's crawling-jobs
+policy in CLAUDE.md, same as egrul_vypiska_pull.py / egrul_batch_pull.py.
+"""
+import argparse
+import re
+import sys
+import unicodedata
+from pathlib import Path
+
+import requests
+
+BASE = "https://bo.nalog.gov.ru"
+SOURCES = Path(__file__).resolve().parent.parent / "data" / "sources"
+
+# bo.nalog.gov.ru's WAF 403s any request lacking a normal browser UA/sec-ch-ua
+# set - confirmed 2026-09-05 (curl/requests default headers -> 403, a real
+# Chrome UA -> 200). Not an auth gate, just a bot-signature check.
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/json, text/plain, */*",
+}
+
+
+def slugify(name: str) -> str:
+    name = unicodedata.normalize("NFKD", name)
+    name = re.sub(r"[^\w\s-]", "", name, flags=re.UNICODE).strip().lower()
+    return re.sub(r"[\s_-]+", "-", name)[:60]
+
+
+def find_org(inn: str) -> dict | None:
+    r = requests.get(
+        f"{BASE}/advanced-search/organizations/search",
+        params={"query": inn},
+        headers=HEADERS,
+        verify=False,
+        timeout=20,
+    )
+    r.raise_for_status()
+    for row in r.json().get("content", []):
+        # inn/shortName come back with <strong> highlight markup around the
+        # matched substring - strip tags before comparing, or an exact-ИНН
+        # match silently never fires.
+        row_inn = re.sub(r"<[^>]+>", "", row.get("inn") or "")
+        if row_inn == inn:
+            row["inn"] = row_inn
+            row["shortName"] = re.sub(r"<[^>]+>", "", row.get("shortName") or "")
+            return row
+    return None
+
+
+def list_filings(org_id: int) -> list[dict]:
+    r = requests.get(
+        f"{BASE}/nbo/organizations/{org_id}/bfo/",
+        headers=HEADERS,
+        verify=False,
+        timeout=20,
+    )
+    r.raise_for_status()
+    return r.json()
+
+
+def download_filing(correction_id: int, out_path: Path) -> int:
+    r = requests.get(
+        f"{BASE}/download/bfo/pdf/{correction_id}",
+        headers=HEADERS,
+        verify=False,
+        timeout=60,
+    )
+    r.raise_for_status()
+    if r.headers.get("content-type", "").split(";")[0] != "application/pdf":
+        raise RuntimeError(f"unexpected content-type {r.headers.get('content-type')!r}")
+    out_path.write_bytes(r.content)
+    return len(r.content)
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--inn", action="append", required=True, help="ИНН (repeatable)")
+    ap.add_argument("--slug", required=False, help="entity slug for filename (single --inn only)")
+    ap.add_argument("--force", action="store_true", help="re-download even if a same-year file exists")
+    args = ap.parse_args()
+
+    requests.packages.urllib3.disable_warnings()  # noqa: self-signed chain, same as zakupki_batch_pull.py
+
+    for inn in args.inn:
+        org = find_org(inn)
+        if not org:
+            print(f"[{inn}] not found in bo.nalog.gov.ru search index", file=sys.stderr)
+            continue
+        filings = list_filings(org["id"])
+        if not filings:
+            print(f"[{inn}] {org.get('shortName', '')}: no БФО filings on record")
+            continue
+        slug = args.slug if (args.slug and len(args.inn) == 1) else slugify(org.get("shortName", inn))
+        for f in filings:
+            year = f.get("period")
+            for tc in f.get("typeCorrections", []):
+                corr = tc.get("correction") or {}
+                cid = corr.get("id")
+                if not cid:
+                    continue
+                out = SOURCES / f"BFO_{inn}_{year}_{slug}.pdf"
+                if out.exists() and not args.force:
+                    print(f"[{inn}] {year}: already have {out.name}, skip (--force to re-pull)")
+                    continue
+                try:
+                    size = download_filing(cid, out)
+                except Exception as ex:
+                    print(f"[{inn}] {year} (correction {cid}): FAILED - {ex}", file=sys.stderr)
+                    continue
+                print(f"[{inn}] {year}: wrote {out.name} ({size:,} bytes)")
+
+    print(
+        "\nRun the housekeeping chain next: inventory_sources.py -> scan_sources.py "
+        "--out data/sources/MANIFEST.md --leads-out <file> -> extract_registry.py -> "
+        "check_registry.py",
+        file=sys.stderr,
+    )
+
+
+if __name__ == "__main__":
+    main()

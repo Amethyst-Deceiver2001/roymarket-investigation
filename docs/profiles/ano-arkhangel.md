@@ -33,6 +33,13 @@
 |---|---|---|
 | 353917, Краснодарский край, г.о. город Новороссийск, г. Новороссийск, ул. Кутузовская, д. 117, помещ. 8 | 2026-09-05 | Registered legal address per the full signed ЕГРЮЛ выписка of 05.09.2026 — this record's first primary-source address (it previously rested on aggregator sourcing only). [s5502] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | — | — | [s5527] |
+| 2025 | — | — | [s5528] |
+
 - 1 OpenSanctions match(es) (screened 2026-09-04).
 
 ## Web & social presence
@@ -71,6 +78,8 @@
 | s5394 | Rusprofile | Rusprofile (RUSPROFILE_2315233718_20260903_ano-arkhangel.txt) | 2026-09-03 | 2026-09-03 |
 | s5409 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_2315233718_20260903_ano-arkhangel.json) | 2026-09-03 | 2026-09-03 |
 | s5502 | EGRUL extract | EGRUL extract (EGRUL_2315233718_20260905_ano-arkhangel.pdf) | 2026-09-05 | 2026-09-05 |
+| s5527 | Bfo | Bfo (BFO_2315233718_2024_ano-arkhangel.pdf) | — | — |
+| s5528 | Bfo | Bfo (BFO_2315233718_2025_ano-arkhangel.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
