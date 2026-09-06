@@ -37,6 +37,28 @@
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; name_ru: Каталог продукции ГИСП — отрасль БАС; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly. [s5344]
 
+## Self-reported marketing claims
+
+> *"Овод" – это новейший боеприпас квадрокоптерного типа: ведёт, как разведку, так и поражает цель.*
+> "Ovod" is a state-of-the-art quadcopter-type munition: it conducts reconnaissance and also strikes the target.
+>
+> — Quoted from a regional Народный фронт official (Елена Зубун) describing the first-ever shipment of 50 «Овод» kamikaze drones to the SVO zone, reposted on the channel's own account of the shipment. (2023-08-17) [s6456]
+
+> *Сейчас наши дроны на оптоволокне преодолевают расстояние до 40 км. Без красивых презентаций и сказок для телевизора. Просто инженерия, математика и русские мужики, которые умеют работать руками и головой.*
+> Right now our fiber-optic drones cover distances of up to 40 km. No pretty presentations or TV fairy tales. Just engineering, math, and Russian men who know how to work with their hands and their heads.
+>
+> — Manufacturer's own technical/marketing claim about fiber-optic-guided strike-drone range, posted alongside a product close-up photo. (2026-05-26) [s6456]
+
+> *Произвели. Испытали. Применили. Разработкой и испытанием дронов ОВОД занимаются люди с реальным боевым опытом... Основатель ОВОДА с 2022 по 2026 год лично работал на многих направлениях от Крынок и Бахмута до Белгорода и Курска.*
+> Manufactured. Tested. Deployed. The people developing and testing OVOD drones have real combat experience... The founder of OVOD personally worked on many fronts from 2022 to 2026, from Krynky and Bakhmut to Belgorod and Kursk.
+>
+> — Extended marketing narrative describing front-line field-testing as the company's core development method, including a joint trial with ФСБ ЦСН special forces. (2026-07-08) [s6456]
+
+> *Тяжелый ударный FPV-дрон «Провод» на оптоволокне отработал на рекордную для боевых условий дальность - 40 километров 400 метров и уничтожил там, на Сумском направлении, укропский склад с БК и ошивавшийся рядом личный состав противника.*
+> The heavy fiber-optic strike FPV drone "Provod" achieved a record combat-condition range of 40.4 km, destroying a Ukrainian ammunition depot and nearby enemy personnel on the Sumy front.
+>
+> — Self-reported strike claim for the «Провод»/«ПрОвод» fiber-optic variant of the «Овод» family, framed as a range record. (2026-08-18) [s6456]
+
 ## Battlefield evidence
 
 > *Операторы БАРС-8 нашли и уничтожили самоходную гаубицу ВСУ западного образца стоимостью порядка 3 млн долларов четырьмя дронами ОВОД. Гаубица стоимостью до 3 млн долларов уничтожена дронами стоимостью порядка 6 тысяч долларов.*
@@ -45,6 +67,13 @@
 > — Third-party-attributed (named БАРС-8 reservist unit, not Овод's own marketing framing) cost-effectiveness battlefield claim, posted 05.08.2026. (2026-08-05) [s5446]
 
 ![Third-party-attributed (named БАРС-8 reservist unit, not Овод's own marketing framing) cost-effectiveness battlefield claim, posted 05.08.2026.](data/sources/TGPOST_multi_20260729-20260805_tulaovod-week-assassination-dovod-barsclaim.txt)
+
+> *Подразделения лётного батальона 88-й бригады Эспаньола стабильно продолжают боевую работу на Константиновском направлении СВО в окрестностях Часов Яра... На видео выше — нарезка поражений ПВД неприятеля несколькими точными ударами FPV-дронов самолетного типа системы «Привет-82» расчетами лётного отряда «Совы», расчетами «Овода» со своими средствами...*
+> Units of the 88th Brigade "Espanyola" flight battalion continue combat operations on the Konstantinovka front near Chasiv Yar... the video shows a compilation of strikes on enemy forward positions by "Privet-82" fixed-wing FPV drone crews, "Ovod" crews with their own equipment...
+>
+> — Named military unit's (88th Brigade, callsign "Испанец"/Espanyola) own combat-application account with video footage, reposted on Овод's own channel — third-party framed, not the manufacturer's own marketing copy. (2025-06-10) [s6456]
+
+![Named military unit's (88th Brigade, callsign "Испанец"/Espanyola) own combat-application account with video footage, reposted on Овод's own channel — third-party framed, not the manufacturer's own marketing copy.](data/sources/TGPOST_multi_20260907_tulaovod-marketing-battlefield-scan.txt)
 
 ## Sanctions & screening
 
@@ -57,6 +86,18 @@
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 5 OCCRP Aleph match(es) (screened 2026-09-05).
+
+## Web & social presence
+
+### Telegram
+
+- <https://t.me/tulaovod> — Official brand channel for the umbrella "группа компаний «ОВОД»" (bio/posts speak in the company's own first-person voice), 831 posts scraped in this repo's own archive. Already used as the source for this entity's marketing_claims/battlefield_evidence/images (source s6456), but was missing from web.telegram itself until now.
+
+## Images
+
+- ![Первая партия из 50 дронов-камикадзе «Овод», упакованных для отправки в зону СВО при поддержке проекта "Народный фронт" (Иркутская область), август 2023.](../images/ovod_shipment_50-drones-narodny-front-2023.jpg) — Первая партия из 50 дронов-камикадзе «Овод», упакованных для отправки в зону СВО при поддержке проекта "Народный фронт" (Иркутская область), август 2023. [s6451]
+- ![Product close-up: motor/propeller assembly of a fiber-optic-guided strike drone, with the «ОВОД» dragonfly logo — official product photo from the manufacturer's own channel.](../images/ovod_product_fiber-optic-spool-closeup.jpg) — Product close-up: motor/propeller assembly of a fiber-optic-guided strike drone, with the «ОВОД» dragonfly logo — official product photo from the manufacturer's own channel. [s6455]
+- ![Stylized CGI promotional render (not a real combat photograph) of an armed quadcopter in a cinematic urban scene, with the «ОВОД» logo — official promotional art, not footage.](../images/ovod_promo_cgi-armed-drone-render.jpg) — Stylized CGI promotional render (not a real combat photograph) of an armed quadcopter in a cinematic urban scene, with the «ОВОД» logo — official promotional art, not footage. [s6454]
 
 ## Principals & persons of interest
 
@@ -79,6 +120,10 @@ _No named principals linked to this entity yet._
 | s3376 | Zakupki | Zakupki (ZAKUPKI_contract_1366202088625000035_20260829.html) | 2026-08-29 | — |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5446 | Tgpost | Tgpost (TGPOST_multi_20260729-20260805_tulaovod-week-assassination-dovod-barsclaim.txt) | — | — |
+| s6451 | Telegram media | Telegram media (TGMEDIA_7100027464_20230817_tulaovod-post72-1.jpg) | 2023-08-17 | — |
+| s6454 | Telegram media | Telegram media (TGMEDIA_7100027464_20260306_tulaovod-post845-1.jpg) | 2026-03-06 | — |
+| s6455 | Telegram media | Telegram media (TGMEDIA_7100027464_20260526_tulaovod-post896-1.jpg) | 2026-05-26 | — |
+| s6456 | Tgpost | Tgpost (TGPOST_multi_20260907_tulaovod-marketing-battlefield-scan.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -15804,10 +15804,68 @@
               "url": "https://xn--80aac0c2a.xn--p1ai/"
             }
           ],
-          "telegram": [],
+          "telegram": [
+            {
+              "note": "Official brand channel (bio confirms: \"Компания GoDrone – противодействие БПЛА, поставки и обслуживание дронов. Сайт: godrone.ru\"), 2707 posts scraped in this repo's own archive. Runs a long-standing recurring \"#набатвделе\" battlefield-testimonial series (soldier/unit field reports), found and wired 2026-09-07 — was previously not listed here despite being this entity's primary Telegram presence.",
+              "url": "https://t.me/GoDrone"
+            }
+          ],
           "vk": [],
           "youtube": []
-        }
+        },
+        "marketing_claims": [
+          {
+            "text_ru": "СВОих не бросаем",
+            "text_en": "We don't abandon our own [wordplay embedding \"SVO\" inside \"svoikh\"/\"our own\"]",
+            "context": "Wall signage inside the GoDrone showroom (Большой Симоновский переулок, 2, Москва), from the store's own official \"Marketing GoDrone\" Yandex Maps photo upload — self-incriminating physical-showroom marketing, not a customer upload. Already on file as an images[] caption; promoted to a structured marketing_claims[] entry per project convention.",
+            "source_id": "s1396",
+            "as_of": "2026-08-25"
+          },
+          {
+            "text_ru": "Сферы применения: Защита техники и личного состава в условиях СВО.",
+            "text_en": "Areas of application: Protection of equipment and personnel under SVO conditions.",
+            "context": "First-listed use case (before civilian applications like crowd/facility protection) on the dedicated набат.рф product site for the «Набат V.3» drone detector.",
+            "source_id": "s6457",
+            "as_of": "2026-09-07"
+          },
+          {
+            "text_ru": "Перевод (военным): 100 000 ₽. Карта / СБП (Военные): 106 000 ₽.",
+            "text_en": "Bank transfer (for military): 100,000 RUB. Card / SBP (military): 106,000 RUB.",
+            "context": "Product site's own pricing table for «Набат V.3», offering a discounted price tier specifically for military buyers (vs. 115,000 RUB retail / 120,000 RUB for legal entities) — a direct self-admission of the military-buyer market segment.",
+            "source_id": "s6457",
+            "as_of": "2026-09-07"
+          }
+        ],
+        "battlefield_evidence": [
+          {
+            "text_ru": "Дрон-детектор «Набат V.2.C» спас жизни бойцов под Бахмутом. Благодаря сигналу с нашего устройства парни смогли вовремя выпрыгнуть из машины и укрыться в застройке. Другим солдатам повезло меньше — их «Урал» был сожжен вражеским дроном.",
+            "text_en": "The \"Nabat V.2.C\" drone detector saved soldiers' lives near Bakhmut. Thanks to our device's signal, the men were able to jump out of the vehicle in time and take cover in a built-up area. Other soldiers were less fortunate — their \"Ural\" truck was burned by an enemy drone.",
+            "context": "Self-reported field-use anecdote from the manufacturer's own recurring \"#набатвделе\" (Nabat in action) testimonial series, Bakhmut direction.",
+            "source_id": "s6458",
+            "as_of": "2025-02-20"
+          },
+          {
+            "text_ru": "Бойцы с Бахмутского направления записали отзыв на «Набат V.2.C»: сигнал дрона ловит отлично и сразу; легок в управлении; работает безотказно.",
+            "text_en": "Soldiers on the Bakhmut direction recorded a review of the \"Nabat V.2.C\": catches the drone signal well and immediately; easy to operate; works without failure.",
+            "context": "Named-unit soldier testimonial video (Часов Яр direction), part of the same testimonial series.",
+            "source_id": "s6458",
+            "as_of": "2025-02-04"
+          },
+          {
+            "text_ru": "НАБАТ.V3 доставлен на Запорожскую АЭС. Детектор БПЛА «НАБАТ.V3» развернут на Запорожской атомной электростанции. Комплекс работает в связке с экраном перехвата видеосигнала и используется для постоянного контроля воздушной обстановки вокруг объекта.",
+            "text_en": "NABAT.V3 delivered to the Zaporizhzhia Nuclear Power Plant. The NABAT.V3 drone detector has been deployed at the Zaporizhzhia NPP. The system works together with a video-signal interception screen and is used for continuous airspace monitoring around the facility.",
+            "context": "Deployment at a named, internationally significant nuclear facility under Russian occupation — a distinctive, high-profile field deployment.",
+            "source_id": "s6458",
+            "as_of": "2025-12-26"
+          },
+          {
+            "text_ru": "Получили отзыв после проведения тестирования детектора «Набат-3» в зоне проведения СВО и приграничных территориях. Бойцами действующего подразделения была проверена работа детектора... Военнослужащими была дана высокая оценка работы устройства.",
+            "text_en": "Received feedback after testing the \"Nabat-3\" detector in the SVO zone and border territories. Soldiers of an active unit tested the detector's operation... The servicemen gave the device's performance a high rating.",
+            "context": "Recent (2026) formal field-test feedback from an active-duty unit, part of the same ongoing testimonial series.",
+            "source_id": "s6458",
+            "as_of": "2026-07-29"
+          }
+        ]
       },
       "verified_against": null,
       "why": [
@@ -15827,7 +15885,9 @@
         "User reminded to also capture self-incriminating marketing copy verbatim, not just paraphrase around it. Re-checked набат.рф's raw HTML for СВО/воен mentions beyond the pricing table already recorded: the site's own hero-section tagline reads verbatim \"Защита техники и личного состава в условиях СВО\" -- added to products[] as a direct quote, since it explicitly markets the detector for combat use in the war rather than as generic security equipment.",
         "User supplied a Street View screenshot (2026-08-25, s1394) confirming the набат.рф site's Большой Симоновский переулок, 2 address is a genuine physical storefront, not a fake/placeholder address -- signage \"GODRONE\"/\"Gd Home\", with a militarized soldier-silhouette decal on the door. Not added to address_history (that field tracks the EGRUL-registered office over time, not an additional retail/showroom location) -- documented in the web.sites note instead.",
         "User pointed to GoDrone's Yandex Maps business listing (2026-08-25, s1395, direct curl archive). Independent (non-manufacturer-controlled) third-party corroboration: same Большой Симоновский переулок, 2 address, Yandex's own \"Drones and quadrocopters\" category classification, 5.0 rating/120 reviews/48-photo gallery, plus two more phone numbers not seen on either godrone.ru or набат.рф.",
-        "User asked to collect visuals and review quotes to enrich the profile (2026-08-25). HAR capture of the Yandex Maps reviews/photos tabs (s1396, 50 of 120 total reviews, 48 photos) surfaced strong independent corroboration of combat-zone end use: a customer review directly confirming a «Набат» purchase \"для наших военнослужащих в зоне СВО\", two more reviews describing urgent purchases \"для фронта\"/\"на СВО\" of other equipment, and -- most significant -- the showroom's own official-account photo showing wall signage reading \"СВОих не бросаем\", a deliberate СВО/своих wordplay physically displayed in-store, not just online marketing copy. Added the quotes to products[] and 4 selected photos to images[]/docs/images/ (exterior, the slogan wall, general showroom, product display)."
+        "User asked to collect visuals and review quotes to enrich the profile (2026-08-25). HAR capture of the Yandex Maps reviews/photos tabs (s1396, 50 of 120 total reviews, 48 photos) surfaced strong independent corroboration of combat-zone end use: a customer review directly confirming a «Набат» purchase \"для наших военнослужащих в зоне СВО\", two more reviews describing urgent purchases \"для фронта\"/\"на СВО\" of other equipment, and -- most significant -- the showroom's own official-account photo showing wall signage reading \"СВОих не бросаем\", a deliberate СВО/своих wordplay physically displayed in-store, not just online marketing copy. Added the quotes to products[] and 4 selected photos to images[]/docs/images/ (exterior, the slogan wall, general showroom, product display).",
+        "Website marketing scan of набот.рф (2026-09-07, source s6457) plus promotion of an already-archived showroom-photo slogan (s1396, previously only an images[] caption) into structured marketing_claims[] — closes the marketing_claims gap flagged in the 2026-09-05 coverage audit for this case-study entity. Military-discount pricing tier and explicit SVO use-case framing are both the manufacturer's own words, not third-party characterization.",
+        "Telegram battlefield-evidence scan of @GoDrone (2026-09-07, source s6458): the entity's own official brand channel (previously missing from web.telegram) runs a long-running recurring soldier/unit-testimonial series (\"#набатвделе\") documenting field use of the «Набат» detector line across many named directions/units, including a deployment at the Zaporizhzhia NPP. Closes the battlefield_evidence gap flagged in the 2026-09-05 coverage audit for this case-study entity; only 4 of ~80+ available testimonial posts were selected as representative, not an exhaustive pull."
       ]
     },
     "ooo-instekh": {
@@ -21633,6 +21693,9 @@
           {
             "source_id": null,
             "text": "NEW cross-network link (found 2026-09-05, cross-channel Филиппов/Архангел trawl): «Овод» took 2nd place in Archangel_Forum's own self-run 'Народное тестирование' (People's Testing) drone comparison series, msg 104088 (2024-07-05) — «Овод» производства ООО «Воздушный тракт» [sic, forum's own abbreviation of this entity's actual name] scored behind 1st-place «ПВХ-1» (АО «Обуховский завод») on the SAME informal testing ground Филиппов's Проект «Архангел» network runs for its own supplier ecosystem. This is the first documented point of contact between this sanctioned, ЦБСТ-flagship entity and the Архангел-family network — a shared informal supplier-vetting circuit, not (yet) a corporate or contractual tie. Separately, Archangel_Forum msg 179660 (2026-07-30) reports an assassination attempt against this company's director Черезов Андрей Павлович ('НАС НЕ ЗАПУГАЛИ — НАС РАЗОЗЛИЛИ'), self-reported by the company's own channel and not independently verified — parallels Filippov's own self-reported assassination-attempt claims (proekt_arhangel#382/#739, s5475) as a second instance of this claim-pattern within the same investigation, worth tracking but not treating as confirmed fact."
+          },
+          {
+            "text": "A rich Telegram marketing/battlefield-evidence scan of @tulaovod (2026-09-07, source s6456) found extensive self-incriminating marketing copy, a third-party military combat-use report, and product photos for the umbrella «Овод» brand — but the channel speaks for the brand as a whole and does not distinguish this entity from its sister company РЛВТ (slug ovod, ИНН 7100027464). All wired claims were attributed to `ovod` since its existing product record (s0526) already ties it concretely to the «Овод» brand; this entity's own marketing_claims/battlefield_evidence/images gaps remain genuinely open pending a way to confirm which specific products/claims belong to ООО «Воздушный трактат» itself rather than РЛВТ."
           }
         ],
         "sanctions": [
@@ -22126,6 +22189,13 @@
             "context": "Third-party-attributed (named БАРС-8 reservist unit, not Овод's own marketing framing) cost-effectiveness battlefield claim, posted 05.08.2026.",
             "source_id": "s5446",
             "as_of": "2026-08-05"
+          },
+          {
+            "text_ru": "Подразделения лётного батальона 88-й бригады Эспаньола стабильно продолжают боевую работу на Константиновском направлении СВО в окрестностях Часов Яра... На видео выше — нарезка поражений ПВД неприятеля несколькими точными ударами FPV-дронов самолетного типа системы «Привет-82» расчетами лётного отряда «Совы», расчетами «Овода» со своими средствами...",
+            "text_en": "Units of the 88th Brigade \"Espanyola\" flight battalion continue combat operations on the Konstantinovka front near Chasiv Yar... the video shows a compilation of strikes on enemy forward positions by \"Privet-82\" fixed-wing FPV drone crews, \"Ovod\" crews with their own equipment...",
+            "context": "Named military unit's (88th Brigade, callsign \"Испанец\"/Espanyola) own combat-application account with video footage, reposted on Овод's own channel — third-party framed, not the manufacturer's own marketing copy.",
+            "source_id": "s6456",
+            "as_of": "2025-06-10"
           }
         ],
         "open_questions": [
@@ -22137,7 +22207,67 @@
             "source_id": "s5446",
             "text": "PEP-adjacency lead, NOT independently confirmed: a 30.07.2026 forward on Овод's own channel, originally from war correspondent Анастасия Кашеварова's (@akashevarova) personal channel, claims Алексей Дюмин — while governor of Tula oblast — personally helped Черезов with his early drone development, before the enemy had comparable technology. This is a named, identifiable journalist's secondhand account, forwarded (not authored) by Овод itself — not corroborated by any Дюмин-side or Овод-official primary source in this pass. If confirmed, this would tie Овод's founding story directly to a now-senior federal security/defense-adjacent official; treat as an open lead requiring independent verification before use, not as an established fact."
           }
-        ]
+        ],
+        "marketing_claims": [
+          {
+            "text_ru": "\"Овод\" – это новейший боеприпас квадрокоптерного типа: ведёт, как разведку, так и поражает цель.",
+            "text_en": "\"Ovod\" is a state-of-the-art quadcopter-type munition: it conducts reconnaissance and also strikes the target.",
+            "context": "Quoted from a regional Народный фронт official (Елена Зубун) describing the first-ever shipment of 50 «Овод» kamikaze drones to the SVO zone, reposted on the channel's own account of the shipment.",
+            "source_id": "s6456",
+            "as_of": "2023-08-17"
+          },
+          {
+            "text_ru": "Сейчас наши дроны на оптоволокне преодолевают расстояние до 40 км. Без красивых презентаций и сказок для телевизора. Просто инженерия, математика и русские мужики, которые умеют работать руками и головой.",
+            "text_en": "Right now our fiber-optic drones cover distances of up to 40 km. No pretty presentations or TV fairy tales. Just engineering, math, and Russian men who know how to work with their hands and their heads.",
+            "context": "Manufacturer's own technical/marketing claim about fiber-optic-guided strike-drone range, posted alongside a product close-up photo.",
+            "source_id": "s6456",
+            "as_of": "2026-05-26"
+          },
+          {
+            "text_ru": "Произвели. Испытали. Применили. Разработкой и испытанием дронов ОВОД занимаются люди с реальным боевым опытом... Основатель ОВОДА с 2022 по 2026 год лично работал на многих направлениях от Крынок и Бахмута до Белгорода и Курска.",
+            "text_en": "Manufactured. Tested. Deployed. The people developing and testing OVOD drones have real combat experience... The founder of OVOD personally worked on many fronts from 2022 to 2026, from Krynky and Bakhmut to Belgorod and Kursk.",
+            "context": "Extended marketing narrative describing front-line field-testing as the company's core development method, including a joint trial with ФСБ ЦСН special forces.",
+            "source_id": "s6456",
+            "as_of": "2026-07-08"
+          },
+          {
+            "text_ru": "Тяжелый ударный FPV-дрон «Провод» на оптоволокне отработал на рекордную для боевых условий дальность - 40 километров 400 метров и уничтожил там, на Сумском направлении, укропский склад с БК и ошивавшийся рядом личный состав противника.",
+            "text_en": "The heavy fiber-optic strike FPV drone \"Provod\" achieved a record combat-condition range of 40.4 km, destroying a Ukrainian ammunition depot and nearby enemy personnel on the Sumy front.",
+            "context": "Self-reported strike claim for the «Провод»/«ПрОвод» fiber-optic variant of the «Овод» family, framed as a range record.",
+            "source_id": "s6456",
+            "as_of": "2026-08-18"
+          }
+        ],
+        "images": [
+          {
+            "caption": "Первая партия из 50 дронов-камикадзе «Овод», упакованных для отправки в зону СВО при поддержке проекта \"Народный фронт\" (Иркутская область), август 2023.",
+            "path": "images/ovod_shipment_50-drones-narodny-front-2023.jpg",
+            "source_id": "s6451"
+          },
+          {
+            "caption": "Product close-up: motor/propeller assembly of a fiber-optic-guided strike drone, with the «ОВОД» dragonfly logo — official product photo from the manufacturer's own channel.",
+            "path": "images/ovod_product_fiber-optic-spool-closeup.jpg",
+            "source_id": "s6455"
+          },
+          {
+            "caption": "Stylized CGI promotional render (not a real combat photograph) of an armed quadcopter in a cinematic urban scene, with the «ОВОД» logo — official promotional art, not footage.",
+            "path": "images/ovod_promo_cgi-armed-drone-render.jpg",
+            "source_id": "s6454"
+          }
+        ],
+        "web": {
+          "sites": [],
+          "telegram": [
+            {
+              "note": "Official brand channel for the umbrella \"группа компаний «ОВОД»\" (bio/posts speak in the company's own first-person voice), 831 posts scraped in this repo's own archive. Already used as the source for this entity's marketing_claims/battlefield_evidence/images (source s6456), but was missing from web.telegram itself until now.",
+              "url": "https://t.me/tulaovod"
+            }
+          ],
+          "vk": [],
+          "youtube": [],
+          "marketplace_listings": [],
+          "other": []
+        }
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026; TheInsider (theins.ru/news/295478), read directly 23.08.2026",
       "why": [
@@ -22147,7 +22277,9 @@
         "2026-08-23 web-search sweep: added «Провод-15» heavy FPV variant and its press-reported >40km range record / Sumy ammo-depot strike claim, surfaced while researching sister entity ooo-vozdushnyy-traktat. Did NOT create a duplicate entity — this ИНН (7100027464) was already fully verified under slug 'ovod'.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0759).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7100027464). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14059) ID-confirmed via ИНН 7100027464 — exact match, screen_gur.py sweep, 2026-08-24. Corroborates the existing «Овод» product entry (previously source_id s0526) and adds detail: repeaters enabling remote control from up to 50m, homing system, capable of carrying fragmentation/high-explosive munitions."
+        "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14059) ID-confirmed via ИНН 7100027464 — exact match, screen_gur.py sweep, 2026-08-24. Corroborates the existing «Овод» product entry (previously source_id s0526) and adds detail: repeaters enabling remote control from up to 50m, homing system, capable of carrying fragmentation/high-explosive munitions.",
+        "Telegram marketing/battlefield scan of @tulaovod (2026-09-07, source s6456 text + s6451/s6454/s6455 media): the channel's full history (2023-2026) carries extensive self-incriminating marketing copy about front-line field-testing, product range/capability claims, and a third-party military-unit combat-use report, plus real product/shipment photos and a promotional CGI render — closing marketing_claims/battlefield_evidence/images gaps flagged in the 2026-09-05 coverage audit as this project's most valuable remaining evidence type.",
+        "Adding @tulaovod to web.telegram (2026-09-07) — already used as the primary source for this entity's marketing/battlefield/images material, an oversight that it wasn't listed in web[] itself."
       ]
     },
     "pao-bank-psb": {

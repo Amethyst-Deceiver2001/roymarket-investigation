@@ -41,6 +41,53 @@
 | 2024 | ₽178,346,000 | ₽9,337,000 | [s0414] |
 | 2025 | ₽55,937,000 | ₽512,000 | [s0415] |
 
+## Self-reported marketing claims
+
+> *СВОих не бросаем*
+> We don't abandon our own [wordplay embedding "SVO" inside "svoikh"/"our own"]
+>
+> — Wall signage inside the GoDrone showroom (Большой Симоновский переулок, 2, Москва), from the store's own official "Marketing GoDrone" Yandex Maps photo upload — self-incriminating physical-showroom marketing, not a customer upload. Already on file as an images[] caption; promoted to a structured marketing_claims[] entry per project convention. (2026-08-25) [s1396]
+
+> *Сферы применения: Защита техники и личного состава в условиях СВО.*
+> Areas of application: Protection of equipment and personnel under SVO conditions.
+>
+> — First-listed use case (before civilian applications like crowd/facility protection) on the dedicated набат.рф product site for the «Набат V.3» drone detector. (2026-09-07) [s6457]
+
+> *Перевод (военным): 100 000 ₽. Карта / СБП (Военные): 106 000 ₽.*
+> Bank transfer (for military): 100,000 RUB. Card / SBP (military): 106,000 RUB.
+>
+> — Product site's own pricing table for «Набат V.3», offering a discounted price tier specifically for military buyers (vs. 115,000 RUB retail / 120,000 RUB for legal entities) — a direct self-admission of the military-buyer market segment. (2026-09-07) [s6457]
+
+## Battlefield evidence
+
+> *Дрон-детектор «Набат V.2.C» спас жизни бойцов под Бахмутом. Благодаря сигналу с нашего устройства парни смогли вовремя выпрыгнуть из машины и укрыться в застройке. Другим солдатам повезло меньше — их «Урал» был сожжен вражеским дроном.*
+> The "Nabat V.2.C" drone detector saved soldiers' lives near Bakhmut. Thanks to our device's signal, the men were able to jump out of the vehicle in time and take cover in a built-up area. Other soldiers were less fortunate — their "Ural" truck was burned by an enemy drone.
+>
+> — Self-reported field-use anecdote from the manufacturer's own recurring "#набатвделе" (Nabat in action) testimonial series, Bakhmut direction. (2025-02-20) [s6458]
+
+![Self-reported field-use anecdote from the manufacturer's own recurring "#набатвделе" (Nabat in action) testimonial series, Bakhmut direction.](data/sources/TGPOST_multi_20260907_godrone-battlefield-testimonial-series.txt)
+
+> *Бойцы с Бахмутского направления записали отзыв на «Набат V.2.C»: сигнал дрона ловит отлично и сразу; легок в управлении; работает безотказно.*
+> Soldiers on the Bakhmut direction recorded a review of the "Nabat V.2.C": catches the drone signal well and immediately; easy to operate; works without failure.
+>
+> — Named-unit soldier testimonial video (Часов Яр direction), part of the same testimonial series. (2025-02-04) [s6458]
+
+![Named-unit soldier testimonial video (Часов Яр direction), part of the same testimonial series.](data/sources/TGPOST_multi_20260907_godrone-battlefield-testimonial-series.txt)
+
+> *НАБАТ.V3 доставлен на Запорожскую АЭС. Детектор БПЛА «НАБАТ.V3» развернут на Запорожской атомной электростанции. Комплекс работает в связке с экраном перехвата видеосигнала и используется для постоянного контроля воздушной обстановки вокруг объекта.*
+> NABAT.V3 delivered to the Zaporizhzhia Nuclear Power Plant. The NABAT.V3 drone detector has been deployed at the Zaporizhzhia NPP. The system works together with a video-signal interception screen and is used for continuous airspace monitoring around the facility.
+>
+> — Deployment at a named, internationally significant nuclear facility under Russian occupation — a distinctive, high-profile field deployment. (2025-12-26) [s6458]
+
+![Deployment at a named, internationally significant nuclear facility under Russian occupation — a distinctive, high-profile field deployment.](data/sources/TGPOST_multi_20260907_godrone-battlefield-testimonial-series.txt)
+
+> *Получили отзыв после проведения тестирования детектора «Набат-3» в зоне проведения СВО и приграничных территориях. Бойцами действующего подразделения была проверена работа детектора... Военнослужащими была дана высокая оценка работы устройства.*
+> Received feedback after testing the "Nabat-3" detector in the SVO zone and border territories. Soldiers of an active unit tested the detector's operation... The servicemen gave the device's performance a high rating.
+>
+> — Recent (2026) formal field-test feedback from an active-duty unit, part of the same ongoing testimonial series. (2026-07-29) [s6458]
+
+![Recent (2026) formal field-test feedback from an active-duty unit, part of the same ongoing testimonial series.](data/sources/TGPOST_multi_20260907_godrone-battlefield-testimonial-series.txt)
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -62,6 +109,10 @@
 
 - <https://godrone.ru/> — GoDrone -- confirmed via exact director-name match (Козлов Дмитрий Сергеевич) and product match (site describes СТМ детектор дронов «НАБАТ», entity's own products[] lists «Набат v3»).
 - <https://xn--80aac0c2a.xn--p1ai/> — набат.рф -- dedicated single-product site for «Набат v3» (punycode Cyrillic domain), user-supplied 2026-08-25, archived s1393. Lists address "Большой Симоновский переулок, 2", Москва -- a physical retail/showroom location, DIFFERENT from the entity's EGRUL registered office (111677, Некрасовка). CONFIRMED REAL 2026-08-25 via a user-supplied Street View screenshot (s1394): a genuine storefront at this address, signage reading "GODRONE"/"Gd Home", with a militarized soldier-silhouette decal on the storefront door. Includes a third-party comparison: the site paraphrases (not a direct quote) a comparison by Кирилл Фёдоров -- self-described "российский блогер и военный эксперт", host on «Соловьёв LIVE» -- of «Набат» against «Булат» (ooo-trimiks-bulat-3mx's own detector), concluding «Набат» is more compact/waterproof/impact-resistant and tracks more drones simultaneously. Marketing copy, not verified against Фёдоров's own original content -- treat as the manufacturer's own claim about a third party's opinion, not a confirmed independent endorsement.
+
+### Telegram
+
+- <https://t.me/GoDrone> — Official brand channel (bio confirms: "Компания GoDrone – противодействие БПЛА, поставки и обслуживание дронов. Сайт: godrone.ru"), 2707 posts scraped in this repo's own archive. Runs a long-standing recurring "#набатвделе" battlefield-testimonial series (soldier/unit field reports), found and wired 2026-09-07 — was previously not listed here despite being this entity's primary Telegram presence.
 
 ### Marketplace listings
 
@@ -105,6 +156,8 @@
 | s1392 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7720907532_20260825_ooo-invizhn-treyd-godrone-ozon-reseller.json) | 2026-08-25 | 2026-08-25 |
 | s1393 | site capture | site capture (SITE_9721203814_20260825_ooo-goudron-nabat-product-site.html) | 2026-08-25 | — |
 | s1396 | site capture | site capture (SITE_9721203814_20260825_ooo-goudron-yandex-reviews-photos.json) | 2026-08-25 | — |
+| s6457 | Nabat | Nabat (NABAT_9721203814_20260907_produkt-site-marketing-scan.html) | 2026-09-07 | — |
+| s6458 | Tgpost | Tgpost (TGPOST_multi_20260907_godrone-battlefield-testimonial-series.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
