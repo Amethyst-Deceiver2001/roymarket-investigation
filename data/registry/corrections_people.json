@@ -482,7 +482,12 @@
           "s0050"
         ],
         "social": [
-          {"platform": "email", "handle": "TAIRO797@MAIL.RU", "source_id": "s0050", "note": "Personal e-mail on file with ЕГРИП as of a 07.05.2025 record update."}
+          {
+            "platform": "email",
+            "handle": "TAIRO797@MAIL.RU",
+            "source_id": "s0050",
+            "note": "Personal e-mail on file with ЕГРИП as of a 07.05.2025 record update."
+          }
         ],
         "open_questions": [
           {
@@ -1025,7 +1030,10 @@
       "set": {
         "_verified": true,
         "inn_personal": "771877750402",
-        "sources": ["s0953", "s0176"],
+        "sources": [
+          "s0953",
+          "s0176"
+        ],
         "roles": [
           {
             "entity_name": "ООО «НПО Рустехдрон»",
@@ -1105,7 +1113,9 @@
     },
     "fedukovich-kirill-olegovich": {
       "set": {
-        "sources": ["s0176"]
+        "sources": [
+          "s0176"
+        ]
       },
       "why": [
         "2026-08-24: leader-id.ru self-reports employer \"ООО «Коптерлаб»\", position \"Генеральный директор\" (two separate leader-id accounts, user_id 6053095 and 6764108, agree) -- exact name/title match to ooo-kopterlab's own already-EGRUL-sourced `director` field (Федукович Кирилл Олегович). Independent corroboration, not new information.",
@@ -2900,15 +2910,20 @@
     },
     "tsyganov-vadim-borisovich": {
       "set": {
-        "notes": "Тел. +7 903 969-51-71. Email: vadimts@inbox.ru.\n\nzakupki cluster review 2026-08-31: 2 unwired archived cards, non-recurring, no ЦБСТ/UAV signal found. Not wired. Closed.",
-        "zakupki_review": {
-          "as_of": "2026-08-31",
-          "outcome": "closed",
-          "note": "2 unwired archived cards, non-recurring, no ЦБСТ/UAV signal."
-        }
+        "sanctions": [
+          {
+            "regime": [
+              "Ukraine (NSDC State Register of Sanctions)"
+            ],
+            "date": null,
+            "note": "Confirmed via Aleph/OCCRP mirror of the Ukraine NSDC sanctions register: exact match on this person's own personal ИНН (504405055721) AND date of birth (1963-05-30) — passport 4608 106680 and taxNumber 11771152843 also given on the listing. Not yet independently opened on the primary sanctions.nsdc.gov.ua register itself; Aleph/OCCRP's own mirror is treated as sufficiently authoritative given the exact dual ИНН+DOB match (no namesake ambiguity), but grounds for listing have not been read.",
+            "source_id": "s5718"
+          }
+        ]
       },
+      "verified_against": "Aleph/OCCRP screening (screen_aleph.py), 2026-09-05 — exact ИНН + DOB match against Ukraine NSDC sanctions register entry",
       "why": [
-        "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate."
+        "2026-09-05 aleph_screen.py hit under 'Global Sanctions Database' dataset scored the query (this person's own personal ИНН) against an entry carrying the identical ИНН (innCode 504405055721 -> matches inn_personal exactly) and identical birthDate (1963-05-30, already on file, sourced separately) — this is the same government-contractor ИП Цыганов already tracked for the «Булат»/«Покров» zakupki contracts, now confirmed as a sanctioned individual under Ukraine's NSDC register."
       ]
     },
     "tyutina-olga-anatolevna": {
@@ -3185,7 +3200,9 @@
     },
     "kurteev-aleksandr-sergeevich": {
       "set": {
-        "sources": ["s0051"],
+        "sources": [
+          "s0051"
+        ],
         "notes": "LIKELY SPURIOUS role, not confirmed: this ИНН (434540800305, ИП Куртеев Александр Сергеевич, ОГРНИП 307434525600161, Сочи/Дагомыс) surfaced only as a leftover populated field in gagaring-school.ru's blank offer-agreement (/oferta) template — plausibly a reused/copied template from an unrelated business, not evidence this person has any actual role at Гагаринг or its training center. No other mention connects him to Барашков or Гагаринг anywhere in this investigation. Kept as an open candidate pending independent confirmation, not treated as an established network member in notes/gagaring_network_map.md. ЕГРИП confirmed 2026-09-05 (s0051): this ИП registration is genuinely active (ОГРНИП verified, no termination record), main ОКВЭД 85.42.9 «Дополнительное профессиональное образование» (supplementary professional education) — a training-adjacent business category, which is at least consistent with (though still not evidence of) a role at a training operator like Гагаринг. Does not upgrade the confirmation bar — still no direct mention linking this person to Гагаринг or Барашков anywhere else.",
         "why": [
           "2026-09-03: re-checked while scoping gagaring_network_map.md to confirmed network only — this role's own _raw context explicitly says the name is 'not otherwise connected to ООО «Гагаринг» or Барашков anywhere else', so it should not be presented as an established connection.",
@@ -3240,7 +3257,12 @@
     },
     "zakelov-aleksandr-aleksandrovich": {
       "set": {
-        "sources": ["s5503", "s5513", "s5515", "s5542"],
+        "sources": [
+          "s5503",
+          "s5513",
+          "s5515",
+          "s5542"
+        ],
         "notes": "Генеральный директор from incorporation (17.05.2024) and 50% co-owner (₽10,000 of ₽20,000) of ООО «Архангел-Центр», ИНН 5032379630 — the Odintsovo military-training operator designated on 23.04.2026 by the EU, Ukraine (NSDC and GUR), France, Switzerland, Belgium and Monaco for training Russian soldiers and paramilitary units in artillery, reconnaissance, sniper and UAV operations for the war in Ukraine. His name was already recorded as the entity's director in this registry, but he had no person record of his own until 05.09.2026 — a gap, given he directs the most heavily designated entity in the «Архангел» family. The full выписка (s5503) additionally establishes his 50% ownership, which the earlier sourcing did not. Personal ИНН region prefix 02 = Республика Башкортостан. No DOB, birthplace or address established. The entity is under an ФНС strike-off decision (№48858 of 31.08.2026, published 02.09.2026), which makes him — not the dissolving ООО — the durable target, and makes his ИНН worth monitoring for a successor registration.\n\nScreening, 2026-09-05: ЕГРИП: TWO sole-proprietor registrations, both in Уфа, Республика Башкортостан — ОГРНИП 322028000147631 (30.08.2022, TERMINATED 10.01.2025, main ОКВЭД 47.91 internet/mail-order retail) and ОГРНИП 325028000022918 (ACTIVE from 03.02.2025, main ОКВЭД 46.18.1 agency wholesale of pharmaceutical, medical, perfume and cosmetic goods, 22 codes). The second was opened three weeks after the first was closed. Neither shows defence, training or UAV activity, and both sit in Башкортостан while the company he directs — the six-jurisdiction-designated ООО «Архангел-Центр» — operates in Одинцово, Московская область. His ФНС «Прозрачный бизнес» director/founder cross-reference could not be completed: the endpoint returned HTTP 400 on every attempt across three separate runs on 05.09.2026 (the same endpoint answered normally for four other people earlier the same day), so his directorships beyond ООО «Архангел-Центр» remain UNCHECKED, not cleared.\n\nФНС director/founder cross-reference retried successfully 2026-09-05 (--force, earlier run this week hit HTTP 400): confirms ooo-arkhangel-tsentr plus one new lead — ООО «АЛЬФАМЕД» (ИНН 9725188003, Moscow, OKVED 46.69.8 medical-equipment wholesale, registered 30.06.2025), where he is a founder alongside Кумыщ Оксана Мусаевна (director), per EGRUL s5542 (source_id corrected 2026-09-05 -- the archived file resolved to s5542, not s5541, on a later pipeline run). No UAV/defense relevance found; recorded as a background-wealth data point, not pursued further."
       },
       "verified_against": "data/sources/EGRIP_322028000147631_20260905_zakelov.pdf (s5513) and EGRIP_325028000022918_20260905_zakelov.pdf (s5515)",
@@ -11329,6 +11351,41 @@
       "notes": "Signed the соглашение о расторжении terminating государственный контракт № ГК 6401/24-4574 with ДИТ Москвы for ООО «Аэромакс», acting under доверенность от 20.12.2024 № 15-09/92-ДИ (s4571). No identifying detail beyond the name and the power-of-attorney reference is sourced.",
       "why": [
         "2026-09-05: surfaced from the signature block of the termination agreement for ООО «Аэромакс»'s largest documented contract. Officer of an OFAC/EU-designated drone manufacturer — a network principal, in PII scope; recorded at name+role only pending identifying detail."
+      ]
+    },
+    {
+      "_verified": true,
+      "address": null,
+      "birthplace": null,
+      "dob": "1974-04-01",
+      "fio_ru": "Шестопалов Сергей Анатольевич",
+      "inn_personal": "480601511636",
+      "name_latin": "Shestopalov Sergei Anatolyevich",
+      "notes": "Sole founder (100%) of ooo-npo-kilovatt (ИНН 4800013729) at incorporation 2024-02-28 (per s0532); General Director per his own OpenSanctions entity page (s6177), which also names a SECOND related \"Киловатт\" entity spelled in Ukrainian transliteration. This registry already tracks a second, DISTINCT \"Киловатт\" entity under the same founder surname — ooo-npo-kilovatt-shestopalov (ИНН 4800016776) — flagged in ooo-npo-kilovatt.open_questions as sharing a trademark/founder link; not yet confirmed whether this person also founded/directs that second entity specifically, only that both carry his surname.",
+      "roles": [
+        {
+          "entity_name": "ООО «Научно-производственное объединение «Киловатт»»",
+          "entity_slug": "ooo-npo-kilovatt",
+          "from": "2024-02-28",
+          "source_id": "s0532",
+          "title": "founder (100%, at incorporation) / General Director",
+          "to": null
+        }
+      ],
+      "sanctions": [
+        {
+          "date": "2025-08-16",
+          "note": "Ukraine NSDC sanctions listing, 10-year term (ends 2025-08-16 + 10y = 2035-08-16). Confirmed via OpenSanctions entity page (ru-inn-480601511636), exact personal ИНН match. Program cited: Law of Ukraine \"On Sanctions\" No. 1644-VII (14 Aug 2014). Not yet independently opened on the primary sanctions.nsdc.gov.ua register itself.",
+          "regime": [
+            "UA-NSDC"
+          ],
+          "source_id": "s6177"
+        }
+      ],
+      "slug": "shestopalov-sergey-anatolevich",
+      "social": [],
+      "why": [
+        "2026-09-06: surfaced while triaging OpenSanctions sanction.linked/.control-tagged hits from the 2026-09-06 full-roster screen (screen_opensanctions.py) — ooo-npo-kilovatt matched ru-inn-4800013729 with those topic tags but empty source_urls in the batch response, so the entity own OpenSanctions detail page was read directly (s6177), surfacing that the underlying designation is this person own Ukraine NSDC listing, not a designation of the company itself. Person was already implicitly on file via founders_history[] on ooo-npo-kilovatt (s0532) but had never been promoted to a people.json record."
       ]
     }
   ]

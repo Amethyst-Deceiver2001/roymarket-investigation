@@ -9,15 +9,29 @@ two-stage async search-proc.json flow — but a different mode (`search-rdl`,
 fields `queryRdl`=ФИО and optionally `dateRdl`=DOB). Confirmed working
 2026-08-22 (Бессонов С.Н. tested clean, 0 hits).
 
-**No DOB currently on file for anyone in people.json** (check_registry.py
-reports 0/147 with DOB), so this searches by name only and cannot rule out
-a same-name/different-person false positive on its own — every hit is
-written with `needs_dob_verification: true` and must be manually confirmed
-(DOB, or at minimum patronymic + region) against the actual person before
-being treated as a real finding. If dob IS later filled in for someone,
-pass it through — the search-rdl form accepts it and the registry can use
-it to narrow results, though the underlying match logic isn't guaranteed to
-filter on it (untested, since no DOB is available to verify with yet).
+If a person has no `dob` on file, this searches by name only and cannot
+rule out a same-name/different-person false positive on its own — every
+hit is written with `needs_dob_verification: true` and must be manually
+confirmed (DOB, or at minimum patronymic + region) against the actual
+person before being treated as a real finding. If `dob` IS on file, it is
+sent as `dateRdl` — **must be reformatted from this repo's ISO
+`YYYY-MM-DD` to `ДД.ММ.ГГГГ` first** (bug found and fixed 2026-09-06: the
+raw ISO string gets an immediate 400 with `ERRORS.dateRdl` citing this
+exact format requirement — the original 2026-08-22 confirmation predates
+this repo having any DOBs on file, so the bug went unexercised until now).
+
+**2026-09-06: pb.nalog.ru's search-rdl now gates behind a captcha
+(`pbSearchCaptcha`) after only a handful of requests from one IP in a
+short window** — reproduced from two independent networks. The very first
+request of a session can still succeed cleanly (confirmed), but a handful
+more in quick succession trip `{"ERRORS":{"pbSearchCaptcha":[...]}}`,
+which cannot be solved unattended. This is new since the 2026-08-22
+confirmation — the endpoint was not captcha-gated then. A full-roster run
+will very likely stall partway through; there is no known workaround short
+of a human solving the captcha in a browser session, so treat repeated
+`pbSearchCaptcha` errors as this wall, not a bug to keep chasing. Try a
+long gap between attempts (hours, not minutes) or a small `--limit`/
+`--slug` batch per session rather than the full sweep.
 
 Writes `disqualification_hits[]` + `disqualification_checked_at` onto each
 person in data/registry/people.json. Fetched screening data, not a hand
@@ -71,8 +85,21 @@ def post(data: dict) -> dict:
             "User-Agent": USER_AGENT,
         },
     )
-    with urllib.request.urlopen(req, timeout=CONNECT_TIMEOUT) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req, timeout=CONNECT_TIMEOUT) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        # pb.nalog.ru returns 400 with a JSON body explaining why (bad date
+        # format, captcha required, etc) -- surface that instead of the bare
+        # "HTTP Error 400: Bad Request" urllib gives by default, since the
+        # two failure modes need very different responses (one is a client
+        # bug to fix, the other is an anti-bot wall this script cannot get
+        # past unattended).
+        try:
+            detail = e.read().decode("utf-8", errors="replace")
+        except Exception:
+            detail = ""
+        raise urllib.error.HTTPError(e.url, e.code, f"{e.reason} -- {detail}", e.headers, None) from None
 
 
 def poll(request_id: str) -> dict:
@@ -89,7 +116,11 @@ def poll(request_id: str) -> dict:
 def search_rdl(fio: str, dob: str | None) -> list[dict]:
     data = {"mode": "search-rdl", "queryRdl": fio, "page": "1", "pageSize": "50"}
     if dob:
-        data["dateRdl"] = dob
+        # dateRdl must be ДД.ММ.ГГГГ -- confirmed 2026-09-06 (this repo's own
+        # dob field is ISO YYYY-MM-DD; sending that raw gets an immediate 400
+        # with ERRORS.dateRdl citing exactly this format requirement).
+        y, m, d = dob.split("-")
+        data["dateRdl"] = f"{d}.{m}.{y}"
     print(f"  submitting query ...", end=" ", flush=True)
     ack = post(data)
     print("ok, polling for result")
@@ -139,7 +170,7 @@ def main() -> None:
         time.sleep(DELAY_BETWEEN_PEOPLE)
 
     print("\nDone. Any hit needs manual DOB/namesake confirmation before it's treated as real — "
-          "see needs_dob_verification on each hit (0/147 people currently have a DOB on file).")
+          "see needs_dob_verification on each hit (false for anyone whose DOB was sent as dateRdl).")
 
 
 if __name__ == "__main__":

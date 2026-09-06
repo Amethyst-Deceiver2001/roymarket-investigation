@@ -34,6 +34,13 @@ background.** Only 6-8 people currently have inn_personal populated, so
 this is a short list, not a heavy batch — but the policy applies regardless
 of scale.
 
+**2026-09-06: shares pb.nalog.ru's search-proc.json backend with
+screen_disqualified.py, and shares its captcha wall** — see that script's
+docstring for the full writeup. A `pbSearchCaptcha` error here means the
+same anti-bot gate, not a bug in this script's search-upr-uchr/search-ul
+calls; confirmed via direct curl reproduction, not specific to this
+script's request shape.
+
 Usage:
     python3 scripts/screen_upr_uchr.py                  # everyone with inn_personal
     python3 scripts/screen_upr_uchr.py --slug shatrakova-anastasiya-artemovna
@@ -77,8 +84,19 @@ def post(data: dict) -> dict:
             "User-Agent": USER_AGENT,
         },
     )
-    with urllib.request.urlopen(req, timeout=CONNECT_TIMEOUT) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req, timeout=CONNECT_TIMEOUT) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        # See screen_disqualified.py's identical fix (2026-09-06): pb.nalog.ru
+        # returns a 400 with a JSON body explaining why (captcha wall, bad
+        # field, etc) -- surface that instead of urllib's bare "HTTP Error
+        # 400: Bad Request".
+        try:
+            detail = e.read().decode("utf-8", errors="replace")
+        except Exception:
+            detail = ""
+        raise urllib.error.HTTPError(e.url, e.code, f"{e.reason} -- {detail}", e.headers, None) from None
 
 
 def poll(request_id: str) -> dict:
