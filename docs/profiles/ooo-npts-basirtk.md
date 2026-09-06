@@ -57,6 +57,10 @@
 | 2024 | ₽11,000 | ₽-181,000 | [s0247] |
 | 2025 | ₽83,700,000 | ₽2,688,000 | [s0248] |
 
+## State-program participation
+
+- as_of: 2026-09-06; name_en: rk.2035.university national БАС (UAV-industry) company registry; name_ru: Реестр компаний БАС — rk.2035.university; role: ID-confirmed match (exact ИНН + ОГРН, not a name collision) in the national rk.2035.university БАС-industry company directory. Surfaced by the screen's full-catalog cross-check pass (missed by the name-substring sweep since the registered short name "НПЦ БАСиРТК" does not literally contain this entity's own name string). Sectors declared: Компания БАС. Activity types: Разработка. Personnel count 13, profile created 2025-12-17. [s1165]
+
 ## Workforce & production scale
 
 | Headcount | As of | Note |
@@ -119,6 +123,7 @@
 | s0232 | document | document (Благодарность.pdf) | — | 2024-12-01 |
 | s0247 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3300009049_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
 | s0248 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3300009049_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
+| s1165 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

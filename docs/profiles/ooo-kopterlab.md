@@ -44,6 +44,7 @@
 ## State-program participation
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; name_ru: Каталог продукции ГИСП — отрасль БАС; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly. [s5344]
+- as_of: 2026-09-06; name_en: rk.2035.university national БАС (UAV-industry) company registry; name_ru: Реестр компаний БАС — rk.2035.university; role: ID-confirmed match (exact ИНН + ОГРН, not a name collision) in the national rk.2035.university БАС-industry company directory. Sectors declared: Компания БАС, Образовательная организация. Activity types: Разработка, Дополнительное [образование]. Personnel count 4, profile created 2025-11-25. [s1165]
 
 ## Web & social presence
 
@@ -70,6 +71,7 @@ _No named principals linked to this entity yet._
 | s0333 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7720925267_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | s0334 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7720925267_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s0473 | EGRUL extract | EGRUL extract (ul-1247700198734-20260823122742.pdf) | — | 2026-08-23 |
+| s1165 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
 | s2626 | Naletay | Naletay (NALETAY_7720925267_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |

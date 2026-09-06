@@ -27,7 +27,7 @@
 
 ## State-program participation
 
-- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 28.99.5 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
+- as_of: 2026-09-06; name_en: rk.2035.university national БАС (UAV-industry) company registry; name_ru: Реестр компаний БАС — rk.2035.university; role: ID-confirmed match (exact ИНН + ОГРН, not a name collision) in the national rk.2035.university БАС-industry company directory. Sectors declared: Компания БАС. Activity types: Разработка, Производство. Personnel count 8, profile created 2026-08-12. [s1165]
 
 ## Trademarks
 
@@ -102,7 +102,7 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0475 | EGRUL extract | EGRUL extract (ul-1101690020959-20260823131713.pdf) | — | 2026-08-23 |
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| s1165 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
