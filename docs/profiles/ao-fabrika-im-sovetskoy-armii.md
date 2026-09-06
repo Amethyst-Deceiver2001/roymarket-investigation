@@ -20,8 +20,8 @@
 |---|---|---|
 | Рябико Ольга Александровна | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0102] |
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 3 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 3 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

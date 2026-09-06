@@ -31,7 +31,7 @@
 |---|---|---|---|
 | РАДИОМОДУЛЬ | RU242557U1 | 2025.12.30 | Тютина Ольга Анатольевна (RU), Тютин Игорь Александрович (RU) |
 
-- 2 OpenSanctions match(es) (screened 2026-08-24).
+- 2 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Web & social presence
 

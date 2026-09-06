@@ -89,6 +89,15 @@
 ## Licences
 
 - Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент станкостроения и инвестиционного машиностроения. Статус: утратило силу 2021-04-21. [s5370]
+- Действующая. Эрул-номер Л026-00122-77/00619905, ОГРН 1117847020400 (совпадает с текущим ОГРН записи). Адрес деятельности: г. Санкт-Петербург, ул. Академика Павлова, д. 14А, литера А, офис 26-Н. [s6414]
+- Статус: действующая (проверено 06.09.2026). Помимо перечисленных, в реестре найдены 4 недействующих/устаревших записи по тому же ИНН (телематические услуги связи и др., часть под старой нумерацией без префикса 'Л0хх') — не включены как исторические/утратившие силу. [s6415]
+- Статус: действующая (проверено 06.09.2026). Помимо перечисленных, в реестре найдены 4 недействующих/устаревших записи по тому же ИНН (телематические услуги связи и др., часть под старой нумерацией без префикса 'Л0хх') — не включены как исторические/утратившие силу. [s6415]
+- Статус: действующая (проверено 06.09.2026). Помимо перечисленных, в реестре найдены 4 недействующих/устаревших записи по тому же ИНН (телематические услуги связи и др., часть под старой нумерацией без префикса 'Л0хх') — не включены как исторические/утратившие силу. [s6415]
+- Статус: действующая (проверено 06.09.2026). Помимо перечисленных, в реестре найдены 4 недействующих/устаревших записи по тому же ИНН (телематические услуги связи и др., часть под старой нумерацией без префикса 'Л0хх') — не включены как исторические/утратившие силу. [s6415]
+- Статус: недействующая. [s6442]
+- Статус: недействующая. [s6442]
+- Статус: недействующая. [s6442]
+- Статус: недействующая. [s6442]
 
 ## Foreign components
 
@@ -103,9 +112,9 @@
 
 **Ukraine (war-sanctions.gur.gov.ua, military-industry listing), Australia (Autonomous Sanctions, Russia), Switzerland (SECO, Ukraine-related measures), US (OFAC, Russia Harmful Foreign Activities Sanctions), GB-RUS, US-BIS-EL, EU (Ukraine-related restrictive measures), NZ-RSA2022, Ukraine (Presidential sanctions decree/list)** [s0797]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 2 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 2 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -343,6 +352,10 @@
 
 - co-inventor (patent RU2741142C2)
 
+## Open questions
+
+- The 2026-09-05 zakupki scan of ИНН 7813491943 reported hit_count=160 but collected only 50 reg_numbers and flagged itself `incomplete` (pagination failed partway). 110 contracts have never been enumerated, so any statement about this entity's zakupki footprint rests on a ~31% sample. Remedy: `python3 scripts/zakupki_batch_pull.py scan --inn 7813491943 --force`.
+
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
@@ -359,6 +372,9 @@
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5370 | document | document (PP719_7813491943_20200422_zaklyuchenie-28088-05.pdf) | 2020-04-22 | 2020-04-22 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| s6414 | bulk open-data extract | bulk open-data extract (DATASET_20260906_roscosmos-licenses-registry-api-full-dump.json) | 2026-09-06 | — |
+| s6415 | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-communications-license-search-ao-nii-vektor.json) | 2026-09-06 | — |
+| s6442 | Rkn | Rkn (RKN_7813491943_20260906_comms-license-search-ao-nii-vektor.html) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

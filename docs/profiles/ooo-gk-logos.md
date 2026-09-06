@@ -31,7 +31,7 @@
 |---|---|---|---|---|
 | — | 1104544 | 20240226 | 10.04.2025 | 01 (broad catch-all filing, no UAV/defense-specific items); 17 (broad catch-all filing, no UAV/defense-specific items) |
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 
 ## Principals & persons of interest
 

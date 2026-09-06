@@ -2,14 +2,15 @@
 
 `manufacturer` `WB: not_checked` 
 
-ИНН 781154619843
+ИНН 781154619843 · ОГРН 320784700272511
 
 ## At a glance
 
 - **Legal form:** IP (sole proprietor)
 - **Wildberries overlap:** not_checked
 
-- 1 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 1 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

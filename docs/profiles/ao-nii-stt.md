@@ -94,14 +94,17 @@
 - Разработка, производство, испытание, установка, монтаж, техническое обслуживание, ремонт, утилизация и реализация вооружения и военной техники [s0211]
 - Сервисное обслуживание вооружения и военной техники [s0211]
 - Космическая деятельность [s0211]
+- Срок действия до 30.04.2027. Статус: действие прекращено. [s6429]
+- Переоформление/продление записи 434-рчс-20-0056, приказ 103-рчс от 16.03.2022. Статус: действует. [s6429]
+- Срок действия: 01.03.2022. Приказ 103-рчс от 16.03.2022. Статус: действует. [s6447]
+- Срок действия: 08.10.2020 - 30.04.2027. Приказ 434-рчс от 08.10.2020. Статус: действие прекращено. [s6447]
 
 ## Sanctions & screening
 
 **Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Switzerland (SECO, Ukraine-related measures), Ukraine (Presidential sanctions decree/list), Ukraine (war-sanctions.gur.gov.ua, military-industry listing), US-BIS-EL, EU (Ukraine-related restrictive measures)** [s0756]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
 
@@ -262,6 +265,8 @@
 | s4253 | Zakupki | Zakupki (ZAKUPKI_ATTACH_6730046954_0335100011714000162_gk-03351000117140001620002_06a0c038.docx) | — | 2014-09-25 |
 | s5055 | Zakupki | Zakupki (ZAKUPKI_contract_0335100011713000056_20260831.html) | 2026-08-31 | — |
 | s5336 | Kad | Kad (KAD_6730046954_20260903_participant-search-page2.png) | 2026-09-03 | — |
+| s6429 | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-frequency-assignment-registry-search.json) | 2026-09-06 | — |
+| s6447 | Rkn | Rkn (RKN_6730046954_20260907_frequency-registry-ao-nii-stt.html) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

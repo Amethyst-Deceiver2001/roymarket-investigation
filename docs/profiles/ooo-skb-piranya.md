@@ -39,6 +39,14 @@
 - **Пиранья 15**
 - **20**
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2023 | ₽36,787,000 | ₽293,000 | [s5550] |
+| 2024 | ₽516,738,000 | ₽134,647,000 | [s5551] |
+| 2025 | ₽870,673,000 | ₽268,932,000 | [s5552] |
+
 ## Workforce & production scale
 
 | Headcount | As of | Note |
@@ -96,9 +104,9 @@
 
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Switzerland (SECO, Ukraine-related measures), Ukraine (Presidential sanctions decree/list), EU (Ukraine-related restrictive measures)** [s0761]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 2 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 2 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
 
@@ -140,10 +148,13 @@
 | s0961 | GUR war-sanctions record | GUR war-sanctions record (GUR_7300024069_20260824_ooo-skb-piranya.html) | 2026-08-24 | — |
 | s1410 | product catalog | product catalog (CATALOG_7300024069_20260825_ooo-skb-piranya-product-catalog.pdf) | 2026-08-25 | — |
 | s1411 | site capture | site capture (WEBCAPTURE_7300024069_20260825_piranhafpv-ru-homepage.html) | 2026-08-25 | — |
-| s1412 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post300-armed-drones-field.jpg) | 2026-08-25 | 2024-11-16 |
-| s1413 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post355-kursk-bpla810-vidthumb.jpg) | 2026-08-25 | 2025-03-14 |
-| s1414 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post360-ntv-naryshkin-exhibit-vidthumb.jpg) | 2026-08-25 | 2025-04-01 |
-| s1415 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post384-vdv-kursk-operator-vidthumb.jpg) | 2026-08-25 | 2025-08-01 |
+| s1412 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post300-armed-drones-field.jpg) | 2026-08-25 | — |
+| s1413 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post355-kursk-bpla810-vidthumb.jpg) | 2026-08-25 | — |
+| s1414 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post360-ntv-naryshkin-exhibit-vidthumb.jpg) | 2026-08-25 | — |
+| s1415 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post384-vdv-kursk-operator-vidthumb.jpg) | 2026-08-25 | — |
+| s5550 | Bfo | Bfo (BFO_7300024069_2023_ооо-скб-пиранья.pdf) | — | — |
+| s5551 | Bfo | Bfo (BFO_7300024069_2024_ооо-скб-пиранья.pdf) | — | — |
+| s5552 | Bfo | Bfo (BFO_7300024069_2025_ооо-скб-пиранья.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

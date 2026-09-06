@@ -18,7 +18,7 @@
 | — | 989519 | 20230425 | 21.12.2023 | 12 (дроны военного назначения; дроны гражданского назначения; дроны грузовые; дроны для фотосъемки) |
 | — | 1009062 | 20230425 | 19.03.2024 | 09 (UAV/defense terms present: навигацион) |
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

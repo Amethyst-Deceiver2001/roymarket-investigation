@@ -27,7 +27,7 @@
 | ЗАО «Курскпромтеплица» | — | original name; exact rename date not yet established |
 | АО «КПТ» | 2026-08-22 | current EGRUL name — as_of is the EGRUL pull date, not the actual rename date, which is unconfirmed |
 
-- 3 OCCRP Aleph match(es) (screened 2026-08-26).
+- 3 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

@@ -27,7 +27,7 @@
 | 2024 | — | ₽22,000 | [s0393] |
 | 2024 | — | ₽22,000 | [s0394] |
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

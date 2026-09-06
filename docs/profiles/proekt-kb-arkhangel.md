@@ -56,6 +56,15 @@
 >
 > — proekt_arhangel#1094, 2026-09-02 — a formal B2B outreach letter to critical-infrastructure enterprise managers, the first primary-source document explicitly naming ООО «Архангел Групп» (ИНН 9702081286, see ooo-arkhangel-grupp) as the designated commercial contracting entity for the whole informal "группа компаний «Архангел»" ecosystem. (2026-09-02) [s5475]
 
+## Foreign components
+
+- name: Bambu Lab X1 Carbon 3D printer + PLA-CF filament; manufacturer: Bambu Lab (China); context: Bill-of-materials spreadsheet for "Малая ДР" (a small combat drone), shared as a Telegram file in the @projectArchangel channel (msg 10381, 26.06.2026): the printer/filament pair is listed as the first component, i.e. used to fabricate the airframe itself, not just workshop equipment. [s5452]
+- name: Brotherhobby Avenger 2816 1050KV motors (×4), HQProp 7×12×2 propellers (×4); manufacturer: Brotherhobby / HQProp (China); context: Same BOM, s5452. [s5452]
+- name: Caddx Ratel PRO FPV camera (1500TVL); manufacturer: Caddx (China); context: Same BOM, s5452. [s5452]
+- name: GEPRC MATEN 1.2G 5W VTX + matching 1.2/1.3GHz antenna; manufacturer: GEPRC (China); context: Same BOM, s5452. [s5452]
+- name: SpeedyBee F4 F405 V4 60A BLS 30x30 Stack flight controller; manufacturer: SpeedyBee (China); context: Same BOM, s5452 -- also confirmed as the actual board flashed in a companion Betaflight config dump from the same message thread (s5453, board_name SPEEDYBEEF405V4, 8 motor resources defined, firmware 4.4.3). [s5452]
+- name: GNB (Gaoneng) 6000mAh LiHV battery; manufacturer: Shenzhen Gaoneng New Energy (China); context: Same BOM, s5452 -- the same GAONENG battery brand documented elsewhere in this registry (see ooo-npo-rustekhdron's litigation[] and ooo-boevye-tekhnologii) supplying the ЦБСТ-network Рустехдрон/ДСГ court case; here found completely independently in an unrelated adjacent-not-ЦБСТ network's own build documentation, consistent with the brand's D2C export model reaching many unrelated Russian buyers rather than one exclusive supply chain. [s5452]
+
 - 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
@@ -228,6 +237,7 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| s5452 | Tgfile | Tgfile (TGFILE_20260626_projectArchangel-10381-arhangel-rocket-bom.xlsx) | 2026-06-26 | — |
 | s5454 | Tgpost | Tgpost (TGPOST_20260626_projectArchangel-10381-arhangel-rocket-build-instructions.txt) | 2026-06-26 | — |
 | s5456 | Tgpost | Tgpost (TGPOST_multi_20251009-20251023_proekt_arhangel-arkhangel-shchit-business-model.txt) | — | — |
 | s5457 | Tgpost | Tgpost (TGPOST_multi_20251102-20251103_academy-bpla-chat-arkhangel-warhead-optimization.txt) | — | — |

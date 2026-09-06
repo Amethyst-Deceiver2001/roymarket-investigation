@@ -29,10 +29,18 @@
 | Новгородская обл., г. Старая Русса, ул. Минеральная, д. 24 — производственная площадка на территории бывшего Старорусского приборостроительного завода ('центр коллективного доступа') | 2026-06-08 | Per smolin.info investigation (s5288), NOT independently corroborated against ЕГРН/satellite imagery yet. Distinct from the registered ул. Лазаревская, 11 address — a genuine second production site if confirmed. [s5288] |
 | Новгородская обл., г. Великий Новгород, ул. Большая Санкт-Петербургская, д. 64 — адрес закупочной комиссии | 2026-06-08 | Per smolin.info investigation (s5288), procurement-commission address, distinct from registered address. Not independently corroborated. [s5288] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2023 | — | — | [s0281] |
+| 2024 | ₽8,184,000 | ₽3,554,000 | [s0282] |
+| 2025 | ₽46,840,000 | ₽-59,519,000 | [s0283] |
+
 ## Government contracts
 
-- customer: ГОКУ «Управление защиты населения от ЧС и по обеспечению пожарной безопасности Новгородской области»; reg_number: 2532103798924000157; date: 2024; value_rub: 4250000; items: Поставка беспилотных летательных аппаратов для нужд проведения специальной военной операции и выполнения специальных задач по обеспечению обороны и безопасности государства — contract text explicitly states SVO purpose. [s3402]
-- customer: ГОКУ «Управление защиты населения от ЧС и по обеспечению пожарной безопасности Новгородской области»; reg_number: 2532103798925000183; date: 2025; value_rub: 3110000; items: Поставка беспилотных летательных аппаратов и станций для их управления для нужд проведения специальной военной операции и выполнения специальных задач по обеспечению обороны и безопасности государства. [s3403]
+- customer: ГОКУ «Управление защиты населения от ЧС и по обеспечению пожарной безопасности Новгородской области»; date: 2024; items: Поставка беспилотных летательных аппаратов для нужд проведения специальной военной операции и выполнения специальных задач по обеспечению обороны и безопасности государства — contract text explicitly states SVO purpose.; reg_number: 2532103798924000157; value_rub: 4250000 [s3402]
+- customer: ГОКУ «Управление защиты населения от ЧС и по обеспечению пожарной безопасности Новгородской области»; date: 2025; items: Поставка беспилотных летательных аппаратов и станций для их управления для нужд проведения специальной военной операции и выполнения специальных задач по обеспечению обороны и безопасности государства.; reg_number: 2532103798925000183; value_rub: 3110000 [s3403]
 - Sberbank-AST internal PurchaseId 3644005; статус закупки: Не состоялся(-ась) | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515497957, real EIS contract registration № 55300010714260000070000, actual SIGNED contract price ₽4998900.00 (vs. original NMC/notice price ₽6332500), signed 29 дек. 2025, published to EIS contract registry 13 янв. 2026. [s5313]
 - Sberbank-AST internal PurchaseId 3643527; статус закупки: Не состоялся(-ась) | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515497898, real EIS contract registration № 55300010714260000100000, actual SIGNED contract price ₽6585000.00 (vs. original NMC/notice price ₽7559182.67), signed 29 дек. 2025, published to EIS contract registry 15 янв. 2026. [s5313]
 - Sberbank-AST internal PurchaseId 3634198; статус закупки: Завершен(-а) | ENRICHED via RTS-Tender organizer-list (s5325): real ЕИС closing/contract number 32515486203, real EIS contract registration № 55300010714260000080000, actual SIGNED contract price ₽7446080.00 (vs. original NMC/notice price ₽7751360), signed 29 дек. 2025, published to EIS contract registry 13 янв. 2026. [s5313]
@@ -47,7 +55,7 @@
 
 ## State-program participation
 
-- name_ru: Программа экспериментального правового режима в сфере цифровых инноваций по эксплуатации БАС и тестированию систем обнаружения/защиты от противоправного применения БАС (Новгородская область); name_en: Federal experimental legal regime (EPR) program for UAS operation and detection/counter-UAS testing, Novgorod Oblast; role: Named operator (Оператор опытных районов) of the regime, per Postanovleniye Pravitel'stva RF; conducts testing of UAS AND electronic-warfare (РЭБ/radio-suppression) equipment across designated test districts covering the whole region; as_of: 2025-04-07 [s5301]
+- as_of: 2025-04-07; name_en: Federal experimental legal regime (EPR) program for UAS operation and detection/counter-UAS testing, Novgorod Oblast; name_ru: Программа экспериментального правового режима в сфере цифровых инноваций по эксплуатации БАС и тестированию систем обнаружения/защиты от противоправного применения БАС (Новгородская область); role: Named operator (Оператор опытных районов) of the regime, per Postanovleniye Pravitel'stva RF; conducts testing of UAS AND electronic-warfare (РЭБ/radio-suppression) equipment across designated test districts covering the whole region [s5301]
 
 ## Self-reported marketing claims
 
@@ -69,8 +77,8 @@
 
 **Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Switzerland (SECO, Ukraine-related measures), Canada (Special Economic Measures Act), Ukraine (Presidential sanctions decree/list), Ukraine (war-sanctions.gur.gov.ua, military-industry listing), EU (Ukraine-related restrictive measures)** [s0748]
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 3 OCCRP Aleph match(es) (screened 2026-08-26).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 3 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -100,6 +108,12 @@
 - **ИНН:** 531501384786
 - Главный бухгалтер
 
+### Stepanov Dmitriy Aleksandrovich — Степанов Дмитрий Александрович
+
+- **Address:** Республика Татарстан, г. Зеленодольск, ул. Большая Заводская, д. 20
+- **ИНН:** 164809949104
+- equipment supplier (sole proprietor / ИП) — SMD assembly-line equipment (2025-12-17–present)
+
 ## Corporate links
 
 - **Ushkuynik LLC** — R&D/nonprofit arm of the Ушкуйник group — АНО «НПЦ «Ушкуйник»» is founded by АНО «Платформа НТИ», director Чадаев А.В.; ООО «Ушкуйник» (npts-ushkuynik) is the commercial entity carrying the actual product, «Князь Вандал Новгородский». User-flagged as sibling/admin, not a separate manufacturer — 2026-08-23.
@@ -112,6 +126,9 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| s0281 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5300010714_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
+| s0282 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5300010714_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| s0283 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5300010714_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s0748 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5300010714_20260824_ano-npts-ushkuynik.json) | 2026-08-24 | — |
 | s0947 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5300010714_20260824_ano-npts-ushkuynik.json) | 2026-08-24 | 2026-08-24 |
 | s3402 | Zakupki | Zakupki (ZAKUPKI_contract_2532103798924000157_20260829.html) | 2026-08-29 | — |

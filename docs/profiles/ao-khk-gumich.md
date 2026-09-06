@@ -19,7 +19,7 @@
 | 2024 | — | ₽-43,027,000 | [s0422] |
 | 2025 | ₽60,712,000 | ₽-3,953,000 | [s0423] |
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

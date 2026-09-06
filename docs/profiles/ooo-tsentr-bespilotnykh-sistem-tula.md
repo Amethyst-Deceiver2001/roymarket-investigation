@@ -22,7 +22,7 @@
 
 ## Government contracts
 
-- customer: ГОУ ТО «Яснополянский образовательный комплекс им. Л.Н. Толстого» (Тульская обл., Щёкинский р-он); contract_number: 03662000356230077920001; reg_number: 2711801501123000085; value_rub: 3072000; date: 2023-12-25; basis: Единственный поставщик — п.25 ч.1 ст.93 44-ФЗ (электронный аукцион признан несостоявшимся); items: Полётный симулятор NORBEL x9 (КТРУ 32.99.53.130-00000332/333), учебно-наглядные пособия/оборудование учебное «Шмель» x1 — образовательное/тренировочное оборудование, не боевые БАС; status: Исполнение завершено — УПД № 2 от 27.12.2023, оплачено платёжным поручением № 2087 от 28.12.2023 (АО «Альфа-Банк»), сумма полностью совпадает с ценой контракта [s1914]
+- basis: Единственный поставщик — п.25 ч.1 ст.93 44-ФЗ (электронный аукцион признан несостоявшимся); contract_number: 03662000356230077920001; customer: ГОУ ТО «Яснополянский образовательный комплекс им. Л.Н. Толстого» (Тульская обл., Щёкинский р-он); date: 2023-12-25; items: Полётный симулятор NORBEL x9 (КТРУ 32.99.53.130-00000332/333), учебно-наглядные пособия/оборудование учебное «Шмель» x1 — образовательное/тренировочное оборудование, не боевые БАС; reg_number: 2711801501123000085; status: Исполнение завершено — УПД № 2 от 27.12.2023, оплачено платёжным поручением № 2087 от 28.12.2023 (АО «Альфа-Банк»), сумма полностью совпадает с ценой контракта; value_rub: 3072000 [s1914]
 
 ## Trademarks
 
@@ -36,7 +36,8 @@
 
 **Canada (SEMA) / Australia / Ukraine (war-sanctions.gur.gov.ua) — UNVERIFIED** [s0572]
 
-- 3 OCCRP Aleph match(es) (screened 2026-08-26).
+- 5 OpenSanctions match(es) (screened 2026-09-06).
+- 3 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -59,7 +60,7 @@ _No named principals linked to this entity yet._
 | s0573 | Ofac | Ofac (OFAC_7100032961_20260824_ooo-tsbs-tula.md) | 2026-08-24 | — |
 | s0945 | Rospatent record | Rospatent record (ROSPATENT_20260824_full-roster-tm-sweep.json) | 2026-08-24 | — |
 | s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
-| s1914 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7100032961_2711801501123000085_kontrakt-27118015011230000850002_0d51cc1d.docx) | — | 2023-12-25 |
+| s1914 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7100032961_2711801501123000085_kontrakt-27118015011230000850002_0d51cc1d.docx) | — | 2013-04-05 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

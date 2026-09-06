@@ -55,8 +55,7 @@
 | 2024 | ₽12,959,000 | ₽5,497,000 | [s0380] |
 | 2025 | ₽55,770,000 | ₽36,095,000 | [s5536] |
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-03).
-- 1 OpenSanctions match(es) (screened 2026-09-03).
+- 5 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

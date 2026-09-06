@@ -32,9 +32,9 @@
 
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Switzerland (SECO, Ukraine-related measures), Ukraine (Presidential sanctions decree/list), EU (Ukraine-related restrictive measures)** [s0729]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 5 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 5 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

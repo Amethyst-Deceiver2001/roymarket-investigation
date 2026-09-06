@@ -37,9 +37,9 @@
 | — | 376714 | 20080130 | 13.04.2009 | 09 (broad catch-all filing, no UAV/defense-specific items); 42 (научно-исследовательские, проектно-конструкторские разработки в области дактилоскопии, совершенствование и обслуживание программного обеспечения) |
 | — | 887648 | 20220427 | 17.08.2022 | 09 (программы для компьютеров, записанные; программы игровые для компьютеров, загружаемые; программы компьютерные, загружаемые; программы операционные для компьютеров, записанные; программы-заставки для компьютеров, записанные или загружаемые); 35 (сбор информации в компьютерных базах данных); 37 (установка, обслуживание и ремонт компьютеров; установка, ремонт и техническое обслуживание офисной техники и оборудования); 42 (broad catch-all filing, no UAV/defense-specific items) |
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 1 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 1 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -53,10 +53,12 @@
 - Генеральный директор; 44% shareholder (Ростех is a co-shareholder of this holding company)
 - `sanctions lead`
 
-### Саидов Адиль Абукович
+### Saidov Adil Abukovich — Саидов Адиль Абукович
 
-![Саидов Адиль Абукович](../images/saidov-adil-abukovich_portrait_soyuzmash.jpg)
+![Saidov Adil Abukovich](../images/saidov-adil-abukovich_portrait_soyuzmash.jpg)
 - **DOB:** 1973-04-18
+- **Address:** г. Москва, Борисовские пруды, д. 25, корп. 2, кв. 172; Московская обл., Красногорск, ул. Верещагина, д. 13
+- **ИНН:** 772428159554
 - Член совета директоров (board member) — which Azimut entity not fully confirmed
 
 ## Sources cited in this profile

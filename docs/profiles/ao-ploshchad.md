@@ -10,6 +10,7 @@
 - **Registered:** 10.07.2023
 - **Address:** г. Москва
 - **Director:** Маслак Никита Юрьевич
+- **Charter capital:** ₽112,000
 - **ОКВЭД:** 62.01 — Разработка компьютерного программного обеспечения
 - **Wildberries overlap:** none_found
 
@@ -20,6 +21,12 @@
 | Value | As of | Note |
 |---|---|---|
 | Маслак Никита Юрьевич | 2023-10-04 | personal ИНН 771541815944 [s0472] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 112000 | 2025-11-11 | Изменения №2 к Уставу (Протокол №6 внеочередного общего собрания акционеров от 10.11.2025, зарегистрированы 11.11.2025): «уставный капитал ... состоит из номинальной стоимости размещенных 1120 ... обыкновенных акций и составляет 112 000 рублей». Устав is approved by a plural Общее собрание акционеров, not a sole founder, so no individual founder name is recoverable from устав text — see founders[] left empty. [s0197] |
 
 ### Address
 
@@ -43,9 +50,9 @@
 
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Switzerland (SECO, Ukraine-related measures), Ukraine (Presidential sanctions decree/list), EU (Ukraine-related restrictive measures)** [s0815]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 5 OpenSanctions match(es) (screened 2026-08-24).
-- 4 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 5 OpenSanctions match(es) (screened 2026-09-06).
+- 4 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
 
@@ -66,6 +73,7 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| s0197 | Founding-Устав bundle | Founding-Устав bundle (UD_1993912.zip) | — | — |
 | s0472 | EGRUL extract | EGRUL extract (ul-1237700463032-20260823122931.pdf) | — | 2026-08-23 |
 | s0815 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9723203841_20260824_ao-ploshchad.json) | 2026-08-24 | — |
 | s0967 | GUR war-sanctions record | GUR war-sanctions record (GUR_9723203841_20260824_ao-ploshchad.html) | 2026-08-24 | — |

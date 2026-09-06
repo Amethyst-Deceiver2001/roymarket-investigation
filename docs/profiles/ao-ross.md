@@ -49,7 +49,7 @@
 
 ## State-program participation
 
-- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry 'Радиоэлектронная промышленность' with primary ОКВЭД 26.40 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry 'Радиоэлектронная промышленность' with primary ОКВЭД 26.40 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
 
 ## Licences
 
@@ -57,8 +57,8 @@
 - Деятельность в области использования источников ионизирующего излучения (генерирующих) [s0009]
 - Разработка, производство, распространение шифровальных (криптографических) средств и защищённых с их использованием систем [s0009]
 
-- 4 OpenSanctions match(es) (screened 2026-08-24).
-- 3 OCCRP Aleph match(es) (screened 2026-08-26).
+- 3 OpenSanctions match(es) (screened 2026-09-06).
+- 3 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -73,7 +73,7 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0009 | document | document (7704097425_20082026.pdf) | 2008-20-26 | 2026-08-20 |
-| s2846 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770809864520000158_1770809864520000158_gk-045-17708098645200001580003_b3bb1612.docx) | — | — |
+| s2846 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770809864520000158_1770809864520000158_gk-045-17708098645200001580003_b3bb1612.docx) | — | 2020-11-10 |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 

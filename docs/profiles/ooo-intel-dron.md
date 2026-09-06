@@ -19,6 +19,8 @@
 |---|---|---|
 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Воронин Александр Андреевич (confirmed live via egrul.nalog.ru 2026-09-03) | — | from corrections:add_entities, unverified |
 
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+
 ## Principals & persons of interest
 
 ### Воронин Александр Андреевич

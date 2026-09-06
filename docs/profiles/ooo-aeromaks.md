@@ -85,13 +85,14 @@
 ## Licences
 
 - Геодезическая и картографическая деятельность — создание государственных топографических карт и планов, государственных геодезических/нивелирных/гравиметрических сетей, сетей дифференциальных геодезических станций, определение параметров фигуры Земли и гравитационного поля; установление, изменение и уточнение прохождения Государственной границы Российской Федерации и границ между субъектами РФ [s0218]
+- Свидетельство эксплуатанта (СЭ), выполняющего авиационные работы — реестр Росавиации (favt.gov.ru, выборка из ФГИС «Реестр эксплуатантов и воздушных судов» на 01.09.2026). Статус: норма (действующее). Эксплуатируемые ВС: АС-МК-6 производства ООО «АС-КАМ» (1 ед.), ДИАМ 20 производства ООО «ДИАМ-АЭРО» (1 ед.) — оба являются беспилотными авиационными системами, не пилотируемыми самолётами. [s6416]
 
 ## Sanctions & screening
 
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), EU (Ukraine-related restrictive measures), Ukraine (Presidential sanctions decree/list), Switzerland (SECO, Ukraine-related measures)** [s0780]
 
-- 5 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- 5 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
 
@@ -145,6 +146,7 @@
 | s5656 | Zakupki | Zakupki (ZAKUPKI_contract_2650123167320000046_20260905.html) | 2026-09-05 | — |
 | s5657 | Zakupki | Zakupki (ZAKUPKI_contract_2702001424420000025_20260905.html) | 2026-09-05 | — |
 | s5658 | Zakupki | Zakupki (ZAKUPKI_contract_2781501552320000032_20260905.html) | 2026-09-05 | — |
+| s6416 | bulk open-data extract | bulk open-data extract (DATASET_20260901_favt-aviation-works-operators-registry.txt) | 2026-09-01 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

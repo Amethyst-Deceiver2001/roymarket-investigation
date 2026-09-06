@@ -19,8 +19,8 @@
 |---|---|---|
 | None | 2026-07-13 | Director appointment record present (ГРН 2267705989274, 13.07.2026 — very recent) but name field not captured in this extraction pass. [s0507] |
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 3 OpenSanctions match(es) (screened 2026-08-24).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 3 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

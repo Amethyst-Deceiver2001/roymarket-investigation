@@ -25,5 +25,15 @@
 
 - Директор (2025-10-28–present)
 
+## Open questions
+
+- Deeper pull attempted 2026-09-03 (per the Гагаринг wide-net push): a fresh egrul.nalog.ru open-API lookup independently confirms director Плыкина Е.В. (second, government-sourced corroboration) but the open API does not return founder/participant info. No zakupki.gov.ru contracts found (single-ИНН scan, zero hits — expected for a firm registered only 28.10.2025). No БФО filing exists yet on bo.nalog.gov.ru (zero results — first fiscal year not yet closed/filed as of this check). Genuinely thin beyond the director name and Гагаринг's own audit-disclosed ₽10M loan — still worth revisiting once a first БФО filing or zakupki activity appears. [s5411]
+
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+| s5411 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7100069249_20260903_ooo-npo-eyler.json) | 2026-09-03 | 2026-09-03 |
+
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

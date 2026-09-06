@@ -24,7 +24,7 @@
 
 - **Скарабей SD-138** — 8-rotor octocopter, ~3kg own weight, up to 15.5kg payload, cruise 140-160km/h (max 200km/h), claimed automatic exit from EW-jamming zones. Based at Технопарк «Липецк». PRESS-SOURCED ONLY (taktichesky.ru) -- no dedicated company website found for ooo-npo-nebo itself, so this cannot yet be cross-checked against a primary company source.
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 
 ## Principals & persons of interest
 

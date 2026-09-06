@@ -29,9 +29,9 @@
 
 **Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Switzerland (SECO, Ukraine-related measures), Canada (Special Economic Measures Act), Ukraine (Presidential sanctions decree/list), EU (Ukraine-related restrictive measures)** [s0820]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 3 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 3 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

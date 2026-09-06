@@ -62,6 +62,12 @@
 - Sole-supplier award from ФГУП «ЗащитаИнфоТранс» of the Ministry of Transport. Статус по карточке контракта на момент захвата: Исполнение. [s5210]
 - Fourth Минтранс contract of the 2025–2026 series. Статус по карточке контракта на момент захвата: Исполнение завершено. [s5205]
 
+## Licences
+
+- Статус: действующая. [s6443]
+- Статус: действующая. [s6443]
+- Статус: действующая. [s6443]
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
@@ -85,6 +91,7 @@ _No named principals linked to this entity yet._
 | s5218 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001743_20260831.html) | 2026-08-31 | — |
 | s5230 | Zakupki | Zakupki (ZAKUPKI_contract_2519150092425000002_20260831.html) | 2026-08-31 | — |
 | s5655 | Zakupki | Zakupki (ZAKUPKI_contract_1770236142725000018_20260905.html) | 2026-09-05 | — |
+| s6443 | Rkn | Rkn (RKN_9726029133_20260906_comms-license-search-ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya.html) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

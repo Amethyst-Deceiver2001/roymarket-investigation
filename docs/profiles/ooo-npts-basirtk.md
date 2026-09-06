@@ -79,7 +79,7 @@
 
 ![Second of two thank-you letters from the same unit/commander; recipient here is the entity's Административный директор Сухоненкова Надежда Андреевна, not yet a separate person record.](images/uas_barilo_letter_sukhonenkova.jpg)
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Web & social presence
 

@@ -40,7 +40,7 @@
 | 2024 | — | — | [s5527] |
 | 2025 | — | — | [s5528] |
 
-- 1 OpenSanctions match(es) (screened 2026-09-04).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Web & social presence
 

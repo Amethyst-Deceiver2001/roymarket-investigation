@@ -18,7 +18,8 @@
 |---|---|---|
 | Ступников Андрей Генадьевич | — | from brief:manufacturers-table:line-995, unverified |
 
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 3 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

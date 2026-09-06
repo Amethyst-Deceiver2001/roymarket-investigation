@@ -28,6 +28,16 @@
 - **Аэромедик** — Fixed-wing VTOL UAS for cargo transport and (planned) casualty evacuation -- per this entity's own rk.2035.university listing. [s1169]
 - **Аэромедик MINI** — Hybrid-powertrain convertiplane for cargo delivery incl. medical payloads. [s1169]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽490,000 | ₽-3,638,000 | [s5545] |
+| 2022 | ₽3,885,000 | ₽-4,991,000 | [s5546] |
+| 2023 | ₽8,213,000 | ₽4,682,000 | [s5547] |
+| 2024 | ₽9,852,000 | ₽-1,553,000 | [s5548] |
+| 2025 | ₽4,293,000 | ₽1,547,000 | [s5549] |
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -44,8 +54,8 @@
 
 **EU (Ukraine-related restrictive measures), Ukraine (Presidential sanctions decree/list), Switzerland (SECO, Ukraine-related measures)** [s0744]
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
 
@@ -84,6 +94,11 @@
 | s0744 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5257183517_20260824_ooo-kleverkopter.json) | 2026-08-24 | — |
 | s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
 | s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
+| s5545 | Bfo | Bfo (BFO_5257183517_2021_ооо-клеверкоптер.pdf) | — | — |
+| s5546 | Bfo | Bfo (BFO_5257183517_2022_ооо-клеверкоптер.pdf) | — | — |
+| s5547 | Bfo | Bfo (BFO_5257183517_2023_ооо-клеверкоптер.pdf) | — | — |
+| s5548 | Bfo | Bfo (BFO_5257183517_2024_ооо-клеверкоптер.pdf) | — | — |
+| s5549 | Bfo | Bfo (BFO_5257183517_2025_ооо-клеверкоптер.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

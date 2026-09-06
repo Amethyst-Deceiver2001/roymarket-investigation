@@ -62,7 +62,7 @@
 
 ## Government contracts
 
-- customer: СГУП «Центр специального назначения «Защита» Брянской области»; reg_number: 2320000296325000067; date: 2025; value_rub: 20235000; items: Поставка средств радиоэлектронной борьбы — largest of this ИНН's 3 zakupki hits; customer is a regional counter-drone/EW response unit in a border region (Bryansk). [s3396]
+- customer: СГУП «Центр специального назначения «Защита» Брянской области»; date: 2025; items: Поставка средств радиоэлектронной борьбы — largest of this ИНН's 3 zakupki hits; customer is a regional counter-drone/EW response unit in a border region (Bryansk).; reg_number: 2320000296325000067; value_rub: 20235000 [s3396]
 
 ## Trademarks
 
@@ -71,7 +71,7 @@
 | — | 1190273 | 20250516 | 27.02.2026 | 01 (broad catch-all filing, no UAV/defense-specific items); 06 (broad catch-all filing, no UAV/defense-specific items); 07 (UAV/defense terms present: дрон, летательн, воздушн, робот); 09 (UAV/defense terms present: антенн, навигацион, военн, оружи, робот, взрывчат); 12 (UAV/defense terms present: беспилот, робот, летательн, радиоуправляем, коптер, дрон, военн, воздушн); 17 (broad catch-all filing, no UAV/defense-specific items); 20 (broad catch-all filing, no UAV/defense-specific items); 28 (UAV/defense terms present: воздушн, дрон, оружи, робот); 35 (broad catch-all filing, no UAV/defense-specific items); 37 (broad catch-all filing, no UAV/defense-specific items); 38 (broad catch-all filing, no UAV/defense-specific items); 39 (UAV/defense terms present: летательн, дрон, навигацион); 40 (UAV/defense terms present: робот); 41 (UAV/defense terms present: робот, дрон); 42 (UAV/defense terms present: робот, дрон); 45 (UAV/defense terms present: дрон) |
 | — | 1190349 | 20250516 | 27.02.2026 | 09 (UAV/defense terms present: антенн, навигацион, военн, оружи, робот, взрывчат); 12 (UAV/defense terms present: беспилот, робот, летательн, радиоуправляем, коптер, дрон, военн, воздушн) |
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Web & social presence
 

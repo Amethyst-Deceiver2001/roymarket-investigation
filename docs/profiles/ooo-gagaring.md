@@ -155,6 +155,7 @@
 - **Birthplace:** Хабаровск / Khabarovsk
 - **Address:** г. Краснодар, ул. Черкасская, д. 97, кв. 25 (current, per multiple 2023–2024 records — Росреестр, ОСАГО policy, ФССП debtor record; earlier registered address through ~2019 was Приморский край, Октябрьский р-н, с. Покровка, ул. Энгельса, 13, кв. 1, matching the registry's existing note on his ОГРНИП's original 2013 Приморье registration)
 - **ИНН:** 252201766438
+- <None>
 
 ## Corporate links
 

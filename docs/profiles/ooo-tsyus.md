@@ -20,7 +20,7 @@
 |---|---|---|
 | Поспехов Иван Александрович | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0052] |
 
-- 1 OCCRP Aleph match(es) (screened 2026-08-26).
+- 1 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

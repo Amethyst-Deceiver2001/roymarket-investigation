@@ -53,8 +53,8 @@
 
 **Ukraine (Presidential sanctions decree/list)** [s0814]
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 2 OCCRP Aleph match(es) (screened 2026-08-26).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 2 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
 

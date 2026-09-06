@@ -19,6 +19,9 @@
 |---|---|---|
 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Мушкевич Павел (confirmed live via egrul.nalog.ru 2026-09-02) | — | from corrections:add_entities, unverified |
 
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 1 OCCRP Aleph match(es) (screened 2026-09-05).
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._

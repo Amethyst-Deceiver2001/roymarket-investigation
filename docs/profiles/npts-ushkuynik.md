@@ -55,7 +55,7 @@
 - Gyroscope/accelerometer — marked ICM HC?AGI — made by Not identified [s0969]
 - Microcontroller 32-bit — marked STM32F405RGT6 GQ24M VQ CHN GQ 440 — made by STMicroelectronics, Switzerland [s0969]
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

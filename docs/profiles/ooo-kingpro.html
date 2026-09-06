@@ -42,12 +42,22 @@
   </section>
 
 
+  <section id="financials">
+    <p class="eyebrow">Financials</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Year</th><th>Revenue</th><th>Profit</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2024</td><td class="num">—</td><td class="num">—</td><td><span class="id">[s0416]</span></td></tr>
+        <tr><td>2025</td><td class="num">—</td><td class="num">—</td><td><span class="id">[s0417]</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
 
 
   <section id="state-programs">
     <p class="eyebrow">State-program participation</p>
     <ul class="plain">
-<li>name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade&#39;s official industrial-facility geodatabase, classified under industry &#39;(unclassified)&#39; with primary ОКВЭД 30.30.6 — independently corroborates the entity&#39;s ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 <span class="id">[s5346]</span></li>    </ul>
+<li>as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade&#39;s official industrial-facility geodatabase, classified under industry &#39;(unclassified)&#39; with primary ОКВЭД 30.30.6 — independently corroborates the entity&#39;s ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). <span class="id">[s5346]</span></li>    </ul>
   </section>
 
 
@@ -68,7 +78,7 @@
   <section id="open-questions">
     <p class="eyebrow">Open questions</p>
     <ul class="plain">
-<li>2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): UNCONFIRMED, real name-collision risk. kingpro.global (WebFetch failed twice, cert expired) plausibly matches via secondary sources (address, founder/director surname Королев) but there are AT LEAST TWO other same-named &#34;КИНГПРО&#34; LLCs in Moscow, including an unrelated e-commerce retailer (ИНН 9729049032, director Маркина С.Е., domain king-pro.ru). If kingpro.global IS this entity, secondary sources describe UAS resistant to EW, tested/approved for Russian armed forces use -- high relevance IF confirmed. Do NOT attach as a product until a direct ИНН-on-site confirmation is done (retry fetch, check archive.org/Google cache, or EGRUL cross-check). </li>    </ul>
+<li>2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): UNCONFIRMED, real name-collision risk. kingpro.global (WebFetch failed twice, cert expired) plausibly matches via secondary sources (address, founder/director surname Королев) but there are AT LEAST TWO other same-named &#34;КИНГПРО&#34; LLCs in Moscow, including an unrelated e-commerce retailer (ИНН 9729049032, director Маркина С.Е., domain king-pro.ru). If kingpro.global IS this entity, secondary sources describe UAS resistant to EW, tested/approved for Russian armed forces use -- high relevance IF confirmed. Do NOT attach as a product until a direct ИНН-on-site confirmation is done (retry fetch, check archive.org/Google cache, or EGRUL cross-check). </li><li>2026-09-05, mining the previously-unparsed БФО filings: the FY2025 filing&#39;s own signature block reads &#39;руководитель Королев Дмитрий Алексеевич&#39; — a different name from the registered director on file, &#39;Королев Алексей Александрович&#39; (director_history, as_of 2024-09-10, s0516). Same surname, different given name/patronymic. Could be an undocumented directorship change (no EGRUL re-pull done since 23.08.2026) or a filing-side error; not resolved here — do not silently merge into director_history without a fresh EGRUL confirmation of which name is current. <span class="id">[s0417]</span></li>    </ul>
   </section>
 
   <section id="sources">
@@ -76,6 +86,8 @@
     <div class="scroll"><table>
       <thead><tr><th>ID</th><th>Type</th><th>Locator</th><th>Captured</th><th>As of</th></tr></thead>
       <tbody>
+        <tr><td class="id">s0416</td><td>БФО annual-accounts filing</td><td>БФО annual-accounts filing (РЕСУРС_БФО_9725168367_2024_20260817.zip)</td><td class="num">2026-08-17</td><td class="num">2024-12-31</td></tr>
+        <tr><td class="id">s0417</td><td>БФО annual-accounts filing</td><td>БФО annual-accounts filing (РЕСУРС_БФО_9725168367_2025_20260817.zip)</td><td class="num">2026-08-17</td><td class="num">2025-12-31</td></tr>
         <tr><td class="id">s0516</td><td>EGRUL extract</td><td>EGRUL extract (ul-1247700607450-20260823133853.pdf)</td><td class="num">—</td><td class="num">2026-08-23</td></tr>
         <tr><td class="id">s5346</td><td>Gisp</td><td>Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json)</td><td class="num">2026-09-03</td><td class="num">2026-09-03</td></tr>
       </tbody>

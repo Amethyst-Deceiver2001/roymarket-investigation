@@ -24,7 +24,7 @@
 
 - By value the largest documented intra-network transaction found so far: a ₽245,678,400 advance paid by НПО «Рустехдрон» to ООО «СПТ» under a supply contract signed 27.10.2025, against which the goods were never delivered. Settlement terms approved by the court: СПТ had already repaid ₽45,000,000 (платёжное поручение № 1811 от 30.06.2026) and acknowledged a remaining ₽200,678,400 debt, to be repaid ₽50m by 31.07.2026, ₽70m by 31.08.2026 and ₽80,678,400 by 30.09.2026; on full performance the plaintiff waives the неустойка. СПТ also agreed to compensate ₽542,128.80 of non-refundable state duty. Note the scale relative to the counterparty: СПТ was registered only 21.03.2024 (ОГРН 1247700253668) yet took a quarter of a billion rubles in advance eighteen months later. The subject of the supply contract is NOT stated in either archived filing — an open question. A related appeal by НПО «Рустехдрон» against a 20.05.2026 interim ruling was RETURNED unheard by the Ninth Arbitration Appeal Court on 07.08.2026 (№ 09АП-36457/2026, s0047) for failure to attach proof of the state duty. [s0048]
 
-- 4 OpenSanctions match(es) (screened 2026-08-24).
+- 4 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

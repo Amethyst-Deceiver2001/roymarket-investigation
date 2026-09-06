@@ -49,8 +49,8 @@
 | — | 745202 | 20190703 | 05.02.2020 | 09 (broad catch-all filing, no UAV/defense-specific items); 35 (broad catch-all filing, no UAV/defense-specific items); 37 (установка, обслуживание и ремонт компьютеров; обслуживание техническое; обслуживание техническое и ремонт; ремонт или техническое обслуживание компьютеров); 38 (broad catch-all filing, no UAV/defense-specific items); 42 (broad catch-all filing, no UAV/defense-specific items) |
 | — | 747058 | 20190703 | 13.02.2020 | 09 (broad catch-all filing, no UAV/defense-specific items); 35 (broad catch-all filing, no UAV/defense-specific items); 37 (установка, обслуживание и ремонт компьютеров; обслуживание техническое; обслуживание техническое и ремонт; ремонт или техническое обслуживание компьютеров); 38 (broad catch-all filing, no UAV/defense-specific items); 42 (broad catch-all filing, no UAV/defense-specific items) |
 
-- 5 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- 5 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

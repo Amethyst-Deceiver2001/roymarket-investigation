@@ -46,7 +46,7 @@
 | 123290, г. Москва, вн.тер.г. муниципальный округ Хорошевский, туп. 1-й Магистральный, д. 11 стр. 1, помещ. 1П | 2026-09-05 | Registered legal address per the full signed ЕГРЮЛ выписка of 05.09.2026. [s5507] |
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
-- 5 OpenSanctions match(es) (screened 2026-08-24).
+- 5 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

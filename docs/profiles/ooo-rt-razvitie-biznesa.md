@@ -43,9 +43,9 @@
 
 **NZ-RSA2022, US (OFAC, Russia Harmful Foreign Activities Sanctions), Ukraine (Presidential sanctions decree/list)** [s0768]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 2 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 2 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Registry flags
 

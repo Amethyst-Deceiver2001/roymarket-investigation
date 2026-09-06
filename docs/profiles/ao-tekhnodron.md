@@ -46,15 +46,15 @@
 
 ## State-program participation
 
-- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30.6 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30.6 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
 
 ## Sanctions & screening
 
 **Switzerland (SECO, Ukraine-related measures), Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), EU (Ukraine-related restrictive measures), Ukraine (Presidential sanctions decree/list)** [s0806]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 2 OpenSanctions match(es) (screened 2026-08-24).
-- 4 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 2 OpenSanctions match(es) (screened 2026-09-06).
+- 4 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

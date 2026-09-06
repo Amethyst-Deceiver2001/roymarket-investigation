@@ -55,9 +55,15 @@
 
 ## Sanctions & screening
 
-**US (OFAC, Russia Harmful Foreign Activities Sanctions), EU (Ukraine-related restrictive measures)** [s1408]
+**US (OFAC, Russia Harmful Foreign Activities Sanctions), EU (Ukraine-related restrictive measures, Reg. 2025/2033)** [s1408]
 
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+**US (OFAC SDN)** [s5831]
+
+**EU (Reg. 2025/2033)** [s5831]
+
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 2 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -104,6 +110,7 @@
 | s5255 | Zakupki | Zakupki (ZAKUPKI_contract_3365000026818000043_20260831.html) | 2026-08-31 | — |
 | s5256 | Zakupki | Zakupki (ZAKUPKI_contract_3390300337517000095_20260831.html) | 2026-08-31 | — |
 | s5257 | Zakupki | Zakupki (ZAKUPKI_contract_3541110087518000025_20260831.html) | 2026-08-31 | — |
+| s5831 | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_7802491148_20260905_ooo-radiofid-sistemy.json) | 2026-09-05 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

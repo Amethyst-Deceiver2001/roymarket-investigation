@@ -41,7 +41,7 @@
 
 ## State-program participation
 
-- name_ru: Каталог продукции ГИСП — отрасль БАС; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.; as_of: 2026-09-03 [s5344]
+- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; name_ru: Каталог продукции ГИСП — отрасль БАС; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly. [s5344]
 
 ## Trademarks
 
@@ -53,9 +53,9 @@
 | — | 872056 | 20210630 | 01.06.2022 | 01 (broad catch-all filing, no UAV/defense-specific items); 07 (UAV/defense terms present: дрон, летательн, воздушн, взрывчат, робот); 09 (UAV/defense terms present: антенн, военн, навигацион, оружи, робот, взрывчат); 12 (UAV/defense terms present: беспилот, робот, летательн, радиоуправляем, коптер, дрон, военн, воздушн); 39 (UAV/defense terms present: летательн, дрон, навигацион) |
 | — | 880543 | 20211208 | 08.07.2022 | 01 (broad catch-all filing, no UAV/defense-specific items); 07 (UAV/defense terms present: дрон, летательн, воздушн, взрывчат, робот); 09 (UAV/defense terms present: антенн, военн, навигацион, оружи, робот, взрывчат); 12 (UAV/defense terms present: беспилот, робот, летательн, радиоуправляем, коптер, дрон, военн, воздушн); 39 (UAV/defense terms present: летательн, дрон, навигацион) |
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 3 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 3 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
 

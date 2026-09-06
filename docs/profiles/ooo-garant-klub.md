@@ -29,8 +29,8 @@
 | 2024 | ₽41,476,000 | ₽-1,796,000 | [s0337] |
 | 2025 | ₽40,350,000 | ₽-31,789,000 | [s0338] |
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 2 OCCRP Aleph match(es) (screened 2026-08-26).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 2 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

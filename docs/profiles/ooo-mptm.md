@@ -46,7 +46,7 @@
 |---|---|---|---|
 | 2025 | ₽1,002,000 | ₽18,000 | [s0407] |
 
-- 2 OpenSanctions match(es) (screened 2026-08-24).
+- 2 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Registry flags
 

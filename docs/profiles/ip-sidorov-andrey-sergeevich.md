@@ -7,7 +7,8 @@
 - **Legal form:** IP (sole proprietor)
 - **Wildberries overlap:** not_checked
 
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

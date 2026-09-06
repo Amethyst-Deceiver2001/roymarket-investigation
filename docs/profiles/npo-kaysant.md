@@ -23,9 +23,17 @@
 - **FPV Дрон «Артемида 10»** — FPV combat/strike drone (GISP nameEn: "FPV Drone Artemis 10"). Operates on 4 frequency bands simultaneously, 25km range without a relay / 100km with relay, factory-fitted with the «Гермес» control channel, up to 4kg payload. GOST Р 59518-2021 cited. Found via GISP goods-catalog exact company_ogrn search. [s5390]
 - **Радиоуправляемая тележка «Аргус»** — Remote-controlled ground cart/trolley — distinct product line from the «Гермес» comms family and the interceptor/FPV drones above. Found via GISP goods-catalog exact company_ogrn search (list-view hit only, no detail record pulled). [s5389]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 3 OCCRP Aleph match(es) (screened 2026-08-26).
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2023 | ₽6,689,000 | ₽1,023,000 | [s0339] |
+| 2024 | ₽194,116,000 | ₽10,911,000 | [s0340] |
+| 2025 | ₽1,812,579,000 | ₽890,678,000 | [s0341] |
+
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 3 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -43,6 +51,9 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| s0339 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7733393203_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
+| s0340 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7733393203_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| s0341 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7733393203_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s2627 | Naletay | Naletay (NALETAY_773376903806_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
 | s5389 | Gisp | Gisp (GISP_20260903_goods-catalog-manufacturer-hits-5-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5390 | Gisp | Gisp (GISP_20260903_goods-catalog-product-details-7-new-items.json) | 2026-09-03 | 2026-09-03 |

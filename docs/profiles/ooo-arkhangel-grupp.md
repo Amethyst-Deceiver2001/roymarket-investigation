@@ -11,6 +11,7 @@
 - **Registered:** 2026-03-12
 - **Address:** 107031, г. Москва, вн.тер.г. муниципальный округ Мещанский, ул. Рождественка, д. 5/7 стр. 2, помещ. 4А/5
 - **Director:** Крючков Дмитрий Александрович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **ЦБСТ tie:** None found.
 - **Wildberries overlap:** not_checked
@@ -28,6 +29,12 @@
 | Value | As of | Note |
 |---|---|---|
 | Филиппов Михаил Геннадьевич, ИНН 502603133030 - 80% (номинал 8,000 руб. из 10,000 руб. уставного капитала); Крючков Дмитрий Александрович, ИНН 712900068586 - 15% (1,500 руб.), он же генеральный директор; Казнова Татьяна Андреевна, ИНН 771501583221 - 5% (500 руб.). | 2026-03-12 | Full signed EGRUL extract - supersedes the earlier pb.nalog.ru upr-uchr partial finding (s5465), which established Филиппов as A founder but not his 80% MAJORITY stake, nor Казнова's existence as a third owner. He is the controlling owner of this entity, not merely one of several founders. [s5474] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2026-03-12 | Уставный капитал per full signed ЕГРЮЛ выписка; matches the founders_history split (Филиппов ₽8,000/80%, Крючков ₽1,500/15%, Казнова ₽500/5%). [s5474] |
 
 ### Address
 

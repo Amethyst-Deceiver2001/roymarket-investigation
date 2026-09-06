@@ -27,7 +27,7 @@
 |---|---|---|---|---|
 | — | 1003743 | 20240118 | 05.03.2024 | 12 (UAV/defense terms present: беспилот, робот, летательн, радиоуправляем, коптер, дрон, военн, воздушн); 14 (broad catch-all filing, no UAV/defense-specific items); 16 (UAV/defense terms present: воздушн); 18 (UAV/defense terms present: военн); 25 (broad catch-all filing, no UAV/defense-specific items); 28 (UAV/defense terms present: воздушн, дрон, оружи, робот); 35 (broad catch-all filing, no UAV/defense-specific items); 40 (UAV/defense terms present: робот); 41 (UAV/defense terms present: робот, дрон) |
 
-- 2 OpenSanctions match(es) (screened 2026-08-24).
+- 2 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

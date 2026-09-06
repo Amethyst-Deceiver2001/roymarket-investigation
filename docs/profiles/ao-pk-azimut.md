@@ -96,11 +96,11 @@
 
 ## Government contracts
 
-- customer: Министерство обороны Российской Федерации; reg_number: 1770425226115000899; date: 2015; value_rub: 789200; items: Only mil-relevant contract among this entity's 76 zakupki hits (₽431.7m total, overwhelmingly civilian) — a small direct МО supply; entity is tracked here as a money-layer node, not primarily as a hardware supplier. [s3042]
+- customer: Министерство обороны Российской Федерации; date: 2015; items: Only mil-relevant contract among this entity's 76 zakupki hits (₽431.7m total, overwhelmingly civilian) — a small direct МО supply; entity is tracked here as a money-layer node, not primarily as a hardware supplier.; reg_number: 1770425226115000899; value_rub: 789200 [s3042]
 
 ## State-program participation
 
-- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.20.1 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.20.1 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
 
 ## Trademarks
 
@@ -117,19 +117,19 @@
 - Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31. [s5353]
 - Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31. [s5354]
 - Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует. [s5355]
+- Лицензиат в реестре: «Открытое акционерное общество "АЗИМУТ"» (101000, г. Москва, ул. Мясницкая, дом 30/1/2, стр.2). Дата внесения сведений в реестр: 17-11-2015. [s6408]
+- Лицензиат в реестре: «Открытое акционерное общество "АЗИМУТ"» (101000, г. Москва, ул. Мясницкая, дом 30/1/2, стр.2). Дата внесения сведений в реестр: 17-11-2015. [s6408]
+- Лицензиат в реестре: «Открытое акционерное общество "АЗИМУТ"» (101000, г. Москва, ул. Мясницкая, дом 30/1/2, стр.2). Дата внесения сведений в реестр: 17-11-2015. [s6408]
+- Лицензиат в реестре: «Открытое акционерное общество "АЗИМУТ"» (101000, г. Москва, ул. Мясницкая, дом 30/1/2, стр.2). Дата внесения сведений в реестр: 17-11-2015. [s6408]
+- Лицензиат в реестре: «Открытое акционерное общество "АЗИМУТ"» (101000, г. Москва, ул. Мясницкая, дом 30/1/2, стр.2). Дата внесения сведений в реестр: 17-11-2015. [s6408]
+- Приказ №941 от 12.05.2023. Статус: действие приостановлено. [s6436]
 
 ## Sanctions & screening
 
 **Canada (Special Economic Measures Act), Switzerland (SECO, Ukraine-related measures), US-BIS-EL, NZ-RSA2022, Ukraine (Presidential sanctions decree/list)** [s0763]
 
-- 4 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
-
-### Securing measures
-
-- ROW_NUM: 1; ROM_KIND: 2; NP_INN: 7701583410; NP_NAME: АКЦИОНЕРНОЕ ОБЩЕСТВО ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "АЗИМУТ"; REG_DATE: 13.09.2021 00:00:00; CNCL_DATE: 01.10.2021 12:34:00; CNCL_REASON: Исполнение решения о привлечении к ответственности за совершение налогового правонарушения (решения об отказе в привлечении к ответственности за совершение налогового правонарушения); ASSET_NAME: Земельный участок 
-, 05:40:000040:1070; row_cnt: 2
-- ROW_NUM: 2; ROM_KIND: 2; NP_INN: 7701583410; NP_NAME: АКЦИОНЕРНОЕ ОБЩЕСТВО ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "АЗИМУТ"; REG_DATE: 13.09.2021 00:00:00; CNCL_DATE: 01.10.2021 12:34:00; CNCL_REASON: Исполнение решения о привлечении к ответственности за совершение налогового правонарушения (решения об отказе в привлечении к ответственности за совершение налогового правонарушения); ASSET_NAME: Земельный участок , 05:40:000040:1071; row_cnt: 2
+- 3 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -155,6 +155,8 @@
 | s5354 | document | document (PP719_7701583410_20211221_zaklyuchenie-113235-11.pdf) | 2021-12-21 | 2021-12-21 |
 | s5355 | document | document (PP719_7701583410_20240604_zaklyuchenie-57277-11.pdf) | 2024-06-04 | 2024-06-04 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
+| s6436 | Mchs | Mchs (MCHS_7701583410_20260906_fire-license-search-ao-pk-azimut.html) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

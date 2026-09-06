@@ -85,8 +85,8 @@
 
 **Sanctioned** [s0794]
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 3 OCCRP Aleph match(es) (screened 2026-08-26).
+- 3 OpenSanctions match(es) (screened 2026-09-06).
+- 3 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
 

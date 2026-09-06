@@ -52,7 +52,7 @@
 |---|---|---|---|
 | 2025 | ₽53,558,000 | ₽1,542,000 | [s5530] |
 
-- 1 OpenSanctions match(es) (screened 2026-09-05).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

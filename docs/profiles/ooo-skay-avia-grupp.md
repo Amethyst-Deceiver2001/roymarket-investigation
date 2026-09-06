@@ -25,6 +25,10 @@
 |---|---|---|
 | 198510, г. Санкт-Петербург, вн.тер.г. город Петергоф, ул. Константиновская, д. 8, литера А, помещ. 1-Н | 2026-03-29 | 2026-09-02: precise address from EGRUL extract s5307 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse "г. Санкт-Петербург". ГРН 2267800128253 dated 28.01.2026. [s5307] |
 
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 2 OCCRP Aleph match(es) (screened 2026-09-05).
+
 ## Principals & persons of interest
 
 ### Прокофьев Михаил Васильевич

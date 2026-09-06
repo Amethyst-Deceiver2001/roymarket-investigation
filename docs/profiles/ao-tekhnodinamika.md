@@ -11,6 +11,14 @@
 - **Address:** Г.Москва
 - **Wildberries overlap:** not_checked
 
+## Ownership & corporate history
+
+### Legal name
+
+| Value | As of | Note |
+|---|---|---|
+| ОАО «Авиационное оборудование» | 2013-03-13 | Registered under this name (ОГРН 1037719005873 — matches this entity's current ОГРН exactly) when granted aviation-tech license 12276-AT-Р on 13.03.2013; the SAME ОГРН appears again in the same registry from 2015 onward (license 13364-AT-Р, 23.04.2015) under the name "АО «Технодинамика»" — dating the "Авиационное оборудование" -> "Технодинамика" rename to between these two dates, not previously pinned down on this record. [s6408] |
+
 ## Products
 
 - **Стартер-генератор трехкаскадный синхронный регулируемый ГСР-90/120 (8Е3.117.079)** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Комплектующие (запасные части) летательных аппаратов, не имеющие самостоятельных группировок [s5391]
@@ -31,12 +39,18 @@
 | — | 1050188 | 20231211 | 12.09.2024 | 01 (broad catch-all filing, no UAV/defense-specific items); 05 (broad catch-all filing, no UAV/defense-specific items); 16 (broad catch-all filing, no UAV/defense-specific items); 21 (broad catch-all filing, no UAV/defense-specific items); 25 (broad catch-all filing, no UAV/defense-specific items); 29 (broad catch-all filing, no UAV/defense-specific items); 31 (broad catch-all filing, no UAV/defense-specific items) |
 | — | 1225369 | 20250520 | 01.06.2026 | 07 (UAV/defense terms present: дрон, летательн, воздушн, робот); 09 (UAV/defense terms present: антенн, военн, навигацион, оружи, робот, взрывчат); 12 (UAV/defense terms present: робот, летательн, радиоуправляем, коптер, дрон, военн, воздушн); 13 (UAV/defense terms present: боеприпас, оружи, взрывчат); 16 (UAV/defense terms present: воздушн); 28 (UAV/defense terms present: воздушн, дрон, оружи, робот) |
 
+## Licences
+
+- Лицензиат в реестре: «Открытое акционерное общество "Авиационное оборудование"» (105318, г. Москва, ул. Ибрагимова, д. 29 корп. 31, корп. 31А). Дата внесения сведений в реестр: 17-11-2015. [s6408]
+- Лицензиат в реестре: «Акционерное общество "Технодинамика"» (105318, г. Москва, ул. Ибрагимова, д. 29 корп. 31, корп. 31А). Дата внесения сведений в реестр: 17-11-2015. [s6408]
+- Лицензиат в реестре: «Акционерное общество "Технодинамика"» (105318, г. Москва, ул. Ибрагимова, д. 29 корп. 31, корп. 31А). Дата внесения сведений в реестр: 21-03-2017. [s6408]
+
 ## Sanctions & screening
 
 **GB-RUS, NZ-RSA2022, Switzerland (SECO, Ukraine-related measures), Australia (Autonomous Sanctions, Russia), US-UKRRUS-REL, Canada (Special Economic Measures Act), Ukraine (Presidential sanctions decree/list), US-SSI, Ukraine (war-sanctions.gur.gov.ua, military-industry listing), US-BIS-EL, EU (Ukraine-related restrictive measures)** [s0778]
 
-- 3 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- 3 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -53,6 +67,7 @@ _No named principals linked to this entity yet._
 | s0110 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7719265496_20260822_ao-tekhnodinamika.json) | 2026-08-22 | 2026-08-22 |
 | s0778 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7719265496_20260824_ao-tekhnodinamika.json) | 2026-08-24 | — |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

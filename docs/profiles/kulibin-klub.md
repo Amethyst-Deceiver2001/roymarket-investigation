@@ -22,8 +22,8 @@
 
 - **Программа "Кулибин-клуб"** — Народный фронт initiative that identifies promising civilian/garage engineering ideas, tests them, coordinates cross-team expertise, and helps scale prototypes into mass production — explicitly framed as feeding into «Народный ВПК». Per the 13-14.08.2026 roundtable: 220,000+ pieces of equipment delivered to fighters as of July 2026; 835 products tested, 195 accepted by the Ministry of Defence; 525 enterprises integrated into ЦБСТ (projected 625+ by end of 2026); ~900 companies supported over 2.5 years; a claimed $50bn+ of enemy equipment destroyed by resident products (unverifiable, self-reported). [s0560]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 1 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

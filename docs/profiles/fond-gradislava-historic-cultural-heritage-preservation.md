@@ -40,7 +40,7 @@
 
 - Trivial routine administrative matter, not a commercial dispute: ОСФР (Пенсионный фонд) sought a court order for a ₽4,000 fine over a late СЗВ-М filing for Nov 2022. The fund objected and the court cancelled its own судебный приказ on 27.07.2023 — a standard outcome for any first objection under АПК РФ, not a substantive finding for either side. Recorded for completeness so this pair of files isn't re-read as an open question later. [s5265]
 
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

@@ -35,7 +35,7 @@
 | — | 988975 | 20220706 | 15.12.2023 | 35 (broad catch-all filing, no UAV/defense-specific items) |
 | — | 1090031 | 20231114 | 04.03.2025 | 09 (UAV/defense terms present: антенн); 16 (полотенца для лица бумажные; полотенца для рук бумажные); 25 (broad catch-all filing, no UAV/defense-specific items); 28 (UAV/defense terms present: дрон) |
 
-- 3 OpenSanctions match(es) (screened 2026-08-24).
+- 3 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

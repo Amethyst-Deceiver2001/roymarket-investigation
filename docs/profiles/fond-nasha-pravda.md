@@ -31,15 +31,15 @@
 
 | Year | Revenue | Profit | Source |
 |---|---|---|---|
-| 2024 | — | ₽14,700,000 | [s0389] |
-| 2025 | — | ₽22,320,000 | [s0390] |
+| 2024 | — | — | [s0389] |
+| 2025 | — | — | [s0390] |
 
 ## Sanctions & screening
 
 **Ukraine (Presidential sanctions decree/list)** [s0575]
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 1 OCCRP Aleph match(es) (screened 2026-08-26).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 1 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

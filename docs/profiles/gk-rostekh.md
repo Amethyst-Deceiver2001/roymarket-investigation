@@ -41,12 +41,16 @@
 
 **Canada (Special Economic Measures Act), US-UKRRUS-REL, US-SSI, Switzerland (SECO, Ukraine-related measures), US-BIS-EL, GB-RUS, NZ-RSA2022, AU-UKRAINE, Ukraine (Presidential sanctions decree/list)** [s0767]
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
+
+## Open questions
+
+- zakupki scan for ИНН 7704274402 is truncated: the scan log records hit_count=45 but only 10 reg_numbers were collected — a page-1 truncation predating zakupki_batch_pull.py's pagination fix. The 35 uncollected hits have never been seen. The 2026-09-05 closure (all 10 archived cards are Минздрав РФ COVID-era medical procurement) therefore rests on a partial sample. Re-run `zakupki_batch_pull.py scan --inn 7704274402 --force` before treating this entity's procurement footprint as characterised.
 
 ## Sources cited in this profile
 

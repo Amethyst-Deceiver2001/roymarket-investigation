@@ -21,7 +21,23 @@
 |---|---|---|
 | Соколов Герман Олегович | 2026-08-24 | EGRUL open-API lookup (egrul.nalog.ru), current at time of pull. [s1161] |
 
-- 2 OCCRP Aleph match(es) (screened 2026-08-26).
+### Legal name
+
+| Value | As of | Note |
+|---|---|---|
+| ООО «Научно-исследовательское производственное предприятие РУСТЕХДРОН» (НИПИ «РУСТЕХДРОН») | 2022-10-03 | Устав at founding (Решение общего собрания учредителей, Протокол №1 от 26.09.2022, ГРН 1225000111313 от 03.10.2022) — original name at incorporation. Still under this name in a later устав (НОВАЯ РЕДАКЦИЯ №1, Протокол от 20.02.2025 №2/25, ГРН 2255004526104 от 27.02.2025) — confirms the «Рустехдрон» name lineage previously inferred only from name-similarity is real and primary-sourced. [s0195] |
+| ООО «РТД-Защита» | 2026-04-10 | Устав under this name is dated «10» апреля 2026 г. № 1 (Решение единственного участника) — the rename happened sometime between 27.02.2025 (still «Рустехдрон») and this date; no document on file pins it closer. Also drops the plural «Общее собрание участников» language of the 2025 устав for «единственный участник» (sole owner) by 2026 — an ownership consolidation alongside the rename, not yet independently explained. [s0195] |
+
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2023 | ₽23,964,000 | ₽-525,000 | [s0271] |
+| 2024 | — | ₽-42,000 | [s0272] |
+| 2025 | ₽580,000 | ₽-3,289,000 | [s0273] |
+
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 2 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -44,6 +60,10 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| s0195 | Founding-Устав bundle | Founding-Устав bundle (UD_1992856.zip) | — | 2026-04-10 |
+| s0271 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5003153526_2023_20260820.zip) | 2026-08-20 | 2023-12-31 |
+| s0272 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5003153526_2024_20260820.zip) | 2026-08-20 | 2024-12-31 |
+| s0273 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5003153526_2025_20260820.zip) | 2026-08-20 | 2025-12-31 |
 | s1161 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5003153526_20260824_ooo-rtd-zashchita.json) | 2026-08-24 | 2026-08-24 |
 
 ---

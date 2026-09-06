@@ -35,9 +35,16 @@
 |---|---|---|---|---|
 | — | 1086620 | 2024-04-19 | 14.02.2025 | 09 (радиоприборы; антенны; радиопередатчики [дистанционная связь]; устройства помехозащитные [электричество]) |
 
+- 4 OpenSanctions match(es) (screened 2026-09-06).
+
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Shestopalov Sergei Anatolyevich — Шестопалов Сергей Анатольевич
+
+- **DOB:** 1974-04-01
+- **ИНН:** 480601511636
+- founder (100%, at incorporation) / General Director (2024-02-28–present)
+- `sanctions lead`
 
 ## Corporate links
 

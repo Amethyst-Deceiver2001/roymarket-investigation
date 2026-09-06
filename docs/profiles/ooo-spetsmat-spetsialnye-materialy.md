@@ -19,6 +19,8 @@
 |---|---|---|
 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (per live EGRUL 2026-09-02): Малевич Елена Юрьевна — differs from source article's stated GD 'Елисеева Елена Юрьевна' (b.1972); plausible post-marriage name change given co-shareholder Малевич П.В., not resolved. | — | from corrections:add_entities, unverified |
 
+- 3 OpenSanctions match(es) (screened 2026-09-06).
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._

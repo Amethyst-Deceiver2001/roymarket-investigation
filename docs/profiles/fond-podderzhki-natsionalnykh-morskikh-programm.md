@@ -23,11 +23,13 @@
 
 | Year | Revenue | Profit | Source |
 |---|---|---|---|
+| 2021 | — | — | [s0310] |
+| 2022 | — | — | [s0311] |
 | 2023 | — | ₽85,237,000 | [s0312] |
 | 2024 | — | ₽317,505,000 | [s0313] |
 | 2025 | — | ₽573,316,000 | [s0314] |
 
-- 3 OCCRP Aleph match(es) (screened 2026-08-26).
+- 3 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -38,6 +40,8 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0105 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7714389530_20260822_fond-podderzhki-natsionalnykh-morskikh-programm.json) | 2026-08-22 | 2026-08-22 |
+| s0310 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714389530_2021_20260816.zip) | 2026-08-16 | 2021-12-31 |
+| s0311 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714389530_2022_20260816.zip) | 2026-08-16 | 2022-12-31 |
 | s0312 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714389530_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
 | s0313 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714389530_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | s0314 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714389530_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |

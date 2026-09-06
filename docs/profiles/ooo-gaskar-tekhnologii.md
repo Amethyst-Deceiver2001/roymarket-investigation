@@ -33,9 +33,9 @@
 
 **Sanctioned** [s0819]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 4 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 4 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

@@ -85,8 +85,8 @@
 
 **Switzerland (SECO, Ukraine-related measures), EU (Ukraine-related restrictive measures), US (OFAC, Russia Harmful Foreign Activities Sanctions), Ukraine (Presidential sanctions decree/list)** [s0795]
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Registry flags
 

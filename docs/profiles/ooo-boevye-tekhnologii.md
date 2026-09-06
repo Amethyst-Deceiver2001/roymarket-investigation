@@ -63,8 +63,6 @@
 >
 > — Product description on irptorg.ru's listing for a GAONENG GNB 6S 6500mAh LiPo battery — the same battery model (different capacity) a Moscow Arbitration Court judgment documents НПО «Рустехдрон» supplying to ООО «ДСГ» in 2023. The listing categorizes the product under «FPV Дроны и РЭБ» (FPV drones and electronic warfare). (2026-09-05) [s5660]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._

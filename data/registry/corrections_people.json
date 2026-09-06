@@ -11387,6 +11387,36 @@
       "why": [
         "2026-09-06: surfaced while triaging OpenSanctions sanction.linked/.control-tagged hits from the 2026-09-06 full-roster screen (screen_opensanctions.py) — ooo-npo-kilovatt matched ru-inn-4800013729 with those topic tags but empty source_urls in the batch response, so the entity own OpenSanctions detail page was read directly (s6177), surfacing that the underlying designation is this person own Ukraine NSDC listing, not a designation of the company itself. Person was already implicitly on file via founders_history[] on ooo-npo-kilovatt (s0532) but had never been promoted to a people.json record."
       ]
+    },
+    {
+      "slug": "zhulidov-evgeniy",
+      "fio_ru": "Жулидов Евгений",
+      "fio_latin": "Evgeny Zhulidov",
+      "dob": "1998-07-14",
+      "roles": [
+        {
+          "entity_slug": "tg-arkhangel-spetsnaza",
+          "role": "Creator and main administrator (callsign «Атлет»)",
+          "as_of": "2024-09-24",
+          "source_id": "s6406"
+        }
+      ],
+      "notes": "Officer, 45th Special Forces (Spetsnaz) Brigade of the VDV, military unit 28337 — the brigade that conducted the February 2022 Hostomel airfield assault, which the channel documented in detail from the outset. Identified by iStories (24.09.2024, s6406) via a Tinder profile photo (military uniform + VDV Spetsnaz flag, self-described as \"Евгений, офицер, 26 лет\") cross-referenced against leaked databases and matched to the channel's own «Атлет» persona via Amazon Rekognition facial comparison (91.5% confidence, independently reported by iStories) — a primary press investigation using a named, described methodology, not a bare assertion. DOB corroborated internally: the channel's own self-disclosed birthday (14 July) matches Жулидов's leaked-database DOB (14.07.1998), and his age would be exactly 26 as of the 2024 publication, consistent with the Tinder bio. Telegram nickname per leaked data: «Арно Брекер». A leaked residential-database record lists his address since 2021 as a three-story ~600m² house in the elite Nikolina Gora settlement on Rublyovo-Uspenskoye Highway — not independently re-verified by this investigation, recorded as press-sourced only. Brigade commander is named in the channel as Вадим Паньков (\"отец\"/\"father\" figure in the channel's own framing) — not otherwise verified. Жулидов told iStories via his personal Telegram account that he stopped administering the channel in late 2022 under orders from his unit — his own denial, not independently confirmed, and in tension with this investigation's own 2026 findings that the channel is still active in first-person combat-content self-promotion. PII scope: qualifies as a confirmed participant in a network's own operational apparatus (creator/administrator of a channel running a joint drone-retraining project with ooo-npo-kilovatt's Гагаринг lab, see tg-arkhangel-spetsnaza's tier_basis), per the 2026-09-04 PII policy amendment — not a bystander or stray mention."
+    },
+    {
+      "slug": "aleynik-evgeniy",
+      "fio_ru": "Алейник Евгений",
+      "fio_latin": "Evgeny Aleinik",
+      "dob": null,
+      "roles": [
+        {
+          "entity_slug": "tg-arkhangel-spetsnaza",
+          "role": "Co-administrator (callsign «Внук»)",
+          "as_of": "2024-09-24",
+          "source_id": "s6406"
+        }
+      ],
+      "notes": "23 years old as of the 2024-09-24 iStories publication (s6406). Son of Станислав Алейник, rector of Belgorod State Agrarian University and former Deputy Minister of Agriculture of Russia — identified by matching name, surname and date of birth to a family photo, then confirmed via Amazon Rekognition facial comparison against the channel's «Внук» persona (88.6% confidence, per iStories' own reporting methodology). His current unit/place of service is not stated in the source — flagged as unknown, not guessed. Originally surfaced publicly via the Ukrainian leak-aggregator site Evocation (July 2024), which published personal data on several «Архангел спецназа» authors — iStories independently verified this specific identification against open-source data rather than simply repeating the leak site's claim. Жулидов's statement to iStories claims Алейник also stopped administering the channel in late 2022 under military orders — his colleague's denial on his behalf, not independently confirmed. PII scope: co-administrator of a channel running a joint drone-retraining project with ooo-npo-kilovatt's Гагаринг lab (see tg-arkhangel-spetsnaza's tier_basis) — a confirmed operational participant under the 2026-09-04 PII policy amendment, not a bystander. DOB left null (only age-at-publication known, not exact birth date)."
     }
   ]
 }

@@ -39,8 +39,8 @@
 
 **Sanctioned** [s0758]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 4 OpenSanctions match(es) (screened 2026-08-24).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 4 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

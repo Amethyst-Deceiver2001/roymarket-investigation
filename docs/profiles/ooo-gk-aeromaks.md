@@ -25,13 +25,23 @@
 |---|---|---|
 | access-restricted (3 separate founder rows, all withheld) | 2026-08-19 | All three founder entries show "Доступ к сведениям ограничен" (Federal Law 129-FZ), each dated 19.08.2026 — a very recent, coordinated redaction (four days before this pull), same pattern as several other network entities. [s0476] |
 
+### Legal name
+
+| Value | As of | Note |
+|---|---|---|
+| ООО «РТИ Аэрокосмические системы» | 2015-09-18 | Registered under this name (ОГРН 1147748024269 — matches this entity's current ОГРН exactly) when granted aviation-tech license 13587-AT-Р on 18.09.2015. "РТИ" is a known AFK Sistema defense-electronics holding brand — this predecessor name suggests an RTI ownership/founding tie not yet otherwise documented on this record; flagged as an open question, not yet independently confirmed via EGRUL founder history. [s6408] |
+
+## Licences
+
+- Лицензиат в реестре: «общество с ограниченной ответственностью "РТИ Аэрокосмические системы"» (125047, г. Москва, 3-я Тверская-Ямская ул., д. 39, стр. 1). Дата внесения сведений в реестр: 17-11-2015. [s6408]
+
 ## Sanctions & screening
 
 **Sanctioned** [s0772]
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 1 OpenSanctions match(es) (screened 2026-08-24).
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
@@ -49,6 +59,7 @@ _No named principals linked to this entity yet._
 | s0476 | EGRUL extract | EGRUL extract (ul-1147748024269-20260823132014.pdf) | — | 2026-08-23 |
 | s0772 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7710974353_20260824_ooo-gk-aeromaks.json) | 2026-08-24 | — |
 | s5342 | Minpromtorg | Minpromtorg (MINPROMTORG_BAS_20260903_nacproekt-obzor.pdf) | 2026-09-03 | — |
+| s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

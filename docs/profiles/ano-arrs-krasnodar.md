@@ -22,7 +22,13 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Сиразатдинов Никита Вадимович
+
+- Учредитель (2024-03-01–present)
+
+### Климов Максим Александрович
+
+- Учредитель (2024-03-01–present)
 
 ## Open questions
 

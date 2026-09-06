@@ -36,10 +36,11 @@
 
 ## Government contracts
 
-- customer: ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz); reg_number: 1500300810225000157; date: 2025; value_rub: 2314200; items: Поставка средств ПОДАВЛЕНИЯ беспилотных аппаратов (не обнаружения — corrected per the sole-supplier notice's own text, which the contract-card-only extraction had mis-parsed as detection). Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ, justified in the notice by reference to МЧС letters МЧС России от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного каталога средств противодействия», explicitly tied to equipping personnel deployed for «поиск, обезвреживание и уничтожение взрывоопасных предметов на территории Курской области» (ordnance-disposal operations in Kursk region) with counter-UAV detection equipment for their own force protection. [s3680]
-- customer: Администрация Белгородского муниципального округа; reg_number: 3310005025826000052; date: 2026; value_rub: 495000; items: Поставка мониторинговых устройств «Булат» — same «Булат» product line as the earlier ИП Цыганов contracts (see corrections entry for that person). [s3424]
+- customer: ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz); date: 2025; items: Поставка средств ПОДАВЛЕНИЯ беспилотных аппаратов (не обнаружения — corrected per the sole-supplier notice's own text, which the contract-card-only extraction had mis-parsed as detection). Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ, justified in the notice by reference to МЧС letters МЧС России от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного каталога средств противодействия», explicitly tied to equipping personnel deployed for «поиск, обезвреживание и уничтожение взрывоопасных предметов на территории Курской области» (ordnance-disposal operations in Kursk region) with counter-UAV detection equipment for their own force protection.; reg_number: 1500300810225000157; value_rub: 2314200 [s3680]
+- customer: Администрация Белгородского муниципального округа; date: 2026; items: Поставка мониторинговых устройств «Булат» — same «Булат» product line as the earlier ИП Цыганов contracts (see corrections entry for that person).; reg_number: 3310005025826000052; value_rub: 495000 [s3424]
 
-- 2 OCCRP Aleph match(es) (screened 2026-08-26).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
+- 2 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
 
@@ -58,6 +59,7 @@
 - **DOB:** 1963-05-30
 - **ИНН:** 504405055721
 - Генеральный директор / основной участник (80-100%) (2024-06-13–present)
+- `sanctions lead`
 
 ## Sources cited in this profile
 

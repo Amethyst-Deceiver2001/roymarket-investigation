@@ -2521,3 +2521,50 @@ Still open from the original pass: full EGRUL for Архангел entities #5/#
 the private Archangel chat (zero scraped message content, only 3/many
 members catalogued — commands handed to user, not yet run), НПО Эйлер deep
 dive, the Одесская 48/3 building pin.
+
+## New licensing-registry screeners + NSPD reliability finding (2026-09-06/07)
+
+Six new registries reverse-engineered and scripted this pass, all now
+tracked in `notes/SOURCE_REGISTER.md` (#59-65): RKN comms-license and
+frequency-assignment registries (`screen_rkn_comms_license.py`,
+`screen_rkn_frequency_registry.py` — both needed the full param set a real
+form submit sends, not just the obvious fields, or the server silently
+returns the unchanged default page instead of erroring), a fixed
+`screen_mchs_fire_licenses.py` (HTML-entity decode bug), Roscosmos
+licences, favt.gov.ru aviation operators, and all 5 Rosgvardia licence
+registries. Full-roster sweeps run clean: 5 RKN comms-license hits + 5 RKN
+frequency hits wired into `licences[]` via `corrections_entities.json`
+(large batches condensed with a note rather than itemized in full, same
+precedent as `npp-radar-mms`'s earlier 24-record RKN batch); МЧС/Roscosmos/
+favt/Rosgvardia hits reviewed and found to be either already-known/wired
+duplicates or clean negatives — no new leads. Ten company profiles rebuilt
+and tag-balance-checked for the entities touched by the wiring.
+
+**NSPD (nspd.gov.ru) downgraded from "promote toward Tier B" to a firm,
+documented Tier B with an honest reliability caveat.** A single curl with a
+full browser-header set got one real 200 (confirmed the exact building
+inventory at Гагаринг's Одесская 48/3 production site — already documented
+2026-09-03/04, not a new finding, just re-confirmed), but every retry
+after that 403'd, from both this sandbox's egress AND the user's own home
+network (confirmed running a 152-entity address sweep). This is a strictly
+worse case than fedresurs.ru's sandbox-only block — no network tested so
+far reliably passes NSPD's WAF via curl, only a real chrome-devtools
+browser session has never failed. `scripts/nspd_lookup.py` (single-query)
+and `scripts/screen_nspd_addresses.py` (batch, built but should not be
+handed to the user again as a full sweep) both exist for when curl does
+work.
+
+**Process notes, both now saved as feedback memories:**
+- The NSPD reverse-engineering above was **largely redundant** — the same
+  endpoint, the same WAF-vs-browser finding, and the same Одесская 48/3
+  building inventory were already fully documented in
+  `notes/gagaring_network_map.md` (2026-09-03/04). Grep `notes/*.md` for a
+  target before starting a fresh registry/facility dive.
+- The `/deep-research` Workflow was invoked twice this session and both
+  times cost far more than the direct alternative (WebSearch/WebFetch/curl)
+  would have — one run hit the account's monthly spend limit mid-flight,
+  the other's final synthesis step returned literal `"test"` placeholder
+  content instead of a real report (findings had to be reconstructed by
+  hand from the workflow's own journal, written up in
+  `notes/deep_research_registries_20260906.md`). Default to direct research
+  tools for this kind of open-ended discovery question going forward.

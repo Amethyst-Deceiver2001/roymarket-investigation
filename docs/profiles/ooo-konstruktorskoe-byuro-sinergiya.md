@@ -31,7 +31,7 @@
 |---|---|---|---|
 | None | ₽227,700,000 | — |  |
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 
 ## Principals & persons of interest
 

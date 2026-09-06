@@ -77,7 +77,7 @@
       <span class="lbl">Canada (Special Economic Measures Act), US-UKRRUS-REL, US-SSI, Switzerland (SECO, Ukraine-related measures), US-BIS-EL, GB-RUS, NZ-RSA2022, AU-UKRAINE, Ukraine (Presidential sanctions decree/list)</span>
 <p><span class="id">[s0767]</span></p>    </div>
     <ul class="plain">
-<li class="footnote" style="border:none;margin:0;padding:0;">1 OpenSanctions match(es) (screened 2026-08-24).</li><li class="footnote" style="border:none;margin:0;padding:0;">5 OCCRP Aleph match(es) (screened 2026-08-26).</li>    </ul>
+<li class="footnote" style="border:none;margin:0;padding:0;">1 OpenSanctions match(es) (screened 2026-09-06).</li><li class="footnote" style="border:none;margin:0;padding:0;">5 OCCRP Aleph match(es) (screened 2026-09-05).</li>    </ul>
   </section>
 
 
@@ -89,6 +89,11 @@
   </section>
 
 
+  <section id="open-questions">
+    <p class="eyebrow">Open questions</p>
+    <ul class="plain">
+<li>zakupki scan for ИНН 7704274402 is truncated: the scan log records hit_count=45 but only 10 reg_numbers were collected — a page-1 truncation predating zakupki_batch_pull.py&#39;s pagination fix. The 35 uncollected hits have never been seen. The 2026-09-05 closure (all 10 archived cards are Минздрав РФ COVID-era medical procurement) therefore rests on a partial sample. Re-run `zakupki_batch_pull.py scan --inn 7704274402 --force` before treating this entity&#39;s procurement footprint as characterised. </li>    </ul>
+  </section>
 
   <section id="sources">
     <p class="eyebrow">Sources cited in this profile</p>

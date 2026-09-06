@@ -22,7 +22,7 @@
 |---|---|---|
 | Шаповалов Сергей Михайлович | 2026-03-18 | personal ИНН 511005152619; also sole founder [s0512] |
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

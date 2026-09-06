@@ -27,7 +27,7 @@
 
 ## State-program participation
 
-- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 28.99.5 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 28.99.5 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
 
 ## Trademarks
 
@@ -52,7 +52,7 @@
 | УСТРОЙСТВО ДЛЯ ОБВЯЗКИ ИЗДЕЛИЙ НА ПАЛЛЕТЕ | RU2793019C1 | 2022.11.18 | Соловьев Константин Юрьевич (RU) |
 | УСТРОЙСТВО ДЛЯ ЗАХВАТА ШТАБЕЛЕЙ | RU2813430C1 | 2023.02.02 | Соловьев Константин Юрьевич (RU), Зиганшин Ильшат Асгатович (RU) |
 
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
 

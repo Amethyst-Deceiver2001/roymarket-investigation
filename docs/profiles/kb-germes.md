@@ -12,7 +12,7 @@
 - **Гусь**
 - **Артемида-10**
 
-- 5 OCCRP Aleph match(es) (screened 2026-08-26).
+- 5 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 

@@ -30,7 +30,7 @@
 
 ## State-program participation
 
-- name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).; as_of: 2026-09-03 [s5346]
+- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
 
 ## Trademarks
 
@@ -38,7 +38,7 @@
 |---|---|---|---|---|
 | — | 1220054 | 20241002 | 13.05.2026 | 09 (UAV/defense terms present: антенн, военн, навигацион, оружи, робот); 13 (UAV/defense terms present: боеприпас, оружи, взрывчат); 35 (broad catch-all filing, no UAV/defense-specific items); 42 (UAV/defense terms present: робот, дрон) |
 
-- 2 OpenSanctions match(es) (screened 2026-08-24).
+- 2 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

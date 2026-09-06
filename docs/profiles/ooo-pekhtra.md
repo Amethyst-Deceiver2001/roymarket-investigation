@@ -25,7 +25,7 @@
 
 **Sanctioned** [s0746]
 
-- 1 OpenSanctions match(es) (screened 2026-08-24).
+- 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
 

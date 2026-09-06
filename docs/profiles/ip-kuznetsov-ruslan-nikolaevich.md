@@ -2,12 +2,14 @@
 
 `manufacturer` `WB: not_checked` 
 
-ИНН 637592279701
+ИНН 637592279701 · ОГРН 320631300042842
 
 ## At a glance
 
 - **Legal form:** IP (sole proprietor)
 - **Wildberries overlap:** not_checked
+
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 
 ## Principals & persons of interest
 

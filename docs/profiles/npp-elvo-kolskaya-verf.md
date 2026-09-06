@@ -25,8 +25,8 @@
 
 - **IoT-устройства и контроллеры мощности** — Power controllers/control panels, electrical-parameter monitoring instruments, oil & gas measurement systems, industrial automation hardware/software, battery charging/balancing devices, LED lighting drivers. "Transport" project line covers electronics for land/air/water vehicles.
 
-- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-08-24).
-- 4 OCCRP Aleph match(es) (screened 2026-08-26).
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
+- 4 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Web & social presence
 
