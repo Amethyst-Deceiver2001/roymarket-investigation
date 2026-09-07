@@ -62,7 +62,7 @@
 ### Саидов Аскер Казбекович
 
 ![Саидов Аскер Казбекович](../images/saidov-asker-kazbekovich_portrait_tadviser.jpg)
-- **DOB:** 1982-10-22
+- **DOB:** 22.10.1982
 - **Birthplace:** Хасавюрт, Дагестан / Khasavyurt, Dagestan
 - **Address:** г. Москва, Петровско-Разумовский проезд, д. 16, кв. 125; г. Москва, ул. Минская, д. 1Г, корп. 2, кв. 217
 - **ИНН:** 054403029570
@@ -72,7 +72,7 @@
 ### Saidov Adil Abukovich — Саидов Адиль Абукович
 
 ![Saidov Adil Abukovich](../images/saidov-adil-abukovich_portrait_soyuzmash.jpg)
-- **DOB:** 1973-04-18
+- **DOB:** 18.04.1973
 - **Address:** г. Москва, Борисовские пруды, д. 25, корп. 2, кв. 172; Московская обл., Красногорск, ул. Верещагина, д. 13
 - **ИНН:** 772428159554
 - Член совета директоров (board member) — which Azimut entity not fully confirmed

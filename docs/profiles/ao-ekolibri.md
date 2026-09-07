@@ -89,7 +89,7 @@
 ### Рогозин Алексей Дмитриевич
 
 ![Рогозин Алексей Дмитриевич](../images/rogozin-aleksey-dmitrievich_portrait_rupep.jpg)
-- **DOB:** 1983-09-21
+- **DOB:** 21.09.1983
 - **ИНН:** 770301599800
 - Председатель консультативного совета / Chairman of the Advisory Council
 - `sanctions lead`

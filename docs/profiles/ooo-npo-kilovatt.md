@@ -56,7 +56,7 @@
 
 ### Shestopalov Sergei Anatolyevich — Шестопалов Сергей Анатольевич
 
-- **DOB:** 1974-04-01
+- **DOB:** 01.04.1974
 - **ИНН:** 480601511636
 - founder (100%, at incorporation) / General Director (2024-02-28–present)
 - `sanctions lead`

@@ -50,7 +50,7 @@
 ### Дмитрий Песков
 
 ![Дмитрий Песков](../images/peskov-dmitriy-nikolaevich_portrait_rupep.jpg)
-- **DOB:** 1975-12-26
+- **DOB:** 26.12.1975
 - **Birthplace:** Воронеж (Voronezh)
 - **ИНН:** 772919018611
 - Presidential special representative for digital and technological development; CEO, АНО «Платформа НТИ»

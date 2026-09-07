@@ -43,7 +43,12 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Дмитрий Владимирович Рубинштейн
+
+- **DOB:** 13.04.1975
+- **ИНН:** 771537069549
+- Генеральный директор, sole-shareholder subsidiary of ЦБСТ (100% owned) (2025-11-27–present)
+- `sanctions lead`
 
 ## Corporate links
 

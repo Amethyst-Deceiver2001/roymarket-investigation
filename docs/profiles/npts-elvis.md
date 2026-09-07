@@ -31,6 +31,7 @@
 | Value | As of | Note |
 |---|---|---|
 | 124460, Москва, вн.тер.г. муниципальный округ Силино, г. Зеленоград, ул. Конструктора Лукина, д. 14, стр. 14, этаж 6, ком. 6.23 | 2024-09-30 | factAddress per contract XML (regNumber 1770559633924000207) — fills a previously-empty address field for this entity; matches its Зеленоград postAddress on the same contract. [s3701] |
+| 124498, г. Москва, г. Зеленоград, проезд 4922-й, д. 4, строение 2 | 2026 | Second Zelenograd facility, distinct from ул. Конструктора Лукина 14 already on file. [s6928] |
 
 ## Products
 
@@ -439,6 +440,7 @@
 | s6438 | Mchs | Mchs (MCHS_7735582816_20260906_fire-license-search-npts-elvis.html) | 2026-09-06 | — |
 | s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
 | s6829 | EGRUL extract | EGRUL extract (EGRUL_7735582816_20260907_npts-elvis.pdf) | 2026-09-07 | 2026-09-07 |
+| s6928 | Proverki | Proverki (PROVERKI_7735582816_20260907_npts-elvis-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -56,7 +56,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Чичков Александр Юрьевич
+
+- **ИНН:** 421715843237
+- Директор (2026-01-26–present)
 
 ## Open questions
 

@@ -96,6 +96,18 @@ def load_json(name):
     return json.loads((REG / name).read_text(encoding="utf-8"))
 
 
+def ru_date(iso_date):
+    """YYYY-MM-DD -> DD.MM.YYYY (Russian convention), per STYLE_GUIDE.md §2.4.
+    Passes through unchanged if it doesn't match the expected ISO shape."""
+    if not iso_date:
+        return iso_date
+    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", iso_date)
+    if not m:
+        return iso_date
+    year, month, day = m.groups()
+    return f"{day}.{month}.{year}"
+
+
 def source_type_label(path: str) -> str:
     stem = Path(path).name
     if stem.startswith("ul-") or stem.startswith("ip-"):
@@ -376,7 +388,7 @@ class ProfileBuilder:
                     display = p.get("name_latin") or p.get("fio_ru")
                     principals.append({
                         "slug": p["slug"], "display_name": display, "fio_ru": p.get("fio_ru"),
-                        "dob": p.get("dob"), "birthplace": p.get("birthplace"),
+                        "dob": ru_date(p.get("dob")), "birthplace": p.get("birthplace"),
                         "address": p.get("address"), "inn_personal": p.get("inn_personal"),
                         "photo_url": photo_url, "photo_md_path": photo_md,
                         "roles": roles_text, "sanctions_chip": sanctions_chip,

@@ -225,6 +225,12 @@ never left in bare Cyrillic in EN prose.
 - On first mention of an entity in the dossier or its profile, give ИНН and ОГРН
   together. In the narrative recap, give neither unless the number is itself the
   point — the recap links to the profile.
+- Dates of birth (and other person-identifying dates — passport issue date,
+  registration date when quoted in prose) are rendered in Russian convention,
+  `DD.MM.YYYY` (e.g. `13.04.1975`), in any published or hand-maintained page —
+  profiles, the dossier, `notes/*.md` tables. `data/registry/*.json` itself keeps
+  ISO `YYYY-MM-DD` for sorting/computation; the DD.MM.YYYY rule is a display-layer
+  conversion applied at render/write time, not a change to the stored value.
 
 ---
 

@@ -8,7 +8,7 @@
 
 - **Legal form:** OOO (limited liability company)
 - **Registered:** 27.02.2023
-- **Address:** г. Москва
+- **Address:** 111675, г. Москва, ул. Пехорская, д. 1/3, стр. 4
 - **Director:** Соколов Герман Олегович
 - **Charter capital:** ₽121,410,256
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
@@ -36,6 +36,18 @@
 | Value | As of | Note |
 |---|---|---|
 | 121410256 | 2023-06-20 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6718] |
+
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 111675, г. Москва, ул. Пехорская, д. 1/3, стр. 4 | 2026-09-03 | From GISP «Атлас промышленности» full dump (40,281 companies), captured 2026-09-03. This address sits inside the Руднево (Rudnevo) industrial zone/technopark in eastern Moscow (Косино-Ухтомский район) -- the same UAV-industry cluster Рубинштейн Дмитрий Владимирович (see dmitriy-vladimirovich-rubinshteyn) ran as "Федеральный центр беспилотных систем" ("unites 12 manufacturers of drones", per investigator.org.ua #270974) March-October 2023, immediately before becoming ЦБСТ's General Director in July 2024. Worth checking whether Рустехдрон was one of those 12 Rudnevo-cluster manufacturers -- not yet confirmed. [s5346] |
+
+### Facility type
+
+| Value | As of | Note |
+|---|---|---|
+| purpose_built_technopark_sez | 2026-09-03 | Руднево (Rudnevo) industrial zone/technopark, eastern Moscow (Пехорская 1/3 стр. 4) -- see address_history/notes for the Рубинштейн Д.В. connection. [s5346] |
 
 ## Products
 
@@ -114,7 +126,7 @@
 
 ### Aleksey Grigoryevich Ordzhonikidze — Орджоникидзе Алексей Григорьевич
 
-- **DOB:** 1977-08-08
+- **DOB:** 08.08.1977
 - **Birthplace:** Москва (Moscow)
 - **ИНН:** 770605353044
 - 21% owner (per iStories 2024-01-19; not independently EGRUL-confirmed for the current filing) (2023-02–present)
@@ -143,6 +155,7 @@
 | s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
 | s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | s6718 | EGRUL extract | EGRUL extract (EGRUL_5003155499_20260907_ooo-npo-rustekhdron.pdf) | 2026-09-07 | 2026-09-07 |
 

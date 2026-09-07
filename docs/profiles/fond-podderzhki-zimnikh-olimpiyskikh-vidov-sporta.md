@@ -32,7 +32,9 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Сергей Руфинович Бровченко
+
+- General Director, Фонд поддержки зимних олимпийских видов спорта, since 11.11.2014
 
 ## Sources cited in this profile
 

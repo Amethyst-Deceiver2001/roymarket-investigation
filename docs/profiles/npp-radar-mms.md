@@ -28,6 +28,14 @@
 |---|---|---|
 | 13996 | 2002-07-24 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6845] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 197375, Санкт-Петербург, вн.тер.г. муниципальный округ Юнтолово, ул. Новосельковская, д. 46, литера А | 2026 | Second corpus at the main Новосельковская production complex, distinct from the д.37 address already on file. One proverki.gov.ru record explicitly names this "Строительство производственно-складского корпуса" (construction of a new production/warehouse building) -- an active expansion, not a static footprint. [s6930] |
+| Ленинградская область, Кингисеппский муниципальный район, Котельское сельское поселение, дер. Хаболово (КН 47:20:0442001:212, КН 47:20:0442001:209) | 2026 | TWO separate proverki.gov.ru records cite cadastral numbers at this location, far from the entity's Санкт-Петербург HQ. Nature of the facility/land use not identified -- possible test range, antenna field, or other undisclosed site. Flagged as an open question, not a confirmed facility type. [s6930] |
+| Курортный район Санкт-Петербурга (Сестрорецк/Белоостров/Песочный, incl. Сестрорецкое болото nature reserve) | 2026 | One proverki.gov.ru record covers this entire area as an inspected zone; specific activity/facility not identified from the record alone. [s6930] |
+
 ## Products
 
 - **БВС ВТ-30Е** — Multi-purpose single-rotor helicopter-type UAS with tail rotor. Manufacturer field on this listing: АО "НПП "Радар ммс" -- confirms this registry's “НПП” name over the separate rk.2035.university showcase blurb's “Концерн” wording (see open_questions). [s1169]
@@ -250,6 +258,7 @@
 
 - Featured in rk.2035.university's curated БАС-industry showcase as "АО «Концерн «Радар ММС»»" -- the catalog blurb uses "Концерн" where this registry has "НПП" (both plausibly refer to the same well-known St. Petersburg avionics/radar group; not ИНН-confirmed via this source, which carries no identifier field). [s1168]
 - This entity's own rk.2035.university product listings (s1169, manufacturer field literally АО "НПП "Радар ммс") confirm the registry's own «НПП «Радар ММС»»» name -- resolving the earlier open question about the showcase catalog's separate «Концерн» wording (s1168) in favour of «НПП». [s1169]
+- Identify what facility/land use is at Ленинградская область, Кингисеппский район, дер. Хаболово (КН 47:20:0442001:212, :209) -- two proverki.gov.ru inspection records cite these cadastral numbers for this defense radar manufacturer, far from its Санкт-Петербург HQ. Test range? Antenna field? Undisclosed production site? Not yet identified. [s6930]
 
 ## Sources cited in this profile
 
@@ -343,6 +352,7 @@
 | s6429 | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-frequency-assignment-registry-search.json) | 2026-09-06 | — |
 | s6450 | Rkn | Rkn (RKN_7814027653_20260907_frequency-registry-npp-radar-mms.html) | 2026-09-07 | — |
 | s6845 | EGRUL extract | EGRUL extract (EGRUL_7814027653_20260907_npp-radar-mms.pdf) | 2026-09-07 | 2026-09-07 |
+| s6930 | Proverki | Proverki (PROVERKI_7814027653_20260907_npp-radar-mms-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

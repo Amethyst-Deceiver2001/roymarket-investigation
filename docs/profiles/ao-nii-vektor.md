@@ -40,6 +40,8 @@
 | Value | As of | Note |
 |---|---|---|
 | 197022, г. Санкт-Петербург, вн.тер.г. муниципальный округ Аптекарский остров, ул. Академика Павлова, д. 14А, литера А, офис 26-Н, помещ. 10 | 2024-02-14 | ГРН 2247800332030 от 14.02.2024. [s0495] |
+| Санкт-Петербург, Приморский район, ул. Маршала Новикова, д. 40, литера А | 2026 | One proverki.gov.ru record explicitly: "Строительство производственно-складского корпуса: акционерное общество «Научно-исследовательский институт «Вектор»" -- a second site under active construction, distinct from the registered Академика Павлова address. [s6922] |
+| Санкт-Петербург, Кантемировская ул., д. 10 | 2026 | One proverki.gov.ru record explicitly labels this the "фактического осуществления деятельности" (actual place of operations) address, as distinct from the "юридического лица" (registered legal) address at Академика Павлова -- i.e. the source itself distinguishes registered vs. operating address here. [s6922] |
 
 ## Products
 
@@ -377,6 +379,7 @@
 | s6415 | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-communications-license-search-ao-nii-vektor.json) | 2026-09-06 | — |
 | s6442 | Rkn | Rkn (RKN_7813491943_20260906_comms-license-search-ao-nii-vektor.html) | 2026-09-06 | — |
 | s6843 | EGRUL extract | EGRUL extract (EGRUL_7813491943_20260907_ao-nii-vektor.pdf) | 2026-09-07 | 2026-09-07 |
+| s6922 | Proverki | Proverki (PROVERKI_7813491943_20260907_ao-nii-vektor-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

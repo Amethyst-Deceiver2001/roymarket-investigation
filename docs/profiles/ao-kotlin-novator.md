@@ -26,6 +26,13 @@
 |---|---|---|
 | 7138035 | 2004-05-13 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6751] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 192019, Санкт-Петербург, ул. Глиняная, д. 5/д. 11 (multiple корп./литеры) | 2026 | Entity has no address field on file at all -- this and the Обводного канала entry are proverki's two facility clusters. [s6917] |
+| 192019, Санкт-Петербург, наб. Обводного канала, д. 14 | 2026 | Second of proverki's two facility clusters for this entity. [s6917] |
+
 ## State-program participation
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry 'Радиоэлектронная промышленность' with primary ОКВЭД 26.51.2 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
@@ -80,6 +87,7 @@
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 | s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
 | s6751 | EGRUL extract | EGRUL extract (EGRUL_7811075899_20260907_ao-kotlin-novator.pdf) | 2026-09-07 | 2026-09-07 |
+| s6917 | Proverki | Proverki (PROVERKI_7811075899_20260907_ao-kotlin-novator-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

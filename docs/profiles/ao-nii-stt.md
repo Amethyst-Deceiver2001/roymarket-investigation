@@ -35,6 +35,13 @@
 |---|---|---|
 | 214012, Смоленская область, г. Смоленск, ул. Ново-Ленинградская, д. 10 | 2006-05-16 | ГРН 2066731129661, 16.05.2006; address object renamed/re-subordinated ГРН 2266700138582, 02.04.2026 [s0211] |
 
+### Legal name
+
+| Value | As of | Note |
+|---|---|---|
+| ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО «НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ СОВРЕМЕННЫХ ТЕЛЕКОММУНИКАЦИОННЫХ ТЕХНОЛОГИЙ» (ЗАО «НИИ СТТ») | 2016-10-01 | Legal-form name shown on proverki.gov.ru inspection record #67160600451272 (Октябрь 2016, Департамент государственной службы занятости населения Смоленской области) — last confirmed use of the ЗАО (closed joint-stock company) form in the inspections registry. [s6916] |
+| АКЦИОНЕРНОЕ ОБЩЕСТВО «НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ СОВРЕМЕННЫХ ТЕЛЕКОММУНИКАЦИОННЫХ ТЕХНОЛОГИЙ» (АО «НИИ СТТ») | 2017-12-01 | Legal-form name shown on proverki.gov.ru inspection record #67170700388968 (Декабрь 2017, Управление Росприроднадзора по Смоленской области) — first confirmed use of the plain АО form; the ЗАО→АО re-registration therefore falls between Oct 2016 and Dec 2017, consistent with the nationwide 2014-2017 ЗАО phase-out (ЗАО invalid for new registrations after 01.09.2014, multi-year grace period for existing companies). [s6916] |
+
 ## Products
 
 - **Скарабей-БН (Skarabey-BN)**
@@ -267,6 +274,7 @@
 | s5336 | Kad | Kad (KAD_6730046954_20260903_participant-search-page2.png) | 2026-09-03 | — |
 | s6429 | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-frequency-assignment-registry-search.json) | 2026-09-06 | — |
 | s6447 | Rkn | Rkn (RKN_6730046954_20260907_frequency-registry-ao-nii-stt.html) | 2026-09-07 | — |
+| s6916 | Proverki | Proverki (PROVERKI_6730046954_20260907_ao-nii-stt-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

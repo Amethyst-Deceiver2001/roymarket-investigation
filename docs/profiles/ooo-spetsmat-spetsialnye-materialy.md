@@ -43,7 +43,11 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Руденко Дмитрий Александрович
+
+- **DOB:** 18.06.1972
+- **ИНН:** 780401121651
+- Соучредитель (50%) (2024-11-22–present)
 
 ## Sources cited in this profile
 

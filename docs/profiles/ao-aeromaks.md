@@ -62,7 +62,7 @@
 ### Алёшин Борис Сергеевич
 
 ![Алёшин Борис Сергеевич](../images/aleshin-boris-sergeevich_portrait_rupep.jpg)
-- **DOB:** 1955-03-03
+- **DOB:** 03.03.1955
 - **Birthplace:** Москва (Moscow)
 - **ИНН:** 770802770590
 - Chairman of the Board of Directors (until 2023 departure) (?–2023)

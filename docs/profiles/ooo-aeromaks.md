@@ -41,6 +41,9 @@
 | Value | As of | Note |
 |---|---|---|
 | 123060, Москва, вн.тер.г. муниципальный округ Щукино, пр-д 1-й Волоколамский, д. 10, стр. 1 | 2025-11-07 | ГРН 2257723296400, 07.11.2025 [s0218] |
+| 101000, г. Москва, пер. Милютинский, д. 13, стр. 1 | 2026 | None of proverki's 3 distinct facility addresses match the entity's own registered legal address (1-й Волоколамский пр-д, д.10, стр.1). [s6927] |
+| 115432, г. Москва, пр-т Андропова, д. 18, к. 9 | 2026 | See note on пер. Милютинский entry -- 2nd of 3 non-matching facility addresses. [s6927] |
+| 199178, г. Санкт-Петербург, Малый пр. В.О., д. 54, корп. 5, лит. Р | 2026 | See note on пер. Милютинский entry -- 3rd of 3 non-matching facility addresses, and the only one outside Moscow. [s6927] |
 
 ## Products
 
@@ -149,6 +152,7 @@
 | s5658 | Zakupki | Zakupki (ZAKUPKI_contract_2781501552320000032_20260905.html) | 2026-09-05 | — |
 | s6416 | bulk open-data extract | bulk open-data extract (DATASET_20260901_favt-aviation-works-operators-registry.txt) | 2026-09-01 | — |
 | s6741 | EGRUL extract | EGRUL extract (EGRUL_7725347482_20260907_ooo-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
+| s6927 | Proverki | Proverki (PROVERKI_7725347482_20260907_ooo-aeromaks-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

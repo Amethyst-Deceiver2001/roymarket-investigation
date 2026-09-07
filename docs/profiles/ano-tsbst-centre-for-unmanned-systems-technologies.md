@@ -62,7 +62,7 @@
 ### Андрей Анатольевич Безруков
 
 ![Андрей Анатольевич Безруков](../images/andrey-bezrukov_portrait_vedomosti.jpg)
-- **DOB:** 1986-07-29
+- **DOB:** 29.07.1986
 - **Address:** г. Москва, пер. Красина, д. 16, стр. 2, кв. 103; г. Санкт-Петербург, ул. Лёни Голикова, д. 29/8, кв. 162
 - **ИНН:** 519031542137
 - Chairman of the Board (правление), ЦБСТ
@@ -76,8 +76,9 @@
 
 ### Дмитрий Владимирович Рубинштейн
 
-- **DOB:** 1975-04-13
-- General Director, АНО «ЦБСТ», until late 2025
+- **DOB:** 13.04.1975
+- **ИНН:** 771537069549
+- General Director, АНО «ЦБСТ», appointed July 2024, until late 2025 (2024-07–present)
 - `sanctions lead`
 
 ## Corporate links

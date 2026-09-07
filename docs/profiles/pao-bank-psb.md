@@ -59,7 +59,7 @@
 ### Пётр Фрадков
 
 ![Пётр Фрадков](../images/fradkov-petr-mikhaylovich_portrait_rupep.jpg)
-- **DOB:** 1978-02-07
+- **DOB:** 07.02.1978
 - **Birthplace:** Москва (Moscow)
 - Chairman, ПАО «Банк ПСБ»
 - `sanctions lead`

@@ -34,7 +34,9 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Устратов Дмитрий Владимирович
+
+- General Director, Фонд поддержки национальных морских программ, since 30.04.2021
 
 ## Sources cited in this profile
 

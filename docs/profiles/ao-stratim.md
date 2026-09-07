@@ -12,6 +12,7 @@
 - **Director:** Костюнин Павел Андреевич
 - **Charter capital:** ₽15,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
+- **ЦБСТ tie:** Named ЦБСТ resident receiving a Минпромторг РФ honorary award, 14.08.2025.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
@@ -28,6 +29,12 @@
 |---|---|---|
 | 15000 | — | from brief:manufacturers-table:line-989, unverified |
 | 15000 | 2023-07-03 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6738] |
+
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 111524, г. Москва, ул. Электродная, д. 2, стр. 34, помещ. 19/3 | 2026-06 | Second physical facility, distinct from the registered Новогиреево/Перовская-65 address -- surfaced by a Гострудинспекция "Объявление предостережения" (warning notice) dated June 2026 naming this as the inspected object address. Not yet corroborated by an independent source (EGRUL, satellite imagery). [s6925] |
 
 ## Products
 
@@ -100,6 +107,7 @@
 | s0779 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7720901379_20260824_ao-stratim.json) | 2026-08-24 | — |
 | s0963 | GUR war-sanctions record | GUR war-sanctions record (GUR_7720901379_20260824_ao-stratim.html) | 2026-08-24 | — |
 | s6738 | EGRUL extract | EGRUL extract (EGRUL_7720901379_20260907_ao-stratim.pdf) | 2026-09-07 | 2026-09-07 |
+| s6925 | Proverki | Proverki (PROVERKI_7720901379_20260907_ao-stratim-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -35,7 +35,17 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Владимирский Михаил Юрьевич
+
+- **DOB:** 24.01.1974
+- **ИНН:** 780507237800
+- Соучредитель (50%) (2026-01-19–present)
+
+### Елисеев Дмитрий Николаевич
+
+- **DOB:** 06.07.1988
+- **ИНН:** 711506978521
+- Генеральный директор; соучредитель (50%) (2026-01-19–present)
 
 ## Sources cited in this profile
 
