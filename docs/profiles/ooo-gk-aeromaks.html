@@ -36,6 +36,7 @@
     <div class="scroll"><table>
       <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
       <tbody>
+        <tr><td>Богатиков Сергей Анатольевич (личный ИНН 770304117100)</td><td class="num">2025-12-14</td><td>Recovered via Aleph/OCCRP&#39;s cached EGRUL mirror (github.com/alephcommons/ru-egrul, itsoft.ru snapshot dated 2025-12-14) -- a directorshipOrganization edge naming this director, predating the 19.08.2026/07.09.2026 EGRUL Federal Law 129-FZ redaction of this entity&#39;s director field. as_of is the mirror&#39;s own snapshot date, not a confirmed EGRUL record date -- treat as &#34;director as of no later than 2025-12-14&#34;, not a precise appointment date. <span class="id">[s6885]</span></td></tr>
         <tr><td>None</td><td class="num">—</td><td>This extract&#39;s director page rendered only the certifying tax-service signature block, not the director data row itself — a PDF-rendering gap (page 38/38, likely a formatting edge case for an older/frequently-amended entity), not an EGRUL redaction. Needs a re-pull or manual page check. <span class="id">[s0476]</span></td></tr>
         <tr><td>— (EGRUL-restricted)</td><td class="num">2026-09-07</td><td>Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. <span class="id">[s6734]</span></td></tr>
       </tbody>
@@ -44,6 +45,7 @@
     <div class="scroll"><table>
       <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
       <tbody>
+        <tr><td>ООО «Кронштадт Беспилотные Системы» (ИНН 7801320277) — 100%</td><td class="num">2025-12-14</td><td>Recovered via Aleph/OCCRP&#39;s cached EGRUL mirror (same snapshot as director recovery, see s6885) -- an ownershipOwner edge naming this entity as sole owner, predating the founder-section redaction (dated 19.08.2026 per s0476). Confirms and gives the exact legal entity/ИНН for the Kronshtadt-group tie already flagged in this record&#39;s open_questions. This entity&#39;s own EGRUL name history (per the same mirror pull, s6886) additionally lists two prior names on this ИНН: «ГРУППА КРОНШТАДТ» and «ИНТЕЛЛЕКТУАЛЬНЫЕ ТЕХНИЧЕСКИЕ РЕШЕНИЯ» -- see name_history. <span class="id">[s6886]</span></td></tr>
         <tr><td>access-restricted (3 separate founder rows, all withheld)</td><td class="num">2026-08-19</td><td>All three founder entries show &#34;Доступ к сведениям ограничен&#34; (Federal Law 129-FZ), each dated 19.08.2026 — a very recent, coordinated redaction (four days before this pull), same pattern as several other network entities. <span class="id">[s0476]</span></td></tr>
         <tr><td>— (EGRUL-restricted)</td><td class="num">2026-09-07</td><td>Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. <span class="id">[s6734]</span></td></tr>
       </tbody>
@@ -60,6 +62,8 @@
       <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
       <tbody>
         <tr><td>ООО «РТИ Аэрокосмические системы»</td><td class="num">2015-09-18</td><td>Registered under this name (ОГРН 1147748024269 — matches this entity&#39;s current ОГРН exactly) when granted aviation-tech license 13587-AT-Р on 18.09.2015. &#34;РТИ&#34; is a known AFK Sistema defense-electronics holding brand — this predecessor name suggests an RTI ownership/founding tie not yet otherwise documented on this record; flagged as an open question, not yet independently confirmed via EGRUL founder history. <span class="id">[s6408]</span></td></tr>
+        <tr><td>ООО «Группа Кронштадт»</td><td class="num">—</td><td>Prior name on ИНН 7710974353 per Aleph&#39;s cached EGRUL mirror (no date attached to the name change itself in this source). <span class="id">[s6886]</span></td></tr>
+        <tr><td>ООО «Интеллектуальные технические решения»</td><td class="num">—</td><td>Earlier prior name on the same ИНН per the same source; chronology relative to «Группа Кронштадт» not stated by this source. <span class="id">[s6886]</span></td></tr>
       </tbody>
     </table></div>
   </section>
@@ -103,7 +107,17 @@
 
   <section id="principals">
     <p class="eyebrow">Principals &amp; persons of interest</p>
-    <p class="empty-note">No named principals linked to this entity yet.</p>
+    <div class="principal-grid">
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4>Bogatikov Sergey Anatolevich</h4>
+<span class="person-fio">Богатиков Сергей Анатольевич</span>          <dl>
+<dt>ИНН</dt><dd>770304117100</dd>          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Генеральный директор (per Aleph EGRUL mirror, snapshot 2025-12-14)</li>          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
 
@@ -128,6 +142,8 @@
         <tr><td class="id">s6577</td><td>Bfo</td><td>Bfo (BFO_7710974353_2024_ооо-гк-аэромакс.pdf)</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td class="id">s6578</td><td>Bfo</td><td>Bfo (BFO_7710974353_2025_ооо-гк-аэромакс.pdf)</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td class="id">s6734</td><td>EGRUL extract</td><td>EGRUL extract (EGRUL_7710974353_20260907_ooo-gk-aeromaks.pdf)</td><td class="num">2026-09-07</td><td class="num">2026-09-07</td></tr>
+        <tr><td class="id">s6885</td><td>OCCRP Aleph screening record</td><td>OCCRP Aleph screening record (ALEPH_DETAIL_770304117100_20260907_bogatikov-director-gk-aeromaks.json)</td><td class="num">2026-09-07</td><td class="num">—</td></tr>
+        <tr><td class="id">s6886</td><td>OCCRP Aleph screening record</td><td>OCCRP Aleph screening record (ALEPH_DETAIL_7710974353_20260907_gk-aeromaks-ownership-expand.json)</td><td class="num">2026-09-07</td><td class="num">—</td></tr>
       </tbody>
     </table></div>
   </section>

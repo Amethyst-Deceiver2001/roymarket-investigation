@@ -11417,6 +11417,31 @@
         }
       ],
       "notes": "23 years old as of the 2024-09-24 iStories publication (s6406). Son of Станислав Алейник, rector of Belgorod State Agrarian University and former Deputy Minister of Agriculture of Russia — identified by matching name, surname and date of birth to a family photo, then confirmed via Amazon Rekognition facial comparison against the channel's «Внук» persona (88.6% confidence, per iStories' own reporting methodology). His current unit/place of service is not stated in the source — flagged as unknown, not guessed. Originally surfaced publicly via the Ukrainian leak-aggregator site Evocation (July 2024), which published personal data on several «Архангел спецназа» authors — iStories independently verified this specific identification against open-source data rather than simply repeating the leak site's claim. Жулидов's statement to iStories claims Алейник also stopped administering the channel in late 2022 under military orders — his colleague's denial on his behalf, not independently confirmed. PII scope: co-administrator of a channel running a joint drone-retraining project with ooo-npo-kilovatt's Гагаринг lab (see tg-arkhangel-spetsnaza's tier_basis) — a confirmed operational participant under the 2026-09-04 PII policy amendment, not a bystander. DOB left null (only age-at-publication known, not exact birth date)."
+    },
+    {
+      "_verified": true,
+      "fio_ru": "Богатиков Сергей Анатольевич",
+      "name_latin": "Bogatikov Sergey Anatolevich",
+      "inn_personal": "770304117100",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "notes": "Recovered as director of ООО «ГК Аэромакс» (ИНН 7710974353) via Aleph/OCCRP's cached EGRUL mirror snapshot dated 2025-12-14 (github.com/alephcommons/ru-egrul), which predates the 19.08.2026/07.09.2026 Federal Law 129-FZ redaction of this entity's director field in current EGRUL. Not independently confirmed against a live/current EGRUL pull -- this is the last publicly-mirrored director identity before redaction, not necessarily still the acting director.",
+      "roles": [
+        {
+          "entity_slug": "ooo-gk-aeromaks",
+          "entity_name": "ООО «Группа компаний «Аэромакс»»",
+          "title": "Генеральный директор (per Aleph EGRUL mirror, snapshot 2025-12-14)",
+          "from": null,
+          "to": null,
+          "source_id": "s6885"
+        }
+      ],
+      "social": [],
+      "why": [
+        "2026-09-07: Aleph/OCCRP cached-EGRUL-mirror recovery of GK Aeromaks' pre-restriction director, per corrections_entities.json's ooo-gk-aeromaks director_history entry (s6885)."
+      ],
+      "slug": "bogatikov-sergey-anatolevich"
     }
   ]
 }

@@ -162,7 +162,7 @@
     "fsa_checked_at": "2026-09-05",
     "fsa_decl_hit_count": 0,
     "checko_status": "Действующая компания",
-    "checko_checked_at": "2026-09-05",
+    "checko_checked_at": "2026-09-07",
     "checko_section_counts": {
       "activity": 45,
       "management": 1,
@@ -3502,6 +3502,16 @@
     "rmsp_checked_at": "2026-09-05",
     "fas_br_hit_count": 0,
     "fas_br_checked_at": "2026-09-05",
+    "checko_status": "Действующая компания",
+    "checko_checked_at": "2026-09-07",
+    "checko_section_counts": {
+      "contacts": 1,
+      "activity": 20,
+      "management": 1,
+      "founders": 1,
+      "staff": 1,
+      "timeline": 4
+    },
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": []
@@ -5977,6 +5987,15 @@
     "rmsp_checked_at": "2026-09-05",
     "fas_br_hit_count": 0,
     "fas_br_checked_at": "2026-09-05",
+    "checko_status": "Действующая компания",
+    "checko_checked_at": "2026-09-07",
+    "checko_section_counts": {
+      "contacts": 2,
+      "activity": 8,
+      "management": 1,
+      "founders": 1,
+      "timeline": 11
+    },
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": []
@@ -13780,6 +13799,19 @@
     "rmsp_checked_at": "2026-09-05",
     "fas_br_hit_count": 0,
     "fas_br_checked_at": "2026-09-05",
+    "checko_status": "Действующая компания",
+    "checko_checked_at": "2026-09-07",
+    "checko_section_counts": {
+      "activity": 21,
+      "assistance": 1,
+      "management": 1,
+      "founders": 2,
+      "licenses": 1,
+      "trademarks": 1,
+      "inspections": 5,
+      "legal-cases": 3,
+      "timeline": 17
+    },
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": []
@@ -17114,6 +17146,20 @@
     "rmsp_checked_at": "2026-09-05",
     "fas_br_hit_count": 0,
     "fas_br_checked_at": "2026-09-05",
+    "checko_status": "Действующая компания",
+    "checko_checked_at": "2026-09-07",
+    "checko_section_counts": {
+      "contacts": 1,
+      "activity": 9,
+      "assistance": 1,
+      "management": 1,
+      "founders": 3,
+      "trademarks": 2,
+      "fedresurs": 4,
+      "leasing": 2,
+      "legal-cases": 1,
+      "timeline": 11
+    },
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": []
@@ -23383,6 +23429,23 @@
     "rmsp_checked_at": "2026-09-05",
     "fas_br_hit_count": 0,
     "fas_br_checked_at": "2026-09-05",
+    "checko_status": "Действующая компания",
+    "checko_checked_at": "2026-09-07",
+    "checko_section_counts": {
+      "contacts": 11,
+      "activity": 52,
+      "management": 1,
+      "connections": 21,
+      "licenses": 8,
+      "trademarks": 18,
+      "fedresurs": 75,
+      "leasing": 3,
+      "pledges": 50,
+      "contracts": 1846,
+      "inspections": 21,
+      "legal-cases": 236,
+      "timeline": 58
+    },
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": []
@@ -24398,6 +24461,12 @@
     "director": null,
     "director_history": [
       {
+        "value": "Богатиков Сергей Анатольевич (личный ИНН 770304117100)",
+        "as_of": "2025-12-14",
+        "source_id": "s6885",
+        "note": "Recovered via Aleph/OCCRP's cached EGRUL mirror (github.com/alephcommons/ru-egrul, itsoft.ru snapshot dated 2025-12-14) -- a directorshipOrganization edge naming this director, predating the 19.08.2026/07.09.2026 EGRUL Federal Law 129-FZ redaction of this entity's director field. as_of is the mirror's own snapshot date, not a confirmed EGRUL record date -- treat as \"director as of no later than 2025-12-14\", not a precise appointment date."
+      },
+      {
         "as_of": null,
         "note": "This extract's director page rendered only the certifying tax-service signature block, not the director data row itself — a PDF-rendering gap (page 38/38, likely a formatting edge case for an older/frequently-amended entity), not an EGRUL redaction. Needs a re-pull or manual page check.",
         "source_id": "s0476",
@@ -24412,6 +24481,12 @@
     ],
     "founders": [],
     "founders_history": [
+      {
+        "value": "ООО «Кронштадт Беспилотные Системы» (ИНН 7801320277) — 100%",
+        "as_of": "2025-12-14",
+        "source_id": "s6886",
+        "note": "Recovered via Aleph/OCCRP's cached EGRUL mirror (same snapshot as director recovery, see s6885) -- an ownershipOwner edge naming this entity as sole owner, predating the founder-section redaction (dated 19.08.2026 per s0476). Confirms and gives the exact legal entity/ИНН for the Kronshtadt-group tie already flagged in this record's open_questions. This entity's own EGRUL name history (per the same mirror pull, s6886) additionally lists two prior names on this ИНН: «ГРУППА КРОНШТАДТ» and «ИНТЕЛЛЕКТУАЛЬНЫЕ ТЕХНИЧЕСКИЕ РЕШЕНИЯ» -- see name_history."
+      },
       {
         "as_of": "2026-08-19",
         "note": "All three founder entries show \"Доступ к сведениям ограничен\" (Federal Law 129-FZ), each dated 19.08.2026 — a very recent, coordinated redaction (four days before this pull), same pattern as several other network entities.",
@@ -24441,6 +24516,18 @@
         "as_of": "2015-09-18",
         "source_id": "s6408",
         "note": "Registered under this name (ОГРН 1147748024269 — matches this entity's current ОГРН exactly) when granted aviation-tech license 13587-AT-Р on 18.09.2015. \"РТИ\" is a known AFK Sistema defense-electronics holding brand — this predecessor name suggests an RTI ownership/founding tie not yet otherwise documented on this record; flagged as an open question, not yet independently confirmed via EGRUL founder history."
+      },
+      {
+        "value": "ООО «Группа Кронштадт»",
+        "as_of": null,
+        "source_id": "s6886",
+        "note": "Prior name on ИНН 7710974353 per Aleph's cached EGRUL mirror (no date attached to the name change itself in this source)."
+      },
+      {
+        "value": "ООО «Интеллектуальные технические решения»",
+        "as_of": null,
+        "source_id": "s6886",
+        "note": "Earlier prior name on the same ИНН per the same source; chronology relative to «Группа Кронштадт» not stated by this source."
       }
     ],
     "facility_type": null,
@@ -24546,6 +24633,9 @@
     "_raw": {
       "context": " primary OKVED 71.12.44 (aerial survey/geospatial services) plus 26+ secondary codes in electronics/aerospace manufacturing and software; wholly owned (100%) by a holding parent, ООО «ГК «Аэромакс»» (ИНН 7710974353), director Бессонов Сергей Николаевич. A direct EGRUL pull (18.08.2026) confirms this identity, unredacted — the only entity found in this network's egrul.nalog.ru extracts with no access-restriction"
     },
+    "why": [
+      "2026-09-07: Aleph/OCCRP cached-EGRUL-mirror recovery of pre-restriction director+owner (Богатиков С.А. / ООО «Кронштадт Беспилотные Системы») plus a two-entry name_history on this ИНН, closing the entity's own open_question about the Kronshtadt tie."
+    ],
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1147748024269-20260823132014.pdf, 38-page extract — the longest in this batch, consistent with an older/more-amended holding entity). \"Деятельность головных офисов\" (head-office/holding activity) fits a \"Группа компаний\" (group of companies) self-description. All founders redacted as of 19.08.2026, four days before this pull — a coordinated recent redaction worth tracking if a pattern emerges across other entities redacted the same week.",
       "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): MAJOR IDENTITY FINDING -- this ИНН (7710974353) is the former holding company ГК «Кронштадт», maker of the \"Orion\" heavy strike/recon drone, \"Sirius\" and \"Grom\" -- completed a rename to «Аэромакс» in April 2026 after ownership passed to ЗПИФ «Технофонд» (УК «Мой капитал»), ending АФК «Система»'s prior ownership. Director Скорятин Георгий Андреевич matches between this registry's record and press coverage of the Kronshtadt→Aeromax rename (Kommersant). Per that reporting, the reorganized group now comprises АО «Кронштадт», civilian-drone producer ooo-aeromaks (this holding company's subsidiary, ИНН 7725347482, already fully catalogued in this registry -- B-120/B-200/B-700/A-5/A-50 line), and a management company «ИКАР». The subsidiary's own site (aeromax-group.ru) represents the group but is registered to ooo-aeromaks's ИНН, not this holding company's -- no separate site/products added directly to this record. Group reported ₽4.5bn 2025 losses amid the civilian-drone pivot.",
@@ -24687,6 +24777,20 @@
     "rmsp_checked_at": "2026-09-05",
     "fas_br_hit_count": 0,
     "fas_br_checked_at": "2026-09-05",
+    "checko_status": "",
+    "checko_checked_at": "2026-09-07",
+    "checko_section_counts": {
+      "contacts": 8,
+      "activity": 10,
+      "management": 1,
+      "founders": 3,
+      "connections": 7,
+      "trademarks": 1,
+      "fedresurs": 14,
+      "legal-cases": 5,
+      "staff": 37,
+      "timeline": 71
+    },
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": []
@@ -60715,5 +60819,80 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
     ],
     "_verified_against": null
+  },
+  {
+    "slug": "ooo-kronshtadt-bespilotnye-sistemy",
+    "name_ru": "Общество с ограниченной ответственностью «Кронштадт Беспилотные Системы»",
+    "name_latin": null,
+    "legal_form": "ООО",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "7801320277",
+    "ogrn": "1167847402898",
+    "extra_ids": null,
+    "registered": "17.10.2016",
+    "address": "115432, г. Москва, ул. Андропова, д. 18, к. 9",
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": null,
+    "director_history": [],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "Identified 2026-09-07 via Aleph/OCCRP's cached EGRUL mirror (snapshot 2025-12-14) as the 100%-owner of ООО «ГК Аэромакс» (ИНН 7710974353, itself a former «Группа Кронштадт»/«Интеллектуальные технические решения» ИНН) as of that snapshot -- part of the Кронштадт heavy-UAV group (Orion/Sirius/Grom family). Not yet independently pulled from primary EGRUL; scaffold record pending a full EGRUL выписка/БФО pull.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "text": "No primary-source EGRUL/БФО pull yet for this entity -- only known via a secondary Aleph EGRUL-mirror ownership edge naming it as ГК Аэромакс's owner. Pull a full выписка to confirm current standing, director, and any further ownership chain up toward the parent Кронштадт group entities.",
+        "source_id": null
+      }
+    ],
+    "sources": [
+      "s6887"
+    ],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "name_en": "Kronshtadt Unmanned Systems LLC",
+    "_corrected": [
+      "2026-09-07: added as a scaffold record after being identified as ГК Аэромакс's owner via Aleph's cached EGRUL mirror; not yet independently verified against primary EGRUL."
+    ]
   }
 ]

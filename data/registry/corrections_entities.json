@@ -3298,6 +3298,32 @@
           "source_id": null
         }
       ]
+    },
+    {
+      "slug": "ooo-kronshtadt-bespilotnye-sistemy",
+      "name_ru": "Общество с ограниченной ответственностью «Кронштадт Беспилотные Системы»",
+      "name_en": "Kronshtadt Unmanned Systems LLC",
+      "legal_form": "ООО",
+      "inn": "7801320277",
+      "ogrn": "1167847402898",
+      "address": "115432, г. Москва, ул. Андропова, д. 18, к. 9",
+      "registered": "17.10.2016",
+      "director": null,
+      "founders": [],
+      "tier": "manufacturer",
+      "tier_basis": "Identified 2026-09-07 via Aleph/OCCRP's cached EGRUL mirror (snapshot 2025-12-14) as the 100%-owner of ООО «ГК Аэромакс» (ИНН 7710974353, itself a former «Группа Кронштадт»/«Интеллектуальные технические решения» ИНН) as of that snapshot -- part of the Кронштадт heavy-UAV group (Orion/Sirius/Grom family). Not yet independently pulled from primary EGRUL; scaffold record pending a full EGRUL выписка/БФО pull.",
+      "open_questions": [
+        {
+          "text": "No primary-source EGRUL/БФО pull yet for this entity -- only known via a secondary Aleph EGRUL-mirror ownership edge naming it as ГК Аэромакс's owner. Pull a full выписка to confirm current standing, director, and any further ownership chain up toward the parent Кронштадт group entities.",
+          "source_id": null
+        }
+      ],
+      "sources": [
+        "s6887"
+      ],
+      "why": [
+        "2026-09-07: added as a scaffold record after being identified as ГК Аэромакс's owner via Aleph's cached EGRUL mirror; not yet independently verified against primary EGRUL."
+      ]
     }
   ],
   "entities": {
@@ -17817,6 +17843,12 @@
         "director": null,
         "director_history": [
           {
+            "value": "Богатиков Сергей Анатольевич (личный ИНН 770304117100)",
+            "as_of": "2025-12-14",
+            "source_id": "s6885",
+            "note": "Recovered via Aleph/OCCRP's cached EGRUL mirror (github.com/alephcommons/ru-egrul, itsoft.ru snapshot dated 2025-12-14) -- a directorshipOrganization edge naming this director, predating the 19.08.2026/07.09.2026 EGRUL Federal Law 129-FZ redaction of this entity's director field. as_of is the mirror's own snapshot date, not a confirmed EGRUL record date -- treat as \"director as of no later than 2025-12-14\", not a precise appointment date."
+          },
+          {
             "as_of": null,
             "note": "This extract's director page rendered only the certifying tax-service signature block, not the director data row itself — a PDF-rendering gap (page 38/38, likely a formatting edge case for an older/frequently-amended entity), not an EGRUL redaction. Needs a re-pull or manual page check.",
             "source_id": "s0476",
@@ -17831,6 +17863,12 @@
         ],
         "founders": [],
         "founders_history": [
+          {
+            "value": "ООО «Кронштадт Беспилотные Системы» (ИНН 7801320277) — 100%",
+            "as_of": "2025-12-14",
+            "source_id": "s6886",
+            "note": "Recovered via Aleph/OCCRP's cached EGRUL mirror (same snapshot as director recovery, see s6885) -- an ownershipOwner edge naming this entity as sole owner, predating the founder-section redaction (dated 19.08.2026 per s0476). Confirms and gives the exact legal entity/ИНН for the Kronshtadt-group tie already flagged in this record's open_questions. This entity's own EGRUL name history (per the same mirror pull, s6886) additionally lists two prior names on this ИНН: «ГРУППА КРОНШТАДТ» and «ИНТЕЛЛЕКТУАЛЬНЫЕ ТЕХНИЧЕСКИЕ РЕШЕНИЯ» -- see name_history."
+          },
           {
             "as_of": "2026-08-19",
             "note": "All three founder entries show \"Доступ к сведениям ограничен\" (Federal Law 129-FZ), each dated 19.08.2026 — a very recent, coordinated redaction (four days before this pull), same pattern as several other network entities.",
@@ -17883,6 +17921,18 @@
             "as_of": "2015-09-18",
             "source_id": "s6408",
             "note": "Registered under this name (ОГРН 1147748024269 — matches this entity's current ОГРН exactly) when granted aviation-tech license 13587-AT-Р on 18.09.2015. \"РТИ\" is a known AFK Sistema defense-electronics holding brand — this predecessor name suggests an RTI ownership/founding tie not yet otherwise documented on this record; flagged as an open question, not yet independently confirmed via EGRUL founder history."
+          },
+          {
+            "value": "ООО «Группа Кронштадт»",
+            "as_of": null,
+            "source_id": "s6886",
+            "note": "Prior name on ИНН 7710974353 per Aleph's cached EGRUL mirror (no date attached to the name change itself in this source)."
+          },
+          {
+            "value": "ООО «Интеллектуальные технические решения»",
+            "as_of": null,
+            "source_id": "s6886",
+            "note": "Earlier prior name on the same ИНН per the same source; chronology relative to «Группа Кронштадт» not stated by this source."
           }
         ],
         "financials": [
@@ -17930,7 +17980,10 @@
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
         ],
-        "charter_capital": 18309491704.16
+        "charter_capital": 18309491704.16,
+        "why": [
+          "2026-09-07: Aleph/OCCRP cached-EGRUL-mirror recovery of pre-restriction director+owner (Богатиков С.А. / ООО «Кронштадт Беспилотные Системы») plus a two-entry name_history on this ИНН, closing the entity's own open_question about the Kronshtadt tie."
+        ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [

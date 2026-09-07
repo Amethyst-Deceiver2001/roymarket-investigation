@@ -42878,5 +42878,41 @@
     "_raw": {},
     "fio_latin": "Evgeny Aleinik",
     "_corrected": null
+  },
+  {
+    "slug": "bogatikov-sergey-anatolevich",
+    "fio_ru": "Богатиков Сергей Анатольевич",
+    "name_latin": "Bogatikov Sergey Anatolevich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "770304117100",
+    "roles": [
+      {
+        "entity_slug": "ooo-gk-aeromaks",
+        "entity_name": "ООО «Группа компаний «Аэромакс»»",
+        "title": "Генеральный директор (per Aleph EGRUL mirror, snapshot 2025-12-14)",
+        "from": null,
+        "to": null,
+        "source_id": "s6885"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Recovered as director of ООО «ГК Аэромакс» (ИНН 7710974353) via Aleph/OCCRP's cached EGRUL mirror snapshot dated 2025-12-14 (github.com/alephcommons/ru-egrul), which predates the 19.08.2026/07.09.2026 Federal Law 129-FZ redaction of this entity's director field in current EGRUL. Not independently confirmed against a live/current EGRUL pull -- this is the last publicly-mirrored director identity before redaction, not necessarily still the acting director.",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-07: Aleph/OCCRP cached-EGRUL-mirror recovery of GK Aeromaks' pre-restriction director, per corrections_entities.json's ooo-gk-aeromaks director_history entry (s6885)."
+    ]
   }
 ]

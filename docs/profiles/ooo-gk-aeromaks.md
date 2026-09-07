@@ -18,6 +18,7 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Богатиков Сергей Анатольевич (личный ИНН 770304117100) | 2025-12-14 | Recovered via Aleph/OCCRP's cached EGRUL mirror (github.com/alephcommons/ru-egrul, itsoft.ru snapshot dated 2025-12-14) -- a directorshipOrganization edge naming this director, predating the 19.08.2026/07.09.2026 EGRUL Federal Law 129-FZ redaction of this entity's director field. as_of is the mirror's own snapshot date, not a confirmed EGRUL record date -- treat as "director as of no later than 2025-12-14", not a precise appointment date. [s6885] |
 | None | — | This extract's director page rendered only the certifying tax-service signature block, not the director data row itself — a PDF-rendering gap (page 38/38, likely a formatting edge case for an older/frequently-amended entity), not an EGRUL redaction. Needs a re-pull or manual page check. [s0476] |
 | — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6734] |
 
@@ -25,6 +26,7 @@
 
 | Value | As of | Note |
 |---|---|---|
+| ООО «Кронштадт Беспилотные Системы» (ИНН 7801320277) — 100% | 2025-12-14 | Recovered via Aleph/OCCRP's cached EGRUL mirror (same snapshot as director recovery, see s6885) -- an ownershipOwner edge naming this entity as sole owner, predating the founder-section redaction (dated 19.08.2026 per s0476). Confirms and gives the exact legal entity/ИНН for the Kronshtadt-group tie already flagged in this record's open_questions. This entity's own EGRUL name history (per the same mirror pull, s6886) additionally lists two prior names on this ИНН: «ГРУППА КРОНШТАДТ» and «ИНТЕЛЛЕКТУАЛЬНЫЕ ТЕХНИЧЕСКИЕ РЕШЕНИЯ» -- see name_history. [s6886] |
 | access-restricted (3 separate founder rows, all withheld) | 2026-08-19 | All three founder entries show "Доступ к сведениям ограничен" (Federal Law 129-FZ), each dated 19.08.2026 — a very recent, coordinated redaction (four days before this pull), same pattern as several other network entities. [s0476] |
 | — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. [s6734] |
 
@@ -39,6 +41,8 @@
 | Value | As of | Note |
 |---|---|---|
 | ООО «РТИ Аэрокосмические системы» | 2015-09-18 | Registered under this name (ОГРН 1147748024269 — matches this entity's current ОГРН exactly) when granted aviation-tech license 13587-AT-Р on 18.09.2015. "РТИ" is a known AFK Sistema defense-electronics holding brand — this predecessor name suggests an RTI ownership/founding tie not yet otherwise documented on this record; flagged as an open question, not yet independently confirmed via EGRUL founder history. [s6408] |
+| ООО «Группа Кронштадт» | — | Prior name on ИНН 7710974353 per Aleph's cached EGRUL mirror (no date attached to the name change itself in this source). [s6886] |
+| ООО «Интеллектуальные технические решения» | — | Earlier prior name on the same ИНН per the same source; chronology relative to «Группа Кронштадт» not stated by this source. [s6886] |
 
 ## Financials
 
@@ -64,7 +68,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Bogatikov Sergey Anatolevich — Богатиков Сергей Анатольевич
+
+- **ИНН:** 770304117100
+- Генеральный директор (per Aleph EGRUL mirror, snapshot 2025-12-14)
 
 ## Open questions
 
@@ -85,6 +92,8 @@ _No named principals linked to this entity yet._
 | s6577 | Bfo | Bfo (BFO_7710974353_2024_ооо-гк-аэромакс.pdf) | — | — |
 | s6578 | Bfo | Bfo (BFO_7710974353_2025_ооо-гк-аэромакс.pdf) | — | — |
 | s6734 | EGRUL extract | EGRUL extract (EGRUL_7710974353_20260907_ooo-gk-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
+| s6885 | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_DETAIL_770304117100_20260907_bogatikov-director-gk-aeromaks.json) | 2026-09-07 | — |
+| s6886 | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_DETAIL_7710974353_20260907_gk-aeromaks-ownership-expand.json) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
