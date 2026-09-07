@@ -26,6 +26,7 @@
 
 | Value | As of | Note |
 |---|---|---|
+| 50000 | 2024-09-20 | Изменения №1 к уставу, протокол внеочередного общего собрания акционеров от 09.09.2024 (внесено в ЕГРЮЛ 20.09.2024, ГРН 2247709425247): capital set to ₽50,000 (50,000 ordinary shares × ₽1), plus authorization to place up to 100,000,000 further shares. [s6908] |
 | 76336 | 2026-01-20 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6824] |
 
 ## Products
@@ -52,6 +53,7 @@
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; name_ru: Каталог продукции ГИСП — отрасль БАС; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly. [s5344]
 - as_of: 2026-09-06; name_en: rk.2035.university national БАС (UAV-industry) company registry; name_ru: Реестр компаний БАС — rk.2035.university; role: ID-confirmed match (exact ИНН + ОГРН, not a name collision) in the national rk.2035.university БАС-industry company directory. Sectors declared: Компания БАС. Activity types: Разработка, Производство, Эксплуатация. Personnel count 84, profile created 2026-04-10. [s1165]
+- as_of: 2025-12-09; name_en: Aerospace Innovation Valley Innovation Science-Technology Center (ИНТЦ) -- residency formalized in the company's own charter; name_ru: Инновационный научно-технологический центр «Аэрокосмическая инновационная долина»; role: Изменения №4 к уставу (протокол внеочередного общего собрания акционеров от 09.12.2025) restated the company's core purpose (п.2.1 устава) as scientific-technological activity under Федеральный закон от 29.07.2017 №216-ФЗ «Об инновационных научно-технологических центрах...» and Постановление Правительства РФ от 22.04.2022 №735 «О создании инновационного научно-технологического центра «Аэрокосмическая инновационная долина»» -- a formal charter-level ИНТЦ-residency declaration, not just a catalogue listing. [s6908]
 
 ## Trademarks
 
@@ -113,6 +115,7 @@
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | s6824 | EGRUL extract | EGRUL extract (EGRUL_7714473012_20260907_ao-ekolibri.pdf) | 2026-09-07 | 2026-09-07 |
+| s6908 | Founding-Устав bundle | Founding-Устав bundle (UD_1217700279103_20260907_ekolibri.zip) | 2026-09-07 | 2024-09-09 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

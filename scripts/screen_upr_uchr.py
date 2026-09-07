@@ -41,6 +41,22 @@ same anti-bot gate, not a bug in this script's search-upr-uchr/search-ul
 calls; confirmed via direct curl reproduction, not specific to this
 script's request shape.
 
+**2026-09-07: bumping DELAY_BETWEEN_PEOPLE (2.0 -> 15.0) did NOT avoid
+the wall.** A real run against the (by then 137-person) inn_personal
+roster got 35 people through before `pbSearchCaptcha` started firing
+repeatedly, roughly the same request count as the original 2.0s-delay
+run that stalled around #10-11 -- so this looks like a count/session
+based gate, not a request-rate one. A loop errors-and-continues past a
+captcha hit rather than aborting (see main()), so a full run still
+crawls the whole list and picks up whatever real successes it can before
+the wall reasserts itself; don't expect a longer per-request delay alone
+to fix it. Confirmed effective mitigation instead: **wait hours, not
+minutes, between attempts** (the wall does not appear to reset within a
+session) -- a same-day immediate re-run mostly just re-hits the wall for
+anyone still unchecked, though re-running is still harmless (it skips
+anyone already checked today) if you want to grab the occasional
+straggler that gets through.
+
 Usage:
     python3 scripts/screen_upr_uchr.py                  # everyone with inn_personal
     python3 scripts/screen_upr_uchr.py --slug shatrakova-anastasiya-artemovna
@@ -66,7 +82,12 @@ USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
 
 POLL_DELAY = 2.0
 POLL_MAX_TRIES = 10
-DELAY_BETWEEN_PEOPLE = 2.0
+DELAY_BETWEEN_PEOPLE = 15.0  # bumped 2026-09-07 from 2.0 -- pb.nalog.ru's
+# search-proc.json captcha-gates after ~10 requests in quick succession
+# (see screen_disqualified.py's header for the discovery). Untested whether
+# a longer per-request gap actually avoids the wall or just delays hitting
+# it by the same request count -- worth another data point before assuming
+# it works.
 
 
 CONNECT_TIMEOUT = 10  # short on purpose — a hung/geoblocked connection should

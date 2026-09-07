@@ -67,7 +67,9 @@ USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
 
 POLL_DELAY = 2.0
 POLL_MAX_TRIES = 10
-DELAY_BETWEEN_PEOPLE = 2.0
+DELAY_BETWEEN_PEOPLE = 15.0  # bumped 2026-09-07 from 2.0, same reasoning
+# as screen_upr_uchr.py -- try a longer gap against the shared
+# pb.nalog.ru captcha wall documented above.
 
 
 CONNECT_TIMEOUT = 10  # short on purpose — a hung/geoblocked connection should

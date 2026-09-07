@@ -1,9 +1,10 @@
 # Founding-document (Устав) gap list
 
-Generated 2026-09-07. Reviews every live entity in `entities.json` (excludes
-3 tombstoned duplicates and 14 `tier: adjacent` out-of-scope entities) for
-whether a founding-document primary source has actually been pulled and
-archived, rather than relying on recall.
+Generated 2026-09-07, updated same day after a 6-entity ФНС pull batch.
+Reviews every live entity in `entities.json` (excludes 3 tombstoned
+duplicates and 14 `tier: adjacent` out-of-scope entities) for whether a
+founding-document primary source has actually been pulled and archived,
+rather than relying on recall.
 
 **"Has a founding doc" means one of:**
 - a bespoke `UD_<OGRN>_*.zip` bundle in `data/sources/` (ФНС founding-document
@@ -13,32 +14,62 @@ archived, rather than relying on recall.
   we already know no entity-specific document exists to pull, so it is
   excluded from the gap list below rather than left as an open item.
 
-**18 entities already have one** (16 bespoke bundles cover 18 slugs — some
-OGRNs map to more than one historical filename — plus 2 confirmed generic-
-template adopters) — excluded from the gap list below:
+**Update 2026-09-07 (same day):** the original pass matched a bundle to its
+entity only via `MANIFEST.md`'s auto-extracted ОГРН column, which fails
+silently when an `Opis.pdf`'s ОГРН is OCR'd as spaced-out digits ("1 1 6 7
+..."). Matching now falls back to the ОГРН embedded in the filename itself
+(`UD_<OGRN>_<date>_<slug>.zip`, the standing archiving convention) when the
+manifest column comes back empty — this recovered 2 bundles that were
+already sitting in `data/sources/` since 19.08.2026 but had been miscounted
+as gaps (`ooo-npo-nebo`, `ooo-arkhangel`).
+
+**26 entities now have a founding doc** — excluded from the gap list below:
 
 - АНО «ЦБСТ» | Centre for Unmanned Systems & Technologies (`ano-tsbst-centre-for-unmanned-systems-technologies`) — bespoke UD zip
-- ООО «Заволжское» (`ooo-zavolzhskoe`) — template #20
-- ООО «Гарант Клуб» (`ooo-garant-klub`) — bespoke UD zip
-- ООО «Финконсалтингк» (ФКК) (`ooo-finkonsaltingk-fkk`) — bespoke UD zip
-- ООО «Системный интегратор» (`ooo-sistemnyy-integrator`) — bespoke UD zip
 - АО «Площадь» (`ao-ploshchad`) — bespoke UD zip
-- ООО «БПР ЯРЛ» (`yarl`) — bespoke UD zip
-- ООО «ТИТАН - СЕВЕРО-ЗАПАД» (`ooo-titan-severo-zapad`) — template #20
-- ООО «КИНГПРО» (`ooo-kingpro`) — bespoke UD zip
-- ООО «Центр Динарус» (`ooo-tsentr-dinarus`) — bespoke UD zip
+- АО «Эколибри» (`ao-ekolibri`) — bespoke UD zip
+- АО УК «Азимут» | formerly «Аэронавигационные и информационные системы» (`ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s`) — bespoke UD zip
+- Акционерное общество «Научно-производственное предприятие» (`ao-npp-real`) — bespoke UD zip
 - ООО «4ГНСС» (`ooo-4gnss`) — bespoke UD zip
-- ООО «ПРОММАШ» (`ooo-prommash`) — bespoke UD zip
 - ООО «АСЕЛ ЛАБС» (`ooo-asel-labs`) — bespoke UD zip
+- ООО «Архангел» (`ooo-arkhangel`) — bespoke UD zip
+- ООО «БПР ЯРЛ» (`yarl`) — bespoke UD zip
 - ООО «Гагаринг» (`ooo-gagaring`) — bespoke UD zip
-- ООО «ТИ ЭС ДЖИ ГРУПП» (`ooo-ti-es-dzhi-grupp`) — bespoke UD zip
-- ООО «НПЦ БАСИРТК» (`ooo-npts-basirtk`) — bespoke UD zip
+- ООО «Гарант Клуб» (`ooo-garant-klub`) — bespoke UD zip
 - ООО «Группа компаний «Логос»» (`ooo-gk-logos`) — bespoke UD zip
+- ООО «Заволжское» (`ooo-zavolzhskoe`) — template #20
+- ООО «КИНГПРО» (`ooo-kingpro`) — bespoke UD zip
+- ООО «НПО НЕБО» (`ooo-npo-nebo`) — bespoke UD zip
+- ООО «НПЦ БАСИРТК» (`ooo-npts-basirtk`) — bespoke UD zip
+- ООО «ПРОММАШ» (`ooo-prommash`) — bespoke UD zip
 - ООО «РТД-Защита» (`ooo-rtd-zashchita`) — bespoke UD zip
+- ООО «СКБ Пиранья» (`ooo-skb-piranya`) — bespoke UD zip
+- ООО «Системный интегратор» (`ooo-sistemnyy-integrator`) — bespoke UD zip
+- ООО «ТИ ЭС ДЖИ ГРУПП» (`ooo-ti-es-dzhi-grupp`) — bespoke UD zip
+- ООО «ТИТАН - СЕВЕРО-ЗАПАД» (`ooo-titan-severo-zapad`) — template #20
+- ООО «Финконсалтингк» (ФКК) (`ooo-finkonsaltingk-fkk`) — bespoke UD zip
+- ООО «Центр Динарус» (`ooo-tsentr-dinarus`) — bespoke UD zip
+- ООО НПК «Герон» (`ooo-npk-geron`) — bespoke UD zip
+- Общество с ограниченной ответственностью «Кронштадт Беспилотные Системы» (`ooo-kronshtadt-bespilotnye-sistemy`) — bespoke UD zip
+
+## Requested, still pending at ФНС (4 entities)
+
+Attempted via the ФНС portal 2026-09-07 but not yet obtainable — ФНС
+returned a "документ формируется" (document is being digitized) response
+rather than the bundle itself. Distinct from the plain gap list below: this
+is a **confirmed attempt with a known retry path**, not an un-tried gap.
+Retry these directly rather than re-triaging them.
+
+| Entity | ОГРН | ИНН | Note |
+|---|---|---|---|
+| АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел» (`ano-arkhangel`) | 1242300005640 | 2315233718 | 2026-09-07: requested via ФНС portal — response "документ формируется" (still being digitized by ФНС), not yet available. |
+| АНО ДПО «Образовательный центр Гагаринг» (`ano-dpo-obrazovatelny-tsentr-gagaring`) | 1252300026208 | 2310240630 | 2026-09-07: requested via ФНС portal — response "документ формируется" (still being digitized by ФНС), not yet available. |
+| АО «Технодрон» (`ao-tekhnodron`) | 1247700354175 | 9704241986 | 2026-09-07: requested via ФНС portal — response "документ формируется" (still being digitized by ФНС), not yet available. |
+| АО ПК «Азимут» (`ao-pk-azimut`) | 1057746261605 | 7701583410 | 2026-09-07: requested via ФНС portal — response "документ формируется" (still being digitized by ФНС), not yet available. |
 
 ## Gap list: live entities with an ОГРН, no founding doc on file
 
-**135 entities.** Pull candidates for a manual ФНС founding-document request
+**123 entities.** Pull candidates for a manual ФНС founding-document request
 (egrul.nalog.ru / nalog.gov.ru portal — no scriptable open-API route exists
 for this document type, confirmed 2026-09-07, see `notes/SOURCE_REGISTER.md`).
 Sorted alphabetically by name. `tier` shown for prioritization.
@@ -48,8 +79,6 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | АНО «Платформа НТИ» (`ano-platforma-nti`) | 1197700000376 | 7703469180 | plumbing |
 | АНО «ЦСАСД» (`ano-tsasd-demyansk`) | 1235300001947 | 5300008970 | plumbing |
 | АНО «Центр развития транспортных технологий» (`ano-tsentr-razvitiya-transportnykh-tekhnologiy`) | 1217700636306 | 9724066980 | plumbing |
-| АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел» (`ano-arkhangel`) | 1242300005640 | 2315233718 | — |
-| АНО ДПО «Образовательный центр Гагаринг» (`ano-dpo-obrazovatelny-tsentr-gagaring`) | 1252300026208 | 2310240630 | — |
 | АО «АУРИН» (`ao-aurin`) | 1237700898786 | 9705214590 | plumbing |
 | АО «Борей» | absorbed, no longer exists (`ao-borey-absorbed-no-longer-exists`) | 1247700237663 | 9701280698 | money-layer |
 | АО «Главтехконструкция» (`ao-glavtekhkonstruktsiya`) | 1174632000190 | 4611014597 | money-layer |
@@ -69,15 +98,10 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | АО «Спецтех Первый» (`ao-spetstekh-perviy`) | 1267700128376 | 9703244871 | cbst-core |
 | АО «Стратим» (`ao-stratim`) | 1237700447324 | 7720901379 | manufacturer |
 | АО «Технодинамика» (`ao-tekhnodinamika`) | 1037719005873 | 7719265496 | plumbing |
-| АО «Технодрон» (`ao-tekhnodron`) | 1247700354175 | 9704241986 | manufacturer |
 | АО «УК СМАРТ» (`ao-uk-smart`) | 1237700557050 | 7751264401 | plumbing |
 | АО «Фабрика им. Советской Армии» (`ao-fabrika-im-sovetskoy-armii`) | 1027739157401 | 7709278792 | money-layer |
 | АО «ХК Гумич» (`ao-khk-gumich`) | 1237700537788 | 9726051114 | money-layer |
 | АО «Центр-Телко» (`ao-tsentr-telko`) | 1027739038590 | 7729150663 | plumbing |
-| АО «Эколибри» (`ao-ekolibri`) | 1217700279103 | 7714473012 | manufacturer |
-| АО ПК «Азимут» (`ao-pk-azimut`) | 1057746261605 | 7701583410 | money-layer |
-| АО УК «Азимут» | formerly «Аэронавигационные и информационные системы» (`ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s`) | 1167746513967 | 7714390623 | money-layer |
-| Акционерное общество «Научно-производственное предприятие» (`ao-npp-real`) | 1237700409121 | 9722048270 | manufacturer |
 | Ассоциация благотворительной помощи «Взаимопомощь» (`assotsiatsiya-vzaimopomoshch`) | 1164700050734 | 4707039070 | money-layer |
 | Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи) (`ano-arrs-krasnodar`) | 1242300011469 | 2312325336 | plumbing |
 | Благотворительный фонд «КЦПН» (`bf-ktspn-barnaul`) | 1152225001114 | 2224171246 | plumbing |
@@ -95,7 +119,6 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «АС-КАМ» (`ooo-as-kam`) | 1166196114083 | 6165205064 | — |
 | ООО «Авиационно-космические разработки «Бегак»» (`ooo-akr-begak`) | 1202600009919 | 2632116476 | manufacturer |
 | ООО «Аркодим» (`ooo-arkodim`) | 1101690020959 | 1659101884 | manufacturer |
-| ООО «Архангел» (`ooo-arkhangel`) | 1257700345407 | 9714079108 | manufacturer |
 | ООО «Атлант Аэро» (`ooo-atlant-aero`) | 1236100025633 | 6154165878 | manufacturer |
 | ООО «Аэро-Хит» (`ooo-aero-khit`) | 1232700009398 | 2700012608 | manufacturer |
 | ООО «Аэромакс» (`ooo-aeromaks`) | 1177746007900 | 7725347482 | manufacturer |
@@ -136,7 +159,6 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «Метаскан» (`ooo-metaskan`) | 1201600057097 | 1660349248 | manufacturer |
 | ООО «НОВА» (`ooo-nova`) | 1086330002549 | 6330037352 | money-layer |
 | ООО «НПК «Центр перспективных технологий»» (ЦПТ) (`ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy`) | 1265300000470 | 5300022741 | manufacturer |
-| ООО «НПО НЕБО» (`ooo-npo-nebo`) | 1254800002786 | 4800023371 | manufacturer |
 | ООО «НПО Рустехдрон» (`ooo-npo-rustekhdron`) | 1235000022179 | 5003155499 | manufacturer |
 | ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер») (`ooo-npo-eyler`) | 1257100008560 | 7100069249 | manufacturer |
 | ООО «Научно-производственное объединение «Киловатт»» (`ooo-npo-kilovatt`) | 1244800001820 | 4800013729 | manufacturer |
@@ -153,7 +175,6 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «РТ-Развитие бизнеса» (`ooo-rt-razvitie-biznesa`) | 1147746392200 | 7704861136 | money-layer |
 | ООО «Рокот Тех» (`ooo-rokot-tekh`) | 1247600010954 | 7606140961 | manufacturer |
 | ООО «Русская лаборатория воздушного транспорта» (`ovod`) | 1227100012369 | 7100027464 | manufacturer |
-| ООО «СКБ Пиранья» (`ooo-skb-piranya`) | 1237300010430 | 7300024069 | manufacturer |
 | ООО «СПДББК» (`ooo-spdbbk`) | 1157847359273 | 7838044584 | manufacturer |
 | ООО «СУПЕРХРОНО» (`ooo-superkhrono`) | 1163525102619 | 3525389520 | manufacturer |
 | ООО «Сибирская навигационная компания» (`ooo-sibirskaya-navigatsionnaya-kompaniya`) | 1184205024849 | 4205376019 | manufacturer |
@@ -172,8 +193,6 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «Центр управления городской аэромобильностью» (`ooo-tsugam`) | 1227700378553 | 9731094770 | manufacturer |
 | ООО «ЭйАрТэк» (`ooo-eyartek`) | 1227300004282 | 7300000540 | manufacturer |
 | ООО «Эколибри-Беспилотные технологии» (`ooo-ekolibri-bt`) | 1237700545191 | 9713001941 | manufacturer |
-| ООО НПК «Герон» (`ooo-npk-geron`) | 1187847365750 | 7814748285 | manufacturer |
-| Общество с ограниченной ответственностью «Кронштадт Беспилотные Системы» (`ooo-kronshtadt-bespilotnye-sistemy`) | 1167847402898 | 7801320277 | manufacturer |
 | ПАО «Банк ПСБ» (`pao-bank-psb`) | 1027739019142 | 7744000912 | cbst-core |
 | Фонд «Градислава» | historic & cultural heritage preservation (`fond-gradislava-historic-cultural-heritage-preservation`) | 1117799007050 | 7704278421 | money-layer |
 | Фонд «ДАР» | Фонд региональных некоммерческих проектов (`fond-dar-fond-regionalnykh-nekommercheskikh-proektov`) | 1067799028923 | 7705517400 | money-layer |
@@ -183,9 +202,9 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 
 ## No ОГРН on file at all
 
-**17 entities** — a founding-document request needs an ОГРН (or at minimum a
-confirmed ИНН to look one up first); these are a prerequisite gap, not yet a
-founding-doc gap as such.
+**17 entities** — a founding-document request needs an ОГРН
+(or at minimum a confirmed ИНН to look one up first); these are a prerequisite
+gap, not yet a founding-doc gap as such.
 
 | Entity | ИНН | Tier |
 |---|---|---|
@@ -211,7 +230,7 @@ founding-doc gap as such.
 
 - 3 tombstoned duplicate records (`_merged_into` set) — not live entities.
 - 14 `tier: adjacent` entities — confirmed to lack a ЦБСТ/РОЙ.МАРКЕТ tie, out of
-  scope for further primary-document collection per CLAUDE.md's
+  scope for further primary-document collection per `CLAUDE.md`'s
   adjacent-networks policy.
 
 ## Note on EGRUL access-restricted entities
@@ -223,3 +242,56 @@ document type from the EGRUL disclosure record, and an entity can still have a
 requestable founding-document bundle even when its current EGRUL
 participant/director fields read "Доступ ограничен". Not pre-filtered out here;
 worth attempting regardless, per the standing no-guessing/verify-directly rule.
+
+## 2026-09-07 pull batch: what was found
+
+6 bundles pulled and read in full (OCR'd where scanned, cp866 nested-zip
+filenames fixed per the standing technique) for ООО «Кронштадт Беспилотные
+Системы», ООО НПК «Герон», ООО «СКБ Пиранья», АО «Эколибри», АО УК
+«Азимут» (formerly АО «АИС»), and АО «Научно-производственное предприятие».
+Notable findings, all wired into `entities.json`/`people.json` via
+`corrections_entities.json`/`corrections_people.json`:
+
+- **Kronshtadt БПЛА's own устав self-declares military purpose.** §3.2.4
+  explicitly lists development/production/testing/repair/modernization of
+  dual-use and military-purpose aircraft "including unmanned aerial vehicles
+  and UAV simulators", work in the interests of the Ministry of Defence
+  (Navy, Air Force), FSB Border Service, MVD, FTS and military intelligence,
+  and state-secrets handling — a direct self-declaration in the company's own
+  founding legal document, not an inference from other sources.
+- **New founder identity recovered: Ткач Кирилл Владимирович**, ООО НПК
+  «Герон»'s sole founder — full name, passport number, and registered
+  address recovered from the устав's own founder-disclosure clause (§6.2),
+  added to `people.json` as `tkach-kirill-vladimirovich`. Also recovered:
+  the company was formed via реорганизация (share exchange) from a prior
+  ЗАО НПК «ГЕРОН», not a fresh incorporation.
+- **АО УК «Азимут»'s charter-capital history corrected and completed.** A
+  prior EGRUL-выписка-sourced entry had mis-dated the current ₽12,806,700,000
+  capital to 2017-12-15 — the устав bundle shows the real 2017 capital was
+  ₽100,000, four orders of magnitude smaller. Corrected timeline: ₽100,000
+  (2017) → ₽12,806,600,000 (2021) → ₽12,806,700,000 (2025) — confirming a
+  ~128,000× capital jump in 2021 while still named АО «АИС». Every edition
+  2017-2025 explicitly declares "обслуживание, ремонт, утилизация и
+  реализация вооружения и военной техники" (arms/military-equipment
+  service/repair/disposal/sale) plus state-secrets handling as core purpose.
+- **АО «Эколибри» became a formal resident of ИНТЦ «Аэрокосмическая
+  инновационная долина»** (Aerospace Innovation Valley innovation
+  science-technology center, under 216-ФЗ), per Изменения №4 к уставу
+  (09.12.2025) — new `state_programs[]` entry, beyond the existing
+  gisp.gov.ru/rk.2035.university catalogue listings. Also recovered an
+  intermediate ₽50,000 charter-capital step (Sept 2024) between the prior
+  history's gap and the current ₽76,336.
+- ООО «СКБ Пиранья»: original устав was approved by a founders' MEETING
+  (plural), not a sole founder — flagged as an open question against the
+  single confirmed founder currently on file.
+- АО «Научно-производственное предприятие»: corroborates existing capital/
+  founder data, no new identity detail (устав doesn't name the founder,
+  standard post-2009 pattern) and no aviation/military language found in
+  its purpose clause.
+
+Verification: `check_registry.py` 0 errors, 39 warnings (baseline
+unchanged); full field-size diff against pre-change git HEAD showed 0
+shrinkages after fixing a self-inflicted overwrite bug (an in-place
+`state_programs[]` assignment on АО «Эколибри» initially clobbered its 2
+pre-existing entries — caught by the diff, fixed by merging instead of
+replacing); 182/182 profiles tag-balance clean.

@@ -4565,14 +4565,33 @@
     "charter_capital": 12806700000,
     "charter_capital_history": [
       {
+        "value": 100000,
+        "as_of": "2017-06-15",
+        "source_id": "s6905",
+        "note": "АО «АИС» (original name), редакция №3 устава, решение общего собрания акционеров от 15.06.2017 (this edition also carried by the ГРН 7177749149516 от 15.12.2017 EGRUL entry -- same ₽100,000 figure, filed a few months later)."
+      },
+      {
+        "value": 12806600000,
+        "as_of": "2021-07-12",
+        "source_id": "s6905",
+        "note": "Устав в новой редакции, решение общего собрания акционеров от 23.06.2021, внесено в ЕГРЮЛ 12.07.2021 (ГРН 2217706050868) -- a ~128,000x capital increase from ₽100,000 to ₽12.8 BILLION within about 4 years, while the company was still named АО «АИС»."
+      },
+      {
         "value": 12806700000,
-        "as_of": "2017-12-15",
-        "source_id": "s6735",
-        "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
+        "as_of": "2025-01-31",
+        "source_id": "s6905",
+        "note": "Редакция №5 (now titled АО «Управляющая компания «Азимут»»), решение общего собрания акционеров от 31.01.2025 -- a further modest ₽100,000 increase on top of the 2021 figure. CORRECTS a mis-dated entry from the earlier EGRUL-выписка sweep, which attributed this ₽12,806,700,000 value to 2017-12-15 -- that date is wrong; per this устав bundle the company's capital in Dec 2017 was ₽100,000, four orders of magnitude smaller. The выписка-sourced entry is removed and replaced by these three dated founding-document entries."
       }
     ],
     "address_history": [],
-    "name_history": [],
+    "name_history": [
+      {
+        "value": "АО «Аэронавигационные и информационные системы» (АО «АИС»)",
+        "as_of": "2021-07-12",
+        "source_id": "s6905",
+        "note": "Confirmed still using this name as of the 12.07.2021 устав edition (редакция dated by ГРН 2217706050868) -- renamed to «Управляющая компания «Азимут»» by the time of редакция №5 (31.01.2025); the exact rename date falls in the gap between these two editions and is not captured in this document set."
+      }
+    ],
     "facility_type": null,
     "facility_type_history": [],
     "parents": [],
@@ -4674,7 +4693,8 @@
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 5 fiscal year(s) with revenue/profit data.",
       "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=7714390623, file cited as source s0106). Director confirmed: Саидов Аскер Казбекович.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: founding-document bundle (s6905, 5 устав editions spanning 2017-2025) OCR'd and read in full -- caught and corrected a real dating error in the existing charter_capital_history (the ₽12.8bn figure was attributed to 2017-12-15, a date when the actual capital was ₽100,000 per this устав's own text) and recovered the full capital-growth timeline: ₽100,000 (2017) -> ₽12,806,600,000 (2021) -> ₽12,806,700,000 (2025). Every edition's purpose clause also explicitly names \"обслуживание, ремонт, утилизация и реализация вооружения и военной техники\" (servicing/repair/disposal/sale of arms and military equipment) plus state-secrets handling -- consistent self-declared defense-industry purpose across the whole 2017-2025 span, not a recent addition."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0106)",
     "opensanctions_matches": [
@@ -10721,6 +10741,10 @@
       {
         "source_id": "s0961",
         "text": "GUR names Пиранья model numbers 7/10/13; this registry's existing entries say 15/20 (source: prior extraction, source_id null). Numbering discrepancy not reconciled — may be different product generations, a GUR simplification, or a registry transcription issue. UPDATE 2026-09-03: the company's own July 2026 product catalog (s1410) independently confirms real flagship models ARE numbered 7/10/13 with detailed specs, matching GUR's numbering exactly — strengthens the case that the registry's older bare \"Пиранья 15\"/\"20\" entries (source_id null) are a mis-transcription or a distinct, unconfirmed earlier line, not the flagship models. Not deleted outright since no direct disproof exists, but the discrepancy now favors 7/10/13 as authoritative."
+      },
+      {
+        "text": "Original устав (Протокол №1, 13.09.2023) was approved by a \"Собранием учредителей\" (plural founders' meeting), but only one founder (Чернышов П.А.) is currently confirmed in founders[] -- the устав body itself does not name individual founders (standard post-2009 pattern) or disclose a founder count/split. Worth checking the founding Протокол №1 itself (not yet pulled -- only the устав text was in this bundle) or a full ЕГРЮЛ выписка's founder history for a possible second/earlier founder.",
+        "source_id": "s6909"
       }
     ],
     "sources": [],
@@ -10740,7 +10764,8 @@
       "2026-09-03: fixed slug/ИНН correction-key collision on 'products' (both keys set it, silently clobbering) — merged the company's own catalog (s1410, rich 7/10/13 + accessories) with GUR's list into the ИНН-keyed entry, which is the one extract_registry.py actually applies last; removed the now-redundant 'products' field from this (slug-keyed) entry so there is only one source of truth for this field.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13798) ID-confirmed via ИНН 7300024069 — exact match, screen_gur.py sweep, 2026-08-24. GUR names model numbers 7/10/13, not matching the registry's existing «Пиранья 15»/«20» — flagged as an open question, not silently reconciled.",
-      "2026-09-07: merged dormant duplicate correction key '7300024069' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+      "2026-09-07: merged dormant duplicate correction key '7300024069' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+      "2026-09-07: founding-document bundle (s6909, both the original устав 13.09.2023 and its новая редакция 03.10.2024) OCR'd and read in full -- confirms Ульяновск address and ₽15,000 capital already on file (EGRUL-выписка-sourced), and surfaces that the original устав was approved by a founders' MEETING (plural), not a sole founder, as an open question against the single-founder founders[] currently on file. The новая редакция (03.10.2024) itself OCR'd poorly (cover-page/stamp text only legible) -- no further content extracted from it."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "opensanctions_matches": [
@@ -33884,6 +33909,12 @@
     "charter_capital": 76336,
     "charter_capital_history": [
       {
+        "value": 50000,
+        "as_of": "2024-09-20",
+        "source_id": "s6908",
+        "note": "Изменения №1 к уставу, протокол внеочередного общего собрания акционеров от 09.09.2024 (внесено в ЕГРЮЛ 20.09.2024, ГРН 2247709425247): capital set to ₽50,000 (50,000 ordinary shares × ₽1), plus authorization to place up to 100,000,000 further shares."
+      },
+      {
         "value": 76336,
         "as_of": "2026-01-20",
         "source_id": "s6824",
@@ -34055,6 +34086,13 @@
         "name_ru": "Реестр компаний БАС — rk.2035.university",
         "role": "ID-confirmed match (exact ИНН + ОГРН, not a name collision) in the national rk.2035.university БАС-industry company directory. Sectors declared: Компания БАС. Activity types: Разработка, Производство, Эксплуатация. Personnel count 84, profile created 2026-04-10.",
         "source_id": "s1165"
+      },
+      {
+        "as_of": "2025-12-09",
+        "name_en": "Aerospace Innovation Valley Innovation Science-Technology Center (ИНТЦ) -- residency formalized in the company's own charter",
+        "name_ru": "Инновационный научно-технологический центр «Аэрокосмическая инновационная долина»",
+        "role": "Изменения №4 к уставу (протокол внеочередного общего собрания акционеров от 09.12.2025) restated the company's core purpose (п.2.1 устава) as scientific-technological activity under Федеральный закон от 29.07.2017 №216-ФЗ «Об инновационных научно-технологических центрах...» and Постановление Правительства РФ от 22.04.2022 №735 «О создании инновационного научно-технологического центра «Аэрокосмическая инновационная долина»» -- a formal charter-level ИНТЦ-residency declaration, not just a catalogue listing.",
+        "source_id": "s6908"
       }
     ],
     "marketing_claims": [],
@@ -34122,7 +34160,8 @@
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 1 filing-year record(s).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14291) ID-confirmed via ИНН 7714473012 — exact match, screen_gur.py sweep, 2026-08-24. Corroborates existing ECOLIBRI eVTOL / P-75 product entries. GUR states the company's advisory board is headed by \"the son of the former head of Roscosmos, Alexei Rogozin\" — this is a second independent confirmation (alongside the existing press-sourced Vedomosti note already in people.json) of Рогозин Алексей Дмитриевич's chairmanship of Эколибри's advisory council.",
-      "2026-09-07: merged dormant duplicate correction key '7714473012' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+      "2026-09-07: merged dormant duplicate correction key '7714473012' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+      "2026-09-07: founding-document bundle (s6908, five Изменения filings 2024-2026) OCR'd and read in full -- recovered the intermediate ₽50,000 capital step (existing history jumped straight to the current ₽76,336 with no earlier data point) and a formal ИНТЦ «Аэрокосмическая инновационная долина» residency declaration written directly into the charter's purpose clause -- new beyond the existing gisp.gov.ru/rk.2035.university state_programs entries, which only showed a product-catalogue listing, not this charter-level status change."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -55766,10 +55805,24 @@
         "note": "from corrections:add_entities, unverified"
       }
     ],
-    "founders": [],
+    "founders": [
+      {
+        "name": "Ткач Кирилл Владимирович",
+        "inn_personal": null,
+        "share_percent": 100,
+        "source_id": "s6907",
+        "note": "Sole founder per the company's own устав (§6.2): \"Гражданин Российской Федерации Ткач Кирилл Владимирович\", паспорт РФ 40 17 938373 (выдан 05.12.2017, Миграционный пункт №17 УФМС по СПб и Ленобласти в Калининском районе, код подразделения 780-017), зарегистрирован по адресу: 195269, Санкт-Петербург, ул. Брянцева д.7, корп.1, кв.22. No inn_personal given in the document -- passport is the identifier disclosed."
+      }
+    ],
     "founders_history": [],
     "charter_capital": 100000,
     "charter_capital_history": [
+      {
+        "value": 100000,
+        "as_of": "2018-01-16",
+        "source_id": "s6907",
+        "note": "Устав approved by Решением №1/2018 единственного учредителя от 16.01.2018 -- ООО formed via реорганизация (share exchange) from ЗАО НПК «ГЕРОН»: 100 shares × ₽1,000 each (₽100,000 total) converted 1:1 into a 100% ООО stake held by Ткач К.В. Same value as the existing 2018-12-06 EGRUL-выписка-sourced entry (s6846) -- this устав pins the exact founding transaction and date, that extract just confirmed the standing value roughly 11 months later."
+      },
       {
         "value": 100000,
         "as_of": "2018-12-06",
@@ -55778,7 +55831,14 @@
       }
     ],
     "address_history": [],
-    "name_history": [],
+    "name_history": [
+      {
+        "value": "ЗАО НПК «ГЕРОН»",
+        "as_of": "2018-01-16 (до реорганизации)",
+        "source_id": "s6907",
+        "note": "Preceding legal form/name before the 16.01.2018 conversion into ООО НПК «ГЕРОН» -- share-exchange reorganization, not a fresh incorporation."
+      }
+    ],
     "facility_type": null,
     "facility_type_history": [],
     "parents": [],
@@ -55857,7 +55917,8 @@
     "_raw": {},
     "_corrected": [
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: founding-document bundle (s6907) OCR'd and read in full -- recovered the sole founder's full identity (name + passport + personal address, per PII policy since sourced), the ЗАО->ООО reorganization history, and pinned the exact founding-decision date."
     ],
     "_verified_against": null,
     "opensanctions_matches": [],
@@ -60497,7 +60558,8 @@
     "_raw": {},
     "_corrected": [
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: founding-document bundle (s6910) OCR'd and read in full -- corroborates the existing ₽30,000 charter capital and sole-founder (Семенов И.Г., 100%) structure already on file from the EGRUL выписка; the устав body itself does not name the founder (standard post-2009 pattern), so no new identity detail beyond what was already confirmed. No aviation/UAV/military terminology found in the purpose clause on this OCR pass -- appears to be a generic-activity charter."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -61118,8 +61180,15 @@
     "director_history": [],
     "founders": [],
     "founders_history": [],
-    "charter_capital": null,
-    "charter_capital_history": [],
+    "charter_capital": 100000,
+    "charter_capital_history": [
+      {
+        "value": 100000,
+        "as_of": "2016-10-04",
+        "source_id": "s6906",
+        "note": "Original Устав (редакция №1), утвержден Решением №01 единственного учредителя от 04.10.2016; unchanged in редакция №2 (Решение №30-05/1/2017 от 30.05.2017, ГРН 8177747805470 от 07.07.2017, still единственный участник)."
+      }
+    ],
     "address_history": [],
     "name_history": [],
     "facility_type": null,
@@ -61127,7 +61196,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": "Identified 2026-09-07 via Aleph/OCCRP's cached EGRUL mirror (snapshot 2025-12-14) as the 100%-owner of ООО «ГК Аэромакс» (ИНН 7710974353, itself a former «Группа Кронштадт»/«Интеллектуальные технические решения» ИНН) as of that snapshot -- part of the Кронштадт heavy-UAV group (Orion/Sirius/Grom family). Not yet independently pulled from primary EGRUL; scaffold record pending a full EGRUL выписка/БФО pull.",
+    "tier_basis": "Identified 2026-09-07 via Aleph/OCCRP's cached EGRUL mirror (snapshot 2025-12-14) as the 100%-owner of ООО «ГК Аэромакс» (ИНН 7710974353, itself a former «Группа Кронштадт»/«Интеллектуальные технические решения» ИНН) as of that snapshot -- part of the Кронштадт heavy-UAV group (Orion/Sirius/Grom family). Not yet independently pulled from primary EGRUL; scaffold record pending a full EGRUL выписка/БФО pull. Founding-document bundle read in full 2026-09-07 (s6906, both редакция №1 and №2): the устав's own purpose clause (§3.2.4) explicitly lists development/production/testing/repair/modernization of dual-use and military-purpose aircraft \"including unmanned aerial vehicles and UAV simulators\", work in the interests of the Ministry of Defence (Navy, Air Force), FSB Border Service, MVD, FTS and military intelligence, holding-company management (consistent with its role as ГК Аэромакс's parent), and state-secrets handling/protection services -- a direct self-declaration of military-industry purpose in the company's own founding legal document, not an inference. Neither редакция names the founder in the устав body (standard post-2009 pattern -- ownership is not disclosed in this document type).",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -61169,7 +61238,7 @@
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "name_en": "Kronshtadt Unmanned Systems LLC",
+    "name_en": "Kronshtadt UV Systems, LLC",
     "zakupki_review": {
       "as_of": "2026-09-07",
       "outcome": "closed",
@@ -61177,7 +61246,8 @@
     },
     "_corrected": [
       "2026-09-07: added as a scaffold record after being identified as ГК Аэромакс's owner via Aleph's cached EGRUL mirror; not yet independently verified against primary EGRUL.",
-      "2026-09-07: zakupki scan (never-scanned gap closure) — scanned by ИНН, zero hits in zakupki.gov.ru contract registry."
+      "2026-09-07: zakupki scan (never-scanned gap closure) — scanned by ИНН, zero hits in zakupki.gov.ru contract registry.",
+      "2026-09-07: founding-document bundle (s6906) OCR'd and read in full -- confirmed charter capital (₽100,000, unchanged 2016-2017) and English name from the устав's own text; corrected name_en from a prior placeholder guess to match the primary document exactly; added the self-declared military/dual-use purpose clause to tier_basis."
     ],
     "wb_matches": [],
     "wb_screened_at": "2026-09-07",

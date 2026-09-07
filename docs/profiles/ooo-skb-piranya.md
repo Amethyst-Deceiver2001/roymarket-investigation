@@ -151,6 +151,7 @@
 ## Open questions
 
 - GUR names Пиранья model numbers 7/10/13; this registry's existing entries say 15/20 (source: prior extraction, source_id null). Numbering discrepancy not reconciled — may be different product generations, a GUR simplification, or a registry transcription issue. UPDATE 2026-09-03: the company's own July 2026 product catalog (s1410) independently confirms real flagship models ARE numbered 7/10/13 with detailed specs, matching GUR's numbering exactly — strengthens the case that the registry's older bare "Пиранья 15"/"20" entries (source_id null) are a mis-transcription or a distinct, unconfirmed earlier line, not the flagship models. Not deleted outright since no direct disproof exists, but the discrepancy now favors 7/10/13 as authoritative. [s0961]
+- Original устав (Протокол №1, 13.09.2023) was approved by a "Собранием учредителей" (plural founders' meeting), but only one founder (Чернышов П.А.) is currently confirmed in founders[] -- the устав body itself does not name individual founders (standard post-2009 pattern) or disclose a founder count/split. Worth checking the founding Протокол №1 itself (not yet pulled -- only the устав text was in this bundle) or a full ЕГРЮЛ выписка's founder history for a possible second/earlier founder. [s6909]
 
 ## Sources cited in this profile
 
@@ -169,6 +170,7 @@
 | s5551 | Bfo | Bfo (BFO_7300024069_2024_ооо-скб-пиранья.pdf) | — | — |
 | s5552 | Bfo | Bfo (BFO_7300024069_2025_ооо-скб-пиранья.pdf) | — | — |
 | s6730 | EGRUL extract | EGRUL extract (EGRUL_7300024069_20260907_ooo-skb-piranya.pdf) | 2026-09-07 | 2026-09-07 |
+| s6909 | Founding-Устав bundle | Founding-Устав bundle (UD_1237300010430_20260907_skb-piranya.zip) | 2026-09-07 | 2023-09-13 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
