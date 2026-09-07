@@ -3943,6 +3943,16 @@
       "why": [
         "2026-09-07: verification via screen_upr_uchr.py ФНС cross-reference -- Лобов Вадим Георгиевич confirmed as учредитель of ao-korporatsiya-sinergiya (ИНН 7743414861), an official-registry match against an already-known entity."
       ]
+    },
+    "zhulidov-evgeniy": {
+      "set": {
+        "inn_personal": "332898705572"
+      },
+      "verified_against": null,
+      "why": [
+        "2026-09-07: user-supplied personal ИНН (332898705572). Checksum valid (both control digits verified). Not yet independently corroborated against a primary document -- running ФНС screens (disqualified-director/subsidiary-liability/director-founder cross-reference) next, which will itself test whether this ИНН resolves to real records; a name/DOB match there would be meaningful corroboration.",
+        "2026-09-07: ran the three standard ФНС screens (disqualified-director, subsidiary-liability, director/founder cross-reference) plus screen_egrip_ip.py -- all 0 hits/no ИП registration. Consistent with a career military officer with no business footprint; does not itself confirm the ИНН, just finds nothing inconsistent with it."
+      ]
     }
   },
   "people_add_entities": [
