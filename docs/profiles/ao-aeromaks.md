@@ -9,6 +9,7 @@
 - **Legal form:** AO (joint-stock company)
 - **Registered:** 2022-08-04
 - **Director:** Управляющая организация: ООО «Кронштадт-Техник»
+- **Charter capital:** ₽10,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,6 +19,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Управляющая организация: ООО «Кронштадт-Техник» | 2026-08-24 | per egrul.nalog.ru open-API lookup, 2026-08-24 [s0949] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АЭРОМАКС" 100% (₽10 000) | 2022-08-04 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6733] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2022-08-04 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6733] |
 
 ## Products
 
@@ -72,6 +85,7 @@
 | s6566 | Bfo | Bfo (BFO_7708407413_2023_ао-аэромакс.pdf) | — | — |
 | s6567 | Bfo | Bfo (BFO_7708407413_2024_ао-аэромакс.pdf) | — | — |
 | s6568 | Bfo | Bfo (BFO_7708407413_2025_ао-аэромакс.pdf) | — | — |
+| s6733 | EGRUL extract | EGRUL extract (EGRUL_7708407413_20260907_ao-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -385,17 +385,6 @@
       "ids": "9702064851 | 1247700190430",
       "role": "Sole owner of МПТМ. Registered 27.02.2024 at 129110, Москва, Банный пер., д. 3, помещ. 208 — not the Нарышкинская building. Co-founded by Фонд «Наша Правда» (from inception) and ПАО «Банк ПСБ» (registered 01.04.2025). Registered contact is a Yandex mailbox. OKVEDs are publishing, software, R&D, market research and conference organising — nothing defence-coded. Sanctioned by Ukraine, Australia, Canada."
     },
-    "_corrected": [
-      "2026-08-24: OpenSanctions screening surfaced a sanctions-adjacent lead requiring careful disambiguation — see open_questions and the new ooo-tsentr-bespilotnykh-sistem-tula record.",
-      "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0574).",
-      "Found via GUR's components catalogue while pulling the confirmed npts-ushkuynik (Knyaz Vandal Novgorodsky) hit — both \"Delta (CBTS.611000)\" entries appeared adjacent in the same weapon-item filter list. Pulled in full to check the CBTS naming coincidence properly rather than leave it as a guess; found nothing attributing it to this or any other registry entity, so recorded as an explicit open question, not a fact.",
-      "CORRECTION 2026-08-24: user flagged that CBTS is not a valid transliteration of ЦБСТ (Ц transliterates as Ts, not C). Withdrew the implied ЦБСТ connection from the open_question wording above — the CBTS.611000 component set remains on file as a pulled-and-read but unattributed record, not a lead pointing at ЦБСТ.",
-      "web.sites was entirely empty for the investigation's own namesake org. Web search 2026-08-25.",
-      "2026-08-25: @asidyakin channel scan (1199 posts) — surfaced 3 unnamed-manufacturer product leads (Локтар/Шорох/Грань) alongside corroboration of already-known residents.",
-      "2026-09-05: read a 1666-line broadcast transcript (s0177/s0178, «Переговорка» podcast, Единая Россия's own information project, 21.04.2025) -- a direct on-record interview with ЦБСТ chairman Андрей Безруков and party ЦИК head Александр Сидякин covering ЦБСТ's founding narrative (traced to 2014 Donetsk airport volunteer drone reconnaissance, the «Барс каскад» unit, formalised as ЦБСТ jointly with фонд «Наша Правда»), a party-wide (not ЦБСТ-specific) ₽14bn total for Единая Россия's 'front aid' procurement since 2024 (hundreds of recon drones, ~1,000 vehicles, medical supplies, night-vision, tourniquets -- a broader category than UAVs alone, stated twice in the transcript, at ~32:00 and ~45:51), Безруков's on-record criticism of 44/275-ФЗ state-defence-procurement law as too rigid and needing reform for faster acquisition, a mention of an accelerator programme working with Сколково, and passing references to a Hasselblad-branded optics maker (transcribed 'Helблад', likely a mishearing) and АО «Стратим»'s drones (already a known registry entity). High-value primary source for the entity's own founding story and policy-advocacy positioning -- not yet drafted into docs/index.html's narrative prose, which is a separate STYLE_GUIDE-governed task from this registry entry.",
-      "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 4 filing-year record(s)."
-    ],
-    "_verified_against": "war-sanctions.gur.gov.ua/en/components (weapon items witem-4835, witem-4800), archived as s0970/s0971",
     "related_entities": [
       {
         "relationship": "OpenSanctions merges this Tula ООО (ИНН 7100032961, reg. 08.02.2023, directly OFAC/EO14024- designated) into the same deduped profile as this Moscow АНО, sharing \"ЦБСТ\"/\"TSBS\" branding and aliases. Relationship not established as of 2026-08-24 — see the Tula entity's own open_questions for what would resolve it.",
@@ -409,6 +398,21 @@
         "source_id": "s0384"
       }
     ],
+    "_corrected": [
+      "2026-08-24: OpenSanctions screening surfaced a sanctions-adjacent lead requiring careful disambiguation — see open_questions and the new ooo-tsentr-bespilotnykh-sistem-tula record.",
+      "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0574).",
+      "Found via GUR's components catalogue while pulling the confirmed npts-ushkuynik (Knyaz Vandal Novgorodsky) hit — both \"Delta (CBTS.611000)\" entries appeared adjacent in the same weapon-item filter list. Pulled in full to check the CBTS naming coincidence properly rather than leave it as a guess; found nothing attributing it to this or any other registry entity, so recorded as an explicit open question, not a fact.",
+      "CORRECTION 2026-08-24: user flagged that CBTS is not a valid transliteration of ЦБСТ (Ц transliterates as Ts, not C). Withdrew the implied ЦБСТ connection from the open_question wording above — the CBTS.611000 component set remains on file as a pulled-and-read but unattributed record, not a lead pointing at ЦБСТ.",
+      "web.sites was entirely empty for the investigation's own namesake org. Web search 2026-08-25.",
+      "2026-08-25: @asidyakin channel scan (1199 posts) — surfaced 3 unnamed-manufacturer product leads (Локтар/Шорох/Грань) alongside corroboration of already-known residents.",
+      "2026-09-05: read a 1666-line broadcast transcript (s0177/s0178, «Переговорка» podcast, Единая Россия's own information project, 21.04.2025) -- a direct on-record interview with ЦБСТ chairman Андрей Безруков and party ЦИК head Александр Сидякин covering ЦБСТ's founding narrative (traced to 2014 Donetsk airport volunteer drone reconnaissance, the «Барс каскад» unit, formalised as ЦБСТ jointly with фонд «Наша Правда»), a party-wide (not ЦБСТ-specific) ₽14bn total for Единая Россия's 'front aid' procurement since 2024 (hundreds of recon drones, ~1,000 vehicles, medical supplies, night-vision, tourniquets -- a broader category than UAVs alone, stated twice in the transcript, at ~32:00 and ~45:51), Безруков's on-record criticism of 44/275-ФЗ state-defence-procurement law as too rigid and needing reform for faster acquisition, a mention of an accelerator programme working with Сколково, and passing references to a Hasselblad-branded optics maker (transcribed 'Helблад', likely a mishearing) and АО «Стратим»'s drones (already a known registry entity). High-value primary source for the entity's own founding story and policy-advocacy positioning -- not yet drafted into docs/index.html's narrative prose, which is a separate STYLE_GUIDE-governed task from this registry entry.",
+      "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 4 filing-year record(s).",
+      "The parent body the whole investigation is about.",
+      "Phase 1 verification pass, 2026-08-22: cross-checked against ЦБСТ's own full signed EGRUL extract (s0231, pulled 15.08.2026) — every field the extract carries (name incl. EGRUL-registered English name, address, director, founders and their join dates, OKVED list, e-mail an0.cbst@yandex.ru) confirms the brief's prose exactly, including the two founders and their distinct join dates. Promoted to _verified: true — the first cbst-core entity to clear full primary-document verification.",
+      "Source-ID stability bug found and fixed 2026-08-22, same session: the source_id values above were originally written against an OLD, unstable positional ID scheme (scripts/extract_registry.py assigned sN = MANIFEST.md line index, which shifts whenever a file is added anywhere earlier in alphabetical sort order). Re-verified and corrected against the NEW stable, path-keyed ID scheme (data/registry/_source_ids.json) after the fix — every source_id in this file now points at the document it was actually verified against.",
+      "2026-09-07: merged dormant duplicate correction key '9702064851' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+    ],
+    "_verified_against": "war-sanctions.gur.gov.ua/en/components (weapon items witem-4835, witem-4800), archived as s0970/s0971",
     "opensanctions_matches": [
       {
         "match_id": "NK-ngEi5GffwpVL68uComVz7o",
@@ -3635,7 +3639,12 @@
     },
     "_corrected": [
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0736).",
-      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
+      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
+      "Kursk production entity, wholly owned by ЦБСТ — a subsidiary, not a counterparty.",
+      "Phase 1 verification pass, 2026-08-22: director, registration date and region (Курская область) cross-checked against egrul.nalog.ru open-API snapshot (s0075) — all match.",
+      "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 1 fiscal year(s) with revenue/profit data.",
+      "Full signed ЕГРЮЛ extract read end-to-end (ul-1254600002920-20260823014908.pdf, pulled 23.08.2026). THIRD confirmed direct-ЦБСТ-owned entity (alongside Спецтех Инвестиции and Спецтех Первый) — but materially different in kind: located in Kursk, not Moscow, and its ОКВЭД profile is genuinely industrial rather than a financial shell — primary 62.01 software development, secondaries 26.30.15 radio-electronic communications equipment, 26.51.2 radiolocation/radio-navigation and remote-control radio equipment, 27.90 other electrical equipment. GD Михайлов Ю.Г. (personal ИНН 502902982507). ₽30,000 charter capital. This reads as ЦБСТ's actual R&D/systems-integration operating arm, distinct from the two Moscow investment shells.",
+      "2026-09-07: merged dormant duplicate correction key '4632306583' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -8195,6 +8204,10 @@
     "_origin_extra": [
       "brief:prose"
     ],
+    "registrar": {
+      "name": "АО «Независимая регистраторская компания Р.О.С.Т.»",
+      "source_id": "s0459"
+    },
     "related_entities": [
       {
         "inn": "5260494520",
@@ -8211,13 +8224,11 @@
       "2026-09-03: removed 'director' from here — identical value also set on the ИНН-keyed correction entry, which extract_registry.py applies last; the duplicate field was harmless (same value) but fragile (order-dependent), fixed as part of a registry-wide slug/ИНН collision sweep.",
       "2026-09-03: removed 'ogrn' from here — identical value also set on the ИНН-keyed entry; duplicate field cleanup, see director note above.",
       "2026-09-03: removed 'registered' from here — identical value also set on the ИНН-keyed entry; duplicate field cleanup, see director note above.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13729) ID-confirmed via ИНН 7720901379 — exact match, screen_gur.py sweep, 2026-08-24. GUR's own page cross-lists ООО «Стратим» (ИНН 5260494520) as a \"related company\" — see related_entities.",
+      "2026-09-07: merged dormant duplicate correction key '7720901379' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
-    "_verified_against": "war-sanctions.gur.gov.ua/en/uav/companies/13729, archived as s0963",
-    "registrar": {
-      "name": "АО «Независимая регистраторская компания Р.О.С.Т.»",
-      "source_id": "s0459"
-    },
+    "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
       {
@@ -9097,14 +9108,6 @@
     "_origin_extra": [
       "brief:prose"
     ],
-    "_corrected": [
-      "Full signed ЕГРЮЛ extract read end-to-end (s0013, 9704241986_20082026.pdf, 8pp, pulled 20.08.2026). Registered 03.05.2024 at Новый Арбат 30/9 — a central-Moscow office address, not a production site. GD Перфильев Н.А. (personal ИНН 771411992808) in post since registration; ₽100,000 charter capital; no licences of any kind on record. As an АО its shareholders are not published (registrar АО «НРК Р.О.С.Т.»), so ownership is unresolved by this document. ОКВЭД is explicit rather than disguised: primary 30.30.6 «Производство беспилотных авиационных систем» — UAS manufacture — though that code was only made primary on 25.02.2026, with the 2024 founding codes being electronics/PCB/computer manufacture. Note the profile tension worth carrying into the entity's open questions: a declared UAS MANUFACTURER with ₽100k capital, no licences and a downtown-Moscow registered address has no verified production footprint in this document.",
-      "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
-      "cbst_tie UPGRADED 23.08.2026 with a direct primary citation found by querying this project's own scraped @ANO_CBST Telegram archive (data/roymarket.db, channel_id 2159491523) — not a data/sources/ document, so no s#### id; channel/post-id/date is the citation, per this project's existing convention for TG-sourced claims.",
-      "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0806).",
-      "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9704241986). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'."
-    ],
-    "_verified_against": "s0013 — АО «Технодрон»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
     "registrar": {
       "as_of": "2024-05-03",
       "inn": "7726030449",
@@ -9112,6 +9115,16 @@
       "ogrn": "1027739216757",
       "source_id": "s0013"
     },
+    "_corrected": [
+      "Full signed ЕГРЮЛ extract read end-to-end (s0013, 9704241986_20082026.pdf, 8pp, pulled 20.08.2026). Registered 03.05.2024 at Новый Арбат 30/9 — a central-Moscow office address, not a production site. GD Перфильев Н.А. (personal ИНН 771411992808) in post since registration; ₽100,000 charter capital; no licences of any kind on record. As an АО its shareholders are not published (registrar АО «НРК Р.О.С.Т.»), so ownership is unresolved by this document. ОКВЭД is explicit rather than disguised: primary 30.30.6 «Производство беспилотных авиационных систем» — UAS manufacture — though that code was only made primary on 25.02.2026, with the 2024 founding codes being electronics/PCB/computer manufacture. Note the profile tension worth carrying into the entity's open questions: a declared UAS MANUFACTURER with ₽100k capital, no licences and a downtown-Moscow registered address has no verified production footprint in this document.",
+      "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
+      "cbst_tie UPGRADED 23.08.2026 with a direct primary citation found by querying this project's own scraped @ANO_CBST Telegram archive (data/roymarket.db, channel_id 2159491523) — not a data/sources/ document, so no s#### id; channel/post-id/date is the citation, per this project's existing convention for TG-sourced claims.",
+      "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0806).",
+      "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9704241986). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+      "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14303) ID-confirmed via ИНН 9704241986 — exact match, screen_gur.py sweep, 2026-08-24. Existing registry «Скворец» entries were duplicated (listed twice) — corrected in this same batch.",
+      "2026-09-07: merged dormant duplicate correction key '9704241986' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+    ],
+    "_verified_against": "s0013 — АО «Технодрон»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
       {
@@ -9402,7 +9415,8 @@
     "_corrected": [
       "User-supplied HAR capture of their own live search (PE_RU=\"...Атлант Аэро...\") found this entity's first-ever IP record — the earlier bulk trademark/patent sweeps and GUR screens found nothing for this entity. Filed 2025-08-25 (roughly a year after the earlier-known name-collision 'Орион' product reference), published 2026-03-30 — recent enough that it likely postdates both bulk CSV dump snapshots this project already used, explaining why the earlier sweeps missed it entirely.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: merged dormant duplicate correction key '6154165878' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "searchplatform.rospatent.gov.ru, PE_RU exact patentee-name query, archived as s0977 (WIPO ST.96 XML full text) + HAR capture",
     "_egrul_crosschecked": "2026-08-22",
@@ -10724,7 +10738,9 @@
       "2026-08-25: full site + product-catalog scan (piranhafpv.ru, its wp-content/uploads/2026/07/web.pdf catalog [s1410], t.me/s/piranhafpv). SELF-INCRIMINATING MARKETING COPY, verbatim: site homepage — \"Поставляем дроны напрямую до адресатов в ЛНР и ДНР\" (we deliver drones directly to recipients in the LNR and DNR) and \"«Убийца Abrams» / Так окрестили наш FPV дрон\" (\"Abrams killer\" — that's what they nicknamed our FPV drone); catalog page 3 — \"Первый американский танк Abrams в зоне СВО уничтожен FPV-дроном «Пиранья-10»\" (the first American Abrams tank destroyed in the SVO zone was destroyed by a «Пиранья-10» FPV drone) [s1410]. Production-scale claims (self-reported, not independently verified): \"более 40 000 беспилотных систем выпущено с 2022 года\" (40,000+ UAS produced since 2022), \"от 1000 БВС в день\" (production capacity up to 1000 UAS/day), \"4 цеха по сборке БВС и систем связи\" (4 assembly shops), \"12 сборочных линий с непрерывным циклом\" (12 continuous-cycle assembly lines), plus in-house 3D-modeling/prototyping centers, a design bureau + IT unit for AI/control-systems development, and own chip/antenna/module development [s1410]. Full technical specs for «Пиранья-7»/«10»/«13» (added to products[] above) resolve the earlier open question about GUR's differing 7/10/13 numbering — these ARE the current official product line, not a numbering discrepancy. No team/leadership names found anywhere in the catalog or site (consistent with the company's low public profile for Чернышов).",
       "Media evidence pulled from @piranhafpv Telegram scrape (245 posts, tg-scan 2026-08-25), corroborating the channel's own battlefield-use claims with photos/video stills independent of marketing copy.",
       "2026-09-03: fixed slug/ИНН correction-key collision on 'products' (both keys set it, silently clobbering) — merged the company's own catalog (s1410, rich 7/10/13 + accessories) with GUR's list into the ИНН-keyed entry, which is the one extract_registry.py actually applies last; removed the now-redundant 'products' field from this (slug-keyed) entry so there is only one source of truth for this field.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13798) ID-confirmed via ИНН 7300024069 — exact match, screen_gur.py sweep, 2026-08-24. GUR names model numbers 7/10/13, not matching the registry's existing «Пиранья 15»/«20» — flagged as an open question, not silently reconciled.",
+      "2026-09-07: merged dormant duplicate correction key '7300024069' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "opensanctions_matches": [
@@ -11047,18 +11063,22 @@
     "_origin_extra": [
       "brief:prose"
     ],
+    "why": [
+      "2026-09-02: smolin.info (s5291) describes ooo-geron (Novgorod) as this entity de facto Novgorod branch producing up to 6,000 drones/month, and documents ooo-geron announcing Ushkuynik residency 25.06.2025 -- ties this already-sanctioned entity into the Ushkuynik orbit via ooo-geron. See ooo-geron for the direct link."
+    ],
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1232700009398-20260823122822.pdf). Sole founder is a legal entity, ООО «Управляющая компания КОМАКС» (ИНН 7704790277, 100%) — not yet in this registry, worth a future check on whether КОМАКС holds other manufacturer-tier entities. Far-east location (Khabarovsk) is unusual for this roster, mostly Moscow/Petersburg/regional-technopark clustered.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0729).",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (2700012608). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-09-03: fixed slug/ИНН correction-key collision on 'open_questions' — merged this (slug-keyed) entry's website/leadership-inconsistency question into the ИНН-keyed entry (the one applied last), which previously silently dropped it; removed the duplicate field here.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13164) ID-confirmed via ИНН 2700012608 — exact match, screen_gur.py full-roster sweep, 2026-08-24.",
+      "GUR names the group's ultimate beneficiary as \"russian senator from the temporarily occupied Kherson region Konstantin Basyuk\" — not yet a person record in this registry, added as an open question rather than a person stub (no DOB/ИНН/other identifying detail given, per PII sourcing discipline).",
+      "GUR also states cooperation with Chinese manufacturer Autel Robotics on localizing Autel UAV production in Russia — a foreign-component/tech-transfer lead worth an independent check, not yet corroborated beyond this one GUR note.",
+      "2026-09-07: merged dormant duplicate correction key '2700012608' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
-    "why": [
-      "2026-09-02: smolin.info (s5291) describes ooo-geron (Novgorod) as this entity de facto Novgorod branch producing up to 6,000 drones/month, and documents ooo-geron announcing Ushkuynik residency 25.06.2025 -- ties this already-sanctioned entity into the Ushkuynik orbit via ooo-geron. See ooo-geron for the direct link."
-    ],
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
       {
@@ -11985,7 +12005,8 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7811075899). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
       "2026-09-06: wired 2 aviation-technology development/production/testing/repair license record(s) from Минпромторг's aviation-tech license registry (data.gov.ru dataset 7705596339-drones, s6408) — ИНН-matched, exact ОГРН cross-check confirmed.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: merged dormant duplicate correction key '7811075899' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -12992,7 +13013,9 @@
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all patentees are an unrelated retail company (\"Торговая площадь\") -- common-word name collision.",
       "2026-09-03: removed 'products' from this (slug-keyed) entry — the ИНН-keyed entry's list (applied last by extract_registry.py) is a strict superset (includes both ПАК items plus Микроб 10с/13с and «Площадь-К»); no data lost, duplicate-field cleanup, part of a registry-wide slug/ИНН collision sweep.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13912) ID-confirmed via ИНН 9723203841 — exact match, screen_gur.py sweep, 2026-08-24. GUR also names the development context as the \"Kulibin Club\" of the Народный фронт (\"Narodnyi Front\") movement.",
+      "2026-09-07: merged dormant duplicate correction key '9723203841' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -16976,6 +16999,25 @@
     "_origin_extra": [
       "brief:prose"
     ],
+    "related_entities": [
+      {
+        "relationship": [
+          "Named dealer, per 3mx.ru/dilery/ AND independently confirmed via madro.ru itself (23.08.2026): «Мэдро» (Madro) explicitly states \"официальный поставщик производителя «3mx»\" (official supplier of manufacturer 3mx) and sells its own branded EW line «УФ-МЭДРО» alongside 3mx products. Storefronts in Saint Petersburg (ул. Академика Павлова, 5В), Moscow (2 offices + a shop at Митинский радиорынок), and Mariupol (occupied Ukraine). Telegram @madro_sales. LEGAL ENTITY STILL UNRESOLVED: a web search surfaced ООО «МАДРО» (ИНН 7720923661, ОГРН 1247700133669, Moscow, registered 08.02.2024, declared activity \"specialized design work\") as a same-named candidate, but this was NOT independently confirmed as the same legal entity behind madro.ru — flagged as a lead, not a match, pending direct confirmation (e.g. the site's own offer/contract documents, which were not checked in this pass)."
+        ],
+        "slug": null,
+        "source_id": "s0558"
+      },
+      {
+        "relationship": "Named dealer, per 3mx.ru/dilery/: «Макс 911» (Max 911) — dji911.com. Telegram @dji911_operator. CONFIRMED via dji911.com itself (23.08.2026): explicitly states \"официальный дилер\" for 3mx and sells «Булат V.4» (\"Булат-4\"), «Марс», «Инкубатор» (remote antenna) and its own «Neobooster» DJI signal-amplifier accessory. LEGAL ENTITY RESOLVED 2026-08-25 (dji911.com/contacts, s1388, direct curl archive): \"Продажу оборудования 3MX на маркетплейсах осуществляет ИП Коровкин А.А. ИНН 780223272953\" -- full name confirmed via egrul.nalog.ru open API (s1387): ИП Коровкин Александр Анатольевич, ОГРНИП 323784700072451 (active, registered 07.03.2023; a prior ОГРНИП 319784700120061 under the same ИНН was terminated 29.12.2022). Checksum-valid ИНН. Incidental retail dealer, not a network principal -- not otherwise PII-profiled per project policy (same treatment as Мэдро's ИП). Also has an Ozon storefront (2026-08-25, user-supplied browser HAR capture, s1384): https://www.ozon.ru/seller/maks-911-4233382/, self-declared page title \"МАКС 911- офиц. дилер 3mx\" -- not independently ИНН-confirmed to Коровкин on that marketplace (sellerTransparency widget not captured there), but consistent given the matching branding.",
+        "slug": null,
+        "source_id": "s1388"
+      },
+      {
+        "relationship": "Named dealer, per 3mx.ru/dilery/: «Покров» (Pokrov) — pokrovsystem.ru, Khimki (Moscow Oblast). Telegram @pokrov_sales. Legal entity RESOLVED 2026-08-24 (cross-link fixed 2026-08-25 -- was already a standalone registry entity, `ooo-pokrov`, ИНН 5038189259/ОГРН 1245000068774, just not linked from here): NOT a pure reseller like Мэдро -- sells its own branded EW jammer line (Покров ВЦА «Алёша», ВЦ4/ВЦ5 «Альфа») alongside resold 3mx detector products (Булат v.4, Марс).",
+        "slug": "ooo-pokrov",
+        "source_id": "s1386"
+      }
+    ],
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 2 trademark filing(s) matched by ИНН.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 1 fiscal year(s) with revenue/profit data.",
@@ -16999,28 +17041,16 @@
       "2026-08-25: pre-restriction ownership/directorship timeline added from third-party OSINT dossier (s1408) — fills a gap EGRUL itself can no longer answer directly (access restricted since 01.11.2024). Corroborates the founder identities already established via aggregator cross-check (see people records' own _corrected notes) with exact stake percentages and date ranges. Not independently re-verified against EGRUL/primary sources; same caution as the rest of this dossier's data applies.",
       "2026-09-03: checked via fedresurs.ru's company-lookup API (GUID ba5a068e-cf1f-4537-8a4a-9c52b8ed21bb). Clean -- no bankruptcy filings, no encumbrances/leases, no publications, no unreliable-info flags on file.",
       "2026-09-03: removed 'wb_overlap' from here — identical value also set on the ИНН-keyed correction entry; duplicate-field cleanup, part of a registry-wide slug/ИНН collision sweep (this pair's value was harmless since both entries agreed, but order-dependent).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "Compound row split; the «Булат»/3mx half is a brand, not a company.",
+      "wb_overlap set to confirmed: the brief records 64 Wildberries",
+      "listings, 63 classified strict_military — the first confirmed",
+      "WB ↔ РОЙ.МАРКЕТ crossover and the worked example for the whole",
+      "supplier-overlap thesis.",
+      "2026-08-25: cleaned up a stale bare \"confirmed\" value in this (older, ИНН-keyed) correction block -- superseded in practice by a later slug-keyed correction that already sets confirmed_reseller, but left here in an invalid enum state that would trip the new wb_overlap validator if this block were ever the one applied last. No new evidence, consistency fix only.",
+      "2026-09-07: merged dormant duplicate correction key '7802942873' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "s0225 — ООО «Тримикс»'s own full signed ЕГРЮЛ extract, pulled 18.08.2026",
-    "related_entities": [
-      {
-        "relationship": [
-          "Named dealer, per 3mx.ru/dilery/ AND independently confirmed via madro.ru itself (23.08.2026): «Мэдро» (Madro) explicitly states \"официальный поставщик производителя «3mx»\" (official supplier of manufacturer 3mx) and sells its own branded EW line «УФ-МЭДРО» alongside 3mx products. Storefronts in Saint Petersburg (ул. Академика Павлова, 5В), Moscow (2 offices + a shop at Митинский радиорынок), and Mariupol (occupied Ukraine). Telegram @madro_sales. LEGAL ENTITY STILL UNRESOLVED: a web search surfaced ООО «МАДРО» (ИНН 7720923661, ОГРН 1247700133669, Moscow, registered 08.02.2024, declared activity \"specialized design work\") as a same-named candidate, but this was NOT independently confirmed as the same legal entity behind madro.ru — flagged as a lead, not a match, pending direct confirmation (e.g. the site's own offer/contract documents, which were not checked in this pass)."
-        ],
-        "slug": null,
-        "source_id": "s0558"
-      },
-      {
-        "relationship": "Named dealer, per 3mx.ru/dilery/: «Макс 911» (Max 911) — dji911.com. Telegram @dji911_operator. CONFIRMED via dji911.com itself (23.08.2026): explicitly states \"официальный дилер\" for 3mx and sells «Булат V.4» (\"Булат-4\"), «Марс», «Инкубатор» (remote antenna) and its own «Neobooster» DJI signal-amplifier accessory. LEGAL ENTITY RESOLVED 2026-08-25 (dji911.com/contacts, s1388, direct curl archive): \"Продажу оборудования 3MX на маркетплейсах осуществляет ИП Коровкин А.А. ИНН 780223272953\" -- full name confirmed via egrul.nalog.ru open API (s1387): ИП Коровкин Александр Анатольевич, ОГРНИП 323784700072451 (active, registered 07.03.2023; a prior ОГРНИП 319784700120061 under the same ИНН was terminated 29.12.2022). Checksum-valid ИНН. Incidental retail dealer, not a network principal -- not otherwise PII-profiled per project policy (same treatment as Мэдро's ИП). Also has an Ozon storefront (2026-08-25, user-supplied browser HAR capture, s1384): https://www.ozon.ru/seller/maks-911-4233382/, self-declared page title \"МАКС 911- офиц. дилер 3mx\" -- not independently ИНН-confirmed to Коровкин on that marketplace (sellerTransparency widget not captured there), but consistent given the matching branding.",
-        "slug": null,
-        "source_id": "s1388"
-      },
-      {
-        "relationship": "Named dealer, per 3mx.ru/dilery/: «Покров» (Pokrov) — pokrovsystem.ru, Khimki (Moscow Oblast). Telegram @pokrov_sales. Legal entity RESOLVED 2026-08-24 (cross-link fixed 2026-08-25 -- was already a standalone registry entity, `ooo-pokrov`, ИНН 5038189259/ОГРН 1245000068774, just not linked from here): NOT a pure reseller like Мэдро -- sells its own branded EW jammer line (Покров ВЦА «Алёша», ВЦ4/ВЦ5 «Альфа») alongside resold 3mx detector products (Булат v.4, Марс).",
-        "slug": "ooo-pokrov",
-        "source_id": "s1386"
-      }
-    ],
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
       {
@@ -19391,7 +19421,8 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (1215235283). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24: promoted 20 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: all patents are personal filings by Фоминых Алексей Михайлович, this entity's confirmed sole director/100% founder -- metal detectors and mine-clearance equipment, directly on-topic for a defense-technology investigation.",
       "2026-09-03: removed 'products' from this (slug-keyed) entry — the ИНН-keyed entry's list (applied last) is a strict superset with richer, sourced descriptions (АЛЬФАМАРИН У/М/base/СИМ variants plus Минпромторг заключение sourcing); no data lost, duplicate-field cleanup, part of a registry-wide slug/ИНН collision sweep.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: merged dormant duplicate correction key '1215235283' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -20362,7 +20393,9 @@
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED. 9 candidates belong to an unrelated 1990s Soviet-era \"Акционерное общество открытого типа «ЭЛВО»\" (high-voltage disconnectors/transformer substations, predating this entity by decades) and the remaining candidates belong to an unrelated university (ОрелГТУ, temperature sensors/regulators) -- common-abbreviation collision, not this entity.",
       "2026-09-03: removed duplicate 'name_ru' — identical value also set on the ИНН-keyed entry; part of a registry-wide slug/ИНН collision sweep.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "Compound row split; see add_entities → kolskaya-verf.",
+      "2026-09-07: merged dormant duplicate correction key '7810918592' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "opensanctions_matches": [],
@@ -22689,7 +22722,8 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (4205376019). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
       "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: merged dormant duplicate correction key '4205376019' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -22903,7 +22937,9 @@
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0811).",
       "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "An ownership vehicle, not a manufacturer.",
+      "2026-09-07: merged dormant duplicate correction key '9714004945' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0152)",
     "_egrul_crosschecked": "2026-08-22",
@@ -23264,6 +23300,12 @@
     "_raw": {
       "context": "is the most consequential finding of this pass: 51% is held by АО «Проминвест» (ИНН 9714004945) — which is itself, per EGRUL’s own disclosure, under trust management (ДовУпрЮЛ) by АО «Технодинамика» (ИНН 7719265496), a Ростех (Rostec) subsidiary specialising in aircraft components — meaning a sanctioned, ЦБСТ-resident drone manufacturer is majority-controlled, via a documented trust-management arrangement, by R"
     },
+    "notes": "zakupki footprint reviewed 2026-08-30 via zakupki_customer_clusters.py: ₽16.46bn (17 contracts, Минпромторг) + ₽1.63bn (18 contracts, Минобороны) among unwired cards — confirms this is a large, already-well-documented state defense prime with an enormous zakupki footprint by nature (already tier=plumbing). Not wiring individually per the established triage principle for entities of this scale.",
+    "zakupki_review": {
+      "as_of": "2026-08-30",
+      "outcome": "closed",
+      "note": "₽16.46bn (Минпромторг) + ₽1.63bn (Минобороны) among unwired cards. A large, already-well-documented state defense prime whose zakupki footprint is enormous by nature; not wired individually per the established triage principle for entities of this scale."
+    },
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 10 trademark filing(s) matched by ИНН.",
       "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=7719265496, file cited as source s0110). Director not resolved by this lookup method — see open_questions.",
@@ -23272,15 +23314,11 @@
       "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-30) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
       "2026-09-06: wired 3 aviation-technology development/production/testing/repair license record(s) from Минпромторг's aviation-tech license registry (data.gov.ru dataset 7705596339-drones, s6408) — ИНН-matched, exact ОГРН cross-check confirmed.",
       "2026-09-06: name_history entry from Минпромторг aviation-tech license registry (s6408) — same ОГРН, different registered name at that date, not yet on file.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "An ownership vehicle, not a manufacturer.",
+      "2026-09-07: merged dormant duplicate correction key '7719265496' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0110)",
-    "notes": "zakupki footprint reviewed 2026-08-30 via zakupki_customer_clusters.py: ₽16.46bn (17 contracts, Минпромторг) + ₽1.63bn (18 contracts, Минобороны) among unwired cards — confirms this is a large, already-well-documented state defense prime with an enormous zakupki footprint by nature (already tier=plumbing). Not wiring individually per the established triage principle for entities of this scale.",
-    "zakupki_review": {
-      "as_of": "2026-08-30",
-      "outcome": "closed",
-      "note": "₽16.46bn (Минпромторг) + ₽1.63bn (Минобороны) among unwired cards. A large, already-well-documented state defense prime whose zakupki footprint is enormous by nature; not wired individually per the established triage principle for entities of this scale."
-    },
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
       {
@@ -23625,7 +23663,13 @@
       "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
       "2026-09-06: wired Rosaviatsia aviation-works operator certificate АР-485 (2026-05-19) from favt.gov.ru's public operator registry (s6416) — this entity is a certified operator flying named UAV models (АС-МК-6/ДИАМ-20), not merely a manufacturer/licensee; independently confirms operational UAV use distinct from any manufacturing license.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 4 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "The brief records this as the first EGRUL candidate checked for the",
+      "name «Аэромакс» and explicitly discarded — zero employees and a",
+      "forestry-nursery secondary OKVED. It is not the Аэромакс in this",
+      "network (that is ООО «Аэромакс», ИНН 7725347482). Tiering it as a",
+      "manufacturer would put a ruled-out company in the supplier list.",
+      "2026-09-07: merged dormant duplicate correction key '7708407413' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "egrul.nalog.ru open API, 2026-08-24",
     "_egrul_crosschecked": "2026-08-22",
@@ -26394,6 +26438,12 @@
     "_raw": {
       "context": "sually large affiliated-company cluster — 22 entities “controlled by or under significant influence of the same group of persons,” including two more Гаскар-branded siblings (ООО «Гаскар Интеграция», ИНН 7733894200; ООО «Гаскар Технологии», ИНН 9731070264), clustered around Skolkovo and a Ленинградское шоссе address shared by several “Аметист”-branded entities, plus one geographically striking outlier — ООО «Во"
     },
+    "why": [
+      {
+        "text": "2026-09-05 zakupki attachment read (379 files). Wired all 10 contracts, ₽1.46bn. Fixed a duplicate and a missing reg_number. Extended director_history back to 2018 (Саитов Р.Ф., s1847). Confirmed Афанасьев И.К. as генеральный директор continuously 2023–2026 from qualified e-signature certificate panels preserved in the archived printed forms (certs 01783089…, 02e4c9e7…, 02da33ec…, 038bd092…).",
+        "source_id": "s1847"
+      }
+    ],
     "zakupki_review": {
       "as_of": "2026-09-05",
       "outcome": "wired",
@@ -26409,15 +26459,12 @@
       "2026-09-03: fixed slug/ИНН correction-key collision on 'address_history' and 'government_contracts' (both keys set them, silently clobbering) — merged this (slug-keyed) entry's Сколково/Ленинградское address_history entries and its third (s3398) government contract into the ИНН-keyed entry, which is the one applied last; removed the now-redundant fields here.",
       "2026-09-03: removed duplicate 'products' from this (slug-keyed) entry — identical value also set on the ИНН-keyed entry (applied last); part of a registry-wide slug/ИНН collision sweep.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GUR (war-sanctions.gur.gov.ua/en/uav/companies/15561) ID-confirmed via ИНН 7733894200 — exact match, screen_gur.py sweep, 2026-08-24. Corroborates existing «Сибирячок» product entry; adds that this unit was supplied to Russian armed forces units in the war against Ukraine, that the company trained operators among military personnel directly involved in hostilities, and that its group includes component-producing enterprises (batteries, electronic/optical modules, electric motors) per the company's own website.",
+      "2026-08-26: OCR'd ZAKUPKI_ATTACH_7733894200_2770135608619000037_30-12-2020-65-0-27701356086190000370030_bb9812a7.pdf (source s1534, pulled as part of the zakupki.gov.ru batch-pull attachment set for reg 2770135608619000037) — a Moscow city default/neustoika notice, not a contract or payment document. Confirms and promotes the entity's standing address (already present only in trademark data, s1274) and adds a documented instance of contractual non-performance on an unrelated 2019 civilian IT contract.",
+      "2026-09-07: merged dormant duplicate correction key '7733894200' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
-    "why": [
-      {
-        "text": "2026-09-05 zakupki attachment read (379 files). Wired all 10 contracts, ₽1.46bn. Fixed a duplicate and a missing reg_number. Extended director_history back to 2018 (Саитов Р.Ф., s1847). Confirmed Афанасьев И.К. as генеральный директор continuously 2023–2026 from qualified e-signature certificate panels preserved in the archived printed forms (certs 01783089…, 02e4c9e7…, 02da33ec…, 038bd092…).",
-        "source_id": "s1847"
-      }
-    ],
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
       {
@@ -27498,7 +27545,9 @@
     "_corrected": [
       "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=1215226708, file cited as source s0052). Director confirmed: Поспехов Иван Александрович.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "Named only as a shareholder of a manufacturer.",
+      "2026-09-07: merged dormant duplicate correction key '1215226708' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0052)",
     "opensanctions_matches": [],
@@ -28134,7 +28183,9 @@
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0760).",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7100046925). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-09-03: removed duplicate 'products' from this (slug-keyed) entry — identical value also set on the ИНН-keyed entry, which extract_registry.py applies last; part of a registry-wide slug/ИНН collision sweep.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14072) ID-confirmed via ИНН 7100046925 — exact match, screen_gur.py sweep, 2026-08-24. GUR profile text is near-identical to the sister Ovod LLC (7100027464) profile — same product, same address city (Tula, Ryazanskaya street 3D, different office number), corroborating the existing registry note that this entity's «Овод»/«Провод» participation runs alongside РЛВТ (ovod) rather than independently.",
+      "2026-09-07: merged dormant duplicate correction key '7100046925' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -28958,7 +29009,9 @@
       "Full text read of the organization's own «Отчет о деятельности некоммерческой организации за 2025 г.», filed with Минюст (form УН000Х, pulled 23.08.2026). MAJOR CROSS-LINK FINDING: АНО «Платформа НТИ» self-declares as учредитель (founder) of SEVEN entities — including АНО «НПЦ «Ушкуйник»» (ОГРН 1235300003685), which is ALREADY a registry entity (manufacturer tier). This is a confirmed, primary-source parent-subsidiary edge between two entities already in this registry, previously unconnected. The other six named — АНО «НПЦ Колыбель БАС Калужской области», АНО «НПЦ БАС «Белгород»», АНО «НПЦ БАС Нижегородской области», АНО «НПЦ БАС Самара», АНО «ФЦ БАС», and a «Фонд поддержки проектов НТИ» — map directly onto the regional АНО «НПЦ БАС» network already parked as adjacent-not-core in the npc_bas_technopark_network memory. This is now a THIRD independent primary document tying that program to a confirmed roster entity (Ушкуйник), via the founder relationship itself rather than mere co-occurrence — worth reconsidering whether the whole НПЦ БАС cluster stays 'adjacent' or needs re-examination as directly connected through Ушкуйник. Governance is via a Наблюдательный совет (11 members) appointed per an АСИ (Агентство стратегических инициатив) protocol dated 12.12.2018 — i.e. Платформа НТИ answers structurally to АСИ. No licences; IT-accreditation on file (Минцифры, 14.05.2025).",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0765).",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "АНО «Платформа НТИ» is an institutional actor, not a producer.",
+      "2026-09-07: merged dormant duplicate correction key '7703469180' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "АНО «Платформа НТИ»'s own «Отчет о деятельности НКО за 2025 г.», filed with Минюст, pulled 23.08.2026",
     "opensanctions_matches": [
@@ -31017,6 +31070,7 @@
     "_raw": {
       "context": "founder that same year, matching the founder-roster date already established via EGRUL. On 15.06.2025, Chadaev also reports the first demonstration flight of a heavy UAV built by АО «НПП «Радар ММС» (ИНН 7814027653, St Petersburg — a well-established Rostec-adjacent precision-guidance/avionics defence contractor, Ministry of Industry as its stated main customer) at Ushkuynik's own test range, timed to the Novgo"
     },
+    "notes": "zakupki signatory review 2026-08-31/09-01: reg 1780902212017000210 (02.10.2017) carries two supplier-side-classified signatures -- Борисов Юрий Иванович, по доверенности, and (separately already in director_history) Гоголинский Кирилл Валерьевич, по Уставу, same date. Борисов signs by delegated power of attorney, not as единоличный исполнительный орган -- reads as a mid-level representative, not an officer, per the PII policy not-a-principal carve-out. Not wired to director_history.",
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1027807560186-20260823133636.pdf). Director title captured as \"ГЕНЕРАЛЬНЫЙ ДИРЕКТОР-ГЕНЕРАЛЬНЫЙ КОНСТРУКТОР\" (combined CEO/Chief Designer title) — a real, recognisable Soviet/Russian defence-industry organisational pattern, consistent with НПП «Радар ММС» being a long-established St Petersburg radar-systems manufacturer, not a shell. АО — shareholders/registrar block and director name did not extract cleanly (same layout quirk); title captured but personal name was not.",
       "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): confirmed match, radar-mms.com. Well-established Soviet-legacy radar/precision-guidance institute; also lists magnetometric systems, power-grid/smart-city IoT, and high-speed vessels (with ЦКБ по СПК им. Р.Е. Алексеева) beyond the UAV/munitions lines above.",
@@ -31036,10 +31090,10 @@
       "2026-09-06: wired Roskosmos space-activity license 1994К (2023-10-06) from licenses.roscosmos.ru's public API (full 548-record registry dump, s6414) — ИНН-matched, ОГРН cross-check confirmed against existing record.",
       "2026-09-06: wired 8 radio-frequency assignment record(s) from RKN's live Единый реестр частотных присвоений (s6429) — a new license/permit category for this entity, distinct from its existing Минпромторг/Roscosmos records. Swept against the same 22-entity UAV/comms-relevant shortlist checked against the comms-license registry; only this entity and ao-nii-stt/npp-radar-mms had any frequency assignments.",
       "RKN Единый реестр частотных присвоений screen (2026-09-07, source s6450): 32 total frequency-assignment records (page-0 sample of 20 pulled), consistent with the entity's known radar/RF-equipment manufacturing profile — routine for this class of entity, not itemized in full.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: merged dormant duplicate correction key '7814027653' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
-    "notes": "zakupki signatory review 2026-08-31/09-01: reg 1780902212017000210 (02.10.2017) carries two supplier-side-classified signatures -- Борисов Юрий Иванович, по доверенности, and (separately already in director_history) Гоголинский Кирилл Валерьевич, по Уставу, same date. Борисов signs by delegated power of attorney, not as единоличный исполнительный орган -- reads as a mid-level representative, not an officer, per the PII policy not-a-principal carve-out. Not wired to director_history.",
     "opensanctions_matches": [
       {
         "match_id": "NK-eC7dmjtHpHrs2eS3n2Y2Js",
@@ -34066,7 +34120,9 @@
       "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 4 product(s) not previously documented.",
       "2026-09-06: screen_rk2035_bas_registry.py full-roster run, ID-confirmed (inn_match=true, ogrn_match=true) hit against the rk.2035.university catalog dataset (s1165) -- wired as a new state_programs[] entry.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 1 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14291) ID-confirmed via ИНН 7714473012 — exact match, screen_gur.py sweep, 2026-08-24. Corroborates existing ECOLIBRI eVTOL / P-75 product entries. GUR states the company's advisory board is headed by \"the son of the former head of Roscosmos, Alexei Rogozin\" — this is a second independent confirmation (alongside the existing press-sourced Vedomosti note already in people.json) of Рогозин Алексей Дмитриевич's chairmanship of Эколибри's advisory council.",
+      "2026-09-07: merged dormant duplicate correction key '7714473012' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -35329,7 +35385,11 @@
     },
     "_corrected": [
       "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=7751264401, file cited as source s0126). Director confirmed: Соколов Александр Николаевич.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "A holding company at the same address, not a producer.",
+      "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 1 fiscal year(s) with revenue/profit data.",
+      "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
+      "2026-09-07: merged dormant duplicate correction key '7751264401' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0126)",
     "_egrul_crosschecked": "2026-08-22",
@@ -35503,7 +35563,8 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9725168367). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 14 candidates -- all unrelated food-science patents (an unrelated \"Гуревич Андрей Владимирович\" and a federal nutrition research institute).",
       "2026-09-05: mined both previously-unparsed БФО filings (s0416, s0417) — both confirmed genuinely zero/blank, not a parser miss (checked by hand). Surfaced a director-name discrepancy in the FY2025 filing's signature block, recorded as an open question rather than resolved.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: merged dormant duplicate correction key '9725168367' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -36316,7 +36377,9 @@
       "2026-09-06: screen_rom.py full-roster run (174 entities) found exactly one hit, this entity -- folded the raw ROM registry data into open_questions per the standing raw-screening-data-is-a-lead-not-a-fact discipline; not wired into litigation[] since a ФНС securing-measures listing is an administrative tax-enforcement restriction, not itself a court case.",
       "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 2 enforcement-proceeding record(s) totalling 11,375,198.43 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14308) ID-confirmed via ИНН 7838044584 — exact match, screen_gur.py sweep, 2026-08-24.",
+      "2026-09-07: merged dormant duplicate correction key '7838044584' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -36637,7 +36700,9 @@
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0745).",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5260494520). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13560) ID-confirmed via ИНН 5260494520 — exact match, screen_gur.py sweep, 2026-08-24. GUR's own page cross-lists АО «Стратим» (ИНН 7720901379) as a \"related company\" sharing the same product line — see related_entities.",
+      "2026-09-07: merged dormant duplicate correction key '5260494520' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -36900,7 +36965,9 @@
       "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=9705214590, file cited as source s0147). Director confirmed: Клёцкин Владислав Николаевич.",
       "2026-08-24 Rospatent full-roster trademark sweep (own ИНН, s0945): this entity's trademark representative is ООО ЮФ «АЙ ПИ ПРО» (Леонов Александр Владимирович), 121059 г. Москва, ул. Большая Дорогомиловская, д. 14, офис 96 — the IDENTICAL representative, at the identical address, used by ООО «НПО Рустехдрон». Both АО «АУРИН» and ООО «НПО Рустехдрон» are EGRУЛ-founder-access-restricted entities in this investigation's own working notes. A shared filing agent is common and not proof of coordination on its own, but flagged as worth a closer look given both entities' redacted ownership.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "A parent holding with a founder-disavowal flag on EGRUL — an ownership vehicle.",
+      "2026-09-07: merged dormant duplicate correction key '9705214590' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0147)",
     "_egrul_crosschecked": "2026-08-22",
@@ -37098,7 +37165,10 @@
     },
     "_corrected": [
       "2026-08-24 direct egrul.nalog.ru lookup: this entity is in LIQUIDATION — ЕГРЮЛ's leadership field now reads \"ЛИКВИДАТОР: Ермолов Сергей Юрьевич\" rather than a director. Confirms the already-correct adjacent tier; no longer an active going concern.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "The brief states this was checked and ruled out; it must not appear as an active supplier.",
+      "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 5 fiscal year(s) with revenue/profit data.",
+      "2026-09-07: merged dormant duplicate correction key '7805728050' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "egrul.nalog.ru open API, 2026-08-24",
     "_egrul_crosschecked": "2026-08-22",
@@ -37315,7 +37385,9 @@
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
       "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=7743414861, file cited as source s0123). Director confirmed: Федяева Анна Юрьевна.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "Holding company, not a producer.",
+      "2026-09-07: merged dormant duplicate correction key '7743414861' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0123)",
     "opensanctions_matches": [
@@ -39544,19 +39616,21 @@
     "_raw": {
       "context": "%, also the company's GD) and ООО «РТ-Развитие бизнеса» (74.9999%, ОГРН 1147746392200, ИНН 7704861136) — a direct EGRUL pull confirms its sole participant, recorded 04.12.2025, is ГК «Ростех» itself (ИНН 7704274402, ОГРН 1077799030847), holding 100% at a nominal share value of ₽45.1bn. This is a second, independent primary-source-documented tie between the Наша Правда/«Инвестментс» financing side of this networ"
     },
-    "_corrected": [
-      "Rospatent full-roster sweep (s0433), 12 trademark filing(s) matched by ИНН.",
-      "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=7704274402, file cited as source s0094). Director confirmed: Чемезов Сергей Викторович.",
-      "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0767).",
-      "2026-09-05: reviewed as the last remaining zakupki_coverage.py high-value candidate after the other 10 flags turned out to be already-triaged records the tool could not recognise as such. Closed on the archived sample, with the hit_count/reg_numbers truncation recorded explicitly rather than glossed.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
-    ],
-    "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0094)",
     "zakupki_review": {
       "as_of": "2026-09-05",
       "outcome": "closed",
       "note": "All 10 archived contract cards read: every one is a Министерство здравоохранения РФ contract dated 31.12.2019–25.12.2020, ₽1,206,993,935.28 combined — COVID-era federal medical procurement, no UAV/ЦБСТ subject matter. Not wired, per the established triage principle for state corporations of this scale (same call as АО «Технодинамика»): this investigation documents Ростех through its subsidiaries' procurement, not the parent's own. CAVEAT: the scan log records hit_count=45 but only 10 reg_numbers collected — a page-1 truncation from before zakupki_batch_pull.py's pagination fix. The 35 uncollected hits have never been seen, so this closure rests on a partial sample; a re-scan would be needed before calling the footprint fully characterised."
     },
+    "_corrected": [
+      "Rospatent full-roster sweep (s0433), 12 trademark filing(s) matched by ИНН.",
+      "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=7704274402, file cited as source s0094). Director confirmed: Чемезов Сергей Викторович.",
+      "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0767).",
+      "2026-09-05: reviewed as the last remaining zakupki_coverage.py high-value candidate after the other 10 flags turned out to be already-triaged records the tool could not recognise as such. Closed on the archived sample, with the hit_count/reg_numbers truncation recorded explicitly rather than glossed.",
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "Swept into the manufacturer tier by section position — Ростех is named in the residents roll-call as an owner of other entities, not as a resident.",
+      "2026-09-07: merged dormant duplicate correction key '7704274402' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+    ],
+    "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0094)",
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
       {
@@ -40010,7 +40084,18 @@
       "2026-09-03: removed 'ogrn' from here — identical value also set on the ИНН-keyed entry; duplicate-field cleanup.",
       "2026-09-03: removed 'registered' from here — identical value also set on the ИНН-keyed entry; duplicate-field cleanup.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "scripts/crosscheck_egrul.py flagged this as a name mismatch",
+      "(registry: ЗАО «Курскпромтеплица» vs EGRUL: АО \"КПТ\"), but the",
+      "brief's own prose (this entity's _raw.context) already documents",
+      "both names as the same company — 'АО «КПТ»/ЗАО «Курскпромтеплица»'",
+      "— and states its GD as Кашников Константин Николаевич, the exact",
+      "person EGRUL confirms. Not an error; the scaffold just never",
+      "captured ogrn/registered/director for this record. name_history is",
+      "seeded with both names but as_of/source_id for the actual rename",
+      "date are left for a human to confirm against a primary document —",
+      "the EGRUL pull only proves the CURRENT name, not when it changed.",
+      "2026-09-07: merged dormant duplicate correction key '7705944272' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0097)",
     "opensanctions_matches": [],
@@ -42943,7 +43028,13 @@
     "_corrected": [
       "2026-08-24 direct egrul.nalog.ru lookup: ОГРН, registration date and GD (Николаев А.Ю.) confirmed. No connection to the КРАМС brand or Kemerovo Oblast candidates named in krams-brand-unresolved's open question — this remains a distinct, unrelated Moscow shell entity (name collision only).",
       "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 3 enforcement-proceeding record(s) totalling 195,753.19 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "OKVED 43.29 construction-services shell, checked as a candidate for",
+      "the КРАМС brand and rejected — the brand is in Kemerovo Oblast and a",
+      "nationwide name search returned no Kemerovo entity. Keeping it in the",
+      "manufacturer tier would assert an identity the brief explicitly",
+      "declines to assert.",
+      "2026-09-07: merged dormant duplicate correction key '9701247080' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "egrul.nalog.ru open API, 2026-08-24",
     "_egrul_crosschecked": "2026-08-22",
@@ -43174,7 +43265,8 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (4217210280). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all patentees are unrelated (\"Саратовское ОАО Завод Проммаш\", \"Артемовский машиностроительный завод «Проммаш»\" -- Ukrainian) -- common-word factory-name collision, not this entity.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: merged dormant duplicate correction key '4217210280' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -46464,7 +46556,15 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5190102381). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 4 candidates -- old, empty-patentee construction-panel filings with no connection to this entity's own name.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 1 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "scripts/crosscheck_egrul.py flagged this: registry had only a",
+      "partial date (12.2024), EGRUL states the exact registration date.",
+      "This record only exists because an add_entities correction split",
+      "it out of the compound row 'НПП «ЭЛВО» / «Кольская верфь»' —",
+      "found and fixed a real bug in extract_registry.py 2026-08-22 where",
+      "a 'set' correction could never target an add_entities-created",
+      "record in the same file (by_key was built before add_entities ran).",
+      "2026-09-07: merged dormant duplicate correction key '5190102381' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026 (ul-1245100006799-20260823141101.pdf)",
     "_egrul_crosschecked": "2026-08-22",
@@ -48926,7 +49026,9 @@
       "Director field had no source_id (unverified placeholder). s0432, already on file, gives the full name directly -- linked here rather than re-pulling.",
       "2026-09-03: removed 'open_questions': [] from here — the ИНН-keyed entry sets a real, non-empty open_questions list (applied last); an empty-list placeholder here was redundant and order-dependent, part of a registry-wide slug/ИНН collision sweep.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 4 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14306) ID-confirmed via ИНН 9731094770 — exact match, screen_gur.py sweep, 2026-08-24. GUR describes this as a Moscow Innovation Cluster / Skolkovo Foundation project — a 400-hectare UAS test site in Skolkovo responsible for participant selection, pilot/aircraft admission and safety monitoring, which \"produces FPV drones used in the war against Ukraine\" (no specific model named).",
+      "2026-09-07: merged dormant duplicate correction key '9731094770' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "opensanctions_matches": [
@@ -49484,7 +49586,8 @@
       "2026-08-24: promoted 2 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: personal filings by Бегак Александр Аркадьевич, this entity's confirmed director/founder -- a transforming flying-amphibious vehicle, directly on-topic.",
       "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 2 enforcement-proceeding record(s) totalling 566,002.24 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: merged dormant duplicate correction key '2632116476' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026 (ul-1202600009919-20260823145414.pdf)",
     "opensanctions_matches": [],
@@ -49897,9 +50000,9 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7704097425). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 20+ candidates with usable patentee data are unrelated (watch brand \"Bell & Ross\", agricultural-equipment firm \"Агроцентр\", assorted individuals named Ross from NZ/US/AU/CA/UA) -- common-word/surname collision, not this entity.",
-      "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added one product: Мобильный привязной аэростатный комплекс АКВ-05."
+      "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added one product: Мобильный привязной аэростатный комплекс АКВ-05.",
+      "2026-09-07: merged dormant duplicate correction key '7704097425' into this slug-keyed entry (registry-hardening pass, no field conflict)."
     ],
-    "_verified_against": "s0009 — АО «РОСС»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
     "registrar": {
       "as_of": "2019-01-28",
       "inn": "7726030449",
@@ -49907,6 +50010,7 @@
       "ogrn": "1027739216757",
       "source_id": "s0009"
     },
+    "_verified_against": "s0009 — АО «РОСС»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-9725127025",
