@@ -155,7 +155,19 @@ def parse_pdf_filing(path: Path) -> dict | None:
             mm = re.search(rf"\b{code}\b\s+(.+)", line)
             if not mm:
                 continue
-            nums = [to_number(tok) for tok in re.findall(r"\(?-?[\d\s]{1,20}\)?", mm.group(1))]
+            # `-layout` separates the this-year and prior-year columns with
+            # a wide run of spaces -- the previous [\d\s]{1,20} pattern had
+            # no way to tell "space inside a thousands-grouped number" from
+            # "space between columns" and, capped at 20 chars, would bleed
+            # digits from the START of the second column into the first
+            # match once the gap was narrow enough to fit both within the
+            # cap (e.g. "59 574 775         13 929 333" -> "5957477513").
+            # Found 2026-09-07 on ooo-tsugam, which had a trillion-ruble
+            # "revenue" as a result. A run of 2+ spaces is the actual column
+            # boundary in this layout; a single space is only ever a
+            # thousands separator within one number.
+            first_col = re.split(r"\s{2,}", mm.group(1).strip(), maxsplit=1)[0]
+            nums = [to_number(tok) for tok in re.findall(r"\(?-?[\d\s]{1,20}\)?", first_col)]
             nums = [n for n in nums if n is not None]
             if not nums:
                 continue
