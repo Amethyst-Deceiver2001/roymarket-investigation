@@ -124,7 +124,14 @@ name collisions, not real ties.
 | Шахматов Иван Анатольевич (`shakhmatov-ivan-anatolevich`) | 471010513778 | 2026-09-07 (0 hits) | — | 2026-09-07 | — |
 | Шветов Артемий Андреевич (`shvetov-artemiy-andreevich`) | 531500409942 | 2026-09-07 (0 hits) | — | 2026-09-07 | Сотрудник @ ООО «Тримикс» |
 
-## Group 2: has a DOB but no ИНН (22 people)
+## Group 2: has a DOB but no ИНН (19 people)
+
+**Stale-entry note (2026-09-08)**: three people previously listed here —
+Корчагина Ольга Александровна, Федоров Павел Романович, Хутешен Алексей
+Александрович — have since had their personal ИНН verified and roles
+confirmed (2026-09-07/08 sessions) and are removed below. This list is a
+working backlog snapshot, not auto-synced with `people.json`; always check
+a person's actual current record before treating an entry here as current.
 
 A DOB is often the field that makes a rupep.org / press / EGRUL match
 legally usable rather than merely suggestive (see the PII-policy
@@ -139,7 +146,6 @@ a personal ИНН to screen against.
 | Дмитрий Медведев (`dmitriy-medvedev`) | 14.09.1965 | Санкт-Петербург (Saint Petersburg, then Leningrad) | Chairman, United Russia; Deputy Chairman, Security Council | PEP — party/state leadership overlapping ЦБСТ's political backing network. |
 | Елисеев Илья Владимирович (`eliseev-ilya-vladimirovich`) | 19.12.1965 | — | — | No roles/notes on file yet — reason for inclusion undocumented, needs re-check. |
 | Жулидов Евгений (`zhulidov-evgeniy`) | 14.07.1998 | — | Creator/main admin («Атлет») of TG channel «Архангел Спецназа» | Officer, 45th VDV Spetsnaz Brigade (Hostomel assault unit); identified by iStories via a Tinder-photo/leaked-data cross-reference. Confirmed affiliated participant, adjacent-Архангел network. |
-| Корчагина Ольга Александровна (`korchagina-olga-aleksandrovna`) | 25.04.1972 | — | — | No roles/notes on file yet — reason for inclusion undocumented, needs re-check. |
 | Мешкова Кристина Андреевна (`meshkova-kristina-andreevna`) | 29.03.2005 | — | — | Family record only — relation unconfirmed, dossier notes her as likely a daughter in the Мешков family, probably linked to Белоглазова (Мешкова) Л.А. of «Тримикс»/3MX. |
 | Мешкова Надежда Филипповна (`meshkova-nadezhda-filippovna`) | 08.10.1954 | — | — | Family record only — mother of Белоглазова (Мешкова) Л.А., a «Тримикс»/3MX network principal. |
 | Незнамов Василий Александрович (`neznamov-vasiliy-aleksandrovich`) | 08.02.1959 | — | — | Family record only — father of Незнамов А.В., a «Тримикс»/3MX network principal. |
@@ -149,8 +155,6 @@ a personal ИНН to screen against.
 | Петрова Марина Владимировна (`petrova-marina-vladimirovna`) | 17.08.1961 | — | — | Family record only — mother of Петров А.А., a «Тримикс»/3MX network principal. |
 | Петрова Наталья Викторовна (`petrova-natalya-viktorovna`) | 19.10.1975 | — | — | Family record only — relation to Петров А.А. (a «Тримикс»/3MX network principal) not explicitly marked in the dossier, possibly linked via Петров Виктор Витальевич; unconfirmed. |
 | Сафиева Виктория Зуфаровна (`safieva-viktoriya-zufarovna`) | 28.01.1985 | — | Сотрудник @ ООО «Тримикс» | Employee of ООО «Тримикс» (3MX network) itself, not just a relative. Identity confirmed 2026-09-07 via leaked-DB dossier (DOB/phone/email match); no ИНН, only СНИЛС. |
-| Федоров Павел Романович (`fedorov-pavel-romanovich`) | 31.08.1998 | — | Сотрудник @ ООО «Тримикс» | Employee of ООО «Тримикс» (3MX network) itself, not just a relative. |
-| Хутешен Алексей Александрович (`khuteshen-aleksey-aleksandrovich`) | 02.10.1983 | — | — @ ООО «ЦКБР» | Candidate role only (`_candidate: true`, no source_id yet) — ЦКБР tie not yet confirmed. |
 | Цыганова Виктория Юрьевна (`tsyganova-viktoriya-yurevna`) | 28.10.1963 | — | — | Family record only — wife of Цыганов Вадим Борисович, a «Тримикс»/3MX network principal. |
 | Шагиахметова Алиса Айратовна (`shagiakhmetova-alisa-ayratovna`) | 05.04.2015 | — | — | Family record only (minor) — daughter of Шагиахметов А.Ф., a «Тримикс»/3MX network principal. |
 | Шахматов Анатолий Александрович (`shakhmatov-anatoliy-aleksandrovich`) | 20.10.1963 | — | — | Family record only — father of Шахматов И.А., a «Тримикс»/3MX network principal. |
