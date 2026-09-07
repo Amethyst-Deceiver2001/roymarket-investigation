@@ -10,6 +10,7 @@
 - **Registered:** 23.07.2007
 - **Address:** Ивановская область
 - **Director:** Харитонова Наталья Евгеньевна
+- **Charter capital:** ₽2,500,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,7 +19,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Харитонова Наталья Евгеньевна | 2026-01-29 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 230905704343. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6701] |
 | Харитонова Наталья Евгеньевна | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0099] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| ФОНД РЕГИОНАЛЬНЫХ НЕКОММЕРЧЕСКИХ ПРОЕКТОВ "ДАР" 100% (₽2 500 000) | 2009-12-22 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6701] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 2500000 | 2007-07-23 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6701] |
 
 ## Financials
 
@@ -47,6 +61,7 @@ _No named principals linked to this entity yet._
 | s0304 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706664648_2023_20260815.zip) | 2026-08-15 | 2023-12-31 |
 | s0305 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706664648_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
 | s0306 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706664648_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
+| s6701 | EGRUL extract | EGRUL extract (EGRUL_7706664648_20260907_ooo-orion.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

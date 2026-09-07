@@ -20,12 +20,14 @@
 | Value | As of | Note |
 |---|---|---|
 | Рубинштейн Дмитрий Владимирович | 2026-04-10 | Генеральный директор, личный ИНН 771537069549 — same individual as GD of АО «Спецтех Инвестиции» [s0437] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6857] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
 | АНО «ЦБСТ» (ИНН 9702064851, ОГРН 1247700190430) — 100%, единственный акционер | 2026-04-10 | ГРН 1267700128376 — direct 100% ownership by ЦБСТ itself [s0437] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. [s6857] |
 
 ### Charter capital
 
@@ -53,6 +55,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0437 | EGRUL extract | EGRUL extract (ul-1267700128376-20260823014943.pdf) | — | 2026-08-23 |
 | s0805 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9703244871_20260824_ao-spetstekh-perviy.json) | 2026-08-24 | — |
+| s6857 | EGRUL extract | EGRUL extract (EGRUL_9703244871_20260907_ao-spetstekh-perviy.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

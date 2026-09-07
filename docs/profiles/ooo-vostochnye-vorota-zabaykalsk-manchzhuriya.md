@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Address:** Забайкальский край, г. Чита
 - **Director:** Карамов Эльдар Рафикович
+- **Charter capital:** ₽100,000
 - **ОКВЭД:** 70.10 — Деятельность головных офисов
 - **Wildberries overlap:** none_found
 
@@ -20,7 +21,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Емец Виктор Валентинович | 2025-03-31 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 444300525891. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6732] |
 | Карамов Эльдар Рафикович | 2025-09-18 | personal ИНН 560205129871; also sole founder [s0521] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Карамов Эльдар Рафикович 10% (₽10 000) / Хафизов Марат Миннерасыхович 90% (₽90 000) | 2024-10-02 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6732] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 100000 | 2016-12-02 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6732] |
 
 ## Financials
 
@@ -58,6 +72,7 @@ _No named principals linked to this entity yet._
 | s6547 | Bfo | Bfo (BFO_7703420474_2023_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
 | s6548 | Bfo | Bfo (BFO_7703420474_2024_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
 | s6549 | Bfo | Bfo (BFO_7703420474_2025_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
+| s6732 | EGRUL extract | EGRUL extract (EGRUL_7703420474_20260907_ooo-vostochnye-vorota-zabaykalsk-manchzhuriya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

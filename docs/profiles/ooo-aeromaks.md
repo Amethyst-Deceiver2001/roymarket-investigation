@@ -22,6 +22,7 @@
 |---|---|---|
 | Чижов Максим Сергеевич | 2020-09-01 | Генеральный директор «действующего на основании Устава» per the signature block of Государственный контракт № 44 with the Ministry of Ecology of Sakhalin Oblast. Earliest documented officer of this entity, predating both Сазанова А.А. (as_of 2024-09-27) and the unreconciled ЕГРЮЛ reading Бессонов С.Н. [s5656] |
 | Сазанова Алиса Алексеевна | 2024-09-27 | Signed государственный контракт № ГК 6401/24-4574 with ДИТ Москвы «в лице генерального директора Сазановой Алисы Алексеевны, действующего на основании Устава». Conflicts with the ЕГРЮЛ extract on file (s0218), which records Бессонов С.Н. as director — the ЕГРЮЛ extract was pulled 20.08.2026 and its own effective date has not been reconciled against this 2024 signature. Not resolved: whether Сазанова held the post only in 2024, or the two records simply reflect different dates. Flagged rather than merged. [s4572] |
+| Бессонов Сергей Николаевич | 2025-09-11 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 644914040799. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6741] |
 
 ### Founders / ownership
 
@@ -147,6 +148,7 @@
 | s5657 | Zakupki | Zakupki (ZAKUPKI_contract_2702001424420000025_20260905.html) | 2026-09-05 | — |
 | s5658 | Zakupki | Zakupki (ZAKUPKI_contract_2781501552320000032_20260905.html) | 2026-09-05 | — |
 | s6416 | bulk open-data extract | bulk open-data extract (DATASET_20260901_favt-aviation-works-operators-registry.txt) | 2026-09-01 | — |
+| s6741 | EGRUL extract | EGRUL extract (EGRUL_7725347482_20260907_ooo-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

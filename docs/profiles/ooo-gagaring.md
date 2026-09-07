@@ -29,12 +29,14 @@
 |---|---|---|
 | [{'inn_personal': '252201766438', 'name': 'Барашков Александр Сергеевич', 'nominal_value': 5050, 'share_percent': 50.5}, {'inn_personal': '231015713057', 'name': 'Александров Алексей Витальевич', 'nominal_value': 4950, 'share_percent': 49.5}] | 2023-09-04 | EGRUL-sourced split (as_of approximated to registration date; exact EGRUL extract pull date not recorded), previously the only recorded figure. [s0455] |
 | [{'name': 'Барашков Александр Сергеевич', 'nominal_value': 5000, 'share_percent': 50.0}, {'name': 'Александров Алексей Витальевич', 'nominal_value': 5000, 'note': 'участник с декабря 2023г.', 'share_percent': 50.0}] | 2025-12-31 | Гагаринг's own FY2025 audit report states an even 50%/50% split (5,000 руб. each), differing slightly from the s0455 EGRUL figure (50.5/49.5). Not reconciled — flagged, not overwritten; a later EGRUL re-pull would resolve which is current. [s5333] |
+| Александров Алексей Витальевич 49.5% (₽4 950) / Барашков Александр Сергеевич 50.5% (₽5 050) | 2026-04-15 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6776] |
 
 ### Charter capital
 
 | Value | As of | Note |
 |---|---|---|
 | 10000 | — | from brief:prose, unverified |
+| 10000 | 2023-09-04 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6776] |
 
 ### Address
 
@@ -220,6 +222,7 @@
 | s5444 | Tgpost | Tgpost (TGPOST_multi_20241219-20250207_my_el_lab-drone-and-ugv-product-line.txt) | — | — |
 | s5445 | Tgpost | Tgpost (TGPOST_multi_20241222-20250107_my_el_lab-detector-and-weapon-attachment-products.txt) | — | — |
 | s5447 | Tgpost | Tgpost (TGPOST_multi_20260828-20260904_my_el_lab-week-otryad-gagaring-recruitment.txt) | — | — |
+| s6776 | EGRUL extract | EGRUL extract (EGRUL_2312321660_20260907_ooo-gagaring.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

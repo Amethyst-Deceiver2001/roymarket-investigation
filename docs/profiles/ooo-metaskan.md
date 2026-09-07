@@ -10,6 +10,7 @@
 - **Registered:** 19.08.2020
 - **Address:** Республика Татарстан, г. Казань
 - **Director:** Поспехов Иван Александрович
+- **Charter capital:** ₽40,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
 - **Wildberries overlap:** none_found
 
@@ -19,7 +20,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Поспехов Иван Александрович | 2024-02-15 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 121525518840. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6712] |
 | Поспехов Иван Александрович | 2025-07-09 | personal ИНН 121525518840; also sole founder [s0481] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Поспехов Иван Александрович 50% (₽20 000) / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЦЕНТРАЛИЗОВАННАЯ ЮРИДИЧЕСКАЯ СЛУЖБА" 50% (₽20 000) | 2025-07-09 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6712] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 40000 | 2025-07-09 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6712] |
 
 ## Products
 
@@ -56,6 +70,7 @@
 | s6470 | Bfo | Bfo (BFO_1660349248_2023_ооо-метаскан.pdf) | — | — |
 | s6471 | Bfo | Bfo (BFO_1660349248_2024_ооо-метаскан.pdf) | — | — |
 | s6472 | Bfo | Bfo (BFO_1660349248_2025_ооо-метаскан.pdf) | — | — |
+| s6712 | EGRUL extract | EGRUL extract (EGRUL_1660349248_20260907_ooo-metaskan.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

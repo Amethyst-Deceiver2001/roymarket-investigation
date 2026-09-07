@@ -7,6 +7,7 @@
 ## At a glance
 
 - **Legal form:** NPTs (research and production centre)
+- **Charter capital:** ₽100,155,978
 - **ОКВЭД:** 26.11.3 — Производство интегральных электронных схем
 - **Wildberries overlap:** none_found
 
@@ -17,6 +18,13 @@
 | Value | As of | Note |
 |---|---|---|
 | Семилетов Антон Дмитриевич | 2024-12-03 | First director_history entry for this entity -- signed "действующего на основании Устава" as АО НПЦ «ЭЛВИС»'s own Генеральный директор on a Минпромторг zakupki government contract (reg 1770559633924000207, an ОКР contract, шифр «Процессор-ИМА-БК»). [s3702] |
+| Булкин Дмитрий Сергеевич | 2026-07-27 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 770704111783. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6829] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 100155978 | 2024-07-15 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6829] |
 
 ### Address
 
@@ -410,6 +418,7 @@
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | s6438 | Mchs | Mchs (MCHS_7735582816_20260906_fire-license-search-npts-elvis.html) | 2026-09-06 | — |
 | s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
+| s6829 | EGRUL extract | EGRUL extract (EGRUL_7735582816_20260907_npts-elvis.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

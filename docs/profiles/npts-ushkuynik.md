@@ -9,6 +9,7 @@
 - **Legal form:** NPTs (research and production centre)
 - **Registered:** 18.04.2024
 - **Address:** 173003, Новгородская область, г. Великий Новгород, Большая Санкт-Петербургская ул., д. 64, офис 12
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 46.90 — Торговля оптовая неспециализированная
 - **Wildberries overlap:** none_found
 
@@ -22,6 +23,7 @@
 |---|---|---|
 | None | 2025-09-15 | Director identity access-restricted in EGRUL as of 15.09.2025 (Federal Law 129-FZ). Confirmed by full 8-page EGRUL extract pulled 23.08.2026 (matches brief text already documenting this redaction date). [s0470] |
 | Гаврилов Даниил Дмитриевич (ИНН 771539239732), Котельников Денис Николаевич (ИНН 744408918180), Кузовлев Андрей Анатольевич (ИНН 744513968543) — succession of директоров prior to the 15.09.2025 EGRUL director-redaction date already on file | 2026-09-02 | rusprofile.ru's history section names three successive pre-redaction directors, each with a personal ИНН, not previously in the registry. Order/dates of succession not given by rusprofile, only that all three preceded the redaction. [s5289] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6722] |
 
 ### Founders / ownership
 
@@ -29,6 +31,13 @@
 |---|---|---|
 | access-restricted | 2025-09-15 | Founder/participant identity access-restricted in EGRUL as of 15.09.2025, per full 8-page extract pulled 23.08.2026. [s0470] |
 | ООО «Статус 53» (ИНН 5300006098) — named as a founder/right-to-act-without-power-of-attorney party per rusprofile's history log | 2026-09-02 | See new add_entities record for ooo-status-53 below — same founder also appears on ooo-ushkuynik-sp's record, i.e. a shared corporate parent across both Ushkuynik commercial-shell entities. [s5289] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. [s6722] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2024-04-18 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6722] |
 
 ### Address
 
@@ -86,6 +95,7 @@
 | s0470 | EGRUL extract | EGRUL extract (ul-1245300001650-20260823122617.pdf) | — | 2026-08-23 |
 | s0969 | GUR war-sanctions record | GUR war-sanctions record (GUR_5300013923_20260824_npts-ushkuynik-components.html) | 2026-08-24 | — |
 | s5289 | Rusprofile | Rusprofile (RUSPROFILE_5300013923_20260902_ooo-ushkuynik.html) | 2026-09-02 | — |
+| s6722 | EGRUL extract | EGRUL extract (EGRUL_5300013923_20260907_npts-ushkuynik.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

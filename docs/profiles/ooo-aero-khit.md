@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Address:** Хабаровский край, г. Хабаровск
 - **Director:** Яценко Виктор Вячеславович
+- **Charter capital:** ₽50,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **Wildberries overlap:** none_found
 
@@ -19,6 +20,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Яценко Виктор Вячеславович | 2024-06-03 | director personal ИНН not captured in this extract (field blank) [s0466] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "УПРАВЛЯЮЩАЯ КОМПАНИЯ КОМАКС" 100% (₽50 000) | 2023-06-09 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6714] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 50000 | 2023-06-09 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6714] |
 
 ## Products
 
@@ -67,6 +80,7 @@
 | s6488 | Bfo | Bfo (BFO_2700012608_2023_ооо-аэро-хит.pdf) | — | — |
 | s6489 | Bfo | Bfo (BFO_2700012608_2024_ооо-аэро-хит.pdf) | — | — |
 | s6490 | Bfo | Bfo (BFO_2700012608_2025_ооо-аэро-хит.pdf) | — | — |
+| s6714 | EGRUL extract | EGRUL extract (EGRUL_2700012608_20260907_ooo-aero-khit.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

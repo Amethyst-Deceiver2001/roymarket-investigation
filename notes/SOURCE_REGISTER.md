@@ -270,6 +270,50 @@ document pull (ФНС founding-doc `UD_*.zip` exports have no open-API route
 either — confirmed 2026-09-07, still a user-only manual ФНС-portal
 download).
 
+## 2026-09-07 (cont'd): EGRUL выписка parsing built and wired — charter capital 43→153/186
+
+`egrul_vypiska_pull.py`'s full-roster sweep (176 entities) only archived
+PDFs; no parser existed to actually extract data out of them, so charter
+capital coverage hadn't moved. Built `parse_egrul_vypiska.py` (new,
+local-file-processing, no network) to read the fixed numbered-row выписка
+layout: one "Размер (в рублях)" line for charter capital, a "Сведения о
+лице, имеющем право без доверенности" block for the director, and repeating
+founder blocks under "Сведения об участниках / учредителях" (ООО) — with a
+fallback to "Сведения о единственном акционере" for a sole-shareholder АО,
+since a multi-shareholder АО's real register sits with an external
+регистратор and is genuinely not disclosed in this document at all (not a
+gap this parser can close).
+
+Three real parser bugs found and fixed while triaging results, same
+discipline as the БФО pass earlier this session:
+- A capital/nominal-value regex anchored on `\d+` only, silently dropping
+  any value with kopecks (`13333.33`, `445915198255.75` on ПАО Промсвязьбанк)
+  — fixed to accept a decimal suffix.
+- The founder-block "Номинальная стоимость доли" regex had no line anchor,
+  so it swallowed the next line's row number into the value (`10000` read
+  as `1000042`) — fixed.
+- Sole-shareholder АО blocks carry no explicit percent line (100% is
+  implied by "единственном") — the parser now fills it in rather than
+  leaving `share_percent` empty.
+
+**Also found the ФЗ-129 access-restriction marker actively suppressing
+data on 13 entities** — see the updated `egrul_uav_data_closure_risk_2025`
+memory; this used to be a future risk being monitored and is now confirmed
+in effect for at least some UAV producers, with a dated before/after
+transition on `ooo-mptm`. The parser now flags this explicitly rather than
+silently reporting an empty founders list indistinguishable from "not
+disclosed for a different reason."
+
+Wired via `corrections_entities.json`: 128 charter_capital_history entries,
+106 director_history + 106 founders_history entries, 24 restricted-access
+flags, across 155 entities (43→153/186 with `charter_capital_history`,
+128/186 with a current `founders[]`, 175/186 with `director_history`).
+Reused the ИНН/slug key-collision-avoidance lesson from the БФО pass;
+found and consolidated 4 more pre-existing dual-key collisions while
+wiring (same bug class as before, unrelated new instances). All 183
+profiles rebuilt, tag-balance clean. `check_registry.py`: 0 errors, 37
+warnings (baseline unchanged).
+
 ## Known gaps in the source set itself (nothing checks these yet)
 
 - **Customs/import data.** Russia has hidden company-level import data since

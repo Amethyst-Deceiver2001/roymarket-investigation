@@ -9,6 +9,7 @@
 - **Registered:** 2024-02-28
 - **Address:** Липецкая область, г. Липецк
 - **Director:** Гаврилов Алексей Георгиевич
+- **Charter capital:** ₽10,000
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
@@ -18,12 +19,19 @@
 | Value | As of | Note |
 |---|---|---|
 | Гаврилов Алексей Георгиевич | — | per egrul.nalog.ru open-API basic lookup, 23.08.2026; matches investigator.org.ua's (investigations/270974) named director exactly -- article describes him as 46, born Odesa, resides Krasnodar, primary business is car repair, became director of one "Kilovatt" entity August 2024. Founder section not visible in this lightweight API lookup -- a full PDF EGRUL extract would be needed to confirm the article's claim that Шестопалов Сергей Анатольевич is the (allegedly nominee) founder. [s0532] |
+| Гаврилов Алексей Георгиевич | 2024-08-15 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 235209926630. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6789] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
 | Шестопалов Сергей Анатольевич | 2024-02-28 | personal ИНН 480601511636; sole founder at incorporation [s0532] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2024-02-28 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6789] |
 
 ## Products
 
@@ -70,6 +78,7 @@
 | s0945 | Rospatent record | Rospatent record (ROSPATENT_20260824_full-roster-tm-sweep.json) | 2026-08-24 | — |
 | s6501 | Bfo | Bfo (BFO_4800013729_2024_ооо-нпо-киловатт.pdf) | — | — |
 | s6502 | Bfo | Bfo (BFO_4800013729_2025_ооо-нпо-киловатт.pdf) | — | — |
+| s6789 | EGRUL extract | EGRUL extract (EGRUL_4800013729_20260907_ooo-npo-kilovatt.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

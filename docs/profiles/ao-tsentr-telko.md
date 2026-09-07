@@ -10,6 +10,7 @@
 - **Registered:** 02.08.2002
 - **Address:** Г.Москва
 - **Director:** Синельщиков Андрей Валентинович
+- **Charter capital:** ₽164,450
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,8 +19,21 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Синельщиков Андрей Валентинович | 2008-02-06 | Должность: Генеральный директор, личный ИНН 770402775996. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6743] |
 | Абрамченков Николай Григорьевич | 2015-05-26 | Signed contract 2771376023015000009 (ГБУ г. Москвы «Система 112») "действующий на основании Устава" — no доверенность number given, the standard indicator of the единоличный исполнительный орган at time of signing. Surfaced via scripts/zakupki_signatory_diff.py; predates the current director_history entry (Синельщиков Андрей Валентинович, as_of 2026-08-24 per egrul.nalog.ru) by ~11 years, no overlap conflict. [s1965] |
 | Синельщиков Андрей Валентинович | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0115] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| АКЦИОНЕРНОЕ ОБЩЕСТВО "УПРАВЛЯЮЩАЯ КОМПАНИЯ "МОЙ КАПИТАЛ" 100% (₽164 450) | 2026-01-15 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6743] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 164450 | 2015-06-29 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6743] |
 
 ## Financials
 
@@ -77,6 +91,7 @@
 | s6585 | Bfo | Bfo (BFO_7729150663_2023_ао-центр-телко.pdf) | — | — |
 | s6586 | Bfo | Bfo (BFO_7729150663_2024_ао-центр-телко.pdf) | — | — |
 | s6587 | Bfo | Bfo (BFO_7729150663_2025_ао-центр-телко.pdf) | — | — |
+| s6743 | EGRUL extract | EGRUL extract (EGRUL_7729150663_20260907_ao-tsentr-telko.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

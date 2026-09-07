@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Address:** Тульская область, г.о. город Тула, с. Осиновая Гора
 - **Director:** Черезов Андрей Павлович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
 - **ЦБСТ tie:** ЦБСТ's own channel repeatedly calls this entity's «Овод» ("Gadfly") FPV strike-drone family its "флагманский резидент" (flagship resident) — the strongest ЦБСТ-tie phrasing found anywhere in the registry.
 - **Wildberries overlap:** none_found
@@ -20,6 +21,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Черезов Андрей Павлович | 2023-11-28 | personal ИНН 712802968839; also sole founder [s0506] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Черезов Андрей Павлович 100% (₽10 000) | 2023-11-28 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6728] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2023-11-28 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6728] |
 
 ## Products
 
@@ -59,6 +72,7 @@ _No named principals linked to this entity yet._
 | s0291 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7100046925_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s0506 | EGRUL extract | EGRUL extract (ul-1237100015767-20260823133443.pdf) | — | 2026-08-23 |
 | s0760 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7100046925_20260824_ooo-vozdushnyy-traktat.json) | 2026-08-24 | — |
+| s6728 | EGRUL extract | EGRUL extract (EGRUL_7100046925_20260907_ooo-vozdushnyy-traktat.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

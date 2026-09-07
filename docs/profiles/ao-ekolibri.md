@@ -9,6 +9,7 @@
 - **Legal form:** AO (joint-stock company)
 - **Address:** г. Москва
 - **Director:** Павлова Татьяна Викторовна
+- **Charter capital:** ₽76,336
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
 - **Wildberries overlap:** none_found
 
@@ -18,7 +19,14 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Павлова Татьяна Викторовна | 2024-07-15 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 772158414345. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6824] |
 | Павлова Татьяна Викторовна | 2026-08-25 | Per АЭРОНЕКСТ member-catalog card («ФИО Руководителя» field, «Должность руководителя»: Генеральный директор), captured_date basis -- as_of is the capture date, not independently confirmed against EGRUL yet. [s1403] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 76336 | 2026-01-20 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6824] |
 
 ## Products
 
@@ -104,6 +112,7 @@
 | s2625 | Naletay | Naletay (NALETAY_7714473012_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| s6824 | EGRUL extract | EGRUL extract (EGRUL_7714473012_20260907_ao-ekolibri.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

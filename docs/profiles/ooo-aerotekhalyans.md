@@ -26,6 +26,7 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Кожемякин Владимир Владимирович 24% (₽24 000) / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ОТРАСЛЕВОЙ ЦЕНТР ИМПОРТОЗАМЕЩЕНИЯ" 51% (₽51 000) / АКЦИОНЕРНОЕ ОБЩЕСТВО "УПРАВЛЯЮЩАЯ КОМПАНИЯ "АЗИМУТ" 25% (₽25 000) | 2025-01-29 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6762] |
 | ЗИТ.ЦИ 51% / АО «УК «Азимут»» 25% / Кожемякин В.В. 24% | 2025-02-19 | ЗИТ.ЦИ stake recorded ГРН 2247713840273, 26.12.2024; Кожемякин and УК «Азимут» ГРН 2257705389357, 29.01.2025 (УК «Азимут» record ГРН 2257713671961, 19.02.2025) [s0224] |
 
 ### Charter capital
@@ -66,6 +67,7 @@
 | s0404 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714020721_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
 | s0405 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714020721_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | s0406 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714020721_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| s6762 | EGRUL extract | EGRUL extract (EGRUL_9714020721_20260907_ooo-aerotekhalyans.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

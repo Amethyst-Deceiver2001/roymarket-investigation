@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Registered:** 22.01.2010
 - **Director:** Незнамов Александр Васильевич
+- **Charter capital:** ₽10,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,12 +19,20 @@
 | Value | As of | Note |
 |---|---|---|
 | Незнамов Александр Васильевич | 2024-11-01 | 100% owner and director, per dossier, 22.01.2010 – 01.11.2024 (dossier's date range, cutoff reason not stated — compare to Тримикс's own 01.11.2024 EGRUL-restriction date, possibly the same access-restriction event, not confirmed). [s1408] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6836] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
 | 100% Незнамов Александр Васильевич | 2024-11-01 | 22.01.2010 – 01.11.2024, per dossier. [s1408] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. [s6836] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2010-01-22 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6836] |
 
 ## Financials
 
@@ -126,6 +135,7 @@
 | s6601 | Bfo | Bfo (BFO_7802491148_2023_ооо-радиофид-системы.pdf) | — | — |
 | s6602 | Bfo | Bfo (BFO_7802491148_2024_ооо-радиофид-системы.pdf) | — | — |
 | s6603 | Bfo | Bfo (BFO_7802491148_2025_ооо-радиофид-системы.pdf) | — | — |
+| s6836 | EGRUL extract | EGRUL extract (EGRUL_7802491148_20260907_ooo-radiofid-sistemy.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

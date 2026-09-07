@@ -18,6 +18,7 @@
 | Value | As of | Note |
 |---|---|---|
 | Рогозин Алексей Дмитриевич | — | from corrections:add_entities, unverified |
+| Рогозин Алексей Дмитриевич | 2021-12-24 | Должность: ДИРЕКТОР, личный ИНН 770301599800. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6867] |
 
 ### Founders / ownership
 
@@ -67,6 +68,7 @@ _No named principals linked to this entity yet._
 | s6683 | Bfo | Bfo (BFO_9724066980_2023_ано-центр-развития-транспортных-технологии.pdf) | — | — |
 | s6684 | Bfo | Bfo (BFO_9724066980_2024_ано-центр-развития-транспортных-технологии.pdf) | — | — |
 | s6685 | Bfo | Bfo (BFO_9724066980_2025_ано-центр-развития-транспортных-технологии.pdf) | — | — |
+| s6867 | EGRUL extract | EGRUL extract (EGRUL_9724066980_20260907_ano-tsentr-razvitiya-transportnykh-tekhnologiy.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

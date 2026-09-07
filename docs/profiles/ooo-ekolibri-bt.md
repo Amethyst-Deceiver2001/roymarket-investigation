@@ -8,6 +8,7 @@
 
 - **Legal form:** OOO (limited liability company)
 - **Address:** г. Москва
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30.6 — Производство беспилотных авиационных систем
 - **Wildberries overlap:** none_found
 
@@ -18,6 +19,18 @@
 | Value | As of | Note |
 |---|---|---|
 | None | 2026-07-13 | Director appointment record present (ГРН 2267705989274, 13.07.2026 — very recent) but name field not captured in this extraction pass. [s0507] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| АКЦИОНЕРНОЕ ОБЩЕСТВО "ЭКОЛИБРИ" 100% (₽10 000) | 2023-11-30 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6862] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2023-08-16 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6862] |
 
 ## Financials
 
@@ -50,6 +63,7 @@ _No named principals linked to this entity yet._
 | s6657 | Bfo | Bfo (BFO_9713001941_2023_ооо-эколибри-бт.pdf) | — | — |
 | s6658 | Bfo | Bfo (BFO_9713001941_2024_ооо-эколибри-бт.pdf) | — | — |
 | s6659 | Bfo | Bfo (BFO_9713001941_2025_ооо-эколибри-бт.pdf) | — | — |
+| s6862 | EGRUL extract | EGRUL extract (EGRUL_9713001941_20260907_ooo-ekolibri-bt.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

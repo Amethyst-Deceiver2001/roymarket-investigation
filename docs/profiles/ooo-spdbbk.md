@@ -7,8 +7,29 @@
 ## At a glance
 
 - **Legal form:** OOO (limited liability company)
+- **Charter capital:** ₽35,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **Wildberries overlap:** none_found
+
+## Ownership & corporate history
+
+### Director
+
+| Value | As of | Note |
+|---|---|---|
+| Королев Дмитрий Михайлович | 2026-08-04 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 784804037752. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6847] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "КРАВТ" 100% (₽35 000) | 2026-08-04 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6847] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 35000 | 2023-04-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6847] |
 
 ## Products
 
@@ -67,6 +88,7 @@ _No named principals linked to this entity yet._
 | s6628 | Bfo | Bfo (BFO_7838044584_2023_ооо-спдббк.pdf) | — | — |
 | s6629 | Bfo | Bfo (BFO_7838044584_2024_ооо-спдббк.pdf) | — | — |
 | s6630 | Bfo | Bfo (BFO_7838044584_2025_ооо-спдббк.pdf) | — | — |
+| s6847 | EGRUL extract | EGRUL extract (EGRUL_7838044584_20260907_ooo-spdbbk.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

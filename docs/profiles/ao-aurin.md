@@ -10,6 +10,7 @@
 - **Registered:** 15.12.2023
 - **Address:** Г.Москва
 - **Director:** Клёцкин Владислав Николаевич
+- **Charter capital:** ₽100,000
 - **ОКВЭД:** 70.22 — None
 - **Wildberries overlap:** not_checked
 
@@ -19,7 +20,14 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Клёцкин Владислав Николаевич | 2024-10-21 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 772605415135. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6859] |
 | Клёцкин Владислав Николаевич | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0147] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 100000 | 2023-12-15 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6859] |
 
 ## Financials
 
@@ -52,6 +60,7 @@
 | s0945 | Rospatent record | Rospatent record (ROSPATENT_20260824_full-roster-tm-sweep.json) | 2026-08-24 | — |
 | s6647 | Bfo | Bfo (BFO_9705214590_2024_ао-аурин.pdf) | — | — |
 | s6648 | Bfo | Bfo (BFO_9705214590_2025_ао-аурин.pdf) | — | — |
+| s6859 | EGRUL extract | EGRUL extract (EGRUL_9705214590_20260907_ao-aurin.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

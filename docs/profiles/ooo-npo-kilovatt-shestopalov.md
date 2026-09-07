@@ -9,6 +9,7 @@
 - **Registered:** 2024-07-22
 - **Address:** Россия, 398024, Липецкая область, г. Липецк, ул. Папина, д. 2
 - **Director:** Шестопалов Сергей Анатольевич
+- **Charter capital:** ₽1,000,000
 - **ЦБСТ tie:** РЭБ «Капюшон» (this entity's product) is repeatedly shown as a ЦБСТ-supported/resident development — delivered to troops as "техника, созданная при поддержке ЦБСТ" and shown at Дронница 2025.
 - **Wildberries overlap:** none_found
 
@@ -25,6 +26,12 @@
 | Value | As of | Note |
 |---|---|---|
 | Шестопалов Сергей Анатольевич | 2026-05-13 | personal ИНН 480601511636; sole founder -- appointment record dated 13.05.2026 in this extract (may reflect a re-entry/confirmation of an existing founding stake rather than a change, original registration is 22.07.2024) [s0533] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 1000000 | 2026-05-13 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6790] |
 
 ### Facility type
 
@@ -139,6 +146,7 @@ _No named principals linked to this entity yet._
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | s6503 | Bfo | Bfo (BFO_4800016776_2024_ооо-научно-производственное-объединение-киловатт.pdf) | — | — |
 | s6504 | Bfo | Bfo (BFO_4800016776_2025_ооо-научно-производственное-объединение-киловатт.pdf) | — | — |
+| s6790 | EGRUL extract | EGRUL extract (EGRUL_4800016776_20260907_ooo-npo-kilovatt-shestopalov.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

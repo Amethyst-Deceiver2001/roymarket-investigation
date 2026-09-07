@@ -23,11 +23,18 @@
 |---|---|---|
 | Козлов Дмитрий Сергеевич | 2023-04-07 | личный ИНН 502727680236 — GD and 100% owner since registration [s0458] |
 
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Козлов Дмитрий Сергеевич 100% (₽10 000) | 2023-04-07 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6768] |
+
 ### Charter capital
 
 | Value | As of | Note |
 |---|---|---|
 | 10000 | — | from brief:manufacturers-table:line-1022, unverified |
+| 10000 | 2023-04-07 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6768] |
 
 ## Products
 
@@ -158,6 +165,7 @@
 | s1396 | site capture | site capture (SITE_9721203814_20260825_ooo-goudron-yandex-reviews-photos.json) | 2026-08-25 | — |
 | s6457 | Nabat | Nabat (NABAT_9721203814_20260907_produkt-site-marketing-scan.html) | 2026-09-07 | — |
 | s6458 | Tgpost | Tgpost (TGPOST_multi_20260907_godrone-battlefield-testimonial-series.txt) | 2026-09-07 | — |
+| s6768 | EGRUL extract | EGRUL extract (EGRUL_9721203814_20260907_ooo-goudron.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Address:** г. Москва
 - **Director:** Константинов Евгений Александрович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30.39 — Производство прочих летательных аппаратов
 - **ЦБСТ tie:** EU-sanctioned as one of six named ЦБСТ residents ("Гаскар Групп") in the EU's 20th sanctions package, per ЦБСТ's own coverage of the listing.
 - **Wildberries overlap:** confirmed_direct
@@ -20,6 +21,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Константинов Евгений Александрович | 2026-04-23 | personal ИНН 263114465785 [s0468] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СИБИРСКАЯ НАВИГАЦИОННАЯ КОМПАНИЯ" 100% (₽10 000) | 2026-04-03 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6759] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2023-04-12 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6759] |
 
 ## Products
 
@@ -82,6 +95,7 @@ _No named principals linked to this entity yet._
 | s6654 | Bfo | Bfo (BFO_9710112989_2023_ооо-гаскар.pdf) | — | — |
 | s6655 | Bfo | Bfo (BFO_9710112989_2024_ооо-гаскар.pdf) | — | — |
 | s6656 | Bfo | Bfo (BFO_9710112989_2025_ооо-гаскар.pdf) | — | — |
+| s6759 | EGRUL extract | EGRUL extract (EGRUL_9710112989_20260907_ooo-gaskar.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

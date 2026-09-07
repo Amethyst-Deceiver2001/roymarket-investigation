@@ -17,7 +17,14 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Чадаев Алексей Викторович | 2023-09-19 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 771003683569. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6806] |
 | Чадаев Алексей Викторович | 2026-08-24 | per egrul.nalog.ru open-API lookup, 2026-08-24 [s0947] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ "ПЛАТФОРМА НАЦИОНАЛЬНОЙ ТЕХНОЛОГИЧЕСКОЙ ИНИЦИАТИВЫ" / АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ "ЦЕНТР СТРЕЛКОВОГО И АВИАЦИОННОГО СПОРТА "ДЕМЯНСК" / АКЦИОНЕРНОЕ ОБЩЕСТВО "УПРАВЛЯЮЩАЯ КОМПАНИЯ ИННОВАЦИОННОГО НАУЧНО- ТЕХНОЛОГИЧЕСКОГО ЦЕНТРА "ИНТЕЛЛЕКТУАЛЬНАЯ ЭЛЕКТРОНИКА - ВАЛДАЙ" / МИНИСТЕРСТВО ПРОМЫШЛЕННОСТИ И ТОРГОВЛИ НОВГОРОДСКОЙ ОБЛАСТИ | 2024-02-29 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6806] |
 
 ### Address
 
@@ -139,6 +146,7 @@
 | s5301 | transcript | transcript (TRANSCRIPT_20250407_programma-razvitiya-bas-novgorod-oblast-minpromtorg.pdf) | 2025-04-07 | — |
 | s5302 | Zakupki | Zakupki (ZAKUPKI_5300010714_20251217_izveshchenie-smd-oborudovanie-ushkuynik.doc) | 2025-12-17 | — |
 | s5313 | Zakupki | Zakupki (ZAKUPKI_5300010714_20260902_sberbank-ast-search-ushkuynik-11notices.json) | 2026-09-02 | — |
+| s6806 | EGRUL extract | EGRUL extract (EGRUL_5300010714_20260907_ano-npts-ushkuynik.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

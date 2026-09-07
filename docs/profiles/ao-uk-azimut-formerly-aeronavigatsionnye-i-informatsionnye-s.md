@@ -10,6 +10,7 @@
 - **Registered:** 30.05.2016
 - **Address:** Г.Москва
 - **Director:** Саидов Аскер Казбекович
+- **Charter capital:** ₽12,806,700,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,7 +19,14 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Саидов Аскер Казбекович | 2016-09-26 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 054403029570. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6735] |
 | Саидов Аскер Казбекович | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0106] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 12806700000 | 2017-12-15 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6735] |
 
 ## Financials
 
@@ -71,6 +79,7 @@
 | s0317 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
 | s0318 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | s0319 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| s6735 | EGRUL extract | EGRUL extract (EGRUL_7714390623_20260907_ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

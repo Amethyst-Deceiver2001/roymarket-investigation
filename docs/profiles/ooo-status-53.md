@@ -7,6 +7,7 @@
 ## At a glance
 
 - **Director:** ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Захаров Сергей Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)
+- **Charter capital:** ₽10,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -16,6 +17,19 @@
 | Value | As of | Note |
 |---|---|---|
 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Захаров Сергей Николаевич (confirmed live via egrul.nalog.ru 2026-09-02) | — | from corrections:add_entities, unverified |
+| Захаров Сергей Николаевич | 2022-10-27 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 532122612279. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6804] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Филиппов Вадим Владимирович 100% (₽10 000) | 2022-10-27 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6804] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2022-10-27 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6804] |
 
 ## Financials
 
@@ -38,6 +52,7 @@
 | s6518 | Bfo | Bfo (BFO_5300006098_2023_ооо-статус-53.pdf) | — | — |
 | s6519 | Bfo | Bfo (BFO_5300006098_2024_ооо-статус-53.pdf) | — | — |
 | s6520 | Bfo | Bfo (BFO_5300006098_2025_ооо-статус-53.pdf) | — | — |
+| s6804 | EGRUL extract | EGRUL extract (EGRUL_5300006098_20260907_ooo-status-53.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -7,6 +7,7 @@
 ## At a glance
 
 - **Director:** Александр Паничев (b. 1995)
+- **Charter capital:** ₽10,000
 - **ЦБСТ tie:** Operates under the «Народный ВПК» (People's Defense-Industrial Complex) framework, run jointly with ANO «ЦБСТ» — a 13-14.08.2026 Народный фронт roundtable had ЦБСТ's own deputy director, Рубинштейн Дмитрий, presenting alongside Kulibin-club's spokesperson.
 - **Wildberries overlap:** not_checked
 
@@ -17,6 +18,19 @@
 | Value | As of | Note |
 |---|---|---|
 | Александр Паничев (b. 1995) | — | from brief:manufacturers-table:line-1018, unverified |
+| Климаков Сергей Васильевич | 2003-04-23 | Должность: Руководитель юридического лица, личный ИНН 774321508686. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6740] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Черленок Игорь Эдуардович (₽3 400) / Климаков Сергей Васильевич (₽3 300) / Дмитриев Геннадий Витальевич (₽3 300) | 2003-04-23 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6740] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2003-04-23 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6740] |
 
 ## Products
 
@@ -43,6 +57,7 @@
 |---|---|---|---|---|
 | s0560 | transcript | transcript (TRANSCRIPT_20260813_onf-kulibin-klub-roundtable.html) | 2026-08-13 | — |
 | s0561 | transcript | transcript (TRANSCRIPT_20260823_pointmedia-gleb-kiselev-profile.html) | 2026-08-23 | — |
+| s6740 | EGRUL extract | EGRUL extract (EGRUL_7725229200_20260907_kulibin-klub.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

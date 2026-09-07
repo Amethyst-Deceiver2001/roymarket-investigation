@@ -10,6 +10,7 @@
 - **Registered:** 09.09.2024
 - **Address:** Удмуртская Республика, г.о. город Глазов, г. Глазов
 - **Director:** Королев Дмитрий Михайлович
+- **Charter capital:** ₽50,000
 - **ОКВЭД:** 26.11 — Производство элементов электронной аппаратуры
 - **Wildberries overlap:** none_found
 
@@ -20,6 +21,19 @@
 | Value | As of | Note |
 |---|---|---|
 | Королев Дмитрий Михайлович | 2024-09-09 | personal ИНН 784804037752 — the SAME person as ООО «КРАВТ»'s own sole founder/director; also sole founder here [s0509] |
+| Королев Дмитрий Михайлович | 2026-08-25 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 784804037752. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6773] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Королев Дмитрий Михайлович 10% (₽5 000) / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "КРАВТ" 90% (₽45 000) | 2024-09-09 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6773] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 50000 | 2024-09-09 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6773] |
 
 ## Products
 
@@ -88,6 +102,7 @@
 | s0509 | EGRUL extract | EGRUL extract (ul-1241800012222-20260823135044.pdf) | — | 2026-08-23 |
 | s6473 | Bfo | Bfo (BFO_1800023369_2024_ооо-кравт-удмуртия.pdf) | — | — |
 | s6474 | Bfo | Bfo (BFO_1800023369_2025_ооо-кравт-удмуртия.pdf) | — | — |
+| s6773 | EGRUL extract | EGRUL extract (EGRUL_1800023369_20260907_ooo-kravt-udmurtiya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

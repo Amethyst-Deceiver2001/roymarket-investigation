@@ -25,6 +25,7 @@
 | Белоглазова (Мешкова) Людмила Александровна | 2024-08-22 | Pre-restriction directorship per dossier, 21.07.2023 – 22.08.2024 (company's own incorporation date through the handover to Шагиахметов). [s1408] |
 | Шагиахметов Айрат Фатхутдинович | 2024-10-31 | Pre-restriction directorship per dossier, 23.08.2024 – 31.10.2024 (took over from Белоглазова, held role through the EGRUL restriction date). [s1408] |
 | — (EGRUL-restricted) | 2024-11-01 | Доступ к сведениям ограничен, ГРН 2247802369637, 01.11.2024 — Federal Law 129-FZ restriction, not a data gap [s0225] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6749] |
 
 ### Founders / ownership
 
@@ -34,6 +35,7 @@
 | 15% Шагиахметов Айрат Фатхутдинович | 2024-10-31 | Pre-restriction ownership per dossier, 23.08.2024 – 31.10.2024. [s1408] |
 | 70-100% Белоглазова (Мешкова) Людмила Александровна | 2024-10-31 | Pre-restriction ownership per dossier, 21.07.2023 – 31.10.2024 (the day before EGRUL access was restricted). [s1408] |
 | 3 participants, all EGRUL-restricted | 2024-11-01 | Доступ к сведениям ограничен, ГРН 2247802369637, 01.11.2024 — Federal Law 129-FZ restriction, not a data gap [s0225] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. [s6749] |
 
 ### Charter capital
 
@@ -208,6 +210,7 @@
 | s1386 | site capture | site capture (SITE_5038189259_20260825_ooo-pokrov-pokrovsystem-ru.html) | 2026-08-25 | — |
 | s1388 | site capture | site capture (SITE_780223272953_20260825_max911-dji911-com-contacts.html) | 2026-08-25 | — |
 | s1408 | third-party OSINT dossier | third-party OSINT dossier (DOSSIER_20260825_trimix-3mx-companies-and-people.xlsx) | 2026-08-25 | — |
+| s6749 | EGRUL extract | EGRUL extract (EGRUL_7802942873_20260907_ooo-trimiks-bulat-3mx.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

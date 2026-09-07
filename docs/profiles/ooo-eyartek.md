@@ -10,6 +10,7 @@
 - **Registered:** 07.04.2022
 - **Address:** Ульяновская область, г. Ульяновск
 - **Director:** Жуков Андрей Викторович
+- **Charter capital:** ₽16,000
 - **ОКВЭД:** 62.01 — Разработка компьютерного программного обеспечения
 - **Wildberries overlap:** none_found
 
@@ -20,6 +21,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Жуков Андрей Викторович | 2024-02-12 | personal ИНН 732703889628; also sole founder [s0485] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Жуков Андрей Викторович 25% (₽4 000) / Капустин Павел Евгеньевич 25% (₽4 000) / Перекатов Сергей Сергеевич 25% (₽4 000) / Фомин Александр Николаевич 25% (₽4 000) | 2024-02-12 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6729] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 16000 | 2024-02-12 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6729] |
 
 ## Financials
 
@@ -70,6 +83,7 @@
 | s6539 | Bfo | Bfo (BFO_7300000540_2023_ооо-эиартэк.pdf) | — | — |
 | s6540 | Bfo | Bfo (BFO_7300000540_2024_ооо-эиартэк.pdf) | — | — |
 | s6541 | Bfo | Bfo (BFO_7300000540_2025_ооо-эиартэк.pdf) | — | — |
+| s6729 | EGRUL extract | EGRUL extract (EGRUL_7300000540_20260907_ooo-eyartek.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

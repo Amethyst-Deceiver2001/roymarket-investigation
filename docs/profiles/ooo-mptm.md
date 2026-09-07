@@ -21,12 +21,14 @@
 | Value | As of | Note |
 |---|---|---|
 | Колударов Антон Валерьевич | 2026-08-04 | Генеральный директор, личный ИНН 773670509988, ГРН 2267706682230, 04.08.2026 — the extract shows only the current holder, so the predecessor is not named in this document [s0230] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6708] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
 | — (EGRUL-restricted) | 2026-07-15 | Доступ к сведениям ограничен, ГРН 2267706073688, 15.07.2026 — Federal Law 129-FZ restriction on the участники/учредители section [s0230] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. [s6708] |
 
 ### Charter capital
 
@@ -62,6 +64,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0230 | EGRUL extract | EGRUL extract (ul-1257700021468-20260814192506.pdf) | — | 2026-08-14 |
 | s0407 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714068459_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
+| s6708 | EGRUL extract | EGRUL extract (EGRUL_9714068459_20260907_ooo-mptm.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

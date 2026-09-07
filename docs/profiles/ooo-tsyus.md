@@ -10,6 +10,7 @@
 - **Registered:** 16.12.2018
 - **Address:** Республика Марий Эл
 - **Director:** Поспехов Иван Александрович
+- **Charter capital:** ₽20,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,7 +19,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Поспехов Иван Александрович | 2023-02-13 | Должность: ДИРЕКТОР, личный ИНН 121525518840. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6709] |
 | Поспехов Иван Александрович | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0052] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Поспехов Иван Александрович 100% (₽20 000) | 2023-02-13 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6709] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 20000 | 2022-11-23 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6709] |
 
 ## Financials
 
@@ -42,6 +56,7 @@
 | s6460 | Bfo | Bfo (BFO_1215226708_2021_ооо-цюс.pdf) | — | — |
 | s6461 | Bfo | Bfo (BFO_1215226708_2022_ооо-цюс.pdf) | — | — |
 | s6462 | Bfo | Bfo (BFO_1215226708_2024_ооо-цюс.pdf) | — | — |
+| s6709 | EGRUL extract | EGRUL extract (EGRUL_1215226708_20260907_ooo-tsyus.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

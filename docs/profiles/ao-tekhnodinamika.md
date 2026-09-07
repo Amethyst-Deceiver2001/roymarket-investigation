@@ -9,9 +9,22 @@
 - **Legal form:** AO (joint-stock company)
 - **Registered:** 12.02.2003
 - **Address:** Г.Москва
+- **Charter capital:** ₽616,565,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
+
+### Director
+
+| Value | As of | Note |
+|---|---|---|
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6737] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 616565000 | 2017-05-11 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6737] |
 
 ### Legal name
 
@@ -68,6 +81,7 @@ _No named principals linked to this entity yet._
 | s0778 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7719265496_20260824_ao-tekhnodinamika.json) | 2026-08-24 | — |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
+| s6737 | EGRUL extract | EGRUL extract (EGRUL_7719265496_20260907_ao-tekhnodinamika.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -8,6 +8,7 @@
 
 - **Address:** г. Москва
 - **Director:** Ивлев Артём Юрьевич
+- **Charter capital:** ₽5,000,000
 - **ОКВЭД:** 46.42 — Торговля оптовая одеждой и обувью
 - **Wildberries overlap:** none_found
 
@@ -19,7 +20,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Ивлев Артём Юрьевич | 2025-04-30 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 502769431954. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6767] |
 | Ивлев Артём Юрьевич | 2025-08-06 | personal ИНН 502769431954 [s0471] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Ивлев Артём Юрьевич 100% (₽5 000 000) | 2025-08-06 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6767] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 5000000 | 2025-08-06 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6767] |
 
 ## Products
 
@@ -52,6 +66,7 @@ _No named principals linked to this entity yet._
 | s6668 | Bfo | Bfo (BFO_9721200789_2023_ооо-бпр-ярл.pdf) | — | — |
 | s6669 | Bfo | Bfo (BFO_9721200789_2024_ооо-бпр-ярл.pdf) | — | — |
 | s6670 | Bfo | Bfo (BFO_9721200789_2025_ооо-бпр-ярл.pdf) | — | — |
+| s6767 | EGRUL extract | EGRUL extract (EGRUL_9721200789_20260907_yarl.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

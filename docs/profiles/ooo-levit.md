@@ -10,6 +10,7 @@
 - **Registered:** 23.05.2006
 - **Address:** Самарская область
 - **Director:** Шуликин Николай Константинович
+- **Charter capital:** ₽118,371,196
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,7 +19,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Шуликин Николай Константинович | 2006-05-23 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 631500347255. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6697] |
 | Шуликин Николай Константинович | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0083] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Михельсон Леонид Викторович 78.2902% (₽92 673 000) / Симановский Леонид Яковлевич 21.7098% (₽25 698 196) | 2016-07-21 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6697] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 118371196 | 2016-07-21 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6697] |
 
 ## Financials
 
@@ -50,6 +64,7 @@ _No named principals linked to this entity yet._
 | s0286 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_6330030244_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | s0287 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_6330030244_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s0752 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_6330030244_20260824_ooo-levit.json) | 2026-08-24 | — |
+| s6697 | EGRUL extract | EGRUL extract (EGRUL_6330030244_20260907_ooo-levit.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

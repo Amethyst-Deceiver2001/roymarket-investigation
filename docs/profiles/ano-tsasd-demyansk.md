@@ -18,6 +18,13 @@
 | Value | As of | Note |
 |---|---|---|
 | Директор (единоличный исполнительный орган) | 2023-05-03 | Term 03.05.2023–02.05.2028, appointed by Решение №1 Учредителя — individual name not captured in this pass, needs a closer read [s0442] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6805] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. [s6805] |
 
 ### Address
 
@@ -63,6 +70,7 @@ _No named principals linked to this entity yet._
 | s0442 | document | document (63713a19-ed28-4f81-b26a-dae6ad2f54e1.pdf) | — | 2025-12-31 |
 | s0570 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5300008970_20260824_ano-tsasd-demyansk.json) | 2026-08-24 | 2026-08-24 |
 | s0747 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5300008970_20260824_ano-tsasd-demyansk.json) | 2026-08-24 | — |
+| s6805 | EGRUL extract | EGRUL extract (EGRUL_5300008970_20260907_ano-tsasd-demyansk.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

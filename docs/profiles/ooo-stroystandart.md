@@ -10,6 +10,7 @@
 - **Registered:** 13.11.2007
 - **Address:** Г.Москва
 - **Director:** Аккерман Екатерина Валерьевна
+- **Charter capital:** ₽1,000,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,7 +19,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Аккерман Екатерина Валерьевна | 2019-03-14 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 370600326800. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6826] |
 | Аккерман Екатерина Валерьевна | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0118] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Аккерман Екатерина Валерьевна 0.02% (₽200) / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ФИНКОНСАЛТИНГК" 99.98% (₽999 800) | 2025-03-21 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6826] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 1000000 | 2025-03-21 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6826] |
 
 ## Financials
 
@@ -47,6 +61,7 @@ _No named principals linked to this entity yet._
 | s6590 | Bfo | Bfo (BFO_7733629755_2023_ооо-строистандарт.pdf) | — | — |
 | s6591 | Bfo | Bfo (BFO_7733629755_2024_ооо-строистандарт.pdf) | — | — |
 | s6592 | Bfo | Bfo (BFO_7733629755_2025_ооо-строистандарт.pdf) | — | — |
+| s6826 | EGRUL extract | EGRUL extract (EGRUL_7733629755_20260907_ooo-stroystandart.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

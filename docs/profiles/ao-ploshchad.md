@@ -27,6 +27,7 @@
 | Value | As of | Note |
 |---|---|---|
 | 112000 | 2025-11-11 | Изменения №2 к Уставу (Протокол №6 внеочередного общего собрания акционеров от 10.11.2025, зарегистрированы 11.11.2025): «уставный капитал ... состоит из номинальной стоимости размещенных 1120 ... обыкновенных акций и составляет 112 000 рублей». Устав is approved by a plural Общее собрание акционеров, not a sole founder, so no individual founder name is recoverable from устав text — see founders[] left empty. [s0197] |
+| 112000 | 2026-05-27 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6769] |
 
 ### Address
 
@@ -90,6 +91,7 @@
 | s6674 | Bfo | Bfo (BFO_9723203841_2023_ао-площадь.pdf) | — | — |
 | s6675 | Bfo | Bfo (BFO_9723203841_2024_ао-площадь.pdf) | — | — |
 | s6676 | Bfo | Bfo (BFO_9723203841_2025_ао-площадь.pdf) | — | — |
+| s6769 | EGRUL extract | EGRUL extract (EGRUL_9723203841_20260907_ao-ploshchad.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

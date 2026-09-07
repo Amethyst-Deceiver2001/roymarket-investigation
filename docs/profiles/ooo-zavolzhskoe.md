@@ -10,6 +10,7 @@
 - **Registered:** 16.04.2013
 - **Address:** Ивановская область
 - **Director:** Волков Михаил Вадимович
+- **Charter capital:** ₽5,555,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,7 +19,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Волков Михаил Вадимович | 2013-07-11 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 780158749175. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6695] |
 | Волков Михаил Вадимович | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0061] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Волков Михаил Вадимович 1% (₽55 000) / НЕКОММЕРЧЕСКИЙ ФОНД СОДЕЙСТВИЯ СОХРАНЕНИЮ ИСТОРИКО-КУЛЬТУРНОГО НАСЛЕДИЯ "ГРАДИСЛАВА" 99% (₽5 500 000) | 2015-03-12 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6695] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 5555000 | 2013-04-16 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6695] |
 
 ## Financials
 
@@ -51,6 +65,7 @@
 | s0257 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
 | s0258 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
 | s0295 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| s6695 | EGRUL extract | EGRUL extract (EGRUL_3705066020_20260907_ooo-zavolzhskoe.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

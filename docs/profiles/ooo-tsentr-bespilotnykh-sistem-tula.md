@@ -10,6 +10,7 @@
 - **Registered:** 08.02.2023
 - **Address:** ул. Кирова, д. 135, к. 1, пом. 9, пом. 15, г. Тула, Тульская обл., 300004
 - **Director:** Борисов Александр Сергеевич
+- **Charter capital:** ₽10,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -19,6 +20,19 @@
 | Value | As of | Note |
 |---|---|---|
 | Борисов Александр Сергеевич | 2023-12-25 | Генеральный директор, signed 25.12.2023 government contract 03662000356230077920001 (regNumber 2711801501123000085), acting on Устав [s1914] |
+| Шпак Максим Викторович | 2024-06-10 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 710516460141. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6813] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Борисов Александр Сергеевич 20% (₽2 000) / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "НАУЧНО- ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ПРОГРАММНЫЕ КОМПЛЕКСЫ РЕАЛЬНОГО ВРЕМЕНИ" 20% (₽2 000) / ФОНД РАЗВИТИЯ ПРОМЫШЛЕННОСТИ ТУЛЬСКОЙ ОБЛАСТИ 60% (₽6 000) | 2023-04-24 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6813] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2023-02-08 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6813] |
 
 ## Financials
 
@@ -72,6 +86,7 @@ _No named principals linked to this entity yet._
 | s6535 | Bfo | Bfo (BFO_7100032961_2023_ооо-цбс.pdf) | — | — |
 | s6536 | Bfo | Bfo (BFO_7100032961_2024_ооо-цбс.pdf) | — | — |
 | s6537 | Bfo | Bfo (BFO_7100032961_2025_ооо-цбс.pdf) | — | — |
+| s6813 | EGRUL extract | EGRUL extract (EGRUL_7100032961_20260907_ooo-tsentr-bespilotnykh-sistem-tula.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

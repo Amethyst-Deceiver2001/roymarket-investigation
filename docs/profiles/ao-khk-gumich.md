@@ -9,7 +9,22 @@
 - **Legal form:** AO (joint-stock company)
 - **Registered:** 14.08.2023
 - **Address:** Г.Москва
+- **Charter capital:** ₽400,002
 - **Wildberries overlap:** not_checked
+
+## Ownership & corporate history
+
+### Director
+
+| Value | As of | Note |
+|---|---|---|
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6869] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 400002 | 2024-01-24 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6869] |
 
 ## Financials
 
@@ -37,6 +52,7 @@ _No named principals linked to this entity yet._
 | s0421 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2023_20260818.zip) | 2026-08-18 | 2023-12-31 |
 | s0422 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2024_20260818.zip) | 2026-08-18 | 2024-12-31 |
 | s0423 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2025_20260818.zip) | 2026-08-18 | 2025-12-31 |
+| s6869 | EGRUL extract | EGRUL extract (EGRUL_9726051114_20260907_ao-khk-gumich.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

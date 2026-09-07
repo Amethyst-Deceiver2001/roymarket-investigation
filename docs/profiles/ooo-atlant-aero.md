@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Address:** Ростовская область, г.о. город Таганрог
 - **Director:** Хутешен Алексей Александрович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **Wildberries overlap:** none_found
 
@@ -19,6 +20,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Хутешен Алексей Александрович | 2023-12-27 | personal ИНН 615404085178 [s0467] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Шевченко Константин Игоревич 8% (₽800) / Пряников Владислав Сергеевич 2% (₽200) / Хутешен Алексей Александрович 39% (₽3 900) / АКЦИОНЕРНОЕ ОБЩЕСТВО "ПРОМИНВЕСТ" 51% (₽5 100) / АКЦИОНЕРНОЕ ОБЩЕСТВО "ТЕХНОДИНАМИКА" | 2026-08-10 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6725] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2023-09-21 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6725] |
 
 ## Products
 
@@ -62,6 +75,7 @@
 | s0467 | EGRUL extract | EGRUL extract (ul-1236100025633-20260823122756.pdf) | — | 2026-08-23 |
 | s0750 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_6154165878_20260824_ooo-atlant-aero.json) | 2026-08-24 | — |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| s6725 | EGRUL extract | EGRUL extract (EGRUL_6154165878_20260907_ooo-atlant-aero.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

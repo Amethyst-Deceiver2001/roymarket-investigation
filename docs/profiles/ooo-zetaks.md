@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Address:** Новгородская область, г. Великий Новгород
 - **Director:** Григорьев Григорий Валерьевич
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 62.01 — Разработка компьютерного программного обеспечения
 - **Wildberries overlap:** none_found
 
@@ -19,6 +20,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Григорьев Григорий Валерьевич | 2022-10-25 | personal ИНН 530202790763; also sole founder [s0503] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Григорьев Григорий Валерьевич 50% (₽5 000) | 2022-10-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6803] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2022-10-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6803] |
 
 ## Financials
 
@@ -46,6 +59,7 @@ _No named principals linked to this entity yet._
 | s6515 | Bfo | Bfo (BFO_5300006066_2023_ооо-зетакс.pdf) | — | — |
 | s6516 | Bfo | Bfo (BFO_5300006066_2024_ооо-зетакс.pdf) | — | — |
 | s6517 | Bfo | Bfo (BFO_5300006066_2025_ооо-зетакс.pdf) | — | — |
+| s6803 | EGRUL extract | EGRUL extract (EGRUL_5300006066_20260907_ooo-zetaks.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

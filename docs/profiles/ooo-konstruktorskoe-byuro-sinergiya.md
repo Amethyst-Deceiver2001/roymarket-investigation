@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Registered:** 24.11.2023
 - **Address:** г. Санкт-Петербург
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
 - **ЦБСТ tie:** ЦБСТ presented its own "«Яким»" automated air-threat-monitoring/interceptor-coordination system on this company's stand at ПМЭФ-2026 (03.06.2026).
 - **Wildberries overlap:** none_found
@@ -20,6 +21,18 @@
 | Value | As of | Note |
 |---|---|---|
 | None | 2025-05-27 | Director appointment record present (ГРН 2257805131626, 27.05.2025) but name field not captured in this extraction pass; founder (Усачёв П.А.) may or may not be the same person — not confirmed. [s0508] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Усачёв Павел Александрович 100% (₽10 000) | 2025-04-10 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6755] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2023-11-24 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6755] |
 
 ## Products
 
@@ -52,6 +65,7 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0508 | EGRUL extract | EGRUL extract (ul-1237800134835-20260823133430.pdf) | — | 2026-08-23 |
+| s6755 | EGRUL extract | EGRUL extract (EGRUL_7842219445_20260907_ooo-konstruktorskoe-byuro-sinergiya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

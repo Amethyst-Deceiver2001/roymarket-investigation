@@ -19,6 +19,13 @@
 | Value | As of | Note |
 |---|---|---|
 | Барашков Александр Сергеевич | — | from corrections:add_entities, unverified |
+| Барашков Александр Сергеевич | 2024-03-01 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 252201766438. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6777] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Сиразетдинов Никита Вадимович / Климов Максим Александрович / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ГАГАРИНГ" / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АВИАЦИОННО-КОСМИЧЕСКИЕ РАЗРАБОТКИ "БЕГАК" / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ПРАЙМ" | 2024-03-01 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6777] |
 
 ## Financials
 
@@ -47,6 +54,7 @@
 |---|---|---|---|---|
 | s6476 | Bfo | Bfo (BFO_2312325336_2024_ассоциация-аррс.pdf) | — | — |
 | s6477 | Bfo | Bfo (BFO_2312325336_2025_ассоциация-аррс.pdf) | — | — |
+| s6777 | EGRUL extract | EGRUL extract (EGRUL_2312325336_20260907_ano-arrs-krasnodar.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

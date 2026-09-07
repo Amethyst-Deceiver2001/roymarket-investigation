@@ -22,11 +22,18 @@
 |---|---|---|
 | Лебедев Сергей Александрович | 2015-11-23 | личный ИНН 561408287508 — GD since registration [s0462] |
 
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ОРИЕНТ СИСТЕМС" 100% (₽10 000) | 2015-11-23 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6830] |
+
 ### Charter capital
 
 | Value | As of | Note |
 |---|---|---|
 | 10000 | — | from brief:prose, unverified |
+| 10000 | 2015-11-23 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6830] |
 
 ### Legal name
 
@@ -81,6 +88,7 @@ _No named principals linked to this entity yet._
 | s0346 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
 | s0462 | EGRUL extract | EGRUL extract (ul-5157746074272-20260823120422.pdf) | — | 2026-08-23 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| s6830 | EGRUL extract | EGRUL extract (EGRUL_7743128980_20260907_ooo-4gnss.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

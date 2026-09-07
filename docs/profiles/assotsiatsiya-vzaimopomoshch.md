@@ -17,6 +17,7 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Любимов Александр Сергеевич | 2021-03-26 | Должность: ПРЕДСЕДАТЕЛЬ, личный ИНН 780158682795. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6788] |
 | Любимов Александр Сергеевич | 2025-04-14 | Председатель, signed the 2024 charitable-activity report 14.04.2025 — same individual already documented in the brief as руководитель КЦПН and глава оргкомитета Дронницы [s0445] |
 
 ## Financials
@@ -45,6 +46,7 @@
 |---|---|---|---|---|
 | s0445 | document | document (a1119d36-1c82-49a9-bf17-b70e86b1c0d3.pdf) | — | — |
 | s0737 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_4707039070_20260824_assotsiatsiya-vzaimopomoshch.json) | 2026-08-24 | — |
+| s6788 | EGRUL extract | EGRUL extract (EGRUL_4707039070_20260907_assotsiatsiya-vzaimopomoshch.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

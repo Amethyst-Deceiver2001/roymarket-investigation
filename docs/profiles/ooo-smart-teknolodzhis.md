@@ -22,11 +22,18 @@
 |---|---|---|
 | Кот Олег Петрович | 2025-11-11 | личный ИНН 772453374643, ГРН 2257723399206 [s0450] |
 
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| АКЦИОНЕРНОЕ ОБЩЕСТВО "УК СМАРТ" 100% (₽5 500 000) | 2023-12-29 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6736] |
+
 ### Charter capital
 
 | Value | As of | Note |
 |---|---|---|
 | 5500000 | — | from brief:manufacturers-table:line-1015, unverified |
+| 5500000 | 2019-11-22 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6736] |
 
 ## Products
 
@@ -70,6 +77,7 @@ _No named principals linked to this entity yet._
 | s0328 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | s0329 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s0450 | EGRUL extract | EGRUL extract (ul-1127746712752-20260823120134.pdf) | — | 2026-08-23 |
+| s6736 | EGRUL extract | EGRUL extract (EGRUL_7715934509_20260907_ooo-smart-teknolodzhis.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -10,6 +10,7 @@
 - **Registered:** 27.02.2023
 - **Address:** г. Москва
 - **Director:** Соколов Герман Олегович
+- **Charter capital:** ₽121,410,256
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **ЦБСТ tie:** Named ЦБСТ resident receiving a Минпромторг РФ honorary award, 14.08.2025.
 - **Wildberries overlap:** none_found
@@ -21,12 +22,20 @@
 | Value | As of | Note |
 |---|---|---|
 | Соколов Герман Олегович | 2026-08-24 | Aggregator-sourced (checko.ru, via WebSearch result summary, page itself Cloudflare-blocked to direct fetch) -- corroborated independently by Соколов's own listing as co-inventor on this entity's patents RU218475U1/RU220486U1 (source s0953) and by his directorship of the related ООО «РТД-Защита» (ex-«НИПП Рустехдрон», ИНН 5003153526, s1161), which shares this entity's director and "РТД" product-naming convention. Not yet confirmed against a full EGRUL PDF extract. |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6718] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
 | access-restricted (2 founders, both withheld) | 2026-04-03 | Two founder rows, both "Доступ к сведениям ограничен" (Federal Law 129-FZ), dated 12.03.2025 and 03.04.2026 respectively — matches exactly the redaction dates already documented in the brief prose (docs/index.html:412). This fresh pull confirms, rather than adds to, the existing finding. [s0486] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. [s6718] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 121410256 | 2023-06-20 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6718] |
 
 ## Products
 
@@ -135,6 +144,7 @@
 | s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| s6718 | EGRUL extract | EGRUL extract (EGRUL_5003155499_20260907_ooo-npo-rustekhdron.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

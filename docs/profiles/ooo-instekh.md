@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Registered:** 10.03.2020
 - **Director:** Чумаков Павел Андреевич
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 43.21 — Производство электромонтажных работ
 - **Wildberries overlap:** none_found
 
@@ -20,7 +21,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Чумаков Павел Андреевич | 2020-08-18 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 780706151347. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6849] |
 | Чумаков Павел Андреевич | 2025-07-30 | personal ИНН 780706151347 [s0500] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Чумаков Павел Андреевич 100% (₽10 000) | 2025-07-30 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6849] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2020-03-10 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6849] |
 
 ## Financials
 
@@ -81,6 +95,7 @@
 | s6636 | Bfo | Bfo (BFO_7842179810_2023_ооо-инстех.pdf) | — | — |
 | s6637 | Bfo | Bfo (BFO_7842179810_2024_ооо-инстех.pdf) | — | — |
 | s6638 | Bfo | Bfo (BFO_7842179810_2025_ооо-инстех.pdf) | — | — |
+| s6849 | EGRUL extract | EGRUL extract (EGRUL_7842179810_20260907_ooo-instekh.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

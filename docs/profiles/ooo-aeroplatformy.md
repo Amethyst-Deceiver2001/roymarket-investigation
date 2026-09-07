@@ -10,6 +10,7 @@
 - **Registered:** 26.02.2021
 - **Address:** Московская область, г.о. Люберцы, пгт. Малаховка
 - **Director:** Власов Артём Аркадьевич
+- **Charter capital:** ₽100,000
 - **ОКВЭД:** 30.30.2 — Производство аэростатов, дирижаблей, планеров, дельтапланов и прочих безмоторных летательных аппаратов
 - **Wildberries overlap:** none_found
 
@@ -19,7 +20,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Власов Артём Аркадьевич | 2021-02-26 | Должность: ДИРЕКТОР, личный ИНН 502771850254. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6796] |
 | Власов Артём Аркадьевич | 2025-10-21 | personal ИНН 502771850254; also sole founder [s0501] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Власов Артём Аркадьевич 51% (₽51 000) / Оксман Николас Николаевич 14% (₽14 000) / АКЦИОНЕРНОЕ ОБЩЕСТВО "СТРАТОЛИНК" 35% (₽35 000) | 2025-10-21 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6796] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 100000 | 2025-10-21 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6796] |
 
 ## Financials
 
@@ -77,6 +91,7 @@
 | s0277 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2024_20260820.zip) | 2026-08-20 | 2024-12-31 |
 | s0278 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2025_20260820.zip) | 2026-08-20 | 2025-12-31 |
 | s0501 | EGRUL extract | EGRUL extract (ul-1215000018650-20260823135334.pdf) | — | 2026-08-23 |
+| s6796 | EGRUL extract | EGRUL extract (EGRUL_5027293811_20260907_ooo-aeroplatformy.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -9,6 +9,7 @@
 - **Registered:** 19.01.2026
 - **Address:** Новгородская область
 - **Director:** ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)
+- **Charter capital:** ₽10,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,10 +19,29 @@
 | Value | As of | Note |
 |---|---|---|
 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02) | — | from corrections:add_entities, unverified |
+| Елисеев Дмитрий Николаевич | 2026-01-19 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 711506978521. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6808] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Елисеев Дмитрий Николаевич 50% (₽5 000) / Владимирский Михаил Юрьевич 50% (₽5 000) | 2026-01-19 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6808] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2026-01-19 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6808] |
 
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
+
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+| s6808 | EGRUL extract | EGRUL extract (EGRUL_5300022741_20260907_ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

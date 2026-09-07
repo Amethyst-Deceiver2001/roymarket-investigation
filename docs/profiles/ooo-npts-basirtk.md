@@ -26,6 +26,7 @@
 | Value | As of | Note |
 |---|---|---|
 | Байгутлина Ирина Анатольевна (100%) | 2024-01-31 |  [s0003] |
+| Байгутлина Ирина Анатольевна 100% (₽500 000) | 2026-07-14 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6782] |
 
 ### Charter capital
 
@@ -124,6 +125,7 @@
 | s0247 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3300009049_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
 | s0248 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3300009049_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
 | s1165 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
+| s6782 | EGRUL extract | EGRUL extract (EGRUL_3300009049_20260907_ooo-npts-basirtk.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

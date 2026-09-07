@@ -10,6 +10,7 @@
 - **Registered:** 2022-10-03
 - **Address:** Московская область, г. Видное
 - **Director:** Соколов Герман Олегович
+- **Charter capital:** ₽1,000,000
 - **ЦБСТ tie:** Same director (Соколов Герман Олегович) as ООО «НПО Рустехдрон» (ИНН 5003155499, this registry's confirmed manufacturer-tier entity with a Дронница/GUR-documented UAV product line). Formerly registered under a near-identical name, «ООО НИПП Рустехдрон», before renaming to «РТД-Защита» -- the "РТД" prefix matches the RTD-K10/RTD-K8/RTD-4M product-naming convention GUR's teardown catalogue already documents for the main Рустехдрон entity (see foreign_components[] / GUR screening on ooo-npo-rustekhdron).
 - **Wildberries overlap:** not_checked
 
@@ -19,7 +20,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Соколов Герман Олегович | 2022-10-03 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 500310216204. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6792] |
 | Соколов Герман Олегович | 2026-08-24 | EGRUL open-API lookup (egrul.nalog.ru), current at time of pull. [s1161] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Соколов Герман Олегович 100% (₽1 000 000) | 2026-02-13 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6792] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 1000000 | 2022-10-03 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6792] |
 
 ### Legal name
 
@@ -65,6 +79,7 @@
 | s0272 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5003153526_2024_20260820.zip) | 2026-08-20 | 2024-12-31 |
 | s0273 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5003153526_2025_20260820.zip) | 2026-08-20 | 2025-12-31 |
 | s1161 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5003153526_20260824_ooo-rtd-zashchita.json) | 2026-08-24 | 2026-08-24 |
+| s6792 | EGRUL extract | EGRUL extract (EGRUL_5003153526_20260907_ooo-rtd-zashchita.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

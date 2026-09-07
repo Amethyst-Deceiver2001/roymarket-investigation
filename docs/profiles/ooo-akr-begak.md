@@ -8,6 +8,7 @@
 
 - **Address:** Пятигорск
 - **Director:** Бегак Александр Аркадьевич
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **Wildberries overlap:** none_found
 
@@ -18,6 +19,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Бегак Александр Аркадьевич | 2020-08-17 | personal ИНН 263202438639; also sole founder — company name carries his own surname [s0525] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Бегак Александр Аркадьевич 94% (₽9 400) / Баскаев Олег Арсенович 5% (₽500) / Куфенко Сергей Романович 1% (₽100) | 2020-08-17 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6779] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2020-08-17 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6779] |
 
 ## Financials
 
@@ -63,6 +76,7 @@ _No named principals linked to this entity yet._
 | s6480 | Bfo | Bfo (BFO_2632116476_2023_ооо-акр-бегак.pdf) | — | — |
 | s6481 | Bfo | Bfo (BFO_2632116476_2024_ооо-акр-бегак.pdf) | — | — |
 | s6482 | Bfo | Bfo (BFO_2632116476_2025_ооо-акр-бегак.pdf) | — | — |
+| s6779 | EGRUL extract | EGRUL extract (EGRUL_2632116476_20260907_ooo-akr-begak.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

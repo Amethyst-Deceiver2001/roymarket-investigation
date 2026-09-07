@@ -8,6 +8,7 @@
 
 - **Legal form:** OOO (limited liability company)
 - **Director:** Гарькуша Владимир Владимирович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 46.75.2 — Торговля оптовая промышленными химикатами
 - **Wildberries overlap:** none_found
 
@@ -20,6 +21,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Гарькуша Владимир Владимирович | 2020-02-27 | personal ИНН 344300633904, also registered as individual entrepreneur ОГРНИП 317344300095898 [s0493] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Гарькуша Владимир Владимирович 100% (₽10 000) | 2013-01-23 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6783] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2007-03-20 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6783] |
 
 ## Financials
 
@@ -74,6 +87,7 @@
 | s6493 | Bfo | Bfo (BFO_3435084957_2023_ооо-промсинтез.pdf) | — | — |
 | s6494 | Bfo | Bfo (BFO_3435084957_2024_ооо-промсинтез.pdf) | — | — |
 | s6495 | Bfo | Bfo (BFO_3435084957_2025_ооо-промсинтез.pdf) | — | — |
+| s6783 | EGRUL extract | EGRUL extract (EGRUL_3435084957_20260907_ooo-promsintez.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

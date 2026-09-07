@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Registered:** 14.08.2019
 - **Director:** Королев Дмитрий Михайлович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
 - **Wildberries overlap:** none_found
 
@@ -19,6 +20,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Королев Дмитрий Михайлович | 2023-08-14 | personal ИНН 784804037752 [s0452] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Королев Дмитрий Михайлович 100% (₽10 000) | 2019-08-14 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6748] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2019-08-14 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6748] |
 
 ## Products
 
@@ -113,6 +126,7 @@ _No named principals linked to this entity yet._
 | s0452 | EGRUL extract | EGRUL extract (ul-1197847166560-20260823120900.pdf) | — | 2026-08-23 |
 | s0794 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7802693899_20260824_ooo-kravt.json) | 2026-08-24 | — |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| s6748 | EGRUL extract | EGRUL extract (EGRUL_7802693899_20260907_ooo-kravt.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

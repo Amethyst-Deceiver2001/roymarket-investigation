@@ -24,6 +24,7 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Колосов Артем Иванович 20% (₽2 000) / АКЦИОНЕРНОЕ ОБЩЕСТВО "ИННОВАЦИОННЫЙ ТЕХНОЛОГИЧЕСКИЙ ЦЕНТР "СИСТЕМА-САРОВ" 80% (₽8 000) | 2026-02-05 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6809] |
 | Колосов Артем Иванович (20%, ИНН 616112111256) | 2026-09-06 | Полная выписка ЕГРЮЛ на 06.09.2026. [s6427] |
 | АО «Инновационный технологический центр «Система-САРОВ»» (80%, ИНН 5216017944, ОГРН 1105254001896) | 2026-09-06 | 80%-й учредитель — технологический центр, связанный с ЗАТО Саров (историческая база ядерного оружейного комплекса РФ, ВНИИЭФ). Требует отдельной проверки природы связи. [s6427] |
 
@@ -32,6 +33,7 @@
 | Value | As of | Note |
 |---|---|---|
 | 10000 | — | from corrections:add_entities, unverified |
+| 10000 | 2016-12-08 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6809] |
 
 ## Products
 
@@ -68,6 +70,7 @@ _No named principals linked to this entity yet._
 | s6420 | Bfo | Bfo (BFO_6165205064_2024_ооо-ас-кам.pdf) | — | — |
 | s6421 | Bfo | Bfo (BFO_6165205064_2025_ооо-ас-кам.pdf) | — | — |
 | s6427 | EGRUL extract | EGRUL extract (EGRUL_6165205064_20260906_inn-6165205064.pdf) | 2026-09-06 | 2026-09-06 |
+| s6809 | EGRUL extract | EGRUL extract (EGRUL_6165205064_20260907_ooo-as-kam.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

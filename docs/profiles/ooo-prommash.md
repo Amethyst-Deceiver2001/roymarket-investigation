@@ -10,6 +10,7 @@
 - **Registered:** 28.02.2024
 - **Address:** Кемеровская область - Кузбасс, г.о. Новокузнецкий, г. Новокузнецк
 - **Director:** Карцев Максим Владимирович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **Wildberries overlap:** none_found
 
@@ -20,6 +21,19 @@
 | Value | As of | Note |
 |---|---|---|
 | Карцев Максим Владимирович | 2024-07-30 | personal ИНН 422301485229; also sole founder [s0510] |
+| Чичков Александр Юрьевич | 2026-01-26 | Должность: ДИРЕКТОР, личный ИНН 421715843237. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6786] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Карцев Максим Владимирович 29% (₽2 900) / Тимофеев Даниил Андреевич 71% (₽7 100) | 2026-02-13 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6786] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2024-02-28 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6786] |
 
 ## Financials
 
@@ -56,6 +70,7 @@ _No named principals linked to this entity yet._
 | s0265 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_4217210280_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
 | s0510 | EGRUL extract | EGRUL extract (ul-1244200002970-20260823135624.pdf) | — | 2026-08-23 |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| s6786 | EGRUL extract | EGRUL extract (EGRUL_4217210280_20260907_ooo-prommash.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

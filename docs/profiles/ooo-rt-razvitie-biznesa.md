@@ -20,6 +20,7 @@
 | Value | As of | Note |
 |---|---|---|
 | — (EGRUL-restricted) | 2022-12-12 | Доступ к сведениям ограничен, ГРН 2227714261949, 12.12.2022 — Federal Law 129-FZ restriction [s0217] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6820] |
 
 ### Founders / ownership
 
@@ -69,6 +70,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0217 | EGRUL extract | EGRUL extract (ul-1147746392200-20260818193210.pdf) | — | 2026-08-18 |
 | s0768 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7704861136_20260824_ooo-rt-razvitie-biznesa.json) | 2026-08-24 | — |
+| s6820 | EGRUL extract | EGRUL extract (EGRUL_7704861136_20260907_ooo-rt-razvitie-biznesa.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -9,6 +9,7 @@
 - **Registered:** 08.07.2014
 - **Address:** 198510, г. Санкт-Петербург, вн.тер.г. город Петергоф, ул. Константиновская, д. 8, литера А, помещ. 1-Н
 - **Director:** ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Екатерина Валерьевна (confirmed live via egrul.nalog.ru 2026-09-02, per source since 24.11.2023)
+- **Charter capital:** ₽100,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,6 +19,19 @@
 | Value | As of | Note |
 |---|---|---|
 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Екатерина Валерьевна (confirmed live via egrul.nalog.ru 2026-09-02, per source since 24.11.2023) | — | from corrections:add_entities, unverified |
+| Христюк Екатерина Валерьевна | 2023-11-24 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 434500103450. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6837] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Христюк Владимир Владимирович 100% (₽100 000) | 2023-09-28 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6837] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 100000 | 2021-09-28 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6837] |
 
 ### Address
 
@@ -74,6 +88,7 @@
 | s6606 | Bfo | Bfo (BFO_7802865058_2023_ооо-скаи-авиа-групп.pdf) | — | — |
 | s6607 | Bfo | Bfo (BFO_7802865058_2024_ооо-скаи-авиа-групп.pdf) | — | — |
 | s6608 | Bfo | Bfo (BFO_7802865058_2025_ооо-скаи-авиа-групп.pdf) | — | — |
+| s6837 | EGRUL extract | EGRUL extract (EGRUL_7802865058_20260907_ooo-skay-avia-grupp.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

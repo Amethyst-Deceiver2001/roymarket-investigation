@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Address:** Ульяновская область, г. Ульяновск
 - **Director:** Чернышов Павел Алексеевич
+- **Charter capital:** ₽15,000
 - **ОКВЭД:** 62.01 — Разработка компьютерного программного обеспечения
 - **Wildberries overlap:** none_found
 
@@ -21,6 +22,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Чернышов Павел Алексеевич | 2023-09-19 | personal ИНН 732508747179; also sole founder [s0487] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Чернышов Павел Алексеевич 40% (₽6 000) / Корчагина Ольга Александровна 60% (₽9 000) | 2023-09-19 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6730] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 15000 | 2023-09-19 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6730] |
 
 ### Legal name
 
@@ -155,6 +168,7 @@
 | s5550 | Bfo | Bfo (BFO_7300024069_2023_ооо-скб-пиранья.pdf) | — | — |
 | s5551 | Bfo | Bfo (BFO_7300024069_2024_ооо-скб-пиранья.pdf) | — | — |
 | s5552 | Bfo | Bfo (BFO_7300024069_2025_ооо-скб-пиранья.pdf) | — | — |
+| s6730 | EGRUL extract | EGRUL extract (EGRUL_7300024069_20260907_ooo-skb-piranya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

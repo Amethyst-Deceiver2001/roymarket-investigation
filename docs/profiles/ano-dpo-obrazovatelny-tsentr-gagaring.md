@@ -19,12 +19,14 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Безроднова Анна Сергеевна | 2026-06-02 | Должность: ДИРЕКТОР, личный ИНН 236100309743. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6775] |
 | Безроднова Анна Сергеевна | 2026-09-03 | per egrul.nalog.ru open-API search result [s5371] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
+| Барашков Александр Сергеевич | 2025-12-12 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6775] |
 | ООО «Гагаринг» (ИНН 2312321660) — учредитель, per Гагаринг's own FY2025 audit report | 2025-12-31 |  [s5333] |
 
 ### Address
@@ -96,6 +98,7 @@
 | s5393 | Tgchannel | Tgchannel (TGCHANNEL_20260903_arkhangelfront-fond-arkhangel-legion-bio.txt) | 2026-09-03 | 2026-09-03 |
 | s5404 | Tgpost | Tgpost (TGPOST_20251214_my_el_lab-2749-sevastopol-sbory-saiga.txt) | 2025-12-14 | 2025-12-14 |
 | s5414 | Tgpost | Tgpost (TGPOST_20260629_projectArchangel-10400-tuapse-school-mountain-camp.txt) | 2026-06-29 | 2026-06-29 |
+| s6775 | EGRUL extract | EGRUL extract (EGRUL_2310240630_20260907_ano-dpo-obrazovatelny-tsentr-gagaring.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -8,6 +8,7 @@
 
 - **Legal form:** OOO (limited liability company)
 - **Director:** Соколов Никита Дмитриевич
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 93.19 — Деятельность в области спорта прочая
 - **Wildberries overlap:** none_found
 
@@ -19,7 +20,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Соколов Никита Дмитриевич | 2020-07-15 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 780633823516. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6770] |
 | Соколов Никита Дмитриевич | 2023-12-05 | personal ИНН 780633823516; also sole founder [s0482] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Соколов Никита Дмитриевич 69% (₽6 900) | 2023-12-05 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6770] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2020-01-29 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6770] |
 
 ## Financials
 
@@ -73,6 +87,7 @@
 | s6679 | Bfo | Bfo (BFO_9724002908_2023_ооо-дсг.pdf) | — | — |
 | s6680 | Bfo | Bfo (BFO_9724002908_2024_ооо-дсг.pdf) | — | — |
 | s6681 | Bfo | Bfo (BFO_9724002908_2025_ооо-дсг.pdf) | — | — |
+| s6770 | EGRUL extract | EGRUL extract (EGRUL_9724002908_20260907_ooo-dsg.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

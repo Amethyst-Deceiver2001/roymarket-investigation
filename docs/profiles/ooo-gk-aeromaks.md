@@ -8,6 +8,7 @@
 
 - **Legal form:** OOO (limited liability company)
 - **Address:** г. Москва
+- **Charter capital:** ₽18,309,491,704.16
 - **ОКВЭД:** 70.10 — Деятельность головных офисов
 - **Wildberries overlap:** none_found
 
@@ -18,12 +19,20 @@
 | Value | As of | Note |
 |---|---|---|
 | None | — | This extract's director page rendered only the certifying tax-service signature block, not the director data row itself — a PDF-rendering gap (page 38/38, likely a formatting edge case for an older/frequently-amended entity), not an EGRUL redaction. Needs a re-pull or manual page check. [s0476] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6734] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
 | access-restricted (3 separate founder rows, all withheld) | 2026-08-19 | All three founder entries show "Доступ к сведениям ограничен" (Federal Law 129-FZ), each dated 19.08.2026 — a very recent, coordinated redaction (four days before this pull), same pattern as several other network entities. [s0476] |
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. [s6734] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 18309491704.16 | 2021-07-27 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6734] |
 
 ### Legal name
 
@@ -75,6 +84,7 @@ _No named principals linked to this entity yet._
 | s6576 | Bfo | Bfo (BFO_7710974353_2023_ооо-гк-аэромакс.pdf) | — | — |
 | s6577 | Bfo | Bfo (BFO_7710974353_2024_ооо-гк-аэромакс.pdf) | — | — |
 | s6578 | Bfo | Bfo (BFO_7710974353_2025_ооо-гк-аэромакс.pdf) | — | — |
+| s6734 | EGRUL extract | EGRUL extract (EGRUL_7710974353_20260907_ooo-gk-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

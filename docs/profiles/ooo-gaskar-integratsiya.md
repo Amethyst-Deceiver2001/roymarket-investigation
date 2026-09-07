@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Address:** 119048, Москва, ул. Лужники, д. 24, стр. 9, ком. 25, пом. II, эт. 3
 - **Director:** Афанасьев Игорь Константинович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 62.01 — Разработка компьютерного программного обеспечения
 - **Wildberries overlap:** none_found
 
@@ -20,8 +21,21 @@
 |---|---|---|
 | Саитов Р.Ф. | 2018-07-23 | Signed as генеральный директор «действующего на основании устава» on Государственный контракт № 0873500001018000127 with ГКУ г. Москвы «УДМС». Extends the tenure of Саитов Ренат Фаритович (already on record as of 2019-05-31, s1548) back by ~10 months — this is the same person, but the source is an OCR'd scan that gives initials only («Саитова Р.Ф.» in the genitive), so the value is recorded as read rather than expanded to the full ФИО. Earliest documented officer of this entity. [s1847] |
 | Саитов Ренат Фаритович | 2019-05-31 | Генеральный директор per the signature block of Государственный контракт № 26/06/19 (действующего на основании Устава) — predates the current director Афанасьев Игорь Константинович. Same person already named as inventor on this entity's patent RU191888U1 (s1170), previously unexplained; this contract supplies the link. [s1548] |
+| Афанасьев Игорь Константинович | 2019-12-05 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 420504290983. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6745] |
 | Бауер Пётр Роландович | 2020-05-28 | Signed contract 2254020256620000035 (Информационно-технологический центр Приморского края) "действующий на основании Устава" — no доверенность number given, the standard indicator of the единоличный исполнительный орган at time of signing. Surfaced via scripts/zakupki_signatory_diff.py. Fills the previously-undocumented gap between Саитов Ренат Фаритович (as_of 2019-05-31) and Афанасьев Игорь Константинович (as_of 2025-08-29) in this entity's director_history. [s3391] |
 | Афанасьев Игорь Константинович | 2025-08-29 | personal ИНН 420504290983; also sole founder; entity registered 2014, older than Гаскар Технологии [s0520] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Афанасьев Игорь Константинович 20% (₽2 000) / Часовских Павел Анатольевич 8% (₽800) / Хафизов Марат Миннерасыхович 72% (₽7 200) | 2026-06-03 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6745] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2014-09-09 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6745] |
 
 ### Address
 
@@ -116,6 +130,7 @@ _No named principals linked to this entity yet._
 | s5557 | Bfo | Bfo (BFO_7733894200_2023_ооо-гаскар-интеграция.pdf) | — | — |
 | s5558 | Bfo | Bfo (BFO_7733894200_2024_ооо-гаскар-интеграция.pdf) | — | — |
 | s5559 | Bfo | Bfo (BFO_7733894200_2025_ооо-гаскар-интеграция.pdf) | — | — |
+| s6745 | EGRUL extract | EGRUL extract (EGRUL_7733894200_20260907_ooo-gaskar-integratsiya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

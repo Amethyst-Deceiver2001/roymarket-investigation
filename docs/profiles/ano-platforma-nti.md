@@ -19,6 +19,7 @@
 | Value | As of | Note |
 |---|---|---|
 | Наблюдательный совет established 14.01.2019 per АСИ protocol №3 от 12.12.2018 | 2019-01-14 |  [s0443] |
+| Песков Дмитрий Николаевич | 2021-03-26 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 772919018611. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6817] |
 
 ## Financials
 
@@ -69,6 +70,7 @@ _No named principals linked to this entity yet._
 | s6552 | Bfo | Bfo (BFO_7703469180_2023_ано-платформа-нти.pdf) | — | — |
 | s6553 | Bfo | Bfo (BFO_7703469180_2024_ано-платформа-нти.pdf) | — | — |
 | s6554 | Bfo | Bfo (BFO_7703469180_2025_ано-платформа-нти.pdf) | — | — |
+| s6817 | EGRUL extract | EGRUL extract (EGRUL_7703469180_20260907_ano-platforma-nti.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

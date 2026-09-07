@@ -22,12 +22,14 @@
 | Value | As of | Note |
 |---|---|---|
 | Кусумов Вахид Абдулович | 2024-06-10 | ИНН 202902196209. Генеральный директор from incorporation; no director change recorded in the ЕГРЮЛ record history through 05.09.2026. [s5504] |
+| Кусумов Вахид Абдулович | 2025-01-24 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 202902196209. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6850] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
 | Кусумов Вахид Абдулович (100%) | 2024-06-10 | Nominal share value ₽10,000 of ₽10,000 charter capital. Sole founder, unchanged through 05.09.2026. [s5504] |
+| Кусумов Вахид Абдулович 100% (₽10 000) | 2025-01-13 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6850] |
 
 ### Charter capital
 
@@ -79,6 +81,7 @@ _No named principals linked to this entity yet._
 | s5523 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9001027869_20260905_ooo-arkhangel-melitopol-2.json) | 2026-09-05 | — |
 | s5532 | Bfo | Bfo (BFO_9001027869_2024_ooo-arkhangel-melitopol-2.pdf) | — | — |
 | s5533 | Bfo | Bfo (BFO_9001027869_2025_ooo-arkhangel-melitopol-2.pdf) | — | — |
+| s6850 | EGRUL extract | EGRUL extract (EGRUL_9001027869_20260907_ooo-arkhangel-melitopol-2.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

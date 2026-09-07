@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Address:** Липецкая область, г. Липецк
 - **Director:** Загорский Александр Сергеевич
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **Wildberries overlap:** none_found
 
@@ -19,6 +20,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Загорский Александр Сергеевич | 2025-04-21 | personal ИНН 502714210755; also sole founder [s0517] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Загорский Александр Сергеевич 100% (₽10 000) | 2025-04-21 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6791] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2025-04-21 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6791] |
 
 ## Products
 
@@ -44,6 +57,7 @@
 |---|---|---|---|---|
 | s0517 | EGRUL extract | EGRUL extract (ul-1254800002786-20260823135141.pdf) | — | 2026-08-23 |
 | s6505 | Bfo | Bfo (BFO_4800023371_2025_ооо-нпо-небо.pdf) | — | — |
+| s6791 | EGRUL extract | EGRUL extract (EGRUL_4800023371_20260907_ooo-npo-nebo.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

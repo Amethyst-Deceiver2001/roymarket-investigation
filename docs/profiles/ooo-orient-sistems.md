@@ -26,12 +26,14 @@
 | Value | As of | Note |
 |---|---|---|
 | Шелаев Денис Владимирович (100%, единственный участник) | 2015-09-28 | Решение №2 единственного участника от 28.09.2015 (изменения в устав, п.6.2) is signed solely by Шелаев Денис Владимирович as «Единственный участник» — he held 100% at this point, not the current 50/50 split with Лебедев Сергей Александрович. The founding решение (08.09.2014) also references «единственный учредитель», consistent with a sole founder at incorporation, but the устав text itself doesn't name that founder — see open_questions. [s0200] |
+| Лебедев Сергей Александрович 50% (₽10 000) / Шелаев Денис Владимирович 50% (₽10 000) | 2015-10-15 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6832] |
 
 ### Charter capital
 
 | Value | As of | Note |
 |---|---|---|
 | 20000 | 2015-09-28 | Решение №2 единственного участника от 28.09.2015, п.1: «Размер уставного капитала Общества составляет 20000 (двадцать тысяч) рублей 00 копеек» — replaces a prior unsourced 20000 placeholder carried from brief prose. [s0200] |
+| 20000 | 2015-10-15 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6832] |
 
 ## Products
 
@@ -93,6 +95,7 @@ _No named principals linked to this entity yet._
 | s0358 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
 | s0359 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
 | s0461 | EGRUL extract | EGRUL extract (ul-5147746083491-20260823120436.pdf) | — | 2026-08-23 |
+| s6832 | EGRUL extract | EGRUL extract (EGRUL_7743939185_20260907_ooo-orient-sistems.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

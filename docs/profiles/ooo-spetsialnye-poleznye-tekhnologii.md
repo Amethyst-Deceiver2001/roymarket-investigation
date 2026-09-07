@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Registered:** 21.03.2024
 - **Address:** г. Москва
+- **Charter capital:** ₽100,000
 - **ОКВЭД:** 27.90 — Производство прочего электрического оборудования
 - **Wildberries overlap:** none_found
 
@@ -19,6 +20,18 @@
 | Value | As of | Note |
 |---|---|---|
 | None | 2024-08-05 | Generic director appointment record present (ГРН 2247707514338, 05.08.2024) but this batch's extraction pass did not capture a name field for it — worth a direct re-read of the source PDF page for the missing ФИО. [s0490] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| АКЦИОНЕРНОЕ ОБЩЕСТВО "ВЕЖЛИВЫЙ КОНЦЕРН" 100% (₽100 000) | 2024-12-20 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6764] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 100000 | 2024-12-20 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6764] |
 
 ## Financials
 
@@ -50,6 +63,7 @@ _No named principals linked to this entity yet._
 | s0490 | EGRUL extract | EGRUL extract (ul-1247700253668-20260823132117.pdf) | — | 2026-08-23 |
 | s6666 | Bfo | Bfo (BFO_9715478264_2024_ооо-спт.pdf) | — | — |
 | s6667 | Bfo | Bfo (BFO_9715478264_2025_ооо-спт.pdf) | — | — |
+| s6764 | EGRUL extract | EGRUL extract (EGRUL_9715478264_20260907_ooo-spetsialnye-poleznye-tekhnologii.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

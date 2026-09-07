@@ -10,6 +10,7 @@
 - **Registered:** 10.11.2023
 - **Address:** 115280, г. Москва, вн.тер.г. муниципальный округ Даниловский, ул. Автозаводская, д. 4, кв. 39
 - **Director:** Потапов Игорь Владимирович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **ЦБСТ tie:** Named participant (АО «НПП», Игорь Потапов) at a 26.03.2025 ЦБСТ-hosted expanded session on developer support, alongside «Стратим», «Площадь» and «Овод».
 - **Wildberries overlap:** none_found
@@ -20,7 +21,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Потапов Игорь Владимирович | 2023-11-10 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 772578663993. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6766] |
 | Потапов Игорь Владимирович | 2026-01-24 | personal ИНН 772578663993 [s0469] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Потапов Игорь Владимирович 100% (₽10 000) | 2023-11-10 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6766] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2023-11-10 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6766] |
 
 ### Address
 
@@ -55,6 +69,7 @@ _No named principals linked to this entity yet._
 | s0411 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9718238013_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s0469 | EGRUL extract | EGRUL extract (ul-1237700769701-20260823122725.pdf) | — | 2026-08-23 |
 | s1170 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rospatent-searchplatform-second-triage-batch.json) | 2026-08-24 | — |
+| s6766 | EGRUL extract | EGRUL extract (EGRUL_9718238013_20260907_ao-npp-bat.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

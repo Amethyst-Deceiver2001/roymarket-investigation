@@ -8,6 +8,7 @@
 
 - **Legal form:** OOO (limited liability company)
 - **Director:** Струлев Игорь Леонидович
+- **Charter capital:** ₽20,000
 - **ОКВЭД:** 26.11 — Производство элементов электронной аппаратуры
 - **ЦБСТ tie:** Named directly as "резидент ЦБСТ" by a primary Telegram source.
 - **Wildberries overlap:** none_found
@@ -18,7 +19,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Струлев Игорь Леонидович | 2016-11-07 | Должность: ДИРЕКТОР, личный ИНН 352500073280. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6715] |
 | Струлев Игорь Леонидович | 2025-06-16 | personal ИНН 352500073280; also sole founder, registered 2016 (one of the older entities in the roster) [s0477] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Струлев Игорь Леонидович 50% (₽10 000) / Минатулаев Шахсолтан Магомедрасулович 50% (₽10 000) | 2025-06-16 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6715] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 20000 | 2025-06-16 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6715] |
 
 ## Products
 
@@ -54,6 +68,7 @@ _No named principals linked to this entity yet._
 | s0253 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
 | s0254 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
 | s0477 | EGRUL extract | EGRUL extract (ul-1163525102619-20260823131946.pdf) | — | 2026-08-23 |
+| s6715 | EGRUL extract | EGRUL extract (EGRUL_3525389520_20260907_ooo-superkhrono.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

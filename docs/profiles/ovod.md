@@ -9,6 +9,7 @@
 
 - **Address:** Тульская область, г.о. город Тула, с. Осиновая Гора
 - **Director:** Черезов Андрей Павлович
+- **Charter capital:** ₽20,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
 - **Wildberries overlap:** none_found
 
@@ -18,7 +19,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Черезов Андрей Павлович | 2022-09-28 | Должность: ДИРЕКТОР, личный ИНН 712802968839. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6727] |
 | Черезов Андрей Павлович | 2024-05-08 | personal ИНН 712802968839; also sole founder — SAME person who wholly owns ООО «Воздушный трактат» (already verified this session), at the same Осиновая Гора address [s0526] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Черезов Андрей Павлович 100% (₽20 000) | 2024-05-08 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6727] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 20000 | 2024-04-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6727] |
 
 ## Products
 
@@ -137,6 +151,7 @@ _No named principals linked to this entity yet._
 | s6532 | Bfo | Bfo (BFO_7100027464_2023_ооо-рлвт.pdf) | — | — |
 | s6533 | Bfo | Bfo (BFO_7100027464_2024_ооо-рлвт.pdf) | — | — |
 | s6534 | Bfo | Bfo (BFO_7100027464_2025_ооо-рлвт.pdf) | — | — |
+| s6727 | EGRUL extract | EGRUL extract (EGRUL_7100027464_20260907_ovod.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

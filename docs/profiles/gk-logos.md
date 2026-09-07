@@ -7,8 +7,29 @@
 
 ## At a glance
 
+- **Charter capital:** ₽10,000
 - **ЦБСТ tie:** Own site (рэб.рус) states the group are "Резиденты научных центров НПЦ БАС и ЦБСТ" (residents of the НПЦ БАС and ЦБСТ research centers) with proprietary counter-drone software.
 - **Wildberries overlap:** not_checked
+
+## Ownership & corporate history
+
+### Director
+
+| Value | As of | Note |
+|---|---|---|
+| Тращёнок Людмила Ефимовна | 2008-06-02 | Должность: Генеральный директор, личный ИНН 781123062753. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6754] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Тращёнок Людмила Ефимовна (₽10 000) | 2004-08-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6754] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2004-08-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6754] |
 
 ## Products
 
@@ -92,6 +113,7 @@
 | s0555 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2023_20260823.zip) | 2026-08-23 | 2023-12-31 |
 | s0556 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2024_20260823.zip) | 2026-08-23 | 2024-12-31 |
 | s0557 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2025_20260823.zip) | 2026-08-23 | 2025-12-31 |
+| s6754 | EGRUL extract | EGRUL extract (EGRUL_7839303129_20260907_gk-logos.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

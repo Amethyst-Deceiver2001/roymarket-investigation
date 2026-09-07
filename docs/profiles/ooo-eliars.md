@@ -8,6 +8,7 @@
 
 - **Address:** Зеленоград
 - **Director:** Атливанчик Сергей Николаевич
+- **Charter capital:** ₽1,000,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -17,6 +18,19 @@
 | Value | As of | Note |
 |---|---|---|
 | Атливанчик Сергей Николаевич | — | from corrections:add_entities, unverified |
+| Атливанчик Сергей Николаевич | 2016-12-12 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 773514103490. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6827] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Паутов Андрей Павлович 25% (₽250 000) / Съедин Михаил Васильевич 25% (₽250 000) / Атливанчик Сергей Николаевич 25% (₽250 000) / Дороничев Юрий Валерьевич 25% (₽250 000) | 2017-06-23 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6827] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 1000000 | 2017-06-23 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6827] |
 
 ## Products
 
@@ -50,6 +64,7 @@ _No named principals linked to this entity yet._
 | s5389 | Gisp | Gisp (GISP_20260903_goods-catalog-manufacturer-hits-5-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5390 | Gisp | Gisp (GISP_20260903_goods-catalog-product-details-7-new-items.json) | 2026-09-03 | 2026-09-03 |
 | s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
+| s6827 | EGRUL extract | EGRUL extract (EGRUL_7735140825_20260907_ooo-eliars.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

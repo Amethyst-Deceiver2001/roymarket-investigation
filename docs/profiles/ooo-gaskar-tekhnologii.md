@@ -8,6 +8,7 @@
 
 - **Legal form:** OOO (limited liability company)
 - **Director:** Афанасьев Игорь Константинович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
 - **Wildberries overlap:** none_found
 
@@ -17,7 +18,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Гелик Александр Геннадьевич | 2023-12-08 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 771475401793. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6772] |
 | Афанасьев Игорь Константинович | 2025-08-29 | personal ИНН 420504290983; also sole founder [s0499] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Афанасьев Игорь Константинович 20% (₽2 000) / Часовских Павел Анатольевич 4.7% (₽470) / Хафизов Марат Миннерасыхович 15.3% (₽1 530) / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АМЕТИСТ КЭПИТАЛ" 60% (₽6 000) | 2026-06-03 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6772] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2020-09-18 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6772] |
 
 ### Address
 
@@ -64,6 +78,7 @@ _No named principals linked to this entity yet._
 | s6688 | Bfo | Bfo (BFO_9731070264_2023_ооо-гаскар-технологии.pdf) | — | — |
 | s6689 | Bfo | Bfo (BFO_9731070264_2024_ооо-гаскар-технологии.pdf) | — | — |
 | s6690 | Bfo | Bfo (BFO_9731070264_2025_ооо-гаскар-технологии.pdf) | — | — |
+| s6772 | EGRUL extract | EGRUL extract (EGRUL_9731070264_20260907_ooo-gaskar-tekhnologii.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

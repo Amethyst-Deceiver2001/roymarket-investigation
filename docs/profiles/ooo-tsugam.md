@@ -8,6 +8,7 @@
 
 - **Address:** г. Москва
 - **Director:** Соколова Ольга Михайловна
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30.39 — Производство прочих летательных аппаратов
 - **Wildberries overlap:** none_found
 
@@ -17,7 +18,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Соколова Ольга Михайловна | 2023-08-29 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 500905260513. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6870] |
 | Соколова Ольга Михайловна | 2026-08-22 | Генеральный директор, per egrul.nalog.ru open-API pull. Corrects the prior placeholder ("Соколова Ольга", no source_id, from corrections:add_entities) which had the correct surname/first name but no patronymic and no citation -- s0432 was already archived 2026-08-22 with the full name but had never been linked to this field. [s0432] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| ФОНД "МОСКОВСКИЙ ИННОВАЦИОННЫЙ КЛАСТЕР" 100% (₽10 000) | 2023-10-10 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6870] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2022-06-28 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6870] |
 
 ## Financials
 
@@ -61,6 +75,7 @@ _No named principals linked to this entity yet._
 | s6692 | Bfo | Bfo (BFO_9731094770_2023_ооо-цугам.pdf) | — | — |
 | s6693 | Bfo | Bfo (BFO_9731094770_2024_ооо-цугам.pdf) | — | — |
 | s6694 | Bfo | Bfo (BFO_9731094770_2025_ооо-цугам.pdf) | — | — |
+| s6870 | EGRUL extract | EGRUL extract (EGRUL_9731094770_20260907_ooo-tsugam.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -9,6 +9,7 @@
 - **Registered:** 25.12.2024
 - **Address:** Мурманская область, г. Мурманск
 - **Director:** Шаповалов Сергей Михайлович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.12 — Строительство прогулочных и спортивных судов
 - **Wildberries overlap:** none_found
 
@@ -20,7 +21,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Шаповалов Сергей Михайлович | 2024-12-25 | Должность: ДИРЕКТОР, личный ИНН 511005152619. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6801] |
 | Шаповалов Сергей Михайлович | 2026-03-18 | personal ИНН 511005152619; also sole founder [s0512] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Шаповалов Сергей Михайлович 100% (₽10 000) | 2026-03-18 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6801] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2024-12-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6801] |
 
 ## Financials
 
@@ -44,6 +58,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0512 | EGRUL extract | EGRUL extract (ul-1245100006799-20260823141101.pdf) | — | 2026-08-23 |
 | s6510 | Bfo | Bfo (BFO_5190102381_2025_ооо-кольская-верфь.pdf) | — | — |
+| s6801 | EGRUL extract | EGRUL extract (EGRUL_5190102381_20260907_kolskaya-verf.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

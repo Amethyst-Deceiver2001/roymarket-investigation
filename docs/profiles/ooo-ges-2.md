@@ -10,6 +10,7 @@
 - **Registered:** 23.05.2014
 - **Address:** Г.Москва
 - **Director:** Голоунин Олег Борисович
+- **Charter capital:** ₽1,779,363,198
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,7 +19,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Голоунин Олег Борисович | 2018-04-13 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 631502679915. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6822] |
 | Голоунин Олег Борисович | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0100] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Михельсон Виктория Леонидовна 0.098% (₽1 744 598) / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ОПТИМА" 99.902% (₽1 777 618 600) | 2023-01-20 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6822] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 1779363198 | 2019-01-31 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6822] |
 
 ## Financials
 
@@ -52,6 +66,7 @@ _No named principals linked to this entity yet._
 | s6562 | Bfo | Bfo (BFO_7706809928_2023_ооо-гэс-2.pdf) | — | — |
 | s6563 | Bfo | Bfo (BFO_7706809928_2024_ооо-гэс-2.pdf) | — | — |
 | s6564 | Bfo | Bfo (BFO_7706809928_2025_ооо-гэс-2.pdf) | — | — |
+| s6822 | EGRUL extract | EGRUL extract (EGRUL_7706809928_20260907_ooo-ges-2.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

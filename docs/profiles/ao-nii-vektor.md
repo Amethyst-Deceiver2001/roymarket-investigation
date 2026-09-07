@@ -21,6 +21,7 @@
 | Value | As of | Note |
 |---|---|---|
 | Скорых Сергей Валерьевич | 2018-05-10 | Генеральный директор, личный ИНН 780212544531. ГРН 7187847631481 от 10.05.2018 for the person record; the ГРН carrying the ДОЛЖНОСТЬ «ГЕНЕРАЛЬНЫЙ ДИРЕКТОР» is 8187847136425 от 09.06.2018, and the most recent amendment to this person's entry is ГРН 2237803085177 от 11.11.2023. Still the sole лицо, имеющее право без доверенности действовать от имени юридического лица as of the extract date 23.08.2026. [s0495] |
+| Скорых Сергей Валерьевич | 2018-06-09 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 780212544531. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6843] |
 
 ### Founders / ownership
 
@@ -375,6 +376,7 @@
 | s6414 | bulk open-data extract | bulk open-data extract (DATASET_20260906_roscosmos-licenses-registry-api-full-dump.json) | 2026-09-06 | — |
 | s6415 | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-communications-license-search-ao-nii-vektor.json) | 2026-09-06 | — |
 | s6442 | Rkn | Rkn (RKN_7813491943_20260906_comms-license-search-ao-nii-vektor.html) | 2026-09-06 | — |
+| s6843 | EGRUL extract | EGRUL extract (EGRUL_7813491943_20260907_ao-nii-vektor.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

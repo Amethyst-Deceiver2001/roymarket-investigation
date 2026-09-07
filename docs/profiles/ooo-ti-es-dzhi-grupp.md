@@ -36,6 +36,7 @@
 | Value | As of | Note |
 |---|---|---|
 | 10000 | — | from corrections:add_entities, unverified |
+| 10000 | 2023-03-22 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6781] |
 
 ### Address
 
@@ -103,6 +104,7 @@
 | s0456 | EGRUL extract | EGRUL extract (ul-1233200001066-20260823120457.pdf) | — | 2026-08-23 |
 | s3396 | Zakupki | Zakupki (ZAKUPKI_contract_2320000296325000067_20260829.html) | 2026-08-29 | — |
 | s3758 | Zakupki | Zakupki (ZAKUPKI_ATTACH_2320000296325000067_2320000296325000067_elektronnyy-kon-23200002963250000670004_a7747f0a.xml) | — | — |
+| s6781 | EGRUL extract | EGRUL extract (EGRUL_3257085996_20260907_ooo-ti-es-dzhi-grupp.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

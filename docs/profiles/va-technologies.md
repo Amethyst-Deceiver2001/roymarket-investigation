@@ -22,11 +22,18 @@
 |---|---|---|
 | Сотов Артём Александрович | 2025-11-25 | sole founder+director since incorporation; личный ИНН 771921673686 [s0566] |
 
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Сотов Артём Александрович 100% (₽10 000) | 2025-11-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6713] |
+
 ### Charter capital
 
 | Value | As of | Note |
 |---|---|---|
 | 10000 | — | from brief:manufacturers-table:line-1023, unverified |
+| 10000 | 2025-11-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6713] |
 
 ### Facility type
 
@@ -60,6 +67,7 @@ _No named principals linked to this entity yet._
 | s0565 | document | document (r4kgfs38gy.pdf) | — | — |
 | s0566 | EGRUL extract | EGRUL extract (ul-1252300058515-20260823193453.pdf) | — | 2026-08-23 |
 | s0567 | Сова | Сова (СОВА_Руководство_оператора.pdf) | — | — |
+| s6713 | EGRUL extract | EGRUL extract (EGRUL_2378001237_20260907_va-technologies.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

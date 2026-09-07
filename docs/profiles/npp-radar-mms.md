@@ -8,6 +8,7 @@
 
 - **Legal form:** NPP (research and production enterprise)
 - **Director:** Анцев Георгий Владимирович
+- **Charter capital:** ₽13,996
 - **ОКВЭД:** 26.11.9 — Производство частей электронных ламп, трубок и прочих электронных компонентов, не включенных в другие группировки
 - **Wildberries overlap:** none_found
 
@@ -18,7 +19,14 @@
 | Value | As of | Note |
 |---|---|---|
 | Гоголинский Кирилл Валерьевич | 2017-10-02 | Signed contract 1780902212017000210 (ФГУП ВНИИ метрологии им. Менделеева) "действующий на основании Устава" — no доверенность number given, the standard indicator of the единоличный исполнительный орган at time of signing. Surfaced via scripts/zakupki_signatory_diff.py, not yet cross-checked against a dated EGRUL extract; predates the current director_history entry (Анцев Георгий Владимирович, as_of 2026-08-25) by ~9 years, no overlap conflict. [s3922] |
+| Анцев Георгий Владимирович | 2021-03-10 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР-, личный ИНН 780105167705. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6845] |
 | Анцев Георгий Владимирович | 2026-08-25 | Per АЭРОНЕКСТ member-catalog card («ФИО Руководителя» field, «Должность руководителя»: Генеральный директор-Генеральный конструктор), captured_date basis -- as_of is the capture date, not independently confirmed against EGRUL yet. [s1407] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 13996 | 2002-07-24 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6845] |
 
 ## Products
 
@@ -334,6 +342,7 @@
 | s6414 | bulk open-data extract | bulk open-data extract (DATASET_20260906_roscosmos-licenses-registry-api-full-dump.json) | 2026-09-06 | — |
 | s6429 | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-frequency-assignment-registry-search.json) | 2026-09-06 | — |
 | s6450 | Rkn | Rkn (RKN_7814027653_20260907_frequency-registry-npp-radar-mms.html) | 2026-09-07 | — |
+| s6845 | EGRUL extract | EGRUL extract (EGRUL_7814027653_20260907_npp-radar-mms.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

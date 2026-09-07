@@ -10,6 +10,7 @@
 - **Registered:** 24.01.2011
 - **Address:** Г.Москва
 - **Director:** Швецов Алексей Александрович
+- **Charter capital:** ₽12,000,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,7 +19,20 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Швецов Алексей Александрович | 2022-03-09 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 780248999250. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6702] |
 | Швецов Алексей Александрович | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0103] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| ФОНД ПОДДЕРЖКИ ЗИМНИХ ОЛИМПИЙСКИХ ВИДОВ СПОРТА 100% (₽12 000 000) | 2026-03-16 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6702] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 12000000 | 2026-03-16 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6702] |
 
 ## Financials
 
@@ -42,6 +56,7 @@ _No named principals linked to this entity yet._
 | s0307 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7709869763_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
 | s0308 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7709869763_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | s0309 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7709869763_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| s6702 | EGRUL extract | EGRUL extract (EGRUL_7709869763_20260907_ooo-finkonsaltingk-fkk.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

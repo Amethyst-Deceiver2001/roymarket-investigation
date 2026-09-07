@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Address:** Нижегородская область, г. Нижний Новгород
 - **Director:** Гусев Сергей Владимирович
+- **Charter capital:** ₽10,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
 - **Wildberries overlap:** none_found
 
@@ -19,6 +20,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Гусев Сергей Владимирович | 2018-08-30 | personal ИНН 732102513469 [s0464] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Гусев Сергей Владимирович 100% (₽10 000) | 2018-08-30 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6719] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2018-08-30 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6719] |
 
 ## Products
 
@@ -99,6 +112,7 @@
 | s5547 | Bfo | Bfo (BFO_5257183517_2023_ооо-клеверкоптер.pdf) | — | — |
 | s5548 | Bfo | Bfo (BFO_5257183517_2024_ооо-клеверкоптер.pdf) | — | — |
 | s5549 | Bfo | Bfo (BFO_5257183517_2025_ооо-клеверкоптер.pdf) | — | — |
+| s6719 | EGRUL extract | EGRUL extract (EGRUL_5257183517_20260907_ooo-kleverkopter.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -27,6 +27,7 @@
 | Value | As of | Note |
 |---|---|---|
 | 15000 | — | from brief:manufacturers-table:line-989, unverified |
+| 15000 | 2023-07-03 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6738] |
 
 ## Products
 
@@ -98,6 +99,7 @@
 | s0459 | EGRUL extract | EGRUL extract (ul-1237700447324-20260823120407.pdf) | — | 2026-08-23 |
 | s0779 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7720901379_20260824_ao-stratim.json) | 2026-08-24 | — |
 | s0963 | GUR war-sanctions record | GUR war-sanctions record (GUR_7720901379_20260824_ao-stratim.html) | 2026-08-24 | — |
+| s6738 | EGRUL extract | EGRUL extract (EGRUL_7720901379_20260907_ao-stratim.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

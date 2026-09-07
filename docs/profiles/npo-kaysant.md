@@ -7,7 +7,28 @@
 ## At a glance
 
 - **Legal form:** NPO (research and production association)
+- **Charter capital:** ₽150,000
 - **Wildberries overlap:** not_checked
+
+## Ownership & corporate history
+
+### Director
+
+| Value | As of | Note |
+|---|---|---|
+| Черепкова Нина Сергеевна | 2022-10-07 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 773376903806. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6744] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. [s6744] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 150000 | 2025-05-16 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6744] |
 
 ## Products
 
@@ -57,6 +78,7 @@
 | s2627 | Naletay | Naletay (NALETAY_773376903806_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
 | s5389 | Gisp | Gisp (GISP_20260903_goods-catalog-manufacturer-hits-5-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5390 | Gisp | Gisp (GISP_20260903_goods-catalog-product-details-7-new-items.json) | 2026-09-03 | 2026-09-03 |
+| s6744 | EGRUL extract | EGRUL extract (EGRUL_7733393203_20260907_npo-kaysant.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

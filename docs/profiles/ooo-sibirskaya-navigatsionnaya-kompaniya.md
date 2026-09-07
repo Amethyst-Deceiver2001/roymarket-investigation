@@ -22,11 +22,18 @@
 |---|---|---|
 | Ступников Андрей Генадьевич | 2023-04-20 | личный ИНН 165043571104 [s0451] |
 
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Константинов Евгений Александрович 26.25% (₽2 625) / Ступников Андрей Генадьевич 73.75% (₽7 375) | 2026-05-29 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6716] |
+
 ### Charter capital
 
 | Value | As of | Note |
 |---|---|---|
 | 10000 | — | from brief:prose, unverified |
+| 10000 | 2018-12-17 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6716] |
 
 ## Financials
 
@@ -76,6 +83,7 @@ _No named principals linked to this entity yet._
 | s0451 | EGRUL extract | EGRUL extract (ul-1184205024849-20260823120210.pdf) | — | 2026-08-23 |
 | s0734 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_4205376019_20260824_ooo-sibirskaya-navigatsionnaya-kompaniya.json) | 2026-08-24 | — |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| s6716 | EGRUL extract | EGRUL extract (EGRUL_4205376019_20260907_ooo-sibirskaya-navigatsionnaya-kompaniya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

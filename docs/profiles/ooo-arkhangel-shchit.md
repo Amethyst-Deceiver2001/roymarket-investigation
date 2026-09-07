@@ -23,6 +23,7 @@
 | Value | As of | Note |
 |---|---|---|
 | Хабибулин Владимир Игоревич | 2025-06-24 | ИНН 270400171723, генеральный директор. He is NOT an owner — the 100% stake is held by Кулемин Игорь Александрович. [s5517] |
+| Хабибулин Владимир Игоревич | 2025-08-26 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 270400171723. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6797] |
 
 ### Founders / ownership
 
@@ -84,6 +85,7 @@
 | s5517 | EGRUL extract | EGRUL extract (EGRUL_5027339008_20260905_ooo-arkhangel-shchit.pdf) | 2026-09-05 | 2026-09-05 |
 | s5522 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5027339008_20260905_ooo-arkhangel-shchit.json) | 2026-09-05 | — |
 | s5530 | Bfo | Bfo (BFO_5027339008_2025_ooo-arkhangel-shchit.pdf) | — | — |
+| s6797 | EGRUL extract | EGRUL extract (EGRUL_5027339008_20260907_ooo-arkhangel-shchit.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

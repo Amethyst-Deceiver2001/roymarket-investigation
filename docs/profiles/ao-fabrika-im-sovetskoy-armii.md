@@ -10,6 +10,7 @@
 - **Registered:** 06.09.2002
 - **Address:** Г.Москва
 - **Director:** Рябико Ольга Александровна
+- **Charter capital:** ₽641,200
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -18,7 +19,14 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Рябико Ольга Александровна | 2018-06-07 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 772737849153. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6823] |
 | Рябико Ольга Александровна | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0102] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 641200 | 2005-07-15 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6823] |
 
 ## Financials
 
@@ -47,6 +55,7 @@ _No named principals linked to this entity yet._
 | s6571 | Bfo | Bfo (BFO_7709278792_2023_ао-фабрика-имсоветскои-армии.pdf) | — | — |
 | s6572 | Bfo | Bfo (BFO_7709278792_2024_ао-фабрика-имсоветскои-армии.pdf) | — | — |
 | s6573 | Bfo | Bfo (BFO_7709278792_2025_ао-фабрика-имсоветскои-армии.pdf) | — | — |
+| s6823 | EGRUL extract | EGRUL extract (EGRUL_7709278792_20260907_ao-fabrika-im-sovetskoy-armii.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

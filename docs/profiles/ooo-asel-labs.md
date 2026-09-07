@@ -10,6 +10,7 @@
 - **Registered:** 17.03.2025
 - **Address:** г. Москва
 - **Director:** Костылин Дмитрий Евгеньевич
+- **Charter capital:** ₽1,000,000
 - **ОКВЭД:** 27.90 — Производство прочего электрического оборудования
 - **Wildberries overlap:** confirmed_direct
 
@@ -20,6 +21,18 @@
 | Value | As of | Note |
 |---|---|---|
 | Костылин Дмитрий Евгеньевич | 2025-03-17 | personal ИНН 632138524207; also sole founder; very recently registered (2025) [s0518] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Костылин Дмитрий Евгеньевич 34% (₽340 000) / Проценко Артем Витальевич 33% (₽330 000) / Руднев Артем Николаевич 33% (₽330 000) | 2025-03-17 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6864] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 1000000 | 2025-03-17 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6864] |
 
 ## Products
 
@@ -64,6 +77,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0412 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9718278129_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
 | s0518 | EGRUL extract | EGRUL extract (ul-1257700126958-20260823135721.pdf) | — | 2026-08-23 |
+| s6864 | EGRUL extract | EGRUL extract (EGRUL_9718278129_20260907_ooo-asel-labs.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

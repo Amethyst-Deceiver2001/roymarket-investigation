@@ -18,6 +18,7 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Бегак Александр Аркадьевич | 2020-10-19 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 263202438639. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6780] |
 | Бегак Александр Аркадьевич | 2026-09-04 | per ФНС «Прозрачный бизнес» (pb.nalog.ru) director/founder cross-reference on his personal ИНН. [s5427] |
 
 ## Financials
@@ -51,6 +52,7 @@
 | s6485 | Bfo | Bfo (BFO_2632811832_2023_нп-дикма.pdf) | — | — |
 | s6486 | Bfo | Bfo (BFO_2632811832_2024_нп-дикма.pdf) | — | — |
 | s6487 | Bfo | Bfo (BFO_2632811832_2025_нп-дикма.pdf) | — | — |
+| s6780 | EGRUL extract | EGRUL extract (EGRUL_2632811832_20260907_np-diskretno-innovatsionny-klaster-maloy-aviatsii.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
