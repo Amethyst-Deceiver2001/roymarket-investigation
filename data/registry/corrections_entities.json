@@ -20483,7 +20483,7 @@
     "ooo-npo-rustekhdron": {
       "set": {
         "_verified": true,
-        "address": "г. Москва",
+        "address": "111675, г. Москва, ул. Пехорская, д. 1/3, стр. 4",
         "cbst_tie": {
           "claim": "Named ЦБСТ resident receiving a Минпромторг РФ honorary award, 14.08.2025.",
           "confidence": "t-doc",
@@ -20811,7 +20811,25 @@
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
         ],
-        "charter_capital": 121410256
+        "charter_capital": 121410256,
+        "address_history": [
+          {
+            "value": "111675, г. Москва, ул. Пехорская, д. 1/3, стр. 4",
+            "as_of": "2026-09-03",
+            "source_id": "s5346",
+            "note": "From GISP «Атлас промышленности» full dump (40,281 companies), captured 2026-09-03. This address sits inside the Руднево (Rudnevo) industrial zone/technopark in eastern Moscow (Косино-Ухтомский район) -- the same UAV-industry cluster Рубинштейн Дмитрий Владимирович (see dmitriy-vladimirovich-rubinshteyn) ran as \"Федеральный центр беспилотных систем\" (\"unites 12 manufacturers of drones\", per investigator.org.ua #270974) March-October 2023, immediately before becoming ЦБСТ's General Director in July 2024. Worth checking whether Рустехдрон was one of those 12 Rudnevo-cluster manufacturers -- not yet confirmed."
+          }
+        ],
+        "facility_type": "purpose_built_technopark_sez",
+        "notes": "\n\nADDRESS/RUDNEVO TIE (2026-09-07): full address (Пехорская 1/3 стр. 4, s5346) places this ЦБСТ resident inside the Руднево технопарк cluster -- the same UAV-industry hub Рубинштейн Д.В. (ЦБСТ's own General Director, 2024-2025) headed immediately before joining ЦБСТ. A direct physical/institutional overlap between ЦБСТ's leadership pipeline and one of its own named residents, surfaced while cross-checking Рубинштейн's prior career (investigator.org.ua #270974). Not yet confirmed whether Рустехдрон was formally one of the technopark's original member companies during Рубинштейн's tenure there, or moved in independently.",
+        "facility_type_history": [
+          {
+            "value": "purpose_built_technopark_sez",
+            "as_of": "2026-09-03",
+            "source_id": "s5346",
+            "note": "Руднево (Rudnevo) industrial zone/technopark, eastern Moscow (Пехорская 1/3 стр. 4) -- see address_history/notes for the Рубинштейн Д.В. connection."
+          }
+        ]
       },
       "verified_against": "searchplatform.rospatent.gov.ru live search API (IN_RU/PE_RU field-scoped query, discovered via user-supplied HAR capture 2026-08-24), archived as s0973/s0974/s0975",
       "why": [

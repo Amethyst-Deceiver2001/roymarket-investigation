@@ -14293,7 +14293,7 @@
     "inn": "5003155499",
     "ogrn": "1235000022179",
     "registered": "27.02.2023",
-    "address": "г. Москва",
+    "address": "111675, г. Москва, ул. Пехорская, д. 1/3, стр. 4",
     "city": "Moscow",
     "okved_code": "30.30",
     "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
@@ -14352,10 +14352,24 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "111675, г. Москва, ул. Пехорская, д. 1/3, стр. 4",
+        "as_of": "2026-09-03",
+        "source_id": "s5346",
+        "note": "From GISP «Атлас промышленности» full dump (40,281 companies), captured 2026-09-03. This address sits inside the Руднево (Rudnevo) industrial zone/technopark in eastern Moscow (Косино-Ухтомский район) -- the same UAV-industry cluster Рубинштейн Дмитрий Владимирович (see dmitriy-vladimirovich-rubinshteyn) ran as \"Федеральный центр беспилотных систем\" (\"unites 12 manufacturers of drones\", per investigator.org.ua #270974) March-October 2023, immediately before becoming ЦБСТ's General Director in July 2024. Worth checking whether Рустехдрон was one of those 12 Rudnevo-cluster manufacturers -- not yet confirmed."
+      }
+    ],
     "name_history": [],
-    "facility_type": null,
-    "facility_type_history": [],
+    "facility_type": "purpose_built_technopark_sez",
+    "facility_type_history": [
+      {
+        "value": "purpose_built_technopark_sez",
+        "as_of": "2026-09-03",
+        "source_id": "s5346",
+        "note": "Руднево (Rudnevo) industrial zone/technopark, eastern Moscow (Пехорская 1/3 стр. 4) -- see address_history/notes for the Рубинштейн Д.В. connection."
+      }
+    ],
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
@@ -14661,6 +14675,7 @@
         "source_id": null
       }
     ],
+    "notes": "\n\nADDRESS/RUDNEVO TIE (2026-09-07): full address (Пехорская 1/3 стр. 4, s5346) places this ЦБСТ resident inside the Руднево технопарк cluster -- the same UAV-industry hub Рубинштейн Д.В. (ЦБСТ's own General Director, 2024-2025) headed immediately before joining ЦБСТ. A direct physical/institutional overlap between ЦБСТ's leadership pipeline and one of its own named residents, surfaced while cross-checking Рубинштейн's prior career (investigator.org.ua #270974). Not yet confirmed whether Рустехдрон was formally one of the technopark's original member companies during Рубинштейн's tenure there, or moved in independently.",
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1235000022179-20260823131658.pdf, 18pp). Confirms the brief's already-documented founder redaction pattern exactly (same two dates). Director page in this extract shows only the certifying tax-service signature block, not a name row — consistent with a director also being access-restricted, though this pull format does not show that as clearly as the founders section does; treat director as unconfirmed-null rather than assume redaction without seeing the explicit restriction notice.",
       "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
