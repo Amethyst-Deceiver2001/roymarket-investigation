@@ -3385,6 +3385,66 @@
           "source_id": "s6915"
         }
       ]
+    },
+    {
+      "slug": "ooo-berkut-dmv",
+      "name_ru": "ООО «Беркут»",
+      "inn": "9709100837",
+      "ogrn": "1237700726636",
+      "address": "Москва",
+      "director": "Рубинштейн Дмитрий Владимирович (founder, per ФНС учредитель/директор cross-reference; not yet confirmed as sitting director)",
+      "okved_code": "30.30",
+      "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования (aircraft/spacecraft manufacturing)",
+      "registered": "26.10.2023",
+      "tier": "unverified",
+      "tier_basis": "Founder-level ФНС director/founder cross-reference hit (screen_upr_uchr.py, 2026-09-07) against Рубинштейн Д.В.'s personal ИНН; independently named by investigator.org.ua (#270974, s6919) as the drone-production company Рубинштейн co-founded and 'simultaneously manages' alongside ЦБСТ. OKVED (aircraft/spacecraft manufacturing) matches that description directly.",
+      "open_questions": [
+        {
+          "text": "Pull a full EGRUL/founding-doc extract to confirm ownership share, current director (vs. founder), and any tie to ЦБСТ itself beyond Рубинштейн's personal role.",
+          "source_id": null
+        }
+      ],
+      "notes": "Founder hit surfaced by screen_upr_uchr.py against Рубинштейн Дмитрий Владимирович's personal ИНН (771537069549) -- role recorded as \"founder\" in ФНС's own director/founder registry, not yet cross-checked against a primary EGRUL extract. Corroborates investigator.org.ua's claim (#270974) that Рубинштейн co-founded and simultaneously manages a drone-production company called «Беркут» alongside his ЦБСТ directorship -- same name, same OKVED (aircraft manufacturing), same Moscow region. No source_id yet since this comes from raw ФНС screening data, not an archived document."
+    },
+    {
+      "slug": "ooo-tekhnomost",
+      "name_ru": "ООО «Техномост»",
+      "inn": "9725186180",
+      "ogrn": "1257700228939",
+      "address": "Москва",
+      "director": "Рубинштейн Дмитрий Владимирович (per ФНС учредитель/директор cross-reference)",
+      "okved_code": "64.20",
+      "okved_label": "Деятельность холдинговых компаний",
+      "registered": "20.05.2025",
+      "tier": "unverified",
+      "tier_basis": "Director-level ФНС director/founder cross-reference hit (screen_upr_uchr.py, 2026-09-07) against Рубинштейн Д.В.'s personal ИНН -- holding-company OKVED, same pattern as his two known Спецтех ЦБСТ-subsidiary directorships (also investment/holding-company OKVED). Not yet confirmed as ЦБСТ-linked.",
+      "open_questions": [
+        {
+          "text": "Pull a full EGRUL/founding-doc extract to confirm ownership -- is this a third ЦБСТ-linked holding vehicle, or an unrelated personal business?",
+          "source_id": null
+        }
+      ],
+      "notes": "Director hit surfaced by screen_upr_uchr.py against Рубинштейн Дмитрий Владимирович's personal ИНН (771537069549). Holding-company OKVED (64.20) mirrors his two confirmed ЦБСТ-subsidiary directorships (АО «Спецтех Инвестиции», АО «Спецтех Первый», both also 64.xx investment/holding codes) -- worth checking whether this is a third vehicle in the same pattern. No source_id yet since this comes from raw ФНС screening data, not an archived document."
+    },
+    {
+      "slug": "ooo-momento-rubinshteyn",
+      "name_ru": "ООО «Моменто»",
+      "inn": "9717192768",
+      "ogrn": "1267700182298",
+      "address": "Москва",
+      "director": "Рубинштейн Дмитрий Владимирович (founder, per ФНС учредитель/директор cross-reference)",
+      "okved_code": "62.01",
+      "okved_label": "Разработка компьютерного программного обеспечения",
+      "registered": "27.05.2026",
+      "tier": "unverified",
+      "tier_basis": "Founder-level ФНС director/founder cross-reference hit (screen_upr_uchr.py, 2026-09-07) against Рубинштейн Д.В.'s personal ИНН. Software-development OKVED, no obvious ЦБСТ tie beyond the shared founder -- likely a personal/adjacent business, not yet confirmed either way.",
+      "open_questions": [
+        {
+          "text": "Pull a full EGRUL/founding-doc extract to establish what this company actually does and whether it has any ЦБСТ-network tie.",
+          "source_id": null
+        }
+      ],
+      "notes": "Founder hit surfaced by screen_upr_uchr.py against Рубинштейн Дмитрий Владимирович's personal ИНН (771537069549). Software-development OKVED suggests a personal/unrelated venture rather than a ЦБСТ vehicle, but not yet confirmed either way. No source_id yet since this comes from raw ФНС screening data, not an archived document."
     }
   ],
   "entities": {

@@ -31370,6 +31370,23 @@
     "_origin": "manifest"
   },
   {
+    "id": "s6918",
+    "type": "egrul",
+    "path": "data/sources/EGRIP_771537069549_20260907_rubinshteyn-dmitriy-vladimirovich.pdf",
+    "url": null,
+    "captured_date": "2026-09-07",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "79b3a2384ba2ed7eac2aaa725d1bbd87a57ef05e91ba89c863e53aa28083ae82",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s0052",
     "type": "egrul_api",
     "path": "data/sources/EGRULAPI_1215226708_20260822_ooo-tsyus.json",
@@ -50111,6 +50128,25 @@
     "inns": [],
     "entities": [],
     "sha256": "78fd780155da1cdfef5d67fa0dea59963dd043c138db7ed3dc0f6b58a4ec3dce",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s6919",
+    "type": null,
+    "path": "data/sources/PRESS_20260907_investigator-org-ua-270974-rubinshteyn.txt",
+    "url": null,
+    "captured_date": "2026-09-07",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "771537069549"
+    ],
+    "entities": [],
+    "sha256": "b8fe064a2ed45bfcf9fe84aed76690b59f873151336389674c06e605630cc4d1",
     "_verified": false,
     "_origin": "manifest"
   },

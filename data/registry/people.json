@@ -1885,34 +1885,110 @@
     "dob": "1975-04-13",
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "771537069549",
     "roles": [
       {
         "entity_slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
-        "title": "General Director, АНО «ЦБСТ», until late 2025",
+        "title": "General Director, АНО «ЦБСТ», appointed July 2024, until late 2025",
+        "body": null,
+        "from": "2024-07",
+        "to": null,
+        "source_id": "s6919"
+      },
+      {
+        "entity_slug": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
+        "title": "Генеральный директор, sole-shareholder subsidiary of ЦБСТ (100% owned)",
+        "body": null,
+        "from": "2025-11-27",
+        "to": null,
+        "source_id": "s0436"
+      },
+      {
+        "entity_slug": "ao-spetstekh-perviy",
+        "title": "Генеральный директор, sole-shareholder subsidiary of ЦБСТ (100% owned)",
+        "body": null,
+        "from": "2026-04-10",
+        "to": null,
+        "source_id": "s0437"
+      },
+      {
+        "entity_slug": null,
+        "entity_name": "«Федеральный центр беспилотных систем» (Rudnevo technopark cluster, Moscow)",
+        "title": "Headed the Rudnevo UAV-industry technopark cluster (\"unites 12 manufacturers of drones\"), Mar-Oct 2023 -- predates his ЦБСТ directorship",
+        "body": null,
+        "from": "2023-03",
+        "to": "2023-10",
+        "source_id": "s6919"
+      },
+      {
+        "entity_slug": "ooo-berkut-dmv",
+        "entity_name": "«Беркут» (Berkut, drone production company)",
+        "title": "Co-founder; manages Беркут simultaneously with ЦБСТ per investigator.org.ua -- legal entity/ИНН not yet identified, open lead",
         "body": null,
         "from": null,
         "to": null,
-        "source_id": null
+        "source_id": "s6919"
+      },
+      {
+        "entity_slug": null,
+        "entity_name": "ИП Рубинштейн Д.В. (ОГРНИП 324774600148072)",
+        "title": "Individual entrepreneur, real-estate rental/purchase-sale/management (ОКВЭД 68.20/68.10/68.31/68.32) + cleaning/landscaping services, registered 05.03.2024, Moscow -- a personal business unrelated to ЦБСТ",
+        "body": null,
+        "from": "2024-03-05",
+        "to": null,
+        "source_id": "s6918"
       }
     ],
     "sanctions": [
       {
         "date": null,
-        "note": "PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: name matches exactly (rare full name); OpenSanctions record carries no notes/positions to independently corroborate role — DOB only, not role-corroborated. Lower confidence than the other Tier-A entries. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
-        "regime": null,
-        "source_id": null
+        "regime": [
+          "UA-SA1644"
+        ],
+        "note": "CONFIRMED 2026-09-07 (upgraded from PLAUSIBLE): personal ИНН 771537069549 obtained directly from his own signed ЕГРИП выписка (ОГРНИП 324774600148072, s6918) EXACTLY matches the innCode field (771537069549) on the OpenSanctions match NK-FB8ZwerfADz5nYiuNzkaPG (Ukraine NSDC sanctions list, programId UA-SA1644, dataset ua_nsdc_sanctions cross-referenced against ext_ru_egrul) -- an exact primary-identifier match, not a name-only fuzzy match. DOB 1975-04-13 on the sanctions record also matches independently (see dob field, itself corroborated by investigator.org.ua, s6919). Full programme name: Ukraine NSDC sanctions.",
+        "source_id": "s6918"
       }
     ],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "9725186180",
+        "ogrn": "1257700228939",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНОМОСТ\"",
+        "role": "director",
+        "okved": "64.20",
+        "okved_label": "Деятельность холдинговых компаний",
+        "registered": "20.05.2025",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "9709100837",
+        "ogrn": "1237700726636",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЕРКУТ\"",
+        "role": "founder",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "26.10.2023",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "9717192768",
+        "ogrn": "1267700182298",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МОМЕНТО\"",
+        "role": "founder",
+        "okved": "62.01",
+        "okved_label": "Разработка компьютерного программного обеспечения",
+        "registered": "27.05.2026",
+        "region": "МОСКВА Г."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
-    "disqualification_checked_at": null,
+    "disqualification_checked_at": "2026-09-07",
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-07",
     "social": [],
     "photo": null,
-    "notes": "The apparent registry “conflict” between aggregators is resolved: this was a real succession, not a data error. Rubinstein appears as sitting CEO through at least Sept 2025 (PMEF, Minpromtorg award, ЭКСПЛОМЕТ agreement). Primary doc",
+    "notes": "\n\nENRICHED 2026-09-07 (EGRIP extract s6918 + investigator.org.ua #270974, s6919): personal ИНН 771537069549 confirmed directly from his own signed ЕГРИП выписка -- exactly matches the OpenSanctions Ukraine-NSDC match's innCode, upgrading that match from plausible to ID-confirmed (see sanctions[]). investigator.org.ua adds: passport 4520775299 (not entered as a structured field -- no dedicated passport field in this schema, see s6919 if needed); phones +79164061136/+79876700080; prior career at АО «Сименс» and headed the \"Главный вычислительный центр\" (Main computing center) within the Russian Presidential Administration; headed the Rudnevo technopark UAV cluster (Federal Center of Unmanned Systems, 12 manufacturer members) Mar-Oct 2023, immediately before ЦБСТ; co-founded and currently also manages drone-production company «Беркут» alongside ЦБСТ -- entity not yet identified/added to this registry, open lead. investigator.org.ua's core allegation: ЦБСТ made false claims about when its drones entered production, since \"these drones have been supplied to the front before registration of the Center.\" Also holds a personal real-estate ИП (ОГРНИП 324774600148072, since 2024-03-05) -- unrelated commercial activity, not a ЦБСТ-network entity.",
     "sources": [],
     "_verified": false,
     "_origin": "brief:executives-table",
@@ -1924,7 +2000,8 @@
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
       "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
-      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to ano-tsbst-centre-for-unmanned-systems-technologies, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
+      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to ano-tsbst-centre-for-unmanned-systems-technologies, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
+      "2026-09-07: wired personal ИНН from a user-supplied primary ЕГРИП выписка (s6918) plus investigator.org.ua corroboration (s6919, user-supplied URL) -- personal ИНН exactly matches the OpenSanctions Ukraine-NSDC match's own innCode, upgrading that match to ID-confirmed; added his two Спецтех subsidiary directorships (already on file for those entities but missing from his own roles[]), his prior Rudnevo technopark role, and the «Беркут» co-founder lead (entity not yet identified)."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
