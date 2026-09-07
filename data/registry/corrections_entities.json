@@ -15483,7 +15483,22 @@
             "source_id": "s6770",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
-        ]
+        ],
+        "address_history": [
+          {
+            "value": "115230, г. Москва, Хлебозаводской пр-д, д. 7, стр. 9, эт. 8, пом. XV, ком. 18П (рм 18г)",
+            "as_of": "2023-07-01",
+            "source_id": "s6935",
+            "note": "First address on file for this entity (had none before), from a proverki.gov.ru Департамент образования и науки Москвы 'профилактический визит' record (Jul 2023). A second address is cited in the same record — see next entry."
+          },
+          {
+            "value": "119331, г. Москва, Вернадского пр-т, д. 29, помещение 4/12 (этаж 12, помещение I, комната № 4)",
+            "as_of": "2023-07-01",
+            "source_id": "s6935",
+            "note": "Second address cited in the same Jul 2023 Департамент образования и науки Москвы record alongside Хлебозаводской пр-д, д.7 — both associated with this entity, relationship between the two (HQ vs branch) not yet disambiguated."
+          }
+        ],
+        "notes": "2026-09-07: proverki.gov.ru screen (2 records, s6935) — control body is Moscow's education department (not a standard labor/fire/tax inspector), suggesting an educational-licensing or training-program angle; surfaced this entity's only two addresses on file (previously none)."
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -16698,7 +16713,24 @@
             "source_id": "s6759",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
-        ]
+        ],
+        "address_history": [
+          {
+            "value": "111675, г. Москва, ул. Пехорская, д. 1Д, стр. 1",
+            "as_of": "2026-08-01",
+            "source_id": "s6934",
+            "note": "First street-level address on file (prior: bare 'г. Москва'), from a proverki.gov.ru labor-inspection warning (Aug 2026, faceName ООО \"ГАСКАР\"). Same street as ООО «НПО «Рустехдрон»»'s Пехорская 1/3 стр.4 facility (Руднево technopark, wired earlier this session) — possible shared-industrial-cluster overlap, not yet confirmed as same building."
+          }
+        ],
+        "name_history": [
+          {
+            "value": "ООО «ЭВР»",
+            "as_of": "2025-11-01",
+            "source_id": "s6934",
+            "note": "proverki.gov.ru inspection records dated Oct 2024 through Nov 2025 all carry faceName ООО \"ЭВР\" at this same ИНН/ОГРН (9710112989 / 1237700273744); the Aug 2026 record is the first to show the current name ООО «ГАСКАР» — renamed sometime between Nov 2025 and Aug 2026."
+          }
+        ],
+        "notes": "2026-09-07: proverki.gov.ru screen (5 records, all labor-inspection warnings, s6934) surfaced a prior legal name (ООО «ЭВР») and this entity's first street-level address (ул. Пехорская, д.1Д, стр.1, Москва)."
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [

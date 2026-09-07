@@ -10185,8 +10185,22 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
-    "name_history": [],
+    "address_history": [
+      {
+        "value": "111675, г. Москва, ул. Пехорская, д. 1Д, стр. 1",
+        "as_of": "2026-08-01",
+        "source_id": "s6934",
+        "note": "First street-level address on file (prior: bare 'г. Москва'), from a proverki.gov.ru labor-inspection warning (Aug 2026, faceName ООО \"ГАСКАР\"). Same street as ООО «НПО «Рустехдрон»»'s Пехорская 1/3 стр.4 facility (Руднево technopark, wired earlier this session) — possible shared-industrial-cluster overlap, not yet confirmed as same building."
+      }
+    ],
+    "name_history": [
+      {
+        "value": "ООО «ЭВР»",
+        "as_of": "2025-11-01",
+        "source_id": "s6934",
+        "note": "proverki.gov.ru inspection records dated Oct 2024 through Nov 2025 all carry faceName ООО \"ЭВР\" at this same ИНН/ОГРН (9710112989 / 1237700273744); the Aug 2026 record is the first to show the current name ООО «ГАСКАР» — renamed sometime between Nov 2025 and Aug 2026."
+      }
+    ],
     "facility_type": null,
     "facility_type_history": [],
     "parents": [],
@@ -10341,6 +10355,7 @@
     "_origin_extra": [
       "brief:prose"
     ],
+    "notes": "2026-09-07: proverki.gov.ru screen (5 records, all labor-inspection warnings, s6934) surfaced a prior legal name (ООО «ЭВР») and this entity's first street-level address (ул. Пехорская, д.1Д, стр.1, Москва).",
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1237700273744-20260823122809.pdf).",
       "REAL CROSS-LINK, not just a routine pull: ООО «Гаскар» (already documented in the brief prose at docs/index.html:412 as EU-sanctioned, address a few doors from ООО «НПО Рустехдрон» on ул. Пехорская) is 100%-owned by ООО «Сибирская навигационная компания» (ИНН 4205376019) — the SAME entity already hand-verified earlier this session (ooo-sibirskaya-navigatsionnaya-kompaniya, in the prior 14-entity manufacturer batch). And Гаскар's own director, Константинов Евгений Александрович (ИНН 263114465785), is independently confirmed as the 26.25% minority founder of that same parent company (Сибирская навигационная компания) — so this is not merely a shell-subsidiary relationship, the sanctioned company's own director is a direct personal owner of its parent. Ties two previously-separate registry records together via a verified primary-document chain.",
@@ -10800,7 +10815,190 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [
+      {
+        "reg_number": "77261373165522925079",
+        "law": "248",
+        "inn": "9710112989",
+        "ogrn": "1237700273744",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАСКАР\"",
+        "period": "Август 2026 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+        "prosecutor_office": "Прокуратура города Москвы",
+        "object_address": "111675, Г.МОСКВА, УЛ ПЕХОРСКАЯ, Д. 1Д, Корпус СТР. 1, ",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/32997159",
+        "_raw": {
+          "id": "32997159",
+          "number": "77261373165522925079",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "9710112989",
+          "ogrn": "1237700273744",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАСКАР\"",
+          "startMonth": "Август 2026 года.",
+          "term": null,
+          "objectAddress": "111675, Г.МОСКВА, УЛ ПЕХОРСКАЯ, Д. 1Д, Корпус СТР. 1, ",
+          "frguOrgName": null,
+          "frguOrgFullName": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": "Прокуратура города Москвы",
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      },
+      {
+        "reg_number": "77251373165519881063",
+        "law": "248",
+        "inn": "9710112989",
+        "ogrn": "1237700273744",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВР\"",
+        "period": "Ноябрь 2025 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+        "prosecutor_office": "Прокуратура города Москвы",
+        "object_address": "null",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/29953148",
+        "_raw": {
+          "id": "29953148",
+          "number": "77251373165519881063",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "9710112989",
+          "ogrn": "1237700273744",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВР\"",
+          "startMonth": "Ноябрь 2025 года.",
+          "term": null,
+          "objectAddress": "null",
+          "frguOrgName": null,
+          "frguOrgFullName": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": "Прокуратура города Москвы",
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      },
+      {
+        "reg_number": "77251373165518390833",
+        "law": "248",
+        "inn": "9710112989",
+        "ogrn": "1237700273744",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВР\"",
+        "period": "Июнь 2025 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+        "prosecutor_office": "Прокуратура города Москвы",
+        "object_address": "null",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/28462921",
+        "_raw": {
+          "id": "28462921",
+          "number": "77251373165518390833",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "9710112989",
+          "ogrn": "1237700273744",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВР\"",
+          "startMonth": "Июнь 2025 года.",
+          "term": null,
+          "objectAddress": "null",
+          "frguOrgName": null,
+          "frguOrgFullName": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": "Прокуратура города Москвы",
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      },
+      {
+        "reg_number": "77241373165515955580",
+        "law": "248",
+        "inn": "9710112989",
+        "ogrn": "1237700273744",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВР\"",
+        "period": "Октябрь 2024 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+        "prosecutor_office": null,
+        "object_address": "null",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/26027668",
+        "_raw": {
+          "id": "26027668",
+          "number": "77241373165515955580",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "9710112989",
+          "ogrn": "1237700273744",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВР\"",
+          "startMonth": "Октябрь 2024 года.",
+          "term": null,
+          "objectAddress": "null",
+          "frguOrgName": null,
+          "frguOrgFullName": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": null,
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      },
+      {
+        "reg_number": "77241373165515927859",
+        "law": "248",
+        "inn": "9710112989",
+        "ogrn": "1237700273744",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВР\"",
+        "period": "Октябрь 2024 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+        "prosecutor_office": null,
+        "object_address": "null",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/25999947",
+        "_raw": {
+          "id": "25999947",
+          "number": "77241373165515927859",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "9710112989",
+          "ogrn": "1237700273744",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВР\"",
+          "startMonth": "Октябрь 2024 года.",
+          "term": null,
+          "objectAddress": "null",
+          "frguOrgName": null,
+          "frguOrgFullName": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": null,
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      }
+    ],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-sibnk",
@@ -16676,7 +16874,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-vizionero",
@@ -27042,7 +27242,9 @@
     },
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ao-tsentr-telko",
@@ -27474,7 +27676,20 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "115230, г. Москва, Хлебозаводской пр-д, д. 7, стр. 9, эт. 8, пом. XV, ком. 18П (рм 18г)",
+        "as_of": "2023-07-01",
+        "source_id": "s6935",
+        "note": "First address on file for this entity (had none before), from a proverki.gov.ru Департамент образования и науки Москвы 'профилактический визит' record (Jul 2023). A second address is cited in the same record — see next entry."
+      },
+      {
+        "value": "119331, г. Москва, Вернадского пр-т, д. 29, помещение 4/12 (этаж 12, помещение I, комната № 4)",
+        "as_of": "2023-07-01",
+        "source_id": "s6935",
+        "note": "Second address cited in the same Jul 2023 Департамент образования и науки Москвы record alongside Хлебозаводской пр-д, д.7 — both associated with this entity, relationship between the two (HQ vs branch) not yet disambiguated."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -27612,6 +27827,7 @@
         "source_id": "s0043"
       }
     ],
+    "notes": "2026-09-07: proverki.gov.ru screen (2 records, s6935) — control body is Moscow's education department (not a standard labor/fire/tax inspector), suggesting an educational-licensing or training-program angle; surfaced this entity's only two addresses on file (previously none).",
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1207700030493-20260823132102.pdf). Sole founder = sole director. Registered address field did not extract cleanly from this PDF (same layout quirk noted on other files this session) — left null rather than guessed.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0816).",
@@ -27759,7 +27975,82 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [
+      {
+        "reg_number": "77250907700020074651",
+        "law": "248",
+        "inn": "9724002908",
+        "ogrn": "1207700030493",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДСГ\"",
+        "period": "Ноябрь 2025 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ДЕПАРТАМЕНТ ОБРАЗОВАНИЯ И НАУКИ ГОРОДА МОСКВЫ",
+        "prosecutor_office": "Прокуратура города Москвы",
+        "object_address": "null",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/30146736",
+        "_raw": {
+          "id": "30146736",
+          "number": "77250907700020074651",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "9724002908",
+          "ogrn": "1207700030493",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДСГ\"",
+          "startMonth": "Ноябрь 2025 года.",
+          "term": null,
+          "objectAddress": "null",
+          "frguOrgName": null,
+          "frguOrgFullName": "ДЕПАРТАМЕНТ ОБРАЗОВАНИЯ И НАУКИ ГОРОДА МОСКВЫ",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": "Прокуратура города Москвы",
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      },
+      {
+        "reg_number": "77230907700006669108",
+        "law": "248",
+        "inn": "9724002908",
+        "ogrn": "1207700030493",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДСГ\"",
+        "period": "Июль 2023 года.",
+        "measure_type": "Профилактический визит",
+        "control_body": "ДЕПАРТАМЕНТ ОБРАЗОВАНИЯ И НАУКИ ГОРОДА МОСКВЫ",
+        "prosecutor_office": null,
+        "object_address": "115230, г. Москва, Хлебозаводской пр-д, д. 7, стр. 9, эт. 8, пом. XV, ком. 18П (рм 18г);119331, г. Москва, Вернадского пр-т, д. 29, помещение 4/12 (этаж 12, помещение I, комната № 4) ",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/16741202",
+        "_raw": {
+          "id": "16741202",
+          "number": "77230907700006669108",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "9724002908",
+          "ogrn": "1207700030493",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДСГ\"",
+          "startMonth": "Июль 2023 года.",
+          "term": null,
+          "objectAddress": "115230, г. Москва, Хлебозаводской пр-д, д. 7, стр. 9, эт. 8, пом. XV, ком. 18П (рм 18г);119331, г. Москва, Вернадского пр-т, д. 29, помещение 4/12 (этаж 12, помещение I, комната № 4) ",
+          "frguOrgName": null,
+          "frguOrgFullName": "ДЕПАРТАМЕНТ ОБРАЗОВАНИЯ И НАУКИ ГОРОДА МОСКВЫ",
+          "inspectionTarget": null,
+          "carryoutName": "Профилактический визит",
+          "prosecName": null,
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      }
+    ],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-spetsialnye-poleznye-tekhnologii",
@@ -28834,7 +29125,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-gaskar-tekhnologii",
@@ -29152,7 +29445,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-vostochnye-vorota-zabaykalsk-manchzhuriya",
@@ -42146,7 +42441,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-promsintez",
@@ -52933,7 +53230,46 @@
     "reestr_digital_excluded_count": 0,
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [
+      {
+        "reg_number": "23240531000016082739",
+        "law": "248",
+        "inn": "2312321660",
+        "ogrn": "1232300051235",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАГАРИНГ\"",
+        "period": "Ноябрь 2024 года.",
+        "measure_type": "Профилактический визит",
+        "control_body": "Управление Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций по Южному федеральному округу",
+        "prosecutor_office": null,
+        "object_address": "null;null;null",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/26154827",
+        "_raw": {
+          "id": "26154827",
+          "number": "23240531000016082739",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "2312321660",
+          "ogrn": "1232300051235",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАГАРИНГ\"",
+          "startMonth": "Ноябрь 2024 года.",
+          "term": null,
+          "objectAddress": "null;null;null",
+          "frguOrgName": null,
+          "frguOrgFullName": "Управление Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций по Южному федеральному округу",
+          "inspectionTarget": null,
+          "carryoutName": "Профилактический визит",
+          "prosecName": null,
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      }
+    ],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-praym",
@@ -55439,7 +55775,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -63257,7 +63595,82 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [
+      {
+        "reg_number": "53261373167321865261",
+        "law": "248",
+        "inn": "7802893898",
+        "ogrn": "1217800073545",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕРОН\"",
+        "period": "Май 2026 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА В НОВГОРОДСКОЙ ОБЛАСТИ",
+        "prosecutor_office": null,
+        "object_address": "обл. Новгородская",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/31937341",
+        "_raw": {
+          "id": "31937341",
+          "number": "53261373167321865261",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "7802893898",
+          "ogrn": "1217800073545",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕРОН\"",
+          "startMonth": "Май 2026 года.",
+          "term": null,
+          "objectAddress": "обл. Новгородская",
+          "frguOrgName": null,
+          "frguOrgFullName": "ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА В НОВГОРОДСКОЙ ОБЛАСТИ",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": null,
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      },
+      {
+        "reg_number": "53240061000216742171",
+        "law": "248",
+        "inn": "7802893898",
+        "ogrn": "1217800073545",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕРОН-АВИА\"",
+        "period": "Декабрь 2024 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ГЛАВНОЕ УПРАВЛЕНИЕ МИНИСТЕРСТВА РОССИЙСКОЙ ФЕДЕРАЦИИ ПО ДЕЛАМ ГРАЖДАНСКОЙ ОБОРОНЫ, ЧРЕЗВЫЧАЙНЫМ СИТУАЦИЯМ И ЛИКВИДАЦИИ ПОСЛЕДСТВИЙ СТИХИЙНЫХ БЕДСТВИЙ ПО НОВГОРОДСКОЙ ОБЛАСТИ",
+        "prosecutor_office": null,
+        "object_address": "null",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/26814259",
+        "_raw": {
+          "id": "26814259",
+          "number": "53240061000216742171",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "7802893898",
+          "ogrn": "1217800073545",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕРОН-АВИА\"",
+          "startMonth": "Декабрь 2024 года.",
+          "term": null,
+          "objectAddress": "null",
+          "frguOrgName": null,
+          "frguOrgFullName": "ГЛАВНОЕ УПРАВЛЕНИЕ МИНИСТЕРСТВА РОССИЙСКОЙ ФЕДЕРАЦИИ ПО ДЕЛАМ ГРАЖДАНСКОЙ ОБОРОНЫ, ЧРЕЗВЫЧАЙНЫМ СИТУАЦИЯМ И ЛИКВИДАЦИИ ПОСЛЕДСТВИЙ СТИХИЙНЫХ БЕДСТВИЙ ПО НОВГОРОДСКОЙ ОБЛАСТИ",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": null,
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      }
+    ],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-skay-avia-grupp",

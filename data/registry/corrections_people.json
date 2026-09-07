@@ -1737,16 +1737,22 @@
         "sanctions": [
           {
             "date": null,
-            "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names her as founder of \"SDB Piranya\" alongside Чернышов — same entity, same registry tie. Personal ИНН given in notes: 732703148651; passport 7317205966. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
-            "regime": null,
-            "source_id": null
+            "regime": [
+              "EU",
+              "FR",
+              "GUR-UA"
+            ],
+            "note": "ID-CONFIRMED 2026-09-07: personal ИНН 732703148651 (independently supplied and checksum-verified) exactly matches OpenSanctions' own innCode field on this match (source s-opensanctions, archived 2026-09-06) — upgrades from role-corroborated PLAUSIBLE to ID-confirmed. Passport 7317205966 also on file via the same match. Sanctioned as majority (60%) owner of ООО «СКБ «Пиранья»» alongside 40%-owner Чернышов Павел Алексеевич, per EU Regulation 2026/1843 (CELEX:32026R1843), France DGT gel-avoirs registry, and GUR Ukraine war-sanctions list.",
+            "source_id": "s6357"
           }
-        ]
+        ],
+        "inn_personal": "732703148651"
       },
-      "verified_against": null,
+      "verified_against": "ИНН checksum (self-verified) + OpenSanctions innCode field cross-check (source: data/sources/OPENSANCTIONS_korchagina-olga-aleksandrovna_20260906_korchagina-olga-aleksandrovna.json)",
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+        "2026-09-07: user supplied her personal ИНН directly for verification; checksum valid, and it exactly matches the innCode already embedded in her existing OpenSanctions match raw payload -- confirms the sanctions match is her, not a namesake."
       ]
     },
     "korolev-aleksey-aleksandrovich": {
