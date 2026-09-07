@@ -50133,23 +50133,40 @@
   },
   {
     "id": "s6916",
-    "type": "inspection_registry",
+    "type": null,
     "path": "data/sources/PROVERKI_6730046954_20260907_ao-nii-stt-inspection-history.txt",
     "url": null,
     "captured_date": "2026-09-07",
     "fiscal_year": null,
-    "as_of": "2026-09-07",
+    "as_of": null,
     "as_of_method": null,
     "supersedes": null,
     "superseded_by": null,
     "inns": [
       "6730046954"
     ],
-    "entities": [
-      "ao-nii-stt"
-    ],
+    "entities": [],
     "sha256": "6c94878471c77cde467f2a6858396d9b403530234ff3de019b491909ab4273e9",
-    "_verified": true,
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s6917",
+    "type": null,
+    "path": "data/sources/PROVERKI_7811075899_20260907_ao-kotlin-novator-inspection-history.txt",
+    "url": null,
+    "captured_date": "2026-09-07",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "7811075899"
+    ],
+    "entities": [],
+    "sha256": "32ddd55ca802e5646385082ca37f70c594592f21bf9c1efcbb79bd656e2a2a82",
+    "_verified": false,
     "_origin": "manifest"
   },
   {

@@ -143,22 +143,27 @@ def screen_one(session: requests.Session, query: str, captcha_file: Path) -> lis
 
 
 def normalize_row(row: dict) -> dict:
-    """Best-effort field mapping -- the exact JSON key names haven't been
-    captured from a successful response yet (every session interactively
-    tested through 2026-09-07 hit a captcha-solve failure before reaching a
-    real payload for inspection). Adjust these keys the first time a real
-    response body is seen, using the visible search-results-table columns
-    as the guide: reg. number, ФЗ, ИНН, ОГРН, entity name, month, control
-    body, prosecutor's office."""
+    """Field mapping CONFIRMED 2026-09-07 against a real successful payload
+    (АО «Котлин-Новатор», ИНН 7811075899, 25 records). Real key names:
+    number (reg number), federalLaw ("248"/"294", no "-ФЗ" suffix), inn,
+    ogrn, faceName (entity name), startMonth (Russian text, e.g. "Апрель
+    2026 года."), carryoutName (measure type, e.g. "Выездная проверка"/
+    "Профилактический визит"/"Документарная") falling back to knmType,
+    frguOrgFullName (control body), prosecName (prosecutor's office, often
+    null), objectAddress, decision (bool -- some violation found, observed
+    False on every record seen so far), id (-> public-knm URL)."""
     return {
-        "reg_number": row.get("regNumber") or row.get("number") or row.get("id"),
-        "law": row.get("law") or row.get("federalLaw"),
+        "reg_number": row.get("number") or row.get("regNumber") or row.get("id"),
+        "law": row.get("federalLaw") or row.get("law"),
         "inn": row.get("inn"),
         "ogrn": row.get("ogrn"),
-        "entity_name": row.get("name") or row.get("entityName"),
-        "period": row.get("period") or row.get("startDate"),
-        "control_body": row.get("controlBody") or row.get("supervisoryAuthority"),
-        "prosecutor_office": row.get("prosecutorOffice"),
+        "entity_name": row.get("faceName") or row.get("name") or row.get("entityName"),
+        "period": row.get("startMonth") or row.get("period") or row.get("startDate"),
+        "measure_type": row.get("carryoutName") or row.get("knmType"),
+        "control_body": row.get("frguOrgFullName") or row.get("controlBody") or row.get("supervisoryAuthority"),
+        "prosecutor_office": row.get("prosecName") or row.get("prosecutorOffice"),
+        "object_address": row.get("objectAddress"),
+        "decision": row.get("decision"),
         "url": (f"{BASE_URL}/portal/public-knm/{row['id']}" if row.get("id") else None),
         "_raw": row,
     }
