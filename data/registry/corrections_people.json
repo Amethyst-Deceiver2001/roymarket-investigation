@@ -1136,12 +1136,33 @@
       "set": {
         "inn_personal": "711506978521",
         "notes_append": [
-          "2026-09-02: personal ИНН confirmed via выписка из ЕГРН (s5295). Also directly confirmed as a signing member of Ushkuynik's закупочная комиссия on the 17.12.2025 протокол (s5303)."
+          "2026-09-02: personal ИНН confirmed via выписка из ЕГРН (s5295). Also directly confirmed as a signing member of Ushkuynik's закупочная комиссия on the 17.12.2025 протокол (s5303).",
+          "2026-09-07: screen_upr_uchr.py ФНС cross-reference confirms Елисеев as генеральный директор AND 50% co-founder of ЦПТ, an entity already in the registry whose own director_history/founders_history already named him (via a full ЕГРЮЛ выписка, s6808, pulled the same day) -- his own roles[] never carried this tie until now, only his Ushkuynik role. ЦПТ is manufacturer-tier -- worth noting as a real organizational link between Ushkuynik staff and a manufacturer entity, not a peripheral business."
         ],
         "sources": [
           "s5295"
-        ]
-      }
+        ],
+        "roles": [
+          {
+            "entity_name": "АНО «НПЦ «Ушкуйник»»",
+            "entity_slug": "ano-npts-ushkuynik",
+            "from": null,
+            "source_id": "s5288",
+            "title": "Начальник производства",
+            "to": null
+          },
+          {
+            "title": "Генеральный директор; соучредитель (50%)",
+            "entity_name": "ООО «НПК «Центр перспективных технологий»» (ЦПТ)",
+            "entity_slug": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
+            "from": "2026-01-19",
+            "to": null,
+            "source_id": "s6808"
+          }
+        ],
+        "_verified": true
+      },
+      "verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference (pb.nalog.ru search-proc.json, scripts/screen_upr_uchr.py, run 2026-09-07) -- exact ИНН match (711506978521) as генеральный директор of ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy (ЦПТ, ИНН 5300022741), an entity already on file, corroborating that entity's own director_history entry sourced to a full signed ЕГРЮЛ выписка (s6808)."
     },
     "eliseev-ilya-vladimirovich": {
       "set": {
@@ -3191,12 +3212,33 @@
       "set": {
         "inn_personal": "780507237800",
         "notes_append": [
-          "2026-09-02: personal ИНН confirmed via выписка из ЕГРН (s5297), independently re-downloaded from smolin.info's own embedded evidence file. Upgrades this from a per-source-only claim."
+          "2026-09-02: personal ИНН confirmed via выписка из ЕГРН (s5297), independently re-downloaded from smolin.info's own embedded evidence file. Upgrades this from a per-source-only claim.",
+          "2026-09-07: ЦПТ's own founders_history (s6808, full ЕГРЮЛ выписка) names Владимирский as 50% co-founder alongside Елисеев Д.Н. -- his own roles[] never carried this tie until now, only his Ushkuynik role. Adds a second confirmed Ushkuynik-to-ЦПТ personnel link."
         ],
         "sources": [
           "s5297"
-        ]
-      }
+        ],
+        "roles": [
+          {
+            "entity_name": "АНО «НПЦ «Ушкуйник»»",
+            "entity_slug": "ano-npts-ushkuynik",
+            "from": null,
+            "source_id": "s5288",
+            "title": "Заместитель генерального директора",
+            "to": null
+          },
+          {
+            "title": "Соучредитель (50%)",
+            "entity_name": "ООО «НПК «Центр перспективных технологий»» (ЦПТ)",
+            "entity_slug": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
+            "from": "2026-01-19",
+            "to": null,
+            "source_id": "s6808"
+          }
+        ],
+        "_verified": true
+      },
+      "verified_against": "Cross-reference against ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy (ЦПТ)'s own founders_history entry (source s6808, a full signed ЕГРЮЛ выписка pulled 2026-09-07) -- exact ФИО match \"Владимирский Михаил Юрьевич\" as 50% co-founder, alongside Елисеев Д.Н. (independently ИНН-confirmed via the same document and via screen_upr_uchr.py the same day)."
     },
     "vlasov-artem-arkadevich": {
       "set": {},

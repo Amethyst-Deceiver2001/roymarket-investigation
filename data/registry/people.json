@@ -26272,7 +26272,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -28000,7 +28000,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -28892,7 +28892,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -34233,7 +34233,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -35103,8 +35103,19 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "7714485748",
+        "ogrn": "1227700289299",
+        "name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СПЕЦПРОЕКТ\"",
+        "role": "director",
+        "okved": "70.10.1",
+        "okved_label": "Деятельность по управлению финансово-промышленными группами",
+        "registered": "20.05.2022",
+        "region": "МОСКВА Г"
+      }
+    ],
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -35469,7 +35480,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -35766,7 +35777,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -35842,7 +35853,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -36131,7 +36142,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -36183,7 +36194,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -36255,8 +36266,19 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "9728026314",
+        "ogrn": "1217700036212",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МКОНСТАНТА\"",
+        "role": "founder",
+        "okved": "62.02",
+        "okved_label": "Деятельность консультативная и работы в области компьютерных технологий",
+        "registered": "03.02.2021",
+        "region": "МОСКВА Г."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -37414,7 +37436,7 @@
     "roles": [],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -37558,7 +37580,7 @@
     "roles": [],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -38408,7 +38430,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -39046,6 +39068,14 @@
         "source_id": "s5288",
         "title": "Заместитель генерального директора",
         "to": null
+      },
+      {
+        "title": "Соучредитель (50%)",
+        "entity_name": "ООО «НПК «Центр перспективных технологий»» (ЦПТ)",
+        "entity_slug": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
+        "from": "2026-01-19",
+        "to": null,
+        "source_id": "s6808"
       }
     ],
     "sanctions": [],
@@ -39061,14 +39091,15 @@
     "sources": [
       "s5297"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": null,
     "notes_append": [
-      "2026-09-02: personal ИНН confirmed via выписка из ЕГРН (s5297), independently re-downloaded from smolin.info's own embedded evidence file. Upgrades this from a per-source-only claim."
+      "2026-09-02: personal ИНН confirmed via выписка из ЕГРН (s5297), independently re-downloaded from smolin.info's own embedded evidence file. Upgrades this from a per-source-only claim.",
+      "2026-09-07: ЦПТ's own founders_history (s6808, full ЕГРЮЛ выписка) names Владимирский as 50% co-founder alongside Елисеев Д.Н. -- his own roles[] never carried this tie until now, only his Ushkuynik role. Adds a second confirmed Ushkuynik-to-ЦПТ personnel link."
     ],
-    "_verified_against": null,
+    "_verified_against": "Cross-reference against ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy (ЦПТ)'s own founders_history entry (source s6808, a full signed ЕГРЮЛ выписка pulled 2026-09-07) -- exact ФИО match \"Владимирский Михаил Юрьевич\" as 50% co-founder, alongside Елисеев Д.Н. (independently ИНН-confirmed via the same document and via screen_upr_uchr.py the same day).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39135,7 +39166,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -39175,11 +39206,30 @@
         "source_id": "s5288",
         "title": "Начальник производства",
         "to": null
+      },
+      {
+        "title": "Генеральный директор; соучредитель (50%)",
+        "entity_name": "ООО «НПК «Центр перспективных технологий»» (ЦПТ)",
+        "entity_slug": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
+        "from": "2026-01-19",
+        "to": null,
+        "source_id": "s6808"
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "5300022741",
+        "ogrn": "1265300000470",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"ЦЕНТР ПЕРСПЕКТИВНЫХ ТЕХНОЛОГИЙ\"",
+        "role": "founder",
+        "okved": "30.30.6",
+        "okved_label": "Производство беспилотных авиационных систем",
+        "registered": "19.01.2026",
+        "region": "НОВГОРОДСКАЯ ОБЛ."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -39190,14 +39240,15 @@
     "sources": [
       "s5295"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": null,
     "notes_append": [
-      "2026-09-02: personal ИНН confirmed via выписка из ЕГРН (s5295). Also directly confirmed as a signing member of Ushkuynik's закупочная комиссия on the 17.12.2025 протокол (s5303)."
+      "2026-09-02: personal ИНН confirmed via выписка из ЕГРН (s5295). Also directly confirmed as a signing member of Ushkuynik's закупочная комиссия on the 17.12.2025 протокол (s5303).",
+      "2026-09-07: screen_upr_uchr.py ФНС cross-reference confirms Елисеев as генеральный директор AND 50% co-founder of ЦПТ, an entity already in the registry whose own director_history/founders_history already named him (via a full ЕГРЮЛ выписка, s6808, pulled the same day) -- his own roles[] never carried this tie until now, only his Ushkuynik role. ЦПТ is manufacturer-tier -- worth noting as a real organizational link between Ushkuynik staff and a manufacturer entity, not a peripheral business."
     ],
-    "_verified_against": null,
+    "_verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference (pb.nalog.ru search-proc.json, scripts/screen_upr_uchr.py, run 2026-09-07) -- exact ИНН match (711506978521) as генеральный директор of ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy (ЦПТ, ИНН 5300022741), an entity already on file, corroborating that entity's own director_history entry sourced to a full signed ЕГРЮЛ выписка (s6808).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39233,8 +39284,19 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "5321143850",
+        "ogrn": "1105321006834",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКСКЛЮЗИВ\"",
+        "role": "director",
+        "okved": "14.19",
+        "okved_label": "Производство прочей одежды и аксессуаров одежды",
+        "registered": "21.12.2010",
+        "region": "НОВГОРОДСКАЯ ОБЛ."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -39530,7 +39592,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -39808,7 +39870,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -39912,7 +39974,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -41514,49 +41576,8 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [
-      {
-        "inn": "2315225234",
-        "ogrn": "1222300022471",
-        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВОРОСЭНЕРГОРЕСУРС\"",
-        "role": "director",
-        "okved": "42.21",
-        "okved_label": "Строительство инженерных коммуникаций для водоснабжения и водоотведения, газоснабжения",
-        "registered": "29.04.2022",
-        "region": "КРАСНОДАРСКИЙ КРАЙ"
-      },
-      {
-        "inn": "2315235056",
-        "ogrn": "1242300023811",
-        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПИТЧ\"",
-        "role": "director",
-        "okved": "62.01",
-        "okved_label": "Разработка компьютерного программного обеспечения",
-        "registered": "26.04.2024",
-        "region": "КРАСНОДАРСКИЙ КРАЙ"
-      },
-      {
-        "inn": "2315225234",
-        "ogrn": "1222300022471",
-        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВОРОСЭНЕРГОРЕСУРС\"",
-        "role": "founder",
-        "okved": "42.21",
-        "okved_label": "Строительство инженерных коммуникаций для водоснабжения и водоотведения, газоснабжения",
-        "registered": "29.04.2022",
-        "region": "КРАСНОДАРСКИЙ КРАЙ"
-      },
-      {
-        "inn": "2315235056",
-        "ogrn": "1242300023811",
-        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПИТЧ\"",
-        "role": "founder",
-        "okved": "62.01",
-        "okved_label": "Разработка компьютерного программного обеспечения",
-        "registered": "26.04.2024",
-        "region": "КРАСНОДАРСКИЙ КРАЙ"
-      }
-    ],
-    "other_entities_checked_at": "2026-09-05",
+    "other_entities": [],
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
