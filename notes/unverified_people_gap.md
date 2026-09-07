@@ -1,13 +1,16 @@
-# Unverified-people backlog (updated 2026-09-07, 4th screen_upr_uchr.py pass)
+# Unverified-people backlog (updated 2026-09-07, 5th screen_upr_uchr.py pass)
 
-Generated 2026-09-07, updated same day after a 4th `screen_upr_uchr.py` run
-(109 people checked) plus a bugfix to that script itself -- see
-`notes/SOURCE_REGISTER.md`/commit history for full detail. This revision also
-closes out a real data-loss bug found the same day: `screen_upr_uchr.py` was
-silently overwriting a person's real prior `other_entities` hits with a false
-"0 hits" whenever pb.nalog.ru's captcha wall fired mid-drill-down -- fixed, and
-the three known-affected people (Ташматов И.С., Тимофеев В.С., Кусумов В.А.)
-restored to their last-good state.
+Generated 2026-09-07, updated same day after a 5th `screen_upr_uchr.py` run
+(10 people re-checked) that also caught and fixed a second instance of a
+data-loss bug in the script itself -- see `notes/SOURCE_REGISTER.md`/commit
+history for full detail. `screen_upr_uchr.py` was silently overwriting a
+person's real prior `other_entities` hits with a false empty or partial
+result whenever pb.nalog.ru's captcha wall fired mid-drill-down (first an
+ALL-cards-failed case, found during the 4th pass; then a PARTIAL-failure
+case, found during this 5th pass). Both fixed; four known-affected people
+restored to their correct state: Ташматов И.С., Тимофеев В.С., Кусумов
+В.А. (all 4th-pass regressions), and Закелов А.А. (the 5th-pass partial
+regression).
 
 `_verified: true` means a primary-source document (EGRUL/founding-doc
 extract, a full ЕГРЮЛ выписка, a signed government contract, an official
@@ -42,6 +45,14 @@ the record.
    tekhnologicheskie-resheniya` and `ooo-spetsmat-spetsialnye-materialy`;
    notably co-founds БТР with Владимирский М.Ю., a second cross-link between
    those two people, not yet chased further).
+7. A 5th `screen_upr_uchr.py` pass (10 people, all already `_verified` from
+   earlier passes) closed no new people but caught and fixed two real bugs
+   in the script itself: pb.nalog.ru's captcha wall could fire mid-drill-down
+   and silently overwrite a person's real prior `other_entities` hits with
+   a false empty/partial result (first the ALL-cards-failed case, then a
+   PARTIAL-failure case caught in this same pass -- Закелов А.А. lost one of
+   three hits to it). Both fixed; three previously-affected people restored
+   (Ташматов И.С., Тимофеев В.С., Кусумов В.А., Закелов А.А.).
 
 **165 people remain unverified**, split below by what each actually needs.
 
