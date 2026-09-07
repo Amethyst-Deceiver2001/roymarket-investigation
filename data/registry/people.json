@@ -37222,88 +37222,6 @@
     "aleph_screened_at": "2026-09-05"
   },
   {
-    "slug": "meshkov-aleksandr-petrovich",
-    "fio_ru": "Мешков Александр Петрович",
-    "name_latin": null,
-    "dob": "1957-12-11",
-    "birthplace": null,
-    "address": null,
-    "inn_personal": null,
-    "roles": [],
-    "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
-    "disqualification_hits": [],
-    "disqualification_checked_at": null,
-    "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
-    "social": [],
-    "photo": null,
-    "notes": "Указан(а) в досье как отец Белоглазовой (Мешковой) Людмилы Александровны принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
-    "sources": [],
-    "_verified": false,
-    "_origin": "corrections:add_entities",
-    "_raw": {},
-    "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
-    ],
-    "opensanctions_matches": [],
-    "opensanctions_screened_at": "2026-09-06",
-    "aleph_matches": [
-      {
-        "entity_id": "704d6a0a059da62dbd57dbcbb66492f55815cd45.158031d6f56e8b32ea0b33627b1b9aac021cbc49",
-        "caption": "СБЕРБАНК РОССИИ",
-        "schema": "Ownership",
-        "score": 41.5122,
-        "dataset_label": "Russian Sberbank shareholders (2006)",
-        "dataset_category": "company",
-        "countries": [],
-        "ui_link": "https://aleph.occrp.org/entities/704d6a0a059da62dbd57dbcbb66492f55815cd45.158031d6f56e8b32ea0b33627b1b9aac021cbc49"
-      },
-      {
-        "entity_id": "812afb992d3aa23413f6a1eda292c1ef883bc15c.a2c14311b26001d9eadaefd95579cb35eb493107",
-        "caption": "Борису Андрееву",
-        "schema": "HyperText",
-        "score": 40.7062,
-        "dataset_label": "Bashkortostan Republic roskomnadzor (media supervision) agency 2022",
-        "dataset_category": "leak",
-        "countries": [],
-        "ui_link": "https://aleph.occrp.org/entities/812afb992d3aa23413f6a1eda292c1ef883bc15c.a2c14311b26001d9eadaefd95579cb35eb493107"
-      },
-      {
-        "entity_id": "b4264c39b90c9b468eabe84cd31b5cee82ee2364.654cc9843058cac6a0382de7b1a449c5e103f30f",
-        "caption": "Михаил Игнатьев",
-        "schema": "HyperText",
-        "score": 40.3892,
-        "dataset_label": "Bashkortostan Republic roskomnadzor (media supervision) agency 2022",
-        "dataset_category": "leak",
-        "countries": [],
-        "ui_link": "https://aleph.occrp.org/entities/b4264c39b90c9b468eabe84cd31b5cee82ee2364.654cc9843058cac6a0382de7b1a449c5e103f30f"
-      },
-      {
-        "entity_id": "1e3ed65bcd44ee61fd3c68d2eaa97a07b8fa827a.0e0e296eaad3a0a274902a9dcd73c12121cc86c7",
-        "caption": "Ольга Ивановна",
-        "schema": "Pages",
-        "score": 37.605,
-        "dataset_label": "Declarator.org: Asset declarations from Russia",
-        "dataset_category": "poi",
-        "countries": [],
-        "ui_link": "https://aleph.occrp.org/entities/1e3ed65bcd44ee61fd3c68d2eaa97a07b8fa827a.0e0e296eaad3a0a274902a9dcd73c12121cc86c7"
-      },
-      {
-        "entity_id": "78c757461cd07439117d68361644a3a2e151fe80.da19f1ba92daafd9717fa36fad088d83ffe80706",
-        "caption": "Ольга Ивановна",
-        "schema": "Pages",
-        "score": 37.5418,
-        "dataset_label": "Declarator.org: Asset declarations from Russia",
-        "dataset_category": "poi",
-        "countries": [],
-        "ui_link": "https://aleph.occrp.org/entities/78c757461cd07439117d68361644a3a2e151fe80.da19f1ba92daafd9717fa36fad088d83ffe80706"
-      }
-    ],
-    "aleph_screened_at": "2026-09-05"
-  },
-  {
     "slug": "meshkova-nadezhda-filippovna",
     "fio_ru": "Мешкова Надежда Филипповна",
     "name_latin": null,
@@ -37547,43 +37465,6 @@
         "ui_link": "https://aleph.occrp.org/entities/18fc4927df32e67074d4f1b62739a8ce5b730935.87b23e891c82986b328fcf24008085e0b86a28f0"
       }
     ],
-    "aleph_screened_at": "2026-09-05"
-  },
-  {
-    "slug": "kuznetsova-menizhegan-khantimirovna",
-    "fio_ru": "Кузнецова Менижеган Хантимировна",
-    "name_latin": null,
-    "dob": "1966-08-01",
-    "birthplace": null,
-    "address": null,
-    "inn_personal": null,
-    "roles": [],
-    "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
-    "disqualification_hits": [],
-    "disqualification_checked_at": null,
-    "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
-    "social": [
-      {
-        "platform": "VK",
-        "source_id": "s1408",
-        "url": "https://vk.ru/id275830750"
-      }
-    ],
-    "photo": null,
-    "notes": "Указан(а) в досье как мать Кузнецова Руслана Николаевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
-    "sources": [],
-    "_verified": false,
-    "_origin": "corrections:add_entities",
-    "_raw": {},
-    "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
-    ],
-    "opensanctions_matches": [],
-    "opensanctions_screened_at": "2026-09-06",
-    "aleph_matches": [],
     "aleph_screened_at": "2026-09-05"
   },
   {

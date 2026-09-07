@@ -54,7 +54,7 @@ the record.
    three hits to it). Both fixed; three previously-affected people restored
    (Ташматов И.С., Тимофеев В.С., Кусумов В.А., Закелов А.А.).
 
-**164 people remain unverified**, split below by what each actually needs.
+**162 people remain unverified**, split below by what each actually needs.
 
 ## Group 1: has a personal ИНН, ready for a ФНС screen (37 people)
 
@@ -124,7 +124,7 @@ name collisions, not real ties.
 | Шахматов Иван Анатольевич (`shakhmatov-ivan-anatolevich`) | 471010513778 | 2026-09-07 (0 hits) | — | 2026-09-07 | — |
 | Шветов Артемий Андреевич (`shvetov-artemiy-andreevich`) | 531500409942 | 2026-09-07 (0 hits) | — | 2026-09-07 | Сотрудник @ ООО «Тримикс» |
 
-## Group 2: has a DOB but no ИНН (25 people)
+## Group 2: has a DOB but no ИНН (23 people)
 
 A DOB is often the field that makes a rupep.org / press / EGRUL match
 legally usable rather than merely suggestive (see the PII-policy
@@ -140,8 +140,6 @@ a personal ИНН to screen against.
 | Елисеев Илья Владимирович (`eliseev-ilya-vladimirovich`) | 19.12.1965 | — | — | No roles/notes on file yet — reason for inclusion undocumented, needs re-check. |
 | Жулидов Евгений (`zhulidov-evgeniy`) | 14.07.1998 | — | Creator/main admin («Атлет») of TG channel «Архангел Спецназа» | Officer, 45th VDV Spetsnaz Brigade (Hostomel assault unit); identified by iStories via a Tinder-photo/leaked-data cross-reference. Confirmed affiliated participant, adjacent-Архангел network. |
 | Корчагина Ольга Александровна (`korchagina-olga-aleksandrovna`) | 25.04.1972 | — | — | No roles/notes on file yet — reason for inclusion undocumented, needs re-check. |
-| Кузнецова Менижеган Хантимировна (`kuznetsova-menizhegan-khantimirovna`) | 01.08.1966 | — | — | Family record only — mother of Кузнецов Р.Н., a «Тримикс»/3MX network principal. Not a fielded participant herself. |
-| Мешков Александр Петрович (`meshkov-aleksandr-petrovich`) | 11.12.1957 | — | — | Family record only — father of Белоглазова (Мешкова) Л.А., a «Тримикс»/3MX network principal. |
 | Мешкова Кристина Андреевна (`meshkova-kristina-andreevna`) | 29.03.2005 | — | — | Family record only — relation unconfirmed, dossier notes her as likely a daughter in the Мешков family, probably linked to Белоглазова (Мешкова) Л.А. of «Тримикс»/3MX. |
 | Мешкова Надежда Филипповна (`meshkova-nadezhda-filippovna`) | 08.10.1954 | — | — | Family record only — mother of Белоглазова (Мешкова) Л.А., a «Тримикс»/3MX network principal. |
 | Незнамов Василий Александрович (`neznamov-vasiliy-aleksandrovich`) | 08.02.1959 | — | — | Family record only — father of Незнамов А.В., a «Тримикс»/3MX network principal. |
