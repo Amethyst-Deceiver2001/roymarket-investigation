@@ -1133,6 +1133,7 @@ ENTITY_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("reestr_digital_excluded_count", "reestr_digital_checked_at"),
     ("fstec_reg1_hit", "fstec_checked_at"),
     ("fstec_reg2_hit", "fstec_checked_at"),
+    ("proverki_inspections", "proverki_checked_at"),
 ]
 PEOPLE_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("other_entities", "other_entities_checked_at"),
