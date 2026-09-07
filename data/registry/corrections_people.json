@@ -1190,16 +1190,18 @@
     },
     "fedyaeva-anna-yurevna": {
       "set": {
-        "inn_personal": "390506952401"
+        "inn_personal": "390506952401",
+        "_verified": true
       },
-      "verified_against": "docs/index.html Университет «Синергия» related-party note, direct re-read of the surrounding text",
+      "verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference (pb.nalog.ru search-proc.json, scripts/screen_upr_uchr.py, run 2026-09-07) -- exact ИНН match (7743414861) as директор of ao-korporatsiya-sinergiya, an entity already on file.",
       "why": [
         "Same bug, same day, different passage: the Университет «Синергия»",
         "related-party note names Лобов В.Г.'s ИНН (614000245280) as sole",
         "100%-beneficiary, then names Федяева А.Ю. nearby (as the day-to-day",
         "signatory/General Director, per the same note) with no ИНН of her",
         "own stated — wrongly duplicated onto this record.",
-        "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2549)."
+        "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2549).",
+        "2026-09-07: verification via screen_upr_uchr.py ФНС cross-reference -- Федяева Анна Юрьевна confirmed as директор of ao-korporatsiya-sinergiya (ИНН 7743414861), an official-registry match against an already-known entity. Upgrades prior weaker citation (\"docs/index.html Университет «Синергия» related-party note, direct re-read of the surrounding text\")."
       ]
     },
     "fomin-aleksandr-nikolaevich": {
@@ -2088,13 +2090,15 @@
         ],
         "sources": [
           "s2708"
-        ]
+        ],
+        "_verified": true
       },
-      "verified_against": null,
+      "verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference (pb.nalog.ru search-proc.json, scripts/screen_upr_uchr.py, run 2026-09-07) -- exact ИНН match (6330030244) as учредитель of ooo-levit, an entity already on file.",
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
-        "2026-08-27: rupep.org profile (pending source_id) confirms dob 11.08.1955, birthplace Kaspiysk/Dagestan, personal ИНН 773600432474, headshot. Sanctioned by Australia/Canada/Ukraine/UK/New Zealand. RuPEP categorizes him 'Связанное лицо' (related person) rather than a PEP in his own right. Confirms his existing tie to this registry: 100% personal owner of ООО «НОВА» (ИНН 6330037352, already sanctioned/money-layer tier). Family/associate detail not wired per PII scope."
+        "2026-08-27: rupep.org profile (pending source_id) confirms dob 11.08.1955, birthplace Kaspiysk/Dagestan, personal ИНН 773600432474, headshot. Sanctioned by Australia/Canada/Ukraine/UK/New Zealand. RuPEP categorizes him 'Связанное лицо' (related person) rather than a PEP in his own right. Confirms his existing tie to this registry: 100% personal owner of ООО «НОВА» (ИНН 6330037352, already sanctioned/money-layer tier). Family/associate detail not wired per PII scope.",
+        "2026-09-07: verification via screen_upr_uchr.py ФНС cross-reference -- Михельсон Леонид Викторович confirmed as учредитель of ooo-levit (ИНН 6330030244), an official-registry match against an already-known entity."
       ]
     },
     "mikhelson-viktoriya-leonidovna": {
@@ -2120,12 +2124,14 @@
         ],
         "sources": [
           "s2709"
-        ]
+        ],
+        "_verified": true
       },
-      "verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
+      "verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference (pb.nalog.ru search-proc.json, scripts/screen_upr_uchr.py, run 2026-09-07) -- exact ИНН match (7706809928) as учредитель of ooo-ges-2, an entity already on file.",
       "why": [
         "2026-08-24 OpenSanctions screening (score 1.0, exact name match, no notes/context text). PLAUSIBLE only, via the surname+patronymic tie to the already-confirmed Михельсон Леонид Викторович (father, per patronymic) — but the returned birthDate (1993-01-01) has the shape of a placeholder/unknown-date convention (Jan 1), not a verified real DOB, so it is deliberately NOT written into the dob field. Flagging rather than silently trusting a suspicious date.",
-        "2026-08-27: rupep.org profile (pending source_id) checked per this session's PEP-candidate list -- confirms identity (dob 01.01.1993, ИНН 772984313656, daughter of Леонид Михельсон) but surfaces no new network tie. Logged as a checked-negative result, not deep-wired, since she is not herself a confirmed network principal."
+        "2026-08-27: rupep.org profile (pending source_id) checked per this session's PEP-candidate list -- confirms identity (dob 01.01.1993, ИНН 772984313656, daughter of Леонид Михельсон) but surfaces no new network tie. Logged as a checked-negative result, not deep-wired, since she is not herself a confirmed network principal.",
+        "2026-09-07: verification via screen_upr_uchr.py ФНС cross-reference -- Михельсон Виктория Леонидовна confirmed as учредитель of ooo-ges-2 (ИНН 7706809928), an official-registry match against an already-known entity. Upgrades prior weaker citation (\"OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text\")."
       ]
     },
     "miller-stanislav-yurevich": {
@@ -2323,13 +2329,15 @@
         ],
         "sources": [
           "s2710"
-        ]
+        ],
+        "_verified": true
       },
-      "verified_against": null,
+      "verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference (pb.nalog.ru search-proc.json, scripts/screen_upr_uchr.py, run 2026-09-07) -- exact ИНН match (9731094770) as директор of ooo-tsugam, an entity already on file.",
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
-        "2026-08-27: rupep.org profile (s2710) confirms this record's ИНН lead (500905260513, previously only mentioned in the OpenSanctions sanctions[].note prose) as her formal inn_personal, adds birthplace (Bishkek, Kyrgyzstan), headshot, and a rich director-for-hire career chain across major Russian aerospace-defense enterprises: АО «НПО «Молния»» (Buran-shuttle developer), АО «ТМЗ»/ЗАО «Корпорация «ТМЗ»» (Тушинский машиностроительный завод), АО «780 РЗ ТСК» (a military repair plant), then this registry's own ООО «ЦУГАМ» (2023, already on file), then ООО «ПТЕРО» (2023) and ООО «РБС ГАРПИЯ» (2025, her current/last-listed position). A genuine dob conflict between this record's existing OpenSanctions-derived value and RuPEP's own value logged as an open question, not silently resolved -- see open_questions[]. RuPEP categorizes her 'Лицо под санкциями' with EU/France/Switzerland/Monaco listed."
+        "2026-08-27: rupep.org profile (s2710) confirms this record's ИНН lead (500905260513, previously only mentioned in the OpenSanctions sanctions[].note prose) as her formal inn_personal, adds birthplace (Bishkek, Kyrgyzstan), headshot, and a rich director-for-hire career chain across major Russian aerospace-defense enterprises: АО «НПО «Молния»» (Buran-shuttle developer), АО «ТМЗ»/ЗАО «Корпорация «ТМЗ»» (Тушинский машиностроительный завод), АО «780 РЗ ТСК» (a military repair plant), then this registry's own ООО «ЦУГАМ» (2023, already on file), then ООО «ПТЕРО» (2023) and ООО «РБС ГАРПИЯ» (2025, her current/last-listed position). A genuine dob conflict between this record's existing OpenSanctions-derived value and RuPEP's own value logged as an open question, not silently resolved -- see open_questions[]. RuPEP categorizes her 'Лицо под санкциями' with EU/France/Switzerland/Monaco listed.",
+        "2026-09-07: verification via screen_upr_uchr.py ФНС cross-reference -- Ольга Соколова confirmed as директор of ooo-tsugam (ИНН 9731094770), an official-registry match against an already-known entity."
       ]
     },
     "ordzhonikidze-aleksey-grigorevich": {
@@ -3006,11 +3014,14 @@
     },
     "stupnikov-andrey-genadevich": {
       "set": {
-        "inn_personal": "165043571104"
+        "inn_personal": "165043571104",
+        "_verified": true
       },
       "why": [
-        "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2559)."
-      ]
+        "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2559).",
+        "2026-09-07: verification via screen_upr_uchr.py ФНС cross-reference -- Ступников Андрей Генадьевич confirmed as директор of ooo-sibirskaya-navigatsionnaya-kompaniya (ИНН 4205376019), an official-registry match against an already-known entity."
+      ],
+      "verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference (pb.nalog.ru search-proc.json, scripts/screen_upr_uchr.py, run 2026-09-07) -- exact ИНН match (4205376019) as директор of ooo-sibirskaya-navigatsionnaya-kompaniya, an entity already on file."
     },
     "sukhoverkhiy-vladimir-andreevich": {
       "set": {
@@ -3791,6 +3802,15 @@
         "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аэромакс»'s (ooo-aeromaks) own director_history entry (s4572), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
       ],
       "verified_against": "s4572 -- ООО «Аэромакс»'s own primary-source founding/EGRUL document, naming Сазанова Алиса Алексеевна as director (cross-referenced from the entity's own director_history entry)."
+    },
+    "lobov-vadim-georgievich": {
+      "set": {
+        "_verified": true
+      },
+      "verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference (pb.nalog.ru search-proc.json, scripts/screen_upr_uchr.py, run 2026-09-07) -- exact ИНН match (7743414861) as учредитель of ao-korporatsiya-sinergiya, an entity already on file.",
+      "why": [
+        "2026-09-07: verification via screen_upr_uchr.py ФНС cross-reference -- Лобов Вадим Георгиевич confirmed as учредитель of ao-korporatsiya-sinergiya (ИНН 7743414861), an official-registry match against an already-known entity."
+      ]
     }
   },
   "people_add_entities": [

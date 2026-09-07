@@ -1,93 +1,92 @@
-# Unverified-people backlog (post 2026-09-07 verification pass)
+# Unverified-people backlog (updated 2026-09-07, post screen_upr_uchr.py run)
 
-Generated 2026-09-07. `_verified: true` means a primary-source document
-(EGRUL/founding-doc extract, a full ЕГРЮЛ выписка, a signed government
-contract, etc.) has actually been read naming this person, per the
-standing verification discipline — not just that some data exists on the
-record.
+Generated 2026-09-07, updated same day after a `screen_upr_uchr.py` run
+against the ФНС «Прозрачный бизнес» director/founder registry.
+`_verified: true` means a primary-source document (EGRUL/founding-doc
+extract, a full ЕГРЮЛ выписка, a signed government contract, an official
+ФНС registry cross-reference, etc.) has actually confirmed this person
+against a known identifier or entity — not just that some data exists on
+the record.
 
-**This pass closed 71 of the prior 246 unverified people** by
-cross-referencing identity confirmations that were already sitting in
-the registry but never linked back to the person record: 64 where a
-person's own name matched an entity's `director_history` entry (with a
-real `source_id`) on an entity they already held a role at, and 7 more
-via the equivalent `founders_history` match. No new documents were
-pulled for this batch — it is pure cross-referencing of already-collected
-primary evidence that had never been propagated to the person record.
+**Two closure passes so far:**
+1. **71 people** closed by cross-referencing director_history/
+   founders_history entries already sitting on entities they held a role
+   at (no new documents pulled — pure cross-reference of already-collected
+   primary evidence).
+2. **6 more people** closed via `screen_upr_uchr.py`'s ФНС director/founder
+   cross-reference (`pb.nalog.ru`) once it returned a hit tying them by
+   exact ИНН to an entity already in the registry: Ольга Соколова
+   (`ooo-tsugam`), Ступников А.Г. (`ooo-sibirskaya-navigatsionnaya-kompaniya`),
+   Лобов В.Г. and Федяева А.Ю. (both `ao-korporatsiya-sinergiya`), and —
+   most notably — **Михельсон Леонид Викторович** (`ooo-levit`) and
+   **Михельсон Виктория Леонидовна** (`ooo-ges-2`).
 
-**175 people remain unverified**, split below by what closing each one
-actually needs.
+**170 people remain unverified**, split below by what each actually needs.
 
-## Group 1: has a personal ИНН, ready for a ФНС screen (46 people)
+## Group 1: has a personal ИНН, ready for a ФНС screen (40 people)
 
-The fastest remaining path to verification for most of these: run
-`scripts/screen_upr_uchr.py` (director/founder cross-reference via
-`pb.nalog.ru`), `scripts/screen_disqualified.py` and
-`scripts/screen_subsidiary.py` against each. A real hit naming the
-person against a known entity/ОГРН is a legitimate `_verified_against`
-citation once hand-checked. This session ran that screen for 2 people
-(the maximum treated as "tested inline" scope) — the remaining 44+
-is a full-roster sweep per the crawling-jobs policy and needs to be run
-by hand:
+`screen_upr_uchr.py` is captcha-gated on `pb.nalog.ru` after roughly
+35 requests per session regardless of the delay between requests (see the
+script's own docstring, updated 2026-09-07) — **wait hours, not minutes,
+between attempts**. It skips anyone already checked today, so repeated
+runs make incremental progress. `screen_disqualified.py` and
+`screen_subsidiary.py` share the roster but not necessarily the same wall
+(`screen_subsidiary.py` uses a different `nalog.gov.ru` endpoint with no
+captcha observed so far — a full run against all 138 completed cleanly
+2026-09-07 with 0 hits).
 
 ```
 python3 scripts/screen_upr_uchr.py
 python3 scripts/screen_disqualified.py
-python3 scripts/screen_subsidiary.py
+python3 scripts/screen_subsidiary.py   # already run clean, 0 hits -- rerun only for new people
 ```
 
-(each defaults to every person with `inn_personal` not yet checked
-today when run with no `--slug`; each hit still needs hand-review
-before being cited, per the scripts' own printed reminders).
+A hit against an entity already in the registry is an instant
+verification (see the two closure passes above); a hit against an
+unlisted entity is a new lead, not yet a citable fact until hand-checked.
 
-| Person | ИНН | upr_uchr checked | disqual. checked | subsidiary checked | Known role |
+| Person | ИНН | upr_uchr checked (hits) | disqual. checked | subsidiary checked | Known role |
 |---|---|---|---|---|---|
-| Александр Геннадьевич Сидякин (`aleksandr-sidyakin`) | 690900262387 | — | — | 2026-09-06 | Secretary of the Supervisory Board; Head of United Russia’s Central Executive Committee |
-| Александр Осадчук (`aleksandr-osadchuk`) | 772027207786 | — | — | 2026-09-06 | Head of the Main Directorate for Innovative Development (ГУИР), Ministry of Defence |
-| Александров Алексей Витальевич (`aleksandrov-aleksey-vitalevich`) | 027313454520 | — | — | 2026-09-06 | — |
-| Алёшин Борис Сергеевич (`aleshin-boris-sergeevich`) | 770802770590 | — | — | 2026-09-06 | Chairman of the Board of Directors (until 2023 departure) |
-| Андрей Анатольевич Безруков (`andrey-bezrukov`) | 519031542137 | — | — | 2026-09-06 | Chairman of the Board (правление), ЦБСТ |
-| Андрей Турчак (`andrey-turchak`) | 781002279818 | — | — | 2026-09-06 | Then Secretary of United Russia’s General Council; later Head of the Altai Republic |
-| Арутюнов Николай Владимирович (`arutyunov-nikolay-vladimirovich`) | 100119009162 | — | — | 2026-09-06 | директор по развитию @ ООО «Решение» ГК «Логос» |
-| Белоглазова Людмила Александровна (`beloglazova-lyudmila-aleksandrovna`) | 636501893256 | — | — | 2026-09-06 | — |
-| Виноградов Юрий Александрович (`vinogradov-yuriy-aleksandrovich`) | 532115324671 | — | — | 2026-09-06 | Заместитель генерального директора @ АНО «НПЦ «Ушкуйник»» |
-| Владимир Владимирович Якушев (`vladimir-vadimovich-yakushev`) | 890304549930 | — | — | 2026-09-06 | Chairman of the Supervisory Board; Secretary of United Russia’s General Council; First Deputy Chairman of the Federation Council |
-| Владимирский Михаил Юрьевич (`vladimirskiy-mikhail-yurevich`) | 780507237800 | — | — | 2026-09-06 | Заместитель генерального директора @ АНО «НПЦ «Ушкуйник»» |
-| Елисеев Дмитрий Николаевич (`eliseev-dmitriy-nikolaevich`) | 711506978521 | — | — | 2026-09-06 | Начальник производства @ АНО «НПЦ «Ушкуйник»» |
-| Живова Елена Вячеславовна (`zhivova-elena-vyacheslavovna`) | 531501384786 | — | — | 2026-09-06 | Главный бухгалтер @ АНО «НПЦ «Ушкуйник»» |
-| Кирилл Лысогорский (`kirill-lysogorskiy`) | 772705212594 | — | — | 2026-09-06 | Deputy Minister of Industry and Trade |
-| Кирток Александр Сергеевич (`kirtok-aleksandr-sergeevich`) | 511500997610 | — | — | 2026-09-06 | Сотрудник @ ООО «Тримикс» |
-| Киселёв Глеб Дмитриевич (`kiselev-gleb-dmitrievich`) | 772883561589 | — | — | 2026-09-06 | представитель на круглом столе Народного фронта @ «Кулибин-клуб» (Народный фронт) |
-| Королев Алексей Александрович (`korolev-aleksey-aleksandrovich`) | 761103199274 | — | — | 2026-09-06 | — |
-| Кузнецов Павел Владиславович (`kuznetsov-pavel-vladislavovich`) | 583502178630 | — | 2026-09-06 | 2026-09-06 | — |
-| Кузнецов Руслан Николаевич (`kuznetsov-ruslan-nikolaevich`) | 637592279701 | — | — | 2026-09-06 | Сотрудник @ ООО «Тримикс»; Индивидуальный предприниматель @ ИП Кузнецов Руслан Николаевич |
-| Кузякин Дмитрий Васильевич (`kuzyakin-dmitriy-vasilevich`) | 501306766736 | — | — | 2026-09-06 | АО «Котлин-Новатор»; co-inventor (patent RU236504U1) @ ООО «ЦКБР» |
-| Куртеев Александр Сергеевич (`kurteev-aleksandr-sergeevich`) | 434540800305 | 2026-09-04 | 2026-09-06 | 2026-09-06 | ООО «Гагаринг» |
-| Лобов Вадим Георгиевич (`lobov-vadim-georgievich`) | 614000245280 | 2026-08-22 | 2026-08-22 | 2026-09-06 | ООО «Синергия Диджитал» |
-| Ляшенко Игорь Владимирович (`lyashenko-igor-vladimirovich`) | 100122155290 | — | — | 2026-09-06 | Генеральный директор и единственный учредитель (100%) @ ООО «Решение» ГК «Логос» |
-| Михайлов Константин Денисович (`mikhaylov-konstantin-denisovich`) | 772032838410 | — | — | 2026-09-06 | Дилер (Москва, Мариуполь) @ ООО «Тримикс» |
-| Михельсон Виктория Леонидовна (`mikhelson-viktoriya-leonidovna`) | 772984313656 | — | — | 2026-09-06 | — |
-| Михельсон Леонид Викторович (`mikhelson-leonid-viktorovich`) | 773600432474 | — | — | 2026-09-06 | ООО «НОВА» |
-| Ольга Соколова (`olga-sokolova`) | 500905260513 | — | — | 2026-09-06 | Генеральный директор; Генеральный директор / Президент |
-| Павлова Татьяна Викторовна (`pavlova-tatyana-viktorovna`) | 781409856219 | — | — | 2026-09-06 | — |
-| Петров Александр Витальевич (`petrov-aleksandr-vitalevich`) | 810702450538 | — | — | 2026-09-06 | — |
+| Александр Геннадьевич Сидякин (`aleksandr-sidyakin`) | 690900262387 | 2026-09-07 (0 hits) | — | 2026-09-07 | Secretary of the Supervisory Board; Head of United Russia’s Central Executive Committee |
+| Александр Осадчук (`aleksandr-osadchuk`) | 772027207786 | 2026-09-07 (0 hits) | — | 2026-09-07 | Head of the Main Directorate for Innovative Development (ГУИР), Ministry of Defence |
+| Александров Алексей Витальевич (`aleksandrov-aleksey-vitalevich`) | 027313454520 | 2026-09-07 (0 hits) | — | 2026-09-07 | — |
+| Алёшин Борис Сергеевич (`aleshin-boris-sergeevich`) | 770802770590 | — | — | 2026-09-07 | Chairman of the Board of Directors (until 2023 departure) |
+| Андрей Анатольевич Безруков (`andrey-bezrukov`) | 519031542137 | 2026-09-07 (0 hits) | — | 2026-09-07 | Chairman of the Board (правление), ЦБСТ |
+| Андрей Турчак (`andrey-turchak`) | 781002279818 | 2026-09-07 (0 hits) | — | 2026-09-07 | Then Secretary of United Russia’s General Council; later Head of the Altai Republic |
+| Арутюнов Николай Владимирович (`arutyunov-nikolay-vladimirovich`) | 100119009162 | — | — | 2026-09-07 | директор по развитию @ ООО «Решение» ГК «Логос» |
+| Белоглазова Людмила Александровна (`beloglazova-lyudmila-aleksandrovna`) | 636501893256 | 2026-09-07 (0 hits) | — | 2026-09-07 | — |
+| Виноградов Юрий Александрович (`vinogradov-yuriy-aleksandrovich`) | 532115324671 | — | — | 2026-09-07 | Заместитель генерального директора @ АНО «НПЦ «Ушкуйник»» |
+| Владимир Владимирович Якушев (`vladimir-vadimovich-yakushev`) | 890304549930 | 2026-09-07 (1 hit) | — | 2026-09-07 | Chairman of the Supervisory Board; Secretary of United Russia’s General Council; First Deputy Chairman of the Federation Council |
+| Владимирский Михаил Юрьевич (`vladimirskiy-mikhail-yurevich`) | 780507237800 | — | — | 2026-09-07 | Заместитель генерального директора @ АНО «НПЦ «Ушкуйник»» |
+| Елисеев Дмитрий Николаевич (`eliseev-dmitriy-nikolaevich`) | 711506978521 | — | — | 2026-09-07 | Начальник производства @ АНО «НПЦ «Ушкуйник»» |
+| Живова Елена Вячеславовна (`zhivova-elena-vyacheslavovna`) | 531501384786 | — | — | 2026-09-07 | Главный бухгалтер @ АНО «НПЦ «Ушкуйник»» |
+| Кирилл Лысогорский (`kirill-lysogorskiy`) | 772705212594 | 2026-09-07 (0 hits) | — | 2026-09-07 | Deputy Minister of Industry and Trade |
+| Кирток Александр Сергеевич (`kirtok-aleksandr-sergeevich`) | 511500997610 | — | — | 2026-09-07 | Сотрудник @ ООО «Тримикс» |
+| Киселёв Глеб Дмитриевич (`kiselev-gleb-dmitrievich`) | 772883561589 | — | — | 2026-09-07 | представитель на круглом столе Народного фронта @ «Кулибин-клуб» (Народный фронт) |
+| Королев Алексей Александрович (`korolev-aleksey-aleksandrovich`) | 761103199274 | 2026-09-07 (0 hits) | — | 2026-09-07 | — |
+| Кузнецов Павел Владиславович (`kuznetsov-pavel-vladislavovich`) | 583502178630 | 2026-09-07 (1 hit) | 2026-09-06 | 2026-09-07 | — |
+| Кузнецов Руслан Николаевич (`kuznetsov-ruslan-nikolaevich`) | 637592279701 | — | — | 2026-09-07 | Сотрудник @ ООО «Тримикс»; Индивидуальный предприниматель @ ИП Кузнецов Руслан Николаевич |
+| Кузякин Дмитрий Васильевич (`kuzyakin-dmitriy-vasilevich`) | 501306766736 | 2026-09-07 (1 hit) | — | 2026-09-07 | АО «Котлин-Новатор»; co-inventor (patent RU236504U1) @ ООО «ЦКБР» |
+| Куртеев Александр Сергеевич (`kurteev-aleksandr-sergeevich`) | 434540800305 | 2026-09-07 (0 hits) | 2026-09-06 | 2026-09-07 | ООО «Гагаринг» |
+| Ляшенко Игорь Владимирович (`lyashenko-igor-vladimirovich`) | 100122155290 | — | — | 2026-09-07 | Генеральный директор и единственный учредитель (100%) @ ООО «Решение» ГК «Логос» |
+| Михайлов Константин Денисович (`mikhaylov-konstantin-denisovich`) | 772032838410 | — | — | 2026-09-07 | Дилер (Москва, Мариуполь) @ ООО «Тримикс» |
+| Павлова Татьяна Викторовна (`pavlova-tatyana-viktorovna`) | 781409856219 | 2026-09-07 (0 hits) | — | 2026-09-07 | — |
+| Петров Александр Витальевич (`petrov-aleksandr-vitalevich`) | 810702450538 | — | — | 2026-09-07 | — |
 | Петров Алексей Александрович (`petrov-aleksey-aleksandrovich`) | 290140368319 | — | — | — | Сотрудник (не окончательно подтверждено) @ ООО «Тримикс» |
-| Петров Виктор Витальевич (`petrov-viktor-vitalevich`) | 292700110340 | — | — | 2026-09-06 | — |
-| Петрова Дарья Александровна (`petrova-darya-aleksandrovna`) | 710680000353 | — | — | 2026-09-06 | — |
-| Потапов Игорь Владимирович (`potapov-igor-vladimirovich`) | 772578663993 | — | — | 2026-09-06 | — |
-| Потехина Светлана Алексеевна (`potekhina-svetlana-alekseevna`) | 526220591645 | — | 2026-09-06 | 2026-09-06 | ООО «Рационы питания» |
-| Прокофьев Михаил Васильевич (`prokofev-mikhail-vasilevich`) | 532120471505 | — | — | 2026-09-06 | сборщик (assembler) @ ООО «Скай авиа групп» |
-| Руденко Дмитрий Александрович (`rudenko-dmitriy-aleksandrovich`) | 780401121651 | — | — | 2026-09-06 | — |
-| Саидов Адиль Абукович (`saidov-adil-abukovich`) | 772428159554 | — | — | 2026-09-06 | Член совета директоров (board member) — which Azimut entity not fully confirmed @ АО УК «Азимут»; Советник генерального директора @ Государственная корпорация «Ростех» |
-| Ступников Андрей Генадьевич (`stupnikov-andrey-genadevich`) | 165043571104 | — | 2026-09-06 | 2026-09-06 | — |
-| Федорова Полина Геннадьевна (`fedorova-polina-gennadevna`) | 470200877524 | — | — | 2026-09-06 | — |
-| Федяева Анна Юрьевна (`fedyaeva-anna-yurevna`) | 390506952401 | — | — | 2026-09-06 | ООО «Синергия Диджитал»; ООО «Мегакампус» |
-| Царьков Даниил Дмитриевич (`tsarkov-daniil-dmitrievich`) | 501214513380 | — | — | 2026-09-06 | Руководитель отдела (Department Head) @ АО «Стратим» |
-| Чичков Александр Юрьевич (`chichkov-aleksandr-yurevich`) | 421715843237 | — | — | 2026-09-06 | Генеральный директор @ ООО «ДРОНОМИР» |
-| Шандобыло Милослава Игоревна (`shandobylo-miloslava-igorevna`) | 781152210830 | — | — | 2026-09-06 | — |
-| Шандобыло Сергей Сергеевич (`shandobylo-sergey-sergeevich`) | 781154619843 | — | — | 2026-09-06 | Директор по развитию @ ООО «Тримикс»; Индивидуальный предприниматель @ ИП Шандобыло Сергей Сергеевич |
-| Шахматов Иван Анатольевич (`shakhmatov-ivan-anatolevich`) | 471010513778 | — | — | 2026-09-06 | — |
-| Шветов Артемий Андреевич (`shvetov-artemiy-andreevich`) | 531500409942 | — | — | 2026-09-06 | Сотрудник @ ООО «Тримикс» |
+| Петров Виктор Витальевич (`petrov-viktor-vitalevich`) | 292700110340 | — | — | 2026-09-07 | — |
+| Петрова Дарья Александровна (`petrova-darya-aleksandrovna`) | 710680000353 | — | — | 2026-09-07 | — |
+| Потапов Игорь Владимирович (`potapov-igor-vladimirovich`) | 772578663993 | 2026-09-07 (0 hits) | — | 2026-09-07 | — |
+| Потехина Светлана Алексеевна (`potekhina-svetlana-alekseevna`) | 526220591645 | 2026-09-07 (0 hits) | 2026-09-06 | 2026-09-07 | ООО «Рационы питания» |
+| Прокофьев Михаил Васильевич (`prokofev-mikhail-vasilevich`) | 532120471505 | — | — | 2026-09-07 | сборщик (assembler) @ ООО «Скай авиа групп» |
+| Руденко Дмитрий Александрович (`rudenko-dmitriy-aleksandrovich`) | 780401121651 | — | — | 2026-09-07 | — |
+| Саидов Адиль Абукович (`saidov-adil-abukovich`) | 772428159554 | — | — | 2026-09-07 | Член совета директоров (board member) — which Azimut entity not fully confirmed @ АО УК «Азимут»; Советник генерального директора @ Государственная корпорация «Ростех» |
+| Федорова Полина Геннадьевна (`fedorova-polina-gennadevna`) | 470200877524 | — | — | 2026-09-07 | — |
+| Царьков Даниил Дмитриевич (`tsarkov-daniil-dmitrievich`) | 501214513380 | — | — | 2026-09-07 | Руководитель отдела (Department Head) @ АО «Стратим» |
+| Чичков Александр Юрьевич (`chichkov-aleksandr-yurevich`) | 421715843237 | — | — | 2026-09-07 | Генеральный директор @ ООО «ДРОНОМИР» |
+| Шандобыло Милослава Игоревна (`shandobylo-miloslava-igorevna`) | 781152210830 | — | — | 2026-09-07 | — |
+| Шандобыло Сергей Сергеевич (`shandobylo-sergey-sergeevich`) | 781154619843 | — | — | 2026-09-07 | Директор по развитию @ ООО «Тримикс»; Индивидуальный предприниматель @ ИП Шандобыло Сергей Сергеевич |
+| Шахматов Иван Анатольевич (`shakhmatov-ivan-anatolevich`) | 471010513778 | 2026-09-07 (0 hits) | — | 2026-09-07 | — |
+| Шветов Артемий Андреевич (`shvetov-artemiy-andreevich`) | 531500409942 | — | — | 2026-09-07 | Сотрудник @ ООО «Тримикс» |
 
 ## Group 2: has a DOB but no ИНН (26 people)
 
@@ -126,7 +125,7 @@ a personal ИНН to screen against.
 | Шахматова Ольга Петровна (`shakhmatova-olga-petrovna`) | 1960-08-28 | — | — |
 | Шахматова Татьяна Анатольевна (`shakhmatova-tatyana-anatolevna`) | 1989-03-28 | — | — |
 
-## Group 3: named, no ИНН, no DOB (90 people)
+## Group 3: named, no ИНН, no DOB (91 people)
 
 The largest group and the hardest to close cheaply — no structured
 identifier to screen against. Verification for these needs an actual
@@ -212,6 +211,7 @@ better use of research time than a passing mention).
 | Сухоненкова Надежда Андреевна (`sukhonenkova-nadezhda-andreevna`) | — |
 | Тарасенко Ирина Анатольевна (`tarasenko-irina-anatolevna`) | — |
 | Тихонов Сергей Юрьевич (`tikhonov-sergey-yurevich`) | — |
+| Ткач Кирилл Владимирович (`tkach-kirill-vladimirovich`) | Единственный учредитель (100%) @ ООО НПК «ГЕРОН» |
 | Трубина Екатерина Святославовна (`trubina-ekaterina-svyatoslavovna`) | — |
 | Федукович Кирилл Олегович (`fedukovich-kirill-olegovich`) | АО «АУРИН» |
 | Фомин Александр Николаевич (`fomin-aleksandr-nikolaevich`) | ООО «ЭйАрТэк» |
