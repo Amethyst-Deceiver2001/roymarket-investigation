@@ -32,6 +32,12 @@
 - Only oblast-level (rather than district-level) ИНСТЕХ customer on file: ОГКУ «Управление по делам гражданской обороны и чрезвычайным ситуациям Белгородской области». Subject taken verbatim from the contract title; the specific radio-electronic goods are not identified in the readable portion of the archived copy. Status per the contract card as of the 2026-08-31 capture: Исполнение завершено. [s5229]
 - Earlier of two Shebekino awards. The signed contract (source s4836) states price, parties and that monтаж/пусконаладка are included, but the item specification sits in an annex not legible in the archived copy — the specific product is therefore not asserted here. Customer signed by начальник Попова Н.А. Funded from the institution's own budget («средства бюджетного учреждения»). Status per the contract card as of the 2026-08-31 capture: Исполнение завершено. [s5251]
 
+## Litigation
+
+- Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
+- Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
+- Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
+
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 5 OpenSanctions match(es) (screened 2026-09-06).
 - 3 OCCRP Aleph match(es) (screened 2026-09-05).
@@ -59,6 +65,7 @@
 | s5251 | Zakupki | Zakupki (ZAKUPKI_contract_3312010279323000007_20260831.html) | 2026-08-31 | — |
 | s5252 | Zakupki | Zakupki (ZAKUPKI_contract_3312010279323000013_20260831.html) | 2026-08-31 | — |
 | s5253 | Zakupki | Zakupki (ZAKUPKI_contract_3312601781924000002_20260831.html) | 2026-08-31 | — |
+| s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

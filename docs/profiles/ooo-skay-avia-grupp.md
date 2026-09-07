@@ -25,6 +25,10 @@
 |---|---|---|
 | 198510, г. Санкт-Петербург, вн.тер.г. город Петергоф, ул. Константиновская, д. 8, литера А, помещ. 1-Н | 2026-03-29 | 2026-09-02: precise address from EGRUL extract s5307 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse "г. Санкт-Петербург". ГРН 2267800128253 dated 28.01.2026. [s5307] |
 
+## Litigation
+
+- Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
+
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 2 OCCRP Aleph match(es) (screened 2026-09-05).
@@ -54,6 +58,7 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s5307 | EGRUL extract | EGRUL extract (EGRUL_7802865058_20260608_ooo-skay-avia-grupp.pdf) | 2026-06-08 | 2026-03-29 |
+| s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

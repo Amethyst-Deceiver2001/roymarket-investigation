@@ -51074,5 +51074,13 @@
     "as_of_method": null,
     "sha256": "b0ffeeb45b9c905b903abf8e1a7c8cdf79242a7f61d6b02edd8ec67bd216a7b4",
     "sample": "Channel: @GoDrone (\"НАБАТ | GoDrone\") — маps to entity `ooo-goudron`, ООО\n«ГОУДРОН», ИНН 9721203814. Channel bio confirms: \"Надёжные, как НАБАТ.\nКомпания GoDrone – противодействие БПЛА, поставки и обслуживание дронов.\nСайт: godrone.ru\" — this is the entity's own official brand channel, not\npreviously listed in entities.json's web.telegram field.\nSource: this repo's own scraped archive (data/roymar"
+  },
+  "FSSP_OPENDATA_20260906_iplegallist-matched-extract.json": {
+    "type": "court",
+    "type_method": "keyword:ПОСТАНОВЛЕНИЕ",
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "3eca1fad8346e554d3762b0f94e8ce8f8e4cb91a50d06012b69815a93b27b1b4",
+    "sample": "{\n \"ooo-geron\": [\n {\n \"debtor_name\": \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \\\"ГЕРОН\\\"\",\n \"proceeding_number\": \"320898/25/53002-ИП\",\n \"institution_date\": \"2025-12-19\",\n \"document_type\": \"Акт органа, осуществляющего контрольные функции\",\n \"execution_object\": \"Страховые взносы, включая пени\",\n \"amount_due\": \"12831.11\",\n \"debt_remaining\": \"2831.11\",\n \"bailiff_department\": \"ОСП Боровичского, Любытин"
   }
 }

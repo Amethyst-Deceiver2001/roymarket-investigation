@@ -30494,6 +30494,16 @@
         "parties": "Министерство промышленности и торговли РФ (заказчик) против АО «НПЦ «Элвис»» (исполнитель)",
         "source_id": "s3712",
         "type": "Претензия о взыскании пени (Минпромторг России)"
+      },
+      {
+        "case_number": "477589/26/77012-ИП",
+        "claim_amount_rub": 3314274.0,
+        "court": "ОСП по Зеленоградскому АО (отдел судебных приставов — не суд)",
+        "subject": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "parties": "ФССП (принудительное взыскание) в отношении АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС)",
+        "status": "Возбуждено 2026-09-03. Остаток задолженности: 3 314 274.00 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
       }
     ],
     "licences": [
@@ -30982,7 +30992,8 @@
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0789).",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7735582816). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
-      "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6438."
+      "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6438.",
+      "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 1 enforcement-proceeding record(s) totalling 3,314,274.00 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "bank_details": {
@@ -33630,7 +33641,28 @@
         "source_id": "s0799"
       }
     ],
-    "litigation": [],
+    "litigation": [
+      {
+        "case_number": "656807/26/78003-ИП",
+        "claim_amount_rub": 675252.93,
+        "court": "Калининский РОСП (отдел судебных приставов — не суд)",
+        "subject": "Страховые взносы, включая пени",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «СПДББК»",
+        "status": "Возбуждено 2026-06-18. Остаток задолженности: 602 904.41 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      },
+      {
+        "case_number": "526774/26/98078-ИП",
+        "claim_amount_rub": 10699945.5,
+        "court": "СОСП по г. Санкт-Петербургу (отдел судебных приставов — не суд)",
+        "subject": "Налог в размере отрицательного сальдо ЕНС",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «СПДББК»",
+        "status": "Возбуждено 2026-06-09. Остаток задолженности: 9 553 522.77 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      }
+    ],
     "licences": [],
     "trademarks": [],
     "patents": [],
@@ -33672,7 +33704,8 @@
       "full EGRUL extract pulled directly 23.08.2026 (ul-1157847359273-20260823135101.pdf). Registered address field did not extract cleanly from this PDF (same recurring layout quirk).",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0799).",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7838044584). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-      "2026-09-06: screen_rom.py full-roster run (174 entities) found exactly one hit, this entity -- folded the raw ROM registry data into open_questions per the standing raw-screening-data-is-a-lead-not-a-fact discipline; not wired into litigation[] since a ФНС securing-measures listing is an administrative tax-enforcement restriction, not itself a court case."
+      "2026-09-06: screen_rom.py full-roster run (174 entities) found exactly one hit, this entity -- folded the raw ROM registry data into open_questions per the standing raw-screening-data-is-a-lead-not-a-fact discipline; not wired into litigation[] since a ФНС securing-measures listing is an administrative tax-enforcement restriction, not itself a court case.",
+      "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 2 enforcement-proceeding record(s) totalling 11,375,198.43 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -39422,7 +39455,38 @@
     "securing_measures": [],
     "securing_measures_checked_at": "2026-09-06",
     "sanctions": [],
-    "litigation": [],
+    "litigation": [
+      {
+        "case_number": "752867/26/98097-ИП",
+        "claim_amount_rub": 175753.19,
+        "court": "СОСП по г. Москве № 2 (отдел судебных приставов — не суд)",
+        "subject": "Налог в размере отрицательного сальдо ЕНС",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «КРАМС»",
+        "status": "Возбуждено 2026-06-01. Остаток задолженности: 155 753.19 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      },
+      {
+        "case_number": "860132/26/98097-ИП",
+        "claim_amount_rub": 10000.0,
+        "court": "СОСП по г. Москве № 2 (отдел судебных приставов — не суд)",
+        "subject": "Исполнительский сбор",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «КРАМС»",
+        "status": "Возбуждено 2026-06-08. Остаток задолженности: 0.00 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      },
+      {
+        "case_number": "881040/26/98097-ИП",
+        "claim_amount_rub": 10000.0,
+        "court": "СОСП по г. Москве № 2 (отдел судебных приставов — не суд)",
+        "subject": "Исполнительский сбор",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «КРАМС»",
+        "status": "Возбуждено 2026-06-09. Остаток задолженности: 0.00 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      }
+    ],
     "licences": [],
     "trademarks": [],
     "patents": [],
@@ -39451,7 +39515,8 @@
       "context": " page is unfilled placeholder text), not the press coverage. A bare-name EGRUL search for «КРАМС» returns 21 nationwide entities, none in Kemerovo Oblast — the closest candidate checked, ООО «КРАМС» (ИНН 9701247080, Moscow), is a construction-services shell (OKVED 43.29, no UAV/electronics activity, in tax arrears and briefly flagged for involuntary EGRUL strike-off in 2024) and is not this entity; a coincident"
     },
     "_corrected": [
-      "2026-08-24 direct egrul.nalog.ru lookup: ОГРН, registration date and GD (Николаев А.Ю.) confirmed. No connection to the КРАМС brand or Kemerovo Oblast candidates named in krams-brand-unresolved's open question — this remains a distinct, unrelated Moscow shell entity (name collision only)."
+      "2026-08-24 direct egrul.nalog.ru lookup: ОГРН, registration date and GD (Николаев А.Ю.) confirmed. No connection to the КРАМС brand or Kemerovo Oblast candidates named in krams-brand-unresolved's open question — this remains a distinct, unrelated Moscow shell entity (name collision only).",
+      "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 3 enforcement-proceeding record(s) totalling 195,753.19 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case)."
     ],
     "_verified_against": "egrul.nalog.ru open API, 2026-08-24",
     "_egrul_crosschecked": "2026-08-22",
@@ -40085,7 +40150,38 @@
     "securing_measures": [],
     "securing_measures_checked_at": "2026-09-06",
     "sanctions": [],
-    "litigation": [],
+    "litigation": [
+      {
+        "case_number": "2810479/25/78011-ИП",
+        "claim_amount_rub": 795395.2,
+        "court": "Адмиралтейский РОСП (отдел судебных приставов — не суд)",
+        "subject": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Информационные системы и технологии»",
+        "status": "Возбуждено 2025-09-08. Остаток задолженности: 743 360.00 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      },
+      {
+        "case_number": "36505/25/78023-ИП",
+        "claim_amount_rub": 19073285.0,
+        "court": "Отдел судебных приставов по взысканию задолженности с юридических лиц (отдел судебных приставов — не суд)",
+        "subject": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Информационные системы и технологии»",
+        "status": "Возбуждено 2025-02-13. Остаток задолженности: 17 825 500.00 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      },
+      {
+        "case_number": "479770/26/98078-ИП",
+        "claim_amount_rub": 129796.0,
+        "court": "СОСП по г. Санкт-Петербургу (отдел судебных приставов — не суд)",
+        "subject": "Налог в размере отрицательного сальдо ЕНС",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Информационные системы и технологии»",
+        "status": "Возбуждено 2026-06-01. Остаток задолженности: 109 796.00 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      }
+    ],
     "licences": [],
     "trademarks": [],
     "patents": [],
@@ -40205,7 +40301,8 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7842179810). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 21 candidates belong to an unrelated company, ОАО «Информационные технологии и коммуникационные системы» (ИНФОТЕКС) -- a word-order collision on \"информационные системы/технологии\" already flagged in an earlier pass; confirmed again here.",
       "2026-09-05: zakupki attachment corpus read end-to-end (7 contracts, ₽28,233,700.00 total, docs already archived but never wired). The entity's actual documented business is public-warning (оповещение) infrastructure for Belgorod oblast's border districts — Волоконовский, Борисовский, Краснояружский, Шебекинский, Валуйский районы plus the oblast civil-defence authority — supplying «Средство селективного оповещения и информирования населения «ОРАЛО-150»» units integrated into the regional РАСЦО alert system via П-166М КПУ control units (АО «КЗТА»). The Volokonovsky contract alone lists 33 named village/khutor installation points. The largest award (₽10,475,700, Шебекино) was made as sole-supplier under п.9 ч.1 ст.93 44-ФЗ, with the justification document citing verbatim the «жёлтый» уровень террористической опасности in force in the oblast since 11.04.2022 «ввиду ситуации на российско-украинской границе». Genuine civil-defence function, procured under war-driven emergency provisions — recorded as such, not characterised as a weapons supply.",
-      "2026-09-05: backfilled the structured `zakupki_review` field (wired, as of 2026-09-05) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
+      "2026-09-05: backfilled the structured `zakupki_review` field (wired, as of 2026-09-05) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
+      "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 3 enforcement-proceeding record(s) totalling 19,998,476.20 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "opensanctions_matches": [
@@ -45346,7 +45443,28 @@
     "securing_measures": [],
     "securing_measures_checked_at": "2026-09-06",
     "sanctions": [],
-    "litigation": [],
+    "litigation": [
+      {
+        "case_number": "168919/26/26030-ИП",
+        "claim_amount_rub": 26164.34,
+        "court": "Пятигорский городской отдел судебных приставов (отдел судебных приставов — не суд)",
+        "subject": "Страховые взносы, включая пени",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Авиационно-космические разработки «Бегак»»",
+        "status": "Возбуждено 2026-05-05. Остаток задолженности: 6 164.34 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      },
+      {
+        "case_number": "424022/26/98026-ИП",
+        "claim_amount_rub": 539837.9,
+        "court": "СОСП по Ставропольскому краю (отдел судебных приставов — не суд)",
+        "subject": "Налог в размере отрицательного сальдо ЕНС",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Авиационно-космические разработки «Бегак»»",
+        "status": "Возбуждено 2026-06-15. Остаток задолженности: 481 998.13 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      }
+    ],
     "licences": [],
     "trademarks": [],
     "patents": [
@@ -45410,7 +45528,8 @@
       "full EGRUL extract pulled directly 23.08.2026 (ul-1202600009919-20260823145414.pdf). Sole founder = sole director, registered 2020. Registered address field did not extract cleanly from this PDF (recurring layout quirk this session).",
       "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found (ЕГРЮЛ lists none); only a bare 2GIS map listing. Single-founder company (Бегак А.А., matches surname), no product info found anywhere -- thin/dormant footprint.",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (2632116476). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-      "2026-08-24: promoted 2 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: personal filings by Бегак Александр Аркадьевич, this entity's confirmed director/founder -- a transforming flying-amphibious vehicle, directly on-topic."
+      "2026-08-24: promoted 2 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: personal filings by Бегак Александр Аркадьевич, this entity's confirmed director/founder -- a transforming flying-amphibious vehicle, directly on-topic.",
+      "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 2 enforcement-proceeding record(s) totalling 566,002.24 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026 (ul-1202600009919-20260823145414.pdf)",
     "opensanctions_matches": [],
@@ -50582,6 +50701,66 @@
         "source_id": "s5314",
         "status": "Опубликовано 29.10.2024 на Федресурсе.",
         "subject": "Договор финансовой аренды (лизинга) №AA047924462 от 17.10.2024 на легковой автотранспорт (не авиатехника, несмотря на \"ГЕРОН-АВИА\" в наименовании стороны), период 24.10.2024–30.09.2029. Сообщение помечено isPublisherInSanctionList/isParticipantInSanctionList=true, что и объясняет сокрытие личности лизингодателя -- не самостоятельное подтверждение санкционного статуса самого ООО «Герон», так как флаг может относиться к любой из сторон."
+      },
+      {
+        "case_number": "320898/25/53002-ИП",
+        "claim_amount_rub": 12831.11,
+        "court": "ОСП Боровичского, Любытинского и Мошенского районов (отдел судебных приставов — не суд)",
+        "subject": "Страховые взносы, включая пени",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Герон»",
+        "status": "Возбуждено 2025-12-19. Остаток задолженности: 2 831.11 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      },
+      {
+        "case_number": "157977/26/53002-ИП",
+        "claim_amount_rub": 15886018.62,
+        "court": "ОСП Боровичского, Любытинского и Мошенского районов (отдел судебных приставов — не суд)",
+        "subject": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Герон»",
+        "status": "Возбуждено 2026-06-05. Остаток задолженности: 14 183 945.20 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      },
+      {
+        "case_number": "15818/26/53002-ИП",
+        "claim_amount_rub": 5413936.66,
+        "court": "ОСП Боровичского, Любытинского и Мошенского районов (отдел судебных приставов — не суд)",
+        "subject": "Задолженность по кредитным платежам (кроме ипотеки)",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Герон»",
+        "status": "Возбуждено 2026-01-29. Остаток задолженности: 4 833 872.02 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      },
+      {
+        "case_number": "43885/26/53002-ИП",
+        "claim_amount_rub": 3848833.29,
+        "court": "ОСП Боровичского, Любытинского и Мошенского районов (отдел судебных приставов — не суд)",
+        "subject": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Герон»",
+        "status": "Возбуждено 2026-02-25. Остаток задолженности: 3 436 458.30 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      },
+      {
+        "case_number": "232161/26/98053-ИП",
+        "claim_amount_rub": 9032138.49,
+        "court": "СОСП по Новгородской области (отдел судебных приставов — не суд)",
+        "subject": "Налог в размере отрицательного сальдо ЕНС",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Герон»",
+        "status": "Возбуждено 2026-07-01. Остаток задолженности: 8 064 409.37 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      },
+      {
+        "case_number": "247024/26/98053-ИП",
+        "claim_amount_rub": 242608.83,
+        "court": "СОСП по Новгородской области (отдел судебных приставов — не суд)",
+        "subject": "Исполнительский сбор",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Герон»",
+        "status": "Возбуждено 2026-07-20. Остаток задолженности: 0.00 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
       }
     ],
     "licences": [],
@@ -50612,7 +50791,8 @@
     "_corrected": [
       "2026-09-02: precise address from EGRUL extract s5308 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"Новгородская область\". ГРН 2255300168836 dated 07.02.2025.",
       "2026-09-02: found via HAR capture of fedresurs.ru (Федресурс fact-message backend API discovered: GET https://fedresurs.ru/backend/sfact-messages/<GUID>, no auth needed, just a Referer header -- see notes/source_expansion_methodology.md). УФНС России по Новгородской области filed a bankruptcy petition against ООО «Герон» with the Novgorod Oblast Arbitration Court, court notification dated 17.02.2026. Significant given ooo-geron was only added to the registry this session (via the smolin.info retrace) as part of the Ushkuynik-adjacent Аэро-Хит/Владимирский cluster.",
-      "2026-09-02: HAR capture of fedresurs.ru's main-site search (GET /backend/companies?searchString=<ИНН> -> GUID, then /backend/companies/<GUID>/{main,bankruptcy,publications,networth,licenses,encumbrances} -- a full universal company-lookup API, reusable for any entity, not just bankruptcy checks; see notes/source_expansion_methodology.md) surfaced a materially worse financial picture than the single УФНС filing already on file: (1) ПАО Сбербанк itself filed TWO separate creditor bankruptcy-intent notices against ООО «Герон» (06.03.2026 and 28.04.2026), on top of the tax authority's 18.02.2026 filing -- three separate creditors circling within 10 weeks. (2) EGRUL itself flagged ООО «Герон»'s registered information as unreliable (\"Недостоверность сведений\", record 11.03.2026, published 12.03.2026, per УФНС России по Новгородской области's own verification check) -- s5322, often a precursor to forced ЕГРЮЛ exclusion. (3) A 2024 vehicle-leasing fact-message (s5314) names the lessee as \"ООО «Герон-Авиа»\" -- same ИНН/ОГРН, confirming this as an alternate/trading name tied to geronavia.ru. Notably, this same message has BOTH isPublisherInSanctionList:true and isParticipantInSanctionList:true set by Fedresurs's own system, and the LESSOR's identity is fully redacted citing \"Постановление Правительства РФ от 12.01.2018 №5\" -- a real, well-documented Russian government decree used specifically to shield defense-industry/gosoboronzakaz-participating entities' EGRUL/Fedresurs footprint from public disclosure. This is flagged here as Fedresurs's own classification, NOT independently verified against a primary international sanctions list (OFAC/EU/UK) or confirmed which sanctions list is meant -- but the shielding decree itself is a strong, independently-verifiable signal that the (unnamed) leasing counterparty is treated as defense-industry-sensitive by the Russian state. No bidding/pledged-asset/networth/license records exist yet (all empty) -- consistent with the bankruptcy still being at the pre-trustee petition stage, per the earlier torgi.gov.ru/bankrot.fedresurs.ru null result."
+      "2026-09-02: HAR capture of fedresurs.ru's main-site search (GET /backend/companies?searchString=<ИНН> -> GUID, then /backend/companies/<GUID>/{main,bankruptcy,publications,networth,licenses,encumbrances} -- a full universal company-lookup API, reusable for any entity, not just bankruptcy checks; see notes/source_expansion_methodology.md) surfaced a materially worse financial picture than the single УФНС filing already on file: (1) ПАО Сбербанк itself filed TWO separate creditor bankruptcy-intent notices against ООО «Герон» (06.03.2026 and 28.04.2026), on top of the tax authority's 18.02.2026 filing -- three separate creditors circling within 10 weeks. (2) EGRUL itself flagged ООО «Герон»'s registered information as unreliable (\"Недостоверность сведений\", record 11.03.2026, published 12.03.2026, per УФНС России по Новгородской области's own verification check) -- s5322, often a precursor to forced ЕГРЮЛ exclusion. (3) A 2024 vehicle-leasing fact-message (s5314) names the lessee as \"ООО «Герон-Авиа»\" -- same ИНН/ОГРН, confirming this as an alternate/trading name tied to geronavia.ru. Notably, this same message has BOTH isPublisherInSanctionList:true and isParticipantInSanctionList:true set by Fedresurs's own system, and the LESSOR's identity is fully redacted citing \"Постановление Правительства РФ от 12.01.2018 №5\" -- a real, well-documented Russian government decree used specifically to shield defense-industry/gosoboronzakaz-participating entities' EGRUL/Fedresurs footprint from public disclosure. This is flagged here as Fedresurs's own classification, NOT independently verified against a primary international sanctions list (OFAC/EU/UK) or confirmed which sanctions list is meant -- but the shielding decree itself is a strong, independently-verifiable signal that the (unnamed) leasing counterparty is treated as defense-industry-sensitive by the Russian state. No bidding/pledged-asset/networth/license records exist yet (all empty) -- consistent with the bankruptcy still being at the pre-trustee petition stage, per the earlier torgi.gov.ru/bankrot.fedresurs.ru null result.",
+      "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 6 enforcement-proceeding record(s) totalling 34,436,367.00 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case)."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -50745,7 +50925,18 @@
     "securing_measures": [],
     "securing_measures_checked_at": "2026-09-06",
     "sanctions": [],
-    "litigation": [],
+    "litigation": [
+      {
+        "case_number": "649810/26/98078-ИП",
+        "claim_amount_rub": 6043375.02,
+        "court": "СОСП по г. Санкт-Петербургу (отдел судебных приставов — не суд)",
+        "subject": "Налог в размере отрицательного сальдо ЕНС",
+        "parties": "ФССП (принудительное взыскание) в отношении ООО «Скай авиа групп»",
+        "status": "Возбуждено 2026-08-03. Остаток задолженности: 5 395 870.56 руб.",
+        "note": "Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск.",
+        "source_id": "s6459"
+      }
+    ],
     "licences": [],
     "trademarks": [],
     "patents": [],
@@ -50772,7 +50963,8 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-02: precise address from EGRUL extract s5307 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"г. Санкт-Петербург\". ГРН 2267800128253 dated 28.01.2026."
+      "2026-09-02: precise address from EGRUL extract s5307 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"г. Санкт-Петербург\". ГРН 2267800128253 dated 28.01.2026.",
+      "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 1 enforcement-proceeding record(s) totalling 6,043,375.02 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case)."
     ],
     "_verified_against": null,
     "opensanctions_matches": [

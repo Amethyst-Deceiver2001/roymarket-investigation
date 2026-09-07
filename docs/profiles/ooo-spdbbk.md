@@ -15,6 +15,11 @@
 - **«Привет-82»** — Aircraft-type FPV loitering munition, per GUR profile. [s0965]
 - **«Привет-120»** — Aircraft-type FPV loitering munition, per GUR profile. [s0965]
 
+## Litigation
+
+- Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
+- Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
+
 ## Sanctions & screening
 
 **Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list), EU-RUS, Switzerland (SECO, Ukraine-related measures)** [s0799]
@@ -46,6 +51,7 @@ _No named principals linked to this entity yet._
 | s0175 | securing-measures registry record | securing-measures registry record (ROM_7838044584_20260822_ooo-spdbbk.json) | 2026-08-22 | — |
 | s0799 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7838044584_20260824_ooo-spdbbk.json) | 2026-08-24 | — |
 | s0965 | GUR war-sanctions record | GUR war-sanctions record (GUR_7838044584_20260824_ooo-spdbbk.html) | 2026-08-24 | — |
+| s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

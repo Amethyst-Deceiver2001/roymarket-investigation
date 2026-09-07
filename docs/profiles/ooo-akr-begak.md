@@ -30,6 +30,11 @@
 | ЛЕТАЮЩАЯ АМФИБИЯ-ТРАНСФОРМИРУЮЩЕЕСЯ ТРАНСПОРТНОЕ СРЕДСТВО | RU190200U1 | — | Бегак Александр Аркадьевич (RU) |
 | ТРАНСФОРМИРУЮЩЕЕСЯ ГИБРИДНОЕ ТРАНСПОРТНОЕ СРЕДСТВО | RU2692311C1 | — | Бегак Александр Аркадьевич (RU) |
 
+## Litigation
+
+- Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
+- Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
+
 - 1 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
@@ -42,6 +47,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0525 | EGRUL extract | EGRUL extract (ul-1202600009919-20260823145414.pdf) | — | 2026-08-23 |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

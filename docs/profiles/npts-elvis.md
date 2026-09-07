@@ -128,6 +128,7 @@
 ## Litigation
 
 - Stage 1 of the ₽5.59bn ОКР «Процессор-ИМА-БК» combat-avionics-processor contract (гос. контракт от 03.12.2024 № 2427020100952000000020323/24208.4420029.11.044) was due 02.06.2025; actual completion per the acceptance act was 19.08.2025 — 78 days late. Минпромторг demanded ₽49,127,400.04 in pени (calculated per contract п.10.3: (Stage-1 price ₽1,145,160,840 − ₽0 actually-accepted-at-the-time) × 78 days × 1/300 × 16.5% CBR key rate). Direct evidence of schedule slippage on this entity's flagship defense R&D contract, found only by reading the fetch-documents attachment in full — not captured by contract-card-only extraction. [s3712]
+- Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
 
 ## Licences
 
@@ -408,6 +409,7 @@
 | s5366 | document | document (PP719_7735582816_20240530_zaklyuchenie-55520-11.pdf) | 2024-05-30 | 2024-05-30 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | s6438 | Mchs | Mchs (MCHS_7735582816_20260906_fire-license-search-npts-elvis.html) | 2026-09-06 | — |
+| s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
