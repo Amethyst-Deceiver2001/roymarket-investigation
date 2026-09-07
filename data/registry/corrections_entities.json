@@ -5513,6 +5513,20 @@
             "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry 'Радиоэлектронная промышленность' with primary ОКВЭД 26.51.2 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
             "source_id": "s5346"
           }
+        ],
+        "address_history": [
+          {
+            "value": "192019, Санкт-Петербург, ул. Глиняная, д. 5/д. 11 (multiple корп./литеры)",
+            "as_of": "2026",
+            "source_id": "s6917",
+            "note": "Entity has no address field on file at all -- this and the Обводного канала entry are proverki's two facility clusters."
+          },
+          {
+            "value": "192019, Санкт-Петербург, наб. Обводного канала, д. 14",
+            "as_of": "2026",
+            "source_id": "s6917",
+            "note": "Second of proverki's two facility clusters for this entity."
+          }
         ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
@@ -6654,6 +6668,18 @@
             "as_of": "2024-02-14",
             "source_id": "s0495",
             "note": "ГРН 2247800332030 от 14.02.2024."
+          },
+          {
+            "value": "Санкт-Петербург, Приморский район, ул. Маршала Новикова, д. 40, литера А",
+            "as_of": "2026",
+            "source_id": "s6922",
+            "note": "One proverki.gov.ru record explicitly: \"Строительство производственно-складского корпуса: акционерное общество «Научно-исследовательский институт «Вектор»\" -- a second site under active construction, distinct from the registered Академика Павлова address."
+          },
+          {
+            "value": "Санкт-Петербург, Кантемировская ул., д. 10",
+            "as_of": "2026",
+            "source_id": "s6922",
+            "note": "One proverki.gov.ru record explicitly labels this the \"фактического осуществления деятельности\" (actual place of operations) address, as distinct from the \"юридического лица\" (registered legal) address at Академика Павлова -- i.e. the source itself distinguishes registered vs. operating address here."
           }
         ],
         "founders_history": [
@@ -11459,7 +11485,7 @@
           }
         ],
         "name_ru": "АО «НПП «Радар ММС»»",
-        "notes": "zakupki signatory review 2026-08-31/09-01: reg 1780902212017000210 (02.10.2017) carries two supplier-side-classified signatures -- Борисов Юрий Иванович, по доверенности, and (separately already in director_history) Гоголинский Кирилл Валерьевич, по Уставу, same date. Борисов signs by delegated power of attorney, not as единоличный исполнительный орган -- reads as a mid-level representative, not an officer, per the PII policy not-a-principal carve-out. Not wired to director_history.",
+        "notes": "zakupki signatory review 2026-08-31/09-01: reg 1780902212017000210 (02.10.2017) carries two supplier-side-classified signatures -- Борисов Юрий Иванович, по доверенности, and (separately already in director_history) Гоголинский Кирилл Валерьевич, по Уставу, same date. Борисов signs by delegated power of attorney, not as единоличный исполнительный орган -- reads as a mid-level representative, not an officer, per the PII policy not-a-principal carve-out. Not wired to director_history.\n\nPROVERKI FACILITY FOOTPRINT (2026-09-07, s6930): 50 inspection records reveal a materially larger and more dispersed physical footprint than previously on file for this defense radar manufacturer -- see address_history for the Хаболово cadastral-land and Курортный район entries in particular, both unexplained and worth further identification.",
         "ogrn": "1027807560186",
         "okved_code": "26.11.9",
         "okved_label": "Производство частей электронных ламп, трубок и прочих электронных компонентов, не включенных в другие группировки",
@@ -11471,6 +11497,10 @@
           {
             "source_id": "s1169",
             "text": "This entity's own rk.2035.university product listings (s1169, manufacturer field literally АО \"НПП \"Радар ммс\") confirm the registry's own «НПП «Радар ММС»»» name -- resolving the earlier open question about the showcase catalog's separate «Концерн» wording (s1168) in favour of «НПП»."
+          },
+          {
+            "text": "Identify what facility/land use is at Ленинградская область, Кингисеппский район, дер. Хаболово (КН 47:20:0442001:212, :209) -- two proverki.gov.ru inspection records cite these cadastral numbers for this defense radar manufacturer, far from its Санкт-Петербург HQ. Test range? Antenna field? Undisclosed production site? Not yet identified.",
+            "source_id": "s6930"
           }
         ],
         "patents": [
@@ -11894,6 +11924,26 @@
             "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.11.9 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
             "source_id": "s5346"
           }
+        ],
+        "address_history": [
+          {
+            "value": "197375, Санкт-Петербург, вн.тер.г. муниципальный округ Юнтолово, ул. Новосельковская, д. 46, литера А",
+            "as_of": "2026",
+            "source_id": "s6930",
+            "note": "Second corpus at the main Новосельковская production complex, distinct from the д.37 address already on file. One proverki.gov.ru record explicitly names this \"Строительство производственно-складского корпуса\" (construction of a new production/warehouse building) -- an active expansion, not a static footprint."
+          },
+          {
+            "value": "Ленинградская область, Кингисеппский муниципальный район, Котельское сельское поселение, дер. Хаболово (КН 47:20:0442001:212, КН 47:20:0442001:209)",
+            "as_of": "2026",
+            "source_id": "s6930",
+            "note": "TWO separate proverki.gov.ru records cite cadastral numbers at this location, far from the entity's Санкт-Петербург HQ. Nature of the facility/land use not identified -- possible test range, antenna field, or other undisclosed site. Flagged as an open question, not a confirmed facility type."
+          },
+          {
+            "value": "Курортный район Санкт-Петербурга (Сестрорецк/Белоостров/Песочный, incl. Сестрорецкое болото nature reserve)",
+            "as_of": "2026",
+            "source_id": "s6930",
+            "note": "One proverki.gov.ru record covers this entire area as an inspected zone; specific activity/facility not identified from the record alone."
+          }
         ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
@@ -11929,6 +11979,12 @@
             "note": "factAddress per contract XML (regNumber 1770559633924000207) — fills a previously-empty address field for this entity; matches its Зеленоград postAddress on the same contract.",
             "source_id": "s3701",
             "value": "124460, Москва, вн.тер.г. муниципальный округ Силино, г. Зеленоград, ул. Конструктора Лукина, д. 14, стр. 14, этаж 6, ком. 6.23"
+          },
+          {
+            "value": "124498, г. Москва, г. Зеленоград, проезд 4922-й, д. 4, строение 2",
+            "as_of": "2026",
+            "source_id": "s6928",
+            "note": "Second Zelenograd facility, distinct from ул. Конструктора Лукина 14 already on file."
           }
         ],
         "bank_details": {
@@ -13335,6 +13391,24 @@
             "note": "ГРН 2257723296400, 07.11.2025",
             "source_id": "s0218",
             "value": "123060, Москва, вн.тер.г. муниципальный округ Щукино, пр-д 1-й Волоколамский, д. 10, стр. 1"
+          },
+          {
+            "value": "101000, г. Москва, пер. Милютинский, д. 13, стр. 1",
+            "as_of": "2026",
+            "source_id": "s6927",
+            "note": "None of proverki's 3 distinct facility addresses match the entity's own registered legal address (1-й Волоколамский пр-д, д.10, стр.1)."
+          },
+          {
+            "value": "115432, г. Москва, пр-т Андропова, д. 18, к. 9",
+            "as_of": "2026",
+            "source_id": "s6927",
+            "note": "See note on пер. Милютинский entry -- 2nd of 3 non-matching facility addresses."
+          },
+          {
+            "value": "199178, г. Санкт-Петербург, Малый пр. В.О., д. 54, корп. 5, лит. Р",
+            "as_of": "2026",
+            "source_id": "s6927",
+            "note": "See note on пер. Милютинский entry -- 3rd of 3 non-matching facility addresses, and the only one outside Moscow."
           }
         ],
         "charter_capital": 3177522000,
