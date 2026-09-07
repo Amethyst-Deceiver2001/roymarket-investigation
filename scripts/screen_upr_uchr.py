@@ -178,6 +178,7 @@ def main() -> None:
             continue
 
         found = []
+        drilldown_failed = False
         for role_key, role_label in (("upr", "director"), ("uchr", "founder")):
             cards = (summary.get(role_key) or {}).get("data") or []
             for card in cards:
@@ -189,6 +190,7 @@ def main() -> None:
                     rows = search_ul_by_token(token, query_name)
                 except (urllib.error.URLError, RuntimeError, TimeoutError) as e:
                     print(f"  {i}/{len(targets)}  {label}  ERROR at drill-down ({role_label}): {e}")
+                    drilldown_failed = True
                     continue
                 for row in rows:
                     found.append({
@@ -201,6 +203,25 @@ def main() -> None:
                         "registered": row.get("dtreg"),
                         "region": row.get("regionname"),
                     })
+
+        if drilldown_failed and not found:
+            # BUG FIXED 2026-09-07: a captcha wall firing mid-run used to hit
+            # here silently -- every card's drill-down would error, `found`
+            # stayed [], and the code below unconditionally overwrote
+            # other_entities with that empty list, erasing any real hits an
+            # earlier successful run had recorded (found live 2026-09-07:
+            # Ташматов И.С., Тимофеев В.С., Кусумов В.А. all silently lost
+            # real other_entities this way). A card-drill-down failure now
+            # aborts this person's write entirely -- leave their prior
+            # other_entities/checked_at untouched and retry them on a later
+            # run instead of recording a false "0 hits."
+            print(f"  {i}/{len(targets)}  {label}  ALL drill-downs failed (captcha wall?) -- "
+                  f"leaving prior other_entities untouched, not overwriting with a false empty result")
+            time.sleep(DELAY_BETWEEN_PEOPLE)
+            continue
+        if drilldown_failed:
+            print(f"  {i}/{len(targets)}  {label}  WARNING: partial result -- some card drill-downs "
+                  f"failed, other_entities below may be incomplete")
 
         person["other_entities"] = found
         person["other_entities_checked_at"] = today
