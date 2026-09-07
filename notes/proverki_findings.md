@@ -15,14 +15,16 @@ variants of "Академика Павлова, д.14" for one entity) — read 
 signal, cluster by hand, and only wire a genuinely distinct physical site
 into `address_history`, not every formatting variant.
 
-## Entities screened so far: 31
+## Entities screened so far: 38
 
 0-hit (genuine "no inspection history" result, not a failed lookup):
 ano-npts-ushkuynik / npts-ushkuynik, ao-ekolibri, ao-mikts, ao-npp-bat,
 ao-npp-real, ao-tekhnodron, gk-logos, ip-kuznetsov-ruslan-nikolaevich,
 kolskaya-verf, kulibin-klub, npo-kaysant, npp-elvo-kolskaya-verf,
 ooo-4gnss, ooo-akr-begak, ooo-aeroplatformy, ooo-arkhangel,
-ooo-arkhangel-grupp.
+ooo-arkhangel-grupp, ooo-aviron, ooo-arkodim, ooo-dron-reysing,
+ooo-dronomir, ooo-asel-labs, ooo-btr-bespilotnye-tekhnologicheskie-resheniya,
+ooo-arkhangel-zaporizhzhie, ooo-arkhangel-shchit, ooo-arkhangel-melitopol-2.
 
 Hits, routine (labor/fire/environmental/consumer-protection history,
 confirms continuous legitimate operation, no new facility or notable
@@ -33,7 +35,7 @@ ooo-aero-khit (1, no address on the record).
 
 Hits with real findings — all wired below: ao-nii-stt (15), ao-kotlin-novator
 (25), ao-stratim (8), ao-pmts-avangard (31), ao-nii-vektor (46), npp-radar-mms
-(50), npts-elvis (13), ooo-aeromaks (17).
+(50), npts-elvis (13), ooo-aeromaks (17), ooo-atlant-aero (4).
 
 ## Physical facilities discovered — all wired into address_history
 
@@ -110,6 +112,15 @@ earlier session (commit f1261b8).
 - Невский пр./наб. кан. Грибоедова intersection records read as separate
   retail/public-space inspections (Роспотребнадзор-style), not a company
   facility — likely noise.
+
+### ООО «Атлант Аэро» (ooo-atlant-aero, ИНН 6154165878) — 4 records, s6931
+Wired 1 new `address_history` entry: **ул. Инструментальная, земельный
+участок 2в/7, Таганрог** — entity previously had no street-level address
+at all (only city-level). One record is a construction-oversight
+inspection (Региональная служба государственного строительного надзора
+Ростовской области); other records in the same set cite slightly
+different building numbers on the same street (2-7 стр.1, 4-54),
+consistent with active construction/expansion at this site.
 
 ## Remaining unscreened
 

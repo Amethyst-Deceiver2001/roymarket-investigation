@@ -9662,7 +9662,14 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "Ростовская область, г. Таганрог, ул. Инструментальная, земельный участок 2в/7",
+        "as_of": "2026",
+        "source_id": "s6931",
+        "note": "First street-level address on file for this entity (previously only city-level). Named in a proverki.gov.ru construction-oversight inspection (РЕГИОНАЛЬНАЯ СЛУЖБА ГОСУДАРСТВЕННОГО СТРОИТЕЛЬНОГО НАДЗОРА РОСТОВСКОЙ ОБЛАСТИ, Июль 2026) -- other records in the same set cite slightly different building numbers on the same street (2-7 стр.1, 4-54), consistent with an active construction/expansion at this site."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -28265,7 +28272,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-gaskar-integratsiya",
@@ -51249,7 +51258,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-instekh",
@@ -62249,7 +62260,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-spetsmat-spetsialnye-materialy",
