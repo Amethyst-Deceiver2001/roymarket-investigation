@@ -3899,10 +3899,47 @@
         }
       ],
       "tier": "manufacturer",
-      "tier_basis": "Added 2026-09-08: found via a director/founder cross-reference screen on Степанов Валерий Юрьевич (Прометей's 24% corporate founder ООО «ДС-БАРС-Т»'s own director), one entity beyond the Хутешен cluster proper but on the same street (ул. Греческая) in the same city (Таганрог). Unlike the generic real-estate/wholesale OKVEDs elsewhere in this cluster, АВИАОК declares a substantial secondary OKVED block — 26.30.11 through 26.30.19, communications/radio-electronic equipment manufacturing — a genuinely UAV/electronics-adjacent activity, not just a holding shell. Long-standing entity (registered 2011, sole founder/director Степанов), no EGRUL restriction/disavowal flags found. No products, contracts, or БФО financials pulled yet — this is a lead requiring the standard verification pass (zakupki, БФО, product-line check via press/website/VK/TG) before it can be characterized further.",
+      "tier_basis": "Added 2026-09-08: found via a director/founder cross-reference screen on Степанов Валерий Юрьевич (Прометей's 24% corporate founder ООО «ДС-БАРС-Т»'s own director), one entity beyond the Хутешен cluster proper but on the same street (ул. Греческая) in the same city (Таганрог). Unlike the generic real-estate/wholesale OKVEDs elsewhere in this cluster, АВИАОК declares a substantial secondary OKVED block — 26.30.11 through 26.30.19, communications/radio-electronic equipment manufacturing — a genuinely UAV/electronics-adjacent activity, not just a holding shell. Long-standing entity (registered 2011, sole founder/director Степанов), no EGRUL restriction/disavowal flags found. No products, contracts, or БФО financials pulled yet — this is a lead requiring the standard verification pass (zakupki, БФО, product-line check via press/website/VK/TG) before it can be characterized further. БФО pull 2026-09-08 (5 filings, FY2021-2025): revenue only reported in the most recent filing — ₽19.4m FY2025, ₽674k profit — prior years show small losses/gains (-₽198k, -₽33k, +₽419k, -₽651k) with no revenue disclosed (simplified filing form). Confirms this is a real, small, actively-operating company, not dormant — the FY2025 revenue jump warrants watching if further filings continue that trend.",
       "products": [],
       "why": [
         "2026-09-08: found via scripts/screen_upr_uchr.py on Степанов В.Ю., himself found while investigating Хутешен А.А.'s Прометей co-founder ООО «ДС-БАРС-Т». Pulled full EGRUL выписка (s6971) to confirm OKVED detail and ownership directly."
+      ],
+      "financials": [
+        {
+          "year": "2021",
+          "revenue": null,
+          "profit": -198000.0,
+          "source_id": "s6972",
+          "note": "Тыс. руб. filing. Revenue not disclosed in this filing (simplified form)."
+        },
+        {
+          "year": "2022",
+          "revenue": null,
+          "profit": -33000.0,
+          "source_id": "s6973",
+          "note": "Тыс. руб. filing. Revenue not disclosed in this filing (simplified form)."
+        },
+        {
+          "year": "2023",
+          "revenue": null,
+          "profit": 419000.0,
+          "source_id": "s6974",
+          "note": "Тыс. руб. filing. Revenue not disclosed in this filing (simplified form)."
+        },
+        {
+          "year": "2024",
+          "revenue": null,
+          "profit": -651000.0,
+          "source_id": "s6975",
+          "note": "Тыс. руб. filing. Revenue not disclosed in this filing (simplified form)."
+        },
+        {
+          "year": "2025",
+          "revenue": 19417000.0,
+          "profit": 674000.0,
+          "source_id": "s6976",
+          "note": "Тыс. руб. filing."
+        }
       ]
     }
   ],
