@@ -2614,7 +2614,7 @@
         "roles": [
           {
             "body": null,
-            "entity_slug": null,
+            "entity_slug": "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta",
             "from": null,
             "source_id": null,
             "title": "General Director, Фонд поддержки зимних олимпийских видов спорта, since 11.11.2014",
@@ -2641,7 +2641,8 @@
         ]
       },
       "why": [
-        "2026-08-25: folded in 2 _candidate role links (АО «Фабрика им. Советской Армии», Фонд «Наша Правда») from the duplicate record brovchenko-sergey-rufinovich, now merged into this one -- still _candidate, not yet independently verified."
+        "2026-08-25: folded in 2 _candidate role links (АО «Фабрика им. Советской Армии», Фонд «Наша Правда») from the duplicate record brovchenko-sergey-rufinovich, now merged into this one -- still _candidate, not yet independently verified.",
+        "2026-09-07: orphan role link fix — linked to fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta (registry entity confirmed to exist)."
       ]
     },
     "shagiakhmetov-ayrat-fatkhutdinovich": {
@@ -3485,6 +3486,23 @@
       },
       "why": [
         "2026-09-07: registry-hardening pass -- resolved orphan role link to ooo-tsentr-bespilotnykh-sistem-tula."
+      ]
+    },
+    "ustratov-dmitriy-vladimirovich": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": "fond-podderzhki-natsionalnykh-morskikh-programm",
+            "title": "General Director, Фонд поддержки национальных морских программ, since 30.04.2021",
+            "body": null,
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
+        ]
+      },
+      "why": [
+        "2026-09-07: orphan role link fix — linked to fond-podderzhki-natsionalnykh-morskikh-programm (registry entity confirmed to exist)."
       ]
     }
   },
