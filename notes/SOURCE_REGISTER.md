@@ -379,6 +379,51 @@ All housekeeping re-run after each pass: `check_registry.py` 0 errors, 39
 warnings (baseline unchanged). 10-12 profiles rebuilt per pass,
 tag-balance clean throughout.
 
+## 2026-09-07 (cont'd): 6-entity founding-document pull batch OCR'd and wired
+
+User manually pulled 6 more `UD_*.zip` founding-document bundles from the
+ФНС portal (Кронштадт БПЛА, НПК «Герон», СКБ «Пиранья», Эколибри, УК
+«Азимут», НПП «Реал») and hit the portal's daily-pull limit; 4 more
+(АНО «Архангел», Гагаринг's education-center АНО, АО «Технодрон», АО ПК
+«Азимут») came back "документ формируется" (still being digitized),
+distinct from an untried gap — recorded as such in
+`notes/founding_docs_gap.md` rather than left looking like a plain miss.
+
+All 6 pulled bundles OCR'd in full (cp866 nested-zip filename fix +
+tesseract `rus` for scanned TIFF pages, ~740s of real OCR across ~200
+pages) and read end-to-end. Findings, all wired via corrections files —
+see the commit and `notes/founding_docs_gap.md`'s own "2026-09-07 pull
+batch" section for full detail:
+- Kronshtadt БПЛА's устав self-declares military/dual-use aircraft
+  (incl. UAVs) purpose plus MO/FSB/MVD/FTS/military-intelligence work in
+  its own §3.2.4 activity clause.
+- New person Ткач Кирилл Владимирович (НПК «Герон»'s sole founder) —
+  full identity recovered from the устав's founder-disclosure clause.
+- Corrected a real dating bug in АО УК «Азимут»'s
+  `charter_capital_history`: the prior EGRUL-выписка sweep had attributed
+  the current ₽12.8bn capital to 2017-12-15, when the устав shows 2017's
+  actual figure was ₽100,000 — recovered the real timeline (₽100k 2017 →
+  ₽12.8066bn 2021 → ₽12.8067bn 2025).
+- АО «Эколибри» is now a formal ИНТЦ «Аэрокосмическая инновационная
+  долина» resident per its own charter amendment (09.12.2025).
+
+Two bugs caught and fixed mid-pass by the standing verification
+discipline: a correction-key collision on НПК «Герон» (merged into the
+existing ИНН-keyed entry rather than creating a new colliding slug key)
+and a self-inflicted `state_programs[]` overwrite on Эколибри (caught by
+the pre-commit field-size diff against git HEAD, fixed by merging).
+
+Also found (not fixed, just documented): `MANIFEST.md`'s auto-extracted
+ОГРН column silently comes back empty when an `Opis.pdf`'s ОГРН is OCR'd
+as spaced-out digits — `founding_docs_gap.md`'s generator now falls back
+to the ОГРН embedded in the archive's own filename, which recovered 2
+already-pulled-but-miscounted bundles (`ooo-npo-nebo`, `ooo-arkhangel`)
+sitting in `data/sources/` since 19.08.2026.
+
+`check_registry.py`: 0 errors, 39 warnings (unchanged). 0 field-size
+shrinkages verified against pre-change git HEAD. 6 profiles rebuilt,
+182/182 tag-balance clean.
+
 ## Known gaps in the source set itself (nothing checks these yet)
 
 - **Customs/import data.** Russia has hidden company-level import data since
