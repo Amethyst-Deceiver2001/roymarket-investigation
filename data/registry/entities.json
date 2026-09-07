@@ -71629,5 +71629,118 @@
     "_corrected": [
       "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6961) to confirm details directly."
     ]
+  },
+  {
+    "slug": "ooo-ik-aviaok",
+    "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ИНЖИНИРИНГОВАЯ КОМПАНИЯ \"АВИАОК\"",
+    "name_latin": "OOO IK Aviaok",
+    "legal_form": "ООО",
+    "brand_ru": "АВИАОК",
+    "brand_latin": null,
+    "inn": "6154569246",
+    "ogrn": "1116154000500",
+    "extra_ids": null,
+    "registered": "21.02.2011",
+    "address": "347900, Ростовская область, г.о. город Таганрог, г. Таганрог, ул. Греческая, д.74, офис 3,5",
+    "okved_code": "62.01",
+    "okved_label": "Разработка компьютерного программного обеспечения",
+    "okved_mismatch": null,
+    "director": "Степанов Валерий Юрьевич",
+    "director_history": [
+      {
+        "value": "Степанов Валерий Юрьевич",
+        "as_of": "2021-10-22",
+        "source_id": "s6971",
+        "note": "ИНН 615413027535, sole founder and director."
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "Added 2026-09-08: found via a director/founder cross-reference screen on Степанов Валерий Юрьевич (Прометей's 24% corporate founder ООО «ДС-БАРС-Т»'s own director), one entity beyond the Хутешен cluster proper but on the same street (ул. Греческая) in the same city (Таганрог). Unlike the generic real-estate/wholesale OKVEDs elsewhere in this cluster, АВИАОК declares a substantial secondary OKVED block — 26.30.11 through 26.30.19, communications/radio-electronic equipment manufacturing — a genuinely UAV/electronics-adjacent activity, not just a holding shell. Long-standing entity (registered 2011, sole founder/director Степанов), no EGRUL restriction/disavowal flags found. No products, contracts, or БФО financials pulled yet — this is a lead requiring the standard verification pass (zakupki, БФО, product-line check via press/website/VK/TG) before it can be characterized further.",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "name_en": "Limited Liability Company Engineering Company \"AVIAOK\"",
+    "okved_secondary": [
+      {
+        "code": "26.30",
+        "label": "Производство коммуникационного оборудования"
+      },
+      {
+        "code": "26.30.11",
+        "label": "Производство средств связи, применяемых для трансляции звуковых сигналов"
+      },
+      {
+        "code": "26.30.12",
+        "label": "Производство средств связи, применяемых для трансляции визуальных сигналов"
+      },
+      {
+        "code": "26.30.13",
+        "label": "Производство средств связи, применяемых для трансляции звуковых и визуальных сигналов"
+      },
+      {
+        "code": "26.30.14",
+        "label": "Производство оборудования, применяемого для трансляции звуковых и визуальных сигналов"
+      },
+      {
+        "code": "26.30.15",
+        "label": "Производство радиоэлектронных бытовых устройств"
+      },
+      {
+        "code": "26.30.16",
+        "label": "Производство оборудования коммуникационного приемно-передающего"
+      },
+      {
+        "code": "26.30.19",
+        "label": "Производство прочего коммуникационного оборудования"
+      },
+      {
+        "code": "32.99.9",
+        "label": "Производство прочих изделий, не включенных в другие группировки"
+      }
+    ],
+    "_corrected": [
+      "2026-09-08: found via scripts/screen_upr_uchr.py on Степанов В.Ю., himself found while investigating Хутешен А.А.'s Прометей co-founder ООО «ДС-БАРС-Т». Pulled full EGRUL выписка (s6971) to confirm OKVED detail and ownership directly."
+    ]
   }
 ]

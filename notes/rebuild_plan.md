@@ -2794,16 +2794,34 @@ new ИНН, and added the whole cluster to the registry:
   (only the disqualification check ran this pass) — do that next before
   calling this network's screening complete.
 
-**Not yet done, next steps if this thread continues:**
-1. Run `screen_upr_uchr.py`/`screen_subsidiary.py`/`screen_egrip_ip.py` on
-   the 8 new people (only `screen_disqualified.py` ran so far).
-2. OpenSanctions/Aleph screen the same 8 (not run yet at all).
-3. zakupki scan on the two manufacturer-tier additions (Прометей, НПК
-   Атлант Аэро) — both too new to likely have contracts, but check anyway.
-4. A БФО pull will find nothing yet (all entities <3 years old, most
-   founded within the last year) — skip until a filing is actually due.
-5. НСПД check on the shared Южное Тушино mail-drop address itself, to
-   confirm/characterize what that address actually is (a registered-agent
-   office vs. something else).
+**Update 2026-09-08.** Ran `screen_upr_uchr.py`/`screen_subsidiary.py`/
+`screen_egrip_ip.py` on all 8. Subsidiary-liability: 0 hits across the
+board. Director/founder cross-reference mostly just confirmed the
+already-known tie, EXCEPT **Степанов Валерий Юрьевич** (ДС-БАРС-Т's
+director), who turned up 4 more companies: ООО «ДС-Проект» and ООО
+«Проектное бюро 74» (both generic real-estate holding, not added) and —
+the real find — **ООО ИК «АВИАОК»** (ИНН 6154569246), which he directs
+and wholly owns. Unlike everything else in this cluster, АВИАОК declares
+a genuine communications/radio-electronics-equipment OKVED block
+(26.30.11–26.30.19), not just real-estate/wholesale codes — added to the
+registry as `ooo-ik-aviaok` (manufacturer tier). Long-standing entity
+(founded 2011), no EGRUL restriction flags. ЕГРИП found active ИП
+registrations for Филатов, Лымарь, and Коцеруба (not detail-checked —
+low priority, proportionality).
+
+**Still not done, next steps if this thread continues:**
+1. OpenSanctions/Aleph screen the now-9 new people (never run).
+2. zakupki scan on the three manufacturer-tier additions (Прометей, НПК
+   Атлант Аэро, АВИАОК) — АВИАОК is old enough (2011) to plausibly have
+   government-contract history, worth checking first.
+3. АВИАОК needs the standard verification pass this registry requires
+   before treating it as more than a lead: БФО pull (old enough to have
+   filings, unlike the other new entities), a press/website/VK/TG check
+   for an actual product line, zakupki.
+4. A БФО pull on the rest of the cluster will find nothing yet (all
+   <3 years old, most founded within the last year) — skip until a
+   filing is actually due.
+5. НСПД check on the shared Южное Тушино mail-drop address (б-р Яна
+   Райниса 41), to confirm/characterize what that address actually is.
 6. Consider whether Пром-Тех's недостоверность flag is worth a closer
    EGRUL record-history read to identify which field was flagged.
