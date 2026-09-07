@@ -3322,8 +3322,14 @@
         "s6887"
       ],
       "why": [
-        "2026-09-07: added as a scaffold record after being identified as ГК Аэромакс's owner via Aleph's cached EGRUL mirror; not yet independently verified against primary EGRUL."
-      ]
+        "2026-09-07: added as a scaffold record after being identified as ГК Аэромакс's owner via Aleph's cached EGRUL mirror; not yet independently verified against primary EGRUL.",
+        "2026-09-07: zakupki scan (never-scanned gap closure) — scanned by ИНН, zero hits in zakupki.gov.ru contract registry."
+      ],
+      "zakupki_review": {
+        "as_of": "2026-09-07",
+        "outcome": "closed",
+        "note": "Scanned by ИНН, zero hits in zakupki.gov.ru contract registry."
+      }
     }
   ],
   "entities": {
@@ -28286,8 +28292,16 @@
       ]
     },
     "9709081670": {
-      "set": {},
-      "why": []
+      "set": {
+        "zakupki_review": {
+          "as_of": "2026-09-07",
+          "outcome": "closed",
+          "note": "Scanned by ИНН, zero hits in zakupki.gov.ru contract registry."
+        }
+      },
+      "why": [
+        "2026-09-07: zakupki scan (never-scanned gap closure) — Scanned by ИНН, zero hits in zakupki.gov.ru contract registry."
+      ]
     },
     "9718293790": {
       "set": {
@@ -28515,11 +28529,17 @@
             "share_percent": 80.0,
             "as_of": "2026-02-05"
           }
-        ]
+        ],
+        "zakupki_review": {
+          "as_of": "2026-09-07",
+          "outcome": "closed",
+          "note": "Scanned by ИНН: 5 hits (regNumbers 1165400311421000018, 1246300226320000157, 2673200542420000002, 2673200542419000007, 1231001860419000033), all pulled and read. All 5 are civilian UAV service/equipment contracts from 2019-2021 (crop-monitoring drone survey for Смоленская область x2, water-body remote sensing for Кубанское БВУ, a UAV research lab-equipment supply to Kazan's КНИТУ-КАИ, and a research UAV+sensor kit contract for Красноярский научный центр СО РАН), total ~₽13.24m. Pre-dates this entity's 2026-09-06 discovery as an АС-МК-6 manufacturer and its financial-collapse period (2023-2025); no ЦБСТ-network customer, no state-defense customer — a generic small civilian-supplier footprint per the standing zakupki triage guidance, not wired into government_contracts[]."
+        }
       },
       "why": [
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-07: zakupki scan (never-scanned gap closure) — Scanned by ИНН: 5 hits (regNumbers 1165400311421000018, 1246300226320000157, 2673200542420000002, 2673200542419000007, 1231001860419000033), all pulled and read. All 5 are civilian UAV service/equipment contracts from 2019-2021 (crop-monitoring drone survey for Смоленская область x2, water-body remote sensing for Кубанское БВУ, a UAV research lab-equipment supply to Kazan's КНИТУ-КАИ, and a research UAV+sensor kit contract for Красноярский научный центр СО РАН), total ~₽13.24m. Pre-dates this entity's 2026-09-06 discovery as an АС-МК-6 manufacturer and its financial-collapse period (2023-2025); no ЦБСТ-network customer, no state-defense customer — a generic small civilian-supplier footprint per the standing zakupki triage guidance, not wired into government_contracts[]."
       ]
     },
     "9309028512": {
@@ -28627,11 +28647,17 @@
             "share_percent": 5.0,
             "as_of": "2025-08-12"
           }
-        ]
+        ],
+        "zakupki_review": {
+          "as_of": "2026-09-07",
+          "outcome": "closed",
+          "note": "Scanned by ИНН, zero hits in zakupki.gov.ru contract registry."
+        }
       },
       "why": [
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-07: zakupki scan (never-scanned gap closure) — Scanned by ИНН, zero hits in zakupki.gov.ru contract registry."
       ]
     },
     "5300022741": {

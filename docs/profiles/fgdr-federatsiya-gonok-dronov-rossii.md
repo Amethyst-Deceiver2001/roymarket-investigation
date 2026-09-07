@@ -31,6 +31,8 @@
 | 2024 | ₽230,677,000 | ₽9,104,000 | [s0399] |
 | 2025 | ₽358,872,000 | ₽17,552,000 | [s0400] |
 
+- 5 OpenSanctions match(es) (screened 2026-09-06).
+
 ## Principals & persons of interest
 
 ### Ilya Viktorovich Galaev — Галаев Илья Викторович

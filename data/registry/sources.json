@@ -59272,6 +59272,23 @@
     "_origin": "manifest"
   },
   {
+    "id": "s6888",
+    "type": null,
+    "path": "data/sources/ZAKUPKI_6165205064_20260907_supplier-search.html",
+    "url": null,
+    "captured_date": "2026-09-07",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "9bce2b245a931f64ab69281c562ddc37041e67db03bdfd4c428c77340bd73a11",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s1429",
     "type": null,
     "path": "data/sources/ZAKUPKI_6168719068_20260825_supplier-search.html",
@@ -99367,6 +99384,26 @@
     "_origin": "manifest"
   },
   {
+    "id": "s6889",
+    "type": null,
+    "path": "data/sources/ZAKUPKI_contract_1165400311421000018_20260907.html",
+    "url": null,
+    "captured_date": "2026-09-07",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "1654003114",
+      "6165205064"
+    ],
+    "entities": [],
+    "sha256": "ae67cece8facb4043de2f5d988d10ab246d5c40370801627e6bbf109eaaddbcd",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s2810",
     "type": null,
     "path": "data/sources/ZAKUPKI_contract_1165400535122000016_20260826.html",
@@ -99445,6 +99482,26 @@
     "_origin": "manifest"
   },
   {
+    "id": "s6890",
+    "type": null,
+    "path": "data/sources/ZAKUPKI_contract_1231001860419000033_20260907.html",
+    "url": null,
+    "captured_date": "2026-09-07",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "2310018604",
+      "6165205064"
+    ],
+    "entities": [],
+    "sha256": "7390e0bcbb4da5f1cba59998608368824158adeabbcc1b706167f5595f426d08",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s3015",
     "type": null,
     "path": "data/sources/ZAKUPKI_contract_1231901933816000131_20260829.html",
@@ -99460,6 +99517,26 @@
     ],
     "entities": [],
     "sha256": "74f360fcb57727f4f7535afefbe0e78011eeec2db520fd7478966b6b9dd40d01",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s6891",
+    "type": null,
+    "path": "data/sources/ZAKUPKI_contract_1246300226320000157_20260907.html",
+    "url": null,
+    "captured_date": "2026-09-07",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "2463002263",
+      "6165205064"
+    ],
+    "entities": [],
+    "sha256": "52c8499a26e80f3c6405f44524accedef6eb6d28f85f1d82177c8988601999a2",
     "_verified": false,
     "_origin": "manifest"
   },
@@ -112479,6 +112556,46 @@
     ],
     "entities": [],
     "sha256": "07eb7c52754f28148b28d223d4d3fe0a6a1db91dbb15b5029d4b582be970a730",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s6892",
+    "type": null,
+    "path": "data/sources/ZAKUPKI_contract_2673200542419000007_20260907.html",
+    "url": null,
+    "captured_date": "2026-09-07",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "6165205064",
+      "6732005424"
+    ],
+    "entities": [],
+    "sha256": "da477c4e7b769e4179281107eed92396a0e040bad08d88e866f0232251b28163",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s6893",
+    "type": null,
+    "path": "data/sources/ZAKUPKI_contract_2673200542420000002_20260907.html",
+    "url": null,
+    "captured_date": "2026-09-07",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "6165205064",
+      "6732005424"
+    ],
+    "entities": [],
+    "sha256": "df33919f92e59cd9af0675dd1b9d7c7e0328b4d355d2792006df57720cec4aa0",
     "_verified": false,
     "_origin": "manifest"
   },

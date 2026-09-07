@@ -49,7 +49,7 @@
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), Canada (Special Economic Measures Act), Australia (Autonomous Sanctions, Russia), Ukraine (war-sanctions.gur.gov.ua, military-industry listing), Ukraine (Presidential sanctions decree/list)** [s0574]
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 3 OCCRP Aleph match(es) (screened 2026-09-05).
+- 3 OCCRP Aleph match(es) (screened 2026-09-07).
 
 ## Web & social presence
 

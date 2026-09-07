@@ -39,7 +39,7 @@
 **Ukraine (Presidential sanctions decree/list)** [s0575]
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 1 OCCRP Aleph match(es) (screened 2026-09-05).
+- 1 OCCRP Aleph match(es) (screened 2026-09-07).
 
 ## Principals & persons of interest
 
