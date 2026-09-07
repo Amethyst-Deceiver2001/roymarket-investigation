@@ -8375,7 +8375,22 @@
             "source_id": "s0963"
           }
         ],
-        "tier": "manufacturer"
+        "tier": "manufacturer",
+        "cbst_tie": {
+          "claim": "Named ЦБСТ resident receiving a Минпромторг РФ honorary award, 14.08.2025.",
+          "confidence": "t-doc",
+          "evidence": "ЦБСТ's own channel, t.me/ano_cbst post 1074, 14.08.2025: \"...генеральный директор НПЦ «Ушкуйник» Алексей Чадаев и представители компаний-резидентов ЦБСТ «Стратим», «Скворец» и «Рустехдрон» получили почётные грамоты...\" -- awarded by Минпромторг deputy minister Василий Шпак. The post does not disambiguate which \"Стратим\" -- attributed here to THIS entity (АО «Стратим», Moscow, ИНН 7720901379) rather than the smaller Nizhny Novgorod ООО «Стратим» (ИНН 5260494520, now in liquidation), on the strength of this entity's Moscow location (same city as ЦБСТ HQ), substantial confirmed 2025 revenue (₽606.8m) and real combat-drone product line -- inference from context, not an explicit statement in the source text.",
+          "source_id": "s6924"
+        },
+        "address_history": [
+          {
+            "value": "111524, г. Москва, ул. Электродная, д. 2, стр. 34, помещ. 19/3",
+            "as_of": "2026-06",
+            "source_id": "s6925",
+            "note": "Second physical facility, distinct from the registered Новогиреево/Перовская-65 address -- surfaced by a Гострудинспекция \"Объявление предостережения\" (warning notice) dated June 2026 naming this as the inspected object address. Not yet corroborated by an independent source (EGRUL, satellite imagery)."
+          }
+        ],
+        "notes": "\n\nLABOR-INSPECTION CLUSTER (proverki.gov.ru, s6925, 2026-09-07): 6 separate \"Объявление предостережения\" (labor-law warning notices) from ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА, all dated June-July 2026 -- an unusual one-month concentration, not spread evenly across the entity's history. Coincides with a documented revenue surge (₽964k in 2023 -> ₽27.8m in 2024 -> ₽606.8m in 2025, see financials[]) suggesting rapid wartime production scale-up; a plausible but unconfirmed read is that a fast hiring ramp outpaced labor-law compliance (unregistered contracts, overtime, safety). All 6 notices show decision=false (no violation confirmed in this record set) -- a \"предостережение\" is itself a pre-emptive warning, not a finding of guilt. Also surfaced a second physical address not previously on file (see address_history) at one of the six."
       },
       "verified_against": null,
       "why": [
@@ -20488,7 +20503,7 @@
           "claim": "Named ЦБСТ resident receiving a Минпромторг РФ honorary award, 14.08.2025.",
           "confidence": "t-doc",
           "evidence": "ЦБСТ's own channel, post 2159491523:1074, 14.08.2025: \"...генеральный директор НПЦ «Ушкуйник» Алексей Чадаев и представители компаний-резидентов ЦБСТ «Стратим», «Скворец» и «Рустехдрон» получили почётные грамоты...\" — awarded by Минпромторг deputy minister Василий Шпак at the \"Беспилотные системы: технологии будущего\" forum.",
-          "source_id": null
+          "source_id": "s6924"
         },
         "director": "Соколов Герман Олегович",
         "director_history": [
