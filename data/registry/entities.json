@@ -71170,8 +71170,10 @@
       }
     ],
     "_corrected": [
-      "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6964) to confirm details directly."
-    ]
+      "Read full EGRUL change-log sequence around GRN 2256101588620 to identify the flagged field, 2026-09-08"
+    ],
+    "notes": "недостоверность flag resolved (2026-09-08): the flagged field was the registered address, not the director/founder record. Full EGRUL history (s6964) shows the record immediately following the 05.06.2025 недостоверность entry is a 'Решение об изменении места нахождения ЮЛ' (decision to change legal address), filed 25.09.2025, with the new current address (ул. Петровская, д.6, кв.16, Таганрог) entered 27.11.2025. The pre-flag address itself isn't recoverable from a standard выписка (only current values + the change log survive), but the sequence is unambiguous: ФНС's own address-verification check found the declared address didn't check out, forcing a move — and the replacement address is itself just a residential apartment, not a business premises. Consistent with the rest of this cluster's mail-drop/no-real-premises pattern, not a one-off.",
+    "_verified_against": "data/sources/EGRUL_6163233330_20260907_ooo-prom-tekh.pdf, re-read in full"
   },
   {
     "slug": "ooo-npk-zevs",
@@ -71327,8 +71329,10 @@
     "_raw": {},
     "name_en": "Joint-Stock Company \"Optical Systems\"",
     "_corrected": [
-      "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6966) to confirm details directly."
-    ]
+      "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08"
+    ],
+    "notes": "НСПД corroboration (2026-09-08): nspd.gov.ru geoportal search on \"Москва, б-р Яна Райниса, д.41\" returns an ordinary Southern Tushino residential apartment tower — individual flats (кв. 33, 83, 18-77 m²), small basement/technical-floor commercial units (Нежилое, тех.подполье/тех.этаж) — no industrial, office-park, or dedicated commercial facility on record at this address. Confirms the mass-registration mail-drop reading already in tier_basis: this is a residential building, not a place any of the three co-registered companies (this entity, АО «Оптические системы», ООО «Аметист», ООО ПК «Стальной купол») could plausibly conduct real operations from.",
+    "_verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
   },
   {
     "slug": "ooo-ametist",
@@ -71402,8 +71406,10 @@
     "_raw": {},
     "name_en": "Limited Liability Company \"Ametist\"",
     "_corrected": [
-      "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6968) to confirm details directly."
-    ]
+      "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08"
+    ],
+    "notes": "НСПД corroboration (2026-09-08): nspd.gov.ru geoportal search on \"Москва, б-р Яна Райниса, д.41\" returns an ordinary Southern Tushino residential apartment tower — individual flats (кв. 33, 83, 18-77 m²), small basement/technical-floor commercial units (Нежилое, тех.подполье/тех.этаж) — no industrial, office-park, or dedicated commercial facility on record at this address. Confirms the mass-registration mail-drop reading already in tier_basis: this is a residential building, not a place any of the three co-registered companies (this entity, АО «Оптические системы», ООО «Аметист», ООО ПК «Стальной купол») could plausibly conduct real operations from.",
+    "_verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
   },
   {
     "slug": "ooo-everest",
@@ -71552,8 +71558,10 @@
     "_raw": {},
     "name_en": "Limited Liability Company Production Company \"Steel Dome\"",
     "_corrected": [
-      "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6965) to confirm details directly."
-    ]
+      "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08"
+    ],
+    "notes": "НСПД corroboration (2026-09-08): nspd.gov.ru geoportal search on \"Москва, б-р Яна Райниса, д.41\" returns an ordinary Southern Tushino residential apartment tower — individual flats (кв. 33, 83, 18-77 m²), small basement/technical-floor commercial units (Нежилое, тех.подполье/тех.этаж) — no industrial, office-park, or dedicated commercial facility on record at this address. Confirms the mass-registration mail-drop reading already in tier_basis: this is a residential building, not a place any of the three co-registered companies (this entity, АО «Оптические системы», ООО «Аметист», ООО ПК «Стальной купол») could plausibly conduct real operations from.",
+    "_verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
   },
   {
     "slug": "ooo-ds-bars-t",
