@@ -2618,3 +2618,30 @@ itself is cheap (the pattern above, or reuse `resolve_key()` from either
 of this session's `apply_bfo.py`/`apply_egrul_vypiska.py` scratch scripts
 for any future correction-writing script instead of introducing a new
 colliding key).
+
+## Phase 3.5 item 2, second half closed: guarded-enum downgrade check (2026-09-07)
+
+Closed the part of item 2 explicitly left open in its original write-up:
+"Catching that class needs either a diff-against-previous-run check or an
+explicit 'downgrade requires justification' rule — not built yet." Added
+to `check_registry.py`: for a small `GUARDED_ENUM_RANK` table (currently
+just `wb_overlap`, the field the original Тримикс regression happened on;
+extend it if another field earns the same treatment), every entity's
+current value is compared against the last **committed** value (`git show
+HEAD:data/registry/entities.json`) and any transition ranked as a downgrade
+(`confirmed_direct`/`confirmed_reseller` -> `none_found` -> `not_checked`)
+is flagged.
+
+First attempt tried to auto-suppress the warning when a correction's
+`why[]` note already mentions the field name — tested against a simulated
+re-injection of the actual Тримикс bug (`wb_overlap` flipped back to
+`none_found`) and it **failed to fire**, because this exact entity already
+carries a `why` note mentioning `wb_overlap` from the *original* 2026-08-25
+fix, which the naive substring search matched and treated as blanket
+permission forever. That's worse than not having the check — a guard that
+can be silently defeated by an old, unrelated note is a false sense of
+safety. Simplified to always warn on a guarded-field downgrade and let a
+human eyeball the one line above it; re-tested against the same simulated
+regression and it now fires correctly, and is silent against the real
+current (clean) state. Restored `entities.json` after the test — no
+lasting change from the simulation, only the check itself is new.

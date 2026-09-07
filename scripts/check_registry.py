@@ -38,6 +38,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -546,6 +547,61 @@ def main() -> int:
             if sid and sid not in source_ids:
                 errors.append(f"source {s['id']}: {key} references "
                               f"unknown source '{sid}'")
+
+    # --- guarded-enum downgrade check --------------------------------------
+    # Phase 3.5 item 2's still-open half (see notes/rebuild_plan.md): a
+    # shape validator alone can't catch a value flipping from one *valid*
+    # enum member to another *valid* one — the actual Тримикс regression (a
+    # bulk correction sweep silently overwrote a correct 'confirmed_reseller'
+    # with 'none_found', both legal values, so no shape check flagged it;
+    # only caught by a human noticing the brief and registry disagreed).
+    # This compares every guarded field against the last COMMITTED registry
+    # (git HEAD) and flags any transition ranked as a downgrade.
+    #
+    # Deliberately does NOT try to auto-detect "already justified" by
+    # scanning correction 'why' text for the field name — tried that first,
+    # and it's a false-safety trap: this exact field already carries a
+    # 'why' note from the ORIGINAL Тримикс fix (2026-08-25), so a naive
+    # substring search would forever suppress detection of a brand-new
+    # regression on the very field it exists to protect, the first time
+    # this check would matter. So it always warns on a downgrade; a human
+    # (or a future session) decides in one glance whether the note above it
+    # explains the change or not. Cheap to eyeball, not worth automating
+    # further until a real false-positive rate shows up in practice.
+    GUARDED_ENUM_RANK = {
+        "wb_overlap": {"confirmed_direct": 2, "confirmed_reseller": 2,
+                       "none_found": 1, "not_checked": 0},
+    }
+
+    def _git_show_json(path: str):
+        try:
+            out = subprocess.run(["git", "show", f"HEAD:{path}"], cwd=REPO,
+                                 capture_output=True, text=True, timeout=10)
+            if out.returncode != 0:
+                return None
+            return json.loads(out.stdout)
+        except (json.JSONDecodeError, subprocess.SubprocessError, OSError):
+            return None
+
+    head_entities = _git_show_json("data/registry/entities.json")
+    if head_entities is not None:
+        head_by_slug = {e["slug"]: e for e in head_entities if e.get("slug")}
+        for e in entities:
+            slug = e.get("slug")
+            old = head_by_slug.get(slug)
+            if not old:
+                continue
+            for field, rank in GUARDED_ENUM_RANK.items():
+                old_v, new_v = old.get(field), e.get(field)
+                if old_v == new_v or old_v not in rank or new_v not in rank:
+                    continue
+                if rank[new_v] < rank[old_v]:
+                    warnings.append(
+                        f"{e['name_ru']}: downgrade on guarded field "
+                        f"'{field}' ({old_v!r} -> {new_v!r} since the last "
+                        f"commit). If this is a deliberate, verified "
+                        f"correction with a why[] note explaining it, fine —"
+                        f" otherwise this is the Тримикс bug recurring.")
 
     # --- 6. records needing a human --------------------------------------
     # A brand record legitimately carries a slashed display name («Булат» /
