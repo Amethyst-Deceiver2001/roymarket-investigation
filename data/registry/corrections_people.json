@@ -3960,14 +3960,14 @@
         "2026-09-07: ran the three standard ФНС screens (disqualified-director, subsidiary-liability, director/founder cross-reference) plus screen_egrip_ip.py -- all 0 hits/no ИП registration. Consistent with a career military officer with no business footprint; does not itself confirm the ИНН, just finds nothing inconsistent with it."
       ]
     },
-    "neznamova-olga-viktorovna": {
+    "safieva-viktoriya-zufarovna": {
       "set": {
-        "inn_personal": "472003876740",
-        "notes": "Указан(а) в досье как жена Незнамова Александра Васильевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант. Тел. +7 911 283-33-37. Email: o.neznamowa2012@yandex.ru. 2026-09-07: ЕГРИП screen (egrul.nalog.ru open API) found one defunct ИП registration under this ИНН — ОГРНИП 315784700062337, registered 30.03.2015, excluded/closed 30.11.2016. Pre-dates this network's wartime UAV activity by several years; not defense-relevant, logged for completeness only. Disqualification, subsidiary-liability, and director/founder cross-reference screens all came back 0 hits."
+        "notes": "Сотрудник 3MX. Тел. +7 911 201-55-11. Email: vsafieva205@mail.ru. 2026-09-07: identity independently confirmed via a leaked-database dossier pull (s6936) — exact match on DOB (28.01.1985), phone (+79112015511), and email (vsafieva205@mail.ru), all already on file from the smolin.info dossier (s1408). No personal ИНН in this source; it does carry a СНИЛС (110-136-414 80), recorded here since no dedicated field exists for it."
       },
       "why": [
-        "2026-09-07: user supplied her personal ИНН directly; checksum valid."
-      ]
+        "2026-09-07: user supplied a leaked-database dossier confirming identity (DOB/phone/email match); no ИНН in the source."
+      ],
+      "verified_against": "data/sources/REVENG_20260907_safieva-viktoriya-zufarovna-dossier.pdf (s6936)"
     }
   },
   "people_add_entities": [
@@ -9829,17 +9829,6 @@
       "notes": "Указан(а) в досье как жена Цыганова Вадима Борисовича принципала сети «Тримикс»/3MX, не самостоятельный фигурант.",
       "roles": [],
       "slug": "tsyganova-viktoriya-yurevna",
-      "social": [],
-      "why": [
-        "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
-      ]
-    },
-    {
-      "dob": "1977-08-22",
-      "fio_ru": "Незнамова Ольга Викторовна",
-      "notes": "Указан(а) в досье как жена Незнамова Александра Васильевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант. Тел. +7 911 283-33-37. Email: o.neznamowa2012@yandex.ru.",
-      "roles": [],
-      "slug": "neznamova-olga-viktorovna",
       "social": [],
       "why": [
         "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."

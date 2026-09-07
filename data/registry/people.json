@@ -36184,14 +36184,15 @@
       }
     ],
     "photo": null,
-    "notes": "Сотрудник 3MX. Тел. +7 911 201-55-11. Email: vsafieva205@mail.ru.",
+    "notes": "Сотрудник 3MX. Тел. +7 911 201-55-11. Email: vsafieva205@mail.ru. 2026-09-07: identity independently confirmed via a leaked-database dossier pull (s6936) — exact match on DOB (28.01.1985), phone (+79112015511), and email (vsafieva205@mail.ru), all already on file from the smolin.info dossier (s1408). No personal ИНН in this source; it does carry a СНИЛС (110-136-414 80), recorded here since no dedicated field exists for it.",
     "sources": [],
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+      "2026-09-07: user supplied a leaked-database dossier confirming identity (DOB/phone/email match); no ИНН in the source."
     ],
+    "_verified_against": "data/sources/REVENG_20260907_safieva-viktoriya-zufarovna-dossier.pdf (s6936)",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -38029,89 +38030,6 @@
         "dataset_category": "leak",
         "countries": [],
         "ui_link": "https://aleph.occrp.org/entities/eef158cee1447c1bb9e81882ef0eba09390e4364.d50b095182ce751df39197f01630b0277797fd7a"
-      }
-    ],
-    "aleph_screened_at": "2026-09-05"
-  },
-  {
-    "slug": "neznamova-olga-viktorovna",
-    "fio_ru": "Незнамова Ольга Викторовна",
-    "name_latin": null,
-    "dob": "1977-08-22",
-    "birthplace": null,
-    "address": null,
-    "inn_personal": "472003876740",
-    "roles": [],
-    "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": "2026-09-07",
-    "disqualification_hits": [],
-    "disqualification_checked_at": "2026-09-07",
-    "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": "2026-09-07",
-    "social": [],
-    "photo": null,
-    "notes": "Указан(а) в досье как жена Незнамова Александра Васильевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант. Тел. +7 911 283-33-37. Email: o.neznamowa2012@yandex.ru. 2026-09-07: ЕГРИП screen (egrul.nalog.ru open API) found one defunct ИП registration under this ИНН — ОГРНИП 315784700062337, registered 30.03.2015, excluded/closed 30.11.2016. Pre-dates this network's wartime UAV activity by several years; not defense-relevant, logged for completeness only. Disqualification, subsidiary-liability, and director/founder cross-reference screens all came back 0 hits.",
-    "sources": [],
-    "_verified": false,
-    "_origin": "corrections:add_entities",
-    "_raw": {},
-    "_corrected": [
-      "2026-09-07: user supplied her personal ИНН directly; checksum valid."
-    ],
-    "_verified_against": null,
-    "opensanctions_matches": [],
-    "opensanctions_screened_at": "2026-09-06",
-    "aleph_matches": [
-      {
-        "entity_id": "0b8341ce0f90ef23f64e7f6e1580007d1ab95768.402fa547550f842ebeb02241bf036a91206f4299",
-        "caption": "Крылосов Дмитрий Михайлович",
-        "schema": "HyperText",
-        "score": 44.9289,
-        "dataset_label": "Russian Transneft R&D email leak (March 2022)",
-        "dataset_category": "other",
-        "countries": [],
-        "ui_link": "https://aleph.occrp.org/entities/0b8341ce0f90ef23f64e7f6e1580007d1ab95768.402fa547550f842ebeb02241bf036a91206f4299"
-      },
-      {
-        "entity_id": "75041736.f539592b72ac7848296039ab74f4d388686e1d17",
-        "caption": "Андреев Андрей Владимирович",
-        "schema": "HyperText",
-        "score": 44.9289,
-        "dataset_label": "Russian Transneft R&D email leak (March 2022)",
-        "dataset_category": "other",
-        "countries": [],
-        "ui_link": "https://aleph.occrp.org/entities/75041736.f539592b72ac7848296039ab74f4d388686e1d17"
-      },
-      {
-        "entity_id": "75044396.576307e75b2823c57421289bb07201ceccb9545b",
-        "caption": "Арсеньев Олег Александрович",
-        "schema": "Email",
-        "score": 39.0766,
-        "dataset_label": "Russian Transneft R&D email leak (March 2022)",
-        "dataset_category": "other",
-        "countries": [],
-        "ui_link": "https://aleph.occrp.org/entities/75044396.576307e75b2823c57421289bb07201ceccb9545b"
-      },
-      {
-        "entity_id": "45b04a1eda9531686830748c61624530cd829b75.85253d0ff09fa68e823b8e6287b461893b462f90",
-        "caption": null,
-        "schema": "Page",
-        "score": 38.0859,
-        "dataset_label": "Declarator.org: Asset declarations from Russia",
-        "dataset_category": "poi",
-        "countries": [],
-        "ui_link": "https://aleph.occrp.org/entities/45b04a1eda9531686830748c61624530cd829b75.85253d0ff09fa68e823b8e6287b461893b462f90"
-      },
-      {
-        "entity_id": "678c47cd66df4a4104300b900285e38aa6be81f3.b65ebaa69ab7254d41a17b32f38d7df213baa456",
-        "caption": null,
-        "schema": "Page",
-        "score": 37.4153,
-        "dataset_label": "Declarator.org: Asset declarations from Russia",
-        "dataset_category": "poi",
-        "countries": [],
-        "ui_link": "https://aleph.occrp.org/entities/678c47cd66df4a4104300b900285e38aa6be81f3.b65ebaa69ab7254d41a17b32f38d7df213baa456"
       }
     ],
     "aleph_screened_at": "2026-09-05"

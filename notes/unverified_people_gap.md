@@ -54,7 +54,7 @@ the record.
    three hits to it). Both fixed; three previously-affected people restored
    (Ташматов И.С., Тимофеев В.С., Кусумов В.А., Закелов А.А.).
 
-**162 people remain unverified**, split below by what each actually needs.
+**161 people remain unverified**, split below by what each actually needs.
 
 ## Group 1: has a personal ИНН, ready for a ФНС screen (37 people)
 
@@ -124,7 +124,7 @@ name collisions, not real ties.
 | Шахматов Иван Анатольевич (`shakhmatov-ivan-anatolevich`) | 471010513778 | 2026-09-07 (0 hits) | — | 2026-09-07 | — |
 | Шветов Артемий Андреевич (`shvetov-artemiy-andreevich`) | 531500409942 | 2026-09-07 (0 hits) | — | 2026-09-07 | Сотрудник @ ООО «Тримикс» |
 
-## Group 2: has a DOB but no ИНН (23 people)
+## Group 2: has a DOB but no ИНН (22 people)
 
 A DOB is often the field that makes a rupep.org / press / EGRUL match
 legally usable rather than merely suggestive (see the PII-policy
@@ -145,11 +145,10 @@ a personal ИНН to screen against.
 | Незнамов Василий Александрович (`neznamov-vasiliy-aleksandrovich`) | 08.02.1959 | — | — | Family record only — father of Незнамов А.В., a «Тримикс»/3MX network principal. |
 | Незнамова Анастасия Васильевна (`neznamova-anastasiya-vasilevna`) | 07.06.1982 | — | — | Family record only — sister of Незнамов А.В., a «Тримикс»/3MX network principal. |
 | Незнамова Людмила Викторовна (`neznamova-lyudmila-viktorovna`) | 20.08.1956 | — | — | Family record only — mother of Незнамов А.В., a «Тримикс»/3MX network principal. |
-| Незнамова Ольга Викторовна (`neznamova-olga-viktorovna`) | 22.08.1977 | — | — | Family record only — wife of Незнамов А.В., a «Тримикс»/3MX network principal. Phone/email on file. |
 | Петров Виталий Павлинович (`petrov-vitaliy-pavlinovich`) | 01.05.1931 | — | — | Family record only — probably grandfather of Петров А.А. (a «Тримикс»/3MX network principal), inferred from shared surname/patronymic pattern, not confirmed. |
 | Петрова Марина Владимировна (`petrova-marina-vladimirovna`) | 17.08.1961 | — | — | Family record only — mother of Петров А.А., a «Тримикс»/3MX network principal. |
 | Петрова Наталья Викторовна (`petrova-natalya-viktorovna`) | 19.10.1975 | — | — | Family record only — relation to Петров А.А. (a «Тримикс»/3MX network principal) not explicitly marked in the dossier, possibly linked via Петров Виктор Витальевич; unconfirmed. |
-| Сафиева Виктория Зуфаровна (`safieva-viktoriya-zufarovna`) | 28.01.1985 | — | Сотрудник @ ООО «Тримикс» | Employee of ООО «Тримикс» (3MX network) itself, not just a relative. Phone/email on file. |
+| Сафиева Виктория Зуфаровна (`safieva-viktoriya-zufarovna`) | 28.01.1985 | — | Сотрудник @ ООО «Тримикс» | Employee of ООО «Тримикс» (3MX network) itself, not just a relative. Identity confirmed 2026-09-07 via leaked-DB dossier (DOB/phone/email match); no ИНН, only СНИЛС. |
 | Федоров Павел Романович (`fedorov-pavel-romanovich`) | 31.08.1998 | — | Сотрудник @ ООО «Тримикс» | Employee of ООО «Тримикс» (3MX network) itself, not just a relative. |
 | Хутешен Алексей Александрович (`khuteshen-aleksey-aleksandrovich`) | 02.10.1983 | — | — @ ООО «ЦКБР» | Candidate role only (`_candidate: true`, no source_id yet) — ЦКБР tie not yet confirmed. |
 | Цыганова Виктория Юрьевна (`tsyganova-viktoriya-yurevna`) | 28.10.1963 | — | — | Family record only — wife of Цыганов Вадим Борисович, a «Тримикс»/3MX network principal. |
