@@ -7543,16 +7543,15 @@
     "dob": "1983-10-02",
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "615404085178",
     "roles": [
       {
-        "entity_slug": null,
-        "entity_name": "ООО «ЦКБР»",
-        "title": null,
-        "from": null,
+        "entity_slug": "ooo-atlant-aero",
+        "entity_name": "ООО «Атлант Аэро»",
+        "title": "Генеральный директор, учредитель",
+        "from": "2023-12-27",
         "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s0467"
       }
     ],
     "sanctions": [
@@ -7565,15 +7564,156 @@
         "source_id": "s0842"
       }
     ],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "6154165878",
+        "ogrn": "1236100025633",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АТЛАНТ АЭРО\"",
+        "role": "director",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "21.09.2023",
+        "region": "РОСТОВСКАЯ ОБЛ"
+      },
+      {
+        "inn": "9717173300",
+        "ogrn": "1247700778600",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АТЛАНТ СЕРВИС\"",
+        "role": "director",
+        "okved": "68.20",
+        "okved_label": "Аренда и управление собственным или арендованным недвижимым имуществом",
+        "registered": "02.12.2024",
+        "region": "МОСКВА Г"
+      },
+      {
+        "inn": "6163233330",
+        "ogrn": "1246100019373",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМ-ТЕХ\"",
+        "role": "director",
+        "okved": "46.52",
+        "okved_label": "Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями",
+        "registered": "02.08.2024",
+        "region": "РОСТОВСКАЯ ОБЛ."
+      },
+      {
+        "inn": "6154166381",
+        "ogrn": "1236100034411",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НПК \"АТЛАНТ АЭРО\"",
+        "role": "director",
+        "okved": "33.11",
+        "okved_label": "Ремонт металлоизделий",
+        "registered": "15.12.2023",
+        "region": "РОСТОВСКАЯ ОБЛ."
+      },
+      {
+        "inn": "7733486867",
+        "ogrn": "1267700239300",
+        "name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ОПТИЧЕСКИЕ СИСТЕМЫ\"",
+        "role": "founder",
+        "okved": "62.01",
+        "okved_label": "Разработка компьютерного программного обеспечения",
+        "registered": "16.07.2026",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "9717142044",
+        "ogrn": "1237700576981",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АМЕТИСТ\"",
+        "role": "founder",
+        "okved": "68.20.2",
+        "okved_label": "Аренда и управление собственным или арендованным нежилым недвижимым имуществом",
+        "registered": "30.08.2023",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "6154165878",
+        "ogrn": "1236100025633",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АТЛАНТ АЭРО\"",
+        "role": "founder",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "21.09.2023",
+        "region": "РОСТОВСКАЯ ОБЛ"
+      },
+      {
+        "inn": "9722117815",
+        "ogrn": "1267700243403",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АТЛАНТ ЛОГИСТИК\"",
+        "role": "founder",
+        "okved": "49.41",
+        "okved_label": "Деятельность автомобильного грузового транспорта",
+        "registered": "21.07.2026",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "6161154122",
+        "ogrn": "1266100002387",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"ЗЕВС\"",
+        "role": "founder",
+        "okved": "46.52",
+        "okved_label": "Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями",
+        "registered": "10.02.2026",
+        "region": "РОСТОВСКАЯ ОБЛ."
+      },
+      {
+        "inn": "6163233330",
+        "ogrn": "1246100019373",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМ-ТЕХ\"",
+        "role": "founder",
+        "okved": "46.52",
+        "okved_label": "Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями",
+        "registered": "02.08.2024",
+        "region": "РОСТОВСКАЯ ОБЛ."
+      },
+      {
+        "inn": "6154171470",
+        "ogrn": "1266100011418",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЕТЕЙ\"",
+        "role": "founder",
+        "okved": "30.30.39",
+        "okved_label": "Производство прочих летательных аппаратов",
+        "registered": "05.06.2026",
+        "region": "РОСТОВСКАЯ ОБЛ."
+      },
+      {
+        "inn": "9704109459",
+        "ogrn": "1217700630828",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВЕРЕСТ\"",
+        "role": "founder",
+        "okved": "68.20.2",
+        "okved_label": "Аренда и управление собственным или арендованным нежилым недвижимым имуществом",
+        "registered": "22.12.2021",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "6154166381",
+        "ogrn": "1236100034411",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НПК \"АТЛАНТ АЭРО\"",
+        "role": "founder",
+        "okved": "33.11",
+        "okved_label": "Ремонт металлоизделий",
+        "registered": "15.12.2023",
+        "region": "РОСТОВСКАЯ ОБЛ."
+      },
+      {
+        "inn": "7733483753",
+        "ogrn": "1267700131236",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПК \"СТАЛЬНОЙ КУПОЛ\"",
+        "role": "founder",
+        "okved": "43.99.7",
+        "okved_label": "Работы по сборке и монтажу сборных конструкций",
+        "registered": "14.04.2026",
+        "region": "МОСКВА Г."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
-    "disqualification_checked_at": null,
+    "disqualification_checked_at": "2026-09-07",
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-07",
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "2026-09-07: ФНС director/founder screen (director/founder ИНН 615404085178) found 14 entity ties beyond ЦКБР — confirms he is director+founder of ООО «Атлант Аэро» itself (this investigation's own entity, ИНН 6154165878, Таганрог facility wired earlier this session), plus a sibling ООО НПК «Атлант Аэро» (ИНН 6154166381, same Ростовская обл., different ОКВЭД — 'Ремонт металлоизделий'). Also founder of ООО «Прометей» (ИНН 6154171470, Ростовская обл., ОКВЭД 'Производство прочих летательных аппаратов' — ANOTHER aircraft manufacturer, not yet in this registry, a real lead). Remaining ties read as a supporting holding/logistics/electronics cluster around the same Rostov/Moscow axis: ООО «Атлант Сервис» (real estate), ООО «Атлант Логистик» (freight), ООО «Пром-Тех» и ООО НПК «Зевс» (electronics wholesale, Ростовская обл.), АО «Оптические системы», ООО «Аметист», ООО «Эверест» (Moscow real estate), ООО ПК «Стальной купол» (assembly/construction). Disqualification and subsidiary-liability screens: 0 hits. ЕГРИП: 2 ИП registrations (ОГРНИП 324619600210070, 305615428000090), not yet detail-checked. None of these new companies verified/added to the registry yet — leads requiring the standard EGRUL/зачупки verification before promotion, per usual discipline. «Прометей» is the highest-priority of these given its aircraft-manufacturing ОКВЭД.",
     "sources": [],
     "mentions": 1,
     "_verified": false,
@@ -7584,7 +7724,8 @@
       ]
     },
     "_corrected": [
-      "2026-08-24 OpenSanctions screening (score 1.0, exact name match, DOB returned but no notes/context text). PLAUSIBLE only: this registry independently ties a Хутешен Алексей Александрович to ООО «ЦКБР» (the entity already ИНН-confirmed sanctioned this same sweep, see ooo-tskbr), which is circumstantially consistent but not itself an identity proof. No personal ИНН cross-check possible — OpenSanctions returned no idNumber for this match."
+      "2026-08-24 OpenSanctions screening (score 1.0, exact name match, DOB returned but no notes/context text). PLAUSIBLE only: this registry independently ties a Хутешен Алексей Александрович to ООО «ЦКБР» (the entity already ИНН-confirmed sanctioned this same sweep, see ooo-tskbr), which is circumstantially consistent but not itself an identity proof. No personal ИНН cross-check possible — OpenSanctions returned no idNumber for this match.",
+      "2026-09-07: user supplied his personal ИНН directly; checksum valid, and it exactly matches the Aleph 'ru-inn-615404085178' EGRUL-registry match already on file (score 44.4539, name ХУТЕШЕН АЛЕКСЕЙ АЛЕКСАНДРОВИЧ) -- independently confirms this is the same person, distinct from the separate name+DOB-only OpenSanctions sanctions match which still lacks an idNumber to cross-check against."
     ],
     "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
     "opensanctions_matches": [

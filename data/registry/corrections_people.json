@@ -1631,11 +1631,24 @@
             ],
             "source_id": "s0842"
           }
-        ]
+        ],
+        "inn_personal": "615404085178",
+        "roles": [
+          {
+            "entity_slug": "ooo-atlant-aero",
+            "entity_name": "ООО «Атлант Аэро»",
+            "title": "Генеральный директор, учредитель",
+            "from": "2023-12-27",
+            "to": null,
+            "source_id": "s0467"
+          }
+        ],
+        "notes": "2026-09-07: ФНС director/founder screen (director/founder ИНН 615404085178) found 14 entity ties beyond ЦКБР — confirms he is director+founder of ООО «Атлант Аэро» itself (this investigation's own entity, ИНН 6154165878, Таганрог facility wired earlier this session), plus a sibling ООО НПК «Атлант Аэро» (ИНН 6154166381, same Ростовская обл., different ОКВЭД — 'Ремонт металлоизделий'). Also founder of ООО «Прометей» (ИНН 6154171470, Ростовская обл., ОКВЭД 'Производство прочих летательных аппаратов' — ANOTHER aircraft manufacturer, not yet in this registry, a real lead). Remaining ties read as a supporting holding/logistics/electronics cluster around the same Rostov/Moscow axis: ООО «Атлант Сервис» (real estate), ООО «Атлант Логистик» (freight), ООО «Пром-Тех» и ООО НПК «Зевс» (electronics wholesale, Ростовская обл.), АО «Оптические системы», ООО «Аметист», ООО «Эверест» (Moscow real estate), ООО ПК «Стальной купол» (assembly/construction). Disqualification and subsidiary-liability screens: 0 hits. ЕГРИП: 2 ИП registrations (ОГРНИП 324619600210070, 305615428000090), not yet detail-checked. None of these new companies verified/added to the registry yet — leads requiring the standard EGRUL/зачупки verification before promotion, per usual discipline. «Прометей» is the highest-priority of these given its aircraft-manufacturing ОКВЭД."
       },
       "verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
       "why": [
-        "2026-08-24 OpenSanctions screening (score 1.0, exact name match, DOB returned but no notes/context text). PLAUSIBLE only: this registry independently ties a Хутешен Алексей Александрович to ООО «ЦКБР» (the entity already ИНН-confirmed sanctioned this same sweep, see ooo-tskbr), which is circumstantially consistent but not itself an identity proof. No personal ИНН cross-check possible — OpenSanctions returned no idNumber for this match."
+        "2026-08-24 OpenSanctions screening (score 1.0, exact name match, DOB returned but no notes/context text). PLAUSIBLE only: this registry independently ties a Хутешен Алексей Александрович to ООО «ЦКБР» (the entity already ИНН-confirmed sanctioned this same sweep, see ooo-tskbr), which is circumstantially consistent but not itself an identity proof. No personal ИНН cross-check possible — OpenSanctions returned no idNumber for this match.",
+        "2026-09-07: user supplied his personal ИНН directly; checksum valid, and it exactly matches the Aleph 'ru-inn-615404085178' EGRUL-registry match already on file (score 44.4539, name ХУТЕШЕН АЛЕКСЕЙ АЛЕКСАНДРОВИЧ) -- independently confirms this is the same person, distinct from the separate name+DOB-only OpenSanctions sanctions match which still lacks an idNumber to cross-check against."
       ]
     },
     "kirill-lysogorskiy": {
