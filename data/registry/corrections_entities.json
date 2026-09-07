@@ -3340,6 +3340,51 @@
           "note": "Original Устав (редакция №1), утвержден Решением №01 единственного учредителя от 04.10.2016; unchanged in редакция №2 (Решение №30-05/1/2017 от 30.05.2017, ГРН 8177747805470 от 07.07.2017, still единственный участник)."
         }
       ]
+    },
+    {
+      "slug": "ooo-hab-svo",
+      "name_ru": "ООО «Хаб СВО»",
+      "inn": "9722102248",
+      "ogrn": "1257700323484",
+      "registered": "21.07.2025",
+      "city": "Москва",
+      "director": "Хабибулин Владимир Игоревич",
+      "tier": "manufacturer",
+      "cbst_tie": null,
+      "notes": "Проект «Архангел»'s own THIRD legal entity (after the multiple ooo-arkhangel-* Kherson/Zaporizhzhia training entities and ooo-arkhangel-shchit), self-announced by the project's own Telegram channel (@projectArchangel) as \"чисто производственная история\" -- a dedicated production/manufacturing vehicle for scaling up «Архангел» interceptor-drone output, distinct from the training-focused Архангел Щит. First floated by name in a 05.11.2024 recruitment post (s6912) as a planned frontline (ЛБС) equipment testing/distribution hub for vetted producers, then confirmed as an incorporated legal entity in a 11.10.2025 project-status post (s6913): \"И наконец третий наш новый проект и юридическое лицо \\\"Хаб СВО\\\" — это чисто производственная история.\" EGRUL-confirmed 2026-09-07 (egrul.nalog.ru open lookup): ГД Хабибулин В.И. (same director as Архангел Щит).",
+      "founders": [
+        "Кулемин Игорь Александрович"
+      ],
+      "founders_history": [
+        {
+          "value": "Кулемин Игорь Александрович",
+          "as_of": "2026-09-07",
+          "source_id": null,
+          "note": "From screen_upr_uchr.py ФНС founder/director cross-reference -- share % not given by that source; needs a full ЕГРЮЛ выписка to confirm ownership split."
+        }
+      ],
+      "director_history": [
+        {
+          "value": "Хабибулин Владимир Игоревич",
+          "as_of": "2026-09-07",
+          "source_id": null,
+          "note": "Confirmed live via egrul.nalog.ru open lookup 2026-09-07, and independently via screen_upr_uchr.py ФНС cross-reference on both his and Кулемин's personal ИНН."
+        }
+      ],
+      "sources": [
+        "s6912",
+        "s6913"
+      ],
+      "open_questions": [
+        {
+          "text": "Full signed ЕГРЮЛ выписка not yet pulled for ooo-hab-svo -- would confirm exact founder share, address, and OKVED against the open-lookup snapshot.",
+          "source_id": null
+        },
+        {
+          "text": "Дмитрий Олегович Рогозин (sitting Federation Council senator, ex-Deputy PM/Roscosmos head) is named by @projectArchangel itself as the movement's \"флагман\" (flagship/figurehead) with direct links to his own channel (@rogozin_do) -- a real PEP-adjacency lead for the whole Архангел network, not specific to ХАБ СВО alone. Not yet independently corroborated beyond this self-description; see people.json record for Рогозин Д.О.",
+          "source_id": "s6912"
+        }
+      ]
     }
   ],
   "entities": {
