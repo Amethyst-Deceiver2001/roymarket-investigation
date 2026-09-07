@@ -52,20 +52,24 @@ as gaps (`ooo-npo-nebo`, `ooo-arkhangel`).
 - ООО НПК «Герон» (`ooo-npk-geron`) — bespoke UD zip
 - Общество с ограниченной ответственностью «Кронштадт Беспилотные Системы» (`ooo-kronshtadt-bespilotnye-sistemy`) — bespoke UD zip
 
-## Requested, still pending at ФНС (4 entities)
+## Attempted at ФНС, deprioritized (4 entities)
 
-Attempted via the ФНС portal 2026-09-07 but not yet obtainable — ФНС
-returned a "документ формируется" (document is being digitized) response
-rather than the bundle itself. Distinct from the plain gap list below: this
-is a **confirmed attempt with a known retry path**, not an un-tried gap.
-Retry these directly rather than re-triaging them.
+Attempted via the ФНС portal 2026-09-07 but not obtainable — ФНС returned a
+"документ формируется" (document is being digitized) response rather than
+the bundle itself. **Decision 2026-09-07: treat as effectively unavailable
+and stop retrying** — after the initial attempt, the user judged these
+unlikely to ever actually digitize. Kept here (rather than folded back into
+the plain gap list) purely as a record that the attempt was made and
+deliberately not pursued further, so a future session doesn't re-attempt
+them under the impression they're an untried gap. Revisit only if there's
+a specific reason to believe ФНС has since processed one of these ОГРН.
 
 | Entity | ОГРН | ИНН | Note |
 |---|---|---|---|
-| АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел» (`ano-arkhangel`) | 1242300005640 | 2315233718 | 2026-09-07: requested via ФНС portal — response "документ формируется" (still being digitized by ФНС), not yet available. |
-| АНО ДПО «Образовательный центр Гагаринг» (`ano-dpo-obrazovatelny-tsentr-gagaring`) | 1252300026208 | 2310240630 | 2026-09-07: requested via ФНС portal — response "документ формируется" (still being digitized by ФНС), not yet available. |
-| АО «Технодрон» (`ao-tekhnodron`) | 1247700354175 | 9704241986 | 2026-09-07: requested via ФНС portal — response "документ формируется" (still being digitized by ФНС), not yet available. |
-| АО ПК «Азимут» (`ao-pk-azimut`) | 1057746261605 | 7701583410 | 2026-09-07: requested via ФНС portal — response "документ формируется" (still being digitized by ФНС), not yet available. |
+| АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел» (`ano-arkhangel`) | 1242300005640 | 2315233718 | 2026-09-07: "документ формируется" at ФНС. Deprioritized same day, not expected to digitize. |
+| АНО ДПО «Образовательный центр Гагаринг» (`ano-dpo-obrazovatelny-tsentr-gagaring`) | 1252300026208 | 2310240630 | 2026-09-07: "документ формируется" at ФНС. Deprioritized same day, not expected to digitize. |
+| АО «Технодрон» (`ao-tekhnodron`) | 1247700354175 | 9704241986 | 2026-09-07: "документ формируется" at ФНС. Deprioritized same day, not expected to digitize. |
+| АО ПК «Азимут» (`ao-pk-azimut`) | 1057746261605 | 7701583410 | 2026-09-07: "документ формируется" at ФНС. Deprioritized same day, not expected to digitize. |
 
 ## Gap list: live entities with an ОГРН, no founding doc on file
 
