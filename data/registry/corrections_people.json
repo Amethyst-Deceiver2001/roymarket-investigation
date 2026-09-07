@@ -3959,6 +3959,15 @@
         "2026-09-07: user-supplied personal ИНН (332898705572). Checksum valid (both control digits verified). Not yet independently corroborated against a primary document -- running ФНС screens (disqualified-director/subsidiary-liability/director-founder cross-reference) next, which will itself test whether this ИНН resolves to real records; a name/DOB match there would be meaningful corroboration.",
         "2026-09-07: ran the three standard ФНС screens (disqualified-director, subsidiary-liability, director/founder cross-reference) plus screen_egrip_ip.py -- all 0 hits/no ИП registration. Consistent with a career military officer with no business footprint; does not itself confirm the ИНН, just finds nothing inconsistent with it."
       ]
+    },
+    "neznamova-olga-viktorovna": {
+      "set": {
+        "inn_personal": "472003876740",
+        "notes": "Указан(а) в досье как жена Незнамова Александра Васильевича принципала сети «Тримикс»/3MX, не самостоятельный фигурант. Тел. +7 911 283-33-37. Email: o.neznamowa2012@yandex.ru. 2026-09-07: ЕГРИП screen (egrul.nalog.ru open API) found one defunct ИП registration under this ИНН — ОГРНИП 315784700062337, registered 30.03.2015, excluded/closed 30.11.2016. Pre-dates this network's wartime UAV activity by several years; not defense-relevant, logged for completeness only. Disqualification, subsidiary-liability, and director/founder cross-reference screens all came back 0 hits."
+      },
+      "why": [
+        "2026-09-07: user supplied her personal ИНН directly; checksum valid."
+      ]
     }
   },
   "people_add_entities": [
