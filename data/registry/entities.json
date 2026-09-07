@@ -17608,7 +17608,14 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "420061, Республика Татарстан, г. Казань, ул. Николая Ершова, зд.31В",
+        "as_of": "2023-04-01",
+        "source_id": "s6937",
+        "note": "First street-level address on file (prior: bare 'Республика Татарстан, г. Казань'), from a proverki.gov.ru labor-inspection warning (Apr 2023)."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -17778,7 +17785,46 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [
+      {
+        "reg_number": "16231373167005958519",
+        "law": "248",
+        "inn": "1660349248",
+        "ogrn": "1201600057097",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАСКАН\"",
+        "period": "Апрель 2023 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА В РЕСПУБЛИКЕ ТАТАРСТАН",
+        "prosecutor_office": null,
+        "object_address": "420061, РЕСПУБЛИКА, ТАТАРСТАН, ГОРОД, КАЗАНЬ, УЛИЦА, НИКОЛАЯ ЕРШОВА, ЗД 31В, 160000010000411",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/16030627",
+        "_raw": {
+          "id": "16030627",
+          "number": "16231373167005958519",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "1660349248",
+          "ogrn": "1201600057097",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАСКАН\"",
+          "startMonth": "Апрель 2023 года.",
+          "term": null,
+          "objectAddress": "420061, РЕСПУБЛИКА, ТАТАРСТАН, ГОРОД, КАЗАНЬ, УЛИЦА, НИКОЛАЯ ЕРШОВА, ЗД 31В, 160000010000411",
+          "frguOrgName": null,
+          "frguOrgFullName": "ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА В РЕСПУБЛИКЕ ТАТАРСТАН",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": null,
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      }
+    ],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-mentastep",
@@ -18096,7 +18142,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-pekhtra",
@@ -43934,7 +43982,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-spdbbk",
@@ -48129,7 +48179,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ao-nii-stt",
@@ -59432,7 +59484,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-npo-kilovatt-shestopalov",
@@ -59960,7 +60014,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "krams-brand-unresolved",
@@ -62978,7 +63034,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ano-ntsns-nevskiy-tsentr-nauchnogo-sotrudnichestva",
@@ -64184,7 +64242,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-akatsiya-avia",
@@ -65526,7 +65586,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ano-dpo-obrazovatelny-tsentr-gagaring",
@@ -69526,7 +69588,9 @@
     },
     "rmsp_checked_at": "2026-09-07",
     "fas_br_hit_count": 0,
-    "fas_br_checked_at": "2026-09-07"
+    "fas_br_checked_at": "2026-09-07",
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-hab-svo",

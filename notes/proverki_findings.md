@@ -15,7 +15,7 @@ variants of "Академика Павлова, д.14" for one entity) — read 
 signal, cluster by hand, and only wire a genuinely distinct physical site
 into `address_history`, not every formatting variant.
 
-## Entities screened so far: 54
+## Entities screened so far: 64
 
 0-hit (genuine "no inspection history" result, not a failed lookup):
 ano-npts-ushkuynik / npts-ushkuynik, ao-ekolibri, ao-mikts, ao-npp-bat,
@@ -28,7 +28,10 @@ ooo-arkhangel-zaporizhzhie, ooo-arkhangel-shchit, ooo-arkhangel-melitopol-2,
 ooo-eyartek, ooo-gk-aeromaks, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii,
 ooo-ekolibri-bt, ooo-eliars, ooo-goudron, ooo-hab-svo, ooo-instekh,
 ooo-intek-bespilotnye-sistemy, ooo-kingpro, ooo-kleverkopter,
-ooo-konstruktorskoe-byuro-sinergiya, ooo-kravt.
+ooo-konstruktorskoe-byuro-sinergiya, ooo-kravt, ooo-mentastep,
+ooo-kravt-udmurtiya, ooo-npo-nebo, ooo-npo-kilovatt,
+ooo-npo-kilovatt-shestopalov, ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy,
+ooo-npk-geron, ooo-npo-eyler, ooo-kronshtadt-bespilotnye-sistemy.
 
 Hits, routine (labor/fire/environmental/consumer-protection history,
 confirms continuous legitimate operation, no new facility or notable
@@ -44,7 +47,7 @@ new precision).
 Hits with real findings — all wired below: ao-nii-stt (15), ao-kotlin-novator
 (25), ao-stratim (8), ao-pmts-avangard (31), ao-nii-vektor (46), npp-radar-mms
 (50), npts-elvis (13), ooo-aeromaks (17), ooo-atlant-aero (4), ooo-gaskar (5,
-s6934), ooo-dsg (2, s6935).
+s6934), ooo-dsg (2, s6935), ooo-metaskan (1, s6937).
 
 ## Physical facilities discovered — all wired into address_history
 
@@ -148,8 +151,13 @@ Control body is Департамент образования и науки го
 standard labor/fire/tax inspector — suggesting an educational-licensing
 or training-program angle worth checking.
 
+### ООО «Метаскан» (ooo-metaskan, ИНН 1660349248) — 1 record, s6937
+Wired 1 new `address_history` entry: **ул. Николая Ершова, зд.31В, Казань**
+— entity previously had only "Республика Татарстан, г. Казань" on file
+(no street). From a routine labor-inspection warning (Apr 2023).
+
 ## Remaining unscreened
 
-~145 manufacturer-tier entities with an ИНН still lack `proverki_checked_at`
+~33 manufacturer-tier entities with an ИНН still lack `proverki_checked_at`
 as of 2026-09-07. See CLAUDE.md/screen_proverki.py's own docstring for the
 interactive-only run pattern (no full-roster batch mode by design).

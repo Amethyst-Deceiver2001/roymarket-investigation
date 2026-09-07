@@ -20000,6 +20000,14 @@
             "source_id": "s6712",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
+        ],
+        "address_history": [
+          {
+            "value": "420061, Республика Татарстан, г. Казань, ул. Николая Ершова, зд.31В",
+            "as_of": "2023-04-01",
+            "source_id": "s6937",
+            "note": "First street-level address on file (prior: bare 'Республика Татарстан, г. Казань'), from a proverki.gov.ru labor-inspection warning (Apr 2023)."
+          }
         ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
