@@ -15,7 +15,7 @@ variants of "Академика Павлова, д.14" for one entity) — read 
 signal, cluster by hand, and only wire a genuinely distinct physical site
 into `address_history`, not every formatting variant.
 
-## Entities screened so far: 38
+## Entities screened so far: 54
 
 0-hit (genuine "no inspection history" result, not a failed lookup):
 ano-npts-ushkuynik / npts-ushkuynik, ao-ekolibri, ao-mikts, ao-npp-bat,
@@ -24,18 +24,27 @@ kolskaya-verf, kulibin-klub, npo-kaysant, npp-elvo-kolskaya-verf,
 ooo-4gnss, ooo-akr-begak, ooo-aeroplatformy, ooo-arkhangel,
 ooo-arkhangel-grupp, ooo-aviron, ooo-arkodim, ooo-dron-reysing,
 ooo-dronomir, ooo-asel-labs, ooo-btr-bespilotnye-tekhnologicheskie-resheniya,
-ooo-arkhangel-zaporizhzhie, ooo-arkhangel-shchit, ooo-arkhangel-melitopol-2.
+ooo-arkhangel-zaporizhzhie, ooo-arkhangel-shchit, ooo-arkhangel-melitopol-2,
+ooo-eyartek, ooo-gk-aeromaks, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii,
+ooo-ekolibri-bt, ooo-eliars, ooo-goudron, ooo-hab-svo, ooo-instekh,
+ooo-intek-bespilotnye-sistemy, ooo-kingpro, ooo-kleverkopter,
+ooo-konstruktorskoe-byuro-sinergiya, ooo-kravt.
 
 Hits, routine (labor/fire/environmental/consumer-protection history,
 confirms continuous legitimate operation, no new facility or notable
 regulator beyond what's already on file): ao-ploshchad (1), ao-ross (2),
 ip-shandobylo-sergey-sergeevich (1, s6929), ip-tsyganov-vadim-borisovich
 (1, s6926, confirms known Солнечногорск/Мышецкое 3MX-network location),
-ooo-aero-khit (1, no address on the record).
+ooo-aero-khit (1, no address on the record), ooo-gagaring (1, s6932, no
+new address), ooo-geron (2, s6933, no new address beyond precise Боровичи
+address already on file), ooo-intel-dron (1, coarse "обл. Челябинская"
+only, no new precision), ooo-kopterlab (1, repeats "г. Москва" only, no
+new precision).
 
 Hits with real findings — all wired below: ao-nii-stt (15), ao-kotlin-novator
 (25), ao-stratim (8), ao-pmts-avangard (31), ao-nii-vektor (46), npp-radar-mms
-(50), npts-elvis (13), ooo-aeromaks (17), ooo-atlant-aero (4).
+(50), npts-elvis (13), ooo-aeromaks (17), ooo-atlant-aero (4), ooo-gaskar (5,
+s6934), ooo-dsg (2, s6935).
 
 ## Physical facilities discovered — all wired into address_history
 
@@ -122,8 +131,25 @@ inspection (Региональная служба государственног
 different building numbers on the same street (2-7 стр.1, 4-54),
 consistent with active construction/expansion at this site.
 
+### ООО «Гаскар» (ooo-gaskar, ИНН 9710112989) — 5 records, s6934
+Wired 1 new `address_history` entry: **ул. Пехорская, д.1Д, стр.1, Москва**
+— entity previously had only "г. Москва" on file. Same street as ООО «НПО
+«Рустехдрон»»'s Пехорская 1/3, стр.4 facility (Руднево technopark, wired
+earlier this session) — possible shared-industrial-cluster overlap, not
+yet confirmed as the same building. Also wired a discovered prior legal
+name: records dated Oct 2024–Nov 2025 all carry faceName ООО «ЭВР» at this
+same ИНН/ОГРН; only the most recent (Aug 2026) record shows «Гаскар» —
+renamed sometime in that window.
+
+### ООО «ДСГ» (ooo-dsg, ИНН 9724002908) — 2 records, s6935
+Wired the entity's only two addresses on file (previously none): Москва,
+Хлебозаводской пр-д, д.7, стр.9 and Москва, Вернадского пр-т, д.29.
+Control body is Департамент образования и науки города Москвы — not a
+standard labor/fire/tax inspector — suggesting an educational-licensing
+or training-program angle worth checking.
+
 ## Remaining unscreened
 
-~155 manufacturer-tier entities with an ИНН still lack `proverki_checked_at`
+~145 manufacturer-tier entities with an ИНН still lack `proverki_checked_at`
 as of 2026-09-07. See CLAUDE.md/screen_proverki.py's own docstring for the
 interactive-only run pattern (no full-roster batch mode by design).
