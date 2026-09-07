@@ -54,7 +54,7 @@ the record.
    three hits to it). Both fixed; three previously-affected people restored
    (Ташматов И.С., Тимофеев В.С., Кусумов В.А., Закелов А.А.).
 
-**165 people remain unverified**, split below by what each actually needs.
+**164 people remain unverified**, split below by what each actually needs.
 
 ## Group 1: has a personal ИНН, ready for a ФНС screen (37 people)
 
@@ -124,7 +124,7 @@ name collisions, not real ties.
 | Шахматов Иван Анатольевич (`shakhmatov-ivan-anatolevich`) | 471010513778 | 2026-09-07 (0 hits) | — | 2026-09-07 | — |
 | Шветов Артемий Андреевич (`shvetov-artemiy-andreevich`) | 531500409942 | 2026-09-07 (0 hits) | — | 2026-09-07 | Сотрудник @ ООО «Тримикс» |
 
-## Group 2: has a DOB but no ИНН (26 people)
+## Group 2: has a DOB but no ИНН (25 people)
 
 A DOB is often the field that makes a rupep.org / press / EGRUL match
 legally usable rather than merely suggestive (see the PII-policy
@@ -132,34 +132,33 @@ rationale in `CLAUDE.md`) -- these are worth a targeted rupep.org or
 press search by name+DOB rather than a registry screen, since most lack
 a personal ИНН to screen against.
 
-| Person | DOB | Birthplace | Known role |
-|---|---|---|---|
-| Батанова Ольга Геннадьевна (`batanova-olga-gennadevna`) | 1955-07-06 | — | — |
-| Гаврилов Александр Валерьевич (`gavrilov-aleksandr-valerevich`) | 1984-02-01 | — | — @ ООО «РТ-Развитие бизнеса»; — @ ГК «Ростех» |
-| Дмитрий Владимирович Рубинштейн (`dmitriy-vladimirovich-rubinshteyn`) | 1975-04-13 | — | General Director, АНО «ЦБСТ», until late 2025 |
-| Дмитрий Медведев (`dmitriy-medvedev`) | 1965-09-14 | Санкт-Петербург (Saint Petersburg, then Leningrad) | Chairman, United Russia; Deputy Chairman, Security Council |
-| Елисеев Илья Владимирович (`eliseev-ilya-vladimirovich`) | 1965-12-19 | — | — |
-| Жулидов Евгений (`zhulidov-evgeniy`) | 1998-07-14 | — | — |
-| Корчагина Ольга Александровна (`korchagina-olga-aleksandrovna`) | 1972-04-25 | — | — |
-| Кузнецова Менижеган Хантимировна (`kuznetsova-menizhegan-khantimirovna`) | 1966-08-01 | — | — |
-| Мешков Александр Петрович (`meshkov-aleksandr-petrovich`) | 1957-12-11 | — | — |
-| Мешкова Кристина Андреевна (`meshkova-kristina-andreevna`) | 2005-03-29 | — | — |
-| Мешкова Надежда Филипповна (`meshkova-nadezhda-filippovna`) | 1954-10-08 | — | — |
-| Незнамов Василий Александрович (`neznamov-vasiliy-aleksandrovich`) | 1959-02-08 | — | — |
-| Незнамова Анастасия Васильевна (`neznamova-anastasiya-vasilevna`) | 1982-06-07 | — | — |
-| Незнамова Людмила Викторовна (`neznamova-lyudmila-viktorovna`) | 1956-08-20 | — | — |
-| Незнамова Ольга Викторовна (`neznamova-olga-viktorovna`) | 1977-08-22 | — | — |
-| Петров Виталий Павлинович (`petrov-vitaliy-pavlinovich`) | 1931-05-01 | — | — |
-| Петрова Марина Владимировна (`petrova-marina-vladimirovna`) | 1961-08-17 | — | — |
-| Петрова Наталья Викторовна (`petrova-natalya-viktorovna`) | 1975-10-19 | — | — |
-| Сафиева Виктория Зуфаровна (`safieva-viktoriya-zufarovna`) | 1985-01-28 | — | Сотрудник @ ООО «Тримикс» |
-| Федоров Павел Романович (`fedorov-pavel-romanovich`) | 1998-08-31 | — | Сотрудник @ ООО «Тримикс» |
-| Хутешен Алексей Александрович (`khuteshen-aleksey-aleksandrovich`) | 1983-10-02 | — | — @ ООО «ЦКБР» |
-| Цыганова Виктория Юрьевна (`tsyganova-viktoriya-yurevna`) | 1963-10-28 | — | — |
-| Шагиахметова Алиса Айратовна (`shagiakhmetova-alisa-ayratovna`) | 2015-04-05 | — | — |
-| Шахматов Анатолий Александрович (`shakhmatov-anatoliy-aleksandrovich`) | 1963-10-20 | — | — |
-| Шахматова Ольга Петровна (`shakhmatova-olga-petrovna`) | 1960-08-28 | — | — |
-| Шахматова Татьяна Анатольевна (`shakhmatova-tatyana-anatolevna`) | 1989-03-28 | — | — |
+| Person | DOB | Birthplace | Known role | Connection to investigation |
+|---|---|---|---|---|
+| Гаврилов Александр Валерьевич (`gavrilov-aleksandr-valerevich`) | 1984-02-01 | — | — @ ООО «РТ-Развитие бизнеса»; — @ ГК «Ростех» | Candidate role only (`_candidate: true`, no source_id yet) — Ростех-linked, tie not yet confirmed. |
+| Дмитрий Владимирович Рубинштейн (`dmitriy-vladimirovich-rubinshteyn`) | 1975-04-13 | — | General Director, АНО «ЦБСТ», until late 2025 | Sitting/recent CEO of ЦБСТ itself — the investigation's core entity. Succession from an earlier director resolved as real, not a data conflict. |
+| Дмитрий Медведев (`dmitriy-medvedev`) | 1965-09-14 | Санкт-Петербург (Saint Petersburg, then Leningrad) | Chairman, United Russia; Deputy Chairman, Security Council | PEP — party/state leadership overlapping ЦБСТ's political backing network. |
+| Елисеев Илья Владимирович (`eliseev-ilya-vladimirovich`) | 1965-12-19 | — | — | No roles/notes on file yet — reason for inclusion undocumented, needs re-check. |
+| Жулидов Евгений (`zhulidov-evgeniy`) | 1998-07-14 | — | Creator/main admin («Атлет») of TG channel «Архангел Спецназа» | Officer, 45th VDV Spetsnaz Brigade (Hostomel assault unit); identified by iStories via a Tinder-photo/leaked-data cross-reference. Confirmed affiliated participant, adjacent-Архангел network. |
+| Корчагина Ольга Александровна (`korchagina-olga-aleksandrovna`) | 1972-04-25 | — | — | No roles/notes on file yet — reason for inclusion undocumented, needs re-check. |
+| Кузнецова Менижеган Хантимировна (`kuznetsova-menizhegan-khantimirovna`) | 1966-08-01 | — | — | Family record only — mother of Кузнецов Р.Н., a «Тримикс»/3MX network principal. Not a fielded participant herself. |
+| Мешков Александр Петрович (`meshkov-aleksandr-petrovich`) | 1957-12-11 | — | — | Family record only — father of Белоглазова (Мешкова) Л.А., a «Тримикс»/3MX network principal. |
+| Мешкова Кристина Андреевна (`meshkova-kristina-andreevna`) | 2005-03-29 | — | — | Family record only — relation unconfirmed, dossier notes her as likely a daughter in the Мешков family, probably linked to Белоглазова (Мешкова) Л.А. of «Тримикс»/3MX. |
+| Мешкова Надежда Филипповна (`meshkova-nadezhda-filippovna`) | 1954-10-08 | — | — | Family record only — mother of Белоглазова (Мешкова) Л.А., a «Тримикс»/3MX network principal. |
+| Незнамов Василий Александрович (`neznamov-vasiliy-aleksandrovich`) | 1959-02-08 | — | — | Family record only — father of Незнамов А.В., a «Тримикс»/3MX network principal. |
+| Незнамова Анастасия Васильевна (`neznamova-anastasiya-vasilevna`) | 1982-06-07 | — | — | Family record only — sister of Незнамов А.В., a «Тримикс»/3MX network principal. |
+| Незнамова Людмила Викторовна (`neznamova-lyudmila-viktorovna`) | 1956-08-20 | — | — | Family record only — mother of Незнамов А.В., a «Тримикс»/3MX network principal. |
+| Незнамова Ольга Викторовна (`neznamova-olga-viktorovna`) | 1977-08-22 | — | — | Family record only — wife of Незнамов А.В., a «Тримикс»/3MX network principal. Phone/email on file. |
+| Петров Виталий Павлинович (`petrov-vitaliy-pavlinovich`) | 1931-05-01 | — | — | Family record only — probably grandfather of Петров А.А. (a «Тримикс»/3MX network principal), inferred from shared surname/patronymic pattern, not confirmed. |
+| Петрова Марина Владимировна (`petrova-marina-vladimirovna`) | 1961-08-17 | — | — | Family record only — mother of Петров А.А., a «Тримикс»/3MX network principal. |
+| Петрова Наталья Викторовна (`petrova-natalya-viktorovna`) | 1975-10-19 | — | — | Family record only — relation to Петров А.А. (a «Тримикс»/3MX network principal) not explicitly marked in the dossier, possibly linked via Петров Виктор Витальевич; unconfirmed. |
+| Сафиева Виктория Зуфаровна (`safieva-viktoriya-zufarovna`) | 1985-01-28 | — | Сотрудник @ ООО «Тримикс» | Employee of ООО «Тримикс» (3MX network) itself, not just a relative. Phone/email on file. |
+| Федоров Павел Романович (`fedorov-pavel-romanovich`) | 1998-08-31 | — | Сотрудник @ ООО «Тримикс» | Employee of ООО «Тримикс» (3MX network) itself, not just a relative. |
+| Хутешен Алексей Александрович (`khuteshen-aleksey-aleksandrovich`) | 1983-10-02 | — | — @ ООО «ЦКБР» | Candidate role only (`_candidate: true`, no source_id yet) — ЦКБР tie not yet confirmed. |
+| Цыганова Виктория Юрьевна (`tsyganova-viktoriya-yurevna`) | 1963-10-28 | — | — | Family record only — wife of Цыганов Вадим Борисович, a «Тримикс»/3MX network principal. |
+| Шагиахметова Алиса Айратовна (`shagiakhmetova-alisa-ayratovna`) | 2015-04-05 | — | — | Family record only (minor) — daughter of Шагиахметов А.Ф., a «Тримикс»/3MX network principal. |
+| Шахматов Анатолий Александрович (`shakhmatov-anatoliy-aleksandrovich`) | 1963-10-20 | — | — | Family record only — father of Шахматов И.А., a «Тримикс»/3MX network principal. |
+| Шахматова Ольга Петровна (`shakhmatova-olga-petrovna`) | 1960-08-28 | — | — | Family record only — mother of Шахматов И.А., a «Тримикс»/3MX network principal. |
+| Шахматова Татьяна Анатольевна (`shakhmatova-tatyana-anatolevna`) | 1989-03-28 | — | — | Family record only — sister of Шахматов И.А., a «Тримикс»/3MX network principal. |
 
 ## Group 3: named, no ИНН, no DOB (89 people)
 
