@@ -6069,7 +6069,12 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "Explicitly named a резидент ЦБСТ (ЦБСТ resident) multiple times on ЦБСТ's own Telegram channel, including its own director being called out by name and its product listed among ЦБСТ residents' \"flagship developments.\"",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own channel (t.me/ANO_CBST): post #313 (15.12.2024) lists \"Упырь\" among \"more than 50 flagship developments of its residents\" presented to Дмитрий Медведев; post #1882/#1891 (20-22.02.2026) names Владимир Ткачук, генеральный директор «Уралдронзавода», as \"Резидент ЦБСТ\" proposing a competency registry at a United Russia forum; post #2383 (05.08.2026), reporting the car-bomb attack on Ткачук, states \"Уралдронзавод\" became \"одним из крупнейших предприятий — резидентов ЦБСТ\" (one of the largest resident enterprises of ЦБСТ) and calls both Ткачук and Черезов (Овод) \"большими друзьями ЦБСТ.\"",
+      "source_id": "s6911"
+    },
     "wb_overlap": "not_checked",
     "products": [
       "Упырь"
@@ -6117,8 +6122,10 @@
       "principal": "Владимир Ткачук",
       "notes": "«Упырь» FPV. Car bomb near Yekaterinburg, 5 Aug 2026 — Tkachuk critically injured, his driver-bodyguard killed."
     },
-    "_corrected": null,
-    "_verified_against": null,
+    "_corrected": [
+      "User flagged (2026-09-07) that Ткачук/Уралдронзавод was wrongly dismissed as an unrelated adjacent lead; a direct DB search of ЦБСТ's own channel (ANO_CBST) confirms repeated, explicit, first-party ЦБСТ-resident framing — this is a confirmed core-network entity, not adjacent."
+    ],
+    "_verified_against": "t.me/ANO_CBST posts #313, #1882, #1891, #2383 (archived as data/sources/TGPOST_20260805_ano_cbst-2383-uraldronzavod-tkachuk-cbst-resident.txt, s6911)",
     "opensanctions_matches": [
       {
         "match_id": "NK-A8hwErVGFYrk2opV6o86eA",

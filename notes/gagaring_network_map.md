@@ -558,6 +558,14 @@ keyword search had missed entirely.
   contracted through a named "ООО «Архангел Групп»" — followed up against
   EGRUL (one live candidate found, ИНН 9702081286, registered 12.03.2026,
   director name doesn't match anyone already on file — not confirmed).
+  **EGRUL re-confirmed 2026-09-07** (open-lookup API, single ИНН, inline):
+  ООО «АРХАНГЕЛ ГРУПП», ОГРН 1267700086081, ГД Крючков Дмитрий Александрович,
+  Москва. Still not merged — Крючков doesn't cross-reference any name
+  already in `people.json`, and the entity's only tie to this network is
+  being named as `@projectArchangel`'s own B2B contracting vehicle in a
+  Telegram post, not yet corroborated by a full ЕГРЮЛ выписка or a second
+  independent source. A real lead, promotion-ready if/when a stronger tie
+  or a full extract turns up.
   Self-described training pipeline into «Рубикон» (Russia's state-level
   drone-tech center), a named 51st Army regiment, and 205th Brigade, with
   a ₽3M+ signing bonus and a referral system that bypasses normal military-
@@ -568,8 +576,29 @@ keyword search had missed entirely.
   own posts. Also spotted a same-named director (Тимофеев В.С.) on a
   second, unconfirmed "Архангел"-branded Crimea entity via the same EGRUL
   search — a lead, not merged.
-- **Still not done**: `Archangel_Forum` (73k posts) and the remaining
-  Academy-chat/tulaovod history are still keyword-swept only, not
-  full-week read; "Будни Радистки," "Упырь"/Ткачук, "Антидронин," "ПВО
-  Сова," and "Архангел Групп" are all real leads surfaced this pass with
-  no further investigation yet.
+- **Still not done**: the remaining Academy-chat/tulaovod history beyond
+  the sampled weeks is still keyword-swept only, not full-week read;
+  "Будни Радистки," "Антидронин," and "ПВО Сова" are real leads surfaced
+  this pass with no further investigation yet.
+- **CORRECTION (2026-09-07)**: this section previously and wrongly stated
+  `Archangel_Forum`'s 73k posts were unscanned and that Ткачук/
+  «Уралдронзавод» was an unrelated adjacent lead (car-bomb "pattern of
+  attacks" mention only) — both wrong, caught by the user. Actually: (1) a
+  full-corpus scoped mining pass already ran 2026-09-04 across all four
+  Филиппов/Архангел-linked channels — Archangel_Forum (73,085 posts),
+  projectArchangel (10,042), proekt_arhangel (1,073), and the private
+  Академия chat (5,795) — 65,454 non-empty posts scanned, documented in
+  `entities.json` open_questions under `s5460` (contact-roster resolution,
+  «Малыха» channel resolution, etc.) — this thread is closed, not open.
+  (2) `uraldronzavod` (Владимир Ткачук, «Упырь» FPV) is a **confirmed ЦБСТ
+  resident**, not adjacent: ЦБСТ's own channel (t.me/ANO_CBST) lists
+  «Упырь» among "50+ flagship developments of its residents" (#313,
+  15.12.2024), names Ткачук by title as "Резидент ЦБСТ" (#1882/#1891,
+  Feb 2026), and — after the 05.08.2026 car-bomb attack on him — calls
+  «Уралдронзавод» "one of ЦБСТ's largest resident enterprises" and Ткачук
+  a "large friend of ЦБСТ" (#2383, archived as s6911). `cbst_tie` wired
+  onto the entity 2026-09-07 (confidence t-doc). Still open: no ИНН/ОГРН
+  on file yet for `uraldronzavod` (OpenSanctions match confirms the entity
+  exists and is sanctioned but carries no ИНН itself) — needs an EGRUL
+  name-search once the exact legal entity name is found (the brand name
+  "Уралдронзавод" alone returns no egrul.nalog.ru hit).
