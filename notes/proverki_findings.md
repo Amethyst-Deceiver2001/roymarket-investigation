@@ -15,7 +15,7 @@ variants of "Академика Павлова, д.14" for one entity) — read 
 signal, cluster by hand, and only wire a genuinely distinct physical site
 into `address_history`, not every formatting variant.
 
-## Entities screened so far: 64
+## Entities screened so far: 74
 
 0-hit (genuine "no inspection history" result, not a failed lookup):
 ano-npts-ushkuynik / npts-ushkuynik, ao-ekolibri, ao-mikts, ao-npp-bat,
@@ -31,7 +31,9 @@ ooo-intek-bespilotnye-sistemy, ooo-kingpro, ooo-kleverkopter,
 ooo-konstruktorskoe-byuro-sinergiya, ooo-kravt, ooo-mentastep,
 ooo-kravt-udmurtiya, ooo-npo-nebo, ooo-npo-kilovatt,
 ooo-npo-kilovatt-shestopalov, ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy,
-ooo-npk-geron, ooo-npo-eyler, ooo-kronshtadt-bespilotnye-sistemy.
+ooo-npk-geron, ooo-npo-eyler, ooo-kronshtadt-bespilotnye-sistemy,
+ooo-pekhtra, ooo-rokot-tekh, ooo-orient-sistems, ooo-prommash,
+ooo-pokrov, ooo-radiofid-sistemy.
 
 Hits, routine (labor/fire/environmental/consumer-protection history,
 confirms continuous legitimate operation, no new facility or notable
@@ -42,12 +44,15 @@ ooo-aero-khit (1, no address on the record), ooo-gagaring (1, s6932, no
 new address), ooo-geron (2, s6933, no new address beyond precise Боровичи
 address already on file), ooo-intel-dron (1, coarse "обл. Челябинская"
 only, no new precision), ooo-kopterlab (1, repeats "г. Москва" only, no
-new precision).
+new precision), ooo-npo-rustekhdron (5, confirms existing Пехорская 1/3
+address exactly, no new precision), ooo-praym (1, no address on the
+record).
 
 Hits with real findings — all wired below: ao-nii-stt (15), ao-kotlin-novator
 (25), ao-stratim (8), ao-pmts-avangard (31), ao-nii-vektor (46), npp-radar-mms
 (50), npts-elvis (13), ooo-aeromaks (17), ooo-atlant-aero (4), ooo-gaskar (5,
-s6934), ooo-dsg (2, s6935), ooo-metaskan (1, s6937).
+s6934), ooo-dsg (2, s6935), ooo-metaskan (1, s6937),
+ooo-opkb-eksplomet (2, s6954).
 
 ## Physical facilities discovered — all wired into address_history
 
@@ -194,8 +199,22 @@ which worked cleanly for all 16 queries. Raw JSON archived as
 None of these changed an entity's `facility_type` classification — all
 notes-only additions to the affected entities' `notes` fields.
 
+### ООО «ОПКБ «Экспломет»» (ooo-opkb-eksplomet, ИНН 1215235283) — 2 records, s6954
+Wired 1 new `address_history` entry: **ул. Строителей, д.95, помещ.102в,
+Йошкар-Ола** — entity previously had only city-level address on file. Two
+consistent records (Nov 2023, Mar 2026) agree on the same street address.
+
+### ООО «Промсинтез» (ooo-promsintez, ИНН 3435084957) — 2 records, s6955
+Not wired to `address_history` (neither record carries an address) but
+flagged in `notes`: same ИНН inspected within two months by two
+geographically unrelated Росприроднадзор regional units — Московская/
+Смоленская области AND Иркутская область/Байкальская природная
+территория — suggesting multi-region operations or environmental-permit
+exposure, not a single fixed site. Worth an EGRUL check for обособленные
+подразделения if this entity warrants closer attention.
+
 ## Remaining unscreened
 
-~33 manufacturer-tier entities with an ИНН still lack `proverki_checked_at`
+~23 manufacturer-tier entities with an ИНН still lack `proverki_checked_at`
 as of 2026-09-07. See CLAUDE.md/screen_proverki.py's own docstring for the
 interactive-only run pattern (no full-roster batch mode by design).

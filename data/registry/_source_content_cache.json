@@ -54995,5 +54995,21 @@
     "as_of_method": null,
     "sha256": "de050b7dc83b2367a729c6ccf552c77443ee90bc6daab4b932fe6db0f23f6686",
     "sample": "{\n \"query\": \"Зеленоград проезд 4922-й дом 4 строение 2\",\n \"error\": \"TypeError: Failed to fetch\"\n}"
+  },
+  "PROVERKI_1215235283_20260907_ooo-opkb-eksplomet-inspection-history.txt": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "6b7cf0f65e1959909d2e4f63fce8e86018b96dbed01a9165b5ff1651073e6807",
+    "sample": "proverki.gov.ru inspection history — ООО «ОПКБ «Экспломет»»\nИНН 1215235283\nPulled 2026-09-07 via scripts/screen_proverki.py\n\n2 records, both \"Объявление предостережения\".\n\n1. Reg# 12261031200021099650 | Март 2026 | Минтруда и соцзащиты Респ. Марий Эл\n Address: г. Йошкар-Ола, ул. Строителей, д.95, помещ.102в\n\n2. Reg# 12231373166008423019 | Ноябрь 2023 | Госинспекция труда в Респ. Марий Эл\n Address:"
+  },
+  "PROVERKI_3435084957_20260907_ooo-promsintez-inspection-history.txt": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "1386f82673f9a7dc14f3ead7d7e4f12a3a21954e36dc23da782f7b3e38ba4c99",
+    "sample": "proverki.gov.ru inspection history — ООО «Промсинтез»\nИНН 3435084957\nPulled 2026-09-07 via scripts/screen_proverki.py\n\n2 records, both \"Объявление предостережения\", neither gives an address.\n\n1. Reg# 67260023734620685410 | Февраль 2026 | Межрегиональное управление\n Росприроднадзора по Московской и Смоленской областям\n\n2. Reg# 38260021000220573710 | Январь 2026 | Межрегиональное управление\n Росприр"
   }
 }

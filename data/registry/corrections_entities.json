@@ -21594,6 +21594,14 @@
             "name_ru": "Набор сапера",
             "source_id": null
           }
+        ],
+        "address_history": [
+          {
+            "value": "424007, Республика Марий Эл, г. Йошкар-Ола, ул. Строителей, д.95, помещ.102в (лит.ЖЗ)",
+            "as_of": "2023-11-01",
+            "source_id": "s6954",
+            "note": "First street-level address on file (prior: bare city-level 'г. Йошкар-Ола'), from two consistent proverki.gov.ru labor-inspection warnings (Nov 2023 and Mar 2026)."
+          }
         ]
       },
       "verified_against": null,
@@ -22747,7 +22755,8 @@
             "share_percent": 100.0,
             "as_of": "2013-01-23"
           }
-        ]
+        ],
+        "notes": "2026-09-07: proverki.gov.ru screen (2 records, s6955) — same ИНН inspected within two months by two geographically unrelated Росприроднадзор regional units: Московская/Смоленская области AND Иркутская область/Байкальская природная территория. Neither record carries an address. Suggests multi-region operations or environmental-permit exposure, not a single fixed site — worth an EGRUL check for обособленные подразделения if this entity warrants a deeper look; no address recovered to wire yet."
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
