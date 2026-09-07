@@ -54867,5 +54867,133 @@
     "as_of_method": null,
     "sha256": "4f26840cff511c9d4c5f1dc3f087f3371c7e1f51c5449e31d0bd32dfa647b7e7",
     "sample": "proverki.gov.ru inspection history — ООО «Метаскан»\nИНН 1660349248\nPulled 2026-09-07 via scripts/screen_proverki.py\n\n1 record.\nReg# 16231373167005958519 | Апрель 2023 года | Объявление предостережения\nControl body: Государственная инспекция труда в Республике Татарстан\nAddress: 420061, Республика Татарстан, г. Казань, ул. Николая Ершова, зд.31В\n\nNotable: entity previously had only \"Республика Тата"
+  },
+  "NSPD_andropova_18_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "4bbe8d6e4bbdbdf03bab79b580e882112b7390aea4b2bd61a3c53a1d70232ddb",
+    "sample": "{\n \"query\": \"Москва проспект Андропова 18 корпус 9\",\n \"status\": 200,\n \"data\": {\n \"data\": {\n \"type\": \"FeatureCollection\",\n \"features\": [\n {\n \"id\": 3224643977,\n \"type\": \"Feature\",\n \"geometry\": {\n \"type\": \"Point\",\n \"coordinates\": [\n 4192592.347858276,\n 7497276.127971072\n ],\n \"crs\": {\n \"type\": \"name\",\n \"properties\": {\n \"name\": \"EPSG:3857\"\n }\n }\n },\n \"properties\": {\n \"category\": 37163,\n \"categoryName\":"
+  },
+  "NSPD_ershova_31v_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "11903477084c341f55cae7e24495a8b2627686d6e83bd65d237c9d81d5145253",
+    "sample": "{\n \"query\": \"Казань улица Николая Ершова 31В\",\n \"status\": 200,\n \"data\": {\n \"data\": {\n \"type\": \"FeatureCollection\",\n \"features\": [\n {\n \"id\": 138591223,\n \"type\": \"Feature\",\n \"geometry\": {\n \"type\": \"Point\",\n \"coordinates\": [\n 5473512.291162316,\n 7518180.889488085\n ],\n \"crs\": {\n \"type\": \"name\",\n \"properties\": {\n \"name\": \"EPSG:3857\"\n }\n }\n },\n \"properties\": {\n \"category\": 37163,\n \"categoryName\": \"Помещ"
+  },
+  "NSPD_glinyanaya_5_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "0ccdbad72f3a07136d0e5c538ed98935f81f39792e8e30fb54fd77528d037ec9",
+    "sample": "{\n \"query\": \"Санкт-Петербург улица Глиняная 5\",\n \"status\": 200,\n \"data\": {\n \"data\": {\n \"type\": \"FeatureCollection\",\n \"features\": [\n {\n \"id\": 270066967,\n \"type\": \"Feature\",\n \"geometry\": {\n \"type\": \"Point\",\n \"coordinates\": [\n 3383096.684111569,\n 8381323.410975265\n ],\n \"crs\": {\n \"type\": \"name\",\n \"properties\": {\n \"name\": \"EPSG:3857\"\n }\n }\n },\n \"properties\": {\n \"category\": 37163,\n \"categoryName\": \"Поме"
+  },
+  "NSPD_instrumentalnaya_taganrog_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "2cd243dfb10734f4b1c67300310a61981aa5c1467b0ff75af06070a4ece29cc2",
+    "sample": "{\n \"query\": \"Таганрог улица Инструментальная земельный участок 2в/7\",\n \"error\": \"TypeError: Failed to fetch\"\n}"
+  },
+  "NSPD_kantemirovskaya_10_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "b12e716bfe9ef45e9fb5113fc6a07a70ebd44de9a59df662fde63e06e973a514",
+    "sample": "{\n \"query\": \"Санкт-Петербург Кантемировская 10\",\n \"status\": 200,\n \"data\": {\n \"data\": {\n \"type\": \"FeatureCollection\",\n \"features\": [\n {\n \"id\": 272262508,\n \"type\": \"Feature\",\n \"geometry\": {\n \"type\": \"Point\",\n \"coordinates\": [\n 3368412.413157195,\n 8396554.778231597\n ],\n \"crs\": {\n \"type\": \"name\",\n \"properties\": {\n \"name\": \"EPSG:3857\"\n }\n }\n },\n \"properties\": {\n \"category\": 37163,\n \"categoryName\": \"Пом"
+  },
+  "NSPD_khabolovo_209_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "ebdbd3f7a0c18ed06ca9a52caf882a6b94699efa299d0d6a230a393082d866f8",
+    "sample": "{\n \"query\": \"47:20:0442001:209\",\n \"status\": 404,\n \"data\": {\n \"code\": 204,\n \"message\": \"no objects found (код=204)\",\n \"requestId\": \"9b5c766f6634e2a68f7a33057e218a40\"\n }\n}"
+  },
+  "NSPD_khabolovo_212_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "1a73a7bfc96ae0e1151430080901d9476f8a42f5158252c8753fdad2acb4ecd1",
+    "sample": "{\n \"query\": \"47:20:0442001:212\",\n \"status\": 200,\n \"data\": {\n \"data\": {\n \"type\": \"FeatureCollection\",\n \"features\": [\n {\n \"id\": 453070954,\n \"type\": \"Feature\",\n \"geometry\": {\n \"type\": \"Polygon\",\n \"coordinates\": [\n [\n [\n 3171753.807078877,\n 8314703.10666183\n ],\n [\n 3171678.9566669837,\n 8314668.473790153\n ],\n [\n 3171692.498444862,\n 8314602.181464012\n ],\n [\n 3171781.9380827444,\n 8314643.549808234\n ],\n ["
+  },
+  "NSPD_khlebozavodskoy_7_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "07cba1896ca5dd99edd3281df686f9e64882606b241fb804993322e9b9074108",
+    "sample": "{\n \"query\": \"Москва Хлебозаводской проезд дом 7 строение 9\",\n \"status\": 404,\n \"data\": {\n \"code\": 204,\n \"message\": \"no objects found (код=204)\",\n \"requestId\": \"142e2e67da1cb82417eed758d85b11fd\"\n }\n}"
+  },
+  "NSPD_maly_vo_54_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "e8113d32002453b36001f8b94089d73c40b986b791545c2ad25c76c088d5f4f1",
+    "sample": "{\n \"query\": \"Санкт-Петербург Малый проспект В.О. 54 корпус 5\",\n \"status\": 200,\n \"data\": {\n \"data\": {\n \"type\": \"FeatureCollection\",\n \"features\": [\n {\n \"id\": 425937362,\n \"type\": \"Feature\",\n \"geometry\": {\n \"type\": \"Polygon\",\n \"coordinates\": [\n [\n [\n 3368049.235209073,\n 8386557.8740659915\n ],\n [\n 3368065.479019735,\n 8386530.442854928\n ],\n [\n 3368077.7972843144,\n 8386528.220895961\n ],\n [\n 3368121.17097"
+  },
+  "NSPD_marshala_novikova_40_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "bb79f8a32426d50d07e6fe8c892946c2ae451f320fea77e16b36226b0003e64c",
+    "sample": "{\n \"query\": \"Санкт-Петербург Приморский район улица Маршала Новикова дом 40 литера А\",\n \"error\": \"TypeError: Failed to fetch\"\n}"
+  },
+  "NSPD_milyutinsky_13_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "252bf1652a8550379297e5beff4c9e1b4841d0c371e2073e75446bbebc0a7213",
+    "sample": "{\n \"query\": \"Москва Милютинский переулок 13 строение 1\",\n \"status\": 200,\n \"data\": {\n \"data\": {\n \"type\": \"FeatureCollection\",\n \"features\": [\n {\n \"id\": 306065343,\n \"type\": \"Feature\",\n \"geometry\": {\n \"type\": \"Point\",\n \"coordinates\": [\n 4189145.169650778,\n 7511751.330109929\n ],\n \"crs\": {\n \"type\": \"name\",\n \"properties\": {\n \"name\": \"EPSG:3857\"\n }\n }\n },\n \"properties\": {\n \"category\": 37163,\n \"categoryNam"
+  },
+  "NSPD_novoselkovskaya_46_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "8179ba467954f99e7c24e7e30e59a83ecce557530d6812a9ba23db121b77fb2d",
+    "sample": "{\n \"query\": \"Санкт-Петербург Новосельковская 46\",\n \"status\": 200,\n \"data\": {\n \"data\": {\n \"type\": \"FeatureCollection\",\n \"features\": [\n {\n \"id\": 425944978,\n \"type\": \"Feature\",\n \"geometry\": {\n \"type\": \"Polygon\",\n \"coordinates\": [\n [\n [\n 3370371.6728107394,\n 8407300.784179542\n ],\n [\n 3370663.611254016,\n 8407085.718680883\n ],\n [\n 3370702.5155586954,\n 8407138.62307172\n ],\n [\n 3370429.6294944207,\n 840733"
+  },
+  "NSPD_obvodnogo_14_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "d6760de48975d5ffeb9de943ee0b6277dae470f1aa514817c463a31ffeac0858",
+    "sample": "{\n \"query\": \"Санкт-Петербург набережная Обводного канала 14\",\n \"status\": 200,\n \"data\": {\n \"data\": {\n \"type\": \"FeatureCollection\",\n \"features\": [\n {\n \"id\": 269735142,\n \"type\": \"Feature\",\n \"geometry\": {\n \"type\": \"Point\",\n \"coordinates\": [\n 3383046.311833413,\n 8381060.100137986\n ],\n \"crs\": {\n \"type\": \"name\",\n \"properties\": {\n \"name\": \"EPSG:3857\"\n }\n }\n },\n \"properties\": {\n \"category\": 37163,\n \"catego"
+  },
+  "NSPD_pekhorskaya_1d_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "09b4df5c3a0f18890b8077af520f0b39c41665cf7bf290a9b2933fc1a0e0f91b",
+    "sample": "{\n \"query\": \"Москва улица Пехорская дом 1Д строение 1\",\n \"status\": 200,\n \"data\": {\n \"data\": {\n \"type\": \"FeatureCollection\",\n \"features\": [\n {\n \"id\": 108119722,\n \"type\": \"Feature\",\n \"geometry\": {\n \"type\": \"MultiPolygon\",\n \"coordinates\": [\n [\n [\n [\n 4222311.548261233,\n 7502519.570097107\n ],\n [\n 4222310.512764025,\n 7502521.120868768\n ],\n [\n 4222313.543144947,\n 7502521.350577489\n ],\n [\n 4222313.657040"
+  },
+  "NSPD_vernadskogo_29_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "1e8101b1e42f33f59a461629debd818ee6e18d86af559218c401b7266002bbc7",
+    "sample": "{\n \"query\": \"Москва проспект Вернадского дом 29\",\n \"status\": 200,\n \"data\": {\n \"data\": {\n \"type\": \"FeatureCollection\",\n \"features\": [\n {\n \"id\": 276585181,\n \"type\": \"Feature\",\n \"geometry\": {\n \"type\": \"Point\",\n \"coordinates\": [\n 4176304.339699044,\n 7495117.934110867\n ],\n \"crs\": {\n \"type\": \"name\",\n \"properties\": {\n \"name\": \"EPSG:3857\"\n }\n }\n },\n \"properties\": {\n \"category\": 37163,\n \"categoryName\": \"По"
+  },
+  "NSPD_zelenograd_4922_20260907.json": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "de050b7dc83b2367a729c6ccf552c77443ee90bc6daab4b932fe6db0f23f6686",
+    "sample": "{\n \"query\": \"Зеленоград проезд 4922-й дом 4 строение 2\",\n \"error\": \"TypeError: Failed to fetch\"\n}"
   }
 }

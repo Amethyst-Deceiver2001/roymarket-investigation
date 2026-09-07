@@ -156,6 +156,44 @@ Wired 1 new `address_history` entry: **ул. Николая Ершова, зд.3
 — entity previously had only "Республика Татарстан, г. Казань" on file
 (no street). From a routine labor-inspection warning (Apr 2023).
 
+## НСПД corroboration pass (2026-09-07)
+
+Per the plan in `notes/rebuild_plan.md`, ran НСПД (Rosreestr) lookups on
+every facility address surfaced above. curl 403'd (WAF, as documented in
+`scripts/nspd_lookup.py`); fell back to a chrome-devtools browser fetch,
+which worked cleanly for all 16 queries. Raw JSON archived as
+`data/sources/NSPD_<slug>_20260907.json`, source_ids s6938-s6953.
+
+- **npp-radar-mms — Хаболово КН :212**: resolved to a 1,530 m² PRIVATE
+  residential land plot, not a company facility — deflates the "test
+  range/antenna field" open question rather than confirming it. Recorded
+  as RESOLVED on the entity record. КН :209 has no НСПД record.
+- **npp-radar-mms — Новосельковская 46**: confirmed real, 10,476 m²
+  warehouse building ("Склад со встроенными помещениями"), commissioned
+  2022.
+- **ooo-gaskar — Пехорская 1Д**: confirmed real, 15,506.8 m² building
+  ("Корпус 9"), commissioned 2022, in Косино-Ухтомский district — the
+  SAME municipal district as ooo-npo-rustekhdron's Пехорская 1/3 site.
+  Upgrades the earlier "possible shared-cluster" note on both entities to
+  a confirmed same-district finding.
+- **ao-nii-vektor — Кантемировская 10**: confirmed real multi-unit
+  nonresidential complex, corroborating the "actual operating address"
+  claim. **Маршала Новикова 40**: no НСПД record — consistent with the
+  site's own "under construction" status from proverki.
+- **ooo-aeromaks**: all three facility addresses (Милютинский 13,
+  Андропова 18, Малый пр. В.О. 54к5) confirmed as real nonresidential
+  buildings.
+- **ao-kotlin-novator**: both clusters (Глиняная 5, Обводного канала 14)
+  confirmed as real nonresidential premises.
+- **ooo-metaskan — Николая Ершова 31В**: confirmed real commercial
+  premises.
+- **No record found** (consistent with active-construction/land status,
+  not a contradiction): npts-elvis's Зеленоград проезд 4922-й; ooo-dsg's
+  Хлебозаводской 7; ooo-atlant-aero's Инструментальная 2в/7 (Таганрог).
+
+None of these changed an entity's `facility_type` classification — all
+notes-only additions to the affected entities' `notes` fields.
+
 ## Remaining unscreened
 
 ~33 manufacturer-tier entities with an ИНН still lack `proverki_checked_at`

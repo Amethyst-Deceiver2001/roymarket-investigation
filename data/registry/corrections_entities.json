@@ -5527,7 +5527,8 @@
             "source_id": "s6917",
             "note": "Second of proverki's two facility clusters for this entity."
           }
-        ]
+        ],
+        "notes": "2026-09-07 NSPD corroboration: both facility clusters confirmed as real nonresidential premises — ул. Глиняная, д.5 (multiple corpuses, 'Нежилое' units 900+ m², s6940) and наб. Обводного канала, д.14 (multiple 'Нежилое' units ~903 m² each, s6950)."
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -6284,7 +6285,7 @@
             "value_rub": 54900000
           }
         ],
-        "notes": "zakupki cluster review 2026-09-01: 157 unwired archived cards reviewed by customer cluster. Wired 1 aggregate entry for the one genuinely large cluster (Минобороны РФ, 9 contracts/₽73.0m/2013-16). The rest of this entity's footprint is a long tail of small-value (thousands to low millions of rubles) routine supply to Leningrad-oblast regional/municipal government, customs posts (Себежская, Кингисеппская таможни) and prosecutors' offices -- consistent with a radio-electronics institute's ordinary communications-equipment business, no ЦБСТ-network-relevant signal found beyond the Минобороны cluster, not individually wired.\n\nNon-recurring-tail review 2026-09-01: re-scanned all 156 remaining unwired archived cards. Caught and fixed a duplicate/mis-cited Минобороны aggregate entry (see that entry's own note for detail). Wired one genuinely new defence-prime customer relationship (Концерн «Моринформсистема-Агат», ₽54.9m SIGINT-simulation complex, 2022). The rest of the tail remains routine Leningrad-oblast regional/municipal/customs/prosecutor supply, consistent with the prior characterisation -- not individually wired.",
+        "notes": "zakupki cluster review 2026-09-01: 157 unwired archived cards reviewed by customer cluster. Wired 1 aggregate entry for the one genuinely large cluster (Минобороны РФ, 9 contracts/₽73.0m/2013-16). The rest of this entity's footprint is a long tail of small-value (thousands to low millions of rubles) routine supply to Leningrad-oblast regional/municipal government, customs posts (Себежская, Кингисеппская таможни) and prosecutors' offices -- consistent with a radio-electronics institute's ordinary communications-equipment business, no ЦБСТ-network-relevant signal found beyond the Минобороны cluster, not individually wired.\n\nNon-recurring-tail review 2026-09-01: re-scanned all 156 remaining unwired archived cards. Caught and fixed a duplicate/mis-cited Минобороны aggregate entry (see that entry's own note for detail). Wired one genuinely new defence-prime customer relationship (Концерн «Моринформсистема-Агат», ₽54.9m SIGINT-simulation complex, 2022). The rest of the tail remains routine Leningrad-oblast regional/municipal/customs/prosecutor supply, consistent with the prior characterisation -- not individually wired. 2026-09-07 NSPD corroboration: Кантемировская ул., д.10 confirmed as a real multi-unit nonresidential building complex (litera А/В, several 'Нежилое' premises up to 432.7 m²) — corroborates the proverki record's own 'фактического осуществления деятельности' (actual operating address) label (s6942). Ул. Маршала Новикова, д.40, лит.А returned no НСПД record (code 204) — consistent with the proverki record's own description of this as an active 'Строительство производственно-складского корпуса' site not yet commissioned/registered in Rosreestr (s6947).",
         "ogrn": "1117847020400",
         "okved_code": "26.30.13",
         "okved_label": "Производство средств связи, выполняющих функцию систем управления и мониторинга",
@@ -11485,7 +11486,7 @@
           }
         ],
         "name_ru": "АО «НПП «Радар ММС»»",
-        "notes": "zakupki signatory review 2026-08-31/09-01: reg 1780902212017000210 (02.10.2017) carries two supplier-side-classified signatures -- Борисов Юрий Иванович, по доверенности, and (separately already in director_history) Гоголинский Кирилл Валерьевич, по Уставу, same date. Борисов signs by delegated power of attorney, not as единоличный исполнительный орган -- reads as a mid-level representative, not an officer, per the PII policy not-a-principal carve-out. Not wired to director_history.\n\nPROVERKI FACILITY FOOTPRINT (2026-09-07, s6930): 50 inspection records reveal a materially larger and more dispersed physical footprint than previously on file for this defense radar manufacturer -- see address_history for the Хаболово cadastral-land and Курортный район entries in particular, both unexplained and worth further identification.",
+        "notes": "zakupki signatory review 2026-08-31/09-01: reg 1780902212017000210 (02.10.2017) carries two supplier-side-classified signatures -- Борисов Юрий Иванович, по доверенности, and (separately already in director_history) Гоголинский Кирилл Валерьевич, по Уставу, same date. Борисов signs by delegated power of attorney, not as единоличный исполнительный орган -- reads as a mid-level representative, not an officer, per the PII policy not-a-principal carve-out. Not wired to director_history.\n\nPROVERKI FACILITY FOOTPRINT (2026-09-07, s6930): 50 inspection records reveal a materially larger and more dispersed physical footprint than previously on file for this defense radar manufacturer -- see address_history for the Хаболово cadastral-land and Курортный район entries in particular, both unexplained and worth further identification. 2026-09-07 NSPD corroboration (s6944/s6943): КН 47:20:0442001:212 resolves to a 1,530 m² PRIVATE residential land plot (permitted use 'индивидуальное жилищное строительство', в Хаболово) — not a defense/industrial parcel. This substantially deflates the 'undisclosed test range/antenna field' hypothesis flagged as an open question after the proverki find; reads much more like a personal landholding of someone tied to the company (unconfirmed) than a company facility. КН :209 returned no record (code 204) — either mistyped in the source or since re-numbered/merged. Also corroborated Новосельковская 46, стр.1 as a real, large facility: НСПД lists it as 'Склад со встроенными помещениями' (warehouse with built-in premises), 10,476 m², 1-5 floors, commissioned 2022 — confirms the proverki 'production/warehouse building under construction' record refers to a genuine, substantial, now-completed structure (s6949).",
         "ogrn": "1027807560186",
         "okved_code": "26.11.9",
         "okved_label": "Производство частей электронных ламп, трубок и прочих электронных компонентов, не включенных в другие группировки",
@@ -11501,6 +11502,10 @@
           {
             "text": "Identify what facility/land use is at Ленинградская область, Кингисеппский район, дер. Хаболово (КН 47:20:0442001:212, :209) -- two proverki.gov.ru inspection records cite these cadastral numbers for this defense radar manufacturer, far from its Санкт-Петербург HQ. Test range? Antenna field? Undisclosed production site? Not yet identified.",
             "source_id": "s6930"
+          },
+          {
+            "text": "RESOLVED 2026-09-07 via НСПД (s6944): КН 47:20:0442001:212 is a 1,530 m² private residential land plot (индивидуальное жилищное строительство) in дер. Хаболово, Кингисеппский район — not a company facility, test range, or antenna field. Likely a personal landholding of an employee/officer named on the proverki inspection (not identified), unrelated to the company's defense-radar operations. КН :209 has no НСПД record (code 204) — possibly mistyped in the source or re-numbered. No further action planned.",
+            "source_id": "s6944"
           }
         ],
         "patents": [
@@ -12866,7 +12871,8 @@
             "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.11.3 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
             "source_id": "s5346"
           }
-        ]
+        ],
+        "notes": "2026-09-07 NSPD check: проезд 4922-й, д.4, стр.2 (Zelenograd) returned no record (code 204) — not yet registered in Rosreestr, or an address-format mismatch; not corroborated either way (s6953)."
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -13766,7 +13772,8 @@
           "as_of": "2026-09-05",
           "outcome": "wired",
           "note": "All 10 contracts read from archived attachments and wired (₽418,242,847.33), including ГК 6401/24-4574 with ДИТ Москвы."
-        }
+        },
+        "notes": "2026-09-07 NSPD corroboration: all three facility addresses confirmed as real nonresidential premises — пер. Милютинский 13, стр.1 (4,734.9 m² commercial building, Красносельский, Москва, s6948); пр-т Андропова 18 (a real multi-building business complex in this address range, exact корпус/пом. numbering in the proverki record does not exactly match НСПД's own corpus numbering but the complex itself is confirmed, s6938); Малый пр. В.О. 54, к.5 (confirmed as 'Блок №1', 1,256.5 m², 4 floors, commissioned 2016, s6946)."
       },
       "verified_against": "s0218 — ООО «Аэромакс»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
       "why": [
@@ -14861,7 +14868,8 @@
             "source_id": "s6931",
             "note": "First street-level address on file for this entity (previously only city-level). Named in a proverki.gov.ru construction-oversight inspection (РЕГИОНАЛЬНАЯ СЛУЖБА ГОСУДАРСТВЕННОГО СТРОИТЕЛЬНОГО НАДЗОРА РОСТОВСКОЙ ОБЛАСТИ, Июль 2026) -- other records in the same set cite slightly different building numbers on the same street (2-7 стр.1, 4-54), consistent with an active construction/expansion at this site."
           }
-        ]
+        ],
+        "notes": "2026-09-07 NSPD check: ул. Инструментальная, з/у 2в/7, Таганрог returned no record (code 204) — consistent with the proverki record's own construction-oversight framing (site under active construction, not yet a registered building/parcel) (s6941)."
       },
       "verified_against": "searchplatform.rospatent.gov.ru, PE_RU exact patentee-name query, archived as s0977 (WIPO ST.96 XML full text) + HAR capture",
       "why": [
@@ -15498,7 +15506,7 @@
             "note": "Second address cited in the same Jul 2023 Департамент образования и науки Москвы record alongside Хлебозаводской пр-д, д.7 — both associated with this entity, relationship between the two (HQ vs branch) not yet disambiguated."
           }
         ],
-        "notes": "2026-09-07: proverki.gov.ru screen (2 records, s6935) — control body is Moscow's education department (not a standard labor/fire/tax inspector), suggesting an educational-licensing or training-program angle; surfaced this entity's only two addresses on file (previously none)."
+        "notes": "2026-09-07: proverki.gov.ru screen (2 records, s6935) — control body is Moscow's education department (not a standard labor/fire/tax inspector), suggesting an educational-licensing or training-program angle; surfaced this entity's only two addresses on file (previously none). 2026-09-07 NSPD check: Вернадского пр-т, д.29 confirmed as real nonresidential commercial premises (s6952); Хлебозаводской пр-д, д.7, стр.9 returned no record (code 204) — not corroborated (s6945)."
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -16730,7 +16738,7 @@
             "note": "proverki.gov.ru inspection records dated Oct 2024 through Nov 2025 all carry faceName ООО \"ЭВР\" at this same ИНН/ОГРН (9710112989 / 1237700273744); the Aug 2026 record is the first to show the current name ООО «ГАСКАР» — renamed sometime between Nov 2025 and Aug 2026."
           }
         ],
-        "notes": "2026-09-07: proverki.gov.ru screen (5 records, all labor-inspection warnings, s6934) surfaced a prior legal name (ООО «ЭВР») and this entity's first street-level address (ул. Пехорская, д.1Д, стр.1, Москва)."
+        "notes": "2026-09-07: proverki.gov.ru screen (5 records, all labor-inspection warnings, s6934) surfaced a prior legal name (ООО «ЭВР») and this entity's first street-level address (ул. Пехорская, д.1Д, стр.1, Москва). 2026-09-07 NSPD corroboration (s6951): ул. Пехорская, д.1Д, стр.1 is a real, substantial building — 'Корпус 9', 15,506.8 m², 2-3 floors, commissioned 2022, private ownership, in the Косино-Ухтомский municipal district of Moscow. This is the SAME municipal district (Косино-Ухтомский/Руднево technopark zone) as ООО «НПО «Рустехдрон»»'s Пехорская 1/3, стр.4 facility — same street, same district, upgrading the 'possible shared-cluster' note to a confirmed shared-industrial-zone finding (still not confirmed as the literally same building)."
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -20008,7 +20016,8 @@
             "source_id": "s6937",
             "note": "First street-level address on file (prior: bare 'Республика Татарстан, г. Казань'), from a proverki.gov.ru labor-inspection warning (Apr 2023)."
           }
-        ]
+        ],
+        "notes": "2026-09-07 NSPD corroboration: ул. Николая Ершова, зд.31В, Казань confirmed as a real multi-unit nonresidential commercial building (units registered 2020, private ownership) (s6939)."
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -20958,7 +20967,7 @@
           }
         ],
         "facility_type": "purpose_built_technopark_sez",
-        "notes": "\n\nADDRESS/RUDNEVO TIE (2026-09-07): full address (Пехорская 1/3 стр. 4, s5346) places this ЦБСТ resident inside the Руднево технопарк cluster -- the same UAV-industry hub Рубинштейн Д.В. (ЦБСТ's own General Director, 2024-2025) headed immediately before joining ЦБСТ. A direct physical/institutional overlap between ЦБСТ's leadership pipeline and one of its own named residents, surfaced while cross-checking Рубинштейн's prior career (investigator.org.ua #270974). Not yet confirmed whether Рустехдрон was formally one of the technopark's original member companies during Рубинштейн's tenure there, or moved in independently.",
+        "notes": "ADDRESS/RUDNEVO TIE (2026-09-07): full address (Пехорская 1/3 стр. 4, s5346) places this ЦБСТ resident inside the Руднево технопарк cluster -- the same UAV-industry hub Рубинштейн Д.В. (ЦБСТ's own General Director, 2024-2025) headed immediately before joining ЦБСТ. A direct physical/institutional overlap between ЦБСТ's leadership pipeline and one of its own named residents, surfaced while cross-checking Рубинштейн's prior career (investigator.org.ua #270974). Not yet confirmed whether Рустехдрон was formally one of the technopark's original member companies during Рубинштейн's tenure there, or moved in independently. 2026-09-07: НСПД confirms ООО «Гаскар»'s separately-discovered Пехорская 1Д, стр.1 facility ('Корпус 9', 15,506.8 m², commissioned 2022) sits in the same Косино-Ухтомский municipal district as this entity's own Пехорская 1/3, стр.4 site — both on ул. Пехорская in the Руднево technopark zone (s6951).",
         "facility_type_history": [
           {
             "value": "purpose_built_technopark_sez",

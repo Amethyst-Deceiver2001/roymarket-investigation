@@ -2744,3 +2744,22 @@ Run `inventory_sources.py` → `scan_sources.py` → `extract_registry.py` →
 committing, same as every other write this session. Update
 `notes/proverki_findings.md`'s per-entity sections to note НСПД
 corroboration once done, so the two logs stay in sync.
+
+**Done 2026-09-07.** Ran 16 lookups via chrome-devtools fetch (curl 403'd
+as expected from this sandbox's IP). Headline result: the Хаболово
+cadastral parcel (КН :212) that looked like a possible undisclosed
+test-range/antenna-field lead turned out to be a 1,530 m² private
+RESIDENTIAL land plot — deflates that open question rather than
+resolving it toward something notable; recorded as RESOLVED on the
+entity record rather than left open. Second finding: ООО «Гаскар»'s
+Пехорская 1Д facility ("Корпус 9", 15,506.8 m², built 2022) sits in the
+same Косино-Ухтомский municipal district as ООО «НПО «Рустехдрон»»'s
+Пехорская 1/3 site — upgrades the "possible shared-cluster" note on both
+entities to a confirmed same-district finding. Everything else was
+routine corroboration (real building exists / matches "actual operating
+address" claim) or a clean non-find (address not yet in Rosreestr,
+consistent with active-construction status already noted from proverki).
+No further facility_type changes warranted — none of the corroborated
+buildings changed an entity's existing facility_type classification, so
+this closed as notes-only additions rather than facility_type_history
+entries. See `notes/proverki_findings.md` for the per-entity detail.
