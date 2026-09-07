@@ -220,8 +220,22 @@ def main() -> None:
             time.sleep(DELAY_BETWEEN_PEOPLE)
             continue
         if drilldown_failed:
+            # BUG FOUND 2026-09-07 (2nd instance, same run that verified the
+            # all-failed fix above): a PARTIAL failure -- some cards drilled
+            # down fine, others errored -- still silently regressed a person
+            # (Закелов А.А. 3 hits -> 2, lost his "director @ Архангел-Центр"
+            # card while "founder @ Архангел-Центр" and a new АЛЬФАМЕД hit
+            # both came through fine) because `found` only ever holds THIS
+            # run's successful cards, discarding whatever the failed card had
+            # previously resolved to. Merge this run's successes into the
+            # prior list instead of replacing it outright, so a failed card
+            # falls back to its last-known value rather than vanishing.
+            prior = {(e.get("inn"), e.get("role")): e for e in (person.get("other_entities") or [])}
+            this_run = {(e.get("inn"), e.get("role")): e for e in found}
+            merged = {**prior, **this_run}
+            found = list(merged.values())
             print(f"  {i}/{len(targets)}  {label}  WARNING: partial result -- some card drill-downs "
-                  f"failed, other_entities below may be incomplete")
+                  f"failed, merged with prior other_entities so nothing already-found is lost")
 
         person["other_entities"] = found
         person["other_entities_checked_at"] = today
