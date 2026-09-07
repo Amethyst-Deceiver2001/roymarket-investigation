@@ -3509,6 +3509,334 @@
       "why": [
         "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен Алексей Александрович, which returned 14 entity ties beyond his known ЦКБР role. Pulled a full signed EGRUL выписка (s6956) to confirm founder shares/director directly rather than relying on the ФНС search-proc summary alone."
       ]
+    },
+    {
+      "slug": "ooo-npk-atlant-aero",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"АТЛАНТ АЭРО\"",
+      "name_en": "Limited Liability Company Scientific-Production Company \"Atlant Aero\"",
+      "name_latin": "OOO NPK Atlant Aero",
+      "legal_form": "ООО",
+      "brand_ru": "НПК Атлант Аэро",
+      "inn": "6154166381",
+      "ogrn": "1236100034411",
+      "registered": "15.12.2023",
+      "address": "Ростовская область, г.о. город Таганрог, г. Таганрог",
+      "okved_code": "33.11",
+      "okved_label": "Ремонт металлоизделий",
+      "director": "Хутешен Алексей Александрович",
+      "director_history": [
+        {
+          "value": "Хутешен Алексей Александрович",
+          "as_of": "2023-12-15",
+          "source_id": "s6962",
+          "note": "ИНН 615404085178."
+        }
+      ],
+      "founders": [
+        {
+          "name": "Хутешен Алексей Александрович",
+          "inn_personal": "615404085178",
+          "share_percent": 45,
+          "source_id": "s6962"
+        },
+        {
+          "name": "Шевченко Константин Игоревич",
+          "inn_personal": "615424668354",
+          "share_percent": 25,
+          "source_id": "s6962"
+        },
+        {
+          "name": "Филатов Роман Константинович",
+          "inn_personal": "615405335896",
+          "share_percent": 25,
+          "source_id": "s6962"
+        },
+        {
+          "name": "Призов Александр Иванович",
+          "inn_personal": "260708322922",
+          "share_percent": 5,
+          "source_id": "s6962"
+        }
+      ],
+      "tier": "manufacturer",
+      "tier_basis": "Added 2026-09-07: sibling entity to ООО «Атлант Аэро», surfaced by the same Хутешен А.А. director/founder screen. Registered 15.12.2023 — 12 days BEFORE Атлант Аэро itself (27.12.2023) — same Taganrog city, same Хутешен-led ownership cluster (he holds 45% and is director; Шевченко К.И., Атлант Аэро's other founder, holds 25% here too). ОКВЭД 'Ремонт металлоизделий' (metal-goods repair) reads as a plausible airframe/structural-repair adjunct to Атлант Аэро's aircraft manufacturing, though not itself confirmed as aviation work. Full EGRUL выписка pulled (s6962) rather than relying on the ФНС search-proc summary.",
+      "products": [],
+      "why": [
+        "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка to confirm founders/director directly."
+      ]
+    },
+    {
+      "slug": "ooo-atlant-servis",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АТЛАНТ СЕРВИС\"",
+      "name_en": "Limited Liability Company \"Atlant Service\"",
+      "name_latin": "Limited Liability Company \"Atlant Service\"",
+      "legal_form": "ООО",
+      "inn": "9717173300",
+      "ogrn": "1247700778600",
+      "registered": "02.12.2024",
+      "address": "129085, г. Москва, вн.тер.г. муниципальный округ Останкинский, пр-кт Мира, д.95, помещ.246",
+      "okved_code": "68.20",
+      "okved_label": "Аренда и управление собственным или арендованным недвижимым имуществом",
+      "director": "Хутешен Алексей Александрович",
+      "director_history": [
+        {
+          "value": "Хутешен Алексей Александрович",
+          "as_of": "02.12.2024",
+          "source_id": "s6969",
+          "note": "ИНН 615404085178."
+        }
+      ],
+      "tier": "adjacent",
+      "tier_basis": "Added 2026-09-07: part of the Хутешен А.А./ООО «Атлант Аэро» supporting corporate cluster, surfaced by a ФНС director/founder screen on Хутешен. Хутешен directs this entity personally (real-estate holding, Moscow) alongside Атлант Аэро/НПК Атлант Аэро/Пром-Тех.",
+      "products": [],
+      "why": [
+        "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6969) to confirm details directly."
+      ]
+    },
+    {
+      "slug": "ooo-atlant-logistik",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АТЛАНТ ЛОГИСТИК\"",
+      "name_en": "Limited Liability Company \"Atlant Logistics\"",
+      "name_latin": "Limited Liability Company \"Atlant Logistics\"",
+      "legal_form": "ООО",
+      "inn": "9722117815",
+      "ogrn": "1267700243403",
+      "registered": "21.07.2026",
+      "address": "109125, г. Москва, вн.тер.г. муниципальный округ Текстильщики, пр-кт Волгоградский, д.73, стр.1",
+      "okved_code": "49.41",
+      "okved_label": "Деятельность автомобильного грузового транспорта",
+      "director": "Русецкий Алексей Сергеевич",
+      "director_history": [
+        {
+          "value": "Русецкий Алексей Сергеевич",
+          "as_of": "21.07.2026",
+          "source_id": "s6970",
+          "note": "ИНН 772423847300."
+        }
+      ],
+      "tier": "adjacent",
+      "tier_basis": "Added 2026-09-07: part of the Хутешен А.А./ООО «Атлант Аэро» supporting corporate cluster, surfaced by a ФНС director/founder screen on Хутешен. Хутешен is a founder here (per the ФНС screen), director is a third party. Same Волгоградский 73 стр.1 address as ООО «Эверест» (see below) — a second shared address inside this cluster. Email TAVIA161@GMAIL.COM matches ООО «Пром-Тех»'s own contact email.",
+      "products": [],
+      "why": [
+        "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6970) to confirm details directly."
+      ],
+      "social": [
+        {
+          "platform": "email",
+          "url": "TAVIA161@GMAIL.COM",
+          "source_id": "s6970"
+        }
+      ]
+    },
+    {
+      "slug": "ooo-prom-tekh",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМ-ТЕХ\"",
+      "name_en": "Limited Liability Company \"Prom-Tekh\"",
+      "name_latin": "Limited Liability Company \"Prom-Tekh\"",
+      "legal_form": "ООО",
+      "inn": "6163233330",
+      "ogrn": "1246100019373",
+      "registered": "02.08.2024",
+      "address": "347922, Ростовская область, г.о. город Таганрог, г. Таганрог, ул. Петровская, д.6, кв.16",
+      "okved_code": "46.52",
+      "okved_label": "Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями",
+      "director": "Хутешен Алексей Александрович",
+      "director_history": [
+        {
+          "value": "Хутешен Алексей Александрович",
+          "as_of": "02.08.2024",
+          "source_id": "s6964",
+          "note": "ИНН 615404085178."
+        }
+      ],
+      "tier": "adjacent",
+      "tier_basis": "Added 2026-09-07: part of the Хутешен А.А./ООО «Атлант Аэро» supporting corporate cluster, surfaced by a ФНС director/founder screen on Хутешен. Хутешен directs this entity personally. ОКВЭД (electronics/telecom wholesale) is component-sourcing-adjacent to the aircraft-manufacturing cluster, worth watching. Email TAVIA161@GMAIL.COM matches ООО «Атлант Логистик». **ФНС unreliable-data flag**: a 'недостоверность сведений о юридическом лице' record was entered 05.06.2025 (ГРН 2256101588620) — the flagged field is not identified in this extract; treat as a data-quality signal, not a confirmed nominee/strawman finding, per the standard caution in scripts/check_egrul_flags.py.",
+      "products": [],
+      "why": [
+        "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6964) to confirm details directly."
+      ],
+      "social": [
+        {
+          "platform": "email",
+          "url": "TAVIA161@GMAIL.COM",
+          "source_id": "s6964"
+        }
+      ]
+    },
+    {
+      "slug": "ooo-npk-zevs",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"ЗЕВС\"",
+      "name_en": "Limited Liability Company Scientific-Production Company \"Zeus\"",
+      "name_latin": "Limited Liability Company Scientific-Production Company \"Zeus\"",
+      "legal_form": "ООО",
+      "inn": "6161154122",
+      "ogrn": "1266100002387",
+      "registered": "10.02.2026",
+      "address": "344113, Ростовская область, г.о. город Ростов-на-Дону, г. Ростов-на-Дону, пр-кт Космонавтов, зд.32В/21В, помещ.302",
+      "okved_code": "46.52",
+      "okved_label": "Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями",
+      "director": "Лымарь Артём Викторович",
+      "director_history": [
+        {
+          "value": "Лымарь Артём Викторович",
+          "as_of": "10.02.2026",
+          "source_id": "s6963",
+          "note": "ИНН 234105701301."
+        }
+      ],
+      "tier": "adjacent",
+      "tier_basis": "Added 2026-09-07: part of the Хутешен А.А./ООО «Атлант Аэро» supporting corporate cluster, surfaced by a ФНС director/founder screen on Хутешен. Хутешен is a founder here per the ФНС screen; director is a third party, brand-new company (registered 10.02.2026). Same electronics-wholesale ОКВЭД as Пром-Тех.",
+      "products": [],
+      "why": [
+        "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6963) to confirm details directly."
+      ],
+      "social": [
+        {
+          "platform": "email",
+          "url": "ARTEMLYMAR@YANDEX.RU",
+          "source_id": "s6963"
+        }
+      ]
+    },
+    {
+      "slug": "ao-opticheskie-sistemy",
+      "name_ru": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ОПТИЧЕСКИЕ СИСТЕМЫ\"",
+      "name_en": "Joint-Stock Company \"Optical Systems\"",
+      "name_latin": "Joint-Stock Company \"Optical Systems\"",
+      "legal_form": "АО",
+      "inn": "7733486867",
+      "ogrn": "1267700239300",
+      "registered": "16.07.2026",
+      "address": "125373, г. Москва, вн.тер.г. муниципальный округ Южное Тушино, б-р Яна Райниса, д.41, помещ.1/1",
+      "okved_code": "62.01",
+      "okved_label": "Разработка компьютерного программного обеспечения",
+      "director": "Савченко Владимир Иванович",
+      "director_history": [
+        {
+          "value": "Савченко Владимир Иванович",
+          "as_of": "16.07.2026",
+          "source_id": "s6966",
+          "note": "ИНН 615417091933."
+        }
+      ],
+      "tier": "adjacent",
+      "tier_basis": "Added 2026-09-07: part of the Хутешен А.А./ООО «Атлант Аэро» supporting corporate cluster, surfaced by a ФНС director/founder screen on Хутешен. Registered address matches a shared mail-drop/registered-agent address used by multiple companies in this cluster (б-р Яна Райниса, д.41, помещ.1/1, Южное Тушино, Москва — same exact address as АО «Оптические системы» and ООО ПК «Стальной купол») — a classic mass-registration address pattern, not evidence of real operations at this location. Хутешен is a founder here per the ФНС screen; brand-new (16.07.2026), software-development ОКВЭД despite the 'Оптические системы' (Optical Systems) name.",
+      "products": [],
+      "why": [
+        "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6966) to confirm details directly."
+      ]
+    },
+    {
+      "slug": "ooo-ametist",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АМЕТИСТ\"",
+      "name_en": "Limited Liability Company \"Ametist\"",
+      "name_latin": "Limited Liability Company \"Ametist\"",
+      "legal_form": "ООО",
+      "inn": "9717142044",
+      "ogrn": "1237700576981",
+      "registered": "30.08.2023",
+      "address": "125373, г. Москва, вн.тер.г. муниципальный округ Южное Тушино, б-р Яна Райниса, д.41, помещ.1/1",
+      "okved_code": "68.20.2",
+      "okved_label": "Аренда и управление собственным или арендованным нежилым недвижимым имуществом",
+      "director": "Беленкова Анжелика Евгеньевна",
+      "director_history": [
+        {
+          "value": "Беленкова Анжелика Евгеньевна",
+          "as_of": "30.08.2023",
+          "source_id": "s6968",
+          "note": "ИНН 503507215228."
+        }
+      ],
+      "tier": "adjacent",
+      "tier_basis": "Added 2026-09-07: part of the Хутешен А.А./ООО «Атлант Аэро» supporting corporate cluster, surfaced by a ФНС director/founder screen on Хутешен. Registered address matches a shared mail-drop/registered-agent address used by multiple companies in this cluster (б-р Яна Райниса, д.41, помещ.1/1, Южное Тушино, Москва — same exact address as АО «Оптические системы» and ООО ПК «Стальной купол») — a classic mass-registration address pattern, not evidence of real operations at this location. Director Беленкова Анжелика Евгеньевна is ALSO director of ООО «Эверест» (see below) — a same-person-directing-two-shell-companies pattern.",
+      "products": [],
+      "why": [
+        "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6968) to confirm details directly."
+      ]
+    },
+    {
+      "slug": "ooo-everest",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВЕРЕСТ\"",
+      "name_en": "Limited Liability Company \"Everest\"",
+      "name_latin": "Limited Liability Company \"Everest\"",
+      "legal_form": "ООО",
+      "inn": "9704109459",
+      "ogrn": "1217700630828",
+      "registered": "22.12.2021",
+      "address": "109125, г. Москва, вн.тер.г. муниципальный округ Текстильщики, пр-кт Волгоградский, д.73, стр.1",
+      "okved_code": "68.20.2",
+      "okved_label": "Аренда и управление собственным или арендованным нежилым недвижимым имуществом",
+      "director": "Беленкова Анжелика Евгеньевна",
+      "director_history": [
+        {
+          "value": "Беленкова Анжелика Евгеньевна",
+          "as_of": "22.12.2021",
+          "source_id": "s6967",
+          "note": "ИНН 503507215228."
+        }
+      ],
+      "tier": "adjacent",
+      "tier_basis": "Added 2026-09-07: part of the Хутешен А.А./ООО «Атлант Аэро» supporting corporate cluster, surfaced by a ФНС director/founder screen on Хутешен. Director Беленкова Анжелика Евгеньевна is ALSO director of ООО «Аметист» (see above) — same nominee-director pattern. Same Волгоградский 73 стр.1 address as ООО «Атлант Логистик» — a second shared address inside this cluster.",
+      "products": [],
+      "why": [
+        "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6967) to confirm details directly."
+      ]
+    },
+    {
+      "slug": "ooo-pk-stalnoy-kupol",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"СТАЛЬНОЙ КУПОЛ\"",
+      "name_en": "Limited Liability Company Production Company \"Steel Dome\"",
+      "name_latin": "Limited Liability Company Production Company \"Steel Dome\"",
+      "legal_form": "ООО",
+      "inn": "7733483753",
+      "ogrn": "1267700131236",
+      "registered": "14.04.2026",
+      "address": "125373, г. Москва, вн.тер.г. муниципальный округ Южное Тушино, б-р Яна Райниса, д.41, помещ.1/1",
+      "okved_code": "43.99.7",
+      "okved_label": "Работы по сборке и монтажу сборных конструкций",
+      "director": "Коцеруба Валерий Вячеславович",
+      "director_history": [
+        {
+          "value": "Коцеруба Валерий Вячеславович",
+          "as_of": "14.04.2026",
+          "source_id": "s6965",
+          "note": "ИНН 583805536228."
+        }
+      ],
+      "tier": "adjacent",
+      "tier_basis": "Added 2026-09-07: part of the Хутешен А.А./ООО «Атлант Аэро» supporting corporate cluster, surfaced by a ФНС director/founder screen on Хутешен. Registered address matches a shared mail-drop/registered-agent address used by multiple companies in this cluster (б-р Яна Райниса, д.41, помещ.1/1, Южное Тушино, Москва — same exact address as АО «Оптические системы» and ООО ПК «Стальной купол») — a classic mass-registration address pattern, not evidence of real operations at this location. Хутешен is a founder here per the ФНС screen. ОКВЭД (assembly/installation of prefab structures) is construction-adjacent, not obviously aviation-related.",
+      "products": [],
+      "why": [
+        "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6965) to confirm details directly."
+      ]
+    },
+    {
+      "slug": "ooo-ds-bars-t",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДС-БАРС-Т\"",
+      "name_en": "Limited Liability Company \"DS-Bars-T\"",
+      "name_latin": "Limited Liability Company \"DS-Bars-T\"",
+      "legal_form": "ООО",
+      "inn": "6154109094",
+      "ogrn": "1076154002913",
+      "registered": "?",
+      "address": "347900, Ростовская область, г. Таганрог, ул. Греческая",
+      "okved_code": "62.01",
+      "okved_label": "Разработка компьютерного программного обеспечения",
+      "director": "Степанов Валерий Юрьевич",
+      "director_history": [
+        {
+          "value": "Степанов Валерий Юрьевич",
+          "as_of": "?",
+          "source_id": "s6961",
+          "note": "ИНН 615413027535."
+        }
+      ],
+      "tier": "adjacent",
+      "tier_basis": "Added 2026-09-07: part of the Хутешен А.А./ООО «Атлант Аэро» supporting corporate cluster, surfaced by a ФНС director/founder screen on Хутешен. The 24% corporate co-founder of ООО «Прометей» — a pre-existing Taganrog company (registered 2007, long before the Хутешен cluster's 2023-2026 wave), director Степанов В.Ю., no other identified tie to Хутешен's companies beyond this one founder stake.",
+      "products": [],
+      "why": [
+        "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6961) to confirm details directly."
+      ]
     }
   ],
   "entities": {

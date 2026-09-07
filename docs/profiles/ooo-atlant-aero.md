@@ -33,6 +33,12 @@
 |---|---|---|
 | 10000 | 2023-09-21 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6725] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| Ростовская область, г. Таганрог, ул. Инструментальная, земельный участок 2в/7 | 2026 | First street-level address on file for this entity (previously only city-level). Named in a proverki.gov.ru construction-oversight inspection (РЕГИОНАЛЬНАЯ СЛУЖБА ГОСУДАРСТВЕННОГО СТРОИТЕЛЬНОГО НАДЗОРА РОСТОВСКОЙ ОБЛАСТИ, Июль 2026) -- other records in the same set cite slightly different building numbers on the same street (2-7 стр.1, 4-54), consistent with an active construction/expansion at this site. [s6931] |
+
 ## Products
 
 - **Орион**
@@ -64,6 +70,13 @@
 
 ## Principals & persons of interest
 
+### Хутешен Алексей Александрович
+
+- **DOB:** 02.10.1983
+- **ИНН:** 615404085178
+- Генеральный директор, учредитель (2023-12-27–present)
+- `sanctions lead`
+
 ### Shevchenko Konstantin Igorevich — Шевченко Константин Игоревич
 
 - co-inventor (patent RU2859152C1)
@@ -76,6 +89,7 @@
 | s0750 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_6154165878_20260824_ooo-atlant-aero.json) | 2026-08-24 | — |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 | s6725 | EGRUL extract | EGRUL extract (EGRUL_6154165878_20260907_ooo-atlant-aero.pdf) | 2026-09-07 | 2026-09-07 |
+| s6931 | Proverki | Proverki (PROVERKI_6154165878_20260907_ooo-atlant-aero-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

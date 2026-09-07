@@ -2763,3 +2763,47 @@ No further facility_type changes warranted — none of the corroborated
 buildings changed an entity's existing facility_type classification, so
 this closed as notes-only additions rather than facility_type_history
 entries. See `notes/proverki_findings.md` for the per-entity detail.
+
+## Хутешен А.А. / Атлант Аэро network expansion (2026-09-07)
+
+`screen_upr_uchr.py` on Хутешен Алексей Александрович (ЦКБР's sanctioned
+chief designer, already known as ООО «Атлант Аэро»'s director) returned 14
+director/founder ties, not just the one Атлант Аэро role already on file.
+Pulled full EGRUL выписки (not just the ФНС search-proc summary) for every
+new ИНН, and added the whole cluster to the registry:
+
+- **ooo-prometey** (manufacturer tier) — a second, brand-new (05.06.2026)
+  Таганрог aircraft manufacturer. Shares founder Шевченко К.И. with Атлант
+  Аэро — a real corporate link between two same-city aircraft makers.
+- **ooo-npk-atlant-aero** (manufacturer tier) — a direct sibling to Атлант
+  Аэро, registered 12 days earlier, same Хутешен/Шевченко ownership,
+  ОКВЭД "Ремонт металлоизделий" (plausible airframe-repair adjunct).
+- **7 supporting entities** (adjacent tier): ооо Атлант Сервис/Атлант
+  Логистик/Пром-Тех/НПК Зевс, АО Оптические Системы, ООО Аметист/Эверест,
+  ООО ПК Стальной Купол, plus ООО «ДС-БАРС-Т» (Прометей's pre-existing
+  24% corporate founder). Two structural patterns worth flagging: three
+  entities share one registered mail-drop address (б-р Яна Райниса 41,
+  Южное Тушино) — a mass-registration signature — and Аметист/Эверест
+  share the same director (Беленкова А.Е.), a nominee-director pattern.
+  Пром-Тех carries an unexplained ФНС "недостоверность сведений" flag
+  (05.06.2025).
+- 8 new named individuals added to `people.json` (Призов, Филатов,
+  Русецкий, Лымарь, Савченко, Беленкова, Коцеруба, Степанов) — all
+  disqualification-screened, 0 hits. Director/founder cross-reference,
+  subsidiary-liability, and ЕГРИП screens NOT yet run on any of them
+  (only the disqualification check ran this pass) — do that next before
+  calling this network's screening complete.
+
+**Not yet done, next steps if this thread continues:**
+1. Run `screen_upr_uchr.py`/`screen_subsidiary.py`/`screen_egrip_ip.py` on
+   the 8 new people (only `screen_disqualified.py` ran so far).
+2. OpenSanctions/Aleph screen the same 8 (not run yet at all).
+3. zakupki scan on the two manufacturer-tier additions (Прометей, НПК
+   Атлант Аэро) — both too new to likely have contracts, but check anyway.
+4. A БФО pull will find nothing yet (all entities <3 years old, most
+   founded within the last year) — skip until a filing is actually due.
+5. НСПД check on the shared Южное Тушино mail-drop address itself, to
+   confirm/characterize what that address actually is (a registered-agent
+   office vs. something else).
+6. Consider whether Пром-Тех's недостоверность flag is worth a closer
+   EGRUL record-history read to identify which field was flagged.
