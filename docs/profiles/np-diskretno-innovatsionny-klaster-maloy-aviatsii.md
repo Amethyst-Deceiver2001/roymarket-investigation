@@ -20,6 +20,15 @@
 |---|---|---|
 | Бегак Александр Аркадьевич | 2026-09-04 | per ФНС «Прозрачный бизнес» (pb.nalog.ru) director/founder cross-reference on his personal ИНН. [s5427] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2022 | — | — | [s6484] |
+| 2023 | — | — | [s6485] |
+| 2024 | — | — | [s6486] |
+| 2025 | ₽10,180,000 | ₽-7,071,000 | [s6487] |
+
 - 4 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
@@ -38,6 +47,10 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s5427 | Pbnalog | Pbnalog (PBNALOG_UPRUCHR_multi_20260904_gagaring-poi-sweep.txt) | 2026-09-04 | 2026-09-04 |
+| s6484 | Bfo | Bfo (BFO_2632811832_2022_нп-дикма.pdf) | — | — |
+| s6485 | Bfo | Bfo (BFO_2632811832_2023_нп-дикма.pdf) | — | — |
+| s6486 | Bfo | Bfo (BFO_2632811832_2024_нп-дикма.pdf) | — | — |
+| s6487 | Bfo | Bfo (BFO_2632811832_2025_нп-дикма.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

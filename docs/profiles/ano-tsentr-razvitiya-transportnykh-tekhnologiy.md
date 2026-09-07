@@ -25,6 +25,15 @@
 |---|---|---|
 | Рогозин Алексей Дмитриевич (физлицо) | 2025-12-31 | Confirms the brief's existing lead — Алексей Рогозин, son of Dmitry Rogozin — now on a primary Минюст document, not just a press-derived lead [s0438] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2022 | — | — | [s6682] |
+| 2023 | — | — | [s6683] |
+| 2024 | — | — | [s6684] |
+| 2025 | — | — | [s6685] |
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -54,6 +63,10 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0438 | document | document (17549cfa-fedc-4ac5-8797-49ff0e77902f.pdf) | — | 2025-12-31 |
 | s0817 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9724066980_20260824_ano-tsentr-razvitiya-transportnykh-tekhnologiy.json) | 2026-08-24 | — |
+| s6682 | Bfo | Bfo (BFO_9724066980_2022_ано-центр-развития-транспортных-технологии.pdf) | — | — |
+| s6683 | Bfo | Bfo (BFO_9724066980_2023_ано-центр-развития-транспортных-технологии.pdf) | — | — |
+| s6684 | Bfo | Bfo (BFO_9724066980_2024_ано-центр-развития-транспортных-технологии.pdf) | — | — |
+| s6685 | Bfo | Bfo (BFO_9724066980_2025_ано-центр-развития-транспортных-технологии.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

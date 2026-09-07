@@ -21,6 +21,16 @@
 |---|---|---|
 | Соколов Никита Дмитриевич | 2023-12-05 | personal ИНН 780633823516; also sole founder [s0482] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽27,756,000 | ₽4,609,000 | [s6677] |
+| 2022 | ₽72,494,000 | ₽-293,000 | [s6678] |
+| 2023 | ₽509,378,000 | ₽5,584,000 | [s6679] |
+| 2024 | ₽11,451,000 | ₽343,000 | [s6680] |
+| 2025 | ₽231,000 | ₽-2,885,000 | [s6681] |
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -58,6 +68,11 @@
 | s0045 | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-dsg-loan-motivated.pdf) | 2026-08-20 | 2025-10-16 |
 | s0482 | EGRUL extract | EGRUL extract (ul-1207700030493-20260823132102.pdf) | — | 2026-08-23 |
 | s0816 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9724002908_20260824_ooo-dsg.json) | 2026-08-24 | — |
+| s6677 | Bfo | Bfo (BFO_9724002908_2021_ооо-дсг.pdf) | — | — |
+| s6678 | Bfo | Bfo (BFO_9724002908_2022_ооо-дсг.pdf) | — | — |
+| s6679 | Bfo | Bfo (BFO_9724002908_2023_ооо-дсг.pdf) | — | — |
+| s6680 | Bfo | Bfo (BFO_9724002908_2024_ооо-дсг.pdf) | — | — |
+| s6681 | Bfo | Bfo (BFO_9724002908_2025_ооо-дсг.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

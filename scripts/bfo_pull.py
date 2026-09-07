@@ -22,19 +22,26 @@ Flow, all unauthenticated:
            same as zakupki.gov.ru elsewhere in this repo)
 
 Single-ИНН / a handful = inline reconnaissance, run directly. A full-roster
-sweep (no --inn) should be handed to the user per this repo's crawling-jobs
-policy in CLAUDE.md, same as egrul_vypiska_pull.py / egrul_batch_pull.py.
+sweep (--all-missing, added 2026-09-07, mirroring egrul_vypiska_pull.py's
+selector-less mode) should be handed to the user per this repo's
+crawling-jobs policy in CLAUDE.md, same as egrul_vypiska_pull.py /
+egrul_batch_pull.py.
 """
 import argparse
+import json
 import re
 import sys
+import time
 import unicodedata
 from pathlib import Path
 
 import requests
 
 BASE = "https://bo.nalog.gov.ru"
-SOURCES = Path(__file__).resolve().parent.parent / "data" / "sources"
+ROOT = Path(__file__).resolve().parent.parent
+SOURCES = ROOT / "data" / "sources"
+ENTITIES = ROOT / "data" / "registry" / "entities.json"
+DELAY_SECONDS = 2.0
 
 # bo.nalog.gov.ru's WAF 403s any request lacking a normal browser UA/sec-ch-ua
 # set - confirmed 2026-09-05 (curl/requests default headers -> 403, a real
@@ -102,14 +109,34 @@ def download_filing(correction_id: int, out_path: Path) -> int:
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--inn", action="append", required=True, help="ИНН (repeatable)")
+    ap.add_argument("--inn", action="append", help="ИНН (repeatable)")
     ap.add_argument("--slug", required=False, help="entity slug for filename (single --inn only)")
     ap.add_argument("--force", action="store_true", help="re-download even if a same-year file exists")
+    ap.add_argument("--all-missing", action="store_true",
+                     help="sweep every entities.json ИНН with an empty financials[] "
+                          "(full-roster live job, hand to user per crawling-jobs policy)")
+    ap.add_argument("--limit", type=int, default=None)
     args = ap.parse_args()
+
+    if not args.inn and not args.all_missing:
+        ap.error("need --inn (repeatable) or --all-missing")
 
     requests.packages.urllib3.disable_warnings()  # noqa: self-signed chain, same as zakupki_batch_pull.py
 
-    for inn in args.inn:
+    entities = json.loads(ENTITIES.read_text(encoding="utf-8"))
+    inn_to_reg_slug = {e["inn"]: e["slug"] for e in entities if e.get("inn") and e.get("slug")}
+
+    inns = list(args.inn or [])
+    if args.all_missing:
+        gap = [e["inn"] for e in entities if e.get("inn") and not e.get("financials")]
+        if args.limit is not None:
+            gap = gap[:args.limit]
+        print(f"{len(gap)} ИНН missing financials[] to sweep", file=sys.stderr)
+        inns.extend(gap)
+
+    for i, inn in enumerate(inns):
+        if args.all_missing and i:
+            time.sleep(DELAY_SECONDS)
         org = find_org(inn)
         if not org:
             print(f"[{inn}] not found in bo.nalog.gov.ru search index", file=sys.stderr)
@@ -118,7 +145,16 @@ def main():
         if not filings:
             print(f"[{inn}] {org.get('shortName', '')}: no БФО filings on record")
             continue
-        slug = args.slug if (args.slug and len(args.inn) == 1) else slugify(org.get("shortName", inn))
+        # Prefer the entity's own entities.json slug (stable filename across
+        # runs) over re-slugifying bo.nalog.gov.ru's shortName, which caused
+        # a real duplicate-content re-pull of ooo-arkhangel's FY2025 filing
+        # under a Cyrillic slug spelling on 2026-09-07.
+        if args.slug and len(inns) == 1:
+            slug = args.slug
+        elif inn in inn_to_reg_slug:
+            slug = inn_to_reg_slug[inn]
+        else:
+            slug = slugify(org.get("shortName", inn))
         for f in filings:
             year = f.get("period")
             for tc in f.get("typeCorrections", []):

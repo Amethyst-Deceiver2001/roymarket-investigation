@@ -136,11 +136,22 @@ def parse_pdf_filing(path: Path) -> dict | None:
     if m:
         units = m.group(1).strip().split("  ")[0].strip()
 
-    revenue = net_profit = None
+    # Non-profit filings (form 0710096) report their real money on the ОЦИС
+    # page ("Отчет о целевом использовании средств", line codes 6100-6400),
+    # not the empty-by-construction P&L -- see the TARGET_CODES comment above
+    # parse_one(). Found 2026-09-07: this PDF-path parser (what every
+    # bfo_pull.py download goes through) only ever scanned for 2110/2400 and
+    # silently dropped funds_* for every non-profit pulled via bfo_pull.py --
+    # the same class of bug as the original all-null discovery, just in the
+    # PDF branch instead of the xlsx one. Confirmed on ano-arrs-krasnodar's
+    # 2024/2025 filings, which had real 6200/6300 figures sitting unread.
+    line_codes = {CODE_REVENUE: "revenue", CODE_NET_PROFIT: "net_profit",
+                  **TARGET_CODES}
+    found: dict[str, float] = {}
     for line in text.splitlines():
-        for code, key in ((CODE_REVENUE, "revenue"), (CODE_NET_PROFIT, "net_profit")):
-            # anchor on the line code as a standalone token, then read the
-            # first number after it
+        for code, key in line_codes.items():
+            if key in found:
+                continue
             mm = re.search(rf"\b{code}\b\s+(.+)", line)
             if not mm:
                 continue
@@ -148,11 +159,23 @@ def parse_pdf_filing(path: Path) -> dict | None:
             nums = [n for n in nums if n is not None]
             if not nums:
                 continue
-            if key == "revenue" and revenue is None:
-                revenue = nums[0]
-            elif key == "net_profit" and net_profit is None:
-                net_profit = nums[0]
-    return {"units": units, "revenue": revenue, "net_profit": net_profit}
+            v = nums[0]
+            if key in SIGN_NORMALISED:
+                v = abs(v)
+            found[key] = v
+
+    revenue = found.get("revenue")
+    net_profit = found.get("net_profit")
+    targets = {k: found[k] for k in TARGET_CODES.values() if k in found}
+    if targets and all(k in targets for k in TARGET_CODES.values()):
+        lhs = (targets["funds_balance_start"] + targets["funds_received"]
+               - targets["funds_used"])
+        if abs(lhs - targets["funds_balance_end"]) > 1:
+            targets["funds_identity_check"] = (
+                f"FAILED: 6100 {targets['funds_balance_start']} + 6200 "
+                f"{targets['funds_received']} - 6300 {targets['funds_used']} = {lhs}, "
+                f"but 6400 reports {targets['funds_balance_end']}")
+    return {"units": units, "revenue": revenue, "net_profit": net_profit, **targets}
 
 
 def parse_one(path: Path) -> dict | None:
@@ -289,7 +312,7 @@ def main():
                 err = parsed.get("error") if parsed else "?"
                 print(f"  [{i}/{len(bfo_sources)}] {src['id']} {slug} FY{fy}: {err}")
                 continue
-            results.setdefault(slug, []).append({
+            rec = {
                 "fiscal_year": fy,
                 "source_id": src["id"],
                 "path": src["path"],
@@ -298,10 +321,16 @@ def main():
                 "revenue": parsed.get("revenue"),
                 # normalise to the xlsx path's key name
                 "profit": parsed.get("net_profit"),
-            })
+            }
+            for k in list(TARGET_CODES.values()) + ["funds_identity_check"]:
+                if k in parsed:
+                    rec[k] = parsed[k]
+            results.setdefault(slug, []).append(rec)
+            extra = "".join(f" {k}={rec[k]}" for k in list(TARGET_CODES.values())
+                             + ["funds_identity_check"] if k in rec)
             print(f"  [{i}/{len(bfo_sources)}] {src['id']} {slug} FY{fy}: "
-                  f"revenue={parsed.get('revenue')} profit={parsed.get('net_profit')} "
-                  f"({parsed.get('units')})")
+                  f"revenue={parsed.get('revenue')} profit={parsed.get('net_profit')}"
+                  f"{extra} ({parsed.get('units')})")
             continue
 
         # БФО zips hold one xlsx member

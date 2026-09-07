@@ -8,7 +8,7 @@
 
 - **Legal form:** OOO (limited liability company)
 - **Registered:** 05.08.2025
-- **Address:** 123290, г. Москва, вн.тер.г. муниципальный округ Хорошевский, туп. 1-й Магистральный, д. 11 стр. 1, помещ. 1П
+- **Address:** г. Москва
 - **Director:** Шатракова Анастасия Артёмовна
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 85.30 — Обучение профессиональное
@@ -45,6 +45,13 @@
 |---|---|---|
 | 123290, г. Москва, вн.тер.г. муниципальный округ Хорошевский, туп. 1-й Магистральный, д. 11 стр. 1, помещ. 1П | 2026-09-05 | Registered legal address per the full signed ЕГРЮЛ выписка of 05.09.2026. [s5507] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2025 | — | — | [s0408] |
+| 2025 | — | — | [s5537] |
+
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 5 OpenSanctions match(es) (screened 2026-09-06).
 
@@ -70,9 +77,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| s0408 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714079108_2025_20260818.zip) | 2026-08-18 | 2025-12-31 |
 | s0474 | EGRUL extract | EGRUL extract (ul-1257700345407-20260823122710.pdf) | — | 2026-08-23 |
 | s1164 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-vacancies.zip) | 2026-08-24 | — |
 | s5507 | EGRUL extract | EGRUL extract (EGRUL_9714079108_20260905_ooo-arkhangel.pdf) | 2026-09-05 | 2026-09-05 |
+| s5537 | Bfo | Bfo (BFO_9714079108_2025_ooo-arkhangel.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

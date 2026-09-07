@@ -42,6 +42,14 @@
 - **«Микроб 13с»** — Autopilot / machine-vision system, per GUR profile. [s0967]
 - **«Площадь-К»** — FPV kamikaze drone, per GUR profile — distinct from the existing ПАК «Площадь.Р»/«Площадь.К» software systems (this is the drone itself, not the targeting software). [s0967]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2023 | — | ₽-995,000 | [s6674] |
+| 2024 | ₽14,190,000 | ₽6,751,000 | [s6675] |
+| 2025 | ₽87,892,000 | ₽21,967,000 | [s6676] |
+
 ## Government contracts
 
 - customer: ФГБОУ ВО «Российский государственный гидрометеорологический университет»; date: 2026; items: НИР «Разработка моделей и методов обработки данных в рамках эскизно-технического проекта демонстратора технологии интеллектуального управления и ситуационного моделирования групповых действий БВС в условиях единого информационно-управляющего поля» — swarm-UAV group-control R&D, entity's only zakupki hit.; reg_number: 1780601211726000023; value_rub: 12000000 [s3389]
@@ -79,6 +87,9 @@
 | s0967 | GUR war-sanctions record | GUR war-sanctions record (GUR_9723203841_20260824_ao-ploshchad.html) | 2026-08-24 | — |
 | s3389 | Zakupki | Zakupki (ZAKUPKI_contract_1780601211726000023_20260829.html) | 2026-08-29 | — |
 | s3748 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1780601211726000023_1780601211726000023_elektronnyy-kon-17806012117260000230004_3d1078c2.xml) | — | — |
+| s6674 | Bfo | Bfo (BFO_9723203841_2023_ао-площадь.pdf) | — | — |
+| s6675 | Bfo | Bfo (BFO_9723203841_2024_ао-площадь.pdf) | — | — |
+| s6676 | Bfo | Bfo (BFO_9723203841_2025_ао-площадь.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

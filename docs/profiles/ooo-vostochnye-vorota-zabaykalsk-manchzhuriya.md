@@ -22,6 +22,16 @@
 |---|---|---|
 | Карамов Эльдар Рафикович | 2025-09-18 | personal ИНН 560205129871; also sole founder [s0521] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | — | ₽-9,312,000 | [s6545] |
+| 2022 | — | ₽-6,559,000 | [s6546] |
+| 2023 | — | ₽-11,509,000 | [s6547] |
+| 2024 | — | ₽-19,997,000 | [s6548] |
+| 2025 | — | ₽-91,411,000 | [s6549] |
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -43,6 +53,11 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0521 | EGRUL extract | EGRUL extract (ul-5167746405481-20260823133416.pdf) | — | 2026-08-23 |
+| s6545 | Bfo | Bfo (BFO_7703420474_2021_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
+| s6546 | Bfo | Bfo (BFO_7703420474_2022_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
+| s6547 | Bfo | Bfo (BFO_7703420474_2023_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
+| s6548 | Bfo | Bfo (BFO_7703420474_2024_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
+| s6549 | Bfo | Bfo (BFO_7703420474_2025_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

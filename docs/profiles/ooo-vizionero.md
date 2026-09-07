@@ -21,6 +21,16 @@
 |---|---|---|
 | Коган Михаил Александрович | 2026-04-21 | personal ИНН 771705581991; also sole founder [s0479] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽9,597,000 | ₽1,285,000 | [s6521] |
+| 2022 | ₽19,727,000 | ₽9,585,000 | [s6522] |
+| 2023 | ₽44,168,000 | ₽4,479,000 | [s6523] |
+| 2024 | ₽4,310,000 | ₽1,165,000 | [s6524] |
+| 2025 | ₽728,424,000 | ₽8,981,165,000 | [s6525] |
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -79,6 +89,11 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0479 | EGRUL extract | EGRUL extract (ul-1195958038902-20260823131741.pdf) | — | 2026-08-23 |
+| s6521 | Bfo | Bfo (BFO_5902056314_2021_ооо-визионеро.pdf) | — | — |
+| s6522 | Bfo | Bfo (BFO_5902056314_2022_ооо-визионеро.pdf) | — | — |
+| s6523 | Bfo | Bfo (BFO_5902056314_2023_ооо-визионеро.pdf) | — | — |
+| s6524 | Bfo | Bfo (BFO_5902056314_2024_ооо-визионеро.pdf) | — | — |
+| s6525 | Bfo | Bfo (BFO_5902056314_2025_ооо-визионеро.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -25,6 +25,16 @@
 
 - **IoT-устройства и контроллеры мощности** — Power controllers/control panels, electrical-parameter monitoring instruments, oil & gas measurement systems, industrial automation hardware/software, battery charging/balancing devices, LED lighting drivers. "Transport" project line covers electronics for land/air/water vehicles.
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽4,999,000 | ₽2,078,000 | [s6614] |
+| 2022 | ₽15,398,000 | ₽8,181,000 | [s6615] |
+| 2023 | ₽49,737,000 | ₽27,281,000 | [s6616] |
+| 2024 | ₽52,810,000 | ₽28,680,000 | [s6617] |
+| 2025 | ₽112,980,000 | ₽29,720,000 | [s6618] |
+
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 4 OCCRP Aleph match(es) (screened 2026-09-05).
 
@@ -47,6 +57,11 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0484 | EGRUL extract | EGRUL extract (ul-1217800070509-20260823131933.pdf) | — | 2026-08-23 |
+| s6614 | Bfo | Bfo (BFO_7810918592_2021_ооо-нпп-элво.pdf) | — | — |
+| s6615 | Bfo | Bfo (BFO_7810918592_2022_ооо-нпп-элво.pdf) | — | — |
+| s6616 | Bfo | Bfo (BFO_7810918592_2023_ооо-нпп-элво.pdf) | — | — |
+| s6617 | Bfo | Bfo (BFO_7810918592_2024_ооо-нпп-элво.pdf) | — | — |
+| s6618 | Bfo | Bfo (BFO_7810918592_2025_ооо-нпп-элво.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

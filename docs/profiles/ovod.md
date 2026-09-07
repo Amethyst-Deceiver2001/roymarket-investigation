@@ -26,6 +26,15 @@
 - **«Провод-15»** — Fiber-optic-guided heavy FPV strike drone variant. Press-reported (2026-08-23 web search) >40km range record in the SVO zone and destruction of a Ukrainian ammunition depot in Sumy region (Aug 2026 coverage) -- not yet cross-checked against a primary source.
 - **Роботизированный комплекс «ДОВОД»** — Наземный необитаемый робототехнический комплекс для безлюдной доставки и запуска FPV-дронов «ОВОД 10» в район выполнения боевой задачи. Совместная разработка ОВОДа и НРТК «Курьер». Действует на удалении до 20 км от операторов, запускает FPV-дроны с дальностью до 35 км — оператор может находиться на расстоянии до 55 км от цели. Успешно испытан в зоне СВО (30.07.2026). Планируется ИИ-управление. [s5446]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2022 | — | ₽-35,000 | [s6531] |
+| 2023 | ₽110,147,000 | ₽6,733,000 | [s6532] |
+| 2024 | ₽561,552,000 | ₽81,457,000 | [s6533] |
+| 2025 | ₽1,310,635,000 | ₽27,965,000 | [s6534] |
+
 ## Government contracts
 
 - customer: ФГБОУ ВО «Воронежский государственный технический университет»; date: 2025; items: Поставка беспилотных авиационных систем мультироторного типа для проведения научно-исследовательских работ — largest of 3 similar VSTU contracts (also 1366202088624000018 ₽19.18m, 1366202088624000019 ₽10.59m) plus a 4th to Belgorod State Technological University (1312301779325000005, ₽12.99m, UAV-vehicle experimental components) — ₽72.6m total across 4 contracts.; reg_number: 1366202088625000035; value_rub: 29883878 [s3376]
@@ -124,6 +133,10 @@ _No named principals linked to this entity yet._
 | s6454 | Telegram media | Telegram media (TGMEDIA_7100027464_20260306_tulaovod-post845-1.jpg) | 2026-03-06 | — |
 | s6455 | Telegram media | Telegram media (TGMEDIA_7100027464_20260526_tulaovod-post896-1.jpg) | 2026-05-26 | — |
 | s6456 | Tgpost | Tgpost (TGPOST_multi_20260907_tulaovod-marketing-battlefield-scan.txt) | 2026-09-07 | — |
+| s6531 | Bfo | Bfo (BFO_7100027464_2022_ооо-рлвт.pdf) | — | — |
+| s6532 | Bfo | Bfo (BFO_7100027464_2023_ооо-рлвт.pdf) | — | — |
+| s6533 | Bfo | Bfo (BFO_7100027464_2024_ооо-рлвт.pdf) | — | — |
+| s6534 | Bfo | Bfo (BFO_7100027464_2025_ооо-рлвт.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -31,6 +31,16 @@
 |---|---|---|
 | ООО «Герон-Авиа» | 2024-10-17 | same ИНН/ОГРН as ООО «Герон» -- appears as the lessee name on a 2024 vehicle-leasing fact-message on Fedresurs. Ties directly to the geronavia.ru site already linked to this entity. [s5314] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | — | — | [s6609] |
+| 2022 | ₽463,000 | ₽23,000 | [s6610] |
+| 2023 | ₽5,567,000 | ₽10,000 | [s6611] |
+| 2024 | ₽28,732,000 | ₽151,000 | [s6612] |
+| 2025 | ₽51,420,000 | ₽-512,000 | [s6613] |
+
 ## Litigation
 
 - as_of: 2026-02-17; court: Арбитражный суд Новгородской области (код А44); parties: УФНС России по Новгородской области (заявитель) против ООО «Герон» (должник); status: Заявление направлено в суд 17.02.2026 (опубликовано на Федресурсе 18.02.2026); subject: Заявление уполномоченного органа (налоговой службы) о признании ООО «Герон» несостоятельным (банкротом) [s5310]
@@ -65,6 +75,11 @@
 | s5323 | Fedresurs | Fedresurs (FEDRESURS_C8BD988ADE964733AFD84EDE4FC0A871_20260902_sberbank-bankruptcy-intent-1.json) | 2026-09-02 | — |
 | s5324 | Fedresurs | Fedresurs (FEDRESURS_FB6C4FA60CB44687AF7C6AE995CDE908_20260902_sberbank-bankruptcy-intent-2.json) | 2026-09-02 | — |
 | s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
+| s6609 | Bfo | Bfo (BFO_7802893898_2021_ооо-герон.pdf) | — | — |
+| s6610 | Bfo | Bfo (BFO_7802893898_2022_ооо-герон.pdf) | — | — |
+| s6611 | Bfo | Bfo (BFO_7802893898_2023_ооо-герон.pdf) | — | — |
+| s6612 | Bfo | Bfo (BFO_7802893898_2024_ооо-герон.pdf) | — | — |
+| s6613 | Bfo | Bfo (BFO_7802893898_2025_ооо-герон.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

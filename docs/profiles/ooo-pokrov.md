@@ -34,6 +34,13 @@
 - **Часы «Таир»** — Wearable notification device paired with the Булат v.4 detector. [s1386]
 - **Детектор «Марс»** — Resold 3mx product — detector of digital video links and ELRS remote controls. [s1386]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | ₽2,731,000 | ₽113,000 | [s6508] |
+| 2025 | ₽110,386,000 | ₽3,960,000 | [s6509] |
+
 ## Government contracts
 
 - customer: ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz); date: 2025; items: Поставка средств ПОДАВЛЕНИЯ беспилотных аппаратов (не обнаружения — corrected per the sole-supplier notice's own text, which the contract-card-only extraction had mis-parsed as detection). Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ, justified in the notice by reference to МЧС letters МЧС России от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного каталога средств противодействия», explicitly tied to equipping personnel deployed for «поиск, обезвреживание и уничтожение взрывоопасных предметов на территории Курской области» (ordnance-disposal operations in Kursk region) with counter-UAV detection equipment for their own force protection.; reg_number: 1500300810225000157; value_rub: 2314200 [s3680]
@@ -70,6 +77,8 @@
 | s3424 | Zakupki | Zakupki (ZAKUPKI_contract_3310005025826000052_20260829.html) | 2026-08-29 | — |
 | s3669 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1500300810225000157_1500300810225000157_elektronnyy-kon-15003008102250001570005_72034074.xml) | 7203-40-74 | — |
 | s3680 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1500300810225000157_1500300810225000157_uvedomlenie-fas-15003008102250001570006_4d2c94b3.zip) | — | — |
+| s6508 | Bfo | Bfo (BFO_5038189259_2024_ооо-покров.pdf) | — | — |
+| s6509 | Bfo | Bfo (BFO_5038189259_2025_ооо-покров.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

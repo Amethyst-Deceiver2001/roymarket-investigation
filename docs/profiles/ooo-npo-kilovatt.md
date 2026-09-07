@@ -29,6 +29,13 @@
 
 - **«Капюшон»** — REB (radio-electronic warfare) jamming stations against FPV drones. Trademark Certificate No. 1086620 and industrial-design Patent No. 145992 (jamming device for UAV communications) both referenced on kilowat48.ru/company/docs/ -- not yet independently verified via Rospatent/FIPS. [s0532]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | ₽237,607,000 | ₽58,418,000 | [s6501] |
+| 2025 | ₽23,000 | ₽3,425,000 | [s6502] |
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -61,6 +68,8 @@
 |---|---|---|---|---|
 | s0532 | EGRUL extract | EGRUL extract (ul-1244800001820-20260823151547.pdf) | — | 2026-08-23 |
 | s0945 | Rospatent record | Rospatent record (ROSPATENT_20260824_full-roster-tm-sweep.json) | 2026-08-24 | — |
+| s6501 | Bfo | Bfo (BFO_4800013729_2024_ооо-нпо-киловатт.pdf) | — | — |
+| s6502 | Bfo | Bfo (BFO_4800013729_2025_ооо-нпо-киловатт.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

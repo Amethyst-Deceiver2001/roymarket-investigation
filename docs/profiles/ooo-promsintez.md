@@ -21,6 +21,16 @@
 |---|---|---|
 | Гарькуша Владимир Владимирович | 2020-02-27 | personal ИНН 344300633904, also registered as individual entrepreneur ОГРНИП 317344300095898 [s0493] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽1,570,395,000 | ₽142,834,000 | [s6491] |
+| 2022 | ₽1,745,756,000 | ₽249,939,000 | [s6492] |
+| 2023 | ₽2,116,771,000 | ₽331,947,000 | [s6493] |
+| 2024 | ₽2,262,184,000 | ₽294,461,000 | [s6494] |
+| 2025 | ₽1,572,965,000 | ₽223,990,000 | [s6495] |
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -59,6 +69,11 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0493 | EGRUL extract | EGRUL extract (ul-1073435002013-20260823133829.pdf) | — | 2026-08-23 |
+| s6491 | Bfo | Bfo (BFO_3435084957_2021_ооо-промсинтез.pdf) | — | — |
+| s6492 | Bfo | Bfo (BFO_3435084957_2022_ооо-промсинтез.pdf) | — | — |
+| s6493 | Bfo | Bfo (BFO_3435084957_2023_ооо-промсинтез.pdf) | — | — |
+| s6494 | Bfo | Bfo (BFO_3435084957_2024_ооо-промсинтез.pdf) | — | — |
+| s6495 | Bfo | Bfo (BFO_3435084957_2025_ооо-промсинтез.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

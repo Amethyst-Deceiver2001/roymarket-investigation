@@ -53,7 +53,9 @@
 | Year | Revenue | Profit | Source |
 |---|---|---|---|
 | 2024 | ₽12,959,000 | ₽5,497,000 | [s0380] |
+| 2024 | ₽12,959,000 | ₽5,497,000 | [s5535] |
 | 2025 | ₽55,770,000 | ₽36,095,000 | [s5536] |
+| 2025 | ₽55,770,000 | ₽36,095,000 | [s0381] |
 
 - 5 OpenSanctions match(es) (screened 2026-09-06).
 
@@ -96,6 +98,7 @@
 |---|---|---|---|---|
 | s0229 | EGRUL extract | EGRUL extract (ul-1249500004181-20260818024226.pdf) | — | 2026-08-18 |
 | s0380 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9500026652_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
+| s0381 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9500026652_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
 | s1166 | License | License (LICENSE_9500026652_20251230_ooo-arkhangel-zaporizhzhia-rosobrnadzor.pdf) | 2025-12-30 | 2025-12-30 |
 | s5443 | Tgpost | Tgpost (TGPOST_multi_20230224-20230704_projectArchangel-dozor-armor-remote-control.txt) | — | — |
 | s5448 | Tgpost | Tgpost (TGPOST_multi_20260828-20260904_projectArchangel-week-interceptor-business-rubikon.txt) | — | — |
@@ -104,6 +107,7 @@
 | s5505 | EGRUL extract | EGRUL extract (EGRUL_9500026652_20260905_ooo-arkhangel-zaporizhzhie.pdf) | 2026-09-05 | 2026-09-05 |
 | s5523 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9001027869_20260905_ooo-arkhangel-melitopol-2.json) | 2026-09-05 | — |
 | s5525 | document | document (RK2035_9500026652_20260905_ooo-arkhangel-zaporizhzhie.json) | 2026-09-05 | 2026-09-05 |
+| s5535 | Bfo | Bfo (BFO_9500026652_2024_ooo-arkhangel-zaporizhzhie.pdf) | — | — |
 | s5536 | Bfo | Bfo (BFO_9500026652_2025_ooo-arkhangel-zaporizhzhie.pdf) | — | — |
 
 ---

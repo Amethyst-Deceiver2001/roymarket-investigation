@@ -35,6 +35,13 @@
 |---|---|---|
 | 100000 | — | from corrections:add_entities, unverified |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | — | ₽80,000 | [s6663] |
+| 2025 | — | ₽426,000 | [s6664] |
+
 ## Workforce & production scale
 
 | Headcount | As of | Note |
@@ -61,6 +68,8 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s2852 | Rusprofile | Rusprofile (RUSPROFILE_9714054618_20260828_tstp-ooo.html) | 2026-08-28 | — |
+| s6663 | Bfo | Bfo (BFO_9714054618_2024_ооо-цтп.pdf) | — | — |
+| s6664 | Bfo | Bfo (BFO_9714054618_2025_ооо-цтп.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

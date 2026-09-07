@@ -20,6 +20,16 @@
 |---|---|---|
 | Кайденко Анна Викторовна | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0084] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽25,973,094,000 | ₽159,193,000 | [s6526] |
+| 2022 | ₽26,556,252,000 | ₽505,723,000 | [s6527] |
+| 2023 | ₽25,537,132,000 | ₽710,708,000 | [s6528] |
+| 2024 | ₽33,533,378,000 | ₽305,461,000 | [s6529] |
+| 2025 | ₽35,677,466,000 | ₽3,318,793,000 | [s6530] |
+
 ## Licences
 
 - Приказ №255 от 21.06.2018. Статус: действующая. [s6435]
@@ -59,6 +69,11 @@ _No named principals linked to this entity yet._
 | s6435 | Mchs | Mchs (MCHS_6330037352_20260906_fire-license-search-ooo-nova.html) | 2026-09-06 | — |
 | s6440 | Rkn | Rkn (RKN_6330037352_20260906_comms-license-search-ooo-nova.html) | 2026-09-06 | — |
 | s6446 | Rkn | Rkn (RKN_6330037352_20260907_frequency-registry-ooo-nova.html) | 2026-09-07 | — |
+| s6526 | Bfo | Bfo (BFO_6330037352_2021_ооо-нова.pdf) | — | — |
+| s6527 | Bfo | Bfo (BFO_6330037352_2022_ооо-нова.pdf) | — | — |
+| s6528 | Bfo | Bfo (BFO_6330037352_2023_ооо-нова.pdf) | — | — |
+| s6529 | Bfo | Bfo (BFO_6330037352_2024_ооо-нова.pdf) | — | — |
+| s6530 | Bfo | Bfo (BFO_6330037352_2025_ооо-нова.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

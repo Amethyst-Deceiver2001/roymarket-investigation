@@ -34,6 +34,7 @@
 
 | Year | Revenue | Profit | Source |
 |---|---|---|---|
+| 2021 | — | — | [s0320] |
 | 2022 | ₽5,692,000 | ₽89,000 | [s0321] |
 | 2023 | ₽19,658,000 | ₽327,000 | [s0322] |
 | 2024 | ₽10,930,000 | ₽660,000 | [s0323] |
@@ -92,6 +93,7 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| s0320 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2021_20260817.zip) | 2026-08-17 | 2021-12-31 |
 | s0321 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2022_20260817.zip) | 2026-08-17 | 2022-12-31 |
 | s0322 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2023_20260817.zip) | 2026-08-17 | 2023-12-31 |
 | s0323 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |

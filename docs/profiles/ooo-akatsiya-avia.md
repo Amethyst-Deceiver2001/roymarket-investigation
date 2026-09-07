@@ -19,6 +19,16 @@
 |---|---|---|
 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Иванов Андрей Георгиевич (confirmed live via egrul.nalog.ru 2026-09-02) | — | from corrections:add_entities, unverified |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽65,026,000 | ₽-25,403,000 | [s6594] |
+| 2022 | ₽110,803,000 | ₽2,550,000 | [s6595] |
+| 2023 | ₽155,587,000 | ₽6,671,000 | [s6596] |
+| 2024 | ₽191,395,000 | ₽45,256,000 | [s6597] |
+| 2025 | ₽149,243,000 | ₽20,567,000 | [s6598] |
+
 ## Government contracts
 
 - The entity's only zakupki hit, found by the user's 2026-09-05 scan of 39 previously-unscanned ИНН. Открытый аукцион в электронной форме, статус «Исполнение завершено». SUBJECT NOT ESTABLISHED: fetch-documents returns 0 attachments for this regNumber — a 2013 award predates the EIS attachment archive — and the contract card carries no предмет field, so what was supplied is not determinable from any document on file. Recorded with items null rather than inferred from the customer's profile. A 2013 contract with an МЧС aviation rescue centre is a decade before this investigation's period of interest and is wired for footprint completeness, not as a war-relevant finding. [s5654]
@@ -41,6 +51,11 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s5654 | Zakupki | Zakupki (ZAKUPKI_contract_0348100081513000036_20260905.html) | 2026-09-05 | — |
 | s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
+| s6594 | Bfo | Bfo (BFO_7802145959_2021_ооо-акация-авиа.pdf) | — | — |
+| s6595 | Bfo | Bfo (BFO_7802145959_2022_ооо-акация-авиа.pdf) | — | — |
+| s6596 | Bfo | Bfo (BFO_7802145959_2023_ооо-акация-авиа.pdf) | — | — |
+| s6597 | Bfo | Bfo (BFO_7802145959_2024_ооо-акация-авиа.pdf) | — | — |
+| s6598 | Bfo | Bfo (BFO_7802145959_2025_ооо-акация-авиа.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

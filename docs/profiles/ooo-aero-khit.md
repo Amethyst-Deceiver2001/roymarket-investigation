@@ -24,6 +24,14 @@
 
 - **«Велес»** — FPV kamikaze drone, per GUR profile. [s0956]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2023 | — | ₽-3,042,000 | [s6488] |
+| 2024 | ₽130,017,000 | ₽516,000 | [s6489] |
+| 2025 | ₽285,001,113,000 | ₽948,580,000 | [s6490] |
+
 ## State-program participation
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; name_ru: Каталог продукции ГИСП — отрасль БАС; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly. [s5344]
@@ -56,6 +64,9 @@
 | s0729 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_2700012608_20260824_ooo-aero-khit.json) | 2026-08-24 | — |
 | s0956 | GUR war-sanctions record | GUR war-sanctions record (GUR_2700012608_20260824_ooo-aero-khit.html) | 2026-08-24 | — |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| s6488 | Bfo | Bfo (BFO_2700012608_2023_ооо-аэро-хит.pdf) | — | — |
+| s6489 | Bfo | Bfo (BFO_2700012608_2024_ооо-аэро-хит.pdf) | — | — |
+| s6490 | Bfo | Bfo (BFO_2700012608_2025_ооо-аэро-хит.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

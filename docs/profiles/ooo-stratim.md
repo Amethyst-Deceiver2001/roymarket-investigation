@@ -26,6 +26,13 @@
 - **«Русак»** — FPV kamikaze UAV, per GUR profile. [s0958]
 - **«Голубь»** — FPV kamikaze UAV, per GUR profile. [s0958]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | ₽880,000 | ₽472,000 | [s6511] |
+| 2025 | — | ₽-592,000 | [s6512] |
+
 ## Sanctions & screening
 
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), EU-RUS, Switzerland (SECO, Ukraine-related measures), Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)** [s0745]
@@ -56,6 +63,8 @@
 | s0513 | EGRUL extract | EGRUL extract (ul-1245200009075-20260823135114.pdf) | — | 2026-08-23 |
 | s0745 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5260494520_20260824_ooo-stratim.json) | 2026-08-24 | — |
 | s0958 | GUR war-sanctions record | GUR war-sanctions record (GUR_5260494520_20260824_ooo-stratim.html) | 2026-08-24 | — |
+| s6511 | Bfo | Bfo (BFO_5260494520_2024_ооо-стратим.pdf) | — | — |
+| s6512 | Bfo | Bfo (BFO_5260494520_2025_ооо-стратим.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

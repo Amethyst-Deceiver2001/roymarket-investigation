@@ -25,6 +25,15 @@
 - **БВС СТ AS-32-8** — Compact electric fixed-wing UAS for rapid deployment and high-precision imagery. [s1169]
 - **БВС СТ Д-12К** — Electric VTOL UAS. [s1169]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2022 | — | ₽-60,011,000 | [s6565] |
+| 2023 | ₽442,000 | ₽-170,265,000 | [s6566] |
+| 2024 | — | ₽-158,859,000 | [s6567] |
+| 2025 | — | ₽-32,713,000 | [s6568] |
+
 ## Licences
 
 - Свидетельство эксплуатанта (СЭ), выполняющего авиационные работы — реестр Росавиации (favt.gov.ru, выборка из ФГИС «Реестр эксплуатантов и воздушных судов» на 01.09.2026). Статус: норма (действующее). Эксплуатируемые ВС: АС-МК-6 (1 ед.), Диам-20 (1 ед.) — оба являются беспилотными авиационными системами. [s6416]
@@ -59,6 +68,10 @@
 | s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
 | s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
 | s6416 | bulk open-data extract | bulk open-data extract (DATASET_20260901_favt-aviation-works-operators-registry.txt) | 2026-09-01 | — |
+| s6565 | Bfo | Bfo (BFO_7708407413_2022_ао-аэромакс.pdf) | — | — |
+| s6566 | Bfo | Bfo (BFO_7708407413_2023_ао-аэромакс.pdf) | — | — |
+| s6567 | Bfo | Bfo (BFO_7708407413_2024_ао-аэромакс.pdf) | — | — |
+| s6568 | Bfo | Bfo (BFO_7708407413_2025_ао-аэромакс.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

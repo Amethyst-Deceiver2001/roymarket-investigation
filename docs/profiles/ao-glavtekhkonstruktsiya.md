@@ -20,6 +20,16 @@
 |---|---|---|
 | Кашников Константин Николаевич | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0066] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽118,244,000 | ₽-88,705,000 | [s6496] |
+| 2022 | ₽145,531,000 | ₽-80,565,000 | [s6497] |
+| 2023 | ₽271,066,000 | ₽-2,047,000 | [s6498] |
+| 2024 | ₽163,878,000 | ₽-103,240,000 | [s6499] |
+| 2025 | ₽804,931,000 | ₽-92,098,000 | [s6500] |
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -38,6 +48,11 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0066 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_4611014597_20260822_ao-glavtekhkonstruktsiya.json) | 2026-08-22 | 2026-08-22 |
+| s6496 | Bfo | Bfo (BFO_4611014597_2021_ао-гтк.pdf) | — | — |
+| s6497 | Bfo | Bfo (BFO_4611014597_2022_ао-гтк.pdf) | — | — |
+| s6498 | Bfo | Bfo (BFO_4611014597_2023_ао-гтк.pdf) | — | — |
+| s6499 | Bfo | Bfo (BFO_4611014597_2024_ао-гтк.pdf) | — | — |
+| s6500 | Bfo | Bfo (BFO_4611014597_2025_ао-гтк.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

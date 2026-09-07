@@ -212,6 +212,64 @@ favor of the working free-text path. One entry, corrected and promoted:
 | 66 | **reestrs.minjust.gov.ru** | A generic registries platform underlying multiple Минюст registries (its foreign-agents page loads via `ExternalApi.setBaseUrl('https://reestrs.minjust.gov.ru')` + a table UUID, e.g. `39b95df9-9a68-6b6d-e1e3-e6388507067e`). A single probe of `GET /api/registers/<uuid>` was interrupted mid-attempt 2026-09-06 and never completed — genuinely open, not confirmed dead. Worth a proper chrome-devtools session (same technique that cracked #59/#60 above) before writing this off. |
 | 67 | ФССП Bank of Enforcement Proceedings (`fssp.gov.ru/iss/ip`) | Already Tier C (#28, captcha on the public page) but note from 2026-09-06 research: the **official** API (`api-ip.fssp.gov.ru`) requires a token issued by ФССП itself and is asynchronous (submit task → poll for result) — not just captcha-gated, genuinely not an anonymous-access API even with a token workaround. Third-party wrappers (`github.com/TalismanFR/fssp`) confirm the same shape. Not worth further automation attempts without the user obtaining credentials directly from ФССП. |
 
+## 2026-09-07: БФО (financials) and full-выписка (charter capital) roster sweeps closed
+
+Two of the coverage audit's stage-2 scriptable-sweep targets, both handed to
+the user as full-roster live jobs per the crawling-jobs policy and run to
+completion:
+
+- **`bfo_pull.py --all-missing`** (new flag added 2026-09-07, mirroring
+  `egrul_vypiska_pull.py`'s selector-less full-roster mode): swept all 104
+  entities that had zero `financials[]`. Found and fixed a real parser bug
+  while triaging the results — `parse_bfo_financials.py`'s PDF-path parser
+  (`parse_pdf_filing()`, the branch every `bfo_pull.py` download goes
+  through) only ever extracted the P&L codes (2110/2400) and never the ОЦИС
+  funds_* codes (6100-6400), so every non-profit pulled via `bfo_pull.py`
+  silently lost its real money the same way the original 2026-09-05
+  xlsx-path bug did — caught on `ano-arrs-krasnodar`, whose 2024/2025
+  filings had real 6200/6300 figures sitting unread. Fixed; both PDF and
+  xlsx paths now extract funds_* identically. `financials[]` coverage rose
+  72→77/186 (231 new filing-year records wired, 11 confirmed genuine
+  all-dash zero filings, 5 left as real gaps pending human review).
+  Also fixed a real duplicate-content bug in `bfo_pull.py` itself: the
+  `--all-missing` path re-slugified `bo.nalog.gov.ru`'s own shortName
+  instead of reusing the entity's registry slug, causing a second,
+  Cyrillic-slugged re-download of an already-pulled filing (`ooo-arkhangel`
+  FY2025) — fixed to prefer `entities.json`'s own slug.
+- **`egrul_vypiska_pull.py`** (no selector = full roster, already built
+  2026-09-05): swept the 133 entities missing `charter_capital_history` —
+  this is the effective replacement for the dead-end Fedresurs route (see
+  entry #24 above), giving founders/shares/capital/ОКВЭД/address history
+  from a signed primary document.
+
+**Also found and fixed while wiring the results: a pre-existing dual
+correction-key collision bug in `extract_registry.py`**, unrelated to the
+БФО work itself but discovered while merging results in. Several entities
+(`ooo-arkhangel`, `fond-nasha-pravda`, `ooo-arkhangel-zaporizhzhie`, and
+~2 more) had TWO correction entries pointing at the same underlying record
+— one keyed by ИНН, one by slug, both pre-dating this session — and
+`extract_registry.py`'s correction loop applied both, with whichever key
+was processed last silently overwriting the earlier one's
+`_verified_against`/`_corrected` fields with `None` (already true in the
+last-committed `entities.json`, e.g. `ooo-arkhangel`'s `financials[]` was
+silently `[]` in production despite a real dormant-filing note existing in
+one of its two correction entries). Fixed the overwrite to only apply when
+the new value is non-null, and manually consolidated the ~3 entities with
+a genuine `financials[]` conflict into a single key each. **This bug
+predates 2026-09-07 and may affect other dual-keyed entities this pass
+didn't touch — a full audit of `corrections_entities.json` for ИНН/slug
+key pairs targeting the same entity (85 such pairs exist; only ~5 had an
+actual field-value conflict) is still open, not done this pass.**
+
+Litigation (5→9/186) was deliberately NOT swept further — `kad.arbitr.ru`
+is DDoS-Guard-blocked with no scripting route (confirmed from both this
+sandbox and the user's own network, logged above), and the ФССП open-data
+route is already fully exploited. The stage-2 "scriptable sweeps" set is
+now genuinely exhausted; further financial/capital gaps need a manual
+document pull (ФНС founding-doc `UD_*.zip` exports have no open-API route
+either — confirmed 2026-09-07, still a user-only manual ФНС-portal
+download).
+
 ## Known gaps in the source set itself (nothing checks these yet)
 
 - **Customs/import data.** Russia has hidden company-level import data since

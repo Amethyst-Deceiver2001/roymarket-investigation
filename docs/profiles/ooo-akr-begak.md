@@ -19,6 +19,16 @@
 |---|---|---|
 | Бегак Александр Аркадьевич | 2020-08-17 | personal ИНН 263202438639; also sole founder — company name carries his own surname [s0525] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽773,000 | ₽652,000 | [s6478] |
+| 2022 | ₽337,000 | ₽-3,813,000 | [s6479] |
+| 2023 | ₽17,231,000 | ₽10,261,000 | [s6480] |
+| 2024 | ₽14,638,000 | ₽-948,000 | [s6481] |
+| 2025 | ₽12,295,000 | ₽40,000 | [s6482] |
+
 ## State-program participation
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
@@ -48,6 +58,11 @@ _No named principals linked to this entity yet._
 | s0525 | EGRUL extract | EGRUL extract (ul-1202600009919-20260823145414.pdf) | — | 2026-08-23 |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 | s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
+| s6478 | Bfo | Bfo (BFO_2632116476_2021_ооо-акр-бегак.pdf) | — | — |
+| s6479 | Bfo | Bfo (BFO_2632116476_2022_ооо-акр-бегак.pdf) | — | — |
+| s6480 | Bfo | Bfo (BFO_2632116476_2023_ооо-акр-бегак.pdf) | — | — |
+| s6481 | Bfo | Bfo (BFO_2632116476_2024_ооо-акр-бегак.pdf) | — | — |
+| s6482 | Bfo | Bfo (BFO_2632116476_2025_ооо-акр-бегак.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

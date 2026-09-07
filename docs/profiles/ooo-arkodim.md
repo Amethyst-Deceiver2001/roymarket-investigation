@@ -25,6 +25,16 @@
 - **Гибкий кабельный канал ARKODIM стальной** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Изделия прочие из недрагоценных металлов, не включенные в другие группировки [s5391]
 - **Гибкий кабельный канал ARKODIM пластиковый ** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Арматура электроизоляционная из пластмасс [s5391]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽15,401,000 | ₽198,000 | [s6463] |
+| 2022 | ₽26,713,000 | ₽2,100,000 | [s6464] |
+| 2023 | ₽38,307,000 | ₽3,422,000 | [s6465] |
+| 2024 | ₽37,009,000 | ₽1,023,000 | [s6466] |
+| 2025 | ₽45,886,000 | ₽218,000 | [s6467] |
+
 ## State-program participation
 
 - as_of: 2026-09-06; name_en: rk.2035.university national БАС (UAV-industry) company registry; name_ru: Реестр компаний БАС — rk.2035.university; role: ID-confirmed match (exact ИНН + ОГРН, not a name collision) in the national rk.2035.university БАС-industry company directory. Sectors declared: Компания БАС. Activity types: Разработка, Производство. Personnel count 8, profile created 2026-08-12. [s1165]
@@ -104,6 +114,11 @@
 | s0475 | EGRUL extract | EGRUL extract (ul-1101690020959-20260823131713.pdf) | — | 2026-08-23 |
 | s1165 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| s6463 | Bfo | Bfo (BFO_1659101884_2021_ооо-аркодим.pdf) | — | — |
+| s6464 | Bfo | Bfo (BFO_1659101884_2022_ооо-аркодим.pdf) | — | — |
+| s6465 | Bfo | Bfo (BFO_1659101884_2023_ооо-аркодим.pdf) | — | — |
+| s6466 | Bfo | Bfo (BFO_1659101884_2024_ооо-аркодим.pdf) | — | — |
+| s6467 | Bfo | Bfo (BFO_1659101884_2025_ооо-аркодим.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

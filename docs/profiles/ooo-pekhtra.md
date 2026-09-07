@@ -21,6 +21,12 @@
 |---|---|---|
 | None | 2024-12-10 | Director appointment record present (ГРН 1245200032406) but name field not captured in this extraction pass. [s0488] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2025 | ₽300,000 | ₽17,000 | [s6513] |
+
 ## Sanctions & screening
 
 **Sanctioned** [s0746]
@@ -41,6 +47,7 @@
 |---|---|---|---|---|
 | s0488 | EGRUL extract | EGRUL extract (ul-1245200032406-20260823131828.pdf) | — | 2026-08-23 |
 | s0746 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5261138034_20260824_ooo-pekhtra.json) | 2026-08-24 | — |
+| s6513 | Bfo | Bfo (BFO_5261138034_2025_ооо-пехтра.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

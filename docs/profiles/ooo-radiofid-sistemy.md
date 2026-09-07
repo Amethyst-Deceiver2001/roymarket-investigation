@@ -25,6 +25,16 @@
 |---|---|---|
 | 100% Незнамов Александр Васильевич | 2024-11-01 | 22.01.2010 – 01.11.2024, per dossier. [s1408] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽762,306,000 | ₽60,387,000 | [s6599] |
+| 2022 | ₽939,917,000 | ₽257,832,000 | [s6600] |
+| 2023 | ₽1,074,168,000 | ₽252,929,000 | [s6601] |
+| 2024 | ₽2,410,713,000 | ₽174,249,000 | [s6602] |
+| 2025 | ₽1,235,880,000 | ₽1,550,021,000 | [s6603] |
+
 ## Government contracts
 
 - Most recent contract on file (2025). Civilian road-safety customer. Status per the contract card as of the 2026-08-31 capture: Исполнение завершено. [s5233]
@@ -111,6 +121,11 @@
 | s5256 | Zakupki | Zakupki (ZAKUPKI_contract_3390300337517000095_20260831.html) | 2026-08-31 | — |
 | s5257 | Zakupki | Zakupki (ZAKUPKI_contract_3541110087518000025_20260831.html) | 2026-08-31 | — |
 | s5831 | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_7802491148_20260905_ooo-radiofid-sistemy.json) | 2026-09-05 | — |
+| s6599 | Bfo | Bfo (BFO_7802491148_2021_ооо-радиофид-системы.pdf) | — | — |
+| s6600 | Bfo | Bfo (BFO_7802491148_2022_ооо-радиофид-системы.pdf) | — | — |
+| s6601 | Bfo | Bfo (BFO_7802491148_2023_ооо-радиофид-системы.pdf) | — | — |
+| s6602 | Bfo | Bfo (BFO_7802491148_2024_ооо-радиофид-системы.pdf) | — | — |
+| s6603 | Bfo | Bfo (BFO_7802491148_2025_ооо-радиофид-системы.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

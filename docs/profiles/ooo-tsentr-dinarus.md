@@ -25,6 +25,13 @@
 
 - **Платформа Динарус** — Платформа для создания систем самоорганизующейся связи (self-organizing comms, MANET-based).
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | ₽29,961,000 | ₽6,230,000 | [s6506] |
+| 2025 | ₽9,202,000 | ₽-1,505,000 | [s6507] |
+
 ## Patents
 
 | Title | Reg. no. | Filed | Inventors |
@@ -59,6 +66,8 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0511 | EGRUL extract | EGRUL extract (ul-1245000015952-20260823135153.pdf) | — | 2026-08-23 |
+| s6506 | Bfo | Bfo (BFO_5022077503_2024_ооо-центр-динарус.pdf) | — | — |
+| s6507 | Bfo | Bfo (BFO_5022077503_2025_ооо-центр-динарус.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

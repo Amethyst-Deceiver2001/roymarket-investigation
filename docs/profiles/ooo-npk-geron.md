@@ -19,12 +19,32 @@
 |---|---|---|
 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Мушкевич Павел (confirmed live via egrul.nalog.ru 2026-09-02) | — | from corrections:add_entities, unverified |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽38,719,000 | ₽1,252,000 | [s6621] |
+| 2022 | ₽55,192,000 | ₽1,306,000 | [s6622] |
+| 2023 | ₽39,083,000 | ₽1,535,000 | [s6623] |
+| 2024 | ₽20,849,000 | ₽4,051,000 | [s6624] |
+| 2025 | ₽18,753,000 | ₽798,000 | [s6625] |
+
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OCCRP Aleph match(es) (screened 2026-09-05).
 
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
+
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+| s6621 | Bfo | Bfo (BFO_7814748285_2021_ооо-нпк-герон.pdf) | — | — |
+| s6622 | Bfo | Bfo (BFO_7814748285_2022_ооо-нпк-герон.pdf) | — | — |
+| s6623 | Bfo | Bfo (BFO_7814748285_2023_ооо-нпк-герон.pdf) | — | — |
+| s6624 | Bfo | Bfo (BFO_7814748285_2024_ооо-нпк-герон.pdf) | — | — |
+| s6625 | Bfo | Bfo (BFO_7814748285_2025_ооо-нпк-герон.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

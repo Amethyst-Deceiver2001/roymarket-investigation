@@ -22,6 +22,16 @@
 |---|---|---|
 | Чумаков Павел Андреевич | 2025-07-30 | personal ИНН 780706151347 [s0500] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽187,730,000 | ₽592,000 | [s6634] |
+| 2022 | ₽187,000 | ₽5,000 | [s6635] |
+| 2023 | ₽20,545,000 | ₽141,000 | [s6636] |
+| 2024 | ₽12,708,000 | ₽-1,054,000 | [s6637] |
+| 2025 | ₽12,000 | ₽-10,221,000 | [s6638] |
+
 ## Government contracts
 
 - Signed муниципальный контракт № 13 (source s4818) names the goods as «Средство селективного оповещения и информирования населения «ОРАЛО-150» или эквивалент» and lists 33 individual installation points, each one a named village or khutor in the Volokonovsky district's rural settlements. The technical annex requires the units to be controlled by the customer's existing П-166М КПУ (АО «КЗТА») and integrated into the regional РАСЦО Белгородской области alert system. Signed for ИНСТЕХ by генеральный директор Чумаков П.А., for the customer by глава администрации района Бикетов С.И. Status per the contract card as of the 2026-08-31 capture: Исполнение завершено. [s5249]
@@ -66,6 +76,11 @@
 | s5252 | Zakupki | Zakupki (ZAKUPKI_contract_3312010279323000013_20260831.html) | 2026-08-31 | — |
 | s5253 | Zakupki | Zakupki (ZAKUPKI_contract_3312601781924000002_20260831.html) | 2026-08-31 | — |
 | s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
+| s6634 | Bfo | Bfo (BFO_7842179810_2021_ооо-инстех.pdf) | — | — |
+| s6635 | Bfo | Bfo (BFO_7842179810_2022_ооо-инстех.pdf) | — | — |
+| s6636 | Bfo | Bfo (BFO_7842179810_2023_ооо-инстех.pdf) | — | — |
+| s6637 | Bfo | Bfo (BFO_7842179810_2024_ооо-инстех.pdf) | — | — |
+| s6638 | Bfo | Bfo (BFO_7842179810_2025_ооо-инстех.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

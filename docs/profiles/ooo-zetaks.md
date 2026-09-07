@@ -20,6 +20,15 @@
 |---|---|---|
 | Григорьев Григорий Валерьевич | 2022-10-25 | personal ИНН 530202790763; also sole founder [s0503] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2022 | ₽264,000 | ₽248,000 | [s6514] |
+| 2023 | ₽4,539,000 | ₽729,000 | [s6515] |
+| 2024 | ₽2,415,000 | ₽-390,000 | [s6516] |
+| 2025 | ₽1,861,000 | ₽-95,000 | [s6517] |
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
@@ -33,6 +42,10 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0503 | EGRUL extract | EGRUL extract (ul-1225300003983-20260823133456.pdf) | — | 2026-08-23 |
+| s6514 | Bfo | Bfo (BFO_5300006066_2022_ооо-зетакс.pdf) | — | — |
+| s6515 | Bfo | Bfo (BFO_5300006066_2023_ооо-зетакс.pdf) | — | — |
+| s6516 | Bfo | Bfo (BFO_5300006066_2024_ооо-зетакс.pdf) | — | — |
+| s6517 | Bfo | Bfo (BFO_5300006066_2025_ооо-зетакс.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

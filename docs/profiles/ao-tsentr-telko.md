@@ -21,6 +21,16 @@
 | Абрамченков Николай Григорьевич | 2015-05-26 | Signed contract 2771376023015000009 (ГБУ г. Москвы «Система 112») "действующий на основании Устава" — no доверенность number given, the standard indicator of the единоличный исполнительный орган at time of signing. Surfaced via scripts/zakupki_signatory_diff.py; predates the current director_history entry (Синельщиков Андрей Валентинович, as_of 2026-08-24 per egrul.nalog.ru) by ~11 years, no overlap conflict. [s1965] |
 | Синельщиков Андрей Валентинович | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0115] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽19,377,000 | ₽-55,000 | [s6583] |
+| 2022 | ₽19,442,000 | ₽-993,000 | [s6584] |
+| 2023 | ₽18,059,000 | ₽-335,000 | [s6585] |
+| 2024 | ₽17,713,000 | ₽-128,000 | [s6586] |
+| 2025 | ₽18,083,000 | ₽-799,000 | [s6587] |
+
 ## Government contracts
 
 - basis: Электронный аукцион; contract_number: 0173100012414000189; customer: Государственная фельдъегерская служба РФ (ГФС России); date: 2014-11-07; reg_number: 0173100012414000131; value_rub: 472472 [s1934]
@@ -62,6 +72,11 @@
 | s6437 | Mchs | Mchs (MCHS_7729150663_20260906_fire-license-search-ao-tsentr-telko.html) | 2026-09-06 | — |
 | s6444 | Rkn | Rkn (RKN_7729150663_20260906_comms-license-search-ao-tsentr-telko-full.html) | 2026-09-06 | — |
 | s6448 | Rkn | Rkn (RKN_7729150663_20260907_frequency-registry-ao-tsentr-telko.html) | 2026-09-07 | — |
+| s6583 | Bfo | Bfo (BFO_7729150663_2021_ао-центр-телко.pdf) | — | — |
+| s6584 | Bfo | Bfo (BFO_7729150663_2022_ао-центр-телко.pdf) | — | — |
+| s6585 | Bfo | Bfo (BFO_7729150663_2023_ао-центр-телко.pdf) | — | — |
+| s6586 | Bfo | Bfo (BFO_7729150663_2024_ао-центр-телко.pdf) | — | — |
+| s6587 | Bfo | Bfo (BFO_7729150663_2025_ао-центр-телко.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

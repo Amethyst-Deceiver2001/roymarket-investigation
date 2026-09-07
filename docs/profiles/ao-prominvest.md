@@ -20,6 +20,14 @@
 |---|---|---|
 | Митенков Борис Юрьевич | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0152] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2023 | — | ₽-458,000 | [s6660] |
+| 2024 | — | ₽-186,000 | [s6661] |
+| 2025 | — | ₽-26,548,000 | [s6662] |
+
 ## Sanctions & screening
 
 **Sanctioned** [s0811]
@@ -36,6 +44,9 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0152 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9714004945_20260822_ao-prominvest.json) | 2026-08-22 | 2026-08-22 |
 | s0811 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9714004945_20260824_ao-prominvest.json) | 2026-08-24 | — |
+| s6660 | Bfo | Bfo (BFO_9714004945_2023_ао-проминвест.pdf) | — | — |
+| s6661 | Bfo | Bfo (BFO_9714004945_2024_ао-проминвест.pdf) | — | — |
+| s6662 | Bfo | Bfo (BFO_9714004945_2025_ао-проминвест.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

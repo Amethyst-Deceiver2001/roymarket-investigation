@@ -25,6 +25,16 @@
 |---|---|---|
 | 198510, г. Санкт-Петербург, вн.тер.г. город Петергоф, ул. Константиновская, д. 8, литера А, помещ. 1-Н | 2026-03-29 | 2026-09-02: precise address from EGRUL extract s5307 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse "г. Санкт-Петербург". ГРН 2267800128253 dated 28.01.2026. [s5307] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | — | — | [s6604] |
+| 2022 | — | — | [s6605] |
+| 2023 | ₽425,000 | ₽41,000 | [s6606] |
+| 2024 | ₽4,000 | — | [s6607] |
+| 2025 | ₽12,477,000 | ₽602,000 | [s6608] |
+
 ## Litigation
 
 - Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
@@ -59,6 +69,11 @@
 |---|---|---|---|---|
 | s5307 | EGRUL extract | EGRUL extract (EGRUL_7802865058_20260608_ooo-skay-avia-grupp.pdf) | 2026-06-08 | 2026-03-29 |
 | s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
+| s6604 | Bfo | Bfo (BFO_7802865058_2021_ооо-скаи-авиа-групп.pdf) | — | — |
+| s6605 | Bfo | Bfo (BFO_7802865058_2022_ооо-скаи-авиа-групп.pdf) | — | — |
+| s6606 | Bfo | Bfo (BFO_7802865058_2023_ооо-скаи-авиа-групп.pdf) | — | — |
+| s6607 | Bfo | Bfo (BFO_7802865058_2024_ооо-скаи-авиа-групп.pdf) | — | — |
+| s6608 | Bfo | Bfo (BFO_7802865058_2025_ооо-скаи-авиа-групп.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

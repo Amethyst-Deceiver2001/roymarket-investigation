@@ -15,6 +15,16 @@
 - **«Привет-82»** — Aircraft-type FPV loitering munition, per GUR profile. [s0965]
 - **«Привет-120»** — Aircraft-type FPV loitering munition, per GUR profile. [s0965]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽22,925,000 | ₽151,000 | [s6626] |
+| 2022 | ₽42,022,000 | ₽391,000 | [s6627] |
+| 2023 | ₽4,328,000 | ₽-27,510,000 | [s6628] |
+| 2024 | ₽106,734,000 | ₽32,000 | [s6629] |
+| 2025 | ₽3,662,061,000 | ₽-41,767,000 | [s6630] |
+
 ## Litigation
 
 - Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
@@ -52,6 +62,11 @@ _No named principals linked to this entity yet._
 | s0799 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7838044584_20260824_ooo-spdbbk.json) | 2026-08-24 | — |
 | s0965 | GUR war-sanctions record | GUR war-sanctions record (GUR_7838044584_20260824_ooo-spdbbk.html) | 2026-08-24 | — |
 | s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
+| s6626 | Bfo | Bfo (BFO_7838044584_2021_ооо-спдббк.pdf) | — | — |
+| s6627 | Bfo | Bfo (BFO_7838044584_2022_ооо-спдббк.pdf) | — | — |
+| s6628 | Bfo | Bfo (BFO_7838044584_2023_ооо-спдббк.pdf) | — | — |
+| s6629 | Bfo | Bfo (BFO_7838044584_2024_ооо-спдббк.pdf) | — | — |
+| s6630 | Bfo | Bfo (BFO_7838044584_2025_ооо-спдббк.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

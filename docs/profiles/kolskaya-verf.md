@@ -22,6 +22,12 @@
 |---|---|---|
 | Шаповалов Сергей Михайлович | 2026-03-18 | personal ИНН 511005152619; also sole founder [s0512] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2025 | — | ₽-4,000 | [s6510] |
+
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
@@ -37,6 +43,7 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0512 | EGRUL extract | EGRUL extract (ul-1245100006799-20260823141101.pdf) | — | 2026-08-23 |
+| s6510 | Bfo | Bfo (BFO_5190102381_2025_ооо-кольская-верфь.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

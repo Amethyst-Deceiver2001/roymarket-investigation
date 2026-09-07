@@ -28,6 +28,12 @@
 - **Пропеллеры 9 дюймов для FPV дрона** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Комплектующие (запасные части) беспилотных авиационных систем, не имеющие самостоятельных группировок [s5391]
 - **Пропеллеры 10 дюймов для FPV дрона** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Комплектующие (запасные части) беспилотных авиационных систем, не имеющие самостоятельных группировок [s5391]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | — | — | [s6544] |
+
 ## State-program participation
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; name_ru: Каталог продукции ГИСП — отрасль БАС; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly. [s5344]
@@ -64,6 +70,7 @@ _No named principals linked to this entity yet._
 | s0515 | EGRUL extract | EGRUL extract (ul-1247600010954-20260823135127.pdf) | — | 2026-08-23 |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| s6544 | Bfo | Bfo (BFO_7606140961_2024_ооо-рокот-тех.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

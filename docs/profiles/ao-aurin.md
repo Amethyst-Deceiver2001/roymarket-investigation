@@ -21,6 +21,13 @@
 |---|---|---|
 | Клёцкин Владислав Николаевич | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0147] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | — | ₽-115,000 | [s6647] |
+| 2025 | ₽261,000 | ₽16,305,000 | [s6648] |
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -43,6 +50,8 @@
 |---|---|---|---|---|
 | s0147 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9705214590_20260822_ao-aurin.json) | 2026-08-22 | 2026-08-22 |
 | s0945 | Rospatent record | Rospatent record (ROSPATENT_20260824_full-roster-tm-sweep.json) | 2026-08-24 | — |
+| s6647 | Bfo | Bfo (BFO_9705214590_2024_ао-аурин.pdf) | — | — |
+| s6648 | Bfo | Bfo (BFO_9705214590_2025_ао-аурин.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

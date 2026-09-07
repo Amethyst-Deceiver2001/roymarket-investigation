@@ -20,6 +20,14 @@
 |---|---|---|
 | Борисов Александр Сергеевич | 2023-12-25 | Генеральный директор, signed 25.12.2023 government contract 03662000356230077920001 (regNumber 2711801501123000085), acting on Устав [s1914] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2023 | ₽2,710,000 | ₽-13,720,000 | [s6535] |
+| 2024 | ₽164,660,000 | ₽1,806,000 | [s6536] |
+| 2025 | ₽133,290,164,000 | ₽-2,114,000 | [s6537] |
+
 ## Government contracts
 
 - basis: Единственный поставщик — п.25 ч.1 ст.93 44-ФЗ (электронный аукцион признан несостоявшимся); contract_number: 03662000356230077920001; customer: ГОУ ТО «Яснополянский образовательный комплекс им. Л.Н. Толстого» (Тульская обл., Щёкинский р-он); date: 2023-12-25; items: Полётный симулятор NORBEL x9 (КТРУ 32.99.53.130-00000332/333), учебно-наглядные пособия/оборудование учебное «Шмель» x1 — образовательное/тренировочное оборудование, не боевые БАС; reg_number: 2711801501123000085; status: Исполнение завершено — УПД № 2 от 27.12.2023, оплачено платёжным поручением № 2087 от 28.12.2023 (АО «Альфа-Банк»), сумма полностью совпадает с ценой контракта; value_rub: 3072000 [s1914]
@@ -61,6 +69,9 @@ _No named principals linked to this entity yet._
 | s0945 | Rospatent record | Rospatent record (ROSPATENT_20260824_full-roster-tm-sweep.json) | 2026-08-24 | — |
 | s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
 | s1914 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7100032961_2711801501123000085_kontrakt-27118015011230000850002_0d51cc1d.docx) | — | 2013-04-05 |
+| s6535 | Bfo | Bfo (BFO_7100032961_2023_ооо-цбс.pdf) | — | — |
+| s6536 | Bfo | Bfo (BFO_7100032961_2024_ооо-цбс.pdf) | — | — |
+| s6537 | Bfo | Bfo (BFO_7100032961_2025_ооо-цбс.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

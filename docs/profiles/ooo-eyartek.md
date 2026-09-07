@@ -21,6 +21,15 @@
 |---|---|---|
 | Жуков Андрей Викторович | 2024-02-12 | personal ИНН 732703889628; also sole founder [s0485] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2022 | — | ₽-6,000 | [s6538] |
+| 2023 | ₽21,372,000 | ₽4,305,000 | [s6539] |
+| 2024 | ₽73,112,000 | ₽16,146,000 | [s6540] |
+| 2025 | ₽3,590,000 | ₽-18,999,000 | [s6541] |
+
 ## Patents
 
 | Title | Reg. no. | Filed | Inventors |
@@ -57,6 +66,10 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0485 | EGRUL extract | EGRUL extract (ul-1227300004282-20260823131727.pdf) | — | 2026-08-23 |
+| s6538 | Bfo | Bfo (BFO_7300000540_2022_ооо-эиартэк.pdf) | — | — |
+| s6539 | Bfo | Bfo (BFO_7300000540_2023_ооо-эиартэк.pdf) | — | — |
+| s6540 | Bfo | Bfo (BFO_7300000540_2024_ооо-эиартэк.pdf) | — | — |
+| s6541 | Bfo | Bfo (BFO_7300000540_2025_ооо-эиартэк.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

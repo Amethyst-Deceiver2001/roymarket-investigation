@@ -26,6 +26,14 @@
 - **БПР ЯРЛ**
 - **Бронежилет для собак «Псы войны»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Изделия текстильные готовые прочие, не включенные в другие группировки; active ПП719 certificate flag on GISP listing [s5391]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2023 | ₽77,023,000 | ₽3,947,000 | [s6668] |
+| 2024 | ₽73,880,000 | ₽17,737,000 | [s6669] |
+| 2025 | ₽487,976,000 | ₽128,078,000 | [s6670] |
+
 ## Government contracts
 
 - Sole-supplier award from the Government of Khabarovsk Krai. Itemisation, unit prices and the supplier's own bank/contact details are read off the archived счёт на оплату № 105 от 12.12.2024 (Альфа-Банк account, tel. +7 905 539-55-77), signed «Руководитель Ивлев А. Ю., Бухгалтер Скотникова Н. В.» — corroborating the director already on record. This is a direct supply of personal body armour and ballistic helmets to a Russian regional government. Статус по карточке контракта на момент захвата: Исполнение завершено. [s3392]
@@ -41,6 +49,9 @@ _No named principals linked to this entity yet._
 | s0471 | EGRUL extract | EGRUL extract (ul-1237700170311-20260823122944.pdf) | — | 2026-08-23 |
 | s3392 | Zakupki | Zakupki (ZAKUPKI_contract_2270000078624000447_20260829.html) | 2026-08-29 | — |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| s6668 | Bfo | Bfo (BFO_9721200789_2023_ооо-бпр-ярл.pdf) | — | — |
+| s6669 | Bfo | Bfo (BFO_9721200789_2024_ооо-бпр-ярл.pdf) | — | — |
+| s6670 | Bfo | Bfo (BFO_9721200789_2025_ооо-бпр-ярл.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

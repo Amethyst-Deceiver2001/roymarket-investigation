@@ -19,9 +19,23 @@
 |---|---|---|
 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02) | — | from corrections:add_entities, unverified |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | — | ₽-8,000 | [s6619] |
+| 2025 | ₽4,777,000 | ₽-120,000 | [s6620] |
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
+
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+| s6619 | Bfo | Bfo (BFO_7813680637_2024_ооо-бтр.pdf) | — | — |
+| s6620 | Bfo | Bfo (BFO_7813680637_2025_ооо-бтр.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

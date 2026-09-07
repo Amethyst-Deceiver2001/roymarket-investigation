@@ -31,6 +31,16 @@
 |---|---|---|
 | ООО «РТИ Аэрокосмические системы» | 2015-09-18 | Registered under this name (ОГРН 1147748024269 — matches this entity's current ОГРН exactly) when granted aviation-tech license 13587-AT-Р on 18.09.2015. "РТИ" is a known AFK Sistema defense-electronics holding brand — this predecessor name suggests an RTI ownership/founding tie not yet otherwise documented on this record; flagged as an open question, not yet independently confirmed via EGRUL founder history. [s6408] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽192,196,000 | ₽843,232,000 | [s6574] |
+| 2022 | ₽107,060,000 | ₽41,544,084,323,000 | [s6575] |
+| 2023 | ₽108,876,000 | ₽12,735,000 | [s6576] |
+| 2024 | ₽101,398,000 | ₽-2,651,597,000 | [s6577] |
+| 2025 | ₽10,022,010,000 | ₽-4,586,736,000 | [s6578] |
+
 ## Licences
 
 - Лицензиат в реестре: «общество с ограниченной ответственностью "РТИ Аэрокосмические системы"» (125047, г. Москва, 3-я Тверская-Ямская ул., д. 39, стр. 1). Дата внесения сведений в реестр: 17-11-2015. [s6408]
@@ -60,6 +70,11 @@ _No named principals linked to this entity yet._
 | s0772 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7710974353_20260824_ooo-gk-aeromaks.json) | 2026-08-24 | — |
 | s5342 | Minpromtorg | Minpromtorg (MINPROMTORG_BAS_20260903_nacproekt-obzor.pdf) | 2026-09-03 | — |
 | s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
+| s6574 | Bfo | Bfo (BFO_7710974353_2021_ооо-гк-аэромакс.pdf) | — | — |
+| s6575 | Bfo | Bfo (BFO_7710974353_2022_ооо-гк-аэромакс.pdf) | — | — |
+| s6576 | Bfo | Bfo (BFO_7710974353_2023_ооо-гк-аэромакс.pdf) | — | — |
+| s6577 | Bfo | Bfo (BFO_7710974353_2024_ооо-гк-аэромакс.pdf) | — | — |
+| s6578 | Bfo | Bfo (BFO_7710974353_2025_ооо-гк-аэромакс.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

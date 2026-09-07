@@ -19,6 +19,14 @@
 |---|---|---|
 | None | 2026-07-13 | Director appointment record present (ГРН 2267705989274, 13.07.2026 — very recent) but name field not captured in this extraction pass. [s0507] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2023 | — | ₽-32,000 | [s6657] |
+| 2024 | — | ₽-2,067,000 | [s6658] |
+| 2025 | ₽151,567,000 | ₽306,000 | [s6659] |
+
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 3 OpenSanctions match(es) (screened 2026-09-06).
 
@@ -39,6 +47,9 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0507 | EGRUL extract | EGRUL extract (ul-1237700545191-20260823133810.pdf) | — | 2026-08-23 |
+| s6657 | Bfo | Bfo (BFO_9713001941_2023_ооо-эколибри-бт.pdf) | — | — |
+| s6658 | Bfo | Bfo (BFO_9713001941_2024_ооо-эколибри-бт.pdf) | — | — |
+| s6659 | Bfo | Bfo (BFO_9713001941_2025_ооо-эколибри-бт.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

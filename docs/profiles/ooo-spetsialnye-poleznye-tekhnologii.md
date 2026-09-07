@@ -20,6 +20,13 @@
 |---|---|---|
 | None | 2024-08-05 | Generic director appointment record present (ГРН 2247707514338, 05.08.2024) but this batch's extraction pass did not capture a name field for it — worth a direct re-read of the source PDF page for the missing ФИО. [s0490] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | ₽431,313,000 | ₽294,000 | [s6666] |
+| 2025 | ₽14,383,394,000 | ₽2,111,000 | [s6667] |
+
 ## Litigation
 
 - By value the largest documented intra-network transaction found so far: a ₽245,678,400 advance paid by НПО «Рустехдрон» to ООО «СПТ» under a supply contract signed 27.10.2025, against which the goods were never delivered. Settlement terms approved by the court: СПТ had already repaid ₽45,000,000 (платёжное поручение № 1811 от 30.06.2026) and acknowledged a remaining ₽200,678,400 debt, to be repaid ₽50m by 31.07.2026, ₽70m by 31.08.2026 and ₽80,678,400 by 30.09.2026; on full performance the plaintiff waives the неустойка. СПТ also agreed to compensate ₽542,128.80 of non-refundable state duty. Note the scale relative to the counterparty: СПТ was registered only 21.03.2024 (ОГРН 1247700253668) yet took a quarter of a billion rubles in advance eighteen months later. The subject of the supply contract is NOT stated in either archived filing — an open question. A related appeal by НПО «Рустехдрон» against a 20.05.2026 interim ruling was RETURNED unheard by the Ninth Arbitration Appeal Court on 07.08.2026 (№ 09АП-36457/2026, s0047) for failure to attach proof of the state duty. [s0048]
@@ -41,6 +48,8 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | s0048 | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-spt-mirovoe.pdf) | 2026-08-20 | 2026-07-08 |
 | s0490 | EGRUL extract | EGRUL extract (ul-1247700253668-20260823132117.pdf) | — | 2026-08-23 |
+| s6666 | Bfo | Bfo (BFO_9715478264_2024_ооо-спт.pdf) | — | — |
+| s6667 | Bfo | Bfo (BFO_9715478264_2025_ооо-спт.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

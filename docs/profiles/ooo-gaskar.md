@@ -33,6 +33,14 @@
 - **Беспилотная авиационная система «Сибирь-1»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 4 кг, но не более 30 кг [s5391]
 - **Беспилотная авиационная система «Сибирячок с совмещенной камерой в видимом и инфракрасном диапазонах»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 0,25 кг, но не более 4 кг [s5391]
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2023 | — | ₽68,632,000 | [s6654] |
+| 2024 | ₽4,376,417,000 | ₽659,246,000 | [s6655] |
+| 2025 | ₽9,824,673,000 | ₽-1,069,447,000 | [s6656] |
+
 ## State-program participation
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; name_ru: Каталог продукции ГИСП — отрасль БАС; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly. [s5344]
@@ -71,6 +79,9 @@ _No named principals linked to this entity yet._
 | s1385 | Ozon marketplace capture | Ozon marketplace capture (OZON_9710112989_20260825_gaskargroup-seller-storefront.json) | 2026-08-25 | — |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| s6654 | Bfo | Bfo (BFO_9710112989_2023_ооо-гаскар.pdf) | — | — |
+| s6655 | Bfo | Bfo (BFO_9710112989_2024_ооо-гаскар.pdf) | — | — |
+| s6656 | Bfo | Bfo (BFO_9710112989_2025_ооо-гаскар.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

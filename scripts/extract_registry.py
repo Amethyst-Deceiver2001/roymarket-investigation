@@ -1512,8 +1512,26 @@ def main() -> int:
                 continue
             for field, value in (spec.get("set") or {}).items():
                 target[field] = value
-            target["_corrected"] = spec.get("why")
-            target["_verified_against"] = spec.get("verified_against")
+            # Some entities are targeted by TWO correction keys (an ИНН key
+            # and a slug key both matching the same by_key entry) -- found
+            # 2026-09-07 on ooo-arkhangel/9714079108, whose slug-keyed entry
+            # carried a real _verified_against/why that a second, later-
+            # processed ИНН-keyed entry with no verified_against silently
+            # nulled out (unconditional assignment, whichever key processed
+            # last wins). Guard against clobbering a real value with an
+            # absent one; a correction wanting to actively blank it can still
+            # do so by never being the case in practice, so this is a
+            # net-safe change.
+            why = spec.get("why")
+            if why:
+                target["_corrected"] = why
+            elif "_corrected" not in target:
+                target["_corrected"] = why
+            va = spec.get("verified_against")
+            if va:
+                target["_verified_against"] = va
+            elif "_verified_against" not in target:
+                target["_verified_against"] = va
             corrections_applied += 1
 
     for e in entities:
