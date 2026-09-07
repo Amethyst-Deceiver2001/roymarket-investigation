@@ -12088,17 +12088,26 @@
       "inn_personal": null,
       "roles": [
         {
-          "title": "Self-described \"флагман движения\" (movement flagship/figurehead) -- named backer, not a formal corporate role",
+          "title": "Self-described \"флагман движения\" (movement flagship/figurehead) -- named backer, corroborated by his own channel",
           "entity_name": "Проект «Архангел» / ООО «Хаб СВО»",
           "entity_slug": "ooo-hab-svo",
           "from": "2024-11-05",
           "to": null,
           "source_id": "s6912"
+        },
+        {
+          "title": "Personally cross-posted a Проект «Архангел» recruitment announcement on his own channel, with enthusiastic endorsement framing",
+          "entity_name": "Проект «Архангел» / ООО «Хаб СВО»",
+          "entity_slug": "ooo-hab-svo",
+          "from": "2025-04-22",
+          "to": null,
+          "source_id": "s6915"
         }
       ],
-      "notes": "Named by @projectArchangel's own channel (05.11.2024, s6912) as \"Флагман движения\" (the movement's flagship), with his own channel (@rogozin_do) linked directly and cross-posted. The post frames official government-department support for Архангел's \"боевая апробация\" (combat-testing) process as flowing through this relationship. Sitting Federation Council senator, former Deputy Prime Minister and Roscosmos director-general -- a significantly higher-profile PEP than any other individual currently on file for this network. NOT the same person as Рогозин Алексей Дмитриевич (rogozin-aleksey-dmitrievich, his son, already on file for ao-ekolibri) -- do not conflate. This is a self-description by Архангел's own channel, not yet independently corroborated by Рогозин's own channel content or a press source -- treat as an open lead, not an established fact of direct involvement, until that corroboration is checked.",
+      "notes": "Named by @projectArchangel's own channel (05.11.2024, s6912) as \"Флагман движения\" (the movement's flagship), with his own channel (@rogozin_do) linked directly and cross-posted. The post frames official government-department support for Архангел's \"боевая апробация\" (combat-testing) process as flowing through this relationship. Sitting Federation Council senator, former Deputy Prime Minister and Roscosmos director-general -- a significantly higher-profile PEP than any other individual currently on file for this network. NOT the same person as Рогозин Алексей Дмитриевич (rogozin-aleksey-dmitrievich, his son, already on file for ao-ekolibri) -- do not conflate. This is a self-description by Архангел's own channel, not yet independently corroborated by Рогозин's own channel content or a press source -- treat as an open lead, not an established fact of direct involvement, until that corroboration is checked.\n\nCORROBORATED 2026-09-07: fetched t.me/rogozin_do/7047 directly (user-supplied URL). His own channel (author line \"РОГОЗИН\") personally cross-posted a Проект «Архангел» recruitment announcement on 2025-04-22 (“ПРОЕКТ “АРХАНГЕЛ”... Присоединяйтесь! Летать так летать! Стрелять так стрелять!”), linking directly to @projectArchangel/7287, with enthusiastic personal-endorsement framing (fire emoji, exclamation points) rather than neutral mention or a forwarded post. This independently corroborates the “флагман движения” claim from Архангел's own side -- no longer resting solely on Архангел's self-description.",
       "sources": [
-        "s6912"
+        "s6912",
+        "s6915"
       ],
       "why": [
         "2026-09-07: surfaced while investigating the «Хаб СВО» lead from screen_upr_uchr.py -- a significant PEP-adjacency finding for the whole Архангел network, not previously on file."
