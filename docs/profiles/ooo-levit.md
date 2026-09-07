@@ -52,7 +52,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Leonid Yakovlevich Simanovskiy — Симановский Леонид Яковлевич
+
+- **ИНН:** 770100058167
+- Участник (21.7098%, номинал ₽25,698,196) (2016-07-21–present)
 
 ## Sources cited in this profile
 

@@ -1213,14 +1213,16 @@
         "inn_personal": "773600432474",
         "nominal_value": 92673000,
         "share_percent": 78.2902,
-        "as_of": "2016-07-21"
+        "as_of": "2016-07-21",
+        "source_id": "s6697"
       },
       {
         "name": "Симановский Леонид Яковлевич",
         "inn_personal": "770100058167",
         "nominal_value": 25698196,
         "share_percent": 21.7098,
-        "as_of": "2016-07-21"
+        "as_of": "2016-07-21",
+        "source_id": "s6697"
       }
     ],
     "founders_history": [
@@ -1325,7 +1327,8 @@
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0752).",
       "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
       "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: backfilled missing source_id on founders[] (Михельсон/Симановский) -- the data was already correct but had no citation; now points at s6697, the full ЕГРЮЛ выписка already used for director_history/founders_history."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0083)",
     "_egrul_crosschecked": "2026-08-22",
@@ -37311,7 +37314,8 @@
         "inn_personal": "614000245280",
         "nominal_value": 100000,
         "share_percent": 100.0,
-        "as_of": "2023-03-30"
+        "as_of": "2023-03-30",
+        "source_id": "s6831"
       }
     ],
     "founders_history": [
@@ -37426,7 +37430,8 @@
       "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=7743414861, file cited as source s0123). Director confirmed: Федяева Анна Юрьевна.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "Holding company, not a producer.",
-      "2026-09-07: merged dormant duplicate correction key '7743414861' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+      "2026-09-07: merged dormant duplicate correction key '7743414861' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+      "2026-09-07: backfilled missing source_id on founders[] (Лобов) -- now points at s6831, the full ЕГРЮЛ выписка already used for director_history/founders_history."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0123)",
     "opensanctions_matches": [
