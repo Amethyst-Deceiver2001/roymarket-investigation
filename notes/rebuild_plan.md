@@ -2645,3 +2645,35 @@ human eyeball the one line above it; re-tested against the same simulated
 regression and it now fires correctly, and is silent against the real
 current (clean) state. Restored `entities.json` after the test — no
 lasting change from the simulation, only the check itself is new.
+
+## Dormant correction-key collisions closed (2026-09-07)
+
+Merged all 37 (36 distinct) dormant pairs listed above, same union/
+gap-fill pattern used on the 6 active ones. `check_registry.py`'s
+correction-key-collision detector now finds zero instances of any kind
+(active or dormant) — the whole bug class flagged this session is fully
+closed, not just the urgent half of it. Notable recoveries where the
+dormant ИНН-keyed twin had real data the live slug had never surfaced:
+`ao-stratim` (director/financials/name_ru/ogrn/products/registered/
+related_entities/tier), `ooo-sistemnyy-integrator` (`_verified`/address/
+charter_capital+history/director+history/financials/founders+history/
+ogrn/okved/parents/registered/tier+basis), `ano-tsbst-centre-for-
+unmanned-systems-technologies` (`_verified`/address+history/
+director+history/founders+history/name_latin/okved/tier+basis). 0
+field-size shrinkages verified against pre-merge git HEAD; 37 profiles
+rebuilt, 182/182 tag-balance clean. This closes Phase 3.5 item covering
+correction-key integrity entirely.
+
+## Founding-document coverage audit + small-batch screening sweeps (2026-09-07)
+
+Separate thread from the registry-hardening work above — see
+`notes/SOURCE_REGISTER.md`'s matching 2026-09-07 entry for full detail:
+`notes/founding_docs_gap.md` (135-entity founding-doc gap list with
+ОГРН/ИНН, for manual ФНС pulls), plus zakupki/RNP/Aleph/GUR/WB catch-up
+sweeps on every small (single-digit to low-double-digit) still-unscreened
+record, and the orphan-role-link review closing 2 of 33 remaining gaps
+(Бровченко, Устратов). Two new leads surfaced needing further research,
+not yet promoted: Богатиков С.А. (ГК Аэромакс director) is also director
+of АО «ГосМКБ «Радуга» им. А.Я. Березняка» (state missile design bureau);
+Шестопалов С.А. founds/directs 3 newly-registered Липецк electronics/
+antenna R&D firms.

@@ -314,6 +314,71 @@ wiring (same bug class as before, unrelated new instances). All 183
 profiles rebuilt, tag-balance clean. `check_registry.py`: 0 errors, 37
 warnings (baseline unchanged).
 
+## 2026-09-07 (cont'd): founding-document coverage audit + small-batch screening sweeps closed
+
+**Founding-document (Устав) gap list.** Reviewed all 170 live entities
+(excludes 3 tombstones + 14 adjacent) for whether a founding-document
+primary source has actually been pulled, rather than relying on recall —
+written to `notes/founding_docs_gap.md`. 18 already have one (16 bespoke
+`UD_*.zip` bundles + 2 confirmed adopters of a generic Типовой устав,
+correctly excluded as "looked up, nothing entity-specific to get"). 135
+have an ОГРН but no founding doc on file — listed with ОГРН/ИНН/tier as
+manual ФНС-portal pull candidates (still no scriptable API for this
+document type, confirmed again this session). 17 have no ОГРН at all,
+listed separately as a prerequisite gap.
+
+**zakupki / RNP / Aleph / GUR / WB catch-up sweeps.** Ran every
+still-small (single-digit to low-double-digit) unscreened-record gap
+these scripts can close without a full-roster hand-off:
+- zakupki `scan --inn` on the 6 never-scanned ИНН (4 entities + 2 people)
+  flagged by `zakupki_coverage.py --gaps-only`. One real hit: ООО
+  «АС-КАМ», 5 civilian UAV service/equipment contracts 2019-2021
+  (~₽13.24m — crop-monitoring drone surveys x2, a water-body remote-
+  sensing contract, a UAV lab-equipment supply to Kazan's КНИТУ-КАИ, a
+  research UAV+sensor kit for Красноярский НЦ СО РАН). Read all 5; no
+  ЦБСТ-network or state-defense customer among them — closed per the
+  standing generic-small-supplier triage rule, not wired into
+  `government_contracts[]`. All 6 ИНН got a structured `zakupki_review`
+  record; the 2 that already had an ИНН-keyed correction entry were
+  merged into that existing key rather than given a new slug-keyed one
+  (avoiding recreating the collision bug just fixed this session).
+- RNP (`screen_rnp.py`) on the same 3 net-new entities: ООО «АС-КАМ»
+  carries a HISTORICAL debarment, РНП.336745-22, 25.02.2022-22.02.2024
+  (since lifted) — verified against its own record card, wired with full
+  detail, and flagged as a plausible contributing fact for the entity's
+  already-noted FY2023->FY2024 revenue collapse (not confirmed causal).
+- Aleph/GUR/WB (`screen_aleph.py`/`screen_gur.py`/`screen_wb.py`) run
+  with a small `--limit` against their whole remaining unscreened
+  backlog (4-8 records each, registry-wide, not just the new
+  additions — these scripts self-scope). WB surfaced 2 direct ИНН
+  matches needing hand-review for `wb_overlap` (Гаскар, Асел Лабс — both
+  already-known network entities, not new leads). Aleph surfaced two
+  genuine new leads via `other_entities`-style director/founder
+  cross-references, written to the two people's records: Богатиков С.А.
+  (ГК Аэромакс director) is also director of АО «ГосМКБ «Радуга» им.
+  А.Я. Березняка» (a state guided-missile design bureau); Шестопалов
+  С.А. founds/directs 3 newly-registered (2024-25) Липецк electronics/
+  antenna R&D firms (НПО «Киловатт» x2, НПО «Мегаватт»). Neither
+  promoted beyond `other_entities[]` without further research.
+- OpenSanctions: attempted on the same 6-entity batch, blocked by the
+  monthly API quota (HTTP 429) — see the updated
+  `opensanctions_api_access` memory. Left unscreened rather than guessed;
+  retry after the monthly window resets, not immediately.
+
+**Orphan role-link review closed out.** Of the 33 non-candidate
+`people.json` roles with `entity_slug: null`, reviewed every one: 31 are
+correctly unlinked (political/state bodies with no registry entity —
+United Russia, Federation Council, ОНФ, MoD, МЧС Курской области, ФГКУ
+«ЦСООР «Лидер»» — or affiliations genuinely outside this registry's
+scope). 2 were real gaps and are now linked: Бровченко ->
+`fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta`, Устратов ->
+`fond-podderzhki-natsionalnykh-morskikh-programm` (both funds already
+existed as registry entities under those exact names).
+
+All housekeeping re-run after each pass: `check_registry.py` 0 errors, 39
+warnings (baseline unchanged). 10-12 profiles rebuilt per pass,
+tag-balance clean throughout.
+
 ## Known gaps in the source set itself (nothing checks these yet)
 
 - **Customs/import data.** Russia has hidden company-level import data since
