@@ -36062,7 +36062,7 @@
     "dob": "1998-08-31",
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "470206586144",
     "roles": [
       {
         "entity_name": "ООО «Тримикс»",
@@ -36075,11 +36075,11 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-07",
     "disqualification_hits": [],
-    "disqualification_checked_at": null,
+    "disqualification_checked_at": "2026-09-07",
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-07",
     "social": [],
     "photo": null,
     "notes": null,
@@ -36088,8 +36088,9 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
+      "2026-09-07: user supplied his personal ИНН directly; checksum valid."
     ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [

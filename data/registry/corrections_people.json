@@ -3968,6 +3968,14 @@
         "2026-09-07: user supplied a leaked-database dossier confirming identity (DOB/phone/email match); no ИНН in the source."
       ],
       "verified_against": "data/sources/REVENG_20260907_safieva-viktoriya-zufarovna-dossier.pdf (s6936)"
+    },
+    "fedorov-pavel-romanovich": {
+      "set": {
+        "inn_personal": "470206586144"
+      },
+      "why": [
+        "2026-09-07: user supplied his personal ИНН directly; checksum valid."
+      ]
     }
   },
   "people_add_entities": [
