@@ -2677,3 +2677,70 @@ not yet promoted: Богатиков С.А. (ГК Аэромакс director) is 
 of АО «ГосМКБ «Радуга» им. А.Я. Березняка» (state missile design bureau);
 Шестопалов С.А. founds/directs 3 newly-registered Липецк electronics/
 antenna R&D firms.
+
+## Plan: НСПД facility investigation for proverki-discovered addresses (2026-09-07)
+
+`notes/proverki_findings.md` (this session) surfaced several physical
+facilities not previously on file, via proverki.gov.ru's
+`object_address` field on inspection records. `scripts/nspd_lookup.py` +
+`scripts/screen_nspd_addresses.py` (built 2026-09-06, see
+`notes/gagaring_network_map.md` for the technique's first real use on
+Гагаринг's own addresses) are the right tool to corroborate these:
+existence, scale, declared building use, construction year, and
+ownership/right type (not owner identity — Rosreestr redacts that
+post-2017). Each single-address lookup is ordinary inline reconnaissance
+under CLAUDE.md's crawling-jobs policy — fine to run directly; only a
+full-roster batch needs handing to the user.
+
+**Reliability caveat already documented in the scripts**: nspd.gov.ru's
+WAF 403s this sandbox's curl in bursts even with full browser headers,
+while a chrome-devtools browser session has not failed once on the same
+queries. Treat an ERROR run as "retry later or fall back to
+chrome-devtools," not proof of no record.
+
+### Priority queue (highest-signal first)
+
+1. **npp-radar-mms — дер. Хаболово cadastral parcels (КН
+   47:20:0442001:212, КН 47:20:0442001:209)**. Exact cadastral numbers
+   already in hand — this is a precise single-record lookup, not a
+   fuzzy address geocode, so should return a clean building/parcel record
+   if the WAF cooperates. Top priority: this is the one open question
+   explicitly flagged on the entity record (radar company, unexplained
+   land far from its SPb HQ). Command:
+   `python3 scripts/nspd_lookup.py --query "47:20:0442001:212"` (and
+   `:209`).
+2. **npp-radar-mms — Новосельковская ул., д.46, лит.А**
+   (the "Строительство производственно-складского корпуса" record) —
+   confirm current construction status/declared purpose against НСПД's
+   own building-name field, same technique that identified Гагаринг's
+   Краснодар "Производственный корпус."
+3. **ao-nii-vektor — ул. Маршала Новикова, д.40, лит.А** (also an active-
+   construction record) and **Кантемировская ул., д.10** (the record's
+   own "фактического осуществления деятельности" address) — corroborate
+   both against НСПД, since the source itself already distinguishes
+   registered vs. operating address here.
+4. **ooo-aeromaks's three non-matching facility addresses** (Милютинский
+   13, Андропова 18к9, Малый пр. В.О. 54к5) — lower priority than the
+   above (no defense-radar/land-use ambiguity), but worth a quick batch
+   since none match the registered legal address at all.
+5. **npts-elvis's second Zeleongrad site** (проезд 4922-й, д.4, стр.2)
+   and **ao-kotlin-novator's two SPb clusters** (Глиняная 5/11, Обводного
+   канала 14) — lowest priority of this batch, routine corroboration.
+
+**Explicitly out of scope for now**: ao-pmts-avangard's Волгоград site —
+per `notes/proverki_findings.md`, this entity has no confirmed ЦБСТ/UAV
+tie, so an НСПД pull isn't worth the turn unless that changes.
+
+### Execution discipline
+
+Same as every prior registry write this session: any real НСПД hit gets
+wired to the entity's `facility_type`/`facility_type_history` (not
+`address_history`, which already holds the address itself) via
+`corrections_entities.json`, with the actual `source_id` from an archived
+`NSPD_<cadastral-or-address-slug>_<YYYYMMDD>_<slug>.json` (or `.txt` for a
+chrome-devtools capture) file in `data/sources/` — never a placeholder.
+Run `inventory_sources.py` → `scan_sources.py` → `extract_registry.py` →
+`check_registry.py` (0 errors) → the field-size-shrinkage diff before
+committing, same as every other write this session. Update
+`notes/proverki_findings.md`'s per-entity sections to note НСПД
+corroboration once done, so the two logs stay in sync.
