@@ -5269,16 +5269,6 @@
       "ids": "7701583410 | 1057746261605",
       "role": "Same building, same director (Saidov). Successor to the Soviet-era Kaluga Telegraph Equipment Works. Holds an active Minpromtorg licence for development, production, testing, sale and disposal of weapons, military equipment and ammunition, plus two FSTEC classified-information licences and four aviation-equipment licences. Branches: St Petersburg, Nizhny Novgorod, Makhachkala, Chelyabinsk, Kaluga."
     },
-    "_corrected": [
-      "Rospatent full-roster sweep (s0433), 5 trademark filing(s) matched by ИНН.",
-      "Full signed ЕГРЮЛ extract read end-to-end (s0212, ul-1057746261605-20260814234906.pdf, pulled 14.08.2026). АО Производственная компания «Азимут», registered 16.02.2005, GD Саидов Аскер Казбекович (personal ИНН 054403029570) since 02.12.2014, charter capital ₽2,422,000. As an АО, shareholders are unpublished — registrar is АО «Новый регистратор» (ИНН 7719263354), notably NOT the НРК Р.О.С.Т. used by АО «РОСС», АО «НИИ СТТ» and АО «Технодрон». Primary ОКВЭД 26.20.1 computer manufacture (made primary 18.05.2026), with communications-switching equipment (26.30.11) among the secondaries. Current name recorded only from 24.12.2024 against a 2005 registration — renamed, predecessor name not in this extract. SHARED-ADDRESS FINDING (primary-source, both sides): АО ПК «Азимут» has been registered at 125167, Москва, ал. Нарышкинская, д. 5, стр. 2, помещ. Х ком. №15 этаж 2 since 20.02.2018 (ГРН 9187746144412). ООО «МПТМ», the РОЙ.МАРКЕТ operator, was registered on 22.01.2025 at the SAME building — ал. Нарышкинская, д. 5, стр. 2, помещ. 1/1. Different premises, same строение; each address comes from that entity's own signed ЕГРЮЛ extract. The marketplace operator was incorporated into a building already occupied for seven years by a money-layer entity of this network.",
-      "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0763).",
-      "2026-09-05: backfilled the structured `zakupki_review` field (partial, as of 2026-08-30) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
-      "2026-09-06: wired 5 aviation-technology development/production/testing/repair license record(s) from Минпромторг's aviation-tech license registry (data.gov.ru dataset 7705596339-drones, s6408) — ИНН-matched, exact ОГРН cross-check confirmed.",
-      "2026-09-06: this entity's own historical name «ОАО «АЗИМУТ»» (2010-2013 license records in s6408, ОГРН 1057746261605 matching this entity exactly) corroborates the existing name_history entry's note that an earlier name existed before the 2024-12-24 «АО Производственная компания «Азимут»» record — the predecessor name is now identified.",
-      "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6436."
-    ],
-    "_verified_against": "s0212 — АО ПК «Азимут»'s own full signed ЕГРЮЛ extract, pulled 14.08.2026",
     "notes": "zakupki footprint reviewed 2026-08-30: 76 of 77 supplierTitle-search hits already have contract cards archived (only 1 card, reg. 1504206041024000005, not yet fetched). Read all 75 unwired cards — customers are overwhelmingly municipal/civilian facility-type work: schools, kindergartens, regional health/education agencies (Калужская, Дагестан, Рязань), environmental-monitoring bodies (Приокское управление Ростехнадзора, ФГБУ «ЦЛАТИ»), and aviation-infrastructure customers (ФГУП «Госкорпорация по ОрВД» ₽77.8m 2017, Федеральное агентство воздушного транспорта ₽29.5m 2016, a flight college). Values range ₽64,535–₽107,100,000. No UAV/defense-specific language in any customer name or contract title. Confirms this entity's commercial activity is generic facility/logistics-services contracting, consistent with its money-layer tier (Azimut-group shareholding relevance, not a products/defense-contracting relevance) — not wiring all 75 as individual government_contracts[] rows since none add ЦБСТ-relevant signal beyond this summary; see data/sources/ZAKUPKI_contract_<regNumber>_*.html for any of the 75 regNumbers if a specific one needs checking later.",
     "registrar": {
       "as_of": "2016-06-20",
@@ -5292,6 +5282,18 @@
       "outcome": "partial",
       "note": "Read all 75 unwired archived cards: overwhelmingly municipal/civilian facility work plus civil-aviation infrastructure customers, no UAV/defense language. 1 aggregate entry wired; 1 card (1504206041024000005) still unfetched."
     },
+    "_corrected": [
+      "Rospatent full-roster sweep (s0433), 5 trademark filing(s) matched by ИНН.",
+      "Full signed ЕГРЮЛ extract read end-to-end (s0212, ul-1057746261605-20260814234906.pdf, pulled 14.08.2026). АО Производственная компания «Азимут», registered 16.02.2005, GD Саидов Аскер Казбекович (personal ИНН 054403029570) since 02.12.2014, charter capital ₽2,422,000. As an АО, shareholders are unpublished — registrar is АО «Новый регистратор» (ИНН 7719263354), notably NOT the НРК Р.О.С.Т. used by АО «РОСС», АО «НИИ СТТ» and АО «Технодрон». Primary ОКВЭД 26.20.1 computer manufacture (made primary 18.05.2026), with communications-switching equipment (26.30.11) among the secondaries. Current name recorded only from 24.12.2024 against a 2005 registration — renamed, predecessor name not in this extract. SHARED-ADDRESS FINDING (primary-source, both sides): АО ПК «Азимут» has been registered at 125167, Москва, ал. Нарышкинская, д. 5, стр. 2, помещ. Х ком. №15 этаж 2 since 20.02.2018 (ГРН 9187746144412). ООО «МПТМ», the РОЙ.МАРКЕТ operator, was registered on 22.01.2025 at the SAME building — ал. Нарышкинская, д. 5, стр. 2, помещ. 1/1. Different premises, same строение; each address comes from that entity's own signed ЕГРЮЛ extract. The marketplace operator was incorporated into a building already occupied for seven years by a money-layer entity of this network.",
+      "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0763).",
+      "2026-09-05: backfilled the structured `zakupki_review` field (partial, as of 2026-08-30) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
+      "2026-09-06: wired 5 aviation-technology development/production/testing/repair license record(s) from Минпромторг's aviation-tech license registry (data.gov.ru dataset 7705596339-drones, s6408) — ИНН-matched, exact ОГРН cross-check confirmed.",
+      "2026-09-06: this entity's own historical name «ОАО «АЗИМУТ»» (2010-2013 license records in s6408, ОГРН 1057746261605 matching this entity exactly) corroborates the existing name_history entry's note that an earlier name existed before the 2024-12-24 «АО Производственная компания «Азимут»» record — the predecessor name is now identified.",
+      "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6436.",
+      "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 48 product(s) not previously documented.",
+      "2026-09-07: merged duplicate correction key '7701583410' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
+    ],
+    "_verified_against": "s0212 — АО ПК «Азимут»'s own full signed ЕГРЮЛ extract, pulled 14.08.2026",
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
       {
@@ -14128,6 +14130,13 @@
     "workforce_history": [],
     "state_programs": [
       {
+        "as_of": "2026-09-03",
+        "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+        "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+        "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 28.99.5 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+        "source_id": "s5346"
+      },
+      {
         "as_of": "2026-09-06",
         "name_en": "rk.2035.university national БАС (UAV-industry) company registry",
         "name_ru": "Реестр компаний БАС — rk.2035.university",
@@ -14176,7 +14185,8 @@
       "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 2 product(s) not previously documented.",
       "2026-09-06: screen_rk2035_bas_registry.py full-roster run, ID-confirmed (inn_match=true, ogrn_match=true) hit against the rk.2035.university catalog dataset (s1165) -- wired as a new state_programs[] entry.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: merged duplicate correction key '1659101884' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -31863,20 +31873,6 @@
     "_raw": {
       "context": " by АНО «НПЦ «Ушкуйник»», «RuDrones. Беспилотные технологии» and the ExpoUAV platform, drawing 60+ representatives from 40+ organisations — Chadaev's own post lists them, including АО «НИИ «Вектор»» (ИНН 7813491943, ГК «Ростех») — a second, direct Rostec-subsidiary participant in this network alongside Атлант Аэро's trust-managed stake, confirmed via Rostec's own site as part of its Роселектроника holding — АО "
     },
-    "_corrected": [
-      "full EGRUL extract pulled directly 23.08.2026 (ul-1117847020400-20260823133710.pdf). Command-and-control/monitoring communications-equipment ОКВЭД — a direct defence-electronics match. АО — shareholders/registrar block and director name did not extract cleanly (same layout quirk); the one appointment-record ГРН captured (8187847136425) looks anomalously long for a standard ГРН and may be an OCR/extraction artifact rather than a real registry number — not relied upon.",
-      "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): high-confidence match via search cross-reference (nii-vektor.ru tied directly to ИНН 7813491943/ОГРН 1117847020400, director Скорых С.В., matching SPb address) -- direct WebFetch of the site failed, so no product/catalog content extracted, only the institutional self-description (\"выполнение заказов министерств и ведомств... для НИОКР и производства аппаратуры в различных направлениях радиотехники и радиоэлектроники\"). FLAG: registry snapshot shows status \"в процессе реорганизации с 14.05.2026\" -- current operating status needs separate verification.",
-      "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0797).",
-      "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7813491943). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-      "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
-      "2026-08-24 foreign-components follow-up: close reading of all 20 archived АО «НИИ «Вектор» patents (not just titles) found two with named, specific foreign parts in their own description text, not prior-art citations -- RU2861850C1's swarm-UAV direction-finding patent lists a full off-the-shelf build (u-blox GPS, Pixhawk flight controller, Raspberry Pi, Semtech-chipset LoRa transceiver, a UK-brand antenna) as its own reference implementation, and RU2763583C2 names a specific Texas Instruments ADC as suited to its receiver design. Other candidate hints in the same batch (Cypress, Analog Devices x2, Texas Instruments' TPS2475x, DJI, a 'Bosch' that turned out to be an inventor's surname not the company) were read in context and rejected as prior-art/background citations, not the entity's own described implementation -- same discipline as the earlier «Импульс»/«Ринтеп» rejection on Атлант Аэро's patent. source_id left null pending archiving these specific description excerpts as distinct sources if promoted further; the underlying patent documents themselves are already archived (see patents[] for reg_numbers/source_ids).",
-      "2026-09-05: backfilled the structured `zakupki_review` field (partial, as of 2026-09-01) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
-      "2026-09-06: wired Roskosmos space-activity license 1972К (2022-10-10) from licenses.roscosmos.ru's public API (full 548-record registry dump, s6414) — ИНН-matched, ОГРН cross-check confirmed against existing record.",
-      "2026-09-06: wired 4 active RKN (Роскомнадзор) communications-service licenses from the live rkn.gov.ru 'Реестр лицензий в области связи' search (s6415) — this is a new license category for this entity, distinct from its existing Роскосмос space-activity license (1972К) and Минпромторг production-confirmation letters. Swept against 21 other UAV/radio/comms-relevant entities in the registry (keyword-matched on радио/связь/телеком/антенн/частот/спутник/авионик); ao-nii-vektor was the only hit — all others confirmed zero communications licenses under this ИНН.",
-      "RKN comms-license registry cross-check (rkn.gov.ru/activity/connection/register/license/, scripts/screen_rkn_comms_license.py, 2026-09-06 full 176-entity sweep) — 4 license record(s) not previously on file. See s6442.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
-    ],
-    "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "notes": "zakupki cluster review 2026-09-01: 157 unwired archived cards reviewed by customer cluster. Wired 1 aggregate entry for the one genuinely large cluster (Минобороны РФ, 9 contracts/₽73.0m/2013-16). The rest of this entity's footprint is a long tail of small-value (thousands to low millions of rubles) routine supply to Leningrad-oblast regional/municipal government, customs posts (Себежская, Кингисеппская таможни) and prosecutors' offices -- consistent with a radio-electronics institute's ordinary communications-equipment business, no ЦБСТ-network-relevant signal found beyond the Минобороны cluster, not individually wired.\n\nNon-recurring-tail review 2026-09-01: re-scanned all 156 remaining unwired archived cards. Caught and fixed a duplicate/mis-cited Минобороны aggregate entry (see that entry's own note for detail). Wired one genuinely new defence-prime customer relationship (Концерн «Моринформсистема-Агат», ₽54.9m SIGINT-simulation complex, 2022). The rest of the tail remains routine Leningrad-oblast regional/municipal/customs/prosecutor supply, consistent with the prior characterisation -- not individually wired.",
     "zakupki_review": {
       "as_of": "2026-09-01",
@@ -31889,6 +31885,22 @@
         "source_id": "s0495"
       }
     ],
+    "_corrected": [
+      "full EGRUL extract pulled directly 23.08.2026 (ul-1117847020400-20260823133710.pdf). Command-and-control/monitoring communications-equipment ОКВЭД — a direct defence-electronics match. АО — shareholders/registrar block and director name did not extract cleanly (same layout quirk); the one appointment-record ГРН captured (8187847136425) looks anomalously long for a standard ГРН and may be an OCR/extraction artifact rather than a real registry number — not relied upon.",
+      "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): high-confidence match via search cross-reference (nii-vektor.ru tied directly to ИНН 7813491943/ОГРН 1117847020400, director Скорых С.В., matching SPb address) -- direct WebFetch of the site failed, so no product/catalog content extracted, only the institutional self-description (\"выполнение заказов министерств и ведомств... для НИОКР и производства аппаратуры в различных направлениях радиотехники и радиоэлектроники\"). FLAG: registry snapshot shows status \"в процессе реорганизации с 14.05.2026\" -- current operating status needs separate verification.",
+      "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0797).",
+      "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7813491943). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+      "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
+      "2026-08-24 foreign-components follow-up: close reading of all 20 archived АО «НИИ «Вектор» patents (not just titles) found two with named, specific foreign parts in their own description text, not prior-art citations -- RU2861850C1's swarm-UAV direction-finding patent lists a full off-the-shelf build (u-blox GPS, Pixhawk flight controller, Raspberry Pi, Semtech-chipset LoRa transceiver, a UK-brand antenna) as its own reference implementation, and RU2763583C2 names a specific Texas Instruments ADC as suited to its receiver design. Other candidate hints in the same batch (Cypress, Analog Devices x2, Texas Instruments' TPS2475x, DJI, a 'Bosch' that turned out to be an inventor's surname not the company) were read in context and rejected as prior-art/background citations, not the entity's own described implementation -- same discipline as the earlier «Импульс»/«Ринтеп» rejection on Атлант Аэро's patent. source_id left null pending archiving these specific description excerpts as distinct sources if promoted further; the underlying patent documents themselves are already archived (see patents[] for reg_numbers/source_ids).",
+      "2026-09-05: backfilled the structured `zakupki_review` field (partial, as of 2026-09-01) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
+      "2026-09-06: wired Roskosmos space-activity license 1972К (2022-10-10) from licenses.roscosmos.ru's public API (full 548-record registry dump, s6414) — ИНН-matched, ОГРН cross-check confirmed against existing record.",
+      "2026-09-06: wired 4 active RKN (Роскомнадзор) communications-service licenses from the live rkn.gov.ru 'Реестр лицензий в области связи' search (s6415) — this is a new license category for this entity, distinct from its existing Роскосмос space-activity license (1972К) and Минпромторг production-confirmation letters. Swept against 21 other UAV/radio/comms-relevant entities in the registry (keyword-matched on радио/связь/телеком/антенн/частот/спутник/авионик); ao-nii-vektor was the only hit — all others confirmed zero communications licenses under this ИНН.",
+      "RKN comms-license registry cross-check (rkn.gov.ru/activity/connection/register/license/, scripts/screen_rkn_comms_license.py, 2026-09-06 full 176-entity sweep) — 4 license record(s) not previously on file. See s6442.",
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 5 product(s) not previously documented.",
+      "2026-09-07: merged duplicate correction key '7813491943' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
+    ],
+    "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "opensanctions_matches": [
       {
         "match_id": "NK-hDT3WpZUNTCkRg97WVWujt",
@@ -32720,6 +32732,104 @@
     ],
     "licences": [
       {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2021-06-11",
+        "number": "48826/11",
+        "source_id": "s5356"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2021-08-10",
+        "number": "67615/11",
+        "source_id": "s5357"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2021-09-27",
+        "number": "82258/11",
+        "source_id": "s5358"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2022-01-11",
+        "number": "466/11",
+        "source_id": "s5359"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-04-14.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2023-04-17",
+        "number": "38949/11",
+        "source_id": "s5360"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-05-09.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2023-05-12",
+        "number": "49047/11",
+        "source_id": "s5361"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-06-17.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2023-06-20",
+        "number": "63888/11",
+        "source_id": "s5362"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-06-17.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2023-06-20",
+        "number": "63891/11",
+        "source_id": "s5363"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2023-09-29",
+        "number": "104664/11",
+        "source_id": "s5364"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2023-12-07",
+        "number": "132832/11",
+        "source_id": "s5365"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2024-05-30",
+        "number": "55520/11",
+        "source_id": "s5366"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-06-17.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2024-06-26",
+        "number": "66629/11",
+        "source_id": "s5367"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2024-06-27",
+        "number": "66839/11",
+        "source_id": "s5368"
+      },
+      {
+        "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
+        "authority": "Министерство промышленности и торговли Российской Федерации",
+        "date": "2024-06-27",
+        "number": "66845/11",
+        "source_id": "s5369"
+      },
+      {
         "activity": "Монтаж, техническое обслуживание и ремонт средств обеспечения пожарной безопасности зданий и сооружений",
         "authority": "ГУ МЧС России по г. Москве",
         "date": "2017-10-31",
@@ -33198,6 +33308,13 @@
     "_raw": {
       "context": ") — a second, direct Rostec-subsidiary participant in this network alongside Атлант Аэро's trust-managed stake, confirmed via Rostec's own site as part of its Роселектроника holding — АО НПЦ «Элвис» (ИНН 7735582816, a long-established Zelenograd microelectronics/signal-processing firm, itself under active US/Japan/Canada/Switzerland/Ukraine sectoral sanctions), ООО «Тримикс» (3МХ) — explicit, independent corrob"
     },
+    "bank_details": {
+      "account": "40706810800000338887",
+      "bank": "ПАО «Промсвязьбанк», г. Москва",
+      "bik": "044525555",
+      "corr_account": "30101810400000000555",
+      "source_id": "s3712"
+    },
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1127746073510-20260823133724.pdf). Full registered name confirms the \"ЭЛВИС\" brand is an acronym: ЭЛектронные Вычислительно-Информационные Системы. Integrated-circuit-design ОКВЭД is a genuine, specific defence-electronics match — this is a real chip-design house, not a shell. АО — shareholders/registrar block and director name did not extract cleanly (same layout quirk).",
       "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): confirmed match. Microelectronics/chip-design house (proprietary «МУЛЬТИКОР» platform, process nodes 16nm-250nm) -- defense-adjacent (radiation-hardened, import-substitution chips) as a COMPONENT supplier, not itself a UAV airframe/systems maker. 1000+ employee institutional operation, no dormancy signal.",
@@ -33206,16 +33323,11 @@
       "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
       "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6438.",
       "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 1 enforcement-proceeding record(s) totalling 3,314,274.00 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 37 product(s) not previously documented.",
+      "2026-09-07: merged duplicate correction key '7735582816' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
-    "bank_details": {
-      "account": "40706810800000338887",
-      "bank": "ПАО «Промсвязьбанк», г. Москва",
-      "bik": "044525555",
-      "corr_account": "30101810400000000555",
-      "source_id": "s3712"
-    },
     "opensanctions_matches": [
       {
         "match_id": "NK-ZRTxXctbfyp5fmBoFLyLx8",
@@ -44776,6 +44888,28 @@
     ],
     "state_programs": [
       {
+        "as_of": "2025-12-31",
+        "name_en": "Association of developers of advanced electronic-reconnaissance, electronic-warfare, and communications systems",
+        "name_ru": "Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ)",
+        "role": "член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure)",
+        "source_id": "s5333"
+      },
+      {
+        "as_of": "2025-12-31",
+        "name_en": "Cost-reimbursement subsidy for equipment purchase",
+        "name_ru": "Субсидия на возмещение затрат, связанных с приобретением оборудования",
+        "note": "Independently corroborated by a second, unrelated primary source: the Краснодарский край Министерство промышленной политики's own 2025 annual program report (s5340, GOVREPORT_20260903_krasnodar-minprom-programma-2025-otchet.pdf), which lists ООО «Гагаринг» as one of 8 recipients of the region's «предоставление субсидий промышленным предприятиям на возмещение части затрат, связанных с приобретением нового оборудования» measure (₽67,119.79 thousand total across all 8 recipients in 2025, federally co-financed via a Минпромторг РФ agreement; per-recipient amounts not broken out in this report, so the ₽8,594,804 figure itself still traces only to s5333, but the fact of the subsidy and its equipment-purchase purpose is now confirmed by both the company's own audit report and the granting ministry's own report — not just a self-reported claim.",
+        "role": "Получатель субсидии в размере 8 594 804,00 руб. на возмещение затрат, связанных с приобретением «Установки послойного селективного лазерного сплавления металлических порошков 3DLAM Mid.», дата ввода в эксплуатацию 18.07.2025г. (metal-powder selective laser melting / metal 3D-printing machine)",
+        "source_id": "s5333"
+      },
+      {
+        "as_of": "2026-09-03",
+        "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+        "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+        "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase (orbis_id 20052703), classified under industry 'Радиоэлектронная промышленность' (radio-electronics industry) with primary ОКВЭД 26.11 — independently corroborates the entity's ИНН/ОГРН/address (matches EGRUL exactly) and its declared radio-electronics/UAV-component industry classification via a second, unrelated federal data source. Geolocated point (39.128152, 45.032572) falls within the registered Пашковский жилой массив address area of Краснодар. Record also confirms no official company website (site: 'Нет').",
+        "source_id": "s5345"
+      },
+      {
         "name": "Хакатон «Воронка инновационных стартапов» — партнёр (Фонд развития инноваций Краснодарского края)",
         "as_of": "2026-06-30",
         "source_id": "s5425",
@@ -44967,7 +45101,8 @@
       "2026-09-03: cross-checked the pre-existing financials[] (s0241/s0242/s0243, presumably an earlier БФО pull) against the FY2025 audit report (s5333). 2025 revenue (₽2,159,046,000) and 2025 net profit (₽664,188,000) match exactly -- strong cross-source confirmation. 2024 net profit does NOT match: existing record shows ₽20,945,000 (s0242) vs the audit report's ₽15,361,000 (s5333, read directly off the Отчёт о финансовых результатах, код 2400). Likely explained by a restatement -- the audit report's own 'Важные обстоятельства' section states 'данная бухгалтерская отчетность является исправленной' (this financial statement has been corrected/restated), and separately its Отчёт об изменениях капитала shows a 2024 opening-balance correction line ('исправление ошибок'). Not resolved which figure is authoritative; flagged here rather than silently overwriting -- the original БФО filing (pre-restatement) and this later audited/restated filing may both be legitimately 'true' for their respective vintage. Left the existing financials[] array as the display record; this note is the correction trail.",
       "2026-09-03: removed 'state_programs' from this (slug-keyed) entry — the ИНН-keyed entry's list (applied last) is a strict superset (adds the ГИСП Атлас промышленности entry); no data lost, duplicate-field cleanup, part of a registry-wide slug/ИНН collision sweep.",
       "2026-09-03: removed 'subsidiaries' from this (slug-keyed) entry — the ИНН-keyed entry's list (applied last) has the same 4 entries but with slug/inn filled in for the АНО «Образовательный центр Гагаринг» entry (this entry left it null); no data lost, kept the more complete version.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-07: merged duplicate correction key '2312321660' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -57317,7 +57452,9 @@
       }
     ],
     "_corrected": [
-      "2026-09-06: follow-up pass on the still-unresolved «Архангел Спецназа» (@arx_spn) legal-entity ID — egrul name-search re-tried and still empty, but the channel's own bio yielded an RKN registration number and a landing-site lead (archangelspetsnaza.ru), archived as s6405. Queued @arx_spn on config/channels.txt for a full scrape, since a live scan of its own posts is the only avenue left untried."
+      "2026-09-06: follow-up pass on the still-unresolved «Архангел Спецназа» (@arx_spn) legal-entity ID — egrul name-search re-tried and still empty, but the channel's own bio yielded an RKN registration number and a landing-site lead (archangelspetsnaza.ru), archived as s6405. Queued @arx_spn on config/channels.txt for a full scrape, since a live scan of its own posts is the only avenue left untried.",
+      "EGRUL_2315233718_20260905_ano-arkhangel (s5502) — full signed ЕГРЮЛ выписка pulled 05.09.2026: confirms ОГРН 1242300005640, registration 01.02.2024, the Новороссийск ул. Кутузовская address, Архангельский Г.Е. as director, Архангельский + Ташматов as the two учредители, and the three-code ОКВЭД list (88.99 / 63.11 / 64.99).",
+      "2026-09-07: merged duplicate correction key '2315233718' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
     ],
     "_verified_against": null,
     "opensanctions_matches": [

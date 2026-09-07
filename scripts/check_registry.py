@@ -186,6 +186,58 @@ def main() -> int:
                     f"are SILENTLY IGNORED by extract_registry.py. Wrap the "
                     f"changed fields in {{\"set\": {{...}}}}; 'why' and "
                     f"'verified_against' stay alongside it.")
+
+        # A correction key can be either a slug or an identifier (ИНН for
+        # entities, personal ИНН for people is NOT used as a key today, but
+        # entities are keyed inconsistently by either). Two correction
+        # entries resolving to the SAME live record is a demonstrated
+        # data-loss bug (see memory roymarket_correction_key_collision_bug):
+        # extract_registry.py applies both 'set' dicts to the same
+        # underlying object, and whichever key is processed last silently
+        # wins on any overlapping field, discarding the other's edits with
+        # no error anywhere. Found and hand-fixed for ~9 entities across two
+        # sessions (2026-09-07); this check makes a NEW collision fail the
+        # build instead of sitting undetected until it corrupts a field.
+        records = entities if block == "entities" else (people or [])
+        id_field = "inn" if block == "entities" else "inn_personal"
+        slug_of_id = {r[id_field]: r["slug"] for r in records if r.get(id_field) and r.get("slug")}
+        valid_slugs = {r["slug"] for r in records if r.get("slug")}
+        resolved: dict[str, list[str]] = defaultdict(list)
+        for key in (data.get(block) or {}):
+            if key in valid_slugs:
+                resolved[key].append(key)
+            elif key in slug_of_id:
+                resolved[slug_of_id[key]].append(key)
+            # else: key matches no live record by slug or ИНН — not this
+            # check's concern (extract_registry.py already scaffolds/warns
+            # on an unmatched correction key elsewhere).
+        for canonical_slug, raw_keys in resolved.items():
+            if len(raw_keys) > 1:
+                # Two correction keys pointing at the same record are only an
+                # ACTIVE data-loss risk if their 'set' blocks actually share a
+                # field — that's the case where "whichever is processed last
+                # wins" can silently discard a value. A pair with no field
+                # overlap is dormant risk (any future edit to either could
+                # still introduce the conflict) — real technical debt, but
+                # not yet corrupting anything, so it's a warning, not a
+                # build-breaking error (per 2026-09-07 audit: ~43 such pairs
+                # exist, only a handful had an actual conflict).
+                field_sets = [set((data[block][k].get("set") or {}).keys()) for k in raw_keys]
+                overlap = set.intersection(*field_sets) - {"why", "verified_against"}
+                msg = (
+                    f"{fname}: correction key collision — {raw_keys} all "
+                    f"resolve to the same record ({canonical_slug}). "
+                    f"extract_registry.py applies both 'set' blocks to the "
+                    f"same object; whichever key is processed last silently "
+                    f"wins on any overlapping field, discarding the other's "
+                    f"edits with no error. Merge into a single key ({key_label})."
+                )
+                if overlap:
+                    errors.append(msg + f" ACTIVE CONFLICT on field(s) {sorted(overlap)} "
+                                         f"— one side's value is being silently dropped right now.")
+                else:
+                    warnings.append(msg + " No overlapping 'set' field today — dormant risk, "
+                                           "not yet corrupting data, but merge when convenient.")
     for i, e in enumerate(entities):
         for k in ENTITY_REQUIRED:
             if k not in e:

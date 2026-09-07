@@ -82,6 +82,9 @@
 
 ## State-program participation
 
+- as_of: 2025-12-31; name_en: Association of developers of advanced electronic-reconnaissance, electronic-warfare, and communications systems; name_ru: Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ); role: член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure) [s5333]
+- Independently corroborated by a second, unrelated primary source: the Краснодарский край Министерство промышленной политики's own 2025 annual program report (s5340, GOVREPORT_20260903_krasnodar-minprom-programma-2025-otchet.pdf), which lists ООО «Гагаринг» as one of 8 recipients of the region's «предоставление субсидий промышленным предприятиям на возмещение части затрат, связанных с приобретением нового оборудования» measure (₽67,119.79 thousand total across all 8 recipients in 2025, federally co-financed via a Минпромторг РФ agreement; per-recipient amounts not broken out in this report, so the ₽8,594,804 figure itself still traces only to s5333, but the fact of the subsidy and its equipment-purchase purpose is now confirmed by both the company's own audit report and the granting ministry's own report — not just a self-reported claim. [s5333]
+- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase (orbis_id 20052703), classified under industry 'Радиоэлектронная промышленность' (radio-electronics industry) with primary ОКВЭД 26.11 — independently corroborates the entity's ИНН/ОГРН/address (matches EGRUL exactly) and its declared radio-electronics/UAV-component industry classification via a second, unrelated federal data source. Geolocated point (39.128152, 45.032572) falls within the registered Пашковский жилой массив address area of Краснодар. Record also confirms no official company website (site: 'Нет'). [s5345]
 - Лаборатория электроники «Гагаринг» выступила партнёром призового фонда (500 тыс. руб.) хакатона по беспилотной навигации в условиях потери сигнала ГНСС, организованного Фондом развития инноваций Краснодарского края в рамках регионального проекта «Воронка инновационных стартапов» (часть нацпроекта «Эффективная и конкурентная экономика»). Первое подтверждённое участие Гагаринга в региональной инновационной госпрограмме Краснодарского края (отдельно от федеральных АЭРОНЕКСТ/Сколково связей, если такие есть). [s5425]
 
 ## Workforce & production scale
@@ -202,6 +205,7 @@
 | s1170 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rospatent-searchplatform-second-triage-batch.json) | 2026-08-24 | — |
 | s5333 | Fedresurs | Fedresurs (FEDRESURS_939B297414FA48A4A4B3497315AF3659_20260903_gagaring-audit-report-2025fy-full.pdf) | 2026-09-03 | — |
 | s5335 | Proverki | Proverki (PROVERKI_2312321660_20260903_gagaring-rkn-inspection-26154827.json) | 2026-09-03 | 2024-11-15 |
+| s5345 | Gisp | Gisp (GISP_2312321660_20260903_atlas-promyshlennosti-company-record.json) | 2026-09-03 | 2026-09-03 |
 | s5385 | Islod | Islod (ISLOD_2310240630_20260903_licence-branch-detail.html) | 2026-09-03 | 2025-07-17 |
 | s5387 | Tgpost | Tgpost (TGPOST_my_el_lab_4210_20260803.txt) | 2026-08-03 | 2026-08-03 |
 | s5403 | Tgpost | Tgpost (TGPOST_20241214_mil_hub-89976-kursk-oblast-lab-visit.txt) | 2024-12-14 | 2024-12-14 |

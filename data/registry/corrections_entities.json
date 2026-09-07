@@ -3423,104 +3423,6 @@
         ]
       }
     },
-    "1659101884": {
-      "set": {
-        "state_programs": [
-          {
-            "as_of": "2026-09-03",
-            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
-            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
-            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 28.99.5 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
-            "source_id": "s5346"
-          }
-        ]
-      }
-    },
-    "2312321660": {
-      "set": {
-        "images": [
-          {
-            "caption": "ул. им. Фадеева, д. 429/3, Краснодар — ООО «Гагаринг»'s registered legal address: an ordinary residential building entrance.",
-            "path": "images/gagaring_hq_krasnodar_residential.jpg",
-            "source_id": null
-          },
-          {
-            "caption": "ул. Цезаря Куникова, 24к2, Краснодар — the «Гагаринг» training centre's licensed address (АНО ДПО «Образовательный центр Гагаринг», лицензия Л035-01218-23/02689789): a two-storey commercial annex at the base of a residential tower.",
-            "path": "images/gagaring_school_kunikova_annex.jpg",
-            "source_id": "s5385"
-          },
-          {
-            "caption": "Барашков Александр Сергеевич, GD/co-founder of ООО «Гагаринг», at what appears to be one of the «Гагаринг» training-centre's field courses (t.me/my_el_lab/4210, one of six images in the post's gallery).",
-            "path": "images/gagaring_barashkov_portrait.jpg",
-            "source_id": "s5387"
-          }
-        ],
-        "state_programs": [
-          {
-            "as_of": "2025-12-31",
-            "name_en": "Association of developers of advanced electronic-reconnaissance, electronic-warfare, and communications systems",
-            "name_ru": "Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ)",
-            "role": "член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure)",
-            "source_id": "s5333"
-          },
-          {
-            "as_of": "2025-12-31",
-            "name_en": "Cost-reimbursement subsidy for equipment purchase",
-            "name_ru": "Субсидия на возмещение затрат, связанных с приобретением оборудования",
-            "note": "Independently corroborated by a second, unrelated primary source: the Краснодарский край Министерство промышленной политики's own 2025 annual program report (s5340, GOVREPORT_20260903_krasnodar-minprom-programma-2025-otchet.pdf), which lists ООО «Гагаринг» as one of 8 recipients of the region's «предоставление субсидий промышленным предприятиям на возмещение части затрат, связанных с приобретением нового оборудования» measure (₽67,119.79 thousand total across all 8 recipients in 2025, federally co-financed via a Минпромторг РФ agreement; per-recipient amounts not broken out in this report, so the ₽8,594,804 figure itself still traces only to s5333, but the fact of the subsidy and its equipment-purchase purpose is now confirmed by both the company's own audit report and the granting ministry's own report — not just a self-reported claim.",
-            "role": "Получатель субсидии в размере 8 594 804,00 руб. на возмещение затрат, связанных с приобретением «Установки послойного селективного лазерного сплавления металлических порошков 3DLAM Mid.», дата ввода в эксплуатацию 18.07.2025г. (metal-powder selective laser melting / metal 3D-printing machine)",
-            "source_id": "s5333"
-          },
-          {
-            "as_of": "2026-09-03",
-            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
-            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
-            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase (orbis_id 20052703), classified under industry 'Радиоэлектронная промышленность' (radio-electronics industry) with primary ОКВЭД 26.11 — independently corroborates the entity's ИНН/ОГРН/address (matches EGRUL exactly) and its declared radio-electronics/UAV-component industry classification via a second, unrelated federal data source. Geolocated point (39.128152, 45.032572) falls within the registered Пашковский жилой массив address area of Краснодар. Record also confirms no official company website (site: 'Нет').",
-            "source_id": "s5345"
-          }
-        ],
-        "subsidiaries": [
-          {
-            "as_of": "2025-12-31",
-            "inn": "7743451768",
-            "name": "ООО «Авирон»",
-            "role": "доля участия 36,8%",
-            "slug": "ooo-aviron",
-            "source_id": "s5333"
-          },
-          {
-            "as_of": "2025-12-31",
-            "inn": "7448259249",
-            "name": "ООО «Интел Дрон»",
-            "role": "доля участия 50%",
-            "slug": "ooo-intel-dron",
-            "source_id": "s5333"
-          },
-          {
-            "as_of": "2025-12-31",
-            "inn": "7100069249",
-            "name": "ООО «НПО Эйлер»",
-            "role": "доля участия 50%",
-            "slug": "ooo-npo-eyler",
-            "source_id": "s5333"
-          },
-          {
-            "as_of": "2025-12-31",
-            "inn": "2310240630",
-            "name": "АНО ДПО «Образовательный центр Гагаринг»",
-            "role": "учредитель",
-            "slug": "ano-dpo-obrazovatelny-tsentr-gagaring",
-            "source_id": "s5333"
-          }
-        ]
-      },
-      "open_questions": [
-        {
-          "source_id": "s5463",
-          "text": "POSSIBLE tie to Проект «Архангел» (proekt-kb-arkhangel, Филиппов М.Г.), NOT confirmed: a projectArchangel/Archangel_Forum post announcing Проект Архангел's own \"Ассоциация Народный ВПК\" (Archangel_Forum#98621, 2024-06-20) cites \"Компания Гагаринг\" (t.me/my_el_lab) directly by name alongside a TASS article about a separate РЭР/РЭБ/связь developers' association. The post's prose does not explicitly state Гагаринг is a joining member — reads as a cited reference/comparable example, not a confirmed formal tie. This is nonetheless the first documented direct textual co-mention of Гагаринг and Проект «Архангел» found in this investigation (the earlier Гагаринг wide-net pass found no tie between the two networks). See the fuller writeup on proekt-kb-arkhangel's own open_questions."
-        }
-      ]
-    },
     "2632116476": {
       "set": {
         "state_programs": [
@@ -3800,307 +3702,6 @@
       "verified_against": "war-sanctions.gur.gov.ua/en/uav/companies/13798, archived as s0961",
       "why": [
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13798) ID-confirmed via ИНН 7300024069 — exact match, screen_gur.py sweep, 2026-08-24. GUR names model numbers 7/10/13, not matching the registry's existing «Пиранья 15»/«20» — flagged as an open question, not silently reconciled."
-      ]
-    },
-    "7701583410": {
-      "set": {
-        "licences": [
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2021-06-29",
-            "number": "54118/11",
-            "source_id": "s5353"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2021-12-21",
-            "number": "113235/11",
-            "source_id": "s5354"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2024-06-04",
-            "number": "57277/11",
-            "source_id": "s5355"
-          }
-        ],
-        "products": [
-          {
-            "description": "Ruggedized x86 mobile/handheld computer (артикул MGT8XPRO-R-46AL37Y1-50), ТРНМ.466453.005ТУ. Производится в г. Калуга, ул. Салтыкова-Щедрина, д. 141 (кадастровый номер 40:26:000358:914).",
-            "name_ru": "Мобильный компьютер MIG T8X (x86)",
-            "source_id": "s5355"
-          },
-          {
-            "description": "Motherboard for the MIG T8X ruggedized computer, ТРНМ.467483.001ТУ.",
-            "name_ru": "Плата материнская мобильного компьютера MIG T8X (x86)",
-            "source_id": "s5355"
-          },
-          {
-            "description": "Keyboard board for the MIG T8X ruggedized computer, ТРНМ.468381.020ТУ.",
-            "name_ru": "Плата клавиатуры мобильного компьютера MIG T8X (x86)",
-            "source_id": "s5355"
-          },
-          {
-            "description": "Ruggedized mobile thermal printer, ТРНМ.162442.001ТУ.",
-            "name_ru": "Мобильный термопринтер MIG КВ4",
-            "source_id": "s5354"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Программно-аппаратные комплексы и аналогичное оборудование, подключаемое к компьютеру или сети передачи данных",
-            "name_ru": "Комплекс средств автоматизации планирования использования воздушного пространства и управления воздушным движением «Галактика» АЕСФ.466451.032",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Серверы хранения данных",
-            "name_ru": "Сервер 2U общего назначения МЛТ-СХ ЛЕТР.466531.022",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Программно-аппаратные комплексы, созданные на серверах или устройствах, содержащие в своем составе один или более вычислительных узлов",
-            "name_ru": "Комплекс вычислительный  МЛТ-КВ ЛЕТР.466535.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные",
-            "name_ru": "Плата расширения дисковой корзины  U.2-12xLFF ЛЕТР.467239.002",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные",
-            "name_ru": "Плата расширения дисковой корзины TRI-2xSFF ЛЕТР.467239.003",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Системные блоки",
-            "name_ru": "Персональный компьютер МЛТ-ПК ЛЕТР.466219.014",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные",
-            "name_ru": "Плата материнская B760W-MX ЛЕТР.469535.002",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности",
-            "name_ru": "Программно-аппаратный комплекс биометрической идентификации и доступа «Киоск» АЕСФ.426479.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности",
-            "name_ru": "Программно-аппаратный комплекс идентификации по радужной оболочке глаза «ВЗОР-Пилон» АЕСФ.425729.002-02",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности",
-            "name_ru": "Программно-аппаратный комплекс биометрической идентификации и доступа «Киоск mini» АЕСФ.426479.002",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры",
-            "name_ru": "Оптический сканер папиллярного узора «Азимут А1» АЕСФ.468469.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры",
-            "name_ru": "Программно-аппаратный комплекс «ВЗОР-Считыватель» АЕСФ.425729.005",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры",
-            "name_ru": "Оптический сканер папиллярного узора «Азимут А2» АЕСФ.468469.002",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры",
-            "name_ru": "Оптический сканер папиллярного узора «Азимут А4» АЕСФ.468469.003",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры",
-            "name_ru": "Оптический сканер папиллярного узора «Азимут АР» АЕСФ.468469.004",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности",
-            "name_ru": "Программно-аппаратный комплекс идентификации по радужной оболочке глаза «ВЗОР-Пилон» АЕСФ.425729.002-03",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Приборы цифровые электроизмерительные прочие; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Analyzer 2700 АЕСФ.464345.004",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Серверы; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Сервер 2U общего назначения МЛТ-С  ЛЕТР.466531.021",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Плата расширения интерфейсов 3х16  ЛЕТР.468359.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Плата расширения дисковой корзины TRI-8XSFF ЛЕТР.467239.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Плата материнская серверная МЛ5 ЛЕТР.469555.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Серверы",
-            "name_ru": "Сервер 2U общего назначения МЛТ  ЛЕТР.466531.021",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Микроскопы оптические; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Сканер микропрепаратов \"OneCell Scan 3.0\" по ЕНЦР.941119.003ТУ",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Комплекс документирования и воспроизведения информации CDR 2700 АЕСФ.466451.031",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации",
-            "name_ru": "Система коммутации речевой связи(СКРС) VCS 2700 АЕСФ.466535.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Комплексный диспетчерский тренажёр АЕСФ.466948.002",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Плата клавиатуры мобильного компьютера MIG T8X(x86) ТРНМ.468381.020",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Приёмоответчик DME/N 2700 АЕСФ.461512.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Система посадки ILS 2700 АЕСФ.461511.029",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Азимутальный радиомаяк VOR 2700 АЕСФ.461512.002",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Радиомаяк азимутальный доплеровский  DVOR 2000 ВАИШ.461512.001-08",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Приёмоответчик DME/NL 2700 АЕСФ.461511.004-01",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Автоматический радиопеленгатор DF 2000 ВАИШ.462112.016-14",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Многопозиционная система наблюдения MAS 2700 АЕСФ.466453.058",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Аэродромный локатор S диапазона со встроенным вторичным каналом \"АОРЛ-АМИ 2700\" АЕСФ.461512.016",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Комплекс средств автоматизации управления воздушным движением (КСА УВД) \"Галактика\" АЕСФ.466451.003",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Командный пульт управления  П-166М КПУ УЯИД.466259.002",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Блок переключений универсальный П-166М БПРУ-03 УЯИД.468332.024",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Телекоммуникационный сервер П-166М ТКС УЯИД.465254.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Блок управления сиреной П-166М БУС УЯИД.468333.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Оборудование управления точками доступа, поддерживающими стандарт для беспроводных сетей 802.11хх; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Блок переключений универсальный П-166М БПРУ-02 УЯИД.468332.016",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Специальное оконечное средство оповещения П-166М «СЗО-3» АЕСФ.468354.015",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Модуль речевого оповещения П-166М МРО УЯИД.468155.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты, приборы и машины для измерения или контроля прочие, не включенные в другие группировки; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Комплекс аппаратно-программный «Балка» АЕСФ.464965.005",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации",
-            "name_ru": "Блок управления П-166М БУ УЯИД.466259.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации",
-            "name_ru": "Терминал управления П-166М УЯИД.469219.001",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Ноутбуки, в том числе портативные в защищенном исполнении, предназначенные для работы в сложной среде эксплуатации",
-            "name_ru": "Мобильный компьютер MIG S6 ",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Тахографы",
-            "name_ru": "Тахограф цифровой «КАСБИ SMART»",
-            "source_id": "s5391"
-          }
-        ],
-        "state_programs": [
-          {
-            "as_of": "2026-09-03",
-            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
-            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
-            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.20.1 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
-            "source_id": "s5346"
-          }
-        ]
-      },
-      "why": [
-        "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 48 product(s) not previously documented."
       ]
     },
     "7703469180": {
@@ -4471,369 +4072,6 @@
         "2026-08-26: OCR'd ZAKUPKI_ATTACH_7733894200_2770135608619000037_30-12-2020-65-0-27701356086190000370030_bb9812a7.pdf (source s1534, pulled as part of the zakupki.gov.ru batch-pull attachment set for reg 2770135608619000037) — a Moscow city default/neustoika notice, not a contract or payment document. Confirms and promotes the entity's standing address (already present only in trademark data, s1274) and adds a documented instance of contractual non-performance on an unrelated 2019 civilian IT contract."
       ]
     },
-    "7735582816": {
-      "set": {
-        "licences": [
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2021-06-11",
-            "number": "48826/11",
-            "source_id": "s5356"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2021-08-10",
-            "number": "67615/11",
-            "source_id": "s5357"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2021-09-27",
-            "number": "82258/11",
-            "source_id": "s5358"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2022-01-11",
-            "number": "466/11",
-            "source_id": "s5359"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-04-14.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2023-04-17",
-            "number": "38949/11",
-            "source_id": "s5360"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-05-09.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2023-05-12",
-            "number": "49047/11",
-            "source_id": "s5361"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-06-17.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2023-06-20",
-            "number": "63888/11",
-            "source_id": "s5362"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-06-17.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2023-06-20",
-            "number": "63891/11",
-            "source_id": "s5363"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2023-09-29",
-            "number": "104664/11",
-            "source_id": "s5364"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2023-12-07",
-            "number": "132832/11",
-            "source_id": "s5365"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2024-05-30",
-            "number": "55520/11",
-            "source_id": "s5366"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-06-17.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2024-06-26",
-            "number": "66629/11",
-            "source_id": "s5367"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2024-06-27",
-            "number": "66839/11",
-            "source_id": "s5368"
-          },
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2024-06-27",
-            "number": "66845/11",
-            "source_id": "s5369"
-          }
-        ],
-        "products": [
-          {
-            "description": "50-core heterogeneous SoC for robotics/embedded AI, 16 Tflops NN performance.",
-            "name_ru": "RoboDeus",
-            "source_id": null
-          },
-          {
-            "description": "Mobile/navigation/multimedia system-on-chip.",
-            "name_ru": "Scythian SoC",
-            "source_id": null
-          },
-          {
-            "description": "IoT-oriented system-on-chip.",
-            "name_ru": "ELIoT SoC",
-            "source_id": null
-          },
-          {
-            "description": "AI/computer-vision security systems.",
-            "name_ru": "PSIM NEST / Senesys-M / Sylph",
-            "source_id": null
-          },
-          {
-            "description": "Integrated circuit (memory), АЕЯР.431220.799ТУ.",
-            "name_ru": "Микросхема интегральная 1657РУ1У",
-            "source_id": "s5356"
-          },
-          {
-            "description": "Мультикор-family DSP/processor integrated circuits, per Минпромторг заключение №67615/11.",
-            "name_ru": "Микросхема интегральная 1892ВМ12АТ / 1892ВМ206 / 1892ВМ15АФ / 1288ПЛ1У",
-            "source_id": "s5357"
-          },
-          {
-            "description": "Мультикор-family second-level integrated circuits, per Минпромторг заключение №82258/11.",
-            "name_ru": "Микросхема интегральная 1892ВМ10Я / 1892ВМ14Я",
-            "source_id": "s5358"
-          },
-          {
-            "description": "Мультикор-family integrated circuit, АЕНВ.431280.469ТУ.",
-            "name_ru": "Микросхема интегральная 1892ВА018",
-            "source_id": "s5359"
-          },
-          {
-            "description": "Preprocessor module, РАЯЖ.468172.005ТУ.",
-            "name_ru": "Модуль препроцессора ЕНОТ",
-            "source_id": "s5361"
-          },
-          {
-            "description": "ELV-MC03 embedded processor module family (SMARC, CE and Q7 form-factor variants), РАЯЖ.467444 ТУ series. Производится по адресам: г. Москва, Зеленоград, ул. Конструктора Лукина, д. 14, стр. 14 и пр-д №4801, д. 7.",
-            "name_ru": "Модуль процессорный ELV-MC03 (SMARC/CE/Q7/base)",
-            "source_id": "s5362"
-          },
-          {
-            "description": "Processor module, РАЯЖ.441461.031ТУ.",
-            "name_ru": "Модуль процессорный Салют-ЭЛ24ПМ2",
-            "source_id": "s5364"
-          },
-          {
-            "description": "Мультикор-family integrated circuit, АЕНВ.431280.605ТУ.",
-            "name_ru": "Микросхема интегральная 1892ВМ268",
-            "source_id": "s5366"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Микросхема интегральная 1892ВМ14Я",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Микросхема интегральная К1892ВМ21Я",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Микросхема интегральная К1892ВГ1Я",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Микросхема интегральная 1657РУ2У",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Микросхема интегральная 1892ВМ10Я АЕЯР.431280.823ТУ РАЯЖ.431282.012-00.02",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие",
-            "name_ru": "Модуль процессорный ELV-MC03-SMARC",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Модуль процессорный ELV-MC03-CE",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Модуль процессорный ELV-MC03-Q7",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Модуль отладочный ELV-SMARC-CB РАЯЖ.441461.049ТУ",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Микросхема интегральная 1892ВМ28А8",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Микросхема интегральная 1892ВМ288",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
-            "name_ru": "Микросхема интегральная 1892ВМ10Я АЕЯР.431280.823ТУ РАЯЖ.431282.012-00.01",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1892ВМ8Я",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1892ВМ5АЯ",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1892ВМ7Я",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1892ВМ2Я",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1892ВМ3Т",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1892КП1Я",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1508ПЛ9Т",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1508ПЛ8Т",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1288ПЛ1У",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1892ВМ15БФ",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1892ХД4Ф",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
-            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BL-8",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
-            "name_ru": "Киберзащищенная IP-видеокамера ECAM03D-2",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
-            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BX-5",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
-            "name_ru": "Киберзащищенная IP-видеокамера ECAM03D-5",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
-            "name_ru": "Киберзащищенная IP-видеокамера ECAM03D-8",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
-            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BX-2",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
-            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BX-8",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
-            "name_ru": "Киберзащищенная IP-видеокамера ECAM03DM-5",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
-            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BL-2",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
-            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BL-5",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
-            "name_ru": "Киберзащищенная IP-видеокамера ECAM03DM-2",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная",
-            "name_ru": "Станция радиолокационная ЕНОТ",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1892ВМ15АФ",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
-            "name_ru": "Микросхема интегральная 1892ВМ206",
-            "source_id": "s5391"
-          }
-        ],
-        "state_programs": [
-          {
-            "as_of": "2026-09-03",
-            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
-            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
-            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.11.3 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
-            "source_id": "s5346"
-          }
-        ]
-      },
-      "why": [
-        "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 37 product(s) not previously documented."
-      ]
-    },
     "7743414861": {
       "set": {
         "tier": "plumbing",
@@ -4943,63 +4181,6 @@
           }
         ]
       }
-    },
-    "7813491943": {
-      "set": {
-        "licences": [
-          {
-            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент станкостроения и инвестиционного машиностроения. Статус: утратило силу 2021-04-21.",
-            "authority": "Министерство промышленности и торговли Российской Федерации",
-            "date": "2020-04-22",
-            "number": "28088/05",
-            "source_id": "s5370"
-          }
-        ],
-        "products": [
-          {
-            "description": "Three-phase AC power-consumption optimizer line (ОЭП 3-060-01 through ОЭП 3-500-01/635-01, incl. -02 variants), ТУ 27.12.31-001-29250611-2018. Производится по адресу: г. Санкт-Петербург, Кантемировская ул., д. 10.",
-            "name_ru": "Оптимизатор энергопотребления трёхфазный серии ОЭП 3",
-            "source_id": "s5370"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие",
-            "name_ru": "Универсальный преобразователь интерфейсов \"УПИ-01\"",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие",
-            "name_ru": "Modbus коммутатор \"МБК-01\"",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Панели и прочие комплекты электрической аппаратуры коммутации или защиты на напряжение не более 1 кВ",
-            "name_ru": "Обратимый бустер серии ОБ3 четырёхступенчатый",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная",
-            "name_ru": "Пассивный когерентный локационный комплекс \"ПКЛ\"",
-            "source_id": "s5391"
-          },
-          {
-            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Машины электрические и аппаратура специализированные",
-            "name_ru": "Оптимизатор энергопотрбления ОЭП 3-200-01",
-            "source_id": "s5391"
-          }
-        ],
-        "state_programs": [
-          {
-            "as_of": "2026-09-03",
-            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
-            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
-            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.30.13 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
-            "source_id": "s5346"
-          }
-        ]
-      },
-      "why": [
-        "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 5 product(s) not previously documented."
-      ]
     },
     "7814027653": {
       "set": {
@@ -8382,6 +7563,47 @@
             "note": "Статус: недействующая.",
             "source_id": "s6442"
           }
+        ],
+        "products": [
+          {
+            "description": "Three-phase AC power-consumption optimizer line (ОЭП 3-060-01 through ОЭП 3-500-01/635-01, incl. -02 variants), ТУ 27.12.31-001-29250611-2018. Производится по адресу: г. Санкт-Петербург, Кантемировская ул., д. 10.",
+            "name_ru": "Оптимизатор энергопотребления трёхфазный серии ОЭП 3",
+            "source_id": "s5370"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие",
+            "name_ru": "Универсальный преобразователь интерфейсов \"УПИ-01\"",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие",
+            "name_ru": "Modbus коммутатор \"МБК-01\"",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Панели и прочие комплекты электрической аппаратуры коммутации или защиты на напряжение не более 1 кВ",
+            "name_ru": "Обратимый бустер серии ОБ3 четырёхступенчатый",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная",
+            "name_ru": "Пассивный когерентный локационный комплекс \"ПКЛ\"",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Машины электрические и аппаратура специализированные",
+            "name_ru": "Оптимизатор энергопотрбления ОЭП 3-200-01",
+            "source_id": "s5391"
+          }
+        ],
+        "state_programs": [
+          {
+            "as_of": "2026-09-03",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.30.13 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346"
+          }
         ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
@@ -8396,7 +7618,9 @@
         "2026-09-06: wired Roskosmos space-activity license 1972К (2022-10-10) from licenses.roscosmos.ru's public API (full 548-record registry dump, s6414) — ИНН-matched, ОГРН cross-check confirmed against existing record.",
         "2026-09-06: wired 4 active RKN (Роскомнадзор) communications-service licenses from the live rkn.gov.ru 'Реестр лицензий в области связи' search (s6415) — this is a new license category for this entity, distinct from its existing Роскосмос space-activity license (1972К) and Минпромторг production-confirmation letters. Swept against 21 other UAV/radio/comms-relevant entities in the registry (keyword-matched on радио/связь/телеком/антенн/частот/спутник/авионик); ao-nii-vektor was the only hit — all others confirmed zero communications licenses under this ИНН.",
         "RKN comms-license registry cross-check (rkn.gov.ru/activity/connection/register/license/, scripts/screen_rkn_comms_license.py, 2026-09-06 full 176-entity sweep) — 4 license record(s) not previously on file. See s6442.",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 5 product(s) not previously documented.",
+        "2026-09-07: merged duplicate correction key '7813491943' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
       ]
     },
     "ao-npp-bat": {
@@ -8728,6 +7952,277 @@
             "note": "Приказ №941 от 12.05.2023. Статус: действие приостановлено.",
             "source_id": "s6436"
           }
+        ],
+        "products": [
+          {
+            "description": "Ruggedized x86 mobile/handheld computer (артикул MGT8XPRO-R-46AL37Y1-50), ТРНМ.466453.005ТУ. Производится в г. Калуга, ул. Салтыкова-Щедрина, д. 141 (кадастровый номер 40:26:000358:914).",
+            "name_ru": "Мобильный компьютер MIG T8X (x86)",
+            "source_id": "s5355"
+          },
+          {
+            "description": "Motherboard for the MIG T8X ruggedized computer, ТРНМ.467483.001ТУ.",
+            "name_ru": "Плата материнская мобильного компьютера MIG T8X (x86)",
+            "source_id": "s5355"
+          },
+          {
+            "description": "Keyboard board for the MIG T8X ruggedized computer, ТРНМ.468381.020ТУ.",
+            "name_ru": "Плата клавиатуры мобильного компьютера MIG T8X (x86)",
+            "source_id": "s5355"
+          },
+          {
+            "description": "Ruggedized mobile thermal printer, ТРНМ.162442.001ТУ.",
+            "name_ru": "Мобильный термопринтер MIG КВ4",
+            "source_id": "s5354"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Программно-аппаратные комплексы и аналогичное оборудование, подключаемое к компьютеру или сети передачи данных",
+            "name_ru": "Комплекс средств автоматизации планирования использования воздушного пространства и управления воздушным движением «Галактика» АЕСФ.466451.032",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Серверы хранения данных",
+            "name_ru": "Сервер 2U общего назначения МЛТ-СХ ЛЕТР.466531.022",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Программно-аппаратные комплексы, созданные на серверах или устройствах, содержащие в своем составе один или более вычислительных узлов",
+            "name_ru": "Комплекс вычислительный  МЛТ-КВ ЛЕТР.466535.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные",
+            "name_ru": "Плата расширения дисковой корзины  U.2-12xLFF ЛЕТР.467239.002",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные",
+            "name_ru": "Плата расширения дисковой корзины TRI-2xSFF ЛЕТР.467239.003",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Системные блоки",
+            "name_ru": "Персональный компьютер МЛТ-ПК ЛЕТР.466219.014",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные",
+            "name_ru": "Плата материнская B760W-MX ЛЕТР.469535.002",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности",
+            "name_ru": "Программно-аппаратный комплекс биометрической идентификации и доступа «Киоск» АЕСФ.426479.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности",
+            "name_ru": "Программно-аппаратный комплекс идентификации по радужной оболочке глаза «ВЗОР-Пилон» АЕСФ.425729.002-02",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности",
+            "name_ru": "Программно-аппаратный комплекс биометрической идентификации и доступа «Киоск mini» АЕСФ.426479.002",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры",
+            "name_ru": "Оптический сканер папиллярного узора «Азимут А1» АЕСФ.468469.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры",
+            "name_ru": "Программно-аппаратный комплекс «ВЗОР-Считыватель» АЕСФ.425729.005",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры",
+            "name_ru": "Оптический сканер папиллярного узора «Азимут А2» АЕСФ.468469.002",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры",
+            "name_ru": "Оптический сканер папиллярного узора «Азимут А4» АЕСФ.468469.003",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Сканеры",
+            "name_ru": "Оптический сканер папиллярного узора «Азимут АР» АЕСФ.468469.004",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Терминалы биометрические, включая терминалы контроля документов и верификации личности",
+            "name_ru": "Программно-аппаратный комплекс идентификации по радужной оболочке глаза «ВЗОР-Пилон» АЕСФ.425729.002-03",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Приборы цифровые электроизмерительные прочие; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Analyzer 2700 АЕСФ.464345.004",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Серверы; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Сервер 2U общего назначения МЛТ-С  ЛЕТР.466531.021",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Плата расширения интерфейсов 3х16  ЛЕТР.468359.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Плата расширения дисковой корзины TRI-8XSFF ЛЕТР.467239.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Плата материнская серверная МЛ5 ЛЕТР.469555.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Серверы",
+            "name_ru": "Сервер 2U общего назначения МЛТ  ЛЕТР.466531.021",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Микроскопы оптические; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Сканер микропрепаратов \"OneCell Scan 3.0\" по ЕНЦР.941119.003ТУ",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Комплекс документирования и воспроизведения информации CDR 2700 АЕСФ.466451.031",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации",
+            "name_ru": "Система коммутации речевой связи(СКРС) VCS 2700 АЕСФ.466535.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Комплексный диспетчерский тренажёр АЕСФ.466948.002",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Плата клавиатуры мобильного компьютера MIG T8X(x86) ТРНМ.468381.020",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Приёмоответчик DME/N 2700 АЕСФ.461512.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Система посадки ILS 2700 АЕСФ.461511.029",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Азимутальный радиомаяк VOR 2700 АЕСФ.461512.002",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Радиомаяк азимутальный доплеровский  DVOR 2000 ВАИШ.461512.001-08",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Приёмоответчик DME/NL 2700 АЕСФ.461511.004-01",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Автоматический радиопеленгатор DF 2000 ВАИШ.462112.016-14",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Многопозиционная система наблюдения MAS 2700 АЕСФ.466453.058",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Аэродромный локатор S диапазона со встроенным вторичным каналом \"АОРЛ-АМИ 2700\" АЕСФ.461512.016",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радионавигационная прочая; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Комплекс средств автоматизации управления воздушным движением (КСА УВД) \"Галактика\" АЕСФ.466451.003",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Командный пульт управления  П-166М КПУ УЯИД.466259.002",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Блок переключений универсальный П-166М БПРУ-03 УЯИД.468332.024",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Телекоммуникационный сервер П-166М ТКС УЯИД.465254.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Блок управления сиреной П-166М БУС УЯИД.468333.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Оборудование управления точками доступа, поддерживающими стандарт для беспроводных сетей 802.11хх; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Блок переключений универсальный П-166М БПРУ-02 УЯИД.468332.016",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Специальное оконечное средство оповещения П-166М «СЗО-3» АЕСФ.468354.015",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Модуль речевого оповещения П-166М МРО УЯИД.468155.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты, приборы и машины для измерения или контроля прочие, не включенные в другие группировки; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Комплекс аппаратно-программный «Балка» АЕСФ.464965.005",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации",
+            "name_ru": "Блок управления П-166М БУ УЯИД.466259.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Средства связи, выполняющие функцию систем коммутации",
+            "name_ru": "Терминал управления П-166М УЯИД.469219.001",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Ноутбуки, в том числе портативные в защищенном исполнении, предназначенные для работы в сложной среде эксплуатации",
+            "name_ru": "Мобильный компьютер MIG S6 ",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Тахографы",
+            "name_ru": "Тахограф цифровой «КАСБИ SMART»",
+            "source_id": "s5391"
+          }
+        ],
+        "state_programs": [
+          {
+            "as_of": "2026-09-03",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.20.1 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346"
+          }
         ]
       },
       "verified_against": "s0212 — АО ПК «Азимут»'s own full signed ЕГРЮЛ extract, pulled 14.08.2026",
@@ -8738,7 +8233,9 @@
         "2026-09-05: backfilled the structured `zakupki_review` field (partial, as of 2026-08-30) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
         "2026-09-06: wired 5 aviation-technology development/production/testing/repair license record(s) from Минпромторг's aviation-tech license registry (data.gov.ru dataset 7705596339-drones, s6408) — ИНН-matched, exact ОГРН cross-check confirmed.",
         "2026-09-06: this entity's own historical name «ОАО «АЗИМУТ»» (2010-2013 license records in s6408, ОГРН 1057746261605 matching this entity exactly) corroborates the existing name_history entry's note that an earlier name existed before the 2024-12-24 «АО Производственная компания «Азимут»» record — the predecessor name is now identified.",
-        "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6436."
+        "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6436.",
+        "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 48 product(s) not previously documented.",
+        "2026-09-07: merged duplicate correction key '7701583410' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
       ]
     },
     "ao-ploshchad": {
@@ -13521,6 +13018,104 @@
         },
         "licences": [
           {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2021-06-11",
+            "number": "48826/11",
+            "source_id": "s5356"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2021-08-10",
+            "number": "67615/11",
+            "source_id": "s5357"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2021-09-27",
+            "number": "82258/11",
+            "source_id": "s5358"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2023-03-31.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2022-01-11",
+            "number": "466/11",
+            "source_id": "s5359"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-04-14.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2023-04-17",
+            "number": "38949/11",
+            "source_id": "s5360"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-05-09.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2023-05-12",
+            "number": "49047/11",
+            "source_id": "s5361"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-06-17.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2023-06-20",
+            "number": "63888/11",
+            "source_id": "s5362"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-06-17.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2023-06-20",
+            "number": "63891/11",
+            "source_id": "s5363"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2023-09-29",
+            "number": "104664/11",
+            "source_id": "s5364"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2023-12-07",
+            "number": "132832/11",
+            "source_id": "s5365"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2024-05-30",
+            "number": "55520/11",
+            "source_id": "s5366"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: утратило силу 2026-06-17.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2024-06-26",
+            "number": "66629/11",
+            "source_id": "s5367"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2024-06-27",
+            "number": "66839/11",
+            "source_id": "s5368"
+          },
+          {
+            "activity": "Заключение Минпромторга России о подтверждении производства промышленной продукции на территории РФ (Постановление Правительства №719) — Департамент радиоэлектронной промышленности. Статус: действует.",
+            "authority": "Министерство промышленности и торговли Российской Федерации",
+            "date": "2024-06-27",
+            "number": "66845/11",
+            "source_id": "s5369"
+          },
+          {
             "activity": "Монтаж, техническое обслуживание и ремонт средств обеспечения пожарной безопасности зданий и сооружений",
             "authority": "ГУ МЧС России по г. Москве",
             "date": "2017-10-31",
@@ -13537,7 +13132,263 @@
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
         ],
-        "charter_capital": 100155978
+        "charter_capital": 100155978,
+        "products": [
+          {
+            "description": "50-core heterogeneous SoC for robotics/embedded AI, 16 Tflops NN performance.",
+            "name_ru": "RoboDeus",
+            "source_id": null
+          },
+          {
+            "description": "Mobile/navigation/multimedia system-on-chip.",
+            "name_ru": "Scythian SoC",
+            "source_id": null
+          },
+          {
+            "description": "IoT-oriented system-on-chip.",
+            "name_ru": "ELIoT SoC",
+            "source_id": null
+          },
+          {
+            "description": "AI/computer-vision security systems.",
+            "name_ru": "PSIM NEST / Senesys-M / Sylph",
+            "source_id": null
+          },
+          {
+            "description": "Integrated circuit (memory), АЕЯР.431220.799ТУ.",
+            "name_ru": "Микросхема интегральная 1657РУ1У",
+            "source_id": "s5356"
+          },
+          {
+            "description": "Мультикор-family DSP/processor integrated circuits, per Минпромторг заключение №67615/11.",
+            "name_ru": "Микросхема интегральная 1892ВМ12АТ / 1892ВМ206 / 1892ВМ15АФ / 1288ПЛ1У",
+            "source_id": "s5357"
+          },
+          {
+            "description": "Мультикор-family second-level integrated circuits, per Минпромторг заключение №82258/11.",
+            "name_ru": "Микросхема интегральная 1892ВМ10Я / 1892ВМ14Я",
+            "source_id": "s5358"
+          },
+          {
+            "description": "Мультикор-family integrated circuit, АЕНВ.431280.469ТУ.",
+            "name_ru": "Микросхема интегральная 1892ВА018",
+            "source_id": "s5359"
+          },
+          {
+            "description": "Preprocessor module, РАЯЖ.468172.005ТУ.",
+            "name_ru": "Модуль препроцессора ЕНОТ",
+            "source_id": "s5361"
+          },
+          {
+            "description": "ELV-MC03 embedded processor module family (SMARC, CE and Q7 form-factor variants), РАЯЖ.467444 ТУ series. Производится по адресам: г. Москва, Зеленоград, ул. Конструктора Лукина, д. 14, стр. 14 и пр-д №4801, д. 7.",
+            "name_ru": "Модуль процессорный ELV-MC03 (SMARC/CE/Q7/base)",
+            "source_id": "s5362"
+          },
+          {
+            "description": "Processor module, РАЯЖ.441461.031ТУ.",
+            "name_ru": "Модуль процессорный Салют-ЭЛ24ПМ2",
+            "source_id": "s5364"
+          },
+          {
+            "description": "Мультикор-family integrated circuit, АЕНВ.431280.605ТУ.",
+            "name_ru": "Микросхема интегральная 1892ВМ268",
+            "source_id": "s5366"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Микросхема интегральная 1892ВМ14Я",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Микросхема интегральная К1892ВМ21Я",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Микросхема интегральная К1892ВГ1Я",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Микросхема интегральная 1657РУ2У",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Микросхема интегральная 1892ВМ10Я АЕЯР.431280.823ТУ РАЯЖ.431282.012-00.02",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие",
+            "name_ru": "Модуль процессорный ELV-MC03-SMARC",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Модуль процессорный ELV-MC03-CE",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства автоматической обработки данных прочие; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Модуль процессорный ELV-MC03-Q7",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Платы печатные смонтированные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Модуль отладочный ELV-SMARC-CB РАЯЖ.441461.049ТУ",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Микросхема интегральная 1892ВМ28А8",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Микросхема интегральная 1892ВМ288",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные; active ПП719 certificate flag on GISP listing",
+            "name_ru": "Микросхема интегральная 1892ВМ10Я АЕЯР.431280.823ТУ РАЯЖ.431282.012-00.01",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1892ВМ8Я",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1892ВМ5АЯ",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1892ВМ7Я",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1892ВМ2Я",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1892ВМ3Т",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1892КП1Я",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1508ПЛ9Т",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1508ПЛ8Т",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1288ПЛ1У",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1892ВМ15БФ",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1892ХД4Ф",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
+            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BL-8",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
+            "name_ru": "Киберзащищенная IP-видеокамера ECAM03D-2",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
+            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BX-5",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
+            "name_ru": "Киберзащищенная IP-видеокамера ECAM03D-5",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
+            "name_ru": "Киберзащищенная IP-видеокамера ECAM03D-8",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
+            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BX-2",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
+            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BX-8",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
+            "name_ru": "Киберзащищенная IP-видеокамера ECAM03DM-5",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
+            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BL-2",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
+            "name_ru": "Киберзащищенная IP-видеокамера ECAM03BL-5",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Видеокамеры цифровые",
+            "name_ru": "Киберзащищенная IP-видеокамера ECAM03DM-2",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Аппаратура радиолокационная",
+            "name_ru": "Станция радиолокационная ЕНОТ",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1892ВМ15АФ",
+            "source_id": "s5391"
+          },
+          {
+            "description": "Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Схемы интегральные электронные",
+            "name_ru": "Микросхема интегральная 1892ВМ206",
+            "source_id": "s5391"
+          }
+        ],
+        "state_programs": [
+          {
+            "as_of": "2026-09-03",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 26.11.3 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346"
+          }
+        ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -13548,7 +13399,9 @@
         "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
         "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6438.",
         "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 1 enforcement-proceeding record(s) totalling 3,314,274.00 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 37 product(s) not previously documented.",
+        "2026-09-07: merged duplicate correction key '7735582816' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
       ]
     },
     "npts-ushkuynik": {
@@ -15151,6 +15004,13 @@
         },
         "state_programs": [
           {
+            "as_of": "2026-09-03",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 28.99.5 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
+            "source_id": "s5346"
+          },
+          {
             "as_of": "2026-09-06",
             "name_en": "rk.2035.university national БАС (UAV-industry) company registry",
             "name_ru": "Реестр компаний БАС — rk.2035.university",
@@ -15223,7 +15083,8 @@
         "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 2 product(s) not previously documented.",
         "2026-09-06: screen_rk2035_bas_registry.py full-roster run, ID-confirmed (inn_match=true, ogrn_match=true) hit against the rk.2035.university catalog dataset (s1165) -- wired as a new state_programs[] entry.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-07: merged duplicate correction key '1659101884' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
       ]
     },
     "ooo-asel-labs": {
@@ -16860,6 +16721,28 @@
         ],
         "state_programs": [
           {
+            "as_of": "2025-12-31",
+            "name_en": "Association of developers of advanced electronic-reconnaissance, electronic-warfare, and communications systems",
+            "name_ru": "Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ)",
+            "role": "член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure)",
+            "source_id": "s5333"
+          },
+          {
+            "as_of": "2025-12-31",
+            "name_en": "Cost-reimbursement subsidy for equipment purchase",
+            "name_ru": "Субсидия на возмещение затрат, связанных с приобретением оборудования",
+            "note": "Independently corroborated by a second, unrelated primary source: the Краснодарский край Министерство промышленной политики's own 2025 annual program report (s5340, GOVREPORT_20260903_krasnodar-minprom-programma-2025-otchet.pdf), which lists ООО «Гагаринг» as one of 8 recipients of the region's «предоставление субсидий промышленным предприятиям на возмещение части затрат, связанных с приобретением нового оборудования» measure (₽67,119.79 thousand total across all 8 recipients in 2025, federally co-financed via a Минпромторг РФ agreement; per-recipient amounts not broken out in this report, so the ₽8,594,804 figure itself still traces only to s5333, but the fact of the subsidy and its equipment-purchase purpose is now confirmed by both the company's own audit report and the granting ministry's own report — not just a self-reported claim.",
+            "role": "Получатель субсидии в размере 8 594 804,00 руб. на возмещение затрат, связанных с приобретением «Установки послойного селективного лазерного сплавления металлических порошков 3DLAM Mid.», дата ввода в эксплуатацию 18.07.2025г. (metal-powder selective laser melting / metal 3D-printing machine)",
+            "source_id": "s5333"
+          },
+          {
+            "as_of": "2026-09-03",
+            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
+            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
+            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase (orbis_id 20052703), classified under industry 'Радиоэлектронная промышленность' (radio-electronics industry) with primary ОКВЭД 26.11 — independently corroborates the entity's ИНН/ОГРН/address (matches EGRUL exactly) and its declared radio-electronics/UAV-component industry classification via a second, unrelated federal data source. Geolocated point (39.128152, 45.032572) falls within the registered Пашковский жилой массив address area of Краснодар. Record also confirms no official company website (site: 'Нет').",
+            "source_id": "s5345"
+          },
+          {
             "name": "Хакатон «Воронка инновационных стартапов» — партнёр (Фонд развития инноваций Краснодарского края)",
             "as_of": "2026-06-30",
             "source_id": "s5425",
@@ -16908,6 +16791,57 @@
             "source_id": "s6776",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
+        ],
+        "images": [
+          {
+            "caption": "ул. им. Фадеева, д. 429/3, Краснодар — ООО «Гагаринг»'s registered legal address: an ordinary residential building entrance.",
+            "path": "images/gagaring_hq_krasnodar_residential.jpg",
+            "source_id": null
+          },
+          {
+            "caption": "ул. Цезаря Куникова, 24к2, Краснодар — the «Гагаринг» training centre's licensed address (АНО ДПО «Образовательный центр Гагаринг», лицензия Л035-01218-23/02689789): a two-storey commercial annex at the base of a residential tower.",
+            "path": "images/gagaring_school_kunikova_annex.jpg",
+            "source_id": "s5385"
+          },
+          {
+            "caption": "Барашков Александр Сергеевич, GD/co-founder of ООО «Гагаринг», at what appears to be one of the «Гагаринг» training-centre's field courses (t.me/my_el_lab/4210, one of six images in the post's gallery).",
+            "path": "images/gagaring_barashkov_portrait.jpg",
+            "source_id": "s5387"
+          }
+        ],
+        "subsidiaries": [
+          {
+            "as_of": "2025-12-31",
+            "inn": "7743451768",
+            "name": "ООО «Авирон»",
+            "role": "доля участия 36,8%",
+            "slug": "ooo-aviron",
+            "source_id": "s5333"
+          },
+          {
+            "as_of": "2025-12-31",
+            "inn": "7448259249",
+            "name": "ООО «Интел Дрон»",
+            "role": "доля участия 50%",
+            "slug": "ooo-intel-dron",
+            "source_id": "s5333"
+          },
+          {
+            "as_of": "2025-12-31",
+            "inn": "7100069249",
+            "name": "ООО «НПО Эйлер»",
+            "role": "доля участия 50%",
+            "slug": "ooo-npo-eyler",
+            "source_id": "s5333"
+          },
+          {
+            "as_of": "2025-12-31",
+            "inn": "2310240630",
+            "name": "АНО ДПО «Образовательный центр Гагаринг»",
+            "role": "учредитель",
+            "slug": "ano-dpo-obrazovatelny-tsentr-gagaring",
+            "source_id": "s5333"
+          }
         ]
       },
       "verified_against": null,
@@ -16923,7 +16857,8 @@
         "2026-09-03: cross-checked the pre-existing financials[] (s0241/s0242/s0243, presumably an earlier БФО pull) against the FY2025 audit report (s5333). 2025 revenue (₽2,159,046,000) and 2025 net profit (₽664,188,000) match exactly -- strong cross-source confirmation. 2024 net profit does NOT match: existing record shows ₽20,945,000 (s0242) vs the audit report's ₽15,361,000 (s5333, read directly off the Отчёт о финансовых результатах, код 2400). Likely explained by a restatement -- the audit report's own 'Важные обстоятельства' section states 'данная бухгалтерская отчетность является исправленной' (this financial statement has been corrected/restated), and separately its Отчёт об изменениях капитала shows a 2024 opening-balance correction line ('исправление ошибок'). Not resolved which figure is authoritative; flagged here rather than silently overwriting -- the original БФО filing (pre-restatement) and this later audited/restated filing may both be legitimately 'true' for their respective vintage. Left the existing financials[] array as the display record; this note is the correction trail.",
         "2026-09-03: removed 'state_programs' from this (slug-keyed) entry — the ИНН-keyed entry's list (applied last) is a strict superset (adds the ГИСП Атлас промышленности entry); no data lost, duplicate-field cleanup, part of a registry-wide slug/ИНН collision sweep.",
         "2026-09-03: removed 'subsidiaries' from this (slug-keyed) entry — the ИНН-keyed entry's list (applied last) has the same 4 entries but with slug/inn filled in for the АНО «Образовательный центр Гагаринг» entry (this entry left it null); no data lost, kept the more complete version.",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-07: merged duplicate correction key '2312321660' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
       ]
     },
     "ooo-garant-klub": {
@@ -27664,95 +27599,6 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
       ]
     },
-    "2315233718": {
-      "set": {
-        "tier_basis": "Director Архангельский Геннадий Евгеньевич — surname overlap with 'Архангел' brand family flagged as unresolved elsewhere; not yet confirmed a real tie to Проект «Архангел»/Филиппов. ADDRESS/SITE CHECK 2026-09-04: nspd.gov.ru (Rosreestr cadastral map) is unreachable from this project's sandbox for a scripted OR in-page-fetch browser approach (net::ERR_TIMED_OUT on a real chrome-devtools browser tab, not just curl) — the 2026-09-03 'untested lead' that a real browser session might bypass its block did NOT pan out; treat nspd.gov.ru as blocked the same as kad.arbitr.ru going forward, not worth re-trying without a genuine user-driven session. Fell back to Yandex Maps (reachable, no block) for the registered address instead: this is a generic mixed commercial/residential building — 'Businesses inside' lists unrelated tenants (household-chemicals wholesale, electrical goods, a housing complex) with no drone/UAV/production signature visible from the exterior or tenant list. Consistent with a registered-office address, not a manufacturing site. SCREENING 2026-09-04: zakupki.gov.ru supplier-search (scoped --inn scan) returned zero contract hits. Rospatent patent-holder search (searchplatform.rospatent.gov.ru /search, patent_holders filter) returned zero hits for the entity name.",
-        "address": "353917, Краснодарский край, г.о. город Новороссийск, г. Новороссийск, ул. Кутузовская, д. 117, помещ. 8",
-        "address_history": [
-          {
-            "value": "353917, Краснодарский край, г.о. город Новороссийск, г. Новороссийск, ул. Кутузовская, д. 117, помещ. 8",
-            "as_of": "2026-09-05",
-            "source_id": "s5502",
-            "note": "Registered legal address per the full signed ЕГРЮЛ выписка of 05.09.2026 — this record's first primary-source address (it previously rested on aggregator sourcing only)."
-          }
-        ],
-        "director_history": [
-          {
-            "value": "Архангельский Геннадий Евгеньевич",
-            "as_of": "2024-02-01",
-            "source_id": "s5502",
-            "note": "ИНН 615491317400, должность ДИРЕКТОР, from incorporation; no director change recorded through 05.09.2026."
-          },
-          {
-            "as_of": "2024-02-01",
-            "note": "в должности с регистрации (rusprofile.ru aggregator pull, not a primary EGRUL extract)",
-            "source_id": "s5394",
-            "value": "Архангельский Геннадий Евгеньевич"
-          }
-        ],
-        "founders": [
-          {
-            "name": "Архангельский Геннадий Евгеньевич",
-            "inn_personal": "615491317400",
-            "share_pct": null,
-            "source_id": "s5502"
-          },
-          {
-            "name": "Ташматов Илья Сергеевич",
-            "inn_personal": "234503145734",
-            "share_pct": null,
-            "source_id": "s5502"
-          }
-        ],
-        "founders_history": [
-          {
-            "value": "Архангельский Геннадий Евгеньевич + Ташматов Илья Сергеевич (учредители)",
-            "as_of": "2024-02-01",
-            "source_id": "s5502",
-            "note": "Both recorded as учредители from incorporation. An АНО has no уставный капитал and no share percentages — the выписка records no доли, so none are asserted here."
-          }
-        ],
-        "okved_code": "88.99",
-        "okved_label": "Предоставление прочих социальных услуг без обеспечения проживания, не включенных в другие группировки",
-        "open_questions": [
-          {
-            "text": "Full ЕГРЮЛ выписка (s5502, 05.09.2026) closes this record's primary-source gap but also narrows the entity's declared profile sharply: only THREE ОКВЭД codes — 88.99 (other social services), 63.11 (data processing/hosting) and 64.99 (other financial services). There is no military, training, education or UAV code at all, despite the organisation's own registered name being «АНО военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел»». A declared-activity profile that omits every activity the name announces is itself a finding; 64.99 in particular (other financial services) is an unusual code for a patriotic-education NKO and is the kind of code used for donation/fundraising flows. No БФО pulled — bo.nalog.gov.ru check outstanding for FY2024 and FY2025.",
-            "source_id": "s5502"
-          },
-          {
-            "text": "No недостоверность or strike-off marker as of 05.09.2026 (checked via check_egrul_flags.py against the full выписка). A 10.01.2025 record (ГРН 2252300017429) records replacement of a personal identity document for one of the recorded individuals — routine, noted only so a future re-pull does not read it as a substantive change.",
-            "source_id": "s5502"
-          },
-          {
-            "source_id": "s5409",
-            "text": "A second, independent egrul.nalog.ru open-API lookup (2026-09-03, s5409) confirms director «Архангельский Геннадий Евгеньевич» and КПП 231501001 — corroborates the earlier rusprofile.ru pull (s5394) on a second, government-sourced channel. Still no full signed EGRUL extract (PDF) pulled — both sources so far are open-API summaries, not the full document. Upgrade if this entity's role in the Гагаринг training-center relationship grows more central."
-          },
-          {
-            "source_id": null,
-            "text": "ARCHANGEL-FAMILY DISAMBIGUATION STATUS (2026-09-03): at least 6 distinct \"Архангел\"-branded organizations are now on record. (1) THIS entity (Архангел Легион, ИНН 2315233718) — confirmed tied to Гагаринг's 51st Army training-center relationship. (2) «Архангел Спецназа» (@arx_spn, 1.02M subs, the mask-branding org with a separate joint drone-retraining project with Гагаринг) — checko.ru name search returned only noise (too many unrelated \"Архангел\"-named companies to disambiguate by name alone) and the channel's own t.me/s/ page carries no external link; NO legal entity identified for it in this pass. (3) «проект Архангел» / Филиппов Михаил Геннадьевич — myrotvorets.center (Cloudflare-blocked to scripts, confirmed again this pass) could not be checked; still only parked in memory (roymarket_archangel_adjacent_network), relationship to (1)/(2) unresolved. (4) ooo-arkhangel (EU-sanctioned ЦБСТ resident, Moscow, ИНН 9714079108, director Шатракова А.А.) — already confirmed unrelated to (1)-(3) in its own record. (5) ooo-arkhangel-zaporizhzhie (ИНН 9500026652, Мелитополь/occupied Zaporizhzhia, a UAV-mechanic TRAINING operator, not a hardware maker despite manufacturer-coded OKVED) — now a full entity record; no tie found to (1)-(4). (6) ooo-arkhangel-tsentr (ИНН 5032379630, «Архангел-ЦЕНТР», Odintsovo — note the real legal name has a -ЦЕНТР suffix, correcting the earlier parked memory's assumption of a bare \"Архангел\") — only a stub record (single open-API lookup), Wagner-branding claim from the parked memory NOT yet re-verified against this specific ИНН. Net: the name \"Архангел\" is being independently reused by at least 4 unrelated legal entities plus 2 informal Telegram brands in this space — a strong instance of the generic-patriotic-brand-name collision pattern documented elsewhere in this project."
-          }
-        ],
-        "financials": [
-          {
-            "year": 2024,
-            "revenue": 0,
-            "profit": 0,
-            "source_id": "s5527",
-            "note": "БФО filing (form 0710099): zero revenue, zero profit — dormant, consistent with this NKO's narrow 3-code declared-activity profile."
-          },
-          {
-            "year": 2025,
-            "revenue": 0,
-            "profit": 0,
-            "source_id": "s5528",
-            "note": "БФО filing: zero revenue, zero profit — still dormant a year later."
-          }
-        ]
-      },
-      "why": [
-        "EGRUL_2315233718_20260905_ano-arkhangel (s5502) — full signed ЕГРЮЛ выписка pulled 05.09.2026: confirms ОГРН 1242300005640, registration 01.02.2024, the Новороссийск ул. Кутузовская address, Архангельский Г.Е. as director, Архангельский + Ташматов as the two учредители, and the three-code ОКВЭД list (88.99 / 63.11 / 64.99)."
-      ]
-    },
     "9702081286": {
       "set": {
         "charter_capital": 10000,
@@ -27943,10 +27789,76 @@
             "source_id": "s6405",
             "text": "«АРХАНГЕЛ СПЕЦНАЗА» (@arx_spn) FOLLOW-UP (2026-09-06): egrul.nalog.ru open-search re-tried with multiple exact-phrase variants (\"Архангел Спецназ\", \"Архангел спецназа\", \"АРХАНГЕЛ СПЕЦНАЗА\") — no exact or near match, only generic unrelated \"Архангел\"/\"Спецназ\"-named organizations returned; still NO legal entity identified by name search. New leads surfaced from the channel's own t.me/s/ preview bio (s6405): (1) a Roskomnadzor blogger-registration number \"РКН - № 7829855991\" disclosed in the bio — fails the standard 10-digit ИНН control-digit check, so this is a RKN registry ID, not an organization tax ID; not yet cross-checked against Roskomnadzor's own public blogger registry (domain lookup did not resolve from this environment). (2) a landing site, archangelspetsnaza.ru (Tilda-hosted merch/vanity page) — no ИНН/ОГРН, no oferta/rekvizity page, no payment-details disclosure found on its front page or /comics subpage. (3) a MAX-messenger presence (max.ru/arx_spn) and named ad/contact handles (@foma_adm, @Letasgo, merch channel @arx_atributika) — none independently checked yet. The channel itself has never been added to config/channels.txt or scraped via tg_scan.py (no metadata or post history in data/roymarket.db) — a full scan of its own posts/pinned content is the only remaining avenue likely to surface a legal-entity self-disclosure (payment requisites, a named organizer), and is queued on the watchlist as a live network job for the user to run per the crawling-jobs policy."
           }
+        ],
+        "tier_basis": "Director Архангельский Геннадий Евгеньевич — surname overlap with 'Архангел' brand family flagged as unresolved elsewhere; not yet confirmed a real tie to Проект «Архангел»/Филиппов. ADDRESS/SITE CHECK 2026-09-04: nspd.gov.ru (Rosreestr cadastral map) is unreachable from this project's sandbox for a scripted OR in-page-fetch browser approach (net::ERR_TIMED_OUT on a real chrome-devtools browser tab, not just curl) — the 2026-09-03 'untested lead' that a real browser session might bypass its block did NOT pan out; treat nspd.gov.ru as blocked the same as kad.arbitr.ru going forward, not worth re-trying without a genuine user-driven session. Fell back to Yandex Maps (reachable, no block) for the registered address instead: this is a generic mixed commercial/residential building — 'Businesses inside' lists unrelated tenants (household-chemicals wholesale, electrical goods, a housing complex) with no drone/UAV/production signature visible from the exterior or tenant list. Consistent with a registered-office address, not a manufacturing site. SCREENING 2026-09-04: zakupki.gov.ru supplier-search (scoped --inn scan) returned zero contract hits. Rospatent patent-holder search (searchplatform.rospatent.gov.ru /search, patent_holders filter) returned zero hits for the entity name.",
+        "address": "353917, Краснодарский край, г.о. город Новороссийск, г. Новороссийск, ул. Кутузовская, д. 117, помещ. 8",
+        "address_history": [
+          {
+            "value": "353917, Краснодарский край, г.о. город Новороссийск, г. Новороссийск, ул. Кутузовская, д. 117, помещ. 8",
+            "as_of": "2026-09-05",
+            "source_id": "s5502",
+            "note": "Registered legal address per the full signed ЕГРЮЛ выписка of 05.09.2026 — this record's first primary-source address (it previously rested on aggregator sourcing only)."
+          }
+        ],
+        "director_history": [
+          {
+            "value": "Архангельский Геннадий Евгеньевич",
+            "as_of": "2024-02-01",
+            "source_id": "s5502",
+            "note": "ИНН 615491317400, должность ДИРЕКТОР, from incorporation; no director change recorded through 05.09.2026."
+          },
+          {
+            "as_of": "2024-02-01",
+            "note": "в должности с регистрации (rusprofile.ru aggregator pull, not a primary EGRUL extract)",
+            "source_id": "s5394",
+            "value": "Архангельский Геннадий Евгеньевич"
+          }
+        ],
+        "founders": [
+          {
+            "name": "Архангельский Геннадий Евгеньевич",
+            "inn_personal": "615491317400",
+            "share_pct": null,
+            "source_id": "s5502"
+          },
+          {
+            "name": "Ташматов Илья Сергеевич",
+            "inn_personal": "234503145734",
+            "share_pct": null,
+            "source_id": "s5502"
+          }
+        ],
+        "founders_history": [
+          {
+            "value": "Архангельский Геннадий Евгеньевич + Ташматов Илья Сергеевич (учредители)",
+            "as_of": "2024-02-01",
+            "source_id": "s5502",
+            "note": "Both recorded as учредители from incorporation. An АНО has no уставный капитал and no share percentages — the выписка records no доли, so none are asserted here."
+          }
+        ],
+        "okved_code": "88.99",
+        "okved_label": "Предоставление прочих социальных услуг без обеспечения проживания, не включенных в другие группировки",
+        "financials": [
+          {
+            "year": 2024,
+            "revenue": 0,
+            "profit": 0,
+            "source_id": "s5527",
+            "note": "БФО filing (form 0710099): zero revenue, zero profit — dormant, consistent with this NKO's narrow 3-code declared-activity profile."
+          },
+          {
+            "year": 2025,
+            "revenue": 0,
+            "profit": 0,
+            "source_id": "s5528",
+            "note": "БФО filing: zero revenue, zero profit — still dormant a year later."
+          }
         ]
       },
       "why": [
-        "2026-09-06: follow-up pass on the still-unresolved «Архангел Спецназа» (@arx_spn) legal-entity ID — egrul name-search re-tried and still empty, but the channel's own bio yielded an RKN registration number and a landing-site lead (archangelspetsnaza.ru), archived as s6405. Queued @arx_spn on config/channels.txt for a full scrape, since a live scan of its own posts is the only avenue left untried."
+        "2026-09-06: follow-up pass on the still-unresolved «Архангел Спецназа» (@arx_spn) legal-entity ID — egrul name-search re-tried and still empty, but the channel's own bio yielded an RKN registration number and a landing-site lead (archangelspetsnaza.ru), archived as s6405. Queued @arx_spn on config/channels.txt for a full scrape, since a live scan of its own posts is the only avenue left untried.",
+        "EGRUL_2315233718_20260905_ano-arkhangel (s5502) — full signed ЕГРЮЛ выписка pulled 05.09.2026: confirms ОГРН 1242300005640, registration 01.02.2024, the Новороссийск ул. Кутузовская address, Архангельский Г.Е. as director, Архангельский + Ташматов as the two учредители, and the three-code ОКВЭД list (88.99 / 63.11 / 64.99).",
+        "2026-09-07: merged duplicate correction key '2315233718' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
       ]
     },
     "7840290315": {

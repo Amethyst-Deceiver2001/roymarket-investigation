@@ -2568,3 +2568,53 @@ work.
   hand from the workflow's own journal, written up in
   `notes/deep_research_registries_20260906.md`). Default to direct research
   tools for this kind of open-ended discovery question going forward.
+
+## Registry hardening: correction-key collision now a build check (2026-09-07)
+
+Closed the open item from the 2026-09-07 БФО/EGRUL-выписка session
+("a full audit of `corrections_entities.json` for ИНН/slug key pairs
+targeting the same entity is still open, not done this pass") by making
+`check_registry.py` detect the class directly instead of relying on
+someone noticing by hand next time. For every `entities{}`/`people{}` key
+in `corrections_entities.json`/`corrections_people.json`, it resolves the
+key (slug or ИНН/inn_personal) to the live record it targets and flags any
+record with more than one correction key pointing at it. **ERROR** (fails
+the build) if the two `set` blocks share an overlapping field — that's the
+mechanism that silently drops one side's value, "whichever key is
+processed last wins" — versus **warning** (dormant risk, not yet
+corrupting anything) when the keys collide but don't yet overlap on a
+field.
+
+First run found 43 colliding pairs. 6 had an active field overlap and were
+genuinely dropping data — merged (union for array fields by content,
+gap-fill for everything else, both `why[]` histories preserved) and
+re-verified with a full before/after field-size diff (0 shrinkages). The
+biggest recovery: `ano-arkhangel`'s ИНН-keyed correction entry had been
+silently overwritten and was carrying address, director_history, founders,
+founders_history, financials and ОКВЭД that the live registry hadn't had
+since whenever the collision was introduced — all recovered. The other 37
+pairs have no field overlap today (dormant — safe until a future edit to
+either key introduces one) and are left as `check_registry.py` warnings, a
+concrete work list rather than a vague "should audit sometime":
+
+```
+ooo-tsyus, ooo-opkb-eksplomet, ooo-akr-begak, ooo-aero-khit,
+ooo-sibirskaya-navigatsionnaya-kompaniya, ooo-prommash,
+ooo-sistemnyy-integrator, kolskaya-verf, ooo-stratim, ooo-atlant-aero,
+ooo-vozdushnyy-traktat, ooo-skb-piranya, ano-platforma-nti, ao-ross,
+gk-rostekh, zao-kurskpromteplitsa, ao-aeromaks, ao-ekolibri,
+ao-tekhnodinamika, ao-stratim, ooo-gaskar-integratsiya,
+ao-korporatsiya-sinergiya, ao-uk-smart, ooo-trimiks-bulat-3mx,
+ooo-ayaks-tekhnologii, npp-elvo-kolskaya-verf, ao-kotlin-novator,
+npp-radar-mms, ooo-spdbbk, ooo-krams,
+ano-tsbst-centre-for-unmanned-systems-technologies, ao-tekhnodron,
+ao-aurin, ao-prominvest, ao-ploshchad, ooo-kingpro, ooo-tsugam
+```
+
+Merge these opportunistically whenever touching one of these records for
+other reasons, or in a dedicated pass — not urgent (no active data loss),
+but each is one bad future edit away from becoming one, and the merge
+itself is cheap (the pattern above, or reuse `resolve_key()` from either
+of this session's `apply_bfo.py`/`apply_egrul_vypiska.py` scratch scripts
+for any future correction-writing script instead of introducing a new
+colliding key).
