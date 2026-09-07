@@ -951,13 +951,26 @@
             "source_id": "s0063",
             "title": "Генеральный директор",
             "to": null
+          },
+          {
+            "entity_name": "ООО «ПРОММАШ»",
+            "entity_slug": "ooo-prommash",
+            "from": "2026-01-26",
+            "to": null,
+            "source_id": "s6786",
+            "title": "Директор"
           }
+        ],
+        "_verified": true,
+        "notes_append": [
+          "2026-09-07: screen_upr_uchr.py confirms a second directorship, ООО «ПРОММАШ» (ooo-prommash, ИНН 4217210280), corroborated by that entity's own full ЕГРЮЛ выписка. Same Тимофеев/Карцев/Чичков Kemerovo drone-manufacturing cluster as ooo-dronomir -- ПРОММАШ is 29%%-owned by Карцев Максим Владимирович (also ДРОНОМИР's earlier director) and 71%%-owned by Тимофеев Даниил Андреевич (ДРОНОМИР's current sole owner/director)."
         ]
       },
       "why": [
         "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «ДРОНОМИР» -> ooo-dronomir, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0063).",
         "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph EGRUL Person record gives personal ИНН directly (s1980)."
-      ]
+      ],
+      "verified_against": "screen_upr_uchr.py ФНС director/founder cross-reference (2026-09-07), exact ИНН match 421715843237, confirmed against ooo-prommash's own full ЕГРЮЛ выписка (s6786, pulled 2026-09-07), which names him ДИРЕКТОР as of 2026-01-26. FLAG: his existing ooo-dronomir role (source s0063, egrul_batch_pull.py, undated) conflicts with that entity's own newer full ЕГРЮЛ выписка (s6785, pulled 2026-09-07), which names Тимофеев Даниил Андреевич as sole director/100%% founder as of 2026-06-05 with no mention of Чичков -- kept as-is, not removed, since resolving which is current/stale needs a dedicated check, not a guess."
     },
     "dementev-vitaliy-evgenevich": {
       "set": {
@@ -2666,12 +2679,41 @@
       "set": {
         "inn_personal": "780401121651",
         "notes_append": [
-          "2026-09-02: personal ИНН confirmed via выписка из ЕГРН (s5296). SAME ИНН also appears as the ГД identifier on the official ЕГРЮЛ extract for the occupied-Donetsk shell ooo-btr-donetsk (s5299) -- direct government-document confirmation of this individual's role there, not just the article's own assertion."
+          "2026-09-02: personal ИНН confirmed via выписка из ЕГРН (s5296). SAME ИНН also appears as the ГД identifier on the official ЕГРЮЛ extract for the occupied-Donetsk shell ooo-btr-donetsk (s5299) -- direct government-document confirmation of this individual's role there, not just the article's own assertion.",
+          "2026-09-07: screen_upr_uchr.py + full ЕГРЮЛ выписки give Руденко three previously-unwired roles. Notably co-founds ООО «БТР» with Владимирский М.Ю. -- the same person independently verified this session as a 50%% ЦПТ co-founder alongside Елисеев Д.Н. (АНО «НПЦ «Ушкуйник»» staff) -- a second Руденко/Владимирский tie worth further attention, not yet chased further."
         ],
         "sources": [
           "s5296"
-        ]
-      }
+        ],
+        "roles": [
+          {
+            "entity_name": "АНО «Невский центр научного сотрудничества»",
+            "entity_slug": "ano-ntsns-nevskiy-tsentr-nauchnogo-sotrudnichestva",
+            "from": "2023-03-20",
+            "to": null,
+            "source_id": "s6848",
+            "title": "Директор"
+          },
+          {
+            "entity_name": "ООО «Беспилотные технологические решения» (БТР)",
+            "entity_slug": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
+            "from": "2024-06-14",
+            "to": null,
+            "source_id": "s6844",
+            "title": "Соучредитель (50%)"
+          },
+          {
+            "entity_name": "ООО «Специальные материалы»",
+            "entity_slug": "ooo-spetsmat-spetsialnye-materialy",
+            "from": "2024-11-22",
+            "to": null,
+            "source_id": "s6834",
+            "title": "Соучредитель (50%)"
+          }
+        ],
+        "_verified": true
+      },
+      "verified_against": " | screen_upr_uchr.py ФНС director/founder cross-reference (2026-09-07), exact ИНН match 780401121651, confirmed against all three entities' own full ЕГРЮЛ выписки: ano-ntsns (director, s6848), ooo-btr (50%% co-founder alongside Владимирский М.Ю. -- s6844, the same Владимирский already verified this session as ЦПТ/Ushkuynik-tied, a second cross-link between these two people), ooo-spetsmat-spetsialnye-materialy (50%% co-founder alongside Малевич П.В. -- s6834)."
     },
     "saidov-asker-kazbekovich": {
       "set": {
