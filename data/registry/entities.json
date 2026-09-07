@@ -6279,7 +6279,14 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "Тульская область, г. Тула, ул. Рязанская, здание 5Ж",
+        "as_of": "2026-04-01",
+        "source_id": "s6960",
+        "note": "First street-level address on file (prior: village-level 'с. Осиновая Гора'), from a ГУ МЧС России по Тульской области 'профилактический визит' record (Apr 2026)."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -6668,7 +6675,46 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [
+      {
+        "reg_number": "71260061000221403596",
+        "law": "248",
+        "inn": "7100027464",
+        "ogrn": "1227100012369",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУССКАЯ ЛАБОРАТОРИЯ ВОЗДУШНОГО ТРАНСПОРТА\"",
+        "period": "Апрель 2026 года.",
+        "measure_type": "Профилактический визит",
+        "control_body": "ГЛАВНОЕ УПРАВЛЕНИЕ МИНИСТЕРСТВА РОССИЙСКОЙ ФЕДЕРАЦИИ ПО ДЕЛАМ ГРАЖДАНСКОЙ ОБОРОНЫ, ЧРЕЗВЫЧАЙНЫМ СИТУАЦИЯМ И ЛИКВИДАЦИИ ПОСЛЕДСТВИЙ СТИХИЙНЫХ БЕДСТВИЙ ПО ТУЛЬСКОЙ ОБЛАСТИ",
+        "prosecutor_office": "Прокуратура Тульской области",
+        "object_address": "обл Тульская, г Тула, ул Рязанская, Здание 5Ж",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/31475676",
+        "_raw": {
+          "id": "31475676",
+          "number": "71260061000221403596",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "7100027464",
+          "ogrn": "1227100012369",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУССКАЯ ЛАБОРАТОРИЯ ВОЗДУШНОГО ТРАНСПОРТА\"",
+          "startMonth": "Апрель 2026 года.",
+          "term": null,
+          "objectAddress": "обл Тульская, г Тула, ул Рязанская, Здание 5Ж",
+          "frguOrgName": null,
+          "frguOrgFullName": "ГЛАВНОЕ УПРАВЛЕНИЕ МИНИСТЕРСТВА РОССИЙСКОЙ ФЕДЕРАЦИИ ПО ДЕЛАМ ГРАЖДАНСКОЙ ОБОРОНЫ, ЧРЕЗВЫЧАЙНЫМ СИТУАЦИЯМ И ЛИКВИДАЦИИ ПОСЛЕДСТВИЙ СТИХИЙНЫХ БЕДСТВИЙ ПО ТУЛЬСКОЙ ОБЛАСТИ",
+          "inspectionTarget": null,
+          "carryoutName": "Профилактический визит",
+          "prosecName": "Прокуратура Тульской области",
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      }
+    ],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-aviron",
@@ -9808,7 +9854,7 @@
     "_origin_extra": [
       "brief:prose"
     ],
-    "notes": "2026-09-07 NSPD check: ул. Инструментальная, з/у 2в/7, Таганрог returned no record (code 204) — consistent with the proverki record's own construction-oversight framing (site under active construction, not yet a registered building/parcel) (s6941).",
+    "notes": "2026-09-07 NSPD check: ул. Инструментальная, з/у 2в/7, Таганрог returned no record (code 204) — consistent with the proverki record's own construction-oversight framing (site under active construction, not yet a registered building/parcel) (s6941). 2026-09-07: this entity's other founder, Шевченко Константин Игоревич (ИНН 615424668354), is also a 25% founder of ООО «Прометей» (ИНН 6154171470, Таганрог, aircraft manufacturer, founded 05.06.2026) — alongside director Хутешен А.А. himself (also 25% founder there). Two shared founders between the two same-city aircraft manufacturers is a real corporate link, added to the registry as ooo-prometey.",
     "_corrected": [
       "User-supplied HAR capture of their own live search (PE_RU=\"...Атлант Аэро...\") found this entity's first-ever IP record — the earlier bulk trademark/patent sweeps and GUR screens found nothing for this entity. Filed 2025-08-25 (roughly a year after the earlier-known name-collision 'Орион' product reference), published 2026-03-30 — recent enough that it likely postdates both bulk CSV dump snapshots this project already used, explaining why the earlier sweeps missed it entirely.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
@@ -17163,7 +17209,14 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "614015, Пермский край, г. Пермь, ул. Луначарского, д.87",
+        "as_of": "2024-03-01",
+        "source_id": "s6959",
+        "note": "First non-Moscow address on file — a real, geographically distant branch/facility, inspected by the Perm regional labor inspectorate (not a Moscow body), from a proverki.gov.ru 'профилактический визит' record (Mar 2024)."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -17490,7 +17543,46 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [
+      {
+        "reg_number": "59241373166009818084",
+        "law": "248",
+        "inn": "5902056314",
+        "ogrn": "1195958038902",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВИЗИОНЕРО\"",
+        "period": "Март 2024 года.",
+        "measure_type": "Профилактический визит",
+        "control_body": " ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА В ПЕРМСКОМ КРАЕ",
+        "prosecutor_office": null,
+        "object_address": "614015, КРАЙ, ПЕРМСКИЙ, ГОРОД, ПЕРМЬ, УЛИЦА, ЛУНАЧАРСКОГО, ДОМ 87, 590000010000689",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/19890172",
+        "_raw": {
+          "id": "19890172",
+          "number": "59241373166009818084",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "5902056314",
+          "ogrn": "1195958038902",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВИЗИОНЕРО\"",
+          "startMonth": "Март 2024 года.",
+          "term": null,
+          "objectAddress": "614015, КРАЙ, ПЕРМСКИЙ, ГОРОД, ПЕРМЬ, УЛИЦА, ЛУНАЧАРСКОГО, ДОМ 87, 590000010000689",
+          "frguOrgName": null,
+          "frguOrgFullName": " ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА В ПЕРМСКОМ КРАЕ",
+          "inspectionTarget": null,
+          "carryoutName": "Профилактический визит",
+          "prosecName": null,
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      }
+    ],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-kb-sinergiya",
@@ -18735,7 +18827,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-trimiks-bulat-3mx",
@@ -19229,7 +19323,9 @@
     },
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-boevye-tekhnologii",
@@ -23980,7 +24076,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-intek-bespilotnye-sistemy",
@@ -24654,7 +24752,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-sibirskaya-navigatsionnaya-kompaniya",
@@ -30146,7 +30246,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-konstruktorskoe-byuro-sinergiya",
@@ -31248,7 +31350,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ano-npts-ushkuynik",
@@ -32225,7 +32329,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ao-pmts-avangard",
@@ -33949,7 +34055,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "npp-radar-mms",
@@ -49935,7 +50043,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-orient-sistems",
@@ -55672,7 +55782,9 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-npts-basirtk",
@@ -58015,7 +58127,118 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "proverki_inspections": [
+      {
+        "reg_number": "77261373165522330924",
+        "law": "248",
+        "inn": "9731094770",
+        "ogrn": "1227700378553",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР УПРАВЛЕНИЯ ГОРОДСКОЙ АЭРОМОБИЛЬНОСТЬЮ\"",
+        "period": "Июль 2026 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+        "prosecutor_office": "Прокуратура города Москвы",
+        "object_address": null,
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/32403004",
+        "_raw": {
+          "id": "32403004",
+          "number": "77261373165522330924",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "9731094770",
+          "ogrn": "1227700378553",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР УПРАВЛЕНИЯ ГОРОДСКОЙ АЭРОМОБИЛЬНОСТЬЮ\"",
+          "startMonth": "Июль 2026 года.",
+          "term": null,
+          "objectAddress": null,
+          "frguOrgName": null,
+          "frguOrgFullName": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": "Прокуратура города Москвы",
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      },
+      {
+        "reg_number": "77251373165519477394",
+        "law": "248",
+        "inn": "9731094770",
+        "ogrn": "1227700378553",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР УПРАВЛЕНИЯ ГОРОДСКОЙ АЭРОМОБИЛЬНОСТЬЮ\"",
+        "period": "Сентябрь 2025 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+        "prosecutor_office": "Прокуратура Тверской области",
+        "object_address": "г. Москва",
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/29549480",
+        "_raw": {
+          "id": "29549480",
+          "number": "77251373165519477394",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "9731094770",
+          "ogrn": "1227700378553",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР УПРАВЛЕНИЯ ГОРОДСКОЙ АЭРОМОБИЛЬНОСТЬЮ\"",
+          "startMonth": "Сентябрь 2025 года.",
+          "term": null,
+          "objectAddress": "г. Москва",
+          "frguOrgName": null,
+          "frguOrgFullName": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": "Прокуратура Тверской области",
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      },
+      {
+        "reg_number": "77241373165509859900",
+        "law": "248",
+        "inn": "9731094770",
+        "ogrn": "1227700378553",
+        "entity_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР УПРАВЛЕНИЯ ГОРОДСКОЙ АЭРОМОБИЛЬНОСТЬЮ\"",
+        "period": "Март 2024 года.",
+        "measure_type": "Объявление предостережения",
+        "control_body": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+        "prosecutor_office": null,
+        "object_address": null,
+        "decision": false,
+        "url": "https://proverki.gov.ru/portal/public-knm/19931988",
+        "_raw": {
+          "id": "19931988",
+          "number": "77241373165509859900",
+          "knmType": "Профилактическое мероприятие",
+          "federalLaw": "248",
+          "inn": "9731094770",
+          "ogrn": "1227700378553",
+          "faceName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР УПРАВЛЕНИЯ ГОРОДСКОЙ АЭРОМОБИЛЬНОСТЬЮ\"",
+          "startMonth": "Март 2024 года.",
+          "term": null,
+          "objectAddress": null,
+          "frguOrgName": null,
+          "frguOrgFullName": "ЦЕНТРАЛЬНАЯ МЕЖРЕГИОНАЛЬНАЯ ТЕРРИТОРИАЛЬНАЯ ГОСУДАРСТВЕННАЯ ИНСПЕКЦИЯ ТРУДА",
+          "inspectionTarget": null,
+          "carryoutName": "Объявление предостережения",
+          "prosecName": null,
+          "version": "ERKNM",
+          "innErknm": [],
+          "orgnErknm": null,
+          "faceNameErknm": null,
+          "decision": false
+        }
+      }
+    ],
+    "proverki_checked_at": "2026-09-07"
   },
   {
     "slug": "ooo-akr-begak",
@@ -70495,5 +70718,120 @@
     "_raw": {},
     "notes": "Founder hit surfaced by screen_upr_uchr.py against Рубинштейн Дмитрий Владимирович's personal ИНН (771537069549). Software-development OKVED suggests a personal/unrelated venture rather than a ЦБСТ vehicle, but not yet confirmed either way. No source_id yet since this comes from raw ФНС screening data, not an archived document.",
     "_corrected": null
+  },
+  {
+    "slug": "ooo-prometey",
+    "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЕТЕЙ\"",
+    "name_latin": "OOO Prometey",
+    "legal_form": "ООО",
+    "brand_ru": "Прометей",
+    "brand_latin": null,
+    "inn": "6154171470",
+    "ogrn": "1266100011418",
+    "extra_ids": null,
+    "registered": "05.06.2026",
+    "address": "347922, Ростовская область, г.о. город Таганрог, г. Таганрог, ул. Шмидта, д.16А",
+    "okved_code": "30.30.39",
+    "okved_label": "Производство прочих летательных аппаратов",
+    "okved_mismatch": null,
+    "director": "Коновалов Роман Владимирович",
+    "director_history": [
+      {
+        "value": "Коновалов Роман Владимирович",
+        "as_of": "2026-06-05",
+        "source_id": "s6956",
+        "note": "ИНН 615422212894. Named director from the entity's own registration date."
+      }
+    ],
+    "founders": [
+      {
+        "name": "Кобзев Виктор Викторович",
+        "inn_personal": "615407579591",
+        "share_percent": 26,
+        "source_id": "s6956"
+      },
+      {
+        "name": "Шевченко Константин Игоревич",
+        "inn_personal": "615424668354",
+        "share_percent": 25,
+        "source_id": "s6956"
+      },
+      {
+        "name": "Хутешен Алексей Александрович",
+        "inn_personal": "615404085178",
+        "share_percent": 25,
+        "source_id": "s6956"
+      },
+      {
+        "name": "ООО «ДС-БАРС-Т»",
+        "inn": "6154109094",
+        "ogrn": "1076154002913",
+        "share_percent": 24,
+        "source_id": "s6956"
+      }
+    ],
+    "founders_history": [],
+    "charter_capital": 100000,
+    "charter_capital_history": [
+      {
+        "value": 100000,
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "Added 2026-09-07: surfaced via a ФНС director/founder cross-reference screen on Хутешен Алексей Александрович (this investigation's already-sanctioned ЦКБР chief designer, and separately confirmed director/founder of ООО «Атлант Аэро»). This entity — registered only 3 months before this pull (05.06.2026), OKVED 30.30.39 'Производство прочих летательных аппаратов' (aircraft manufacturing, same code family as other UAV manufacturers in this registry), email domain PROMET.AERO@MAIL.RU, based in the same city (Таганрог) as ООО «Атлант Аэро» — shares a second founder with Атлант Аэро: Шевченко Константин Игоревич (ИНН 615424668354, exact match to Атлант Аэро's own founder record). Two founders in common with a confirmed manufacturer-tier entity, in the same city, in the same OKVED family, founded within the current wartime UAV-industry expansion window — sufficient basis for manufacturer tier pending further verification (no БФО filing exists yet given the entity's age; no zakupki/products evidence pulled yet).",
+    "cbst_tie": null,
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "name_en": "Limited Liability Company \"Prometheus\"",
+    "social": [
+      {
+        "platform": "email",
+        "url": "PROMET.AERO@MAIL.RU",
+        "source_id": "s6956"
+      }
+    ],
+    "_corrected": [
+      "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен Алексей Александрович, which returned 14 entity ties beyond his known ЦКБР role. Pulled a full signed EGRUL выписка (s6956) to confirm founder shares/director directly rather than relying on the ФНС search-proc summary alone."
+    ]
   }
 ]

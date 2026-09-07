@@ -1641,6 +1641,14 @@
             "from": "2023-12-27",
             "to": null,
             "source_id": "s0467"
+          },
+          {
+            "entity_slug": "ooo-prometey",
+            "entity_name": "ООО «Прометей»",
+            "title": "Учредитель (25%)",
+            "from": "2026-06-05",
+            "to": null,
+            "source_id": "s6956"
           }
         ],
         "notes": "2026-09-07: ФНС director/founder screen (director/founder ИНН 615404085178) found 14 entity ties beyond ЦКБР — confirms he is director+founder of ООО «Атлант Аэро» itself (this investigation's own entity, ИНН 6154165878, Таганрог facility wired earlier this session), plus a sibling ООО НПК «Атлант Аэро» (ИНН 6154166381, same Ростовская обл., different ОКВЭД — 'Ремонт металлоизделий'). Also founder of ООО «Прометей» (ИНН 6154171470, Ростовская обл., ОКВЭД 'Производство прочих летательных аппаратов' — ANOTHER aircraft manufacturer, not yet in this registry, a real lead). Remaining ties read as a supporting holding/logistics/electronics cluster around the same Rostov/Moscow axis: ООО «Атлант Сервис» (real estate), ООО «Атлант Логистик» (freight), ООО «Пром-Тех» и ООО НПК «Зевс» (electronics wholesale, Ростовская обл.), АО «Оптические системы», ООО «Аметист», ООО «Эверест» (Moscow real estate), ООО ПК «Стальной купол» (assembly/construction). Disqualification and subsidiary-liability screens: 0 hits. ЕГРИП: 2 ИП registrations (ОГРНИП 324619600210070, 305615428000090), not yet detail-checked. None of these new companies verified/added to the registry yet — leads requiring the standard EGRUL/зачупки verification before promotion, per usual discipline. «Прометей» is the highest-priority of these given its aircraft-manufacturing ОКВЭД."
@@ -12200,6 +12208,46 @@
       ],
       "why": [
         "2026-09-07: screen_upr_uchr.py hit, same corroboration as Хабибулин above."
+      ]
+    },
+    {
+      "slug": "konovalov-roman-vladimirovich-prometey",
+      "fio_ru": "Коновалов Роман Владимирович",
+      "dob": null,
+      "inn_personal": "615422212894",
+      "roles": [
+        {
+          "entity_slug": "ooo-prometey",
+          "entity_name": "ООО «Прометей»",
+          "title": "Генеральный директор",
+          "from": "2026-06-05",
+          "to": null,
+          "source_id": "s6956"
+        }
+      ],
+      "notes": "Director of ООО «Прометей» (aircraft manufacturer, Таганрог) since its registration 05.06.2026, per EGRUL extract s6956. No independent role/tie beyond this directorship identified yet.",
+      "why": [
+        "2026-09-07: named director on ООО «Прометей»'s EGRUL extract, pulled while investigating Хутешен А.А.'s newly-surfaced entity network."
+      ]
+    },
+    {
+      "slug": "kobzev-viktor-viktorovich",
+      "fio_ru": "Кобзев Виктор Викторович",
+      "dob": null,
+      "inn_personal": "615407579591",
+      "roles": [
+        {
+          "entity_slug": "ooo-prometey",
+          "entity_name": "ООО «Прометей»",
+          "title": "Учредитель (26%)",
+          "from": "2026-06-05",
+          "to": null,
+          "source_id": "s6956"
+        }
+      ],
+      "notes": "26% founder of ООО «Прометей» (aircraft manufacturer, Таганрог), per EGRUL extract s6956. No other tie to this network identified yet.",
+      "why": [
+        "2026-09-07: named founder on ООО «Прометей»'s EGRUL extract, pulled while investigating Хутешен А.А.'s newly-surfaced entity network."
       ]
     }
   ]

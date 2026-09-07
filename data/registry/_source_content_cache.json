@@ -55011,5 +55011,45 @@
     "as_of_method": null,
     "sha256": "1386f82673f9a7dc14f3ead7d7e4f12a3a21954e36dc23da782f7b3e38ba4c99",
     "sample": "proverki.gov.ru inspection history — ООО «Промсинтез»\nИНН 3435084957\nPulled 2026-09-07 via scripts/screen_proverki.py\n\n2 records, both \"Объявление предостережения\", neither gives an address.\n\n1. Reg# 67260023734620685410 | Февраль 2026 | Межрегиональное управление\n Росприроднадзора по Московской и Смоленской областям\n\n2. Reg# 38260021000220573710 | Январь 2026 | Межрегиональное управление\n Росприр"
+  },
+  "PROVERKI_4205376019_20260907_ooo-sibirskaya-navigatsionnaya-kompaniya-inspection-history.txt": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "ceb7006364753d70e2d4c71059af541c874acb9a31d51468a9c0ab84bdde0de4",
+    "sample": "proverki.gov.ru inspection history — ООО «Сибирская навигационная компания»\nИНН 4205376019\nPulled 2026-09-07 via scripts/screen_proverki.py\n\n2 records, neither carries an address (both null).\n\n1. Reg# 77251373165519878113 | Ноябрь 2025 | Объявление предостережения |\n Центральная межрегиональная территориальная гос. инспекция труда\n2. Reg# 77240061000111500785 | Август 2024 | Профилактический визит"
+  },
+  "PROVERKI_7838044584_20260907_ooo-spdbbk-inspection-history.txt": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "6219f872c74a2fc9d247ebb37df1b5c2ecf905f79814a3b21afd8afbad259343",
+    "sample": "proverki.gov.ru inspection history — ООО «СПДББК»\nИНН 7838044584\nPulled 2026-09-07 via scripts/screen_proverki.py\n\n2 records, both \"Объявление предостережения\", Июнь 2026, Северо-Западная\nмежрегиональная территориальная государственная инспекция труда.\n\n1. Reg# 78261373159122188651 — Address: 195009, г. Санкт-Петербург,\n Финляндский округ, ул. Комсомола, д.1-3, помещ.5Н\n2. Reg# 7826137315912211581"
+  },
+  "EGRUL_6154171470_20260907_ooo-prometey.pdf": {
+    "type": "egrul",
+    "type_method": "keyword:ВЫПИСКА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ",
+    "as_of": "2026-09-08",
+    "as_of_method": "egrul:по состоянию на",
+    "sha256": "f411058107b239d1523b99deefae61f001bfb9edfb6e9a1483155b9701098c54",
+    "sample": " ВЫПИСКА\n из Единого государственного реестра юридических лиц\n\n\n 08.09.2026 № ЮЭ9965-26-\n 176031766\n дата формирования выписки\n\n\nНастоящая выписка содержит сведения о юридическом лице\n ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЕТЕЙ\"\n полное наименование юридического лица\n\n\n ОГРН 1 2 6 6 1 0 0 0 1 1 4 1 8\n\n ИНН 6 1 5 4 1 7 1 4 7 0\nвключенные в Единый государственный реестр юридических лиц по со"
+  },
+  "PROVERKI_5902056314_20260907_ooo-vizionero-inspection-history.txt": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "17fa53e9e347ca232c952e18d511eebb87fcc13a1e9944a0e1355c5132ac3db9",
+    "sample": "proverki.gov.ru inspection history — ООО «Визионеро»\nИНН 5902056314\nPulled 2026-09-07 via scripts/screen_proverki.py\n\n1 record.\nReg# 59241373166009818084 | Март 2024 | Профилактический визит\nControl body: Государственная инспекция труда в Пермском крае\nAddress: 614015, Пермский край, г. Пермь, ул. Луначарского, д.87\n\nNotable: entity's registered address is \"г. Москва\" — this record surfaces\na real"
+  },
+  "PROVERKI_7100027464_20260907_ovod-inspection-history.txt": {
+    "type": null,
+    "type_method": null,
+    "as_of": null,
+    "as_of_method": null,
+    "sha256": "24b9783ac82e68427d2faf8d4b1028857653ff05a7eaea1c61a70a875405bfda",
+    "sample": "proverki.gov.ru inspection history — ОВОД\nИНН 7100027464\nPulled 2026-09-07 via scripts/screen_proverki.py\n\n1 record.\nReg# 71260061000221403596 | Апрель 2026 | Профилактический визит\nControl body: ГУ МЧС России по Тульской области\nAddress: Тульская область, г. Тула, ул. Рязанская, здание 5Ж\n\nNotable: entity's registered address was village-level (\"с. Осиновая\nГора\"). This record surfaces a precise "
   }
 }

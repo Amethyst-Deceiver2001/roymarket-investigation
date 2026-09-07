@@ -7552,6 +7552,14 @@
         "from": "2023-12-27",
         "to": null,
         "source_id": "s0467"
+      },
+      {
+        "entity_slug": "ooo-prometey",
+        "entity_name": "ООО «Прометей»",
+        "title": "Учредитель (25%)",
+        "from": "2026-06-05",
+        "to": null,
+        "source_id": "s6956"
       }
     ],
     "sanctions": [
@@ -44541,6 +44549,78 @@
     "_raw": {},
     "_corrected": [
       "2026-09-07: surfaced while investigating the «Хаб СВО» lead from screen_upr_uchr.py -- a significant PEP-adjacency finding for the whole Архангел network, not previously on file."
+    ]
+  },
+  {
+    "slug": "konovalov-roman-vladimirovich-prometey",
+    "fio_ru": "Коновалов Роман Владимирович",
+    "name_latin": null,
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "615422212894",
+    "roles": [
+      {
+        "entity_slug": "ooo-prometey",
+        "entity_name": "ООО «Прометей»",
+        "title": "Генеральный директор",
+        "from": "2026-06-05",
+        "to": null,
+        "source_id": "s6956"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Director of ООО «Прометей» (aircraft manufacturer, Таганрог) since its registration 05.06.2026, per EGRUL extract s6956. No independent role/tie beyond this directorship identified yet.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-07: named director on ООО «Прометей»'s EGRUL extract, pulled while investigating Хутешен А.А.'s newly-surfaced entity network."
+    ]
+  },
+  {
+    "slug": "kobzev-viktor-viktorovich",
+    "fio_ru": "Кобзев Виктор Викторович",
+    "name_latin": null,
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "615407579591",
+    "roles": [
+      {
+        "entity_slug": "ooo-prometey",
+        "entity_name": "ООО «Прометей»",
+        "title": "Учредитель (26%)",
+        "from": "2026-06-05",
+        "to": null,
+        "source_id": "s6956"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "26% founder of ООО «Прометей» (aircraft manufacturer, Таганрог), per EGRUL extract s6956. No other tie to this network identified yet.",
+    "sources": [],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-07: named founder on ООО «Прометей»'s EGRUL extract, pulled while investigating Хутешен А.А.'s newly-surfaced entity network."
     ]
   }
 ]

@@ -3445,6 +3445,70 @@
         }
       ],
       "notes": "Founder hit surfaced by screen_upr_uchr.py against Рубинштейн Дмитрий Владимирович's personal ИНН (771537069549). Software-development OKVED suggests a personal/unrelated venture rather than a ЦБСТ vehicle, but not yet confirmed either way. No source_id yet since this comes from raw ФНС screening data, not an archived document."
+    },
+    {
+      "slug": "ooo-prometey",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЕТЕЙ\"",
+      "name_en": "Limited Liability Company \"Prometheus\"",
+      "name_latin": "OOO Prometey",
+      "legal_form": "ООО",
+      "brand_ru": "Прометей",
+      "inn": "6154171470",
+      "ogrn": "1266100011418",
+      "registered": "05.06.2026",
+      "address": "347922, Ростовская область, г.о. город Таганрог, г. Таганрог, ул. Шмидта, д.16А",
+      "okved_code": "30.30.39",
+      "okved_label": "Производство прочих летательных аппаратов",
+      "charter_capital": 100000,
+      "director": "Коновалов Роман Владимирович",
+      "director_history": [
+        {
+          "value": "Коновалов Роман Владимирович",
+          "as_of": "2026-06-05",
+          "source_id": "s6956",
+          "note": "ИНН 615422212894. Named director from the entity's own registration date."
+        }
+      ],
+      "founders": [
+        {
+          "name": "Кобзев Виктор Викторович",
+          "inn_personal": "615407579591",
+          "share_percent": 26,
+          "source_id": "s6956"
+        },
+        {
+          "name": "Шевченко Константин Игоревич",
+          "inn_personal": "615424668354",
+          "share_percent": 25,
+          "source_id": "s6956"
+        },
+        {
+          "name": "Хутешен Алексей Александрович",
+          "inn_personal": "615404085178",
+          "share_percent": 25,
+          "source_id": "s6956"
+        },
+        {
+          "name": "ООО «ДС-БАРС-Т»",
+          "inn": "6154109094",
+          "ogrn": "1076154002913",
+          "share_percent": 24,
+          "source_id": "s6956"
+        }
+      ],
+      "social": [
+        {
+          "platform": "email",
+          "url": "PROMET.AERO@MAIL.RU",
+          "source_id": "s6956"
+        }
+      ],
+      "tier": "manufacturer",
+      "tier_basis": "Added 2026-09-07: surfaced via a ФНС director/founder cross-reference screen on Хутешен Алексей Александрович (this investigation's already-sanctioned ЦКБР chief designer, and separately confirmed director/founder of ООО «Атлант Аэро»). This entity — registered only 3 months before this pull (05.06.2026), OKVED 30.30.39 'Производство прочих летательных аппаратов' (aircraft manufacturing, same code family as other UAV manufacturers in this registry), email domain PROMET.AERO@MAIL.RU, based in the same city (Таганрог) as ООО «Атлант Аэро» — shares a second founder with Атлант Аэро: Шевченко Константин Игоревич (ИНН 615424668354, exact match to Атлант Аэро's own founder record). Two founders in common with a confirmed manufacturer-tier entity, in the same city, in the same OKVED family, founded within the current wartime UAV-industry expansion window — sufficient basis for manufacturer tier pending further verification (no БФО filing exists yet given the entity's age; no zakupki/products evidence pulled yet).",
+      "products": [],
+      "why": [
+        "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен Алексей Александрович, which returned 14 entity ties beyond his known ЦКБР role. Pulled a full signed EGRUL выписка (s6956) to confirm founder shares/director directly rather than relying on the ФНС search-proc summary alone."
+      ]
     }
   ],
   "entities": {
@@ -14869,7 +14933,7 @@
             "note": "First street-level address on file for this entity (previously only city-level). Named in a proverki.gov.ru construction-oversight inspection (РЕГИОНАЛЬНАЯ СЛУЖБА ГОСУДАРСТВЕННОГО СТРОИТЕЛЬНОГО НАДЗОРА РОСТОВСКОЙ ОБЛАСТИ, Июль 2026) -- other records in the same set cite slightly different building numbers on the same street (2-7 стр.1, 4-54), consistent with an active construction/expansion at this site."
           }
         ],
-        "notes": "2026-09-07 NSPD check: ул. Инструментальная, з/у 2в/7, Таганрог returned no record (code 204) — consistent with the proverki record's own construction-oversight framing (site under active construction, not yet a registered building/parcel) (s6941)."
+        "notes": "2026-09-07 NSPD check: ул. Инструментальная, з/у 2в/7, Таганрог returned no record (code 204) — consistent with the proverki record's own construction-oversight framing (site under active construction, not yet a registered building/parcel) (s6941). 2026-09-07: this entity's other founder, Шевченко Константин Игоревич (ИНН 615424668354), is also a 25% founder of ООО «Прометей» (ИНН 6154171470, Таганрог, aircraft manufacturer, founded 05.06.2026) — alongside director Хутешен А.А. himself (also 25% founder there). Two shared founders between the two same-city aircraft manufacturers is a real corporate link, added to the registry as ooo-prometey."
       },
       "verified_against": "searchplatform.rospatent.gov.ru, PE_RU exact patentee-name query, archived as s0977 (WIPO ST.96 XML full text) + HAR capture",
       "why": [
@@ -26144,6 +26208,14 @@
             "source_id": "s6724",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
+        ],
+        "address_history": [
+          {
+            "value": "614015, Пермский край, г. Пермь, ул. Луначарского, д.87",
+            "as_of": "2024-03-01",
+            "source_id": "s6959",
+            "note": "First non-Moscow address on file — a real, geographically distant branch/facility, inspected by the Perm regional labor inspectorate (not a Moscow body), from a proverki.gov.ru 'профилактический визит' record (Mar 2024)."
+          }
         ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
@@ -27059,6 +27131,14 @@
             "as_of": "2024-05-08",
             "source_id": "s6727",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
+          }
+        ],
+        "address_history": [
+          {
+            "value": "Тульская область, г. Тула, ул. Рязанская, здание 5Ж",
+            "as_of": "2026-04-01",
+            "source_id": "s6960",
+            "note": "First street-level address on file (prior: village-level 'с. Осиновая Гора'), from a ГУ МЧС России по Тульской области 'профилактический визит' record (Apr 2026)."
           }
         ]
       },

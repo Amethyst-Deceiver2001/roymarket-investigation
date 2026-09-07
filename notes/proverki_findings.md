@@ -15,7 +15,7 @@ variants of "Академика Павлова, д.14" for one entity) — read 
 signal, cluster by hand, and only wire a genuinely distinct physical site
 into `address_history`, not every formatting variant.
 
-## Entities screened so far: 74
+## Entities screened so far: 97 (full manufacturer-tier roster complete)
 
 0-hit (genuine "no inspection history" result, not a failed lookup):
 ano-npts-ushkuynik / npts-ushkuynik, ao-ekolibri, ao-mikts, ao-npp-bat,
@@ -33,7 +33,13 @@ ooo-kravt-udmurtiya, ooo-npo-nebo, ooo-npo-kilovatt,
 ooo-npo-kilovatt-shestopalov, ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy,
 ooo-npk-geron, ooo-npo-eyler, ooo-kronshtadt-bespilotnye-sistemy,
 ooo-pekhtra, ooo-rokot-tekh, ooo-orient-sistems, ooo-prommash,
-ooo-pokrov, ooo-radiofid-sistemy.
+ooo-pokrov, ooo-radiofid-sistemy, ooo-sibnk, ooo-skay-avia-grupp,
+ooo-skb-piranya, ooo-smart-teknolodzhis, ooo-spetsialnye-poleznye-tekhnologii,
+ooo-spetsmat-spetsialnye-materialy, ooo-stratim, ooo-superkhrono,
+ooo-ti-es-dzhi-grupp, ooo-titan-severo-zapad, ooo-trimiks-bulat-3mx,
+ooo-tsentr-dinarus, ooo-ushkuynik-sp,
+ooo-vostochnye-vorota-zabaykalsk-manchzhuriya, ooo-vozdushnyy-traktat,
+ooo-zetaks, va-technologies, yarl.
 
 Hits, routine (labor/fire/environmental/consumer-protection history,
 confirms continuous legitimate operation, no new facility or notable
@@ -46,13 +52,17 @@ address already on file), ooo-intel-dron (1, coarse "обл. Челябинск�
 only, no new precision), ooo-kopterlab (1, repeats "г. Москва" only, no
 new precision), ooo-npo-rustekhdron (5, confirms existing Пехорская 1/3
 address exactly, no new precision), ooo-praym (1, no address on the
-record).
+record), ooo-sibirskaya-navigatsionnaya-kompaniya (2, s6957, no new
+precision but confirms registered address in the same Косино-Ухтомский
+district as Гаскар/Рустехдрон — see below), ooo-tsugam (3, no new
+precision beyond bare "г. Москва").
 
 Hits with real findings — all wired below: ao-nii-stt (15), ao-kotlin-novator
 (25), ao-stratim (8), ao-pmts-avangard (31), ao-nii-vektor (46), npp-radar-mms
 (50), npts-elvis (13), ooo-aeromaks (17), ooo-atlant-aero (4), ooo-gaskar (5,
 s6934), ooo-dsg (2, s6935), ooo-metaskan (1, s6937),
-ooo-opkb-eksplomet (2, s6954).
+ooo-opkb-eksplomet (2, s6954), ooo-spdbbk (2, s6958), ooo-vizionero
+(1, s6959), ovod (1, s6960).
 
 ## Physical facilities discovered — all wired into address_history
 
@@ -213,8 +223,43 @@ geographically unrelated Росприроднадзор regional units — Мо�
 exposure, not a single fixed site. Worth an EGRUL check for обособленные
 подразделения if this entity warrants closer attention.
 
+### ООО «СПДББК» (ooo-spdbbk, ИНН 7838044584) — 2 records, s6958
+Wired 1 new `address_history` entry: **ул. Комсомола, д.1-3, помещ.5Н,
+Санкт-Петербург (Финляндский округ)** — entity previously had no address
+at all on file.
+
+### ООО «Визионеро» (ooo-vizionero, ИНН 5902056314) — 1 record, s6959
+Wired 1 new `address_history` entry: **ул. Луначарского, д.87, Пермь** —
+entity's registered address is "г. Москва"; this is a real, geographically
+distant branch inspected by the Perm regional labor inspectorate, the
+first non-Moscow address on file.
+
+### «Овод» (ovod, ИНН 7100027464) — 1 record, s6960
+Wired 1 new `address_history` entry: **ул. Рязанская, здание 5Ж, Тула** —
+entity previously had only village-level address (с. Осиновая Гора) on
+file. From a ГУ МЧС Тульской обл. record.
+
+## A ФНС screen surfaced a new manufacturer-tier entity outside proverki
+
+While screening Хутешен Алексей Александрович (ЦКБР chief designer,
+separately confirmed director/founder of ООО «Атлант Аэро») via
+`screen_upr_uchr.py`, his director/founder cross-reference turned up 14
+entity ties. One of them — **ООО «Прометей»** (ИНН 6154171470, ОГРН
+1266100011418) — is now added to `entities.json` as `ooo-prometey`:
+registered 05.06.2026 (three months old), Таганрог (same city as Атлант
+Аэро), ОКВЭД 30.30.39 «Производство прочих летательных аппаратов»
+(aircraft manufacturing), email PROMET.AERO@MAIL.RU. Full EGRUL выписка
+pulled (s6956) rather than relying on the ФНС summary alone: founders are
+Кобзев В.В. (26%), Шевченко К.И. (25%), Хутешен А.А. (25%), and ООО
+«ДС-БАРС-Т» (24%, ИНН 6154109094, not yet checked). Director: Коновалов
+Р.В. (ИНН 615422212894). **Шевченко Константин Игоревич is Атлант Аэро's
+OTHER existing founder** — two shared founders between two same-city
+aircraft manufacturers is a real corporate link, not a coincidence. Both
+new individuals (Коновалов, Кобзев) added to `people.json` with their
+`ooo-prometey` roles; no other ties identified for either yet.
+
 ## Remaining unscreened
 
-~23 manufacturer-tier entities with an ИНН still lack `proverki_checked_at`
-as of 2026-09-07. See CLAUDE.md/screen_proverki.py's own docstring for the
+None — every manufacturer-tier entity with an ИНН has now been screened
+against proverki.gov.ru as of 2026-09-07. See CLAUDE.md/screen_proverki.py's own docstring for the
 interactive-only run pattern (no full-roster batch mode by design).
