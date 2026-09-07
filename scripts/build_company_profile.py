@@ -464,6 +464,13 @@ class ProfileBuilder:
         e = self.by_slug.get(slug)
         if not e:
             raise SystemExit(f"no entity with slug {slug!r} in entities.json")
+        if e.get("_merged_into"):
+            raise SystemExit(
+                f"{slug!r} is a tombstone (_merged_into -> {e['_merged_into']!r}) — "
+                f"it is a duplicate record folded into the live entity, not a "
+                f"publishable profile. Render {e['_merged_into']!r} instead, or "
+                f"delete docs/profiles/{slug}.{{html,md}} if a stale page for it "
+                f"already exists.")
         self.cited_ids = set()
         ctx = self.build_context(e)
 
@@ -502,11 +509,14 @@ def main():
 
     builder = ProfileBuilder()
     if args.all:
-        slugs = [e["slug"] for e in builder.entities if e.get("tier") not in ("adjacent",)]
+        slugs = [e["slug"] for e in builder.entities
+                 if e.get("tier") not in ("adjacent",) and not e.get("_merged_into")]
     elif args.inn:
-        matches = [e["slug"] for e in builder.entities if e.get("inn") == args.inn]
+        matches = [e["slug"] for e in builder.entities
+                   if e.get("inn") == args.inn and not e.get("_merged_into")]
         if not matches:
-            raise SystemExit(f"no entity with ИНН {args.inn}")
+            raise SystemExit(f"no live entity with ИНН {args.inn} "
+                              f"(it may belong to a tombstoned duplicate record)")
         slugs = matches
     else:
         slugs = [args.slug]

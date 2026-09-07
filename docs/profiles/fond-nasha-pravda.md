@@ -43,6 +43,12 @@
 
 ## Principals & persons of interest
 
+### Александр Руфинович Бровченко
+
+- **ИНН:** 501105677892
+- General Director, Фонд «Наша Правда», since 21.03.2023
+- `sanctions lead`
+
 ### Бровченко Александр Руфинович
 
 ## Open questions

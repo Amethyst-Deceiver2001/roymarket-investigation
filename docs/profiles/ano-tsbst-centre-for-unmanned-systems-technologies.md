@@ -74,6 +74,12 @@
 - General Director, АНО «ЦБСТ» (2025-12-16–present)
 - `sanctions lead`
 
+### Дмитрий Владимирович Рубинштейн
+
+- **DOB:** 1975-04-13
+- General Director, АНО «ЦБСТ», until late 2025
+- `sanctions lead`
+
 ## Corporate links
 
 - **Center for Unmanned Systems LLC (Tula)** — OpenSanctions merges this Tula ООО (ИНН 7100032961, reg. 08.02.2023, directly OFAC/EO14024- designated) into the same deduped profile as this Moscow АНО, sharing "ЦБСТ"/"TSBS" branding and aliases. Relationship not established as of 2026-08-24 — see the Tula entity's own open_questions for what would resolve it. [s0572]

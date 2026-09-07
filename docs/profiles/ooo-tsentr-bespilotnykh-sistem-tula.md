@@ -63,7 +63,9 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Aleksandr Sergeevich Borisov
+
+- Генеральный директор, ООО «Центр беспилотных систем» (Тула, ИНН 7100032961)
 
 ## Corporate links
 

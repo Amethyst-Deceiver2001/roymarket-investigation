@@ -53,8 +53,15 @@ PERSON_REQUIRED = ["slug", "fio_ru", "roles", "_verified"]
 
 LEGAL_PREFIX = re.compile(
     r"^(ФГКУ|ФГУП|ФКУ|ГУП|МУП|АНО|ОАО|ПАО|ЗАО|ООО|АО|НПЦ|НПО|НПП|ОПКБ|"
-    r"СКБ|КБ|ГК|ИП|Фонд|НТЦ|НИПП|УЦ|ЮФ|ЗПИФ|УК)\s*"
+    r"СКБ|КБ|ГК|ИП|Фонд|НТЦ|НИПП|УЦ|ЮФ|ЗПИФ|УК)\s*",
+    re.IGNORECASE,
 )
+# normalise_name() lowercases its input before applying LEGAL_PREFIX, so this
+# flag is load-bearing: without it, none of the (capitalized-Cyrillic)
+# alternatives above ever match, and the legal-form-prefix strip this
+# function's docstring promises ("ООО «X» / «X» / OOO "X" variants") silently
+# never fires. Found 2026-09-07 while chasing why an obviously-matching
+# guillemet-quoted entity name in a role's title text wasn't resolving.
 
 
 def load(name: str):
@@ -305,6 +312,25 @@ def main() -> int:
 
     tombstone_entity_slugs = {e["slug"] for e in entities if e.get("_merged_into")}
     tombstone_people_slugs = {p.get("slug") for p in (people or []) if p.get("_merged_into")}
+
+    # build_company_profile.py now refuses to render a tombstone (2026-09-07
+    # hardening pass), but a page from BEFORE that guard existed can still
+    # sit in docs/profiles/ looking exactly like a live, citable entity page
+    # — found 3 real instances (kb-germes, ooo-sibnk, ooo-kb-sinergiya) this
+    # same pass. Flag any such leftover file directly instead of relying on
+    # someone noticing docs/profiles/ doesn't match entities.json.
+    profiles_dir = REPO / "docs" / "profiles"
+    if profiles_dir.exists():
+        for slug in sorted(tombstone_entity_slugs):
+            for ext in ("html", "md"):
+                stale = profiles_dir / f"{slug}.{ext}"
+                if stale.exists():
+                    warnings.append(
+                        f"docs/profiles/{slug}.{ext} is a published profile page "
+                        f"for a tombstoned entity (_merged_into -> "
+                        f"{next(e['_merged_into'] for e in entities if e['slug'] == slug)!r}) "
+                        f"— stale, delete it (build_company_profile.py now refuses "
+                        f"to regenerate it).")
 
     for e in entities:
         for sid in e.get("sources", []):

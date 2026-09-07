@@ -102,7 +102,9 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Renat Faritovich Saitov
+
+- Генеральный директор ООО «Гаскар Интеграция» (2019)
 
 ## Open questions
 

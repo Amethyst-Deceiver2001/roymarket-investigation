@@ -47,7 +47,13 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Дмитрий Песков
+
+![Дмитрий Песков](../images/peskov-dmitriy-nikolaevich_portrait_rupep.jpg)
+- **DOB:** 1975-12-26
+- **Birthplace:** Воронеж (Voronezh)
+- **ИНН:** 772919018611
+- Presidential special representative for digital and technological development; CEO, АНО «Платформа НТИ»
 
 ## Corporate links
 

@@ -47,7 +47,13 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Saidov Adil Abukovich — Саидов Адиль Абукович
+
+![Saidov Adil Abukovich](../images/saidov-adil-abukovich_portrait_soyuzmash.jpg)
+- **DOB:** 1973-04-18
+- **Address:** г. Москва, Борисовские пруды, д. 25, корп. 2, кв. 172; Московская обл., Красногорск, ул. Верещагина, д. 13
+- **ИНН:** 772428159554
+- Советник генерального директора
 
 ## Open questions
 

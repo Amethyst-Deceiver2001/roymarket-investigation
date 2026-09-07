@@ -81,6 +81,16 @@
             "regime": null,
             "source_id": "s0739"
           }
+        ],
+        "roles": [
+          {
+            "entity_slug": "fond-nasha-pravda",
+            "title": "General Director, Фонд «Наша Правда», since 21.03.2023",
+            "body": null,
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
         ]
       },
       "verified_against": "docs/index.html Executives table",
@@ -95,7 +105,8 @@
         "Отчество) — not merged here, flagged as a real dedup gap worth a",
         "dedicated fix rather than folded silently into this correction.",
         "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0739).",
-        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
+        "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-nasha-pravda, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
       ]
     },
     "aleksandr-sidyakin": {
@@ -991,13 +1002,24 @@
           "as_of": "2026-08-31",
           "outcome": "closed",
           "note": "6 unwired archived cards, all РАНХиГС, ₽728,220 combined 2023 — academic/consulting-fee scale, not procurement of substance."
-        }
+        },
+        "roles": [
+          {
+            "entity_slug": "ano-platforma-nti",
+            "title": "Presidential special representative for digital and technological development; CEO, АНО «Платформа НТИ»",
+            "body": "ЦБСТ Supervisory Board",
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
+        ]
       },
       "verified_against": null,
       "why": [
         "2026-08-24: OpenSanctions match explicitly checked and rejected — name collision with Kremlin press secretary Dmitry Peskov.",
         "2026-08-26: rupep.org profile (s2606) for this registry's Дмитрий Песков (Presidential special representative for digital/technological development, CEO АНО «Платформа НТИ») -- role text matches this RuPEP profile exactly, and RuPEP's own career table lists both roles verbatim. This is a DIFFERENT person from the Kremlin press secretary Dmitry Sergeevich Peskov already correctly rejected in this record's open_questions[] (b.1967, Moscow) -- RuPEP gives dob 26.12.1975, birthplace Voronezh, ИНН 772919018611, none of which match the press secretary. Confirms the earlier rejection was correct rather than resolving it away.",
-        "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate."
+        "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate.",
+        "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to ano-platforma-nti, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
       ]
     },
     "dmitriy-vladimirovich-rubinshteyn": {
@@ -1010,12 +1032,23 @@
             "regime": null,
             "source_id": null
           }
+        ],
+        "roles": [
+          {
+            "entity_slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
+            "title": "General Director, АНО «ЦБСТ», until late 2025",
+            "body": null,
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
         ]
       },
       "verified_against": null,
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
+        "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
+        "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to ano-tsbst-centre-for-unmanned-systems-technologies, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
       ]
     },
     "doronin-viktor-valentinovich": {
@@ -2295,13 +2328,24 @@
         ],
         "sources": [
           "s2602"
+        ],
+        "roles": [
+          {
+            "entity_slug": "pao-bank-psb",
+            "title": "Chairman, ПАО «Банк ПСБ»",
+            "body": "ЦБСТ Supervisory Board",
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
         ]
       },
       "verified_against": null,
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
-        "2026-08-26: rupep.org profile (s2602) confirms dob 07.02.1978 (already on file), adds birthplace Moscow and headshot. RuPEP's stated ИНН (77020096763) is only 11 digits -- checksum-invalid, logged as an open question instead of wired. Family/associate detail on the RuPEP page not wired per PII scope."
+        "2026-08-26: rupep.org profile (s2602) confirms dob 07.02.1978 (already on file), adds birthplace Moscow and headshot. RuPEP's stated ИНН (77020096763) is only 11 digits -- checksum-invalid, logged as an open question instead of wired. Family/associate detail on the RuPEP page not wired per PII scope.",
+        "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to pao-bank-psb, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
       ]
     },
     "petrichkovich-yaroslav-yaroslavovich": {
@@ -3304,6 +3348,143 @@
       "verified_against": "scripts/screen_egrip_ip.py, run 2026-09-05; data/sources/EGRUL_9702081286_20260905_ooo-arkhangel-grupp.pdf (s5506)",
       "why": [
         "Confirms from a primary document that the «Проект «Архангел»» principal controls 80% of a declared UAV manufacturer, upgrading what was previously an aggregator-sourced other_entities line."
+      ]
+    },
+    "viktor-ilich-davydov": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+            "title": "General Director, Фонд «ДАР», since 2008",
+            "body": null,
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
+        ]
+      },
+      "why": [
+        "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-dar-fond-regionalnykh-nekommercheskikh-proektov, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
+      ]
+    },
+    "ivan-igorevich-karabinskiy": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": "fond-gradislava-historic-cultural-heritage-preservation",
+            "title": "General Director, Фонд «Градислава»",
+            "body": null,
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
+        ]
+      },
+      "why": [
+        "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-gradislava-historic-cultural-heritage-preservation, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
+      ]
+    },
+    "koludarov-anton-valerevich": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": "ooo-mptm",
+            "title": "Director, ООО «МПТМ» (as of 04.08.2026)",
+            "body": null,
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
+        ]
+      },
+      "why": [
+        "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to ooo-mptm, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
+      ]
+    },
+    "saidov-adil-abukovich": {
+      "set": {
+        "roles": [
+          {
+            "_candidate": true,
+            "entity_name": "АО УК «Азимут»",
+            "entity_slug": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
+            "from": null,
+            "source_id": null,
+            "title": "Член совета директоров (board member) — which Azimut entity not fully confirmed",
+            "to": null
+          },
+          {
+            "entity_name": "Государственная корпорация «Ростех»",
+            "entity_slug": "gk-rostekh",
+            "from": null,
+            "source_id": "s3664",
+            "title": "Советник генерального директора",
+            "to": null
+          },
+          {
+            "entity_name": "ОООР «СоюзМаш России»",
+            "entity_slug": null,
+            "from": null,
+            "source_id": "s3664",
+            "title": "Член Бюро Правления",
+            "to": null
+          },
+          {
+            "entity_name": "Ассоциация «Лига содействия оборонным предприятиям»",
+            "entity_slug": null,
+            "from": null,
+            "source_id": "s3664",
+            "title": "Член Бюро",
+            "to": null
+          },
+          {
+            "entity_name": "АО «НИИ «Сапфир»» (0541016738)",
+            "entity_slug": null,
+            "from": "2014-12",
+            "source_id": "s3664",
+            "title": "Акционер (23.48%), с декабря 2014",
+            "to": null
+          }
+        ]
+      },
+      "why": [
+        "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to gk-rostekh, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
+      ]
+    },
+    "saitov-renat-faritovich": {
+      "set": {
+        "roles": [
+          {
+            "body": null,
+            "entity_name": null,
+            "entity_slug": "ooo-gaskar-integratsiya",
+            "from": null,
+            "source_id": null,
+            "title": "Генеральный директор ООО «Гаскар Интеграция» (2019)",
+            "to": null
+          }
+        ]
+      },
+      "why": [
+        "2026-09-07: registry-hardening pass -- resolved orphan role link to ooo-gaskar-integratsiya."
+      ]
+    },
+    "borisov-aleksandr-sergeevich-tsbs-tula": {
+      "set": {
+        "roles": [
+          {
+            "body": null,
+            "entity_name": null,
+            "entity_slug": "ooo-tsentr-bespilotnykh-sistem-tula",
+            "from": null,
+            "source_id": null,
+            "title": "Генеральный директор, ООО «Центр беспилотных систем» (Тула, ИНН 7100032961)",
+            "to": null
+          }
+        ]
+      },
+      "why": [
+        "2026-09-07: registry-hardening pass -- resolved orphan role link to ooo-tsentr-bespilotnykh-sistem-tula."
       ]
     }
   },

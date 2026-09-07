@@ -56,7 +56,9 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Колударов Антон Валерьевич
+
+- Director, ООО «МПТМ» (as of 04.08.2026)
 
 ## Sources cited in this profile
 

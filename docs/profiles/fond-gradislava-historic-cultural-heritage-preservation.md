@@ -44,7 +44,9 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Иван Игоревич Карабинский
+
+- General Director, Фонд «Градислава»
 
 ## Sources cited in this profile
 

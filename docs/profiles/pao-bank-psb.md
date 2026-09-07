@@ -56,7 +56,13 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Пётр Фрадков
+
+![Пётр Фрадков](../images/fradkov-petr-mikhaylovich_portrait_rupep.jpg)
+- **DOB:** 1978-02-07
+- **Birthplace:** Москва (Moscow)
+- Chairman, ПАО «Банк ПСБ»
+- `sanctions lead`
 
 ## Open questions
 

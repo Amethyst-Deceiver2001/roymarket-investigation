@@ -41,7 +41,9 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Виктор Ильич Давыдов
+
+- General Director, Фонд «ДАР», since 2008
 
 ## Sources cited in this profile
 
