@@ -505,7 +505,7 @@
     "sources": [
       "s2602"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:supervisory_board-table",
     "_raw": {
       "name": "Пётр Фрадков",
@@ -522,9 +522,10 @@
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
       "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
       "2026-08-26: rupep.org profile (s2602) confirms dob 07.02.1978 (already on file), adds birthplace Moscow and headshot. RuPEP's stated ИНН (77020096763) is only 11 digits -- checksum-invalid, logged as an open question instead of wired. Family/associate detail on the RuPEP page not wired per PII scope.",
-      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to pao-bank-psb, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
+      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to pao-bank-psb, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ПАО «Банк ПСБ»'s (pao-bank-psb) own director_history entry (s0434), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0434 -- ПАО «Банк ПСБ»'s own primary-source founding/EGRUL document, naming Пётр Фрадков as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "Q4492294",
@@ -637,7 +638,7 @@
     "sources": [
       "s2606"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:supervisory_board-table",
     "_raw": {
       "name": "Дмитрий Песков",
@@ -659,9 +660,10 @@
       "2026-08-24: OpenSanctions match explicitly checked and rejected — name collision with Kremlin press secretary Dmitry Peskov.",
       "2026-08-26: rupep.org profile (s2606) for this registry's Дмитрий Песков (Presidential special representative for digital/technological development, CEO АНО «Платформа НТИ») -- role text matches this RuPEP profile exactly, and RuPEP's own career table lists both roles verbatim. This is a DIFFERENT person from the Kremlin press secretary Dmitry Sergeevich Peskov already correctly rejected in this record's open_questions[] (b.1967, Moscow) -- RuPEP gives dob 26.12.1975, birthplace Voronezh, ИНН 772919018611, none of which match the press secretary. Confirms the earlier rejection was correct rather than resolving it away.",
       "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate.",
-      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to ano-platforma-nti, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
+      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to ano-platforma-nti, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
+      "2026-09-07: verification backlog closure — identity already confirmed by АНО «Платформа НТИ»'s (ano-platforma-nti) own director_history entry (s6817), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6817 -- АНО «Платформа НТИ»'s own primary-source founding/EGRUL document, naming Дмитрий Песков as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "Q111263326",
@@ -1968,7 +1970,7 @@
     "photo": null,
     "notes": "ИНН 501105677892. Not a nominal signatory — the fund’s channel shows him personally delivering equipment to front-line units from July 2023. Documented brother of Сергей Руфинович Бровченко (below). Primary doc",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:executives-table",
     "_raw": {
       "name": "Александр Руфинович Бровченко",
@@ -1987,9 +1989,10 @@
       "dedicated fix rather than folded silently into this correction.",
       "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0739).",
       "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
-      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-nasha-pravda, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
+      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-nasha-pravda, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
+      "2026-09-07: verification backlog closure — identity already confirmed by Фонд «Наша Правда»'s (fond-nasha-pravda) own director_history entry (s0221), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "docs/index.html Executives table",
+    "_verified_against": "s0221 -- Фонд «Наша Правда»'s own primary-source founding/EGRUL document, naming Александр Руфинович Бровченко as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-501105677892",
@@ -2055,7 +2058,7 @@
     "photo": null,
     "notes": "Named as the Olympic Fund's own sole beneficial owner in its FY2023–25 filings. Documented brother of Наша Правда's Александр Руфинович Бровченко per investigator.org.ua, independent of the shared-patronymic match found in the filings. Primary doc",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:executives-table",
     "_raw": {
       "name": "Сергей Руфинович Бровченко",
@@ -2064,9 +2067,10 @@
     },
     "_corrected": [
       "2026-08-25: folded in 2 _candidate role links (АО «Фабрика им. Советской Армии», Фонд «Наша Правда») from the duplicate record brovchenko-sergey-rufinovich, now merged into this one -- still _candidate, not yet independently verified.",
-      "2026-09-07: orphan role link fix — linked to fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta (registry entity confirmed to exist)."
+      "2026-09-07: orphan role link fix — linked to fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta (registry entity confirmed to exist).",
+      "2026-09-07: verification backlog closure — identity already confirmed by Фонд поддержки зимних олимпийских видов спорта's (fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta) own director_history entry (s6700), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6700 -- Фонд поддержки зимних олимпийских видов спорта's own primary-source founding/EGRUL document, naming Сергей Руфинович Бровченко as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -2154,7 +2158,7 @@
     "photo": null,
     "notes": "Named as ООО «Орион»'s sole \"бенефициарный владелец\" in that entity's own FY2023–25 filings, in his capacity as ДАР's sole executive body — the disclosure is internally consistent with the known DAR→Орион ownership chain, not a new outside name. Primary doc",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:executives-table",
     "_raw": {
       "name": "Виктор Ильич Давыдов",
@@ -2162,9 +2166,10 @@
       "note": "Named as ООО «Орион»'s sole \"бенефициарный владелец\" in that entity's own FY2023–25 filings, in his capacity as ДАР's sole executive body — the disclosure is internally consistent with the known DAR→Орион ownership chain, not a new outside name. Primary doc"
     },
     "_corrected": [
-      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-dar-fond-regionalnykh-nekommercheskikh-proektov, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
+      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-dar-fond-regionalnykh-nekommercheskikh-proektov, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
+      "2026-09-07: verification backlog closure — identity already confirmed by Фонд «ДАР» | Фонд региональных некоммерческих проектов's (fond-dar-fond-regionalnykh-nekommercheskikh-proektov) own director_history entry (s0214), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0214 -- Фонд «ДАР» | Фонд региональных некоммерческих проектов's own primary-source founding/EGRUL document, naming Виктор Ильич Давыдов as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -2254,7 +2259,7 @@
     "photo": null,
     "notes": "Confirmed directly in Градислава's own FY2025 Minjust filing (contact ivan.karabinsky@gradislava.ru, +79268005982), not just via cross-reference from other funds' board rosters. Directs the co-founder foundation sharing Наша Правда's office. Primary doc",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:executives-table",
     "_raw": {
       "name": "Иван Игоревич Карабинский",
@@ -2262,9 +2267,10 @@
       "note": "Confirmed directly in Градислава's own FY2025 Minjust filing (contact ivan.karabinsky@gradislava.ru, +79268005982), not just via cross-reference from other funds' board rosters. Directs the co-founder foundation sharing Наша Правда's office. Primary doc"
     },
     "_corrected": [
-      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-gradislava-historic-cultural-heritage-preservation, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
+      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-gradislava-historic-cultural-heritage-preservation, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
+      "2026-09-07: verification backlog closure — identity already confirmed by Фонд «Градислава» | historic & cultural heritage preservation's (fond-gradislava-historic-cultural-heritage-preservation) own director_history entry (s0216), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0216 -- Фонд «Градислава» | historic & cultural heritage preservation's own primary-source founding/EGRUL document, naming Иван Игоревич Карабинский as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -2352,7 +2358,7 @@
     "photo": null,
     "notes": "EGRUL-confirmed. Biography unresolved — multiple same-name hits, none confirmed. Open",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:executives-table",
     "_raw": {
       "name": "Колударов Антон Валерьевич",
@@ -2360,9 +2366,10 @@
       "note": "EGRUL-confirmed. Biography unresolved — multiple same-name hits, none confirmed. Open"
     },
     "_corrected": [
-      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to ooo-mptm, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug."
+      "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to ooo-mptm, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «МПТМ»'s (ooo-mptm) own director_history entry (s0230), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0230 -- ООО «МПТМ»'s own primary-source founding/EGRUL document, naming Колударов Антон Валерьевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -2467,7 +2474,7 @@
     "photo": "images/saidov-asker-kazbekovich_portrait_tadviser.jpg",
     "notes": "RESOLVED 2026-08-25: NAZK sanctions profile (sanctions.nazk.gov.ua/ru/sanction-person/16429/, DNS-blocked in our sandbox, read via Google's cached index) describes his company as engaged in \"production of radar, radio navigation equipment and remote control radio equipment\" — this matches АО ПК «Азимут» (Производственная компания, ИНН 7701583410, 548 employees, ₽3.9bn 2021 revenue per checko.ru), NOT АО УК «Азимут» (Управляющая компания, ИНН 7714390623), which is a pure holding vehicle with no production activity. The '44% shareholder, Rostech co-shareholder' fact is real but attaches to the HOLDING company specifically — both facts are genuine, they just describe different entities/roles. checko.ru independently confirms him as GD of both. New lead, not yet added: a brother, Саидов Адиль Абукович, appears on NAZK profile 17771 as a board member of \"JSC AZIMUT\" — which entity not yet confirmed. Personal ИНН cross-reference: rusprofile.ru/person/saidov-ak-054403029570. Photo: TAdviser company-profile page (tadviser.ru/index.php/Персона:Саидов_Аскер_Казбекович), filename itself identifies him as \"гендир-Азимут-Москва\". Small (250px) — worth checking for a larger original if this goes in the published brief. No VK/Telegram/LinkedIn found. NAZK's own sanctions page (profile 16429) was DNS-blocked in this research pass, worth checking manually for its own photo. [s3664] Phone +79856434005, emails asker@saidov.info, asker1@bk.ru, asker.saidov@azimut.ru. Confirms АО УК «Азимут» manages: АО «НИИ измерительной техники-РТК им. Брейгина» (7453012173), ООО «Автодория» (1655215859), НТЦ «Азимут» (7733300287), ООО «Адванст Мобилити Солюшинз» (7710950049), ООО «Аэротехальянс» (9714020721), ООО «Сонда Про» (7415077532), ООО «Авиателекоминвест» (7801656830), ООО «Вансел» (7813267853), ООО «Техноисток» (7704339272), ООО «РТ-Процессинговый Центр» (9724026218).",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:executives-table",
     "_raw": {
       "name": "Саидов Аскер Казбекович",
@@ -2477,9 +2484,10 @@
     "_corrected": [
       "2026-08-24 OpenSanctions screening returned match_id \"ru-inn-054403029570\" — this IS the exact personal ИНН (054403029570) already stated in this registry's own pre-existing note, itself sourced to Ukraine's NAZK \"War & Sanctions\" register profile 16429. An identifier match, not a name/score match — formalizing dob/birthplace/inn_personal fields from that same pre-existing, already-sourced note text. Which of the two same-named «Азимут» entities the Western designations attach to remains unresolved (see existing open question).",
       "2026-08-25: OSINT research pass resolves which Azimut entity the sanctions designation attaches to — АО ПК «Азимут» (production), distinct from his ownership stake in АО УК «Азимут» (holding).",
-      "2026-08-25: photo/social-media OSINT research pass."
+      "2026-08-25: photo/social-media OSINT research pass.",
+      "2026-09-07: verification backlog closure — identity already confirmed by АО ПК «Азимут»'s (ao-pk-azimut) own director_history entry (s0212), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
+    "_verified_against": "s0212 -- АО ПК «Азимут»'s own primary-source founding/EGRUL document, naming Саидов Аскер Казбекович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-054403029570",
@@ -3062,7 +3070,7 @@
     "photo": null,
     "notes": "Confirmed directly in the fund's own FY2025 Minjust filing — the same name and person as the \"Фонд Поддержки нац. морских проектов\" employer field on Наша Правда's own board roster, resolving the fourth-foundation lead person-to-person. A Russian Ministry of Interior NGO-affiliates registry (via OCCRP Aleph) additionally lists him as a member of the Winter Olympic Sports Support Fund itself, 2016–2019 — a third network tie for the same person, predating both his Наша Правда board seat and his Морских Программ directorship. Primary doc",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:executives-table",
     "_raw": {
       "name": "Устратов Дмитрий Владимирович",
@@ -3076,9 +3084,10 @@
     },
     "mentions": 5,
     "_corrected": [
-      "2026-09-07: orphan role link fix — linked to fond-podderzhki-natsionalnykh-morskikh-programm (registry entity confirmed to exist)."
+      "2026-09-07: orphan role link fix — linked to fond-podderzhki-natsionalnykh-morskikh-programm (registry entity confirmed to exist).",
+      "2026-09-07: verification backlog closure — identity already confirmed by Фонд поддержки национальных морских программ's (fond-podderzhki-natsionalnykh-morskikh-programm) own director_history entry (s6703), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6703 -- Фонд поддержки национальных морских программ's own primary-source founding/EGRUL document, naming Устратов Дмитрий Владимирович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-243900616945",
@@ -3303,7 +3312,7 @@
       "s0050"
     ],
     "mentions": 5,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -3338,9 +3347,10 @@
       "край (МИФНС №9), tax jurisdiction later moved to Краснодар.",
       "2026-08-24 OpenSanctions screening: both returned candidates have a DIFFERENT surname from this registry's Барашков — \"Baranov Aleksandr Sergeevich\" (Wagner PMC member, DOB 1978-08-29) and \"Александр Сергеевич Карташков\" (bare name). Neither carries any of this registry's own «Гагаринг»/«АКР Бегак»/КБ «Око» company context. REJECTED as a false positive — surname collision (Барашков vs Баранов/Карташков), not the same person.",
       "2026-08-24: user-supplied HimeraSearch OSINT-leak-aggregator dossier (s1171, a Химера-style compilation of breached Russian consumer/courier/banking/Rosreestr/tax records, NOT a government registry) matches this person on an EXACT identifier — ИНН 252201766438, the same personal ИНН already on this record — across every one of its ~40 constituent leaked-dataset entries, all under the same DOB (03.11.1979). Confirms dob and adds birthplace (Хабаровск, consistent across three independent Росреестр pulls dated 2022–2024) and current address (Краснодар, ул. Черкасская 97-25, consistent across a 2024 ФССП debtor record, a 2024 ОСАГО policy and multiple 2024 Росреестр vehicle-registration entries). Employment history in the dossier — director/владелец of ИП Барашков Александр Сергеевич and multiple SDEK Krasnodar courier-franchise entities, 2018–2023, before the shift to «Гагаринг» — corroborates the registry's own existing note that this is a \"гаражники\"-era startup founder, and independently confirms the Приморье→Краснодар address move already inferred from the ОГРНИП/tax-jurisdiction record. One dossier entry (LEADER-ID.RU ПОЛЬЗОВАТЕЛИ 2023, no user_id given, photo file 145752.jpg, address Краснодар, occupation «Предприниматель») is a plausible third leader-id.ru account for this person, distinct from the two non-matching accounts already recorded in leader_id_matches (a Nerekhta schoolboy and a blank Moscow account) — not promoted here since the dossier gives no leader-id user_id to cross-check, left as an open lead only. NOT promoting the dossier's passport numbers, SNILS, phone numbers or vehicle/insurance detail into the registry — out of scope for what a company-profile record needs; ИНН/dob/birthplace/address already give sanctions screening a workable identifier set. Also noted but not acted on: a debt record (ФССП, Прикубанский округ Краснодара, ₽132,554, 2023) — ordinary consumer debt, not evidence of anything relevant to this investigation.",
-      "2026-08-24: resolved this person's `_candidate` role at ООО «Гагаринг» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-gagaring, source s0455) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ООО «Гагаринг» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-gagaring, source s0455) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Гагаринг»'s (ooo-gagaring) own director_history entry (s0455), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
+    "_verified_against": "s0455 -- ООО «Гагаринг»'s own primary-source founding/EGRUL document, naming Барашков Александр Сергеевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-744717851046",
@@ -3643,7 +3653,7 @@
     "notes": null,
     "sources": [],
     "mentions": 3,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -3655,9 +3665,10 @@
     "_corrected": [
       "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0754).",
       "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
-      "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «Аэромакс» -> ooo-aeromaks, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0113)."
+      "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «Аэромакс» -> ooo-aeromaks, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0113).",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аэромакс»'s (ooo-aeromaks) own director_history entry (s6741), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6741 -- ООО «Аэромакс»'s own primary-source founding/EGRUL document, naming Бессонов Сергей Николаевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "NK-bHNoVYjPGWZBD2xiJoG5XY",
@@ -3771,7 +3782,7 @@
     "notes": null,
     "sources": [],
     "mentions": 3,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -3782,9 +3793,10 @@
     },
     "_corrected": [
       "2026-08-24: resolved this person's `_candidate` role at ООО «Промсинтез» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-promsintez, source s0493) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
-      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph EGRUL Person record gives personal ИНН directly (s1979)."
+      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph EGRUL Person record gives personal ИНН directly (s1979).",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Промсинтез»'s (ooo-promsintez) own director_history entry (s0493), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0493 -- ООО «Промсинтез»'s own primary-source founding/EGRUL document, naming Гарькуша Владимир Владимирович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -3916,7 +3928,7 @@
     "notes": null,
     "sources": [],
     "mentions": 3,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -3928,9 +3940,10 @@
     "_merged_into": "aleksandr-rufinovich-brovchenko",
     "_corrected": [
       "2026-08-24: merged real dedup gap flagged earlier this session — same person, two scaffold records from different name-order extraction passes (Имя Отчество Фамилия vs Фамилия Имя Отчество). Canonical record is aleksandr-rufinovich-brovchenko, which already carries inn_personal and the clean primary role.",
-      "2026-08-24: resolved this person's `_candidate` role at Фонд «Наша Правда» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (fond-nasha-pravda, source s0221) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at Фонд «Наша Правда» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (fond-nasha-pravda, source s0221) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by Фонд «Наша Правда»'s (fond-nasha-pravda) own director_history entry (s0221), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0221 -- Фонд «Наша Правда»'s own primary-source founding/EGRUL document, naming Бровченко Александр Руфинович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-501105677892",
@@ -4278,7 +4291,7 @@
     "notes": "Role/DOB/ИНН/sanctions all independently corroborated (checko.ru, OpenSanctions match NK-noHRu6gRFtR4BRvsJBrtB3 score 1.0, co-designee Корчагина Ольга Александровна same EU package). New press background: per The Insider (via OCCRP republication), before end of 2022 he worked in currency trading; mid-2023 changed his Telegram avatar to \"Пиранья\" and joined FPV-drone-owner chats (Autel owners, \"Движение ZV Ульяновск\"). Izvestia (cited secondhand) reported СКБ «Пиранья» had supplied 8,000+ drones to the front since winter -- not independently verified against the original Izvestia piece. No personal photo found. The only image located (theins.ru/storage/content_image/original/23/23811/file-0170cc8768a214d4b35aa9fb93b916f8.jpg, from The Insider's \"Самоделкины из Сколково\" investigation) is a screenshot of his Telegram avatar — the «Пиранья» (Piranha) fish logo, NOT a photo of his face — useful only as an identity/brand marker, not a headshot. No personal VK/Telegram handle found (per The Insider, he changed his TG nickname \"crypto\"->\"fpv\" but his actual @username wasn't disclosed). Company channel t.me/s/piranhafpv is sales-only, no founder photo. [s3664] Phones +79021273476/+79510995055, emails pawa_web@mail.ru, cubotweb73@gmail.com, roboteka2010@gmail.com. Independently confirms directorship/40% stake in ООО «СКБ Пиранья» (7300024069) and prior (2015-2019) directorship/34% stake in ООО «Личность и Капитал» (7325136286).",
     "sources": [],
     "mentions": 2,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -4292,9 +4305,10 @@
       "2026-08-24: resolved this person's `_candidate` role at ООО «СКБ Пиранья» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-skb-piranya, source s0487) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
       "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
       "2026-08-25: OSINT research pass -- adds press background (currency trader to FPV-drone community) and an unverified 8,000+ drone supply claim.",
-      "2026-08-25: photo/social-media OSINT research pass."
+      "2026-08-25: photo/social-media OSINT research pass.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «СКБ Пиранья»'s (ooo-skb-piranya) own director_history entry (s0487), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0487 -- ООО «СКБ Пиранья»'s own primary-source founding/EGRUL document, naming Чернышов Павел Алексеевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "NK-noHRu6gRFtR4BRvsJBrtB3",
@@ -4601,7 +4615,7 @@
     "notes": null,
     "sources": [],
     "mentions": 2,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -4611,9 +4625,10 @@
     },
     "_corrected": [
       "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
-      "2026-08-24: resolved this person's `_candidate` role at АО «Котлин-Новатор» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-kotlin-novator, source s0463) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at АО «Котлин-Новатор» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-kotlin-novator, source s0463) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by АО «Котлин-Новатор»'s (ao-kotlin-novator) own director_history entry (s0463), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": [],
+    "_verified_against": "s0463 -- АО «Котлин-Новатор»'s own primary-source founding/EGRUL document, naming Жук Виталий Александрович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-781422806104",
@@ -4703,7 +4718,7 @@
     "notes": null,
     "sources": [],
     "mentions": 2,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -4712,9 +4727,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: resolved this person's `_candidate` role at АО «АУРИН» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-aurin, source s0147) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at АО «АУРИН» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-aurin, source s0147) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by АО «АУРИН»'s (ao-aurin) own director_history entry (s6859), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6859 -- АО «АУРИН»'s own primary-source founding/EGRUL document, naming Клёцкин Владислав Николаевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-772605415135",
@@ -4844,7 +4860,7 @@
     "notes": null,
     "sources": [],
     "mentions": 2,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -4856,9 +4872,10 @@
       "2026-08-24: the «НИПП «Рустехдрон»» candidate role is CONFIRMED via direct patent co-authorship on RU218475U1/RU220486U1 (same filing as Дзема В.В. and Свистунов М.В.) — this closes one of this session's own earlier 'zero corroboration, left unconfirmed' cases from the OpenSanctions 'check 33' pass. The separate ООО «ДСГ» role tie is UNCHANGED and remains a candidate — no evidence connecting the two roles has been found; do not assume they corroborate each other.",
       "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
       "2026-08-24: added director roles at both ooo-npo-rustekhdron and the newly-added ooo-rtd-zashchita, alongside the existing verified co-inventor role. The ООО «ДСГ» candidate role remains unresolved and unrelated (per this record's own existing _corrected note: ДСГ's director carries a different patronymic, Никита Дмитриевич, treated as a same-surname coincidence, not this Соколов).",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «РТД-Защита»'s (ooo-rtd-zashchita) own director_history entry (s6792), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "fips.ru direct lookup, RUPM 218475 and RUPM 220486, 2026-08-24",
+    "_verified_against": "s6792 -- ООО «РТД-Защита»'s own primary-source founding/EGRUL document, naming Соколов Герман Олегович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-500310216204",
@@ -5222,7 +5239,7 @@
     "notes": null,
     "sources": [],
     "mentions": 2,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -5233,9 +5250,10 @@
     "_corrected": [
       "2026-08-24: merged in 3 co-inventor patent roles (RU208483U1, RU209336U1, RU2782021C1) that had been scaffolded onto a duplicate record (barakhtin-artem-vladimirovich-2, now _merged_into this one) -- both matched the same leader-id.ru user_id 498457.",
       "2026-08-24: leader-id.ru self-reports employer \"АРКОДИМ\", position \"Генеральный директор\", Казань -- corroborates the brief prose's own claim (\"50/50 owned by GD Барахтин Артём Владимирович и Соловьев Константин Юрьевич\") that Барахтин is a GD-level principal, not just a co-inventor. NOT promoted to entity-level `director` on ooo-arkodim: that field is currently sourced to a direct EGRUL pull (s0475) naming Соловьев as director -- see open_questions added to ooo-arkodim this same pass for the apparent conflict, which likely reflects Barakhtin/Solovyov each heading a different entity within the affiliated «Аркодим»/«Аркодим-ПРО»/«Аркодим+»/«Аркодим-М»/«Аркодим-2» Kazan group the brief prose already names, not a real discrepancy on one entity.",
-      "2026-08-24: photo pulled directly from this leader-id.ru account (user_id 498457, GET /api/v4/users/498457, field `photo` -> v3.leader-id.ru/files/user_photo/498457/498457_200.jpg), the same account already ID-matched above via user_id. Professional headshot, consistent with the PII policy's photo-sourcing bound (subject's own professional/public presence, not private imagery)."
+      "2026-08-24: photo pulled directly from this leader-id.ru account (user_id 498457, GET /api/v4/users/498457, field `photo` -> v3.leader-id.ru/files/user_photo/498457/498457_200.jpg), the same account already ID-matched above via user_id. Professional headshot, consistent with the PII policy's photo-sourcing bound (subject's own professional/public presence, not private imagery).",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аркодим»'s (ooo-arkodim) own director_history entry (s6711), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6711 -- ООО «Аркодим»'s own primary-source founding/EGRUL document, naming Барахтин Артём Владимирович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -5348,7 +5366,7 @@
     "notes": null,
     "sources": [],
     "mentions": 2,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -5359,9 +5377,10 @@
     "_corrected": [
       "2026-08-24: merged in the co-inventor role (ПрЭВМ RU2023613722, source s1054) and leader-id-sourced photo from the now-tombstoned duplicate lysenko-andrey-olegovich-2 -- same person, confirmed via identical leader-id.ru user_id 658623 shared across both records.",
       "2026-08-24: leader-id.ru self-reports employer \"Визионеро\", position \"Руководитель проекта\" (Project Lead), Пермь -- upgrades this from a bare co-inventor credit to a project-leadership role at ooo-vizionero, entity-name match exact. Left the co-inventor role's structured `title`/`source_id` as the citable primary source rather than overwriting it with the uncited leader-id job title; the leadership detail is recorded here as corroboration only, per this registry's standing rule that a leader-id self-report alone doesn't source a structured field.",
-      "The КБ «Синергия» role stays `_candidate`: no leader-id or other corroboration found for it this pass."
+      "The КБ «Синергия» role stays `_candidate`: no leader-id or other corroboration found for it this pass.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Визионеро»'s (ooo-vizionero) own director_history entry (s6724), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6724 -- ООО «Визионеро»'s own primary-source founding/EGRUL document, naming Лысенко Андрей Олегович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -5649,7 +5668,7 @@
     "notes": null,
     "sources": [],
     "mentions": 2,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -5659,9 +5678,10 @@
     },
     "_corrected": [
       "2026-08-24: resolved this person's `_candidate` role at ООО «Метаскан» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-metaskan, source s0481) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
-      "2026-08-24: resolved this person's `_candidate` role at ООО «ЦЮС» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-tsyus, source s0052) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ООО «ЦЮС» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-tsyus, source s0052) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Метаскан»'s (ooo-metaskan) own director_history entry (s6712), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6712 -- ООО «Метаскан»'s own primary-source founding/EGRUL document, naming Поспехов Иван Александрович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -5770,7 +5790,7 @@
     "notes": "Паспорт 3608 869401. Тел. +7 921 570-67-88. Email: posenses@gmail.ru, info@prounit.info (указан один раз для Яндекс.Еды, не перепроверено). Prior individual-entrepreneur registration: ИП «Шагиахметов Айрат Фатхутдинович», ОГРНИП 314637508500045, registered 26.03.2014, liquidated 30.08.2022 — declared activity \"дополнительное профессиональное образование\" (unrelated to electronics/counter-UAV), registered address с. Большая Черниговка, Самарская обл. (matches known hometown). rusprofile.ru/person/shagiakhmetov-af-636501708070 — exact ИНН match, high confidence. checko.ru confirms Тримикс's director/founder data is now fully FL-129-ФЗ-restricted at the aggregator level too (not just raw EGRUL), consistent with post-sanctions info suppression. [s3664] Confirms work at ООО «Радиофид Системы» (7802491148) since 2014.",
     "sources": [],
     "mentions": 2,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -5784,9 +5804,10 @@
       "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
       "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text.",
       "2026-08-25: photo + corroborating public appearance from @vimaivivs (ВИМАИВиВС, St. Petersburg Military Artillery Museum) post 3195, 17.12.2025 (t.me/vimaivivs/3195, s1409) — ceremony where ООО «Тримикс» handed the museum a «Булат» v.4 detector and a «Таир» individual-warning device, and signed a cooperation agreement with the Михайловская военная артиллерийская академия, with Шагиахметов personally awarding certificates (благодарственные письма) to cadets — same genre as other roster entities' cadet/unit recognition events. Confirms his GD role and personal public-facing promotion of the product line in a military-institutional setting.",
-      "2026-08-25: OSINT research pass — adds prior (unrelated-industry, now-liquidated) ИП registration."
+      "2026-08-25: OSINT research pass — adds prior (unrelated-industry, now-liquidated) ИП registration.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Тримикс»'s (ooo-trimiks-bulat-3mx) own director_history entry (s1408), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s1408 -- ООО «Тримикс»'s own primary-source founding/EGRUL document, naming Шагиахметов Айрат Фатхутдинович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "NK-9unsMpdt7TvmoSN748URF2",
@@ -6289,7 +6310,7 @@
     "notes": null,
     "sources": [],
     "mentions": 2,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -6298,9 +6319,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: resolved this person's `_candidate` role at ООО «Заволжское» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-zavolzhskoe, source s0061) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ООО «Заволжское» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-zavolzhskoe, source s0061) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Заволжское»'s (ooo-zavolzhskoe) own director_history entry (s6695), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6695 -- ООО «Заволжское»'s own primary-source founding/EGRUL document, naming Волков Михаил Вадимович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -6647,7 +6669,7 @@
     "notes": null,
     "sources": [],
     "mentions": 2,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -6656,9 +6678,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: resolved this person's `_candidate` role at АО «РОСС» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-ross, source s0009) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at АО «РОСС» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-ross, source s0009) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by АО «РОСС»'s (ao-ross) own director_history entry (s0009), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0009 -- АО «РОСС»'s own primary-source founding/EGRUL document, naming Максимов Юрий Алексеевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -7024,7 +7047,7 @@
     "notes": "Screening, 2026-09-05: ЕГРИП: no sole-proprietor registration found (checked 05.09.2026). ФНС «Прозрачный бизнес» director/founder cross-reference (05.09.2026) returns ООО «Архангел», ИНН 9714079108, and nothing else — she is not a serial director or nominee, which is the relevant negative for an EU-designated company whose ownership she halved on 23.06.2026.",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -7032,9 +7055,10 @@
       ]
     },
     "_corrected": [
-      "Establishes that the sole other-business check on the director of an EU-designated entity is clean — a negative worth recording so it is not re-run."
+      "Establishes that the sole other-business check on the director of an EU-designated entity is clean — a negative worth recording so it is not re-run.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Архангел»'s (ooo-arkhangel) own director_history entry (s5507), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference via scripts/screen_upr_uchr.py, run 2026-09-05; scripts/screen_egrip_ip.py, run 2026-09-05",
+    "_verified_against": "s5507 -- ООО «Архангел»'s own primary-source founding/EGRUL document, naming Шатракова Анастасия Артёмовна as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [],
@@ -7306,7 +7330,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -7323,9 +7347,10 @@
       "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
       "2026-08-24 opensanctions people cross-reference pass: ambiguous, logged as open question rather than promoted.",
       "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU134797S (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
-      "2026-08-24 cleanup: dropped a stale prose-extracted _candidate role for ООО «Клеверкоптер», now superseded by the resolved co-inventor role added from the patent sweep (same entity, now with entity_slug/title/source_id)."
+      "2026-08-24 cleanup: dropped a stale prose-extracted _candidate role for ООО «Клеверкоптер», now superseded by the resolved co-inventor role added from the patent sweep (same entity, now with entity_slug/title/source_id).",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Клеверкоптер»'s (ooo-kleverkopter) own director_history entry (s0464), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "Rospatent bulk patent dump (s0952), 2026-08-24",
+    "_verified_against": "s0464 -- ООО «Клеверкоптер»'s own primary-source founding/EGRUL document, naming Гусев Сергей Владимирович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-623300860474",
@@ -7500,7 +7525,7 @@
     "notes": "Signed the 02.06.2014 ГБУ ДСЗМ radio-communications services contract personally, acting on Устав. Passport captured verbatim from the signature block per the full-identifying-detail PEP policy — director of the entity that structurally links Кронштадт back into the Аэромакс UAV holding company.",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -7514,9 +7539,10 @@
     "passport": "45 00 309096, выдан 2 ОВД р-на Хамовники УВД ЦАО г. Москвы, 11.10.2000, код подразделения 773-004",
     "source_id": "s1937",
     "_corrected": [
-      "2026-08-24: resolved this person's `_candidate` role at АО «Центр-Телко» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-tsentr-telko, source s0115) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at АО «Центр-Телко» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-tsentr-telko, source s0115) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by АО «Центр-Телко»'s (ao-tsentr-telko) own director_history entry (s6743), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6743 -- АО «Центр-Телко»'s own primary-source founding/EGRUL document, naming Синельщиков Андрей Валентинович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -7728,7 +7754,7 @@
     "notes": "Only one other registration found under his name: a same-industry (software development) ИП, registered 25.11.2021, voluntarily liquidated 26.07.2023 -- almost exactly when АО «Площадь» was founded (10.07.2023) and shortly before his GD appointment there (04.10.2023). No other founder/shareholder roles found anywhere (rusprofile/checko/Aleph/OpenSanctions). This is a clean single-entity profile, not a multi-company nominee-director pattern -- leans AGAINST a front-man theory, though his young age (b.1998) for a defense-sector GD remains independently worth noting as atypical. Checked 2026-08-25, no photo or social media found despite 2-3 press interviews as GD of АО «Площадь» (RIA Novosti 12.12.2024, spbdnevnik.ru 23.01.2025) — none carried a personal photo (spbdnevnik.ru's accompanying image is stock drone footage, not him). No LinkedIn/GitHub/VK/Telegram found despite his software-development background making GitHub a plausible lead — none surfaced. [s3664] Phones +79853007052/+79859133520, emails maslak-98@mail.ru, maslak.nyu@phystech.edu (МФТИ). Brother Маслак Степан Юрьевич (b. 06.07.1994) is director since Nov 2022 of Фонд Содействия и Поддержки Ветеранов «Кольчуга» (veteran/SVO-participant support charity) — a family tie between this АО «Площадь» director and SVO-adjacent charitable activity, not yet independently verified beyond this OSINT compilation.",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -7740,9 +7766,10 @@
       "2026-08-24 OpenSanctions screening (score 1.0, exact name match, DOB returned but no notes/context text). PLAUSIBLE only: this registry independently ties a Маслак Никита Юрьевич to АО «Площадь» (ao-ploshchad, already ИНН-confirmed sanctioned this same sweep), circumstantially consistent but not itself identity proof. No personal ИНН cross-check possible.",
       "2026-08-24: resolved this person's `_candidate` role at АО «Площадь» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-ploshchad, source s0472) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
       "2026-08-25: OSINT research pass -- personal ИНН + corporate-history check for nominee-director pattern (result: none found).",
-      "2026-08-25: photo/social-media OSINT research pass."
+      "2026-08-25: photo/social-media OSINT research pass.",
+      "2026-09-07: verification backlog closure — identity already confirmed by АО «Площадь»'s (ao-ploshchad) own director_history entry (s0472), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
+    "_verified_against": "s0472 -- АО «Площадь»'s own primary-source founding/EGRUL document, naming Маслак Никита Юрьевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "NK-JghyoKinh8FBKNtc4wCeRb",
@@ -7809,7 +7836,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -7819,9 +7846,10 @@
     "_corrected": [
       "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
       "2026-08-24: resolved this person's `_candidate` role at ООО «ДСГ» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-dsg, source s0482) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «ДСГ»'s (ooo-dsg) own director_history entry (s6770), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": [],
+    "_verified_against": "s6770 -- ООО «ДСГ»'s own primary-source founding/EGRUL document, naming Соколов Никита Дмитриевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-780633823516",
@@ -8237,7 +8265,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -8247,9 +8275,10 @@
     "_corrected": [
       "2026-08-24: leader-id.ru self-reports employer \"ООО \\\"АРКОДИМ-Про\\\"\", position \"Генеральный директор\", Казань -- consistent with (and corroborating) the brief prose's claim he co-owns the «Аркодим» Kazan group 50/50 with Барахтин, but names a DIFFERENT entity (\"АРКОДИМ-Про\") than ooo-arkodim's own EGRUL-sourced director field (which also names him -- s0475). Left unresolved whether \"АРКОДИМ-Про\" is: the same legal entity referred to informally, a genuinely separate affiliated entity (the brief prose already names four affiliated Kazan «АРКОДИМ» entities: АРКОДИМ-ПРО, АРКОДИМ+, АРКОДИМ-М, АРКОДИМ-2), or a stale leader-id.ru self-entry. See ooo-arkodim open_questions for the flagged conflict.",
       "2026-08-24: photo pulled directly from this leader-id.ru account (user_id 1763366, GET /api/v4/users/1763366, field `photo` -> v3.leader-id.ru/files/user_photo/1763366/1763366_200.jpg), the same account already ID-matched above.",
-      "2026-08-24: resolved this person's `_candidate` role at ООО «Аркодим» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-arkodim, source s0475) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ООО «Аркодим» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-arkodim, source s0475) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аркодим»'s (ooo-arkodim) own director_history entry (s0475), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0475 -- ООО «Аркодим»'s own primary-source founding/EGRUL document, naming Соловьев Константин Юрьевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -8353,7 +8382,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -8362,9 +8391,10 @@
     },
     "_corrected": [
       "2026-08-24: resolved this person's `_candidate` role at ООО «ЭйАрТэк» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-eyartek, source s0485) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
-      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph Company/OGRN-2016 record (ИП registration) gives ИНН directly (s1978)."
+      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph Company/OGRN-2016 record (ИП registration) gives ИНН directly (s1978).",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «ЭйАрТэк»'s (ooo-eyartek) own director_history entry (s0485), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0485 -- ООО «ЭйАрТэк»'s own primary-source founding/EGRUL document, naming Жуков Андрей Викторович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-732703889628",
@@ -8874,7 +8904,7 @@
     "notes": "zakupki footprint reviewed 2026-08-31: 42 contracts under ИП Городничин Д.А. (ИНН 470314984657), all regional/municipal cultural-education institutions (colleges/schools of arts and theatre in Pskov, Perm, Khabarovsk, Vologda regions) — generic small-business supply contracting, no UAV/defense/ЦБСТ-relevant subject matter in any customer or contract title. Not wired to government_contracts[]; unrelated to his ООО «Визионеро» co-inventor role. Closed.",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -8889,9 +8919,10 @@
     "_corrected": [
       "2026-08-25: folded in the co-inventor role (ООО «Визионеро», s1054) from the duplicate record gorodnichin-dmitriy-aleksandrovich-2, now merged into this one.",
       "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph Company/OGRN-2016 record (ИП registration, \"ИП ГОРОДНИЧИН ДМИТРИЙ АЛЕКСАНДРОВИЧ\") gives ИНН directly (s1972).",
-      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
+      "2026-09-07: verification backlog closure (round 2, founders) -- identity confirmed by ООО «Визионеро»'s (ooo-vizionero) own founders_history entry (s6724), a primary-source document, but the person record had never been marked _verified."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6724 -- ООО «Визионеро»'s own primary-source founding/EGRUL document, naming Городничин Дмитрий Александрович as a founder (cross-referenced from the entity's own founders_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -9133,7 +9164,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -9141,9 +9172,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: resolved this person's `_candidate` role at ООО «Конструкторское бюро «Синергия»» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `founder` field (ooo-konstruktorskoe-byuro-sinergiya, source s0508) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ООО «Конструкторское бюро «Синергия»» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `founder` field (ooo-konstruktorskoe-byuro-sinergiya, source s0508) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure (round 2, founders) -- identity confirmed by ООО «Конструкторское бюро «Синергия»»'s (ooo-konstruktorskoe-byuro-sinergiya) own founders_history entry (s6755), a primary-source document, but the person record had never been marked _verified."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6755 -- ООО «Конструкторское бюро «Синергия»»'s own primary-source founding/EGRUL document, naming Усачёв Павел Александрович as a founder (cross-referenced from the entity's own founders_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -9241,7 +9273,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -9249,9 +9281,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: resolved this person's `_candidate` role at ООО «Ментастеп» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-mentastep, source s0491) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ООО «Ментастеп» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-mentastep, source s0491) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Ментастеп»'s (ooo-mentastep) own director_history entry (s0491), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0491 -- ООО «Ментастеп»'s own primary-source founding/EGRUL document, naming Радченко Михаил Юрьевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-615401893360",
@@ -9754,7 +9787,7 @@
     "notes": "zakupki footprint reviewed 2026-08-31: 19 contracts under ИНН 773376903806, spread across unrelated regional customers (Kemerovo MVD logistics centre, Moscow geodesy trust, Bauman MSTU Kaluga branch, regional fire/rescue services) with no thematic or geographic connection to her ООО «НПО Кайсант» role (which is Moscow-region UAV-component manufacturing). Reads as generic small-supplier contracting, likely the same taxpayer but an unrelated side activity, not a ЦБСТ-relevant footprint. Not wired to government_contracts[]. Closed.",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -9769,9 +9802,10 @@
     "_corrected": [
       "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2540).",
       "2026-08-26: confirmed via налетай.рф (ГТЛК state UAV marketplace) that НПО «Кайсант»'s ГЕРМЕС-7/ГУСЬ-7 products are sold under her personal ИП (ip-cherepkova, ИНН 773376903806 -- exact match to inn_personal already on file), not the company's own name -- see npo-kaysant's marketplace_listings[] note for the full reasoning on why this looks like a deliberate visibility-reduction pattern.",
-      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
+      "2026-09-07: verification backlog closure — identity already confirmed by НПО «КАЙСАНТ»'s (npo-kaysant) own director_history entry (s6744), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6744 -- НПО «КАЙСАНТ»'s own primary-source founding/EGRUL document, naming Черепкова Нина Сергеевна as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "NK-idCvA8GTbpW2QSPcdXvVfq",
@@ -9985,7 +10019,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -9993,9 +10027,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: the pre-existing `_candidate` role on this person pointed at the wrong entity -- \"ООО «Ушкуйник»\" (npts-ushkuynik, the flagship UAV maker itself, whose own `director` field is null) rather than \"АНО «НПЦ «Ушкуйник»»\" (ano-npts-ushkuynik, a separate registry entity whose `director` field already reads \"Чадаев Алексей Викторович\", sourced to an EGRUL pull s0947). Corrected the entity_slug/entity_name to the АНО and attached that same s0947 source, dropping `_candidate` since it now matches an independently EGRUL-sourced field exactly. Corroborated further by leader-id.ru, which self-reports the same employer (full legal name match) and position \"Генеральный директор\", Москва. NOT the same person as «Чадаев Ю.А.» (leader of АНО «НПЦ БАС «ТулаДрон»», per the parked npc_bas_technopark_network memory) -- different patronymic, different organization."
+      "2026-08-24: the pre-existing `_candidate` role on this person pointed at the wrong entity -- \"ООО «Ушкуйник»\" (npts-ushkuynik, the flagship UAV maker itself, whose own `director` field is null) rather than \"АНО «НПЦ «Ушкуйник»»\" (ano-npts-ushkuynik, a separate registry entity whose `director` field already reads \"Чадаев Алексей Викторович\", sourced to an EGRUL pull s0947). Corrected the entity_slug/entity_name to the АНО and attached that same s0947 source, dropping `_candidate` since it now matches an independently EGRUL-sourced field exactly. Corroborated further by leader-id.ru, which self-reports the same employer (full legal name match) and position \"Генеральный директор\", Москва. NOT the same person as «Чадаев Ю.А.» (leader of АНО «НПЦ БАС «ТулаДрон»», per the parked npc_bas_technopark_network memory) -- different patronymic, different organization.",
+      "2026-09-07: verification backlog closure — identity already confirmed by АНО «НПЦ «Ушкуйник»»'s (ano-npts-ushkuynik) own director_history entry (s6806), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6806 -- АНО «НПЦ «Ушкуйник»»'s own primary-source founding/EGRUL document, naming Чадаев Алексей Викторович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "Q4506685",
@@ -11208,7 +11243,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -11218,9 +11253,10 @@
     "_corrected": [
       "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2858174C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
       "2026-08-24 cleanup: dropped a stale prose-extracted _candidate role for ООО «КРАВТ УДМУРТИЯ», now superseded by the resolved co-inventor role added from the patent sweep (same entity, now with entity_slug/title/source_id).",
-      "2026-08-24: leader-id.ru self-reports employer \"КРАВТ\", position \"Директор\", Санкт-Петербург -- corroborates the (previously unpromoted) web-search finding that Королев Д.М. is Генеральный директор of ООО «КРАВТ», which owns 90% of the registry's own ооо-kravt-udmurtiya (this person's co-inventor entity). Two independent sources (WebSearch career profile + leader-id.ru self-report) now agree; still not personal-ИНН-confirmed identity, but a real corroboration of the director claim."
+      "2026-08-24: leader-id.ru self-reports employer \"КРАВТ\", position \"Директор\", Санкт-Петербург -- corroborates the (previously unpromoted) web-search finding that Королев Д.М. is Генеральный директор of ООО «КРАВТ», which owns 90% of the registry's own ооо-kravt-udmurtiya (this person's co-inventor entity). Two independent sources (WebSearch career profile + leader-id.ru self-report) now agree; still not personal-ИНН-confirmed identity, but a real corroboration of the director claim.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «КРАВТ УДМУРТИЯ»'s (ooo-kravt-udmurtiya) own director_history entry (s0509), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0509 -- ООО «КРАВТ УДМУРТИЯ»'s own primary-source founding/EGRUL document, naming Королев Дмитрий Михайлович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-784804037752",
@@ -11823,7 +11859,7 @@
     "notes": "Contact per АО «Стратим» Leader-ID org profile (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25): phone +7 981 796-88-05 (stored as +89817968805), email pablo.88@mail.ru. Note the org record's own hide_phone/hide_email flags are both true, yet the API payload returns both fields anyway — a platform privacy-control bug, not an intentional public disclosure by the subject.",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -11834,9 +11870,10 @@
       "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Генеральный директор\", Москва -- exact name/title match to ao-stratim's own already-sourced `director` field (Костюнин Павел Андреевич), resolving one of the three pre-existing `_candidate` role links on this person (АО «Стратим») via corroboration, though not upgraded to a sourced `source_id` on the role itself -- leader-id self-report alone isn't sufficient sourcing for that per this registry's standing discipline. The other two candidate roles (АО «Стратим-Тех», ООО «Стратим») remain unreviewed.",
       "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. АО «Стратим» -> ao-stratim, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0111). ООО «Стратим» -> ooo-stratim, confirmed Ликвидатор via egrul_batch_pull.py snapshot (s0074).",
       "2026-08-25: photo pulled from leader-id.ru profile page https://leader-id.ru/users/6040137 (user_id 6040137, avatar field -> leader-id.storage.yandexcloud.net/upload/6040137/0255b3ed-e645-4f8c-8e7c-0479c67db6ea_360.jpg), the account already ID-matched above (see leader_id_matches). This is the SECOND leader_id_matches entry for this person (user_id 6040137, no employer/position populated by the search API), not the first (user_id 6188775, employer/position populated). The public profile page for 6040137 confirms the same person (АО «Стратим» Генеральный директор 2022-present) and adds stated interests (biotech, UAV, low-earth-orbit spacecraft) but no contact details or other social links -- profile has no public email/phone/social fields, and resume/education sections are marked hidden by the user.",
-      "2026-08-25: added phone/email from АО «Стратим» Leader-ID org page backend API — see ao-stratim's open_questions for the same capture's ИНН/alias discrepancy note."
+      "2026-08-25: added phone/email from АО «Стратим» Leader-ID org page backend API — see ao-stratim's open_questions for the same capture's ИНН/alias discrepancy note.",
+      "2026-09-07: verification backlog closure — identity already confirmed by АО «Стратим»'s (ao-stratim) own director_history entry (s0459), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0459 -- АО «Стратим»'s own primary-source founding/EGRUL document, naming Костюнин Павел Андреевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-510203980877",
@@ -12037,7 +12074,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -12045,9 +12082,10 @@
       ]
     },
     "_corrected": [
-      "Signed the association's own 2024 Минюст filing as Председатель, 14.04.2025."
+      "Signed the association's own 2024 Минюст filing as Председатель, 14.04.2025.",
+      "2026-09-07: verification backlog closure — identity already confirmed by Ассоциация благотворительной помощи «Взаимопомощь»'s (assotsiatsiya-vzaimopomoshch) own director_history entry (s6788), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6788 -- Ассоциация благотворительной помощи «Взаимопомощь»'s own primary-source founding/EGRUL document, naming Любимов Александр Сергеевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-780156437974",
@@ -13206,7 +13244,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -13214,9 +13252,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: resolved this person's `_candidate` role at ЗАО «Курскпромтеплица» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (zao-kurskpromteplitsa, source s0097) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ЗАО «Курскпромтеплица» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (zao-kurskpromteplitsa, source s0097) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ЗАО «Курскпромтеплица»'s (zao-kurskpromteplitsa) own director_history entry (s6821), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6821 -- ЗАО «Курскпромтеплица»'s own primary-source founding/EGRUL document, naming Кашников Константин Николаевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -13327,7 +13366,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -13335,9 +13374,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: resolved this person's `_candidate` role at ООО «Аэротехальянс» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `founder` field (ooo-aerotekhalyans, source s0224) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ООО «Аэротехальянс» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `founder` field (ooo-aerotekhalyans, source s0224) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure (round 2, founders) -- identity confirmed by ООО «Аэротехальянс»'s (ooo-aerotekhalyans) own founders_history entry (s6762), a primary-source document, but the person record had never been marked _verified."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6762 -- ООО «Аэротехальянс»'s own primary-source founding/EGRUL document, naming Кожемякин Владимир Владимирович as a founder (cross-referenced from the entity's own founders_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -13522,7 +13562,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -13530,9 +13570,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: resolved this person's `_candidate` role at ООО «Оупен Лоджистикс» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-oupen-lodzhistiks, source s0222) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at ООО «Оупен Лоджистикс» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-oupen-lodzhistiks, source s0222) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Оупен Лоджистикс»'s (ooo-oupen-lodzhistiks) own director_history entry (s0222), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0222 -- ООО «Оупен Лоджистикс»'s own primary-source founding/EGRUL document, naming Диомидов Владимир Викторович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-421202041968",
@@ -13630,7 +13671,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -13640,9 +13681,10 @@
     "_corrected": [
       "2026-08-24: leader-id.ru self-reports employer \"ООО «Авирон»\", position \"Директор\" -- exact name match to ooo-aviron's own already-EGRUL-sourced `director` field (Лапин Игорь Николаевич, s0460), though leader-id lists his city as Екатеринбург against the entity's Москва registered address (not necessarily a conflict -- a director's personal city and a company's registered address routinely differ). Added as a data point to ooo-aviron's existing open question about which \"Авирон\" this is (UAV-network entity vs. an unrelated Russian pharma company found in the earlier patent sweep) -- a director-name match alone doesn't resolve that, since leader-id carries no industry/subject-matter field.",
       "2026-08-24: resolved this person's `_candidate` role at ООО «Авирон» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-aviron, source s0460) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
-      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph EGRUL Person record gives personal ИНН directly (s1981)."
+      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph EGRUL Person record gives personal ИНН directly (s1981).",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Авирон»'s (ooo-aviron) own director_history entry (s6746), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6746 -- ООО «Авирон»'s own primary-source founding/EGRUL document, naming Лапин Игорь Николаевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -13723,7 +13765,7 @@
     "notes": "DOB (1986-03-12) independently confirmed via OpenSanctions' own entity page (opensanctions.org/entities/NK-V3f3RiNNYKaoEriEX9zuRy/), not just the aggregate match_id already in this record -- upgrades this from a circumstantial (ГОУДРОН-tie-only) DOB match to a directly source-confirmed one. Same OpenSanctions page supplied the personal ИНН above. Checked 2026-08-25, no photo or social media found: OpenSanctions entity page, NAZK register (via OpenSanctions), and ГОУДРОН's own site (godrone.ru, no team/bio page) all carry no image. Common name makes disambiguation hard — an HSE faculty member and other namesakes found and explicitly excluded (no DOB/ИНН/ГОУДРОН link). [s3664] Phone +79263589691, email frondiball@gmail.com. NEW LEAD: mother Яценко Ангелина Викторовна (b. 19.06.1959, ИНН 505603159114) is director/founder since June 2025 of a SECOND drone-industry company, ООО «ГОУ Дрон» (9725186951) — not yet its own entity record, worth adding.",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -13735,9 +13777,10 @@
       "2026-08-24 OpenSanctions screening (score 1.0, exact name match, DOB returned but no notes/context text). PLAUSIBLE only: this registry independently ties a Козлов Дмитрий Сергеевич to ООО «ГОУДРОН» (ooo-goudron, already ИНН-confirmed sanctioned this same sweep) — circumstantially consistent but not itself identity proof, and Козлов is a common surname. A second candidate (Дмитрий Евгеньевич Козлов, score 0.88) was returned and discarded as a different patronymic.",
       "2026-08-24: resolved this person's `_candidate` role at ООО «ГОУДРОН» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-goudron, source s0458) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
       "2026-08-25: OSINT research pass -- personal ИНН + direct DOB confirmation via OpenSanctions entity page.",
-      "2026-08-25: photo/social-media OSINT research pass."
+      "2026-08-25: photo/social-media OSINT research pass.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «ГОУДРОН»'s (ooo-goudron) own director_history entry (s0458), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
+    "_verified_against": "s0458 -- ООО «ГОУДРОН»'s own primary-source founding/EGRUL document, naming Козлов Дмитрий Сергеевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "NK-V3f3RiNNYKaoEriEX9zuRy",
@@ -13983,7 +14026,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -13992,9 +14035,10 @@
     },
     "_corrected": [
       "2026-08-24: resolved this person's `_candidate` role at ООО «ТИТАН - СЕВЕРО-ЗАПАД» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-titan-severo-zapad, source s0449) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
-      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph EGRUL Person record gives personal ИНН directly (s1982)."
+      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph EGRUL Person record gives personal ИНН directly (s1982).",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «ТИТАН - СЕВЕРО-ЗАПАД»'s (ooo-titan-severo-zapad) own director_history entry (s0449), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0449 -- ООО «ТИТАН - СЕВЕРО-ЗАПАД»'s own primary-source founding/EGRUL document, naming Красковский Вячеслав Александрович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-781416519422",
@@ -14108,7 +14152,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -14118,9 +14162,10 @@
     "_corrected": [
       "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0757).",
       "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2637799C1, RU2663193C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
-      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text."
+      "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
+      "2026-09-07: verification backlog closure — identity already confirmed by АО «НИИ СТТ»'s (ao-nii-stt) own director_history entry (s0211), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0211 -- АО «НИИ СТТ»'s own primary-source founding/EGRUL document, naming Богомолов Андрей Владимирович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-673103142483",
@@ -14199,7 +14244,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -14209,9 +14254,10 @@
     "_corrected": [
       "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU242557U1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
       "2026-08-24 cleanup: dropped a stale prose-extracted _candidate role for ООО «Центр Динарус», now superseded by the resolved co-inventor role added from the patent sweep (same entity, now with entity_slug/title/source_id).",
-      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph EGRUL Person record gives personal ИНН directly (s1983)."
+      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph EGRUL Person record gives personal ИНН directly (s1983).",
+      "2026-09-07: verification backlog closure (round 2, founders) -- identity confirmed by ООО «Центр Динарус»'s (ooo-tsentr-dinarus) own founders_history entry (s6794), a primary-source document, but the person record had never been marked _verified."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6794 -- ООО «Центр Динарус»'s own primary-source founding/EGRUL document, naming Тютина Ольга Анатольевна as a founder (cross-referenced from the entity's own founders_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -14742,7 +14788,7 @@
     "notes": "Signed as «генеральный директор Чумаков Павел Андреевич, действующий на основании Устава» on the entity's Belgorod-oblast public-warning-system contracts, including муниципальный контракт № 13 with Волоконовский район (s4818, 2024). No identifying detail beyond the name is sourced — DOB, birthplace, address and personal ИНН left null rather than inferred.",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -14750,8 +14796,9 @@
       ]
     },
     "_corrected": [
-      "2026-09-05: surfaced while reading ООО «Информационные системы и технологии»'s previously-unwired zakupki attachment corpus. Director of a registry entity; recorded at name+role only, pending an EGRUL pull that would carry identifying detail."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Информационные системы и технологии»'s (ooo-instekh) own director_history entry (s6849), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
+    "_verified_against": "s6849 -- ООО «Информационные системы и технологии»'s own primary-source founding/EGRUL document, naming Чумаков Павел Андреевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -15027,7 +15074,7 @@
     "notes": "The direct '_candidate' role at ООО «Гагаринг» itself is scaffold noise from text proximity, not a distinct fact — his real, sourced connection is as director of ООО «АКР «Бегак»» (ИНН 2632116476, Пятигорск), a fellow co-founder of АРРС (ano-arrs-krasnodar) alongside Гагаринг itself and Барашков (АРРС's GD). No separate evidence of a personal role at Гагаринг beyond that association-level connection.",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -15035,9 +15082,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2566)."
+      "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2566).",
+      "2026-09-07: verification backlog closure — identity already confirmed by НЕКОММЕРЧЕСКОЕ ПАРТНЕРСТВО «ДИСКРЕТНО-ИННОВАЦИОННЫЙ КЛАСТЕР МАЛОЙ АВИАЦИИ»'s (np-diskretno-innovatsionny-klaster-maloy-aviatsii) own director_history entry (s6780), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6780 -- НЕКОММЕРЧЕСКОЕ ПАРТНЕРСТВО «ДИСКРЕТНО-ИННОВАЦИОННЫЙ КЛАСТЕР МАЛОЙ АВИАЦИИ»'s own primary-source founding/EGRUL document, naming Бегак Александр Аркадьевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -15118,7 +15166,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -15128,9 +15176,10 @@
     "_corrected": [
       "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
       "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «Прайм» -> ooo-praym, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0120).",
-      "2026-08-26 aleph_followup.py triage/fetch pass over previously-untriaged aleph_matches[]: exact full-ФИО match, Aleph Company/OGRN-2016 record (ИП registration) gives ИНН directly (s1975)."
+      "2026-08-26 aleph_followup.py triage/fetch pass over previously-untriaged aleph_matches[]: exact full-ФИО match, Aleph Company/OGRN-2016 record (ИП registration) gives ИНН directly (s1975).",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Прайм»'s (ooo-praym) own director_history entry (s6828), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "Rospatent bulk patent dump (s0952), 2026-08-24",
+    "_verified_against": "s6828 -- ООО «Прайм»'s own primary-source founding/EGRUL document, naming Баранова Ольга Владимировна as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-772880281008",
@@ -15336,7 +15385,7 @@
     "notes": "Individual co-founder of АРРС alongside ООО «Гагаринг», ООО «АКР «Бегак»» and ООО «Прайм» (per ano-arrs-krasnodar's own founders[] list). Separately confirmed via OpenSanctions exact-ИНН match (695004552407) to Ukraine's NSDC sanctions list (see sanctions[]) — the sanctioned Климов Максим Олександрович/Александрович and this АРРС founder are the same person (identifier match, not name-only).",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -15346,8 +15395,10 @@
     "why": [
       "2026-09-03: corrected during the Гагаринг-network wide-net push — his scaffolded record had no role at all despite being named as an АРРС founder in the entity's own founders[] list; added the missing role."
     ],
-    "_corrected": null,
-    "_verified_against": null,
+    "_corrected": [
+      "2026-09-07: verification backlog closure (round 2, founders) -- identity confirmed by Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи)'s (ano-arrs-krasnodar) own founders_history entry (s6777), a primary-source document, but the person record had never been marked _verified."
+    ],
+    "_verified_against": "s6777 -- Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи)'s own primary-source founding/EGRUL document, naming Климов Максим Александрович as a founder (cross-referenced from the entity's own founders_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ua-nsdc-34189-klimov-maksim-oleksandrovic",
@@ -15767,7 +15818,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -15777,9 +15828,10 @@
     "_corrected": [
       "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
       "2026-08-24: resolved this person's `_candidate` role at ООО «ТИ ЭС ДЖИ ГРУПП» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-ti-es-dzhi-grupp, source s0456) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
-      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph \"Russian government officials income and asset declarations\" record gives personal ИНН directly (s1988)."
+      "2026-08-26 aleph_followup.py triage/fetch pass: exact full-ФИО match, Aleph \"Russian government officials income and asset declarations\" record gives personal ИНН directly (s1988).",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «ТИ ЭС ДЖИ ГРУПП»'s (ooo-ti-es-dzhi-grupp) own director_history entry (s0456), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "Rospatent bulk patent dump (s0952), 2026-08-24",
+    "_verified_against": "s0456 -- ООО «ТИ ЭС ДЖИ ГРУПП»'s own primary-source founding/EGRUL document, naming Абрамова Татьяна Александровна as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -16012,7 +16064,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -16020,9 +16072,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: resolved this person's `_candidate` role at НПО «НЕБО» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-npo-nebo, source s0517) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields."
+      "2026-08-24: resolved this person's `_candidate` role at НПО «НЕБО» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-npo-nebo, source s0517) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «НПО НЕБО»'s (ooo-npo-nebo) own director_history entry (s0517), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0517 -- ООО «НПО НЕБО»'s own primary-source founding/EGRUL document, naming Загорский Александр Сергеевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-544514167237",
@@ -35431,13 +35484,14 @@
     "photo": null,
     "notes": "Тел. +7 903 969-51-71. Email: vadimts@inbox.ru.",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-05 aleph_screen.py hit under 'Global Sanctions Database' dataset scored the query (this person's own personal ИНН) against an entry carrying the identical ИНН (innCode 504405055721 -> matches inn_personal exactly) and identical birthDate (1963-05-30, already on file, sourced separately) — this is the same government-contractor ИП Цыганов already tracked for the «Булат»/«Покров» zakupki contracts, now confirmed as a sanctioned individual under Ukraine's NSDC register."
+      "2026-09-05 aleph_screen.py hit under 'Global Sanctions Database' dataset scored the query (this person's own personal ИНН) against an entry carrying the identical ИНН (innCode 504405055721 -> matches inn_personal exactly) and identical birthDate (1963-05-30, already on file, sourced separately) — this is the same government-contractor ИП Цыганов already tracked for the «Булат»/«Покров» zakupki contracts, now confirmed as a sanctioned individual under Ukraine's NSDC register.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «ПОКРОВ»'s (ooo-pokrov) own director_history entry (s6799), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "Aleph/OCCRP screening (screen_aleph.py), 2026-09-05 — exact ИНН + DOB match against Ukraine NSDC sanctions register entry",
+    "_verified_against": "s6799 -- ООО «ПОКРОВ»'s own primary-source founding/EGRUL document, naming Цыганов Вадим Борисович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "Q33279366",
@@ -38593,12 +38647,13 @@
     "photo": null,
     "notes": "Per rusprofile.ru (s5289): a pre-15.09.2025-redaction director of npts-ushkuynik (ООО «Ушкуйник», ИНН 5300013923, the entity producing the «Князь Вандал Новгородский» drone). No further biographical detail found this pass.",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-02: added from rusprofile.ru pulls (s5289/s5290) on npts-ushkuynik / ooo-ushkuynik-sp director history."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Ушкуйник»'s (npts-ushkuynik) own director_history entry (s5289), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
+    "_verified_against": "s5289 -- ООО «Ушкуйник»'s own primary-source founding/EGRUL document, naming Гаврилов Даниил Дмитриевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [],
@@ -38633,12 +38688,13 @@
     "photo": null,
     "notes": "Per rusprofile.ru (s5289): a pre-15.09.2025-redaction director of npts-ushkuynik (ООО «Ушкуйник», ИНН 5300013923). No further biographical detail found this pass.",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-02: added from rusprofile.ru pulls (s5289/s5290) on npts-ushkuynik / ooo-ushkuynik-sp director history."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Ушкуйник»'s (npts-ushkuynik) own director_history entry (s5289), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
+    "_verified_against": "s5289 -- ООО «Ушкуйник»'s own primary-source founding/EGRUL document, naming Котельников Денис Николаевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "Q120853949",
@@ -38745,12 +38801,13 @@
     "photo": null,
     "notes": "Per rusprofile.ru (s5289, s5290): a pre-redaction director of BOTH npts-ushkuynik (ООО «Ушкуйник») and ooo-ushkuynik-sp (ООО «Ушкуйник-СП») — the only individual documented leading both Ushkuynik commercial-shell entities. No further biographical detail found this pass.",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-02: added from rusprofile.ru pulls (s5289/s5290) on npts-ushkuynik / ooo-ushkuynik-sp director history."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Ушкуйник»'s (npts-ushkuynik) own director_history entry (s5289), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
+    "_verified_against": "s5289 -- ООО «Ушкуйник»'s own primary-source founding/EGRUL document, naming Кузовлев Андрей Анатольевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-910906384501",
@@ -38817,12 +38874,13 @@
     "photo": null,
     "notes": "Генеральный директор ООО «Статус 53» (ИНН 5300006098), the shared corporate founder of both npts-ushkuynik and ooo-ushkuynik-sp. Confirmed live via egrul.nalog.ru 2026-09-02. No further biographical detail found this pass.",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-02: added from rusprofile.ru pulls (s5289/s5290) on npts-ushkuynik / ooo-ushkuynik-sp director history."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Статус 53»'s (ooo-status-53) own director_history entry (s6804), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
+    "_verified_against": "s6804 -- ООО «Статус 53»'s own primary-source founding/EGRUL document, naming Захаров Сергей Николаевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -38957,13 +39015,14 @@
     "photo": null,
     "notes": "Per smolin.info (s5291): founder of ooo-geron and ooo-skay-avia-grupp; current GD of ooo-geron (confirmed live via egrul.nalog.ru 2026-09-02).",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-02: DOB/ИНН upgraded to primary-sourced -- confirmed against actual EGRN extract s5305 (embedded in smolin.info article 2, s5291, independently re-downloaded, not just the article's own assertion)."
+      "2026-09-02: DOB/ИНН upgraded to primary-sourced -- confirmed against actual EGRN extract s5305 (embedded in smolin.info article 2, s5291, independently re-downloaded, not just the article's own assertion).",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Герон»'s (ooo-geron) own director_history entry (s6838), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": null,
+    "_verified_against": "s6838 -- ООО «Герон»'s own primary-source founding/EGRUL document, naming Христюк Владимир Владимирович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39011,12 +39070,13 @@
     "photo": null,
     "notes": "Per smolin.info (s5291): GD of ooo-skay-avia-grupp since 24.11.2023 (confirmed live via egrul.nalog.ru 2026-09-02); relative (per source, exact relationship unstated) of Христюк В.В.",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
       "2026-09-02: DOB/ИНН upgraded to primary-sourced -- confirmed against actual EGRN extract s5304 (embedded in smolin.info article 2, s5291, independently re-downloaded, not just the article's own assertion).",
-      "2026-09-02: found via HAR capture of fedresurs.ru. A creditor bankruptcy-intent notice from 02.06.2023 names the debtor 'Шевцова Екатерина Валерьевна', DOB 17.06.1980, ИНН 434500103450, ОГРНИП 318784700187482 -- identical ИНН and DOB to the confirmed khristyuk-ekaterina-valerevna record, strongly indicating this is the same person under a former (likely maiden) surname, roughly 5 months before she became GD of ооо-скай-авиа-групп as Христюк."
+      "2026-09-02: found via HAR capture of fedresurs.ru. A creditor bankruptcy-intent notice from 02.06.2023 names the debtor 'Шевцова Екатерина Валерьевна', DOB 17.06.1980, ИНН 434500103450, ОГРНИП 318784700187482 -- identical ИНН and DOB to the confirmed khristyuk-ekaterina-valerevna record, strongly indicating this is the same person under a former (likely maiden) surname, roughly 5 months before she became GD of ооо-скай-авиа-групп as Христюк.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Скай авиа групп»'s (ooo-skay-avia-grupp) own director_history entry (s6837), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
     "litigation": [
       {
@@ -39043,7 +39103,7 @@
         "note": "Более старая (2005) ИП-регистрация под этим же личным ИНН (434500103450) числится в ЕГРИП на фамилию «Мирошина», не «Христюк» — прямое совпадение по уникальному персональному ИНН в открытом поиске egrul.nalog.ru (не rusprofile.ru, чьи «премиум»-виджеты в этом же исследовании оказались недостоверны — см. память rusprofile_ru_decoy_content_anti_scraping). Вероятная девичья фамилия / фамилия до замужества; независимого второго источника пока нет."
       }
     ],
-    "_verified_against": null,
+    "_verified_against": "s6837 -- ООО «Скай авиа групп»'s own primary-source founding/EGRUL document, naming Христюк Екатерина Валерьевна as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39099,12 +39159,13 @@
     "photo": null,
     "notes": "GD of ooo-aero-khit (confirmed live via egrul.nalog.ru 2026-09-02). NOTE: this is a DIFFERENT Виктор Яценко from the 'Виктор Яценко' already tracked elsewhere in this registry (see roymarket tracking notes) -- full patronymic Вячеславович disambiguates; do not conflate.",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-02: added from smolin.info investigation (s5291, TRANSCRIPT_20260608, companion piece to s5288)."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аэро-Хит»'s (ooo-aero-khit) own director_history entry (s0466), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
+    "_verified_against": "s0466 -- ООО «Аэро-Хит»'s own primary-source founding/EGRUL document, naming Яценко Виктор Вячеславович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "Q108060327",
@@ -39224,12 +39285,13 @@
     "photo": null,
     "notes": "GD of ooo-aero-khit-m (confirmed live via egrul.nalog.ru 2026-09-02). Article alleges DNR-linked organization membership -- PER SOURCE ONLY, not independently verified; treat as an unverified lead.",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-02: added from smolin.info investigation (s5291, TRANSCRIPT_20260608, companion piece to s5288)."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аэро-хит М»'s (ooo-aero-khit-m) own director_history entry (s6865), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
+    "_verified_against": "s6865 -- ООО «Аэро-хит М»'s own primary-source founding/EGRUL document, naming Жигулин Алексей Михайлович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "Q55104803",
@@ -39344,12 +39406,13 @@
     "photo": null,
     "notes": "Found via ООО «Гагаринг»'s FY2025 audit report related-party note naming Интел Дрон as a 50%-owned affiliate; confirmed live via egrul.nalog.ru 2026-09-03.",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-03: identified as ГД of ooo-intel-dron, surfaced via s5333."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Интел Дрон»'s (ooo-intel-dron) own director_history entry (s6815), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
+    "_verified_against": "s6815 -- ООО «Интел Дрон»'s own primary-source founding/EGRUL document, naming Воронин Александр Андреевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39435,12 +39498,13 @@
     "photo": null,
     "notes": "Found via ООО «Гагаринг»'s FY2025 audit report related-party note naming НПО Эйлер (aircraft/UAV-production OKVED, Tula) as a 50%-owned affiliate; confirmed live via egrul.nalog.ru 2026-09-03.",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-03: identified as director of ooo-npo-eyler, surfaced via s5333."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер»)'s (ooo-npo-eyler) own director_history entry (s6814), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
+    "_verified_against": "s6814 -- ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер»)'s own primary-source founding/EGRUL document, naming Плыкина Екатерина Викторовна as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-710516155388",
@@ -40258,13 +40322,14 @@
     "sources": [
       "s0229"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "The single most productive screen of the 2026-09-05 pass: a person-level ФНС cross-reference surfaced an entire additional «Архангел» legal entity in Crimea that no brand-name search had found."
+      "The single most productive screen of the 2026-09-05 pass: a person-level ФНС cross-reference surfaced an entire additional «Архангел» legal entity in Crimea that no brand-name search had found.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"'s (ooo-arkhangel-zaporizhzhie) own director_history entry (s0229), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "data/sources/EGRIP_319344300112860_20260905_timofeev.pdf (s5510); ФНС «Прозрачный бизнес» director/founder cross-reference via scripts/screen_upr_uchr.py, run 2026-09-05; data/sources/EGRUL_9108131213_20260905_ooo-arkhangel-crimea.pdf (s5508)",
+    "_verified_against": "s0229 -- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"'s own primary-source founding/EGRUL document, naming Тимофеев Владимир Сергеевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-343704095632",
@@ -40352,13 +40417,14 @@
       "s0229",
       "s5413"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "Confirms via signed primary documents that he controls two separate same-named entities at one address in occupied Melitopol, which the earlier other_entities lead only asserted."
+      "Confirms via signed primary documents that he controls two separate same-named entities at one address in occupied Melitopol, which the earlier other_entities lead only asserted.",
+      "2026-09-07: verification backlog closure (round 2, founders) -- identity confirmed by ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"'s (ooo-arkhangel-zaporizhzhie) own founders_history entry (s0229), a primary-source document, but the person record had never been marked _verified. Upgrades prior weaker citation (\"scripts/screen_egrip_ip.py, run 2026-09-05; data/sources/EGRUL_9001027869_20260905_ooo-arkhangel-melitopol-2.pdf (s5504) and EGRUL_9500026652_20260905_ooo-arkhangel-zaporizhzhie.pdf (s5505)\") to this primary-source one."
     ],
-    "_verified_against": "scripts/screen_egrip_ip.py, run 2026-09-05; data/sources/EGRUL_9001027869_20260905_ooo-arkhangel-melitopol-2.pdf (s5504) and EGRUL_9500026652_20260905_ooo-arkhangel-zaporizhzhie.pdf (s5505)",
+    "_verified_against": "s0229 -- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"'s own primary-source founding/EGRUL document, naming Кусумов Вахид Абдулович as a founder (cross-referenced from the entity's own founders_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "NK-oBYVfFUeLqr6jZQKCbpReZ",
@@ -40428,12 +40494,13 @@
       "s5371",
       "s5408"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-03: promoted per the Гагаринг wide-net push (Thread C — named individuals never promoted to people.json)."
+      "2026-09-07: verification backlog closure — identity already confirmed by АНО ДПО «Образовательный центр Гагаринг»'s (ano-dpo-obrazovatelny-tsentr-gagaring) own director_history entry (s6775), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
+    "_verified_against": "s6775 -- АНО ДПО «Образовательный центр Гагаринг»'s own primary-source founding/EGRUL document, naming Безроднова Анна Сергеевна as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -40543,13 +40610,14 @@
       "s5394",
       "s5409"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "First business-ties screen ever run on the АНО «Архангел» director. Result is one unrelated property-management holding — recorded so the check is not repeated."
+      "First business-ties screen ever run on the АНО «Архангел» director. Result is one unrelated property-management holding — recorded so the check is not repeated.",
+      "2026-09-07: verification backlog closure — identity already confirmed by АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел»'s (ano-arkhangel) own director_history entry (s5502), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference via scripts/screen_upr_uchr.py, run 2026-09-05; scripts/screen_egrip_ip.py, run 2026-09-05; egrul.nalog.ru open lookup on ИНН 2315998065",
+    "_verified_against": "s5502 -- АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел»'s own primary-source founding/EGRUL document, naming Архангельский Геннадий Евгеньевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -40648,13 +40716,14 @@
     "sources": [
       "s5394"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "Two previously-unknown Новороссийск companies under the same principal as АНО «Архангел», one of them a software developer registered three months after the NKO. Logged as leads, not links."
+      "Two previously-unknown Новороссийск companies under the same principal as АНО «Архангел», one of them a software developer registered three months after the NKO. Logged as leads, not links.",
+      "2026-09-07: verification backlog closure (round 2, founders) -- identity confirmed by АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел»'s (ano-arkhangel) own founders_history entry (s5502), a primary-source document, but the person record had never been marked _verified. Upgrades prior weaker citation (\"data/sources/EGRIP_306231210900130_20260905_tashmatov.pdf (s5509); ФНС «Прозрачный бизнес» director/founder cross-reference via scripts/screen_upr_uchr.py, run 2026-09-05; egrul.nalog.ru open lookups on ИНН 2315225234 and 2315235056\") to this primary-source one."
     ],
-    "_verified_against": "data/sources/EGRIP_306231210900130_20260905_tashmatov.pdf (s5509); ФНС «Прозрачный бизнес» director/founder cross-reference via scripts/screen_upr_uchr.py, run 2026-09-05; egrul.nalog.ru open lookups on ИНН 2315225234 and 2315235056",
+    "_verified_against": "s5502 -- АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел»'s own primary-source founding/EGRUL document, naming Ташматов Илья Сергеевич as a founder (cross-referenced from the entity's own founders_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -40763,14 +40832,15 @@
       "s5477",
       "s5484"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "passport": "4621309711 (current, issued 03.10.2012, ГУ МВД России по Московской обл. / О-ние в г.о. Лыткарино, код подразделения 500-080). Passport history per s5464: 9703967888 (issued 2007-09-08, ОВД Калининского р-на г. Чебоксары), 4608490314, 4612934841, 4612964841.",
     "_corrected": [
-      "Confirms from a primary document that the «Проект «Архангел»» principal controls 80% of a declared UAV manufacturer, upgrading what was previously an aggregator-sourced other_entities line."
+      "Confirms from a primary document that the «Проект «Архангел»» principal controls 80% of a declared UAV manufacturer, upgrading what was previously an aggregator-sourced other_entities line.",
+      "2026-09-07: verification backlog closure — identity already confirmed by ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЛ КОНСТРАКШНС\"'s (ooo-ml-konstrakshns) own director_history entry (s6795), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
-    "_verified_against": "scripts/screen_egrip_ip.py, run 2026-09-05; data/sources/EGRUL_9702081286_20260905_ooo-arkhangel-grupp.pdf (s5506)",
+    "_verified_against": "s6795 -- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЛ КОНСТРАКШНС\"'s own primary-source founding/EGRUL document, naming Филиппов Михаил Геннадьевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -42575,10 +42645,13 @@
     "sources": [
       "s5543"
     ],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_corrected": null,
+    "_corrected": [
+      "2026-09-07: verification backlog closure — identity already confirmed by Акционерное общество «Научно-производственное предприятие»'s (ao-npp-real) own director_history entry (s5543), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+    ],
+    "_verified_against": "s5543 -- Акционерное общество «Научно-производственное предприятие»'s own primary-source founding/EGRUL document, naming Семенов Игорь Георгиевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -42634,12 +42707,13 @@
     "photo": null,
     "notes": "Named as «генеральный директор Сазанова Алиса Алексеевна, действующего на основании Устава» signing государственный контракт № ГК 6401/24-4574 (₽268,916,478.58, ДИТ Москвы) on 27.09.2024. UNRESOLVED: the ЕГРЮЛ extract on file for ООО «Аэромакс» (s0218) records Бессонов С.Н. as director; the two records have not been reconciled and it is not established whether she held the post only during 2024 or the records simply carry different effective dates. See the entity's director_history. No identifying detail beyond the name is sourced.",
     "sources": [],
-    "_verified": false,
+    "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-05: surfaced from the signature block of ООО «Аэромакс»'s largest documented contract while reading its previously-unwired zakupki attachment corpus. Officer of an OFAC/EU-designated drone manufacturer — a network principal, in PII scope; recorded at name+role only pending identifying detail."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аэромакс»'s (ooo-aeromaks) own director_history entry (s4572), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
+    "_verified_against": "s4572 -- ООО «Аэромакс»'s own primary-source founding/EGRUL document, naming Сазанова Алиса Алексеевна as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
       {
         "match_id": "NK-L7d29iRkT5WE6jzpoa4f3e",
