@@ -52,7 +52,7 @@ as gaps (`ooo-npo-nebo`, `ooo-arkhangel`).
 - ООО НПК «Герон» (`ooo-npk-geron`) — bespoke UD zip
 - Общество с ограниченной ответственностью «Кронштадт Беспилотные Системы» (`ooo-kronshtadt-bespilotnye-sistemy`) — bespoke UD zip
 
-## Attempted at ФНС, deprioritized (4 entities)
+## Attempted at ФНС, deprioritized (7 entities)
 
 Attempted via the ФНС portal 2026-09-07 but not obtainable — ФНС returned a
 "документ формируется" (document is being digitized) response rather than
@@ -70,10 +70,13 @@ a specific reason to believe ФНС has since processed one of these ОГРН.
 | АНО ДПО «Образовательный центр Гагаринг» (`ano-dpo-obrazovatelny-tsentr-gagaring`) | 1252300026208 | 2310240630 | 2026-09-07: "документ формируется" at ФНС. Deprioritized same day, not expected to digitize. |
 | АО «Технодрон» (`ao-tekhnodron`) | 1247700354175 | 9704241986 | 2026-09-07: "документ формируется" at ФНС. Deprioritized same day, not expected to digitize. |
 | АО ПК «Азимут» (`ao-pk-azimut`) | 1057746261605 | 7701583410 | 2026-09-07: "документ формируется" at ФНС. Deprioritized same day, not expected to digitize. |
+| АО «НИИ СТТ» (`ao-nii-stt`) | 1026701461160 | 6730046954 | **Found 2026-09-08, previously untracked here**: hit "not digitized" pre-2026-08-20 (undated attempt, recorded only in prose — docs/index.html's АО «НИИ СТТ» section). A primary EGRUL extract (not the founding doc itself) was separately obtained via nalog.gov.ru, user-supplied, 20.08.2026 — that's a different document type and doesn't resolve this gap. |
+| ООО «Ушкуйник-СП» (`ooo-ushkuynik-sp`) | 1245300003827 | 5300015906 | **Found 2026-09-08, previously untracked here**: same undated "not digitized" wall, per the same АО «НИИ СТТ» prose ("the same wall as Ушкуйник-СП и Атлант Аэро"). |
+| ООО «Атлант Аэро» (`ooo-atlant-aero`) | 1236100025633 | 6154165878 | **Found 2026-09-08, previously untracked here**: same undated "not digitized" wall — the largest single manufacturer in this brief (854 employees, ₽59.08bn income), so worth a retry later even though deprioritized for now; flagging here specifically so it isn't recommended for a fresh pull attempt by mistake, as it nearly was on 2026-09-08. |
 
 ## Gap list: live entities with an ОГРН, no founding doc on file
 
-**123 entities.** Pull candidates for a manual ФНС founding-document request
+**120 entities.** Pull candidates for a manual ФНС founding-document request
 (egrul.nalog.ru / nalog.gov.ru portal — no scriptable open-API route exists
 for this document type, confirmed 2026-09-07, see `notes/SOURCE_REGISTER.md`).
 Sorted alphabetically by name. `tier` shown for prioritization.
@@ -90,7 +93,6 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | АО «Котлин-Новатор» (`ao-kotlin-novator`) | 1027806064571 | 7811075899 | manufacturer |
 | АО «МИКЦ» (`ao-mikts`) | 1227700322410 | 7714486438 | manufacturer |
 | АО «НИИ «Вектор»» (`ao-nii-vektor`) | 1117847020400 | 7813491943 | manufacturer |
-| АО «НИИ СТТ» (`ao-nii-stt`) | 1026701461160 | 6730046954 | manufacturer |
 | АО «НПП «Радар ММС»» (`npp-radar-mms`) | 1027807560186 | 7814027653 | manufacturer |
 | АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) (`npts-elvis`) | 1127746073510 | 7735582816 | manufacturer |
 | АО «Научно-производственное предприятие Беспилотные авиационные технологии» (`ao-npp-bat`) | 1237700769701 | 9718238013 | manufacturer |
@@ -123,7 +125,6 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «АС-КАМ» (`ooo-as-kam`) | 1166196114083 | 6165205064 | — |
 | ООО «Авиационно-космические разработки «Бегак»» (`ooo-akr-begak`) | 1202600009919 | 2632116476 | manufacturer |
 | ООО «Аркодим» (`ooo-arkodim`) | 1101690020959 | 1659101884 | manufacturer |
-| ООО «Атлант Аэро» (`ooo-atlant-aero`) | 1236100025633 | 6154165878 | manufacturer |
 | ООО «Аэро-Хит» (`ooo-aero-khit`) | 1232700009398 | 2700012608 | manufacturer |
 | ООО «Аэромакс» (`ooo-aeromaks`) | 1177746007900 | 7725347482 | manufacturer |
 | ООО «Аэроплатформы» (`ooo-aeroplatformy`) | 1215000018650 | 5027293811 | manufacturer |
@@ -189,7 +190,6 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «Стратим» (`ooo-stratim`) | 1245200009075 | 5260494520 | manufacturer |
 | ООО «Стройстандарт» (`ooo-stroystandart`) | 1077762402992 | 7733629755 | money-layer |
 | ООО «Тримикс» (`ooo-trimiks-bulat-3mx`) | 1237800084235 | 7802942873 | manufacturer |
-| ООО «Ушкуйник-СП» (`ooo-ushkuynik-sp`) | 1245300003827 | 5300015906 | manufacturer |
 | ООО «Ушкуйник» (`npts-ushkuynik`) | 1245300001650 | 5300013923 | manufacturer |
 | ООО «ЦТП» (Цифровая транспортная платформа) (`ooo-tstp-tsifrovaya-transportnaya-platforma`) | 1247700498660 | 9714054618 | plumbing |
 | ООО «ЦЮС» (`ooo-tsyus`) | 1181215007192 | 1215226708 | plumbing |
