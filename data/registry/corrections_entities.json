@@ -4133,6 +4133,82 @@
           "source_id": "s7345"
         }
       ]
+    },
+    {
+      "slug": "ooo-otkrytoe-nebo-kaluga",
+      "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОТКРЫТОЕ НЕБО\"",
+      "name_latin": "OOO \"Otkrytoe Nebo\" (Open Sky, Kaluga)",
+      "legal_form": "ООО",
+      "inn": "4029059580",
+      "ogrn": "1184027014753",
+      "registered": "07.11.2018",
+      "address": "248035, Калужская область, г. Калуга, ш. Грабцевское, д. 75, помещ. 25 офис 2",
+      "okved_code": "30.30",
+      "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+      "okved_secondary": [
+        {
+          "code": "42.91.5",
+          "label": "Производство подводных работ, включая водолазные"
+        },
+        {
+          "code": "47.61",
+          "label": "Торговля розничная книгами в специализированных магазинах"
+        },
+        {
+          "code": "52.24",
+          "label": "Транспортная обработка грузов"
+        },
+        {
+          "code": "52.29",
+          "label": "Деятельность вспомогательная прочая, связанная с перевозками"
+        },
+        {
+          "code": "58.11",
+          "label": "Издание книг"
+        },
+        {
+          "code": "64.99",
+          "label": "Предоставление прочих финансовых услуг"
+        }
+      ],
+      "director": "Порсев Андрей Валерьевич",
+      "director_history": [
+        {
+          "value": "Порсев Андрей Валерьевич",
+          "as_of": "07.11.2018",
+          "source_id": "s7355",
+          "note": "ИНН 772484933348. Founding GD, unchanged through this pull."
+        }
+      ],
+      "founders": "Порсев Андрей Валерьевич (15%), Федюкин Владимир Анатольевич (85%, added 26.04.2022)",
+      "founders_history": [
+        {
+          "value": "Порсев Андрей Валерьевич 15% (₽30,000); Федюкин Владимир Анатольевич 85% (₽170,000, ИНН 402702972386)",
+          "as_of": "26.04.2022",
+          "source_id": "s7355"
+        }
+      ],
+      "charter_capital": 200000,
+      "charter_capital_history": [
+        {
+          "value": 200000,
+          "as_of": "07.11.2018",
+          "source_id": "s7355"
+        }
+      ],
+      "tier": "adjacent",
+      "tier_basis": "Surfaced 2026-09-08 via a lead-mining pass over the freshly-rescraped @projectArchangel channel: a recurring 'полезные ссылки' post (msg 586, first seen 15.04.2023, repeated at least through 26.05.2026) directs FPV-pilot trainees to xn----btbkbwudbfnuc0j.xn--p1ai (punycode for открытое-небо.рф) for a training certificate ('Сертификат о прохождении обучения от компании Открытое небо'). Its own site (fetched 2026-09-08) confirms a Kaluga-based operation offering both diving-instructor training AND UAV development/manufacturing (water-landing drones, towed diver-transport devices) — matching the ОГРН's own primary ОКВЭД (30.30, aircraft production). This resolves a previously-unresolved lead: an earlier session (2026-08-25, iStories reporting) found a differently-profiled 'Открытое небо' in Lytkarino (Moscow oblast, co-owners Клименко/Голикова, a photo/video-production front company) serving the SAME certificate-issuing role for a DIFFERENT part of this drone-training network (Филиппов's own Проект «Архангел» core operation) — a 2026-09-08 EGRUL name search for that Lytkarino profile returned 20 ambiguous same-named candidates nationwide and was left unresolved. This Kaluga entity is a DIFFERENT company (ИНН 4029059580 vs. no confirmed ИНН for the Lytkarino one) — do not conflate the two. Whether both are genuinely 'Открытое небо' front companies serving parallel roles in adjacent training networks, or whether one of the two press/self-reported attributions is simply wrong about which 'Открытое небо' is meant, is unresolved. No EGRUL restriction/недостоверность flags found. Tiered adjacent (a training-certificate/logistics vendor, not a weapons/UAV-combat-product manufacturer in its own right, despite the ОКВЭД) pending further evidence.",
+      "cbst_tie": {
+        "claim": null,
+        "evidence": null,
+        "source_id": null,
+        "confidence": "not_established"
+      },
+      "wb_overlap": "not_checked",
+      "products": [],
+      "why": [
+        "2026-09-08: found via lead-mining a freshly-rescraped @projectArchangel corpus; resolved the linked punycode domain, fetched the site, and confirmed via a targeted egrul.nalog.ru ИНН search (single exact match)."
+      ]
     }
   ],
   "entities": {
