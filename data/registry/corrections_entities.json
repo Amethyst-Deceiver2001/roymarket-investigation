@@ -4499,6 +4499,12 @@
         "_verified": true,
         "address_history": [
           {
+            "value": "173003, Новгородская обл, г. Великий Новгород, ул. Лазаревская, 11, помещ. 105",
+            "as_of": "2023-09-19",
+            "source_id": "s7369",
+            "note": "First address of record per registration date shown on the checko.ru-style extract; previously null in this registry."
+          },
+          {
             "as_of": "2025-12-17",
             "note": "PRIMARY SOURCE, not per-source-only: this is the entity's own 223-ФЗ tender notice (Извещение, еис № 32515497957, published on utp.sberbank-ast.ru, PDF/DOC obtained directly from smolin.info's own embedded evidence files and independently re-downloaded/archived here). Confirms the address exactly. Supersedes the earlier 'per smolin.info, not independently corroborated' caveat.",
             "source_id": "s5302",
@@ -4703,6 +4709,15 @@
             "source_id": "s5285",
             "status": "Иск удовлетворён в полном объёме решением от 27.10.2025 (упрощённое производство, ст.229 АПК РФ): взыскано 76,458.02 руб. долга + 24,107.05 руб. неустойки + 10,028 руб. госпошлины с ООО «Энергополис» в пользу Ушкуйника.",
             "subject": "Взыскание основного долга по договору №13-а от 10.07.2024 (76,458.92 руб.) и неустойки (24,107.05 руб.) — предположительно аренда/оказание услуг (условия договора №13-а не раскрыты полностью в доступных актах)."
+          },
+          {
+            "case_number": "А44-6214/2025",
+            "court": "Арбитражный суд Новгородской области",
+            "parties": "АО «Лазерные системы» (ИНН 7819039902, истец) против Управления Федеральной антимонопольной службы по Новгородской области (ИНН 5321047553, ответчик); АНО «НПЦ «Ушкуйник»» (ИНН 5300010714) — третье лицо",
+            "subject": "Оспаривание отказа УФАС по Новгородской области (решение № 053/07/3-456/2025 от 15.08.2025) в рассмотрении жалобы АО «Лазерные системы» на порядок проведения закрытого конкурса, организованного Ушкуйником — истец утверждал, что Ушкуйник обязан руководствоваться 223-ФЗ.",
+            "status": "В иске отказано решением от 13.03.2026 (ч.3 ст.201 АПК РФ): суд согласился с УФАС, что Ушкуйник не относится к категории заказчиков, обязанных применять 223-ФЗ, и что ФАС не имела полномочий рассматривать жалобу по данной закупке.",
+            "note": "Third-party win for Ушкуйник — a court explicitly confirmed it is NOT subject to 223-ФЗ compliance oversight as a procuring entity, a legally significant finding given the scale of its own sole-supplier equipment purchases recorded in government_contracts[] (many already cite 223-ФЗ in their own notice numbers despite this ruling).",
+            "source_id": "s7369"
           }
         ],
         "marketing_claims": [
@@ -4766,7 +4781,11 @@
           "2026-09-02: smolin.info investigative article (archived s5288, TRANSCRIPT_20260608) names Ushkuynik's leadership beyond already-known GD Чадаев А.В.: Владимирский М.Ю. (зам. ГД, procurement), Виноградов Ю.А. (зам. ГД), Елисеев Д.Н. (начальник производства), Живова Е.В. (главбух) — see people.json additions. Also names a cluster of affiliated companies controlled by the same leadership (ООО «БТР», ООО «Спецмат», ООО «НПК «ЦПТ»», АНО «НЦНС») — see add_entities below. Spot-checked 6 of the article's corporate claims (director names, ОГРН, registration dates) directly against egrul.nalog.ru live lookup 2026-09-02: 5 of 6 matched exactly; ООО «Спецмат» (7801738089) GD is currently 'Малевич Елена Юрьевна' per live EGRUL vs. the article's 'Елисеева Елена Юрьевна' (b.1972) — plausible post-marriage name change (a Малевич П.В. is also a co-shareholder per the article) rather than a source error, but flagged, not resolved. This level of corroboration on checkable facts raises confidence in the article's uncheckable claims but border-crossing/SIM-card/occupied-territory allegations against several individuals remain PER-SOURCE ONLY, not independently verified — treat as investigative leads requiring separate corroboration before any sanctions-submission use, per PII sourcing discipline.",
           "2026-09-02: nspd.gov.ru cadastral check on Старая Русса, ул. Минеральная, 24 (per smolin.info, s5288): a real building/parcel exists at that exact address (помещение 802.3 m², cad. quarter 53:24:0030121, private ownership; plus separate 'корп. 1'/'корп. 3' land-parcel records nearby). Owner name not disclosed at this open search tier (would need a paid ЕГРН extract), but existence and scale (802 m², larger than the 29.3 m² 'офис 12' registered address) corroborates this as a plausible real production site rather than a fabricated claim.",
           "2026-09-02: smolin.info companion article (s5291) documents ooo-geron (Novgorod, alleged 6,000 drones/month, GD Христюк В.В.) announcing Ushkuynik residency status on 25.06.2025 -- a second, independent smolin.info piece naming a resident/affiliate beyond the leadership-cluster article (s5288). See ooo-geron and its supply-chain entities (ooo-skay-avia-grupp, ooo-aero-khit, ooo-npk-geron, ooo-akatsiya-avia, ooo-aero-khit-servis, ooo-aero-khit-m) for the full traced network.",
-          "2026-09-02: retraced smolin.info's own citations for the closed-procurement/address claims -- the article embeds downloadable primary documents (223-ФЗ извещение + протокол, several EGRUL/EGRN extracts, the Demyansk aerodrome postanovlenie, and the Novgorod BAS regional program) rather than asserting facts on its own authority. All 12 files independently re-downloaded from smolin.info's own CDN and archived here (s5292-s5303) -- this converts several previously per-source-only facts (addresses, personal ИНН for the leadership cluster, the occupied-Donetsk shell entity) to directly primary-sourced government/procurement documents."
+          "2026-09-02: retraced smolin.info's own citations for the closed-procurement/address claims -- the article embeds downloadable primary documents (223-ФЗ извещение + протокол, several EGRUL/EGRN extracts, the Demyansk aerodrome postanovlenie, and the Novgorod BAS regional program) rather than asserting facts on its own authority. All 12 files independently re-downloaded from smolin.info's own CDN and archived here (s5292-s5303) -- this converts several previously per-source-only facts (addresses, personal ИНН for the leadership cluster, the occupied-Donetsk shell entity) to directly primary-sourced government/procurement documents.",
+          "2026-09-08: reviewed a fresh checko.ru-style extract (s7369, pulled 8 September 2026). Filled two previously-null fields (address, primary OKVED — the full extract lists 19 activity codes including production of UAVs/aircraft/engines and their parts, weapons-adjacent optical/electronic equipment, and technical testing/certification, consistent with the entity's stated purpose). Added the beneficial-ownership chain (\"конечные владельцы\", 4 current holders at ~25% each: Правительство Новгородской области, АНО «Платформа НТИ», АО «УК ИНТЦ «Интеллектуальная Электроника — Валдай»», АНО «ЦСАС «Демянск»» — the same four as the direct founders[], confirming a flat rather than layered ownership structure) as parents[]. The extract also lists 4 HISTORICAL beneficial owners no longer current (АНО «Агентство стратегических инициатив по продвижению новых проектов» ИНН 7704278735, Минобрнауки РФ ИНН 9710062939, Новгородская областная Дума ИНН 5321134453, Правительство РФ) -- not wired as parents[] entries (that field models current ownership), but worth noting: this shows the entity's ownership chain used to run through the Russian federal government directly (Правительство РФ) and АСИ before being restructured to route through regional/NTI-platform intermediaries instead.",
+          "2026-09-08: added a second litigation record (А44-6214/2025) from the same extract -- a case where Ушкуйник was a third party, and the court explicitly ruled it is NOT subject to 223-ФЗ compliance oversight as a procuring entity. This sits in tension with the fact that most of Ушкуйник's own equipment-purchase notices in government_contracts[] (as customer) already cite 223-ФЗ procedure themselves -- not necessarily contradictory (a body can voluntarily follow 223-ФЗ form without being legally bound by it), but worth keeping in view.",
+          "2026-09-08: the extract's FY2024/2025 ЦФУ (targeted-funding) figures — \"Взносы и иные целевые поступления\" 26,401 т.р. (2024) / 532,070 т.р. (2025) — do not match this registry's existing financials[] funds_received figures for the same years (33,218,000 / 1,046,383,000, sourced s0282/s0283, presumably fuller БФО filings read directly). Not reconciled; the primary БФО-sourced figures are treated as more authoritative than this aggregator's summary and left unchanged, but the scale of the gap (roughly 2x) is large enough to flag for a closer read of both documents side by side.",
+          "2026-09-08: the same extract lists 34 \"Госзакупки — Заказчик\" records (Ушкуйник as PURCHASER, mostly 223-ФЗ sole-supplier equipment buys for its \"Центр коллективного пользования\" production facility, individually ranging ~₽0.9M to ₽229.7M) plus 2 \"Госзакупки — Участник\" records (Ушкуйник as SUPPLIER, the already-wired FPV-drone-kit contracts to the Novgorod civil-defense customer). Only a subset of the 34 purchaser-side records appear to be individually wired in government_contracts[] so far (the ones enriched via the RTS-Tender organizer-list cross-check, source s5325) -- a full line-by-line reconciliation against all 34 was not attempted in this pass (would need the same EIS-number cross-verification discipline as the existing entries, not a mechanical copy from the aggregator's summary) and is flagged here as a real, sizeable open item for a dedicated future pass, not silently treated as already complete."
         ],
         "financials": [
           {
@@ -4835,6 +4854,39 @@
             "name": "МИНИСТЕРСТВО ПРОМЫШЛЕННОСТИ И ТОРГОВЛИ НОВГОРОДСКОЙ ОБЛАСТИ",
             "inn": "5321178877",
             "as_of": "2024-02-29"
+          }
+        ],
+        "address": "173003, Новгородская обл, г. Великий Новгород, ул. Лазаревская, 11, помещ. 105",
+        "okved_code": "72.19.9",
+        "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие, не включенные в другие группировки",
+        "parents": [
+          {
+            "name": "Правительство Новгородской области",
+            "inn": "5321053652",
+            "share_percent": 25,
+            "note": "косвенная доля (конечный владелец), per checko.ru-style beneficial-ownership chain",
+            "source_id": "s7369"
+          },
+          {
+            "name": "АНО «Платформа Национальной Технологической Инициативы»",
+            "inn": "7703469180",
+            "share_percent": 25,
+            "note": "косвенная доля (конечный владелец) — also a direct founder (see founders[])",
+            "source_id": "s7369"
+          },
+          {
+            "name": "АО «УК ИНТЦ «Интеллектуальная Электроника — Валдай»»",
+            "inn": "5300002784",
+            "share_percent": 25,
+            "note": "косвенная доля (конечный владелец) — also a direct founder (see founders[])",
+            "source_id": "s7369"
+          },
+          {
+            "name": "АНО «Центр стрелкового и авиационного спорта «Демянск»»",
+            "inn": "5300008970",
+            "share_percent": 25,
+            "note": "косвенная доля (конечный владелец) — also a direct founder (see founders[])",
+            "source_id": "s7369"
           }
         ]
       },

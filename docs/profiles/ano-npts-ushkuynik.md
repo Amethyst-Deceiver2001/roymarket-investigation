@@ -8,7 +8,9 @@
 
 - **Legal form:** ANO (autonomous non-profit organisation)
 - **Registered:** 19.09.2023
+- **Address:** 173003, Новгородская обл, г. Великий Новгород, ул. Лазаревская, 11, помещ. 105
 - **Director:** Чадаев Алексей Викторович
+- **ОКВЭД:** 72.19.9 — Научные исследования и разработки в области естественных и технических наук прочие, не включенные в другие группировки
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
@@ -30,6 +32,7 @@
 
 | Value | As of | Note |
 |---|---|---|
+| 173003, Новгородская обл, г. Великий Новгород, ул. Лазаревская, 11, помещ. 105 | 2023-09-19 | First address of record per registration date shown on the checko.ru-style extract; previously null in this registry. [s7369] |
 | 173003, Новгородская обл., г. Великий Новгород, ул. Большая Санкт-Петербургская, д.64 -- закупочная комиссия (место открытия доступа к заявкам и рассмотрения/оценки заявок), 17.12.2025 | 2025-12-17 | PRIMARY SOURCE, not per-source-only: this is the entity's own 223-ФЗ tender notice (Извещение, еис № 32515497957, published on utp.sberbank-ast.ru, PDF/DOC obtained directly from smolin.info's own embedded evidence files and independently re-downloaded/archived here). Confirms the address exactly. Supersedes the earlier 'per smolin.info, not independently corroborated' caveat. [s5302] |
 | Новгородская обл., г. Старая Русса, ул. Минеральная, д.24 -- место поставки товара (3D-принтеры, SDM-монтажные линии и др.), per the same tender documents | 2025-12-17 | PRIMARY SOURCE: same 223-ФЗ tender notice, item 8 ('Место поставки товара'). Confirmed by a second document, the evaluation Протокол (s5303, 17.12.2025): sole bidder Степанов Дмитрий Александрович (ИНН 164809949104, г. Зеленодольск, Татарстан) won the ₽6,332,500 contract for SDM-mounting equipment (банк питателей, трафаретный принтер, резчик печатных плат, миксер для паяльной пасты), delivery deadline 31.03.2026; signed by чадаев А.В. (chair), Живова Е.В. (secretary), Елисеев Д.Н. (member) -- confirms all three named leadership figures' committee roles directly, in their own signatures. Supersedes the earlier 'per smolin.info, not independently corroborated' caveat. [s5302] |
 | 173003, Новгородская область, г.о. Великий Новгород, г. Великий Новгород, ул. Лазаревская, д. 11, помещ. 105 | 2025-12-18 | factAddress per contract XML (regNumber 2532103798925000183). Cross-checked against rusprofile.ru (s3930, captured 2026-08-30): matches this entity's current юридический (registered) address exactly -- corroboration, not a distinct facility. Fills a previously-empty address field for this entity. [s3786] |
@@ -79,6 +82,7 @@
 ## Litigation
 
 - Единственное известное судебное дело Ушкуйника — здесь Ушкуйник выступает истцом (в отличие от типичного паттерна ответчика по неустойкам у АО «НИИ СТТ»/АО «НПП Радар ммс»), взыскивая относительно небольшую сумму (~100.6 тыс. руб.) с контрагента в Иннополисе. Не установлена связь предмета договора №13-а с профильной (БАС/оборонной) деятельностью Ушкуйника — сумма и упрощённый порядок производства указывают на рутинный хозяйственный спор (возможно, аренда офиса/имущества в Иннополисе), не на профильный контракт. Три акта архивированы: s5285 (принятие иска, 01.09.2025), s5286 (уточнение исковых требований, 22.09.2025), s5287 (решение, 27.10.2025). [s5285]
+- Third-party win for Ушкуйник — a court explicitly confirmed it is NOT subject to 223-ФЗ compliance oversight as a procuring entity, a legally significant finding given the scale of its own sole-supplier equipment purchases recorded in government_contracts[] (many already cite 223-ФЗ in their own notice numbers despite this ruling). [s7369]
 
 ## Sanctions & screening
 
@@ -124,6 +128,10 @@
 ## Corporate links
 
 - **Ushkuynik LLC** — R&D/nonprofit arm of the Ушкуйник group — АНО «НПЦ «Ушкуйник»» is founded by АНО «Платформа НТИ», director Чадаев А.В.; ООО «Ушкуйник» (npts-ushkuynik) is the commercial entity carrying the actual product, «Князь Вандал Новгородский». User-flagged as sibling/admin, not a separate manufacturer — 2026-08-23.
+- **Правительство Новгородской области** — Parent entity (25%) [s7369]
+- **АНО «Платформа Национальной Технологической Инициативы»** — Parent entity (25%) [s7369]
+- **АО «УК ИНТЦ «Интеллектуальная Электроника — Валдай»»** — Parent entity (25%) [s7369]
+- **АНО «Центр стрелкового и авиационного спорта «Демянск»»** — Parent entity (25%) [s7369]
 
 ## Open questions
 
@@ -147,6 +155,7 @@
 | s5302 | Zakupki | Zakupki (ZAKUPKI_5300010714_20251217_izveshchenie-smd-oborudovanie-ushkuynik.doc) | 2025-12-17 | — |
 | s5313 | Zakupki | Zakupki (ZAKUPKI_5300010714_20260902_sberbank-ast-search-ushkuynik-11notices.json) | 2026-09-02 | — |
 | s6806 | EGRUL extract | EGRUL extract (EGRUL_5300010714_20260907_ano-npts-ushkuynik.pdf) | 2026-09-07 | 2026-09-07 |
+| s7369 | Checko | Checko (CHECKO_5300010714_20260908_ano-npts-ushkuynik.pdf) | 2026-09-08 | 2026-09-08 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
