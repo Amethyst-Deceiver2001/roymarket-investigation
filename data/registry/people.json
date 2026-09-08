@@ -4453,7 +4453,7 @@
     "dob": "1965-12-19",
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "781124117772",
     "roles": [],
     "sanctions": [
       {
@@ -4485,7 +4485,8 @@
     },
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-09-08: full ЕГРИП выписка pulled by the user for ОГРНИП 304781109900012 (s7367) -- a historical, long-defunct individual-entrepreneur registration under this exact name, male, Russian citizen, registered 08.04.2004 in St. Petersburg (Nevsky district tax office), main activity ОКВЭД 74.60 \"Проведение расследований и обеспечение безопасности\" (investigations and security services), terminated by his own decision 14.05.2009. Carries personal ИНН 781124117772, now wired as inn_personal -- the first personal ИНН on file for this person. The extract itself carries no DOB field (ЕГРИП extracts of this type do not include one), so the identity link to the sanctioned b.1965-12-19 Gazprombank/ДАР Елисеев rests on exact full-name match plus city (St. Petersburg matches his Leningrad State University background) -- plausible, not document-proven; flagged rather than silently treated as fully confirmed. The underlying business (investigations/security services, pre-dating his Gazprombank career by the time it wound down in 2009) is a biographical detail not previously on file for this person."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
