@@ -45707,7 +45707,7 @@
     "aleph_screened_at": "2026-09-08"
   },
   {
-    "slug": null,
+    "slug": "porsev-andrey-valerevich",
     "fio_ru": "Порсев Андрей Валерьевич",
     "name_latin": "Porsev Andrey Valeryevich",
     "dob": null,
@@ -45722,7 +45722,42 @@
         "from": "2018-11-07",
         "to": null,
         "source_id": "s7355"
-      },
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Founding GD/co-founder of ООО «Открытое небо» (Kaluga), the training-certificate issuer directly linked from @projectArchangel's own recurring 'полезные ссылки' post.",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-08: found via ООО «Открытое небо»'s own EGRUL выписка (s7355), surfaced from a lead-mining pass over @projectArchangel."
+    ],
+    "aleph_matches": [
+      {
+        "note": "2 results, both from Russian Unified State Register of Legal Entities (EGRUL) collection (itsoft.ru mirror) -- generic EGRUL-derived entries only, no sanctions/PEP dataset.",
+        "is_sanction": false
+      }
+    ],
+    "aleph_screened_at": "2026-09-08"
+  },
+  {
+    "slug": "fedyukin-vladimir-anatolevich",
+    "fio_ru": "Федюкин Владимир Анатольевич",
+    "name_latin": "Fedyukin Vladimir Anatolyevich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "402702972386",
+    "roles": [
       {
         "entity_name": "ООО «Открытое небо»",
         "entity_slug": "ooo-otkrytoe-nebo-kaluga",
@@ -45741,13 +45776,20 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": "Founding GD/co-founder of ООО «Открытое небо» (Kaluga), the training-certificate issuer directly linked from @projectArchangel's own recurring 'полезные ссылки' post.\n\nMajority (85%) owner of ООО «Открытое небо» (Kaluga), added as a founder 26.04.2022 -- four years after Порсев's original sole incorporation.",
+    "notes": "Majority (85%) owner of ООО «Открытое небо» (Kaluga), added as a founder 26.04.2022 -- four years after Порсев's original sole incorporation.",
     "sources": [],
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
       "2026-09-08: found via ООО «Открытое небо»'s own EGRUL выписка (s7355), surfaced from a lead-mining pass over @projectArchangel."
-    ]
+    ],
+    "aleph_matches": [
+      {
+        "note": "2 results, both from Russian Unified State Register of Legal Entities (EGRUL) collection (itsoft.ru mirror) -- generic EGRUL-derived entries only, no sanctions/PEP dataset.",
+        "is_sanction": false
+      }
+    ],
+    "aleph_screened_at": "2026-09-08"
   }
 ]

@@ -4207,8 +4207,57 @@
       "wb_overlap": "not_checked",
       "products": [],
       "why": [
-        "2026-09-08: found via lead-mining a freshly-rescraped @projectArchangel corpus; resolved the linked punycode domain, fetched the site, and confirmed via a targeted egrul.nalog.ru ИНН search (single exact match)."
-      ]
+        "2026-09-08: found via lead-mining a freshly-rescraped @projectArchangel corpus; resolved the linked punycode domain, fetched the site, and confirmed via a targeted egrul.nalog.ru ИНН search (single exact match).",
+        "2026-09-08: pulled all 5 БФО filings (FY2021-2025) and ran a zakupki scan -- thin revenue throughout confirms this is a small training/logistics vendor, not an active manufacturer despite its OKVED. GUR/Aleph screened clean (0 hits / generic EGRUL-only). OpenSanctions screen attempted but blocked by the API key's monthly rate limit -- not yet completed, flag for a retry."
+      ],
+      "financials": [
+        {
+          "year": 2021,
+          "revenue": 0.649,
+          "revenue_unit": "million RUB",
+          "profit": 0.002,
+          "profit_unit": "million RUB",
+          "source_id": "s7356"
+        },
+        {
+          "year": 2022,
+          "revenue": 0.336,
+          "revenue_unit": "million RUB",
+          "profit": 0.005,
+          "profit_unit": "million RUB",
+          "source_id": "s7357"
+        },
+        {
+          "year": 2023,
+          "revenue": 0.5,
+          "revenue_unit": "million RUB",
+          "profit": 0.031,
+          "profit_unit": "million RUB",
+          "source_id": "s7358"
+        },
+        {
+          "year": 2024,
+          "revenue": 0.579,
+          "revenue_unit": "million RUB",
+          "profit": 0.012,
+          "profit_unit": "million RUB",
+          "source_id": "s7359"
+        },
+        {
+          "year": 2025,
+          "revenue": 1.094,
+          "revenue_unit": "million RUB",
+          "profit": 0.014,
+          "profit_unit": "million RUB",
+          "source_id": "s7360",
+          "note": "Thin revenue throughout (₽336k-1.094m/year across all 5 filings on record) -- consistent with a small training/certification-services operation, not an active manufacturer, despite the declared 30.30 aircraft-production OKVED."
+        }
+      ],
+      "zakupki_review": {
+        "as_of": "2026-09-08",
+        "outcome": "closed",
+        "note": "single-ИНН scan run, 0 hits -- consistent with a small non-state-contracting training/certification vendor."
+      }
     }
   ],
   "entities": {
