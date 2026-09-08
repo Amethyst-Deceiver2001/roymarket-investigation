@@ -124,6 +124,72 @@ investigation. All cross-checks were done by ИНН/ОГРН, never by name — 
 as connected to Гагаринг (or to any other entity in this family), confirm
 via identifier first.
 
+## Entities added since this doc was last written (2026-09-05 to -08)
+
+Five more legal entities surfaced after the "six distinct organizations"
+count above was fixed — this doc's own count is now stale; the registry
+(`entities.json`) is authoritative, not this list. Kept brief here since
+the full forensic detail (dozens of open_questions per entity) lives on
+each entity's own record, not duplicated into prose:
+
+- **`ooo-arkhangel-shchit`** (ИНН 5027339008, Лыткарино) — CONFIRMS a
+  press photo-credit lead: proekt_arhangel's own channel (msg 623,
+  2025-10-11) states Проект «Архангел» created this entity mid-2025 for
+  civilian PVO/security-staff training. 100% owner Кулемин Игорь
+  Александрович, director Хабибулин Владимир Игоревич — both thin
+  records (ИНН only, no DOB/address). Registered address is a private
+  flat; no БФО filed yet (first FY 2025).
+- **`ooo-arkhangel-grupp`** (ИНН 9702081286, Moscow, registered
+  12.03.2026) — named as @projectArchangel's own B2B contracting vehicle
+  for the interceptor-drone facility-defense business. Director Крючков
+  Дмитрий Александрович, no cross-reference to anyone else on file.
+  Full screening battery (OpenSanctions/Aleph/GUR/rk2035/ФНС РОМ) clean.
+- **`ooo-arkhangel-istra`** (ИНН 5017140245, Павловская Слобода) —
+  RESOLVED to a namesake, not part of the network: sole owner/director
+  Аристархов Владимир Вячеславович runs a Moscow law/IT firm (ОКВЭД
+  69.10) with no aerospace/UAV/training codes and no personal tie to
+  anyone else in this family. A trademark collision (Rospatent reg.
+  1183435), not a corporate one. Tiered `adjacent` deliberately, so this
+  doesn't get re-flagged as a fresh lead.
+- **`ooo-arkhangel-melitopol-2`** (ИНН 9001027869, same Мелитополь
+  address as `ooo-arkhangel-zaporizhzhie` but a distinct, earlier
+  registration) — sole owner/director Кусумов Вахид Абдулович, also
+  100% founder of the sibling entity. UA-NSDC sanctioned (confirmed
+  exact-identifier OpenSanctions match). БФО filings (FY2024-25, read
+  2026-09-08) show zero revenue both years — a dormant vehicle, distinct
+  from the sibling that books the real ₽55.77m education revenue.
+- **`ooo-arkhangel-crimea`** (ИНН 9108131213, Судак) — director/50%
+  owner Тимофеев Владимир Сергеевич, the SAME person who directs
+  `ooo-arkhangel-zaporizhzhie`, appointed there 3 days before this
+  entity's registration. Declared ОКВЭД mixes grain cultivation with a
+  full aviation-training-school code block. FY2025 БФО (read 2026-09-08)
+  books zero revenue — pre-operational as of its first filing, so the
+  agriculture-vs-training question stays open pending a later filing.
+  Unique in the family for a non-minimum ₽3.1m charter capital, paid in
+  kind (booked as fixed assets, not cash).
+- **`proekt-kb-arkhangel`** — Филиппов's own informal project/channel
+  operation, no single ИНН of its own (see the entities above, which are
+  its formal vehicles). Has by far the largest open_questions[] list of
+  any record in this registry — full multi-city 2023 network history,
+  Kalashnikov MOU/serial-production escalation, Putin/Мулино exhibition
+  claim (unconfirmed by name in independent press), a documented
+  ЧВК-Вагнер ideological throughline, and dozens of named but
+  unresolved partner/vendor leads (Ворон-оптоволокно, Открытое небо,
+  ООО «Воздушный тракт»/«Овод», КБ «Перит», GoDrone, and others) — read
+  the entity's own record directly rather than this summary if picking
+  this thread back up.
+
+Also closed 2026-09-08: Черезов Андрей Павлович (director of `ovod` and
+`ooo-vozdushnyy-traktat`, the Tula «Овод» drone maker who survived an
+assassination attempt) had no personal ИНН on file despite an EGRUL
+extract for `ovod` already sitting in `data/sources/` since 2026-09-07 —
+found there (712802968839), unexploited. «Открытое небо» (the Lytkarino
+cert-issuing front company for Проект Архангел's pilot school, per
+iStories) was searched by name on egrul.nalog.ru — 20 same-named
+candidates nationwide, none clearly identifiable as the Lytkarino one by
+region field alone; genuinely unresolved, would need a per-candidate
+address check to close.
+
 ## Sources
 
 Fully cited in each entity's own `data/registry/entities.json` /

@@ -69135,11 +69135,7 @@
     "images": [],
     "open_questions": [
       {
-        "text": "Why do two separate ООО «Архангел» legal entities exist at the same Melitopol address under the same owner, two months apart (10.06.2024 and 22.08.2024)? Neither carries a liquidation or reorganisation marker, so both are live. Candidate explanations to test: (a) a re-registration under a different tax-region code (this one is ИНН-prefix 9001 = Запорожская область's original code, the sibling is 9500) that was never wound up; (b) a deliberate two-vehicle structure separating the licensed training operation (the sibling holds Rosobrnadzor licence Л035-00115-95/01431042 and books all revenue as образовательные услуги) from a production/procurement shell. Requires a БФО pull on 9001027869 to see whether it files any revenue at all.",
-        "source_id": "s5504"
-      },
-      {
-        "text": "БФО (annual accounts) never pulled for ИНН 9001027869 — bo.nalog.gov.ru check outstanding. If it files zero revenue, the dormant-vehicle reading of the two-entity structure is supported.",
+        "text": "Why do two separate ООО «Архангел» legal entities exist at the same Melitopol address under the same owner, two months apart (10.06.2024 and 22.08.2024)? Neither carries a liquidation or reorganisation marker, so both are live. Candidate explanations to test: (a) a re-registration under a different tax-region code (this one is ИНН-prefix 9001 = Запорожская область's original code, the sibling is 9500) that was never wound up; (b) a deliberate two-vehicle structure separating the licensed training operation (the sibling holds Rosobrnadzor licence Л035-00115-95/01431042 and books all revenue as образовательные услуги) from a production/procurement shell. Requires a БФО pull on 9001027869 to see whether it files any revenue at all. RESOLVED 2026-09-08: hypothesis (b) confirmed by the БФО filings already on file (s5532/s5533, see financials[]) — this entity reports zero revenue in both FY2024 and FY2025, consistent with being a dormant vehicle distinct from its revenue-booking sibling.",
         "source_id": "s5504"
       },
       {
@@ -69417,7 +69413,7 @@
         "revenue": 0,
         "profit": 0,
         "source_id": "s5534",
-        "note": "БФО filing: zero revenue, zero profit. Balance sheet shows ₽3,100 thousand in fixed assets (Основные средства), exactly matching the ₽3,100 thousand charter capital — the company's only asset is apparently the capital contribution itself, no operating activity. Дело подписал уполномоченный представитель Свиридов Сергей Владимирович (authorized representative, NOT the director/founder already on file) — a new name, not yet cross-referenced; see open_questions."
+        "note": "БФО filing: balance-sheet total ₽3,100k, held entirely as Основные средства (fixed assets), matching the ₽3.1m charter capital exactly — i.e. the capital appears to have been contributed in kind, not cash. Zero revenue line (Совокупный финансовый результат, code 2500, blank/zero). No FY2023/2024 comparative figures shown (company registered 14.04.2025, so FY2025 is its first filing)."
       }
     ],
     "egrul_flags": [],
@@ -69446,7 +69442,7 @@
     "images": [],
     "open_questions": [
       {
-        "text": "Is this a working agricultural business in Sudak that happens to share the «Архангел» name and a director with the Melitopol UAV entity, or a Crimean arm of the same operation? The ОКВЭД list argues both ways at once — 19 agricultural codes as the declared core, against a complete aviation- and vocational-training block including 85.42.2 «Деятельность школ обучения вождению воздушных и плавательных судов». Resolve with a БФО pull (first full fiscal year 2025, filed 2026): revenue tagged to agriculture would settle it one way, revenue tagged to образовательные услуги — the same tag under which the Melitopol entity books all ₽55.77M of its income — the other.",
+        "text": "Is this a working agricultural business in Sudak that happens to share the «Архангел» name and a director with the Melitopol UAV entity, or a Crimean arm of the same operation? The ОКВЭД list argues both ways at once — 19 agricultural codes as the declared core, against a complete aviation- and vocational-training block including 85.42.2 «Деятельность школ обучения вождению воздушных и плавательных судов». Resolve with a БФО pull (first full fiscal year 2025, filed 2026): revenue tagged to agriculture would settle it one way, revenue tagged to образовательные услуги — the same tag under which the Melitopol entity books all ₽55.77M of its income — the other. PARTIALLY RESOLVED 2026-09-08: the FY2025 БФО filing (s5534, see financials[]) books ZERO revenue under either category — the company is pre-operational/dormant as of its first fiscal year, the same pattern already confirmed for its Melitopol sibling (ИНН 9001027869). This doesn't resolve the agri-vs-training question (no revenue exists yet to tag either way) but does rule out \"working agricultural business\" as the CURRENT state — whatever this entity becomes, it hasn't started operating yet. Worth re-checking once a FY2026 filing exists.",
         "source_id": "s5508"
       },
       {

@@ -2889,6 +2889,63 @@ checked at least once, no backlog remains):
 
 Group-1 unverified-people refresh (`other_entities_checked_at`) is now
 fully current for every person carrying a personal ИНН — no backlog
-remains from this thread. **Not yet done:** the Гагаринг wide-net
-deep-dive plan (`~/.claude/plans/spicy-beaming-kite.md`) — parked,
-user has not yet selected it when offered as a next-step option.
+remains from this thread.
+
+## Гагаринг wide-net deep-dive (started 2026-09-08)
+
+Picking up the parked plan at `~/.claude/plans/spicy-beaming-kite.md` at
+the user's direction. **Finding on opening this thread: the plan itself is
+largely stale.** `notes/gagaring_network_map.md` (604 lines) and
+`notes/archangel_adjacent_network.md` (now ~230 lines) already document an
+enormous amount of work done 2026-09-03 through -07 — full-corpus channel
+reads (65k+ posts scanned across the Архангел-family channels alone),
+independent press corroboration of the Kalashnikov MOU/serial-production
+tie, EGRUL pulls for nearly every entity in the family (now 11 distinct
+«Архангел»-branded records, not the plan's estimated 6), and most of
+threads A/D/E/G already substantially closed. Rather than re-executing the
+stale plan, spent this pass closing the concrete gaps that were still
+genuinely open on top of that existing work:
+
+- **`ooo-arkhangel-melitopol-2`**: the "why do two Архангел entities share
+  one Melitopol address" open question had a БФО pull sitting unread in
+  `data/sources/` since 2026-09-05 (s5532/s5533) — read it: zero revenue
+  both FY2024 and FY2025, confirming the dormant-second-vehicle
+  hypothesis. Question closed.
+- **`ooo-arkhangel-crimea`**: same situation, one unread БФО filing
+  (s5534) — zero revenue in its first (FY2025) filing, ₽3.1m charter
+  capital paid in kind not cash. Doesn't fully resolve the
+  agriculture-vs-training question (no revenue exists yet to tag either
+  way) but rules out "currently operating" as the state — noted.
+- **Черезов Андрей Павлович** (director of `ovod`/`ooo-vozdushnyy-traktat`,
+  the Tula «Овод» maker who survived a 2026-07-29 assassination attempt,
+  already extensively documented in `gagaring_network_map.md`'s own
+  "ovod" section) had no personal ИНН despite an EGRUL extract for `ovod`
+  already on file since 2026-09-07 — found there (712802968839),
+  unexploited. Now on his people.json record.
+- **«Открытое небо»** (Lytkarino cert-issuing front company for Проект
+  Архангел's pilot school, per iStories) — attempted an EGRUL name search;
+  20 same-named candidates nationwide, none clearly identifiable as the
+  Lytkarino one by region field alone. Genuinely unresolved, left open —
+  would need a per-candidate address check.
+- Reconciled `notes/archangel_adjacent_network.md`, which only documented
+  6 of the now-11 «Архангел»-branded entities — added a summary section
+  for the 5 it was missing (`ooo-arkhangel-shchit/-grupp/-istra/
+  -melitopol-2/-crimea`, `proekt-kb-arkhangel`) pointing to each entity's
+  own much more detailed `open_questions[]` rather than re-deriving it.
+
+**Genuinely still open, not attempted this pass** (real next steps if this
+thread continues, roughly in order of tractability):
+1. Кулемин Игорь Александрович / Хабибулин Владимир Игоревич
+   (`ooo-arkhangel-shchit`'s owner/director) — both have an ИНН but no
+   DOB/address; would need a RuPEP or similar deep-dive.
+2. «Открытое небо» — resolve which of the 20 same-named candidates is the
+   Lytkarino one (per-candidate EGRUL address pull).
+3. «Ворон-оптоволокно» — no ИНН/entity resolved yet despite a confirmed
+   direct founder-to-founder relationship with Проект «Архангел».
+4. `tg-arkhangel-spetsnaza` (@arx_spn, 1.02M subs) — still no legal
+   entity identified; checko.ru/myrotvorets untried per the original
+   plan.
+5. The plan's threads B/C/F (Одесская 48/3 building ID, Курская/Sevastopol
+   location confirmation, НПО Эйлер deep-dive) — not touched this pass,
+   still open per `gagaring_network_map.md`'s own "what's still open"
+   section.
