@@ -58291,5 +58291,13 @@
     "as_of_method": "manual:live registry lookup, as_of = capture date (list itself updates daily per its own disclaimer)",
     "sha256": "392397cca5fc976462af5c138234e7060ae6d8cb7b4312b6b8a25305cb0c97c3",
     "sample": "Источник: Честный ЗНАК (ГИС МТ) — Список участников оборота товаров\nURL: https://xn--80ajghhoc2aj1c8b.xn--p1ai/business/spisokuot/?GIS_INN=2312321660\nПулено (captured): 2026-09-08, через chrome-devtools MCP (реальный браузер, Yandex SmartCaptcha пройдена вручную)\n\nРезультат поиска по ИНН 2312321660:\n\nИНН\tНаименование\tТоварная группа\tТип участника\tРегион\tАдрес\n2312321660\tООО ГАГАРИНГ\tРадиоэлектронн"
+  },
+  "REESTRZALOGOV_2312321660_20260908_negative.txt": {
+    "type": "pledge_registry_search",
+    "type_method": "manual:ФНП Реестр уведомлений о залоге движимого имущества, negative-result search",
+    "as_of": "2026-09-08",
+    "as_of_method": "manual:live registry lookup, as_of = search date",
+    "sha256": "3a2c9b5583e0fc5427a747ddcd81f6853eae641cc2f3adcaeb217497770ef731",
+    "sample": "Источник: Федеральная нотариальная палата — Реестр уведомлений о залоге движимого имущества\nURL: https://www.reestr-zalogov.ru/search/index (поиск по залогодателю — юридическое лицо)\nПулено (captured): 2026-09-08, через chrome-devtools MCP (реальный браузер)\n\nПараметры поиска: Наименование: (пусто), ОГРН: (пусто), ИНН: 2312321660 (ООО «Гагаринг»)\nПоиск охватывал: Федеральная нотариальная палата + "
   }
 }
