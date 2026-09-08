@@ -9663,7 +9663,16 @@
     "birthplace": null,
     "address": null,
     "inn_personal": "165043571104",
-    "roles": [],
+    "roles": [
+      {
+        "entity_name": "ООО «Гаскар» (formerly ООО «ЭВР»)",
+        "entity_slug": "ooo-gaskar",
+        "title": "signed on behalf of sole participant ООО «СибНК» to order the ЭВР->Гаскар rename",
+        "from": "2026-06-09",
+        "to": null,
+        "source_id": "s7354"
+      }
+    ],
     "sanctions": [],
     "other_entities": [
       {
@@ -9726,7 +9735,8 @@
     },
     "_corrected": [
       "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2559).",
-      "2026-09-07: verification via screen_upr_uchr.py ФНС cross-reference -- Ступников Андрей Генадьевич confirmed as директор of ooo-sibirskaya-navigatsionnaya-kompaniya (ИНН 4205376019), an official-registry match against an already-known entity."
+      "2026-09-07: verification via screen_upr_uchr.py ФНС cross-reference -- Ступников Андрей Генадьевич confirmed as директор of ooo-sibirskaya-navigatsionnaya-kompaniya (ИНН 4205376019), an official-registry match against an already-known entity.",
+      "2026-09-08: found in Гаскар's own founding-document rename amendment (s7354) — he signed решение №09-06/2026 acting for СибНК (already known as his own director role) to formally rename ООО «ЭВР» to ООО «Гаскар»."
     ],
     "_verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference (pb.nalog.ru search-proc.json, scripts/screen_upr_uchr.py, run 2026-09-07) -- exact ИНН match (4205376019) as директор of ooo-sibirskaya-navigatsionnaya-kompaniya, an entity already on file.",
     "opensanctions_matches": [

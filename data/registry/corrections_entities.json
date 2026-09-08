@@ -8580,7 +8580,27 @@
         ],
         "charter_capital": 10000,
         "tier": "plumbing",
-        "tier_basis": "holds 51% of Атлант Аэро, itself under Rostec trust management"
+        "tier_basis": "holds 51% of Атлант Аэро, itself under Rostec trust management",
+        "name_history": [
+          {
+            "value": "Акционерное общество «Концерн «Авиамеханика»»",
+            "as_of": "2023-02-21",
+            "source_id": "s7353",
+            "note": "Original incorporation name, per founding устав протокол №1 от 13.02.2023 (учредительный документ, GRN 1237700148180)."
+          },
+          {
+            "value": "Акционерное общество «Техноимпульс Инвест»",
+            "as_of": "2023-12-18",
+            "source_id": "s7353",
+            "note": "Renamed per внеочередное общее собрание акционеров протокол от 11.12.2023 (устав в новой редакции, GRN 2237712494391). This is the name OpenSanctions' own designation caption uses (\"Акционерное общество \\\"Техноимпульс Инвест\\\"\") — confirms that match was against a prior name, not a coincidence."
+          },
+          {
+            "value": "Акционерное общество «ПромИнвест»",
+            "as_of": "2025-12-29",
+            "source_id": "s7353",
+            "note": "Current name. Renamed per внеочередное заседание общего собрания акционеров протокол от 22.12.2025 (устав в новой редакции, GRN 2257724857124) — the most recent of 4 charter documents on file, so this is confirmed current as of this pass."
+          }
+        ]
       },
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0152)",
       "why": [
@@ -8590,7 +8610,8 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "An ownership vehicle, not a manufacturer.",
-        "2026-09-07: merged dormant duplicate correction key '9714004945' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+        "2026-09-07: merged dormant duplicate correction key '9714004945' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+        "2026-09-08: read all 4 founding-document revisions (устав + 3 amendments, OCR'd, s7353) obtained via the ФНС portal — recovered a 2-rename history not previously on file: Концерн «Авиамеханика» (2023-02-21) -> Техноимпульс Инвест (2023-12-18) -> ПромИнвест (2025-12-29, current). Explains why the OpenSanctions designation caption reads 'Техноимпульс Инвест' rather than the current name. No specific business-purpose clause found in any revision (generic 'извлечение прибыли' profit clause throughout) — consistent with a holding/trust-management vehicle, not an operating company."
       ]
     },
     "ao-ross": {
@@ -17421,9 +17442,15 @@
         "name_history": [
           {
             "value": "ООО «ЭВР»",
-            "as_of": "2025-11-01",
-            "source_id": "s6934",
-            "note": "proverki.gov.ru inspection records dated Oct 2024 through Nov 2025 all carry faceName ООО \"ЭВР\" at this same ИНН/ОГРН (9710112989 / 1237700273744); the Aug 2026 record is the first to show the current name ООО «ГАСКАР» — renamed sometime between Nov 2025 and Aug 2026."
+            "as_of": "2023-04-07",
+            "source_id": "s7354",
+            "note": "Founding name, per учредительный документ протокол общего собрания учредителей №1 от 07.04.2023 (GRN 1237700273744) — confirms and pushes back proverki.gov.ru's inference (which only bounded it Nov 2025-Aug 2026) to the entity's actual formation."
+          },
+          {
+            "value": "ООО «ГАСКАР»",
+            "as_of": "2026-06-17",
+            "source_id": "s7354",
+            "note": "Renamed per решение №09-06/2026 от 09.06.2026 единственного участника ООО «СибНК» (в лице А.Г. Ступникова), внесено в ЕГРЮЛ 17.06.2026 (GRN 2267705105138) — precisely dates and confirms proverki.gov.ru's range. Notable timing: the EU's 20th sanctions package (24.04.2026) already named this entity as \"«Гаскар Групп»\" nearly 2 months BEFORE the legal rename — the sanctioned brand identity preceded the formal corporate name change, not the other way around."
           }
         ],
         "notes": "2026-09-07: proverki.gov.ru screen (5 records, all labor-inspection warnings, s6934) surfaced a prior legal name (ООО «ЭВР») and this entity's first street-level address (ул. Пехорская, д.1Д, стр.1, Москва). 2026-09-07 NSPD corroboration (s6951): ул. Пехорская, д.1Д, стр.1 is a real, substantial building — 'Корпус 9', 15,506.8 m², 2-3 floors, commissioned 2022, private ownership, in the Косино-Ухтомский municipal district of Moscow. This is the SAME municipal district (Косино-Ухтомский/Руднево technopark zone) as ООО «НПО «Рустехдрон»»'s Пехорская 1/3, стр.4 facility — same street, same district, upgrading the 'possible shared-cluster' note to a confirmed shared-industrial-zone finding (still not confirmed as the literally same building)."
@@ -17442,7 +17469,8 @@
         "2026-08-26: user-supplied HAR capture of their own налетай.рф buyer-account session confirms ООО «Гаскар» (ИНН 9710112989, exact match) is a listed partner/seller on налетай.рф -- the ГТЛК-backed state civilian UAV marketplace -- with 57 products (FPV components), full legal info matching this record. Added as a second web.marketplace_listings[] entry alongside the existing Ozon storefront.",
         "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 6 product(s) not previously documented.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-08: read the full founding-document bundle (устав + rename amendment, OCR'd, s7354) obtained via ФНС — precisely dates the ЭВР->Гаскар rename (17.06.2026, ordered by sole participant СибНК acting through Ступников А.Г., already on file) and confirms it postdates the EU sanctions designation under the 'Гаскар' brand name by ~2 months."
       ]
     },
     "ooo-gaskar-integratsiya": {
@@ -26100,6 +26128,12 @@
         ],
         "founders_history": [
           {
+            "value": "Борисов Александр Сергеевич 100% (sole participant)",
+            "as_of": "2023-02-03",
+            "source_id": "s7352",
+            "note": "Founding sole participant, per решение единственного учредителя №1 (устав, 03.02.2023). An устав amendment dated 14.04.2023 (GRN 2237100102171, s7352) confirms he was still sole participant then ('решением единственного участника Борисова Александра Сергеевича №2') -- 10 days before the 3-way split below took effect."
+          },
+          {
             "value": "Борисов Александр Сергеевич 20% (₽2 000) / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО- ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ПРОГРАММНЫЕ КОМПЛЕКСЫ РЕАЛЬНОГО ВРЕМЕНИ\" 20% (₽2 000) / ФОНД РАЗВИТИЯ ПРОМЫШЛЕННОСТИ ТУЛЬСКОЙ ОБЛАСТИ 60% (₽6 000)",
             "as_of": "2023-04-24",
             "source_id": "s6813",
@@ -26151,7 +26185,8 @@
         "Web search for this OFAC-designated entity's website (2026-08-25) found no confirmed site of its own, but re-surfaced and strengthened the existing КБ ЦБС name-collision flag with a confirmed ИНН for the other entity.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-08-26: pulled the entity's only zakupki.gov.ru government contract (regNumber 2711801501123000085) and all attachments (kontrakt docx x2, УПД zip, платёжное поручение xlsx, счёт pdf, contract card html) per user request to find and deep-dive the strongest confirmed cbst-core entity with a zakupki footprint. Contract is a fully-executed, fully-paid ₽3.072m sale of NORBEL flight simulators + educational aids to a Tula-region school under sole-supplier justification (failed electronic auction) — training/educational equipment, not combat-ready UAV hardware, consistent with the entity's training/education-market positioning. Signed by Генеральный директор Борисов Александр Сергеевич (source s1914), which conflicts with the existing unsourced director field (Шпак Максим Викторович, from corrections:add_entities with no source) — recorded as a dated director_history entry per the as_of=source-read convention rather than overwriting the unsourced value outright."
+        "2026-08-26: pulled the entity's only zakupki.gov.ru government contract (regNumber 2711801501123000085) and all attachments (kontrakt docx x2, УПД zip, платёжное поручение xlsx, счёт pdf, contract card html) per user request to find and deep-dive the strongest confirmed cbst-core entity with a zakupki footprint. Contract is a fully-executed, fully-paid ₽3.072m sale of NORBEL flight simulators + educational aids to a Tula-region school under sole-supplier justification (failed electronic auction) — training/educational equipment, not combat-ready UAV hardware, consistent with the entity's training/education-market positioning. Signed by Генеральный директор Борисов Александр Сергеевич (source s1914), which conflicts with the existing unsourced director field (Шпак Максим Викторович, from corrections:add_entities with no source) — recorded as a dated director_history entry per the as_of=source-read convention rather than overwriting the unsourced value outright.",
+        "2026-09-08: read the full founding-document bundle (устав + 2 amendments, s7352) -- confirms Борисов was briefly sole 100% founder before the 3-way split (with НПО ПКРВ and Фонд развития промышленности Тульской области) took effect 10 days later; the устав itself carries only generic boilerplate purpose language, no UAV-specific activity clause."
       ]
     },
     "ooo-tsentr-dinarus": {
