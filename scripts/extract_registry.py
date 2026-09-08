@@ -1143,6 +1143,7 @@ ENTITY_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("roscosmos_license_matches", "roscosmos_checked_at"),
     ("rosgvardia_license_matches", "rosgvardia_checked_at"),
     ("ekg_rating_matches", "ekg_rating_checked_at"),
+    ("kontur_focus_matches", "kontur_focus_checked_at"),
 ]
 PEOPLE_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("other_entities", "other_entities_checked_at"),

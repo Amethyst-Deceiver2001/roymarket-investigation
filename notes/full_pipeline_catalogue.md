@@ -35,6 +35,35 @@ lookup on a **[network]** script is still fine to run inline for spot-checks.
 | `extract_ids.py` | General-purpose CLI: pipe any text through it for the same pattern set | local |
 | `check_egrul_flags.py` | EGRUL access-restriction/disavowal marker detection on pasted extract text | local |
 
+## Stage 1.5 — Kontur.Focus Pro exports (recurring manual input, added 2026-09-08)
+
+| Script | Source | Class |
+|---|---|---|
+| `parse_kontur_focus.py --pdf <path> --slug <slug> --source-id <sNNNN>` | Kontur.Focus Pro company-profile PDF, the user's own paid-subscription export, dropped into `data/sources/` | local |
+
+Not a screener against a live third-party service — the user pulls these
+themselves from their own Kontur.Focus Pro subscription and hands the PDF
+over; this only parses an already-downloaded file. Confirmed on the first
+real run (АНО «НПЦ «Ушкуйник»», `data/sources/CHECKO_5300010714_20260908_
+ano-npts-ushkuynik.pdf`, source `s7369`): 19 ОКВЭД codes, 4 founders, 8
+beneficial owners (Kontur's own computed chain), 2 litigation cases, 36
+government contracts (participant + customer roles), full 4-year financials
+across all 4 forms (matches `parse_bfo_financials.py`'s own numbers), the
+ЭКГ rating (matches `screen_ekg_rating.py`'s live pull exactly — 83/15/32/
+36 both ways), and 23 "Ближайшие связи" affiliated-network entities, 21 of
+them not previously in this project's registry at all — sister АНО «НПЦ
+БАС» centres in other regions, ФОНД НТИ, the founding ministry, and several
+unrelated-looking commercial/political entities worth individual triage.
+
+Writes a compact raw summary (`kontur_focus_matches[]` /
+`kontur_focus_checked_at`) directly onto the matched entity in
+`entities.json` (added to `ENTITY_CARRY_FORWARD_FIELDS`), and the full
+parsed structure to `data/registry/_kontur_focus_cache.json` keyed by ИНН.
+Does **not** auto-wire litigation/government_contracts/founders_history —
+those need human dedup against what zakupki_batch_pull.py/kad.arbitr.ru
+pulls may already have recorded; the script prints a review scaffold of
+what looks new instead, the same discipline as `_scaffold_leads.json`.
+
 ## Stage 2 — registry identifiers & founding documents
 
 | Script | Source | Class |
