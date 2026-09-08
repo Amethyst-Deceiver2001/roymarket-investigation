@@ -27,6 +27,16 @@
 |---|---|---|
 | ООО «Группа компаний «Аэромакс»» (ИНН 7710974353), 100%, sole shareholder | 13.02.2025 |  [s7345] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2021 | ₽1 | ₽0 | [s7346] |
+| 2022 | — | ₽-2 | [s7347] |
+| 2023 | — | ₽-49 | [s7348] |
+| 2024 | — | ₽-5,534 | [s7349] |
+| 2025 | — | ₽-8,039 | [s7350] |
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
@@ -36,6 +46,11 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s7345 | EGRUL extract | EGRUL extract (EGRUL_7713133550_20260908_ao-rti-radio.pdf) | 2026-09-08 | 2026-09-08 |
+| s7346 | Bfo | Bfo (BFO_7713133550_2021_ao-rti-radio.pdf) | — | — |
+| s7347 | Bfo | Bfo (BFO_7713133550_2022_ao-rti-radio.pdf) | — | — |
+| s7348 | Bfo | Bfo (BFO_7713133550_2023_ao-rti-radio.pdf) | — | — |
+| s7349 | Bfo | Bfo (BFO_7713133550_2024_ao-rti-radio.pdf) | — | — |
+| s7350 | Bfo | Bfo (BFO_7713133550_2025_ao-rti-radio.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

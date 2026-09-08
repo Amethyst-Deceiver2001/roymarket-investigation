@@ -71957,11 +71957,54 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": "Added 2026-09-08: surfaced via a ФНС director/founder re-screen of Бессонов Сергей Николаевич, already on file as ООО «Аэромакс»'s own director. His own EGRUL выписка (s7345) shows this is a real, long-established (registered 17.04.1997, pre-2002 formation) radar/radionavigation-equipment manufacturer with a genuine electronics-manufacturing OKVED stack (26.51.2 primary — same radar/radionavigation code as АО «НПП «Радар ММС»» elsewhere in this registry — plus PCB/integrated-circuit/electronic-component manufacturing codes), not a shell or generic wholesale wrapper. Its sole shareholder (100%, acquired 13.02.2025) is ООО «Группа компаний «Аэромакс»» (ИНН 7710974353) — this is a corporate acquisition by the already-known Аэромакс group, not an unrelated company, and Бессонов was installed as its GD six days later (19.02.2026). Worth tracking as an Аэромакс subsidiary with real manufacturing substance behind the acquisition; no EGRUL restriction/недостоверность flags found.",
+    "tier_basis": "Added 2026-09-08: surfaced via a ФНС director/founder re-screen of Бессонов Сергей Николаевич, already on file as ООО «Аэромакс»'s own director. His own EGRUL выписка (s7345) shows this is a real, long-established (registered 17.04.1997, pre-2002 formation) legal entity carrying a genuine electronics-manufacturing OKVED stack (26.51.2 primary — same radar/radionavigation code as АО «НПП «Радар ММС»» elsewhere in this registry — plus PCB/integrated-circuit/electronic-component manufacturing codes). Its sole shareholder (100%, acquired 13.02.2025) is ООО «Группа компаний «Аэромакс»» (ИНН 7710974353) — a corporate acquisition by the already-known Аэромакс group, not an unrelated company, and Бессонов was installed as its GD six days later (19.02.2026). No EGRUL restriction/недостоверность flags found. **Correction 2026-09-08 (same day), after pulling and reading all 5 available БФО filings (FY2021–2025, s7346–s7350, via bo.nalog.gov.ru — see [[bo_nalog_gov_ru_bfo_download_uncaptchad]]): despite the manufacturing OKVED, this is NOT an operating manufacturer.** Fixed assets have been near-zero and shrinking every year on file (₽2.409m in FY2021 down to ₽16,000 by FY2025); inventory (Запасы, line 1210) is zero in every filing; actual product/goods/services sales revenue (cash-flow line 4111) was ₽1.08m in FY2021 and ₽359k in FY2020 — trivial, and no later filing even shows a comparable line, consistent with the business having gone effectively dormant. The company instead carries large financial-instrument positions (loans issued ~₽206–255m, \"приобретенные права в рамках оказания финансовых услуг\" ~₽31.6m) and has posted enormous non-operating losses since FY2023: -₽48.6m (FY2023), -₽5.53bn (FY2024), -₽8.04bn (FY2025) net loss (Тыс. руб. units confirmed on the filing's own cover page), driven almost entirely by \"Отчисления в оценочные резервы\" (provisioning/write-down charges) inside \"Прочие расходы\", not by any operating cost of sales (Себестоимость продаж, line 2120, is literally 0 in the FY2025 filing). Read this as a dormant, financially-engineered shell that happens to hold a decades-old radar-manufacturing OKVED and legal-entity age — not evidence of actual production capacity — until/unless a future filing or other primary source shows real manufacturing activity resuming under Аэромакс's ownership. The Аэромакс-acquisition and Бессонов-directorship facts stand as originally found; only the \"real manufacturing substance\" characterization is withdrawn. **Name-collision check (2026-09-08):** ИНН 7713133550 is NOT the well-known Ростех/АФК «Система»-adjacent «Концерн «РТИ Системы»» group — that concern's holding entities are separate legal persons, АО «РТИ» (ИНН 5031005664, Ногинск) and АО «УК РТИ» (ИНН 7714847772), confirmed via a bo.nalog.gov.ru name search; no ownership or address link found between either of those and АО «РТИ-Радио». Treat the shared «РТИ» brand prefix as coincidental/reused branding, not a tie to the larger concern, unless a primary source says otherwise. Subsidiaries: none — its own EGRUL выписка (s7345) carries no «Сведения об участии в юридических лицах» section, i.e. it does not itself hold stakes in other companies.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
-    "financials": [],
+    "financials": [
+      {
+        "year": 2021,
+        "revenue": 1.08,
+        "revenue_unit": "million RUB",
+        "profit": 0.364,
+        "profit_unit": "million RUB",
+        "source_id": "s7346",
+        "note": "FY2021: sales revenue (cash-flow line 4111) ₽1.08m; net profit (line 2400) +₽364k — the one profitable year on file."
+      },
+      {
+        "year": 2022,
+        "revenue": null,
+        "profit": -1.78,
+        "profit_unit": "million RUB",
+        "source_id": "s7347",
+        "note": "FY2022 net loss ₽1.78m; fixed assets down to ₽1.47m."
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "profit": -48.621,
+        "profit_unit": "million RUB",
+        "source_id": "s7348",
+        "note": "FY2023 net loss ₽48.6m (later restated to a much larger figure in the FY2024 filing's comparative column — see note on FY2024); fixed assets down to ₽530k; inventory zero."
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "profit": -5533.664,
+        "profit_unit": "million RUB",
+        "source_id": "s7349",
+        "note": "FY2024 net loss ₽5.53bn (Тыс. руб. filing unit confirmed) — the FY2024 filing's own comparative column restates FY2023's loss to ₽6.27bn, materially larger than the ₽48.6m the FY2023 filing itself reported; driven by 'Отчисления в оценочные резервы' (provisioning/write-down charges), not operating costs. Fixed assets down to ₽28,000."
+      },
+      {
+        "year": 2025,
+        "revenue": 0,
+        "revenue_unit": "million RUB",
+        "profit": -8039.174,
+        "profit_unit": "million RUB",
+        "source_id": "s7350",
+        "note": "FY2025 net loss ₽8.04bn; cost of sales (line 2120) is literally 0 — no operating manufacturing activity; fixed assets down to ₽16,000; balance-sheet total assets only ₽363m against this loss, so the loss is a non-cash provisioning/write-down entry, not a cash outflow of that scale."
+      }
+    ],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": null,
@@ -72027,7 +72070,8 @@
       }
     ],
     "_corrected": [
-      "2026-09-08: found via scripts/screen_upr_uchr.py's re-screen of Бессонов С.Н. (part of the Group-1 unverified-people refresh); pulled full EGRUL выписка (s7345) to confirm details and the Аэромакс ownership link directly."
+      "2026-09-08: found via scripts/screen_upr_uchr.py's re-screen of Бессонов С.Н. (part of the Group-1 unverified-people refresh); pulled full EGRUL выписка (s7345) to confirm details and the Аэромакс ownership link directly.",
+      "2026-09-08 (same day, follow-up): pulled all 5 available БФО filings (bo.nalog.gov.ru) and read them in full — found the entity is financially a dormant/write-down shell despite its manufacturing OKVED, corrected tier_basis accordingly; also ruled out a name-collision tie to the larger «Концерн «РТИ Системы»» group; confirmed no subsidiaries of its own."
     ]
   }
 ]
