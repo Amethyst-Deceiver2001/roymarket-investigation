@@ -387,6 +387,46 @@
     "_origin": "manifest"
   },
   {
+    "id": "s7363",
+    "type": "court",
+    "path": "data/sources/A32-19338-2025_20250404_Opredelenie.pdf",
+    "url": null,
+    "captured_date": "2025-04-04",
+    "fiscal_year": null,
+    "as_of": "2025-04-04",
+    "as_of_method": "court:worded-date",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "2312321660",
+      "7731372134"
+    ],
+    "entities": [],
+    "sha256": "96e6a49478156d4cc2a6a0f5ad025011ea9aa001ab76b94465314ccfd1fe6d9a",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s7364",
+    "type": "court",
+    "path": "data/sources/A32-19338-2025_20250602_Reshenija_i_postanovlenija.pdf",
+    "url": null,
+    "captured_date": "2025-06-02",
+    "fiscal_year": null,
+    "as_of": "2025-06-02",
+    "as_of_method": "court:numeric-date",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "2312321660",
+      "7731372134"
+    ],
+    "entities": [],
+    "sha256": "6c932c7ba2cdee1472f7ea03642726f6eaca91885c0a90160aa591ec9c6767ee",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s5264",
     "type": "court",
     "path": "data/sources/A40-106643-2023_20230516_Reshenija_i_postanovlenija.pdf",
@@ -36945,6 +36985,25 @@
     ],
     "entities": [],
     "sha256": "11f666b4147a153a6ba647a084890c34b2a06c6a5969db99dc816afdde48a159",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s7365",
+    "type": "chestny_znak_participant_registry",
+    "path": "data/sources/CHZ_2312321660_20260908_uchastnik-reestr.txt",
+    "url": null,
+    "captured_date": "2026-09-08",
+    "fiscal_year": null,
+    "as_of": "2026-09-08",
+    "as_of_method": "manual:live registry lookup, as_of = capture date (list itself updates daily per its own disclaimer)",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "2312321660"
+    ],
+    "entities": [],
+    "sha256": "392397cca5fc976462af5c138234e7060ae6d8cb7b4312b6b8a25305cb0c97c3",
     "_verified": false,
     "_origin": "manifest"
   },

@@ -139,7 +139,7 @@
 
 ## Litigation
 
-- kad.arbitr.ru is DDoS-Guard-blocked (confirmed 2026-09-08, no scripting route per prior finding) — case details sourced only from the checko.ru-style extract's summary, not the underlying court filing itself. Low-value routine commercial dispute (₽99,540), not prioritized for a manual kad.arbitr.ru pull. [s7361]
+- Primary court filings (определение о принятии, 2025-04-04, s7363; решение, 2025-06-02, s7364) pulled directly from kad.arbitr.ru by the user 2026-09-08, superseding the earlier aggregator-only sourcing (s7361). Routine commercial dispute — Гагаринг as plaintiff recovering an unfulfilled supplier advance, not itself evidentiary of anything beyond ordinary business activity. [s7364]
 
 ## Web & social presence
 
@@ -233,6 +233,7 @@
 | s5447 | Tgpost | Tgpost (TGPOST_multi_20260828-20260904_my_el_lab-week-otryad-gagaring-recruitment.txt) | — | — |
 | s6776 | EGRUL extract | EGRUL extract (EGRUL_2312321660_20260907_ooo-gagaring.pdf) | 2026-09-07 | 2026-09-07 |
 | s7361 | Ооо | Ооо (ООО_ГАГАРИНГ-1232300051235-2026-09-08.pdf) | — | 2026-09-08 |
+| s7364 | arbitration court filing | arbitration court filing (A32-19338-2025_20250602_Reshenija_i_postanovlenija.pdf) | 2025-06-02 | 2025-06-02 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

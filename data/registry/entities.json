@@ -53654,15 +53654,15 @@
     "litigation": [
       {
         "case_number": "А32-19338/2025",
-        "court": "Арбитражный суд Краснодарского края",
+        "court": "Арбитражный суд Краснодарского края (судья М.М. Данько)",
         "role": "истец",
-        "opposing_party": "ООО «ДАР», ИНН 7731372134, ОГРН 1177746591450",
-        "subject": "О неисполнении или ненадлежащем исполнении обязательств по договорам поставки",
+        "opposing_party": "ООО «ДАР», Московская обл., г. Мытищи, ИНН 7731372134, ОГРН 1177746591450",
+        "subject": "Взыскание неотработанного аванса по договору поставки № У5-29483 от 13.01.2025 (₽94,800) и неустойки за 21.01.2025-20.03.2025 (₽4,740)",
         "amount": 99540,
-        "filed": "2026-04-02",
-        "outcome": "Иск удовлетворён полностью; выдан исполнительный лист (2025-07-21)",
-        "source_id": "s7361",
-        "note": "kad.arbitr.ru is DDoS-Guard-blocked (confirmed 2026-09-08, no scripting route per prior finding) — case details sourced only from the checko.ru-style extract's summary, not the underlying court filing itself. Low-value routine commercial dispute (₽99,540), not prioritized for a manual kad.arbitr.ru pull."
+        "filed": "2025-04-04",
+        "outcome": "Иск удовлетворён в полном объёме 2025-06-02 (упрощённое производство): взыскано ₽94,800 + ₽4,740 неустойки + ₽10,000 госпошлины с ООО «ДАР» в пользу ООО «Гагаринг». Решение подлежало немедленному исполнению.",
+        "source_id": "s7364",
+        "note": "Primary court filings (определение о принятии, 2025-04-04, s7363; решение, 2025-06-02, s7364) pulled directly from kad.arbitr.ru by the user 2026-09-08, superseding the earlier aggregator-only sourcing (s7361). Routine commercial dispute — Гагаринг as plaintiff recovering an unfulfilled supplier advance, not itself evidentiary of anything beyond ordinary business activity."
       }
     ],
     "licences": [],
@@ -53912,6 +53912,9 @@
     "_raw": {
       "context": "Й.МАРКЕТ itself and doesn't on its own establish that tie; worth checking against a fresh РОЙ.МАРКЕТ vendor listing, not folded in as confirmed. Лаборатория Гагаринг is now resolved — ООО «Гагаринг» (ИНН 2312321660, Краснодар; registered 04.09.2023), identified via its own site (gagaring.ru, a self-described \"маркетплейс электроники для БПЛА и FPV\" operated by \"Гагаринг. Лаборатория электроники\") and confirmed "
     },
+    "why": [
+      "2026-09-08: user pulled the actual kad.arbitr.ru court filings for А32-19338/2025 (определение + решение), confirming and detailing the earlier aggregator-sourced litigation entry — case is a routine unfulfilled-advance recovery against ООО «ДАР», not otherwise notable. Also confirmed directly (not via aggregator) that Гагаринг is a registered participant in the Честный Знак/ГИС МТ mandatory goods-marking system under the «Радиоэлектронная продукция» commodity group, розница/УОТ type — official registry lookup (xn--80ajghhoc2aj1c8b.xn--p1ai/business/spisokuot/), CAPTCHA solved via chrome-devtools browser session, s7365."
+    ],
     "_corrected": [
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
