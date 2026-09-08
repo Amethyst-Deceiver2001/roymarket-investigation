@@ -173,6 +173,7 @@
 - **ООО «Интел Дрон»** — доля участия 50% [s5333]
 - **ООО «НПО Эйлер»** — доля участия 50% [s5333]
 - **АНО ДПО «Образовательный центр Гагаринг»** — учредитель [s5333]
+- **ООО «Лаборатория Янгеля»** — доля участия 50% [s7362]
 
 ## Open questions
 
@@ -233,6 +234,7 @@
 | s5447 | Tgpost | Tgpost (TGPOST_multi_20260828-20260904_my_el_lab-week-otryad-gagaring-recruitment.txt) | — | — |
 | s6776 | EGRUL extract | EGRUL extract (EGRUL_2312321660_20260907_ooo-gagaring.pdf) | 2026-09-07 | 2026-09-07 |
 | s7361 | Ооо | Ооо (ООО_ГАГАРИНГ-1232300051235-2026-09-08.pdf) | — | 2026-09-08 |
+| s7362 | EGRUL extract | EGRUL extract (EGRUL_2373028450_20260908_ooo-laboratoriya-yangelya.pdf) | 2026-09-08 | 2026-09-08 |
 | s7364 | arbitration court filing | arbitration court filing (A32-19338-2025_20250602_Reshenija_i_postanovlenija.pdf) | 2025-06-02 | 2025-06-02 |
 
 ---
