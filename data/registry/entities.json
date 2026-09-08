@@ -53651,7 +53651,20 @@
     "securing_measures": [],
     "securing_measures_checked_at": "2026-09-06",
     "sanctions": [],
-    "litigation": [],
+    "litigation": [
+      {
+        "case_number": "А32-19338/2025",
+        "court": "Арбитражный суд Краснодарского края",
+        "role": "истец",
+        "opposing_party": "ООО «ДАР», ИНН 7731372134, ОГРН 1177746591450",
+        "subject": "О неисполнении или ненадлежащем исполнении обязательств по договорам поставки",
+        "amount": 99540,
+        "filed": "2026-04-02",
+        "outcome": "Иск удовлетворён полностью; выдан исполнительный лист (2025-07-21)",
+        "source_id": "s7361",
+        "note": "kad.arbitr.ru is DDoS-Guard-blocked (confirmed 2026-09-08, no scripting route per prior finding) — case details sourced only from the checko.ru-style extract's summary, not the underlying court filing itself. Low-value routine commercial dispute (₽99,540), not prioritized for a manual kad.arbitr.ru pull."
+      }
+    ],
     "licences": [],
     "trademarks": [],
     "patents": [
@@ -53688,6 +53701,12 @@
         "count": 105,
         "note": "Среднегодовая численность работающих за 2025 год и численность персонала на 31.12.2025 (совпадают), per FY2025 audit report",
         "source_id": "s5333"
+      },
+      {
+        "count": 74,
+        "as_of": "2025-12-31",
+        "source_id": "s7361",
+        "note": "checko.ru-style aggregator figure (среднесписочная численность за 2025) — conflicts with the FY2025 audit report's own figure of 105 (s5333). Not reconciled; flagged as a discrepancy, audit-report figure treated as more authoritative pending a fresh check."
       }
     ],
     "state_programs": [
@@ -53906,7 +53925,8 @@
       "2026-09-03: removed 'state_programs' from this (slug-keyed) entry — the ИНН-keyed entry's list (applied last) is a strict superset (adds the ГИСП Атлас промышленности entry); no data lost, duplicate-field cleanup, part of a registry-wide slug/ИНН collision sweep.",
       "2026-09-03: removed 'subsidiaries' from this (slug-keyed) entry — the ИНН-keyed entry's list (applied last) has the same 4 entries but with slug/inn filled in for the АНО «Образовательный центр Гагаринг» entry (this entry left it null); no data lost, kept the more complete version.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-      "2026-09-07: merged duplicate correction key '2312321660' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
+      "2026-09-07: merged duplicate correction key '2312321660' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class).",
+      "2026-09-08: a fresh checko.ru-style extract (s7361) surfaced a litigation record (А32-19338/2025, won against ООО «ДАР») not previously captured, plus a workforce figure (74 employees, среднесписочная численность за 2025) that conflicts with the FY2025 audit report's stated 105 (s5333, среднегодовая численность/численность на 31.12.2025). Not reconciled — flagged in workforce_history rather than overwritten; the audit-report figure is treated as more authoritative (primary financial filing vs. third-party aggregator) but the discrepancy is worth resolving against a fresh EGRUL/Rosstat pull."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -72323,5 +72343,129 @@
     "aleph_screened_at": "2026-09-08",
     "gur_matches": [],
     "gur_screened_at": "2026-09-08"
+  },
+  {
+    "slug": "ooo-laboratoriya-yangelya",
+    "name_ru": "Общество с ограниченной ответственностью «Лаборатория Янгеля»",
+    "name_latin": null,
+    "legal_form": null,
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "2373028450",
+    "ogrn": "1262300002535",
+    "extra_ids": null,
+    "registered": "27.01.2026",
+    "address": "353201, Краснодарский край, м.р-н Динской, с.п. Динское, ст-ца Динская, пер. Тельмана, д. 3 стр. 13, этаж 2, помещ. 22",
+    "okved_code": "62.01",
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "Хатьянов Сергей Валерьевич",
+    "director_history": [
+      {
+        "value": "Чугалинский Константин Андреевич",
+        "as_of": "2026-01-27",
+        "source_id": "s7362",
+        "note": "Founding director per own EGRUL extract"
+      },
+      {
+        "value": "Хатьянов Сергей Валерьевич (ИНН 232204433988)",
+        "as_of": "2026-07-27",
+        "source_id": "s7362",
+        "note": "Current director per own EGRUL extract"
+      }
+    ],
+    "founders": [
+      {
+        "name": "Чугалинский Константин Андреевич",
+        "inn_personal": "780446615114",
+        "share_percent": 50,
+        "nominal_value": 5000,
+        "source_id": "s7362"
+      },
+      {
+        "name": "ООО «Гагаринг»",
+        "inn": "2312321660",
+        "share_percent": 50,
+        "nominal_value": 5000,
+        "source_id": "s7362"
+      }
+    ],
+    "founders_history": [
+      {
+        "value": [
+          {
+            "name": "Чугалинский Константин Андреевич",
+            "inn_personal": "780446615114",
+            "share_percent": 50,
+            "nominal_value": 5000
+          },
+          {
+            "name": "ООО «Гагаринг»",
+            "inn": "2312321660",
+            "share_percent": 50,
+            "nominal_value": 5000
+          }
+        ],
+        "as_of": "2026-01-27",
+        "source_id": "s7362",
+        "note": "Founding split, unchanged as of the 2026-09-08 EGRUL pull."
+      }
+    ],
+    "charter_capital": 10000,
+    "charter_capital_history": [
+      {
+        "value": 10000,
+        "as_of": "2026-01-27",
+        "source_id": "s7362"
+      }
+    ],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "network",
+    "tier_basis": "50%-owned subsidiary of ООО «Гагаринг» (Барашков А.С.'s core СВО-drone-training entity), founded 2026-01-27 — Гагаринг's 7th recorded subsidiary/investment, alongside Ассоциация АРРС, АНО ДПО «Образовательный Центр Гагаринг», ООО «Интел Дрон», ООО «НПО Эйлер», ООО «Авирон». Software-development OKVED (62.01) matches the pattern of Гагаринг spinning up small specialised satellites rather than a standalone manufacturer.",
+    "cbst_tie": "not_established",
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "name_en": "LLC \"Yangel Lab\"",
+    "okved_secondary": [],
+    "_corrected": [
+      "Discovered 2026-09-08 in a checko.ru-style company-data extract (s7361) of ООО «Гагаринг» listing its 'Учрежденные юридические лица' — Лаборатория Янгеля was not previously in the registry.",
+      "Corroborated via egrul.nalog.ru open API and a full signed EGRUL выписка pull (2026-09-08, s7362) — confirms ИНН/ОГРН, 50/50 founder split (Чугалинский Константин Андреевич / ООО «Гагаринг»), director change Чугалинский→Хатьянов (2026-07-27), OKVED 62.01, charter capital ₽10,000."
+    ]
   }
 ]

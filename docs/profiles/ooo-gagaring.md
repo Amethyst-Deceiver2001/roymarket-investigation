@@ -94,6 +94,7 @@
 | 4 | 2023-12-31 | Численность персонала на 31.12.2023, per FY2025 audit report [s5333] |
 | 34 | 2024-12-31 | Численность персонала на 31.12.2024, per FY2025 audit report [s5333] |
 | 105 | 2025-12-31 | Среднегодовая численность работающих за 2025 год и численность персонала на 31.12.2025 (совпадают), per FY2025 audit report [s5333] |
+| 74 | 2025-12-31 | checko.ru-style aggregator figure (среднесписочная численность за 2025) — conflicts with the FY2025 audit report's own figure of 105 (s5333). Not reconciled; flagged as a discrepancy, audit-report figure treated as more authoritative pending a fresh check. [s7361] |
 
 ## Self-reported marketing claims
 
@@ -135,6 +136,10 @@
 | Title | Reg. no. | Filed | Inventors |
 |---|---|---|---|
 | Способ и система плазменной сварки плавящимся электродом | RU2792246C1 | — | Барашков Александр Сергеевич (RU) |
+
+## Litigation
+
+- kad.arbitr.ru is DDoS-Guard-blocked (confirmed 2026-09-08, no scripting route per prior finding) — case details sourced only from the checko.ru-style extract's summary, not the underlying court filing itself. Low-value routine commercial dispute (₽99,540), not prioritized for a manual kad.arbitr.ru pull. [s7361]
 
 ## Web & social presence
 
@@ -227,6 +232,7 @@
 | s5445 | Tgpost | Tgpost (TGPOST_multi_20241222-20250107_my_el_lab-detector-and-weapon-attachment-products.txt) | — | — |
 | s5447 | Tgpost | Tgpost (TGPOST_multi_20260828-20260904_my_el_lab-week-otryad-gagaring-recruitment.txt) | — | — |
 | s6776 | EGRUL extract | EGRUL extract (EGRUL_2312321660_20260907_ooo-gagaring.pdf) | 2026-09-07 | 2026-09-07 |
+| s7361 | Ооо | Ооо (ООО_ГАГАРИНГ-1232300051235-2026-09-08.pdf) | — | 2026-09-08 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
