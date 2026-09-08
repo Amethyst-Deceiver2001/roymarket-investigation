@@ -4082,11 +4082,48 @@
       "tier": "manufacturer",
       "tier_basis": "Added 2026-09-08: surfaced via a ФНС director/founder re-screen of Бессонов Сергей Николаевич, already on file as ООО «Аэромакс»'s own director. His own EGRUL выписка (s7345) shows this is a real, long-established (registered 17.04.1997, pre-2002 formation) legal entity carrying a genuine electronics-manufacturing OKVED stack (26.51.2 primary — same radar/radionavigation code as АО «НПП «Радар ММС»» elsewhere in this registry — plus PCB/integrated-circuit/electronic-component manufacturing codes). Its sole shareholder (100%, acquired 13.02.2025) is ООО «Группа компаний «Аэромакс»» (ИНН 7710974353) — a corporate acquisition by the already-known Аэромакс group, not an unrelated company, and Бессонов was installed as its GD six days later (19.02.2026). No EGRUL restriction/недостоверность flags found. **Correction 2026-09-08 (same day), after pulling and reading all 5 available БФО filings (FY2021–2025, s7346–s7350, via bo.nalog.gov.ru — see [[bo_nalog_gov_ru_bfo_download_uncaptchad]]): despite the manufacturing OKVED, this is NOT an operating manufacturer.** Fixed assets have been near-zero and shrinking every year on file (₽2.409m in FY2021 down to ₽16,000 by FY2025); inventory (Запасы, line 1210) is zero in every filing; actual product/goods/services sales revenue (cash-flow line 4111) was ₽1.08m in FY2021 and ₽359k in FY2020 — trivial, and no later filing even shows a comparable line, consistent with the business having gone effectively dormant. The company instead carries large financial-instrument positions (loans issued ~₽206–255m, \"приобретенные права в рамках оказания финансовых услуг\" ~₽31.6m) and has posted enormous non-operating losses since FY2023: -₽48.6m (FY2023), -₽5.53bn (FY2024), -₽8.04bn (FY2025) net loss (Тыс. руб. units confirmed on the filing's own cover page), driven almost entirely by \"Отчисления в оценочные резервы\" (provisioning/write-down charges) inside \"Прочие расходы\", not by any operating cost of sales (Себестоимость продаж, line 2120, is literally 0 in the FY2025 filing). Read this as a dormant, financially-engineered shell that happens to hold a decades-old radar-manufacturing OKVED and legal-entity age — not evidence of actual production capacity — until/unless a future filing or other primary source shows real manufacturing activity resuming under Аэромакс's ownership. The Аэромакс-acquisition and Бессонов-directorship facts stand as originally found; only the \"real manufacturing substance\" characterization is withdrawn. **Name-collision check (2026-09-08):** ИНН 7713133550 is NOT the well-known Ростех/АФК «Система»-adjacent «Концерн «РТИ Системы»» group — that concern's holding entities are separate legal persons, АО «РТИ» (ИНН 5031005664, Ногинск) and АО «УК РТИ» (ИНН 7714847772), confirmed via a bo.nalog.gov.ru name search; no ownership or address link found between either of those and АО «РТИ-Радио». Treat the shared «РТИ» brand prefix as coincidental/reused branding, not a tie to the larger concern, unless a primary source says otherwise. Subsidiaries: none — its own EGRUL выписка (s7345) carries no «Сведения об участии в юридических лицах» section, i.e. it does not itself hold stakes in other companies.",
       "financials": [
-        {"year": 2021, "revenue": 1.08, "revenue_unit": "million RUB", "profit": 0.364, "profit_unit": "million RUB", "source_id": "s7346", "note": "FY2021: sales revenue (cash-flow line 4111) ₽1.08m; net profit (line 2400) +₽364k — the one profitable year on file."},
-        {"year": 2022, "revenue": null, "profit": -1.78, "profit_unit": "million RUB", "source_id": "s7347", "note": "FY2022 net loss ₽1.78m; fixed assets down to ₽1.47m."},
-        {"year": 2023, "revenue": null, "profit": -48.621, "profit_unit": "million RUB", "source_id": "s7348", "note": "FY2023 net loss ₽48.6m (later restated to a much larger figure in the FY2024 filing's comparative column — see note on FY2024); fixed assets down to ₽530k; inventory zero."},
-        {"year": 2024, "revenue": null, "profit": -5533.664, "profit_unit": "million RUB", "source_id": "s7349", "note": "FY2024 net loss ₽5.53bn (Тыс. руб. filing unit confirmed) — the FY2024 filing's own comparative column restates FY2023's loss to ₽6.27bn, materially larger than the ₽48.6m the FY2023 filing itself reported; driven by 'Отчисления в оценочные резервы' (provisioning/write-down charges), not operating costs. Fixed assets down to ₽28,000."},
-        {"year": 2025, "revenue": 0, "revenue_unit": "million RUB", "profit": -8039.174, "profit_unit": "million RUB", "source_id": "s7350", "note": "FY2025 net loss ₽8.04bn; cost of sales (line 2120) is literally 0 — no operating manufacturing activity; fixed assets down to ₽16,000; balance-sheet total assets only ₽363m against this loss, so the loss is a non-cash provisioning/write-down entry, not a cash outflow of that scale."}
+        {
+          "year": 2021,
+          "revenue": 1.08,
+          "revenue_unit": "million RUB",
+          "profit": 0.364,
+          "profit_unit": "million RUB",
+          "source_id": "s7346",
+          "note": "FY2021: sales revenue (cash-flow line 4111) ₽1.08m; net profit (line 2400) +₽364k — the one profitable year on file."
+        },
+        {
+          "year": 2022,
+          "revenue": null,
+          "profit": -1.78,
+          "profit_unit": "million RUB",
+          "source_id": "s7347",
+          "note": "FY2022 net loss ₽1.78m; fixed assets down to ₽1.47m."
+        },
+        {
+          "year": 2023,
+          "revenue": null,
+          "profit": -48.621,
+          "profit_unit": "million RUB",
+          "source_id": "s7348",
+          "note": "FY2023 net loss ₽48.6m (later restated to a much larger figure in the FY2024 filing's comparative column — see note on FY2024); fixed assets down to ₽530k; inventory zero."
+        },
+        {
+          "year": 2024,
+          "revenue": null,
+          "profit": -5533.664,
+          "profit_unit": "million RUB",
+          "source_id": "s7349",
+          "note": "FY2024 net loss ₽5.53bn (Тыс. руб. filing unit confirmed) — the FY2024 filing's own comparative column restates FY2023's loss to ₽6.27bn, materially larger than the ₽48.6m the FY2023 filing itself reported; driven by 'Отчисления в оценочные резервы' (provisioning/write-down charges), not operating costs. Fixed assets down to ₽28,000."
+        },
+        {
+          "year": 2025,
+          "revenue": 0,
+          "revenue_unit": "million RUB",
+          "profit": -8039.174,
+          "profit_unit": "million RUB",
+          "source_id": "s7350",
+          "note": "FY2025 net loss ₽8.04bn; cost of sales (line 2120) is literally 0 — no operating manufacturing activity; fixed assets down to ₽16,000; balance-sheet total assets only ₽363m against this loss, so the loss is a non-cash provisioning/write-down entry, not a cash outflow of that scale."
+        }
       ],
       "products": [],
       "why": [
@@ -26236,16 +26273,74 @@
     },
     "ooo-tskbr": {
       "set": {
-        "state_programs": [
+        "_verified": true,
+        "inn": "5040176793",
+        "ogrn": "1225000003458",
+        "registered": "20.01.2022",
+        "address": "140180, Московская область, г.о. Жуковский, г. Жуковский, ул. Луч, д. 24/1А, этаж 2, помещ. 112",
+        "okved_code": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "director": "Косолапов Олег Юрьевич",
+        "director_history": [
           {
-            "as_of": "2026-09-03",
-            "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
-            "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
-            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
-            "source_id": "s5346"
+            "value": "Кузякин Дмитрий Васильевич",
+            "as_of": "20.01.2022",
+            "source_id": "s7351",
+            "note": "Founding GD, per EGRUL. Also personal ИНН 501306766736 — same person as the individually EU/UA/CH-sanctioned chief designer already on file (kuzyakin-dmitriy-vasilevich)."
+          },
+          {
+            "value": "Косолапов Олег Юрьевич",
+            "as_of": "20.05.2025",
+            "source_id": "s7351",
+            "note": "ИНН 645001842561. Succeeded Кузякин as GD; Кузякин remains a 25% co-founder."
+          }
+        ],
+        "founders": "Кузякин Д.В. (25%), Мазалова Виктория Вячеславовна (26%), Фонд содействия развитию науки, инноваций и технологий (24%, ИНН 5040097774), ООО «Инвестпроектгрупп» (25%, ИНН 5040127965)",
+        "founders_history": [
+          {
+            "value": "Кузякин Дмитрий Васильевич (ИНН 501306766736), 25%; Мазалова Виктория Вячеславовна (ИНН 482412647610), 26%; Фонд содействия развитию науки, инноваций и технологий (ИНН 5040097774, ОГРН 1105000000874), 24%; ООО «Инвестпроектгрупп» (ИНН 5040127965, ОГРН 1135040012788), 25%",
+            "as_of": "13.12.2023",
+            "source_id": "s7351"
+          }
+        ],
+        "charter_capital": 10000,
+        "charter_capital_history": [
+          {
+            "value": 10000,
+            "as_of": "20.01.2022",
+            "source_id": "s7351"
+          }
+        ],
+        "egrul_flags": [
+          {
+            "flag": "недостоверность сведений о юридическом лице",
+            "date": "30.03.2022",
+            "source_id": "s7351",
+            "note": "Flagged then superseded by a corrective change entry two months later (30.05.2022, ГРН 2225001209860) — resolved and stale, not current as of this 08.09.2026 extract."
+          }
+        ],
+        "sanctions": [
+          {
+            "date": null,
+            "regime": null,
+            "note": "The company itself (not only chief-designer/co-founder Кузякин, already on file as individually sanctioned) was named sanctioned per Chadaev's channel corroboration of an Interfax (20.05.2025) report on Ushkuynik-network sanctions — see docs/index.html's ExpoUAV section. Regime/date not yet independently confirmed against a primary sanctions-list text; treat as PLAUSIBLE pending that check.",
+            "source_id": null
+          }
+        ],
+        "products": [
+          {
+            "name_ru": "«Джокер»",
+            "note": "FPV drone; ЦБСТ credits it with the Russian SSO's first FPV combat use, 10 March 2022 (Hostomel axis).",
+            "source_id": null
           }
         ]
-      }
+      },
+      "verified_against": [
+        "s7351"
+      ],
+      "why": [
+        "2026-09-08: closed the _scaffold_leads.json unattributed-ИНН gap for 5040176793 — the entity already existed in the registry (table-scaffolded from docs/index.html prose) but had no inn/ogrn/founders/director. Pulled a full EGRUL выписка (s7351) directly to fill it in; confirms the founders list already on file for Кузякин (via audit-it.ru/checko.ru inference) and adds the GD succession (Кузякин -> Косолапов, 20.05.2025) not previously recorded."
+      ]
     },
     "ooo-tsugam": {
       "set": {

@@ -1,13 +1,17 @@
 # ООО «ЦКБР»
 
-`manufacturer` `WB: not_checked` 
+`sanctioned` `manufacturer` `WB: not_checked` 
 
- · Zhukovsky
+ИНН 5040176793 · ОГРН 1225000003458 · Zhukovsky
 
 ## At a glance
 
 - **Legal form:** OOO (limited liability company)
-- **Director:** Кузякин Дмитрий Васильевич (chief designer)
+- **Registered:** 20.01.2022
+- **Address:** 140180, Московская область, г.о. Жуковский, г. Жуковский, ул. Луч, д. 24/1А, этаж 2, помещ. 112
+- **Director:** Косолапов Олег Юрьевич
+- **Charter capital:** ₽10,000
+- **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -16,19 +20,36 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Кузякин Дмитрий Васильевич (chief designer) | — | from brief:manufacturers-table:line-999, unverified |
+| Кузякин Дмитрий Васильевич | 20.01.2022 | Founding GD, per EGRUL. Also personal ИНН 501306766736 — same person as the individually EU/UA/CH-sanctioned chief designer already on file (kuzyakin-dmitriy-vasilevich). [s7351] |
+| Косолапов Олег Юрьевич | 20.05.2025 | ИНН 645001842561. Succeeded Кузякин as GD; Кузякин remains a 25% co-founder. [s7351] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Кузякин Дмитрий Васильевич (ИНН 501306766736), 25%; Мазалова Виктория Вячеславовна (ИНН 482412647610), 26%; Фонд содействия развитию науки, инноваций и технологий (ИНН 5040097774, ОГРН 1105000000874), 24%; ООО «Инвестпроектгрупп» (ИНН 5040127965, ОГРН 1135040012788), 25% | 13.12.2023 |  [s7351] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 20.01.2022 |  [s7351] |
 
 ## Products
 
-- **Джокер**
+- **«Джокер»**
 
-## State-program participation
+## Sanctions & screening
 
-- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
+**Sanctioned**
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 5 OCCRP Aleph match(es) (screened 2026-09-05).
+
+## Registry flags
+
+- Flagged then superseded by a corrective change entry two months later (30.05.2022, ГРН 2225001209860) — resolved and stale, not current as of this 08.09.2026 extract.
 
 ## Principals & persons of interest
 
@@ -46,7 +67,7 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| s7351 | EGRUL extract | EGRUL extract (EGRUL_5040176793_20260908_ooo-tskbr.pdf) | 2026-09-08 | 2026-09-08 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

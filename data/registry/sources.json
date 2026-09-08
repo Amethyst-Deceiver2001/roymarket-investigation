@@ -38486,7 +38486,7 @@
     "as_of": "2026-08-22",
     "as_of_method": "egrul_api:pull-date",
     "supersedes": null,
-    "superseded_by": null,
+    "superseded_by": "s7351",
     "inns": [],
     "entities": [],
     "sha256": "f7aa3ab7687443d27406c305a83ac2ede0856042199387da87c9fe92557a25be",
@@ -41412,6 +41412,29 @@
     ],
     "entities": [],
     "sha256": "7d46a4c12b83cc163da4fc19725c662104c357e1e94bd1ebf6302035d4babef5",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s7351",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_5040176793_20260908_ooo-tskbr.pdf",
+    "url": null,
+    "captured_date": "2026-09-08",
+    "fiscal_year": null,
+    "as_of": "2026-09-08",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": "s0428",
+    "superseded_by": null,
+    "inns": [
+      "482412647610",
+      "501306766736",
+      "5040097774",
+      "5040127965",
+      "645001842561"
+    ],
+    "entities": [],
+    "sha256": "4d515b9ec9c5e8c549a23a92da9038340ac3c887e6634085fe8d0f584f83432b",
     "_verified": false,
     "_origin": "manifest"
   },

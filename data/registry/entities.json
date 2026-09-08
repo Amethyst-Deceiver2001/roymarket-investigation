@@ -12481,27 +12481,45 @@
     "legal_form": "ООО",
     "brand_ru": null,
     "brand_latin": null,
-    "inn": null,
-    "ogrn": null,
-    "registered": null,
-    "address": null,
+    "inn": "5040176793",
+    "ogrn": "1225000003458",
+    "registered": "20.01.2022",
+    "address": "140180, Московская область, г.о. Жуковский, г. Жуковский, ул. Луч, д. 24/1А, этаж 2, помещ. 112",
     "city": "Zhukovsky",
-    "okved_code": null,
-    "okved_label": null,
+    "okved_code": "30.30",
+    "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
     "okved_mismatch": null,
-    "director": "Кузякин Дмитрий Васильевич (chief designer)",
+    "director": "Косолапов Олег Юрьевич",
     "director_history": [
       {
-        "value": "Кузякин Дмитрий Васильевич (chief designer)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from brief:manufacturers-table:line-999, unverified"
+        "value": "Кузякин Дмитрий Васильевич",
+        "as_of": "20.01.2022",
+        "source_id": "s7351",
+        "note": "Founding GD, per EGRUL. Also personal ИНН 501306766736 — same person as the individually EU/UA/CH-sanctioned chief designer already on file (kuzyakin-dmitriy-vasilevich)."
+      },
+      {
+        "value": "Косолапов Олег Юрьевич",
+        "as_of": "20.05.2025",
+        "source_id": "s7351",
+        "note": "ИНН 645001842561. Succeeded Кузякин as GD; Кузякин remains a 25% co-founder."
       }
     ],
-    "founders": [],
-    "founders_history": [],
-    "charter_capital": null,
-    "charter_capital_history": [],
+    "founders": "Кузякин Д.В. (25%), Мазалова Виктория Вячеславовна (26%), Фонд содействия развитию науки, инноваций и технологий (24%, ИНН 5040097774), ООО «Инвестпроектгрупп» (25%, ИНН 5040127965)",
+    "founders_history": [
+      {
+        "value": "Кузякин Дмитрий Васильевич (ИНН 501306766736), 25%; Мазалова Виктория Вячеславовна (ИНН 482412647610), 26%; Фонд содействия развитию науки, инноваций и технологий (ИНН 5040097774, ОГРН 1105000000874), 24%; ООО «Инвестпроектгрупп» (ИНН 5040127965, ОГРН 1135040012788), 25%",
+        "as_of": "13.12.2023",
+        "source_id": "s7351"
+      }
+    ],
+    "charter_capital": 10000,
+    "charter_capital_history": [
+      {
+        "value": 10000,
+        "as_of": "20.01.2022",
+        "source_id": "s7351"
+      }
+    ],
     "address_history": [],
     "name_history": [],
     "facility_type": null,
@@ -12512,13 +12530,31 @@
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [
-      "Джокер"
+      {
+        "name_ru": "«Джокер»",
+        "note": "FPV drone; ЦБСТ credits it with the Russian SSO's first FPV combat use, 10 March 2022 (Hostomel axis).",
+        "source_id": null
+      }
     ],
     "financials": [],
-    "egrul_flags": [],
+    "egrul_flags": [
+      {
+        "flag": "недостоверность сведений о юридическом лице",
+        "date": "30.03.2022",
+        "source_id": "s7351",
+        "note": "Flagged then superseded by a corrective change entry two months later (30.05.2022, ГРН 2225001209860) — resolved and stale, not current as of this 08.09.2026 extract."
+      }
+    ],
     "securing_measures": [],
     "securing_measures_checked_at": null,
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": null,
+        "regime": null,
+        "note": "The company itself (not only chief-designer/co-founder Кузякин, already on file as individually sanctioned) was named sanctioned per Chadaev's channel corroboration of an Interfax (20.05.2025) report on Ushkuynik-network sanctions — see docs/index.html's ExpoUAV section. Regime/date not yet independently confirmed against a primary sanctions-list text; treat as PLAUSIBLE pending that check.",
+        "source_id": null
+      }
+    ],
     "litigation": [],
     "licences": [],
     "trademarks": [],
@@ -12526,15 +12562,7 @@
     "foreign_components": [],
     "government_contracts": [],
     "workforce_history": [],
-    "state_programs": [
-      {
-        "as_of": "2026-09-03",
-        "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
-        "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
-        "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly).",
-        "source_id": "s5346"
-      }
-    ],
+    "state_programs": [],
     "marketing_claims": [],
     "battlefield_evidence": [],
     "domain_history": [],
@@ -12550,15 +12578,19 @@
     "open_questions": [],
     "sources": [],
     "confidence": null,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:manufacturers-table:line-999",
     "_raw": {
       "company": "ООО «ЦКБР» (Zhukovsky)",
       "principal": "Кузякин Дмитрий Васильевич (chief designer)",
       "notes": "«Джокер» FPV drone — Russian SSO's first FPV combat use, 10 Mar 2022 (Hostomel). Kuzyakin EU-sanctioned individually, 2025."
     },
-    "_corrected": null,
-    "_verified_against": null,
+    "_corrected": [
+      "2026-09-08: closed the _scaffold_leads.json unattributed-ИНН gap for 5040176793 — the entity already existed in the registry (table-scaffolded from docs/index.html prose) but had no inn/ogrn/founders/director. Pulled a full EGRUL выписка (s7351) directly to fill it in; confirms the founders list already on file for Кузякин (via audit-it.ru/checko.ru inference) and adds the GD succession (Кузякин -> Косолапов, 20.05.2025) not previously recorded."
+    ],
+    "_verified_against": [
+      "s7351"
+    ],
     "opensanctions_matches": [
       {
         "match_id": "NK-dXAURt3D53BFeqUMWLDB89",
