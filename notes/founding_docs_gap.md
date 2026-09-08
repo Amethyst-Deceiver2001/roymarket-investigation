@@ -23,7 +23,7 @@ manifest column comes back empty — this recovered 2 bundles that were
 already sitting in `data/sources/` since 19.08.2026 but had been miscounted
 as gaps (`ooo-npo-nebo`, `ooo-arkhangel`).
 
-**26 entities now have a founding doc** — excluded from the gap list below:
+**29 entities now have a founding doc** — excluded from the gap list below (3 added 2026-09-08: АО «Проминвест», ООО «Гаскар», ООО «Центр беспилотных систем» (Tula) — not yet read/wired in, just archived):
 
 - АНО «ЦБСТ» | Centre for Unmanned Systems & Technologies (`ano-tsbst-centre-for-unmanned-systems-technologies`) — bespoke UD zip
 - АО «Площадь» (`ao-ploshchad`) — bespoke UD zip
@@ -51,8 +51,11 @@ as gaps (`ooo-npo-nebo`, `ooo-arkhangel`).
 - ООО «Центр Динарус» (`ooo-tsentr-dinarus`) — bespoke UD zip
 - ООО НПК «Герон» (`ooo-npk-geron`) — bespoke UD zip
 - Общество с ограниченной ответственностью «Кронштадт Беспилотные Системы» (`ooo-kronshtadt-bespilotnye-sistemy`) — bespoke UD zip
+- АО «Проминвест» (`ao-prominvest`) — bespoke UD zip, `UD_1237700148180_20260908_ao-prominvest.zip`
+- ООО «Гаскар» (`ooo-gaskar`) — bespoke UD zip, `UD_1237700273744_20260908_ooo-gaskar.zip`
+- ООО «Центр беспилотных систем» (Tula) (`ooo-tsentr-bespilotnykh-sistem-tula`) — bespoke UD zip, `UD_1237100001467_20260908_ooo-tsentr-bespilotnykh-sistem-tula.zip`
 
-## Attempted at ФНС, deprioritized (7 entities)
+## Attempted at ФНС, deprioritized (15 entities)
 
 Attempted via the ФНС portal 2026-09-07 but not obtainable — ФНС returned a
 "документ формируется" (document is being digitized) response rather than
@@ -73,10 +76,18 @@ a specific reason to believe ФНС has since processed one of these ОГРН.
 | АО «НИИ СТТ» (`ao-nii-stt`) | 1026701461160 | 6730046954 | **Found 2026-09-08, previously untracked here**: hit "not digitized" pre-2026-08-20 (undated attempt, recorded only in prose — docs/index.html's АО «НИИ СТТ» section). A primary EGRUL extract (not the founding doc itself) was separately obtained via nalog.gov.ru, user-supplied, 20.08.2026 — that's a different document type and doesn't resolve this gap. |
 | ООО «Ушкуйник-СП» (`ooo-ushkuynik-sp`) | 1245300003827 | 5300015906 | **Found 2026-09-08, previously untracked here**: same undated "not digitized" wall, per the same АО «НИИ СТТ» prose ("the same wall as Ушкуйник-СП и Атлант Аэро"). |
 | ООО «Атлант Аэро» (`ooo-atlant-aero`) | 1236100025633 | 6154165878 | **Found 2026-09-08, previously untracked here**: same undated "not digitized" wall — the largest single manufacturer in this brief (854 employees, ₽59.08bn income), so worth a retry later even though deprioritized for now; flagging here specifically so it isn't recommended for a fresh pull attempt by mistake, as it nearly was on 2026-09-08. |
+| АО «НИИ «Вектор»» (`ao-nii-vektor`) | 1117847020400 | 7813491943 | 2026-09-08: "документ формируется" at ФНС — user attempted, part of that day's 12-entity pull batch. Deprioritized. |
+| АО «Спецтех Инвестиции» (`ao-spetstekh-investitsii-ao-spetstekh-pervyy`) | 1257700523079 | 9703232234 | 2026-09-08: "документ формируется" at ФНС. Deprioritized. |
+| АО «Спецтех Первый» (`ao-spetstekh-perviy`) | 1267700128376 | 9703244871 | 2026-09-08: "документ формируется" at ФНС. Deprioritized. |
+| Фонд «Наша Правда» (`fond-nasha-pravda`) | 1237700218612 | 9705196180 | 2026-09-08: "документ формируется" at ФНС. Deprioritized. |
+| ООО «МПТМ» (`ooo-mptm`) | 1257700021468 | 9714068459 | 2026-09-08: "документ формируется" at ФНС. Deprioritized. |
+| АО «Стратим» (`ao-stratim`) | 1237700447324 | 7720901379 | 2026-09-08: "документ формируется" at ФНС. Deprioritized. |
+| АО «Котлин-Новатор» (`ao-kotlin-novator`) | 1027806064571 | 7811075899 | 2026-09-08: "документ формируется" at ФНС. Deprioritized. |
+| ООО «Тримикс» (`ooo-trimiks-bulat-3mx`) | 1237800084235 | 7802942873 | 2026-09-08: "документ формируется" at ФНС (re-attempted; the entity's EGRUL identity was separately already resolved via a different pull, see docs/index.html's footnote — that's a different document type). Deprioritized. |
 
 ## Gap list: live entities with an ОГРН, no founding doc on file
 
-**120 entities.** Pull candidates for a manual ФНС founding-document request
+**109 entities.** Pull candidates for a manual ФНС founding-document request
 (egrul.nalog.ru / nalog.gov.ru portal — no scriptable open-API route exists
 for this document type, confirmed 2026-09-07, see `notes/SOURCE_REGISTER.md`).
 Sorted alphabetically by name. `tier` shown for prioritization.
@@ -90,19 +101,13 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | АО «Борей» | absorbed, no longer exists (`ao-borey-absorbed-no-longer-exists`) | 1247700237663 | 9701280698 | money-layer |
 | АО «Главтехконструкция» (`ao-glavtekhkonstruktsiya`) | 1174632000190 | 4611014597 | money-layer |
 | АО «Корпорация «Синергия»» (`ao-korporatsiya-sinergiya`) | 1237700250182 | 7743414861 | plumbing |
-| АО «Котлин-Новатор» (`ao-kotlin-novator`) | 1027806064571 | 7811075899 | manufacturer |
 | АО «МИКЦ» (`ao-mikts`) | 1227700322410 | 7714486438 | manufacturer |
-| АО «НИИ «Вектор»» (`ao-nii-vektor`) | 1117847020400 | 7813491943 | manufacturer |
 | АО «НПП «Радар ММС»» (`npp-radar-mms`) | 1027807560186 | 7814027653 | manufacturer |
 | АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) (`npts-elvis`) | 1127746073510 | 7735582816 | manufacturer |
 | АО «Научно-производственное предприятие Беспилотные авиационные технологии» (`ao-npp-bat`) | 1237700769701 | 9718238013 | manufacturer |
 | АО «ПМЦ «Авангард»» (`ao-pmts-avangard`) | 1047855051892 | 7804302798 | manufacturer |
-| АО «Проминвест» (`ao-prominvest`) | 1237700148180 | 9714004945 | plumbing |
 | АО «РОСС» (`ao-ross`) | 1027700135957 | 7704097425 | manufacturer |
 | АО «Сейм-Агро» (`ao-seym-agro`) | 1114611000283 | 4611011596 | money-layer |
-| АО «Спецтех Инвестиции» (`ao-spetstekh-investitsii-ao-spetstekh-pervyy`) | 1257700523079 | 9703232234 | cbst-core |
-| АО «Спецтех Первый» (`ao-spetstekh-perviy`) | 1267700128376 | 9703244871 | cbst-core |
-| АО «Стратим» (`ao-stratim`) | 1237700447324 | 7720901379 | manufacturer |
 | АО «Технодинамика» (`ao-tekhnodinamika`) | 1037719005873 | 7719265496 | plumbing |
 | АО «УК СМАРТ» (`ao-uk-smart`) | 1237700557050 | 7751264401 | plumbing |
 | АО «Фабрика им. Советской Армии» (`ao-fabrika-im-sovetskoy-armii`) | 1027739157401 | 7709278792 | money-layer |
@@ -138,7 +143,6 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «ГЭС-2» (`ooo-ges-2`) | 1147746575767 | 7706809928 | money-layer |
 | ООО «Гаскар Интеграция» (`ooo-gaskar-integratsiya`) | 5147746074196 | 7733894200 | manufacturer |
 | ООО «Гаскар Технологии» (`ooo-gaskar-tekhnologii`) | 1207700344037 | 9731070264 | manufacturer |
-| ООО «Гаскар» (`ooo-gaskar`) | 1237700273744 | 9710112989 | manufacturer |
 | ООО «Герон» (`ooo-geron`) | 1217800073545 | 7802893898 | manufacturer |
 | ООО «Группа компаний «Аэромакс»» (`ooo-gk-aeromaks`) | 1147748024269 | 7710974353 | manufacturer |
 | ООО «ДИАМ-АЭРО» (`ooo-diam-aero`) | 1187847091079 | 7811687549 | — |
@@ -159,7 +163,6 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «Конструкторское бюро СОВА» (`va-technologies`) | 1252300058515 | 2378001237 | manufacturer |
 | ООО «КоптерЛаб» (`ooo-kopterlab`) | 1247700198734 | 7720925267 | manufacturer |
 | ООО «Левит» (`ooo-levit`) | 1066330007798 | 6330030244 | money-layer |
-| ООО «МПТМ» (`ooo-mptm`) | 1257700021468 | 9714068459 | cbst-core |
 | ООО «Ментастеп» (`ooo-mentastep`) | 1247700255208 | 9715478320 | manufacturer |
 | ООО «Метаскан» (`ooo-metaskan`) | 1201600057097 | 1660349248 | manufacturer |
 | ООО «НОВА» (`ooo-nova`) | 1086330002549 | 6330037352 | money-layer |
@@ -189,18 +192,15 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «Специальные полезные технологии» (`ooo-spetsialnye-poleznye-tekhnologii`) | 1247700253668 | 9715478264 | manufacturer |
 | ООО «Стратим» (`ooo-stratim`) | 1245200009075 | 5260494520 | manufacturer |
 | ООО «Стройстандарт» (`ooo-stroystandart`) | 1077762402992 | 7733629755 | money-layer |
-| ООО «Тримикс» (`ooo-trimiks-bulat-3mx`) | 1237800084235 | 7802942873 | manufacturer |
 | ООО «Ушкуйник» (`npts-ushkuynik`) | 1245300001650 | 5300013923 | manufacturer |
 | ООО «ЦТП» (Цифровая транспортная платформа) (`ooo-tstp-tsifrovaya-transportnaya-platforma`) | 1247700498660 | 9714054618 | plumbing |
 | ООО «ЦЮС» (`ooo-tsyus`) | 1181215007192 | 1215226708 | plumbing |
-| ООО «Центр беспилотных систем» (`ooo-tsentr-bespilotnykh-sistem-tula`) | 1237100001467 | 7100032961 | cbst-core |
 | ООО «Центр управления городской аэромобильностью» (`ooo-tsugam`) | 1227700378553 | 9731094770 | manufacturer |
 | ООО «ЭйАрТэк» (`ooo-eyartek`) | 1227300004282 | 7300000540 | manufacturer |
 | ООО «Эколибри-Беспилотные технологии» (`ooo-ekolibri-bt`) | 1237700545191 | 9713001941 | manufacturer |
 | ПАО «Банк ПСБ» (`pao-bank-psb`) | 1027739019142 | 7744000912 | cbst-core |
 | Фонд «Градислава» | historic & cultural heritage preservation (`fond-gradislava-historic-cultural-heritage-preservation`) | 1117799007050 | 7704278421 | money-layer |
 | Фонд «ДАР» | Фонд региональных некоммерческих проектов (`fond-dar-fond-regionalnykh-nekommercheskikh-proektov`) | 1067799028923 | 7705517400 | money-layer |
-| Фонд «Наша Правда» (`fond-nasha-pravda`) | 1237700218612 | 9705196180 | cbst-core |
 | Фонд поддержки зимних олимпийских видов спорта (`fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta`) | 1117799016851 | 7706470191 | money-layer |
 | Фонд поддержки национальных морских программ (`fond-podderzhki-natsionalnykh-morskikh-programm`) | 1167700057447 | 7714389530 | money-layer |
 
