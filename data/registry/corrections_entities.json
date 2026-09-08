@@ -13786,21 +13786,22 @@
             "source_id": "s5346"
           }
         ],
-        "notes": "2026-09-07 NSPD check: проезд 4922-й, д.4, стр.2 (Zelenograd) returned no record (code 204) — not yet registered in Rosreestr, or an address-format mismatch; not corroborated either way (s6953)."
+        "notes": "2026-09-07 NSPD check: проезд 4922-й, д.4, стр.2 (Zelenograd) returned no record (code 204) — not yet registered in Rosreestr, or an address-format mismatch; not corroborated either way (s6953).",
+        "why": [
+          "full EGRUL extract pulled directly 23.08.2026 (ul-1127746073510-20260823133724.pdf). Full registered name confirms the \"ЭЛВИС\" brand is an acronym: ЭЛектронные Вычислительно-Информационные Системы. Integrated-circuit-design ОКВЭД is a genuine, specific defence-electronics match — this is a real chip-design house, not a shell. АО — shareholders/registrar block and director name did not extract cleanly (same layout quirk).",
+          "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): confirmed match. Microelectronics/chip-design house (proprietary «МУЛЬТИКОР» platform, process nodes 16nm-250nm) -- defense-adjacent (radiation-hardened, import-substitution chips) as a COMPONENT supplier, not itself a UAV airframe/systems maker. 1000+ employee institutional operation, no dormancy signal.",
+          "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0789).",
+          "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7735582816). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+          "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
+          "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6438.",
+          "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 1 enforcement-proceeding record(s) totalling 3,314,274.00 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
+          "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+          "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 37 product(s) not previously documented.",
+          "2026-09-07: merged duplicate correction key '7735582816' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class).",
+          "ФССП (2026-09-08): ₽3.31M remaining on one 'иные взыскания' enforcement (2026-09-03, very recent) — worth noting though modest relative to ЭЛВИС's scale."
+        ]
       },
-      "verified_against": "full EGRUL extract pulled directly 23.08.2026",
-      "why": [
-        "full EGRUL extract pulled directly 23.08.2026 (ul-1127746073510-20260823133724.pdf). Full registered name confirms the \"ЭЛВИС\" brand is an acronym: ЭЛектронные Вычислительно-Информационные Системы. Integrated-circuit-design ОКВЭД is a genuine, specific defence-electronics match — this is a real chip-design house, not a shell. АО — shareholders/registrar block and director name did not extract cleanly (same layout quirk).",
-        "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): confirmed match. Microelectronics/chip-design house (proprietary «МУЛЬТИКОР» platform, process nodes 16nm-250nm) -- defense-adjacent (radiation-hardened, import-substitution chips) as a COMPONENT supplier, not itself a UAV airframe/systems maker. 1000+ employee institutional operation, no dormancy signal.",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0789).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7735582816). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
-        "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6438.",
-        "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 1 enforcement-proceeding record(s) totalling 3,314,274.00 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 37 product(s) not previously documented.",
-        "2026-09-07: merged duplicate correction key '7735582816' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
-      ]
+      "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
     "npts-ushkuynik": {
       "set": {
@@ -17393,9 +17394,7 @@
         "why": [
           "2026-09-08: user pulled the actual kad.arbitr.ru court filings for А32-19338/2025 (определение + решение), confirming and detailing the earlier aggregator-sourced litigation entry — case is a routine unfulfilled-advance recovery against ООО «ДАР», not otherwise notable. Also confirmed directly (not via aggregator) that Гагаринг is a registered participant in the Честный Знак/ГИС МТ mandatory goods-marking system under the «Радиоэлектронная продукция» commodity group, розница/УОТ type — official registry lookup (xn--80ajghhoc2aj1c8b.xn--p1ai/business/spisokuot/), CAPTCHA solved via chrome-devtools browser session, s7365.",
           "2026-09-08: checked reestr-zalogov.ru (ФНП Реестр уведомлений о залоге движимого имущества, incl. Федресурс cross-search) by ИНН — 0 hits, s7366. Closes the last identified Kontur.Focus-Pro-equivalent coverage gap for this entity other than ФССП enforcement proceedings (handed to user per crawling-jobs policy, not yet run)."
-        ],
-        "pledge_registry_matches": [],
-        "pledge_registry_checked_at": "2026-09-08"
+        ]
       },
       "verified_against": null,
       "why": [
@@ -18385,16 +18384,17 @@
             "share_percent": 100.0,
             "as_of": "2021-05-06"
           }
+        ],
+        "why": [
+          "2026-09-02: precise address from EGRUL extract s5308 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"Новгородская область\". ГРН 2255300168836 dated 07.02.2025.",
+          "2026-09-02: found via HAR capture of fedresurs.ru (Федресурс fact-message backend API discovered: GET https://fedresurs.ru/backend/sfact-messages/<GUID>, no auth needed, just a Referer header -- see notes/source_expansion_methodology.md). УФНС России по Новгородской области filed a bankruptcy petition against ООО «Герон» with the Novgorod Oblast Arbitration Court, court notification dated 17.02.2026. Significant given ooo-geron was only added to the registry this session (via the smolin.info retrace) as part of the Ushkuynik-adjacent Аэро-Хит/Владимирский cluster.",
+          "2026-09-02: HAR capture of fedresurs.ru's main-site search (GET /backend/companies?searchString=<ИНН> -> GUID, then /backend/companies/<GUID>/{main,bankruptcy,publications,networth,licenses,encumbrances} -- a full universal company-lookup API, reusable for any entity, not just bankruptcy checks; see notes/source_expansion_methodology.md) surfaced a materially worse financial picture than the single УФНС filing already on file: (1) ПАО Сбербанк itself filed TWO separate creditor bankruptcy-intent notices against ООО «Герон» (06.03.2026 and 28.04.2026), on top of the tax authority's 18.02.2026 filing -- three separate creditors circling within 10 weeks. (2) EGRUL itself flagged ООО «Герон»'s registered information as unreliable (\"Недостоверность сведений\", record 11.03.2026, published 12.03.2026, per УФНС России по Новгородской области's own verification check) -- s5322, often a precursor to forced ЕГРЮЛ exclusion. (3) A 2024 vehicle-leasing fact-message (s5314) names the lessee as \"ООО «Герон-Авиа»\" -- same ИНН/ОГРН, confirming this as an alternate/trading name tied to geronavia.ru. Notably, this same message has BOTH isPublisherInSanctionList:true and isParticipantInSanctionList:true set by Fedresurs's own system, and the LESSOR's identity is fully redacted citing \"Постановление Правительства РФ от 12.01.2018 №5\" -- a real, well-documented Russian government decree used specifically to shield defense-industry/gosoboronzakaz-participating entities' EGRUL/Fedresurs footprint from public disclosure. This is flagged here as Fedresurs's own classification, NOT independently verified against a primary international sanctions list (OFAC/EU/UK) or confirmed which sanctions list is meant -- but the shielding decree itself is a strong, independently-verifiable signal that the (unnamed) leasing counterparty is treated as defense-industry-sensitive by the Russian state. No bidding/pledged-asset/networth/license records exist yet (all empty) -- consistent with the bankruptcy still being at the pre-trustee petition stage, per the earlier torgi.gov.ru/bankrot.fedresurs.ru null result.",
+          "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 6 enforcement-proceeding record(s) totalling 34,436,367.00 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
+          "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
+          "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+          "ФССП (2026-09-08, s-fssp opendata): ~₽30.5M remaining across 6 proceedings, incl. ₽14.18M 'иные взыскания', ₽8.06M unpaid tax (ЕНС отрицательное сальдо), ₽4.83M notarial credit-debt enforcement, ₽3.44M court judgment — material financial-distress signal, worth a closer look at the underlying cases before drawing conclusions."
         ]
-      },
-      "why": [
-        "2026-09-02: precise address from EGRUL extract s5308 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"Новгородская область\". ГРН 2255300168836 dated 07.02.2025.",
-        "2026-09-02: found via HAR capture of fedresurs.ru (Федресурс fact-message backend API discovered: GET https://fedresurs.ru/backend/sfact-messages/<GUID>, no auth needed, just a Referer header -- see notes/source_expansion_methodology.md). УФНС России по Новгородской области filed a bankruptcy petition against ООО «Герон» with the Novgorod Oblast Arbitration Court, court notification dated 17.02.2026. Significant given ooo-geron was only added to the registry this session (via the smolin.info retrace) as part of the Ushkuynik-adjacent Аэро-Хит/Владимирский cluster.",
-        "2026-09-02: HAR capture of fedresurs.ru's main-site search (GET /backend/companies?searchString=<ИНН> -> GUID, then /backend/companies/<GUID>/{main,bankruptcy,publications,networth,licenses,encumbrances} -- a full universal company-lookup API, reusable for any entity, not just bankruptcy checks; see notes/source_expansion_methodology.md) surfaced a materially worse financial picture than the single УФНС filing already on file: (1) ПАО Сбербанк itself filed TWO separate creditor bankruptcy-intent notices against ООО «Герон» (06.03.2026 and 28.04.2026), on top of the tax authority's 18.02.2026 filing -- three separate creditors circling within 10 weeks. (2) EGRUL itself flagged ООО «Герон»'s registered information as unreliable (\"Недостоверность сведений\", record 11.03.2026, published 12.03.2026, per УФНС России по Новгородской области's own verification check) -- s5322, often a precursor to forced ЕГРЮЛ exclusion. (3) A 2024 vehicle-leasing fact-message (s5314) names the lessee as \"ООО «Герон-Авиа»\" -- same ИНН/ОГРН, confirming this as an alternate/trading name tied to geronavia.ru. Notably, this same message has BOTH isPublisherInSanctionList:true and isParticipantInSanctionList:true set by Fedresurs's own system, and the LESSOR's identity is fully redacted citing \"Постановление Правительства РФ от 12.01.2018 №5\" -- a real, well-documented Russian government decree used specifically to shield defense-industry/gosoboronzakaz-participating entities' EGRUL/Fedresurs footprint from public disclosure. This is flagged here as Fedresurs's own classification, NOT independently verified against a primary international sanctions list (OFAC/EU/UK) or confirmed which sanctions list is meant -- but the shielding decree itself is a strong, independently-verifiable signal that the (unnamed) leasing counterparty is treated as defense-industry-sensitive by the Russian state. No bidding/pledged-asset/networth/license records exist yet (all empty) -- consistent with the bankruptcy still being at the pre-trustee petition stage, per the earlier torgi.gov.ru/bankrot.fedresurs.ru null result.",
-        "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 6 enforcement-proceeding record(s) totalling 34,436,367.00 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
-        "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
-      ]
+      }
     },
     "ooo-ges-2": {
       "set": {
@@ -19230,21 +19230,22 @@
             "share_percent": 100.0,
             "as_of": "2025-07-30"
           }
+        ],
+        "why": [
+          "full EGRUL extract pulled directly 23.08.2026 (ul-1207800035079-20260823135654.pdf). Founders section did not resolve to a clean name/share row in this extraction pass — left unset rather than guessed.",
+          "REVERTED an over-eager site-sweep attachment (23.08.2026): AURA/instechno.ru product data had been written directly onto this entity's products[] field without confirming the legal-entity match — the entity's own pre-existing okved_mismatch note already flagged this as uncertain. Moved to an open_question instead of an asserted fact.",
+          "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): second independent attempt to confirm the instechno.ru match also failed -- no ИНН/legal-name self-disclosure found on the site.",
+          "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7842179810). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+          "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 21 candidates belong to an unrelated company, ОАО «Информационные технологии и коммуникационные системы» (ИНФОТЕКС) -- a word-order collision on \"информационные системы/технологии\" already flagged in an earlier pass; confirmed again here.",
+          "2026-09-05: zakupki attachment corpus read end-to-end (7 contracts, ₽28,233,700.00 total, docs already archived but never wired). The entity's actual documented business is public-warning (оповещение) infrastructure for Belgorod oblast's border districts — Волоконовский, Борисовский, Краснояружский, Шебекинский, Валуйский районы plus the oblast civil-defence authority — supplying «Средство селективного оповещения и информирования населения «ОРАЛО-150»» units integrated into the regional РАСЦО alert system via П-166М КПУ control units (АО «КЗТА»). The Volokonovsky contract alone lists 33 named village/khutor installation points. The largest award (₽10,475,700, Шебекино) was made as sole-supplier under п.9 ч.1 ст.93 44-ФЗ, with the justification document citing verbatim the «жёлтый» уровень террористической опасности in force in the oblast since 11.04.2022 «ввиду ситуации на российско-украинской границе». Genuine civil-defence function, procured under war-driven emergency provisions — recorded as such, not characterised as a weapons supply.",
+          "2026-09-05: backfilled the structured `zakupki_review` field (wired, as of 2026-09-05) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
+          "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 3 enforcement-proceeding record(s) totalling 19,998,476.20 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
+          "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
+          "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+          "ФССП (2026-09-08): ~₽18.68M remaining, dominated by one ₽17.8M 'иные взыскания' enforcement (2025-02-13) plus a smaller unpaid-tax act — material financial-distress signal."
         ]
       },
-      "verified_against": "full EGRUL extract pulled directly 23.08.2026",
-      "why": [
-        "full EGRUL extract pulled directly 23.08.2026 (ul-1207800035079-20260823135654.pdf). Founders section did not resolve to a clean name/share row in this extraction pass — left unset rather than guessed.",
-        "REVERTED an over-eager site-sweep attachment (23.08.2026): AURA/instechno.ru product data had been written directly onto this entity's products[] field without confirming the legal-entity match — the entity's own pre-existing okved_mismatch note already flagged this as uncertain. Moved to an open_question instead of an asserted fact.",
-        "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): second independent attempt to confirm the instechno.ru match also failed -- no ИНН/legal-name self-disclosure found on the site.",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7842179810). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 21 candidates belong to an unrelated company, ОАО «Информационные технологии и коммуникационные системы» (ИНФОТЕКС) -- a word-order collision on \"информационные системы/технологии\" already flagged in an earlier pass; confirmed again here.",
-        "2026-09-05: zakupki attachment corpus read end-to-end (7 contracts, ₽28,233,700.00 total, docs already archived but never wired). The entity's actual documented business is public-warning (оповещение) infrastructure for Belgorod oblast's border districts — Волоконовский, Борисовский, Краснояружский, Шебекинский, Валуйский районы plus the oblast civil-defence authority — supplying «Средство селективного оповещения и информирования населения «ОРАЛО-150»» units integrated into the regional РАСЦО alert system via П-166М КПУ control units (АО «КЗТА»). The Volokonovsky contract alone lists 33 named village/khutor installation points. The largest award (₽10,475,700, Шебекино) was made as sole-supplier under п.9 ч.1 ст.93 44-ФЗ, with the justification document citing verbatim the «жёлтый» уровень террористической опасности in force in the oblast since 11.04.2022 «ввиду ситуации на российско-украинской границе». Genuine civil-defence function, procured under war-driven emergency provisions — recorded as such, not characterised as a weapons supply.",
-        "2026-09-05: backfilled the structured `zakupki_review` field (wired, as of 2026-09-05) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
-        "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 3 enforcement-proceeding record(s) totalling 19,998,476.20 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
-        "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
-      ]
+      "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
     "ooo-intek-bespilotnye-sistemy": {
       "set": {
@@ -24698,14 +24699,15 @@
             "share_percent": 100.0,
             "as_of": "2023-09-28"
           }
+        ],
+        "why": [
+          "2026-09-02: precise address from EGRUL extract s5307 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"г. Санкт-Петербург\". ГРН 2267800128253 dated 28.01.2026.",
+          "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 1 enforcement-proceeding record(s) totalling 6,043,375.02 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
+          "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
+          "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+          "ФССП (2026-09-08): ₽5.40M remaining, a single unpaid-tax enforcement act (ЕНС отрицательное сальдо) — material financial-distress signal."
         ]
-      },
-      "why": [
-        "2026-09-02: precise address from EGRUL extract s5307 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"г. Санкт-Петербург\". ГРН 2267800128253 dated 28.01.2026.",
-        "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 1 enforcement-proceeding record(s) totalling 6,043,375.02 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
-        "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
-      ]
+      }
     },
     "ooo-skb-piranya": {
       "set": {
@@ -25227,21 +25229,22 @@
             "name_ru": "«Привет-120»",
             "source_id": "s0965"
           }
+        ],
+        "why": [
+          "REAL CROSS-LINK: СПДББК is 100%-owned by ООО «КРАВТ» (ИНН 7802693899) — already hand-verified this session (sole founder/director Королев Дмитрий Михайлович). КРАВТ is not a standalone shell but the parent of at least this subsidiary, plus ООО «КРАВТ Удмуртия» in this same batch shares the same personal owner (Королев Д.М.) — three-entity КРАВТ group now on record.",
+          "full EGRUL extract pulled directly 23.08.2026 (ul-1157847359273-20260823135101.pdf). Registered address field did not extract cleanly from this PDF (same recurring layout quirk).",
+          "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0799).",
+          "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7838044584). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
+          "2026-09-06: screen_rom.py full-roster run (174 entities) found exactly one hit, this entity -- folded the raw ROM registry data into open_questions per the standing raw-screening-data-is-a-lead-not-a-fact discipline; not wired into litigation[] since a ФНС securing-measures listing is an administrative tax-enforcement restriction, not itself a court case.",
+          "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 2 enforcement-proceeding record(s) totalling 11,375,198.43 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
+          "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
+          "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+          "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14308) ID-confirmed via ИНН 7838044584 — exact match, screen_gur.py sweep, 2026-08-24.",
+          "2026-09-07: merged dormant duplicate correction key '7838044584' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+          "ФССП (2026-09-08): ~₽10.16M remaining, mostly a ₽9.55M unpaid-tax enforcement (ЕНС отрицательное сальдо) plus ₽603K insurance contributions — material financial-distress signal."
         ]
       },
-      "verified_against": "full EGRUL extract pulled directly 23.08.2026",
-      "why": [
-        "REAL CROSS-LINK: СПДББК is 100%-owned by ООО «КРАВТ» (ИНН 7802693899) — already hand-verified this session (sole founder/director Королев Дмитрий Михайлович). КРАВТ is not a standalone shell but the parent of at least this subsidiary, plus ООО «КРАВТ Удмуртия» in this same batch shares the same personal owner (Королев Д.М.) — three-entity КРАВТ group now on record.",
-        "full EGRUL extract pulled directly 23.08.2026 (ul-1157847359273-20260823135101.pdf). Registered address field did not extract cleanly from this PDF (same recurring layout quirk).",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0799).",
-        "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7838044584). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-09-06: screen_rom.py full-roster run (174 entities) found exactly one hit, this entity -- folded the raw ROM registry data into open_questions per the standing raw-screening-data-is-a-lead-not-a-fact discipline; not wired into litigation[] since a ФНС securing-measures listing is an administrative tax-enforcement restriction, not itself a court case.",
-        "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 2 enforcement-proceeding record(s) totalling 11,375,198.43 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
-        "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14308) ID-confirmed via ИНН 7838044584 — exact match, screen_gur.py sweep, 2026-08-24.",
-        "2026-09-07: merged dormant duplicate correction key '7838044584' into this slug-keyed entry (registry-hardening pass, no field conflict)."
-      ]
+      "verified_against": "full EGRUL extract pulled directly 23.08.2026"
     },
     "ooo-spetsialnye-poleznye-tekhnologii": {
       "set": {
@@ -28259,29 +28262,30 @@
             "authority": "Роскомнадзор (Единый реестр частотных присвоений)",
             "source_id": "s6449"
           }
+        ],
+        "why": [
+          "Phase 1 verification pass, 2026-08-22: this record had no ИНН/ОГРН at",
+          "all (only a BIC). A one-off egrul.nalog.ru lookup by name resolves it",
+          "unambiguously: ИНН 7744000912, ОГРН 1027739019142 — matching exactly",
+          "the founder ИНН/ОГРН already independently confirmed inside ЦБСТ's",
+          "own EGRUL extract (s0228) for this same bank as ЦБСТ's second",
+          "founder. Registered 26.07.2002 (Ярославская область — historic seat",
+          "before Moscow HQ), well before ЦБСТ existed, consistent with PSB",
+          "being the designated defence-procurement bank rather than a purpose-",
+          "built vehicle.",
+          "Correction 2026-08-22: an earlier version of this correction block accidentally dropped the tier/tier_basis fields set by a prior correction when it was replaced wholesale instead of merged — restored here. Same session, caught immediately by re-checking the regenerated entities.json against what was expected.",
+          "Full signed ЕГРЮЛ extract read end-to-end (ul-1027739019142-20260823014925.pdf, 94pp, pulled 23.08.2026 — the longest document read this session). Bank dates to registration with the Central Bank of Russia on 16.07.2001, pre-dating its current 'Банк ПСБ' name (name change record ГРН 2257600659150, 01.04.2025). CONFIRMS: 100% owned by the RUSSIAN FEDERATION itself, acting through Росимущество (Федеральное агентство по управлению государственным имуществом, ИНН 7710723134) as единственный акционер since 04.06.2021 — direct sovereign ownership, unredacted. Chairman Фрадков Пётр Михайлович (personal ИНН 770200967631) since 19.09.2018 — publicly known figure, already head of Промсвязьбанк/PSB group. Charter capital ₽427,076,526,755.75 — ₽427 BILLION, several orders of magnitude above every other entity in this registry, consistent with PSB's role as the designated defence-sector settlement bank. Registered address moved to Yaroslavl (ГРН matching the current Республиканская address); registrar АО «РДЦ Паритет».",
+          "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0792).",
+          "2026-08-24 Rospatent full-roster trademark sweep (own ИНН, s0945): 187 trademark records reviewed (retail-banking/consumer brand portfolio — e.g. «Авиапрофлизинг», an aviation-leasing subsidiary brand, not drone/defense-related). Not individually catalogued — none bear on this investigation beyond the bank's already-documented sanctions status.",
+          "web.sites was empty despite being a major public bank. Web search 2026-08-25.",
+          "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-30) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
+          "RKN comms-license registry cross-check (rkn.gov.ru/activity/connection/register/license/, scripts/screen_rkn_comms_license.py, 2026-09-06 full 176-entity sweep) — 2 license record(s) not previously on file. See s6441.",
+          "RKN Единый реестр частотных присвоений screen (2026-09-07, source s6449): 1 expired (2011-2021) frequency-assignment record — routine legacy radio-equipment licensing for a major bank, not itself a finding.",
+          "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+          "ФССП (2026-09-08): 39 proceedings on file, ~₽102.15M remaining, dominated by two very recent (2026-08-31) 'иные взыскания' claims of ₽71.45M and ₽29.2M — plausible routine litigation volume for a bank this size, not treated as a distress signal without reading the underlying claims; flagged for awareness only."
         ]
       },
-      "verified_against": "egrul.nalog.ru open-API lookup, 22.08.2026 (one-off, ordinary reconnaissance) + cross-confirmed via s0231",
-      "why": [
-        "Phase 1 verification pass, 2026-08-22: this record had no ИНН/ОГРН at",
-        "all (only a BIC). A one-off egrul.nalog.ru lookup by name resolves it",
-        "unambiguously: ИНН 7744000912, ОГРН 1027739019142 — matching exactly",
-        "the founder ИНН/ОГРН already independently confirmed inside ЦБСТ's",
-        "own EGRUL extract (s0228) for this same bank as ЦБСТ's second",
-        "founder. Registered 26.07.2002 (Ярославская область — historic seat",
-        "before Moscow HQ), well before ЦБСТ existed, consistent with PSB",
-        "being the designated defence-procurement bank rather than a purpose-",
-        "built vehicle.",
-        "Correction 2026-08-22: an earlier version of this correction block accidentally dropped the tier/tier_basis fields set by a prior correction when it was replaced wholesale instead of merged — restored here. Same session, caught immediately by re-checking the regenerated entities.json against what was expected.",
-        "Full signed ЕГРЮЛ extract read end-to-end (ul-1027739019142-20260823014925.pdf, 94pp, pulled 23.08.2026 — the longest document read this session). Bank dates to registration with the Central Bank of Russia on 16.07.2001, pre-dating its current 'Банк ПСБ' name (name change record ГРН 2257600659150, 01.04.2025). CONFIRMS: 100% owned by the RUSSIAN FEDERATION itself, acting through Росимущество (Федеральное агентство по управлению государственным имуществом, ИНН 7710723134) as единственный акционер since 04.06.2021 — direct sovereign ownership, unredacted. Chairman Фрадков Пётр Михайлович (personal ИНН 770200967631) since 19.09.2018 — publicly known figure, already head of Промсвязьбанк/PSB group. Charter capital ₽427,076,526,755.75 — ₽427 BILLION, several orders of magnitude above every other entity in this registry, consistent with PSB's role as the designated defence-sector settlement bank. Registered address moved to Yaroslavl (ГРН matching the current Республиканская address); registrar АО «РДЦ Паритет».",
-        "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0792).",
-        "2026-08-24 Rospatent full-roster trademark sweep (own ИНН, s0945): 187 trademark records reviewed (retail-banking/consumer brand portfolio — e.g. «Авиапрофлизинг», an aviation-leasing subsidiary brand, not drone/defense-related). Not individually catalogued — none bear on this investigation beyond the bank's already-documented sanctions status.",
-        "web.sites was empty despite being a major public bank. Web search 2026-08-25.",
-        "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-30) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
-        "RKN comms-license registry cross-check (rkn.gov.ru/activity/connection/register/license/, scripts/screen_rkn_comms_license.py, 2026-09-06 full 176-entity sweep) — 2 license record(s) not previously on file. See s6441.",
-        "RKN Единый реестр частотных присвоений screen (2026-09-07, source s6449): 1 expired (2011-2021) frequency-assignment record — routine legacy radio-equipment licensing for a major bank, not itself a finding.",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
-      ]
+      "verified_against": "egrul.nalog.ru open-API lookup, 22.08.2026 (one-off, ordinary reconnaissance) + cross-confirmed via s0231"
     },
     "uraldronzavod": {
       "set": {

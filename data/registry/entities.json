@@ -3880,7 +3880,7 @@
       "outcome": "closed",
       "note": "861 hits sampled from the archived search-results page rather than a 200-card pull: overwhelmingly regional/municipal government credit-facility contracts. Deliberately not wired; a full fetch-contracts pass was judged not worth the cost."
     },
-    "_corrected": [
+    "why": [
       "Phase 1 verification pass, 2026-08-22: this record had no ИНН/ОГРН at",
       "all (only a BIC). A one-off egrul.nalog.ru lookup by name resolves it",
       "unambiguously: ИНН 7744000912, ОГРН 1027739019142 — matching exactly",
@@ -3898,8 +3898,10 @@
       "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-30) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
       "RKN comms-license registry cross-check (rkn.gov.ru/activity/connection/register/license/, scripts/screen_rkn_comms_license.py, 2026-09-06 full 176-entity sweep) — 2 license record(s) not previously on file. See s6441.",
       "RKN Единый реестр частотных присвоений screen (2026-09-07, source s6449): 1 expired (2011-2021) frequency-assignment record — routine legacy radio-equipment licensing for a major bank, not itself a finding.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "ФССП (2026-09-08): 39 proceedings on file, ~₽102.15M remaining, dominated by two very recent (2026-08-31) 'иные взыскания' claims of ₽71.45M and ₽29.2M — plausible routine litigation volume for a bank this size, not treated as a distress signal without reading the underlying claims; flagged for awareness only."
     ],
+    "_corrected": null,
     "_verified_against": "egrul.nalog.ru open-API lookup, 22.08.2026 (one-off, ordinary reconnaissance) + cross-confirmed via s0231",
     "opensanctions_matches": [
       {
@@ -4021,7 +4023,439 @@
         "K": "87-л от 27.04.2022",
         "L": "Действующая"
       }
-    ]
+    ],
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "98777/16/34043-ИП",
+        "institution_date": "2016-11-01",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Госпошлина, присужденная судом",
+        "amount_due": "1539.99",
+        "debt_remaining": "1539.99",
+        "bailiff_department": "Центральный РОСП",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "103495/16/34043-ИП",
+        "institution_date": "2016-11-18",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Процессуальные издержки в пользу иных лиц, кроме расходов на экспертизу",
+        "amount_due": "15000.00",
+        "debt_remaining": "15000.00",
+        "bailiff_department": "Центральный РОСП",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "126203/26/76001-ИП",
+        "institution_date": "2026-03-20",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Моральный вред как самостоятельное требование (за исключением вреда от преступления)",
+        "amount_due": "30000.00",
+        "debt_remaining": "30000.00",
+        "bailiff_department": "Дзержинское РОСП г. Ярославля",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "1412497/24/77056-ИП",
+        "institution_date": "2024-08-30",
+        "document_type": "Постановление судебного пристава-исполнителя",
+        "execution_object": "Исполнительский сбор",
+        "amount_due": "10000.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "907240/26/77056-ИП",
+        "institution_date": "2024-04-08",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "639383/26/77056-ИП",
+        "institution_date": "2026-06-11",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Наложение ареста",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "611723/22/77056-ИП",
+        "institution_date": "2022-12-16",
+        "document_type": "Удостоверение, выданное уполномоченным по правам потребителей финансовых услуг в порядке, предусмотренном Федеральным законом от 04.06.2018 № 123-ФЗ \"Об уполномоченном по правам потребителей финансовых услуг\"",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "27011.28",
+        "debt_remaining": "27011.28",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "907093/26/77056-ИП",
+        "institution_date": "2024-10-30",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Моральный вред как самостоятельное требование (за исключением вреда от преступления)",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "144890/24/77056-ИП",
+        "institution_date": "2024-02-15",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "10021.34",
+        "debt_remaining": "21.34",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "366864/26/77056-ИП",
+        "institution_date": "2026-04-09",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "31220.51",
+        "debt_remaining": "31220.51",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО\"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "3349/26/77056-ИП",
+        "institution_date": "2026-01-13",
+        "document_type": "Постановление судебного пристава-исполнителя",
+        "execution_object": "Исполнительский сбор",
+        "amount_due": "5034.58",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "562867/26/77056-ИП",
+        "institution_date": "2026-05-20",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "0.00",
+        "debt_remaining": "25000.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "907520/26/77056-ИП",
+        "institution_date": "2025-04-21",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "578419/26/77056-ИП",
+        "institution_date": "2026-05-25",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "0.00",
+        "debt_remaining": "46000.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "600099/26/77056-ИП",
+        "institution_date": "2026-05-29",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "50.00",
+        "debt_remaining": "50.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "558772/25/77056-ИП",
+        "institution_date": "2025-02-19",
+        "document_type": "Постановление судебного пристава-исполнителя",
+        "execution_object": "Исполнительский сбор",
+        "amount_due": "630000.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "907298/26/77056-ИП",
+        "institution_date": "2025-07-18",
+        "document_type": "Удостоверение, выданное уполномоченным по правам потребителей финансовых услуг в порядке, предусмотренном Федеральным законом от 04.06.2018 № 123-ФЗ \"Об уполномоченном по правам потребителей финансовых услуг\"",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"БАНК ПСБ\"",
+        "proceeding_number": "965538/26/77056-ИП",
+        "institution_date": "2026-08-26",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "622770.00",
+        "debt_remaining": "792684.52",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"БАНК ПСБ\"",
+        "proceeding_number": "976649/26/77056-ИП",
+        "institution_date": "2026-08-05",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Госпошлина, присужденная судом",
+        "amount_due": "4000.00",
+        "debt_remaining": "4000.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"БАНК ПСБ\"",
+        "proceeding_number": "975646/26/77056-ИП",
+        "institution_date": "2026-08-31",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "71451006.50",
+        "debt_remaining": "71451006.50",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"БАНК ПСБ\"",
+        "proceeding_number": "975604/26/77056-ИП",
+        "institution_date": "2026-08-31",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "29201522.14",
+        "debt_remaining": "29201522.14",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"БАНК ПСБ\"",
+        "proceeding_number": "958410/26/77056-ИП",
+        "institution_date": "2026-09-03",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Госпошлина, присужденная судом",
+        "amount_due": "60300.00",
+        "debt_remaining": "60300.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "965539/26/77056-ИП",
+        "institution_date": "2026-09-03",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Госпошлина, присужденная судом",
+        "amount_due": "10656.04",
+        "debt_remaining": "10656.04",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "964761/26/77056-ИП",
+        "institution_date": "2026-09-03",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "6000.00",
+        "debt_remaining": "6000.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "956041/26/77056-ИП",
+        "institution_date": "2026-09-03",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "30000.00",
+        "debt_remaining": "30000.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"БАНК ПСБ\"",
+        "proceeding_number": "1000783/26/77056-ИП",
+        "institution_date": "2026-09-04",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "96060.31",
+        "debt_remaining": "96060.31",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "36786/26/77056-ИП",
+        "institution_date": "2026-01-23",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "907425/26/77056-ИП",
+        "institution_date": "2025-09-11",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \" ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "1093529/24/77056-ИП",
+        "institution_date": "2024-06-20",
+        "document_type": "Постановление судебного пристава-исполнителя",
+        "execution_object": "Исполнительский сбор",
+        "amount_due": "10000.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ОАО ПРОМСВЯЗЬБАНК 1027739019142",
+        "proceeding_number": "1093530/24/77056-ИП",
+        "institution_date": "2024-06-20",
+        "document_type": "Постановление судебного пристава-исполнителя",
+        "execution_object": "Исполнительский сбор",
+        "amount_due": "10000.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "1425545/25/77056-ИП",
+        "institution_date": "2025-10-01",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иной вид исполнения неимущественного характера",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "103121/26/77056-ИП",
+        "institution_date": "2026-02-10",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иной вид исполнения неимущественного характера",
+        "amount_due": "6000.00",
+        "debt_remaining": "6000.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "125260/26/77056-ИП",
+        "institution_date": "2026-02-16",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "0.00",
+        "debt_remaining": "45000.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"БАНК ПСБ\"",
+        "proceeding_number": "140721/26/77056-ИП",
+        "institution_date": "2026-02-19",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Процессуальные издержки в пользу иных лиц, кроме расходов на экспертизу",
+        "amount_due": "0.00",
+        "debt_remaining": "23000.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "151736/26/77056-ИП",
+        "institution_date": "2026-02-24",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "0.00",
+        "debt_remaining": "45030.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "182385/26/77056-ИП",
+        "institution_date": "2026-03-03",
+        "document_type": "Постановление судебного пристава-исполнителя",
+        "execution_object": "Исполнительский сбор",
+        "amount_due": "10000.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "200839/26/77056-ИП",
+        "institution_date": "2026-03-06",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"ПРОМСВЯЗЬБАНК\"",
+        "proceeding_number": "230459/26/77056-ИП",
+        "institution_date": "2026-03-16",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "204028.83",
+        "debt_remaining": "204028.83",
+        "bailiff_department": "ОСП по Юго-Восточному АО",
+        "inn": "7744000912"
+      },
+      {
+        "debtor_name": "ПАО \"БАНК ПСБ\"",
+        "proceeding_number": "923628/26/98077-ИП",
+        "institution_date": "2026-07-06",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Конфискация имущества по УК РФ (код главы по КБК для ФССП — 322)",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "СОСП по г. Москве № 1",
+        "inn": "7744000912"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-aerotekhalyans",
@@ -6728,7 +7162,21 @@
         }
       }
     ],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ООО\"РУССКАЯ ЛАБОРАТОРИЯ ВОЗДУШНОГО ТРАНСПОРТА\"",
+        "proceeding_number": "268668/26/71029-ИП",
+        "institution_date": "2026-09-03",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф иного органа",
+        "amount_due": "5000.00",
+        "debt_remaining": "5000.00",
+        "bailiff_department": "ОСП Центрального района г. Тулы",
+        "inn": "7100027464"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-aviron",
@@ -24131,7 +24579,21 @@
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": [],
     "proverki_inspections": [],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОНСТРУКТОРСКОЕ БЮРО СОВА\"",
+        "proceeding_number": "182541/26/99003-ИП",
+        "institution_date": "2026-08-20",
+        "document_type": "Акт органа, осуществляющего контрольные функции",
+        "execution_object": "Страховые взносы, включая пени",
+        "amount_due": "2000.00",
+        "debt_remaining": "2000.00",
+        "bailiff_department": "Отдел судебных приставов по федеральной территории \"Сириус\"",
+        "inn": "2378001237"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-intek-bespilotnye-sistemy",
@@ -27512,7 +27974,21 @@
         }
       }
     ],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ООО \"АЭРОМАКС\"",
+        "proceeding_number": "979327/26/77057-ИП",
+        "institution_date": "2026-08-07",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "0.00",
+        "debt_remaining": "25045.00",
+        "bailiff_department": "ОСП по Северо-Западному АО",
+        "inn": "7725347482"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-gk-aeromaks",
@@ -30323,7 +30799,21 @@
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": [],
     "proverki_inspections": [],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ООО \"ПОДОЛЬЕ XXI\"",
+        "proceeding_number": "146258/24/75044-ИП",
+        "institution_date": "2024-08-21",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Наложение ареста",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "Забайкальское РОСП",
+        "inn": "7703420474"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-konstruktorskoe-byuro-sinergiya",
@@ -41254,7 +41744,7 @@
       "source_id": "s3712"
     },
     "notes": "2026-09-07 NSPD check: проезд 4922-й, д.4, стр.2 (Zelenograd) returned no record (code 204) — not yet registered in Rosreestr, or an address-format mismatch; not corroborated either way (s6953).",
-    "_corrected": [
+    "why": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1127746073510-20260823133724.pdf). Full registered name confirms the \"ЭЛВИС\" brand is an acronym: ЭЛектронные Вычислительно-Информационные Системы. Integrated-circuit-design ОКВЭД is a genuine, specific defence-electronics match — this is a real chip-design house, not a shell. АО — shareholders/registrar block and director name did not extract cleanly (same layout quirk).",
       "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): confirmed match. Microelectronics/chip-design house (proprietary «МУЛЬТИКОР» platform, process nodes 16nm-250nm) -- defense-adjacent (radiation-hardened, import-substitution chips) as a COMPONENT supplier, not itself a UAV airframe/systems maker. 1000+ employee institutional operation, no dormancy signal.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0789).",
@@ -41264,8 +41754,10 @@
       "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 1 enforcement-proceeding record(s) totalling 3,314,274.00 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 37 product(s) not previously documented.",
-      "2026-09-07: merged duplicate correction key '7735582816' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
+      "2026-09-07: merged duplicate correction key '7735582816' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class).",
+      "ФССП (2026-09-08): ₽3.31M remaining on one 'иные взыскания' enforcement (2026-09-03, very recent) — worth noting though modest relative to ЭЛВИС's scale."
     ],
+    "_corrected": null,
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "opensanctions_matches": [
       {
@@ -42209,7 +42701,43 @@
         }
       }
     ],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО НАУЧНО-ПРОИЗВОДСТВЕННЫЙ ЦЕНТР \"ЭЛЕКТРОННЫЕ ВЫЧИСЛИТЕЛЬНО-ИНФОРМАЦИОННЫЕ СИСТЕМЫ\"",
+        "proceeding_number": "255257/25/63017-ИП",
+        "institution_date": "2025-07-24",
+        "document_type": "Исполнительный лист",
+        "execution_object": "",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП г.Новокуйбышевска",
+        "inn": "7735582816"
+      },
+      {
+        "debtor_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО НАУЧНО-ПРОИЗВОДСТВЕННЫЙ ЦЕНТР \"ЭЛЕКТРОННЫЕ ВЫЧИСЛИТЕЛЬНО-ИНФОРМАЦИОННЫЕ СИСТЕМЫ\"",
+        "proceeding_number": "431517/26/63017-ИП",
+        "institution_date": "2026-08-31",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф по постановлению должностного лица ФССП России",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП г.Новокуйбышевска",
+        "inn": "7735582816"
+      },
+      {
+        "debtor_name": "АО \"НАУЧНО-ПРОИЗВОДСТВЕННЫЙ ЦЕНТР \"ЭЛЕКТРОННЫЕ ВЫЧИСЛИТЕЛЬНО-ИНФОРМАЦИОННЫЕ СИСТЕМЫ\"",
+        "proceeding_number": "477589/26/77012-ИП",
+        "institution_date": "2026-09-03",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "1300000.00",
+        "debt_remaining": "3314274.00",
+        "bailiff_department": "ОСП по Зеленоградскому АО",
+        "inn": "7735582816"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ao-ekolibri",
@@ -44831,7 +45359,7 @@
     "_raw": {
       "context": "» (ИНН 1800023369, registered 09.09.2024 in Glazov, Удмуртская Республика — electronics-component manufacturing, OKVED 26.11 — the remaining 10% held personally by Королев), and 100% of ООО «СПДББК» (ИНН 7838044584). КРАВТ УДМУРТИЯ appears to be a newly-stood-up satellite production site: its own EGRUL filing shows zero declared employees, zero revenue and zero expenses as of its most recent reporting date (01."
     },
-    "_corrected": [
+    "why": [
       "REAL CROSS-LINK: СПДББК is 100%-owned by ООО «КРАВТ» (ИНН 7802693899) — already hand-verified this session (sole founder/director Королев Дмитрий Михайлович). КРАВТ is not a standalone shell but the parent of at least this subsidiary, plus ООО «КРАВТ Удмуртия» in this same batch shares the same personal owner (Королев Д.М.) — three-entity КРАВТ group now on record.",
       "full EGRUL extract pulled directly 23.08.2026 (ul-1157847359273-20260823135101.pdf). Registered address field did not extract cleanly from this PDF (same recurring layout quirk).",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0799).",
@@ -44841,8 +45369,10 @@
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14308) ID-confirmed via ИНН 7838044584 — exact match, screen_gur.py sweep, 2026-08-24.",
-      "2026-09-07: merged dormant duplicate correction key '7838044584' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+      "2026-09-07: merged dormant duplicate correction key '7838044584' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+      "ФССП (2026-09-08): ~₽10.16M remaining, mostly a ₽9.55M unpaid-tax enforcement (ЕНС отрицательное сальдо) plus ₽603K insurance contributions — material financial-distress signal."
     ],
+    "_corrected": null,
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
@@ -45073,7 +45603,32 @@
         }
       }
     ],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПДББК\"",
+        "proceeding_number": "656807/26/78003-ИП",
+        "institution_date": "2026-06-18",
+        "document_type": "Акт органа, осуществляющего контрольные функции",
+        "execution_object": "Страховые взносы, включая пени",
+        "amount_due": "675252.93",
+        "debt_remaining": "602904.41",
+        "bailiff_department": "Калининский РОСП",
+        "inn": "7838044584"
+      },
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПДББК\"",
+        "proceeding_number": "526774/26/98078-ИП",
+        "institution_date": "2026-06-09",
+        "document_type": "Акт органа, осуществляющего контрольные функции",
+        "execution_object": "Налог в размере отрицательного сальдо ЕНС",
+        "amount_due": "10699945.50",
+        "debt_remaining": "9553522.77",
+        "bailiff_department": "СОСП по г. Санкт-Петербургу",
+        "inn": "7838044584"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-stratim",
@@ -45380,7 +45935,21 @@
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": [],
     "proverki_inspections": [],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРАТИМ\"",
+        "proceeding_number": "73809/26/52005-ИП",
+        "institution_date": "2026-06-05",
+        "document_type": "Акт органа, осуществляющего контрольные функции",
+        "execution_object": "Страховые взносы, включая пени",
+        "amount_due": "18.13",
+        "debt_remaining": "18.13",
+        "bailiff_department": "Нижегородское РОСП г. Нижнего Новгорода",
+        "inn": "5260494520"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ao-aurin",
@@ -46858,7 +47427,32 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ООО \" НОВА\"",
+        "proceeding_number": "183929/23/63017-ИП",
+        "institution_date": "2023-09-22",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Процессуальные издержки в пользу иных лиц, кроме расходов на экспертизу",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП г.Новокуйбышевска",
+        "inn": "6330037352"
+      },
+      {
+        "debtor_name": "ООО \"НОВА\"",
+        "proceeding_number": "362129/25/63017-ИП",
+        "institution_date": "2025-09-25",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Наложение ареста",
+        "amount_due": "0.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "ОСП г.Новокуйбышевска",
+        "inn": "6330037352"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-ges-2",
@@ -51824,7 +52418,43 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАМС\"",
+        "proceeding_number": "752867/26/98097-ИП",
+        "institution_date": "2026-06-01",
+        "document_type": "Акт органа, осуществляющего контрольные функции",
+        "execution_object": "Налог в размере отрицательного сальдо ЕНС",
+        "amount_due": "175753.19",
+        "debt_remaining": "155753.19",
+        "bailiff_department": "СОСП по г. Москве № 2",
+        "inn": "9701247080"
+      },
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАМС\"",
+        "proceeding_number": "860132/26/98097-ИП",
+        "institution_date": "2026-06-08",
+        "document_type": "Постановление судебного пристава-исполнителя",
+        "execution_object": "Исполнительский сбор",
+        "amount_due": "10000.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "СОСП по г. Москве № 2",
+        "inn": "9701247080"
+      },
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАМС\"",
+        "proceeding_number": "881040/26/98097-ИП",
+        "institution_date": "2026-06-09",
+        "document_type": "Постановление судебного пристава-исполнителя",
+        "execution_object": "Исполнительский сбор",
+        "amount_due": "10000.00",
+        "debt_remaining": "0.00",
+        "bailiff_department": "СОСП по г. Москве № 2",
+        "inn": "9701247080"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-prommash",
@@ -52622,7 +53252,7 @@
       "outcome": "wired",
       "note": "All 7 contracts read from archived attachments and wired (₽28,233,700.00) — Belgorod border-district public-warning systems."
     },
-    "_corrected": [
+    "why": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1207800035079-20260823135654.pdf). Founders section did not resolve to a clean name/share row in this extraction pass — left unset rather than guessed.",
       "REVERTED an over-eager site-sweep attachment (23.08.2026): AURA/instechno.ru product data had been written directly onto this entity's products[] field without confirming the legal-entity match — the entity's own pre-existing okved_mismatch note already flagged this as uncertain. Moved to an open_question instead of an asserted fact.",
       "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): second independent attempt to confirm the instechno.ru match also failed -- no ИНН/legal-name self-disclosure found on the site.",
@@ -52632,8 +53262,10 @@
       "2026-09-05: backfilled the structured `zakupki_review` field (wired, as of 2026-09-05) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
       "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 3 enforcement-proceeding record(s) totalling 19,998,476.20 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "ФССП (2026-09-08): ~₽18.68M remaining, dominated by one ₽17.8M 'иные взыскания' enforcement (2025-02-13) plus a smaller unpaid-tax act — material financial-distress signal."
     ],
+    "_corrected": null,
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "opensanctions_matches": [
       {
@@ -53092,7 +53724,43 @@
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": [],
     "proverki_inspections": [],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ООО \"ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ТЕХНОЛОГИИ\"",
+        "proceeding_number": "2810479/25/78011-ИП",
+        "institution_date": "2025-09-08",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "795395.20",
+        "debt_remaining": "743360.00",
+        "bailiff_department": "Адмиралтейский РОСП",
+        "inn": "7842179810"
+      },
+      {
+        "debtor_name": "ООО \"ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ТЕХНОЛОГИИ\"",
+        "proceeding_number": "36505/25/78023-ИП",
+        "institution_date": "2025-02-13",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "19073285.00",
+        "debt_remaining": "17825500.00",
+        "bailiff_department": "Отдел судебных приставов по взысканию задолженности с юридических лиц",
+        "inn": "7842179810"
+      },
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ТЕХНОЛОГИИ\"",
+        "proceeding_number": "479770/26/98078-ИП",
+        "institution_date": "2026-06-01",
+        "document_type": "Акт органа, осуществляющего контрольные функции",
+        "execution_object": "Налог в размере отрицательного сальдо ЕНС",
+        "amount_due": "129796.00",
+        "debt_remaining": "109796.00",
+        "bailiff_department": "СОСП по г. Санкт-Петербургу",
+        "inn": "7842179810"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-asel-labs",
@@ -53924,8 +54592,6 @@
       "2026-09-08: user pulled the actual kad.arbitr.ru court filings for А32-19338/2025 (определение + решение), confirming and detailing the earlier aggregator-sourced litigation entry — case is a routine unfulfilled-advance recovery against ООО «ДАР», not otherwise notable. Also confirmed directly (not via aggregator) that Гагаринг is a registered participant in the Честный Знак/ГИС МТ mandatory goods-marking system under the «Радиоэлектронная продукция» commodity group, розница/УОТ type — official registry lookup (xn--80ajghhoc2aj1c8b.xn--p1ai/business/spisokuot/), CAPTCHA solved via chrome-devtools browser session, s7365.",
       "2026-09-08: checked reestr-zalogov.ru (ФНП Реестр уведомлений о залоге движимого имущества, incl. Федресурс cross-search) by ИНН — 0 hits, s7366. Closes the last identified Kontur.Focus-Pro-equivalent coverage gap for this entity other than ФССП enforcement proceedings (handed to user per crawling-jobs policy, not yet run)."
     ],
-    "pledge_registry_matches": [],
-    "pledge_registry_checked_at": "2026-09-08",
     "_corrected": [
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
@@ -54113,7 +54779,9 @@
         }
       }
     ],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "pledge_registry_matches": [],
+    "pledge_registry_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-praym",
@@ -56362,7 +57030,43 @@
     "fas_br_checked_at": "2026-09-05",
     "fstec_reg1_hit": [],
     "fstec_checked_at": "2026-09-05",
-    "fstec_reg2_hit": []
+    "fstec_reg2_hit": [],
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "АНО ЦЕНТР СТРЕЛКОВОГО И АВИАЦИОННОГО СПОРТА ДЕМЯНСК",
+        "proceeding_number": "77723/26/53005-ИП",
+        "institution_date": "2026-08-19",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф ГИБДД",
+        "amount_due": "20750.00",
+        "debt_remaining": "750.00",
+        "bailiff_department": "ОСП Демянского и Маревского районов",
+        "inn": "5300008970"
+      },
+      {
+        "debtor_name": "АНО ЦЕНТР СТРЕЛКОВОГО И АВИАЦИОННОГО СПОРТА ДЕМЯНСК",
+        "proceeding_number": "77695/26/53005-ИП",
+        "institution_date": "2026-08-19",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф ГИБДД",
+        "amount_due": "20750.00",
+        "debt_remaining": "750.00",
+        "bailiff_department": "ОСП Демянского и Маревского районов",
+        "inn": "5300008970"
+      },
+      {
+        "debtor_name": "АНО ЦЕНТР СТРЕЛКОВОГО И АВИАЦИОННОГО СПОРТА ДЕМЯНСК",
+        "proceeding_number": "78693/26/53005-ИП",
+        "institution_date": "2026-08-20",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф ГИБДД",
+        "amount_due": "750.00",
+        "debt_remaining": "750.00",
+        "bailiff_department": "ОСП Демянского и Маревского районов",
+        "inn": "5300008970"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-eliars",
@@ -58642,7 +59346,32 @@
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": [],
     "proverki_inspections": [],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВИАЦИОННО-КОСМИЧЕСКИЕ РАЗРАБОТКИ \"БЕГАК\"",
+        "proceeding_number": "168919/26/26030-ИП",
+        "institution_date": "2026-05-05",
+        "document_type": "Акт органа, осуществляющего контрольные функции",
+        "execution_object": "Страховые взносы, включая пени",
+        "amount_due": "26164.34",
+        "debt_remaining": "6164.34",
+        "bailiff_department": "Пятигорский городской отдел судебных приставов",
+        "inn": "2632116476"
+      },
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВИАЦИОННО-КОСМИЧЕСКИЕ РАЗРАБОТКИ \"БЕГАК\"",
+        "proceeding_number": "424022/26/98026-ИП",
+        "institution_date": "2026-06-15",
+        "document_type": "Акт органа, осуществляющего контрольные функции",
+        "execution_object": "Налог в размере отрицательного сальдо ЕНС",
+        "amount_due": "539837.90",
+        "debt_remaining": "481998.13",
+        "bailiff_department": "СОСП по Ставропольскому краю",
+        "inn": "2632116476"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ano-arrs-krasnodar",
@@ -64531,12 +65260,16 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-02: added from smolin.info (s5291, companion piece to s5288). Director/ОГРН/registration date corroborated live via egrul.nalog.ru 2026-09-02 (exact match). Claimed monthly output (6,000 units) is per-source, not independently verified. Ushkuynik-residency claim (25.06.2025) is the article's own factual anchor for the Ushkuynik connection — not yet cross-checked against Ushkuynik's own resident list (not public)."
+    ],
+    "why": [
       "2026-09-02: precise address from EGRUL extract s5308 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"Новгородская область\". ГРН 2255300168836 dated 07.02.2025.",
       "2026-09-02: found via HAR capture of fedresurs.ru (Федресурс fact-message backend API discovered: GET https://fedresurs.ru/backend/sfact-messages/<GUID>, no auth needed, just a Referer header -- see notes/source_expansion_methodology.md). УФНС России по Новгородской области filed a bankruptcy petition against ООО «Герон» with the Novgorod Oblast Arbitration Court, court notification dated 17.02.2026. Significant given ooo-geron was only added to the registry this session (via the smolin.info retrace) as part of the Ushkuynik-adjacent Аэро-Хит/Владимирский cluster.",
       "2026-09-02: HAR capture of fedresurs.ru's main-site search (GET /backend/companies?searchString=<ИНН> -> GUID, then /backend/companies/<GUID>/{main,bankruptcy,publications,networth,licenses,encumbrances} -- a full universal company-lookup API, reusable for any entity, not just bankruptcy checks; see notes/source_expansion_methodology.md) surfaced a materially worse financial picture than the single УФНС filing already on file: (1) ПАО Сбербанк itself filed TWO separate creditor bankruptcy-intent notices against ООО «Герон» (06.03.2026 and 28.04.2026), on top of the tax authority's 18.02.2026 filing -- three separate creditors circling within 10 weeks. (2) EGRUL itself flagged ООО «Герон»'s registered information as unreliable (\"Недостоверность сведений\", record 11.03.2026, published 12.03.2026, per УФНС России по Новгородской области's own verification check) -- s5322, often a precursor to forced ЕГРЮЛ exclusion. (3) A 2024 vehicle-leasing fact-message (s5314) names the lessee as \"ООО «Герон-Авиа»\" -- same ИНН/ОГРН, confirming this as an alternate/trading name tied to geronavia.ru. Notably, this same message has BOTH isPublisherInSanctionList:true and isParticipantInSanctionList:true set by Fedresurs's own system, and the LESSOR's identity is fully redacted citing \"Постановление Правительства РФ от 12.01.2018 №5\" -- a real, well-documented Russian government decree used specifically to shield defense-industry/gosoboronzakaz-participating entities' EGRUL/Fedresurs footprint from public disclosure. This is flagged here as Fedresurs's own classification, NOT independently verified against a primary international sanctions list (OFAC/EU/UK) or confirmed which sanctions list is meant -- but the shielding decree itself is a strong, independently-verifiable signal that the (unnamed) leasing counterparty is treated as defense-industry-sensitive by the Russian state. No bidding/pledged-asset/networth/license records exist yet (all empty) -- consistent with the bankruptcy still being at the pre-trustee petition stage, per the earlier torgi.gov.ru/bankrot.fedresurs.ru null result.",
       "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 6 enforcement-proceeding record(s) totalling 34,436,367.00 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "ФССП (2026-09-08, s-fssp opendata): ~₽30.5M remaining across 6 proceedings, incl. ₽14.18M 'иные взыскания', ₽8.06M unpaid tax (ЕНС отрицательное сальдо), ₽4.83M notarial credit-debt enforcement, ₽3.44M court judgment — material financial-distress signal, worth a closer look at the underlying cases before drawing conclusions."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -64691,7 +65424,76 @@
         }
       }
     ],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕРОН\"",
+        "proceeding_number": "320898/25/53002-ИП",
+        "institution_date": "2025-12-19",
+        "document_type": "Акт органа, осуществляющего контрольные функции",
+        "execution_object": "Страховые взносы, включая пени",
+        "amount_due": "12831.11",
+        "debt_remaining": "2831.11",
+        "bailiff_department": "ОСП Боровичского, Любытинского и Мошенского районов",
+        "inn": "7802893898"
+      },
+      {
+        "debtor_name": "ООО \"ГЕРОН\"",
+        "proceeding_number": "157977/26/53002-ИП",
+        "institution_date": "2026-06-05",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "15886018.62",
+        "debt_remaining": "14183945.20",
+        "bailiff_department": "ОСП Боровичского, Любытинского и Мошенского районов",
+        "inn": "7802893898"
+      },
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕРОН\"",
+        "proceeding_number": "15818/26/53002-ИП",
+        "institution_date": "2026-01-29",
+        "document_type": "Исполнительная надпись нотариуса",
+        "execution_object": "Задолженность по кредитным платежам (кроме ипотеки)",
+        "amount_due": "5413936.66",
+        "debt_remaining": "4833872.02",
+        "bailiff_department": "ОСП Боровичского, Любытинского и Мошенского районов",
+        "inn": "7802893898"
+      },
+      {
+        "debtor_name": "ООО \"ГЕРОН\"",
+        "proceeding_number": "43885/26/53002-ИП",
+        "institution_date": "2026-02-25",
+        "document_type": "Исполнительный лист",
+        "execution_object": "Иные взыскания имущественного характера в пользу физических и юридических лиц",
+        "amount_due": "3848833.29",
+        "debt_remaining": "3436458.30",
+        "bailiff_department": "ОСП Боровичского, Любытинского и Мошенского районов",
+        "inn": "7802893898"
+      },
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕРОН\"",
+        "proceeding_number": "232161/26/98053-ИП",
+        "institution_date": "2026-07-01",
+        "document_type": "Акт органа, осуществляющего контрольные функции",
+        "execution_object": "Налог в размере отрицательного сальдо ЕНС",
+        "amount_due": "9032138.49",
+        "debt_remaining": "8064409.37",
+        "bailiff_department": "СОСП по Новгородской области",
+        "inn": "7802893898"
+      },
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕРОН\"",
+        "proceeding_number": "247024/26/98053-ИП",
+        "institution_date": "2026-07-20",
+        "document_type": "Постановление судебного пристава-исполнителя",
+        "execution_object": "Исполнительский сбор",
+        "amount_due": "242608.83",
+        "debt_remaining": "0.00",
+        "bailiff_department": "СОСП по Новгородской области",
+        "inn": "7802893898"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-skay-avia-grupp",
@@ -64846,10 +65648,14 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-02: added from smolin.info (s5291). Director/ОГРН/registration date corroborated live via egrul.nalog.ru 2026-09-02 (exact match)."
+    ],
+    "why": [
       "2026-09-02: precise address from EGRUL extract s5307 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse \"г. Санкт-Петербург\". ГРН 2267800128253 dated 28.01.2026.",
       "ФССП open-data bulk-CSV screen (2026-09-07, source s6459, dataset 7709576929-iplegallist): 1 enforcement-proceeding record(s) totalling 6,043,375.02 RUB in amounts due. Genuinely material financial-distress signal, wired despite no dedicated field existing for enforcement proceedings (reused litigation[] with an explicit note distinguishing it from a court case).",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "ФССП (2026-09-08): ₽5.40M remaining, a single unpaid-tax enforcement act (ЕНС отрицательное сальдо) — material financial-distress signal."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -64948,7 +65754,21 @@
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": [],
     "proverki_inspections": [],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СКАЙ АВИА ГРУПП\"",
+        "proceeding_number": "649810/26/98078-ИП",
+        "institution_date": "2026-08-03",
+        "document_type": "Акт органа, осуществляющего контрольные функции",
+        "execution_object": "Налог в размере отрицательного сальдо ЕНС",
+        "amount_due": "6043375.02",
+        "debt_remaining": "5395870.56",
+        "bailiff_department": "СОСП по г. Санкт-Петербургу",
+        "inn": "7802865058"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-npk-geron",
@@ -68624,7 +69444,32 @@
     "fstec_checked_at": "2026-09-05",
     "fstec_reg2_hit": [],
     "proverki_inspections": [],
-    "proverki_checked_at": "2026-09-07"
+    "proverki_checked_at": "2026-09-07",
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ООО АРХАНГЕЛ ЩИТ",
+        "proceeding_number": "268496/26/50021-ИП",
+        "institution_date": "2026-05-14",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф ГИБДД",
+        "amount_due": "5000.00",
+        "debt_remaining": "5000.00",
+        "bailiff_department": "Люберецкий РОСП",
+        "inn": "5027339008"
+      },
+      {
+        "debtor_name": "ООО \"АРХАНГЕЛ ЩИТ\"",
+        "proceeding_number": "921057/26/50061-ИП",
+        "institution_date": "2026-08-24",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф иного органа",
+        "amount_due": "1500.00",
+        "debt_remaining": "1500.00",
+        "bailiff_department": "МОСП по ВАШ № 1",
+        "inn": "5027339008"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-arkhangel-grupp",
@@ -71367,7 +72212,87 @@
     ],
     "_corrected": [
       "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6963) to confirm details directly."
-    ]
+    ],
+    "fssp_debt_matches": [
+      {
+        "debtor_name": "ООО НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ ЗЕВС",
+        "proceeding_number": "153729/26/61025-ИП",
+        "institution_date": "2026-09-01",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф ГИБДД",
+        "amount_due": "2250.00",
+        "debt_remaining": "2250.00",
+        "bailiff_department": "Ворошиловское РОСП г. Ростова-на-Дону ГУФССП России по Ростовской области",
+        "inn": "6161154122"
+      },
+      {
+        "debtor_name": "ООО НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ ЗЕВС",
+        "proceeding_number": "110079/26/61085-ИП",
+        "institution_date": "2026-08-17",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф ГИБДД",
+        "amount_due": "750.00",
+        "debt_remaining": "750.00",
+        "bailiff_department": "ОСП по работе с ЮЛ по г. Ростову-на-Дону ГУФССП России по Ростовской области",
+        "inn": "6161154122"
+      },
+      {
+        "debtor_name": "ООО НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ ЗЕВС",
+        "proceeding_number": "110073/26/61085-ИП",
+        "institution_date": "2026-08-17",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф ГИБДД",
+        "amount_due": "750.00",
+        "debt_remaining": "750.00",
+        "bailiff_department": "ОСП по работе с ЮЛ по г. Ростову-на-Дону ГУФССП России по Ростовской области",
+        "inn": "6161154122"
+      },
+      {
+        "debtor_name": "ООО НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ ЗЕВС",
+        "proceeding_number": "110076/26/61085-ИП",
+        "institution_date": "2026-08-18",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф ГИБДД",
+        "amount_due": "2250.00",
+        "debt_remaining": "2250.00",
+        "bailiff_department": "ОСП по работе с ЮЛ по г. Ростову-на-Дону ГУФССП России по Ростовской области",
+        "inn": "6161154122"
+      },
+      {
+        "debtor_name": "ООО НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ ЗЕВС",
+        "proceeding_number": "110663/26/61085-ИП",
+        "institution_date": "2026-08-19",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф ГИБДД",
+        "amount_due": "7500.00",
+        "debt_remaining": "7500.00",
+        "bailiff_department": "ОСП по работе с ЮЛ по г. Ростову-на-Дону ГУФССП России по Ростовской области",
+        "inn": "6161154122"
+      },
+      {
+        "debtor_name": "ООО НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ ЗЕВС",
+        "proceeding_number": "111479/26/61085-ИП",
+        "institution_date": "2026-08-20",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф ГИБДД",
+        "amount_due": "2250.00",
+        "debt_remaining": "2250.00",
+        "bailiff_department": "ОСП по работе с ЮЛ по г. Ростову-на-Дону ГУФССП России по Ростовской области",
+        "inn": "6161154122"
+      },
+      {
+        "debtor_name": "ООО НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ ЗЕВС",
+        "proceeding_number": "113603/26/61085-ИП",
+        "institution_date": "2026-08-26",
+        "document_type": "Акт по делу об административном правонарушении",
+        "execution_object": "Штраф ГИБДД",
+        "amount_due": "2250.00",
+        "debt_remaining": "2250.00",
+        "bailiff_department": "ОСП по работе с ЮЛ по г. Ростову-на-Дону ГУФССП России по Ростовской области",
+        "inn": "6161154122"
+      }
+    ],
+    "fssp_debt_checked_at": "2026-09-08"
   },
   {
     "slug": "ao-opticheskie-sistemy",

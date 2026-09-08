@@ -34,6 +34,12 @@
 |---|---|---|
 | 20000 | 2024-04-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6727] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| Тульская область, г. Тула, ул. Рязанская, здание 5Ж | 2026-04-01 | First street-level address on file (prior: village-level 'с. Осиновая Гора'), from a ГУ МЧС России по Тульской области 'профилактический визит' record (Apr 2026). [s6960] |
+
 ## Products
 
 - **«Овод»** — FPV kamikaze drone with neural-network-based autonomous targeting ("система самонаведения на основе нейросети"), deployed in Ukraine since 2023. Company e-mail domain (company@ovod71.ru) is literally the product brand. [s0526]
@@ -81,6 +87,16 @@
 > The heavy fiber-optic strike FPV drone "Provod" achieved a record combat-condition range of 40.4 km, destroying a Ukrainian ammunition depot and nearby enemy personnel on the Sumy front.
 >
 > — Self-reported strike claim for the «Провод»/«ПрОвод» fiber-optic variant of the «Овод» family, framed as a range record. (2026-08-18) [s6456]
+
+> *Дроны на "леске" различаются длиной катушки. Сейчас катушки позволяют летать на 40 км, можно и дальше... Подсчет стоимости уничтоженной техники не ведется, но в целом можно считать 2-4 дрона на гаубицу или боевую машину. Фактически получается уничтожить ценное имущество стоимостью от 100 млн рублей дронами суммарной стоимостью меньше 1 млн рублей... Мы постоянно растем, совершенствуем свои дроны и увеличиваем объемы производства. В перспективе ждем появления изделий, способных работать автоматически с использованием ИИ.*
+> "Leash"-type drones differ by spool length. Spools now allow flight up to 40 km, and further is possible... The value of destroyed equipment isn't tracked, but roughly 2-4 drones are used per howitzer or combat vehicle. In effect, assets worth over 100 million rubles are destroyed using drones totaling under 1 million rubles... We keep growing, improving our drones and increasing production volumes. Going forward we expect products capable of working autonomously using AI.
+>
+> — TASS-quoted ("ТАСС пишет про наши дроны") company statement on cost-effectiveness economics and a forward AI-autonomy roadmap. (2026-08-20) [s6456]
+
+> *Сегодня год с момента основания боевой группы "ОВОД" в составе отдела контроля и целевого применения производителя дронов "ОВОД". Боевая группа создана из опытных воинов - ветеранов СВО. Военные специалисты ОВОДА содействуют подразделениям МО РФ и других силовых служб в зоне СВО. Боевая группа "ОВОД" регулярно работает на сложных участках фронта, где занимается апробацией изделий и выполняет боевые задачи в роли беспилотного спецназа.*
+> Today marks one year since the founding of the OVOD combat group within the manufacturer's own control-and-target-application department. The combat group is made up of experienced SVO veterans. OVOD's military specialists assist units of the Russian MoD and other security services in the SVO zone. The OVOD combat group regularly operates in difficult front-line sectors, field-testing products and carrying out combat tasks in the role of unmanned special forces.
+>
+> — 1st-anniversary announcement (founded ~28.08.2025) of the manufacturer's own in-house combat/field-testing detachment, staffed by SVO veterans and operating directly at the front — distinct from the earlier-documented general 'field-support sector' (msg 845), this is explicitly a combat unit performing military tasks, not just training/support. (2026-08-28) [s6456]
 
 ## Battlefield evidence
 
@@ -152,6 +168,7 @@ _No named principals linked to this entity yet._
 | s6533 | Bfo | Bfo (BFO_7100027464_2024_ооо-рлвт.pdf) | — | — |
 | s6534 | Bfo | Bfo (BFO_7100027464_2025_ооо-рлвт.pdf) | — | — |
 | s6727 | EGRUL extract | EGRUL extract (EGRUL_7100027464_20260907_ovod.pdf) | 2026-09-07 | 2026-09-07 |
+| s6960 | Proverki | Proverki (PROVERKI_7100027464_20260907_ovod-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
