@@ -1136,6 +1136,12 @@ ENTITY_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("proverki_inspections", "proverki_checked_at"),
     ("fssp_debt_matches", "fssp_debt_checked_at"),
     ("pledge_registry_matches", "pledge_registry_checked_at"),
+    ("favt_aviation_matches", "favt_aviation_checked_at"),
+    ("mchs_fire_license_matches", "mchs_fire_checked_at"),
+    ("rkn_comms_license_matches", "rkn_comms_checked_at"),
+    ("rkn_frequency_matches", "rkn_frequency_checked_at"),
+    ("roscosmos_license_matches", "roscosmos_checked_at"),
+    ("rosgvardia_license_matches", "rosgvardia_checked_at"),
 ]
 PEOPLE_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("other_entities", "other_entities_checked_at"),

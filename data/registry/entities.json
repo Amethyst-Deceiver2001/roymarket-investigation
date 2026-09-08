@@ -54545,7 +54545,7 @@
     ],
     "egrul_flags": [],
     "securing_measures": [],
-    "securing_measures_checked_at": "2026-09-06",
+    "securing_measures_checked_at": "2026-09-08",
     "sanctions": [],
     "litigation": [
       {
@@ -54810,7 +54810,10 @@
     },
     "why": [
       "2026-09-08: user pulled the actual kad.arbitr.ru court filings for А32-19338/2025 (определение + решение), confirming and detailing the earlier aggregator-sourced litigation entry — case is a routine unfulfilled-advance recovery against ООО «ДАР», not otherwise notable. Also confirmed directly (not via aggregator) that Гагаринг is a registered participant in the Честный Знак/ГИС МТ mandatory goods-marking system under the «Радиоэлектронная продукция» commodity group, розница/УОТ type — official registry lookup (xn--80ajghhoc2aj1c8b.xn--p1ai/business/spisokuot/), CAPTCHA solved via chrome-devtools browser session, s7365.",
-      "2026-09-08: checked reestr-zalogov.ru (ФНП Реестр уведомлений о залоге движимого имущества, incl. Федресурс cross-search) by ИНН — 0 hits, s7366. Closes the last identified Kontur.Focus-Pro-equivalent coverage gap for this entity other than ФССП enforcement proceedings (handed to user per crawling-jobs policy, not yet run)."
+      "2026-09-08: checked reestr-zalogov.ru (ФНП Реестр уведомлений о залоге движимого имущества, incl. Федресурс cross-search) by ИНН — 0 hits, s7366. Closes the last identified Kontur.Focus-Pro-equivalent coverage gap for this entity other than ФССП enforcement proceedings (handed to user per crawling-jobs policy, not yet run).",
+      "2026-09-08: full re-screen pass across all entity-relevant open-registry screeners (24 scripts inventoried, see notes/kontur_focus_pro_coverage_report or equivalent). Six screeners had NEVER been run against this entity before (favt aviation-operators, MChS fire-license, RKN comms-license, RKN frequency registry, Roscosmos space-license, Rosgvardia 5-registry weapons/security-license bundle) -- all six came back 0 hits, now wired as favt_aviation_matches/mchs_fire_license_matches/rkn_comms_license_matches/rkn_frequency_matches/roscosmos_license_matches/rosgvardia_license_matches + their _checked_at fields (added to ENTITY_CARRY_FORWARD_FIELDS so a future regeneration does not silently drop them, same fix class as the 2026-09-08 FSSP checked_at gap). NSPD address cross-check (7th previously-unrun screener) was attempted but blocked by nspd.gov.ru's WAF (403 on both addresses) -- left unmarked/unchecked, not recorded as a clean 0-hit, per this project's no-guessing rule.",
+      "2026-09-08: rmsp.nalog.ru re-check surfaced a field not previously read closely -- dtregistryout=10.07.2026, is_active=0. This entity was REMOVED from the Единый реестр субъектов МСП (SME registry) on 2026-07-10, after being listed since its 2023-10-10 registration. Cause not stated by the registry itself; plausible explanations include exceeding the SME revenue/headcount size threshold (consistent with the FY2025 audit's ~25x revenue jump to ₽2.16bn -- large primes and fast-growing firms routinely exit this registry on size grounds, a NEUTRAL-TO-POSITIVE signal, not adverse) or a status/filing issue -- not resolved either way, flagged for a human read of the SME-registry's own removal-reason codes if ever exposed. Same query also returned od2_sschr=74 (self-reported headcount), corroborating the checko.ru extract's 74 figure over the FY2025 audit's 105 in the still-unresolved workforce_history discrepancy noted 2026-09-08.",
+      "2026-09-08: gur_components_matches' sole entry (query=\"radio\", matched_product=\"Детектор Анализатор Радио Сигналов «ДАРС»\", cited across Geran-2/Shahed-136/Orlan-10 component teardowns) reviewed against this entity's own product catalogue -- Гагаринг's actual portable-detector line is branded «ЮРКА» (ЮРКА 1.2/1.2ВП), not «ДАРС». Assessed as a free-text keyword collision from an automated \"radio\" query, not a real product match -- flagged explicitly as a likely false positive, should NOT be read as evidence this entity's hardware appears inside GUR's Geran-2/Shahed-136 teardown catalogue absent a stronger identifier match."
     ],
     "_corrected": [
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
@@ -54903,11 +54906,11 @@
     ],
     "rospatent_director_screened_at": "2026-08-24",
     "rk2035_matches": [],
-    "rk2035_screened_at": "2026-09-06",
+    "rk2035_screened_at": "2026-09-08",
     "wb_matches": [],
     "wb_screened_at": "2026-09-07",
     "rnp_matches": [],
-    "rnp_screened_at": "2026-09-05",
+    "rnp_screened_at": "2026-09-08",
     "rmsp_hit": {
       "id": 1232300051235,
       "ogrn": "1232300051235",
@@ -54932,11 +54935,11 @@
       "pr_soc": 0,
       "is_pp": 0,
       "cnt": 1,
-      "token": "010E0F988BD4CE42D58013C5C2AB60810ACD2F104E877DDFAB475E65A86CF1D2EA8892A15B6C0D64376C996E7E90EB77"
+      "token": "3E8FB37DE93CDACB2B44CA17B5623AEB1F709AE6FA0DB83C9F27BA00CD35E3D2F4A7F3ECC33D1707C1AB8704ED089EEB"
     },
-    "rmsp_checked_at": "2026-09-05",
+    "rmsp_checked_at": "2026-09-08",
     "fas_br_hit_count": 0,
-    "fas_br_checked_at": "2026-09-05",
+    "fas_br_checked_at": "2026-09-08",
     "fsa_cert_hit_count": 0,
     "fsa_checked_at": "2026-09-05",
     "fsa_decl_hit_count": 0,
@@ -55003,7 +55006,19 @@
     "fssp_debt_matches": [],
     "fssp_debt_checked_at": "2026-09-08",
     "pledge_registry_matches": [],
-    "pledge_registry_checked_at": "2026-09-08"
+    "pledge_registry_checked_at": "2026-09-08",
+    "favt_aviation_matches": [],
+    "favt_aviation_checked_at": "2026-09-08",
+    "mchs_fire_license_matches": [],
+    "mchs_fire_checked_at": "2026-09-08",
+    "rkn_comms_license_matches": [],
+    "rkn_comms_checked_at": "2026-09-08",
+    "rkn_frequency_matches": [],
+    "rkn_frequency_checked_at": "2026-09-08",
+    "roscosmos_license_matches": [],
+    "roscosmos_checked_at": "2026-09-08",
+    "rosgvardia_license_matches": [],
+    "rosgvardia_checked_at": "2026-09-08"
   },
   {
     "slug": "ooo-praym",
