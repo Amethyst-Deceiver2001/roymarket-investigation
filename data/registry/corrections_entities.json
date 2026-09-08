@@ -4023,6 +4023,75 @@
         "outcome": "closed",
         "note": "single-ИНН scan run, 0 hits — company too young (Dec 2024) to plausibly have a government-contract history yet."
       }
+    },
+    {
+      "slug": "ao-rti-radio",
+      "name_ru": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"РТИ-РАДИО\"",
+      "name_en": "Joint Stock Company \"RTI-Radio\"",
+      "name_latin": "Joint Stock Company \"RTI-Radio\"",
+      "legal_form": "АО",
+      "inn": "7713133550",
+      "ogrn": "1027739416220",
+      "registered": "17.04.1997",
+      "address": "107553, г. Москва, вн.тер.г. муниципальный округ Преображенское, ул. Большая Черкизовская, д.21 стр.1, помещ.5/1",
+      "okved_code": "26.51.2",
+      "okved_label": "Производство радиолокационной, радионавигационной аппаратуры и радиоаппаратуры дистанционного управления",
+      "okved_secondary": [
+        {
+          "code": "26.1",
+          "label": "Производство элементов электронной аппаратуры и печатных схем (плат)"
+        },
+        {
+          "code": "26.11.3",
+          "label": "Производство интегральных электронных схем"
+        },
+        {
+          "code": "26.11.9",
+          "label": "Производство частей электронных ламп, трубок и прочих электронных компонентов"
+        },
+        {
+          "code": "26.12",
+          "label": "Производство электронных печатных плат"
+        },
+        {
+          "code": "33.13",
+          "label": "Ремонт электронного и оптического оборудования"
+        },
+        {
+          "code": "33.14",
+          "label": "Ремонт электрического оборудования"
+        }
+      ],
+      "director": "Бессонов Сергей Николаевич",
+      "director_history": [
+        {
+          "value": "Бессонов Сергей Николаевич",
+          "as_of": "19.02.2026",
+          "source_id": "s7345",
+          "note": "ИНН 644914040799 — same person already on file as ООО «Аэромакс»'s own director."
+        }
+      ],
+      "founders": "ООО «Группа компаний «Аэромакс»» (100%, sole shareholder)",
+      "founders_history": [
+        {
+          "value": "ООО «Группа компаний «Аэромакс»» (ИНН 7710974353), 100%, sole shareholder",
+          "as_of": "13.02.2025",
+          "source_id": "s7345"
+        }
+      ],
+      "tier": "manufacturer",
+      "tier_basis": "Added 2026-09-08: surfaced via a ФНС director/founder re-screen of Бессонов Сергей Николаевич, already on file as ООО «Аэромакс»'s own director. His own EGRUL выписка (s7345) shows this is a real, long-established (registered 17.04.1997, pre-2002 formation) radar/radionavigation-equipment manufacturer with a genuine electronics-manufacturing OKVED stack (26.51.2 primary — same radar/radionavigation code as АО «НПП «Радар ММС»» elsewhere in this registry — plus PCB/integrated-circuit/electronic-component manufacturing codes), not a shell or generic wholesale wrapper. Its sole shareholder (100%, acquired 13.02.2025) is ООО «Группа компаний «Аэромакс»» (ИНН 7710974353) — this is a corporate acquisition by the already-known Аэромакс group, not an unrelated company, and Бессонов was installed as its GD six days later (19.02.2026). Worth tracking as an Аэромакс subsidiary with real manufacturing substance behind the acquisition; no EGRUL restriction/недостоверность flags found.",
+      "products": [],
+      "why": [
+        "2026-09-08: found via scripts/screen_upr_uchr.py's re-screen of Бессонов С.Н. (part of the Group-1 unverified-people refresh); pulled full EGRUL выписка (s7345) to confirm details and the Аэромакс ownership link directly."
+      ],
+      "social": [
+        {
+          "platform": "email",
+          "url": "INBOX@K-TECH.RU",
+          "source_id": "s7345"
+        }
+      ]
     }
   ],
   "entities": {
@@ -18276,7 +18345,8 @@
         "charter_capital": 18309491704.16,
         "why": [
           "2026-09-07: Aleph/OCCRP cached-EGRUL-mirror recovery of pre-restriction director+owner (Богатиков С.А. / ООО «Кронштадт Беспилотные Системы») plus a two-entry name_history on this ИНН, closing the entity's own open_question about the Kronshtadt tie."
-        ]
+        ],
+        "notes": "Acquired 100% of АО «РТИ-Радио» (ИНН 7713133550, see its own registry entry) on 13.02.2025 — a long-established (1997) radar/radionavigation-equipment manufacturer, not a shell — and installed its own director Бессонов С.Н. as РТИ-Радио's GD on 19.02.2026, confirmed via РТИ-Радио's own EGRUL выписка (s7345, 2026-09-08)."
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -18289,7 +18359,8 @@
         "2026-09-06: name_history entry from Минпромторг aviation-tech license registry (s6408) — same ОГРН, different registered name at that date, not yet on file.",
         "2026-09-06: identified a new registry entity ooo-diam-aero (ООО «ДИАМ-АЭРО», ИНН 7811687549) whose founders (АО «ИКАР-ТЕХ» 95% + АО ГК «ИКАР» 5%) and director (Скорятин Георгий Андреевич) match this record's own already-noted «ИКАР» management company and Скорятин directorship from the Kronshtadt→Aeromax rename reporting — ДИАМ-АЭРО is very likely a sister/subsidiary production entity inside this same group, manufacturing the ДИАМ-20 UAV (flown by ooo-aeromaks/ao-aeromaks per Rosaviatsia operator certificates, s6416). Formal Участия/subsidiary linkage not yet confirmed in this record's own EGRUL data — flagged as open question on ooo-diam-aero's own record pending that check.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-08: RTI-Радио's own EGRUL confirms Аэромакс Group's 100% acquisition and director installation"
       ]
     },
     "ooo-gk-logos": {
