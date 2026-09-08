@@ -2825,3 +2825,70 @@ low priority, proportionality).
    Райниса 41), to confirm/characterize what that address actually is.
 6. Consider whether Пром-Тех's недостоверность flag is worth a closer
    EGRUL record-history read to identify which field was flagged.
+
+**Update 2026-09-08 — items 1-6 above all closed.** НСПД confirmed б-р
+Яна Райниса 41 (АО Оптические Системы/ООО Аметист/ООО ПК Стальной Купол)
+is an ordinary residential building, not a distinct commercial mail-drop
+of interest — noted on all three, no further action. Read Пром-Тех's full
+EGRUL change-log sequence and resolved the недостоверность flag to its
+registered-address field specifically (already re-confirmed current by a
+later filing). OpenSanctions/Aleph screened all 9 cluster people: only
+generic EGRUL-derived `ru-inn-` entries, no sanction/PEP topics on any of
+them. zakupki scans: 0 hits across Прометей, НПК Атлант Аэро and АВИАОК
+(all `zakupki_review: closed`, recorded per-entity). АВИАОК's БФО pull
+found no filings on record despite its 2011 founding — flagged, not yet
+explained (possible lapsed disclosure, same pattern seen elsewhere in this
+network, or a filing that predates bo.nalog.gov.ru's coverage window).
+
+Two further leads surfaced from a fresh `screen_upr_uchr.py` pass over
+the whole ~155-person unverified-people roster with a personal ИНН
+(started 2026-09-07, ran to 131/149 before the pb.nalog.ru captcha wall,
+resumed 2026-09-08 for the remaining 24 — every record with an ИНН is now
+checked at least once, no backlog remains):
+
+- **ООО «Сельскохозяйственные беспилотные системы «МИРА»»**
+  (`ooo-selskohozyaystvennye-bespilotnye-sistemy-mira`, ИНН 7804712459) —
+  a 3rd corporate tie for Кобзев Виктор Викторович (35% founder,
+  23.07.2026), already known via Прометей/РИБЭКС. Registered as generic
+  agricultural-equipment wholesale (ОКВЭД 46.61) in Dec 2024, then added
+  ОКВЭД 30.30.6 "Производство беспилотных авиационных систем" seven
+  months later (17.07.2026) — the same declared-purpose-drift pattern
+  already documented elsewhere in this registry. НСПД-confirmed real
+  small office suite (not another mail-drop). zakupki: 0 hits, too young
+  to plausibly have contract history yet (`zakupki_review: closed`).
+- **АО «РТИ-Радио»** (`ao-rti-radio`, ИНН 7713133550) — surfaced via
+  Бессонов Сергей Николаевич (already known as ООО «Аэромакс»'s
+  director), installed as this entity's GD 19.02.2026, six days after
+  ООО «Группа компаний «Аэромакс»» acquired 100% (13.02.2025). Initially
+  characterized as a real manufacturer (long-established 1997, genuine
+  radar/radionavigation OKVED matching АО «НПП «Радар ММС»») — **corrected
+  same day** after pulling and reading all 5 available БФО filings
+  (FY2021–2025): fixed assets have shrunk to ₽16,000, inventory is zero
+  in every year, real product-sales revenue peaked at ~₽1m in FY2021, and
+  net losses since FY2023 run into the billions of rubles (-₽8.04bn
+  FY2025), driven by non-cash provisioning charges, not operating costs
+  — this is a dormant financial shell wearing an old manufacturing OKVED,
+  not evidence of active production. The Аэромакс-acquisition fact
+  itself still stands. Also ruled out a name-collision tie to the much
+  larger Ростех/АФК «Система»-adjacent «Концерн «РТИ Системы»» group
+  (separate ИНН, no ownership link found) and confirmed no subsidiaries
+  of its own.
+- Киселёв Глеб Дмитриевич — not a new corporate tie, but a
+  characterization fix at the user's direction: he's both PEP-adjacent
+  (son of Дмитрий Киселёв) AND a defense-industry figure in his own
+  right via «Кулибин-клуб» (835 designs tested, 195 accepted by MoD,
+  220,000+ units delivered per his own ONF-roundtable statements,
+  s0560), plus a since-exited 2016-2019 10% stake in ООО «Агрофирма
+  «Таврида»» (RuPEP, s7344).
+- ЦКБР scaffold gap closed 2026-09-08: the entity existed in the
+  registry (table-scaffolded from prose) but had no ИНН/founders/director
+  filled in. Pulled a full EGRUL выписка directly — confirms the founders
+  list already on file for co-founder/chief-designer Кузякин Д.В. (25%,
+  individually EU/UA/CH-sanctioned) and adds a GD succession not
+  previously recorded (Кузякин -> Косолапов О.Ю., 20.05.2025).
+
+Group-1 unverified-people refresh (`other_entities_checked_at`) is now
+fully current for every person carrying a personal ИНН — no backlog
+remains from this thread. **Not yet done:** the Гагаринг wide-net
+deep-dive plan (`~/.claude/plans/spicy-beaming-kite.md`) — parked,
+user has not yet selected it when offered as a next-step option.
