@@ -135,11 +135,12 @@ def validate_generated_graph(
     sources: list[dict],
 ) -> list[str]:
     """Check artifacts against an independent deterministic registry rebuild."""
-    errors = validate_graph(graph, entities, people, sources)
+    graph_errors = validate_graph(graph, entities, people, sources)
+    errors = [*graph_errors]
     if graph_views is None:
         errors.append("relationship_graph_views.json missing — run "
                       "scripts/build_relationship_graph.py")
-    elif isinstance(graph, dict) and isinstance(graph.get("nodes"), list) and isinstance(graph.get("edges"), list):
+    elif not graph_errors:
         errors.extend(validate_views(graph, graph_views))
 
     expected_graph = build_graph(entities, people)

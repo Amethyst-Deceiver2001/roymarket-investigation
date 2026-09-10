@@ -234,6 +234,23 @@ def validate_graph(
 VIEW_NAMES = ("cited_only", "current_only", "core_network", "evidence_gaps")
 
 
+def _projection_ready(graph: dict) -> bool:
+    """Return whether projection code can safely read required graph members."""
+    if not isinstance(graph, dict):
+        return False
+    nodes, edges = graph.get("nodes"), graph.get("edges")
+    if not isinstance(nodes, list) or not isinstance(edges, list):
+        return False
+    return (
+        all(isinstance(node, dict) and isinstance(node.get("id"), str)
+            and isinstance(node.get("kind"), str) for node in nodes)
+        and all(isinstance(edge, dict) and isinstance(edge.get("source"), str)
+                and isinstance(edge.get("target"), str)
+                and "source_id" in edge and "temporal_status" in edge
+                for edge in edges)
+    )
+
+
 def build_view_projections(graph: dict) -> dict[str, dict]:
     """Derive every view directly from the canonical graph, deterministically."""
     nodes = {node["id"]: node for node in graph["nodes"]}
@@ -270,6 +287,9 @@ def validate_views(graph: dict, views: dict) -> list[str]:
         return ["graph views: top-level fields must be schema_version, generated_from, views"]
     if views.get("generated_from") != "relationship_graph.json":
         return ["graph views: generated_from must be relationship_graph.json"]
+    if not _projection_ready(graph):
+        return ["graph views: cannot derive expected projections because the "
+                "canonical graph has malformed node or edge members"]
     view_map = views.get("views")
     if not isinstance(view_map, dict) or set(view_map) != set(VIEW_NAMES):
         return ["graph views: expected cited_only, current_only, core_network, evidence_gaps"]

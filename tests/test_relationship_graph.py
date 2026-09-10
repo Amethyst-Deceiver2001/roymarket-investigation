@@ -124,6 +124,23 @@ class RelationshipGraphTests(unittest.TestCase):
         self.assertTrue(any("does not exactly match the deterministic rebuild" in message
                             for message in messages))
 
+    def test_malformed_graph_returns_errors_without_view_traceback(self):
+        malformed = {
+            "schema_version": 2,
+            "node_count": 1,
+            "edge_count": 1,
+            "unresolved_count": 0,
+            "nodes": [{}],
+            "edges": [{}],
+            "unresolved": [],
+        }
+        self.assertTrue(any("cannot derive expected projections" in message
+                            for message in validate_views(malformed, self.views)))
+        messages = validate_generated_graph(
+            malformed, self.views, ENTITIES, PEOPLE, SOURCES)
+        self.assertTrue(any("nodes[0].kind" in message for message in messages))
+        self.assertTrue(any("edges[0] endpoint" in message for message in messages))
+
     def test_quality_report_is_deterministic(self):
         first = report(self.graph, self.views, ENTITIES, PEOPLE)
         second = report(self.graph, self.views, ENTITIES, PEOPLE)
