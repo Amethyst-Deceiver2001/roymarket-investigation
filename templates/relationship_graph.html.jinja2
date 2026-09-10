@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Relationship graph explorer — ROY.MARKET investigation</title>
+  <style>
+    :root {
+      --paper:#eceef1; --panel:#f6f7f9; --panel-2:#e3e6ea; --ink:#12161b;
+      --ink-2:#414a55; --ink-3:#66727e; --rule:#c8ced6; --rule-soft:#dbe0e6;
+      --accent:#17456b; --accent-soft:#e0e9f1; --ok:#0a7a53; --ok-bg:#e3f0ea;
+      --mid:#96700a; --mid-bg:#faf5e8; --low:#8a3030; --low-bg:#f2dedd;
+      --lead:#6c3c87; --lead-bg:#eee5f4; --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+      --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    }
+    @media (prefers-color-scheme:dark) { :root:not([data-theme="light"]) {
+      --paper:#0e1216; --panel:#151b21; --panel-2:#1d242c; --ink:#e6eaee;
+      --ink-2:#b3bcc6; --ink-3:#8e9aa6; --rule:#2c353f; --rule-soft:#222a33;
+      --accent:#7db4dd; --accent-soft:#16252f; --ok:#6fc9a3; --ok-bg:#12261f;
+      --mid:#e0b23f; --mid-bg:#2a2314; --low:#ec7a95; --low-bg:#2d1918;
+      --lead:#d5acee; --lead-bg:#2d2038;
+    }}
+    :root[data-theme="dark"] { --paper:#0e1216; --panel:#151b21; --panel-2:#1d242c; --ink:#e6eaee; --ink-2:#b3bcc6; --ink-3:#8e9aa6; --rule:#2c353f; --rule-soft:#222a33; --accent:#7db4dd; --accent-soft:#16252f; --ok:#6fc9a3; --ok-bg:#12261f; --mid:#e0b23f; --mid-bg:#2a2314; --low:#ec7a95; --low-bg:#2d1918; --lead:#d5acee; --lead-bg:#2d2038; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; padding:0 1.25rem 5rem; background:var(--paper); color:var(--ink); font:16px/1.55 var(--sans); }
+    .wrap { max-width:78rem; margin:0 auto; }
+    .skip { position:absolute; left:-999px; top:.5rem; background:var(--ink); color:var(--paper); padding:.45rem .7rem; z-index:2; }
+    .skip:focus { left:.75rem; }
+    .mast { border-bottom:3px double var(--rule); padding:2.5rem 0 1.25rem; margin-bottom:1.75rem; }
+    .theme { float:right; border:1px solid var(--rule); background:var(--panel-2); color:var(--ink); border-radius:4px; padding:.35rem .7rem; font:inherit; cursor:pointer; }
+    .kicker, .eyebrow, .mono { color:var(--ink-3); font:700 .7rem var(--mono); letter-spacing:.12em; text-transform:uppercase; }
+    .kicker { margin:0 0 .9rem; color:var(--accent); }
+    h1, h2 { font-family:var(--serif); font-weight:400; line-height:1.12; letter-spacing:-.015em; }
+    h1 { max-width:48rem; font-size:clamp(2rem,5vw,3.3rem); margin:0 0 .8rem; }
+    h2 { font-size:clamp(1.45rem,3vw,2rem); margin:.2rem 0 1rem; }
+    h3 { margin:.1rem 0 .45rem; font-size:1rem; }
+    .standfirst { max-width:54rem; margin:0; color:var(--ink-2); font:1.08rem/1.5 var(--serif); }
+    .stats, .legend, .controls, .task-nav { display:flex; flex-wrap:wrap; gap:.55rem; align-items:center; }
+    .stats { margin-top:1rem; font:.73rem var(--mono); color:var(--ink-3); }
+    .stats span { padding:.2rem .45rem; background:var(--panel-2); border-radius:3px; }
+    .task-nav { margin:1.2rem 0; }
+    button, input { font:inherit; }
+    button { color:var(--ink); background:var(--panel); border:1px solid var(--rule); border-radius:4px; padding:.48rem .7rem; cursor:pointer; }
+    button:hover { border-color:var(--accent); }
+    button[aria-pressed="true"] { background:var(--accent); color:white; border-color:var(--accent); }
+    button:focus-visible, input:focus-visible, a:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+    a { color:var(--accent); text-underline-offset:2px; }
+    .notice { padding:.9rem 1rem; background:var(--accent-soft); border-left:3px solid var(--accent); color:var(--ink-2); }
+    .notice strong { color:var(--ink); }
+    .layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(18rem,25rem); gap:1rem; align-items:start; margin-top:1.5rem; }
+    .panel { background:var(--panel); border:1px solid var(--rule-soft); border-radius:5px; padding:1rem; }
+    .controls { margin-bottom:1rem; }
+    .controls label { font-size:.83rem; font-weight:650; }
+    input[type="search"] { min-width:min(100%,23rem); padding:.48rem .65rem; border:1px solid var(--rule); border-radius:4px; color:var(--ink); background:var(--panel); }
+    .state, .kind, .tier, .heuristic { display:inline-block; border-radius:3px; padding:.16rem .42rem; font:700 .66rem var(--mono); letter-spacing:.04em; }
+    .state.cited { color:var(--ok); background:var(--ok-bg); }
+    .state.gap { color:var(--low); background:var(--low-bg); }
+    .state.current { color:var(--accent); background:var(--accent-soft); }
+    .state.historical, .heuristic { color:var(--mid); background:var(--mid-bg); }
+    .state.undated { color:var(--ink-2); background:var(--panel-2); }
+    .kind { color:var(--accent); background:var(--accent-soft); }
+    .kind.unresolved { color:var(--lead); background:var(--lead-bg); }
+    .tier { color:var(--ink-2); background:var(--panel-2); }
+    .scroll { overflow-x:auto; border:1px solid var(--rule-soft); border-radius:4px; }
+    table { width:100%; border-collapse:collapse; font-size:.83rem; min-width:54rem; }
+    th, td { padding:.65rem .7rem; text-align:left; vertical-align:top; border-bottom:1px solid var(--rule-soft); }
+    th { background:var(--panel-2); color:var(--ink-3); font:700 .65rem var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+    tr:last-child td { border-bottom:0; }
+    td button { padding:.16rem .35rem; font-size:.78rem; text-align:left; }
+    .pagination { display:flex; justify-content:space-between; align-items:center; margin-top:.75rem; color:var(--ink-3); font-size:.8rem; }
+    .detail { position:sticky; top:1rem; min-height:16rem; }
+    .detail p { margin:.4rem 0; }
+    .detail dl { margin:.85rem 0; }
+    .detail dt { color:var(--ink-3); font:700 .65rem var(--mono); letter-spacing:.08em; text-transform:uppercase; margin-top:.7rem; }
+    .detail dd { margin:.1rem 0; overflow-wrap:anywhere; }
+    .source-list { list-style:none; padding:0; margin:.8rem 0 0; }
+    .source-list li { border-top:1px solid var(--rule-soft); padding:.65rem 0; font-size:.82rem; }
+    .map { margin-top:1rem; border-top:1px solid var(--rule-soft); padding-top:1rem; }
+    .map-list { list-style:none; margin:.75rem 0 0; padding:0; }
+    .map-list li { display:grid; grid-template-columns:auto 1fr; gap:.5rem; border-top:1px solid var(--rule-soft); padding:.55rem 0; }
+    .map-arrow { color:var(--accent); font-weight:700; }
+    .muted { color:var(--ink-3); font-size:.84rem; }
+    .fine { font-size:.78rem; color:var(--ink-3); }
+    .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    footer { border-top:1px solid var(--rule); margin-top:2rem; padding-top:1rem; color:var(--ink-3); font-size:.79rem; }
+    @media (max-width:52rem) { .layout { grid-template-columns:1fr; } .detail { position:static; } body { padding-inline:.8rem; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#graph-table">Skip to relationship table</a>
+  <main class="wrap">
+    <header class="mast">
+      <button class="theme" id="theme-toggle" type="button" aria-pressed="false">Dark theme</button>
+      <p class="kicker">Registry explorer · local derived artifact</p>
+      <h1>Relationship graph, with the uncertainty left in</h1>
+      <p class="standfirst">A task-oriented reader for the verified registry graph. It starts with cited relationships rather than a force-laid-out network; position carries no meaning, and unresolved names remain research leads rather than principals.</p>
+      <div class="stats" aria-label="Graph summary">
+        <span>{{ node_count }} nodes</span><span>{{ edge_count }} relationships</span>
+        <span>{{ cited_count }} directly cited</span><span>{{ gap_count }} evidence gaps</span>
+      </div>
+    </header>
+
+    <nav class="task-nav" aria-label="Relationship graph tasks">
+      <button type="button" data-view="cited_only" aria-pressed="true">Cited relationships</button>
+      <button type="button" data-view="current_only" aria-pressed="false">Current, dated relationships</button>
+      <button type="button" data-view="core_network" aria-pressed="false">CBST-core neighbourhood</button>
+      <button type="button" data-view="evidence_gaps" aria-pressed="false">Evidence gaps to review</button>
+    </nav>
+
+    <section class="notice" aria-labelledby="reading-rules">
+      <strong id="reading-rules">Reading rules.</strong> “Cited” means this specific graph edge has an originating source ID. “Current” and “historical” require a directly cited, dated registry-history entry. “Undated” does not establish when a relationship applied. An evidence gap means the edge lacks an originating source ID; it is not evidence that no source exists.
+    </section>
+
+    <section class="layout" aria-label="Relationship graph explorer">
+      <div class="panel">
+        <div class="controls">
+          <label for="graph-search">Find a record or relationship</label>
+          <input id="graph-search" type="search" autocomplete="off" placeholder="Name, type, source ID, or tier">
+          <button type="button" id="clear-search">Clear</button>
+        </div>
+        <div class="legend" aria-label="Legend">
+          <span class="kind">Kind: entity/person/product</span>
+          <span class="tier">Tier: entity analysis label</span>
+          <span class="kind unresolved">Unresolved research lead</span>
+          <span class="heuristic">Product labels are heuristics</span>
+        </div>
+        <p id="view-description" class="muted" aria-live="polite"></p>
+        <div class="scroll">
+          <table id="graph-table">
+            <caption class="visually-hidden">Relationships in the selected derived graph view</caption>
+            <thead><tr><th>From</th><th>Relationship</th><th>To</th><th>Evidence &amp; timing</th><th>Source</th></tr></thead>
+            <tbody id="edge-rows"></tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button type="button" id="previous-page">Previous</button>
+          <span id="page-status" aria-live="polite"></span>
+          <button type="button" id="next-page">Next</button>
+        </div>
+      </div>
+
+      <aside class="panel detail" aria-labelledby="detail-heading">
+        <p class="eyebrow">Detail and evidence</p>
+        <h2 id="detail-heading">Select a relationship</h2>
+        <div id="detail-content"><p class="muted">Use a record or relationship button in the table. The source metadata shown here is restricted to evidence directly attached to the selected graph edge or product node.</p></div>
+        <div class="map" aria-labelledby="map-heading">
+          <p class="eyebrow">Local connection view</p>
+          <h3 id="map-heading">Select a record to inspect its neighbourhood</h3>
+          <p class="fine">This is a capped connection list, not a global layout. Ordering and placement do not imply hierarchy, proximity, or control.</p>
+          <ul id="map-list" class="map-list"></ul>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      Generated from the validated canonical registry graph and its reproducible derived views. Product platform and installation labels are text-matching heuristics, not independently asserted technical classifications. <a href="index.html">Return to the investigation</a>.
+    </footer>
+  </main>
+
+  <script id="canonical-graph" type="application/json">{{ graph_json | safe }}</script>
+  <script id="graph-views" type="application/json">{{ views_json | safe }}</script>
+  <script id="graph-sources" type="application/json">{{ sources_json | safe }}</script>
+  <script>
+    (() => {
+      "use strict";
+      const graph = JSON.parse(document.getElementById("canonical-graph").textContent);
+      const views = JSON.parse(document.getElementById("graph-views").textContent).views;
+      const sourceById = new Map(JSON.parse(document.getElementById("graph-sources").textContent).map(source => [source.id, source]));
+      const nodeById = new Map(graph.nodes.map(node => [node.id, node]));
+      const pageSize = 50;
+      const descriptions = {
+        cited_only: "Showing only relationships with a source ID directly attached to that graph edge.",
+        current_only: "Showing only directly cited, dated relationships explicitly marked current by a registry-history record.",
+        core_network: "Showing the one-hop neighbourhood of entities classified cbst-core. This is a navigation filter, not an organizational boundary.",
+        evidence_gaps: "Showing relationships whose originating field has no source ID. Treat these as research leads, not unsupported conclusions."
+      };
+      let activeView = "cited_only";
+      let page = 0;
+      let selectedNodeId = null;
+      const search = document.getElementById("graph-search");
+      const rows = document.getElementById("edge-rows");
+      const pageStatus = document.getElementById("page-status");
+      const detailHeading = document.getElementById("detail-heading");
+      const detailContent = document.getElementById("detail-content");
+      const mapHeading = document.getElementById("map-heading");
+      const mapList = document.getElementById("map-list");
+
+      function nodeLabel(id) { return nodeById.get(id)?.label || id; }
+      function nodeKind(id) { return nodeById.get(id)?.kind || "unknown"; }
+      function currentEdges() {
+        const term = search.value.trim().toLowerCase();
+        const edges = views[activeView].edges;
+        if (!term) return edges;
+        return edges.filter(edge => {
+          const source = nodeById.get(edge.source) || {};
+          const target = nodeById.get(edge.target) || {};
+          return [source.label, source.kind, source.tier, target.label, target.kind, target.tier,
+                  edge.type, edge.label, edge.source_id, edge.temporal_status]
+            .filter(Boolean).join(" ").toLowerCase().includes(term);
+        });
+      }
+      function appendText(parent, text) { parent.append(document.createTextNode(text)); }
+      function stateLabel(edge) {
+        if (!edge.source_id) return ["Evidence gap", "gap"];
+        if (edge.temporal_status === "current") return ["Cited · current", "current"];
+        if (edge.temporal_status === "historical") return ["Cited · historical", "historical"];
+        return ["Cited · undated", "undated"];
+      }
+      function nodeButton(id) {
+        const button = document.createElement("button");
+        const node = nodeById.get(id) || {};
+        button.type = "button";
+        button.textContent = node.label || id;
+        button.title = `Inspect ${node.kind || "record"}: ${node.label || id}`;
+        button.addEventListener("click", () => showNode(id));
+        return button;
+      }
+      function statePill(edge) {
+        const [label, cls] = stateLabel(edge);
+        const span = document.createElement("span");
+        span.className = `state ${cls}`;
+        span.textContent = label;
+        return span;
+      }
+      function appendNodeMeta(cell, id) {
+        const node = nodeById.get(id) || {};
+        cell.append(nodeButton(id));
+        const kind = document.createElement("span");
+        kind.className = `kind ${node.kind === "unresolved" ? "unresolved" : ""}`;
+        kind.textContent = node.kind === "unresolved" ? "research lead" : (node.kind || "unknown");
+        cell.append(document.createElement("br"), kind);
+        if (node.kind === "entity" && node.tier) {
+          const tier = document.createElement("span");
+          tier.className = "tier";
+          tier.textContent = `tier: ${node.tier}`;
+          cell.append(document.createTextNode(" "), tier);
+        }
+        if (node.kind === "product") {
+          const heuristic = document.createElement("span");
+          heuristic.className = "heuristic";
+          const c = node.classification || {};
+          heuristic.textContent = `heuristic: UAV ${c.uav_platform || "unknown"}; EW ${c.ew_installation || "unknown"}`;
+          cell.append(document.createElement("br"), heuristic);
+        }
+      }
+      function showEdge(edge) {
+        const source = sourceById.get(edge.source_id);
+        detailHeading.textContent = `${nodeLabel(edge.source)} → ${nodeLabel(edge.target)}`;
+        detailContent.replaceChildren();
+        const relationship = document.createElement("p");
+        relationship.innerHTML = "";
+        const strong = document.createElement("strong");
+        strong.textContent = `Relationship: ${edge.type}`;
+        relationship.append(strong);
+        if (edge.label) appendText(relationship, ` — ${edge.label}`);
+        detailContent.append(relationship, statePill(edge));
+        const dl = document.createElement("dl");
+        const add = (term, value) => {
+          const dt = document.createElement("dt"); dt.textContent = term;
+          const dd = document.createElement("dd"); dd.textContent = value || "—";
+          dl.append(dt, dd);
+        };
+        add("Time state", edge.temporal_status);
+        add("As of", edge.as_of);
+        add("Source ID", edge.source_id);
+        detailContent.append(dl);
+        if (!source) {
+          const p = document.createElement("p");
+          p.className = "muted";
+          p.textContent = "No originating source ID is attached to this edge. This is an evidence gap, not a claim that no corroborating source exists elsewhere.";
+          detailContent.append(p);
+          return;
+        }
+        const sourceTitle = document.createElement("h3");
+        sourceTitle.textContent = "Attached source metadata";
+        const list = document.createElement("ul");
+        list.className = "source-list";
+        const item = document.createElement("li");
+        const title = document.createElement("strong");
+        title.textContent = source.id;
+        item.append(title, document.createElement("br"));
+        appendText(item, `${source.type || "untyped document"} · as of ${source.as_of || "not recorded"} · captured ${source.captured_date || "not recorded"}`);
+        item.append(document.createElement("br"));
+        if (source.url) {
+          const link = document.createElement("a");
+          link.href = source.url; link.target = "_blank"; link.rel = "noopener";
+          link.textContent = "Open source";
+          item.append(link);
+        } else {
+          const path = document.createElement("span");
+          path.className = "fine"; path.textContent = source.path || "Source path not recorded";
+          item.append(path);
+        }
+        list.append(item);
+        detailContent.append(sourceTitle, list);
+      }
+      function showNode(id) {
+        selectedNodeId = id;
+        const node = nodeById.get(id);
+        if (!node) return;
+        detailHeading.textContent = node.label;
+        detailContent.replaceChildren();
+        const kind = document.createElement("p");
+        const kindPill = document.createElement("span");
+        kindPill.className = `kind ${node.kind === "unresolved" ? "unresolved" : ""}`;
+        kindPill.textContent = node.kind === "unresolved" ? "research lead" : `node kind: ${node.kind}`;
+        kind.append(kindPill);
+        appendText(kind, node.kind === "unresolved" ? " Unresolved research lead — not a confirmed principal." : "");
+        detailContent.append(kind);
+        const dl = document.createElement("dl");
+        const add = (term, value) => {
+          if (value === null || value === undefined || value === "") return;
+          const dt = document.createElement("dt"); dt.textContent = term;
+          const dd = document.createElement("dd"); dd.textContent = value;
+          dl.append(dt, dd);
+        };
+        add("Entity tier", node.tier);
+        add("Degree in canonical graph", node.degree);
+        add("Product classification", node.kind === "product" ? `Heuristic only: UAV ${node.classification.uav_platform}; EW installation ${node.classification.ew_installation}` : null);
+        detailContent.append(dl);
+        if (node.kind === "product") {
+          const note = document.createElement("p");
+          note.className = "muted";
+          note.textContent = "These labels are literal-text heuristics from the product description. Unknown is retained where the text does not explicitly identify a platform or installation.";
+          detailContent.append(note);
+        }
+        renderMap();
+      }
+      function renderMap() {
+        mapList.replaceChildren();
+        if (!selectedNodeId) return;
+        const incident = views[activeView].edges.filter(edge => edge.source === selectedNodeId || edge.target === selectedNodeId).slice(0, 24);
+        mapHeading.textContent = `${nodeLabel(selectedNodeId)} — local connections`;
+        if (!incident.length) {
+          const li = document.createElement("li");
+          li.className = "muted"; li.textContent = "No relationships for this record in the selected task view.";
+          mapList.append(li); return;
+        }
+        for (const edge of incident) {
+          const other = edge.source === selectedNodeId ? edge.target : edge.source;
+          const li = document.createElement("li");
+          const arrow = document.createElement("span"); arrow.className = "map-arrow";
+          arrow.textContent = edge.source === selectedNodeId ? "→" : "←";
+          const text = document.createElement("div");
+          text.append(nodeButton(other), document.createTextNode(` · ${edge.type}`));
+          if (edge.label) appendText(text, ` (${edge.label})`);
+          text.append(document.createElement("br"), statePill(edge));
+          li.append(arrow, text); mapList.append(li);
+        }
+      }
+      function renderTable() {
+        const edges = currentEdges();
+        const pages = Math.max(1, Math.ceil(edges.length / pageSize));
+        page = Math.min(page, pages - 1);
+        rows.replaceChildren();
+        for (const edge of edges.slice(page * pageSize, (page + 1) * pageSize)) {
+          const tr = document.createElement("tr");
+          const from = document.createElement("td"); appendNodeMeta(from, edge.source);
+          const relation = document.createElement("td");
+          const inspect = document.createElement("button");
+          inspect.type = "button"; inspect.textContent = edge.type;
+          inspect.addEventListener("click", () => showEdge(edge));
+          relation.append(inspect);
+          if (edge.label) relation.append(document.createElement("br"), document.createTextNode(edge.label));
+          const to = document.createElement("td"); appendNodeMeta(to, edge.target);
+          const evidence = document.createElement("td"); evidence.append(statePill(edge));
+          if (edge.as_of) evidence.append(document.createElement("br"), document.createTextNode(`as of ${edge.as_of}`));
+          const source = document.createElement("td");
+          source.textContent = edge.source_id || "No direct source ID";
+          tr.append(from, relation, to, evidence, source); rows.append(tr);
+        }
+        pageStatus.textContent = `${edges.length} relationships · page ${page + 1} of ${pages}`;
+        document.getElementById("previous-page").disabled = page === 0;
+        document.getElementById("next-page").disabled = page >= pages - 1;
+        document.getElementById("view-description").textContent = descriptions[activeView];
+        renderMap();
+      }
+      for (const button of document.querySelectorAll("[data-view]")) {
+        button.addEventListener("click", () => {
+          activeView = button.dataset.view; page = 0; selectedNodeId = null;
+          for (const candidate of document.querySelectorAll("[data-view]")) {
+            candidate.setAttribute("aria-pressed", String(candidate === button));
+          }
+          detailHeading.textContent = "Select a relationship";
+          detailContent.replaceChildren();
+          const p = document.createElement("p"); p.className = "muted";
+          p.textContent = "Use a record or relationship button in the table.";
+          detailContent.append(p); renderTable();
+        });
+      }
+      search.addEventListener("input", () => { page = 0; renderTable(); });
+      document.getElementById("clear-search").addEventListener("click", () => { search.value = ""; search.focus(); page = 0; renderTable(); });
+      document.getElementById("previous-page").addEventListener("click", () => { page -= 1; renderTable(); });
+      document.getElementById("next-page").addEventListener("click", () => { page += 1; renderTable(); });
+      document.getElementById("theme-toggle").addEventListener("click", () => {
+        const dark = document.documentElement.dataset.theme !== "dark";
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+        document.getElementById("theme-toggle").setAttribute("aria-pressed", String(dark));
+        document.getElementById("theme-toggle").textContent = dark ? "Light theme" : "Dark theme";
+      });
+      renderTable();
+    })();
+  </script>
+</body>
+</html>

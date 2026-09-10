@@ -171,6 +171,7 @@ what looks new instead, the same discipline as `_scaffold_leads.json`.
 | `check_tag_balance.py` | HTML tag-balance check before publish | local |
 | `build_relationship_graph.py` | Nodes/edges from ownership/directorship/founding/role/product fields; excludes tombstones and writes cited/current/core/evidence-gap derived views | local |
 | `graph_quality_report.py` | Deterministic relationship-graph baseline (schema, parity, citation, temporal, stub, and view counts) | local |
+| `build_graph_explorer.py` | Generates an accessible, evidence-first explorer from the validated canonical graph, derived views, and directly attached source metadata | local |
 
 **Blocked/parked, for completeness**: `kad.arbitr.ru` (DDoS-Guard, no
 scripting route — manual browser search only), `leader-id.ru` (session
