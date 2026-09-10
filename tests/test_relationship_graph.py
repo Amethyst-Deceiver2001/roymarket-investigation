@@ -11,6 +11,7 @@ SCRIPTS = Path(__file__).resolve().parent.parent / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
 from build_relationship_graph import build_graph, build_views, classify_product  # noqa: E402
+from check_registry import validate_generated_graph  # noqa: E402
 from graph_contract import validate_graph, validate_views  # noqa: E402
 from graph_quality_report import report  # noqa: E402
 
@@ -108,10 +109,20 @@ class RelationshipGraphTests(unittest.TestCase):
         self.assertTrue(any("tombstoned registry node" in message
                             for message in validate_graph(bad, ENTITIES, PEOPLE, SOURCES)))
         bad_views = copy.deepcopy(self.views)
-        bad_views["views"]["cited_only"]["edges"].append(
-            next(edge for edge in self.graph["edges"] if edge["source_id"] is None)
-        )
-        self.assertTrue(any("uncited edge" in message for message in validate_views(self.graph, bad_views)))
+        bad_views["views"]["cited_only"]["edges"].pop()
+        self.assertTrue(any("edge projection differs" in message
+                            for message in validate_views(self.graph, bad_views)))
+
+    def test_rebuild_rejects_substituted_valid_source(self):
+        bad = copy.deepcopy(self.graph)
+        edge = next(edge for edge in bad["edges"] if edge["source_id"] == "s1")
+        edge["source_id"] = "s2"
+        self.assertEqual([], validate_graph(bad, ENTITIES, PEOPLE, SOURCES))
+        bad_views = build_views(bad)
+        self.assertEqual([], validate_views(bad, bad_views))
+        messages = validate_generated_graph(bad, bad_views, ENTITIES, PEOPLE, SOURCES)
+        self.assertTrue(any("does not exactly match the deterministic rebuild" in message
+                            for message in messages))
 
     def test_quality_report_is_deterministic(self):
         first = report(self.graph, self.views, ENTITIES, PEOPLE)

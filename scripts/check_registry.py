@@ -46,6 +46,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from reverse_source_index import build_index  # noqa: E402
 from graph_contract import validate_graph, validate_views  # noqa: E402
+from build_relationship_graph import build_graph, build_views  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 REG = REPO / "data" / "registry"
@@ -124,6 +125,36 @@ def normalise_name(name: str) -> str:
     s = LEGAL_PREFIX.sub("", s)
     s = re.sub(r"[^0-9a-zа-я]+", "", s)
     return s
+
+
+def validate_generated_graph(
+    graph: dict,
+    graph_views: dict | None,
+    entities: list[dict],
+    people: list[dict],
+    sources: list[dict],
+) -> list[str]:
+    """Check artifacts against an independent deterministic registry rebuild."""
+    errors = validate_graph(graph, entities, people, sources)
+    if graph_views is None:
+        errors.append("relationship_graph_views.json missing — run "
+                      "scripts/build_relationship_graph.py")
+    elif isinstance(graph, dict) and isinstance(graph.get("nodes"), list) and isinstance(graph.get("edges"), list):
+        errors.extend(validate_views(graph, graph_views))
+
+    expected_graph = build_graph(entities, people)
+    if graph != expected_graph:
+        errors.append(
+            "relationship_graph.json does not exactly match the deterministic "
+            "rebuild from live entities.json/people.json — relationship "
+            "endpoints, source_id provenance, classifications, or tombstone "
+            "handling are stale or altered; run scripts/build_relationship_graph.py")
+    if graph_views is not None and graph_views != build_views(expected_graph):
+        errors.append(
+            "relationship_graph_views.json does not exactly match the "
+            "deterministic derived views from the live registry; run "
+            "scripts/build_relationship_graph.py")
+    return errors
 
 
 def main() -> int:
@@ -562,17 +593,17 @@ def main() -> int:
         except json.JSONDecodeError as ex:
             errors.append(f"relationship_graph.json: not valid JSON ({ex})")
         else:
-            errors.extend(validate_graph(graph, entities, people or [], sources or []))
+            graph_views = None
             if views_path.exists():
                 try:
                     graph_views = json.loads(views_path.read_text(encoding="utf-8"))
                 except json.JSONDecodeError as ex:
                     errors.append(f"relationship_graph_views.json: not valid JSON ({ex})")
-                else:
-                    errors.extend(validate_views(graph, graph_views))
-            else:
-                errors.append("relationship_graph_views.json missing — run "
-                              "scripts/build_relationship_graph.py")
+            errors.extend(validate_generated_graph(
+                graph, graph_views, entities, people or [], sources or []))
+    else:
+        errors.append("relationship_graph.json missing — run "
+                      "scripts/build_relationship_graph.py")
 
     # --- guarded-enum downgrade check --------------------------------------
     # Phase 3.5 item 2's still-open half (see notes/rebuild_plan.md): a

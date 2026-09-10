@@ -164,7 +164,7 @@ what looks new instead, the same discipline as `_scaffold_leads.json`.
 |---|---|---|
 | `inventory_sources.py` | Types + dates every file in `data/sources/`, caches to `_source_content_cache.json` | local |
 | `extract_registry.py` | Rebuilds `entities.json`/`people.json` from cache + `corrections_*.json` | local |
-| `check_registry.py` | ИНН/ОГРН checksum validation, registry shape/carry-forward guard, and relationship-graph contract validation | local |
+| `check_registry.py` | ИНН/ОГРН checksum validation, registry shape/carry-forward guard, and exact deterministic relationship-graph rebuild/contract validation | local |
 | `reverse_source_index.py` | Derives entity/person ↔ source citation map | local |
 | `coverage_report.py` | Per-entity coverage matrix across every screening dimension | local |
 | `build_company_profile.py` | Generates `docs/profiles/<slug>.{html,md}` from the registry | local |
@@ -202,3 +202,6 @@ classifications only use explicit multirotor or vehicle-mounted wording;
 generic UAV/jammer text remains `unknown`/`unclassified`. Unresolved names
 are retained as visible stub nodes rather than silently dropped, and
 `graph_quality_report.py` provides a deterministic baseline for every run.
+`check_registry.py` rebuilds the canonical graph from the live registry and
+requires the serialized graph and each view to match exactly, so a
+well-formed but stale edge or substituted known source_id cannot pass.

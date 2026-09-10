@@ -231,38 +231,77 @@ def validate_graph(
     return errors
 
 
+VIEW_NAMES = ("cited_only", "current_only", "core_network", "evidence_gaps")
+
+
+def build_view_projections(graph: dict) -> dict[str, dict]:
+    """Derive every view directly from the canonical graph, deterministically."""
+    nodes = {node["id"]: node for node in graph["nodes"]}
+    edges = graph["edges"]
+
+    def subgraph(selected: list[dict]) -> dict:
+        ids = {edge["source"] for edge in selected} | {edge["target"] for edge in selected}
+        return {
+            "nodes": [nodes[node_id] for node_id in sorted(ids)],
+            "edges": selected,
+        }
+
+    core_ids = {
+        node["id"] for node in graph["nodes"]
+        if node["kind"] == "entity" and node.get("tier") == "cbst-core"
+    }
+    return {
+        "cited_only": subgraph([edge for edge in edges if edge["source_id"] is not None]),
+        "current_only": subgraph([edge for edge in edges if edge["temporal_status"] == "current"]),
+        "core_network": subgraph([
+            edge for edge in edges
+            if edge["source"] in core_ids or edge["target"] in core_ids
+        ]),
+        "evidence_gaps": subgraph([edge for edge in edges if edge["source_id"] is None]),
+    }
+
+
 def validate_views(graph: dict, views: dict) -> list[str]:
-    """Validate derived views are exact edge/node subsets of the full graph."""
+    """Require serialized views to exactly equal their canonical projections."""
     errors: list[str] = []
     if not isinstance(views, dict) or views.get("schema_version") != GRAPH_SCHEMA_VERSION:
         return ["graph views: schema_version must match the graph schema"]
-    full_nodes = {node["id"]: node for node in graph.get("nodes", []) if isinstance(node, dict) and node.get("id")}
-    full_edges = {
-        json_key(edge) for edge in graph.get("edges", []) if isinstance(edge, dict)
-    }
+    if set(views) != {"schema_version", "generated_from", "views"}:
+        return ["graph views: top-level fields must be schema_version, generated_from, views"]
+    if views.get("generated_from") != "relationship_graph.json":
+        return ["graph views: generated_from must be relationship_graph.json"]
     view_map = views.get("views")
-    expected = {"cited_only", "current_only", "core_network", "evidence_gaps"}
-    if not isinstance(view_map, dict) or set(view_map) != expected:
+    if not isinstance(view_map, dict) or set(view_map) != set(VIEW_NAMES):
         return ["graph views: expected cited_only, current_only, core_network, evidence_gaps"]
+    expected_views = build_view_projections(graph)
 
-    for name, view in view_map.items():
+    for name in VIEW_NAMES:
+        view = view_map[name]
         if not isinstance(view, dict) or not isinstance(view.get("nodes"), list) or not isinstance(view.get("edges"), list):
             errors.append(f"graph views: {name} must contain nodes and edges lists")
             continue
-        ids = {node.get("id") for node in view["nodes"] if isinstance(node, dict)}
-        if len(ids) != len(view["nodes"]) or not ids <= set(full_nodes):
-            errors.append(f"graph views: {name} contains unknown or duplicate nodes")
-        for edge in view["edges"]:
-            if json_key(edge) not in full_edges:
-                errors.append(f"graph views: {name} contains an edge absent from full graph")
-            elif edge.get("source") not in ids or edge.get("target") not in ids:
-                errors.append(f"graph views: {name} edge endpoint is absent from its nodes")
-        if name == "cited_only" and any(edge.get("source_id") is None for edge in view["edges"]):
-            errors.append("graph views: cited_only includes an uncited edge")
-        if name == "current_only" and any(edge.get("temporal_status") != "current" for edge in view["edges"]):
-            errors.append("graph views: current_only includes a non-current edge")
-        if name == "evidence_gaps" and any(edge.get("source_id") is not None for edge in view["edges"]):
-            errors.append("graph views: evidence_gaps includes a cited edge")
+        expected = expected_views[name]
+        if view["edges"] != expected["edges"]:
+            actual_keys = Counter(json_key(edge) for edge in view["edges"] if isinstance(edge, dict))
+            expected_keys = Counter(json_key(edge) for edge in expected["edges"])
+            missing = sum((expected_keys - actual_keys).values())
+            extra = sum((actual_keys - expected_keys).values())
+            errors.append(
+                f"graph views: {name} edge projection differs from its canonical "
+                f"predicate ({missing} missing, {extra} extra or substituted; "
+                "run scripts/build_relationship_graph.py)")
+        if view["nodes"] != expected["nodes"]:
+            actual_ids = Counter(
+                node.get("id") for node in view["nodes"]
+                if isinstance(node, dict) and node.get("id")
+            )
+            expected_ids = Counter(node["id"] for node in expected["nodes"])
+            missing = sum((expected_ids - actual_ids).values())
+            extra = sum((actual_ids - expected_ids).values())
+            errors.append(
+                f"graph views: {name} node projection differs from endpoints of "
+                f"its canonical edges ({missing} missing, {extra} extra, or "
+                "non-canonical node content/order; run scripts/build_relationship_graph.py)")
     return errors
 
 

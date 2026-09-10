@@ -21,7 +21,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-from graph_contract import GRAPH_SCHEMA_VERSION
+from graph_contract import GRAPH_SCHEMA_VERSION, build_view_projections
 
 REPO = Path(__file__).resolve().parent.parent
 REG = REPO / "data" / "registry"
@@ -283,33 +283,10 @@ def build_graph(entities: list[dict], people: list[dict]) -> dict:
 
 def build_views(graph: dict) -> dict:
     """Build deterministic edge subsets without promoting uncited evidence."""
-    nodes = {node["id"]: node for node in graph["nodes"]}
-    edges = graph["edges"]
-
-    def subgraph(selected: list[dict]) -> dict:
-        ids = {edge["source"] for edge in selected} | {edge["target"] for edge in selected}
-        return {
-            "nodes": [nodes[node_id] for node_id in sorted(ids)],
-            "edges": selected,
-        }
-
-    core_ids = {
-        node["id"] for node in graph["nodes"]
-        if node["kind"] == "entity" and node.get("tier") == "cbst-core"
-    }
-    core_edges = [
-        edge for edge in edges
-        if edge["source"] in core_ids or edge["target"] in core_ids
-    ]
     return {
         "schema_version": GRAPH_SCHEMA_VERSION,
         "generated_from": "relationship_graph.json",
-        "views": {
-            "cited_only": subgraph([edge for edge in edges if edge["source_id"] is not None]),
-            "current_only": subgraph([edge for edge in edges if edge["temporal_status"] == "current"]),
-            "core_network": subgraph(core_edges),
-            "evidence_gaps": subgraph([edge for edge in edges if edge["source_id"] is None]),
-        },
+        "views": build_view_projections(graph),
     }
 
 
