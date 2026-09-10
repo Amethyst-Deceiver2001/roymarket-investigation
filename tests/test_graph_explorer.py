@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import copy
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -64,6 +65,32 @@ class GraphExplorerTests(unittest.TestCase):
         malformed["nodes"][0]["id"] = ""
         with self.assertRaises(ValueError):
             build_context(malformed, self.views, ENTITIES, PEOPLE, SOURCES)
+
+    def test_dark_selected_controls_meet_wcag_aa_contrast(self):
+        html = render_explorer(self.context)
+        dark_theme = re.search(r":root\[data-theme=\"dark\"\] \{([^}]*)\}", html)
+        self.assertIsNotNone(dark_theme)
+        colors = dict(re.findall(r"--(accent(?:-ink)?):\s*(#[0-9a-f]{3,6})", dark_theme.group(1)))
+        selected_rule = re.search(r'button\[aria-pressed="true"\] \{([^}]*)\}', html)
+        self.assertIsNotNone(selected_rule)
+        selected_color = re.search(r"(?:^|;)\s*color:([^;]+);", selected_rule.group(1))
+        self.assertIsNotNone(selected_color)
+        self.assertEqual("var(--accent-ink)", selected_color.group(1).strip())
+        self.assertGreaterEqual(contrast_ratio(colors["accent"], colors["accent-ink"]), 4.5)
+
+
+def contrast_ratio(first: str, second: str) -> float:
+    def luminance(color: str) -> float:
+        components = [int(color[index:index + 2], 16) / 255 for index in (1, 3, 5)]
+        adjusted = [
+            component / 12.92 if component <= 0.04045
+            else ((component + 0.055) / 1.055) ** 2.4
+            for component in components
+        ]
+        return 0.2126 * adjusted[0] + 0.7152 * adjusted[1] + 0.0722 * adjusted[2]
+
+    high, low = sorted((luminance(first), luminance(second)), reverse=True)
+    return (high + 0.05) / (low + 0.05)
 
 
 if __name__ == "__main__":
