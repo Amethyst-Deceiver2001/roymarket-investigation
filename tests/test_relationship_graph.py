@@ -25,6 +25,9 @@ ENTITIES = [
         "director": "Alice Example",
         "director_history": [{"value": "Alice Example", "as_of": "2026-01-02", "source_id": "s1"}],
         "founders": "Unknown Founder (100%)",
+        "founders_history": [{
+            "value": "Former Founder (25%)", "as_of": "2025-01-02", "source_id": "s1",
+        }],
         "products": [
             {"name_ru": "Generic UAV jammer", "description": "UAV jammer", "source_id": "s2"},
             {"name_ru": "Explicit platform", "description": "multirotor vehicle-mounted jammer", "source_id": "s2"},
@@ -78,6 +81,12 @@ class RelationshipGraphTests(unittest.TestCase):
         self.assertNotIn("merged", ids)
         self.assertNotIn("merged-person", ids)
         self.assertIn("stub::unknown founder", ids)
+        former_founder = next(
+            edge for edge in self.graph["edges"]
+            if edge["source"] == "stub::former founder" and edge["target"] == "core"
+        )
+        self.assertEqual("historical", former_founder["temporal_status"])
+        self.assertEqual("s1", former_founder["source_id"])
         self.assertEqual([], validate_graph(self.graph, ENTITIES, PEOPLE, SOURCES))
         self.assertEqual([], validate_views(self.graph, self.views))
         self.assertEqual(

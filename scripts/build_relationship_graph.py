@@ -208,6 +208,35 @@ def build_graph(entities: list[dict], people: list[dict]) -> dict:
             source = target or add_stub(raw_name, f"founder of {slug}")
             add_edge(source, slug, "founded",
                      f"{founder['share']}%" if founder.get("share") else None)
+        current_founders = {
+            normalize(founder["name"])
+            for founder in parse_founder_entries(entity.get("founders"))
+        }
+        historical_founders = set()
+        for entry in entity.get("founders_history") or []:
+            if not isinstance(entry, dict):
+                continue
+            as_of, source_id = _date_and_source(entry)
+            for founder in parse_founder_entries(entry.get("value")):
+                raw_name = founder["name"]
+                normalized_name = normalize(raw_name)
+                if normalized_name in current_founders or normalized_name in historical_founders:
+                    continue
+                historical_founders.add(normalized_name)
+                target = resolve_name(raw_name)
+                if target == slug:
+                    continue
+                source = target or add_stub(raw_name, f"former founder of {slug}")
+                add_edge(
+                    source,
+                    slug,
+                    "founded",
+                    f"former founder ({founder['share']}%)" if founder.get("share")
+                    else "former founder",
+                    source_id,
+                    as_of,
+                    temporal_status="historical" if as_of and source_id else "unknown",
+                )
         for director in entity.get("director_history") or []:
             raw_name = director.get("value")
             if not raw_name or raw_name.startswith("—"):

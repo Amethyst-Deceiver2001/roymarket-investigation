@@ -94,9 +94,9 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 
 | Entity | ОГРН | ИНН | Tier |
 |---|---|---|---|
-| АНО «Платформа НТИ» (`ano-platforma-nti`) | 1197700000376 | 7703469180 | plumbing |
+| АНО «Платформа НТИ» (`ano-platforma-nti`) | 1197700000376 | 7703469180 | plumbing | - no docs 
 | АНО «ЦСАСД» (`ano-tsasd-demyansk`) | 1235300001947 | 5300008970 | plumbing |
-| АНО «Центр развития транспортных технологий» (`ano-tsentr-razvitiya-transportnykh-tekhnologiy`) | 1217700636306 | 9724066980 | plumbing |
+| АНО «Центр развития транспортных технологий» (`ano-tsentr-razvitiya-transportnykh-tekhnologiy`) | 1217700636306 | 9724066980 | plumbing | - no docs
 | АО «АУРИН» (`ao-aurin`) | 1237700898786 | 9705214590 | plumbing |
 | АО «Борей» | absorbed, no longer exists (`ao-borey-absorbed-no-longer-exists`) | 1247700237663 | 9701280698 | money-layer |
 | АО «Главтехконструкция» (`ao-glavtekhkonstruktsiya`) | 1174632000190 | 4611014597 | money-layer |
@@ -111,7 +111,7 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | АО «Технодинамика» (`ao-tekhnodinamika`) | 1037719005873 | 7719265496 | plumbing |
 | АО «УК СМАРТ» (`ao-uk-smart`) | 1237700557050 | 7751264401 | plumbing |
 | АО «Фабрика им. Советской Армии» (`ao-fabrika-im-sovetskoy-armii`) | 1027739157401 | 7709278792 | money-layer |
-| АО «ХК Гумич» (`ao-khk-gumich`) | 1237700537788 | 9726051114 | money-layer |
+| АО «ХК Гумич» (`ao-khk-gumich`) | 1237700537788 | 9726051114 | money-layer | - no docs
 | АО «Центр-Телко» (`ao-tsentr-telko`) | 1027739038590 | 7729150663 | plumbing |
 | Ассоциация благотворительной помощи «Взаимопомощь» (`assotsiatsiya-vzaimopomoshch`) | 1164700050734 | 4707039070 | money-layer |
 | Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи) (`ano-arrs-krasnodar`) | 1242300011469 | 2312325336 | plumbing |
@@ -123,20 +123,30 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ИП Шандобыло Сергей Сергеевич (`ip-shandobylo-sergey-sergeevich`) | 320784700272511 | 781154619843 | manufacturer |
 | НЕКОММЕРЧЕСКОЕ ПАРТНЕРСТВО «ДИСКРЕТНО-ИННОВАЦИОННЫЙ КЛАСТЕР МАЛОЙ АВИАЦИИ» (`np-diskretno-innovatsionny-klaster-maloy-aviatsii`) | 1142651011788 | 2632811832 | plumbing |
 | НПП «ЭЛВО» (`npp-elvo-kolskaya-verf`) | 1217800070509 | 7810918592 | manufacturer |
-| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ ГРУПП" (`ooo-arkhangel-grupp`) | 1267700086081 | 9702081286 | manufacturer |
-| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ ЩИТ" (`ooo-arkhangel-shchit`) | 1255000059533 | 5027339008 | manufacturer |
-| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ" (`ooo-arkhangel-zaporizhzhie`) | 1249500004181 | 9500026652 | manufacturer |
-| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ" (`ooo-arkhangel-melitopol-2`) | 1249000005517 | 9001027869 | manufacturer |
+| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ ГРУПП" (`ooo-arkhangel-grupp`) | 1267700086081 | 9702081286 | manufacturer | - founding docs found
+| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ ЩИТ" (`ooo-arkhangel-shchit`) | 1255000059533 | 5027339008 | manufacturer | docs found
+| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ" (`ooo-arkhangel-zaporizhzhie`) | 1249500004181 | 9500026652 | manufacturer | 
+
+Действующая организация
+ИНН:
+9500026652
+ОГРН:
+1249500004181
+Регион:
+Запорожская область
+Применяет типовой устав № 20 с 21.08.2024
+| ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ" (`ooo-arkhangel-melitopol-2`) | 1249000005517 | 9001027869 | manufacturer | Применяет типовой устав № 20 с 09.06.2024
+
 | ООО «АС-КАМ» (`ooo-as-kam`) | 1166196114083 | 6165205064 | — |
 | ООО «Авиационно-космические разработки «Бегак»» (`ooo-akr-begak`) | 1202600009919 | 2632116476 | manufacturer |
 | ООО «Аркодим» (`ooo-arkodim`) | 1101690020959 | 1659101884 | manufacturer |
-| ООО «Аэро-Хит» (`ooo-aero-khit`) | 1232700009398 | 2700012608 | manufacturer |
-| ООО «Аэромакс» (`ooo-aeromaks`) | 1177746007900 | 7725347482 | manufacturer |
+| ООО «Аэро-Хит» (`ooo-aero-khit`) | 1232700009398 | 2700012608 | manufacturer | no docs
+| ООО «Аэромакс» (`ooo-aeromaks`) | 1177746007900 | 7725347482 | manufacturer | no docs
 | ООО «Аэроплатформы» (`ooo-aeroplatformy`) | 1215000018650 | 5027293811 | manufacturer |
 | ООО «Аэротехальянс» (`ooo-aerotekhalyans`) | 1237700640660 | 9714020721 | money-layer |
 | ООО «Беспилотные технологические решения» (БТР) (`ooo-btr-bespilotnye-tekhnologicheskie-resheniya`) | 1247800059980 | 7813680637 | manufacturer |
 | ООО «Визионеро» (`ooo-vizionero`) | 1195958038902 | 5902056314 | manufacturer |
-| ООО «Винград» (`ooo-vingrad`) | 1177746217879 | 9701066447 | money-layer |
+| ООО «Винград» (`ooo-vingrad`) | 1177746217879 | 9701066447 | money-layer | docs found
 | ООО «Воздушный трактат» (`ooo-vozdushnyy-traktat`) | 1237100015767 | 7100046925 | manufacturer |
 | ООО «Восточные ворота Забайкальск-Маньчжурия» (`ooo-vostochnye-vorota-zabaykalsk-manchzhuriya`) | 5167746405481 | 7703420474 | manufacturer |
 | ООО «ГОУДРОН» (`ooo-goudron`) | 1237700265846 | 9721203814 | manufacturer |
