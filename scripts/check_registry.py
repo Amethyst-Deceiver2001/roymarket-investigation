@@ -45,6 +45,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from reverse_source_index import build_index  # noqa: E402
+from graph_contract import validate_graph, validate_views  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 REG = REPO / "data" / "registry"
@@ -547,6 +548,31 @@ def main() -> int:
             if sid and sid not in source_ids:
                 errors.append(f"source {s['id']}: {key} references "
                               f"unknown source '{sid}'")
+
+    # --- generated relationship graph -------------------------------------
+    # The graph is a derived artifact, but it is consumed independently by
+    # visualization and analysis tools. Validate it against the live registry
+    # so a stale graph cannot quietly reintroduce merged records or invented
+    # endpoint/source relationships.
+    graph_path = REG / "relationship_graph.json"
+    views_path = REG / "relationship_graph_views.json"
+    if graph_path.exists():
+        try:
+            graph = json.loads(graph_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as ex:
+            errors.append(f"relationship_graph.json: not valid JSON ({ex})")
+        else:
+            errors.extend(validate_graph(graph, entities, people or [], sources or []))
+            if views_path.exists():
+                try:
+                    graph_views = json.loads(views_path.read_text(encoding="utf-8"))
+                except json.JSONDecodeError as ex:
+                    errors.append(f"relationship_graph_views.json: not valid JSON ({ex})")
+                else:
+                    errors.extend(validate_views(graph, graph_views))
+            else:
+                errors.append("relationship_graph_views.json missing — run "
+                              "scripts/build_relationship_graph.py")
 
     # --- guarded-enum downgrade check --------------------------------------
     # Phase 3.5 item 2's still-open half (see notes/rebuild_plan.md): a

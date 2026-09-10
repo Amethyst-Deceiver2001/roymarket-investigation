@@ -32,9 +32,10 @@ LOCAL_STAGES = [
     ("mine_leads.py", []),
     ("mine_zakupki.py", []),  # skippable via --skip-slow, see notes/rebuild history 2026-08-29
     ("extract_registry.py", []),
+    ("build_relationship_graph.py", []),
     ("check_registry.py", []),
     ("reverse_source_index.py", []),
-    ("build_relationship_graph.py", []),
+    ("graph_quality_report.py", ["--out", "data/registry/relationship_graph_quality.md"]),
     ("coverage_report.py", []),
 ]
 
