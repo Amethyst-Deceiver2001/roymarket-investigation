@@ -112,6 +112,103 @@ def uav_score(text: str) -> int:
     return sum(1 for term in UAV_TERMS if term in t)
 
 
+# Delivery-attribution genre: a channel reporting "we delivered/gave <product>
+# to <unit>" — the stereotyped phrasing that resolved АО «РОСС» 2026-09-08
+# (@nashapravdafond post 1905141464:240, "производства АО «Росс»" paired
+# with a named "Центр" group-of-forces reconnaissance unit). Verb + unit-noun
+# fuzzy match, independent of which comes first or how far apart they sit —
+# a delivery post routinely interleaves the verb, the unit, and the quoted
+# product name in any order ("передали бойцам N-й бригады «Продукт»" vs
+# "«Продукт» доставлен в расположение N-го полка").
+DELIVERY_VERBS = [
+    "передал", "передали", "передан", "переданы", "переданные",
+    "доставил", "доставили", "доставлен", "доставлены",
+    "отправил", "отправили", "отправлен", "отправлены",
+    "направил", "направили", "направлен", "направлены",
+    "вручил", "вручили", "вручен", "вручены",
+    "переданы вместе", "приобрет", "закупил", "закупили",
+]
+UNIT_NOUNS = [
+    "боец", "бойц", "парн", "солдат", "военнослужащ",
+    "батальон", "дивизион", "полк", "бригад", "дивизи",
+    "рот[аеы]", "взвод", "отряд", "расчет", "расчёт",
+    "подразделен", "разведподразделен", "войсковая часть", "в/ч",
+    "группировк", "группа войск", "фронт",
+]
+RE_DELIVERY_VERB = re.compile(
+    "(?:" + "|".join(v.replace(" ", r"\s+") for v in DELIVERY_VERBS) + ")",
+    re.IGNORECASE,
+)
+RE_UNIT_NOUN = re.compile(
+    "(?:" + "|".join(UNIT_NOUNS) + ")", re.IGNORECASE
+)
+
+
+# Quoted strings that are never a product name in this genre: Russian
+# group-of-forces codenames (a delivery post routinely names its own unit
+# this way, e.g. "войск «Центр»") and this investigation's own fund names,
+# which appear constantly as the *actor*, not the *product*, in this exact
+# sentence shape.
+_DELIVERY_NOISE_QUOTES = {
+    "центр", "запад", "юг", "север", "восток", "днепр", "заря", "z",
+    "наша правда", "дар", "градислава",
+}
+
+
+def delivery_attribution_hits(text: str, window: int = 400) -> list[dict]:
+    """Find stereotyped delivery-report sentences pairing a quoted product
+    name with a military-unit noun and a delivery verb, in any order,
+    within `window` characters of each other.
+
+    Returns a list of {"product": str, "verb_span": (start,end),
+    "unit_span": (start,end), "snippet": str} dicts, deduped by product name
+    (norm()-ed) — a channel that mentions the same product across several
+    nearby sentences in one post should not produce duplicate hits.
+
+    This is intentionally loose (proximity, not a parse) — it is a triage
+    signal for a human to read the surrounding post, not a citable claim on
+    its own. See [[military_thankyou_letter_genre]] for the sibling
+    letterhead-photo genre this complements.
+    """
+    if not text:
+        return []
+    verb_spans = [m.span() for m in RE_DELIVERY_VERB.finditer(text)]
+    unit_spans = [m.span() for m in RE_UNIT_NOUN.finditer(text)]
+    if not verb_spans or not unit_spans:
+        return []
+    quoted = [
+        m for m in RE_QUOTED_NAME.finditer(text)
+        if not is_noise_quote(m.group(1))
+        and norm(m.group(1)) not in _DELIVERY_NOISE_QUOTES
+    ]
+    hits: dict[str, dict] = {}
+    for qm in quoted:
+        qstart, qend = qm.span()
+        nearest_verb = min(
+            (v for v in verb_spans if abs(v[0] - qstart) <= window),
+            key=lambda v: abs(v[0] - qstart), default=None,
+        )
+        nearest_unit = min(
+            (u for u in unit_spans if abs(u[0] - qstart) <= window),
+            key=lambda u: abs(u[0] - qstart), default=None,
+        )
+        if nearest_verb is None or nearest_unit is None:
+            continue
+        product = qm.group(1).strip()
+        key = norm(product)
+        if key in hits:
+            continue
+        lo = max(0, min(qstart, nearest_verb[0], nearest_unit[0]) - 60)
+        hi = min(len(text), max(qend, nearest_verb[1], nearest_unit[1]) + 60)
+        hits[key] = {
+            "product": product,
+            "verb_span": nearest_verb,
+            "unit_span": nearest_unit,
+            "snippet": text[lo:hi].replace("\n", " ").strip(),
+        }
+    return list(hits.values())
+
+
 def load_known_text(repo_root=None) -> str:
     """Normalised blob of everything this investigation already knows.
 

@@ -538,8 +538,18 @@
         "value": "Бровченко Александр Руфинович"
       }
     ],
-    "founders": [],
-    "founders_history": [],
+    "founders": [
+      "Фонд «ДАР»",
+      "Фонд «Градислава»"
+    ],
+    "founders_history": [
+      {
+        "value": "Фонд региональных некоммерческих проектов «ДАР» и Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава»",
+        "as_of": "2026-09-08",
+        "source_id": "s7370",
+        "note": "Наша Правда's own official site (о фонде section) self-describes as a joint project of these two funds — a first-party admission, not press attribution. Verbatim: «Фонд \"Наша Правда\" - это совместный проект Фонда региональных некоммерческих проектов \"ДАР\" и Некоммерческого фонда содействия сохранению историко-культурного наследия \"Градислава\", направленный на поддержку военнослужащих и граждан на территории СВО.» Resolves open_questions.json src015 — the EGRUL/устав route to this fact is structurally blocked (a Фонд's founders aren't published in a standard EGRUL extract, and Наша Правда's founding устав is paper-only, not digitized, per territorial ФНС response 2026-09-08), but this self-published statement is independently as strong as any registry document short of the устав itself."
+      }
+    ],
     "charter_capital": null,
     "charter_capital_history": [],
     "address_history": [
@@ -609,7 +619,9 @@
     "battlefield_evidence": [],
     "domain_history": [],
     "web": {
-      "sites": [],
+      "sites": [
+        "https://xn----7sbabalo0evak8f.xn--p1ai/"
+      ],
       "telegram": [],
       "vk": [],
       "youtube": [],
@@ -60058,7 +60070,16 @@
       }
     ],
     "marketing_claims": [],
-    "battlefield_evidence": [],
+    "battlefield_evidence": [
+      {
+        "as_of": "2024-02-21",
+        "text_ru": "В разведподразделении войск «Центр», куда на днях доставили приобретенные фондом «Наша Правда» радиоэлектронные системы подавления дронов, был проведен практический показ двух комплексов оптико-электронной разведки «Взгляд» и «Наблюдатель» дневного и ночного исполнения производства АО «Росс». Бойцы разведподразделения прошли обучение и получили приборы в опытную эксплуатацию.",
+        "text_en": "Post dated 2024-02-21: a reconnaissance unit of the \"Центр\" group of forces received a practical demonstration of two day/night optical-electronic reconnaissance complexes, \"Взгляд\" and \"Наблюдатель\", explicitly described as \"производства АО «Росс»\" (made by JSC ROSS), delivered alongside vehicle-mounted electronic-warfare (drone-jamming) kits purchased by Фонд «Наша Правда».",
+        "context": "Third-party delivery-report source (Наша Правда's own Telegram channel @nashapravdafond, post 1905141464:240) — the first source found that explicitly names АО «РОСС» as the manufacturer of «Взгляд»/«Наблюдатель», resolving this entity's own open_questions note that the brand-to-entity link was 'plausible but not established' from the zakupki contract's generic item description alone.",
+        "source_id": null,
+        "note": "No standalone archived file — cited directly from this repo's own Telegram scrape (tg_posts, channel_id=1905141464 '@nashapravdafond', post id 1905141464:240, in data/roymarket.db). Text quoted verbatim 2026-09-08."
+      }
+    ],
     "domain_history": [],
     "web": {
       "sites": [],
@@ -60089,7 +60110,8 @@
       "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 20+ candidates with usable patentee data are unrelated (watch brand \"Bell & Ross\", agricultural-equipment firm \"Агроцентр\", assorted individuals named Ross from NZ/US/AU/CA/UA) -- common-word/surname collision, not this entity.",
       "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added one product: Мобильный привязной аэростатный комплекс АКВ-05.",
-      "2026-09-07: merged dormant duplicate correction key '7704097425' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+      "2026-09-07: merged dormant duplicate correction key '7704097425' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+      "2026-09-08: @nashapravdafond channel survey (this repo's own Telegram DB) turned up post 1905141464:240 (21.02.2024), a third-party delivery report explicitly naming АО «Росс» as manufacturer of «Взгляд»/«Наблюдатель» — resolves the open_questions note that this brand-to-entity link was previously only plausible, not established. Wired to battlefield_evidence[]."
     ],
     "registrar": {
       "as_of": "2019-01-28",

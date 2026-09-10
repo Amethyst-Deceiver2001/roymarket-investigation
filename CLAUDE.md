@@ -3,8 +3,11 @@
 This repo is a standalone spin-off of a ЦБСТ/РОЙ.МАРКЕТ (Russian "military
 marketplace" and its parent defence-tech body) OSINT investigation, migrated
 out of the `wb_watch` project on 2026-08-18 once it outgrew "annex to a WB
-tracker" scope. Read `HANDOFF.md` first in any new session — it has full
-context, current state, and pending work that this file doesn't repeat.
+tracker" scope. Read `notes/rebuild_plan.md` first in any new session — it
+has full context, current state, and pending work that this file doesn't
+repeat (each section ends with its own "Still open"/"Status" note; there
+is no separate `HANDOFF.md` — an earlier one was retired in favor of this
+single live file, see its own header note).
 
 ## This repo has its own Telegram scraping pipeline — separate from wb_watch
 
@@ -580,13 +583,15 @@ from generating the profiles themselves.
 `/docs`) and the standalone Artifact companion
 (https://claude.ai/code/artifact/5450bf7e-7f7b-4788-93c0-761503dd5ea4). Edit
 the local file freely; only republish the Artifact when the user calls an
-explicit investigation cutoff — see `HANDOFF.md` for why (the Artifact
-intentionally lags the local file between cutoffs).
+explicit investigation cutoff — see `roymarket_no_per_fold_publish` (seeded
+memory) for why (the Artifact intentionally lags the local file between
+cutoffs).
 
 ## Tag-balance check before any publish
 
-Run the scoped tag-count script (in `HANDOFF.md` and the seeded memory) after
-every `docs/index.html` edit, before publishing.
+Run `scripts/check_tag_balance.py` (see the seeded memory
+`html_brief_tag_balance_check`) after every `docs/index.html` edit, before
+publishing.
 
 ## PII handling
 
