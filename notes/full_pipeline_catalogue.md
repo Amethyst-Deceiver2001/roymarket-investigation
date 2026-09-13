@@ -164,12 +164,14 @@ what looks new instead, the same discipline as `_scaffold_leads.json`.
 |---|---|---|
 | `inventory_sources.py` | Types + dates every file in `data/sources/`, caches to `_source_content_cache.json` | local |
 | `extract_registry.py` | Rebuilds `entities.json`/`people.json` from cache + `corrections_*.json` | local |
-| `check_registry.py` | ИНН/ОГРН checksum validation, shape checks, carry-forward-field guard | local |
+| `check_registry.py` | ИНН/ОГРН checksum validation, registry shape/carry-forward guard, and exact deterministic relationship-graph rebuild/contract validation | local |
 | `reverse_source_index.py` | Derives entity/person ↔ source citation map | local |
 | `coverage_report.py` | Per-entity coverage matrix across every screening dimension | local |
 | `build_company_profile.py` | Generates `docs/profiles/<slug>.{html,md}` from the registry | local |
 | `check_tag_balance.py` | HTML tag-balance check before publish | local |
-| `build_relationship_graph.py` | **New 2026-09-08** — nodes/edges from ownership/directorship/founding/role fields | local |
+| `build_relationship_graph.py` | Nodes/edges from ownership/directorship/founding/role/product fields; excludes tombstones and writes cited/current/core/evidence-gap derived views | local |
+| `graph_quality_report.py` | Deterministic relationship-graph baseline (schema, parity, citation, temporal, stub, and view counts) | local |
+| `build_graph_explorer.py` | Generates an accessible, evidence-first explorer from the validated canonical graph, derived views, and directly attached source metadata | local |
 
 **Blocked/parked, for completeness**: `kad.arbitr.ru` (DDoS-Guard, no
 scripting route — manual browser search only), `leader-id.ru` (session
@@ -189,9 +191,18 @@ identified in the "what would bring us closer to Kontur's scope" discussion
 sitting in the registry, just never assembled into a graph.
 
 `scripts/build_relationship_graph.py` closes that gap: it resolves those
-free-text name fields against both registries via normalized matching and
-writes `data/registry/relationship_graph.json` (790 nodes, 1041 edges as of
-first run — 224 directorship, 199 founding, 584 role/affiliation, 19
-ambiguous-related, 15 direct-ownership edges; 195 names it could not resolve
-to an existing registry slug are kept as visible stub nodes rather than
-silently dropped — itself a leads list worth triaging).
+free-text name fields against both live registries via normalized matching,
+excludes `_merged_into` tombstones, and writes the canonical
+`data/registry/relationship_graph.json` plus
+`relationship_graph_views.json`.  The derived views are intentionally
+evidence-first: `cited_only` uses only an edge's originating `source_id`;
+`current_only` requires a directly cited, dated historical-record entry;
+`core_network` is a one-hop ЦБСТ-core view; and `evidence_gaps` makes
+uncited edges visible without assigning them a source. Product-node
+classifications only use explicit multirotor or vehicle-mounted wording;
+generic UAV/jammer text remains `unknown`/`unclassified`. Unresolved names
+are retained as visible stub nodes rather than silently dropped, and
+`graph_quality_report.py` provides a deterministic baseline for every run.
+`check_registry.py` rebuilds the canonical graph from the live registry and
+requires the serialized graph and each view to match exactly, so a
+well-formed but stale edge or substituted known source_id cannot pass.
