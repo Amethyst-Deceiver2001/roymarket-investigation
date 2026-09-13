@@ -36,6 +36,7 @@ import html
 import json
 import re
 import sys
+from datetime import date
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -857,6 +858,18 @@ SOURCE_TYPE_PATTERNS = [
 
 RE_FILENAME_DATE = re.compile(r"_(\d{8})(?:_|\.)")
 RE_FILENAME_YEAR = re.compile(r"_(\d{4})_\d{8}")
+# This investigation's own active pull window — used only as a plausibility
+# guard on the DD-MM-YYYY fallback reading in infer_source_type_and_dates(),
+# never to accept/reject the primary YYYYMMDD reading. Widen the upper bound
+# as real project years pass rather than deleting the check.
+PLAUSIBLE_PULL_YEARS = (2020, 2027)
+
+
+def _valid_iso_date(year: int, month: int, day: int) -> str | None:
+    try:
+        return date(year, month, day).isoformat()
+    except ValueError:
+        return None
 
 
 def infer_source_type_and_dates(fname: str) -> tuple[str | None, str | None, str | None]:
@@ -870,6 +883,25 @@ def infer_source_type_and_dates(fname: str) -> tuple[str | None, str | None, str
     Устав amendment or a БФО filing states an effective/fiscal date that can
     be much earlier) — that distinction is `as_of` on the registry record,
     filled by a human who has actually read the document, not guessed here.
+
+    The 8 digits after an underscore are usually YYYYMMDD, but two other
+    shapes collide with that same regex and were silently mis-parsed into
+    nonsense dates (e.g. "1708-20-26", "3396-34-34") until this was fixed
+    2026-09-13, found by eyeballing the new evidence-first graph explorer's
+    source-detail panel, which is the first place in the pipeline that ever
+    rendered `captured_date` directly to a reader:
+      - a small pre-convention batch of raw `<ИНН>_<8digits>.pdf` EGRUL pulls
+        used DD-MM-YYYY instead (e.g. `..._17082026.pdf` = 17 Aug 2026);
+      - `ZAKUPKI_ATTACH_*` filenames end in an 8-digit upload UID that is
+        not a date in either order — must not be reported as one.
+    Resolution order: accept the YYYYMMDD reading only if it's a real
+    calendar date (this covers the overwhelming majority, unchanged from
+    before); otherwise try DD-MM-YYYY, but only accept it if the resulting
+    year also falls in this project's plausible pull window — otherwise a
+    UID that happens to parse as *some* valid calendar date in one order
+    (e.g. year 1665 or 6596) would silently replace one wrong guess with
+    another. Anything satisfying neither becomes `None` — an honest gap,
+    not a guess — same discipline as the `as_of` field's own sourcing rule.
     """
     doc_type = None
     for pattern, t in SOURCE_TYPE_PATTERNS:
@@ -884,7 +916,11 @@ def infer_source_type_and_dates(fname: str) -> tuple[str | None, str | None, str
     captured = None
     if date_m:
         raw = date_m.group(1)
-        captured = f"{raw[0:4]}-{raw[4:6]}-{raw[6:8]}"
+        captured = _valid_iso_date(int(raw[0:4]), int(raw[4:6]), int(raw[6:8]))
+        if captured is None:
+            dmy = _valid_iso_date(int(raw[4:8]), int(raw[2:4]), int(raw[0:2]))
+            if dmy and PLAUSIBLE_PULL_YEARS[0] <= int(dmy[:4]) <= PLAUSIBLE_PULL_YEARS[1]:
+                captured = dmy
 
     return doc_type, captured, fiscal_year
 

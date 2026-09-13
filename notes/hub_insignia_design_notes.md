@@ -565,3 +565,74 @@ New working principle:
     existing channels, because MIL-STD-2525's frame/icon orthogonality
     was the right model from the start, not just a convenient one for
     the hub badge specifically.
+
+## v7 (2026-09-13) — merged a parallel hardening pass; product icons cut to 2
+
+A separate working copy of this repo (same machine, confirmed by the user)
+had, in parallel, rebuilt `build_relationship_graph.py` around a stricter
+contract (`graph_contract.py`, schema_version 2, exact-equality validation
+wired into `check_registry.py`), fixed a real founder-share-parsing bug,
+excluded `_merged_into` tombstones from the graph, and — the one point of
+actual disagreement — replaced `classify_product()`'s 15-category keyword
+heuristic (v6, above) with a deliberately conservative 2-signal version:
+only explicit "multirotor/quadcopter" or "vehicle-mounted" wording gets
+classified; every other product (462 of 474, post-merge) now reads
+`unclassified` rather than inferring a subtype from generic UAV/jammer
+language. Reasoning given: generic wording doesn't actually support a
+specific-subtype inference, and this project's own standard is to survive
+a hostile lawyer, not to look complete.
+
+User's call after reviewing both: adopt the conservative classifier
+everywhere (recommended by both the handoff's own reasoning and this
+project's "no guessing, no placeholders"/"never present inference as
+fact" standing rules), but keep `classify_variant()` (the offensive/
+defensive/dual hub badge from v3/v5) — a separate, already-approved,
+entity-level read of the same `products[]` text, not something the
+product-classifier decision was about. Re-added `classify_variant()` to
+the merged `build_relationship_graph.py`, wired `variant=classify_variant
+(entity)` back into the entity node emission, and extended
+`graph_contract.py`'s entity `NODE_FIELDS` to allow it — `check_registry
+.py --quiet` and `graph_contract.validate_graph()` both pass clean with
+this addition, confirming it doesn't fight the new contract.
+
+On the live graph: `productIconMarkup()` cut from 15 cases down to 2
+(multirotor, vehicle-mounted EW), reading the new `classification: {status,
+uav_platform, ew_installation}` node shape instead of the old flat
+`category`/`fiber_optic` fields; the fiber-optic corner-tag modifier was
+retired entirely (the merged classifier doesn't track it). Sidebar copy
+rewritten to say plainly that only explicit wording earns an icon. Hub
+badges needed no changes — same `variant` field, same rendering — since
+that classifier round-trips through the merge unchanged.
+
+Merge mechanics, for the record: committed this session's own uncommitted
+work as a checkpoint first (`d9d48a5`), then `git merge` the recovered
+branch, resolving the one real code conflict (`build_relationship_graph
+.py`) by taking the incoming rewrite wholesale and re-adding
+`classify_variant()` on top, rather than hand-splicing two divergent
+files. `relationship_graph.json`/`_views.json` regenerated from the
+merged code rather than merged as data (1308 nodes, 1637 edges, 208
+unresolved — matches the incoming branch's own reported figures exactly).
+Restored `tests/fixtures/bfo_*.xlsx` after running `test_bfo_parser.py`
+per the incoming branch's own documented note that its `build()` step
+regenerates those tracked fixtures as an unrelated side effect.
+
+Verified: `python3 tests/test_relationship_graph.py` (8 passed),
+`test_graph_explorer.py` (4 passed), full existing `test_*.py` suite,
+`graph_contract.validate_graph()` (0 errors), `check_registry.py --quiet`
+(0 errors, pre-existing warnings only), `check_tag_balance.py` on both
+`docs/index.html` and the new `docs/relationship-graph.html`, `node
+--check` on the extracted script, and a headless reload of the live
+graph confirming node/edge counts match and the 12 now-classified
+products (10 multirotor, 2 vehicle-mounted) render their icons correctly
+with no new console errors. Republished to the same live URL,
+https://claude.ai/code/artifact/0e402553-a22e-4427-a3a9-c5b0251bdaa2.
+
+New working principle:
+
+11. **A more conservative classifier is a legitimate design decision, not
+    just a smaller one.** Cutting 13 of 15 icon categories reads like a
+    regression by icon count alone, but the actual trade is precision for
+    recall in a document meant to survive adversarial scrutiny — the
+    right call depends on what the visual is *for*, which is a judgment
+    only the project owner can make, not something to resolve by
+    defaulting to whichever version already shipped.

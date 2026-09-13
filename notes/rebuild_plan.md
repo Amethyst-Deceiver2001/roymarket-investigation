@@ -3117,6 +3117,54 @@ debug-script DOM mutation (never reached the saved file), in
 `notes/hub_insignia_design_notes.md`'s "v5" entry. Republished to the
 same graph URL.
 
+**Update 2026-09-13 ("v7"): merged a parallel hardening pass; product
+icon set cut from 15 categories to 2.** A separate working copy of this
+repo (same machine, user-confirmed) had independently built a stricter
+graph contract (`graph_contract.py`, schema_version 2, exact-equality
+validation now wired into `check_registry.py`), fixed a real founder-
+share-parsing bug, excluded `_merged_into` tombstones from the graph, and
+replaced `classify_product()`'s broad keyword heuristic with a
+deliberately conservative 2-signal version (explicit "multirotor" or
+"vehicle-mounted" wording only — 462 of 474 products now read
+`unclassified`, up from 32%). User reviewed both classifiers and chose
+the conservative one everywhere, consistent with this project's own
+"never present inference as fact" standard, while keeping
+`classify_variant()` (the hub badge) as a separate, already-approved
+feature not covered by that decision — re-added on top of the merge.
+Merged via `git merge` after committing this session's own uncommitted
+work as a checkpoint first; one real code conflict
+(`build_relationship_graph.py`), resolved by taking the incoming rewrite
+and re-adding `classify_variant()`. `relationship_graph.json`/`_views
+.json` regenerated from the merged code (1308 nodes, 1637 edges, 208
+unresolved). New artifact from the same merge: `docs/relationship-graph
+.html`, a table-first evidence-only explorer (cited/current/core/
+evidence-gap views), deliberately not force-directed. Full writeup,
+including the merge-review process and what was verified, in
+`notes/hub_insignia_design_notes.md`'s "v7" entry. Live D3 graph updated
+to match (product icons cut to 2 categories) and republished to the same
+URL.
+
+**Same day, follow-on: fixed a `sources.json` date-parsing bug the new
+explorer surfaced.** Actually reading `docs/relationship-graph.html`
+(not just testing it) turned up 43 sources with a nonsense
+`captured_date` (e.g. `"1708-20-26"`, `"3396-34-34"`) — pre-existing,
+invisible until this new page started rendering `captured_date` directly
+in its source-detail panel. Root cause in `extract_registry.py`'s
+`infer_source_type_and_dates()`: it blindly slices any 8-digit filename
+stamp as YYYYMMDD, but a small pre-convention batch of `<ИНН>_
+<8digits>.pdf` EGRUL pulls used DD-MM-YYYY, and `ZAKUPKI_ATTACH_*`
+filenames end in an 8-digit upload UID that isn't a date in either
+order. Fixed to accept the YYYYMMDD reading only if it's a real calendar
+date, fall back to DD-MM-YYYY only if that's also a real date AND its
+year falls in a plausible pull window (2020–2027), and set `None`
+otherwise rather than keep guessing — 4 sources got a real corrected
+date, 39 correctly became `null` (an honest gap, not a wrong date).
+Regenerated `sources.json` via the normal `extract_registry.py` pipeline
+(confirmed `entities.json`/`people.json`/everything else byte-identical
+— only `captured_date` values changed) and `docs/relationship-graph
+.html`. Verified: full test suite, `check_registry.py --quiet` (0
+errors, matching pre-fix), tag-balance.
+
 **Update 2026-09-09 ("v6"): product nodes gained 15 subtype icons.** User
 asked for more varied/intuitive icons distinguishing quadcopters, FPV,
 parts, and EW-setup subtypes, plus more researched categories. A third
