@@ -24,6 +24,21 @@ Edge sources (all pre-existing structured fields, nothing new mined here):
                                     graph doesn't silently drop them)
   - entities[].director / director_history[]   person --directs--> entity
                                     (name-string; resolved the same way)
+  - entities[].founders_history[]  entity/person --founded--> entity, with
+                                    historical=true for any name not also
+                                    present in the current founders[] list
+                                    (2026-09-08: the flat founders[]/
+                                    director[] fields are a display
+                                    convenience per CLAUDE.md's dated-history
+                                    convention; the _history arrays are the
+                                    actual record, so a former founder now
+                                    also gets an edge, flagged historical
+                                    rather than silently dropped)
+  - entities[].director_history[]  additionally flags an entry
+                                    historical=true when its value differs
+                                    from the entity's current `director`
+                                    field (a former director still gets a
+                                    "directs" edge, just visually distinct)
   - people[].roles[]                person --role(title)--> entity
                                     (already carries entity_slug when known)
   - people[].other_entities[]       person --director/founder--> entity
@@ -102,6 +117,113 @@ def parse_founder_entries(raw) -> list[dict]:
     return out
 
 
+# Offensive/defensive/dual-use classification for the hub glyph badges
+# (dagger / shield / shield+dagger — see notes/hub_insignia_design_notes.md
+# for the full design rationale and semiotics research behind the icon
+# choice). Keyword heuristic over products[]' own name_ru/description text,
+# same class of approach as id_patterns.py's UAV_TERMS scoring — a
+# PRESENTATION judgment for this graph's icon layer only, not a new
+# registry field or a sourced claim. A hit on both lists (common — many
+# manufacturers here genuinely make both an FPV strike drone and a
+# counter-drone/RF line, per the original 5-entity manual pass this
+# heuristic generalizes) yields "dual", the same as the manual pass found.
+OFFENSIVE_TERMS = [
+    "камикадзе", "kamikaze", "ударный дрон", "ударн", "боеприпас",
+    "боевая часть", "warhead", "боеголов", "снаряд", "авиабомб", "бомб",
+    "штурмов",
+]
+DEFENSIVE_TERMS = [
+    "рэб", "радиоэлектронн", "подавлен", "антидрон", "anti-drone",
+    "counter-drone", "counter-uav", "jam", "глушен", "детектор бпла",
+    "обнаружен", "щит", "перехватчик", "антиспуфинг", "радиоподавлен",
+]
+
+
+def classify_variant(entity: dict) -> str | None:
+    if entity.get("tier") not in ("manufacturer", "cbst-core"):
+        return None
+    chunks = []
+    for prod in entity.get("products") or []:
+        if isinstance(prod, dict):
+            chunks.append(str(prod.get("name_ru") or ""))
+            chunks.append(str(prod.get("description") or ""))
+        elif isinstance(prod, str):
+            chunks.append(prod)
+    text = " ".join(chunks).lower()
+    if not text.strip():
+        return None
+    off = any(term in text for term in OFFENSIVE_TERMS)
+    dfn = any(term in text for term in DEFENSIVE_TERMS)
+    if off and dfn:
+        return "dual"
+    if off:
+        return "offensive"
+    if dfn:
+        return "defensive"
+    return None
+
+
+# Product-node subtype classification (2026-09-09), approved from the
+# standalone "Product Icon Set" mockup — 15 categories keyword-matched
+# against each products[] entry's own name/description text, same
+# presentation-layer-read discipline as classify_variant() above (not a
+# sourced field). Order matters: earlier patterns are more specific and
+# checked first so e.g. a jammer described with "vehicle" doesn't fall
+# through to the generic multirotor/UAV catch-all at the bottom.
+PRODUCT_CATEGORY_PATTERNS = [
+    ("munition_warhead", re.compile(
+        r"боеприпас|боевая часть|\bбч\b|warhead|боеголов|снаряд|"
+        r"дульная насадка|дронобой", re.I)),
+    ("ew_vehicle", re.compile(
+        r"(глуш|jam|рэб|подавлен).{0,60}(вездеход|автомобил|машин|vehicle|"
+        r"легков|кунг|kung|шасси)|(вездеход|автомобил|машин|vehicle|"
+        r"легков|кунг|kung|шасси).{0,60}(глуш|jam|рэб|подавлен)", re.I)),
+    ("ew_stationary", re.compile(
+        r"(глуш|jam|рэб|подавлен).{0,60}(стационарн|stationary)|"
+        r"(стационарн|stationary).{0,60}(глуш|jam|рэб|подавлен)", re.I)),
+    ("ew_portable", re.compile(
+        r"(глуш|jam|рэб|подавлен).{0,60}(портатив|ранцев|носим|portable|"
+        r"handheld|man.?pack)|(портатив|ранцев|носим|portable|handheld|"
+        r"man.?pack).{0,60}(глуш|jam|рэб|подавлен)", re.I)),
+    ("ew_vehicle", re.compile(r"глуш|jam|рэб\b|подавлен|jammer", re.I)),
+    ("detector_counter_uas", re.compile(
+        r"детектор|обнаружени|antidrone|anti-drone|counter.?drone|"
+        r"counter.?uas|counter-uav", re.I)),
+    ("antenna_mast", re.compile(r"антенн|\bmast\b|мачт", re.I)),
+    ("battery_power", re.compile(
+        r"аккумулятор|батаре|\bbattery\b|повербанк|\bbms\b", re.I)),
+    ("motor_part", re.compile(
+        r"\bмотор\b|двигател|\bвинт\b|propeller|\bmotor\b", re.I)),
+    ("video_link", re.compile(
+        r"видеосвяз|видеоприемник|видеоприёмник|видеопередат|video.?link",
+        re.I)),
+    ("ground_control", re.compile(
+        r"пульт управлен|наземная станция|ground control|\bgcs\b", re.I)),
+    ("repeater_relay", re.compile(r"ретрансл|repeater|\brelay\b", re.I)),
+    ("fixed_wing", re.compile(
+        r"самолетн|самолётн|fixed.?wing|конвертоплан|планер", re.I)),
+    ("helicopter", re.compile(
+        r"вертолет|вертолёт|helicopter|однороторн", re.I)),
+    ("fpv_strike", re.compile(
+        r"\bfpv\b|камикадзе|kamikaze|барражирующ|ударный дрон", re.I)),
+    ("multirotor_utility", re.compile(
+        r"квадрокоптер|мультикоптер|октокоптер|multirotor|quadcopter|"
+        r"\bбпла\b|\buav\b|\bдрон", re.I)),
+]
+FIBER_OPTIC_RE = re.compile(r"оптоволок|fiber.?optic|\bволс\b", re.I)
+
+
+def classify_product(name: str, description: str) -> tuple[str | None, bool]:
+    text = f"{name or ''} {description or ''}".strip()
+    if not text:
+        return None, False
+    fiber = bool(FIBER_OPTIC_RE.search(text))
+    for category, pattern in PRODUCT_CATEGORY_PATTERNS:
+        if pattern.search(text):
+            return category, fiber
+    return None, fiber
+
+
 def normalize(name: str) -> str:
     if not name:
         return ""
@@ -156,6 +278,7 @@ def main() -> None:
             tier=e.get("tier"),
             sanctioned=bool(e.get("sanctions")),
             legal_form=e.get("legal_form"),
+            variant=classify_variant(e),
         )
 
     for p in people:
@@ -165,6 +288,7 @@ def main() -> None:
             label=p.get("fio_ru") or p["slug"],
             name_latin=p.get("name_latin"),
             sanctioned=bool(p.get("sanctions")),
+            photo=p.get("photo"),
         )
 
     def resolve_name(raw_name: str) -> str | None:
@@ -175,10 +299,11 @@ def main() -> None:
             return name_to_person_slug[norm]
         return None
 
-    def add_edge(src, dst, etype, label=None, source_id=None, as_of=None, weight=1.0):
+    def add_edge(src, dst, etype, label=None, source_id=None, as_of=None, weight=1.0, historical=False):
         edges.append({
             "source": src, "target": dst, "type": etype,
             "label": label, "source_id": source_id, "as_of": as_of, "weight": weight,
+            "historical": bool(historical),
         })
 
     for e in entities:
@@ -202,10 +327,12 @@ def main() -> None:
             if rel.get("slug"):
                 add_edge(slug, rel["slug"], "related", "related (ambiguous)", rel.get("source_id"))
 
+        current_founder_names = set()
         for f in parse_founder_entries(e.get("founders")):
             nm = f.get("name")
             if not nm:
                 continue
+            current_founder_names.add(normalize(nm))
             target = resolve_name(nm)
             if target and target != slug:
                 add_edge(target, slug, "founded", f"{f.get('share')}%" if f.get("share") else None)
@@ -215,6 +342,30 @@ def main() -> None:
                 add_edge(stub_id, slug, "founded")
                 unresolved.append({"raw_name": nm, "context": f"founder of {slug}"})
 
+        seen_hist_founders = set()
+        for fh in e.get("founders_history") or []:
+            raw_val = fh.get("value")
+            if not raw_val or (isinstance(raw_val, str) and raw_val.startswith("—")):
+                continue
+            for f in parse_founder_entries(raw_val):
+                nm = f.get("name")
+                if not nm:
+                    continue
+                norm = normalize(nm)
+                if norm in current_founder_names or norm in seen_hist_founders:
+                    continue
+                seen_hist_founders.add(norm)
+                target = resolve_name(nm)
+                label = f"former founder{' (' + f.get('share') + '%)' if f.get('share') else ''}, as of {fh.get('as_of')}"
+                if target and target != slug:
+                    add_edge(target, slug, "founded", label, fh.get("source_id"), fh.get("as_of"), historical=True)
+                else:
+                    stub_id = f"stub::{norm}"
+                    add_node(stub_id, kind="unresolved", label=nm)
+                    add_edge(stub_id, slug, "founded", label, fh.get("source_id"), fh.get("as_of"), historical=True)
+                    unresolved.append({"raw_name": nm, "context": f"former founder of {slug}"})
+
+        current_director_name = normalize(e.get("director")) if e.get("director") else None
         director_entries = e.get("director_history") or ([{"value": e["director"], "source_id": None, "as_of": None}]
                                                             if e.get("director") else [])
         seen_directors = set()
@@ -223,13 +374,15 @@ def main() -> None:
             if not nm or nm in seen_directors or nm.startswith("—"):
                 continue
             seen_directors.add(nm)
+            is_historical = current_director_name is not None and normalize(nm) != current_director_name
+            label = f"former director, as of {d.get('as_of')}" if is_historical and d.get("as_of") else ("former director" if is_historical else None)
             target = resolve_name(nm)
             if target and target != slug:
-                add_edge(target, slug, "directs", None, d.get("source_id"), d.get("as_of"))
+                add_edge(target, slug, "directs", label, d.get("source_id"), d.get("as_of"), historical=is_historical)
             elif not target:
                 stub_id = f"stub::{normalize(nm)}"
                 add_node(stub_id, kind="unresolved", label=nm)
-                add_edge(stub_id, slug, "directs", None, d.get("source_id"), d.get("as_of"))
+                add_edge(stub_id, slug, "directs", label, d.get("source_id"), d.get("as_of"), historical=is_historical)
                 unresolved.append({"raw_name": nm, "context": f"director of {slug}"})
 
     for p in people:
@@ -243,6 +396,37 @@ def main() -> None:
             target = oe.get("inn") and inn_to_entity_slug.get(oe["inn"])
             if target and target != slug:
                 add_edge(slug, target, "role", oe.get("role"))
+
+    # Product nodes (POLE-style "Object" entity, distinct from the entity/
+    # person kinds above) — one node per entities.json products[] entry,
+    # dict-shaped (name_ru/description/source_id) or a bare string. Kept as
+    # a distinct `kind` so the client can render/toggle them separately
+    # rather than folding product facts into the parent entity's tooltip.
+    for e in entities:
+        slug = e["slug"]
+        for i, prod in enumerate(e.get("products") or []):
+            if isinstance(prod, dict):
+                name = prod.get("name_ru") or prod.get("description")
+                description = prod.get("description") or ""
+                source_id = prod.get("source_id")
+            else:
+                name = prod
+                description = ""
+                source_id = None
+            if not name:
+                continue
+            pid = f"{slug}__product__{i}"
+            category, fiber_optic = classify_product(name, description)
+            add_node(
+                pid,
+                kind="product",
+                label=name,
+                parent_entity=slug,
+                source_id=source_id,
+                category=category,
+                fiber_optic=fiber_optic or None,
+            )
+            add_edge(slug, pid, "produces", None, source_id)
 
     if args.slug:
         keep = {args.slug}

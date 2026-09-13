@@ -219,6 +219,7 @@
     },
     "andrey-bezrukov": {
       "set": {
+        "_verified": true,
         "address": "г. Москва, пер. Красина, д. 16, стр. 2, кв. 103; г. Санкт-Петербург, ул. Лёни Голикова, д. 29/8, кв. 162",
         "dob": "1986-07-29",
         "fio_ru": "Андрей Анатольевич Безруков",
@@ -1070,6 +1071,7 @@
     },
     "dmitriy-vladimirovich-rubinshteyn": {
       "set": {
+        "_verified": true,
         "dob": "1975-04-13",
         "sanctions": [
           {
@@ -2376,8 +2378,9 @@
     "nina-olegovna-yanykina": {
       "set": {
         "_verified": true,
+        "photo": "images/nina-olegovna-yanykina_portrait_leader-id.png",
         "inn_personal": "780158807980",
-        "notes": "ИНН 780158807980, GRN 2257724392760. Previously ran ЦБСТ’s dual-use accelerator; also managing partner of ГК «Деловой альянс». Primary doc 2026-08-30: zakupki.gov.ru supplier-search on her personal ИНН (780158807980) surfaced 10 contracts, all small (₽65k-200k) purchases with СПбНИУ ИТМО dated 2011-2013 -- predates her ЦБСТ role and reads as an ordinary academic-services footprint (equipment/consulting for the university), not ЦБСТ/UAV-relevant. Reviewed and closed, not wired to government_contracts[].",
+        "notes": "ИНН 780158807980, GRN 2257724392760. Previously ran ЦБСТ’s dual-use accelerator; also managing partner of ГК «Деловой альянс». Primary doc 2026-08-30: zakupki.gov.ru supplier-search on her personal ИНН (780158807980) surfaced 10 contracts, all small (₽65k-200k) purchases with СПбНИУ ИТМО dated 2011-2013 -- predates her ЦБСТ role and reads as an ordinary academic-services footprint (equipment/consulting for the university), not ЦБСТ/UAV-relevant. Reviewed and closed, not wired to government_contracts[].\n\nPhoto (2026-09-08): leader-id.ru/en/users/906 own profile photo (https://leader-id.storage.yandexcloud.net/user_photo/906/655339c1cba26861857857_360.png), alt-text-confirmed as her own uploaded portrait (not a default avatar) — same identity-confirmed leader-id user_id already used for her role/ИНН sourcing above, per the imagery-pipeline gating rule (only attach a photo where the source is already independently identity-confirmed, never on a name match alone).",
         "open_questions": [
           {
             "source_id": "s1968",

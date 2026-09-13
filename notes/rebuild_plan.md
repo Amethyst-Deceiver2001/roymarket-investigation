@@ -5,8 +5,11 @@
 > per-session, not-git-tracked location outside the repo) so it survives
 > alongside the investigation it governs and doesn't depend on any one
 > session's local Claude state. Read and update *this* file going forward.
-> `HANDOFF.md` points here. The old external file has been left as a
-> redirect stub — if you're reading it instead, come here.
+> `CLAUDE.md` points here directly. The old `HANDOFF.md` redirect stub
+> this note used to mention no longer exists in the repo (confirmed
+> 2026-09-08) — `CLAUDE.md` was updated the same day to stop referencing
+> it. If anything still points at `HANDOFF.md`, that's stale; this file is
+> the actual live status doc.
 
 ## Context
 
@@ -1292,6 +1295,76 @@ it look. Phase 1b's actual job is verifying that legacy 147, not the newer
 
 ## Phase 4 — The generator and the site
 
+**RETIRED 2026-09-08, at user direction.** The Jinja-generator approach
+below is no longer the plan. It was deferred back in August specifically
+to avoid automating the class of bug that caused the Тримикс `wb_overlap`
+regression (a generator faithfully re-rendering whatever a bulk sweep
+writes has the same blind spot, just automated) — and in the two weeks
+since, it never got picked back up in favor of breadth-first investigative
+work on other networks (see the session logs below this phase). Rather
+than keep it on the books as a stalled prerequisite, it's retired outright.
+What replaces it: direct iteration on `docs/index.html`/`docs/profiles/`
+using data already in the registry — the same low-risk lever the MVP
+publish below used, now the standing approach rather than a one-off
+interim step. **Also retired, same direction, same date: the "MVP
+publication" framing two sections below** — it was explicitly scoped as
+an interim stand-in for Phase 4; with Phase 4 gone, there's no longer a
+"real" version it's standing in for, so the distinction stops being
+meaningful. Direct registry-to-page edits are simply how this project
+publishes now.
+
+**POI-verification gate relaxed, same date.** Phase 1b's "verify the
+147-person legacy cohort before publishing People blocks" gate blocked
+on a specific, well-defined worry: rendering unverified identities as
+established fact in a sanctions-facing document. At user direction, that
+gate is now scoped down rather than dropped — **the most important POIs
+are treated as already verified where the underlying sourcing already
+supports it**, not by blanket-flipping the `_verified` bool. Checked
+2026-09-08: of the 12 people holding a role at a `cbst-core`-tier entity,
+2 (`andrey-bezrukov`, `dmitriy-vladimirovich-rubinshteyn`) had exhaustive
+sourcing (DOB, personal ИНН, multiple source-backed roles, sanctions
+cross-references) sitting on file with `_verified` still `false` — a
+bookkeeping gap, not a research one. Both flipped to `true` via
+`corrections_people.json`. Two others in the same cohort
+(`zamyatin-aleksandr-yurevich`, `borisov-aleksandr-sergeevich-tsbs-tula`)
+were checked and genuinely don't clear the bar yet (one source each, no
+DOB/ИНН) — left `false`, correctly. This is the model going forward:
+check sourcing depth per person before flipping the flag, not a bulk
+policy change. `check_registry.py`: 0 errors after the change.
+
+**Headshot pulled the same pass**: Яныкина Нина Олеговна (sitting GD,
+АНО «ЦБСТ») had no photo despite being `_verified` since before this
+session. Found her own leader-id.ru profile photo (the same
+identity-confirmed leader-id `user_id` already backing her role/ИНН
+sourcing — not a fresh name-match), fetched, visually confirmed as a real
+portrait, saved to `docs/images/nina-olegovna-yanykina_portrait_leader-id.png`,
+wired via `corrections_people.json`. Other core-cohort people still
+missing a photo (Бровченко, Рубинштейн, Замятин, Колударов, Байгутлина,
+Борисов) were checked this pass — no clean bio-photo lead found for
+Бровченко in the time spent; the rest weren't attempted. Real next step
+if this continues, not done here.
+
+**Design direction for any future site/publication work, same date.**
+Whatever replaces the generator-and-rewrite approach should carry the
+same aesthetic correction the Hub Insignia mockup thread worked out this
+session (full reasoning and semiotics research in
+`notes/hub_insignia_design_notes.md`): **no green-on-black terminal
+skin, no space-movie-villain color scheme.** The subjects of this
+investigation present themselves in techno-optimist, venture-deck
+registers despite being arms producers — a menacing dark aesthetic
+undersells that irony and reads as generated-AI-slop besides; a clean,
+utilitarian, visually subtle treatment (paper-toned ground, one confident
+accent color, flat functional signage rather than mood lighting) lets the
+actual subject matter do the unsettling work on its own. This is a
+standing instruction for `docs/index.html`/`docs/profiles/`, not just the
+one mockup artifact it was worked out on.
+
+---
+
+**Everything below this line is the original Phase 4 plan, kept for
+reference/ideas to recycle into direct-edit work — not an active
+prerequisite queue.**
+
 **Status: not started.** No `scripts/build_site.py`, no `docs/_templates/`, no
 `docs/_prose/`. `docs/index.html` is still the single hand-edited file from
 before this plan. `requirements.txt` has 3 entries (telethon, python-dotenv,
@@ -1514,6 +1587,14 @@ first-person «мы» permitted, and the engine is dry registry lexis («ОКВ�
 
 ## MVP publication (2026-08-25) — a deliberate, scoped-down interim step
 
+**RETIRED as a distinct concept 2026-09-08, same direction as Phase 4
+above.** This was explicitly scoped as a stand-in for the "real" Phase 4
+generator; with Phase 4 retired, there's no longer a more-real version
+this is standing in for. The pattern it used — hand-edit `docs/index.html`
+directly from evidence already sitting in the registry — is now just how
+this project publishes, not an interim compromise. Kept below for the
+record of what shipped and why.
+
 Before the multi-session program below resumes, a bounded MVP shipped: the
 Тримикс `wb_overlap` regression is **fixed** (`b06d9f1` — registry and brief
 now agree; `docs/index.html`'s prose and summary-table row both state the
@@ -1551,6 +1632,13 @@ unwritten manufacturers beyond the 5 chosen here (a reasonable next batch,
 once this round is reviewed).
 
 ## Sequencing note
+
+**Superseded 2026-09-08** — this ordering exists to sequence toward Phase
+4, which is now retired (see above). Direct registry-to-page edits don't
+need a generator gate, and the POI-verification gate is now scoped to
+"most important people already verified where sourcing supports it" (see
+Phase 4's retirement note) rather than the full 147-person cohort. Kept
+below for the record of the reasoning at the time.
 
 This is a multi-session program, not one pass. **Revised order as of
 2026-08-25**, given that the MVP above has now landed on top of the
@@ -2949,3 +3037,104 @@ thread continues, roughly in order of tractability):
    location confirmation, НПО Эйлер deep-dive) — not touched this pass,
    still open per `gagaring_network_map.md`'s own "what's still open"
    section.
+
+## Hub Insignia — presentation-layer design exploration (2026-09-08)
+
+**Not part of the registry rebuild above** — flagged here only so a future
+session doesn't rediscover it from scratch or mistake it for registry work.
+A standalone mockup artifact, built and iterated in-session at user
+direction, exploring a classification-mark/icon system for the live
+Network Graph's cluster hubs (offensive/defensive/dual-use manufacturer
+type, plus hub-site type and drone-platform-type variants). Full revision
+log and visual-semiotics research (Peirce icon/index/symbol, Neurath's
+Isotype, ISO 7001, ANSI Z535/GHS) in `notes/hub_insignia_design_notes.md`.
+Published at https://claude.ai/code/artifact/8bed5183-6ced-4df0-8c2d-8a4352ceaacd.
+
+**Update 2026-09-08, same day: wired into the live Network Graph**, at
+user direction. The dagger/shield/shield+dagger glyph system now renders
+on hub nodes in https://claude.ai/code/artifact/0e402553-a22e-4427-a3a9-c5b0251bdaa2 —
+`build_relationship_graph.py` gained a `classify_variant()` keyword
+heuristic over `products[]` text (24/207 entities classified: 14
+defensive, 7 offensive, 3 dual), logged as a presentation read, not a
+sourced registry field, same caveat the mockup carried, now surfaced in
+the graph's own sidebar legend too. Full detail in
+`notes/hub_insignia_design_notes.md`'s "v3" entry. Nothing here touches
+`entities.json`'s schema or gates any phase above — the `variant` field
+lives only in the derived `data/registry/relationship_graph.json`, not
+the source-of-truth registry files.
+
+**Update 2026-09-08, later same day: extended to all node/edge types
+("v4")**, at user direction to keep researching visual semiotics and
+apply it beyond hubs. Researched Bertin's visual variables and POLE/
+link-analysis link-chart conventions (i2 Analyst's Notebook genre — the
+one this graph actually belongs to); full citations in
+`notes/hub_insignia_design_notes.md`'s "v4" entry. Two changes landed in
+the live graph: (1) node **shape** now encodes kind — circle=entity,
+diamond=person, square=product — closing a gap where the sidebar legend
+already promised a person diamond the canvas never rendered; (2)
+`products[]` entries are promoted to their own graph node kind (477
+product nodes/edges from 72 entities, off by default via a toggle) with
+directed arrowheads added to the inherently directional edge types
+(owns/founded/directs/produces). Same presentation-not-sourced discipline
+as v3 — no `entities.json` schema change.
+
+**Update 2026-09-08, still later same day ("v4.1"): grouping made
+explicit.** User feedback on a full-graph screenshot: with 1408 nodes
+on screen, everything outside the labeled hub clusters read as "a
+sparse cluster of loosely if at all connected galaxies... grouped by an
+uncertain principle." Cause: components of size 1–2 (the majority of
+the graph — most entities have exactly one director/founder) all
+shared one weak central anchor point instead of getting their own
+layout space. Fixed by replacing the uniform-grid clustering with a
+size-aware shelf pack (cell size ∝ √component-size) and adding an
+explicit soft convex-hull halo around every component so grouping is
+drawn, not inferred from proximity. Full writeup in
+`notes/hub_insignia_design_notes.md`'s "v4.1" entry. Republished to the
+same graph URL.
+
+Touches the same registry data the phases above track (pulled 5 real
+entities' names/ИНН/products for test cards) but only as read-only input —
+no entity record was modified. Two live-fetched brand assets (site
+favicons, a Telegram channel avatar, one product photo) were embedded in
+the mockup artifact as base64 but were **not** archived into
+`data/sources/`, added to `entities.json`'s `images[]`, or run through the
+`inventory_sources.py`/`extract_registry.py`/`check_registry.py`
+housekeeping bundle — per CLAUDE.md's own imagery convention, that would be
+a separate follow-up if these assets are wanted as permanent registry
+assets rather than mockup-only decoration.
+
+**Update 2026-09-09 ("v5"): hub badge glyph replaced with a hex/pattern
+family.** A second standalone mockup ("Hub Icon Schema",
+https://claude.ai/code/artifact/8bed5183-6ced-4df0-8c2d-8a4352ceaacd)
+redesigned the v3 dagger/shield badge as one fixed hex glyph whose *fill
+pattern* — solid/hollow-ring/split — carries offensive/defensive/dual,
+instead of two different shape families, tested against real imagery for
+«Овод», ГОУДРОН, and БАСИРТК. User approved it and asked to wire it in;
+only `hubGlyphInner()`'s rendering and the `.hub-badge` CSS changed in
+the live graph — `classify_variant()`'s existing full-graph classification
+logic was untouched. Full writeup, including a caught-before-publish
+debug-script DOM mutation (never reached the saved file), in
+`notes/hub_insignia_design_notes.md`'s "v5" entry. Republished to the
+same graph URL.
+
+**Update 2026-09-09 ("v6"): product nodes gained 15 subtype icons.** User
+asked for more varied/intuitive icons distinguishing quadcopters, FPV,
+parts, and EW-setup subtypes, plus more researched categories. A third
+mockup ("Product Icon Set",
+https://claude.ai/code/artifact/fa4295ea-cef5-4fa0-ab0b-27cd92407a93)
+surveyed the registry's 477 `products[]` entries by keyword, designed 15
+monoline pictograms (FPV strike, multirotor, fixed-wing, helicopter,
+three EW-jammer variants, detector, antenna, battery, motor, video-link,
+ground-control, munition, repeater, plus a fiber-optic modifier tag)
+grounded in MIL-STD-2525's frame/icon orthogonality and ISO 7000's
+symbol-family consistency, and iterated on six icons that read poorly at
+first pass. Approved and wired in: `build_relationship_graph.py` gained
+`classify_product()` (same keyword-heuristic, non-registry-field
+discipline as `classify_variant()`) — 153 of 477 products matched a
+category, the rest genuinely fall outside the UAV/EW vocabulary (GISP-
+catalogue office/IT hardware, not a classifier miss). `network_graph.html`
+renders the matched icon directly on the product's own square (a new
+`--product-icon-ink` token, no separate backing) and gave product nodes a
+7px size floor so the icon has room to draw. Full writeup in
+`notes/hub_insignia_design_notes.md`'s "v6" entry. Republished to the
+same graph URL.
