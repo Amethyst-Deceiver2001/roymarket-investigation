@@ -41,6 +41,7 @@ _PREFIX_RE = re.compile(
 _QUOTE_RE = re.compile(r"[«»\"'“”‘’]")
 _WS_RE = re.compile(r"\s+")
 _SHARE_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*%")
+_SHARE_SUFFIX_RE = re.compile(r"\s*(\d+(?:[.,]\d+)?)\s*%\s*$")
 _SPLIT_RE = re.compile(r",\s*(?![^(]*\))")
 _MULTIROTOR_RE = re.compile(r"\b(?:multirotor|multicopter|quadcopter)\b|"
                             r"мультикоптер|квадрокоптер", re.IGNORECASE)
@@ -60,7 +61,10 @@ def parse_founder_entries(raw) -> list[dict]:
     for item in raw:
         if isinstance(item, dict):
             if item.get("name"):
-                out.append({"name": item["name"], "share": item.get("share")})
+                out.append({
+                    "name": item["name"],
+                    "share": item.get("share", item.get("share_pct")),
+                })
             continue
         if not isinstance(item, str):
             continue
@@ -70,6 +74,7 @@ def parse_founder_entries(raw) -> list[dict]:
                 continue
             share_m = _SHARE_RE.search(segment)
             name = segment[: segment.find("(")].strip() if "(" in segment else segment
+            name = _SHARE_SUFFIX_RE.sub("", name)
             name = name.strip(" .,")
             if len(name) >= 3:
                 out.append({"name": name, "share": share_m.group(1) if share_m else None})

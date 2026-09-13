@@ -94,6 +94,37 @@ class RelationshipGraphTests(unittest.TestCase):
             build_graph(copy.deepcopy(ENTITIES), copy.deepcopy(PEOPLE)),
         )
 
+    def test_historical_founder_share_suffix_does_not_create_false_stub(self):
+        entities = [{
+            "slug": "company",
+            "name_ru": "ООО «Company»",
+            "tier": "manufacturer",
+            "founders": [{"name": "Current Founder", "share_pct": 50}],
+            "founders_history": [{
+                "value": "Current Founder 50% (₽1 550 000)",
+                "as_of": "2025-04-14",
+                "source_id": "s1",
+            }],
+        }]
+        people = [{"slug": "current-founder", "fio_ru": "Current Founder"}]
+
+        graph = build_graph(entities, people)
+        self.assertNotIn("stub::current founder 50%", {node["id"] for node in graph["nodes"]})
+        self.assertTrue(any(
+            edge["type"] == "founded"
+            and edge["source"] == "current-founder"
+            and edge["target"] == "company"
+            and edge["label"] == "50%"
+            for edge in graph["edges"]
+        ))
+        self.assertFalse(any(
+            edge["type"] == "founded"
+            and edge["source"] == "current-founder"
+            and edge["target"] == "company"
+            and edge["temporal_status"] == "historical"
+            for edge in graph["edges"]
+        ))
+
     def test_validator_rejects_graph_contract_breaks(self):
         bad = copy.deepcopy(self.graph)
         bad["edges"][0]["source_id"] = "missing"

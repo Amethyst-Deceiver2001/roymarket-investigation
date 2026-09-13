@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1397,
-  "edge_count": 1728,
-  "unresolved_count": 297,
+  "node_count": 1308,
+  "edge_count": 1637,
+  "unresolved_count": 208,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -308,7 +308,7 @@
       "tier": "adjacent",
       "sanctioned": true,
       "legal_form": "АО",
-      "degree": 7
+      "degree": 6
     },
     {
       "id": "ao-aurin",
@@ -385,7 +385,7 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": "АО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ao-kotlin-novator",
@@ -440,7 +440,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "АО",
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "ao-npp-real",
@@ -451,7 +451,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "АО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ao-opticheskie-sistemy",
@@ -495,7 +495,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "АО",
-      "degree": 3
+      "degree": 2
     },
     {
       "id": "ao-prominvest",
@@ -528,7 +528,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "АО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ao-seym-agro",
@@ -605,7 +605,7 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": "АО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
@@ -1228,7 +1228,7 @@
       "label": "Елисеев Дмитрий Николаевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "eliseev-ilya-vladimirovich",
@@ -1947,7 +1947,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "koludarov-anton-valerevich",
@@ -2629,7 +2629,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "НПП",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "npp-radar-mms",
@@ -2719,7 +2719,7 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-aero-khit-servis",
@@ -2730,7 +2730,7 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "ooo-aeromaks",
@@ -2752,7 +2752,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 9
+      "degree": 8
     },
     {
       "id": "ooo-aerotekhalyans",
@@ -2763,7 +2763,7 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-akatsiya-avia",
@@ -2774,7 +2774,7 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "ooo-akr-begak",
@@ -2785,7 +2785,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 3
+      "degree": 2
     },
     {
       "id": "ooo-ametist",
@@ -2818,7 +2818,7 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 7
+      "degree": 6
     },
     {
       "id": "ooo-arkhangel-grupp",
@@ -2851,7 +2851,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-arkhangel-shchit",
@@ -2873,7 +2873,7 @@
       "tier": "adjacent",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 11
+      "degree": 10
     },
     {
       "id": "ooo-arkhangel-zaporizhzhie",
@@ -2895,7 +2895,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 19
+      "degree": 18
     },
     {
       "id": "ooo-as-kam",
@@ -2906,7 +2906,7 @@
       "tier": null,
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ooo-asel-labs",
@@ -2917,7 +2917,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 12
+      "degree": 11
     },
     {
       "id": "ooo-atlant-aero",
@@ -2928,7 +2928,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 9
+      "degree": 8
     },
     {
       "id": "ooo-atlant-logistik",
@@ -2961,7 +2961,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 12
+      "degree": 11
     },
     {
       "id": "ooo-ayaks-tekhnologii",
@@ -2972,7 +2972,7 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "ooo-berkut-dmv",
@@ -2994,7 +2994,7 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 7
+      "degree": 6
     },
     {
       "id": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
@@ -3027,7 +3027,7 @@
       "tier": null,
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-dron-reysing",
@@ -3038,7 +3038,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-dronomir",
@@ -3049,7 +3049,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-ds-bars-t",
@@ -3071,7 +3071,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 7
+      "degree": 6
     },
     {
       "id": "ooo-ekolibri-bt",
@@ -3093,7 +3093,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 17
+      "degree": 16
     },
     {
       "id": "ooo-everest",
@@ -3115,7 +3115,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 7
+      "degree": 6
     },
     {
       "id": "ooo-finkonsaltingk-fkk",
@@ -3126,7 +3126,7 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "ooo-gagaring",
@@ -3137,7 +3137,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 39
+      "degree": 38
     },
     {
       "id": "ooo-garant-klub",
@@ -3148,7 +3148,7 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-gaskar",
@@ -3170,7 +3170,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 13
+      "degree": 12
     },
     {
       "id": "ooo-gaskar-tekhnologii",
@@ -3181,7 +3181,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "ooo-geron",
@@ -3192,7 +3192,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 7
+      "degree": 6
     },
     {
       "id": "ooo-ges-2",
@@ -3203,7 +3203,7 @@
       "tier": "money-layer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ooo-gk-aeromaks",
@@ -3225,7 +3225,7 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-goudron",
@@ -3236,7 +3236,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ooo-hab-svo",
@@ -3269,7 +3269,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-intek-bespilotnye-sistemy",
@@ -3291,7 +3291,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-investments",
@@ -3302,7 +3302,7 @@
       "tier": "money-layer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-kingpro",
@@ -3313,7 +3313,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 3
+      "degree": 2
     },
     {
       "id": "ooo-kleverkopter",
@@ -3324,7 +3324,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 10
+      "degree": 9
     },
     {
       "id": "ooo-konstruktorskoe-byuro-sinergiya",
@@ -3335,7 +3335,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-kopterlab",
@@ -3346,7 +3346,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 11
+      "degree": 10
     },
     {
       "id": "ooo-krams",
@@ -3357,7 +3357,7 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "ooo-kravt",
@@ -3368,7 +3368,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 28
+      "degree": 27
     },
     {
       "id": "ooo-kravt-udmurtiya",
@@ -3379,7 +3379,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 13
+      "degree": 12
     },
     {
       "id": "ooo-kronshtadt-bespilotnye-sistemy",
@@ -3412,7 +3412,7 @@
       "tier": "money-layer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-mentastep",
@@ -3423,7 +3423,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "ooo-metaskan",
@@ -3434,7 +3434,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ooo-ml-konstrakshns",
@@ -3445,7 +3445,7 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-momento-rubinshteyn",
@@ -3478,7 +3478,7 @@
       "tier": "money-layer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-npk-atlant-aero",
@@ -3533,7 +3533,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 7
+      "degree": 6
     },
     {
       "id": "ooo-npo-kilovatt",
@@ -3566,7 +3566,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-npo-rustekhdron",
@@ -3588,7 +3588,7 @@
       "tier": "cbst-core",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 7
+      "degree": 6
     },
     {
       "id": "ooo-opkb-eksplomet",
@@ -3599,7 +3599,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 16
+      "degree": 15
     },
     {
       "id": "ooo-orient-sistems",
@@ -3610,7 +3610,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 18
+      "degree": 17
     },
     {
       "id": "ooo-orion",
@@ -3621,7 +3621,7 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "ooo-orzhitskie-artezianskie-vody",
@@ -3632,7 +3632,7 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-otkrytoe-nebo-kaluga",
@@ -3643,7 +3643,7 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ooo-oupen-lodzhistiks",
@@ -3687,7 +3687,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 14
+      "degree": 13
     },
     {
       "id": "ooo-praym",
@@ -3698,7 +3698,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-prom-tekh",
@@ -3731,7 +3731,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ooo-promsintez",
@@ -3742,7 +3742,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ooo-radiofid-sistemy",
@@ -3764,7 +3764,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-rt-razvitie-biznesa",
@@ -3786,7 +3786,7 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-selskohozyaystvennye-bespilotnye-sistemy-mira",
@@ -3808,7 +3808,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ooo-sistemnyy-integrator",
@@ -3830,7 +3830,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-skb-piranya",
@@ -3841,7 +3841,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 15
+      "degree": 14
     },
     {
       "id": "ooo-smart-teknolodzhis",
@@ -3896,7 +3896,7 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 7
+      "degree": 6
     },
     {
       "id": "ooo-stratim",
@@ -3907,7 +3907,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 10
+      "degree": 9
     },
     {
       "id": "ooo-stroystandart",
@@ -3918,7 +3918,7 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-superkhrono",
@@ -3929,7 +3929,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 9
+      "degree": 8
     },
     {
       "id": "ooo-tekhnomost",
@@ -3984,7 +3984,7 @@
       "tier": "cbst-core",
       "sanctioned": true,
       "legal_form": null,
-      "degree": 10
+      "degree": 8
     },
     {
       "id": "ooo-tsentr-dinarus",
@@ -3995,7 +3995,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ooo-tskbr",
@@ -4006,7 +4006,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 15
+      "degree": 14
     },
     {
       "id": "ooo-tstp-tsifrovaya-transportnaya-platforma",
@@ -4028,7 +4028,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": null,
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-tsyus",
@@ -4039,7 +4039,7 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-ushkuynik-sp",
@@ -4061,7 +4061,7 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-vizionero",
@@ -4072,7 +4072,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-vostochnye-vorota-zabaykalsk-manchzhuriya",
@@ -4083,7 +4083,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "ooo-vozdushnyy-traktat",
@@ -4094,7 +4094,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-zavolzhskoe",
@@ -4105,7 +4105,7 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "ooo-zetaks",
@@ -4116,7 +4116,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "degree": 3
+      "degree": 2
     },
     {
       "id": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
@@ -4154,7 +4154,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": null,
-      "degree": 7
+      "degree": 6
     },
     {
       "id": "pao-bank-psb",
@@ -10730,7 +10730,7 @@
       "label": "Руденко Дмитрий Александрович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 8
+      "degree": 9
     },
     {
       "id": "rumyantsev-aleksandr-ivanovich",
@@ -11267,12 +11267,6 @@
       "degree": 3
     },
     {
-      "id": "stub::100%",
-      "kind": "unresolved",
-      "label": "100%",
-      "degree": 1
-    },
-    {
       "id": "stub::100% незнамов александр васильевич",
       "kind": "unresolved",
       "label": "100% Незнамов Александр Васильевич",
@@ -11306,12 +11300,6 @@
       "id": "stub::24%; ооо инвестпроектгрупп",
       "kind": "unresolved",
       "label": "24%; ООО «Инвестпроектгрупп»",
-      "degree": 1
-    },
-    {
-      "id": "stub::25%",
-      "kind": "unresolved",
-      "label": "25%",
       "degree": 1
     },
     {
@@ -11435,21 +11423,15 @@
       "degree": 3
     },
     {
-      "id": "stub::аккерман екатерина валерьевна 0.02%",
-      "kind": "unresolved",
-      "label": "Аккерман Екатерина Валерьевна 0.02%",
-      "degree": 1
-    },
-    {
       "id": "stub::акр бегак",
       "kind": "unresolved",
       "label": "ООО «АКР «Бегак»»",
       "degree": 1
     },
     {
-      "id": "stub::акционерное общество вежливый концерн 100%",
+      "id": "stub::акционерное общество вежливый концерн",
       "kind": "unresolved",
-      "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВЕЖЛИВЫЙ КОНЦЕРН\" 100%",
+      "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВЕЖЛИВЫЙ КОНЦЕРН\"",
       "degree": 1
     },
     {
@@ -11465,21 +11447,15 @@
       "degree": 1
     },
     {
-      "id": "stub::акционерное общество икар- тех 95%",
-      "kind": "unresolved",
-      "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ИКАР- ТЕХ\" 95%",
-      "degree": 1
-    },
-    {
       "id": "stub::акционерное общество инновационный технологический центр система-саров",
       "kind": "unresolved",
       "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ИННОВАЦИОННЫЙ ТЕХНОЛОГИЧЕСКИЙ ЦЕНТР \"СИСТЕМА-САРОВ\"",
       "degree": 1
     },
     {
-      "id": "stub::акционерное общество ук смарт 100%",
+      "id": "stub::акционерное общество ук смарт",
       "kind": "unresolved",
-      "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УК СМАРТ\" 100%",
+      "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УК СМАРТ\"",
       "degree": 1
     },
     {
@@ -11495,27 +11471,15 @@
       "degree": 1
     },
     {
-      "id": "stub::акционерное общество управляющая компания мой капитал 100%",
+      "id": "stub::акционерное общество эколибри",
       "kind": "unresolved",
-      "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УПРАВЛЯЮЩАЯ КОМПАНИЯ \"МОЙ КАПИТАЛ\" 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::акционерное общество эколибри 100%",
-      "kind": "unresolved",
-      "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЭКОЛИБРИ\" 100%",
+      "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЭКОЛИБРИ\"",
       "degree": 1
     },
     {
       "id": "stub::александр паничев (b. 1995)",
       "kind": "unresolved",
       "label": "Александр Паничев (b. 1995)",
-      "degree": 1
-    },
-    {
-      "id": "stub::александров алексей витальевич 49.5%",
-      "kind": "unresolved",
-      "label": "Александров Алексей Витальевич 49.5%",
       "degree": 1
     },
     {
@@ -11531,27 +11495,9 @@
       "degree": 5
     },
     {
-      "id": "stub::афанасьев игорь константинович 20%",
-      "kind": "unresolved",
-      "label": "Афанасьев Игорь Константинович 20%",
-      "degree": 2
-    },
-    {
-      "id": "stub::байгутлина ирина анатольевна 100%",
-      "kind": "unresolved",
-      "label": "Байгутлина Ирина Анатольевна 100%",
-      "degree": 1
-    },
-    {
       "id": "stub::бауер пётр роландович",
       "kind": "unresolved",
       "label": "Бауер Пётр Роландович",
-      "degree": 1
-    },
-    {
-      "id": "stub::бегак александр аркадьевич 94%",
-      "kind": "unresolved",
-      "label": "Бегак Александр Аркадьевич 94%",
       "degree": 1
     },
     {
@@ -11583,18 +11529,6 @@
       "kind": "unresolved",
       "label": "Борисов Александр Сергеевич",
       "degree": 2
-    },
-    {
-      "id": "stub::борисов александр сергеевич 100%",
-      "kind": "unresolved",
-      "label": "Борисов Александр Сергеевич 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::борисов александр сергеевич 20%",
-      "kind": "unresolved",
-      "label": "Борисов Александр Сергеевич 20%",
-      "degree": 1
     },
     {
       "id": "stub::бровченко александр руфинович",
@@ -11639,30 +11573,6 @@
       "degree": 2
     },
     {
-      "id": "stub::владимирский михаил юрьевич 50%",
-      "kind": "unresolved",
-      "label": "Владимирский Михаил Юрьевич 50%",
-      "degree": 1
-    },
-    {
-      "id": "stub::власов артём аркадьевич 51%",
-      "kind": "unresolved",
-      "label": "Власов Артём Аркадьевич 51%",
-      "degree": 1
-    },
-    {
-      "id": "stub::волков михаил вадимович 1%",
-      "kind": "unresolved",
-      "label": "Волков Михаил Вадимович 1%",
-      "degree": 1
-    },
-    {
-      "id": "stub::воронин александр андреевич 30%",
-      "kind": "unresolved",
-      "label": "Воронин Александр Андреевич 30%",
-      "degree": 1
-    },
-    {
       "id": "stub::гаврилов алексей георгиевич",
       "kind": "unresolved",
       "label": "Гаврилов Алексей Георгиевич",
@@ -11685,12 +11595,6 @@
       "kind": "unresolved",
       "label": "Галкин Вадим Сергеевич",
       "degree": 1
-    },
-    {
-      "id": "stub::гарькуша владимир владимирович 100%",
-      "kind": "unresolved",
-      "label": "Гарькуша Владимир Владимирович 100%",
-      "degree": 2
     },
     {
       "id": "stub::гелик александр геннадьевич",
@@ -11801,12 +11705,6 @@
       "degree": 2
     },
     {
-      "id": "stub::григорьев григорий валерьевич 50%",
-      "kind": "unresolved",
-      "label": "Григорьев Григорий Валерьевич 50%",
-      "degree": 1
-    },
-    {
       "id": "stub::григорьев дмитрий евгеньевич",
       "kind": "unresolved",
       "label": "Григорьев Дмитрий Евгеньевич",
@@ -11819,12 +11717,6 @@
       "degree": 1
     },
     {
-      "id": "stub::гусев сергей владимирович 100%",
-      "kind": "unresolved",
-      "label": "Гусев Сергей Владимирович 100%",
-      "degree": 1
-    },
-    {
       "id": "stub::давыдов виктор ильич",
       "kind": "unresolved",
       "label": "Давыдов Виктор Ильич",
@@ -11834,12 +11726,6 @@
       "id": "stub::дар",
       "kind": "unresolved",
       "label": "Фонд «ДАР»",
-      "degree": 1
-    },
-    {
-      "id": "stub::дзема вадим вадимович 100%",
-      "kind": "unresolved",
-      "label": "Дзема Вадим Вадимович 100%",
       "degree": 1
     },
     {
@@ -11891,12 +11777,6 @@
       "degree": 1
     },
     {
-      "id": "stub::елисеев дмитрий николаевич 50%",
-      "kind": "unresolved",
-      "label": "Елисеев Дмитрий Николаевич 50%",
-      "degree": 1
-    },
-    {
       "id": "stub::емец виктор валентинович",
       "kind": "unresolved",
       "label": "Емец Виктор Валентинович",
@@ -11915,39 +11795,15 @@
       "degree": 2
     },
     {
-      "id": "stub::ермолов сергей юрьевич 51%",
+      "id": "stub::закелов а.а",
       "kind": "unresolved",
-      "label": "Ермолов Сергей Юрьевич 51%",
+      "label": "Закелов А.А",
       "degree": 1
     },
     {
-      "id": "stub::жуков андрей викторович 25%",
+      "id": "stub::закрытое акционерное общество группа компаний титан",
       "kind": "unresolved",
-      "label": "Жуков Андрей Викторович 25%",
-      "degree": 1
-    },
-    {
-      "id": "stub::загорский александр сергеевич 100%",
-      "kind": "unresolved",
-      "label": "Загорский Александр Сергеевич 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::закелов а.а. 50%",
-      "kind": "unresolved",
-      "label": "Закелов А.А. 50%",
-      "degree": 1
-    },
-    {
-      "id": "stub::закелов александр александрович 50%",
-      "kind": "unresolved",
-      "label": "Закелов Александр Александрович 50%",
-      "degree": 1
-    },
-    {
-      "id": "stub::закрытое акционерное общество группа компаний титан 100%",
-      "kind": "unresolved",
-      "label": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГРУППА КОМПАНИЙ \"ТИТАН\" 100%",
+      "label": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГРУППА КОМПАНИЙ \"ТИТАН\"",
       "degree": 1
     },
     {
@@ -11963,9 +11819,9 @@
       "degree": 1
     },
     {
-      "id": "stub::зит.ци 51% / ао ук азимут 25% / кожемякин в.в. 24%",
+      "id": "stub::зит.ци 51% / ао ук азимут 25% / кожемякин в.в",
       "kind": "unresolved",
-      "label": "ЗИТ.ЦИ 51% / АО «УК «Азимут»» 25% / Кожемякин В.В. 24%",
+      "label": "ЗИТ.ЦИ 51% / АО «УК «Азимут»» 25% / Кожемякин В.В",
       "degree": 1
     },
     {
@@ -11973,18 +11829,6 @@
       "kind": "unresolved",
       "label": "Иванов Андрей Георгиевич",
       "degree": 2
-    },
-    {
-      "id": "stub::иванов андрей георгиевич 100%",
-      "kind": "unresolved",
-      "label": "Иванов Андрей Георгиевич 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::ивлев артём юрьевич 100%",
-      "kind": "unresolved",
-      "label": "Ивлев Артём Юрьевич 100%",
-      "degree": 1
     },
     {
       "id": "stub::икар-тех",
@@ -11999,21 +11843,21 @@
       "degree": 1
     },
     {
-      "id": "stub::инн 502603133030 - 80%",
+      "id": "stub::инн 502603133030 -",
       "kind": "unresolved",
-      "label": "ИНН 502603133030 - 80%",
+      "label": "ИНН 502603133030 -",
       "degree": 1
     },
     {
-      "id": "stub::инн 712900068586 - 15%",
+      "id": "stub::инн 712900068586 -",
       "kind": "unresolved",
-      "label": "ИНН 712900068586 - 15%",
+      "label": "ИНН 712900068586 -",
       "degree": 1
     },
     {
-      "id": "stub::инн 771501583221 - 5%",
+      "id": "stub::инн 771501583221 -",
       "kind": "unresolved",
-      "label": "ИНН 771501583221 - 5%",
+      "label": "ИНН 771501583221 -",
       "degree": 1
     },
     {
@@ -12065,22 +11909,10 @@
       "degree": 2
     },
     {
-      "id": "stub::карамов эльдар рафикович 10%",
-      "kind": "unresolved",
-      "label": "Карамов Эльдар Рафикович 10%",
-      "degree": 1
-    },
-    {
       "id": "stub::карцев максим владимирович",
       "kind": "unresolved",
       "label": "Карцев Максим Владимирович",
       "degree": 2
-    },
-    {
-      "id": "stub::карцев максим владимирович 29%",
-      "kind": "unresolved",
-      "label": "Карцев Максим Владимирович 29%",
-      "degree": 1
     },
     {
       "id": "stub::климаков сергей васильевич",
@@ -12095,57 +11927,9 @@
       "degree": 2
     },
     {
-      "id": "stub::коган михаил александрович 25%",
-      "kind": "unresolved",
-      "label": "Коган Михаил Александрович 25%",
-      "degree": 1
-    },
-    {
-      "id": "stub::кожемякин владимир владимирович 24%",
-      "kind": "unresolved",
-      "label": "Кожемякин Владимир Владимирович 24%",
-      "degree": 1
-    },
-    {
-      "id": "stub::козлов дмитрий сергеевич 100%",
-      "kind": "unresolved",
-      "label": "Козлов Дмитрий Сергеевич 100%",
-      "degree": 1
-    },
-    {
       "id": "stub::колосов артем иванович",
       "kind": "unresolved",
       "label": "Колосов Артем Иванович",
-      "degree": 1
-    },
-    {
-      "id": "stub::колосов артем иванович 20%",
-      "kind": "unresolved",
-      "label": "Колосов Артем Иванович 20%",
-      "degree": 1
-    },
-    {
-      "id": "stub::константинов евгений александрович 26.25%",
-      "kind": "unresolved",
-      "label": "Константинов Евгений Александрович 26.25%",
-      "degree": 1
-    },
-    {
-      "id": "stub::королев алексей александрович 100%",
-      "kind": "unresolved",
-      "label": "Королев Алексей Александрович 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::королев дмитрий михайлович 10%",
-      "kind": "unresolved",
-      "label": "Королев Дмитрий Михайлович 10%",
-      "degree": 1
-    },
-    {
-      "id": "stub::королев дмитрий михайлович 100%",
-      "kind": "unresolved",
-      "label": "Королев Дмитрий Михайлович 100%",
       "degree": 1
     },
     {
@@ -12159,18 +11943,6 @@
       "kind": "unresolved",
       "label": "Костылин Дмитрий Евгеньевич",
       "degree": 2
-    },
-    {
-      "id": "stub::костылин дмитрий евгеньевич 34%",
-      "kind": "unresolved",
-      "label": "Костылин Дмитрий Евгеньевич 34%",
-      "degree": 1
-    },
-    {
-      "id": "stub::костюнин павел андреевич 75%",
-      "kind": "unresolved",
-      "label": "Костюнин Павел Андреевич 75%",
-      "degree": 1
     },
     {
       "id": "stub::кронштадт беспилотные системы",
@@ -12203,34 +11975,10 @@
       "degree": 2
     },
     {
-      "id": "stub::кусумов вахид абдулович 100%",
-      "kind": "unresolved",
-      "label": "Кусумов Вахид Абдулович 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::лапин игорь николаевич 63.2%",
-      "kind": "unresolved",
-      "label": "Лапин Игорь Николаевич 63.2%",
-      "degree": 1
-    },
-    {
       "id": "stub::лебедев сергей александрович",
       "kind": "unresolved",
       "label": "Лебедев Сергей Александрович",
       "degree": 3
-    },
-    {
-      "id": "stub::лебедев сергей александрович 50%",
-      "kind": "unresolved",
-      "label": "Лебедев Сергей Александрович 50%",
-      "degree": 1
-    },
-    {
-      "id": "stub::лобов вадим георгиевич 100%",
-      "kind": "unresolved",
-      "label": "Лобов Вадим Георгиевич 100%",
-      "degree": 1
     },
     {
       "id": "stub::мазалова виктория вячеславовна",
@@ -12281,33 +12029,9 @@
       "degree": 1
     },
     {
-      "id": "stub::михельсон виктория леонидовна 0.098%",
-      "kind": "unresolved",
-      "label": "Михельсон Виктория Леонидовна 0.098%",
-      "degree": 1
-    },
-    {
-      "id": "stub::михельсон леонид викторович 100%",
-      "kind": "unresolved",
-      "label": "Михельсон Леонид Викторович 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::михельсон леонид викторович 78.2902%",
-      "kind": "unresolved",
-      "label": "Михельсон Леонид Викторович 78.2902%",
-      "degree": 1
-    },
-    {
       "id": "stub::московский инновационный кластер",
       "kind": "unresolved",
       "label": "Фонд «Московский инновационный кластер»",
-      "degree": 1
-    },
-    {
-      "id": "stub::московский инновационный кластер 100%",
-      "kind": "unresolved",
-      "label": "ФОНД \"МОСКОВСКИЙ ИННОВАЦИОННЫЙ КЛАСТЕР\" 100%",
       "degree": 1
     },
     {
@@ -12329,18 +12053,6 @@
       "degree": 2
     },
     {
-      "id": "stub::нахтигаль никита витальевич 100%",
-      "kind": "unresolved",
-      "label": "Нахтигаль Никита Витальевич 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::наша правда 90.91%",
-      "kind": "unresolved",
-      "label": "Фонд «Наша Правда» 90.91%",
-      "degree": 1
-    },
-    {
       "id": "stub::не раскрыты в егрюл",
       "kind": "unresolved",
       "label": "Не раскрыты в ЕГРЮЛ",
@@ -12359,22 +12071,10 @@
       "degree": 1
     },
     {
-      "id": "stub::нефедьев андрей матвеевич 100%",
-      "kind": "unresolved",
-      "label": "Нефедьев Андрей Матвеевич 100%",
-      "degree": 1
-    },
-    {
       "id": "stub::николаев александр юрьевич",
       "kind": "unresolved",
       "label": "Николаев Александр Юрьевич",
       "degree": 3
-    },
-    {
-      "id": "stub::николаев александр юрьевич 100%",
-      "kind": "unresolved",
-      "label": "Николаев Александр Юрьевич 100%",
-      "degree": 1
     },
     {
       "id": "stub::он же генеральный директор; казнова татьяна андреевна",
@@ -12398,12 +12098,6 @@
       "id": "stub::паутов андрей павлович",
       "kind": "unresolved",
       "label": "Паутов Андрей Павлович",
-      "degree": 1
-    },
-    {
-      "id": "stub::паутов андрей павлович 25%",
-      "kind": "unresolved",
-      "label": "Паутов Андрей Павлович 25%",
       "degree": 1
     },
     {
@@ -12437,64 +12131,10 @@
       "degree": 2
     },
     {
-      "id": "stub::петрова ольга сергеевна 51%",
-      "kind": "unresolved",
-      "label": "Петрова Ольга Сергеевна 51%",
-      "degree": 1
-    },
-    {
-      "id": "stub::плыкина екатерина викторовна 50%",
-      "kind": "unresolved",
-      "label": "Плыкина Екатерина Викторовна 50%",
-      "degree": 1
-    },
-    {
-      "id": "stub::поддержки зимних олимпийских видов спорта 100%",
-      "kind": "unresolved",
-      "label": "ФОНД ПОДДЕРЖКИ ЗИМНИХ ОЛИМПИЙСКИХ ВИДОВ СПОРТА 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::порсев андрей валерьевич 15%",
-      "kind": "unresolved",
-      "label": "Порсев Андрей Валерьевич 15%",
-      "degree": 1
-    },
-    {
-      "id": "stub::поспехов иван александрович 100%",
-      "kind": "unresolved",
-      "label": "Поспехов Иван Александрович 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::поспехов иван александрович 50%",
-      "kind": "unresolved",
-      "label": "Поспехов Иван Александрович 50%",
-      "degree": 1
-    },
-    {
-      "id": "stub::потапов игорь владимирович 100%",
-      "kind": "unresolved",
-      "label": "Потапов Игорь Владимирович 100%",
-      "degree": 1
-    },
-    {
       "id": "stub::потехин владимир александрович",
       "kind": "unresolved",
       "label": "Потехин Владимир Александрович",
       "degree": 3
-    },
-    {
-      "id": "stub::потехин владимир александрович 100%",
-      "kind": "unresolved",
-      "label": "Потехин Владимир Александрович 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::радченко михаил юрьевич 100%",
-      "kind": "unresolved",
-      "label": "Радченко Михаил Юрьевич 100%",
-      "degree": 1
     },
     {
       "id": "stub::развития промышленности тульской области",
@@ -12506,12 +12146,6 @@
       "id": "stub::региональных некоммерческих проектов дар",
       "kind": "unresolved",
       "label": "ФОНД РЕГИОНАЛЬНЫХ НЕКОММЕРЧЕСКИХ ПРОЕКТОВ \"ДАР\"",
-      "degree": 1
-    },
-    {
-      "id": "stub::региональных некоммерческих проектов дар 100%",
-      "kind": "unresolved",
-      "label": "ФОНД РЕГИОНАЛЬНЫХ НЕКОММЕРЧЕСКИХ ПРОЕКТОВ \"ДАР\" 100%",
       "degree": 1
     },
     {
@@ -12563,12 +12197,6 @@
       "degree": 2
     },
     {
-      "id": "stub::руденко дмитрий александрович 50%",
-      "kind": "unresolved",
-      "label": "Руденко Дмитрий Александрович 50%",
-      "degree": 1
-    },
-    {
       "id": "stub::рябико ольга александровна",
       "kind": "unresolved",
       "label": "Рябико Ольга Александровна",
@@ -12581,21 +12209,15 @@
       "degree": 1
     },
     {
-      "id": "stub::с ограниченной ответственностью аэромакс 100%",
-      "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЭРОМАКС\" 100%",
-      "degree": 1
-    },
-    {
       "id": "stub::с ограниченной ответственностью аякс",
       "kind": "unresolved",
       "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЯКС\"",
       "degree": 1
     },
     {
-      "id": "stub::с ограниченной ответственностью беспилотные технологические решения 100%",
+      "id": "stub::с ограниченной ответственностью беспилотные технологические решения",
       "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЕСПИЛОТНЫЕ ТЕХНОЛОГИЧЕСКИЕ РЕШЕНИЯ\" 100%",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЕСПИЛОТНЫЕ ТЕХНОЛОГИЧЕСКИЕ РЕШЕНИЯ\"",
       "degree": 1
     },
     {
@@ -12605,15 +12227,15 @@
       "degree": 2
     },
     {
-      "id": "stub::с ограниченной ответственностью информационные технологии 50%",
+      "id": "stub::с ограниченной ответственностью информационные технологии",
       "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ\" 50%",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ\"",
       "degree": 1
     },
     {
-      "id": "stub::с ограниченной ответственностью кравт 100%",
+      "id": "stub::с ограниченной ответственностью кравт",
       "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАВТ\" 100%",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАВТ\"",
       "degree": 1
     },
     {
@@ -12629,9 +12251,9 @@
       "degree": 1
     },
     {
-      "id": "stub::с ограниченной ответственностью ориент системс 100%",
+      "id": "stub::с ограниченной ответственностью ориент системс",
       "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОРИЕНТ СИСТЕМС\" 100%",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОРИЕНТ СИСТЕМС\"",
       "degree": 1
     },
     {
@@ -12641,27 +12263,21 @@
       "degree": 1
     },
     {
-      "id": "stub::с ограниченной ответственностью сибирская навигационная компания 100%",
+      "id": "stub::с ограниченной ответственностью сибирская навигационная компания",
       "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИБИРСКАЯ НАВИГАЦИОННАЯ КОМПАНИЯ\" 100%",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИБИРСКАЯ НАВИГАЦИОННАЯ КОМПАНИЯ\"",
       "degree": 1
     },
     {
-      "id": "stub::с ограниченной ответственностью стартап- студия университета лобачевского 100%",
+      "id": "stub::с ограниченной ответственностью стартап- студия университета лобачевского",
       "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАРТАП- СТУДИЯ УНИВЕРСИТЕТА ЛОБАЧЕВСКОГО\" 100%",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАРТАП- СТУДИЯ УНИВЕРСИТЕТА ЛОБАЧЕВСКОГО\"",
       "degree": 1
     },
     {
       "id": "stub::с ограниченной ответственностью управляющая компания комакс",
       "kind": "unresolved",
       "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УПРАВЛЯЮЩАЯ КОМПАНИЯ КОМАКС\"",
-      "degree": 2
-    },
-    {
-      "id": "stub::с ограниченной ответственностью управляющая компания комакс 100%",
-      "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УПРАВЛЯЮЩАЯ КОМПАНИЯ КОМАКС\" 100%",
       "degree": 3
     },
     {
@@ -12674,12 +12290,6 @@
       "id": "stub::с ограниченной ответственностью финансово- консультационная компания фонда дар выписка из егрюл 07.09.2026 11:36 огрн 5087746197622 страница 2 из 13",
       "kind": "unresolved",
       "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФИНАНСОВО- КОНСУЛЬТАЦИОННАЯ КОМПАНИЯ ФОНДА \"ДАР\" Выписка из ЕГРЮЛ 07.09.2026 11:36 ОГРН 5087746197622 Страница 2 из 13",
-      "degree": 1
-    },
-    {
-      "id": "stub::с ограниченной ответственностью финансово- консультационная компания фонда дар выписка из егрюл 07.09.2026 11:36 огрн 5087746197622 страница 2 из 13 99%",
-      "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФИНАНСОВО- КОНСУЛЬТАЦИОННАЯ КОМПАНИЯ ФОНДА \"ДАР\" Выписка из ЕГРЮЛ 07.09.2026 11:36 ОГРН 5087746197622 Страница 2 из 13 99%",
       "degree": 1
     },
     {
@@ -12707,12 +12317,6 @@
       "degree": 1
     },
     {
-      "id": "stub::семенов игорь георгиевич 100%",
-      "kind": "unresolved",
-      "label": "Семенов Игорь Георгиевич 100%",
-      "degree": 1
-    },
-    {
       "id": "stub::сиразетдинов никита вадимович / климов максим александрович / общество с ограниченной ответственностью гагаринг / общество с ограниченной ответственностью авиационно-космические разработки бегак / общество с ограниченной ответственностью прайм",
       "kind": "unresolved",
       "label": "Сиразетдинов Никита Вадимович / Климов Максим Александрович / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАГАРИНГ\" / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВИАЦИОННО-КОСМИЧЕСКИЕ РАЗРАБОТКИ \"БЕГАК\" / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРАЙМ\"",
@@ -12731,40 +12335,16 @@
       "degree": 2
     },
     {
-      "id": "stub::соколов герман олегович 100%",
-      "kind": "unresolved",
-      "label": "Соколов Герман Олегович 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::соколов никита дмитриевич 69%",
-      "kind": "unresolved",
-      "label": "Соколов Никита Дмитриевич 69%",
-      "degree": 1
-    },
-    {
       "id": "stub::соколова ольга михайловна",
       "kind": "unresolved",
       "label": "Соколова Ольга Михайловна",
       "degree": 2
     },
     {
-      "id": "stub::соловьев константин юрьевич 50%",
-      "kind": "unresolved",
-      "label": "Соловьев Константин Юрьевич 50%",
-      "degree": 1
-    },
-    {
       "id": "stub::сотов артём александрович",
       "kind": "unresolved",
       "label": "Сотов Артём Александрович",
       "degree": 2
-    },
-    {
-      "id": "stub::сотов артём александрович 100%",
-      "kind": "unresolved",
-      "label": "Сотов Артём Александрович 100%",
-      "degree": 1
     },
     {
       "id": "stub::стартап-студия университета лобачевского",
@@ -12779,33 +12359,15 @@
       "degree": 2
     },
     {
-      "id": "stub::степаева мария ивановна 100%",
-      "kind": "unresolved",
-      "label": "Степаева Мария Ивановна 100%",
-      "degree": 1
-    },
-    {
       "id": "stub::струлев игорь леонидович",
       "kind": "unresolved",
       "label": "Струлев Игорь Леонидович",
       "degree": 3
     },
     {
-      "id": "stub::струлев игорь леонидович 50%",
-      "kind": "unresolved",
-      "label": "Струлев Игорь Леонидович 50%",
-      "degree": 1
-    },
-    {
       "id": "stub::съедин михаил васильевич",
       "kind": "unresolved",
       "label": "Съедин Михаил Васильевич",
-      "degree": 1
-    },
-    {
-      "id": "stub::тимофеев владимир сергеевич 50%",
-      "kind": "unresolved",
-      "label": "Тимофеев Владимир Сергеевич 50%",
       "degree": 1
     },
     {
@@ -12815,22 +12377,10 @@
       "degree": 2
     },
     {
-      "id": "stub::тимофеев даниил андреевич 100%",
-      "kind": "unresolved",
-      "label": "Тимофеев Даниил Андреевич 100%",
-      "degree": 1
-    },
-    {
       "id": "stub::тращёнок людмила ефимовна",
       "kind": "unresolved",
       "label": "Тращёнок Людмила Ефимовна",
       "degree": 2
-    },
-    {
-      "id": "stub::тютина ольга анатольевна 100%",
-      "kind": "unresolved",
-      "label": "Тютина Ольга Анатольевна 100%",
-      "degree": 1
     },
     {
       "id": "stub::управляющая компания азимут",
@@ -12848,12 +12398,6 @@
       "id": "stub::управляющая организация: ооо кронштадт-техник",
       "kind": "unresolved",
       "label": "Управляющая организация: ООО «Кронштадт-Техник»",
-      "degree": 1
-    },
-    {
-      "id": "stub::усачёв павел александрович 100%",
-      "kind": "unresolved",
-      "label": "Усачёв Павел Александрович 100%",
       "degree": 1
     },
     {
@@ -12875,33 +12419,9 @@
       "degree": 1
     },
     {
-      "id": "stub::федукович кирилл олегович 20%",
-      "kind": "unresolved",
-      "label": "Федукович Кирилл Олегович 20%",
-      "degree": 1
-    },
-    {
       "id": "stub::филиппов вадим владимирович",
       "kind": "unresolved",
       "label": "Филиппов Вадим Владимирович",
-      "degree": 1
-    },
-    {
-      "id": "stub::филиппов вадим владимирович 100%",
-      "kind": "unresolved",
-      "label": "Филиппов Вадим Владимирович 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::филиппов михаил геннадьевич 100%",
-      "kind": "unresolved",
-      "label": "Филиппов Михаил Геннадьевич 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::фоминых алексей михайлович 100%",
-      "kind": "unresolved",
-      "label": "Фоминых Алексей Михайлович 100%",
       "degree": 1
     },
     {
@@ -12923,22 +12443,10 @@
       "degree": 1
     },
     {
-      "id": "stub::христюк владимир владимирович 100%",
-      "kind": "unresolved",
-      "label": "Христюк Владимир Владимирович 100%",
-      "degree": 2
-    },
-    {
       "id": "stub::цбст",
       "kind": "unresolved",
       "label": "АНО «ЦБСТ»",
       "degree": 3
-    },
-    {
-      "id": "stub::цыганов вадим борисович 100%",
-      "kind": "unresolved",
-      "label": "Цыганов Вадим Борисович 100%",
-      "degree": 1
     },
     {
       "id": "stub::чемезов сергей викторович",
@@ -12947,21 +12455,9 @@
       "degree": 2
     },
     {
-      "id": "stub::черезов андрей павлович 100%",
-      "kind": "unresolved",
-      "label": "Черезов Андрей Павлович 100%",
-      "degree": 2
-    },
-    {
       "id": "stub::черленок игорь эдуардович",
       "kind": "unresolved",
       "label": "Черленок Игорь Эдуардович",
-      "degree": 1
-    },
-    {
-      "id": "stub::чернышов павел алексеевич 40%",
-      "kind": "unresolved",
-      "label": "Чернышов Павел Алексеевич 40%",
       "degree": 1
     },
     {
@@ -12977,45 +12473,15 @@
       "degree": 2
     },
     {
-      "id": "stub::чумаков павел андреевич 100%",
-      "kind": "unresolved",
-      "label": "Чумаков Павел Андреевич 100%",
-      "degree": 1
-    },
-    {
       "id": "stub::шаповалов сергей михайлович",
       "kind": "unresolved",
       "label": "Шаповалов Сергей Михайлович",
       "degree": 3
     },
     {
-      "id": "stub::шаповалов сергей михайлович 100%",
+      "id": "stub::шатракова а.а",
       "kind": "unresolved",
-      "label": "Шаповалов Сергей Михайлович 100%",
-      "degree": 1
-    },
-    {
-      "id": "stub::шатракова а.а. 50%",
-      "kind": "unresolved",
-      "label": "Шатракова А.А. 50%",
-      "degree": 1
-    },
-    {
-      "id": "stub::швецов алексей александрович 0.5%",
-      "kind": "unresolved",
-      "label": "Швецов Алексей Александрович 0.5%",
-      "degree": 1
-    },
-    {
-      "id": "stub::швецов алексей александрович 1%",
-      "kind": "unresolved",
-      "label": "Швецов Алексей Александрович 1%",
-      "degree": 1
-    },
-    {
-      "id": "stub::шевченко константин игоревич 8%",
-      "kind": "unresolved",
-      "label": "Шевченко Константин Игоревич 8%",
+      "label": "Шатракова А.А",
       "degree": 1
     },
     {
@@ -13305,7 +12771,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "viktor-ilich-davydov",
@@ -13337,7 +12803,7 @@
       "label": "Владимирский Михаил Юрьевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "vlasenkova-alina-aleksandrovna",
@@ -13436,7 +12902,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "degree": 6
+      "degree": 5
     },
     {
       "id": "yastrebov-sergey-vladimirovich",
@@ -14865,7 +14331,7 @@
       "source": "aristarkhov-vladimir-vyacheslavovich",
       "target": "ooo-arkhangel-istra",
       "type": "founded",
-      "label": null,
+      "label": "100%",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -15845,7 +15311,7 @@
       "source": "chapurin-viktor-viktorovich",
       "target": "ooo-arkhangel-tsentr",
       "type": "founded",
-      "label": null,
+      "label": "50%",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -16464,6 +15930,16 @@
     {
       "source": "eliseev-dmitriy-nikolaevich",
       "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
+      "type": "founded",
+      "label": "former founder (50%)",
+      "source_id": "s6808",
+      "as_of": "2026-01-19",
+      "weight": 1.0,
+      "temporal_status": "historical"
+    },
+    {
+      "source": "eliseev-dmitriy-nikolaevich",
+      "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
       "type": "role",
       "label": "founder",
       "source_id": null,
@@ -16875,7 +16351,7 @@
       "source": "galiev-ruslan-railovich",
       "target": "ooo-arkhangel",
       "type": "founded",
-      "label": null,
+      "label": "50%",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -18765,7 +18241,7 @@
       "source": "kulemin-igor-aleksandrovich",
       "target": "ooo-arkhangel-shchit",
       "type": "founded",
-      "label": null,
+      "label": "100%",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -18855,7 +18331,7 @@
       "source": "kusumov-vakhid-abdulovich",
       "target": "ooo-arkhangel-melitopol-2",
       "type": "founded",
-      "label": null,
+      "label": "100%",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -18885,7 +18361,7 @@
       "source": "kusumov-vakhid-abdulovich",
       "target": "ooo-arkhangel-zaporizhzhie",
       "type": "founded",
-      "label": null,
+      "label": "100%",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -24564,6 +24040,16 @@
     {
       "source": "rudenko-dmitriy-aleksandrovich",
       "target": "ooo-spetsmat-spetsialnye-materialy",
+      "type": "founded",
+      "label": "former founder (50%)",
+      "source_id": "s6834",
+      "as_of": "2024-11-22",
+      "weight": 1.0,
+      "temporal_status": "historical"
+    },
+    {
+      "source": "rudenko-dmitriy-aleksandrovich",
+      "target": "ooo-spetsmat-spetsialnye-materialy",
       "type": "role",
       "label": "founder",
       "source_id": null,
@@ -25055,7 +24541,7 @@
       "source": "shatrakova-anastasiya-artemovna",
       "target": "ooo-arkhangel",
       "type": "founded",
-      "label": null,
+      "label": "50%",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -26102,16 +25588,6 @@
       "temporal_status": "historical"
     },
     {
-      "source": "stub::100%",
-      "target": "ao-rti-radio",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s7345",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown"
-    },
-    {
       "source": "stub::100% незнамов александр васильевич",
       "target": "ooo-radiofid-sistemy",
       "type": "founded",
@@ -26166,16 +25642,6 @@
       "target": "ooo-tskbr",
       "type": "founded",
       "label": "former founder (24%)",
-      "source_id": "s7351",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::25%",
-      "target": "ooo-tskbr",
-      "type": "founded",
-      "label": "former founder (25%)",
       "source_id": "s7351",
       "as_of": null,
       "weight": 1.0,
@@ -26422,16 +25888,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::аккерман екатерина валерьевна 0.02%",
-      "target": "ooo-stroystandart",
-      "type": "founded",
-      "label": "former founder (0.02%)",
-      "source_id": "s6826",
-      "as_of": "2025-03-21",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::акр бегак",
       "target": "ano-arrs-krasnodar",
       "type": "founded",
@@ -26442,7 +25898,7 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::акционерное общество вежливый концерн 100%",
+      "source": "stub::акционерное общество вежливый концерн",
       "target": "ooo-spetsialnye-poleznye-tekhnologii",
       "type": "founded",
       "label": "former founder (100%)",
@@ -26472,16 +25928,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::акционерное общество икар- тех 95%",
-      "target": "ooo-diam-aero",
-      "type": "founded",
-      "label": "former founder (95%)",
-      "source_id": "s6842",
-      "as_of": "2025-08-12",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::акционерное общество инновационный технологический центр система-саров",
       "target": "ooo-as-kam",
       "type": "founded",
@@ -26492,7 +25938,7 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::акционерное общество ук смарт 100%",
+      "source": "stub::акционерное общество ук смарт",
       "target": "ooo-smart-teknolodzhis",
       "type": "founded",
       "label": "former founder (100%)",
@@ -26522,17 +25968,7 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::акционерное общество управляющая компания мой капитал 100%",
-      "target": "ao-tsentr-telko",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6743",
-      "as_of": "2026-01-15",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::акционерное общество эколибри 100%",
+      "source": "stub::акционерное общество эколибри",
       "target": "ooo-ekolibri-bt",
       "type": "founded",
       "label": "former founder (100%)",
@@ -26550,16 +25986,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::александров алексей витальевич 49.5%",
-      "target": "ooo-gagaring",
-      "type": "founded",
-      "label": "former founder (49.5%)",
-      "source_id": "s6776",
-      "as_of": "2026-04-15",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::архангельский геннадий евгеньевич + ташматов илья сергеевич",
@@ -26622,52 +26048,12 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::афанасьев игорь константинович 20%",
-      "target": "ooo-gaskar-integratsiya",
-      "type": "founded",
-      "label": "former founder (20%)",
-      "source_id": "s6745",
-      "as_of": "2026-06-03",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::афанасьев игорь константинович 20%",
-      "target": "ooo-gaskar-tekhnologii",
-      "type": "founded",
-      "label": "former founder (20%)",
-      "source_id": "s6772",
-      "as_of": "2026-06-03",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::байгутлина ирина анатольевна 100%",
-      "target": "ooo-npts-basirtk",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6782",
-      "as_of": "2026-07-14",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::бауер пётр роландович",
       "target": "ooo-gaskar-integratsiya",
       "type": "directs",
       "label": null,
       "source_id": "s3391",
       "as_of": "2020-05-28",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::бегак александр аркадьевич 94%",
-      "target": "ooo-akr-begak",
-      "type": "founded",
-      "label": "former founder (94%)",
-      "source_id": "s6779",
-      "as_of": "2020-08-17",
       "weight": 1.0,
       "temporal_status": "historical"
     },
@@ -26730,26 +26116,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::борисов александр сергеевич 100%",
-      "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s7352",
-      "as_of": "2023-02-03",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::борисов александр сергеевич 20%",
-      "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-      "type": "founded",
-      "label": "former founder (20%)",
-      "source_id": "s6813",
-      "as_of": "2023-04-24",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::бровченко александр руфинович",
@@ -26842,46 +26208,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::владимирский михаил юрьевич 50%",
-      "target": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
-      "type": "founded",
-      "label": "former founder (50%)",
-      "source_id": "s6844",
-      "as_of": "2024-06-14",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::власов артём аркадьевич 51%",
-      "target": "ooo-aeroplatformy",
-      "type": "founded",
-      "label": "former founder (51%)",
-      "source_id": "s6796",
-      "as_of": "2025-10-21",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::волков михаил вадимович 1%",
-      "target": "ooo-zavolzhskoe",
-      "type": "founded",
-      "label": "former founder (1%)",
-      "source_id": "s6695",
-      "as_of": "2015-03-12",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::воронин александр андреевич 30%",
-      "target": "ooo-intel-dron",
-      "type": "founded",
-      "label": "former founder (30%)",
-      "source_id": "s6815",
-      "as_of": "2025-07-02",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::гаврилов алексей георгиевич",
       "target": "ooo-npo-kilovatt",
       "type": "directs",
@@ -26928,26 +26254,6 @@
       "label": null,
       "source_id": "s4253",
       "as_of": "2014-10-29",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::гарькуша владимир владимирович 100%",
-      "target": "ooo-gk-logos",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6784",
-      "as_of": "2025-06-16",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::гарькуша владимир владимирович 100%",
-      "target": "ooo-promsintez",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6783",
-      "as_of": "2013-01-23",
       "weight": 1.0,
       "temporal_status": "historical"
     },
@@ -27162,16 +26468,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::григорьев григорий валерьевич 50%",
-      "target": "ooo-zetaks",
-      "type": "founded",
-      "label": "former founder (50%)",
-      "source_id": "s6803",
-      "as_of": "2022-10-25",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::григорьев дмитрий евгеньевич",
       "target": "ao-borey-absorbed-no-longer-exists",
       "type": "directs",
@@ -27222,16 +26518,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::гусев сергей владимирович 100%",
-      "target": "ooo-kleverkopter",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6719",
-      "as_of": "2018-08-30",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::давыдов виктор ильич",
       "target": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
       "type": "directs",
@@ -27250,16 +26536,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::дзема вадим вадимович 100%",
-      "target": "ooo-dron-reysing",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6742",
-      "as_of": "2020-03-27",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::директор (единоличный исполнительный орган)",
@@ -27362,16 +26638,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::елисеев дмитрий николаевич 50%",
-      "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
-      "type": "founded",
-      "label": "former founder (50%)",
-      "source_id": "s6808",
-      "as_of": "2026-01-19",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::емец виктор валентинович",
       "target": "ooo-vostochnye-vorota-zabaykalsk-manchzhuriya",
       "type": "directs",
@@ -27422,37 +26688,7 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::ермолов сергей юрьевич 51%",
-      "target": "ooo-ayaks-tekhnologii",
-      "type": "founded",
-      "label": "former founder (51%)",
-      "source_id": "s6840",
-      "as_of": "2018-05-29",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::жуков андрей викторович 25%",
-      "target": "ooo-eyartek",
-      "type": "founded",
-      "label": "former founder (25%)",
-      "source_id": "s6729",
-      "as_of": "2024-02-12",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::загорский александр сергеевич 100%",
-      "target": "ooo-npo-nebo",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6791",
-      "as_of": "2025-04-21",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::закелов а.а. 50%",
+      "source": "stub::закелов а.а",
       "target": "ooo-arkhangel-tsentr",
       "type": "founded",
       "label": "former founder (50%)",
@@ -27462,17 +26698,7 @@
       "temporal_status": "historical"
     },
     {
-      "source": "stub::закелов александр александрович 50%",
-      "target": "ooo-arkhangel-tsentr",
-      "type": "founded",
-      "label": "former founder (50%)",
-      "source_id": "s6798",
-      "as_of": "2024-11-12",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::закрытое акционерное общество группа компаний титан 100%",
+      "source": "stub::закрытое акционерное общество группа компаний титан",
       "target": "ooo-titan-severo-zapad",
       "type": "founded",
       "label": "former founder (100%)",
@@ -27502,7 +26728,7 @@
       "temporal_status": "historical"
     },
     {
-      "source": "stub::зит.ци 51% / ао ук азимут 25% / кожемякин в.в. 24%",
+      "source": "stub::зит.ци 51% / ао ук азимут 25% / кожемякин в.в",
       "target": "ooo-aerotekhalyans",
       "type": "founded",
       "label": "former founder (51%)",
@@ -27532,26 +26758,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::иванов андрей георгиевич 100%",
-      "target": "ooo-akatsiya-avia",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6835",
-      "as_of": "2017-12-25",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::ивлев артём юрьевич 100%",
-      "target": "yarl",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6767",
-      "as_of": "2025-08-06",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::икар-тех",
       "target": "ooo-diam-aero",
       "type": "founded",
@@ -27572,7 +26778,7 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::инн 502603133030 - 80%",
+      "source": "stub::инн 502603133030 -",
       "target": "ooo-arkhangel-grupp",
       "type": "founded",
       "label": "former founder (80%)",
@@ -27582,7 +26788,7 @@
       "temporal_status": "historical"
     },
     {
-      "source": "stub::инн 712900068586 - 15%",
+      "source": "stub::инн 712900068586 -",
       "target": "ooo-arkhangel-grupp",
       "type": "founded",
       "label": "former founder (15%)",
@@ -27592,7 +26798,7 @@
       "temporal_status": "historical"
     },
     {
-      "source": "stub::инн 771501583221 - 5%",
+      "source": "stub::инн 771501583221 -",
       "target": "ooo-arkhangel-grupp",
       "type": "founded",
       "label": "former founder (5%)",
@@ -27702,16 +26908,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::карамов эльдар рафикович 10%",
-      "target": "ooo-vostochnye-vorota-zabaykalsk-manchzhuriya",
-      "type": "founded",
-      "label": "former founder (10%)",
-      "source_id": "s6732",
-      "as_of": "2024-10-02",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::карцев максим владимирович",
       "target": "ooo-prommash",
       "type": "directs",
@@ -27730,16 +26926,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::карцев максим владимирович 29%",
-      "target": "ooo-prommash",
-      "type": "founded",
-      "label": "former founder (29%)",
-      "source_id": "s6786",
-      "as_of": "2026-02-13",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::климаков сергей васильевич",
@@ -27782,36 +26968,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::коган михаил александрович 25%",
-      "target": "ooo-vizionero",
-      "type": "founded",
-      "label": "former founder (25%)",
-      "source_id": "s6724",
-      "as_of": "2026-06-29",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::кожемякин владимир владимирович 24%",
-      "target": "ooo-aerotekhalyans",
-      "type": "founded",
-      "label": "former founder (24%)",
-      "source_id": "s6762",
-      "as_of": "2025-01-29",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::козлов дмитрий сергеевич 100%",
-      "target": "ooo-goudron",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6768",
-      "as_of": "2023-04-07",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::колосов артем иванович",
       "target": "ooo-as-kam",
       "type": "founded",
@@ -27820,56 +26976,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::колосов артем иванович 20%",
-      "target": "ooo-as-kam",
-      "type": "founded",
-      "label": "former founder (20%)",
-      "source_id": "s6809",
-      "as_of": "2026-02-05",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::константинов евгений александрович 26.25%",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "founded",
-      "label": "former founder (26.25%)",
-      "source_id": "s6716",
-      "as_of": "2026-05-29",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::королев алексей александрович 100%",
-      "target": "ooo-kingpro",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6868",
-      "as_of": "2024-09-10",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::королев дмитрий михайлович 10%",
-      "target": "ooo-kravt-udmurtiya",
-      "type": "founded",
-      "label": "former founder (10%)",
-      "source_id": "s6773",
-      "as_of": "2024-09-09",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::королев дмитрий михайлович 100%",
-      "target": "ooo-kravt",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6748",
-      "as_of": "2019-08-14",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::косолапов олег юрьевич",
@@ -27900,26 +27006,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::костылин дмитрий евгеньевич 34%",
-      "target": "ooo-asel-labs",
-      "type": "founded",
-      "label": "former founder (34%)",
-      "source_id": "s6864",
-      "as_of": "2025-03-17",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::костюнин павел андреевич 75%",
-      "target": "ooo-stratim",
-      "type": "founded",
-      "label": "former founder (75%)",
-      "source_id": "s6802",
-      "as_of": "2024-04-01",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::кронштадт беспилотные системы",
@@ -27982,26 +27068,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::кусумов вахид абдулович 100%",
-      "target": "ooo-arkhangel-melitopol-2",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6850",
-      "as_of": "2025-01-13",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::лапин игорь николаевич 63.2%",
-      "target": "ooo-aviron",
-      "type": "founded",
-      "label": "former founder (63.2%)",
-      "source_id": "s6746",
-      "as_of": "2026-06-30",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::лебедев сергей александрович",
       "target": "ooo-4gnss",
       "type": "directs",
@@ -28030,26 +27096,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::лебедев сергей александрович 50%",
-      "target": "ooo-orient-sistems",
-      "type": "founded",
-      "label": "former founder (50%)",
-      "source_id": "s6832",
-      "as_of": "2015-10-15",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::лобов вадим георгиевич 100%",
-      "target": "ao-korporatsiya-sinergiya",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6831",
-      "as_of": "2023-03-30",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::мазалова виктория вячеславовна",
@@ -28142,36 +27188,6 @@
       "temporal_status": "current"
     },
     {
-      "source": "stub::михельсон виктория леонидовна 0.098%",
-      "target": "ooo-ges-2",
-      "type": "founded",
-      "label": "former founder (0.098%)",
-      "source_id": "s6822",
-      "as_of": "2023-01-20",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::михельсон леонид викторович 100%",
-      "target": "ooo-nova",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6810",
-      "as_of": "2019-10-14",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::михельсон леонид викторович 78.2902%",
-      "target": "ooo-levit",
-      "type": "founded",
-      "label": "former founder (78.2902%)",
-      "source_id": "s6697",
-      "as_of": "2016-07-21",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::московский инновационный кластер",
       "target": "ooo-tsugam",
       "type": "founded",
@@ -28180,16 +27196,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::московский инновационный кластер 100%",
-      "target": "ooo-tsugam",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6870",
-      "as_of": "2023-10-10",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::мту сатурн (управляющая организация, инн 7718047248, огрн 1027739168478)",
@@ -28232,26 +27238,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::нахтигаль никита витальевич 100%",
-      "target": "ooo-rokot-tekh",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6816",
-      "as_of": "2024-11-27",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::наша правда 90.91%",
-      "target": "ooo-investments",
-      "type": "founded",
-      "label": "former founder (90.91%)",
-      "source_id": "s0223",
-      "as_of": "2026-01-20",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::не раскрыты в егрюл",
       "target": "ao-nii-vektor",
       "type": "founded",
@@ -28282,16 +27268,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::нефедьев андрей матвеевич 100%",
-      "target": "ao-pmts-avangard",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6839",
-      "as_of": "2021-08-12",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::николаев александр юрьевич",
       "target": "ooo-krams",
       "type": "directs",
@@ -28320,16 +27296,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::николаев александр юрьевич 100%",
-      "target": "ooo-krams",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6855",
-      "as_of": "2023-04-18",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::он же генеральный директор; казнова татьяна андреевна",
@@ -28370,16 +27336,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::паутов андрей павлович 25%",
-      "target": "ooo-eliars",
-      "type": "founded",
-      "label": "former founder (25%)",
-      "source_id": "s6827",
-      "as_of": "2017-06-23",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::перфильев николай александрович",
@@ -28442,76 +27398,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::петрова ольга сергеевна 51%",
-      "target": "npp-elvo-kolskaya-verf",
-      "type": "founded",
-      "label": "former founder (51%)",
-      "source_id": "s6750",
-      "as_of": "2021-06-25",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::плыкина екатерина викторовна 50%",
-      "target": "ooo-npo-eyler",
-      "type": "founded",
-      "label": "former founder (50%)",
-      "source_id": "s6814",
-      "as_of": "2025-10-28",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::поддержки зимних олимпийских видов спорта 100%",
-      "target": "ooo-finkonsaltingk-fkk",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6702",
-      "as_of": "2026-03-16",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::порсев андрей валерьевич 15%",
-      "target": "ooo-otkrytoe-nebo-kaluga",
-      "type": "founded",
-      "label": "former founder (15%)",
-      "source_id": "s7355",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::поспехов иван александрович 100%",
-      "target": "ooo-tsyus",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6709",
-      "as_of": "2023-02-13",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::поспехов иван александрович 50%",
-      "target": "ooo-metaskan",
-      "type": "founded",
-      "label": "former founder (50%)",
-      "source_id": "s6712",
-      "as_of": "2025-07-09",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::потапов игорь владимирович 100%",
-      "target": "ao-npp-bat",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6766",
-      "as_of": "2023-11-10",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::потехин владимир александрович",
       "target": "ooo-boevye-tekhnologii",
       "type": "directs",
@@ -28542,26 +27428,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::потехин владимир александрович 100%",
-      "target": "ooo-boevye-tekhnologii",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6721",
-      "as_of": "2026-08-25",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::радченко михаил юрьевич 100%",
-      "target": "ooo-mentastep",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6765",
-      "as_of": "2024-03-21",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::развития промышленности тульской области",
       "target": "ooo-tsentr-bespilotnykh-sistem-tula",
       "type": "founded",
@@ -28580,16 +27446,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::региональных некоммерческих проектов дар 100%",
-      "target": "ooo-orion",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6701",
-      "as_of": "2009-12-22",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::региональных некоммерческих проектов дар и некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
@@ -28702,16 +27558,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::руденко дмитрий александрович 50%",
-      "target": "ooo-spetsmat-spetsialnye-materialy",
-      "type": "founded",
-      "label": "former founder (50%)",
-      "source_id": "s6834",
-      "as_of": "2024-11-22",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::рябико ольга александровна",
       "target": "ao-fabrika-im-sovetskoy-armii",
       "type": "directs",
@@ -28742,16 +27588,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::с ограниченной ответственностью аэромакс 100%",
-      "target": "ao-aeromaks",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6733",
-      "as_of": "2022-08-04",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::с ограниченной ответственностью аякс",
       "target": "ooo-ayaks-tekhnologii",
       "type": "founded",
@@ -28762,7 +27598,7 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::с ограниченной ответственностью беспилотные технологические решения 100%",
+      "source": "stub::с ограниченной ответственностью беспилотные технологические решения",
       "target": "ooo-btr-donetsk",
       "type": "founded",
       "label": "former founder (100%)",
@@ -28792,7 +27628,7 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::с ограниченной ответственностью информационные технологии 50%",
+      "source": "stub::с ограниченной ответственностью информационные технологии",
       "target": "ooo-intek-bespilotnye-sistemy",
       "type": "founded",
       "label": "former founder (50%)",
@@ -28802,7 +27638,7 @@
       "temporal_status": "historical"
     },
     {
-      "source": "stub::с ограниченной ответственностью кравт 100%",
+      "source": "stub::с ограниченной ответственностью кравт",
       "target": "ooo-spdbbk",
       "type": "founded",
       "label": "former founder (100%)",
@@ -28832,7 +27668,7 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::с ограниченной ответственностью ориент системс 100%",
+      "source": "stub::с ограниченной ответственностью ориент системс",
       "target": "ooo-4gnss",
       "type": "founded",
       "label": "former founder (100%)",
@@ -28852,7 +27688,7 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::с ограниченной ответственностью сибирская навигационная компания 100%",
+      "source": "stub::с ограниченной ответственностью сибирская навигационная компания",
       "target": "ooo-gaskar",
       "type": "founded",
       "label": "former founder (100%)",
@@ -28862,7 +27698,7 @@
       "temporal_status": "historical"
     },
     {
-      "source": "stub::с ограниченной ответственностью стартап- студия университета лобачевского 100%",
+      "source": "stub::с ограниченной ответственностью стартап- студия университета лобачевского",
       "target": "ooo-pekhtra",
       "type": "founded",
       "label": "former founder (100%)",
@@ -28873,6 +27709,16 @@
     },
     {
       "source": "stub::с ограниченной ответственностью управляющая компания комакс",
+      "target": "ooo-aero-khit",
+      "type": "founded",
+      "label": "former founder (100%)",
+      "source_id": "s6714",
+      "as_of": "2023-06-09",
+      "weight": 1.0,
+      "temporal_status": "historical"
+    },
+    {
+      "source": "stub::с ограниченной ответственностью управляющая компания комакс",
       "target": "ooo-aero-khit-m",
       "type": "founded",
       "label": null,
@@ -28890,36 +27736,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::с ограниченной ответственностью управляющая компания комакс 100%",
-      "target": "ooo-aero-khit",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6714",
-      "as_of": "2023-06-09",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::с ограниченной ответственностью управляющая компания комакс 100%",
-      "target": "ooo-aero-khit-m",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6865",
-      "as_of": "2026-02-27",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::с ограниченной ответственностью управляющая компания комакс 100%",
-      "target": "ooo-aero-khit-servis",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6858",
-      "as_of": "2023-09-14",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::с ограниченной ответственностью управляющая компания фонда дар",
@@ -28940,16 +27756,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::с ограниченной ответственностью финансово- консультационная компания фонда дар выписка из егрюл 07.09.2026 11:36 огрн 5087746197622 страница 2 из 13 99%",
-      "target": "ooo-garant-klub",
-      "type": "founded",
-      "label": "former founder (99%)",
-      "source_id": "s6704",
-      "as_of": "2012-05-05",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::с ограниченной ответственностью финконсалтингк",
@@ -29012,16 +27818,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::семенов игорь георгиевич 100%",
-      "target": "ao-npp-real",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6866",
-      "as_of": "2023-06-14",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::сиразетдинов никита вадимович / климов максим александрович / общество с ограниченной ответственностью гагаринг / общество с ограниченной ответственностью авиационно-космические разработки бегак / общество с ограниченной ответственностью прайм",
       "target": "ano-arrs-krasnodar",
       "type": "founded",
@@ -29062,26 +27858,6 @@
       "temporal_status": "current"
     },
     {
-      "source": "stub::соколов герман олегович 100%",
-      "target": "ooo-rtd-zashchita",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6792",
-      "as_of": "2026-02-13",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::соколов никита дмитриевич 69%",
-      "target": "ooo-dsg",
-      "type": "founded",
-      "label": "former founder (69%)",
-      "source_id": "s6770",
-      "as_of": "2023-12-05",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::соколова ольга михайловна",
       "target": "ooo-tsugam",
       "type": "directs",
@@ -29102,16 +27878,6 @@
       "temporal_status": "current"
     },
     {
-      "source": "stub::соловьев константин юрьевич 50%",
-      "target": "ooo-arkodim",
-      "type": "founded",
-      "label": "former founder (50%)",
-      "source_id": "s6711",
-      "as_of": "2022-05-20",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::сотов артём александрович",
       "target": "va-technologies",
       "type": "directs",
@@ -29130,16 +27896,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::сотов артём александрович 100%",
-      "target": "va-technologies",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6713",
-      "as_of": "2025-11-25",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::стартап-студия университета лобачевского",
@@ -29172,16 +27928,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::степаева мария ивановна 100%",
-      "target": "ooo-praym",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6828",
-      "as_of": "2025-09-11",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::струлев игорь леонидович",
       "target": "ooo-superkhrono",
       "type": "directs",
@@ -29212,16 +27958,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::струлев игорь леонидович 50%",
-      "target": "ooo-superkhrono",
-      "type": "founded",
-      "label": "former founder (50%)",
-      "source_id": "s6715",
-      "as_of": "2025-06-16",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::съедин михаил васильевич",
       "target": "ooo-eliars",
       "type": "founded",
@@ -29230,16 +27966,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::тимофеев владимир сергеевич 50%",
-      "target": "ooo-arkhangel-crimea",
-      "type": "founded",
-      "label": "former founder (50%)",
-      "source_id": "s6851",
-      "as_of": "2025-04-14",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::тимофеев даниил андреевич",
@@ -29262,16 +27988,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::тимофеев даниил андреевич 100%",
-      "target": "ooo-dronomir",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6785",
-      "as_of": "2026-06-05",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::тращёнок людмила ефимовна",
       "target": "gk-logos",
       "type": "directs",
@@ -29290,16 +28006,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::тютина ольга анатольевна 100%",
-      "target": "ooo-tsentr-dinarus",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6794",
-      "as_of": "2024-12-02",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::управляющая компания азимут",
@@ -29332,16 +28038,6 @@
       "temporal_status": "current"
     },
     {
-      "source": "stub::усачёв павел александрович 100%",
-      "target": "ooo-konstruktorskoe-byuro-sinergiya",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6755",
-      "as_of": "2025-04-10",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::фадеев игорь анатольевич",
       "target": "ao-pmts-avangard",
       "type": "directs",
@@ -29372,16 +28068,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::федукович кирилл олегович 20%",
-      "target": "ooo-kopterlab",
-      "type": "founded",
-      "label": "former founder (20%)",
-      "source_id": "s6739",
-      "as_of": "2024-02-29",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::филиппов вадим владимирович",
       "target": "ooo-status-53",
       "type": "founded",
@@ -29390,36 +28076,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::филиппов вадим владимирович 100%",
-      "target": "ooo-status-53",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6804",
-      "as_of": "2022-10-27",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::филиппов михаил геннадьевич 100%",
-      "target": "ooo-ml-konstrakshns",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6795",
-      "as_of": "2011-11-18",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::фоминых алексей михайлович 100%",
-      "target": "ooo-opkb-eksplomet",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6710",
-      "as_of": "2023-07-25",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::фрадков пётр михайлович",
@@ -29462,26 +28118,6 @@
       "temporal_status": "historical"
     },
     {
-      "source": "stub::христюк владимир владимирович 100%",
-      "target": "ooo-geron",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6838",
-      "as_of": "2021-05-06",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::христюк владимир владимирович 100%",
-      "target": "ooo-skay-avia-grupp",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6837",
-      "as_of": "2023-09-28",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::цбст",
       "target": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
       "type": "founded",
@@ -29512,16 +28148,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::цыганов вадим борисович 100%",
-      "target": "ooo-pokrov",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6799",
-      "as_of": "2026-02-24",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::чемезов сергей викторович",
       "target": "gk-rostekh",
       "type": "directs",
@@ -29542,26 +28168,6 @@
       "temporal_status": "current"
     },
     {
-      "source": "stub::черезов андрей павлович 100%",
-      "target": "ooo-vozdushnyy-traktat",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6728",
-      "as_of": "2023-11-28",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::черезов андрей павлович 100%",
-      "target": "ovod",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6727",
-      "as_of": "2024-05-08",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::черленок игорь эдуардович",
       "target": "kulibin-klub",
       "type": "founded",
@@ -29570,16 +28176,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown"
-    },
-    {
-      "source": "stub::чернышов павел алексеевич 40%",
-      "target": "ooo-skb-piranya",
-      "type": "founded",
-      "label": "former founder (40%)",
-      "source_id": "s6730",
-      "as_of": "2023-09-19",
-      "weight": 1.0,
-      "temporal_status": "historical"
     },
     {
       "source": "stub::чижов максим сергеевич",
@@ -29612,16 +28208,6 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::чумаков павел андреевич 100%",
-      "target": "ooo-instekh",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6849",
-      "as_of": "2025-07-30",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
       "source": "stub::шаповалов сергей михайлович",
       "target": "kolskaya-verf",
       "type": "directs",
@@ -29652,52 +28238,12 @@
       "temporal_status": "unknown"
     },
     {
-      "source": "stub::шаповалов сергей михайлович 100%",
-      "target": "kolskaya-verf",
-      "type": "founded",
-      "label": "former founder (100%)",
-      "source_id": "s6801",
-      "as_of": "2026-03-18",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::шатракова а.а. 50%",
+      "source": "stub::шатракова а.а",
       "target": "ooo-arkhangel",
       "type": "founded",
       "label": "former founder (50%)",
       "source_id": "s5507",
       "as_of": "2026-06-23",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::швецов алексей александрович 0.5%",
-      "target": "ooo-vingrad",
-      "type": "founded",
-      "label": "former founder (0.5%)",
-      "source_id": "s6854",
-      "as_of": "2024-11-26",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::швецов алексей александрович 1%",
-      "target": "ooo-orzhitskie-artezianskie-vody",
-      "type": "founded",
-      "label": "former founder (1%)",
-      "source_id": "s6860",
-      "as_of": "2025-01-29",
-      "weight": 1.0,
-      "temporal_status": "historical"
-    },
-    {
-      "source": "stub::шевченко константин игоревич 8%",
-      "target": "ooo-atlant-aero",
-      "type": "founded",
-      "label": "former founder (8%)",
-      "source_id": "s6725",
-      "as_of": "2026-08-10",
       "weight": 1.0,
       "temporal_status": "historical"
     },
@@ -29935,7 +28481,7 @@
       "source": "timofeev-vladimir-sergeevich",
       "target": "ooo-arkhangel-crimea",
       "type": "founded",
-      "label": null,
+      "label": "50%",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -30293,6 +28839,16 @@
     },
     {
       "source": "vladimirskiy-mikhail-yurevich",
+      "target": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
+      "type": "founded",
+      "label": "former founder (50%)",
+      "source_id": "s6844",
+      "as_of": "2024-06-14",
+      "weight": 1.0,
+      "temporal_status": "historical"
+    },
+    {
+      "source": "vladimirskiy-mikhail-yurevich",
       "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
       "type": "role",
       "label": "Соучредитель (50%)",
@@ -30615,7 +29171,7 @@
       "source": "zakelov-aleksandr-aleksandrovich",
       "target": "ooo-arkhangel-tsentr",
       "type": "founded",
-      "label": null,
+      "label": "50%",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -30863,13 +29419,6 @@
       ]
     },
     {
-      "id": "stub::100%",
-      "raw_name": "100%",
-      "contexts": [
-        "former founder of ao-rti-radio"
-      ]
-    },
-    {
       "id": "stub::100% незнамов александр васильевич",
       "raw_name": "100% Незнамов Александр Васильевич",
       "contexts": [
@@ -30907,13 +29456,6 @@
     {
       "id": "stub::24%; ооо инвестпроектгрупп",
       "raw_name": "24%; ООО «Инвестпроектгрупп»",
-      "contexts": [
-        "former founder of ooo-tskbr"
-      ]
-    },
-    {
-      "id": "stub::25%",
-      "raw_name": "25%",
       "contexts": [
         "former founder of ooo-tskbr"
       ]
@@ -31062,13 +29604,6 @@
       ]
     },
     {
-      "id": "stub::аккерман екатерина валерьевна 0.02%",
-      "raw_name": "Аккерман Екатерина Валерьевна 0.02%",
-      "contexts": [
-        "former founder of ooo-stroystandart"
-      ]
-    },
-    {
       "id": "stub::акр бегак",
       "raw_name": "ООО «АКР «Бегак»»",
       "contexts": [
@@ -31076,8 +29611,8 @@
       ]
     },
     {
-      "id": "stub::акционерное общество вежливый концерн 100%",
-      "raw_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВЕЖЛИВЫЙ КОНЦЕРН\" 100%",
+      "id": "stub::акционерное общество вежливый концерн",
+      "raw_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВЕЖЛИВЫЙ КОНЦЕРН\"",
       "contexts": [
         "former founder of ooo-spetsialnye-poleznye-tekhnologii"
       ]
@@ -31097,13 +29632,6 @@
       ]
     },
     {
-      "id": "stub::акционерное общество икар- тех 95%",
-      "raw_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ИКАР- ТЕХ\" 95%",
-      "contexts": [
-        "former founder of ooo-diam-aero"
-      ]
-    },
-    {
       "id": "stub::акционерное общество инновационный технологический центр система-саров",
       "raw_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ИННОВАЦИОННЫЙ ТЕХНОЛОГИЧЕСКИЙ ЦЕНТР \"СИСТЕМА-САРОВ\"",
       "contexts": [
@@ -31111,8 +29639,8 @@
       ]
     },
     {
-      "id": "stub::акционерное общество ук смарт 100%",
-      "raw_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УК СМАРТ\" 100%",
+      "id": "stub::акционерное общество ук смарт",
+      "raw_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УК СМАРТ\"",
       "contexts": [
         "former founder of ooo-smart-teknolodzhis"
       ]
@@ -31132,15 +29660,8 @@
       ]
     },
     {
-      "id": "stub::акционерное общество управляющая компания мой капитал 100%",
-      "raw_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УПРАВЛЯЮЩАЯ КОМПАНИЯ \"МОЙ КАПИТАЛ\" 100%",
-      "contexts": [
-        "former founder of ao-tsentr-telko"
-      ]
-    },
-    {
-      "id": "stub::акционерное общество эколибри 100%",
-      "raw_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЭКОЛИБРИ\" 100%",
+      "id": "stub::акционерное общество эколибри",
+      "raw_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЭКОЛИБРИ\"",
       "contexts": [
         "former founder of ooo-ekolibri-bt"
       ]
@@ -31150,13 +29671,6 @@
       "raw_name": "Александр Паничев (b. 1995)",
       "contexts": [
         "director of kulibin-klub"
-      ]
-    },
-    {
-      "id": "stub::александров алексей витальевич 49.5%",
-      "raw_name": "Александров Алексей Витальевич 49.5%",
-      "contexts": [
-        "former founder of ooo-gagaring"
       ]
     },
     {
@@ -31177,32 +29691,10 @@
       ]
     },
     {
-      "id": "stub::афанасьев игорь константинович 20%",
-      "raw_name": "Афанасьев Игорь Константинович 20%",
-      "contexts": [
-        "former founder of ooo-gaskar-integratsiya",
-        "former founder of ooo-gaskar-tekhnologii"
-      ]
-    },
-    {
-      "id": "stub::байгутлина ирина анатольевна 100%",
-      "raw_name": "Байгутлина Ирина Анатольевна 100%",
-      "contexts": [
-        "former founder of ooo-npts-basirtk"
-      ]
-    },
-    {
       "id": "stub::бауер пётр роландович",
       "raw_name": "Бауер Пётр Роландович",
       "contexts": [
         "director of ooo-gaskar-integratsiya"
-      ]
-    },
-    {
-      "id": "stub::бегак александр аркадьевич 94%",
-      "raw_name": "Бегак Александр Аркадьевич 94%",
-      "contexts": [
-        "former founder of ooo-akr-begak"
       ]
     },
     {
@@ -31239,20 +29731,6 @@
       "contexts": [
         "founder of ooo-tsentr-bespilotnykh-sistem-tula",
         "director of ooo-tsentr-bespilotnykh-sistem-tula"
-      ]
-    },
-    {
-      "id": "stub::борисов александр сергеевич 100%",
-      "raw_name": "Борисов Александр Сергеевич 100%",
-      "contexts": [
-        "former founder of ooo-tsentr-bespilotnykh-sistem-tula"
-      ]
-    },
-    {
-      "id": "stub::борисов александр сергеевич 20%",
-      "raw_name": "Борисов Александр Сергеевич 20%",
-      "contexts": [
-        "former founder of ooo-tsentr-bespilotnykh-sistem-tula"
       ]
     },
     {
@@ -31306,34 +29784,6 @@
       ]
     },
     {
-      "id": "stub::владимирский михаил юрьевич 50%",
-      "raw_name": "Владимирский Михаил Юрьевич 50%",
-      "contexts": [
-        "former founder of ooo-btr-bespilotnye-tekhnologicheskie-resheniya"
-      ]
-    },
-    {
-      "id": "stub::власов артём аркадьевич 51%",
-      "raw_name": "Власов Артём Аркадьевич 51%",
-      "contexts": [
-        "former founder of ooo-aeroplatformy"
-      ]
-    },
-    {
-      "id": "stub::волков михаил вадимович 1%",
-      "raw_name": "Волков Михаил Вадимович 1%",
-      "contexts": [
-        "former founder of ooo-zavolzhskoe"
-      ]
-    },
-    {
-      "id": "stub::воронин александр андреевич 30%",
-      "raw_name": "Воронин Александр Андреевич 30%",
-      "contexts": [
-        "former founder of ooo-intel-dron"
-      ]
-    },
-    {
       "id": "stub::гаврилов алексей георгиевич",
       "raw_name": "Гаврилов Алексей Георгиевич",
       "contexts": [
@@ -31359,14 +29809,6 @@
       "raw_name": "Галкин Вадим Сергеевич",
       "contexts": [
         "director of ao-nii-stt"
-      ]
-    },
-    {
-      "id": "stub::гарькуша владимир владимирович 100%",
-      "raw_name": "Гарькуша Владимир Владимирович 100%",
-      "contexts": [
-        "former founder of ooo-promsintez",
-        "former founder of ooo-gk-logos"
       ]
     },
     {
@@ -31498,13 +29940,6 @@
       ]
     },
     {
-      "id": "stub::григорьев григорий валерьевич 50%",
-      "raw_name": "Григорьев Григорий Валерьевич 50%",
-      "contexts": [
-        "former founder of ooo-zetaks"
-      ]
-    },
-    {
       "id": "stub::григорьев дмитрий евгеньевич",
       "raw_name": "Григорьев Дмитрий Евгеньевич",
       "contexts": [
@@ -31521,13 +29956,6 @@
       ]
     },
     {
-      "id": "stub::гусев сергей владимирович 100%",
-      "raw_name": "Гусев Сергей Владимирович 100%",
-      "contexts": [
-        "former founder of ooo-kleverkopter"
-      ]
-    },
-    {
       "id": "stub::давыдов виктор ильич",
       "raw_name": "Давыдов Виктор Ильич",
       "contexts": [
@@ -31539,13 +29967,6 @@
       "raw_name": "Фонд «ДАР»",
       "contexts": [
         "founder of fond-nasha-pravda"
-      ]
-    },
-    {
-      "id": "stub::дзема вадим вадимович 100%",
-      "raw_name": "Дзема Вадим Вадимович 100%",
-      "contexts": [
-        "former founder of ooo-dron-reysing"
       ]
     },
     {
@@ -31607,13 +30028,6 @@
       ]
     },
     {
-      "id": "stub::елисеев дмитрий николаевич 50%",
-      "raw_name": "Елисеев Дмитрий Николаевич 50%",
-      "contexts": [
-        "former founder of ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy"
-      ]
-    },
-    {
       "id": "stub::емец виктор валентинович",
       "raw_name": "Емец Виктор Валентинович",
       "contexts": [
@@ -31636,43 +30050,15 @@
       ]
     },
     {
-      "id": "stub::ермолов сергей юрьевич 51%",
-      "raw_name": "Ермолов Сергей Юрьевич 51%",
-      "contexts": [
-        "former founder of ooo-ayaks-tekhnologii"
-      ]
-    },
-    {
-      "id": "stub::жуков андрей викторович 25%",
-      "raw_name": "Жуков Андрей Викторович 25%",
-      "contexts": [
-        "former founder of ooo-eyartek"
-      ]
-    },
-    {
-      "id": "stub::загорский александр сергеевич 100%",
-      "raw_name": "Загорский Александр Сергеевич 100%",
-      "contexts": [
-        "former founder of ooo-npo-nebo"
-      ]
-    },
-    {
-      "id": "stub::закелов а.а. 50%",
-      "raw_name": "Закелов А.А. 50%",
+      "id": "stub::закелов а.а",
+      "raw_name": "Закелов А.А",
       "contexts": [
         "former founder of ooo-arkhangel-tsentr"
       ]
     },
     {
-      "id": "stub::закелов александр александрович 50%",
-      "raw_name": "Закелов Александр Александрович 50%",
-      "contexts": [
-        "former founder of ooo-arkhangel-tsentr"
-      ]
-    },
-    {
-      "id": "stub::закрытое акционерное общество группа компаний титан 100%",
-      "raw_name": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГРУППА КОМПАНИЙ \"ТИТАН\" 100%",
+      "id": "stub::закрытое акционерное общество группа компаний титан",
+      "raw_name": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГРУППА КОМПАНИЙ \"ТИТАН\"",
       "contexts": [
         "former founder of ooo-titan-severo-zapad"
       ]
@@ -31692,8 +30078,8 @@
       ]
     },
     {
-      "id": "stub::зит.ци 51% / ао ук азимут 25% / кожемякин в.в. 24%",
-      "raw_name": "ЗИТ.ЦИ 51% / АО «УК «Азимут»» 25% / Кожемякин В.В. 24%",
+      "id": "stub::зит.ци 51% / ао ук азимут 25% / кожемякин в.в",
+      "raw_name": "ЗИТ.ЦИ 51% / АО «УК «Азимут»» 25% / Кожемякин В.В",
       "contexts": [
         "former founder of ooo-aerotekhalyans"
       ]
@@ -31704,20 +30090,6 @@
       "contexts": [
         "founder of ooo-akatsiya-avia",
         "director of ooo-akatsiya-avia"
-      ]
-    },
-    {
-      "id": "stub::иванов андрей георгиевич 100%",
-      "raw_name": "Иванов Андрей Георгиевич 100%",
-      "contexts": [
-        "former founder of ooo-akatsiya-avia"
-      ]
-    },
-    {
-      "id": "stub::ивлев артём юрьевич 100%",
-      "raw_name": "Ивлев Артём Юрьевич 100%",
-      "contexts": [
-        "former founder of yarl"
       ]
     },
     {
@@ -31735,22 +30107,22 @@
       ]
     },
     {
-      "id": "stub::инн 502603133030 - 80%",
-      "raw_name": "ИНН 502603133030 - 80%",
+      "id": "stub::инн 502603133030 -",
+      "raw_name": "ИНН 502603133030 -",
       "contexts": [
         "former founder of ooo-arkhangel-grupp"
       ]
     },
     {
-      "id": "stub::инн 712900068586 - 15%",
-      "raw_name": "ИНН 712900068586 - 15%",
+      "id": "stub::инн 712900068586 -",
+      "raw_name": "ИНН 712900068586 -",
       "contexts": [
         "former founder of ooo-arkhangel-grupp"
       ]
     },
     {
-      "id": "stub::инн 771501583221 - 5%",
-      "raw_name": "ИНН 771501583221 - 5%",
+      "id": "stub::инн 771501583221 -",
+      "raw_name": "ИНН 771501583221 -",
       "contexts": [
         "former founder of ooo-arkhangel-grupp"
       ]
@@ -31813,25 +30185,11 @@
       ]
     },
     {
-      "id": "stub::карамов эльдар рафикович 10%",
-      "raw_name": "Карамов Эльдар Рафикович 10%",
-      "contexts": [
-        "former founder of ooo-vostochnye-vorota-zabaykalsk-manchzhuriya"
-      ]
-    },
-    {
       "id": "stub::карцев максим владимирович",
       "raw_name": "Карцев Максим Владимирович",
       "contexts": [
         "founder of ooo-prommash",
         "director of ooo-prommash"
-      ]
-    },
-    {
-      "id": "stub::карцев максим владимирович 29%",
-      "raw_name": "Карцев Максим Владимирович 29%",
-      "contexts": [
-        "former founder of ooo-prommash"
       ]
     },
     {
@@ -31851,66 +30209,10 @@
       ]
     },
     {
-      "id": "stub::коган михаил александрович 25%",
-      "raw_name": "Коган Михаил Александрович 25%",
-      "contexts": [
-        "former founder of ooo-vizionero"
-      ]
-    },
-    {
-      "id": "stub::кожемякин владимир владимирович 24%",
-      "raw_name": "Кожемякин Владимир Владимирович 24%",
-      "contexts": [
-        "former founder of ooo-aerotekhalyans"
-      ]
-    },
-    {
-      "id": "stub::козлов дмитрий сергеевич 100%",
-      "raw_name": "Козлов Дмитрий Сергеевич 100%",
-      "contexts": [
-        "former founder of ooo-goudron"
-      ]
-    },
-    {
       "id": "stub::колосов артем иванович",
       "raw_name": "Колосов Артем Иванович",
       "contexts": [
         "founder of ooo-as-kam"
-      ]
-    },
-    {
-      "id": "stub::колосов артем иванович 20%",
-      "raw_name": "Колосов Артем Иванович 20%",
-      "contexts": [
-        "former founder of ooo-as-kam"
-      ]
-    },
-    {
-      "id": "stub::константинов евгений александрович 26.25%",
-      "raw_name": "Константинов Евгений Александрович 26.25%",
-      "contexts": [
-        "former founder of ooo-sibirskaya-navigatsionnaya-kompaniya"
-      ]
-    },
-    {
-      "id": "stub::королев алексей александрович 100%",
-      "raw_name": "Королев Алексей Александрович 100%",
-      "contexts": [
-        "former founder of ooo-kingpro"
-      ]
-    },
-    {
-      "id": "stub::королев дмитрий михайлович 10%",
-      "raw_name": "Королев Дмитрий Михайлович 10%",
-      "contexts": [
-        "former founder of ooo-kravt-udmurtiya"
-      ]
-    },
-    {
-      "id": "stub::королев дмитрий михайлович 100%",
-      "raw_name": "Королев Дмитрий Михайлович 100%",
-      "contexts": [
-        "former founder of ooo-kravt"
       ]
     },
     {
@@ -31926,20 +30228,6 @@
       "contexts": [
         "founder of ooo-asel-labs",
         "director of ooo-asel-labs"
-      ]
-    },
-    {
-      "id": "stub::костылин дмитрий евгеньевич 34%",
-      "raw_name": "Костылин Дмитрий Евгеньевич 34%",
-      "contexts": [
-        "former founder of ooo-asel-labs"
-      ]
-    },
-    {
-      "id": "stub::костюнин павел андреевич 75%",
-      "raw_name": "Костюнин Павел Андреевич 75%",
-      "contexts": [
-        "former founder of ooo-stratim"
       ]
     },
     {
@@ -31979,40 +30267,12 @@
       ]
     },
     {
-      "id": "stub::кусумов вахид абдулович 100%",
-      "raw_name": "Кусумов Вахид Абдулович 100%",
-      "contexts": [
-        "former founder of ooo-arkhangel-melitopol-2"
-      ]
-    },
-    {
-      "id": "stub::лапин игорь николаевич 63.2%",
-      "raw_name": "Лапин Игорь Николаевич 63.2%",
-      "contexts": [
-        "former founder of ooo-aviron"
-      ]
-    },
-    {
       "id": "stub::лебедев сергей александрович",
       "raw_name": "Лебедев Сергей Александрович",
       "contexts": [
         "founder of ooo-orient-sistems",
         "director of ooo-orient-sistems",
         "director of ooo-4gnss"
-      ]
-    },
-    {
-      "id": "stub::лебедев сергей александрович 50%",
-      "raw_name": "Лебедев Сергей Александрович 50%",
-      "contexts": [
-        "former founder of ooo-orient-sistems"
-      ]
-    },
-    {
-      "id": "stub::лобов вадим георгиевич 100%",
-      "raw_name": "Лобов Вадим Георгиевич 100%",
-      "contexts": [
-        "former founder of ao-korporatsiya-sinergiya"
       ]
     },
     {
@@ -32072,38 +30332,10 @@
       ]
     },
     {
-      "id": "stub::михельсон виктория леонидовна 0.098%",
-      "raw_name": "Михельсон Виктория Леонидовна 0.098%",
-      "contexts": [
-        "former founder of ooo-ges-2"
-      ]
-    },
-    {
-      "id": "stub::михельсон леонид викторович 100%",
-      "raw_name": "Михельсон Леонид Викторович 100%",
-      "contexts": [
-        "former founder of ooo-nova"
-      ]
-    },
-    {
-      "id": "stub::михельсон леонид викторович 78.2902%",
-      "raw_name": "Михельсон Леонид Викторович 78.2902%",
-      "contexts": [
-        "former founder of ooo-levit"
-      ]
-    },
-    {
       "id": "stub::московский инновационный кластер",
       "raw_name": "Фонд «Московский инновационный кластер»",
       "contexts": [
         "founder of ooo-tsugam"
-      ]
-    },
-    {
-      "id": "stub::московский инновационный кластер 100%",
-      "raw_name": "ФОНД \"МОСКОВСКИЙ ИННОВАЦИОННЫЙ КЛАСТЕР\" 100%",
-      "contexts": [
-        "former founder of ooo-tsugam"
       ]
     },
     {
@@ -32129,20 +30361,6 @@
       ]
     },
     {
-      "id": "stub::нахтигаль никита витальевич 100%",
-      "raw_name": "Нахтигаль Никита Витальевич 100%",
-      "contexts": [
-        "former founder of ooo-rokot-tekh"
-      ]
-    },
-    {
-      "id": "stub::наша правда 90.91%",
-      "raw_name": "Фонд «Наша Правда» 90.91%",
-      "contexts": [
-        "former founder of ooo-investments"
-      ]
-    },
-    {
       "id": "stub::не раскрыты в егрюл",
       "raw_name": "Не раскрыты в ЕГРЮЛ",
       "contexts": [
@@ -32164,25 +30382,11 @@
       ]
     },
     {
-      "id": "stub::нефедьев андрей матвеевич 100%",
-      "raw_name": "Нефедьев Андрей Матвеевич 100%",
-      "contexts": [
-        "former founder of ao-pmts-avangard"
-      ]
-    },
-    {
       "id": "stub::николаев александр юрьевич",
       "raw_name": "Николаев Александр Юрьевич",
       "contexts": [
         "founder of ooo-krams",
         "director of ooo-krams"
-      ]
-    },
-    {
-      "id": "stub::николаев александр юрьевич 100%",
-      "raw_name": "Николаев Александр Юрьевич 100%",
-      "contexts": [
-        "former founder of ooo-krams"
       ]
     },
     {
@@ -32211,13 +30415,6 @@
       "raw_name": "Паутов Андрей Павлович",
       "contexts": [
         "founder of ooo-eliars"
-      ]
-    },
-    {
-      "id": "stub::паутов андрей павлович 25%",
-      "raw_name": "Паутов Андрей Павлович 25%",
-      "contexts": [
-        "former founder of ooo-eliars"
       ]
     },
     {
@@ -32257,74 +30454,11 @@
       ]
     },
     {
-      "id": "stub::петрова ольга сергеевна 51%",
-      "raw_name": "Петрова Ольга Сергеевна 51%",
-      "contexts": [
-        "former founder of npp-elvo-kolskaya-verf"
-      ]
-    },
-    {
-      "id": "stub::плыкина екатерина викторовна 50%",
-      "raw_name": "Плыкина Екатерина Викторовна 50%",
-      "contexts": [
-        "former founder of ooo-npo-eyler"
-      ]
-    },
-    {
-      "id": "stub::поддержки зимних олимпийских видов спорта 100%",
-      "raw_name": "ФОНД ПОДДЕРЖКИ ЗИМНИХ ОЛИМПИЙСКИХ ВИДОВ СПОРТА 100%",
-      "contexts": [
-        "former founder of ooo-finkonsaltingk-fkk"
-      ]
-    },
-    {
-      "id": "stub::порсев андрей валерьевич 15%",
-      "raw_name": "Порсев Андрей Валерьевич 15%",
-      "contexts": [
-        "former founder of ooo-otkrytoe-nebo-kaluga"
-      ]
-    },
-    {
-      "id": "stub::поспехов иван александрович 100%",
-      "raw_name": "Поспехов Иван Александрович 100%",
-      "contexts": [
-        "former founder of ooo-tsyus"
-      ]
-    },
-    {
-      "id": "stub::поспехов иван александрович 50%",
-      "raw_name": "Поспехов Иван Александрович 50%",
-      "contexts": [
-        "former founder of ooo-metaskan"
-      ]
-    },
-    {
-      "id": "stub::потапов игорь владимирович 100%",
-      "raw_name": "Потапов Игорь Владимирович 100%",
-      "contexts": [
-        "former founder of ao-npp-bat"
-      ]
-    },
-    {
       "id": "stub::потехин владимир александрович",
       "raw_name": "Потехин Владимир Александрович",
       "contexts": [
         "founder of ooo-boevye-tekhnologii",
         "director of ooo-boevye-tekhnologii"
-      ]
-    },
-    {
-      "id": "stub::потехин владимир александрович 100%",
-      "raw_name": "Потехин Владимир Александрович 100%",
-      "contexts": [
-        "former founder of ooo-boevye-tekhnologii"
-      ]
-    },
-    {
-      "id": "stub::радченко михаил юрьевич 100%",
-      "raw_name": "Радченко Михаил Юрьевич 100%",
-      "contexts": [
-        "former founder of ooo-mentastep"
       ]
     },
     {
@@ -32339,13 +30473,6 @@
       "raw_name": "ФОНД РЕГИОНАЛЬНЫХ НЕКОММЕРЧЕСКИХ ПРОЕКТОВ \"ДАР\"",
       "contexts": [
         "founder of ooo-orion"
-      ]
-    },
-    {
-      "id": "stub::региональных некоммерческих проектов дар 100%",
-      "raw_name": "ФОНД РЕГИОНАЛЬНЫХ НЕКОММЕРЧЕСКИХ ПРОЕКТОВ \"ДАР\" 100%",
-      "contexts": [
-        "former founder of ooo-orion"
       ]
     },
     {
@@ -32407,13 +30534,6 @@
       ]
     },
     {
-      "id": "stub::руденко дмитрий александрович 50%",
-      "raw_name": "Руденко Дмитрий Александрович 50%",
-      "contexts": [
-        "former founder of ooo-spetsmat-spetsialnye-materialy"
-      ]
-    },
-    {
       "id": "stub::рябико ольга александровна",
       "raw_name": "Рябико Ольга Александровна",
       "contexts": [
@@ -32428,13 +30548,6 @@
       ]
     },
     {
-      "id": "stub::с ограниченной ответственностью аэромакс 100%",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЭРОМАКС\" 100%",
-      "contexts": [
-        "former founder of ao-aeromaks"
-      ]
-    },
-    {
       "id": "stub::с ограниченной ответственностью аякс",
       "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЯКС\"",
       "contexts": [
@@ -32442,8 +30555,8 @@
       ]
     },
     {
-      "id": "stub::с ограниченной ответственностью беспилотные технологические решения 100%",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЕСПИЛОТНЫЕ ТЕХНОЛОГИЧЕСКИЕ РЕШЕНИЯ\" 100%",
+      "id": "stub::с ограниченной ответственностью беспилотные технологические решения",
+      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЕСПИЛОТНЫЕ ТЕХНОЛОГИЧЕСКИЕ РЕШЕНИЯ\"",
       "contexts": [
         "former founder of ooo-btr-donetsk"
       ]
@@ -32457,15 +30570,15 @@
       ]
     },
     {
-      "id": "stub::с ограниченной ответственностью информационные технологии 50%",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ\" 50%",
+      "id": "stub::с ограниченной ответственностью информационные технологии",
+      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ\"",
       "contexts": [
         "former founder of ooo-intek-bespilotnye-sistemy"
       ]
     },
     {
-      "id": "stub::с ограниченной ответственностью кравт 100%",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАВТ\" 100%",
+      "id": "stub::с ограниченной ответственностью кравт",
+      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАВТ\"",
       "contexts": [
         "former founder of ooo-spdbbk"
       ]
@@ -32485,8 +30598,8 @@
       ]
     },
     {
-      "id": "stub::с ограниченной ответственностью ориент системс 100%",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОРИЕНТ СИСТЕМС\" 100%",
+      "id": "stub::с ограниченной ответственностью ориент системс",
+      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОРИЕНТ СИСТЕМС\"",
       "contexts": [
         "former founder of ooo-4gnss"
       ]
@@ -32499,15 +30612,15 @@
       ]
     },
     {
-      "id": "stub::с ограниченной ответственностью сибирская навигационная компания 100%",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИБИРСКАЯ НАВИГАЦИОННАЯ КОМПАНИЯ\" 100%",
+      "id": "stub::с ограниченной ответственностью сибирская навигационная компания",
+      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИБИРСКАЯ НАВИГАЦИОННАЯ КОМПАНИЯ\"",
       "contexts": [
         "former founder of ooo-gaskar"
       ]
     },
     {
-      "id": "stub::с ограниченной ответственностью стартап- студия университета лобачевского 100%",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАРТАП- СТУДИЯ УНИВЕРСИТЕТА ЛОБАЧЕВСКОГО\" 100%",
+      "id": "stub::с ограниченной ответственностью стартап- студия университета лобачевского",
+      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАРТАП- СТУДИЯ УНИВЕРСИТЕТА ЛОБАЧЕВСКОГО\"",
       "contexts": [
         "former founder of ooo-pekhtra"
       ]
@@ -32516,17 +30629,9 @@
       "id": "stub::с ограниченной ответственностью управляющая компания комакс",
       "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УПРАВЛЯЮЩАЯ КОМПАНИЯ КОМАКС\"",
       "contexts": [
+        "former founder of ooo-aero-khit",
         "founder of ooo-aero-khit-servis",
         "founder of ooo-aero-khit-m"
-      ]
-    },
-    {
-      "id": "stub::с ограниченной ответственностью управляющая компания комакс 100%",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УПРАВЛЯЮЩАЯ КОМПАНИЯ КОМАКС\" 100%",
-      "contexts": [
-        "former founder of ooo-aero-khit",
-        "former founder of ooo-aero-khit-servis",
-        "former founder of ooo-aero-khit-m"
       ]
     },
     {
@@ -32541,13 +30646,6 @@
       "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФИНАНСОВО- КОНСУЛЬТАЦИОННАЯ КОМПАНИЯ ФОНДА \"ДАР\" Выписка из ЕГРЮЛ 07.09.2026 11:36 ОГРН 5087746197622 Страница 2 из 13",
       "contexts": [
         "founder of ooo-garant-klub"
-      ]
-    },
-    {
-      "id": "stub::с ограниченной ответственностью финансово- консультационная компания фонда дар выписка из егрюл 07.09.2026 11:36 огрн 5087746197622 страница 2 из 13 99%",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФИНАНСОВО- КОНСУЛЬТАЦИОННАЯ КОМПАНИЯ ФОНДА \"ДАР\" Выписка из ЕГРЮЛ 07.09.2026 11:36 ОГРН 5087746197622 Страница 2 из 13 99%",
-      "contexts": [
-        "former founder of ooo-garant-klub"
       ]
     },
     {
@@ -32581,13 +30679,6 @@
       ]
     },
     {
-      "id": "stub::семенов игорь георгиевич 100%",
-      "raw_name": "Семенов Игорь Георгиевич 100%",
-      "contexts": [
-        "former founder of ao-npp-real"
-      ]
-    },
-    {
       "id": "stub::сиразетдинов никита вадимович / климов максим александрович / общество с ограниченной ответственностью гагаринг / общество с ограниченной ответственностью авиационно-космические разработки бегак / общество с ограниченной ответственностью прайм",
       "raw_name": "Сиразетдинов Никита Вадимович / Климов Максим Александрович / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАГАРИНГ\" / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВИАЦИОННО-КОСМИЧЕСКИЕ РАЗРАБОТКИ \"БЕГАК\" / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРАЙМ\"",
       "contexts": [
@@ -32609,31 +30700,10 @@
       ]
     },
     {
-      "id": "stub::соколов герман олегович 100%",
-      "raw_name": "Соколов Герман Олегович 100%",
-      "contexts": [
-        "former founder of ooo-rtd-zashchita"
-      ]
-    },
-    {
-      "id": "stub::соколов никита дмитриевич 69%",
-      "raw_name": "Соколов Никита Дмитриевич 69%",
-      "contexts": [
-        "former founder of ooo-dsg"
-      ]
-    },
-    {
       "id": "stub::соколова ольга михайловна",
       "raw_name": "Соколова Ольга Михайловна",
       "contexts": [
         "director of ooo-tsugam"
-      ]
-    },
-    {
-      "id": "stub::соловьев константин юрьевич 50%",
-      "raw_name": "Соловьев Константин Юрьевич 50%",
-      "contexts": [
-        "former founder of ooo-arkodim"
       ]
     },
     {
@@ -32642,13 +30712,6 @@
       "contexts": [
         "founder of va-technologies",
         "director of va-technologies"
-      ]
-    },
-    {
-      "id": "stub::сотов артём александрович 100%",
-      "raw_name": "Сотов Артём Александрович 100%",
-      "contexts": [
-        "former founder of va-technologies"
       ]
     },
     {
@@ -32667,13 +30730,6 @@
       ]
     },
     {
-      "id": "stub::степаева мария ивановна 100%",
-      "raw_name": "Степаева Мария Ивановна 100%",
-      "contexts": [
-        "former founder of ooo-praym"
-      ]
-    },
-    {
       "id": "stub::струлев игорь леонидович",
       "raw_name": "Струлев Игорь Леонидович",
       "contexts": [
@@ -32682,24 +30738,10 @@
       ]
     },
     {
-      "id": "stub::струлев игорь леонидович 50%",
-      "raw_name": "Струлев Игорь Леонидович 50%",
-      "contexts": [
-        "former founder of ooo-superkhrono"
-      ]
-    },
-    {
       "id": "stub::съедин михаил васильевич",
       "raw_name": "Съедин Михаил Васильевич",
       "contexts": [
         "founder of ooo-eliars"
-      ]
-    },
-    {
-      "id": "stub::тимофеев владимир сергеевич 50%",
-      "raw_name": "Тимофеев Владимир Сергеевич 50%",
-      "contexts": [
-        "former founder of ooo-arkhangel-crimea"
       ]
     },
     {
@@ -32711,25 +30753,11 @@
       ]
     },
     {
-      "id": "stub::тимофеев даниил андреевич 100%",
-      "raw_name": "Тимофеев Даниил Андреевич 100%",
-      "contexts": [
-        "former founder of ooo-dronomir"
-      ]
-    },
-    {
       "id": "stub::тращёнок людмила ефимовна",
       "raw_name": "Тращёнок Людмила Ефимовна",
       "contexts": [
         "founder of gk-logos",
         "director of gk-logos"
-      ]
-    },
-    {
-      "id": "stub::тютина ольга анатольевна 100%",
-      "raw_name": "Тютина Ольга Анатольевна 100%",
-      "contexts": [
-        "former founder of ooo-tsentr-dinarus"
       ]
     },
     {
@@ -32754,13 +30782,6 @@
       ]
     },
     {
-      "id": "stub::усачёв павел александрович 100%",
-      "raw_name": "Усачёв Павел Александрович 100%",
-      "contexts": [
-        "former founder of ooo-konstruktorskoe-byuro-sinergiya"
-      ]
-    },
-    {
       "id": "stub::фадеев игорь анатольевич",
       "raw_name": "Фадеев Игорь Анатольевич",
       "contexts": [
@@ -32782,38 +30803,10 @@
       ]
     },
     {
-      "id": "stub::федукович кирилл олегович 20%",
-      "raw_name": "Федукович Кирилл Олегович 20%",
-      "contexts": [
-        "former founder of ooo-kopterlab"
-      ]
-    },
-    {
       "id": "stub::филиппов вадим владимирович",
       "raw_name": "Филиппов Вадим Владимирович",
       "contexts": [
         "founder of ooo-status-53"
-      ]
-    },
-    {
-      "id": "stub::филиппов вадим владимирович 100%",
-      "raw_name": "Филиппов Вадим Владимирович 100%",
-      "contexts": [
-        "former founder of ooo-status-53"
-      ]
-    },
-    {
-      "id": "stub::филиппов михаил геннадьевич 100%",
-      "raw_name": "Филиппов Михаил Геннадьевич 100%",
-      "contexts": [
-        "former founder of ooo-ml-konstrakshns"
-      ]
-    },
-    {
-      "id": "stub::фоминых алексей михайлович 100%",
-      "raw_name": "Фоминых Алексей Михайлович 100%",
-      "contexts": [
-        "former founder of ooo-opkb-eksplomet"
       ]
     },
     {
@@ -32838,27 +30831,12 @@
       ]
     },
     {
-      "id": "stub::христюк владимир владимирович 100%",
-      "raw_name": "Христюк Владимир Владимирович 100%",
-      "contexts": [
-        "former founder of ooo-geron",
-        "former founder of ooo-skay-avia-grupp"
-      ]
-    },
-    {
       "id": "stub::цбст",
       "raw_name": "АНО «ЦБСТ»",
       "contexts": [
         "founder of ao-spetstekh-investitsii-ao-spetstekh-pervyy",
         "founder of ooo-sistemnyy-integrator",
         "founder of ao-spetstekh-perviy"
-      ]
-    },
-    {
-      "id": "stub::цыганов вадим борисович 100%",
-      "raw_name": "Цыганов Вадим Борисович 100%",
-      "contexts": [
-        "former founder of ooo-pokrov"
       ]
     },
     {
@@ -32869,25 +30847,10 @@
       ]
     },
     {
-      "id": "stub::черезов андрей павлович 100%",
-      "raw_name": "Черезов Андрей Павлович 100%",
-      "contexts": [
-        "former founder of ovod",
-        "former founder of ooo-vozdushnyy-traktat"
-      ]
-    },
-    {
       "id": "stub::черленок игорь эдуардович",
       "raw_name": "Черленок Игорь Эдуардович",
       "contexts": [
         "founder of kulibin-klub"
-      ]
-    },
-    {
-      "id": "stub::чернышов павел алексеевич 40%",
-      "raw_name": "Чернышов Павел Алексеевич 40%",
-      "contexts": [
-        "former founder of ooo-skb-piranya"
       ]
     },
     {
@@ -32906,13 +30869,6 @@
       ]
     },
     {
-      "id": "stub::чумаков павел андреевич 100%",
-      "raw_name": "Чумаков Павел Андреевич 100%",
-      "contexts": [
-        "former founder of ooo-instekh"
-      ]
-    },
-    {
       "id": "stub::шаповалов сергей михайлович",
       "raw_name": "Шаповалов Сергей Михайлович",
       "contexts": [
@@ -32921,38 +30877,10 @@
       ]
     },
     {
-      "id": "stub::шаповалов сергей михайлович 100%",
-      "raw_name": "Шаповалов Сергей Михайлович 100%",
-      "contexts": [
-        "former founder of kolskaya-verf"
-      ]
-    },
-    {
-      "id": "stub::шатракова а.а. 50%",
-      "raw_name": "Шатракова А.А. 50%",
+      "id": "stub::шатракова а.а",
+      "raw_name": "Шатракова А.А",
       "contexts": [
         "former founder of ooo-arkhangel"
-      ]
-    },
-    {
-      "id": "stub::швецов алексей александрович 0.5%",
-      "raw_name": "Швецов Алексей Александрович 0.5%",
-      "contexts": [
-        "former founder of ooo-vingrad"
-      ]
-    },
-    {
-      "id": "stub::швецов алексей александрович 1%",
-      "raw_name": "Швецов Алексей Александрович 1%",
-      "contexts": [
-        "former founder of ooo-orzhitskie-artezianskie-vody"
-      ]
-    },
-    {
-      "id": "stub::шевченко константин игоревич 8%",
-      "raw_name": "Шевченко Константин Игоревич 8%",
-      "contexts": [
-        "former founder of ooo-atlant-aero"
       ]
     },
     {
