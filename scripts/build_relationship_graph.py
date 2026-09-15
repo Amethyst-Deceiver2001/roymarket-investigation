@@ -61,8 +61,10 @@ _PREFIX_RE = re.compile(
 )
 _QUOTE_RE = re.compile(r"[«»\"'“”‘’]")
 _WS_RE = re.compile(r"\s+")
+_PAREN_RE = re.compile(r"\s*\([^)]*\)")
 _SHARE_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*%")
 _SHARE_SUFFIX_RE = re.compile(r"\s*(\d+(?:[.,]\d+)?)\s*%\s*$")
+_SHARE_PREFIX_RE = re.compile(r"^\s*(\d+(?:[.,]\d+)?)\s*%\s*")
 _SPLIT_RE = re.compile(r",\s*(?![^(]*\))")
 _MULTIROTOR_RE = re.compile(r"\b(?:multirotor|multicopter|quadcopter)\b|"
                             r"мультикоптер|квадрокоптер", re.IGNORECASE)
@@ -98,6 +100,7 @@ def parse_founder_entries(raw) -> list[dict]:
             share_m = _SHARE_RE.search(segment)
             name = segment[: segment.find("(")].strip() if "(" in segment else segment
             name = _SHARE_SUFFIX_RE.sub("", name)
+            name = _SHARE_PREFIX_RE.sub("", name)
             name = name.strip(" .,")
             if len(name) >= 3:
                 out.append({"name": name, "share": share_m.group(1) if share_m else None})
@@ -107,7 +110,16 @@ def parse_founder_entries(raw) -> list[dict]:
 def normalize(name: str) -> str:
     if not name:
         return ""
-    n = _QUOTE_RE.sub("", name)
+    # Strip parenthetical asides (maiden name, role title, alt-name
+    # abbreviation) before comparing -- e.g. a director_history raw string
+    # "Галаев Илья Викторович (Президент)" or "Белоглазова (Мешкова)
+    # Людмила Александровна" needs to match the plain name on file, and an
+    # entity's own name_ru can carry a trailing brand-abbreviation aside
+    # ("ООО «Беспилотные технологические решения» (БТР)") a founder/
+    # director reference elsewhere won't repeat. Found 2026-09-16
+    # continuing the unresolved-stub audit.
+    n = _PAREN_RE.sub("", name)
+    n = _QUOTE_RE.sub("", n)
     prev = None
     while prev != n:
         prev = n
