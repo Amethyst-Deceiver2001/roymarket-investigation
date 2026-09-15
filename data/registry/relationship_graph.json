@@ -2,7 +2,7 @@
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1426,
-  "edge_count": 2100,
+  "edge_count": 2105,
   "unresolved_count": 173,
   "nodes": [
     {
@@ -2029,7 +2029,7 @@
       "label": "Фомин Александр Николаевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "fominykh-aleksey-mikhaylovich",
@@ -3077,7 +3077,7 @@
       "label": "Малевич Павел Владимирович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "malysheva-natalya-viktorovna",
@@ -3385,7 +3385,7 @@
       "label": "Оксман Николас Николаевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "olga-sokolova",
@@ -3477,7 +3477,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 9
+      "degree": 10
     },
     {
       "id": "ooo-aerotekhalyans",
@@ -3681,7 +3681,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 11
+      "degree": 12
     },
     {
       "id": "ooo-atlant-aero",
@@ -3921,7 +3921,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 10
+      "degree": 12
     },
     {
       "id": "ooo-finkonsaltingk-fkk",
@@ -4797,7 +4797,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 7
+      "degree": 8
     },
     {
       "id": "ooo-status-53",
@@ -5153,7 +5153,7 @@
       "label": "Перекатов Сергей Сергеевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "petkau-oleg-gergardovich",
@@ -11771,7 +11771,7 @@
       "label": "Проценко Артём Витальевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "pugach-evgeniy-evgenevich",
@@ -21011,6 +21011,17 @@
       "confidence": null
     },
     {
+      "source": "fomin-aleksandr-nikolaevich",
+      "target": "ooo-eyartek",
+      "type": "role",
+      "label": "25% co-founder",
+      "source_id": "s6729",
+      "as_of": "2024-02-12",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "fominykh-aleksey-mikhaylovich",
       "target": "ooo-metaskan",
       "type": "role",
@@ -24399,6 +24410,17 @@
       "confidence": null
     },
     {
+      "source": "malevich-pavel-vladimirovich",
+      "target": "ooo-spetsmat-spetsialnye-materialy",
+      "type": "role",
+      "label": "50% co-founder",
+      "source_id": "s6834",
+      "as_of": "2024-11-22",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "malysheva-natalya-viktorovna",
       "target": "ooo-aerotekhalyans",
       "type": "directs",
@@ -25835,6 +25857,17 @@
       "label": null,
       "source_id": null,
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "oksman-nikolas-nikolaevich",
+      "target": "ooo-aeroplatformy",
+      "type": "role",
+      "label": "14% founder",
+      "source_id": "s6796",
+      "as_of": "2025-10-21",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -30229,6 +30262,17 @@
       "confidence": null
     },
     {
+      "source": "perekatov-sergey-sergeevich",
+      "target": "ooo-eyartek",
+      "type": "role",
+      "label": "25% co-founder",
+      "source_id": "s6729",
+      "as_of": "2024-02-12",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "petkau-oleg-gergardovich",
       "target": "ao-nii-vektor",
       "type": "role",
@@ -31236,6 +31280,17 @@
       "label": "co-inventor (patent RU2858174C1)",
       "source_id": "s1047",
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "protsenko-artem-vitalevich",
+      "target": "ooo-asel-labs",
+      "type": "role",
+      "label": "33% co-founder",
+      "source_id": "s6864",
+      "as_of": "2025-03-17",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null

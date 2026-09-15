@@ -7701,7 +7701,16 @@
     "birthplace": null,
     "address": null,
     "inn_personal": null,
-    "roles": [],
+    "roles": [
+      {
+        "entity_slug": "ooo-asel-labs",
+        "entity_name": null,
+        "title": "33% co-founder",
+        "from": "2025-03-17",
+        "to": null,
+        "source_id": "s6864"
+      }
+    ],
     "sanctions": [],
     "other_entities": [],
     "other_entities_checked_at": null,
@@ -7722,6 +7731,10 @@
         " of ₽619,000 cash plus ₽63,000 receivables against ₽681,000 equity — exactly the ₽1,000,000 charter capital minus the year's loss, arithmetically consistent and confirming no debt/liabilities yet. GD Проценко Артём Витальевич signs both statements, matching the EGRUL record. Nothing here contradicts the counter-drone manufacturing narrative — a company incorporated in March and still burning founder capital by year-end is an ordinary early-stage profile, n"
       ]
     },
+    "_corrected": [
+      "2026-09-16: wired a confirmed founder role from this entity's own full signed ЕГРЮЛ-выписка founders_history (already sourced) -- found via a subagent research pass on degree-0 people; no new lookup performed, only the person-side role was missing."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -10041,13 +10054,12 @@
     "inn_personal": null,
     "roles": [
       {
-        "entity_slug": null,
-        "entity_name": "ООО «ЭйАрТэк»",
-        "title": null,
-        "from": null,
+        "entity_slug": "ooo-eyartek",
+        "entity_name": null,
+        "title": "25% co-founder",
+        "from": "2024-02-12",
         "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s6729"
       }
     ],
     "sanctions": [],
@@ -10070,7 +10082,8 @@
       ]
     },
     "_corrected": [
-      "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person."
+      "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
+      "2026-09-16: wired a confirmed founder role from this entity's own full signed ЕГРЮЛ-выписка founders_history (already sourced) -- found via a subagent research pass on degree-0 people; no new lookup performed, only the person-side role was missing."
     ],
     "_verified_against": "Rospatent bulk patent dump (s0952), 2026-08-24",
     "opensanctions_matches": [
@@ -10199,13 +10212,12 @@
     "inn_personal": null,
     "roles": [
       {
-        "entity_slug": null,
-        "entity_name": "ООО «ЭйАрТэк»",
-        "title": null,
-        "from": null,
+        "entity_slug": "ooo-eyartek",
+        "entity_name": null,
+        "title": "25% co-founder",
+        "from": "2024-02-12",
         "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s6729"
       }
     ],
     "sanctions": [],
@@ -10227,6 +10239,10 @@
         "nd BAS operator trainer, is ООО «ЭйАрТэк» (ИНН 7300000540, Ulyanovsk, reg. 07.04.2022, software-development OKVED) — four co-founders at 25% each (Жуков Андрей Викторович, Фомин Александр Николаевич, Перекатов Сергей Сергеевич, and GD Капустин Павел Евгеньевич), 7 employees, ₽61.9m declared income for the year through 01.01.2026. «Визионеро», named by ЦБСТ as an “IT-компания” resident (06.01.2026, GD quoted discussing early-stage scaling) without a named p"
       ]
     },
+    "_corrected": [
+      "2026-09-16: wired a confirmed founder role from this entity's own full signed ЕГРЮЛ-выписка founders_history (already sourced) -- found via a subagent research pass on degree-0 people; no new lookup performed, only the person-side role was missing."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-732591260966",
@@ -16883,6 +16899,14 @@
         "to": null,
         "source_id": null,
         "_candidate": true
+      },
+      {
+        "entity_slug": "ooo-aeroplatformy",
+        "entity_name": null,
+        "title": "14% founder",
+        "from": "2025-10-21",
+        "to": null,
+        "source_id": "s6796"
       }
     ],
     "sanctions": [],
@@ -16904,6 +16928,10 @@
         "aft can be used to deliver and drop UAVs, glide bombs, military cargo\") to any point up to two days' flight away. GD Власов Артём Аркадьевич; founders are Власов (51%), АО «Стратолинк» (35%, director Оксман Николас Николаевич, same individual as a 14% minority founder here), and Оксман himself (14%). The director is now primary-source confirmed — a direct query of ФНС's own official egrul.nalog.ru search API (no captcha, no auth required for basic search) "
       ]
     },
+    "_corrected": [
+      "2026-09-16: wired a confirmed founder role from this entity's own full signed ЕГРЮЛ-выписка founders_history (already sourced) -- found via a subagent research pass on degree-0 people; no new lookup performed, only the person-side role was missing."
+    ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -41891,7 +41919,16 @@
     "birthplace": null,
     "address": null,
     "inn_personal": null,
-    "roles": [],
+    "roles": [
+      {
+        "entity_slug": "ooo-spetsmat-spetsialnye-materialy",
+        "entity_name": null,
+        "title": "50% co-founder",
+        "from": "2024-11-22",
+        "to": null,
+        "source_id": "s6834"
+      }
+    ],
     "sanctions": [],
     "other_entities": [],
     "other_entities_checked_at": null,
@@ -41907,8 +41944,9 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-02: added from smolin.info investigation (s5288, TRANSCRIPT_20260608)."
+      "2026-09-16: wired a confirmed founder role from this entity's own full signed ЕГРЮЛ-выписка founders_history (already sourced) -- found via a subagent research pass on degree-0 people; no new lookup performed, only the person-side role was missing."
     ],
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [

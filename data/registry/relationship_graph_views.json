@@ -1839,6 +1839,14 @@
           "degree": 8
         },
         {
+          "id": "fomin-aleksandr-nikolaevich",
+          "kind": "person",
+          "label": "Фомин Александр Николаевич",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "fominykh-aleksey-mikhaylovich",
           "kind": "person",
           "label": "Фоминых Алексей Михайлович",
@@ -2703,6 +2711,14 @@
           "degree": 2
         },
         {
+          "id": "malevich-pavel-vladimirovich",
+          "kind": "person",
+          "label": "Малевич Павел Владимирович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "malysheva-natalya-viktorovna",
           "kind": "person",
           "label": "Малышева Наталья Викторовна",
@@ -2907,6 +2923,14 @@
           "degree": 13
         },
         {
+          "id": "oksman-nikolas-nikolaevich",
+          "kind": "person",
+          "label": "Оксман Николас Николаевич",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "olga-sokolova",
           "kind": "person",
           "label": "Ольга Соколова",
@@ -2996,7 +3020,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 9
+          "degree": 10
         },
         {
           "id": "ooo-aerotekhalyans",
@@ -3200,7 +3224,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ooo-atlant-aero",
@@ -3416,7 +3440,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 12
         },
         {
           "id": "ooo-finkonsaltingk-fkk",
@@ -4280,7 +4304,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ooo-status-53",
@@ -4627,6 +4651,14 @@
           "kind": "person",
           "label": "Пеньков Андрей Анатольевич",
           "name_latin": "Penkov Andrey Anatolevich",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "perekatov-sergey-sergeevich",
+          "kind": "person",
+          "label": "Перекатов Сергей Сергеевич",
+          "name_latin": null,
           "sanctioned": false,
           "degree": 1
         },
@@ -9376,6 +9408,14 @@
           "kind": "person",
           "label": "Проторгуев Сергей Александрович",
           "name_latin": "Protorguev Sergey Aleksandrovich",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "protsenko-artem-vitalevich",
+          "kind": "person",
+          "label": "Проценко Артём Витальевич",
+          "name_latin": null,
           "sanctioned": false,
           "degree": 1
         },
@@ -16317,6 +16357,17 @@
           "confidence": null
         },
         {
+          "source": "fomin-aleksandr-nikolaevich",
+          "target": "ooo-eyartek",
+          "type": "role",
+          "label": "25% co-founder",
+          "source_id": "s6729",
+          "as_of": "2024-02-12",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "fominykh-aleksey-mikhaylovich",
           "target": "ooo-opkb-eksplomet",
           "type": "directs",
@@ -18385,6 +18436,17 @@
           "confidence": null
         },
         {
+          "source": "malevich-pavel-vladimirovich",
+          "target": "ooo-spetsmat-spetsialnye-materialy",
+          "type": "role",
+          "label": "50% co-founder",
+          "source_id": "s6834",
+          "as_of": "2024-11-22",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "malysheva-natalya-viktorovna",
           "target": "ooo-aerotekhalyans",
           "type": "directs",
@@ -19458,6 +19520,17 @@
           "label": "group-structure",
           "source_id": "s0470",
           "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "oksman-nikolas-nikolaevich",
+          "target": "ooo-aeroplatformy",
+          "type": "role",
+          "label": "14% founder",
+          "source_id": "s6796",
+          "as_of": "2025-10-21",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
@@ -22004,6 +22077,17 @@
           "confidence": null
         },
         {
+          "source": "perekatov-sergey-sergeevich",
+          "target": "ooo-eyartek",
+          "type": "role",
+          "label": "25% co-founder",
+          "source_id": "s6729",
+          "as_of": "2024-02-12",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "petkau-oleg-gergardovich",
           "target": "ao-nii-vektor",
           "type": "role",
@@ -22736,6 +22820,17 @@
           "label": "co-inventor (patent RU2858174C1)",
           "source_id": "s1047",
           "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "protsenko-artem-vitalevich",
+          "target": "ooo-asel-labs",
+          "type": "role",
+          "label": "33% co-founder",
+          "source_id": "s6864",
+          "as_of": "2025-03-17",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
@@ -27639,7 +27734,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 9
+          "degree": 10
         },
         {
           "id": "ooo-aerotekhalyans",
@@ -27795,7 +27890,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ooo-atlant-aero",
@@ -27915,7 +28010,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 12
         },
         {
           "id": "ooo-finkonsaltingk-fkk",
@@ -31762,7 +31857,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 9
+          "degree": 10
         },
         {
           "id": "ooo-aerotekhalyans",
@@ -34656,7 +34751,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 9
+          "degree": 10
         },
         {
           "id": "ooo-aerotekhalyans",
@@ -34860,7 +34955,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ooo-atlant-aero",
@@ -35100,7 +35195,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 12
         },
         {
           "id": "ooo-finkonsaltingk-fkk",
@@ -35964,7 +36059,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ooo-status-53",

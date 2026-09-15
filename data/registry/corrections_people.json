@@ -1520,10 +1520,22 @@
       ]
     },
     "fomin-aleksandr-nikolaevich": {
-      "set": {},
+      "set": {
+        "roles": [
+          {
+            "entity_slug": "ooo-eyartek",
+            "entity_name": null,
+            "title": "25% co-founder",
+            "from": "2024-02-12",
+            "to": null,
+            "source_id": "s6729"
+          }
+        ]
+      },
       "verified_against": "Rospatent bulk patent dump (s0952), 2026-08-24",
       "why": [
-        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person."
+        "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
+        "2026-09-16: wired a confirmed founder role from this entity's own full signed ЕГРЮЛ-выписка founders_history (already sourced) -- found via a subagent research pass on degree-0 people; no new lookup performed, only the person-side role was missing."
       ]
     },
     "fominykh-aleksey-mikhaylovich": {
@@ -4959,6 +4971,83 @@
       },
       "why": [
         "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "oksman-nikolas-nikolaevich": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": null,
+            "entity_name": "АО «Стратолинк»",
+            "title": null,
+            "from": null,
+            "to": null,
+            "source_id": null,
+            "_candidate": true
+          },
+          {
+            "entity_slug": "ooo-aeroplatformy",
+            "entity_name": null,
+            "title": "14% founder",
+            "from": "2025-10-21",
+            "to": null,
+            "source_id": "s6796"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-16: wired a confirmed founder role from this entity's own full signed ЕГРЮЛ-выписка founders_history (already sourced) -- found via a subagent research pass on degree-0 people; no new lookup performed, only the person-side role was missing."
+      ]
+    },
+    "perekatov-sergey-sergeevich": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": "ooo-eyartek",
+            "entity_name": null,
+            "title": "25% co-founder",
+            "from": "2024-02-12",
+            "to": null,
+            "source_id": "s6729"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-16: wired a confirmed founder role from this entity's own full signed ЕГРЮЛ-выписка founders_history (already sourced) -- found via a subagent research pass on degree-0 people; no new lookup performed, only the person-side role was missing."
+      ]
+    },
+    "protsenko-artem-vitalevich": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": "ooo-asel-labs",
+            "entity_name": null,
+            "title": "33% co-founder",
+            "from": "2025-03-17",
+            "to": null,
+            "source_id": "s6864"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-16: wired a confirmed founder role from this entity's own full signed ЕГРЮЛ-выписка founders_history (already sourced) -- found via a subagent research pass on degree-0 people; no new lookup performed, only the person-side role was missing."
+      ]
+    },
+    "malevich-pavel-vladimirovich": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": "ooo-spetsmat-spetsialnye-materialy",
+            "entity_name": null,
+            "title": "50% co-founder",
+            "from": "2024-11-22",
+            "to": null,
+            "source_id": "s6834"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-16: wired a confirmed founder role from this entity's own full signed ЕГРЮЛ-выписка founders_history (already sourced) -- found via a subagent research pass on degree-0 people; no new lookup performed, only the person-side role was missing."
       ]
     }
   },
