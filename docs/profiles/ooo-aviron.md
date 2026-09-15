@@ -1,6 +1,6 @@
 # ООО «Авирон»
 
-`manufacturer` `WB: not_checked` 
+`manufacturer` 
 
 ИНН 7743451768 · Moscow
 
@@ -9,7 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Director:** Лапин Игорь Николаевич
 - **Charter capital:** ₽27,174
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
 

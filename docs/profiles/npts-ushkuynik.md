@@ -86,8 +86,8 @@
 
 ## Corporate links
 
-- **АНО «НПЦ «Ушкуйник»»** — shares "Ушкуйник" brand/name; NOT the same legal entity — АНО is the operating nonprofit (director Чадаев А.В., confirmed), this ООО is a separate commercial-form entity with its own redacted founders/director. No documented common ownership beyond the shared name and Novgorod address cluster. [s0470]
-- **ООО «Ушкуйник-СП»** — same commercial-shell pattern (also EGRUL-redacted director/founders, also no БФО filings on record), address on the same Большая Санкт-Петербургская street a few doors down [s0470]
+- **АНО «НПЦ «Ушкуйник»»** `same-name-different-entity` — shares "Ушкуйник" brand/name; NOT the same legal entity — АНО is the operating nonprofit (director Чадаев А.В., confirmed), this ООО is a separate commercial-form entity with its own redacted founders/director. No documented common ownership beyond the shared name and Novgorod address cluster. [s0470]
+- **ООО «Ушкуйник-СП»** `group-structure` — same commercial-shell pattern (also EGRUL-redacted director/founders, also no БФО filings on record), address on the same Большая Санкт-Петербургская street a few doors down [s0470]
 - **АНО «НПЦ «Ушкуйник»»** — Parent entity
 
 ## Sources cited in this profile

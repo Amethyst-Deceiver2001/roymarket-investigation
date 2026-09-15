@@ -59,11 +59,12 @@
 ### Костюнин Павел Андреевич
 
 ![Костюнин Павел Андреевич](../images/kostyunin-pavel-andreevich_portrait_leaderid.jpg)
+- **ИНН:** 510203980877
 - Ликвидатор
 
 ## Corporate links
 
-- **АО «Стратим»** — GUR's own profile pages cross-list ООО «Стратим» and АО «Стратим» as "Related companies" of each other, sharing the Щегол/Русак/Голубь/Ястреб product line (GUR names "Ястреб" specifically on the ООО side as "a smaller analogue of the GERAN-2"). Different ИНН, different legal form, different city (Nizhny Novgorod vs Moscow) — GUR gives no further detail on the corporate mechanism of the relationship (common ownership vs. licensing vs. informal group branding); not independently confirmed beyond GUR's own cross-listing. [s0958]
+- **АО «Стратим»** `external-registry-cross-listed` — GUR's own profile pages cross-list ООО «Стратим» and АО «Стратим» as "Related companies" of each other, sharing the Щегол/Русак/Голубь/Ястреб product line (GUR names "Ястреб" specifically on the ООО side as "a smaller analogue of the GERAN-2"). Different ИНН, different legal form, different city (Nizhny Novgorod vs Moscow) — GUR gives no further detail on the corporate mechanism of the relationship (common ownership vs. licensing vs. informal group branding); not independently confirmed beyond GUR's own cross-listing. [s0958]
 
 ## Open questions
 

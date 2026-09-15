@@ -1,7 +1,7 @@
 # OOO "Arkhangel Shchit" ("Arkhangel Shield") — ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ ЩИТ"
 
 **Brand:** Архангел
-`manufacturer` `WB: not_checked` 
+`manufacturer` 
 
 ИНН 5027339008 · ОГРН 1255000059533
 
@@ -14,7 +14,7 @@
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30.6 — Производство беспилотных авиационных систем
 - **ЦБСТ tie:** None found.
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
 

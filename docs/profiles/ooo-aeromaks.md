@@ -125,7 +125,7 @@
 
 ## Corporate links
 
-- **ООО «Аэромакс-Авиа (Центр-Логистика)»** — Same director (Бессонов Сергей Николаевич) — confirms ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) is a sister/logistics-arm entity of the ГК «Аэромакс» group, not an unrelated namesake. Found via screen_upr_uchr.py's other_entities scan on bessonov-sergey-nikolaevich, 2026-09-14.
+- **ООО «Аэромакс-Авиа (Центр-Логистика)»** `sister-entity` — Same director (Бессонов Сергей Николаевич) — confirms ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) is a sister/logistics-arm entity of the ГК «Аэромакс» group, not an unrelated namesake. Found via screen_upr_uchr.py's other_entities scan on bessonov-sergey-nikolaevich, 2026-09-14.
 - **ООО «ГК «Аэромакс»»** — Parent entity (100%) [s0218]
 
 ## Open questions

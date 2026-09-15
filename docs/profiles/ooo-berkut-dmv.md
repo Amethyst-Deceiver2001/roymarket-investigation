@@ -32,7 +32,7 @@
 
 - **DOB:** 13.04.1975
 - **ИНН:** 771537069549
-- Co-founder; manages Беркут simultaneously with ЦБСТ per investigator.org.ua -- legal entity/ИНН not yet identified, open lead
+- Co-founder; manages Беркут simultaneously with ЦБСТ per investigator.org.ua -- ИНН 9709100837/ОГРН 1237700726636 since resolved via ФНС founder cross-check (other_entities, 2026-09-07)
 - `sanctions lead`
 
 ## Open questions

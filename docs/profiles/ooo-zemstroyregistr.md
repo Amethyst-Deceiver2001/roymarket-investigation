@@ -53,7 +53,7 @@
 
 ## Corporate links
 
-- **ООО «Аркодим»** — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. OKVED (юридическая деятельность) suggests an administrative/legal-services shell rather than a manufacturing entity — not yet independently assessed for UAV-relevance.
+- **ООО «Аркодим»** `sister-entity` — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. OKVED (юридическая деятельность) suggests an administrative/legal-services shell rather than a manufacturing entity — not yet independently assessed for UAV-relevance.
 
 ## Sources cited in this profile
 

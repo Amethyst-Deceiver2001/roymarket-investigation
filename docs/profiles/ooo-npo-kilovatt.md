@@ -63,8 +63,8 @@
 
 ## Corporate links
 
-- **IE Pinimasova Elena Aleksandrovna** — The reseller/storefront ИП (Пинимасова Е.А., kilowat48.ru) already in this registry lists "ООО НПО Киловатт" as the legal operating entity on its /company/docs/ page -- this record is that entity. Two separate legal persons: one manufactures/holds IP (this LLC, Lipetsk), the other appears to run the Moscow-facing retail storefront (the ИП). [s0532]
-- **Unresolved entity** — Same sole founder (Шестопалов С.А.) as the second Kilovatt LLC (ИНН 4800016776) -- see that record. Common ownership confirmed via both entities' own EGRUL extracts. [s0532]
+- **IE Pinimasova Elena Aleksandrovna** `name-collision-distinct` — The reseller/storefront ИП (Пинимасова Е.А., kilowat48.ru) already in this registry lists "ООО НПО Киловатт" as the legal operating entity on its /company/docs/ page -- this record is that entity. Two separate legal persons: one manufactures/holds IP (this LLC, Lipetsk), the other appears to run the Moscow-facing retail storefront (the ИП). [s0532]
+- **Unresolved entity** `sister-entity` — Same sole founder (Шестопалов С.А.) as the second Kilovatt LLC (ИНН 4800016776) -- see that record. Common ownership confirmed via both entities' own EGRUL extracts. [s0532]
 
 ## Open questions
 

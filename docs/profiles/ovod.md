@@ -42,8 +42,8 @@
 
 ## Products
 
-- **«Овод»** — FPV kamikaze drone with neural-network-based autonomous targeting ("система самонаведения на основе нейросети"), deployed in Ukraine since 2023. Company e-mail domain (company@ovod71.ru) is literally the product brand. [s0526]
-- **«Провод-15»** — Fiber-optic-guided heavy FPV strike drone variant. Press-reported (2026-08-23 web search) >40km range record in the SVO zone and destruction of a Ukrainian ammunition depot in Sumy region (Aug 2026 coverage) -- not yet cross-checked against a primary source.
+- **«Овод»** ([full profile](products/ovod.html)) — FPV kamikaze drone with neural-network-based autonomous targeting ("система самонаведения на основе нейросети"), deployed in Ukraine since 2023. Company e-mail domain (company@ovod71.ru) is literally the product brand. [s0526]
+- **«Провод-15»** ([full profile](products/ovod.html)) — Fiber-optic-guided heavy FPV strike drone variant. Press-reported (2026-08-23 web search) >40km range record in the SVO zone and destruction of a Ukrainian ammunition depot in Sumy region (Aug 2026 coverage) -- not yet cross-checked against a primary source.
 - **Роботизированный комплекс «ДОВОД»** — Наземный необитаемый робототехнический комплекс для безлюдной доставки и запуска FPV-дронов «ОВОД 10» в район выполнения боевой задачи. Совместная разработка ОВОДа и НРТК «Курьер». Действует на удалении до 20 км от операторов, запускает FPV-дроны с дальностью до 35 км — оператор может находиться на расстоянии до 55 км от цели. Успешно испытан в зоне СВО (30.07.2026). Планируется ИИ-управление. [s5446]
 
 ## Financials

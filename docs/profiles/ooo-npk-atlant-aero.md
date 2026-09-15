@@ -1,7 +1,7 @@
 # OOO NPK Atlant Aero — ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "АТЛАНТ АЭРО"
 
 **Brand:** НПК Атлант Аэро
-`manufacturer` `WB: not_checked` 
+`manufacturer` 
 
 ИНН 6154166381 · ОГРН 1236100034411
 
@@ -12,7 +12,7 @@
 - **Address:** Ростовская область, г.о. город Таганрог, г. Таганрог
 - **Director:** Хутешен Алексей Александрович
 - **ОКВЭД:** 33.11 — Ремонт металлоизделий
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
 

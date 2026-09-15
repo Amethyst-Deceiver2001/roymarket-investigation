@@ -78,6 +78,10 @@
 - **ИНН:** 771541815944
 - `sanctions lead`
 
+## Corporate links
+
+- **ООО «Гагаринг»** `co-exhibited` — Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot "Народный ВПК" (14-16 June 2024, Nizhny Novgorod) lists АО «Площадь» ("разработка бортовых решений для разведывательных и ударных БЛА на основе ИИ") and ООО «Гагаринг» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11). Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file.
+
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |

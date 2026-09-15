@@ -1,12 +1,12 @@
 # Project "KB Arkhangel" — Проект КБ «Архангел»
 
 **Brand:** Архангел
-`manufacturer` `WB: not_checked` 
+`manufacturer` 
 
 ## At a glance
 
 - **ЦБСТ tie:** None found.
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** none_found
 
 ## Products
 

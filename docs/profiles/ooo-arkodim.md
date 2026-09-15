@@ -67,12 +67,12 @@
 
 ## Corporate links
 
-- **ООО «Аркодим-2»** — Same director (Барахтин Артём Владимирович) — sister entity in the same Kazan «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
-- **ООО «Аркодим-Про»** — Барахтин Артём Владимирович is a recorded founder here (current director differs) — sister entity in the same «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
-- **ООО «Научно-технический центр «Аркодим»»** — Барахтин Артём Владимирович is a recorded founder here (current director differs) — sister entity in the same «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
-- **ООО «Земстройрегистр»** — Same director (Барахтин Артём Владимирович) — administrative/legal-services shell, no defense-industry OKVED signal on its own. Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
-- **ООО «Экспокэт»** — Барахтин Артём Владимирович is a recorded founder here (current director is a different, unrelated-seeming person); OKVED (фотография) shows no defense-industry signal. Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
-- **Ассоциация технологического бизнеса** — Same director (Барахтин Артём Владимирович) — a Moscow-registered trade association (АТБ). Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
+- **ООО «Аркодим-2»** `sister-entity` — Same director (Барахтин Артём Владимирович) — sister entity in the same Kazan «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
+- **ООО «Аркодим-Про»** `sister-entity` — Барахтин Артём Владимирович is a recorded founder here (current director differs) — sister entity in the same «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
+- **ООО «Научно-технический центр «Аркодим»»** `sister-entity` — Барахтин Артём Владимирович is a recorded founder here (current director differs) — sister entity in the same «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
+- **ООО «Земстройрегистр»** `sister-entity` — Same director (Барахтин Артём Владимирович) — administrative/legal-services shell, no defense-industry OKVED signal on its own. Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
+- **ООО «Экспокэт»** `sister-entity` — Барахтин Артём Владимирович is a recorded founder here (current director is a different, unrelated-seeming person); OKVED (фотография) shows no defense-industry signal. Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
+- **Ассоциация технологического бизнеса** `sister-entity` — Same director (Барахтин Артём Владимирович) — a Moscow-registered trade association (АТБ). Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.
 
 ## Sources cited in this profile
 

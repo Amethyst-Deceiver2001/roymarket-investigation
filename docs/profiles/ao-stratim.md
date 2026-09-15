@@ -67,6 +67,7 @@
 ### Костюнин Павел Андреевич
 
 ![Костюнин Павел Андреевич](../images/kostyunin-pavel-andreevich_portrait_leaderid.jpg)
+- **ИНН:** 510203980877
 - Генеральный директор
 
 ### Данилин Виктор Сергеевич
@@ -90,7 +91,7 @@
 
 ## Corporate links
 
-- **ООО «Стратим»** — GUR's own profile pages cross-list ООО «Стратим» and АО «Стратим» as "Related companies" of each other, sharing the Щегол/Русак/Голубь/Ястреб product line. Different ИНН, different legal form, different city (Moscow vs Nizhny Novgorod) — GUR gives no further detail on the corporate mechanism of the relationship; not independently confirmed beyond GUR's own cross-listing. [s0963]
+- **ООО «Стратим»** `external-registry-cross-listed` — GUR's own profile pages cross-list ООО «Стратим» and АО «Стратим» as "Related companies" of each other, sharing the Щегол/Русак/Голубь/Ястреб product line. Different ИНН, different legal form, different city (Moscow vs Nizhny Novgorod) — GUR gives no further detail on the corporate mechanism of the relationship; not independently confirmed beyond GUR's own cross-listing. [s0963]
 
 ## Open questions
 

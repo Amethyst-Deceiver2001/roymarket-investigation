@@ -43,7 +43,7 @@
 
 ## Corporate links
 
-- **ООО «Аэромакс»** — Same director (Бессонов Сергей Николаевич, EU-sanctioned per s0754) as ooo-aeromaks — confirms this is a sister/logistics-arm entity of the ГК «Аэромакс» group rather than an unrelated namesake (resolves the open question raised by the original brand-collision flag). OKVED 52.23.13 (aviation ground-handling logistics) is consistent with a group logistics subsidiary; not yet independently assessed for UAV-relevance beyond the shared director.
+- **ООО «Аэромакс»** `sister-entity` — Same director (Бессонов Сергей Николаевич, EU-sanctioned per s0754) as ooo-aeromaks — confirms this is a sister/logistics-arm entity of the ГК «Аэромакс» group rather than an unrelated namesake (resolves the open question raised by the original brand-collision flag). OKVED 52.23.13 (aviation ground-handling logistics) is consistent with a group logistics subsidiary; not yet independently assessed for UAV-relevance beyond the shared director.
 - **ООО «Аэромакс»** — Direct registered founder (1% + 99% treasury share held by the company itself). Confirms this is a genuine subsidiary/sister entity of the EU-sanctioned ooo-aeromaks, not merely a same-director namesake. (1%) [s7450]
 
 ## Sources cited in this profile

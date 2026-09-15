@@ -267,7 +267,13 @@ def build_graph(entities: list[dict], people: list[dict],
             add_edge(slug, target, "owns", subsidiary.get("role"), source_id, as_of,
                      temporal_status=temporal_status)
         for related in entity.get("related_entities") or []:
-            add_edge(slug, related.get("slug"), "related", "related (ambiguous)",
+            # relationship_type (schema v5, graph_contract.RELATED_ENTITY_
+            # RELATIONSHIP_TYPES) is a structured category added 2026-09-15
+            # to replace the old hardcoded "related (ambiguous)" label --
+            # fall back to it only for a related_entities entry that
+            # predates the taxonomy and hasn't been classified yet.
+            add_edge(slug, related.get("slug"), "related",
+                     related.get("relationship_type") or "related (ambiguous)",
                      related.get("source_id"))
         for founder in parse_founder_entries(entity.get("founders")):
             raw_name = founder["name"]

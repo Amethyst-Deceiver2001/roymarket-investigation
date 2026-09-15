@@ -64,7 +64,7 @@
     <div class="cards">
       {% for pr in products %}
       <div class="card">
-        <h4>{{ pr.name }}</h4>
+        <h4>{% if pr.profile_url %}<a href="{{ pr.profile_url }}">{{ pr.name }}</a>{% else %}{{ pr.name }}{% endif %}</h4>
         {% if pr.description %}<p>{{ pr.description }}</p>{% endif %}
         {% if pr.source %}<span class="q">{{ pr.source }}</span>{% endif %}
       </div>
@@ -276,7 +276,9 @@
     <p class="eyebrow">Corporate links</p>
     <ul class="plain">
       {% for r in related_entities %}
-      <li>{% if r.profile_url %}<a href="{{ r.profile_url }}">{{ r.label }}</a>{% else %}<strong>{{ r.label }}</strong>{% endif %} — {{ r.relationship }} {% if r.source %}<span class="id">[{{ r.source }}]</span>{% endif %}</li>
+      <li>{% if r.profile_url %}<a href="{{ r.profile_url }}">{{ r.label }}</a>{% else %}<strong>{{ r.label }}</strong>{% endif %}
+        {% if r.relationship_type %}<span class="tag t-open">{{ r.relationship_type }}</span>{% endif %}
+        — {{ r.relationship }} {% if r.source %}<span class="id">[{{ r.source }}]</span>{% endif %}</li>
       {% endfor %}
     </ul>
   </section>

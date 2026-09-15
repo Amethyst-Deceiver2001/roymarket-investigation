@@ -73,7 +73,7 @@ _No named principals linked to this entity yet._
 
 ## Corporate links
 
-- **ООО «ОРИЕНТ СИСТЕМС»** — orsyst.ru (already the registered site for ooo-orient-sistems, which carries the full 4GNSS catalog) footer explicitly states "© ООО «4ГНСС»" -- this entity appears to be the brand/legal vehicle for the 4GNSS product line within the Orient Systems group, not a separately operating manufacturer. Products live on ooo-orient-sistems's record; not duplicated here.
+- **ООО «ОРИЕНТ СИСТЕМС»** `group-structure` — orsyst.ru (already the registered site for ooo-orient-sistems, which carries the full 4GNSS catalog) footer explicitly states "© ООО «4ГНСС»" -- this entity appears to be the brand/legal vehicle for the 4GNSS product line within the Orient Systems group, not a separately operating manufacturer. Products live on ooo-orient-sistems's record; not duplicated here.
 - **ООО «ОРИЕНТ СИСТЕМС»** — Parent entity (100%) [s0462]
 
 ## Sources cited in this profile

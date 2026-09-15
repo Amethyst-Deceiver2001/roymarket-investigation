@@ -53,7 +53,7 @@
 
 ## Corporate links
 
-- **ООО «Аркодим»** — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim — a sister/satellite entity in the same Kazan «Аркодим» family. Not yet EGRUL-выписка-verified for founder overlap or independently assessed for UAV-relevance; tier left unset pending that review.
+- **ООО «Аркодим»** `sister-entity` — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim — a sister/satellite entity in the same Kazan «Аркодим» family. Not yet EGRUL-выписка-verified for founder overlap or independently assessed for UAV-relevance; tier left unset pending that review.
 
 ## Sources cited in this profile
 

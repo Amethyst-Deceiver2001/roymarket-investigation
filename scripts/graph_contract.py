@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-GRAPH_SCHEMA_VERSION = 4
+GRAPH_SCHEMA_VERSION = 5
 NODE_KINDS = {"entity", "person", "product", "unresolved",
               "government_customer", "military_unit"}
 EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
@@ -41,6 +41,27 @@ EDGE_FIELDS = {
 # cbst_tie.confidence field (t-doc/t-open/press are positive-tie values;
 # "none"/"not_established" mean no tie and are never emitted as edges).
 CBST_TIE_CONFIDENCE = {"t-doc", "t-open", "press"}
+
+# related_entities[].relationship_type (added 2026-09-15, schema v5) — a
+# controlled vocabulary replacing the previous hardcoded "related
+# (ambiguous)" edge label with the real category each of the registry's 42
+# related_entities[] ties actually falls into, derived from reading all 42
+# entries rather than invented ahead of the data. `competitor` is defined
+# here for future use even though no entity currently carries it — no
+# confirmed product-competitor claim exists in the registry as of this
+# writing; adding the category doesn't mean populating it without evidence.
+RELATED_ENTITY_RELATIONSHIP_TYPES = {
+    "dealer",                        # authorized reseller of another entity's product
+    "co-exhibited",                  # separate exhibitors at the same event/forum
+    "co-speaker",                    # named speakers/co-appearances at the same conference or press piece
+    "sister-entity",                 # confirmed common director/founder/ownership, same corporate family
+    "group-structure",               # nonprofit R&D arm + commercial arm, or -СП joint-venture vehicle, within one group
+    "managed-by",                    # ЕГРЮЛ-listed управляющая организация relationship
+    "external-registry-cross-listed",# a third-party registry (GUR/OpenSanctions) lists them as related; mechanism not independently confirmed
+    "same-name-different-entity",    # shares a brand/name; CONFIRMED to be a distinct legal entity, not the same one
+    "training-partnership",          # co-runs a training/operational program, not a corporate tie
+    "competitor",                    # rival products/entities in the same market segment (unpopulated as of schema v5 -- no sourced claim exists yet)
+}
 PRODUCT_CLASSIFICATION_FIELDS = {
     "status", "uav_platform", "ew_installation",
 }

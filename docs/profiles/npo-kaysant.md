@@ -1,6 +1,6 @@
 # НПО «КАЙСАНТ»
 
-`sanctioned` `manufacturer` `WB: not_checked` 
+`sanctioned` `manufacturer` 
 
 ИНН 7733393203
 
@@ -9,7 +9,7 @@
 - **Legal form:** NPO (research and production association)
 - **Charter capital:** ₽150,000
 - **ЦБСТ tie:** Named directly as "резидент ЦБСТ" by ЦБСТ's own channel, twice.
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
 
@@ -74,6 +74,10 @@
 
 - co-inventor (ПрЭВМ RU2025669326)
 - 93.3% owner (per rusprofile/companium/spark-interfax aggregators, 2026-08-24 -- not yet EGRUL-confirmed)
+
+## Corporate links
+
+- **АНО «НПЦ «Ушкуйник»»** `co-speaker` — Shared exhibition appearance: a "Что показывали на Дроннице" press digest (2025-09-09) round-up describes both НПО «КАЙСАНТ»'s interceptor drone and АНО «НПЦ «Ушкуйник»»'s optical-fiber «Князь Вандал Новгородский» production figures in the same piece, both companies' products shown at Дронница-2025. Confirmed verbatim against the live DB, identical text cross-posted to channels tsg_group71 msg 168 and nponebo msg 95 (both 2025-09-09). Both entities already carry independent cbst_tie records -- this documents a direct physical/promotional co-appearance, not a new ЦБСТ link.
 
 ## Sources cited in this profile
 

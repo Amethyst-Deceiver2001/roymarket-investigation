@@ -36,8 +36,8 @@
 
 ## Products
 
-- **«Овод»** — FPV strike-drone family, developed by Андрей Иванов (technical founder/spokesperson) under owner/director Черезов А.П. First batch of 4,000 units delivered to SVO forces Oct 2024.
-- **«Провод» / «Провод-15»** — Fiber-optic-guided heavy FPV strike drone, reported >40km range record in the SVO zone; press-reported destruction of a Ukrainian ammunition depot in Sumy region (Aug 2026 coverage). Brand appears more directly tied to sister entity РЛВТ but press confirms this entity's participation.
+- **«Овод»** ([full profile](products/ovod.html)) — FPV strike-drone family, developed by Андрей Иванов (technical founder/spokesperson) under owner/director Черезов А.П. First batch of 4,000 units delivered to SVO forces Oct 2024.
+- **«Провод» / «Провод-15»** ([full profile](products/ovod.html)) — Fiber-optic-guided heavy FPV strike drone, reported >40km range record in the SVO zone; press-reported destruction of a Ukrainian ammunition depot in Sumy region (Aug 2026 coverage). Brand appears more directly tied to sister entity РЛВТ but press confirms this entity's participation.
 
 ## Financials
 

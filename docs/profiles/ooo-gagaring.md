@@ -47,7 +47,7 @@
 
 ## Products
 
-- **Система связи «Кузнечик»** — ПО системы связи для БПЛА «Кузнечик» — учтено как нематериальный актив (капитальные вложения), оставшийся срок полезного использования 75–110 месяцев по состоянию на 31.12.2025. Explicitly a UAV (БПЛА) communications-system software product, per FY2025 audit report intangible-assets note. [s5333]
+- **Система связи «Кузнечик»** ([full profile](products/kuznechik.html)) — ПО системы связи для БПЛА «Кузнечик» — учтено как нематериальный актив (капитальные вложения), оставшийся срок полезного использования 75–110 месяцев по состоянию на 31.12.2025. Explicitly a UAV (БПЛА) communications-system software product, per FY2025 audit report intangible-assets note. [s5333]
 - **Детектор портативный «ЮРКА 1.2»** — 21,960 руб.
 - **Детектор портативный «ЮРКА 1.2ВП»** — С видеоперехватом. 24,400 руб.
 - **Детектор портативный «ЮРКА 1.2СК»** — С сухим контактом для РЭБ-интеграции. 23,180 руб.
@@ -56,7 +56,7 @@
 - **РЭБ-глушитель «Звезда 2»** — Подавляет управление FPV-дронами (700-1000 МГц, дальность 300м). Само-описано как «средство последнего шанса». 52 тыс. руб. [s5437]
 - **Вынос FPV-передатчика «Нить»** — Выносной пульт управления, позволяет управлять дроном из укрытия; входит в комплект системы связи «Кузнечик» (per RT interview, s5435). 4,000 руб. [s5437]
 - **Дрон-детектор «ГОРН»** — Из линейки детекторов булат/асель/зов, прошёл испытания; по словам Барашкова отклонён армейскими закупщиками несмотря на лучшие ТТХ («бойцы привыкли к другим детекторам»). 55 тыс. руб., 400+ шт. в наличии на момент поста (июль 2025). [s5439]
-- **Режим «Подхват» (модуль связи «Кузнечик»)** — Двухпилотный релейный режим передачи управления, удваивающий боевой радиус дронов и наземных роботизированных платформ; позволяет поражать цели в глубоком тылу или за сложным рельефом. Цифровой контур управления защищён шифрованием. Анонсирован ЦБСТ 02.05.2026. [s5440]
+- **Режим «Подхват» (модуль связи «Кузнечик»)** ([full profile](products/kuznechik.html)) — Двухпилотный релейный режим передачи управления, удваивающий боевой радиус дронов и наземных роботизированных платформ; позволяет поражать цели в глубоком тылу или за сложным рельефом. Цифровой контур управления защищён шифрованием. Анонсирован ЦБСТ 02.05.2026. [s5440]
 - **БПЛА разведчик «СКАУТ-1»** — Ручной запуск, до 60 мин полёта, дальность связи до 25 км, полезная нагрузка до 350г, полёт по маршруту в режиме радиомолчания. 96,000 руб. [s5444]
 - **БПЛА квадрокоптер «СКАУТ-10»** — Три конфигурации на выбор: многоразовый со сбросом / одноразовый камикадзе / с тепловизором. До 30 мин полёта, полезная нагрузка до 1.1 кг, дальность до 25 км. 63,800 руб. Камикадзе-версия — расходуемый ударный боеприпас, не только разведка. [s5444]
 - **БПЛА самолёт «СКАУТ-5»** — Тяжёлый разведывательно-мониторинговый комплекс: фотокамера до 50 Мп, ЛИДАР, тепловизор, мультиспектральная камера, газоанализатор. До 20ч полёта, МВМ 25 кг, полезная нагрузка до 8 кг. 11,440,000 руб. [s5444]
@@ -127,14 +127,9 @@
 > *Выражаю огромную благодарность Товарищу Александру Сергеевичу и всему коллективу лаборатории «Гагаринг» за предоставленные «Кузнечики» в количестве 500 шт. Благодарим за постоянную поддержку!*
 > I express my deep gratitude to Comrade Aleksandr Sergeyevich and the whole Gagaring lab team for the 500 Kuznechik units provided. Thank you for your constant support!
 >
-> — Field acknowledgment credited to channel @RuFront (30.08.2026) — a quantified (500 units), third-party-attributed confirmation of Кузнечик supply to a named front-line-adjacent channel, independent of Гагаринг's own marketing. (2026-08-30) [s5447]
+> — Field acknowledgment credited to channel @RuFront (30.08.2026) — a quantified (500 units), third-party-attributed confirmation of Кузнечик supply to a named front-line-adjacent channel, independent of Гагаринг's own marketing. Also a military thank-you letter genre post (see CLAUDE.md's documented pattern) -- a near-duplicate second entry with the identical Russian original but no source_id was removed 2026-09-15 (found during product-profile review) as the same underlying post catalogued twice, not independent corroboration. (2026-08-30) [s5447]
 
-![Field acknowledgment credited to channel @RuFront (30.08.2026) — a quantified (500 units), third-party-attributed confirmation of Кузнечик supply to a named front-line-adjacent channel, independent of Гагаринг's own marketing.](data/sources/TGPOST_multi_20260828-20260904_my_el_lab-week-otryad-gagaring-recruitment.txt)
-
-> *Выражаю огромную благодарность Товарищу Александру Сергеевичу и всему коллективу лаборатории «Гагаринг» за предоставленные «Кузнечики» в количестве 500 шт. Благодарим за постоянную поддержку!*
-> I express my great gratitude to Comrade Alexander Sergeyevich and the entire staff of the Gagaring laboratory for providing 500 units of the "Kuznechik" [comms module]. We thank you for your continued support!
->
-> — Military thank-you letter genre post (see CLAUDE.md's documented pattern), posted/reposted via a channel self-identifying as @RuFront, naming Gagaring's own staff and a specific 500-unit quantity of its «Кузнечик» comms module. (2026-08-30)
+![Field acknowledgment credited to channel @RuFront (30.08.2026) — a quantified (500 units), third-party-attributed confirmation of Кузнечик supply to a named front-line-adjacent channel, independent of Гагаринг's own marketing. Also a military thank-you letter genre post (see CLAUDE.md's documented pattern) -- a near-duplicate second entry with the identical Russian original but no source_id was removed 2026-09-15 (found during product-profile review) as the same underlying post catalogued twice, not independent corroboration.](data/sources/TGPOST_multi_20260828-20260904_my_el_lab-week-otryad-gagaring-recruitment.txt)
 
 ## Patents
 
@@ -174,6 +169,7 @@
 
 ## Corporate links
 
+- **АО «Площадь»** `co-exhibited` — Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot "Народный ВПК" (14-16 June 2024, Nizhny Novgorod) lists ООО «Гагаринг» and АО «Площадь» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11). Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file.
 - **ООО «Авирон»** — доля участия 36,8% [s5333]
 - **ООО «Интел Дрон»** — доля участия 50% [s5333]
 - **ООО «НПО Эйлер»** — доля участия 50% [s5333]

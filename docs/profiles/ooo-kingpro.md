@@ -11,6 +11,7 @@
 - **Director:** Королев Алексей Александрович
 - **Charter capital:** ₽100,000
 - **ОКВЭД:** 30.30.6 — Производство беспилотных авиационных систем
+- **ЦБСТ tie:** Named directly as a резидент ЦБСТ, alongside АО «Стратим», in a joint battlefield-delivery announcement (ЦБСТ/Единая Россия/фонд «Наша Правда» framing) to named combat units.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

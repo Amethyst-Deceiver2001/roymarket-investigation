@@ -1,6 +1,6 @@
 # ИП Цыганов Вадим Борисович
 
-`manufacturer` `WB: not_checked` 
+`manufacturer` `WB: confirmed_reseller` 
 
 ИНН 504405055721 · ОГРН 318500700040208
 
@@ -9,7 +9,7 @@
 - **Legal form:** IP (sole proprietor)
 - **Registered:** 01.10.2018
 - **Address:** 141580, Московская обл., Солнечногорский р-н (Химки), д. Мышецкое, ул. Дорожная, д. 13
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** confirmed_reseller
 
 ## Ownership & corporate history
 
@@ -21,7 +21,7 @@
 
 ## Products
 
-- **Детектор беспилотных летательных аппаратов «Булат» v.4** — Handheld counter-UAV/UAS radio detector, per the Спецификация attached to Государственный контракт № 130 (source s1459). Full verbatim spec table: detection frequency range 300-6200 MHz; detection range up to 1.5 km; battery: removable lithium, 2100 mAh (15,540 mWh), autonomous runtime up to 6.5h; 2x SMA antenna connectors; DC 3.5mm and USB Type-C charging ports; 3.5mm TRRS headphone jack; button-keypad control with 3 side buttons; operating range -20°C to +45°C; kit includes detector, 2 detachable SMA antennas, 3 spare lithium battery packs, carrying strap, AC 220V/DC 5.4V charger, USB-C charging cable, charging dock, 3 clips, quick-start guide, passport/manual, packaging. Sold as new, factory-assembled, serially produced (не восстановленный, не собранный из восстановленных компонентов), 12-month warranty. [s1459]
+- **Детектор беспилотных летательных аппаратов «Булат» v.4** ([full profile](products/bulat.html)) — Handheld counter-UAV/UAS radio detector, per the Спецификация attached to Государственный контракт № 130 (source s1459). Full verbatim spec table: detection frequency range 300-6200 MHz; detection range up to 1.5 km; battery: removable lithium, 2100 mAh (15,540 mWh), autonomous runtime up to 6.5h; 2x SMA antenna connectors; DC 3.5mm and USB Type-C charging ports; 3.5mm TRRS headphone jack; button-keypad control with 3 side buttons; operating range -20°C to +45°C; kit includes detector, 2 detachable SMA antennas, 3 spare lithium battery packs, carrying strap, AC 220V/DC 5.4V charger, USB-C charging cable, charging dock, 3 clips, quick-start guide, passport/manual, packaging. Sold as new, factory-assembled, serially produced (не восстановленный, не собранный из восстановленных компонентов), 12-month warranty. [s1459]
 
 ## Government contracts
 

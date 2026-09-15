@@ -250,6 +250,31 @@ class ProductProfileBuilder:
                     "note": note, "source": self.source_label(gc.get("source_id")),
                 })
 
+        # --- related entities: pulled from every entity in the supply chain's
+        # own related_entities[] -- a product-level view of the same typed
+        # ties (dealer/co-exhibited/competitor/etc, graph_contract.
+        # RELATED_ENTITY_RELATIONSHIP_TYPES) that already render on the
+        # maker's own company profile, since "who else is this product's
+        # maker tied to" is exactly the context a reader wants here too. ---
+        related_entities = []
+        for slug in chain_slugs:
+            ent = self.by_slug.get(slug)
+            if not ent:
+                continue
+            for r in ent.get("related_entities") or []:
+                rel_slug = r.get("slug")
+                target = self.by_slug.get(rel_slug)
+                label = (target.get("name_latin") or target.get("name_ru")) if target else (rel_slug or "Unresolved entity")
+                relationship = r.get("relationship")
+                if isinstance(relationship, list):
+                    relationship = "; ".join(relationship)
+                related_entities.append({
+                    "via": self.entity_link(slug)["label"],
+                    "label": label, "profile_url": f"../{rel_slug}.html" if rel_slug and rel_slug in self.by_slug else None,
+                    "relationship_type": r.get("relationship_type"), "relationship": relationship,
+                    "source": self.source_label(r.get("source_id")),
+                })
+
         chips = []
         if any(self.by_slug.get(s, {}).get("sanctions") for s in chain_slugs):
             chips.append({"label": "supply-chain entity sanctioned", "cls": "t-doc"})
@@ -286,6 +311,7 @@ class ProductProfileBuilder:
             "description": description,
             "specs": specs, "images_gallery": [i for i in images_gallery if i["url"] or i["md_path"]],
             "field_testing": field_testing, "handovers": handovers,
+            "related_entities": related_entities,
             "not_yet_sourced": not_yet_sourced, "sources_table": sources_table,
         }
 

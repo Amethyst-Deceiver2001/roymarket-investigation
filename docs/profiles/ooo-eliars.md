@@ -1,6 +1,6 @@
 # ООО «Элиарс»
 
-`sanctioned` `manufacturer` `WB: not_checked` 
+`sanctioned` `manufacturer` 
 
 ИНН 7735140825
 
@@ -9,7 +9,7 @@
 - **Address:** Зеленоград
 - **Director:** Атливанчик Сергей Николаевич
 - **Charter capital:** ₽1,000,000
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
 

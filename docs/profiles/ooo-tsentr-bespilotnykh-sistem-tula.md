@@ -66,11 +66,12 @@
 
 ### Aleksandr Sergeevich Borisov
 
+- **ИНН:** 561012075269
 - Генеральный директор, ООО «Центр беспилотных систем» (Тула, ИНН 7100032961)
 
 ## Corporate links
 
-- **Autonomous Non-Profit Organization "The Center for Uncrewed Vehicle Systems and Technology" (ЦБСТ's own EGRUL-registered English name)** — Shares the "ЦБСТ"/"TSBS" brand family and is merged into one deduped profile by OpenSanctions (shared aliases, shared branding) — but registered over a year EARLIER (08.02.2023, Tula) than АНО «ЦБСТ»'s own Moscow registration (27.02.2024), under a DIFFERENT legal form (ООО vs АНО) and a different ИНН. The exact corporate relationship (predecessor, founding vehicle, regional subsidiary, or independently-operating same-branded entity) is NOT established — flagged as the single highest-priority open question this discovery raises. [s0572]
+- **Autonomous Non-Profit Organization "The Center for Uncrewed Vehicle Systems and Technology" (ЦБСТ's own EGRUL-registered English name)** `external-registry-cross-listed` — Shares the "ЦБСТ"/"TSBS" brand family and is merged into one deduped profile by OpenSanctions (shared aliases, shared branding) — but registered over a year EARLIER (08.02.2023, Tula) than АНО «ЦБСТ»'s own Moscow registration (27.02.2024), under a DIFFERENT legal form (ООО vs АНО) and a different ИНН. The exact corporate relationship (predecessor, founding vehicle, regional subsidiary, or independently-operating same-branded entity) is NOT established — flagged as the single highest-priority open question this discovery raises. [s0572]
 
 ## Open questions
 

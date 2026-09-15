@@ -32,6 +32,10 @@ Image: `data/sources/PRESS_20250408_vz-ru-tass-kuznechik-onf-battlefield-confirm
 Field acknowledgment credited to channel @RuFront (30.08.2026) — a quantified (500 units), third-party-attributed confirmation of Кузнечик supply to a named front-line-adjacent channel, independent of Гагаринг's own marketing. Also a military thank-you letter genre post (see CLAUDE.md's documented pattern) -- a near-duplicate second entry with the identical Russian original but no source_id was removed 2026-09-15 (found during product-profile review) as the same underlying post catalogued twice, not independent corroboration. — 2026-08-30 [s5447]
 Image: `data/sources/TGPOST_multi_20260828-20260904_my_el_lab-week-otryad-gagaring-recruitment.txt`
 
+## Network context
+
+- **АО «Площадь»** `co-exhibited` — via ООО «Гагаринг»: Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot "Народный ВПК" (14-16 June 2024, Nizhny Novgorod) lists ООО «Гагаринг» and АО «Площадь» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11). Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file.
+
 ## Not yet sourced
 
 - No structured specifications on file — description text above is the only sourced technical detail.

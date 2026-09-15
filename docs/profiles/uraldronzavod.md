@@ -1,12 +1,12 @@
 # «Уралдронзавод»
 
-`sanctioned` `manufacturer` `WB: not_checked` 
+`sanctioned` `manufacturer` 
 
 ## At a glance
 
 - **Director:** Владимир Ткачук
 - **ЦБСТ tie:** Explicitly named a резидент ЦБСТ (ЦБСТ resident) multiple times on ЦБСТ's own Telegram channel, including its own director being called out by name and its product listed among ЦБСТ residents' "flagship developments."
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
 

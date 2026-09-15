@@ -32,8 +32,19 @@ import re
 from pathlib import Path
 
 import jinja2
+import sys
 
 REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO / "scripts"))
+from build_product_profile import FLAGSHIP_PRODUCTS  # noqa: E402
+
+# name_ru -> product-profile slug, for the handful of flagship products that
+# have a real docs/profiles/products/ page (see build_product_profile.py's
+# own FLAGSHIP_PRODUCTS docstring for why this is a short hand-maintained
+# list, not the full ~489-entry products[] corpus).
+PRODUCT_PROFILE_BY_NAME = {
+    name: cfg["slug"] for cfg in FLAGSHIP_PRODUCTS for name in cfg["product_names"]
+}
 REG = REPO / "data" / "registry"
 TEMPLATES = REPO / "templates"
 OUT_DIR = REPO / "docs" / "profiles"
@@ -273,9 +284,10 @@ class ProfileBuilder:
 
         products = [
             {"name": p.get("name_ru"), "description": p.get("description"),
-             "source": self.source_label(p.get("source_id"))}
+             "source": self.source_label(p.get("source_id")),
+             "profile_url": f"products/{PRODUCT_PROFILE_BY_NAME[p['name_ru']]}.html" if p.get("name_ru") in PRODUCT_PROFILE_BY_NAME else None}
             if isinstance(p, dict) else
-            {"name": p, "description": None, "source": None}
+            {"name": p, "description": None, "source": None, "profile_url": None}
             for p in e.get("products", [])
         ]
 
@@ -360,7 +372,8 @@ class ProfileBuilder:
         for key, label in web_group_labels:
             items = web.get(key) or []
             if items:
-                web_groups.append({"label": label, "links": [{"url": i.get("url"), "note": i.get("note")} for i in items]})
+                links = [{"url": i, "note": None} if isinstance(i, str) else {"url": i.get("url"), "note": i.get("note")} for i in items]
+                web_groups.append({"label": label, "links": links})
 
         # --- principals ---
         principals = []
@@ -407,7 +420,8 @@ class ProfileBuilder:
                 relationship = "; ".join(relationship)
             related_entities.append({
                 "label": label, "profile_url": profile_url,
-                "relationship": relationship, "source": self.source_label(r.get("source_id")),
+                "relationship": relationship, "relationship_type": r.get("relationship_type"),
+                "source": self.source_label(r.get("source_id")),
             })
         def linked_entity_entry(item, default_relationship):
             """parents[]/subsidiaries[] hold either a bare slug string (older

@@ -62,7 +62,7 @@
 
 ## Corporate links
 
-- **ANO DPO Obrazovatelny Tsentr Gagaring (Gagaring Educational Center, autonomous non-profit supplementary-professional-education org)** — «Архангел Легион» co-runs this entity's 51st Guards Combined Arms Army UAV-operator training-center relationship, per that entity's own tier_basis.
+- **ANO DPO Obrazovatelny Tsentr Gagaring (Gagaring Educational Center, autonomous non-profit supplementary-professional-education org)** `training-partnership` — «Архангел Легион» co-runs this entity's 51st Guards Combined Arms Army UAV-operator training-center relationship, per that entity's own tier_basis.
 
 ## Open questions
 

@@ -44,7 +44,7 @@
 
 ## Corporate links
 
-- **ООО «Аркодим»** — Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different, unrelated-seeming person. OKVED (фотография) shows no defense-industry signal — low priority for further pursuit.
+- **ООО «Аркодим»** `sister-entity` — Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different, unrelated-seeming person. OKVED (фотография) shows no defense-industry signal — low priority for further pursuit.
 
 ## Sources cited in this profile
 

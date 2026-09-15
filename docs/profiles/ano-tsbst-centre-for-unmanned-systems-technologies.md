@@ -59,6 +59,14 @@
 
 ## Principals & persons of interest
 
+### Владимир Владимирович Якушев
+
+![Владимир Владимирович Якушев](../images/vladimir-vadimovich-yakushev_portrait_wikimedia.jpg)
+- **DOB:** 14.06.1968
+- **Birthplace:** Нефтекамск, Башкортостан (Neftekamsk, Bashkortostan)
+- **ИНН:** 890304549930
+- Chairman of the Supervisory Board; Secretary of United Russia's General Council; First Deputy Chairman of the Federation Council (2025-02-14–present)
+
 ### Андрей Анатольевич Безруков
 
 ![Андрей Анатольевич Безруков](../images/andrey-bezrukov_portrait_vedomosti.jpg)
@@ -84,7 +92,7 @@
 
 ## Corporate links
 
-- **Center for Unmanned Systems LLC (Tula)** — OpenSanctions merges this Tula ООО (ИНН 7100032961, reg. 08.02.2023, directly OFAC/EO14024- designated) into the same deduped profile as this Moscow АНО, sharing "ЦБСТ"/"TSBS" branding and aliases. Relationship not established as of 2026-08-24 — see the Tula entity's own open_questions for what would resolve it. [s0572]
+- **Center for Unmanned Systems LLC (Tula)** `external-registry-cross-listed` — OpenSanctions merges this Tula ООО (ИНН 7100032961, reg. 08.02.2023, directly OFAC/EO14024- designated) into the same deduped profile as this Moscow АНО, sharing "ЦБСТ"/"TSBS" branding and aliases. Relationship not established as of 2026-08-24 — see the Tula entity's own open_questions for what would resolve it. [s0572]
 
 ## Open questions
 

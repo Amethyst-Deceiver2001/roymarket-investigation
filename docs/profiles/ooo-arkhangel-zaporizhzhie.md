@@ -1,7 +1,7 @@
 # OOO "Arkhangel" (Zaporizhzhia) — ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ"
 
 **Brand:** Архангел
-`manufacturer` `WB: not_checked` 
+`manufacturer` 
 
 ИНН 9500026652 · ОГРН 1249500004181
 
@@ -13,7 +13,7 @@
 - **Director:** Тимофеев Владимир Сергеевич
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30.6 — Производство беспилотных авиационных систем
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
 
@@ -75,7 +75,7 @@
 
 ## Corporate links
 
-- **OOO "Arkhangel" (Melitopol, INN 9001027869)** — None [s5505]
+- **OOO "Arkhangel" (Melitopol, INN 9001027869)** `sister-entity` — None [s5505]
 
 ## Open questions
 

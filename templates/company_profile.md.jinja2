@@ -27,7 +27,7 @@
 {% if products %}
 ## Products
 
-{% for pr in products %}- **{{ pr.name }}**{% if pr.description %} — {{ pr.description }}{% endif %}{% if pr.source %} [{{ pr.source }}]{% endif %}
+{% for pr in products %}- **{{ pr.name }}**{% if pr.profile_url %} ([full profile]({{ pr.profile_url }})){% endif %}{% if pr.description %} — {{ pr.description }}{% endif %}{% if pr.source %} [{{ pr.source }}]{% endif %}
 {% endfor %}
 {% endif %}
 {% if financials %}
@@ -176,7 +176,7 @@ _No named principals linked to this entity yet._
 {% if related_entities %}
 ## Corporate links
 
-{% for r in related_entities %}- **{{ r.label }}** — {{ r.relationship }}{% if r.source %} [{{ r.source }}]{% endif %}
+{% for r in related_entities %}- **{{ r.label }}**{% if r.relationship_type %} `{{ r.relationship_type }}`{% endif %} — {{ r.relationship }}{% if r.source %} [{{ r.source }}]{% endif %}
 {% endfor %}
 {% endif %}
 {% if open_questions %}

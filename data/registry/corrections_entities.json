@@ -5501,17 +5501,20 @@
           {
             "relationship": "R&D/nonprofit arm of the Ушкуйник group — АНО «НПЦ «Ушкуйник»» is founded by АНО «Платформа НТИ», director Чадаев А.В.; ООО «Ушкуйник» (npts-ushkuynik) is the commercial entity carrying the actual product, «Князь Вандал Новгородский». User-flagged as sibling/admin, not a separate manufacturer — 2026-08-23.",
             "slug": "npts-ushkuynik",
-            "source_id": null
+            "source_id": null,
+            "relationship_type": "group-structure"
           },
           {
             "relationship": "Shared exhibition appearance: a \"Что показывали на Дроннице\" press digest (2025-09-09) round-up describes both АНО «НПЦ «Ушкуйник»»'s optical-fiber «Князь Вандал Новгородский» production figures and НПО «КАЙСАНТ»'s interceptor drone in the same piece, both companies' products shown at Дронница-2025. Confirmed verbatim against the live DB, identical text cross-posted to channels tsg_group71 msg 168 and nponebo msg 95 (both 2025-09-09). Both entities already carry independent cbst_tie records -- this documents a direct physical/promotional co-appearance, not a new ЦБСТ link.",
             "slug": "npo-kaysant",
-            "source_id": null
+            "source_id": null,
+            "relationship_type": "co-speaker"
           },
           {
             "relationship": "Joint conference attendance, upgraded from the leads file's 'plausible series, needs per-event confirmation' framing: channel chadayevru msg 2722 (2024-04-17, reporting the 12.04.2024 IV конференция по технологиям обнаружения и противодействия БПЛА, Saint Petersburg) directly names BOTH \"Руководитель АНО «НПЦ «Ушкуйник» А.В. Чадаев\" (speaker) AND \"Директор по развитию ООО «Тримикс» С.С. Шандобыло\" (speaker) at the SAME single documented event -- not merely a conference-series inference. Verified verbatim against data/roymarket.db 2026-09-15.",
             "slug": "ooo-trimiks-bulat-3mx",
-            "source_id": null
+            "source_id": null,
+            "relationship_type": "co-speaker"
           }
         ],
         "sanctions": [
@@ -5676,7 +5679,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-14: found via ЦБСТ-resident cross-reference research pass. Distinct from the already-wired npts-ushkuynik (ООО «Ушкуйник», the commercial arm) — this is the АНО itself, ИНН 5300010714, whose cbst_tie was still false.",
         "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the tsg_group71/nponebo shared-Дронница-digest text verbatim against data/roymarket.db. Recorded as related_entities; both entities already independently carry cbst_tie so this is not a new ЦБСТ-link finding, just a documented co-appearance.",
-        "2026-09-15: informal-cooperation triage (LEAD 3) -- re-read chadayevru msg 2722 in full (the leads file only quoted a snippet) and found it directly names both organizations' representatives as speakers at the same 12.04.2024 conference, a stronger single-document confirmation than the leads file's 'series inference' framing. Recorded as related_entities."
+        "2026-09-15: informal-cooperation triage (LEAD 3) -- re-read chadayevru msg 2722 in full (the leads file only quoted a snippet) and found it directly names both organizations' representatives as speakers at the same 12.04.2024 conference, a stronger single-document confirmation than the leads file's 'series inference' framing. Recorded as related_entities.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ano-platforma-nti": {
@@ -5975,7 +5979,8 @@
           {
             "relationship": "OpenSanctions merges this Tula ООО (ИНН 7100032961, reg. 08.02.2023, directly OFAC/EO14024- designated) into the same deduped profile as this Moscow АНО, sharing \"ЦБСТ\"/\"TSBS\" branding and aliases. Relationship not established as of 2026-08-24 — see the Tula entity's own open_questions for what would resolve it.",
             "slug": "ooo-tsentr-bespilotnykh-sistem-tula",
-            "source_id": "s0572"
+            "source_id": "s0572",
+            "relationship_type": "external-registry-cross-listed"
           }
         ],
         "sanctions": [
@@ -6141,7 +6146,8 @@
         "The parent body the whole investigation is about.",
         "Phase 1 verification pass, 2026-08-22: cross-checked against ЦБСТ's own full signed EGRUL extract (s0231, pulled 15.08.2026) — every field the extract carries (name incl. EGRUL-registered English name, address, director, founders and their join dates, OKVED list, e-mail an0.cbst@yandex.ru) confirms the brief's prose exactly, including the two founders and their distinct join dates. Promoted to _verified: true — the first cbst-core entity to clear full primary-document verification.",
         "Source-ID stability bug found and fixed 2026-08-22, same session: the source_id values above were originally written against an OLD, unstable positional ID scheme (scripts/extract_registry.py assigned sN = MANIFEST.md line index, which shifts whenever a file is added anywhere earlier in alphabetical sort order). Re-verified and corrected against the NEW stable, path-keyed ID scheme (data/registry/_source_ids.json) after the fix — every source_id in this file now points at the document it was actually verified against.",
-        "2026-09-07: merged dormant duplicate correction key '9702064851' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+        "2026-09-07: merged dormant duplicate correction key '9702064851' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ano-tsentr-razvitiya-transportnykh-tekhnologiy": {
@@ -9415,7 +9421,8 @@
           {
             "relationship": "Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot \"Народный ВПК\" (14-16 June 2024, Nizhny Novgorod) lists АО «Площадь» (\"разработка бортовых решений для разведывательных и ударных БЛА на основе ИИ\") and ООО «Гагаринг» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11). Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file.",
             "slug": "ooo-gagaring",
-            "source_id": null
+            "source_id": null,
+            "relationship_type": "co-exhibited"
           }
         ]
       },
@@ -9432,7 +9439,8 @@
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13912) ID-confirmed via ИНН 9723203841 — exact match, screen_gur.py sweep, 2026-08-24. GUR also names the development context as the \"Kulibin Club\" of the Народный фронт (\"Narodnyi Front\") movement.",
         "2026-09-07: merged dormant duplicate correction key '9723203841' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the projectArchangel/Archangel_Forum joint-exhibitor listing verbatim against data/roymarket.db. Recorded as related_entities per CLAUDE.md's existing mechanism, not a new cbst_tie (it's the Архангел project's own event, not ЦБСТ's)."
+        "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the projectArchangel/Archangel_Forum joint-exhibitor listing verbatim against data/roymarket.db. Recorded as related_entities per CLAUDE.md's existing mechanism, not a new cbst_tie (it's the Архангел project's own event, not ЦБСТ's).",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ao-pmts-avangard": {
@@ -10317,7 +10325,8 @@
             "inn": "5260494520",
             "relationship": "GUR's own profile pages cross-list ООО «Стратим» and АО «Стратим» as \"Related companies\" of each other, sharing the Щегол/Русак/Голубь/Ястреб product line. Different ИНН, different legal form, different city (Moscow vs Nizhny Novgorod) — GUR gives no further detail on the corporate mechanism of the relationship; not independently confirmed beyond GUR's own cross-listing.",
             "slug": "ooo-stratim",
-            "source_id": "s0963"
+            "source_id": "s0963",
+            "relationship_type": "external-registry-cross-listed"
           }
         ],
         "tier": "manufacturer",
@@ -10350,7 +10359,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13729) ID-confirmed via ИНН 7720901379 — exact match, screen_gur.py sweep, 2026-08-24. GUR's own page cross-lists ООО «Стратим» (ИНН 5260494520) as a \"related company\" — see related_entities.",
         "2026-09-07: merged dormant duplicate correction key '7720901379' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ao-tekhnodinamika": {
@@ -12641,7 +12651,8 @@
           {
             "relationship": "Shared exhibition appearance: a \"Что показывали на Дроннице\" press digest (2025-09-09) round-up describes both НПО «КАЙСАНТ»'s interceptor drone and АНО «НПЦ «Ушкуйник»»'s optical-fiber «Князь Вандал Новгородский» production figures in the same piece, both companies' products shown at Дронница-2025. Confirmed verbatim against the live DB, identical text cross-posted to channels tsg_group71 msg 168 and nponebo msg 95 (both 2025-09-09). Both entities already carry independent cbst_tie records -- this documents a direct physical/promotional co-appearance, not a new ЦБСТ link.",
             "slug": "ano-npts-ushkuynik",
-            "source_id": null
+            "source_id": null,
+            "relationship_type": "co-speaker"
           }
         ]
       },
@@ -12652,7 +12663,8 @@
         "2026-09-14: found via ЦБСТ-resident cross-reference research pass (subagent research into all \"резидент ЦБСТ\" statements). Already documented in docs/index.html prose but never mirrored into the structured cbst_tie field until now.",
         "2026-09-15: new corroborating detail found via a dronnitsa.ru research pass -- «Участники «Дронницы 2023»: НПО КАЙСАНТ» (dronnitsa.ru/n/10/, 09.08.2023, archived as s7506) confirms this entity exhibited at Дронница 2023 (not previously documented on this record) and lists two counter-drone product names not yet in products[]: radio-gun «Аргус-Антидрон» and mobile REB station «Аргус-Антифурия», alongside the already-documented «Аргус-Купол» dome jammer and FPV drone «Аргус» (verbatim quote: «радиоружья «Аргус-Антидрон» купольные системы подавления БПЛА «Аргус-Купол» мобильная станция РЭБ «Аргус-Антифурия»... FPV-дрон «Аргус» с полезной нагрузкой до 1,5 кг»).",
         "[2026-09-15] wb_overlap=none_found: Brand-name search for «ГЕРМЕС связь»/«ГЕРМЕС мачты» on wildberries.ru (2026-09-15) found no product listing.",
-        "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the tsg_group71/nponebo shared-Дронница-digest text verbatim against data/roymarket.db. Recorded as related_entities; both entities already independently carry cbst_tie so this is not a new ЦБСТ-link finding, just a documented co-appearance."
+        "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the tsg_group71/nponebo shared-Дронница-digest text verbatim against data/roymarket.db. Recorded as related_entities; both entities already independently carry cbst_tie so this is not a new ЦБСТ-link finding, just a documented co-appearance.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "npo-kilobatt": {
@@ -12686,7 +12698,8 @@
           {
             "relationship": "The actual REB manufacturer/dealer network this ИП was originally (and incorrectly) conflated with -- see that record's own related_entities for the dealer-certificate name discrepancy (Пинимасов А.В., not Пинимасова Е.А.).",
             "slug": "ooo-npo-kilovatt-shestopalov",
-            "source_id": "s0537"
+            "source_id": "s0537",
+            "relationship_type": "name-collision-distinct"
           }
         ],
         "tier": "adjacent",
@@ -12725,7 +12738,8 @@
       "why": [
         "Full ЕГРИП extract (fl-316784700156711-20260823182427.pdf, pulled 23.08.2026) confirms pure furniture-retail OKVED with no defence/electronics code -- resolves the standing check_registry.py compound-record warning by moving the REB product catalog entirely onto ooo-npo-kilovatt-shestopalov, which already independently holds the fuller, better-sourced version of it.",
         "2026-08-24 Rospatent full-roster trademark sweep (own ИНН, s0945): two personal trademarks (filed 2021-08-23) held by Пинимасова Елена Александровна in her own name, not the company's — no mark-text hint captured, doesn't bear on this entity's already-established adjacent/non-drone tier determination (see existing open_questions re: the furniture-retailer/name-collision finding).",
-        "2026-08-24: flipping _verified to true — this record's own open_questions already document a full resolution (confirmed Penza furniture retailer, unrelated to the Lipetsk Kilovatt EW manufacturers) via a full ЕГРИП extract pulled 23.08.2026; nothing further pending."
+        "2026-08-24: flipping _verified to true — this record's own open_questions already document a full resolution (confirmed Penza furniture retailer, unrelated to the Lipetsk Kilovatt EW manufacturers) via a full ЕГРИП extract pulled 23.08.2026; nothing further pending.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "npp-elvo-kolskaya-verf": {
@@ -15294,13 +15308,15 @@
             "inn": "5300010714",
             "relationship": "shares \"Ушкуйник\" brand/name; NOT the same legal entity — АНО is the operating nonprofit (director Чадаев А.В., confirmed), this ООО is a separate commercial-form entity with its own redacted founders/director. No documented common ownership beyond the shared name and Novgorod address cluster.",
             "slug": "ano-npts-ushkuynik",
-            "source_id": "s0470"
+            "source_id": "s0470",
+            "relationship_type": "same-name-different-entity"
           },
           {
             "inn": "5300015906",
             "relationship": "same commercial-shell pattern (also EGRUL-redacted director/founders, also no БФО filings on record), address on the same Большая Санкт-Петербургская street a few doors down",
             "slug": "ooo-ushkuynik-sp",
-            "source_id": "s0470"
+            "source_id": "s0470",
+            "relationship_type": "group-structure"
           }
         ],
         "tier": "manufacturer",
@@ -15336,7 +15352,8 @@
         "GUR's teardown-component catalogue (distinct from its sanctions/companies sections, discovered 2026-08-24) directly names \"Fiber-optic UAV 'Knyaz Vandal Novgorodsky'\" — this entity's own flagship product — as the armament for 12 identified components, overwhelmingly Chinese-manufactured (Sigmastar, Purui Semiconductor, Hangzhou Zhongke, CapXon) with additional Taiwanese (Unisonic, Realtek, Winbond), US (Semtech) and Swiss (STMicroelectronics) parts. First populated foreign_components[] entries in the registry from a primary teardown source rather than press inference.",
         "The adjacent \"Delta (CBTS.611000)\" weapon-item entries seen in the same GUR filter context were pulled and checked separately — GUR gives no attribution linking them to this entity or any other in the registry; recorded as an open question on АНО «ЦБСТ» instead (see that entity's open_questions), not here.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-4gnss": {
@@ -15480,7 +15497,8 @@
           {
             "relationship": "orsyst.ru (already the registered site for ooo-orient-sistems, which carries the full 4GNSS catalog) footer explicitly states \"© ООО «4ГНСС»\" -- this entity appears to be the brand/legal vehicle for the 4GNSS product line within the Orient Systems group, not a separately operating manufacturer. Products live on ooo-orient-sistems's record; not duplicated here.",
             "slug": "ooo-orient-sistems",
-            "source_id": null
+            "source_id": null,
+            "relationship_type": "group-structure"
           }
         ],
         "wb_overlap": "none_found",
@@ -15522,7 +15540,8 @@
         "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 20 candidates -- same unrelated-noise set as ooo-orient-sistems (appears to be a shared/duplicate query result), no connection to this entity's own name.",
         "2026-08-25: appears on the Agency for Technological Development's (АТР, atr.gov.ru) federal grant program \"Комплектующие для БАС\" (208.atr.gov.ru/bas) -- «Реестр потенциальных производителей», exact ИНН match. These are dated snapshot PDFs (производители 30.06.2026, исполнители 14.07.2026, per the page's own labels) pulled 2026-08-25 and archived at data/sources/. This is a state-recognized potential-supplier listing for the national UAV-components grant program, not itself a ЦБСТ/РОЙ.МАРКЕТ link -- corroborates the entity's UAV/components industry footprint, does not establish any relationship to the ЦБСТ network specifically.",
         "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 10 product(s) not previously documented.",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-aero-khit": {
@@ -16060,7 +16079,8 @@
         "related_entities": [
           {
             "slug": "ooo-aeromaks-avia-tsentr-logistika",
-            "relationship": "Same director (Бессонов Сергей Николаевич) — confirms ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) is a sister/logistics-arm entity of the ГК «Аэромакс» group, not an unrelated namesake. Found via screen_upr_uchr.py's other_entities scan on bessonov-sergey-nikolaevich, 2026-09-14."
+            "relationship": "Same director (Бессонов Сергей Николаевич) — confirms ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) is a sister/logistics-arm entity of the ГК «Аэромакс» group, not an unrelated namesake. Found via screen_upr_uchr.py's other_entities scan on bessonov-sergey-nikolaevich, 2026-09-14.",
+            "relationship_type": "sister-entity"
           }
         ]
       },
@@ -16079,7 +16099,8 @@
         "2026-09-06: wired Rosaviatsia aviation-works operator certificate АР-315 (2024-09-30) from favt.gov.ru's public operator registry (s6416) — this entity is a certified operator flying named UAV models (АС-МК-6/ДИАМ-20), not merely a manufacturer/licensee; independently confirms operational UAV use distinct from any manufacturing license.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-14: screen_upr_uchr.py (manual-captcha run) found bessonov-sergey-nikolaevich as director of a second entity, ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) — confirmed via egrul.nalog.ru open API (s7441) and wired as a related_entities back-link, plus the reciprocal thin add_entities record.",
-        "2026-09-14: received 3 products (БВС СТ AS-32-10, AS-32-8, Д-12К) reassigned from ao-aeromaks -- both entities' rk.2035.university catalog entry (catalog_id 019c662d-...) is internally inconsistent: the showcase editorial description names \"АО «Аэромакс»\" but every individual product listing's own manufacturer field says \"ООО «Аэромакс»\" (source s1169). Resolved in favour of ooo-aeromaks (this entity, ИНН 7725347482) using independent corroboration: this entity is a formally active АЭРОНЕКСТ association member with UavCount:6 on its own membership record (s1405) -- ao-aeromaks (ИНН 7708407413, a 2022-founded Кронштадт-Техник-managed entity) has no comparable independent UAV-product corroboration on file. Not a certainty (no OKVED/primary EGRUL activity-code text was extractable from either entity's scanned EGRUL PDF to settle it definitively), but the weight of evidence favours this entity."
+        "2026-09-14: received 3 products (БВС СТ AS-32-10, AS-32-8, Д-12К) reassigned from ao-aeromaks -- both entities' rk.2035.university catalog entry (catalog_id 019c662d-...) is internally inconsistent: the showcase editorial description names \"АО «Аэромакс»\" but every individual product listing's own manufacturer field says \"ООО «Аэромакс»\" (source s1169). Resolved in favour of ooo-aeromaks (this entity, ИНН 7725347482) using independent corroboration: this entity is a formally active АЭРОНЕКСТ association member with UavCount:6 on its own membership record (s1405) -- ao-aeromaks (ИНН 7708407413, a 2022-founded Кронштадт-Техник-managed entity) has no comparable independent UAV-product corroboration on file. Not a certainty (no OKVED/primary EGRUL activity-code text was extractable from either entity's scanned EGRUL PDF to settle it definitively), but the weight of evidence favours this entity.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-aeroplatformy": {
@@ -16612,27 +16633,33 @@
         "related_entities": [
           {
             "slug": "ooo-arkodim-2",
-            "relationship": "Same director (Барахтин Артём Владимирович) — sister entity in the same Kazan «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14."
+            "relationship": "Same director (Барахтин Артём Владимирович) — sister entity in the same Kazan «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
+            "relationship_type": "sister-entity"
           },
           {
             "slug": "ooo-arkodim-pro",
-            "relationship": "Барахтин Артём Владимирович is a recorded founder here (current director differs) — sister entity in the same «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14."
+            "relationship": "Барахтин Артём Владимирович is a recorded founder here (current director differs) — sister entity in the same «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
+            "relationship_type": "sister-entity"
           },
           {
             "slug": "ooo-ntc-arkodim",
-            "relationship": "Барахтин Артём Владимирович is a recorded founder here (current director differs) — sister entity in the same «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14."
+            "relationship": "Барахтин Артём Владимирович is a recorded founder here (current director differs) — sister entity in the same «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
+            "relationship_type": "sister-entity"
           },
           {
             "slug": "ooo-zemstroyregistr",
-            "relationship": "Same director (Барахтин Артём Владимирович) — administrative/legal-services shell, no defense-industry OKVED signal on its own. Found via screen_upr_uchr.py's other_entities scan, 2026-09-14."
+            "relationship": "Same director (Барахтин Артём Владимирович) — administrative/legal-services shell, no defense-industry OKVED signal on its own. Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
+            "relationship_type": "sister-entity"
           },
           {
             "slug": "ooo-ekspoket",
-            "relationship": "Барахтин Артём Владимирович is a recorded founder here (current director is a different, unrelated-seeming person); OKVED (фотография) shows no defense-industry signal. Found via screen_upr_uchr.py's other_entities scan, 2026-09-14."
+            "relationship": "Барахтин Артём Владимирович is a recorded founder here (current director is a different, unrelated-seeming person); OKVED (фотография) shows no defense-industry signal. Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
+            "relationship_type": "sister-entity"
           },
           {
             "slug": "associatsiya-tekhnologicheskogo-biznesa",
-            "relationship": "Same director (Барахтин Артём Владимирович) — a Moscow-registered trade association (АТБ). Found via screen_upr_uchr.py's other_entities scan, 2026-09-14."
+            "relationship": "Same director (Барахтин Артём Владимирович) — a Moscow-registered trade association (АТБ). Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
+            "relationship_type": "sister-entity"
           }
         ],
         "sanctions_review": {
@@ -16678,7 +16705,8 @@
       "why": [
         "2026-09-14: screen_upr_uchr.py (manual-captcha run) cross-referenced barakhtin-artem-vladimirovich (already recorded as ooo-arkodim's director) and surfaced 6 more entities as director/founder hits — all confirmed via egrul.nalog.ru open API (s7436, s7437, s7438, s7439, s7440, s7442). None yet independently EGRUL-выписка-verified or assessed for UAV-relevance beyond the shared director/founder; recorded as related_entities pending that fuller review (see notes/rebuild_plan.md 2026-09-14 entry).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread."
+        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-asel-labs": {
@@ -17675,7 +17703,8 @@
           {
             "relationship": "Managed by АО «Эколибри» per ЕГРЮЛ (\"управляющая организация: АО Эколибри\") -- subsidiary carrying the UAV-specific OKVED (production of unmanned aerial systems) matching the parent's eVTOL line, but no distinct product names found for this subsidiary specifically; plausibly folded into ecolibri.aero but not directly confirmed there.",
             "slug": "ao-ekolibri",
-            "source_id": null
+            "source_id": null,
+            "relationship_type": "managed-by"
           }
         ],
         "wb_overlap": "none_found",
@@ -17729,7 +17758,8 @@
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no independent website found. 2024 loss of ₽2,067,000 on only ₽10,000 charter capital reported -- thin/shell-like subsidiary economics worth noting.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9713001941). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-eliars": {
@@ -18649,7 +18679,8 @@
           {
             "relationship": "Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot \"Народный ВПК\" (14-16 June 2024, Nizhny Novgorod) lists ООО «Гагаринг» and АО «Площадь» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11). Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file.",
             "slug": "ao-ploshchad",
-            "source_id": null
+            "source_id": null,
+            "relationship_type": "co-exhibited"
           }
         ]
       },
@@ -18670,7 +18701,8 @@
         "2026-09-07: merged duplicate correction key '2312321660' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class).",
         "2026-09-08: a fresh checko.ru-style extract (s7361) surfaced a litigation record (А32-19338/2025, won against ООО «ДАР») not previously captured, plus a workforce figure (74 employees, среднесписочная численность за 2025) that conflicts with the FY2025 audit report's stated 105 (s5333, среднегодовая численность/численность на 31.12.2025). Not reconciled — flagged in workforce_history rather than overwritten; the audit-report figure is treated as more authoritative (primary financial filing vs. third-party aggregator) but the discrepancy is worth resolving against a fresh EGRUL/Rosstat pull.",
         "2026-09-15: new battlefield_evidence found via a local DB mine (channel my_el_lab, id 1614515134, post 4546, 30.08.2026) — a military thank-you letter naming Gagaring's own staff and a specific 500-unit «Кузнечик» quantity, distinct from the existing evidence already on file. This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document -- no s#### id applies; the channel/post/date is the citation.",
-        "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the projectArchangel/Archangel_Forum joint-exhibitor listing verbatim against data/roymarket.db. Recorded as related_entities per CLAUDE.md's existing mechanism, not a new cbst_tie (it's the Архангел project's own event, not ЦБСТ's)."
+        "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the projectArchangel/Archangel_Forum joint-exhibitor listing verbatim against data/roymarket.db. Recorded as related_entities per CLAUDE.md's existing mechanism, not a new cbst_tie (it's the Архангел project's own event, not ЦБСТ's).",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-garant-klub": {
@@ -22674,14 +22706,28 @@
           "as_of": "2026-09-15",
           "outcome": "closed",
           "note": "Sister-entity collision risk: this registry already has a separately-sanctioned \"ООО «Научно-производственное объединение «Киловатт»» (Шестопалов)\" record (different ИНН) — the two share the \"Киловатт\" brand/name. The OpenSanctions match keyed to THIS entity's own ИНН (ru-inn-4800013729, score 1.0) carries topics=[sanction.linked, sanction.control] only — i.e. flagged as linked to/controlled by a sanctioned party, not itself directly designated. A second, exact-score \"sanction\"-topic match (Ukrainian-language caption \"Кіловат\") has zero source_urls to confirm which Kilovatt entity it targets. Given the own-ИНН match is linked/controlled (not direct), and the exact-topic match is unverifiable, not promoted; the already-sanctioned sister record is unaffected by this note."
-        }
+        },
+        "related_entities": [
+          {
+            "relationship": "The reseller/storefront ИП (Пинимасова Е.А., kilowat48.ru) already in this registry lists \"ООО НПО Киловатт\" as the legal operating entity on its /company/docs/ page -- this record is that entity. Two separate legal persons: one manufactures/holds IP (this LLC, Lipetsk), the other appears to run the Moscow-facing retail storefront (the ИП).",
+            "slug": "npo-kilobatt",
+            "source_id": "s0532",
+            "relationship_type": "name-collision-distinct"
+          },
+          {
+            "relationship": "Same sole founder (Шестопалов С.А.) as the second Kilovatt LLC (ИНН 4800016776) -- see that record. Common ownership confirmed via both entities' own EGRUL extracts.",
+            "source_id": "s0532",
+            "relationship_type": "sister-entity"
+          }
+        ]
       },
       "why": [
         "2026-08-24 Rospatent full-roster trademark sweep (own ИНН 4800013729, s0945): trademark №1086620 («Капюшон», filed 2024-04-19) is registered under THIS entity's own ИНН per Rospatent's official bulk data — NOT ooo-npo-kilovatt-shestopalov's ИНН (4800016776), even though a certificate for the same reg. number was downloaded from kilowat48.ru (the Шестопалов-directed sister site) and already recorded on that entity's own trademarks[] (source s0539). Both facts are kept on record rather than one silently overwriting the other: Rospatent's own registry data says the legal right-holder is this entity (Гаврилов-directed); the Шестопалов entity's own site nonetheless displays/uses the mark operationally. Consistent with the already-established common-ownership finding (same founder Шестопалов С.А. on both entities) — most likely an ordinary intra-group trademark holding structure, not a contradiction, but recorded explicitly rather than assumed.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (4800013729). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 17 candidates -- old Soviet-era cutting-tool patents with no patentee data, predating this entity.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-npo-kilovatt-shestopalov": {
@@ -22935,7 +22981,21 @@
           }
         ],
         "charter_capital": 1000000,
-        "tier_basis": "The «Капюшон» counter-drone EW jamming-station line is repeatedly documented on ЦБСТ's own channel as \"техника, созданная при поддержке ЦБСТ\" (technology created with ЦБСТ's support) — delivered to «Центр»/«Днепр» grouping troops via «Единая Россия»/фонд «Наша Правда», and separately shown at Дронница 2025. Sanctioned per an Aleph 'Global Sanctions Database' ID-confirmed ИНН match (specific regime/list not yet identified). Large GISP-catalogued and own-site-confirmed product line across multiple «Капюшон» jamming-station models, own trademark (\"Капюшон\", reg. 1086620) and industrial-design patent for a UAV-communications jamming device. ₽1.2bn FY2024 / ₽1.16bn FY2025 revenue."
+        "tier_basis": "The «Капюшон» counter-drone EW jamming-station line is repeatedly documented on ЦБСТ's own channel as \"техника, созданная при поддержке ЦБСТ\" (technology created with ЦБСТ's support) — delivered to «Центр»/«Днепр» grouping troops via «Единая Россия»/фонд «Наша Правда», and separately shown at Дронница 2025. Sanctioned per an Aleph 'Global Sanctions Database' ID-confirmed ИНН match (specific regime/list not yet identified). Large GISP-catalogued and own-site-confirmed product line across multiple «Капюшон» jamming-station models, own trademark (\"Капюшон\", reg. 1086620) and industrial-design patent for a UAV-communications jamming device. ₽1.2bn FY2024 / ₽1.16bn FY2025 revenue.",
+        "related_entities": [
+          {
+            "relationship": "Second, separately-registered LLC with a near-identical legal name (both \"ООО НПО Киловатт\") in the same city -- this is the one investigator.org.ua's article most likely describes as the actual \"Kapyushon\" manufacturer, per its own certification paperwork; the earlier-matched entity's current role is unclear.",
+            "slug": "ooo-npo-kilovatt",
+            "source_id": "s0533",
+            "relationship_type": "name-collision-distinct"
+          },
+          {
+            "relationship": "kilowat48.ru's official-dealer certificate (№2106/2024) is issued BY this entity TO \"ИП Пинимасов Александр Вячеславович\" (ИНН 583680188519) -- a DIFFERENT person from the ИП already in this registry under npo-kilobatt (Пинимасова Елена Александровна, ИНН 583713716580). See that record's open_questions for the name discrepancy this surfaced.",
+            "slug": "npo-kilobatt",
+            "source_id": "s0537",
+            "relationship_type": "dealer"
+          }
+        ]
       },
       "verified_against": "Aleph API 2026-08-24 direct-ИНН query, cross-checked against this entity's own already-verified ИНН/ОГРН",
       "why": [
@@ -22944,7 +23004,8 @@
         "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 5 product(s) not previously documented.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-npo-nebo": {
@@ -26535,30 +26596,26 @@
         ],
         "images": [
           {
-            "file": "TGMEDIA_7300024069_20250401_piranhafpv-post360-1.jpg",
-            "caption_ru": "НТВ-репортаж: продукция СКБ «Пиранья» (дрон-камикадзе «Пиранья-10», грузовой дрон «Пиранья-13») на выставке «Изобретения для Победы», представлена директору СВР Сергею Нарышкину.",
-            "caption_en": "NTV news footage: SKB Piranha's product line (kamikaze drone Piranha-10, cargo drone Piranha-13) at the \"Inventions for Victory\" exhibition, presented to SVR director Sergey Naryshkin.",
+            "path": "images/TGMEDIA_7300024069_20250401_piranhafpv-post360-1.jpg",
+            "caption": "NTV news footage: SKB Piranha's product line (kamikaze drone Piranha-10, cargo drone Piranha-13) at the \"Inventions for Victory\" exhibition, presented to SVR director Sergey Naryshkin.",
             "source_id": "s7509",
             "as_of": "2025-04-01"
           },
           {
-            "file": "TGMEDIA_7300024069_20250801_piranhafpv-post384-1.jpg",
-            "caption_ru": "Оператор FPV-дрона на боевой позиции (группировка «Север», Курское приграничье) — компания заявляет производство оптоволоконного кабеля управления, использованного в этом эпизоде.",
-            "caption_en": "An FPV drone operator at a field position (\"Sever\" grouping, Kursk border area) — the company claims to manufacture the fiber-optic control cable used in this engagement.",
+            "path": "images/TGMEDIA_7300024069_20250801_piranhafpv-post384-1.jpg",
+            "caption": "An FPV drone operator at a field position (\"Sever\" grouping, Kursk border area) — the company claims to manufacture the fiber-optic control cable used in this engagement.",
             "source_id": "s7512",
             "as_of": "2025-08-01"
           },
           {
-            "file": "TGMEDIA_7300024069_20251029_piranhafpv-post432-1.jpg",
-            "caption_ru": "Стенд СКБ «Пиранья» на выставке «Интерполитех-2025» (Москва, ВДНХ, павильон 57): полная линейка продукции, включая две новые платформы (тяжёлый 20-дюймовый дрон и дрон-перехватчик).",
-            "caption_en": "SKB Piranha's booth at the \"Interpolitex-2025\" exhibition (Moscow, VDNKh, pavilion 57): full product line, including two newly-unveiled platforms (a heavy 20\" drone and an interceptor drone).",
+            "path": "images/TGMEDIA_7300024069_20251029_piranhafpv-post432-1.jpg",
+            "caption": "SKB Piranha's booth at the \"Interpolitex-2025\" exhibition (Moscow, VDNKh, pavilion 57): full product line, including two newly-unveiled platforms (a heavy 20\" drone and an interceptor drone).",
             "source_id": "s7513",
             "as_of": "2025-10-29"
           },
           {
-            "file": "TGMEDIA_7300024069_20251029_piranhafpv-post432-2.jpg",
-            "caption_ru": "Стенд СКБ «Пиранья» на выставке «Интерполитех-2025» — брендированный баннер с продукцией на выставочном столе.",
-            "caption_en": "SKB Piranha's booth at \"Interpolitex-2025\" — branded banner with products on the exhibition table.",
+            "path": "images/TGMEDIA_7300024069_20251029_piranhafpv-post432-2.jpg",
+            "caption": "SKB Piranha's booth at \"Interpolitex-2025\" — branded banner with products on the exhibition table.",
             "source_id": "s7514",
             "as_of": "2025-10-29"
           }
@@ -26576,7 +26633,8 @@
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13798) ID-confirmed via ИНН 7300024069 — exact match, screen_gur.py sweep, 2026-08-24. GUR names model numbers 7/10/13, not matching the registry's existing «Пиранья 15»/«20» — flagged as an open question, not silently reconciled.",
         "2026-09-07: merged dormant duplicate correction key '7300024069' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "2026-09-07: founding-document bundle (s6909, both the original устав 13.09.2023 and its новая редакция 03.10.2024) OCR'd and read in full -- confirms Ульяновск address and ₽15,000 capital already on file (EGRUL-выписка-sourced), and surfaces that the original устав was approved by a founders' MEETING (plural), not a sole founder, as an open question against the single-founder founders[] currently on file. The новая редакция (03.10.2024) itself OCR'd poorly (cover-page/stamp text only legible) -- no further content extracted from it.",
-        "2026-09-15: 4 images added following a local Telegram-DB media pull (tg_media_pull.py, @piranhafpv channel) surfaced by a case-study evidence-depth research pass — this entity had 0 images despite 3 marketing_claims/4 battlefield_evidence already on file. Files copied to docs/images/, archived+indexed as s7509/s7512/s7513/s7514. Source posts also carry additional marketing copy not yet in marketing_claims[] (verbatim self-incriminating claims: \"Первый танк «ABRAMS» был подбит БПЛА «Пиранья 10»\", \"Производство более 4 000 аппаратов ежемесячно\" [post 360, 01.04.2025]; \"Наша компания Пиранья гордится тем, что производит высококачественное оптоволокно для управления дронами с дальностью до 30 км\" [post 384, 01.08.2025] — a direct claim of supplying the fiber-optic cable used in a MoD-press-service-reported tank-destruction near Kursk) -- flagged here for a follow-up pass to also populate marketing_claims[]/battlefield_evidence[], not done in this edit to keep this change scoped to images."
+        "2026-09-15: 4 images added following a local Telegram-DB media pull (tg_media_pull.py, @piranhafpv channel) surfaced by a case-study evidence-depth research pass — this entity had 0 images despite 3 marketing_claims/4 battlefield_evidence already on file. Files copied to docs/images/, archived+indexed as s7509/s7512/s7513/s7514. Source posts also carry additional marketing copy not yet in marketing_claims[] (verbatim self-incriminating claims: \"Первый танк «ABRAMS» был подбит БПЛА «Пиранья 10»\", \"Производство более 4 000 аппаратов ежемесячно\" [post 360, 01.04.2025]; \"Наша компания Пиранья гордится тем, что производит высококачественное оптоволокно для управления дронами с дальностью до 30 км\" [post 384, 01.08.2025] — a direct claim of supplying the fiber-optic cable used in a MoD-press-service-reported tank-destruction near Kursk) -- flagged here for a follow-up pass to also populate marketing_claims[]/battlefield_evidence[], not done in this edit to keep this change scoped to images.",
+        "2026-09-15: fixed a field-shape bug in the images[] entries added above — they used 'file'/'caption_ru'/'caption_en' keys, but the registry's own images[] schema (see every other entity's images[]) is 'path' (relative to docs/, e.g. 'images/<file>')/'caption' (single field). The mismatch was silent until build_company_profile.py's --all run crashed on it (KeyError: 'path') during unrelated product-profile work. Fixed to 'path'/'caption' (using the English caption text to match this project's EN-is-analysis convention for profile pages); the Russian caption text is not lost, just no longer duplicated in a second field this schema has no display path for — recoverable from git history if needed."
       ]
     },
     "ooo-smart-teknolodzhis": {
@@ -27085,7 +27143,8 @@
             "inn": "7720901379",
             "relationship": "GUR's own profile pages cross-list ООО «Стратим» and АО «Стратим» as \"Related companies\" of each other, sharing the Щегол/Русак/Голубь/Ястреб product line (GUR names \"Ястреб\" specifically on the ООО side as \"a smaller analogue of the GERAN-2\"). Different ИНН, different legal form, different city (Nizhny Novgorod vs Moscow) — GUR gives no further detail on the corporate mechanism of the relationship (common ownership vs. licensing vs. informal group branding); not independently confirmed beyond GUR's own cross-listing.",
             "slug": "ao-stratim",
-            "source_id": "s0958"
+            "source_id": "s0958",
+            "relationship_type": "external-registry-cross-listed"
           }
         ]
       },
@@ -27100,7 +27159,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13560) ID-confirmed via ИНН 5260494520 — exact match, screen_gur.py sweep, 2026-08-24. GUR's own page cross-lists АО «Стратим» (ИНН 7720901379) as a \"related company\" sharing the same product line — see related_entities.",
         "2026-09-07: merged dormant duplicate correction key '5260494520' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-        "2026-09-14: Founding-document bundle (data/sources/UD_1245200009075_20260914_ooo-stratim.zip, s7427) read in full, OCR'd (scanned TIFF, 17 pages, Протокол №1 общего собрания учредителей, 27.03.2024). Generic 'any lawful activity' purpose clause. Note: this is ООО «Стратим» (ИНН 5260494520), distinct from the already-deprioritized АО «Стратим» (ИНН 7720901379, 'документ формируется' at ФНС per founding_docs_gap.md) -- same brand name, confirmed different legal entity by ИНН, no relationship established. Corroborates existing record, no new fact."
+        "2026-09-14: Founding-document bundle (data/sources/UD_1245200009075_20260914_ooo-stratim.zip, s7427) read in full, OCR'd (scanned TIFF, 17 pages, Протокол №1 общего собрания учредителей, 27.03.2024). Generic 'any lawful activity' purpose clause. Note: this is ООО «Стратим» (ИНН 5260494520), distinct from the already-deprioritized АО «Стратим» (ИНН 7720901379, 'документ формируется' at ФНС per founding_docs_gap.md) -- same brand name, confirmed different legal entity by ИНН, no relationship established. Corroborates existing record, no new fact.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-stroystandart": {
@@ -27838,22 +27898,26 @@
               "Named dealer, per 3mx.ru/dilery/ AND independently confirmed via madro.ru itself (23.08.2026): «Мэдро» (Madro) explicitly states \"официальный поставщик производителя «3mx»\" (official supplier of manufacturer 3mx) and sells its own branded EW line «УФ-МЭДРО» alongside 3mx products. Storefronts in Saint Petersburg (ул. Академика Павлова, 5В), Moscow (2 offices + a shop at Митинский радиорынок), and Mariupol (occupied Ukraine). Telegram @madro_sales. LEGAL ENTITY STILL UNRESOLVED: a web search surfaced ООО «МАДРО» (ИНН 7720923661, ОГРН 1247700133669, Moscow, registered 08.02.2024, declared activity \"specialized design work\") as a same-named candidate, but this was NOT independently confirmed as the same legal entity behind madro.ru — flagged as a lead, not a match, pending direct confirmation (e.g. the site's own offer/contract documents, which were not checked in this pass)."
             ],
             "slug": null,
-            "source_id": "s0558"
+            "source_id": "s0558",
+            "relationship_type": "dealer"
           },
           {
             "relationship": "Named dealer, per 3mx.ru/dilery/: «Макс 911» (Max 911) — dji911.com. Telegram @dji911_operator. CONFIRMED via dji911.com itself (23.08.2026): explicitly states \"официальный дилер\" for 3mx and sells «Булат V.4» (\"Булат-4\"), «Марс», «Инкубатор» (remote antenna) and its own «Neobooster» DJI signal-amplifier accessory. LEGAL ENTITY RESOLVED 2026-08-25 (dji911.com/contacts, s1388, direct curl archive): \"Продажу оборудования 3MX на маркетплейсах осуществляет ИП Коровкин А.А. ИНН 780223272953\" -- full name confirmed via egrul.nalog.ru open API (s1387): ИП Коровкин Александр Анатольевич, ОГРНИП 323784700072451 (active, registered 07.03.2023; a prior ОГРНИП 319784700120061 under the same ИНН was terminated 29.12.2022). Checksum-valid ИНН. Incidental retail dealer, not a network principal -- not otherwise PII-profiled per project policy (same treatment as Мэдро's ИП). Also has an Ozon storefront (2026-08-25, user-supplied browser HAR capture, s1384): https://www.ozon.ru/seller/maks-911-4233382/, self-declared page title \"МАКС 911- офиц. дилер 3mx\" -- not independently ИНН-confirmed to Коровкин on that marketplace (sellerTransparency widget not captured there), but consistent given the matching branding.",
             "slug": null,
-            "source_id": "s1388"
+            "source_id": "s1388",
+            "relationship_type": "dealer"
           },
           {
             "relationship": "Named dealer, per 3mx.ru/dilery/: «Покров» (Pokrov) — pokrovsystem.ru, Khimki (Moscow Oblast). Telegram @pokrov_sales. Legal entity RESOLVED 2026-08-24 (cross-link fixed 2026-08-25 -- was already a standalone registry entity, `ooo-pokrov`, ИНН 5038189259/ОГРН 1245000068774, just not linked from here): NOT a pure reseller like Мэдро -- sells its own branded EW jammer line (Покров ВЦА «Алёша», ВЦ4/ВЦ5 «Альфа») alongside resold 3mx detector products (Булат v.4, Марс).",
             "slug": "ooo-pokrov",
-            "source_id": "s1386"
+            "source_id": "s1386",
+            "relationship_type": "dealer"
           },
           {
             "relationship": "Joint conference attendance, upgraded from the leads file's 'plausible series, needs per-event confirmation' framing: channel chadayevru msg 2722 (2024-04-17, reporting the 12.04.2024 IV конференция по технологиям обнаружения и противодействия БПЛА, Saint Petersburg) directly names BOTH \"Директор по развитию ООО «Тримикс» С.С. Шандобыло\" (speaker) AND \"Руководитель АНО «НПЦ «Ушкуйник» А.В. Чадаев\" (speaker) at the SAME single documented event -- not merely a conference-series inference. Verified verbatim against data/roymarket.db 2026-09-15.",
             "slug": "ano-npts-ushkuynik",
-            "source_id": null
+            "source_id": null,
+            "relationship_type": "co-speaker"
           }
         ],
         "sanctions": [
@@ -27981,7 +28045,8 @@
         "2026-08-25: cleaned up a stale bare \"confirmed\" value in this (older, ИНН-keyed) correction block -- superseded in practice by a later slug-keyed correction that already sets confirmed_reseller, but left here in an invalid enum state that would trip the new wb_overlap validator if this block were ever the one applied last. No new evidence, consistency fix only.",
         "2026-09-07: merged dormant duplicate correction key '7802942873' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "2026-09-15: informal-cooperation triage (LEAD 3) -- re-read chadayevru msg 2722 in full (the leads file only quoted a snippet) and found it directly names both organizations' representatives as speakers at the same 12.04.2024 conference, a stronger single-document confirmation than the leads file's 'series inference' framing. Recorded as related_entities."
+        "2026-09-15: informal-cooperation triage (LEAD 3) -- re-read chadayevru msg 2722 in full (the leads file only quoted a snippet) and found it directly names both organizations' representatives as speakers at the same 12.04.2024 conference, a stronger single-document confirmation than the leads file's 'series inference' framing. Recorded as related_entities.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-tsentr-bespilotnykh-sistem-tula": {
@@ -28111,6 +28176,14 @@
             "status": "Исполнение завершено — УПД № 2 от 27.12.2023, оплачено платёжным поручением № 2087 от 28.12.2023 (АО «Альфа-Банк»), сумма полностью совпадает с ценой контракта",
             "value_rub": 3072000
           }
+        ],
+        "related_entities": [
+          {
+            "relationship": "Shares the \"ЦБСТ\"/\"TSBS\" brand family and is merged into one deduped profile by OpenSanctions (shared aliases, shared branding) — but registered over a year EARLIER (08.02.2023, Tula) than АНО «ЦБСТ»'s own Moscow registration (27.02.2024), under a DIFFERENT legal form (ООО vs АНО) and a different ИНН. The exact corporate relationship (predecessor, founding vehicle, regional subsidiary, or independently-operating same-branded entity) is NOT established — flagged as the single highest-priority open question this discovery raises.",
+            "slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
+            "source_id": "s0572",
+            "relationship_type": "external-registry-cross-listed"
+          }
         ]
       },
       "why": [
@@ -28119,7 +28192,8 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-08-26: pulled the entity's only zakupki.gov.ru government contract (regNumber 2711801501123000085) and all attachments (kontrakt docx x2, УПД zip, платёжное поручение xlsx, счёт pdf, contract card html) per user request to find and deep-dive the strongest confirmed cbst-core entity with a zakupki footprint. Contract is a fully-executed, fully-paid ₽3.072m sale of NORBEL flight simulators + educational aids to a Tula-region school under sole-supplier justification (failed electronic auction) — training/educational equipment, not combat-ready UAV hardware, consistent with the entity's training/education-market positioning. Signed by Генеральный директор Борисов Александр Сергеевич (source s1914), which conflicts with the existing unsourced director field (Шпак Максим Викторович, from corrections:add_entities with no source) — recorded as a dated director_history entry per the as_of=source-read convention rather than overwriting the unsourced value outright.",
-        "2026-09-08: read the full founding-document bundle (устав + 2 amendments, s7352) -- confirms Борисов was briefly sole 100% founder before the 3-way split (with НПО ПКРВ and Фонд развития промышленности Тульской области) took effect 10 days later; the устав itself carries only generic boilerplate purpose language, no UAV-specific activity clause."
+        "2026-09-08: read the full founding-document bundle (устав + 2 amendments, s7352) -- confirms Борисов was briefly sole 100% founder before the 3-way split (with НПО ПКРВ and Фонд развития промышленности Тульской области) took effect 10 days later; the устав itself carries only generic boilerplate purpose language, no UAV-specific activity clause.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-tsentr-dinarus": {
@@ -28617,7 +28691,8 @@
           {
             "relationship": "«-СП» (совместное предприятие / joint venture) suffix and shared «Ушкуйник» branding indicate this is a group vehicle alongside npts-ushkuynik (ООО «Ушкуйник», the entity carrying the actual product, «Князь Вандал Новгородский»), not an independent manufacturer. User-flagged as sibling/admin, not a separate manufacturer — 2026-08-23.",
             "slug": "npts-ushkuynik",
-            "source_id": null
+            "source_id": null,
+            "relationship_type": "group-structure"
           }
         ],
         "wb_overlap": "none_found",
@@ -28650,7 +28725,8 @@
         "2026-08-24 direct egrul.nalog.ru lookup: ОГРН and registration date confirmed. Director not returned in this lookup's summary row — a full EGRUL extract would be needed for that specific field, not pursued further given this entity's already-established role (JV/admin arm of the Ушкуйник group, no separate product catalog expected — see existing related_entities note).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5300015906). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-vingrad": {
@@ -30556,7 +30632,8 @@
             "inn": "9001027869",
             "relation": "same registered address (Мелитополь, ул. Гоголя, д. 91/1) and same principal — Кусумов Вахид Абдулович (ИНН 202902196209) is 100% founder of this entity and both 100% founder and ген.директор of 9001027869",
             "source_id": "s5505",
-            "confidence": "confirmed"
+            "confidence": "confirmed",
+            "relationship_type": "sister-entity"
           }
         ],
         "web": [],
@@ -30608,7 +30685,8 @@
       "why": [
         "EGRUL_9500026652_20260905_ooo-arkhangel-zaporizhzhie (s5505) — full signed ЕГРЮЛ выписка pulled 05.09.2026: re-confirms ОГРН, registration 22.08.2024, the Melitopol address, ₽10,000 charter capital, Тимофеев В.С. as ген.директор and Кусумов В.А. as sole 100% founder, main ОКВЭД 30.30.6 within a 50-code list.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
-        "[2026-09-15] wb_overlap=none_found: Brand-name search for дрон-перехватчик «Архангел» on wildberries.ru (2026-09-15) found no product listing — the only Wildberries connection found was branded project merchandise (t-shirts), not the interceptor drone itself."
+        "[2026-09-15] wb_overlap=none_found: Brand-name search for дрон-перехватчик «Архангел» on wildberries.ru (2026-09-15) found no product listing — the only Wildberries connection found was branded project merchandise (t-shirts), not the interceptor drone itself.",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "5026016117": {
@@ -30909,12 +30987,22 @@
             "source_id": "s5528",
             "note": "БФО filing: zero revenue, zero profit — still dormant a year later."
           }
+        ],
+        "related_entities": [
+          {
+            "inn": "2310240630",
+            "relationship": "«Архангел Легион» co-runs this entity's 51st Guards Combined Arms Army UAV-operator training-center relationship, per that entity's own tier_basis.",
+            "slug": "ano-dpo-obrazovatelny-tsentr-gagaring",
+            "source_id": null,
+            "relationship_type": "training-partnership"
+          }
         ]
       },
       "why": [
         "2026-09-06: follow-up pass on the still-unresolved «Архангел Спецназа» (@arx_spn) legal-entity ID — egrul name-search re-tried and still empty, but the channel's own bio yielded an RKN registration number and a landing-site lead (archangelspetsnaza.ru), archived as s6405. Queued @arx_spn on config/channels.txt for a full scrape, since a live scan of its own posts is the only avenue left untried.",
         "EGRUL_2315233718_20260905_ano-arkhangel (s5502) — full signed ЕГРЮЛ выписка pulled 05.09.2026: confirms ОГРН 1242300005640, registration 01.02.2024, the Новороссийск ул. Кутузовская address, Архангельский Г.Е. as director, Архангельский + Ташматов as the two учредители, and the three-code ОКВЭД list (88.99 / 63.11 / 64.99).",
-        "2026-09-07: merged duplicate correction key '2315233718' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class)."
+        "2026-09-07: merged duplicate correction key '2315233718' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class).",
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "7840290315": {
@@ -32767,6 +32855,138 @@
       },
       "why": [
         "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread."
+      ]
+    },
+    "ooo-arkhangel-melitopol-2": {
+      "set": {
+        "related_entities": [
+          {
+            "slug": "ooo-arkhangel-zaporizhzhie",
+            "inn": "9500026652",
+            "relation": "same registered address (Мелитополь, ул. Гоголя, д. 91/1) and same principal (Кусумов В.А., ИНН 202902196209 — 100% founder of both, ген.директор of this one)",
+            "source_id": "s5504",
+            "confidence": "confirmed",
+            "relationship_type": "sister-entity"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      ]
+    },
+    "ooo-arkhangel-crimea": {
+      "set": {
+        "related_entities": [
+          {
+            "slug": "ooo-arkhangel-zaporizhzhie",
+            "inn": "9500026652",
+            "relation": "shared director — Тимофеев Владимир Сергеевич (ИНН 343704095632) is генеральный директор of the Melitopol entity and both director and 50% owner here; his Melitopol appointment (11.04.2025) and this entity's registration (14.04.2025) are three days apart",
+            "source_id": "s5508",
+            "confidence": "confirmed",
+            "relationship_type": "sister-entity"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      ]
+    },
+    "ooo-arkodim-2": {
+      "set": {
+        "related_entities": [
+          {
+            "slug": "ooo-arkodim",
+            "relationship": "Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim — a sister/satellite entity in the same Kazan «Аркодим» family. Not yet EGRUL-выписка-verified for founder overlap or independently assessed for UAV-relevance; tier left unset pending that review.",
+            "relationship_type": "sister-entity"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      ]
+    },
+    "ooo-arkodim-pro": {
+      "set": {
+        "related_entities": [
+          {
+            "slug": "ooo-arkodim",
+            "relationship": "Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different person (Соловьев Константин Юрьевич). Sister entity in the same «Аркодим» family, not yet EGRUL-выписка-verified or independently assessed for UAV-relevance.",
+            "relationship_type": "sister-entity"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      ]
+    },
+    "ooo-ntc-arkodim": {
+      "set": {
+        "related_entities": [
+          {
+            "slug": "ooo-arkodim",
+            "relationship": "Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different person (Соловьев Константин Юрьевич). Sister entity in the same «Аркодим» family, not yet EGRUL-выписка-verified or independently assessed for UAV-relevance.",
+            "relationship_type": "sister-entity"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      ]
+    },
+    "ooo-zemstroyregistr": {
+      "set": {
+        "related_entities": [
+          {
+            "slug": "ooo-arkodim",
+            "relationship": "Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. OKVED (юридическая деятельность) suggests an administrative/legal-services shell rather than a manufacturing entity — not yet independently assessed for UAV-relevance.",
+            "relationship_type": "sister-entity"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      ]
+    },
+    "ooo-ekspoket": {
+      "set": {
+        "related_entities": [
+          {
+            "slug": "ooo-arkodim",
+            "relationship": "Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different, unrelated-seeming person. OKVED (фотография) shows no defense-industry signal — low priority for further pursuit.",
+            "relationship_type": "sister-entity"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      ]
+    },
+    "associatsiya-tekhnologicheskogo-biznesa": {
+      "set": {
+        "related_entities": [
+          {
+            "slug": "ooo-arkodim",
+            "relationship": "Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. A Moscow-registered trade association, not yet independently assessed for UAV-relevance or membership overlap with other network entities.",
+            "relationship_type": "sister-entity"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      ]
+    },
+    "ooo-aeromaks-avia-tsentr-logistika": {
+      "set": {
+        "related_entities": [
+          {
+            "slug": "ooo-aeromaks",
+            "relationship": "Same director (Бессонов Сергей Николаевич, EU-sanctioned per s0754) as ooo-aeromaks — confirms this is a sister/logistics-arm entity of the ГК «Аэромакс» group rather than an unrelated namesake (resolves the open question raised by the original brand-collision flag). OKVED 52.23.13 (aviation ground-handling logistics) is consistent with a group logistics subsidiary; not yet independently assessed for UAV-relevance beyond the shared director.",
+            "relationship_type": "sister-entity"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     }
   }

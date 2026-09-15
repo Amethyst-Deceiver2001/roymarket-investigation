@@ -131,8 +131,8 @@
 
 ## Corporate links
 
-- **NPO Kilowatt LLC** — Second, separately-registered LLC with a near-identical legal name (both "ООО НПО Киловатт") in the same city -- this is the one investigator.org.ua's article most likely describes as the actual "Kapyushon" manufacturer, per its own certification paperwork; the earlier-matched entity's current role is unclear. [s0533]
-- **IE Pinimasova Elena Aleksandrovna** — kilowat48.ru's official-dealer certificate (№2106/2024) is issued BY this entity TO "ИП Пинимасов Александр Вячеславович" (ИНН 583680188519) -- a DIFFERENT person from the ИП already in this registry under npo-kilobatt (Пинимасова Елена Александровна, ИНН 583713716580). See that record's open_questions for the name discrepancy this surfaced. [s0537]
+- **NPO Kilowatt LLC** `name-collision-distinct` — Second, separately-registered LLC with a near-identical legal name (both "ООО НПО Киловатт") in the same city -- this is the one investigator.org.ua's article most likely describes as the actual "Kapyushon" manufacturer, per its own certification paperwork; the earlier-matched entity's current role is unclear. [s0533]
+- **IE Pinimasova Elena Aleksandrovna** `dealer` — kilowat48.ru's official-dealer certificate (№2106/2024) is issued BY this entity TO "ИП Пинимасов Александр Вячеславович" (ИНН 583680188519) -- a DIFFERENT person from the ИП already in this registry under npo-kilobatt (Пинимасова Елена Александровна, ИНН 583713716580). See that record's open_questions for the name discrepancy this surfaced. [s0537]
 
 ## Open questions
 

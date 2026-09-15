@@ -44,9 +44,9 @@
 - **Покров ВЦА «Алёша»** — 4-6 km range, 10-channel circular video-frequency suppression, 1050-6200 MHz. [s1386]
 - **Покров ВЦ4 «Альфа»** — 10 channels, 360° 40cm antennas, 400-5900 MHz, up to 500m radius. [s1386]
 - **Покров ВЦ5 «Альфа»** — 12 channels, 360° 40cm antennas, 400-5900 MHz, backpack design. [s1386]
-- **Детектор «Булат» v.4 (3MX)** — Resold 3mx product — detection range 1.5 km, 300-7200 MHz. [s1386]
+- **Детектор «Булат» v.4 (3MX)** ([full profile](products/bulat.html)) — Resold 3mx product — detection range 1.5 km, 300-7200 MHz. [s1386]
 - **Часы «Таир»** — Wearable notification device paired with the Булат v.4 detector. [s1386]
-- **Детектор «Марс»** — Resold 3mx product — detector of digital video links and ELRS remote controls. [s1386]
+- **Детектор «Марс»** ([full profile](products/bulat.html)) — Resold 3mx product — detector of digital video links and ELRS remote controls. [s1386]
 
 ## Financials
 

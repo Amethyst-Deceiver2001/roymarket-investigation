@@ -49,6 +49,14 @@ Product profile · РОЙ.МАРКЕТ investigation
 {% endfor %}
 {% endif %}
 
+{% if related_entities %}
+## Network context
+
+{% for r in related_entities %}
+- **{{ r.label }}**{% if r.relationship_type %} `{{ r.relationship_type }}`{% endif %} — via {{ r.via }}: {{ r.relationship }}{% if r.source %} [{{ r.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+
 {% if handovers %}
 ## Handovers to government customers / units
 

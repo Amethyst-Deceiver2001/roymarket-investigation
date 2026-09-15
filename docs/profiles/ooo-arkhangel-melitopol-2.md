@@ -68,7 +68,7 @@
 
 ## Corporate links
 
-- **OOO "Arkhangel" (Zaporizhzhia)** — None [s5504]
+- **OOO "Arkhangel" (Zaporizhzhia)** `sister-entity` — None [s5504]
 
 ## Open questions
 

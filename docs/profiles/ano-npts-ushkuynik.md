@@ -128,7 +128,9 @@
 
 ## Corporate links
 
-- **Ushkuynik LLC** — R&D/nonprofit arm of the Ушкуйник group — АНО «НПЦ «Ушкуйник»» is founded by АНО «Платформа НТИ», director Чадаев А.В.; ООО «Ушкуйник» (npts-ushkuynik) is the commercial entity carrying the actual product, «Князь Вандал Новгородский». User-flagged as sibling/admin, not a separate manufacturer — 2026-08-23.
+- **Ushkuynik LLC** `group-structure` — R&D/nonprofit arm of the Ушкуйник group — АНО «НПЦ «Ушкуйник»» is founded by АНО «Платформа НТИ», director Чадаев А.В.; ООО «Ушкуйник» (npts-ushkuynik) is the commercial entity carrying the actual product, «Князь Вандал Новгородский». User-flagged as sibling/admin, not a separate manufacturer — 2026-08-23.
+- **НПО «КАЙСАНТ»** `co-speaker` — Shared exhibition appearance: a "Что показывали на Дроннице" press digest (2025-09-09) round-up describes both АНО «НПЦ «Ушкуйник»»'s optical-fiber «Князь Вандал Новгородский» production figures and НПО «КАЙСАНТ»'s interceptor drone in the same piece, both companies' products shown at Дронница-2025. Confirmed verbatim against the live DB, identical text cross-posted to channels tsg_group71 msg 168 and nponebo msg 95 (both 2025-09-09). Both entities already carry independent cbst_tie records -- this documents a direct physical/promotional co-appearance, not a new ЦБСТ link.
+- **LIMITED LIABILITY COMPANY "TRIMIX"** `co-speaker` — Joint conference attendance, upgraded from the leads file's 'plausible series, needs per-event confirmation' framing: channel chadayevru msg 2722 (2024-04-17, reporting the 12.04.2024 IV конференция по технологиям обнаружения и противодействия БПЛА, Saint Petersburg) directly names BOTH "Руководитель АНО «НПЦ «Ушкуйник» А.В. Чадаев" (speaker) AND "Директор по развитию ООО «Тримикс» С.С. Шандобыло" (speaker) at the SAME single documented event -- not merely a conference-series inference. Verified verbatim against data/roymarket.db 2026-09-15.
 - **Правительство Новгородской области** — Parent entity (25%) [s7369]
 - **АНО «Платформа Национальной Технологической Инициативы»** — Parent entity (25%) [s7369]
 - **АО «УК ИНТЦ «Интеллектуальная Электроника — Валдай»»** — Parent entity (25%) [s7369]

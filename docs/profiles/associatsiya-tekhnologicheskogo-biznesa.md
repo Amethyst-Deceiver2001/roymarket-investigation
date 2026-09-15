@@ -38,7 +38,7 @@
 
 ## Corporate links
 
-- **ООО «Аркодим»** — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. A Moscow-registered trade association, not yet independently assessed for UAV-relevance or membership overlap with other network entities.
+- **ООО «Аркодим»** `sister-entity` — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. A Moscow-registered trade association, not yet independently assessed for UAV-relevance or membership overlap with other network entities.
 
 ## Sources cited in this profile
 

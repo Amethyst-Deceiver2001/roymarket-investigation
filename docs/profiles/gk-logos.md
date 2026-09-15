@@ -1,7 +1,7 @@
 # ГК «Логос»
 
 **Brand:** «Логос» / РЭБ.РУС
-`manufacturer` `WB: not_checked` 
+`manufacturer` 
 
 ИНН 7839303129
 
@@ -9,7 +9,7 @@
 
 - **Charter capital:** ₽10,000
 - **ЦБСТ tie:** Own site (рэб.рус) states the group are "Резиденты научных центров НПЦ БАС и ЦБСТ" (residents of the НПЦ БАС and ЦБСТ research centers) with proprietary counter-drone software.
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
 

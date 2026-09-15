@@ -674,6 +674,39 @@ Extend `FLAGSHIP_PRODUCTS` deliberately, one real product at a time, only
 when a product actually has enough sourced specs/images/field-testing data
 to justify a page — not as a mechanical sweep of the remaining ~484 entries.
 
+Company profiles link to a product's profile page when one exists
+(`PRODUCT_PROFILE_BY_NAME` in `build_company_profile.py`, keyed off the
+exact `products[].name_ru` strings `FLAGSHIP_PRODUCTS` names) — a plain
+description card otherwise, never a dead link to a page that doesn't
+exist yet.
+
+### `related_entities[].relationship_type` — a typed vocabulary, not free-text guessing
+
+Every `related_entities[]` entry always had a free-text `relationship`
+paragraph, but nothing categorized *what kind* of tie it was — a reader
+(or a filter, or a future exhibit) couldn't tell "authorized dealer" from
+"co-exhibited at one forum" from "same director, real corporate family"
+without reading the whole paragraph. `relationship_type` (schema v5,
+`graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES`) fixes that: `dealer`,
+`co-exhibited`, `co-speaker`, `sister-entity`, `group-structure`,
+`managed-by`, `external-registry-cross-listed`, `same-name-different-
+entity`, `training-partnership`, `competitor`. **This vocabulary was
+derived by reading every one of the registry's (then-)42 `related_entities[]`
+entries and categorizing what each one actually documents — never invented
+ahead of the data.** `competitor` is defined for future use; as of
+2026-09-15 no entity carries a sourced competitor claim, and the category
+existing is not licence to populate it without one. `build_relationship_
+graph.py` uses it as the `related` edge's label when present, falling back
+to the old generic "related (ambiguous)" only for an entry that predates
+the taxonomy and hasn't been classified. Renders as a `.tag` chip on both
+company profiles ("Corporate links") and product profiles ("Network
+context" — pulled from every entity in the product's own supply chain,
+labeled "via <entity>" so a reader sees whose relationship it actually is).
+
+When adding a new `related_entities[]` entry, set `relationship_type` from
+this vocabulary at the same time — don't leave it for a later backfill
+pass, or the entry silently falls back to the generic label again.
+
 ## Publishing
 
 `docs/index.html` is the GitHub Pages source (repo Settings → Pages →

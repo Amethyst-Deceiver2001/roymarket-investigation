@@ -50,7 +50,7 @@
 
 ## Corporate links
 
-- **Ushkuynik LLC** — «-СП» (совместное предприятие / joint venture) suffix and shared «Ушкуйник» branding indicate this is a group vehicle alongside npts-ushkuynik (ООО «Ушкуйник», the entity carrying the actual product, «Князь Вандал Новгородский»), not an independent manufacturer. User-flagged as sibling/admin, not a separate manufacturer — 2026-08-23.
+- **Ushkuynik LLC** `group-structure` — «-СП» (совместное предприятие / joint venture) suffix and shared «Ушкуйник» branding indicate this is a group vehicle alongside npts-ushkuynik (ООО «Ушкуйник», the entity carrying the actual product, «Князь Вандал Новгородский»), not an independent manufacturer. User-flagged as sibling/admin, not a separate manufacturer — 2026-08-23.
 
 ## Sources cited in this profile
 

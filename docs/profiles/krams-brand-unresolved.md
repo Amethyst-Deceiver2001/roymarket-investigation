@@ -1,12 +1,12 @@
 # KRAMS (brand, legal entity unresolved) — КРАМС (бренд, юрлицо не установлено)
 
-`manufacturer` `WB: not_checked` 
+`manufacturer` 
 
  · Kemerovo Oblast (per krams.pro / Kuzbass governor visit coverage)
 
 ## At a glance
 
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** none_found
 
 ## Products
 

@@ -1,10 +1,10 @@
 # «Булат» / 3mx
 
-`manufacturer` `WB: not_checked` 
+`manufacturer` `WB: confirmed_reseller` 
 
 ## At a glance
 
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** confirmed_reseller
 
 ## Principals & persons of interest
 

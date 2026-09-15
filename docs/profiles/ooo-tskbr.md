@@ -1,6 +1,6 @@
 # ООО «ЦКБР»
 
-`sanctioned` `manufacturer` `WB: not_checked` 
+`sanctioned` `manufacturer` 
 
 ИНН 5040176793 · ОГРН 1225000003458 · Zhukovsky
 
@@ -12,7 +12,7 @@
 - **Director:** Косолапов Олег Юрьевич
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
-- **Wildberries overlap:** not_checked
+- **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
 
