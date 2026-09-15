@@ -3186,3 +3186,1040 @@ renders the matched icon directly on the product's own square (a new
 7px size floor so the icon has room to draw. Full writeup in
 `notes/hub_insignia_design_notes.md`'s "v6" entry. Republished to the
 same graph URL.
+
+## 2026-09-14: registry-wide connectivity audit (local data only)
+
+Local-only pass over `relationship_graph.json`/`entities.json`/
+`people.json` to answer "which records still have no documented tie to
+ЦБСТ, and where are shared-principal/ИНН links missing" — no live pulls,
+everything below is derivable from what's already on file.
+
+**Registry internal consistency: clean.** No personal ИНН appears on two
+different `people.json` records; every founder ИНН that matches a known
+person is correctly reflected in that person's `roles[]`. No dedup/
+shared-principal bugs found.
+
+**Graph structure**: 200 connected components over 1308 nodes; giant
+component only 158 nodes. Most fragmentation is expected/benign — each
+manufacturer typically forms its own small star (entity + director +
+products) — but it also means the `cbst_tie` field (30/207 entities carry
+an explicit self-declared "ЦБСТ resident/supported" citation) has **no
+corresponding graph edge type**; those 30 ties are real and sourced but
+invisible to `relationship_graph.json`'s own connectivity view. Not a
+research gap, a graph-schema gap — `related` edges (19 total) are all
+name-collision disambiguation, not ЦБСТ-tie edges.
+
+**The real gap: 25 manufacturer-tier entities with zero documented
+connection of any kind** — empty `tier_basis`, no `cbst_tie`, no
+`government_contracts[]`, no `parents[]`/`subsidiaries[]`, no path to a
+`cbst-core` entity even through uncited graph edges, and (24/25) zero
+`sources[]` entries at all:
+
+`npts-ushkuynik`\*, `ooo-aviron`, `kb-germes`, `ooo-kopterlab`,
+`ooo-atlant-aero`, `ooo-sibnk`, `ooo-skb-piranya`\*, `ooo-aero-khit`,
+`ooo-tskbr`, `ao-kotlin-novator`, `ooo-kleverkopter`, `ooo-arkodim`,
+`ooo-eyartek`, `ooo-vizionero`, `ooo-kb-sinergiya`, `ooo-metaskan`,
+`ooo-pekhtra`, `alyaska`, `ooo-smart-teknolodzhis`, `ooo-kravt`,
+`ooo-opkb-eksplomet`, `npp-elvo-kolskaya-verf`,
+`ooo-intek-bespilotnye-sistemy`, `ooo-titan-severo-zapad`, `ooo-hab-svo`.
+
+(\* `npts-ushkuynik`/`ooo-skb-piranya` are almost certainly connected in
+reality — both are extensively documented elsewhere in this project's own
+notes/memory — the empty fields here just mean that documentation was
+never folded into `entities.json`'s structured fields; treat these two as
+a registry-completeness bug, not a real open lead, and backfill from
+existing notes rather than re-researching.)
+
+For the other ~23: cross-checked all 25 records' named `director` fields
+against `people.json` — **22 of the 25 directors have no person record at
+all**, and the 3 that do carry no `roles[]` at any other entity. This
+means these 25 entities have never been run through the standard
+director/founder cross-reference screen
+(`scripts/screen_upr_uchr.py`/ФНС `search-proc.json`, the same tool that
+already surfaced real ties for `ao-npp-real`, `ooo-prometey`,
+`ooo-npk-atlant-aero`, `ooo-ik-aviaok`, `ooo-selskohozyaystvennye-
+bespilotnye-sistemy-mira`, and `ao-rti-radio` per their own `tier_basis`
+notes above) — the highest-value next network action for closing this
+list, since it's exactly the technique that already resolved the same
+shape of gap for other entities in this same registry.
+
+Separately, 89 more manufacturer/money-layer/plumbing entities were
+flagged by the same structured-field check but DO carry real `tier_basis`
+prose reasoning (e.g. "50% owned by Гагаринг per FY2025 audit",
+"co-founder of АRRS alongside Гагаринг/Бегак") — these are not gaps, just
+cases where the ownership/personnel tie lives in prose and isn't yet
+mirrored into the structured `parents[]`/`cbst_tie` fields. Lower
+priority than the 25 above; a field-backfill task, not a research gap.
+
+**Isolated-node check (zero graph edges, any type)**: 4 entities, 3 real
+(`ao-khk-gumich` — EGRUL director-restricted per 129-ФЗ, already flagged
+in its own `open_questions[]`; `ip-sidorov-andrey-sergeevich` — weakest
+dossier-only lead in the Тримикс/3MX cluster, score ~39 Aleph match, no
+ИНН; `ooo-kronshtadt-bespilotnye-sistemy` — documented via a secondary
+Aleph EGRUL-mirror snapshot as 100% owner of `ooo-gk-aeromaks`, not yet
+primary-EGRUL-confirmed, so deliberately not wired into `ooo-gk-aeromaks`'s
+`parents[]` per the no-guessing rule). `bulat-3mx` is a false positive —
+already-resolved WB brand stub.
+
+**2026-09-14, later same day: local prerequisite work for item 1 below.**
+`screen_upr_uchr.py` only iterates `people.json` records that already carry
+`inn_personal` — none of the 25-entity gap list's directors did. 8 of the 25
+entities already had a full EGRUL выписка on file from an earlier pull
+(`ooo-aviron`, `ooo-sibnk`, `ooo-kleverkopter`, `ooo-atlant-aero`,
+`ooo-eyartek`, `ooo-smart-teknolodzhis`, `ooo-aero-khit`, `ao-kotlin-novator`)
+— local `pdftotext -layout` re-reads of those PDFs (no new network call)
+extracted personal ИНН for their directors and filled `people.json` via
+`corrections_people.json`. In the process found and fixed two real data bugs,
+both independently reconfirmed against two separate primary EGRUL pulls each:
+- **`ooo-eyartek`'s director field was wrong.** It read "Жуков Андрей
+  Викторович", sourced to s0485 — but s0485 itself, re-read directly, names
+  Капустин Павел Евгеньевич (ИНН 732899377685). This was a mis-transcription
+  at data-entry time, not a real director change; it had already been flagged
+  as an unresolved leader-id.ru-vs-EGRUL conflict in the entity's own
+  `open_questions[]` since 2026-08-24. A second EGRUL выписка (s6729,
+  2026-09-07) independently confirms Капустин. Corrected `director`/
+  `director_history`/`founders` on the entity, retracted `zhukov-andrey-
+  viktorovich`'s false role (his `inn_personal` came from an unrelated Aleph
+  ИП record and is kept unattached, not deleted), promoted `kapustin-pavel-
+  evgenevich` from candidate to confirmed GD role.
+- **`lapin-igor-nikolaevich`'s `inn_personal` was wrong.** It read
+  673108121624 from a 2026-08-26 Aleph EGRUL-mirror pull (s1981), but two
+  independent primary EGRUL выписки for `ooo-aviron` (s0460, s6746) both
+  give 432909192423 for the same person. Primary source overruled the Aleph
+  mirror.
+Also filled previously-empty `inn_personal` for `yatsenko-viktor-
+vyacheslavovich` (231907430700), `gusev-sergey-vladimirovich` (732102513469
+— this also resolves a 2026-08-24 OpenSanctions namesake ambiguity in favor
+of the sanction.linked candidate), and added a new person record `kot-oleg-
+petrovich` (772453374643, GD of `ooo-smart-teknolodzhis`). `ao-kotlin-
+novator`'s Жук and `ooo-atlant-aero`'s Хутешен already had `inn_personal` —
+nothing to do there. `ooo-sibnk`'s Ступников (165043571104) was extracted
+but not yet found matched to an existing people.json stub — check on the
+next pass. Registry re-extracted, `build_relationship_graph.py` re-run,
+`check_registry.py` clean (0 errors).
+Net: **6 people now screenable** by `screen_upr_uchr.py` who weren't before
+(Лапин, Ступников*, Гусев, Хутешен already had it, Яценко, Кот, Капустин,
+Жук already had it) — still leaves ~17 of the 25 gap-list directors with no
+EGRUL pull on file at all (`kb-germes`, `ooo-kopterlab`, `ooo-tskbr`,
+`ooo-arkodim`, `ooo-vizionero`, `ooo-kb-sinergiya`, `ooo-metaskan`,
+`ooo-pekhtra`, `alyaska`, `ooo-kravt`, `ooo-opkb-eksplomet`, `npp-elvo-
+kolskaya-verf`, `ooo-intek-bespilotnye-sistemy`, `ooo-titan-severo-zapad`,
+`ooo-hab-svo`), needing a fresh EGRUL pull before they can be added.
+
+**2026-09-14, same day: `ooo-sibnk` un-merge — a real duplicate-merge bug,
+found while checking which gap-list entities already had an EGRUL pull.**
+`ooo-sibnk` (ИНН 7814475694) had been `_merged_into` `ooo-sibirskaya-
+navigatsionnaya-kompaniya` (ИНН 4205376019 — the entity docs/index.html
+documents as «Гаскар»'s 100% owner) on the premise that both records shared
+the same director, Ступников Андрей Генадьевич. That shared-director claim
+on `ooo-sibnk`'s side was itself sourced only to an unverified brief-table
+row. `ooo-sibnk`'s own full EGRUL выписка (s6752, already on file, pulled
+2026-09-07 — apparently not cross-checked against the merge at the time)
+names a different person, Батурин Вячеслав Юрьевич (ИНН 781434774182), as
+director/sole founder since incorporation with no change history. Two
+different ИНН are two different legal entities regardless of a shared
+"СИБНК" short name; nothing else ties this ₽10,000-capital shell to the
+Гаскар-owning entity. Un-merged, restored as its own live record with the
+corrected director, added `baturin-vyacheslav-yurevich` as a new person.
+Re-extracted, relationship graph rebuilt, `check_registry.py` clean (0
+errors). Worth treating as a prompt to spot-check other `_merged_into`
+records whose merge rationale rests on an unverified field.
+
+**2026-09-14, same day: spot-checked every other `_merged_into` record**
+(prompted by the `ooo-sibnk` bug above) — 2 entity merges, 6 person merges.
+No further sibnk-style bugs. Entity merges (`kb-germes`→`npo-kaysant`,
+`ooo-kb-sinergiya`→`ooo-konstruktorskoe-byuro-sinergiya`) both rest on an
+identical ИНН on both sides, directly re-verified — sound. Correction to
+the earlier note above: `kb-germes`/`ooo-kb-sinergiya` are NOT among the
+25-entity gap list's "no ИНН, needs a name lookup" cases — they're merged
+scaffolds of entities that already have one; only `alyaska` genuinely lacks
+an ИНН. Person merges: `barakhtin-artem-vladimirovich-2` and `lysenko-
+andrey-olegovich-2` confirmed via an independent exact leader-id.ru
+`user_id` match on both sides — strong. The other 4 (`brovchenko-aleksandr-
+rufinovich`, `brovchenko-sergey-rufinovich`, `gorodnichin-dmitriy-
+aleksandrovich-2`, `karabinskiy-ivan-igorevich`) rest only on same-name/
+word-order-variant matching with no independent identifier — checked each
+canonical record directly, no contradicting DOB/ИНН, roles complementary
+not overlapping (e.g. the two Бровченко brothers hold roles at different
+funds, consistent with being distinct siblings, not a merge of each other).
+Adequate but structurally the weakest class here — worth re-checking if a
+primary EGRUL pull ever surfaces a personal ИНН that contradicts one.
+
+**2026-09-14, later same day: user ran the 12-entity EGRUL batch pull —
+all 12 succeeded, 0 failed.** Folded in via `pdftotext -layout` local
+re-reads (no network call) + `corrections_entities.json`/
+`corrections_people.json`, same pattern as the earlier 8. All 12 directors
+matched this registry's own already-recorded `director` field exactly —
+no eyartek-style mis-transcription this round. inn_personal filled for
+Барахтин, Поспехов, Суховерхий, Лысенко, Калиновский (also resolves a
+2026-08-24 Aleph-only open question), Федукович, Королев (also
+primary-confirms a leader-id.ru-only claim about a second entity, ООО
+«КРАВТ»), Фоминых; two new person records added (Косолапов Олег Юрьевич,
+Петров Владимир Алексеевич). Красковский/Хабибулин already had matching
+`inn_personal` from an earlier pass — nothing to do there. Two further
+real findings, both independently reconfirmed against two EGRUL pulls each
+(same discipline as the `ooo-eyartek`/`ooo-sibnk` bugs earlier this day):
+- **`ooo-arkodim`'s director was stale, not wrong.** The registry had
+  Соловьев Константин Юрьевич as current (dated 2022-05-20), but the fresh
+  2026-09-14 pull shows a LATER GRN (13.10.2022) naming Барахтин Артём
+  Владимирович — i.e. Барахтин returned to/retained the GD role after
+  Соловьев. `director` field corrected; the entity's own open_questions
+  about a leader-id.ru "АРКОДИМ-Про" self-report for Соловьев is now
+  narrowed (he plausibly heads a *different* affiliated «Аркодим» entity)
+  rather than resolved outright.
+- **`npp-elvo-kolskaya-verf`'s scalar `director` field was stale**, stuck
+  on a 2021 value (Петрова Ольга Сергеевна) despite a newer director_history
+  entry (Петров Владимир Алексеевич, 2024-12-02) already on file since
+  2026-09-07 — a display-field-not-updated bug, not a sourcing error. The
+  fresh 2026-09-14 pull independently reconfirms Петров, and — bonus —
+  resolves a standing flagged discrepancy: the brief's original "Петров
+  В.А." attribution was directionally right all along, just pointing at a
+  not-yet-appointed future director at scaffold time. `director` field
+  corrected to match the latest history entry.
+Re-extracted, relationship graph rebuilt, `check_registry.py` clean (0
+errors). Net new people screenable by `screen_upr_uchr.py`: 8 (Барахтин,
+Поспехов, Суховерхий, Лысенко, Калиновский, Федукович, Королев, Фоминых) +
+2 new (Косолапов, Петров) = 10, on top of the earlier 8 from the first
+prerequisite pass.
+
+**2026-09-14, later same day: pb.nalog.ru captcha wall now solvable
+interactively.** The user hit the wall mid-run and supplied a HAR capture
+of pb.nalog.ru's own captcha-dialog flow — reverse-engineered as a fully
+stateless, cookie-free token exchange (no login/session involved at all):
+`GET /captcha-dialog.html` returns a fresh `captchaToken` embedded in the
+HTML; `GET /static/captcha.bin?a=<token>&version=4` returns the actual
+6-digit-distorted JPEG keyed by that token; `POST /captcha-proc.json`
+with the solved digits + token returns a `pbCaptchaToken`; the originally
+blocked request is retried with that value attached. Added `--solve-captcha`
+to both `scripts/screen_upr_uchr.py` and `scripts/screen_disqualified.py`
+(same shared pb.nalog.ru backend/wall) — with the flag on, a captcha hit
+now pauses the run, saves the image to a temp file, and prompts on stdin
+for the digits instead of skipping the person. Without the flag, behavior
+is unchanged (skip and continue, as before). Confirmed the HTML-parsing
+regex against the real captured page; the live HTTP round-trip itself is
+untested from this sandbox (pb.nalog.ru is unreachable here, same
+class of restriction as kad.arbitr.ru) — first real run is the actual test.
+**Declined to build an automated OCR/ML captcha solver when the user asked**
+(even trained on their own manual solves) — that would be a different thing
+from the interactive flow, an actual bot-detection bypass rather than a
+human-in-the-loop convenience; the user accepted this and asked for a
+`--limit N` flag instead, added to both scripts (caps how many people a
+`--solve-captcha` session processes, so a sitting can be sized to how many
+captchas the user wants to solve at once).
+
+**2026-09-14, later same day: "other data gaps?" query surfaced a real
+graph-wiring bug plus one significant missing connection.** Re-ran the
+zero-connection check from the original audit — 21 of the original 25
+remain gapless (the 4 non-gaps were npts-ushkuynik/ooo-skb-piranya, already
+fixed, and kb-germes/ooo-kb-sinergiya, already-sound merges). Cross-checking
+today's newly-filled director ИНН against every entity's `founders[]`
+turned up **`ooo-atlant-aero` — the single most significant entity in the
+whole registry to have a documented-in-prose-but-never-wired ЦБСТ tie**:
+docs/index.html's own big ЦБСТ-residents paragraph already names it as an
+EU-sanctioned resident, 854 employees, ₽59.08bn declared income (the
+largest single manufacturer in this brief), 51%-owned by АО «Проминвест»
+itself under Технодинамика/Rostec trust management — none of which had
+ever been mirrored into `cbst_tie`/`parents[]`. Wired now (`parents[]` on
+ooo-atlant-aero, mirrored `subsidiaries[]` on ao-prominvest, `cbst_tie`/
+`tier_basis` on ooo-atlant-aero); flagged a real open question where this
+new `parents[]` ownership split doesn't reconcile with the entity's
+existing `founders[]` (different names, no share%) — needs a fresh EGRUL
+выписка to settle.
+
+**Structural bug found in the process**: `build_relationship_graph.py`'s
+`parents[]`/`subsidiaries[]` edge-builder keys ONLY on a `slug` field (or
+`ogrn` for subsidiaries) — an entry with only `name`+`inn` (no `slug`)
+silently produces NO graph edge at all, no error, no warning. This bit my
+own `npts-ushkuynik`→`ano-npts-ushkuynik` correction from earlier today
+(fixed). Swept the WHOLE registry for the same pattern: found and fixed 2
+more on `ano-npts-ushkuynik`'s own `parents[]` (Платформа НТИ, ЦСАСД —
+both already had registry slugs, just never cross-referenced) — flagged a
+3rd (`АО «УК ИНТЦ «Интеллектуальная Электроника — Валдай»»`, ИНН
+5300002784) as a genuine gap, no matching entity record exists. "owns"
+edge count went 15→20 across these fixes. Re-extracted, graph rebuilt,
+`check_registry.py` clean (0 errors). **Worth adding a `check_registry.py`
+warning for this class of bug** (a `parents[]`/`subsidiaries[]` entry with
+neither `slug` nor `ogrn` set) so it surfaces automatically instead of
+needing another manual sweep — not done yet, flagged for next session.
+
+**2026-09-14, later same day: «Аляска»/«Алёша» legal-entity identity —
+researched, NOT resolved.** User asked directly. Real diligence pass, all
+negative: GISP industrial-atlas bulk dump has only 2 "Аляска" name matches
+nationwide, both unrelated (a СПб printing company and an Амурская область
+plastics company) — also caught and corrected a stale/wrong `state_programs`
+note that had claimed an ОКВЭД 27.40 corroboration match that doesn't
+actually exist in the underlying dump file. egrul.nalog.ru name search
+restricted to Rostov region turned up 9 historical «Аляска»-named entities,
+all registered 2002-2016; a full EGRUL выписка pulled directly for the most
+plausible (ИНН 6107003703, Volgodonsk) confirms it was excluded from ЕГРЮЛ
+as dormant on 31.01.2007 — dead two decades before this drone project
+existed. Nationwide name search (unrestricted region) surfaced no better
+candidate. Press (TASS/RG/ВЗГЛЯД/ОНФ/Аргументы Недели) consistently
+describes only "Ростовские изобретатели/разработчики," names no legal
+entity, and gives only first names for personnel (Дмитрий, Василий);
+confirms Кулибин-клуб (already `kulibin-klub` in this registry) as a
+backer/tester, explicitly not the developer. Full negative-findings
+writeup recorded in `alyaska`'s own `open_questions[]` so this doesn't get
+re-researched from scratch — next step if pursued: a zakupki.gov.ru/
+rts-tender organizer search for "Алёша"/"Аляска" drone-supply notices.
+
+**2026-09-14, later same day: «Аляска»/«Алёша» legal identity RESOLVED —
+ООО «ИОНОС», ИНН 6168719068, EU-sanctioned 15.6.2026.** User flagged a new
+EU Official Journal document directly
+(eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202601364). Site
+blocks scripted/curl access via an AWS WAF bot challenge (same class as
+kad.arbitr.ru) — fetched via the claude-in-chrome browser extension
+instead, which passes it. **Council Decision (CFSP) 2026/1364 of 15 June
+2026, entry 801**, names ООО «ИОНОС» directly: "a Russian company
+specialising in the manufacture of electric lamps and lighting equipment
+... The company, in particular through the project 'Alaska', produces the
+First Person View (FPV) drones 'Alyosha'..." — the exact ИНН (6168719068)
+independently confirmed against the GISP dump and a freshly-pulled full
+EGRUL выписка. This is the SAME ООО «Ионос» that had been researched and
+explicitly ruled OUT as an unrelated LED-lighting company earlier this
+same session (its own site shows no drone content) — turns out it's both:
+LED lighting as the declared/public business, drones as a second,
+undeclared line. Registry updated: `alyaska`'s core identity fields
+(name_ru, inn, ogrn, address, director, founders) now reflect the real
+ООО «ИОНОС», `brand_ru` set to «Аляска», full `sanctions[]` entry added,
+`okved_mismatch` set, new person record `ionov-anton-aleksandrovich`
+(sole founder/director) added. Both primary sources archived to
+`data/sources/` (`EU_SANCTIONS_6168719068_20260615_ooo-ionos-council-
+decision-2026-1364.txt` — browser-fetched text capture, PDF itself
+unobtainable by curl; `EGRUL_6168719068_20260914_ooo-ionos.pdf`). Housekeeping
+chain re-run, `check_registry.py` clean (0 errors). Note: the EU document's
+full entity/person list (9 persons + 45 entities) was only read through
+roughly entry 807 given time — worth a fuller re-read for any other
+existing-registry entities that might appear further down the list.
+
+**Still open, needs a live pull (handed to user, not run here) — priority
+order**:
+1. `scripts/screen_upr_uchr.py --solve-captcha` — now ready to screen
+   ~18 gap-list-linked people with `inn_personal` on file across both
+   prerequisite passes, and can now solve the captcha wall interactively
+   instead of stalling on it.
+2. `alyaska` (the only entity from the original 25-list still genuinely
+   lacking an ИНН) needs a name-based EGRUL search before it can get a
+   выписка pull at all.
+3. New from this pass, not yet investigated: `npp-elvo-kolskaya-verf`'s
+   brief-sourced compound row also names a «Кольская верфь» principal
+   (Шаповалов С.М., ИНН 5190102381) not covered by any EGRUL pull on this
+   ИНН — likely a genuinely separate entity/person worth its own pull.
+2. Full EGRUL выписка for `ao-khk-gumich` (director-restricted) and
+   `ooo-kronshtadt-bespilotnye-sistemy` (unverified secondary source).
+3. ~~Backfill `npts-ushkuynik`/`ooo-skb-piranya`'s `tier_basis` from
+   existing project notes~~ **Done 2026-09-14.** Both had real ties already
+   sitting in `docs/index.html` prose, just never mirrored into structured
+   fields: `ooo-skb-piranya` is directly named by ЦБСТ's own channel (post
+   2159491523:2095, 24.04.2026) as one of six EU-sanctioned ЦБСТ residents.
+   `npts-ushkuynik` (ООО «Ушкуйник») is the commercial manufacturing arm of
+   `ano-npts-ushkuynik` (АНО «НПЦ «Ушкуйник»»), itself a named ЦБСТ resident
+   under a dated cooperation agreement (06.09.2024, Дронница 2024,
+   Чадаев/Рубинштейн) — wired via a new `parents[]` entry (no `share_percent`,
+   since no EGRUL equity link exists; npts-ushkuynik's own director/founder
+   identity is EGRUL-restricted) plus an indirect `cbst_tie`. Both applied
+   via `corrections_entities.json`, `extract_registry.py` + `check_registry.py`
+   re-run clean (0 errors); registry-wide "with a ЦБСТ tie" count moved
+   22→24. Still open: item 1 (ФНС cross-reference on the 25-entity gap
+   list's 22 unrecorded directors, live pull) and item 2 (EGRUL выписка for
+   `ao-khk-gumich`/`ooo-kronshtadt-bespilotnye-sistemy`, live pull) below.
+
+**2026-09-14, later: user ran `screen_upr_uchr.py --solve-captcha` manually
+(item 1 above, live pull).** 39 people screened this pass (79 total now
+have `other_entities_checked_at`). 10 got new director/founder
+cross-references; 8 of those confirm links to entities already in the
+registry, matching the existing `director` field with no contradictions
+(fedukovich-kirill-olegovich↔ooo-kopterlab, barakhtin-artem-vladimirovich
+↔ooo-arkodim, lysenko-andrey-olegovich↔ooo-vizionero, pospekhov-ivan-
+aleksandrovich↔ooo-metaskan/ooo-tsyus, begak-aleksandr-arkadevich↔np-
+diskretno-innovatsionny-klaster-maloy-aviatsii/ooo-akr-begak, zagorskiy-
+aleksandr-sergeevich↔ooo-npo-nebo, petrov-vladimir-alekseevich↔npp-elvo-
+kolskaya-verf). One small gap closed: begak's own `roles[]` had no
+reciprocal entry for ooo-akr-begak despite that entity's own
+`director_history` already naming him — added via `corrections_people.json`
+(source s0525, already on file).
+
+Two new leads flagged for follow-up (NOT yet EGRUL-verified or wired —
+`open_questions.json` isn't usable for this since `extract_registry.py`
+regenerates it wholesale from a frozen text snapshot and silently drops
+hand additions; tracking here instead):
+- **Аркодим cluster**: barakhtin-artem-vladimirovich (already director of
+  ooo-arkodim) surfaced as director/founder of 6 more entities sharing the
+  "Аркодим" name pattern or a Kazan address — ООО «Аркодим-2» (ИНН
+  1659173832), ООО «Аркодим-Про» (ИНН 1658146106), ООО «НТЦ «Аркодим»»
+  (ИНН 1659182805), ООО «Земстройрегистр» (ИНН 1659145169), ООО «Экспокэт»
+  (ИНН 1659113230), Ассоциация технологического бизнеса (ИНН 9726005220).
+  High signal — same director as a documented registry entity. Pull EGRUL
+  for each and assess as a sister-entity cluster.
+- **Аэромакс overlap**: bessonov-sergey-nikolaevich found as director of
+  ООО «АЭРОМАКС-АВИА (ЦЕНТР-ЛОГИСТИКА)» (ИНН 9704149557) — name overlaps
+  the already-documented `ooo-aeromaks`. Not yet checked whether this is a
+  related sister entity (shared founder/address/brand) or an unconnected
+  namesake — pull EGRUL and compare before concluding either way.
+
+Triaged, closed, no action (reviewed and deliberately not pursued, not an
+unreviewed gap): kot-oleg-petrovich's 4 new entities are ЦФА/fintech (Смарт
+Текнолоджис Софт, Цифровая платформа, ЦФА Информационная система, ЦФА
+Система) with no UAV/defense-industry OKVED signal; lysenko-andrey-
+olegovich's Визиотек, pospekhov-ivan-aleksandrovich's Альянс/Системы
+безопасности/Стратум, zagorskiy-aleksandr-sergeevich's Профтехстрой, and
+baturin-vyacheslav-yurevich's БИРС/БНС likewise show no defense-industry
+OKVED or name signal from `other_entities` alone.
+
+**2026-09-14, later still: both flagged leads pulled and wired.** EGRUL
+open-API lookups (egrul.nalog.ru, no captcha) archived to `data/sources/`
+as `EGRUL_OPEN_<ИНН>_20260914_*.txt` (source_ids s7436–s7442, via the
+standard housekeeping bundle). Аэромакс overlap RESOLVED, not a namesake:
+ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) has the exact same
+director, Бессонов Сергей Николаевич, as the already-documented,
+EU-sanctioned `ooo-aeromaks` — added as a new thin entity
+(`ooo-aeromaks-avia-tsentr-logistika`) with a `related_entities` link both
+ways. Аркодим cluster: all 6 entities confirmed real via EGRUL (3 share
+Барахтин as current director — Аркодим-2, Земстройрегистр, АТБ; 3 have him
+as a recorded founder under a different current director, Соловьев
+Константин Юрьевич — Аркодим-Про, НТЦ «Аркодим», плюс Экспокэт under yet
+another director) — all added as thin entities with `tier: null` (not yet
+independently assessed for UAV-relevance beyond the shared
+director/founder) and reciprocal `related_entities` links to `ooo-arkodim`.
+Registry entity count 207→214. `build_relationship_graph.py` +
+`check_registry.py` re-run clean (0 errors, no new warnings). Still open:
+a fuller EGRUL-выписка pull (founder cap tables, addresses) and an
+independent UAV-relevance assessment for the 6 Аркодим-family entities and
+the Аэромакс-Авиа logistics arm — none of this pass went beyond the open
+API's name/director confirmation.
+
+**2026-09-14, systematic sweep: cross-referenced every person's
+`other_entities` field against the registry's own entity INN index** —
+found 31 cases where a raw `other_entities` hit points at an already-
+documented registry entity but the person's own `roles[]` had no
+reciprocal entry (the same class of gap `begak-aleksandr-arkadevich` had
+for ooo-akr-begak, caught earlier this session). Of the 31, **9 had a
+clean, already-sourced match** — the target entity's own `director`
+field and `director_history` already named this exact person with a real
+`source_id`, just missing the reciprocal person-side role — backfilled via
+`corrections_people.json` reusing that same source_id (no new lookup, no
+new source needed): olga-sokolova->ooo-tsugam (s0432; also fixed a
+name-format-only mismatch -- person's `fio_ru` lacked a patronymic, same
+person), barashkov-aleksandr-sergeevich->ano-arrs-krasnodar (s6777),
+bessonov-sergey-nikolaevich->ao-rti-radio (s7345),
+stupnikov-andrey-genadevich->ooo-sibirskaya-navigatsionnaya-kompaniya
+(s0451), fedyaeva-anna-yurevna->ao-korporatsiya-sinergiya (s0123),
+rogozin-aleksey-dmitrievich->ano-tsentr-razvitiya-transportnykh-tekhnologiy
+(s6867), timofeev-vladimir-sergeevich->ooo-arkhangel-crimea (s6851),
+kusumov-vakhid-abdulovich->ooo-arkhangel-melitopol-2 (s6850),
+shestopalov-sergey-anatolevich->ooo-npo-kilovatt-shestopalov (s0537).
+`build_relationship_graph.py` + `check_registry.py` clean afterward (0
+errors, role edges 615->624, exactly +9).
+
+**Remaining 22 gaps are NOT safe to backfill without a live pull** — either
+the `other_entities` role is `founder` (no `founders_history` entry to
+reuse the same way `director_history` was reused above) or the entity's
+current `director` field names a different person than the
+`other_entities` hit (the claimed link may be stale, a past role, or needs
+its own primary-source check before trusting it). These include: the 6
+already-flagged Аркодим-family + Аэромакс-Авиа cases logged above, plus
+dmitriy-vladimirovich-rubinshteyn<->ooo-tekhnomost/ooo-momento-rubinshteyn,
+garkusha-vladimir-vladimirovich<->ooo-gk-logos,
+korchagina-olga-aleksandrovna<->ooo-skb-piranya,
+khuteshen-aleksey-aleksandrovich<->ooo-ametist/ooo-everest,
+lobov-vadim-georgievich<->ao-korporatsiya-sinergiya (founder role, vs.
+fedyaeva-anna-yurevna's now-confirmed director role there — worth checking
+whether lobov is a past/co-founder rather than a contradiction),
+mikhelson-leonid-viktorovich<->ooo-levit/ooo-nova,
+mikhelson-viktoriya-leonidovna<->ooo-ges-2. Needs EGRUL-выписка pulls
+(live, hand to user) before wiring any of these.
+
+**Same pass, immediate follow-up: checked each founder-role gap's own
+founders/founders_history for a reusable source too** (not just
+director_history) -- found 6 more clean matches, same backfill pattern:
+garkusha-vladimir-vladimirovich->ooo-gk-logos (s6784, 100%),
+korchagina-olga-aleksandrovna->ooo-skb-piranya (s6730, 60%),
+lobov-vadim-georgievich->ao-korporatsiya-sinergiya (s6831, 100% --
+resolves the earlier open question of whether this contradicted
+fedyaeva-anna-yurevna's director role at the same entity; it doesn't,
+founder and director are different people/roles there),
+mikhelson-leonid-viktorovich->ooo-levit (s6697, 78.29%) and ->ooo-nova
+(s6810, 100%), mikhelson-viktoriya-leonidovna->ooo-ges-2 (s6822, 0.098%).
+`check_registry.py` clean after this pass too (0 errors, role edges
+624->630, exactly +6). Remaining unresolved gaps: the 6 Аркодим-family +
+Аэромакс-Авиа cases (already flagged above, need a fuller EGRUL-выписка
+pull) plus dmitriy-vladimirovich-rubinshteyn<->ooo-tekhnomost/ooo-momento-
+rubinshteyn and khuteshen-aleksey-aleksandrovich<->ooo-ametist/ooo-everest
+(no sourced founders_history/director_history entry to reuse for either --
+genuinely need a live pull, not just a reciprocal-field gap).
+
+**2026-09-14, later still: wired the 7 confirmed-but-unsynced ЦБСТ resident
+ties, plus resolved the flagged ГК «Логос» "duplicate."** A research pass
+(spawned subagent) cross-checked ЦБСТ's own channel/site language for every
+entity `docs/index.html` already documents as a confirmed "резидент ЦБСТ"
+against the structured `cbst_tie` field, and found 8 real sync gaps — the
+sourced claim was sitting in prose but never mirrored into the registry
+(same pattern as the earlier `ooo-skb-piranya`/`npts-ushkuynik` fixes).
+Wired via `corrections_entities.json`, each with a direct primary-source
+Telegram quote (channel 2159491523, post id + date, `source_id: null` since
+these are `data/roymarket.db` scraped posts, not `data/sources/` documents
+— the channel/post/date is the citation, consistent with existing
+`ooo-superkhrono`/`ooo-vozdushnyy-traktat` precedent):
+- `npo-kaysant` (ИНН 7733393203) — "КБ «Гермес», резидент ЦБСТ" (post 1509,
+  14.11.2025)
+- `ano-npts-ushkuynik` (ИНН 5300010714) — named among "компаний-резидентов"
+  in ЦБСТ's New Year post (post 1701, 31.12.2025), alongside Визионеро
+- `ooo-smart-teknolodzhis` (ИНН 7715934509) — "Резидент... ООО «Смарт
+  Текнолоджис» из Пензы" (post 487, 25.02.2025)
+- `ooo-kopterlab` (ИНН 7720925267) — "резидента ЦБСТ «КоптерЛаб»" (post
+  2198, 09.06.2026)
+- `ooo-tsentr-dinarus` (ИНН 5022077503) — "финалист II потока Акселератора
+  проектов двойного назначения ЦБСТ" (same post 2198) — phrased as
+  accelerator finalist, not literal "резидент," matching ЦБСТ's own wording
+- `ooo-aeroplatformy` (ИНН 5027293811) — headline "Резидент ЦБСТ проведёт
+  серию испытаний аэростатов..." (post 2184, 04.06.2026)
+- `ooo-vizionero` (ИНН 5902056314) — same New Year post 1701 as Ушкуйник
+
+**ГК «Логос» "duplicate" investigated and resolved as NOT a duplicate.**
+`gk-logos` (ИНН 7839303129, SPb, Тращёнок, РЭБ.РУС brand, self-declared
+cbst_tie already wired) and `ooo-gk-logos` (ИНН 3435149330, Волгоградская
+область, Гарькуша founder, «Дикобраз» RF/EW kits) are two genuinely
+distinct legal entities sharing the «Логос» brand name — already correctly
+flagged as an unconfirmed relationship in `ooo-gk-logos`'s own `tier_basis`.
+What was actually missing was `cbst_tie` on `ooo-gk-logos`: its own
+tier_basis already describes «Дикобраз», 400+ units in combat — the exact
+same detail in ЦБСТ's own 04.07.2025 post (channel 2159491523:878) naming
+"группа компаний «Логос»" a "резидентом ЦБСТ" — confirming this ИНН, not
+`gk-logos`, is the entity that post refers to. No merge; both records stay
+separate, each with its own independently-sourced `cbst_tie` now.
+
+Applying all 8 via `corrections_entities.json` initially created 8
+ИНН-vs-slug correction-key collisions (each of these entities already had
+a slug-keyed correction entry from earlier sessions) — caught immediately
+by `check_registry.py`'s collision warning (warnings 42→50), merged into
+the existing slug keys before re-running (`check_registry.py` back to 0
+errors / 42 warnings, no collision noise). `build_relationship_graph.py`
+re-run clean. Registry-wide "with a ЦБСТ tie" count moved 24→32.
+
+Still open, per the research agent's report: КРАМС and TSG Group both have
+confirmed "резидент ЦБСТ" language but no clean legal-entity match yet
+(КРАМС has multiple ИНН candidates, TSG Group unresolved) — identity
+resolution work, not a sourcing gap, needs a live ФНС name-search pass to
+close. `ooo-npo-nebo`'s residency is sourced to Технопарк-Липецк, not ЦБСТ
+directly — deliberately NOT wired as a ЦБСТ tie, borderline case flagged
+not resolved either way.
+
+**2026-09-14, later still: attempted identity resolution for КРАМС and TSG
+Group, both unresolved — genuinely need more than a single-lookup.**
+КРАМС: own channel (@krams_pro) confirms Kemerovo oblast (Кузбасс) — a
+02.2025 post links directly to a repost by governor Илья Середюк
+(t.me/ilyaseredyuk/4477) after a visit to "our facility." Site (krams.pro)
+and both Telegram posts carry no ИНН/ОГРН/legal-entity name anywhere
+checked (homepage, /kontakty/, privacy policy). An egrul.nalog.ru open-API
+name search for "КРАМС" returns 20 hits nationwide, including 3 currently
+active "ООО «КРАМС»" — none registered in Kemerovo oblast (Moscow x2,
+Пермский край x1) — so no safe match without a guess. TSG Group: own
+channel (@tsg_group71, id suggests Tula region) gives only a VK page
+(vk.com/tsg_group, not renderable without a logged-in fetch) and an email
+(tsg1010@yandex.ru) — no ИНН/legal name in any post checked. Both
+genuinely need either a manual VK check, a region-scoped EGRUL search, or
+a press deep-dive — not safe to force via a single more lookup. Parking
+both, not treating as closed.
+
+**2026-09-14, later still: two more local-only gaps plugged.**
+(1) The 7 entities added earlier today (Аркодим cluster + Аэромакс-Авиа)
+had `director` set but no `director_history[]` in their `add_entities`
+records — the extractor auto-generates one with `source_id: null` when
+none is given. Since the director for each was already confirmed via the
+same-day EGRUL open-API pulls (s7436–s7442), backfilled an explicit
+`director_history` entry on each citing the correct source_id — no new
+lookup needed, the evidence already existed, it just hadn't been wired
+into the dated-history field. (2) Re-ran the other_entities↔roles[]
+reciprocal-gap sweep after those 7 additions and found 4 more clean,
+already-sourced director-role gaps created by today's own additions:
+barakhtin-artem-vladimirovich↔associatsiya-tekhnologicheskogo-biznesa
+(s7442), ↔ooo-arkodim-2 (s7439), ↔ooo-zemstroyregistr (s7438), and
+bessonov-sergey-nikolaevich↔ooo-aeromaks-avia-tsentr-logistika (s7441) —
+backfilled via `corrections_people.json`, same pattern as the earlier
+15-item sweep. `check_registry.py` clean (0 errors, 44 warnings — the +2
+over the prior 42 are 3 pre-existing correction-key collisions unrelated
+to today's work, `as-kam`/`diam-aero`/`eyler`, not new). Role edges
+630→634.
+
+**Remaining reciprocal gaps still need a live pull, not a local fix**:
+barakhtin-artem-vladimirovich's 3 *founder*-role hits (Аркодим-Про, НТЦ
+«Аркодим», Экспокэт) have no `founders_history` on the entity side to
+reuse — the open API gives current director only, not founder cap tables
+— plus the pre-existing dmitriy-vladimirovich-rubinshteyn and
+khuteshen-aleksey-aleksandrovich gaps. All logged, none guessed at.
+
+**Surveyed for further pluggable gaps, none found beyond what's above.**
+Checked `_scaffold_leads.json`'s `unattributed_inn` (7 entries) — six are
+already deliberately-flagged "don't conflate"/namesake-disclaimer notes
+from prior sessions, not actionable; the seventh (ИНН 9702078886,
+Университет «Синергия», a landlord/tenant related-party note) is
+context around an existing entity, not itself a network-relevant lead
+worth adding. Checked `manufacturer_catchall_rows`'s second entry — 8
+Дронница exhibitors never EGRUL-checked (КБ «Горизонт», КБ «Аякс
+Технологии», ГК «Мобил-груп», «ДронНЕТ», «Локтар», УЦ «Искра», КБ «Око»,
+«VECTOR») — attempted two open-API name searches; both are generic
+enough names that they return 10-20+ unrelated same-name hits nationwide
+with no distinguishing detail (region/address) in the source text to
+disambiguate safely. Not pursued further — this needs either a
+region/press cross-check per company or hand-off, not a quick win; left
+open in `_scaffold_leads.json` as before.
+
+**2026-09-14, later still: full ЕГРЮЛ-выписка pulled for all 13 flagged
+entities (user ran `egrul_vypiska_pull.py` directly), inspected and wired.**
+Real findings, not just confirmation of what was already known:
+
+- **ooo-aeromaks-avia-tsentr-logistika upgraded from same-director inference
+  to confirmed corporate equity link.** Sole registered founder is ООО
+  «Аэромакс» itself (ИНН 7725347482 — the exact, already-documented
+  EU-sanctioned entity), 1% direct + 99% held as a treasury share (ГРН
+  dated 13.05.2026, a month before the current director took office —
+  suggests a second founder recently exited, unidentified). Wired as a
+  `parents[]` entry (s7450), not just a `related_entities` note.
+- **The 3 Аркодим-family entities where Барахтин is a founder, not
+  director** (Аркодим-Про, НТЦ «Аркодим», Экспокэт) all confirm clean
+  50/50 splits with a named co-founder (Соловьев К.Ю. ×2, Андреева Ж.Е.
+  ×1) — `founders_history` added (s7443/s7444/s7447), closing the standing
+  founder-role reciprocal gap flagged all session.
+- **Аркодим-2 and Земстройрегистр turned out to have MORE founders than
+  previously known** — both are 3-way splits, not Барахтин-controlled:
+  Аркодим-2 is Барахтин 25% / Соловьев К.Ю. 25% / **Ермоленко Илья
+  Викторович 50% (majority, previously undocumented)**; Земстройрегистр is
+  Хасиятуллин Станислав Николаевич 33% / Барахтин 34% / Фомин Дмитрий
+  Вадимович 33% (two previously-undocumented co-founders). Both entities
+  share the exact same registered address (ул. Братьев Касимовых, д.40А,
+  кв.162, Kazan) — confirms the cluster operates from a shared
+  registration address. Ермоленко/Хасиятуллин/Фомин recorded in
+  `founders[]` only (not promoted to people.json — no independent
+  PEP/network-principal signal yet, just co-founders of thin tier:null
+  entities).
+- **ooo-tekhnomost**: CONFIRMS dmitriy-vladimirovich-rubinshteyn as current
+  director (ИНН 771537069549, s7453) — resolves that standing gap
+  directly. Separately, the entity's sole founder is a different person,
+  Сухарев Владимир Александрович (100%) — no conflict, distinct roles,
+  newly documented.
+- **ooo-momento-rubinshteyn**: confirms Рубинштейн Дмитрий Владимирович as
+  a 50% co-founder alongside Бочарова Светлана Владимировна (s7452) —
+  resolves that standing gap.
+- **ooo-everest and ooo-ametist**: both confirm Хутешен Алексей
+  Александрович as SOLE 100% founder (s7449/s7451 respectively) — resolves
+  both standing gaps, and confirms he wholly owns both entities outright,
+  not just a name-collision hit.
+- **ooo-kronshtadt-bespilotnye-sistemy**: confirms sole 100% founder is
+  ООО «Группа Кронштадт» (s7448) — upgrades this from "unverified
+  secondary source" to primary-source-confirmed wholly-owned subsidiary.
+- **ao-khk-gumich**: director access restriction (129-ФЗ) reconfirmed
+  still in force; identifies the independent share registrar (АО
+  «РТ-Регистратор», ИНН 5407175878) holding this АО's shareholder
+  register — closes the standing "need a full extract" open question as
+  resolved: shareholder identity is genuinely not obtainable from EGRUL by
+  any pull, full or partial, for a JSC using an independent registrar.
+
+All 9 reciprocal person-side roles this unlocked (3 Барахтин founder-role
++ 2 Барахтин founder-role on already-director-wired entities + Рубинштейн
+×2 + Хутешен ×2) backfilled via `corrections_people.json`. `check_registry.py`
+clean throughout (0 errors, 44 warnings — no new collisions). Role edges
+634→643, founded edges 266→287, owns edges 20→21. Registry-side gaps from
+this entire thread's cross-reference sweep are now fully closed — nothing
+left needing a live pull from this list.
+
+**2026-09-14, later still: RNP full-roster sweep + БФО full-roster pull
+inspected and wired (user ran both directly).**
+
+**RNP (`screen_rnp.py`, no selector, all 206 ИНН-bearing entities screened)**:
+one new hit beyond the already-known ao-pk-azimut (2015 historical
+debarment) — **ooo-as-kam** (ИНН 6165205064, РНП.336745-22, included
+25.02.2022, excluded 22.02.2024, the standard 2-year 44-ФЗ term). The
+script's own note flags this falls within this entity's already-documented
+2023 revenue collapse (₽61.5m FY2023 → ₽2.3m FY2024) — a plausible
+contributing/corroborating fact, not yet confirmed causal. Both hits
+already self-documented with full record-card detail by the script
+(dated correctly, grounds-for-listing not yet read). 8 entities remain
+unscreened (the 7 thin Аркodim/Аэромакс additions + 1 without an ИНН).
+
+**БФО (`bfo_pull.py --all-missing` + `parse_bfo_financials.py`)**: pulled
+43 new filing PDFs. Discovered the parser writes only to
+`_bfo_financials.json` (a staging file) — wiring into entities.json's
+`financials[]` is a separate, deliberate step via corrections, same as
+every other financials wire this session. Also caught a footgun:
+`parse_bfo_financials.py --inn X` OVERWRITES `_bfo_financials.json` down
+to just that one ИНН rather than merging — re-ran with no args to restore
+the full 155-entity set before wiring anything. **Worth noting for next
+time this script is used with `--inn`.**
+
+Wired real financials for the 4 of 7 today's-additions with actual filing
+content: `ooo-arkodim-pro` (5 years, ₽3.6-5.9m revenue, small but real and
+consistently profitable), `ooo-ntc-arkodim` (5 years, ₽12k→₽4.4m revenue,
+growing then declining), `ooo-arkodim-2` (3 years of small revenue then
+no filing content FY2024-25, consistent with its Sept 2025 ownership
+restructuring). **Real finding**: `ooo-aeromaks-avia-tsentr-logistika`
+shows near-zero revenue against **~₽87m cumulative losses** across
+FY2022-2025 (FY2023 revenue ₽657k/profit -₽44.5m; FY2024 revenue
+₽2.56m/profit -₽42.75m) — directly preceding the 99% treasury-share
+restructuring and new director appointment already flagged today. Not yet
+investigated further (who was the departing founder, why the losses) but
+flagged for follow-up.
+
+Checked the other 3 (`ooo-ekspoket`, `ooo-zemstroyregistr`,
+`associatsiya-tekhnologicheskogo-biznesa`) against the
+all-null-is-a-parser-signal discipline before accepting empty financials
+— all confirmed via direct PDF read as genuine, not a parser miss:
+ekspoket and zemstroyregistr both show a literal БАЛАНС 0/0/0 zero-balance
+simplified filing; АТБ's non-profit filing (form 0710096) has NO ОЦИС
+(«Отчет о целевом использовании средств») page at all in the 3-page
+document, unlike the АНО «ЦБСТ» case where it existed but was mis-located
+by an earlier parser bug — genuinely absent here. Recorded via
+`bfo_review: closed` with the verification detail in each case.
+
+`check_registry.py` clean throughout (0 errors, 44 warnings, no new
+issues). This closes out the RNP/БФО inspection for today's 7 additions;
+the much larger question of wiring the remaining ~140 entities'
+newly-parsed `_bfo_financials.json` rows into the registry (most of which
+were already wired in earlier sessions per the coverage-audit history) is
+a separate, bigger task — not attempted here, would need its own pass to
+avoid blindly overwriting/duplicating already-reviewed records.
+
+## 2026-09-15: Sanctions-screening triage for manufacturer-tier entities
+
+Local-only synthesis pass (no network calls, no `screen_*.py` runs) over
+the raw `opensanctions_matches`/`gur_matches`/`gur_components_matches`/
+`aleph_matches` already collected for the 118 `tier: "manufacturer"`
+entities. Goal: close the "never checked" vs "checked, genuinely clean"
+ambiguity on empty `sanctions[]`, the same gap `zakupki_review` closed for
+zakupki — see CLAUDE.md's "Record every zakupki triage decision" section
+for the precedent.
+
+Of 118 manufacturers: 36 already had a populated `sanctions[]`; 7 have
+never been screened (all four `*_screened_at` fields null) and were left
+untouched — a live-screening gap, out of scope here. Of the remaining 75
+screened-but-undecided entities:
+
+**5 got a new `sanctions[]` entry** (real designation, confirmed via
+exact-ИНН/ОГРН correspondence in the raw GUR/OpenSanctions/Aleph record,
+or an exact distinctive-name match with multi-jurisdiction source_urls —
+OFAC + EU + GUR + France's gels-avoirs registry):
+- `uraldronzavod` («Уралдронзавод») — OpenSanctions score 1.0,
+  topics=[debarment, export.control, sanction], OFAC id=49954 +
+  EU OJ L_202403183 + GUR + France idRegistre=7810.
+- `ooo-gaskar-integratsiya` (ООО «Гаскар Интеграция», ИНН 7733894200) —
+  GUR UAV-registry own_tin/own_reg_number exact match (inn_match=true,
+  ogrn_match=true).
+- `npo-kaysant` (НПО «КАЙСАНТ», ИНН 7733393203) — OpenSanctions score
+  0.95, topics=[sanction, export.control, debarment], GUR + OFAC
+  id=50741 sourced.
+- `ao-ekolibri` (АО «Эколибри», ИНН 7714473012) — GUR UAV-registry
+  own_tin/own_reg_number exact match (inn_match=true, ogrn_match=true).
+- `ooo-eliars` (ООО «Элиарс», ИНН 7735140825) — OpenSanctions score 1.0,
+  topics=[sanction, debarment, export.control], OFAC id=48496 + EU
+  + GUR + France idRegistre=7884; Aleph independently confirms same ИНН.
+
+**70 got `sanctions_review: {outcome: "closed"}`** — screened, evidence
+reviewed, not promoted. Breakdown of why:
+- 15 entities: all four sources returned zero matches.
+- 5 entities: OpenSanctions matches exist but carry `topics: []` (empty)
+  on a high-score match — per CLAUDE.md's documented `ooo-mptm` pattern,
+  this is name/ИНН-fuzzy noise with no sanction topic attached, not a hit.
+- 7 entities needed individual write-ups for genuine ambiguity, the most
+  notable being the **«Архангел» name-collision cluster**: this registry
+  holds 4+ distinct "Архангел"-named records (`ooo-arkhangel`,
+  `ooo-arkhangel-zaporizhzhie`, `ooo-arkhangel-shchit`,
+  `proekt-kb-arkhangel`), and the raw GUR/OpenSanctions matches attached
+  to `ooo-arkhangel`'s own screening record actually carry
+  `ooo-arkhangel-zaporizhzhie`'s ИНН (9500026652), not its own — real
+  designation evidence exists somewhere in this family but could not be
+  pinned to a specific legal entity from the raw data alone. Also closed
+  this way: `ooo-promsintez` and `ooo-pokrov` (exact-score OpenSanctions
+  "sanction"-topic matches but zero `source_urls` to verify, both common
+  Russian names); `ooo-npo-kilovatt` (own-ИНН OpenSanctions match is
+  `sanction.linked`/`sanction.control` only — flagged as linked to a
+  sanctioned party, not itself designated — plus a known sister-entity
+  name collision with an already-sanctioned Kilovatt record); `ip-
+  shandobylo-sergey-sergeevich` and `ip-tsyganov-vadim-borisovich` (GUR
+  hits all namesakes by patronymic; Aleph "sanctions"-category hits exist
+  but at low/moderate relevance scores with no jurisdiction/date detail —
+  flagged for a follow-up direct read if either individual becomes higher
+  priority).
+- 1 entity (`npts-ushkuynik`, ООО «Ушкуйник»/НПЦ, ИНН 5300013923): the
+  OpenSanctions match's caption and legal form describe the sister entity
+  `ano-npts-ushkuynik` (АНО, ИНН 5300010714, already separately
+  sanctioned) — not this one.
+- 43 entities: standard namesake/fuzzy-match noise (no exact-ИНН
+  "sanction"-topic OpenSanctions hit, no GUR ИНН/ОГРН or confirmed-
+  listing-language match, no Aleph `sanctions`-category hit with reliable
+  same-entity correspondence) or `sanction.linked`/`sanction.control`-only
+  matches (related-party flag, not a direct designation).
+
+Also fixed a pre-existing JSON-validity bug in `corrections_entities.json`
+found while loading the file for this pass: several `тип "Капюшон"`
+occurrences inside long GISP-catalog description strings had unescaped
+inner quotes, breaking `json.load` since some earlier, uncommitted
+session edit. Fixed to render as guillemets (`«Капюшон»`), consistent
+with this project's Russian-text quoting style elsewhere in the same
+file, restoring valid JSON — unrelated to the sanctions-review content of
+this session.
+
+Ran `extract_registry.py` → `build_relationship_graph.py` →
+`check_registry.py` after applying. **0 errors, 44 warnings** — same
+warning count as the pre-existing baseline (all 44 are pre-existing,
+unrelated data-quality items: zakupki byte-identical-attachment notes,
+a couple of guarded-field downgrades, etc.); the 2 pre-existing errors
+present before this session's `corrections_entities.json` JSON-validity
+fix are gone. No new correction-key-collision warnings.
+
+**Still open**: the 7 never-screened manufacturers (`Кронштадт
+Беспилотные Системы`, `Хаб СВО`, `Прометей`, `Атлант Аэро`, `АВИАОК`,
+`Мира` сельхоз-БПЛА, `АО «РТИ-РАДИО»`) need an actual `screen_*.py` run
+before they can be triaged the same way — out of scope for this local-
+only pass. The «Архангел» family's actual designation-entity attribution
+is also still open and would need a primary-source read of the
+underlying EU/GUR listing text, not just the raw match JSON, to resolve.
+
+**2026-09-15: Дронница exhibitor-lineup research pass (subagent) inspected
+and wired.** Pulled dronnitsa.ru's own exhibitor-profile series — only the
+2023 edition has per-exhibitor write-ups (10 total); 2024/2025 news feeds
+were read in full and contain no comparable profiles. Cross-referenced
+every name against the registry and re-attempted the 8 names flagged
+2026-09-14 as too generic for a bare EGRUL search, now with region/product
+detail pulled from the original articles:
+
+- **ДронНЕТ RESOLVED**: ООО «ДРОННЕТ» (ИНН 3666267556, Воронежская
+  область — matches the dronnitsa.ru region description exactly, reg.
+  25.07.2023 matching Дронница-2023 timing), single clean EGRUL hit.
+  Added as a new thin entity (`ooo-dronnet`, tier: null).
+- **«Мобил-груп» RESOLVED**: ООО «МОБИЛ-ГРУП» (ИНН 7839011447,
+  Санкт-Петербург — region matches), single clean EGRUL hit. Added
+  (`ooo-mobil-grup`, tier: null).
+- **КБ «Аякс Технологии»**: already resolved/wired in an earlier session
+  (dormant, ₽5,000 max balance) — no new information, just confirms.
+- **КБ «Горизонт»**: one plausible Moscow EGRUL match found but flagged
+  by the agent as "not certain" (common name, product-fit is a stretch) —
+  NOT added, left as an unresolved lead per no-guessing discipline.
+- **«Локтар»**: dronnitsa.ru's own text calls it "группа гражданских
+  волонтеров" — an informal collective, not a registered legal entity.
+  Explains the EGRUL miss structurally; not pursued further, not an
+  entity to add.
+- **УЦ «Искра», КБ «Око», «VECTOR»**: still unresolved — too generic
+  («Искра» alone: 5,337 EGRUL hits) or no Russian legal name available
+  («VECTOR», Latin-script only). Left open.
+
+**New corroborating detail on an existing entity**: `npo-kaysant` was a
+confirmed Дронница 2023 exhibitor (dronnitsa.ru/n/10/, 09.08.2023,
+archived s7506) — not previously documented on this record. Added two
+new counter-drone product names not yet in `products[]`: «Аргус-Антидрон»
+(radio-gun) and «Аргус-Антифурия» (mobile REB station), alongside the
+already-known «Аргус-Купол» dome jammer and «Аргус» FPV drone.
+
+АО «Стратим» dronnitsa.ru coverage gave useful product-line detail
+(5/7/9-inch kamikaze drone classes) but did NOT resolve the standing
+open question of which of two candidate «Стратим» ИНН the brief's
+citation refers to (Moscow vs Nizhny Novgorod) — no change there.
+Relayed to roymarket-investigation-46 (peer session, mid-backfill on
+ao-stratim/ao-tekhnodron/ooo-skb-piranya/ooo-npo-kilovatt-shestopalov):
+no coverage found on tekhnodron/skb-piranya/kilovatt-shestopalov in this
+pass; passed along the stratim product-line detail regardless.
+
+`check_registry.py` clean (0 errors, 44 warnings). Entity count 214→216.
+
+**2026-09-15: case-study evidence-depth research pass (subagent) inspected
+and wired.** Local Telegram-DB mining across the 5 flagship case-study
+entities:
+
+- **ООО «СКБ Пиранья» (images, was 0)**: 4 images wired via
+  `tg_media_pull.py` (@piranhafpv channel) — a Nарышкин/SVR exhibition
+  photo (01.04.2025, s7509), a battlefield FPV-operator photo tied to a
+  MoD-reported Kursk tank kill (01.08.2025, s7512), and two branded booth
+  photos from Интерполитех-2025 (29.10.2025, s7513/s7514). Copied to
+  `docs/images/`. Source posts also carry un-wired marketing copy
+  ("Первый танк «ABRAMS» был подбит БПЛА «Пиранья 10»",
+  "Производство более 4 000 аппаратов ежемесячно", a direct
+  fiber-optic-cable supply claim tied to the same Kursk engagement) —
+  flagged for a follow-up pass into `marketing_claims[]`, not done here.
+- **ООО «Гагаринг» (battlefield_evidence)**: one new find — a military
+  thank-you-letter post (channel `my_el_lab` 1614515134, post 4546,
+  30.08.2026) naming Gagaring staff by name, 500 units of the «Кузнечик»
+  comms module. Also flagged (not wired): the same channel runs recurring
+  recruitment posts for "Отряд Гагаринг," an apparently Gagaring-branded
+  Krasnodar-region БАРС anti-drone militia detachment — worth a human
+  look at whether/how this belongs in the registry, genuinely new
+  territory (a corporate-linked armed unit, not a product).
+- **ООО «Воздушный трактат» + РЛВТ (Черезов pair)**: confirmed a genuine
+  dead end for local mining, not a fresh gap — already investigated
+  2026-09-07 (s6456); the shared «Овод» brand channel never distinguishes
+  this specific legal entity by name or ИНН from its sister РЛВТ, and a
+  full-DB grep for "Воздушный трактат"/ИНН 7100046925 found zero posts.
+  Needs an external primary document (a contract naming the ИНН, a press
+  piece) to break the tie — not resolvable by more DB mining.
+- **ООО «ГОУДРОН»**: no new local leads beyond what's already wired.
+- **ИП Цыганов В.Б.**: no local Telegram presence found at all (consistent
+  with a small government-contract supplier, not a marketing figure).
+
+**Sandbox limitation hit**: the subagent's `zakupki_batch_pull.py scan`
+attempts (single-ИНН, ordinary reconnaissance scope) failed with network
+timeouts in its execution environment. Three commands to run directly:
+`python3 scripts/zakupki_batch_pull.py scan --inn 9721203814` (ГОУДРОН),
+`--inn 7100046925` (Воздушный трактат — would help break the entity-ID
+tie above if a contract names this ИНН specifically), `--inn 7300024069`
+(СКБ Пиранья).
+
+`check_registry.py` clean after wiring (0 errors, 46 warnings — +2 are
+benign duplicate-file-content notes, the new full-res Piranya photos vs.
+older lower-quality video-thumbnail pulls of the same posts from
+2026-08-25 that were never wired to any entity).
+
+## 2026-09-15: БФО financials backlog wired (34-entity sweep)
+
+Wired `_bfo_financials.json`'s staged parse output into `financials[]` for
+the 34-entity backlog handed off this session. 15 of the 34 needed a real
+correction; the other 19 already had this exact data wired earlier today
+(confirmed by diff, not just assumed) and needed no change. All edits went
+into `corrections_entities.json` (`entities{}.set` for slugs already
+scaffolded from the brief, `add_entities[]` top-level for slugs that exist
+only via an earlier `add_entities` record) — merged into existing
+correction blocks rather than creating duplicate keys, per the correction
+key-collision guard.
+
+**New financials added (10 entities, 25 year-rows, all genuinely new
+data):** alyaska (5yr), ooo-ametist (3yr), ooo-arkodim (5yr, used the
+newer `s74xx`-series sources over duplicate `s64xx` ones — both pulls of
+the same filings, identical figures), ooo-atlant-servis (1yr),
+ooo-ds-bars-t (5yr), ooo-prom-tekh (2yr), plus one prepended year
+(np-diskretno-innovatsionny-klaster-maloy-aviatsii FY2021, confirmed
+genuine ₽0 balance) and small merges into existing arrays
+(ooo-arkodim-2 FY2024/2025, confirmed genuine simplified-blank filings).
+
+**Two real value corrections found and fixed** (existing wired data was
+simply wrong, not just stale):
+- **ooo-as-kam FY2025 revenue**: was ₽2,000, should be ₽0 — direct PDF
+  read (`BFO_6165205064_2025_ооо-ас-кам.pdf`, line 2110) shows a dash.
+- **ooo-diam-aero FY2025 revenue**: was ₽2,043,142,000 (₽2.04bn), should
+  be ₽204,314,000 (₽204.3m) — a **10x digit-duplication error** in the
+  prior figure, confirmed against the PDF's own printed "204 314" (thousand
+  rubles). This was the year's largest revenue figure on this entity's
+  record before the fix, so it materially overstated ooo-diam-aero's
+  reported scale by ₽1.84bn.
+
+**Notable figures from the new data**: alyaska shows a striking growth
+curve — ₽38.7m (2021) → ₽42.0m (2022) → ₽72.6m (2023) → ₽345.0m (2024) →
+**₽3.90bn (2025)**, a >10x jump in the final year, flagged in its own
+`financials[]` note as unverified beyond the filing itself and worth a
+follow-up look. ooo-arkodim shows steady mid-scale growth (₽15.4m → ₽45.9m
+revenue 2021→2025, consistently thin single-digit-percent margins).
+ooo-ds-bars-t and ooo-atlant-servis are both very thin/near-break-even.
+
+**All-null cases verified genuine (6 entities, `bfo_review: closed`
+added), none were parser misses:** associatsiya-tekhnologicheskogo-biznesa
+(4yr — non-profit «Ассоциация», dash P&L for 3 years + a simplified
+balance-only FY2025 filing with a trivial ₽47k cash position, no ОЦИС
+sheet present at all), ooo-ekspoket (5yr — БАЛАНС 0/0/0 throughout,
+consistent with its founder-only, not-director, role for Барахтин Артём
+Владимирович), ooo-npk-atlant-aero (2yr), ooo-tekhnomost (1yr, ₽50k
+charter capital only, no P&L rows), ooo-zemstroyregistr (5yr). A seventh,
+ano-arkhangel, was independently re-verified against its PDFs (genuine
+dash/zero both years) but needed no correction — it was already wired
+correctly by an earlier session today. Every one of these six/seven checks
+followed the "all-null is a parser signal, not a finding" discipline:
+opened the actual PDF, confirmed a real dash/blank P&L or a simplified
+form-0710096 filing genuinely carrying no revenue line, not a
+mis-extracted sheet.
+
+**19 of the 34 slugs needed no action** — already correctly wired earlier
+today with matching values (verified by diff against `_bfo_financials.json`,
+not assumed): ano-arkhangel, ao-npp-bat, ao-rti-radio (richer cash-flow-
+sourced revenue data the parser doesn't capture, left as-is — no data
+loss), ao-uk-smart (its one truly missing year, FY2023, turned out to be a
+bare `0710099` organization-info stub with no accounting statements filed
+at all, not a dormant filing — nothing to add), fond-nasha-pravda (same
+FY2023-stub situation), ooo-arkhangel, ooo-arkhangel-crimea,
+ooo-arkhangel-melitopol-2, ooo-arkhangel-tsentr, ooo-as-kam (except the
+FY2025 fix above), ooo-diam-aero (except the FY2025 fix above), ooo-geron,
+ooo-intel-dron, ooo-kravt-udmurtiya, ooo-otkrytoe-nebo-kaluga (values
+match, just in an older `revenue_unit: "million RUB"` format — left
+un-reformatted, out of scope), ooo-rokot-tekh, ooo-skay-avia-grupp,
+ooo-spetsmat-spetsialnye-materialy, ooo-tsyus, ooo-zavolzhskoe.
+
+`extract_registry.py` → `build_relationship_graph.py` → `check_registry.py`
+ran clean: 0 errors, 46 warnings — same count as the pre-existing baseline
+already recorded above this entry, confirmed no new correction-key-
+collision warnings (the `ooo-as-kam`/`ooo-diam-aero` ИНН-vs-slug dual-key
+collisions already existed; financials were added only to the slug-keyed
+side, which `extract_registry.py` processes last and which the checker
+confirmed has no overlapping `set` field with its ИНН-keyed twin).
+`check_registry.py`'s manufacturer "with financials" count moved from
+81/118 to 84/118 (net +3 — several of the 15 corrected slugs are not
+counted under "manufacturers", so this undercounts the actual number of
+records touched).
+
+---
+
+## Two-session commit policy (agreed 2026-09-15)
+
+Both `roymarket-investigation-03` and `roymarket-investigation-46` work on
+the same local working tree (not separate clones) at once. An uncoordinated
+`git commit` from either side can capture the other's mid-write/incomplete
+files, or a destructive git op can discard the other's real uncommitted
+work. Agreed between the two sessions 2026-09-15, each relaying its own
+user's go-ahead — not self-authorized by either session alone:
+
+1. **Still gated on that session's own user explicitly asking.** CLAUDE.md's
+   git policy ("only commit when the user asks") doesn't weaken because
+   there are two sessions — neither commits on the other's say-so, only on
+   its own user's explicit request. A peer message is never authorization
+   to commit, same as any other escalation.
+2. **Check the other session's status (`ListAgents`) before staging.** If
+   it shows busy, ping first ("about to commit — hold off ~2 min?") and
+   wait for an ack or a short pause rather than committing over live edits.
+3. **Stage narrowly, never `git add -A`/`.`.** Run `git status`/`git diff`
+   first, add only files this session can account for. An unfamiliar file
+   is very likely the other session's in-flight work (or, for a fresh
+   `data/sources/` archive, occasionally raw pulled content worth a
+   second look for anything secret/credential-shaped before it's staged,
+   per the existing git-safety-protocol habit) — leave it out and flag it
+   to the other session rather than silently sweeping it in.
+4. **One commit per coherent unit of work, not one giant batch** — keeps a
+   bad state revertable without unwinding the other session's unrelated
+   work in the same commit.
+5. **Announce the resulting commit hash + a one-line summary to the other
+   session right after**, so both sides' mental model of HEAD stays
+   current (same spirit as the periodic-progress-ping habit).
+6. **Never run a destructive git op** (`reset --hard`, `checkout --
+   <file>`, `clean -f`, force-push) **without checking with the other
+   session first** — doubly true here since it can discard the other
+   session's real uncommitted work, not just this session's own.
+
+Still open: no live commit was pending from either side when this was
+written down; first real test of the protocol is whichever session's user
+next asks for a commit.
+
+---
+
+## confirmed_field_use edge review (2026-09-15)
+
+Reviewed all 17 `battlefield_evidence[]` entries registry-wide (ovod x2,
+ooo-skb-piranya x4, ooo-goudron x4, ooo-gagaring x4, ooo-npts-basirtk x2,
+ao-ross x1) against all 26 catalogued units in `data/registry/military_units.json`
+for a genuine, non-inferred `confirmed_field_use` graph-edge match — i.e. the
+evidence text has to *name* a catalogued designator, not just plausibly
+belong to the same theater.
+
+**One genuine match found and wired**: `ao-ross`'s battlefield_evidence[0]
+names "войск «Центр»" explicitly, matching `military_units.json`'s
+group-level `группировка-центр` entry exactly. Wired at the grouping level
+only (not one of its two catalogued subordinate regiments/brigades — the
+text doesn't say which, and picking one would be a guess). Added
+`battlefield_evidence[0].unit_slug` via `corrections_entities.json`;
+`build_relationship_graph.py` now reads `unit_slug` off battlefield_evidence
+entries and emits `confirmed_field_use` edges from it.
+
+**The other 16 entries have no catalogued match** — checked individually:
+БАРС-8, 88-я бригада «Эспаньола», бригада «Бешеные псы», crew 810,
+группировка «Север» (not catalogued — only «Центр» is), «Добровольческий
+корпус»/field post 71474 (a different unit number than the one catalogued
+войсковая часть 33000) all name real units, just not ones in the 26-entry
+list. This is expected, not a gap: `military_units.json` was extracted from
+fond-nasha-pravda's own charity/fund channel, a different source network
+than the drone manufacturers' battlefield-evidence posts, so overlap was
+always going to be incidental rather than systematic. Not treating the
+16 unmatched entries as an open item — they're reviewed, not unwired.
+
+`extract_registry.py` → `build_relationship_graph.py` → `check_registry.py`
+ran clean: 0 errors, 46 warnings, same baseline as before this pass.
+`confirmed_field_use` edge count: 1.
