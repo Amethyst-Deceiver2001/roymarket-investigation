@@ -2,7 +2,7 @@
   "schema_version": 5,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1482,
-  "edge_count": 2056,
+  "edge_count": 2060,
   "unresolved_count": 216,
   "nodes": [
     {
@@ -43,7 +43,7 @@
       "label": "Александр Осадчук",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "aleksandr-rufinovich-brovchenko",
@@ -59,7 +59,7 @@
       "label": "Александр Геннадьевич Сидякин",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "aleksandrov-aleksey-vitalevich",
@@ -255,7 +255,7 @@
       "sanctioned": true,
       "legal_form": "АНО",
       "variant": null,
-      "degree": 45
+      "degree": 49
     },
     {
       "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -2631,7 +2631,7 @@
       "label": "Кирилл Лысогорский",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "kirtok-aleksandr-sergeevich",
@@ -3219,7 +3219,7 @@
       "label": "Михаил Кузнецов",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "mikhaylov-konstantin-denisovich",
@@ -14571,6 +14571,17 @@
       "confidence": null
     },
     {
+      "source": "aleksandr-osadchuk",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "role",
+      "label": "Head of the Main Directorate for Innovative Development (ГУИР), Ministry of Defence",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "aleksandr-rufinovich-brovchenko",
       "target": "fond-nasha-pravda",
       "type": "role",
@@ -14586,6 +14597,17 @@
       "target": "fond-nasha-pravda",
       "type": "role",
       "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "aleksandr-sidyakin",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "role",
+      "label": "Secretary of the Supervisory Board; Head of United Russia’s Central Executive Committee",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -22832,6 +22854,17 @@
       "confidence": null
     },
     {
+      "source": "kirill-lysogorskiy",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "role",
+      "label": "Deputy Minister of Industry and Trade",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "kirtok-aleksandr-sergeevich",
       "target": "ooo-trimiks-bulat-3mx",
       "type": "role",
@@ -24420,6 +24453,17 @@
       "target": "ao-ploshchad",
       "type": "role",
       "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "mikhail-kuznetsov",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "role",
+      "label": "Head of the Executive Committee, ОНФ (Popular Front)",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,

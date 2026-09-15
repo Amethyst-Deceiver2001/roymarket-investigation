@@ -206,7 +206,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 45
+          "degree": 49
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -26819,7 +26819,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 45
+          "degree": 49
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -31592,12 +31592,28 @@
     "core_network": {
       "nodes": [
         {
+          "id": "aleksandr-osadchuk",
+          "kind": "person",
+          "label": "Александр Осадчук",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 1
+        },
+        {
           "id": "aleksandr-rufinovich-brovchenko",
           "kind": "person",
           "label": "Александр Руфинович Бровченко",
           "name_latin": null,
           "sanctioned": true,
           "degree": 2
+        },
+        {
+          "id": "aleksandr-sidyakin",
+          "kind": "person",
+          "label": "Александр Геннадьевич Сидякин",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 1
         },
         {
           "id": "andrey-bezrukov",
@@ -31629,7 +31645,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 45
+          "degree": 49
         },
         {
           "id": "ao-npp-bat",
@@ -31746,6 +31762,14 @@
           "degree": 11
         },
         {
+          "id": "kirill-lysogorskiy",
+          "kind": "person",
+          "label": "Кирилл Лысогорский",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 1
+        },
+        {
           "id": "koludarov-anton-valerevich",
           "kind": "person",
           "label": "Колударов Антон Валерьевич",
@@ -31764,6 +31788,14 @@
           "legal_form": null,
           "variant": null,
           "degree": 8
+        },
+        {
+          "id": "mikhail-kuznetsov",
+          "kind": "person",
+          "label": "Михаил Кузнецов",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
         },
         {
           "id": "nina-olegovna-yanykina",
@@ -32269,6 +32301,17 @@
       ],
       "edges": [
         {
+          "source": "aleksandr-osadchuk",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Head of the Main Directorate for Innovative Development (ГУИР), Ministry of Defence",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "aleksandr-rufinovich-brovchenko",
           "target": "fond-nasha-pravda",
           "type": "role",
@@ -32284,6 +32327,17 @@
           "target": "fond-nasha-pravda",
           "type": "role",
           "label": "director",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "aleksandr-sidyakin",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Secretary of the Supervisory Board; Head of United Russia’s Central Executive Committee",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -32577,6 +32631,17 @@
           "confidence": "t-open"
         },
         {
+          "source": "kirill-lysogorskiy",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Deputy Minister of Industry and Trade",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "koludarov-anton-valerevich",
           "target": "ooo-mptm",
           "type": "directs",
@@ -32608,6 +32673,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "t-doc"
+        },
+        {
+          "source": "mikhail-kuznetsov",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Head of the Executive Committee, ОНФ (Popular Front)",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
         },
         {
           "source": "nina-olegovna-yanykina",
@@ -33194,12 +33270,28 @@
           "degree": 3
         },
         {
+          "id": "aleksandr-osadchuk",
+          "kind": "person",
+          "label": "Александр Осадчук",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 1
+        },
+        {
           "id": "aleksandr-rufinovich-brovchenko",
           "kind": "person",
           "label": "Александр Руфинович Бровченко",
           "name_latin": null,
           "sanctioned": true,
           "degree": 2
+        },
+        {
+          "id": "aleksandr-sidyakin",
+          "kind": "person",
+          "label": "Александр Геннадьевич Сидякин",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 1
         },
         {
           "id": "aleksandrov-aleksey-vitalevich",
@@ -33303,7 +33395,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 45
+          "degree": 49
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -34046,6 +34138,14 @@
           "degree": 33
         },
         {
+          "id": "kirill-lysogorskiy",
+          "kind": "person",
+          "label": "Кирилл Лысогорский",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 1
+        },
+        {
           "id": "klimov-maksim-aleksandrovich",
           "kind": "person",
           "label": "Климов Максим Александрович",
@@ -34264,6 +34364,14 @@
           "name_latin": null,
           "sanctioned": true,
           "degree": 3
+        },
+        {
+          "id": "mikhail-kuznetsov",
+          "kind": "person",
+          "label": "Михаил Кузнецов",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
         },
         {
           "id": "mikhelson-leonid-viktorovich",
@@ -39043,6 +39151,17 @@
           "confidence": null
         },
         {
+          "source": "aleksandr-osadchuk",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Head of the Main Directorate for Innovative Development (ГУИР), Ministry of Defence",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "aleksandr-rufinovich-brovchenko",
           "target": "fond-nasha-pravda",
           "type": "role",
@@ -39058,6 +39177,17 @@
           "target": "fond-nasha-pravda",
           "type": "role",
           "label": "director",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "aleksandr-sidyakin",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Secretary of the Supervisory Board; Head of United Russia’s Central Executive Committee",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -40946,6 +41076,17 @@
           "confidence": null
         },
         {
+          "source": "kirill-lysogorskiy",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Deputy Minister of Industry and Trade",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "klimov-maksim-aleksandrovich",
           "target": "ano-arrs-krasnodar",
           "type": "founded",
@@ -41544,6 +41685,17 @@
           "target": "ao-ploshchad",
           "type": "role",
           "label": "director",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "mikhail-kuznetsov",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Head of the Executive Committee, ОНФ (Popular Front)",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,

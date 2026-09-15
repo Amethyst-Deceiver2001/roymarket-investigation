@@ -47,6 +47,16 @@
         "birthplace": "Обнинск, Калужская область (Obninsk, Kaluga Oblast)",
         "dob": "1962-11-17",
         "inn_personal": "772027207786",
+        "roles": [
+          {
+            "entity_slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
+            "title": "Head of the Main Directorate for Innovative Development (ГУИР), Ministry of Defence",
+            "body": "ЦБСТ Supervisory Board",
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
+        ],
         "notes": "Identity confirmed independently (OpenSanctions gives DOB 17.11.1962, Obninsk, Kaluga Oblast -- exact match). Original 2018 US OFAC SDN designation (CAATSA §224, effective 19.12.2018) stems from a US DOJ indictment naming him -- then a Colonel -- as commanding officer of GRU Unit 74455, publicly tracked as \"Sandworm\", tied to 2016 US election-interference/hacking activity (co-indicted: Aleksey Potemkin, Anatoliy Kovalev). By 2022 press appearances (function.mil.ru, tvzvezda.ru) he holds the rank Major-General as \"Начальник ГУИР\" (Head of the Main Directorate for Innovative Development), briefing on UAV/AI topics at Army-2022 -- ГУИР is the connection to this network's ministerial representation. Also listed under UK Cyber Activity sanctions (18.07.2025), New Zealand Russia Sanctions Act (20.02.2026), US Trade CSL/SAM exclusions (30.03.2026), and Ukraine's GUR register (war-sanctions.gur.gov.ua/en/sanctions/persons/1717, page itself 403'd, existence confirmed via search index). One unverified secondary-source claim of a later promotion to Lieutenant-General (2023) -- single low-quality snippet, do not cite without a primary source. No photo independently visually verified. Best lead: FBI's \"Cyber's Most Wanted\" flyer for him (fbi.gov/wanted/cyber/aleksandr-vladimirovich-osadchuk/download.pdf), from the 2018 GRU Unit 74455 indictment — FBI wanted-flyer format standardly includes a photo, but automated fetch was blocked (403) and content not visually confirmed. function.mil.ru and tvzvezda.ru's Aug 2022 coverage of his Army-2022 press briefing exist but no image URL could be extracted from either. No social media checked/found (unlikely for an active GRU/MoD general). Photo confirmed 2026-08-25 (user-supplied URL): nashaoborona.ru/wp-content/uploads/2022/08/SAVX2403-1_2.jpg — Army-2022 press briefing photo, on-image nameplate reads \"генерал-майор ОСАДЧУК Александр Владимирович / Major General OSADCHUK Alexander\" plus a name-tag on his uniform \"ОСАДЧУК А.В.\" — exact name+rank match, no ambiguity. [s3664] Phones +79032410466/+79037970357/+79263367483/+79252376261, emails comnet66@yandex.ru, comnet67@mail.ru.\n\nPII source-linkage pass 2026-09-02: dob/birthplace/personal-ИНН confirmed against rupep.org profile (s2605), archived RUPEP_20260826_osadchuk-aleksandr-vladimirovich.pdf.",
         "passport": "Russian passport 4509 373987",
         "photo": "images/aleksandr-osadchuk_portrait_nashaoborona.jpg",
@@ -70,7 +80,8 @@
         "2026-08-25: OSINT research pass -- confirms identity via DOB, adds GRU Unit 74455/Sandworm/DOJ-indictment background and sanctions-regime detail.",
         "2026-08-25: photo/social-media OSINT research pass.",
         "2026-08-25: photo confirmed via user-supplied nashaoborona.ru URL, nameplate-verified.",
-        "2026-08-26: rupep.org profile (s2605) confirms dob 17.11.1962 and birthplace Obninsk/Kaluga Oblast (both already independently confirmed via OpenSanctions per this record's existing notes), adds personal ИНН 772027207786. Existing photo (source: nashaoborona) kept as primary per existing sourcing precedent (see aleksandr-sidyakin); RuPEP headshot pulled but not set as the display photo. RuPEP flags family members (daughter, wife, son-in-law, granddaughter) -- not wired per PII scope."
+        "2026-08-26: rupep.org profile (s2605) confirms dob 17.11.1962 and birthplace Obninsk/Kaluga Oblast (both already independently confirmed via OpenSanctions per this record's existing notes), adds personal ИНН 772027207786. Existing photo (source: nashaoborona) kept as primary per existing sourcing precedent (see aleksandr-sidyakin); RuPEP headshot pulled but not set as the display photo. RuPEP flags family members (daughter, wife, son-in-law, granddaughter) -- not wired per PII scope.",
+        "2026-09-15: graph-connectivity audit -- this ЦБСТ Supervisory Board role (already correctly recorded in prose/title) had entity_slug null, generating no graph edge, same bug class already fixed for vladimir-vadimovich-yakushev and andrey-bezrukov earlier the same day (see notes/rebuild_plan.md's 'confirmed_field_use edge review' entry, which fixed those two but missed this one and 3 siblings -- sidyakin/lysogorskiy/kuznetsov). Backfilled entity_slug to ano-tsbst-centre-for-unmanned-systems-technologies. No new source found naming this specific person alongside Yakushev/Bezrukov in s7519's article -- source_id left null (existing state), not fabricated."
       ]
     },
     "aleksandr-rufinovich-brovchenko": {
@@ -129,6 +140,16 @@
         ],
         "passport": "Russian passport 4510 747365; travel passport 530004691 / 100113962 / 531064240",
         "photo": "images/aleksandr-sidyakin_portrait_erru.jpg",
+        "roles": [
+          {
+            "entity_slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
+            "title": "Secretary of the Supervisory Board; Head of United Russia’s Central Executive Committee",
+            "body": "ЦБСТ Supervisory Board",
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
+        ],
         "sanctions": [
           {
             "date": null,
@@ -161,7 +182,8 @@
         "2026-08-25: OSINT research pass -- confirms bio/DOB, adds declared-income lead and notes absence of found corporate footprint.",
         "2026-08-25: photo/social-media OSINT research pass.",
         "2026-08-25: personal Telegram/VK confirmed via t.me/asidyakin's own bio — added to social[].",
-        "2026-08-26: user-supplied RuPEP.org profile (PDF export, last profile update per RuPEP 19.05.2026) — filled in the patronymic (Геннадьевич, previously missing), birthplace and personal ИНН directly from RuPEP's own record (s2535). DOB (17.11.1977) and Segezha birthplace/career history corroborate what was already independently sourced. Also carries a full income-declaration history (2011-2017, real estate/vehicles) and a family/business-connections panel (father/sons/daughter/ex-wife/in-laws, mostly \"Совместное путешествие\"-inferred, i.e. joint-travel-record-based — not independently verified and not wired here per the PII-scope rule, family members aren't network principals in their own right) — kept in the archived PDF for reference. A headshot photo is embedded in the PDF too but this record already carries a sourced er.ru party portrait, so the existing photo field was left as-is (extracted RuPEP headshot saved to docs/images/aleksandr-sidyakin_portrait_rupep.jpg in case a second image is wanted later)."
+        "2026-08-26: user-supplied RuPEP.org profile (PDF export, last profile update per RuPEP 19.05.2026) — filled in the patronymic (Геннадьевич, previously missing), birthplace and personal ИНН directly from RuPEP's own record (s2535). DOB (17.11.1977) and Segezha birthplace/career history corroborate what was already independently sourced. Also carries a full income-declaration history (2011-2017, real estate/vehicles) and a family/business-connections panel (father/sons/daughter/ex-wife/in-laws, mostly \"Совместное путешествие\"-inferred, i.e. joint-travel-record-based — not independently verified and not wired here per the PII-scope rule, family members aren't network principals in their own right) — kept in the archived PDF for reference. A headshot photo is embedded in the PDF too but this record already carries a sourced er.ru party portrait, so the existing photo field was left as-is (extracted RuPEP headshot saved to docs/images/aleksandr-sidyakin_portrait_rupep.jpg in case a second image is wanted later).",
+        "2026-09-15: graph-connectivity audit -- this ЦБСТ Supervisory Board role had entity_slug null, generating no graph edge (same bug class fixed for vladimir-vadimovich-yakushev/andrey-bezrukov earlier the same day per notes/rebuild_plan.md, which missed this record and 2 siblings). Backfilled entity_slug to ano-tsbst-centre-for-unmanned-systems-technologies. Checked TRANSCRIPT_20250421_peregovorka-cbst-er-sidyakin-bezrukov.txt (the only archived source naming both Сидякин and ЦБСТ together) for direct corroboration of the \"Secretary of the Supervisory Board\" title specifically -- it does NOT independently confirm this; he's introduced there only by his United Russia executive-committee title, and the board-chairmanship discussion in that transcript is about Yakushev, not him. The title itself is not newly sourced by this pass -- source_id left null (existing state, a placeholder per this registry's own convention, not fabricated)."
       ]
     },
     "aleksandrov-aleksey-vitalevich": {
@@ -2042,8 +2064,18 @@
         "birthplace": "Ванадзор, Армения (Vanadzor, Armenia)",
         "dob": "1986-04-19",
         "inn_personal": "772705212594",
-        "notes": "PII source-linkage pass 2026-09-02: dob/birthplace/personal-ИНН confirmed against rupep.org profile (s2604), archived RUPEP_20260826_lysogorskiy-kirill-alekseevich.pdf.",
+        "notes": "PII source-linkage pass 2026-09-02: dob/birthplace/personal-ИНН confirmed against rupep.org profile (s2604), archived RUPEP_20260826_lysogorskiy-kirill-alekseevich.pdf.\n\n2026-09-15: graph-connectivity audit -- this ЦБСТ Supervisory Board role had entity_slug null, generating no graph edge (same bug class fixed for vladimir-vadimovich-yakushev/andrey-bezrukov earlier the same day per notes/rebuild_plan.md). Backfilled entity_slug to ano-tsbst-centre-for-unmanned-systems-technologies. No new source found naming him specifically; source_id left null (existing state, not fabricated).",
         "photo": "images/lysogorskiy-kirill-alekseevich_portrait_rupep.jpg",
+        "roles": [
+          {
+            "entity_slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
+            "title": "Deputy Minister of Industry and Trade",
+            "body": "ЦБСТ Supervisory Board",
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
+        ],
         "sanctions": [
           {
             "date": null,
@@ -2585,7 +2617,17 @@
     },
     "mikhail-kuznetsov": {
       "set": {
-        "notes": "PII source-linkage pass 2026-09-02: rupep.org has a \"Кузнецов Михаил Евгеньевич\" profile (s2603, RUPEP_20260826_kuznetsov-mikhail-evgenevich.pdf, b. 20.06.1979, Самара, ИНН 631919923965, UK-sanctioned) but this is a DIFFERENT PERSON — an MSU (Lomonosov) economics lecturer/department head, not this registry's ОНФ Executive Committee head. NOT linked. dob/birthplace/inn_personal remain unsourced for this entity; no RuPEP or other archived source found for the correct person."
+        "notes": "PII source-linkage pass 2026-09-02: rupep.org has a \"Кузнецов Михаил Евгеньевич\" profile (s2603, RUPEP_20260826_kuznetsov-mikhail-evgenevich.pdf, b. 20.06.1979, Самара, ИНН 631919923965, UK-sanctioned) but this is a DIFFERENT PERSON — an MSU (Lomonosov) economics lecturer/department head, not this registry's ОНФ Executive Committee head. NOT linked. dob/birthplace/inn_personal remain unsourced for this entity; no RuPEP or other archived source found for the correct person.\n\n2026-09-15: graph-connectivity audit -- this ЦБСТ Supervisory Board role had entity_slug null, generating no graph edge (same bug class fixed for vladimir-vadimovich-yakushev/andrey-bezrukov earlier the same day per notes/rebuild_plan.md). Backfilled entity_slug to ano-tsbst-centre-for-unmanned-systems-technologies. No new source found naming him specifically; source_id left null (existing state, not fabricated).",
+        "roles": [
+          {
+            "entity_slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
+            "title": "Head of the Executive Committee, ОНФ (Popular Front)",
+            "body": "ЦБСТ Supervisory Board",
+            "from": null,
+            "to": null,
+            "source_id": null
+          }
+        ]
       },
       "verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
       "why": [
