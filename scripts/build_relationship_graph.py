@@ -510,6 +510,10 @@ def build_graph(entities: list[dict], people: list[dict],
             target = inn_to_entity_slug.get(other.get("inn"))
             add_edge(slug, target, "role", other.get("role"), other.get("source_id"),
                      other.get("as_of"))
+        family = person.get("family_of")
+        if isinstance(family, dict) and family.get("principal_slug"):
+            add_edge(slug, family["principal_slug"], "family_tie", family.get("relation"),
+                      family.get("source_id"), confidence=family.get("confidence"))
 
     node_list = sorted(nodes.values(), key=lambda node: node["id"])
     edges.sort(key=lambda edge: (

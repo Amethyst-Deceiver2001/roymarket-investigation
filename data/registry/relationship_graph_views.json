@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "generated_from": "relationship_graph.json",
   "views": {
     "cited_only": {
@@ -814,7 +814,7 @@
           "label": "Белоглазова Людмила Александровна",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 1
+          "degree": 3
         },
         {
           "id": "belov-evgeniy-sergeevich",
@@ -1768,7 +1768,7 @@
           "label": "Федоров Павел Романович",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 1
+          "degree": 2
         },
         {
           "id": "fedorov-sergey-gennadevich",
@@ -2788,7 +2788,7 @@
           "label": "Незнамов Александр Васильевич",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 4
+          "degree": 7
         },
         {
           "id": "nikiforov-anton-sergeevich",
@@ -4652,7 +4652,7 @@
           "label": "Петров Алексей Александрович",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 1
+          "degree": 7
         },
         {
           "id": "petrov-vladimir-alekseevich",
@@ -9593,7 +9593,7 @@
           "label": "Шагиахметов Айрат Фатхутдинович",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "shakhmatov-ivan-anatolevich",
@@ -9601,7 +9601,7 @@
           "label": "Шахматов Иван Анатольевич",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 1
+          "degree": 4
         },
         {
           "id": "shandobylo-sergey-sergeevich",
@@ -9609,7 +9609,7 @@
           "label": "Шандобыло Сергей Сергеевич",
           "name_latin": "Shandabyla Siarhei",
           "sanctioned": false,
-          "degree": 2
+          "degree": 7
         },
         {
           "id": "shatrakova-anastasiya-artemovna",
@@ -10591,7 +10591,7 @@
           "label": "Цыганов Вадим Борисович",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "tychinskiy-aleksandr-yulevich",
@@ -27513,7 +27513,7 @@
           "label": "Незнамов Александр Васильевич",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 4
+          "degree": 7
         },
         {
           "id": "nina-olegovna-yanykina",
@@ -33689,6 +33689,14 @@
           "degree": 6
         },
         {
+          "id": "beloglazova-lyudmila-aleksandrovna",
+          "kind": "person",
+          "label": "Белоглазова Людмила Александровна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 3
+        },
+        {
           "id": "bessonov-sergey-nikolaevich",
           "kind": "person",
           "label": "Бессонов Сергей Николаевич",
@@ -33827,6 +33835,22 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 6
+        },
+        {
+          "id": "fedorov-pavel-romanovich",
+          "kind": "person",
+          "label": "Федоров Павел Романович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 2
+        },
+        {
+          "id": "fedorova-polina-gennadevna",
+          "kind": "person",
+          "label": "Федорова Полина Геннадьевна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
         },
         {
           "id": "fedukovich-kirill-olegovich",
@@ -34349,6 +34373,22 @@
           "degree": 3
         },
         {
+          "id": "meshkova-kristina-andreevna",
+          "kind": "person",
+          "label": "Мешкова Кристина Андреевна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "meshkova-nadezhda-filippovna",
+          "kind": "person",
+          "label": "Мешкова Надежда Филипповна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "mikhail-kuznetsov",
           "kind": "person",
           "label": "Михаил Кузнецов",
@@ -34379,6 +34419,38 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 2
+        },
+        {
+          "id": "neznamov-aleksandr-vasilevich",
+          "kind": "person",
+          "label": "Незнамов Александр Васильевич",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 7
+        },
+        {
+          "id": "neznamov-vasiliy-aleksandrovich",
+          "kind": "person",
+          "label": "Незнамов Василий Александрович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "neznamova-anastasiya-vasilevna",
+          "kind": "person",
+          "label": "Незнамова Анастасия Васильевна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "neznamova-lyudmila-viktorovna",
+          "kind": "person",
+          "label": "Незнамова Людмила Викторовна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
         },
         {
           "id": "nina-olegovna-yanykina",
@@ -36189,12 +36261,68 @@
           "degree": 1
         },
         {
+          "id": "petrov-aleksandr-vitalevich",
+          "kind": "person",
+          "label": "Петров Александр Витальевич",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "petrov-aleksey-aleksandrovich",
+          "kind": "person",
+          "label": "Петров Алексей Александрович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 7
+        },
+        {
+          "id": "petrov-viktor-vitalevich",
+          "kind": "person",
+          "label": "Петров Виктор Витальевич",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "petrov-vitaliy-pavlinovich",
+          "kind": "person",
+          "label": "Петров Виталий Павлинович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "petrov-vladimir-alekseevich",
           "kind": "person",
           "label": "Петров Владимир Алексеевич",
           "name_latin": "Petrov Vladimir Alekseevich",
           "sanctioned": false,
           "degree": 4
+        },
+        {
+          "id": "petrova-darya-aleksandrovna",
+          "kind": "person",
+          "label": "Петрова Дарья Александровна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "petrova-marina-vladimirovna",
+          "kind": "person",
+          "label": "Петрова Марина Владимировна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "petrova-natalya-viktorovna",
+          "kind": "person",
+          "label": "Петрова Наталья Викторовна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
         },
         {
           "id": "pinimasov-aleksandr",
@@ -38130,6 +38258,102 @@
           "degree": 3
         },
         {
+          "id": "shagiakhmetov-ayrat-fatkhutdinovich",
+          "kind": "person",
+          "label": "Шагиахметов Айрат Фатхутдинович",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 4
+        },
+        {
+          "id": "shagiakhmetova-alisa-ayratovna",
+          "kind": "person",
+          "label": "Шагиахметова Алиса Айратовна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "shakhmatov-anatoliy-aleksandrovich",
+          "kind": "person",
+          "label": "Шахматов Анатолий Александрович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "shakhmatov-ivan-anatolevich",
+          "kind": "person",
+          "label": "Шахматов Иван Анатольевич",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 4
+        },
+        {
+          "id": "shakhmatova-olga-petrovna",
+          "kind": "person",
+          "label": "Шахматова Ольга Петровна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "shakhmatova-tatyana-anatolevna",
+          "kind": "person",
+          "label": "Шахматова Татьяна Анатольевна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "shandobylo-aleksandr-otets",
+          "kind": "person",
+          "label": "Шандобыло Александр",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "shandobylo-lyudmila-aleksandrovna-mat",
+          "kind": "person",
+          "label": "Шандобыло Людмила Александровна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "shandobylo-miloslava-igorevna",
+          "kind": "person",
+          "label": "Шандобыло Милослава Игоревна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "shandobylo-sergey-sergeevich",
+          "kind": "person",
+          "label": "Шандобыло Сергей Сергеевич",
+          "name_latin": "Shandabyla Siarhei",
+          "sanctioned": false,
+          "degree": 7
+        },
+        {
+          "id": "shandobylo-tatyana-rodstvennitsa",
+          "kind": "person",
+          "label": "Шандобыло Татьяна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "shandobylo-yuliya-rodstvennitsa",
+          "kind": "person",
+          "label": "Шандобыло Юлия",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "shatrakova-anastasiya-artemovna",
           "kind": "person",
           "label": "Шатракова Анастасия Артёмовна",
@@ -38873,7 +39097,15 @@
           "label": "Цыганов Вадим Борисович",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 4
+          "degree": 5
+        },
+        {
+          "id": "tsyganova-viktoriya-yurevna",
+          "kind": "person",
+          "label": "Цыганова Виктория Юрьевна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
         },
         {
           "id": "tyutina-olga-anatolevna",
@@ -40344,6 +40576,17 @@
           "confidence": null
         },
         {
+          "source": "fedorova-polina-gennadevna",
+          "target": "fedorov-pavel-romanovich",
+          "type": "family_tie",
+          "label": "mother",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
           "source": "fedukovich-kirill-olegovich",
           "target": "ooo-kopterlab",
           "type": "founded",
@@ -41785,6 +42028,28 @@
           "confidence": null
         },
         {
+          "source": "meshkova-kristina-andreevna",
+          "target": "beloglazova-lyudmila-aleksandrovna",
+          "type": "family_tie",
+          "label": "possible relative (relation unconfirmed by dossier)",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "unconfirmed"
+        },
+        {
+          "source": "meshkova-nadezhda-filippovna",
+          "target": "beloglazova-lyudmila-aleksandrovna",
+          "type": "family_tie",
+          "label": "mother",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
           "source": "mikhail-kuznetsov",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "role",
@@ -41871,6 +42136,39 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "neznamov-vasiliy-aleksandrovich",
+          "target": "neznamov-aleksandr-vasilevich",
+          "type": "family_tie",
+          "label": "father",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
+          "source": "neznamova-anastasiya-vasilevna",
+          "target": "neznamov-aleksandr-vasilevich",
+          "type": "family_tie",
+          "label": "sister",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
+          "source": "neznamova-lyudmila-viktorovna",
+          "target": "neznamov-aleksandr-vasilevich",
+          "type": "family_tie",
+          "label": "mother",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
         },
         {
           "source": "nina-olegovna-yanykina",
@@ -43941,6 +44239,39 @@
           "confidence": null
         },
         {
+          "source": "petrov-aleksandr-vitalevich",
+          "target": "petrov-aleksey-aleksandrovich",
+          "type": "family_tie",
+          "label": "father",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
+          "source": "petrov-viktor-vitalevich",
+          "target": "petrov-aleksey-aleksandrovich",
+          "type": "family_tie",
+          "label": "uncle (probable)",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "probable"
+        },
+        {
+          "source": "petrov-vitaliy-pavlinovich",
+          "target": "petrov-aleksey-aleksandrovich",
+          "type": "family_tie",
+          "label": "grandfather (probable)",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "probable"
+        },
+        {
           "source": "petrov-vladimir-alekseevich",
           "target": "npp-elvo-kolskaya-verf",
           "type": "role",
@@ -43950,6 +44281,39 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "petrova-darya-aleksandrovna",
+          "target": "petrov-aleksey-aleksandrovich",
+          "type": "family_tie",
+          "label": "sister",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
+          "source": "petrova-marina-vladimirovna",
+          "target": "petrov-aleksey-aleksandrovich",
+          "type": "family_tie",
+          "label": "mother",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
+          "source": "petrova-natalya-viktorovna",
+          "target": "petrov-aleksey-aleksandrovich",
+          "type": "family_tie",
+          "label": "relative (unconfirmed)",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "unconfirmed"
         },
         {
           "source": "pinimasov-aleksandr",
@@ -44357,6 +44721,105 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "shagiakhmetova-alisa-ayratovna",
+          "target": "shagiakhmetov-ayrat-fatkhutdinovich",
+          "type": "family_tie",
+          "label": "daughter",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
+          "source": "shakhmatov-anatoliy-aleksandrovich",
+          "target": "shakhmatov-ivan-anatolevich",
+          "type": "family_tie",
+          "label": "father",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
+          "source": "shakhmatova-olga-petrovna",
+          "target": "shakhmatov-ivan-anatolevich",
+          "type": "family_tie",
+          "label": "mother",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
+          "source": "shakhmatova-tatyana-anatolevna",
+          "target": "shakhmatov-ivan-anatolevich",
+          "type": "family_tie",
+          "label": "sister",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
+          "source": "shandobylo-aleksandr-otets",
+          "target": "shandobylo-sergey-sergeevich",
+          "type": "family_tie",
+          "label": "father (probable)",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "probable"
+        },
+        {
+          "source": "shandobylo-lyudmila-aleksandrovna-mat",
+          "target": "shandobylo-sergey-sergeevich",
+          "type": "family_tie",
+          "label": "mother",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
+          "source": "shandobylo-miloslava-igorevna",
+          "target": "shandobylo-sergey-sergeevich",
+          "type": "family_tie",
+          "label": "wife",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
+        },
+        {
+          "source": "shandobylo-tatyana-rodstvennitsa",
+          "target": "shandobylo-sergey-sergeevich",
+          "type": "family_tie",
+          "label": "relative (unconfirmed)",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "unconfirmed"
+        },
+        {
+          "source": "shandobylo-yuliya-rodstvennitsa",
+          "target": "shandobylo-sergey-sergeevich",
+          "type": "family_tie",
+          "label": "relative (unconfirmed)",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "unconfirmed"
         },
         {
           "source": "shatrakova-anastasiya-artemovna",
@@ -45985,6 +46448,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "tsyganova-viktoriya-yurevna",
+          "target": "tsyganov-vadim-borisovich",
+          "type": "family_tie",
+          "label": "wife",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
         },
         {
           "source": "tyutina-olga-anatolevna",

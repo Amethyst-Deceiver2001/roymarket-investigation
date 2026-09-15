@@ -38975,8 +38975,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "shandobylo-sergey-sergeevich",
+      "relation": "wife",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [],
@@ -39017,8 +39024,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "shandobylo-sergey-sergeevich",
+      "relation": "mother",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39084,8 +39098,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "shandobylo-sergey-sergeevich",
+      "relation": "father (probable)",
+      "confidence": "probable",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39146,8 +39167,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "shandobylo-sergey-sergeevich",
+      "relation": "relative (unconfirmed)",
+      "confidence": "unconfirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39208,8 +39236,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "shandobylo-sergey-sergeevich",
+      "relation": "relative (unconfirmed)",
+      "confidence": "unconfirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39264,8 +39299,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "shakhmatov-ivan-anatolevich",
+      "relation": "father",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39348,8 +39390,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "shakhmatov-ivan-anatolevich",
+      "relation": "mother",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39430,8 +39479,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "shakhmatov-ivan-anatolevich",
+      "relation": "sister",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39512,8 +39568,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "beloglazova-lyudmila-aleksandrovna",
+      "relation": "mother",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39594,8 +39657,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "beloglazova-lyudmila-aleksandrovna",
+      "relation": "possible relative (relation unconfirmed by dossier)",
+      "confidence": "unconfirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39676,8 +39746,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "shagiakhmetov-ayrat-fatkhutdinovich",
+      "relation": "daughter",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -39758,8 +39835,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "fedorov-pavel-romanovich",
+      "relation": "mother",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [],
@@ -39789,8 +39873,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "petrov-aleksey-aleksandrovich",
+      "relation": "uncle (probable)",
+      "confidence": "probable",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [],
@@ -39821,12 +39912,19 @@
     "_raw": {},
     "_corrected": [
       "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2564).",
-      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
     "zakupki_review": {
       "as_of": "2026-08-31",
       "outcome": "closed",
       "note": "44 contracts, entirely Kudymkar district/municipal customers; generic small-supplier footprint."
+    },
+    "family_of": {
+      "principal_slug": "petrov-aleksey-aleksandrovich",
+      "relation": "father",
+      "confidence": "confirmed",
+      "source_id": null
     },
     "_verified_against": null,
     "opensanctions_matches": [
@@ -39884,8 +39982,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2548)."
+      "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2548).",
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "petrov-aleksey-aleksandrovich",
+      "relation": "sister",
+      "confidence": "confirmed",
+      "source_id": null
+    },
     "_verified_against": null,
     "opensanctions_matches": [
       {
@@ -39947,8 +40052,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "petrov-aleksey-aleksandrovich",
+      "relation": "mother",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-502101885903",
@@ -40038,8 +40150,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "petrov-aleksey-aleksandrovich",
+      "relation": "relative (unconfirmed)",
+      "confidence": "unconfirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -40120,8 +40239,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "petrov-aleksey-aleksandrovich",
+      "relation": "grandfather (probable)",
+      "confidence": "probable",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -40202,8 +40328,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "tsyganov-vadim-borisovich",
+      "relation": "wife",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [
       {
         "match_id": "Q4506342",
@@ -40298,8 +40431,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "neznamov-aleksandr-vasilevich",
+      "relation": "sister",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -40380,8 +40520,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "neznamov-aleksandr-vasilevich",
+      "relation": "father",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -40464,8 +40611,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408), listed as a relative of a ООО «Тримикс»/3MX principal or employee — NOT independently a network principal, official, owner, or director themselves. Included per explicit user direction to extend full-PII treatment to dossier-listed relatives; otherwise out of scope under this registry's standing PII policy default."
+      "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "family_of": {
+      "principal_slug": "neznamov-aleksandr-vasilevich",
+      "relation": "mother",
+      "confidence": "confirmed",
+      "source_id": null
+    },
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [

@@ -3075,19 +3075,33 @@
           "as_of": "2026-08-31",
           "outcome": "closed",
           "note": "44 contracts, entirely Kudymkar district/municipal customers; generic small-supplier footprint."
+        },
+        "family_of": {
+          "principal_slug": "petrov-aleksey-aleksandrovich",
+          "relation": "father",
+          "confidence": "confirmed",
+          "source_id": null
         }
       },
       "why": [
         "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2564).",
-        "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
+        "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
       ]
     },
     "petrova-darya-aleksandrovna": {
       "set": {
-        "inn_personal": "710680000353"
+        "inn_personal": "710680000353",
+        "family_of": {
+          "principal_slug": "petrov-aleksey-aleksandrovich",
+          "relation": "sister",
+          "confidence": "confirmed",
+          "source_id": null
+        }
       },
       "why": [
-        "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2548)."
+        "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2548).",
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
       ]
     },
     "polkovnikov-sergey-petrovich": {
@@ -4666,6 +4680,266 @@
       },
       "why": [
         "2026-09-15: closes the 'five EGRUL name-mismatch cases' lead — director and founder are different offices, so Мушкевич-as-director does not contradict Ткач-as-founder. Left an explicit open note on the one genuinely unverified piece (current-day ownership) rather than guessing."
+      ]
+    },
+    "fedorova-polina-gennadevna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "fedorov-pavel-romanovich",
+          "relation": "mother",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "meshkova-kristina-andreevna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "beloglazova-lyudmila-aleksandrovna",
+          "relation": "possible relative (relation unconfirmed by dossier)",
+          "confidence": "unconfirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "meshkova-nadezhda-filippovna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "beloglazova-lyudmila-aleksandrovna",
+          "relation": "mother",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "neznamov-vasiliy-aleksandrovich": {
+      "set": {
+        "family_of": {
+          "principal_slug": "neznamov-aleksandr-vasilevich",
+          "relation": "father",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "neznamova-anastasiya-vasilevna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "neznamov-aleksandr-vasilevich",
+          "relation": "sister",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "neznamova-lyudmila-viktorovna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "neznamov-aleksandr-vasilevich",
+          "relation": "mother",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "petrov-viktor-vitalevich": {
+      "set": {
+        "family_of": {
+          "principal_slug": "petrov-aleksey-aleksandrovich",
+          "relation": "uncle (probable)",
+          "confidence": "probable",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "petrov-vitaliy-pavlinovich": {
+      "set": {
+        "family_of": {
+          "principal_slug": "petrov-aleksey-aleksandrovich",
+          "relation": "grandfather (probable)",
+          "confidence": "probable",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "petrova-marina-vladimirovna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "petrov-aleksey-aleksandrovich",
+          "relation": "mother",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "petrova-natalya-viktorovna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "petrov-aleksey-aleksandrovich",
+          "relation": "relative (unconfirmed)",
+          "confidence": "unconfirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "shagiakhmetova-alisa-ayratovna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "shagiakhmetov-ayrat-fatkhutdinovich",
+          "relation": "daughter",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "shakhmatov-anatoliy-aleksandrovich": {
+      "set": {
+        "family_of": {
+          "principal_slug": "shakhmatov-ivan-anatolevich",
+          "relation": "father",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "shakhmatova-olga-petrovna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "shakhmatov-ivan-anatolevich",
+          "relation": "mother",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "shakhmatova-tatyana-anatolevna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "shakhmatov-ivan-anatolevich",
+          "relation": "sister",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "shandobylo-aleksandr-otets": {
+      "set": {
+        "family_of": {
+          "principal_slug": "shandobylo-sergey-sergeevich",
+          "relation": "father (probable)",
+          "confidence": "probable",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "shandobylo-lyudmila-aleksandrovna-mat": {
+      "set": {
+        "family_of": {
+          "principal_slug": "shandobylo-sergey-sergeevich",
+          "relation": "mother",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "shandobylo-miloslava-igorevna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "shandobylo-sergey-sergeevich",
+          "relation": "wife",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "shandobylo-tatyana-rodstvennitsa": {
+      "set": {
+        "family_of": {
+          "principal_slug": "shandobylo-sergey-sergeevich",
+          "relation": "relative (unconfirmed)",
+          "confidence": "unconfirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "shandobylo-yuliya-rodstvennitsa": {
+      "set": {
+        "family_of": {
+          "principal_slug": "shandobylo-sergey-sergeevich",
+          "relation": "relative (unconfirmed)",
+          "confidence": "unconfirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+      ]
+    },
+    "tsyganova-viktoriya-yurevna": {
+      "set": {
+        "family_of": {
+          "principal_slug": "tsyganov-vadim-borisovich",
+          "relation": "wife",
+          "confidence": "confirmed",
+          "source_id": null
+        }
+      },
+      "why": [
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
       ]
     }
   },

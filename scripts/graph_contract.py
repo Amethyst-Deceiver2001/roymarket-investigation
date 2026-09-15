@@ -10,11 +10,11 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-GRAPH_SCHEMA_VERSION = 5
+GRAPH_SCHEMA_VERSION = 6
 NODE_KINDS = {"entity", "person", "product", "unresolved",
               "government_customer", "military_unit"}
 EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
-              "procures", "confirmed_field_use", "cbst_tie"}
+              "procures", "confirmed_field_use", "cbst_tie", "family_tie"}
 TEMPORAL_STATUSES = {"current", "historical", "unknown"}
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 UNIT_TYPES = {"army", "brigade", "regiment", "battalion", "detachment",
@@ -41,6 +41,11 @@ EDGE_FIELDS = {
 # cbst_tie.confidence field (t-doc/t-open/press are positive-tie values;
 # "none"/"not_established" mean no tie and are never emitted as edges).
 CBST_TIE_CONFIDENCE = {"t-doc", "t-open", "press"}
+# family_tie.confidence: mirrors the source dossier's own hedging language
+# ("мать X" stated plainly vs "вероятно дядя"/"предположительно отец" vs an
+# explicit "установить кто" unresolved flag) rather than inventing a new
+# vocabulary -- see people.json's family_of.confidence.
+FAMILY_TIE_CONFIDENCE = {"confirmed", "probable", "unconfirmed"}
 
 # related_entities[].relationship_type (added 2026-09-15, schema v5) — a
 # controlled vocabulary replacing the previous hardcoded "related
@@ -287,6 +292,12 @@ def validate_graph(
                 "procures": ({"government_customer"}, {"entity"}),
                 "confirmed_field_use": ({"entity", "product"}, {"military_unit"}),
                 "cbst_tie": ({"entity"}, {"entity"}),
+                # family_tie added 2026-09-16: a relative of a network
+                # principal, sourced from a leaked dossier's own family-tree
+                # notes rather than a corporate role -- the "maybe bucket:
+                # relatives" case from the degree-0 audit. person->person
+                # only; direction is relative -> principal.
+                "family_tie": ({"person"}, {"person"}),
             }[etype]
             if src_kind not in permitted[0] or dst_kind not in permitted[1]:
                 _error(errors, f"{where} has invalid {src_kind}->{dst_kind} endpoints for {etype}")
@@ -301,8 +312,11 @@ def validate_graph(
         if etype == "cbst_tie":
             if confidence not in CBST_TIE_CONFIDENCE:
                 _error(errors, f"{where}.confidence has invalid value {confidence!r} for cbst_tie")
+        elif etype == "family_tie":
+            if confidence not in FAMILY_TIE_CONFIDENCE:
+                _error(errors, f"{where}.confidence has invalid value {confidence!r} for family_tie")
         elif confidence is not None:
-            _error(errors, f"{where}.confidence must be null for non-cbst_tie edge type {etype!r}")
+            _error(errors, f"{where}.confidence must be null for edge type {etype!r}")
         status = edge.get("temporal_status")
         if status not in TEMPORAL_STATUSES:
             _error(errors, f"{where}.temporal_status has invalid value {status!r}")
