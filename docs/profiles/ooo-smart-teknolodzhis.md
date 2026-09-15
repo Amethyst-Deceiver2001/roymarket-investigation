@@ -12,6 +12,7 @@
 - **Director:** Кот Олег Петрович
 - **Charter capital:** ₽5,500,000
 - **ОКВЭД:** 62.02.9 — Деятельность консультативная в области компьютерных технологий прочая
+- **ЦБСТ tie:** Named directly as "резидент ЦБСТ" by ЦБСТ's own channel.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
@@ -61,7 +62,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Кот Олег Петрович
+
+- **ИНН:** 772453374643
+- Генеральный директор
 
 ## Open questions
 

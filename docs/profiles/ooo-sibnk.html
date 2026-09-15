@@ -1,0 +1,129 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ООО «СИБНК» — company profile — РОЙ.МАРКЕТ</title>
+<link rel="stylesheet" href="../assets/profile.css">
+</head><body>
+<div class="wrap">
+
+  <header class="mast">
+    <button id="theme-toggle" type="button" aria-pressed="false" style="float:right;background:var(--panel-2);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:.35em .7em;font:inherit;font-size:.85em;cursor:pointer;">☾/☀ theme</button>
+    <p class="kicker">Company profile · РОЙ.МАРКЕТ investigation</p>
+    <div class="profile-head">
+      <div class="profile-head-text">
+        <h1 title="limited liability company">ООО «СИБНК»</h1>
+        <div class="chip-row">
+<span class="tag t-open">manufacturer</span><span class="tag t-press">WB: not_checked</span>        </div>
+        <p class="meta">
+<span>ИНН 7814475694</span><span>Сибирская навигационная компания, Moscow</span>        </p>
+      </div>
+    </div>
+  </header>
+
+  <section id="at-a-glance">
+    <p class="eyebrow">At a glance</p>
+    <div class="meta-grid">
+      <div><dt>Legal form</dt><dd>OOO (limited liability company)</dd></div>
+      <div><dt>Director</dt><dd>Батурин Вячеслав Юрьевич</dd></div>
+      <div><dt>Charter capital</dt><dd>₽10,000</dd></div>
+      <div><dt>Wildberries overlap</dt><dd>not_checked</dd></div>
+    </div>
+  </section>
+
+  <section id="ownership-history">
+    <p class="eyebrow">Ownership &amp; corporate history</p>
+    <h3>Director</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Батурин Вячеслав Юрьевич</td><td class="num">2010-08-17</td><td>Должность: Генеральный директор, личный ИНН 781434774182. Full signed ЕГРЮЛ выписка pulled 2026-09-07. (Prior entry naming &#34;Ступников Андрей Генадьевич&#34;, sourced only to an unverified brief-table row, removed 2026-09-14 -- it was the same misattribution that had motivated this record&#39;s now-reversed merge into ooo-sibirskaya-navigatsionnaya-kompaniya; see this record&#39;s own `why`.) <span class="id">[s6752]</span></td></tr>
+      </tbody>
+    </table></div>
+    <h3>Founders / ownership</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Батурин Вячеслав Юрьевич 100% (₽10 000)</td><td class="num">2010-08-17</td><td>Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). <span class="id">[s6752]</span></td></tr>
+      </tbody>
+    </table></div>
+    <h3>Charter capital</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>10000</td><td class="num">2010-08-17</td><td>Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). <span class="id">[s6752]</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section id="sanctions">
+    <p class="eyebrow">Sanctions &amp; screening</p>
+    <ul class="plain">
+<li class="footnote" style="border:none;margin:0;padding:0;">1 OpenSanctions match(es) (screened 2026-09-06).</li><li class="footnote" style="border:none;margin:0;padding:0;">3 OCCRP Aleph match(es) (screened 2026-09-05).</li>    </ul>
+  </section>
+
+
+
+
+  <section id="principals">
+    <p class="eyebrow">Principals &amp; persons of interest</p>
+    <div class="principal-grid">
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4>Baturin Vyacheslav Yurevich</h4>
+<span class="person-fio">Батурин Вячеслав Юрьевич</span>          <dl>
+<dt>ИНН</dt><dd>781434774182</dd>          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Генеральный директор / sole founder (100%, ₽10,000) (2010-08-17–present)</li>          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="sources">
+    <p class="eyebrow">Sources cited in this profile</p>
+    <div class="scroll"><table>
+      <thead><tr><th>ID</th><th>Type</th><th>Locator</th><th>Captured</th><th>As of</th></tr></thead>
+      <tbody>
+        <tr><td class="id">s6752</td><td>EGRUL extract</td><td>EGRUL extract (EGRUL_7814475694_20260907_ooo-sibnk.pdf)</td><td class="num">2026-09-07</td><td class="num">2026-09-07</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <p class="footnote">Generated from this investigation's registry (<code>data/registry/</code>) by <code>scripts/build_company_profile.py</code>. Not a substitute for reading the underlying primary sources listed above.</p>
+
+</div>
+<script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  var stored = null;
+  try { stored = localStorage.getItem('roymarket-theme'); } catch (e) {}
+  function apply(theme) {
+    if (theme === 'dark' || theme === 'light') { root.setAttribute('data-theme', theme); }
+    else { root.removeAttribute('data-theme'); }
+    if (btn) btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+  }
+  apply(stored);
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var currentlyDark = current === 'dark' || (!current && systemDark);
+      var next = currentlyDark ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem('roymarket-theme', next); } catch (e) {}
+    });
+  }
+})();
+</script>
+</body></html>

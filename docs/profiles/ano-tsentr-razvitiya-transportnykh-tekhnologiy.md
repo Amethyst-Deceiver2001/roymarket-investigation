@@ -52,7 +52,13 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Рогозин Алексей Дмитриевич
+
+![Рогозин Алексей Дмитриевич](../images/rogozin-aleksey-dmitrievich_portrait_rupep.jpg)
+- **DOB:** 21.09.1983
+- **ИНН:** 770301599800
+- Директор
+- `sanctions lead`
 
 ## Open questions
 

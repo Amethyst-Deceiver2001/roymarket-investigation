@@ -86,7 +86,7 @@
   <section id="open-questions">
     <p class="eyebrow">Open questions</p>
     <ul class="plain">
-<li>2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. Director/leadership not returned by the open-API quick-lookup for this ИНН (large АО, likely board-governed rather than a single listed GD in this lookup format) -- a full signed EGRUL extract would be needed to resolve founders/leadership structure. <span class="id">[s0165]</span></li>    </ul>
+<li>2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. Director/leadership not returned by the open-API quick-lookup for this ИНН (large АО, likely board-governed rather than a single listed GD in this lookup format) -- a full signed EGRUL extract would be needed to resolve founders/leadership structure. <span class="id">[s0165]</span></li><li>2026-09-14 re-pull (full signed ЕГРЮЛ выписка, egrul_vypiska_pull.py) CLOSES the prior open question about resolving shareholders via a full extract: this АО&#39;s shares are held via an independent registrar (АО «РТ-Регистратор», ИНН 5407175878, ОГРН 1025403189790) rather than listed directly in EGRUL -- standard for a JSC of this size, and means shareholder identity is genuinely not obtainable from EGRUL by any pull, full or partial. Director/representative access remains restricted (Федеральный закон №129-ФЗ, confirmed still in force as of this pull). Resolving ownership further would need a registrar-held reestr request, out of scope for this project&#39;s tooling. <span class="id">[s7455]</span></li>    </ul>
   </section>
 
   <section id="sources">
@@ -99,6 +99,7 @@
         <tr><td class="id">s0422</td><td>БФО annual-accounts filing</td><td>БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2024_20260818.zip)</td><td class="num">2026-08-18</td><td class="num">2024-12-31</td></tr>
         <tr><td class="id">s0423</td><td>БФО annual-accounts filing</td><td>БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2025_20260818.zip)</td><td class="num">2026-08-18</td><td class="num">2025-12-31</td></tr>
         <tr><td class="id">s6869</td><td>EGRUL extract</td><td>EGRUL extract (EGRUL_9726051114_20260907_ao-khk-gumich.pdf)</td><td class="num">2026-09-07</td><td class="num">2026-09-07</td></tr>
+        <tr><td class="id">s7455</td><td>EGRUL extract</td><td>EGRUL extract (EGRUL_9726051114_20260914_ao-khk-gumich.pdf)</td><td class="num">2026-09-14</td><td class="num">2026-09-14</td></tr>
       </tbody>
     </table></div>
   </section>

@@ -51,6 +51,13 @@
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry 'Радиоэлектронная промышленность' with primary ОКВЭД 26.40 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
 
+## Battlefield evidence
+
+> *В разведподразделении войск «Центр», куда на днях доставили приобретенные фондом «Наша Правда» радиоэлектронные системы подавления дронов, был проведен практический показ двух комплексов оптико-электронной разведки «Взгляд» и «Наблюдатель» дневного и ночного исполнения производства АО «Росс». Бойцы разведподразделения прошли обучение и получили приборы в опытную эксплуатацию.*
+> Post dated 2024-02-21: a reconnaissance unit of the "Центр" group of forces received a practical demonstration of two day/night optical-electronic reconnaissance complexes, "Взгляд" and "Наблюдатель", explicitly described as "производства АО «Росс»" (made by JSC ROSS), delivered alongside vehicle-mounted electronic-warfare (drone-jamming) kits purchased by Фонд «Наша Правда».
+>
+> — Third-party delivery-report source (Наша Правда's own Telegram channel @nashapravdafond, post 1905141464:240) — the first source found that explicitly names АО «РОСС» as the manufacturer of «Взгляд»/«Наблюдатель», resolving this entity's own open_questions note that the brand-to-entity link was 'plausible but not established' from the zakupki contract's generic item description alone. (2024-02-21)
+
 ## Licences
 
 - Разработка, производство, испытание и ремонт авиационной техники [s0009]
@@ -72,7 +79,7 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0009 | document | document (7704097425_20082026.pdf) | 2008-20-26 | 2026-08-20 |
+| s0009 | document | document (7704097425_20082026.pdf) | 2026-08-20 | 2026-08-20 |
 | s2846 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770809864520000158_1770809864520000158_gk-045-17708098645200001580003_b3bb1612.docx) | — | 2020-11-10 |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |

@@ -1,6 +1,6 @@
 # АО «Эколибри»
 
-`manufacturer` 
+`sanctioned` `manufacturer` 
 
 ИНН 7714473012 · ОГРН 1217700279103 · Moscow
 
@@ -38,6 +38,9 @@
 - **Эколибри Р-30** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном самолетного типа с максимальной взлетной массой свыше 1 кг, но не более 30 кг [s5391]
 - **Эколибри Р-5** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 4 кг, но не более 30 кг [s5391]
 - **Эколибри Р-75** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном самолетного типа с вертикальным взлетом и посадкой с максимальной взлетной массой свыше 30 кг, но не более 500 кг [s5391]
+- **Эколибри P-30** — Макет БВС самолетного типа с гибридной силовой установкой для мониторинга и перевозки грузов [s1169]
+- **Эколибри eVTOL** — Макет БВС самолетного типа с гибридной силовой установкой для перевозки людей и грузов [s1169]
+- **Эколибри Р-55** — БВС мультироторного вида для перевозки грузов и мониторинга [s1169]
 
 ## Financials
 
@@ -64,6 +67,10 @@
 | — | 837294 | 20210305 | 16.11.2021 | 01 (broad catch-all filing, no UAV/defense-specific items); 07 (UAV/defense terms present: дрон, летательн, воздушн, взрывчат, робот); 09 (UAV/defense terms present: антенн, военн, навигацион, оружи, робот, взрывчат); 12 (UAV/defense terms present: беспилот, летательн, дрон, военн, воздушн); 39 (UAV/defense terms present: летательн, навигацион) |
 | — | 872056 | 20210630 | 01.06.2022 | 01 (broad catch-all filing, no UAV/defense-specific items); 07 (UAV/defense terms present: дрон, летательн, воздушн, взрывчат, робот); 09 (UAV/defense terms present: антенн, военн, навигацион, оружи, робот, взрывчат); 12 (UAV/defense terms present: беспилот, робот, летательн, радиоуправляем, коптер, дрон, военн, воздушн); 39 (UAV/defense terms present: летательн, дрон, навигацион) |
 | — | 880543 | 20211208 | 08.07.2022 | 01 (broad catch-all filing, no UAV/defense-specific items); 07 (UAV/defense terms present: дрон, летательн, воздушн, взрывчат, робот); 09 (UAV/defense terms present: антенн, военн, навигацион, оружи, робот, взрывчат); 12 (UAV/defense terms present: беспилот, робот, летательн, радиоуправляем, коптер, дрон, военн, воздушн); 39 (UAV/defense terms present: летательн, дрон, навигацион) |
+
+## Sanctions & screening
+
+**Sanctioned**
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
@@ -110,6 +117,7 @@
 | s0324 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
 | s1165 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
 | s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
+| s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
 | s1403 | АЭРОНЕКСТ member record | АЭРОНЕКСТ member record (AERONEXT_7714473012_20260825_ao-ekolibri.json) | 2026-08-25 | — |
 | s2625 | Naletay | Naletay (NALETAY_7714473012_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
 | s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |

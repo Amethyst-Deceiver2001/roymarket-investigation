@@ -43,6 +43,7 @@ _No named principals linked to this entity yet._
 ## Open questions
 
 - 2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. Director/leadership not returned by the open-API quick-lookup for this ИНН (large АО, likely board-governed rather than a single listed GD in this lookup format) -- a full signed EGRUL extract would be needed to resolve founders/leadership structure. [s0165]
+- 2026-09-14 re-pull (full signed ЕГРЮЛ выписка, egrul_vypiska_pull.py) CLOSES the prior open question about resolving shareholders via a full extract: this АО's shares are held via an independent registrar (АО «РТ-Регистратор», ИНН 5407175878, ОГРН 1025403189790) rather than listed directly in EGRUL -- standard for a JSC of this size, and means shareholder identity is genuinely not obtainable from EGRUL by any pull, full or partial. Director/representative access remains restricted (Федеральный закон №129-ФЗ, confirmed still in force as of this pull). Resolving ownership further would need a registrar-held reestr request, out of scope for this project's tooling. [s7455]
 
 ## Sources cited in this profile
 
@@ -53,6 +54,7 @@ _No named principals linked to this entity yet._
 | s0422 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2024_20260818.zip) | 2026-08-18 | 2024-12-31 |
 | s0423 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2025_20260818.zip) | 2026-08-18 | 2025-12-31 |
 | s6869 | EGRUL extract | EGRUL extract (EGRUL_9726051114_20260907_ao-khk-gumich.pdf) | 2026-09-07 | 2026-09-07 |
+| s7455 | EGRUL extract | EGRUL extract (EGRUL_9726051114_20260914_ao-khk-gumich.pdf) | 2026-09-14 | 2026-09-14 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -53,6 +53,9 @@
 - **А-5** — Aircraft-type БАС.
 - **А-5 М/Л** — Aircraft-type БАС — "высокой скоростью, большой продолжительностью и высотой полета".
 - **A-50** — Multicopter-type БАС (VTOL) — no dedicated page yet.
+- **БВС СТ AS-32-10** — Fixed-wing UAS with extended flight time, for aerial survey over large areas. [s1169]
+- **БВС СТ AS-32-8** — Compact electric fixed-wing UAS for rapid deployment and high-precision imagery. [s1169]
+- **БВС СТ Д-12К** — Electric VTOL UAS. [s1169]
 
 ## Financials
 
@@ -122,6 +125,7 @@
 
 ## Corporate links
 
+- **ООО «Аэромакс-Авиа (Центр-Логистика)»** — Same director (Бессонов Сергей Николаевич) — confirms ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) is a sister/logistics-arm entity of the ГК «Аэромакс» group, not an unrelated namesake. Found via screen_upr_uchr.py's other_entities scan on bessonov-sergey-nikolaevich, 2026-09-14.
 - **ООО «ГК «Аэромакс»»** — Parent entity (100%) [s0218]
 
 ## Open questions
@@ -134,6 +138,7 @@
 |---|---|---|---|---|
 | s0218 | EGRUL extract | EGRUL extract (ul-1177746007900-20260820195721.pdf) | — | 2026-08-20 |
 | s0780 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7725347482_20260824_ooo-aeromaks.json) | 2026-08-24 | — |
+| s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
 | s4572 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7725347482_2771087800024000123_kontrakt-gk-6-27710878000240001230002_2266db7b.docx) | — | 2023-12-26 |
 | s5219 | Zakupki | Zakupki (ZAKUPKI_contract_1772231995223000867_20260831.html) | 2026-08-31 | — |
 | s5220 | Zakupki | Zakupki (ZAKUPKI_contract_1772231995224000778_20260831.html) | 2026-08-31 | — |

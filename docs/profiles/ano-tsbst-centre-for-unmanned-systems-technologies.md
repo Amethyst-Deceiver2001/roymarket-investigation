@@ -70,6 +70,7 @@
 
 ### Нина Олеговна Яныкина
 
+![Нина Олеговна Яныкина](../images/nina-olegovna-yanykina_portrait_leader-id.png)
 - **ИНН:** 780158807980
 - General Director, АНО «ЦБСТ» (2025-12-16–present)
 - `sanctions lead`

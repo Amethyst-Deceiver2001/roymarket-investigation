@@ -72,7 +72,14 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Михельсон Леонид Викторович
+
+![Михельсон Леонид Викторович](../images/mikhelson-leonid-viktorovich_portrait_rupep.jpg)
+- **DOB:** 11.08.1955
+- **Birthplace:** Каспийск, Дагестан (Kaspiysk, Dagestan)
+- **ИНН:** 773600432474
+- Учредитель
+- `sanctions lead`
 
 ## Sources cited in this profile
 

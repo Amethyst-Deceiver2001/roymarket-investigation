@@ -59,6 +59,9 @@
 
 ### Калиновский Никита Владиславович
 
+- **ИНН:** 503411116191
+- Генеральный директор
+
 ## Open questions
 
 - Who was the director disqualified by court order (постановление 28.04.2025, EGRUL entry 04.09.2025), and what was the underlying case? [s0489]

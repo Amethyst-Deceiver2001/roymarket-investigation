@@ -10,6 +10,7 @@
 - **Address:** Волгоградская область
 - **Director:** Бурлака Павел Анатольевич
 - **Charter capital:** ₽100,000
+- **ЦБСТ tie:** ЦБСТ's own channel directly names "группа компаний «Логос»" a "резидентом ЦБСТ" as the developer of the «Дикобраз» RF/EW jamming kits distributed to «Центр» grouping troops via «Единая Россия»/фонд «Наша Правда», 03.07.2025 — the same «Дикобраз»/400+ units-in-combat detail already recorded in this entity's own tier_basis, confirming this ИНН (not the unrelated ИНН 7839303129 gk-logos/РЭБ.РУС record) is the entity ЦБСТ's post refers to.
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -49,7 +50,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Гарькуша Владимир Владимирович
+
+- **ИНН:** 344300633904
+- Учредитель
 
 ## Sources cited in this profile
 

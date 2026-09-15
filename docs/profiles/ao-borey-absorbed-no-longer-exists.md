@@ -41,6 +41,10 @@
 
 _No named principals linked to this entity yet._
 
+## Open questions
+
+- The absorption mechanism this entity's own slug refers to ("absorbed, no longer exists") is now confirmed: reorganized via присоединение INTO ООО «Инвестментс» (`ooo-investments`, ИНН 9707004743), per a joint meeting of both companies' participants/shareholders dated 17.11.2025 and Инвестментс's resulting new-redaction charter (registered 20.01.2026). Shared director Григорьев Д.Е. across both entities is consistent with this. Not yet checked: the commercial/strategic rationale for the merger, or whether any of Борей's own assets/contracts carried over to Инвестментс. [s7378]
+
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
@@ -49,6 +53,7 @@ _No named principals linked to this entity yet._
 | s0393 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
 | s0394 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | s6756 | EGRUL extract | EGRUL extract (EGRUL_9701280698_20260907_ao-borey-absorbed-no-longer-exists.pdf) | 2026-09-07 | 2026-09-07 |
+| s7378 | Founding-Устав bundle | Founding-Устав bundle (UD_1237700523895_20260913_ooo-investments.zip) | 2026-09-13 | 2023-08-01 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -35,6 +35,12 @@
 |---|---|---|
 | 40000 | 2025-07-09 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6712] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 420061, Республика Татарстан, г. Казань, ул. Николая Ершова, зд.31В | 2023-04-01 | First street-level address on file (prior: bare 'Республика Татарстан, г. Казань'), from a proverki.gov.ru labor-inspection warning (Apr 2023). [s6937] |
+
 ## Products
 
 - **Арена 5М**
@@ -56,6 +62,14 @@
 
 ### Поспехов Иван Александрович
 
+- **ИНН:** 121525518840
+- Генеральный директор
+
+### Фоминых Алексей Михайлович
+
+- **ИНН:** 121515275363
+- генеральный конструктор (per leader-id.ru self-report)
+
 ## Open questions
 
 - 2026-08-24 OpenSanctions full-roster screening: OpenSanctions' name-similarity match for this entity was CHECKED and REJECTED — the designation record it returned (ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "МЕТАСКАН", ИНН/tax number 5024179758) does not match this entity's own ИНН. Recorded explicitly so this false lead is not mistaken for a real hit in a future pass.
@@ -71,6 +85,7 @@
 | s6471 | Bfo | Bfo (BFO_1660349248_2024_ооо-метаскан.pdf) | — | — |
 | s6472 | Bfo | Bfo (BFO_1660349248_2025_ооо-метаскан.pdf) | — | — |
 | s6712 | EGRUL extract | EGRUL extract (EGRUL_1660349248_20260907_ooo-metaskan.pdf) | 2026-09-07 | 2026-09-07 |
+| s6937 | Proverki | Proverki (PROVERKI_1660349248_20260907_ooo-metaskan-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

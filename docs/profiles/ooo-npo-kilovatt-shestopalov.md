@@ -48,14 +48,14 @@
 - **К-14 «Багажный бокс»** [s0536]
 - **К-15 «ВИП БОКС»** [s0536]
 - **К-15** [s0536]
-- **ТП 4-28А** [s0536]
-- **ТП 4-28Б** [s0536]
-- **ТП 4-50А** [s0536]
-- **ТП 4-50Б** [s0536]
-- **ТП 7-100** [s0536]
-- **ТП8-100 («Штурм-К»)** [s0536]
+- **ТП 4-28А** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель рюкзак ТП4-28А» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки) — same model already documented as a separate GISP-sourced entry below; description backfilled onto this blank stub 2026-09-15 (duplicate-stub cleanup, no new source). [s5391]
+- **ТП 4-28Б** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель рюкзак ТП4-28Б» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки) — same model already documented as a separate GISP-sourced entry below; description backfilled onto this blank stub 2026-09-15 (duplicate-stub cleanup, no new source). [s5391]
+- **ТП 4-50А** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель рюкзак ТП4-50А» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки) — same model already documented as a separate GISP-sourced entry below; description backfilled onto this blank stub 2026-09-15 (duplicate-stub cleanup, no new source). [s5391]
+- **ТП 4-50Б** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель рюкзак ТП4-50Б» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки) — same model already documented as a separate GISP-sourced entry below; description backfilled onto this blank stub 2026-09-15 (duplicate-stub cleanup, no new source). [s5391]
+- **ТП 7-100** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель рюкзак ТП 7-100» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки). [s5391]
+- **ТП8-100 («Штурм-К»)** — Own-site product catalog (kilowatt48.ru/shop/, archived 2026-09-15): listed as «Станция РЭБ Капюшон ТП 8-100» (product slug stancziya-protivodejstviya-bpla-kapyushon-takticheskaya-perenosnaya-tp-8-100, category «переносные»/portable) — confirms the «Штурм-К» alias in this record's name_ru is the same Капюшон jamming-station line. [s7501]
 - **«Штурм-С»** [s0536]
-- **ТП 10-100** [s0536]
+- **ТП 10-100** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель ТП 10-100» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки). [s5391]
 - **ФПВ-3** [s0536]
 - **ФПВ-3 НЧ** [s0536]
 - **ФПВ-4** [s0536]
@@ -65,18 +65,18 @@
 - **ФПВ-6С** [s0536]
 - **ФПВ-7** [s0536]
 - **ФПВ-8** [s0536]
-- **ФПВ-12** [s0536]
-- **ФПВ-2128** [s0536]
-- **ФПВ-1/140** [s0536]
-- **ФПВ-1/200** [s0536]
-- **ФПВ-1/300** [s0536]
-- **К-8М** [s0536]
-- **К-12М «БАГАЖНЫЙ БОКС»** [s0536]
-- **ФПВ-8М** [s0536]
-- **К-15 М** [s0536]
+- **ФПВ-12** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель ФПВ-12» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки) — confirms this is the Капюшон jamming-station line, NOT an FPV strike drone (name contains "ФПВ" but denotes the station's frequency-module code, a false-positive risk this description corrects). [s5391]
+- **ФПВ-2128** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип «Капюшон», модель ФПВ-2128» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки) — a frequency module for the Капюшон jamming station, NOT an FPV strike drone. [s5391]
+- **ФПВ-1/140** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип «Капюшон», модель ФПВ-1/140» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки) — a frequency module for the Капюшон jamming station, NOT an FPV strike drone. [s5391]
+- **ФПВ-1/200** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип «Капюшон», модель ФПВ-1/200» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки) — a frequency module for the Капюшон jamming station, NOT an FPV strike drone. [s5391]
+- **ФПВ-1/300** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип «Капюшон», модель ФПВ-1/300» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки) — a frequency module for the Капюшон jamming station, NOT an FPV strike drone. [s5391]
+- **К-8М** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель К-8М» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки). [s5391]
+- **К-12М «БАГАЖНЫЙ БОКС»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель К-12М Багажный Бокс» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки). [s5391]
+- **ФПВ-8М** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель ФПВ-8М» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки) — confirms this is the Капюшон jamming-station line, NOT an FPV strike drone (name contains "ФПВ" but denotes the station's frequency-module code; this record was previously misclassified as fpv_kamikaze_strike by scripts/classify_product_icon.py on the bare "ФПВ-8М" name alone before this description was added). [s5391]
+- **К-15 М** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель К-15М» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки). [s5391]
 - **К-15 М3.3** [s0536]
-- **К-15 М «ВИП БОКС»** [s0536]
-- **К-12 М** [s0536]
+- **К-15 М «ВИП БОКС»** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель К-15М ВИП» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки) — GISP's model string omits the "БОКС" word present in this record's own name_ru; treated as the same product (VIP-trim case variant), not independently confirmed as identical. [s5391]
+- **К-12 М** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель К-12М» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки). [s5391]
 - **Сигнал** [s0536]
 - **«Капюшон К-12»** — Full technical test data on file: at 720-730/915/990-1000MHz ELRS control frequencies, achieves partial jamming at 100-155m and full loss-of-control at 40-100m against a test drone, per an internal test report ("Справка о тестировании") downloaded from kilowat48.ru. Informal/internal document, not a certified third-party test. [s0540]
 - **«Ребус»** — Stationary EW complex (also «Ребус-2»).
@@ -122,7 +122,12 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Shestopalov Sergei Anatolyevich — Шестопалов Сергей Анатольевич
+
+- **DOB:** 01.04.1974
+- **ИНН:** 480601511636
+- Генеральный директор
+- `sanctions lead`
 
 ## Corporate links
 
@@ -147,6 +152,7 @@ _No named principals linked to this entity yet._
 | s6503 | Bfo | Bfo (BFO_4800016776_2024_ооо-научно-производственное-объединение-киловатт.pdf) | — | — |
 | s6504 | Bfo | Bfo (BFO_4800016776_2025_ооо-научно-производственное-объединение-киловатт.pdf) | — | — |
 | s6790 | EGRUL extract | EGRUL extract (EGRUL_4800016776_20260907_ooo-npo-kilovatt-shestopalov.pdf) | 2026-09-07 | 2026-09-07 |
+| s7501 | product catalog | product catalog (CATALOG_4800016776_20260915_kilowatt48-shop-page3.html) | 2026-09-15 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -50,6 +50,9 @@
 
 ### Суховерхий Владимир Андреевич
 
+- **ИНН:** 526106960953
+- Генеральный директор
+
 ## Open questions
 
 - 2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found, no EGRUL contact info. Very recently registered (10.12.2024, ~20 months old), generic "other scientific R&D" OKVED -- thin registry footprint, relevance unconfirmed either way.

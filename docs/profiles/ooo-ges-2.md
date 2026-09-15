@@ -53,7 +53,12 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Михельсон Виктория Леонидовна
+
+- **DOB:** 01.01.1993
+- **ИНН:** 772984313656
+- Учредитель (0.098%)
+- `sanctions lead`
 
 ## Sources cited in this profile
 

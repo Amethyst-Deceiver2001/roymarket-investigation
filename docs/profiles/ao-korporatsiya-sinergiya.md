@@ -53,7 +53,15 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Лобов Вадим Георгиевич
+
+- **ИНН:** 614000245280
+- Учредитель
+
+### Федяева Анна Юрьевна
+
+- **ИНН:** 390506952401
+- Генеральный директор
 
 ## Sources cited in this profile
 

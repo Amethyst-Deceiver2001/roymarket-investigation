@@ -12,6 +12,7 @@
 - **Director:** Фоминых Алексей Михайлович
 - **Charter capital:** ₽250,000
 - **ОКВЭД:** 27.90 — Производство прочего электрического оборудования
+- **ЦБСТ tie:** ЦБСТ (АНО «Центр беспилотных систем и технологий») and ООО «ОПКБ ЭКСПЛОМЕТ» signed a formal strategic-cooperation agreement (соглашение о стратегическом сотрудничестве) on joint development of remote demining systems, minefield mapping, and integrating UAVs with mine-detection — a direct, first-degree institutional tie, not merely an adjacent industry connection.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
@@ -34,6 +35,12 @@
 |---|---|---|
 | 250000 | — | from brief:manufacturers-table:line-1017, unverified |
 | 250000 | 2023-07-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6710] |
+
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 424007, Республика Марий Эл, г. Йошкар-Ола, ул. Строителей, д.95, помещ.102в (лит.ЖЗ) | 2023-11-01 | First street-level address on file (prior: bare city-level 'г. Йошкар-Ола'), from two consistent proverki.gov.ru labor-inspection warnings (Nov 2023 and Mar 2026). [s6954] |
 
 ## Products
 
@@ -100,7 +107,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Фоминых Алексей Михайлович
+
+- **ИНН:** 121515275363
+- Генеральный директор
 
 ## Sources cited in this profile
 
@@ -114,6 +124,7 @@ _No named principals linked to this entity yet._
 | s5351 | document | document (PP719_1215235283_20220425_zaklyuchenie-37390-11.pdf) | 2022-04-25 | 2022-04-25 |
 | s5352 | document | document (PP719_1215235283_20231128_zaklyuchenie-128052-11.pdf) | 2023-11-28 | 2023-11-28 |
 | s6710 | EGRUL extract | EGRUL extract (EGRUL_1215235283_20260907_ooo-opkb-eksplomet.pdf) | 2026-09-07 | 2026-09-07 |
+| s6954 | Proverki | Proverki (PROVERKI_1215235283_20260907_ooo-opkb-eksplomet-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

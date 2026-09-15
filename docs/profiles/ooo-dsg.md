@@ -35,6 +35,13 @@
 |---|---|---|
 | 10000 | 2020-01-29 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6770] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 115230, г. Москва, Хлебозаводской пр-д, д. 7, стр. 9, эт. 8, пом. XV, ком. 18П (рм 18г) | 2023-07-01 | First address on file for this entity (had none before), from a proverki.gov.ru Департамент образования и науки Москвы 'профилактический визит' record (Jul 2023). A second address is cited in the same record — see next entry. [s6935] |
+| 119331, г. Москва, Вернадского пр-т, д. 29, помещение 4/12 (этаж 12, помещение I, комната № 4) | 2023-07-01 | Second address cited in the same Jul 2023 Департамент образования и науки Москвы record alongside Хлебозаводской пр-д, д.7 — both associated with this entity, relationship between the two (HQ vs branch) not yet disambiguated. [s6935] |
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -88,6 +95,7 @@
 | s6680 | Bfo | Bfo (BFO_9724002908_2024_ооо-дсг.pdf) | — | — |
 | s6681 | Bfo | Bfo (BFO_9724002908_2025_ооо-дсг.pdf) | — | — |
 | s6770 | EGRUL extract | EGRUL extract (EGRUL_9724002908_20260907_ooo-dsg.pdf) | 2026-09-07 | 2026-09-07 |
+| s6935 | Proverki | Proverki (PROVERKI_9724002908_20260907_ooo-dsg-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

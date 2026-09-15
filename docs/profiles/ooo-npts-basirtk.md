@@ -119,7 +119,7 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0003 | document | document (3300009049_17082026.pdf) | 1708-20-26 | 2026-08-17 |
+| s0003 | document | document (3300009049_17082026.pdf) | 2026-08-17 | 2026-08-17 |
 | s0184 | Founding-Устав bundle | Founding-Устав bundle (UD_1243300000789_20260818_npc-basirtk.zip) | 2026-08-18 | 2026-07-15 |
 | s0232 | document | document (Благодарность.pdf) | — | 2024-12-01 |
 | s0247 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3300009049_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |

@@ -58,7 +58,14 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Ольга Соколова
+
+![Ольга Соколова](../images/sokolova-olga-mikhaylovna_portrait_rupep.jpg)
+- **DOB:** 03.01.1976
+- **Birthplace:** Бишкек, Кыргызстан (Bishkek, Kyrgyzstan)
+- **ИНН:** 500905260513
+- Генеральный директор
+- `sanctions lead`
 
 ## Open questions
 

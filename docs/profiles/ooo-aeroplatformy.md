@@ -12,6 +12,7 @@
 - **Director:** Власов Артём Аркадьевич
 - **Charter capital:** ₽100,000
 - **ОКВЭД:** 30.30.2 — Производство аэростатов, дирижаблей, планеров, дельтапланов и прочих безмоторных летательных аппаратов
+- **ЦБСТ tie:** Named directly as "Резидент ЦБСТ" in the headline of ЦБСТ's own channel post announcing its aerostat/balloon test program for SVO military delivery use.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

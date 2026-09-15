@@ -1,6 +1,6 @@
 # НПО «КАЙСАНТ»
 
-`manufacturer` `WB: not_checked` 
+`sanctioned` `manufacturer` `WB: not_checked` 
 
 ИНН 7733393203
 
@@ -8,6 +8,7 @@
 
 - **Legal form:** NPO (research and production association)
 - **Charter capital:** ₽150,000
+- **ЦБСТ tie:** Named directly as "резидент ЦБСТ" by ЦБСТ's own channel, twice.
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -43,6 +44,8 @@
 - **Дрон-перехватчик** — Interceptor drone (GISP nameEn: "Interceptor drone"), found via GISP goods-catalog exact company_ogrn search (ОГРН 1227700641805) under a generic (unbranded) listing — NOT confirmed to be the same product as the already-documented «ГУСЬ-7» above; GISP describes a passive/semi-active homing, platform/tube-launched interceptor (cruise 270 km/h, max 380 km/h, range 10 km, engages targets at 1000-3000m altitude up to 250 km/h target speed) versus «ГУСЬ-7»'s description as a kinetic multirotor FPV interceptor — the guidance/launch mechanism described differs enough that this may be a second, distinct interceptor model; flagged for verification rather than merged. GOST Р 59518-2021 cited. Production address per GISP: 125362, Москва, Строительный проезд, д.7А корп.28, помещ.224 — matches this entity's registered address. [s5390]
 - **FPV Дрон «Артемида 10»** — FPV combat/strike drone (GISP nameEn: "FPV Drone Artemis 10"). Operates on 4 frequency bands simultaneously, 25km range without a relay / 100km with relay, factory-fitted with the «Гермес» control channel, up to 4kg payload. GOST Р 59518-2021 cited. Found via GISP goods-catalog exact company_ogrn search. [s5390]
 - **Радиоуправляемая тележка «Аргус»** — Remote-controlled ground cart/trolley — distinct product line from the «Гермес» comms family and the interceptor/FPV drones above. Found via GISP goods-catalog exact company_ogrn search (list-view hit only, no detail record pulled). [s5389]
+- **«Аргус-Антидрон» (радиоружьё)** — Anti-drone RF detector/jammer gun, exhibited at Дронница 2023. [s7506]
+- **«Аргус-Антифурия» (мобильная станция РЭБ)** — Mobile RF-jamming station, exhibited at Дронница 2023. [s7506]
 
 ## Financials
 
@@ -51,6 +54,10 @@
 | 2023 | ₽6,689,000 | ₽1,023,000 | [s0339] |
 | 2024 | ₽194,116,000 | ₽10,911,000 | [s0340] |
 | 2025 | ₽1,812,579,000 | ₽890,678,000 | [s0341] |
+
+## Sanctions & screening
+
+**Sanctioned**
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
@@ -79,6 +86,7 @@
 | s5389 | Gisp | Gisp (GISP_20260903_goods-catalog-manufacturer-hits-5-companies.json) | 2026-09-03 | 2026-09-03 |
 | s5390 | Gisp | Gisp (GISP_20260903_goods-catalog-product-details-7-new-items.json) | 2026-09-03 | 2026-09-03 |
 | s6744 | EGRUL extract | EGRUL extract (EGRUL_7733393203_20260907_npo-kaysant.pdf) | 2026-09-07 | 2026-09-07 |
+| s7506 | transcript | transcript (TRANSCRIPT_20230809_dronnitsa-2023-npo-kaysant-argus.html) | 2023-08-09 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

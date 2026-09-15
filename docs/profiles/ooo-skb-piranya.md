@@ -11,6 +11,7 @@
 - **Director:** Чернышов Павел Алексеевич
 - **Charter capital:** ₽15,000
 - **ОКВЭД:** 62.01 — Разработка компьютерного программного обеспечения
+- **ЦБСТ tie:** Named directly by ЦБСТ's own channel as one of six EU-sanctioned ЦБСТ residents in the EU's 20th sanctions package (as «СКБ «Пиранья»»).
 - **Wildberries overlap:** none_found
 
 > **Declared vs. actual activity.** Registered as software development — matches this project's own plan document, which already flags "СКБ Пиранья as software" as one of the standing declared-vs-actual ОКВЭД mismatch examples (see notes/okved_mismatches.md).
@@ -140,12 +141,26 @@
 
 - <https://youtube.com/@piranhafpv> — Per site footer.
 
+## Images
+
+- ![NTV news footage: SKB Piranha's product line (kamikaze drone Piranha-10, cargo drone Piranha-13) at the "Inventions for Victory" exhibition, presented to SVR director Sergey Naryshkin.](../images/TGMEDIA_7300024069_20250401_piranhafpv-post360-1.jpg) — NTV news footage: SKB Piranha's product line (kamikaze drone Piranha-10, cargo drone Piranha-13) at the "Inventions for Victory" exhibition, presented to SVR director Sergey Naryshkin. [s7509]
+- ![An FPV drone operator at a field position ("Sever" grouping, Kursk border area) — the company claims to manufacture the fiber-optic control cable used in this engagement.](../images/TGMEDIA_7300024069_20250801_piranhafpv-post384-1.jpg) — An FPV drone operator at a field position ("Sever" grouping, Kursk border area) — the company claims to manufacture the fiber-optic control cable used in this engagement. [s7512]
+- ![SKB Piranha's booth at the "Interpolitex-2025" exhibition (Moscow, VDNKh, pavilion 57): full product line, including two newly-unveiled platforms (a heavy 20" drone and an interceptor drone).](../images/TGMEDIA_7300024069_20251029_piranhafpv-post432-1.jpg) — SKB Piranha's booth at the "Interpolitex-2025" exhibition (Moscow, VDNKh, pavilion 57): full product line, including two newly-unveiled platforms (a heavy 20" drone and an interceptor drone). [s7513]
+- ![SKB Piranha's booth at "Interpolitex-2025" — branded banner with products on the exhibition table.](../images/TGMEDIA_7300024069_20251029_piranhafpv-post432-2.jpg) — SKB Piranha's booth at "Interpolitex-2025" — branded banner with products on the exhibition table. [s7514]
+
 ## Principals & persons of interest
 
 ### Чернышов Павел Алексеевич
 
 - **DOB:** 09.05.1984
 - **ИНН:** 732508747179
+- `sanctions lead`
+
+### Корчагина Ольга Александровна
+
+- **DOB:** 25.04.1972
+- **ИНН:** 732703148651
+- Учредитель (60%)
 - `sanctions lead`
 
 ## Open questions
@@ -171,6 +186,10 @@
 | s5552 | Bfo | Bfo (BFO_7300024069_2025_ооо-скб-пиранья.pdf) | — | — |
 | s6730 | EGRUL extract | EGRUL extract (EGRUL_7300024069_20260907_ooo-skb-piranya.pdf) | 2026-09-07 | 2026-09-07 |
 | s6909 | Founding-Устав bundle | Founding-Устав bundle (UD_1237300010430_20260907_skb-piranya.zip) | 2026-09-07 | 2023-09-13 |
+| s7509 | Telegram media | Telegram media (TGMEDIA_7300024069_20250401_piranhafpv-post360-1.jpg) | 2025-04-01 | — |
+| s7512 | Telegram media | Telegram media (TGMEDIA_7300024069_20250801_piranhafpv-post384-1.jpg) | 2025-08-01 | — |
+| s7513 | Telegram media | Telegram media (TGMEDIA_7300024069_20251029_piranhafpv-post432-1.jpg) | 2025-10-29 | — |
+| s7514 | Telegram media | Telegram media (TGMEDIA_7300024069_20251029_piranhafpv-post432-2.jpg) | 2025-10-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

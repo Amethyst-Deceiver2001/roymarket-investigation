@@ -11,6 +11,7 @@
 - **Address:** 173003, Новгородская обл, г. Великий Новгород, ул. Лазаревская, 11, помещ. 105
 - **Director:** Чадаев Алексей Викторович
 - **ОКВЭД:** 72.19.9 — Научные исследования и разработки в области естественных и технических наук прочие, не включенные в другие группировки
+- **ЦБСТ tie:** Named among ЦБСТ's "resident-company leadership" in a New Year channel post, alongside Авирон, Овод, АО «НПП», Аляска and Визионеро.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

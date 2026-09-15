@@ -39,7 +39,7 @@
 
 - **Скворец**
 - **Скворец**
-- **Скворец ВМФ**
+- **Скворец ВМФ** — FPV kamikaze UAV, per GUR profile — likely the same as the existing «Скворец ВМФ» naval variant. Description backfilled 2026-09-15 from the «Скворец-З» sibling entry below, which already asserts this identity (duplicate-stub cleanup, no new source). [s0966]
 - **«Скворец-7»** — FPV kamikaze UAV, per GUR profile. [s0966]
 - **«Скворец-10»** — FPV kamikaze UAV, per GUR profile. [s0966]
 - **«Скворец-З»** — FPV kamikaze UAV, per GUR profile — likely the same as the existing «Скворец ВМФ» naval variant. [s0966]
@@ -64,7 +64,7 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0013 | document | document (9704241986_20082026.pdf) | 2008-20-26 | 2026-08-20 |
+| s0013 | document | document (9704241986_20082026.pdf) | 2026-08-20 | 2026-08-20 |
 | s0806 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9704241986_20260824_ao-tekhnodron.json) | 2026-08-24 | — |
 | s0966 | GUR war-sanctions record | GUR war-sanctions record (GUR_9704241986_20260824_ao-tekhnodron.html) | 2026-08-24 | — |
 | s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |

@@ -11,6 +11,7 @@
 - **Address:** 173003, Новгородская область, г. Великий Новгород, Большая Санкт-Петербургская ул., д. 64, офис 12
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 46.90 — Торговля оптовая неспециализированная
+- **ЦБСТ tie:** Indirect: parent АНО «НПЦ «Ушкуйник»» is a named ЦБСТ resident under a dated, primary-sourced cooperation agreement with АНО «ЦБСТ»; npts-ushkuynik is that АНО's own commercial manufacturing arm, producing the same «Князь Вандал Новгородский» drone the АНО is credited with.
 - **Wildberries overlap:** none_found
 
 > **Declared vs. actual activity.** Secondary code 26.51.6 (Производство прочих приборов, датчиков, аппаратуры и инструментов для измерения, контроля и испытаний) sits oddly against a wholesale-trade primary registration — consistent with the brief's existing read of this and Ушкуйник-СП as commercial/holding shells adjacent to the operating АНО, not the actual manufacturing site.
@@ -87,6 +88,7 @@
 
 - **АНО «НПЦ «Ушкуйник»»** — shares "Ушкуйник" brand/name; NOT the same legal entity — АНО is the operating nonprofit (director Чадаев А.В., confirmed), this ООО is a separate commercial-form entity with its own redacted founders/director. No documented common ownership beyond the shared name and Novgorod address cluster. [s0470]
 - **ООО «Ушкуйник-СП»** — same commercial-shell pattern (also EGRUL-redacted director/founders, also no БФО filings on record), address on the same Большая Санкт-Петербургская street a few doors down [s0470]
+- **АНО «НПЦ «Ушкуйник»»** — Parent entity
 
 ## Sources cited in this profile
 

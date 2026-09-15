@@ -37,7 +37,16 @@
 
 ## Products
 
-- **«Джокер»**
+- **«Джокер»** — FPV kamikaze/strike drone. Per ЦБСТ's own Telegram channel (t.me/ANO_CBST/1931, 27.02.2026): Russian Special Operations Forces used «Джокер» FPV drones to destroy a Ukrainian strongpoint on the Hostomel axis, 10 March 2022 — credited by the channel as the war's first FPV combat use. Developer named as ЦКБР chief designer Дмитрий Кузякин. [s7503]
+
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2022 | ₽32,949,000 | ₽93,000 | [s7382] |
+| 2023 | ₽70,569,000 | ₽65,000 | [s7383] |
+| 2024 | ₽41,048,000 | ₽50,000 | [s7384] |
+| 2025 | ₽551,033,000 | ₽1,001,000 | [s7385] |
 
 ## Sanctions & screening
 
@@ -63,11 +72,21 @@
 - co-inventor (patent RU236504U1)
 - `sanctions lead`
 
+### Kosolapov Oleg Yurevich — Косолапов Олег Юрьевич
+
+- **ИНН:** 645001842561
+- Генеральный директор (2025-05-20–present)
+
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s7351 | EGRUL extract | EGRUL extract (EGRUL_5040176793_20260908_ooo-tskbr.pdf) | 2026-09-08 | 2026-09-08 |
+| s7382 | Bfo | Bfo (BFO_5040176793_2022_ooo-tskbr.pdf) | — | — |
+| s7383 | Bfo | Bfo (BFO_5040176793_2023_ooo-tskbr.pdf) | — | — |
+| s7384 | Bfo | Bfo (BFO_5040176793_2024_ooo-tskbr.pdf) | — | — |
+| s7385 | Bfo | Bfo (BFO_5040176793_2025_ooo-tskbr.pdf) | — | — |
+| s7503 | transcript | transcript (TRANSCRIPT_20260227_ano-cbst-dzhoker-fpv-first-combat-use.txt) | 2026-02-27 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

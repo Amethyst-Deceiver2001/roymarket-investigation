@@ -113,7 +113,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Королев Дмитрий Михайлович
+
+- **ИНН:** 784804037752
+- Генеральный директор
 
 ## Sources cited in this profile
 

@@ -10,7 +10,7 @@
 - **Registered:** 24.01.2011
 - **Address:** Г.Москва
 - **Director:** Швецов Алексей Александрович
-- **Charter capital:** ₽12,000,000
+- **Charter capital:** ₽14,000,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -33,6 +33,7 @@
 | Value | As of | Note |
 |---|---|---|
 | 12000000 | 2026-03-16 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6702] |
+| 14000000 | 2026-09-09 | Изменения №7 в устав ООО «ФинКонсалтингК», решение единственного участника от 03.08.2026, зарегистрировано ЕГРЮЛ 09.09.2026 (ГРН 2267707652441): «3.5. Уставный капитал Общества составляет 14 000 000 (четырнадцать миллионов) рублей.» — a ₽2m increase over the prior ₽12m figure in under 6 months. Read directly from the устав amendment (OCR'd scanned TIFF), not inferred. [s7407] |
 
 ## Financials
 
@@ -57,6 +58,7 @@ _No named principals linked to this entity yet._
 | s0308 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7709869763_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | s0309 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7709869763_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s6702 | EGRUL extract | EGRUL extract (EGRUL_7709869763_20260907_ooo-finkonsaltingk-fkk.pdf) | 2026-09-07 | 2026-09-07 |
+| s7407 | Founding-Устав bundle | Founding-Устав bundle (UD_1117746033052_20260914_ooo-finkonsaltingk-fkk.zip) | 2026-09-14 | 2024-08-05 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

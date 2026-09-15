@@ -39,7 +39,11 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Бессонов Сергей Николаевич
+
+- **ИНН:** 644914040799
+- Генеральный директор
+- `sanctions lead`
 
 ## Sources cited in this profile
 

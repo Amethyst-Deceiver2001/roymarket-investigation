@@ -25,6 +25,7 @@
 
 | Year | Revenue | Profit | Source |
 |---|---|---|---|
+| 2021 | — | — | [s6483] |
 | 2022 | — | — | [s6484] |
 | 2023 | — | — | [s6485] |
 | 2024 | — | — | [s6486] |
@@ -48,6 +49,7 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s5427 | Pbnalog | Pbnalog (PBNALOG_UPRUCHR_multi_20260904_gagaring-poi-sweep.txt) | 2026-09-04 | 2026-09-04 |
+| s6483 | Bfo | Bfo (BFO_2632811832_2021_нп-дикма.pdf) | — | — |
 | s6484 | Bfo | Bfo (BFO_2632811832_2022_нп-дикма.pdf) | — | — |
 | s6485 | Bfo | Bfo (BFO_2632811832_2023_нп-дикма.pdf) | — | — |
 | s6486 | Bfo | Bfo (BFO_2632811832_2024_нп-дикма.pdf) | — | — |

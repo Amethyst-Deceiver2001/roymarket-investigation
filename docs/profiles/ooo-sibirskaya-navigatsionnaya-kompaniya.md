@@ -65,7 +65,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Ступников Андрей Генадьевич
+
+- **ИНН:** 165043571104
+- Генеральный директор
 
 ## Open questions
 

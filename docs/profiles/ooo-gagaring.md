@@ -131,6 +131,11 @@
 
 ![Field acknowledgment credited to channel @RuFront (30.08.2026) — a quantified (500 units), third-party-attributed confirmation of Кузнечик supply to a named front-line-adjacent channel, independent of Гагаринг's own marketing.](data/sources/TGPOST_multi_20260828-20260904_my_el_lab-week-otryad-gagaring-recruitment.txt)
 
+> *Выражаю огромную благодарность Товарищу Александру Сергеевичу и всему коллективу лаборатории «Гагаринг» за предоставленные «Кузнечики» в количестве 500 шт. Благодарим за постоянную поддержку!*
+> I express my great gratitude to Comrade Alexander Sergeyevich and the entire staff of the Gagaring laboratory for providing 500 units of the "Kuznechik" [comms module]. We thank you for your continued support!
+>
+> — Military thank-you letter genre post (see CLAUDE.md's documented pattern), posted/reposted via a channel self-identifying as @RuFront, naming Gagaring's own staff and a specific 500-unit quantity of its «Кузнечик» comms module. (2026-08-30)
+
 ## Patents
 
 | Title | Reg. no. | Filed | Inventors |

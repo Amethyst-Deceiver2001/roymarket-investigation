@@ -36,6 +36,12 @@
 | 350020, Краснодарский край, г. Краснодар, ул. Коммунаров, д. 268, помещ. 54 (место нахождения организации / registered legal address) | 2025-07-17 | Per ИСЛОД (Информационная система лицензирования образовательной деятельности) licence record Л035-01218-23/02689789. [s5386] |
 | 350020, Краснодарский край, г. Краснодар, ул. им. Цезаря Куникова, 24, корпус №2, помещ. 44-46 (место осуществления образовательной деятельности / actual licensed training-activity site) | 2025-07-17 | Per ИСЛОД licence branch detail — this is the officially licensed physical location where the ДПО training activity is conducted, distinct from the legal mailbox address above. Independently matches a claim already present in docs/index.html ("ул. Цезаря Куникова, 24к2, Краснодар — the «Гагаринг» training centre's address", with a photo, images/gagaring_school_kunikova_annex.jpg) that predates this registry entity and had no traceable source_id — this ИСЛОД record is the first solid primary-source confirmation of that pre-existing claim. Independently corroborated via NSPD cadastral lookup (s5388, cadastral no. 23:43:0129001:54507): the building at this address is a standard 18-storey apartment tower (built 2020, 37,025.5 m², brick/monolithic), officially classified «Многоквартирный жилой дом со встроенно-пристроенными помещениями» — i.e. an ordinary residential tower with ground-floor commercial/office units, not a purpose-built training facility, polygon or hangar. Same "mailbox/office-suite address" pattern already established for ООО «Гагаринг»'s own registered HQ (see roymarket-tracking-discipline memory). [s5385] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2025 | — | ₽-56,694,000 | [s7381] |
+
 ## Images
 
 - ![Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading «УДАРНАЯ СПЕЦНАЗ...» and «АРХАНГЕЛ». RESOLVED (2026-09-03): this is the branding of «Архангел Спецназа» (@arx_spn, a 1.02M-subscriber VDV servicemembers' Telegram channel), which announced an active joint veteran drone-retraining project with Гагаринг's own БПЛА lab on 2026-08-10 (s5392) — confirms the mask branding directly, not a visual guess. NOT yet confirmed as the same brand as the «Архангел Легион»/«проект Архангел» already tied to this entity's own 51st Army training-center relationship (see this entity's tier_basis) — flagged separately below.](../images/gagaring-training-graduation-mask-crop.png) — Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading «УДАРНАЯ СПЕЦНАЗ...» and «АРХАНГЕЛ». RESOLVED (2026-09-03): this is the branding of «Архангел Спецназа» (@arx_spn, a 1.02M-subscriber VDV servicemembers' Telegram channel), which announced an active joint veteran drone-retraining project with Гагаринг's own БПЛА lab on 2026-08-10 (s5392) — confirms the mask branding directly, not a visual guess. NOT yet confirmed as the same brand as the «Архангел Легион»/«проект Архангел» already tied to this entity's own 51st Army training-center relationship (see this entity's tier_basis) — flagged separately below. [s5392]
@@ -99,6 +105,7 @@
 | s5404 | Tgpost | Tgpost (TGPOST_20251214_my_el_lab-2749-sevastopol-sbory-saiga.txt) | 2025-12-14 | 2025-12-14 |
 | s5414 | Tgpost | Tgpost (TGPOST_20260629_projectArchangel-10400-tuapse-school-mountain-camp.txt) | 2026-06-29 | 2026-06-29 |
 | s6775 | EGRUL extract | EGRUL extract (EGRUL_2310240630_20260907_ano-dpo-obrazovatelny-tsentr-gagaring.pdf) | 2026-09-07 | 2026-09-07 |
+| s7381 | Bfo | Bfo (BFO_2310240630_2025_ano-dpo-obrazovatelny-tsentr-gagaring.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

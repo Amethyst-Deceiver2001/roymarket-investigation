@@ -24,7 +24,7 @@
     <div class="meta-grid">
       <div><dt>Legal form</dt><dd>NPP (research and production enterprise)</dd></div>
       <div><dt>Address</dt><dd>г. Санкт-Петербург</dd></div>
-      <div><dt>Director</dt><dd>Петрова Ольга Сергеевна</dd></div>
+      <div><dt>Director</dt><dd>Петров Владимир Алексеевич</dd></div>
       <div><dt>Charter capital</dt><dd>₽10,000</dd></div>
       <div><dt>ОКВЭД</dt><dd>72.19 — Научные исследования и разработки в области естественных и технических наук прочие</dd></div>
       <div><dt>Wildberries overlap</dt><dd>none_found</dd></div>
@@ -38,8 +38,9 @@
       <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
       <tbody>
         <tr><td>Петров В.А. / Шаповалов С.М.</td><td class="num">—</td><td>PRE-EXISTING SCAFFOLD VALUE, from brief:manufacturers-table:line-1020 — could not be confirmed against this fresh EGRUL pull; kept in history for the record but NOT treated as current. <span class="id">[s0484]</span></td></tr>
-        <tr><td>Петрова Ольга Сергеевна</td><td class="num">2021-06-25</td><td>full EGRUL extract pulled directly 23.08.2026 (ul-1217800070509-20260823131933.pdf) — sole founder+director, personal ИНН 781312561892. DISCREPANCY FLAGGED: this name does not match the brief&#39;s prose-sourced &#34;Петров В.А.&#34; at all (different person, different patronymic pattern, different gender) — either the brief&#39;s original source named a different individual (a co-founder, an earlier director, or the Кольская верфь side of this compound entity rather than ЭЛВО itself) or the scaffold mis-split the original compound row. NOT resolved here; needs the original brief source re-checked before either value is treated as authoritative. <span class="id">[s0484]</span></td></tr>
+        <tr><td>Петрова Ольга Сергеевна</td><td class="num">2021-06-25</td><td>full EGRUL extract pulled directly 23.08.2026 (ul-1217800070509-20260823131933.pdf) — sole founder+director, personal ИНН 781312561892. DISCREPANCY FLAGGED (RESOLVED 2026-09-14, see the 2024-12-02 and 2026-09-14 entries below): this name did not match the brief&#39;s prose-sourced &#34;Петров В.А.&#34; — turns out to simply be an earlier director; Петров was appointed later (2024-12-02) and two independent fresh EGRUL pulls since (2026-09-07, 2026-09-14) both confirm him as current, so the brief&#39;s original &#34;Петров В.А.&#34; attribution was directionally right all along, just pointing at a not-yet-appointed future director at scaffold time. <span class="id">[s0484]</span></td></tr>
         <tr><td>Петров Владимир Алексеевич</td><td class="num">2024-12-02</td><td>Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 780723994259. Full signed ЕГРЮЛ выписка pulled 2026-09-07. <span class="id">[s6750]</span></td></tr>
+        <tr><td>Петров Владимир Алексеевич</td><td class="num">2024-12-02</td><td>Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 780723994259. Independently reconfirmed by a second fresh full ЕГРЮЛ выписка, pulled 2026-09-14 as part of the connectivity-audit 12-entity batch (notes/rebuild_plan.md). The scalar `director` field above had been left stale at the 2021 value despite this newer history entry already being on file since 2026-09-07 -- corrected to match the latest history entry. <span class="id">[s7417]</span></td></tr>
       </tbody>
     </table></div>
     <h3>Founders / ownership</h3>
@@ -106,14 +107,24 @@
 
   <section id="principals">
     <p class="eyebrow">Principals &amp; persons of interest</p>
-    <p class="empty-note">No named principals linked to this entity yet.</p>
+    <div class="principal-grid">
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4>Petrov Vladimir Alekseevich</h4>
+<span class="person-fio">Петров Владимир Алексеевич</span>          <dl>
+<dt>ИНН</dt><dd>780723994259</dd>          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Генеральный директор (2024-12-02–present)</li>          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
 
   <section id="open-questions">
     <p class="eyebrow">Open questions</p>
     <ul class="plain">
-<li>Fresh EGRUL pull (23.08.2026) names sole founder/director as Петрова Ольга Сергеевна — does not match the brief&#39;s original &#34;Петров В.А.&#34; attribution for НПП «ЭЛВО». Reconcile against the original source before treating either as authoritative; the brief&#39;s compound row also names a separate «Кольская верфь» principal (Шаповалов С.М., ИНН 5190102381) not covered by this pull. <span class="id">[s0484]</span></li>    </ul>
+<li>RESOLVED 2026-09-14 (see director_history): Петрова Ольга Сергеевна (2021-06-25 pull) and Петров Владимир Алексеевич (current, per two independent EGRUL pulls dated 2026-09-07 and 2026-09-14) are simply two successive directors — the brief&#39;s original &#34;Петров В.А.&#34; attribution matches the later, current one. Still open: the brief&#39;s compound row also names a separate «Кольская верфь» principal (Шаповалов С.М., ИНН 5190102381) not covered by any pull on this ИНН -- likely a genuinely separate entity/person within the compound &#34;НПП ЭЛВО / Кольская верфь&#34; table row, not yet investigated. <span class="id">[s7417]</span></li>    </ul>
   </section>
 
   <section id="sources">
@@ -128,6 +139,7 @@
         <tr><td class="id">s6617</td><td>Bfo</td><td>Bfo (BFO_7810918592_2024_ооо-нпп-элво.pdf)</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td class="id">s6618</td><td>Bfo</td><td>Bfo (BFO_7810918592_2025_ооо-нпп-элво.pdf)</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td class="id">s6750</td><td>EGRUL extract</td><td>EGRUL extract (EGRUL_7810918592_20260907_npp-elvo-kolskaya-verf.pdf)</td><td class="num">2026-09-07</td><td class="num">2026-09-07</td></tr>
+        <tr><td class="id">s7417</td><td>EGRUL extract</td><td>EGRUL extract (EGRUL_7810918592_20260914_npp-elvo-kolskaya-verf.pdf)</td><td class="num">2026-09-14</td><td class="num">2026-09-14</td></tr>
       </tbody>
     </table></div>
   </section>

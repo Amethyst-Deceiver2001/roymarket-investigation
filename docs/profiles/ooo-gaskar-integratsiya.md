@@ -1,6 +1,6 @@
 # ООО «Гаскар Интеграция»
 
-`manufacturer` 
+`sanctioned` `manufacturer` 
 
 ИНН 7733894200 · ОГРН 5147746074196
 
@@ -89,6 +89,10 @@
 | Title | Reg. no. | Filed | Inventors |
 |---|---|---|---|
 | КАРТОЧКА БИОМЕТРИЧЕСКОЙ ИДЕНТИФИКАЦИИ ПО УЧЕТУ РАБОЧЕГО ВРЕМЕНИ | RU191888U1 | — | Саитов Ренат Фаритович (RU) |
+
+## Sanctions & screening
+
+**Sanctioned**
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).

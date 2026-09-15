@@ -89,7 +89,7 @@
 | s0946 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5038189259_20260824_ooo-pokrov.json) | 2026-08-24 | 2026-08-24 |
 | s1386 | site capture | site capture (SITE_5038189259_20260825_ooo-pokrov-pokrovsystem-ru.html) | 2026-08-25 | — |
 | s3424 | Zakupki | Zakupki (ZAKUPKI_contract_3310005025826000052_20260829.html) | 2026-08-29 | — |
-| s3669 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1500300810225000157_1500300810225000157_elektronnyy-kon-15003008102250001570005_72034074.xml) | 7203-40-74 | — |
+| s3669 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1500300810225000157_1500300810225000157_elektronnyy-kon-15003008102250001570005_72034074.xml) | — | — |
 | s3680 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1500300810225000157_1500300810225000157_uvedomlenie-fas-15003008102250001570006_4d2c94b3.zip) | — | — |
 | s6508 | Bfo | Bfo (BFO_5038189259_2024_ооо-покров.pdf) | — | — |
 | s6509 | Bfo | Bfo (BFO_5038189259_2025_ооо-покров.pdf) | — | — |

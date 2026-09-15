@@ -1,6 +1,6 @@
 # «Уралдронзавод»
 
-`manufacturer` `WB: not_checked` 
+`sanctioned` `manufacturer` `WB: not_checked` 
 
 ## At a glance
 
@@ -23,6 +23,10 @@
 ## State-program participation
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30.39 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
+
+## Sanctions & screening
+
+**Sanctioned**
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 5 OCCRP Aleph match(es) (screened 2026-09-05).

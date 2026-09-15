@@ -52,6 +52,15 @@
 
 ## Principals & persons of interest
 
+### Михельсон Леонид Викторович
+
+![Михельсон Леонид Викторович](../images/mikhelson-leonid-viktorovich_portrait_rupep.jpg)
+- **DOB:** 11.08.1955
+- **Birthplace:** Каспийск, Дагестан (Kaspiysk, Dagestan)
+- **ИНН:** 773600432474
+- Учредитель (78.29%)
+- `sanctions lead`
+
 ### Leonid Yakovlevich Simanovskiy — Симановский Леонид Яковлевич
 
 - **ИНН:** 770100058167

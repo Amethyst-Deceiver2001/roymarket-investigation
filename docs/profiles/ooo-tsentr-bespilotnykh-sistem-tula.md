@@ -26,6 +26,7 @@
 
 | Value | As of | Note |
 |---|---|---|
+| Борисов Александр Сергеевич 100% (sole participant) | 2023-02-03 | Founding sole participant, per решение единственного учредителя №1 (устав, 03.02.2023). An устав amendment dated 14.04.2023 (GRN 2237100102171, s7352) confirms he was still sole participant then ('решением единственного участника Борисова Александра Сергеевича №2') -- 10 days before the 3-way split below took effect. [s7352] |
 | Борисов Александр Сергеевич 20% (₽2 000) / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "НАУЧНО- ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ПРОГРАММНЫЕ КОМПЛЕКСЫ РЕАЛЬНОГО ВРЕМЕНИ" 20% (₽2 000) / ФОНД РАЗВИТИЯ ПРОМЫШЛЕННОСТИ ТУЛЬСКОЙ ОБЛАСТИ 60% (₽6 000) | 2023-04-24 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6813] |
 
 ### Charter capital
@@ -89,6 +90,7 @@
 | s6536 | Bfo | Bfo (BFO_7100032961_2024_ооо-цбс.pdf) | — | — |
 | s6537 | Bfo | Bfo (BFO_7100032961_2025_ооо-цбс.pdf) | — | — |
 | s6813 | EGRUL extract | EGRUL extract (EGRUL_7100032961_20260907_ooo-tsentr-bespilotnykh-sistem-tula.pdf) | 2026-09-07 | 2026-09-07 |
+| s7352 | Founding-Устав bundle | Founding-Устав bundle (UD_1237100001467_20260908_ooo-tsentr-bespilotnykh-sistem-tula.zip) | 2026-09-08 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

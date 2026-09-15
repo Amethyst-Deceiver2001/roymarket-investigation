@@ -20,6 +20,12 @@
 |---|---|---|
 | Рубинштейн Дмитрий Владимирович (founder, per ФНС учредитель/директор cross-reference; not yet confirmed as sitting director) | — | from corrections:add_entities, unverified |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | — | ₽-1,857,000 | [s7400] |
+
 ## Principals & persons of interest
 
 ### Дмитрий Владимирович Рубинштейн
@@ -32,6 +38,12 @@
 ## Open questions
 
 - Pull a full EGRUL/founding-doc extract to confirm ownership share, current director (vs. founder), and any tie to ЦБСТ itself beyond Рубинштейн's personal role.
+
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+| s7400 | Bfo | Bfo (BFO_9709100837_2024_ooo-berkut-dmv.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

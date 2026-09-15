@@ -59,7 +59,12 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Vakhid Abdulovich Kusumov — Кусумов Вахид Абдулович
+
+- **DOB:** 26.02.1973
+- **ИНН:** 202902196209
+- Генеральный директор
+- `sanctions lead`
 
 ## Corporate links
 
@@ -67,8 +72,7 @@ _No named principals linked to this entity yet._
 
 ## Open questions
 
-- Why do two separate ООО «Архангел» legal entities exist at the same Melitopol address under the same owner, two months apart (10.06.2024 and 22.08.2024)? Neither carries a liquidation or reorganisation marker, so both are live. Candidate explanations to test: (a) a re-registration under a different tax-region code (this one is ИНН-prefix 9001 = Запорожская область's original code, the sibling is 9500) that was never wound up; (b) a deliberate two-vehicle structure separating the licensed training operation (the sibling holds Rosobrnadzor licence Л035-00115-95/01431042 and books all revenue as образовательные услуги) from a production/procurement shell. Requires a БФО pull on 9001027869 to see whether it files any revenue at all. [s5504]
-- БФО (annual accounts) never pulled for ИНН 9001027869 — bo.nalog.gov.ru check outstanding. If it files zero revenue, the dormant-vehicle reading of the two-entity structure is supported. [s5504]
+- Why do two separate ООО «Архангел» legal entities exist at the same Melitopol address under the same owner, two months apart (10.06.2024 and 22.08.2024)? Neither carries a liquidation or reorganisation marker, so both are live. Candidate explanations to test: (a) a re-registration under a different tax-region code (this one is ИНН-prefix 9001 = Запорожская область's original code, the sibling is 9500) that was never wound up; (b) a deliberate two-vehicle structure separating the licensed training operation (the sibling holds Rosobrnadzor licence Л035-00115-95/01431042 and books all revenue as образовательные услуги) from a production/procurement shell. Requires a БФО pull on 9001027869 to see whether it files any revenue at all. RESOLVED 2026-09-08: hypothesis (b) confirmed by the БФО filings already on file (s5532/s5533, see financials[]) — this entity reports zero revenue in both FY2024 and FY2025, consistent with being a dormant vehicle distinct from its revenue-booking sibling. [s5504]
 - Is this the entity actually behind @projectArchangel / the Kalashnikov Zaporizhzhia training-centre memorandum, rather than 9500026652? The press coverage names only the informal «проект «Архангел»» and Филиппов, never an ИНН — so the attribution currently resting on 9500026652 is a location inference, and the existence of a second same-address entity weakens it. Do not treat either ИНН as the press-named party without a document that states one. [s5504]
 - Ukraine's NSDC designation (programId UA-SA1644) is on file, but the underlying Ukrainian presidential decree / NSDC decision number and its date have NOT been retrieved — OpenSanctions supplies the programId and the referent id (ua-nsdc-29694-...) but this project has not opened the primary Ukrainian instrument. Retrieve it before the designation is cited in any submission, and record the decree number and designation date in the sanctions[] entry, which currently has date: null. [s5523]
 - An entity ALREADY designated by Ukraine was, until 05.09.2026, absent from this registry entirely — reachable only through a one-line other_entities lead on its owner's person record. Worth noting as a method finding rather than a fact about the entity: six prior passes over the «Архангел» family were name-driven, and a name search does not reach an entity whose only path in runs through a person's ИНН. The same gap probably exists elsewhere in the registry.

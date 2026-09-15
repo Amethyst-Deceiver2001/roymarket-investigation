@@ -53,6 +53,10 @@
 
 - Delivery/install location: обл. Московская, г.о. Красногорск. Civilian regional-government IT licensing contract. [s3399]
 
+## State-program participation
+
+- The устав's own §3.1 ПРЕДМЕТ И ВИДЫ ДЕЯТЕЛЬНОСТИ restricts the entity's activity EXCLUSIVELY to research and commercialisation under 244-ФЗ, per the rules of the Сколково project as approved by its управляющая компания, aligned to Russia's научно-технологического развития priorities. This is not a generic activity list — the charter itself limits the company to Сколково-project research, making it a formal resident/participant, not just a claimed affiliate. [s7422]
+
 ## Sanctions & screening
 
 **Sanctioned** [s0819]
@@ -79,6 +83,7 @@ _No named principals linked to this entity yet._
 | s6689 | Bfo | Bfo (BFO_9731070264_2024_ооо-гаскар-технологии.pdf) | — | — |
 | s6690 | Bfo | Bfo (BFO_9731070264_2025_ооо-гаскар-технологии.pdf) | — | — |
 | s6772 | EGRUL extract | EGRUL extract (EGRUL_9731070264_20260907_ooo-gaskar-tekhnologii.pdf) | 2026-09-07 | 2026-09-07 |
+| s7422 | Founding-Устав bundle | Founding-Устав bundle (UD_1207700344037_20260914_ooo-gaskar-tekhnologii.zip) | 2026-09-14 | 2020-09-15 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

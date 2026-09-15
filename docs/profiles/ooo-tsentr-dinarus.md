@@ -10,6 +10,7 @@
 - **Address:** г. Москва
 - **Charter capital:** ₽100,000
 - **ОКВЭД:** 62.02 — Деятельность консультативная и работы в области компьютерных технологий
+- **ЦБСТ tie:** Named as a finalist of Cohort II of ЦБСТ's own "Акселератор проектов двойного назначения" (dual-use projects accelerator) — a primary-source institutional-program tie, not the literal word "резидент" but the same class of ЦБСТ-program participation evidence.
 - **Wildberries overlap:** none_found
 
 > **Declared vs. actual activity.** IT-consulting registration, no manufacturing/UAV ОКВЭД signal — worth a relevance recheck on why this ИНН was scaffolded into the manufacturer tier.

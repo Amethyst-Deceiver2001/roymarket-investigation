@@ -1,6 +1,6 @@
 # ООО «Элиарс»
 
-`manufacturer` `WB: not_checked` 
+`sanctioned` `manufacturer` `WB: not_checked` 
 
 ИНН 7735140825
 
@@ -48,6 +48,10 @@
 ## Licences
 
 - Лицензиат в реестре: «Общество с ограниченной ответственностью "ЭЛИАРС"» (124460, г. Москва, г. Зеленоград, ул. Конструктора Гуськова, д. 8, стр. 1). Дата внесения сведений в реестр: 17-11-2015. [s6408]
+
+## Sanctions & screening
+
+**Sanctioned**
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 5 OCCRP Aleph match(es) (screened 2026-09-05).

@@ -48,6 +48,8 @@
 
 ### Поспехов Иван Александрович
 
+- **ИНН:** 121525518840
+
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |

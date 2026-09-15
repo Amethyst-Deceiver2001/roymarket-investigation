@@ -8,7 +8,7 @@
 
 - **Legal form:** NPP (research and production enterprise)
 - **Address:** г. Санкт-Петербург
-- **Director:** Петрова Ольга Сергеевна
+- **Director:** Петров Владимир Алексеевич
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
 - **Wildberries overlap:** none_found
@@ -20,8 +20,9 @@
 | Value | As of | Note |
 |---|---|---|
 | Петров В.А. / Шаповалов С.М. | — | PRE-EXISTING SCAFFOLD VALUE, from brief:manufacturers-table:line-1020 — could not be confirmed against this fresh EGRUL pull; kept in history for the record but NOT treated as current. [s0484] |
-| Петрова Ольга Сергеевна | 2021-06-25 | full EGRUL extract pulled directly 23.08.2026 (ul-1217800070509-20260823131933.pdf) — sole founder+director, personal ИНН 781312561892. DISCREPANCY FLAGGED: this name does not match the brief's prose-sourced "Петров В.А." at all (different person, different patronymic pattern, different gender) — either the brief's original source named a different individual (a co-founder, an earlier director, or the Кольская верфь side of this compound entity rather than ЭЛВО itself) or the scaffold mis-split the original compound row. NOT resolved here; needs the original brief source re-checked before either value is treated as authoritative. [s0484] |
+| Петрова Ольга Сергеевна | 2021-06-25 | full EGRUL extract pulled directly 23.08.2026 (ul-1217800070509-20260823131933.pdf) — sole founder+director, personal ИНН 781312561892. DISCREPANCY FLAGGED (RESOLVED 2026-09-14, see the 2024-12-02 and 2026-09-14 entries below): this name did not match the brief's prose-sourced "Петров В.А." — turns out to simply be an earlier director; Петров was appointed later (2024-12-02) and two independent fresh EGRUL pulls since (2026-09-07, 2026-09-14) both confirm him as current, so the brief's original "Петров В.А." attribution was directionally right all along, just pointing at a not-yet-appointed future director at scaffold time. [s0484] |
 | Петров Владимир Алексеевич | 2024-12-02 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 780723994259. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6750] |
+| Петров Владимир Алексеевич | 2024-12-02 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 780723994259. Independently reconfirmed by a second fresh full ЕГРЮЛ выписка, pulled 2026-09-14 as part of the connectivity-audit 12-entity batch (notes/rebuild_plan.md). The scalar `director` field above had been left stale at the 2021 value despite this newer history entry already being on file since 2026-09-07 -- corrected to match the latest history entry. [s7417] |
 
 ### Founders / ownership
 
@@ -60,11 +61,14 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Petrov Vladimir Alekseevich — Петров Владимир Алексеевич
+
+- **ИНН:** 780723994259
+- Генеральный директор (2024-12-02–present)
 
 ## Open questions
 
-- Fresh EGRUL pull (23.08.2026) names sole founder/director as Петрова Ольга Сергеевна — does not match the brief's original "Петров В.А." attribution for НПП «ЭЛВО». Reconcile against the original source before treating either as authoritative; the brief's compound row also names a separate «Кольская верфь» principal (Шаповалов С.М., ИНН 5190102381) not covered by this pull. [s0484]
+- RESOLVED 2026-09-14 (see director_history): Петрова Ольга Сергеевна (2021-06-25 pull) and Петров Владимир Алексеевич (current, per two independent EGRUL pulls dated 2026-09-07 and 2026-09-14) are simply two successive directors — the brief's original "Петров В.А." attribution matches the later, current one. Still open: the brief's compound row also names a separate «Кольская верфь» principal (Шаповалов С.М., ИНН 5190102381) not covered by any pull on this ИНН -- likely a genuinely separate entity/person within the compound "НПП ЭЛВО / Кольская верфь" table row, not yet investigated. [s7417]
 
 ## Sources cited in this profile
 
@@ -77,6 +81,7 @@ _No named principals linked to this entity yet._
 | s6617 | Bfo | Bfo (BFO_7810918592_2024_ооо-нпп-элво.pdf) | — | — |
 | s6618 | Bfo | Bfo (BFO_7810918592_2025_ооо-нпп-элво.pdf) | — | — |
 | s6750 | EGRUL extract | EGRUL extract (EGRUL_7810918592_20260907_npp-elvo-kolskaya-verf.pdf) | 2026-09-07 | 2026-09-07 |
+| s7417 | EGRUL extract | EGRUL extract (EGRUL_7810918592_20260914_npp-elvo-kolskaya-verf.pdf) | 2026-09-14 | 2026-09-14 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -11,6 +11,7 @@
 - **Director:** Хутешен Алексей Александрович
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
+- **ЦБСТ tie:** Named directly by ЦБСТ's own channel as one of six EU-sanctioned ЦБСТ residents in the EU's 20th sanctions package (as «Атлант Аэро»); press coverage of the sanctions describes it as a maker of FPV drones and components for Orion-type UAVs plus EW/digital-integration systems.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
@@ -80,6 +81,14 @@
 ### Shevchenko Konstantin Igorevich — Шевченко Константин Игоревич
 
 - co-inventor (patent RU2859152C1)
+
+## Corporate links
+
+- **АО «Проминвест»** — Parent entity (51%)
+
+## Open questions
+
+- founders[] (source s0467) lists only Шевченко Константин Игоревич, no share%, while the cbst_tie/parents[] prose (docs/index.html) describes a 51/39/two-smaller-holder split (АО «Проминвест» / GD Хутешен / two individuals) with no Шевченко named. Not reconciled -- s0467 may predate the ownership described in the prose (dated 10.08.2026 for the Хутешен-stake increase), or Шевченко may be one of the unnamed "two smaller individual holders." A fresh full EGRUL выписка would settle this. [s0467]
 
 ## Sources cited in this profile
 

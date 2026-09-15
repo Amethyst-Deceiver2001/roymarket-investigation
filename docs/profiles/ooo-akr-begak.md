@@ -62,7 +62,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Бегак Александр Аркадьевич
+
+- **ИНН:** 263202438639
+- Генеральный директор
 
 ## Sources cited in this profile
 

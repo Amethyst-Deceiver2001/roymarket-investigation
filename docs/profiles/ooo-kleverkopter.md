@@ -35,11 +35,12 @@
 
 ## Products
 
-- **Курьер-30** — Multi-rotor cargo UAV, 30kg MTOW, 6kg payload, 30km range -- delivery/field-scanning/irrigation.
+- **Курьер-30** — Multi-rotor cargo UAV, 30kg MTOW, 6kg payload, 30km range -- delivery/field-scanning/irrigation. [s1169]
 - **Патруль-30** — Hybrid VTOL, 7kg payload, 300km range -- delivery/monitoring.
 - **Аэромедик-680** — Heavy hybrid convertible VTOL, 130kg payload, 600km range -- casualty evacuation, inter-terminal cargo.
 - **Аэромедик** — Fixed-wing VTOL UAS for cargo transport and (planned) casualty evacuation -- per this entity's own rk.2035.university listing. [s1169]
 - **Аэромедик MINI** — Hybrid-powertrain convertiplane for cargo delivery incl. medical payloads. [s1169]
+- **Aэромедик MINI** — Универсальный конвертоплан с гибридной силовой установкой для доставки грузов, в том числе медицинсткого назначения. [s1169]
 
 ## Financials
 
@@ -88,6 +89,7 @@
 
 ### Гусев Сергей Владимирович
 
+- **ИНН:** 732102513469
 - co-inventor (patent RU134797S)
 
 ### Dubnyakov Dmitriy Andreevich — Дубняков Дмитрий Андреевич

@@ -12,6 +12,7 @@
 - **Director:** Федукович Кирилл Олегович
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 62.01 — Разработка компьютерного программного обеспечения
+- **ЦБСТ tie:** Named directly as "резидент ЦБСТ" by ЦБСТ's own channel.
 - **Wildberries overlap:** none_found
 
 > **Declared vs. actual activity.** Declared activity is software development, not UAV manufacture — name ("КоптерЛаб") suggests drone-adjacent work (flight-control software, ground-control-station apps) rather than airframe production; consistent with, not contradicting, a software-focused registration.
@@ -75,7 +76,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Федукович Кирилл Олегович
+
+- **ИНН:** 110602844434
+- Генеральный директор
 
 ## Sources cited in this profile
 

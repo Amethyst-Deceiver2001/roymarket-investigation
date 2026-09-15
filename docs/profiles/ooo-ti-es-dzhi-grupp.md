@@ -46,12 +46,12 @@
 
 ## Products
 
-- **Шелкопряд**
-- **Подсолнух**
-- **Незабудка**
-- **Брянск-1**
-- **Подснежник-800**
-- **Дирижёр**
+- **Шелкопряд** — Станок для намотки оптоволокна (fiber-optic winding machine) for fiber-optic-controlled drone spools. Per KurskCiTY.ru coverage of a «ТСГ» field-test exhibition for отряд «Яким»/бригада «БАРС-Курск», 20.05.2026. [s7502]
+- **Подсолнух** — Дрон-мишень (target drone) simulating enemy long-range strike drones for mobile fire-team training: climbs to 2km altitude, up to 130km/h. Per KurskCiTY.ru coverage of a «ТСГ» field-test exhibition for отряд «Яким»/бригада «БАРС-Курск», 20.05.2026. [s7502]
+- **Незабудка** — Дрон-перехватчик самолётного типа (fixed-wing-type interceptor drone) carrying a 600-800g warhead, up to 200km/h. Per KurskCiTY.ru coverage of a «ТСГ» field-test exhibition for отряд «Яким»/бригада «БАРС-Курск», 20.05.2026. [s7502]
+- **Брянск-1** — Дрон-перехватчик самолётного типа (fixed-wing-type interceptor drone) carrying a 600-800g warhead, up to 300km/h. Per KurskCiTY.ru coverage of a «ТСГ» field-test exhibition for отряд «Яким»/бригада «БАРС-Курск», 20.05.2026. [s7502]
+- **Подснежник-800** — Compact composite reconnaissance UAV that fits in a backpack, up to two hours flight endurance. Per KurskCiTY.ru coverage of a «ТСГ» field-test exhibition for отряд «Яким»/бригада «БАРС-Курск», 20.05.2026. [s7502]
+- **Дирижёр** — Multifunctional master control console combining fiber-optic drone-control-station functions with radio communications and a BPLA firmware-flashing device. Per KurskCiTY.ru coverage of a «ТСГ» field-test exhibition for отряд «Яким»/бригада «БАРС-Курск», 20.05.2026. [s7502]
 
 ## Financials
 
@@ -105,6 +105,7 @@
 | s3396 | Zakupki | Zakupki (ZAKUPKI_contract_2320000296325000067_20260829.html) | 2026-08-29 | — |
 | s3758 | Zakupki | Zakupki (ZAKUPKI_ATTACH_2320000296325000067_2320000296325000067_elektronnyy-kon-23200002963250000670004_a7747f0a.xml) | — | — |
 | s6781 | EGRUL extract | EGRUL extract (EGRUL_3257085996_20260907_ooo-ti-es-dzhi-grupp.pdf) | 2026-09-07 | 2026-09-07 |
+| s7502 | press coverage | press coverage (PRESS_20260520_kurskcity-tsg-yakim-bars-kursk-field-test.html) | 2026-05-20 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

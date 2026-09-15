@@ -34,6 +34,19 @@
 |---|---|---|
 | 10000 | 2023-04-12 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6759] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 111675, г. Москва, ул. Пехорская, д. 1Д, стр. 1 | 2026-08-01 | First street-level address on file (prior: bare 'г. Москва'), from a proverki.gov.ru labor-inspection warning (Aug 2026, faceName ООО "ГАСКАР"). Same street as ООО «НПО «Рустехдрон»»'s Пехорская 1/3 стр.4 facility (Руднево technopark, wired earlier this session) — possible shared-industrial-cluster overlap, not yet confirmed as same building. [s6934] |
+
+### Legal name
+
+| Value | As of | Note |
+|---|---|---|
+| ООО «ЭВР» | 2023-04-07 | Founding name, per учредительный документ протокол общего собрания учредителей №1 от 07.04.2023 (GRN 1237700273744) — confirms and pushes back proverki.gov.ru's inference (which only bounded it Nov 2025-Aug 2026) to the entity's actual formation. [s7354] |
+| ООО «ГАСКАР» | 2026-06-17 | Renamed per решение №09-06/2026 от 09.06.2026 единственного участника ООО «СибНК» (в лице А.Г. Ступникова), внесено в ЕГРЮЛ 17.06.2026 (GRN 2267705105138) — precisely dates and confirms proverki.gov.ru's range. Notable timing: the EU's 20th sanctions package (24.04.2026) already named this entity as "«Гаскар Групп»" nearly 2 months BEFORE the legal rename — the sanctioned brand identity preceded the formal corporate name change, not the other way around. [s7354] |
+
 ## Products
 
 - **СИБНК**
@@ -75,7 +88,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Ступников Андрей Генадьевич
+
+- **ИНН:** 165043571104
+- signed on behalf of sole participant ООО «СибНК» to order the ЭВР->Гаскар rename (2026-06-09–present)
 
 ## Open questions
 
@@ -96,6 +112,8 @@ _No named principals linked to this entity yet._
 | s6655 | Bfo | Bfo (BFO_9710112989_2024_ооо-гаскар.pdf) | — | — |
 | s6656 | Bfo | Bfo (BFO_9710112989_2025_ооо-гаскар.pdf) | — | — |
 | s6759 | EGRUL extract | EGRUL extract (EGRUL_9710112989_20260907_ooo-gaskar.pdf) | 2026-09-07 | 2026-09-07 |
+| s6934 | Proverki | Proverki (PROVERKI_9710112989_20260907_ooo-gaskar-inspection-history.txt) | 2026-09-07 | — |
+| s7354 | Founding-Устав bundle | Founding-Устав bundle (UD_1237700273744_20260908_ooo-gaskar.zip) | 2026-09-08 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

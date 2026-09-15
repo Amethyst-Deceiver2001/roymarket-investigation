@@ -105,7 +105,7 @@ _No named principals linked to this entity yet._
 | s3054 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001602_20260829.html) | 2026-08-29 | — |
 | s3099 | Zakupki | Zakupki (ZAKUPKI_contract_2780137972121000038_20260829.html) | 2026-08-29 | — |
 | s3102 | Zakupki | Zakupki (ZAKUPKI_contract_2780137972123000041_20260829.html) | 2026-08-29 | — |
-| s3719 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770982726625001602_1770982726625001602_elektronnyy-kon-17709827266250016020006_35479068.xml) | 3547-90-68 | — |
+| s3719 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770982726625001602_1770982726625001602_elektronnyy-kon-17709827266250016020006_35479068.xml) | — | — |
 | s3720 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770982726625001602_1770982726625001602_kontrakt-rgs0-17709827266250016020002_8290bf1d.docx) | — | — |
 | s6439 | Mchs | Mchs (MCHS_7804302798_20260906_fire-license-search-ao-pmts-avangard.html) | 2026-09-06 | — |
 | s6839 | EGRUL extract | EGRUL extract (EGRUL_7804302798_20260907_ao-pmts-avangard.pdf) | 2026-09-07 | 2026-09-07 |

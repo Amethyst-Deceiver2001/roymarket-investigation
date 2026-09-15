@@ -9,7 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Registered:** 07.04.2022
 - **Address:** Ульяновская область, г. Ульяновск
-- **Director:** Жуков Андрей Викторович
+- **Director:** Капустин Павел Евгеньевич
 - **Charter capital:** ₽16,000
 - **ОКВЭД:** 62.01 — Разработка компьютерного программного обеспечения
 - **Wildberries overlap:** none_found
@@ -20,7 +20,8 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Жуков Андрей Викторович | 2024-02-12 | personal ИНН 732703889628; also sole founder [s0485] |
+| Капустин Павел Евгеньевич | 2024-02-12 | CORRECTED 2026-09-14: this entry previously read "Жуков Андрей Викторович" (personal ИНН 732703889628), attributed to source s0485 -- but a direct re-read of s0485 (data/sources/ul-1227300004282-20260823131727.pdf) itself shows Фамилия/Имя/Отчество КАПУСТИН/ПАВЕЛ/ЕВГЕНЬЕВИЧ, ИНН 732899377685, at GRN 1227300004282 (the entity's own registration record, dated 07.04.2022) -- the "Жуков" value was a mis-transcription of this same document, not a separate historical director. Independently confirmed by a second, later full EGRUL выписка (s6729, pulled 2026-09-07) showing the identical Капустин name/ИНН. This resolves the leader-id.ru-vs-EGRUL conflict flagged in this entity's own open_questions[] on 2026-08-24 in favor of Капустин -- leader-id.ru was right, the registry's own EGRUL transcription was wrong. [s0485] |
+| Капустин Павел Евгеньевич | 2026-09-07 | personal ИНН 732899377685; also sole founder. Full EGRUL выписка re-pull independently reconfirms the corrected 2024-02-12 entry. [s6729] |
 
 ### Founders / ownership
 
@@ -51,9 +52,10 @@
 
 ## Principals & persons of interest
 
-### Жуков Андрей Викторович
+### Капустин Павел Евгеньевич
 
-- **ИНН:** 502209658173
+- **ИНН:** 732899377685
+- Генеральный директор
 
 ### Dementev Vitaliy Evgenevich — Дементьев Виталий Евгеньевич
 
@@ -72,7 +74,6 @@
 ## Open questions
 
 - 2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found, no EGRUL contact info, no UAV/defense signal of any kind. Ulyanovsk software-dev OKVED, ₽16,000 capital -- plausible generic shop or shell, relevance to this network unconfirmed either way.
-- 2026-08-24: leader-id.ru self-report shows Капустин Павел Евгеньевич as Генеральный директор, Ульяновск -- exact company-name/city match, but CONFLICTS with the director field on file (Жуков Андрей Викторович, sourced to a direct EGRUL pull as of 2024-02-12, s0485, also sole founder). Not resolved either way: could be a director change since the 2024 EGRUL snapshot (worth a fresh EGRUL pull), a title leader-id mislabeled (e.g. a non-GD role self-reported as GD), or an unrelated same-name collision. Do not treat either name as more authoritative than the other without a fresh primary-source check.
 
 ## Sources cited in this profile
 
