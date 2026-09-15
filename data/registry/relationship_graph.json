@@ -2,7 +2,7 @@
   "schema_version": 5,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1482,
-  "edge_count": 2072,
+  "edge_count": 2076,
   "unresolved_count": 216,
   "nodes": [
     {
@@ -3939,7 +3939,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 6
+      "degree": 8
     },
     {
       "id": "ooo-ekolibri-bt",
@@ -4515,7 +4515,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "offensive",
-      "degree": 26
+      "degree": 30
     },
     {
       "id": "ooo-npts-basirtk",
@@ -4863,7 +4863,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 2
+      "degree": 4
     },
     {
       "id": "ooo-spetsmat-spetsialnye-materialy",
@@ -26627,6 +26627,17 @@
       "confidence": null
     },
     {
+      "source": "ooo-dsg",
+      "target": "ooo-npo-rustekhdron",
+      "type": "related",
+      "label": "counterparty",
+      "source_id": "s0043",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-ekolibri-bt",
       "target": "ao-ekolibri",
       "type": "related",
@@ -28531,6 +28542,28 @@
     },
     {
       "source": "ooo-npo-rustekhdron",
+      "target": "ooo-dsg",
+      "type": "related",
+      "label": "counterparty",
+      "source_id": "s0043",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-npo-rustekhdron",
+      "target": "ooo-spetsialnye-poleznye-tekhnologii",
+      "type": "related",
+      "label": "counterparty",
+      "source_id": "s0048",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-npo-rustekhdron",
       "target": "product::ooo-npo-rustekhdron::бпла-ртд-1",
       "type": "produces",
       "label": null,
@@ -29338,6 +29371,17 @@
       "type": "produces",
       "label": null,
       "source_id": "s0965",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-spetsialnye-poleznye-tekhnologii",
+      "target": "ooo-npo-rustekhdron",
+      "type": "related",
+      "label": "counterparty",
+      "source_id": "s0048",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",

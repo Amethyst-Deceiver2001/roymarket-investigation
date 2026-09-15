@@ -62,6 +62,7 @@ RELATED_ENTITY_RELATIONSHIP_TYPES = {
     "training-partnership",          # co-runs a training/operational program, not a corporate tie
     "competitor",                    # rival products/entities in the same market segment (unpopulated as of schema v5 -- no sourced claim exists yet)
     "shared-address",                # registered at the identical street address per EGRUL, with NO confirmed director/founder overlap -- a co-location signal only, distinct from sister-entity (which requires a confirmed common principal)
+    "counterparty",                  # buyer/seller or lender/borrower tie established by a litigation record (arbitration court filing) -- an ordinary commercial transaction confirmed by a court's own findings of fact, not a marketing claim or a corporate-family assertion
 }
 PRODUCT_CLASSIFICATION_FIELDS = {
     "status", "uav_platform", "ew_installation",

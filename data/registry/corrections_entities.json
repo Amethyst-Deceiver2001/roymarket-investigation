@@ -17581,6 +17581,15 @@
           }
         ],
         "ogrn": "1207700030493",
+        "related_entities": [
+          {
+            "slug": "ooo-npo-rustekhdron",
+            "relationship": "Seller/lender counterparty per two parallel arbitration cases this entity lost: a supply-contract debt (А40-192834/25-183-1337) whose underlying УПД itemises the actual delivered goods as an F1-grenade release mechanism plus GAONENG FPV drone batteries -- a munitions-dropping drone payload kit, established on the court's own findings of fact -- and a separate loan-interest claim (А40-192134/25-7-2358).",
+            "relationship_type": "counterparty",
+            "source_id": "s0043",
+            "confidence": "confirmed"
+          }
+        ],
         "okved_code": "93.19",
         "okved_label": "Деятельность в области спорта прочая",
         "okved_mismatch": {
@@ -17727,7 +17736,8 @@
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9724002908). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, both candidates belong to unrelated foreign companies (an Italian and a German firm both abbreviated \"ДСГ\") -- common-abbreviation collision.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-15: added a counterparty related_entities[] edge to ooo-npo-rustekhdron (new relationship_type value, same session) -- already documented in this record's own litigation[]/why[] but never converted into a graph edge."
       ]
     },
     "ooo-ekolibri-bt": {
@@ -23484,6 +23494,22 @@
           }
         ],
         "wb_overlap": "none_found",
+        "related_entities": [
+          {
+            "slug": "ooo-dsg",
+            "relationship": "Buyer/lender counterparty per two parallel arbitration cases: a supply-contract debt (А40-192834/25-183-1337) whose underlying УПД itemises the actual delivered goods as an F1-grenade release mechanism plus GAONENG FPV drone batteries -- a munitions-dropping drone payload kit, established on the court's own findings of fact -- and a separate loan-interest claim (А40-192134/25-7-2358). Both suits found for ooo-npo-rustekhdron in full.",
+            "relationship_type": "counterparty",
+            "source_id": "s0043",
+            "confidence": "confirmed"
+          },
+          {
+            "slug": "ooo-spetsialnye-poleznye-tekhnologii",
+            "relationship": "Buyer counterparty per arbitration case А40-141771/26-181-710: a ₽245,678,400 advance paid under a supply contract for which goods were never delivered. Settled by a court-approved repayment schedule; СПТ was registered only 18 months before receiving the advance.",
+            "relationship_type": "counterparty",
+            "source_id": "s0048",
+            "confidence": "confirmed"
+          }
+        ],
         "litigation": [
           {
             "case": "А40-192834/25-183-1337",
@@ -23598,7 +23624,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
         "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 15 products total after this pass.",
-        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+        "2026-09-15: added counterparty related_entities[] edges to ooo-dsg and ooo-spetsialnye-poleznye-tekhnologii (new relationship_type value, same session) -- both already fully documented in this record's own litigation[] but never converted into a graph edge. No new lookups; cited to the same litigation source_ids already on file."
       ]
     },
     "ooo-npts-basirtk": {
@@ -27050,6 +27077,15 @@
           }
         ],
         "ogrn": "1247700253668",
+        "related_entities": [
+          {
+            "slug": "ooo-npo-rustekhdron",
+            "relationship": "Seller counterparty per arbitration case А40-141771/26-181-710: received a ₽245,678,400 advance under a supply contract for which goods were never delivered. Settled by a court-approved repayment schedule; this entity was registered only 18 months before receiving the advance.",
+            "relationship_type": "counterparty",
+            "source_id": "s0048",
+            "confidence": "confirmed"
+          }
+        ],
         "okved_code": "27.90",
         "okved_label": "Производство прочего электрического оборудования",
         "open_questions": [
@@ -27127,7 +27163,8 @@
         "full EGRUL extract pulled directly 23.08.2026 (ul-1247700253668-20260823132117.pdf). Sole founder is a legal entity, АО «Вежливый концерн» (ИНН 9715482630, 100%) — not currently in this registry; name is a notable one (\"Polite Concern,\" an ironic echo of \"вежливые люди,\" the 2014 Crimea-annexation euphemism) worth a follow-up ownership check on its own. Director's name did not extract cleanly from this PDF pass — flagged as an open item rather than left implicitly resolved.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (9715478264). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-15: added a counterparty related_entities[] edge to ooo-npo-rustekhdron (new relationship_type value, same session) -- the ₽245.7m advance-fraud-pattern settlement, already documented in the corresponding НПО «Рустехдрон» record's litigation[], never converted into a graph edge."
       ]
     },
     "ooo-stratim": {
