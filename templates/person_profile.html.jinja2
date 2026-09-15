@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ display_name }} — РОЙ.МАРКЕТ investigation</title>
+<link rel="stylesheet" href="../../assets/profile.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="mast">
+    <div class="profile-head">
+{% if photo_url %}
+      <img class="person-portrait" src="{{ photo_url }}" alt="{{ display_name }}">
+{% else %}
+      <div class="person-portrait">PHOTO<br>NOT ON<br>FILE</div>
+{% endif %}
+      <div class="profile-head-text">
+        <p class="kicker">Person profile · РОЙ.МАРКЕТ investigation</p>
+        <h1>{{ display_name }}</h1>
+{% if fio_ru and fio_ru != display_name %}
+        <span class="fio-ru">{{ fio_ru }}</span>
+{% endif %}
+        <div class="chip-row">
+{% for chip in chips %}
+          <span class="tag {{ chip.cls }}">{{ chip.label }}</span>
+{% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% if meta_grid %}
+  <section>
+    <p class="eyebrow">At a glance</p>
+    <div class="meta-grid">
+{% for item in meta_grid %}
+      <div><dt>{{ item.label }}</dt><dd>{{ item.value }}</dd></div>
+{% endfor %}
+    </div>
+  </section>
+{% endif %}
+
+{% if role_rows %}
+  <section>
+    <p class="eyebrow">Roles &amp; corporate affiliations</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Entity</th><th>Role</th><th>Since</th><th>Source</th></tr></thead>
+        <tbody>
+{% for r in role_rows %}
+          <tr>
+            <td>
+{% if r.profile_url %}
+              <a href="{{ r.profile_url }}">{{ r.entity_name }}</a>
+{% else %}
+              {{ r.entity_name }}
+{% endif %}
+            </td>
+            <td>
+              <span class="role-kind {{ r.kind_cls }}">{{ r.kind_label }}</span>
+{% if r.role_text %}
+              {{ r.role_text }}
+{% endif %}
+            </td>
+            <td>{{ r.since or "—" }}{% if r.until %}–{{ r.until }}{% endif %}</td>
+            <td class="id">{% if r.source %}[{{ r.source }}]{% endif %}</td>
+          </tr>
+{% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+{% endif %}
+
+{% if network_svg %}
+  <section>
+    <p class="eyebrow">Network</p>
+    <h2>How this person connects to the network</h2>
+    <div class="net-panel">
+      <div class="net-svg-wrap">
+        {{ network_svg | safe }}
+      </div>
+      <div class="net-legend">
+        <span><span class="net-swatch circle" style="background: var(--person-bg); border: 2px solid var(--person);"></span>This person</span>
+        <span><span class="net-swatch" style="background: var(--accent-soft); border: 2px solid var(--accent);"></span>Director + founder</span>
+        <span><span class="net-swatch" style="background: var(--panel-2); border: 2px solid var(--rule);"></span>Other entity role</span>
+        <span><span class="net-swatch" style="background: var(--ok-bg); border: 2px solid var(--ok);"></span>Product</span>
+        <span><span class="net-swatch" style="background: var(--mid-bg); border: 2px solid var(--mid);"></span>Co-role person</span>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if products %}
+  <section>
+    <p class="eyebrow">Products linked via this person</p>
+    <p>Every product below is fielded by an entity this person holds a role at — the relationship shown is the company's own tie to the product, not a direct person→product record.</p>
+    <div class="principal-grid">
+{% for pr in products %}
+      <div class="prod-card">
+        <h4>{{ pr.first }}{% if pr.rest_count %} + {{ pr.rest_count }} more{% endif %}</h4>
+        <span class="via">via
+{% if pr.profile_url %}
+          <a href="{{ pr.profile_url }}">{{ pr.entity_name }}</a>
+{% else %}
+          {{ pr.entity_name }}
+{% endif %}
+          · {{ pr.kind_label }}</span>
+      </div>
+{% endfor %}
+    </div>
+  </section>
+{% endif %}
+
+{% if related_persons %}
+  <section>
+    <p class="eyebrow">Related persons</p>
+    <div class="principal-grid">
+{% for rp in related_persons %}
+      <div class="person-card">
+        <div class="person-photo placeholder">PHOTO<br>NOT ON<br>FILE</div>
+        <div class="person-body">
+          <h4>{{ rp.name_latin or rp.fio_ru }}</h4>
+{% if rp.fio_ru and rp.fio_ru != (rp.name_latin or rp.fio_ru) %}
+          <span class="person-fio">{{ rp.fio_ru }}</span>
+{% endif %}
+          <dl>
+{% if rp.title %}
+            <dt>Role</dt><dd>{{ rp.title }}</dd>
+{% endif %}
+            <dt>Shared entity</dt><dd>
+{% if rp.via_profile_url %}
+              <a href="{{ rp.via_profile_url }}">{{ rp.via_entity }}</a>
+{% else %}
+              {{ rp.via_entity }}
+{% endif %}
+            </dd>
+{% if rp.source %}
+            <dt>Source</dt><dd>[{{ rp.source }}]</dd>
+{% endif %}
+          </dl>
+        </div>
+      </div>
+{% endfor %}
+    </div>
+  </section>
+{% endif %}
+
+{% if screening %}
+  <section>
+    <p class="eyebrow">Sanctions &amp; screening</p>
+    <div class="meta-grid">
+{% for s in screening %}
+      <div><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>
+{% endfor %}
+    </div>
+{% if sanctions %}
+{% for s in sanctions %}
+    <div class="callout">
+      <span class="lbl">Sanctions regime</span>
+      <p><strong>{{ s.regimes }}</strong>{% if s.note %} — {{ s.note }}{% endif %}{% if s.source %} [{{ s.source }}]{% endif %}</p>
+    </div>
+{% endfor %}
+{% endif %}
+  </section>
+{% endif %}
+
+{% if sources_table %}
+  <section class="footnote">
+    <p><strong>Sources cited in this profile</strong></p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>ID</th><th>Type</th><th>Locator</th><th>Captured</th><th>As of</th></tr></thead>
+        <tbody>
+{% for s in sources_table %}
+          <tr>
+            <td class="id">{{ s.id }}</td>
+            <td>{{ s.type or "—" }}</td>
+            <td>{% if s.url %}<a href="{{ s.url }}">{{ s.locator }}</a>{% else %}{{ s.locator }}{% endif %}</td>
+            <td>{{ s.captured_date or "—" }}</td>
+            <td>{{ s.as_of or "—" }}</td>
+          </tr>
+{% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+{% endif %}
+
+  <p class="footnote">Generated from this investigation's registry (<code>data/registry/</code>) by <code>scripts/build_person_profile.py</code>. Not a substitute for reading the underlying primary sources listed above.</p>
+
+</div>
+</body>
+</html>

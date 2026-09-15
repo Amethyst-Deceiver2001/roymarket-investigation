@@ -243,7 +243,7 @@
         {% if p.photo_url %}<img class="person-photo" src="{{ p.photo_url }}" alt="{{ p.display_name }}">
         {% else %}<div class="person-photo placeholder">no photo</div>{% endif %}
         <div class="person-body">
-          <h4>{{ p.display_name }}</h4>
+          <h4>{% if p.profile_url %}<a href="{{ p.profile_url }}">{{ p.display_name }}</a>{% else %}{{ p.display_name }}{% endif %}</h4>
           {% if p.fio_ru and p.fio_ru != p.display_name %}<span class="person-fio">{{ p.fio_ru }}</span>{% endif %}
           <dl>
             {% if p.dob %}<dt>DOB</dt><dd>{{ p.dob }}</dd>{% endif %}

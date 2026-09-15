@@ -1,0 +1,50 @@
+# {{ display_name }}{% if fio_ru and fio_ru != display_name %} — {{ fio_ru }}{% endif %}
+
+Person profile · РОЙ.МАРКЕТ investigation
+
+{% for chip in chips %}`{{ chip.label }}` {% endfor %}
+
+## At a glance
+
+{% for item in meta_grid %}- **{{ item.label }}:** {{ item.value }}
+{% endfor %}
+{% if role_rows %}
+## Roles & corporate affiliations
+
+| Entity | Role | Since | Source |
+|---|---|---|---|
+{% for r in role_rows %}| {{ r.entity_name }} | {{ r.kind_label }}{% if r.role_text %} — {{ r.role_text }}{% endif %} | {{ r.since or "—" }}{% if r.until %}–{{ r.until }}{% endif %} | {% if r.source %}[{{ r.source }}]{% endif %} |
+{% endfor %}
+{% endif %}
+{% if products %}
+## Products linked via this person
+
+{% for pr in products %}- **{{ pr.first }}**{% if pr.rest_count %} + {{ pr.rest_count }} more{% endif %} — via {{ pr.entity_name }} · {{ pr.kind_label }}
+{% endfor %}
+{% endif %}
+{% if related_persons %}
+## Related persons
+
+{% for rp in related_persons %}- **{{ rp.name_latin or rp.fio_ru }}**{% if rp.title %} — {{ rp.title }}{% endif %} — shared entity: {{ rp.via_entity }}{% if rp.source %} [{{ rp.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+{% if screening %}
+## Sanctions & screening
+
+{% for s in screening %}- **{{ s.label }}:** {{ s.value }}
+{% endfor %}
+{% for s in sanctions %}
+> **{{ s.regimes }}**{% if s.note %} — {{ s.note }}{% endif %}{% if s.source %} [{{ s.source }}]{% endif %}
+{% endfor %}
+{% endif %}
+{% if sources_table %}
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+{% for s in sources_table %}| {{ s.id }} | {{ s.type or "—" }} | {{ s.locator_md }} | {{ s.captured_date or "—" }} | {{ s.as_of or "—" }} |
+{% endfor %}
+{% endif %}
+
+---
+_Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

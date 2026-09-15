@@ -64,7 +64,7 @@
 
 ## Principals & persons of interest
 
-### Aleksandr Sergeevich Borisov
+### Aleksandr Sergeevich Borisov — Борисов Александр Сергеевич
 
 - **ИНН:** 561012075269
 - Генеральный директор, ООО «Центр беспилотных систем» (Тула, ИНН 7100032961)

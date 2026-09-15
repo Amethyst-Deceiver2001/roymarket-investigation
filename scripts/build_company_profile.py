@@ -399,8 +399,10 @@ class ProfileBuilder:
                     if p.get("sanctions"):
                         sanctions_chip = {"label": "sanctions lead", "cls": "t-open"}
                     display = p.get("name_latin") or p.get("fio_ru")
+                    person_profile_path = REPO / "docs" / "profiles" / "persons" / f"{p['slug']}.html"
                     principals.append({
                         "slug": p["slug"], "display_name": display, "fio_ru": p.get("fio_ru"),
+                        "profile_url": f"persons/{p['slug']}.html" if person_profile_path.exists() else None,
                         "dob": ru_date(p.get("dob")), "birthplace": p.get("birthplace"),
                         "address": p.get("address"), "inn_personal": p.get("inn_personal"),
                         "photo_url": photo_url, "photo_md_path": photo_md,

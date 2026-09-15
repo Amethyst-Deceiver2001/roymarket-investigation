@@ -76,6 +76,41 @@
 - Chairman of the Board (правление), ЦБСТ
 - `sanctions lead`
 
+### Александр Геннадьевич Сидякин
+
+![Александр Геннадьевич Сидякин](../images/aleksandr-sidyakin_portrait_erru.jpg)
+- **DOB:** 17.11.1977
+- **Birthplace:** Сегежа, Карелия (Segezha, Karelia)
+- **Address:** г. Москва, Княжеская ул., д. 8А; г. Москва, ул. Фестивальная, д. 73, корп. 3, кв. 71; Респ. Татарстан, г. Казань, ул. Апастовская, д. 11А, кв. 11
+- **ИНН:** 690900262387
+- Secretary of the Supervisory Board; Head of United Russia’s Central Executive Committee
+- `sanctions lead`
+- <https://t.me/asidyakin>
+- <https://vk.com/a_sidyakin>
+
+### Кирилл Лысогорский
+
+![Кирилл Лысогорский](../images/lysogorskiy-kirill-alekseevich_portrait_rupep.jpg)
+- **DOB:** 19.04.1986
+- **Birthplace:** Ванадзор, Армения (Vanadzor, Armenia)
+- **ИНН:** 772705212594
+- Deputy Minister of Industry and Trade
+- `sanctions lead`
+
+### Михаил Кузнецов
+
+- Head of the Executive Committee, ОНФ (Popular Front)
+
+### Александр Осадчук
+
+![Александр Осадчук](../images/aleksandr-osadchuk_portrait_nashaoborona.jpg)
+- **DOB:** 17.11.1962
+- **Birthplace:** Обнинск, Калужская область (Obninsk, Kaluga Oblast)
+- **Address:** г. Москва, ул. Металлургов, д. 62, кв. 155; Московская обл., г. Химки, ул. Горшина, д. 1, кв. 724
+- **ИНН:** 772027207786
+- Head of the Main Directorate for Innovative Development (ГУИР), Ministry of Defence
+- `sanctions lead`
+
 ### Нина Олеговна Яныкина
 
 ![Нина Олеговна Яныкина](../images/nina-olegovna-yanykina_portrait_leader-id.png)

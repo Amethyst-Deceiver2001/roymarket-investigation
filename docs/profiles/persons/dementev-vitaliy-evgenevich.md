@@ -1,0 +1,38 @@
+# Dementev Vitaliy Evgenevich — Дементьев Виталий Евгеньевич
+
+Person profile · РОЙ.МАРКЕТ investigation
+
+`no sanctions on file` 
+
+## At a glance
+
+- **Personal ИНН:** 732509162768
+- **Entities linked:** 1
+- **Primary role:** co-inventor (patent RU2857656C1), ООО «ЭйАрТэк»
+
+## Roles & corporate affiliations
+
+| Entity | Role | Since | Source |
+|---|---|---|---|
+| ООО «ЭйАрТэк» | role — co-inventor (patent RU2857656C1) | — | [s1046] |
+
+## Related persons
+
+- **Капустин Павел Евгеньевич** — Генеральный директор — shared entity: ООО «ЭйАрТэк» [s6729]
+- **Elyagin Sergey Vladimirovich** — co-inventor (patent RU2857656C1) — shared entity: ООО «ЭйАрТэк» [s1046]
+- **Tsarev Andrey Petrovich** — co-inventor (patent RU2857656C1) — shared entity: ООО «ЭйАрТэк» [s1046]
+
+## Sanctions & screening
+
+- **Disqualified-director registry:** No hits (checked 2026-09-08)
+- **Subsidiary-liability registry:** No hits (checked 2026-09-07)
+
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+| s1046 | Rospatent patent record | Rospatent patent record (PATENT_RU2857656C1_2026-08-24_ooo-eyartek.json) | — | — |
+| s6729 | EGRUL extract | EGRUL extract (EGRUL_7300000540_20260907_ooo-eyartek.pdf) | 2026-09-07 | 2026-09-07 |
+
+---
+_Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._
