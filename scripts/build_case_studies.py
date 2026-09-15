@@ -13,8 +13,23 @@ Node/edge sets are exact 1-hop neighborhoods of each anchor pulled from
 data/registry/relationship_graph.json (trimmed of duplicate customer nodes
 and product entries where a case's caption only discusses 1-2 named
 products) -- every node/edge here is traceable to a real registry record,
-not invented for the narrative. Colors/shapes below are copied verbatim
-from the live Network Graph artifact's own CSS custom properties.
+not invented for the narrative. Colors/shapes are copied verbatim from the
+live Network Graph artifact's own CSS custom properties.
+
+Product icons (added in this pass) reuse scripts/classify_product_icon.py's
+category read of each product's own name_ru/description -- but only a
+REAL keyword match, never its "keyword-generic-default" fallback tier
+(see ooo-skb-piranya's «Пиранья-10», classified only by the generic
+default, left as a plain unlabeled square below rather than guessing an
+icon for it).
+
+Photos and quotes are pulled directly from entities.json's images[]/
+marketing_claims[]/battlefield_evidence[] -- every one already has a real
+source_id in the registry. No stock photography, no paraphrase: quotes are
+verbatim Russian with an inline English gloss, per this project's
+STYLE_GUIDE.md quote-handling rule. Photos publish as separate files (see
+the Artifact `files` parameter in the publish call), not inlined as
+base64, referenced here by their eventual served path under images/.
 """
 
 TITLE = "Five Residents"
@@ -33,11 +48,21 @@ CASES = [
             "(30.08.2026)."
         ),
         "sources": "s5440 · ЦБСТ Telegram, 02.05.2026 · my_el_lab post 4546, 30.08.2026",
+        "photo": {
+            "src": "gagaring_barashkov_portrait.jpg",
+            "caption": "Барашков А.С. at a «Гагаринг» training-centre field course.",
+            "source": "t.me/my_el_lab/4210 · s5387",
+        },
+        "quote": {
+            "ru": "Выражаю огромную благодарность Товарищу Александру Сергеевичу и всему коллективу лаборатории «Гагаринг» за предоставленные «Кузнечики» в количестве 500 шт. Благодарим за постоянную поддержку!",
+            "en": "“Gratitude to Comrade Aleksandr Sergeevich and the whole «Gagaring» lab for the 500 «Kuznechik» units provided. Thank you for your constant support!”",
+            "source": "Front-line unit thank-you letter · s5447",
+        },
         "nodes": [
             {"id": "barashkov", "kind": "person", "label": "Барашков А.С.", "x": 70, "y": 55},
             {"id": "gagaring", "kind": "entity", "label": "ООО «Гагаринг»", "x": 220, "y": 150, "r": 20},
             {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 55},
-            {"id": "kuznechik", "kind": "product", "label": "«Кузнечик»\nсвязь", "x": 380, "y": 245},
+            {"id": "kuznechik", "kind": "product", "label": "«Кузнечик»\nсвязь", "x": 380, "y": 245, "icon": "video_link"},
             {"id": "eyler", "kind": "entity", "label": "НПО «Эйлер»", "x": 100, "y": 250, "r": 12},
             {"id": "yangel", "kind": "entity", "label": "Лаб. Янгеля", "x": 220, "y": 270, "r": 12},
             {"id": "intel", "kind": "entity", "label": "«Интел Дрон»", "x": 340, "y": 270, "r": 12},
@@ -63,11 +88,21 @@ CASES = [
             "not a third-party claim."
         ),
         "sources": "@GoDrone Telegram, 09.12.2025",
+        "photo": {
+            "src": "ooo-goudron_showroom_svoih-ne-brosaem-slogan.jpg",
+            "caption": "ГОУДРОН's own showroom wall: &laquo;СВОих не бросаем&raquo;.",
+            "source": "s1396",
+        },
+        "quote": {
+            "ru": "Сферы применения: Защита техники и личного состава в условиях СВО.",
+            "en": "“Fields of application: protection of equipment and personnel in the conditions of the SVO [Russia's official term for its war on Ukraine].”",
+            "source": "набат.рф product page · s6457",
+        },
         "nodes": [
             {"id": "kozlov", "kind": "person", "label": "Козлов Д.С.", "x": 80, "y": 60},
             {"id": "goudron", "kind": "entity", "label": "ООО «ГОУДРОН»", "x": 230, "y": 150, "r": 18},
             {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 60},
-            {"id": "nabat", "kind": "product", "label": "«Набат v3»", "x": 230, "y": 260},
+            {"id": "nabat", "kind": "product", "label": "«Набат v3»", "x": 230, "y": 260, "icon": "detector"},
         ],
         "edges": [
             {"s": "kozlov", "t": "goudron", "type": "founded"},
@@ -87,13 +122,23 @@ CASES = [
             "резидент&raquo; (flagship resident)."
         ),
         "sources": "ЦБСТ Telegram post 2159491523:623, 15.04.2025 · theins.ru, 23.08.2026",
+        "photo": {
+            "src": "ovod_shipment_50-drones-narodny-front-2023.jpg",
+            "caption": "First batch of 50 «Овод» kamikaze drones, packed for shipment to the SVO zone with the &laquo;Народный фронт&raquo; project.",
+            "source": "s6455",
+        },
+        "quote": {
+            "ru": "Боевая группа создана из опытных воинов - ветеранов СВО. Военные специалисты ОВОДА содействуют подразделениям МО РФ и других силовых служб в зоне СВО.",
+            "en": "“The combat group was formed from experienced fighters — SVO veterans. Ovod's military specialists assist Russian MoD units and other security services in the SVO zone.”",
+            "source": "Ovod's own Telegram · s6456",
+        },
         "nodes": [
             {"id": "cherezov", "kind": "person", "label": "Черезов А.П.", "x": 220, "y": 45},
             {"id": "traktat", "kind": "entity", "label": "«Воздушный трактат»", "x": 100, "y": 165, "r": 16},
             {"id": "ovod_ent", "kind": "entity", "label": "«РЛВТ»", "x": 340, "y": 165, "r": 16},
             {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 220, "y": 270},
-            {"id": "prod_t", "kind": "product", "label": "«Овод»", "x": 60, "y": 270},
-            {"id": "prod_o", "kind": "product", "label": "«Овод»", "x": 380, "y": 270},
+            {"id": "prod_t", "kind": "product", "label": "«Овод»", "x": 60, "y": 270, "icon": "fpv_strike"},
+            {"id": "prod_o", "kind": "product", "label": "«Овод»", "x": 380, "y": 270, "icon": "fpv_strike"},
         ],
         "edges": [
             {"s": "cherezov", "t": "traktat", "type": "directs"},
@@ -115,13 +160,23 @@ CASES = [
             "strike-drone family plus its own fiber-optic comms line."
         ),
         "sources": "ЦБСТ Telegram post 2159491523:2095, 24.04.2026",
+        "photo": {
+            "src": "TGMEDIA_7300024069_20250801_piranhafpv-post384-1.jpg",
+            "caption": "An FPV drone operator at a field position, &laquo;Север&raquo; grouping, Kursk border area — company-claimed кill of a US-supplied Abrams tank.",
+            "source": "@piranhafpv, 01.08.2025 · s7512",
+        },
+        "quote": {
+            "ru": "Первый американский танк Abrams в зоне СВО уничтожен FPV-дроном «Пиранья-10»",
+            "en": "“The first American Abrams tank in the SVO zone was destroyed by a «Piranha-10» FPV drone.”",
+            "source": "СКБ «Пиранья» own channel · s1410",
+        },
         "nodes": [
             {"id": "chernyshov", "kind": "person", "label": "Чернышов П.А.\n40%", "x": 70, "y": 55},
             {"id": "korchagina", "kind": "person", "label": "Корчагина О.А.\n60%", "x": 70, "y": 245},
             {"id": "piranya", "kind": "entity", "label": "СКБ «Пиранья»", "x": 230, "y": 150, "r": 20},
             {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 55},
             {"id": "p10", "kind": "product", "label": "«Пиранья-10»", "x": 380, "y": 165},
-            {"id": "p13", "kind": "product", "label": "«Пиранья-13»", "x": 380, "y": 260},
+            {"id": "p13", "kind": "product", "label": "«Пиранья-13»", "x": 380, "y": 260, "icon": "fpv_strike"},
         ],
         "edges": [
             {"s": "chernyshov", "t": "piranya", "type": "founded"},
@@ -144,11 +199,13 @@ CASES = [
             "extends past ЦБСТ's own named residents."
         ),
         "sources": "zakupki.gov.ru contract cards · see government_contracts[]",
+        "photo": None,
+        "quote_note": "No self-incriminating marketing copy is on file for this entity — its government-contract cards are the only sourced material.",
         "nodes": [
             {"id": "tsyganov", "kind": "person", "label": "Цыганов В.Б.", "x": 80, "y": 60},
             {"id": "ip", "kind": "entity", "label": "ИП Цыганов", "x": 230, "y": 150, "r": 18},
             {"id": "pokrov", "kind": "entity", "label": "ООО «Покров»", "x": 230, "y": 270, "r": 12},
-            {"id": "bulat", "kind": "product", "label": "«Булат» v.4", "x": 380, "y": 90},
+            {"id": "bulat", "kind": "product", "label": "«Булат» v.4", "x": 380, "y": 90, "icon": "detector"},
             {"id": "mchs", "kind": "gov", "label": "МЧС Курской обл.", "x": 380, "y": 200},
             {"id": "lider", "kind": "gov", "label": "ФГКУ «Лидер»", "x": 380, "y": 270},
         ],
@@ -190,6 +247,34 @@ EDGE_STYLE = {
     "role": {"dash": None, "color": "var(--edge)", "arrow": False, "opacity": 0.55},
 }
 
+# Product icon glyphs -- drawn centered at (0,0), overlaid on the product
+# square. Only three categories are used here (see module docstring on why
+# «Пиранья-10» gets none): "video_link" (Кузнечик, a comms/control-link
+# module, not a UAV itself), "detector" (Набат/Булат counter-UAS units,
+# glyph reused near-verbatim from the live graph's own radar-sweep icon),
+# "fpv_strike" (Овод family -- a genuinely new glyph, since the live
+# graph's own icon set has no strike-specific glyph yet: an X-frame quad
+# with a warhead nose, distinct from the live graph's plain 4-arm
+# "multirotor" glyph which marks airframe shape only, not intent).
+ICON_GLYPH = {
+    "video_link": (
+        '<path d="M-6,4 A8,8 0 0 1 6,4" fill="none"/>'
+        '<path d="M-3.2,4 A4.3,4.3 0 0 1 3.2,4" fill="none"/>'
+        '<circle cy="4" r="1.3" class="p-fill"/>'
+    ),
+    "detector": (
+        '<circle r="7" fill="none"/>'
+        '<path d="M0,0 L6,-6 A8,8 0 0 1 8,0 Z" class="p-fill" opacity="0.78"/>'
+        '<circle cx="3" cy="-3" r="1.1" class="p-fill"/>'
+    ),
+    "fpv_strike": (
+        '<path d="M0,-7 L-7,-9 M0,-7 L7,-9 M0,4 L-7,7 M0,4 L7,7" fill="none"/>'
+        '<circle cx="-7" cy="-9" r="1.6"/><circle cx="7" cy="-9" r="1.6"/>'
+        '<circle cx="-7" cy="7" r="1.6"/><circle cx="7" cy="7" r="1.6"/>'
+        '<path d="M-3,-2 L3,-2 L0,7 Z" class="p-fill"/>'
+    ),
+}
+
 
 def node_fill(n, case):
     if n["kind"] == "entity":
@@ -199,26 +284,32 @@ def node_fill(n, case):
 
 def node_shape_svg(n, case):
     x, y = n["x"], n["y"]
-    r = n.get("r", 10 if n["kind"] == "person" else 8 if n["kind"] == "product" else 14)
+    default_r = 10 if n["kind"] == "person" else 11 if n["kind"] == "product" else 14
+    r = n.get("r", default_r)
     fill = node_fill(n, case)
     sanctioned = n["id"] in SANCTIONED
     stroke = "var(--sanctioned-ring)" if sanctioned else "var(--node-stroke)"
     sw = 2.5 if sanctioned else 1
     shape = SHAPE[n["kind"]]
+    icon_svg = ""
     if shape == "circle":
         el = f'<circle cx="{x}" cy="{y}" r="{r}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
     elif shape == "diamond":
         pts = f"{x},{y-r} {x+r},{y} {x},{y+r} {x-r},{y}"
         el = f'<polygon points="{pts}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
     else:  # square
-        s = r * 1.5
-        el = f'<rect x="{x-s/2:.1f}" y="{y-s/2:.1f}" width="{s:.1f}" height="{s:.1f}" rx="2" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
+        s = r * 1.7
+        el = f'<rect x="{x-s/2:.1f}" y="{y-s/2:.1f}" width="{s:.1f}" height="{s:.1f}" rx="2.5" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
+        icon_key = n.get("icon")
+        if icon_key:
+            icon_svg = (f'<g transform="translate({x},{y})" class="product-icon">'
+                        f'{ICON_GLYPH[icon_key]}</g>')
     label_lines = n["label"].split("\n")
     dy0 = r + 14
     label_svg = ""
     for i, line in enumerate(label_lines):
         label_svg += f'<text x="{x}" y="{y + dy0 + i * 12}" class="node-label" text-anchor="middle">{line}</text>'
-    return el + label_svg
+    return el + icon_svg + label_svg
 
 
 def edge_svg(e, nodes_by_id):
@@ -248,16 +339,44 @@ def render_panel(case):
     </svg>'''
 
 
+def render_photo(photo):
+    if not photo:
+        return ""
+    return f'''
+        <figure class="case-photo">
+          <img src="images/{photo['src']}" alt="{photo['caption']}" loading="lazy">
+          <figcaption>{photo['caption']} (cropped to frame) <span class="cite">{photo['source']}</span></figcaption>
+        </figure>'''
+
+
+def render_quote(case):
+    q = case.get("quote")
+    if q:
+        return f'''
+        <blockquote class="pull-quote">
+          <p class="ru">&laquo;{q['ru']}&raquo;</p>
+          <p class="en">{q['en']}</p>
+          <cite>{q['source']}</cite>
+        </blockquote>'''
+    note = case.get("quote_note")
+    if note:
+        return f'<p class="quote-absent">{note}</p>'
+    return ""
+
+
 def render_case(case, idx):
     svg = render_panel(case)
     reverse = " reverse" if idx % 2 == 1 else ""
+    photo_html = render_photo(case.get("photo"))
+    quote_html = render_quote(case)
     return f'''
     <section class="case{reverse}">
-      <div class="case-diagram">{svg}</div>
+      <div class="case-diagram">{svg}{photo_html}</div>
       <div class="case-copy">
         <p class="eyebrow">{case['eyebrow']}</p>
         <h2>{case['heading']}</h2>
         <p class="body">{case['body']}</p>
+        {quote_html}
         <p class="sources">{case['sources']}</p>
       </div>
     </section>'''
@@ -267,7 +386,7 @@ CASES_HTML = "\n".join(render_case(c, i) for i, c in enumerate(CASES))
 
 HTML = f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body>
 <title>{TITLE}</title>
-<meta name="description" content="Five hand-verified sub-networks from the РОЙ.МАРКЕТ registry, each showing one manufacturer's real ownership, product, and ЦБСТ ties.">
+<meta name="description" content="Five hand-verified sub-networks from the РОЙ.МАРКЕТ registry, each showing one manufacturer's real ownership, product, and ЦБСТ ties, with photos and verbatim quotes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -281,12 +400,15 @@ HTML = f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport
   --hairline: #e1e0d9;
   --accent: #4c5f2f;
   --node-stroke: rgba(11,11,11,0.15);
+  --quote-bg: #fbf3ec;
+  --quote-rule: #c9784a;
 
   --t-manufacturer: #2a78d6;
   --t-cbst-core: #eb6834;
   --t-network: #008300;
   --person-fill: #7a8a99;
   --product-fill: #8a7a5c;
+  --product-icon-ink: #f7f4ea;
   --sanctioned-ring: #d03b3b;
   --edge: #b9b8b1;
   --edge-owns: #52514e;
@@ -303,12 +425,15 @@ HTML = f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport
     --hairline: #35342b;
     --accent: #8fae6b;
     --node-stroke: rgba(255,255,255,0.18);
+    --quote-bg: #241d16;
+    --quote-rule: #e2966a;
 
     --t-manufacturer: #3987e5;
     --t-cbst-core: #e2966a;
     --t-network: #3fae3f;
     --person-fill: #8fa3b3;
     --product-fill: #b3a480;
+    --product-icon-ink: #211c11;
     --sanctioned-ring: #e66767;
     --edge: #3a3a37;
     --edge-owns: #c3c2b7;
@@ -325,12 +450,15 @@ HTML = f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport
   --hairline: #35342b;
   --accent: #8fae6b;
   --node-stroke: rgba(255,255,255,0.18);
+  --quote-bg: #241d16;
+  --quote-rule: #e2966a;
 
   --t-manufacturer: #3987e5;
   --t-cbst-core: #e2966a;
   --t-network: #3fae3f;
   --person-fill: #8fa3b3;
   --product-fill: #b3a480;
+  --product-icon-ink: #211c11;
   --sanctioned-ring: #e66767;
   --edge: #3a3a37;
   --edge-owns: #c3c2b7;
@@ -392,7 +520,7 @@ section.case {{
   display: grid;
   grid-template-columns: 440px 1fr;
   gap: 32px;
-  align-items: center;
+  align-items: start;
   padding: 36px 0;
   border-top: 1px solid var(--hairline);
 }}
@@ -416,6 +544,31 @@ section.case.reverse .case-copy {{ order: 1; }}
   fill: var(--ink-2);
   font-weight: 500;
 }}
+.product-icon {{ fill: none; stroke: var(--product-icon-ink); stroke-width: 1.4px; stroke-linecap: round; stroke-linejoin: round; }}
+.product-icon .p-fill {{ fill: var(--product-icon-ink); stroke: none; }}
+.case-photo {{
+  margin: 10px 0 0;
+  border-top: 1px solid var(--hairline);
+  padding-top: 10px;
+}}
+.case-photo img {{
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}}
+.case-photo figcaption {{
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  margin-top: 6px;
+}}
+.case-photo figcaption .cite {{
+  font-family: "IBM Plex Mono", monospace;
+  display: block;
+  margin-top: 2px;
+}}
 .case-copy .eyebrow {{
   font-family: "IBM Plex Mono", monospace;
   font-size: 11.5px;
@@ -436,7 +589,39 @@ section.case.reverse .case-copy {{ order: 1; }}
   font-size: 14.5px;
   line-height: 1.65;
   color: var(--ink-2);
-  margin: 0 0 12px;
+  margin: 0 0 16px;
+}}
+blockquote.pull-quote {{
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: var(--quote-bg);
+  border-left: 3px solid var(--quote-rule);
+  border-radius: 0 8px 8px 0;
+}}
+blockquote.pull-quote .ru {{
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0 0 6px;
+  color: var(--ink);
+}}
+blockquote.pull-quote .en {{
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 8px;
+  color: var(--ink-2);
+}}
+blockquote.pull-quote cite {{
+  font-family: "IBM Plex Mono", monospace;
+  font-style: normal;
+  font-size: 11px;
+  color: var(--ink-muted);
+}}
+p.quote-absent {{
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--ink-muted);
+  margin: 0 0 16px;
 }}
 .case-copy .sources {{
   font-family: "IBM Plex Mono", monospace;
@@ -458,7 +643,7 @@ footer.note {{
   <header class="hero">
     <p class="kicker">РОЙ.МАРКЕТ / ЦБСТ &middot; case study excerpts</p>
     <h1>Five residents, five kinds of proof</h1>
-    <p class="lede">Every claim below traces to a primary source already cited in the registry — ЦБСТ's own channel, a manufacturer's own Telegram post, a front-line unit's thank-you letter, or a government contract card. These are fixed excerpts of a much larger, queryable network; the full interactive graph is linked at the bottom.</p>
+    <p class="lede">Every claim below traces to a primary source already cited in the registry — ЦБСТ's own channel, a manufacturer's own Telegram post, a front-line unit's thank-you letter, or a government contract card. Photos are the subjects' own public posts; quotes are verbatim with an English gloss. These are fixed excerpts of a much larger, queryable network; the full interactive graph is linked at the bottom.</p>
     <div class="legend">
       <span class="item"><span class="sw circle" style="background:var(--t-manufacturer)"></span> Manufacturer</span>
       <span class="item"><span class="sw circle" style="background:var(--t-cbst-core)"></span> АНО «ЦБСТ»</span>
@@ -472,7 +657,7 @@ footer.note {{
   {CASES_HTML}
 
   <footer class="note">
-    Positions are laid out for legibility, not computed — they carry no evidentiary meaning, same convention as the live graph. Every node and edge shown here is drawn from <code>data/registry/relationship_graph.json</code>; nothing is invented for narrative effect. For the full 1,430-node registry — search, filters, every citation — see the live <a href="https://claude.ai/artifact/2m4hhbSUG9XqNRvU5K1Ha9">РОЙ.МАРКЕТ Network Graph</a>.
+    Positions are laid out for legibility, not computed — they carry no evidentiary meaning, same convention as the live graph. Every node and edge shown here is drawn from <code>data/registry/relationship_graph.json</code>; product icons reflect a real keyword classification from <code>scripts/classify_product_icon.py</code>, never a guess (see the generator's own note on which products were left unlabeled). Photos and quotes are the subjects' own public material, not stock imagery. For the full 1,430-node registry — search, filters, every citation — see the live <a href="https://claude.ai/artifact/2m4hhbSUG9XqNRvU5K1Ha9">РОЙ.МАРКЕТ Network Graph</a>.
   </footer>
 </div>
 </body></html>'''

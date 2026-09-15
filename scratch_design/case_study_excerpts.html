@@ -1,6 +1,6 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body>
 <title>Five Residents</title>
-<meta name="description" content="Five hand-verified sub-networks from the РОЙ.МАРКЕТ registry, each showing one manufacturer's real ownership, product, and ЦБСТ ties.">
+<meta name="description" content="Five hand-verified sub-networks from the РОЙ.МАРКЕТ registry, each showing one manufacturer's real ownership, product, and ЦБСТ ties, with photos and verbatim quotes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -14,12 +14,15 @@
   --hairline: #e1e0d9;
   --accent: #4c5f2f;
   --node-stroke: rgba(11,11,11,0.15);
+  --quote-bg: #fbf3ec;
+  --quote-rule: #c9784a;
 
   --t-manufacturer: #2a78d6;
   --t-cbst-core: #eb6834;
   --t-network: #008300;
   --person-fill: #7a8a99;
   --product-fill: #8a7a5c;
+  --product-icon-ink: #f7f4ea;
   --sanctioned-ring: #d03b3b;
   --edge: #b9b8b1;
   --edge-owns: #52514e;
@@ -36,12 +39,15 @@
     --hairline: #35342b;
     --accent: #8fae6b;
     --node-stroke: rgba(255,255,255,0.18);
+    --quote-bg: #241d16;
+    --quote-rule: #e2966a;
 
     --t-manufacturer: #3987e5;
     --t-cbst-core: #e2966a;
     --t-network: #3fae3f;
     --person-fill: #8fa3b3;
     --product-fill: #b3a480;
+    --product-icon-ink: #211c11;
     --sanctioned-ring: #e66767;
     --edge: #3a3a37;
     --edge-owns: #c3c2b7;
@@ -58,12 +64,15 @@
   --hairline: #35342b;
   --accent: #8fae6b;
   --node-stroke: rgba(255,255,255,0.18);
+  --quote-bg: #241d16;
+  --quote-rule: #e2966a;
 
   --t-manufacturer: #3987e5;
   --t-cbst-core: #e2966a;
   --t-network: #3fae3f;
   --person-fill: #8fa3b3;
   --product-fill: #b3a480;
+  --product-icon-ink: #211c11;
   --sanctioned-ring: #e66767;
   --edge: #3a3a37;
   --edge-owns: #c3c2b7;
@@ -125,7 +134,7 @@ section.case {
   display: grid;
   grid-template-columns: 440px 1fr;
   gap: 32px;
-  align-items: center;
+  align-items: start;
   padding: 36px 0;
   border-top: 1px solid var(--hairline);
 }
@@ -149,6 +158,31 @@ section.case.reverse .case-copy { order: 1; }
   fill: var(--ink-2);
   font-weight: 500;
 }
+.product-icon { fill: none; stroke: var(--product-icon-ink); stroke-width: 1.4px; stroke-linecap: round; stroke-linejoin: round; }
+.product-icon .p-fill { fill: var(--product-icon-ink); stroke: none; }
+.case-photo {
+  margin: 10px 0 0;
+  border-top: 1px solid var(--hairline);
+  padding-top: 10px;
+}
+.case-photo img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.case-photo figcaption {
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  margin-top: 6px;
+}
+.case-photo figcaption .cite {
+  font-family: "IBM Plex Mono", monospace;
+  display: block;
+  margin-top: 2px;
+}
 .case-copy .eyebrow {
   font-family: "IBM Plex Mono", monospace;
   font-size: 11.5px;
@@ -169,7 +203,39 @@ section.case.reverse .case-copy { order: 1; }
   font-size: 14.5px;
   line-height: 1.65;
   color: var(--ink-2);
-  margin: 0 0 12px;
+  margin: 0 0 16px;
+}
+blockquote.pull-quote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: var(--quote-bg);
+  border-left: 3px solid var(--quote-rule);
+  border-radius: 0 8px 8px 0;
+}
+blockquote.pull-quote .ru {
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+blockquote.pull-quote .en {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 8px;
+  color: var(--ink-2);
+}
+blockquote.pull-quote cite {
+  font-family: "IBM Plex Mono", monospace;
+  font-style: normal;
+  font-size: 11px;
+  color: var(--ink-muted);
+}
+p.quote-absent {
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--ink-muted);
+  margin: 0 0 16px;
 }
 .case-copy .sources {
   font-family: "IBM Plex Mono", monospace;
@@ -191,7 +257,7 @@ footer.note {
   <header class="hero">
     <p class="kicker">РОЙ.МАРКЕТ / ЦБСТ &middot; case study excerpts</p>
     <h1>Five residents, five kinds of proof</h1>
-    <p class="lede">Every claim below traces to a primary source already cited in the registry — ЦБСТ's own channel, a manufacturer's own Telegram post, a front-line unit's thank-you letter, or a government contract card. These are fixed excerpts of a much larger, queryable network; the full interactive graph is linked at the bottom.</p>
+    <p class="lede">Every claim below traces to a primary source already cited in the registry — ЦБСТ's own channel, a manufacturer's own Telegram post, a front-line unit's thank-you letter, or a government contract card. Photos are the subjects' own public posts; quotes are verbatim with an English gloss. These are fixed excerpts of a much larger, queryable network; the full interactive graph is linked at the bottom.</p>
     <div class="legend">
       <span class="item"><span class="sw circle" style="background:var(--t-manufacturer)"></span> Manufacturer</span>
       <span class="item"><span class="sw circle" style="background:var(--t-cbst-core)"></span> АНО «ЦБСТ»</span>
@@ -220,15 +286,25 @@ footer.note {
       <polygon points="70,45 80,55 70,65 60,55" fill="var(--person-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="70" y="79" class="node-label" text-anchor="middle">Барашков А.С.</text>
       <circle cx="220" cy="150" r="20" fill="var(--t-manufacturer)" stroke="var(--node-stroke)" stroke-width="1"/><text x="220" y="184" class="node-label" text-anchor="middle">ООО «Гагаринг»</text>
       <circle cx="380" cy="55" r="14" fill="var(--t-cbst-core)" stroke="var(--node-stroke)" stroke-width="1"/><text x="380" y="83" class="node-label" text-anchor="middle">АНО «ЦБСТ»</text>
-      <rect x="374.0" y="239.0" width="12.0" height="12.0" rx="2" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="380" y="267" class="node-label" text-anchor="middle">«Кузнечик»</text><text x="380" y="279" class="node-label" text-anchor="middle">связь</text>
+      <rect x="370.6" y="235.7" width="18.7" height="18.7" rx="2.5" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><g transform="translate(380,245)" class="product-icon"><path d="M-6,4 A8,8 0 0 1 6,4" fill="none"/><path d="M-3.2,4 A4.3,4.3 0 0 1 3.2,4" fill="none"/><circle cy="4" r="1.3" class="p-fill"/></g><text x="380" y="270" class="node-label" text-anchor="middle">«Кузнечик»</text><text x="380" y="282" class="node-label" text-anchor="middle">связь</text>
       <circle cx="100" cy="250" r="12" fill="var(--t-manufacturer)" stroke="var(--node-stroke)" stroke-width="1"/><text x="100" y="276" class="node-label" text-anchor="middle">НПО «Эйлер»</text>
       <circle cx="220" cy="270" r="12" fill="var(--t-manufacturer)" stroke="var(--node-stroke)" stroke-width="1"/><text x="220" y="296" class="node-label" text-anchor="middle">Лаб. Янгеля</text>
       <circle cx="340" cy="270" r="12" fill="var(--t-manufacturer)" stroke="var(--node-stroke)" stroke-width="1"/><text x="340" y="296" class="node-label" text-anchor="middle">«Интел Дрон»</text>
-    </svg></div>
+    </svg>
+        <figure class="case-photo">
+          <img src="images/gagaring_barashkov_portrait.jpg" alt="Барашков А.С. at a «Гагаринг» training-centre field course." loading="lazy">
+          <figcaption>Барашков А.С. at a «Гагаринг» training-centre field course. (cropped to frame) <span class="cite">t.me/my_el_lab/4210 · s5387</span></figcaption>
+        </figure></div>
       <div class="case-copy">
         <p class="eyebrow">Case 01 · Multi-role principal</p>
         <h2>Гагаринг: one man, four companies, one ЦБСТ tie</h2>
         <p class="body">Барашков Александр Сергеевич founded and directs ООО «Гагаринг» and, through it, three sister labs and a training center. ЦБСТ's own channel names Гагаринг a &laquo;резидент ЦБСТ&raquo; directly [s5440]. Its «Кузнечик» comms module was named by call sign in a front-line unit's thank-you letter for 500 delivered units (30.08.2026).</p>
+        
+        <blockquote class="pull-quote">
+          <p class="ru">&laquo;Выражаю огромную благодарность Товарищу Александру Сергеевичу и всему коллективу лаборатории «Гагаринг» за предоставленные «Кузнечики» в количестве 500 шт. Благодарим за постоянную поддержку!&raquo;</p>
+          <p class="en">“Gratitude to Comrade Aleksandr Sergeevich and the whole «Gagaring» lab for the 500 «Kuznechik» units provided. Thank you for your constant support!”</p>
+          <cite>Front-line unit thank-you letter · s5447</cite>
+        </blockquote>
         <p class="sources">s5440 · ЦБСТ Telegram, 02.05.2026 · my_el_lab post 4546, 30.08.2026</p>
       </div>
     </section>
@@ -247,12 +323,22 @@ footer.note {
       <polygon points="80,50 90,60 80,70 70,60" fill="var(--person-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="80" y="84" class="node-label" text-anchor="middle">Козлов Д.С.</text>
       <circle cx="230" cy="150" r="18" fill="var(--t-manufacturer)" stroke="var(--sanctioned-ring)" stroke-width="2.5"/><text x="230" y="182" class="node-label" text-anchor="middle">ООО «ГОУДРОН»</text>
       <circle cx="380" cy="60" r="14" fill="var(--t-cbst-core)" stroke="var(--node-stroke)" stroke-width="1"/><text x="380" y="88" class="node-label" text-anchor="middle">АНО «ЦБСТ»</text>
-      <rect x="224.0" y="254.0" width="12.0" height="12.0" rx="2" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="230" y="282" class="node-label" text-anchor="middle">«Набат v3»</text>
-    </svg></div>
+      <rect x="220.7" y="250.7" width="18.7" height="18.7" rx="2.5" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><g transform="translate(230,260)" class="product-icon"><circle r="7" fill="none"/><path d="M0,0 L6,-6 A8,8 0 0 1 8,0 Z" class="p-fill" opacity="0.78"/><circle cx="3" cy="-3" r="1.1" class="p-fill"/></g><text x="230" y="285" class="node-label" text-anchor="middle">«Набат v3»</text>
+    </svg>
+        <figure class="case-photo">
+          <img src="images/ooo-goudron_showroom_svoih-ne-brosaem-slogan.jpg" alt="ГОУДРОН's own showroom wall: &laquo;СВОих не бросаем&raquo;." loading="lazy">
+          <figcaption>ГОУДРОН's own showroom wall: &laquo;СВОих не бросаем&raquo;. (cropped to frame) <span class="cite">s1396</span></figcaption>
+        </figure></div>
       <div class="case-copy">
         <p class="eyebrow">Case 02 · Self-reported tie</p>
         <h2>ГОУДРОН: «we've worked with ЦБСТ for months»</h2>
         <p class="body">A small, single-founder manufacturer. Its own Telegram channel, commenting on ЦБСТ's «Яким» combat-testing detachment, wrote: &laquo;Мы работаем с ЦБСТ не первый месяц&raquo; — a first-person, self-reported confirmation of an ongoing working relationship, not a third-party claim.</p>
+        
+        <blockquote class="pull-quote">
+          <p class="ru">&laquo;Сферы применения: Защита техники и личного состава в условиях СВО.&raquo;</p>
+          <p class="en">“Fields of application: protection of equipment and personnel in the conditions of the SVO [Russia's official term for its war on Ukraine].”</p>
+          <cite>набат.рф product page · s6457</cite>
+        </blockquote>
         <p class="sources">@GoDrone Telegram, 09.12.2025</p>
       </div>
     </section>
@@ -274,13 +360,23 @@ footer.note {
       <circle cx="100" cy="165" r="16" fill="var(--t-manufacturer)" stroke="var(--sanctioned-ring)" stroke-width="2.5"/><text x="100" y="195" class="node-label" text-anchor="middle">«Воздушный трактат»</text>
       <circle cx="340" cy="165" r="16" fill="var(--t-manufacturer)" stroke="var(--sanctioned-ring)" stroke-width="2.5"/><text x="340" y="195" class="node-label" text-anchor="middle">«РЛВТ»</text>
       <circle cx="220" cy="270" r="14" fill="var(--t-cbst-core)" stroke="var(--node-stroke)" stroke-width="1"/><text x="220" y="298" class="node-label" text-anchor="middle">АНО «ЦБСТ»</text>
-      <rect x="54.0" y="264.0" width="12.0" height="12.0" rx="2" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="60" y="292" class="node-label" text-anchor="middle">«Овод»</text>
-      <rect x="374.0" y="264.0" width="12.0" height="12.0" rx="2" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="380" y="292" class="node-label" text-anchor="middle">«Овод»</text>
-    </svg></div>
+      <rect x="50.6" y="260.6" width="18.7" height="18.7" rx="2.5" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><g transform="translate(60,270)" class="product-icon"><path d="M0,-7 L-7,-9 M0,-7 L7,-9 M0,4 L-7,7 M0,4 L7,7" fill="none"/><circle cx="-7" cy="-9" r="1.6"/><circle cx="7" cy="-9" r="1.6"/><circle cx="-7" cy="7" r="1.6"/><circle cx="7" cy="7" r="1.6"/><path d="M-3,-2 L3,-2 L0,7 Z" class="p-fill"/></g><text x="60" y="295" class="node-label" text-anchor="middle">«Овод»</text>
+      <rect x="370.6" y="260.6" width="18.7" height="18.7" rx="2.5" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><g transform="translate(380,270)" class="product-icon"><path d="M0,-7 L-7,-9 M0,-7 L7,-9 M0,4 L-7,7 M0,4 L7,7" fill="none"/><circle cx="-7" cy="-9" r="1.6"/><circle cx="7" cy="-9" r="1.6"/><circle cx="-7" cy="7" r="1.6"/><circle cx="7" cy="7" r="1.6"/><path d="M-3,-2 L3,-2 L0,7 Z" class="p-fill"/></g><text x="380" y="295" class="node-label" text-anchor="middle">«Овод»</text>
+    </svg>
+        <figure class="case-photo">
+          <img src="images/ovod_shipment_50-drones-narodny-front-2023.jpg" alt="First batch of 50 «Овод» kamikaze drones, packed for shipment to the SVO zone with the &laquo;Народный фронт&raquo; project." loading="lazy">
+          <figcaption>First batch of 50 «Овод» kamikaze drones, packed for shipment to the SVO zone with the &laquo;Народный фронт&raquo; project. (cropped to frame) <span class="cite">s6455</span></figcaption>
+        </figure></div>
       <div class="case-copy">
         <p class="eyebrow">Case 03 · One brand, two sanctioned entities</p>
         <h2>«Овод»: the same owner behind two sanctioned companies</h2>
         <p class="body">Черезов Андрей Павлович owns and directs both ООО «Воздушный трактат» and ООО «РЛВТ» — separately EU/US-sanctioned — selling the same «Овод»/«Провод» strike-drone family under both entities. ЦБСТ's own channel calls «Овод» its &laquo;флагманский резидент&raquo; (flagship resident).</p>
+        
+        <blockquote class="pull-quote">
+          <p class="ru">&laquo;Боевая группа создана из опытных воинов - ветеранов СВО. Военные специалисты ОВОДА содействуют подразделениям МО РФ и других силовых служб в зоне СВО.&raquo;</p>
+          <p class="en">“The combat group was formed from experienced fighters — SVO veterans. Ovod's military specialists assist Russian MoD units and other security services in the SVO zone.”</p>
+          <cite>Ovod's own Telegram · s6456</cite>
+        </blockquote>
         <p class="sources">ЦБСТ Telegram post 2159491523:623, 15.04.2025 · theins.ru, 23.08.2026</p>
       </div>
     </section>
@@ -302,13 +398,23 @@ footer.note {
       <polygon points="70,235 80,245 70,255 60,245" fill="var(--person-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="70" y="269" class="node-label" text-anchor="middle">Корчагина О.А.</text><text x="70" y="281" class="node-label" text-anchor="middle">60%</text>
       <circle cx="230" cy="150" r="20" fill="var(--t-manufacturer)" stroke="var(--sanctioned-ring)" stroke-width="2.5"/><text x="230" y="184" class="node-label" text-anchor="middle">СКБ «Пиранья»</text>
       <circle cx="380" cy="55" r="14" fill="var(--t-cbst-core)" stroke="var(--node-stroke)" stroke-width="1"/><text x="380" y="83" class="node-label" text-anchor="middle">АНО «ЦБСТ»</text>
-      <rect x="374.0" y="159.0" width="12.0" height="12.0" rx="2" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="380" y="187" class="node-label" text-anchor="middle">«Пиранья-10»</text>
-      <rect x="374.0" y="254.0" width="12.0" height="12.0" rx="2" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="380" y="282" class="node-label" text-anchor="middle">«Пиранья-13»</text>
-    </svg></div>
+      <rect x="370.6" y="155.7" width="18.7" height="18.7" rx="2.5" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="380" y="190" class="node-label" text-anchor="middle">«Пиранья-10»</text>
+      <rect x="370.6" y="250.7" width="18.7" height="18.7" rx="2.5" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><g transform="translate(380,260)" class="product-icon"><path d="M0,-7 L-7,-9 M0,-7 L7,-9 M0,4 L-7,7 M0,4 L7,7" fill="none"/><circle cx="-7" cy="-9" r="1.6"/><circle cx="7" cy="-9" r="1.6"/><circle cx="-7" cy="7" r="1.6"/><circle cx="7" cy="7" r="1.6"/><path d="M-3,-2 L3,-2 L0,7 Z" class="p-fill"/></g><text x="380" y="285" class="node-label" text-anchor="middle">«Пиранья-13»</text>
+    </svg>
+        <figure class="case-photo">
+          <img src="images/TGMEDIA_7300024069_20250801_piranhafpv-post384-1.jpg" alt="An FPV drone operator at a field position, &laquo;Север&raquo; grouping, Kursk border area — company-claimed кill of a US-supplied Abrams tank." loading="lazy">
+          <figcaption>An FPV drone operator at a field position, &laquo;Север&raquo; grouping, Kursk border area — company-claimed кill of a US-supplied Abrams tank. (cropped to frame) <span class="cite">@piranhafpv, 01.08.2025 · s7512</span></figcaption>
+        </figure></div>
       <div class="case-copy">
         <p class="eyebrow">Case 04 · Named in the EU's 20th package</p>
         <h2>СКБ «Пиранья»: named directly by ЦБСТ's own channel</h2>
         <p class="body">Two owners (Чернышов 40%, Корчагина 60%). ЦБСТ's channel listed &laquo;СКБ «Пиранья»&raquo; by name among six ЦБСТ-circle organizations newly hit by the EU's 20th sanctions package, alongside «Технодрон» and «Архангел». It makes a cargo-capable strike-drone family plus its own fiber-optic comms line.</p>
+        
+        <blockquote class="pull-quote">
+          <p class="ru">&laquo;Первый американский танк Abrams в зоне СВО уничтожен FPV-дроном «Пиранья-10»&raquo;</p>
+          <p class="en">“The first American Abrams tank in the SVO zone was destroyed by a «Piranha-10» FPV drone.”</p>
+          <cite>СКБ «Пиранья» own channel · s1410</cite>
+        </blockquote>
         <p class="sources">ЦБСТ Telegram post 2159491523:2095, 24.04.2026</p>
       </div>
     </section>
@@ -329,7 +435,7 @@ footer.note {
       <polygon points="80,50 90,60 80,70 70,60" fill="var(--person-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="80" y="84" class="node-label" text-anchor="middle">Цыганов В.Б.</text>
       <circle cx="230" cy="150" r="18" fill="var(--t-manufacturer)" stroke="var(--node-stroke)" stroke-width="1"/><text x="230" y="182" class="node-label" text-anchor="middle">ИП Цыганов</text>
       <circle cx="230" cy="270" r="12" fill="var(--t-manufacturer)" stroke="var(--node-stroke)" stroke-width="1"/><text x="230" y="296" class="node-label" text-anchor="middle">ООО «Покров»</text>
-      <rect x="374.0" y="84.0" width="12.0" height="12.0" rx="2" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><text x="380" y="112" class="node-label" text-anchor="middle">«Булат» v.4</text>
+      <rect x="370.6" y="80.7" width="18.7" height="18.7" rx="2.5" fill="var(--product-fill)" stroke="var(--node-stroke)" stroke-width="1"/><g transform="translate(380,90)" class="product-icon"><circle r="7" fill="none"/><path d="M0,0 L6,-6 A8,8 0 0 1 8,0 Z" class="p-fill" opacity="0.78"/><circle cx="3" cy="-3" r="1.1" class="p-fill"/></g><text x="380" y="115" class="node-label" text-anchor="middle">«Булат» v.4</text>
       <circle cx="380" cy="200" r="14" fill="var(--t-network)" stroke="var(--node-stroke)" stroke-width="1"/><text x="380" y="228" class="node-label" text-anchor="middle">МЧС Курской обл.</text>
       <circle cx="380" cy="270" r="14" fill="var(--t-network)" stroke="var(--node-stroke)" stroke-width="1"/><text x="380" y="298" class="node-label" text-anchor="middle">ФГКУ «Лидер»</text>
     </svg></div>
@@ -337,12 +443,13 @@ footer.note {
         <p class="eyebrow">Case 05 · No ЦБСТ tie found</p>
         <h2>Цыганов: a direct line to federal buyers, no ЦБСТ tie</h2>
         <p class="body">ИП Цыганов В.Б. sells the «Булат» v.4 drone detector through its own subsidiary ООО «Покров», and has won government contracts directly from Kursk's regional MChS directorate and the FSB-linked «Лидер» rescue center. No ЦБСТ tie is recorded for this entity in the registry — the ecosystem's downstream reach extends past ЦБСТ's own named residents.</p>
+        <p class="quote-absent">No self-incriminating marketing copy is on file for this entity — its government-contract cards are the only sourced material.</p>
         <p class="sources">zakupki.gov.ru contract cards · see government_contracts[]</p>
       </div>
     </section>
 
   <footer class="note">
-    Positions are laid out for legibility, not computed — they carry no evidentiary meaning, same convention as the live graph. Every node and edge shown here is drawn from <code>data/registry/relationship_graph.json</code>; nothing is invented for narrative effect. For the full 1,430-node registry — search, filters, every citation — see the live <a href="https://claude.ai/artifact/2m4hhbSUG9XqNRvU5K1Ha9">РОЙ.МАРКЕТ Network Graph</a>.
+    Positions are laid out for legibility, not computed — they carry no evidentiary meaning, same convention as the live graph. Every node and edge shown here is drawn from <code>data/registry/relationship_graph.json</code>; product icons reflect a real keyword classification from <code>scripts/classify_product_icon.py</code>, never a guess (see the generator's own note on which products were left unlabeled). Photos and quotes are the subjects' own public material, not stock imagery. For the full 1,430-node registry — search, filters, every citation — see the live <a href="https://claude.ai/artifact/2m4hhbSUG9XqNRvU5K1Ha9">РОЙ.МАРКЕТ Network Graph</a>.
   </footer>
 </div>
 </body></html>
