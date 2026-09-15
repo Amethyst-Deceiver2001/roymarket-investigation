@@ -636,6 +636,44 @@ Not yet wired up: `docs/index.html` doesn't link to `docs/profiles/` pages
 yet (no nav, no cross-linking from the narrative). That's a separate task
 from generating the profiles themselves.
 
+### Product profiles (added 2026-09-15) — flagship products only, not the full `products[]` corpus
+
+`scripts/build_product_profile.py` generates `docs/profiles/products/
+<slug>.{html,md}` the same generated-not-hand-written way company profiles
+work, but there is no product-level registry file to drive it from —
+`products[]` entries live nested under each entity, with no product-level
+slug, and (as of this writing) only 25 of 489 entries across the whole
+registry have a structured `specs{}` dict; the rest are name+description
+only, and images/`battlefield_evidence[]` are captioned at the *entity*
+level with no field linking them to one specific product when an entity
+sells several. Building a real profile — not a mostly-empty stub — for
+every one of 489 entries isn't achievable from what the registry currently
+holds.
+
+So this is scoped to a short, hand-maintained `FLAGSHIP_PRODUCTS` list in
+the script itself (currently 5: Кузнечик, Набат, Овод, Пиранья, Булат/3MX —
+the same flagship entities already central to the coverage audit and the
+"From ЦБСТ to the Front" exhibit), each entry naming its maker entity_slug,
+the exact `products[].name_ru` values that make up that flagship product
+(often several registry entries — variants, sub-modules), and a short list
+of distinct-proper-noun match keywords (e.g. `["кузнечик", "kuznechik"]`)
+used to link images/`battlefield_evidence[]` from across the product's real
+supply chain (maker + any reseller/distributor entity, e.g. Булат's
+Тримикс → ПОКРОВ → ИП Цыганов chain) by substring match on the product's
+own brand name — never a generic term, or unrelated evidence gets pulled
+in. `government_contracts[]`-derived "handovers" are scoped to the
+reseller/distributor entities specifically (a contract card rarely names
+the product brand in a structured field, so keyword-matching it would be
+unreliable — but a reseller/distributor's *only* registry-relevant
+contracts already are for this product line, so no matching is needed
+there). Every section that comes up empty is stated as such under "Not yet
+sourced" rather than omitted silently, so a thin page still tells you what
+hasn't been confirmed, not just what has.
+
+Extend `FLAGSHIP_PRODUCTS` deliberately, one real product at a time, only
+when a product actually has enough sourced specs/images/field-testing data
+to justify a page — not as a mechanical sweep of the remaining ~484 entries.
+
 ## Publishing
 
 `docs/index.html` is the GitHub Pages source (repo Settings → Pages →
