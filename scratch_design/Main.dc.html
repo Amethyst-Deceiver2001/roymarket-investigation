@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#efeee7; --ink:#1c1a16; --ink-soft:#5a564c; --line:#cfccc0; --paper:#f8f7f2;
+    --offensive:#a3491f; --defensive:#2c5a72; --dual:#6a5a1e;
+    --icon-ink:#2c3320; --icon-accent:#a3491f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;}
+  a{color:var(--defensive)} a:hover{color:var(--ink)}
+  .wrap{max-width:1280px;margin:0 auto;padding:40px 36px 56px;}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);}
+  h1{font-family:Oswald,sans-serif;font-weight:600;font-size:34px;letter-spacing:.01em;margin:6px 0 2px;text-wrap:balance;}
+  .sub{font-size:14px;color:var(--ink-soft);max-width:660px;line-height:1.5;margin:0 0 30px;}
+
+  .stage-row{display:grid;grid-template-columns:1fr 46px 1fr 46px 1fr;align-items:start;gap:0;}
+  .stage-head{display:flex;flex-direction:column;gap:2px;padding-bottom:14px;border-bottom:2px solid var(--ink);margin-bottom:16px;}
+  .stage-label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+  .stage-title{font-family:Oswald,sans-serif;font-weight:600;font-size:19px;}
+  .col{display:flex;flex-direction:column;gap:14px;}
+  .arrowcol{display:flex;align-items:flex-start;justify-content:center;padding-top:52px;}
+
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:14px 16px;}
+
+  /* supply cards */
+  .hub-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .glyph-tag{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:2px;}
+  .glyph-tag.off{color:var(--offensive);border:1px solid var(--offensive);}
+  .glyph-tag.def{color:var(--defensive);border:1px solid var(--defensive);}
+  .glyph-tag.dual{color:var(--dual);border:1px solid var(--dual);}
+  .donor-name{font-family:Oswald,sans-serif;font-weight:600;font-size:15px;margin:0 0 4px;}
+  .donor-meta{font-size:12px;color:var(--ink-soft);line-height:1.5;}
+
+  /* transfer cards */
+  .ev-card{border-left:3px solid var(--ink);display:flex;gap:12px;align-items:flex-start;}
+  .ev-card.off{border-left-color:var(--offensive);}
+  .ev-card.def{border-left-color:var(--defensive);}
+  .ev-card.dual{border-left-color:var(--dual);}
+  .icon-stack{display:flex;flex-direction:column;gap:6px;flex:none;}
+  .icon-swatch{width:34px;height:34px;background:var(--bg);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:none;}
+  .icon-swatch svg{width:20px;height:20px;stroke:var(--icon-ink);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+  .icon-swatch svg .fill{fill:var(--icon-ink);stroke:none;}
+  .icon-swatch svg .accent{stroke:var(--icon-accent);}
+  .icon-swatch svg .accent-fill{fill:var(--icon-accent);stroke:none;}
+  .ev-body{min-width:0;}
+  .ev-product{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;margin:0 0 4px;}
+  .ev-dir{font-size:12px;color:var(--ink-soft);}
+
+  /* demand cards */
+  .unit-name{font-family:Oswald,sans-serif;font-weight:600;font-size:15px;margin:0 0 3px;}
+  .unit-conf{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;}
+  .unit-dir{font-size:12px;color:var(--ink-soft);}
+
+  .loop-note{grid-column:1/-1;margin-top:26px;padding:14px 18px;background:var(--paper);border:1px dashed var(--dual);border-radius:2px;font-size:12.5px;color:var(--ink-soft);display:flex;gap:10px;align-items:flex-start;}
+  .loop-note b{color:var(--ink);font-weight:600;}
+  .foot{margin-top:30px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:12px;}
+</style>
+</helmet>
+
+<div class="wrap">
+  <div class="kicker">РОЙ.МАРКЕТ / ЦБСТ — evidence chain</div>
+  <h1>Supply → Demand Cycle</h1>
+  <p class="sub">Who makes what, and who it goes to. Hub glyph = offensive/defensive/dual per the approved Hub Icon Schema; product icons = the approved Product Icon Set.</p>
+
+  <div class="stage-row">
+    <div class="stage-head"><div class="stage-label">01 &middot; Supply</div><div class="stage-title">Donor orgs</div></div>
+    <div></div>
+    <div class="stage-head"><div class="stage-label">02 &middot; Transfer</div><div class="stage-title">Product &rarr; direction</div></div>
+    <div></div>
+    <div class="stage-head"><div class="stage-label">03 &middot; Demand</div><div class="stage-title">Military units</div></div>
+  </div>
+
+  <div class="stage-row">
+    <div class="col">
+      <div class="card">
+        <div class="hub-row"><svg width="20" height="22" viewBox="0 0 46 46"><polygon points="23,4 40,13.5 40,32.5 23,42 6,32.5 6,13.5" fill="var(--dual)"/></svg><span class="glyph-tag dual">dual</span></div>
+        <div class="donor-name">Фонд «Наша Правда»</div>
+        <div class="donor-meta">234 handover posts, 2023&ndash;2026 &middot; institutional donor &middot; deliveries personally attributed to А. Сидякин 23&times;</div>
+      </div>
+      <div class="card">
+        <div class="hub-row"><svg width="20" height="22" viewBox="0 0 46 46"><clipPath id="c1"><rect x="6" y="4" width="17" height="38"/></clipPath><polygon points="23,4 40,13.5 40,32.5 23,42 6,32.5 6,13.5" fill="none" stroke="var(--dual)" stroke-width="2"/><polygon points="23,4 40,13.5 40,32.5 23,42 6,32.5 6,13.5" fill="var(--dual)" clip-path="url(#c1)"/></svg><span class="glyph-tag dual">dual</span></div>
+        <div class="donor-name">Гагаринг (@my_el_lab)</div>
+        <div class="donor-meta">Lab-run manufacturer/donor &middot; video receivers, GCS &amp; detectors</div>
+      </div>
+      <div class="card">
+        <div class="hub-row"><svg width="20" height="22" viewBox="0 0 46 46"><polygon points="23,4 40,13.5 40,32.5 23,42 6,32.5 6,13.5" fill="none" stroke="var(--defensive)" stroke-width="2"/><circle cx="23" cy="23" r="7" fill="none" stroke="var(--defensive)" stroke-width="2"/></svg><span class="glyph-tag def">defensive</span></div>
+        <div class="donor-name">ЦБСТ (@ANO_CBST)</div>
+        <div class="donor-meta">Network hub &middot; also redistributes via recipient units &mdash; see loop below</div>
+      </div>
+    </div>
+
+    <div class="arrowcol">
+      <svg width="40" height="240" viewBox="0 0 40 240"><line x1="0" y1="32" x2="34" y2="32" stroke="var(--ink)" stroke-width="1.5"/><polygon points="34,27 40,32 34,37" fill="var(--ink)"/>
+        <line x1="0" y1="112" x2="34" y2="112" stroke="var(--ink)" stroke-width="1.5"/><polygon points="34,107 40,112 34,117" fill="var(--ink)"/>
+        <line x1="0" y1="192" x2="34" y2="192" stroke="var(--ink)" stroke-width="1.5"/><polygon points="34,187 40,192 34,197" fill="var(--ink)"/>
+      </svg>
+    </div>
+
+    <div class="col">
+      <div class="card ev-card def">
+        <div class="icon-stack">
+          <div class="icon-swatch"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path class="accent-fill" style="opacity:.85" d="M12 12 L18 6 A8 8 0 0 1 20 12 Z"/><circle cx="15" cy="9" r="1.3" class="fill"/></svg></div>
+          <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M6 15 A6 6 0 0 1 18 15 Z"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="12" y1="15" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/><path class="accent" d="M12 9 L8 4 M12 9 L16 4 M12 9 L12 2"/></svg></div>
+        </div>
+        <div class="ev-body">
+          <div class="ev-product">«Булат» v4 detector + «Капюшон» РЭБ station</div>
+          <div class="ev-dir">Херсонская область &middot; &#8381;10.5m</div>
+        </div>
+      </div>
+      <div class="card ev-card def">
+        <div class="icon-stack">
+          <div class="icon-swatch"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path class="accent-fill" style="opacity:.85" d="M12 12 L18 6 A8 8 0 0 1 20 12 Z"/><circle cx="15" cy="9" r="1.3" class="fill"/></svg></div>
+        </div>
+        <div class="ev-body">
+          <div class="ev-product">«Юрка» detectors</div>
+          <div class="ev-dir">Курское направление</div>
+        </div>
+      </div>
+      <div class="card ev-card dual">
+        <div class="icon-stack">
+          <div class="icon-swatch"><svg viewBox="0 0 24 24"><circle cx="12" cy="19" r="1.4" class="fill"/><path d="M9.5 15.5 A3.5 3.5 0 0 1 14.5 15.5"/><path d="M6.5 12.5 A7.5 7.5 0 0 1 17.5 12.5"/><path d="M3.5 9.5 A11.5 11.5 0 0 1 20.5 9.5"/></svg></div>
+          <div class="icon-swatch"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="10" rx="1"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/><circle cx="9" cy="11" r="1.6" class="accent"/><line x1="14" y1="9" x2="17" y2="9"/><line x1="14" y1="13" x2="17" y2="13"/></svg></div>
+        </div>
+        <div class="ev-body">
+          <div class="ev-product">«Сова 5.8» video receiver + НСУ «Кузнечик» GCS</div>
+          <div class="ev-dir">Запорожская обл., Васильевский р-н</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrowcol">
+      <svg width="40" height="240" viewBox="0 0 40 240"><line x1="0" y1="32" x2="34" y2="32" stroke="var(--ink)" stroke-width="1.5"/><polygon points="34,27 40,32 34,37" fill="var(--ink)"/>
+        <line x1="0" y1="112" x2="34" y2="112" stroke="var(--ink)" stroke-width="1.5"/><polygon points="34,107 40,112 34,117" fill="var(--ink)"/>
+        <line x1="0" y1="192" x2="34" y2="192" stroke="var(--ink)" stroke-width="1.5"/><polygon points="34,187 40,192 34,197" fill="var(--ink)"/>
+      </svg>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="unit-name">58&ndash;я армия</div>
+        <div class="unit-conf">named &middot; army</div>
+        <div class="unit-dir">Херсонское направление</div>
+      </div>
+      <div class="card">
+        <div class="unit-name">337&ndash;й гвардейский полк</div>
+        <div class="unit-conf">named &middot; regiment, ВДВ</div>
+        <div class="unit-dir">Курское направление</div>
+      </div>
+      <div class="card">
+        <div class="unit-name">Подразделение, Васильевский р&ndash;н</div>
+        <div class="unit-conf">descriptive &middot; role unspecified</div>
+        <div class="unit-dir">Запорожская область</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="loop-note">
+    <svg width="22" height="22" viewBox="0 0 22 22" style="flex:none;margin-top:1px;"><path d="M4 11a7 7 0 1 1 2 5" fill="none" stroke="var(--dual)" stroke-width="2"/><polygon points="4,7 4,15 10,11" fill="var(--dual)"/></svg>
+    <div><b>Multi-hop redistribution:</b> ЦБСТ &rarr; Отряд «Яким» (recipient) &rarr; «смежные подразделения» (Яким re-donates on). A demand-side unit becomes a supply-side node one hop later &mdash; the reason this is a <i>cycle</i>, not a one-way pipeline.</div>
+  </div>
+
+  <div class="foot">Sources: @nashapravdafond, @my_el_lab, @ANO_CBST &middot; data/roymarket.db &middot; hub glyph per Hub Icon Schema, product icons per Product Icon Set</div>
+</div>
+</x-dc>
+</body>
+</html>

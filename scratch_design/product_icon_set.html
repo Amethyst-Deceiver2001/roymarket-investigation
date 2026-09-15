@@ -1,0 +1,347 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<title>Product Icon Set</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #efeee7; --panel: #ffffff; --panel-2: #f6f5ef; --line: #d4d2c4;
+    --ink: #17180f; --ink-2: #4b4c3f; --muted: #7a7c68; --accent: #4c5f2f;
+    --icon-ink: #2c3320; --icon-bg: #f6f5ef; --icon-accent: #a3491f;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --display: 'Oswald', 'Arial Narrow', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d0e0a; --panel: #15160f; --panel-2: #191a12; --line: #34362450;
+      --ink: #dcdccc; --ink-2: #b3b39a; --muted: #7c7d64; --accent: #9db56e;
+      --icon-ink: #d7d9c6; --icon-bg: #191a12; --icon-accent: #d98a4e;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d0e0a; --panel: #15160f; --panel-2: #191a12; --line: #34362450;
+    --ink: #dcdccc; --ink-2: #b3b39a; --muted: #7c7d64; --accent: #9db56e;
+    --icon-ink: #d7d9c6; --icon-bg: #191a12; --icon-accent: #d98a4e;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.55; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 56px 28px 96px; }
+  .eyebrow { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--display); font-weight: 600; font-size: clamp(30px, 4.4vw, 44px); letter-spacing: 0.01em; text-transform: uppercase; margin: 0 0 14px; text-wrap: balance; }
+  .lede { max-width: 680px; color: var(--ink-2); font-size: 15.5px; margin: 0 0 8px; }
+  .lede + .lede { margin-top: 10px; }
+  section { margin-top: 60px; }
+  h2 { font-family: var(--display); font-weight: 600; font-size: 21px; text-transform: uppercase; letter-spacing: 0.03em; margin: 0 0 6px; display: flex; align-items: baseline; gap: 10px; }
+  h2 .num { font-family: var(--mono); font-size: 13px; color: var(--muted); font-weight: 500; }
+  .section-note { color: var(--muted); font-size: 13.5px; max-width: 660px; margin: 0 0 26px; }
+  code { font-family: var(--mono); }
+
+  .icon-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .icon-cell { background: var(--panel); padding: 18px 14px 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .icon-cell.unclassified { background: var(--panel-2); }
+  .icon-swatch { width: 44px; height: 44px; background: var(--icon-bg); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; }
+  .icon-swatch.dashed { border-style: dashed; }
+  .icon-swatch svg { width: 26px; height: 26px; stroke: var(--icon-ink); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .icon-swatch svg .fill { fill: var(--icon-ink); stroke: none; }
+  .icon-swatch svg .accent { stroke: var(--icon-accent); }
+  .icon-swatch svg .accent-fill { fill: var(--icon-accent); stroke: none; }
+  .icon-label { font-family: var(--display); font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.25; }
+  .icon-count { font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
+  .icon-tier { display: inline-block; margin-top: 2px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; text-transform: uppercase; padding: 1px 5px; border: 1px solid var(--line); color: var(--muted); }
+  .icon-tier.structured { color: var(--accent); border-color: var(--accent); }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .card { background: var(--panel); border: 1px solid var(--line); display: flex; gap: 14px; padding: 16px; align-items: flex-start; }
+  .card .icon-swatch { flex: none; width: 40px; height: 40px; }
+  .card .icon-swatch svg { width: 23px; height: 23px; }
+  .card-body { min-width: 0; }
+  .card-entity { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin-bottom: 3px; }
+  .card-name { font-family: var(--display); font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .card-desc { font-size: 12.5px; color: var(--ink-2); }
+  .card-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag { font-family: var(--mono); font-size: 9.5px; padding: 2px 7px; border: 1px solid var(--line); color: var(--muted); }
+
+  .principle { margin-top: 18px; font-family: var(--mono); font-size: 12px; color: var(--muted); border-left: 2px solid var(--line); padding-left: 14px; }
+  .principle b { color: var(--ink-2); font-weight: 600; }
+
+  .rule-box { background: var(--panel); border: 1px solid var(--line); padding: 20px 22px; margin-top: 20px; }
+  .rule-box h3 { font-family: var(--display); font-size: 14px; text-transform: uppercase; letter-spacing: 0.03em; margin: 0 0 10px; }
+  .rule-box ol { margin: 0; padding-left: 20px; font-size: 13px; color: var(--ink-2); }
+  .rule-box li { margin-bottom: 8px; }
+  .rule-box li:last-child { margin-bottom: 0; }
+
+  .modifier-row { display: flex; align-items: center; gap: 16px; background: var(--panel); border: 1px solid var(--line); padding: 18px 20px; margin-top: 20px; }
+  .modifier-row .icon-swatch { flex: none; }
+
+  footer { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--muted); }
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">РОЙ.МАРКЕТ · Network Graph · presentation layer, mockup for review · follows Hub Icon Schema</p>
+  <h1>Product Icon Set</h1>
+  <p class="lede">Right now every <code>products[]</code> node on the graph renders as the same plain square — a strike drone, a jammer, and a battery are visually identical. This proposes <b style="color:var(--ink)">17 monoline category pictograms plus an explicit 18th unclassified glyph</b>, grounded in the actual spread of the registry's 487 product entries, so a reader can tell a kamikaze quad from a counter-drone detector from a spare battery without opening the detail panel — and can tell "not yet classifiable" from "quietly forced into the wrong bucket."</p>
+  <p class="lede">Design precedent: <b style="color:var(--ink)">MIL-STD-2525/APP-6</b> military symbology keeps a symbol's frame (affiliation) and its interior icon (unit type) orthogonal — an operator learns the icon vocabulary once and reuses it regardless of frame. Node <i>kind</i> already owns the frame here (square = product, unchanged); these icons only fill the interior, the same way tier owns color and the hub badge's fill-pattern owns offensive/defensive/dual — a fourth independent channel, not a competing one. Stroke weight and grid are held constant across all 18 per <b style="color:var(--ink)">ISO 7000</b>'s consistency guidance for equipment-symbol families, so the set reads as one vocabulary rather than 18 unrelated drawings.</p>
+
+  <section>
+    <h2><span class="num">01</span> Classification rule — no longer implicit</h2>
+    <p class="section-note">2026-09-14 revision: the original mockup assigned categories by eyeballing text with no stated fallback — concretely, all 27 EW-jammer hits in the first pass shared one undifferentiated count despite three separate jammer icons being shown, with no rule for which one a matched product should get. Fixed with a real, checked-in classifier (<code>scripts/classify_product_icon.py</code>), not just prose:</p>
+    <div class="rule-box">
+      <h3>Tier 1 — structured, where it exists</h3>
+      <ol>
+        <li>If a product carries a <code>type_bvs</code> field (wired 2026-09-14 from rk.2035.university's own product sub-catalog, source s1169, for 6 entities so far), map it directly — only 4 distinct values exist in that source, all airframe types, so this only ever resolves the 4 airframe categories. A structured airframe type still gets overridden to <b style="color:var(--ink)">FPV / kamikaze strike</b> if the text itself uses strike language — <code>type_bvs</code> says nothing about intent, only shape.</li>
+      </ol>
+      <h3 style="margin-top:16px">Tier 2 — keyword, with an explicit default</h3>
+      <ol>
+        <li>Everything else (the large majority of the corpus) falls to keyword matching against <code>name_ru</code> + <code>description</code> — bilingual: Russian and English terms both, after the original English-only-description gap (gk-logos's real jammers were falling to "unclassified" because their descriptions read "Omnidirectional vehicle-mounted EW jammer" — no Russian trigger word at all) was found and fixed. A second pass (same day, triggered by manually triaging the unclassified bucket rather than trusting the count) found two more bilingual gaps — Cyrillic "ФПВ" wasn't recognized as equivalent to Latin "FPV", and English "kamikaze" wasn't recognized alongside "камикадзе" — plus a semantic inversion: "maintain link when jammed" (a strike drone describing its own EW <i>resistance</i>) was matching the same bare substring as "jammer", misclassifying an airframe as its own countermeasure. All three fixed with tighter, not looser, patterns.</li>
+        <li><b style="color:var(--ink)">A third pass found the detector count was conflating three unrelated device classes</b> — the same "one undifferentiated bucket" problem the jammer mount-rule fixed, but one level deeper. "детектор"/"пеленгатор"/"detector" alone also matches landmine detectors and walkthrough metal-detector arches (ooo-opkb-eksplomet's АЛЬФАМАРИН/ARENA line — airport-security-style personnel screening, not drone-related at all) and a manned-aviation radio direction-finder (ao-pk-azimut's DF 2000). Both entities are already known to sit outside this taxonomy's industry (see §03) — the bug was letting one shared English gloss word pull their products into a UAV category anyway. An explicit exclusion guard removes 8 false hits without loosening the real detector patterns.</li>
+        <li><b style="color:var(--ink)">EW jammer mount-type sub-rule, stated explicitly</b>: переносн/portable → portable icon; стационарн/dome/fixed → stationary icon; автомобил/vehicle-mounted/omnidirectional → vehicle icon; <b>no match on mount language → vehicle-mounted</b> (the modal case in the original count, now a stated default instead of a silent one).</li>
+        <li><b style="color:var(--ink)">Two categories added 2026-09-14</b> after triaging the unclassified bucket by hand rather than treating a large count as self-explanatory: <b style="color:var(--ink)">Electronics / compute module</b> and <b style="color:var(--ink)">Navigation / GNSS module</b> — a real slice of this registry isn't complete-UAV manufacturers at all but B2B component suppliers feeding <i>other</i> manufacturers' airframes (npts-elvis's ~30 chips/SoCs/processor modules; ooo-4gnss/ooo-orient-sistems's ~15 GNSS receiver boards), previously indistinguishable in the unclassified count from genuinely unrelated-industry noise. <b style="color:var(--ink)">Motor / propeller / part</b> was broadened to <b style="color:var(--ink)">Motor / propeller / rotor blade</b> (also now covers starter-generators) rather than spin up a 19th icon for a term with zero literal hits in the corpus as of this writing.</li>
+        <li><b style="color:var(--ink)">No category matches at all → the 18th "unclassified" glyph</b>, not a forced nearest-neighbor guess. On the live corpus this is still the single largest bucket (190 of 487) — mostly one entity, ao-pk-azimut (51 products: air-traffic-control avionics, biometric scanners, servers), whose entire product line is a different industry this taxonomy was never meant to cover. That's the fallback working as intended, not a coverage failure — see §03 for the full triage of what's left.</li>
+      </ol>
+    </div>
+    <p class="section-note" style="margin-top:14px">Live distribution as of this revision: FPV/strike 51 · multirotor/cargo 33 · electronics/compute 30 · fixed-wing/VTOL 25 · detector/counter-UAS 26 · jammer-vehicle 40 · battery 16 · nav/GNSS 15 · antenna 7 · helicopter 7 · motor/part/rotor 5 · jammer-stationary 4 · jammer-portable 5 · video link 3 · repeater 2 · ground control station 1 · munition 1 · <b>unclassified 190</b>. 25 products resolved via the structured tier, 246 via keyword (6 via the explicit generic-UAV-term default, documented above), 190 unclassified — run <code>python3 scripts/classify_product_icon.py</code> for the live count any time the registry changes.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span> Category legend</h2>
+    <p class="section-note">Icons unchanged from the first pass — only the assignment rule behind them changed. Counts below are the live classifier output, not the original mockup's manual read.</p>
+    <div class="icon-grid">
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M12 3 L15 9 L9 9 Z" class="accent-fill"/><path d="M12 9 L5 5 M12 9 L19 5 M12 13 L5 19 M12 13 L19 19"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="9" x2="12" y2="13"/></svg></div>
+        <div class="icon-label">FPV / kamikaze strike</div>
+        <div class="icon-count">51 hits · warhead nose on X-frame</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M12 8 L5 5 M12 8 L19 5 M12 14 L5 19 M12 14 L19 19"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><rect x="9" y="8" width="6" height="6" rx="1"/></svg></div>
+        <div class="icon-label">Multirotor / cargo utility</div>
+        <div class="icon-count">33 hits · plain X-frame, payload box</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="20"/><path d="M12 8 L3 13 M12 8 L21 13"/><path d="M12 16 L8 19 M12 16 L16 19"/><circle cx="12" cy="2" r="1.1" class="fill"/></svg></div>
+        <div class="icon-label">Fixed-wing / VTOL</div>
+        <div class="icon-count">25 hits · swept wing + tail</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="1.6"/><line x1="12" y1="6.5" x2="12" y2="10"/><path d="M8 10 L16 10 L14 16 L10 16 Z"/><line x1="14" y1="13" x2="19" y2="13"/><circle cx="19" cy="13" r="1.4"/></svg></div>
+        <div class="icon-label">Helicopter-type UAS</div>
+        <div class="icon-count">7 hits · rotor disc + tail boom</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><rect x="4" y="13" width="16" height="6" rx="1"/><circle cx="7" cy="19" r="1.4" class="fill"/><circle cx="17" cy="19" r="1.4" class="fill"/><path class="accent" d="M12 13 L12 6 M12 6 L8 3 M12 6 L16 3 M12 6 L12 2"/></svg></div>
+        <div class="icon-label">EW jammer, vehicle-mounted</div>
+        <div class="icon-count">40 hits · omni burst on hull · the mount-rule default</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M6 15 A6 6 0 0 1 18 15 Z"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="12" y1="15" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/><path class="accent" d="M12 9 L8 4 M12 9 L16 4 M12 9 L12 2"/></svg></div>
+        <div class="icon-label">EW jammer, stationary/dome</div>
+        <div class="icon-count">4 hits · dome + burst, fixed installation</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><line x1="4" y1="14" x2="16" y2="14"/><path d="M7 14 L7 19 L10 19 L10 15"/><path class="accent" d="M16 14 L20 11 M16 14 L20 14 M16 14 L20 17"/></svg></div>
+        <div class="icon-label">EW jammer, portable</div>
+        <div class="icon-count">5 hits · man-pack directional wand</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path class="accent" d="M12 12 L18 6 A8 8 0 0 1 20 12 Z" class="accent-fill" style="fill:var(--icon-accent);stroke:none;opacity:0.85"/><circle cx="15" cy="9" r="1.3" class="fill"/></svg></div>
+        <div class="icon-label">Detector / counter-UAS</div>
+        <div class="icon-count">26 hits · radar sweep + contact</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="21"/><line x1="7" y1="8" x2="17" y2="8"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="9.5" y1="16" x2="14.5" y2="16"/><circle cx="12" cy="2" r="1.3" class="fill"/></svg></div>
+        <div class="icon-label">Antenna / mast</div>
+        <div class="icon-count">7 hits · tapered cross-bars</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><rect x="6" y="7" width="12" height="14" rx="1.5"/><rect x="10" y="4" width="4" height="3" rx="0.8"/><rect x="8" y="10" width="8" height="4" class="fill"/></svg></div>
+        <div class="icon-label">Battery / power</div>
+        <div class="icon-count">16 hits · cell + charge fill</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="9" ry="2.4" transform="rotate(45 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="2.4" transform="rotate(-45 12 12)"/><circle cx="12" cy="12" r="1.7" class="fill"/></svg></div>
+        <div class="icon-label">Motor / propeller / rotor blade</div>
+        <div class="icon-count">5 hits · two-blade + hub</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1"/><line x1="9" y1="4" x2="9" y2="7"/><line x1="15" y1="4" x2="15" y2="7"/><line x1="9" y1="17" x2="9" y2="20"/><line x1="15" y1="17" x2="15" y2="20"/><line x1="4" y1="9" x2="7" y2="9"/><line x1="4" y1="15" x2="7" y2="15"/><line x1="17" y1="9" x2="20" y2="9"/><line x1="17" y1="15" x2="20" y2="15"/><circle cx="12" cy="12" r="1.6" class="fill"/></svg></div>
+        <div class="icon-label">Electronics / compute module</div>
+        <div class="icon-count">30 hits · chip body, die center — mostly one entity's semiconductor line</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><rect x="10" y="4" width="4" height="4" rx="0.6"/><path d="M10 6 L6 4 L6 8 L10 6"/><path d="M14 6 L18 4 L18 8 L14 6"/><path class="accent" d="M9 10 A5 5 0 0 1 15 10"/><path class="accent" d="M7 13 A8 8 0 0 1 17 13"/><circle cx="12" cy="20" r="1.4" class="fill"/></svg></div>
+        <div class="icon-label">Navigation / GNSS module</div>
+        <div class="icon-count">15 hits · satellite + signal arcs to ground</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><circle cx="12" cy="19" r="1.4" class="fill"/><path d="M9.5 15.5 A3.5 3.5 0 0 1 14.5 15.5"/><path d="M6.5 12.5 A7.5 7.5 0 0 1 17.5 12.5"/><path d="M3.5 9.5 A11.5 11.5 0 0 1 20.5 9.5"/></svg></div>
+        <div class="icon-label">Video / control link</div>
+        <div class="icon-count">3 hits · directional signal arcs</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="10" rx="1"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/><circle cx="9" cy="11" r="1.6" class="accent"/><line x1="14" y1="9" x2="17" y2="9"/><line x1="14" y1="13" x2="17" y2="13"/></svg></div>
+        <div class="icon-label">Ground control station</div>
+        <div class="icon-count">1 hit · panel + stand + control</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M12 2 C15 2 16 6 16 10 L16 18 C16 20 14 21 12 21 C10 21 8 20 8 18 L8 10 C8 6 9 2 12 2 Z" class="accent"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="9" y1="6" x2="15" y2="6"/></svg></div>
+        <div class="icon-label">Munition / warhead attachment</div>
+        <div class="icon-count">1 hit · ordnance capsule</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M12 3 L7 20 M12 3 L17 20"/><line x1="9.3" y1="12" x2="14.7" y2="12"/><line x1="8" y1="16" x2="16" y2="16"/><path class="accent" d="M3 9 A9 9 0 0 1 6 4 M21 9 A9 9 0 0 0 18 4"/></svg></div>
+        <div class="icon-label">Repeater / relay</div>
+        <div class="icon-count">2 hits · tower, arcs both sides</div>
+      </div>
+
+      <div class="icon-cell unclassified">
+        <div class="icon-swatch dashed"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="1" stroke-dasharray="2.5 2.2"/></svg></div>
+        <div class="icon-label">Unclassified</div>
+        <div class="icon-count">190 hits · no rule matched — shown as a gap, not guessed</div>
+      </div>
+
+    </div>
+
+    <div class="modifier-row">
+      <div class="icon-swatch"><svg viewBox="0 0 24 24" style="width:26px;height:26px;stroke:var(--icon-ink);fill:none;stroke-width:1.7"><path d="M12 12 m-6 0 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0" stroke-dasharray="2.2 2"/><circle cx="12" cy="12" r="1.6" class="fill" style="fill:var(--icon-ink)"/></svg></div>
+      <div>
+        <div class="icon-label" style="margin-bottom:3px">Fiber-optic-guided (modifier tag)</div>
+        <div class="icon-count">Small coil badge overlaid on the corner of a drone icon (e.g. «Провод-15», ВОЛС cable spools) rather than its own category — it's a guidance-method variant of an existing airframe, not a different kind of object.</div>
+      </div>
+    </div>
+
+    <p class="principle"><b>Why 17+1 categories, not fewer:</b> a strike quad, a cargo quad, and a fixed-wing craft already collapse to one "product" square today — the registry treats them as meaningfully different (different <code>products[]</code> language, different evidentiary weight for an offensive/defensive read). The two newest categories exist for the same reason: a semiconductor die and a GNSS receiver board are both "components," but they're different objects to a reader, and folding either into an airframe icon would misrepresent a B2B parts supplier as a drone maker. Fewer categories would just move the ambiguity from the whole graph down to this icon set. <b>Why not more:</b> a category with 1-2 hits (video/control link, munition) folds into its nearest neighbor's icon family rather than getting its own glyph nobody will learn to recognize — this is also why rotor blades didn't get a 19th icon: zero products in the corpus are literally described as a blade, so the existing motor/part icon absorbed the label instead of a glyph with nothing behind it. <b>Why the 18th matters:</b> the first pass had no explicit "doesn't fit" state, which is indistinguishable from a wrong guess to a reader — 200 real products in this corpus are legitimately outside UAV hardware entirely (server boards, biometric scanners, weather sensors, unmanned ground robots), and the honest move is to show that, not force them into "battery" because it's the closest available shape.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span> What's still unclassified, and why</h2>
+    <p class="section-note">The 190 remaining products split into four real categories, not one undifferentiated pile:</p>
+    <div class="rule-box">
+      <ol>
+        <li><b style="color:var(--ink)">Different industry entirely (~160)</b> — ao-pk-azimut's ATC navaids/biometric scanners/servers (51, this entity's whole product line); npts-elvis's IP security cameras (11 — a stationary-CCTV line, not a UAV EO/IR payload, checked and ruled out rather than assumed); ooo-kravt's powerbanks/EV chargers/3D printer (14); npp-radar-mms's weather/hydrology sensors, pulled in by the same GISP catalog sweep as their actual UAVs (14); ooo-opkb-eksplomet's landmine/walkthrough-metal-detector security-screening line (8, see §01's third pass); assorted singletons (a dog body-armor line, a youth STEM program, a tethered aerostat).</li>
+        <li><b style="color:var(--ink)">Real UAV/EW product, but blank source text (~40)</b> — a data gap, not a classifier bug. ao-stratim (Русак-С/Голубь/Тювик), ao-tekhnodron (Скворец), and ooo-skb-piranya (Пиранья 15/"20") each carry a duplicate stub entry with empty <code>description</code> sitting beside a sibling entry that has real GUR/catalog text and classifies correctly. ooo-npo-kilovatt-shestopalov's remaining К-*/ТП-* model codes (22) likely belong to the same jammer/case line already confirmed elsewhere in this entity's catalog, but have no pulled description to confirm from.</li>
+        <li><b style="color:var(--ink)">Real product, no matching category (~10)</b> — a scope decision, not a bug. ao-ploshchad's autopilot/machine-vision modules and targeting software have no "avionics/software" category yet; npp-radar-mms's radar-seeker heads for Kalibr/Kh-35/Kh-59 munitions sit between munition and detector without fitting either cleanly.</li>
+        <li><b style="color:var(--ink)">A different object class, watching for more evidence (4)</b> — ooo-gagaring's tracked ground robots («Молот», «Молекула», «Атом») are genuinely not aircraft; forcing a UGV into any airframe icon would misrepresent it. Left unclassified rather than reused/force-fit for now — one entity, four products isn't yet enough signal to justify an 18th pictogram nobody else's catalog would populate. Revisit if a second UGV maker turns up in the registry.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span> Applied to real product text</h2>
+    <p class="section-note">Nine products pulled directly from the registry, spanning the diversity of the set above — verbatim descriptions, unedited.</p>
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M12 3 L15 9 L9 9 Z" class="accent-fill"/><path d="M12 9 L5 5 M12 9 L19 5 M12 13 L5 19 M12 13 L19 19"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="9" x2="12" y2="13"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">ovod</div>
+          <div class="card-name">«Овод»</div>
+          <div class="card-desc">FPV kamikaze drone with neural-network-based autonomous targeting, deployed in Ukraine since 2023.</div>
+          <div class="card-tags"><span class="tag">strike</span><span class="tag">offensive hub</span><span class="icon-tier">keyword</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M12 8 L5 5 M12 8 L19 5 M12 14 L5 19 M12 14 L19 19"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><rect x="9" y="8" width="6" height="6" rx="1"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">ooo-npo-rustekhdron</div>
+          <div class="card-name">РТД-РТ15/22</div>
+          <div class="card-desc">Multi-rotor UAS, 6kg MTOW, 3kg payload, 30km/h cruise, «Мелкосерийное производство» (small-batch).</div>
+          <div class="card-tags"><span class="tag">utility</span><span class="tag">type_bvs</span><span class="icon-tier structured">structured</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="20"/><path d="M12 8 L3 13 M12 8 L21 13"/><path d="M12 16 L8 19 M12 16 L16 19"/><circle cx="12" cy="2" r="1.1" class="fill"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">ooo-kleverkopter</div>
+          <div class="card-name">Аэромедик</div>
+          <div class="card-desc">Fixed-wing VTOL UAS for cargo transport and (planned) casualty evacuation.</div>
+          <div class="card-tags"><span class="tag">fixed-wing</span><span class="tag">medevac claim</span><span class="icon-tier">keyword</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><rect x="4" y="13" width="16" height="6" rx="1"/><circle cx="7" cy="19" r="1.4" class="fill"/><circle cx="17" cy="19" r="1.4" class="fill"/><path class="accent" d="M12 13 L12 6 M12 6 L8 3 M12 6 L16 3 M12 6 L12 2"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">gk-logos</div>
+          <div class="card-name">«Дикобраз-М6»</div>
+          <div class="card-desc">Omnidirectional vehicle-mounted EW jammer, 6 channels, 50W/channel, disguised as a civilian vehicle.</div>
+          <div class="card-tags"><span class="tag">EW · vehicle</span><span class="tag">defensive hub</span><span class="icon-tier">keyword, EN trigger</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M6 15 A6 6 0 0 1 18 15 Z"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="12" y1="15" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/><path class="accent" d="M12 9 L8 4 M12 9 L16 4 M12 9 L12 2"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">gk-logos</div>
+          <div class="card-name">«Логос С8»</div>
+          <div class="card-desc">Stationary EW jamming system.</div>
+          <div class="card-tags"><span class="tag">EW · stationary</span><span class="icon-tier">keyword, mount-rule</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><line x1="4" y1="14" x2="16" y2="14"/><path d="M7 14 L7 19 L10 19 L10 15"/><path class="accent" d="M16 14 L20 11 M16 14 L20 14 M16 14 L20 17"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">gk-logos</div>
+          <div class="card-name">«ИКАР»</div>
+          <div class="card-desc">Portable autonomous special-waveform antenna signal generator for neutralizing small UAVs.</div>
+          <div class="card-tags"><span class="tag">EW · portable</span><span class="icon-tier">keyword, mount-rule</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path style="fill:var(--icon-accent);stroke:none;opacity:0.85" d="M12 12 L18 6 A8 8 0 0 1 20 12 Z"/><circle cx="15" cy="9" r="1.3" class="fill"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">ooo-trimiks-bulat-3mx</div>
+          <div class="card-name">«Булат» в.4</div>
+          <div class="card-desc">Портативный всенаправленный детектор БПЛА, обнаружение до 1.5 км; firmware v1.71.</div>
+          <div class="card-tags"><span class="tag">detector</span><span class="icon-tier">keyword</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch dashed"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="1" stroke-dasharray="2.5 2.2"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">ao-pk-azimut</div>
+          <div class="card-name">Мобильный компьютер MIG T8X (x86)</div>
+          <div class="card-desc">Ruggedized mobile computer hardware — this entity's product line is IT/biometric equipment, not UAV hardware.</div>
+          <div class="card-tags"><span class="tag">unclassified</span><span class="icon-tier">no rule matched</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M12 3 L7 20 M12 3 L17 20"/><line x1="9.3" y1="12" x2="14.7" y2="12"/><line x1="8" y1="16" x2="16" y2="16"/><path style="stroke:var(--icon-accent)" d="M3 9 A9 9 0 0 1 6 4 M21 9 A9 9 0 0 0 18 4"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">ooo-skb-piranya</div>
+          <div class="card-name">Воздушные ретрансляторы</div>
+          <div class="card-desc">Airborne signal-relay units, 148×92×35.5mm, 0.5–0.6kg, mounts for both DJI and «Пиранья» airframes.</div>
+          <div class="card-tags"><span class="tag">repeater</span><span class="icon-tier">keyword</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer>
+    Mockup only — not wired into the live Network Graph artifact. Category assignment now runs through <code>scripts/classify_product_icon.py</code> (checked in, deterministic, re-runnable), same discipline as the hub badge's <code>variant</code> read: presentation-layer, not a new sourced registry field. Pending approval before any change to product-node rendering in the published graph.
+  </footer>
+</div>
+
+</body></html>

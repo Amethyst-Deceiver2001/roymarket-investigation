@@ -1,0 +1,456 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<title>The ЦБСТ Orbit</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #efeee7; --panel: #ffffff; --panel-2: #f6f5ef; --line: #d4d2c4;
+    --ink: #17180f; --ink-2: #4b4c3f; --muted: #7a7c68; --accent: #4c5f2f;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --display: 'Oswald', 'Arial Narrow', sans-serif;
+
+    /* graph tokens — copied verbatim from the live РОЙ.МАРКЕТ Network Graph
+       artifact (0e402553), light block. Do not invent new values here. */
+    --t-manufacturer: #2a78d6;
+    --t-cbst-core: #eb6834;
+    --t-plumbing: #1baf7a;
+    --t-money-layer: #eda100;
+    --t-adjacent: #e87ba4;
+    --t-network: #008300;
+    --t-unverified: #4a3aa7;
+    --t-none: #898781;
+    --person-fill: #7a8a99;
+    --product-fill: #8a7a5c;
+    --sanctioned-ring: #d03b3b;
+    --edge: #b9b8b1;
+    --edge-owns: #52514e;
+    --edge-produces: #8a7a5c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d0e0a; --panel: #15160f; --panel-2: #191a12; --line: #34362450;
+      --ink: #dcdccc; --ink-2: #b3b39a; --muted: #7c7d64; --accent: #9db56e;
+
+      --t-manufacturer: #3987e5;
+      --t-cbst-core: #d95926;
+      --t-plumbing: #199e70;
+      --t-money-layer: #c98500;
+      --t-adjacent: #d55181;
+      --t-network: #008300;
+      --t-unverified: #9085e9;
+      --t-none: #898781;
+      --person-fill: #8fa3b3;
+      --product-fill: #b3a480;
+      --sanctioned-ring: #e66767;
+      --edge: #3a3a37;
+      --edge-owns: #c3c2b7;
+      --edge-produces: #b3a480;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d0e0a; --panel: #15160f; --panel-2: #191a12; --line: #34362450;
+    --ink: #dcdccc; --ink-2: #b3b39a; --muted: #7c7d64; --accent: #9db56e;
+
+    --t-manufacturer: #3987e5;
+    --t-cbst-core: #d95926;
+    --t-plumbing: #199e70;
+    --t-money-layer: #c98500;
+    --t-adjacent: #d55181;
+    --t-network: #008300;
+    --t-unverified: #9085e9;
+    --t-none: #898781;
+    --person-fill: #8fa3b3;
+    --product-fill: #b3a480;
+    --sanctioned-ring: #e66767;
+    --edge: #3a3a37;
+    --edge-owns: #c3c2b7;
+    --edge-produces: #b3a480;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.55; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 52px 24px 100px; }
+
+  .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+
+  header.hero { border-bottom: 1px solid var(--line); padding-bottom: 34px; margin-bottom: 46px; }
+  header.hero .kicker { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; }
+  h1 { font-family: var(--display); font-weight: 600; font-size: clamp(30px, 4.6vw, 46px);
+    letter-spacing: 0.005em; text-transform: uppercase; margin: 0 0 16px; text-wrap: balance; max-width: 20ch; }
+  .lede { max-width: 700px; color: var(--ink-2); font-size: 15.5px; margin: 0 0 10px; }
+  .lede b { color: var(--ink); font-weight: 600; }
+  .lede code { font-family: var(--mono); font-size: 0.92em; background: var(--panel-2); padding: 1px 5px; border: 1px solid var(--line); }
+
+  section.legend {
+    background: var(--panel); border: 1px solid var(--line); padding: 20px 24px;
+    margin-bottom: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px 28px;
+  }
+  section.legend h2 { font-family: var(--display); font-weight: 600; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--muted); margin: 0 0 10px; grid-column: 1/-1; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  .legend-group h3 { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+  .legend-row { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: var(--ink-2); padding: 3px 0; }
+  .legend-swatch { width: 13px; height: 13px; flex: none; display: inline-block; }
+  .legend-circle { border-radius: 50%; }
+  .legend-diamond { transform: rotate(45deg); background: var(--person-fill); }
+  .legend-ring { border-radius: 50%; border: 2.5px solid var(--sanctioned-ring); background: transparent; }
+  .legend-accent-ring { border-radius: 50%; border: 2.5px solid var(--accent); background: transparent; }
+  .legend-edge { width: 26px; height: 0; border-top-width: 2px; border-top-style: solid; flex: none; }
+  .legend-pin { width: 15px; height: 15px; border-radius: 50%; background: var(--accent); color: #fff; font-family: var(--mono); font-size: 9px; display: flex; align-items: center; justify-content: center; flex: none; }
+  .legend-hubsize { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+  .legend-hubsize .dot { border-radius: 50%; background: var(--t-manufacturer); flex: none; }
+
+  .diagram-frame { background: var(--panel); border: 1px solid var(--line); padding: 16px; margin-bottom: 48px; }
+  .orbit-svg { width: 100%; height: auto; display: block; max-width: 980px; margin: 0 auto; }
+  .diagram-note { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin: 12px 4px 0; letter-spacing: 0.01em; }
+
+  .node-shape { stroke: rgba(120,120,120,0.35); stroke-width: 1; }
+  .sanction-ring { fill: none; stroke: var(--sanctioned-ring); stroke-width: 2; }
+  .hub-shape { stroke: rgba(120,120,120,0.35); stroke-width: 1.5; }
+  .hub-ring { stroke-width: 2.5; }
+  .hub-label { font-family: var(--sans); font-weight: 600; font-size: 18px; fill: #fff; paint-order: stroke; stroke: rgba(0,0,0,0.35); stroke-width: 3px; pointer-events: none; }
+  .node-label { font-family: var(--sans); font-size: 12px; fill: var(--ink-2); }
+  .node-label.small { font-size: 10.5px; }
+  .pin-label { font-family: var(--mono); font-weight: 600; font-size: 10px; fill: #fff; pointer-events: none; }
+
+  .edge { fill: none; }
+  .edge-owns { stroke: var(--edge-owns); stroke-width: 2; opacity: 0.85; }
+  .edge-founded { stroke: var(--edge); stroke-width: 1.3; stroke-dasharray: 4,3; opacity: 0.85; }
+  .edge-tier-only { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 1,3; opacity: 0.55; }
+  .edge-cbst-tie { stroke: var(--t-cbst-core); stroke-width: 1.1; opacity: 0.45; }
+  .edge-cbst-tie.conf-t-open { stroke-dasharray: 5,3; opacity: 0.4; }
+  .edge-cbst-tie.conf-press { stroke-dasharray: 1,3; opacity: 0.4; }
+
+  .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+  .case { padding: 26px 28px; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); }
+  .case-head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .case-pin { width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; font-family: var(--mono); font-weight: 600; font-size: 11px; display: flex; align-items: center; justify-content: center; flex: none; }
+  .case-name { font-family: var(--display); font-weight: 600; font-size: 18px; letter-spacing: 0.005em; margin: 0; text-wrap: balance; line-height: 1.15; }
+  .case-latin { font-family: var(--sans); font-style: italic; font-size: 12px; color: var(--muted); margin: 0 0 12px 32px; }
+  .case-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px 32px; }
+  .meta-chip { font-family: var(--mono); font-size: 10.5px; padding: 3px 8px; border: 1px solid var(--line); color: var(--ink-2); background: var(--panel-2); white-space: nowrap; }
+  .case-desc { font-size: 13.5px; color: var(--ink-2); margin: 0 0 0 32px; }
+  .case-finding { font-size: 12px; color: var(--accent); margin: 10px 0 0 32px; font-family: var(--mono); }
+  .pchip-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0 32px; }
+  .pchip { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 10.5px;
+    color: var(--ink-2); background: var(--panel-2); border: 1px solid var(--line); padding: 3px 8px 3px 6px; white-space: nowrap; }
+  .pchip svg { width: 13px; height: 13px; flex: none; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .pchip svg .pfill { fill: var(--accent); stroke: none; }
+  .pchip.more { color: var(--muted); border-style: dashed; }
+  .profile-note { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin: 10px 0 0 32px; }
+  .profile-note code { background: var(--panel-2); padding: 1px 4px; border: 1px solid var(--line); }
+
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  footer a { color: var(--accent); }
+
+  @media (max-width: 700px) {
+    .case-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<svg style="position:absolute;width:0;height:0" aria-hidden="true">
+  <defs>
+    <symbol id="pi-fpv" viewBox="0 0 24 24"><path d="M12 3 L15 9 L9 9 Z" class="pfill"/><path d="M12 9 L5 5 M12 9 L19 5 M12 13 L5 19 M12 13 L19 19"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="9" x2="12" y2="13"/></symbol>
+    <symbol id="pi-detector" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 12 L18 6 A8 8 0 0 1 20 12 Z" class="pfill" style="opacity:.85"/><circle cx="15" cy="9" r="1.3" class="pfill"/></symbol>
+    <symbol id="pi-ew-vehicle" viewBox="0 0 24 24"><rect x="4" y="13" width="16" height="6" rx="1"/><circle cx="7" cy="19" r="1.4" class="pfill"/><circle cx="17" cy="19" r="1.4" class="pfill"/><path d="M12 13 L12 6 M12 6 L8 3 M12 6 L16 3 M12 6 L12 2"/></symbol>
+    <symbol id="pi-ew-portable" viewBox="0 0 24 24"><line x1="4" y1="14" x2="16" y2="14"/><path d="M7 14 L7 19 L10 19 L10 15"/><path d="M16 14 L20 11 M16 14 L20 14 M16 14 L20 17"/></symbol>
+    <symbol id="pi-multirotor" viewBox="0 0 24 24"><path d="M12 8 L5 5 M12 8 L19 5 M12 14 L5 19 M12 14 L19 19"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><rect x="9" y="8" width="6" height="6" rx="1"/></symbol>
+    <symbol id="pi-fixedwing" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="20"/><path d="M12 8 L3 13 M12 8 L21 13"/><path d="M12 16 L8 19 M12 16 L16 19"/><circle cx="12" cy="2" r="1.1" class="pfill"/></symbol>
+    <symbol id="pi-video" viewBox="0 0 24 24"><circle cx="12" cy="19" r="1.4" class="pfill"/><path d="M9.5 15.5 A3.5 3.5 0 0 1 14.5 15.5"/><path d="M6.5 12.5 A7.5 7.5 0 0 1 17.5 12.5"/><path d="M3.5 9.5 A11.5 11.5 0 0 1 20.5 9.5"/></symbol>
+    <symbol id="pi-antenna" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="21"/><line x1="7" y1="8" x2="17" y2="8"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="9.5" y1="16" x2="14.5" y2="16"/><circle cx="12" cy="2" r="1.3" class="pfill"/></symbol>
+    <symbol id="pi-repeater" viewBox="0 0 24 24"><path d="M12 3 L7 20 M12 3 L17 20"/><line x1="9.3" y1="12" x2="14.7" y2="12"/><line x1="8" y1="16" x2="16" y2="16"/><path d="M3 9 A9 9 0 0 1 6 4 M21 9 A9 9 0 0 0 18 4"/></symbol>
+    <symbol id="pi-munition" viewBox="0 0 24 24"><path d="M12 2 C15 2 16 6 16 10 L16 18 C16 20 14 21 12 21 C10 21 8 20 8 18 L8 10 C8 6 9 2 12 2 Z"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="9" y1="6" x2="15" y2="6"/></symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <header class="hero">
+    <p class="kicker">РОЙ.МАРКЕТ investigation · network-graph schema v4</p>
+    <h1>The ЦБСТ orbit</h1>
+    <p class="lede">This investigation's thesis is that a single institution — АНО «ЦБСТ» — sits at
+      the center of a marketplace of manufacturers, not that five manufacturers each happen to run
+      their own independent network. This exhibit replaces an earlier "five independent hub-and-spoke
+      diagrams" version of this content with what the underlying registry actually supports: <b>one
+      diagram, one center</b>. ЦБСТ sits in the middle; its own institutional core (funds, its
+      holding companies, a banking partner) forms an inner ring; every entity carrying a sourced,
+      structured <code>cbst_tie</code> record — added to the graph schema for this exhibit, schema v4 —
+      forms an outer ring of satellites. The five flagship case studies from the coverage audit are
+      highlighted within that structure, not pulled out into their own diagrams.</p>
+    <p class="lede">Every node and every spoke shown is a real registry record — filtered and laid
+      out for legibility, nothing invented. Where a flagship case study's own real connectivity
+      does <b>not</b> run through a direct <code>cbst_tie</code> record, that is shown as it actually
+      is (a real indirect path, or no traceable path at all) rather than forced into position — see
+      cases 3b and 5 below.</p>
+  </header>
+
+  <section class="legend">
+    <h2>How to read this diagram</h2>
+    <div class="legend-group">
+      <h3>Position — three rings</h3>
+      <div class="legend-row"><span class="legend-swatch legend-circle" style="background:var(--t-cbst-core);width:20px;height:20px"></span><span>Center — АНО «ЦБСТ» itself</span></div>
+      <div class="legend-row"><span class="legend-swatch legend-circle" style="background:var(--t-cbst-core)"></span><span>Inner ring — ЦБСТ's own institutional core (<code>tier: cbst-core</code>, 9 entities incl. ЦБСТ)</span></div>
+      <div class="legend-row"><span class="legend-swatch legend-circle" style="background:var(--t-manufacturer)"></span><span>Outer ring — entities with a sourced <code>cbst_tie</code> record (29 non-core entities)</span></div>
+      <div class="legend-row"><span class="legend-pin">1</span><span>Numbered pin — one of the five flagship case studies (captions below)</span></div>
+    </div>
+    <div class="legend-group">
+      <h3>Shape / marker</h3>
+      <div class="legend-row"><span class="legend-swatch legend-circle" style="background:var(--t-manufacturer)"></span><span>Organization (dot size ∝ √degree in the full 1,483-node graph — a real connectivity metric, not invented)</span></div>
+      <div class="legend-row"><span class="legend-swatch legend-diamond"></span><span>Person</span></div>
+      <div class="legend-row"><span class="legend-swatch legend-ring"></span><span>Sanctioned (EU / US / other)</span></div>
+      <div class="legend-row"><span class="legend-swatch legend-accent-ring"></span><span>Flagship case-study entity (accent ring, always pinned)</span></div>
+    </div>
+    <div class="legend-group">
+      <h3>Spokes — <code>cbst_tie</code> edge confidence</h3>
+      <div class="legend-row"><span class="legend-edge" style="border-color:var(--t-cbst-core)"></span><span><code>t-doc</code> — documentary primary source (27 of 29 outer edges)</span></div>
+      <div class="legend-row"><span class="legend-edge" style="border-color:var(--t-cbst-core);border-top-style:dashed"></span><span><code>t-open</code> — open-source corroboration, not a primary document (1 edge)</span></div>
+      <div class="legend-row"><span class="legend-edge" style="border-color:var(--t-cbst-core);border-top-style:dotted"></span><span><code>press</code> — press-sourced (1 edge)</span></div>
+      <div class="legend-row"><span class="legend-edge" style="border-color:var(--edge-owns)"></span><span>owns (equity, inner ring only)</span></div>
+      <div class="legend-row"><span class="legend-edge" style="border-color:var(--edge);border-top-style:dashed"></span><span>founded / directs / related</span></div>
+      <div class="legend-row"><span class="legend-edge" style="border-color:var(--muted);opacity:.55;border-top-style:dotted"></span><span>tier assignment only — no directed edge exists yet in the registry (2 inner-ring entities)</span></div>
+    </div>
+  </section>
+
+  <div class="diagram-frame">
+    <svg viewBox="0 0 1510 1510" class="orbit-svg" role="img" aria-label="ЦБСТ orbit: АНО ЦБСТ at center, its institutional core as an inner ring, and 29 cbst_tie-linked entities as an outer ring, with the five flagship case studies highlighted">
+<defs><marker id="orbit-arrow-owns" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="var(--edge-owns)"/></marker><marker id="orbit-arrow-generic" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="var(--edge)"/></marker></defs>
+<circle cx="755" cy="755" r="175" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="2,4"/>
+<circle cx="755" cy="755" r="380" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="2,4"/>
+<line x1="755" y1="755" x2="755.0" y2="580.0" class="edge edge-tier-only"/>
+<line x1="755" y1="755" x2="878.7" y2="631.3" class="edge edge-founded"/>
+<line x1="755" y1="755" x2="930.0" y2="755.0" class="edge edge-owns" marker-end="url(#orbit-arrow-owns)"/>
+<line x1="755" y1="755" x2="878.7" y2="878.7" class="edge edge-owns" marker-end="url(#orbit-arrow-owns)"/>
+<line x1="755" y1="755" x2="755.0" y2="930.0" class="edge edge-founded"/>
+<line x1="755" y1="755" x2="631.3" y2="878.7" class="edge edge-owns" marker-end="url(#orbit-arrow-owns)"/>
+<line x1="755" y1="755" x2="580.0" y2="755.0" class="edge edge-tier-only"/>
+<line x1="755" y1="755" x2="631.3" y2="631.3" class="edge edge-founded"/>
+<line x1="755" y1="755" x2="755.0" y2="375.0" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="836.7" y2="383.9" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="914.6" y2="410.1" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="985.0" y2="452.5" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="1044.6" y2="509.0" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="1090.7" y2="577.0" class="edge edge-cbst-tie conf-t-open"/>
+<line x1="755" y1="755" x2="1121.1" y2="653.3" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="1134.4" y2="734.4" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="1130.0" y2="816.5" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="1108.0" y2="895.7" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="1069.5" y2="968.3" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="1016.3" y2="1030.9" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="950.9" y2="1080.6" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="876.3" y2="1115.1" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="796.1" y2="1132.8" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="713.9" y2="1132.8" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="633.7" y2="1115.1" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="559.1" y2="1080.6" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="493.7" y2="1030.9" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="440.5" y2="968.3" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="402.0" y2="895.7" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="380.0" y2="816.5" class="edge edge-cbst-tie conf-press"/>
+<line x1="755" y1="755" x2="375.6" y2="734.4" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="388.9" y2="653.3" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="419.3" y2="577.0" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="465.4" y2="509.0" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="525.0" y2="452.5" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="595.4" y2="410.1" class="edge edge-cbst-tie "/>
+<line x1="755" y1="755" x2="673.3" y2="383.9" class="edge edge-cbst-tie "/>
+<circle cx="755.0" cy="580.0" r="15" fill="var(--t-cbst-core)" class="node-shape" data-id="ooo-mptm"/>
+<text x="755.0" y="558.0" transform="rotate(-90.0 755.0 558.0)" text-anchor="start" dominant-baseline="middle" class="node-label small">ООО «МПТМ»</text>
+<circle cx="878.7" cy="631.3" r="19" class="sanction-ring"/>
+<circle cx="878.7" cy="631.3" r="15" fill="var(--t-cbst-core)" class="node-shape" data-id="fond-nasha-pravda"/>
+<text x="894.3" y="615.7" transform="rotate(-45.0 894.3 615.7)" text-anchor="start" dominant-baseline="middle" class="node-label small">Фонд «Наша Правда»</text>
+<circle cx="930.0" cy="755.0" r="19" class="sanction-ring"/>
+<circle cx="930.0" cy="755.0" r="15" fill="var(--t-cbst-core)" class="node-shape" data-id="ao-spetstekh-investitsii-ao-spetstekh-pervyy"/>
+<text x="952.0" y="755.0" transform="rotate(0.0 952.0 755.0)" text-anchor="start" dominant-baseline="middle" class="node-label small">АО «Спецтех Инвестиции»</text>
+<circle cx="878.7" cy="878.7" r="19" class="sanction-ring"/>
+<circle cx="878.7" cy="878.7" r="15" fill="var(--t-cbst-core)" class="node-shape" data-id="ooo-sistemnyy-integrator"/>
+<text x="894.3" y="894.3" transform="rotate(45.0 894.3 894.3)" text-anchor="start" dominant-baseline="middle" class="node-label small">ООО «Системный интегратор»</text>
+<circle cx="755.0" cy="930.0" r="19" class="sanction-ring"/>
+<circle cx="755.0" cy="930.0" r="15" fill="var(--t-cbst-core)" class="node-shape" data-id="pao-bank-psb"/>
+<text x="755.0" y="952.0" transform="rotate(90.0 755.0 952.0)" text-anchor="start" dominant-baseline="middle" class="node-label small">ПАО «Банк ПСБ»</text>
+<circle cx="631.3" cy="878.7" r="19" class="sanction-ring"/>
+<circle cx="631.3" cy="878.7" r="15" fill="var(--t-cbst-core)" class="node-shape" data-id="ao-spetstekh-perviy"/>
+<text x="615.7" y="894.3" transform="rotate(315.0 615.7 894.3)" text-anchor="end" dominant-baseline="middle" class="node-label small">АО «Спецтех Первый»</text>
+<circle cx="580.0" cy="755.0" r="15" fill="var(--t-cbst-core)" class="node-shape" data-id="ooo-npts-basirtk"/>
+<text x="558.0" y="755.0" transform="rotate(360.0 558.0 755.0)" text-anchor="end" dominant-baseline="middle" class="node-label small">ООО «НПЦ БАСИРТК»</text>
+<circle cx="631.3" cy="631.3" r="19" class="sanction-ring"/>
+<circle cx="631.3" cy="631.3" r="15" fill="var(--t-cbst-core)" class="node-shape" data-id="ooo-tsentr-bespilotnykh-sistem-tula"/>
+<text x="615.7" y="615.7" transform="rotate(405.0 615.7 615.7)" text-anchor="end" dominant-baseline="middle" class="node-label small">ООО «Центр беспилотных систем»</text>
+<circle cx="755.0" cy="375.0" r="25.3" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+<circle cx="755.0" cy="375.0" r="20.3" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-gagaring"/>
+<circle cx="755.0" cy="377.0" r="10" fill="var(--accent)" stroke="var(--panel)" stroke-width="1.5"/>
+<text x="755.0" y="377.0" text-anchor="middle" dominant-baseline="middle" class="pin-label">1</text>
+<text x="755.0" y="338.7" transform="rotate(-90.0 755.0 338.7)" text-anchor="start" dominant-baseline="middle" class="node-label">ООО «Гагаринг»</text>
+<circle cx="836.7" cy="383.9" r="18.7" class="sanction-ring"/>
+<circle cx="836.7" cy="383.9" r="15.2" fill="var(--t-manufacturer)" class="node-shape" data-id="ano-npts-ushkuynik"/>
+<circle cx="914.6" cy="410.1" r="6.6" fill="var(--t-manufacturer)" class="node-shape" data-id="ao-npp-bat"/>
+<circle cx="985.0" cy="452.5" r="14.7" class="sanction-ring"/>
+<circle cx="985.0" cy="452.5" r="11.2" fill="var(--t-manufacturer)" class="node-shape" data-id="ao-stratim"/>
+<circle cx="1044.6" cy="509.0" r="12.0" class="sanction-ring"/>
+<circle cx="1044.6" cy="509.0" r="8.5" fill="var(--t-manufacturer)" class="node-shape" data-id="ao-tekhnodron"/>
+<circle cx="1090.7" cy="577.0" r="9.6" fill="var(--t-manufacturer)" class="node-shape" data-id="gk-logos"/>
+<circle cx="1121.1" cy="653.3" r="8.5" fill="var(--t-manufacturer)" class="node-shape" data-id="kulibin-klub"/>
+<circle cx="1134.4" cy="734.4" r="16.6" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+<circle cx="1134.4" cy="734.4" r="15.1" class="sanction-ring"/>
+<circle cx="1134.4" cy="734.4" r="11.6" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-goudron"/>
+<circle cx="1132.4" cy="734.5" r="10" fill="var(--accent)" stroke="var(--panel)" stroke-width="1.5"/>
+<text x="1132.4" y="734.5" text-anchor="middle" dominant-baseline="middle" class="pin-label">2</text>
+<text x="1162.0" y="732.9" transform="rotate(-3.1 1162.0 732.9)" text-anchor="start" dominant-baseline="middle" class="node-label">ООО «ГОУДРОН»</text>
+<circle cx="1130.0" cy="816.5" r="15.5" class="sanction-ring"/>
+<circle cx="1130.0" cy="816.5" r="12.0" fill="var(--t-manufacturer)" class="node-shape" data-id="npo-kaysant"/>
+<circle cx="1108.0" cy="895.7" r="10.3" fill="var(--t-manufacturer)" class="node-shape" data-id="npts-ushkuynik"/>
+<circle cx="1069.5" cy="968.3" r="8.9" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-aeroplatformy"/>
+<circle cx="1016.3" cy="1030.9" r="8.9" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-arkhangel"/>
+<circle cx="950.9" cy="1080.6" r="13.1" class="sanction-ring"/>
+<circle cx="950.9" cy="1080.6" r="9.6" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-atlant-aero"/>
+<circle cx="876.3" cy="1115.1" r="14.1" class="sanction-ring"/>
+<circle cx="876.3" cy="1115.1" r="10.6" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-gaskar"/>
+<circle cx="796.1" cy="1132.8" r="16.2" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+<circle cx="796.1" cy="1132.8" r="14.7" class="sanction-ring"/>
+<circle cx="796.1" cy="1132.8" r="11.2" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-vozdushnyy-traktat"/>
+<circle cx="795.9" cy="1130.8" r="10" fill="var(--accent)" stroke="var(--panel)" stroke-width="1.5"/>
+<text x="795.9" y="1130.8" text-anchor="middle" dominant-baseline="middle" class="pin-label">3a</text>
+<text x="799.0" y="1159.8" transform="rotate(83.8 799.0 1159.8)" text-anchor="start" dominant-baseline="middle" class="node-label">ООО «Воздушный трактат»</text>
+<circle cx="713.9" cy="1132.8" r="7.6" fill="var(--t-plumbing)" class="node-shape" data-id="ooo-gk-logos"/>
+<circle cx="633.7" cy="1115.1" r="7.2" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-konstruktorskoe-byuro-sinergiya"/>
+<circle cx="559.1" cy="1080.6" r="10.6" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-kopterlab"/>
+<circle cx="493.7" cy="1030.9" r="6.6" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-mentastep"/>
+<circle cx="440.5" cy="968.3" r="22.5" class="sanction-ring"/>
+<circle cx="440.5" cy="968.3" r="19.0" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-npo-kilovatt-shestopalov"/>
+<circle cx="402.0" cy="895.7" r="17.2" class="sanction-ring"/>
+<circle cx="402.0" cy="895.7" r="13.7" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-npo-rustekhdron"/>
+<circle cx="380.0" cy="816.5" r="8.5" fill="var(--t-plumbing)" class="node-shape" data-id="ooo-rtd-zashchita"/>
+<circle cx="375.6" cy="734.4" r="20.2" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+<circle cx="375.6" cy="734.4" r="18.7" class="sanction-ring"/>
+<circle cx="375.6" cy="734.4" r="15.2" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-skb-piranya"/>
+<circle cx="377.6" cy="734.5" r="10" fill="var(--accent)" stroke="var(--panel)" stroke-width="1.5"/>
+<text x="377.6" y="734.5" text-anchor="middle" dominant-baseline="middle" class="pin-label">4</text>
+<text x="344.4" y="732.7" transform="rotate(363.1 344.4 732.7)" text-anchor="end" dominant-baseline="middle" class="node-label">ООО «СКБ Пиранья»</text>
+<circle cx="388.9" cy="653.3" r="7.6" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-smart-teknolodzhis"/>
+<circle cx="419.3" cy="577.0" r="8.9" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-superkhrono"/>
+<circle cx="465.4" cy="509.0" r="16.7" class="sanction-ring"/>
+<circle cx="465.4" cy="509.0" r="13.2" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-trimiks-bulat-3mx"/>
+<circle cx="525.0" cy="452.5" r="7.6" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-tsentr-dinarus"/>
+<circle cx="595.4" cy="410.1" r="9.6" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-vizionero"/>
+<circle cx="673.3" cy="383.9" r="9.5" class="sanction-ring"/>
+<circle cx="673.3" cy="383.9" r="6.0" fill="var(--t-manufacturer)" class="node-shape" data-id="uraldronzavod"/>
+<circle cx="755" cy="755" r="67" class="sanction-ring hub-ring"/>
+<circle cx="755" cy="755" r="60" fill="var(--t-cbst-core)" class="node-shape hub-shape"/>
+<text x="755" y="755" text-anchor="middle" dominant-baseline="middle" class="hub-label">ЦБСТ</text>
+<line x1="796.1" y1="1132.8" x2="804.7" y2="1212.3" class="edge edge-founded" marker-end="url(#orbit-arrow-generic)"/>
+<line x1="804.7" y1="1212.3" x2="813.9" y2="1296.8" class="edge edge-founded" marker-end="url(#orbit-arrow-generic)"/>
+<polygon points="804.7,1203.3 813.7,1212.3 804.7,1221.3 795.7,1212.3" fill="var(--person-fill)" class="node-shape" data-id="cherezov-andrey-pavlovich"/>
+<text x="904.9" y="1162.3" text-anchor="middle" dominant-baseline="middle" class="node-label small">Черезов А.П.</text>
+<circle cx="813.9" cy="1296.8" r="15.2" class="sanction-ring"/>
+<circle cx="813.9" cy="1296.8" r="11.2" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+<circle cx="813.9" cy="1296.8" r="7.2" fill="var(--t-manufacturer)" class="node-shape" data-id="ovod"/>
+<circle cx="813.7" cy="1294.8" r="10" fill="var(--accent)" stroke="var(--panel)" stroke-width="1.5"/>
+<text x="813.7" y="1294.8" text-anchor="middle" dominant-baseline="middle" class="pin-label">3b</text>
+<text x="816.4" y="1319.8" transform="rotate(83.8 816.4 1319.8)" text-anchor="start" dominant-baseline="middle" class="node-label small">«Овод» / РЛВТ</text>
+<line x1="465.4" y1="509.0" x2="404.4" y2="457.2" class="edge edge-founded"/>
+<line x1="404.4" y1="457.2" x2="339.6" y2="402.2" class="edge edge-owns" marker-end="url(#orbit-arrow-owns)"/>
+<circle cx="404.4" cy="457.2" r="9" fill="var(--t-manufacturer)" class="node-shape" data-id="ooo-pokrov"/>
+<text x="377.0" y="533.7" text-anchor="middle" dominant-baseline="middle" class="node-label small">ООО «ПОКРОВ» (3mx dealer)</text>
+<circle cx="339.6" cy="402.2" r="18.0" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+<circle cx="339.6" cy="402.2" r="13.0" fill="var(--t-manufacturer)" class="node-shape" data-id="ip-tsyganov-vadim-borisovich"/>
+<circle cx="341.1" cy="403.5" r="10" fill="var(--accent)" stroke="var(--panel)" stroke-width="1.5"/>
+<text x="341.1" y="403.5" text-anchor="middle" dominant-baseline="middle" class="pin-label">5</text>
+<text x="317.5" y="383.4" transform="rotate(400.3 317.5 383.4)" text-anchor="end" dominant-baseline="middle" class="node-label">ИП Цыганов В.Б.</text>
+    </svg>
+    <p class="diagram-note">25 of the 29 outer-ring entities are shown as unlabeled dots (sized by
+      real graph degree, colored by tier, ringed if sanctioned) to keep the diagram legible — every
+      one of them is a real, sourced <code>cbst_tie</code> record, queryable in
+      <code>data/registry/entities.json</code> and browsable in the full interactive Network Graph.
+      Only the five flagship case studies carry labels and captions here.</p>
+  </div>
+
+  <div class="case-grid">
+    <article class="case" id="case-gagaring">
+      <div class="case-head"><span class="case-pin">1</span><h3 class="case-name">ООО «Гагаринг»</h3></div>
+      <p class="case-latin">OOO Gagaring</p>
+      <div class="case-meta"><span class="meta-chip">ИНН 2312321660</span><span class="meta-chip">cbst_tie: t-doc, s5440</span></div>
+      <p class="case-desc">A sourced ЦБСТ tie, three years of financials — peaking at ₽2.16bn in 2025 — marketing copy, and a military thank-you letter naming Gagaring staff and 500 «Кузнечик» comms modules delivered to a combat unit. The one subject that carries the argument end to end, from a registered company to a named battlefield user. Not currently sanctioned.</p>
+      <div class="pchip-row">
+        <span class="pchip"><svg><use href="#pi-detector"/></svg>4 detector/counter-UAS</span>
+        <span class="pchip"><svg><use href="#pi-fpv"/></svg>4 FPV/strike</span>
+        <span class="pchip"><svg><use href="#pi-ew-vehicle"/></svg>4 EW jammer</span>
+        <span class="pchip more">+10 more · 24 products total</span>
+      </div>
+      <p class="profile-note">Full product line, financial history, sources: <code>docs/profiles/ooo-gagaring.html</code></p>
+    </article>
+
+    <article class="case" id="case-goudron">
+      <div class="case-head"><span class="case-pin">2</span><h3 class="case-name">ООО «ГОУДРОН»</h3></div>
+      <p class="case-latin">OOO Goudron</p>
+      <div class="case-meta"><span class="meta-chip">ИНН 9721203814</span><span class="meta-chip">cbst_tie: t-doc</span></div>
+      <p class="case-desc">A smaller, already-designated file, shown for contrast rather than scale: one founder-director, one named product line («Набат v3»), and a sanctions record already attached. The control case for what the evidentiary standard looks like once a designation has actually landed.</p>
+      <div class="pchip-row">
+        <span class="pchip"><svg><use href="#pi-detector"/></svg>1 detector/counter-UAS</span>
+      </div>
+      <p class="profile-note">Full record, sources: <code>docs/profiles/ooo-goudron.html</code></p>
+    </article>
+
+    <article class="case" id="case-traktat">
+      <div class="case-head"><span class="case-pin">3a</span><h3 class="case-name">ООО «Воздушный трактат»</h3></div>
+      <p class="case-latin">OOO Vozdushnyy Traktat</p>
+      <div class="case-meta"><span class="meta-chip">ИНН 7100046925</span><span class="meta-chip">cbst_tie: t-doc</span></div>
+      <p class="case-desc">One owner — Черезов Андрей Павлович — two companies, one product brand («Овод»), both entities under EU/US sanctions. ЦБСТ&rsquo;s self-declared "flagship resident," structured across two legal shells that manufacture and sell overlapping product lines under the same name.</p>
+      <div class="pchip-row">
+        <span class="pchip"><svg><use href="#pi-fpv"/></svg>2 FPV/strike</span>
+      </div>
+      <p class="profile-note">Full record, sources: <code>docs/profiles/ooo-vozdushnyy-traktat.html</code></p>
+    </article>
+
+    <article class="case" id="case-ovod">
+      <div class="case-head"><span class="case-pin">3b</span><h3 class="case-name">РЛВТ («Овод»)</h3></div>
+      <p class="case-latin">Russkaya Laboratoriya Vozdushnogo Transporta</p>
+      <div class="case-meta"><span class="meta-chip">ИНН 7100027464</span><span class="meta-chip">no direct cbst_tie</span></div>
+      <p class="case-desc">Carries no <code>cbst_tie</code> record of its own — the registry's ЦБСТ residency claims all attach to its sister shell, «Воздушный трактат» (3a). Shown here exactly as the graph actually connects it: via its shared owner, Черезов Андрей Павлович, not via a forced direct spoke.</p>
+      <p class="case-finding">real connectivity: 2 hops via a shared founder/director, not a direct tie</p>
+      <p class="profile-note">Full record, sources: <code>docs/profiles/ovod.html</code></p>
+    </article>
+
+    <article class="case" id="case-piranya">
+      <div class="case-head"><span class="case-pin">4</span><h3 class="case-name">ООО «СКБ Пиранья»</h3></div>
+      <p class="case-latin">OOO SKB Piranya</p>
+      <div class="case-meta"><span class="meta-chip">ИНН 7300024069</span><span class="meta-chip">cbst_tie: t-doc</span></div>
+      <p class="case-desc">Revenue climbed ₽36.8m → ₽516.7m → ₽870.7m across 2023–2025 — an order-of-magnitude jump inside two years. Two named founders, already under sanctions.</p>
+      <div class="pchip-row">
+        <span class="pchip"><svg><use href="#pi-fpv"/></svg>2 FPV/strike</span>
+        <span class="pchip"><svg><use href="#pi-antenna"/></svg>1 antenna/mast</span>
+        <span class="pchip"><svg><use href="#pi-repeater"/></svg>1 repeater/relay</span>
+        <span class="pchip more">+4 more · 8 products total</span>
+      </div>
+      <p class="profile-note">Full product line, financial history, sources: <code>docs/profiles/ooo-skb-piranya.html</code></p>
+    </article>
+
+    <article class="case" id="case-tsyganov">
+      <div class="case-head"><span class="case-pin">5</span><h3 class="case-name">ИП Цыганов Вадим Борисович</h3></div>
+      <p class="case-latin">IP Tsyganov Vadim Borisovich</p>
+      <div class="case-meta"><span class="meta-chip">ИНН 504405055721 (personal)</span><span class="meta-chip">indirect, 3 hops</span></div>
+      <p class="case-desc">₽28.2m in «Булат»/«Покров» government contracts with Russian MЧС and civil-defense customers, contracts and attachments already archived. Also the 100%-owner and general director (per rusprofile.ru's identity block, source s3929, and a primary ЕГРЮЛ выписка, s6799) of ООО «ПОКРОВ», a named «Тримикс»/3MX dealer.</p>
+      <p class="case-finding">real connectivity: 3 hops — Цыганов → ООО «ПОКРОВ» (dealer) → «Тримикс» (sourced <code>cbst_tie</code>) → ЦБСТ. An earlier version of this diagram incorrectly reported no traceable connection; see full chain and sources on each entity's own profile.</p>
+      <div class="pchip-row">
+        <span class="pchip"><svg><use href="#pi-detector"/></svg>1 detector/counter-UAS</span>
+      </div>
+      <p class="profile-note">Full record, sources: <code>docs/profiles/ip-tsyganov-vadim-borisovich.html</code> · <code>docs/profiles/ooo-pokrov.html</code></p>
+    </article>
+  </div>
+
+  <footer>
+    Center and inner ring from <code>data/registry/entities.json</code>'s <code>tier: cbst-core</code>
+    (9 entities incl. ЦБСТ). Outer ring from the 30 <code>cbst_tie</code> edges newly added to
+    <code>data/registry/relationship_graph.json</code> (schema v4) for this exhibit — one edge per
+    entity whose <code>cbst_tie.confidence</code> is <code>t-doc</code>/<code>t-open</code>/<code>press</code>
+    (entities whose own review recorded <code>none</code>/<code>not_established</code> are excluded,
+    not shown as ties); 1 of the 30 (Фонд «Наша Правда») is itself <code>tier: cbst-core</code> and
+    rendered in the inner ring instead of duplicated in the outer one, leaving 29 outer-ring dots.
+    Dot size ∝ √(graph degree) in the full graph — a real connectivity measure, not invented. Five
+    flagship case studies (accent ring + numbered pin) reuse this project's own coverage-audit
+    case-study captions verbatim, repositioned from an earlier five-independent-panel version of
+    this exhibit into their real position in the single hub structure. Node/edge color and shape
+    grammar reused verbatim from the live
+    <a href="https://claude.ai/code/artifact/0e402553-a22e-4427-a3a9-c5b0251bdaa2">РОЙ.МАРКЕТ Network Graph</a>.
+    2026-09-15.
+  </footer>
+</div>
+
+</body></html>

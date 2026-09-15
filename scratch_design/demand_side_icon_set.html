@@ -1,0 +1,239 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<title>Demand-Side Icon Set</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #efeee7; --panel: #ffffff; --panel-2: #f6f5ef; --line: #d4d2c4;
+    --ink: #17180f; --ink-2: #4b4c3f; --muted: #7a7c68; --accent: #4c5f2f;
+    --icon-ink: #2c3320; --icon-bg: #f6f5ef; --icon-accent: #a3491f;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --display: 'Oswald', 'Arial Narrow', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d0e0a; --panel: #15160f; --panel-2: #191a12; --line: #34362450;
+      --ink: #dcdccc; --ink-2: #b3b39a; --muted: #7c7d64; --accent: #9db56e;
+      --icon-ink: #d7d9c6; --icon-bg: #191a12; --icon-accent: #d98a4e;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d0e0a; --panel: #15160f; --panel-2: #191a12; --line: #34362450;
+    --ink: #dcdccc; --ink-2: #b3b39a; --muted: #7c7d64; --accent: #9db56e;
+    --icon-ink: #d7d9c6; --icon-bg: #191a12; --icon-accent: #d98a4e;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.55; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 56px 28px 96px; }
+  .eyebrow { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--display); font-weight: 600; font-size: clamp(30px, 4.4vw, 44px); letter-spacing: 0.01em; text-transform: uppercase; margin: 0 0 14px; text-wrap: balance; }
+  .lede { max-width: 680px; color: var(--ink-2); font-size: 15.5px; margin: 0 0 8px; }
+  .lede + .lede { margin-top: 10px; }
+  section { margin-top: 60px; }
+  h2 { font-family: var(--display); font-weight: 600; font-size: 21px; text-transform: uppercase; letter-spacing: 0.03em; margin: 0 0 6px; display: flex; align-items: baseline; gap: 10px; }
+  h2 .num { font-family: var(--mono); font-size: 13px; color: var(--muted); font-weight: 500; }
+  .section-note { color: var(--muted); font-size: 13.5px; max-width: 680px; margin: 0 0 26px; }
+  code { font-family: var(--mono); }
+
+  .icon-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .icon-cell { background: var(--panel); padding: 18px 14px 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .icon-cell.thin { background: var(--panel-2); }
+  .icon-swatch { width: 44px; height: 44px; background: var(--icon-bg); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; }
+  .icon-swatch.dashed { border-style: dashed; }
+  .icon-swatch svg { width: 26px; height: 26px; stroke: var(--icon-ink); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .icon-swatch svg .fill { fill: var(--icon-ink); stroke: none; }
+  .icon-swatch svg .accent { stroke: var(--icon-accent); }
+  .icon-swatch svg .accent-fill { fill: var(--icon-accent); stroke: none; }
+  .icon-label { font-family: var(--display); font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.25; }
+  .icon-count { font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
+  .icon-tier { display: inline-block; margin-top: 2px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; text-transform: uppercase; padding: 1px 5px; border: 1px solid var(--line); color: var(--muted); }
+  .icon-tier.real { color: var(--accent); border-color: var(--accent); }
+
+  .edge-row { display: flex; align-items: center; gap: 16px; background: var(--panel); border: 1px solid var(--line); padding: 18px 20px; margin-top: 12px; }
+  .edge-row .icon-swatch { flex: none; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .card { background: var(--panel); border: 1px solid var(--line); display: flex; gap: 14px; padding: 16px; align-items: flex-start; }
+  .card .icon-swatch { flex: none; width: 40px; height: 40px; }
+  .card .icon-swatch svg { width: 23px; height: 23px; }
+  .card-body { min-width: 0; }
+  .card-entity { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin-bottom: 3px; }
+  .card-name { font-family: var(--display); font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .card-desc { font-size: 12.5px; color: var(--ink-2); }
+  .card-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag { font-family: var(--mono); font-size: 9.5px; padding: 2px 7px; border: 1px solid var(--line); color: var(--muted); }
+
+  .principle { margin-top: 18px; font-family: var(--mono); font-size: 12px; color: var(--muted); border-left: 2px solid var(--line); padding-left: 14px; }
+  .principle b { color: var(--ink-2); font-weight: 600; }
+
+  .rule-box { background: var(--panel); border: 1px solid var(--line); padding: 20px 22px; margin-top: 20px; }
+  .rule-box h3 { font-family: var(--display); font-size: 14px; text-transform: uppercase; letter-spacing: 0.03em; margin: 0 0 10px; }
+  .rule-box ol, .rule-box ul { margin: 0; padding-left: 20px; font-size: 13px; color: var(--ink-2); }
+  .rule-box li { margin-bottom: 8px; }
+  .rule-box li:last-child { margin-bottom: 0; }
+
+  .rejected { background: var(--panel-2); border: 1px dashed var(--line); padding: 16px 20px; margin-top: 14px; }
+  .rejected h4 { font-family: var(--display); font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.03em; margin: 0 0 6px; color: var(--muted); }
+  .rejected p { margin: 0; font-size: 12.5px; color: var(--ink-2); }
+
+  table.evidence { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 12.5px; }
+  table.evidence th, table.evidence td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); }
+  table.evidence th { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); font-weight: 500; }
+  table.evidence td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  footer { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--muted); }
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">РОЙ.МАРКЕТ · Network Graph · presentation layer, mockup for review · companion to Product Icon Set + Hub Icon Schema</p>
+  <h1>Demand-Side Icon Set</h1>
+  <p class="lede">The graph currently only draws the <b style="color:var(--ink)">supply side</b> — manufacturers, their products, their owners. This proposes glyphs for who's on the other end of a sale: a <b style="color:var(--ink)">named military unit</b> that received or fielded a product, a <b style="color:var(--ink)">government body</b> that procured it under contract, and a <b style="color:var(--ink)">volunteer/procurement fund</b> that bought it and delivered it to the front — three demand-side actor types, each grounded in a real, already-sourced field in the registry, not invented for symmetry with the supply side.</p>
+  <p class="lede">Two more demand-side categories were <b style="color:var(--ink)">tested against the corpus and not built</b> — see §03. That's a deliberate finding, the same discipline the Product Icon Set used to reject a speculative EO/IR-camera category: a shape nobody's data backs is worse than no shape at all.</p>
+
+  <section>
+    <h2><span class="num">01</span> What the registry actually supports</h2>
+    <p class="section-note">Sized against <code>data/registry/military_units.json</code> and every entity's <code>government_contracts[]</code>/<code>battlefield_evidence[]</code> arrays before drawing anything — same rule as the product classifier: evidence first, glyph second.</p>
+    <table class="evidence">
+      <tr><th>Demand-side actor</th><th>Source field</th><th>Count</th><th>Already a graph node?</th></tr>
+      <tr><td>Named military unit</td><td><code>military_units.json</code></td><td class="num">26</td><td>No — text-only record, not yet emitted by <code>build_relationship_graph.py</code></td></tr>
+      <tr><td>Government / institutional buyer</td><td><code>government_contracts[].customer</code></td><td class="num">117 unique</td><td>No — free-text field, not a resolved entity node</td></tr>
+      <tr><td>Volunteer / procurement fund</td><td>entity records with <code>legal_form</code> «Фонд»/«Благотворительный фонд»</td><td class="num">6</td><td><b style="color:var(--ink)">Yes</b> — already plain circle nodes, tier "Money layer"</td></tr>
+    </table>
+    <p class="section-note" style="margin-top:14px">The first two rows are a real gap in <code>build_relationship_graph.py</code>, not just a missing icon — this mockup proposes what they'd look like once emitted, but making them appear as nodes at all is separate follow-on work, same "mockup first, wire in later" sequencing as the Hub Icon Schema plan.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span> Node glyphs</h2>
+    <p class="section-note">Same monoline grammar as the product set — square frame reserved for <code>products[]</code>, so these get a different base shape (a shield silhouette) to keep node <i>kind</i> readable before a reader even looks at color, per the dataviz rule that identity is never carried by hue alone.</p>
+    <div class="icon-grid">
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M12 3 L19 6 L19 12 C19 17 15.5 20 12 21 C8.5 20 5 17 5 12 L5 6 Z"/><path class="accent" d="M9 12 L11 14 L15 9"/></svg></div>
+        <div class="icon-label">Military unit — named</div>
+        <div class="icon-count">22 of 26 · solid shield, checkmark = named-and-sourced identification</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch dashed"><svg viewBox="0 0 24 24"><path d="M12 3 L19 6 L19 12 C19 17 15.5 20 12 21 C8.5 20 5 17 5 12 L5 6 Z" stroke-dasharray="2.4 2"/><circle cx="12" cy="12" r="1.4" class="fill"/></svg></div>
+        <div class="icon-label">Military unit — descriptive only</div>
+        <div class="icon-count">4 of 26 · dashed shield, no confirmed designator — «grouping» or role description stands in for a name</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="9" rx="1"/><path d="M4 10 L12 4 L20 10"/><line x1="7" y1="10" x2="7" y2="19"/><line x1="12" y1="10" x2="12" y2="19"/><line x1="17" y1="10" x2="17" y2="19"/><circle cx="12" cy="4" r="1" class="accent-fill"/></svg></div>
+        <div class="icon-label">Government / institutional buyer</div>
+        <div class="icon-count">117 unique customers · colonnade pediment, generic public-institution glyph</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="9" rx="1"/><path d="M4 10 L12 4 L20 10"/><line x1="7" y1="10" x2="7" y2="19"/><line x1="12" y1="10" x2="12" y2="19"/><line x1="17" y1="10" x2="17" y2="19"/><path class="accent" d="M9 4 L12 1 L15 4" /></svg></div>
+        <div class="icon-label">Defense-ministry buyer (МО РФ)</div>
+        <div class="icon-count">13 contracts · same pediment + accent chevron — a variant, not a new base shape, per MIL-STD-2525's frame/interior-icon split already used for the hub badges</div>
+      </div>
+
+      <div class="icon-cell">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 21 C6 16.5 8.7 14 12 14 C15.3 14 18 16.5 18 21"/><path class="accent" d="M12 4 L12 1 M9 5.5 L7 3 M15 5.5 L17 3"/></svg></div>
+        <div class="icon-label">Volunteer / procurement fund</div>
+        <div class="icon-count">6 entities · figure + raised-hands glyph — buys hardware, delivers it to units, distinct from a manufacturer or a government buyer</div>
+      </div>
+
+    </div>
+
+    <h3 style="font-family:var(--display);font-size:14px;text-transform:uppercase;letter-spacing:.03em;margin:26px 0 10px">Edge glyphs — how a demand-side node connects back to a product</h3>
+    <div class="edge-row">
+      <div class="icon-swatch"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="1"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/><path class="accent" d="M14 15 L16 17 L20 12"/></svg></div>
+      <div>
+        <div class="icon-label" style="margin-bottom:3px">Procures (government contract)</div>
+        <div class="icon-count">Product/entity → institutional buyer. Sourced from a real <code>government_contracts[]</code> entry (contract number, date, sometimes value) — an evidentiary edge, not an inference.</div>
+      </div>
+    </div>
+    <div class="edge-row">
+      <div class="icon-swatch"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" class="fill"/><path class="accent" d="M18 6 L21 3"/></svg></div>
+      <div>
+        <div class="icon-label" style="margin-bottom:3px">Confirmed field use</div>
+        <div class="icon-count">Product → military unit. Sourced from <code>battlefield_evidence[]</code> — a thank-you letter, an MoD-attributed kill claim, a named-unit testimonial. Weaker than a contract (self-reported/press, not a procurement record) — render thinner/dashed to keep that distinction visible.</div>
+      </div>
+    </div>
+
+    <p class="principle"><b>Why a shield, not a circle:</b> the existing tier palette (Manufacturer/ЦБСТ core/Plumbing/Money layer/Adjacent/Network/Unverified) already owns node color, and every current node — company or fund — renders as the same circle. Giving military units and institutional buyers their own base silhouette means a reader can tell "who makes it," "who bought it," and "who used it" apart at a glance, the same shape-carries-category move the Product Icon Set uses against the product square. <b>Why the fund gets a variant, not a new base shape:</b> it's already a node today (tier: Money layer) — this only proposes swapping its icon, no graph-schema change required, unlike the other two rows.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span> Tested, not built</h2>
+    <p class="section-note">The user's original ask also named "companies buying products and/or services (financial, training etc.)" — checked against the corpus the same way the EO/IR-camera and UGV hypotheses were checked in the Product Icon Set, before drawing anything:</p>
+    <div class="rejected">
+      <h4>Financial-services buyer (leasing / credit / investment)</h4>
+      <p>9 entities contain financing-adjacent language (лизинг/кредит/инвестици/финансировани) somewhere in free text — but on inspection this is almost entirely the entity's <i>own</i> financing arrangements (a manufacturer describing its equipment leasing terms to end customers, or its own investment round), not a documented case of another company buying products <i>as a financial-services transaction</i>. The one clean counter-example — a procurement fund purchasing hardware and donating it forward — is already covered by the "volunteer/procurement fund" node above. No separate financial-buyer entity type survives contact with real text.</p>
+    </div>
+    <div class="rejected">
+      <h4>Training-provider buyer</h4>
+      <p>15 entities contain training-adjacent language (обучение/курс/подготовка) — but every instance found is the manufacturer describing operator-training <i>it offers</i> (a value-add service on top of its own product), never a third-party training academy or school recorded as a customer relationship. <code>state_programs[]</code> (31 entries) looked like a candidate source but turned out to be almost entirely GISP/rk.2035.university <i>registry-listing</i> participation, not training or funding relationships.</p>
+    </div>
+    <p class="section-note" style="margin-top:2px">Both would need a real structured field first — a <code>training_delivered[]</code> or <code>financed_by[]</code> array with its own <code>source_id</code>, built the same disciplined way <code>government_contracts[]</code> was — before either is icon-worthy. Building the glyph ahead of the data would be indistinguishable from guessing.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span> Applied to real registry text</h2>
+    <p class="section-note">Five pairs pulled directly from <code>entities.json</code> — verbatim, unedited.</p>
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="9" rx="1"/><path d="M4 10 L12 4 L20 10"/><line x1="7" y1="10" x2="7" y2="19"/><line x1="12" y1="10" x2="12" y2="19"/><line x1="17" y1="10" x2="17" y2="19"/><path class="accent" d="M9 4 L12 1 L15 4" /></svg></div>
+        <div class="card-body">
+          <div class="card-entity">npp-radar-mms → Министерство обороны РФ</div>
+          <div class="card-name">Госконтракт 0173100000812000015</div>
+          <div class="card-desc">One of a run of MoD госконтракты dated 2011–2017, same customer, same supplier — a defense-ministry buyer with a real contract-number trail, not a one-off.</div>
+          <div class="card-tags"><span class="tag">procures</span><span class="icon-tier real">government_contracts[]</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M12 3 L19 6 L19 12 C19 17 15.5 20 12 21 C8.5 20 5 17 5 12 L5 6 Z"/><path class="accent" d="M9 12 L11 14 L15 9"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">ovod → 88-я бригада «Эспаньола»</div>
+          <div class="card-name">«Привет-82» FPV strikes, Часов Яр axis</div>
+          <div class="card-desc">"Подразделения лётного батальона 88-й бригады Эспаньола стабильно продолжают боевую работу... FPV-дронов самолетного типа системы «Привет-82»."</div>
+          <div class="card-tags"><span class="tag">confirmed field use</span><span class="icon-tier real">battlefield_evidence[]</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><path d="M12 3 L19 6 L19 12 C19 17 15.5 20 12 21 C8.5 20 5 17 5 12 L5 6 Z"/><path class="accent" d="M9 12 L11 14 L15 9"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">ooo-skb-piranya → ВДВ, группировка «Север»</div>
+          <div class="card-name">MoD-attributed kill claim, fibre-optic FPV</div>
+          <div class="card-desc">"Kamikaze-drone crews of one of the [VDV] groupings 'Север'..." — tank + EW-equipped pickup, MoD press service attribution, 2025-08-01.</div>
+          <div class="card-tags"><span class="tag">confirmed field use</span><span class="icon-tier real">battlefield_evidence[]</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 21 C6 16.5 8.7 14 12 14 C15.3 14 18 16.5 18 21"/><path class="accent" d="M12 4 L12 1 M9 5.5 L7 3 M15 5.5 L17 3"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">Фонд «Наша Правда» → ao-ross → войска «Центр»</div>
+          <div class="card-name">«Взгляд»/«Наблюдатель» EO/IR recon complexes</div>
+          <div class="card-desc">"В разведподразделении войск «Центр», куда на днях доставили приобретенные фондом «Наша Правда» радиоэлектронные системы подавления дронов, был проведен практический показ..."</div>
+          <div class="card-tags"><span class="tag">fund buys</span><span class="tag">delivers to unit</span><span class="icon-tier real">battlefield_evidence[]</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon-swatch dashed"><svg viewBox="0 0 24 24"><path d="M12 3 L19 6 L19 12 C19 17 15.5 20 12 21 C8.5 20 5 17 5 12 L5 6 Z" stroke-dasharray="2.4 2"/><circle cx="12" cy="12" r="1.4" class="fill"/></svg></div>
+        <div class="card-body">
+          <div class="card-entity">ooo-goudron → unnamed forward unit</div>
+          <div class="card-name">«Набат-3» detector field feedback</div>
+          <div class="card-desc">"Получили отзыв после проведения тестирования детектора «Набат-3» в зоне проведения СВО... Бойцами действующего подразделения была проверена работа детектора." No unit name given — descriptive-only, dashed shield.</div>
+          <div class="card-tags"><span class="tag">confirmed field use</span><span class="tag">unnamed unit</span><span class="icon-tier real">battlefield_evidence[]</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer>
+    Mockup only — not wired into the live Network Graph artifact, and two of the three node types aren't graph nodes yet at all (§01). Financial-buyer and training-provider categories were tested against the corpus and deliberately not built (§03) — that's a finding, logged the same way the Product Icon Set logs its rejected EO/IR-camera hypothesis. Grounded in general node/glyph literature: shape (not hue alone) is the standard way to separate node <i>kinds</i> in heterogeneous/bipartite network drawings (Cambridge Intelligence, "Get more from your graphs with glyphs"; bipartite-network visualization survey work), and recognizable real-world icon metaphors read faster than abstract shapes in buyer/supplier network diagrams (yFiles/Creately supply-chain visualization guidance) — both consistent with this project's existing dataviz-skill rule that identity is never color-alone.
+  </footer>
+</div>
+
+</body></html>
