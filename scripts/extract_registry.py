@@ -1188,6 +1188,7 @@ PEOPLE_CARRY_FORWARD_FIELDS: list[tuple[str | None, str]] = [
     ("opensanctions_matches", "opensanctions_screened_at"),
     ("aleph_matches", "aleph_screened_at"),
     ("leader_id_matches", "leader_id_screened_at"),
+    ("egrip_hits", "egrip_checked_at"),
 ]
 
 

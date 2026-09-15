@@ -19,6 +19,7 @@ import argparse
 import json
 import time
 import urllib.request
+from datetime import date
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -99,7 +100,10 @@ def main() -> None:
         roster = roster[: args.limit]
 
     log = json.loads(LOG_PATH.read_text(encoding="utf-8")) if LOG_PATH.exists() else {}
+    people_by_slug = {p["slug"]: p for p in people}
+    today = date.today().isoformat()
     found = 0
+    scanned = 0
     for i, p in enumerate(roster, 1):
         slug = p["slug"]
         inn = p["inn_personal"]
@@ -113,6 +117,22 @@ def main() -> None:
             continue
         hits = hits_from_rows(rows)
         log[slug] = {"inn": inn, "hits": hits}
+        scanned += 1
+
+        # Write directly onto people.json -- egrip_hits/egrip_checked_at are
+        # raw screening evidence (PEOPLE_CARRY_FORWARD_FIELDS in
+        # extract_registry.py), same category as other_entities/
+        # disqualification_hits/subsidiary_liability_hits written by the
+        # sibling screen_*.py scripts, so per CLAUDE.md they must be written
+        # directly here rather than via corrections.json. egrip_checked_at
+        # is set on EVERY run regardless of hit/no-hit, so a null hit is
+        # distinguishable from "never checked".
+        person = people_by_slug.get(slug)
+        if person is not None:
+            person["egrip_hits"] = hits
+            person["egrip_checked_at"] = today
+            PEOPLE_PATH.write_text(json.dumps(people, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
         if hits:
             found += 1
             print(f"[{i}/{len(roster)}] {slug} ({inn}): {len(hits)} ИП record(s) — {[h['ogrnip'] for h in hits]}")
@@ -121,7 +141,8 @@ def main() -> None:
         time.sleep(SLEEP_SEC)
 
     LOG_PATH.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\nscanned {len(roster)}, {found} with at least one ИП registration, log written to {LOG_PATH}")
+    print(f"\nscanned {scanned}, {found} with at least one ИП registration, log written to {LOG_PATH}, "
+          f"egrip_hits/egrip_checked_at written to {PEOPLE_PATH}")
 
 
 if __name__ == "__main__":

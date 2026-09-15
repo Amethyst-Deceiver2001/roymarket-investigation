@@ -133,6 +133,7 @@ def validate_generated_graph(
     entities: list[dict],
     people: list[dict],
     sources: list[dict],
+    military_units: list[dict] | None = None,
 ) -> list[str]:
     """Check artifacts against an independent deterministic registry rebuild."""
     graph_errors = validate_graph(graph, entities, people, sources)
@@ -143,7 +144,7 @@ def validate_generated_graph(
     elif not graph_errors:
         errors.extend(validate_views(graph, graph_views))
 
-    expected_graph = build_graph(entities, people)
+    expected_graph = build_graph(entities, people, military_units)
     if graph != expected_graph:
         errors.append(
             "relationship_graph.json does not exactly match the deterministic "
@@ -600,8 +601,11 @@ def main() -> int:
                     graph_views = json.loads(views_path.read_text(encoding="utf-8"))
                 except json.JSONDecodeError as ex:
                     errors.append(f"relationship_graph_views.json: not valid JSON ({ex})")
+            military_units_path = REG / "military_units.json"
+            military_units = json.loads(military_units_path.read_text(encoding="utf-8")) \
+                if military_units_path.exists() else []
             errors.extend(validate_generated_graph(
-                graph, graph_views, entities, people or [], sources or []))
+                graph, graph_views, entities, people or [], sources or [], military_units))
     else:
         errors.append("relationship_graph.json missing — run "
                       "scripts/build_relationship_graph.py")

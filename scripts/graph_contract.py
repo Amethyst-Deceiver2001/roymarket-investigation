@@ -10,11 +10,17 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-GRAPH_SCHEMA_VERSION = 2
-NODE_KINDS = {"entity", "person", "product", "unresolved"}
-EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces"}
+GRAPH_SCHEMA_VERSION = 4
+NODE_KINDS = {"entity", "person", "product", "unresolved",
+              "government_customer", "military_unit"}
+EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
+              "procures", "confirmed_field_use", "cbst_tie"}
 TEMPORAL_STATUSES = {"current", "historical", "unknown"}
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+UNIT_TYPES = {"army", "brigade", "regiment", "battalion", "detachment",
+              "volunteer_detachment", "unit_designator", "grouping",
+              "unspecified_role"}
+UNIT_DESIGNATION_CONFIDENCE = {"named", "descriptive", "grouping"}
 
 NODE_FIELDS = {
     "entity": {"id", "kind", "label", "name_latin", "inn", "tier",
@@ -23,11 +29,18 @@ NODE_FIELDS = {
     "product": {"id", "kind", "label", "owner_slug", "source_id",
                 "classification", "degree"},
     "unresolved": {"id", "kind", "label", "degree"},
+    "government_customer": {"id", "kind", "label", "degree"},
+    "military_unit": {"id", "kind", "label", "unit_type", "parent_grouping",
+                       "designation_confidence", "degree"},
 }
 EDGE_FIELDS = {
     "source", "target", "type", "label", "source_id", "as_of", "weight",
-    "temporal_status",
+    "temporal_status", "confidence",
 }
+# Confidence vocabulary carried over verbatim from entities.json's own
+# cbst_tie.confidence field (t-doc/t-open/press are positive-tie values;
+# "none"/"not_established" mean no tie and are never emitted as edges).
+CBST_TIE_CONFIDENCE = {"t-doc", "t-open", "press"}
 PRODUCT_CLASSIFICATION_FIELDS = {
     "status", "uav_platform", "ew_installation",
 }
@@ -145,6 +158,20 @@ def validate_graph(
                     _error(errors, f"{where}.classification.uav_platform is invalid")
                 if classification.get("ew_installation") not in {"vehicle-mounted", "unknown"}:
                     _error(errors, f"{where}.classification.ew_installation is invalid")
+        elif kind == "government_customer":
+            if not node_id.startswith("customer::"):
+                _error(errors, f"{where} government_customer node id must start with 'customer::'")
+        elif kind == "military_unit":
+            if not node_id.startswith("unit::"):
+                _error(errors, f"{where} military_unit node id must start with 'unit::'")
+            if node.get("unit_type") not in UNIT_TYPES:
+                _error(errors, f"{where}.unit_type has invalid value {node.get('unit_type')!r}")
+            if node.get("designation_confidence") not in UNIT_DESIGNATION_CONFIDENCE:
+                _error(errors, f"{where}.designation_confidence has invalid value "
+                               f"{node.get('designation_confidence')!r}")
+            pg = node.get("parent_grouping")
+            if pg is not None and not isinstance(pg, str):
+                _error(errors, f"{where}.parent_grouping must be a string or null")
         else:
             if not node_id.startswith("stub::"):
                 _error(errors, f"{where} unresolved node id must start with 'stub::'")
@@ -182,6 +209,9 @@ def validate_graph(
                 "directs": ({"entity", "person", "unresolved"}, {"entity"}),
                 "role": ({"person"}, {"entity"}),
                 "produces": ({"entity"}, {"product"}),
+                "procures": ({"government_customer"}, {"entity"}),
+                "confirmed_field_use": ({"entity", "product"}, {"military_unit"}),
+                "cbst_tie": ({"entity"}, {"entity"}),
             }[etype]
             if src_kind not in permitted[0] or dst_kind not in permitted[1]:
                 _error(errors, f"{where} has invalid {src_kind}->{dst_kind} endpoints for {etype}")
@@ -192,6 +222,12 @@ def validate_graph(
             _error(errors, f"{where}.as_of must be YYYY-MM-DD or null")
         if not isinstance(edge.get("weight"), (int, float)) or isinstance(edge.get("weight"), bool):
             _error(errors, f"{where}.weight must be numeric")
+        confidence = edge.get("confidence")
+        if etype == "cbst_tie":
+            if confidence not in CBST_TIE_CONFIDENCE:
+                _error(errors, f"{where}.confidence has invalid value {confidence!r} for cbst_tie")
+        elif confidence is not None:
+            _error(errors, f"{where}.confidence must be null for non-cbst_tie edge type {etype!r}")
         status = edge.get("temporal_status")
         if status not in TEMPORAL_STATUSES:
             _error(errors, f"{where}.temporal_status has invalid value {status!r}")

@@ -61,15 +61,42 @@ def slugify(name: str) -> str:
     return re.sub(r"[\s_-]+", "-", name)[:60]
 
 
+# bo.nalog.gov.ru's TLS/connection is flaky under repeated automated hits
+# (confirmed 2026-09-14: SSLError/IncompleteRead/RemoteDisconnected all seen
+# on plain retries of the same request seconds apart, no pattern to which
+# endpoint). A single unhandled one used to kill the whole --all-missing
+# sweep partway through the 2nd entity. get_with_retry() absorbs these with
+# a short backoff before giving up; the per-ИНН loop in main() also now
+# isolates each entity's own exceptions so one still-failing ИНН doesn't
+# abort the ones after it.
+RETRYABLE = (
+    requests.exceptions.SSLError,
+    requests.exceptions.ConnectionError,
+    requests.exceptions.Timeout,
+)
+
+
+def get_with_retry(url: str, *, attempts: int = 4, backoff: float = 3.0, **kwargs) -> requests.Response:
+    last_exc = None
+    for attempt in range(attempts):
+        try:
+            r = requests.get(url, headers=HEADERS, verify=False, **kwargs)
+            r.raise_for_status()
+            return r
+        except RETRYABLE as ex:
+            last_exc = ex
+            if attempt < attempts - 1:
+                print(f"  retry {attempt + 1}/{attempts - 1} after {ex.__class__.__name__}: {ex}", file=sys.stderr)
+                time.sleep(backoff * (attempt + 1))
+    raise last_exc
+
+
 def find_org(inn: str) -> dict | None:
-    r = requests.get(
+    r = get_with_retry(
         f"{BASE}/advanced-search/organizations/search",
         params={"query": inn},
-        headers=HEADERS,
-        verify=False,
         timeout=20,
     )
-    r.raise_for_status()
     for row in r.json().get("content", []):
         # inn/shortName come back with <strong> highlight markup around the
         # matched substring - strip tags before comparing, or an exact-ИНН
@@ -83,24 +110,12 @@ def find_org(inn: str) -> dict | None:
 
 
 def list_filings(org_id: int) -> list[dict]:
-    r = requests.get(
-        f"{BASE}/nbo/organizations/{org_id}/bfo/",
-        headers=HEADERS,
-        verify=False,
-        timeout=20,
-    )
-    r.raise_for_status()
+    r = get_with_retry(f"{BASE}/nbo/organizations/{org_id}/bfo/", timeout=20)
     return r.json()
 
 
 def download_filing(correction_id: int, out_path: Path) -> int:
-    r = requests.get(
-        f"{BASE}/download/bfo/pdf/{correction_id}",
-        headers=HEADERS,
-        verify=False,
-        timeout=60,
-    )
-    r.raise_for_status()
+    r = get_with_retry(f"{BASE}/download/bfo/pdf/{correction_id}", timeout=60)
     if r.headers.get("content-type", "").split(";")[0] != "application/pdf":
         raise RuntimeError(f"unexpected content-type {r.headers.get('content-type')!r}")
     out_path.write_bytes(r.content)
@@ -137,11 +152,19 @@ def main():
     for i, inn in enumerate(inns):
         if args.all_missing and i:
             time.sleep(DELAY_SECONDS)
-        org = find_org(inn)
+        try:
+            org = find_org(inn)
+        except Exception as ex:
+            print(f"[{inn}] search FAILED, skipping this ИНН - {ex}", file=sys.stderr)
+            continue
         if not org:
             print(f"[{inn}] not found in bo.nalog.gov.ru search index", file=sys.stderr)
             continue
-        filings = list_filings(org["id"])
+        try:
+            filings = list_filings(org["id"])
+        except Exception as ex:
+            print(f"[{inn}] filing-list FAILED, skipping this ИНН - {ex}", file=sys.stderr)
+            continue
         if not filings:
             print(f"[{inn}] {org.get('shortName', '')}: no БФО filings on record")
             continue

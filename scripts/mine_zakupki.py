@@ -621,12 +621,53 @@ def parse_contract_card_html(path: Path):
     # above; "Цена контракта" in particular lives here as div.price's own
     # title/content spans, never in the section__title blocks, so contracts
     # using only this older template previously mined with no price at all.
-    for title_el in soup.select("span.cardMainInfo__title"):
+    #
+    # The title element is a <span> for most fields but a <div> specifically
+    # for "Объекты закупки" (the contract subject/предмет line) — found
+    # 2026-09-15 while chasing 53 government_contracts[] records with empty
+    # items/subject_ru across npp-radar-mms/ao-tsentr-telko. The old
+    # span-only selector silently skipped this one field on every card in
+    # the corpus (confirmed against all 1498 archived
+    # ZAKUPKI_contract_*.html files — every one has exactly one "Объекты
+    # закупки" section, div-titled). Selecting both tags fixes it without
+    # touching any other field's extraction.
+    #
+    # The visible content span is truncated with "..." for long subjects;
+    # the untruncated text lives in the content div's own `data-tooltip`
+    # attribute (`data-tooltip='<div class="custom-tooltiptext
+    # text-break">FULL TEXT</div>'`) when present, so that's preferred over
+    # the visible (possibly-truncated) span text.
+    for title_el in soup.select("div.cardMainInfo__title, span.cardMainInfo__title"):
         content_el = title_el.find_next_sibling(class_="cardMainInfo__content")
         if not content_el:
             continue
         key = title_el.get_text(" ", strip=True)
-        val = content_el.get_text(" ", strip=True)
+        tooltip = content_el.get("data-tooltip")
+        if tooltip:
+            val = BeautifulSoup(tooltip, "html.parser").get_text(" ", strip=True)
+        else:
+            # "Объекты закупки" with more than one line item shows only the
+            # first item's text plus a "Посмотреть все (N)" link to a
+            # separate page this card doesn't carry. Sometimes that first
+            # item's text is a real, substantive description (a general
+            # contract-subject sentence covering all N line items, e.g. a
+            # multi-position delivery under one named product) — safe to
+            # keep. Sometimes it's a bare, non-substantive stage label
+            # ("Этап 1", "Этап 2 "...) that means nothing on its own —
+            # reporting that as "the subject" would be a fragment
+            # masquerading as the whole. Found 2026-09-15 on reg
+            # 0173100004513001187 (bare "Этап 1", 5 objects — excluded) vs
+            # reg 1770425226117000798 (a full descriptive sentence, 5
+            # objects — kept) while working the npp-radar-mms/
+            # ao-tsentr-telko subject_ru gaps.
+            content_copy = BeautifulSoup(str(content_el), "html.parser")
+            more_link = content_copy.find("a", string=re.compile(r"Посмотреть\s+все"))
+            if more_link:
+                more_link.decompose()
+            val = content_copy.get_text(" ", strip=True)
+            if more_link and re.fullmatch(r"Этап\s*\d+", val.strip()):
+                val = ""
+        val = re.sub(r"\s+", " ", val).strip()
         if key and val and key not in fields:
             fields[key] = val
 

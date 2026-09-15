@@ -67,6 +67,110 @@ NO_PRICE = """
 </body></html>
 """
 
+# "Объекты закупки" (contract subject/предмет) title element is a <div>,
+# not a <span> like every other cardMainInfo__title field -- found
+# 2026-09-15 chasing 53 empty items/subject_ru gaps on npp-radar-mms/
+# ao-tsentr-telko. The old span-only selector silently skipped this field
+# on every one of the 1498 archived contract cards. Long subjects are
+# truncated with "..." in the visible span but carry the full text in the
+# content div's own data-tooltip attribute.
+OBJECT_LONG_WITH_TOOLTIP = """
+<html><body>
+<section class="blockInfo__section">
+  <span class="section__title">Полное наименование заказчика</span>
+  <span class="section__info">Министерство обороны Российской Федерации</span>
+</section>
+<div class="cardMainInfo__section">
+  <div class="cardMainInfo__title">Объекты закупки</div>
+  <div class="cardMainInfo__content"
+       data-tooltip='<div class="custom-tooltiptext text-break">Разработка технологии и конструкции ряда датчиков микроперемещений и температуры с идентификацией на поверхностных акустических волнах для применения в дистанционных автоматизированных системах контроля и мониторинга</div>'>
+    <span class="text-break d-block">
+      Разработка технологии и конструкции ряда датчиков микроперемещений и температуры с идентификацией на поверхностных акуст... &nbsp;
+    </span>
+  </div>
+</div>
+</body></html>
+"""
+
+# Short subject, no truncation -> no data-tooltip attribute at all; the
+# visible span text is already the full value.
+OBJECT_SHORT_NO_TOOLTIP = """
+<html><body>
+<section class="blockInfo__section">
+  <span class="section__title">Полное наименование заказчика</span>
+  <span class="section__info">Министерство обороны Российской Федерации</span>
+</section>
+<div class="cardMainInfo__section">
+  <div class="cardMainInfo__title">Объекты закупки</div>
+  <div class="cardMainInfo__content">
+    <span class="text-break d-block">
+      Мобильная радиостанция Motorola DM4400 136-174 МГц 0-25 Вт 99 кан. &nbsp;
+    </span>
+  </div>
+</div>
+</body></html>
+"""
+
+# Multi-item "Объекты закупки" -- the card only ever shows the first item
+# ("Этап 1") plus a "Посмотреть все (N)" link to a page this scrape never
+# fetched. Must NOT glue the link text onto the value, and must NOT return
+# the single-item fragment as if it were the whole (N-item) subject --
+# real find, reg 0173100004513001187 (5 objects, card lists only 1).
+OBJECT_MULTI_ITEM = """
+<html><body>
+<section class="blockInfo__section">
+  <span class="section__title">Полное наименование заказчика</span>
+  <span class="section__info">Министерство обороны Российской Федерации</span>
+</section>
+<div class="cardMainInfo__section">
+  <div class="cardMainInfo__title">Объекты закупки</div>
+  <div class="cardMainInfo__content">
+    <span class="text-break d-block">
+      Этап 1 &nbsp;
+      <a target="_blank" rel="noopener" href="/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=0173100004513001187#contractSubjects">
+        Посмотреть все&nbsp;(5)
+      </a>
+    </span>
+  </div>
+</div>
+</body></html>
+"""
+
+# Multi-item, but the first item's text is a real descriptive sentence (not
+# a bare "Этап N" placeholder) -- kept, unlike OBJECT_MULTI_ITEM above.
+# Real find, reg 1770425226117000798 (5 objects under one described supply
+# contract).
+OBJECT_MULTI_ITEM_SUBSTANTIVE = """
+<html><body>
+<section class="blockInfo__section">
+  <span class="section__title">Полное наименование заказчика</span>
+  <span class="section__info">Министерство обороны Российской Федерации</span>
+</section>
+<div class="cardMainInfo__section">
+  <div class="cardMainInfo__title">Объекты закупки</div>
+  <div class="cardMainInfo__content">
+    <span class="text-break d-block">
+      поставка гидрометеостанций корабельных «Характер-К» с монтажными и пусконаладочными работами для нужд Минобороны России &nbsp;
+      <a target="_blank" rel="noopener" href="/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=1770425226117000798#contractSubjects">
+        Посмотреть все&nbsp;(5)
+      </a>
+    </span>
+  </div>
+</div>
+</body></html>
+"""
+
+# No "Объекты закупки" section at all on the card -- must not crash, must
+# not fabricate a value (real-absence case, distinct from a parser miss).
+OBJECT_ABSENT = """
+<html><body>
+<section class="blockInfo__section">
+  <span class="section__title">Полное наименование заказчика</span>
+  <span class="section__info">Министерство обороны Российской Федерации</span>
+</section>
+</body></html>
+"""
+
 
 def write_fixture(name: str, html: str) -> Path:
     path = FIXTURES_DIR / name
@@ -537,12 +641,54 @@ def run() -> int:
     if got != expected:
         failures.append(f"SIGNATORY_GENDER_PAREN: expected {expected}, got {got}")
 
+    # "Объекты закупки" (contract subject) — div-titled field the old
+    # span-only selector skipped entirely.
+    path = write_fixture("zakupki_object_long_tooltip.html", OBJECT_LONG_WITH_TOOLTIP)
+    result = parse_contract_card_html(path)
+    obj = result["fields"].get("Объекты закупки")
+    expected_obj = ("Разработка технологии и конструкции ряда датчиков "
+                    "микроперемещений и температуры с идентификацией на "
+                    "поверхностных акустических волнах для применения в "
+                    "дистанционных автоматизированных системах контроля и "
+                    "мониторинга")
+    if obj != expected_obj:
+        failures.append(f"OBJECT_LONG_WITH_TOOLTIP: expected {expected_obj!r}, got {obj!r}")
+
+    path = write_fixture("zakupki_object_short.html", OBJECT_SHORT_NO_TOOLTIP)
+    result = parse_contract_card_html(path)
+    obj = result["fields"].get("Объекты закупки")
+    expected_obj = "Мобильная радиостанция Motorola DM4400 136-174 МГц 0-25 Вт 99 кан."
+    if obj != expected_obj:
+        failures.append(f"OBJECT_SHORT_NO_TOOLTIP: expected {expected_obj!r}, got {obj!r}")
+
+    path = write_fixture("zakupki_object_multi_item.html", OBJECT_MULTI_ITEM)
+    result = parse_contract_card_html(path)
+    obj = result["fields"].get("Объекты закупки")
+    if obj is not None:
+        failures.append(f"OBJECT_MULTI_ITEM: expected no key (partial fragment "
+                         f"should not be reported as the subject), got {obj!r}")
+
+    path = write_fixture("zakupki_object_multi_item_substantive.html", OBJECT_MULTI_ITEM_SUBSTANTIVE)
+    result = parse_contract_card_html(path)
+    obj = result["fields"].get("Объекты закупки")
+    expected_obj = ("поставка гидрометеостанций корабельных «Характер-К» с "
+                    "монтажными и пусконаладочными работами для нужд "
+                    "Минобороны России")
+    if obj != expected_obj:
+        failures.append(f"OBJECT_MULTI_ITEM_SUBSTANTIVE: expected {expected_obj!r}, got {obj!r}")
+
+    path = write_fixture("zakupki_object_absent.html", OBJECT_ABSENT)
+    result = parse_contract_card_html(path)
+    obj = result["fields"].get("Объекты закупки")
+    if obj is not None:
+        failures.append(f"OBJECT_ABSENT: expected no key, got {obj!r}")
+
     if failures:
         print(f"FAILED ({len(failures)}):")
         for f in failures:
             print(f"  - {f}")
         return 1
-    print("OK: 16/16 zakupki parser fixtures passed")
+    print("OK: 21/21 zakupki parser fixtures passed")
     return 0
 
 

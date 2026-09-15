@@ -21,14 +21,17 @@ import re
 from collections import Counter
 from pathlib import Path
 
-from graph_contract import GRAPH_SCHEMA_VERSION, build_view_projections
+from graph_contract import GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, build_view_projections
 
 REPO = Path(__file__).resolve().parent.parent
 REG = REPO / "data" / "registry"
 ENTITIES = REG / "entities.json"
 PEOPLE = REG / "people.json"
+MILITARY_UNITS = REG / "military_units.json"
 OUT = REG / "relationship_graph.json"
 VIEWS_OUT = REG / "relationship_graph_views.json"
+
+CBST_SLUG = "ano-tsbst-centre-for-unmanned-systems-technologies"
 
 LEGAL_PREFIXES = [
     "ООО", "ОАО", "ЗАО", "ПАО", "АО", "АНО", "НКО", "НПЦ", "НПО", "КБ",
@@ -97,6 +100,12 @@ def product_id(owner_slug: str, name: str, ordinal: int = 1) -> str:
     stem = re.sub(r"[^a-z0-9а-я]+", "-", normalize(name)).strip("-") or "unnamed"
     base = f"product::{owner_slug}::{stem}"
     return base if ordinal == 1 else f"{base}--{ordinal}"
+
+
+def customer_id(name: str) -> str:
+    """Stable graph-only id for a government_contracts[].customer name."""
+    stem = re.sub(r"[^a-z0-9а-я]+", "-", normalize(name)).strip("-") or "unnamed"
+    return f"customer::{stem}"
 
 
 def classify_product(name: str, description: str | None) -> dict:
@@ -172,10 +181,12 @@ def _director_temporal_status(entry: dict, current_name: str | None) -> str:
     return "current" if normalize(entry.get("value", "")) == normalize(current_name or "") else "historical"
 
 
-def build_graph(entities: list[dict], people: list[dict]) -> dict:
+def build_graph(entities: list[dict], people: list[dict],
+                 military_units: list[dict] | None = None) -> dict:
     """Return a deterministic full graph and evidence-first derived views."""
     entities = [e for e in entities if not e.get("_merged_into")]
     people = [p for p in people if not p.get("_merged_into")]
+    military_units = military_units or []
     entity_by_ogrn = {e.get("ogrn"): e["slug"] for e in entities if e.get("ogrn")}
     inn_to_entity_slug = {e.get("inn"): e["slug"] for e in entities if e.get("inn")}
 
@@ -210,6 +221,13 @@ def build_graph(entities: list[dict], people: list[dict]) -> dict:
             label=person.get("fio_ru") or person["slug"],
             name_latin=person.get("name_latin"), sanctioned=bool(person.get("sanctions")),
         )
+    for unit in military_units:
+        add_node(
+            f"unit::{unit['slug']}", kind="military_unit",
+            label=unit.get("name_ru") or unit["slug"],
+            unit_type=unit.get("unit_type"), parent_grouping=unit.get("parent_grouping"),
+            designation_confidence=unit.get("designation_confidence"),
+        )
 
     def add_stub(raw_name: str, context: str) -> str:
         node_id = f"stub::{normalize(raw_name)}"
@@ -223,7 +241,7 @@ def build_graph(entities: list[dict], people: list[dict]) -> dict:
         return name_to_slug.get(normalize(raw_name))
 
     def add_edge(source, target, edge_type, label=None, source_id=None, as_of=None,
-                 weight=1.0, temporal_status="unknown") -> None:
+                 weight=1.0, temporal_status="unknown", confidence=None) -> None:
         if source in nodes and target in nodes:
             as_of = as_of if isinstance(as_of, str) and _DATE_RE.fullmatch(as_of) else None
             if temporal_status in {"current", "historical"} and (not as_of or not source_id):
@@ -232,6 +250,7 @@ def build_graph(entities: list[dict], people: list[dict]) -> dict:
                 "source": source, "target": target, "type": edge_type,
                 "label": label, "source_id": source_id, "as_of": as_of,
                 "weight": weight, "temporal_status": temporal_status,
+                "confidence": confidence,
             })
 
     for entity in entities:
@@ -323,6 +342,36 @@ def build_graph(entities: list[dict], people: list[dict]) -> dict:
                      source_id=source_id, classification=classify_product(name, description))
             add_edge(slug, node_id, "produces", source_id=source_id)
 
+        for contract in entity.get("government_contracts") or []:
+            customer_name = contract.get("customer")
+            if not customer_name:
+                continue
+            cust_id = customer_id(customer_name)
+            add_node(cust_id, kind="government_customer", label=customer_name)
+            raw_date = contract.get("date")
+            as_of = raw_date if isinstance(raw_date, str) and _DATE_RE.fullmatch(raw_date) else None
+            source_id = contract.get("source_id") if isinstance(contract.get("source_id"), str) else None
+            add_edge(cust_id, slug, "procures", contract.get("contract_number"),
+                     source_id, as_of, weight=contract.get("value_rub") or 1.0)
+
+        cbst_tie = entity.get("cbst_tie")
+        if (isinstance(cbst_tie, dict) and cbst_tie.get("claim")
+                and cbst_tie.get("confidence") in CBST_TIE_CONFIDENCE
+                and slug != CBST_SLUG and CBST_SLUG in nodes):
+            claim = cbst_tie["claim"]
+            label = claim if len(claim) <= 120 else claim[:117] + "..."
+            add_edge(slug, CBST_SLUG, "cbst_tie", label,
+                     cbst_tie.get("source_id"), weight=1.0,
+                     confidence=cbst_tie.get("confidence"))
+
+        for evidence in entity.get("battlefield_evidence") or []:
+            unit_slug = evidence.get("unit_slug")
+            if not unit_slug:
+                continue
+            unit_node_id = f"unit::{unit_slug}"
+            as_of, source_id = _date_and_source(evidence)
+            add_edge(slug, unit_node_id, "confirmed_field_use", None, source_id, as_of)
+
     for person in people:
         slug = person["slug"]
         for role in person.get("roles") or []:
@@ -375,7 +424,8 @@ def main() -> None:
     args = ap.parse_args()
     entities = json.loads(ENTITIES.read_text(encoding="utf-8"))
     people = json.loads(PEOPLE.read_text(encoding="utf-8"))
-    graph = build_graph(entities, people)
+    military_units = json.loads(MILITARY_UNITS.read_text(encoding="utf-8")) if MILITARY_UNITS.exists() else []
+    graph = build_graph(entities, people, military_units)
     views = build_views(graph)
     OUT.write_text(json.dumps(graph, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     VIEWS_OUT.write_text(json.dumps(views, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

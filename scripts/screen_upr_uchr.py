@@ -57,15 +57,49 @@ anyone still unchecked, though re-running is still harmless (it skips
 anyone already checked today) if you want to grab the occasional
 straggler that gets through.
 
+**2026-09-14: interactive captcha solving added (`--solve-captcha`).**
+Reverse-engineered from a user-supplied HAR capture of pb.nalog.ru's own
+captcha-dialog flow (no login/cookies involved — every step is a plain,
+stateless GET/POST keyed only by an explicit token value):
+
+  1. GET  /captcha-dialog.html            -> HTML with a hidden
+     `<input name="captchaToken" value="...">` — a fresh token, freshly
+     generated server-side on every load, not tied to the request that
+     originally triggered the wall.
+  2. GET  /static/captcha.bin?a=<token>&version=4  -> a small JPEG (200x100,
+     6 distorted digits) keyed by that same token.
+  3. POST /captcha-proc.json  captcha=<the 6 digits>&captchaToken=<token>
+     -> a JSON-encoded string, e.g. "5A4C05DC..." — call this pbCaptchaToken.
+  4. Retry the ORIGINAL blocked request with `pbCaptchaToken=<that value>`
+     added to its POST body (alongside its normal fields) — this is the
+     `['mode','page','pageSize','token','pbCaptchaToken']` field pb's own
+     `pb-search-form.js` already special-cases.
+
+With `--solve-captcha`, `post()` catches both captcha signals (an HTTP 400
+with `pbSearchCaptcha` in the body, and a 200 response with
+`captchaRequired: true`) and pauses: it saves the image locally and prompts
+for the digits on stdin, submits them, and retries the original call with
+`pbCaptchaToken` attached — transparent to every caller (`search_upr_uchr`/
+`search_ul_by_token` don't need to know this happened). Solving one captcha
+clears the wall for the request it was attached to, but the wall can
+reassert a few requests later (consistent with the count/session-based
+gate already documented above) — expect to solve more than one per run.
+Without `--solve-captcha` (the default), behavior is unchanged from
+before: a captcha hit still raises and the loop skips to the next person,
+same as the original "cannot proceed unattended" design.
+
 Usage:
     python3 scripts/screen_upr_uchr.py                  # everyone with inn_personal
     python3 scripts/screen_upr_uchr.py --slug shatrakova-anastasiya-artemovna
     python3 scripts/screen_upr_uchr.py --force           # re-check even if already checked today
+    python3 scripts/screen_upr_uchr.py --solve-captcha   # pause and prompt to solve captchas as they appear
 """
 from __future__ import annotations
 
 import argparse
 import json
+import re
+import tempfile
 import time
 import urllib.error
 import urllib.parse
@@ -77,8 +111,15 @@ REPO = Path(__file__).resolve().parent.parent
 PEOPLE = REPO / "data" / "registry" / "people.json"
 
 BASE_URL = "https://pb.nalog.ru/search-proc.json"
+CAPTCHA_DIALOG_URL = "https://pb.nalog.ru/captcha-dialog.html"
+CAPTCHA_IMG_URL = "https://pb.nalog.ru/static/captcha.bin"
+CAPTCHA_PROC_URL = "https://pb.nalog.ru/captcha-proc.json"
+CAPTCHA_IMG_PATH = Path(tempfile.gettempdir()) / "pb_nalog_captcha.jpg"
 USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
               "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+
+SOLVE_CAPTCHA = False  # set from --solve-captcha in main()
+MAX_CAPTCHA_ATTEMPTS = 3  # per blocked call — a wrong guess retries, doesn't abort
 
 POLL_DELAY = 2.0
 POLL_MAX_TRIES = 10
@@ -95,7 +136,47 @@ CONNECT_TIMEOUT = 10  # short on purpose — a hung/geoblocked connection should
                        # up to 10 polls stacked on top of that.
 
 
-def post(data: dict) -> dict:
+def _http_get(url: str) -> bytes:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(req, timeout=CONNECT_TIMEOUT) as resp:
+        return resp.read()
+
+
+def solve_captcha_interactively() -> str:
+    """Fetch a fresh pb.nalog.ru captcha, save it locally, prompt on stdin
+    for the digits, submit them, and return the resulting pbCaptchaToken to
+    attach to the retried request. See the module docstring for the
+    HAR-derived flow this drives."""
+    html = _http_get(CAPTCHA_DIALOG_URL).decode("utf-8", errors="replace")
+    m = re.search(r'name="captchaToken"\s+value="([0-9A-Fa-f]+)"', html)
+    if not m:
+        raise RuntimeError("could not find captchaToken in captcha-dialog.html — page shape may have changed")
+    token = m.group(1)
+
+    img_bytes = _http_get(f"{CAPTCHA_IMG_URL}?a={token}&version=4")
+    CAPTCHA_IMG_PATH.write_bytes(img_bytes)
+
+    print(f"\n  >>> CAPTCHA required. Image saved to: {CAPTCHA_IMG_PATH}")
+    print(f"      Open it (e.g. `open {CAPTCHA_IMG_PATH}`) and type the digits you see.")
+    digits = input("      Digits: ").strip()
+
+    body = urllib.parse.urlencode({"captcha": digits, "captchaToken": token}).encode("ascii")
+    req = urllib.request.Request(
+        CAPTCHA_PROC_URL, data=body, method="POST",
+        headers={
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-Requested-With": "XMLHttpRequest",
+            "User-Agent": USER_AGENT,
+        },
+    )
+    with urllib.request.urlopen(req, timeout=CONNECT_TIMEOUT) as resp:
+        result = json.loads(resp.read().decode("utf-8"))
+    if not isinstance(result, str) or not result:
+        raise RuntimeError(f"unexpected captcha-proc.json response: {result!r}")
+    return result
+
+
+def post(data: dict, _captcha_attempts: int = 0) -> dict:
     body = urllib.parse.urlencode(data).encode("ascii")
     req = urllib.request.Request(
         BASE_URL, data=body, method="POST",
@@ -107,7 +188,7 @@ def post(data: dict) -> dict:
     )
     try:
         with urllib.request.urlopen(req, timeout=CONNECT_TIMEOUT) as resp:
-            return json.loads(resp.read().decode("utf-8"))
+            result = json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         # See screen_disqualified.py's identical fix (2026-09-06): pb.nalog.ru
         # returns a 400 with a JSON body explaining why (captcha wall, bad
@@ -117,7 +198,16 @@ def post(data: dict) -> dict:
             detail = e.read().decode("utf-8", errors="replace")
         except Exception:
             detail = ""
+        if SOLVE_CAPTCHA and "pbSearchCaptcha" in detail and _captcha_attempts < MAX_CAPTCHA_ATTEMPTS:
+            pb_captcha_token = solve_captcha_interactively()
+            return post({**data, "pbCaptchaToken": pb_captcha_token}, _captcha_attempts + 1)
         raise urllib.error.HTTPError(e.url, e.code, f"{e.reason} -- {detail}", e.headers, None) from None
+
+    if isinstance(result, dict) and result.get("captchaRequired") and SOLVE_CAPTCHA and _captcha_attempts < MAX_CAPTCHA_ATTEMPTS:
+        pb_captcha_token = solve_captcha_interactively()
+        return post({**data, "pbCaptchaToken": pb_captcha_token}, _captcha_attempts + 1)
+
+    return result
 
 
 def poll(request_id: str) -> dict:
@@ -149,10 +239,18 @@ def search_ul_by_token(token: str, query_name: str) -> list[dict]:
 
 
 def main() -> None:
+    global SOLVE_CAPTCHA
     ap = argparse.ArgumentParser()
     ap.add_argument("--slug", default=None)
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--solve-captcha", action="store_true",
+                     help="pause and prompt on stdin to solve pb.nalog.ru captchas as they appear, "
+                          "instead of skipping the person on a captcha hit")
+    ap.add_argument("--limit", type=int, default=None,
+                     help="stop after this many people this run, so a --solve-captcha session can be "
+                          "sized to how many captchas you're willing to solve in one sitting")
     args = ap.parse_args()
+    SOLVE_CAPTCHA = args.solve_captcha
 
     people = json.loads(PEOPLE.read_text(encoding="utf-8"))
     today = date.today().isoformat()
@@ -162,6 +260,8 @@ def main() -> None:
         targets = [p for p in targets if p["slug"] == args.slug]
     if not args.force:
         targets = [p for p in targets if p.get("other_entities_checked_at") != today]
+    if args.limit is not None:
+        targets = targets[:args.limit]
 
     if not targets:
         print("Nothing to do (everyone with inn_personal already checked today — use --force).")
