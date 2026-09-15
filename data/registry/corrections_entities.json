@@ -5004,6 +5004,21 @@
     }
   ],
   "entities": {
+    "ooo-atlant-logistik": {
+      "set": {
+        "related_entities": [
+          {
+            "slug": "ooo-everest",
+            "relationship": "Identical registered address (109125, г. Москва, пр-кт Волгоградский, д.73, стр.1). No director or founder overlap found (this entity's director is Русецкий Алексей Сергеевич; ooo-everest's is Беленкова Анжелика Евгеньевна, sole founder Хутешен Алексей Александрович). Co-location only, likely a shared registered-agent/virtual-office suite.",
+            "relationship_type": "shared-address",
+            "confidence": "confirmed"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-15: found during a registry-wide precise-address co-location scan (no EGRUL needed, both entities' address/director/founders fields already in the registry) -- new shared-address relationship_type value added the same session."
+      ]
+    },
     "9714068459": {
       "set": {
         "_verified": true,
@@ -5014,6 +5029,15 @@
             "note": "ГРН 1257700021468, 22.01.2025 — address at registration, unchanged as of the 14.08.2026 extract",
             "source_id": "s0230",
             "value": "125167, Москва, вн.тер.г. муниципальный округ Аэропорт, ал. Нарышкинская, д. 5, стр. 2, помещ. 1/1"
+          }
+        ],
+        "related_entities": [
+          {
+            "slug": "ooo-aerotekhalyans",
+            "relationship": "Identical registered помещение (125167, Москва, ал. Нарышкинская, д.5, стр.2, помещ.1/1). No director or founder overlap found -- ooo-aerotekhalyans is 51%/25%/24% owned by ООО «Отраслевой центр импортозамещения», АО «УК «Азимут»» and Кожемякин В.В., none matching this entity's own director/founder record. Co-location only, likely a shared registered-agent/virtual-office suite; ООО «Оупен Лоджистикс», also registered at this same address, is excluded from this tag as unrelated to the investigation.",
+            "relationship_type": "shared-address",
+            "source_id": "s0230",
+            "confidence": "confirmed"
           }
         ],
         "charter_capital": 100000,
@@ -12216,7 +12240,19 @@
             "source_id": "s1416",
             "subject_ru": "Поставка детекторов беспилотных летательных аппаратов Булат v.4",
             "value": 16192000,
-            "value_rub": 16192000
+            "value_rub": 16192000,
+            "event_type": "contract_award",
+            "actor_to": {
+              "kind": "government_customer",
+              "id": null,
+              "label": "ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ ПО КУРСКОЙ ОБЛАСТИ (ИНН 4632047480)"
+            },
+            "delivery_confirmed": {
+              "event_type": "delivery_confirmation",
+              "as_of": "2024-11-18",
+              "note": "УПД confirms all 184 contracted units delivered, same file family as s1416.",
+              "source_id": "s1416"
+            }
           },
           {
             "contract_number": "ЕП 3-25 (реестровый № 1500300810225000152)",
@@ -12226,7 +12262,19 @@
             "source_id": "s1417",
             "subject_ru": "Комплекс противодействия БПЛА «Покров» ВЦ5 АЛЬФА",
             "value": 11984000,
-            "value_rub": 11984000
+            "value_rub": 11984000,
+            "event_type": "contract_award",
+            "actor_to": {
+              "kind": "government_customer",
+              "id": null,
+              "label": "ФГКУ «ЦСООР «ЛИДЕР»» (ИНН 5003008102)"
+            },
+            "delivery_confirmed": {
+              "event_type": "delivery_confirmation",
+              "as_of": "2025-12-25",
+              "note": "Акт № 1, signed by the unit's own commanding general, names Цыганов explicitly as \"Производитель\" (manufacturer), not merely reseller.",
+              "source_id": "s1464"
+            }
           },
           {
             "customer": "Главное управление МЧС России по Курской области",
@@ -12234,7 +12282,13 @@
             "items": "Оперативная закупка детекторов беспилотных летательных аппаратов (дальность обнаружения до 1,5 км) для оснащения личного состава пожарно-спасательной группировки Курской области. Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ — federal-level emergency status declared for Kursk region от 07.08.2024, justification citing МЧС Минстра Куренкова's directive and explicitly attributing the emergency to «неизбирательные террористические атаки ВСУ» (official-framing quote, verbatim from the justification document, not this investigation's own characterization).",
             "reg_number": "1463204748024000101",
             "source_id": "s1460",
-            "value_rub": 16192000
+            "value_rub": 16192000,
+            "event_type": "contract_award",
+            "actor_to": {
+              "kind": "government_customer",
+              "id": null,
+              "label": "Главное управление МЧС России по Курской области"
+            }
           }
         ],
         "notes": "zakupki cluster review 2026-08-31: 1 remaining unwired archived card beyond the already-wired Булат/Покров contracts, non-recurring, no new signal. Not wired. Closed.",
@@ -16241,6 +16295,15 @@
             "value": "125167, Москва, вн.тер.г. муниципальный округ Аэропорт, ал. Нарышкинская, д. 5, стр. 2, помещ. 1/1"
           }
         ],
+        "related_entities": [
+          {
+            "slug": "ooo-mptm",
+            "relationship": "Identical registered помещение (125167, Москва, ал. Нарышкинская, д.5, стр.2, помещ.1/1). No director or founder overlap found. Co-location only, likely a shared registered-agent/virtual-office suite; ООО «Оупен Лоджистикс», also registered at this same address, is excluded from this tag as unrelated to the investigation.",
+            "relationship_type": "shared-address",
+            "source_id": "s0224",
+            "confidence": "confirmed"
+          }
+        ],
         "charter_capital": 100000,
         "charter_capital_history": [
           {
@@ -18553,21 +18616,39 @@
             "text_en": "The Kuznechik prototype was unveiled back in 2023, but large-scale deliveries to the troops began only after the AFU incursion into Kursk oblast. According to information we get from our military, FPV drones equipped with Kuznechiks have struck hundreds of units of military equipment, including heavily armored Western-made examples.",
             "context": "On-record quote from founder Александр Барашков to RT (02.11.2024), independently corroborating (from a source distinct from the earlier single-blogger Kursk-lab mention) that Гагаринг deployed field labs inside Курская область during the incursion response, equipping thousands of FPV drones. This directly resolves the previously-flagged open question about an unconfirmed Kursk-oblast site.",
             "source_id": "s5435",
-            "as_of": "2024-11-02"
+            "as_of": "2024-11-02",
+            "event_type": "press_self_report",
+            "actor_to": {
+              "kind": "entity",
+              "id": null,
+              "label": "RT (press)"
+            }
           },
           {
             "text_ru": "Система связи и управление «Кузнечик» для FPV-дронов активно используется российскими военными в зоне специальной военной операции на Украине... Барашков отметил, что не может раскрывать количество поставленных систем и их распределение по подразделениям, так как эта информация является закрытой.",
             "text_en": "The Kuznechik communications/control system for FPV drones is actively used by Russian forces in the SVO zone... Barashkov noted he cannot disclose the quantity of systems delivered or their distribution among units, as this information is classified.",
             "context": "Independent confirmation via Народный фронт (ONF, a state-linked movement) → ТАСС → vz.ru/ridus.ru republication (08.04.2025), distinct from Гагаринг's own marketing copy. Notable self-admission: Барашков will make broad battlefield-effectiveness claims on record but explicitly declines to give verifiable deployment-scale figures, calling them classified.",
             "source_id": "s5436",
-            "as_of": "2025-04-08"
+            "as_of": "2025-04-08",
+            "event_type": "field_confirmation",
+            "actor_to": {
+              "kind": "entity",
+              "id": null,
+              "label": "Russian armed forces (via ОНФ -> ТАСС -> vz.ru)"
+            }
           },
           {
             "text_ru": "Выражаю огромную благодарность Товарищу Александру Сергеевичу и всему коллективу лаборатории «Гагаринг» за предоставленные «Кузнечики» в количестве 500 шт. Благодарим за постоянную поддержку!",
             "text_en": "I express my deep gratitude to Comrade Aleksandr Sergeyevich and the whole Gagaring lab team for the 500 Kuznechik units provided. Thank you for your constant support!",
             "context": "Field acknowledgment credited to channel @RuFront (30.08.2026) — a quantified (500 units), third-party-attributed confirmation of Кузнечик supply to a named front-line-adjacent channel, independent of Гагаринг's own marketing. Also a military thank-you letter genre post (see CLAUDE.md's documented pattern) -- a near-duplicate second entry with the identical Russian original but no source_id was removed 2026-09-15 (found during product-profile review) as the same underlying post catalogued twice, not independent corroboration.",
             "source_id": "s5447",
-            "as_of": "2026-08-30"
+            "as_of": "2026-08-30",
+            "event_type": "thank_you_letter",
+            "actor_to": {
+              "kind": "military_unit",
+              "id": null,
+              "label": "unnamed front-line unit (via @RuFront)"
+            }
           }
         ],
         "cbst_tie": {
@@ -24734,7 +24815,13 @@
             "items": "Поставка средств ПОДАВЛЕНИЯ беспилотных аппаратов (не обнаружения — corrected per the sole-supplier notice's own text, which the contract-card-only extraction had mis-parsed as detection). Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ, justified in the notice by reference to МЧС letters МЧС России от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного каталога средств противодействия», explicitly tied to equipping personnel deployed for «поиск, обезвреживание и уничтожение взрывоопасных предметов на территории Курской области» (ordnance-disposal operations in Kursk region) with counter-UAV detection equipment for their own force protection.",
             "reg_number": "1500300810225000157",
             "source_id": "s3680",
-            "value_rub": 2314200
+            "value_rub": 2314200,
+            "event_type": "contract_award",
+            "actor_to": {
+              "kind": "government_customer",
+              "id": null,
+              "label": "ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz)"
+            }
           },
           {
             "customer": "Администрация Белгородского муниципального округа",
@@ -24742,7 +24829,13 @@
             "items": "Поставка мониторинговых устройств «Булат» — same «Булат» product line as the earlier ИП Цыганов contracts (see corrections entry for that person).",
             "reg_number": "3310005025826000052",
             "source_id": "s3424",
-            "value_rub": 495000
+            "value_rub": 495000,
+            "event_type": "contract_award",
+            "actor_to": {
+              "kind": "government_customer",
+              "id": null,
+              "label": "Администрация Белгородского муниципального округа"
+            }
           }
         ],
         "inn": "5038189259",
@@ -31914,10 +32007,25 @@
     },
     "ao-opticheskie-sistemy": {
       "set": {
-        "notes": "НСПД corroboration (2026-09-08): nspd.gov.ru geoportal search on \"Москва, б-р Яна Райниса, д.41\" returns an ordinary Southern Tushino residential apartment tower — individual flats (кв. 33, 83, 18-77 m²), small basement/technical-floor commercial units (Нежилое, тех.подполье/тех.этаж) — no industrial, office-park, or dedicated commercial facility on record at this address. Confirms the mass-registration mail-drop reading already in tier_basis: this is a residential building, not a place any of the three co-registered companies (this entity, АО «Оптические системы», ООО «Аметист», ООО ПК «Стальной купол») could plausibly conduct real operations from."
+        "notes": "НСПД corroboration (2026-09-08): nspd.gov.ru geoportal search on \"Москва, б-р Яна Райниса, д.41\" returns an ordinary Southern Tushino residential apartment tower — individual flats (кв. 33, 83, 18-77 m²), small basement/technical-floor commercial units (Нежилое, тех.подполье/тех.этаж) — no industrial, office-park, or dedicated commercial facility on record at this address. Confirms the mass-registration mail-drop reading already in tier_basis: this is a residential building, not a place any of the three co-registered companies (this entity, АО «Оптические системы», ООО «Аметист», ООО ПК «Стальной купол») could plausibly conduct real operations from.",
+        "related_entities": [
+          {
+            "slug": "ooo-ametist",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1 -- the residential mail-drop building this entity, ooo-ametist and ooo-pk-stalnoy-kupol all share). No director or founder overlap found with this entity's own record.",
+            "relationship_type": "shared-address",
+            "confidence": "confirmed"
+          },
+          {
+            "slug": "ooo-pk-stalnoy-kupol",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record.",
+            "relationship_type": "shared-address",
+            "confidence": "confirmed"
+          }
+        ]
       },
       "why": [
-        "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08"
+        "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08",
+        "2026-09-15: wired shared-address related_entities[] edges to ooo-ametist and ooo-pk-stalnoy-kupol -- co-location only, no confirmed common principal with either. Found during a registry-wide address-co-location scan."
       ],
       "verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
     },
@@ -31946,6 +32054,18 @@
             "relationship_type": "sister-entity",
             "source_id": "s7451",
             "confidence": "confirmed"
+          },
+          {
+            "slug": "ao-opticheskie-sistemy",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found (this entity's own director/founder is Хутешен/Беленкова).",
+            "relationship_type": "shared-address",
+            "confidence": "confirmed"
+          },
+          {
+            "slug": "ooo-pk-stalnoy-kupol",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found (this entity's own director/founder is Хутешен/Беленкова).",
+            "relationship_type": "shared-address",
+            "confidence": "confirmed"
           }
         ],
         "financials": [
@@ -31972,16 +32092,31 @@
       "why": [
         "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08",
         "2026-09-14: full ЕГРЮЛ-выписка (s7451) confirms sole 100% founder is Хутешен Алексей Александрович (same person as ooo-everest's sole founder) -- resolves the standing person-side reciprocal-role gap with a sourced founders_history entry.",
-        "2026-09-15: wired the sister-entity related_entities[] edge to ooo-everest that the 2026-09-14 why-note already identified but never converted into a graph edge -- found during a registry-wide address-co-location scan (no EGRUL needed, both founders_history entries already sourced)."
+        "2026-09-15: wired the sister-entity related_entities[] edge to ooo-everest that the 2026-09-14 why-note already identified but never converted into a graph edge -- found during a registry-wide address-co-location scan (no EGRUL needed, both founders_history entries already sourced). Also added shared-address edges to ao-opticheskie-sistemy and ooo-pk-stalnoy-kupol, the two entities this entity co-registers with, distinguishing that from the stronger everest sister-entity tie."
       ],
       "verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
     },
     "ooo-pk-stalnoy-kupol": {
       "set": {
-        "notes": "НСПД corroboration (2026-09-08): nspd.gov.ru geoportal search on \"Москва, б-р Яна Райниса, д.41\" returns an ordinary Southern Tushino residential apartment tower — individual flats (кв. 33, 83, 18-77 m²), small basement/technical-floor commercial units (Нежилое, тех.подполье/тех.этаж) — no industrial, office-park, or dedicated commercial facility on record at this address. Confirms the mass-registration mail-drop reading already in tier_basis: this is a residential building, not a place any of the three co-registered companies (this entity, АО «Оптические системы», ООО «Аметист», ООО ПК «Стальной купол») could plausibly conduct real operations from."
+        "notes": "НСПД corroboration (2026-09-08): nspd.gov.ru geoportal search on \"Москва, б-р Яна Райниса, д.41\" returns an ordinary Southern Tushino residential apartment tower — individual flats (кв. 33, 83, 18-77 m²), small basement/technical-floor commercial units (Нежилое, тех.подполье/тех.этаж) — no industrial, office-park, or dedicated commercial facility on record at this address. Confirms the mass-registration mail-drop reading already in tier_basis: this is a residential building, not a place any of the three co-registered companies (this entity, АО «Оптические системы», ООО «Аметист», ООО ПК «Стальной купол») could plausibly conduct real operations from.",
+        "related_entities": [
+          {
+            "slug": "ao-opticheskie-sistemy",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record.",
+            "relationship_type": "shared-address",
+            "confidence": "confirmed"
+          },
+          {
+            "slug": "ooo-ametist",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record.",
+            "relationship_type": "shared-address",
+            "confidence": "confirmed"
+          }
+        ]
       },
       "why": [
-        "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08"
+        "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08",
+        "2026-09-15: wired shared-address related_entities[] edges to ao-opticheskie-sistemy and ooo-ametist -- co-location only, no confirmed common principal with either. Found during a registry-wide address-co-location scan."
       ],
       "verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
     },
@@ -32840,12 +32975,19 @@
             "relationship_type": "sister-entity",
             "source_id": "s7449",
             "confidence": "confirmed"
+          },
+          {
+            "slug": "ooo-atlant-logistik",
+            "relationship": "Identical registered address (109125, г. Москва, пр-кт Волгоградский, д.73, стр.1). No director or founder overlap found (this entity's own director/founder is Хутешен/Беленкова, per ooo-ametist's sister-entity tie above; ooo-atlant-logistik's director is Русецкий Алексей Сергеевич). Co-location only, likely a shared registered-agent/virtual-office suite.",
+            "relationship_type": "shared-address",
+            "confidence": "confirmed"
           }
         ]
       },
       "why": [
         "2026-09-14: full ЕГРЮЛ-выписка (s7449) confirms sole 100% founder is Хутешен Алексей Александрович -- resolves the standing person-side reciprocal-role gap with a sourced founders_history entry.",
-        "2026-09-15: wired the reciprocal sister-entity related_entities[] edge to ooo-ametist that the 2026-09-14 why-note already identified but never converted into a graph edge -- found during a registry-wide address-co-location scan (no EGRUL needed, both founders_history entries already sourced)."
+        "2026-09-15: wired the reciprocal sister-entity related_entities[] edge to ooo-ametist that the 2026-09-14 why-note already identified but never converted into a graph edge -- found during a registry-wide address-co-location scan (no EGRUL needed, both founders_history entries already sourced).",
+        "2026-09-15: added a shared-address tie to ooo-atlant-logistik (new relationship_type value, added the same scan) -- co-location only, no confirmed common principal."
       ]
     },
     "proekt-kb-arkhangel": {

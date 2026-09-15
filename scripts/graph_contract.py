@@ -61,10 +61,56 @@ RELATED_ENTITY_RELATIONSHIP_TYPES = {
     "same-name-different-entity",    # shares a brand/name; CONFIRMED to be a distinct legal entity, not the same one
     "training-partnership",          # co-runs a training/operational program, not a corporate tie
     "competitor",                    # rival products/entities in the same market segment (unpopulated as of schema v5 -- no sourced claim exists yet)
+    "shared-address",                # registered at the identical street address per EGRUL, with NO confirmed director/founder overlap -- a co-location signal only, distinct from sister-entity (which requires a confirmed common principal)
 }
 PRODUCT_CLASSIFICATION_FIELDS = {
     "status", "uav_platform", "ew_installation",
 }
+
+# event_type (added 2026-09-15) -- a controlled vocabulary for re-typing a
+# battlefield_evidence[]/government_contracts[]/marketing_claims[] entry as a
+# dated transaction between two named parties, instead of a bare prose
+# paragraph on one entity's own record. Derived from a validated design
+# prototype (a 9-row hand-built timeline over the Кузнечик/Булат flagship
+# chains -- see notes/rebuild_plan.md's 2026-09-15 evidence-ledger entry)
+# before being applied to real registry data, same "prototype the visual
+# before committing to a schema change" discipline as every other exhibit
+# this project has shipped.
+#
+# Each typed entry also carries an `actor_to` object naming the second
+# party: {"kind": one of ACTOR_KINDS, "id": a resolvable slug/node id or
+# null, "label": a human-readable name -- filled always, since `id` is
+# frequently not yet resolvable to an existing catalogued node (see the
+# multi-role-individuals/military-unit lesson below)}.
+#
+# Deliberately NOT wired into build_relationship_graph.py yet, and NOT
+# validated by validate_graph() above: doing so would require resolving
+# every actor_to.label to a real graph node, and this project already hit
+# the failure mode that guards against -- a peer audit (2026-09-15) found
+# `confirmed_field_use` sitting at a single edge was CORRECT, not a gap,
+# because military_units.json is deliberately scoped to one specific source
+# network (a delivery-tracking channel) and must not be widened with units
+# named only in unrelated drone-manufacturer battlefield posts, even though
+# those posts are perfectly good evidence in their own right. event_type
+# lets that evidence exist as a structured, dated, typed record -- and
+# drive a browsable evidence-ledger exhibit -- without forcing a premature
+# or catalog-polluting graph edge. Wire actor_to.id -> a real node (and add
+# graph validation) only once a specific event_type's target is something
+# this project has already decided belongs in the graph (e.g. a
+# `government_customer` contract award, which the graph already resolves
+# via `procures` edges independent of this field).
+EVENT_TYPES = {
+    "press_self_report",       # on-record interview/press statement by the entity itself
+    "field_confirmation",      # independent (non-marketing) third-party republication of field use
+    "thank_you_letter",        # «благодарственное письмо» genre -- see CLAUDE.md's documented pattern
+    "commendation",            # «почетная грамота» genre, same family as thank_you_letter
+    "delivery_confirmation",   # a УПД/Акт or equivalent closing a contract_award
+    "contract_award",          # a government_contracts[] entry, sole-supplier or tendered
+    "handover_ceremony",       # a staged/photographed handover event
+    "battlefield_sighting",    # combat-footage/downed-unit sighting, independent of self-reporting
+    "marketing_claim",         # self-incriminating self-promotion, not independently corroborated
+}
+ACTOR_KINDS = {"entity", "person", "military_unit", "government_customer"}
 
 
 def _error(errors: list[str], message: str) -> None:

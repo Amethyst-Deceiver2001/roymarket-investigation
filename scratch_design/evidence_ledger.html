@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Evidence Ledger — РОЙ.МАРКЕТ</title>
+<style>
+:root {
+  --paper: #eceef1; --panel: #f6f7f9; --panel-2: #e3e6ea;
+  --ink: #12161b; --ink-2: #414a55; --ink-3: #6b7683;
+  --rule: #c8ced6; --rule-soft: #dbe0e6;
+  --accent: #17456b; --accent-soft: #e0e9f1;
+  --shadow: 0 1px 2px rgba(18,22,27,.06), 0 8px 24px rgba(18,22,27,.05);
+  --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1216; --panel: #151b21; --panel-2: #1d242c;
+    --ink: #e6eaee; --ink-2: #b3bcc6; --ink-3: #838f9c;
+    --rule: #2c353f; --rule-soft: #222a33;
+    --accent: #7db4dd; --accent-soft: #16252f;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1216; --panel: #151b21; --panel-2: #1d242c;
+  --ink: #e6eaee; --ink-2: #b3bcc6; --ink-3: #838f9c;
+  --rule: #2c353f; --rule-soft: #222a33;
+  --accent: #7db4dd; --accent-soft: #16252f;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; margin: 0; padding: 0 1.25rem 6rem; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-underline-offset: 2px; }
+.wrap { max-width: 46rem; margin: 0 auto; }
+.mast { border-bottom: 3px double var(--rule); padding: 3rem 0 1.5rem; margin-bottom: 1rem; }
+.kicker { font-family: var(--mono); font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin: 0 0 1rem; }
+h1 { font-family: var(--serif); font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.1; font-weight: 400; letter-spacing: -.015em; text-wrap: balance; margin: 0 0 .5rem; }
+.standfirst { font-family: var(--serif); font-size: 1.05rem; line-height: 1.55; color: var(--ink-2); margin: 0 0 1.25rem; }
+.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin: 0 0 2.5rem; font-size: .8rem; color: var(--ink-2); }
+.legend > span { display: flex; align-items: center; gap: .5rem; }
+.lane-dot { width: .7rem; height: .7rem; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.evt-tag { font-family: var(--mono); font-size: .6rem; letter-spacing: .06em; text-transform: uppercase; padding: .15em .5em; border-radius: 2px; background: var(--panel-2); color: var(--ink-3); }
+.timeline { position: relative; padding-left: 1.9rem; }
+.timeline::before { content: ""; position: absolute; left: .4rem; top: .4rem; bottom: .4rem; width: 2px; background: var(--rule-soft); }
+.tl-item { position: relative; margin-bottom: 2.25rem; }
+.tl-item:last-child { margin-bottom: 0; }
+.tl-dot { position: absolute; left: -1.9rem; top: .35rem; width: .85rem; height: .85rem; border-radius: 50%; border: 2px solid var(--paper); box-shadow: 0 0 0 1.5px currentColor; }
+.tl-date { font-family: var(--mono); font-size: .72rem; color: var(--ink-3); letter-spacing: .03em; margin-bottom: .4rem; display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+.tl-card { background: var(--panel); border: 1px solid var(--rule-soft); border-left-width: 3px; border-radius: 0 4px 4px 0; padding: 1rem 1.15rem; box-shadow: var(--shadow); }
+.tl-flow { font-size: .92rem; font-weight: 640; margin: 0 0 .5rem; display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.tl-flow .arrow { color: var(--ink-3); font-weight: 400; }
+.tl-quote { font-family: var(--mono); font-size: .78rem; line-height: 1.6; background: var(--panel-2); border-radius: 3px; padding: .7rem .85rem; margin: .6rem 0; white-space: pre-wrap; }
+.tl-quote .en { display: block; margin-top: .5rem; font-family: var(--sans); color: var(--ink-2); white-space: normal; }
+.tl-note { font-size: .84rem; color: var(--ink-2); margin: .5rem 0 0; }
+.tl-foot { display: flex; justify-content: space-between; align-items: center; margin-top: .7rem; padding-top: .6rem; border-top: 1px solid var(--rule-soft); font-size: .74rem; color: var(--ink-3); flex-wrap: wrap; gap: .5rem; }
+.tl-value { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 640; }
+.id { font-family: var(--mono); }
+.footnote { font-size: .84rem; color: var(--ink-3); border-top: 1px solid var(--rule-soft); padding-top: 1.25rem; margin-top: 3rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mast">
+    <p class="kicker">Evidence ledger · РОЙ.МАРКЕТ investigation</p>
+    <h1>Every claim, dated and typed</h1>
+    <p class="standfirst">10 sourced prose claims re-read as discrete, dated transactions between two named parties, generated from <code>data/registry/</code>'s own <code>event_type</code> fields — not a hand-picked exhibit. Extend by backfilling more entities' <code>battlefield_evidence[]</code>/<code>government_contracts[]</code>/<code>marketing_claims[]</code> entries with <code>event_type</code> via <code>corrections_entities.json</code>, then re-run this generator.</p>
+    <div class="legend">
+      <span><span class="lane-dot" style="background:#17456b"></span>ИП Цыганов Вадим Борисович</span>
+      <span><span class="lane-dot" style="background:#96700a"></span>ООО «Гагаринг»</span>
+      <span><span class="lane-dot" style="background:#0a7a53"></span>Pokrov LLC</span>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="tl-item" style="color: #17456b">
+      <span class="tl-dot"></span>
+      <div class="tl-date">2024-10-29 <span class="evt-tag">contract award</span></div>
+      <div class="tl-card" style="border-left-color: #17456b">
+        <p class="tl-flow">ИП Цыганов Вадим Борисович <span class="arrow">→</span> ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ ПО КУРСКОЙ ОБЛАСТИ (ИНН 4632047480)</p>
+        
+        <p class="tl-note">Поставка детекторов беспилотных летательных аппаратов Булат v.4</p>
+        <div class="tl-foot"><span class="tl-value">₽16,192,000</span><span class="id">[s1416]</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item" style="color: #17456b">
+      <span class="tl-dot"></span>
+      <div class="tl-date">2024-10-29 <span class="evt-tag">contract award</span></div>
+      <div class="tl-card" style="border-left-color: #17456b">
+        <p class="tl-flow">ИП Цыганов Вадим Борисович <span class="arrow">→</span> Главное управление МЧС России по Курской области</p>
+        
+        <p class="tl-note">Оперативная закупка детекторов беспилотных летательных аппаратов (дальность обнаружения до 1,5 км) для оснащения личного состава пожарно-спасательной группировки Курской области. Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ — federal-level emergency status declared for Kursk region от 07.08.2024, justification citing МЧС Минстра Куренкова&#x27;s directive and explicitly attributing the emergency to «неизбирательные террористические атаки ВСУ» (official-framing quote, verbatim from the justification document, not this investigation&#x27;s own characterization).</p>
+        <div class="tl-foot"><span class="tl-value">₽16,192,000</span><span class="id">[s1460]</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item" style="color: #96700a">
+      <span class="tl-dot"></span>
+      <div class="tl-date">2024-11-02 <span class="evt-tag">press self-report</span></div>
+      <div class="tl-card" style="border-left-color: #96700a">
+        <p class="tl-flow">ООО «Гагаринг» <span class="arrow">→</span> RT (press)</p>
+        <div class="tl-quote">«Прототип «Кузнечика» был представлен ещё в 2023 году, но масштабные поставки в войска начались только после вторжения ВСУ в Курскую область. По информации, которую мы получаем от наших военных, FPV-дроны, оснащённые «Кузнечиками», поразили сотни единиц военной техники, включая тяжело бронированные образцы западного производства.»<span class="en">The Kuznechik prototype was unveiled back in 2023, but large-scale deliveries to the troops began only after the AFU incursion into Kursk oblast. According to information we get from our military, FPV drones equipped with Kuznechiks have struck hundreds of units of military equipment, including heavily armored Western-made examples.</span></div>
+        <p class="tl-note">On-record quote from founder Александр Барашков to RT (02.11.2024), independently corroborating (from a source distinct from the earlier single-blogger Kursk-lab mention) that Гагаринг deployed field labs inside Курская область during the incursion response, equipping thousands of FPV drones. This directly resolves the previously-flagged open question about an unconfirmed Kursk-oblast site.</p>
+        <div class="tl-foot"><span></span><span class="id">[s5435]</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item" style="color: #17456b">
+      <span class="tl-dot"></span>
+      <div class="tl-date">2024-11-18 <span class="evt-tag">delivery confirmation</span></div>
+      <div class="tl-card" style="border-left-color: #17456b">
+        <p class="tl-flow">ИП Цыганов Вадим Борисович <span class="arrow">→</span> ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ ПО КУРСКОЙ ОБЛАСТИ (ИНН 4632047480)</p>
+        
+        <p class="tl-note">УПД confirms all 184 contracted units delivered, same file family as s1416.</p>
+        <div class="tl-foot"><span></span><span class="id">[s1416]</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item" style="color: #0a7a53">
+      <span class="tl-dot"></span>
+      <div class="tl-date">2025 <span class="evt-tag">contract award</span></div>
+      <div class="tl-card" style="border-left-color: #0a7a53">
+        <p class="tl-flow">Pokrov LLC <span class="arrow">→</span> ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz)</p>
+        
+        <p class="tl-note">Поставка средств ПОДАВЛЕНИЯ беспилотных аппаратов (не обнаружения — corrected per the sole-supplier notice&#x27;s own text, which the contract-card-only extraction had mis-parsed as detection). Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ, justified in the notice by reference to МЧС letters МЧС России от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного каталога средств противодействия», explicitly tied to equipping personnel deployed for «поиск, обезвреживание и уничтожение взрывоопасных предметов на территории Курской области» (ordnance-disposal operations in Kursk region) with counter-UAV detection equipment for their own force protection.</p>
+        <div class="tl-foot"><span class="tl-value">₽2,314,200</span><span class="id">[s3680]</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item" style="color: #96700a">
+      <span class="tl-dot"></span>
+      <div class="tl-date">2025-04-08 <span class="evt-tag">field confirmation</span></div>
+      <div class="tl-card" style="border-left-color: #96700a">
+        <p class="tl-flow">ООО «Гагаринг» <span class="arrow">→</span> Russian armed forces (via ОНФ -&gt; ТАСС -&gt; vz.ru)</p>
+        <div class="tl-quote">«Система связи и управление «Кузнечик» для FPV-дронов активно используется российскими военными в зоне специальной военной операции на Украине... Барашков отметил, что не может раскрывать количество поставленных систем и их распределение по подразделениям, так как эта информация является закрытой.»<span class="en">The Kuznechik communications/control system for FPV drones is actively used by Russian forces in the SVO zone... Barashkov noted he cannot disclose the quantity of systems delivered or their distribution among units, as this information is classified.</span></div>
+        <p class="tl-note">Independent confirmation via Народный фронт (ONF, a state-linked movement) → ТАСС → vz.ru/ridus.ru republication (08.04.2025), distinct from Гагаринг&#x27;s own marketing copy. Notable self-admission: Барашков will make broad battlefield-effectiveness claims on record but explicitly declines to give verifiable deployment-scale figures, calling them classified.</p>
+        <div class="tl-foot"><span></span><span class="id">[s5436]</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item" style="color: #17456b">
+      <span class="tl-dot"></span>
+      <div class="tl-date">2025-09-18 <span class="evt-tag">contract award</span></div>
+      <div class="tl-card" style="border-left-color: #17456b">
+        <p class="tl-flow">ИП Цыганов Вадим Борисович <span class="arrow">→</span> ФГКУ «ЦСООР «ЛИДЕР»» (ИНН 5003008102)</p>
+        
+        <p class="tl-note">Комплекс противодействия БПЛА «Покров» ВЦ5 АЛЬФА</p>
+        <div class="tl-foot"><span class="tl-value">₽11,984,000</span><span class="id">[s1417]</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item" style="color: #17456b">
+      <span class="tl-dot"></span>
+      <div class="tl-date">2025-12-25 <span class="evt-tag">delivery confirmation</span></div>
+      <div class="tl-card" style="border-left-color: #17456b">
+        <p class="tl-flow">ИП Цыганов Вадим Борисович <span class="arrow">→</span> ФГКУ «ЦСООР «ЛИДЕР»» (ИНН 5003008102)</p>
+        
+        <p class="tl-note">Акт № 1, signed by the unit&#x27;s own commanding general, names Цыганов explicitly as &quot;Производитель&quot; (manufacturer), not merely reseller.</p>
+        <div class="tl-foot"><span></span><span class="id">[s1464]</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item" style="color: #0a7a53">
+      <span class="tl-dot"></span>
+      <div class="tl-date">2026 <span class="evt-tag">contract award</span></div>
+      <div class="tl-card" style="border-left-color: #0a7a53">
+        <p class="tl-flow">Pokrov LLC <span class="arrow">→</span> Администрация Белгородского муниципального округа</p>
+        
+        <p class="tl-note">Поставка мониторинговых устройств «Булат» — same «Булат» product line as the earlier ИП Цыганов contracts (see corrections entry for that person).</p>
+        <div class="tl-foot"><span class="tl-value">₽495,000</span><span class="id">[s3424]</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item" style="color: #96700a">
+      <span class="tl-dot"></span>
+      <div class="tl-date">2026-08-30 <span class="evt-tag">thank-you letter</span></div>
+      <div class="tl-card" style="border-left-color: #96700a">
+        <p class="tl-flow">ООО «Гагаринг» <span class="arrow">→</span> unnamed front-line unit (via @RuFront)</p>
+        <div class="tl-quote">«Выражаю огромную благодарность Товарищу Александру Сергеевичу и всему коллективу лаборатории «Гагаринг» за предоставленные «Кузнечики» в количестве 500 шт. Благодарим за постоянную поддержку!»<span class="en">I express my deep gratitude to Comrade Aleksandr Sergeyevich and the whole Gagaring lab team for the 500 Kuznechik units provided. Thank you for your constant support!</span></div>
+        <p class="tl-note">Field acknowledgment credited to channel @RuFront (30.08.2026) — a quantified (500 units), third-party-attributed confirmation of Кузнечик supply to a named front-line-adjacent channel, independent of Гагаринг&#x27;s own marketing. Also a military thank-you letter genre post (see CLAUDE.md&#x27;s documented pattern) -- a near-duplicate second entry with the identical Russian original but no source_id was removed 2026-09-15 (found during product-profile review) as the same underlying post catalogued twice, not independent corroboration.</p>
+        <div class="tl-foot"><span></span><span class="id">[s5447]</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="footnote">
+    <p>Generated from <code>data/registry/entities.json</code> by <code>scripts/build_evidence_ledger.py</code>. Not hand-edited — corrections go through <code>corrections_entities.json</code>.</p>
+  </div>
+</div>
+</body>
+</html>

@@ -2,7 +2,7 @@
   "schema_version": 5,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1482,
-  "edge_count": 2062,
+  "edge_count": 2072,
   "unresolved_count": 216,
   "nodes": [
     {
@@ -487,7 +487,7 @@
       "sanctioned": false,
       "legal_form": "АО",
       "variant": null,
-      "degree": 5
+      "degree": 9
     },
     {
       "id": "ao-pk-azimut",
@@ -3567,7 +3567,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 7
+      "degree": 9
     },
     {
       "id": "ooo-akatsiya-avia",
@@ -3603,7 +3603,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 8
+      "degree": 12
     },
     {
       "id": "ooo-arkhangel",
@@ -3783,7 +3783,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 5
+      "degree": 7
     },
     {
       "id": "ooo-atlant-servis",
@@ -3987,7 +3987,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 8
+      "degree": 10
     },
     {
       "id": "ooo-eyartek",
@@ -4395,7 +4395,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 2
+      "degree": 4
     },
     {
       "id": "ooo-nova",
@@ -4635,7 +4635,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 5
+      "degree": 9
     },
     {
       "id": "ooo-pokrov",
@@ -15196,6 +15196,28 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
+    },
+    {
+      "source": "ao-opticheskie-sistemy",
+      "target": "ooo-ametist",
+      "type": "related",
+      "label": "shared-address",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-opticheskie-sistemy",
+      "target": "ooo-pk-stalnoy-kupol",
+      "type": "related",
+      "label": "shared-address",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
     },
     {
       "source": "ao-pk-azimut",
@@ -26066,11 +26088,44 @@
       "confidence": "t-doc"
     },
     {
+      "source": "ooo-aerotekhalyans",
+      "target": "ooo-mptm",
+      "type": "related",
+      "label": "shared-address",
+      "source_id": "s0224",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-ametist",
+      "target": "ao-opticheskie-sistemy",
+      "type": "related",
+      "label": "shared-address",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-ametist",
       "target": "ooo-everest",
       "type": "related",
       "label": "sister-entity",
       "source_id": "s7451",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-ametist",
+      "target": "ooo-pk-stalnoy-kupol",
+      "type": "related",
+      "label": "shared-address",
+      "source_id": null,
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -26451,6 +26506,17 @@
       "confidence": null
     },
     {
+      "source": "ooo-atlant-logistik",
+      "target": "ooo-everest",
+      "type": "related",
+      "label": "shared-address",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-aviron",
       "target": "product::ooo-aviron::дори-комплект-береговой-пульт-ду-бортовой-блок-управления-передачи-информации",
       "type": "produces",
@@ -26698,6 +26764,17 @@
       "type": "related",
       "label": "sister-entity",
       "source_id": "s7449",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-everest",
+      "target": "ooo-atlant-logistik",
+      "type": "related",
+      "label": "shared-address",
+      "source_id": null,
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -27859,6 +27936,17 @@
       "confidence": null
     },
     {
+      "source": "ooo-mptm",
+      "target": "ooo-aerotekhalyans",
+      "type": "related",
+      "label": "shared-address",
+      "source_id": "s0230",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-npo-kilovatt",
       "target": "npo-kilobatt",
       "type": "related",
@@ -28919,6 +29007,28 @@
       "target": "product::ooo-orient-sistems::система-ориент-s-ориент-s-lite",
       "type": "produces",
       "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-pk-stalnoy-kupol",
+      "target": "ao-opticheskie-sistemy",
+      "type": "related",
+      "label": "shared-address",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-pk-stalnoy-kupol",
+      "target": "ooo-ametist",
+      "type": "related",
+      "label": "shared-address",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
