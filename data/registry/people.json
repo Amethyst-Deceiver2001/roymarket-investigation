@@ -2597,11 +2597,11 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities_checked_at": "2026-09-15",
     "disqualification_hits": [],
-    "disqualification_checked_at": null,
+    "disqualification_checked_at": "2026-09-15",
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-15",
     "social": [],
     "photo": null,
     "notes": "\n\n2026-09-15 inn_personal backfill: personal ИНН 773670509988 confirmed via ООО «МПТМ»'s own director_history entry (s0230, full EGRUL выписка pulled 2026-09-07 / note dated 2026-08-04) — the entity's own primary-source record already named this figure; only the person record's own inn_personal field had not been set.",
@@ -6382,12 +6382,23 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "7842219445",
+        "ogrn": "1237800134835",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОНСТРУКТОРСКОЕ БЮРО СИНЕРГИЯ\"",
+        "role": "director",
+        "okved": "72.19",
+        "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
+        "registered": "24.11.2023",
+        "region": "САНКТ-ПЕТЕРБУРГ Г."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-15",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-15",
     "social": [],
     "photo": null,
     "notes": "\n\n2026-09-15 inn_personal backfill: confirmed via ООО «КБ Синергия»'s own full ЕГРЮЛ выписка (s6755, EGRUL_7842219445_20260907_ooo-konstruktorskoe-byuro-sinergiya.pdf), naming НЕКРАСОВ АЛЕКСАНДР ВИКТОРОВИЧ with personal ИНН 781627958891 in the директор section (ГРН 2257805131626, 27.05.2025).",
@@ -10804,12 +10815,93 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "7708142686",
+        "ogrn": "1027700479740",
+        "name": "ОБРАЗОВАТЕЛЬНАЯ АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ВЫСШЕГО ОБРАЗОВАНИЯ \"МОСКОВСКИЙ ТЕХНОЛОГИЧЕСКИЙ ИНСТИТУТ\"",
+        "role": "director",
+        "okved": "85.22.1",
+        "okved_label": "Образование высшее - бакалавриат",
+        "registered": "02.12.2002",
+        "region": "ГОРОД ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ МОСКВА"
+      },
+      {
+        "inn": "9703057470",
+        "ogrn": "1217700532389",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИНЕРДЖИ СПЕЙС СИТИ\"",
+        "role": "director",
+        "okved": "68.20",
+        "okved_label": "Аренда и управление собственным или арендованным недвижимым имуществом",
+        "registered": "08.11.2021",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "7736654559",
+        "ogrn": "1137746047405",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЕДУНЕТВОРК\"",
+        "role": "founder",
+        "okved": "73.1",
+        "okved_label": "Деятельность рекламная",
+        "registered": "25.01.2013",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "7842219445",
+        "ogrn": "1237800134835",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОНСТРУКТОРСКОЕ БЮРО СИНЕРГИЯ\"",
+        "role": "founder",
+        "okved": "72.19",
+        "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
+        "registered": "24.11.2023",
+        "region": "САНКТ-ПЕТЕРБУРГ Г."
+      },
+      {
+        "inn": "7736641912",
+        "ogrn": "1127746267384",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МОБИЛЬНОЕ ОБРАЗОВАНИЕ\"",
+        "role": "founder",
+        "okved": "62.01",
+        "okved_label": "Разработка компьютерного программного обеспечения",
+        "registered": "10.04.2012",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "7743221570",
+        "ogrn": "1177746856803",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ЦЕНТР \"АРСЕНАЛ\"",
+        "role": "founder",
+        "okved": "55.10",
+        "okved_label": "Деятельность гостиниц и прочих мест для временного проживания",
+        "registered": "09.08.2017",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "7743652312",
+        "ogrn": "1077758068673",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИНЕРГИЯ ИНТЕГРАТОР\"",
+        "role": "founder",
+        "okved": "46.69",
+        "okved_label": "Торговля оптовая прочими машинами и оборудованием",
+        "registered": "18.07.2007",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "9703057470",
+        "ogrn": "1217700532389",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИНЕРДЖИ СПЕЙС СИТИ\"",
+        "role": "founder",
+        "okved": "68.20",
+        "okved_label": "Аренда и управление собственным или арендованным недвижимым имуществом",
+        "registered": "08.11.2021",
+        "region": "МОСКВА Г."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-15",
     "disqualification_hits": [],
-    "disqualification_checked_at": null,
+    "disqualification_checked_at": "2026-09-15",
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-15",
     "social": [],
     "photo": null,
     "notes": "\n\n2026-09-15 inn_personal backfill: confirmed via ООО «КБ Синергия»'s own full ЕГРЮЛ выписка (s6755, EGRUL_7842219445_20260907_ooo-konstruktorskoe-byuro-sinergiya.pdf), naming УСАЧЁВ ПАВЕЛ АЛЕКСАНДРОВИЧ with personal ИНН 730603977387 in the founder/участники section (ГРН 2257804768538, 10.04.2025).",
@@ -13769,12 +13861,53 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "7720901379",
+        "ogrn": "1237700447324",
+        "name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СТРАТИМ\"",
+        "role": "director",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "03.07.2023",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "9724145543",
+        "ogrn": "1237700601490",
+        "name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СТРАТИМ-ТЕХ\"",
+        "role": "director",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "12.09.2023",
+        "region": "МОСКВА Г."
+      },
+      {
+        "inn": "5260494520",
+        "ogrn": "1245200009075",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРАТИМ\"",
+        "role": "director",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "01.04.2024",
+        "region": "НИЖЕГОРОДСКАЯ ОБЛ."
+      },
+      {
+        "inn": "5260494520",
+        "ogrn": "1245200009075",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРАТИМ\"",
+        "role": "founder",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "01.04.2024",
+        "region": "НИЖЕГОРОДСКАЯ ОБЛ."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-15",
     "disqualification_hits": [],
-    "disqualification_checked_at": null,
+    "disqualification_checked_at": "2026-09-15",
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-15",
     "social": [],
     "photo": "images/kostyunin-pavel-andreevich_portrait_leaderid.jpg",
     "notes": "Contact per АО «Стратим» Leader-ID org profile (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25): phone +7 981 796-88-05 (stored as +89817968805), email pablo.88@mail.ru. Note the org record's own hide_phone/hide_email flags are both true, yet the API payload returns both fields anyway — a platform privacy-control bug, not an intentional public disclosure by the subject.\n\n2026-09-15 inn_personal backfill: confirmed via ООО «СТРАТИМ» (successor/owning entity, ИНН 5260494520)'s own full ЕГРЮЛ выписка (s6802, EGRUL_5260494520_20260907_ooo-stratim.pdf), naming КОСТЮНИН ПАВЕЛ АНДРЕЕВИЧ with personal ИНН 510203980877 as both генеральный директор (ГРН 2265200138157, 02.03.2026) and founder (ГРН 1245200009075, 01.04.2024); the same document lists АО «Стратим» (ИНН 7720901379) as a related legal-entity founder.",
@@ -17058,12 +17191,33 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "7842179810",
+        "ogrn": "1207800035079",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ТЕХНОЛОГИИ\"",
+        "role": "director",
+        "okved": "43.21",
+        "okved_label": "Производство электромонтажных работ",
+        "registered": "10.03.2020",
+        "region": "САНКТ-ПЕТЕРБУРГ Г."
+      },
+      {
+        "inn": "7842179810",
+        "ogrn": "1207800035079",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ТЕХНОЛОГИИ\"",
+        "role": "founder",
+        "okved": "43.21",
+        "okved_label": "Производство электромонтажных работ",
+        "registered": "10.03.2020",
+        "region": "САНКТ-ПЕТЕРБУРГ Г."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-15",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-15",
     "social": [],
     "photo": null,
     "notes": "\n\n2026-09-15 inn_personal backfill: confirmed via ООО «Информационные системы и технологии»'s own full ЕГРЮЛ выписка (s6849, EGRUL_7842179810_20260907_ooo-instekh.pdf), naming ЧУМАКОВ ПАВЕЛ АНДРЕЕВИЧ with personal ИНН 780706151347 in the директор section (ГРН 2257805605110, 30.07.2025).",
@@ -40975,7 +41129,7 @@
   },
   {
     "slug": "borisov-aleksandr-sergeevich-tsbs-tula",
-    "fio_ru": null,
+    "fio_ru": "Борисов Александр Сергеевич",
     "name_latin": "Aleksandr Sergeevich Borisov",
     "dob": null,
     "birthplace": null,
@@ -40993,15 +41147,26 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "7100032961",
+        "ogrn": "1237100001467",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР БЕСПИЛОТНЫХ СИСТЕМ\"",
+        "role": "founder",
+        "okved": "25.62",
+        "okved_label": "Обработка металлических изделий механическая",
+        "registered": "08.02.2023",
+        "region": "ТУЛЬСКАЯ ОБЛ."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-15",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-15",
     "social": [],
     "photo": null,
-    "notes": "\n\n2026-09-15 inn_personal backfill: confirmed via ООО «Центр беспилотных систем» (Тула)'s own full ЕГРЮЛ выписка (s6813, EGRUL_7100032961_20260907_ooo-tsentr-bespilotnykh-sistem-tula.pdf), naming БОРИСОВ АЛЕКСАНДР СЕРГЕЕВИЧ with personal ИНН 561012075269 in the директор section (ГРН 2257100612041, 23.06.2025).",
+    "notes": "\n\n2026-09-15 inn_personal backfill: confirmed via ООО «Центр беспилотных систем» (Тула)'s own full ЕГРЮЛ выписка (s6813, EGRUL_7100032961_20260907_ooo-tsentr-bespilotnykh-sistem-tula.pdf), naming БОРИСОВ АЛЕКСАНДР СЕРГЕЕВИЧ with personal ИНН 561012075269 in the директор section (ГРН 2257100612041, 23.06.2025). fio_ru was null (only name_ru set) -- backfilled 2026-09-15, same value, so screen_subsidiary.py/screen_upr_uchr.py's split_fio() stop crashing on this record.",
     "sources": [],
     "_verified": false,
     "_origin": "corrections:add_entities",
@@ -42531,12 +42696,33 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "7448259249",
+        "ogrn": "1247400026246",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕЛ ДРОН\"",
+        "role": "director",
+        "okved": "72.19",
+        "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
+        "registered": "13.09.2024",
+        "region": "ЧЕЛЯБИНСКАЯ ОБЛ"
+      },
+      {
+        "inn": "7448259249",
+        "ogrn": "1247400026246",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕЛ ДРОН\"",
+        "role": "founder",
+        "okved": "72.19",
+        "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
+        "registered": "13.09.2024",
+        "region": "ЧЕЛЯБИНСКАЯ ОБЛ"
+      }
+    ],
+    "other_entities_checked_at": "2026-09-15",
     "disqualification_hits": [],
-    "disqualification_checked_at": null,
+    "disqualification_checked_at": "2026-09-15",
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-15",
     "social": [],
     "photo": null,
     "notes": "\n\n2026-09-15 inn_personal backfill: confirmed via ООО «Интел Дрон»'s own full ЕГРЮЛ выписка (s6815, EGRUL_7448259249_20260907_ooo-intel-dron.pdf), naming ВОРОНИН АЛЕКСАНДР АНДРЕЕВИЧ with personal ИНН 743400196100 in the директор section (ГРН 2257402274083, 02.07.2025).",
@@ -42632,12 +42818,73 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "7100069224",
+        "ogrn": "1257100008549",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕЛЛЕКТУАЛЬНЫЕ ХИМИЧЕСКИЕ ТЕХНОЛОГИИ\"",
+        "role": "director",
+        "okved": "72.19",
+        "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
+        "registered": "28.10.2025",
+        "region": "ТУЛЬСКАЯ ОБЛ."
+      },
+      {
+        "inn": "7100069249",
+        "ogrn": "1257100008560",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ЭЙЛЕР\"",
+        "role": "director",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "28.10.2025",
+        "region": "ТУЛЬСКАЯ ОБЛ."
+      },
+      {
+        "inn": "7100044131",
+        "ogrn": "1237100012940",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОПТИК-СМАРТ\"",
+        "role": "director",
+        "okved": "26.51.8",
+        "okved_label": "Производство частей приборов и инструментов для навигации, управления, измерения, контроля, испытаний и прочих целей",
+        "registered": "22.09.2023",
+        "region": "ТУЛЬСКАЯ ОБЛ."
+      },
+      {
+        "inn": "7100069224",
+        "ogrn": "1257100008549",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕЛЛЕКТУАЛЬНЫЕ ХИМИЧЕСКИЕ ТЕХНОЛОГИИ\"",
+        "role": "founder",
+        "okved": "72.19",
+        "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
+        "registered": "28.10.2025",
+        "region": "ТУЛЬСКАЯ ОБЛ."
+      },
+      {
+        "inn": "7100069249",
+        "ogrn": "1257100008560",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ЭЙЛЕР\"",
+        "role": "founder",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "28.10.2025",
+        "region": "ТУЛЬСКАЯ ОБЛ."
+      },
+      {
+        "inn": "7100044131",
+        "ogrn": "1237100012940",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОПТИК-СМАРТ\"",
+        "role": "founder",
+        "okved": "26.51.8",
+        "okved_label": "Производство частей приборов и инструментов для навигации, управления, измерения, контроля, испытаний и прочих целей",
+        "registered": "22.09.2023",
+        "region": "ТУЛЬСКАЯ ОБЛ."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-15",
     "disqualification_hits": [],
-    "disqualification_checked_at": null,
+    "disqualification_checked_at": "2026-09-15",
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-15",
     "social": [],
     "photo": null,
     "notes": "\n\n2026-09-15 inn_personal backfill: confirmed via ООО «НПО Эйлер»'s own full ЕГРЮЛ выписка (s6814, EGRUL_7100069249_20260907_ooo-npo-eyler.pdf), naming ПЛЫКИНА ЕКАТЕРИНА ВИКТОРОВНА with personal ИНН 710516155388 as both директор and учредитель (ГРН 1257100008560, 28.10.2025).",
@@ -47811,12 +48058,43 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "4029059580",
+        "ogrn": "1184027014753",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОТКРЫТОЕ НЕБО\"",
+        "role": "director",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "07.11.2018",
+        "region": "КАЛУЖСКАЯ ОБЛАСТЬ"
+      },
+      {
+        "inn": "9718071565",
+        "ogrn": "1177746649002",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РАЗРАБОТКА ИННОВАЦИОННЫХ ТЕХНОЛОГИЙ\"",
+        "role": "director",
+        "okved": "72.19",
+        "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
+        "registered": "03.07.2017",
+        "region": "КАЛУЖСКАЯ ОБЛ."
+      },
+      {
+        "inn": "3327148106",
+        "ogrn": "1213300007227",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУСАЛАЙТ\"",
+        "role": "director",
+        "okved": "26.11",
+        "okved_label": "Производство элементов электронной аппаратуры",
+        "registered": "06.09.2021",
+        "region": "КАЛУЖСКАЯ ОБЛ."
+      }
+    ],
+    "other_entities_checked_at": "2026-09-15",
     "disqualification_hits": [],
-    "disqualification_checked_at": null,
+    "disqualification_checked_at": "2026-09-15",
     "subsidiary_liability_hits": [],
-    "subsidiary_liability_checked_at": null,
+    "subsidiary_liability_checked_at": "2026-09-15",
     "social": [],
     "photo": null,
     "notes": "Founding GD/co-founder of ООО «Открытое небо» (Kaluga), the training-certificate issuer directly linked from @projectArchangel's own recurring 'полезные ссылки' post.",

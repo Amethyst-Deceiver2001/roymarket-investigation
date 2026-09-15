@@ -1,9 +1,9 @@
 {
   "schema_version": 5,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1483,
-  "edge_count": 2043,
-  "unresolved_count": 217,
+  "node_count": 1482,
+  "edge_count": 2056,
+  "unresolved_count": 216,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -607,7 +607,7 @@
       "sanctioned": true,
       "legal_form": "АО",
       "variant": "offensive",
-      "degree": 16
+      "degree": 17
     },
     {
       "id": "ao-tekhnodinamika",
@@ -972,10 +972,10 @@
     {
       "id": "borisov-aleksandr-sergeevich-tsbs-tula",
       "kind": "person",
-      "label": "borisov-aleksandr-sergeevich-tsbs-tula",
+      "label": "Борисов Александр Сергеевич",
       "name_latin": "Aleksandr Sergeevich Borisov",
       "sanctioned": false,
-      "degree": 1
+      "degree": 4
     },
     {
       "id": "borisov-evgeniy-gennadevich",
@@ -1147,7 +1147,7 @@
       "label": "Чумаков Павел Андреевич",
       "name_latin": "Chumakov Pavel Andreevich",
       "sanctioned": false,
-      "degree": 4
+      "degree": 6
     },
     {
       "id": "customer::various-regional-мвд-directorates-гу-мвд-умвд-по-субъектам-рф",
@@ -2819,7 +2819,7 @@
       "label": "Костюнин Павел Андреевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 4
+      "degree": 7
     },
     {
       "id": "kot-oleg-petrovich",
@@ -3299,7 +3299,7 @@
       "label": "Некрасов Александр Викторович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 1
+      "degree": 2
     },
     {
       "id": "neznamov-aleksandr-vasilevich",
@@ -4167,7 +4167,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 11
+      "degree": 13
     },
     {
       "id": "ooo-intek-bespilotnye-sistemy",
@@ -4191,7 +4191,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 7
+      "degree": 9
     },
     {
       "id": "ooo-investments",
@@ -4239,7 +4239,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 5
+      "degree": 7
     },
     {
       "id": "ooo-kopterlab",
@@ -4467,7 +4467,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 6
+      "degree": 8
     },
     {
       "id": "ooo-npo-kilovatt",
@@ -4599,7 +4599,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "ooo-oupen-lodzhistiks",
@@ -4899,7 +4899,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "offensive",
-      "degree": 9
+      "degree": 11
     },
     {
       "id": "ooo-stroystandart",
@@ -4983,7 +4983,7 @@
       "sanctioned": true,
       "legal_form": null,
       "variant": null,
-      "degree": 9
+      "degree": 10
     },
     {
       "id": "ooo-tsentr-dinarus",
@@ -5375,7 +5375,7 @@
       "label": "Плыкина Екатерина Викторовна",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 3
+      "degree": 5
     },
     {
       "id": "podstrigaev-aleksey-sergeevich",
@@ -5455,7 +5455,7 @@
       "label": "Порсев Андрей Валерьевич",
       "name_latin": "Porsev Andrey Valeryevich",
       "sanctioned": false,
-      "degree": 3
+      "degree": 4
     },
     {
       "id": "pospekhov-ivan-aleksandrovich",
@@ -12734,12 +12734,6 @@
       "degree": 1
     },
     {
-      "id": "stub::борисов александр сергеевич",
-      "kind": "unresolved",
-      "label": "Борисов Александр Сергеевич",
-      "degree": 2
-    },
-    {
       "id": "stub::бочарова светлана владимировна",
       "kind": "unresolved",
       "label": "Бочарова Светлана Владимировна",
@@ -14225,7 +14219,7 @@
       "label": "Усачёв Павел Александрович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "ustimov-r-s",
@@ -14333,7 +14327,7 @@
       "label": "Воронин Александр Андреевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 3
+      "degree": 5
     },
     {
       "id": "voskresenskiy-dmitriy-mikhaylovich",
@@ -17406,6 +17400,39 @@
     {
       "source": "borisov-aleksandr-sergeevich-tsbs-tula",
       "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+      "type": "directs",
+      "label": null,
+      "source_id": "s1914",
+      "as_of": "2023-12-25",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "borisov-aleksandr-sergeevich-tsbs-tula",
+      "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "borisov-aleksandr-sergeevich-tsbs-tula",
+      "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+      "type": "role",
+      "label": "founder",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "borisov-aleksandr-sergeevich-tsbs-tula",
+      "target": "ooo-tsentr-bespilotnykh-sistem-tula",
       "type": "role",
       "label": "Генеральный директор, ООО «Центр беспилотных систем» (Тула, ИНН 7100032961)",
       "source_id": null,
@@ -17969,6 +17996,28 @@
       "target": "ooo-instekh",
       "type": "founded",
       "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "chumakov-pavel-andreevich",
+      "target": "ooo-instekh",
+      "type": "role",
+      "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "chumakov-pavel-andreevich",
+      "target": "ooo-instekh",
+      "type": "role",
+      "label": "founder",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -23358,6 +23407,17 @@
       "source": "kostyunin-pavel-andreevich",
       "target": "ao-stratim",
       "type": "role",
+      "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kostyunin-pavel-andreevich",
+      "target": "ao-stratim",
+      "type": "role",
       "label": "Генеральный директор",
       "source_id": "s0111",
       "as_of": null,
@@ -23370,6 +23430,28 @@
       "target": "ooo-stratim",
       "type": "founded",
       "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kostyunin-pavel-andreevich",
+      "target": "ooo-stratim",
+      "type": "role",
+      "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kostyunin-pavel-andreevich",
+      "target": "ooo-stratim",
+      "type": "role",
+      "label": "founder",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -24515,6 +24597,17 @@
       "type": "role",
       "label": "co-inventor (patent RU2765196C2)",
       "source_id": "s1027",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "nekrasov-aleksandr-viktorovich",
+      "target": "ooo-konstruktorskoe-byuro-sinergiya",
+      "type": "role",
+      "label": "director",
+      "source_id": null,
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -30068,6 +30161,28 @@
       "source": "plykina-ekaterina-viktorovna",
       "target": "ooo-npo-eyler",
       "type": "role",
+      "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "plykina-ekaterina-viktorovna",
+      "target": "ooo-npo-eyler",
+      "type": "role",
+      "label": "founder",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "plykina-ekaterina-viktorovna",
+      "target": "ooo-npo-eyler",
+      "type": "role",
       "label": "Директор",
       "source_id": "s5333",
       "as_of": "2025-10-28",
@@ -30289,6 +30404,17 @@
       "target": "ooo-otkrytoe-nebo-kaluga",
       "type": "founded",
       "label": "15%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "porsev-andrey-valerevich",
+      "target": "ooo-otkrytoe-nebo-kaluga",
+      "type": "role",
+      "label": "director",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -33191,28 +33317,6 @@
     {
       "source": "stub::бойко антонина юрьевна",
       "target": "ooo-ti-es-dzhi-grupp",
-      "type": "founded",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "stub::борисов александр сергеевич",
-      "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-      "type": "directs",
-      "label": null,
-      "source_id": "s1914",
-      "as_of": "2023-12-25",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
-      "source": "stub::борисов александр сергеевич",
-      "target": "ooo-tsentr-bespilotnykh-sistem-tula",
       "type": "founded",
       "label": null,
       "source_id": null,
@@ -36262,6 +36366,17 @@
       "target": "ooo-konstruktorskoe-byuro-sinergiya",
       "type": "role",
       "label": "founder",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "usachev-pavel-aleksandrovich",
+      "target": "ooo-konstruktorskoe-byuro-sinergiya",
+      "type": "role",
+      "label": "founder",
       "source_id": "s0508",
       "as_of": null,
       "weight": 1.0,
@@ -36515,6 +36630,28 @@
       "target": "ooo-intel-dron",
       "type": "founded",
       "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "voronin-aleksandr-andreevich",
+      "target": "ooo-intel-dron",
+      "type": "role",
+      "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "voronin-aleksandr-andreevich",
+      "target": "ooo-intel-dron",
+      "type": "role",
+      "label": "founder",
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -37332,14 +37469,6 @@
       "raw_name": "Бойко Антонина Юрьевна",
       "contexts": [
         "founder of ooo-ti-es-dzhi-grupp"
-      ]
-    },
-    {
-      "id": "stub::борисов александр сергеевич",
-      "raw_name": "Борисов Александр Сергеевич",
-      "contexts": [
-        "founder of ooo-tsentr-bespilotnykh-sistem-tula",
-        "director of ooo-tsentr-bespilotnykh-sistem-tula"
       ]
     },
     {

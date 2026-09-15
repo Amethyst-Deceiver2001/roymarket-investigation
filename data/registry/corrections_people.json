@@ -4343,6 +4343,7 @@
     },
     "borisov-aleksandr-sergeevich-tsbs-tula": {
       "set": {
+        "fio_ru": "Борисов Александр Сергеевич",
         "roles": [
           {
             "body": null,
@@ -4355,7 +4356,7 @@
           }
         ],
         "inn_personal": "561012075269",
-        "notes": "\n\n2026-09-15 inn_personal backfill: confirmed via ООО «Центр беспилотных систем» (Тула)'s own full ЕГРЮЛ выписка (s6813, EGRUL_7100032961_20260907_ooo-tsentr-bespilotnykh-sistem-tula.pdf), naming БОРИСОВ АЛЕКСАНДР СЕРГЕЕВИЧ with personal ИНН 561012075269 in the директор section (ГРН 2257100612041, 23.06.2025)."
+        "notes": "\n\n2026-09-15 inn_personal backfill: confirmed via ООО «Центр беспилотных систем» (Тула)'s own full ЕГРЮЛ выписка (s6813, EGRUL_7100032961_20260907_ooo-tsentr-bespilotnykh-sistem-tula.pdf), naming БОРИСОВ АЛЕКСАНДР СЕРГЕЕВИЧ with personal ИНН 561012075269 in the директор section (ГРН 2257100612041, 23.06.2025). fio_ru was null (only name_ru set) -- backfilled 2026-09-15, same value, so screen_subsidiary.py/screen_upr_uchr.py's split_fio() stop crashing on this record."
       },
       "why": [
         "2026-09-07: registry-hardening pass -- resolved orphan role link to ooo-tsentr-bespilotnykh-sistem-tula."
