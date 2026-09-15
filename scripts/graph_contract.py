@@ -275,7 +275,14 @@ def validate_graph(
                 "related": ({"entity"}, {"entity"}),
                 "founded": ({"entity", "person", "unresolved"}, {"entity"}),
                 "directs": ({"entity", "person", "unresolved"}, {"entity"}),
-                "role": ({"person"}, {"entity"}),
+                # government_customer added 2026-09-16: a person's role can
+                # be a contract-signatory position at a government customer
+                # body (acceptance-committee member, financially-responsible
+                # officer, agency head) rather than a corporate role at a
+                # registry entity -- these were previously unresolvable
+                # (role.entity_slug has no equivalent field for a customer
+                # id) and fell through as false degree-0 stub-free gaps.
+                "role": ({"person"}, {"entity", "government_customer"}),
                 "produces": ({"entity"}, {"product"}),
                 "procures": ({"government_customer"}, {"entity"}),
                 "confirmed_field_use": ({"entity", "product"}, {"military_unit"}),

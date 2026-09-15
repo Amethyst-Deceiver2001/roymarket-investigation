@@ -246,6 +246,16 @@ def build_graph(entities: list[dict], people: list[dict],
     military_units = military_units or []
     entity_by_ogrn = {e.get("ogrn"): e["slug"] for e in entities if e.get("ogrn")}
     inn_to_entity_slug = {e.get("inn"): e["slug"] for e in entities if e.get("inn")}
+    # Every distinct government_contracts[].customer name, longest first so
+    # a substring check below prefers the more specific match (e.g. a full
+    # institution name over a generic "Главное управление" fragment that
+    # happens to also appear in an unrelated customer's name).
+    gov_customer_names = sorted(
+        {c["customer"] for e in entities for c in (e.get("government_contracts") or [])
+         if isinstance(c, dict) and c.get("customer")}
+        | set(CUSTOMER_NAME_ALIASES) | set(CUSTOMER_NAME_ALIASES.values()),
+        key=len, reverse=True,
+    )
 
     name_to_slug = {}
     # Word-order-insensitive fallback index: people.json's own fio_ru
@@ -476,10 +486,24 @@ def build_graph(entities: list[dict], people: list[dict],
             as_of, source_id = _date_and_source(evidence)
             add_edge(slug, unit_node_id, "confirmed_field_use", None, source_id, as_of)
 
+    def resolve_government_customer(title: str) -> str | None:
+        """A contract-signatory role's title names a known government
+        customer verbatim (e.g. 'Член приемочной комиссии, майор, ФГКУ
+        «ЦСООР «Лидер»»') -- match it against every distinct customer name
+        already seen in government_contracts[] (longest first, so a more
+        specific name wins over a generic fragment it contains)."""
+        if not title:
+            return None
+        norm_title = normalize(title)
+        for cust_name in gov_customer_names:
+            if len(cust_name) >= 8 and normalize(cust_name) in norm_title:
+                return customer_id(cust_name)
+        return None
+
     for person in people:
         slug = person["slug"]
         for role in person.get("roles") or []:
-            target = role.get("entity_slug")
+            target = role.get("entity_slug") or resolve_government_customer(role.get("title"))
             add_edge(slug, target, "role", role.get("title"), role.get("source_id"),
                      role.get("from"))
         for other in person.get("other_entities") or []:
