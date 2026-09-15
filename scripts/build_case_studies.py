@@ -47,7 +47,7 @@ CASES = [
             "front-line unit's thank-you letter for 500 delivered units "
             "(30.08.2026)."
         ),
-        "sources": "s5440 · ЦБСТ Telegram, 02.05.2026 · my_el_lab post 4546, 30.08.2026",
+        "sources": "s5440 · ЦБСТ Telegram, 02.05.2026 · my_el_lab post 4546, 30.08.2026 — note: the three sister labs sit farther out and lighter than «Кузнечик» below, since they share only a founder with Гагаринг, not its actual product line.",
         "photo": {
             "src": "gagaring_barashkov_portrait.jpg",
             "caption": "Барашков А.С. at a «Гагаринг» training-centre field course.",
@@ -59,21 +59,21 @@ CASES = [
             "source": "Front-line unit thank-you letter · s5447",
         },
         "nodes": [
-            {"id": "barashkov", "kind": "person", "label": "Барашков А.С.", "x": 70, "y": 55},
-            {"id": "gagaring", "kind": "entity", "label": "ООО «Гагаринг»", "x": 220, "y": 150, "r": 20, "type_icon": "manufacturer"},
-            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 55, "type_icon": "ngo"},
-            {"id": "kuznechik", "kind": "product", "label": "«Кузнечик»\nсвязь", "x": 380, "y": 245, "icon": "video_link"},
-            {"id": "eyler", "kind": "entity", "label": "НПО «Эйлер»", "x": 100, "y": 250, "r": 12},
-            {"id": "yangel", "kind": "entity", "label": "Лаб. Янгеля", "x": 220, "y": 270, "r": 12},
-            {"id": "intel", "kind": "entity", "label": "«Интел Дрон»", "x": 340, "y": 270, "r": 12, "type_icon": "manufacturer"},
+            {"id": "barashkov", "kind": "person", "label": "Барашков А.С.", "x": 65, "y": 45, "href": "profiles/persons/barashkov-aleksandr-sergeevich.html"},
+            {"id": "gagaring", "kind": "entity", "label": "ООО «Гагаринг»", "x": 205, "y": 140, "r": 20, "type_icon": "manufacturer", "href": "profiles/ooo-gagaring.html"},
+            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 365, "y": 45, "type_icon": "ngo", "href": "profiles/ano-tsbst-centre-for-unmanned-systems-technologies.html"},
+            {"id": "kuznechik", "kind": "product", "label": "«Кузнечик»\nсвязь", "x": 300, "y": 210, "r": 14, "icon": "video_link", "href": "profiles/products/kuznechik.html"},
+            {"id": "eyler", "kind": "entity", "label": "НПО «Эйлер»", "x": 50, "y": 250, "r": 8, "weight": "secondary", "href": "profiles/ooo-npo-eyler.html"},
+            {"id": "yangel", "kind": "entity", "label": "Лаб. Янгеля", "x": 125, "y": 280, "r": 8, "weight": "secondary", "href": "profiles/ooo-laboratoriya-yangelya.html"},
+            {"id": "intel", "kind": "entity", "label": "«Интел Дрон»", "x": 330, "y": 285, "r": 8, "weight": "secondary", "type_icon": "manufacturer", "href": "profiles/ooo-intel-dron.html"},
         ],
         "edges": [
             {"s": "barashkov", "t": "gagaring", "type": "founded"},
             {"s": "gagaring", "t": "cbst", "type": "cbst_tie"},
             {"s": "gagaring", "t": "kuznechik", "type": "produces"},
-            {"s": "gagaring", "t": "eyler", "type": "founded"},
-            {"s": "gagaring", "t": "yangel", "type": "founded"},
-            {"s": "gagaring", "t": "intel", "type": "founded"},
+            {"s": "gagaring", "t": "eyler", "type": "founded", "weight": "secondary"},
+            {"s": "gagaring", "t": "yangel", "type": "founded", "weight": "secondary"},
+            {"s": "gagaring", "t": "intel", "type": "founded", "weight": "secondary"},
         ],
     },
     {
@@ -99,10 +99,10 @@ CASES = [
             "source": "набат.рф product page · s6457",
         },
         "nodes": [
-            {"id": "kozlov", "kind": "person", "label": "Козлов Д.С.", "x": 80, "y": 60},
-            {"id": "goudron", "kind": "entity", "label": "ООО «ГОУДРОН»", "x": 230, "y": 150, "r": 18, "type_icon": "manufacturer"},
-            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 60, "type_icon": "ngo"},
-            {"id": "nabat", "kind": "product", "label": "«Набат v3»", "x": 230, "y": 260, "icon": "detector"},
+            {"id": "kozlov", "kind": "person", "label": "Козлов Д.С.", "x": 80, "y": 60, "href": "profiles/persons/kozlov-dmitriy-sergeevich.html"},
+            {"id": "goudron", "kind": "entity", "label": "ООО «ГОУДРОН»", "x": 230, "y": 150, "r": 18, "type_icon": "manufacturer", "href": "profiles/ooo-goudron.html"},
+            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 60, "type_icon": "ngo", "href": "profiles/ano-tsbst-centre-for-unmanned-systems-technologies.html"},
+            {"id": "nabat", "kind": "product", "label": "«Набат v3»", "x": 230, "y": 260, "icon": "detector", "href": "profiles/products/nabat.html"},
         ],
         "edges": [
             {"s": "kozlov", "t": "goudron", "type": "founded"},
@@ -133,12 +133,12 @@ CASES = [
             "source": "Ovod's own Telegram · s6456",
         },
         "nodes": [
-            {"id": "cherezov", "kind": "person", "label": "Черезов А.П.", "x": 220, "y": 45},
-            {"id": "traktat", "kind": "entity", "label": "«Воздушный трактат»", "x": 100, "y": 165, "r": 16, "type_icon": "manufacturer"},
-            {"id": "ovod_ent", "kind": "entity", "label": "«РЛВТ»", "x": 340, "y": 165, "r": 16, "type_icon": "manufacturer"},
-            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 220, "y": 270, "type_icon": "ngo"},
-            {"id": "prod_t", "kind": "product", "label": "«Овод»", "x": 60, "y": 270, "icon": "fpv_strike"},
-            {"id": "prod_o", "kind": "product", "label": "«Овод»", "x": 380, "y": 270, "icon": "fpv_strike"},
+            {"id": "cherezov", "kind": "person", "label": "Черезов А.П.", "x": 220, "y": 45, "href": "profiles/persons/cherezov-andrey-pavlovich.html"},
+            {"id": "traktat", "kind": "entity", "label": "«Воздушный трактат»", "x": 100, "y": 165, "r": 16, "type_icon": "manufacturer", "href": "profiles/ooo-vozdushnyy-traktat.html"},
+            {"id": "ovod_ent", "kind": "entity", "label": "«РЛВТ»", "x": 340, "y": 165, "r": 16, "type_icon": "manufacturer", "href": "profiles/ovod.html"},
+            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 220, "y": 270, "type_icon": "ngo", "href": "profiles/ano-tsbst-centre-for-unmanned-systems-technologies.html"},
+            {"id": "prod_t", "kind": "product", "label": "«Овод»", "x": 60, "y": 270, "icon": "fpv_strike", "href": "profiles/products/ovod.html"},
+            {"id": "prod_o", "kind": "product", "label": "«Овод»", "x": 380, "y": 270, "icon": "fpv_strike", "href": "profiles/products/ovod.html"},
         ],
         "edges": [
             {"s": "cherezov", "t": "traktat", "type": "directs"},
@@ -171,12 +171,12 @@ CASES = [
             "source": "СКБ «Пиранья» own channel · s1410",
         },
         "nodes": [
-            {"id": "chernyshov", "kind": "person", "label": "Чернышов П.А.\n40%", "x": 70, "y": 55},
-            {"id": "korchagina", "kind": "person", "label": "Корчагина О.А.\n60%", "x": 70, "y": 245},
-            {"id": "piranya", "kind": "entity", "label": "СКБ «Пиранья»", "x": 230, "y": 150, "r": 20, "type_icon": "manufacturer"},
-            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 55, "type_icon": "ngo"},
-            {"id": "p10", "kind": "product", "label": "«Пиранья-10»", "x": 380, "y": 165},
-            {"id": "p13", "kind": "product", "label": "«Пиранья-13»", "x": 380, "y": 260, "icon": "fpv_strike"},
+            {"id": "chernyshov", "kind": "person", "label": "Чернышов П.А.\n40%", "x": 70, "y": 55, "href": "profiles/persons/chernyshov-pavel-alekseevich.html"},
+            {"id": "korchagina", "kind": "person", "label": "Корчагина О.А.\n60%", "x": 70, "y": 245, "href": "profiles/persons/korchagina-olga-aleksandrovna.html"},
+            {"id": "piranya", "kind": "entity", "label": "СКБ «Пиранья»", "x": 230, "y": 150, "r": 20, "type_icon": "manufacturer", "href": "profiles/ooo-skb-piranya.html"},
+            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 55, "type_icon": "ngo", "href": "profiles/ano-tsbst-centre-for-unmanned-systems-technologies.html"},
+            {"id": "p10", "kind": "product", "label": "«Пиранья-10»", "x": 380, "y": 165, "href": "profiles/products/piranya.html"},
+            {"id": "p13", "kind": "product", "label": "«Пиранья-13»", "x": 380, "y": 260, "icon": "fpv_strike", "href": "profiles/products/piranya.html"},
         ],
         "edges": [
             {"s": "chernyshov", "t": "piranya", "type": "founded"},
@@ -206,10 +206,10 @@ CASES = [
         "photo": None,
         "quote_note": "No self-incriminating marketing copy is on file for this entity — its government-contract cards are the only sourced material.",
         "nodes": [
-            {"id": "tsyganov", "kind": "person", "label": "Цыганов В.Б.", "x": 80, "y": 60},
-            {"id": "ip", "kind": "entity", "label": "ИП Цыганов", "x": 230, "y": 150, "r": 18, "type_icon": "manufacturer"},
-            {"id": "pokrov", "kind": "entity", "label": "ООО «Покров»", "x": 230, "y": 270, "r": 12, "type_icon": "dealer"},
-            {"id": "bulat", "kind": "product", "label": "«Булат» v.4", "x": 380, "y": 90, "icon": "detector"},
+            {"id": "tsyganov", "kind": "person", "label": "Цыганов В.Б.", "x": 80, "y": 60, "href": "profiles/persons/tsyganov-vadim-borisovich.html"},
+            {"id": "ip", "kind": "entity", "label": "ИП Цыганов", "x": 230, "y": 150, "r": 18, "type_icon": "manufacturer", "href": "profiles/ip-tsyganov-vadim-borisovich.html"},
+            {"id": "pokrov", "kind": "entity", "label": "ООО «Покров»", "x": 230, "y": 270, "r": 12, "type_icon": "dealer", "href": "profiles/ooo-pokrov.html"},
+            {"id": "bulat", "kind": "product", "label": "«Булат» v.4", "x": 380, "y": 90, "icon": "detector", "href": "profiles/products/bulat.html"},
             {"id": "mchs", "kind": "gov", "label": "МЧС Курской обл.", "x": 380, "y": 200, "type_icon": "govt"},
             {"id": "lider", "kind": "gov", "label": "ФГКУ «Лидер»", "x": 380, "y": 270, "type_icon": "govt"},
         ],
@@ -341,6 +341,8 @@ def node_shape_svg(n, case):
     stroke = "var(--sanctioned-ring)" if sanctioned else "var(--node-stroke)"
     sw = 2.5 if sanctioned else 1
     shape = SHAPE[n["kind"]]
+    secondary = n.get("weight") == "secondary"
+    group_opacity = 0.6 if secondary else 1
     icon_svg = ""
     if shape == "circle":
         el = f'<circle cx="{x}" cy="{y}" r="{r}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
@@ -361,21 +363,29 @@ def node_shape_svg(n, case):
                         f'{ICON_GLYPH[icon_key]}</g>')
     label_lines = n["label"].split("\n")
     dy0 = r + 14
+    label_cls = "node-label secondary" if secondary else "node-label"
     label_svg = ""
     for i, line in enumerate(label_lines):
-        label_svg += f'<text x="{x}" y="{y + dy0 + i * 12}" class="node-label" text-anchor="middle">{line}</text>'
-    return el + icon_svg + label_svg
+        label_svg += f'<text x="{x}" y="{y + dy0 + i * 12}" class="{label_cls}" text-anchor="middle">{line}</text>'
+    group = f'<g opacity="{group_opacity}">{el}{icon_svg}{label_svg}</g>'
+    href = n.get("href")
+    if href:
+        return f'<a href="{href}" class="node-link" aria-label="Open profile: {n["label"].replace(chr(10), " ")}">{group}</a>'
+    return group
 
 
 def edge_svg(e, nodes_by_id):
     s = nodes_by_id[e["s"]]
     t = nodes_by_id[e["t"]]
     style = EDGE_STYLE[e["type"]]
-    dash = f' stroke-dasharray="{style["dash"]}"' if style["dash"] else ""
-    opacity = style.get("opacity", 1)
-    marker = ' marker-end="url(#arrow)"' if style["arrow"] else ""
+    secondary = e.get("weight") == "secondary"
+    dash = ' stroke-dasharray="3,3"' if secondary else (f' stroke-dasharray="{style["dash"]}"' if style["dash"] else "")
+    opacity = 0.45 if secondary else style.get("opacity", 1)
+    width = 1 if secondary else 1.6
+    color = "var(--edge)" if secondary else style["color"]
+    marker = ' marker-end="url(#arrow)"' if (style["arrow"] and not secondary) else ""
     return (f'<line x1="{s["x"]}" y1="{s["y"]}" x2="{t["x"]}" y2="{t["y"]}" '
-            f'stroke="{style["color"]}" stroke-width="1.6" opacity="{opacity}"{dash}{marker}/>')
+            f'stroke="{color}" stroke-width="{width}" opacity="{opacity}"{dash}{marker}/>')
 
 
 def render_panel(case):
@@ -614,6 +624,10 @@ section.case.reverse .case-copy {{ order: 1; }}
   fill: var(--ink-2);
   font-weight: 500;
 }}
+.node-label.secondary {{ font-size: 10px; fill: var(--ink-muted); font-weight: 400; }}
+.node-link {{ cursor: pointer; }}
+.node-link:hover .node-label {{ fill: var(--accent); text-decoration: underline; }}
+.node-link:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px; }}
 .product-icon {{ fill: none; stroke: var(--product-icon-ink); stroke-width: 1.4px; stroke-linecap: round; stroke-linejoin: round; }}
 .product-icon .p-fill {{ fill: var(--product-icon-ink); stroke: none; }}
 .case-photo {{
@@ -728,7 +742,7 @@ footer.note {{
   {CASES_HTML}
 
   <footer class="note">
-    Positions are laid out for legibility, not computed — they carry no evidentiary meaning, same convention as the live graph. Every node and edge shown here is drawn from <code>data/registry/relationship_graph.json</code>; product icons reflect a real keyword classification from <code>scripts/classify_product_icon.py</code>, never a guess (see the generator's own note on which products were left unlabeled). Photos and quotes are the subjects' own public material, not stock imagery. For the full 1,430-node registry — search, filters, every citation — see the live <a href="https://claude.ai/artifact/2m4hhbSUG9XqNRvU5K1Ha9">РОЙ.МАРКЕТ Network Graph</a>.
+    Positions are laid out for legibility, not computed — they carry no evidentiary meaning, same convention as the live graph. Every node and edge shown here is drawn from <code>data/registry/relationship_graph.json</code>; product icons reflect a real keyword classification from <code>scripts/classify_product_icon.py</code>, never a guess (see the generator's own note on which products were left unlabeled). Every person, company, and product name is a link to its full sourced profile page. Fainter, dashed ties mark a relationship that shares only a founder, not a product line or ЦБСТ tie -- weight in these diagrams tracks how central a tie is to the case, not just whether one exists. Photos and quotes are the subjects' own public material, not stock imagery. For the full 1,430-node registry — search, filters, every citation — see the live <a href="https://claude.ai/artifact/2m4hhbSUG9XqNRvU5K1Ha9">РОЙ.МАРКЕТ Network Graph</a>.
   </footer>
 </div>
 </body></html>'''
