@@ -1,9 +1,9 @@
 {
   "schema_version": 5,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1455,
+  "node_count": 1449,
   "edge_count": 2066,
-  "unresolved_count": 189,
+  "unresolved_count": 183,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -51,7 +51,7 @@
       "label": "Александр Руфинович Бровченко",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "aleksandr-sidyakin",
@@ -1879,7 +1879,7 @@
       "label": "Дмитрий Владимирович Рубинштейн",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 9
+      "degree": 13
     },
     {
       "id": "dolgushevskiy-aleksey-mikhaylovich",
@@ -2471,7 +2471,7 @@
       "label": "Иван Игоревич Карабинский",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 1
+      "degree": 2
     },
     {
       "id": "ivankin-sergey",
@@ -3355,7 +3355,7 @@
       "label": "Нина Олеговна Яныкина",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "nogin-maksim-andreevich",
@@ -12065,7 +12065,7 @@
       "label": "Сергей Руфинович Бровченко",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 1
+      "degree": 3
     },
     {
       "id": "sevidov-vladimir-vitalevich",
@@ -12680,18 +12680,6 @@
       "degree": 1
     },
     {
-      "id": "stub::бровченко александр руфинович",
-      "kind": "unresolved",
-      "label": "Бровченко Александр Руфинович",
-      "degree": 1
-    },
-    {
-      "id": "stub::бровченко сергей руфинович",
-      "kind": "unresolved",
-      "label": "Бровченко Сергей Руфинович",
-      "degree": 2
-    },
-    {
       "id": "stub::булкин дмитрий сергеевич",
       "kind": "unresolved",
       "label": "Булкин Дмитрий Сергеевич",
@@ -12863,12 +12851,6 @@
       "id": "stub::группа кронштадт",
       "kind": "unresolved",
       "label": "ООО «Группа Кронштадт»",
-      "degree": 1
-    },
-    {
-      "id": "stub::давыдов виктор ильич",
-      "kind": "unresolved",
-      "label": "Давыдов Виктор Ильич",
       "degree": 1
     },
     {
@@ -13050,12 +13032,6 @@
       "kind": "unresolved",
       "label": "Кайденко Анна Викторовна",
       "degree": 2
-    },
-    {
-      "id": "stub::карабинский иван игоревич",
-      "kind": "unresolved",
-      "label": "Карабинский Иван Игоревич",
-      "degree": 1
     },
     {
       "id": "stub::карамов эльдар рафикович",
@@ -13308,12 +13284,6 @@
       "kind": "unresolved",
       "label": "Российская Федерация",
       "degree": 1
-    },
-    {
-      "id": "stub::рубинштейн дмитрий владимирович",
-      "kind": "unresolved",
-      "label": "Рубинштейн Дмитрий Владимирович",
-      "degree": 4
     },
     {
       "id": "stub::рубинштейн дмитрий владимирович (founder, per фнс учредитель/директор cross-reference)",
@@ -13572,12 +13542,6 @@
       "kind": "unresolved",
       "label": "Яковенко Ирина Геннадьевна",
       "degree": 2
-    },
-    {
-      "id": "stub::яныкина нина олеговна",
-      "kind": "unresolved",
-      "label": "Яныкина Нина Олеговна",
-      "degree": 1
     },
     {
       "id": "stub::₽250",
@@ -14093,7 +14057,7 @@
       "label": "Виктор Ильич Давыдов",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 1
+      "degree": 2
     },
     {
       "id": "vinogradov-yuriy-aleksandrovich",
@@ -14417,6 +14381,17 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "aleksandr-rufinovich-brovchenko",
+      "target": "fond-nasha-pravda",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0221",
+      "as_of": "2023-03-21",
+      "weight": 1.0,
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -20417,12 +20392,34 @@
     {
       "source": "dmitriy-vladimirovich-rubinshteyn",
       "target": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0436",
+      "as_of": "2025-11-27",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "dmitriy-vladimirovich-rubinshteyn",
+      "target": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
       "type": "role",
       "label": "Генеральный директор, sole-shareholder subsidiary of ЦБСТ (100% owned)",
       "source_id": "s0436",
       "as_of": "2025-11-27",
       "weight": 1.0,
       "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "dmitriy-vladimirovich-rubinshteyn",
+      "target": "ao-spetstekh-perviy",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0437",
+      "as_of": "2026-04-10",
+      "weight": 1.0,
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -20461,6 +20458,17 @@
     {
       "source": "dmitriy-vladimirovich-rubinshteyn",
       "target": "ooo-momento-rubinshteyn",
+      "type": "founded",
+      "label": "50%%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "dmitriy-vladimirovich-rubinshteyn",
+      "target": "ooo-momento-rubinshteyn",
       "type": "role",
       "label": "founder",
       "source_id": null,
@@ -20478,6 +20486,17 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "dmitriy-vladimirovich-rubinshteyn",
+      "target": "ooo-tekhnomost",
+      "type": "directs",
+      "label": null,
+      "source_id": "s7453",
+      "as_of": "2026-09-14",
+      "weight": 1.0,
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -21853,6 +21872,17 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ivan-igorevich-karabinskiy",
+      "target": "fond-gradislava-historic-cultural-heritage-preservation",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0216",
+      "as_of": "2021-12-17",
+      "weight": 1.0,
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -24658,6 +24688,17 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "nina-olegovna-yanykina",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0228",
+      "as_of": "2025-12-16",
+      "weight": 1.0,
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -31714,6 +31755,28 @@
     {
       "source": "sergey-rufinovich-brovchenko",
       "target": "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta",
+      "type": "directs",
+      "label": null,
+      "source_id": "s6700",
+      "as_of": "2015-01-26",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "sergey-rufinovich-brovchenko",
+      "target": "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0098",
+      "as_of": "2026-08-24",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "sergey-rufinovich-brovchenko",
+      "target": "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta",
       "type": "role",
       "label": "General Director, Фонд поддержки зимних олимпийских видов спорта, since 11.11.2014",
       "source_id": null,
@@ -33527,39 +33590,6 @@
       "confidence": null
     },
     {
-      "source": "stub::бровченко александр руфинович",
-      "target": "fond-nasha-pravda",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0221",
-      "as_of": "2023-03-21",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
-      "source": "stub::бровченко сергей руфинович",
-      "target": "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta",
-      "type": "directs",
-      "label": null,
-      "source_id": "s6700",
-      "as_of": "2015-01-26",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
-      "source": "stub::бровченко сергей руфинович",
-      "target": "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0098",
-      "as_of": "2026-08-24",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
       "source": "stub::булкин дмитрий сергеевич",
       "target": "npts-elvis",
       "type": "directs",
@@ -33967,17 +33997,6 @@
       "confidence": null
     },
     {
-      "source": "stub::давыдов виктор ильич",
-      "target": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0214",
-      "as_of": "2008-05-27",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
       "source": "stub::дар",
       "target": "fond-nasha-pravda",
       "type": "founded",
@@ -34369,17 +34388,6 @@
       "label": null,
       "source_id": "s0084",
       "as_of": "2026-08-24",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
-      "source": "stub::карабинский иван игоревич",
-      "target": "fond-gradislava-historic-cultural-heritage-preservation",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0216",
-      "as_of": "2021-12-17",
       "weight": 1.0,
       "temporal_status": "current",
       "confidence": null
@@ -35020,50 +35028,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "stub::рубинштейн дмитрий владимирович",
-      "target": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0436",
-      "as_of": "2025-11-27",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
-      "source": "stub::рубинштейн дмитрий владимирович",
-      "target": "ao-spetstekh-perviy",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0437",
-      "as_of": "2026-04-10",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
-      "source": "stub::рубинштейн дмитрий владимирович",
-      "target": "ooo-momento-rubinshteyn",
-      "type": "founded",
-      "label": "50%%",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "stub::рубинштейн дмитрий владимирович",
-      "target": "ooo-tekhnomost",
-      "type": "directs",
-      "label": null,
-      "source_id": "s7453",
-      "as_of": "2026-09-14",
-      "weight": 1.0,
-      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -35738,17 +35702,6 @@
       "confidence": null
     },
     {
-      "source": "stub::яныкина нина олеговна",
-      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0228",
-      "as_of": "2025-12-16",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
       "source": "stub::₽250",
       "target": "ooo-oupen-lodzhistiks",
       "type": "founded",
@@ -36373,6 +36326,17 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "viktor-ilich-davydov",
+      "target": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0214",
+      "as_of": "2008-05-27",
+      "weight": 1.0,
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -37357,20 +37321,6 @@
       ]
     },
     {
-      "id": "stub::бровченко александр руфинович",
-      "raw_name": "Бровченко Александр Руфинович",
-      "contexts": [
-        "director of fond-nasha-pravda"
-      ]
-    },
-    {
-      "id": "stub::бровченко сергей руфинович",
-      "raw_name": "Бровченко Сергей Руфинович",
-      "contexts": [
-        "director of fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta"
-      ]
-    },
-    {
       "id": "stub::булкин дмитрий сергеевич",
       "raw_name": "Булкин Дмитрий Сергеевич",
       "contexts": [
@@ -37576,13 +37526,6 @@
       "raw_name": "ООО «Группа Кронштадт»",
       "contexts": [
         "founder of ooo-kronshtadt-bespilotnye-sistemy"
-      ]
-    },
-    {
-      "id": "stub::давыдов виктор ильич",
-      "raw_name": "Давыдов Виктор Ильич",
-      "contexts": [
-        "director of fond-dar-fond-regionalnykh-nekommercheskikh-proektov"
       ]
     },
     {
@@ -37797,13 +37740,6 @@
       "raw_name": "Кайденко Анна Викторовна",
       "contexts": [
         "director of ooo-nova"
-      ]
-    },
-    {
-      "id": "stub::карабинский иван игоревич",
-      "raw_name": "Карабинский Иван Игоревич",
-      "contexts": [
-        "director of fond-gradislava-historic-cultural-heritage-preservation"
       ]
     },
     {
@@ -38110,16 +38046,6 @@
       "raw_name": "Российская Федерация",
       "contexts": [
         "founder of pao-bank-psb"
-      ]
-    },
-    {
-      "id": "stub::рубинштейн дмитрий владимирович",
-      "raw_name": "Рубинштейн Дмитрий Владимирович",
-      "contexts": [
-        "director of ao-spetstekh-investitsii-ao-spetstekh-pervyy",
-        "director of ao-spetstekh-perviy",
-        "director of ooo-tekhnomost",
-        "founder of ooo-momento-rubinshteyn"
       ]
     },
     {
@@ -38431,13 +38357,6 @@
       "raw_name": "Яковенко Ирина Геннадьевна",
       "contexts": [
         "director of ooo-vingrad"
-      ]
-    },
-    {
-      "id": "stub::яныкина нина олеговна",
-      "raw_name": "Яныкина Нина Олеговна",
-      "contexts": [
-        "director of ano-tsbst-centre-for-unmanned-systems-technologies"
       ]
     },
     {

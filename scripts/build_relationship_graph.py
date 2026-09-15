@@ -211,13 +211,34 @@ def build_graph(entities: list[dict], people: list[dict],
     inn_to_entity_slug = {e.get("inn"): e["slug"] for e in entities if e.get("inn")}
 
     name_to_slug = {}
+    # Word-order-insensitive fallback index: people.json's own fio_ru
+    # values are NOT consistently ordered (given-name-first for most
+    # entries, e.g. "Владимир Владимирович Якушев", but surname-first for
+    # others, e.g. "Колударов Антон Валерьевич") while director_history/
+    # founders raw strings consistently use the surname-first ЕГРЮЛ/
+    # official-document order. Found 2026-09-16 auditing unresolved stubs:
+    # ЦБСТ's own director, "Яныкина Нина Олеговна" (director_history), was
+    # a false stub despite already being catalogued as person
+    # nina-olegovna-yanykina with fio_ru "Нина Олеговна Яныкина" -- same
+    # three tokens, different order. Keyed on a sorted token tuple so order
+    # doesn't matter; used only as a fallback when the exact-order lookup
+    # misses, and only for 3-token names, to keep the match tight.
+    name_to_slug_sorted = {}
     for entity in entities:
         for name in (entity.get("name_ru"), entity.get("brand_ru")):
             if name:
-                name_to_slug.setdefault(normalize(name), entity["slug"])
+                key = normalize(name)
+                name_to_slug.setdefault(key, entity["slug"])
+                tokens = key.split()
+                if len(tokens) == 3:
+                    name_to_slug_sorted.setdefault(tuple(sorted(tokens)), entity["slug"])
     for person in people:
         if person.get("fio_ru"):
-            name_to_slug.setdefault(normalize(person["fio_ru"]), person["slug"])
+            key = normalize(person["fio_ru"])
+            name_to_slug.setdefault(key, person["slug"])
+            tokens = key.split()
+            if len(tokens) == 3:
+                name_to_slug_sorted.setdefault(tuple(sorted(tokens)), person["slug"])
 
     nodes: dict[str, dict] = {}
     edges: list[dict] = []
@@ -258,7 +279,14 @@ def build_graph(entities: list[dict], people: list[dict],
         return node_id
 
     def resolve_name(raw_name: str) -> str | None:
-        return name_to_slug.get(normalize(raw_name))
+        key = normalize(raw_name)
+        target = name_to_slug.get(key)
+        if target:
+            return target
+        tokens = key.split()
+        if len(tokens) == 3:
+            return name_to_slug_sorted.get(tuple(sorted(tokens)))
+        return None
 
     def add_edge(source, target, edge_type, label=None, source_id=None, as_of=None,
                  weight=1.0, temporal_status="unknown", confidence=None) -> None:
