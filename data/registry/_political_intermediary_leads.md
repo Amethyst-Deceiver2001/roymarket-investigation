@@ -209,15 +209,15 @@ Two concrete outcomes:
    `ooo-berkut-dmv`). Stale-note fix applied via corrections_people.json.
 
 2. **pospekhov-ivan-aleksandrovich** (director/founder, `ooo-metaskan` +
-   `ooo-tsyus`, both already registered) has an unwired ФНС hit worth a dedicated
-   look: ООО «Системы Безопасности» (ИНН 5001160158), OKVED 26.30 "Производство
-   элементов электронной аппаратуры" — the SAME electronic-components-manufacturing
-   OKVED code as several already-registered manufacturer-tier entities. Not wired
-   here — no independent confirmation yet that this specific company has any
-   UAV/EW/ЦБСТ connection beyond sharing an industry code and a director with an
-   already-registered network entity. Worth an EGRUL pull + product check before
-   deciding whether it's a new manufacturer-tier entity or an unrelated same-industry
-   coincidence.
+   `ooo-tsyus`, both already registered) — **RESOLVED 2026-09-15, closed, not
+   wired.** ООО «Системы Безопасности» (ИНН 5001160158, OKVED 26.11) turned out
+   to be a personal shell/holding vehicle: full EGRUL выписка pulled (s7520)
+   shows Поспехов as 100% sole owner AND director, statutory-minimum charter
+   capital, and 38 additional catch-all ОКВЭД codes spanning unrelated retail/
+   IT/accounting/transport/construction activity — the same discount pattern
+   as every other Part-2 bridge-figure candidate. No product/patent/UAV signal
+   found. See the full reasoning in `corrections_people.json`'s
+   `pospekhov-ivan-aleksandrovich` entry.
 
 Everyone else's extra other_entities[] hits (Гагаринг's Барашков → СДЭК courier
 franchise + a charity fund; Гаркуша's 9-entity chemical-trading cluster; Тимофеев's
