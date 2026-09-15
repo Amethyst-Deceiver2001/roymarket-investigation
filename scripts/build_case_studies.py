@@ -60,12 +60,12 @@ CASES = [
         },
         "nodes": [
             {"id": "barashkov", "kind": "person", "label": "Барашков А.С.", "x": 70, "y": 55},
-            {"id": "gagaring", "kind": "entity", "label": "ООО «Гагаринг»", "x": 220, "y": 150, "r": 20},
-            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 55},
+            {"id": "gagaring", "kind": "entity", "label": "ООО «Гагаринг»", "x": 220, "y": 150, "r": 20, "type_icon": "manufacturer"},
+            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 55, "type_icon": "ngo"},
             {"id": "kuznechik", "kind": "product", "label": "«Кузнечик»\nсвязь", "x": 380, "y": 245, "icon": "video_link"},
             {"id": "eyler", "kind": "entity", "label": "НПО «Эйлер»", "x": 100, "y": 250, "r": 12},
             {"id": "yangel", "kind": "entity", "label": "Лаб. Янгеля", "x": 220, "y": 270, "r": 12},
-            {"id": "intel", "kind": "entity", "label": "«Интел Дрон»", "x": 340, "y": 270, "r": 12},
+            {"id": "intel", "kind": "entity", "label": "«Интел Дрон»", "x": 340, "y": 270, "r": 12, "type_icon": "manufacturer"},
         ],
         "edges": [
             {"s": "barashkov", "t": "gagaring", "type": "founded"},
@@ -100,8 +100,8 @@ CASES = [
         },
         "nodes": [
             {"id": "kozlov", "kind": "person", "label": "Козлов Д.С.", "x": 80, "y": 60},
-            {"id": "goudron", "kind": "entity", "label": "ООО «ГОУДРОН»", "x": 230, "y": 150, "r": 18},
-            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 60},
+            {"id": "goudron", "kind": "entity", "label": "ООО «ГОУДРОН»", "x": 230, "y": 150, "r": 18, "type_icon": "manufacturer"},
+            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 60, "type_icon": "ngo"},
             {"id": "nabat", "kind": "product", "label": "«Набат v3»", "x": 230, "y": 260, "icon": "detector"},
         ],
         "edges": [
@@ -134,9 +134,9 @@ CASES = [
         },
         "nodes": [
             {"id": "cherezov", "kind": "person", "label": "Черезов А.П.", "x": 220, "y": 45},
-            {"id": "traktat", "kind": "entity", "label": "«Воздушный трактат»", "x": 100, "y": 165, "r": 16},
-            {"id": "ovod_ent", "kind": "entity", "label": "«РЛВТ»", "x": 340, "y": 165, "r": 16},
-            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 220, "y": 270},
+            {"id": "traktat", "kind": "entity", "label": "«Воздушный трактат»", "x": 100, "y": 165, "r": 16, "type_icon": "manufacturer"},
+            {"id": "ovod_ent", "kind": "entity", "label": "«РЛВТ»", "x": 340, "y": 165, "r": 16, "type_icon": "manufacturer"},
+            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 220, "y": 270, "type_icon": "ngo"},
             {"id": "prod_t", "kind": "product", "label": "«Овод»", "x": 60, "y": 270, "icon": "fpv_strike"},
             {"id": "prod_o", "kind": "product", "label": "«Овод»", "x": 380, "y": 270, "icon": "fpv_strike"},
         ],
@@ -173,8 +173,8 @@ CASES = [
         "nodes": [
             {"id": "chernyshov", "kind": "person", "label": "Чернышов П.А.\n40%", "x": 70, "y": 55},
             {"id": "korchagina", "kind": "person", "label": "Корчагина О.А.\n60%", "x": 70, "y": 245},
-            {"id": "piranya", "kind": "entity", "label": "СКБ «Пиранья»", "x": 230, "y": 150, "r": 20},
-            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 55},
+            {"id": "piranya", "kind": "entity", "label": "СКБ «Пиранья»", "x": 230, "y": 150, "r": 20, "type_icon": "manufacturer"},
+            {"id": "cbst", "kind": "cbst", "label": "АНО «ЦБСТ»", "x": 380, "y": 55, "type_icon": "ngo"},
             {"id": "p10", "kind": "product", "label": "«Пиранья-10»", "x": 380, "y": 165},
             {"id": "p13", "kind": "product", "label": "«Пиранья-13»", "x": 380, "y": 260, "icon": "fpv_strike"},
         ],
@@ -194,20 +194,24 @@ CASES = [
             "ИП Цыганов В.Б. sells the «Булат» v.4 drone detector through its "
             "own subsidiary ООО «Покров», and has won government contracts "
             "directly from Kursk's regional MChS directorate and the "
-            "FSB-linked «Лидер» rescue center. No ЦБСТ tie is recorded for "
-            "this entity in the registry — the ecosystem's downstream reach "
+            "FSB-linked «Лидер» rescue center. Покров is itself a registry-"
+            "named dealer for a second manufacturer, АО «Тримикс»/3mx, "
+            "reselling its «Булат»/«Марс» line alongside Покров's own "
+            "branded EW jammers [s1386] — one downstream node serving two "
+            "manufacturers at once. No ЦБСТ tie is recorded for this "
+            "entity in the registry — the ecosystem's downstream reach "
             "extends past ЦБСТ's own named residents."
         ),
-        "sources": "zakupki.gov.ru contract cards · see government_contracts[]",
+        "sources": "zakupki.gov.ru contract cards · see government_contracts[] · s1386",
         "photo": None,
         "quote_note": "No self-incriminating marketing copy is on file for this entity — its government-contract cards are the only sourced material.",
         "nodes": [
             {"id": "tsyganov", "kind": "person", "label": "Цыганов В.Б.", "x": 80, "y": 60},
-            {"id": "ip", "kind": "entity", "label": "ИП Цыганов", "x": 230, "y": 150, "r": 18},
-            {"id": "pokrov", "kind": "entity", "label": "ООО «Покров»", "x": 230, "y": 270, "r": 12},
+            {"id": "ip", "kind": "entity", "label": "ИП Цыганов", "x": 230, "y": 150, "r": 18, "type_icon": "manufacturer"},
+            {"id": "pokrov", "kind": "entity", "label": "ООО «Покров»", "x": 230, "y": 270, "r": 12, "type_icon": "dealer"},
             {"id": "bulat", "kind": "product", "label": "«Булат» v.4", "x": 380, "y": 90, "icon": "detector"},
-            {"id": "mchs", "kind": "gov", "label": "МЧС Курской обл.", "x": 380, "y": 200},
-            {"id": "lider", "kind": "gov", "label": "ФГКУ «Лидер»", "x": 380, "y": 270},
+            {"id": "mchs", "kind": "gov", "label": "МЧС Курской обл.", "x": 380, "y": 200, "type_icon": "govt"},
+            {"id": "lider", "kind": "gov", "label": "ФГКУ «Лидер»", "x": 380, "y": 270, "type_icon": "govt"},
         ],
         "edges": [
             {"s": "tsyganov", "t": "ip", "type": "role"},
@@ -275,6 +279,52 @@ ICON_GLYPH = {
     ),
 }
 
+# Entity-TYPE glyphs (added on user request), distinct from the product
+# glyphs above -- these mark what kind of organization a circle node IS
+# (manufacturer / dealer / government agency / NGO-GONGO), not what it
+# makes. Each is driven by a real, already-recorded field, never guessed:
+#   manufacturer -> node["tier"] == "manufacturer" (the same field that
+#     already sets the node's fill color -- this just makes the same fact
+#     legible without relying on color alone).
+#   ngo          -> node["legal_form"] == "АНО" (АНО/Ассоциация/Фонд are
+#     Russia's non-profit legal forms; ЦБСТ itself is one).
+#   govt         -> node kind "gov" (already a distinct government_customer
+#     node kind in the live graph).
+#   dealer       -> a SOURCED related_entities[].relationship_type=="dealer"
+#     edge naming this entity, never inferred from an empty products[]. Of
+#     this exhibit's nodes only ООО «Покров» qualifies: АО «Тримикс»/3mx's
+#     own registry record names Покров as its dealer for the «Булат»/«Марс»
+#     detector line (s1386) -- alongside Покров's own branded EW jammers,
+#     so it is a manufacturer AND a dealer, not purely one or the other.
+ENTITY_ICON = {
+    "manufacturer": (
+        '<circle r="3.6" fill="none"/>'
+        + "".join(
+            f'<line x1="{3.6*_c:.2f}" y1="{3.6*_s:.2f}" x2="{6.4*_c:.2f}" y2="{6.4*_s:.2f}"/>'
+            for _c, _s in (
+                (1, 0), (0.5, 0.866), (-0.5, 0.866),
+                (-1, 0), (-0.5, -0.866), (0.5, -0.866),
+            )
+        )
+    ),
+    "ngo": (
+        '<path d="M-6,6 C-7,-2 -1,-8 7,-8 C8,1 2,7 -6,6 Z" fill="none"/>'
+        '<path d="M-5,5 L6,-7" fill="none"/>'
+    ),
+    "govt": (
+        '<line x1="-8" y1="7" x2="8" y2="7"/>'
+        '<line x1="-8" y1="1" x2="8" y2="1"/>'
+        '<line x1="-5" y1="1" x2="-5" y2="7"/>'
+        '<line x1="0" y1="1" x2="0" y2="7"/>'
+        '<line x1="5" y1="1" x2="5" y2="7"/>'
+        '<path d="M-8,1 L0,-7 L8,1 Z" fill="none"/>'
+    ),
+    "dealer": (
+        '<rect x="-8" y="-4" width="9" height="8" rx="1" fill="none"/>'
+        '<path d="M0,0 L8,0 M4,-3.2 L8,0 L4,3.2" fill="none"/>'
+    ),
+}
+
 
 def node_fill(n, case):
     if n["kind"] == "entity":
@@ -294,6 +344,11 @@ def node_shape_svg(n, case):
     icon_svg = ""
     if shape == "circle":
         el = f'<circle cx="{x}" cy="{y}" r="{r}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
+        type_icon = n.get("type_icon")
+        if type_icon:
+            scale = r / 10
+            icon_svg = (f'<g transform="translate({x},{y}) scale({scale:.2f})" class="product-icon">'
+                        f'{ENTITY_ICON[type_icon]}</g>')
     elif shape == "diamond":
         pts = f"{x},{y-r} {x+r},{y} {x},{y+r} {x-r},{y}"
         el = f'<polygon points="{pts}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
@@ -383,6 +438,19 @@ def render_case(case, idx):
 
 
 CASES_HTML = "\n".join(render_case(c, i) for i, c in enumerate(CASES))
+
+ICON_LEGEND_LABELS = {
+    "manufacturer": "Manufacturer (tier)",
+    "ngo": "NGO / GONGO (АНО, Ассоциация, Фонд)",
+    "govt": "Government agency",
+    "dealer": "Dealer (sourced relationship_type)",
+}
+ICON_LEGEND_HTML = "\n".join(
+    f'<span class="item"><svg width="18" height="18" viewBox="-10 -10 20 20" class="icon-legend-swatch">'
+    f'<circle r="9" fill="var(--ink-2)"/>'
+    f'<g class="product-icon">{ENTITY_ICON[key]}</g></svg> {label}</span>'
+    for key, label in ICON_LEGEND_LABELS.items()
+)
 
 HTML = f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body>
 <title>{TITLE}</title>
@@ -515,6 +583,8 @@ header.hero p.lede {{
 .legend .sw.diamond {{ transform: rotate(45deg); border-radius: 2px; }}
 .legend .sw.square {{ border-radius: 2px; }}
 .legend .sw.ring {{ background: transparent; border: 2px solid var(--sanctioned-ring); }}
+.icon-legend {{ margin-top: 10px; }}
+.icon-legend-swatch {{ flex-shrink: 0; vertical-align: middle; }}
 
 section.case {{
   display: grid;
@@ -652,6 +722,7 @@ footer.note {{
       <span class="item"><span class="sw circle" style="background:var(--t-network)"></span> Govt. customer</span>
       <span class="item"><span class="sw ring"></span> Sanctioned</span>
     </div>
+    <div class="legend icon-legend">{ICON_LEGEND_HTML}</div>
   </header>
 
   {CASES_HTML}
