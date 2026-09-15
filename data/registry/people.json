@@ -11701,7 +11701,24 @@
     "birthplace": null,
     "address": null,
     "inn_personal": "712802968839",
-    "roles": [],
+    "roles": [
+      {
+        "entity_name": "ООО «Воздушный трактат»",
+        "entity_slug": "ooo-vozdushnyy-traktat",
+        "title": "Директор и учредитель (100%)",
+        "from": "2023-11-28",
+        "to": null,
+        "source_id": "s6728"
+      },
+      {
+        "entity_name": "ООО «Русская лаборатория воздушного транспорта» (РЛВТ)",
+        "entity_slug": "ovod",
+        "title": "Директор и учредитель (100%)",
+        "from": "2024-05-08",
+        "to": null,
+        "source_id": "s6727"
+      }
+    ],
     "sanctions": [],
     "other_entities": [
       {
@@ -11763,7 +11780,8 @@
       ]
     },
     "_corrected": [
-      "2026-09-08: personal ИНН found in the already-pulled EGRUL выписка for ovod (ИНН 7100027464, s6727) — he's named there as director since 28.09.2022, ИНН 712802968839. Sitting unexploited since 2026-09-07; closing the gap now that this Гагаринг-adjacent 'Архангел'-family thread is being worked."
+      "2026-09-08: personal ИНН found in the already-pulled EGRUL выписка for ovod (ИНН 7100027464, s6727) — he's named there as director since 28.09.2022, ИНН 712802968839. Sitting unexploited since 2026-09-07; closing the gap now that this Гагаринг-adjacent 'Архангел'-family thread is being worked.",
+      "2026-09-17: added roles[] entries for both ooo-vozdushnyy-traktat and ovod (director+100% founder of each, per each entity's own director/founders_history fields, sourced s6728/s6727) -- the entity-side records and relationship_graph.json already carried this tie, but people.json's own roles[] array was empty, so no person profile page existed for him. Found while wiring clickable profile links into the 'Five Residents' case-study exhibit."
     ],
     "_verified_against": null,
     "opensanctions_matches": [

@@ -1002,7 +1002,7 @@
           "label": "Черезов Андрей Павлович",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 9
+          "degree": 11
         },
         {
           "id": "chernyshov-pavel-alekseevich",
@@ -4508,7 +4508,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ooo-zavolzhskoe",
@@ -4584,7 +4584,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": "offensive",
-          "degree": 12
+          "degree": 13
         },
         {
           "id": "pao-bank-psb",
@@ -13271,6 +13271,17 @@
         },
         {
           "source": "cherezov-andrey-pavlovich",
+          "target": "ooo-vozdushnyy-traktat",
+          "type": "role",
+          "label": "Директор и учредитель (100%)",
+          "source_id": "s6728",
+          "as_of": "2023-11-28",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "cherezov-andrey-pavlovich",
           "target": "ovod",
           "type": "directs",
           "label": null,
@@ -13289,6 +13300,17 @@
           "as_of": "2024-05-08",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "cherezov-andrey-pavlovich",
+          "target": "ovod",
+          "type": "role",
+          "label": "Директор и учредитель (100%)",
+          "source_id": "s6727",
+          "as_of": "2024-05-08",
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -27109,7 +27131,7 @@
           "label": "Черезов Андрей Павлович",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 9
+          "degree": 11
         },
         {
           "id": "chernyshov-pavel-alekseevich",
@@ -28637,7 +28659,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ooo-zavolzhskoe",
@@ -28697,7 +28719,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": "offensive",
-          "degree": 12
+          "degree": 13
         },
         {
           "id": "pao-bank-psb",
@@ -32064,7 +32086,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "pao-bank-psb",
@@ -33750,7 +33772,7 @@
           "label": "Черезов Андрей Павлович",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 9
+          "degree": 11
         },
         {
           "id": "chernyshov-pavel-alekseevich",
@@ -36170,7 +36192,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ooo-zavolzhskoe",
@@ -36238,7 +36260,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": "offensive",
-          "degree": 12
+          "degree": 13
         },
         {
           "id": "pao-bank-psb",
