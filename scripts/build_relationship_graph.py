@@ -33,7 +33,25 @@ VIEWS_OUT = REG / "relationship_graph_views.json"
 
 CBST_SLUG = "ano-tsbst-centre-for-unmanned-systems-technologies"
 
+# Full spelled-out legal forms come first so the alternation (which tries
+# alternatives left-to-right, not longest-match) consumes the whole phrase
+# in one pass instead of stopping at a bare prefix word and leaving the
+# rest of the phrase (e.g. "с ограниченной ответственностью") stuck in the
+# normalized name. Found 2026-09-16: a founder string written as the
+# abbreviation ("ООО «Кронштадт Беспилотные Системы»") failed to resolve
+# against that entity's own name_ru, which spells the legal form out in
+# full ("Общество с ограниченной ответственностью «...»") -- normalize()
+# only stripped the bare "Общество" token, leaving "с ограниченной
+# ответственностью" attached on one side but not the other, so the two
+# normalized strings never matched.
 LEGAL_PREFIXES = [
+    "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ",
+    "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО",
+    "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО",
+    "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО",
+    "АКЦИОНЕРНОЕ ОБЩЕСТВО",
+    "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ",
+    "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ",
     "ООО", "ОАО", "ЗАО", "ПАО", "АО", "АНО", "НКО", "НПЦ", "НПО", "КБ",
     "ФГУП", "ГУП", "МУП", "ИП", "ФОНД", "АССОЦИАЦИЯ", "СОЮЗ", "ОБЩЕСТВО",
 ]
@@ -67,6 +85,8 @@ def parse_founder_entries(raw) -> list[dict]:
                 out.append({
                     "name": item["name"],
                     "share": item.get("share", item.get("share_pct")),
+                    "inn": item.get("inn"),
+                    "ogrn": item.get("ogrn"),
                 })
             continue
         if not isinstance(item, str):
@@ -277,7 +297,19 @@ def build_graph(entities: list[dict], people: list[dict],
                      related.get("source_id"))
         for founder in parse_founder_entries(entity.get("founders")):
             raw_name = founder["name"]
-            target = resolve_name(raw_name)
+            # ИНН/ОГРН resolution first, before the name-normalization
+            # fallback: a founder string can use a legitimate business
+            # abbreviation (e.g. "ГК" for "Группа компаний") that no
+            # generic legal-form-prefix stripping can expand, and an
+            # already-recorded ИНН/ОГРН on the founder entry is a stronger,
+            # unambiguous match than any name heuristic. Found 2026-09-16
+            # auditing false unresolved stubs: ooo-aeromaks's founder entry
+            # for ooo-gk-aeromaks already carried the exact matching
+            # ИНН/ОГРН and still fell through to a stub under name-only
+            # resolution.
+            target = (inn_to_entity_slug.get(founder.get("inn"))
+                      or entity_by_ogrn.get(founder.get("ogrn"))
+                      or resolve_name(raw_name))
             if target == slug:
                 continue
             source = target or add_stub(raw_name, f"founder of {slug}")

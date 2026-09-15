@@ -182,7 +182,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ano-tsasd-demyansk",
@@ -194,7 +194,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": null,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "ano-tsbst-centre-for-unmanned-systems-technologies",
@@ -206,7 +206,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 49
+          "degree": 52
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -262,7 +262,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 4
+          "degree": 3
         },
         {
           "id": "ao-aurin",
@@ -586,7 +586,7 @@
           "sanctioned": false,
           "legal_form": "УК",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-uk-smart",
@@ -1071,6 +1071,12 @@
           "degree": 1
         },
         {
+          "id": "customer::всероссийский-научно-исследовательский-институт-метрологии-им-д-и-менделеева",
+          "kind": "government_customer",
+          "label": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ \"ВСЕРОССИЙСКИЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ МЕТРОЛОГИИ ИМ.Д.И.МЕНДЕЛЕЕВА\"",
+          "degree": 1
+        },
+        {
           "id": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий-дсзм",
           "kind": "government_customer",
           "label": "ГБУ г. Москвы «Дирекция спортивных и зрелищных мероприятий» (ДСЗМ)",
@@ -1242,6 +1248,12 @@
           "id": "customer::департамент-природопользования-и-охраны-окружающей-среды-города-москвы-инн-7704457822",
           "kind": "government_customer",
           "label": "ДЕПАРТАМЕНТ ПРИРОДОПОЛЬЗОВАНИЯ И ОХРАНЫ ОКРУЖАЮЩЕЙ СРЕДЫ ГОРОДА МОСКВЫ (ИНН 7704457822)",
+          "degree": 1
+        },
+        {
+          "id": "customer::защитаинфотранс-министерства-транспорта-российской-федерации",
+          "kind": "government_customer",
+          "label": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ \"ЗАЩИТАИНФОТРАНС МИНИСТЕРСТВА ТРАНСПОРТА РОССИЙСКОЙ ФЕДЕРАЦИИ\"",
           "degree": 1
         },
         {
@@ -1665,18 +1677,6 @@
           "degree": 2
         },
         {
-          "id": "customer::федеральное-государственное-унитарное-предприятие-всероссийский-научно-исследовательский-институт-метрологии-им-д-и-менделеева",
-          "kind": "government_customer",
-          "label": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ \"ВСЕРОССИЙСКИЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ МЕТРОЛОГИИ ИМ.Д.И.МЕНДЕЛЕЕВА\"",
-          "degree": 1
-        },
-        {
-          "id": "customer::федеральное-государственное-унитарное-предприятие-защитаинфотранс-министерства-транспорта-российской-федерации",
-          "kind": "government_customer",
-          "label": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ \"ЗАЩИТАИНФОТРАНС МИНИСТЕРСТВА ТРАНСПОРТА РОССИЙСКОЙ ФЕДЕРАЦИИ\"",
-          "degree": 1
-        },
-        {
           "id": "customer::федеральное-государственное-учреждение-администрация-морского-порта",
           "kind": "government_customer",
           "label": "Федеральное государственное учреждение «Администрация морского порта»",
@@ -1918,7 +1918,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -1930,7 +1930,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "fond-nasha-pravda",
@@ -2978,7 +2978,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 16
+          "degree": 15
         },
         {
           "id": "ooo-aero-khit",
@@ -2990,7 +2990,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": "offensive",
-          "degree": 6
+          "degree": 5
         },
         {
           "id": "ooo-aero-khit-m",
@@ -3026,7 +3026,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 38
+          "degree": 40
         },
         {
           "id": "ooo-aeromaks-avia-tsentr-logistika",
@@ -3086,7 +3086,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-ametist",
@@ -3242,7 +3242,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 9
         },
         {
           "id": "ooo-asel-labs",
@@ -3350,7 +3350,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ooo-btr-donetsk",
@@ -3410,7 +3410,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-dsg",
@@ -3423,18 +3423,6 @@
           "legal_form": "ООО",
           "variant": null,
           "degree": 8
-        },
-        {
-          "id": "ooo-ekolibri-bt",
-          "kind": "entity",
-          "label": "ООО «Эколибри-Беспилотные технологии»",
-          "name_latin": null,
-          "inn": "9713001941",
-          "tier": "manufacturer",
-          "sanctioned": false,
-          "legal_form": "ООО",
-          "variant": null,
-          "degree": 3
         },
         {
           "id": "ooo-ekspoket",
@@ -3494,7 +3482,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 7
         },
         {
           "id": "ooo-gagaring",
@@ -3506,7 +3494,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": "dual",
-          "degree": 41
+          "degree": 43
         },
         {
           "id": "ooo-garant-klub",
@@ -3530,7 +3518,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 14
+          "degree": 13
         },
         {
           "id": "ooo-gaskar-integratsiya",
@@ -3590,7 +3578,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-gk-logos",
@@ -3662,7 +3650,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 9
+          "degree": 8
         },
         {
           "id": "ooo-intel-dron",
@@ -3771,6 +3759,18 @@
           "legal_form": "ООО",
           "variant": null,
           "degree": 14
+        },
+        {
+          "id": "ooo-kronshtadt-bespilotnye-sistemy",
+          "kind": "entity",
+          "label": "Общество с ограниченной ответственностью «Кронштадт Беспилотные Системы»",
+          "name_latin": null,
+          "inn": "7801320277",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "variant": null,
+          "degree": 2
         },
         {
           "id": "ooo-laboratoriya-yangelya",
@@ -4034,7 +4034,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-orzhitskie-artezianskie-vody",
@@ -4298,7 +4298,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 5
         },
         {
           "id": "ooo-spdbbk",
@@ -4310,7 +4310,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 5
         },
         {
           "id": "ooo-spetsialnye-poleznye-tekhnologii",
@@ -4322,7 +4322,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 4
+          "degree": 3
         },
         {
           "id": "ooo-spetsmat-spetsialnye-materialy",
@@ -4418,7 +4418,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 9
         },
         {
           "id": "ooo-trimiks-bulat-3mx",
@@ -4610,7 +4610,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 15
+          "degree": 16
         },
         {
           "id": "ordzhonikidze-aleksey-grigorevich",
@@ -10008,34 +10008,10 @@
           "degree": 1
         },
         {
-          "id": "stub::автономная некоммерческая организация платформа национальной технологической инициативы / автономная некоммерческая организация центр стрелкового и авиационного спорта демянск / акционерное общество управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай / министерство промышленности и торговли новгородской области",
-          "kind": "unresolved",
-          "label": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"ПЛАТФОРМА НАЦИОНАЛЬНОЙ ТЕХНОЛОГИЧЕСКОЙ ИНИЦИАТИВЫ\" / АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"ЦЕНТР СТРЕЛКОВОГО И АВИАЦИОННОГО СПОРТА \"ДЕМЯНСК\" / АКЦИОНЕРНОЕ ОБЩЕСТВО \"УПРАВЛЯЮЩАЯ КОМПАНИЯ ИННОВАЦИОННОГО НАУЧНО- ТЕХНОЛОГИЧЕСКОГО ЦЕНТРА \"ИНТЕЛЛЕКТУАЛЬНАЯ ЭЛЕКТРОНИКА - ВАЛДАЙ\" / МИНИСТЕРСТВО ПРОМЫШЛЕННОСТИ И ТОРГОВЛИ НОВГОРОДСКОЙ ОБЛАСТИ",
-          "degree": 1
-        },
-        {
           "id": "stub::аккерман екатерина валерьевна",
           "kind": "unresolved",
           "label": "Аккерман Екатерина Валерьевна",
           "degree": 3
-        },
-        {
-          "id": "stub::акционерное общество вежливый концерн",
-          "kind": "unresolved",
-          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВЕЖЛИВЫЙ КОНЦЕРН\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::акционерное общество ук смарт",
-          "kind": "unresolved",
-          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УК СМАРТ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::акционерное общество эколибри",
-          "kind": "unresolved",
-          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЭКОЛИБРИ\"",
-          "degree": 1
         },
         {
           "id": "stub::андреева жанна евгеньевна",
@@ -10071,6 +10047,12 @@
           "id": "stub::белоглазова (мешкова) людмила александровна",
           "kind": "unresolved",
           "label": "Белоглазова (Мешкова) Людмила Александровна",
+          "degree": 1
+        },
+        {
+          "id": "stub::беспилотные технологические решения",
+          "kind": "unresolved",
+          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЕСПИЛОТНЫЕ ТЕХНОЛОГИЧЕСКИЕ РЕШЕНИЯ\"",
           "degree": 1
         },
         {
@@ -10206,12 +10188,6 @@
           "degree": 1
         },
         {
-          "id": "stub::закрытое акционерное общество группа компаний титан",
-          "kind": "unresolved",
-          "label": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГРУППА КОМПАНИЙ \"ТИТАН\"",
-          "degree": 1
-        },
-        {
           "id": "stub::защитаинфотранс министерства транспорта российской федерации",
           "kind": "unresolved",
           "label": "ФГУП «ЗащитаИнфоТранс Министерства транспорта Российской Федерации»",
@@ -10251,12 +10227,6 @@
           "id": "stub::инн 771501583221 -",
           "kind": "unresolved",
           "label": "ИНН 771501583221 -",
-          "degree": 1
-        },
-        {
-          "id": "stub::инновационный технологический центр система-саров",
-          "kind": "unresolved",
-          "label": "АО «Инновационный технологический центр «Система-САРОВ»»",
           "degree": 1
         },
         {
@@ -10306,12 +10276,6 @@
           "kind": "unresolved",
           "label": "Костылин Дмитрий Евгеньевич",
           "degree": 2
-        },
-        {
-          "id": "stub::кронштадт беспилотные системы",
-          "kind": "unresolved",
-          "label": "ООО «Кронштадт Беспилотные Системы»",
-          "degree": 1
         },
         {
           "id": "stub::крючков дмитрий александрович (инн 712900068586)",
@@ -10422,6 +10386,12 @@
           "degree": 2
         },
         {
+          "id": "stub::платформа национальной технологической инициативы / автономная некоммерческая организация центр стрелкового и авиационного спорта демянск / акционерное общество управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай / министерство промышленности и торговли новгородской области",
+          "kind": "unresolved",
+          "label": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"ПЛАТФОРМА НАЦИОНАЛЬНОЙ ТЕХНОЛОГИЧЕСКОЙ ИНИЦИАТИВЫ\" / АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"ЦЕНТР СТРЕЛКОВОГО И АВИАЦИОННОГО СПОРТА \"ДЕМЯНСК\" / АКЦИОНЕРНОЕ ОБЩЕСТВО \"УПРАВЛЯЮЩАЯ КОМПАНИЯ ИННОВАЦИОННОГО НАУЧНО- ТЕХНОЛОГИЧЕСКОГО ЦЕНТРА \"ИНТЕЛЛЕКТУАЛЬНАЯ ЭЛЕКТРОНИКА - ВАЛДАЙ\" / МИНИСТЕРСТВО ПРОМЫШЛЕННОСТИ И ТОРГОВЛИ НОВГОРОДСКОЙ ОБЛАСТИ",
+          "degree": 1
+        },
+        {
           "id": "stub::потехин владимир александрович",
           "kind": "unresolved",
           "label": "Потехин Владимир Александрович",
@@ -10450,48 +10420,6 @@
           "kind": "unresolved",
           "label": "Рябико Ольга Александровна",
           "degree": 2
-        },
-        {
-          "id": "stub::с ограниченной ответственностью беспилотные технологические решения",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЕСПИЛОТНЫЕ ТЕХНОЛОГИЧЕСКИЕ РЕШЕНИЯ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью информационные технологии",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью кравт",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАВТ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью ориент системс",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОРИЕНТ СИСТЕМС\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью сибирская навигационная компания",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИБИРСКАЯ НАВИГАЦИОННАЯ КОМПАНИЯ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью стартап- студия университета лобачевского",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАРТАП- СТУДИЯ УНИВЕРСИТЕТА ЛОБАЧЕВСКОГО\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью управляющая компания комакс",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УПРАВЛЯЮЩАЯ КОМПАНИЯ КОМАКС\"",
-          "degree": 3
         },
         {
           "id": "stub::саитов р.ф.",
@@ -10528,6 +10456,12 @@
           "kind": "unresolved",
           "label": "Сотов Артём Александрович",
           "degree": 2
+        },
+        {
+          "id": "stub::стартап- студия университета лобачевского",
+          "kind": "unresolved",
+          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАРТАП- СТУДИЯ УНИВЕРСИТЕТА ЛОБАЧЕВСКОГО\"",
+          "degree": 1
         },
         {
           "id": "stub::степаева мария ивановна",
@@ -13637,6 +13571,17 @@
           "confidence": null
         },
         {
+          "source": "customer::всероссийский-научно-исследовательский-институт-метрологии-им-д-и-менделеева",
+          "target": "npp-radar-mms",
+          "type": "procures",
+          "label": "1719187302431442209016193\n                                             / \n                                            315-ЭА/2017",
+          "source_id": "s2691",
+          "as_of": null,
+          "weight": 3379145.82,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий-дсзм",
           "target": "ao-tsentr-telko",
           "type": "procures",
@@ -14062,6 +14007,17 @@
           "source_id": "s5235",
           "as_of": "2022-11-08",
           "weight": 21600000.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::защитаинфотранс-министерства-транспорта-российской-федерации",
+          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
+          "type": "procures",
+          "label": "ЗИТ-99С/1",
+          "source_id": "s5210",
+          "as_of": "2026-07-14",
+          "weight": 743280.0,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -15822,28 +15778,6 @@
           "source_id": "s2693",
           "as_of": null,
           "weight": 36643416.67,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::федеральное-государственное-унитарное-предприятие-всероссийский-научно-исследовательский-институт-метрологии-им-д-и-менделеева",
-          "target": "npp-radar-mms",
-          "type": "procures",
-          "label": "1719187302431442209016193\n                                             / \n                                            315-ЭА/2017",
-          "source_id": "s2691",
-          "as_of": null,
-          "weight": 3379145.82,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::федеральное-государственное-унитарное-предприятие-защитаинфотранс-министерства-транспорта-российской-федерации",
-          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
-          "type": "procures",
-          "label": "ЗИТ-99С/1",
-          "source_id": "s5210",
-          "as_of": "2026-07-14",
-          "weight": 743280.0,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -20655,6 +20589,17 @@
           "confidence": null
         },
         {
+          "source": "ooo-kronshtadt-bespilotnye-sistemy",
+          "target": "ooo-gk-aeromaks",
+          "type": "founded",
+          "label": "former founder (100%)",
+          "source_id": "s6886",
+          "as_of": "2025-12-14",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
           "source": "ooo-mptm",
           "target": "ooo-aerotekhalyans",
           "type": "related",
@@ -24406,17 +24351,6 @@
           "confidence": null
         },
         {
-          "source": "stub::автономная некоммерческая организация платформа национальной технологической инициативы / автономная некоммерческая организация центр стрелкового и авиационного спорта демянск / акционерное общество управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай / министерство промышленности и торговли новгородской области",
-          "target": "ano-npts-ushkuynik",
-          "type": "founded",
-          "label": "former founder",
-          "source_id": "s6806",
-          "as_of": "2024-02-29",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
           "source": "stub::аккерман екатерина валерьевна",
           "target": "ooo-stroystandart",
           "type": "directs",
@@ -24436,39 +24370,6 @@
           "as_of": "2026-08-24",
           "weight": 1.0,
           "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::акционерное общество вежливый концерн",
-          "target": "ooo-spetsialnye-poleznye-tekhnologii",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6764",
-          "as_of": "2024-12-20",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::акционерное общество ук смарт",
-          "target": "ooo-smart-teknolodzhis",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6736",
-          "as_of": "2023-12-29",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::акционерное общество эколибри",
-          "target": "ooo-ekolibri-bt",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6862",
-          "as_of": "2023-11-30",
-          "weight": 1.0,
-          "temporal_status": "historical",
           "confidence": null
         },
         {
@@ -24555,6 +24456,17 @@
           "label": null,
           "source_id": "s1408",
           "as_of": "2024-08-22",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
+          "source": "stub::беспилотные технологические решения",
+          "target": "ooo-btr-donetsk",
+          "type": "founded",
+          "label": "former founder (100%)",
+          "source_id": "s6852",
+          "as_of": "2024-11-02",
           "weight": 1.0,
           "temporal_status": "historical",
           "confidence": null
@@ -24890,17 +24802,6 @@
           "confidence": null
         },
         {
-          "source": "stub::закрытое акционерное общество группа компаний титан",
-          "target": "ooo-titan-severo-zapad",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6753",
-          "as_of": "2010-04-19",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
           "source": "stub::защитаинфотранс министерства транспорта российской федерации",
           "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
           "type": "founded",
@@ -24973,17 +24874,6 @@
           "label": "former founder (5%)",
           "source_id": "s5474",
           "as_of": "2026-03-12",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::инновационный технологический центр система-саров",
-          "target": "ooo-as-kam",
-          "type": "founded",
-          "label": "former founder (80%)",
-          "source_id": "s6427",
-          "as_of": "2026-09-06",
           "weight": 1.0,
           "temporal_status": "historical",
           "confidence": null
@@ -25085,17 +24975,6 @@
           "as_of": "2025-03-17",
           "weight": 1.0,
           "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::кронштадт беспилотные системы",
-          "target": "ooo-gk-aeromaks",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6886",
-          "as_of": "2025-12-14",
-          "weight": 1.0,
-          "temporal_status": "historical",
           "confidence": null
         },
         {
@@ -25330,6 +25209,17 @@
           "confidence": null
         },
         {
+          "source": "stub::платформа национальной технологической инициативы / автономная некоммерческая организация центр стрелкового и авиационного спорта демянск / акционерное общество управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай / министерство промышленности и торговли новгородской области",
+          "target": "ano-npts-ushkuynik",
+          "type": "founded",
+          "label": "former founder",
+          "source_id": "s6806",
+          "as_of": "2024-02-29",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
           "source": "stub::потехин владимир александрович",
           "target": "ooo-boevye-tekhnologii",
           "type": "directs",
@@ -25440,83 +25330,6 @@
           "confidence": null
         },
         {
-          "source": "stub::с ограниченной ответственностью беспилотные технологические решения",
-          "target": "ooo-btr-donetsk",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6852",
-          "as_of": "2024-11-02",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью информационные технологии",
-          "target": "ooo-intek-bespilotnye-sistemy",
-          "type": "founded",
-          "label": "former founder (50%)",
-          "source_id": "s6726",
-          "as_of": "2024-01-24",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью кравт",
-          "target": "ooo-spdbbk",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6847",
-          "as_of": "2026-08-04",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью ориент системс",
-          "target": "ooo-4gnss",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6830",
-          "as_of": "2015-11-23",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью сибирская навигационная компания",
-          "target": "ooo-gaskar",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6759",
-          "as_of": "2026-04-03",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью стартап- студия университета лобачевского",
-          "target": "ooo-pekhtra",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6720",
-          "as_of": "2024-12-10",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью управляющая компания комакс",
-          "target": "ooo-aero-khit",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6714",
-          "as_of": "2023-06-09",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
           "source": "stub::саитов р.ф.",
           "target": "ooo-gaskar-integratsiya",
           "type": "directs",
@@ -25602,6 +25415,17 @@
           "as_of": "2025-11-25",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "stub::стартап- студия университета лобачевского",
+          "target": "ooo-pekhtra",
+          "type": "founded",
+          "label": "former founder (100%)",
+          "source_id": "s6720",
+          "as_of": "2024-12-10",
+          "weight": 1.0,
+          "temporal_status": "historical",
           "confidence": null
         },
         {
@@ -26907,7 +26731,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 49
+          "degree": 52
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -26939,7 +26763,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 4
+          "degree": 3
         },
         {
           "id": "ao-aurin",
@@ -27215,7 +27039,7 @@
           "sanctioned": false,
           "legal_form": "УК",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-uk-smart",
@@ -27467,7 +27291,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -27479,7 +27303,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "fond-nasha-pravda",
@@ -27799,7 +27623,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 16
+          "degree": 15
         },
         {
           "id": "ooo-aero-khit",
@@ -27811,7 +27635,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": "offensive",
-          "degree": 6
+          "degree": 5
         },
         {
           "id": "ooo-aeromaks",
@@ -27823,7 +27647,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 38
+          "degree": 40
         },
         {
           "id": "ooo-aeromaks-avia-tsentr-logistika",
@@ -27871,7 +27695,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-arkhangel",
@@ -28123,7 +27947,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 7
         },
         {
           "id": "ooo-gagaring",
@@ -28135,7 +27959,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": "dual",
-          "degree": 41
+          "degree": 43
         },
         {
           "id": "ooo-garant-klub",
@@ -28159,7 +27983,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 14
+          "degree": 13
         },
         {
           "id": "ooo-gaskar-integratsiya",
@@ -28507,7 +28331,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-orzhitskie-artezianskie-vody",
@@ -28687,7 +28511,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 5
         },
         {
           "id": "ooo-stroystandart",
@@ -28747,7 +28571,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 9
         },
         {
           "id": "ooo-tsentr-bespilotnykh-sistem-tula",
@@ -28891,7 +28715,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 15
+          "degree": 16
         },
         {
           "id": "ovod",
@@ -31733,7 +31557,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 49
+          "degree": 52
         },
         {
           "id": "ao-npp-bat",
@@ -31975,7 +31799,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": "dual",
-          "degree": 41
+          "degree": 43
         },
         {
           "id": "ooo-gaskar",
@@ -31987,7 +31811,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 14
+          "degree": 13
         },
         {
           "id": "ooo-gk-logos",
@@ -32179,7 +32003,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 5
         },
         {
           "id": "ooo-superkhrono",
@@ -32317,6 +32141,12 @@
           "degree": 1
         },
         {
+          "id": "stub::научно- производственное объединение программные комплексы реального времени",
+          "kind": "unresolved",
+          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО- ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ПРОГРАММНЫЕ КОМПЛЕКСЫ РЕАЛЬНОГО ВРЕМЕНИ\"",
+          "degree": 1
+        },
+        {
           "id": "stub::развития промышленности тульской области",
           "kind": "unresolved",
           "label": "ФОНД РАЗВИТИЯ ПРОМЫШЛЕННОСТИ ТУЛЬСКОЙ ОБЛАСТИ",
@@ -32341,22 +32171,10 @@
           "degree": 4
         },
         {
-          "id": "stub::с ограниченной ответственностью научно- производственное объединение программные комплексы реального времени",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО- ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ПРОГРАММНЫЕ КОМПЛЕКСЫ РЕАЛЬНОГО ВРЕМЕНИ\"",
-          "degree": 1
-        },
-        {
           "id": "stub::фрадков пётр михайлович",
           "kind": "unresolved",
           "label": "Фрадков Пётр Михайлович",
           "degree": 1
-        },
-        {
-          "id": "stub::цбст",
-          "kind": "unresolved",
-          "label": "АНО «ЦБСТ»",
-          "degree": 3
         },
         {
           "id": "stub::шпак максим викторович",
@@ -32469,6 +32287,17 @@
         {
           "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "target": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "target": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
           "type": "owns",
           "label": "100%",
           "source_id": "s0436",
@@ -32480,11 +32309,33 @@
         {
           "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "target": "ao-spetstekh-perviy",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "target": "ao-spetstekh-perviy",
           "type": "owns",
           "label": "100%",
           "source_id": "s0437",
           "as_of": null,
           "weight": 100,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "target": "ooo-sistemnyy-integrator",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -33215,6 +33066,17 @@
           "confidence": null
         },
         {
+          "source": "stub::научно- производственное объединение программные комплексы реального времени",
+          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "stub::развития промышленности тульской области",
           "target": "ooo-tsentr-bespilotnykh-sistem-tula",
           "type": "founded",
@@ -33270,17 +33132,6 @@
           "confidence": null
         },
         {
-          "source": "stub::с ограниченной ответственностью научно- производственное объединение программные комплексы реального времени",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "stub::фрадков пётр михайлович",
           "target": "pao-bank-psb",
           "type": "directs",
@@ -33289,39 +33140,6 @@
           "as_of": "2018-09-19",
           "weight": 1.0,
           "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::цбст",
-          "target": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::цбст",
-          "target": "ao-spetstekh-perviy",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::цбст",
-          "target": "ooo-sistemnyy-integrator",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -33505,7 +33323,19 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 6
+          "degree": 7
+        },
+        {
+          "id": "ano-tsasd-demyansk",
+          "kind": "entity",
+          "label": "АНО «ЦСАСД»",
+          "name_latin": "ANO TsSASD",
+          "inn": "5300008970",
+          "tier": "plumbing",
+          "sanctioned": true,
+          "legal_form": null,
+          "variant": null,
+          "degree": 3
         },
         {
           "id": "ano-tsbst-centre-for-unmanned-systems-technologies",
@@ -33517,7 +33347,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 49
+          "degree": 52
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -33541,7 +33371,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 4
+          "degree": 3
         },
         {
           "id": "ao-ekolibri",
@@ -33781,7 +33611,7 @@
           "sanctioned": false,
           "legal_form": "УК",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-uk-smart",
@@ -34077,7 +33907,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -34089,7 +33919,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "fond-nasha-pravda",
@@ -34629,7 +34459,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 16
+          "degree": 15
         },
         {
           "id": "ooo-aero-khit",
@@ -34641,7 +34471,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": "offensive",
-          "degree": 6
+          "degree": 5
         },
         {
           "id": "ooo-aero-khit-m",
@@ -34677,7 +34507,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 38
+          "degree": 40
         },
         {
           "id": "ooo-aeromaks-avia-tsentr-logistika",
@@ -34737,7 +34567,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-ametist",
@@ -34893,7 +34723,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 9
         },
         {
           "id": "ooo-asel-labs",
@@ -35001,7 +34831,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ooo-btr-donetsk",
@@ -35073,7 +34903,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-dsg",
@@ -35097,7 +34927,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 2
         },
         {
           "id": "ooo-ekspoket",
@@ -35157,7 +34987,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 7
         },
         {
           "id": "ooo-gagaring",
@@ -35169,7 +34999,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": "dual",
-          "degree": 41
+          "degree": 43
         },
         {
           "id": "ooo-garant-klub",
@@ -35193,7 +35023,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 14
+          "degree": 13
         },
         {
           "id": "ooo-gaskar-integratsiya",
@@ -35253,7 +35083,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-gk-logos",
@@ -35325,7 +35155,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 9
+          "degree": 8
         },
         {
           "id": "ooo-intel-dron",
@@ -35445,7 +35275,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 1
+          "degree": 2
         },
         {
           "id": "ooo-laboratoriya-yangelya",
@@ -35721,7 +35551,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-orzhitskie-artezianskie-vody",
@@ -35973,7 +35803,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 5
         },
         {
           "id": "ooo-spdbbk",
@@ -35985,7 +35815,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 5
         },
         {
           "id": "ooo-spetsialnye-poleznye-tekhnologii",
@@ -35997,7 +35827,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 4
+          "degree": 3
         },
         {
           "id": "ooo-spetsmat-spetsialnye-materialy",
@@ -36093,7 +35923,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 9
         },
         {
           "id": "ooo-trimiks-bulat-3mx",
@@ -36285,7 +36115,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 15
+          "degree": 16
         },
         {
           "id": "ordzhonikidze-aleksey-grigorevich",
@@ -38379,18 +38209,6 @@
           "degree": 1
         },
         {
-          "id": "stub::автономная некоммерческая организация платформа национальной технологической инициативы",
-          "kind": "unresolved",
-          "label": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"ПЛАТФОРМА НАЦИОНАЛЬНОЙ ТЕХНОЛОГИЧЕСКОЙ ИНИЦИАТИВЫ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::автономная некоммерческая организация центр стрелкового и авиационного спорта демянск",
-          "kind": "unresolved",
-          "label": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"ЦЕНТР СТРЕЛКОВОГО И АВИАЦИОННОГО СПОРТА \"ДЕМЯНСК\"",
-          "degree": 1
-        },
-        {
           "id": "stub::аквамарин-4523",
           "kind": "unresolved",
           "label": "ООО «АКВАМАРИН-4523»",
@@ -38401,42 +38219,6 @@
           "kind": "unresolved",
           "label": "Аккерман Екатерина Валерьевна",
           "degree": 3
-        },
-        {
-          "id": "stub::акр бегак",
-          "kind": "unresolved",
-          "label": "ООО «АКР «Бегак»»",
-          "degree": 1
-        },
-        {
-          "id": "stub::акционерное общество группа компаний икар",
-          "kind": "unresolved",
-          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО ГРУППА КОМПАНИЙ \"ИКАР\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::акционерное общество икар- тех",
-          "kind": "unresolved",
-          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ИКАР- ТЕХ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::акционерное общество инновационный технологический центр система-саров",
-          "kind": "unresolved",
-          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ИННОВАЦИОННЫЙ ТЕХНОЛОГИЧЕСКИЙ ЦЕНТР \"СИСТЕМА-САРОВ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::акционерное общество управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай",
-          "kind": "unresolved",
-          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УПРАВЛЯЮЩАЯ КОМПАНИЯ ИННОВАЦИОННОГО НАУЧНО- ТЕХНОЛОГИЧЕСКОГО ЦЕНТРА \"ИНТЕЛЛЕКТУАЛЬНАЯ ЭЛЕКТРОНИКА - ВАЛДАЙ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::акционерное общество управляющая компания мой капитал",
-          "kind": "unresolved",
-          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УПРАВЛЯЮЩАЯ КОМПАНИЯ \"МОЙ КАПИТАЛ\"",
-          "degree": 1
         },
         {
           "id": "stub::александр паничев (b. 1995)",
@@ -38457,6 +38239,12 @@
           "degree": 5
         },
         {
+          "id": "stub::аякс",
+          "kind": "unresolved",
+          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЯКС\"",
+          "degree": 1
+        },
+        {
           "id": "stub::барахтин артём владимирович / соловьёв константин юрьевич (50/50)",
           "kind": "unresolved",
           "label": "Барахтин Артём Владимирович / Соловьёв Константин Юрьевич (50/50)",
@@ -38472,12 +38260,6 @@
           "id": "stub::бочарова светлана владимировна",
           "kind": "unresolved",
           "label": "Бочарова Светлана Владимировна",
-          "degree": 1
-        },
-        {
-          "id": "stub::бтр",
-          "kind": "unresolved",
-          "label": "ООО «БТР»",
           "degree": 1
         },
         {
@@ -38565,12 +38347,6 @@
           "degree": 1
         },
         {
-          "id": "stub::гк аэромакс",
-          "kind": "unresolved",
-          "label": "ООО «ГК «Аэромакс»»",
-          "degree": 1
-        },
-        {
           "id": "stub::градислава",
           "kind": "unresolved",
           "label": "Фонд «Градислава»",
@@ -38587,6 +38363,12 @@
           "kind": "unresolved",
           "label": "Григорьев Дмитрий Евгеньевич",
           "degree": 4
+        },
+        {
+          "id": "stub::группа компаний икар",
+          "kind": "unresolved",
+          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО ГРУППА КОМПАНИЙ \"ИКАР\"",
+          "degree": 1
         },
         {
           "id": "stub::группа компаний титан",
@@ -38631,12 +38413,6 @@
           "degree": 1
         },
         {
-          "id": "stub::дс-барс-т",
-          "kind": "unresolved",
-          "label": "ООО «ДС-БАРС-Т»",
-          "degree": 1
-        },
-        {
           "id": "stub::елисеев д.н.",
           "kind": "unresolved",
           "label": "Елисеев Д.Н.",
@@ -38673,6 +38449,12 @@
           "degree": 2
         },
         {
+          "id": "stub::икар- тех",
+          "kind": "unresolved",
+          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ИКАР- ТЕХ\"",
+          "degree": 1
+        },
+        {
           "id": "stub::инвестпроектгрупп",
           "kind": "unresolved",
           "label": "ООО «Инвестпроектгрупп»",
@@ -38682,6 +38464,12 @@
           "id": "stub::инноваций и технологий",
           "kind": "unresolved",
           "label": "инноваций и технологий",
+          "degree": 1
+        },
+        {
+          "id": "stub::инновационный технологический центр система-саров",
+          "kind": "unresolved",
+          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ИННОВАЦИОННЫЙ ТЕХНОЛОГИЧЕСКИЙ ЦЕНТР \"СИСТЕМА-САРОВ\"",
           "degree": 1
         },
         {
@@ -38787,16 +38575,16 @@
           "degree": 1
         },
         {
+          "id": "stub::научно- производственное объединение программные комплексы реального времени",
+          "kind": "unresolved",
+          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО- ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ПРОГРАММНЫЕ КОМПЛЕКСЫ РЕАЛЬНОГО ВРЕМЕНИ\"",
+          "degree": 1
+        },
+        {
           "id": "stub::нахтигаль никита витальевич",
           "kind": "unresolved",
           "label": "Нахтигаль Никита Витальевич",
           "degree": 2
-        },
-        {
-          "id": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
-          "kind": "unresolved",
-          "label": "НЕКОММЕРЧЕСКИЙ ФОНД СОДЕЙСТВИЯ СОХРАНЕНИЮ ИСТОРИКО-КУЛЬТУРНОГО НАСЛЕДИЯ \"ГРАДИСЛАВА\"",
-          "degree": 1
         },
         {
           "id": "stub::нефедьев андрей матвеевич",
@@ -38811,9 +38599,9 @@
           "degree": 3
         },
         {
-          "id": "stub::отраслевой центр импортозамещения (зит.ци)",
+          "id": "stub::оптима",
           "kind": "unresolved",
-          "label": "ООО «Отраслевой центр импортозамещения» (ЗИТ.ЦИ)",
+          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОПТИМА\"",
           "degree": 1
         },
         {
@@ -38835,15 +38623,15 @@
           "degree": 3
         },
         {
-          "id": "stub::развития промышленности тульской области",
+          "id": "stub::производство обучающих систем и технологий",
           "kind": "unresolved",
-          "label": "ФОНД РАЗВИТИЯ ПРОМЫШЛЕННОСТИ ТУЛЬСКОЙ ОБЛАСТИ",
+          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВО ОБУЧАЮЩИХ СИСТЕМ И ТЕХНОЛОГИЙ\"",
           "degree": 1
         },
         {
-          "id": "stub::региональных некоммерческих проектов дар",
+          "id": "stub::развития промышленности тульской области",
           "kind": "unresolved",
-          "label": "ФОНД РЕГИОНАЛЬНЫХ НЕКОММЕРЧЕСКИХ ПРОЕКТОВ \"ДАР\"",
+          "label": "ФОНД РАЗВИТИЯ ПРОМЫШЛЕННОСТИ ТУЛЬСКОЙ ОБЛАСТИ",
           "degree": 1
         },
         {
@@ -38875,66 +38663,6 @@
           "kind": "unresolved",
           "label": "Руденко Д.А.",
           "degree": 2
-        },
-        {
-          "id": "stub::с ограниченной ответственностью аэромакс",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЭРОМАКС\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью аякс",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЯКС\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью гагаринг",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАГАРИНГ\"",
-          "degree": 2
-        },
-        {
-          "id": "stub::с ограниченной ответственностью научно- производственное объединение программные комплексы реального времени",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО- ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ПРОГРАММНЫЕ КОМПЛЕКСЫ РЕАЛЬНОГО ВРЕМЕНИ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью оптима",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОПТИМА\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью производство обучающих систем и технологий",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВО ОБУЧАЮЩИХ СИСТЕМ И ТЕХНОЛОГИЙ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью управляющая компания комакс",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УПРАВЛЯЮЩАЯ КОМПАНИЯ КОМАКС\"",
-          "degree": 3
-        },
-        {
-          "id": "stub::с ограниченной ответственностью управляющая компания фонда дар",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УПРАВЛЯЮЩАЯ КОМПАНИЯ ФОНДА \"ДАР\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью финансово- консультационная компания фонда дар выписка из егрюл 07.09.2026 11:36 огрн 5087746197622 страница 2 из 13",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФИНАНСОВО- КОНСУЛЬТАЦИОННАЯ КОМПАНИЯ ФОНДА \"ДАР\" Выписка из ЕГРЮЛ 07.09.2026 11:36 ОГРН 5087746197622 Страница 2 из 13",
-          "degree": 1
-        },
-        {
-          "id": "stub::с ограниченной ответственностью финконсалтингк",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФИНКОНСАЛТИНГК\"",
-          "degree": 3
         },
         {
           "id": "stub::сапфир-7452",
@@ -38997,15 +38725,21 @@
           "degree": 2
         },
         {
-          "id": "stub::управляющая компания азимут",
+          "id": "stub::управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай",
           "kind": "unresolved",
-          "label": "АО «Управляющая компания «Азимут»»",
+          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УПРАВЛЯЮЩАЯ КОМПАНИЯ ИННОВАЦИОННОГО НАУЧНО- ТЕХНОЛОГИЧЕСКОГО ЦЕНТРА \"ИНТЕЛЛЕКТУАЛЬНАЯ ЭЛЕКТРОНИКА - ВАЛДАЙ\"",
           "degree": 1
         },
         {
           "id": "stub::управляющая компания комакс",
           "kind": "unresolved",
           "label": "ООО «Управляющая компания КОМАКС»",
+          "degree": 3
+        },
+        {
+          "id": "stub::управляющая компания мой капитал",
+          "kind": "unresolved",
+          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УПРАВЛЯЮЩАЯ КОМПАНИЯ \"МОЙ КАПИТАЛ\"",
           "degree": 1
         },
         {
@@ -39031,12 +38765,6 @@
           "kind": "unresolved",
           "label": "Хасиятуллин Станислав Николаевич",
           "degree": 1
-        },
-        {
-          "id": "stub::цбст",
-          "kind": "unresolved",
-          "label": "АНО «ЦБСТ»",
-          "degree": 3
         },
         {
           "id": "stub::цихончик сергей павлович",
@@ -39405,10 +39133,54 @@
           "confidence": null
         },
         {
-          "source": "ao-aeromaks",
-          "target": "ooo-aeromaks-avia-tsentr-logistika",
+          "source": "ano-platforma-nti",
+          "target": "ano-npts-ushkuynik",
           "type": "founded",
-          "label": "1%%",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ano-tsasd-demyansk",
+          "target": "ano-npts-ushkuynik",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "target": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "target": "ao-spetstekh-perviy",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "target": "ooo-sistemnyy-integrator",
+          "type": "founded",
+          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -39650,6 +39422,17 @@
           "source": "ao-tekhnodron",
           "target": "product::ao-tekhnodron::скворец--2",
           "type": "produces",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
+          "target": "ooo-aerotekhalyans",
+          "type": "founded",
           "label": null,
           "source_id": null,
           "as_of": null,
@@ -40619,6 +40402,28 @@
           "target": "ooo-opkb-eksplomet",
           "type": "role",
           "label": "founder",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+          "target": "ooo-orion",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "fond-gradislava-historic-cultural-heritage-preservation",
+          "target": "ooo-zavolzhskoe",
+          "type": "founded",
+          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -42156,6 +41961,28 @@
         },
         {
           "source": "ooo-aeromaks",
+          "target": "ao-aeromaks",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aeromaks",
+          "target": "ooo-aeromaks-avia-tsentr-logistika",
+          "type": "founded",
+          "label": "1%%",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aeromaks",
           "target": "ooo-aeromaks-avia-tsentr-logistika",
           "type": "related",
           "label": "sister-entity",
@@ -42252,6 +42079,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-akr-begak",
+          "target": "ano-arrs-krasnodar",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
         },
         {
           "source": "ooo-ametist",
@@ -42562,6 +42400,28 @@
           "confidence": null
         },
         {
+          "source": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
+          "target": "ooo-btr-donetsk",
+          "type": "founded",
+          "label": "100%%",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-ds-bars-t",
+          "target": "ooo-prometey",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "ooo-ekolibri-bt",
           "target": "ao-ekolibri",
           "type": "related",
@@ -42672,6 +42532,50 @@
           "confidence": null
         },
         {
+          "source": "ooo-finkonsaltingk-fkk",
+          "target": "ooo-garant-klub",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-finkonsaltingk-fkk",
+          "target": "ooo-orzhitskie-artezianskie-vody",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-finkonsaltingk-fkk",
+          "target": "ooo-stroystandart",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-finkonsaltingk-fkk",
+          "target": "ooo-vingrad",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "ooo-gagaring",
           "target": "ano-arrs-krasnodar",
           "type": "founded",
@@ -42695,7 +42599,29 @@
         },
         {
           "source": "ooo-gagaring",
+          "target": "ooo-intel-dron",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-gagaring",
           "target": "ooo-laboratoriya-yangelya",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-gagaring",
+          "target": "ooo-npo-eyler",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -42830,6 +42756,17 @@
           "target": "ao-rti-radio",
           "type": "founded",
           "label": "100%",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-gk-aeromaks",
+          "target": "ooo-aeromaks",
+          "type": "founded",
+          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -43398,6 +43335,17 @@
           "confidence": null
         },
         {
+          "source": "ooo-orion",
+          "target": "ooo-garant-klub",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "ooo-pk-stalnoy-kupol",
           "target": "ao-opticheskie-sistemy",
           "type": "related",
@@ -43787,6 +43735,17 @@
           "target": "ooo-arkodim",
           "type": "related",
           "label": "sister-entity",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
+          "target": "ooo-aerotekhalyans",
+          "type": "founded",
+          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -44630,28 +44589,6 @@
           "confidence": null
         },
         {
-          "source": "stub::автономная некоммерческая организация платформа национальной технологической инициативы",
-          "target": "ano-npts-ushkuynik",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::автономная некоммерческая организация центр стрелкового и авиационного спорта демянск",
-          "target": "ano-npts-ushkuynik",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "stub::аквамарин-4523",
           "target": "ooo-tstp-tsifrovaya-transportnaya-platforma",
           "type": "founded",
@@ -44665,72 +44602,6 @@
         {
           "source": "stub::аккерман екатерина валерьевна",
           "target": "ooo-stroystandart",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::акр бегак",
-          "target": "ano-arrs-krasnodar",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::акционерное общество группа компаний икар",
-          "target": "ooo-diam-aero",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::акционерное общество икар- тех",
-          "target": "ooo-diam-aero",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::акционерное общество инновационный технологический центр система-саров",
-          "target": "ooo-as-kam",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::акционерное общество управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай",
-          "target": "ano-npts-ushkuynik",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::акционерное общество управляющая компания мой капитал",
-          "target": "ao-tsentr-telko",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -44784,6 +44655,17 @@
           "confidence": null
         },
         {
+          "source": "stub::аякс",
+          "target": "ooo-ayaks-tekhnologii",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "stub::барахтин артём владимирович / соловьёв константин юрьевич (50/50)",
           "target": "ooo-arkodim",
           "type": "directs",
@@ -44810,17 +44692,6 @@
           "target": "ooo-momento-rubinshteyn",
           "type": "founded",
           "label": "50%%",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::бтр",
-          "target": "ooo-btr-donetsk",
-          "type": "founded",
-          "label": "100%%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -45004,17 +44875,6 @@
           "confidence": null
         },
         {
-          "source": "stub::гк аэромакс",
-          "target": "ooo-aeromaks",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "stub::градислава",
           "target": "fond-nasha-pravda",
           "type": "founded",
@@ -45039,6 +44899,17 @@
         {
           "source": "stub::григорьев дмитрий евгеньевич",
           "target": "ooo-investments",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::группа компаний икар",
+          "target": "ooo-diam-aero",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -45125,17 +44996,6 @@
           "confidence": null
         },
         {
-          "source": "stub::дс-барс-т",
-          "target": "ooo-prometey",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "stub::елисеев д.н.",
           "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
           "type": "founded",
@@ -45202,6 +45062,17 @@
           "confidence": null
         },
         {
+          "source": "stub::икар- тех",
+          "target": "ooo-diam-aero",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "stub::инвестпроектгрупп",
           "target": "ooo-tskbr",
           "type": "founded",
@@ -45217,6 +45088,17 @@
           "target": "ooo-tskbr",
           "type": "founded",
           "label": "24%",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::инновационный технологический центр система-саров",
+          "target": "ooo-as-kam",
+          "type": "founded",
+          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -45411,8 +45293,8 @@
           "confidence": null
         },
         {
-          "source": "stub::нахтигаль никита витальевич",
-          "target": "ooo-rokot-tekh",
+          "source": "stub::научно- производственное объединение программные комплексы реального времени",
+          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -45422,8 +45304,8 @@
           "confidence": null
         },
         {
-          "source": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
-          "target": "ooo-zavolzhskoe",
+          "source": "stub::нахтигаль никита витальевич",
+          "target": "ooo-rokot-tekh",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -45455,8 +45337,8 @@
           "confidence": null
         },
         {
-          "source": "stub::отраслевой центр импортозамещения (зит.ци)",
-          "target": "ooo-aerotekhalyans",
+          "source": "stub::оптима",
+          "target": "ooo-ges-2",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -45499,8 +45381,8 @@
           "confidence": null
         },
         {
-          "source": "stub::развития промышленности тульской области",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+          "source": "stub::производство обучающих систем и технологий",
+          "target": "ooo-aviron",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -45510,8 +45392,8 @@
           "confidence": null
         },
         {
-          "source": "stub::региональных некоммерческих проектов дар",
-          "target": "ooo-orion",
+          "source": "stub::развития промышленности тульской области",
+          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -45580,160 +45462,6 @@
           "target": "ooo-spetsmat-spetsialnye-materialy",
           "type": "founded",
           "label": "50% (per source, unverified)%",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью аэромакс",
-          "target": "ao-aeromaks",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью аякс",
-          "target": "ooo-ayaks-tekhnologii",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью гагаринг",
-          "target": "ooo-intel-dron",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью гагаринг",
-          "target": "ooo-npo-eyler",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью научно- производственное объединение программные комплексы реального времени",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью оптима",
-          "target": "ooo-ges-2",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью производство обучающих систем и технологий",
-          "target": "ooo-aviron",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью управляющая компания комакс",
-          "target": "ooo-aero-khit-m",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью управляющая компания комакс",
-          "target": "ooo-aero-khit-servis",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью управляющая компания фонда дар",
-          "target": "ooo-garant-klub",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью финансово- консультационная компания фонда дар выписка из егрюл 07.09.2026 11:36 огрн 5087746197622 страница 2 из 13",
-          "target": "ooo-garant-klub",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью финконсалтингк",
-          "target": "ooo-orzhitskie-artezianskie-vody",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью финконсалтингк",
-          "target": "ooo-stroystandart",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::с ограниченной ответственностью финконсалтингк",
-          "target": "ooo-vingrad",
-          "type": "founded",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -45851,8 +45579,8 @@
           "confidence": null
         },
         {
-          "source": "stub::управляющая компания азимут",
-          "target": "ooo-aerotekhalyans",
+          "source": "stub::управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай",
+          "target": "ano-npts-ushkuynik",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -45864,6 +45592,39 @@
         {
           "source": "stub::управляющая компания комакс",
           "target": "ooo-aero-khit",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::управляющая компания комакс",
+          "target": "ooo-aero-khit-m",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::управляющая компания комакс",
+          "target": "ooo-aero-khit-servis",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::управляющая компания мой капитал",
+          "target": "ao-tsentr-telko",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -45910,39 +45671,6 @@
           "target": "ooo-zemstroyregistr",
           "type": "founded",
           "label": "33%%",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::цбст",
-          "target": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::цбст",
-          "target": "ao-spetstekh-perviy",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::цбст",
-          "target": "ooo-sistemnyy-integrator",
-          "type": "founded",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
