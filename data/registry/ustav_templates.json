@@ -39,6 +39,42 @@
         "note": "Switched from a custom charter to this generic model charter on 19.09.2023 — a later adoption, not a registration-time default. By design carries zero company-specific text after the switch.",
         "adopted": "2023-09-19",
         "source_id": null
+      },
+      {
+        "entity_slug": "ooo-arkhangel-zaporizhzhie",
+        "inn": "9500026652",
+        "note": "Registration-time adoption (Zaporizhzhia Oblast registration, ОГРН 1249500004181) — per egrul.nalog.ru open-lookup text pasted into notes/founding_docs_gap.md, not yet independently archived as a source file. No bespoke founder disclosure to pull.",
+        "adopted": "2024-08-21",
+        "source_id": null
+      },
+      {
+        "entity_slug": "ooo-arkhangel-melitopol-2",
+        "inn": "9001027869",
+        "note": "Registration-time adoption (ОГРН 1249000005517) — per egrul.nalog.ru open-lookup text pasted into notes/founding_docs_gap.md, not yet independently archived as a source file. No bespoke founder disclosure to pull.",
+        "adopted": "2024-06-09",
+        "source_id": null
+      },
+      {
+        "entity_slug": "ooo-dronomir",
+        "inn": "4214047363",
+        "note": "Confirmed 2026-09-13 by reading field 16 (\"Номер типового устава\") of the entity's own EGRUL extract already on file: value \"20\", ГРН 1264200005530 dated 05.06.2026. No bespoke founder disclosure to pull.",
+        "adopted": "2026-06-05",
+        "source_id": null
+      }
+    ]
+  },
+  "32": {
+    "file": null,
+    "source_id": null,
+    "legal_basis": "Приказ Минэкономразвития России от 01.08.2018 №411",
+    "form": "ООО (типовой устав для общества с ограниченной ответственностью)",
+    "known_users": [
+      {
+        "entity_slug": "ooo-zetaks",
+        "inn": "5300006066",
+        "note": "Confirmed 2026-09-13 by reading field 19 (\"Номер типового устава\") of the entity's own EGRUL extract already on file (data/sources/ul-1225300003983-20260823133456.pdf): value \"32\", ГРН 1225300003983 dated 25.10.2022. No reference copy of template #32's own text has been separately archived here (only #20 is, at s0313) — the number/date is independently confirmed regardless. No bespoke founder disclosure to pull.",
+        "adopted": "2022-10-25",
+        "source_id": null
       }
     ]
   }
