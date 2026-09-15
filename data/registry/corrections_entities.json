@@ -8009,7 +8009,37 @@
           "as_of": "2026-09-14",
           "outcome": "closed",
           "note": "not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
-        }
+        },
+        "related_entities": [
+          {
+            "slug": null,
+            "name": "АО «Кронштадт»",
+            "relationship_type": "counterparty",
+            "relationship": "Supplier/buyer relationship under two supply contracts (22.08.2022 and 10.12.2021) -- НИИ СТТ sued Кронштадт for ₽220,591,266.42 in unpaid debt (case А40-204416/2025); settled by мировое соглашение 14.01.2026 with Кронштадт acknowledging ₽196,120,339.87 owed, payable in 5 monthly installments. A companion, smaller suit (А40-186273/2026, ₽38.1m) was still in progress as of the pull date. Both are EU-sanctioned network entities -- among the largest single intercompany-debt figures established anywhere in this registry. Not yet resolved to a registry slug: this ИНН/legal entity (АО «Кронштадт», the sanctioned parent) is distinct from the registry's existing ooo-kronshtadt-bespilotnye-sistemy (a different legal form, ООО, and a different, more specific name) -- adding a dedicated entity record for the parent is a separate task, not done here.",
+            "source_id": "s0023"
+          },
+          {
+            "slug": null,
+            "name": "ФКУ «НПО «Специальная техника и связь» МВД России»",
+            "relationship_type": "counterparty",
+            "relationship": "МВД's special-equipment/communications procurement unit sued НИИ СТТ for ₽110,687 in неустойка under a government contract (case А40-269303/2025); decided 16.12.2025 in the plaintiff's favor. A real institutional customer relationship confirmed by the court record, not a marketing claim.",
+            "source_id": "s0038"
+          },
+          {
+            "slug": null,
+            "name": "ФГУП «18 Центральный научно-исследовательский институт» Минобороны России",
+            "relationship_type": "counterparty",
+            "relationship": "Minoborony research institute (overseeing telecommunications/EW standards) sued НИИ СТТ over a 2017 government contract (case А40-119204/2019, ₽1.23m); the filing was returned on a procedural defect and not decided on the merits, but the contractual customer relationship itself is established by the case record.",
+            "source_id": "s0014"
+          },
+          {
+            "slug": null,
+            "name": "ФГКУ «Войсковая часть 68240» (FSB Центр специальной техники)",
+            "relationship_type": "counterparty",
+            "relationship": "FSB's «Центр специальной техники» sued НИИ СТТ (case А40-74708/2020); decided in part for the plaintiff at first instance (29.07.2020), upheld through cassation, further review refused by the Supreme Court of the Russian Federation (15.06.2021). The underlying contract's subject/amount is redacted throughout (routine for FSB-counterparty commercial litigation), but the contractual relationship itself is confirmed by the case record.",
+            "source_id": "s0039"
+          }
+        ]
       },
       "verified_against": "s0211 — АО «НИИ СТТ»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
       "why": [
@@ -8023,7 +8053,8 @@
         "2026-09-05: backfilled the structured `zakupki_review` field (partial, as of 2026-09-01) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate.",
         "2026-09-06: wired 2 radio-frequency assignment record(s) from RKN's live Единый реестр частотных присвоений (s6429) — a new license/permit category for this entity, distinct from its existing Минпромторг/Roscosmos records. Swept against the same 22-entity UAV/comms-relevant shortlist checked against the comms-license registry; only this entity and ao-nii-stt/npp-radar-mms had any frequency assignments.",
         "RKN Единый реестр частотных присвоений screen (2026-09-07, source s6447): 2 frequency-assignment records, consistent with the entity's existing telecommunications-research profile.",
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "2026-09-15: relationship-coverage audit (subagent pass, verified individually, not a raw count) found АО «НИИ СТТ» had zero related_entities[] despite four already-researched litigation counterparties the entity's own litigation[] notes explicitly flag as notable institutional/commercial ties (Кронштадт, МВД НПО СТС, 18 ЦНИИ, в/ч 68240). Wired all four as `counterparty` (schema addition from earlier today) -- none get a registry slug since none of the four named parties exist as their own entity record yet; each cites its own litigation source_id."
       ]
     },
     "ao-nii-vektor": {
