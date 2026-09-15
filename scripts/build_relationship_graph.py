@@ -134,8 +134,33 @@ def product_id(owner_slug: str, name: str, ordinal: int = 1) -> str:
     return base if ordinal == 1 else f"{base}--{ordinal}"
 
 
+# Known government_customer name variants that normalize() can't reconcile
+# on its own -- one contract record spells the body's legal form/name out
+# in full, another uses its own standard abbreviation, and the two share no
+# stripped prefix or substring relationship for normalize() to catch.
+# Found 2026-09-16 auditing government_customer node duplication (a
+# subagent's cross-read of all 105 node labels, not a mechanical rule):
+# each entry's key is the shorter/abbreviated raw customer string as it
+# appears in some government_contracts[].customer field, mapped to the
+# fuller canonical string used elsewhere for the same real body. Add a
+# pair here (never silently merge two different real bodies) only once
+# confirmed the same institution, e.g. via the abbreviation being spelled
+# out verbatim in one of the two labels.
+CUSTOMER_NAME_ALIASES = {
+    "ГБУ ДСЗМ": "ГБУ г. Москвы «Дирекция спортивных и зрелищных мероприятий» (ДСЗМ)",
+    "ФГКУ «ЦСООР «ЛИДЕР»»": "ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»»",
+    "ФГКУ «Дирекция по строительству и эксплуатации объектов Росграницы»":
+        "Федеральное государственное казенное учреждение «Дирекция по строительству и эксплуатации объектов Росграницы»",
+    "ГФС России": "Государственная фельдъегерская служба РФ (ГФС России)",
+}
+_CUSTOMER_NAME_ALIASES_NORM = {normalize(k): v for k, v in CUSTOMER_NAME_ALIASES.items()}
+
+
 def customer_id(name: str) -> str:
     """Stable graph-only id for a government_contracts[].customer name."""
+    canonical = _CUSTOMER_NAME_ALIASES_NORM.get(normalize(name))
+    if canonical:
+        name = canonical
     stem = re.sub(r"[^a-z0-9а-я]+", "-", normalize(name)).strip("-") or "unnamed"
     return f"customer::{stem}"
 
@@ -424,6 +449,7 @@ def build_graph(entities: list[dict], people: list[dict],
             customer_name = contract.get("customer")
             if not customer_name:
                 continue
+            customer_name = _CUSTOMER_NAME_ALIASES_NORM.get(normalize(customer_name), customer_name)
             cust_id = customer_id(customer_name)
             add_node(cust_id, kind="government_customer", label=customer_name)
             raw_date = contract.get("date")

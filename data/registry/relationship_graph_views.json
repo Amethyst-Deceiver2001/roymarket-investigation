@@ -1096,19 +1096,13 @@
           "id": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
           "kind": "government_customer",
           "label": "ГБУ г. Москвы «Дирекция спортивных и зрелищных мероприятий» (ДСЗМ)",
-          "degree": 1
+          "degree": 6
         },
         {
           "id": "customer::гбу-г-москвы-система-112",
           "kind": "government_customer",
           "label": "ГБУ г. Москвы «Система 112»",
           "degree": 2
-        },
-        {
-          "id": "customer::гбу-дсзм",
-          "kind": "government_customer",
-          "label": "ГБУ ДСЗМ",
-          "degree": 5
         },
         {
           "id": "customer::гку-мо-московский-областной-центр-информационно-коммуникационных-технологий",
@@ -1144,7 +1138,7 @@
           "id": "customer::государственная-фельдъегерская-служба-рф",
           "kind": "government_customer",
           "label": "Государственная фельдъегерская служба РФ (ГФС России)",
-          "degree": 1
+          "degree": 2
         },
         {
           "id": "customer::государственное-бюджетное-учреждение-новосибирской-области-центр-цифровой-трансформации-новосибирской-области",
@@ -1210,12 +1204,6 @@
           "id": "customer::гу-мвд-россии-по-кемеровской-области",
           "kind": "government_customer",
           "label": "ГУ МВД России по Кемеровской области",
-          "degree": 1
-        },
-        {
-          "id": "customer::гфс-россии",
-          "kind": "government_customer",
-          "label": "ГФС России",
           "degree": 1
         },
         {
@@ -1513,22 +1501,10 @@
           "degree": 2
         },
         {
-          "id": "customer::фгку-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
-          "kind": "government_customer",
-          "label": "ФГКУ «Дирекция по строительству и эксплуатации объектов Росграницы»",
-          "degree": 5
-        },
-        {
           "id": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
           "kind": "government_customer",
           "label": "ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz)",
-          "degree": 1
-        },
-        {
-          "id": "customer::фгку-цсоор-лидер",
-          "kind": "government_customer",
-          "label": "ФГКУ «ЦСООР «ЛИДЕР»» (ИНН 5003008102)",
-          "degree": 1
+          "degree": 2
         },
         {
           "id": "customer::федеральное-бюджетное-учреждение-государственный-региональный-центр-стандартизации-метрологии-и-испытаний-в-нижегородской-области",
@@ -1630,7 +1606,7 @@
           "id": "customer::федеральное-государственное-казенное-учреждение-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
           "kind": "government_customer",
           "label": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ \"ДИРЕКЦИЯ ПО СТРОИТЕЛЬСТВУ И ЭКСПЛУАТАЦИИ ОБЪЕКТОВ РОСГРАНИЦЫ\"",
-          "degree": 2
+          "degree": 7
         },
         {
           "id": "customer::федеральное-государственное-унитарное-гидрографическое-предприятие",
@@ -13536,6 +13512,61 @@
           "confidence": null
         },
         {
+          "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2013-03-12",
+          "weight": 17020200,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": "0У3/304/14/4МБК",
+          "source_id": "s1937",
+          "as_of": "2014-06-02",
+          "weight": 1491300,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2014-12-15",
+          "weight": 568500,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2015-05-07",
+          "weight": 874000,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2016-03-21",
+          "weight": 3280000,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "customer::гбу-г-москвы-система-112",
           "target": "ao-tsentr-telko",
           "type": "procures",
@@ -13554,61 +13585,6 @@
           "source_id": "s1441",
           "as_of": "2015-05-26",
           "weight": 7792200,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::гбу-дсзм",
-          "target": "ao-tsentr-telko",
-          "type": "procures",
-          "label": null,
-          "source_id": "s1441",
-          "as_of": "2013-03-12",
-          "weight": 17020200,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::гбу-дсзм",
-          "target": "ao-tsentr-telko",
-          "type": "procures",
-          "label": "0У3/304/14/4МБК",
-          "source_id": "s1937",
-          "as_of": "2014-06-02",
-          "weight": 1491300,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::гбу-дсзм",
-          "target": "ao-tsentr-telko",
-          "type": "procures",
-          "label": null,
-          "source_id": "s1441",
-          "as_of": "2014-12-15",
-          "weight": 568500,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::гбу-дсзм",
-          "target": "ao-tsentr-telko",
-          "type": "procures",
-          "label": null,
-          "source_id": "s1441",
-          "as_of": "2015-05-07",
-          "weight": 874000,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::гбу-дсзм",
-          "target": "ao-tsentr-telko",
-          "type": "procures",
-          "label": null,
-          "source_id": "s1441",
-          "as_of": "2016-03-21",
-          "weight": 3280000,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -13697,6 +13673,17 @@
           "source_id": "s1934",
           "as_of": "2014-11-07",
           "weight": 472472,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::государственная-фельдъегерская-служба-рф",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2015-05-13",
+          "weight": 178035.84,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -13829,17 +13816,6 @@
           "source_id": "s3328",
           "as_of": null,
           "weight": 2430000,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::гфс-россии",
-          "target": "ao-tsentr-telko",
-          "type": "procures",
-          "label": null,
-          "source_id": "s1441",
-          "as_of": "2015-05-13",
-          "weight": 178035.84,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -15373,57 +15349,13 @@
           "confidence": null
         },
         {
-          "source": "customer::фгку-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
-          "target": "ao-pmts-avangard",
+          "source": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
+          "target": "ip-tsyganov-vadim-borisovich",
           "type": "procures",
-          "label": null,
-          "source_id": "s3046",
-          "as_of": null,
-          "weight": 31790000.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::фгку-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
-          "target": "ao-pmts-avangard",
-          "type": "procures",
-          "label": null,
-          "source_id": "s3053",
-          "as_of": null,
-          "weight": 51208000.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::фгку-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
-          "target": "ao-pmts-avangard",
-          "type": "procures",
-          "label": null,
-          "source_id": "s3054",
-          "as_of": "2025-12-08",
-          "weight": 2969227175,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::фгку-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
-          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
-          "type": "procures",
-          "label": null,
-          "source_id": "s5217",
-          "as_of": "2025-07-18",
-          "weight": 227500000.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::фгку-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
-          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
-          "type": "procures",
-          "label": null,
-          "source_id": "s5218",
-          "as_of": "2025-12-24",
-          "weight": 131350000.0,
+          "label": "ЕП 3-25 (реестровый № 1500300810225000152)",
+          "source_id": "s1417",
+          "as_of": "2025-09-18",
+          "weight": 11984000,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -15435,17 +15367,6 @@
           "source_id": "s3680",
           "as_of": null,
           "weight": 2314200,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::фгку-цсоор-лидер",
-          "target": "ip-tsyganov-vadim-borisovich",
-          "type": "procures",
-          "label": "ЕП 3-25 (реестровый № 1500300810225000152)",
-          "source_id": "s1417",
-          "as_of": "2025-09-18",
-          "weight": 11984000,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -15682,6 +15603,39 @@
         },
         {
           "source": "customer::федеральное-государственное-казенное-учреждение-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
+          "target": "ao-pmts-avangard",
+          "type": "procures",
+          "label": null,
+          "source_id": "s3046",
+          "as_of": null,
+          "weight": 31790000.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::федеральное-государственное-казенное-учреждение-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
+          "target": "ao-pmts-avangard",
+          "type": "procures",
+          "label": null,
+          "source_id": "s3053",
+          "as_of": null,
+          "weight": 51208000.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::федеральное-государственное-казенное-учреждение-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
+          "target": "ao-pmts-avangard",
+          "type": "procures",
+          "label": null,
+          "source_id": "s3054",
+          "as_of": "2025-12-08",
+          "weight": 2969227175,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::федеральное-государственное-казенное-учреждение-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
           "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
           "type": "procures",
           "label": "РГС03-91-14/24",
@@ -15699,6 +15653,28 @@
           "source_id": "s5216",
           "as_of": "2024-11-18",
           "weight": 39500000.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::федеральное-государственное-казенное-учреждение-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
+          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
+          "type": "procures",
+          "label": null,
+          "source_id": "s5217",
+          "as_of": "2025-07-18",
+          "weight": 227500000.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::федеральное-государственное-казенное-учреждение-дирекция-по-строительству-и-эксплуатации-объектов-росграницы",
+          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
+          "type": "procures",
+          "label": null,
+          "source_id": "s5218",
+          "as_of": "2025-12-24",
+          "weight": 131350000.0,
           "temporal_status": "unknown",
           "confidence": null
         },
