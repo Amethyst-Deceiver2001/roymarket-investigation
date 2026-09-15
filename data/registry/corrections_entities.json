@@ -31939,6 +31939,15 @@
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-14 (egrul_vypiska_pull.py, ГРН 2257716103566, 17.04.2025)."
           }
         ],
+        "related_entities": [
+          {
+            "slug": "ooo-everest",
+            "relationship": "Same sole 100% founder, Хутешен Алексей Александрович, per both entities' full signed ЕГРЮЛ-выписка -- a confirmed corporate-family tie, separate from this entity's own registered-address mail-drop cluster (with ao-opticheskie-sistemy/ooo-pk-stalnoy-kupol) since ooo-everest sits at a different address entirely.",
+            "relationship_type": "sister-entity",
+            "source_id": "s7451",
+            "confidence": "confirmed"
+          }
+        ],
         "financials": [
           {
             "year": "2023",
@@ -31962,7 +31971,8 @@
       },
       "why": [
         "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08",
-        "2026-09-14: full ЕГРЮЛ-выписка (s7451) confirms sole 100% founder is Хутешен Алексей Александрович (same person as ooo-everest's sole founder) -- resolves the standing person-side reciprocal-role gap with a sourced founders_history entry."
+        "2026-09-14: full ЕГРЮЛ-выписка (s7451) confirms sole 100% founder is Хутешен Алексей Александрович (same person as ooo-everest's sole founder) -- resolves the standing person-side reciprocal-role gap with a sourced founders_history entry.",
+        "2026-09-15: wired the sister-entity related_entities[] edge to ooo-everest that the 2026-09-14 why-note already identified but never converted into a graph edge -- found during a registry-wide address-co-location scan (no EGRUL needed, both founders_history entries already sourced)."
       ],
       "verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
     },
@@ -32822,10 +32832,20 @@
             "source_id": "s7449",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-14 (egrul_vypiska_pull.py, ГРН 2257709403170, 06.02.2025)."
           }
+        ],
+        "related_entities": [
+          {
+            "slug": "ooo-ametist",
+            "relationship": "Same sole 100% founder, Хутешен Алексей Александрович, per both entities' full signed ЕГРЮЛ-выписка -- a confirmed corporate-family tie, distinct from and not reachable via the separate registered-address mail-drop cluster ooo-ametist sits in (with ao-opticheskie-sistemy/ooo-pk-stalnoy-kupol).",
+            "relationship_type": "sister-entity",
+            "source_id": "s7449",
+            "confidence": "confirmed"
+          }
         ]
       },
       "why": [
-        "2026-09-14: full ЕГРЮЛ-выписка (s7449) confirms sole 100% founder is Хутешен Алексей Александрович -- resolves the standing person-side reciprocal-role gap with a sourced founders_history entry."
+        "2026-09-14: full ЕГРЮЛ-выписка (s7449) confirms sole 100% founder is Хутешен Алексей Александрович -- resolves the standing person-side reciprocal-role gap with a sourced founders_history entry.",
+        "2026-09-15: wired the reciprocal sister-entity related_entities[] edge to ooo-ametist that the 2026-09-14 why-note already identified but never converted into a graph edge -- found during a registry-wide address-co-location scan (no EGRUL needed, both founders_history entries already sourced)."
       ]
     },
     "proekt-kb-arkhangel": {

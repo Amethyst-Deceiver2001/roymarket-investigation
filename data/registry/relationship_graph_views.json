@@ -3098,7 +3098,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 8
         },
         {
           "id": "ooo-arkhangel",
@@ -3470,7 +3470,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 8
         },
         {
           "id": "ooo-eyartek",
@@ -19676,6 +19676,17 @@
           "confidence": null
         },
         {
+          "source": "ooo-ametist",
+          "target": "ooo-everest",
+          "type": "related",
+          "label": "sister-entity",
+          "source_id": "s7451",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "ooo-arkhangel-crimea",
           "target": "ooo-arkhangel-zaporizhzhie",
           "type": "related",
@@ -19912,6 +19923,17 @@
           "type": "produces",
           "label": null,
           "source_id": "s5390",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-everest",
+          "target": "ooo-ametist",
+          "type": "related",
+          "label": "sister-entity",
+          "source_id": "s7449",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -34627,7 +34649,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 8
         },
         {
           "id": "ooo-arkhangel",
@@ -35011,7 +35033,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 8
         },
         {
           "id": "ooo-eyartek",

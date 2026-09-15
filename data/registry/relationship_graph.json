@@ -2,7 +2,7 @@
   "schema_version": 5,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1482,
-  "edge_count": 2060,
+  "edge_count": 2062,
   "unresolved_count": 216,
   "nodes": [
     {
@@ -3603,7 +3603,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 6
+      "degree": 8
     },
     {
       "id": "ooo-arkhangel",
@@ -3987,7 +3987,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 6
+      "degree": 8
     },
     {
       "id": "ooo-eyartek",
@@ -26066,6 +26066,17 @@
       "confidence": "t-doc"
     },
     {
+      "source": "ooo-ametist",
+      "target": "ooo-everest",
+      "type": "related",
+      "label": "sister-entity",
+      "source_id": "s7451",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-arkhangel",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
@@ -26676,6 +26687,17 @@
       "type": "produces",
       "label": null,
       "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-everest",
+      "target": "ooo-ametist",
+      "type": "related",
+      "label": "sister-entity",
+      "source_id": "s7449",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
