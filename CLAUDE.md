@@ -293,6 +293,20 @@ failure modes this project has actually hit:
   either let the user run it in their own terminal instead, or make clear
   you're starting a background task they'll be notified about — don't
   silently launch it in the background and go quiet.
+- **A field silently empty for every record, not just one, is still a
+  parser bug** — same lesson as the all-null rule below, but corpus-wide.
+  `mine_zakupki.py`'s `parse_contract_card_html` selected
+  `span.cardMainInfo__title` only; "Объекты закупки" (the contract subject
+  line) uses a `<div>` for that same title class on every one of 1498
+  archived contract cards, so `government_contracts[].items`/`subject_ru`
+  came back empty across the whole corpus — not because contracts lack a
+  stated subject, but because the selector never matched it. Fixed
+  2026-09-15 to select both tags, plus preferring a truncated span's
+  `data-tooltip` for the full text and dropping a non-substantive
+  "Этап N" stage label instead of reporting it as the subject. See
+  `tests/test_zakupki_parser.py`'s `zakupki_object_*` fixtures — run them
+  after touching this parser, same discipline as the price-parsing bug
+  above.
 
 **An all-null result for one entity is a parser signal, not a finding.** When
 a parser returns nothing for *every* document belonging to a single record,
@@ -496,6 +510,51 @@ failure seriously**: it caught a transposed ОГРН for АО «Стратим»
 been sitting in the brief, and two personal ИНН that had been mis-attributed
 to organisations. A wrong identifier in a sanctions submission is a serious
 defect, not a typo.
+
+## `relationship_graph.json` — generated, schema-versioned, rebuild after any registry change
+
+`scripts/build_relationship_graph.py` derives `data/registry/
+relationship_graph.json` (+`relationship_graph_views.json`) from
+`entities.json`/`people.json`/`military_units.json` — the same
+generated-not-hand-written discipline as company profiles. Always run it
+after any `corrections_entities.json`/`corrections_people.json` change
+that could touch ownership, roles, products, government contracts, or
+`cbst_tie`; `check_registry.py` fails loudly (`does not exactly match the
+deterministic rebuild`) if it's stale, so a forgotten rebuild surfaces
+immediately rather than silently shipping an out-of-date graph.
+`scripts/graph_contract.py` is the schema itself — `GRAPH_SCHEMA_VERSION`,
+the `EDGE_TYPES` table (endpoint-kind validation per edge type), and any
+controlled vocabularies (e.g. `CBST_TIE_CONFIDENCE`). Bump the version and
+extend the contract there first when adding a genuinely new edge type or
+field, the same way `entities.json`'s own field additions get documented
+above.
+
+**`cbst_tie`** (added 2026-09-15, schema v4) is an entity→ЦБСТ edge, one
+per entity whose own `cbst_tie` field (a normal `entities.json` field, set
+via `corrections_entities.json` like any other human-conclusion field) has
+`confidence` in `{t-doc, t-open, press}` — `none`/`not_established`
+entities are excluded, not shown as ties. This exists because the
+registry could already assert an entity was ЦБСТ-tied in prose but the
+graph had no corresponding edge, making the network's actual center-and-
+satellite structure invisible in any graph-based exhibit; don't add a
+`cbst_tie` claim without setting `confidence` from that exact vocabulary,
+or the edge silently won't render.
+
+**Multi-hop reachability, not just direct edges, is what "connected to
+ЦБСТ" means.** A published exhibit once reported an entity as having "no
+traceable ЦБСТ edge" based on a 1-hop check, when a real 3-hop path
+(Цыганов → «ПОКРОВ» → «Тримикс» → ЦБСТ, all real ties) already existed in
+the graph. Before asserting any entity/person is unconnected to the
+network, run an actual BFS over `relationship_graph.json` treating every
+edge type as undirected for reachability, not a single-hop scan.
+
+`scripts/classify_product_icon.py` maps `products[]` entries to the
+17-category Product Icon Set (structured `type_bvs` first, keyword
+fallback second) — presentation-layer classification only, same
+discipline as the hub-badge offensive/defensive/dual read: not a new
+sourced registry field, a deterministic, reviewable rule set. Used by
+exhibit build scripts under `scratch_design/`, not by the generated
+company profiles.
 
 ## Writing: read `STYLE_GUIDE.md` before drafting any prose
 

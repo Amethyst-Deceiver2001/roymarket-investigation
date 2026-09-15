@@ -4223,3 +4223,62 @@ always going to be incidental rather than systematic. Not treating the
 `extract_registry.py` → `build_relationship_graph.py` → `check_registry.py`
 ran clean: 0 errors, 46 warnings, same baseline as before this pass.
 `confirmed_field_use` edge count: 1.
+
+---
+
+## Political-intermediary/bridge-figure triage + exhibit redesign (2026-09-15)
+
+**Data-model gap closed**: the registry already modeled "supply" (`tier:
+manufacturer`) and "demand" (`government_customer`/`military_unit` node
+kinds, from `government_contracts[]`/`confirmed_field_use` edges), but had
+no way to see a third axis — people bridging the political apparatus (ЕР,
+Federation Council, Rostech-adjacent bodies) and the business network. This
+didn't need a new schema; the existing person-role-edge mechanism was
+sufficient, it just had real gaps: **Vladimir Yakushev's ЦБСТ Supervisory
+Board chairmanship had `entity_slug: null`, generating no graph edge at
+all**, despite being independently sourceable in prose. Same for Andrey
+Bezrukov's (ЦБСТ's own board chairman) `source_id`. Both backfilled against
+a newly archived primary source (er.ru, 14.02.2025, `s7519`, which quotes
+both titles directly in one article). See `data/registry/
+_political_intermediary_leads.md` for the full triage (Saidov Adil
+Abukovich confirmed as the cleanest fully-sourced example, both sides on
+one `source_id`).
+
+**Lesson from the same pass**: a background agent's "13 cross-tier bridge
+figures" finding (people tied to entities in 2+ different registry tiers)
+mostly evaporated on individual inspection — 11 of 13 already had their real
+network ties fully wired, and their "extra" untied entities turned out to be
+unrelated personal business (chemical trading, courier franchises, real
+estate) rather than genuine ecosystem bridges. Raw cross-tier entity count
+is a weak proxy for significance; check what the entities actually are
+before treating a count as a finding. One real new lead survived the check:
+Иван Поспехов (already a registered manufacturer-tier director) also
+directs ООО «Системы Безопасности», sharing the electronic-components-
+manufacturing OKVED code with several registered network entities — not
+wired, needs its own EGRUL/product check first.
+
+**Exhibit redesign**: the "ЦБСТ Orbit" radial hub-and-spoke diagram (a
+30-node star of every `cbst_tie` entity at once) was rejected by the user
+outright — "I don't understand what's going on here... no icons, no
+visible supply chains." Root cause: a network graph (relationships) and a
+process/supply-chain flow (CBST supports → manufacturer produces → unit
+fields it) are different chart families (confirmed against current
+dataviz-literature guidance); no single diagram does both jobs. Rebuilt as
+**"From ЦБСТ to the Front"** — five independent linear flow-chain diagrams,
+one per flagship case study, each stage a real Product-Icon-Set icon, each
+arrow a cited claim, stopping short rather than being padded when a chain
+runs out (e.g. Цыганов's case, correctly shown as a 5-node *indirect*
+chain via «ПОКРОВ»/«Тримикс», not forced into the same shape as the direct
+cases). Published to the same artifact URL the orbit version had used. The
+full institutional web didn't disappear — it's one paragraph pointing at
+the live interactive Network Graph (a separate artifact,
+`0e402553-a22e-4427-a3a9-c5b0251bdaa2`), which was itself found stale
+(schema v3, pre-`cbst_tie`) and refreshed to current schema v4/2043-edge
+data in the same pass. This is the two-track split (`spicy-beaming-kite.md`
+plan) actually landing, in a different final shape than the plan drafted —
+that plan file is now fully superseded, all three of its parts shipped.
+
+`check_registry.py` clean throughout this work: 0 errors, 43 warnings
+(baseline unchanged). `relationship_graph.json` at schema v4, 2043 edges
+(`cbst_tie` 32, `role` 664, `related` 39 — the last figure includes peer
+session -e2's informal-cooperation wiring from the same day).
