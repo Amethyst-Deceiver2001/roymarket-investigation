@@ -14,7 +14,10 @@ Product profile · РОЙ.МАРКЕТ investigation
 {% if description %}
 ## Description
 
-{{ description }}{% if description_source %} [{{ description_source }}]{% endif %}
+{% for d in description %}
+**{{ d.name }}:** {{ d.text }}{% if d.source %} [{{ d.source }}]{% endif %}
+
+{% endfor %}
 {% endif %}
 
 {% if specs %}

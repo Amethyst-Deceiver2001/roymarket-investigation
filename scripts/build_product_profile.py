@@ -171,17 +171,18 @@ class ProductProfileBuilder:
         products = [p for p in (maker.get("products") or [])
                     if isinstance(p, dict) and p.get("name_ru") in cfg["product_names"]]
 
-        # --- description: concatenate each matched product entry's own text,
-        # since a flagship "product" here is often modeled as several
-        # registry products[] entries (variants/sub-modules) ---
-        desc_parts, desc_sources = [], []
-        for p in products:
-            if p.get("description"):
-                desc_parts.append(f"{p['name_ru']}: {p['description']}")
-            if p.get("source_id"):
-                desc_sources.append(self.source_label(p["source_id"]))
-        description = "\n\n".join(desc_parts) if desc_parts else None
-        description_source = ", ".join(sorted(set(s for s in desc_sources if s))) or None
+        # --- description: one paragraph per matched product entry, since a
+        # flagship "product" here is often modeled as several registry
+        # products[] entries (variants/sub-modules) that can each carry a
+        # different source_id -- cite each paragraph on its own, not once
+        # at the end of the whole block (a single trailing citation looked
+        # right for a 1-product flagship but silently dropped every source
+        # except the last one whenever a product had 2+ variant entries;
+        # found 2026-09-15 during a peer-session review of the first batch). ---
+        description = [
+            {"name": p["name_ru"], "text": p["description"], "source": self.source_label(p.get("source_id"))}
+            for p in products if p.get("description")
+        ] or None
 
         # --- specs: structured specs{} dict if any product entry has one ---
         specs = []
@@ -242,9 +243,11 @@ class ProductProfileBuilder:
                 continue
             for gc in ent.get("government_contracts") or []:
                 note = gc.get("note") or gc.get("items") or ""
+                if len(note) > 400:
+                    note = note[:400].rstrip() + "…"
                 handovers.append({
                     "customer": gc.get("customer"), "date": gc.get("date"),
-                    "note": note[:400], "source": self.source_label(gc.get("source_id")),
+                    "note": note, "source": self.source_label(gc.get("source_id")),
                 })
 
         chips = []
@@ -280,7 +283,7 @@ class ProductProfileBuilder:
             "slug": cfg["slug"], "display_name": cfg["display_name"],
             "name_ru": cfg["product_names"][0] if cfg["product_names"] else None,
             "chips": chips, "supply_chain": supply_chain,
-            "description": description, "description_source": description_source,
+            "description": description,
             "specs": specs, "images_gallery": [i for i in images_gallery if i["url"] or i["md_path"]],
             "field_testing": field_testing, "handovers": handovers,
             "not_yet_sourced": not_yet_sourced, "sources_table": sources_table,

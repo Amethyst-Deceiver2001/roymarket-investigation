@@ -32,7 +32,9 @@
   {% if description %}
   <section id="description">
     <p class="eyebrow">Description</p>
-    <p>{{ description }} {% if description_source %}<span class="id">[{{ description_source }}]</span>{% endif %}</p>
+    {% for d in description %}
+    <p><strong>{{ d.name }}:</strong> {{ d.text }} {% if d.source %}<span class="id">[{{ d.source }}]</span>{% endif %}</p>
+    {% endfor %}
   </section>
   {% endif %}
 

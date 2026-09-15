@@ -11,11 +11,11 @@ Product profile · РОЙ.МАРКЕТ investigation
 
 ## Description
 
-БПЛА «Пиранья-7»: Flagship-line FPV kamikaze quadcopter. 385x435x47mm, 0.612kg empty, 2kg payload, 5kg max takeoff weight. Cruise 80km/h, max 140km/h. Flight time 30min empty / 8min with max payload. Range 18km (1kg payload) / 10km (2kg payload). Control/video range up to 60km with relay. Wind resistance up to 15m/s. Modular comms (analog/optical-fiber/multi-frequency). Uses: reconnaissance, monitoring, anti-personnel/anti-armor strikes, fortified-position attacks, small-cargo/medical delivery up to 2kg.
+**БПЛА «Пиранья-7»:** Flagship-line FPV kamikaze quadcopter. 385x435x47mm, 0.612kg empty, 2kg payload, 5kg max takeoff weight. Cruise 80km/h, max 140km/h. Flight time 30min empty / 8min with max payload. Range 18km (1kg payload) / 10km (2kg payload). Control/video range up to 60km with relay. Wind resistance up to 15m/s. Modular comms (analog/optical-fiber/multi-frequency). Uses: reconnaissance, monitoring, anti-personnel/anti-armor strikes, fortified-position attacks, small-cargo/medical delivery up to 2kg. [s1410]
 
-БПЛА «Пиранья-10»: "Flagship of the Пиранья product line" per the company's own catalog. 525x570x60mm, 0.845kg empty, 5kg payload, 9kg max takeoff weight. Cruise 80km/h, max 140km/h. Flight time 35min empty / 15min max payload. Range 44km (1kg) / 38km (3kg) / 5km (5kg). Control/video range up to 60km. EW-resistant with automatic frequency-hopping to maintain link when jammed. Site marketing name: "Убийца Abrams" ("Abrams killer") — see self-incriminating-copy note.
+**БПЛА «Пиранья-10»:** "Flagship of the Пиранья product line" per the company's own catalog. 525x570x60mm, 0.845kg empty, 5kg payload, 9kg max takeoff weight. Cruise 80km/h, max 140km/h. Flight time 35min empty / 15min max payload. Range 44km (1kg) / 38km (3kg) / 5km (5kg). Control/video range up to 60km. EW-resistant with automatic frequency-hopping to maintain link when jammed. Site marketing name: "Убийца Abrams" ("Abrams killer") — see self-incriminating-copy note. [s1410]
 
-БПЛА «Пиранья-13»: "Class speed leader" per catalog, 4-motor UAS. 742x683x85mm, 1.8kg empty, 6kg payload, 13kg max takeoff weight. Cruise/max 80/140km/h. Flight time 45min empty / 15min max payload. Range 37km (3kg) / 25km (6kg). Control/video range up to 60km. Also usable as an airborne relay platform. Doubles as kamikaze strike or covert scout with delivery up to 6kg to hard-to-reach targets. [s1410]
+**БПЛА «Пиранья-13»:** "Class speed leader" per catalog, 4-motor UAS. 742x683x85mm, 1.8kg empty, 6kg payload, 13kg max takeoff weight. Cruise/max 80/140km/h. Flight time 45min empty / 15min max payload. Range 37km (3kg) / 25km (6kg). Control/video range up to 60km. Also usable as an airborne relay platform. Doubles as kamikaze strike or covert scout with delivery up to 6kg to hard-to-reach targets. [s1410]
 
 ## Field testing & battlefield evidence
 

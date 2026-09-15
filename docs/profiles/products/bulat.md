@@ -15,19 +15,19 @@ Product profile · РОЙ.МАРКЕТ investigation
 
 ## Description
 
-«Булат» в.4: Портативный всенаправленный детектор БПЛА, обнаружение до 1.5 км; firmware v1.71.
+**«Булат» в.4:** Портативный всенаправленный детектор БПЛА, обнаружение до 1.5 км; firmware v1.71.
 
-«Булат» в.3: Портативный всенаправленный детектор БПЛА; firmware v4.13.
+**«Булат» в.3:** Портативный всенаправленный детектор БПЛА; firmware v4.13.
 
 ## Handovers to government customers / units
 
 | Customer | Date | Note | Source |
 |---|---|---|---|
-| ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz) | 2025 | Поставка средств ПОДАВЛЕНИЯ беспилотных аппаратов (не обнаружения — corrected per the sole-supplier notice's own text, which the contract-card-only extraction had mis-parsed as detection). Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ, justified in the notice by reference to МЧС letters МЧС России от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного | [s3680] |
+| ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz) | 2025 | Поставка средств ПОДАВЛЕНИЯ беспилотных аппаратов (не обнаружения — corrected per the sole-supplier notice's own text, which the contract-card-only extraction had mis-parsed as detection). Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ, justified in the notice by reference to МЧС letters МЧС России от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного… | [s3680] |
 | Администрация Белгородского муниципального округа | 2026 | Поставка мониторинговых устройств «Булат» — same «Булат» product line as the earlier ИП Цыганов contracts (see corrections entry for that person). | [s3424] |
-| ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ ПО КУРСКОЙ ОБЛАСТИ (ИНН 4632047480) | 2024-10-29 | Sole-supplier procurement (44-ФЗ ст. 93 ч.1 п.9 — emergency/disaster-response grounds), concluded 29.10.2024 — during the active Kursk-oblast incursion. Delivery: г. Курск, ул. Можаевская, 6. Спецификация (Приложение к Контракту, source s1459 — an 11-page scanned PDF; pages 6-11 with the actual spec table exceed this project's standard 5-page OCR cap and needed a manual full-document OCR pass) spe | [s1416] |
-| ФГКУ «ЦСООР «ЛИДЕР»» (ИНН 5003008102) | 2025-09-18 | Sole-supplier procurement (44-ФЗ ст. 93 ч.1 п.9), 30% advance (₽3,595,200). Delivery to ФГКУ «ЦСООР «Лидер»»'s own address, Москва, Мосрентген. Contract card also lists supplier contact +7 926 215-30-15 / vipochka@bk.ru. «Уведомление ФАС о заключении контракта с единственным поставщиком» (source s1474, 19.09.2025, signed by Начальник отдела организации контрактной работы капитан К.Ю. Гребенькова)  | [s1417] |
-| Главное управление МЧС России по Курской области | 2024-10-29 | Оперативная закупка детекторов беспилотных летательных аппаратов (дальность обнаружения до 1,5 км) для оснащения личного состава пожарно-спасательной группировки Курской области. Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ — federal-level emergency status declared for Kursk region от 07.08.2024, justification citing МЧС Минстра Куренкова's directive and explicitly attributing the emergency to «неизбир | [s1460] |
+| ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ ПО КУРСКОЙ ОБЛАСТИ (ИНН 4632047480) | 2024-10-29 | Sole-supplier procurement (44-ФЗ ст. 93 ч.1 п.9 — emergency/disaster-response grounds), concluded 29.10.2024 — during the active Kursk-oblast incursion. Delivery: г. Курск, ул. Можаевская, 6. Спецификация (Приложение к Контракту, source s1459 — an 11-page scanned PDF; pages 6-11 with the actual spec table exceed this project's standard 5-page OCR cap and needed a manual full-document OCR pass) spe… | [s1416] |
+| ФГКУ «ЦСООР «ЛИДЕР»» (ИНН 5003008102) | 2025-09-18 | Sole-supplier procurement (44-ФЗ ст. 93 ч.1 п.9), 30% advance (₽3,595,200). Delivery to ФГКУ «ЦСООР «Лидер»»'s own address, Москва, Мосрентген. Contract card also lists supplier contact +7 926 215-30-15 / vipochka@bk.ru. «Уведомление ФАС о заключении контракта с единственным поставщиком» (source s1474, 19.09.2025, signed by Начальник отдела организации контрактной работы капитан К.Ю. Гребенькова)… | [s1417] |
+| Главное управление МЧС России по Курской области | 2024-10-29 | Оперативная закупка детекторов беспилотных летательных аппаратов (дальность обнаружения до 1,5 км) для оснащения личного состава пожарно-спасательной группировки Курской области. Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ — federal-level emergency status declared for Kursk region от 07.08.2024, justification citing МЧС Минстра Куренкова's directive and explicitly attributing the emergency to «неизбир… | [s1460] |
 
 ## Not yet sourced
 
