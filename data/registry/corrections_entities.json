@@ -11688,6 +11688,11 @@
             "source_id": "s0221",
             "status": "open",
             "text": "Who are Фонд «Наша Правда»'s founders? The brief attributes it to Фонд «ДАР» and Фонд «Градислава», but this is NOT confirmed by the fund's own ЕГРЮЛ extract — a Фонд's учредители are simply not published in ЕГРЮЛ (the extract has no учредители section at all, which is a structural property of the legal form, not a redaction). Resolving this needs the fund's Устав or a Минюст filing, not another ЕГРЮЛ pull."
+          },
+          {
+            "source_id": null,
+            "status": "open",
+            "text": "docs/index.html cites a \"FY2024 filing\" naming Наблюдательный совет members in full (Давыдов, Елисеев, Карабинский, Устратов, Антонова) and Попечительский совет (Тихонов, Манецкий, Дукал), tagged \"Primary doc\". Traced this exhaustively 2026-09-16: it is NOT the БФО/ГИР БО filing (checked both FY2024, s0389, and FY2025, s0390, OCR'd directly -- both only give a headcount, \"5 человек\", no names). It IS a real, separate Минюст NKO-reporting form (ОН0001, \"Отчет о персональном составе руководящих органов\") -- confirmed via nco.minjust.gov.ru's own reports archive (searched by this entity's ОГРН 1237700218612), which lists exactly two ОН0001 filings (08.04.2024 and 10.04.2025) alongside the ОН0002 spending-disclosure forms. Unlike ОН0002, neither ОН0001 filing has a public download icon on that portal -- ОН0001 carries named individuals' ИНН/СНИЛС/identity-document numbers, and this portal does not expose that form for public download at all (confirmed: the ОН0002 rows for the same ИНН DO have a working download link). This is a genuine access restriction, not a missing-file gap -- getting the actual names would need a direct request to Минюст (a personal/institutional data request), not another scripted or browser pull. Whoever originally sourced the docs.html claim as \"Primary doc\" must have obtained the ОН0001 filing through a channel not available to this investigation now (a personal request, a leak, or a since-closed public view) -- worth asking the user directly whether they have that document on hand rather than re-attempting the portal."
           }
         ],
         "registered": "21.03.2023",
