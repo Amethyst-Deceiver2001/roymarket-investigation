@@ -2390,11 +2390,11 @@
     "roles": [
       {
         "entity_slug": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
-        "title": "General Director, Фонд «ДАР», since 2008",
+        "title": "Генеральный директор, Фонд «ДАР»",
         "body": null,
-        "from": null,
+        "from": "2008-05-27",
         "to": null,
-        "source_id": null
+        "source_id": "s0214"
       }
     ],
     "sanctions": [],
@@ -2417,7 +2417,8 @@
     },
     "_corrected": [
       "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-dar-fond-regionalnykh-nekommercheskikh-proektov, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
-      "2026-09-07: verification backlog closure — identity already confirmed by Фонд «ДАР» | Фонд региональных некоммерческих проектов's (fond-dar-fond-regionalnykh-nekommercheskikh-proektov) own director_history entry (s0214), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+      "2026-09-07: verification backlog closure — identity already confirmed by Фонд «ДАР» | Фонд региональных некоммерческих проектов's (fond-dar-fond-regionalnykh-nekommercheskikh-proektov) own director_history entry (s0214), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+      "2026-09-16 (docs->registry gap-list pass, item 4): filled source_id/from-date from s0214. Did NOT wire the separate docs/index.html claim that he's disclosed as ООО «Орион»'s sole «бенефициарный владелец» in that entity's own FY2023-25 filings -- pulled and OCR'd ооо-orion's FY2025 БФО notes (s0306) directly to verify before citing, and that specific document actually names a DIFFERENT, more recent director (Харитонова Наталья Евгеньевна, since 14.01.2026) with no бенефициарный владелец disclosure or Давыдов mention found anywhere in the OCR'd text -- the docs.html paraphrase may be citing an earlier filing year (FY2023/2024) or a section this OCR pass missed. Needs a closer read before wiring, not a guess; flagged, not forced through."
     ],
     "_verified_against": "s0214 -- Фонд «ДАР» | Фонд региональных некоммерческих проектов's own primary-source founding/EGRUL document, naming Виктор Ильич Давыдов as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
@@ -2493,9 +2494,9 @@
         "entity_slug": "fond-gradislava-historic-cultural-heritage-preservation",
         "title": "General Director, Фонд «Градислава»",
         "body": null,
-        "from": null,
+        "from": "2021-12-17",
         "to": null,
-        "source_id": null
+        "source_id": "s0216"
       }
     ],
     "sanctions": [],
@@ -2518,7 +2519,8 @@
     },
     "_corrected": [
       "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-gradislava-historic-cultural-heritage-preservation, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
-      "2026-09-07: verification backlog closure — identity already confirmed by Фонд «Градислава» | historic & cultural heritage preservation's (fond-gradislava-historic-cultural-heritage-preservation) own director_history entry (s0216), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+      "2026-09-07: verification backlog closure — identity already confirmed by Фонд «Градислава» | historic & cultural heritage preservation's (fond-gradislava-historic-cultural-heritage-preservation) own director_history entry (s0216), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+      "2026-09-16 (docs->registry gap-list pass, item 2): filled the role's source_id (was still null despite the entity side already citing s0216 for the identical fact) and from-date, both taken directly from that same director_history entry. The separate duplicate stub (karabinskiy-ivan-igorevich, _merged_into this record since 2026-08-25) is already correctly marked and needs no further action. His additional Наша Правда Наблюдательный совет seat (named in docs/index.html, tagged \"Primary doc\") is NOT wired here -- the actual underlying document (a Минюст/ГИР БО governing-body filing) is not present in data/sources/; checked both archived FY2024 and FY2025 БФО filings for fond-nasha-pravda directly (OCR'd the scanned пояснительная записка PDFs in both) and neither names any individual board members, only a headcount (\"5 человек\"). Needs an actual document pull, not a quick backfill -- flagged for follow-up, not guessed."
     ],
     "_verified_against": "s0216 -- Фонд «Градислава» | historic & cultural heritage preservation's own primary-source founding/EGRUL document, naming Иван Игоревич Карабинский as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
@@ -3321,15 +3323,15 @@
     "dob": null,
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "501101524888",
     "roles": [
       {
         "entity_slug": "fond-podderzhki-natsionalnykh-morskikh-programm",
-        "title": "General Director, Фонд поддержки национальных морских программ, since 30.04.2021",
+        "title": "Генеральный директор, Фонд поддержки национальных морских программ",
         "body": null,
-        "from": null,
+        "from": "2016-05-23",
         "to": null,
-        "source_id": null
+        "source_id": "s6703"
       }
     ],
     "sanctions": [],
@@ -3358,7 +3360,8 @@
     "mentions": 5,
     "_corrected": [
       "2026-09-07: orphan role link fix — linked to fond-podderzhki-natsionalnykh-morskikh-programm (registry entity confirmed to exist).",
-      "2026-09-07: verification backlog closure — identity already confirmed by Фонд поддержки национальных морских программ's (fond-podderzhki-natsionalnykh-morskikh-programm) own director_history entry (s6703), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+      "2026-09-07: verification backlog closure — identity already confirmed by Фонд поддержки национальных морских программ's (fond-podderzhki-natsionalnykh-morskikh-programm) own director_history entry (s6703), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+      "2026-09-16 (docs->registry gap-list pass, item 3): filled source_id/from-date/personal ИНН, all from s6703 (the entity's own full signed ЕГРЮЛ выписка). Note: docs/index.html's prose gives his tenure as \"since 30.04.2021\" but the primary document itself dates the ГРН for his director record to 2016-05-23 -- used the primary document's own date, not the prose paraphrase; the 30.04.2021 figure is unexplained and not reflected here. His additional Наша Правда Наблюдательный совет seat (docs/index.html, \"Primary doc\" tag) is NOT wired -- same gap as ivan-igorevich-karabinskiy's entry: the actual governing-body filing isn't in data/sources/, only headcount-only БФО notes are."
     ],
     "_verified_against": "s6703 -- Фонд поддержки национальных морских программ's own primary-source founding/EGRUL document, naming Устратов Дмитрий Владимирович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
@@ -32964,6 +32967,14 @@
       {
         "entity_name": "АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС)",
         "entity_slug": "npts-elvis",
+        "from": "2024-12-03",
+        "to": "2026-07-27",
+        "title": "Генеральный директор",
+        "source_id": "s3702"
+      },
+      {
+        "entity_name": "АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС)",
+        "entity_slug": "npts-elvis",
         "from": null,
         "source_id": "s0996",
         "title": "co-inventor (patent RU227818U1)",
@@ -33013,9 +33024,10 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_verified_against": null,
+    "_verified_against": "s3702 -- npts-elvis's own director_history entry (already sourced, first entry for this entity), cross-referenced directly; s6829 confirms the successor GD (Булкин Д.С., since 2026-07-27), giving Семилетов's tenure a clean `to` date.",
     "_corrected": [
-      "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2518)."
+      "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2518).",
+      "2026-09-16 (docs->registry gap-list pass): added the GD role itself -- entity side already had this sourced (s3702) but the person's own roles[] only carried unrelated patent co-inventor credits. Pure backfill, no new research; end date set from the entity's next director_history entry (s6829)."
     ],
     "opensanctions_matches": [
       {

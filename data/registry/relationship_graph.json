@@ -2,7 +2,7 @@
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1431,
-  "edge_count": 2117,
+  "edge_count": 2118,
   "unresolved_count": 177,
   "nodes": [
     {
@@ -3365,7 +3365,7 @@
       "sanctioned": true,
       "legal_form": "НПЦ",
       "variant": null,
-      "degree": 151
+      "degree": 152
     },
     {
       "id": "npts-ushkuynik",
@@ -11971,7 +11971,7 @@
       "label": "Семилетов Антон Дмитриевич",
       "name_latin": "Semiletov Anton Dmitrievich",
       "sanctioned": false,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "semiletov-dmitriy-aleksandrovich",
@@ -21949,8 +21949,8 @@
       "target": "fond-gradislava-historic-cultural-heritage-preservation",
       "type": "role",
       "label": "General Director, Фонд «Градислава»",
-      "source_id": null,
-      "as_of": null,
+      "source_id": "s0216",
+      "as_of": "2021-12-17",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -32087,6 +32087,17 @@
       "confidence": null
     },
     {
+      "source": "semiletov-anton-dmitrievich",
+      "target": "npts-elvis",
+      "type": "role",
+      "label": "Генеральный директор",
+      "source_id": "s3702",
+      "as_of": "2024-12-03",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "semiletov-dmitriy-aleksandrovich",
       "target": "npts-elvis",
       "type": "role",
@@ -36754,9 +36765,9 @@
       "source": "ustratov-dmitriy-vladimirovich",
       "target": "fond-podderzhki-natsionalnykh-morskikh-programm",
       "type": "role",
-      "label": "General Director, Фонд поддержки национальных морских программ, since 30.04.2021",
-      "source_id": null,
-      "as_of": null,
+      "label": "Генеральный директор, Фонд поддержки национальных морских программ",
+      "source_id": "s6703",
+      "as_of": "2016-05-23",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -36787,9 +36798,9 @@
       "source": "viktor-ilich-davydov",
       "target": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
       "type": "role",
-      "label": "General Director, Фонд «ДАР», since 2008",
-      "source_id": null,
-      "as_of": null,
+      "label": "Генеральный директор, Фонд «ДАР»",
+      "source_id": "s0214",
+      "as_of": "2008-05-27",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
