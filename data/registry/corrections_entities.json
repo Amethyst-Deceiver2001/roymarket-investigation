@@ -10273,6 +10273,57 @@
             "value": "Костюнин Павел Андреевич"
           }
         ],
+        "founders": [
+          {
+            "name": "Акционерное общество \"Хоук Холдинг\"",
+            "share_percent": 51.0,
+            "nominal_value": 7650,
+            "source_id": "s0332",
+            "as_of": "2025-12-31",
+            "note": "\"доля косвенного участия\" — 100% ultimately owned by Ястребов Сергей Владимирович per the same filing's disclosed beneficiary structure."
+          },
+          {
+            "name": "Бежанов Иван Валериевич",
+            "share_percent": 37.2,
+            "nominal_value": 5580,
+            "inn_personal": null,
+            "source_id": "s0332",
+            "as_of": "2025-12-31",
+            "note": "Former GD; shareholder directly, not via a holding entity."
+          },
+          {
+            "name": "Акционерное общество \"АИН\"",
+            "share_percent": 6.0,
+            "nominal_value": 900,
+            "source_id": "s0332",
+            "as_of": "2025-12-31"
+          },
+          {
+            "name": "Махнёв Александр Игоревич",
+            "share_percent": 4.5,
+            "nominal_value": 675,
+            "inn_personal": null,
+            "source_id": "s0332",
+            "as_of": "2025-12-31",
+            "note": "Technical director, shareholder since 01.08.2024."
+          },
+          {
+            "name": "Назаров Олег Рамилевич",
+            "share_percent": 1.3,
+            "nominal_value": 195,
+            "inn_personal": null,
+            "source_id": "s0332",
+            "as_of": "2025-12-31"
+          }
+        ],
+        "founders_history": [
+          {
+            "value": "АО \"Хоук Холдинг\" 51% (доля косвенного участия, 100% Ястребов С.В.) / Бежанов И.В. 37,2% / АО \"АИН\" 6% / Махнёв А.И. 4,5% (технический директор) / Назаров О.Р. 1,3% — из 15 000 акций всего",
+            "as_of": "2025-12-31",
+            "source_id": "s0332",
+            "note": "FY2025 БФО пояснительная записка (0710099, §9 \"Информация о связанных сторонах\"), audited by ООО «ФинСоюзАудит»; all four individuals named explicitly as \"конечные бенефициары\" (ultimate beneficiaries)."
+          }
+        ],
         "okved_code": "30.30",
         "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
         "open_questions": [
@@ -11425,6 +11476,14 @@
             "note": "Генеральный директор, личный ИНН 695202386920, ГРН 2217711641585, 17.12.2021",
             "source_id": "s0216",
             "value": "Карабинский Иван Игоревич"
+          }
+        ],
+        "founders_history": [
+          {
+            "value": "Рубцов Леонид Викторович (founder, per press reporting)",
+            "as_of": "2023-04-18",
+            "source_id": "s7521",
+            "note": "Press-sourced, NOT confirmed via this entity's own EGRUL extract (EGRUL_7704278421_20260907, s0459-series pull, has no \"Сведения об учредителях\" section listing individual founders for this fund at all -- a gap in what that document type discloses, not a contradiction of the press claim). Ведомости, 18.04.2023, read directly: \"Учредителем «Градиславы» числился Леонид Рубцов...\" Corroborated independently by ооо-zavolzhskoe's own EGRUL-confirmed 99% ownership by this fund (s0459) -- the press account and the corporate-structure chain match, even though the founder fact itself rests on press reporting rather than EGRUL."
           }
         ],
         "financials": [
@@ -31860,41 +31919,6 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
       ]
     },
-    "9108131213": {
-      "set": {
-        "director_history": [
-          {
-            "value": "Тимофеев Владимир Сергеевич",
-            "as_of": "2025-04-14",
-            "source_id": "s5508",
-            "note": "ИНН 343704095632, должность ДИРЕКТОР, from incorporation. The SAME individual is генеральный директор of ООО «Архангел» ИНН 9500026652 in occupied Melitopol (appointed there 11.04.2025, three days before this entity was registered)."
-          },
-          {
-            "value": "Тимофеев Владимир Сергеевич",
-            "as_of": "2025-10-09",
-            "source_id": "s6851",
-            "note": "Должность: ДИРЕКТОР, личный ИНН 343704095632. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
-          }
-        ],
-        "founders_history": [
-          {
-            "value": "Тимофеев Владимир Сергеевич 50% (₽1 550 000)",
-            "as_of": "2025-04-14",
-            "source_id": "s6851",
-            "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
-          },
-          {
-            "value": "Тимофеев Владимир Сергеевич 50% (₽1,550,000); remaining 50% (₽1,550,000) held by the company itself",
-            "as_of": "2025-09-11",
-            "source_id": "s5508",
-            "note": "Тимофеев's 50% dates from incorporation (14.04.2025). The other 50% passed to the company itself («доля, принадлежащая обществу») by ГРН 2259100947180 on 11.09.2025 — i.e. a co-owner exited and their stake was bought back. The выписка does not name the departed participant; under ст. 24 №14-ФЗ a treasury share must be redistributed or cancelled within a year, so the position as of 05.09.2026 is already past that deadline."
-          }
-        ]
-      },
-      "why": [
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
-      ]
-    },
     "5017140245": {
       "set": {
         "director_history": [
@@ -31914,43 +31938,6 @@
       },
       "why": [
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
-      ]
-    },
-    "9001027869": {
-      "set": {
-        "director_history": [
-          {
-            "value": "Кусумов Вахид Абдулович",
-            "as_of": "2024-06-10",
-            "source_id": "s5504",
-            "note": "ИНН 202902196209. Генеральный директор from incorporation; no director change recorded in the ЕГРЮЛ record history through 05.09.2026."
-          },
-          {
-            "value": "Кусумов Вахид Абдулович",
-            "as_of": "2025-01-24",
-            "source_id": "s6850",
-            "note": "Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 202902196209. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
-          }
-        ],
-        "founders_history": [
-          {
-            "value": "Кусумов Вахид Абдулович (100%)",
-            "as_of": "2024-06-10",
-            "source_id": "s5504",
-            "note": "Nominal share value ₽10,000 of ₽10,000 charter capital. Sole founder, unchanged through 05.09.2026."
-          },
-          {
-            "value": "Кусумов Вахид Абдулович 100% (₽10 000)",
-            "as_of": "2025-01-13",
-            "source_id": "s6850",
-            "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
-          }
-        ],
-        "wb_overlap": "not_checked"
-      },
-      "why": [
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread."
       ]
     },
     "5032379630": {
@@ -33089,6 +33076,35 @@
     },
     "ooo-arkhangel-melitopol-2": {
       "set": {
+        "director_history": [
+          {
+            "value": "Кусумов Вахид Абдулович",
+            "as_of": "2024-06-10",
+            "source_id": "s5504",
+            "note": "ИНН 202902196209. Генеральный директор from incorporation; no director change recorded in the ЕГРЮЛ record history through 05.09.2026."
+          },
+          {
+            "value": "Кусумов Вахид Абдулович",
+            "as_of": "2025-01-24",
+            "source_id": "s6850",
+            "note": "Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 202902196209. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
+          }
+        ],
+        "founders_history": [
+          {
+            "value": "Кусумов Вахид Абдулович (100%)",
+            "as_of": "2024-06-10",
+            "source_id": "s5504",
+            "note": "Nominal share value ₽10,000 of ₽10,000 charter capital. Sole founder, unchanged through 05.09.2026."
+          },
+          {
+            "value": "Кусумов Вахид Абдулович 100% (₽10 000)",
+            "as_of": "2025-01-13",
+            "source_id": "s6850",
+            "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
+          }
+        ],
+        "wb_overlap": "not_checked",
         "related_entities": [
           {
             "slug": "ooo-arkhangel-zaporizhzhie",
@@ -33101,11 +33117,41 @@
         ]
       },
       "why": [
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },
     "ooo-arkhangel-crimea": {
       "set": {
+        "director_history": [
+          {
+            "value": "Тимофеев Владимир Сергеевич",
+            "as_of": "2025-04-14",
+            "source_id": "s5508",
+            "note": "ИНН 343704095632, должность ДИРЕКТОР, from incorporation. The SAME individual is генеральный директор of ООО «Архангел» ИНН 9500026652 in occupied Melitopol (appointed there 11.04.2025, three days before this entity was registered)."
+          },
+          {
+            "value": "Тимофеев Владимир Сергеевич",
+            "as_of": "2025-10-09",
+            "source_id": "s6851",
+            "note": "Должность: ДИРЕКТОР, личный ИНН 343704095632. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
+          }
+        ],
+        "founders_history": [
+          {
+            "value": "Тимофеев Владимир Сергеевич 50% (₽1 550 000)",
+            "as_of": "2025-04-14",
+            "source_id": "s6851",
+            "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
+          },
+          {
+            "value": "Тимофеев Владимир Сергеевич 50% (₽1,550,000); remaining 50% (₽1,550,000) held by the company itself",
+            "as_of": "2025-09-11",
+            "source_id": "s5508",
+            "note": "Тимофеев's 50% dates from incorporation (14.04.2025). The other 50% passed to the company itself («доля, принадлежащая обществу») by ГРН 2259100947180 on 11.09.2025 — i.e. a co-owner exited and their stake was bought back. The выписка does not name the departed participant; under ст. 24 №14-ФЗ a treasury share must be redistributed or cancelled within a year, so the position as of 05.09.2026 is already past that deadline."
+          }
+        ],
         "related_entities": [
           {
             "slug": "ooo-arkhangel-zaporizhzhie",
@@ -33118,6 +33164,7 @@
         ]
       },
       "why": [
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
       ]
     },

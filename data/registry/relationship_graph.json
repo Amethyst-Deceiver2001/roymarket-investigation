@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1426,
-  "edge_count": 2105,
-  "unresolved_count": 173,
+  "node_count": 1431,
+  "edge_count": 2117,
+  "unresolved_count": 177,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -607,7 +607,7 @@
       "sanctioned": true,
       "legal_form": "АО",
       "variant": "offensive",
-      "degree": 17
+      "degree": 27
     },
     {
       "id": "ao-tekhnodinamika",
@@ -923,7 +923,7 @@
       "label": "Бежанов Иван Валериевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 2
     },
     {
       "id": "bezrodnova-anna-sergeevna",
@@ -2061,7 +2061,7 @@
       "sanctioned": false,
       "legal_form": "Фонд",
       "variant": null,
-      "degree": 3
+      "degree": 5
     },
     {
       "id": "fond-nasha-pravda",
@@ -3061,7 +3061,15 @@
       "label": "Махнёв Александр Игоревич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
+    },
+    {
+      "id": "makhnyov-aleksandr-igorevich",
+      "kind": "person",
+      "label": "Махнёв Александр Игоревич",
+      "name_latin": "Makhnyov Aleksandr Igorevich",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "maksimov-yuriy-alekseevich",
@@ -3211,9 +3219,9 @@
       "id": "nazarov-oleg-ramilevich",
       "kind": "person",
       "label": "Назаров Олег Рамилевич",
-      "name_latin": null,
+      "name_latin": "Nazarov Oleg Ramilevich",
       "sanctioned": false,
-      "degree": 0
+      "degree": 2
     },
     {
       "id": "nekrasov-aleksandr-viktorovich",
@@ -11835,7 +11843,7 @@
       "label": "Рубцов Леонид Викторович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 2
     },
     {
       "id": "rudenko-dmitriy-aleksandrovich",
@@ -12374,6 +12382,12 @@
       "degree": 5
     },
     {
+      "id": "stub::/ ао аин 6% / махнёв а.и. 4",
+      "kind": "unresolved",
+      "label": "/ АО \"АИН\" 6% / Махнёв А.И. 4",
+      "degree": 1
+    },
+    {
       "id": "stub::000",
       "kind": "unresolved",
       "label": "000",
@@ -12485,6 +12499,12 @@
       "id": "stub::абрамченков николай григорьевич",
       "kind": "unresolved",
       "label": "Абрамченков Николай Григорьевич",
+      "degree": 1
+    },
+    {
+      "id": "stub::аин",
+      "kind": "unresolved",
+      "label": "Акционерное общество \"АИН\"",
       "degree": 1
     },
     {
@@ -13352,6 +13372,12 @@
       "degree": 1
     },
     {
+      "id": "stub::хоук холдинг",
+      "kind": "unresolved",
+      "label": "Акционерное общество \"Хоук Холдинг\"",
+      "degree": 1
+    },
+    {
       "id": "stub::цихончик сергей павлович",
       "kind": "unresolved",
       "label": "Цихончик Сергей Павлович",
@@ -13404,6 +13430,12 @@
       "kind": "unresolved",
       "label": "Яковенко Ирина Геннадьевна",
       "degree": 2
+    },
+    {
+      "id": "stub::— из 15 000 акций всего",
+      "kind": "unresolved",
+      "label": "— из 15 000 акций всего",
+      "degree": 1
     },
     {
       "id": "stub::₽250",
@@ -14049,7 +14081,7 @@
       "id": "yastrebov-sergey-vladimirovich",
       "kind": "person",
       "label": "Ястребов Сергей Владимирович",
-      "name_latin": null,
+      "name_latin": "Yastrebov Sergey Vladimirovich",
       "sanctioned": false,
       "degree": 0
     },
@@ -17089,6 +17121,28 @@
       "type": "role",
       "label": "Генеральный директор",
       "source_id": "s7441",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "bezhanov-ivan-valerievich",
+      "target": "ao-stratim",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "bezhanov-ivan-valerievich",
+      "target": "ao-stratim",
+      "type": "role",
+      "label": "Генеральный директор (former); shareholder 37.2% (5,580 of 15,000 shares) directly",
+      "source_id": "s0332",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -24388,6 +24442,28 @@
       "confidence": null
     },
     {
+      "source": "makhnev-aleksandr-igorevich",
+      "target": "ao-stratim",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "makhnyov-aleksandr-igorevich",
+      "target": "ao-stratim",
+      "type": "role",
+      "label": "Технический директор; shareholder 4.5% (675 of 15,000 shares)",
+      "source_id": "s0332",
+      "as_of": "2024-08-01",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "maksimov-yuriy-alekseevich",
       "target": "ao-ross",
       "type": "directs",
@@ -24679,6 +24755,28 @@
       "type": "role",
       "label": "co-inventor (patent RU2765196C2)",
       "source_id": "s1027",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "nazarov-oleg-ramilevich",
+      "target": "ao-stratim",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "nazarov-oleg-ramilevich",
+      "target": "ao-stratim",
+      "type": "role",
+      "label": "shareholder 1.3% (195 of 15,000 shares)",
+      "source_id": "s0332",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -31472,6 +31570,28 @@
       "confidence": null
     },
     {
+      "source": "rubtsov-leonid-viktorovich",
+      "target": "fond-gradislava-historic-cultural-heritage-preservation",
+      "type": "founded",
+      "label": "former founder",
+      "source_id": "s7521",
+      "as_of": "2023-04-18",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
+      "source": "rubtsov-leonid-viktorovich",
+      "target": "fond-gradislava-historic-cultural-heritage-preservation",
+      "type": "role",
+      "label": "Founder (per press reporting)",
+      "source_id": "s7521",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "rudenko-dmitriy-aleksandrovich",
       "target": "ano-ntsns-nevskiy-tsentr-nauchnogo-sotrudnichestva",
       "type": "directs",
@@ -33419,6 +33539,17 @@
       "confidence": null
     },
     {
+      "source": "stub::/ ао аин 6% / махнёв а.и. 4",
+      "target": "ao-stratim",
+      "type": "founded",
+      "label": "former founder (2%)",
+      "source_id": "s0332",
+      "as_of": "2025-12-31",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
       "source": "stub::000",
       "target": "ooo-aeromaks",
       "type": "founded",
@@ -33669,6 +33800,17 @@
       "as_of": "2015-05-26",
       "weight": 1.0,
       "temporal_status": "historical",
+      "confidence": null
+    },
+    {
+      "source": "stub::аин",
+      "target": "ao-stratim",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
       "confidence": null
     },
     {
@@ -35806,6 +35948,17 @@
       "confidence": null
     },
     {
+      "source": "stub::хоук холдинг",
+      "target": "ao-stratim",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "stub::цихончик сергей павлович",
       "target": "ooo-dronnet",
       "type": "directs",
@@ -35957,6 +36110,17 @@
       "as_of": "2026-08-24",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "stub::— из 15 000 акций всего",
+      "target": "ao-stratim",
+      "type": "founded",
+      "label": "former founder (3%)",
+      "source_id": "s0332",
+      "as_of": "2025-12-31",
+      "weight": 1.0,
+      "temporal_status": "historical",
       "confidence": null
     },
     {
@@ -37337,6 +37501,13 @@
   ],
   "unresolved": [
     {
+      "id": "stub::/ ао аин 6% / махнёв а.и. 4",
+      "raw_name": "/ АО \"АИН\" 6% / Махнёв А.И. 4",
+      "contexts": [
+        "former founder of ao-stratim"
+      ]
+    },
+    {
       "id": "stub::000",
       "raw_name": "000",
       "contexts": [
@@ -37471,6 +37642,13 @@
       "raw_name": "Абрамченков Николай Григорьевич",
       "contexts": [
         "director of ao-tsentr-telko"
+      ]
+    },
+    {
+      "id": "stub::аин",
+      "raw_name": "Акционерное общество \"АИН\"",
+      "contexts": [
+        "founder of ao-stratim"
       ]
     },
     {
@@ -38516,6 +38694,13 @@
       ]
     },
     {
+      "id": "stub::хоук холдинг",
+      "raw_name": "Акционерное общество \"Хоук Холдинг\"",
+      "contexts": [
+        "founder of ao-stratim"
+      ]
+    },
+    {
       "id": "stub::цихончик сергей павлович",
       "raw_name": "Цихончик Сергей Павлович",
       "contexts": [
@@ -38578,6 +38763,13 @@
       "raw_name": "Яковенко Ирина Геннадьевна",
       "contexts": [
         "director of ooo-vingrad"
+      ]
+    },
+    {
+      "id": "stub::— из 15 000 акций всего",
+      "raw_name": "— из 15 000 акций всего",
+      "contexts": [
+        "former founder of ao-stratim"
       ]
     },
     {

@@ -13414,7 +13414,7 @@
   {
     "slug": "yastrebov-sergey-vladimirovich",
     "fio_ru": "Ястребов Сергей Владимирович",
-    "name_latin": null,
+    "name_latin": "Yastrebov Sergey Vladimirovich",
     "dob": null,
     "birthplace": null,
     "address": null,
@@ -13437,6 +13437,15 @@
         "to": null,
         "source_id": null,
         "_candidate": true
+      },
+      {
+        "entity_name": "Акционерное общество \"Хоук Холдинг\"",
+        "entity_slug": null,
+        "from": null,
+        "to": null,
+        "title": "100% owner",
+        "source_id": "s0332",
+        "_candidate": true
       }
     ],
     "sanctions": [],
@@ -13448,16 +13457,20 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "2026-09-16: new record. Named ultimate beneficiary of АО «Стратим» per the entity's own audited FY2025 БФО filing (s0332) -- 100% owner of АО «Хоук Холдинг», which in turn holds 51% of АО «Стратим» (7,650 of 15,000 shares) as an indirect-participation stake. Not a direct officer/shareholder of АО «Стратим» itself; the tie runs through the holding company.",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
         "disclose, for the first time in this brief, a named ultimate-beneficial-ownership structure for a flagship ЦБСТ resident: of 15,000 total shares, АО «Хоук Холдинг» holds 51% (100% ultimately owned by Ястребов Сергей Владимирович), former GD Бежанов Иван Валериевич holds 37.2% directly, АО «АИН» holds 6%, technical director Махнёв Александр Игоревич holds 4.5%, and Назаров Олег Рамилевич holds 1.3%; the notes name all four — Ястребов, Бежанов, Махнёв, Назар"
       ]
     },
+    "_corrected": [
+      "s0332 -- АО «Стратим»'s own audited FY2025 БФО пояснительная записка (0710099, §9 \"Информация о связанных сторонах\"), read directly: names Ястребов explicitly as one of four \"конечные бенефициары\" and as 100% owner of АО «Хоук Холдинг», which holds a 51% (доля косвенного участия) stake in АО «Стратим».",
+      "АО «Хоук Холдинг» itself has no registry entity record yet (not yet added to entities.json) -- role's entity_slug left null and marked _candidate pending that addition."
+    ],
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -13539,22 +13552,12 @@
     "inn_personal": null,
     "roles": [
       {
-        "entity_slug": null,
-        "entity_name": "АО «Хоук Холдинг»",
-        "title": null,
+        "entity_name": "АО «Стратим»",
+        "entity_slug": "ao-stratim",
         "from": null,
-        "to": null,
-        "source_id": null,
-        "_candidate": true
-      },
-      {
-        "entity_slug": null,
-        "entity_name": "АО «АИН»",
-        "title": null,
-        "from": null,
-        "to": null,
-        "source_id": null,
-        "_candidate": true
+        "to": "2024-05-03",
+        "title": "Генеральный директор (former); shareholder 37.2% (5,580 of 15,000 shares) directly",
+        "source_id": "s0332"
       }
     ],
     "sanctions": [],
@@ -13569,7 +13572,7 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -13577,9 +13580,10 @@
       ]
     },
     "_corrected": [
-      "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Основатель\" (Founder), Moscow -- a previously-undocumented company link for this person (existing `_candidate` roles are АО «Хоук Холдинг» and АО «АИН», neither Стратим) and a previously-undocumented founder for ao-stratim (whose `founders[]` is currently empty). Not promoted to a structured role or to ao-stratim's `founders[]` -- leader-id self-report alone isn't sufficient sourcing for either field per this registry's standing discipline. Worth an EGRUL/founding-document check to confirm."
+      "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Основатель\" (Founder), Moscow -- a previously-undocumented company link for this person (existing `_candidate` roles are АО «Хоук Холдинг» and АО «АИН», neither Стратим) and a previously-undocumented founder for ao-stratim (whose `founders[]` is currently empty). Not promoted to a structured role or to ao-stratim's `founders[]` -- leader-id self-report alone isn't sufficient sourcing for either field per this registry's standing discipline. Worth an EGRUL/founding-document check to confirm.",
+      "2026-09-16: promoted to a structured role -- ao-stratim's FY2025 БФО filing (s0332), read directly (pdftotext over the pulled zip's НО_БУХПЗ PDF), names Бежанов as holding 5,580 of 15,000 shares (37.2%) directly and as one of four disclosed ultimate beneficiaries. This independently corroborates the earlier leader-id self-report, clearing the sourcing bar the original note flagged as missing."
     ],
-    "_verified_against": null,
+    "_verified_against": "s0332 -- АО «Стратим»'s own audited FY2025 БФО пояснительная записка (0710099, §9), confirms leader-id.ru's earlier self-reported \"Основатель\" claim (s6... leader-id pull, 2026-08-24) with an independent, primary-source ownership disclosure -- named explicitly as one of four \"конечные бенефициары\".",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-770201384382",
@@ -13768,7 +13772,7 @@
   {
     "slug": "nazarov-oleg-ramilevich",
     "fio_ru": "Назаров Олег Рамилевич",
-    "name_latin": null,
+    "name_latin": "Nazarov Oleg Ramilevich",
     "dob": null,
     "birthplace": null,
     "address": null,
@@ -13782,6 +13786,14 @@
         "to": null,
         "source_id": null,
         "_candidate": true
+      },
+      {
+        "entity_name": "АО «Стратим»",
+        "entity_slug": "ao-stratim",
+        "from": null,
+        "to": null,
+        "title": "shareholder 1.3% (195 of 15,000 shares)",
+        "source_id": "s0332"
       }
     ],
     "sanctions": [],
@@ -13793,16 +13805,19 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": null,
+    "notes": "2026-09-16: new record. Shareholder (1.3%, 195 of 15,000 shares) of АО «Стратим» per the entity's own audited FY2025 БФО filing (s0332).",
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
         "ds 51% (100% ultimately owned by Ястребов Сергей Владимирович), former GD Бежанов Иван Валериевич holds 37.2% directly, АО «АИН» holds 6%, technical director Махнёв Александр Игоревич holds 4.5%, and Назаров Олег Рамилевич holds 1.3%; the notes name all four — Ястребов, Бежанов, Махнёв, Назаров — explicitly as \"конечные бенефициары\" (ultimate beneficiaries). Current GD Костюнин Павел Андреевич (since 03.05.2024) holds no disclosed equity but is also GD of "
       ]
     },
+    "_corrected": [
+      "s0332 -- АО «Стратим»'s own audited FY2025 БФО пояснительная записка (0710099, §9), read directly: names Назаров as one of four disclosed ultimate beneficiaries."
+    ],
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -19401,7 +19416,16 @@
     "birthplace": null,
     "address": null,
     "inn_personal": null,
-    "roles": [],
+    "roles": [
+      {
+        "entity_name": "Фонд «Градислава» | historic & cultural heritage preservation",
+        "entity_slug": "fond-gradislava-historic-cultural-heritage-preservation",
+        "from": null,
+        "to": null,
+        "title": "Founder (per press reporting)",
+        "source_id": "s7521"
+      }
+    ],
     "sanctions": [],
     "other_entities": [],
     "other_entities_checked_at": null,
@@ -19414,13 +19438,17 @@
     "notes": null,
     "sources": [],
     "mentions": 1,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
         "а’s ownership reach also now extends further than a name and an office: EGRUL confirms it holds 99% of Заволжское outright (уставный капитал ₽5.5m), and Заволжское’s own founder from 2011 to 2021 was Леонид Викторович Рубцов — the same name FBK gives as Градислава’s founder. Founder checks out against FBK’s account through a second, independent corporate vehicle, not just Градислава itself. Correction to earlier work in this investigation: a prior pass att"
       ]
     },
+    "_corrected": [
+      "2026-09-16: promoted from an unstructured brief-prose scaffold (_origin: brief:prose, roles: []) to a structured role after re-checking the underlying Ведомости article directly rather than trusting docs/index.html's paraphrase -- confirmed the quote is verbatim (matches data/registry/quotes.json q014) and archived the source for a real source_id (s7521, previously null)."
+    ],
+    "_verified_against": "s7521 -- Ведомости, 18.04.2023, read directly (fetched and archived data/sources/PRESS_20230418_vedomosti-fond-nasha-pravda-rubtsov-gradislava.html 2026-09-16): \"Учредителем «Градиславы» числился Леонид Рубцов...\" No EGRUL founder listing exists for this non-profit fund to cross-check against (its own EGRUL extract, s0459-series, carries no individual-founder section at all), so this role is press-sourced only, not press+EGRUL.",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -48398,5 +48426,41 @@
       }
     ],
     "aleph_screened_at": "2026-09-08"
+  },
+  {
+    "slug": "makhnyov-aleksandr-igorevich",
+    "fio_ru": "Махнёв Александр Игоревич",
+    "name_latin": "Makhnyov Aleksandr Igorevich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [
+      {
+        "entity_name": "АО «Стратим»",
+        "entity_slug": "ao-stratim",
+        "from": "2024-08-01",
+        "to": null,
+        "title": "Технический директор; shareholder 4.5% (675 of 15,000 shares)",
+        "source_id": "s0332"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "2026-09-16: new record. Technical director and shareholder (4.5%, 675 of 15,000 shares, since 01.08.2024) of АО «Стратим» per the entity's own audited FY2025 БФО filing (s0332).",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "s0332 -- АО «Стратим»'s own audited FY2025 БФО пояснительная записка (0710099, §9), read directly: names Махнёв as technical director and one of four disclosed ultimate beneficiaries, shareholder since 01.08.2024."
+    ]
   }
 ]
