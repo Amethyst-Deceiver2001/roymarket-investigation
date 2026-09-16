@@ -65,6 +65,10 @@
 
 - **ООО «Аэротехальянс»** `shared-address` — Identical registered помещение (125167, Москва, ал. Нарышкинская, д.5, стр.2, помещ.1/1). No director or founder overlap found -- ooo-aerotekhalyans is 51%/25%/24% owned by ООО «Отраслевой центр импортозамещения», АО «УК «Азимут»» and Кожемякин В.В., none matching this entity's own director/founder record. Co-location only, likely a shared registered-agent/virtual-office suite; ООО «Оупен Лоджистикс», also registered at this same address, is excluded from this tag as unrelated to the investigation. [s0230]
 
+## Open questions
+
+- This entity's own _raw scaffold note (carried from the frozen pre-migration docs/_archive snapshot) states "100% ЦБСТ-owned until the stake's end-date of 12-14.07.2026" -- a specific, dated ownership-transition claim -- but no source for it could be located 2026-09-16: it does not appear anywhere in the current docs/index.html, and every EGRUL pull actually archived for this entity (ul-1257700021468-20260814192506.pdf, EGRUL_9714068459_20260907_ooo-mptm.pdf, EGRULAPI_9714068459_20260822_ooo-mptm.json) already postdates the 15.07.2026 access restriction and shows only "Доступ к сведениям ограничен" for учредители -- none of them could have been the source of a historical founders fact. No Aleph/OCCRP pull exists for this ИНН either. The underlying claim is plausible (fits the platform's own ЦБСТ-operator role throughout the brief) but its specific source has been lost between the archived scaffold and the current registry -- needs either a fresh full ЕГРЮЛ выписка (which may itself now be restricted) or locating whatever aggregator/cache the original scaffold note drew from.
+
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |

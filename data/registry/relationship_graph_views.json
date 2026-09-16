@@ -214,7 +214,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 66
+          "degree": 69
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -666,7 +666,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 4
         },
         {
           "id": "assotsiatsiya-vzaimopomoshch",
@@ -2571,6 +2571,18 @@
           "degree": 4
         },
         {
+          "id": "krams-brand-unresolved",
+          "kind": "entity",
+          "label": "КРАМС (бренд, юрлицо не установлено)",
+          "name_latin": "KRAMS (brand, legal entity unresolved)",
+          "inn": null,
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": null,
+          "degree": 6
+        },
+        {
           "id": "kraskovskiy-vyacheslav-aleksandrovich",
           "kind": "person",
           "label": "Красковский Вячеслав Александрович",
@@ -3256,7 +3268,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 28
+          "degree": 23
         },
         {
           "id": "ooo-arkodim-2",
@@ -3268,7 +3280,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 11
+          "degree": 10
         },
         {
           "id": "ooo-arkodim-pro",
@@ -3280,7 +3292,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 6
         },
         {
           "id": "ooo-as-kam",
@@ -3484,7 +3496,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 6
         },
         {
           "id": "ooo-eliars",
@@ -4036,7 +4048,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-ntc-arkodim",
@@ -4048,7 +4060,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 6
         },
         {
           "id": "ooo-opkb-eksplomet",
@@ -4636,7 +4648,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 11
+          "degree": 10
         },
         {
           "id": "ooo-zetaks",
@@ -18228,6 +18240,17 @@
           "confidence": null
         },
         {
+          "source": "krams-brand-unresolved",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Self-identifies directly as a ЦБСТ resident, and separately confirms participation in cohort 3 of ЦБСТ's own accelera...",
+          "source_id": "s7523",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "kraskovskiy-vyacheslav-aleksandrovich",
           "target": "ooo-titan-severo-zapad",
           "type": "directs",
@@ -20098,6 +20121,17 @@
           "confidence": null
         },
         {
+          "source": "ooo-arkodim",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Directly named a ЦБСТ resident by ЦБСТ's own channel in a post crediting the company with neural-network target-track...",
+          "source_id": "s7524",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "ooo-as-kam",
           "target": "product::ooo-as-kam::ас-32-08",
           "type": "produces",
@@ -21724,6 +21758,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "ooo-npts-basirtk",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "All four projects submitted by НПЦ БАСиРТК were selected into the III stream of ЦБСТ's own Accelerator for special an...",
+          "source_id": "s7522",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "ooo-opkb-eksplomet",
@@ -27216,7 +27261,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 66
+          "degree": 69
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -27564,7 +27609,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 4
         },
         {
           "id": "assotsiatsiya-vzaimopomoshch",
@@ -28340,7 +28385,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 11
+          "degree": 10
         },
         {
           "id": "ooo-arkodim-pro",
@@ -28352,7 +28397,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 6
         },
         {
           "id": "ooo-asel-labs",
@@ -28460,7 +28505,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 6
         },
         {
           "id": "ooo-eliars",
@@ -28844,7 +28889,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-ntc-arkodim",
@@ -28856,7 +28901,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 6
         },
         {
           "id": "ooo-opkb-eksplomet",
@@ -29252,7 +29297,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 11
+          "degree": 10
         },
         {
           "id": "ooo-zetaks",
@@ -32149,7 +32194,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 66
+          "degree": 69
         },
         {
           "id": "antonova-tatyana-sergeevna",
@@ -32338,6 +32383,18 @@
           "degree": 2
         },
         {
+          "id": "krams-brand-unresolved",
+          "kind": "entity",
+          "label": "КРАМС (бренд, юрлицо не установлено)",
+          "name_latin": "KRAMS (brand, legal entity unresolved)",
+          "inn": null,
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": null,
+          "degree": 6
+        },
+        {
           "id": "kulibin-klub",
           "kind": "entity",
           "label": "«Кулибин-клуб»",
@@ -32456,6 +32513,18 @@
           "legal_form": "ООО",
           "variant": null,
           "degree": 9
+        },
+        {
+          "id": "ooo-arkodim",
+          "kind": "entity",
+          "label": "ООО «Аркодим»",
+          "name_latin": null,
+          "inn": "1659101884",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "variant": null,
+          "degree": 23
         },
         {
           "id": "ooo-atlant-aero",
@@ -32671,7 +32740,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-opkb-eksplomet",
@@ -33493,6 +33562,17 @@
           "confidence": null
         },
         {
+          "source": "krams-brand-unresolved",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Self-identifies directly as a ЦБСТ resident, and separately confirms participation in cohort 3 of ЦБСТ's own accelera...",
+          "source_id": "s7523",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "kulibin-klub",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -33630,6 +33710,17 @@
           "type": "cbst_tie",
           "label": "EU-sanctioned as one of six named ЦБСТ residents in the EU's 20th sanctions package, per ЦБСТ's own coverage of the l...",
           "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-arkodim",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Directly named a ЦБСТ resident by ЦБСТ's own channel in a post crediting the company with neural-network target-track...",
+          "source_id": "s7524",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33806,6 +33897,17 @@
           "type": "cbst_tie",
           "label": "Named ЦБСТ resident receiving a Минпромторг РФ honorary award, 14.08.2025.",
           "source_id": "s6924",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-npts-basirtk",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "All four projects submitted by НПЦ БАСиРТК were selected into the III stream of ЦБСТ's own Accelerator for special an...",
+          "source_id": "s7522",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -34343,7 +34445,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 66
+          "degree": 69
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -34647,7 +34749,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 4
         },
         {
           "id": "atlivanchik-sergey-nikolaevich",
@@ -35267,7 +35369,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "kraskovskiy-vyacheslav-aleksandrovich",
@@ -35811,7 +35913,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 28
+          "degree": 23
         },
         {
           "id": "ooo-arkodim-2",
@@ -35823,7 +35925,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 11
+          "degree": 10
         },
         {
           "id": "ooo-arkodim-pro",
@@ -35835,7 +35937,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 6
         },
         {
           "id": "ooo-as-kam",
@@ -36063,7 +36165,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 6
         },
         {
           "id": "ooo-eliars",
@@ -36627,7 +36729,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-ntc-arkodim",
@@ -36639,7 +36741,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 6
         },
         {
           "id": "ooo-opkb-eksplomet",
@@ -37215,7 +37317,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 11
+          "degree": 10
         },
         {
           "id": "ooo-zetaks",
@@ -43680,72 +43782,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "t-doc"
-        },
-        {
-          "source": "ooo-arkodim",
-          "target": "associatsiya-tekhnologicheskogo-biznesa",
-          "type": "related",
-          "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-arkodim",
-          "target": "ooo-arkodim-2",
-          "type": "related",
-          "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-arkodim",
-          "target": "ooo-arkodim-pro",
-          "type": "related",
-          "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-arkodim",
-          "target": "ooo-ekspoket",
-          "type": "related",
-          "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-arkodim",
-          "target": "ooo-ntc-arkodim",
-          "type": "related",
-          "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-arkodim",
-          "target": "ooo-zemstroyregistr",
-          "type": "related",
-          "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
         },
         {
           "source": "ooo-arkodim-2",

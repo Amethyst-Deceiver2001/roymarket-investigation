@@ -105,7 +105,13 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "source_id": null,
+        "status": "open",
+        "text": "This entity's own _raw scaffold note (carried from the frozen pre-migration docs/_archive snapshot) states \"100% ЦБСТ-owned until the stake's end-date of 12-14.07.2026\" -- a specific, dated ownership-transition claim -- but no source for it could be located 2026-09-16: it does not appear anywhere in the current docs/index.html, and every EGRUL pull actually archived for this entity (ul-1257700021468-20260814192506.pdf, EGRUL_9714068459_20260907_ooo-mptm.pdf, EGRULAPI_9714068459_20260822_ooo-mptm.json) already postdates the 15.07.2026 access restriction and shows only \"Доступ к сведениям ограничен\" for учредители -- none of them could have been the source of a historical founders fact. No Aleph/OCCRP pull exists for this ИНН either. The underlying claim is plausible (fits the platform's own ЦБСТ-operator role throughout the brief) but its specific source has been lost between the archived scaffold and the current registry -- needs either a fresh full ЕГРЮЛ выписка (which may itself now be restricted) or locating whatever aggregator/cache the original scaffold note drew from."
+      }
+    ],
     "sources": [],
     "confidence": "doc",
     "_verified": true,
@@ -17012,41 +17018,15 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "Directly named a ЦБСТ resident by ЦБСТ's own channel in a post crediting the company with neural-network target-tracking/ballistics-prediction algorithms for a small-PVO counter-drone system.",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own Telegram channel (@ANO_CBST), msg 2134, 12.05.2026, headline: \"Резидент ЦБСТ разработал нейросетевые алгоритмы для антидроновой системы малой ПВО. Компания «Аркодим» (Казань) реализовала комплекс инженерных решений по автоматизации обнаружения и наведения на вражеские БпЛА.\"",
+      "source_id": "s7524"
+    },
     "wb_overlap": "not_checked",
     "products": [],
-    "financials": [
-      {
-        "year": "2021",
-        "revenue": 15401000.0,
-        "profit": 198000.0,
-        "source_id": "s7461"
-      },
-      {
-        "year": "2022",
-        "revenue": 26713000.0,
-        "profit": 2100000.0,
-        "source_id": "s7462"
-      },
-      {
-        "year": "2023",
-        "revenue": 38307000.0,
-        "profit": 342000.0,
-        "source_id": "s7463"
-      },
-      {
-        "year": "2024",
-        "revenue": 37009000.0,
-        "profit": 1023000.0,
-        "source_id": "s7464"
-      },
-      {
-        "year": "2025",
-        "revenue": 45886000.0,
-        "profit": 218000.0,
-        "source_id": "s7465"
-      }
-    ],
+    "financials": [],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": "2026-09-06",
@@ -17081,49 +17061,8 @@
       "principal": "Барахтин Артём Владимирович / Соловьёв Константин Юрьевич (50/50)",
       "notes": "ИНН 1659101884. Neural-network target-tracking/ballistics prediction for a small-scale anti-drone air-defence system, pitched at the Russian Venture Forum. Pre-war robotics firm (est. 2010), 8 employees. OKVED \"Производство промышленных роботов и робототехнических устройств.\""
     },
-    "related_entities": [
-      {
-        "slug": "ooo-arkodim-2",
-        "relationship": "Same director (Барахтин Артём Владимирович) — sister entity in the same Kazan «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
-        "relationship_type": "sister-entity"
-      },
-      {
-        "slug": "ooo-arkodim-pro",
-        "relationship": "Барахтин Артём Владимирович is a recorded founder here (current director differs) — sister entity in the same «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
-        "relationship_type": "sister-entity"
-      },
-      {
-        "slug": "ooo-ntc-arkodim",
-        "relationship": "Барахтин Артём Владимирович is a recorded founder here (current director differs) — sister entity in the same «Аркодим» family, found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
-        "relationship_type": "sister-entity"
-      },
-      {
-        "slug": "ooo-zemstroyregistr",
-        "relationship": "Same director (Барахтин Артём Владимирович) — administrative/legal-services shell, no defense-industry OKVED signal on its own. Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
-        "relationship_type": "sister-entity"
-      },
-      {
-        "slug": "ooo-ekspoket",
-        "relationship": "Барахтин Артём Владимирович is a recorded founder here (current director is a different, unrelated-seeming person); OKVED (фотография) shows no defense-industry signal. Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
-        "relationship_type": "sister-entity"
-      },
-      {
-        "slug": "associatsiya-tekhnologicheskogo-biznesa",
-        "relationship": "Same director (Барахтин Артём Владимирович) — a Moscow-registered trade association (АТБ). Found via screen_upr_uchr.py's other_entities scan, 2026-09-14.",
-        "relationship_type": "sister-entity"
-      }
-    ],
-    "sanctions_review": {
-      "as_of": "2026-09-15",
-      "outcome": "closed",
-      "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). Aleph: 5 match(es), dataset categories=['company', 'procurement'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
-    },
-    "tier_basis": "Thin direct record — no sanctions/products/cbst_tie on file, only financials (₽15m→₽46m, 2021-2025) and a 50/50 director pair (Барахтин Артём Владимирович / Соловьёв Константин Юрьевич). Барахтин is the confirmed common founder/director figure tying together the already-verified «Аркодим cluster» (ooo-arkodim-pro, ooo-ntc-arkodim, ooo-ekspoket, ooo-zemstroyregistr — see their own tier_basis/founders_history entries from the 2026-09-14 full-выписка pass) — grounds this entity's inclusion by corporate-family association rather than independent product/sanctions evidence; flagged as the weakest basis in this batch.",
     "_corrected": [
-      "2026-09-14: screen_upr_uchr.py (manual-captcha run) cross-referenced barakhtin-artem-vladimirovich (already recorded as ooo-arkodim's director) and surfaced 6 more entities as director/founder hits — all confirmed via egrul.nalog.ru open API (s7436, s7437, s7438, s7439, s7440, s7442). None yet independently EGRUL-выписка-verified or assessed for UAV-relevance beyond the shared director/founder; recorded as related_entities pending that fuller review (see notes/rebuild_plan.md 2026-09-14 entry).",
-      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-      "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread.",
-      "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      "2026-09-16 (coverage-gap follow-up pass): docs/index.html's own paraphrase (\"which ЦБСТ credits with... algorithms\") understated the actual post -- the post's own headline states directly \"Резидент ЦБСТ разработал...\", a residency statement, not just a technology credit. Read the actual post text before wiring rather than trusting the brief's paraphrase alone."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -58235,7 +58174,12 @@
     "subsidiaries": [],
     "tier": "cbst-core",
     "tier_basis": "own OKVED codes explicitly declare weapons/ammunition manufacturing (25.40) and military-security-related activity (84.22) alongside R&D (72.19); its own channel documents direct front-line FPV-drone supply to the 106th Guards Airborne Division and two MoD-stamped commendation letters from the commander of the «Добровольческий корпус»",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "All four projects submitted by НПЦ БАСиРТК were selected into the III stream of ЦБСТ's own Accelerator for special and dual-purpose projects, and completed its first two modules.",
+      "confidence": "t-doc",
+      "evidence": "The entity's own Telegram channel (@UAS_development), msg 625, 18.06.2026: \"Все четыре поданных НПЦ БАСиРТК проекта успешно прошли отбор в III поток Акселератора проектов специального и двойного назначения АНО \\\"ЦБСТ\\\".\" Corroborated by two follow-up posts on the same channel (msg 629, 27.06.2026 and msg 643, 25.07.2026) confirming completion of the accelerator's first and second modules for the same four projects.",
+      "source_id": "s7522"
+    },
     "wb_overlap": "not_checked",
     "products": [
       {
@@ -63374,8 +63318,13 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": "A documented FPV-drone brand (models «КРАМС 7», «КРАМС 9») with an active product site (krams.pro) and Telegram presence, covered in regional press including a Kuzbass governor visit — but the underlying legal entity has NOT been identified (explicitly not ooo-krams, ИНН 9701247080, already confirmed as an unrelated Moscow entity — see open_questions). This is a placeholder brand-level record pending entity resolution, not yet an established ЦБСТ-network tie of any kind; do not cite as a confirmed network member.",
-    "cbst_tie": null,
+    "tier_basis": "A documented FPV-drone brand (models «КРАМС 7», «КРАМС 9») with an active product site (krams.pro) and Telegram presence, covered in regional press including a Kuzbass governor visit, and a directly primary-source-confirmed ЦБСТ residency claim (see cbst_tie) — but the underlying LEGAL ENTITY has NOT been identified (explicitly not ooo-krams, ИНН 9701247080, already confirmed as an unrelated Moscow entity — see open_questions). The brand-level residency/network tie is confirmed; the corporate identity behind the brand is not. Do not cite as a confirmed legal-entity network member until that identity is resolved.",
+    "cbst_tie": {
+      "claim": "Self-identifies directly as a ЦБСТ resident, and separately confirms participation in cohort 3 of ЦБСТ's own accelerator programme for special/dual-purpose projects.",
+      "confidence": "t-doc",
+      "evidence": "The brand's own Telegram channel (@krams_pro), msg 133, 10.12.2025, titled \"КРАМС - резидент АНО «ЦБСТ»\": \"Компания «КРАМС» является резидентом АНО «Центр беспилотных систем и технологий»\". A second post (msg 150, 25.03.2026) confirms enrollment in \"3 поток Акселератора спецтехпроектов ЦБСТ\".",
+      "source_id": "s7523"
+    },
     "wb_overlap": "none_found",
     "products": [
       {

@@ -11,6 +11,7 @@
 - **Director:** Байгутлина Ирина Анатольевна
 - **Charter capital:** ₽500,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук (R&D, primary code); secondary codes explicitly include 25.40 «Производство оружия и боеприпасов» (weapons/ammunition manufacturing) and 84.22 «Деятельность, связанная с обеспечением военной безопасности» (military-security-related activity) — most network entities register under vaguer software/electronics codes and leave the weapons link implicit; this one states it directly.
+- **ЦБСТ tie:** All four projects submitted by НПЦ БАСиРТК were selected into the III stream of ЦБСТ's own Accelerator for special and dual-purpose projects, and completed its first two modules.
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history

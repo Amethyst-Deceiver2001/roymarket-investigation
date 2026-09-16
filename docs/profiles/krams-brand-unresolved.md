@@ -6,6 +6,7 @@
 
 ## At a glance
 
+- **ЦБСТ tie:** Self-identifies directly as a ЦБСТ resident, and separately confirms participation in cohort 3 of ЦБСТ's own accelerator programme for special/dual-purpose projects.
 - **Wildberries overlap:** none_found
 
 ## Products
