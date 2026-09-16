@@ -2,7 +2,7 @@
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1436,
-  "edge_count": 2130,
+  "edge_count": 2138,
   "unresolved_count": 182,
   "nodes": [
     {
@@ -291,7 +291,7 @@
       "label": "Антонова Татьяна Сергеевна",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "antsev-georgiy-vladimirovich",
@@ -1865,7 +1865,7 @@
       "label": "Дукал Марина Александровна",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "dzema-vadim-vadimovich",
@@ -1905,7 +1905,7 @@
       "label": "Елисеев Илья Владимирович",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "elyagin-sergey-vladimirovich",
@@ -2073,7 +2073,7 @@
       "sanctioned": true,
       "legal_form": "Фонд",
       "variant": null,
-      "degree": 10
+      "degree": 18
     },
     {
       "id": "fond-podderzhki-natsionalnykh-morskikh-programm",
@@ -2393,7 +2393,7 @@
       "label": "Иван Игоревич Карабинский",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "ivankin-sergey",
@@ -3101,7 +3101,7 @@
       "label": "Манецкий Роман Каллистратович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "markin-viktor-stepanovich",
@@ -13571,7 +13571,7 @@
       "label": "Тихонов Сергей Юрьевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "timofeev-vladimir-sergeevich",
@@ -13961,7 +13961,7 @@
       "label": "Устратов Дмитрий Владимирович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 3
+      "degree": 4
     },
     {
       "id": "va-technologies",
@@ -13981,7 +13981,7 @@
       "label": "Виктор Ильич Давыдов",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "vinogradov-yuriy-aleksandrovich",
@@ -14698,6 +14698,17 @@
       "type": "role",
       "label": "co-inventor (patent RU203165U1)",
       "source_id": "s0990",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "antonova-tatyana-sergeevna",
+      "target": "fond-nasha-pravda",
+      "type": "role",
+      "label": "Член Наблюдательного совета",
+      "source_id": "s0389",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20655,6 +20666,17 @@
       "confidence": null
     },
     {
+      "source": "dukal-marina-aleksandrovna",
+      "target": "fond-nasha-pravda",
+      "type": "role",
+      "label": "Член Попечительского совета",
+      "source_id": "s0389",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "dzema-vadim-vadimovich",
       "target": "ooo-dron-reysing",
       "type": "directs",
@@ -20782,6 +20804,17 @@
       "label": "Генеральный директор; соучредитель (50%)",
       "source_id": "s6808",
       "as_of": "2026-01-19",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "eliseev-ilya-vladimirovich",
+      "target": "fond-nasha-pravda",
+      "type": "role",
+      "label": "Член Наблюдательного совета",
+      "source_id": "s0389",
+      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -22014,6 +22047,17 @@
       "label": "General Director, Фонд «Градислава»",
       "source_id": "s0216",
       "as_of": "2021-12-17",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ivan-igorevich-karabinskiy",
+      "target": "fond-nasha-pravda",
+      "type": "role",
+      "label": "Член Наблюдательного совета",
+      "source_id": "s0389",
+      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -24568,6 +24612,17 @@
       "as_of": "2025-01-24",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "manetskiy-roman-kallistratovich",
+      "target": "fond-nasha-pravda",
+      "type": "role",
+      "label": "Член Попечительского совета",
+      "source_id": "s0389",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
       "confidence": null
     },
     {
@@ -36484,6 +36539,17 @@
       "confidence": null
     },
     {
+      "source": "tikhonov-sergey-yurevich",
+      "target": "fond-nasha-pravda",
+      "type": "role",
+      "label": "Член Попечительского совета",
+      "source_id": "s0389",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "timofeev-vladimir-sergeevich",
       "target": "ooo-arkhangel-crimea",
       "type": "directs",
@@ -36881,6 +36947,17 @@
     },
     {
       "source": "ustratov-dmitriy-vladimirovich",
+      "target": "fond-nasha-pravda",
+      "type": "role",
+      "label": "Член Наблюдательного совета",
+      "source_id": "s0389",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ustratov-dmitriy-vladimirovich",
       "target": "fond-podderzhki-natsionalnykh-morskikh-programm",
       "type": "directs",
       "label": null,
@@ -36941,6 +37018,17 @@
       "label": "Генеральный директор, Фонд «ДАР»",
       "source_id": "s0214",
       "as_of": "2008-05-27",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "viktor-ilich-davydov",
+      "target": "fond-nasha-pravda",
+      "type": "role",
+      "label": "Член Наблюдательного совета",
+      "source_id": "s0389",
+      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
