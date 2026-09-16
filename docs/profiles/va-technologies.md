@@ -51,6 +51,10 @@
 
 - <https://va-technologies.ru/> — Product/brand site — carries no ИНН/ОГРН/address, matched to the legal entity via founder name + product identity.
 
+## Images
+
+- ![Promotional banner with the "VA Technologies" logo and self-published marketing claim of GPS-denied hybrid optical navigation, from the company's own official site.](../images/va-technologies_banner_official-site.png) — Promotional banner with the "VA Technologies" logo and self-published marketing claim of GPS-denied hybrid optical navigation, from the company's own official site. [s7539]
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
@@ -68,6 +72,7 @@ _No named principals linked to this entity yet._
 | s0566 | EGRUL extract | EGRUL extract (ul-1252300058515-20260823193453.pdf) | — | 2026-08-23 |
 | s0567 | Сова | Сова (СОВА_Руководство_оператора.pdf) | — | — |
 | s6713 | EGRUL extract | EGRUL extract (EGRUL_2378001237_20260907_va-technologies.pdf) | 2026-09-07 | 2026-09-07 |
+| s7539 | site capture | site capture (SITE_2378001237_20260916_va-technologies-banner.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

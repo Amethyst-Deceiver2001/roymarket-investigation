@@ -84,6 +84,10 @@
 
 - <None>
 
+## Images
+
+- ![Company logo ("TSG Group"), from the company's own official site.](../images/ooo-ti-es-dzhi-grupp_logo_official-site.png) — Company logo ("TSG Group"), from the company's own official site. [s7561]
+
 ## Principals & persons of interest
 
 ### Абрамова Татьяна Александровна
@@ -106,6 +110,7 @@
 | s3758 | Zakupki | Zakupki (ZAKUPKI_ATTACH_2320000296325000067_2320000296325000067_elektronnyy-kon-23200002963250000670004_a7747f0a.xml) | — | — |
 | s6781 | EGRUL extract | EGRUL extract (EGRUL_3257085996_20260907_ooo-ti-es-dzhi-grupp.pdf) | 2026-09-07 | 2026-09-07 |
 | s7502 | press coverage | press coverage (PRESS_20260520_kurskcity-tsg-yakim-bars-kursk-field-test.html) | 2026-05-20 | — |
+| s7561 | site capture | site capture (SITE_3257085996_20260916_ooo-ti-es-dzhi-grupp-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

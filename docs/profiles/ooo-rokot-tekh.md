@@ -68,6 +68,10 @@
 
 - <https://xn--80aaorhk2b.xn--p1ai/sellers/rokot-tex> — Official partner/seller profile on Налетай.рф, the ГТЛК-backed state civilian UAV marketplace. Legal-info block confirms exact ИНН match. Direct manufacturer storefront (sells under its own name, not a reseller). 3 products, FPV propellers.
 
+## Images
+
+- ![Company logo ("POKOT-TEX"), from the company's own official site.](../images/ooo-rokot-tekh_logo_official-site.jpg) — Company logo ("POKOT-TEX"), from the company's own official site. [s7565]
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
@@ -85,6 +89,7 @@ _No named principals linked to this entity yet._
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | s6544 | Bfo | Bfo (BFO_7606140961_2024_ооо-рокот-тех.pdf) | — | — |
 | s6816 | EGRUL extract | EGRUL extract (EGRUL_7606140961_20260907_ooo-rokot-tekh.pdf) | 2026-09-07 | 2026-09-07 |
+| s7565 | site capture | site capture (SITE_7606140961_20260916_ooo-rokot-tekh-logo.jpg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

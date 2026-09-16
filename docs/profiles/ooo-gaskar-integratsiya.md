@@ -104,6 +104,10 @@
 
 - <https://gaskar.group/> — Confirmed via exact ИНН match on the registry listing for this entity, contact m.ambarcumyan@gaskar.group.
 
+## Images
+
+- ![Brand banner with product UAV and "ГАСКАР" wordmark, from the company's own official site.](../images/ooo-gaskar-integratsiya_brand_official-site.jpg) — Brand banner with product UAV and "ГАСКАР" wordmark, from the company's own official site. [s7568]
+
 ## Principals & persons of interest
 
 ### Renat Faritovich Saitov
@@ -137,6 +141,7 @@
 | s5558 | Bfo | Bfo (BFO_7733894200_2024_ооо-гаскар-интеграция.pdf) | — | — |
 | s5559 | Bfo | Bfo (BFO_7733894200_2025_ооо-гаскар-интеграция.pdf) | — | — |
 | s6745 | EGRUL extract | EGRUL extract (EGRUL_7733894200_20260907_ooo-gaskar-integratsiya.pdf) | 2026-09-07 | 2026-09-07 |
+| s7568 | site capture | site capture (SITE_7733894200_20260916_ooo-gaskar-integratsiya-brand.jpg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

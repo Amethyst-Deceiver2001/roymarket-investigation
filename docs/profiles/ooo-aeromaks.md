@@ -108,6 +108,10 @@
 
 - <https://www.aeromax-group.ru/produkciya/> — ИНН 7725347482 entity — the EU-sanctioned Кронштадт/Аэромакс operating LLC.
 
+## Images
+
+- ![Company logo ("M.A.X"), from the company's own official site.](../images/ooo-aeromaks_logo_official-site.png) — Company logo ("M.A.X"), from the company's own official site. [s7567]
+
 ## Principals & persons of interest
 
 ### Бессонов Сергей Николаевич
@@ -159,6 +163,7 @@
 | s6416 | bulk open-data extract | bulk open-data extract (DATASET_20260901_favt-aviation-works-operators-registry.txt) | 2026-09-01 | — |
 | s6741 | EGRUL extract | EGRUL extract (EGRUL_7725347482_20260907_ooo-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
 | s6927 | Proverki | Proverki (PROVERKI_7725347482_20260907_ooo-aeromaks-inspection-history.txt) | 2026-09-07 | — |
+| s7567 | site capture | site capture (SITE_7725347482_20260916_ooo-aeromaks-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

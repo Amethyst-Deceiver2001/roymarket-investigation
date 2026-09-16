@@ -105,6 +105,10 @@
 
 - <https://альфамарин.рф/>
 
+## Images
+
+- ![Company emblem, from the company's own official site.](../images/ooo-opkb-eksplomet_logo_official-site.svg) — Company emblem, from the company's own official site. [s7559]
+
 ## Principals & persons of interest
 
 ### Фоминых Алексей Михайлович
@@ -125,6 +129,7 @@
 | s5352 | document | document (PP719_1215235283_20231128_zaklyuchenie-128052-11.pdf) | 2023-11-28 | 2023-11-28 |
 | s6710 | EGRUL extract | EGRUL extract (EGRUL_1215235283_20260907_ooo-opkb-eksplomet.pdf) | 2026-09-07 | 2026-09-07 |
 | s6954 | Proverki | Proverki (PROVERKI_1215235283_20260907_ooo-opkb-eksplomet-inspection-history.txt) | 2026-09-07 | — |
+| s7559 | site capture | site capture (SITE_1215235283_20260916_ooo-opkb-eksplomet-logo.svg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

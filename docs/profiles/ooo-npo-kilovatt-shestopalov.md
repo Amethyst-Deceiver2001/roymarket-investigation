@@ -120,6 +120,10 @@
 
 - <https://kilowat48.ru/> — Full catalog confirmed via site sweep 23.08.2026 — vehicle-type-segmented (легковые/грузовые/бронетехника/стационарные/переносные/мото).
 
+## Images
+
+- ![Product photo of a counter-drone unit bearing the "НПО КИЛОВАТТ" marking, from the company's own official site.](../images/ooo-npo-kilovatt_product_official-site.jpg) — Product photo of a counter-drone unit bearing the "НПО КИЛОВАТТ" marking, from the company's own official site. [s7563]
+
 ## Principals & persons of interest
 
 ### Shestopalov Sergei Anatolyevich — Шестопалов Сергей Анатольевич
@@ -153,6 +157,7 @@
 | s6504 | Bfo | Bfo (BFO_4800016776_2025_ооо-научно-производственное-объединение-киловатт.pdf) | — | — |
 | s6790 | EGRUL extract | EGRUL extract (EGRUL_4800016776_20260907_ooo-npo-kilovatt-shestopalov.pdf) | 2026-09-07 | 2026-09-07 |
 | s7501 | product catalog | product catalog (CATALOG_4800016776_20260915_kilowatt48-shop-page3.html) | 2026-09-15 | — |
+| s7563 | site capture | site capture (SITE_4800016776_20260916_ooo-npo-kilovatt-product.jpg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
