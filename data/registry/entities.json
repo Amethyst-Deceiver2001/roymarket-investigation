@@ -63366,7 +63366,29 @@
     "government_contracts": [],
     "workforce_history": [],
     "state_programs": [],
-    "marketing_claims": [],
+    "marketing_claims": [
+      {
+        "text_ru": "Сначала был разработан наш первый сброс под DJI Mavic 3, который отлично себя зарекомендовал в боевых условиях... в конце 2022 года, были разработаны первые собственные прототипы беспилотников, которые были отправлены на передовую и опробованы в боевых условиях. Получив отзывы, прототипы были переработаны, еще раз опробованы на СВО, после чего мы получили первый готовый квадрокоптер: «Крамс 7 дюймов».",
+        "text_en": "First we developed our first release mechanism for the DJI Mavic 3, which proved itself well in combat conditions... at the end of 2022, our first own drone prototypes were developed and sent to the front line and tested in combat conditions. After receiving feedback, the prototypes were reworked, tested again in the SVO, after which we got our first finished quadcopter: the \"Krams 7-inch\".",
+        "context": "Company's own origin-story post, directly tying the «Крамс 7» quadcopter's development and testing to frontline combat use.",
+        "source_id": "s7530",
+        "as_of": "2024-07-28"
+      },
+      {
+        "text_ru": "Сбросы «ДУПЛЕТ» и «КОЛУН»... Несколько лет подряд они стабильно стояли на страже Родины. Помогая нашим бойцам выполнять задачи... Итог: более 14 000 сбросов доставлены на передовую. Каждый – сработал на победу.",
+        "text_en": "\"Duplet\" and \"Kolun\" release mechanisms... For several years in a row they stood steadily guarding the Motherland, helping our fighters complete their missions... Result: more than 14,000 units delivered to the front line. Each one worked for victory.",
+        "context": "Company's own promotional post quantifying frontline deliveries of its munitions-release products.",
+        "source_id": "s7531",
+        "as_of": "2025-07-20"
+      },
+      {
+        "text_ru": "«Дуплет» и «Колун» — именно с разработки и производства этих изделий началась наша деятельность... С начала СВО мы отгрузили десятки тысяч сбросов и не собираемся останавливаться.",
+        "text_en": "\"Duplet\" and \"Kolun\" — it was precisely with the development and production of these items that our activity began... Since the start of the SVO we have shipped tens of thousands of release units and have no intention of stopping.",
+        "context": "Company's own promotional post, self-attributed cumulative shipment claim since the start of the war.",
+        "source_id": "s7532",
+        "as_of": "2025-12-05"
+      }
+    ],
     "battlefield_evidence": [],
     "domain_history": [],
     "web": {
@@ -63406,7 +63428,8 @@
     "city": "Kemerovo Oblast (per krams.pro / Kuzbass governor visit coverage)",
     "verified_against": null,
     "_corrected": [
-      "[2026-09-15] wb_overlap=none_found: Brand-name search for FPV-дрон «КРАМС 7»/«9»/«13» on wildberries.ru (2026-09-15) found no product listing — only generic FPV-drone category pages."
+      "[2026-09-15] wb_overlap=none_found: Brand-name search for FPV-дрон «КРАМС 7»/«9»/«13» on wildberries.ru (2026-09-15) found no product listing — only generic FPV-drone category pages.",
+      "2026-09-16 (coverage-gap agent pass, marketing_claims): 3 verbatim self-published marketing claims found and verified directly against data/roymarket.db (@krams_pro, msgs 3/108/128) before archiving and wiring. battlefield_evidence[] checked separately -- one post (msg 77, 2025-04-02) paraphrases third-party footage from a channel called \"Русский беспилотник\" but doesn't itself constitute a directly-sourced third-party post; the actual channel post was not located this pass -- flagged as an open lead, not wired."
     ],
     "sanctions_review": {
       "as_of": "2026-09-15",
