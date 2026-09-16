@@ -2343,6 +2343,14 @@
           "degree": 1
         },
         {
+          "id": "klimov-maksim-aleksandrovich",
+          "kind": "person",
+          "label": "Климов Максим Александрович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 2
+        },
+        {
           "id": "kobylyatskiy-andrey-vadimovich",
           "kind": "person",
           "label": "Кобыляцкий Андрей Вадимович",
@@ -9786,6 +9794,14 @@
           "name_latin": "Andrey Valentinovich Sinelshchikov",
           "sanctioned": false,
           "degree": 3
+        },
+        {
+          "id": "sirazatdinov-nikita-vadimovich",
+          "kind": "person",
+          "label": "Сиразатдинов Никита Вадимович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 2
         },
         {
           "id": "skif-wozmezdiye",
@@ -17644,6 +17660,17 @@
           "confidence": null
         },
         {
+          "source": "klimov-maksim-aleksandrovich",
+          "target": "ano-arrs-krasnodar",
+          "type": "role",
+          "label": "Учредитель",
+          "source_id": "s6777",
+          "as_of": "2024-03-01",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "kobylyatskiy-andrey-vadimovich",
           "target": "npts-elvis",
           "type": "role",
@@ -23920,6 +23947,17 @@
           "label": null,
           "source_id": "s0115",
           "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "sirazatdinov-nikita-vadimovich",
+          "target": "ano-arrs-krasnodar",
+          "type": "role",
+          "label": "Учредитель",
+          "source_id": "s6777",
+          "as_of": "2024-03-01",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
@@ -41705,17 +41743,6 @@
           "confidence": null
         },
         {
-          "source": "klimov-maksim-aleksandrovich",
-          "target": "ano-arrs-krasnodar",
-          "type": "role",
-          "label": "Учредитель",
-          "source_id": null,
-          "as_of": "2024-03-01",
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "kobzev-viktor-viktorovich",
           "target": "ooo-prometey",
           "type": "founded",
@@ -45319,17 +45346,6 @@
           "label": null,
           "source_id": null,
           "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "sirazatdinov-nikita-vadimovich",
-          "target": "ano-arrs-krasnodar",
-          "type": "role",
-          "label": "Учредитель",
-          "source_id": null,
-          "as_of": "2024-03-01",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null

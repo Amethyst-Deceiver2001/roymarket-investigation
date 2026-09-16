@@ -2158,19 +2158,18 @@
             "title": "Учредитель",
             "from": "2024-03-01",
             "to": null,
-            "source_id": null,
+            "source_id": "s6777",
             "_candidate": false
           }
         ],
         "notes": "Individual co-founder of АРРС alongside ООО «Гагаринг», ООО «АКР «Бегак»» and ООО «Прайм» (per ano-arrs-krasnodar's own founders[] list). Separately confirmed via OpenSanctions exact-ИНН match (695004552407) to Ukraine's NSDC sanctions list (see sanctions[]) — the sanctioned Климов Максим Олександрович/Александрович and this АРРС founder are the same person (identifier match, not name-only).",
-        "why": [
-          "2026-09-03: corrected during the Гагаринг-network wide-net push — his scaffolded record had no role at all despite being named as an АРРС founder in the entity's own founders[] list; added the missing role."
-        ],
         "_verified": true
       },
       "verified_against": "s6777 -- Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи)'s own primary-source founding/EGRUL document, naming Климов Максим Александрович as a founder (cross-referenced from the entity's own founders_history entry).",
       "why": [
-        "2026-09-07: verification backlog closure (round 2, founders) -- identity confirmed by Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи)'s (ano-arrs-krasnodar) own founders_history entry (s6777), a primary-source document, but the person record had never been marked _verified."
+        "2026-09-03: corrected during the Гагаринг-network wide-net push — his scaffolded record had no role at all despite being named as an АРРС founder in the entity's own founders[] list; added the missing role.",
+        "2026-09-07: verification backlog closure (round 2, founders) -- identity confirmed by Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи)'s (ano-arrs-krasnodar) own founders_history entry (s6777), a primary-source document, but the person record had never been marked _verified.",
+        "2026-09-16 (docs->registry gap-list, section (b)): the role's own source_id had been left null this whole time despite verified_against already citing s6777 (a stronger primary source than the list-org.com aggregator the gap-list flagged as weak) -- filled it in. Merged two duplicate 'why' JSON keys that had accumulated (the second was silently shadowing the first on parse) into one array; no content lost."
       ]
     },
     "kondratev-aleksey-dmitrievich": {
@@ -4171,15 +4170,16 @@
             "title": "Учредитель",
             "from": "2024-03-01",
             "to": null,
-            "source_id": null,
+            "source_id": "s6777",
             "_candidate": false
           }
         ],
-        "notes": "Individual co-founder of АРРС alongside ООО «Гагаринг», ООО «АКР «Бегак»» and ООО «Прайм» (per ano-arrs-krasnodar's own founders[] list). The originally-scaffolded role incorrectly pointed at ООО «Прайм» itself as employer/entity — corrected 2026-09-03: he is a co-founder of the ASSOCIATION, not of Прайм.",
-        "why": [
-          "2026-09-03: corrected during the Гагаринг-network wide-net push — the scaffolded _candidate role misattributed this person's founder role to ООО «Прайм» rather than ano-arrs-krasnodar, the actual entity his name appears as a founder of."
-        ]
-      }
+        "notes": "Individual co-founder of АРРС alongside ООО «Гагаринг», ООО «АКР «Бегак»» and ООО «Прайм» (per ano-arrs-krasnodar's own founders[] list). The originally-scaffolded role incorrectly pointed at ООО «Прайм» itself as employer/entity — corrected 2026-09-03: he is a co-founder of the ASSOCIATION, not of Прайм."
+      },
+      "why": [
+        "2026-09-03: corrected during the Гагаринг-network wide-net push — the scaffolded _candidate role misattributed this person's founder role to ООО «Прайм» rather than ano-arrs-krasnodar, the actual entity his name appears as a founder of.",
+        "2026-09-16 (docs->registry gap-list, section (b)): filled the role's source_id with s6777, ano-arrs-krasnodar's own full signed ЕГРЮЛ выписка, already the entity-side source for the identical founders_history fact -- stronger than the list-org.com aggregator lookup the gap-list flagged as weak. Note: the entity's own founders_history spells the surname 'Сиразетдинов' (е), not this record's 'Сиразатдинов' (а) -- a likely OCR/transliteration variant, not flagged as a separate open question since the ИНН/context otherwise line up, but worth a human eye if it ever matters for a citation."
+      ]
     },
     "kurteev-aleksandr-sergeevich": {
       "set": {
