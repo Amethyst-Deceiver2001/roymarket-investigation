@@ -18,7 +18,15 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Related persons
 
+- **Виктор Ильич Давыдов** — Член Наблюдательного совета — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0389]
+- **Иван Игоревич Карабинский** — Член Наблюдательного совета — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0389]
+- **Устратов Дмитрий Владимирович** — Член Наблюдательного совета — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0389]
 - **Бровченко Александр Руфинович** — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0221]
+- **Елисеев Илья Владимирович** — Член Наблюдательного совета — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0389]
+- **Антонова Татьяна Сергеевна** — Член Наблюдательного совета — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0389]
+- **Тихонов Сергей Юрьевич** — Член Попечительского совета — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0389]
+- **Манецкий Роман Каллистратович** — Член Попечительского совета — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0389]
+- **Дукал Марина Александровна** — Член Попечительского совета — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0389]
 
 ## Sanctions & screening
 
@@ -33,6 +41,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | s0221 | EGRUL extract | EGRUL extract (ul-1237700218612-20260815010023.pdf) | — | 2026-08-15 |
+| s0389 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9705196180_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
 | s0739 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_501105677892_20260824_aleksandr-rufinovich-brovchenko.json) | 2026-08-24 | — |
 
 ---

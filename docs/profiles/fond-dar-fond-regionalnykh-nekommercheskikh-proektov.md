@@ -43,7 +43,7 @@
 
 ### Виктор Ильич Давыдов
 
-- General Director, Фонд «ДАР», since 2008
+- Генеральный директор, Фонд «ДАР» (2008-05-27–present)
 
 ## Sources cited in this profile
 

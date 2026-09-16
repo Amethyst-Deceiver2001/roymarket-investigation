@@ -57,6 +57,7 @@
 
 ## Corporate links
 
+- **ООО «МПТМ»** `shared-address` — Identical registered помещение (125167, Москва, ал. Нарышкинская, д.5, стр.2, помещ.1/1). No director or founder overlap found. Co-location only, likely a shared registered-agent/virtual-office suite; ООО «Оупен Лоджистикс», also registered at this same address, is excluded from this tag as unrelated to the investigation. [s0224]
 - **ООО «Отраслевой центр импортозамещения»** — Parent entity (51%) [s0224]
 
 ## Sources cited in this profile

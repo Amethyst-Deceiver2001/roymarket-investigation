@@ -56,7 +56,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Черезов Андрей Павлович
+
+- **ИНН:** 712802968839
+- Директор и учредитель (100%) (2023-11-28–present)
 
 ## Open questions
 

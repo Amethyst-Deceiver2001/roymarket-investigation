@@ -50,6 +50,10 @@
 
 _No named principals linked to this entity yet._
 
+## Corporate links
+
+- **ООО «НПО Рустехдрон»** `counterparty` — Seller counterparty per arbitration case А40-141771/26-181-710: received a ₽245,678,400 advance under a supply contract for which goods were never delivered. Settled by a court-approved repayment schedule; this entity was registered only 18 months before receiving the advance. [s0048]
+
 ## Open questions
 
 - 2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found despite repeated targeted searches. OKVED is production of "other electrical equipment", registered only in 2024, Moscow (Khamovniki). No drone/UAV mention surfaced anywhere; relevance unconfirmed.

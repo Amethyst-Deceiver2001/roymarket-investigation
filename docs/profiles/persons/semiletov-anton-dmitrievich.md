@@ -8,17 +8,17 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 - **Personal ИНН:** 773392073013
 - **Entities linked:** 1
-- **Primary role:** co-inventor (patent RU227818U1); co-inventor (patent RU231126U1); co-inventor (patent RU2758587C1); co-inventor (patent RU2847063C1), АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС)
+- **Primary role:** Генеральный директор; co-inventor (patent RU227818U1); co-inventor (patent RU231126U1); co-inventor (patent RU2758587C1); co-inventor (patent RU2847063C1), АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС)
 
 ## Roles & corporate affiliations
 
 | Entity | Role | Since | Source |
 |---|---|---|---|
-| АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) | role — co-inventor (patent RU227818U1); co-inventor (patent RU231126U1); co-inventor (patent RU2758587C1); co-inventor (patent RU2847063C1) | — | [s0996] |
+| АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) | director — Генеральный директор; co-inventor (patent RU227818U1); co-inventor (patent RU231126U1); co-inventor (patent RU2758587C1); co-inventor (patent RU2847063C1) | 03.12.2024–27.07.2026 | [s3702] |
 
 ## Products linked via this person
 
-- **RoboDeus** + 48 more — via АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) · role
+- **RoboDeus** + 48 more — via АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) · director
 
 ## Related persons
 
@@ -91,6 +91,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 | s1034 | Rospatent patent record | Rospatent patent record (PATENT_RU2790094C1_2026-08-24_npts-elvis.json) | — | — |
 | s1042 | Rospatent patent record | Rospatent patent record (PATENT_RU2847063C1_2026-08-24_npts-elvis.json) | — | — |
 | s1085 | press coverage | press coverage (PRESS_20220603_kommersant-elvis-petrichkovich-exit.html) | 2022-06-03 | — |
+| s3702 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_kontrakt-2420-17705596339240002070002_032cbeeb.docx) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

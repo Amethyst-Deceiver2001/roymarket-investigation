@@ -18,6 +18,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Related persons
 
+- **Фомин Александр Николаевич** — 25% co-founder — shared entity: ООО «ЭйАрТэк» [s6729]
+- **Перекатов Сергей Сергеевич** — 25% co-founder — shared entity: ООО «ЭйАрТэк» [s6729]
 - **Dementev Vitaliy Evgenevich** — co-inventor (patent RU2857656C1) — shared entity: ООО «ЭйАрТэк» [s1046]
 - **Elyagin Sergey Vladimirovich** — co-inventor (patent RU2857656C1) — shared entity: ООО «ЭйАрТэк» [s1046]
 - **Tsarev Andrey Petrovich** — co-inventor (patent RU2857656C1) — shared entity: ООО «ЭйАрТэк» [s1046]

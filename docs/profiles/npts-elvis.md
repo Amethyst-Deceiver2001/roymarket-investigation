@@ -334,6 +334,7 @@
 ### Semiletov Anton Dmitrievich — Семилетов Антон Дмитриевич
 
 - **ИНН:** 773392073013
+- Генеральный директор (2024-12-03–2026-07-27)
 - co-inventor (patent RU227818U1)
 - co-inventor (patent RU231126U1)
 - co-inventor (patent RU2758587C1)

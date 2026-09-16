@@ -109,9 +109,81 @@
       </div>
       <div class="person-card">
 <div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4><a href="persons/viktor-ilich-davydov.html">Виктор Ильич Давыдов</a></h4>
+          <dl>
+          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Член Наблюдательного совета</li>          </ul>
+        </div>
+      </div>
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4><a href="persons/ivan-igorevich-karabinskiy.html">Иван Игоревич Карабинский</a></h4>
+          <dl>
+          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Член Наблюдательного совета</li>          </ul>
+        </div>
+      </div>
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4><a href="persons/ustratov-dmitriy-vladimirovich.html">Устратов Дмитрий Владимирович</a></h4>
+          <dl>
+<dt>ИНН</dt><dd>501101524888</dd>          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Член Наблюдательного совета</li>          </ul>
+        </div>
+      </div>
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
           <h4><a href="persons/brovchenko-aleksandr-rufinovich.html">Бровченко Александр Руфинович</a></h4>
           <dl>
           </dl>
+        </div>
+      </div>
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4>Елисеев Илья Владимирович</h4>
+          <dl>
+<dt>DOB</dt><dd>19.12.1965</dd><dt>ИНН</dt><dd>781124117772</dd>          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Член Наблюдательного совета</li>          </ul>
+<span class="tag t-open">sanctions lead</span>        </div>
+      </div>
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4>Антонова Татьяна Сергеевна</h4>
+          <dl>
+          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Член Наблюдательного совета</li>          </ul>
+        </div>
+      </div>
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4>Тихонов Сергей Юрьевич</h4>
+          <dl>
+          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Член Попечительского совета</li>          </ul>
+        </div>
+      </div>
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4>Манецкий Роман Каллистратович</h4>
+          <dl>
+          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Член Попечительского совета</li>          </ul>
+        </div>
+      </div>
+      <div class="person-card">
+<div class="person-photo placeholder">no photo</div>        <div class="person-body">
+          <h4>Дукал Марина Александровна</h4>
+          <dl>
+          </dl>
+          <ul class="plain" style="margin-top:.6rem;">
+<li>Член Попечительского совета</li>          </ul>
         </div>
       </div>
     </div>
@@ -121,7 +193,7 @@
   <section id="open-questions">
     <p class="eyebrow">Open questions</p>
     <ul class="plain">
-<li>Who are Фонд «Наша Правда»&#39;s founders? The brief attributes it to Фонд «ДАР» and Фонд «Градислава», but this is NOT confirmed by the fund&#39;s own ЕГРЮЛ extract — a Фонд&#39;s учредители are simply not published in ЕГРЮЛ (the extract has no учредители section at all, which is a structural property of the legal form, not a redaction). Resolving this needs the fund&#39;s Устав or a Минюст filing, not another ЕГРЮЛ pull. <span class="id">[s0221]</span></li>    </ul>
+<li>Who are Фонд «Наша Правда»&#39;s founders? The brief attributes it to Фонд «ДАР» and Фонд «Градислава», but this is NOT confirmed by the fund&#39;s own ЕГРЮЛ extract — a Фонд&#39;s учредители are simply not published in ЕГРЮЛ (the extract has no учредители section at all, which is a structural property of the legal form, not a redaction). Resolving this needs the fund&#39;s Устав or a Минюст filing, not another ЕГРЮЛ pull. <span class="id">[s0221]</span></li><li>RESOLVED 2026-09-16, correcting an earlier same-day dead-end (see this project&#39;s own commit history, 67162e6): docs/index.html&#39;s &#34;FY2024 filing names its governing bodies in full&#34; claim IS the БФО filing (s0389) after all. Two earlier attempts to OCR this zip only ever ran OCR against its audit-opinion attachment (page-numbered &#34;0280&#34;), never against the actual пояснительная записка PDF (NO_BUHPZ_...) sitting in the same zip -- that file is a 36-page scan that also needed its own OCR pass and had never gotten one. Once OCR&#39;d directly, its own §1.2 табл.3/4 names all 8 people exactly as docs/index.html paraphrases them: Наблюдательный совет = Давыдов (Фонд «ДАР»), Елисеев (no employer listed), Карабинский (Фонд «Градислава»), Устратов (Фонд Поддержки нац. морских проектов), Антонова (no employer listed); Попечительский совет = Тихонов (Фонд «ДАР»), Манецкий (Фонд «Градислава»), Дукал (Фонд «ДАР»). All 8 roles wired on the person side (fond-nasha-pravda, source_id s0389). Lesson for future OCR passes on a multi-file zip: OCR every scanned PDF in the archive, not just the one that happens to have the identifiable filename pattern already used elsewhere. <span class="id">[s0389]</span></li>    </ul>
   </section>
 
   <section id="sources">

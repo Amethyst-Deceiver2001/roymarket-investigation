@@ -61,6 +61,10 @@
 - **ИНН:** 773670509988
 - Director, ООО «МПТМ» (as of 04.08.2026)
 
+## Corporate links
+
+- **ООО «Аэротехальянс»** `shared-address` — Identical registered помещение (125167, Москва, ал. Нарышкинская, д.5, стр.2, помещ.1/1). No director or founder overlap found -- ooo-aerotekhalyans is 51%/25%/24% owned by ООО «Отраслевой центр импортозамещения», АО «УК «Азимут»» and Кожемякин В.В., none matching this entity's own director/founder record. Co-location only, likely a shared registered-agent/virtual-office suite; ООО «Оупен Лоджистикс», also registered at this same address, is excluded from this tag as unrelated to the investigation. [s0230]
+
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |

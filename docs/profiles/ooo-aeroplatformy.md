@@ -56,6 +56,10 @@
 
 ## Principals & persons of interest
 
+### Оксман Николас Николаевич
+
+- 14% founder (2025-10-21–present)
+
 ### Batozhargalov Buyanto Batorovich — Батожаргалов Буянто Баторович
 
 - **ИНН:** 800102095959

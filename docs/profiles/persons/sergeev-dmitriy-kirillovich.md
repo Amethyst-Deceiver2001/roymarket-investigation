@@ -53,7 +53,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Razuvaev Yuriy Yurevich** — co-inventor (patent RU2766442C1) — shared entity: АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) [s1029]
 - **Sakharov Aleksey Yurevich** — co-inventor (patent RU140982U1) — shared entity: АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) [s0984]
 - **Svyatka Ivan Vladimirovich** — co-inventor (patent RU227818U1) — shared entity: АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) [s0996]
-- **Semiletov Anton Dmitrievich** — co-inventor (patent RU227818U1) — shared entity: АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) [s0996]
+- **Semiletov Anton Dmitrievich** — Генеральный директор — shared entity: АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) [s3702]
 - **Semiletov Dmitriy Aleksandrovich** — co-inventor (patent RU2758587C1) — shared entity: АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) [s1024]
 - **Skok Dmitriy Vladimirovich** — co-inventor (patent RU140982U1) — shared entity: АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) [s0984]
 - **Solokhina Tatyana Vladimirovna** — co-inventor (patent RU140982U1) — shared entity: АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) [s0984]
@@ -90,6 +90,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 | s1034 | Rospatent patent record | Rospatent patent record (PATENT_RU2790094C1_2026-08-24_npts-elvis.json) | — | — |
 | s1042 | Rospatent patent record | Rospatent patent record (PATENT_RU2847063C1_2026-08-24_npts-elvis.json) | — | — |
 | s1085 | press coverage | press coverage (PRESS_20220603_kommersant-elvis-petrichkovich-exit.html) | 2022-06-03 | — |
+| s3702 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_kontrakt-2420-17705596339240002070002_032cbeeb.docx) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

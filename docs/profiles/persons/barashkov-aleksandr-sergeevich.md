@@ -29,8 +29,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Related persons
 
-- **Сиразатдинов Никита Вадимович** — Учредитель — shared entity: Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS)
-- **Климов Максим Александрович** — Учредитель — shared entity: Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS)
+- **Сиразатдинов Никита Вадимович** — Учредитель — shared entity: Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS) [s6777]
+- **Климов Максим Александрович** — Учредитель — shared entity: Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS) [s6777]
 
 ## Sanctions & screening
 

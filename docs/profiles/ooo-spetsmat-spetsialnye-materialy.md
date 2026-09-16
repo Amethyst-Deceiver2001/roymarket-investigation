@@ -49,6 +49,10 @@
 - **ИНН:** 780401121651
 - Соучредитель (50%) (2024-11-22–present)
 
+### Малевич Павел Владимирович
+
+- 50% co-founder (2024-11-22–present)
+
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |

@@ -23,6 +23,12 @@
 |---|---|---|
 | Костюнин Павел Андреевич | 2024-05-03 | личный ИНН 510203980877 [s0459] |
 
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| АО "Хоук Холдинг" 51% (доля косвенного участия, 100% Ястребов С.В.) / Бежанов И.В. 37,2% / АО "АИН" 6% / Махнёв А.И. 4,5% (технический директор) / Назаров О.Р. 1,3% — из 15 000 акций всего | 2025-12-31 | FY2025 БФО пояснительная записка (0710099, §9 "Информация о связанных сторонах"), audited by ООО «ФинСоюзАудит»; all four individuals named explicitly as "конечные бенефициары" (ultimate beneficiaries). [s0332] |
+
 ### Charter capital
 
 | Value | As of | Note |
@@ -64,6 +70,14 @@
 
 ## Principals & persons of interest
 
+### Бежанов Иван Валериевич
+
+- Генеральный директор (former); shareholder 37.2% (5,580 of 15,000 shares) directly (?–2024-05-03)
+
+### Nazarov Oleg Ramilevich — Назаров Олег Рамилевич
+
+- shareholder 1.3% (195 of 15,000 shares)
+
 ### Костюнин Павел Андреевич
 
 ![Костюнин Павел Андреевич](../images/kostyunin-pavel-andreevich_portrait_leaderid.jpg)
@@ -88,6 +102,10 @@
 ### Попов Григорий Сергеевич
 
 - CV-инженер (computer-vision engineer)
+
+### Makhnyov Aleksandr Igorevich — Махнёв Александр Игоревич
+
+- Технический директор; shareholder 4.5% (675 of 15,000 shares) (2024-08-01–present)
 
 ## Corporate links
 

@@ -69,7 +69,9 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Проценко Артём Витальевич
+
+- 33% co-founder (2025-03-17–present)
 
 ## Sources cited in this profile
 

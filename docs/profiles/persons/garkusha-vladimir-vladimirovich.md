@@ -17,6 +17,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 | ООО «Промсинтез» | role | — | [s0493] |
 | ООО «Группа компаний «Логос»» | founder — Учредитель | — | [s6784] |
 
+## Related persons
+
+- **Бурлака Павел Анатольевич** — Генеральный директор — shared entity: ООО «Группа компаний «Логос»» [s6784]
+
 ## Sanctions & screening
 
 - **Disqualified-director registry:** No hits (checked 2026-09-08)

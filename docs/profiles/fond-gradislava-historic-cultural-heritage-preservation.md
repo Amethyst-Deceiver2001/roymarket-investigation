@@ -21,6 +21,12 @@
 |---|---|---|
 | Карабинский Иван Игоревич | 2021-12-17 | Генеральный директор, личный ИНН 695202386920, ГРН 2217711641585, 17.12.2021 [s0216] |
 
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Рубцов Леонид Викторович (founder, per press reporting) | 2023-04-18 | Press-sourced, NOT confirmed via this entity's own EGRUL extract (EGRUL_7704278421_20260907, s0459-series pull, has no "Сведения об учредителях" section listing individual founders for this fund at all -- a gap in what that document type discloses, not a contradiction of the press claim). Ведомости, 18.04.2023, read directly: "Учредителем «Градиславы» числился Леонид Рубцов..." Corroborated independently by ооо-zavolzhskoe's own EGRUL-confirmed 99% ownership by this fund (s0459) -- the press account and the corporate-structure chain match, even though the founder fact itself rests on press reporting rather than EGRUL. [s7521] |
+
 ### Address
 
 | Value | As of | Note |
@@ -46,7 +52,11 @@
 
 ### Иван Игоревич Карабинский
 
-- General Director, Фонд «Градислава»
+- General Director, Фонд «Градислава» (2021-12-17–present)
+
+### Рубцов Леонид Викторович
+
+- Founder (per press reporting)
 
 ## Sources cited in this profile
 
@@ -58,6 +68,7 @@
 | s0294 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | s0295 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | s5265 | arbitration court filing | arbitration court filing (A40-106643-2023_20230728_Opredelenie.pdf) | 2023-07-28 | 2023-07-27 |
+| s7521 | press coverage | press coverage (PRESS_20230418_vedomosti-fond-nasha-pravda-rubtsov-gradislava.html) | 2023-04-18 | 2023-04-18 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

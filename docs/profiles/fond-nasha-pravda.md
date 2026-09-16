@@ -62,11 +62,48 @@
 - General Director, Фонд «Наша Правда», since 21.03.2023
 - `sanctions lead`
 
+### Виктор Ильич Давыдов
+
+- Член Наблюдательного совета
+
+### Иван Игоревич Карабинский
+
+- Член Наблюдательного совета
+
+### Устратов Дмитрий Владимирович
+
+- **ИНН:** 501101524888
+- Член Наблюдательного совета
+
 ### Бровченко Александр Руфинович
+
+### Елисеев Илья Владимирович
+
+- **DOB:** 19.12.1965
+- **ИНН:** 781124117772
+- Член Наблюдательного совета
+- `sanctions lead`
+
+### Антонова Татьяна Сергеевна
+
+- Член Наблюдательного совета
+
+### Тихонов Сергей Юрьевич
+
+- Член Попечительского совета
+
+### Манецкий Роман Каллистратович
+
+- Член Попечительского совета
+
+### Дукал Марина Александровна
+
+- Член Попечительского совета
 
 ## Open questions
 
 - Who are Фонд «Наша Правда»'s founders? The brief attributes it to Фонд «ДАР» and Фонд «Градислава», but this is NOT confirmed by the fund's own ЕГРЮЛ extract — a Фонд's учредители are simply not published in ЕГРЮЛ (the extract has no учредители section at all, which is a structural property of the legal form, not a redaction). Resolving this needs the fund's Устав or a Минюст filing, not another ЕГРЮЛ pull. [s0221]
+- RESOLVED 2026-09-16, correcting an earlier same-day dead-end (see this project's own commit history, 67162e6): docs/index.html's "FY2024 filing names its governing bodies in full" claim IS the БФО filing (s0389) after all. Two earlier attempts to OCR this zip only ever ran OCR against its audit-opinion attachment (page-numbered "0280"), never against the actual пояснительная записка PDF (NO_BUHPZ_...) sitting in the same zip -- that file is a 36-page scan that also needed its own OCR pass and had never gotten one. Once OCR'd directly, its own §1.2 табл.3/4 names all 8 people exactly as docs/index.html paraphrases them: Наблюдательный совет = Давыдов (Фонд «ДАР»), Елисеев (no employer listed), Карабинский (Фонд «Градислава»), Устратов (Фонд Поддержки нац. морских проектов), Антонова (no employer listed); Попечительский совет = Тихонов (Фонд «ДАР»), Манецкий (Фонд «Градислава»), Дукал (Фонд «ДАР»). All 8 roles wired on the person side (fond-nasha-pravda, source_id s0389). Lesson for future OCR passes on a multi-file zip: OCR every scanned PDF in the archive, not just the one that happens to have the identifiable filename pattern already used elsewhere. [s0389]
 
 ## Sources cited in this profile
 

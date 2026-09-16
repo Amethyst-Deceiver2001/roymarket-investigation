@@ -13,12 +13,12 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | Entity | Role | Since | Source |
 |---|---|---|---|
-| Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS) | founder — Учредитель | 01.03.2024 |  |
+| Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS) | founder — Учредитель | 01.03.2024 | [s6777] |
 
 ## Related persons
 
 - **Барашков Александр Сергеевич** — Директор — shared entity: Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS) [s6777]
-- **Сиразатдинов Никита Вадимович** — Учредитель — shared entity: Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS)
+- **Сиразатдинов Никита Вадимович** — Учредитель — shared entity: Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS) [s6777]
 
 ## Sanctions & screening
 

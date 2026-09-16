@@ -19,6 +19,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 | ООО «Беспилотные технологические решения» (БТР) | founder — Соучредитель (50%) | 14.06.2024 | [s6844] |
 | ООО «Специальные материалы» (Спецмат) | founder — Соучредитель (50%) | 22.11.2024 | [s6834] |
 
+## Related persons
+
+- **Малевич Павел Владимирович** — 50% co-founder — shared entity: ООО «Специальные материалы» (Спецмат) [s6834]
+
 ## Sanctions & screening
 
 - **Disqualified-director registry:** No hits (checked 2026-09-08)

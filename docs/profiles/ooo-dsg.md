@@ -77,6 +77,10 @@
 - **ИНН:** 780633823516
 - `sanctions lead`
 
+## Corporate links
+
+- **ООО «НПО Рустехдрон»** `counterparty` — Seller/lender counterparty per two parallel arbitration cases this entity lost: a supply-contract debt (А40-192834/25-183-1337) whose underlying УПД itemises the actual delivered goods as an F1-grenade release mechanism plus GAONENG FPV drone batteries -- a munitions-dropping drone payload kit, established on the court's own findings of fact -- and a separate loan-interest claim (А40-192134/25-7-2358). [s0043]
+
 ## Open questions
 
 - 2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found, no EGRUL contact info. Registered OKVED is "прочая деятельность в области спорта" (other sports activities) across 27 registered activity types -- broad-OKVED-list pattern consistent with a generic multi-purpose shell. No drone/defense signal found; relevance unconfirmed.

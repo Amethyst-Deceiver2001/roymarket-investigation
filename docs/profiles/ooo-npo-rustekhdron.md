@@ -136,6 +136,11 @@
 - **ИНН:** 770475114490
 - 29.5% owner (per iStories 2024-01-19; not independently EGRUL-confirmed for the current filing) (2023-02–present)
 
+## Corporate links
+
+- **ООО «ДСГ»** `counterparty` — Buyer/lender counterparty per two parallel arbitration cases: a supply-contract debt (А40-192834/25-183-1337) whose underlying УПД itemises the actual delivered goods as an F1-grenade release mechanism plus GAONENG FPV drone batteries -- a munitions-dropping drone payload kit, established on the court's own findings of fact -- and a separate loan-interest claim (А40-192134/25-7-2358). Both suits found for ooo-npo-rustekhdron in full. [s0043]
+- **ООО «Специальные полезные технологии»** `counterparty` — Buyer counterparty per arbitration case А40-141771/26-181-710: a ₽245,678,400 advance paid under a supply contract for which goods were never delivered. Settled by a court-approved repayment schedule; СПТ was registered only 18 months before receiving the advance. [s0048]
+
 ## Open questions
 
 - 2026-08-24 war-sanctions.gur.gov.ua profile (uav/companies/14300, own ИНН/ОГРН confirmed exact match) lists "CONCERN KALASHNIKOV JSC" (TIN 1832090230, products Goliaf/Karakurt) as a "related company" — GUR's own site does not explain the basis for that relation (ownership, shared personnel, joint procurement, or simply the same UAV-industry categorisation). NOT yet independently verified as a corporate/ownership tie — do not assert one without further evidence. Kalashnikov Concern is independently, separately Western-sanctioned and outside this investigation's core ЦБСТ scope; if a real tie is confirmed it would be a significant finding, but the claim needs its own verification, not inheritance from GUR's own curated 'related companies' widget. [s0955]
