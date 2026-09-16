@@ -113,6 +113,10 @@
 
 - <https://3mx.ru/dilery/> — Manufacturer's own dealer-network page, 2026-08-25 (originally archived 23.08.2026 as s0558, not re-archived here -- identical content confirmed by check_registry.py's duplicate-file warning): lists 3 official dealers -- Мэдро/madro.ru (confirmed WB presence, see marketplace_listings), Макс 911/dji911.com (Moscow), Покров/pokrovsystem.ru (Moscow). The latter two not yet checked for a WB presence of their own -- open lead.
 
+## Images
+
+- ![Company logo ("3mx" brand), from the company's own official site.](../images/ooo-trimiks_logo_official-site.svg) — Company logo ("3mx" brand), from the company's own official site. [s7547]
+
 ## Principals & persons of interest
 
 ### Шагиахметов Айрат Фатхутдинович
@@ -213,6 +217,7 @@
 | s1388 | site capture | site capture (SITE_780223272953_20260825_max911-dji911-com-contacts.html) | 2026-08-25 | — |
 | s1408 | third-party OSINT dossier | third-party OSINT dossier (DOSSIER_20260825_trimix-3mx-companies-and-people.xlsx) | 2026-08-25 | — |
 | s6749 | EGRUL extract | EGRUL extract (EGRUL_7802942873_20260907_ooo-trimiks-bulat-3mx.pdf) | 2026-09-07 | 2026-09-07 |
+| s7547 | site capture | site capture (SITE_7802942873_20260916_ooo-trimiks-logo.svg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

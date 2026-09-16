@@ -55,6 +55,10 @@
 
 - <https://www.psbank.ru/> — Bank's own domain, confirmed via psbank.ru/bank and psbank.ru/llm-info self-description pages; matches 2025 rename from Промсвязьбанк to «Банк ПСБ».
 
+## Images
+
+- ![Bank logo mark, from the bank's own official site (psbank.ru).](../images/pao-bank-psb_logo_psbank-ru.png) — Bank logo mark, from the bank's own official site (psbank.ru). [s7534]
+
 ## Principals & persons of interest
 
 ### Пётр Фрадков
@@ -78,6 +82,7 @@
 | s6441 | Rkn | Rkn (RKN_7744000912_20260906_comms-license-search-pao-bank-psb.html) | 2026-09-06 | — |
 | s6449 | Rkn | Rkn (RKN_7744000912_20260907_frequency-registry-pao-bank-psb.html) | 2026-09-07 | — |
 | s6747 | EGRUL extract | EGRUL extract (EGRUL_7744000912_20260907_pao-bank-psb.pdf) | 2026-09-07 | 2026-09-07 |
+| s7534 | site capture | site capture (SITE_7744000912_20260916_pao-bank-psb-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

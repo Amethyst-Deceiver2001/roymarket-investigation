@@ -170,6 +170,10 @@
 
 - <https://elvees.ru/> — Also multicore.ru -- NOT elvis.ru. Confirmed via search cross-reference to ИНН 7735582816/ОГРН 1127746073510, director Семилетов А.Д.
 
+## Images
+
+- ![Company logo, from the company's own official site (elvees.ru).](../images/npts-elvis_logo_official-site.svg) — Company logo, from the company's own official site (elvees.ru). [s7544]
+
 ## Principals & persons of interest
 
 ### Alekseev Ilya Nikolaevich — Алексеев Илья Николаевич
@@ -442,6 +446,7 @@
 | s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
 | s6829 | EGRUL extract | EGRUL extract (EGRUL_7735582816_20260907_npts-elvis.pdf) | 2026-09-07 | 2026-09-07 |
 | s6928 | Proverki | Proverki (PROVERKI_7735582816_20260907_npts-elvis-inspection-history.txt) | 2026-09-07 | — |
+| s7544 | site capture | site capture (SITE_7735582816_20260916_npts-elvis-logo.svg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

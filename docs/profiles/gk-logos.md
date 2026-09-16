@@ -66,6 +66,10 @@
 
 - <None>
 
+## Images
+
+- ![Company logo, from the group's own official site.](../images/gk-logos_logo_official-site.svg) — Company logo, from the group's own official site. [s7553]
+
 ## Principals & persons of interest
 
 ### Arutyunov Nikolay Vladimirovich — Арутюнов Николай Владимирович
@@ -114,6 +118,7 @@
 | s0556 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2024_20260823.zip) | 2026-08-23 | 2024-12-31 |
 | s0557 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2025_20260823.zip) | 2026-08-23 | 2025-12-31 |
 | s6754 | EGRUL extract | EGRUL extract (EGRUL_7839303129_20260907_gk-logos.pdf) | 2026-09-07 | 2026-09-07 |
+| s7553 | site capture | site capture (SITE_7839303129_20260916_gk-logos-logo.svg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

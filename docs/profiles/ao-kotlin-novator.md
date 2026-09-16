@@ -68,6 +68,10 @@
 
 - <http://kotlin-novator.ru> — SSL certificate expired at check time, content not independently re-verified live.
 
+## Images
+
+- ![Company logo, from the company's own official site.](../images/ao-kotlin-novator_logo_official-site.png) — Company logo, from the company's own official site. [s7551]
+
 ## Principals & persons of interest
 
 ### Жук Виталий Александрович
@@ -89,6 +93,7 @@
 | s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
 | s6751 | EGRUL extract | EGRUL extract (EGRUL_7811075899_20260907_ao-kotlin-novator.pdf) | 2026-09-07 | 2026-09-07 |
 | s6917 | Proverki | Proverki (PROVERKI_7811075899_20260907_ao-kotlin-novator-inspection-history.txt) | 2026-09-07 | — |
+| s7551 | site capture | site capture (SITE_7811075899_20260916_ao-kotlin-novator-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

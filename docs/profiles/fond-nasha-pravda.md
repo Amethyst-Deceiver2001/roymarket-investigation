@@ -54,6 +54,10 @@
 
 - <https://xn----7sbabalo0evak8f.xn--p1ai/>
 
+## Images
+
+- ![Foundation logo, from the organization's own official site.](../images/fond-nasha-pravda_logo_official-site.jpg) — Foundation logo, from the organization's own official site. [s7538]
+
 ## Principals & persons of interest
 
 ### Александр Руфинович Бровченко
@@ -114,6 +118,7 @@
 | s0390 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9705196180_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
 | s0575 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9705196180_20260824_fond-nasha-pravda.json) | 2026-08-24 | — |
 | s7370 | transcript | transcript (TRANSCRIPT_20260908_nasha-pravda-official-site.html) | 2026-09-08 | — |
+| s7538 | site capture | site capture (SITE_9705196180_20260916_fond-nasha-pravda-logo.jpg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

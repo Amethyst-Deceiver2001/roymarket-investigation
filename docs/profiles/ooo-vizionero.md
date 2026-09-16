@@ -73,6 +73,10 @@
 
 - <https://visionero.ru/> — Confirmed via exact ИНН (5902056314) and ОГРН (1195958038902) match on-site.
 
+## Images
+
+- ![Company logo, from the company's own official site.](../images/ooo-vizionero_logo_official-site.png) — Company logo, from the company's own official site. [s7542]
+
 ## Principals & persons of interest
 
 ### Лысенко Андрей Олегович
@@ -119,6 +123,7 @@
 | s6525 | Bfo | Bfo (BFO_5902056314_2025_ооо-визионеро.pdf) | — | — |
 | s6724 | EGRUL extract | EGRUL extract (EGRUL_5902056314_20260907_ooo-vizionero.pdf) | 2026-09-07 | 2026-09-07 |
 | s6959 | Proverki | Proverki (PROVERKI_5902056314_20260907_ooo-vizionero-inspection-history.txt) | 2026-09-07 | — |
+| s7542 | site capture | site capture (SITE_5902056314_20260916_ooo-vizionero-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

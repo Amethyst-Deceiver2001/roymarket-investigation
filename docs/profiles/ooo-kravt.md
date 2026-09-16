@@ -112,6 +112,10 @@
 
 - <https://xn--80aaorhk2b.xn--p1ai/sellers/kravt> — Official partner/seller profile on Налетай.рф, the ГТЛК-backed state civilian UAV marketplace. Legal-info block confirms exact ИНН match. Direct manufacturer storefront (sells under its own name, not a reseller). 3 products, FPV/UAV batteries.
 
+## Images
+
+- ![Product photo of an electronic control unit (БРП-3), from the company's own official site.](../images/ooo-kravt_product_official-site.png) — Product photo of an electronic control unit (БРП-3), from the company's own official site. [s7545]
+
 ## Principals & persons of interest
 
 ### Королев Дмитрий Михайлович
@@ -131,6 +135,7 @@
 | s0794 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7802693899_20260824_ooo-kravt.json) | 2026-08-24 | — |
 | s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | s6748 | EGRUL extract | EGRUL extract (EGRUL_7802693899_20260907_ooo-kravt.pdf) | 2026-09-07 | 2026-09-07 |
+| s7545 | site capture | site capture (SITE_7802693899_20260916_ooo-kravt-product-photo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

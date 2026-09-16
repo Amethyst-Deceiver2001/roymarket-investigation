@@ -67,6 +67,10 @@
 - <https://www.wildberries.ru/catalog/985476680/detail.aspx> — Детектор дронов aSel Labs H233 -- matches products[] entry exactly.
 - <https://www.ozon.ru/product/opoveshchatel-detektor-dronov-asel-labs-h231b-3982108317/> — Same H231B detector listed on Ozon, a second marketplace -- confirmed via user-supplied browser HAR capture 2026-08-25 (s1383). No seller/company-info API call was captured, so the Ozon listing's own account is not itself ИНН-confirmed to this entity (unlike the WB storefront above, which is); recorded as a brand-match listing lead.
 
+## Images
+
+- ![Company logo, from the company's own official site.](../images/ooo-asel-labs_logo_official-site.svg) — Company logo, from the company's own official site. [s7555]
+
 ## Principals & persons of interest
 
 ### Проценко Артём Витальевич
@@ -80,6 +84,7 @@
 | s0412 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9718278129_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
 | s0518 | EGRUL extract | EGRUL extract (ul-1257700126958-20260823135721.pdf) | — | 2026-08-23 |
 | s6864 | EGRUL extract | EGRUL extract (EGRUL_9718278129_20260907_ooo-asel-labs.pdf) | 2026-09-07 | 2026-09-07 |
+| s7555 | site capture | site capture (SITE_9718278129_20260916_ooo-asel-labs-logo.svg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

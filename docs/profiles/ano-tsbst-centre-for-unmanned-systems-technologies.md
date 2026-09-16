@@ -57,6 +57,10 @@
 
 - <https://cbst.ru/> — Confirmed via convergent third-party business registries (Kontur.Focus, RBC Companies) all citing ИНН 9702064851/ОГРН 1247700190430/GD Яныкина Нина Олеговна against this domain; cbst.ru's own /about page doesn't self-state ИНН (checked directly), so this rests on registry-aggregator corroboration rather than the site's own text.
 
+## Images
+
+- ![Company logo, from the organization's own official site (cbst.ru).](../images/ano-tsbst_logo_cbst-ru.png) — Company logo, from the organization's own official site (cbst.ru). [s7536]
+
 ## Principals & persons of interest
 
 ### Владимир Владимирович Якушев
@@ -152,6 +156,7 @@
 | s0572 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7100032961_20260824_ooo-tsentr-bespilotnykh-sistem-tula.json) | 2026-08-24 | 2026-08-24 |
 | s0574 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9702064851_20260824_ano-tsbst-centre-for-unmanned-systems-technologies.json) | 2026-08-24 | — |
 | s0970 | GUR war-sanctions record | GUR war-sanctions record (GUR_20260824_delta-cbts611000-sample1.html) | 2026-08-24 | — |
+| s7536 | site capture | site capture (SITE_9702064851_20260916_ano-tsbst-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

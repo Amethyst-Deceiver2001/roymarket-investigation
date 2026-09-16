@@ -70,6 +70,10 @@
 
 - <https://areasystems.tech/>
 
+## Images
+
+- ![Company logo ("AREA Systems" brand), from the company's own official site.](../images/ao-ploshchad_logo_official-site.webp) — Company logo ("AREA Systems" brand), from the company's own official site. [s7557]
+
 ## Principals & persons of interest
 
 ### Маслак Никита Юрьевич
@@ -97,6 +101,7 @@
 | s6675 | Bfo | Bfo (BFO_9723203841_2024_ао-площадь.pdf) | — | — |
 | s6676 | Bfo | Bfo (BFO_9723203841_2025_ао-площадь.pdf) | — | — |
 | s6769 | EGRUL extract | EGRUL extract (EGRUL_9723203841_20260907_ao-ploshchad.pdf) | 2026-09-07 | 2026-09-07 |
+| s7557 | site capture | site capture (SITE_9723203841_20260916_ao-ploshchad-logo.webp) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

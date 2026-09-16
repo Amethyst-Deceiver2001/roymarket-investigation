@@ -59,6 +59,10 @@
 
 - <https://nppelvo.ru/> — Contact email o.s.petrova@nppelvo.ru corroborates a co-founder name match, though ИНН not shown on-page.
 
+## Images
+
+- ![Company logo, from the company's own official site.](../images/npp-elvo_logo_official-site.png) — Company logo, from the company's own official site. [s7549]
+
 ## Principals & persons of interest
 
 ### Petrov Vladimir Alekseevich — Петров Владимир Алексеевич
@@ -82,6 +86,7 @@
 | s6618 | Bfo | Bfo (BFO_7810918592_2025_ооо-нпп-элво.pdf) | — | — |
 | s6750 | EGRUL extract | EGRUL extract (EGRUL_7810918592_20260907_npp-elvo-kolskaya-verf.pdf) | 2026-09-07 | 2026-09-07 |
 | s7417 | EGRUL extract | EGRUL extract (EGRUL_7810918592_20260914_npp-elvo-kolskaya-verf.pdf) | 2026-09-14 | 2026-09-14 |
+| s7549 | site capture | site capture (SITE_7810918592_20260916_npp-elvo-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

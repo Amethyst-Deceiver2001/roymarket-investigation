@@ -73,6 +73,10 @@
 
 - <None>
 
+## Images
+
+- ![Company logo ("ПОКРОВ — Система безопасности"), from the company's own official site.](../images/ooo-pokrov_logo_official-site.jpg) — Company logo ("ПОКРОВ — Система безопасности"), from the company's own official site. [s7540]
+
 ## Principals & persons of interest
 
 ### Цыганов Вадим Борисович
@@ -94,6 +98,7 @@
 | s6508 | Bfo | Bfo (BFO_5038189259_2024_ооо-покров.pdf) | — | — |
 | s6509 | Bfo | Bfo (BFO_5038189259_2025_ооо-покров.pdf) | — | — |
 | s6799 | EGRUL extract | EGRUL extract (EGRUL_5038189259_20260907_ooo-pokrov.pdf) | 2026-09-07 | 2026-09-07 |
+| s7540 | site capture | site capture (SITE_5038189259_20260916_ooo-pokrov-logo.jpg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
