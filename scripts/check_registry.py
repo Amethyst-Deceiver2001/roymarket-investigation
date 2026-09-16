@@ -563,13 +563,34 @@ def main() -> int:
     dup_groups = {h: paths for h, paths in by_hash.items() if len(paths) > 1}
     zakupki_dup_groups = {h: p for h, p in dup_groups.items()
                           if all("ZAKUPKI" in path for path in p)}
-    other_dup_groups = {h: p for h, p in dup_groups.items() if h not in zakupki_dup_groups}
+    # A screening tool (OPENSANCTIONS_/ALEPH_) re-pulled on a later date and got
+    # a byte-identical result -- "checked again, no change", not a data problem.
+    # Only collapses when every filename in the group is identical apart from
+    # its 8-digit date segment; a same-date or differently-keyed pair (e.g. a
+    # slug typo, or ALEPH_DETAIL_unknown's hash-suffix mismatch) still differs
+    # after stripping the date, so it stays flagged as worth a human glance.
+    def _strip_date(path: str) -> str:
+        return re.sub(r"\d{8}", "", path)
+    rescreen_dup_groups = {
+        h: p for h, p in dup_groups.items()
+        if h not in zakupki_dup_groups
+        and all(pp.split("/")[-1].startswith(("OPENSANCTIONS_", "ALEPH_")) for pp in p)
+        and len({_strip_date(pp) for pp in p}) == 1
+    }
+    other_dup_groups = {h: p for h, p in dup_groups.items()
+                        if h not in zakupki_dup_groups and h not in rescreen_dup_groups}
     if zakupki_dup_groups:
         warnings.append(
             f"{len(zakupki_dup_groups)} byte-identical zakupki attachment group(s) "
             f"under multiple filenames (expected — zakupki.gov.ru itself serves the "
             f"same document under several names; not a data-quality issue). Full list: "
             + " | ".join(f"[{', '.join(p)}]" for p in zakupki_dup_groups.values()))
+    if rescreen_dup_groups:
+        warnings.append(
+            f"{len(rescreen_dup_groups)} byte-identical screening-tool re-pull group(s) "
+            f"(OPENSANCTIONS_/ALEPH_, same key, different pull date — expected re-screen "
+            f"with no change; not a data-quality issue). Full list: "
+            + " | ".join(f"[{', '.join(p)}]" for p in rescreen_dup_groups.values()))
     for h, paths in other_dup_groups.items():
         warnings.append(f"identical file content under {len(paths)} "
                         f"names (non-zakupki — worth a look): {', '.join(paths)}")
