@@ -5130,6 +5130,26 @@
       "why": [
         "2026-09-16: promoted from an unstructured brief-prose scaffold (_origin: brief:prose, roles: []) to a structured role after re-checking the underlying Ведомости article directly rather than trusting docs/index.html's paraphrase -- confirmed the quote is verbatim (matches data/registry/quotes.json q014) and archived the source for a real source_id (s7521, previously null)."
       ]
+    },
+    "burlaka-pavel-anatolevich": {
+      "set": {
+        "inn_personal": "501001019105",
+        "roles": [
+          {
+            "entity_name": "ООО «Группа компаний «Логос»»",
+            "entity_slug": "ooo-gk-logos",
+            "from": "2025-10-29",
+            "to": null,
+            "title": "Генеральный директор",
+            "source_id": "s6784"
+          }
+        ],
+        "_verified": true
+      },
+      "verified_against": "s6784 -- ooo-gk-logos's own full signed ЕГРЮЛ выписка, already sourcing the identical fact on the entity's own director_history.",
+      "why": [
+        "2026-09-16 (docs->registry gap-list, section (b) item): pure backfill -- entity side (ooo-gk-logos) already carried this fully sourced; person record had zero roles despite docs/index.html naming him directly (\"GD: Бурлака Павел Анатольевич, appointed 29.10.2025 -- four months after founding, a separate person from the founder\")."
+      ]
     }
   },
   "people_add_entities": [

@@ -6884,8 +6884,17 @@
     "dob": null,
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
-    "roles": [],
+    "inn_personal": "501001019105",
+    "roles": [
+      {
+        "entity_name": "ООО «Группа компаний «Логос»»",
+        "entity_slug": "ooo-gk-logos",
+        "from": "2025-10-29",
+        "to": null,
+        "title": "Генеральный директор",
+        "source_id": "s6784"
+      }
+    ],
     "sanctions": [],
     "other_entities": [],
     "other_entities_checked_at": null,
@@ -6898,7 +6907,7 @@
     "notes": null,
     "sources": [],
     "mentions": 2,
-    "_verified": false,
+    "_verified": true,
     "_origin": "brief:prose",
     "_raw": {
       "contexts": [
@@ -6906,6 +6915,10 @@
         "ic preview is privacy-gated (no public post history via t.me/s/Logosrus), so establishing persons of interest beyond the EGRUL-confirmed founder/GD already documented (Гарькуша Владимир Владимирович, Бурлака Павел Анатольевич) requires this project's own authenticated scrape rather than open-web access; added to config/channels.txt for the next scan — checked directly and found empty (no public posts), a dead end for now. Field check Two priced, certified "
       ]
     },
+    "_corrected": [
+      "2026-09-16 (docs->registry gap-list, section (b) item): pure backfill -- entity side (ooo-gk-logos) already carried this fully sourced; person record had zero roles despite docs/index.html naming him directly (\"GD: Бурлака Павел Анатольевич, appointed 29.10.2025 -- four months after founding, a separate person from the founder\")."
+    ],
+    "_verified_against": "s6784 -- ooo-gk-logos's own full signed ЕГРЮЛ выписка, already sourcing the identical fact on the entity's own director_history.",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [

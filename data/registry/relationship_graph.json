@@ -2,7 +2,7 @@
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1431,
-  "edge_count": 2118,
+  "edge_count": 2119,
   "unresolved_count": 177,
   "nodes": [
     {
@@ -1043,7 +1043,7 @@
       "label": "Бурлака Павел Анатольевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "buslov-dmitriy-sergeevich",
@@ -4049,7 +4049,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "ooo-goudron",
@@ -17443,6 +17443,17 @@
       "as_of": "2026-08-24",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "burlaka-pavel-anatolevich",
+      "target": "ooo-gk-logos",
+      "type": "role",
+      "label": "Генеральный директор",
+      "source_id": "s6784",
+      "as_of": "2025-10-29",
+      "weight": 1.0,
+      "temporal_status": "unknown",
       "confidence": null
     },
     {
