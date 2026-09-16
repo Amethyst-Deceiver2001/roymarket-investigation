@@ -11,6 +11,7 @@
 - **Director:** Рубинштейн Дмитрий Владимирович
 - **Charter capital:** ₽100,000
 - **ОКВЭД:** 64.30 — Деятельность инвестиционных фондов и аналогичных финансовых организаций
+- **ЦБСТ tie:** 100% owned by АНО «ЦБСТ» itself (единственный акционер), run by Дмитрий Рубинштейн, ЦБСТ's own former general director.
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history

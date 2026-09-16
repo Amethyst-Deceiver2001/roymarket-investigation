@@ -11,6 +11,7 @@
 - **Director:** Черезов Андрей Павлович
 - **Charter capital:** ₽20,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
+- **ЦБСТ tie:** ЦБСТ's own channel repeatedly calls «Овод» its "флагманский резидент" (flagship resident); a 29.07.2026 post states the company was founded post-SVO and later came "в контур ЦБСТ" (into ЦБСТ's orbit).
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

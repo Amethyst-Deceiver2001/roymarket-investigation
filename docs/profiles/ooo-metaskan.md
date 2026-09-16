@@ -12,6 +12,7 @@
 - **Director:** Поспехов Иван Александрович
 - **Charter capital:** ₽40,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
+- **ЦБСТ tie:** ЦБСТ's own "gift convoy" delivery reporting: «Арена 5М» demining detonators handed over to Kursk-direction sappers, 12.05.2025.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

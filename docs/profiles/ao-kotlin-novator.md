@@ -10,6 +10,7 @@
 - **Director:** Жук Виталий Александрович
 - **Charter capital:** ₽7,138,035
 - **ОКВЭД:** 26.51.2 — Производство радиолокационной, радионавигационной аппаратуры и радиоаппаратуры дистанционного управления
+- **ЦБСТ tie:** Named directly by ЦБСТ's own channel, 24.04.2026 post (t.me/ANO_CBST/2095) on the EU's 20th sanctions package, as one of "two further named entities" beyond the six-name contour list.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

@@ -12,6 +12,7 @@
 - **Director:** Фрадков Пётр Михайлович
 - **Charter capital:** ₽427,076,526,755.75
 - **ОКВЭД:** 64.19 — Денежное посредничество прочее
+- **ЦБСТ tie:** Co-founder of АНО «ЦБСТ» (registered as co-founder 01.04.2025), and the settlement bank for the platform's own operator ООО «МПТМ».
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history

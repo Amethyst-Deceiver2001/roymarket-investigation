@@ -11,6 +11,7 @@
 - **Director:** Гусев Сергей Владимирович
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
+- **ЦБСТ tie:** Named directly by ЦБСТ's own channel, same 24.04.2026 post (t.me/ANO_CBST/2095) as ао-kotlin-novator above.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

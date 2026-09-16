@@ -12,6 +12,7 @@
 - **Address:** 346741, Ростовская область, Азовский р-н, х. Колузаево, ул. Ленина, д. 68Б
 - **Director:** Ионов Антон Александрович
 - **ОКВЭД:** 27.40 — Производство электрических ламп и осветительного оборудования
+- **ЦБСТ tie:** Named directly ((brand «Аляска»)) among ЦБСТ's own resident-company leadership in its 31.12.2025 New Year Telegram post, alongside «Авирон», «Овод», АО «НПП» and «Визионеро».
 - **Wildberries overlap:** none_found
 
 > **Declared vs. actual activity.** Declared ОКВЭД 27.40 is LED-lighting-equipment manufacturing; the EU's own 15.6.2026 sanctions listing (s7429) states the company also manufactures FPV drones ("Алёша") via a second, undeclared business line, "Проект «Аляска»".

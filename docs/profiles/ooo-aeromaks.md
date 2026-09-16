@@ -12,6 +12,7 @@
 - **Director:** Бессонов Сергей Николаевич
 - **Charter capital:** ₽3,177,522,000
 - **ОКВЭД:** 71.12.44 — Деятельность по созданию топографических карт и планов
+- **ЦБСТ tie:** Named directly by ЦБСТ's own channel as a sanctioned resident -- "a tenth name" in the same 24.04.2026 post (t.me/ANO_CBST/2095) discussed at length elsewhere in the same post beyond its six-name contour sentence, corroborated by the EU's own Council Decision (CFSP) 2026/504 (entry 759) naming LLC "AEROMAKS" (ИНН 7725347482) directly.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

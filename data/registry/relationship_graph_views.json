@@ -78,7 +78,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "alyoshina-ekaterina-andreevna",
@@ -214,7 +214,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 52
+          "degree": 66
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -362,7 +362,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "ao-mikts",
@@ -458,7 +458,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": "offensive",
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ao-pmts-avangard",
@@ -530,7 +530,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-spetstekh-perviy",
@@ -542,7 +542,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-stratim",
@@ -3040,7 +3040,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": "offensive",
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-aero-khit-m",
@@ -3076,7 +3076,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 40
+          "degree": 41
         },
         {
           "id": "ooo-aeromaks-avia-tsentr-logistika",
@@ -3352,7 +3352,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ooo-ayaks-tekhnologii",
@@ -3748,7 +3748,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 12
+          "degree": 13
         },
         {
           "id": "ooo-konstruktorskoe-byuro-sinergiya",
@@ -3796,7 +3796,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 30
+          "degree": 31
         },
         {
           "id": "ooo-kravt-udmurtiya",
@@ -3868,7 +3868,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 8
+          "degree": 9
         },
         {
           "id": "ooo-ml-konstrakshns",
@@ -4312,7 +4312,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-skay-avia-grupp",
@@ -4688,7 +4688,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": "offensive",
-          "degree": 13
+          "degree": 14
         },
         {
           "id": "pao-bank-psb",
@@ -4700,7 +4700,7 @@
           "sanctioned": true,
           "legal_form": "ПАО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "parshikov-sergey-lynya",
@@ -12165,6 +12165,28 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "100% owned by АНО «ЦБСТ» itself, run by Дмитрий Рубинштейн, ЦБСТ's own former general director.",
+          "source_id": "s0436",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ao-spetstekh-perviy",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "100% owned by АНО «ЦБСТ» itself (единственный акционер), run by Дмитрий Рубинштейн, ЦБСТ's own former general director.",
+          "source_id": "s0437",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "ao-stratim",
@@ -21946,6 +21968,17 @@
           "confidence": "press"
         },
         {
+          "source": "ooo-sistemnyy-integrator",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "100% owned by АНО «ЦБСТ» itself.",
+          "source_id": "s0435",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "ooo-skb-piranya",
           "target": "product::ooo-skb-piranya::бпла-пиранья-10",
           "type": "produces",
@@ -22266,6 +22299,17 @@
         },
         {
           "source": "ovod",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ's own channel repeatedly calls «Овод» its \"флагманский резидент\" (flagship resident); a 29.07.2026 post states t...",
+          "source_id": "s5446",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ovod",
           "target": "product::ovod::овод",
           "type": "produces",
           "label": null,
@@ -22285,6 +22329,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "pao-bank-psb",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Co-founder of АНО «ЦБСТ» (registered as co-founder 01.04.2025), and the settlement bank for the platform's own operat...",
+          "source_id": "s6705",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "parshikov-sergey-lynya",
@@ -27101,7 +27156,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ano-arkhangel",
@@ -27161,7 +27216,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 52
+          "degree": 66
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -27277,7 +27332,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "ao-nii-stt",
@@ -27349,7 +27404,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": "offensive",
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ao-pmts-avangard",
@@ -27409,7 +27464,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-spetstekh-perviy",
@@ -27421,7 +27476,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-stratim",
@@ -28117,7 +28172,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": "offensive",
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-aeromaks",
@@ -28129,7 +28184,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 40
+          "degree": 41
         },
         {
           "id": "ooo-aeromaks-avia-tsentr-logistika",
@@ -28333,7 +28388,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ooo-boevye-tekhnologii",
@@ -28597,7 +28652,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 12
+          "degree": 13
         },
         {
           "id": "ooo-kopterlab",
@@ -28633,7 +28688,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 30
+          "degree": 31
         },
         {
           "id": "ooo-kravt-udmurtiya",
@@ -28693,7 +28748,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 8
+          "degree": 9
         },
         {
           "id": "ooo-ml-konstrakshns",
@@ -28993,7 +29048,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-skb-piranya",
@@ -29233,7 +29288,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": "offensive",
-          "degree": 13
+          "degree": 14
         },
         {
           "id": "pao-bank-psb",
@@ -29245,7 +29300,7 @@
           "sanctioned": true,
           "legal_form": "ПАО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "pavlova-tatyana-viktorovna",
@@ -32053,6 +32108,18 @@
           "degree": 1
         },
         {
+          "id": "alyaska",
+          "kind": "entity",
+          "label": "ООО «ИОНОС»",
+          "name_latin": "LLC \"IONOS\"",
+          "inn": "6168719068",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": "ООО",
+          "variant": null,
+          "degree": 7
+        },
+        {
           "id": "andrey-bezrukov",
           "kind": "person",
           "label": "Андрей Анатольевич Безруков",
@@ -32082,7 +32149,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 52
+          "degree": 66
         },
         {
           "id": "antonova-tatyana-sergeevna",
@@ -32091,6 +32158,18 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 1
+        },
+        {
+          "id": "ao-kotlin-novator",
+          "kind": "entity",
+          "label": "АО «Котлин-Новатор»",
+          "name_latin": null,
+          "inn": "7811075899",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": "АО",
+          "variant": null,
+          "degree": 5
         },
         {
           "id": "ao-npp-bat",
@@ -32105,6 +32184,18 @@
           "degree": 4
         },
         {
+          "id": "ao-ploshchad",
+          "kind": "entity",
+          "label": "АО «Площадь»",
+          "name_latin": null,
+          "inn": "9723203841",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": "АО",
+          "variant": "offensive",
+          "degree": 12
+        },
+        {
           "id": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
           "kind": "entity",
           "label": "АО «Спецтех Инвестиции»",
@@ -32114,7 +32205,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-spetstekh-perviy",
@@ -32126,7 +32217,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-stratim",
@@ -32307,6 +32398,30 @@
           "degree": 13
         },
         {
+          "id": "ooo-aero-khit",
+          "kind": "entity",
+          "label": "ООО «Аэро-Хит»",
+          "name_latin": null,
+          "inn": "2700012608",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": "ООО",
+          "variant": "offensive",
+          "degree": 6
+        },
+        {
+          "id": "ooo-aeromaks",
+          "kind": "entity",
+          "label": "ООО «Аэромакс»",
+          "name_latin": null,
+          "inn": "7725347482",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": "ООО",
+          "variant": null,
+          "degree": 41
+        },
+        {
           "id": "ooo-aeroplatformy",
           "kind": "entity",
           "label": "ООО «Аэроплатформы»",
@@ -32353,6 +32468,18 @@
           "legal_form": "ООО",
           "variant": null,
           "degree": 11
+        },
+        {
+          "id": "ooo-aviron",
+          "kind": "entity",
+          "label": "ООО «Авирон»",
+          "name_latin": null,
+          "inn": "7743451768",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "variant": null,
+          "degree": 12
         },
         {
           "id": "ooo-gagaring",
@@ -32427,6 +32554,18 @@
           "degree": 3
         },
         {
+          "id": "ooo-kleverkopter",
+          "kind": "entity",
+          "label": "ООО «Клеверкоптер»",
+          "name_latin": null,
+          "inn": "5257183517",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": "ООО",
+          "variant": null,
+          "degree": 13
+        },
+        {
           "id": "ooo-konstruktorskoe-byuro-sinergiya",
           "kind": "entity",
           "label": "ООО «Конструкторское бюро «Синергия»»",
@@ -32451,6 +32590,18 @@
           "degree": 14
         },
         {
+          "id": "ooo-kravt",
+          "kind": "entity",
+          "label": "ООО «КРАВТ»",
+          "name_latin": null,
+          "inn": "7802693899",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": "ООО",
+          "variant": null,
+          "degree": 31
+        },
+        {
           "id": "ooo-mentastep",
           "kind": "entity",
           "label": "ООО «Ментастеп»",
@@ -32461,6 +32612,18 @@
           "legal_form": "ООО",
           "variant": null,
           "degree": 4
+        },
+        {
+          "id": "ooo-metaskan",
+          "kind": "entity",
+          "label": "ООО «Метаскан»",
+          "name_latin": null,
+          "inn": "1660349248",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "variant": null,
+          "degree": 9
         },
         {
           "id": "ooo-mptm",
@@ -32544,7 +32707,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-skb-piranya",
@@ -32643,6 +32806,18 @@
           "degree": 8
         },
         {
+          "id": "ovod",
+          "kind": "entity",
+          "label": "ООО «Русская лаборатория воздушного транспорта»",
+          "name_latin": "Russian Air Transport Laboratory LLC",
+          "inn": "7100027464",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": null,
+          "variant": "offensive",
+          "degree": 14
+        },
+        {
           "id": "pao-bank-psb",
           "kind": "entity",
           "label": "ПАО «Банк ПСБ»",
@@ -32652,7 +32827,7 @@
           "sanctioned": true,
           "legal_form": "ПАО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "petr-fradkov",
@@ -32845,6 +33020,17 @@
           "confidence": null
         },
         {
+          "source": "alyaska",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly ((brand «Аляска»)) among ЦБСТ's own resident-company leadership in its 31.12.2025 New Year Telegram po...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "andrey-bezrukov",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "role",
@@ -32955,11 +33141,55 @@
           "confidence": null
         },
         {
+          "source": "ao-kotlin-novator",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly by ЦБСТ's own channel, 24.04.2026 post (t.me/ANO_CBST/2095) on the EU's 20th sanctions package, as one...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "ao-npp-bat",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Named participant (АО «НПП», Игорь Потапов) at a 26.03.2025 ЦБСТ-hosted expanded session on developer support, alongs...",
           "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ao-ploshchad",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ's own channel directly demonstrated «Площадь»'s targeting/navigation platform to troops, 09.06.2026, describing ...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "100% owned by АНО «ЦБСТ» itself, run by Дмитрий Рубинштейн, ЦБСТ's own former general director.",
+          "source_id": "s0436",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ao-spetstekh-perviy",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "100% owned by АНО «ЦБСТ» itself (единственный акционер), run by Дмитрий Рубинштейн, ЦБСТ's own former general director.",
+          "source_id": "s0437",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33351,6 +33581,28 @@
           "confidence": "t-doc"
         },
         {
+          "source": "ooo-aero-khit",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly in ЦБСТ's own channel's six-name \"contour\" list: \"«Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хи...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-aeromaks",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly by ЦБСТ's own channel as a sanctioned resident -- \"a tenth name\" in the same 24.04.2026 post (t.me/ANO...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "ooo-aeroplatformy",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -33388,6 +33640,17 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Named directly by ЦБСТ's own channel as one of six EU-sanctioned ЦБСТ residents in the EU's 20th sanctions package (a...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-aviron",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named among ЦБСТ's own resident-company leadership in ЦБСТ's own 31.12.2025 New Year Telegram post, alongside «Овод»,...",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -33450,6 +33713,17 @@
           "confidence": "t-doc"
         },
         {
+          "source": "ooo-kleverkopter",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly by ЦБСТ's own channel, same 24.04.2026 post (t.me/ANO_CBST/2095) as ао-kotlin-novator above.",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "ooo-konstruktorskoe-byuro-sinergiya",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -33472,10 +33746,32 @@
           "confidence": "t-doc"
         },
         {
+          "source": "ooo-kravt",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ resident confirmed directly by the channel's own 11.04.2026 post: \"Резидент ЦБСТ запустил производство складного...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "ooo-mentastep",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Named ЦБСТ resident; its tactical-footwear product was shown at the «Запад-2025» strategic exercises alongside other ...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-metaskan",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ's own \"gift convoy\" delivery reporting: «Арена 5М» demining detonators handed over to Kursk-direction sappers, 1...",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -33547,6 +33843,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "press"
+        },
+        {
+          "source": "ooo-sistemnyy-integrator",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "100% owned by АНО «ЦБСТ» itself.",
+          "source_id": "s0435",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "ooo-skb-piranya",
@@ -33631,6 +33938,28 @@
           "type": "cbst_tie",
           "label": "ЦБСТ's own channel repeatedly calls this entity's «Овод» (\"Gadfly\") FPV strike-drone family its \"флагманский резидент...",
           "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ovod",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ's own channel repeatedly calls «Овод» its \"флагманский резидент\" (flagship resident); a 29.07.2026 post states t...",
+          "source_id": "s5446",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "pao-bank-psb",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Co-founder of АНО «ЦБСТ» (registered as co-founder 01.04.2025), and the settlement bank for the platform's own operat...",
+          "source_id": "s6705",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33918,7 +34247,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ano-arkhangel",
@@ -34014,7 +34343,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 52
+          "degree": 66
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -34074,7 +34403,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "ao-nii-stt",
@@ -34158,7 +34487,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": "offensive",
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ao-pmts-avangard",
@@ -34218,7 +34547,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-spetstekh-perviy",
@@ -34230,7 +34559,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-stratim",
@@ -35266,7 +35595,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": "offensive",
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-aero-khit-m",
@@ -35302,7 +35631,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 40
+          "degree": 41
         },
         {
           "id": "ooo-aeromaks-avia-tsentr-logistika",
@@ -35578,7 +35907,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ooo-ayaks-tekhnologii",
@@ -35998,7 +36327,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 12
+          "degree": 13
         },
         {
           "id": "ooo-konstruktorskoe-byuro-sinergiya",
@@ -36046,7 +36375,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 30
+          "degree": 31
         },
         {
           "id": "ooo-kravt-udmurtiya",
@@ -36118,7 +36447,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 8
+          "degree": 9
         },
         {
           "id": "ooo-ml-konstrakshns",
@@ -36562,7 +36891,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-skay-avia-grupp",
@@ -36930,7 +37259,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": "offensive",
-          "degree": 13
+          "degree": 14
         },
         {
           "id": "pao-bank-psb",
@@ -36942,7 +37271,7 @@
           "sanctioned": true,
           "legal_form": "ПАО",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "pavlova-tatyana-viktorovna",
@@ -40065,6 +40394,17 @@
         },
         {
           "source": "alyaska",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly ((brand «Аляска»)) among ЦБСТ's own resident-company leadership in its 31.12.2025 New Year Telegram po...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "alyaska",
           "target": "product::alyaska::ал-ша",
           "type": "produces",
           "label": null,
@@ -40240,6 +40580,17 @@
           "confidence": null
         },
         {
+          "source": "ao-kotlin-novator",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly by ЦБСТ's own channel, 24.04.2026 post (t.me/ANO_CBST/2095) on the EU's 20th sanctions package, as one...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "ao-nii-stt",
           "target": "product::ao-nii-stt::merlin-vr",
           "type": "produces",
@@ -40293,6 +40644,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "ao-ploshchad",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ's own channel directly demonstrated «Площадь»'s targeting/navigation platform to troops, 09.06.2026, describing ...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "ao-ploshchad",
@@ -43133,6 +43495,28 @@
           "confidence": null
         },
         {
+          "source": "ooo-aero-khit",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly in ЦБСТ's own channel's six-name \"contour\" list: \"«Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хи...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-aeromaks",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly by ЦБСТ's own channel as a sanctioned resident -- \"a tenth name\" in the same 24.04.2026 post (t.me/ANO...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "ooo-aeromaks",
           "target": "ao-aeromaks",
           "type": "founded",
@@ -43527,6 +43911,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "ooo-aviron",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named among ЦБСТ's own resident-company leadership in ЦБСТ's own 31.12.2025 New Year Telegram post, alongside «Овод»,...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "ooo-aviron",
@@ -44036,6 +44431,17 @@
         },
         {
           "source": "ooo-kleverkopter",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly by ЦБСТ's own channel, same 24.04.2026 post (t.me/ANO_CBST/2095) as ао-kotlin-novator above.",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-kleverkopter",
           "target": "product::ooo-kleverkopter::аэромедик-680",
           "type": "produces",
           "label": null,
@@ -44083,6 +44489,17 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Named directly as \"резидент ЦБСТ\" by ЦБСТ's own channel.",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-kravt",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ resident confirmed directly by the channel's own 11.04.2026 post: \"Резидент ЦБСТ запустил производство складного...",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -44226,6 +44643,17 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Named ЦБСТ resident; its tactical-footwear product was shown at the «Запад-2025» strategic exercises alongside other ...",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-metaskan",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ's own \"gift convoy\" delivery reporting: «Арена 5М» demining detonators handed over to Kursk-direction sappers, 1...",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,

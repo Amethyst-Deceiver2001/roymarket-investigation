@@ -11,6 +11,7 @@
 - **Director:** Яценко Виктор Вячеславович
 - **Charter capital:** ₽50,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
+- **ЦБСТ tie:** Named directly in ЦБСТ's own channel's six-name "contour" list: "«Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел»".
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

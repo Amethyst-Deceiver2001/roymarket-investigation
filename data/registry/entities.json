@@ -3494,7 +3494,12 @@
     "subsidiaries": [],
     "tier": "cbst-core",
     "tier_basis": "100% ЦБСТ-owned",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "100% owned by АНО «ЦБСТ» itself, run by Дмитрий Рубинштейн, ЦБСТ's own former general director.",
+      "confidence": "t-doc",
+      "evidence": "founders[] entry: АНО «ЦБСТ» (ИНН 9702064851) 100% owner, per full signed ЕГРЮЛ выписка. Corroborated in docs/index.html prose.",
+      "source_id": "s0436"
+    },
     "wb_overlap": "not_checked",
     "products": [],
     "financials": [],
@@ -3558,7 +3563,8 @@
       "Phase 1 verification pass, 2026-08-22: ОГРН, director and registration date cross-checked against egrul.nalog.ru open-API snapshot (s0151) — all match. ОГРН was previously null in the registry; now filled.",
       "Full signed ЕГРЮЛ extract read end-to-end (ul-1257700523079-20260823014851.pdf, 8pp, pulled 23.08.2026 — source_id pending next registry regeneration, see below). KEY FINDING: 100% DIRECT ownership by АНО «ЦБСТ» itself (ИНН 9702064851, ОГРН 1247700190430) as единственный акционер (sole shareholder) — not a layer removed, ЦБСТ is the immediate parent. GD Рубинштейн Дмитрий Владимирович (personal ИНН 771537069549). ₽100,000 charter capital, primary ОКВЭД 64.30 investment-fund activity, holding-company code (64.20) as secondary — an investment-vehicle profile, not an operating company. Registrar АО «РТ-Регистратор» (ИНН 5407175878) — this is the same ИНН that was incorrectly flagged as an orphan correction key earlier this session (removed then as 'matches no record' because it's a registrar, not a registry entity in its own right — confirms that removal was correct, not a missed entity).",
       "2026-09-14: founding-document bundle (data/sources/UD_1976582.zip, s0189, устав от 20.10.2025) read in full — corroborates the 100% ЦБСТ ownership already established via the EGRUL выписка: §8.4 names 'Учредитель Общества - Автономная некоммерческая организация «Центр Беспилотных Систем и Технологий» ... ОГРН: 1247700190430 ... («ЦБСТ»)' verbatim in the устав's own founder-rights clause. No new fact, but confirms the ownership tie is stated in the company's own founding legal document, not only in a registry extract. Also resolves the stale 2026-09-07 'документ формируется' status recorded in notes/founding_docs_gap.md's deprioritized-entity table — ФНС digitized this bundle by 16.08.2026 (per its own Opis.pdf date), before that deprioritization note was even written; the gap file's deprioritized entry for this entity is now corrected.",
-      "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+      "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s0436 verified to exist in sources.json (data/sources/ul-1257700523079-20260823014851.pdf)."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -3683,7 +3689,12 @@
     "subsidiaries": [],
     "tier": "cbst-core",
     "tier_basis": "100% ЦБСТ-owned (own FY2025 filing)",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "100% owned by АНО «ЦБСТ» itself.",
+      "confidence": "t-doc",
+      "evidence": "founders[] entry: АНО «ЦБСТ» 100% owner, confirmed independently via this entity's own FY2025 filing, not just EGRUL.",
+      "source_id": "s0435"
+    },
     "wb_overlap": "not_checked",
     "products": [],
     "financials": [
@@ -3741,7 +3752,8 @@
       "Phase 1 verification pass, 2026-08-22: director, registration date and region (Курская область) cross-checked against egrul.nalog.ru open-API snapshot (s0075) — all match.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 1 fiscal year(s) with revenue/profit data.",
       "Full signed ЕГРЮЛ extract read end-to-end (ul-1254600002920-20260823014908.pdf, pulled 23.08.2026). THIRD confirmed direct-ЦБСТ-owned entity (alongside Спецтех Инвестиции and Спецтех Первый) — but materially different in kind: located in Kursk, not Moscow, and its ОКВЭД profile is genuinely industrial rather than a financial shell — primary 62.01 software development, secondaries 26.30.15 radio-electronic communications equipment, 26.51.2 radiolocation/radio-navigation and remote-control radio equipment, 27.90 other electrical equipment. GD Михайлов Ю.Г. (personal ИНН 502902982507). ₽30,000 charter capital. This reads as ЦБСТ's actual R&D/systems-integration operating arm, distinct from the two Moscow investment shells.",
-      "2026-09-07: merged dormant duplicate correction key '4632306583' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+      "2026-09-07: merged dormant duplicate correction key '4632306583' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s0435 verified to exist in sources.json (data/sources/ul-1254600002920-20260823014908.pdf)."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -3876,7 +3888,12 @@
     "subsidiaries": [],
     "tier": "cbst-core",
     "tier_basis": "ЦБСТ co-founder and МПТМ's settlement bank",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "Co-founder of АНО «ЦБСТ» (registered as co-founder 01.04.2025), and the settlement bank for the platform's own operator ООО «МПТМ».",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own EGRUL founders record names ПАО «Банк ПСБ» as a co-founder. МПТМ's own supplier offer document states its account/BIC is held at this bank.",
+      "source_id": "s6705"
+    },
     "wb_overlap": "not_checked",
     "products": [],
     "financials": [],
@@ -4003,7 +4020,8 @@
       "note": "not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
     },
     "_corrected": [
-      "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+      "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s6705 verified (data/sources/EGRUL_9702064851_20260907_ano-tsbst-centre-for-unmanned-systems-technologies.pdf, ЦБСТ's own full EGRUL extract)."
     ],
     "_verified_against": "egrul.nalog.ru open-API lookup, 22.08.2026 (one-off, ordinary reconnaissance) + cross-confirmed via s0231",
     "opensanctions_matches": [
@@ -6896,7 +6914,12 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "ЦБСТ's own channel repeatedly calls «Овод» its \"флагманский резидент\" (flagship resident); a 29.07.2026 post states the company was founded post-SVO and later came \"в контур ЦБСТ\" (into ЦБСТ's orbit).",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own Telegram channel, multiple posts. NOTE: docs/index.html's own narrative prose names the legal entity as ООО «Воздушный трактат» ИНН 7100046925 -- a DIFFERENT ИНН from this record's 7100027464. OpenSanctions' exact-ИНН match (s0759) supports 7100027464 as the real maker and this source (s5446) is already used elsewhere on this exact record, so the docs.html-stated ИНН looks stale/wrong rather than a different company -- but this discrepancy is NOT independently resolved here and should be checked before citing this tie in published prose.",
+      "source_id": "s5446"
+    },
     "wb_overlap": "none_found",
     "products": [
       {
@@ -7150,7 +7173,8 @@
       "Adding @tulaovod to web.telegram (2026-09-07) — already used as the primary source for this entity's marketing/battlefield/images material, an oversight that it wasn't listed in web[] itself.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 4 filing-year record(s).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s5446 verified (data/sources/TGPOST_multi_20260729-20260805_tulaovod-week-assassination-dovod-barsclaim.txt). ИНН discrepancy flagged, not resolved -- see evidence field."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026; TheInsider (theins.ru/news/295478), read directly 23.08.2026",
     "opensanctions_matches": [
@@ -7420,7 +7444,12 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "Named among ЦБСТ's own resident-company leadership in ЦБСТ's own 31.12.2025 New Year Telegram post, alongside «Овод», АО «НПП», «Аляска» and «Визионеро».",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own Telegram channel, 31.12.2025 New Year post (per docs/index.html prose, quoted directly). Post not yet archived as a discrete data/sources/ file -- this project's own scraped Telegram DB (data/roymarket.db) is the underlying record; no sNNNN id applies yet.",
+      "source_id": null
+    },
     "wb_overlap": "none_found",
     "products": [
       "Чебурашка",
@@ -7494,7 +7523,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-      "[2026-09-15] wb_overlap=none_found: Brand-name search for products «Чебурашка»/«Кощей 2.0»/«Сокол» on wildberries.ru (2026-09-15) found no matching product; a same-named 'Кощей' combat drone exists but is sold via other channels (djirussia.ru), not WB."
+      "[2026-09-15] wb_overlap=none_found: Brand-name search for products «Чебурашка»/«Кощей 2.0»/«Сокол» on wildberries.ru (2026-09-15) found no matching product; a same-named 'Кощей' combat drone exists but is sold via other channels (djirussia.ru), not WB.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): no archived file for this specific post exists yet; source_id left null per the ooo-gk-logos/ao-tekhnodron precedent for DB-scraped-but-unarchived TG posts."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -12596,7 +12626,12 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "Named directly in ЦБСТ's own channel's six-name \"contour\" list: \"«Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел»\".",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026 -- same post already cited verbatim for ao-tekhnodron/ooo-arkhangel/ooo-atlant-aero's cbst_tie.",
+      "source_id": null
+    },
     "wb_overlap": "none_found",
     "products": [
       {
@@ -12714,7 +12749,8 @@
       "GUR names the group's ultimate beneficiary as \"russian senator from the temporarily occupied Kherson region Konstantin Basyuk\" — not yet a person record in this registry, added as an open question rather than a person stub (no DOB/ИНН/other identifying detail given, per PII sourcing discipline).",
       "GUR also states cooperation with Chinese manufacturer Autel Robotics on localizing Autel UAV production in Russia — a foreign-component/tech-transfer lead worth an independent check, not yet corroborated beyond this one GUR note.",
       "2026-09-07: merged dormant duplicate correction key '2700012608' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post/precedent as the other five already-tied entities from this exact post."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -13658,7 +13694,12 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "Named directly by ЦБСТ's own channel, 24.04.2026 post (t.me/ANO_CBST/2095) on the EU's 20th sanctions package, as one of \"two further named entities\" beyond the six-name contour list.",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026 (per docs/index.html prose, quoted at length elsewhere in this brief). Post already in this project's scraped Telegram DB, not yet archived as a discrete file.",
+      "source_id": null
+    },
     "wb_overlap": "none_found",
     "products": [],
     "financials": [],
@@ -13786,7 +13827,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-07: merged dormant duplicate correction key '7811075899' into this slug-keyed entry (registry-hardening pass, no field conflict).",
       "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post already used for ao-tekhnodron/ooo-arkhangel/ooo-atlant-aero's cbst_tie; source_id null matches that precedent."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -14885,7 +14927,12 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "Named directly by ЦБСТ's own channel, same 24.04.2026 post (t.me/ANO_CBST/2095) as ао-kotlin-novator above.",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026 (per docs/index.html prose).",
+      "source_id": null
+    },
     "wb_overlap": "none_found",
     "products": [
       {
@@ -15099,7 +15146,8 @@
       "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 6 products total after this pass.",
-      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post/precedent as ao-kotlin-novator."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -15635,7 +15683,12 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "ЦБСТ's own channel directly demonstrated «Площадь»'s targeting/navigation platform to troops, 09.06.2026, describing it as \"одноимённой компании\" (the eponymous company's own platform).",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own Telegram channel, 09.06.2026 post (per docs/index.html prose, quoted directly). Post not archived as a discrete file; no sNNNN id applies yet.",
+      "source_id": null
+    },
     "wb_overlap": "none_found",
     "products": [
       {
@@ -15772,7 +15825,8 @@
       "2026-09-07: merged dormant duplicate correction key '9723203841' into this slug-keyed entry (registry-hardening pass, no field conflict).",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
       "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the projectArchangel/Archangel_Forum joint-exhibitor listing verbatim against data/roymarket.db. Recorded as related_entities per CLAUDE.md's existing mechanism, not a new cbst_tie (it's the Архангел project's own event, not ЦБСТ's).",
-      "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): source_id left null, same precedent as ooo-aviron above."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -18778,7 +18832,12 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "ЦБСТ's own \"gift convoy\" delivery reporting: «Арена 5М» demining detonators handed over to Kursk-direction sappers, 12.05.2025.",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own Telegram channel delivery/\"gift convoy\" post (per docs/index.html prose). Post not archived as a discrete file; no sNNNN id applies yet.",
+      "source_id": null
+    },
     "wb_overlap": "none_found",
     "products": [
       "Арена 5М"
@@ -18874,7 +18933,8 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (1660349248). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): source_id left null, same precedent as ooo-aviron above."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -20564,7 +20624,12 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "Named directly ((brand «Аляска»)) among ЦБСТ's own resident-company leadership in its 31.12.2025 New Year Telegram post, alongside «Авирон», «Овод», АО «НПП» and «Визионеро».",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own Telegram channel, 31.12.2025 New Year post -- same post as ooo-aviron's cbst_tie above.",
+      "source_id": null
+    },
     "wb_overlap": "none_found",
     "products": [
       "Алёша"
@@ -20663,7 +20728,8 @@
       "2026-09-14: identity resolved via a live-fetched EU primary source, Council Decision (CFSP) 2026/1364 (15.6.2026), entry 801 -- see sanctions[] for the verbatim reasons text and source_id s7429 for the archived capture. Site (eur-lex.europa.eu) blocks scripted/curl access via an AWS WAF challenge; fetched through the claude-in-chrome browser extension instead, same workaround class as other WAF/DDoS-Guard-blocked sites in this project.",
       "2026-09-14: director/founder/registration facts from a directly-pulled full EGRUL выписка (s7428, egrul_vypiska_pull.py) -- sole founder and director both Ионов Антон Александрович (ИНН 616899150213) since incorporation, no ownership-change history on file.",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-      "[2026-09-15] wb_overlap=none_found: Brand-name search for «Алёша» (Проект «Аляска») on wildberries.ru (2026-09-15) found no product listing — a military kamikaze drone, not sold on a consumer marketplace."
+      "[2026-09-15] wb_overlap=none_found: Brand-name search for «Алёша» (Проект «Аляска») on wildberries.ru (2026-09-15) found no product listing — a military kamikaze drone, not sold on a consumer marketplace.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post/precedent as ooo-aviron."
     ],
     "_verified_against": null,
     "opensanctions_matches": [],
@@ -21182,7 +21248,12 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "ЦБСТ resident confirmed directly by the channel's own 11.04.2026 post: \"Резидент ЦБСТ запустил производство складного FPV-дрона с донаведением. Петербургская компания «Кравт» наладила выпуск квадрокоптера «Матрёшка»\".",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own Telegram channel, 11.04.2026 post, quoted verbatim in docs/index.html.",
+      "source_id": null
+    },
     "wb_overlap": "none_found",
     "products": [
       {
@@ -21669,7 +21740,8 @@
       "2026-08-26: user-supplied HAR/public-API cross-reference against налетай.рф (ГТЛК state UAV marketplace) manufacturer facet list -- confirmed via exact ИНН match on the seller's own legal-info block.",
       "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 14 product(s) not previously documented.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): quoted directly from docs/index.html; post not yet archived as a discrete file."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -27289,7 +27361,12 @@
     "subsidiaries": [],
     "tier": "manufacturer",
     "tier_basis": "brief section: 525 residents, and how many of them are under EU sanctions",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "Named directly by ЦБСТ's own channel as a sanctioned resident -- \"a tenth name\" in the same 24.04.2026 post (t.me/ANO_CBST/2095) discussed at length elsewhere in the same post beyond its six-name contour sentence, corroborated by the EU's own Council Decision (CFSP) 2026/504 (entry 759) naming LLC \"AEROMAKS\" (ИНН 7725347482) directly.",
+      "confidence": "t-doc",
+      "evidence": "docs/index.html's own extended Аэромакс paragraph quotes the EU decision verbatim and states \"The ЦБСТ tie is now directly confirmed by ЦБСТ's own channel: its 24.04.2026 post... explicitly names «Аэромакс» among the sanctioned residents, alongside «Котлин-Новатор», «Клеверкоптер» and МФТИ\" -- this is a distinct clause of the same long post from the six-name contour sentence, not a separate/conflicting post. Applies specifically to ООО «Аэромакс» (ИНН 7725347482), NOT the discarded АО «Аэромакс» (ИНН 7708407413, zero employees, wrong candidate per the same paragraph) and NOT the parent holding ООО «ГК «Аэромакс»» (ИНН 7710974353, which the brief explicitly says this resident \"sits inside\", not itself named).",
+      "source_id": null
+    },
     "wb_overlap": "none_found",
     "products": [
       {
@@ -27642,7 +27719,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-14: screen_upr_uchr.py (manual-captcha run) found bessonov-sergey-nikolaevich as director of a second entity, ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) — confirmed via egrul.nalog.ru open API (s7441) and wired as a related_entities back-link, plus the reciprocal thin add_entities record.",
       "2026-09-14: received 3 products (БВС СТ AS-32-10, AS-32-8, Д-12К) reassigned from ao-aeromaks -- both entities' rk.2035.university catalog entry (catalog_id 019c662d-...) is internally inconsistent: the showcase editorial description names \"АО «Аэромакс»\" but every individual product listing's own manufacturer field says \"ООО «Аэромакс»\" (source s1169). Resolved in favour of ooo-aeromaks (this entity, ИНН 7725347482) using independent corroboration: this entity is a formally active АЭРОНЕКСТ association member with UavCount:6 on its own membership record (s1405) -- ao-aeromaks (ИНН 7708407413, a 2022-founded Кронштадт-Техник-managed entity) has no comparable independent UAV-product corroboration on file. Not a certainty (no OKVED/primary EGRUL activity-code text was extractable from either entity's scanned EGRUL PDF to settle it definitively), but the weight of evidence favours this entity.",
-      "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+      "2026-09-16 (coverage-gap agent pass, verified independently before wiring): verified directly against the full docs/index.html paragraph (not just a fragment) before wiring -- an agent flagged this as a possible footnote error based on only the six-name contour sentence, but the fuller paragraph (already read in full this session) confirms Аэромакс is named in a separate clause of the same post, not fabricated."
     ],
     "_verified_against": "s0218 — ООО «Аэромакс»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
     "_egrul_crosschecked": "2026-08-22",
@@ -57325,7 +57403,12 @@
     "subsidiaries": [],
     "tier": "cbst-core",
     "tier_basis": "100% ЦБСТ-owned, per the brief's Legal entities table",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "100% owned by АНО «ЦБСТ» itself (единственный акционер), run by Дмитрий Рубинштейн, ЦБСТ's own former general director.",
+      "confidence": "t-doc",
+      "evidence": "founders_history entry (as_of 2026-04-10, ГРН 1267700128376): АНО «ЦБСТ» (ИНН 9702064851, ОГРН 1247700190430) — 100%, единственный акционер, per full EGRUL extract. Corroborated in docs/index.html prose: \"ЦБСТ also owns two joint-stock companies, «Спецтех Инвестиции» и «Спецтех Первый» (100% each), both run by Дмитрий Рубинштейн — ЦБСТ's own former general director.\"",
+      "source_id": "s0437"
+    },
     "wb_overlap": "not_checked",
     "products": [],
     "financials": [],

@@ -12,6 +12,7 @@
 - **Director:** Маслак Никита Юрьевич
 - **Charter capital:** ₽112,000
 - **ОКВЭД:** 62.01 — Разработка компьютерного программного обеспечения
+- **ЦБСТ tie:** ЦБСТ's own channel directly demonstrated «Площадь»'s targeting/navigation platform to troops, 09.06.2026, describing it as "одноимённой компании" (the eponymous company's own platform).
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

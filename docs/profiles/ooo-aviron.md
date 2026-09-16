@@ -9,6 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Director:** Лапин Игорь Николаевич
 - **Charter capital:** ₽27,174
+- **ЦБСТ tie:** Named among ЦБСТ's own resident-company leadership in ЦБСТ's own 31.12.2025 New Year Telegram post, alongside «Овод», АО «НПП», «Аляска» and «Визионеро».
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

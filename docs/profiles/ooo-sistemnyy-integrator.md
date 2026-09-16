@@ -12,6 +12,7 @@
 - **Director:** Михайлов Юрий Геннадьевич
 - **Charter capital:** ₽30,000
 - **ОКВЭД:** 62.01 — Разработка компьютерного программного обеспечения
+- **ЦБСТ tie:** 100% owned by АНО «ЦБСТ» itself.
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
