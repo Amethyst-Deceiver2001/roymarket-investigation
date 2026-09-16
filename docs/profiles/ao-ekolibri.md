@@ -22,6 +22,12 @@
 | Павлова Татьяна Викторовна | 2024-07-15 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 772158414345. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6824] |
 | Павлова Татьяна Викторовна | 2026-08-25 | Per АЭРОНЕКСТ member-catalog card («ФИО Руководителя» field, «Должность руководителя»: Генеральный директор), captured_date basis -- as_of is the capture date, not independently confirmed against EGRUL yet. [s1403] |
 
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| 6 акционеров (Павлова 52.4%, ДЕДАЛ 13.1%, АИТК/Жук 12.5% each, Туляков 7.0%, Бабурин 2.5%) | 2025-12-31 | Таблица 5.8.1 «Сведения об акционерах» in the entity's own FY2025 БФО filing (already in data/sources/, РЕСУРС_БФО_7714473012_2025_20260817.zip -- Пояснения PDF, p.34). Sum of nominal values (76 336 руб.) matches entities.json's existing charter_capital field exactly. [s0324] |
+
 ### Charter capital
 
 | Value | As of | Note |
@@ -93,13 +99,30 @@
 
 ## Principals & persons of interest
 
+### Жук Виталий Александрович
+
+- **ИНН:** 781422806104
+- Акционер (12.5%) и Член Совета директоров
+- `sanctions lead`
+
 ### Рогозин Алексей Дмитриевич
 
 ![Рогозин Алексей Дмитриевич](../images/rogozin-aleksey-dmitrievich_portrait_rupep.jpg)
 - **DOB:** 21.09.1983
 - **ИНН:** 770301599800
-- Председатель консультативного совета / Chairman of the Advisory Council
+- Председатель консультативного совета / Chairman of the Advisory Council (superseded by a Совет директоров seat per the entity's FY2025 filing, s0324 -- exact transition date not stated in either source, 'to' left null rather than guessed)
+- Член Совета директоров; также долгосрочный займодавец (₽302 тыс., 6.5%, погашение по предъявлении)
 - `sanctions lead`
+
+### Басов Алексей Николаевич
+
+- **ИНН:** 774305253744
+- Член Совета директоров
+
+### Исаенко Сергей Васильевич
+
+- **ИНН:** 772914520916
+- Член Совета директоров
 
 ## Open questions
 

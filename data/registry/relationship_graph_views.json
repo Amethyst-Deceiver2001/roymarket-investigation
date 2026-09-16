@@ -306,7 +306,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 15
+          "degree": 26
         },
         {
           "id": "ao-fabrika-im-sovetskoy-armii",
@@ -733,6 +733,14 @@
           "kind": "person",
           "label": "Бархатов Алексей Владимирович",
           "name_latin": "Barkhatov Aleksey Vladimirovich",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "basov-aleksey-nikolaevich",
+          "kind": "person",
+          "label": "Басов Алексей Николаевич",
+          "name_latin": null,
           "sanctioned": false,
           "degree": 1
         },
@@ -2141,6 +2149,14 @@
           "legal_form": "ИП",
           "variant": "defensive",
           "degree": 8
+        },
+        {
+          "id": "isaenko-sergey-vasilevich",
+          "kind": "person",
+          "label": "Исаенко Сергей Васильевич",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
         },
         {
           "id": "ivan-igorevich-karabinskiy",
@@ -4676,7 +4692,7 @@
           "label": "Павлова Татьяна Викторовна",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "penkov-andrey-anatolevich",
@@ -9489,7 +9505,7 @@
           "label": "Рогозин Алексей Дмитриевич",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "rogozin-dmitriy-olegovich",
@@ -9965,6 +9981,12 @@
           "id": "stub::522",
           "kind": "unresolved",
           "label": "522",
+          "degree": 1
+        },
+        {
+          "id": "stub::6 акционеров",
+          "kind": "unresolved",
+          "label": "6 акционеров",
           "degree": 1
         },
         {
@@ -10979,7 +11001,7 @@
           "label": "Жук Виталий Александрович",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 3
+          "degree": 5
         },
         {
           "id": "zhukov-andrey-viktorovich",
@@ -12682,6 +12704,17 @@
           "type": "role",
           "label": "co-inventor (patent RU2820521C1)",
           "source_id": "s1038",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "basov-aleksey-nikolaevich",
+          "target": "ao-ekolibri",
+          "type": "role",
+          "label": "Член Совета директоров",
+          "source_id": "s0324",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -16972,6 +17005,17 @@
           "type": "produces",
           "label": null,
           "source_id": "s1459",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "isaenko-sergey-vasilevich",
+          "target": "ao-ekolibri",
+          "type": "role",
+          "label": "Член Совета директоров",
+          "source_id": "s0324",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -23053,8 +23097,19 @@
           "source": "rogozin-aleksey-dmitrievich",
           "target": "ao-ekolibri",
           "type": "role",
-          "label": "Председатель консультативного совета / Chairman of the Advisory Council",
+          "label": "Председатель консультативного совета / Chairman of the Advisory Council (superseded by a Совет директоров seat per the entity's FY2025 filing, s0324 -- exact transition date not stated in either source, 'to' left null rather than guessed)",
           "source_id": "s0962",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "rogozin-aleksey-dmitrievich",
+          "target": "ao-ekolibri",
+          "type": "role",
+          "label": "Член Совета директоров; также долгосрочный займодавец (₽302 тыс., 6.5%, погашение по предъявлении)",
+          "source_id": "s0324",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -24508,6 +24563,17 @@
           "label": "former founder",
           "source_id": "s0218",
           "as_of": "2026-07-14",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
+          "source": "stub::6 акционеров",
+          "target": "ao-ekolibri",
+          "type": "founded",
+          "label": "former founder (52.4%)",
+          "source_id": "s0324",
+          "as_of": "2025-12-31",
           "weight": 1.0,
           "temporal_status": "historical",
           "confidence": null
@@ -26758,6 +26824,17 @@
         },
         {
           "source": "zhuk-vitaliy-aleksandrovich",
+          "target": "ao-ekolibri",
+          "type": "role",
+          "label": "Акционер (12.5%) и Член Совета директоров",
+          "source_id": "s0324",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "zhuk-vitaliy-aleksandrovich",
           "target": "ao-kotlin-novator",
           "type": "directs",
           "label": null,
@@ -27024,7 +27101,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 15
+          "degree": 26
         },
         {
           "id": "ao-fabrika-im-sovetskoy-armii",
@@ -29048,7 +29125,7 @@
           "label": "Павлова Татьяна Викторовна",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "petrov-vladimir-alekseevich",
@@ -29088,7 +29165,7 @@
           "label": "Рогозин Алексей Дмитриевич",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "saidov-asker-kazbekovich",
@@ -29538,7 +29615,7 @@
           "label": "Жук Виталий Александрович",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 3
+          "degree": 5
         }
       ],
       "edges": [
@@ -33693,7 +33770,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 15
+          "degree": 26
         },
         {
           "id": "ao-korporatsiya-sinergiya",
@@ -36588,6 +36665,14 @@
           "degree": 5
         },
         {
+          "id": "pavlova-tatyana-viktorovna",
+          "kind": "person",
+          "label": "Павлова Татьяна Викторовна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 3
+        },
+        {
           "id": "petr-fradkov",
           "kind": "person",
           "label": "Пётр Фрадков",
@@ -38518,7 +38603,7 @@
           "label": "Рогозин Алексей Дмитриевич",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "rudenko-dmitriy-aleksandrovich",
@@ -38821,6 +38906,12 @@
           "degree": 1
         },
         {
+          "id": "stub::аитк",
+          "kind": "unresolved",
+          "label": "ООО «АИТК»",
+          "degree": 1
+        },
+        {
           "id": "stub::аквамарин-4523",
           "kind": "unresolved",
           "label": "ООО «АКВАМАРИН-4523»",
@@ -38854,6 +38945,12 @@
           "id": "stub::аякс",
           "kind": "unresolved",
           "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЯКС\"",
+          "degree": 1
+        },
+        {
+          "id": "stub::бабурин виктор игоревич",
+          "kind": "unresolved",
+          "label": "Бабурин Виктор Игоревич",
           "degree": 1
         },
         {
@@ -38998,6 +39095,12 @@
           "id": "stub::дар",
           "kind": "unresolved",
           "label": "Фонд «ДАР»",
+          "degree": 1
+        },
+        {
+          "id": "stub::дедал",
+          "kind": "unresolved",
+          "label": "ООО «ДЕДАЛ»",
           "degree": 1
         },
         {
@@ -39319,6 +39422,12 @@
           "degree": 2
         },
         {
+          "id": "stub::туляков александр владимирович",
+          "kind": "unresolved",
+          "label": "Туляков Александр Владимирович",
+          "degree": 1
+        },
+        {
           "id": "stub::управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай",
           "kind": "unresolved",
           "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УПРАВЛЯЮЩАЯ КОМПАНИЯ ИННОВАЦИОННОГО НАУЧНО- ТЕХНОЛОГИЧЕСКОГО ЦЕНТРА \"ИНТЕЛЛЕКТУАЛЬНАЯ ЭЛЕКТРОНИКА - ВАЛДАЙ\"",
@@ -39593,7 +39702,7 @@
           "label": "Жук Виталий Александрович",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 3
+          "degree": 5
         }
       ],
       "edges": [
@@ -44570,6 +44679,17 @@
           "confidence": null
         },
         {
+          "source": "pavlova-tatyana-viktorovna",
+          "target": "ao-ekolibri",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "petr-fradkov",
           "target": "pao-bank-psb",
           "type": "role",
@@ -45560,6 +45680,17 @@
           "confidence": null
         },
         {
+          "source": "stub::аитк",
+          "target": "ao-ekolibri",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "stub::аквамарин-4523",
           "target": "ooo-tstp-tsifrovaya-transportnaya-platforma",
           "type": "founded",
@@ -45628,6 +45759,17 @@
         {
           "source": "stub::аякс",
           "target": "ooo-ayaks-tekhnologii",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::бабурин виктор игоревич",
+          "target": "ao-ekolibri",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -45914,6 +46056,17 @@
         {
           "source": "stub::дар",
           "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::дедал",
+          "target": "ao-ekolibri",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -46517,6 +46670,17 @@
           "confidence": null
         },
         {
+          "source": "stub::туляков александр владимирович",
+          "target": "ao-ekolibri",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "stub::управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай",
           "target": "ano-npts-ushkuynik",
           "type": "founded",
@@ -47038,6 +47202,17 @@
           "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
           "type": "role",
           "label": "Член приемочной комиссии, майор, ФГКУ «ЦСООР «Лидер»»",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "zhuk-vitaliy-aleksandrovich",
+          "target": "ao-ekolibri",
+          "type": "founded",
+          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,

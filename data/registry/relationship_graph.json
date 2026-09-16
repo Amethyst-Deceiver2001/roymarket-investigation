@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1431,
-  "edge_count": 2119,
-  "unresolved_count": 177,
+  "node_count": 1436,
+  "edge_count": 2130,
+  "unresolved_count": 182,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -355,7 +355,7 @@
       "sanctioned": true,
       "legal_form": "АО",
       "variant": null,
-      "degree": 15
+      "degree": 26
     },
     {
       "id": "ao-fabrika-im-sovetskoy-armii",
@@ -811,7 +811,7 @@
       "label": "Басов Алексей Николаевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "batozhargalov-buyanto-batorovich",
@@ -2385,7 +2385,7 @@
       "label": "Исаенко Сергей Васильевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 0
+      "degree": 1
     },
     {
       "id": "ivan-igorevich-karabinskiy",
@@ -5145,7 +5145,7 @@
       "label": "Павлова Татьяна Викторовна",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "penkov-andrey-anatolevich",
@@ -11819,7 +11819,7 @@
       "label": "Рогозин Алексей Дмитриевич",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "rogozin-dmitriy-olegovich",
@@ -12418,6 +12418,12 @@
       "degree": 1
     },
     {
+      "id": "stub::6 акционеров",
+      "kind": "unresolved",
+      "label": "6 акционеров",
+      "degree": 1
+    },
+    {
       "id": "stub::70-100% белоглазова",
       "kind": "unresolved",
       "label": "70-100% Белоглазова",
@@ -12508,6 +12514,12 @@
       "degree": 1
     },
     {
+      "id": "stub::аитк",
+      "kind": "unresolved",
+      "label": "ООО «АИТК»",
+      "degree": 1
+    },
+    {
       "id": "stub::аквамарин-4523",
       "kind": "unresolved",
       "label": "ООО «АКВАМАРИН-4523»",
@@ -12547,6 +12559,12 @@
       "id": "stub::аякс",
       "kind": "unresolved",
       "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЯКС\"",
+      "degree": 1
+    },
+    {
+      "id": "stub::бабурин виктор игоревич",
+      "kind": "unresolved",
+      "label": "Бабурин Виктор Игоревич",
       "degree": 1
     },
     {
@@ -12757,6 +12775,12 @@
       "id": "stub::дар",
       "kind": "unresolved",
       "label": "Фонд «ДАР»",
+      "degree": 1
+    },
+    {
+      "id": "stub::дедал",
+      "kind": "unresolved",
+      "label": "ООО «ДЕДАЛ»",
       "degree": 1
     },
     {
@@ -13286,6 +13310,12 @@
       "kind": "unresolved",
       "label": "Тращёнок Людмила Ефимовна",
       "degree": 2
+    },
+    {
+      "id": "stub::туляков александр владимирович",
+      "kind": "unresolved",
+      "label": "Туляков Александр Владимирович",
+      "degree": 1
     },
     {
       "id": "stub::управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай",
@@ -14175,7 +14205,7 @@
       "label": "Жук Виталий Александрович",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 3
+      "degree": 5
     },
     {
       "id": "zhukov-andrey-viktorovich",
@@ -16670,6 +16700,17 @@
       "type": "role",
       "label": "co-inventor (patent RU2820521C1)",
       "source_id": "s1038",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "basov-aleksey-nikolaevich",
+      "target": "ao-ekolibri",
+      "type": "role",
+      "label": "Член Совета директоров",
+      "source_id": "s0324",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21939,6 +21980,17 @@
       "type": "produces",
       "label": null,
       "source_id": "s1459",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "isaenko-sergey-vasilevich",
+      "target": "ao-ekolibri",
+      "type": "role",
+      "label": "Член Совета директоров",
+      "source_id": "s0324",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -30360,6 +30412,17 @@
       "confidence": null
     },
     {
+      "source": "pavlova-tatyana-viktorovna",
+      "target": "ao-ekolibri",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "penkov-andrey-anatolevich",
       "target": "ao-nii-stt",
       "type": "role",
@@ -31540,8 +31603,19 @@
       "source": "rogozin-aleksey-dmitrievich",
       "target": "ao-ekolibri",
       "type": "role",
-      "label": "Председатель консультативного совета / Chairman of the Advisory Council",
+      "label": "Председатель консультативного совета / Chairman of the Advisory Council (superseded by a Совет директоров seat per the entity's FY2025 filing, s0324 -- exact transition date not stated in either source, 'to' left null rather than guessed)",
       "source_id": "s0962",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "rogozin-aleksey-dmitrievich",
+      "target": "ao-ekolibri",
+      "type": "role",
+      "label": "Член Совета директоров; также долгосрочный займодавец (₽302 тыс., 6.5%, погашение по предъявлении)",
+      "source_id": "s0324",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -33649,6 +33723,17 @@
       "confidence": null
     },
     {
+      "source": "stub::6 акционеров",
+      "target": "ao-ekolibri",
+      "type": "founded",
+      "label": "former founder (52.4%)",
+      "source_id": "s0324",
+      "as_of": "2025-12-31",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
       "source": "stub::70-100% белоглазова",
       "target": "ooo-trimiks-bulat-3mx",
       "type": "founded",
@@ -33836,6 +33921,17 @@
       "confidence": null
     },
     {
+      "source": "stub::аитк",
+      "target": "ao-ekolibri",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "stub::аквамарин-4523",
       "target": "ooo-tstp-tsifrovaya-transportnaya-platforma",
       "type": "founded",
@@ -33981,6 +34077,17 @@
     {
       "source": "stub::аякс",
       "target": "ooo-ayaks-tekhnologii",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::бабурин виктор игоревич",
+      "target": "ao-ekolibri",
       "type": "founded",
       "label": null,
       "source_id": null,
@@ -34454,6 +34561,17 @@
     {
       "source": "stub::дар",
       "target": "fond-nasha-pravda",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::дедал",
+      "target": "ao-ekolibri",
       "type": "founded",
       "label": null,
       "source_id": null,
@@ -35774,6 +35892,17 @@
     {
       "source": "stub::тращёнок людмила ефимовна",
       "target": "gk-logos",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::туляков александр владимирович",
+      "target": "ao-ekolibri",
       "type": "founded",
       "label": null,
       "source_id": null,
@@ -37401,6 +37530,28 @@
     },
     {
       "source": "zhuk-vitaliy-aleksandrovich",
+      "target": "ao-ekolibri",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "zhuk-vitaliy-aleksandrovich",
+      "target": "ao-ekolibri",
+      "type": "role",
+      "label": "Акционер (12.5%) и Член Совета директоров",
+      "source_id": "s0324",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "zhuk-vitaliy-aleksandrovich",
       "target": "ao-kotlin-novator",
       "type": "directs",
       "label": null,
@@ -37567,6 +37718,13 @@
       ]
     },
     {
+      "id": "stub::6 акционеров",
+      "raw_name": "6 акционеров",
+      "contexts": [
+        "former founder of ao-ekolibri"
+      ]
+    },
+    {
       "id": "stub::70-100% белоглазова",
       "raw_name": "70-100% Белоглазова",
       "contexts": [
@@ -37674,6 +37832,13 @@
       ]
     },
     {
+      "id": "stub::аитк",
+      "raw_name": "ООО «АИТК»",
+      "contexts": [
+        "founder of ao-ekolibri"
+      ]
+    },
+    {
       "id": "stub::аквамарин-4523",
       "raw_name": "ООО «АКВАМАРИН-4523»",
       "contexts": [
@@ -37725,6 +37890,13 @@
       "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЯКС\"",
       "contexts": [
         "founder of ooo-ayaks-tekhnologii"
+      ]
+    },
+    {
+      "id": "stub::бабурин виктор игоревич",
+      "raw_name": "Бабурин Виктор Игоревич",
+      "contexts": [
+        "founder of ao-ekolibri"
       ]
     },
     {
@@ -37975,6 +38147,13 @@
       "raw_name": "Фонд «ДАР»",
       "contexts": [
         "founder of fond-nasha-pravda"
+      ]
+    },
+    {
+      "id": "stub::дедал",
+      "raw_name": "ООО «ДЕДАЛ»",
+      "contexts": [
+        "founder of ao-ekolibri"
       ]
     },
     {
@@ -38613,6 +38792,13 @@
       "contexts": [
         "founder of gk-logos",
         "director of gk-logos"
+      ]
+    },
+    {
+      "id": "stub::туляков александр владимирович",
+      "raw_name": "Туляков Александр Владимирович",
+      "contexts": [
+        "founder of ao-ekolibri"
       ]
     },
     {

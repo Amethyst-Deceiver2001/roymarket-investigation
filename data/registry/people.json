@@ -5105,6 +5105,14 @@
         "source_id": null,
         "title": null,
         "to": null
+      },
+      {
+        "entity_slug": "ao-ekolibri",
+        "entity_name": "АО «Эколибри»",
+        "title": "Акционер (12.5%) и Член Совета директоров",
+        "from": null,
+        "to": null,
+        "source_id": "s0324"
       }
     ],
     "sanctions": [
@@ -5160,7 +5168,8 @@
     "_corrected": [
       "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
       "2026-08-24: resolved this person's `_candidate` role at АО «Котлин-Новатор» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-kotlin-novator, source s0463) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
-      "2026-09-07: verification backlog closure — identity already confirmed by АО «Котлин-Новатор»'s (ao-kotlin-novator) own director_history entry (s0463), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+      "2026-09-07: verification backlog closure — identity already confirmed by АО «Котлин-Новатор»'s (ao-kotlin-novator) own director_history entry (s0463), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+      "[2026-09-16] Added sourced Эколибри shareholder (12.5%) + board-seat role per s0324 (personal ИНН 781422806104, matches the entity's existing person record exactly). NOT resolving the separate docs.html-flagged question of whether this is the same Жук as Котлин-Новатор's -- both existing roles (Котлин-Новатор, Клеверкоптер) left untouched, this is purely additive."
     ],
     "_verified_against": "s0463 -- АО «Котлин-Новатор»'s own primary-source founding/EGRUL document, naming Жук Виталий Александрович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
@@ -19002,7 +19011,7 @@
       {
         "entity_slug": "ao-ekolibri",
         "source_id": "s0962",
-        "title": "Председатель консультативного совета / Chairman of the Advisory Council"
+        "title": "Председатель консультативного совета / Chairman of the Advisory Council (superseded by a Совет директоров seat per the entity's FY2025 filing, s0324 -- exact transition date not stated in either source, 'to' left null rather than guessed)"
       },
       {
         "entity_name": "АНО «Центр развития транспортных технологий»",
@@ -19011,6 +19020,14 @@
         "from": null,
         "to": null,
         "source_id": "s6867"
+      },
+      {
+        "entity_slug": "ao-ekolibri",
+        "entity_name": "АО «Эколибри»",
+        "title": "Член Совета директоров; также долгосрочный займодавец (₽302 тыс., 6.5%, погашение по предъявлении)",
+        "from": null,
+        "to": null,
+        "source_id": "s0324"
       }
     ],
     "sanctions": [
@@ -19074,7 +19091,8 @@
       "GUR independently states Эколибри's advisory board is \"headed by the son of the former head of Roscosmos, Alexei Rogozin\" — a second, independent confirmation alongside the existing press-sourced note, sufficient to move this role out of _candidate/unverified status.",
       "2026-08-24 opensanctions people cross-reference pass: score-1.0 exact match, well-corroborated public figure, explicit 'sanction' topic (not just linked).",
       "2026-08-26: rupep.org profile (s2607) confirms inn_personal 770301599800 already on file (source s0000-series OpenSanctions match), adds dob 21.09.1983 and headshot. RuPEP categorizes him 'Член семьи' (family member -- of Dmitry Rogozin) rather than a PEP in his own right; no birthplace given on the profile.",
-      "2026-09-14: screen_upr_uchr.py (manual-captcha run) other_entities scan found this director link via egrul.nalog.ru open API; the entity's own director_history already carries s6867 naming this person, but roles[] had no reciprocal entry — added it, same source already on file."
+      "2026-09-14: screen_upr_uchr.py (manual-captcha run) other_entities scan found this director link via egrul.nalog.ru open API; the entity's own director_history already carries s6867 naming this person, but roles[] had no reciprocal entry — added it, same source already on file.",
+      "[2026-09-16] Per _docs_registry_gap_list item 12: added sourced Эколибри Совет директоров seat + related-party long-term-loan disclosure, both per s0324 (personal ИНН 770301599800). Annotated the existing s0962 advisory-council role as likely superseded rather than removing it -- neither source states an exact transition date, so 'to' is left null per no-guessing-no-placeholders discipline; a human should resolve which is current if it matters for the brief."
     ],
     "_verified_against": "war-sanctions.gur.gov.ua/en/uav/companies/14291 (s0962), corroborating the prior Vedomosti press mention already in _raw",
     "opensanctions_matches": [
@@ -19163,25 +19181,15 @@
     "dob": null,
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "774305253744",
     "roles": [
       {
-        "entity_slug": null,
-        "entity_name": "ООО «ДЕДАЛ»",
-        "title": null,
+        "entity_slug": "ao-ekolibri",
+        "entity_name": "АО «Эколибри»",
+        "title": "Член Совета директоров",
         "from": null,
         "to": null,
-        "source_id": null,
-        "_candidate": true
-      },
-      {
-        "entity_slug": null,
-        "entity_name": "ООО «АИТК»",
-        "title": null,
-        "from": null,
-        "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s0324"
       }
     ],
     "sanctions": [],
@@ -19210,7 +19218,8 @@
       }
     ],
     "_corrected": [
-      "2026-08-24 opensanctions people cross-reference pass: ambiguous, logged as open question rather than promoted."
+      "2026-08-24 opensanctions people cross-reference pass: ambiguous, logged as open question rather than promoted.",
+      "[2026-09-16] Per _docs_registry_gap_list item 10: the two _candidate ДЕДАЛ/АИТК role stubs were a mis-read -- ДЕДАЛ/АИТК are shareholders IN АО «Эколибри», not entities Басов himself directs. The entity's own FY2025 БФО filing (s0324, 'Перечень связанных сторон', p.45) instead names him directly as a Член Совета директоров of Эколибри, with personal ИНН 774305253744. Replaced the two unsourced candidate stubs with this one real, sourced role."
     ],
     "_verified_against": [],
     "opensanctions_matches": [
@@ -19310,25 +19319,15 @@
     "dob": null,
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "772914520916",
     "roles": [
       {
-        "entity_slug": null,
-        "entity_name": "ООО «ДЕДАЛ»",
-        "title": null,
+        "entity_slug": "ao-ekolibri",
+        "entity_name": "АО «Эколибри»",
+        "title": "Член Совета директоров",
         "from": null,
         "to": null,
-        "source_id": null,
-        "_candidate": true
-      },
-      {
-        "entity_slug": null,
-        "entity_name": "ООО «АИТК»",
-        "title": null,
-        "from": null,
-        "to": null,
-        "source_id": null,
-        "_candidate": true
+        "source_id": "s0324"
       }
     ],
     "sanctions": [],
@@ -19351,7 +19350,8 @@
       ]
     },
     "_corrected": [
-      "2026-08-24 OpenSanctions screening: the only returned candidate is \"Сергей Васильевич Савенков\" — a DIFFERENT surname from this registry's Исаенко (score only 0.86, no notes, no DOB). REJECTED as a false positive — surname collision (Исаенко vs Савенков), not the same person."
+      "2026-08-24 OpenSanctions screening: the only returned candidate is \"Сергей Васильевич Савенков\" — a DIFFERENT surname from this registry's Исаенко (score only 0.86, no notes, no DOB). REJECTED as a false positive — surname collision (Исаенко vs Савенков), not the same person.",
+      "[2026-09-16] Same pattern as basov-aleksey-nikolaevich (see that record's why[] for detail): ДЕДАЛ/АИТК candidate stubs replaced with the real sourced Эколибри Совет директоров seat, per s0324 (personal ИНН 772914520916)."
     ],
     "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
     "opensanctions_matches": [

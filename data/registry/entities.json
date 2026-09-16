@@ -43792,8 +43792,58 @@
         "value": "Павлова Татьяна Викторовна"
       }
     ],
-    "founders": [],
-    "founders_history": [],
+    "founders": [
+      {
+        "name": "Павлова Татьяна Викторовна",
+        "inn_personal": "772158414345",
+        "nominal_value": 40000,
+        "share_percent": 52.4,
+        "source_id": "s0324"
+      },
+      {
+        "name": "ООО «АИТК»",
+        "inn": "3663143016",
+        "nominal_value": 9542,
+        "share_percent": 12.5,
+        "source_id": "s0324"
+      },
+      {
+        "name": "Жук Виталий Александрович",
+        "inn_personal": "781422806104",
+        "nominal_value": 9542,
+        "share_percent": 12.5,
+        "source_id": "s0324"
+      },
+      {
+        "name": "ООО «ДЕДАЛ»",
+        "inn": "9721137992",
+        "nominal_value": 10000,
+        "share_percent": 13.1,
+        "source_id": "s0324"
+      },
+      {
+        "name": "Туляков Александр Владимирович",
+        "inn_personal": "772632399813",
+        "nominal_value": 5344,
+        "share_percent": 7.0,
+        "source_id": "s0324"
+      },
+      {
+        "name": "Бабурин Виктор Игоревич",
+        "inn_personal": "774305540227",
+        "nominal_value": 1908,
+        "share_percent": 2.5,
+        "source_id": "s0324"
+      }
+    ],
+    "founders_history": [
+      {
+        "value": "6 акционеров (Павлова 52.4%, ДЕДАЛ 13.1%, АИТК/Жук 12.5% each, Туляков 7.0%, Бабурин 2.5%)",
+        "as_of": "2025-12-31",
+        "source_id": "s0324",
+        "note": "Таблица 5.8.1 «Сведения об акционерах» in the entity's own FY2025 БФО filing (already in data/sources/, РЕСУРС_БФО_7714473012_2025_20260817.zip -- Пояснения PDF, p.34). Sum of nominal values (76 336 руб.) matches entities.json's existing charter_capital field exactly."
+      }
+    ],
     "charter_capital": 76336,
     "charter_capital_history": [
       {
@@ -44122,7 +44172,8 @@
       "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14291) ID-confirmed via ИНН 7714473012 — exact match, screen_gur.py sweep, 2026-08-24. Corroborates existing ECOLIBRI eVTOL / P-75 product entries. GUR states the company's advisory board is headed by \"the son of the former head of Roscosmos, Alexei Rogozin\" — this is a second independent confirmation (alongside the existing press-sourced Vedomosti note already in people.json) of Рогозин Алексей Дмитриевич's chairmanship of Эколибри's advisory council.",
       "2026-09-07: merged dormant duplicate correction key '7714473012' into this slug-keyed entry (registry-hardening pass, no field conflict).",
       "2026-09-07: founding-document bundle (s6908, five Изменения filings 2024-2026) OCR'd and read in full -- recovered the intermediate ₽50,000 capital step (existing history jumped straight to the current ₽76,336 with no earlier data point) and a formal ИНТЦ «Аэрокосмическая инновационная долина» residency declaration written directly into the charter's purpose clause -- new beyond the existing gisp.gov.ru/rk.2035.university state_programs entries, which only showed a product-catalogue listing, not this charter-level status change.",
-      "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 10 products total after this pass."
+      "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 10 products total after this pass.",
+      "[2026-09-16] Backfilled full founders/founders_history from the entity's own already-archived FY2025 БФО filing (s0324), closing a gap flagged in data/registry/_docs_registry_gap_list_2026-09-16.md item 13. The filing's 'Перечень связанных сторон' table (p.45) also lists the 5-member Совет директоров as of 31.12.2025 (Рогозин, Павлова, Жук, Басов, Исаенко) -- Павлова's GD role already recorded separately; the other 4 board seats are wired on the person side via corrections_people.json (this same pass)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "_egrul_crosschecked": "2026-08-22",
