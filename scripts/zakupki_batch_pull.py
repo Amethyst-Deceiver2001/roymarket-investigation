@@ -270,7 +270,7 @@ def cmd_scan(args) -> int:
     ok = hits = zero = failed = skipped = 0
     for i, t in enumerate(targets, 1):
         inn = t["inn"]
-        if not args.force and log.get(inn, {}).get("date") == today:
+        if not args.force and inn in log:
             skipped += 1
             continue
 
