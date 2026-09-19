@@ -32,6 +32,9 @@ the Artifact `files` parameter in the publish call), not inlined as
 base64, referenced here by their eventual served path under images/.
 """
 
+import json
+
+NODE_COUNT = json.load(open("data/registry/relationship_graph.json", encoding="utf-8"))["node_count"]
 TITLE = "Five Residents"
 
 CASES = [
@@ -742,7 +745,7 @@ footer.note {{
   {CASES_HTML}
 
   <footer class="note">
-    Positions are laid out for legibility, not computed — they carry no evidentiary meaning, same convention as the live graph. Every node and edge shown here is drawn from <code>data/registry/relationship_graph.json</code>; product icons reflect a real keyword classification from <code>scripts/classify_product_icon.py</code>, never a guess (see the generator's own note on which products were left unlabeled). Every person, company, and product name is a link to its full sourced profile page. Fainter, dashed ties mark a relationship that shares only a founder, not a product line or ЦБСТ tie -- weight in these diagrams tracks how central a tie is to the case, not just whether one exists. Photos and quotes are the subjects' own public material, not stock imagery. For the full 1,430-node registry — search, filters, every citation — see the live <a href="https://claude.ai/artifact/2m4hhbSUG9XqNRvU5K1Ha9">РОЙ.МАРКЕТ Network Graph</a>.
+    Positions are laid out for legibility, not computed — they carry no evidentiary meaning, same convention as the live graph. Every node and edge shown here is drawn from <code>data/registry/relationship_graph.json</code>; product icons reflect a real keyword classification from <code>scripts/classify_product_icon.py</code>, never a guess (see the generator's own note on which products were left unlabeled). Every person, company, and product name is a link to its full sourced profile page. Fainter, dashed ties mark a relationship that shares only a founder, not a product line or ЦБСТ tie -- weight in these diagrams tracks how central a tie is to the case, not just whether one exists. Photos and quotes are the subjects' own public material, not stock imagery. For the full {NODE_COUNT:,}-node registry — search, filters, every citation — see the live <a href="https://claude.ai/artifact/2m4hhbSUG9XqNRvU5K1Ha9">РОЙ.МАРКЕТ Network Graph</a>.
   </footer>
 </div>
 </body></html>'''
