@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1075,
-  "edge_count": 1817,
-  "unresolved_count": 98,
+  "node_count": 1068,
+  "edge_count": 1810,
+  "unresolved_count": 91,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -2689,7 +2689,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 10
+      "degree": 9
     },
     {
       "id": "ooo-arkodim-pro",
@@ -3025,7 +3025,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-kingpro",
@@ -3361,7 +3361,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "ooo-pk-stalnoy-kupol",
@@ -3625,7 +3625,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": "dual",
-      "degree": 15
+      "degree": 13
     },
     {
       "id": "ooo-trimiks-bulat-3mx",
@@ -3781,7 +3781,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 11
+      "degree": 9
     },
     {
       "id": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
@@ -10127,6 +10127,12 @@
       "degree": 5
     },
     {
+      "id": "stub::inn-232204433988",
+      "kind": "unresolved",
+      "label": "Хатьянов Сергей Валерьевич",
+      "degree": 1
+    },
+    {
       "id": "stub::inn-3663143016",
       "kind": "unresolved",
       "label": "ООО «АИТК»",
@@ -10211,12 +10217,6 @@
       "degree": 1
     },
     {
-      "id": "stub::абрамов ю.а",
-      "kind": "unresolved",
-      "label": "Абрамов Ю.А",
-      "degree": 1
-    },
-    {
       "id": "stub::абрамов юрий александрович",
       "kind": "unresolved",
       "label": "Абрамов Юрий Александрович",
@@ -10243,7 +10243,7 @@
     {
       "id": "stub::александр паничев",
       "kind": "unresolved",
-      "label": "Александр Паничев (b. 1995)",
+      "label": "Александр Паничев",
       "degree": 1
     },
     {
@@ -10286,12 +10286,6 @@
       "id": "stub::белоглазова",
       "kind": "unresolved",
       "label": "Белоглазова",
-      "degree": 1
-    },
-    {
-      "id": "stub::бойко а.ю",
-      "kind": "unresolved",
-      "label": "Бойко А.Ю",
       "degree": 1
     },
     {
@@ -10343,12 +10337,6 @@
       "degree": 1
     },
     {
-      "id": "stub::григорьев д.е",
-      "kind": "unresolved",
-      "label": "Григорьев Д.Е",
-      "degree": 1
-    },
-    {
       "id": "stub::григорьев дмитрий евгеньевич",
       "kind": "unresolved",
       "label": "Григорьев Дмитрий Евгеньевич",
@@ -10370,12 +10358,6 @@
       "id": "stub::емец виктор валентинович",
       "kind": "unresolved",
       "label": "Емец Виктор Валентинович",
-      "degree": 1
-    },
-    {
-      "id": "stub::ермоленко и.в",
-      "kind": "unresolved",
-      "label": "Ермоленко И.В",
       "degree": 1
     },
     {
@@ -10413,6 +10395,12 @@
       "kind": "unresolved",
       "label": "Коган Михаил Александрович",
       "degree": 2
+    },
+    {
+      "id": "stub::кронштадт-техник",
+      "kind": "unresolved",
+      "label": "ООО «Кронштадт-Техник»",
+      "degree": 1
     },
     {
       "id": "stub::курбанов руслан минтарович",
@@ -10547,12 +10535,6 @@
       "degree": 2
     },
     {
-      "id": "stub::стартап- студия университета лобачевского",
-      "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАРТАП- СТУДИЯ УНИВЕРСИТЕТА ЛОБАЧЕВСКОГО\"",
-      "degree": 1
-    },
-    {
       "id": "stub::степаева мария ивановна",
       "kind": "unresolved",
       "label": "Степаева Мария Ивановна",
@@ -10589,12 +10571,6 @@
       "degree": 1
     },
     {
-      "id": "stub::управляющая организация: ооо кронштадт-техник",
-      "kind": "unresolved",
-      "label": "Управляющая организация: ООО «Кронштадт-Техник»",
-      "degree": 1
-    },
-    {
       "id": "stub::фадеев игорь анатольевич",
       "kind": "unresolved",
       "label": "Фадеев Игорь Анатольевич",
@@ -10613,12 +10589,6 @@
       "degree": 1
     },
     {
-      "id": "stub::фомин д.в",
-      "kind": "unresolved",
-      "label": "Фомин Д.В",
-      "degree": 1
-    },
-    {
       "id": "stub::фомин дмитрий вадимович",
       "kind": "unresolved",
       "label": "Фомин Дмитрий Вадимович",
@@ -10631,21 +10601,9 @@
       "degree": 2
     },
     {
-      "id": "stub::хасиятуллин с.н",
-      "kind": "unresolved",
-      "label": "Хасиятуллин С.Н",
-      "degree": 1
-    },
-    {
       "id": "stub::хасиятуллин станислав николаевич",
       "kind": "unresolved",
       "label": "Хасиятуллин Станислав Николаевич",
-      "degree": 1
-    },
-    {
-      "id": "stub::хатьянов сергей валерьевич",
-      "kind": "unresolved",
-      "label": "Хатьянов Сергей Валерьевич (ИНН 232204433988)",
       "degree": 1
     },
     {
@@ -28396,6 +28354,17 @@
       "confidence": null
     },
     {
+      "source": "stub::inn-232204433988",
+      "target": "ooo-laboratoriya-yangelya",
+      "type": "directs",
+      "label": null,
+      "source_id": "s7362",
+      "as_of": "2026-07-27",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
       "source": "stub::inn-3663143016",
       "target": "ao-ekolibri",
       "type": "founded",
@@ -28422,8 +28391,8 @@
       "target": "ooo-pekhtra",
       "type": "founded",
       "label": null,
-      "source_id": null,
-      "as_of": null,
+      "source_id": "s6720",
+      "as_of": "2024-12-10",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -28594,23 +28563,12 @@
       "confidence": null
     },
     {
-      "source": "stub::абрамов ю.а",
-      "target": "ooo-ti-es-dzhi-grupp",
-      "type": "founded",
-      "label": "35%",
-      "source_id": "s0456",
-      "as_of": "2024-10-29",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
       "source": "stub::абрамов юрий александрович",
       "target": "ooo-ti-es-dzhi-grupp",
       "type": "founded",
       "label": null,
-      "source_id": null,
-      "as_of": null,
+      "source_id": "s0456",
+      "as_of": "2024-10-29",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -28814,23 +28772,12 @@
       "confidence": null
     },
     {
-      "source": "stub::бойко а.ю",
-      "target": "ooo-ti-es-dzhi-grupp",
-      "type": "founded",
-      "label": "49%",
-      "source_id": "s0456",
-      "as_of": "2024-10-29",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
       "source": "stub::бойко антонина юрьевна",
       "target": "ooo-ti-es-dzhi-grupp",
       "type": "founded",
       "label": null,
-      "source_id": null,
-      "as_of": null,
+      "source_id": "s0456",
+      "as_of": "2024-10-29",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -28924,17 +28871,6 @@
       "confidence": null
     },
     {
-      "source": "stub::григорьев д.е",
-      "target": "ooo-investments",
-      "type": "founded",
-      "label": "9.09%",
-      "source_id": "s0223",
-      "as_of": "2026-01-20",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
       "source": "stub::григорьев дмитрий евгеньевич",
       "target": "ao-borey-absorbed-no-longer-exists",
       "type": "directs",
@@ -28972,8 +28908,8 @@
       "target": "ooo-investments",
       "type": "founded",
       "label": null,
-      "source_id": null,
-      "as_of": null,
+      "source_id": "s0223",
+      "as_of": "2026-01-20",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -29012,23 +28948,12 @@
       "confidence": null
     },
     {
-      "source": "stub::ермоленко и.в",
+      "source": "stub::ермоленко илья викторович",
       "target": "ooo-arkodim-2",
       "type": "founded",
       "label": "50%",
       "source_id": "s7446",
       "as_of": "2026-09-14",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
-      "source": "stub::ермоленко илья викторович",
-      "target": "ooo-arkodim-2",
-      "type": "founded",
-      "label": "50%",
-      "source_id": null,
-      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -29141,6 +29066,17 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::кронштадт-техник",
+      "target": "ao-aeromaks",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0949",
+      "as_of": "2026-08-24",
+      "weight": 1.0,
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -29507,17 +29443,6 @@
       "confidence": null
     },
     {
-      "source": "stub::стартап- студия университета лобачевского",
-      "target": "ooo-pekhtra",
-      "type": "founded",
-      "label": "100%",
-      "source_id": "s6720",
-      "as_of": "2024-12-10",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
       "source": "stub::степаева мария ивановна",
       "target": "ooo-praym",
       "type": "directs",
@@ -29628,17 +29553,6 @@
       "confidence": null
     },
     {
-      "source": "stub::управляющая организация: ооо кронштадт-техник",
-      "target": "ao-aeromaks",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0949",
-      "as_of": "2026-08-24",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
       "source": "stub::фадеев игорь анатольевич",
       "target": "ao-pmts-avangard",
       "type": "directs",
@@ -29672,23 +29586,12 @@
       "confidence": null
     },
     {
-      "source": "stub::фомин д.в",
+      "source": "stub::фомин дмитрий вадимович",
       "target": "ooo-zemstroyregistr",
       "type": "founded",
       "label": "33%",
       "source_id": "s7445",
       "as_of": "2026-09-14",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
-      "source": "stub::фомин дмитрий вадимович",
-      "target": "ooo-zemstroyregistr",
-      "type": "founded",
-      "label": "33%",
-      "source_id": null,
-      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -29716,36 +29619,14 @@
       "confidence": null
     },
     {
-      "source": "stub::хасиятуллин с.н",
+      "source": "stub::хасиятуллин станислав николаевич",
       "target": "ooo-zemstroyregistr",
       "type": "founded",
       "label": "33%",
       "source_id": "s7445",
       "as_of": "2026-09-14",
       "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
-      "source": "stub::хасиятуллин станислав николаевич",
-      "target": "ooo-zemstroyregistr",
-      "type": "founded",
-      "label": "33%",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
       "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "stub::хатьянов сергей валерьевич",
-      "target": "ooo-laboratoriya-yangelya",
-      "type": "directs",
-      "label": null,
-      "source_id": "s7362",
-      "as_of": "2026-07-27",
-      "weight": 1.0,
-      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -31082,6 +30963,13 @@
   ],
   "unresolved": [
     {
+      "id": "stub::inn-232204433988",
+      "raw_name": "Хатьянов Сергей Валерьевич",
+      "contexts": [
+        "director of ooo-laboratoriya-yangelya"
+      ]
+    },
+    {
       "id": "stub::inn-3663143016",
       "raw_name": "ООО «АИТК»",
       "contexts": [
@@ -31184,13 +31072,6 @@
       ]
     },
     {
-      "id": "stub::абрамов ю.а",
-      "raw_name": "Абрамов Ю.А",
-      "contexts": [
-        "former founder of ooo-ti-es-dzhi-grupp"
-      ]
-    },
-    {
       "id": "stub::абрамов юрий александрович",
       "raw_name": "Абрамов Юрий Александрович",
       "contexts": [
@@ -31221,7 +31102,7 @@
     },
     {
       "id": "stub::александр паничев",
-      "raw_name": "Александр Паничев (b. 1995)",
+      "raw_name": "Александр Паничев",
       "contexts": [
         "director of kulibin-klub"
       ]
@@ -31277,13 +31158,6 @@
       "raw_name": "Белоглазова",
       "contexts": [
         "former founder of ooo-trimiks-bulat-3mx"
-      ]
-    },
-    {
-      "id": "stub::бойко а.ю",
-      "raw_name": "Бойко А.Ю",
-      "contexts": [
-        "former founder of ooo-ti-es-dzhi-grupp"
       ]
     },
     {
@@ -31343,13 +31217,6 @@
       ]
     },
     {
-      "id": "stub::григорьев д.е",
-      "raw_name": "Григорьев Д.Е",
-      "contexts": [
-        "former founder of ooo-investments"
-      ]
-    },
-    {
       "id": "stub::григорьев дмитрий евгеньевич",
       "raw_name": "Григорьев Дмитрий Евгеньевич",
       "contexts": [
@@ -31377,13 +31244,6 @@
       "raw_name": "Емец Виктор Валентинович",
       "contexts": [
         "director of ooo-vostochnye-vorota-zabaykalsk-manchzhuriya"
-      ]
-    },
-    {
-      "id": "stub::ермоленко и.в",
-      "raw_name": "Ермоленко И.В",
-      "contexts": [
-        "former founder of ooo-arkodim-2"
       ]
     },
     {
@@ -31429,6 +31289,13 @@
       "contexts": [
         "founder of ooo-vizionero",
         "director of ooo-vizionero"
+      ]
+    },
+    {
+      "id": "stub::кронштадт-техник",
+      "raw_name": "ООО «Кронштадт-Техник»",
+      "contexts": [
+        "director of ao-aeromaks"
       ]
     },
     {
@@ -31592,13 +31459,6 @@
       ]
     },
     {
-      "id": "stub::стартап- студия университета лобачевского",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАРТАП- СТУДИЯ УНИВЕРСИТЕТА ЛОБАЧЕВСКОГО\"",
-      "contexts": [
-        "former founder of ooo-pekhtra"
-      ]
-    },
-    {
       "id": "stub::степаева мария ивановна",
       "raw_name": "Степаева Мария Ивановна",
       "contexts": [
@@ -31644,13 +31504,6 @@
       ]
     },
     {
-      "id": "stub::управляющая организация: ооо кронштадт-техник",
-      "raw_name": "Управляющая организация: ООО «Кронштадт-Техник»",
-      "contexts": [
-        "director of ao-aeromaks"
-      ]
-    },
-    {
       "id": "stub::фадеев игорь анатольевич",
       "raw_name": "Фадеев Игорь Анатольевич",
       "contexts": [
@@ -31672,13 +31525,6 @@
       ]
     },
     {
-      "id": "stub::фомин д.в",
-      "raw_name": "Фомин Д.В",
-      "contexts": [
-        "former founder of ooo-zemstroyregistr"
-      ]
-    },
-    {
       "id": "stub::фомин дмитрий вадимович",
       "raw_name": "Фомин Дмитрий Вадимович",
       "contexts": [
@@ -31693,24 +31539,10 @@
       ]
     },
     {
-      "id": "stub::хасиятуллин с.н",
-      "raw_name": "Хасиятуллин С.Н",
-      "contexts": [
-        "former founder of ooo-zemstroyregistr"
-      ]
-    },
-    {
       "id": "stub::хасиятуллин станислав николаевич",
       "raw_name": "Хасиятуллин Станислав Николаевич",
       "contexts": [
         "founder of ooo-zemstroyregistr"
-      ]
-    },
-    {
-      "id": "stub::хатьянов сергей валерьевич",
-      "raw_name": "Хатьянов Сергей Валерьевич (ИНН 232204433988)",
-      "contexts": [
-        "director of ooo-laboratoriya-yangelya"
       ]
     },
     {

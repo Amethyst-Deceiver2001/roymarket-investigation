@@ -85,6 +85,7 @@ _VEHICLE_MOUNTED_RE = re.compile(
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 # Legal-form prefixes are stripped by normalize(), so ООО «X» and АО «X» collide by name;
 # an ИНН written in the same segment disambiguates them.
+_INN_IN_NAME_RE = re.compile(r"\(\s*ИНН\s*(\d{10,12})\s*\)")
 _INN_RE = re.compile(r"ИНН\s*(\d{10})\b")
 
 
@@ -129,10 +130,10 @@ _NOISE_PHRASES = {
     "не раскрыты в егрюл", "участники не раскрыты",
 }
 _ROLE_PREFIX_RE = re.compile(
-    r"^\s*(?:ГЕНЕРАЛЬНЫЙ ДИРЕКТОР|ДИРЕКТОР|ЛИКВИДАТОР)\s*(?:\([^)]*\))?\s*:\s*", re.IGNORECASE)
+    r"^\s*(?:ГЕНЕРАЛЬНЫЙ ДИРЕКТОР|УПРАВЛЯЮЩАЯ ОРГАНИЗАЦИЯ|ДИРЕКТОР|ЛИКВИДАТОР)\s*(?:\([^)]*\))?\s*:\s*", re.IGNORECASE)
 
 
-_NOTE_PAREN_RE = re.compile(r"\s*\((?:confirmed|per |founder,|с \d|\d+/\d+)[^)]*\)")
+_NOTE_PAREN_RE = re.compile(r"\s*\((?:confirmed|per |founder,|с \d|\d+/\d+|b\. ?\d{4}|ИНН)[^)]*\)")
 
 
 def clean_person_ref(raw: str) -> str:
@@ -380,6 +381,9 @@ def build_graph(entities: list[dict], people: list[dict],
     def add_stub(raw_name: str, context: str, inn: str | None = None) -> str | None:
         if is_noise_name(raw_name):
             return None
+        # A personal or company ИНН written into the name ("Хатьянов С.В. (ИНН 2322…)") is
+        # the stronger key, and comes off the label.
+        inn = inn or next(iter(_INN_IN_NAME_RE.findall(raw_name)), None)
         raw_name = _NOTE_PAREN_RE.sub("", raw_name).strip()
         # Key on ИНН when the source gives one: the same company under two names (a
         # renamed managing company, "Мой Капитал" / "Альфа-Капитал АИ", ИНН 7706681026)
@@ -615,23 +619,14 @@ def build_graph(entities: list[dict], people: list[dict],
         return all(_part_ok(w, r) for w, r in zip(rest, given)) and _part_ok(rest[0], given[0])
 
     person_slugs = {p["slug"]: p for p in people}
-    for stub_id in [n for n, node in nodes.items() if node["kind"] == "unresolved"]:
+
+    def merge_stub(stub_id, keep_id):
+        nonlocal edges
         stub_edges = [e for e in edges if stub_id in (e["source"], e["target"])]
-        neighbours = {e["target"] if e["source"] == stub_id else e["source"] for e in stub_edges}
-        candidates = [
-            slug for slug, person in person_slugs.items()
-            if slug in nodes and person.get("fio_ru")
-            and _same_person_name(nodes[stub_id]["label"], person["fio_ru"])
-            and any(slug in (e["source"], e["target"])
-                    and ({e["source"], e["target"]} & neighbours) for e in edges)
-        ]
-        if len(candidates) != 1:
-            continue
-        person = candidates[0]
         for e in stub_edges:
-            e["source" if e["source"] == stub_id else "target"] = person
-        # The person's own edge to the same entity may already exist (from the full-name
-        # entry); keep one, and let it inherit the date/source the stub edge carried.
+            e["source" if e["source"] == stub_id else "target"] = keep_id
+        # The kept node's own edge to the same entity may already exist (from the
+        # full-name entry); keep one, and let it inherit the date/source the stub edge carried.
         own = {(e["source"], e["target"], e["type"]): e for e in edges if e not in stub_edges}
         kept = []
         for e in edges:
@@ -644,6 +639,54 @@ def build_graph(entities: list[dict], people: list[dict],
         edges = kept
         del nodes[stub_id]
         unresolved.pop(stub_id, None)
+
+    def _neighbours(node_id):
+        return {e["target"] if e["source"] == node_id else e["source"]
+                for e in edges if node_id in (e["source"], e["target"])}
+
+    # The same organisation reached twice as a stub -- once keyed by ИНН, once by name, or
+    # spelled "СТАРТАП- СТУДИЯ" against "Стартап-студия" -- is one node.
+    def _org_key(label):
+        return re.sub(r"\s*-\s*", "-", normalize(label))
+
+    by_org: dict[str, list[str]] = {}
+    for stub_id, node in nodes.items():
+        if node["kind"] == "unresolved":
+            by_org.setdefault(_org_key(node["label"]), []).append(stub_id)
+    for ids in by_org.values():
+        keep = next((i for i in ids if i.startswith("stub::inn-")), ids[0])
+        for stub_id in ids:
+            if stub_id != keep:
+                merge_stub(stub_id, keep)
+
+    for stub_id in [n for n, node in nodes.items() if node["kind"] == "unresolved"]:
+        if stub_id not in nodes:
+            continue
+        neighbours = _neighbours(stub_id)
+        candidates = [
+            slug for slug, person in person_slugs.items()
+            if slug in nodes and person.get("fio_ru")
+            and _same_person_name(nodes[stub_id]["label"], person["fio_ru"])
+            and _neighbours(slug) & neighbours
+        ]
+        if len(candidates) == 1:
+            merge_stub(stub_id, candidates[0])
+            continue
+        if candidates:
+            continue
+        # No registry person: an initials-only stub folds into the one fuller stub for the
+        # same person on the same entity ("Абрамов Ю.А" -> "Абрамов Юрий Александрович").
+        if not re.search(r"\b\w\.", nodes[stub_id]["label"]):
+            continue
+        fuller = [
+            other for other, node in nodes.items()
+            if other != stub_id and node["kind"] == "unresolved"
+            and not re.search(r"\b\w\.", node["label"])
+            and _same_person_name(nodes[stub_id]["label"], node["label"])
+            and _neighbours(other) & neighbours
+        ]
+        if len(fuller) == 1:
+            merge_stub(stub_id, fuller[0])
 
     # People marked graph_tier == "reference" (relatives, staff, contract
     # signatories) stay on file in people.json but are kept off the graph, so
