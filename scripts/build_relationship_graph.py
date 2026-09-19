@@ -330,6 +330,9 @@ def build_graph(entities: list[dict], people: list[dict],
             if name:
                 names.append(name)
                 names.extend(part for part in name.split(" | ") if part.strip() and part != name)
+        # A recorded full/official name (name_history) resolves to the entity too.
+        names.extend(h["value"] for h in entity.get("name_history") or []
+                     if isinstance(h, dict) and h.get("value"))
         for name in names:
             key = normalize(name)
             name_to_slug.setdefault(key, entity["slug"])

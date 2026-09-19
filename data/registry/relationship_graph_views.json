@@ -1520,7 +1520,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -1532,7 +1532,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "fond-nasha-pravda",
@@ -8856,12 +8856,6 @@
           "degree": 1
         },
         {
-          "id": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
-          "kind": "unresolved",
-          "label": "Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава»",
-          "degree": 1
-        },
-        {
           "id": "stub::перфильев николай александрович",
           "kind": "unresolved",
           "label": "Перфильев Николай Александрович",
@@ -8883,12 +8877,6 @@
           "id": "stub::пряников владислав сергеевич",
           "kind": "unresolved",
           "label": "Пряников Владислав Сергеевич",
-          "degree": 1
-        },
-        {
-          "id": "stub::региональных некоммерческих проектов дар",
-          "kind": "unresolved",
-          "label": "Фонд региональных некоммерческих проектов «ДАР»",
           "degree": 1
         },
         {
@@ -14493,6 +14481,28 @@
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+          "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7370",
+          "as_of": "2026-09-08",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "fond-gradislava-historic-cultural-heritage-preservation",
+          "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7370",
+          "as_of": "2026-09-08",
+          "weight": 1.0,
+          "temporal_status": "current",
           "confidence": null
         },
         {
@@ -22878,17 +22888,6 @@
           "confidence": null
         },
         {
-          "source": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
-          "target": "fond-nasha-pravda",
-          "type": "founded",
-          "label": null,
-          "source_id": "s7370",
-          "as_of": "2026-09-08",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "stub::перфильев николай александрович",
           "target": "ao-tekhnodron",
           "type": "directs",
@@ -22939,17 +22938,6 @@
           "label": "2%",
           "source_id": "s6725",
           "as_of": "2026-08-10",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::региональных некоммерческих проектов дар",
-          "target": "fond-nasha-pravda",
-          "type": "founded",
-          "label": null,
-          "source_id": "s7370",
-          "as_of": "2026-09-08",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -24778,7 +24766,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -24790,7 +24778,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "fond-nasha-pravda",
@@ -26357,12 +26345,6 @@
           "degree": 1
         },
         {
-          "id": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
-          "kind": "unresolved",
-          "label": "Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава»",
-          "degree": 1
-        },
-        {
           "id": "stub::перфильев николай александрович",
           "kind": "unresolved",
           "label": "Перфильев Николай Александрович",
@@ -26378,12 +26360,6 @@
           "id": "stub::пряников владислав сергеевич",
           "kind": "unresolved",
           "label": "Пряников Владислав Сергеевич",
-          "degree": 1
-        },
-        {
-          "id": "stub::региональных некоммерческих проектов дар",
-          "kind": "unresolved",
-          "label": "Фонд региональных некоммерческих проектов «ДАР»",
           "degree": 1
         },
         {
@@ -27071,6 +27047,28 @@
           "label": null,
           "source_id": "s0453",
           "as_of": "2023-04-13",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+          "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7370",
+          "as_of": "2026-09-08",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "fond-gradislava-historic-cultural-heritage-preservation",
+          "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7370",
+          "as_of": "2026-09-08",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -28341,17 +28339,6 @@
           "confidence": null
         },
         {
-          "source": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
-          "target": "fond-nasha-pravda",
-          "type": "founded",
-          "label": null,
-          "source_id": "s7370",
-          "as_of": "2026-09-08",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "stub::перфильев николай александрович",
           "target": "ao-tekhnodron",
           "type": "directs",
@@ -28391,17 +28378,6 @@
           "label": "2%",
           "source_id": "s6725",
           "as_of": "2026-08-10",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::региональных некоммерческих проектов дар",
-          "target": "fond-nasha-pravda",
-          "type": "founded",
-          "label": null,
-          "source_id": "s7370",
-          "as_of": "2026-09-08",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -29090,7 +29066,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -29102,7 +29078,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "fond-nasha-pravda",
@@ -29804,18 +29780,6 @@
           "degree": 1
         },
         {
-          "id": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
-          "kind": "unresolved",
-          "label": "Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава»",
-          "degree": 1
-        },
-        {
-          "id": "stub::региональных некоммерческих проектов дар",
-          "kind": "unresolved",
-          "label": "Фонд региональных некоммерческих проектов «ДАР»",
-          "degree": 1
-        },
-        {
           "id": "stub::российская федерация",
           "kind": "unresolved",
           "label": "Российская Федерация",
@@ -30356,6 +30320,17 @@
           "confidence": null
         },
         {
+          "source": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+          "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7370",
+          "as_of": "2026-09-08",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
           "source": "fond-gradislava-historic-cultural-heritage-preservation",
           "target": "fond-nasha-pravda",
           "type": "founded",
@@ -30364,6 +30339,17 @@
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "fond-gradislava-historic-cultural-heritage-preservation",
+          "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7370",
+          "as_of": "2026-09-08",
+          "weight": 1.0,
+          "temporal_status": "current",
           "confidence": null
         },
         {
@@ -31126,28 +31112,6 @@
           "confidence": null
         },
         {
-          "source": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
-          "target": "fond-nasha-pravda",
-          "type": "founded",
-          "label": null,
-          "source_id": "s7370",
-          "as_of": "2026-09-08",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::региональных некоммерческих проектов дар",
-          "target": "fond-nasha-pravda",
-          "type": "founded",
-          "label": null,
-          "source_id": "s7370",
-          "as_of": "2026-09-08",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "stub::российская федерация",
           "target": "pao-bank-psb",
           "type": "founded",
@@ -31844,7 +31808,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -31856,7 +31820,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "fond-nasha-pravda",

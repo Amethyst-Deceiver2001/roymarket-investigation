@@ -11511,6 +11511,14 @@
     },
     "fond-dar-fond-regionalnykh-nekommercheskikh-proektov": {
       "set": {
+        "name_history": [
+          {
+            "value": "Фонд региональных некоммерческих проектов «ДАР»",
+            "as_of": "2026-09-07",
+            "source_id": "s6699",
+            "note": "Full official name per the ЕГРЮЛ выписка (ОГРН 1067799028923), which prints it in capitals with straight quotes; quotes normalised here. name_ru carries a shortened alias, so a reference using the full name (fond-nasha-pravda's founders, s7370) could not match it."
+          }
+        ],
         "founders": [
           {
             "name": "ООО «ЛЕВИТ»",
@@ -11623,6 +11631,14 @@
     },
     "fond-gradislava-historic-cultural-heritage-preservation": {
       "set": {
+        "name_history": [
+          {
+            "value": "Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава»",
+            "as_of": "2026-09-07",
+            "source_id": "s6698",
+            "note": "Full official name per the ЕГРЮЛ выписка (ОГРН 1117799007050), which prints it in capitals with straight quotes; quotes normalised here. name_ru carries a shortened alias, so a reference using the full name (fond-nasha-pravda's founders, s7370) could not match it."
+          }
+        ],
         "_verified": true,
         "address": "115172, Москва, наб. Котельническая, д. 25, стр. 1, офис 18",
         "address_history": [
@@ -12730,7 +12746,7 @@
           "evidence": "The brand's own Telegram channel (@krams_pro), msg 133, 10.12.2025, titled \"КРАМС - резидент АНО «ЦБСТ»\": \"Компания «КРАМС» является резидентом АНО «Центр беспилотных систем и технологий»\". A second post (msg 150, 25.03.2026) confirms enrollment in \"3 поток Акселератора спецтехпроектов ЦБСТ\".",
           "source_id": "s7523"
         },
-        "tier_basis": "A documented FPV-drone brand (models «КРАМС 7», «КРАМС 9») with an active product site (krams.pro) and Telegram presence, covered in regional press including a Kuzbass governor visit, and a directly primary-source-confirmed ЦБСТ residency claim (see cbst_tie) — but the underlying LEGAL ENTITY has NOT been identified (explicitly not ooo-krams, ИНН 9701247080, already confirmed as an unrelated Moscow entity — see open_questions). The brand-level residency/network tie is confirmed; the corporate identity behind the brand is not. Do not cite as a confirmed legal-entity network member until that identity is resolved.",
+        "tier_basis": "A documented FPV-drone brand (models «КРАМС 7», «КРАМС 9») with an active product site (krams.pro) and Telegram presence, covered in regional press including a Kuzbass governor visit, and a directly primary-source-confirmed ЦБСТ residency claim (see cbst_tie) — but the underlying LEGAL ENTITY has NOT been identified (not matched to ООО «КРАМС», ИНН 9701247080: that Moscow company, registered 18.04.2023 with construction ОКВЭД and sole owner Николаев А.Ю., shares only the name, and nothing on file ties it to the brand either way — see the note on this record). The brand-level residency/network tie is confirmed; the corporate identity behind the brand is not. Do not cite as a confirmed legal-entity network member until that identity is resolved.",
         "sanctions_review": {
           "as_of": "2026-09-15",
           "outcome": "closed",
@@ -12763,6 +12779,7 @@
       },
       "verified_against": [],
       "why": [
+        "2026-09-19 (checked, not merged): looked up ООО «КРАМС» (ИНН 9701247080, ooo-krams) as the possible legal entity behind this brand and did not merge them. What is on file for ООО «КРАМС»: Москва, registered 18.04.2023, sole owner and director Николаев Александр Юрьевич (ЕГРЮЛ выписка s6855), ОКВЭД 43.29, 38.32, 41.10, 41.20, 43.21 -- construction and installation, no drone or electronics activity. What is on file for the brand: FPV models «КРАМС 7/9/13», krams.pro, @krams_pro (2024-2026), a +7 923 contact number, info@krams.pro, a ЦБСТ residency post naming «Компания «КРАМС»» (s7523), and no ООО/ИНН on the site (s7571 footer/contacts). The name is the only link and no document connects the two, so this is neither an identification nor a ruling-out. The earlier wording here, that ooo-krams was 'already confirmed as an unrelated Moscow entity -- see open_questions', pointed to an open question that does not exist and is replaced by this note. Open: identify the brand's legal entity, e.g. from a contract, a product-sale invoice or the residency documents.",
         "[2026-09-15] wb_overlap=none_found: Brand-name search for FPV-дрон «КРАМС 7»/«9»/«13» on wildberries.ru (2026-09-15) found no product listing — only generic FPV-drone category pages.",
         "2026-09-16 (coverage-gap agent pass, marketing_claims): 3 verbatim self-published marketing claims found and verified directly against data/roymarket.db (@krams_pro, msgs 3/108/128) before archiving and wiring. battlefield_evidence[] checked separately -- one post (msg 77, 2025-04-02) paraphrases third-party footage from a channel called \"Русский беспилотник\" but doesn't itself constitute a directly-sourced third-party post; the actual channel post was not located this pass -- flagged as an open lead, not wired."
       ]
