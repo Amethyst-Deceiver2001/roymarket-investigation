@@ -111,6 +111,7 @@
 
 - **Project "KB Arkhangel"** `training-partnership` — Both sides publicly name the tie. Архангел: msg 5500 (17.10.2024, meeting with Рогозин as 'командир БАРС Сармат') and msg 5502 ('Полностью подключаемся к взаимодействию с Барс Сармат и объединяем ресурсы, возможности и наработки'), [s7693]/s7694. Сармат: msg 1683 (21.10.2024), 1744 (05.11.2024, 'Сплочение и объединение наше всё!!! Барс САРМАТ ... создан для того чтоб объединить воинов новой формации'), joint approbations in msg 1831 (Горыныч 2.0) and 1988 (ЩИТ-И), [s7697]-s7700. The logo of the unit appears with the word АРХАНГЕЛ behind a speaker in a Архангел video. No contract or shared registration is on file: a cooperation/recruitment/testing tie, not a corporate one. [s7694]
 - **Fond "Sarmat"** `group-structure` — The unit's site presents the Фонд as 'Помощь добровольцам Центра специального назначения «Барс-Сармат»' with the fund's bank details for donations ([s7682]). No ЕГРЮЛ extract for the fund is on file yet, so its founders and any personal tie to the unit's leadership are unconfirmed. [s7682]
+- **ANO CPV "ZOV-AA"** `training-partnership` — Named with the Отряд «БАРС-Сармат» (командир Д.О. Рогозин) and Проект «Архангел» in a joint infrastructure-protection project (msg 1668 on the unit's own channel, 18.10.2024, [s7696]; and Архангел msg 5503/5657, [s7728]). [s7696]
 
 ## Open questions
 

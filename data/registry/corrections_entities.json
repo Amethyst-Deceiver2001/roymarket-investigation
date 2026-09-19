@@ -2131,6 +2131,13 @@
             "relationship_type": "training-partnership",
             "relationship": "Both sides publicly name the tie (see the ЦСН record): Архангел's own msg 5500 and 5502 (17.10.2024, s7693/s7694) announce a meeting with Рогозин as 'командир БАРС Сармат' and 'Полностью подключаемся к взаимодействию с Барс Сармат и объединяем ресурсы, возможности и наработки'; the unit's own channel answers with msg 1683 and 1744 and two joint approbations (Горыныч 2.0, ЩИТ-И, s7699/s7700). The unit's logo appears next to the word АРХАНГЕЛ in a Архангел video. A cooperation, recruitment and testing tie, not a corporate one: no contract or shared registration is on file.",
             "source_id": "s7694"
+          },
+          {
+            "slug": "ano-tsvp-zov-aa",
+            "name": "АНО ЦПВ «ЗОВ-АА»",
+            "relationship_type": "training-partnership",
+            "relationship": "Named co-organiser in Архангел's own posts (msg 5080, 5503, 5657, 5807, 5826; s7704, s7728-s7730): the 27-29.08.2024 Leningrad-region FPV/EW test event, Kazan events of November 2024 (with Гермес support) and a joint infrastructure-protection project with the ЦСН. The organisation is the Tatarstan АНО ИНН 1651092483 (see its record).",
+            "source_id": "s7728"
           }
       ],
       "inn": null,
@@ -2409,6 +2416,20 @@
             "context": "@projectArchangel msg 5500 (17.10.2024). The Архангел-side counterpart to the unit's own msg 1683 and 1744.",
             "source_id": "s7693",
             "as_of": "2024-10-17"
+          },
+          {
+            "text_ru": "Центр Помощи Военнослужащим \"ЗОВ-АА\"(За Отважных Войнов Армии Ангелов), совместно с Проект \"Архангел\", организует мероприятие!",
+            "text_en": "The Centre for Assistance to Servicemen ZOV-AA, jointly with Project Arkhangel, is organising an event.",
+            "context": "@projectArchangel msg 5080 (13.08.2024): FPV drones assessed under EW 'максимально приближенных к боевым', tests 'под протокол' with a technical conclusion issued by a Минобороны officer; the events' details are on the ЗОВ-АА record.",
+            "source_id": "s7704",
+            "as_of": "2024-08-13"
+          },
+          {
+            "text_ru": "\"Барс–Сармат\" продолжает отбор девушек в первое на фронте боевое подразделение имени героя Советского Союза Полины Осипенко — эскадрильи БпЛА \"Ночные ведьмы. 2.0.\"",
+            "text_en": "Bars-Sarmat continues selecting girls for the first combat unit at the front named after Hero of the Soviet Union Polina Osipenko, the UAV squadron Night Witches 2.0.",
+            "context": "Recruitment appeal for the ЦСН carried on Архангел's own channel (@projectArchangel msg 5529, 20.10.2024); Архангел acts as a recruiting outlet for the unit.",
+            "source_id": "s7705",
+            "as_of": "2024-10-20"
           }
       ],
       "open_questions": [
@@ -2623,6 +2644,14 @@
           {
             "source_id": "s7653",
             "text": "Гермес: the «Архангел» channels repeatedly promote the «ГЕРМЕС» long-range/anti-jam comms line (59 video posts in the local scrape of @projectArchangel, Dec 2023 - Jul 2026, counted from data/roymarket.db rather than an archived file; e.g. msg 3881 «Производство связи ГЕРМЕС. t.me/germesfpv»), and both build bills of materials list «Связь: Гермес или аналоги» (s5452, s7653). This registry holds «ГЕРМЕС связь» and «ГЕРМЕС мачты» as products of НПО «КАЙСАНТ» (npo-kaysant, ИНН 7733393203); the matching product names make it likely that entity is behind the channel, but no primary source yet says so or that it supplies Архангел. Deliberately NOT recorded as a related_entities edge: an edge would pull the whole Архангел cluster (Филиппов, ООО «Архангел Групп», ML Констракшнс) into the ЦБСТ-connected graph on an unconfirmed link."
+          },
+          {
+            "source_id": "s7706",
+            "text": "The unit's channel (msg 1746, 06.11.2024) credits the Tatarstan 'Академия пилотов: операторы будущего' to «Всероссийского фонда помощи военным «Архангел»» and the youth ministry. Is that фонд the АНО «Архангел» (ИНН 2315233718) on file, the ЗОВ-АА АНО, or another body? Unresolved."
+          },
+          {
+            "source_id": "s7705",
+            "text": "@NightVVit («Ночные ведьмы 2.0», the women's UAV squadron the ЦСН recruits for, msg 5529) no longer resolves; find who runs it and whether any name links back to Архангел or ЗОВ-АА."
           }
       ],
       "director": null,
@@ -6264,7 +6293,14 @@
             "relationship_type": "group-structure",
             "relationship": "The unit's site presents the Фонд as 'Помощь добровольцам Центра специального назначения «Барс-Сармат»' with the fund's bank details for donations (s7682). No ЕГРЮЛ extract for the fund is on file yet, so its founders and any personal tie to the unit's leadership are unconfirmed.",
             "source_id": "s7682"
-          }
+          },
+            {
+              "slug": "ano-tsvp-zov-aa",
+              "name": "АНО ЦПВ «ЗОВ-АА»",
+              "relationship_type": "training-partnership",
+              "relationship": "Named with the Отряд «БАРС-Сармат» (командир Д.О. Рогозин) and Проект «Архангел» in a joint infrastructure-protection project (msg 1668 on the unit's own channel, 18.10.2024, s7696; and Архангел msg 5503/5657, s7728).",
+              "source_id": "s7696"
+            }
         ],
         "open_questions": [
           {
@@ -6334,6 +6370,160 @@
         "sources": [],
         "why": [
           "2026-09-19: identifiers taken from the Фонд's own page on the unit's site (s7682), not from an official register."
+        ]
+      },
+      {
+        "slug": "ano-tsvp-zov-aa",
+        "name_ru": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ЦЕНТР ПОМОЩИ ВОЕННОСЛУЖАЩИМ \"ЗА ОТВАЖНЫХ ВОИНОВ - АРМИИ АНГЕЛОВ\"",
+        "name_en": "Autonomous Non-Profit Organization Military Assistance Center \"For the Brave Soldiers - of the Army of Angels\"",
+        "name_latin": "ANO CPV \"ZOV-AA\"",
+        "legal_form": "АНО",
+        "brand_ru": "ЗОВ-АА",
+        "inn": "1651092483",
+        "ogrn": "1221600086180",
+        "registered": "24.10.2022",
+        "address": "423575, Республика Татарстан, м.р-н Нижнекамский, г. Нижнекамск, пр-кт Строителей, д. 11А, кв. 39",
+        "address_history": [
+          {
+            "value": "423575, Республика Татарстан, г. Нижнекамск, пр-кт Строителей, д. 11А, кв. 39",
+            "as_of": "2026-09-19",
+            "source_id": "s7727",
+            "note": "ЕГРЮЛ выписка of 19.09.2026; an apartment address, unchanged since registration."
+          }
+        ],
+        "okved_code": "88.99",
+        "okved_label": "Предоставление прочих социальных услуг без обеспечения проживания, не включенных в другие группировки",
+        "okved_secondary": [
+          {
+            "code": "69.10",
+            "label": "Деятельность в области права"
+          },
+          {
+            "code": "70.21",
+            "label": "Деятельность в сфере связей с общественностью"
+          },
+          {
+            "code": "73.20.2",
+            "label": "Деятельность по изучению общественного мнения"
+          },
+          {
+            "code": "82.30",
+            "label": "Деятельность по организации конференций и выставок"
+          },
+          {
+            "code": "85.41.9",
+            "label": "Образование дополнительное детей и взрослых, не включенное в другие группировки"
+          },
+          {
+            "code": "85.42.9",
+            "label": "Деятельность по дополнительному профессиональному образованию прочая"
+          },
+          {
+            "code": "88.10",
+            "label": "Предоставление социальных услуг без обеспечения проживания престарелым и инвалидам"
+          }
+        ],
+        "director": "Прибылова Кристина Анатольевна (Председатель)",
+        "director_history": [
+          {
+            "value": "Прибылова Кристина Анатольевна (Председатель)",
+            "as_of": "2022-10-24",
+            "source_id": "s7727",
+            "note": "Named from registration on 24.10.2022, still the sole person entitled to act without a power of attorney per the 19.09.2026 выписка. ИНН 165123632514. An АНО has no founders in ЕГРЮЛ."
+          }
+        ],
+        "tier": "adjacent",
+        "tier_basis": "Tatarstan-registered АНО behind the «ЗОВ-АА» brand, a recurring co-organiser with Проект «Архангел» from August to December 2024: the Leningrad-region FPV/EW test event of 27-29.08.2024 (msg 5080, s7704), the joint infrastructure-protection project with the ЦСН «Барс-Сармат» (msg 5503, 5657: s7728) and the Kazan drone event of 6-8.11.2024, which Архангел says was held 'под эгидой проекта Архангел и проекта ZOV-AA' with Гермес support (msg 5807, s7729). Identification: the org's VK page (vk.com/id463123770, shown as «Rossia Sila») calls itself «ЦПВ АНО «ZOV-AA»» (s7731) and the full name expands the ЗОВ-АА acronym Архангел itself spells out in msg 5503; the name and Татарстан region match the Kazan events. Its Telegram handles @zov_aa_spb and @zov_aa_official no longer resolve (checked 2026-09-19). No ЦБСТ tie found.",
+        "cbst_tie": {
+          "claim": "None found.",
+          "confidence": "none",
+          "evidence": null,
+          "source_id": null
+        },
+        "wb_overlap": "none_found",
+        "products": [],
+        "marketing_claims": [
+          {
+            "text_ru": "Целью Организации является оказание всесторонней помощи военнослужащим, осуществляющих срочную службу или службу на СВО",
+            "text_en": "The organisation's aim is to provide comprehensive assistance to servicemen serving conscript service or serving in the SVO.",
+            "context": "Status line of the org's own VK page (vk.com/id463123770, captured 19.09.2026), which heads it «ЦПВ АНО «ZOV-AA»»; 93 posts, latest seen dated 07.2025.",
+            "source_id": "s7731",
+            "as_of": "2026-09-19"
+          },
+          {
+            "text_ru": "организует мероприятие! С 27.08 по 29.08.2024г. НА ПОДГОТОВЛЕННОЙ ПЛОЩАДКЕ В ЛЕНИНГРАДСКОЙ ОБЛАСТИ, СОСТОИТСЯ МЕРОПРИЯТИЕ, НАПРАВЛЕННОЕ НА ОЦЕНКУ ПОЛЕТНЫХ КАЧЕСТВ FPV ДРОНОВ, В УСЛОВИЯХ ВОЗДЕЙСТВИЯ РЭБ, МАКСИМАЛЬНО ПРИБЛИЖЕННЫХ К БОЕВЫМ(подразумеваются условия СВО).",
+            "text_en": "organises an event. On 27-29.08.2024 at a prepared site in the Leningrad region, an event assessing the flight qualities of FPV drones under EW conditions as close to combat as possible (meaning SVO conditions).",
+            "context": "@projectArchangel msg 5080 (13.08.2024), announcement by ЗОВ-АА 'совместно с Проект «Архангел»', 'По согласованию с Министерством Обороны'; tests 'под протокол' with a technical conclusion on the manufacturer's product issued by a Минобороны officer; applications via @zov_aa_spb (handle no longer resolves).",
+            "source_id": "s7704",
+            "as_of": "2024-08-13"
+          },
+          {
+            "text_ru": "прорабатывают совместные меры по защите объектов критически важной инфраструктуры - необходимую методику и технические средства.",
+            "text_en": "are working out joint measures to protect critically important infrastructure objects: the necessary methodology and technical means.",
+            "context": "@projectArchangel msg 5657 (03.11.2024): ЗОВ-АА together with Проект «Архангел» and the Отряд «БАРС-Сармат» (командир - Д.О. Рогозин); manufacturers invited to 'апробацию'; a main event planned with Republic of Tatarstan government support in February 2025. Lists the org's VK page vk.com/id463123770.",
+            "source_id": "s7728",
+            "as_of": "2024-11-03"
+          },
+          {
+            "text_ru": "В Казани прошло знаковое событие в области БПЛА под эгидой проекта Архангел и проекта ZOV-AA.",
+            "text_en": "A landmark UAV event was held in Kazan under the aegis of the Arkhangel project and the ZOV-AA project.",
+            "context": "@projectArchangel msg 5807 (19.11.2024): the same post says the Гермес team helped run it and that 'Гермес рожден в России и производится в России'. Msg 5826 (20.11.2024, s7730) says the Архангел team and ЗОВ-АА are preparing further Tatarstan events, including a three-day February congress of volunteers, developers, producers, commanders and UAV operators.",
+            "source_id": "s7729",
+            "as_of": "2024-11-19"
+          }
+        ],
+        "web": {
+          "sites": [],
+          "vk": [
+            {
+              "url": "https://vk.com/id463123770",
+              "note": "org's VK page, shown as «Rossia Sila»; rendered capture s7731"
+            }
+          ],
+          "telegram": [
+            {
+              "url": "https://t.me/zov_aa_official",
+              "note": "cited by Архангел msg 5826; no longer resolves (2026-09-19)"
+            },
+            {
+              "url": "https://t.me/zov_aa_spb",
+              "note": "application contact in msg 5080; no longer resolves (2026-09-19)"
+            }
+          ]
+        },
+        "related_entities": [
+          {
+            "slug": "proekt-kb-arkhangel",
+            "name": "Проект КБ «Архангел»",
+            "relationship_type": "training-partnership",
+            "relationship": "Named co-organiser on Архангел's side in msg 5080, 5503, 5657, 5807 and 5826 (s7704, s7728-s7730): a joint FPV/EW test event, joint drone events in Kazan, and a joint infrastructure-protection project.",
+            "source_id": "s7728"
+          },
+          {
+            "slug": "csn-bars-sarmat",
+            "name": "ЦСН «Барс-Сармат»",
+            "relationship_type": "training-partnership",
+            "relationship": "Named alongside the Отряд «БАРС-Сармат» (командир Д.О. Рогозин) in the joint infrastructure-protection project, msg 5503 and 5657 (s7728).",
+            "source_id": "s7728"
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s7727",
+            "text": "Прибылова К.А. is the sole registered head, and the address is a Нижнекамск apartment. Find who actually runs ЗОВ-АА and who funds it; check her personal ties, other entities (ФНС director/founder cross-reference), and whether the VK page (93 posts) names people or units."
+          },
+          {
+            "source_id": "s7731",
+            "text": "The VK page is JS-rendered and only partly captured; read and archive its posts (Dec 2024 to July 2025 seen) by hand in a browser, including any photos of events and equipment."
+          },
+          {
+            "source_id": "s7730",
+            "text": "The three-day February 2025 Tatarstan congress (msg 5826) and the joint infrastructure-protection tests (msg 5657): check whether they took place, who exhibited, and what the Tatarstan government (Минмолодёжи РТ, Ресурсный центр) contributed."
+          }
+        ],
+        "sources": [],
+        "why": [
+          "2026-09-19: identified from the VK page vk.com/id463123770 (user-supplied) whose status line names «ЦПВ АНО «ZOV-AA»», then matched by name in the open ЕГРЮЛ search and confirmed with a full выписка (s7727)."
         ]
       }
   ],

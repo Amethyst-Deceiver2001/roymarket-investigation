@@ -120,6 +120,16 @@
 >
 > — @projectArchangel msg 5500 (17.10.2024). The Архангел-side counterpart to the unit's own msg 1683 and 1744. (2024-10-17) [s7693]
 
+> *Центр Помощи Военнослужащим "ЗОВ-АА"(За Отважных Войнов Армии Ангелов), совместно с Проект "Архангел", организует мероприятие!*
+> The Centre for Assistance to Servicemen ZOV-AA, jointly with Project Arkhangel, is organising an event.
+>
+> — @projectArchangel msg 5080 (13.08.2024): FPV drones assessed under EW 'максимально приближенных к боевым', tests 'под протокол' with a technical conclusion issued by a Минобороны officer; the events' details are on the ЗОВ-АА record. (2024-08-13) [s7704]
+
+> *"Барс–Сармат" продолжает отбор девушек в первое на фронте боевое подразделение имени героя Советского Союза Полины Осипенко — эскадрильи БпЛА "Ночные ведьмы. 2.0."*
+> Bars-Sarmat continues selecting girls for the first combat unit at the front named after Hero of the Soviet Union Polina Osipenko, the UAV squadron Night Witches 2.0.
+>
+> — Recruitment appeal for the ЦСН carried on Архангел's own channel (@projectArchangel msg 5529, 20.10.2024); Архангел acts as a recruiting outlet for the unit. (2024-10-20) [s7705]
+
 ## Foreign components
 
 - name: Bambu Lab X1 Carbon 3D printer + PLA-CF filament; manufacturer: Bambu Lab (China); context: Bill-of-materials spreadsheet for "Малая ДР" (a small combat drone), shared as a Telegram file in the @projectArchangel channel (msg 10381, 26.06.2026): the printer/filament pair is listed as the first component, i.e. used to fabricate the airframe itself, not just workshop equipment. [s5452]
@@ -265,6 +275,7 @@
 
 - **НПО «КАЙСАНТ»** `component-supplier` — Both sides publicly name the tie: the ГЕРМЕС long-range comms line, whose own channel @germesfpv is НПО «КАЙСАНТ»'s (Telegram title and Академия chat msg 110720, [s5457]), is presented as fitted to Архангел's interceptors. (1) ГЕРМЕС's own post, forwarded into mil_hub as msg 130001 (14.05.2026, forward from @germesfpv): «Мы рады, что Михаил «Архангел» выбрал спецсвязь ГЕРМЕС для своих дронов-перехватчиков.» and «Дроны-перехватчики проекта «Архангел» оснащены дальнобойной связью ГЕРМЕС.» Only that post's opening line («Правильно обученный личный состав и правильные изделия») is attributed to Филиппов; the ГЕРМЕС sentences are the vendor's own claim, not his. (2) Архангел's own channel, @projectArchangel msg 3881 (03.04.2024): «Производство связи ГЕРМЕС.https://t.me/germesfpv», and 59 ГЕРМЕС video posts through July 2026 ([s7653]). (3) Архангел's bill of materials lists «Связь: Гермес или аналоги» ([s5452]). No supply contract or invoice is on file, so this is a self-reported product-use tie between the two, not a documented sale. НПО «КАЙСАНТ» is a ЦБСТ resident (t-doc), so this makes the Архангел cluster reachable from ЦБСТ through it. [s5539]
 - **CSN "Bars-Sarmat" (Rogozin)** `training-partnership` — Both sides publicly name the tie (see the ЦСН record): Архангел's own msg 5500 and 5502 (17.10.2024, [s7693]/s7694) announce a meeting with Рогозин as 'командир БАРС Сармат' and 'Полностью подключаемся к взаимодействию с Барс Сармат и объединяем ресурсы, возможности и наработки'; the unit's own channel answers with msg 1683 and 1744 and two joint approbations (Горыныч 2.0, ЩИТ-И, [s7699]/s7700). The unit's logo appears next to the word АРХАНГЕЛ in a Архангел video. A cooperation, recruitment and testing tie, not a corporate one: no contract or shared registration is on file. [s7694]
+- **ANO CPV "ZOV-AA"** `training-partnership` — Named co-organiser in Архангел's own posts (msg 5080, 5503, 5657, 5807, 5826; [s7704], [s7728]-s7730): the 27-29.08.2024 Leningrad-region FPV/EW test event, Kazan events of November 2024 (with Гермес support) and a joint infrastructure-protection project with the ЦСН. The organisation is the Tatarstan АНО ИНН 1651092483 (see its record). [s7728]
 
 ## Open questions
 
@@ -321,6 +332,8 @@
 - Speaker of video msg 10782 introduces herself by the callsign «Радистка» (machine transcript, approximate). Whether she is the operator of the 1st Slavic Brigade who received drop systems (msg 7815), the channel @rastratchikRadistka, and the person already noted in notes/gagaring_network_map.md is inferred from the callsign only. No people.json record: no full name is sourced. [s7654]
 - «Ночник ПВН»: no sensor make/model, no statement whether it is thermal or low-light, and no evidence of who fields it. The channel's recruitment posts offer a 'малое ПВО' role, so a link to its air-defence crews is plausible but unshown. [s7618]
 - Гермес: the «Архангел» channels repeatedly promote the «ГЕРМЕС» long-range/anti-jam comms line (59 video posts in the local scrape of @projectArchangel, Dec 2023 - Jul 2026, counted from data/roymarket.db rather than an archived file; e.g. msg 3881 «Производство связи ГЕРМЕС. t.me/germesfpv»), and both build bills of materials list «Связь: Гермес или аналоги» ([s5452], [s7653]). This registry holds «ГЕРМЕС связь» and «ГЕРМЕС мачты» as products of НПО «КАЙСАНТ» (npo-kaysant, ИНН 7733393203); the matching product names make it likely that entity is behind the channel, but no primary source yet says so or that it supplies Архангел. Deliberately NOT recorded as a related_entities edge: an edge would pull the whole Архангел cluster (Филиппов, ООО «Архангел Групп», ML Констракшнс) into the ЦБСТ-connected graph on an unconfirmed link. [s7653]
+- The unit's channel (msg 1746, 06.11.2024) credits the Tatarstan 'Академия пилотов: операторы будущего' to «Всероссийского фонда помощи военным «Архангел»» and the youth ministry. Is that фонд the АНО «Архангел» (ИНН 2315233718) on file, the ЗОВ-АА АНО, or another body? Unresolved. [s7706]
+- @NightVVit («Ночные ведьмы 2.0», the women's UAV squadron the ЦСН recruits for, msg 5529) no longer resolves; find who runs it and whether any name links back to Архангел or ЗОВ-АА. [s7705]
 
 ## Sources cited in this profile
 
@@ -360,6 +373,10 @@
 | [s7655] | Tgpost | Tgpost (TGPOST_20260919_projectArchangel-10796-nochnik-pvn.txt) | 2026-09-19 | — |
 | [s7693] | Tgpost | Tgpost (TGPOST_20241017_projectArchangel-5500-meeting-rogozin-sarmat.txt) | 2024-10-17 | — |
 | [s7694] | Tgpost | Tgpost (TGPOST_20241017_projectArchangel-5502-arkhangel-joins-sarmat.txt) | 2024-10-17 | — |
+| [s7704] | Tgpost | Tgpost (TGPOST_20240813_projectArchangel-5080-zov-aa-fpv-ew-test-event-leningrad.txt) | 2024-08-13 | — |
+| [s7705] | Tgpost | Tgpost (TGPOST_20241020_projectArchangel-5529-sarmat-nochnye-vedmy-recruitment.txt) | 2024-10-20 | — |
+| [s7706] | Tgpost | Tgpost (TGPOST_20241106_russian_shock_volunteer_brigade-1746-tatarstan-akademiya-pilotov-arkhangel-fund.txt) | 2024-11-06 | — |
+| [s7728] | Tgpost | Tgpost (TGPOST_20241103_projectArchangel-5657-zov-aa-arkhangel-sarmat-project.txt) | 2024-11-03 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

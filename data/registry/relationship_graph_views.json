@@ -237,6 +237,18 @@
           "degree": 5
         },
         {
+          "id": "ano-tsvp-zov-aa",
+          "kind": "entity",
+          "label": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ЦЕНТР ПОМОЩИ ВОЕННОСЛУЖАЩИМ \"ЗА ОТВАЖНЫХ ВОИНОВ - АРМИИ АНГЕЛОВ\"",
+          "name_latin": "ANO CPV \"ZOV-AA\"",
+          "inn": "1651092483",
+          "tier": "adjacent",
+          "sanctioned": false,
+          "legal_form": "АНО",
+          "variant": null,
+          "degree": 6
+        },
+        {
           "id": "anokhin-dmitriy-vladimirovich",
           "kind": "person",
           "label": "Анохин Дмитрий Владимирович",
@@ -994,7 +1006,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 6
+          "degree": 8
         },
         {
           "id": "customer::various-regional-мвд-directorates",
@@ -4371,6 +4383,14 @@
           "kind": "person",
           "label": "Потехина Светлана Алексеевна",
           "name_latin": null,
+          "sanctioned": false,
+          "degree": 2
+        },
+        {
+          "id": "pribylova-kristina-anatolevna",
+          "kind": "person",
+          "label": "Прибылова Кристина Анатольевна",
+          "name_latin": "Kristina Anatolevna Pribylova",
           "sanctioned": false,
           "degree": 2
         },
@@ -8656,7 +8676,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": "defensive",
-          "degree": 20
+          "degree": 22
         },
         {
           "id": "protorguev-sergey-aleksandrovich",
@@ -10276,6 +10296,28 @@
           "type": "related",
           "label": "external-registry-cross-listed",
           "source_id": "s0572",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ano-tsvp-zov-aa",
+          "target": "csn-bars-sarmat",
+          "type": "related",
+          "label": "training-partnership",
+          "source_id": "s7728",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ano-tsvp-zov-aa",
+          "target": "proekt-kb-arkhangel",
+          "type": "related",
+          "label": "training-partnership",
+          "source_id": "s7728",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -12652,6 +12694,17 @@
           "type": "role",
           "label": "co-inventor (patent RU2769566C2)",
           "source_id": "s1030",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "csn-bars-sarmat",
+          "target": "ano-tsvp-zov-aa",
+          "type": "related",
+          "label": "training-partnership",
+          "source_id": "s7696",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -21843,12 +21896,45 @@
           "confidence": null
         },
         {
+          "source": "pribylova-kristina-anatolevna",
+          "target": "ano-tsvp-zov-aa",
+          "type": "directs",
+          "label": null,
+          "source_id": "s7727",
+          "as_of": "2022-10-24",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "pribylova-kristina-anatolevna",
+          "target": "ano-tsvp-zov-aa",
+          "type": "role",
+          "label": "Председатель (sole person acting without a power of attorney)",
+          "source_id": "s7727",
+          "as_of": "2022-10-24",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "prizov-aleksandr-ivanovich",
           "target": "ooo-npk-atlant-aero",
           "type": "role",
           "label": "Учредитель (5%)",
           "source_id": "s6962",
           "as_of": "2023-12-15",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "proekt-kb-arkhangel",
+          "target": "ano-tsvp-zov-aa",
+          "type": "related",
+          "label": "training-partnership",
+          "source_id": "s7728",
+          "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
@@ -25566,6 +25652,18 @@
           "degree": 5
         },
         {
+          "id": "ano-tsvp-zov-aa",
+          "kind": "entity",
+          "label": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ЦЕНТР ПОМОЩИ ВОЕННОСЛУЖАЩИМ \"ЗА ОТВАЖНЫХ ВОИНОВ - АРМИИ АНГЕЛОВ\"",
+          "name_latin": "ANO CPV \"ZOV-AA\"",
+          "inn": "1651092483",
+          "tier": "adjacent",
+          "sanctioned": false,
+          "legal_form": "АНО",
+          "variant": null,
+          "degree": 6
+        },
+        {
           "id": "antsev-georgiy-vladimirovich",
           "kind": "person",
           "label": "Анцев Георгий Владимирович",
@@ -26007,7 +26105,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 6
+          "degree": 8
         },
         {
           "id": "dmitriy-vladimirovich-rubinshteyn",
@@ -27612,6 +27710,14 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 3
+        },
+        {
+          "id": "pribylova-kristina-anatolevna",
+          "kind": "person",
+          "label": "Прибылова Кристина Анатольевна",
+          "name_latin": "Kristina Anatolevna Pribylova",
+          "sanctioned": false,
+          "degree": 2
         },
         {
           "id": "radchenko-mikhail-yurevich",
@@ -29356,6 +29462,17 @@
           "label": null,
           "source_id": "s0469",
           "as_of": "2026-01-24",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "pribylova-kristina-anatolevna",
+          "target": "ano-tsvp-zov-aa",
+          "type": "directs",
+          "label": null,
+          "source_id": "s7727",
+          "as_of": "2022-10-24",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
