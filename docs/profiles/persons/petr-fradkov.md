@@ -23,7 +23,13 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Disqualified-director registry:** No hits (checked None)
 - **Subsidiary-liability registry:** No hits (checked None)
 
-> **Sanctioned** — OpenSanctions topics: sanction; debarment; role.pep; corp.disqual; export.control. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Chairman/CEO of Promsvyazbank (ПАО «Банк ПСБ»). Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.
+> **Sanctioned** — OpenSanctions topics: sanction; debarment; role.pep; corp.disqual; export.control. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Chairman/CEO of Promsvyazbank (ПАО «Банк ПСБ»). Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap. [s0860]
+
+## Sources cited in this profile
+
+| ID | Type | Locator | Captured | As of |
+|---|---|---|---|---|
+| [s0860] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_petr-fradkov_20260824_petr-fradkov.json) | 2026-08-24 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

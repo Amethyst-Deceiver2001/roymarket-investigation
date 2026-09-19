@@ -6725,7 +6725,7 @@
       {
         "date": null,
         "note": "OpenSanctions/GUR: exact-name match \"Limited Liability Company Uraldronzavod\" (match_id NK-A8hwErVGFYrk2opV6o86eA, score 1.0), topics=[debarment, export.control, sanction], corroborated by OFAC (sanctionssearch.ofac.treas.gov id=49954), EU (OJ L_202403183), France's gels-avoirs asset-freeze registry (idRegistre=7810), and GUR's own sanctioned-companies list (war-sanctions.gur.gov.ua companies/13813). Aleph's Global Sanctions Database independently carries the same entity under 3 separate records (scores 17.1/11.9/10.1). Distinctive single-word legal name, no plausible namesake collision found in the raw match set.",
-        "source_id": null
+        "source_id": "s0755"
       }
     ],
     "litigation": [],
@@ -9648,7 +9648,7 @@
       "claim": "Named participant (АО «НПП», Игорь Потапов) at a 26.03.2025 ЦБСТ-hosted expanded session on developer support, alongside «Стратим», «Площадь» and «Овод».",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:574, 26.03.2025: \"...собрались более 40 резидентов — от инженеров «Стратим» и «Площади» до разработчиков дронов «Овод» и представителей АО «НПП».\" Quote: \"Игорь Потапов (АО «НПП») отметил, что ЦБСТ стал эффективной площадкой прямого диалога между производителями и структурами, способными оказывать реальную поддержку.\"",
-      "source_id": null
+      "source_id": "s7583"
     },
     "wb_overlap": "none_found",
     "products": [],
@@ -9927,7 +9927,7 @@
       "claim": "Named directly as \"резидент ЦБСТ\" by ЦБСТ's own channel.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:2198, 09.06.2026: \"ПАК «Форпост» — ещё одно комплексное антидроновое решение от резидента ЦБСТ «КоптерЛаб»...\" This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document — no s#### id applies; the channel/post/date is the citation.",
-      "source_id": null
+      "source_id": "s7591"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -10256,7 +10256,7 @@
       "claim": "«Скворец»/«Скворец ВМФ» FPV drone family developed \"при поддержке\" (with the support of) ЦБСТ; independently confirmed as an EU-sanctioned ЦБСТ resident.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:509, 04.03.2025: \"Разработка «Скворца» проходит при поддержке Центра беспилотных систем и технологий (ЦБСТ)...\" Independently reconfirmed by post 2159491523:2095, 24.04.2026 (ЦБСТ's own post on the EU's 20th sanctions package): \"«Технодрон»... компания при поддержке Центра беспилотных систем и технологий постоянно совершенствует семейство FPV-дронов «Скворец».\"",
-      "source_id": null
+      "source_id": "s7582"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -10588,7 +10588,7 @@
       "claim": "Named directly by ЦБСТ's own channel as one of six EU-sanctioned ЦБСТ residents in the EU's 20th sanctions package (as «Атлант Аэро»); press coverage of the sanctions describes it as a maker of FPV drones and components for Orion-type UAVs plus EW/digital-integration systems.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026: \"В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел».\" 854 employees, ₽59.08bn declared income and ₽3.22bn profit tax paid (year through 01.01.2026) per EGRUL's own open tax data.",
-      "source_id": null
+      "source_id": "s7588"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -11145,7 +11145,7 @@
       "claim": "EU-sanctioned as one of six named ЦБСТ residents (\"Гаскар Групп\") in the EU's 20th sanctions package, per ЦБСТ's own coverage of the listing.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026 (see ooo-arkhangel/ao-tekhnodron for the same post). NOTE: the post names \"Гаскар Групп\" — not independently disambiguated in this pass between ООО «Гаскар» itself and its sister entities «Гаскар Технологии»/«Гаскар Интеграция» (also in this registry, under a different founder, Афанасьев И.К.) — attached to ooo-gaskar as the primary EU-sanctioned entity per the existing registry record, but the exact referent of \"Групп\" is a real open question. Web search (23.08.2026) for \"Гаскар Технологии\"/\"Гаскар Интеграция\" + EU sanctions found NO hits connecting either sister entity to the EU's 20th package — some (weak, negative-evidence) support for \"Гаскар Групп\" referring to this entity (ООО «Гаскар») rather than the Афанасьев-founded sister pair, though not a positive confirmation either way.",
-      "source_id": null
+      "source_id": "s7588"
     },
     "wb_overlap": "confirmed_direct",
     "products": [
@@ -12188,7 +12188,7 @@
       "claim": "Named directly by ЦБСТ's own channel as one of six EU-sanctioned ЦБСТ residents in the EU's 20th sanctions package (as «СКБ «Пиранья»»).",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026: \"В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел».\" Identified as ООО «СКБ Пиранья» (ИНН 7300024069, Ulyanovsk — historically Симбирск, hence «Симбирское конструкторское бюро «Пиранья»» per ЦБСТ's own HeliRussia coverage), maker of the «Пиранья 15»/«Пиранья 20» cargo-capable strike drones; GD/40% owner Чернышов Павел Алексеевич, 60% owner Корчагина Ольга Александровна match already-registered director field.",
-      "source_id": null
+      "source_id": "s7588"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -12660,7 +12660,7 @@
       "claim": "Named directly in ЦБСТ's own channel's six-name \"contour\" list: \"«Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел»\".",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026 -- same post already cited verbatim for ao-tekhnodron/ooo-arkhangel/ooo-atlant-aero's cbst_tie.",
-      "source_id": null
+      "source_id": "s7588"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -13147,7 +13147,7 @@
       "claim": "EU-sanctioned as one of six named ЦБСТ residents in the EU's 20th sanctions package, per ЦБСТ's own coverage of the listing.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026: \"В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел».\" Note: the earlier \"2026 accelerator finalist\" framing from the brief scaffold was NOT independently confirmed in this channel search — dropped from the claim rather than left unsupported; the EU-sanctions listing is the confirmed basis.",
-      "source_id": null
+      "source_id": "s7588"
     },
     "wb_overlap": "none_found",
     "products": [],
@@ -13728,7 +13728,7 @@
       "claim": "Named directly by ЦБСТ's own channel, 24.04.2026 post (t.me/ANO_CBST/2095) on the EU's 20th sanctions package, as one of \"two further named entities\" beyond the six-name contour list.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026 (per docs/index.html prose, quoted at length elsewhere in this brief). Post already in this project's scraped Telegram DB, not yet archived as a discrete file.",
-      "source_id": null
+      "source_id": "s7588"
     },
     "wb_overlap": "none_found",
     "products": [],
@@ -14967,7 +14967,7 @@
       "claim": "Named directly by ЦБСТ's own channel, same 24.04.2026 post (t.me/ANO_CBST/2095) as ао-kotlin-novator above.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026 (per docs/index.html prose).",
-      "source_id": null
+      "source_id": "s7588"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -18111,7 +18111,7 @@
       "claim": "Named among ЦБСТ's \"resident-company leadership\" in a New Year channel post.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:1701, 31.12.2025: \"...руководители наших компаний-резидентов: «Авирон», «Овод», АО «НПП», НПЦ «Ушкуйник», «Аляска» и «Визионеро».\" This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document — no s#### id applies; the channel/post/date is the citation.",
-      "source_id": null
+      "source_id": "s7587"
     },
     "wb_overlap": "none_found",
     "products": [],
@@ -19093,7 +19093,7 @@
       "claim": "Named ЦБСТ resident; its tactical-footwear product was shown at the «Запад-2025» strategic exercises alongside other resident hardware.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:1246, 17.09.2025: \"...продукция проекта «Ментастеп» по защите ног личного состава и гражданского персонала, использующих тактическую обувь\" — under the heading \"Благодарим резидентов ЦБСТ за участие в стратегических учениях «Запад-2025».\" Note: the earlier \"2025 accelerator special-prize winner\" framing from the brief scaffold was NOT independently confirmed in this channel search — the Запад-2025 showing is the confirmed basis. Web search (23.08.2026) clarifies the prize mechanism: «Ментастеп» received a special prize specifically from фонд «Наша Правда» (priority purchasing status when SVO-participant orders come in), not a ЦБСТ-accelerator main prize — of the accelerator's first wave (370 applications, 50 regions, 14 finalists), 5 projects won outright and Ментастеп received separate special recognition, not one of the 5. The brief scaffold's original \"special-prize winner\" framing is accurate in substance, just imprecise about which body (Наша Правда, not ЦБСТ itself) issued the prize.",
-      "source_id": null
+      "source_id": "s7586"
     },
     "wb_overlap": "none_found",
     "products": [],
@@ -20855,7 +20855,7 @@
       "claim": "Named directly as \"резидент ЦБСТ\" by ЦБСТ's own channel.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:487, 25.02.2025: \"Резидент Центра беспилотных систем и технологий (ЦБСТ), компания ООО «Смарт Текнолоджис» из Пензы, разработала устройство «Метафора» — межсетевой ретранслятор...\" This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document — no s#### id applies; the channel/post/date is the citation.",
-      "source_id": null
+      "source_id": "s7581"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -24223,7 +24223,7 @@
       "claim": "Named directly as \"резидент ЦБСТ\" by a primary Telegram source.",
       "confidence": "t-doc",
       "evidence": "mil_hub channel, 24.09.2025, naming «СуперХроно» directly as \"резидент ЦБСТ\" in the context of its «Тень» closed spec-comms system's use aboard 810th Guards Naval Infantry Brigade «Скворец» FPV drones. This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document — no s#### id applies; the channel/date is the citation. Additional corroboration found via brand search: ЦБСТ's own channel, post 2159491523:639, 19.04.2025, lists \"защищенные системы связи «Тень»\" (this entity's product) among examples of ЦБСТ's ~300-company ecosystem output, alongside «Скворец» and «Площадь».",
-      "source_id": null
+      "source_id": "s7584"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -30626,7 +30626,7 @@
       {
         "date": null,
         "note": "GUR UAV-industry registry: caption \"LIMITED LIABILITY COMPANY GASCAR INTEGRATION\" (war-sanctions.gur.gov.ua/en/uav/companies/15561) carries own_tin=7733894200 and own_reg_number=5147746074196 — an EXACT match to this entity's own ИНН/ОГРН (inn_match=true, ogrn_match=true), confirming same-entity identity even though has_confirmed_listing_language=false. OpenSanctions mirrors the same GUR record at score 1.0 (topics=[poi]).",
-        "source_id": null
+        "source_id": "s0964"
       }
     ],
     "litigation": [],
@@ -31689,7 +31689,7 @@
       "claim": "ЦБСТ presented its own \"«Яким»\" automated air-threat-monitoring/interceptor-coordination system on this company's stand at ПМЭФ-2026 (03.06.2026).",
       "confidence": "t-doc",
       "evidence": "Exact confirmation: ЦБСТ's own channel, post 2159491523:2181, 03.06.2026: \"Центр беспилотных систем и технологий представляет на ПМЭФ-2026 автоматизированную систему мониторинга воздушных угроз «Яким». С возможностями изделия можно ознакомиться на стенде ООО «Конструкторское бюро «Синергия»».\"",
-      "source_id": null
+      "source_id": "s7589"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -32194,7 +32194,7 @@
       {
         "date": null,
         "note": "OpenSanctions: \"LIMITED LIABILITY COMPANY NAUCHNO PROIZVODSTVENNOE OBYEDINENIE KAISANT\" (match_id NK-B8atCCX9rDFNSu5nxQfzQ7, score 0.95), topics=[sanction, export.control, debarment], sourced to GUR's sanctioned-companies list (companies/14048) and OFAC (sanctionssearch.ofac.treas.gov id=50741) — a direct name transliteration of this entity (НПО «КАЙСАНТ»/Nauchno-Proizvodstvennoe Obyedinenie Kaisant), no INN corroboration available but no plausible namesake found either. Aleph's Global Sanctions Database independently carries the identical caption under 3 records. (Note: the entity's own gur_matches field separately picked up an unrelated \"NPO AVIABAS\" record, own_tin 7802943980 != this entity's own ИНН — that GUR hit is namesake noise from the NPO-prefix, not evidence against this designation.)",
-        "source_id": null
+        "source_id": "s0784"
       }
     ],
     "litigation": [],
@@ -32927,7 +32927,7 @@
       "claim": "Named among ЦБСТ's \"resident-company leadership\" in a New Year channel post, alongside Авирон, Овод, АО «НПП», Аляска and Визионеро.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:1701, 31.12.2025: \"...пожеланиями делятся Председатель правления ЦБСТ Андрей Безруков, гендиректор ЦБСТ Нина Яныкина и руководители наших компаний-резидентов: «Авирон», «Овод», АО «НПП», НПЦ «Ушкуйник», «Аляска» и «Визионеро».\" NOTE: nvgushkuynik.ru itself describes АНО «НПЦ «Ушкуйник»» as a parallel incubator with its own 30+ residents, not merely a ЦБСТ resident — this post is nonetheless a direct primary-source ЦБСТ statement naming it as one of \"our resident companies,\" so the tie is recorded as stated even though the institutional relationship is more complex than a simple resident listing (see notes/rebuild_plan.md 2026-09-XX entry on the co-founder/governance link already wired via parents[] on the related npts-ushkuynik record). This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document — no s#### id applies; the channel/post/date is the citation.",
-      "source_id": null
+      "source_id": "s7587"
     },
     "wb_overlap": "none_found",
     "products": [],
@@ -44123,7 +44123,7 @@
       {
         "date": null,
         "note": "GUR UAV-industry registry: caption \"ECOLIBRI JOINT-STOCK COMPANY\" (war-sanctions.gur.gov.ua/en/uav/companies/14291) carries own_tin=7714473012 and own_reg_number=1217700279103 — an EXACT match to this entity's own ИНН/ОГРН (inn_match=true, ogrn_match=true). OpenSanctions mirrors the same GUR record at score 0.95 (topics=[poi]).",
-        "source_id": null
+        "source_id": "s0962"
       }
     ],
     "litigation": [],
@@ -51956,7 +51956,7 @@
       "claim": "Named as a finalist of Cohort II of ЦБСТ's own \"Акселератор проектов двойного назначения\" (dual-use projects accelerator) — a primary-source institutional-program tie, not the literal word \"резидент\" but the same class of ЦБСТ-program participation evidence.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:2198, 09.06.2026: \"Одним из подобных решений является «Динарус» — платформа MANET... Её разработал финалист II потока Акселератора проектов двойного назначения ЦБСТ — компания «Динарус».\" This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document — no s#### id applies; the channel/post/date is the citation.",
-      "source_id": null
+      "source_id": "s7591"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -53441,7 +53441,7 @@
       "claim": "Named directly as \"Резидент ЦБСТ\" in the headline of ЦБСТ's own channel post announcing its aerostat/balloon test program for SVO military delivery use.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:2184, 04.06.2026, headline: \"Резидент ЦБСТ проведёт серию испытаний аэростатов для последующего применения в зоне СВО\" — body names the company: \"компания «Аэроплатформы» осуществит несколько испытаний образцов воздухоплавательной техники\", describing military-delivery use (\"такие аппараты можно применять для доставки в нужную локацию и сброса БпЛА, планирующих авиабомб, военных грузов\"). This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document — no s#### id applies; the channel/post/date is the citation.",
-      "source_id": null
+      "source_id": "s7590"
     },
     "wb_overlap": "none_found",
     "products": [],
@@ -58857,7 +58857,7 @@
       {
         "date": null,
         "note": "OpenSanctions: \"Limited Liability Company Eliars\" (match_id NK-DMVf7HbcS5X8Pfx6XRNh2X, score 1.0), topics=[sanction, debarment, export.control], corroborated by OFAC (sanctionssearch.ofac.treas.gov id=48496), GUR sanctioned-companies list (companies/8970), EU regulation (OJ L_202500389), France's gels-avoirs registry (idRegistre=7884), and permid.org. Aleph independently confirms the same ИНН (7735140825) directly against EGRUL (score 23.9) plus 3 separate 'sanctions'-category Global Sanctions Database records with the matching caption \"ЭЛИАРС\"/\"Eliars\". Distinctive name, exact ИНН correspondence via Aleph EGRUL cross-check.",
-        "source_id": null
+        "source_id": "s0787"
       }
     ],
     "litigation": [],
@@ -59356,7 +59356,7 @@
       "claim": "ЦБСТ's own channel directly names \"группа компаний «Логос»\" a \"резидентом ЦБСТ\" as the developer of the «Дикобраз» RF/EW jamming kits distributed to «Центр» grouping troops via «Единая Россия»/фонд «Наша Правда», 03.07.2025 — the same «Дикобраз»/400+ units-in-combat detail already recorded in this entity's own tier_basis, confirming this ИНН (not the unrelated ИНН 7839303129 gk-logos/РЭБ.РУС record) is the entity ЦБСТ's post refers to.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:878, 04.07.2025: \"Военкорам переданы средства радиоэлектронной борьбы «Дикобраз», разработанные группой компаний «Логос» — резидентом ЦБСТ... По данным производителя, более 400 единиц этих комплексов уже находятся на боевом применении.\" This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document — no s#### id applies; the channel/post/date is the citation.",
-      "source_id": null
+      "source_id": "s7585"
     },
     "wb_overlap": "not_checked",
     "products": [],

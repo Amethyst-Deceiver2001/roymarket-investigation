@@ -57,7 +57,7 @@
 
 ## Sanctions & screening
 
-**Sanctioned**
+**Sanctioned** [s0784]
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
@@ -86,6 +86,7 @@
 | [s0339] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7733393203_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
 | [s0340] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7733393203_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | [s0341] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7733393203_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s0784] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7733393203_20260824_npo-kaysant.json) | 2026-08-24 | — |
 | [s2627] | Naletay | Naletay (NALETAY_773376903806_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
 | [s5389] | Gisp | Gisp (GISP_20260903_goods-catalog-manufacturer-hits-5-companies.json) | 2026-09-03 | 2026-09-03 |
 | [s5390] | Gisp | Gisp (GISP_20260903_goods-catalog-product-details-7-new-items.json) | 2026-09-03 | 2026-09-03 |

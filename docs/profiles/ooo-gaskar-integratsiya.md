@@ -92,7 +92,7 @@
 
 ## Sanctions & screening
 
-**Sanctioned**
+**Sanctioned** [s0964]
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
@@ -123,6 +123,7 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | [s0520] | EGRUL extract | EGRUL extract (ul-5147746074196-20260823133346.pdf) | — | 2026-08-23 |
+| [s0964] | GUR war-sanctions record | GUR war-sanctions record (GUR_7733894200_20260824_ooo-gaskar-integratsiya.html) | 2026-08-24 | — |
 | [s1503] | Zakupki | Zakupki (ZAKUPKI_ATTACH_7733894200_2502412952426000007_elektronnyy-kon-25024129524260000070005_4f85e59e.xml) | — | — |
 | [s1534] | Zakupki | Zakupki (ZAKUPKI_ATTACH_7733894200_2770135608619000037_30-12-2020-65-0-27701356086190000370030_bb9812a7.pdf) | — | 2020-12-30 |
 | [s1548] | Zakupki | Zakupki (ZAKUPKI_ATTACH_7733894200_2770135608619000037_gk-26-06-19-017-27701356086190000370002_8a684764.docx) | — | 2018-12-29 |

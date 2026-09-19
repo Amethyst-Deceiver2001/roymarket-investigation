@@ -26,7 +26,7 @@
 
 ## Sanctions & screening
 
-**Sanctioned**
+**Sanctioned** [s0755]
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 5 OCCRP Aleph match(es) (screened 2026-09-05).
@@ -39,6 +39,7 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| [s0755] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_6671284030_20260824_uraldronzavod.json) | 2026-08-24 | — |
 | [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---

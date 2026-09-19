@@ -76,7 +76,7 @@
 
 ## Sanctions & screening
 
-**Sanctioned**
+**Sanctioned** [s0962]
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
@@ -138,6 +138,7 @@
 | [s0322] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2023_20260817.zip) | 2026-08-17 | 2023-12-31 |
 | [s0323] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
 | [s0324] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
+| [s0962] | GUR war-sanctions record | GUR war-sanctions record (GUR_7714473012_20260824_ao-ekolibri.html) | 2026-08-24 | — |
 | [s1165] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
 | [s1168] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
 | [s1169] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |

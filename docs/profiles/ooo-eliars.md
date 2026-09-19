@@ -51,7 +51,7 @@
 
 ## Sanctions & screening
 
-**Sanctioned**
+**Sanctioned** [s0787]
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 5 OCCRP Aleph match(es) (screened 2026-09-05).
@@ -64,6 +64,7 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| [s0787] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7735140825_20260824_ooo-eliars.json) | 2026-08-24 | — |
 | [s3686] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1616303058823000546_1616303058823000546_kontrakt-497-16163030588230005460002_0ae35aee.docx) | — | 2013-04-05 |
 | [s5389] | Gisp | Gisp (GISP_20260903_goods-catalog-manufacturer-hits-5-companies.json) | 2026-09-03 | 2026-09-03 |
 | [s5390] | Gisp | Gisp (GISP_20260903_goods-catalog-product-details-7-new-items.json) | 2026-09-03 | 2026-09-03 |

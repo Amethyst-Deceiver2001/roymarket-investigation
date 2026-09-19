@@ -39,12 +39,13 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Subsidiary-liability registry:** No hits (checked 2026-09-07)
 - **ЕГРИП (personal ИП):** 1 registration(s) on file
 
-> **Sanctioned** — OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: consistent with this registry's already-documented personal-naming-pattern finding (exited 3mx/Тримикс founder whose surname matches jammer product names «Айрат 100»/«Алия 350» sold via Мэдро) — OpenSanctions record carries no notes to independently corroborate beyond the name/DOB match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.
+> **Sanctioned** — OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: consistent with this registry's already-documented personal-naming-pattern finding (exited 3mx/Тримикс founder whose surname matches jammer product names «Айрат 100»/«Алия 350» sold via Мэдро) — OpenSanctions record carries no notes to independently corroborate beyond the name/DOB match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap. [s0863]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| [s0863] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_shagiakhmetov-ayrat-fatkhutdinovich_20260824_shagiakhmetov-ayrat-fatkhutdinovich.json) | 2026-08-24 | — |
 | [s1039] | Rospatent patent record | Rospatent patent record (PATENT_RU2826668C1_2026-08-24_ooo-trimiks-bulat-3mx.json) | — | — |
 | [s1408] | third-party OSINT dossier | third-party OSINT dossier (DOSSIER_20260825_trimix-3mx-companies-and-people.xlsx) | 2026-08-25 | — |
 

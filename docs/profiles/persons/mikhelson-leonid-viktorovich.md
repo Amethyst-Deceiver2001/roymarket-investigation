@@ -29,12 +29,13 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Disqualified-director registry:** No hits (checked 2026-09-08)
 - **Subsidiary-liability registry:** No hits (checked 2026-09-07)
 
-> **Sanctioned** — OpenSanctions topics: corp.disqual; role.oligarch; sanction; role.rca; poi. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions' own sanctions notes cite the exact ₽33bn/2006 ДАР charter-capital contribution with Симановский already documented in this registry's finding 15 and ownership diagram — independent confirmation of a core registry finding, not just an identity match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.
+> **Sanctioned** — OpenSanctions topics: corp.disqual; role.oligarch; sanction; role.rca; poi. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions' own sanctions notes cite the exact ₽33bn/2006 ДАР charter-capital contribution with Симановский already documented in this registry's finding 15 and ownership diagram — independent confirmation of a core registry finding, not just an identity match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap. [s0855]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| [s0855] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_mikhelson-leonid-viktorovich_20260824_mikhelson-leonid-viktorovich.json) | 2026-08-24 | — |
 | [s6697] | EGRUL extract | EGRUL extract (EGRUL_6330030244_20260907_ooo-levit.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6810] | EGRUL extract | EGRUL extract (EGRUL_6330037352_20260907_ooo-nova.pdf) | 2026-09-07 | 2026-09-07 |
 

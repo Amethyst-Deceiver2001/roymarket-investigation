@@ -35,12 +35,13 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 > **Ukraine, European Union, Switzerland** — CONFIRMED via RuPEP.org profile (category: "Лицо под санкциями"), which independently states personal ИНН 501306766736 -- an EXACT match to this record's already-established ИНН from the OpenSanctions/audit-it.ru cross-reference. This closes the gap the earlier PLAUSIBLE-tier note (below, preserved for its corroborating detail) flagged as needing a primary-source read: RuPEP lists him under sanctions from Ukraine, the EU, and Switzerland. RuPEP itself is an aggregator, not the primary designation instrument, so treat this as CONFIRMED-by-independent-ИНН-match rather than a primary-source read of the underlying EU/CH/UA legal act. [s2788]
 
-> **Sanctioned** — OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check at the time), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him founder/co-owner of "LLC Center for Integrated Unmanned Solutions" — this registry's already ИНН-confirmed ООО «ЦКБР» (Complex Unmanned Solutions Center Ltd), Zhukovsky, full-cycle FPV production. Personal ИНН given in notes: 501306766736. Superseded in confidence tier by the RuPEP-confirmed entry above, kept for its independent corroboration detail.
+> **Sanctioned** — OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check at the time), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him founder/co-owner of "LLC Center for Integrated Unmanned Solutions" — this registry's already ИНН-confirmed ООО «ЦКБР» (Complex Unmanned Solutions Center Ltd), Zhukovsky, full-cycle FPV production. Personal ИНН given in notes: 501306766736. Superseded in confidence tier by the RuPEP-confirmed entry above, kept for its independent corroboration detail. [s0852]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| [s0852] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_kuzyakin-dmitriy-vasilevich_20260824_kuzyakin-dmitriy-vasilevich.json) | 2026-08-24 | — |
 | [s1000] | Rospatent patent record | Rospatent patent record (PATENT_RU236504U1_2026-08-24_ooo-tskbr.json) | — | — |
 | [s2788] | Pep | Pep (PEP_ Кузякин Дмитрий Васильевич, Москов...-Технический Институт, МФТИ, сотрудник.pdf) | — | 2026-05-20 |
 | [s7411] | EGRUL extract | EGRUL extract (EGRUL_5040176793_20260914_ooo-tskbr.pdf) | 2026-09-14 | 2026-09-14 |

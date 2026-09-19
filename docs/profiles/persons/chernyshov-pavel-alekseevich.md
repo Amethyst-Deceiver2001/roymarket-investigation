@@ -31,13 +31,14 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Disqualified-director registry:** No hits (checked 2026-09-08)
 - **Subsidiary-liability registry:** No hits (checked 2026-09-07)
 
-> **Sanctioned** — OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him director/founder of "SDB Piranya" (Simbirsk Design Bureau Пиранья) — matches this registry's existing СКБ «Пиранья» okved_mismatch note. Personal ИНН given in notes: 732508747179; passport 7304202860. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.
+> **Sanctioned** — OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him director/founder of "SDB Piranya" (Simbirsk Design Bureau Пиранья) — matches this registry's existing СКБ «Пиранья» okved_mismatch note. Personal ИНН given in notes: 732508747179; passport 7304202860. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap. [s0829]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | [s0487] | EGRUL extract | EGRUL extract (ul-1237300010430-20260823131643.pdf) | — | 2026-08-23 |
+| [s0829] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_chernyshov-pavel-alekseevich_20260824_chernyshov-pavel-alekseevich.json) | 2026-08-24 | — |
 | [s6730] | EGRUL extract | EGRUL extract (EGRUL_7300024069_20260907_ooo-skb-piranya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
