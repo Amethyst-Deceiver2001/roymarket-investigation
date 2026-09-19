@@ -12,6 +12,7 @@
 - **Director:** Капустин Павел Евгеньевич
 - **Charter capital:** ₽16,000
 - **ОКВЭД:** 62.01 — Разработка компьютерного программного обеспечения
+- **ЦБСТ tie:** Presented by ЦБСТ among the exhibitors at HeliRussia.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

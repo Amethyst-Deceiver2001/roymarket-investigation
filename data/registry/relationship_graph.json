@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1095,
-  "edge_count": 1788,
-  "unresolved_count": 157,
+  "node_count": 1132,
+  "edge_count": 1846,
+  "unresolved_count": 159,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -20,6 +20,14 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 3
+    },
+    {
+      "id": "agievich-sergey-nikolaevich",
+      "kind": "person",
+      "label": "Агиевич Сергей Николаевич",
+      "name_latin": "Agievich Sergey Nikolaevich",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "aleksandr-osadchuk",
@@ -314,6 +322,30 @@
       "degree": 5
     },
     {
+      "id": "ao-kronshtadt",
+      "kind": "entity",
+      "label": "АО «Кронштадт»",
+      "name_latin": "JSC Kronshtadt",
+      "inn": "7808035536",
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 3
+    },
+    {
+      "id": "ao-nii-stt",
+      "kind": "entity",
+      "label": "АО «НИИ СТТ»",
+      "name_latin": null,
+      "inn": "6730046954",
+      "tier": "manufacturer",
+      "sanctioned": true,
+      "legal_form": "АО",
+      "variant": null,
+      "degree": 56
+    },
+    {
       "id": "ao-nii-vektor",
       "kind": "entity",
       "label": "АО «НИИ «Вектор»»",
@@ -554,6 +586,14 @@
       "degree": 4
     },
     {
+      "id": "astakhov-sergey-petrovich",
+      "kind": "person",
+      "label": "Астахов Сергей Петрович",
+      "name_latin": "Astakhov Sergey Petrovich",
+      "sanctioned": false,
+      "degree": 6
+    },
+    {
       "id": "baklykov-kirill-viktorovich",
       "kind": "person",
       "label": "Баклыков Кирилл Викторович",
@@ -722,6 +762,22 @@
       "degree": 2
     },
     {
+      "id": "bogomolov-andrey-vladimirovich",
+      "kind": "person",
+      "label": "Богомолов Андрей Владимирович",
+      "name_latin": null,
+      "sanctioned": true,
+      "degree": 4
+    },
+    {
+      "id": "bolshakov-viktor-viktorovich",
+      "kind": "person",
+      "label": "Большаков Виктор Викторович",
+      "name_latin": "Bolshakov Viktor Viktorovich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "borisov-aleksandr-sergeevich-tsbs-tula",
       "kind": "person",
       "label": "Борисов Александр Сергеевич",
@@ -802,6 +858,14 @@
       "degree": 3
     },
     {
+      "id": "chemarov-aleksey-olegovich",
+      "kind": "person",
+      "label": "Чемаров Алексей Олегович",
+      "name_latin": "Chemarov Aleksey Olegovich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "cherepkov-aleksandr-aleksandrovich",
       "kind": "person",
       "label": "Черепков Александр Александрович",
@@ -848,6 +912,12 @@
       "name_latin": "Chukalin Sergey Lvovich",
       "sanctioned": false,
       "degree": 2
+    },
+    {
+      "id": "customer::various-regional-мвд-directorates",
+      "kind": "government_customer",
+      "label": "Various regional МВД directorates (ГУ МВД/УМВД по субъектам РФ)",
+      "degree": 1
     },
     {
       "id": "customer::администрация-белгородского-муниципального-округа",
@@ -919,6 +989,12 @@
       "id": "customer::гоу-то-яснополянский-образовательный-комплекс-им-л-н-толстого",
       "kind": "government_customer",
       "label": "ГОУ ТО «Яснополянский образовательный комплекс им. Л.Н. Толстого» (Тульская обл., Щёкинский р-он)",
+      "degree": 1
+    },
+    {
+      "id": "customer::гу-мвд-россии-по-кемеровской-области",
+      "kind": "government_customer",
+      "label": "ГУ МВД России по Кемеровской области",
       "degree": 1
     },
     {
@@ -1108,6 +1184,18 @@
       "degree": 1
     },
     {
+      "id": "customer::фгкоу-впо-калининградский-пограничный-институт-фсб-россии",
+      "kind": "government_customer",
+      "label": "ФГКОУ ВПО «Калининградский пограничный институт ФСБ России»",
+      "degree": 1
+    },
+    {
+      "id": "customer::фгку-войсковая-часть-35533",
+      "kind": "government_customer",
+      "label": "ФГКУ «Войсковая часть 35533» (FSB-affiliated special-purpose unit)",
+      "degree": 2
+    },
+    {
       "id": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
       "kind": "government_customer",
       "label": "ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz)",
@@ -1210,6 +1298,18 @@
       "degree": 1
     },
     {
+      "id": "customer::фку-ик-1-уфсин-россии-по-костромской-области",
+      "kind": "government_customer",
+      "label": "ФКУ ИК-1 УФСИН России по Костромской области",
+      "degree": 1
+    },
+    {
+      "id": "customer::фскн-россии",
+      "kind": "government_customer",
+      "label": "ФСКН России (Федеральная служба РФ по контролю за оборотом наркотиков, dissolved/merged into МВД 2016)",
+      "degree": 1
+    },
+    {
       "id": "dementev-vitaliy-evgenevich",
       "kind": "person",
       "label": "Дементьев Виталий Евгеньевич",
@@ -1290,6 +1390,14 @@
       "degree": 5
     },
     {
+      "id": "ekonom-vitaliy-panteleevich",
+      "kind": "person",
+      "label": "Эконом Виталий Пантелеевич",
+      "name_latin": "Ekonom Vitaliy Panteleevich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "eliseev-dmitriy-nikolaevich",
       "kind": "person",
       "label": "Елисеев Дмитрий Николаевич",
@@ -1330,6 +1438,14 @@
       "degree": 1
     },
     {
+      "id": "fedorov-sergey-gennadevich",
+      "kind": "person",
+      "label": "Федоров Сергей Геннадьевич",
+      "name_latin": "Fedorov Sergey Gennadevich",
+      "sanctioned": false,
+      "degree": 2
+    },
+    {
       "id": "fedukovich-kirill-olegovich",
       "kind": "person",
       "label": "Федукович Кирилл Олегович",
@@ -1348,6 +1464,14 @@
       "legal_form": "Общественная организация",
       "variant": null,
       "degree": 3
+    },
+    {
+      "id": "filatov-maksim-alekseevich",
+      "kind": "person",
+      "label": "Филатов Максим Алексеевич",
+      "name_latin": "Filatov Maksim Alekseevich",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "filatov-roman-konstantinovich",
@@ -1482,6 +1606,14 @@
       "degree": 1
     },
     {
+      "id": "gaylit-sergey-vladimirovich",
+      "kind": "person",
+      "label": "Гайлит Сергей Владимирович",
+      "name_latin": "Gaylit Sergey Vladimirovich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "gk-logos",
       "kind": "entity",
       "label": "ГК «Логос»",
@@ -1546,10 +1678,26 @@
       "degree": 4
     },
     {
+      "id": "grigorev-valeriy-vladimirovich",
+      "kind": "person",
+      "label": "Григорьев Валерий Владимирович",
+      "name_latin": "Grigorev Valeriy Vladimirovich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "gromov-aleksandr-vladimirovich",
       "kind": "person",
       "label": "Громов Александр Владимирович",
       "name_latin": "Gromov Aleksandr Vladimirovich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
+      "id": "gulidov-aleksey-anatolevich",
+      "kind": "person",
+      "label": "Гулидов Алексей Анатольевич",
+      "name_latin": "Gulidov Aleksey Anatolevich",
       "sanctioned": false,
       "degree": 1
     },
@@ -1692,6 +1840,14 @@
       "name_latin": "Kazarinov Andrey Sergeevich",
       "sanctioned": false,
       "degree": 3
+    },
+    {
+      "id": "kelyan-andrey-khazarovich",
+      "kind": "person",
+      "label": "Кельян Андрей Хазарович",
+      "name_latin": "Kelyan Andrey Khazarovich",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "khamukhin-anatoliy-vladimirovich",
@@ -1902,6 +2058,14 @@
       "degree": 3
     },
     {
+      "id": "kozenova-aleksandra-olegovna",
+      "kind": "person",
+      "label": "Козенова Александра Олеговна",
+      "name_latin": "Kozenova Aleksandra Olegovna",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "kozhemyakin-vladimir-vladimirovich",
       "kind": "person",
       "label": "Кожемякин Владимир Владимирович",
@@ -1990,6 +2154,14 @@
       "degree": 4
     },
     {
+      "id": "lenskaya-evgeniya-vladimirovna",
+      "kind": "person",
+      "label": "Ленская Евгения Владимировна",
+      "name_latin": "Lenskaya Evgeniya Vladimirovna",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "levshin-sergey-aleksandrovich",
       "kind": "person",
       "label": "Левшин Сергей Александрович",
@@ -2010,6 +2182,14 @@
       "kind": "person",
       "label": "Лукиянов Александр Сергеевич",
       "name_latin": "Lukiyanov Aleksandr Sergeevich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
+      "id": "lutsenko-sergey-aleksandrovich",
+      "kind": "person",
+      "label": "Луценко Сергей Александрович",
+      "name_latin": "Lutsenko Sergey Aleksandrovich",
       "sanctioned": false,
       "degree": 1
     },
@@ -2751,7 +2931,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 7
+      "degree": 8
     },
     {
       "id": "ooo-gk-logos",
@@ -3658,6 +3838,14 @@
       "degree": 3
     },
     {
+      "id": "penkov-andrey-anatolevich",
+      "kind": "person",
+      "label": "Пеньков Андрей Анатольевич",
+      "name_latin": "Penkov Andrey Anatolevich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "perekatov-sergey-sergeevich",
       "kind": "person",
       "label": "Перекатов Сергей Сергеевич",
@@ -3762,6 +3950,14 @@
       "degree": 5
     },
     {
+      "id": "polikarpov-aleksandr-alekseevich",
+      "kind": "person",
+      "label": "Поликарпов Александр Алексеевич",
+      "name_latin": "Polikarpov Aleksandr Alekseevich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "polkovnikov-sergey-petrovich",
       "kind": "person",
       "label": "Полковников Сергей Петрович",
@@ -3782,6 +3978,14 @@
       "kind": "person",
       "label": "Понкратьев Алексей Иванович",
       "name_latin": "Ponkratev Aleksey Ivanovich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
+      "id": "ponomarev-aleksandr-anatolevich",
+      "kind": "person",
+      "label": "Пономарев Александр Анатольевич",
+      "name_latin": "Ponomarev Aleksandr Anatolevich",
       "sanctioned": false,
       "degree": 1
     },
@@ -3977,6 +4181,32 @@
       "label": "Эколибри Р-75",
       "owner_slug": "ao-ekolibri",
       "source_id": "s5391",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-nii-stt::merlin-vr",
+      "kind": "product",
+      "label": "Merlin-VR",
+      "owner_slug": "ao-nii-stt",
+      "source_id": null,
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-nii-stt::скарабей-бн",
+      "kind": "product",
+      "label": "Скарабей-БН (Skarabey-BN)",
+      "owner_slug": "ao-nii-stt",
+      "source_id": null,
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -9427,6 +9657,14 @@
       "degree": 1
     },
     {
+      "id": "pugach-evgeniy-evgenevich",
+      "kind": "person",
+      "label": "Пугач Евгений Евгеньевич",
+      "name_latin": "Pugach Evgeniy Evgenevich",
+      "sanctioned": false,
+      "degree": 2
+    },
+    {
       "id": "pyankov-ilya-sergeevich",
       "kind": "person",
       "label": "Пьянков Илья Сергеевич",
@@ -9601,6 +9839,14 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 3
+    },
+    {
+      "id": "sevidov-vladimir-vitalevich",
+      "kind": "person",
+      "label": "Севидов Владимир Витальевич",
+      "name_latin": "Sevidov Vladimir Vitalevich",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "shabanov-marat-faradovich",
@@ -9841,6 +10087,14 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 7
+    },
+    {
+      "id": "stroev-nikolay-nikolaevich",
+      "kind": "person",
+      "label": "Строев Николай Николаевич",
+      "name_latin": "Stroev Nikolay Nikolaevich",
+      "sanctioned": false,
+      "degree": 5
     },
     {
       "id": "stub::000",
@@ -10107,6 +10361,12 @@
       "degree": 1
     },
     {
+      "id": "stub::галкин вадим сергеевич",
+      "kind": "unresolved",
+      "label": "Галкин Вадим Сергеевич",
+      "degree": 1
+    },
+    {
       "id": "stub::гелик александр геннадьевич",
       "kind": "unresolved",
       "label": "Гелик Александр Геннадьевич",
@@ -10218,6 +10478,12 @@
       "id": "stub::дмитриев геннадий витальевич",
       "kind": "unresolved",
       "label": "Дмитриев Геннадий Витальевич",
+      "degree": 1
+    },
+    {
+      "id": "stub::донцов василий николаевич",
+      "kind": "unresolved",
+      "label": "Донцов Василий Николаевич",
       "degree": 1
     },
     {
@@ -10809,6 +11075,14 @@
       "degree": 2
     },
     {
+      "id": "sulimskiy-evgeniy-sergeevich",
+      "kind": "person",
+      "label": "Сулимский Евгений Сергеевич",
+      "name_latin": "Sulimskiy Evgeniy Sergeevich",
+      "sanctioned": false,
+      "degree": 4
+    },
+    {
       "id": "suvorova-elena-aleksandrovna",
       "kind": "person",
       "label": "Суворова Елена Александровна",
@@ -10847,6 +11121,14 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 1
+    },
+    {
+      "id": "timofeeva-nataliya-sergeevna",
+      "kind": "person",
+      "label": "Тимофеева Наталия Сергеевна",
+      "name_latin": "Timofeeva Nataliya Sergeevna",
+      "sanctioned": false,
+      "degree": 2
     },
     {
       "id": "tolstousov-artem",
@@ -10993,6 +11275,14 @@
       "degree": 4
     },
     {
+      "id": "vlasenkova-alina-aleksandrovna",
+      "kind": "person",
+      "label": "Власенкова Алина Александровна",
+      "name_latin": "Vlasenkova Alina Aleksandrovna",
+      "sanctioned": false,
+      "degree": 3
+    },
+    {
       "id": "vlasov-artem-arkadevich",
       "kind": "person",
       "label": "Власов Артём Аркадьевич",
@@ -11037,6 +11327,14 @@
       "kind": "person",
       "label": "Яблоков Евгений Николаевич",
       "name_latin": "Yablokov Evgeniy Nikolaevich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
+      "id": "yakovenkov-valentin-valentinovich",
+      "kind": "person",
+      "label": "Яковенков Валентин Валентинович",
+      "name_latin": "Yakovenkov Valentin Valentinovich",
       "sanctioned": false,
       "degree": 1
     },
@@ -11169,6 +11467,17 @@
       "type": "role",
       "label": null,
       "source_id": "s0456",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "agievich-sergey-nikolaevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2637799C1)",
+      "source_id": "s1003",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -11756,6 +12065,50 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
+    },
+    {
+      "source": "ao-kronshtadt",
+      "target": "ooo-gk-aeromaks",
+      "type": "related",
+      "label": "group-structure",
+      "source_id": "s7610",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-nii-stt",
+      "target": "ao-kronshtadt",
+      "type": "related",
+      "label": "counterparty",
+      "source_id": "s0023",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-nii-stt",
+      "target": "product::ao-nii-stt::merlin-vr",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-nii-stt",
+      "target": "product::ao-nii-stt::скарабей-бн",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
     },
     {
       "source": "ao-nii-vektor",
@@ -12913,6 +13266,72 @@
       "confidence": "t-open"
     },
     {
+      "source": "astakhov-sergey-petrovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU134783S)",
+      "source_id": "s0982",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "astakhov-sergey-petrovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2626575C1)",
+      "source_id": "s1002",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "astakhov-sergey-petrovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2644630C1)",
+      "source_id": "s1005",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "astakhov-sergey-petrovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2758565C1)",
+      "source_id": "s1022",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "astakhov-sergey-petrovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2758565C9)",
+      "source_id": "s1023",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "astakhov-sergey-petrovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2782475C1)",
+      "source_id": "s1033",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "baklykov-kirill-viktorovich",
       "target": "ooo-kravt-udmurtiya",
       "type": "role",
@@ -13936,6 +14355,61 @@
       "confidence": null
     },
     {
+      "source": "bogomolov-andrey-vladimirovich",
+      "target": "ao-nii-stt",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0211",
+      "as_of": "2016-05-19",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "bogomolov-andrey-vladimirovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2637799C1)",
+      "source_id": "s1003",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "bogomolov-andrey-vladimirovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2663193C1)",
+      "source_id": "s1006",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "bogomolov-andrey-vladimirovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "bolshakov-viktor-viktorovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU134783S)",
+      "source_id": "s0982",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "borisov-aleksandr-sergeevich-tsbs-tula",
       "target": "ooo-tsentr-bespilotnykh-sistem-tula",
       "type": "directs",
@@ -14172,6 +14646,17 @@
       "type": "role",
       "label": null,
       "source_id": "s0947",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "chemarov-aleksey-olegovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2663193C1)",
+      "source_id": "s1006",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -14442,6 +14927,17 @@
       "confidence": null
     },
     {
+      "source": "customer::various-regional-мвд-directorates",
+      "target": "ao-nii-stt",
+      "type": "procures",
+      "label": null,
+      "source_id": "s3294",
+      "as_of": null,
+      "weight": 22351363.99,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "customer::администрация-белгородского-муниципального-округа",
       "target": "ooo-pokrov",
       "type": "procures",
@@ -14603,6 +15099,17 @@
       "source_id": "s1914",
       "as_of": "2023-12-25",
       "weight": 3072000,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "customer::гу-мвд-россии-по-кемеровской-области",
+      "target": "ao-nii-stt",
+      "type": "procures",
+      "label": null,
+      "source_id": "s3328",
+      "as_of": null,
+      "weight": 2430000,
       "temporal_status": "unknown",
       "confidence": null
     },
@@ -15894,6 +16401,39 @@
       "confidence": null
     },
     {
+      "source": "customer::фгкоу-впо-калининградский-пограничный-институт-фсб-россии",
+      "target": "ao-nii-stt",
+      "type": "procures",
+      "label": null,
+      "source_id": "s5055",
+      "as_of": null,
+      "weight": 1768000,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "customer::фгку-войсковая-часть-35533",
+      "target": "ao-nii-stt",
+      "type": "procures",
+      "label": null,
+      "source_id": "s3330",
+      "as_of": null,
+      "weight": 126467572,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "customer::фгку-войсковая-часть-35533",
+      "target": "ao-nii-stt",
+      "type": "procures",
+      "label": null,
+      "source_id": "s3342",
+      "as_of": null,
+      "weight": 178430146.96,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
       "target": "ip-tsyganov-vadim-borisovich",
       "type": "procures",
@@ -16220,6 +16760,28 @@
       "source_id": "s2655",
       "as_of": null,
       "weight": 9000000,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "customer::фку-ик-1-уфсин-россии-по-костромской-области",
+      "target": "ao-nii-stt",
+      "type": "procures",
+      "label": null,
+      "source_id": "s3330",
+      "as_of": null,
+      "weight": 604096,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "customer::фскн-россии",
+      "target": "ao-nii-stt",
+      "type": "procures",
+      "label": null,
+      "source_id": "s3330",
+      "as_of": null,
+      "weight": 8500000,
       "temporal_status": "unknown",
       "confidence": null
     },
@@ -16598,6 +17160,17 @@
       "confidence": null
     },
     {
+      "source": "ekonom-vitaliy-panteleevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2663193C1)",
+      "source_id": "s1006",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "eliseev-dmitriy-nikolaevich",
       "target": "ano-npts-ushkuynik",
       "type": "role",
@@ -16708,6 +17281,28 @@
       "confidence": null
     },
     {
+      "source": "fedorov-sergey-gennadevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2626575C1)",
+      "source_id": "s1002",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "fedorov-sergey-gennadevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2644630C1)",
+      "source_id": "s1005",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "fedukovich-kirill-olegovich",
       "target": "ooo-kopterlab",
       "type": "directs",
@@ -16757,6 +17352,17 @@
       "type": "role",
       "label": "Генеральный директор",
       "source_id": "s7415",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "filatov-maksim-alekseevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU134783S)",
+      "source_id": "s0982",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -17181,6 +17787,17 @@
       "confidence": null
     },
     {
+      "source": "gaylit-sergey-vladimirovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU134783S)",
+      "source_id": "s0982",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "gk-logos",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
@@ -17401,11 +18018,33 @@
       "confidence": null
     },
     {
+      "source": "grigorev-valeriy-vladimirovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2626575C1)",
+      "source_id": "s1002",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "gromov-aleksandr-vladimirovich",
       "target": "ao-nii-vektor",
       "type": "role",
       "label": "co-inventor (patent RU2769566C2)",
       "source_id": "s1030",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "gulidov-aleksey-anatolevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2637799C1)",
+      "source_id": "s1003",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -17802,6 +18441,17 @@
       "type": "role",
       "label": "co-inventor (patent RU2859188C1)",
       "source_id": "s1049",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kelyan-andrey-khazarovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2663193C1)",
+      "source_id": "s1006",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -18930,6 +19580,17 @@
       "confidence": null
     },
     {
+      "source": "kozenova-aleksandra-olegovna",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2782475C1)",
+      "source_id": "s1033",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "kozhemyakin-vladimir-vladimirovich",
       "target": "ooo-aerotekhalyans",
       "type": "founded",
@@ -19238,6 +19899,17 @@
       "confidence": null
     },
     {
+      "source": "lenskaya-evgeniya-vladimirovna",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU134783S)",
+      "source_id": "s0982",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "levshin-sergey-aleksandrovich",
       "target": "npts-elvis",
       "type": "role",
@@ -19265,6 +19937,17 @@
       "type": "role",
       "label": "co-inventor (patent RU2716283C2)",
       "source_id": "s1013",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "lutsenko-sergey-aleksandrovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2637799C1)",
+      "source_id": "s1003",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -24859,6 +25542,17 @@
       "confidence": null
     },
     {
+      "source": "penkov-andrey-anatolevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2644630C1)",
+      "source_id": "s1005",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "perekatov-sergey-sergeevich",
       "target": "ooo-eyartek",
       "type": "founded",
@@ -25332,6 +26026,17 @@
       "confidence": null
     },
     {
+      "source": "polikarpov-aleksandr-alekseevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2626575C1)",
+      "source_id": "s1002",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "polkovnikov-sergey-petrovich",
       "target": "ao-nii-vektor",
       "type": "role",
@@ -25370,6 +26075,17 @@
       "type": "role",
       "label": "co-inventor (patent RU2752249C2)",
       "source_id": "s1020",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ponomarev-aleksandr-anatolevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2637799C1)",
+      "source_id": "s1003",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -25689,6 +26405,28 @@
       "type": "role",
       "label": "co-inventor (patent RU2858174C1)",
       "source_id": "s1047",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "pugach-evgeniy-evgenevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2626575C1)",
+      "source_id": "s1002",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "pugach-evgeniy-evgenevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2644630C1)",
+      "source_id": "s1005",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -26393,6 +27131,17 @@
       "type": "role",
       "label": "General Director, Фонд поддержки зимних олимпийских видов спорта, since 11.11.2014",
       "source_id": "s0098",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "sevidov-vladimir-vitalevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2663193C1)",
+      "source_id": "s1006",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -27532,6 +28281,61 @@
       "confidence": null
     },
     {
+      "source": "stroev-nikolay-nikolaevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2626575C1)",
+      "source_id": "s1002",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stroev-nikolay-nikolaevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2644630C1)",
+      "source_id": "s1005",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stroev-nikolay-nikolaevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2758565C1)",
+      "source_id": "s1022",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stroev-nikolay-nikolaevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2758565C9)",
+      "source_id": "s1023",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stroev-nikolay-nikolaevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2782475C1)",
+      "source_id": "s1033",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "stub::000",
       "target": "ooo-aeromaks",
       "type": "founded",
@@ -28170,6 +28974,17 @@
       "confidence": null
     },
     {
+      "source": "stub::галкин вадим сергеевич",
+      "target": "ao-nii-stt",
+      "type": "directs",
+      "label": null,
+      "source_id": "s4253",
+      "as_of": "2014-10-29",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
       "source": "stub::гелик александр геннадьевич",
       "target": "ooo-gaskar-tekhnologii",
       "type": "directs",
@@ -28415,6 +29230,17 @@
       "source": "stub::дмитриев геннадий витальевич",
       "target": "kulibin-klub",
       "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::донцов василий николаевич",
+      "target": "ao-kronshtadt",
+      "type": "directs",
       "label": null,
       "source_id": null,
       "as_of": null,
@@ -29886,6 +30712,50 @@
       "confidence": null
     },
     {
+      "source": "sulimskiy-evgeniy-sergeevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2644630C1)",
+      "source_id": "s1005",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "sulimskiy-evgeniy-sergeevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2758565C1)",
+      "source_id": "s1022",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "sulimskiy-evgeniy-sergeevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2758565C9)",
+      "source_id": "s1023",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "sulimskiy-evgeniy-sergeevich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2782475C1)",
+      "source_id": "s1033",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "suvorova-elena-aleksandrovna",
       "target": "npts-elvis",
       "type": "role",
@@ -29957,6 +30827,28 @@
       "type": "role",
       "label": "Член Попечительского совета",
       "source_id": "s0389",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "timofeeva-nataliya-sergeevna",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2758565C1)",
+      "source_id": "s1022",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "timofeeva-nataliya-sergeevna",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2758565C9)",
+      "source_id": "s1023",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -30348,6 +31240,39 @@
       "confidence": null
     },
     {
+      "source": "vlasenkova-alina-aleksandrovna",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2758565C1)",
+      "source_id": "s1022",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "vlasenkova-alina-aleksandrovna",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2758565C9)",
+      "source_id": "s1023",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "vlasenkova-alina-aleksandrovna",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU2782475C1)",
+      "source_id": "s1033",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "vlasov-artem-arkadevich",
       "target": "ooo-aeroplatformy",
       "type": "directs",
@@ -30507,6 +31432,17 @@
       "type": "role",
       "label": "co-inventor (patent RU2700560C1)",
       "source_id": "s1010",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "yakovenkov-valentin-valentinovich",
+      "target": "ao-nii-stt",
+      "type": "role",
+      "label": "co-inventor (patent RU134783S)",
+      "source_id": "s0982",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -31120,6 +32056,13 @@
       ]
     },
     {
+      "id": "stub::галкин вадим сергеевич",
+      "raw_name": "Галкин Вадим Сергеевич",
+      "contexts": [
+        "director of ao-nii-stt"
+      ]
+    },
+    {
       "id": "stub::гелик александр геннадьевич",
       "raw_name": "Гелик Александр Геннадьевич",
       "contexts": [
@@ -31253,6 +32196,13 @@
       "raw_name": "Дмитриев Геннадий Витальевич",
       "contexts": [
         "founder of kulibin-klub"
+      ]
+    },
+    {
+      "id": "stub::донцов василий николаевич",
+      "raw_name": "Донцов Василий Николаевич",
+      "contexts": [
+        "director of ao-kronshtadt"
       ]
     },
     {
@@ -31936,7 +32886,6 @@
     }
   ],
   "detached_ids": [
-    "agievich-sergey-nikolaevich",
     "alexandr-alex-bbggt",
     "aleynik-evgeniy",
     "andrew-first-pathfinder",
@@ -31947,26 +32896,20 @@
     "ao-khk-gumich",
     "ao-korporatsiya-sinergiya",
     "ao-mikts",
-    "ao-nii-stt",
     "ao-ross",
     "ao-seym-agro",
     "ao-tsentr-telko",
     "aristarkhov-vladimir-vyacheslavovich",
-    "astakhov-sergey-petrovich",
     "atlivanchik-sergey-nikolaevich",
     "barilo-denis-aleksandrovich",
     "baturin-vyacheslav-yurevich",
     "belissimo-bella-academy-admin",
     "bf-ktspn-barnaul",
-    "bogomolov-andrey-vladimirovich",
-    "bolshakov-viktor-viktorovich",
     "bulat-3mx",
     "chapurin-viktor-viktorovich",
-    "chemarov-aleksey-olegovich",
     "chetvertkov-aleksey-vladimirovich",
     "chichkov-aleksandr-yurevich",
     "chumakov-pavel-andreevich",
-    "customer::various-regional-мвд-directorates",
     "customer::администрация-борисовского-района",
     "customer::администрация-краснояружского-района-белгородской-области",
     "customer::администрация-муниципального-района-волоконовский-район-белгородской-области",
@@ -31980,7 +32923,6 @@
     "customer::государственное-краевое-учреждение-центр-безопасности-дорожного-движения-пермского-края",
     "customer::государственное-природоохранное-бюджетное-учреждение-мосэкомониторинг",
     "customer::государственное-унитарное-предприятие-ставропольского-края-ставрополькоммунэлектро",
-    "customer::гу-мвд-россии-по-кемеровской-области",
     "customer::министерство-внутренних-дел-по-чувашской-республике",
     "customer::муниципальное-бюджетное-учреждение-управление-оперативного-реагирования-шебекинского-городского-округа",
     "customer::муниципальное-казенное-предприятие-волжские-межрайонные-электросети-городского-округа-город-волжский-волгоградской-области",
@@ -31997,50 +32939,38 @@
     "customer::управление-министерства-внутренних-дел-российской-федерации-по-белгородской-области",
     "customer::управление-министерства-внутренних-дел-российской-федерации-по-кировской-области",
     "customer::фгбу-авиационно-спасательный-центр",
-    "customer::фгкоу-впо-калининградский-пограничный-институт-фсб-россии",
-    "customer::фгку-войсковая-часть-35533",
     "customer::федеральное-бюджетное-учреждение-государственный-региональный-центр-стандартизации-метрологии-и-испытаний-в-нижегородской-области",
     "customer::федеральное-государственное-бюджетное-учреждение-дальневосточное-управление-по-гидрометеорологии-и-мониторингу-окружающей-среды",
     "customer::федеральное-государственное-бюджетное-учреждение-сахалинское-управление-по-гидрометеорологии-и-мониторингу-окружающей-среды",
     "customer::федеральное-государственное-бюджетное-учреждение-управление-по-гидрометеорологии-и-мониторингу-окружающей-среды-республики-татарстан",
     "customer::федеральное-казенное-учреждение-центр-хозяйственного-и-сервисного-обеспечения-управления-министерства-внутренних-дел-российской-федерации-по-амурской-области",
     "customer::федеральное-казенное-учреждение-центр-хозяйственного-и-сервисного-обеспечения-управления-министерства-внутренних-дел-российской-федерации-по-смоленской-области",
-    "customer::фку-ик-1-уфсин-россии-по-костромской-области",
-    "customer::фскн-россии",
     "dmitriy-medvedev",
     "dolgushevskiy-aleksey-mikhaylovich",
     "drobakha-inga-sergeevna",
     "dubrovskiy-aleksandr",
     "efremov-anton-veniaminovich",
-    "ekonom-vitaliy-panteleevich",
     "evgeniy-sergeevich-ieto-yal",
     "fedorov-pavel-vyacheslavovich",
-    "fedorov-sergey-gennadevich",
     "fedyaeva-anna-yurevna",
     "fedyukin-vladimir-anatolevich",
-    "filatov-maksim-alekseevich",
     "filippov-mikhail-gennadevich",
     "gagarin-gagapih",
     "gavrilov-aleksandr-valerevich",
-    "gaylit-sergey-vladimirovich",
     "geha-geha125ru",
     "golovachev-vitaliy-yurevich",
     "goncharenko-anton-aleksandrovich",
-    "grigorev-valeriy-vladimirovich",
-    "gulidov-aleksey-anatolevich",
     "ip-sidorov-andrey-sergeevich",
     "ivlev-artem-yurevich",
     "kalinovskiy-nikita-vladislavovich",
     "kashnikov-konstantin-nikolaevich",
     "kaznova-tatyana-andreevna",
-    "kelyan-andrey-khazarovich",
     "khabibulin-vladimir-igorevich",
     "khristyuk-ekaterina-valerevna",
     "khristyuk-vladimir-vladimirovich",
     "kindyakov-andrey-andreevich",
     "kolskaya-verf",
     "korolev-dmitriy-alekseevich",
-    "kozenova-aleksandra-olegovna",
     "kraskovskiy-vyacheslav-aleksandrovich",
     "krylov-andrey-olegovich",
     "kryuchkov-dmitriy-aleksandrovich",
@@ -32048,11 +32978,9 @@
     "kurteev-aleksandr-sergeevich",
     "kusumov-vakhid-abdulovich",
     "kuznetsov-pavel-vladislavovich",
-    "lenskaya-evgeniya-vladimirovna",
     "leonov-aleksandr-vladimirovich",
     "lobov-vadim-georgievich",
     "lunev-ivan-ivanovich",
-    "lutsenko-sergey-aleksandrovich",
     "maksimov-yuriy-alekseevich",
     "medisova-tatyana-nikolaevna",
     "mikhaylova-irina-valerievna",
@@ -32094,13 +33022,8 @@
     "ooo-titan-severo-zapad",
     "ooo-tstp-tsifrovaya-transportnaya-platforma",
     "ooo-zetaks",
-    "penkov-andrey-anatolevich",
     "petrovich-sapfpv",
-    "polikarpov-aleksandr-alekseevich",
-    "ponomarev-aleksandr-anatolevich",
     "porsev-andrey-valerevich",
-    "product::ao-nii-stt::merlin-vr",
-    "product::ao-nii-stt::скарабей-бн",
     "product::ao-ross::мобильный-привязной-аэростатный-комплекс-акв-05",
     "product::ooo-arkhangel-shchit::дрон-перехватчик-архангел",
     "product::ooo-arkhangel-zaporizhzhie::вынос-пульта-управления-бпла",
@@ -32159,19 +33082,15 @@
     "proekt-kb-arkhangel",
     "prokofev-mikhail-vasilevich",
     "protsenko-artem-vitalevich",
-    "pugach-evgeniy-evgenevich",
     "rogozin-dmitriy-olegovich",
     "roman-academy-chat-79168352900",
-    "sevidov-vladimir-vitalevich",
     "shatskikh-aleksandr-vladimirovich",
     "sinelshchikov-andrey-valentinovich",
     "skif-wozmezdiye",
     "skoryatin-georgiy-andreevich",
-    "stroev-nikolay-nikolaevich",
     "stub::абрамченков николай григорьевич",
     "stub::аквамарин-4523",
     "stub::аякс",
-    "stub::галкин вадим сергеевич",
     "stub::генеральный директор: иванов андрей георгиевич",
     "stub::генеральный директор: мушкевич павел",
     "stub::генеральный директор: христюк владимир владимирович",
@@ -32217,11 +33136,9 @@
     "stub::чапурин в.в",
     "stub::шаповалов сергей михайлович",
     "sukhonenkova-nadezhda-andreevna",
-    "sulimskiy-evgeniy-sergeevich",
     "tarasenko-irina-anatolevna",
     "tg-arkhangel-spetsnaza",
     "timofeev-vladimir-sergeevich",
-    "timofeeva-nataliya-sergeevna",
     "tkach-kirill-vladimirovich",
     "trubina-ekaterina-svyatoslavovna",
     "unit::10-й-разведотряд",
@@ -32250,9 +33167,7 @@
     "unit::добровольческий-отряд-валькирия",
     "unit::отряд-яким",
     "unit::подразделение-васильевский-р-н",
-    "vlasenkova-alina-aleksandrovna",
     "voenkor-evgeniy-lisitsyn",
-    "yakovenkov-valentin-valentinovich",
     "yarl",
     "yastrebov-sergey-vladimirovich",
     "zagorskiy-aleksandr-sergeevich",

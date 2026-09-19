@@ -12,6 +12,7 @@
 - **Director:** Сотов Артём Александрович
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
+- **ЦБСТ tie:** Participant in ЦБСТ's accelerator (third stream).
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

@@ -12,6 +12,7 @@
 - **Director:** Абрамова Татьяна Александровна
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
+- **ЦБСТ tie:** Named a ЦБСТ resident: KurskCity reports «Основную часть экспозиции представила компания «ТСГ» — резидент АНО «ЦБСТ»», and ЦБСТ's own channel post of 21.05.2026 describes the same exhibit as «изделиями резидента ЦБСТ — компании TSG Group».
 - **Wildberries overlap:** none_found
 
 > **Declared vs. actual activity.** Declared R&D, but secondary OKVED codes are concrete hardware manufacture: 25.11/25.61/25.99 (metalworking), 26.30.5/26.30.17 (radio/TV transmitting equipment and parts), 26.51 (measurement/testing/navigation instruments) — consistent with an actual production profile, not a pure research shop.

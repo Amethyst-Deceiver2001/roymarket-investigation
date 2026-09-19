@@ -13,6 +13,7 @@
 - **Director:** Семенов Игорь Георгиевич
 - **Charter capital:** ₽30,000
 - **ОКВЭД:** 26.20 — Производство компьютеров и периферийного оборудования
+- **ЦБСТ tie:** ЦБСТ's own channel names «НПП» and its representative Игорь Потапов as residents of ЦБСТ; АО «НПП» (Потапов, исполнительный директор) is that company by the registry's own resolution.
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history

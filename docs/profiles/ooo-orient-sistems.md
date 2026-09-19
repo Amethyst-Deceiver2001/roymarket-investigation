@@ -11,6 +11,7 @@
 - **Address:** 125080, Москва, вн.тер.г. муниципальный округ Сокол
 - **Director:** Лебедев Сергей Александрович
 - **Charter capital:** ₽20,000
+- **ЦБСТ tie:** Named by ЦБСТ's own channel as a developer of a system it presents.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

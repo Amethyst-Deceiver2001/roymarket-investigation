@@ -9,6 +9,7 @@
 - **Registered:** 08.08.2016
 - **Address:** обл. Ленинградская, м.р-н Сланцевский, с.п. Старопольское, д. Шакицы, д.14
 - **Director:** Любимов Александр Сергеевич
+- **ЦБСТ tie:** Legal vehicle of the «Дронница» слёт, an event ЦБСТ lists in its own calendar and where its director lectured; personal tie to ЦБСТ through Любимов. No corporate or financial link found.
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history

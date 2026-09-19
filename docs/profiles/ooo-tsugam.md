@@ -10,6 +10,7 @@
 - **Director:** Соколова Ольга Михайловна
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30.39 — Производство прочих летательных аппаратов
+- **ЦБСТ tie:** General director sits on ЦБСТ's supervisory board.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

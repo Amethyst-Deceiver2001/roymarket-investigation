@@ -12,6 +12,7 @@
 - **Director:** Потехин Владимир Александрович
 - **Charter capital:** ₽30,000
 - **ОКВЭД:** 46.52 — Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями
+- **ЦБСТ tie:** ЦБСТ's channel calls the company's development director a ЦБСТ resident.
 - **Wildberries overlap:** not_checked
 
 > **Declared vs. actual activity.** Registered OKVED is wholesale electronics trade (46.52); the entity's own site describes it as producing rations, clothing and drone/РЭБ equipment, and it separately retails FPV batteries.

@@ -11,6 +11,7 @@
 - **Director:** Петров Владимир Алексеевич
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 72.19 — Научные исследования и разработки в области естественных и технических наук прочие
+- **ЦБСТ tie:** Named a ЦБСТ resident and accelerator participant.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

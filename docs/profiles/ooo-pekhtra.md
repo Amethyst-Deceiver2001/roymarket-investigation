@@ -12,6 +12,7 @@
 - **Director:** Суховерхий Владимир Андреевич
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 72.19.9 — Научные исследования и разработки в области естественных и технических наук прочие, не включенные в другие группировки
+- **ЦБСТ tie:** Special-prize winner in ЦБСТ's 2025 accelerator (not stated as a resident).
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history

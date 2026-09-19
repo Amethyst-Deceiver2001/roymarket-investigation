@@ -5001,6 +5001,30 @@
       "why": [
         "2026-09-15: found via a research pass on dronnitsa.ru's own exhibitor coverage, which described «ГК «Мобил-груп»» as a 20+-year St Petersburg radio-infrastructure company (2G/4G/5G, DSRC/C-V2X). Resolved via egrul.nalog.ru open-API name search (s7505) -- a single clean hit, region (Санкт-Петербург) matching. Not yet independently assessed for UAV-relevance beyond this identification and the Дронница exhibitor listing itself; tier left unset."
       ]
+    },
+    {
+      "slug": "ao-kronshtadt",
+      "name_ru": "АО «Кронштадт»",
+      "name_latin": "JSC Kronshtadt",
+      "inn": "7808035536",
+      "ogrn": "1027809176141",
+      "registered": "21.08.2002",
+      "address": "123060, г. Москва, 1-й Волоколамский пр-д, д. 10 стр. 1, этаж/помещ./ком. 1/I/146 (EGRUL 19.09.2026)",
+      "director": "Донцов Василий Николаевич",
+      "tier": "manufacturer",
+      "tier_basis": "Operating company of the Кронштадт drone group (Dubna, Orion/Inokhodets/Sirius families), whose group «Группа компаний «Кронштадт»» was renamed ГК «Аэромакс» on 18.05.2026 and combined with the ЦБСТ-named resident «Аэромакс» and «ИКАР». Counterparty of АО «НИИ СТТ» in a ₽220.6m supply-debt case. Its own ЦБСТ tie is through that group, not stated directly.",
+      "related_entities": [
+        {
+          "slug": "ooo-gk-aeromaks",
+          "name": "ООО «Группа компаний «Аэромакс»»",
+          "relationship_type": "group-structure",
+          "relationship": "Кронштадт's own channel (@aeromax_group, msg 864, 18.05.2026): «Группа компаний «Кронштадт» объявляет о переименовании: новое имя – ГК «Аэромакс». Под ним объединяются компетенции «Кронштадта», «Аэромакса» и «ИКАР».» The same channel posted as АО «Кронштадт» in 2023 (e.g. msgs 27.04.2023 naming its deputy CEO as «заместитель генерального директора по персоналу АО «Кронштадт»»). The registry's ООО «ГК Аэромакс» (ИНН 7710974353) is recorded under the former name ООО «Группа Кронштадт»; no EGRUL extract linking the two legal forms (АО «Кронштадт» ИНН 7808035536 vs ООО ИНН 7710974353) has been read, so the link is the group's own rename statement, not an ownership record.",
+          "source_id": "s7610"
+        }
+      ],
+      "why": [
+        "2026-09-19: added while investigating why АО «НИИ СТТ» had no path to ЦБСТ. Identifiers from the court filing s0022/s0023 and a fresh full ЕГРЮЛ выписка (s7608, pulled 19.09.2026, single-ИНН lookup). Shareholders are not listed in a JSC extract (register held by АО «Реестр»), so ownership of the group is not established here."
+      ]
     }
   ],
   "entities": {
@@ -8092,7 +8116,7 @@
         },
         "related_entities": [
           {
-            "slug": null,
+            "slug": "ao-kronshtadt",
             "name": "АО «Кронштадт»",
             "relationship_type": "counterparty",
             "relationship": "Supplier/buyer relationship under two supply contracts (22.08.2022 and 10.12.2021) -- НИИ СТТ sued Кронштадт for ₽220,591,266.42 in unpaid debt (case А40-204416/2025); settled by мировое соглашение 14.01.2026 with Кронштадт acknowledging ₽196,120,339.87 owed, payable in 5 monthly installments. A companion, smaller suit (А40-186273/2026, ₽38.1m) was still in progress as of the pull date. Both are EU-sanctioned network entities -- among the largest single intercompany-debt figures established anywhere in this registry. Not yet resolved to a registry slug: this ИНН/legal entity (АО «Кронштадт», the sanctioned parent) is distinct from the registry's existing ooo-kronshtadt-bespilotnye-sistemy (a different legal form, ООО, and a different, more specific name) -- adding a dedicated entity record for the parent is a separate task, not done here.",
@@ -8123,6 +8147,7 @@
       },
       "verified_against": "s0211 — АО «НИИ СТТ»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
       "why": [
+        "2026-09-19: supply link to АО «Кронштадт» corroborated independently of the court record by two 28.01.2022 posts from «Военный Осведомитель» (t.me/milinfolive/75392, s7609; vk.com/wall-123538639_2147206, s7611): the «Акцент-СМ» mobile satellite-communications terminal (SOTM) with auto-tracking, photographed at the opening of the Кронштадт UAV plant in Dubna on the «Иноходец-БЛА-С» (Орион-С) UAV, is attributed to «НИИ СТТ (НИИ Современных Телекоммуникационных Технологий) Завод «Эдельвейс»»; the post adds that the same plant supplies satellite equipment to УЗГА for the heavy UAV «Альтиус-РУ». Third-party military-blogger claim, photos not archived; consistent with the supply contracts and ₽196.1m settlement in s0023.",
         "Rospatent full-roster sweep (s0433), 2 trademark filing(s) matched by ИНН.",
         "Full signed ЕГРЮЛ extract read end-to-end (s0211, ul-1026701461160-20260820233705.pdf, 25pp, pulled 20.08.2026). Confirms ОГРН, registration 26.12.2002 (one of the oldest entities in the roster), Smolensk address, GD Богомолов А.В. (personal ИНН 673103142483, in post since 19.05.2016) and ₽5m charter capital. As an АО its shareholders are not in ЕГРЮЛ — only the share registrar, АО «НРК Р.О.С.Т.» (ИНН 7726030449) — so ownership stays unresolved by this document. TWO findings that materially change how this entity reads. (1) ОКВЭД: it DECLARES 25.40 «Производство оружия и боеприпасов» — weapons and ammunition manufacture — added 13.02.2024. That is not an okved_mismatch; it is the opposite, an explicit self-declaration. (2) NINE licences, an unusually complete state-security portfolio: TWO separate ФСБ Smolensk licences for «специальных технических средств, предназначенных для негласного получения информации» (covert information-gathering equipment, 2011 and 2015), an ФСБ cryptographic-means licence (2019), a Minpromtorg licence covering development/production/testing/repair/disposal AND SALE of вооружение и военная техника (2013) plus a second Minpromtorg licence for servicing weapons and military equipment (2022), and a Roscosmos SPACE ACTIVITY licence (2017). Covert-surveillance manufacture, military-equipment production and space activity under one roof is a materially stronger designation basis than the roster's typical drone-assembler profile.",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): found the presumed official site (niistt.ru) but it is currently unreachable -- no content extracted, match unconfirmed.",

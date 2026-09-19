@@ -12,6 +12,7 @@
 - **Director:** Косолапов Олег Юрьевич
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
+- **ЦБСТ tie:** Named among the ЦБСТ residents hit by the EU 20th sanctions package.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
