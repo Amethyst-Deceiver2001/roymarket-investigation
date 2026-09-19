@@ -118,7 +118,7 @@
 <body>
 <div class="wrap">
 <header>
-  <p class="eyebrow">Internal audit · first written 5 September 2026 · rewritten 19 September 2026</p>
+  <p class="eyebrow">Internal audit · first written 5 September 2026 · rewritten 19 September 2026, second pass</p>
   <h1>Coverage audit &amp; path to a publication cutoff</h1>
   <p class="sub">A pass over the registry as it stands today: what is covered, which sources exist and which
   of them we can reach ourselves, which entities can carry a case study, what changed since the
@@ -128,12 +128,12 @@
 </header>
 
 <div class="metrics">
-  <div class="metric"><span class="n">217</span><span class="l">entities in registry</span><span class="d up">↑ from 216</span></div>
+  <div class="metric"><span class="n">235</span><span class="l">entities in registry</span><span class="d up">↑ from 216 (233 live)</span></div>
   <div class="metric"><span class="n">433</span><span class="l">people</span><span class="d up">↑ from 432</span></div>
   <div class="metric"><span class="n">119</span><span class="l">manufacturers</span><span class="d">78 not sanctioned</span></div>
-  <div class="metric"><span class="n">73%</span><span class="l">have БФО financials</span><span class="d">158 of 217</span></div>
-  <div class="metric"><span class="n">31%</span><span class="l">carry an explicit ЦБСТ tie</span><span class="d up">↑ from 18%</span></div>
-  <div class="metric"><span class="n">0</span><span class="l">check_registry.py errors</span><span class="d">15 warnings, ↓ from 46</span></div>
+  <div class="metric"><span class="n">67%</span><span class="l">have БФО financials</span><span class="d">158 of 235, same 158</span></div>
+  <div class="metric"><span class="n">29%</span><span class="l">carry an explicit ЦБСТ tie</span><span class="d up">↑ from 18%</span></div>
+  <div class="metric"><span class="n">0</span><span class="l">check_registry.py errors</span><span class="d">16 warnings, ↓ from 46</span></div>
 </div>
 
 <section>
@@ -149,7 +149,7 @@
       Three are left unsourced on purpose: Лысогорский (the archived file's topics conflict with the
       note's own label), Скорятин (the record carries only a <code class="id">sanction.linked</code>
       topic, not a designation) and ЦКБР (the claim rests on an Interfax item relayed by Чадаев). The
-      registry now holds 63 sanctioned entities and 35 sanctioned people; <strong>the regime and date of
+      registry now holds 67 sanctioned entities and 35 sanctioned people (four entity entries were added in the second pass, below); <strong>the regime and date of
       designation were not re-confirmed against OFAC, EU, UK or GUR primary pages</strong> for any of
       them in this pass.</li>
     <li><strong>Dates of birth: 26 of 30 tied to a source.</strong> Each was matched by exact surname and
@@ -183,7 +183,7 @@
       separators are no longer split, role labels ("ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: …") are stripped, multi-person
       director strings are split, and non-name fragments are refused. The numeric stubs had also been
       acting as false bridges: two records, ООО «Оупен Лоджистикс» and Диомидов В.В., had reached the hub
-      only through them and are now correctly off the graph. 120 unresolved names remain, real names not matched to a registry record. Four more were registry entities missed because their names carry an alias after " | " (Градислава, ДАР, ЗИТ.ЦИ, УК «Азимут»); the matcher now indexes both parts. A new tool, <code class="id">scripts/registry_lookup.py</code>, matches a name against every entity and person by exact, transliterated, contained-words and spelling-variant tiers, and its rescan of the graph also found АО «Центр-Телко» — 100% owned by ИНН 7706681026, the same company that held 49.659% of ГК «Аэромакс» — which had been off the graph because that owner appeared as two differently named stubs; stubs are now keyed by ИНН.</li>
+      only through them and are now correctly off the graph. 107 unresolved names now remain (98 before the second pass), real names not matched to a registry record. Four more were registry entities missed because their names carry an alias after " | " (Градислава, ДАР, ЗИТ.ЦИ, УК «Азимут»); the matcher now indexes both parts. A new tool, <code class="id">scripts/registry_lookup.py</code>, matches a name against every entity and person by exact, transliterated, contained-words and spelling-variant tiers, and its rescan of the graph also found АО «Центр-Телко» — 100% owned by ИНН 7706681026, the same company that held 49.659% of ГК «Аэромакс» — which had been off the graph because that owner appeared as two differently named stubs; stubs are now keyed by ИНН.</li>
     <li><strong>Detached sanctioned entities: five reconnected, seven still open.</strong> Левит, НОВА
       and Михельсон connect through the ДАР fund to Наша Правда (read from the FY2023 БФО note by OCR).
       Пехтра connects by press (special-prize winner in the accelerator, not a resident) and
@@ -198,10 +198,34 @@
       ownership of АО «Кронштадт» itself is not on any register we hold, and the group link rests on
       the group's own 18.05.2026 rename post. АО «Кронштадт» scores 6 of 27 on coverage and has not been
       screened against any list.</li>
+    <li><strong>Second pass, 19 September (afternoon): stubs, owners and screening.</strong> Twenty
+      person stubs written as initials or a spelling variant ("Елисеев Д.Н.", "Сиразетдинов") were
+      merged into the one registry person who already sits on the same entity, and the same person written
+      as initials and in full became one node. Thirteen organisations that had been founders-as-stubs were
+      pulled as full ЕГРЮЛ выписки (<code class="id">s7621</code>–<code class="id">s7633</code>) and added
+      as entities, plus five of their owners (<code class="id">s7635</code>–<code class="id">s7639</code>).
+      The выписки showed that the co-founder of ЦБС-Тула, ООО «НПО ПКРВ», is 55% held by
+      АО «Проминвест» (already on file as holder of 51% of Атлант Аэро) and 45% by
+      АО «КБП им. Шипунова».</li>
+    <li><strong>Four sanctions entries added from OpenSanctions pages, dates left empty.</strong>
+      НПО ПКРВ (OFAC SDN, Ukraine NSDC), УК КОМАКС (Ukraine NSDC), Группа ПРОМАВТО (OFAC, EU, France,
+      Belgium, Monaco) and КБП им. Шипунова (OFAC, EU, France, Belgium, Switzerland, Canada, Ukraine NSDC,
+      Monaco). The dates on those pages are OpenSanctions' first-seen dates, so none is recorded; the other
+      nine new entities have no listing on OpenSanctions or web search, which is a negative from those two
+      sources only.</li>
+    <li><strong>Архангел is now on the ЦБСТ component through ГЕРМЕС.</strong> НПО «КАЙСАНТ» (the ЦБСТ
+      resident behind @germesfpv) and Архангел name each other publicly — the vendor's post says Архангел
+      chose ГЕРМЕС, Архангел's channel and bill of materials list it — and the link is recorded as a new
+      <code class="id">component-supplier</code> type, a self-reported tie, not a sale on file. Twenty-five
+      nodes joined the component. A registry note attributing the ГЕРМЕС sentences to Филиппов was wrong:
+      the post is a forward from the vendor's channel, and only its opening line is his.</li>
+    <li><strong>ё policy and one merged person.</strong> Names are spelled with ё only where a source for
+      that person gives it and matched with ё folded (STYLE_GUIDE §2.5); Махнёв А.И. was merged into the
+      record that keeps the accepted romanisation "Makhnev".</li>
     <li><strong>Presentation layer.</strong> The live Network Graph, Five Residents, From ЦБСТ to the
-      Front and Multi-Role Individuals were refreshed against the 19 September graph. A profile index
-      page lists all 205 company, 5 product and 366 person profiles, and dead links from profiles to
-      pages that do not exist were removed.</li>
+      Front and Multi-Role Individuals were refreshed against the 19 September graph (second pass). A profile index
+      page lists all 205 company, 5 product and 366 person profiles (counts from the morning build, not
+      re-run), and dead links from profiles to pages that do not exist were removed.</li>
   </ul>
 </section>
 
@@ -239,48 +263,51 @@
 <section>
   <div class="sec-head"><span class="sec-num">02</span><div>
     <h2>Where coverage actually stands</h2></div></div>
-  <p>Recomputed from <code class="id">scripts/coverage_report.py</code> across all 217 entities, against
-  the 15 September figures. Identity and screening are steady. The evidence layer moved on ЦБСТ tie
+  <p>Recomputed from <code class="id">scripts/coverage_report.py</code> across all 235 entities, against
+  the 15 September figures. Identity is steady; screening and financial coverage fell in percentage only, for the reason below. The evidence layer moved on ЦБСТ tie
   (which section 00 explains) and on images, WB/marketplace coverage and tier basis, which this pass did not
   work on and which are not attributed here.</p>
 
   <div class="tbl-wrap"><table>
     <thead><tr><th>Dimension</th><th>Group</th><th class="num">Now</th><th class="num">15 Sep</th><th style="width:150px">·</th></tr></thead>
     <tbody>
-      <tr><td>ИНН</td><td>identity</td><td class="num">96%</td><td class="num">96%</td><td><span class="bar hi"><span style="width:96%"></span></span></td></tr>
-      <tr><td>WB / marketplace</td><td>screening</td><td class="num">96% <span class="delta-up">↑</span></td><td class="num">83%</td><td><span class="bar hi"><span style="width:96%"></span></span></td></tr>
-      <tr><td>ОГРН</td><td>identity</td><td class="num">91%</td><td class="num">91%</td><td><span class="bar hi"><span style="width:91%"></span></span></td></tr>
-      <tr><td>Tier basis</td><td>analysis</td><td class="num">93% <span class="delta-up">↑</span></td><td class="num">77%</td><td><span class="bar hi"><span style="width:93%"></span></span></td></tr>
+      <tr><td>ИНН</td><td>identity</td><td class="num">97% <span class="delta-up">↑</span></td><td class="num">96%</td><td><span class="bar hi"><span style="width:97%"></span></span></td></tr>
+      <tr><td>WB / marketplace</td><td>screening</td><td class="num">89% <span class="delta-up">↑</span></td><td class="num">83%</td><td><span class="bar hi"><span style="width:89%"></span></span></td></tr>
+      <tr><td>ОГРН</td><td>identity</td><td class="num">92% <span class="delta-up">↑</span></td><td class="num">91%</td><td><span class="bar hi"><span style="width:92%"></span></span></td></tr>
+      <tr><td>Tier basis</td><td>analysis</td><td class="num">94% <span class="delta-up">↑</span></td><td class="num">77%</td><td><span class="bar hi"><span style="width:94%"></span></span></td></tr>
       <tr><td>Director</td><td>identity</td><td class="num">87%</td><td class="num">87%</td><td><span class="bar hi"><span style="width:87%"></span></span></td></tr>
-      <tr><td>GUR war-sanctions</td><td>screening</td><td class="num">85%</td><td class="num">85%</td><td><span class="bar hi"><span style="width:85%"></span></span></td></tr>
-      <tr><td>OpenSanctions</td><td>screening</td><td class="num">84%</td><td class="num">85%</td><td><span class="bar hi"><span style="width:84%"></span></span></td></tr>
-      <tr><td>Aleph / OCCRP</td><td>screening</td><td class="num">84%</td><td class="num">85%</td><td><span class="bar hi"><span style="width:84%"></span></span></td></tr>
-      <tr><td>Address</td><td>identity</td><td class="num">82%</td><td class="num">81%</td><td><span class="bar"><span style="width:82%"></span></span></td></tr>
-      <tr><td>ФНС обеспеч. меры</td><td>screening</td><td class="num">80%</td><td class="num">81%</td><td><span class="bar hi"><span style="width:80%"></span></span></td></tr>
-      <tr><td>Reg. date</td><td>identity</td><td class="num">75%</td><td class="num">75%</td><td><span class="bar"><span style="width:75%"></span></span></td></tr>
-      <tr><td><strong>БФО financials</strong></td><td>financial</td><td class="num">73%</td><td class="num">74%</td><td><span class="bar"><span style="width:73%"></span></span></td></tr>
-      <tr><td>Charter capital</td><td>identity</td><td class="num">73%</td><td class="num">74%</td><td><span class="bar"><span style="width:73%"></span></span></td></tr>
-      <tr><td>Founders</td><td>identity</td><td class="num">70%</td><td class="num">69%</td><td><span class="bar"><span style="width:70%"></span></span></td></tr>
-      <tr><td>ОКВЭД</td><td>identity</td><td class="num">58%</td><td class="num">58%</td><td><span class="bar"><span style="width:58%"></span></span></td></tr>
-      <tr><td>rk2035 БАС registry</td><td>screening</td><td class="num">52%</td><td class="num">52%</td><td><span class="bar"><span style="width:52%"></span></span></td></tr>
-      <tr><td>Rospatent (director)</td><td>screening</td><td class="num">43%</td><td class="num">43%</td><td><span class="bar lo"><span style="width:43%"></span></span></td></tr>
-      <tr><td>GUR components teardown</td><td>screening</td><td class="num">37%</td><td class="num">35%</td><td><span class="bar lo"><span style="width:37%"></span></span></td></tr>
-      <tr><td>Products</td><td>activity</td><td class="num">32%</td><td class="num">32%</td><td><span class="bar lo"><span style="width:32%"></span></span></td></tr>
-      <tr><td><strong>Explicit ЦБСТ tie stated</strong></td><td>analysis</td><td class="num">31% <span class="delta-up">↑</span></td><td class="num">18%</td><td><span class="bar lo"><span style="width:31%"></span></span></td></tr>
+      <tr><td>GUR war-sanctions</td><td>screening</td><td class="num">78% <span class="delta-dn">↓</span></td><td class="num">85%</td><td><span class="bar hi"><span style="width:78%"></span></span></td></tr>
+      <tr><td>OpenSanctions</td><td>screening</td><td class="num">78% <span class="delta-dn">↓</span></td><td class="num">85%</td><td><span class="bar hi"><span style="width:78%"></span></span></td></tr>
+      <tr><td>Aleph / OCCRP</td><td>screening</td><td class="num">78% <span class="delta-dn">↓</span></td><td class="num">85%</td><td><span class="bar hi"><span style="width:78%"></span></span></td></tr>
+      <tr><td>Address</td><td>identity</td><td class="num">83% <span class="delta-up">↑</span></td><td class="num">81%</td><td><span class="bar hi"><span style="width:83%"></span></span></td></tr>
+      <tr><td>ФНС обеспеч. меры</td><td>screening</td><td class="num">74% <span class="delta-dn">↓</span></td><td class="num">81%</td><td><span class="bar"><span style="width:74%"></span></span></td></tr>
+      <tr><td>Reg. date</td><td>identity</td><td class="num">77% <span class="delta-up">↑</span></td><td class="num">75%</td><td><span class="bar hi"><span style="width:77%"></span></span></td></tr>
+      <tr><td><strong>БФО financials</strong></td><td>financial</td><td class="num">67% <span class="delta-dn">↓</span></td><td class="num">74%</td><td><span class="bar"><span style="width:67%"></span></span></td></tr>
+      <tr><td>Charter capital</td><td>identity</td><td class="num">68% <span class="delta-dn">↓</span></td><td class="num">74%</td><td><span class="bar"><span style="width:68%"></span></span></td></tr>
+      <tr><td>Founders</td><td>identity</td><td class="num">70% <span class="delta-up">↑</span></td><td class="num">69%</td><td><span class="bar"><span style="width:70%"></span></span></td></tr>
+      <tr><td>ОКВЭД</td><td>identity</td><td class="num">54% <span class="delta-dn">↓</span></td><td class="num">58%</td><td><span class="bar"><span style="width:54%"></span></span></td></tr>
+      <tr><td>rk2035 БАС registry</td><td>screening</td><td class="num">48% <span class="delta-dn">↓</span></td><td class="num">52%</td><td><span class="bar"><span style="width:48%"></span></span></td></tr>
+      <tr><td>Rospatent (director)</td><td>screening</td><td class="num">40% <span class="delta-dn">↓</span></td><td class="num">43%</td><td><span class="bar lo"><span style="width:40%"></span></span></td></tr>
+      <tr><td>GUR components teardown</td><td>screening</td><td class="num">34% <span class="delta-dn">↓</span></td><td class="num">35%</td><td><span class="bar lo"><span style="width:34%"></span></span></td></tr>
+      <tr><td>Products</td><td>activity</td><td class="num">30% <span class="delta-dn">↓</span></td><td class="num">32%</td><td><span class="bar lo"><span style="width:30%"></span></span></td></tr>
+      <tr><td><strong>Explicit ЦБСТ tie stated</strong></td><td>analysis</td><td class="num">29% <span class="delta-up">↑</span></td><td class="num">18%</td><td><span class="bar lo"><span style="width:29%"></span></span></td></tr>
       <tr><td><strong>Sanctions checked</strong></td><td>analysis</td><td class="num">29%</td><td class="num">29%</td><td><span class="bar lo"><span style="width:29%"></span></span></td></tr>
-      <tr><td>Patents / trademarks</td><td>activity</td><td class="num">22%</td><td class="num">22%</td><td><span class="bar lo"><span style="width:22%"></span></span></td></tr>
-      <tr><td>Web / social presence</td><td>activity</td><td class="num">18%</td><td class="num">18%</td><td><span class="bar lo"><span style="width:18%"></span></span></td></tr>
+      <tr><td>Patents / trademarks</td><td>activity</td><td class="num">20% <span class="delta-dn">↓</span></td><td class="num">22%</td><td><span class="bar lo"><span style="width:20%"></span></span></td></tr>
+      <tr><td>Web / social presence</td><td>activity</td><td class="num">16% <span class="delta-dn">↓</span></td><td class="num">18%</td><td><span class="bar lo"><span style="width:16%"></span></span></td></tr>
       <tr><td><strong>Images</strong></td><td>activity</td><td class="num">14% <span class="delta-up">↑</span></td><td class="num">5%</td><td><span class="bar lo"><span style="width:14%"></span></span></td></tr>
-      <tr><td>Government contracts</td><td>activity</td><td class="num">11%</td><td class="num">11%</td><td><span class="bar lo"><span style="width:11%"></span></span></td></tr>
-      <tr><td><strong>Marketing claims</strong></td><td>activity</td><td class="num">4%</td><td class="num">3%</td><td><span class="bar lo"><span style="width:4%"></span></span></td></tr>
+      <tr><td>Government contracts</td><td>activity</td><td class="num">10% <span class="delta-dn">↓</span></td><td class="num">11%</td><td><span class="bar lo"><span style="width:10%"></span></span></td></tr>
+      <tr><td><strong>Marketing claims</strong></td><td>activity</td><td class="num">3%</td><td class="num">3%</td><td><span class="bar lo"><span style="width:3%"></span></span></td></tr>
       <tr><td><strong>Battlefield evidence</strong></td><td>activity</td><td class="num">3%</td><td class="num">3%</td><td><span class="bar lo"><span style="width:3%"></span></span></td></tr>
     </tbody>
   </table></div>
 
-  <div class="callout"><p><strong>Read the small drops for what they are.</strong> OpenSanctions, Aleph,
-  БФО and charter capital each show a one-point dip. One entity was added (АО «Кронштадт», with no
-  screening or financials yet), which alone moves the denominator. БФО is 158 entities in absolute terms against about 160 on 15 September; I did not trace which two, so treat that as an
-  unexplained item rather than a rounding effect.</p></div>
+  <div class="callout"><p><strong>Read the drops for what they are.</strong> Eighteen entities were added
+  today (13 co-founders and five of their owners, from full ЕГРЮЛ выписки); 20 entities now have no
+  screening dimension at all, and they are those 18, АО «Кронштадт» and one Telegram channel. That moves every screening
+  percentage down (OpenSanctions, GUR and Aleph 85% to 78%; WB 96% to 89%; БФО 73% to 67%) without any
+  record losing a screening. БФО is still the same 158 entities in absolute terms, against about 160 on
+  15 September; I did not trace which two, so treat that as an unexplained item, not a rounding effect.
+  The screening sweeps for these entities are the next scriptable job and need your terminal.</p></div>
 
   <div class="callout" style="border-left-color:var(--accent)"><p><strong>The structural finding still
   holds.</strong> Marketing claims (4%) and battlefield evidence (3%) are the thinnest layers and did
@@ -343,9 +370,9 @@
 <section>
   <div class="sec-head"><span class="sec-num">04</span><div>
     <h2>The source register, and what it can reach</h2></div></div>
-  <p>Carried forward unchanged from 14 September — no new source-access probing happened in this period.
+  <p>Carried forward unchanged from 14 September — no new source-access probing happened in this period, except that OpenSanctions entity pages, opened one at a time by ИНН, proved readable for ad-hoc screening.
   Thirty-nine sources catalogued, each tiered by whether we can work it ourselves. The archive itself
-  grew: <code class="id">data/sources/</code> now holds about 7,560 files, with 7,592 entries in the
+  grew: <code class="id">data/sources/</code> now holds about 7,650 files, with 7,649 entries in the
   source catalogue.</p>
 
   <div class="tbl-wrap"><table>
@@ -377,15 +404,16 @@
   <div class="tbl-wrap"><table>
     <thead><tr><th>Claim type</th><th class="num">Sourced</th><th>Still open</th></tr></thead>
     <tbody>
-      <tr><td>Sanctions entries (<code class="id">sanctions[]</code>)</td><td class="num">15 of 18 closed this period</td>
-        <td>Лысогорский, Скорятин, ЦКБР left unsourced on purpose. Regime and date not confirmed against
+      <tr><td>Sanctions entries (<code class="id">sanctions[]</code>)</td><td class="num">15 of 18 closed this period; 4 new</td>
+        <td>Лысогорский, Скорятин, ЦКБР left unsourced on purpose. The four new entries (НПО ПКРВ, УК КОМАКС,
+        ПРОМАВТО, КБП) cite an OpenSanctions page and carry no date. Regime and date not confirmed against
         primary designation pages for any entry.</td></tr>
       <tr><td>Dates of birth</td><td class="num">26 of 30 closed this period</td>
         <td>Елисеев, Корчагина, Гаврилов, Пинимасова — need rupep or ЕГРЮЛ.</td></tr>
       <tr><td>Person roles</td><td class="num">30 of 101 closed this period</td>
         <td>12 roles on non-reference people still lack a source; 62 stubs separated out as leads.</td></tr>
       <tr><td>ЦБСТ ties (positive)</td><td class="num">60 entities</td>
-        <td>Воздушный трактат and Килоуатт–Шестопалов unsourced; 147 entities carry no tie field at all
+        <td>Воздушный трактат and Килоуатт–Шестопалов unsourced; 161 entities carry no tie field at all
         (not the same as "no tie").</td></tr>
       <tr><td>Ownership</td><td class="num">edges from ЕГРЮЛ and БФО notes</td>
         <td>ГК Аэромакс ↔ ООО «Аэромакс» hold each other across dates (2021 Aleph snapshot vs a 2026
@@ -405,8 +433,8 @@
 <section>
   <div class="sec-head"><span class="sec-num">06</span><div>
     <h2>Tasks only you can do</h2></div></div>
-  <p>Items 1–8 are carried forward from 15 September: no route opened on any of them. New items 9–13
-  come from this period's work. Ordered by what most changes the presentation.</p>
+  <p>Items 1–8 are carried forward from 15 September: no route opened on any of them. Items 9–13
+  come from the first pass of this period and 14–15 from the second. Ordered by what most changes the presentation.</p>
 
   <div class="tbl-wrap"><table>
     <thead><tr><th>#</th><th>Task</th><th>Blocker</th><th>Unlocks</th></tr></thead>
@@ -437,7 +465,7 @@
         <td><span class="chip c-c">captcha / manual / your call</span></td>
         <td>Debt signal absent from every scriptable source; the Филиппов flag currently rests on a leak
         aggregator and is not publishable; a public deck probably should show less than the registry holds.</td></tr>
-      <tr><td class="id">9</td><td><strong>Screen АО «Кронштадт»</strong> against OpenSanctions, GUR and Aleph, and pull its БФО</td>
+      <tr><td class="id">9</td><td><strong>Screen АО «Кронштадт»</strong> against OpenSanctions, GUR and Aleph, and pull its БФО (still 0 of 8 screening dimensions)</td>
         <td><span class="chip c-b">single-entity, inline</span></td>
         <td>The new entity scores 6 of 27; it is listed in the rk2035 catalog as the maker of «Орион» and «Гелиос-РЛД».</td></tr>
       <tr><td class="id">10</td><td><strong>Find who owns АО «Кронштадт»</strong> (shareholder register or a filing that names it)</td>
@@ -449,9 +477,15 @@
       <tr><td class="id">12</td><td><strong>Full zakupki re-mine review</strong> — output file exists locally (<code class="id">_zakupki_mined_report.md</code>, 997 contracts); not reviewed in this pass</td>
         <td><span class="chip c-b">read, then wire</span></td>
         <td>Recovers the "Объекты закупки" subject field corpus-wide.</td></tr>
-      <tr><td class="id">13</td><td><strong>Push the repository and republish artifacts</strong> once you call the cutoff</td>
+      <tr><td class="id">13</td><td><strong>Call the cutoff</strong> so the brief and the Registry Dossier can be republished</td>
         <td><span class="chip c-c">your call</span></td>
-        <td>Nothing has been pushed to GitHub; the brief at <code class="id">docs/index.html</code> and the Registry Dossier are older than this rebuild.</td></tr>
+        <td>The repository is pushed to the private GitHub repo (main at 0b9d629); the working artifacts are current, but <code class="id">docs/index.html</code> and the Registry Dossier are older than this rebuild.</td></tr>
+      <tr><td class="id">14</td><td><strong>Run the OpenSanctions, GUR and Aleph screening sweeps</strong> for the 51–52 entities that have never been screened by them (the 18 added today, АО «Кронштадт», the Архангел Telegram channel and older adjacent and untiered records); the sweep scripts take no per-entity selector, so they run over every unscreened record</td>
+        <td><span class="chip c-c">live sweep, your terminal</span></td>
+        <td>Turns "not screened" into a citable negative or a hit for the new ownership layer; the four sanctions found today came from single OpenSanctions pages, not a sweep.</td></tr>
+      <tr><td class="id">15</td><td><strong>Pull the owners not yet on file</strong> — АО «НПО «Высокоточные комплексы» (7704721192, КБП's sole shareholder), the six organisation stubs with no ИНН (АИН, Хоук Холдинг, Кронштадт-Техник, Аметист Кэпитал, Стратолинк, Централизованная юридическая служба) and the individual owners behind ПРОМАВТО</td>
+        <td><span class="chip c-b">ЕГРЮЛ, single lookups</span></td>
+        <td>Extends the ownership layer behind two sanctioned entities and closes the largest remaining stub group.</td></tr>
     </tbody>
   </table></div>
 </section>
@@ -472,7 +506,7 @@
     <li>
       <p class="when">Stage 2 · nearly done</p>
       <h3>Finish the scriptable sweeps</h3>
-      <p>БФО financials at 73%. Remaining: the entities without financials, screening for
+      <p>БФО financials at 67% (73% before today's 18 new entities were added; the same 158). Remaining: the entities without financials, the screening sweeps in item 14 including
       АО «Кронштадт», RNP across the full manufacturer roster, and the Fedresurs charter-capital pass
       on the case studies.</p>
     </li>
@@ -486,8 +520,9 @@
     <li>
       <p class="when">Stage 4 · the deliverable</p>
       <h3>Freeze and build the sanctions-gap list</h3>
-      <p>78 manufacturers currently carry no sanctions record; 47 of them have a documented revenue
-      figure (52 have any financials row). Leaders by latest year: Смарт Текнолоджис (₽3.93bn, 2025),
+      <p>78 manufacturers currently carry no sanctions record; 52 have any financials row, and 40 have a
+      nonzero latest-year revenue figure by a definition I can state (the 47 quoted earlier used one I could
+      not reproduce). Leaders by latest year: Смарт Текнолоджис (₽3.93bn, 2025),
       Гагаринг (₽2.16bn), Промсинтез (₽1.57bn), Специальные полезные технологии (₽1.44bn) and
       ПМЦ «Авангард» (₽1.28bn, 2022). That list, with growth curves attached, is the presentation's
       central exhibit. The 15 September figures were 77 and 53; the second is not comparable, since I
@@ -511,8 +546,8 @@
 </section>
 
 <footer>
-  First written 2026-09-05 · rewritten 2026-09-19 against registry state at commit 8611a1e<br>
-  0 errors, 15 warnings on check_registry.py · coverage figures from scripts/coverage_report.py, run 2026-09-19 ·
+  First written 2026-09-05 · rewritten 2026-09-19, second pass, against registry state at commit 0b9d629<br>
+  0 errors, 16 warnings on check_registry.py · coverage figures from scripts/coverage_report.py, run 2026-09-19 ·
   graph: 1,124 nodes, 1,884 edges, 249 detached ids
 </footer>
 </div>
