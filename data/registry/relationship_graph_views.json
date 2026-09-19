@@ -114,7 +114,7 @@
           "sanctioned": false,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 9
+          "degree": 8
         },
         {
           "id": "ano-arrs-krasnodar",
@@ -503,6 +503,18 @@
           "legal_form": "АО",
           "variant": "offensive",
           "degree": 8
+        },
+        {
+          "id": "ao-tsentr-telko",
+          "kind": "entity",
+          "label": "АО «Центр-Телко»",
+          "name_latin": null,
+          "inn": "7729150663",
+          "tier": "plumbing",
+          "sanctioned": false,
+          "legal_form": "АО",
+          "variant": null,
+          "degree": 15
         },
         {
           "id": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
@@ -935,6 +947,18 @@
           "degree": 1
         },
         {
+          "id": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "kind": "government_customer",
+          "label": "ГБУ г. Москвы «Дирекция спортивных и зрелищных мероприятий» (ДСЗМ)",
+          "degree": 6
+        },
+        {
+          "id": "customer::гбу-г-москвы-система-112",
+          "kind": "government_customer",
+          "label": "ГБУ г. Москвы «Система 112»",
+          "degree": 2
+        },
+        {
           "id": "customer::гку-мо-московский-областной-центр-информационно-коммуникационных-технологий",
           "kind": "government_customer",
           "label": "ГКУ МО «Московский областной центр информационно-коммуникационных технологий»",
@@ -957,6 +981,12 @@
           "kind": "government_customer",
           "label": "Государственная корпорация по атомной энергии «Росатом»",
           "degree": 1
+        },
+        {
+          "id": "customer::государственная-фельдъегерская-служба-рф",
+          "kind": "government_customer",
+          "label": "Государственная фельдъегерская служба РФ (ГФС России)",
+          "degree": 2
         },
         {
           "id": "customer::государственное-казенное-учреждение-города-москвы-информационный-город",
@@ -1514,7 +1544,7 @@
           "sanctioned": true,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 18
+          "degree": 19
         },
         {
           "id": "fond-podderzhki-natsionalnykh-morskikh-programm",
@@ -3542,7 +3572,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": "dual",
-          "degree": 14
+          "degree": 16
         },
         {
           "id": "ooo-trimiks-bulat-3mx",
@@ -4073,7 +4103,7 @@
           "degree": 1
         },
         {
-          "id": "product::ao-nii-vektor::обратимый-бустер-серии-об3-четыр-хступенчатый",
+          "id": "product::ao-nii-vektor::обратимый-бустер-серии-об3-четырехступенчатый",
           "kind": "product",
           "label": "Обратимый бустер серии ОБ3 четырёхступенчатый",
           "owner_slug": "ao-nii-vektor",
@@ -4099,7 +4129,7 @@
           "degree": 1
         },
         {
-          "id": "product::ao-nii-vektor::оптимизатор-энергопотребления-тр-хфазный-серии-оэп-3",
+          "id": "product::ao-nii-vektor::оптимизатор-энергопотребления-трехфазный-серии-оэп-3",
           "kind": "product",
           "label": "Оптимизатор энергопотребления трёхфазный серии ОЭП 3",
           "owner_slug": "ao-nii-vektor",
@@ -4320,7 +4350,7 @@
           "degree": 1
         },
         {
-          "id": "product::ao-pk-azimut::комплексный-диспетчерский-тренаж-р-аесф-466948-002",
+          "id": "product::ao-pk-azimut::комплексный-диспетчерский-тренажер-аесф-466948-002",
           "kind": "product",
           "label": "Комплексный диспетчерский тренажёр АЕСФ.466948.002",
           "owner_slug": "ao-pk-azimut",
@@ -4580,7 +4610,7 @@
           "degree": 1
         },
         {
-          "id": "product::ao-pk-azimut::при-моответчик-dme-n-2700-аесф-461512-001",
+          "id": "product::ao-pk-azimut::приемоответчик-dme-n-2700-аесф-461512-001",
           "kind": "product",
           "label": "Приёмоответчик DME/N 2700 АЕСФ.461512.001",
           "owner_slug": "ao-pk-azimut",
@@ -4593,7 +4623,7 @@
           "degree": 1
         },
         {
-          "id": "product::ao-pk-azimut::при-моответчик-dme-nl-2700-аесф-461511-004-01",
+          "id": "product::ao-pk-azimut::приемоответчик-dme-nl-2700-аесф-461511-004-01",
           "kind": "product",
           "label": "Приёмоответчик DME/NL 2700 АЕСФ.461511.004-01",
           "owner_slug": "ao-pk-azimut",
@@ -6257,7 +6287,7 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-gagaring::бпла-самол-т-скаут-5",
+          "id": "product::ooo-gagaring::бпла-самолет-скаут-5",
           "kind": "product",
           "label": "БПЛА самолёт «СКАУТ-5»",
           "owner_slug": "ooo-gagaring",
@@ -7830,7 +7860,7 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-pokrov::покров-вца-ал-ша",
+          "id": "product::ooo-pokrov::покров-вца-алеша",
           "kind": "product",
           "label": "Покров ВЦА «Алёша»",
           "owner_slug": "ooo-pokrov",
@@ -8038,7 +8068,7 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-ti-es-dzhi-grupp::дириж-р",
+          "id": "product::ooo-ti-es-dzhi-grupp::дирижер",
           "kind": "product",
           "label": "Дирижёр",
           "owner_slug": "ooo-ti-es-dzhi-grupp",
@@ -8274,10 +8304,10 @@
         {
           "id": "saitov-renat-faritovich",
           "kind": "person",
-          "label": "saitov-renat-faritovich",
+          "label": "Саитов Ренат Фаритович",
           "name_latin": "Renat Faritovich Saitov",
           "sanctioned": false,
-          "degree": 1
+          "degree": 2
         },
         {
           "id": "sakharov-aleksey-yurevich",
@@ -8488,6 +8518,14 @@
           "degree": 3
         },
         {
+          "id": "sinelshchikov-andrey-valentinovich",
+          "kind": "person",
+          "label": "Синельщиков Андрей Валентинович",
+          "name_latin": "Andrey Valentinovich Sinelshchikov",
+          "sanctioned": false,
+          "degree": 3
+        },
+        {
           "id": "sirazatdinov-nikita-vadimovich",
           "kind": "person",
           "label": "Сиразатдинов Никита Вадимович",
@@ -8565,7 +8603,7 @@
           "label": "Соловьев Константин Юрьевич",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "starostenko-anton-valentinovich",
@@ -8608,6 +8646,36 @@
           "degree": 5
         },
         {
+          "id": "stub::inn-7706681026",
+          "kind": "unresolved",
+          "label": "АО «Альфа-Капитал Альтернативные инвестиции»",
+          "degree": 2
+        },
+        {
+          "id": "stub::inn-7708083600",
+          "kind": "unresolved",
+          "label": "ФГУП «ЗащитаИнфoТранс Министерства транспорта Российской Федерации»",
+          "degree": 2
+        },
+        {
+          "id": "stub::абрамов ю.а",
+          "kind": "unresolved",
+          "label": "Абрамов Ю.А",
+          "degree": 1
+        },
+        {
+          "id": "stub::абрамова т.а",
+          "kind": "unresolved",
+          "label": "Абрамова Т.А",
+          "degree": 1
+        },
+        {
+          "id": "stub::абрамченков николай григорьевич",
+          "kind": "unresolved",
+          "label": "Абрамченков Николай Григорьевич",
+          "degree": 1
+        },
+        {
           "id": "stub::аккерман екатерина валерьевна",
           "kind": "unresolved",
           "label": "Аккерман Екатерина Валерьевна",
@@ -8624,12 +8692,6 @@
           "kind": "unresolved",
           "label": "Андреева Жанна Евгеньевна",
           "degree": 2
-        },
-        {
-          "id": "stub::архангельский геннадий евгеньевич + ташматов илья сергеевич",
-          "kind": "unresolved",
-          "label": "Архангельский Геннадий Евгеньевич + Ташматов Илья Сергеевич",
-          "degree": 1
         },
         {
           "id": "stub::афанасьев игорь константинович",
@@ -8650,7 +8712,7 @@
           "degree": 1
         },
         {
-          "id": "stub::бауер пётр роландович",
+          "id": "stub::бауер петр роландович",
           "kind": "unresolved",
           "label": "Бауер Пётр Роландович",
           "degree": 1
@@ -8734,18 +8796,6 @@
           "degree": 1
         },
         {
-          "id": "stub::защитаинфотранс министерства транспорта российской федерации",
-          "kind": "unresolved",
-          "label": "ФГУП «ЗащитаИнфоТранс Министерства транспорта Российской Федерации»",
-          "degree": 1
-        },
-        {
-          "id": "stub::зпиф комбинированный технофонд",
-          "kind": "unresolved",
-          "label": "ЗПИФ комбинированный «Технофонд»",
-          "degree": 1
-        },
-        {
           "id": "stub::истомин лев львович",
           "kind": "unresolved",
           "label": "Истомин Лев Львович",
@@ -8812,7 +8862,7 @@
           "degree": 2
         },
         {
-          "id": "stub::махнёв а.и",
+          "id": "stub::махнев а.и",
           "kind": "unresolved",
           "label": "Махнёв А.И",
           "degree": 1
@@ -8845,6 +8895,12 @@
           "id": "stub::назаров о.р",
           "kind": "unresolved",
           "label": "Назаров О.Р",
+          "degree": 1
+        },
+        {
+          "id": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
+          "kind": "unresolved",
+          "label": "Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава»",
           "degree": 1
         },
         {
@@ -8884,9 +8940,9 @@
           "degree": 1
         },
         {
-          "id": "stub::региональных некоммерческих проектов дар и некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
+          "id": "stub::региональных некоммерческих проектов дар",
           "kind": "unresolved",
-          "label": "Фонд региональных некоммерческих проектов «ДАР» и Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава»",
+          "label": "Фонд региональных некоммерческих проектов «ДАР»",
           "degree": 1
         },
         {
@@ -8899,12 +8955,6 @@
           "id": "stub::саитов р.ф.",
           "kind": "unresolved",
           "label": "Саитов Р.Ф.",
-          "degree": 1
-        },
-        {
-          "id": "stub::саитов ренат фаритович",
-          "kind": "unresolved",
-          "label": "Саитов Ренат Фаритович",
           "degree": 1
         },
         {
@@ -8938,7 +8988,7 @@
           "degree": 1
         },
         {
-          "id": "stub::сотов артём александрович",
+          "id": "stub::сотов артем александрович",
           "kind": "unresolved",
           "label": "Сотов Артём Александрович",
           "degree": 2
@@ -8968,7 +9018,7 @@
           "degree": 3
         },
         {
-          "id": "stub::тращёнок людмила ефимовна",
+          "id": "stub::тращенок людмила ефимовна",
           "kind": "unresolved",
           "label": "Тращёнок Людмила Ефимовна",
           "degree": 2
@@ -8992,7 +9042,7 @@
           "degree": 1
         },
         {
-          "id": "stub::фрадков пётр михайлович",
+          "id": "stub::фрадков петр михайлович",
           "kind": "unresolved",
           "label": "Фрадков Пётр Михайлович",
           "degree": 1
@@ -9939,7 +9989,7 @@
         },
         {
           "source": "ao-nii-vektor",
-          "target": "product::ao-nii-vektor::обратимый-бустер-серии-об3-четыр-хступенчатый",
+          "target": "product::ao-nii-vektor::обратимый-бустер-серии-об3-четырехступенчатый",
           "type": "produces",
           "label": null,
           "source_id": "s5391",
@@ -9961,7 +10011,7 @@
         },
         {
           "source": "ao-nii-vektor",
-          "target": "product::ao-nii-vektor::оптимизатор-энергопотребления-тр-хфазный-серии-оэп-3",
+          "target": "product::ao-nii-vektor::оптимизатор-энергопотребления-трехфазный-серии-оэп-3",
           "type": "produces",
           "label": null,
           "source_id": "s5370",
@@ -10170,7 +10220,7 @@
         },
         {
           "source": "ao-pk-azimut",
-          "target": "product::ao-pk-azimut::комплексный-диспетчерский-тренаж-р-аесф-466948-002",
+          "target": "product::ao-pk-azimut::комплексный-диспетчерский-тренажер-аесф-466948-002",
           "type": "produces",
           "label": null,
           "source_id": "s5391",
@@ -10390,7 +10440,7 @@
         },
         {
           "source": "ao-pk-azimut",
-          "target": "product::ao-pk-azimut::при-моответчик-dme-n-2700-аесф-461512-001",
+          "target": "product::ao-pk-azimut::приемоответчик-dme-n-2700-аесф-461512-001",
           "type": "produces",
           "label": null,
           "source_id": "s5391",
@@ -10401,7 +10451,7 @@
         },
         {
           "source": "ao-pk-azimut",
-          "target": "product::ao-pk-azimut::при-моответчик-dme-nl-2700-аесф-461511-004-01",
+          "target": "product::ao-pk-azimut::приемоответчик-dme-nl-2700-аесф-461511-004-01",
           "type": "produces",
           "label": null,
           "source_id": "s5391",
@@ -12094,6 +12144,94 @@
           "confidence": null
         },
         {
+          "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2012-12-28",
+          "weight": 6600000,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2013-03-12",
+          "weight": 17020200,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": "0У3/304/14/4МБК",
+          "source_id": "s1937",
+          "as_of": "2014-06-02",
+          "weight": 1491300,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2014-12-15",
+          "weight": 568500,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2015-05-07",
+          "weight": 874000,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::гбу-г-москвы-дирекция-спортивных-и-зрелищных-мероприятий",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2016-03-21",
+          "weight": 3280000,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::гбу-г-москвы-система-112",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2013-09-13",
+          "weight": 13149372,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::гбу-г-москвы-система-112",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2015-05-26",
+          "weight": 7792200,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "customer::гку-мо-московский-областной-центр-информационно-коммуникационных-технологий",
           "target": "ooo-gaskar-tekhnologii",
           "type": "procures",
@@ -12156,6 +12294,28 @@
           "source_id": "s3043",
           "as_of": null,
           "weight": 151427994,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::государственная-фельдъегерская-служба-рф",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": "0173100012414000189",
+          "source_id": "s1934",
+          "as_of": "2014-11-07",
+          "weight": 472472,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "customer::государственная-фельдъегерская-служба-рф",
+          "target": "ao-tsentr-telko",
+          "type": "procures",
+          "label": null,
+          "source_id": "s1441",
+          "as_of": "2015-05-13",
+          "weight": 178035.84,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -17837,7 +17997,7 @@
         },
         {
           "source": "ooo-gagaring",
-          "target": "product::ooo-gagaring::бпла-самол-т-скаут-5",
+          "target": "product::ooo-gagaring::бпла-самолет-скаут-5",
           "type": "produces",
           "label": null,
           "source_id": "s5444",
@@ -19443,7 +19603,7 @@
         },
         {
           "source": "ooo-pokrov",
-          "target": "product::ooo-pokrov::покров-вца-ал-ша",
+          "target": "product::ooo-pokrov::покров-вца-алеша",
           "type": "produces",
           "label": null,
           "source_id": "s1386",
@@ -19729,7 +19889,7 @@
         },
         {
           "source": "ooo-ti-es-dzhi-grupp",
-          "target": "product::ooo-ti-es-dzhi-grupp::дириж-р",
+          "target": "product::ooo-ti-es-dzhi-grupp::дирижер",
           "type": "produces",
           "label": null,
           "source_id": "s7502",
@@ -21017,6 +21177,17 @@
         {
           "source": "saitov-renat-faritovich",
           "target": "ooo-gaskar-integratsiya",
+          "type": "directs",
+          "label": null,
+          "source_id": "s1548",
+          "as_of": "2019-05-31",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
+          "source": "saitov-renat-faritovich",
+          "target": "ooo-gaskar-integratsiya",
           "type": "role",
           "label": "Генеральный директор ООО «Гаскар Интеграция» (2019)",
           "source_id": "s1548",
@@ -21664,6 +21835,39 @@
           "confidence": null
         },
         {
+          "source": "sinelshchikov-andrey-valentinovich",
+          "target": "ao-tsentr-telko",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6743",
+          "as_of": "2008-02-06",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "sinelshchikov-andrey-valentinovich",
+          "target": "ao-tsentr-telko",
+          "type": "directs",
+          "label": null,
+          "source_id": "s0115",
+          "as_of": "2026-08-24",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "sinelshchikov-andrey-valentinovich",
+          "target": "ao-tsentr-telko",
+          "type": "role",
+          "label": null,
+          "source_id": "s0115",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "sirazatdinov-nikita-vadimovich",
           "target": "ano-arrs-krasnodar",
           "type": "role",
@@ -22115,6 +22319,61 @@
           "confidence": null
         },
         {
+          "source": "stub::inn-7706681026",
+          "target": "ooo-gk-aeromaks",
+          "type": "founded",
+          "label": "former founder (49.659%)",
+          "source_id": "s6886",
+          "as_of": "2025-12-14",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-7708083600",
+          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
+          "type": "founded",
+          "label": "100%",
+          "source_id": "s0219",
+          "as_of": "2022-11-28",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "stub::абрамов ю.а",
+          "target": "ooo-ti-es-dzhi-grupp",
+          "type": "founded",
+          "label": "35%",
+          "source_id": "s0456",
+          "as_of": "2024-10-29",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "stub::абрамова т.а",
+          "target": "ooo-ti-es-dzhi-grupp",
+          "type": "founded",
+          "label": "16%",
+          "source_id": "s0456",
+          "as_of": "2024-10-29",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "stub::абрамченков николай григорьевич",
+          "target": "ao-tsentr-telko",
+          "type": "directs",
+          "label": null,
+          "source_id": "s1965",
+          "as_of": "2015-05-26",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
           "source": "stub::аккерман екатерина валерьевна",
           "target": "ooo-stroystandart",
           "type": "directs",
@@ -22154,17 +22413,6 @@
           "label": null,
           "source_id": "s7437",
           "as_of": "2026-09-14",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::архангельский геннадий евгеньевич + ташматов илья сергеевич",
-          "target": "ano-arkhangel",
-          "type": "founded",
-          "label": null,
-          "source_id": "s5502",
-          "as_of": "2024-02-01",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -22236,7 +22484,7 @@
           "confidence": null
         },
         {
-          "source": "stub::бауер пётр роландович",
+          "source": "stub::бауер петр роландович",
           "target": "ooo-gaskar-integratsiya",
           "type": "directs",
           "label": null,
@@ -22423,28 +22671,6 @@
           "confidence": null
         },
         {
-          "source": "stub::защитаинфотранс министерства транспорта российской федерации",
-          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
-          "type": "founded",
-          "label": "100%",
-          "source_id": "s0219",
-          "as_of": "2022-11-28",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::зпиф комбинированный технофонд",
-          "target": "ooo-gk-aeromaks",
-          "type": "founded",
-          "label": "former founder (49.659%)",
-          "source_id": "s6886",
-          "as_of": "2025-12-14",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
           "source": "stub::истомин лев львович",
           "target": "ooo-aero-khit-servis",
           "type": "directs",
@@ -22588,7 +22814,7 @@
           "confidence": null
         },
         {
-          "source": "stub::махнёв а.и",
+          "source": "stub::махнев а.и",
           "target": "ao-stratim",
           "type": "founded",
           "label": "4,5%",
@@ -22660,6 +22886,17 @@
           "label": "1,3%",
           "source_id": "s0332",
           "as_of": "2025-12-31",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
+          "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7370",
+          "as_of": "2026-09-08",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -22742,7 +22979,7 @@
           "confidence": null
         },
         {
-          "source": "stub::региональных некоммерческих проектов дар и некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
+          "source": "stub::региональных некоммерческих проектов дар",
           "target": "fond-nasha-pravda",
           "type": "founded",
           "label": null,
@@ -22781,17 +23018,6 @@
           "label": null,
           "source_id": "s1847",
           "as_of": "2018-07-23",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::саитов ренат фаритович",
-          "target": "ooo-gaskar-integratsiya",
-          "type": "directs",
-          "label": null,
-          "source_id": "s1548",
-          "as_of": "2019-05-31",
           "weight": 1.0,
           "temporal_status": "historical",
           "confidence": null
@@ -22874,7 +23100,7 @@
           "confidence": null
         },
         {
-          "source": "stub::сотов артём александрович",
+          "source": "stub::сотов артем александрович",
           "target": "va-technologies",
           "type": "directs",
           "label": null,
@@ -22940,7 +23166,7 @@
           "confidence": null
         },
         {
-          "source": "stub::тращёнок людмила ефимовна",
+          "source": "stub::тращенок людмила ефимовна",
           "target": "gk-logos",
           "type": "directs",
           "label": null,
@@ -22984,7 +23210,7 @@
           "confidence": null
         },
         {
-          "source": "stub::фрадков пётр михайлович",
+          "source": "stub::фрадков петр михайлович",
           "target": "pao-bank-psb",
           "type": "directs",
           "label": null,
@@ -24136,7 +24362,7 @@
           "sanctioned": false,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 9
+          "degree": 8
         },
         {
           "id": "ano-arrs-krasnodar",
@@ -24423,6 +24649,18 @@
           "degree": 8
         },
         {
+          "id": "ao-tsentr-telko",
+          "kind": "entity",
+          "label": "АО «Центр-Телко»",
+          "name_latin": null,
+          "inn": "7729150663",
+          "tier": "plumbing",
+          "sanctioned": false,
+          "legal_form": "АО",
+          "variant": null,
+          "degree": 15
+        },
+        {
           "id": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
           "kind": "entity",
           "label": "АО УК «Азимут» | formerly «Аэронавигационные и информационные системы»",
@@ -24676,7 +24914,7 @@
           "sanctioned": true,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 18
+          "degree": 19
         },
         {
           "id": "fond-podderzhki-natsionalnykh-morskikh-programm",
@@ -25760,7 +25998,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": "dual",
-          "degree": 14
+          "degree": 16
         },
         {
           "id": "ooo-tsentr-bespilotnykh-sistem-tula",
@@ -26035,6 +26273,14 @@
           "degree": 6
         },
         {
+          "id": "sinelshchikov-andrey-valentinovich",
+          "kind": "person",
+          "label": "Синельщиков Андрей Валентинович",
+          "name_latin": "Andrey Valentinovich Sinelshchikov",
+          "sanctioned": false,
+          "degree": 3
+        },
+        {
           "id": "skorykh-sergey-valerevich",
           "kind": "person",
           "label": "Скорых Сергей Валерьевич",
@@ -26064,7 +26310,7 @@
           "label": "Соловьев Константин Юрьевич",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "stepanov-valeriy-yurevich",
@@ -26073,6 +26319,24 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 7
+        },
+        {
+          "id": "stub::inn-7708083600",
+          "kind": "unresolved",
+          "label": "ФГУП «ЗащитаИнфoТранс Министерства транспорта Российской Федерации»",
+          "degree": 2
+        },
+        {
+          "id": "stub::абрамов ю.а",
+          "kind": "unresolved",
+          "label": "Абрамов Ю.А",
+          "degree": 1
+        },
+        {
+          "id": "stub::абрамова т.а",
+          "kind": "unresolved",
+          "label": "Абрамова Т.А",
+          "degree": 1
         },
         {
           "id": "stub::аккерман екатерина валерьевна",
@@ -26091,12 +26355,6 @@
           "kind": "unresolved",
           "label": "Андреева Жанна Евгеньевна",
           "degree": 2
-        },
-        {
-          "id": "stub::архангельский геннадий евгеньевич + ташматов илья сергеевич",
-          "kind": "unresolved",
-          "label": "Архангельский Геннадий Евгеньевич + Ташматов Илья Сергеевич",
-          "degree": 1
         },
         {
           "id": "stub::афанасьев игорь константинович",
@@ -26159,12 +26417,6 @@
           "degree": 1
         },
         {
-          "id": "stub::защитаинфотранс министерства транспорта российской федерации",
-          "kind": "unresolved",
-          "label": "ФГУП «ЗащитаИнфоТранс Министерства транспорта Российской Федерации»",
-          "degree": 1
-        },
-        {
           "id": "stub::кайденко анна викторовна",
           "kind": "unresolved",
           "label": "Кайденко Анна Викторовна",
@@ -26207,7 +26459,7 @@
           "degree": 1
         },
         {
-          "id": "stub::махнёв а.и",
+          "id": "stub::махнев а.и",
           "kind": "unresolved",
           "label": "Махнёв А.И",
           "degree": 1
@@ -26243,6 +26495,12 @@
           "degree": 1
         },
         {
+          "id": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
+          "kind": "unresolved",
+          "label": "Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава»",
+          "degree": 1
+        },
+        {
           "id": "stub::перфильев николай александрович",
           "kind": "unresolved",
           "label": "Перфильев Николай Александрович",
@@ -26261,9 +26519,9 @@
           "degree": 1
         },
         {
-          "id": "stub::региональных некоммерческих проектов дар и некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
+          "id": "stub::региональных некоммерческих проектов дар",
           "kind": "unresolved",
-          "label": "Фонд региональных некоммерческих проектов «ДАР» и Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава»",
+          "label": "Фонд региональных некоммерческих проектов «ДАР»",
           "degree": 1
         },
         {
@@ -26303,7 +26561,7 @@
           "degree": 1
         },
         {
-          "id": "stub::сотов артём александрович",
+          "id": "stub::сотов артем александрович",
           "kind": "unresolved",
           "label": "Сотов Артём Александрович",
           "degree": 2
@@ -26345,7 +26603,7 @@
           "degree": 1
         },
         {
-          "id": "stub::фрадков пётр михайлович",
+          "id": "stub::фрадков петр михайлович",
           "kind": "unresolved",
           "label": "Фрадков Пётр Михайлович",
           "degree": 1
@@ -27767,6 +28025,28 @@
           "confidence": null
         },
         {
+          "source": "sinelshchikov-andrey-valentinovich",
+          "target": "ao-tsentr-telko",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6743",
+          "as_of": "2008-02-06",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "sinelshchikov-andrey-valentinovich",
+          "target": "ao-tsentr-telko",
+          "type": "directs",
+          "label": null,
+          "source_id": "s0115",
+          "as_of": "2026-08-24",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
           "source": "skorykh-sergey-valerevich",
           "target": "ao-nii-vektor",
           "type": "directs",
@@ -27866,6 +28146,39 @@
           "confidence": null
         },
         {
+          "source": "stub::inn-7708083600",
+          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
+          "type": "founded",
+          "label": "100%",
+          "source_id": "s0219",
+          "as_of": "2022-11-28",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "stub::абрамов ю.а",
+          "target": "ooo-ti-es-dzhi-grupp",
+          "type": "founded",
+          "label": "35%",
+          "source_id": "s0456",
+          "as_of": "2024-10-29",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "stub::абрамова т.а",
+          "target": "ooo-ti-es-dzhi-grupp",
+          "type": "founded",
+          "label": "16%",
+          "source_id": "s0456",
+          "as_of": "2024-10-29",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
           "source": "stub::аккерман екатерина валерьевна",
           "target": "ooo-stroystandart",
           "type": "directs",
@@ -27905,17 +28218,6 @@
           "label": null,
           "source_id": "s7437",
           "as_of": "2026-09-14",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::архангельский геннадий евгеньевич + ташматов илья сергеевич",
-          "target": "ano-arkhangel",
-          "type": "founded",
-          "label": null,
-          "source_id": "s5502",
-          "as_of": "2024-02-01",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -28086,17 +28388,6 @@
           "confidence": null
         },
         {
-          "source": "stub::защитаинфотранс министерства транспорта российской федерации",
-          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
-          "type": "founded",
-          "label": "100%",
-          "source_id": "s0219",
-          "as_of": "2022-11-28",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "stub::кайденко анна викторовна",
           "target": "ooo-nova",
           "type": "directs",
@@ -28196,7 +28487,7 @@
           "confidence": null
         },
         {
-          "source": "stub::махнёв а.и",
+          "source": "stub::махнев а.и",
           "target": "ao-stratim",
           "type": "founded",
           "label": "4,5%",
@@ -28273,6 +28564,17 @@
           "confidence": null
         },
         {
+          "source": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
+          "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7370",
+          "as_of": "2026-09-08",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
           "source": "stub::перфильев николай александрович",
           "target": "ao-tekhnodron",
           "type": "directs",
@@ -28317,7 +28619,7 @@
           "confidence": null
         },
         {
-          "source": "stub::региональных некоммерческих проектов дар и некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
+          "source": "stub::региональных некоммерческих проектов дар",
           "target": "fond-nasha-pravda",
           "type": "founded",
           "label": null,
@@ -28427,7 +28729,7 @@
           "confidence": null
         },
         {
-          "source": "stub::сотов артём александрович",
+          "source": "stub::сотов артем александрович",
           "target": "va-technologies",
           "type": "directs",
           "label": null,
@@ -28515,7 +28817,7 @@
           "confidence": null
         },
         {
-          "source": "stub::фрадков пётр михайлович",
+          "source": "stub::фрадков петр михайлович",
           "target": "pao-bank-psb",
           "type": "directs",
           "label": null,
@@ -29101,7 +29403,7 @@
           "sanctioned": true,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 18
+          "degree": 19
         },
         {
           "id": "gk-logos",
@@ -29641,7 +29943,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": "dual",
-          "degree": 14
+          "degree": 16
         },
         {
           "id": "ooo-trimiks-bulat-3mx",
@@ -29773,27 +30075,33 @@
           "degree": 1
         },
         {
+          "id": "stub::inn-7105509736",
+          "kind": "unresolved",
+          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО- ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ПРОГРАММНЫЕ КОМПЛЕКСЫ РЕАЛЬНОГО ВРЕМЕНИ\"",
+          "degree": 1
+        },
+        {
+          "id": "stub::inn-7107116177",
+          "kind": "unresolved",
+          "label": "ФОНД РАЗВИТИЯ ПРОМЫШЛЕННОСТИ ТУЛЬСКОЙ ОБЛАСТИ",
+          "degree": 1
+        },
+        {
           "id": "stub::михайлов юрий геннадьевич",
           "kind": "unresolved",
           "label": "Михайлов Юрий Геннадьевич",
           "degree": 1
         },
         {
-          "id": "stub::научно- производственное объединение программные комплексы реального времени",
+          "id": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
           "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО- ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ПРОГРАММНЫЕ КОМПЛЕКСЫ РЕАЛЬНОГО ВРЕМЕНИ\"",
+          "label": "Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава»",
           "degree": 1
         },
         {
-          "id": "stub::развития промышленности тульской области",
+          "id": "stub::региональных некоммерческих проектов дар",
           "kind": "unresolved",
-          "label": "ФОНД РАЗВИТИЯ ПРОМЫШЛЕННОСТИ ТУЛЬСКОЙ ОБЛАСТИ",
-          "degree": 1
-        },
-        {
-          "id": "stub::региональных некоммерческих проектов дар и некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
-          "kind": "unresolved",
-          "label": "Фонд региональных некоммерческих проектов «ДАР» и Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава»",
+          "label": "Фонд региональных некоммерческих проектов «ДАР»",
           "degree": 1
         },
         {
@@ -29803,7 +30111,7 @@
           "degree": 1
         },
         {
-          "id": "stub::фрадков пётр михайлович",
+          "id": "stub::фрадков петр михайлович",
           "kind": "unresolved",
           "label": "Фрадков Пётр Михайлович",
           "degree": 1
@@ -31069,6 +31377,28 @@
           "confidence": null
         },
         {
+          "source": "stub::inn-7105509736",
+          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-7107116177",
+          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "stub::михайлов юрий геннадьевич",
           "target": "ooo-sistemnyy-integrator",
           "type": "directs",
@@ -31080,29 +31410,18 @@
           "confidence": null
         },
         {
-          "source": "stub::научно- производственное объединение программные комплексы реального времени",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+          "source": "stub::некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
+          "target": "fond-nasha-pravda",
           "type": "founded",
           "label": null,
-          "source_id": null,
-          "as_of": null,
+          "source_id": "s7370",
+          "as_of": "2026-09-08",
           "weight": 1.0,
-          "temporal_status": "unknown",
+          "temporal_status": "current",
           "confidence": null
         },
         {
-          "source": "stub::развития промышленности тульской области",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::региональных некоммерческих проектов дар и некоммерческий фонд содействия сохранению историко-культурного наследия градислава",
+          "source": "stub::региональных некоммерческих проектов дар",
           "target": "fond-nasha-pravda",
           "type": "founded",
           "label": null,
@@ -31124,7 +31443,7 @@
           "confidence": null
         },
         {
-          "source": "stub::фрадков пётр михайлович",
+          "source": "stub::фрадков петр михайлович",
           "target": "pao-bank-psb",
           "type": "directs",
           "label": null,
@@ -31272,7 +31591,7 @@
           "sanctioned": false,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 9
+          "degree": 8
         },
         {
           "id": "ano-arrs-krasnodar",
@@ -31587,6 +31906,18 @@
           "degree": 8
         },
         {
+          "id": "ao-tsentr-telko",
+          "kind": "entity",
+          "label": "АО «Центр-Телко»",
+          "name_latin": null,
+          "inn": "7729150663",
+          "tier": "plumbing",
+          "sanctioned": false,
+          "legal_form": "АО",
+          "variant": null,
+          "degree": 15
+        },
+        {
           "id": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
           "kind": "entity",
           "label": "АО УК «Азимут» | formerly «Аэронавигационные и информационные системы»",
@@ -31836,7 +32167,7 @@
           "sanctioned": true,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 18
+          "degree": 19
         },
         {
           "id": "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta",
@@ -33312,7 +33643,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": "dual",
-          "degree": 14
+          "degree": 16
         },
         {
           "id": "ooo-trimiks-bulat-3mx",
@@ -33579,7 +33910,7 @@
           "degree": 3
         },
         {
-          "id": "product::alyaska::ал-ша",
+          "id": "product::alyaska::алеша",
           "kind": "product",
           "label": "Алёша",
           "owner_slug": "alyaska",
@@ -34437,7 +34768,7 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-kravt::матр-шка",
+          "id": "product::ooo-kravt::матрешка",
           "kind": "product",
           "label": "«Матрёшка»",
           "owner_slug": "ooo-kravt",
@@ -34905,7 +35236,7 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-trimiks-bulat-3mx::п-тр",
+          "id": "product::ooo-trimiks-bulat-3mx::петр",
           "kind": "product",
           "label": "«Пётр»",
           "owner_slug": "ooo-trimiks-bulat-3mx",
@@ -35132,7 +35463,7 @@
           "label": "Соловьев Константин Юрьевич",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "stepanov-valeriy-yurevich",
@@ -35141,6 +35472,90 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 7
+        },
+        {
+          "id": "stub::inn-3663143016",
+          "kind": "unresolved",
+          "label": "ООО «АИТК»",
+          "degree": 1
+        },
+        {
+          "id": "stub::inn-5040127965",
+          "kind": "unresolved",
+          "label": "ООО «Инвестпроектгрупп»",
+          "degree": 1
+        },
+        {
+          "id": "stub::inn-5261135844",
+          "kind": "unresolved",
+          "label": "ООО «Стартап-студия университета Лобачевского»",
+          "degree": 1
+        },
+        {
+          "id": "stub::inn-5300002784",
+          "kind": "unresolved",
+          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УПРАВЛЯЮЩАЯ КОМПАНИЯ ИННОВАЦИОННОГО НАУЧНО- ТЕХНОЛОГИЧЕСКОГО ЦЕНТРА \"ИНТЕЛЛЕКТУАЛЬНАЯ ЭЛЕКТРОНИКА - ВАЛДАЙ\"",
+          "degree": 1
+        },
+        {
+          "id": "stub::inn-5321178877",
+          "kind": "unresolved",
+          "label": "МИНИСТЕРСТВО ПРОМЫШЛЕННОСТИ И ТОРГОВЛИ НОВГОРОДСКОЙ ОБЛАСТИ",
+          "degree": 1
+        },
+        {
+          "id": "stub::inn-7105509736",
+          "kind": "unresolved",
+          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО- ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ПРОГРАММНЫЕ КОМПЛЕКСЫ РЕАЛЬНОГО ВРЕМЕНИ\"",
+          "degree": 1
+        },
+        {
+          "id": "stub::inn-7107116177",
+          "kind": "unresolved",
+          "label": "ФОНД РАЗВИТИЯ ПРОМЫШЛЕННОСТИ ТУЛЬСКОЙ ОБЛАСТИ",
+          "degree": 1
+        },
+        {
+          "id": "stub::inn-7704790277",
+          "kind": "unresolved",
+          "label": "ООО «Управляющая компания КОМАКС»",
+          "degree": 3
+        },
+        {
+          "id": "stub::inn-7706681026",
+          "kind": "unresolved",
+          "label": "АО «Альфа-Капитал Альтернативные инвестиции»",
+          "degree": 2
+        },
+        {
+          "id": "stub::inn-7708083600",
+          "kind": "unresolved",
+          "label": "ФГУП «ЗащитаИнфoТранс Министерства транспорта Российской Федерации»",
+          "degree": 2
+        },
+        {
+          "id": "stub::inn-7716846333",
+          "kind": "unresolved",
+          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВО ОБУЧАЮЩИХ СИСТЕМ И ТЕХНОЛОГИЙ\"",
+          "degree": 1
+        },
+        {
+          "id": "stub::inn-9710075695",
+          "kind": "unresolved",
+          "label": "Фонд «Московский инновационный кластер»",
+          "degree": 1
+        },
+        {
+          "id": "stub::inn-9715482630",
+          "kind": "unresolved",
+          "label": "АО «Вежливый концерн»",
+          "degree": 1
+        },
+        {
+          "id": "stub::inn-9721137992",
+          "kind": "unresolved",
+          "label": "ООО «ДЕДАЛ»",
+          "degree": 1
         },
         {
           "id": "stub::абрамов юрий александрович",
@@ -35152,12 +35567,6 @@
           "id": "stub::аин",
           "kind": "unresolved",
           "label": "Акционерное общество \"АИН\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::аитк",
-          "kind": "unresolved",
-          "label": "ООО «АИТК»",
           "degree": 1
         },
         {
@@ -35203,12 +35612,6 @@
           "degree": 1
         },
         {
-          "id": "stub::вежливый концерн",
-          "kind": "unresolved",
-          "label": "АО «Вежливый концерн»",
-          "degree": 1
-        },
-        {
           "id": "stub::владимир ткачук",
           "kind": "unresolved",
           "label": "Владимир Ткачук",
@@ -35225,12 +35628,6 @@
           "kind": "unresolved",
           "label": "Григорьев Дмитрий Евгеньевич",
           "degree": 4
-        },
-        {
-          "id": "stub::дедал",
-          "kind": "unresolved",
-          "label": "ООО «ДЕДАЛ»",
-          "degree": 1
         },
         {
           "id": "stub::дмитриев геннадий витальевич",
@@ -35254,18 +35651,6 @@
           "id": "stub::ермоленко илья викторович",
           "kind": "unresolved",
           "label": "Ермоленко Илья Викторович",
-          "degree": 1
-        },
-        {
-          "id": "stub::защитаинфoтранс министерства транспорта российской федерации",
-          "kind": "unresolved",
-          "label": "ФГУП «ЗащитаИнфoТранс Министерства транспорта Российской Федерации»",
-          "degree": 1
-        },
-        {
-          "id": "stub::инвестпроектгрупп",
-          "kind": "unresolved",
-          "label": "ООО «Инвестпроектгрупп»",
           "degree": 1
         },
         {
@@ -35335,24 +35720,6 @@
           "degree": 1
         },
         {
-          "id": "stub::министерство промышленности и торговли новгородской области",
-          "kind": "unresolved",
-          "label": "МИНИСТЕРСТВО ПРОМЫШЛЕННОСТИ И ТОРГОВЛИ НОВГОРОДСКОЙ ОБЛАСТИ",
-          "degree": 1
-        },
-        {
-          "id": "stub::московский инновационный кластер",
-          "kind": "unresolved",
-          "label": "Фонд «Московский инновационный кластер»",
-          "degree": 1
-        },
-        {
-          "id": "stub::научно- производственное объединение программные комплексы реального времени",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО- ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ПРОГРАММНЫЕ КОМПЛЕКСЫ РЕАЛЬНОГО ВРЕМЕНИ\"",
-          "degree": 1
-        },
-        {
           "id": "stub::нефедьев андрей матвеевич",
           "kind": "unresolved",
           "label": "Нефедьев Андрей Матвеевич",
@@ -35369,18 +35736,6 @@
           "kind": "unresolved",
           "label": "Потехин Владимир Александрович",
           "degree": 3
-        },
-        {
-          "id": "stub::производство обучающих систем и технологий",
-          "kind": "unresolved",
-          "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВО ОБУЧАЮЩИХ СИСТЕМ И ТЕХНОЛОГИЙ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::развития промышленности тульской области",
-          "kind": "unresolved",
-          "label": "ФОНД РАЗВИТИЯ ПРОМЫШЛЕННОСТИ ТУЛЬСКОЙ ОБЛАСТИ",
-          "degree": 1
         },
         {
           "id": "stub::российская федерация",
@@ -35401,22 +35756,10 @@
           "degree": 1
         },
         {
-          "id": "stub::соловьёв константин юрьевич",
-          "kind": "unresolved",
-          "label": "Соловьёв Константин Юрьевич",
-          "degree": 1
-        },
-        {
-          "id": "stub::сотов артём александрович",
+          "id": "stub::сотов артем александрович",
           "kind": "unresolved",
           "label": "Сотов Артём Александрович",
           "degree": 2
-        },
-        {
-          "id": "stub::стартап-студия университета лобачевского",
-          "kind": "unresolved",
-          "label": "ООО «Стартап-студия университета Лобачевского»",
-          "degree": 1
         },
         {
           "id": "stub::степаева мария ивановна",
@@ -35437,7 +35780,7 @@
           "degree": 1
         },
         {
-          "id": "stub::тращёнок людмила ефимовна",
+          "id": "stub::тращенок людмила ефимовна",
           "kind": "unresolved",
           "label": "Тращёнок Людмила Ефимовна",
           "degree": 2
@@ -35447,18 +35790,6 @@
           "kind": "unresolved",
           "label": "Туляков Александр Владимирович",
           "degree": 1
-        },
-        {
-          "id": "stub::управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай",
-          "kind": "unresolved",
-          "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УПРАВЛЯЮЩАЯ КОМПАНИЯ ИННОВАЦИОННОГО НАУЧНО- ТЕХНОЛОГИЧЕСКОГО ЦЕНТРА \"ИНТЕЛЛЕКТУАЛЬНАЯ ЭЛЕКТРОНИКА - ВАЛДАЙ\"",
-          "degree": 1
-        },
-        {
-          "id": "stub::управляющая компания комакс",
-          "kind": "unresolved",
-          "label": "ООО «Управляющая компания КОМАКС»",
-          "degree": 3
         },
         {
           "id": "stub::февралев александр евгеньевич",
@@ -35667,7 +35998,7 @@
         },
         {
           "source": "alyaska",
-          "target": "product::alyaska::ал-ша",
+          "target": "product::alyaska::алеша",
           "type": "produces",
           "label": null,
           "source_id": null,
@@ -38648,7 +38979,7 @@
         },
         {
           "source": "ooo-kravt",
-          "target": "product::ooo-kravt::матр-шка",
+          "target": "product::ooo-kravt::матрешка",
           "type": "produces",
           "label": null,
           "source_id": null,
@@ -39165,7 +39496,7 @@
         },
         {
           "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::п-тр",
+          "target": "product::ooo-trimiks-bulat-3mx::петр",
           "type": "produces",
           "label": null,
           "source_id": null,
@@ -39957,6 +40288,17 @@
         },
         {
           "source": "solovev-konstantin-yurevich",
+          "target": "ooo-arkodim",
+          "type": "directs",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "solovev-konstantin-yurevich",
           "target": "ooo-arkodim-2",
           "type": "founded",
           "label": "25%",
@@ -40022,6 +40364,182 @@
           "confidence": null
         },
         {
+          "source": "stub::inn-3663143016",
+          "target": "ao-ekolibri",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-5040127965",
+          "target": "ooo-tskbr",
+          "type": "founded",
+          "label": "25%",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-5261135844",
+          "target": "ooo-pekhtra",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-5300002784",
+          "target": "ano-npts-ushkuynik",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-5321178877",
+          "target": "ano-npts-ushkuynik",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-7105509736",
+          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-7107116177",
+          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-7704790277",
+          "target": "ooo-aero-khit",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-7704790277",
+          "target": "ooo-aero-khit-m",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-7704790277",
+          "target": "ooo-aero-khit-servis",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-7706681026",
+          "target": "ao-tsentr-telko",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-7708083600",
+          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-7716846333",
+          "target": "ooo-aviron",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-9710075695",
+          "target": "ooo-tsugam",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-9715482630",
+          "target": "ooo-spetsialnye-poleznye-tekhnologii",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::inn-9721137992",
+          "target": "ao-ekolibri",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "stub::абрамов юрий александрович",
           "target": "ooo-ti-es-dzhi-grupp",
           "type": "founded",
@@ -40035,17 +40553,6 @@
         {
           "source": "stub::аин",
           "target": "ao-stratim",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::аитк",
-          "target": "ao-ekolibri",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -40143,17 +40650,6 @@
           "confidence": null
         },
         {
-          "source": "stub::вежливый концерн",
-          "target": "ooo-spetsialnye-poleznye-tekhnologii",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "stub::владимир ткачук",
           "target": "uraldronzavod",
           "type": "directs",
@@ -40189,17 +40685,6 @@
         {
           "source": "stub::григорьев дмитрий евгеньевич",
           "target": "ooo-investments",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::дедал",
-          "target": "ao-ekolibri",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -40246,28 +40731,6 @@
           "target": "ooo-arkodim-2",
           "type": "founded",
           "label": "50%",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::защитаинфoтранс министерства транспорта российской федерации",
-          "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::инвестпроектгрупп",
-          "target": "ooo-tskbr",
-          "type": "founded",
-          "label": "25%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -40396,39 +40859,6 @@
           "confidence": null
         },
         {
-          "source": "stub::министерство промышленности и торговли новгородской области",
-          "target": "ano-npts-ushkuynik",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::московский инновационный кластер",
-          "target": "ooo-tsugam",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::научно- производственное объединение программные комплексы реального времени",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "stub::нефедьев андрей матвеевич",
           "target": "ao-pmts-avangard",
           "type": "founded",
@@ -40455,28 +40885,6 @@
           "target": "ooo-boevye-tekhnologii",
           "type": "founded",
           "label": "100%",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::производство обучающих систем и технологий",
-          "target": "ooo-aviron",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::развития промышленности тульской области",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -40528,30 +40936,8 @@
           "confidence": null
         },
         {
-          "source": "stub::соловьёв константин юрьевич",
-          "target": "ooo-arkodim",
-          "type": "directs",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::сотов артём александрович",
+          "source": "stub::сотов артем александрович",
           "target": "va-technologies",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::стартап-студия университета лобачевского",
-          "target": "ooo-pekhtra",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -40594,7 +40980,7 @@
           "confidence": null
         },
         {
-          "source": "stub::тращёнок людмила ефимовна",
+          "source": "stub::тращенок людмила ефимовна",
           "target": "gk-logos",
           "type": "founded",
           "label": null,
@@ -40607,50 +40993,6 @@
         {
           "source": "stub::туляков александр владимирович",
           "target": "ao-ekolibri",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::управляющая компания инновационного научно- технологического центра интеллектуальная электроника - валдай",
-          "target": "ano-npts-ushkuynik",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::управляющая компания комакс",
-          "target": "ooo-aero-khit",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::управляющая компания комакс",
-          "target": "ooo-aero-khit-m",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::управляющая компания комакс",
-          "target": "ooo-aero-khit-servis",
           "type": "founded",
           "label": null,
           "source_id": null,

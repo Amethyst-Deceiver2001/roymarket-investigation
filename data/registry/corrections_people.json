@@ -4561,6 +4561,7 @@
     },
     "saitov-renat-faritovich": {
       "set": {
+        "fio_ru": "Саитов Ренат Фаритович",
         "roles": [
           {
             "body": null,
@@ -4574,6 +4575,7 @@
         ]
       },
       "why": [
+        "2026-09-19: fio_ru set from this record's own name_latin (\"Renat Faritovich Saitov\") and the Cyrillic form already used for this person in director_history; the record had no Cyrillic name, so name matching missed it and the graph showed a stub beside it.",
         "2026-09-07: registry-hardening pass -- resolved orphan role link to ooo-gaskar-integratsiya."
       ]
     },

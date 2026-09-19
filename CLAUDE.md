@@ -549,6 +549,17 @@ registered as an entity's founder) the builder surfaces them automatically. Thei
 profile pages are unaffected. Set it deliberately per person with a `why` note; it is
 not inferred.
 
+**Look a name up with `scripts/registry_lookup.py` before calling it unrecorded.** A graph
+"unresolved stub", a name in a post, a counterparty in a court filing -- none of them is
+"not in the registry" until it has been through the fuzzy lookup (`python3
+scripts/registry_lookup.py "Фонд Градислава"`, or `--stubs` / `--nulls` for a rescan). It
+matches the bare name, name with ООО/АО/Фонд, a `" | "` alias part, `brand_ru`, Latin names,
+`name_history`, ё/е, and Cyrillic<->Latin transliteration, plus spelling variants for
+people. On 2026-09-19 Фонд «Градислава» was called unrecorded while sitting in
+`entities.json` under `"Фонд «Градислава» | historic & cultural heritage preservation"`.
+Its lower tiers (`contains`, `fuzzy`, `initials`) are leads to read, never automatic
+merges -- "Песков Дмитрий Николаевич" is not the Kremlin spokesman.
+
 **Multi-hop reachability, not just direct edges, is what "connected to
 ЦБСТ" means.** A published exhibit once reported an entity as having "no
 traceable ЦБСТ edge" based on a 1-hop check, when a real 3-hop path

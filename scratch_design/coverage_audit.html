@@ -167,10 +167,10 @@
       Воздушный трактат (via a product mention) and Килоуатт–Шестопалов (the post does not name the
       entity).</li>
     <li><strong>Graph policy: everything on the graph connects to the hub.</strong> The graph is now
-      1,091 nodes and 1,818 edges, down from 1,430 nodes. 40 minor people (22 relatives, 10 government
+      1,096 nodes and 1,835 edges, down from 1,430 nodes. 40 minor people (22 relatives, 10 government
       signatories, 8 staff) are held on file with <code class="id">graph_tier: "reference"</code> and
       resurface automatically if they gain an ownership, founder or director edge. A reachability
-      check from the ЦБСТ hub drops every node it cannot reach — 287 ids at the last build — and lists
+      check from the ЦБСТ hub drops every node it cannot reach — 277 ids at the last build — and lists
       them under <code class="id">detached_ids</code>; the registry records themselves are untouched.</li>
     <li><strong>A founder-parsing bug hid real ownership.</strong> Multi-founder history strings joined
       with " / " lost every founder after the first. After the fix, 48 founder edges appeared and four
@@ -183,7 +183,7 @@
       separators are no longer split, role labels ("ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: …") are stripped, multi-person
       director strings are split, and non-name fragments are refused. The numeric stubs had also been
       acting as false bridges: two records, ООО «Оупен Лоджистикс» and Диомидов В.В., had reached the hub
-      only through them and are now correctly off the graph. 120 unresolved names remain, real names not matched to a registry record. Four more were registry entities missed because their names carry an alias after " | " (Градислава, ДАР, ЗИТ.ЦИ, УК «Азимут»); the matcher now indexes both parts.</li>
+      only through them and are now correctly off the graph. 120 unresolved names remain, real names not matched to a registry record. Four more were registry entities missed because their names carry an alias after " | " (Градислава, ДАР, ЗИТ.ЦИ, УК «Азимут»); the matcher now indexes both parts. A new tool, <code class="id">scripts/registry_lookup.py</code>, matches a name against every entity and person by exact, transliterated, contained-words and spelling-variant tiers, and its rescan of the graph also found АО «Центр-Телко» — 100% owned by ИНН 7706681026, the same company that held 49.659% of ГК «Аэромакс» — which had been off the graph because that owner appeared as two differently named stubs; stubs are now keyed by ИНН.</li>
     <li><strong>Detached sanctioned entities: five reconnected, seven still open.</strong> Левит, НОВА
       and Михельсон connect through the ДАР fund to Наша Правда (read from the FY2023 БФО note by OCR).
       Пехтра connects by press (special-prize winner in the accelerator, not a resident) and
@@ -513,7 +513,7 @@
 <footer>
   First written 2026-09-05 · rewritten 2026-09-19 against registry state at commit 8611a1e<br>
   0 errors, 15 warnings on check_registry.py · coverage figures from scripts/coverage_report.py, run 2026-09-19 ·
-  graph: 1,091 nodes, 1,818 edges, 287 detached ids
+  graph: 1,096 nodes, 1,835 edges, 277 detached ids
 </footer>
 </div>
 </body>

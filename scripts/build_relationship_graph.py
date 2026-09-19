@@ -75,7 +75,8 @@ _SHARE_PREFIX_RE = re.compile(r"^\s*\d+(?:[.,]\d+)?(?:\s*[-–]\s*\d+(?:[.,]\d+)
 # A comma between two digits is a thousands or decimal separator ("₽3,177,522,000",
 # "1,3%"), and ";" separates co-holders in prose lists; splitting on the former produced
 # numeric "founders".
-_SPLIT_RE = re.compile(r"\s+/\s+|;\s*(?![^(]*\))|(?:(?<!\d),|(?<=\d),(?=\s|\D))\s*(?![^(]*\))")
+# " + " joins two holders in one string; " и " does too when a second legal-form/fund name follows.
+_SPLIT_RE = re.compile(r"\s+/\s+|\s+\+\s+|\s+и\s+(?=(?:Некоммерческий\s+)?(?:[Фф]онд|ООО|АО|АНО)\b)|;\s*(?![^(]*\))|(?:(?<!\d),|(?<=\d),(?=\s|\D))\s*(?![^(]*\))")
 _MULTIROTOR_RE = re.compile(r"\b(?:multirotor|multicopter|quadcopter)\b|"
                             r"мультикоптер|квадрокоптер", re.IGNORECASE)
 _VEHICLE_MOUNTED_RE = re.compile(
@@ -171,7 +172,8 @@ def normalize(name: str) -> str:
     while prev != n:
         prev = n
         n = _PREFIX_RE.sub("", n)
-    return _WS_RE.sub(" ", n).strip().lower()
+    # ё/е are interchangeable in registry sources ("Соловьёв" vs "Соловьев"); fold both sides.
+    return _WS_RE.sub(" ", n).strip().lower().replace("ё", "е")
 
 
 def product_id(owner_slug: str, name: str, ordinal: int = 1) -> str:
@@ -372,11 +374,14 @@ def build_graph(entities: list[dict], people: list[dict],
             designation_confidence=unit.get("designation_confidence"),
         )
 
-    def add_stub(raw_name: str, context: str) -> str | None:
+    def add_stub(raw_name: str, context: str, inn: str | None = None) -> str | None:
         if is_noise_name(raw_name):
             return None
         raw_name = _NOTE_PAREN_RE.sub("", raw_name).strip()
-        node_id = f"stub::{normalize(raw_name)}"
+        # Key on ИНН when the source gives one: the same company under two names (a
+        # renamed managing company, "Мой Капитал" / "Альфа-Капитал АИ", ИНН 7706681026)
+        # must be ONE node, or two entities it owns never meet through it.
+        node_id = f"stub::inn-{inn}" if inn else f"stub::{normalize(raw_name)}"
         add_node(node_id, kind="unresolved", label=raw_name)
         item = unresolved.setdefault(node_id, {"id": node_id, "raw_name": raw_name, "contexts": []})
         if context not in item["contexts"]:
@@ -445,7 +450,7 @@ def build_graph(entities: list[dict], people: list[dict],
                       or resolve_name(raw_name))
             if target == slug:
                 continue
-            source = target or add_stub(raw_name, f"founder of {slug}")
+            source = target or add_stub(raw_name, f"founder of {slug}", founder.get("inn"))
             add_edge(source, slug, "founded",
                      f"{str(founder['share']).rstrip('%')}%" if founder.get("share") else None)
         current_founders = {
@@ -471,7 +476,7 @@ def build_graph(entities: list[dict], people: list[dict],
                 target = inn_to_entity_slug.get(founder.get("inn")) or resolve_name(raw_name)
                 if target == slug:
                     continue
-                source = target or add_stub(raw_name, f"former founder of {slug}")
+                source = target or add_stub(raw_name, f"former founder of {slug}", founder.get("inn"))
                 if is_latest:
                     label = f"{founder['share']}%" if founder.get("share") else None
                     status = "current" if as_of and source_id else "unknown"

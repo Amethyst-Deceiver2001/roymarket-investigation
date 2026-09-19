@@ -40493,7 +40493,7 @@
   },
   {
     "slug": "saitov-renat-faritovich",
-    "fio_ru": null,
+    "fio_ru": "Саитов Ренат Фаритович",
     "name_latin": "Renat Faritovich Saitov",
     "dob": null,
     "birthplace": null,
@@ -40530,6 +40530,7 @@
     ],
     "source_id": "s1548",
     "_corrected": [
+      "2026-09-19: fio_ru set from this record's own name_latin (\"Renat Faritovich Saitov\") and the Cyrillic form already used for this person in director_history; the record had no Cyrillic name, so name matching missed it and the graph showed a stub beside it.",
       "2026-09-07: registry-hardening pass -- resolved orphan role link to ooo-gaskar-integratsiya."
     ],
     "_verified_against": null,
