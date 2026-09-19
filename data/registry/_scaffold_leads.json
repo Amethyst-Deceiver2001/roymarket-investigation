@@ -71,5 +71,271 @@
       "_note": "catch-all row inside the manufacturers table; split into per-entity/per-product open questions"
     }
   ],
-  "parse_problems": []
+  "parse_problems": [],
+  "role_candidates_from_prose": [
+    {
+      "person_slug": "sergey-rufinovich-brovchenko",
+      "entity_name": "АО «Фабрика им. Советской Армии»"
+    },
+    {
+      "person_slug": "sergey-rufinovich-brovchenko",
+      "entity_name": "Фонд «Наша Правда»"
+    },
+    {
+      "person_slug": "barashkov-aleksandr-sergeevich",
+      "entity_name": "ООО «АКР «Бегак»»"
+    },
+    {
+      "person_slug": "barashkov-aleksandr-sergeevich",
+      "entity_name": "КБ «Око»"
+    },
+    {
+      "person_slug": "brovchenko-sergey-rufinovich",
+      "entity_name": "АО «Фабрика им. Советской Армии»"
+    },
+    {
+      "person_slug": "brovchenko-sergey-rufinovich",
+      "entity_name": "Фонд «Наша Правда»"
+    },
+    {
+      "person_slug": "bessonov-sergey-nikolaevich",
+      "entity_name": "ООО «ГК «Аэромакс»»"
+    },
+    {
+      "person_slug": "bessonov-sergey-nikolaevich",
+      "entity_name": "ООО «Группа компаний «Аэромакс»»"
+    },
+    {
+      "person_slug": "kurteev-aleksandr-sergeevich",
+      "entity_name": "ООО «Гагаринг»"
+    },
+    {
+      "person_slug": "brovchenko-aleksandr-rufinovich",
+      "entity_name": "Фонд «ДАР»"
+    },
+    {
+      "person_slug": "brovchenko-aleksandr-rufinovich",
+      "entity_name": "ООО «Орион»"
+    },
+    {
+      "person_slug": "kindyakov-andrey-andreevich",
+      "entity_name": "ООО «КРАВТ»"
+    },
+    {
+      "person_slug": "chernyshov-pavel-alekseevich",
+      "entity_name": "ООО «Аэро-Хит»"
+    },
+    {
+      "person_slug": "kuzyakin-dmitriy-vasilevich",
+      "entity_name": "АО «Котлин-Новатор»"
+    },
+    {
+      "person_slug": "zhuk-vitaliy-aleksandrovich",
+      "entity_name": "ООО «Клеверкоптер»"
+    },
+    {
+      "person_slug": "sokolov-german-olegovich",
+      "entity_name": "ООО «ДСГ»"
+    },
+    {
+      "person_slug": "fedukovich-kirill-olegovich",
+      "entity_name": "АО «АУРИН»"
+    },
+    {
+      "person_slug": "lysenko-andrey-olegovich",
+      "entity_name": "ООО «КБ «Синергия»»"
+    },
+    {
+      "person_slug": "nekrasov-aleksandr-viktorovich",
+      "entity_name": "ООО «Визионеро»"
+    },
+    {
+      "person_slug": "nekrasov-aleksandr-viktorovich",
+      "entity_name": "ООО «КБ «Синергия»»"
+    },
+    {
+      "person_slug": "nekrasov-aleksandr-viktorovich",
+      "entity_name": "ООО «Метаскан»"
+    },
+    {
+      "person_slug": "pospekhov-ivan-aleksandrovich",
+      "entity_name": "ОПКБ «Экспломет»"
+    },
+    {
+      "person_slug": "pospekhov-ivan-aleksandrovich",
+      "entity_name": "ООО «Ментастеп»"
+    },
+    {
+      "person_slug": "pospekhov-ivan-aleksandrovich",
+      "entity_name": "ООО «Пехтра»"
+    },
+    {
+      "person_slug": "kot-oleg-petrovich",
+      "entity_name": "АО «УК СМАРТ»"
+    },
+    {
+      "person_slug": "mikhaylova-irina-valerievna",
+      "entity_name": "АО «АУРИН»"
+    },
+    {
+      "person_slug": "mikhaylova-irina-valerievna",
+      "entity_name": "ООО «МПТМ»"
+    },
+    {
+      "person_slug": "volkov-mikhail-vadimovich",
+      "entity_name": "Фонд «Градислава»"
+    },
+    {
+      "person_slug": "shvetsov-aleksey-aleksandrovich",
+      "entity_name": "ООО «Винград»"
+    },
+    {
+      "person_slug": "potekhina-svetlana-alekseevna",
+      "entity_name": "ООО «Рационы питания»"
+    },
+    {
+      "person_slug": "gusev-sergey-vladimirovich",
+      "entity_name": "АО «Аэромакс»"
+    },
+    {
+      "person_slug": "sinelshchikov-andrey-valentinovich",
+      "entity_name": "ЗПИФ «Технофонд»"
+    },
+    {
+      "person_slug": "sinelshchikov-andrey-valentinovich",
+      "entity_name": "ООО «Группа компаний «Кронштадт»»"
+    },
+    {
+      "person_slug": "leonov-aleksandr-vladimirovich",
+      "entity_name": "ЮФ «АЙ ПИ ПРО»"
+    },
+    {
+      "person_slug": "kapustin-pavel-evgenevich",
+      "entity_name": "ООО «Визионеро»"
+    },
+    {
+      "person_slug": "radchenko-mikhail-yurevich",
+      "entity_name": "ООО «Пехтра»"
+    },
+    {
+      "person_slug": "sukhoverkhiy-vladimir-andreevich",
+      "entity_name": "ООО «Стартап-студия университета Лобачевского»"
+    },
+    {
+      "person_slug": "efremov-anton-veniaminovich",
+      "entity_name": "АО «УК СМАРТ»"
+    },
+    {
+      "person_slug": "goncharenko-anton-aleksandrovich",
+      "entity_name": "АО «УК СМАРТ»"
+    },
+    {
+      "person_slug": "yastrebov-sergey-vladimirovich",
+      "entity_name": "АО «Хоук Холдинг»"
+    },
+    {
+      "person_slug": "yastrebov-sergey-vladimirovich",
+      "entity_name": "АО «АИН»"
+    },
+    {
+      "person_slug": "makhnev-aleksandr-igorevich",
+      "entity_name": "АО «Хоук Холдинг»"
+    },
+    {
+      "person_slug": "makhnev-aleksandr-igorevich",
+      "entity_name": "АО «АИН»"
+    },
+    {
+      "person_slug": "nazarov-oleg-ramilevich",
+      "entity_name": "АО «АИН»"
+    },
+    {
+      "person_slug": "kostyunin-pavel-andreevich",
+      "entity_name": "АО «Стратим-Тех»"
+    },
+    {
+      "person_slug": "lobov-vadim-georgievich",
+      "entity_name": "ООО «Синергия Диджитал»"
+    },
+    {
+      "person_slug": "fedyaeva-anna-yurevna",
+      "entity_name": "ООО «Синергия Диджитал»"
+    },
+    {
+      "person_slug": "fedyaeva-anna-yurevna",
+      "entity_name": "ООО «Мегакампус»"
+    },
+    {
+      "person_slug": "fedyaeva-anna-yurevna",
+      "entity_name": "АО «Синерджи Хаб»"
+    },
+    {
+      "person_slug": "fedyaeva-anna-yurevna",
+      "entity_name": "ООО «Синерджи Траст»"
+    },
+    {
+      "person_slug": "mikhelson-leonid-viktorovich",
+      "entity_name": "ООО «НОВА»"
+    },
+    {
+      "person_slug": "krylov-andrey-olegovich",
+      "entity_name": "ООО «Стройстандарт»"
+    },
+    {
+      "person_slug": "krylov-andrey-olegovich",
+      "entity_name": "ООО «Винград»"
+    },
+    {
+      "person_slug": "gavrilov-aleksandr-valerevich",
+      "entity_name": "ООО «РТ-Развитие бизнеса»"
+    },
+    {
+      "person_slug": "gavrilov-aleksandr-valerevich",
+      "entity_name": "ГК «Ростех»"
+    },
+    {
+      "person_slug": "kashnikov-konstantin-nikolaevich",
+      "entity_name": "АО «КПТ»"
+    },
+    {
+      "person_slug": "kashnikov-konstantin-nikolaevich",
+      "entity_name": "ООО «Инвестментс»"
+    },
+    {
+      "person_slug": "kozhemyakin-vladimir-vladimirovich",
+      "entity_name": "УК «Азимут»"
+    },
+    {
+      "person_slug": "malysheva-natalya-viktorovna",
+      "entity_name": "УК «Азимут»"
+    },
+    {
+      "person_slug": "tyutina-olga-anatolevna",
+      "entity_name": "АО «Альфа-Банк»"
+    },
+    {
+      "person_slug": "vlasov-artem-arkadevich",
+      "entity_name": "АО «Стратолинк»"
+    },
+    {
+      "person_slug": "oksman-nikolas-nikolaevich",
+      "entity_name": "АО «Стратолинк»"
+    },
+    {
+      "person_slug": "chumakov-pavel-andreevich",
+      "entity_name": "ООО «ИНСТЕХ»"
+    },
+    {
+      "person_slug": "baranova-olga-vladimirovna",
+      "entity_name": "ООО «АКР «Бегак»»"
+    },
+    {
+      "person_slug": "shatskikh-aleksandr-vladimirovich",
+      "entity_name": "ООО «НПО НЕБО»"
+    },
+    {
+      "person_slug": "skoryatin-georgiy-andreevich",
+      "entity_name": "ГК «Аэромакс»"
+    }
+  ]
 }

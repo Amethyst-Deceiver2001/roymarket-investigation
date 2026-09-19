@@ -1640,6 +1640,22 @@ def main() -> int:
 
     attribute_open_questions(open_qs, entities, people)
 
+    # Prose co-mention "candidates" (an entity named in the same text window as a
+    # person -- see parse_people_from_prose) carry no title, no source and no
+    # resolved entity: they assert nothing, and the graph and profile builders
+    # already skip them. Keep them as triage leads instead of as roles[] entries
+    # that read as unsourced role claims.
+    role_candidate_leads = []
+    for p in people:
+        keep = []
+        for r in p.get("roles", []):
+            if (isinstance(r, dict) and r.get("_candidate") and not r.get("title")
+                    and not r.get("source_id") and not r.get("entity_slug")):
+                role_candidate_leads.append({"person_slug": p.get("slug"), "entity_name": r.get("entity_name")})
+            else:
+                keep.append(r)
+        p["roles"] = keep
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     payloads = {
         "entities.json": entities,
@@ -1651,6 +1667,7 @@ def main() -> int:
             "unattributed_inn": prose_leads,
             "manufacturer_catchall_rows": catchalls,
             "parse_problems": problems,
+            "role_candidates_from_prose": role_candidate_leads,
         },
     }
     for name, payload in payloads.items():
