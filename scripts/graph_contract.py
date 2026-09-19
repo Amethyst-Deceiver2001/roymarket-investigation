@@ -172,6 +172,9 @@ def validate_graph(
         p["slug"] for p in people
         if isinstance(p, dict) and p.get("slug") and p.get("graph_tier") == "reference"
     }
+    # Nodes with no path to the ЦБСТ hub are deliberately left off the graph and
+    # listed in detached_ids; a missing node is only an error if it is not listed.
+    detached = set(graph.get("detached_ids") or [])
     tombstone_entities = {
         e["slug"] for e in entities
         if isinstance(e, dict) and e.get("slug") and e.get("_merged_into")
@@ -258,7 +261,7 @@ def validate_graph(
     for tombstone in sorted(tombstone_entities | tombstone_people):
         if tombstone in node_by_id:
             _error(errors, f"tombstoned registry node {tombstone!r} is included")
-    for missing in sorted((live_entities | (live_people - reference_people)) - set(node_by_id)):
+    for missing in sorted((live_entities | (live_people - reference_people)) - set(node_by_id) - detached):
         _error(errors, f"live registry node {missing!r} is missing")
 
     observed_degree = Counter()

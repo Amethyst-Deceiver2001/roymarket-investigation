@@ -44,6 +44,7 @@ CBST_SLUG = "ano-tsbst-centre-for-unmanned-systems-technologies"
 # only stripped the bare "Общество" token, leaving "с ограниченной
 # ответственностью" attached on one side but not the other, so the two
 # normalized strings never matched.
+HUB_SLUG = "ano-tsbst-centre-for-unmanned-systems-technologies"
 LEGAL_PREFIXES = [
     "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ",
     "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО",
@@ -65,7 +66,13 @@ _PAREN_RE = re.compile(r"\s*\([^)]*\)")
 _SHARE_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*%")
 _SHARE_SUFFIX_RE = re.compile(r"\s*(\d+(?:[.,]\d+)?)\s*%\s*$")
 _SHARE_PREFIX_RE = re.compile(r"^\s*(\d+(?:[.,]\d+)?)\s*%\s*")
-_SPLIT_RE = re.compile(r",\s*(?![^(]*\))")
+# founders_history[].value joins co-founders with " / " ("A 20% (₽2 000) / B 80%
+# (₽8 000)"), not a comma -- splitting on commas alone parsed only the FIRST
+# founder of every multi-founder history string and dropped the rest (found
+# 2026-09-19: АО «Аурин»'s 80% of КоптерЛаб and АО «Проминвест»'s 51% of Атлант
+# Аэро were both invisible to the graph). Spaced slash only, so a name that
+# contains a bare "/" is not split.
+_SPLIT_RE = re.compile(r"\s+/\s+|,\s*(?![^(]*\))")
 _MULTIROTOR_RE = re.compile(r"\b(?:multirotor|multicopter|quadcopter)\b|"
                             r"мультикоптер|квадрокоптер", re.IGNORECASE)
 _VEHICLE_MOUNTED_RE = re.compile(
@@ -395,10 +402,15 @@ def build_graph(entities: list[dict], people: list[dict],
             for founder in parse_founder_entries(entity.get("founders"))
         }
         historical_founders = set()
-        for entry in entity.get("founders_history") or []:
-            if not isinstance(entry, dict):
-                continue
+        # Newest entry first: whoever the latest dated history entry lists is the
+        # current holder (the flat `founders` field often carries only the natural
+        # persons), everyone who appears only in an older entry is a former founder.
+        history = sorted((h for h in entity.get("founders_history") or [] if isinstance(h, dict)),
+                         key=lambda h: _date_and_source(h)[0] or "", reverse=True)
+        latest_as_of = next((_date_and_source(h)[0] for h in history if _date_and_source(h)[0]), None)
+        for entry in history:
             as_of, source_id = _date_and_source(entry)
+            is_latest = bool(as_of) and as_of == latest_as_of
             for founder in parse_founder_entries(entry.get("value")):
                 raw_name = founder["name"]
                 normalized_name = normalize(raw_name)
@@ -409,16 +421,14 @@ def build_graph(entities: list[dict], people: list[dict],
                 if target == slug:
                     continue
                 source = target or add_stub(raw_name, f"former founder of {slug}")
-                add_edge(
-                    source,
-                    slug,
-                    "founded",
-                    f"former founder ({founder['share']}%)" if founder.get("share")
-                    else "former founder",
-                    source_id,
-                    as_of,
-                    temporal_status="historical" if as_of and source_id else "unknown",
-                )
+                if is_latest:
+                    label = f"{founder['share']}%" if founder.get("share") else None
+                    status = "current" if as_of and source_id else "unknown"
+                else:
+                    label = (f"former founder ({founder['share']}%)" if founder.get("share")
+                             else "former founder")
+                    status = "historical" if as_of and source_id else "unknown"
+                add_edge(source, slug, "founded", label, source_id, as_of, temporal_status=status)
         for director in entity.get("director_history") or []:
             raw_name = director.get("value")
             if not raw_name or raw_name.startswith("—"):
@@ -529,6 +539,31 @@ def build_graph(entities: list[dict], people: list[dict],
         for slug in hidden:
             nodes.pop(slug, None)
 
+    # Every node on the graph must connect, directly or through any chain of
+    # edges of any type, to the central hub (ЦБСТ). Anything that doesn't -- an
+    # adjacent-not-ЦБСТ network, an entity kept on file from a brief table, a
+    # product or person hanging off one -- stays in the registry but is left off
+    # the graph, and is listed under `detached_ids` so the omission is visible.
+    detached_ids = []
+    if HUB_SLUG in nodes:
+        adjacency: dict[str, set] = {}
+        for e in edges:
+            adjacency.setdefault(e["source"], set()).add(e["target"])
+            adjacency.setdefault(e["target"], set()).add(e["source"])
+        reachable, stack = {HUB_SLUG}, [HUB_SLUG]
+        while stack:
+            for nxt in adjacency.get(stack.pop(), ()):
+                if nxt not in reachable:
+                    reachable.add(nxt)
+                    stack.append(nxt)
+        detached_ids = sorted(set(nodes) - reachable)
+        if detached_ids:
+            gone = set(detached_ids)
+            edges = [e for e in edges if e["source"] not in gone and e["target"] not in gone]
+            for node_id in detached_ids:
+                nodes.pop(node_id, None)
+                unresolved.pop(node_id, None)
+
     node_list = sorted(nodes.values(), key=lambda node: node["id"])
     edges.sort(key=lambda edge: (
         edge["source"], edge["target"], edge["type"], edge["as_of"] or "",
@@ -551,6 +586,7 @@ def build_graph(entities: list[dict], people: list[dict],
         "nodes": node_list,
         "edges": edges,
         "unresolved": unresolved_list,
+        "detached_ids": detached_ids,
     }
     return graph
 

@@ -13035,6 +13035,12 @@
     },
     "npp-elvo-kolskaya-verf": {
       "set": {
+        "cbst_tie": {
+          "claim": "Named a ЦБСТ resident and accelerator participant.",
+          "confidence": "t-doc",
+          "evidence": "ЦБСТ channel msg 2325, 17.07.2026: «Петербургское НПП «ЭЛВО» (участник II потока Акселератора и резидент ЦБСТ)».",
+          "source_id": "s7604"
+        },
         "images": [
           {"caption": "Company logo, from the company's own official site.", "path": "images/npp-elvo_logo_official-site.png", "source_id": "s7549"}
         ],
@@ -13170,6 +13176,7 @@
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
+        "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
         "full EGRUL extract pulled directly 23.08.2026 — see director_history and open_questions for a genuine discrepancy against the pre-existing scaffold that this pass could not resolve. Left as an open question rather than silently overwriting the brief's original attribution.",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): medium-high confidence match via nppelvo.ru. Real operating company (2025 revenue ~₽113.8M, 18 employees). Site does not explicitly claim drone/defense work -- \"transport electronics\" is the only UAV-adjacent line; treat as medium relevance pending firmer confirmation.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7810918592). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
@@ -17450,6 +17457,12 @@
     },
     "ooo-boevye-tekhnologii": {
       "set": {
+        "cbst_tie": {
+          "claim": "ЦБСТ's channel calls the company's development director a ЦБСТ resident.",
+          "confidence": "t-open",
+          "evidence": "ЦБСТ channel msg 1135, 22.08.2025: «директора по развитию компании «Боевые технологии» Владимира Потехина, резидента ЦБСТ». Matches by company name and the director's name; no ИНН in the post. The entity's earlier tier_basis says it is not part of the network and predates this post -- unreconciled, see open questions.",
+          "source_id": "s7602"
+        },
         "name_ru": "ООО «Боевые технологии» (Военторг «ИРПТОРГ»)",
         "name_en": "OOO Boevye Tekhnologii (\"Combat Technologies\", trading as Voentorg IRPTORG)",
         "kpp": "526201001",
@@ -17585,6 +17598,7 @@
           ]
         },
         "why": [
+        "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
           {
             "text": "2026-09-05: surfaced while trying to trace the Chinese export side of the GAONENG battery a court filing documents НПО «Рустехдрон» delivering to ООО «ДСГ» — no public Chinese per-company customs data exists post-2022, and GAONENG itself doesn't appear in The Insider's SanctionsEvasionTracker (a D2C hobby-parcel exporter, not the kind of trade that dataset catches). The Russian retail side was more productive: this entity is a documented military-equipment producer (rations, clothing, РЭБ, drones) that also retails the exact battery brand with explicit military-market language.",
             "source_id": "s5659"
@@ -18187,6 +18201,12 @@
     },
     "ooo-eyartek": {
       "set": {
+        "cbst_tie": {
+          "claim": "Presented by ЦБСТ among the exhibitors at HeliRussia.",
+          "confidence": "t-open",
+          "evidence": "ЦБСТ channel msg 2186, 05.06.2026, headed «Резиденты ЦБСТ представили свои изделия на HeliRussia»: «Земляки СКБ — IT-компания «ЭйАрТэк» — показали на HeliRussia модельную альтернативную навигационную систему». Named in a post about residents, but the «резидент» label is not applied to this company by itself.",
+          "source_id": "s7603"
+        },
         "_verified": true,
         "address": "Ульяновская область, г. Ульяновск",
         "director": "Капустин Павел Евгеньевич",
@@ -18295,6 +18315,7 @@
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
+        "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
         "full EGRUL extract pulled directly 23.08.2026 (ul-1227300004282-20260823131727.pdf). Sole founder = sole director. Ulyanovsk — same region as СКБ Пиранья in this same batch, both software-registered; worth checking whether Ulyanovsk is emerging as a regional cluster the way Zhukovsky/Taganrog are for aerospace-specific registrations.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7300000540). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
@@ -24505,6 +24526,12 @@
     },
     "ooo-orient-sistems": {
       "set": {
+        "cbst_tie": {
+          "claim": "Named by ЦБСТ's own channel as a developer of a system it presents.",
+          "confidence": "t-open",
+          "evidence": "ЦБСТ channel msg 2198, 09.06.2026: «Малая технологическая компания Orient Systems (4GNSS) разработала автономную защищённую систему «Ориент. Коршун»». Brand-level match; the post does not say «резидент».",
+          "source_id": "s7591"
+        },
         "_verified": true,
         "address": "125080, Москва, вн.тер.г. муниципальный округ Сокол",
         "charter_capital": 20000,
@@ -24699,6 +24726,7 @@
       },
       "verified_against": null,
       "why": [
+        "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
         "Rospatent full-roster sweep (s0433), 1 trademark filing(s) matched by ИНН.",
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 5 fiscal year(s) with revenue/profit data.",
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 5 fiscal year(s) with revenue/profit data.",
@@ -27752,6 +27780,12 @@
     },
     "ooo-ti-es-dzhi-grupp": {
       "set": {
+        "cbst_tie": {
+          "claim": "Named a ЦБСТ resident: KurskCity reports «Основную часть экспозиции представила компания «ТСГ» — резидент АНО «ЦБСТ»», and ЦБСТ's own channel post of 21.05.2026 describes the same exhibit as «изделиями резидента ЦБСТ — компании TSG Group».",
+          "confidence": "t-doc",
+          "evidence": "KurskCity, 20.05.2026 (archived s7502); ЦБСТ channel msg 2154, 21.05.2026 uses the Latin name TSG Group, not «ТСГ», so the identity link rests on the KurskCity page.",
+          "source_id": "s7502"
+        },
         "images": [
           {"caption": "Company logo (\"TSG Group\"), from the company's own official site.", "path": "images/ooo-ti-es-dzhi-grupp_logo_official-site.png", "source_id": "s7561"}
         ],
@@ -27937,6 +27971,7 @@
       },
       "verified_against": "Full EGRUL extract read end-to-end (ul-1233200001066-20260823120457.pdf, s0456, 17pp).",
       "why": [
+        "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
         "Rospatent full-roster sweep (s0433), 2 trademark filing(s) matched by ИНН.",
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
@@ -28713,6 +28748,12 @@
     },
     "ooo-tskbr": {
       "set": {
+        "cbst_tie": {
+          "claim": "Named among the ЦБСТ residents hit by the EU 20th sanctions package.",
+          "confidence": "t-doc",
+          "evidence": "ЦБСТ channel msg 2095, 24.04.2026, headed «Евросоюз ввёл санкции против нескольких резидентов ЦБСТ»: «подпал гендиректор Центра комплексных беспилотных решений (ЦКБР)». Msg 1931 (27.02.2026) also credits its «Джокер» FPV drone to ЦКБР chief designer Дмитрий Кузякин.",
+          "source_id": "s7588"
+        },
         "_verified": true,
         "inn": "5040176793",
         "ogrn": "1225000003458",
@@ -28812,6 +28853,7 @@
         "s7351"
       ],
       "why": [
+        "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
         "2026-09-08: closed the _scaffold_leads.json unattributed-ИНН gap for 5040176793 — the entity already existed in the registry (table-scaffolded from docs/index.html prose) but had no inn/ogrn/founders/director. Pulled a full EGRUL выписка (s7351) directly to fill it in; confirms the founders list already on file for Кузякин (via audit-it.ru/checko.ru inference) and adds the GD succession (Кузякин -> Косолапов, 20.05.2025) not previously recorded.",
         "2026-09-14: БФО coverage sweep (bfo_pull.py --all-missing) found and parsed 4 filing years (FY2022-2025), previously had empty financials[]. Revenue grew sharply in FY2025 (₽551.0m vs ₽41.0m FY2024) while profit stayed thin (₽1.0m) across all four years -- a thin-margin profile worth noting if this entity gets deeper narrative treatment.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
@@ -28820,6 +28862,12 @@
     },
     "ooo-tsugam": {
       "set": {
+        "cbst_tie": {
+          "claim": "General director sits on ЦБСТ's supervisory board.",
+          "confidence": "t-doc",
+          "evidence": "ЦБСТ channel msg 453, 14.02.2025, supervisory-board membership list: «генеральный директор ООО ЦУГАМ Ольга Соколова». The post gives the company name, not the ИНН; the registry's director for ООО «ЦУГАМ» is Соколова Ольга Михайловна.",
+          "source_id": "s7600"
+        },
         "_verified": true,
         "address": "г. Москва",
         "director": "Соколова Ольга Михайловна",
@@ -28932,6 +28980,7 @@
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
+        "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
         "REAL INSTITUTIONAL LINK: ЦУГАМ is 100%-owned by Фонд «Московский инновационный кластер» (ИНН 9710075695) — a Moscow City Government innovation-cluster fund, a state entity. This is a direct city-government ownership stake in a UAV-manufacture-coded entity, a stronger and more explicit state tie than most of this registry's ownership chains, which rely on inference from address/personnel overlap.",
         "full EGRUL extract pulled directly 23.08.2026 (ul-1227700378553-20260823135803.pdf).",
         "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no standalone company site -- operates as a joint Moscow Инновационный кластер/Фонд «Сколково» drone-testing-zone program (~400 hectares, flights to 100m), covered via tadviser.ru/cnews.ru/MIK press releases rather than its own domain. UAV-relevance confirmed; not a shell, just not consumer-facing.",
@@ -30601,6 +30650,12 @@
     },
     "va-technologies": {
       "set": {
+        "cbst_tie": {
+          "claim": "Participant in ЦБСТ's accelerator (third stream).",
+          "confidence": "t-open",
+          "evidence": "ЦБСТ channel msg 2379, 03.08.2026: «VA Technologies является участником третьего потока Акселератора Центра беспилотных систем и технологий (ЦБСТ)». Accelerator participant, not stated as a resident.",
+          "source_id": "s7605"
+        },
         "images": [
           {"caption": "Promotional banner with the \"VA Technologies\" logo and self-published marketing claim of GPS-denied hybrid optical navigation, from the company's own official site.", "path": "images/va-technologies_banner_official-site.png", "source_id": "s7539"}
         ],
@@ -30711,6 +30766,7 @@
       },
       "verified_against": "s0566; s0565; s0567; va-technologies.ru read directly 23.08.2026.",
       "why": [
+        "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
         "User-identified lead confirmed: VA Technologies (va-technologies.ru) is the product/brand site for ООО «Конструкторское бюро СОВА» (ИНН 2378001237, ОГРН 1252300058515) — the site's own product, «СОВА», is a direct name+description match to the pitch deck's \"SOVA\" navigation module, and the EGRUL extract's sole founder/director, Сотов Артём Александрович, matches the pitch deck's named founder \"Артём Сотов\" exactly.",
         "Full EGRUL extract read directly (s0566, ul-1252300058515-20260823193453.pdf): confirms ИНН/ОГРН/100%-founder-director/address in the Сириус federal territory, matching the founder's own stated НТУ Сириус education background.",
         "A 2024-dated operator manual (s0567, СОВА_Руководство_оператора.pdf, formal ЕСПД document КТДЛ.01494-01 34 01, 18pp) confirms the software existed and was formally documented over a year before the LLC's 25.11.2025 incorporation — consistent with a team formalizing an already-working product into a company, not incorporating first and building later.",
@@ -31477,6 +31533,12 @@
     },
     "9722048270": {
       "set": {
+        "cbst_tie": {
+          "claim": "ЦБСТ's own channel names «НПП» and its representative Игорь Потапов as residents of ЦБСТ; АО «НПП» (Потапов, исполнительный директор) is that company by the registry's own resolution.",
+          "confidence": "t-open",
+          "evidence": "ЦБСТ channel msg 629, 16.04.2025: «Резиденты Центра беспилотных систем и технологий — компания «НПП» и её официальный представитель Игорь Потапов». Msg 1683 (26.12.2025): «резидента ЦБСТ, исполнительного директора АО «НПП» Игоря Потапова». The posts use the short name and give no ИНН; matching it to ИНН 9722048270 is the registry's inference, hence t-open not t-doc.",
+          "source_id": "s7601"
+        },
         "financials": [
           {
             "year": "2023",
@@ -31524,6 +31586,7 @@
         "wb_overlap": "not_checked"
       },
       "why": [
+        "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-07: founding-document bundle (s6910) OCR'd and read in full -- corroborates the existing ₽30,000 charter capital and sole-founder (Семенов И.Г., 100%) structure already on file from the EGRUL выписка; the устав body itself does not name the founder (standard post-2009 pattern), so no new identity detail beyond what was already confirmed. No aviation/UAV/military terminology found in the purpose clause on this OCR pass -- appears to be a generic-activity charter.",
