@@ -1,8 +1,8 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1095,
-  "edge_count": 1835,
+  "node_count": 1097,
+  "edge_count": 1837,
   "unresolved_count": 120,
   "nodes": [
     {
@@ -308,6 +308,18 @@
       "legal_form": "АО",
       "variant": null,
       "degree": 25
+    },
+    {
+      "id": "ao-khk-gumich",
+      "kind": "entity",
+      "label": "АО «ХК Гумич»",
+      "name_latin": null,
+      "inn": "9726051114",
+      "tier": "money-layer",
+      "sanctioned": false,
+      "legal_form": "АО",
+      "variant": null,
+      "degree": 2
     },
     {
       "id": "ao-kotlin-novator",
@@ -1618,6 +1630,14 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 8
+    },
+    {
+      "id": "gavrilov-aleksandr-valerevich",
+      "kind": "person",
+      "label": "Гаврилов Александр Валерьевич",
+      "name_latin": null,
+      "sanctioned": true,
+      "degree": 1
     },
     {
       "id": "gavrilov-daniil-dmitrievich",
@@ -3425,7 +3445,7 @@
       "sanctioned": true,
       "legal_form": null,
       "variant": null,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "ooo-rtd-zashchita",
@@ -17706,6 +17726,17 @@
       "confidence": null
     },
     {
+      "source": "gavrilov-aleksandr-valerevich",
+      "target": "ao-khk-gumich",
+      "type": "founded",
+      "label": "25.0001249994%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "gavrilov-daniil-dmitrievich",
       "target": "npts-ushkuynik",
       "type": "directs",
@@ -24707,6 +24738,17 @@
       "type": "produces",
       "label": null,
       "source_id": "s0494",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-rt-razvitie-biznesa",
+      "target": "ao-khk-gumich",
+      "type": "founded",
+      "label": "74.9998750006%",
+      "source_id": null,
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -32270,7 +32312,6 @@
     "anlunegova-nastya-academy-admin",
     "ao-fabrika-im-sovetskoy-armii",
     "ao-glavtekhkonstruktsiya",
-    "ao-khk-gumich",
     "ao-korporatsiya-sinergiya",
     "ao-mikts",
     "ao-ross",
@@ -32330,7 +32371,6 @@
     "fedyukin-vladimir-anatolevich",
     "filippov-mikhail-gennadevich",
     "gagarin-gagapih",
-    "gavrilov-aleksandr-valerevich",
     "geha-geha125ru",
     "golovachev-vitaliy-yurevich",
     "goncharenko-anton-aleksandrovich",

@@ -3392,7 +3392,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": null,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "ooo-rtd-zashchita",
@@ -31714,6 +31714,18 @@
           "degree": 25
         },
         {
+          "id": "ao-khk-gumich",
+          "kind": "entity",
+          "label": "АО «ХК Гумич»",
+          "name_latin": null,
+          "inn": "9726051114",
+          "tier": "money-layer",
+          "sanctioned": false,
+          "legal_form": "АО",
+          "variant": null,
+          "degree": 2
+        },
+        {
           "id": "ao-kotlin-novator",
           "kind": "entity",
           "label": "АО «Котлин-Новатор»",
@@ -32204,6 +32216,14 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 8
+        },
+        {
+          "id": "gavrilov-aleksandr-valerevich",
+          "kind": "person",
+          "label": "Гаврилов Александр Валерьевич",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 1
         },
         {
           "id": "gk-logos",
@@ -33463,7 +33483,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": null,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "ooo-rtd-zashchita",
@@ -37295,6 +37315,17 @@
           "confidence": null
         },
         {
+          "source": "gavrilov-aleksandr-valerevich",
+          "target": "ao-khk-gumich",
+          "type": "founded",
+          "label": "25.0001249994%",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "gk-logos",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -39334,6 +39365,17 @@
           "target": "ano-arrs-krasnodar",
           "type": "founded",
           "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-rt-razvitie-biznesa",
+          "target": "ao-khk-gumich",
+          "type": "founded",
+          "label": "74.9998750006%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
