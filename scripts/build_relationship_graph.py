@@ -585,6 +585,63 @@ def build_graph(entities: list[dict], people: list[dict],
             add_edge(slug, family["principal_slug"], "family_tie", family.get("relation"),
                       family.get("source_id"), confidence=family.get("confidence"))
 
+    # A person written as initials ("Елисеев Д.Н."), or with a patronymic/spelling the
+    # registry record lacks, cannot match by name alone -- but it is the same person when
+    # exactly ONE registry person is compatible with the written name AND already sits on an
+    # entity the stub is attached to. The shared entity is the evidence, so a namesake
+    # elsewhere ("Песков Дмитрий Николаевич" / the Kremlin spokesman) never merges.
+    def _name_parts(text):
+        return re.findall(r"[^\W\d_]+", normalize(text))
+
+    def _part_ok(written, recorded):
+        return written == recorded or (len(written) == 1 and recorded.startswith(written))
+
+    def _same_person_name(stub_label, fio):
+        stub, rec = _name_parts(stub_label), _name_parts(fio)
+        if len(stub) < 2 or len(rec) < 2:
+            return False
+        for i, word in enumerate(rec):
+            if word == stub[0] or (len(word) >= 6 and len(stub[0]) == len(word)
+                                   and sum(a != b for a, b in zip(word, stub[0])) <= 1):
+                given = rec[:i] + rec[i + 1:]
+                break
+        else:
+            return False
+        rest = stub[1:]
+        # "Ольга Соколова" carries no patronymic: compare only what both sides have.
+        return all(_part_ok(w, r) for w, r in zip(rest, given)) and _part_ok(rest[0], given[0])
+
+    person_slugs = {p["slug"]: p for p in people}
+    for stub_id in [n for n, node in nodes.items() if node["kind"] == "unresolved"]:
+        stub_edges = [e for e in edges if stub_id in (e["source"], e["target"])]
+        neighbours = {e["target"] if e["source"] == stub_id else e["source"] for e in stub_edges}
+        candidates = [
+            slug for slug, person in person_slugs.items()
+            if slug in nodes and person.get("fio_ru")
+            and _same_person_name(nodes[stub_id]["label"], person["fio_ru"])
+            and any(slug in (e["source"], e["target"])
+                    and ({e["source"], e["target"]} & neighbours) for e in edges)
+        ]
+        if len(candidates) != 1:
+            continue
+        person = candidates[0]
+        for e in stub_edges:
+            e["source" if e["source"] == stub_id else "target"] = person
+        # The person's own edge to the same entity may already exist (from the full-name
+        # entry); keep one, and let it inherit the date/source the stub edge carried.
+        own = {(e["source"], e["target"], e["type"]): e for e in edges if e not in stub_edges}
+        kept = []
+        for e in edges:
+            twin = own.get((e["source"], e["target"], e["type"])) if e in stub_edges else None
+            if twin:
+                for field in ("as_of", "source_id"):
+                    twin[field] = twin[field] or e[field]
+            else:
+                kept.append(e)
+        edges = kept
+        del nodes[stub_id]
+        unresolved.pop(stub_id, None)
+
     # People marked graph_tier == "reference" (relatives, staff, contract
     # signatories) stay on file in people.json but are kept off the graph, so
     # they don't clutter it. One exception: a reference person who holds a
