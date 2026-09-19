@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1083,
-  "edge_count": 1765,
-  "unresolved_count": 154,
+  "node_count": 1095,
+  "edge_count": 1788,
+  "unresolved_count": 157,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -199,7 +199,7 @@
       "sanctioned": true,
       "legal_form": "АНО",
       "variant": null,
-      "degree": 78
+      "degree": 80
     },
     {
       "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -537,6 +537,18 @@
       "inn": "9726005220",
       "tier": null,
       "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 4
+    },
+    {
+      "id": "assotsiatsiya-vzaimopomoshch",
+      "kind": "entity",
+      "label": "Ассоциация благотворительной помощи «Взаимопомощь»",
+      "name_latin": null,
+      "inn": "4707039070",
+      "tier": "money-layer",
+      "sanctioned": true,
       "legal_form": null,
       "variant": null,
       "degree": 4
@@ -1371,7 +1383,7 @@
       "sanctioned": false,
       "legal_form": "Фонд",
       "variant": null,
-      "degree": 3
+      "degree": 4
     },
     {
       "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -2026,6 +2038,14 @@
       "degree": 6
     },
     {
+      "id": "lyubimov-aleksandr-sergeevich",
+      "kind": "person",
+      "label": "Любимов Александр Сергеевич",
+      "name_latin": null,
+      "sanctioned": false,
+      "degree": 3
+    },
+    {
       "id": "lyubina-lyubov-mikhaylovna",
       "kind": "person",
       "label": "Любина Любовь Михайловна",
@@ -2120,6 +2140,14 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 1
+    },
+    {
+      "id": "mikhelson-leonid-viktorovich",
+      "kind": "person",
+      "label": "Михельсон Леонид Викторович",
+      "name_latin": null,
+      "sanctioned": true,
+      "degree": 6
     },
     {
       "id": "miller-stanislav-yurevich",
@@ -2882,6 +2910,18 @@
       "degree": 5
     },
     {
+      "id": "ooo-levit",
+      "kind": "entity",
+      "label": "ООО «Левит»",
+      "name_latin": null,
+      "inn": "6330030244",
+      "tier": "money-layer",
+      "sanctioned": true,
+      "legal_form": "ООО",
+      "variant": null,
+      "degree": 9
+    },
+    {
       "id": "ooo-mentastep",
       "kind": "entity",
       "label": "ООО «Ментастеп»",
@@ -2928,6 +2968,18 @@
       "legal_form": "ООО",
       "variant": null,
       "degree": 4
+    },
+    {
+      "id": "ooo-nova",
+      "kind": "entity",
+      "label": "ООО «НОВА»",
+      "name_latin": null,
+      "inn": "6330037352",
+      "tier": "money-layer",
+      "sanctioned": true,
+      "legal_form": "ООО",
+      "variant": null,
+      "degree": 5
     },
     {
       "id": "ooo-npk-atlant-aero",
@@ -3093,6 +3145,18 @@
       "inn": "9714015016",
       "tier": "money-layer",
       "sanctioned": false,
+      "legal_form": "ООО",
+      "variant": null,
+      "degree": 5
+    },
+    {
+      "id": "ooo-pekhtra",
+      "kind": "entity",
+      "label": "ООО «Пехтра»",
+      "name_latin": null,
+      "inn": "5261138034",
+      "tier": "manufacturer",
+      "sanctioned": true,
       "legal_form": "ООО",
       "variant": null,
       "degree": 5
@@ -9635,6 +9699,14 @@
       "degree": 2
     },
     {
+      "id": "shulikin-nikolay-konstantinovich",
+      "kind": "person",
+      "label": "Шуликин Николай Константинович",
+      "name_latin": null,
+      "sanctioned": false,
+      "degree": 2
+    },
+    {
       "id": "shvetsov-aleksey-aleksandrovich",
       "kind": "person",
       "label": "Швецов Алексей Александрович",
@@ -9649,6 +9721,14 @@
       "name_latin": "Sidorov Nikolay Mikhaylovich",
       "sanctioned": false,
       "degree": 4
+    },
+    {
+      "id": "simanovskiy-leonid-yakovlevich",
+      "kind": "person",
+      "label": "Симановский Леонид Яковлевич",
+      "name_latin": "Leonid Yakovlevich Simanovskiy",
+      "sanctioned": false,
+      "degree": 3
     },
     {
       "id": "sirazatdinov-nikita-vadimovich",
@@ -10207,6 +10287,12 @@
       "degree": 1
     },
     {
+      "id": "stub::кайденко анна викторовна",
+      "kind": "unresolved",
+      "label": "Кайденко Анна Викторовна",
+      "degree": 2
+    },
+    {
       "id": "stub::карамов эльдар рафикович",
       "kind": "unresolved",
       "label": "Карамов Эльдар Рафикович",
@@ -10489,6 +10575,18 @@
       "degree": 2
     },
     {
+      "id": "stub::стартап- студия университета лобачевского",
+      "kind": "unresolved",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАРТАП- СТУДИЯ УНИВЕРСИТЕТА ЛОБАЧЕВСКОГО\"",
+      "degree": 1
+    },
+    {
+      "id": "stub::стартап-студия университета лобачевского",
+      "kind": "unresolved",
+      "label": "ООО «Стартап-студия университета Лобачевского»",
+      "degree": 1
+    },
+    {
       "id": "stub::степаева мария ивановна",
       "kind": "unresolved",
       "label": "Степаева Мария Ивановна",
@@ -10701,6 +10799,14 @@
       "name_latin": "Sugak Mikhail Ivanovich",
       "sanctioned": false,
       "degree": 1
+    },
+    {
+      "id": "sukhoverkhiy-vladimir-andreevich",
+      "kind": "person",
+      "label": "Суховерхий Владимир Андреевич",
+      "name_latin": null,
+      "sanctioned": false,
+      "degree": 2
     },
     {
       "id": "suvorova-elena-aleksandrovna",
@@ -12794,6 +12900,17 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
+    },
+    {
+      "source": "assotsiatsiya-vzaimopomoshch",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Legal vehicle of the «Дронница» слёт, an event ЦБСТ lists in its own calendar and where its director lectured; person...",
+      "source_id": "s0445",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-open"
     },
     {
       "source": "baklykov-kirill-viktorovich",
@@ -19275,6 +19392,39 @@
       "confidence": null
     },
     {
+      "source": "lyubimov-aleksandr-sergeevich",
+      "target": "assotsiatsiya-vzaimopomoshch",
+      "type": "directs",
+      "label": null,
+      "source_id": "s6788",
+      "as_of": "2021-03-26",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "lyubimov-aleksandr-sergeevich",
+      "target": "assotsiatsiya-vzaimopomoshch",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0445",
+      "as_of": "2025-04-14",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "lyubimov-aleksandr-sergeevich",
+      "target": "assotsiatsiya-vzaimopomoshch",
+      "type": "role",
+      "label": "Председатель",
+      "source_id": "s0445",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "lyubina-lyubov-mikhaylovna",
       "target": "ao-nii-vektor",
       "type": "role",
@@ -19434,6 +19584,72 @@
       "type": "role",
       "label": "Дилер (Москва, Мариуполь)",
       "source_id": "s1408",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "mikhelson-leonid-viktorovich",
+      "target": "ooo-levit",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "mikhelson-leonid-viktorovich",
+      "target": "ooo-levit",
+      "type": "role",
+      "label": "founder",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "mikhelson-leonid-viktorovich",
+      "target": "ooo-levit",
+      "type": "role",
+      "label": "Учредитель (78.29%)",
+      "source_id": "s6697",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "mikhelson-leonid-viktorovich",
+      "target": "ooo-nova",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "mikhelson-leonid-viktorovich",
+      "target": "ooo-nova",
+      "type": "role",
+      "label": "founder",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "mikhelson-leonid-viktorovich",
+      "target": "ooo-nova",
+      "type": "role",
+      "label": "Учредитель",
+      "source_id": "s6810",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -22542,6 +22758,17 @@
       "confidence": null
     },
     {
+      "source": "ooo-levit",
+      "target": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-mentastep",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
@@ -23695,6 +23922,17 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
+    },
+    {
+      "source": "ooo-pekhtra",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Special-prize winner in ЦБСТ's 2025 accelerator (not stated as a resident).",
+      "source_id": "s7606",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "press"
     },
     {
       "source": "ooo-pk-stalnoy-kupol",
@@ -26557,6 +26795,28 @@
       "confidence": null
     },
     {
+      "source": "shulikin-nikolay-konstantinovich",
+      "target": "ooo-levit",
+      "type": "directs",
+      "label": null,
+      "source_id": "s6697",
+      "as_of": "2006-05-23",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "shulikin-nikolay-konstantinovich",
+      "target": "ooo-levit",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0083",
+      "as_of": "2026-08-24",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
       "source": "shvetsov-aleksey-aleksandrovich",
       "target": "ooo-finkonsaltingk-fkk",
       "type": "directs",
@@ -26662,6 +26922,39 @@
       "label": "co-inventor (patent RU2858409C1)",
       "source_id": "s1048",
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "simanovskiy-leonid-yakovlevich",
+      "target": "ooo-levit",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "simanovskiy-leonid-yakovlevich",
+      "target": "ooo-levit",
+      "type": "role",
+      "label": "founder",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "simanovskiy-leonid-yakovlevich",
+      "target": "ooo-levit",
+      "type": "role",
+      "label": "Участник (21.7098%, номинал ₽25,698,196)",
+      "source_id": "s6697",
+      "as_of": "2016-07-21",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -28273,6 +28566,28 @@
       "confidence": null
     },
     {
+      "source": "stub::кайденко анна викторовна",
+      "target": "ooo-nova",
+      "type": "directs",
+      "label": null,
+      "source_id": "s6810",
+      "as_of": "2019-10-23",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "stub::кайденко анна викторовна",
+      "target": "ooo-nova",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0084",
+      "as_of": "2026-08-24",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
       "source": "stub::карамов эльдар рафикович",
       "target": "ooo-vostochnye-vorota-zabaykalsk-manchzhuriya",
       "type": "directs",
@@ -28955,6 +29270,28 @@
       "confidence": null
     },
     {
+      "source": "stub::стартап- студия университета лобачевского",
+      "target": "ooo-pekhtra",
+      "type": "founded",
+      "label": "100%",
+      "source_id": "s6720",
+      "as_of": "2024-12-10",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "stub::стартап-студия университета лобачевского",
+      "target": "ooo-pekhtra",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "stub::степаева мария ивановна",
       "target": "ooo-praym",
       "type": "directs",
@@ -29521,6 +29858,28 @@
       "type": "role",
       "label": "co-inventor (patent RU203165U1)",
       "source_id": "s0990",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "sukhoverkhiy-vladimir-andreevich",
+      "target": "ooo-pekhtra",
+      "type": "role",
+      "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "sukhoverkhiy-vladimir-andreevich",
+      "target": "ooo-pekhtra",
+      "type": "role",
+      "label": "Генеральный директор",
+      "source_id": "s7412",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -30976,6 +31335,13 @@
       ]
     },
     {
+      "id": "stub::кайденко анна викторовна",
+      "raw_name": "Кайденко Анна Викторовна",
+      "contexts": [
+        "director of ooo-nova"
+      ]
+    },
+    {
       "id": "stub::карамов эльдар рафикович",
       "raw_name": "Карамов Эльдар Рафикович",
       "contexts": [
@@ -31315,6 +31681,20 @@
       ]
     },
     {
+      "id": "stub::стартап- студия университета лобачевского",
+      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАРТАП- СТУДИЯ УНИВЕРСИТЕТА ЛОБАЧЕВСКОГО\"",
+      "contexts": [
+        "former founder of ooo-pekhtra"
+      ]
+    },
+    {
+      "id": "stub::стартап-студия университета лобачевского",
+      "raw_name": "ООО «Стартап-студия университета Лобачевского»",
+      "contexts": [
+        "founder of ooo-pekhtra"
+      ]
+    },
+    {
       "id": "stub::степаева мария ивановна",
       "raw_name": "Степаева Мария Ивановна",
       "contexts": [
@@ -31572,7 +31952,6 @@
     "ao-seym-agro",
     "ao-tsentr-telko",
     "aristarkhov-vladimir-vyacheslavovich",
-    "assotsiatsiya-vzaimopomoshch",
     "astakhov-sergey-petrovich",
     "atlivanchik-sergey-nikolaevich",
     "barilo-denis-aleksandrovich",
@@ -31674,11 +32053,9 @@
     "lobov-vadim-georgievich",
     "lunev-ivan-ivanovich",
     "lutsenko-sergey-aleksandrovich",
-    "lyubimov-aleksandr-sergeevich",
     "maksimov-yuriy-alekseevich",
     "medisova-tatyana-nikolaevna",
     "mikhaylova-irina-valerievna",
-    "mikhelson-leonid-viktorovich",
     "mikhelson-viktoriya-leonidovna",
     "nastenkov-vitaliy-gennadevich",
     "neznamov-aleksandr-vasilevich",
@@ -31704,14 +32081,11 @@
     "ooo-instekh",
     "ooo-intek-bespilotnye-sistemy",
     "ooo-krams",
-    "ooo-levit",
     "ooo-ml-konstrakshns",
     "ooo-mobil-grup",
-    "ooo-nova",
     "ooo-npk-geron",
     "ooo-npo-nebo",
     "ooo-otkrytoe-nebo-kaluga",
-    "ooo-pekhtra",
     "ooo-prommash",
     "ooo-radiofid-sistemy",
     "ooo-rokot-tekh",
@@ -31790,8 +32164,6 @@
     "roman-academy-chat-79168352900",
     "sevidov-vladimir-vitalevich",
     "shatskikh-aleksandr-vladimirovich",
-    "shulikin-nikolay-konstantinovich",
-    "simanovskiy-leonid-yakovlevich",
     "sinelshchikov-andrey-valentinovich",
     "skif-wozmezdiye",
     "skoryatin-georgiy-andreevich",
@@ -31823,7 +32195,6 @@
     "stub::инновационный технологический центр система-саров",
     "stub::интэк",
     "stub::информационные технологии",
-    "stub::кайденко анна викторовна",
     "stub::карцев максим владимирович",
     "stub::колосов артем иванович",
     "stub::костылин дмитрий евгеньевич",
@@ -31838,8 +32209,6 @@
     "stub::руднев артем николаевич",
     "stub::рябико ольга александровна",
     "stub::сапфир-7452",
-    "stub::стартап- студия университета лобачевского",
-    "stub::стартап-студия университета лобачевского",
     "stub::съедин михаил васильевич",
     "stub::тимофеев даниил андреевич",
     "stub::управляющая компания мой капитал",
@@ -31848,7 +32217,6 @@
     "stub::чапурин в.в",
     "stub::шаповалов сергей михайлович",
     "sukhonenkova-nadezhda-andreevna",
-    "sukhoverkhiy-vladimir-andreevich",
     "sulimskiy-evgeniy-sergeevich",
     "tarasenko-irina-anatolevna",
     "tg-arkhangel-spetsnaza",

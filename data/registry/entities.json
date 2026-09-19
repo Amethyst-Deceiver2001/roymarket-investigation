@@ -1034,8 +1034,22 @@
         "value": "Давыдов Виктор Ильич"
       }
     ],
-    "founders": [],
-    "founders_history": [],
+    "founders": [
+      {
+        "name": "ООО «ЛЕВИТ»",
+        "inn": "6330030244",
+        "share_percent": null,
+        "source_id": "s0298"
+      }
+    ],
+    "founders_history": [
+      {
+        "value": "ООО «ЛЕВИТ» (ИНН 6330030244, ОГРН 1066330007798)",
+        "as_of": "2024-03-18",
+        "source_id": "s0298",
+        "note": "FY2023 ГИР БО filing notes (compiled 18.03.2024), scanned page read by OCR: «Учредитель: Общество с ограниченной ответственностью «ЛЕВИТ» ... ИНН 6330030244». Corroborated by Ведомости 18.04.2023."
+      }
+    ],
     "charter_capital": null,
     "charter_capital_history": [],
     "address_history": [
@@ -1143,6 +1157,7 @@
       "role": "Co-founder of Наша Правда and source of ₽1.213bn of its first ₽1.773bn. Registered 03.11.2006; director Давыдов В.И. since 2008; address 2-й Спасоналивковский пер. 6. ₽25.1bn assets, zero revenue. Founded by ООО «Левит». Supervisory board chaired by Ilya Eliseev. Named by FBK and reflected in Western sanctions reasoning as a holder of Medvedev’s undisclosed assets."
     },
     "why": [
+      "2026-09-19: founders were empty although the record's own prose and the FY2023 БФО notes (OCR-read) name ООО «Левит» as founder; recorded so the Левит/Михельсон holding connects to the ЦБСТ chain through Наша Правда.",
       {
         "text": "2026-09-05: 5 filing-year(s) of targeted-funding figures recovered from БФО filings already on disk. They had parsed as empty because scripts/parse_bfo_financials.py read only the P&L sheet, which is blank on every non-profit filing — a parser gap, not a missing document.",
         "source_id": "s0296"
@@ -19438,7 +19453,12 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "Special-prize winner in ЦБСТ's 2025 accelerator (not stated as a resident).",
+      "confidence": "press",
+      "evidence": "Наша Правда channel msg 443, 04.06.2025, citing Коммерсантъ: «Центр беспилотных систем и технологий, учрежденный фондом «Наша Правда» и ПСБ, подвел итоги акселератора проектов специального и двойного назначения ... Социальные проекты компаний «Ментастеп» ... и «Пехтра», занимающейся разработкой периферийного устройства управления компьютером через мышечные сигналы ... получили специальный приз от фонда «Наша Правда»». The five winners who become residents are named separately and do not include Пехтра. The post gives no ИНН; the match to ИНН 5261138034 rests on the product description and the registry's earlier identification.",
+      "source_id": "s7606"
+    },
     "wb_overlap": "none_found",
     "products": [],
     "financials": [
@@ -19501,6 +19521,7 @@
     ],
     "tier_basis": "Sanctioned per OpenSanctions (ID-confirmed via exact ИНН match; regime/primary source URL not returned by the aggregator, so treat as PLAUSIBLE pending a primary-list read). Founded/100%-owned by «Стартап-студия университета Лобачевского», an R&D-incubator vehicle; ОКВЭД is applied natural/technical-science research. No named product on file — thin direct evidence beyond the sanctions match and its incubator lineage; flagged for a closer look.",
     "_corrected": [
+      "2026-09-19: cbst_tie added -- accelerator prize winner per Наша Правда's channel citing Коммерсантъ; press-tier because it is a prize, not residency, and the Коммерсантъ original was not retrieved.",
       "full EGRUL extract pulled directly 23.08.2026 (ul-1245200032406-20260823132846.pdf if applicable / actually 131828). ООО «Пехтра» is 100%-owned by ООО «Стартап-студия университета Лобачевского» (ИНН 5261135844) — Lobachevsky University's (Nizhny Novgorod) own startup incubator vehicle. A genuine university-technology-transfer link, distinct from the government/ЦБСТ-adjacent incubator pattern seen elsewhere in this registry (cf. Ушкуйник/Платформа НТИ) — worth tracking as a third institutional-sponsorship type if more university-owned entities turn up.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0746).",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5261138034). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
@@ -59727,7 +59748,12 @@
     "subsidiaries": [],
     "tier": "money-layer",
     "tier_basis": "Self-declared ₽309.87m (2024) in receipts, explicitly funds БПЛА/РЭБ procurement and «Дронница» — a real money-flow node, not incidental infrastructure. Reclassified from plumbing.",
-    "cbst_tie": null,
+    "cbst_tie": {
+      "claim": "Legal vehicle of the «Дронница» слёт, an event ЦБСТ lists in its own calendar and where its director lectured; personal tie to ЦБСТ through Любимов. No corporate or financial link found.",
+      "confidence": "t-open",
+      "evidence": "The association's own 2024 charitable-activity report (s0445, signed 14.04.2025) states it ran the «Ежегодный всероссийский слет инструкторов и операторов боевых БПЛА «Дронница»». ЦБСТ channel msg 1161 (31.08.2025) lists «Всероссийский Слёт операторов боевых квадрокоптеров «Дронница»» in its September calendar and msg 1180 (04.09.2025, archived s7607) announces «Лекция Гендиректора ЦБСТ Дмитрия Рубинштейна на «Дроннице 2025»». Msg 508 (03.03.2025) calls Александр Любимов, the association's chairman, «Наш коллега и друг». The association is not itself named in any ЦБСТ post.",
+      "source_id": "s0445"
+    },
     "wb_overlap": "not_checked",
     "products": [],
     "financials": [
@@ -59778,6 +59804,7 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: cbst_tie added from the association's own Минюст report plus ЦБСТ's channel; event and personal tie only, no ownership or funding link.",
       "Full text read of the organization's own 2024 «Отчет о благотворительной деятельности» filed with Минюст (Главное управление по СПб и Ленинградской области, signed 14.04.2025, pulled 23.08.2026). SELF-DECLARED FINDING: total receipts ₽309,867,111.76 (₽309.87m) for 2024. Expenditure lines explicitly list purchases including «БПЛА, средства радиоэлектронной борьбы, иные виды оборудования» (UAVs, EW equipment, other equipment), operator training explicitly framed as preparing specialists for reconnaissance/combat-support UAV operation, and book publishing on military tactics. The narrative section explicitly states the organization ran the «Ежегодный всероссийский слет инструкторов и операторов боевых БПЛА 'Дронница'» — this is the FIRST primary document confirming Ассоциация «Взаимопомощь» as Дронница's actual legal/financial vehicle, not just an operator name association. Governing-body roster names Любимов Александр Сергеевич (Председатель), Мартынова Майя Владимировна, and Любимов Сергей Александрович (shared surname/patronymic pattern with the chairman — possible family control, flagged not confirmed) — no DOB/personal ИНН given in this document (all fields '-'). Tier upgraded from plumbing to money-layer: this is a real, quantified money-flow node, not incidental infrastructure.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0737).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
