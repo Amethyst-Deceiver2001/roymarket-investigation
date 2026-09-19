@@ -5332,7 +5332,16 @@
             "source_id": "s7628"
           }
         ],
-        "sanctions": [],
+        "sanctions": [
+          {
+            "regime": [
+              "UA-NSDC"
+            ],
+            "date": null,
+            "source_id": "s7678",
+            "note": "This company is listed on its OpenSanctions entity page (ru-inn-…, page text captured 2026-09-19, matched on the ИНН). Listings shown: Ukraine NSDC State Register of Sanctions (one dataset); the page also lists it as a 100% owner of ООО «Аэро-Хит», «Аэро-Хит Сервис» and «Аэро-Хит Херсон», the ownership-or-control link OpenSanctions records. The dates on that page are OpenSanctions' first-seen dates, not designation dates, so the date is left empty and the regime and date still need confirming against the primary lists (OFAC, EU, UK, GUR, NSDC). Not screened against GUR or Aleph."
+          }
+        ],
         "why": [
           "2026-09-19: added from a full ЕГРЮЛ выписка (s7628) to resolve a graph stub, «УК КОМАКС» as founder of ООО «Аэро-Хит». Not yet screened against sanctions lists."
         ],
@@ -5595,7 +5604,17 @@
             "source_id": "s7626"
           }
         ],
-        "sanctions": [],
+        "sanctions": [
+          {
+            "regime": [
+              "US (OFAC SDN list)",
+              "UA-NSDC"
+            ],
+            "date": null,
+            "source_id": "s7675",
+            "note": "This company is listed on its OpenSanctions entity page (ru-inn-…, page text captured 2026-09-19, matched on the ИНН). Listings shown: US OFAC SDN list, Ukraine NSDC State Register of Sanctions; also Taiwan strategic high-tech commodities entity list and US SAM procurement exclusions (export-control and debarment lists, not sanctions). The dates on that page are OpenSanctions' first-seen dates, not designation dates, so the date is left empty and the regime and date still need confirming against the primary lists (OFAC, EU, UK, GUR, NSDC). Not screened against GUR or Aleph."
+          }
+        ],
         "why": [
           "2026-09-19: added from a full ЕГРЮЛ выписка (s7626) to resolve a graph stub, this company as founder of ООО «Центр беспилотных систем — Тула». The 55% holder ИНН 9714004945 matches ao-prominvest on file. Not yet screened against sanctions lists."
         ],
@@ -5804,6 +5823,243 @@
         "sanctions": [],
         "why": [
           "2026-09-19: added from a full ЕГРЮЛ выписка (s7632) to resolve a graph stub. Not yet screened against sanctions lists."
+        ]
+      },
+      {
+        "slug": "fond-sozidanie",
+        "name_ru": "Фонд поддержки социальных инициатив «Созидание»",
+        "inn": "5040181970",
+        "ogrn": "1225000127824",
+        "registered": "14.11.2022",
+        "address": "Московская обл., г. Раменское, ул. Чугунова, д. 1Б, офис 203",
+        "director": "Стогов Олег Николаевич",
+        "tier": "plumbing",
+        "tier_basis": "Sole owner of ООО «Инвестпроектгрупп», which holds 25% of ООО «ЦКБР». The ЕГРЮЛ выписка lists no founders for the fund itself.",
+        "_verified": true,
+        "name_history": [
+          {
+            "value": "ФОНД ПОДДЕРЖКИ СОЦИАЛЬНЫХ ИНИЦИАТИВ \"СОЗИДАНИЕ\"",
+            "as_of": "2026-09-19",
+            "source_id": "s7635",
+            "note": "Full official name per the ЕГРЮЛ выписка, printed in capitals with straight quotes; case and quotes normalised here."
+          }
+        ],
+        "founders": [],
+        "sanctions": [],
+        "why": [
+          "2026-09-19: added from a full ЕГРЮЛ выписка (s7635) as the 100% owner of ООО «Инвестпроектгрупп» (s7622). Its OpenSanctions entity page (s7670) carries no sanctions topic. Not yet screened against GUR or Aleph."
+        ],
+        "director_history": [
+          {
+            "value": "Стогов Олег Николаевич",
+            "as_of": "2026-07-31",
+            "source_id": "s7635",
+            "note": "Директор (ЕГРЮЛ выписка pulled 19.09.2026; date is the record's own ГРН date)"
+          }
+        ]
+      },
+      {
+        "slug": "ao-kompaniya-molot",
+        "name_ru": "АО «Компания Молот»",
+        "inn": "9710134767",
+        "ogrn": "1247700465231",
+        "registered": "01.07.2024",
+        "address": "125047, г. Москва, 2-я Тверская-Ямская ул., д. 18, помещ. 7/2",
+        "director": "Головин Денис Владимирович",
+        "tier": "plumbing",
+        "tier_basis": "Holds 100% of ООО «Производство обучающих систем и технологий» since 03.09.2026 (s7630). Capital ₽15 000; a JSC extract lists no shareholders.",
+        "_verified": true,
+        "name_history": [
+          {
+            "value": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"КОМПАНИЯ МОЛОТ\"",
+            "as_of": "2026-09-19",
+            "source_id": "s7639",
+            "note": "Full official name per the ЕГРЮЛ выписка, printed in capitals with straight quotes; case and quotes normalised here."
+          }
+        ],
+        "founders": [],
+        "sanctions": [],
+        "why": [
+          "2026-09-19: added from a full ЕГРЮЛ выписка (s7639). No OpenSanctions entity page exists for this ИНН (404 on 2026-09-19). Not yet screened against GUR or Aleph."
+        ],
+        "director_history": [
+          {
+            "value": "Головин Денис Владимирович",
+            "as_of": "2026-08-18",
+            "source_id": "s7639",
+            "note": "Генеральный директор (ЕГРЮЛ выписка pulled 19.09.2026; date is the record's own ГРН date)"
+          }
+        ]
+      },
+      {
+        "slug": "fond-infrastrukturnykh-i-obrazovatelnykh-programm",
+        "name_ru": "Фонд инфраструктурных и образовательных программ",
+        "inn": "7728116275",
+        "ogrn": "1107799030118",
+        "registered": "22.10.2010",
+        "address": "117292, г. Москва, пр-т 60-летия Октября, д. 10А",
+        "director": null,
+        "tier": "plumbing",
+        "tier_basis": "Holds 45% of ООО «Стартап-студия университета Лобачевского» (s7623). The ЕГРЮЛ выписка hides its director (access-restricted entry).",
+        "_verified": true,
+        "name_history": [
+          {
+            "value": "ФОНД ИНФРАСТРУКТУРНЫХ И ОБРАЗОВАТЕЛЬНЫХ ПРОГРАММ",
+            "as_of": "2026-09-19",
+            "source_id": "s7638",
+            "note": "Full official name per the ЕГРЮЛ выписка, printed in capitals with straight quotes; case and quotes normalised here."
+          }
+        ],
+        "founders": [],
+        "sanctions": [],
+        "why": [
+          "2026-09-19: added from a full ЕГРЮЛ выписка (s7638). The director field is access-restricted in the extract, so none is recorded. Its OpenSanctions entity page (s7680) carries no sanctions topic. Not yet screened against GUR or Aleph."
+        ]
+      },
+      {
+        "slug": "ooo-gruppa-promavto",
+        "name_ru": "ООО «Группа ПРОМАВТО»",
+        "inn": "5263093100",
+        "ogrn": "1125263004162",
+        "registered": "03.07.2012",
+        "address": "603107, Нижегородская обл., г. Нижний Новгород, ул. Заовражная, д. 7А",
+        "director": "Амбаров Михаил Андреевич",
+        "tier": "plumbing",
+        "tier_basis": "Holds 27% of ООО «Стартап-студия университета Лобачевского» (s7623). Capital ₽4 000 000, held by four individuals; sanctioned per its OpenSanctions entity page.",
+        "_verified": true,
+        "name_history": [
+          {
+            "value": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРУППА ПРОМАВТО\"",
+            "as_of": "2026-09-19",
+            "source_id": "s7636",
+            "note": "Full official name per the ЕГРЮЛ выписка, printed in capitals with straight quotes; case and quotes normalised here."
+          }
+        ],
+        "founders": [
+          {
+            "name": "Амбаров Андрей Евгеньевич",
+            "inn_personal": "526014737698",
+            "nominal_value": 1060000,
+            "share_percent": 26.5,
+            "as_of": "2023-10-03",
+            "source_id": "s7636"
+          },
+          {
+            "name": "Трушков Александр Сергеевич",
+            "inn_personal": "523401362440",
+            "nominal_value": 980000,
+            "share_percent": 24.5,
+            "as_of": "2023-10-03",
+            "source_id": "s7636"
+          },
+          {
+            "name": "Амбаров Петр Андреевич",
+            "inn_personal": "526004765103",
+            "nominal_value": 980000,
+            "share_percent": 24.5,
+            "as_of": "2023-10-03",
+            "source_id": "s7636"
+          },
+          {
+            "name": "Амбаров Михаил Андреевич",
+            "inn_personal": "526097794778",
+            "nominal_value": 980000,
+            "share_percent": 24.5,
+            "as_of": "2023-10-03",
+            "source_id": "s7636"
+          }
+        ],
+        "sanctions": [
+          {
+            "regime": [
+              "US (OFAC SDN list)",
+              "EU (Financial Sanctions Files, Official Journal)",
+              "France (national asset freezing)",
+              "Belgium",
+              "Monaco"
+            ],
+            "date": null,
+            "source_id": "s7672",
+            "note": "This company is listed on its OpenSanctions entity page (ru-inn-…, page text captured 2026-09-19, matched on the ИНН). Listings shown: US OFAC SDN list, EU Financial Sanctions Files and Official Journal sanctioned entities, French national asset freezing, Belgian financial sanctions, Monaco freezing list; also Taiwan strategic-commodities list and US SAM exclusions (not sanctions). The dates on that page are OpenSanctions' first-seen dates, not designation dates, so the date is left empty and the regime and date still need confirming against the primary lists (OFAC, EU, UK, GUR, NSDC). Not screened against GUR or Aleph."
+          }
+        ],
+        "why": [
+          "2026-09-19: added from a full ЕГРЮЛ выписка (s7636) as a 27% holder of the Lobachevsky startup studio. Its sanctions listing is from the OpenSanctions entity page (s7672) and still needs confirming against the primary lists. Not yet screened against GUR or Aleph."
+        ],
+        "director_history": [
+          {
+            "value": "Амбаров Михаил Андреевич",
+            "as_of": "2020-12-25",
+            "source_id": "s7636",
+            "note": "Генеральный директор (ЕГРЮЛ выписка pulled 19.09.2026; date is the record's own ГРН date)"
+          }
+        ],
+        "founders_history": [
+          {
+            "value": "Амбаров Андрей Евгеньевич — 26.5% (₽1 060 000) / Трушков Александр Сергеевич — 24.5% (₽980 000) / Амбаров Петр Андреевич — 24.5% (₽980 000) / Амбаров Михаил Андреевич — 24.5% (₽980 000)",
+            "as_of": "2026-09-19",
+            "source_id": "s7636",
+            "note": "ЕГРЮЛ выписка pulled 19.09.2026, single-ИНН lookup; per-holder dates are in the выписка."
+          }
+        ]
+      },
+      {
+        "slug": "ao-kbp-shipunova",
+        "name_ru": "АО «Конструкторское бюро приборостроения им. академика А. Г. Шипунова»",
+        "inn": "7105514574",
+        "ogrn": "1117154036911",
+        "registered": "30.12.2011",
+        "address": "300004, Тульская обл., г. Тула, ул. Щегловская засека, д. 59",
+        "director": null,
+        "tier": "plumbing",
+        "tier_basis": "Holds 45% of ООО «НПО ПКРВ» (s7626), the co-founder of ООО «Центр беспилотных систем — Тула». Sole shareholder and the person entitled to act for it is АО «НПО «Высокоточные комплексы»; sanctioned per its OpenSanctions entity page.",
+        "_verified": true,
+        "name_history": [
+          {
+            "value": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"КОНСТРУКТОРСКОЕ БЮРО ПРИБОРОСТРОЕНИЯ ИМ. АКАДЕМИКА А. Г. ШИПУНОВА\"",
+            "as_of": "2026-09-19",
+            "source_id": "s7637",
+            "note": "Full official name per the ЕГРЮЛ выписка, printed in capitals with straight quotes; case and quotes normalised here."
+          }
+        ],
+        "founders": [
+          {
+            "name": "АО «НПО «Высокоточные комплексы»",
+            "inn": "7704721192",
+            "ogrn": "1097746068012",
+            "nominal_value": 10814109400,
+            "share_percent": 100.0,
+            "as_of": "2021-05-31",
+            "source_id": "s7637"
+          }
+        ],
+        "sanctions": [
+          {
+            "regime": [
+              "US (OFAC SDN list)",
+              "EU (Financial Sanctions Files, Official Journal)",
+              "France (national asset freezing)",
+              "Belgium",
+              "Switzerland (SECO)",
+              "Canada (Special Economic Measures Act)",
+              "UA-NSDC",
+              "Monaco"
+            ],
+            "date": null,
+            "source_id": "s7676",
+            "note": "This company is listed on its OpenSanctions entity page (ru-inn-…, page text captured 2026-09-19, matched on the ИНН). Listings shown: US OFAC SDN list, EU Financial Sanctions Files and Official Journal, French asset freezing, Belgian sanctions, Swiss SECO, Canadian consolidated autonomous sanctions, Ukraine NSDC, Monaco freezing list; also US SAM exclusions, export-control lists and Japan's End User List (not sanctions). The dates on that page are OpenSanctions' first-seen dates, not designation dates, so the date is left empty and the regime and date still need confirming against the primary lists (OFAC, EU, UK, GUR, NSDC). Not screened against GUR or Aleph."
+          }
+        ],
+        "why": [
+          "2026-09-19: added from a full ЕГРЮЛ выписка (s7637). The extract names АО «НПО «Высокоточные комплексы» as both sole shareholder and the entity acting on its behalf; no individual director is given, so none is recorded. Its sanctions listing is from the OpenSanctions entity page (s7676) and still needs confirming against the primary lists. Not yet screened against GUR or Aleph. The holder ИНН 7704721192 is not itself on file."
+        ],
+        "founders_history": [
+          {
+            "value": "АО «НПО «Высокоточные комплексы» (ИНН 7704721192, ОГРН 1097746068012) — 100% (₽10 814 109 400), the sole shareholder",
+            "as_of": "2026-09-19",
+            "source_id": "s7637",
+            "note": "ЕГРЮЛ выписка pulled 19.09.2026, single-ИНН lookup; per-holder dates are in the выписка."
+          }
         ]
       }
   ],

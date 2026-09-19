@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1092,
-  "edge_count": 1839,
-  "unresolved_count": 102,
+  "node_count": 1099,
+  "edge_count": 1847,
+  "unresolved_count": 104,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -310,6 +310,18 @@
       "degree": 25
     },
     {
+      "id": "ao-kbp-shipunova",
+      "kind": "entity",
+      "label": "АО «Конструкторское бюро приборостроения им. академика А. Г. Шипунова»",
+      "name_latin": null,
+      "inn": "7105514574",
+      "tier": "plumbing",
+      "sanctioned": true,
+      "legal_form": null,
+      "variant": null,
+      "degree": 2
+    },
+    {
       "id": "ao-khk-gumich",
       "kind": "entity",
       "label": "АО «ХК Гумич»",
@@ -318,6 +330,18 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "АО",
+      "variant": null,
+      "degree": 2
+    },
+    {
+      "id": "ao-kompaniya-molot",
+      "kind": "entity",
+      "label": "АО «Компания Молот»",
+      "name_latin": null,
+      "inn": "9710134767",
+      "tier": "plumbing",
+      "sanctioned": false,
+      "legal_form": null,
       "variant": null,
       "degree": 2
     },
@@ -1592,6 +1616,18 @@
       "degree": 7
     },
     {
+      "id": "fond-infrastrukturnykh-i-obrazovatelnykh-programm",
+      "kind": "entity",
+      "label": "Фонд инфраструктурных и образовательных программ",
+      "name_latin": null,
+      "inn": "7728116275",
+      "tier": "plumbing",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 1
+    },
+    {
       "id": "fond-moskovskiy-innovatsionnyy-klaster",
       "kind": "entity",
       "label": "Фонд «Московский инновационный кластер»",
@@ -1645,6 +1681,18 @@
       "label": "Фонд развития промышленности Тульской области",
       "name_latin": null,
       "inn": "7107116177",
+      "tier": "plumbing",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 2
+    },
+    {
+      "id": "fond-sozidanie",
+      "kind": "entity",
+      "label": "Фонд поддержки социальных инициатив «Созидание»",
+      "name_latin": null,
+      "inn": "5040181970",
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
@@ -3088,6 +3136,18 @@
       "degree": 6
     },
     {
+      "id": "ooo-gruppa-promavto",
+      "kind": "entity",
+      "label": "ООО «Группа ПРОМАВТО»",
+      "name_latin": null,
+      "inn": "5263093100",
+      "tier": "plumbing",
+      "sanctioned": true,
+      "legal_form": null,
+      "variant": null,
+      "degree": 6
+    },
+    {
       "id": "ooo-ik-aviaok",
       "kind": "entity",
       "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ИНЖИНИРИНГОВАЯ КОМПАНИЯ \"АВИАОК\"",
@@ -3382,7 +3442,7 @@
       "name_latin": null,
       "inn": "7105509736",
       "tier": "plumbing",
-      "sanctioned": false,
+      "sanctioned": true,
       "legal_form": null,
       "variant": null,
       "degree": 4
@@ -3850,7 +3910,7 @@
       "name_latin": null,
       "inn": "7704790277",
       "tier": "plumbing",
-      "sanctioned": false,
+      "sanctioned": true,
       "legal_form": null,
       "variant": null,
       "degree": 6
@@ -10289,21 +10349,9 @@
       "degree": 1
     },
     {
-      "id": "stub::inn-5040181970",
-      "kind": "unresolved",
-      "label": "Фонд поддержки социальных инициатив «Созидание»",
-      "degree": 1
-    },
-    {
       "id": "stub::inn-5262004442",
       "kind": "unresolved",
       "label": "ФГАОУ ВО «Национальный исследовательский Нижегородский государственный университет им. Н.И. Лобачевского»",
-      "degree": 1
-    },
-    {
-      "id": "stub::inn-5263093100",
-      "kind": "unresolved",
-      "label": "ООО «Группа ПРОМАВТО»",
       "degree": 1
     },
     {
@@ -10319,15 +10367,15 @@
       "degree": 1
     },
     {
-      "id": "stub::inn-7105514574",
-      "kind": "unresolved",
-      "label": "АО «Конструкторское бюро приборостроения им. академика А. Г. Шипунова»",
-      "degree": 1
-    },
-    {
       "id": "stub::inn-7702361427",
       "kind": "unresolved",
       "label": "Министерство транспорта Российской Федерации",
+      "degree": 1
+    },
+    {
+      "id": "stub::inn-7704721192",
+      "kind": "unresolved",
+      "label": "АО «НПО «Высокоточные комплексы»",
       "degree": 1
     },
     {
@@ -10340,18 +10388,6 @@
       "id": "stub::inn-7710723134",
       "kind": "unresolved",
       "label": "Федеральное агентство по управлению государственным имуществом",
-      "degree": 1
-    },
-    {
-      "id": "stub::inn-7728116275",
-      "kind": "unresolved",
-      "label": "Фонд инфраструктурных и образовательных программ",
-      "degree": 1
-    },
-    {
-      "id": "stub::inn-9710134767",
-      "kind": "unresolved",
-      "label": "АО «Компания Молот»",
       "degree": 1
     },
     {
@@ -10388,6 +10424,24 @@
       "id": "stub::александр паничев",
       "kind": "unresolved",
       "label": "Александр Паничев",
+      "degree": 1
+    },
+    {
+      "id": "stub::амбаров андрей евгеньевич",
+      "kind": "unresolved",
+      "label": "Амбаров Андрей Евгеньевич",
+      "degree": 1
+    },
+    {
+      "id": "stub::амбаров михаил андреевич",
+      "kind": "unresolved",
+      "label": "Амбаров Михаил Андреевич",
+      "degree": 2
+    },
+    {
+      "id": "stub::амбаров петр андреевич",
+      "kind": "unresolved",
+      "label": "Амбаров Петр Андреевич",
       "degree": 1
     },
     {
@@ -10502,6 +10556,12 @@
       "id": "stub::гоголинский кирилл валерьевич",
       "kind": "unresolved",
       "label": "Гоголинский Кирилл Валерьевич",
+      "degree": 1
+    },
+    {
+      "id": "stub::головин денис владимирович",
+      "kind": "unresolved",
+      "label": "Головин Денис Владимирович",
       "degree": 1
     },
     {
@@ -10757,6 +10817,12 @@
       "degree": 2
     },
     {
+      "id": "stub::стогов олег николаевич",
+      "kind": "unresolved",
+      "label": "Стогов Олег Николаевич",
+      "degree": 1
+    },
+    {
       "id": "stub::стратолинк",
       "kind": "unresolved",
       "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СТРАТОЛИНК\"",
@@ -10779,6 +10845,12 @@
       "kind": "unresolved",
       "label": "Тращёнок Людмила Ефимовна",
       "degree": 2
+    },
+    {
+      "id": "stub::трушков александр сергеевич",
+      "kind": "unresolved",
+      "label": "Трушков Александр Сергеевич",
+      "degree": 1
     },
     {
       "id": "stub::туляков александр владимирович",
@@ -11905,6 +11977,28 @@
       "type": "produces",
       "label": null,
       "source_id": "s5391",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-kbp-shipunova",
+      "target": "ooo-npo-programmnye-kompleksy-realnogo-vremeni",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-kompaniya-molot",
+      "target": "ooo-proizvodstvo-obuchayushchikh-sistem-i-tekhnologiy",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -17598,6 +17692,17 @@
       "confidence": null
     },
     {
+      "source": "fond-infrastrukturnykh-i-obrazovatelnykh-programm",
+      "target": "ooo-startap-studiya-universiteta-lobachevskogo",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "fond-moskovskiy-innovatsionnyy-klaster",
       "target": "ooo-tsugam",
       "type": "founded",
@@ -17666,6 +17771,17 @@
     {
       "source": "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
       "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "fond-sozidanie",
+      "target": "ooo-investproektgrupp",
       "type": "founded",
       "label": null,
       "source_id": null,
@@ -23169,6 +23285,17 @@
       "type": "produces",
       "label": null,
       "source_id": "s1393",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-gruppa-promavto",
+      "target": "ooo-startap-studiya-universiteta-lobachevskogo",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -28818,29 +28945,7 @@
       "confidence": null
     },
     {
-      "source": "stub::inn-5040181970",
-      "target": "ooo-investproektgrupp",
-      "type": "founded",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
       "source": "stub::inn-5262004442",
-      "target": "ooo-startap-studiya-universiteta-lobachevskogo",
-      "type": "founded",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "stub::inn-5263093100",
       "target": "ooo-startap-studiya-universiteta-lobachevskogo",
       "type": "founded",
       "label": null,
@@ -28873,8 +28978,8 @@
       "confidence": null
     },
     {
-      "source": "stub::inn-7105514574",
-      "target": "ooo-npo-programmnye-kompleksy-realnogo-vremeni",
+      "source": "stub::inn-7702361427",
+      "target": "fgup-zashchitainfotrans",
       "type": "founded",
       "label": null,
       "source_id": null,
@@ -28884,8 +28989,8 @@
       "confidence": null
     },
     {
-      "source": "stub::inn-7702361427",
-      "target": "fgup-zashchitainfotrans",
+      "source": "stub::inn-7704721192",
+      "target": "ao-kbp-shipunova",
       "type": "founded",
       "label": null,
       "source_id": null,
@@ -28919,28 +29024,6 @@
     {
       "source": "stub::inn-7710723134",
       "target": "fgup-zashchitainfotrans",
-      "type": "founded",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "stub::inn-7728116275",
-      "target": "ooo-startap-studiya-universiteta-lobachevskogo",
-      "type": "founded",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "stub::inn-9710134767",
-      "target": "ooo-proizvodstvo-obuchayushchikh-sistem-i-tekhnologiy",
       "type": "founded",
       "label": null,
       "source_id": null,
@@ -29030,6 +29113,50 @@
       "source": "stub::александр паничев",
       "target": "kulibin-klub",
       "type": "directs",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::амбаров андрей евгеньевич",
+      "target": "ooo-gruppa-promavto",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::амбаров михаил андреевич",
+      "target": "ooo-gruppa-promavto",
+      "type": "directs",
+      "label": null,
+      "source_id": "s7636",
+      "as_of": "2020-12-25",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "stub::амбаров михаил андреевич",
+      "target": "ooo-gruppa-promavto",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::амбаров петр андреевич",
+      "target": "ooo-gruppa-promavto",
+      "type": "founded",
       "label": null,
       "source_id": null,
       "as_of": null,
@@ -29310,6 +29437,17 @@
       "as_of": "2017-10-02",
       "weight": 1.0,
       "temporal_status": "historical",
+      "confidence": null
+    },
+    {
+      "source": "stub::головин денис владимирович",
+      "target": "ao-kompaniya-molot",
+      "type": "directs",
+      "label": null,
+      "source_id": "s7639",
+      "as_of": "2026-08-18",
+      "weight": 1.0,
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -29995,6 +30133,17 @@
       "confidence": null
     },
     {
+      "source": "stub::стогов олег николаевич",
+      "target": "fond-sozidanie",
+      "type": "directs",
+      "label": null,
+      "source_id": "s7635",
+      "as_of": "2026-07-31",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
       "source": "stub::стратолинк",
       "target": "ooo-aeroplatformy",
       "type": "founded",
@@ -30063,6 +30212,17 @@
     {
       "source": "stub::тращенок людмила ефимовна",
       "target": "gk-logos",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::трушков александр сергеевич",
+      "target": "ooo-gruppa-promavto",
       "type": "founded",
       "label": null,
       "source_id": null,
@@ -31511,22 +31671,8 @@
       ]
     },
     {
-      "id": "stub::inn-5040181970",
-      "raw_name": "Фонд поддержки социальных инициатив «Созидание»",
-      "contexts": [
-        "founder of ooo-investproektgrupp"
-      ]
-    },
-    {
       "id": "stub::inn-5262004442",
       "raw_name": "ФГАОУ ВО «Национальный исследовательский Нижегородский государственный университет им. Н.И. Лобачевского»",
-      "contexts": [
-        "founder of ooo-startap-studiya-universiteta-lobachevskogo"
-      ]
-    },
-    {
-      "id": "stub::inn-5263093100",
-      "raw_name": "ООО «Группа ПРОМАВТО»",
       "contexts": [
         "founder of ooo-startap-studiya-universiteta-lobachevskogo"
       ]
@@ -31546,17 +31692,17 @@
       ]
     },
     {
-      "id": "stub::inn-7105514574",
-      "raw_name": "АО «Конструкторское бюро приборостроения им. академика А. Г. Шипунова»",
-      "contexts": [
-        "founder of ooo-npo-programmnye-kompleksy-realnogo-vremeni"
-      ]
-    },
-    {
       "id": "stub::inn-7702361427",
       "raw_name": "Министерство транспорта Российской Федерации",
       "contexts": [
         "founder of fgup-zashchitainfotrans"
+      ]
+    },
+    {
+      "id": "stub::inn-7704721192",
+      "raw_name": "АО «НПО «Высокоточные комплексы»",
+      "contexts": [
+        "founder of ao-kbp-shipunova"
       ]
     },
     {
@@ -31572,20 +31718,6 @@
       "raw_name": "Федеральное агентство по управлению государственным имуществом",
       "contexts": [
         "founder of fgup-zashchitainfotrans"
-      ]
-    },
-    {
-      "id": "stub::inn-7728116275",
-      "raw_name": "Фонд инфраструктурных и образовательных программ",
-      "contexts": [
-        "founder of ooo-startap-studiya-universiteta-lobachevskogo"
-      ]
-    },
-    {
-      "id": "stub::inn-9710134767",
-      "raw_name": "АО «Компания Молот»",
-      "contexts": [
-        "founder of ooo-proizvodstvo-obuchayushchikh-sistem-i-tekhnologiy"
       ]
     },
     {
@@ -31629,6 +31761,28 @@
       "raw_name": "Александр Паничев",
       "contexts": [
         "director of kulibin-klub"
+      ]
+    },
+    {
+      "id": "stub::амбаров андрей евгеньевич",
+      "raw_name": "Амбаров Андрей Евгеньевич",
+      "contexts": [
+        "founder of ooo-gruppa-promavto"
+      ]
+    },
+    {
+      "id": "stub::амбаров михаил андреевич",
+      "raw_name": "Амбаров Михаил Андреевич",
+      "contexts": [
+        "founder of ooo-gruppa-promavto",
+        "director of ooo-gruppa-promavto"
+      ]
+    },
+    {
+      "id": "stub::амбаров петр андреевич",
+      "raw_name": "Амбаров Петр Андреевич",
+      "contexts": [
+        "founder of ooo-gruppa-promavto"
       ]
     },
     {
@@ -31766,6 +31920,13 @@
       "raw_name": "Гоголинский Кирилл Валерьевич",
       "contexts": [
         "director of npp-radar-mms"
+      ]
+    },
+    {
+      "id": "stub::головин денис владимирович",
+      "raw_name": "Головин Денис Владимирович",
+      "contexts": [
+        "director of ao-kompaniya-molot"
       ]
     },
     {
@@ -32075,6 +32236,13 @@
       ]
     },
     {
+      "id": "stub::стогов олег николаевич",
+      "raw_name": "Стогов Олег Николаевич",
+      "contexts": [
+        "director of fond-sozidanie"
+      ]
+    },
+    {
       "id": "stub::стратолинк",
       "raw_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СТРАТОЛИНК\"",
       "contexts": [
@@ -32102,6 +32270,13 @@
       "contexts": [
         "founder of gk-logos",
         "director of gk-logos"
+      ]
+    },
+    {
+      "id": "stub::трушков александр сергеевич",
+      "raw_name": "Трушков Александр Сергеевич",
+      "contexts": [
+        "founder of ooo-gruppa-promavto"
       ]
     },
     {
