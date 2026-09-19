@@ -166,6 +166,12 @@ def validate_graph(
         p["slug"] for p in people
         if isinstance(p, dict) and p.get("slug") and not p.get("_merged_into")
     }
+    # graph_tier == "reference" people (relatives, staff, signatories) are kept on
+    # file but may be absent from the graph, so a missing node is not an error.
+    reference_people = {
+        p["slug"] for p in people
+        if isinstance(p, dict) and p.get("slug") and p.get("graph_tier") == "reference"
+    }
     tombstone_entities = {
         e["slug"] for e in entities
         if isinstance(e, dict) and e.get("slug") and e.get("_merged_into")
@@ -252,7 +258,7 @@ def validate_graph(
     for tombstone in sorted(tombstone_entities | tombstone_people):
         if tombstone in node_by_id:
             _error(errors, f"tombstoned registry node {tombstone!r} is included")
-    for missing in sorted((live_entities | live_people) - set(node_by_id)):
+    for missing in sorted((live_entities | (live_people - reference_people)) - set(node_by_id)):
         _error(errors, f"live registry node {missing!r} is missing")
 
     observed_degree = Counter()

@@ -1,8 +1,8 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1436,
-  "edge_count": 2149,
+  "node_count": 1396,
+  "edge_count": 2109,
   "unresolved_count": 182,
   "nodes": [
     {
@@ -26,14 +26,6 @@
       "kind": "person",
       "label": "Агиевич Сергей Николаевич",
       "name_latin": "Agievich Sergey Nikolaevich",
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "akhezin-a-n",
-      "kind": "person",
-      "label": "akhezin-a-n",
-      "name_latin": "Akhezin A.N.",
       "sanctioned": false,
       "degree": 1
     },
@@ -607,7 +599,7 @@
       "sanctioned": true,
       "legal_form": "АО",
       "variant": "offensive",
-      "degree": 27
+      "degree": 23
     },
     {
       "id": "ao-tekhnodinamika",
@@ -684,14 +676,6 @@
       "name_latin": "Gennadiy Evgenevich Arkhangelskiy",
       "sanctioned": false,
       "degree": 5
-    },
-    {
-      "id": "arkhangelskiy-gennadiy-weapons-engineer",
-      "kind": "person",
-      "label": "Архангельский Геннадий (patronymic unconfirmed)",
-      "name_latin": "Gennadiy Arkhangelskiy",
-      "sanctioned": false,
-      "degree": 1
     },
     {
       "id": "artem-dark-gaa",
@@ -891,7 +875,7 @@
       "label": "Белоглазова Людмила Александровна",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 3
+      "degree": 1
     },
     {
       "id": "belov-evgeniy-sergeevich",
@@ -1225,7 +1209,7 @@
       "id": "customer::главное-управление-мчс-россии-по-курской-области",
       "kind": "government_customer",
       "label": "ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ ПО КУРСКОЙ ОБЛАСТИ (ИНН 4632047480)",
-      "degree": 4
+      "degree": 2
     },
     {
       "id": "customer::гоку-управление-защиты-населения-от-чс-и-по-обеспечению-пожарной-безопасности-новгородской-области",
@@ -1609,7 +1593,7 @@
       "id": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
       "kind": "government_customer",
       "label": "ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz)",
-      "degree": 10
+      "degree": 2
     },
     {
       "id": "customer::федеральное-бюджетное-учреждение-государственный-региональный-центр-стандартизации-метрологии-и-испытаний-в-нижегородской-области",
@@ -1753,14 +1737,6 @@
       "id": "customer::фскн-россии",
       "kind": "government_customer",
       "label": "ФСКН России (Федеральная служба РФ по контролю за оборотом наркотиков, dissolved/merged into МВД 2016)",
-      "degree": 1
-    },
-    {
-      "id": "danilin-viktor-sergeevich",
-      "kind": "person",
-      "label": "Данилин Виктор Сергеевич",
-      "name_latin": null,
-      "sanctioned": false,
       "degree": 1
     },
     {
@@ -1937,7 +1913,7 @@
       "label": "Федоров Павел Романович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 1
     },
     {
       "id": "fedorov-pavel-vyacheslavovich",
@@ -1954,14 +1930,6 @@
       "name_latin": "Fedorov Sergey Gennadevich",
       "sanctioned": false,
       "degree": 2
-    },
-    {
-      "id": "fedorova-polina-gennadevna",
-      "kind": "person",
-      "label": "Федорова Полина Геннадьевна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
     },
     {
       "id": "fedukovich-kirill-olegovich",
@@ -2140,14 +2108,6 @@
       "degree": 1
     },
     {
-      "id": "ganysh-v-p",
-      "kind": "person",
-      "label": "ganysh-v-p",
-      "name_latin": "Ganysh V.P.",
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
       "id": "garkusha-vladimir-vladimirovich",
       "kind": "person",
       "label": "Гарькуша Владимир Владимирович",
@@ -2260,14 +2220,6 @@
       "degree": 3
     },
     {
-      "id": "grebenkova-k-yu",
-      "kind": "person",
-      "label": "grebenkova-k-yu",
-      "name_latin": "Grebenkova K.Yu.",
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
       "id": "grigorev-dmitriy-vasilevich",
       "kind": "person",
       "label": "Григорьев Дмитрий Васильевич",
@@ -2280,14 +2232,6 @@
       "kind": "person",
       "label": "Григорьев Валерий Владимирович",
       "name_latin": "Grigorev Valeriy Vladimirovich",
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "grigoryan-e-a",
-      "kind": "person",
-      "label": "grigoryan-e-a",
-      "name_latin": "Grigoryan E.A.",
       "sanctioned": false,
       "degree": 1
     },
@@ -2553,14 +2497,6 @@
       "label": "Кирилл Лысогорский",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 1
-    },
-    {
-      "id": "kirtok-aleksandr-sergeevich",
-      "kind": "person",
-      "label": "Кирток Александр Сергеевич",
-      "name_latin": null,
-      "sanctioned": false,
       "degree": 1
     },
     {
@@ -2836,14 +2772,6 @@
       "degree": 5
     },
     {
-      "id": "kulagin-s-a",
-      "kind": "person",
-      "label": "kulagin-s-a",
-      "name_latin": "Kulagin S.A.",
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
       "id": "kulemin-igor-aleksandrovich",
       "kind": "person",
       "label": "Кулемин Игорь Александрович",
@@ -2902,14 +2830,6 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 2
-    },
-    {
-      "id": "kuznetsov-v-s-fgku-lider",
-      "kind": "person",
-      "label": "kuznetsov-v-s-fgku-lider",
-      "name_latin": "Kuznetsov V.S.",
-      "sanctioned": false,
-      "degree": 1
     },
     {
       "id": "kuzovlev-andrey-anatolevich",
@@ -3128,22 +3048,6 @@
       "degree": 0
     },
     {
-      "id": "meshkova-kristina-andreevna",
-      "kind": "person",
-      "label": "Мешкова Кристина Андреевна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "meshkova-nadezhda-filippovna",
-      "kind": "person",
-      "label": "Мешкова Надежда Филипповна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
       "id": "mikhail-kuznetsov",
       "kind": "person",
       "label": "Михаил Кузнецов",
@@ -3237,31 +3141,7 @@
       "label": "Незнамов Александр Васильевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 7
-    },
-    {
-      "id": "neznamov-vasiliy-aleksandrovich",
-      "kind": "person",
-      "label": "Незнамов Василий Александрович",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "neznamova-anastasiya-vasilevna",
-      "kind": "person",
-      "label": "Незнамова Анастасия Васильевна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "neznamova-lyudmila-viktorovna",
-      "kind": "person",
-      "label": "Незнамова Людмила Викторовна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
+      "degree": 4
     },
     {
       "id": "nikiforov-anton-sergeevich",
@@ -4901,7 +4781,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "defensive",
-      "degree": 26
+      "degree": 23
     },
     {
       "id": "ooo-tsentr-bespilotnykh-sistem-tula",
@@ -5188,33 +5068,9 @@
       "degree": 17
     },
     {
-      "id": "petrov-aleksandr-vitalevich",
-      "kind": "person",
-      "label": "Петров Александр Витальевич",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
       "id": "petrov-aleksey-aleksandrovich",
       "kind": "person",
       "label": "Петров Алексей Александрович",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 7
-    },
-    {
-      "id": "petrov-viktor-vitalevich",
-      "kind": "person",
-      "label": "Петров Виктор Витальевич",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "petrov-vitaliy-pavlinovich",
-      "kind": "person",
-      "label": "Петров Виталий Павлинович",
       "name_latin": null,
       "sanctioned": false,
       "degree": 1
@@ -5226,30 +5082,6 @@
       "name_latin": "Petrov Vladimir Alekseevich",
       "sanctioned": false,
       "degree": 4
-    },
-    {
-      "id": "petrova-darya-aleksandrovna",
-      "kind": "person",
-      "label": "Петрова Дарья Александровна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "petrova-marina-vladimirovna",
-      "kind": "person",
-      "label": "Петрова Марина Владимировна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "petrova-natalya-viktorovna",
-      "kind": "person",
-      "label": "Петрова Наталья Викторовна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
     },
     {
       "id": "petrovich-sapfpv",
@@ -5370,14 +5202,6 @@
       "name_latin": "Poperechnyy Pavel Sergeevich",
       "sanctioned": false,
       "degree": 4
-    },
-    {
-      "id": "popov-grigoriy-sergeevich",
-      "kind": "person",
-      "label": "Попов Григорий Сергеевич",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
     },
     {
       "id": "porsev-andrey-valerevich",
@@ -11755,7 +11579,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": "defensive",
-      "degree": 17
+      "degree": 16
     },
     {
       "id": "prokofev-mikhail-vasilevich",
@@ -11878,14 +11702,6 @@
       "degree": 1
     },
     {
-      "id": "safieva-viktoriya-zufarovna",
-      "kind": "person",
-      "label": "Сафиева Виктория Зуфаровна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
       "id": "saidov-adil-abukovich",
       "kind": "person",
       "label": "Саидов Адиль Абукович",
@@ -11938,14 +11754,6 @@
       "kind": "person",
       "label": "Савин Андрей Дмитриевич",
       "name_latin": "Savin Andrey Dmitrievich",
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "savvin-a-a",
-      "kind": "person",
-      "label": "savvin-a-a",
-      "name_latin": "Savvin A.A.",
       "sanctioned": false,
       "degree": 1
     },
@@ -12019,68 +11827,12 @@
       "label": "Шагиахметов Айрат Фатхутдинович",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 4
-    },
-    {
-      "id": "shagiakhmetova-alisa-ayratovna",
-      "kind": "person",
-      "label": "Шагиахметова Алиса Айратовна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "shakhmatov-anatoliy-aleksandrovich",
-      "kind": "person",
-      "label": "Шахматов Анатолий Александрович",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
+      "degree": 3
     },
     {
       "id": "shakhmatov-ivan-anatolevich",
       "kind": "person",
       "label": "Шахматов Иван Анатольевич",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 4
-    },
-    {
-      "id": "shakhmatova-olga-petrovna",
-      "kind": "person",
-      "label": "Шахматова Ольга Петровна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "shakhmatova-tatyana-anatolevna",
-      "kind": "person",
-      "label": "Шахматова Татьяна Анатольевна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "shandobylo-aleksandr-otets",
-      "kind": "person",
-      "label": "Шандобыло Александр",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "shandobylo-lyudmila-aleksandrovna-mat",
-      "kind": "person",
-      "label": "Шандобыло Людмила Александровна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "shandobylo-miloslava-igorevna",
-      "kind": "person",
-      "label": "Шандобыло Милослава Игоревна",
       "name_latin": null,
       "sanctioned": false,
       "degree": 1
@@ -12091,23 +11843,7 @@
       "label": "Шандобыло Сергей Сергеевич",
       "name_latin": "Shandabyla Siarhei",
       "sanctioned": false,
-      "degree": 7
-    },
-    {
-      "id": "shandobylo-tatyana-rodstvennitsa",
-      "kind": "person",
-      "label": "Шандобыло Татьяна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "shandobylo-yuliya-rodstvennitsa",
-      "kind": "person",
-      "label": "Шандобыло Юлия",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
+      "degree": 2
     },
     {
       "id": "shatrakova-anastasiya-artemovna",
@@ -12182,28 +11918,12 @@
       "degree": 2
     },
     {
-      "id": "shtrek-igor-aleksandrovich",
-      "kind": "person",
-      "label": "Штрек Игорь Александрович",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
       "id": "shulikin-nikolay-konstantinovich",
       "kind": "person",
       "label": "Шуликин Николай Константинович",
       "name_latin": null,
       "sanctioned": false,
       "degree": 2
-    },
-    {
-      "id": "shvetov-artemiy-andreevich",
-      "kind": "person",
-      "label": "Шветов Артемий Андреевич",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
     },
     {
       "id": "shvetsov-aleksey-aleksandrovich",
@@ -12244,14 +11964,6 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 2
-    },
-    {
-      "id": "skabelin-s-n",
-      "kind": "person",
-      "label": "skabelin-s-n",
-      "name_latin": "Skabelin S.N.",
-      "sanctioned": false,
-      "degree": 1
     },
     {
       "id": "skif-wozmezdiye",
@@ -13630,28 +13342,12 @@
       "degree": 1
     },
     {
-      "id": "tsarkov-daniil-dmitrievich",
-      "kind": "person",
-      "label": "Царьков Даниил Дмитриевич",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
       "id": "tsyganov-vadim-borisovich",
       "kind": "person",
       "label": "Цыганов Вадим Борисович",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 5
-    },
-    {
-      "id": "tsyganova-viktoriya-yurevna",
-      "kind": "person",
-      "label": "Цыганова Виктория Юрьевна",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 1
+      "degree": 4
     },
     {
       "id": "tychinskiy-aleksandr-yulevich",
@@ -13948,14 +13644,6 @@
       "degree": 3
     },
     {
-      "id": "ustimov-r-s",
-      "kind": "person",
-      "label": "ustimov-r-s",
-      "name_latin": "Ustimov R.S.",
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
       "id": "ustratov-dmitriy-vladimirovich",
       "kind": "person",
       "label": "Устратов Дмитрий Владимирович",
@@ -14176,14 +13864,6 @@
       "degree": 1
     },
     {
-      "id": "zaytsev-e-d",
-      "kind": "person",
-      "label": "zaytsev-e-d",
-      "name_latin": "Zaytsev E.D.",
-      "sanctioned": false,
-      "degree": 1
-    },
-    {
       "id": "zhigulin-aleksey-mikhaylovich",
       "kind": "person",
       "label": "Жигулин Алексей Михайлович",
@@ -14291,17 +13971,6 @@
       "type": "role",
       "label": "co-inventor (patent RU2637799C1)",
       "source_id": "s1003",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "akhezin-a-n",
-      "target": "customer::главное-управление-мчс-россии-по-курской-области",
-      "type": "role",
-      "label": "Заместитель руководителя, Главное управление МЧС России по Курской области",
-      "source_id": "s1460",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -16096,17 +15765,6 @@
       "label": "Директор / соучредитель",
       "source_id": "s5394",
       "as_of": "2024-02-01",
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "arkhangelskiy-gennadiy-weapons-engineer",
-      "target": "proekt-kb-arkhangel",
-      "type": "role",
-      "label": "Contributor — weapons/mount engineering (self-described)",
-      "source_id": "s5460",
-      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -20391,17 +20049,6 @@
       "confidence": null
     },
     {
-      "source": "danilin-viktor-sergeevich",
-      "target": "ao-stratim",
-      "type": "role",
-      "label": "Сотрудник (Leader-ID org staff listing, role/title not specified)",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
       "source": "dementev-vitaliy-evgenevich",
       "target": "ooo-eyartek",
       "type": "role",
@@ -20939,17 +20586,6 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
-    },
-    {
-      "source": "fedorova-polina-gennadevna",
-      "target": "fedorov-pavel-romanovich",
-      "type": "family_tie",
-      "label": "mother",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
     },
     {
       "source": "fedukovich-kirill-olegovich",
@@ -21491,17 +21127,6 @@
       "confidence": null
     },
     {
-      "source": "ganysh-v-p",
-      "target": "customer::главное-управление-мчс-россии-по-курской-области",
-      "type": "role",
-      "label": "Начальник управления информационных технологий и связи, полковник внутренней службы, Главное управление МЧС России по Курской области",
-      "source_id": "s1460",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
       "source": "garkusha-vladimir-vladimirovich",
       "target": "ooo-gk-logos",
       "type": "founded",
@@ -21788,17 +21413,6 @@
       "confidence": null
     },
     {
-      "source": "grebenkova-k-yu",
-      "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-      "type": "role",
-      "label": "Начальник отдела (организации контрактной работы), капитан, ФГКУ «ЦСООР «Лидер»»",
-      "source_id": "s1474",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
       "source": "grigorev-dmitriy-vasilevich",
       "target": "ao-nii-vektor",
       "type": "role",
@@ -21848,17 +21462,6 @@
       "type": "role",
       "label": "co-inventor (patent RU2626575C1)",
       "source_id": "s1002",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "grigoryan-e-a",
-      "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-      "type": "role",
-      "label": "Член приемочной комиссии, капитан, ФГКУ «ЦСООР «Лидер»»",
-      "source_id": "s1464",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -23053,17 +22656,6 @@
       "confidence": null
     },
     {
-      "source": "kirtok-aleksandr-sergeevich",
-      "target": "ooo-trimiks-bulat-3mx",
-      "type": "role",
-      "label": "Сотрудник",
-      "source_id": "s1408",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
       "source": "kiryukhin-aleksandr-maksimovich",
       "target": "ao-nii-vektor",
       "type": "role",
@@ -23999,17 +23591,6 @@
       "confidence": null
     },
     {
-      "source": "kulagin-s-a",
-      "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-      "type": "role",
-      "label": "Член приемочной комиссии, майор, ФГКУ «ЦСООР «Лидер»»",
-      "source_id": "s1464",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
       "source": "kulemin-igor-aleksandrovich",
       "target": "ooo-arkhangel-shchit",
       "type": "founded",
@@ -24224,17 +23805,6 @@
       "type": "role",
       "label": "Сотрудник",
       "source_id": "s1408",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "kuznetsov-v-s-fgku-lider",
-      "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-      "type": "role",
-      "label": "Член приемочной комиссии, майор, ФГКУ «ЦСООР «Лидер»»",
-      "source_id": "s1464",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -24736,28 +24306,6 @@
       "confidence": null
     },
     {
-      "source": "meshkova-kristina-andreevna",
-      "target": "beloglazova-lyudmila-aleksandrovna",
-      "type": "family_tie",
-      "label": "possible relative (relation unconfirmed by dossier)",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "unconfirmed"
-    },
-    {
-      "source": "meshkova-nadezhda-filippovna",
-      "target": "beloglazova-lyudmila-aleksandrovna",
-      "type": "family_tie",
-      "label": "mother",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
-    },
-    {
       "source": "mikhail-kuznetsov",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "role",
@@ -25031,39 +24579,6 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
-    },
-    {
-      "source": "neznamov-vasiliy-aleksandrovich",
-      "target": "neznamov-aleksandr-vasilevich",
-      "type": "family_tie",
-      "label": "father",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
-    },
-    {
-      "source": "neznamova-anastasiya-vasilevna",
-      "target": "neznamov-aleksandr-vasilevich",
-      "type": "family_tie",
-      "label": "sister",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
-    },
-    {
-      "source": "neznamova-lyudmila-viktorovna",
-      "target": "neznamov-aleksandr-vasilevich",
-      "type": "family_tie",
-      "label": "mother",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
     },
     {
       "source": "nikiforov-anton-sergeevich",
@@ -30852,17 +30367,6 @@
       "confidence": null
     },
     {
-      "source": "petrov-aleksandr-vitalevich",
-      "target": "petrov-aleksey-aleksandrovich",
-      "type": "family_tie",
-      "label": "father",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
-    },
-    {
       "source": "petrov-aleksey-aleksandrovich",
       "target": "ooo-trimiks-bulat-3mx",
       "type": "role",
@@ -30872,28 +30376,6 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
-    },
-    {
-      "source": "petrov-viktor-vitalevich",
-      "target": "petrov-aleksey-aleksandrovich",
-      "type": "family_tie",
-      "label": "uncle (probable)",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "probable"
-    },
-    {
-      "source": "petrov-vitaliy-pavlinovich",
-      "target": "petrov-aleksey-aleksandrovich",
-      "type": "family_tie",
-      "label": "grandfather (probable)",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "probable"
     },
     {
       "source": "petrov-vladimir-alekseevich",
@@ -30938,39 +30420,6 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
-    },
-    {
-      "source": "petrova-darya-aleksandrovna",
-      "target": "petrov-aleksey-aleksandrovich",
-      "type": "family_tie",
-      "label": "sister",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
-    },
-    {
-      "source": "petrova-marina-vladimirovna",
-      "target": "petrov-aleksey-aleksandrovich",
-      "type": "family_tie",
-      "label": "mother",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
-    },
-    {
-      "source": "petrova-natalya-viktorovna",
-      "target": "petrov-aleksey-aleksandrovich",
-      "type": "family_tie",
-      "label": "relative (unconfirmed)",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "unconfirmed"
     },
     {
       "source": "petrovich-sapfpv",
@@ -31275,17 +30724,6 @@
       "type": "role",
       "label": "co-inventor (patent RU2717950C1)",
       "source_id": "s1014",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "popov-grigoriy-sergeevich",
-      "target": "ao-stratim",
-      "type": "role",
-      "label": "CV-инженер (computer-vision engineer)",
-      "source_id": null,
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -32007,17 +31445,6 @@
       "confidence": null
     },
     {
-      "source": "safieva-viktoriya-zufarovna",
-      "target": "ooo-trimiks-bulat-3mx",
-      "type": "role",
-      "label": "Сотрудник",
-      "source_id": "s1408",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
       "source": "saidov-adil-abukovich",
       "target": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
       "type": "role",
@@ -32199,17 +31626,6 @@
       "type": "role",
       "label": "co-inventor (patent RU2779484C1)",
       "source_id": "s1031",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "savvin-a-a",
-      "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-      "type": "role",
-      "label": "Начальник, генерал-майор, ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»»",
-      "source_id": "s1464",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -32480,28 +31896,6 @@
       "confidence": null
     },
     {
-      "source": "shagiakhmetova-alisa-ayratovna",
-      "target": "shagiakhmetov-ayrat-fatkhutdinovich",
-      "type": "family_tie",
-      "label": "daughter",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
-    },
-    {
-      "source": "shakhmatov-anatoliy-aleksandrovich",
-      "target": "shakhmatov-ivan-anatolevich",
-      "type": "family_tie",
-      "label": "father",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
-    },
-    {
       "source": "shakhmatov-ivan-anatolevich",
       "target": "ooo-trimiks-bulat-3mx",
       "type": "founded",
@@ -32511,61 +31905,6 @@
       "weight": 1.0,
       "temporal_status": "historical",
       "confidence": null
-    },
-    {
-      "source": "shakhmatova-olga-petrovna",
-      "target": "shakhmatov-ivan-anatolevich",
-      "type": "family_tie",
-      "label": "mother",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
-    },
-    {
-      "source": "shakhmatova-tatyana-anatolevna",
-      "target": "shakhmatov-ivan-anatolevich",
-      "type": "family_tie",
-      "label": "sister",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
-    },
-    {
-      "source": "shandobylo-aleksandr-otets",
-      "target": "shandobylo-sergey-sergeevich",
-      "type": "family_tie",
-      "label": "father (probable)",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "probable"
-    },
-    {
-      "source": "shandobylo-lyudmila-aleksandrovna-mat",
-      "target": "shandobylo-sergey-sergeevich",
-      "type": "family_tie",
-      "label": "mother",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
-    },
-    {
-      "source": "shandobylo-miloslava-igorevna",
-      "target": "shandobylo-sergey-sergeevich",
-      "type": "family_tie",
-      "label": "wife",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
     },
     {
       "source": "shandobylo-sergey-sergeevich",
@@ -32588,28 +31927,6 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
-    },
-    {
-      "source": "shandobylo-tatyana-rodstvennitsa",
-      "target": "shandobylo-sergey-sergeevich",
-      "type": "family_tie",
-      "label": "relative (unconfirmed)",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "unconfirmed"
-    },
-    {
-      "source": "shandobylo-yuliya-rodstvennitsa",
-      "target": "shandobylo-sergey-sergeevich",
-      "type": "family_tie",
-      "label": "relative (unconfirmed)",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "unconfirmed"
     },
     {
       "source": "shatrakova-anastasiya-artemovna",
@@ -32920,17 +32237,6 @@
       "confidence": null
     },
     {
-      "source": "shtrek-igor-aleksandrovich",
-      "target": "ao-stratim",
-      "type": "role",
-      "label": "Инженер (Engineer), с 2021",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
       "source": "shulikin-nikolay-konstantinovich",
       "target": "ooo-levit",
       "type": "directs",
@@ -32950,17 +32256,6 @@
       "as_of": "2026-08-24",
       "weight": 1.0,
       "temporal_status": "current",
-      "confidence": null
-    },
-    {
-      "source": "shvetov-artemiy-andreevich",
-      "target": "ooo-trimiks-bulat-3mx",
-      "type": "role",
-      "label": "Сотрудник",
-      "source_id": "s1408",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
       "confidence": null
     },
     {
@@ -33157,17 +32452,6 @@
       "label": "Учредитель",
       "source_id": "s6777",
       "as_of": "2024-03-01",
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "skabelin-s-n",
-      "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-      "type": "role",
-      "label": "Материально-ответственное лицо, ФГКУ «ЦСООР «Лидер»»",
-      "source_id": "s1464",
-      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -36858,17 +36142,6 @@
       "confidence": null
     },
     {
-      "source": "tsarkov-daniil-dmitrievich",
-      "target": "ao-stratim",
-      "type": "role",
-      "label": "Руководитель отдела (Department Head)",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
       "source": "tsyganov-vadim-borisovich",
       "target": "ip-tsyganov-vadim-borisovich",
       "type": "role",
@@ -36911,17 +36184,6 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
-    },
-    {
-      "source": "tsyganova-viktoriya-yurevna",
-      "target": "tsyganov-vadim-borisovich",
-      "type": "family_tie",
-      "label": "wife",
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "confirmed"
     },
     {
       "source": "tychinskiy-aleksandr-yulevich",
@@ -37050,17 +36312,6 @@
       "type": "role",
       "label": "founder",
       "source_id": "s0508",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "ustimov-r-s",
-      "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-      "type": "role",
-      "label": "Член приемочной комиссии, капитан, ФГКУ «ЦСООР «Лидер»»",
-      "source_id": "s1464",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -37688,17 +36939,6 @@
       "type": "role",
       "label": "co-inventor (patent RU2752861C1)",
       "source_id": "s1021",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "zaytsev-e-d",
-      "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-      "type": "role",
-      "label": "Член приемочной комиссии, майор, ФГКУ «ЦСООР «Лидер»»",
-      "source_id": "s1464",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",

@@ -540,6 +540,15 @@ satellite structure invisible in any graph-based exhibit; don't add a
 `cbst_tie` claim without setting `confidence` from that exact vocabulary,
 or the edge silently won't render.
 
+**`graph_tier: "reference"`** (people.json, set via `corrections_people.json`) keeps a
+minor person -- a relative, a staff member, a contract signatory -- fully on file
+(record, `other_entities`, family/role fields) but off the relationship graph, so they
+don't clutter it. It is a display decision, not a verdict on the person: if a reference
+person gains an `owns`/`founded`/`directs` edge (say, a relative turns out to be
+registered as an entity's founder) the builder surfaces them automatically. Their
+profile pages are unaffected. Set it deliberately per person with a `why` note; it is
+not inferred.
+
 **Multi-hop reachability, not just direct edges, is what "connected to
 ЦБСТ" means.** A published exhibit once reported an entity as having "no
 traceable ЦБСТ edge" based on a 1-hop check, when a real 3-hop path

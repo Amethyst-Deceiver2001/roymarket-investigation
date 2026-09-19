@@ -515,6 +515,20 @@ def build_graph(entities: list[dict], people: list[dict],
             add_edge(slug, family["principal_slug"], "family_tie", family.get("relation"),
                       family.get("source_id"), confidence=family.get("confidence"))
 
+    # People marked graph_tier == "reference" (relatives, staff, contract
+    # signatories) stay on file in people.json but are kept off the graph, so
+    # they don't clutter it. One exception: a reference person who holds a
+    # structural control link to an entity (owns/founded/directs) is exactly the
+    # "relative registered as a founder" lead worth seeing, so stays visible.
+    control_types = {"owns", "founded", "directs"}
+    reference = {p["slug"] for p in people if p.get("graph_tier") == "reference"}
+    surfaced = {e[end] for e in edges if e["type"] in control_types for end in ("source", "target")} & reference
+    hidden = reference - surfaced
+    if hidden:
+        edges = [e for e in edges if e["source"] not in hidden and e["target"] not in hidden]
+        for slug in hidden:
+            nodes.pop(slug, None)
+
     node_list = sorted(nodes.values(), key=lambda node: node["id"])
     edges.sort(key=lambda edge: (
         edge["source"], edge["target"], edge["type"], edge["as_of"] or "",

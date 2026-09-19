@@ -37388,9 +37388,10 @@
     ],
     "leader_id_screened_at": "2026-08-25",
     "_corrected": [
-      "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only.",
-      "2026-08-25: leader-id.ru public profile page (https://leader-id.ru/users/487737) read directly (no auth) for headshot/contact/social -- employer/position, resume, education, and activity are all explicitly hidden by the user (\"Пользователь скрыл информацию\"); avatar is the platform's generic placeholder, not a real photo; no contact fields or social links displayed. Nothing to add beyond the org-staff-listing entry already sourced."
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link)."
     ],
+    "graph_tier": "reference",
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -37501,8 +37502,10 @@
     ],
     "leader_id_screened_at": "2026-08-25",
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2434)."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
@@ -37577,9 +37580,10 @@
     ],
     "leader_id_screened_at": "2026-08-25",
     "_corrected": [
-      "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only.",
-      "2026-08-25: leader-id.ru public profile page (https://leader-id.ru/users/6123622) read directly (no auth) for headshot/contact/social -- profile gives position \"Engineer\" at АО «Стратим» since 2021 and an education history entry (see notes); avatar is a generic placeholder, not a real photo; no contact fields or social links displayed."
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link)."
     ],
+    "graph_tier": "reference",
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -37686,9 +37690,10 @@
     ],
     "leader_id_screened_at": "2026-08-25",
     "_corrected": [
-      "2026-08-25: added from АО «Стратим» Leader-ID org staff list (org #2358296, backend GET /api/v4/organizations/2358296, retrieved 2026-08-25) -- listed as one of 7 total staff (userId + fullName only). No role/title, dates, or other detail given by that endpoint beyond org membership; not independently corroborated against EGRUL or any other source. Treat as an unverified staff lead, not a confirmed officer role -- unlike Костюнин (GD, EGRUL-sourced) and Бежанов (37.2% owner, prose-sourced), this is org-membership-only.",
-      "2026-08-25: leader-id.ru public profile page (https://leader-id.ru/users/6169979) read directly (no auth) for headshot/contact/social -- profile gives position \"CV-engineer\" at АО «Стратим»; avatar is a generic placeholder, not a real photo; no contact fields, social links, city, or education/resume displayed -- user has hidden that information."
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link)."
     ],
+    "graph_tier": "reference",
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [
@@ -37996,8 +38001,10 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-07: user supplied a leaked-database dossier confirming identity (DOB/phone/email match); no ИНН in the source."
     ],
+    "graph_tier": "reference",
     "_verified_against": "data/sources/REVENG_20260907_safieva-viktoriya-zufarovna-dossier.pdf (s6936)",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
@@ -38090,8 +38097,10 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded)."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
@@ -38146,8 +38155,10 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded)."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
@@ -38597,9 +38608,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "shandobylo-sergey-sergeevich",
       "relation": "wife",
@@ -38647,8 +38660,10 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "shandobylo-sergey-sergeevich",
       "relation": "mother",
@@ -38721,8 +38736,10 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "shandobylo-sergey-sergeevich",
       "relation": "father (probable)",
@@ -38790,8 +38807,10 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "shandobylo-sergey-sergeevich",
       "relation": "relative (unconfirmed)",
@@ -38859,8 +38878,10 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "shandobylo-sergey-sergeevich",
       "relation": "relative (unconfirmed)",
@@ -38924,9 +38945,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "shakhmatov-ivan-anatolevich",
       "relation": "father",
@@ -39018,9 +39041,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "shakhmatov-ivan-anatolevich",
       "relation": "mother",
@@ -39110,9 +39135,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "shakhmatov-ivan-anatolevich",
       "relation": "sister",
@@ -39202,9 +39229,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "beloglazova-lyudmila-aleksandrovna",
       "relation": "mother",
@@ -39294,9 +39323,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "beloglazova-lyudmila-aleksandrovna",
       "relation": "possible relative (relation unconfirmed by dossier)",
@@ -39386,9 +39417,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "shagiakhmetov-ayrat-fatkhutdinovich",
       "relation": "daughter",
@@ -39478,9 +39511,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "fedorov-pavel-romanovich",
       "relation": "mother",
@@ -39519,9 +39554,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "petrov-aleksey-aleksandrovich",
       "relation": "uncle (probable)",
@@ -39558,10 +39595,12 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2564).",
       "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "zakupki_review": {
       "as_of": "2026-08-31",
       "outcome": "closed",
@@ -39631,10 +39670,12 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2548).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "petrov-aleksey-aleksandrovich",
       "relation": "sister",
@@ -39704,9 +39745,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "petrov-aleksey-aleksandrovich",
       "relation": "mother",
@@ -39805,9 +39848,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "petrov-aleksey-aleksandrovich",
       "relation": "relative (unconfirmed)",
@@ -39897,9 +39942,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "petrov-aleksey-aleksandrovich",
       "relation": "grandfather (probable)",
@@ -39989,9 +40036,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "tsyganov-vadim-borisovich",
       "relation": "wife",
@@ -40095,9 +40144,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "neznamov-aleksandr-vasilevich",
       "relation": "sister",
@@ -40187,9 +40238,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "neznamov-aleksandr-vasilevich",
       "relation": "father",
@@ -40281,9 +40334,11 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
     ],
+    "graph_tier": "reference",
     "family_of": {
       "principal_slug": "neznamov-aleksandr-vasilevich",
       "relation": "mother",
@@ -40576,8 +40631,10 @@
     ],
     "source_id": "s1474",
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: role source attached from the person's own recorded source (s1474); the archived document was OCR-read and names this individual."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06"
@@ -40621,8 +40678,10 @@
     ],
     "source_id": "s1460",
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: role source attached from the person's own recorded source (s1460); the archived document was OCR-read and names this individual."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06"
@@ -40666,8 +40725,10 @@
     ],
     "source_id": "s1460",
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: role source attached from the person's own recorded source (s1460); the archived document was OCR-read and names this individual."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06"
@@ -40711,8 +40772,10 @@
     ],
     "source_id": "s1464",
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: role source attached from the person's own recorded source (s1464); the archived document was OCR-read and names this individual."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06"
@@ -40756,8 +40819,10 @@
     ],
     "source_id": "s1464",
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: role source attached from the person's own recorded source (s1464); the archived document was OCR-read and names this individual."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06"
@@ -40801,8 +40866,10 @@
     ],
     "source_id": "s1464",
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: role source attached from the person's own recorded source (s1464); the archived document was OCR-read and names this individual."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06"
@@ -40846,8 +40913,10 @@
     ],
     "source_id": "s1464",
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: role source attached from the person's own recorded source (s1464); the archived document was OCR-read and names this individual."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06"
@@ -40891,8 +40960,10 @@
     ],
     "source_id": "s1464",
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: role source attached from the person's own recorded source (s1464); the archived document was OCR-read and names this individual."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06"
@@ -40936,8 +41007,10 @@
     ],
     "source_id": "s1464",
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: role source attached from the person's own recorded source (s1464); the archived document was OCR-read and names this individual."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06"
@@ -40981,8 +41054,10 @@
     ],
     "source_id": "s1464",
     "_corrected": [
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
       "2026-09-19: role source attached from the person's own recorded source (s1464); the archived document was OCR-read and names this individual."
     ],
+    "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06"
@@ -44209,8 +44284,10 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-04: surfaced in a scoped full-corpus mining pass over all Филиппов/Архангел-linked channels. Signs projectArchangel#9534 describing personal sourcing/installation of ten four-barrel ЯкБ-12.7mm aviation machine guns for a customer's mobile counter-UAV fire groups (МОГ), posting under the project's own channel with his own MAX/Telegram channel \"arkhangelfront\". Added as a distinct person record — NOT merged with the existing Архангельский Геннадий Евгеньевич (arkhangelskiy-gennadiy-evgenevich, director of the separate АНО «Архангел»/«Архангел Легион») despite the surname match — see the corresponding open_question on proekt-kb-arkhangel for why this is flagged as a possible-but-unconfirmed overlap, not a merge."
+      "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link)."
     ],
+    "graph_tier": "reference",
+    "_verified_against": null,
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [],
