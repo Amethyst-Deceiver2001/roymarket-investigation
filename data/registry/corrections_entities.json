@@ -20219,10 +20219,10 @@
         "founders": [],
         "founders_history": [
           {
-            "value": "ООО «Кронштадт Беспилотные Системы» (ИНН 7801320277) — 100%",
+            "value": "ООО «Аэромакс» (ИНН 7725347482) — 49.659% / ЗПИФ комбинированный «Технофонд» (УК АО «Альфа-Капитал Альтернативные инвестиции», ИНН 7706681026) — 49.659% / Алёшин Борис Сергеевич (личный ИНН 770802770590) — 0.682%",
             "as_of": "2025-12-14",
             "source_id": "s6886",
-            "note": "Recovered via Aleph/OCCRP's cached EGRUL mirror (same snapshot as director recovery, see s6885) -- an ownershipOwner edge naming this entity as sole owner, predating the founder-section redaction (dated 19.08.2026 per s0476). Confirms and gives the exact legal entity/ИНН for the Kronshtadt-group tie already flagged in this record's open_questions. This entity's own EGRUL name history (per the same mirror pull, s6886) additionally lists two prior names on this ИНН: «ГРУППА КРОНШТАДТ» and «ИНТЕЛЛЕКТУАЛЬНЫЕ ТЕХНИЧЕСКИЕ РЕШЕНИЯ» -- see name_history."
+            "note": "CORRECTED 2026-09-19: this entry previously read \"ООО «Кронштадт Беспилотные Системы» — 100%\" as this entity's OWNER; the direction was inverted. In the Aleph/OCCRP EGRUL mirror snapshot of 2025-12-14 (s6886) the ownershipOwner edge has this ИНН (then «Группа Кронштадт») as OWNER and ООО «Кронштадт Беспилотные Системы» (ИНН 7801320277) as ASSET, 100%, from 2016-10-17 -- confirmed by the primary ЕГРЮЛ выписка of 7801320277 (s7448), which lists ИНН 7710974353 / ОГРН 1147748024269 as its sole participant. The three ownershipAsset edges in s6886 give this entity's own owners at that snapshot: ООО «Аэромакс» 49.659% (from 2021-02-24), ЗПИФ «Технофонд» via Альфа-Капитал АИ 49.659% (from 2021-07-27), Алёшин Б.С. 0.682% (from 2017-06-08); founder section since access-restricted (s0476). Aleph is a secondary mirror, not a primary extract; the EGRUL name history on this ИНН is unchanged (\"ГРУППА КРОНШТАДТ\", \"ИНТЕЛЛЕКТУАЛЬНЫЕ ТЕХНИЧЕСКИЕ РЕШЕНИЯ\")."
           },
           {
             "as_of": "2026-08-19",
@@ -20337,6 +20337,7 @@
         ],
         "charter_capital": 18309491704.16,
         "why": [
+        "2026-09-19 (open question, not resolved): АО «Кронштадт» (ИНН 7808035536, ao-kronshtadt) is named in the group's own 18.05.2026 rename post (s7610) as part of ГК «Аэромакс», but no register on file shows who owns it -- a JSC extract lists no shareholders (s7608). Separately, ownership between this entity and ООО «Аэромакс» (ИНН 7725347482) is bidirectional across dates: Aleph snapshot 2025-12-14 (s6886) has ООО «Аэромакс» holding 49.659% of this entity from 2021-02-24, while the ЕГРЮЛ выписка of ООО «Аэромакс» (s0218) has this entity as its sole participant from 04.06.2026. Consistent with a 2026 restructure but not evidenced as one; a current выписка of this entity is founder-restricted, so the present holders here are unknown.",
           "2026-09-07: Aleph/OCCRP cached-EGRUL-mirror recovery of pre-restriction director+owner (Богатиков С.А. / ООО «Кронштадт Беспилотные Системы») plus a two-entry name_history on this ИНН, closing the entity's own open_question about the Kronshtadt tie."
         ],
         "notes": "Acquired 100% of АО «РТИ-Радио» (ИНН 7713133550, see its own registry entry) on 13.02.2025 — a long-established (1997) radar/radionavigation-equipment manufacturer, not a shell — and installed its own director Бессонов С.Н. as РТИ-Радио's GD on 19.02.2026, confirmed via РТИ-Радио's own EGRUL выписка (s7345, 2026-09-08)."
@@ -32867,14 +32868,16 @@
         },
         "founders": [
           {
-            "name": "ООО «Группа Кронштадт»",
+            "name": "ООО «Группа компаний «Аэромакс»»",
+            "inn": "7710974353",
+            "ogrn": "1147748024269",
             "nominal_value": 100000,
             "share": "100%"
           }
         ],
         "founders_history": [
           {
-            "value": "ООО «Группа Кронштадт» 100%",
+            "value": "ООО «Группа компаний «Аэромакс»» (ИНН 7710974353; в выписке значится под прежним наименованием ООО «Группа Кронштадт») 100%",
             "as_of": "2026-09-14",
             "source_id": "s7448",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-14 (egrul_vypiska_pull.py, ГРН 1167847402898, 17.10.2016)."
@@ -32884,6 +32887,7 @@
       },
       "verified_against": null,
       "why": [
+        "2026-09-19: the sole participant named in the s7448 выписка as ООО «Группа Кронштадт» (ОГРН 1147748024269, ИНН 7710974353) is the entity now named ООО «ГК Аэромакс» (ooo-gk-aeromaks); resolved to that slug. Direction is parent -> subsidiary: ГК Аэромакс owns this entity, not the reverse (see the correction note on ooo-gk-aeromaks founders_history).",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
         "2026-09-14: rk.2035.university product-models sweep (s1169) surfaced a catalog entry for \"АО «Кронштадт»\" (2 models: ГЕЛИОС-РЛД, ОРИОН) with manufacturer field literally \"АО «Кронштадт»\" -- this is NOT the same entity as this record (this is «Кронштадт Беспилотные Системы», ИНН 7801320277). АО «Кронштадт» (ИНН 7808035536, makes «Орион»/«Сириус» strike-recon UAS, EU-sanctioned, ГД Донцов В.Н. per an OSINT VARTA capture read this session -- not yet archived to data/sources/) appears to be a related but separately-registered parent/sibling entity in the same Кронштадт corporate family (this entity's own prior research already found ao-aeromaks managed by ООО «Кронштадт-Техник», s1405-adjacent). Flagged as a real, currently-unregistered manufacturer worth adding as its own entity via a proper EGRUL pull -- not wired here, no new entity created without going through the standard extraction pipeline.",
         "2026-09-14: full ЕГРЮЛ-выписка (s7448) confirms sole 100% founder is ООО «Группа Кронштадт» -- upgrades this entity from 'unverified secondary source' to a primary-source-confirmed wholly-owned subsidiary of the Кронштадт group.",

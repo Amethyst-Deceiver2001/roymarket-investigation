@@ -66,7 +66,7 @@
           "label": "Алёшин Борис Сергеевич",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 1
+          "degree": 2
         },
         {
           "id": "alyaska",
@@ -2542,7 +2542,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 41
+          "degree": 42
         },
         {
           "id": "ooo-aeromaks-avia-tsentr-logistika",
@@ -2902,7 +2902,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 8
+          "degree": 11
         },
         {
           "id": "ooo-gk-logos",
@@ -3035,18 +3035,6 @@
           "legal_form": "ООО",
           "variant": null,
           "degree": 15
-        },
-        {
-          "id": "ooo-kronshtadt-bespilotnye-sistemy",
-          "kind": "entity",
-          "label": "Общество с ограниченной ответственностью «Кронштадт Беспилотные Системы»",
-          "name_latin": null,
-          "inn": "7801320277",
-          "tier": "manufacturer",
-          "sanctioned": false,
-          "legal_form": "ООО",
-          "variant": null,
-          "degree": 2
         },
         {
           "id": "ooo-laboratoriya-yangelya",
@@ -8904,6 +8892,12 @@
           "degree": 1
         },
         {
+          "id": "stub::зпиф комбинированный технофонд",
+          "kind": "unresolved",
+          "label": "ЗПИФ комбинированный «Технофонд»",
+          "degree": 1
+        },
+        {
           "id": "stub::истомин лев львович",
           "kind": "unresolved",
           "label": "Истомин Лев Львович",
@@ -9749,6 +9743,17 @@
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "aleshin-boris-sergeevich",
+          "target": "ooo-gk-aeromaks",
+          "type": "founded",
+          "label": "former founder (0.682%)",
+          "source_id": "s6886",
+          "as_of": "2025-12-14",
+          "weight": 1.0,
+          "temporal_status": "historical",
           "confidence": null
         },
         {
@@ -17640,6 +17645,17 @@
         },
         {
           "source": "ooo-aeromaks",
+          "target": "ooo-gk-aeromaks",
+          "type": "founded",
+          "label": "former founder (49.659%)",
+          "source_id": "s6886",
+          "as_of": "2025-12-14",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aeromaks",
           "target": "product::ooo-aeromaks::бвс-ст-as-32-10",
           "type": "produces",
           "label": null,
@@ -18626,17 +18642,6 @@
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-kronshtadt-bespilotnye-sistemy",
-          "target": "ooo-gk-aeromaks",
-          "type": "founded",
-          "label": "former founder (100%)",
-          "source_id": "s6886",
-          "as_of": "2025-12-14",
-          "weight": 1.0,
-          "temporal_status": "historical",
           "confidence": null
         },
         {
@@ -22875,6 +22880,17 @@
           "confidence": null
         },
         {
+          "source": "stub::зпиф комбинированный технофонд",
+          "target": "ooo-gk-aeromaks",
+          "type": "founded",
+          "label": "former founder (49.659%)",
+          "source_id": "s6886",
+          "as_of": "2025-12-14",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
           "source": "stub::истомин лев львович",
           "target": "ooo-aero-khit-servis",
           "type": "directs",
@@ -25497,7 +25513,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 41
+          "degree": 42
         },
         {
           "id": "ooo-aeromaks-avia-tsentr-logistika",
@@ -30021,7 +30037,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 41
+          "degree": 42
         },
         {
           "id": "ooo-aeroplatformy",
@@ -30964,7 +30980,7 @@
           "source": "baygutlina-irina-anatolevna",
           "target": "ooo-npts-basirtk",
           "type": "founded",
-          "label": "100%%",
+          "label": "100%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -33127,7 +33143,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 41
+          "degree": 42
         },
         {
           "id": "ooo-aeromaks-avia-tsentr-logistika",
@@ -33499,7 +33515,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 8
+          "degree": 11
         },
         {
           "id": "ooo-gk-logos",
@@ -33643,7 +33659,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 2
+          "degree": 1
         },
         {
           "id": "ooo-laboratoriya-yangelya",
@@ -36128,12 +36144,6 @@
           "degree": 4
         },
         {
-          "id": "stub::группа кронштадт",
-          "kind": "unresolved",
-          "label": "ООО «Группа Кронштадт»",
-          "degree": 1
-        },
-        {
           "id": "stub::дар",
           "kind": "unresolved",
           "label": "Фонд «ДАР»",
@@ -36992,7 +37002,7 @@
           "source": "barakhtin-artem-vladimirovich",
           "target": "ooo-arkodim-2",
           "type": "founded",
-          "label": "25%%",
+          "label": "25%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -37025,7 +37035,7 @@
           "source": "barakhtin-artem-vladimirovich",
           "target": "ooo-arkodim-pro",
           "type": "founded",
-          "label": "50%%",
+          "label": "50%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -37047,7 +37057,7 @@
           "source": "barakhtin-artem-vladimirovich",
           "target": "ooo-ekspoket",
           "type": "founded",
-          "label": "50%%",
+          "label": "50%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -37069,7 +37079,7 @@
           "source": "barakhtin-artem-vladimirovich",
           "target": "ooo-ntc-arkodim",
           "type": "founded",
-          "label": "50%%",
+          "label": "50%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -37091,7 +37101,7 @@
           "source": "barakhtin-artem-vladimirovich",
           "target": "ooo-zemstroyregistr",
           "type": "founded",
-          "label": "34%%",
+          "label": "34%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -37190,7 +37200,7 @@
           "source": "baygutlina-irina-anatolevna",
           "target": "ooo-npts-basirtk",
           "type": "founded",
-          "label": "100%%",
+          "label": "100%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -37531,7 +37541,7 @@
           "source": "dmitriy-vladimirovich-rubinshteyn",
           "target": "ooo-momento-rubinshteyn",
           "type": "founded",
-          "label": "50%%",
+          "label": "50%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -37773,7 +37783,7 @@
           "source": "garkusha-vladimir-vladimirovich",
           "target": "ooo-gk-logos",
           "type": "founded",
-          "label": "100%%",
+          "label": "100%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -37971,7 +37981,7 @@
           "source": "khuteshen-aleksey-aleksandrovich",
           "target": "ooo-ametist",
           "type": "founded",
-          "label": "100%%",
+          "label": "100%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -38037,7 +38047,7 @@
           "source": "khuteshen-aleksey-aleksandrovich",
           "target": "ooo-everest",
           "type": "founded",
-          "label": "100%%",
+          "label": "100%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -38873,7 +38883,7 @@
           "source": "ooo-aeromaks",
           "target": "ooo-aeromaks-avia-tsentr-logistika",
           "type": "founded",
-          "label": "1%%",
+          "label": "1%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -39104,7 +39114,7 @@
           "source": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
           "target": "ooo-btr-donetsk",
           "type": "founded",
-          "label": "100%%",
+          "label": "100%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -39380,6 +39390,17 @@
           "target": "ooo-aeromaks",
           "type": "founded",
           "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-gk-aeromaks",
+          "target": "ooo-kronshtadt-bespilotnye-sistemy",
+          "type": "founded",
+          "label": "100%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -40776,7 +40797,7 @@
           "source": "solovev-konstantin-yurevich",
           "target": "ooo-arkodim-2",
           "type": "founded",
-          "label": "25%%",
+          "label": "25%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -40787,7 +40808,7 @@
           "source": "solovev-konstantin-yurevich",
           "target": "ooo-arkodim-pro",
           "type": "founded",
-          "label": "50%%",
+          "label": "50%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -40798,7 +40819,7 @@
           "source": "solovev-konstantin-yurevich",
           "target": "ooo-ntc-arkodim",
           "type": "founded",
-          "label": "50%%",
+          "label": "50%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -40897,7 +40918,7 @@
           "source": "stub::андреева жанна евгеньевна",
           "target": "ooo-ekspoket",
           "type": "founded",
-          "label": "50%%",
+          "label": "50%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -40963,7 +40984,7 @@
           "source": "stub::бочарова светлана владимировна",
           "target": "ooo-momento-rubinshteyn",
           "type": "founded",
-          "label": "50%%",
+          "label": "50%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -41125,17 +41146,6 @@
           "confidence": null
         },
         {
-          "source": "stub::группа кронштадт",
-          "target": "ooo-kronshtadt-bespilotnye-sistemy",
-          "type": "founded",
-          "label": "100%%",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "stub::дар",
           "target": "fond-nasha-pravda",
           "type": "founded",
@@ -41216,7 +41226,7 @@
           "source": "stub::ермоленко илья викторович",
           "target": "ooo-arkodim-2",
           "type": "founded",
-          "label": "50%%",
+          "label": "50%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -41535,7 +41545,7 @@
           "source": "stub::сухарев владимир александрович",
           "target": "ooo-tekhnomost",
           "type": "founded",
-          "label": "100%%",
+          "label": "100%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -41634,7 +41644,7 @@
           "source": "stub::фомин дмитрий вадимович",
           "target": "ooo-zemstroyregistr",
           "type": "founded",
-          "label": "33%%",
+          "label": "33%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -41645,7 +41655,7 @@
           "source": "stub::хасиятуллин станислав николаевич",
           "target": "ooo-zemstroyregistr",
           "type": "founded",
-          "label": "33%%",
+          "label": "33%",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,

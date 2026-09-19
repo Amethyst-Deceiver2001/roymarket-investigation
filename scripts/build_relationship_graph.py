@@ -79,6 +79,9 @@ _VEHICLE_MOUNTED_RE = re.compile(
     r"\bvehicle[- ]mounted\b|на\s+(?:автомобильном|машинном)\s+(?:шасси|платформе)|"
     r"на\s+базе\s+автомобил", re.IGNORECASE)
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+# Legal-form prefixes are stripped by normalize(), so ООО «X» and АО «X» collide by name;
+# an ИНН written in the same segment disambiguates them.
+_INN_RE = re.compile(r"ИНН\s*(\d{10})\b")
 
 
 def parse_founder_entries(raw) -> list[dict]:
@@ -110,7 +113,9 @@ def parse_founder_entries(raw) -> list[dict]:
             name = _SHARE_PREFIX_RE.sub("", name)
             name = name.strip(" .,")
             if len(name) >= 3:
-                out.append({"name": name, "share": share_m.group(1) if share_m else None})
+                inn_m = _INN_RE.search(segment)
+                out.append({"name": name, "share": share_m.group(1) if share_m else None,
+                            "inn": inn_m.group(1) if inn_m else None})
     return out
 
 
@@ -396,7 +401,7 @@ def build_graph(entities: list[dict], people: list[dict],
                 continue
             source = target or add_stub(raw_name, f"founder of {slug}")
             add_edge(source, slug, "founded",
-                     f"{founder['share']}%" if founder.get("share") else None)
+                     f"{str(founder['share']).rstrip('%')}%" if founder.get("share") else None)
         current_founders = {
             normalize(founder["name"])
             for founder in parse_founder_entries(entity.get("founders"))
@@ -417,7 +422,7 @@ def build_graph(entities: list[dict], people: list[dict],
                 if normalized_name in current_founders or normalized_name in historical_founders:
                     continue
                 historical_founders.add(normalized_name)
-                target = resolve_name(raw_name)
+                target = inn_to_entity_slug.get(founder.get("inn")) or resolve_name(raw_name)
                 if target == slug:
                     continue
                 source = target or add_stub(raw_name, f"former founder of {slug}")
