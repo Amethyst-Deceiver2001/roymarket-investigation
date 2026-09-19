@@ -29,6 +29,14 @@
           "degree": 1
         },
         {
+          "id": "akhezin-a-n",
+          "kind": "person",
+          "label": "akhezin-a-n",
+          "name_latin": "Akhezin A.N.",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "aleksandr-osadchuk",
           "kind": "person",
           "label": "Александр Осадчук",
@@ -2019,6 +2027,14 @@
           "degree": 1
         },
         {
+          "id": "ganysh-v-p",
+          "kind": "person",
+          "label": "ganysh-v-p",
+          "name_latin": "Ganysh V.P.",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "garkusha-vladimir-vladimirovich",
           "kind": "person",
           "label": "Гарькуша Владимир Владимирович",
@@ -2107,6 +2123,14 @@
           "degree": 3
         },
         {
+          "id": "grebenkova-k-yu",
+          "kind": "person",
+          "label": "grebenkova-k-yu",
+          "name_latin": "Grebenkova K.Yu.",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "grigorev-dmitriy-vasilevich",
           "kind": "person",
           "label": "Григорьев Дмитрий Васильевич",
@@ -2119,6 +2143,14 @@
           "kind": "person",
           "label": "Григорьев Валерий Владимирович",
           "name_latin": "Grigorev Valeriy Vladimirovich",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "grigoryan-e-a",
+          "kind": "person",
+          "label": "grigoryan-e-a",
+          "name_latin": "Grigoryan E.A.",
           "sanctioned": false,
           "degree": 1
         },
@@ -2631,6 +2663,14 @@
           "degree": 5
         },
         {
+          "id": "kulagin-s-a",
+          "kind": "person",
+          "label": "kulagin-s-a",
+          "name_latin": "Kulagin S.A.",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "kulemin-igor-aleksandrovich",
           "kind": "person",
           "label": "Кулемин Игорь Александрович",
@@ -2673,6 +2713,14 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 2
+        },
+        {
+          "id": "kuznetsov-v-s-fgku-lider",
+          "kind": "person",
+          "label": "kuznetsov-v-s-fgku-lider",
+          "name_latin": "Kuznetsov V.S.",
+          "sanctioned": false,
+          "degree": 1
         },
         {
           "id": "kuzovlev-andrey-anatolevich",
@@ -9680,6 +9728,14 @@
           "degree": 7
         },
         {
+          "id": "saitov-renat-faritovich",
+          "kind": "person",
+          "label": "saitov-renat-faritovich",
+          "name_latin": "Renat Faritovich Saitov",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "sakharov-aleksey-yurevich",
           "kind": "person",
           "label": "Сахаров Алексей Юрьевич",
@@ -9708,6 +9764,14 @@
           "kind": "person",
           "label": "Савин Андрей Дмитриевич",
           "name_latin": "Savin Andrey Dmitrievich",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "savvin-a-a",
+          "kind": "person",
+          "label": "savvin-a-a",
+          "name_latin": "Savvin A.A.",
           "sanctioned": false,
           "degree": 1
         },
@@ -9910,6 +9974,14 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 2
+        },
+        {
+          "id": "skabelin-s-n",
+          "kind": "person",
+          "label": "skabelin-s-n",
+          "name_latin": "Skabelin S.N.",
+          "sanctioned": false,
+          "degree": 1
         },
         {
           "id": "skif-wozmezdiye",
@@ -10876,6 +10948,14 @@
           "degree": 3
         },
         {
+          "id": "ustimov-r-s",
+          "kind": "person",
+          "label": "ustimov-r-s",
+          "name_latin": "Ustimov R.S.",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "ustratov-dmitriy-vladimirovich",
           "kind": "person",
           "label": "Устратов Дмитрий Владимирович",
@@ -11080,6 +11160,14 @@
           "degree": 1
         },
         {
+          "id": "zaytsev-e-d",
+          "kind": "person",
+          "label": "zaytsev-e-d",
+          "name_latin": "Zaytsev E.D.",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
           "id": "zhigulin-aleksey-mikhaylovich",
           "kind": "person",
           "label": "Жигулин Алексей Михайлович",
@@ -11176,6 +11264,17 @@
           "type": "role",
           "label": "co-inventor (patent RU2637799C1)",
           "source_id": "s1003",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "akhezin-a-n",
+          "target": "customer::главное-управление-мчс-россии-по-курской-области",
+          "type": "role",
+          "label": "Заместитель руководителя, Главное управление МЧС России по Курской области",
+          "source_id": "s1460",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -13390,6 +13489,17 @@
           "as_of": "2023-12-25",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
+          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
+          "type": "role",
+          "label": "Генеральный директор, ООО «Центр беспилотных систем» (Тула, ИНН 7100032961)",
+          "source_id": "s1914",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -16902,6 +17012,17 @@
           "confidence": null
         },
         {
+          "source": "ganysh-v-p",
+          "target": "customer::главное-управление-мчс-россии-по-курской-области",
+          "type": "role",
+          "label": "Начальник управления информационных технологий и связи, полковник внутренней службы, Главное управление МЧС России по Курской области",
+          "source_id": "s1460",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "garkusha-vladimir-vladimirovich",
           "target": "ooo-gk-logos",
           "type": "role",
@@ -17111,6 +17232,17 @@
           "confidence": null
         },
         {
+          "source": "grebenkova-k-yu",
+          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
+          "type": "role",
+          "label": "Начальник отдела (организации контрактной работы), капитан, ФГКУ «ЦСООР «Лидер»»",
+          "source_id": "s1474",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "grigorev-dmitriy-vasilevich",
           "target": "ao-nii-vektor",
           "type": "role",
@@ -17160,6 +17292,17 @@
           "type": "role",
           "label": "co-inventor (patent RU2626575C1)",
           "source_id": "s1002",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "grigoryan-e-a",
+          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
+          "type": "role",
+          "label": "Член приемочной комиссии, капитан, ФГКУ «ЦСООР «Лидер»»",
+          "source_id": "s1464",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -18497,6 +18640,17 @@
           "confidence": null
         },
         {
+          "source": "kulagin-s-a",
+          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
+          "type": "role",
+          "label": "Член приемочной комиссии, майор, ФГКУ «ЦСООР «Лидер»»",
+          "source_id": "s1464",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "kulemin-igor-aleksandrovich",
           "target": "ooo-arkhangel-shchit",
           "type": "role",
@@ -18612,6 +18766,17 @@
           "type": "role",
           "label": "Сотрудник",
           "source_id": "s1408",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "kuznetsov-v-s-fgku-lider",
+          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
+          "type": "role",
+          "label": "Член приемочной комиссии, майор, ФГКУ «ЦСООР «Лидер»»",
+          "source_id": "s1464",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -24030,6 +24195,17 @@
           "confidence": null
         },
         {
+          "source": "saitov-renat-faritovich",
+          "target": "ooo-gaskar-integratsiya",
+          "type": "role",
+          "label": "Генеральный директор ООО «Гаскар Интеграция» (2019)",
+          "source_id": "s1548",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "sakharov-aleksey-yurevich",
           "target": "npts-elvis",
           "type": "role",
@@ -24090,6 +24266,17 @@
           "type": "role",
           "label": "co-inventor (patent RU2779484C1)",
           "source_id": "s1031",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "savvin-a-a",
+          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
+          "type": "role",
+          "label": "Начальник, генерал-майор, ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»»",
+          "source_id": "s1464",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -24718,6 +24905,17 @@
           "label": "Учредитель",
           "source_id": "s6777",
           "as_of": "2024-03-01",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "skabelin-s-n",
+          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
+          "type": "role",
+          "label": "Материально-ответственное лицо, ФГКУ «ЦСООР «Лидер»»",
+          "source_id": "s1464",
+          "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
@@ -27055,6 +27253,17 @@
           "confidence": null
         },
         {
+          "source": "ustimov-r-s",
+          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
+          "type": "role",
+          "label": "Член приемочной комиссии, капитан, ФГКУ «ЦСООР «Лидер»»",
+          "source_id": "s1464",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "ustratov-dmitriy-vladimirovich",
           "target": "fond-nasha-pravda",
           "type": "role",
@@ -27522,6 +27731,17 @@
           "type": "role",
           "label": "co-inventor (patent RU2752861C1)",
           "source_id": "s1021",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "zaytsev-e-d",
+          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
+          "type": "role",
+          "label": "Член приемочной комиссии, майор, ФГКУ «ЦСООР «Лидер»»",
+          "source_id": "s1464",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33878,7 +34098,7 @@
           "target": "ooo-tsentr-bespilotnykh-sistem-tula",
           "type": "role",
           "label": "Генеральный директор, ООО «Центр беспилотных систем» (Тула, ИНН 7100032961)",
-          "source_id": null,
+          "source_id": "s1914",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -34810,14 +35030,6 @@
           "degree": 3
         },
         {
-          "id": "akhezin-a-n",
-          "kind": "person",
-          "label": "akhezin-a-n",
-          "name_latin": "Akhezin A.N.",
-          "sanctioned": false,
-          "degree": 1
-        },
-        {
           "id": "aleksandr-rufinovich-brovchenko",
           "kind": "person",
           "label": "Александр Руфинович Бровченко",
@@ -35398,18 +35610,6 @@
           "degree": 6
         },
         {
-          "id": "customer::главное-управление-мчс-россии-по-курской-области",
-          "kind": "government_customer",
-          "label": "ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ ПО КУРСКОЙ ОБЛАСТИ (ИНН 4632047480)",
-          "degree": 4
-        },
-        {
-          "id": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-          "kind": "government_customer",
-          "label": "ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz)",
-          "degree": 10
-        },
-        {
           "id": "danilin-viktor-sergeevich",
           "kind": "person",
           "label": "Данилин Виктор Сергеевич",
@@ -35598,14 +35798,6 @@
           "degree": 2
         },
         {
-          "id": "ganysh-v-p",
-          "kind": "person",
-          "label": "ganysh-v-p",
-          "name_latin": "Ganysh V.P.",
-          "sanctioned": false,
-          "degree": 1
-        },
-        {
           "id": "garkusha-vladimir-vladimirovich",
           "kind": "person",
           "label": "Гарькуша Владимир Владимирович",
@@ -35636,22 +35828,6 @@
           "legal_form": "ГК",
           "variant": null,
           "degree": 5
-        },
-        {
-          "id": "grebenkova-k-yu",
-          "kind": "person",
-          "label": "grebenkova-k-yu",
-          "name_latin": "Grebenkova K.Yu.",
-          "sanctioned": false,
-          "degree": 1
-        },
-        {
-          "id": "grigoryan-e-a",
-          "kind": "person",
-          "label": "grigoryan-e-a",
-          "name_latin": "Grigoryan E.A.",
-          "sanctioned": false,
-          "degree": 1
         },
         {
           "id": "gusev-sergey-vladimirovich",
@@ -35866,14 +36042,6 @@
           "degree": 5
         },
         {
-          "id": "kulagin-s-a",
-          "kind": "person",
-          "label": "kulagin-s-a",
-          "name_latin": "Kulagin S.A.",
-          "sanctioned": false,
-          "degree": 1
-        },
-        {
           "id": "kulemin-igor-aleksandrovich",
           "kind": "person",
           "label": "Кулемин Игорь Александрович",
@@ -35900,14 +36068,6 @@
           "name_latin": "Vakhid Abdulovich Kusumov",
           "sanctioned": true,
           "degree": 9
-        },
-        {
-          "id": "kuznetsov-v-s-fgku-lider",
-          "kind": "person",
-          "label": "kuznetsov-v-s-fgku-lider",
-          "name_latin": "Kuznetsov V.S.",
-          "sanctioned": false,
-          "degree": 1
         },
         {
           "id": "kuzyakin-dmitriy-vasilevich",
@@ -39799,28 +39959,12 @@
           "degree": 7
         },
         {
-          "id": "saitov-renat-faritovich",
-          "kind": "person",
-          "label": "saitov-renat-faritovich",
-          "name_latin": "Renat Faritovich Saitov",
-          "sanctioned": false,
-          "degree": 1
-        },
-        {
           "id": "savchenko-vladimir-ivanovich",
           "kind": "person",
           "label": "Савченко Владимир Иванович",
           "name_latin": null,
           "sanctioned": false,
           "degree": 3
-        },
-        {
-          "id": "savvin-a-a",
-          "kind": "person",
-          "label": "savvin-a-a",
-          "name_latin": "Savvin A.A.",
-          "sanctioned": false,
-          "degree": 1
         },
         {
           "id": "semenov-igor-georgievich",
@@ -39989,14 +40133,6 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 2
-        },
-        {
-          "id": "skabelin-s-n",
-          "kind": "person",
-          "label": "skabelin-s-n",
-          "name_latin": "Skabelin S.N.",
-          "sanctioned": false,
-          "degree": 1
         },
         {
           "id": "skoryatin-georgiy-andreevich",
@@ -40754,14 +40890,6 @@
           "degree": 3
         },
         {
-          "id": "ustimov-r-s",
-          "kind": "person",
-          "label": "ustimov-r-s",
-          "name_latin": "Ustimov R.S.",
-          "sanctioned": false,
-          "degree": 1
-        },
-        {
           "id": "va-technologies",
           "kind": "entity",
           "label": "ООО «Конструкторское бюро СОВА»",
@@ -40842,14 +40970,6 @@
           "degree": 2
         },
         {
-          "id": "zaytsev-e-d",
-          "kind": "person",
-          "label": "zaytsev-e-d",
-          "name_latin": "Zaytsev E.D.",
-          "sanctioned": false,
-          "degree": 1
-        },
-        {
           "id": "zhuk-vitaliy-aleksandrovich",
           "kind": "person",
           "label": "Жук Виталий Александрович",
@@ -40864,17 +40984,6 @@
           "target": "ooo-ti-es-dzhi-grupp",
           "type": "founded",
           "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "akhezin-a-n",
-          "target": "customer::главное-управление-мчс-россии-по-курской-области",
-          "type": "role",
-          "label": "Заместитель руководителя, Главное управление МЧС России по Курской области",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -41762,17 +41871,6 @@
           "confidence": null
         },
         {
-          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "role",
-          "label": "Генеральный директор, ООО «Центр беспилотных систем» (Тула, ИНН 7100032961)",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "chapurin-viktor-viktorovich",
           "target": "ooo-arkhangel-tsentr",
           "type": "founded",
@@ -42345,17 +42443,6 @@
           "confidence": null
         },
         {
-          "source": "ganysh-v-p",
-          "target": "customer::главное-управление-мчс-россии-по-курской-области",
-          "type": "role",
-          "label": "Начальник управления информационных технологий и связи, полковник внутренней службы, Главное управление МЧС России по Курской области",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "garkusha-vladimir-vladimirovich",
           "target": "ooo-gk-logos",
           "type": "founded",
@@ -42426,28 +42513,6 @@
           "target": "ooo-rt-razvitie-biznesa",
           "type": "founded",
           "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "grebenkova-k-yu",
-          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-          "type": "role",
-          "label": "Начальник отдела (организации контрактной работы), капитан, ФГКУ «ЦСООР «Лидер»»",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "grigoryan-e-a",
-          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-          "type": "role",
-          "label": "Член приемочной комиссии, капитан, ФГКУ «ЦСООР «Лидер»»",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -43258,17 +43323,6 @@
           "confidence": null
         },
         {
-          "source": "kulagin-s-a",
-          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-          "type": "role",
-          "label": "Член приемочной комиссии, майор, ФГКУ «ЦСООР «Лидер»»",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "kulemin-igor-aleksandrovich",
           "target": "ooo-arkhangel-shchit",
           "type": "founded",
@@ -43361,17 +43415,6 @@
           "target": "ooo-arkhangel-zaporizhzhie",
           "type": "role",
           "label": "founder",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "kuznetsov-v-s-fgku-lider",
-          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-          "type": "role",
-          "label": "Член приемочной комиссии, майор, ФГКУ «ЦСООР «Лидер»»",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -45843,32 +45886,10 @@
           "confidence": null
         },
         {
-          "source": "saitov-renat-faritovich",
-          "target": "ooo-gaskar-integratsiya",
-          "type": "role",
-          "label": "Генеральный директор ООО «Гаскар Интеграция» (2019)",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "savchenko-vladimir-ivanovich",
           "target": "ao-opticheskie-sistemy",
           "type": "role",
           "label": "director",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "savvin-a-a",
-          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-          "type": "role",
-          "label": "Начальник, генерал-майор, ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»»",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -46188,17 +46209,6 @@
           "target": "ano-arrs-krasnodar",
           "type": "founded",
           "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "skabelin-s-n",
-          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-          "type": "role",
-          "label": "Материально-ответственное лицо, ФГКУ «ЦСООР «Лидер»»",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -47757,17 +47767,6 @@
           "confidence": null
         },
         {
-          "source": "ustimov-r-s",
-          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-          "type": "role",
-          "label": "Член приемочной комиссии, капитан, ФГКУ «ЦСООР «Лидер»»",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "vlasov-artem-arkadevich",
           "target": "ooo-aeroplatformy",
           "type": "founded",
@@ -47915,17 +47914,6 @@
           "target": "ooo-status-53",
           "type": "role",
           "label": "Генеральный директор",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "zaytsev-e-d",
-          "target": "customer::фгку-центр-по-проведению-спасательных-операций-особого-риска-лидер",
-          "type": "role",
-          "label": "Член приемочной комиссии, майор, ФГКУ «ЦСООР «Лидер»»",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
