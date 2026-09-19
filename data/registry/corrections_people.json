@@ -3324,6 +3324,7 @@
     },
     "rogozin-aleksey-dmitrievich": {
       "set": {
+        "family_of": {"principal_slug": "rogozin-dmitriy-olegovich", "relation": "son", "confidence": "confirmed", "source_id": "s2607"},
         "_verified": true,
         "dob": "1983-09-21",
         "inn_personal": "770301599800",
@@ -5975,6 +5976,7 @@
         }
       ],
       "slug": "kiselev-gleb-dmitrievich",
+      "family_of": {"principal_slug": "kiselev-dmitriy-konstantinovich", "relation": "son", "confidence": "confirmed", "source_id": "s7344"},
       "sources": [
         "s0562",
         "s0560",
@@ -13971,8 +13973,8 @@
       "slug": "rogozin-dmitriy-olegovich",
       "fio_ru": "Рогозин Дмитрий Олегович",
       "name_latin": "Dmitry Olegovich Rogozin",
-      "dob": null,
-      "birthplace": null,
+      "dob": "1963-12-21",
+      "birthplace": "Москва (Moscow)",
       "address": null,
       "inn_personal": null,
       "roles": [
@@ -13991,7 +13993,15 @@
           "from": "2025-04-22",
           "to": null,
           "source_id": "s6915"
-        }
+        },
+          {
+            "title": "Начальник Центра (commander) of ЦСН «Барс-Сармат»; the unit's own site gives him as 'Начальник Центра специального назначения отряда беспилотных систем «Барс-Сармат»' and, since September 2024, 'командир' of its first volunteer detachment. Archangel's own channel names him 'командир БАРС Сармат' (17.10.2024)",
+            "entity_name": "ЦСН «Барс-Сармат»",
+            "entity_slug": "csn-bars-sarmat",
+            "from": "2024-09",
+            "to": null,
+            "source_id": "s7687"
+          }
       ],
       "notes": "Named by @projectArchangel's own channel (05.11.2024, s6912) as \"Флагман движения\" (the movement's flagship), with his own channel (@rogozin_do) linked directly and cross-posted. The post frames official government-department support for Архангел's \"боевая апробация\" (combat-testing) process as flowing through this relationship. Sitting Federation Council senator, former Deputy Prime Minister and Roscosmos director-general -- a significantly higher-profile PEP than any other individual currently on file for this network. NOT the same person as Рогозин Алексей Дмитриевич (rogozin-aleksey-dmitrievich, his son, already on file for ao-ekolibri) -- do not conflate. This is a self-description by Архангел's own channel, not yet independently corroborated by Рогозин's own channel content or a press source -- treat as an open lead, not an established fact of direct involvement, until that corroboration is checked.\n\nCORROBORATED 2026-09-07: fetched t.me/rogozin_do/7047 directly (user-supplied URL). His own channel (author line \"РОГОЗИН\") personally cross-posted a Проект «Архангел» recruitment announcement on 2025-04-22 (“ПРОЕКТ “АРХАНГЕЛ”... Присоединяйтесь! Летать так летать! Стрелять так стрелять!”), linking directly to @projectArchangel/7287, with enthusiastic personal-endorsement framing (fire emoji, exclamation points) rather than neutral mention or a forwarded post. This independently corroborates the “флагман движения” claim from Архангел's own side -- no longer resting solely on Архангел's self-description.",
       "sources": [
@@ -14381,6 +14391,24 @@
       "why": [
         "s0332 -- АО «Стратим»'s own audited FY2025 БФО пояснительная записка (0710099, §9), read directly: names Назаров as one of four disclosed ultimate beneficiaries."
       ]
-    }
+    },
+      {
+        "slug": "kiselev-dmitriy-konstantinovich",
+        "fio_ru": "Киселёв Дмитрий Константинович",
+        "name_latin": "Dmitry Konstantinovich Kiselev",
+        "dob": null,
+        "birthplace": null,
+        "address": null,
+        "inn_personal": null,
+        "roles": [],
+        "notes": "Named as father of Киселёв Глеб Дмитриевич by RuPEP (s7344: 'Киселёв Дмитрий Константинович – отец, ФГУП ВГТРК, автор и ...') and, as head of МИА «Россия сегодня», by the pointmedia.io profile of his elder son (s0561). PEP-context only, NOT a stakeholder in this network: no tie of his own to any entity here is on file. Recorded 2026-09-19 as the principal end of the family tie because a high-profile loyalist media figure's son is active in the military-coded drone industry (his son's «Кулибин-клуб» role), which is itself the finding. Do not treat him as a network participant; add roles only if a sourced tie appears. Only the two sourced facts are recorded; no DOB, ИНН or address on file.",
+        "sources": [
+          "s7344",
+          "s0561"
+        ],
+        "why": [
+          "2026-09-19: created at user direction to monitor family ties of PEP-linked persons; father-son tie confirmed by RuPEP's own family list."
+        ]
+      }
   ]
 }

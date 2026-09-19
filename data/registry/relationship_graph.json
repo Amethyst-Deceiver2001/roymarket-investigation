@@ -1,8 +1,8 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1124,
-  "edge_count": 1884,
+  "node_count": 1133,
+  "edge_count": 1908,
   "unresolved_count": 107,
   "nodes": [
     {
@@ -1018,6 +1018,18 @@
       "degree": 2
     },
     {
+      "id": "csn-bars-sarmat",
+      "kind": "entity",
+      "label": "Центр специального назначения (добровольческий, беспилотных систем) «Барс-Сармат»",
+      "name_latin": "CSN \"Bars-Sarmat\" (Rogozin)",
+      "inn": null,
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 6
+    },
+    {
       "id": "customer::various-regional-мвд-directorates",
       "kind": "government_customer",
       "label": "Various regional МВД directorates (ГУ МВД/УМВД по субъектам РФ)",
@@ -1744,6 +1756,18 @@
       "degree": 2
     },
     {
+      "id": "fond-sarmat",
+      "kind": "entity",
+      "label": "Общественно полезный фонд научно-технологического и социально-экономического развития «Сармат»",
+      "name_latin": "Fond \"Sarmat\"",
+      "inn": "6154168283",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "Фонд",
+      "variant": null,
+      "degree": 2
+    },
+    {
       "id": "fond-sozidanie",
       "kind": "entity",
       "label": "Фонд поддержки социальных инициатив «Созидание»",
@@ -2080,6 +2104,14 @@
       "degree": 1
     },
     {
+      "id": "khabibulin-vladimir-igorevich",
+      "kind": "person",
+      "label": "Хабибулин Владимир Игоревич",
+      "name_latin": "Khabibulin Vladimir Igorevich",
+      "sanctioned": false,
+      "degree": 7
+    },
+    {
       "id": "khamukhin-anatoliy-vladimirovich",
       "kind": "person",
       "label": "Хамухин Анатолий Владимирович",
@@ -2112,12 +2144,20 @@
       "degree": 1
     },
     {
+      "id": "kiselev-dmitriy-konstantinovich",
+      "kind": "person",
+      "label": "Киселёв Дмитрий Константинович",
+      "name_latin": "Dmitry Konstantinovich Kiselev",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "kiselev-gleb-dmitrievich",
       "kind": "person",
       "label": "Киселёв Глеб Дмитриевич",
       "name_latin": "Kiselev Gleb Dmitrievich",
       "sanctioned": false,
-      "degree": 1
+      "degree": 2
     },
     {
       "id": "kishikov-sergey-sergeevich",
@@ -2338,6 +2378,14 @@
       "name_latin": "Kryuchkov Dmitriy Aleksandrovich",
       "sanctioned": false,
       "degree": 5
+    },
+    {
+      "id": "kulemin-igor-aleksandrovich",
+      "kind": "person",
+      "label": "Кулемин Игорь Александрович",
+      "name_latin": "Kulemin Igor Aleksandrovich",
+      "sanctioned": false,
+      "degree": 6
     },
     {
       "id": "kulibin-klub",
@@ -2900,6 +2948,18 @@
       "degree": 15
     },
     {
+      "id": "ooo-arkhangel-shchit",
+      "kind": "entity",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ ЩИТ\"",
+      "name_latin": "OOO \"Arkhangel Shchit\" (\"Arkhangel Shield\")",
+      "inn": "5027339008",
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": "ООО",
+      "variant": "defensive",
+      "degree": 8
+    },
+    {
       "id": "ooo-arkodim",
       "kind": "entity",
       "label": "ООО «Аркодим»",
@@ -3246,6 +3306,18 @@
       "legal_form": null,
       "variant": null,
       "degree": 6
+    },
+    {
+      "id": "ooo-hab-svo",
+      "kind": "entity",
+      "label": "ООО «Хаб СВО»",
+      "name_latin": null,
+      "inn": "9722102248",
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 8
     },
     {
       "id": "ooo-ik-aviaok",
@@ -7121,6 +7193,19 @@
       "degree": 1
     },
     {
+      "id": "product::ooo-arkhangel-shchit::дрон-перехватчик-архангел",
+      "kind": "product",
+      "label": "Дрон-перехватчик «Архангел»",
+      "owner_slug": "ooo-arkhangel-shchit",
+      "source_id": "s5456",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::ooo-atlant-aero::орион",
       "kind": "product",
       "label": "Орион",
@@ -10068,7 +10153,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": "defensive",
-      "degree": 18
+      "degree": 20
     },
     {
       "id": "protorguev-sergey-aleksandrovich",
@@ -10116,7 +10201,15 @@
       "label": "Рогозин Алексей Дмитриевич",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 7
+      "degree": 8
+    },
+    {
+      "id": "rogozin-dmitriy-olegovich",
+      "kind": "person",
+      "label": "Рогозин Дмитрий Олегович",
+      "name_latin": "Dmitry Olegovich Rogozin",
+      "sanctioned": false,
+      "degree": 5
     },
     {
       "id": "roman-academy-chat-79168352900",
@@ -15201,6 +15294,28 @@
       "confidence": null
     },
     {
+      "source": "csn-bars-sarmat",
+      "target": "fond-sarmat",
+      "type": "related",
+      "label": "group-structure",
+      "source_id": "s7682",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "csn-bars-sarmat",
+      "target": "proekt-kb-arkhangel",
+      "type": "related",
+      "label": "training-partnership",
+      "source_id": "s7694",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "customer::various-regional-мвд-directorates",
       "target": "ao-nii-stt",
       "type": "procures",
@@ -18160,6 +18275,17 @@
       "confidence": null
     },
     {
+      "source": "fond-sarmat",
+      "target": "csn-bars-sarmat",
+      "type": "related",
+      "label": "group-structure",
+      "source_id": "s7682",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "fond-sozidanie",
       "target": "ooo-investproektgrupp",
       "type": "founded",
@@ -19172,6 +19298,83 @@
       "confidence": null
     },
     {
+      "source": "khabibulin-vladimir-igorevich",
+      "target": "ooo-arkhangel-shchit",
+      "type": "directs",
+      "label": null,
+      "source_id": "s5517",
+      "as_of": "2025-06-24",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "khabibulin-vladimir-igorevich",
+      "target": "ooo-arkhangel-shchit",
+      "type": "directs",
+      "label": null,
+      "source_id": "s6797",
+      "as_of": "2025-08-26",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "khabibulin-vladimir-igorevich",
+      "target": "ooo-arkhangel-shchit",
+      "type": "role",
+      "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "khabibulin-vladimir-igorevich",
+      "target": "ooo-arkhangel-shchit",
+      "type": "role",
+      "label": "генеральный директор",
+      "source_id": "s5517",
+      "as_of": "2025-06-24",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "khabibulin-vladimir-igorevich",
+      "target": "ooo-hab-svo",
+      "type": "directs",
+      "label": null,
+      "source_id": null,
+      "as_of": "2026-09-07",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "khabibulin-vladimir-igorevich",
+      "target": "ooo-hab-svo",
+      "type": "role",
+      "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "khabibulin-vladimir-igorevich",
+      "target": "ooo-hab-svo",
+      "type": "role",
+      "label": "генеральный директор",
+      "source_id": "s6913",
+      "as_of": "2025-07-21",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "khamukhin-anatoliy-vladimirovich",
       "target": "npts-elvis",
       "type": "role",
@@ -19599,6 +19802,17 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
+    },
+    {
+      "source": "kiselev-gleb-dmitrievich",
+      "target": "kiselev-dmitriy-konstantinovich",
+      "type": "family_tie",
+      "label": "son",
+      "source_id": "s7344",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "confirmed"
     },
     {
       "source": "kiselev-gleb-dmitrievich",
@@ -20509,6 +20723,72 @@
       "label": "генеральный директор and co-founder (15%)",
       "source_id": "s5506",
       "as_of": "2026-03-12",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kulemin-igor-aleksandrovich",
+      "target": "ooo-arkhangel-shchit",
+      "type": "founded",
+      "label": "100%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kulemin-igor-aleksandrovich",
+      "target": "ooo-arkhangel-shchit",
+      "type": "role",
+      "label": "founder",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kulemin-igor-aleksandrovich",
+      "target": "ooo-arkhangel-shchit",
+      "type": "role",
+      "label": "sole founder (100%)",
+      "source_id": "s5517",
+      "as_of": "2025-06-24",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kulemin-igor-aleksandrovich",
+      "target": "ooo-hab-svo",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kulemin-igor-aleksandrovich",
+      "target": "ooo-hab-svo",
+      "type": "role",
+      "label": "founder",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kulemin-igor-aleksandrovich",
+      "target": "ooo-hab-svo",
+      "type": "role",
+      "label": "учредитель (founder, share % not yet confirmed)",
+      "source_id": "s6913",
+      "as_of": "2025-07-21",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -22833,6 +23113,17 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-arkhangel-shchit",
+      "target": "product::ooo-arkhangel-shchit::дрон-перехватчик-архангел",
+      "type": "produces",
+      "label": null,
+      "source_id": "s5456",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
     },
     {
       "source": "ooo-arkodim",
@@ -27434,6 +27725,17 @@
     },
     {
       "source": "proekt-kb-arkhangel",
+      "target": "csn-bars-sarmat",
+      "type": "related",
+      "label": "training-partnership",
+      "source_id": "s7694",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "proekt-kb-arkhangel",
       "target": "npo-kaysant",
       "type": "related",
       "label": "component-supplier",
@@ -27648,6 +27950,61 @@
       "label": "Член Совета директоров; также долгосрочный займодавец (₽302 тыс., 6.5%, погашение по предъявлении)",
       "source_id": "s0324",
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "rogozin-aleksey-dmitrievich",
+      "target": "rogozin-dmitriy-olegovich",
+      "type": "family_tie",
+      "label": "son",
+      "source_id": "s2607",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "confirmed"
+    },
+    {
+      "source": "rogozin-dmitriy-olegovich",
+      "target": "csn-bars-sarmat",
+      "type": "directs",
+      "label": null,
+      "source_id": "s7687",
+      "as_of": "2026-09-19",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "rogozin-dmitriy-olegovich",
+      "target": "csn-bars-sarmat",
+      "type": "role",
+      "label": "Начальник Центра (commander) of ЦСН «Барс-Сармат»; the unit's own site gives him as 'Начальник Центра специального назначения отряда беспилотных систем «Барс-Сармат»' and, since September 2024, 'командир' of its first volunteer detachment. Archangel's own channel names him 'командир БАРС Сармат' (17.10.2024)",
+      "source_id": "s7687",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "rogozin-dmitriy-olegovich",
+      "target": "ooo-hab-svo",
+      "type": "role",
+      "label": "Self-described \"флагман движения\" (movement flagship/figurehead) -- named backer, corroborated by his own channel",
+      "source_id": "s6912",
+      "as_of": "2024-11-05",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "rogozin-dmitriy-olegovich",
+      "target": "ooo-hab-svo",
+      "type": "role",
+      "label": "Personally cross-posted a Проект «Архангел» recruitment announcement on his own channel, with enthusiastic endorsement framing",
+      "source_id": "s6915",
+      "as_of": "2025-04-22",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -33136,7 +33493,6 @@
     "ivlev-artem-yurevich",
     "kalinovskiy-nikita-vladislavovich",
     "kashnikov-konstantin-nikolaevich",
-    "khabibulin-vladimir-igorevich",
     "khristyuk-ekaterina-valerevna",
     "khristyuk-vladimir-vladimirovich",
     "kindyakov-andrey-andreevich",
@@ -33144,7 +33500,6 @@
     "korolev-dmitriy-alekseevich",
     "kraskovskiy-vyacheslav-aleksandrovich",
     "krylov-andrey-olegovich",
-    "kulemin-igor-aleksandrovich",
     "kurteev-aleksandr-sergeevich",
     "kusumov-vakhid-abdulovich",
     "kuznetsov-pavel-vladislavovich",
@@ -33162,7 +33517,6 @@
     "ooo-arkhangel-crimea",
     "ooo-arkhangel-istra",
     "ooo-arkhangel-melitopol-2",
-    "ooo-arkhangel-shchit",
     "ooo-arkhangel-tsentr",
     "ooo-arkhangel-zaporizhzhie",
     "ooo-as-kam",
@@ -33174,7 +33528,6 @@
     "ooo-eliars",
     "ooo-geron",
     "ooo-ges-2",
-    "ooo-hab-svo",
     "ooo-instekh",
     "ooo-intek-bespilotnye-sistemy",
     "ooo-krams",
@@ -33193,7 +33546,6 @@
     "ooo-zetaks",
     "porsev-andrey-valerevich",
     "product::ao-ross::мобильный-привязной-аэростатный-комплекс-акв-05",
-    "product::ooo-arkhangel-shchit::дрон-перехватчик-архангел",
     "product::ooo-arkhangel-zaporizhzhie::вынос-пульта-управления-бпла",
     "product::ooo-arkhangel-zaporizhzhie::дрон-перехватчик-архангел",
     "product::ooo-arkhangel-zaporizhzhie::полевой-обнаружитель-подавитель-радиоканалов-управления-бпла-дозор-1п",
@@ -33246,7 +33598,6 @@
     "product::yarl::бронежилет-для-собак-псы-войны",
     "prokofev-mikhail-vasilevich",
     "protsenko-artem-vitalevich",
-    "rogozin-dmitriy-olegovich",
     "shatskikh-aleksandr-vladimirovich",
     "skoryatin-georgiy-andreevich",
     "stub::inn-5216017944",

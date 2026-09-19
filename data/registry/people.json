@@ -18546,6 +18546,12 @@
         "rivate aviation-engineering firm reported (Nov. 2022) to be developing Russia's first electric VTOL aircraft. Both roles are now independently press-confirmed: corporate-registry press coverage names Алексей Дмитриевич Рогозин directly as the АНО's head, and Vedomosti reports him as chairman of Эколибри's advisory council specifically, discussing drone-regulation policy — matching this critical source's framing exactly. Эколибри's own FY2021–25 БФО filings"
       ]
     },
+    "family_of": {
+      "principal_slug": "rogozin-dmitriy-olegovich",
+      "relation": "son",
+      "confidence": "confirmed",
+      "source_id": "s2607"
+    },
     "open_questions": [
       {
         "source_id": "s1969",
@@ -20619,6 +20625,12 @@
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "family_of": {
+      "principal_slug": "kiselev-dmitriy-konstantinovich",
+      "relation": "son",
+      "confidence": "confirmed",
+      "source_id": "s7344"
+    },
     "_corrected": [
       "User correction 2026-09-08: he is both PEP-adjacent AND a defense-industry figure in his own right — Кулибин-клуб is on this project's list; re-read the already-archived roundtable transcript (s0560) and found his own quotes about the testing/procurement pipeline, previously under-mined",
       "Housekeeping: re-archived RuPEP PDF (s7344) under naming convention, found a previously unrecorded 2016-2019 corporate stake"
@@ -47142,8 +47154,8 @@
     "slug": "rogozin-dmitriy-olegovich",
     "fio_ru": "Рогозин Дмитрий Олегович",
     "name_latin": "Dmitry Olegovich Rogozin",
-    "dob": null,
-    "birthplace": null,
+    "dob": "1963-12-21",
+    "birthplace": "Москва (Moscow)",
     "address": null,
     "inn_personal": null,
     "roles": [
@@ -47162,6 +47174,14 @@
         "from": "2025-04-22",
         "to": null,
         "source_id": "s6915"
+      },
+      {
+        "title": "Начальник Центра (commander) of ЦСН «Барс-Сармат»; the unit's own site gives him as 'Начальник Центра специального назначения отряда беспилотных систем «Барс-Сармат»' and, since September 2024, 'командир' of its first volunteer detachment. Archangel's own channel names him 'командир БАРС Сармат' (17.10.2024)",
+        "entity_name": "ЦСН «Барс-Сармат»",
+        "entity_slug": "csn-bars-sarmat",
+        "from": "2024-09",
+        "to": null,
+        "source_id": "s7687"
       }
     ],
     "sanctions": [],
@@ -48185,5 +48205,35 @@
     ],
     "_merged_into": "makhnev-aleksandr-igorevich",
     "_verified_against": null
+  },
+  {
+    "slug": "kiselev-dmitriy-konstantinovich",
+    "fio_ru": "Киселёв Дмитрий Константинович",
+    "name_latin": "Dmitry Konstantinovich Kiselev",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": null,
+    "roles": [],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Named as father of Киселёв Глеб Дмитриевич by RuPEP (s7344: 'Киселёв Дмитрий Константинович – отец, ФГУП ВГТРК, автор и ...') and, as head of МИА «Россия сегодня», by the pointmedia.io profile of his elder son (s0561). PEP-context only, NOT a stakeholder in this network: no tie of his own to any entity here is on file. Recorded 2026-09-19 as the principal end of the family tie because a high-profile loyalist media figure's son is active in the military-coded drone industry (his son's «Кулибин-клуб» role), which is itself the finding. Do not treat him as a network participant; add roles only if a sourced tie appears. Only the two sourced facts are recorded; no DOB, ИНН or address on file.",
+    "sources": [
+      "s7344",
+      "s0561"
+    ],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-19: created at user direction to monitor family ties of PEP-linked persons; father-son tie confirmed by RuPEP's own family list."
+    ]
   }
 ]
