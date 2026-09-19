@@ -193,8 +193,10 @@ Matching never depends on it.
   `extract_registry.py` and `scripts/registry_lookup.py` do this; new code that compares
   names must too. In Latin keys `yo` folds to `e` as well (Kiselyov = Kiselev,
   Artyom = Artem).
-- **Latin display**: render ё as **yo** ("Alyoshin", "Artyom", "Makhnyov") when we
-  transliterate ourselves; where a source gives a Latin spelling (a sanctions-list entry, a
+- **Latin display**: render ё as **yo** ("Alyoshin", "Artyom") when we transliterate
+  ourselves and no romanisation is established -- an accepted romanisation that puts е
+  for ё ("Makhnev", "Kiselev") is kept, and wins over a mechanical "yo" (decided
+  2026-09-19 when the duplicate `makhnyov-` record was retired); where a source gives a Latin spelling (a sanctions-list entry, a
   patent record) keep that spelling as-is, because that is the string a screener will
   search. Slugs stay ASCII and are not renamed when a ё is added.
 - **Audit**: `python3 scripts/yo_audit.py` lists same-person and cross-record spelling

@@ -1,7 +1,7 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1096,
+  "node_count": 1095,
   "edge_count": 1835,
   "unresolved_count": 120,
   "nodes": [
@@ -2275,17 +2275,9 @@
       "id": "makhnev-aleksandr-igorevich",
       "kind": "person",
       "label": "Махнёв Александр Игоревич",
-      "name_latin": null,
+      "name_latin": "Makhnev Aleksandr Igorevich",
       "sanctioned": false,
-      "degree": 1
-    },
-    {
-      "id": "makhnyov-aleksandr-igorevich",
-      "kind": "person",
-      "label": "Махнёв Александр Игоревич",
-      "name_latin": "Makhnyov Aleksandr Igorevich",
-      "sanctioned": false,
-      "degree": 1
+      "degree": 2
     },
     {
       "id": "malevich-pavel-vladimirovich",
@@ -20134,7 +20126,7 @@
       "confidence": null
     },
     {
-      "source": "makhnyov-aleksandr-igorevich",
+      "source": "makhnev-aleksandr-igorevich",
       "target": "ao-stratim",
       "type": "role",
       "label": "Технический директор; shareholder 4.5% (675 of 15,000 shares)",

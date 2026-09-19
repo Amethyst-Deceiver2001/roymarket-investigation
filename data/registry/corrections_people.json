@@ -5690,6 +5690,33 @@
       "why": [
         "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link)."
       ]
+    },
+    "makhnyov-aleksandr-igorevich": {
+      "set": {
+        "_merged_into": "makhnev-aleksandr-igorevich"
+      },
+      "why": [
+        "2026-09-19: retired as a duplicate of makhnev-aleksandr-igorevich at the user's direction. Same name (Махнёв Александр Игоревич); the canonical slug keeps the \"makhnev\" romanisation because it is the accepted one (Russian е standing in for ё in a proper name). The АО «Стратим» role (s0332) moved to the canonical record."
+      ]
+    },
+    "makhnev-aleksandr-igorevich": {
+      "set": {
+        "name_latin": "Makhnev Aleksandr Igorevich",
+        "notes": "2026-09-19: absorbs the retired duplicate makhnyov-aleksandr-igorevich. Technical director and shareholder (4.5%, 675 of 15,000 shares, since 01.08.2024) of АО «Стратим» per the entity's own audited FY2025 БФО filing (s0332).",
+        "roles": [
+          {
+            "entity_name": "АО «Стратим»",
+            "entity_slug": "ao-stratim",
+            "from": "2024-08-01",
+            "source_id": "s0332",
+            "title": "Технический директор; shareholder 4.5% (675 of 15,000 shares)",
+            "to": null
+          }
+        ]
+      },
+      "why": [
+        "2026-09-19: roles and notes carried over from makhnyov-aleksandr-igorevich when that duplicate was retired; name_latin set to the romanisation the user confirmed as accepted (е for ё), replacing the duplicate's \"Makhnyov\"."
+      ]
     }
   },
   "people_add_entities": [
