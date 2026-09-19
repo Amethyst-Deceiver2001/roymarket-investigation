@@ -173,6 +173,33 @@ Cyrillic original stays available.
 - **Never fabricate** a given name or patronymic to complete a form. "Surname
   I.O." is an honest fallback where the source gives no more.
 
+### 2.5 ё and е — one policy for spelling, one for matching
+
+Decided 2026-09-19. Proper names are spelled with **ё** wherever a source for that
+person or entity gives it, as a house style, in Russian and in transliteration.
+Matching never depends on it.
+
+- **Store and display ё where a source has it.** «Алёшин», «Артём», «Киселёв», «Пётр»,
+  «Махнёв». One source giving ё is enough; the ё form is the canonical `fio_ru`/`name_ru`.
+- **Never infer ё from a name's shape, and never read a missing ё as evidence.** ЕГРЮЛ,
+  passport scans and most court filings drop it. Королёв and Королев are different
+  surnames, Фёдоров and Федоров both exist; add a ё only from a source for *that* person.
+  Do not bulk-convert.
+- **Never touch verbatim text.** Quotes, source files, `source_id`-backed strings,
+  ЕГРЮЛ-derived history values and any ALL-CAPS register text keep the source's
+  spelling (§3.1). The house style applies to our own prose and to the canonical name
+  fields only.
+- **All matching folds ё to е on both sides.** The graph builder, `check_registry.py`,
+  `extract_registry.py` and `scripts/registry_lookup.py` do this; new code that compares
+  names must too. In Latin keys `yo` folds to `e` as well (Kiselyov = Kiselev,
+  Artyom = Artem).
+- **Latin display**: render ё as **yo** ("Alyoshin", "Artyom", "Makhnyov") when we
+  transliterate ourselves; where a source gives a Latin spelling (a sanctions-list entry, a
+  patent record) keep that spelling as-is, because that is the string a screener will
+  search. Slugs stay ASCII and are not renamed when a ё is added.
+- **Audit**: `python3 scripts/yo_audit.py` lists same-person and cross-record spelling
+  splits and word-level leads. Only a same-person hit is safe to fix without a source.
+
 ### 2.3 Legal-entity names — transliterate the legal form, never translate it
 
 **The legal-form abbreviation is part of the registered name and stays

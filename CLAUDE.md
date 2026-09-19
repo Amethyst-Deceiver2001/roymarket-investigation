@@ -549,12 +549,17 @@ registered as an entity's founder) the builder surfaces them automatically. Thei
 profile pages are unaffected. Set it deliberately per person with a `why` note; it is
 not inferred.
 
+**ё policy (STYLE_GUIDE.md §2.5):** names are *spelled* with ё wherever a source for that
+person gives it, and *matched* with ё folded to е on both sides -- never let one depend on
+the other. Do not add a ё without a source for that person, and never edit verbatim
+quotes or source text. `python3 scripts/yo_audit.py` reports spelling splits.
+
 **Look a name up with `scripts/registry_lookup.py` before calling it unrecorded.** A graph
 "unresolved stub", a name in a post, a counterparty in a court filing -- none of them is
 "not in the registry" until it has been through the fuzzy lookup (`python3
 scripts/registry_lookup.py "Фонд Градислава"`, or `--stubs` / `--nulls` for a rescan). It
 matches the bare name, name with ООО/АО/Фонд, a `" | "` alias part, `brand_ru`, Latin names,
-`name_history`, ё/е, and Cyrillic<->Latin transliteration, plus spelling variants for
+`name_history`, ё/е (and Latin yo/e), Cyrillic<->Latin transliteration, `_merged_into` tombstones (answered with the canonical record), plus spelling variants for
 people. On 2026-09-19 Фонд «Градислава» was called unrecorded while sitting in
 `entities.json` under `"Фонд «Градислава» | historic & cultural heritage preservation"`.
 Its lower tiers (`contains`, `fuzzy`, `initials`) are leads to read, never automatic

@@ -49,6 +49,7 @@ def translit(s: str) -> str:
 
 def key_latin(s: str) -> str:
     s = _LATIN_FORMS.sub(" ", s.lower())
+    s = re.sub(r"(?<=[bcdfghjklmnpqrstvwxz])yo|(?<=\b)yo", "e", s)  # Kiselyov/Kiselev, Artyom/Artem
     return re.sub(r"[^a-z0-9]+", " ", s).strip()
 
 
@@ -75,13 +76,18 @@ def _same_but_surname(a: str, b: str) -> bool:
 class Registry:
     def __init__(self):
         self.records = []  # (slug, kind, label, [(field, string)])
+        self.merged = {}   # tombstone slug -> canonical slug (_merged_into)
         for e in _load("entities.json"):
+            if e.get("_merged_into"):
+                self.merged[e["slug"]] = e["_merged_into"]
             names = [("name_ru", e.get("name_ru")), ("brand_ru", e.get("brand_ru")),
                      ("name_latin", e.get("name_latin")), ("brand_latin", e.get("brand_latin"))]
             names += [("name_history", h.get("value")) for h in e.get("name_history") or []
                       if isinstance(h, dict)]
             self.records.append((e["slug"], "entity", e.get("name_ru") or e["slug"], self._expand(names)))
         for p in _load("people.json"):
+            if p.get("_merged_into"):
+                self.merged[p["slug"]] = p["_merged_into"]
             names = [("fio_ru", p.get("fio_ru")), ("name_latin", p.get("name_latin"))]
             self.records.append((p["slug"], "person", p.get("fio_ru") or p["slug"], self._expand(names)))
         self.by_key = {}
@@ -115,6 +121,8 @@ class Registry:
         hits, seen = [], set()
 
         def add(tier, score, slug, kind, label, field):
+            if slug in self.merged:  # a tombstone answers with the record it was merged into
+                field, slug = f"{field}; tombstone of {self.merged[slug]}", self.merged[slug]
             if kind in kinds and (slug, tier) not in seen:
                 seen.add((slug, tier))
                 hits.append((tier, score, slug, kind, label, field))
