@@ -319,13 +319,21 @@ def build_graph(entities: list[dict], people: list[dict],
     # misses, and only for 3-token names, to keep the match tight.
     name_to_slug_sorted = {}
     for entity in entities:
+        # name_ru carries an alias after " | " on some records ("Фонд «Градислава» | historic
+        # & cultural heritage preservation"); index each part too, or a reference using the
+        # plain name misses the entity and becomes a stub (found 2026-09-19: Градислава, ДАР,
+        # ЗИТ.ЦИ and УК «Азимут» were all stubs beside their own registry records).
+        names = []
         for name in (entity.get("name_ru"), entity.get("brand_ru")):
             if name:
-                key = normalize(name)
-                name_to_slug.setdefault(key, entity["slug"])
-                tokens = key.split()
-                if len(tokens) == 3:
-                    name_to_slug_sorted.setdefault(tuple(sorted(tokens)), entity["slug"])
+                names.append(name)
+                names.extend(part for part in name.split(" | ") if part.strip() and part != name)
+        for name in names:
+            key = normalize(name)
+            name_to_slug.setdefault(key, entity["slug"])
+            tokens = key.split()
+            if len(tokens) == 3:
+                name_to_slug_sorted.setdefault(tuple(sorted(tokens)), entity["slug"])
     for person in people:
         if person.get("fio_ru"):
             key = normalize(person["fio_ru"])

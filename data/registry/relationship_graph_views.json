@@ -514,7 +514,7 @@
           "sanctioned": false,
           "legal_form": "УК",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ao-uk-smart",
@@ -1490,7 +1490,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -1502,7 +1502,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "fond-nasha-pravda",
@@ -3710,7 +3710,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 16
+          "degree": 17
         },
         {
           "id": "ordzhonikidze-aleksey-grigorevich",
@@ -8740,12 +8740,6 @@
           "degree": 1
         },
         {
-          "id": "stub::зит.ци",
-          "kind": "unresolved",
-          "label": "ЗИТ.ЦИ",
-          "degree": 1
-        },
-        {
           "id": "stub::зпиф комбинированный технофонд",
           "kind": "unresolved",
           "label": "ЗПИФ комбинированный «Технофонд»",
@@ -8978,12 +8972,6 @@
           "kind": "unresolved",
           "label": "Тращёнок Людмила Ефимовна",
           "degree": 2
-        },
-        {
-          "id": "stub::ук азимут",
-          "kind": "unresolved",
-          "label": "АО «УК «Азимут»»",
-          "degree": 1
         },
         {
           "id": "stub::управляющая организация: ооо кронштадт-техник",
@@ -10827,6 +10815,17 @@
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
+          "target": "ooo-aerotekhalyans",
+          "type": "founded",
+          "label": "25%",
+          "source_id": "s0224",
+          "as_of": "2025-02-19",
+          "weight": 1.0,
+          "temporal_status": "current",
           "confidence": null
         },
         {
@@ -19885,6 +19884,17 @@
         {
           "source": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
           "target": "ooo-aerotekhalyans",
+          "type": "founded",
+          "label": "51%",
+          "source_id": "s0224",
+          "as_of": "2025-02-19",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
+          "target": "ooo-aerotekhalyans",
           "type": "owns",
           "label": "51%",
           "source_id": "s0224",
@@ -22424,17 +22434,6 @@
           "confidence": null
         },
         {
-          "source": "stub::зит.ци",
-          "target": "ooo-aerotekhalyans",
-          "type": "founded",
-          "label": "51%",
-          "source_id": "s0224",
-          "as_of": "2025-02-19",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "stub::зпиф комбинированный технофонд",
           "target": "ooo-gk-aeromaks",
           "type": "founded",
@@ -22949,17 +22948,6 @@
           "as_of": "2008-06-02",
           "weight": 1.0,
           "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::ук азимут",
-          "target": "ooo-aerotekhalyans",
-          "type": "founded",
-          "label": "25%",
-          "source_id": "s0224",
-          "as_of": "2025-02-19",
-          "weight": 1.0,
-          "temporal_status": "current",
           "confidence": null
         },
         {
@@ -24444,7 +24432,7 @@
           "sanctioned": false,
           "legal_form": "УК",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ao-uk-smart",
@@ -24664,7 +24652,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -24676,7 +24664,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "fond-nasha-pravda",
@@ -25892,7 +25880,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 16
+          "degree": 17
         },
         {
           "id": "ovod",
@@ -26177,12 +26165,6 @@
           "degree": 1
         },
         {
-          "id": "stub::зит.ци",
-          "kind": "unresolved",
-          "label": "ЗИТ.ЦИ",
-          "degree": 1
-        },
-        {
           "id": "stub::кайденко анна викторовна",
           "kind": "unresolved",
           "label": "Кайденко Анна Викторовна",
@@ -26343,12 +26325,6 @@
           "kind": "unresolved",
           "label": "Струлев Игорь Леонидович",
           "degree": 3
-        },
-        {
-          "id": "stub::ук азимут",
-          "kind": "unresolved",
-          "label": "АО «УК «Азимут»»",
-          "degree": 1
         },
         {
           "id": "stub::управляющая организация: ооо кронштадт-техник",
@@ -26598,6 +26574,17 @@
           "label": null,
           "source_id": "s6725",
           "as_of": "2026-08-10",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
+          "target": "ooo-aerotekhalyans",
+          "type": "founded",
+          "label": "25%",
+          "source_id": "s0224",
+          "as_of": "2025-02-19",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -27428,6 +27415,17 @@
           "confidence": null
         },
         {
+          "source": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
+          "target": "ooo-aerotekhalyans",
+          "type": "founded",
+          "label": "51%",
+          "source_id": "s0224",
+          "as_of": "2025-02-19",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
           "source": "pavlova-tatyana-viktorovna",
           "target": "ao-ekolibri",
           "type": "directs",
@@ -28099,17 +28097,6 @@
           "confidence": null
         },
         {
-          "source": "stub::зит.ци",
-          "target": "ooo-aerotekhalyans",
-          "type": "founded",
-          "label": "51%",
-          "source_id": "s0224",
-          "as_of": "2025-02-19",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "stub::кайденко анна викторовна",
           "target": "ooo-nova",
           "type": "directs",
@@ -28490,17 +28477,6 @@
           "label": null,
           "source_id": "s0477",
           "as_of": "2025-06-16",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::ук азимут",
-          "target": "ooo-aerotekhalyans",
-          "type": "founded",
-          "label": "25%",
-          "source_id": "s0224",
-          "as_of": "2025-02-19",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -29090,6 +29066,30 @@
           "name_latin": null,
           "sanctioned": true,
           "degree": 1
+        },
+        {
+          "id": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+          "kind": "entity",
+          "label": "Фонд «ДАР» | Фонд региональных некоммерческих проектов",
+          "name_latin": null,
+          "inn": "7705517400",
+          "tier": "money-layer",
+          "sanctioned": false,
+          "legal_form": "Фонд",
+          "variant": null,
+          "degree": 5
+        },
+        {
+          "id": "fond-gradislava-historic-cultural-heritage-preservation",
+          "kind": "entity",
+          "label": "Фонд «Градислава» | historic & cultural heritage preservation",
+          "name_latin": null,
+          "inn": "7704278421",
+          "tier": "money-layer",
+          "sanctioned": false,
+          "legal_form": "Фонд",
+          "variant": null,
+          "degree": 6
         },
         {
           "id": "fond-nasha-pravda",
@@ -29773,18 +29773,6 @@
           "degree": 1
         },
         {
-          "id": "stub::градислава",
-          "kind": "unresolved",
-          "label": "Фонд «Градислава»",
-          "degree": 1
-        },
-        {
-          "id": "stub::дар",
-          "kind": "unresolved",
-          "label": "Фонд «ДАР»",
-          "degree": 1
-        },
-        {
           "id": "stub::михайлов юрий геннадьевич",
           "kind": "unresolved",
           "label": "Михайлов Юрий Геннадьевич",
@@ -30338,6 +30326,28 @@
           "type": "role",
           "label": "Член Наблюдательного совета",
           "source_id": "s0389",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+          "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "fond-gradislava-historic-cultural-heritage-preservation",
+          "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -31059,28 +31069,6 @@
           "confidence": null
         },
         {
-          "source": "stub::градислава",
-          "target": "fond-nasha-pravda",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::дар",
-          "target": "fond-nasha-pravda",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "stub::михайлов юрий геннадьевич",
           "target": "ooo-sistemnyy-integrator",
           "type": "directs",
@@ -31608,7 +31596,7 @@
           "sanctioned": false,
           "legal_form": "УК",
           "variant": null,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ao-uk-smart",
@@ -31824,7 +31812,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -31836,7 +31824,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "fond-nasha-pravda",
@@ -33492,7 +33480,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 16
+          "degree": 17
         },
         {
           "id": "ordzhonikidze-aleksey-grigorevich",
@@ -35233,22 +35221,10 @@
           "degree": 2
         },
         {
-          "id": "stub::градислава",
-          "kind": "unresolved",
-          "label": "Фонд «Градислава»",
-          "degree": 1
-        },
-        {
           "id": "stub::григорьев дмитрий евгеньевич",
           "kind": "unresolved",
           "label": "Григорьев Дмитрий Евгеньевич",
           "degree": 4
-        },
-        {
-          "id": "stub::дар",
-          "kind": "unresolved",
-          "label": "Фонд «ДАР»",
-          "degree": 1
         },
         {
           "id": "stub::дедал",
@@ -36824,7 +36800,29 @@
         },
         {
           "source": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+          "target": "fond-nasha-pravda",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
           "target": "ooo-orion",
+          "type": "founded",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "fond-gradislava-historic-cultural-heritage-preservation",
+          "target": "fond-nasha-pravda",
           "type": "founded",
           "label": null,
           "source_id": null,
@@ -40189,30 +40187,8 @@
           "confidence": null
         },
         {
-          "source": "stub::градислава",
-          "target": "fond-nasha-pravda",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "stub::григорьев дмитрий евгеньевич",
           "target": "ooo-investments",
-          "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::дар",
-          "target": "fond-nasha-pravda",
           "type": "founded",
           "label": null,
           "source_id": null,

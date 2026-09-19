@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1095,
+  "node_count": 1091,
   "edge_count": 1818,
-  "unresolved_count": 124,
+  "unresolved_count": 120,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -523,7 +523,7 @@
       "sanctioned": false,
       "legal_form": "УК",
       "variant": null,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "ao-uk-smart",
@@ -1499,7 +1499,7 @@
       "sanctioned": false,
       "legal_form": "Фонд",
       "variant": null,
-      "degree": 4
+      "degree": 5
     },
     {
       "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -1511,7 +1511,7 @@
       "sanctioned": false,
       "legal_form": "Фонд",
       "variant": null,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "fond-nasha-pravda",
@@ -3751,7 +3751,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 16
+      "degree": 17
     },
     {
       "id": "ordzhonikidze-aleksey-grigorevich",
@@ -10239,12 +10239,6 @@
       "degree": 1
     },
     {
-      "id": "stub::градислава",
-      "kind": "unresolved",
-      "label": "Фонд «Градислава»",
-      "degree": 1
-    },
-    {
       "id": "stub::григорьев д.е",
       "kind": "unresolved",
       "label": "Григорьев Д.Е",
@@ -10255,12 +10249,6 @@
       "kind": "unresolved",
       "label": "Григорьев Дмитрий Евгеньевич",
       "degree": 4
-    },
-    {
-      "id": "stub::дар",
-      "kind": "unresolved",
-      "label": "Фонд «ДАР»",
-      "degree": 1
     },
     {
       "id": "stub::дедал",
@@ -10314,12 +10302,6 @@
       "id": "stub::защитаинфотранс министерства транспорта российской федерации",
       "kind": "unresolved",
       "label": "ФГУП «ЗащитаИнфоТранс Министерства транспорта Российской Федерации»",
-      "degree": 1
-    },
-    {
-      "id": "stub::зит.ци",
-      "kind": "unresolved",
-      "label": "ЗИТ.ЦИ",
       "degree": 1
     },
     {
@@ -10662,12 +10644,6 @@
       "id": "stub::туляков александр владимирович",
       "kind": "unresolved",
       "label": "Туляков Александр Владимирович",
-      "degree": 1
-    },
-    {
-      "id": "stub::ук азимут",
-      "kind": "unresolved",
-      "label": "АО «УК «Азимут»»",
       "degree": 1
     },
     {
@@ -12934,6 +12910,17 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
+      "target": "ooo-aerotekhalyans",
+      "type": "founded",
+      "label": "25%",
+      "source_id": "s0224",
+      "as_of": "2025-02-19",
+      "weight": 1.0,
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -17272,7 +17259,29 @@
     },
     {
       "source": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+      "target": "fond-nasha-pravda",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
       "target": "ooo-orion",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "fond-gradislava-historic-cultural-heritage-preservation",
+      "target": "fond-nasha-pravda",
       "type": "founded",
       "label": null,
       "source_id": null,
@@ -25215,6 +25224,17 @@
     {
       "source": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
       "target": "ooo-aerotekhalyans",
+      "type": "founded",
+      "label": "51%",
+      "source_id": "s0224",
+      "as_of": "2025-02-19",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
+      "target": "ooo-aerotekhalyans",
       "type": "owns",
       "label": "51%",
       "source_id": "s0224",
@@ -28612,17 +28632,6 @@
       "confidence": null
     },
     {
-      "source": "stub::градислава",
-      "target": "fond-nasha-pravda",
-      "type": "founded",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
       "source": "stub::григорьев д.е",
       "target": "ooo-investments",
       "type": "founded",
@@ -28669,17 +28678,6 @@
     {
       "source": "stub::григорьев дмитрий евгеньевич",
       "target": "ooo-investments",
-      "type": "founded",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "stub::дар",
-      "target": "fond-nasha-pravda",
       "type": "founded",
       "label": null,
       "source_id": null,
@@ -28783,17 +28781,6 @@
       "label": "100%",
       "source_id": "s0219",
       "as_of": "2022-11-28",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
-      "source": "stub::зит.ци",
-      "target": "ooo-aerotekhalyans",
-      "type": "founded",
-      "label": "51%",
-      "source_id": "s0224",
-      "as_of": "2025-02-19",
       "weight": 1.0,
       "temporal_status": "current",
       "confidence": null
@@ -29665,17 +29652,6 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "stub::ук азимут",
-      "target": "ooo-aerotekhalyans",
-      "type": "founded",
-      "label": "25%",
-      "source_id": "s0224",
-      "as_of": "2025-02-19",
-      "weight": 1.0,
-      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -31395,13 +31371,6 @@
       ]
     },
     {
-      "id": "stub::градислава",
-      "raw_name": "Фонд «Градислава»",
-      "contexts": [
-        "founder of fond-nasha-pravda"
-      ]
-    },
-    {
       "id": "stub::григорьев д.е",
       "raw_name": "Григорьев Д.Е",
       "contexts": [
@@ -31415,13 +31384,6 @@
         "founder of ooo-investments",
         "director of ooo-investments",
         "director of ao-borey-absorbed-no-longer-exists"
-      ]
-    },
-    {
-      "id": "stub::дар",
-      "raw_name": "Фонд «ДАР»",
-      "contexts": [
-        "founder of fond-nasha-pravda"
       ]
     },
     {
@@ -31485,13 +31447,6 @@
       "raw_name": "ФГУП «ЗащитаИнфоТранс Министерства транспорта Российской Федерации»",
       "contexts": [
         "former founder of ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya"
-      ]
-    },
-    {
-      "id": "stub::зит.ци",
-      "raw_name": "ЗИТ.ЦИ",
-      "contexts": [
-        "former founder of ooo-aerotekhalyans"
       ]
     },
     {
@@ -31904,13 +31859,6 @@
       "raw_name": "Туляков Александр Владимирович",
       "contexts": [
         "founder of ao-ekolibri"
-      ]
-    },
-    {
-      "id": "stub::ук азимут",
-      "raw_name": "АО «УК «Азимут»»",
-      "contexts": [
-        "former founder of ooo-aerotekhalyans"
       ]
     },
     {
