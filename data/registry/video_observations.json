@@ -12,7 +12,9 @@
    "evidence": "bom_text",
    "verbatim_ru": "Полетный контроллер для FPV F722 BLS 65A FC&ESC BEASTFPV (Стек)",
    "confidence": "stated",
-   "note": "Replaces SpeedyBee F405 V4 60A stack listed in post 182106; post says SpeedyBee 60A 'больше не производят. на рынки подделки!'. Not yet matched to the board seen in video 10619."
+   "note": "Replaces SpeedyBee F405 V4 60A stack listed in post 182106; post says SpeedyBee 60A 'больше не производят. на рынки подделки!'. Not yet matched to the board seen in video 10619.",
+   "registry_status": "NEW to registry (no BeastFPV/F722 anywhere in registry, notes or archived TGPOST files as of 2026-09-19).",
+   "wired": "2026-09-19: foreign_components[] + open_questions[] (s7653) on proekt-kb-arkhangel"
   },
   {
    "id": "obs-0002",
@@ -25,7 +27,8 @@
    "evidence": "bom_text",
    "verbatim_ru": "SpeedyBee F4 F405 V4 60A BLS 30x30 Stack FC Drone",
    "confidence": "stated",
-   "note": "Earlier BOM; same list, same posts series. Matches config dump `SPEEDYBEEF405V4` in the Ракета folder."
+   "note": "Earlier BOM; same list, same posts series. Matches config dump `SPEEDYBEEF405V4` in the Ракета folder.",
+   "registry_status": "ALREADY IN REGISTRY: foreign_components[] on proekt-kb-arkhangel cites the June 2026 BOM (s5452) and the config dump (s5453)."
   },
   {
    "id": "obs-0003",
@@ -38,7 +41,8 @@
    "evidence": "bom_text",
    "verbatim_ru": "Brotherhobby Avenger 2816 1050",
    "confidence": "stated",
-   "note": ""
+   "note": "",
+   "registry_status": "ALREADY IN REGISTRY (s5452)."
   },
   {
    "id": "obs-0004",
@@ -51,7 +55,8 @@
    "evidence": "bom_text",
    "verbatim_ru": "HQ Prop 7122",
    "confidence": "stated",
-   "note": ""
+   "note": "",
+   "registry_status": "ALREADY IN REGISTRY (s5452)."
   },
   {
    "id": "obs-0005",
@@ -64,7 +69,8 @@
    "evidence": "bom_text",
    "verbatim_ru": "Caddx Ratel PRO FPV камера 1500TVL",
    "confidence": "stated",
-   "note": ""
+   "note": "",
+   "registry_status": "ALREADY IN REGISTRY (s5452)."
   },
   {
    "id": "obs-0006",
@@ -77,7 +83,8 @@
    "evidence": "bom_text",
    "verbatim_ru": "GEPRC MATEN 1.2G 5W VTX PRO",
    "confidence": "stated",
-   "note": ""
+   "note": "",
+   "registry_status": "ALREADY IN REGISTRY (s5452)."
   },
   {
    "id": "obs-0007",
@@ -90,7 +97,8 @@
    "evidence": "bom_text",
    "verbatim_ru": "GEPRC SOMA 1.2G/1.3G антенна для дрона",
    "confidence": "stated",
-   "note": ""
+   "note": "",
+   "registry_status": "ALREADY IN REGISTRY (s5452)."
   },
   {
    "id": "obs-0008",
@@ -103,7 +111,8 @@
    "evidence": "bom_text",
    "verbatim_ru": "Аккумулятор GNB 6000 Mah LiHv",
    "confidence": "stated",
-   "note": ""
+   "note": "",
+   "registry_status": "ALREADY IN REGISTRY (s5452)."
   },
   {
    "id": "obs-0009",
@@ -116,7 +125,8 @@
    "evidence": "bom_text",
    "verbatim_ru": "Связь: Гермес или аналоги",
    "confidence": "stated",
-   "note": "Hermes link also named in the Ракета folder BOM ('Связь Гермес или аналоги'). Forum thread 2026-09-03 msgs 183271-183279 ties Кузнечик receiver reflashing to Гермес/Гагаринг support; not verified."
+   "note": "Hermes link also named in the Ракета folder BOM ('Связь Гермес или аналоги'). Forum thread 2026-09-03 msgs 183271-183279 ties Кузнечик receiver reflashing to Гермес/Гагаринг support; not verified.",
+   "registry_status": "Hermes link not in foreign_components; the Кузнечик/Гермес thread is a lead only."
   },
   {
    "id": "obs-0010",
@@ -129,7 +139,8 @@
    "evidence": "bom_text",
    "verbatim_ru": "Принтер Bambulab X1Carbon / Филамент Bambulab Filament PLA-CF",
    "confidence": "stated",
-   "note": ""
+   "note": "",
+   "registry_status": "ALREADY IN REGISTRY (s5452)."
   },
   {
    "id": "obs-0011",
@@ -142,7 +153,9 @@
    "evidence": "caption",
    "verbatim_ru": "Дрон нужно загружать 550-700гр, вес максимально смещаем ближе к голове, для лучшей развесовки, без веса он не летает!",
    "confidence": "stated",
-   "note": "Post says 'загружать' (load) but does not say what the load is. The Ракета folder has a hollow 70x77 mm canister + lid (36.8 cm3 of material). Do not describe as warhead without further evidence."
+   "note": "CORRECTION: the channel's own earlier posts state the warhead weight as 500-700 g (31.05.2025, s5475: «Вес боевой части в представленной модели 500-700 граммов») and a 500 g cylinder with a fragmentation warhead (s5454). The 550-700 g load here is in the same range, so it is very likely the warhead; this post itself does not say so.",
+   "registry_status": "CORRECTION: the registry already carries a sourced marketing claim (s5454, 2026-06-26) that the combat version uses a cylinder with a warhead (fragments: balls or lock nuts), 500 g. The 550-700 g load here is consistent with that; the cylinder/canister in the print files is therefore probably that warhead container. Still an inference from two sources, not a statement in this post.",
+   "wired": "2026-09-19: marketing_claims[] (s7653) on proekt-kb-arkhangel"
   },
   {
    "id": "obs-0012",
@@ -155,7 +168,9 @@
    "evidence": "caption",
    "verbatim_ru": "скорость экономичного полета в районе 140кмч, пиковая скорость 315кмч, дальность ... до 50км ... время полета 20-23мин",
    "confidence": "stated",
-   "note": "Self-reported performance claims in the channel's own build instructions; unverified."
+   "note": "Self-reported performance claims in the channel's own build instructions; unverified.",
+   "registry_status": "Performance figures: check s5454 before treating as new.",
+   "wired": "2026-09-19: marketing_claims[] (s7653) on proekt-kb-arkhangel"
   },
   {
    "id": "obs-0013",
@@ -168,7 +183,8 @@
    "evidence": "on_screen",
    "verbatim_ru": null,
    "confidence": "seen",
-   "note": "3D drone model in orange-themed configurator UI with an FC on a red USB cable; frames at ~40 s, ~100-116 s."
+   "note": "3D drone model in orange-themed configurator UI with an FC on a red USB cable; frames at ~40 s, ~100-116 s.",
+   "wired": "2026-09-19: foreign_components[] Betaflight Configurator + image (s7643) on proekt-kb-arkhangel"
   },
   {
    "id": "obs-0014",
@@ -181,7 +197,8 @@
    "evidence": "on_screen",
    "verbatim_ru": null,
    "confidence": "seen",
-   "note": "Chip top-marking unreadable at 848x464. Likely the BeastFPV or SpeedyBee board named in the BOM posts; unconfirmed. Reverse side shown in video 183433 with white JST sockets."
+   "note": "Chip top-marking unreadable at 848x464. Likely the BeastFPV or SpeedyBee board named in the BOM posts; unconfirmed. Reverse side shown in video 183433 with white JST sockets.",
+   "wired": "2026-09-19: image (s7642) + open_questions[] on proekt-kb-arkhangel"
   },
   {
    "id": "obs-0015",
@@ -194,7 +211,8 @@
    "evidence": "on_screen",
    "verbatim_ru": null,
    "confidence": "seen",
-   "note": "Narration (whisper small, approximate) describes the internals; DJI items are background only, identified visually, not by markings."
+   "note": "Narration (whisper small, approximate) describes the internals; DJI items are background only, identified visually, not by markings.",
+   "wired": "2026-09-19: products[] + foreign_components[] (s7618, s7619) on proekt-kb-arkhangel"
   },
   {
    "id": "obs-0016",
@@ -207,7 +225,246 @@
    "evidence": "spoken",
    "verbatim_ru": "Это такие тепловизоры по дешману, скажем так. Для работы на постах воздушного наблюдения ПВН, так называемые.",
    "confidence": "stated",
-   "note": "Whisper transcript, small model; wording approximate. Sensor make/model not stated."
+   "note": "Whisper transcript, small model; wording approximate. Sensor make/model not stated.",
+   "wired": "2026-09-19: products[] (s7618) on proekt-kb-arkhangel"
+  },
+  {
+   "id": "obs-0017",
+   "entity_slug": "proekt-kb-arkhangel",
+   "source": "t.me/projectArchangel/10782 (2026-09-13)",
+   "video_file": "data/sources/TGMEDIA_20260919_projectarchangel-post10782.mp4",
+   "timestamp": null,
+   "category": "military_affiliation",
+   "item": "78th regiment of the 51st army named as the main destination of graduates",
+   "evidence": "caption",
+   "verbatim_ru": "Одни из самых крепких, братских отношений у нас сложились с 78-м полкой 51-ой армии. Здесь служит наверное две трети наших выпускников.",
+   "confidence": "stated",
+   "note": "Quote as posted (grammar as in original). Different unit from the 11th battalion named in 10511; not reconciled. Contract terms in the same post: 'Контракт годовой и без автопродления. Подъемные от 3 миллионов рублей.'",
+   "registry_status": "PARTLY KNOWN: the registry already records '78 полк БПС 51-ой армии' as a destination (recruitment-pipeline note). New here: the 'две трети наших выпускников' quantification and the 2026-09-13 date.",
+   "wired": "2026-09-19: marketing_claims[] (s7654) + open_questions[] on proekt-kb-arkhangel"
+  },
+  {
+   "id": "obs-0018",
+   "entity_slug": "proekt-kb-arkhangel",
+   "source": "t.me/projectArchangel/10782 (2026-09-13)",
+   "video_file": "data/sources/TGMEDIA_20260919_projectarchangel-post10782.mp4",
+   "timestamp": "whole clip (static shot)",
+   "category": "hardware_background",
+   "item": "Enclosed CoreXY-style 3D printer (Creality K1-series look-alike) plus an open-frame gantry printer with spool holder, in the speaker's studio",
+   "evidence": "on_screen",
+   "verbatim_ru": null,
+   "confidence": "seen",
+   "note": "Brand/model not legible at 848x448: medium confidence on the enclosed unit, low on the second. The Bambulab X1 Carbon named in the BOM does not appear in these frames. Olive jerrycan-shaped containers on a shelf: purpose unknown."
+  },
+  {
+   "id": "obs-0019",
+   "entity_slug": "proekt-kb-arkhangel",
+   "source": "t.me/projectArchangel/7815 (2025-06-19)",
+   "video_file": null,
+   "timestamp": null,
+   "category": "material_support",
+   "item": "Drop-release systems for FPV supplied to a unit operator on request",
+   "evidence": "caption",
+   "verbatim_ru": "Оператор FPV-дронов 1-й Славянской бригады 51-й армии с позывным \"Радистка\" на постоянной основе получает военно-техническую поддержку от организации Архангел «Легион» ... Мы отправляем по её запросу ДЕСЯТЬ систем сброса груза на FPV.",
+   "confidence": "stated",
+   "note": "Also posted on @rastratchikRadistka as msg 1754. The channel's own words for the recipient and the support; the system's make is not stated.",
+   "wired": "2026-09-19: marketing_claims[] (s7648) on proekt-kb-arkhangel"
+  },
+  {
+   "id": "obs-0020",
+   "entity_slug": "proekt-kb-arkhangel",
+   "source": "t.me/projectArchangel/10573 (2026-07-28)",
+   "video_file": null,
+   "timestamp": null,
+   "category": "military_affiliation",
+   "item": "Stated purpose of the training centre: preparing specialists for the Ministry of Defence; regional government support named",
+   "evidence": "caption",
+   "verbatim_ru": "Главной целью нашего центра является подготовка специалистов для Министерства обороны. Это факт. ... Краснодарскому краю, который нас поддерживает.",
+   "confidence": "stated",
+   "note": "",
+   "registry_status": "Check whether already covered by the pipeline/recruitment note on the entity before wiring.",
+   "wired": "2026-09-19: marketing_claims[] (s7651) on proekt-kb-arkhangel"
+  },
+  {
+   "id": "obs-0021",
+   "entity_slug": "proekt-kb-arkhangel",
+   "source": "t.me/projectArchangel/10573 (2026-07-28)",
+   "video_file": null,
+   "timestamp": null,
+   "category": "military_affiliation",
+   "item": "Units named as where graduates are placed, with 'везде год, везде наши люди'",
+   "evidence": "caption",
+   "verbatim_ru": "Рубикон, полк БПС 51-й армии, 205-я бригада — везде год, везде наши люди. ... Мы сотрудничаем только с теми частями, командиров которых знаем и в которых уже служат наши выпускники.",
+   "confidence": "stated",
+   "note": "",
+   "registry_status": "ALREADY IN REGISTRY in prose (Рубикон, 78 полк БПС 51-ой армии, 205-я бригада, ₽3M bonus).",
+   "wired": "2026-09-19: marketing_claims[] (s7650, s7651) on proekt-kb-arkhangel"
+  },
+  {
+   "id": "obs-0022",
+   "entity_slug": "proekt-kb-arkhangel",
+   "source": "t.me/projectArchangel/10573 (2026-07-28)",
+   "video_file": null,
+   "timestamp": null,
+   "category": "domestic_use",
+   "item": "Civil-contract group ('ЧВК', 'условное название') using the network's interceptors at industrial sites and training mobilisation-reserve and regional BARS personnel",
+   "evidence": "caption",
+   "verbatim_ru": "ЧВК — это, конечно, условное название. На самом деле это группа людей на гражданских договорах, которые занимаются: • применением наших перехватчиков на предприятиях, НПЗ и складах в тылу; • обучением личного состава из числа местных сил мобрезерва и региональных БАРСов",
+   "confidence": "stated",
+   "note": "Self-description; ties to the BARS/Gagaring apparatus already in the registry are a lead, not yet checked.",
+   "registry_status": "Self-described 'ЧВК' claim is ALREADY a marketing_claims[] entry (s5475, 2026-07-25)."
+  },
+  {
+   "id": "obs-0023",
+   "entity_slug": "proekt-kb-arkhangel",
+   "source": "t.me/projectArchangel/10511 (2026-07-19)",
+   "video_file": null,
+   "timestamp": null,
+   "category": "military_affiliation",
+   "item": "Recruitment into 11th battalion, 205th brigade and «Рубикон» with role list and payout",
+   "evidence": "caption",
+   "verbatim_ru": "11 батальон 51-ой армии. Легендарное подразделение в котором служит наша любимая Радистка ждет операторов. 205-ая бригада, видеоотчеты с пораженными целями которой частенько публикуются у нас на канале ... Единовременная выплата от ТРЕХ миллионов рублей.",
+   "confidence": "stated",
+   "note": "Roles offered in the same post include strike drones ('Ударные дроны — гаси все что движется'), fire correction, EW, small air defence. The channel says it publishes the 205th brigade's target-hit video reports.",
+   "wired": "2026-09-19: marketing_claims[] (s7650) on proekt-kb-arkhangel"
+  },
+  {
+   "id": "obs-0024",
+   "entity_slug": "proekt-kb-arkhangel",
+   "source": "t.me/projectArchangel/9640 (2026-03-02)",
+   "video_file": null,
+   "timestamp": null,
+   "category": "military_affiliation",
+   "item": "Trainee heading to a separate UAS battalion of the 51st army; payout 3.4 million rubles",
+   "evidence": "caption",
+   "verbatim_ru": "В скором времени он отправится служить в Отдельный Батальон беспилотных систем 51-ой армии. ... получишь выплату в 3.4 миллиона рублей, служить будешь у наших друзей.",
+   "confidence": "stated",
+   "note": "",
+   "wired": "2026-09-19: marketing_claims[] (s7649) on proekt-kb-arkhangel"
+  },
+  {
+   "id": "obs-0025",
+   "entity_slug": "proekt-kb-arkhangel",
+   "source": "t.me/projectArchangel/10782 (2026-09-13)",
+   "video_file": "data/sources/TGMEDIA_20260919_projectarchangel-post10782.mp4",
+   "timestamp": "00:00-00:57",
+   "category": "military_affiliation",
+   "item": "Speaker self-identifies by callsign «Радистка»: SVO since 2022, strike-drone operator since 2023, serving in a UAS-troops unit, recruiting on the school's behalf",
+   "evidence": "spoken",
+   "verbatim_ru": null,
+   "confidence": "stated",
+   "note": "Whisper (small) transcript, approximate; garbled words read as: 'мой позывной Радистка', 'соратники', 'школа БПЛА Архангел'. Gist as transcribed: 'Здравствуйте, дорогие жители Краснодара и Краснодарского края. Я ваша землячка ... На специальной военной операции нахожусь с 2022 года и с 2023 года являюсь оператором ударных беспилотных аппаратов ... были созданы войска беспилотных систем. В одном из таких подразделений мы сейчас находимся со своей командой ... Приходите к нам ... обратиться в школу БПЛА Архангел. Там вы получите помощь в заходе к нам на контракт с максимальными выплатами.' Same callsign as the operator in post 7815 (1-я Славянская бригада 51-й армии, received 10 drop systems) and @rastratchikRadistka; that the speaker is that operator is inferred from the callsign, not stated in the clip. Callsign only; no real name recorded. Existing registry/notes already track «Радистка» (gagaring_network_map.md, my_el_lab msg 1242).",
+   "registry_status": "PARTLY KNOWN: callsign appears in gagaring_network_map.md and an entity note; the recruiting-video statement itself is new.",
+   "wired": "2026-09-19: image (s7645) + open_questions[] (no people.json record: only a callsign is sourced) on proekt-kb-arkhangel"
+  },
+  {
+   "id": "obs-0026",
+   "entity_slug": "ooo-skb-piranya",
+   "source": "rutube.ru/video/3f2358b8d03c263b39f56f16f2d3bc5d (Пятый канал, 2024-05-22; embedded on piranhafpv.ru homepage)",
+   "video_file": "data/sources/VIDEO_7300024069_20240522_5tv-news-piranya-fpv.mp4",
+   "timestamp": "00:00-00:39",
+   "category": "performance_claims",
+   "item": "Press report (not the maker's own promo): Пиранья FPV drones described as operating on frequencies the enemy cannot jam; footage shows video degrading under interference while the drone keeps flying and hits small targets",
+   "evidence": "spoken",
+   "verbatim_ru": null,
+   "confidence": "stated",
+   "note": "On-screen captions (exact): «Атака «Пираньи»»; «Новые российские FPV-дроны начали охоту на технику ВСУ»; «Средства РЭБ противника не способны заглушить наши беспилотники». Narration via whisper base, approximate: 'Главное их преимущество — это работа на частотах, которые враги просто не могут глушить. Естественно, всех нюансов инженеры не раскрывают.' No component, radio or flight-controller make is named; the frequency band is not stated. Footage is FPV with a yellow-nosed airframe. The maker embeds this clip on its own homepage (WEBCAPTURE_7300024069_20260825_piranhafpv-ru-homepage.html), so it is used as a promo asset.",
+   "registry_status": "Not yet checked against the Пиранья record's marketing_claims[] (s1411, s1410)."
   }
- ]
+ ],
+ "military_units": {
+  "_note": "Units the maker itself names. DO NOT wire into military_units.json: graph_contract.py records a 2026-09-15 decision that file stays scoped to the delivery-tracking channel network and must not be widened with units named only in manufacturer posts. Home for these is typed entries (event_type + actor_to kind=military_unit, id null) on the maker's record, with archived sources.",
+  "units": [
+   {
+    "as_posted": "51-я армия",
+    "role": "parent formation named in nearly all posts",
+    "first_seen": "2025-06-19",
+    "last_seen": "2026-09-13",
+    "posts": [
+     "projectArchangel/7815",
+     "9630",
+     "9640",
+     "9899",
+     "9901",
+     "9907",
+     "10511",
+     "10573",
+     "10782"
+    ],
+    "registry_status": "already recorded in prose on proekt-kb-arkhangel (recruitment-pipeline note); not a military_units.json entry"
+   },
+   {
+    "as_posted": "1-я Славянская бригада 51-й армии",
+    "role": "employer of the operator 'Радистка'; received drop systems",
+    "first_seen": "2025-06-19",
+    "posts": [
+     "projectArchangel/7815",
+     "rastratchikRadistka/1754"
+    ],
+    "obs": [
+     "obs-0019"
+    ],
+    "registry_status": "1-я Славянская бригада: not in registry (Радистка appears in gagaring_network_map.md notes only); 11-й батальон: appears in one archived TGPOST file, not in registry"
+   },
+   {
+    "as_posted": "11-й (отдельный) батальон беспилотных систем 51-й армии",
+    "role": "destination of graduates; 'Радистка' serves there per 10511",
+    "first_seen": "2026-02-28",
+    "last_seen": "2026-07-19",
+    "posts": [
+     "projectArchangel/9630",
+     "9640",
+     "9775",
+     "9965",
+     "10511"
+    ],
+    "obs": [
+     "obs-0023",
+     "obs-0024"
+    ],
+    "registry_status": "1-я Славянская бригада: not in registry (Радистка appears in gagaring_network_map.md notes only); 11-й батальон: appears in one archived TGPOST file, not in registry"
+   },
+   {
+    "as_posted": "205-я бригада",
+    "role": "source of target-hit video reports posted on the channel; recruits operators/technicians",
+    "first_seen": "2026-07-19",
+    "posts": [
+     "projectArchangel/10511",
+     "10573"
+    ],
+    "obs": [
+     "obs-0021",
+     "obs-0023"
+    ],
+    "registry_status": "already recorded in prose on proekt-kb-arkhangel (recruitment-pipeline note); not a military_units.json entry"
+   },
+   {
+    "as_posted": "«Рубикон» (полк БПС 51-й армии)",
+    "role": "recruiting 'спецов самого широкого спектра'",
+    "first_seen": "2026-07-19",
+    "posts": [
+     "projectArchangel/10511",
+     "10573"
+    ],
+    "obs": [
+     "obs-0021",
+     "obs-0023"
+    ],
+    "registry_status": "already recorded in prose on proekt-kb-arkhangel (recruitment-pipeline note); not a military_units.json entry"
+   },
+   {
+    "as_posted": "78-й полк 51-й армии",
+    "role": "'две трети наших выпускников' serve here",
+    "first_seen": "2026-09-13",
+    "posts": [
+     "projectArchangel/10782"
+    ],
+    "obs": [
+     "obs-0017"
+    ],
+    "registry_status": "already recorded in prose on proekt-kb-arkhangel (recruitment-pipeline note); not a military_units.json entry"
+   }
+  ]
+ },
+ "_wired_note": "'wired' = present in corrections_entities.json add_entities record for proekt-kb-arkhangel as of 2026-09-19. Items without it are not in the registry."
 }

@@ -1,7 +1,30 @@
-# Promo-video source inventory (manufacturer)
+# Promo-video source inventory (adjacent, cbst-core, manufacturer)
 
-119 entities listed; 113 have no known video-bearing presence (site-only or none).
+152 entities listed; 136 have no known video-bearing presence (site-only or none).
 
+
+## ООО «МПТМ» (ИНН 9714068459, ooo-mptm)
+- (no web presence recorded)
+
+## АНО «ЦБСТ» | Centre for Unmanned Systems & Technologies (ИНН 9702064851, ano-tsbst-centre-for-unmanned-systems-technologies)
+- sites: https://cbst.ru/
+
+## Фонд «Наша Правда» (ИНН 9705196180, fond-nasha-pravda)
+- sites: https://xn----7sbabalo0evak8f.xn--p1ai/
+- vk: https://vk.com/nashapravdafond  [from archived site capture, not in registry web{}]
+
+## АО «Спецтех Инвестиции» (ИНН 9703232234, ao-spetstekh-investitsii-ao-spetstekh-pervyy)
+- (no web presence recorded)
+
+## ООО «Системный интегратор» (ИНН 4632306583, ooo-sistemnyy-integrator)
+- (no web presence recorded)
+
+## ПАО «Банк ПСБ» (ИНН 7744000912, pao-bank-psb)
+- sites: https://www.psbank.ru/
+- dzen: https://dzen.ru/psbank_ru  [from archived site capture, not in registry web{}]
+- ok: https://ok.ru/group/58105065963555  [from archived site capture, not in registry web{}]
+- rutube: https://rutube.ru/channel/24734074/  [from archived site capture, not in registry web{}]
+- vk: https://vk.com/psbank_ru  [from archived site capture, not in registry web{}]
 
 ## ООО «Ушкуйник» (ИНН 5300013923, npts-ushkuynik)
 - (no web presence recorded)
@@ -48,6 +71,9 @@
 - vk: https://vk.com/piranhafpv
 - youtube: https://youtube.com/@piranhafpv
 - sites: https://piranhafpv.ru/
+- rutube: https://rutube.ru/video/3f2358b8d03c263b39f56f16f2d3bc5d/  [from archived site capture, not in registry web{}]
+- vk: https://vk.ru/piranhafpv  [from archived site capture, not in registry web{}]
+- youtube: https://www.youtube.com/@piranhafpv  [from archived site capture, not in registry web{}]
 
 ## ООО «Аэро-Хит» (ИНН 2700012608, ooo-aero-khit)
 - (no web presence recorded)
@@ -60,6 +86,7 @@
 
 ## АО «Котлин-Новатор» (ИНН 7811075899, ao-kotlin-novator)
 - sites: http://kotlin-novator.ru
+- vk: https://vk.com/kotlin_novator  [from archived site capture, not in registry web{}]
 
 ## ООО «Клеверкоптер» (ИНН 5257183517, ooo-kleverkopter)
 - sites: https://clevercopter.ru/
@@ -78,6 +105,7 @@
 
 ## ООО «Визионеро» (ИНН 5902056314, ooo-vizionero)
 - sites: https://visionero.ru/
+- vk: https://vk.com/visionero  [from archived site capture, not in registry web{}]
 
 ## ООО «КБ «Синергия»» (ИНН None, ooo-kb-sinergiya)
 - (no web presence recorded)
@@ -97,6 +125,15 @@
 ## ООО «Тримикс» (ИНН 7802942873, ooo-trimiks-bulat-3mx)
 - other: https://3mx.ru/dilery/
 - sites: https://3mx.ru/
+- dzen: https://dzen.ru/3mx?utm_referrer=dzen.ru  [from archived site capture, not in registry web{}]
+- dzen: https://dzen.ru/a/Z4kI724Y3UMbINlY  [from archived site capture, not in registry web{}]
+- ok: https://ok.ru/group/70000005134862  [from archived site capture, not in registry web{}]
+- rutube: https://rutube.ru/channel/30344656/  [from archived site capture, not in registry web{}]
+- vk: https://vk.com/3mx.products  [from archived site capture, not in registry web{}]
+- vk: https://vk.com/video-224020730_456239030  [from archived site capture, not in registry web{}]
+- vk: https://vk.com/video-224020730_456239219  [from archived site capture, not in registry web{}]
+- vk: https://vkvideo.ru/playlist/-224020730_11/video-224020730_456239090  [from archived site capture, not in registry web{}]
+- youtube: https://www.youtube.com/@3mx-media  [from archived site capture, not in registry web{}]
 
 ## ООО «ИОНОС» (ИНН 6168719068, alyaska)
 - (no web presence recorded)
@@ -111,6 +148,9 @@
 - sites: https://альфамарин.рф/
 
 ## «Кулибин-клуб» (ИНН 7725229200, kulibin-klub)
+- (no web presence recorded)
+
+## ИП Пинимасова Елена Александровна (ИНН 583713716580, npo-kilobatt)
 - (no web presence recorded)
 
 ## НПП «ЭЛВО» (ИНН 7810918592, npp-elvo-kolskaya-verf)
@@ -138,8 +178,15 @@
 ## ООО «Сибирская навигационная компания» (ИНН 4205376019, ooo-sibirskaya-navigatsionnaya-kompaniya)
 - (no web presence recorded)
 
+## АО «Аэромакс» (ИНН 7708407413, ao-aeromaks)
+- (no web presence recorded)
+
 ## ООО «Аэромакс» (ИНН 7725347482, ooo-aeromaks)
 - sites: https://www.aeromax-group.ru/produkciya/
+- dzen: https://dzen.ru/gcaeromax  [from archived site capture, not in registry web{}]
+- rutube: https://rutube.ru/channel/78162435/  [from archived site capture, not in registry web{}]
+- vk: https://vk.ru/aeromax_group  [from archived site capture, not in registry web{}]
+- youtube: https://www.youtube.com/channel/UCZ-A10GUyrjBnPHQA-MdLDQ  [from archived site capture, not in registry web{}]
 
 ## ООО «Группа компаний «Аэромакс»» (ИНН 7710974353, ooo-gk-aeromaks)
 - (no web presence recorded)
@@ -191,6 +238,7 @@
 
 ## АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) (ИНН 7735582816, npts-elvis)
 - sites: https://elvees.ru/
+- rutube: https://rutube.ru/channel/28467469/  [from archived site capture, not in registry web{}]
 
 ## АО «Эколибри» (ИНН 7714473012, ao-ekolibri)
 - sites: http://эколибри.рф
@@ -216,6 +264,9 @@
 ## ООО «Стратим» (ИНН 5260494520, ooo-stratim)
 - (no web presence recorded)
 
+## ООО «Аякс-Технологии» (ИНН 7805728050, ooo-ayaks-tekhnologii)
+- (no web presence recorded)
+
 ## ООО «Рокот Тех» (ИНН 7606140961, ooo-rokot-tekh)
 - sites: https://rokottech.ru
 
@@ -237,6 +288,9 @@
 ## ООО «Аэроплатформы» (ИНН 5027293811, ooo-aeroplatformy)
 - (no web presence recorded)
 
+## ООО «КРАМС» (ИНН 9701247080, ooo-krams)
+- (no web presence recorded)
+
 ## ООО «ПРОММАШ» (ИНН 4217210280, ooo-prommash)
 - (no web presence recorded)
 
@@ -256,6 +310,12 @@
 ## ООО «Прайм» (ИНН 7735565264, ooo-praym)
 - (no web presence recorded)
 
+## Общероссийская физкультурно-спортивная общественная организация «Федерация гонок дронов (беспилотных воздушных судов) России» (ИНН 9709081670, fgdr-federatsiya-gonok-dronov-rossii)
+- (no web presence recorded)
+
+## АО «Спецтех Первый» (ИНН 9703244871, ao-spetstekh-perviy)
+- (no web presence recorded)
+
 ## ООО «Кольская верфь» (ИНН 5190102381, kolskaya-verf)
 - (no web presence recorded)
 
@@ -264,6 +324,10 @@
 
 ## ООО «ТИ ЭС ДЖИ ГРУПП» (ИНН 3257085996, ooo-ti-es-dzhi-grupp)
 - sites: https://xn----etbb2caedho.xn--p1ai/
+- vk: https://vk.com/tsg_group?feedType=ownerFeed&amp;owner=-230408141&amp;z=video-230408141_456239073%2Fvideos-230408141%2Fpl_-230408141_-2  [from archived site capture, not in registry web{}]
+
+## ООО «НПЦ БАСИРТК» (ИНН 3300009049, ooo-npts-basirtk)
+- telegram: https://t.me/UAS_development  [scraped (415 posts)]
 
 ## ООО «Элиарс» (ИНН 7735140825, ooo-eliars)
 - (no web presence recorded)
@@ -282,12 +346,21 @@
 
 ## ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) (ИНН 4800016776, ooo-npo-kilovatt-shestopalov)
 - sites: https://kilowat48.ru/
+- dzen: https://dzen.ru/ekipirovka  [from archived site capture, not in registry web{}]
+- vk: https://vk.com/ekipirovka.expert  [from archived site capture, not in registry web{}]
 
 ## КРАМС (бренд, юрлицо не установлено) (ИНН None, krams-brand-unresolved)
 - sites: https://krams.pro/
 
 ## ООО «ПОКРОВ» (ИНН 5038189259, ooo-pokrov)
 - sites: https://pokrovsystem.ru/
+- vk: https://vk.com/video-160451_456240263  [from archived site capture, not in registry web{}]
+- vk: https://vk.com/video-160451_456240418  [from archived site capture, not in registry web{}]
+- vk: https://vk.com/video419378198_456239124  [from archived site capture, not in registry web{}]
+- vk: https://vk.com/video419378198_456239125  [from archived site capture, not in registry web{}]
+
+## ООО «Центр беспилотных систем» (ИНН 7100032961, ooo-tsentr-bespilotnykh-sistem-tula)
+- (no web presence recorded)
 
 ## ООО «Радиофид Системы» (ИНН 7802491148, ooo-radiofid-sistemy)
 - (no web presence recorded)
@@ -313,6 +386,9 @@
 ## ООО «НПК «Центр перспективных технологий»» (ЦПТ) (ИНН 5300022741, ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy)
 - (no web presence recorded)
 
+## АНО «Невский центр научного сотрудничества» (НЦНС) (ИНН 7840290315, ano-ntsns-nevskiy-tsentr-nauchnogo-sotrudnichestva)
+- (no web presence recorded)
+
 ## ООО «Герон» (ИНН 7802893898, ooo-geron)
 - (no web presence recorded)
 
@@ -322,6 +398,18 @@
 ## ООО НПК «Герон» (ИНН 7814748285, ooo-npk-geron)
 - (no web presence recorded)
 
+## ООО «Акация-авиа» (ИНН 7802145959, ooo-akatsiya-avia)
+- (no web presence recorded)
+
+## ООО «Аэро-хит сервис» (ИНН 9704220859, ooo-aero-khit-servis)
+- (no web presence recorded)
+
+## ООО «Аэро-хит М» (ИНН 9718293790, ooo-aero-khit-m)
+- (no web presence recorded)
+
+## ООО «Беспилотные технологические решения — Донецк» (БТР-Д) (ИНН 9309028512, ooo-btr-donetsk)
+- (no web presence recorded)
+
 ## ООО «Интел Дрон» (ИНН 7448259249, ooo-intel-dron)
 - (no web presence recorded)
 
@@ -329,6 +417,12 @@
 - (no web presence recorded)
 
 ## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ" (ИНН 9500026652, ooo-arkhangel-zaporizhzhie)
+- (no web presence recorded)
+
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ-ЦЕНТР" (ИНН 5032379630, ooo-arkhangel-tsentr)
+- (no web presence recorded)
+
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "МЛ КОНСТРАКШНС" (ИНН 5026016117, ooo-ml-konstrakshns)
 - (no web presence recorded)
 
 ## Проект КБ «Архангел» (ИНН None, proekt-kb-arkhangel)
@@ -355,7 +449,13 @@
 ## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ ГРУПП" (ИНН 9702081286, ooo-arkhangel-grupp)
 - (no web presence recorded)
 
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ" (ИНН 5017140245, ooo-arkhangel-istra)
+- (no web presence recorded)
+
 ## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ" (ИНН 9001027869, ooo-arkhangel-melitopol-2)
+- (no web presence recorded)
+
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ" (ИНН 9108131213, ooo-arkhangel-crimea)
 - (no web presence recorded)
 
 ## Акционерное общество «Научно-производственное предприятие» (ИНН 9722048270, ao-npp-real)
@@ -373,6 +473,33 @@
 ## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "АТЛАНТ АЭРО" (ИНН 6154166381, ooo-npk-atlant-aero)
 - (no web presence recorded)
 
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АТЛАНТ СЕРВИС" (ИНН 9717173300, ooo-atlant-servis)
+- (no web presence recorded)
+
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АТЛАНТ ЛОГИСТИК" (ИНН 9722117815, ooo-atlant-logistik)
+- (no web presence recorded)
+
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ПРОМ-ТЕХ" (ИНН 6163233330, ooo-prom-tekh)
+- (no web presence recorded)
+
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "ЗЕВС" (ИНН 6161154122, ooo-npk-zevs)
+- (no web presence recorded)
+
+## АКЦИОНЕРНОЕ ОБЩЕСТВО "ОПТИЧЕСКИЕ СИСТЕМЫ" (ИНН 7733486867, ao-opticheskie-sistemy)
+- (no web presence recorded)
+
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АМЕТИСТ" (ИНН 9717142044, ooo-ametist)
+- (no web presence recorded)
+
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЭВЕРЕСТ" (ИНН 9704109459, ooo-everest)
+- (no web presence recorded)
+
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "СТАЛЬНОЙ КУПОЛ" (ИНН 7733483753, ooo-pk-stalnoy-kupol)
+- (no web presence recorded)
+
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ДС-БАРС-Т" (ИНН 6154109094, ooo-ds-bars-t)
+- (no web presence recorded)
+
 ## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ИНЖИНИРИНГОВАЯ КОМПАНИЯ "АВИАОК" (ИНН 6154569246, ooo-ik-aviaok)
 - (no web presence recorded)
 
@@ -382,11 +509,18 @@
 ## АКЦИОНЕРНОЕ ОБЩЕСТВО "РТИ-РАДИО" (ИНН 7713133550, ao-rti-radio)
 - (no web presence recorded)
 
+## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ОТКРЫТОЕ НЕБО" (ИНН 4029059580, ooo-otkrytoe-nebo-kaluga)
+- (no web presence recorded)
+
 ## АО «Кронштадт» (ИНН 7808035536, ao-kronshtadt)
 - (no web presence recorded)
 
 ## No video-bearing presence recorded
 
+- ООО «МПТМ»
+- АНО «ЦБСТ» | Centre for Unmanned Systems & Technologies
+- АО «Спецтех Инвестиции»
+- ООО «Системный интегратор»
 - ООО «Ушкуйник»
 - «Уралдронзавод»
 - ООО «Авирон»
@@ -402,13 +536,11 @@
 - ООО «Аэро-Хит»
 - ООО «Архангел»
 - ООО «ЦКБР»
-- АО «Котлин-Новатор»
 - ООО «Клеверкоптер»
 - АО «Площадь»
 - ООО «НПО Рустехдрон»
 - ООО «Аркодим»
 - ООО «ЭйАрТэк»
-- ООО «Визионеро»
 - ООО «КБ «Синергия»»
 - ООО «Метаскан»
 - ООО «Ментастеп»
@@ -419,13 +551,14 @@
 - ООО «КРАВТ»
 - ООО «ОПКБ Экспломет»
 - «Кулибин-клуб»
+- ИП Пинимасова Елена Александровна
 - НПП «ЭЛВО»
 - ООО «СУПЕРХРОНО»
 - ООО «Конструкторское бюро СОВА»
 - ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ»
 - ООО «ТИТАН - СЕВЕРО-ЗАПАД»
 - ООО «Сибирская навигационная компания»
-- ООО «Аэромакс»
+- АО «Аэромакс»
 - ООО «Группа компаний «Аэромакс»»
 - ООО «ДСГ»
 - ООО «Специальные полезные технологии»
@@ -442,7 +575,6 @@
 - ООО «Зетакс»
 - АО «НПП «Радар ММС»»
 - АО «НИИ «Вектор»»
-- АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС)
 - АО «Эколибри»
 - АО «МИКЦ»
 - ООО «Эколибри-Беспилотные технологии»
@@ -451,6 +583,7 @@
 - ООО «КРАВТ УДМУРТИЯ»
 - ООО «СПДББК»
 - ООО «Стратим»
+- ООО «Аякс-Технологии»
 - ООО «Рокот Тех»
 - ООО «НПО НЕБО»
 - АО «НИИ СТТ»
@@ -458,22 +591,23 @@
 - ООО «ОРИЕНТ СИСТЕМС»
 - ООО «4ГНСС»
 - ООО «Аэроплатформы»
+- ООО «КРАМС»
 - ООО «ПРОММАШ»
 - ООО «ДРОНОМИР»
 - ООО «Информационные системы и технологии»
 - ООО «АСЕЛ ЛАБС»
 - ООО «Прайм»
+- Общероссийская физкультурно-спортивная общественная организация «Федерация гонок дронов (беспилотных воздушных судов) России»
+- АО «Спецтех Первый»
 - ООО «Кольская верфь»
 - «Булат» / 3mx
-- ООО «ТИ ЭС ДЖИ ГРУПП»
 - ООО «Элиарс»
 - ООО «Центр управления городской аэромобильностью»
 - ООО «Авиационно-космические разработки «Бегак»»
 - АО «РОСС»
 - ООО «Научно-производственное объединение «Киловатт»»
-- ООО «Научно-производственное объединение «Киловатт»» (Шестопалов)
 - КРАМС (бренд, юрлицо не установлено)
-- ООО «ПОКРОВ»
+- ООО «Центр беспилотных систем»
 - ООО «Радиофид Системы»
 - ИП Кузнецов Руслан Николаевич
 - ИП Шандобыло Сергей Сергеевич
@@ -482,21 +616,40 @@
 - ООО «Беспилотные технологические решения» (БТР)
 - ООО «Специальные материалы» (Спецмат)
 - ООО «НПК «Центр перспективных технологий»» (ЦПТ)
+- АНО «Невский центр научного сотрудничества» (НЦНС)
 - ООО «Герон»
 - ООО «Скай авиа групп»
 - ООО НПК «Герон»
+- ООО «Акация-авиа»
+- ООО «Аэро-хит сервис»
+- ООО «Аэро-хит М»
+- ООО «Беспилотные технологические решения — Донецк» (БТР-Д)
 - ООО «Интел Дрон»
 - ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер»)
 - ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ-ЦЕНТР"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "МЛ КОНСТРАКШНС"
 - ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ ЩИТ"
 - ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ ГРУПП"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ"
 - ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ"
 - Акционерное общество «Научно-производственное предприятие»
 - Общество с ограниченной ответственностью «Кронштадт Беспилотные Системы»
 - ООО «Хаб СВО»
 - ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ПРОМЕТЕЙ"
 - ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "АТЛАНТ АЭРО"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АТЛАНТ СЕРВИС"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АТЛАНТ ЛОГИСТИК"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ПРОМ-ТЕХ"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "ЗЕВС"
+- АКЦИОНЕРНОЕ ОБЩЕСТВО "ОПТИЧЕСКИЕ СИСТЕМЫ"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АМЕТИСТ"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЭВЕРЕСТ"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "СТАЛЬНОЙ КУПОЛ"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ДС-БАРС-Т"
 - ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ИНЖИНИРИНГОВАЯ КОМПАНИЯ "АВИАОК"
 - ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СЕЛЬСКОХОЗЯЙСТВЕННЫЕ БЕСПИЛОТНЫЕ СИСТЕМЫ "МИРА"
 - АКЦИОНЕРНОЕ ОБЩЕСТВО "РТИ-РАДИО"
+- ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ОТКРЫТОЕ НЕБО"
 - АО «Кронштадт»

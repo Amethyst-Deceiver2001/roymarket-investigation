@@ -88,6 +88,7 @@ def main() -> int:
     ap.add_argument("--channel", help="channel username to restrict to")
     ap.add_argument("--category", help="one LEXICON category")
     ap.add_argument("--min-posts", type=int, default=3, help="min posts for a channel/term pair")
+    ap.add_argument("--video-only", action="store_true", help="only posts whose media is a video (promo-video captions)")
     ap.add_argument("--out", help="write a markdown report here")
     ap.add_argument("--json-out", help="write raw counts JSON here")
     a = ap.parse_args()
@@ -96,6 +97,8 @@ def main() -> int:
     chan = {r[0]: r[1] or str(r[0]) for r in con.execute("select id, username from tg_channels")}
     sql = "select channel_id, msg_id, date, media_type, text from tg_posts where text is not null and text != ''"
     args: list = []
+    if a.video_only:
+        sql += " and media_type = 'video'"
     if a.channel:
         ids = [k for k, v in chan.items() if v.lower() == a.channel.lower()]
         if not ids:

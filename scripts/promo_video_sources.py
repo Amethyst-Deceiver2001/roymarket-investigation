@@ -40,6 +40,19 @@ def main() -> int:
         if uname:
             scraped[uname.lower()] = n
 
+    archived = {}  # ИНН -> [(platform, url)] from entities' own archived site captures
+    links_path = ROOT / "data/registry/_source_video_links.json"
+    if links_path.exists():
+        for fname, urls in json.load(open(links_path)).items():
+            m = re.match(r"(?:SITE|WEBCAPTURE)_(\d{10,12})_", fname)
+            if not m:
+                continue
+            for u in urls:
+                if re.search(r"dzen\.ru/(?:ria|news|tass|vedomosti)|yandex\.maps|vk\.com/(?:rtrg|share)|MchsRussia", u):
+                    continue
+                plat = "youtube" if "youtu" in u else "vk" if "vk." in u or "vkvideo" in u else "rutube" if "rutube" in u else "dzen" if "dzen" in u else "ok"
+                archived.setdefault(m.group(1), []).append((plat, u))
+
     rows, no_presence = [], []
     for e in ents:
         if e.get("tier") not in tiers:
@@ -65,6 +78,10 @@ def main() -> int:
                     else:
                         status = "NOT WATCHED"
                 found.append((plat, url, status))
+        known_urls = {f[1].rstrip("/") for f in found}
+        for plat, u in archived.get(str(e.get("inn")), []):
+            if u.rstrip("/") not in known_urls:
+                found.append((plat, u, "from archived site capture, not in registry web{}"))
         video_bearing = [f for f in found if f[0] != "sites"]
         if not video_bearing:
             no_presence.append(name)

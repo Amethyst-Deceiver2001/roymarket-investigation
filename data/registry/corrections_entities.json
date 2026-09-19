@@ -2146,7 +2146,12 @@
           "name_ru": "«Слоненок»",
           "description": "Unified airspace surveillance-and-strike complex combining radar/video detection with interceptor-drone engagement. 15km monitoring radius, AI-based automatic target engagement, capacity for 17 interceptor drones per unit; operator role reduced to a single switch-toggle at the engagement moment. Press-quoted (paraphrase, not verbatim — see s5459) description from Филиппов: the system can replace the work of several mobile fire groups (МОГ). Described as a collaboration between Проект «Архангел» specialists and unnamed colleagues in St. Petersburg.",
           "source_id": "s5459"
-        }
+        },
+          {
+            "name_ru": "«Ночник ПВН» — прибор наблюдения (ПВН = пост воздушного наблюдения) с экраном 7\" и 5\"",
+            "description": "Hand-held/turret-mounted observation device the channel published as open design files (post 10796, 19.09.2026: «Это ночник ПВН. Кому надо было. Берите пользуйтесь.»; RAR with STEP/STL files and a parts note in msg 10797). From the demonstrator's narration (machine transcript, approximate) it is a low-cost 'thermal-style' imager for air-observation posts in two versions, 7-inch and 5-inch screen, an ordinary FPV camera, a green laser pointer on a button on the grip that marks a found target (not visible in the imager), a removable 6S1P pack on XT60, a voltmeter/charge indicator, one (7-inch) or two (5-inch) buck modules, and a dovetail quick-release so it can sit on a turret or take a hand grip. The parts note lists a 5\" monitor, voltmeter, step-down converter and laser, each as an Ozon link with no make named. Sensor make/model and thermal-versus-low-light are not stated.",
+            "source_id": "s7618"
+          }
       ],
       "battlefield_evidence": [],
       "foreign_components": [
@@ -2185,7 +2190,68 @@
           "manufacturer": "Shenzhen Gaoneng New Energy (China)",
           "context": "Same BOM, s5452 -- the same GAONENG battery brand documented elsewhere in this registry (see ooo-npo-rustekhdron's litigation[] and ooo-boevye-tekhnologii) supplying the ЦБСТ-network Рустехдрон/ДСГ court case; here found completely independently in an unrelated adjacent-not-ЦБСТ network's own build documentation, consistent with the brand's D2C export model reaching many unrelated Russian buyers rather than one exclusive supply chain.",
           "source_id": "s5452"
-        }
+        },
+          {
+            "name": "F722 BLS 65A FC&ESC BEASTFPV flight-controller/ESC stack (replacing the SpeedyBee stack)",
+            "manufacturer": "BeastFPV (brand; country of origin not established in this registry)",
+            "context": "Bill of materials in the channel's 06.09.2026 build/print/flight instruction post (Archangel_Forum msg 183433, topic «К. Б. \"Архангел\"»): «Полетный контроллер для FPV F722 BLS 65A FC&ESC BEASTFPV (Стек)». The same post says the earlier SpeedyBee stack was dropped: «Программа и настройки под полетник: BestFPV с ESC 65A так как стек SpeedyBee 60А больше не производят. на рынки подделки!» («BestFPV» sic; the post's own spelling). Earlier BOM (26.06.2026) named the SpeedyBee F405 V4 60A stack instead (s5452). The flight controller visible in the channel's videos (s7617, s7615; stills s7642, s7643) is a ~30×30 mm STM32-type LQFP-64 board with «Rev 2.2» and an «A» logo; chip markings are not legible, so it is NOT matched to either product.",
+            "source_id": "s7653"
+          },
+          {
+            "name": "SolidWorks (CAD, incl. CAM/MBD modules) used to model the airframe body",
+            "manufacturer": "Dassault Systèmes (France)",
+            "context": "Seen, not stated: the on-screen toolbar tabs read SOLIDWORKS / SOLIDWORKS CAM / MBD in the CAD walkthrough of the tube-and-arm body lettered «АРХАНГЕЛ» in the 32-minute instruction video (Archangel_Forum msg 183433, frame at ~25 min, still s7644).",
+            "source_id": "s7644"
+          },
+          {
+            "name": "Betaflight Configurator (flight-controller setup software), shown on a laptop with the FC on USB",
+            "manufacturer": "Betaflight open-source project (international)",
+            "context": "Seen, not stated: first ~2 minutes of the instruction video (msg 183433) show the configurator's orange-themed UI with a 3D drone model while the board is connected on a red USB cable (still s7643). Consistent with the Betaflight 4.4.3 config dump archived as s5453.",
+            "source_id": "s7643"
+          },
+          {
+            "name": "5\" monitor, voltmeter, step-down converter and laser pointer for the «Ночник ПВН» device",
+            "manufacturer": "not named (parts note lists Ozon marketplace short links only)",
+            "context": "Parts note «Запчасти.txt» inside the RAR published in post 10797 (19.09.2026); the links were not opened, so makes and origin are unknown.",
+            "source_id": "s7619"
+          }
+      ],
+      "images": [
+          {
+            "path": "images/TGMEDIA_20260804_projectarchangel-post10619-fc-board-crop.png",
+            "source_id": "s7642",
+            "caption": "Flight-controller board shown in the «Архангел» lab video (@projectArchangel msg 10619, 04.08.2026): ~30×30 mm, STM32-type LQFP-64 MCU, USB-C, silkscreen «Rev 2.2» and an «A» logo, hand-soldered leads. 4× enlarged crop of one frame of an 848×464 video; chip markings not legible, make not confirmed (see open questions)."
+          },
+          {
+            "path": "images/TGMEDIA_20260804_projectarchangel-post10619-airframe-assembly-bench.png",
+            "source_id": "s7641",
+            "caption": "Assembly bench in the «Архангел» lab (msg 10619, 04.08.2026): a black tube-and-arm airframe on a silicone soldering mat, with staff in «АРХАНГЕЛ»-branded shirts. The channel captions the clip as assembly of «дронов-перехватчиков второго поколения»."
+          },
+          {
+            "path": "images/TGMEDIA_20260906_archangelforum-post183433-fc-betaflight-usb.png",
+            "source_id": "s7643",
+            "caption": "Flight controller on a USB cable in front of Betaflight Configurator, first minutes of the 32-minute instruction video (Archangel_Forum msg 183433, 06.09.2026); this frame shows the connector side (white JST sockets), yellow silicone standoffs as in the 10619 board."
+          },
+          {
+            "path": "images/TGMEDIA_20260906_archangelforum-post183433-solidworks-body-cad.png",
+            "source_id": "s7644",
+            "caption": "CAD model of the tube body lettered «АРХАНГЕЛ» in SolidWorks (toolbar reads SOLIDWORKS / SOLIDWORKS CAM / MBD), from the same instruction video (msg 183433)."
+          },
+          {
+            "path": "images/TGMEDIA_20260919_projectarchangel-post10796-pvn-front-laser.png",
+            "source_id": "s7646",
+            "caption": "«Ночник ПВН» observation device (screen, camera and green laser pointer on top) demonstrated in @projectArchangel msg 10796 (19.09.2026), released with its design files."
+          },
+          {
+            "path": "images/TGMEDIA_20260919_projectarchangel-post10796-pvn-internals.png",
+            "source_id": "s7647",
+            "caption": "Inside the «Ночник ПВН»: FPV camera, foil-wrapped battery pack with XT60 lead and buck-converter boards (msg 10796)."
+          },
+          {
+            "path": "images/TGMEDIA_20260913_projectarchangel-post10782-radistka-recruitment.png",
+            "source_id": "s7645",
+            "caption": "Frame from the 57-second recruitment video (msg 10782, 13.09.2026): a uniformed speaker in front of a workshop with several 3D printers who, per a machine transcript (approximate), introduces herself by the callsign «Радистка», says she has been an operator of strike UAVs since 2023 and points viewers to the «Архангел» school. Identity beyond the callsign is not established here."
+          }
       ],
       "marketing_claims": [
         {
@@ -2243,7 +2309,77 @@
           "context": "proekt_arhangel#1094, 2026-09-02 — a formal B2B outreach letter to critical-infrastructure enterprise managers, the first primary-source document explicitly naming ООО «Архангел Групп» (ИНН 9702081286, see ooo-arkhangel-grupp) as the designated commercial contracting entity for the whole informal \"группа компаний «Архангел»\" ecosystem.",
           "source_id": "s5475",
           "as_of": "2026-09-02"
-        }
+        },
+          {
+            "as_of": "2026-09-06",
+            "source_id": "s7653",
+            "text_ru": "Дрон нужно загружать 550-700гр, вес максимально смещаем ближе к голове, для лучшей развесовки, без веса он не летает!",
+            "text_en": "The drone must be loaded with 550-700 g, the weight moved as far forward toward the head as possible for better balance; without weight it does not fly!",
+            "context": "Channel's own build/flight instruction (msg 183433). This post does not say what the load is, but the channel's own earlier posts give the same range as the warhead: «Вес боевой части в представленной модели 500-700 граммов» (31.05.2025, s5475) and a 500 g cylinder with a fragmentation warhead in the combat version (s5454). The ballast-versus-warhead reading is therefore the channel's own, stated elsewhere; this post does not call it a warhead."
+          },
+          {
+            "as_of": "2026-09-06",
+            "source_id": "s7653",
+            "text_ru": "скорость экономичного полета в районе 140кмч, пиковая скорость 315кмч, дальность на 7000мам аккумуляторе заряженным в 4.45в LiHv время полета 20-23мин если не тратить заряд на долгий взлет а сразу оторвавшись от земли на 1м за 2-3 секунды перейти в горизонт и начать планировать снизив газ, дальность полета до 50км в зависимости от условий и ветра",
+            "text_en": "economical flight speed around 140 km/h, peak speed 315 km/h, [...] flight range up to 50 km depending on conditions and wind",
+            "context": "Same post (msg 183433). Figures differ from the earlier product description (max 340 km/h, cruise 100-120 km/h, s5454): self-reported and inconsistent between posts."
+          },
+          {
+            "as_of": "2026-09-06",
+            "source_id": "s7653",
+            "text_ru": "Программа и настройки под полетник: BestFPV с ESC 65A так как стек SpeedyBee 60А больше не производят. на рынки подделки!",
+            "text_en": "Software and settings for the flight controller: BestFPV [sic] with a 65A ESC, since the SpeedyBee 60A stack is no longer produced. Fakes on the market!",
+            "context": "Explains the switch from the SpeedyBee (s5452) to the BeastFPV stack (foreign_components[]); «BestFPV» is the post's own spelling."
+          },
+          {
+            "as_of": "2025-06-19",
+            "source_id": "s7648",
+            "text_ru": "Оператор FPV-дронов 1-й Славянской бригады 51-й армии с позывным \"Радистка\" на постоянной основе получает военно-техническую поддержку от организации Архангел «Легион» для дальнейшего распределения по её усмотрению. Мы отправляем по её запросу ДЕСЯТЬ систем сброса груза на FPV.",
+            "text_en": "A FPV-drone operator of the 1st Slavic Brigade of the 51st Army with the callsign \"Радистка\" permanently receives military-technical support from the «Архангел» organisation «Легион» [...] We are sending, at her request, TEN cargo-drop systems for FPV.",
+            "context": "Channel's own report of material support to a named army unit's operator (also posted on her channel @rastratchikRadistka msg 1754). The make of the drop systems is not stated."
+          },
+          {
+            "as_of": "2026-07-28",
+            "source_id": "s7651",
+            "text_ru": "Главной целью нашего центра является подготовка специалистов для Министерства обороны.\nЭто факт.",
+            "text_en": "The main goal of our centre is training specialists for the Ministry of Defence. That is a fact.",
+            "context": "Post «Кого мы учим бесплатно?» (msg 10573). Same post lists «Рубикон, полк БПС 51-й армии, 205-я бригада — везде год, везде наши люди»."
+          },
+          {
+            "as_of": "2026-07-19",
+            "source_id": "s7650",
+            "text_ru": "205-ая бригада, видеоотчеты с пораженными  целями которой частенько публикуются у нас на канале ждет и операторов и техников.",
+            "text_en": "the 205th Brigade, whose video reports with hit targets are often published on our channel, is waiting for both operators and technicians.",
+            "context": "Recruitment post (msg 10511), also naming the 11th battalion of the 51st Army and «Рубикон»; roles listed include «Ударные дроны — гаси все что движется» and a single payment «от ТРЕХ миллионов рублей»."
+          },
+          {
+            "as_of": "2026-09-13",
+            "source_id": "s7654",
+            "text_ru": "Одни из самых крепких, братских отношений у нас сложились с 78-м полкой 51-ой армии.\n\nЗдесь служит наверное две трети наших выпускников.",
+            "text_en": "One of our strongest, fraternal relationships has formed with the 78th regiment of the 51st Army. Probably two thirds of our graduates serve here.",
+            "context": "Post msg 10782 with a 57-second recruitment video (s7634; still s7645). «78-м полкой» is the post's own grammar (sic). Unit named by the channel only; not independently confirmed."
+          },
+          {
+            "as_of": "2026-03-02",
+            "source_id": "s7649",
+            "text_ru": "В скором времени он отправится служить в Отдельный Батальон беспилотных систем 51-ой армии. ... получишь выплату в 3.4 миллиона рублей, служить будешь у наших друзей.",
+            "text_en": "Soon he will go to serve in a Separate Unmanned Systems Battalion of the 51st Army. [...] you will get a payment of 3.4 million rubles, you will serve with our friends.",
+            "context": "Post msg 9640 about a trainee; payout figure differs from the «от трёх миллионов» in later posts."
+          },
+          {
+            "as_of": "2026-08-04",
+            "source_id": "s7652",
+            "text_ru": "Задача последних дней сборка наших дронов-перехватчиков второго поколения.",
+            "text_en": "The task of recent days is assembling our second-generation interceptor drones.",
+            "context": "Caption of the 84-second lab video (msg 10619; stills s7641, s7642) that shows the airframe on a bench and the flight-controller board."
+          },
+          {
+            "as_of": "2026-09-19",
+            "source_id": "s7655",
+            "text_ru": "Это ночник ПВН. Кому надо было. Берите пользуйтесь.",
+            "text_en": "This is the ПВН night-light. For whoever needed it. Take it, use it.",
+            "context": "Channel releasing the «Ночник ПВН» design files (video s7618, RAR s7619); see products[]."
+          }
       ],
       "open_questions": [
         {
@@ -2433,7 +2569,31 @@
         {
           "text": "GoDrone (t.me/GoDrone, \"НАБАТ | GoDrone\", counter-UAV/drone-supply company, godrone.ru, 12,199 subscribers) hosts its own training-recruitment post for \"ракета «Архангел»\" (msg1347, 23.07.2025) — phrased as GoDrone's own announcement ('Через месяц начинается обучение первого потока операторов НАШЕЙ новой ракеты «Архангел»'), suggesting GoDrone may be a training-delivery partner for this specific product line, distinct from the interceptor-drone product already documented — not yet resolved whether 'ракета' here is loose marketing language for the same interceptor or an actual separate missile-type product. Separately (msg1582, 18.09.2025) GoDrone names \"Архангел Спецназа\" as one of its own customers ('Наши легионеры берут дроны в GoDrone') — this is the distinct, still-unresolved-to-a-legal-entity «Архангел Спецназа» brand (@arx_spn, 1.02M subscribers, per the parked roymarket_archangel_adjacent_network memory), NOT confirmed as the same operation as Филиппов's Проект «Архангел» — recorded here only as GoDrone being a shared commercial touchpoint for multiple same-named-but-distinct «Архангел» brands, not as a merge of the two.",
           "source_id": "s5539"
-        }
+        },
+          {
+            "source_id": "s7653",
+            "text": "Which flight controller is in the channel's drones? The 26.06.2026 BOM and config dump name the SpeedyBee F405 V4 60A stack (s5452, s5453); the 06.09.2026 post says that stack is no longer made and specifies a BeastFPV F722 BLS 65A stack. The board visible in videos s7617/s7615 (stills s7642, s7643) is an STM32-type LQFP-64 board with «Rev 2.2» and an «A» logo, unmatched to either. A sharper view of the chip side or the silkscreen, or the beastfpv.ru product page (linked in Archangel_Forum msg 122423, not opened), would settle it."
+          },
+          {
+            "source_id": "s7653",
+            "text": "Self-reported performance figures conflict: max 340 km/h / cruise 100-120 km/h (s5454) versus peak 315 km/h / economy 140 km/h and 50 km range (msg 183433, 06.09.2026). No independent test data on file."
+          },
+          {
+            "source_id": "s7648",
+            "text": "Units the channel says it supplies or places graduates with: 1-я Славянская бригада 51-й армии (10 drop systems, 19.06.2025), 11-й отдельный батальон беспилотных систем 51-й армии, 205-я бригада, «Рубикон», 78-й полк 51-й армии (\"две трети выпускников\", msg 10782). All are the channel's own statements. They are deliberately NOT in military_units.json, which stays scoped to the delivery-tracking channel network (see scripts/graph_contract.py); the 11th battalion and the 78th regiment are named inconsistently as the main destination and are not reconciled."
+          },
+          {
+            "source_id": "s7654",
+            "text": "Speaker of video msg 10782 introduces herself by the callsign «Радистка» (machine transcript, approximate). Whether she is the operator of the 1st Slavic Brigade who received drop systems (msg 7815), the channel @rastratchikRadistka, and the person already noted in notes/gagaring_network_map.md is inferred from the callsign only. No people.json record: no full name is sourced."
+          },
+          {
+            "source_id": "s7618",
+            "text": "«Ночник ПВН»: no sensor make/model, no statement whether it is thermal or low-light, and no evidence of who fields it. The channel's recruitment posts offer a 'малое ПВО' role, so a link to its air-defence crews is plausible but unshown."
+          },
+          {
+            "source_id": "s7653",
+            "text": "Гермес: the «Архангел» channels repeatedly promote the «ГЕРМЕС» long-range/anti-jam comms line (59 video posts in the local scrape of @projectArchangel, Dec 2023 - Jul 2026, counted from data/roymarket.db rather than an archived file; e.g. msg 3881 «Производство связи ГЕРМЕС. t.me/germesfpv»), and both build bills of materials list «Связь: Гермес или аналоги» (s5452, s7653). This registry holds «ГЕРМЕС связь» and «ГЕРМЕС мачты» as products of НПО «КАЙСАНТ» (npo-kaysant, ИНН 7733393203); the matching product names make it likely that entity is behind the channel, but no primary source yet says so or that it supplies Архангел. Deliberately NOT recorded as a related_entities edge: an edge would pull the whole Архангел cluster (Филиппов, ООО «Архангел Групп», ML Констракшнс) into the ЦБСТ-connected graph on an unconfirmed link."
+          }
       ],
       "director": null,
       "name_history": [],
