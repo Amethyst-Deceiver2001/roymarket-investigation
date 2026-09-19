@@ -65,14 +65,17 @@ _WS_RE = re.compile(r"\s+")
 _PAREN_RE = re.compile(r"\s*\([^)]*\)")
 _SHARE_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*%")
 _SHARE_SUFFIX_RE = re.compile(r"\s*(\d+(?:[.,]\d+)?)\s*%\s*$")
-_SHARE_PREFIX_RE = re.compile(r"^\s*(\d+(?:[.,]\d+)?)\s*%\s*")
+_SHARE_PREFIX_RE = re.compile(r"^\s*\d+(?:[.,]\d+)?(?:\s*[-–]\s*\d+(?:[.,]\d+)?)?\s*%\s*")
 # founders_history[].value joins co-founders with " / " ("A 20% (₽2 000) / B 80%
 # (₽8 000)"), not a comma -- splitting on commas alone parsed only the FIRST
 # founder of every multi-founder history string and dropped the rest (found
 # 2026-09-19: АО «Аурин»'s 80% of КоптерЛаб and АО «Проминвест»'s 51% of Атлант
 # Аэро were both invisible to the graph). Spaced slash only, so a name that
 # contains a bare "/" is not split.
-_SPLIT_RE = re.compile(r"\s+/\s+|,\s*(?![^(]*\))")
+# A comma between two digits is a thousands or decimal separator ("₽3,177,522,000",
+# "1,3%"), and ";" separates co-holders in prose lists; splitting on the former produced
+# numeric "founders".
+_SPLIT_RE = re.compile(r"\s+/\s+|;\s*(?![^(]*\))|(?:(?<!\d),|(?<=\d),(?=\s|\D))\s*(?![^(]*\))")
 _MULTIROTOR_RE = re.compile(r"\b(?:multirotor|multicopter|quadcopter)\b|"
                             r"мультикоптер|квадрокоптер", re.IGNORECASE)
 _VEHICLE_MOUNTED_RE = re.compile(
@@ -109,6 +112,7 @@ def parse_founder_entries(raw) -> list[dict]:
                 continue
             share_m = _SHARE_RE.search(segment)
             name = segment[: segment.find("(")].strip() if "(" in segment else segment
+            name = name.split(" — ")[0]
             name = _SHARE_SUFFIX_RE.sub("", name)
             name = _SHARE_PREFIX_RE.sub("", name)
             name = name.strip(" .,")
@@ -117,6 +121,37 @@ def parse_founder_entries(raw) -> list[dict]:
                 out.append({"name": name, "share": share_m.group(1) if share_m else None,
                             "inn": inn_m.group(1) if inn_m else None})
     return out
+
+
+_NOISE_PHRASES = {
+    "access-restricted", "all egrul-restricted", "sole shareholder", "единственный акционер",
+    "не раскрыты в егрюл", "участники не раскрыты",
+}
+_ROLE_PREFIX_RE = re.compile(
+    r"^\s*(?:ГЕНЕРАЛЬНЫЙ ДИРЕКТОР|ДИРЕКТОР|ЛИКВИДАТОР)\s*(?:\([^)]*\))?\s*:\s*", re.IGNORECASE)
+
+
+_NOTE_PAREN_RE = re.compile(r"\s*\((?:confirmed|per |founder,|с \d|\d+/\d+)[^)]*\)")
+
+
+def clean_person_ref(raw: str) -> str:
+    """Strip a leading role label and a trailing ' — note' from a director string."""
+    raw = _ROLE_PREFIX_RE.sub("", raw or "")
+    return raw.split(" — ")[0].strip()
+
+
+def is_noise_name(raw: str) -> bool:
+    """True for a fragment of prose or numbers that a free-text split mistook for a name:
+    share sizes, counts, redaction notices, note tails. Real names start with a capital
+    letter or a legal form, never a digit, symbol, or lowercase word."""
+    s = (raw or "").strip()
+    if len(s) < 3 or s.lower() in _NOISE_PHRASES:
+        return True
+    if not s[0].isalpha() or s[0].islower():
+        return True
+    if re.match(r"^(?:Директор|Наблюдательный совет)\b.*(?:орган|established)", s):
+        return True
+    return bool(re.search(r"\b(?:акционеров|participants)\b", s)) and not re.search(r"[«\"]", s)
 
 
 def normalize(name: str) -> str:
@@ -329,7 +364,10 @@ def build_graph(entities: list[dict], people: list[dict],
             designation_confidence=unit.get("designation_confidence"),
         )
 
-    def add_stub(raw_name: str, context: str) -> str:
+    def add_stub(raw_name: str, context: str) -> str | None:
+        if is_noise_name(raw_name):
+            return None
+        raw_name = _NOTE_PAREN_RE.sub("", raw_name).strip()
         node_id = f"stub::{normalize(raw_name)}"
         add_node(node_id, kind="unresolved", label=raw_name)
         item = unresolved.setdefault(node_id, {"id": node_id, "raw_name": raw_name, "contexts": []})
@@ -438,15 +476,19 @@ def build_graph(entities: list[dict], people: list[dict],
             raw_name = director.get("value")
             if not raw_name or raw_name.startswith("—"):
                 continue
-            target = resolve_name(raw_name)
-            if target == slug:
-                continue
-            source = target or add_stub(raw_name, f"director of {slug}")
             as_of, source_id = _date_and_source(director)
-            add_edge(source, slug, "directs", source_id=source_id, as_of=as_of,
-                     temporal_status=_director_temporal_status(director, entity.get("director")))
+            for person_ref in _SPLIT_RE.split(clean_person_ref(raw_name)):
+                person_ref = person_ref.strip()
+                if not person_ref:
+                    continue
+                target = resolve_name(person_ref)
+                if target == slug:
+                    continue
+                source = target or add_stub(person_ref, f"director of {slug}")
+                add_edge(source, slug, "directs", source_id=source_id, as_of=as_of,
+                         temporal_status=_director_temporal_status(director, entity.get("director")))
         if not entity.get("director_history") and entity.get("director"):
-            raw_name = entity["director"]
+            raw_name = clean_person_ref(entity["director"])
             target = resolve_name(raw_name)
             if target != slug:
                 source = target or add_stub(raw_name, f"director of {slug}")
