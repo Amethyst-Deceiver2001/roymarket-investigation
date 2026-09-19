@@ -36,7 +36,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0862 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_saidov-asker-kazbekovich_20260824_saidov-asker-kazbekovich.json) | 2026-08-24 | — |
+| [s0862] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_saidov-asker-kazbekovich_20260824_saidov-asker-kazbekovich.json) | 2026-08-24 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

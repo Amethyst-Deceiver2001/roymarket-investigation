@@ -59,12 +59,12 @@
 
 ### Telegram
 
-- <None>
-- <None>
+- <https://t.me/Chernozem77>
+- <https://t.me/Logosrus>
 
 ### Other
 
-- <None>
+- info@ewarfare.ru / logosrus@mail.ru
 
 ## Images
 
@@ -108,17 +108,17 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0546 | transcript | transcript (TRANSCRIPT_20260401_gk-logos-spp-spb-rebrus-pvo-presentation.pdf) | 2026-04-01 | — |
-| s0547 | transcript | transcript (TRANSCRIPT_20260526_gk-logos-srro-rostov-roundtable.html) | 2026-05-26 | — |
-| s0551 | document | document (fl-325547600079000-20260823183012.pdf) | — | — |
-| s0552 | EGRUL extract | EGRUL extract (ul-1151001003230-20260823183108.pdf) | — | 2026-08-23 |
-| s0553 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2021_20260823.zip) | 2026-08-23 | 2021-12-31 |
-| s0554 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2022_20260823.zip) | 2026-08-23 | 2022-12-31 |
-| s0555 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2023_20260823.zip) | 2026-08-23 | 2023-12-31 |
-| s0556 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2024_20260823.zip) | 2026-08-23 | 2024-12-31 |
-| s0557 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2025_20260823.zip) | 2026-08-23 | 2025-12-31 |
-| s6754 | EGRUL extract | EGRUL extract (EGRUL_7839303129_20260907_gk-logos.pdf) | 2026-09-07 | 2026-09-07 |
-| s7553 | site capture | site capture (SITE_7839303129_20260916_gk-logos-logo.svg) | 2026-09-16 | — |
+| [s0546] | transcript | transcript (TRANSCRIPT_20260401_gk-logos-spp-spb-rebrus-pvo-presentation.pdf) | 2026-04-01 | — |
+| [s0547] | transcript | transcript (TRANSCRIPT_20260526_gk-logos-srro-rostov-roundtable.html) | 2026-05-26 | — |
+| [s0551] | document | document (fl-325547600079000-20260823183012.pdf) | — | — |
+| [s0552] | EGRUL extract | EGRUL extract (ul-1151001003230-20260823183108.pdf) | — | 2026-08-23 |
+| [s0553] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2021_20260823.zip) | 2026-08-23 | 2021-12-31 |
+| [s0554] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2022_20260823.zip) | 2026-08-23 | 2022-12-31 |
+| [s0555] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2023_20260823.zip) | 2026-08-23 | 2023-12-31 |
+| [s0556] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2024_20260823.zip) | 2026-08-23 | 2024-12-31 |
+| [s0557] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1001294845_2025_20260823.zip) | 2026-08-23 | 2025-12-31 |
+| [s6754] | EGRUL extract | EGRUL extract (EGRUL_7839303129_20260907_gk-logos.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7553] | site capture | site capture (SITE_7839303129_20260916_gk-logos-logo.svg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

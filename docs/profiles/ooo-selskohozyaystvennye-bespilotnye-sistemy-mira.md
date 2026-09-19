@@ -44,8 +44,8 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7342 | EGRUL extract | EGRUL extract (EGRUL_7804712459_20260908_ooo-mira.pdf) | 2026-09-08 | 2026-09-08 |
-| s7395 | Bfo | Bfo (BFO_7804712459_2025_ooo-selskohozyaystvennye-bespilotnye-sistemy-mira.pdf) | — | — |
+| [s7342] | EGRUL extract | EGRUL extract (EGRUL_7804712459_20260908_ooo-mira.pdf) | 2026-09-08 | 2026-09-08 |
+| [s7395] | Bfo | Bfo (BFO_7804712459_2025_ooo-selskohozyaystvennye-bespilotnye-sistemy-mira.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -77,11 +77,11 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0110 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7719265496_20260822_ao-tekhnodinamika.json) | 2026-08-22 | 2026-08-22 |
-| s0778 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7719265496_20260824_ao-tekhnodinamika.json) | 2026-08-24 | — |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
-| s6737 | EGRUL extract | EGRUL extract (EGRUL_7719265496_20260907_ao-tekhnodinamika.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0110] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7719265496_20260822_ao-tekhnodinamika.json) | 2026-08-22 | 2026-08-22 |
+| [s0778] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7719265496_20260824_ao-tekhnodinamika.json) | 2026-08-24 | — |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6408] | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
+| [s6737] | EGRUL extract | EGRUL extract (EGRUL_7719265496_20260907_ao-tekhnodinamika.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

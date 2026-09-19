@@ -38,8 +38,8 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s6906 | Founding-Устав bundle | Founding-Устав bundle (UD_1167847402898_20260907_kronshtadt-bespilotnye-sistemy.zip) | 2026-09-07 | 2016-10-04 |
-| s7448 | EGRUL extract | EGRUL extract (EGRUL_7801320277_20260914_ooo-kronshtadt-bespilotnye-sistemy.pdf) | 2026-09-14 | 2026-09-14 |
+| [s6906] | Founding-Устав bundle | Founding-Устав bundle (UD_1167847402898_20260907_kronshtadt-bespilotnye-sistemy.zip) | 2026-09-07 | 2016-10-04 |
+| [s7448] | EGRUL extract | EGRUL extract (EGRUL_7801320277_20260914_ooo-kronshtadt-bespilotnye-sistemy.pdf) | 2026-09-14 | 2026-09-14 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

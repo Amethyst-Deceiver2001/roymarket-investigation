@@ -49,12 +49,12 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7345 | EGRUL extract | EGRUL extract (EGRUL_7713133550_20260908_ao-rti-radio.pdf) | 2026-09-08 | 2026-09-08 |
-| s7346 | Bfo | Bfo (BFO_7713133550_2021_ao-rti-radio.pdf) | — | — |
-| s7347 | Bfo | Bfo (BFO_7713133550_2022_ao-rti-radio.pdf) | — | — |
-| s7348 | Bfo | Bfo (BFO_7713133550_2023_ao-rti-radio.pdf) | — | — |
-| s7349 | Bfo | Bfo (BFO_7713133550_2024_ao-rti-radio.pdf) | — | — |
-| s7350 | Bfo | Bfo (BFO_7713133550_2025_ao-rti-radio.pdf) | — | — |
+| [s7345] | EGRUL extract | EGRUL extract (EGRUL_7713133550_20260908_ao-rti-radio.pdf) | 2026-09-08 | 2026-09-08 |
+| [s7346] | Bfo | Bfo (BFO_7713133550_2021_ao-rti-radio.pdf) | — | — |
+| [s7347] | Bfo | Bfo (BFO_7713133550_2022_ao-rti-radio.pdf) | — | — |
+| [s7348] | Bfo | Bfo (BFO_7713133550_2023_ao-rti-radio.pdf) | — | — |
+| [s7349] | Bfo | Bfo (BFO_7713133550_2024_ao-rti-radio.pdf) | — | — |
+| [s7350] | Bfo | Bfo (BFO_7713133550_2025_ao-rti-radio.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

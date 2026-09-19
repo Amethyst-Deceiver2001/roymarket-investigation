@@ -55,13 +55,13 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0097 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7705944272_20260822_zao-kurskpromteplitsa.json) | 2026-08-22 | 2026-08-22 |
-| s6555 | Bfo | Bfo (BFO_7705944272_2021_ао-кпт.pdf) | — | — |
-| s6556 | Bfo | Bfo (BFO_7705944272_2022_ао-кпт.pdf) | — | — |
-| s6557 | Bfo | Bfo (BFO_7705944272_2023_ао-кпт.pdf) | — | — |
-| s6558 | Bfo | Bfo (BFO_7705944272_2024_ао-кпт.pdf) | — | — |
-| s6559 | Bfo | Bfo (BFO_7705944272_2025_ао-кпт.pdf) | — | — |
-| s6821 | EGRUL extract | EGRUL extract (EGRUL_7705944272_20260907_zao-kurskpromteplitsa.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0097] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7705944272_20260822_zao-kurskpromteplitsa.json) | 2026-08-22 | 2026-08-22 |
+| [s6555] | Bfo | Bfo (BFO_7705944272_2021_ао-кпт.pdf) | — | — |
+| [s6556] | Bfo | Bfo (BFO_7705944272_2022_ао-кпт.pdf) | — | — |
+| [s6557] | Bfo | Bfo (BFO_7705944272_2023_ао-кпт.pdf) | — | — |
+| [s6558] | Bfo | Bfo (BFO_7705944272_2024_ао-кпт.pdf) | — | — |
+| [s6559] | Bfo | Bfo (BFO_7705944272_2025_ао-кпт.pdf) | — | — |
+| [s6821] | EGRUL extract | EGRUL extract (EGRUL_7705944272_20260907_zao-kurskpromteplitsa.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

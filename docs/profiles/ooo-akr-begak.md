@@ -71,15 +71,15 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0525 | EGRUL extract | EGRUL extract (ul-1202600009919-20260823145414.pdf) | — | 2026-08-23 |
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
-| s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
-| s6478 | Bfo | Bfo (BFO_2632116476_2021_ооо-акр-бегак.pdf) | — | — |
-| s6479 | Bfo | Bfo (BFO_2632116476_2022_ооо-акр-бегак.pdf) | — | — |
-| s6480 | Bfo | Bfo (BFO_2632116476_2023_ооо-акр-бегак.pdf) | — | — |
-| s6481 | Bfo | Bfo (BFO_2632116476_2024_ооо-акр-бегак.pdf) | — | — |
-| s6482 | Bfo | Bfo (BFO_2632116476_2025_ооо-акр-бегак.pdf) | — | — |
-| s6779 | EGRUL extract | EGRUL extract (EGRUL_2632116476_20260907_ooo-akr-begak.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0525] | EGRUL extract | EGRUL extract (ul-1202600009919-20260823145414.pdf) | — | 2026-08-23 |
+| [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s6459] | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
+| [s6478] | Bfo | Bfo (BFO_2632116476_2021_ооо-акр-бегак.pdf) | — | — |
+| [s6479] | Bfo | Bfo (BFO_2632116476_2022_ооо-акр-бегак.pdf) | — | — |
+| [s6480] | Bfo | Bfo (BFO_2632116476_2023_ооо-акр-бегак.pdf) | — | — |
+| [s6481] | Bfo | Bfo (BFO_2632116476_2024_ооо-акр-бегак.pdf) | — | — |
+| [s6482] | Bfo | Bfo (BFO_2632116476_2025_ооо-акр-бегак.pdf) | — | — |
+| [s6779] | EGRUL extract | EGRUL extract (EGRUL_2632116476_20260907_ooo-akr-begak.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

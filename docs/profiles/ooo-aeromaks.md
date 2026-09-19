@@ -22,7 +22,7 @@
 | Value | As of | Note |
 |---|---|---|
 | Чижов Максим Сергеевич | 2020-09-01 | Генеральный директор «действующего на основании Устава» per the signature block of Государственный контракт № 44 with the Ministry of Ecology of Sakhalin Oblast. Earliest documented officer of this entity, predating both Сазанова А.А. (as_of 2024-09-27) and the unreconciled ЕГРЮЛ reading Бессонов С.Н. [s5656] |
-| Сазанова Алиса Алексеевна | 2024-09-27 | Signed государственный контракт № ГК 6401/24-4574 with ДИТ Москвы «в лице генерального директора Сазановой Алисы Алексеевны, действующего на основании Устава». Conflicts with the ЕГРЮЛ extract on file (s0218), which records Бессонов С.Н. as director — the ЕГРЮЛ extract was pulled 20.08.2026 and its own effective date has not been reconciled against this 2024 signature. Not resolved: whether Сазанова held the post only in 2024, or the two records simply reflect different dates. Flagged rather than merged. [s4572] |
+| Сазанова Алиса Алексеевна | 2024-09-27 | Signed государственный контракт № ГК 6401/24-4574 with ДИТ Москвы «в лице генерального директора Сазановой Алисы Алексеевны, действующего на основании Устава». Conflicts with the ЕГРЮЛ extract on file ([s0218]), which records Бессонов С.Н. as director — the ЕГРЮЛ extract was pulled 20.08.2026 and its own effective date has not been reconciled against this 2024 signature. Not resolved: whether Сазанова held the post only in 2024, or the two records simply reflect different dates. Flagged rather than merged. [s4572] |
 | Бессонов Сергей Николаевич | 2025-09-11 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 644914040799. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6741] |
 
 ### Founders / ownership
@@ -76,10 +76,10 @@
 - Municipal aerial-survey/topographic mapping work. Status per the contract card as of the 2026-08-31 capture: Исполнение завершено. [s5258]
 - Second award from the same St Petersburg customer. Subject stated at contract-card level only — no readable signed contract document in the archived attachment set. Status per the contract card as of the 2026-08-31 capture: Исполнение завершено. [s5242]
 - Moscow city environmental department; first of two consecutive awards on the same subject. Status per the contract card as of the 2026-08-31 capture: Исполнение завершено. [s5235]
-- Second-largest contract on file. Aerial remote-sensing survey work for the federal forest-inventory agency ФГБУ «Рослесинфорг» (source s4568-series attachment set; subject text quoted from the signed гражданско-правовой договор № ЭА-000777). Status per the contract card as of the 2026-08-31 capture: Исполнение прекращено. [s5219]
+- Second-largest contract on file. Aerial remote-sensing survey work for the federal forest-inventory agency ФГБУ «Рослесинфорг» (source [s4568]-series attachment set; subject text quoted from the signed гражданско-правовой договор № ЭА-000777). Status per the contract card as of the 2026-08-31 capture: Исполнение прекращено. [s5219]
 - Moscow city environmental department; second and larger of two consecutive awards on the same subject. Status per the contract card as of the 2026-08-31 capture: Исполнение завершено. [s5236]
 - Second Рослесинфорг award, this one combining satellite ДЗЗ with ground survey data from the государственная инвентаризация лесов (ГИЛ). Status per the contract card as of the 2026-08-31 capture: Исполнение завершено. [s5220]
-- Largest documented contract for this entity. Open electronic competition (реестровый номер закупки 0173200001424001297, протокол ИЭОК1 от 16.09.2024); максимальное значение цены ₽268,916,478.58, сумма единичных расценок ₽23,050.00 (source s4572, the signed государственный контракт docx). Signed for Аэромакс by генеральный директор Сазанова Алиса Алексеевна — NOT Бессонов С.Н., the director on file from the ЕГРЮЛ extract; see director_history. Terminated by mutual agreement in 2025 without any services rendered or paid (соглашение о расторжении, source s4571, signed for Аэромакс by первый заместитель генерального директора Никифоров Антон Сергеевич under доверенность от 20.12.2024 № 15-09/92-ДИ; «услуги не оказывались и оплате не подлежат», «стороны претензий друг к другу не имеют»). Same customer and same ГК 6401/24-XXXX contract-number series as ООО «Гаскар интеграция»'s ₽516.8m ГК 6401/24-4522 — two separate ДИТ Москвы awards in the same 2024 batch to two entities on this roster. Status per the contract card as of the 2026-08-31 capture: Исполнение прекращено. [s5240]
+- Largest documented contract for this entity. Open electronic competition (реестровый номер закупки 0173200001424001297, протокол ИЭОК1 от 16.09.2024); максимальное значение цены ₽268,916,478.58, сумма единичных расценок ₽23,050.00 (source [s4572], the signed государственный контракт docx). Signed for Аэромакс by генеральный директор Сазанова Алиса Алексеевна — NOT Бессонов С.Н., the director on file from the ЕГРЮЛ extract; see director_history. Terminated by mutual agreement in 2025 without any services rendered or paid (соглашение о расторжении, source [s4571], signed for Аэромакс by первый заместитель генерального директора Никифоров Антон Сергеевич under доверенность от 20.12.2024 № 15-09/92-ДИ; «услуги не оказывались и оплате не подлежат», «стороны претензий друг к другу не имеют»). Same customer and same ГК 6401/24-XXXX contract-number series as ООО «Гаскар интеграция»'s ₽516.8m ГК 6401/24-4522 — two separate ДИТ Москвы awards in the same 2024 batch to two entities on this roster. Status per the contract card as of the 2026-08-31 capture: Исполнение прекращено. [s5240]
 
 ## Trademarks
 
@@ -141,29 +141,29 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0218 | EGRUL extract | EGRUL extract (ul-1177746007900-20260820195721.pdf) | — | 2026-08-20 |
-| s0780 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7725347482_20260824_ooo-aeromaks.json) | 2026-08-24 | — |
-| s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
-| s4572 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7725347482_2771087800024000123_kontrakt-gk-6-27710878000240001230002_2266db7b.docx) | — | 2023-12-26 |
-| s5219 | Zakupki | Zakupki (ZAKUPKI_contract_1772231995223000867_20260831.html) | 2026-08-31 | — |
-| s5220 | Zakupki | Zakupki (ZAKUPKI_contract_1772231995224000778_20260831.html) | 2026-08-31 | — |
-| s5231 | Zakupki | Zakupki (ZAKUPKI_contract_2526029455221000021_20260831.html) | 2026-08-31 | — |
-| s5235 | Zakupki | Zakupki (ZAKUPKI_contract_2770422175322000063_20260831.html) | 2026-08-31 | — |
-| s5236 | Zakupki | Zakupki (ZAKUPKI_contract_2770422175323000039_20260831.html) | 2026-08-31 | — |
-| s5240 | Zakupki | Zakupki (ZAKUPKI_contract_2771087800024000123_20260831.html) | 2026-08-31 | — |
-| s5241 | Zakupki | Zakupki (ZAKUPKI_contract_2781501552320000058_20260831.html) | 2026-08-31 | — |
-| s5242 | Zakupki | Zakupki (ZAKUPKI_contract_2781501552322000005_20260831.html) | 2026-08-31 | — |
-| s5258 | Zakupki | Zakupki (ZAKUPKI_contract_3650129088721000013_20260831.html) | 2026-08-31 | — |
-| s5259 | Zakupki | Zakupki (ZAKUPKI_contract_3673001207021000003_20260831.html) | 2026-08-31 | — |
-| s5553 | Bfo | Bfo (BFO_7725347482_2021_ооо-аэромакс.pdf) | — | — |
-| s5554 | Bfo | Bfo (BFO_7725347482_2022_ооо-аэромакс.pdf) | — | — |
-| s5656 | Zakupki | Zakupki (ZAKUPKI_contract_2650123167320000046_20260905.html) | 2026-09-05 | — |
-| s5657 | Zakupki | Zakupki (ZAKUPKI_contract_2702001424420000025_20260905.html) | 2026-09-05 | — |
-| s5658 | Zakupki | Zakupki (ZAKUPKI_contract_2781501552320000032_20260905.html) | 2026-09-05 | — |
-| s6416 | bulk open-data extract | bulk open-data extract (DATASET_20260901_favt-aviation-works-operators-registry.txt) | 2026-09-01 | — |
-| s6741 | EGRUL extract | EGRUL extract (EGRUL_7725347482_20260907_ooo-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
-| s6927 | Proverki | Proverki (PROVERKI_7725347482_20260907_ooo-aeromaks-inspection-history.txt) | 2026-09-07 | — |
-| s7567 | site capture | site capture (SITE_7725347482_20260916_ooo-aeromaks-logo.png) | 2026-09-16 | — |
+| [s0218] | EGRUL extract | EGRUL extract (ul-1177746007900-20260820195721.pdf) | — | 2026-08-20 |
+| [s0780] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7725347482_20260824_ooo-aeromaks.json) | 2026-08-24 | — |
+| [s1169] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
+| [s4572] | Zakupki | Zakupki (ZAKUPKI_ATTACH_7725347482_2771087800024000123_kontrakt-gk-6-27710878000240001230002_2266db7b.docx) | — | 2023-12-26 |
+| [s5219] | Zakupki | Zakupki (ZAKUPKI_contract_1772231995223000867_20260831.html) | 2026-08-31 | — |
+| [s5220] | Zakupki | Zakupki (ZAKUPKI_contract_1772231995224000778_20260831.html) | 2026-08-31 | — |
+| [s5231] | Zakupki | Zakupki (ZAKUPKI_contract_2526029455221000021_20260831.html) | 2026-08-31 | — |
+| [s5235] | Zakupki | Zakupki (ZAKUPKI_contract_2770422175322000063_20260831.html) | 2026-08-31 | — |
+| [s5236] | Zakupki | Zakupki (ZAKUPKI_contract_2770422175323000039_20260831.html) | 2026-08-31 | — |
+| [s5240] | Zakupki | Zakupki (ZAKUPKI_contract_2771087800024000123_20260831.html) | 2026-08-31 | — |
+| [s5241] | Zakupki | Zakupki (ZAKUPKI_contract_2781501552320000058_20260831.html) | 2026-08-31 | — |
+| [s5242] | Zakupki | Zakupki (ZAKUPKI_contract_2781501552322000005_20260831.html) | 2026-08-31 | — |
+| [s5258] | Zakupki | Zakupki (ZAKUPKI_contract_3650129088721000013_20260831.html) | 2026-08-31 | — |
+| [s5259] | Zakupki | Zakupki (ZAKUPKI_contract_3673001207021000003_20260831.html) | 2026-08-31 | — |
+| [s5553] | Bfo | Bfo (BFO_7725347482_2021_ооо-аэромакс.pdf) | — | — |
+| [s5554] | Bfo | Bfo (BFO_7725347482_2022_ооо-аэромакс.pdf) | — | — |
+| [s5656] | Zakupki | Zakupki (ZAKUPKI_contract_2650123167320000046_20260905.html) | 2026-09-05 | — |
+| [s5657] | Zakupki | Zakupki (ZAKUPKI_contract_2702001424420000025_20260905.html) | 2026-09-05 | — |
+| [s5658] | Zakupki | Zakupki (ZAKUPKI_contract_2781501552320000032_20260905.html) | 2026-09-05 | — |
+| [s6416] | bulk open-data extract | bulk open-data extract (DATASET_20260901_favt-aviation-works-operators-registry.txt) | 2026-09-01 | — |
+| [s6741] | EGRUL extract | EGRUL extract (EGRUL_7725347482_20260907_ooo-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6927] | Proverki | Proverki (PROVERKI_7725347482_20260907_ooo-aeromaks-inspection-history.txt) | 2026-09-07 | — |
+| [s7567] | site capture | site capture (SITE_7725347482_20260916_ooo-aeromaks-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

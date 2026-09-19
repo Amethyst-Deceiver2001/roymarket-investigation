@@ -68,14 +68,14 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0223 | EGRUL extract | EGRUL extract (ul-1237700523895-20260815163505.pdf) | — | 2026-08-15 |
-| s0391 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2023_20260815.zip) | 2026-08-15 | 2023-12-31 |
-| s0392 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
-| s0393 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
-| s0394 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0395 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
-| s0396 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s0808 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9707004743_20260824_ooo-investments.json) | 2026-08-24 | — |
+| [s0223] | EGRUL extract | EGRUL extract (ul-1237700523895-20260815163505.pdf) | — | 2026-08-15 |
+| [s0391] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2023_20260815.zip) | 2026-08-15 | 2023-12-31 |
+| [s0392] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
+| [s0393] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
+| [s0394] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0395] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
+| [s0396] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s0808] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9707004743_20260824_ooo-investments.json) | 2026-08-24 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -88,17 +88,17 @@
 
 ## Open questions
 
-- founders[] (source s0467) lists only Шевченко Константин Игоревич, no share%, while the cbst_tie/parents[] prose (docs/index.html) describes a 51/39/two-smaller-holder split (АО «Проминвест» / GD Хутешен / two individuals) with no Шевченко named. Not reconciled -- s0467 may predate the ownership described in the prose (dated 10.08.2026 for the Хутешен-stake increase), or Шевченко may be one of the unnamed "two smaller individual holders." A fresh full EGRUL выписка would settle this. [s0467]
+- founders[] (source [s0467]) lists only Шевченко Константин Игоревич, no share%, while the cbst_tie/parents[] prose (docs/index.html) describes a 51/39/two-smaller-holder split (АО «Проминвест» / GD Хутешен / two individuals) with no Шевченко named. Not reconciled -- [s0467] may predate the ownership described in the prose (dated 10.08.2026 for the Хутешен-stake increase), or Шевченко may be one of the unnamed "two smaller individual holders." A fresh full EGRUL выписка would settle this. [s0467]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0467 | EGRUL extract | EGRUL extract (ul-1236100025633-20260823122756.pdf) | — | 2026-08-23 |
-| s0750 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_6154165878_20260824_ooo-atlant-aero.json) | 2026-08-24 | — |
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
-| s6725 | EGRUL extract | EGRUL extract (EGRUL_6154165878_20260907_ooo-atlant-aero.pdf) | 2026-09-07 | 2026-09-07 |
-| s6931 | Proverki | Proverki (PROVERKI_6154165878_20260907_ooo-atlant-aero-inspection-history.txt) | 2026-09-07 | — |
+| [s0467] | EGRUL extract | EGRUL extract (ul-1236100025633-20260823122756.pdf) | — | 2026-08-23 |
+| [s0750] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_6154165878_20260824_ooo-atlant-aero.json) | 2026-08-24 | — |
+| [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s6725] | EGRUL extract | EGRUL extract (EGRUL_6154165878_20260907_ooo-atlant-aero.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6931] | Proverki | Proverki (PROVERKI_6154165878_20260907_ooo-atlant-aero-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -56,11 +56,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5543 | EGRUL extract | EGRUL extract (EGRUL_9722048270_20260905_inn-9722048270.pdf) | 2026-09-05 | 2026-09-05 |
-| s6671 | Bfo | Bfo (BFO_9722048270_2023_ао-нпп.pdf) | — | — |
-| s6672 | Bfo | Bfo (BFO_9722048270_2024_ао-нпп.pdf) | — | — |
-| s6673 | Bfo | Bfo (BFO_9722048270_2025_ао-нпп.pdf) | — | — |
-| s6866 | EGRUL extract | EGRUL extract (EGRUL_9722048270_20260907_ao-npp-real.pdf) | 2026-09-07 | 2026-09-07 |
+| [s5543] | EGRUL extract | EGRUL extract (EGRUL_9722048270_20260905_inn-9722048270.pdf) | 2026-09-05 | 2026-09-05 |
+| [s6671] | Bfo | Bfo (BFO_9722048270_2023_ао-нпп.pdf) | — | — |
+| [s6672] | Bfo | Bfo (BFO_9722048270_2024_ао-нпп.pdf) | — | — |
+| [s6673] | Bfo | Bfo (BFO_9722048270_2025_ао-нпп.pdf) | — | — |
+| [s6866] | EGRUL extract | EGRUL extract (EGRUL_9722048270_20260907_ao-npp-real.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -31,7 +31,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0560 | transcript | transcript (TRANSCRIPT_20260813_onf-kulibin-klub-roundtable.html) | 2026-08-13 | — |
+| [s0560] | transcript | transcript (TRANSCRIPT_20260813_onf-kulibin-klub-roundtable.html) | 2026-08-13 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

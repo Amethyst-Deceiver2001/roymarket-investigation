@@ -165,31 +165,31 @@
 
 ## Open questions
 
-- GUR names Пиранья model numbers 7/10/13; this registry's existing entries say 15/20 (source: prior extraction, source_id null). Numbering discrepancy not reconciled — may be different product generations, a GUR simplification, or a registry transcription issue. UPDATE 2026-09-03: the company's own July 2026 product catalog (s1410) independently confirms real flagship models ARE numbered 7/10/13 with detailed specs, matching GUR's numbering exactly — strengthens the case that the registry's older bare "Пиранья 15"/"20" entries (source_id null) are a mis-transcription or a distinct, unconfirmed earlier line, not the flagship models. Not deleted outright since no direct disproof exists, but the discrepancy now favors 7/10/13 as authoritative. [s0961]
+- GUR names Пиранья model numbers 7/10/13; this registry's existing entries say 15/20 (source: prior extraction, source_id null). Numbering discrepancy not reconciled — may be different product generations, a GUR simplification, or a registry transcription issue. UPDATE 2026-09-03: the company's own July 2026 product catalog ([s1410]) independently confirms real flagship models ARE numbered 7/10/13 with detailed specs, matching GUR's numbering exactly — strengthens the case that the registry's older bare "Пиранья 15"/"20" entries (source_id null) are a mis-transcription or a distinct, unconfirmed earlier line, not the flagship models. Not deleted outright since no direct disproof exists, but the discrepancy now favors 7/10/13 as authoritative. [s0961]
 - Original устав (Протокол №1, 13.09.2023) was approved by a "Собранием учредителей" (plural founders' meeting), but only one founder (Чернышов П.А.) is currently confirmed in founders[] -- the устав body itself does not name individual founders (standard post-2009 pattern) or disclose a founder count/split. Worth checking the founding Протокол №1 itself (not yet pulled -- only the устав text was in this bundle) or a full ЕГРЮЛ выписка's founder history for a possible second/earlier founder. [s6909]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0487 | EGRUL extract | EGRUL extract (ul-1237300010430-20260823131643.pdf) | — | 2026-08-23 |
-| s0761 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7300024069_20260824_ooo-skb-piranya.json) | 2026-08-24 | — |
-| s0961 | GUR war-sanctions record | GUR war-sanctions record (GUR_7300024069_20260824_ooo-skb-piranya.html) | 2026-08-24 | — |
-| s1410 | product catalog | product catalog (CATALOG_7300024069_20260825_ooo-skb-piranya-product-catalog.pdf) | 2026-08-25 | — |
-| s1411 | site capture | site capture (WEBCAPTURE_7300024069_20260825_piranhafpv-ru-homepage.html) | 2026-08-25 | — |
-| s1412 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post300-armed-drones-field.jpg) | 2026-08-25 | — |
-| s1413 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post355-kursk-bpla810-vidthumb.jpg) | 2026-08-25 | — |
-| s1414 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post360-ntv-naryshkin-exhibit-vidthumb.jpg) | 2026-08-25 | — |
-| s1415 | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post384-vdv-kursk-operator-vidthumb.jpg) | 2026-08-25 | — |
-| s5550 | Bfo | Bfo (BFO_7300024069_2023_ооо-скб-пиранья.pdf) | — | — |
-| s5551 | Bfo | Bfo (BFO_7300024069_2024_ооо-скб-пиранья.pdf) | — | — |
-| s5552 | Bfo | Bfo (BFO_7300024069_2025_ооо-скб-пиранья.pdf) | — | — |
-| s6730 | EGRUL extract | EGRUL extract (EGRUL_7300024069_20260907_ooo-skb-piranya.pdf) | 2026-09-07 | 2026-09-07 |
-| s6909 | Founding-Устав bundle | Founding-Устав bundle (UD_1237300010430_20260907_skb-piranya.zip) | 2026-09-07 | 2023-09-13 |
-| s7509 | Telegram media | Telegram media (TGMEDIA_7300024069_20250401_piranhafpv-post360-1.jpg) | 2025-04-01 | — |
-| s7512 | Telegram media | Telegram media (TGMEDIA_7300024069_20250801_piranhafpv-post384-1.jpg) | 2025-08-01 | — |
-| s7513 | Telegram media | Telegram media (TGMEDIA_7300024069_20251029_piranhafpv-post432-1.jpg) | 2025-10-29 | — |
-| s7514 | Telegram media | Telegram media (TGMEDIA_7300024069_20251029_piranhafpv-post432-2.jpg) | 2025-10-29 | — |
+| [s0487] | EGRUL extract | EGRUL extract (ul-1237300010430-20260823131643.pdf) | — | 2026-08-23 |
+| [s0761] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7300024069_20260824_ooo-skb-piranya.json) | 2026-08-24 | — |
+| [s0961] | GUR war-sanctions record | GUR war-sanctions record (GUR_7300024069_20260824_ooo-skb-piranya.html) | 2026-08-24 | — |
+| [s1410] | product catalog | product catalog (CATALOG_7300024069_20260825_ooo-skb-piranya-product-catalog.pdf) | 2026-08-25 | — |
+| [s1411] | site capture | site capture (WEBCAPTURE_7300024069_20260825_piranhafpv-ru-homepage.html) | 2026-08-25 | — |
+| [s1412] | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post300-armed-drones-field.jpg) | 2026-08-25 | — |
+| [s1413] | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post355-kursk-bpla810-vidthumb.jpg) | 2026-08-25 | — |
+| [s1414] | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post360-ntv-naryshkin-exhibit-vidthumb.jpg) | 2026-08-25 | — |
+| [s1415] | Telegram media | Telegram media (TGMEDIA_7300024069_20260825_piranhafpv-post384-vdv-kursk-operator-vidthumb.jpg) | 2026-08-25 | — |
+| [s5550] | Bfo | Bfo (BFO_7300024069_2023_ооо-скб-пиранья.pdf) | — | — |
+| [s5551] | Bfo | Bfo (BFO_7300024069_2024_ооо-скб-пиранья.pdf) | — | — |
+| [s5552] | Bfo | Bfo (BFO_7300024069_2025_ооо-скб-пиранья.pdf) | — | — |
+| [s6730] | EGRUL extract | EGRUL extract (EGRUL_7300024069_20260907_ooo-skb-piranya.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6909] | Founding-Устав bundle | Founding-Устав bundle (UD_1237300010430_20260907_skb-piranya.zip) | 2026-09-07 | 2023-09-13 |
+| [s7509] | Telegram media | Telegram media (TGMEDIA_7300024069_20250401_piranhafpv-post360-1.jpg) | 2025-04-01 | — |
+| [s7512] | Telegram media | Telegram media (TGMEDIA_7300024069_20250801_piranhafpv-post384-1.jpg) | 2025-08-01 | — |
+| [s7513] | Telegram media | Telegram media (TGMEDIA_7300024069_20251029_piranhafpv-post432-1.jpg) | 2025-10-29 | — |
+| [s7514] | Telegram media | Telegram media (TGMEDIA_7300024069_20251029_piranhafpv-post432-2.jpg) | 2025-10-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

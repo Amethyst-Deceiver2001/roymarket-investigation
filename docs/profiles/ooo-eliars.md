@@ -64,11 +64,11 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s3686 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1616303058823000546_1616303058823000546_kontrakt-497-16163030588230005460002_0ae35aee.docx) | — | 2013-04-05 |
-| s5389 | Gisp | Gisp (GISP_20260903_goods-catalog-manufacturer-hits-5-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5390 | Gisp | Gisp (GISP_20260903_goods-catalog-product-details-7-new-items.json) | 2026-09-03 | 2026-09-03 |
-| s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
-| s6827 | EGRUL extract | EGRUL extract (EGRUL_7735140825_20260907_ooo-eliars.pdf) | 2026-09-07 | 2026-09-07 |
+| [s3686] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1616303058823000546_1616303058823000546_kontrakt-497-16163030588230005460002_0ae35aee.docx) | — | 2013-04-05 |
+| [s5389] | Gisp | Gisp (GISP_20260903_goods-catalog-manufacturer-hits-5-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5390] | Gisp | Gisp (GISP_20260903_goods-catalog-product-details-7-new-items.json) | 2026-09-03 | 2026-09-03 |
+| [s6408] | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
+| [s6827] | EGRUL extract | EGRUL extract (EGRUL_7735140825_20260907_ooo-eliars.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -74,11 +74,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0532 | EGRUL extract | EGRUL extract (ul-1244800001820-20260823151547.pdf) | — | 2026-08-23 |
-| s0945 | Rospatent record | Rospatent record (ROSPATENT_20260824_full-roster-tm-sweep.json) | 2026-08-24 | — |
-| s6501 | Bfo | Bfo (BFO_4800013729_2024_ооо-нпо-киловатт.pdf) | — | — |
-| s6502 | Bfo | Bfo (BFO_4800013729_2025_ооо-нпо-киловатт.pdf) | — | — |
-| s6789 | EGRUL extract | EGRUL extract (EGRUL_4800013729_20260907_ooo-npo-kilovatt.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0532] | EGRUL extract | EGRUL extract (ul-1244800001820-20260823151547.pdf) | — | 2026-08-23 |
+| [s0945] | Rospatent record | Rospatent record (ROSPATENT_20260824_full-roster-tm-sweep.json) | 2026-08-24 | — |
+| [s6501] | Bfo | Bfo (BFO_4800013729_2024_ооо-нпо-киловатт.pdf) | — | — |
+| [s6502] | Bfo | Bfo (BFO_4800013729_2025_ооо-нпо-киловатт.pdf) | — | — |
+| [s6789] | EGRUL extract | EGRUL extract (EGRUL_4800013729_20260907_ooo-npo-kilovatt.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

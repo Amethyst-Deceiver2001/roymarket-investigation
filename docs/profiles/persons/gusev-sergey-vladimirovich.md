@@ -34,7 +34,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0983 | Rospatent patent record | Rospatent patent record (PATENT_RU134797S_2026-08-24_ooo-kleverkopter.json) | — | — |
+| [s0983] | Rospatent patent record | Rospatent patent record (PATENT_RU134797S_2026-08-24_ooo-kleverkopter.json) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

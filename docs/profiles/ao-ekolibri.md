@@ -110,7 +110,7 @@
 ![Рогозин Алексей Дмитриевич](../images/rogozin-aleksey-dmitrievich_portrait_rupep.jpg)
 - **DOB:** 21.09.1983
 - **ИНН:** 770301599800
-- Председатель консультативного совета / Chairman of the Advisory Council (superseded by a Совет директоров seat per the entity's FY2025 filing, s0324 -- exact transition date not stated in either source, 'to' left null rather than guessed)
+- Председатель консультативного совета / Chairman of the Advisory Council (superseded by a Совет директоров seat per the entity's FY2025 filing, [s0324] -- exact transition date not stated in either source, 'to' left null rather than guessed)
 - Член Совета директоров; также долгосрочный займодавец (₽302 тыс., 6.5%, погашение по предъявлении)
 - `sanctions lead`
 
@@ -133,20 +133,20 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0320 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2021_20260817.zip) | 2026-08-17 | 2021-12-31 |
-| s0321 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2022_20260817.zip) | 2026-08-17 | 2022-12-31 |
-| s0322 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2023_20260817.zip) | 2026-08-17 | 2023-12-31 |
-| s0323 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
-| s0324 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
-| s1165 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
-| s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
-| s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
-| s1403 | АЭРОНЕКСТ member record | АЭРОНЕКСТ member record (AERONEXT_7714473012_20260825_ao-ekolibri.json) | 2026-08-25 | — |
-| s2625 | Naletay | Naletay (NALETAY_7714473012_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
-| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6824 | EGRUL extract | EGRUL extract (EGRUL_7714473012_20260907_ao-ekolibri.pdf) | 2026-09-07 | 2026-09-07 |
-| s6908 | Founding-Устав bundle | Founding-Устав bundle (UD_1217700279103_20260907_ekolibri.zip) | 2026-09-07 | 2024-09-09 |
+| [s0320] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2021_20260817.zip) | 2026-08-17 | 2021-12-31 |
+| [s0321] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2022_20260817.zip) | 2026-08-17 | 2022-12-31 |
+| [s0322] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2023_20260817.zip) | 2026-08-17 | 2023-12-31 |
+| [s0323] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
+| [s0324] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
+| [s1165] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
+| [s1168] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
+| [s1169] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
+| [s1403] | АЭРОНЕКСТ member record | АЭРОНЕКСТ member record (AERONEXT_7714473012_20260825_ao-ekolibri.json) | 2026-08-25 | — |
+| [s2625] | Naletay | Naletay (NALETAY_7714473012_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
+| [s5344] | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6824] | EGRUL extract | EGRUL extract (EGRUL_7714473012_20260907_ao-ekolibri.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6908] | Founding-Устав bundle | Founding-Устав bundle (UD_1217700279103_20260907_ekolibri.zip) | 2026-09-07 | 2024-09-09 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -36,8 +36,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s1408 | third-party OSINT dossier | third-party OSINT dossier (DOSSIER_20260825_trimix-3mx-companies-and-people.xlsx) | 2026-08-25 | — |
-| s5718 | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_504405055721_20260905_ip-tsyganov-vadim-borisovich.json) | 2026-09-05 | — |
+| [s1408] | third-party OSINT dossier | third-party OSINT dossier (DOSSIER_20260825_trimix-3mx-companies-and-people.xlsx) | 2026-08-25 | — |
+| [s5718] | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_504405055721_20260905_ip-tsyganov-vadim-borisovich.json) | 2026-09-05 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

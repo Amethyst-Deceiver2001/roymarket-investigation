@@ -56,10 +56,10 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0222 | EGRUL extract | EGRUL extract (ul-1237700483976-20260814212311.pdf) | — | 2026-08-14 |
-| s0401 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714015016_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
-| s0402 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714015016_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0403 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714015016_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s0222] | EGRUL extract | EGRUL extract (ul-1237700483976-20260814212311.pdf) | — | 2026-08-14 |
+| [s0401] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714015016_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
+| [s0402] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714015016_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0403] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714015016_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

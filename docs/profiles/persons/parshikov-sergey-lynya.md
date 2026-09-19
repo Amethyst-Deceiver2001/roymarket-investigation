@@ -35,11 +35,11 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5371 | EGRUL extract | EGRUL extract (EGRUL_2310240630_20260903_open-api-search-result.json) | 2026-09-03 | 2026-09-03 |
-| s5378 | Tgpost | Tgpost (TGPOST_projectArchangel_9613_20260224.txt) | 2026-02-24 | 2026-02-24 |
-| s5395 | Tgpost | Tgpost (TGPOST_20250904_my_el_lab-2339-gagaring-instructors-intro-tolstousov.txt) | 2025-09-04 | 2025-09-04 |
-| s5397 | Tgpost | Tgpost (TGPOST_20251113_mil_hub-117507-gagaring-poslednii-rubezh-4-instructors.txt) | 2025-11-13 | 2025-11-13 |
-| s5398 | Tgpost | Tgpost (TGPOST_20251229_my_el_lab-2863-gagaring-saiga-lynya-course-thanks.txt) | 2025-12-29 | 2025-12-29 |
+| [s5371] | EGRUL extract | EGRUL extract (EGRUL_2310240630_20260903_open-api-search-result.json) | 2026-09-03 | 2026-09-03 |
+| [s5378] | Tgpost | Tgpost (TGPOST_projectArchangel_9613_20260224.txt) | 2026-02-24 | 2026-02-24 |
+| [s5395] | Tgpost | Tgpost (TGPOST_20250904_my_el_lab-2339-gagaring-instructors-intro-tolstousov.txt) | 2025-09-04 | 2025-09-04 |
+| [s5397] | Tgpost | Tgpost (TGPOST_20251113_mil_hub-117507-gagaring-poslednii-rubezh-4-instructors.txt) | 2025-11-13 | 2025-11-13 |
+| [s5398] | Tgpost | Tgpost (TGPOST_20251229_my_el_lab-2863-gagaring-saiga-lynya-course-thanks.txt) | 2025-12-29 | 2025-12-29 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

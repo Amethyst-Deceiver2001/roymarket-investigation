@@ -59,14 +59,14 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0757 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_673103142483_20260824_bogomolov-andrey-vladimirovich.json) | 2026-08-24 | — |
-| s0982 | Rospatent patent record | Rospatent patent record (PATENT_RU134783S_2026-08-24_ao-nii-stt.json) | — | — |
-| s1002 | Rospatent patent record | Rospatent patent record (PATENT_RU2626575C1_2026-08-24_ao-nii-stt.json) | — | 2006-05-11 |
-| s1003 | Rospatent patent record | Rospatent patent record (PATENT_RU2637799C1_2026-08-24_ao-nii-stt.json) | — | — |
-| s1005 | Rospatent patent record | Rospatent patent record (PATENT_RU2644630C1_2026-08-24_ao-nii-stt.json) | — | — |
-| s1006 | Rospatent patent record | Rospatent patent record (PATENT_RU2663193C1_2026-08-24_ao-nii-stt.json) | — | — |
-| s1022 | Rospatent patent record | Rospatent patent record (PATENT_RU2758565C1_2026-08-24_ao-nii-stt.json) | — | — |
-| s1033 | Rospatent patent record | Rospatent patent record (PATENT_RU2782475C1_2026-08-24_ao-nii-stt.json) | — | — |
+| [s0757] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_673103142483_20260824_bogomolov-andrey-vladimirovich.json) | 2026-08-24 | — |
+| [s0982] | Rospatent patent record | Rospatent patent record (PATENT_RU134783S_2026-08-24_ao-nii-stt.json) | — | — |
+| [s1002] | Rospatent patent record | Rospatent patent record (PATENT_RU2626575C1_2026-08-24_ao-nii-stt.json) | — | 2006-05-11 |
+| [s1003] | Rospatent patent record | Rospatent patent record (PATENT_RU2637799C1_2026-08-24_ao-nii-stt.json) | — | — |
+| [s1005] | Rospatent patent record | Rospatent patent record (PATENT_RU2644630C1_2026-08-24_ao-nii-stt.json) | — | — |
+| [s1006] | Rospatent patent record | Rospatent patent record (PATENT_RU2663193C1_2026-08-24_ao-nii-stt.json) | — | — |
+| [s1022] | Rospatent patent record | Rospatent patent record (PATENT_RU2758565C1_2026-08-24_ao-nii-stt.json) | — | — |
+| [s1033] | Rospatent patent record | Rospatent patent record (PATENT_RU2782475C1_2026-08-24_ao-nii-stt.json) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -214,7 +214,7 @@
     <h3>{{ g.label }}</h3>
     <ul class="link-list">
       {% for item in g.links %}
-      <li><a href="{{ item.url }}">{{ item.url }}</a>{% if item.note %}<br><span class="note">{{ item.note }}</span>{% endif %}</li>
+      <li>{% if item.url %}<a href="{{ item.url }}">{{ item.text }}</a>{% else %}{{ item.text }}{% endif %}{% if item.note %}<br><span class="note">{{ item.note }}</span>{% endif %}</li>
       {% endfor %}
     </ul>
     {% endfor %}
@@ -259,7 +259,7 @@
           {% if p.sanctions_chip %}<span class="tag {{ p.sanctions_chip.cls }}">{{ p.sanctions_chip.label }}</span>{% endif %}
           {% if p.social %}
           <ul class="link-list" style="margin-top:.6rem;">
-            {% for s in p.social %}<li><a href="{{ s }}">{{ s }}</a></li>{% endfor %}
+            {% for s in p.social %}<li>{% if s.url %}<a href="{{ s.url }}">{{ s.text }}</a>{% else %}{{ s.text }}{% endif %}</li>{% endfor %}
           </ul>
           {% endif %}
         </div>

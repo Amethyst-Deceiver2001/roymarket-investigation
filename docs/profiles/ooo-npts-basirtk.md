@@ -40,7 +40,7 @@
 | Value | As of | Note |
 |---|---|---|
 | Владимирская обл., г. Муром (exact prior address not yet pulled) | — | Pre-15.07.2026 address — this entity's registered address before the charter amendment; not yet confirmed against a document. |
-| 602251, Владимирская обл., г.о. округ Муром, г. Муром, ш. Карачаровское, д. 5 | 2026-07-22 | GRN 2263300336253, 22.07.2026 — matches the 15.07.2026 charter amendment (s0187) moving the entity into Технопарк Муроммаш. [s0003] |
+| 602251, Владимирская обл., г.о. округ Муром, г. Муром, ш. Карачаровское, д. 5 | 2026-07-22 | GRN 2263300336253, 22.07.2026 — matches the 15.07.2026 charter amendment ([s0187]) moving the entity into Технопарк Муроммаш. [s0003] |
 
 ### Facility type
 
@@ -114,19 +114,19 @@
 ## Open questions
 
 - Сухоненкова Надежда Андреевна (Административный директор) is named as a commendation-letter recipient in this entity's own channel but has no person record yet -- not yet wired per the PII-scope rule (principal/officer-level role, should qualify once a DOB/ИНН lead surfaces).
-- «Ступор» counter-drone RF system participation (16.10.2024 post) and the second Благодарственное письмо (to Сухоненкова, 05.04.2026) have no archived primary-source file yet -- only the first letter (Замятину, s0232) has been pulled and archived. Worth an archival pass on the entity's own channel (t.me/UAS_development) for these specific posts.
+- «Ступор» counter-drone RF system participation (16.10.2024 post) and the second Благодарственное письмо (to Сухоненкова, 05.04.2026) have no archived primary-source file yet -- only the first letter (Замятину, [s0232]) has been pulled and archived. Worth an archival pass on the entity's own channel (t.me/UAS_development) for these specific posts.
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0003 | document | document (3300009049_17082026.pdf) | 2026-08-17 | 2026-08-17 |
-| s0184 | Founding-Устав bundle | Founding-Устав bundle (UD_1243300000789_20260818_npc-basirtk.zip) | 2026-08-18 | 2026-07-15 |
-| s0232 | document | document (Благодарность.pdf) | — | 2024-12-01 |
-| s0247 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3300009049_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
-| s0248 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3300009049_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
-| s1165 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
-| s6782 | EGRUL extract | EGRUL extract (EGRUL_3300009049_20260907_ooo-npts-basirtk.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0003] | document | document (3300009049_17082026.pdf) | 2026-08-17 | 2026-08-17 |
+| [s0184] | Founding-Устав bundle | Founding-Устав bundle (UD_1243300000789_20260818_npc-basirtk.zip) | 2026-08-18 | 2026-07-15 |
+| [s0232] | document | document (Благодарность.pdf) | — | 2024-12-01 |
+| [s0247] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3300009049_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
+| [s0248] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3300009049_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
+| [s1165] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
+| [s6782] | EGRUL extract | EGRUL extract (EGRUL_3300009049_20260907_ooo-npts-basirtk.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

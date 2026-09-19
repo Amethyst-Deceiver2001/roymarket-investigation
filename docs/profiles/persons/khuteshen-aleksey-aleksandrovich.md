@@ -58,21 +58,21 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0467 | EGRUL extract | EGRUL extract (ul-1236100025633-20260823122756.pdf) | — | 2026-08-23 |
-| s0842 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_khuteshen-aleksey-aleksandrovich_20260824_khuteshen-aleksey-aleksandrovich.json) | 2026-08-24 | — |
-| s0977 | Rospatent patent record | Rospatent patent record (PATENT_RU2859152C1_20260824_ooo-atlant-aero.xml) | 2026-08-24 | — |
-| s6956 | EGRUL extract | EGRUL extract (EGRUL_6154171470_20260907_ooo-prometey.pdf) | 2026-09-07 | 2026-09-08 |
-| s6962 | EGRUL extract | EGRUL extract (EGRUL_6154166381_20260907_ooo-npk-atlant-aero.pdf) | 2026-09-07 | 2026-09-08 |
-| s6963 | EGRUL extract | EGRUL extract (EGRUL_6161154122_20260907_ooo-npk-zevs.pdf) | 2026-09-07 | 2026-09-08 |
-| s6964 | EGRUL extract | EGRUL extract (EGRUL_6163233330_20260907_ooo-prom-tekh.pdf) | 2026-09-07 | 2026-09-08 |
-| s6965 | EGRUL extract | EGRUL extract (EGRUL_7733483753_20260907_ooo-pk-stalnoy-kupol.pdf) | 2026-09-07 | 2026-09-08 |
-| s6966 | EGRUL extract | EGRUL extract (EGRUL_7733486867_20260907_ao-opticheskie-sistemy.pdf) | 2026-09-07 | 2026-09-08 |
-| s6967 | EGRUL extract | EGRUL extract (EGRUL_9704109459_20260907_ooo-everest.pdf) | 2026-09-07 | 2026-09-08 |
-| s6968 | EGRUL extract | EGRUL extract (EGRUL_9717142044_20260907_ooo-ametist.pdf) | 2026-09-07 | 2026-09-08 |
-| s6969 | EGRUL extract | EGRUL extract (EGRUL_9717173300_20260907_ooo-atlant-servis.pdf) | 2026-09-07 | 2026-09-08 |
-| s6970 | EGRUL extract | EGRUL extract (EGRUL_9722117815_20260907_ooo-atlant-logistik.pdf) | 2026-09-07 | 2026-09-08 |
-| s7449 | EGRUL extract | EGRUL extract (EGRUL_9704109459_20260914_ooo-everest.pdf) | 2026-09-14 | 2026-09-14 |
-| s7451 | EGRUL extract | EGRUL extract (EGRUL_9717142044_20260914_ooo-ametist.pdf) | 2026-09-14 | 2026-09-14 |
+| [s0467] | EGRUL extract | EGRUL extract (ul-1236100025633-20260823122756.pdf) | — | 2026-08-23 |
+| [s0842] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_khuteshen-aleksey-aleksandrovich_20260824_khuteshen-aleksey-aleksandrovich.json) | 2026-08-24 | — |
+| [s0977] | Rospatent patent record | Rospatent patent record (PATENT_RU2859152C1_20260824_ooo-atlant-aero.xml) | 2026-08-24 | — |
+| [s6956] | EGRUL extract | EGRUL extract (EGRUL_6154171470_20260907_ooo-prometey.pdf) | 2026-09-07 | 2026-09-08 |
+| [s6962] | EGRUL extract | EGRUL extract (EGRUL_6154166381_20260907_ooo-npk-atlant-aero.pdf) | 2026-09-07 | 2026-09-08 |
+| [s6963] | EGRUL extract | EGRUL extract (EGRUL_6161154122_20260907_ooo-npk-zevs.pdf) | 2026-09-07 | 2026-09-08 |
+| [s6964] | EGRUL extract | EGRUL extract (EGRUL_6163233330_20260907_ooo-prom-tekh.pdf) | 2026-09-07 | 2026-09-08 |
+| [s6965] | EGRUL extract | EGRUL extract (EGRUL_7733483753_20260907_ooo-pk-stalnoy-kupol.pdf) | 2026-09-07 | 2026-09-08 |
+| [s6966] | EGRUL extract | EGRUL extract (EGRUL_7733486867_20260907_ao-opticheskie-sistemy.pdf) | 2026-09-07 | 2026-09-08 |
+| [s6967] | EGRUL extract | EGRUL extract (EGRUL_9704109459_20260907_ooo-everest.pdf) | 2026-09-07 | 2026-09-08 |
+| [s6968] | EGRUL extract | EGRUL extract (EGRUL_9717142044_20260907_ooo-ametist.pdf) | 2026-09-07 | 2026-09-08 |
+| [s6969] | EGRUL extract | EGRUL extract (EGRUL_9717173300_20260907_ooo-atlant-servis.pdf) | 2026-09-07 | 2026-09-08 |
+| [s6970] | EGRUL extract | EGRUL extract (EGRUL_9722117815_20260907_ooo-atlant-logistik.pdf) | 2026-09-07 | 2026-09-08 |
+| [s7449] | EGRUL extract | EGRUL extract (EGRUL_9704109459_20260914_ooo-everest.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7451] | EGRUL extract | EGRUL extract (EGRUL_9717142044_20260914_ooo-ametist.pdf) | 2026-09-14 | 2026-09-14 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

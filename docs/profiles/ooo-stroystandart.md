@@ -55,13 +55,13 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0118 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7733629755_20260822_ooo-stroystandart.json) | 2026-08-22 | 2026-08-22 |
-| s6588 | Bfo | Bfo (BFO_7733629755_2021_ооо-строистандарт.pdf) | — | — |
-| s6589 | Bfo | Bfo (BFO_7733629755_2022_ооо-строистандарт.pdf) | — | — |
-| s6590 | Bfo | Bfo (BFO_7733629755_2023_ооо-строистандарт.pdf) | — | — |
-| s6591 | Bfo | Bfo (BFO_7733629755_2024_ооо-строистандарт.pdf) | — | — |
-| s6592 | Bfo | Bfo (BFO_7733629755_2025_ооо-строистандарт.pdf) | — | — |
-| s6826 | EGRUL extract | EGRUL extract (EGRUL_7733629755_20260907_ooo-stroystandart.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0118] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7733629755_20260822_ooo-stroystandart.json) | 2026-08-22 | 2026-08-22 |
+| [s6588] | Bfo | Bfo (BFO_7733629755_2021_ооо-строистандарт.pdf) | — | — |
+| [s6589] | Bfo | Bfo (BFO_7733629755_2022_ооо-строистандарт.pdf) | — | — |
+| [s6590] | Bfo | Bfo (BFO_7733629755_2023_ооо-строистандарт.pdf) | — | — |
+| [s6591] | Bfo | Bfo (BFO_7733629755_2024_ооо-строистандарт.pdf) | — | — |
+| [s6592] | Bfo | Bfo (BFO_7733629755_2025_ооо-строистандарт.pdf) | — | — |
+| [s6826] | EGRUL extract | EGRUL extract (EGRUL_7733629755_20260907_ooo-stroystandart.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

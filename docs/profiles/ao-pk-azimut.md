@@ -147,16 +147,16 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0212 | EGRUL extract | EGRUL extract (ul-1057746261605-20260814234906.pdf) | — | 2026-08-14 |
-| s0763 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7701583410_20260824_ao-pk-azimut.json) | 2026-08-24 | — |
-| s3042 | Zakupki | Zakupki (ZAKUPKI_contract_1770425226115000899_20260829.html) | 2026-08-29 | — |
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5353 | document | document (PP719_7701583410_20210629_zaklyuchenie-54118-11.pdf) | 2021-06-29 | 2021-06-29 |
-| s5354 | document | document (PP719_7701583410_20211221_zaklyuchenie-113235-11.pdf) | 2021-12-21 | 2021-12-21 |
-| s5355 | document | document (PP719_7701583410_20240604_zaklyuchenie-57277-11.pdf) | 2024-06-04 | 2024-06-04 |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
-| s6436 | Mchs | Mchs (MCHS_7701583410_20260906_fire-license-search-ao-pk-azimut.html) | 2026-09-06 | — |
+| [s0212] | EGRUL extract | EGRUL extract (ul-1057746261605-20260814234906.pdf) | — | 2026-08-14 |
+| [s0763] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7701583410_20260824_ao-pk-azimut.json) | 2026-08-24 | — |
+| [s3042] | Zakupki | Zakupki (ZAKUPKI_contract_1770425226115000899_20260829.html) | 2026-08-29 | — |
+| [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5353] | document | document (PP719_7701583410_20210629_zaklyuchenie-54118-11.pdf) | 2021-06-29 | 2021-06-29 |
+| [s5354] | document | document (PP719_7701583410_20211221_zaklyuchenie-113235-11.pdf) | 2021-12-21 | 2021-12-21 |
+| [s5355] | document | document (PP719_7701583410_20240604_zaklyuchenie-57277-11.pdf) | 2024-06-04 | 2024-06-04 |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6408] | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
+| [s6436] | Mchs | Mchs (MCHS_7701583410_20260906_fire-license-search-ao-pk-azimut.html) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

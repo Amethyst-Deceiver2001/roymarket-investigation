@@ -76,22 +76,22 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0981 | Rospatent patent record | Rospatent patent record (PATENT_RU117356S_2026-08-24_npts-elvis.json) | — | — |
-| s0984 | Rospatent patent record | Rospatent patent record (PATENT_RU140982U1_2026-08-24_npts-elvis.json) | — | — |
-| s0986 | Rospatent patent record | Rospatent patent record (PATENT_RU182852U1_2026-08-24_npts-elvis.json) | — | — |
-| s0988 | Rospatent patent record | Rospatent patent record (PATENT_RU197098U1_2026-08-24_npts-elvis.json) | — | — |
-| s0996 | Rospatent patent record | Rospatent patent record (PATENT_RU227818U1_2026-08-24_npts-elvis.json) | — | — |
-| s0998 | Rospatent patent record | Rospatent patent record (PATENT_RU231126U1_2026-08-24_npts-elvis.json) | — | — |
-| s1007 | Rospatent patent record | Rospatent patent record (PATENT_RU2689820C1_2026-08-24_npts-elvis.json) | — | — |
-| s1009 | Rospatent patent record | Rospatent patent record (PATENT_RU2698157C1_2026-08-24_npts-elvis.json) | — | — |
-| s1010 | Rospatent patent record | Rospatent patent record (PATENT_RU2700560C1_2026-08-24_npts-elvis.json) | — | — |
-| s1021 | Rospatent patent record | Rospatent patent record (PATENT_RU2752861C1_2026-08-24_npts-elvis.json) | — | — |
-| s1024 | Rospatent patent record | Rospatent patent record (PATENT_RU2758587C1_2026-08-24_npts-elvis.json) | — | — |
-| s1029 | Rospatent patent record | Rospatent patent record (PATENT_RU2766442C1_2026-08-24_npts-elvis.json) | — | — |
-| s1034 | Rospatent patent record | Rospatent patent record (PATENT_RU2790094C1_2026-08-24_npts-elvis.json) | — | — |
-| s1042 | Rospatent patent record | Rospatent patent record (PATENT_RU2847063C1_2026-08-24_npts-elvis.json) | — | — |
-| s1085 | press coverage | press coverage (PRESS_20220603_kommersant-elvis-petrichkovich-exit.html) | 2022-06-03 | — |
-| s3702 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_kontrakt-2420-17705596339240002070002_032cbeeb.docx) | — | — |
+| [s0981] | Rospatent patent record | Rospatent patent record (PATENT_RU117356S_2026-08-24_npts-elvis.json) | — | — |
+| [s0984] | Rospatent patent record | Rospatent patent record (PATENT_RU140982U1_2026-08-24_npts-elvis.json) | — | — |
+| [s0986] | Rospatent patent record | Rospatent patent record (PATENT_RU182852U1_2026-08-24_npts-elvis.json) | — | — |
+| [s0988] | Rospatent patent record | Rospatent patent record (PATENT_RU197098U1_2026-08-24_npts-elvis.json) | — | — |
+| [s0996] | Rospatent patent record | Rospatent patent record (PATENT_RU227818U1_2026-08-24_npts-elvis.json) | — | — |
+| [s0998] | Rospatent patent record | Rospatent patent record (PATENT_RU231126U1_2026-08-24_npts-elvis.json) | — | — |
+| [s1007] | Rospatent patent record | Rospatent patent record (PATENT_RU2689820C1_2026-08-24_npts-elvis.json) | — | — |
+| [s1009] | Rospatent patent record | Rospatent patent record (PATENT_RU2698157C1_2026-08-24_npts-elvis.json) | — | — |
+| [s1010] | Rospatent patent record | Rospatent patent record (PATENT_RU2700560C1_2026-08-24_npts-elvis.json) | — | — |
+| [s1021] | Rospatent patent record | Rospatent patent record (PATENT_RU2752861C1_2026-08-24_npts-elvis.json) | — | — |
+| [s1024] | Rospatent patent record | Rospatent patent record (PATENT_RU2758587C1_2026-08-24_npts-elvis.json) | — | — |
+| [s1029] | Rospatent patent record | Rospatent patent record (PATENT_RU2766442C1_2026-08-24_npts-elvis.json) | — | — |
+| [s1034] | Rospatent patent record | Rospatent patent record (PATENT_RU2790094C1_2026-08-24_npts-elvis.json) | — | — |
+| [s1042] | Rospatent patent record | Rospatent patent record (PATENT_RU2847063C1_2026-08-24_npts-elvis.json) | — | — |
+| [s1085] | press coverage | press coverage (PRESS_20220603_kommersant-elvis-petrichkovich-exit.html) | 2022-06-03 | — |
+| [s3702] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_kontrakt-2420-17705596339240002070002_032cbeeb.docx) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

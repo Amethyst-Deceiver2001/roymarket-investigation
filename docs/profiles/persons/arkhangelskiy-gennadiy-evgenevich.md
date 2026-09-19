@@ -29,7 +29,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5394 | Rusprofile | Rusprofile (RUSPROFILE_2315233718_20260903_ano-arkhangel.txt) | 2026-09-03 | 2026-09-03 |
+| [s5394] | Rusprofile | Rusprofile (RUSPROFILE_2315233718_20260903_ano-arkhangel.txt) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

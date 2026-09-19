@@ -81,13 +81,13 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0493 | EGRUL extract | EGRUL extract (ul-1073435002013-20260823133829.pdf) | — | 2026-08-23 |
-| s6491 | Bfo | Bfo (BFO_3435084957_2021_ооо-промсинтез.pdf) | — | — |
-| s6492 | Bfo | Bfo (BFO_3435084957_2022_ооо-промсинтез.pdf) | — | — |
-| s6493 | Bfo | Bfo (BFO_3435084957_2023_ооо-промсинтез.pdf) | — | — |
-| s6494 | Bfo | Bfo (BFO_3435084957_2024_ооо-промсинтез.pdf) | — | — |
-| s6495 | Bfo | Bfo (BFO_3435084957_2025_ооо-промсинтез.pdf) | — | — |
-| s6783 | EGRUL extract | EGRUL extract (EGRUL_3435084957_20260907_ooo-promsintez.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0493] | EGRUL extract | EGRUL extract (ul-1073435002013-20260823133829.pdf) | — | 2026-08-23 |
+| [s6491] | Bfo | Bfo (BFO_3435084957_2021_ооо-промсинтез.pdf) | — | — |
+| [s6492] | Bfo | Bfo (BFO_3435084957_2022_ооо-промсинтез.pdf) | — | — |
+| [s6493] | Bfo | Bfo (BFO_3435084957_2023_ооо-промсинтез.pdf) | — | — |
+| [s6494] | Bfo | Bfo (BFO_3435084957_2024_ооо-промсинтез.pdf) | — | — |
+| [s6495] | Bfo | Bfo (BFO_3435084957_2025_ооо-промсинтез.pdf) | — | — |
+| [s6783] | EGRUL extract | EGRUL extract (EGRUL_3435084957_20260907_ooo-promsintez.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -45,7 +45,7 @@
 
 ## Government contracts
 
-- Two subsequent соглашения (s2849, s2850) only adjust the ИКЗ code and reaffirm the delivery deadline (20.12.2020) — no substantive change to price or subject. Delivery акт (s2845) and its payment order (s2848) also archived, confirming the contract was fully executed, not merely awarded. [s2846]
+- Two subsequent соглашения ([s2849], [s2850]) only adjust the ИКЗ code and reaffirm the delivery deadline (20.12.2020) — no substantive change to price or subject. Delivery акт ([s2845]) and its payment order ([s2848]) also archived, confirming the contract was fully executed, not merely awarded. [s2846]
 
 ## State-program participation
 
@@ -79,10 +79,10 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0009 | document | document (7704097425_20082026.pdf) | 2026-08-20 | 2026-08-20 |
-| s2846 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770809864520000158_1770809864520000158_gk-045-17708098645200001580003_b3bb1612.docx) | — | 2020-11-10 |
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s0009] | document | document (7704097425_20082026.pdf) | 2026-08-20 | 2026-08-20 |
+| [s2846] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770809864520000158_1770809864520000158_gk-045-17708098645200001580003_b3bb1612.docx) | — | 2020-11-10 |
+| [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

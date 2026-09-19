@@ -35,7 +35,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5289 | Rusprofile | Rusprofile (RUSPROFILE_5300013923_20260902_ooo-ushkuynik.html) | 2026-09-02 | — |
+| [s5289] | Rusprofile | Rusprofile (RUSPROFILE_5300013923_20260902_ooo-ushkuynik.html) | 2026-09-02 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

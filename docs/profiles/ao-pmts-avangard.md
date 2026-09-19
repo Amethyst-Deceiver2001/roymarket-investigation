@@ -89,26 +89,26 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0368 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7804302798_2021_20260817.zip) | 2026-08-17 | 2021-12-31 |
-| s0369 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7804302798_2022_20260817.zip) | 2026-08-17 | 2022-12-31 |
-| s0448 | EGRUL extract | EGRUL extract (ul-1047855051892-20260823120305.pdf) | — | 2026-08-23 |
-| s2967 | Zakupki | Zakupki (ZAKUPKI_contract_0172100003111000066_20260829.html) | 2026-08-29 | — |
-| s2975 | Zakupki | Zakupki (ZAKUPKI_contract_0172200004411000039_20260829.html) | 2026-08-29 | — |
-| s2997 | Zakupki | Zakupki (ZAKUPKI_contract_0372100000111000108_20260829.html) | 2026-08-29 | — |
-| s3003 | Zakupki | Zakupki (ZAKUPKI_contract_0373100038211000004_20260829.html) | 2026-08-29 | — |
-| s3008 | Zakupki | Zakupki (ZAKUPKI_contract_0618100000112000079_20260829.html) | 2026-08-29 | — |
-| s3041 | Zakupki | Zakupki (ZAKUPKI_contract_1770235245417000408_20260829.html) | 2026-08-29 | — |
-| s3043 | Zakupki | Zakupki (ZAKUPKI_contract_1770641334823000111_20260829.html) | 2026-08-29 | — |
-| s3046 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726619000830_20260829.html) | 2026-08-29 | — |
-| s3049 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726623000834_20260829.html) | 2026-08-29 | — |
-| s3053 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001093_20260829.html) | 2026-08-29 | — |
-| s3054 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001602_20260829.html) | 2026-08-29 | — |
-| s3099 | Zakupki | Zakupki (ZAKUPKI_contract_2780137972121000038_20260829.html) | 2026-08-29 | — |
-| s3102 | Zakupki | Zakupki (ZAKUPKI_contract_2780137972123000041_20260829.html) | 2026-08-29 | — |
-| s3719 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770982726625001602_1770982726625001602_elektronnyy-kon-17709827266250016020006_35479068.xml) | — | — |
-| s3720 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770982726625001602_1770982726625001602_kontrakt-rgs0-17709827266250016020002_8290bf1d.docx) | — | — |
-| s6439 | Mchs | Mchs (MCHS_7804302798_20260906_fire-license-search-ao-pmts-avangard.html) | 2026-09-06 | — |
-| s6839 | EGRUL extract | EGRUL extract (EGRUL_7804302798_20260907_ao-pmts-avangard.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0368] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7804302798_2021_20260817.zip) | 2026-08-17 | 2021-12-31 |
+| [s0369] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7804302798_2022_20260817.zip) | 2026-08-17 | 2022-12-31 |
+| [s0448] | EGRUL extract | EGRUL extract (ul-1047855051892-20260823120305.pdf) | — | 2026-08-23 |
+| [s2967] | Zakupki | Zakupki (ZAKUPKI_contract_0172100003111000066_20260829.html) | 2026-08-29 | — |
+| [s2975] | Zakupki | Zakupki (ZAKUPKI_contract_0172200004411000039_20260829.html) | 2026-08-29 | — |
+| [s2997] | Zakupki | Zakupki (ZAKUPKI_contract_0372100000111000108_20260829.html) | 2026-08-29 | — |
+| [s3003] | Zakupki | Zakupki (ZAKUPKI_contract_0373100038211000004_20260829.html) | 2026-08-29 | — |
+| [s3008] | Zakupki | Zakupki (ZAKUPKI_contract_0618100000112000079_20260829.html) | 2026-08-29 | — |
+| [s3041] | Zakupki | Zakupki (ZAKUPKI_contract_1770235245417000408_20260829.html) | 2026-08-29 | — |
+| [s3043] | Zakupki | Zakupki (ZAKUPKI_contract_1770641334823000111_20260829.html) | 2026-08-29 | — |
+| [s3046] | Zakupki | Zakupki (ZAKUPKI_contract_1770982726619000830_20260829.html) | 2026-08-29 | — |
+| [s3049] | Zakupki | Zakupki (ZAKUPKI_contract_1770982726623000834_20260829.html) | 2026-08-29 | — |
+| [s3053] | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001093_20260829.html) | 2026-08-29 | — |
+| [s3054] | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001602_20260829.html) | 2026-08-29 | — |
+| [s3099] | Zakupki | Zakupki (ZAKUPKI_contract_2780137972121000038_20260829.html) | 2026-08-29 | — |
+| [s3102] | Zakupki | Zakupki (ZAKUPKI_contract_2780137972123000041_20260829.html) | 2026-08-29 | — |
+| [s3719] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770982726625001602_1770982726625001602_elektronnyy-kon-17709827266250016020006_35479068.xml) | — | — |
+| [s3720] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770982726625001602_1770982726625001602_kontrakt-rgs0-17709827266250016020002_8290bf1d.docx) | — | — |
+| [s6439] | Mchs | Mchs (MCHS_7804302798_20260906_fire-license-search-ao-pmts-avangard.html) | 2026-09-06 | — |
+| [s6839] | EGRUL extract | EGRUL extract (EGRUL_7804302798_20260907_ao-pmts-avangard.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

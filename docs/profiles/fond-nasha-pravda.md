@@ -107,18 +107,18 @@
 ## Open questions
 
 - Who are Фонд «Наша Правда»'s founders? The brief attributes it to Фонд «ДАР» and Фонд «Градислава», but this is NOT confirmed by the fund's own ЕГРЮЛ extract — a Фонд's учредители are simply not published in ЕГРЮЛ (the extract has no учредители section at all, which is a structural property of the legal form, not a redaction). Resolving this needs the fund's Устав or a Минюст filing, not another ЕГРЮЛ pull. [s0221]
-- RESOLVED 2026-09-16, correcting an earlier same-day dead-end (see this project's own commit history, 67162e6): docs/index.html's "FY2024 filing names its governing bodies in full" claim IS the БФО filing (s0389) after all. Two earlier attempts to OCR this zip only ever ran OCR against its audit-opinion attachment (page-numbered "0280"), never against the actual пояснительная записка PDF (NO_BUHPZ_...) sitting in the same zip -- that file is a 36-page scan that also needed its own OCR pass and had never gotten one. Once OCR'd directly, its own §1.2 табл.3/4 names all 8 people exactly as docs/index.html paraphrases them: Наблюдательный совет = Давыдов (Фонд «ДАР»), Елисеев (no employer listed), Карабинский (Фонд «Градислава»), Устратов (Фонд Поддержки нац. морских проектов), Антонова (no employer listed); Попечительский совет = Тихонов (Фонд «ДАР»), Манецкий (Фонд «Градислава»), Дукал (Фонд «ДАР»). All 8 roles wired on the person side (fond-nasha-pravda, source_id s0389). Lesson for future OCR passes on a multi-file zip: OCR every scanned PDF in the archive, not just the one that happens to have the identifiable filename pattern already used elsewhere. [s0389]
+- RESOLVED 2026-09-16, correcting an earlier same-day dead-end (see this project's own commit history, 67162e6): docs/index.html's "FY2024 filing names its governing bodies in full" claim IS the БФО filing ([s0389]) after all. Two earlier attempts to OCR this zip only ever ran OCR against its audit-opinion attachment (page-numbered "0280"), never against the actual пояснительная записка PDF (NO_BUHPZ_...) sitting in the same zip -- that file is a 36-page scan that also needed its own OCR pass and had never gotten one. Once OCR'd directly, its own §1.2 табл.3/4 names all 8 people exactly as docs/index.html paraphrases them: Наблюдательный совет = Давыдов (Фонд «ДАР»), Елисеев (no employer listed), Карабинский (Фонд «Градислава»), Устратов (Фонд Поддержки нац. морских проектов), Антонова (no employer listed); Попечительский совет = Тихонов (Фонд «ДАР»), Манецкий (Фонд «Градислава»), Дукал (Фонд «ДАР»). All 8 roles wired on the person side (fond-nasha-pravda, source_id [s0389]). Lesson for future OCR passes on a multi-file zip: OCR every scanned PDF in the archive, not just the one that happens to have the identifiable filename pattern already used elsewhere. [s0389]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0221 | EGRUL extract | EGRUL extract (ul-1237700218612-20260815010023.pdf) | — | 2026-08-15 |
-| s0389 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9705196180_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
-| s0390 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9705196180_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
-| s0575 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9705196180_20260824_fond-nasha-pravda.json) | 2026-08-24 | — |
-| s7370 | transcript | transcript (TRANSCRIPT_20260908_nasha-pravda-official-site.html) | 2026-09-08 | — |
-| s7538 | site capture | site capture (SITE_9705196180_20260916_fond-nasha-pravda-logo.jpg) | 2026-09-16 | — |
+| [s0221] | EGRUL extract | EGRUL extract (ul-1237700218612-20260815010023.pdf) | — | 2026-08-15 |
+| [s0389] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9705196180_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
+| [s0390] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9705196180_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
+| [s0575] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9705196180_20260824_fond-nasha-pravda.json) | 2026-08-24 | — |
+| [s7370] | transcript | transcript (TRANSCRIPT_20260908_nasha-pravda-official-site.html) | 2026-09-08 | — |
+| [s7538] | site capture | site capture (SITE_9705196180_20260916_fond-nasha-pravda-logo.jpg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

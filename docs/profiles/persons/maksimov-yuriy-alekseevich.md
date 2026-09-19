@@ -28,7 +28,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0009 | document | document (7704097425_20082026.pdf) | 2026-08-20 | 2026-08-20 |
+| [s0009] | document | document (7704097425_20082026.pdf) | 2026-08-20 | 2026-08-20 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

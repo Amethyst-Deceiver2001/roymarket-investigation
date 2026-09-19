@@ -55,9 +55,9 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0560 | transcript | transcript (TRANSCRIPT_20260813_onf-kulibin-klub-roundtable.html) | 2026-08-13 | — |
-| s0561 | transcript | transcript (TRANSCRIPT_20260823_pointmedia-gleb-kiselev-profile.html) | 2026-08-23 | — |
-| s6740 | EGRUL extract | EGRUL extract (EGRUL_7725229200_20260907_kulibin-klub.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0560] | transcript | transcript (TRANSCRIPT_20260813_onf-kulibin-klub-roundtable.html) | 2026-08-13 | — |
+| [s0561] | transcript | transcript (TRANSCRIPT_20260823_pointmedia-gleb-kiselev-profile.html) | 2026-08-23 | — |
+| [s6740] | EGRUL extract | EGRUL extract (EGRUL_7725229200_20260907_kulibin-klub.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

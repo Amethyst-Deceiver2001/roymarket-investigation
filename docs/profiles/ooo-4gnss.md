@@ -80,15 +80,15 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0201 | Founding-Устав bundle | Founding-Устав bundle (UD_1996182.zip) | — | — |
-| s0342 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2021_20260821.zip) | 2026-08-21 | 2021-12-31 |
-| s0343 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2022_20260821.zip) | 2026-08-21 | 2022-12-31 |
-| s0344 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2023_20260821.zip) | 2026-08-21 | 2023-12-31 |
-| s0345 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
-| s0346 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
-| s0462 | EGRUL extract | EGRUL extract (ul-5157746074272-20260823120422.pdf) | — | 2026-08-23 |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6830 | EGRUL extract | EGRUL extract (EGRUL_7743128980_20260907_ooo-4gnss.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0201] | Founding-Устав bundle | Founding-Устав bundle (UD_1996182.zip) | — | — |
+| [s0342] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2021_20260821.zip) | 2026-08-21 | 2021-12-31 |
+| [s0343] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2022_20260821.zip) | 2026-08-21 | 2022-12-31 |
+| [s0344] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2023_20260821.zip) | 2026-08-21 | 2023-12-31 |
+| [s0345] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
+| [s0346] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743128980_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
+| [s0462] | EGRUL extract | EGRUL extract (ul-5157746074272-20260823120422.pdf) | — | 2026-08-23 |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6830] | EGRUL extract | EGRUL extract (EGRUL_7743128980_20260907_ooo-4gnss.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

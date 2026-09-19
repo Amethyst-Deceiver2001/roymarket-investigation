@@ -26,7 +26,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| ООО «Кронштадт Беспилотные Системы» (ИНН 7801320277) — 100% | 2025-12-14 | Recovered via Aleph/OCCRP's cached EGRUL mirror (same snapshot as director recovery, see s6885) -- an ownershipOwner edge naming this entity as sole owner, predating the founder-section redaction (dated 19.08.2026 per s0476). Confirms and gives the exact legal entity/ИНН for the Kronshtadt-group tie already flagged in this record's open_questions. This entity's own EGRUL name history (per the same mirror pull, s6886) additionally lists two prior names on this ИНН: «ГРУППА КРОНШТАДТ» and «ИНТЕЛЛЕКТУАЛЬНЫЕ ТЕХНИЧЕСКИЕ РЕШЕНИЯ» -- see name_history. [s6886] |
+| ООО «Кронштадт Беспилотные Системы» (ИНН 7801320277) — 100% | 2025-12-14 | Recovered via Aleph/OCCRP's cached EGRUL mirror (same snapshot as director recovery, see [s6885]) -- an ownershipOwner edge naming this entity as sole owner, predating the founder-section redaction (dated 19.08.2026 per [s0476]). Confirms and gives the exact legal entity/ИНН for the Kronshtadt-group tie already flagged in this record's open_questions. This entity's own EGRUL name history (per the same mirror pull, [s6886]) additionally lists two prior names on this ИНН: «ГРУППА КРОНШТАДТ» and «ИНТЕЛЛЕКТУАЛЬНЫЕ ТЕХНИЧЕСКИЕ РЕШЕНИЯ» -- see name_history. [s6886] |
 | access-restricted (3 separate founder rows, all withheld) | 2026-08-19 | All three founder entries show "Доступ к сведениям ограничен" (Federal Law 129-FZ), each dated 19.08.2026 — a very recent, coordinated redaction (four days before this pull), same pattern as several other network entities. [s0476] |
 | — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the участники/учредители section, confirmed via full выписка pulled 2026-09-07. [s6734] |
 
@@ -76,24 +76,24 @@
 ## Open questions
 
 - One of Russia's most prominent heavy military-UAV manufacturer lineages (Orion/Sirius/Grom) sits directly upstream of an already-catalogued registry entity via 100% ownership (see ooo-aeromaks founders[]) -- worth a dedicated deeper pass on the Kronshtadt→Aeromax corporate history and any residual military-drone production continuing under either entity, separate from the civilian pivot the press coverage emphasizes.
-- Минпромторг России's national БАС-classification chart (s5342, «О реализации национального проекта «Беспилотные авиационные системы» в период до 2030 года», p.2) lists «SH-750 (Аэромакс)» as the representative example product for the вертолетный тип / тяжелый (более 500 кг) UAV category — the heaviest helicopter-type class. "SH-750" doesn't match any model currently in products[] on any of the three Аэромакс-named entities (ao-aeromaks: AS-32-10/AS-32-8/Д-12К fixed-wing/VTOL; ooo-aeromaks: B-120/B-200/B-700 helicopter-type, А-5/А-5 М/Л/A-50 aircraft/multicopter-type; ooo-gk-aeromaks: none listed). Given ooo-aeromaks already carries the B-series helicopter line and B-700 is noted as "in development — no dedicated page yet", SH-750 may be a renamed/rebranded designation for B-700 or a newer heavy model entirely — needs checking against the group's current product pages (aeromaks brand site/VK/Rosteh press) before wiring to any specific entity's products[]. [s5342]
+- Минпромторг России's national БАС-classification chart ([s5342], «О реализации национального проекта «Беспилотные авиационные системы» в период до 2030 года», p.2) lists «SH-750 (Аэромакс)» as the representative example product for the вертолетный тип / тяжелый (более 500 кг) UAV category — the heaviest helicopter-type class. "SH-750" doesn't match any model currently in products[] on any of the three Аэромакс-named entities (ao-aeromaks: AS-32-10/AS-32-8/Д-12К fixed-wing/VTOL; ooo-aeromaks: B-120/B-200/B-700 helicopter-type, А-5/А-5 М/Л/A-50 aircraft/multicopter-type; ooo-gk-aeromaks: none listed). Given ooo-aeromaks already carries the B-series helicopter line and B-700 is noted as "in development — no dedicated page yet", SH-750 may be a renamed/rebranded designation for B-700 or a newer heavy model entirely — needs checking against the group's current product pages (aeromaks brand site/VK/Rosteh press) before wiring to any specific entity's products[]. [s5342]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0476 | EGRUL extract | EGRUL extract (ul-1147748024269-20260823132014.pdf) | — | 2026-08-23 |
-| s0772 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7710974353_20260824_ooo-gk-aeromaks.json) | 2026-08-24 | — |
-| s5342 | Minpromtorg | Minpromtorg (MINPROMTORG_BAS_20260903_nacproekt-obzor.pdf) | 2026-09-03 | — |
-| s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
-| s6574 | Bfo | Bfo (BFO_7710974353_2021_ооо-гк-аэромакс.pdf) | — | — |
-| s6575 | Bfo | Bfo (BFO_7710974353_2022_ооо-гк-аэромакс.pdf) | — | — |
-| s6576 | Bfo | Bfo (BFO_7710974353_2023_ооо-гк-аэромакс.pdf) | — | — |
-| s6577 | Bfo | Bfo (BFO_7710974353_2024_ооо-гк-аэромакс.pdf) | — | — |
-| s6578 | Bfo | Bfo (BFO_7710974353_2025_ооо-гк-аэромакс.pdf) | — | — |
-| s6734 | EGRUL extract | EGRUL extract (EGRUL_7710974353_20260907_ooo-gk-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
-| s6885 | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_DETAIL_770304117100_20260907_bogatikov-director-gk-aeromaks.json) | 2026-09-07 | — |
-| s6886 | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_DETAIL_7710974353_20260907_gk-aeromaks-ownership-expand.json) | 2026-09-07 | — |
+| [s0476] | EGRUL extract | EGRUL extract (ul-1147748024269-20260823132014.pdf) | — | 2026-08-23 |
+| [s0772] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7710974353_20260824_ooo-gk-aeromaks.json) | 2026-08-24 | — |
+| [s5342] | Minpromtorg | Minpromtorg (MINPROMTORG_BAS_20260903_nacproekt-obzor.pdf) | 2026-09-03 | — |
+| [s6408] | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
+| [s6574] | Bfo | Bfo (BFO_7710974353_2021_ооо-гк-аэромакс.pdf) | — | — |
+| [s6575] | Bfo | Bfo (BFO_7710974353_2022_ооо-гк-аэромакс.pdf) | — | — |
+| [s6576] | Bfo | Bfo (BFO_7710974353_2023_ооо-гк-аэромакс.pdf) | — | — |
+| [s6577] | Bfo | Bfo (BFO_7710974353_2024_ооо-гк-аэромакс.pdf) | — | — |
+| [s6578] | Bfo | Bfo (BFO_7710974353_2025_ооо-гк-аэромакс.pdf) | — | — |
+| [s6734] | EGRUL extract | EGRUL extract (EGRUL_7710974353_20260907_ooo-gk-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6885] | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_DETAIL_770304117100_20260907_bogatikov-director-gk-aeromaks.json) | 2026-09-07 | — |
+| [s6886] | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_DETAIL_7710974353_20260907_gk-aeromaks-ownership-expand.json) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

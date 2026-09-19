@@ -75,14 +75,14 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0466 | EGRUL extract | EGRUL extract (ul-1232700009398-20260823122822.pdf) | — | 2026-08-23 |
-| s0729 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_2700012608_20260824_ooo-aero-khit.json) | 2026-08-24 | — |
-| s0956 | GUR war-sanctions record | GUR war-sanctions record (GUR_2700012608_20260824_ooo-aero-khit.html) | 2026-08-24 | — |
-| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
-| s6488 | Bfo | Bfo (BFO_2700012608_2023_ооо-аэро-хит.pdf) | — | — |
-| s6489 | Bfo | Bfo (BFO_2700012608_2024_ооо-аэро-хит.pdf) | — | — |
-| s6490 | Bfo | Bfo (BFO_2700012608_2025_ооо-аэро-хит.pdf) | — | — |
-| s6714 | EGRUL extract | EGRUL extract (EGRUL_2700012608_20260907_ooo-aero-khit.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0466] | EGRUL extract | EGRUL extract (ul-1232700009398-20260823122822.pdf) | — | 2026-08-23 |
+| [s0729] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_2700012608_20260824_ooo-aero-khit.json) | 2026-08-24 | — |
+| [s0956] | GUR war-sanctions record | GUR war-sanctions record (GUR_2700012608_20260824_ooo-aero-khit.html) | 2026-08-24 | — |
+| [s5344] | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s6488] | Bfo | Bfo (BFO_2700012608_2023_ооо-аэро-хит.pdf) | — | — |
+| [s6489] | Bfo | Bfo (BFO_2700012608_2024_ооо-аэро-хит.pdf) | — | — |
+| [s6490] | Bfo | Bfo (BFO_2700012608_2025_ооо-аэро-хит.pdf) | — | — |
+| [s6714] | EGRUL extract | EGRUL extract (EGRUL_2700012608_20260907_ooo-aero-khit.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

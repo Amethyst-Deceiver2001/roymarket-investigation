@@ -22,13 +22,13 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Крючков Дмитрий Александрович (ИНН 712900068586) | 2026-03-12 | Per full signed EGRUL extract - supersedes the earlier open-API-only director note (s5451), which lacked his personal ИНН. [s5474] |
+| Крючков Дмитрий Александрович (ИНН 712900068586) | 2026-03-12 | Per full signed EGRUL extract - supersedes the earlier open-API-only director note ([s5451]), which lacked his personal ИНН. [s5474] |
 
 ### Founders / ownership
 
 | Value | As of | Note |
 |---|---|---|
-| Филиппов Михаил Геннадьевич, ИНН 502603133030 - 80% (номинал 8,000 руб. из 10,000 руб. уставного капитала); Крючков Дмитрий Александрович, ИНН 712900068586 - 15% (1,500 руб.), он же генеральный директор; Казнова Татьяна Андреевна, ИНН 771501583221 - 5% (500 руб.). | 2026-03-12 | Full signed EGRUL extract - supersedes the earlier pb.nalog.ru upr-uchr partial finding (s5465), which established Филиппов as A founder but not his 80% MAJORITY stake, nor Казнова's existence as a third owner. He is the controlling owner of this entity, not merely one of several founders. [s5474] |
+| Филиппов Михаил Геннадьевич, ИНН 502603133030 - 80% (номинал 8,000 руб. из 10,000 руб. уставного капитала); Крючков Дмитрий Александрович, ИНН 712900068586 - 15% (1,500 руб.), он же генеральный директор; Казнова Татьяна Андреевна, ИНН 771501583221 - 5% (500 руб.). | 2026-03-12 | Full signed EGRUL extract - supersedes the earlier pb.nalog.ru upr-uchr partial finding ([s5465]), which established Филиппов as A founder but not his 80% MAJORITY stake, nor Казнова's existence as a third owner. He is the controlling owner of this entity, not merely one of several founders. [s5474] |
 
 ### Charter capital
 
@@ -74,8 +74,8 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5465 | Fns | Fns (FNS_PB_UPR_UCHR_502603133030_20260904_filippov-raw.json) | 2026-09-04 | — |
-| s5474 | EGRUL extract | EGRUL extract (EGRUL_9702081286_20260904_arkhangel-grupp.pdf) | 2026-09-04 | 2026-09-04 |
+| [s5465] | Fns | Fns (FNS_PB_UPR_UCHR_502603133030_20260904_filippov-raw.json) | 2026-09-04 | — |
+| [s5474] | EGRUL extract | EGRUL extract (EGRUL_9702081286_20260904_arkhangel-grupp.pdf) | 2026-09-04 | 2026-09-04 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

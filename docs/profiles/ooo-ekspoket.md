@@ -50,13 +50,13 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7437 | EGRUL extract | EGRUL extract (EGRUL_OPEN_1659113230_20260914_ooo-ekspoket-search.txt) | 2026-09-14 | — |
-| s7444 | EGRUL extract | EGRUL extract (EGRUL_1659113230_20260914_ooo-ekspoket.pdf) | 2026-09-14 | 2026-09-14 |
-| s7466 | Bfo | Bfo (BFO_1659113230_2021_ooo-ekspoket.pdf) | — | — |
-| s7467 | Bfo | Bfo (BFO_1659113230_2022_ooo-ekspoket.pdf) | — | — |
-| s7468 | Bfo | Bfo (BFO_1659113230_2023_ooo-ekspoket.pdf) | — | — |
-| s7469 | Bfo | Bfo (BFO_1659113230_2024_ooo-ekspoket.pdf) | — | — |
-| s7470 | Bfo | Bfo (BFO_1659113230_2025_ooo-ekspoket.pdf) | — | — |
+| [s7437] | EGRUL extract | EGRUL extract (EGRUL_OPEN_1659113230_20260914_ooo-ekspoket-search.txt) | 2026-09-14 | — |
+| [s7444] | EGRUL extract | EGRUL extract (EGRUL_1659113230_20260914_ooo-ekspoket.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7466] | Bfo | Bfo (BFO_1659113230_2021_ooo-ekspoket.pdf) | — | — |
+| [s7467] | Bfo | Bfo (BFO_1659113230_2022_ooo-ekspoket.pdf) | — | — |
+| [s7468] | Bfo | Bfo (BFO_1659113230_2023_ooo-ekspoket.pdf) | — | — |
+| [s7469] | Bfo | Bfo (BFO_1659113230_2024_ooo-ekspoket.pdf) | — | — |
+| [s7470] | Bfo | Bfo (BFO_1659113230_2025_ooo-ekspoket.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

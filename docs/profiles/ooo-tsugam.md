@@ -19,7 +19,7 @@
 | Value | As of | Note |
 |---|---|---|
 | Соколова Ольга Михайловна | 2023-08-29 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 500905260513. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6870] |
-| Соколова Ольга Михайловна | 2026-08-22 | Генеральный директор, per egrul.nalog.ru open-API pull. Corrects the prior placeholder ("Соколова Ольга", no source_id, from corrections:add_entities) which had the correct surname/first name but no patronymic and no citation -- s0432 was already archived 2026-08-22 with the full name but had never been linked to this field. [s0432] |
+| Соколова Ольга Михайловна | 2026-08-22 | Генеральный директор, per egrul.nalog.ru open-API pull. Supersedes an earlier uncited entry ("Соколова Ольга", no patronymic); the full name is confirmed by the EGRUL extract archived 2026-08-22. [s0432] |
 
 ### Founders / ownership
 
@@ -75,14 +75,14 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0432 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9731094770_20260822_ooo-tsugam.json) | 2026-08-22 | 2026-08-22 |
-| s0820 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9731094770_20260824_ooo-tsugam.json) | 2026-08-24 | — |
-| s0968 | GUR war-sanctions record | GUR war-sanctions record (GUR_9731094770_20260824_ooo-tsugam.html) | 2026-08-24 | — |
-| s6691 | Bfo | Bfo (BFO_9731094770_2022_ооо-цугам.pdf) | — | — |
-| s6692 | Bfo | Bfo (BFO_9731094770_2023_ооо-цугам.pdf) | — | — |
-| s6693 | Bfo | Bfo (BFO_9731094770_2024_ооо-цугам.pdf) | — | — |
-| s6694 | Bfo | Bfo (BFO_9731094770_2025_ооо-цугам.pdf) | — | — |
-| s6870 | EGRUL extract | EGRUL extract (EGRUL_9731094770_20260907_ooo-tsugam.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0432] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9731094770_20260822_ooo-tsugam.json) | 2026-08-22 | 2026-08-22 |
+| [s0820] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9731094770_20260824_ooo-tsugam.json) | 2026-08-24 | — |
+| [s0968] | GUR war-sanctions record | GUR war-sanctions record (GUR_9731094770_20260824_ooo-tsugam.html) | 2026-08-24 | — |
+| [s6691] | Bfo | Bfo (BFO_9731094770_2022_ооо-цугам.pdf) | — | — |
+| [s6692] | Bfo | Bfo (BFO_9731094770_2023_ооо-цугам.pdf) | — | — |
+| [s6693] | Bfo | Bfo (BFO_9731094770_2024_ооо-цугам.pdf) | — | — |
+| [s6694] | Bfo | Bfo (BFO_9731094770_2025_ооо-цугам.pdf) | — | — |
+| [s6870] | EGRUL extract | EGRUL extract (EGRUL_9731094770_20260907_ooo-tsugam.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

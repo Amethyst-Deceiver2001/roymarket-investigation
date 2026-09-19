@@ -59,11 +59,11 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0507 | EGRUL extract | EGRUL extract (ul-1237700545191-20260823133810.pdf) | — | 2026-08-23 |
-| s6657 | Bfo | Bfo (BFO_9713001941_2023_ооо-эколибри-бт.pdf) | — | — |
-| s6658 | Bfo | Bfo (BFO_9713001941_2024_ооо-эколибри-бт.pdf) | — | — |
-| s6659 | Bfo | Bfo (BFO_9713001941_2025_ооо-эколибри-бт.pdf) | — | — |
-| s6862 | EGRUL extract | EGRUL extract (EGRUL_9713001941_20260907_ooo-ekolibri-bt.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0507] | EGRUL extract | EGRUL extract (ul-1237700545191-20260823133810.pdf) | — | 2026-08-23 |
+| [s6657] | Bfo | Bfo (BFO_9713001941_2023_ооо-эколибри-бт.pdf) | — | — |
+| [s6658] | Bfo | Bfo (BFO_9713001941_2024_ооо-эколибри-бт.pdf) | — | — |
+| [s6659] | Bfo | Bfo (BFO_9713001941_2025_ооо-эколибри-бт.pdf) | — | — |
+| [s6862] | EGRUL extract | EGRUL extract (EGRUL_9713001941_20260907_ooo-ekolibri-bt.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

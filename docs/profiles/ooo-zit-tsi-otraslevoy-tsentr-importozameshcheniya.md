@@ -76,22 +76,22 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0219 | EGRUL extract | EGRUL extract (ul-1227700802878-20260814212230.pdf) | — | 2026-08-14 |
-| s0418 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726029133_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
-| s0419 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726029133_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0420 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726029133_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s5202 | Zakupki | Zakupki (ZAKUPKI_contract_1770236142725000068_20260831.html) | 2026-08-31 | — |
-| s5203 | Zakupki | Zakupki (ZAKUPKI_contract_1770236142726000026_20260831.html) | 2026-08-31 | — |
-| s5204 | Zakupki | Zakupki (ZAKUPKI_contract_1770236142726000033_20260831.html) | 2026-08-31 | — |
-| s5205 | Zakupki | Zakupki (ZAKUPKI_contract_1770236142726000039_20260831.html) | 2026-08-31 | — |
-| s5210 | Zakupki | Zakupki (ZAKUPKI_contract_1770808360026000006_20260831.html) | 2026-08-31 | — |
-| s5215 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726624000840_20260831.html) | 2026-08-31 | — |
-| s5216 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726624001098_20260831.html) | 2026-08-31 | — |
-| s5217 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001086_20260831.html) | 2026-08-31 | — |
-| s5218 | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001743_20260831.html) | 2026-08-31 | — |
-| s5230 | Zakupki | Zakupki (ZAKUPKI_contract_2519150092425000002_20260831.html) | 2026-08-31 | — |
-| s5655 | Zakupki | Zakupki (ZAKUPKI_contract_1770236142725000018_20260905.html) | 2026-09-05 | — |
-| s6443 | Rkn | Rkn (RKN_9726029133_20260906_comms-license-search-ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya.html) | 2026-09-06 | — |
+| [s0219] | EGRUL extract | EGRUL extract (ul-1227700802878-20260814212230.pdf) | — | 2026-08-14 |
+| [s0418] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726029133_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
+| [s0419] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726029133_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0420] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726029133_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s5202] | Zakupki | Zakupki (ZAKUPKI_contract_1770236142725000068_20260831.html) | 2026-08-31 | — |
+| [s5203] | Zakupki | Zakupki (ZAKUPKI_contract_1770236142726000026_20260831.html) | 2026-08-31 | — |
+| [s5204] | Zakupki | Zakupki (ZAKUPKI_contract_1770236142726000033_20260831.html) | 2026-08-31 | — |
+| [s5205] | Zakupki | Zakupki (ZAKUPKI_contract_1770236142726000039_20260831.html) | 2026-08-31 | — |
+| [s5210] | Zakupki | Zakupki (ZAKUPKI_contract_1770808360026000006_20260831.html) | 2026-08-31 | — |
+| [s5215] | Zakupki | Zakupki (ZAKUPKI_contract_1770982726624000840_20260831.html) | 2026-08-31 | — |
+| [s5216] | Zakupki | Zakupki (ZAKUPKI_contract_1770982726624001098_20260831.html) | 2026-08-31 | — |
+| [s5217] | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001086_20260831.html) | 2026-08-31 | — |
+| [s5218] | Zakupki | Zakupki (ZAKUPKI_contract_1770982726625001743_20260831.html) | 2026-08-31 | — |
+| [s5230] | Zakupki | Zakupki (ZAKUPKI_contract_2519150092425000002_20260831.html) | 2026-08-31 | — |
+| [s5655] | Zakupki | Zakupki (ZAKUPKI_contract_1770236142725000018_20260905.html) | 2026-09-05 | — |
+| [s6443] | Rkn | Rkn (RKN_9726029133_20260906_comms-license-search-ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya.html) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

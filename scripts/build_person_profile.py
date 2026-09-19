@@ -32,6 +32,7 @@ import sys
 from pathlib import Path
 
 import jinja2
+from profile_text import bracket_source_ids_html, bracket_source_ids_md
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
@@ -119,7 +120,8 @@ class PersonProfileBuilder:
         return fallback or slug
 
     def entity_profile_url(self, slug):
-        if slug and slug in self.by_slug and not self.by_slug[slug].get("_merged_into"):
+        if slug and slug in self.by_slug and not self.by_slug[slug].get("_merged_into") \
+                and (OUT_DIR.parent / f"{slug}.html").exists():
             return f"../{slug}.html"
         return None
 
@@ -394,8 +396,10 @@ class PersonProfileBuilder:
 
         OUT_DIR.mkdir(parents=True, exist_ok=True)
         html = html_env.get_template("person_profile.html.jinja2").render(**ctx)
+        html = bracket_source_ids_html(html)
         (OUT_DIR / f"{slug}.html").write_text(html, encoding="utf-8")
         md = md_env.get_template("person_profile.md.jinja2").render(**ctx)
+        md = bracket_source_ids_md(md)
         md = re.sub(r"\n{3,}", "\n\n", md)
         (OUT_DIR / f"{slug}.md").write_text(md, encoding="utf-8")
         return OUT_DIR / f"{slug}.html", OUT_DIR / f"{slug}.md"

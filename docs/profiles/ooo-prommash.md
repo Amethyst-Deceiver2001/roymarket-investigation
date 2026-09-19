@@ -69,11 +69,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0264 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_4217210280_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
-| s0265 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_4217210280_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
-| s0510 | EGRUL extract | EGRUL extract (ul-1244200002970-20260823135624.pdf) | — | 2026-08-23 |
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
-| s6786 | EGRUL extract | EGRUL extract (EGRUL_4217210280_20260907_ooo-prommash.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0264] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_4217210280_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
+| [s0265] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_4217210280_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
+| [s0510] | EGRUL extract | EGRUL extract (ul-1244200002970-20260823135624.pdf) | — | 2026-08-23 |
+| [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s6786] | EGRUL extract | EGRUL extract (EGRUL_4217210280_20260907_ooo-prommash.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

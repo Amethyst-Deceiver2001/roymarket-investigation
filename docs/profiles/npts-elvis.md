@@ -411,42 +411,42 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0789 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7735582816_20260824_npts-elvis.json) | 2026-08-24 | — |
-| s2864 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001940_20260827.html) | 2026-08-27 | — |
-| s2876 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009514000226_20260827.html) | 2026-08-27 | — |
-| s2892 | Zakupki | Zakupki (ZAKUPKI_contract_1504013620820000010_20260827.html) | 2026-08-27 | — |
-| s2911 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633916001183_20260827.html) | 2026-08-27 | — |
-| s2912 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633916001223_20260827.html) | 2026-08-27 | — |
-| s2916 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000583_20260827.html) | 2026-08-27 | — |
-| s2917 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000767_20260827.html) | 2026-08-27 | — |
-| s2918 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000811_20260827.html) | 2026-08-27 | — |
-| s2919 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000816_20260827.html) | 2026-08-27 | — |
-| s2923 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633921000206_20260827.html) | 2026-08-27 | — |
-| s2925 | Zakupki | Zakupki (ZAKUPKI_contract_1770559633924000207_20260827.html) | 2026-08-27 | — |
-| s3701 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_elektronnyy-kon-17705596339240002070004_33d7453e.xml) | — | — |
-| s3702 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_kontrakt-2420-17705596339240002070002_032cbeeb.docx) | — | — |
-| s3712 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_protsessor-ima-b-17705596339240002070038_33887297.pdf) | — | 2024-12-03 |
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5356 | document | document (PP719_7735582816_20210611_zaklyuchenie-48826-11.pdf) | 2021-06-11 | 2021-06-11 |
-| s5357 | document | document (PP719_7735582816_20210810_zaklyuchenie-67615-11.pdf) | 2021-08-10 | 2021-08-10 |
-| s5358 | document | document (PP719_7735582816_20210927_zaklyuchenie-82258-11.pdf) | 2021-09-27 | 2021-09-27 |
-| s5359 | document | document (PP719_7735582816_20220111_zaklyuchenie-466-11.pdf) | 2022-01-11 | 2022-01-11 |
-| s5360 | document | document (PP719_7735582816_20230417_zaklyuchenie-38949-11.pdf) | 2023-04-17 | 2023-04-17 |
-| s5361 | document | document (PP719_7735582816_20230512_zaklyuchenie-49047-11.pdf) | 2023-05-12 | 2023-05-12 |
-| s5362 | document | document (PP719_7735582816_20230620_zaklyuchenie-63888-11.pdf) | 2023-06-20 | 2023-06-20 |
-| s5363 | document | document (PP719_7735582816_20230620_zaklyuchenie-63891-11.pdf) | 2023-06-20 | 2023-06-20 |
-| s5364 | document | document (PP719_7735582816_20230929_zaklyuchenie-104664-11.pdf) | 2023-09-29 | 2023-09-29 |
-| s5365 | document | document (PP719_7735582816_20231207_zaklyuchenie-132832-11.pdf) | 2023-12-07 | 2023-12-07 |
-| s5366 | document | document (PP719_7735582816_20240530_zaklyuchenie-55520-11.pdf) | 2024-05-30 | 2024-05-30 |
-| s5367 | document | document (PP719_7735582816_20240626_zaklyuchenie-66629-11.pdf) | 2024-06-26 | 2024-06-26 |
-| s5368 | document | document (PP719_7735582816_20240627_zaklyuchenie-66839-11.pdf) | 2024-06-27 | 2024-06-27 |
-| s5369 | document | document (PP719_7735582816_20240627_zaklyuchenie-66845-11.pdf) | 2024-06-27 | 2024-06-27 |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6438 | Mchs | Mchs (MCHS_7735582816_20260906_fire-license-search-npts-elvis.html) | 2026-09-06 | — |
-| s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
-| s6829 | EGRUL extract | EGRUL extract (EGRUL_7735582816_20260907_npts-elvis.pdf) | 2026-09-07 | 2026-09-07 |
-| s6928 | Proverki | Proverki (PROVERKI_7735582816_20260907_npts-elvis-inspection-history.txt) | 2026-09-07 | — |
-| s7544 | site capture | site capture (SITE_7735582816_20260916_npts-elvis-logo.svg) | 2026-09-16 | — |
+| [s0789] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7735582816_20260824_npts-elvis.json) | 2026-08-24 | — |
+| [s2864] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001940_20260827.html) | 2026-08-27 | — |
+| [s2876] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009514000226_20260827.html) | 2026-08-27 | — |
+| [s2892] | Zakupki | Zakupki (ZAKUPKI_contract_1504013620820000010_20260827.html) | 2026-08-27 | — |
+| [s2911] | Zakupki | Zakupki (ZAKUPKI_contract_1770559633916001183_20260827.html) | 2026-08-27 | — |
+| [s2912] | Zakupki | Zakupki (ZAKUPKI_contract_1770559633916001223_20260827.html) | 2026-08-27 | — |
+| [s2916] | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000583_20260827.html) | 2026-08-27 | — |
+| [s2917] | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000767_20260827.html) | 2026-08-27 | — |
+| [s2918] | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000811_20260827.html) | 2026-08-27 | — |
+| [s2919] | Zakupki | Zakupki (ZAKUPKI_contract_1770559633917000816_20260827.html) | 2026-08-27 | — |
+| [s2923] | Zakupki | Zakupki (ZAKUPKI_contract_1770559633921000206_20260827.html) | 2026-08-27 | — |
+| [s2925] | Zakupki | Zakupki (ZAKUPKI_contract_1770559633924000207_20260827.html) | 2026-08-27 | — |
+| [s3701] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_elektronnyy-kon-17705596339240002070004_33d7453e.xml) | — | — |
+| [s3702] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_kontrakt-2420-17705596339240002070002_032cbeeb.docx) | — | — |
+| [s3712] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633924000207_1770559633924000207_protsessor-ima-b-17705596339240002070038_33887297.pdf) | — | 2024-12-03 |
+| [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5356] | document | document (PP719_7735582816_20210611_zaklyuchenie-48826-11.pdf) | 2021-06-11 | 2021-06-11 |
+| [s5357] | document | document (PP719_7735582816_20210810_zaklyuchenie-67615-11.pdf) | 2021-08-10 | 2021-08-10 |
+| [s5358] | document | document (PP719_7735582816_20210927_zaklyuchenie-82258-11.pdf) | 2021-09-27 | 2021-09-27 |
+| [s5359] | document | document (PP719_7735582816_20220111_zaklyuchenie-466-11.pdf) | 2022-01-11 | 2022-01-11 |
+| [s5360] | document | document (PP719_7735582816_20230417_zaklyuchenie-38949-11.pdf) | 2023-04-17 | 2023-04-17 |
+| [s5361] | document | document (PP719_7735582816_20230512_zaklyuchenie-49047-11.pdf) | 2023-05-12 | 2023-05-12 |
+| [s5362] | document | document (PP719_7735582816_20230620_zaklyuchenie-63888-11.pdf) | 2023-06-20 | 2023-06-20 |
+| [s5363] | document | document (PP719_7735582816_20230620_zaklyuchenie-63891-11.pdf) | 2023-06-20 | 2023-06-20 |
+| [s5364] | document | document (PP719_7735582816_20230929_zaklyuchenie-104664-11.pdf) | 2023-09-29 | 2023-09-29 |
+| [s5365] | document | document (PP719_7735582816_20231207_zaklyuchenie-132832-11.pdf) | 2023-12-07 | 2023-12-07 |
+| [s5366] | document | document (PP719_7735582816_20240530_zaklyuchenie-55520-11.pdf) | 2024-05-30 | 2024-05-30 |
+| [s5367] | document | document (PP719_7735582816_20240626_zaklyuchenie-66629-11.pdf) | 2024-06-26 | 2024-06-26 |
+| [s5368] | document | document (PP719_7735582816_20240627_zaklyuchenie-66839-11.pdf) | 2024-06-27 | 2024-06-27 |
+| [s5369] | document | document (PP719_7735582816_20240627_zaklyuchenie-66845-11.pdf) | 2024-06-27 | 2024-06-27 |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6438] | Mchs | Mchs (MCHS_7735582816_20260906_fire-license-search-npts-elvis.html) | 2026-09-06 | — |
+| [s6459] | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
+| [s6829] | EGRUL extract | EGRUL extract (EGRUL_7735582816_20260907_npts-elvis.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6928] | Proverki | Proverki (PROVERKI_7735582816_20260907_npts-elvis-inspection-history.txt) | 2026-09-07 | — |
+| [s7544] | site capture | site capture (SITE_7735582816_20260916_npts-elvis-logo.svg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

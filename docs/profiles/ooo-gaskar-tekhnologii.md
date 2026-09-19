@@ -73,17 +73,17 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0499 | EGRUL extract | EGRUL extract (ul-1207700344037-20260823133402.pdf) | — | 2026-08-23 |
-| s0819 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9731070264_20260824_ooo-gaskar-tekhnologii.json) | 2026-08-24 | — |
-| s1873 | Zakupki | Zakupki (ZAKUPKI_ATTACH_9731070264_2502413084025000058_elektronnyy-kon-25024130840250000580005_be4e4780.xml) | — | — |
-| s3399 | Zakupki | Zakupki (ZAKUPKI_contract_2502413084025000058_20260829.html) | 2026-08-29 | — |
-| s6686 | Bfo | Bfo (BFO_9731070264_2021_ооо-гаскар-технологии.pdf) | — | — |
-| s6687 | Bfo | Bfo (BFO_9731070264_2022_ооо-гаскар-технологии.pdf) | — | — |
-| s6688 | Bfo | Bfo (BFO_9731070264_2023_ооо-гаскар-технологии.pdf) | — | — |
-| s6689 | Bfo | Bfo (BFO_9731070264_2024_ооо-гаскар-технологии.pdf) | — | — |
-| s6690 | Bfo | Bfo (BFO_9731070264_2025_ооо-гаскар-технологии.pdf) | — | — |
-| s6772 | EGRUL extract | EGRUL extract (EGRUL_9731070264_20260907_ooo-gaskar-tekhnologii.pdf) | 2026-09-07 | 2026-09-07 |
-| s7422 | Founding-Устав bundle | Founding-Устав bundle (UD_1207700344037_20260914_ooo-gaskar-tekhnologii.zip) | 2026-09-14 | 2020-09-15 |
+| [s0499] | EGRUL extract | EGRUL extract (ul-1207700344037-20260823133402.pdf) | — | 2026-08-23 |
+| [s0819] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9731070264_20260824_ooo-gaskar-tekhnologii.json) | 2026-08-24 | — |
+| [s1873] | Zakupki | Zakupki (ZAKUPKI_ATTACH_9731070264_2502413084025000058_elektronnyy-kon-25024130840250000580005_be4e4780.xml) | — | — |
+| [s3399] | Zakupki | Zakupki (ZAKUPKI_contract_2502413084025000058_20260829.html) | 2026-08-29 | — |
+| [s6686] | Bfo | Bfo (BFO_9731070264_2021_ооо-гаскар-технологии.pdf) | — | — |
+| [s6687] | Bfo | Bfo (BFO_9731070264_2022_ооо-гаскар-технологии.pdf) | — | — |
+| [s6688] | Bfo | Bfo (BFO_9731070264_2023_ооо-гаскар-технологии.pdf) | — | — |
+| [s6689] | Bfo | Bfo (BFO_9731070264_2024_ооо-гаскар-технологии.pdf) | — | — |
+| [s6690] | Bfo | Bfo (BFO_9731070264_2025_ооо-гаскар-технологии.pdf) | — | — |
+| [s6772] | EGRUL extract | EGRUL extract (EGRUL_9731070264_20260907_ooo-gaskar-tekhnologii.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7422] | Founding-Устав bundle | Founding-Устав bundle (UD_1207700344037_20260914_ooo-gaskar-tekhnologii.zip) | 2026-09-14 | 2020-09-15 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

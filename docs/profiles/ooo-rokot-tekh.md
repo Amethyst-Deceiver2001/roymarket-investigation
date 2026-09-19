@@ -62,7 +62,7 @@
 
 ### Telegram
 
-- <None>
+- <https://t.me/ROKOT_TEH_manager>
 
 ### Marketplace listings
 
@@ -84,12 +84,12 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0515 | EGRUL extract | EGRUL extract (ul-1247600010954-20260823135127.pdf) | — | 2026-08-23 |
-| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6544 | Bfo | Bfo (BFO_7606140961_2024_ооо-рокот-тех.pdf) | — | — |
-| s6816 | EGRUL extract | EGRUL extract (EGRUL_7606140961_20260907_ooo-rokot-tekh.pdf) | 2026-09-07 | 2026-09-07 |
-| s7565 | site capture | site capture (SITE_7606140961_20260916_ooo-rokot-tekh-logo.jpg) | 2026-09-16 | — |
+| [s0515] | EGRUL extract | EGRUL extract (ul-1247600010954-20260823135127.pdf) | — | 2026-08-23 |
+| [s5344] | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6544] | Bfo | Bfo (BFO_7606140961_2024_ооо-рокот-тех.pdf) | — | — |
+| [s6816] | EGRUL extract | EGRUL extract (EGRUL_7606140961_20260907_ooo-rokot-tekh.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7565] | site capture | site capture (SITE_7606140961_20260916_ooo-rokot-tekh-logo.jpg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

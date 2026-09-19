@@ -33,7 +33,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s1001 | Rospatent patent record | Rospatent patent record (PATENT_RU242557U1_2026-08-24_ooo-tsentr-dinarus.json) | — | — |
+| [s1001] | Rospatent patent record | Rospatent patent record (PATENT_RU242557U1_2026-08-24_ooo-tsentr-dinarus.json) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

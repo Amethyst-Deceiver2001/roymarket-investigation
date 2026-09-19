@@ -48,8 +48,8 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5411 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7100069249_20260903_ooo-npo-eyler.json) | 2026-09-03 | 2026-09-03 |
-| s6814 | EGRUL extract | EGRUL extract (EGRUL_7100069249_20260907_ooo-npo-eyler.pdf) | 2026-09-07 | 2026-09-07 |
+| [s5411] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7100069249_20260903_ooo-npo-eyler.json) | 2026-09-03 | 2026-09-03 |
+| [s6814] | EGRUL extract | EGRUL extract (EGRUL_7100069249_20260907_ooo-npo-eyler.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

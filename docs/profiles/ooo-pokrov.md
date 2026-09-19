@@ -37,7 +37,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 141204, Московская область, г.о. Пушкинский, г. Пушкино, ул. Тургенева, д. 1, помещ. 2, ком. 4Д | 2025-06-09 | factAddress per contract XML (regNumber 1500300810225000157). Cross-checked against rusprofile.ru (s3929, captured 2026-08-30): this IS the entity's current юридический (registered) address, not a distinct undocumented facility as first assumed -- supersedes the unsourced 'Химки, д. Мышецкое' value previously carried in this entity's scalar 'address' field (no source_id, likely inherited from the founder ИП Цыганов's own address at scaffold time). [s3669] |
+| 141204, Московская область, г.о. Пушкинский, г. Пушкино, ул. Тургенева, д. 1, помещ. 2, ком. 4Д | 2025-06-09 | factAddress per contract XML (regNumber 1500300810225000157). Cross-checked against rusprofile.ru ([s3929], captured 2026-08-30): this IS the entity's current юридический (registered) address, not a distinct undocumented facility as first assumed -- supersedes the unsourced 'Химки, д. Мышецкое' value previously carried in this entity's scalar 'address' field (no source_id, likely inherited from the founder ИП Цыганов's own address at scaffold time). [s3669] |
 
 ## Products
 
@@ -67,11 +67,11 @@
 
 ### Website
 
-- <https://pokrovsystem.ru/> — Contact: sales@pokrovsystem.ru, +7 495 799-7101 / +7 905 519-7101. Re-confirmed 2026-08-25 (s1386, direct curl archive) -- ОГРН 1245000068774 matches exactly.
+- <https://pokrovsystem.ru/> — Contact: sales@pokrovsystem.ru, +7 495 799-7101 / +7 905 519-7101. Re-confirmed 2026-08-25 ([s1386], direct curl archive) -- ОГРН 1245000068774 matches exactly.
 
 ### Telegram
 
-- <None>
+- <https://t.me/pokrov_sales>
 
 ## Images
 
@@ -90,15 +90,15 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0946 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5038189259_20260824_ooo-pokrov.json) | 2026-08-24 | 2026-08-24 |
-| s1386 | site capture | site capture (SITE_5038189259_20260825_ooo-pokrov-pokrovsystem-ru.html) | 2026-08-25 | — |
-| s3424 | Zakupki | Zakupki (ZAKUPKI_contract_3310005025826000052_20260829.html) | 2026-08-29 | — |
-| s3669 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1500300810225000157_1500300810225000157_elektronnyy-kon-15003008102250001570005_72034074.xml) | — | — |
-| s3680 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1500300810225000157_1500300810225000157_uvedomlenie-fas-15003008102250001570006_4d2c94b3.zip) | — | — |
-| s6508 | Bfo | Bfo (BFO_5038189259_2024_ооо-покров.pdf) | — | — |
-| s6509 | Bfo | Bfo (BFO_5038189259_2025_ооо-покров.pdf) | — | — |
-| s6799 | EGRUL extract | EGRUL extract (EGRUL_5038189259_20260907_ooo-pokrov.pdf) | 2026-09-07 | 2026-09-07 |
-| s7540 | site capture | site capture (SITE_5038189259_20260916_ooo-pokrov-logo.jpg) | 2026-09-16 | — |
+| [s0946] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5038189259_20260824_ooo-pokrov.json) | 2026-08-24 | 2026-08-24 |
+| [s1386] | site capture | site capture (SITE_5038189259_20260825_ooo-pokrov-pokrovsystem-ru.html) | 2026-08-25 | — |
+| [s3424] | Zakupki | Zakupki (ZAKUPKI_contract_3310005025826000052_20260829.html) | 2026-08-29 | — |
+| [s3669] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1500300810225000157_1500300810225000157_elektronnyy-kon-15003008102250001570005_72034074.xml) | — | — |
+| [s3680] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1500300810225000157_1500300810225000157_uvedomlenie-fas-15003008102250001570006_4d2c94b3.zip) | — | — |
+| [s6508] | Bfo | Bfo (BFO_5038189259_2024_ооо-покров.pdf) | — | — |
+| [s6509] | Bfo | Bfo (BFO_5038189259_2025_ооо-покров.pdf) | — | — |
+| [s6799] | EGRUL extract | EGRUL extract (EGRUL_5038189259_20260907_ooo-pokrov.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7540] | site capture | site capture (SITE_5038189259_20260916_ooo-pokrov-logo.jpg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -60,13 +60,13 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0471 | EGRUL extract | EGRUL extract (ul-1237700170311-20260823122944.pdf) | — | 2026-08-23 |
-| s3392 | Zakupki | Zakupki (ZAKUPKI_contract_2270000078624000447_20260829.html) | 2026-08-29 | — |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6668 | Bfo | Bfo (BFO_9721200789_2023_ооо-бпр-ярл.pdf) | — | — |
-| s6669 | Bfo | Bfo (BFO_9721200789_2024_ооо-бпр-ярл.pdf) | — | — |
-| s6670 | Bfo | Bfo (BFO_9721200789_2025_ооо-бпр-ярл.pdf) | — | — |
-| s6767 | EGRUL extract | EGRUL extract (EGRUL_9721200789_20260907_yarl.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0471] | EGRUL extract | EGRUL extract (ul-1237700170311-20260823122944.pdf) | — | 2026-08-23 |
+| [s3392] | Zakupki | Zakupki (ZAKUPKI_contract_2270000078624000447_20260829.html) | 2026-08-29 | — |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6668] | Bfo | Bfo (BFO_9721200789_2023_ооо-бпр-ярл.pdf) | — | — |
+| [s6669] | Bfo | Bfo (BFO_9721200789_2024_ооо-бпр-ярл.pdf) | — | — |
+| [s6670] | Bfo | Bfo (BFO_9721200789_2025_ооо-бпр-ярл.pdf) | — | — |
+| [s6767] | EGRUL extract | EGRUL extract (EGRUL_9721200789_20260907_yarl.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

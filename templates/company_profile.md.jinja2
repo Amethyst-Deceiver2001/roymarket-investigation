@@ -143,7 +143,7 @@
 {% for g in web_groups %}
 ### {{ g.label }}
 
-{% for item in g.links %}- <{{ item.url }}>{% if item.note %} — {{ item.note }}{% endif %}
+{% for item in g.links %}- {% if item.url %}<{{ item.url }}>{% else %}{{ item.text }}{% endif %}{% if item.note %} — {{ item.note }}{% endif %}
 {% endfor %}
 {% endfor %}
 {% endif %}
@@ -167,7 +167,7 @@
 {% endif %}{% if p.inn_personal %}- **ИНН:** {{ p.inn_personal }}
 {% endif %}{% for r in p.roles %}- {{ r }}
 {% endfor %}{% if p.sanctions_chip %}- `{{ p.sanctions_chip.label }}`
-{% endif %}{% for s in p.social %}- <{{ s }}>
+{% endif %}{% for s in p.social %}- {% if s.url %}<{{ s.url }}>{% else %}{{ s.text }}{% endif %}
 {% endfor %}
 {% endfor %}
 {% else %}

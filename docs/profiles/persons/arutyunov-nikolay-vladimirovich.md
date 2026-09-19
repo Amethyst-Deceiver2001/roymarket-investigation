@@ -36,8 +36,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0547 | transcript | transcript (TRANSCRIPT_20260526_gk-logos-srro-rostov-roundtable.html) | 2026-05-26 | — |
-| s0552 | EGRUL extract | EGRUL extract (ul-1151001003230-20260823183108.pdf) | — | 2026-08-23 |
+| [s0547] | transcript | transcript (TRANSCRIPT_20260526_gk-logos-srro-rostov-roundtable.html) | 2026-05-26 | — |
+| [s0552] | EGRUL extract | EGRUL extract (ul-1151001003230-20260823183108.pdf) | — | 2026-08-23 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

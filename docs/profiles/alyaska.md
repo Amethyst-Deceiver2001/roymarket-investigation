@@ -15,7 +15,7 @@
 - **ЦБСТ tie:** Named directly ((brand «Аляска»)) among ЦБСТ's own resident-company leadership in its 31.12.2025 New Year Telegram post, alongside «Авирон», «Овод», АО «НПП» and «Визионеро».
 - **Wildberries overlap:** none_found
 
-> **Declared vs. actual activity.** Declared ОКВЭД 27.40 is LED-lighting-equipment manufacturing; the EU's own 15.6.2026 sanctions listing (s7429) states the company also manufactures FPV drones ("Алёша") via a second, undeclared business line, "Проект «Аляска»".
+> **Declared vs. actual activity.** Declared ОКВЭД 27.40 is LED-lighting-equipment manufacturing; the EU's own 15.6.2026 sanctions listing ([s7429]) states the company also manufactures FPV drones ("Алёша") via a second, undeclared business line, "Проект «Аляска»".
 
 ## Ownership & corporate history
 
@@ -41,7 +41,7 @@
 
 ## State-program participation
 
-- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase under its LED-lighting ОКВЭД 27.40 — independently corroborates ИНН/ОГРН/address, which match EGRUL exactly. RESOLVED 2026-09-14: earlier the same day this note had been flagged as a stray/mismatched citation (ООО «Ионос» appeared unrelated to «Аляска» based on its own site content, which only describes the LED-lighting business). The EU's own 15.6.2026 sanctions listing (Council Decision (CFSP) 2026/1364, entry 801, source s7429) subsequently confirmed ООО «ИОНОС» genuinely operates BOTH businesses — LED lighting as its declared/public-facing activity, and «Проект «Аляска»» FPV-drone production as a second, evidently less publicised line. This note was right all along; the entity identity is now confirmed, not stray. [s5346]
+- as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase under its LED-lighting ОКВЭД 27.40 — independently corroborates ИНН/ОГРН/address, which match EGRUL exactly. RESOLVED 2026-09-14: earlier the same day this note had been flagged as a stray/mismatched citation (ООО «Ионос» appeared unrelated to «Аляска» based on its own site content, which only describes the LED-lighting business). The EU's own 15.6.2026 sanctions listing (Council Decision (CFSP) 2026/1364, entry 801, source [s7429]) subsequently confirmed ООО «ИОНОС» genuinely operates BOTH businesses — LED lighting as its declared/public-facing activity, and «Проект «Аляска»» FPV-drone production as a second, evidently less publicised line. This note was right all along; the entity identity is now confirmed, not stray. [s5346]
 
 ## Sanctions & screening
 
@@ -64,14 +64,14 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
-| s7428 | EGRUL extract | EGRUL extract (EGRUL_6168719068_20260914_ooo-ionos.pdf) | 2026-09-14 | 2026-09-14 |
-| s7429 | Eu | Eu (EU_SANCTIONS_6168719068_20260615_ooo-ionos-council-decision-2026-1364.txt) | 2026-06-15 | — |
-| s7486 | Bfo | Bfo (BFO_6168719068_2021_alyaska.pdf) | — | — |
-| s7487 | Bfo | Bfo (BFO_6168719068_2022_alyaska.pdf) | — | — |
-| s7488 | Bfo | Bfo (BFO_6168719068_2023_alyaska.pdf) | — | — |
-| s7489 | Bfo | Bfo (BFO_6168719068_2024_alyaska.pdf) | — | — |
-| s7490 | Bfo | Bfo (BFO_6168719068_2025_alyaska.pdf) | — | — |
+| [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s7428] | EGRUL extract | EGRUL extract (EGRUL_6168719068_20260914_ooo-ionos.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7429] | Eu | Eu (EU_SANCTIONS_6168719068_20260615_ooo-ionos-council-decision-2026-1364.txt) | 2026-06-15 | — |
+| [s7486] | Bfo | Bfo (BFO_6168719068_2021_alyaska.pdf) | — | — |
+| [s7487] | Bfo | Bfo (BFO_6168719068_2022_alyaska.pdf) | — | — |
+| [s7488] | Bfo | Bfo (BFO_6168719068_2023_alyaska.pdf) | — | — |
+| [s7489] | Bfo | Bfo (BFO_6168719068_2024_alyaska.pdf) | — | — |
+| [s7490] | Bfo | Bfo (BFO_6168719068_2025_alyaska.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

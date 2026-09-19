@@ -32,6 +32,7 @@ import re
 from pathlib import Path
 
 import jinja2
+from profile_text import bracket_source_ids_html, bracket_source_ids_md
 import sys
 
 REPO = Path(__file__).resolve().parent.parent
@@ -47,6 +48,36 @@ PRODUCT_PROFILE_BY_NAME = {
 }
 REG = REPO / "data" / "registry"
 TEMPLATES = REPO / "templates"
+def _link_parts(item):
+    """(href, text, note) for a web/social entry of any recorded shape.
+
+    Entries are a bare URL string, {url}, {handle} (a Telegram @handle or
+    t.me/... path) or {type, value} (an email/phone). Only something that
+    really is a URL gets an href -- a handle is resolved to https://t.me/,
+    an email to mailto:, anything else renders as plain text instead of a
+    dead href="None" link. A scheme-less host/path gets https:// so it does
+    not resolve as a relative path.
+    """
+    note = None
+    if isinstance(item, dict):
+        note = item.get("note")
+        raw = item.get("url") or item.get("handle") or item.get("value") or item.get("id")
+    else:
+        raw = item
+    if not raw:
+        return None, None, note
+    raw = str(raw).strip()
+    if re.match(r"https?://", raw):
+        return raw, raw, note
+    if raw.startswith("@"):
+        return "https://t.me/" + raw[1:], raw, note
+    if re.match(r"^(t\.me|max\.ru|vk\.com|youtube\.com|www\.)[/\w]", raw):
+        return "https://" + raw, raw, note
+    if re.match(r"^[^\s@/]+@[^\s@/]+\.[a-z]{2,}$", raw, re.I):
+        return "mailto:" + raw, raw, note
+    return None, raw, note
+
+
 OUT_DIR = REPO / "docs" / "profiles"
 DOCS_IMAGES = REPO / "docs" / "images"
 
@@ -372,7 +403,11 @@ class ProfileBuilder:
         for key, label in web_group_labels:
             items = web.get(key) or []
             if items:
-                links = [{"url": i, "note": None} if isinstance(i, str) else {"url": i.get("url"), "note": i.get("note")} for i in items]
+                links = []
+                for i in items:
+                    href, text, note = _link_parts(i)
+                    if text:
+                        links.append({"url": href, "text": text, "note": note})
                 web_groups.append({"label": label, "links": links})
 
         # --- principals ---
@@ -407,7 +442,7 @@ class ProfileBuilder:
                         "address": p.get("address"), "inn_personal": p.get("inn_personal"),
                         "photo_url": photo_url, "photo_md_path": photo_md,
                         "roles": roles_text, "sanctions_chip": sanctions_chip,
-                        "social": [s.get("url") if isinstance(s, dict) else s for s in p.get("social", [])],
+                        "social": [dict(zip(("url", "text", "note"), _link_parts(s))) for s in p.get("social", []) if _link_parts(s)[1]],
                     })
                     break
 
@@ -416,7 +451,7 @@ class ProfileBuilder:
         for r in e.get("related_entities", []):
             rel_slug = r.get("slug")
             label = self.by_slug[rel_slug]["name_latin"] or self.by_slug[rel_slug]["name_ru"] if rel_slug and rel_slug in self.by_slug else (rel_slug or "Unresolved entity")
-            profile_url = f"{rel_slug}.html" if rel_slug and rel_slug in self.by_slug else None
+            profile_url = f"{rel_slug}.html" if rel_slug and rel_slug in self.by_slug and (OUT_DIR / f"{rel_slug}.html").exists() else None
             relationship = r.get("relationship")
             if isinstance(relationship, list):
                 relationship = "; ".join(relationship)
@@ -441,7 +476,7 @@ class ProfileBuilder:
                     relationship = f"{relationship} ({share}%)"
                 return {
                     "label": label,
-                    "profile_url": f"{rel_slug}.html" if rel_slug and rel_slug in self.by_slug else None,
+                    "profile_url": f"{rel_slug}.html" if rel_slug and rel_slug in self.by_slug and (OUT_DIR / f"{rel_slug}.html").exists() else None,
                     "relationship": relationship,
                     "source": self.source_label(item.get("source_id")),
                 }
@@ -520,8 +555,10 @@ class ProfileBuilder:
 
         OUT_DIR.mkdir(parents=True, exist_ok=True)
         html = html_env.get_template("company_profile.html.jinja2").render(**ctx)
+        html = bracket_source_ids_html(html)
         (OUT_DIR / f"{slug}.html").write_text(html, encoding="utf-8")
         md = md_env.get_template("company_profile.md.jinja2").render(**ctx)
+        md = bracket_source_ids_md(md)
         md = re.sub(r"\n{3,}", "\n\n", md)
         (OUT_DIR / f"{slug}.md").write_text(md, encoding="utf-8")
         return OUT_DIR / f"{slug}.html", OUT_DIR / f"{slug}.md"

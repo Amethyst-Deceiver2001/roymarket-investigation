@@ -30,7 +30,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7414 | EGRUL extract | EGRUL extract (EGRUL_7000013316_20260914_ooo-intek-bespilotnye-sistemy.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7414] | EGRUL extract | EGRUL extract (EGRUL_7000013316_20260914_ooo-intek-bespilotnye-sistemy.pdf) | 2026-09-14 | 2026-09-14 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

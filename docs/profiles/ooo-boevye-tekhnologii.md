@@ -78,12 +78,12 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0279 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5262393781_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0280 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5262393781_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s0542 | Founding-Устав bundle | Founding-Устав bundle (UD_1997512.zip) | — | 2024-09-10 |
-| s5659 | EGRUL extract | EGRUL extract (EGRUL_5262393781_20260905_ooo-boevye-tekhnologii.pdf) | 2026-09-05 | 2026-09-05 |
-| s5660 | Tgfile | Tgfile (TGFILE_20260905_irptorg-gaoneng-product.html) | 2026-09-05 | — |
-| s6721 | EGRUL extract | EGRUL extract (EGRUL_5262393781_20260907_ooo-boevye-tekhnologii.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0279] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5262393781_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0280] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5262393781_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s0542] | Founding-Устав bundle | Founding-Устав bundle (UD_1997512.zip) | — | 2024-09-10 |
+| [s5659] | EGRUL extract | EGRUL extract (EGRUL_5262393781_20260905_ooo-boevye-tekhnologii.pdf) | 2026-09-05 | 2026-09-05 |
+| [s5660] | Tgfile | Tgfile (TGFILE_20260905_irptorg-gaoneng-product.html) | 2026-09-05 | — |
+| [s6721] | EGRUL extract | EGRUL extract (EGRUL_5262393781_20260907_ooo-boevye-tekhnologii.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

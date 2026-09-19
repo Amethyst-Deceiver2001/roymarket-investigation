@@ -21,7 +21,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Соколов Герман Олегович | 2026-08-24 | Aggregator-sourced (checko.ru, via WebSearch result summary, page itself Cloudflare-blocked to direct fetch) -- corroborated independently by Соколов's own listing as co-inventor on this entity's patents RU218475U1/RU220486U1 (source s0953) and by his directorship of the related ООО «РТД-Защита» (ex-«НИПП Рустехдрон», ИНН 5003153526, s1161), which shares this entity's director and "РТД" product-naming convention. Not yet confirmed against a full EGRUL PDF extract. |
+| Соколов Герман Олегович | 2026-08-24 | Aggregator-sourced (checko.ru, via WebSearch result summary, page itself Cloudflare-blocked to direct fetch) -- corroborated independently by Соколов's own listing as co-inventor on this entity's patents RU218475U1/RU220486U1 (source [s0953]) and by his directorship of the related ООО «РТД-Защита» (ex-«НИПП Рустехдрон», ИНН 5003153526, [s1161]), which shares this entity's director and "РТД" product-naming convention. Not yet confirmed against a full EGRUL PDF extract. |
 | — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6718] |
 
 ### Founders / ownership
@@ -91,7 +91,7 @@
 
 - MATERIALLY THE MOST IMPORTANT DOCUMENT IN THIS CLUSTER: the judgment itemises what was actually delivered under the УПД № 18 от 25.07.2023, and the goods are military. Two line items only: «Система сброса для гранаты типа «F1»» — a release/drop mechanism for an F1 fragmentation hand grenade — 30 units at ₽13,800 (₽414,000); and «Аккумулятор GAONENG GNB 1300MAH 14BV 100C XT60», 50 units at ₽6,000 (₽300,000). The second is a standard 4S FPV drone LiPo battery pack made by GAONENG (Shenzhen, China). A grenade-release mechanism plus FPV drone batteries is a munitions-dropping drone payload kit, and it is established here on the face of a Russian state arbitration court's own findings of fact, not on marketing copy or a Telegram claim. The delivery date (25.07.2023) puts it well inside the full-scale invasion. Recorded on both parties: НПО «Рустехдрон» as supplier, ООО «ДСГ» as buyer. [s0043]
 - A second, separate НПО «Рустехдрон» → ООО «ДСГ» claim running in parallel with the supply-contract debt above, this one on a LOAN. So the two entities are tied by both a goods supply and a lending relationship, and ДСГ defaulted on both — relevant to how tightly this pair is connected beyond an arm's-length sale. [s0045]
-- By value the largest documented intra-network transaction found so far: a ₽245,678,400 advance paid by НПО «Рустехдрон» to ООО «СПТ» under a supply contract signed 27.10.2025, against which the goods were never delivered. Settlement terms approved by the court: СПТ had already repaid ₽45,000,000 (платёжное поручение № 1811 от 30.06.2026) and acknowledged a remaining ₽200,678,400 debt, to be repaid ₽50m by 31.07.2026, ₽70m by 31.08.2026 and ₽80,678,400 by 30.09.2026; on full performance the plaintiff waives the неустойка. СПТ also agreed to compensate ₽542,128.80 of non-refundable state duty. Note the scale relative to the counterparty: СПТ was registered only 21.03.2024 (ОГРН 1247700253668) yet took a quarter of a billion rubles in advance eighteen months later. The subject of the supply contract is NOT stated in either archived filing — an open question. A related appeal by НПО «Рустехдрон» against a 20.05.2026 interim ruling was RETURNED unheard by the Ninth Arbitration Appeal Court on 07.08.2026 (№ 09АП-36457/2026, s0047) for failure to attach proof of the state duty. [s0048]
+- By value the largest documented intra-network transaction found so far: a ₽245,678,400 advance paid by НПО «Рустехдрон» to ООО «СПТ» under a supply contract signed 27.10.2025, against which the goods were never delivered. Settlement terms approved by the court: СПТ had already repaid ₽45,000,000 (платёжное поручение № 1811 от 30.06.2026) and acknowledged a remaining ₽200,678,400 debt, to be repaid ₽50m by 31.07.2026, ₽70m by 31.08.2026 and ₽80,678,400 by 30.09.2026; on full performance the plaintiff waives the неустойка. СПТ also agreed to compensate ₽542,128.80 of non-refundable state duty. Note the scale relative to the counterparty: СПТ was registered only 21.03.2024 (ОГРН 1247700253668) yet took a quarter of a billion rubles in advance eighteen months later. The subject of the supply contract is NOT stated in either archived filing — an open question. A related appeal by НПО «Рустехдрон» against a 20.05.2026 interim ruling was RETURNED unheard by the Ninth Arbitration Appeal Court on 07.08.2026 (№ 09АП-36457/2026, [s0047]) for failure to attach proof of the state duty. [s0048]
 
 ## Foreign components
 
@@ -150,19 +150,19 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0043 | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-dsg-debt.pdf) | 2026-08-20 | 2025-12-25 |
-| s0045 | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-dsg-loan-motivated.pdf) | 2026-08-20 | 2025-10-16 |
-| s0048 | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-spt-mirovoe.pdf) | 2026-08-20 | 2026-07-08 |
-| s0486 | EGRUL extract | EGRUL extract (ul-1235000022179-20260823131658.pdf) | — | 2026-08-23 |
-| s0738 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5003155499_20260824_ooo-npo-rustekhdron.json) | 2026-08-24 | — |
-| s0955 | GUR war-sanctions record | GUR war-sanctions record (GUR_5003155499_20260824_ooo-npo-rustekhdron.html) | 2026-08-24 | — |
-| s1163 | press coverage | press coverage (PRESS_20240119_istories-dron-inferno-rustekhdron.html) | 2024-01-19 | — |
-| s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
-| s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
-| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6718 | EGRUL extract | EGRUL extract (EGRUL_5003155499_20260907_ooo-npo-rustekhdron.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0043] | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-dsg-debt.pdf) | 2026-08-20 | 2025-12-25 |
+| [s0045] | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-dsg-loan-motivated.pdf) | 2026-08-20 | 2025-10-16 |
+| [s0048] | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-spt-mirovoe.pdf) | 2026-08-20 | 2026-07-08 |
+| [s0486] | EGRUL extract | EGRUL extract (ul-1235000022179-20260823131658.pdf) | — | 2026-08-23 |
+| [s0738] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5003155499_20260824_ooo-npo-rustekhdron.json) | 2026-08-24 | — |
+| [s0955] | GUR war-sanctions record | GUR war-sanctions record (GUR_5003155499_20260824_ooo-npo-rustekhdron.html) | 2026-08-24 | — |
+| [s1163] | press coverage | press coverage (PRESS_20240119_istories-dron-inferno-rustekhdron.html) | 2024-01-19 | — |
+| [s1168] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
+| [s1169] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
+| [s5344] | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6718] | EGRUL extract | EGRUL extract (EGRUL_5003155499_20260907_ooo-npo-rustekhdron.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

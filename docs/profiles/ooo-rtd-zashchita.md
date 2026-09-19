@@ -74,12 +74,12 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0195 | Founding-Устав bundle | Founding-Устав bundle (UD_1992856.zip) | — | 2026-04-10 |
-| s0271 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5003153526_2023_20260820.zip) | 2026-08-20 | 2023-12-31 |
-| s0272 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5003153526_2024_20260820.zip) | 2026-08-20 | 2024-12-31 |
-| s0273 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5003153526_2025_20260820.zip) | 2026-08-20 | 2025-12-31 |
-| s1161 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5003153526_20260824_ooo-rtd-zashchita.json) | 2026-08-24 | 2026-08-24 |
-| s6792 | EGRUL extract | EGRUL extract (EGRUL_5003153526_20260907_ooo-rtd-zashchita.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0195] | Founding-Устав bundle | Founding-Устав bundle (UD_1992856.zip) | — | 2026-04-10 |
+| [s0271] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5003153526_2023_20260820.zip) | 2026-08-20 | 2023-12-31 |
+| [s0272] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5003153526_2024_20260820.zip) | 2026-08-20 | 2024-12-31 |
+| [s0273] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5003153526_2025_20260820.zip) | 2026-08-20 | 2025-12-31 |
+| [s1161] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5003153526_20260824_ooo-rtd-zashchita.json) | 2026-08-24 | 2026-08-24 |
+| [s6792] | EGRUL extract | EGRUL extract (EGRUL_5003153526_20260907_ooo-rtd-zashchita.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

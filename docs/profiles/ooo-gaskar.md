@@ -82,9 +82,9 @@
 
 ### Marketplace listings
 
-- <https://www.ozon.ru/seller/gaskargroup/> — Manufacturer's own Ozon storefront -- ОГРН exact match (1237700273744) confirmed via user-supplied browser HAR capture 2026-08-25 (s1385), independently repeated on the seller page's sellerLegalInformation widget AND the motor product page's own about-seller tooltip. Seller_id 4848816, 5/5 rating, 29 reviews, 94 orders, Premium-shop badge, registered on Ozon ~3 months as of capture.
+- <https://www.ozon.ru/seller/gaskargroup/> — Manufacturer's own Ozon storefront -- ОГРН exact match (1237700273744) confirmed via user-supplied browser HAR capture 2026-08-25 ([s1385]), independently repeated on the seller page's sellerLegalInformation widget AND the motor product page's own about-seller tooltip. Seller_id 4848816, 5/5 rating, 29 reviews, 94 orders, Premium-shop badge, registered on Ozon ~3 months as of capture.
 - <https://www.ozon.ru/product/motor-py3115-1300kv-beskollektornyy-fpv-5183531962/> — PY3115 1300KV brushless FPV motor -- confirmed as this entity's own product via JSON-LD brand field ("ГАСКАР") on the product page itself, not just a listing on the storefront.
-- <https://xn--80aaorhk2b.xn--p1ai/sellers/gackar> — Official partner/seller profile on Налетай.рф (налетай.рф), the state-backed civilian UAV marketplace created by АО «ГТЛК» (Государственная транспортная лизинговая компания), operated by ООО «ЦТП» (ИНН 9714054618). Legal-info block on the page gives Название ООО «ГАСКАР», ИНН 9710112989, КПП 772001001, address г. Москва, ул. Пехорская, д.1Д стр.1 -- exact ИНН match to this record. 57 products listed as of 2026-08-26 (flight controllers, motors, propellers, cameras/thermal, batteries, receivers, antennas, modems, frames, cables/mounts) -- same FPV/UAV-components line already documented via this entity's Ozon storefront. Captured via a user-supplied browser HAR (buyer account, s2610); catalog listing API response archived separately (s2609, totalCount=57). Notable: this Canada-sanctioned ЦБСТ-resident entity sells openly through a marketplace built and backed by a Russian state-owned company (ГТЛК), distinct from and in addition to its Ozon presence.
+- <https://xn--80aaorhk2b.xn--p1ai/sellers/gackar> — Official partner/seller profile on Налетай.рф (налетай.рф), the state-backed civilian UAV marketplace created by АО «ГТЛК» (Государственная транспортная лизинговая компания), operated by ООО «ЦТП» (ИНН 9714054618). Legal-info block on the page gives Название ООО «ГАСКАР», ИНН 9710112989, КПП 772001001, address г. Москва, ул. Пехорская, д.1Д стр.1 -- exact ИНН match to this record. 57 products listed as of 2026-08-26 (flight controllers, motors, propellers, cameras/thermal, batteries, receivers, antennas, modems, frames, cables/mounts) -- same FPV/UAV-components line already documented via this entity's Ozon storefront. Captured via a user-supplied browser HAR (buyer account, [s2610]); catalog listing API response archived separately ([s2609], totalCount=57). Notable: this Canada-sanctioned ЦБСТ-resident entity sells openly through a marketplace built and backed by a Russian state-owned company (ГТЛК), distinct from and in addition to its Ozon presence.
 
 ## Principals & persons of interest
 
@@ -95,25 +95,25 @@
 
 ## Open questions
 
-- rk.2035.university lists 4 product models (БВС Сибиряк, Сибиряк мини, Сибирь-1, Сибирь-2) under manufacturer «ГК "Гаскар Групп"» (s1169) -- a group/trading name distinct from any of this registry's three separately-registered Гаскар entities (ooo-gaskar, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii). Not attributed to any one of the three pending a direct check of which entity actually holds this product line. [s1169]
+- rk.2035.university lists 4 product models (БВС Сибиряк, Сибиряк мини, Сибирь-1, Сибирь-2) under manufacturer «ГК "Гаскар Групп"» ([s1169]) -- a group/trading name distinct from any of this registry's three separately-registered Гаскар entities (ooo-gaskar, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii). Not attributed to any one of the three pending a direct check of which entity actually holds this product line. [s1169]
 - products[] carries a single bare entry "СИБНК" -- this looks like it may actually be an abbreviation of the 100%-owning founder, ООО «Сибирская навигационная компания», mis-recorded as a product name rather than an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats "ООО «СИБНК»" as its own distinct entity name, adding to the confusion. Web search for "СИБНК" as a Wildberries product (2026-08-25) found nothing. RESOLVED (partially) 2026-08-25: wb_overlap=confirmed's actual basis is now independently corroborated on Ozon too -- the entity trades FPV components (motors, propellers) under the brand «ГАСКАР», not «СИБНК». "СИБНК" itself remains unexplained and is left as-is pending a human decision on whether to remove it as a mis-recorded entry.
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0468 | EGRUL extract | EGRUL extract (ul-1237700273744-20260823122809.pdf) | — | 2026-08-23 |
-| s0809 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9710112989_20260824_ooo-gaskar.json) | 2026-08-24 | — |
-| s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
-| s1385 | Ozon marketplace capture | Ozon marketplace capture (OZON_9710112989_20260825_gaskargroup-seller-storefront.json) | 2026-08-25 | — |
-| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6654 | Bfo | Bfo (BFO_9710112989_2023_ооо-гаскар.pdf) | — | — |
-| s6655 | Bfo | Bfo (BFO_9710112989_2024_ооо-гаскар.pdf) | — | — |
-| s6656 | Bfo | Bfo (BFO_9710112989_2025_ооо-гаскар.pdf) | — | — |
-| s6759 | EGRUL extract | EGRUL extract (EGRUL_9710112989_20260907_ooo-gaskar.pdf) | 2026-09-07 | 2026-09-07 |
-| s6934 | Proverki | Proverki (PROVERKI_9710112989_20260907_ooo-gaskar-inspection-history.txt) | 2026-09-07 | — |
-| s7354 | Founding-Устав bundle | Founding-Устав bundle (UD_1237700273744_20260908_ooo-gaskar.zip) | 2026-09-08 | — |
+| [s0468] | EGRUL extract | EGRUL extract (ul-1237700273744-20260823122809.pdf) | — | 2026-08-23 |
+| [s0809] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9710112989_20260824_ooo-gaskar.json) | 2026-08-24 | — |
+| [s1169] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
+| [s1385] | Ozon marketplace capture | Ozon marketplace capture (OZON_9710112989_20260825_gaskargroup-seller-storefront.json) | 2026-08-25 | — |
+| [s5344] | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6654] | Bfo | Bfo (BFO_9710112989_2023_ооо-гаскар.pdf) | — | — |
+| [s6655] | Bfo | Bfo (BFO_9710112989_2024_ооо-гаскар.pdf) | — | — |
+| [s6656] | Bfo | Bfo (BFO_9710112989_2025_ооо-гаскар.pdf) | — | — |
+| [s6759] | EGRUL extract | EGRUL extract (EGRUL_9710112989_20260907_ooo-gaskar.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6934] | Proverki | Proverki (PROVERKI_9710112989_20260907_ooo-gaskar-inspection-history.txt) | 2026-09-07 | — |
+| [s7354] | Founding-Устав bundle | Founding-Устав bundle (UD_1237700273744_20260908_ooo-gaskar.zip) | 2026-09-08 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

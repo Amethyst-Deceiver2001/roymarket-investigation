@@ -28,8 +28,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0463 | EGRUL extract | EGRUL extract (ul-1027806064571-20260823122903.pdf) | — | 2026-08-23 |
-| s1044 | Rospatent patent record | Rospatent patent record (PATENT_RU2851746C1_2026-08-24_ao-kotlin-novator.json) | — | — |
+| [s0463] | EGRUL extract | EGRUL extract (ul-1027806064571-20260823122903.pdf) | — | 2026-08-23 |
+| [s1044] | Rospatent patent record | Rospatent patent record (PATENT_RU2851746C1_2026-08-24_ao-kotlin-novator.json) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

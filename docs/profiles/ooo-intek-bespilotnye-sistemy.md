@@ -71,11 +71,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0288 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7000013316_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
-| s0289 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7000013316_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
-| s0489 | EGRUL extract | EGRUL extract (ul-1247000000488-20260823132000.pdf) | — | 2026-08-23 |
-| s0758 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7000013316_20260824_ooo-intek-bespilotnye-sistemy.json) | 2026-08-24 | — |
-| s6726 | EGRUL extract | EGRUL extract (EGRUL_7000013316_20260907_ooo-intek-bespilotnye-sistemy.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0288] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7000013316_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
+| [s0289] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7000013316_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
+| [s0489] | EGRUL extract | EGRUL extract (ul-1247000000488-20260823132000.pdf) | — | 2026-08-23 |
+| [s0758] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7000013316_20260824_ooo-intek-bespilotnye-sistemy.json) | 2026-08-24 | — |
+| [s6726] | EGRUL extract | EGRUL extract (EGRUL_7000013316_20260907_ooo-intek-bespilotnye-sistemy.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

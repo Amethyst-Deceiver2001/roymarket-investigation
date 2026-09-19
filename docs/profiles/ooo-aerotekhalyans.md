@@ -64,11 +64,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0224 | EGRUL extract | EGRUL extract (ul-1237700640660-20260814212203.pdf) | — | 2026-08-14 |
-| s0404 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714020721_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
-| s0405 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714020721_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0406 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714020721_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s6762 | EGRUL extract | EGRUL extract (EGRUL_9714020721_20260907_ooo-aerotekhalyans.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0224] | EGRUL extract | EGRUL extract (ul-1237700640660-20260814212203.pdf) | — | 2026-08-14 |
+| [s0404] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714020721_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
+| [s0405] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714020721_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0406] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9714020721_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s6762] | EGRUL extract | EGRUL extract (EGRUL_9714020721_20260907_ooo-aerotekhalyans.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

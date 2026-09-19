@@ -68,13 +68,13 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0438 | document | document (17549cfa-fedc-4ac5-8797-49ff0e77902f.pdf) | — | 2025-12-31 |
-| s0817 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9724066980_20260824_ano-tsentr-razvitiya-transportnykh-tekhnologiy.json) | 2026-08-24 | — |
-| s6682 | Bfo | Bfo (BFO_9724066980_2022_ано-центр-развития-транспортных-технологии.pdf) | — | — |
-| s6683 | Bfo | Bfo (BFO_9724066980_2023_ано-центр-развития-транспортных-технологии.pdf) | — | — |
-| s6684 | Bfo | Bfo (BFO_9724066980_2024_ано-центр-развития-транспортных-технологии.pdf) | — | — |
-| s6685 | Bfo | Bfo (BFO_9724066980_2025_ано-центр-развития-транспортных-технологии.pdf) | — | — |
-| s6867 | EGRUL extract | EGRUL extract (EGRUL_9724066980_20260907_ano-tsentr-razvitiya-transportnykh-tekhnologiy.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0438] | document | document (17549cfa-fedc-4ac5-8797-49ff0e77902f.pdf) | — | 2025-12-31 |
+| [s0817] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9724066980_20260824_ano-tsentr-razvitiya-transportnykh-tekhnologiy.json) | 2026-08-24 | — |
+| [s6682] | Bfo | Bfo (BFO_9724066980_2022_ано-центр-развития-транспортных-технологии.pdf) | — | — |
+| [s6683] | Bfo | Bfo (BFO_9724066980_2023_ано-центр-развития-транспортных-технологии.pdf) | — | — |
+| [s6684] | Bfo | Bfo (BFO_9724066980_2024_ано-центр-развития-транспортных-технологии.pdf) | — | — |
+| [s6685] | Bfo | Bfo (BFO_9724066980_2025_ано-центр-развития-транспортных-технологии.pdf) | — | — |
+| [s6867] | EGRUL extract | EGRUL extract (EGRUL_9724066980_20260907_ano-tsentr-razvitiya-transportnykh-tekhnologiy.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

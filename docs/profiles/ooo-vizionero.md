@@ -115,15 +115,15 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0479 | EGRUL extract | EGRUL extract (ul-1195958038902-20260823131741.pdf) | — | 2026-08-23 |
-| s6521 | Bfo | Bfo (BFO_5902056314_2021_ооо-визионеро.pdf) | — | — |
-| s6522 | Bfo | Bfo (BFO_5902056314_2022_ооо-визионеро.pdf) | — | — |
-| s6523 | Bfo | Bfo (BFO_5902056314_2023_ооо-визионеро.pdf) | — | — |
-| s6524 | Bfo | Bfo (BFO_5902056314_2024_ооо-визионеро.pdf) | — | — |
-| s6525 | Bfo | Bfo (BFO_5902056314_2025_ооо-визионеро.pdf) | — | — |
-| s6724 | EGRUL extract | EGRUL extract (EGRUL_5902056314_20260907_ooo-vizionero.pdf) | 2026-09-07 | 2026-09-07 |
-| s6959 | Proverki | Proverki (PROVERKI_5902056314_20260907_ooo-vizionero-inspection-history.txt) | 2026-09-07 | — |
-| s7542 | site capture | site capture (SITE_5902056314_20260916_ooo-vizionero-logo.png) | 2026-09-16 | — |
+| [s0479] | EGRUL extract | EGRUL extract (ul-1195958038902-20260823131741.pdf) | — | 2026-08-23 |
+| [s6521] | Bfo | Bfo (BFO_5902056314_2021_ооо-визионеро.pdf) | — | — |
+| [s6522] | Bfo | Bfo (BFO_5902056314_2022_ооо-визионеро.pdf) | — | — |
+| [s6523] | Bfo | Bfo (BFO_5902056314_2023_ооо-визионеро.pdf) | — | — |
+| [s6524] | Bfo | Bfo (BFO_5902056314_2024_ооо-визионеро.pdf) | — | — |
+| [s6525] | Bfo | Bfo (BFO_5902056314_2025_ооо-визионеро.pdf) | — | — |
+| [s6724] | EGRUL extract | EGRUL extract (EGRUL_5902056314_20260907_ooo-vizionero.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6959] | Proverki | Proverki (PROVERKI_5902056314_20260907_ooo-vizionero-inspection-history.txt) | 2026-09-07 | — |
+| [s7542] | site capture | site capture (SITE_5902056314_20260916_ooo-vizionero-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

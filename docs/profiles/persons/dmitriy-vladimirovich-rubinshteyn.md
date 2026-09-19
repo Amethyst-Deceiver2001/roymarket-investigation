@@ -41,20 +41,20 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Subsidiary-liability registry:** No hits (checked 2026-09-07)
 - **ЕГРИП (personal ИП):** 1 registration(s) on file
 
-> **UA-SA1644** — CONFIRMED 2026-09-07 (upgraded from PLAUSIBLE): personal ИНН 771537069549 obtained directly from his own signed ЕГРИП выписка (ОГРНИП 324774600148072, s6918) EXACTLY matches the innCode field (771537069549) on the OpenSanctions match NK-FB8ZwerfADz5nYiuNzkaPG (Ukraine NSDC sanctions list, programId UA-SA1644, dataset ua_nsdc_sanctions cross-referenced against ext_ru_egrul) -- an exact primary-identifier match, not a name-only fuzzy match. DOB 1975-04-13 on the sanctions record also matches independently (see dob field, itself corroborated by investigator.org.ua, s6919). Full programme name: Ukraine NSDC sanctions. [s6918]
+> **UA-SA1644** — CONFIRMED 2026-09-07 (upgraded from PLAUSIBLE): personal ИНН 771537069549 obtained directly from his own signed ЕГРИП выписка (ОГРНИП 324774600148072, [s6918]) EXACTLY matches the innCode field (771537069549) on the OpenSanctions match NK-FB8ZwerfADz5nYiuNzkaPG (Ukraine NSDC sanctions list, programId UA-SA1644, dataset ua_nsdc_sanctions cross-referenced against ext_ru_egrul) -- an exact primary-identifier match, not a name-only fuzzy match. DOB 1975-04-13 on the sanctions record also matches independently (see dob field, itself corroborated by investigator.org.ua, [s6919]). Full programme name: Ukraine NSDC sanctions. [s6918]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0228 | EGRUL extract | EGRUL extract (ul-1247700190430-20260815005804.pdf) | — | 2026-08-15 |
-| s0436 | EGRUL extract | EGRUL extract (ul-1257700523079-20260823014851.pdf) | — | 2026-08-23 |
-| s0437 | EGRUL extract | EGRUL extract (ul-1267700128376-20260823014943.pdf) | — | 2026-08-23 |
-| s6918 | EGRIP (sole-proprietor registry) record | EGRIP (sole-proprietor registry) record (EGRIP_771537069549_20260907_rubinshteyn-dmitriy-vladimirovich.pdf) | 2026-09-07 | — |
-| s6919 | press coverage | press coverage (PRESS_20260907_investigator-org-ua-270974-rubinshteyn.txt) | 2026-09-07 | — |
-| s7452 | EGRUL extract | EGRUL extract (EGRUL_9717192768_20260914_ooo-momento-rubinshteyn.pdf) | 2026-09-14 | 2026-09-14 |
-| s7453 | EGRUL extract | EGRUL extract (EGRUL_9725186180_20260914_ooo-tekhnomost.pdf) | 2026-09-14 | 2026-09-14 |
-| s7519 | transcript | transcript (TRANSCRIPT_20250214_er-ru-yakushev-bezrukov-tsbst-nabsovet.txt) | 2025-02-14 | — |
+| [s0228] | EGRUL extract | EGRUL extract (ul-1247700190430-20260815005804.pdf) | — | 2026-08-15 |
+| [s0436] | EGRUL extract | EGRUL extract (ul-1257700523079-20260823014851.pdf) | — | 2026-08-23 |
+| [s0437] | EGRUL extract | EGRUL extract (ul-1267700128376-20260823014943.pdf) | — | 2026-08-23 |
+| [s6918] | EGRIP (sole-proprietor registry) record | EGRIP (sole-proprietor registry) record (EGRIP_771537069549_20260907_rubinshteyn-dmitriy-vladimirovich.pdf) | 2026-09-07 | — |
+| [s6919] | press coverage | press coverage (PRESS_20260907_investigator-org-ua-270974-rubinshteyn.txt) | 2026-09-07 | — |
+| [s7452] | EGRUL extract | EGRUL extract (EGRUL_9717192768_20260914_ooo-momento-rubinshteyn.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7453] | EGRUL extract | EGRUL extract (EGRUL_9725186180_20260914_ooo-tekhnomost.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7519] | transcript | transcript (TRANSCRIPT_20250214_er-ru-yakushev-bezrukov-tsbst-nabsovet.txt) | 2025-02-14 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

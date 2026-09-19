@@ -31,11 +31,11 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0475 | EGRUL extract | EGRUL extract (ul-1101690020959-20260823131713.pdf) | — | 2026-08-23 |
-| s0980 | Rospatent patent record | Rospatent patent record (PATENT_RU114291S_2026-08-24_ooo-arkodim.json) | — | — |
-| s0991 | Rospatent patent record | Rospatent patent record (PATENT_RU208483U1_2026-08-24_ooo-arkodim.json) | — | — |
-| s1008 | Rospatent patent record | Rospatent patent record (PATENT_RU2696508C1_2026-08-24_ooo-arkodim.json) | — | — |
-| s7409 | EGRUL extract | EGRUL extract (EGRUL_1659101884_20260914_ooo-arkodim.pdf) | 2026-09-14 | 2026-09-14 |
+| [s0475] | EGRUL extract | EGRUL extract (ul-1101690020959-20260823131713.pdf) | — | 2026-08-23 |
+| [s0980] | Rospatent patent record | Rospatent patent record (PATENT_RU114291S_2026-08-24_ooo-arkodim.json) | — | — |
+| [s0991] | Rospatent patent record | Rospatent patent record (PATENT_RU208483U1_2026-08-24_ooo-arkodim.json) | — | — |
+| [s1008] | Rospatent patent record | Rospatent patent record (PATENT_RU2696508C1_2026-08-24_ooo-arkodim.json) | — | — |
+| [s7409] | EGRUL extract | EGRUL extract (EGRUL_1659101884_20260914_ooo-arkodim.pdf) | 2026-09-14 | 2026-09-14 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

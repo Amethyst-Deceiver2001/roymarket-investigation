@@ -59,9 +59,9 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0270 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_4632306583_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s0435 | EGRUL extract | EGRUL extract (ul-1254600002920-20260823014908.pdf) | — | 2026-08-23 |
-| s0736 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_4632306583_20260824_ooo-sistemnyy-integrator.json) | 2026-08-24 | — |
+| [s0270] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_4632306583_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s0435] | EGRUL extract | EGRUL extract (ul-1254600002920-20260823014908.pdf) | — | 2026-08-23 |
+| [s0736] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_4632306583_20260824_ooo-sistemnyy-integrator.json) | 2026-08-24 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

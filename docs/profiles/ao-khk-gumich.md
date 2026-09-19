@@ -49,12 +49,12 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0165 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9726051114_20260822_ao-khk-gumich.json) | 2026-08-22 | 2026-08-22 |
-| s0421 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2023_20260818.zip) | 2026-08-18 | 2023-12-31 |
-| s0422 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2024_20260818.zip) | 2026-08-18 | 2024-12-31 |
-| s0423 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2025_20260818.zip) | 2026-08-18 | 2025-12-31 |
-| s6869 | EGRUL extract | EGRUL extract (EGRUL_9726051114_20260907_ao-khk-gumich.pdf) | 2026-09-07 | 2026-09-07 |
-| s7455 | EGRUL extract | EGRUL extract (EGRUL_9726051114_20260914_ao-khk-gumich.pdf) | 2026-09-14 | 2026-09-14 |
+| [s0165] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9726051114_20260822_ao-khk-gumich.json) | 2026-08-22 | 2026-08-22 |
+| [s0421] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2023_20260818.zip) | 2026-08-18 | 2023-12-31 |
+| [s0422] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2024_20260818.zip) | 2026-08-18 | 2024-12-31 |
+| [s0423] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9726051114_2025_20260818.zip) | 2026-08-18 | 2025-12-31 |
+| [s6869] | EGRUL extract | EGRUL extract (EGRUL_9726051114_20260907_ao-khk-gumich.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7455] | EGRUL extract | EGRUL extract (EGRUL_9726051114_20260914_ao-khk-gumich.pdf) | 2026-09-14 | 2026-09-14 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

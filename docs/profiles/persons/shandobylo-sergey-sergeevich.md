@@ -44,8 +44,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s1039 | Rospatent patent record | Rospatent patent record (PATENT_RU2826668C1_2026-08-24_ooo-trimiks-bulat-3mx.json) | — | — |
-| s1408 | third-party OSINT dossier | third-party OSINT dossier (DOSSIER_20260825_trimix-3mx-companies-and-people.xlsx) | 2026-08-25 | — |
+| [s1039] | Rospatent patent record | Rospatent patent record (PATENT_RU2826668C1_2026-08-24_ooo-trimiks-bulat-3mx.json) | — | — |
+| [s1408] | third-party OSINT dossier | third-party OSINT dossier (DOSSIER_20260825_trimix-3mx-companies-and-people.xlsx) | 2026-08-25 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

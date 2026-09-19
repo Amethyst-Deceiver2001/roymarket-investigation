@@ -163,9 +163,9 @@
 
 ## Litigation
 
-- Полный четырёхлетний цикл (2022–2024): первая инстанция → апелляция → кассационная отмена → новое рассмотрение → отказ в иске → апелляция и кассация подтвердили отказ → поворот исполнения. Представитель истца в заседании 02.09.2024: Пашаев Р.М. (доверенность от 12.10.2022). Судья первой инстанции на всех этапах — Ласкина С.О. В отличие от пассивной модели ответчика, видимой в делах АО «НИИ СТТ», АО «НПП Радар ммс» демонстрирует реальную способность вести многоуровневую апелляционно-кассационную защиту и добилось полного освобождения от неустойки, а также подавало (неуспешно, отклонён к совместному рассмотрению) встречный иск к Минобороны о взыскании собственной задолженности. Хронология по всем 15 файлам дела архивирована в data/sources/A40-211563-2022_*.pdf (s5266–s5280); не все 15 файлов прочитаны построчно, но итоговая траектория подтверждена финальным определением от 02.09.2024 (s5280), которое пересказывает все промежуточные акты. [s5266]
-- ПАО «Информационные телекоммуникационные технологии» не числится в реестре — не проверено через ЕГРЮЛ. Три доступных акта архивированы: s5282 (21.02.2026), s5283 (22.03.2026), s5284 (02.06.2026). Дело закрыто для дальнейшего доступа судом (закрытое заседание) после этих трёх документов — статья 11 АПК РФ (гостайна/оборонная классификация либо ходатайство стороны о коммерческой/служебной тайне, конкретное основание не установлено из доступных текстов). [s5282]
-- Открытый вопрос, а не подтверждённая связь. Документ архивирован (s5281), но информационная ценность близка к нулю из-за полной редакции текста. Не привязывать к АО «НПП Радар ммс» без независимого подтверждения имён сторон. [s5281]
+- Полный четырёхлетний цикл (2022–2024): первая инстанция → апелляция → кассационная отмена → новое рассмотрение → отказ в иске → апелляция и кассация подтвердили отказ → поворот исполнения. Представитель истца в заседании 02.09.2024: Пашаев Р.М. (доверенность от 12.10.2022). Судья первой инстанции на всех этапах — Ласкина С.О. В отличие от пассивной модели ответчика, видимой в делах АО «НИИ СТТ», АО «НПП Радар ммс» демонстрирует реальную способность вести многоуровневую апелляционно-кассационную защиту и добилось полного освобождения от неустойки, а также подавало (неуспешно, отклонён к совместному рассмотрению) встречный иск к Минобороны о взыскании собственной задолженности. Хронология по всем 15 файлам дела архивирована в data/sources/A40-211563-2022_*.pdf ([s5266]–[s5280]); не все 15 файлов прочитаны построчно, но итоговая траектория подтверждена финальным определением от 02.09.2024 ([s5280]), которое пересказывает все промежуточные акты. [s5266]
+- ПАО «Информационные телекоммуникационные технологии» не числится в реестре — не проверено через ЕГРЮЛ. Три доступных акта архивированы: [s5282] (21.02.2026), [s5283] (22.03.2026), [s5284] (02.06.2026). Дело закрыто для дальнейшего доступа судом (закрытое заседание) после этих трёх документов — статья 11 АПК РФ (гостайна/оборонная классификация либо ходатайство стороны о коммерческой/служебной тайне, конкретное основание не установлено из доступных текстов). [s5282]
+- Открытый вопрос, а не подтверждённая связь. Документ архивирован ([s5281]), но информационная ценность близка к нулю из-за полной редакции текста. Не привязывать к АО «НПП Радар ммс» без независимого подтверждения имён сторон. [s5281]
 
 ## Licences
 
@@ -258,104 +258,104 @@
 ## Open questions
 
 - Featured in rk.2035.university's curated БАС-industry showcase as "АО «Концерн «Радар ММС»»" -- the catalog blurb uses "Концерн" where this registry has "НПП" (both plausibly refer to the same well-known St. Petersburg avionics/radar group; not ИНН-confirmed via this source, which carries no identifier field). [s1168]
-- This entity's own rk.2035.university product listings (s1169, manufacturer field literally АО "НПП "Радар ммс") confirm the registry's own «НПП «Радар ММС»»» name -- resolving the earlier open question about the showcase catalog's separate «Концерн» wording (s1168) in favour of «НПП». [s1169]
+- This entity's own rk.2035.university product listings ([s1169], manufacturer field literally АО "НПП "Радар ммс") confirm the registry's own «НПП «Радар ММС»»» name -- resolving the earlier open question about the showcase catalog's separate «Концерн» wording ([s1168]) in favour of «НПП». [s1169]
 - Identify what facility/land use is at Ленинградская область, Кингисеппский район, дер. Хаболово (КН 47:20:0442001:212, :209) -- two proverki.gov.ru inspection records cite these cadastral numbers for this defense radar manufacturer, far from its Санкт-Петербург HQ. Test range? Antenna field? Undisclosed production site? Not yet identified. [s6930]
-- RESOLVED 2026-09-07 via НСПД (s6944): КН 47:20:0442001:212 is a 1,530 m² private residential land plot (индивидуальное жилищное строительство) in дер. Хаболово, Кингисеппский район — not a company facility, test range, or antenna field. Likely a personal landholding of an employee/officer named on the proverki inspection (not identified), unrelated to the company's defense-radar operations. КН :209 has no НСПД record (code 204) — possibly mistyped in the source or re-numbered. No further action planned. [s6944]
+- RESOLVED 2026-09-07 via НСПД ([s6944]): КН 47:20:0442001:212 is a 1,530 m² private residential land plot (индивидуальное жилищное строительство) in дер. Хаболово, Кингисеппский район — not a company facility, test range, or antenna field. Likely a personal landholding of an employee/officer named on the proverki inspection (not identified), unrelated to the company's defense-radar operations. КН :209 has no НСПД record (code 204) — possibly mistyped in the source or re-numbered. No further action planned. [s6944]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0798 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7814027653_20260824_npp-radar-mms.json) | 2026-08-24 | — |
-| s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
-| s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
-| s1407 | АЭРОНЕКСТ member record | АЭРОНЕКСТ member record (AERONEXT_7814027653_20260825_npp-radar-mms.json) | 2026-08-25 | — |
-| s2630 | Naletay | Naletay (NALETAY_7814027653_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
-| s2632 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009513000238_20260826.html) | 2026-08-26 | — |
-| s2633 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009514000152_20260826.html) | 2026-08-26 | — |
-| s2634 | Zakupki | Zakupki (ZAKUPKI_contract_1773411103526000181_20260826.html) | 2026-08-26 | — |
-| s2635 | Zakupki | Zakupki (ZAKUPKI_contract_1780130013624000177_20260826.html) | 2026-08-26 | — |
-| s2636 | Zakupki | Zakupki (ZAKUPKI_contract_1783905878025000014_20260826.html) | 2026-08-26 | — |
-| s2637 | Zakupki | Zakupki (ZAKUPKI_contract_2783848285225000007_20260826.html) | 2026-08-26 | — |
-| s2638 | Zakupki | Zakupki (ZAKUPKI_contract_2783848285226000007_20260826.html) | 2026-08-26 | — |
-| s2639 | Zakupki | Zakupki (ZAKUPKI_contract_2784244461023000147_20260826.html) | 2026-08-26 | — |
-| s2640 | Zakupki | Zakupki (ZAKUPKI_contract_3633005008919000078_20260826.html) | 2026-08-26 | — |
-| s2643 | Zakupki | Zakupki (ZAKUPKI_contract_0172200001611000138_20260826.html) | 2026-08-26 | — |
-| s2644 | Zakupki | Zakupki (ZAKUPKI_contract_0172200002011000053_20260826.html) | 2026-08-26 | — |
-| s2645 | Zakupki | Zakupki (ZAKUPKI_contract_0172200002012000045_20260826.html) | 2026-08-26 | — |
-| s2646 | Zakupki | Zakupki (ZAKUPKI_contract_0172200006913000007_20260826.html) | 2026-08-26 | — |
-| s2647 | Zakupki | Zakupki (ZAKUPKI_contract_0172200006914000012_20260826.html) | 2026-08-26 | — |
-| s2648 | Zakupki | Zakupki (ZAKUPKI_contract_0173100004511001960_20260826.html) | 2026-08-26 | — |
-| s2649 | Zakupki | Zakupki (ZAKUPKI_contract_0173100004512000181_20260826.html) | 2026-08-26 | — |
-| s2650 | Zakupki | Zakupki (ZAKUPKI_contract_0173100004512000279_20260826.html) | 2026-08-26 | — |
-| s2651 | Zakupki | Zakupki (ZAKUPKI_contract_0173100004513000376_20260826.html) | 2026-08-26 | — |
-| s2652 | Zakupki | Zakupki (ZAKUPKI_contract_0173100004513001187_20260826.html) | 2026-08-26 | — |
-| s2653 | Zakupki | Zakupki (ZAKUPKI_contract_0173100004514000501_20260826.html) | 2026-08-26 | — |
-| s2655 | Zakupki | Zakupki (ZAKUPKI_contract_0173100005713000052_20260826.html) | 2026-08-26 | — |
-| s2656 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511000410_20260826.html) | 2026-08-26 | — |
-| s2657 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511000602_20260826.html) | 2026-08-26 | — |
-| s2658 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511000713_20260826.html) | 2026-08-26 | — |
-| s2659 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511000929_20260826.html) | 2026-08-26 | — |
-| s2660 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511000940_20260826.html) | 2026-08-26 | — |
-| s2661 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001172_20260826.html) | 2026-08-26 | — |
-| s2662 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001305_20260826.html) | 2026-08-26 | — |
-| s2663 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001827_20260826.html) | 2026-08-26 | — |
-| s2664 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001841_20260826.html) | 2026-08-26 | — |
-| s2665 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001929_20260826.html) | 2026-08-26 | — |
-| s2666 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001978_20260826.html) | 2026-08-26 | — |
-| s2667 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511002057_20260826.html) | 2026-08-26 | — |
-| s2668 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511002205_20260826.html) | 2026-08-26 | — |
-| s2669 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009512000115_20260826.html) | 2026-08-26 | — |
-| s2670 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009512000332_20260826.html) | 2026-08-26 | — |
-| s2671 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009512000333_20260826.html) | 2026-08-26 | — |
-| s2672 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009512000352_20260826.html) | 2026-08-26 | — |
-| s2673 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009512000766_20260826.html) | 2026-08-26 | — |
-| s2675 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009513000264_20260826.html) | 2026-08-26 | — |
-| s2676 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009514000262_20260826.html) | 2026-08-26 | — |
-| s2677 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009514000358_20260826.html) | 2026-08-26 | — |
-| s2678 | Zakupki | Zakupki (ZAKUPKI_contract_0173100009514000523_20260826.html) | 2026-08-26 | — |
-| s2679 | Zakupki | Zakupki (ZAKUPKI_contract_0372100002113000487_20260826.html) | 2026-08-26 | — |
-| s2680 | Zakupki | Zakupki (ZAKUPKI_contract_0372100006212000015_20260826.html) | 2026-08-26 | — |
-| s2681 | Zakupki | Zakupki (ZAKUPKI_contract_0372100009412000116_20260826.html) | 2026-08-26 | — |
-| s2682 | Zakupki | Zakupki (ZAKUPKI_contract_0373100006614000002_20260826.html) | 2026-08-26 | — |
-| s2683 | Zakupki | Zakupki (ZAKUPKI_contract_1770425226117000798_20260826.html) | 2026-08-26 | — |
-| s2686 | Zakupki | Zakupki (ZAKUPKI_contract_1772642942722000056_20260826.html) | 2026-08-26 | — |
-| s2687 | Zakupki | Zakupki (ZAKUPKI_contract_1772811643723000033_20260826.html) | 2026-08-26 | — |
-| s2688 | Zakupki | Zakupki (ZAKUPKI_contract_1773411103523000117_20260826.html) | 2026-08-26 | — |
-| s2689 | Zakupki | Zakupki (ZAKUPKI_contract_1780130013621000159_20260826.html) | 2026-08-26 | — |
-| s2690 | Zakupki | Zakupki (ZAKUPKI_contract_1780130013624000051_20260826.html) | 2026-08-26 | — |
-| s2691 | Zakupki | Zakupki (ZAKUPKI_contract_1780902212017000210_20260826.html) | 2026-08-26 | — |
-| s2692 | Zakupki | Zakupki (ZAKUPKI_contract_1781202209622000001_20260826.html) | 2026-08-26 | — |
-| s2693 | Zakupki | Zakupki (ZAKUPKI_contract_1781202209623000001_20260826.html) | 2026-08-26 | — |
-| s2694 | Zakupki | Zakupki (ZAKUPKI_contract_1783905878023000044_20260826.html) | 2026-08-26 | — |
-| s2695 | Zakupki | Zakupki (ZAKUPKI_contract_2780548181422000052_20260826.html) | 2026-08-26 | — |
-| s2696 | Zakupki | Zakupki (ZAKUPKI_contract_2783848285215000015_20260826.html) | 2026-08-26 | — |
-| s2697 | Zakupki | Zakupki (ZAKUPKI_contract_2783848285218000007_20260826.html) | 2026-08-26 | — |
-| s2698 | Zakupki | Zakupki (ZAKUPKI_contract_2783848285220000003_20260826.html) | 2026-08-26 | — |
-| s2699 | Zakupki | Zakupki (ZAKUPKI_contract_2783848285221000008_20260826.html) | 2026-08-26 | — |
-| s2700 | Zakupki | Zakupki (ZAKUPKI_contract_2783848285222000009_20260826.html) | 2026-08-26 | — |
-| s2701 | Zakupki | Zakupki (ZAKUPKI_contract_2783848285223000006_20260826.html) | 2026-08-26 | — |
-| s2702 | Zakupki | Zakupki (ZAKUPKI_contract_2783848285224000004_20260826.html) | 2026-08-26 | — |
-| s2703 | Zakupki | Zakupki (ZAKUPKI_contract_2784244461022000131_20260826.html) | 2026-08-26 | — |
-| s2704 | Zakupki | Zakupki (ZAKUPKI_contract_2784244461022000132_20260826.html) | 2026-08-26 | — |
-| s2705 | Zakupki | Zakupki (ZAKUPKI_contract_2784244461023000105_20260826.html) | 2026-08-26 | — |
-| s2712 | Zakupki | Zakupki (ZAKUPKI_ATTACH_0173100004514000947_0173100004514000947_82-pk-kharakter-01731000045140009470002_00559baa.docx) | — | — |
-| s2718 | Zakupki | Zakupki (ZAKUPKI_ATTACH_0173100009513000090_0173100009513000090_modul-peregruz_0cb13e9d.pdf) | — | — |
-| s2773 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633916000981_1770559633916000981_16411-4432017-1-17705596339160009810002_4169e4e7.pdf) | — | — |
-| s2780 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633917000757_1770559633917000757_17208-4442018-1-17705596339170007570002_60287f57.pdf) | — | — |
-| s3922 | Zakupki | Zakupki (ZAKUPKI_contract_1780902212017000210_20260830.html) | 2026-08-30 | — |
-| s5266 | arbitration court filing | arbitration court filing (A40-211563-2022_20221109_Opredelenie.pdf) | 2022-11-09 | 2022-11-09 |
-| s5281 | arbitration court filing | arbitration court filing (A54-3359-2026_20260417_Opredelenie.pdf) | 2026-04-17 | 2026-04-17 |
-| s5282 | arbitration court filing | arbitration court filing (A56-17609-2026_20260221_Opredelenie.pdf) | 2026-02-21 | 2026-02-21 |
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
-| s6414 | bulk open-data extract | bulk open-data extract (DATASET_20260906_roscosmos-licenses-registry-api-full-dump.json) | 2026-09-06 | — |
-| s6429 | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-frequency-assignment-registry-search.json) | 2026-09-06 | — |
-| s6450 | Rkn | Rkn (RKN_7814027653_20260907_frequency-registry-npp-radar-mms.html) | 2026-09-07 | — |
-| s6845 | EGRUL extract | EGRUL extract (EGRUL_7814027653_20260907_npp-radar-mms.pdf) | 2026-09-07 | 2026-09-07 |
-| s6930 | Proverki | Proverki (PROVERKI_7814027653_20260907_npp-radar-mms-inspection-history.txt) | 2026-09-07 | — |
-| s6944 | Nspd | Nspd (NSPD_khabolovo_212_20260907.json) | 2026-09-07 | — |
+| [s0798] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7814027653_20260824_npp-radar-mms.json) | 2026-08-24 | — |
+| [s1168] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
+| [s1169] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
+| [s1407] | АЭРОНЕКСТ member record | АЭРОНЕКСТ member record (AERONEXT_7814027653_20260825_npp-radar-mms.json) | 2026-08-25 | — |
+| [s2630] | Naletay | Naletay (NALETAY_7814027653_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
+| [s2632] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009513000238_20260826.html) | 2026-08-26 | — |
+| [s2633] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009514000152_20260826.html) | 2026-08-26 | — |
+| [s2634] | Zakupki | Zakupki (ZAKUPKI_contract_1773411103526000181_20260826.html) | 2026-08-26 | — |
+| [s2635] | Zakupki | Zakupki (ZAKUPKI_contract_1780130013624000177_20260826.html) | 2026-08-26 | — |
+| [s2636] | Zakupki | Zakupki (ZAKUPKI_contract_1783905878025000014_20260826.html) | 2026-08-26 | — |
+| [s2637] | Zakupki | Zakupki (ZAKUPKI_contract_2783848285225000007_20260826.html) | 2026-08-26 | — |
+| [s2638] | Zakupki | Zakupki (ZAKUPKI_contract_2783848285226000007_20260826.html) | 2026-08-26 | — |
+| [s2639] | Zakupki | Zakupki (ZAKUPKI_contract_2784244461023000147_20260826.html) | 2026-08-26 | — |
+| [s2640] | Zakupki | Zakupki (ZAKUPKI_contract_3633005008919000078_20260826.html) | 2026-08-26 | — |
+| [s2643] | Zakupki | Zakupki (ZAKUPKI_contract_0172200001611000138_20260826.html) | 2026-08-26 | — |
+| [s2644] | Zakupki | Zakupki (ZAKUPKI_contract_0172200002011000053_20260826.html) | 2026-08-26 | — |
+| [s2645] | Zakupki | Zakupki (ZAKUPKI_contract_0172200002012000045_20260826.html) | 2026-08-26 | — |
+| [s2646] | Zakupki | Zakupki (ZAKUPKI_contract_0172200006913000007_20260826.html) | 2026-08-26 | — |
+| [s2647] | Zakupki | Zakupki (ZAKUPKI_contract_0172200006914000012_20260826.html) | 2026-08-26 | — |
+| [s2648] | Zakupki | Zakupki (ZAKUPKI_contract_0173100004511001960_20260826.html) | 2026-08-26 | — |
+| [s2649] | Zakupki | Zakupki (ZAKUPKI_contract_0173100004512000181_20260826.html) | 2026-08-26 | — |
+| [s2650] | Zakupki | Zakupki (ZAKUPKI_contract_0173100004512000279_20260826.html) | 2026-08-26 | — |
+| [s2651] | Zakupki | Zakupki (ZAKUPKI_contract_0173100004513000376_20260826.html) | 2026-08-26 | — |
+| [s2652] | Zakupki | Zakupki (ZAKUPKI_contract_0173100004513001187_20260826.html) | 2026-08-26 | — |
+| [s2653] | Zakupki | Zakupki (ZAKUPKI_contract_0173100004514000501_20260826.html) | 2026-08-26 | — |
+| [s2655] | Zakupki | Zakupki (ZAKUPKI_contract_0173100005713000052_20260826.html) | 2026-08-26 | — |
+| [s2656] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511000410_20260826.html) | 2026-08-26 | — |
+| [s2657] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511000602_20260826.html) | 2026-08-26 | — |
+| [s2658] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511000713_20260826.html) | 2026-08-26 | — |
+| [s2659] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511000929_20260826.html) | 2026-08-26 | — |
+| [s2660] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511000940_20260826.html) | 2026-08-26 | — |
+| [s2661] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001172_20260826.html) | 2026-08-26 | — |
+| [s2662] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001305_20260826.html) | 2026-08-26 | — |
+| [s2663] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001827_20260826.html) | 2026-08-26 | — |
+| [s2664] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001841_20260826.html) | 2026-08-26 | — |
+| [s2665] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001929_20260826.html) | 2026-08-26 | — |
+| [s2666] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511001978_20260826.html) | 2026-08-26 | — |
+| [s2667] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511002057_20260826.html) | 2026-08-26 | — |
+| [s2668] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009511002205_20260826.html) | 2026-08-26 | — |
+| [s2669] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009512000115_20260826.html) | 2026-08-26 | — |
+| [s2670] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009512000332_20260826.html) | 2026-08-26 | — |
+| [s2671] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009512000333_20260826.html) | 2026-08-26 | — |
+| [s2672] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009512000352_20260826.html) | 2026-08-26 | — |
+| [s2673] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009512000766_20260826.html) | 2026-08-26 | — |
+| [s2675] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009513000264_20260826.html) | 2026-08-26 | — |
+| [s2676] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009514000262_20260826.html) | 2026-08-26 | — |
+| [s2677] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009514000358_20260826.html) | 2026-08-26 | — |
+| [s2678] | Zakupki | Zakupki (ZAKUPKI_contract_0173100009514000523_20260826.html) | 2026-08-26 | — |
+| [s2679] | Zakupki | Zakupki (ZAKUPKI_contract_0372100002113000487_20260826.html) | 2026-08-26 | — |
+| [s2680] | Zakupki | Zakupki (ZAKUPKI_contract_0372100006212000015_20260826.html) | 2026-08-26 | — |
+| [s2681] | Zakupki | Zakupki (ZAKUPKI_contract_0372100009412000116_20260826.html) | 2026-08-26 | — |
+| [s2682] | Zakupki | Zakupki (ZAKUPKI_contract_0373100006614000002_20260826.html) | 2026-08-26 | — |
+| [s2683] | Zakupki | Zakupki (ZAKUPKI_contract_1770425226117000798_20260826.html) | 2026-08-26 | — |
+| [s2686] | Zakupki | Zakupki (ZAKUPKI_contract_1772642942722000056_20260826.html) | 2026-08-26 | — |
+| [s2687] | Zakupki | Zakupki (ZAKUPKI_contract_1772811643723000033_20260826.html) | 2026-08-26 | — |
+| [s2688] | Zakupki | Zakupki (ZAKUPKI_contract_1773411103523000117_20260826.html) | 2026-08-26 | — |
+| [s2689] | Zakupki | Zakupki (ZAKUPKI_contract_1780130013621000159_20260826.html) | 2026-08-26 | — |
+| [s2690] | Zakupki | Zakupki (ZAKUPKI_contract_1780130013624000051_20260826.html) | 2026-08-26 | — |
+| [s2691] | Zakupki | Zakupki (ZAKUPKI_contract_1780902212017000210_20260826.html) | 2026-08-26 | — |
+| [s2692] | Zakupki | Zakupki (ZAKUPKI_contract_1781202209622000001_20260826.html) | 2026-08-26 | — |
+| [s2693] | Zakupki | Zakupki (ZAKUPKI_contract_1781202209623000001_20260826.html) | 2026-08-26 | — |
+| [s2694] | Zakupki | Zakupki (ZAKUPKI_contract_1783905878023000044_20260826.html) | 2026-08-26 | — |
+| [s2695] | Zakupki | Zakupki (ZAKUPKI_contract_2780548181422000052_20260826.html) | 2026-08-26 | — |
+| [s2696] | Zakupki | Zakupki (ZAKUPKI_contract_2783848285215000015_20260826.html) | 2026-08-26 | — |
+| [s2697] | Zakupki | Zakupki (ZAKUPKI_contract_2783848285218000007_20260826.html) | 2026-08-26 | — |
+| [s2698] | Zakupki | Zakupki (ZAKUPKI_contract_2783848285220000003_20260826.html) | 2026-08-26 | — |
+| [s2699] | Zakupki | Zakupki (ZAKUPKI_contract_2783848285221000008_20260826.html) | 2026-08-26 | — |
+| [s2700] | Zakupki | Zakupki (ZAKUPKI_contract_2783848285222000009_20260826.html) | 2026-08-26 | — |
+| [s2701] | Zakupki | Zakupki (ZAKUPKI_contract_2783848285223000006_20260826.html) | 2026-08-26 | — |
+| [s2702] | Zakupki | Zakupki (ZAKUPKI_contract_2783848285224000004_20260826.html) | 2026-08-26 | — |
+| [s2703] | Zakupki | Zakupki (ZAKUPKI_contract_2784244461022000131_20260826.html) | 2026-08-26 | — |
+| [s2704] | Zakupki | Zakupki (ZAKUPKI_contract_2784244461022000132_20260826.html) | 2026-08-26 | — |
+| [s2705] | Zakupki | Zakupki (ZAKUPKI_contract_2784244461023000105_20260826.html) | 2026-08-26 | — |
+| [s2712] | Zakupki | Zakupki (ZAKUPKI_ATTACH_0173100004514000947_0173100004514000947_82-pk-kharakter-01731000045140009470002_00559baa.docx) | — | — |
+| [s2718] | Zakupki | Zakupki (ZAKUPKI_ATTACH_0173100009513000090_0173100009513000090_modul-peregruz_0cb13e9d.pdf) | — | — |
+| [s2773] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633916000981_1770559633916000981_16411-4432017-1-17705596339160009810002_4169e4e7.pdf) | — | — |
+| [s2780] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770559633917000757_1770559633917000757_17208-4442018-1-17705596339170007570002_60287f57.pdf) | — | — |
+| [s3922] | Zakupki | Zakupki (ZAKUPKI_contract_1780902212017000210_20260830.html) | 2026-08-30 | — |
+| [s5266] | arbitration court filing | arbitration court filing (A40-211563-2022_20221109_Opredelenie.pdf) | 2022-11-09 | 2022-11-09 |
+| [s5281] | arbitration court filing | arbitration court filing (A54-3359-2026_20260417_Opredelenie.pdf) | 2026-04-17 | 2026-04-17 |
+| [s5282] | arbitration court filing | arbitration court filing (A56-17609-2026_20260221_Opredelenie.pdf) | 2026-02-21 | 2026-02-21 |
+| [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6408] | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
+| [s6414] | bulk open-data extract | bulk open-data extract (DATASET_20260906_roscosmos-licenses-registry-api-full-dump.json) | 2026-09-06 | — |
+| [s6429] | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-frequency-assignment-registry-search.json) | 2026-09-06 | — |
+| [s6450] | Rkn | Rkn (RKN_7814027653_20260907_frequency-registry-npp-radar-mms.html) | 2026-09-07 | — |
+| [s6845] | EGRUL extract | EGRUL extract (EGRUL_7814027653_20260907_npp-radar-mms.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6930] | Proverki | Proverki (PROVERKI_7814027653_20260907_npp-radar-mms-inspection-history.txt) | 2026-09-07 | — |
+| [s6944] | Nspd | Nspd (NSPD_khabolovo_212_20260907.json) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

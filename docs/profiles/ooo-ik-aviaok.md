@@ -43,12 +43,12 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s6971 | EGRUL extract | EGRUL extract (EGRUL_6154569246_20260908_ooo-ik-aviaok.pdf) | 2026-09-08 | 2026-09-08 |
-| s6972 | Bfo | Bfo (BFO_6154569246_2021_ooo-ik-aviaok.pdf) | — | — |
-| s6973 | Bfo | Bfo (BFO_6154569246_2022_ooo-ik-aviaok.pdf) | — | — |
-| s6974 | Bfo | Bfo (BFO_6154569246_2023_ooo-ik-aviaok.pdf) | — | — |
-| s6975 | Bfo | Bfo (BFO_6154569246_2024_ooo-ik-aviaok.pdf) | — | — |
-| s6976 | Bfo | Bfo (BFO_6154569246_2025_ooo-ik-aviaok.pdf) | — | — |
+| [s6971] | EGRUL extract | EGRUL extract (EGRUL_6154569246_20260908_ooo-ik-aviaok.pdf) | 2026-09-08 | 2026-09-08 |
+| [s6972] | Bfo | Bfo (BFO_6154569246_2021_ooo-ik-aviaok.pdf) | — | — |
+| [s6973] | Bfo | Bfo (BFO_6154569246_2022_ooo-ik-aviaok.pdf) | — | — |
+| [s6974] | Bfo | Bfo (BFO_6154569246_2023_ooo-ik-aviaok.pdf) | — | — |
+| [s6975] | Bfo | Bfo (BFO_6154569246_2024_ooo-ik-aviaok.pdf) | — | — |
+| [s6976] | Bfo | Bfo (BFO_6154569246_2025_ooo-ik-aviaok.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

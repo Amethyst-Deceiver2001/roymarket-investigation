@@ -61,18 +61,18 @@ _No named principals linked to this entity yet._
 
 ## Open questions
 
-- The pitch deck (s0565) names «Пиранья» (СКБ Пиранья, already ЦБСТ-network verified) and «БТ-Групп «Боевые Технологии»» (ООО «Боевые технологии», already verified) as prospective TARGET CUSTOMERS — this is SOVA pitching to them, not evidence of an existing relationship, sale, or ЦБСТ residency of its own. No ЦБСТ tie confirmed for va-technologies/КБ СОВА itself; not claimed as one. [s0565]
+- The pitch deck ([s0565]) names «Пиранья» (СКБ Пиранья, already ЦБСТ-network verified) and «БТ-Групп «Боевые Технологии»» (ООО «Боевые технологии», already verified) as prospective TARGET CUSTOMERS — this is SOVA pitching to them, not evidence of an existing relationship, sale, or ЦБСТ residency of its own. No ЦБСТ tie confirmed for va-technologies/КБ СОВА itself; not claimed as one. [s0565]
 - Team named in the pitch deck, not yet added as individual person records (all appear to be technical staff, not principals — see roymarket significance-bounded research rule): Артём Кондратьев (engineer, CV/autonomous navigation), Максим Панченко (engineer, software/microcontroller integration), Евгений Беспятчук (engineer, software/data analysis/GIS), Полина Деманова (business manager, sales/partnerships). Founder Сотов Артём Александрович's prior employer ООО «PEERS» (БПЛА navigation systems, per his own CV in the deck) not yet checked for its own ЦБСТ/РОЙ.МАРКЕТ relevance. [s0565]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0565 | document | document (r4kgfs38gy.pdf) | — | — |
-| s0566 | EGRUL extract | EGRUL extract (ul-1252300058515-20260823193453.pdf) | — | 2026-08-23 |
-| s0567 | Сова | Сова (СОВА_Руководство_оператора.pdf) | — | — |
-| s6713 | EGRUL extract | EGRUL extract (EGRUL_2378001237_20260907_va-technologies.pdf) | 2026-09-07 | 2026-09-07 |
-| s7539 | site capture | site capture (SITE_2378001237_20260916_va-technologies-banner.png) | 2026-09-16 | — |
+| [s0565] | document | document (r4kgfs38gy.pdf) | — | — |
+| [s0566] | EGRUL extract | EGRUL extract (ul-1252300058515-20260823193453.pdf) | — | 2026-08-23 |
+| [s0567] | Сова | Сова (СОВА_Руководство_оператора.pdf) | — | — |
+| [s6713] | EGRUL extract | EGRUL extract (EGRUL_2378001237_20260907_va-technologies.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7539] | site capture | site capture (SITE_2378001237_20260916_va-technologies-banner.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

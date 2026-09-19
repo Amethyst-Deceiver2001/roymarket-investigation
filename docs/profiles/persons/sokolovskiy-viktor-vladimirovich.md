@@ -39,7 +39,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s1011 | Rospatent patent record | Rospatent patent record (PATENT_RU2705387C1_2026-08-24_npp-radar-mms.json) | — | — |
+| [s1011] | Rospatent patent record | Rospatent patent record (PATENT_RU2705387C1_2026-08-24_npp-radar-mms.json) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

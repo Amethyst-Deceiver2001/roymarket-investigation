@@ -82,14 +82,14 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0375 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7838380755_2021_20260821.zip) | 2026-08-21 | 2021-12-31 |
-| s0376 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7838380755_2022_20260821.zip) | 2026-08-21 | 2022-12-31 |
-| s0377 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7838380755_2023_20260821.zip) | 2026-08-21 | 2023-12-31 |
-| s0378 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7838380755_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
-| s0379 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7838380755_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
-| s0449 | EGRUL extract | EGRUL extract (ul-1077847345179-20260823120701.pdf) | — | 2026-08-23 |
-| s0800 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7838380755_20260824_ooo-titan-severo-zapad.json) | 2026-08-24 | — |
-| s6753 | EGRUL extract | EGRUL extract (EGRUL_7838380755_20260907_ooo-titan-severo-zapad.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0375] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7838380755_2021_20260821.zip) | 2026-08-21 | 2021-12-31 |
+| [s0376] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7838380755_2022_20260821.zip) | 2026-08-21 | 2022-12-31 |
+| [s0377] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7838380755_2023_20260821.zip) | 2026-08-21 | 2023-12-31 |
+| [s0378] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7838380755_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
+| [s0379] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7838380755_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
+| [s0449] | EGRUL extract | EGRUL extract (ul-1077847345179-20260823120701.pdf) | — | 2026-08-23 |
+| [s0800] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7838380755_20260824_ooo-titan-severo-zapad.json) | 2026-08-24 | — |
+| [s6753] | EGRUL extract | EGRUL extract (EGRUL_7838380755_20260907_ooo-titan-severo-zapad.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

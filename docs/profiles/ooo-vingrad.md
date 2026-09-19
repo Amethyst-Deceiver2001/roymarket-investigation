@@ -55,14 +55,14 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0139 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9701066447_20260822_ooo-vingrad.json) | 2026-08-22 | 2026-08-22 |
-| s6639 | Bfo | Bfo (BFO_9701066447_2021_ооо-винград.pdf) | — | — |
-| s6640 | Bfo | Bfo (BFO_9701066447_2022_ооо-винград.pdf) | — | — |
-| s6641 | Bfo | Bfo (BFO_9701066447_2023_ооо-винград.pdf) | — | — |
-| s6642 | Bfo | Bfo (BFO_9701066447_2024_ооо-винград.pdf) | — | — |
-| s6643 | Bfo | Bfo (BFO_9701066447_2025_ооо-винград.pdf) | — | — |
-| s6854 | EGRUL extract | EGRUL extract (EGRUL_9701066447_20260907_ooo-vingrad.pdf) | 2026-09-07 | 2026-09-07 |
-| s7373 | Founding-Устав bundle | Founding-Устав bundle (UD_1177746217879_20260910_ooo-vingrad.zip) | 2026-09-10 | 2024-07-09 |
+| [s0139] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9701066447_20260822_ooo-vingrad.json) | 2026-08-22 | 2026-08-22 |
+| [s6639] | Bfo | Bfo (BFO_9701066447_2021_ооо-винград.pdf) | — | — |
+| [s6640] | Bfo | Bfo (BFO_9701066447_2022_ооо-винград.pdf) | — | — |
+| [s6641] | Bfo | Bfo (BFO_9701066447_2023_ооо-винград.pdf) | — | — |
+| [s6642] | Bfo | Bfo (BFO_9701066447_2024_ооо-винград.pdf) | — | — |
+| [s6643] | Bfo | Bfo (BFO_9701066447_2025_ооо-винград.pdf) | — | — |
+| [s6854] | EGRUL extract | EGRUL extract (EGRUL_9701066447_20260907_ooo-vingrad.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7373] | Founding-Устав bundle | Founding-Устав bundle (UD_1177746217879_20260910_ooo-vingrad.zip) | 2026-09-10 | 2024-07-09 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

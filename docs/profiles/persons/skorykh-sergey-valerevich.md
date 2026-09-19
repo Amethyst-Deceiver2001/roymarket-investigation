@@ -79,22 +79,22 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0990 | Rospatent patent record | Rospatent patent record (PATENT_RU203165U1_2026-08-24_ao-nii-vektor.json) | — | — |
-| s0997 | Rospatent patent record | Rospatent patent record (PATENT_RU2279098C1_2026-08-24_ao-nii-vektor.json) | — | — |
-| s0999 | Rospatent patent record | Rospatent patent record (PATENT_RU234467U1_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1013 | Rospatent patent record | Rospatent patent record (PATENT_RU2716283C2_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1016 | Rospatent patent record | Rospatent patent record (PATENT_RU2741142C2_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1018 | Rospatent patent record | Rospatent patent record (PATENT_RU2746221C2_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1020 | Rospatent patent record | Rospatent patent record (PATENT_RU2752249C2_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1025 | Rospatent patent record | Rospatent patent record (PATENT_RU2761983C2_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1026 | Rospatent patent record | Rospatent patent record (PATENT_RU2763583C2_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1027 | Rospatent patent record | Rospatent patent record (PATENT_RU2765196C2_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1030 | Rospatent patent record | Rospatent patent record (PATENT_RU2769566C2_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1037 | Rospatent patent record | Rospatent patent record (PATENT_RU2818393C1_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1038 | Rospatent patent record | Rospatent patent record (PATENT_RU2820521C1_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1041 | Rospatent patent record | Rospatent patent record (PATENT_RU2845089C1_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1048 | Rospatent patent record | Rospatent patent record (PATENT_RU2858409C1_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1050 | Rospatent patent record | Rospatent patent record (PATENT_RU2860540C1_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s0990] | Rospatent patent record | Rospatent patent record (PATENT_RU203165U1_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s0997] | Rospatent patent record | Rospatent patent record (PATENT_RU2279098C1_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s0999] | Rospatent patent record | Rospatent patent record (PATENT_RU234467U1_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1013] | Rospatent patent record | Rospatent patent record (PATENT_RU2716283C2_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1016] | Rospatent patent record | Rospatent patent record (PATENT_RU2741142C2_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1018] | Rospatent patent record | Rospatent patent record (PATENT_RU2746221C2_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1020] | Rospatent patent record | Rospatent patent record (PATENT_RU2752249C2_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1025] | Rospatent patent record | Rospatent patent record (PATENT_RU2761983C2_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1026] | Rospatent patent record | Rospatent patent record (PATENT_RU2763583C2_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1027] | Rospatent patent record | Rospatent patent record (PATENT_RU2765196C2_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1030] | Rospatent patent record | Rospatent patent record (PATENT_RU2769566C2_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1037] | Rospatent patent record | Rospatent patent record (PATENT_RU2818393C1_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1038] | Rospatent patent record | Rospatent patent record (PATENT_RU2820521C1_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1041] | Rospatent patent record | Rospatent patent record (PATENT_RU2845089C1_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1048] | Rospatent patent record | Rospatent patent record (PATENT_RU2858409C1_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1050] | Rospatent patent record | Rospatent patent record (PATENT_RU2860540C1_2026-08-24_ao-nii-vektor.json) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

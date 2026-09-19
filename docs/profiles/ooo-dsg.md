@@ -89,17 +89,17 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0043 | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-dsg-debt.pdf) | 2026-08-20 | 2025-12-25 |
-| s0045 | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-dsg-loan-motivated.pdf) | 2026-08-20 | 2025-10-16 |
-| s0482 | EGRUL extract | EGRUL extract (ul-1207700030493-20260823132102.pdf) | — | 2026-08-23 |
-| s0816 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9724002908_20260824_ooo-dsg.json) | 2026-08-24 | — |
-| s6677 | Bfo | Bfo (BFO_9724002908_2021_ооо-дсг.pdf) | — | — |
-| s6678 | Bfo | Bfo (BFO_9724002908_2022_ооо-дсг.pdf) | — | — |
-| s6679 | Bfo | Bfo (BFO_9724002908_2023_ооо-дсг.pdf) | — | — |
-| s6680 | Bfo | Bfo (BFO_9724002908_2024_ооо-дсг.pdf) | — | — |
-| s6681 | Bfo | Bfo (BFO_9724002908_2025_ооо-дсг.pdf) | — | — |
-| s6770 | EGRUL extract | EGRUL extract (EGRUL_9724002908_20260907_ooo-dsg.pdf) | 2026-09-07 | 2026-09-07 |
-| s6935 | Proverki | Proverki (PROVERKI_9724002908_20260907_ooo-dsg-inspection-history.txt) | 2026-09-07 | — |
+| [s0043] | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-dsg-debt.pdf) | 2026-08-20 | 2025-12-25 |
+| [s0045] | court filing | court filing (COURT_5003155499_20260820_rustehdron-vs-dsg-loan-motivated.pdf) | 2026-08-20 | 2025-10-16 |
+| [s0482] | EGRUL extract | EGRUL extract (ul-1207700030493-20260823132102.pdf) | — | 2026-08-23 |
+| [s0816] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9724002908_20260824_ooo-dsg.json) | 2026-08-24 | — |
+| [s6677] | Bfo | Bfo (BFO_9724002908_2021_ооо-дсг.pdf) | — | — |
+| [s6678] | Bfo | Bfo (BFO_9724002908_2022_ооо-дсг.pdf) | — | — |
+| [s6679] | Bfo | Bfo (BFO_9724002908_2023_ооо-дсг.pdf) | — | — |
+| [s6680] | Bfo | Bfo (BFO_9724002908_2024_ооо-дсг.pdf) | — | — |
+| [s6681] | Bfo | Bfo (BFO_9724002908_2025_ооо-дсг.pdf) | — | — |
+| [s6770] | EGRUL extract | EGRUL extract (EGRUL_9724002908_20260907_ooo-dsg.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6935] | Proverki | Proverki (PROVERKI_9724002908_20260907_ooo-dsg-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

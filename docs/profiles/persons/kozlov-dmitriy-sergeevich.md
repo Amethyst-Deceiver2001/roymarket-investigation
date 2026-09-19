@@ -35,8 +35,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0458 | EGRUL extract | EGRUL extract (ul-1237700265846-20260823120511.pdf) | — | 2026-08-23 |
-| s0849 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_kozlov-dmitriy-sergeevich_20260824_kozlov-dmitriy-sergeevich.json) | 2026-08-24 | — |
+| [s0458] | EGRUL extract | EGRUL extract (ul-1237700265846-20260823120511.pdf) | — | 2026-08-23 |
+| [s0849] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_kozlov-dmitriy-sergeevich_20260824_kozlov-dmitriy-sergeevich.json) | 2026-08-24 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

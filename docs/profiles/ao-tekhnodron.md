@@ -64,10 +64,10 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0013 | document | document (9704241986_20082026.pdf) | 2026-08-20 | 2026-08-20 |
-| s0806 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9704241986_20260824_ao-tekhnodron.json) | 2026-08-24 | — |
-| s0966 | GUR war-sanctions record | GUR war-sanctions record (GUR_9704241986_20260824_ao-tekhnodron.html) | 2026-08-24 | — |
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s0013] | document | document (9704241986_20082026.pdf) | 2026-08-20 | 2026-08-20 |
+| [s0806] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9704241986_20260824_ao-tekhnodron.json) | 2026-08-24 | — |
+| [s0966] | GUR war-sanctions record | GUR war-sanctions record (GUR_9704241986_20260824_ao-tekhnodron.html) | 2026-08-24 | — |
+| [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

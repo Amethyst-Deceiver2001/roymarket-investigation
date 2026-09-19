@@ -34,8 +34,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s1054 | Rospatent patent record | Rospatent patent record (PATENT_RU2023613722PREVM_20260824_ooo-vizionero.json) | 2026-08-24 | — |
-| s7413 | EGRUL extract | EGRUL extract (EGRUL_5902056314_20260914_ooo-vizionero.pdf) | 2026-09-14 | 2026-09-14 |
+| [s1054] | Rospatent patent record | Rospatent patent record (PATENT_RU2023613722PREVM_20260824_ooo-vizionero.json) | 2026-08-24 | — |
+| [s7413] | EGRUL extract | EGRUL extract (EGRUL_5902056314_20260914_ooo-vizionero.pdf) | 2026-09-14 | 2026-09-14 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

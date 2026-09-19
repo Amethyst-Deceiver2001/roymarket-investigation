@@ -37,7 +37,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 174406, Новгородская область, м.о. Боровичский, г. Боровичи, ул. Красноармейская, д. 71, стр. 1 | 2026-03-29 | 2026-09-02: precise address from EGRUL extract s5308 (embedded in smolin.info article 2, s5291, independently re-downloaded), upgrading from coarse "Новгородская область". ГРН 2255300168836 dated 07.02.2025. [s5308] |
+| 174406, Новгородская область, м.о. Боровичский, г. Боровичи, ул. Красноармейская, д. 71, стр. 1 | 2026-03-29 | 2026-09-02: precise address from EGRUL extract [s5308] (embedded in smolin.info article 2, [s5291], independently re-downloaded), upgrading from coarse "Новгородская область". ГРН 2255300168836 dated 07.02.2025. [s5308] |
 
 ### Legal name
 
@@ -83,18 +83,18 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5308 | EGRUL extract | EGRUL extract (EGRUL_7802893898_20260608_ooo-geron.pdf) | 2026-06-08 | 2026-03-29 |
-| s5310 | Fedresurs | Fedresurs (FEDRESURS_9C5449018C274B47A14635AD4E65801E_20260902_geron-bankruptcy-notification.json) | 2026-09-02 | — |
-| s5314 | Fedresurs | Fedresurs (FEDRESURS_5FA5ADD8A1E6405F99CDE5684E0AC6E0_20260902_geron-avia-leasing-shielded-lessor.json) | 2026-09-02 | — |
-| s5323 | Fedresurs | Fedresurs (FEDRESURS_C8BD988ADE964733AFD84EDE4FC0A871_20260902_sberbank-bankruptcy-intent-1.json) | 2026-09-02 | — |
-| s5324 | Fedresurs | Fedresurs (FEDRESURS_FB6C4FA60CB44687AF7C6AE995CDE908_20260902_sberbank-bankruptcy-intent-2.json) | 2026-09-02 | — |
-| s6459 | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
-| s6609 | Bfo | Bfo (BFO_7802893898_2021_ооо-герон.pdf) | — | — |
-| s6610 | Bfo | Bfo (BFO_7802893898_2022_ооо-герон.pdf) | — | — |
-| s6611 | Bfo | Bfo (BFO_7802893898_2023_ооо-герон.pdf) | — | — |
-| s6612 | Bfo | Bfo (BFO_7802893898_2024_ооо-герон.pdf) | — | — |
-| s6613 | Bfo | Bfo (BFO_7802893898_2025_ооо-герон.pdf) | — | — |
-| s6838 | EGRUL extract | EGRUL extract (EGRUL_7802893898_20260907_ooo-geron.pdf) | 2026-09-07 | 2026-09-07 |
+| [s5308] | EGRUL extract | EGRUL extract (EGRUL_7802893898_20260608_ooo-geron.pdf) | 2026-06-08 | 2026-03-29 |
+| [s5310] | Fedresurs | Fedresurs (FEDRESURS_9C5449018C274B47A14635AD4E65801E_20260902_geron-bankruptcy-notification.json) | 2026-09-02 | — |
+| [s5314] | Fedresurs | Fedresurs (FEDRESURS_5FA5ADD8A1E6405F99CDE5684E0AC6E0_20260902_geron-avia-leasing-shielded-lessor.json) | 2026-09-02 | — |
+| [s5323] | Fedresurs | Fedresurs (FEDRESURS_C8BD988ADE964733AFD84EDE4FC0A871_20260902_sberbank-bankruptcy-intent-1.json) | 2026-09-02 | — |
+| [s5324] | Fedresurs | Fedresurs (FEDRESURS_FB6C4FA60CB44687AF7C6AE995CDE908_20260902_sberbank-bankruptcy-intent-2.json) | 2026-09-02 | — |
+| [s6459] | Fssp | Fssp (FSSP_OPENDATA_20260906_iplegallist-matched-extract.json) | 2026-09-06 | — |
+| [s6609] | Bfo | Bfo (BFO_7802893898_2021_ооо-герон.pdf) | — | — |
+| [s6610] | Bfo | Bfo (BFO_7802893898_2022_ооо-герон.pdf) | — | — |
+| [s6611] | Bfo | Bfo (BFO_7802893898_2023_ооо-герон.pdf) | — | — |
+| [s6612] | Bfo | Bfo (BFO_7802893898_2024_ооо-герон.pdf) | — | — |
+| [s6613] | Bfo | Bfo (BFO_7802893898_2025_ооо-герон.pdf) | — | — |
+| [s6838] | EGRUL extract | EGRUL extract (EGRUL_7802893898_20260907_ooo-geron.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

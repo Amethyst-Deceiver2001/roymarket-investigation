@@ -26,8 +26,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0525 | EGRUL extract | EGRUL extract (ul-1202600009919-20260823145414.pdf) | — | 2026-08-23 |
-| s5427 | Pbnalog | Pbnalog (PBNALOG_UPRUCHR_multi_20260904_gagaring-poi-sweep.txt) | 2026-09-04 | 2026-09-04 |
+| [s0525] | EGRUL extract | EGRUL extract (ul-1202600009919-20260823145414.pdf) | — | 2026-08-23 |
+| [s5427] | Pbnalog | Pbnalog (PBNALOG_UPRUCHR_multi_20260904_gagaring-poi-sweep.txt) | 2026-09-04 | 2026-09-04 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

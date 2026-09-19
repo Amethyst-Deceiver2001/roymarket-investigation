@@ -47,8 +47,8 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0491 | EGRUL extract | EGRUL extract (ul-1247700255208-20260823131811.pdf) | — | 2026-08-23 |
-| s6765 | EGRUL extract | EGRUL extract (EGRUL_9715478320_20260907_ooo-mentastep.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0491] | EGRUL extract | EGRUL extract (ul-1247700255208-20260823131811.pdf) | — | 2026-08-23 |
+| [s6765] | EGRUL extract | EGRUL extract (EGRUL_9715478320_20260907_ooo-mentastep.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

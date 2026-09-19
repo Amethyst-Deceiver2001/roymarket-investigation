@@ -81,14 +81,14 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0106 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7714390623_20260822_ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s.json) | 2026-08-22 | 2026-08-22 |
-| s0315 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2021_20260816.zip) | 2026-08-16 | 2021-12-31 |
-| s0316 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2022_20260816.zip) | 2026-08-16 | 2022-12-31 |
-| s0317 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
-| s0318 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0319 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s6735 | EGRUL extract | EGRUL extract (EGRUL_7714390623_20260907_ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s.pdf) | 2026-09-07 | 2026-09-07 |
-| s6905 | Founding-Устав bundle | Founding-Устав bundle (UD_1167746513967_20260907_uk-azimut.zip) | 2026-09-07 | 2018-03-02 |
+| [s0106] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7714390623_20260822_ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s.json) | 2026-08-22 | 2026-08-22 |
+| [s0315] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2021_20260816.zip) | 2026-08-16 | 2021-12-31 |
+| [s0316] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2022_20260816.zip) | 2026-08-16 | 2022-12-31 |
+| [s0317] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
+| [s0318] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0319] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714390623_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s6735] | EGRUL extract | EGRUL extract (EGRUL_7714390623_20260907_ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6905] | Founding-Устав bundle | Founding-Устав bundle (UD_1167746513967_20260907_uk-azimut.zip) | 2026-09-07 | 2018-03-02 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

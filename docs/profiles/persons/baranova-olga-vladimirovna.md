@@ -30,7 +30,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0120 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7735565264_20260822_ooo-praym.json) | 2026-08-22 | 2026-08-22 |
+| [s0120] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7735565264_20260822_ooo-praym.json) | 2026-08-22 | 2026-08-22 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

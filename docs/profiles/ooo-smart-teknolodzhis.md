@@ -69,19 +69,19 @@
 
 ## Open questions
 
-- 2026-08-24: leader-id.ru self-report shows Ефремов Антон Вениаминович as Генеральный директор, Москва -- exact company-name/city match, but CONFLICTS with the director field on file (Кот Олег Петрович, sourced to EGRUL as of 2025-11-11, s0450, more recent than most other director pulls in this registry). Not resolved either way: could be a leader-id self-report gone stale, a title mismatch (a non-GD role self-reported as GD), or a director change more recent than the 2025-11-11 EGRUL snapshot. Do not treat either name as more authoritative than the other without a fresh primary-source check.
+- 2026-08-24: leader-id.ru self-report shows Ефремов Антон Вениаминович as Генеральный директор, Москва -- exact company-name/city match, but CONFLICTS with the director field on file (Кот Олег Петрович, sourced to EGRUL as of 2025-11-11, [s0450], more recent than most other director pulls in this registry). Not resolved either way: could be a leader-id self-report gone stale, a title mismatch (a non-GD role self-reported as GD), or a director change more recent than the 2025-11-11 EGRUL snapshot. Do not treat either name as more authoritative than the other without a fresh primary-source check.
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0325 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2021_20260816.zip) | 2026-08-16 | 2021-12-31 |
-| s0326 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2022_20260816.zip) | 2026-08-16 | 2022-12-31 |
-| s0327 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
-| s0328 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0329 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s0450 | EGRUL extract | EGRUL extract (ul-1127746712752-20260823120134.pdf) | — | 2026-08-23 |
-| s6736 | EGRUL extract | EGRUL extract (EGRUL_7715934509_20260907_ooo-smart-teknolodzhis.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0325] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2021_20260816.zip) | 2026-08-16 | 2021-12-31 |
+| [s0326] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2022_20260816.zip) | 2026-08-16 | 2022-12-31 |
+| [s0327] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
+| [s0328] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0329] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s0450] | EGRUL extract | EGRUL extract (ul-1127746712752-20260823120134.pdf) | — | 2026-08-23 |
+| [s6736] | EGRUL extract | EGRUL extract (EGRUL_7715934509_20260907_ooo-smart-teknolodzhis.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

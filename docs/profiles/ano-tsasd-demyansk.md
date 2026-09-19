@@ -67,10 +67,10 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0442 | document | document (63713a19-ed28-4f81-b26a-dae6ad2f54e1.pdf) | — | 2025-12-31 |
-| s0570 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5300008970_20260824_ano-tsasd-demyansk.json) | 2026-08-24 | 2026-08-24 |
-| s0747 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5300008970_20260824_ano-tsasd-demyansk.json) | 2026-08-24 | — |
-| s6805 | EGRUL extract | EGRUL extract (EGRUL_5300008970_20260907_ano-tsasd-demyansk.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0442] | document | document (63713a19-ed28-4f81-b26a-dae6ad2f54e1.pdf) | — | 2025-12-31 |
+| [s0570] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5300008970_20260824_ano-tsasd-demyansk.json) | 2026-08-24 | 2026-08-24 |
+| [s0747] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5300008970_20260824_ano-tsasd-demyansk.json) | 2026-08-24 | — |
+| [s6805] | EGRUL extract | EGRUL extract (EGRUL_5300008970_20260907_ano-tsasd-demyansk.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -24,7 +24,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 100000 | 2018-01-16 | Устав approved by Решением №1/2018 единственного учредителя от 16.01.2018 -- ООО formed via реорганизация (share exchange) from ЗАО НПК «ГЕРОН»: 100 shares × ₽1,000 each (₽100,000 total) converted 1:1 into a 100% ООО stake held by Ткач К.В. Same value as the existing 2018-12-06 EGRUL-выписка-sourced entry (s6846) -- this устав pins the exact founding transaction and date, that extract just confirmed the standing value roughly 11 months later. [s6907] |
+| 100000 | 2018-01-16 | Устав approved by Решением №1/2018 единственного учредителя от 16.01.2018 -- ООО formed via реорганизация (share exchange) from ЗАО НПК «ГЕРОН»: 100 shares × ₽1,000 each (₽100,000 total) converted 1:1 into a 100% ООО stake held by Ткач К.В. Same value as the existing 2018-12-06 EGRUL-выписка-sourced entry ([s6846]) -- this устав pins the exact founding transaction and date, that extract just confirmed the standing value roughly 11 months later. [s6907] |
 | 100000 | 2018-12-06 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6846] |
 
 ### Legal name
@@ -57,13 +57,13 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s6621 | Bfo | Bfo (BFO_7814748285_2021_ооо-нпк-герон.pdf) | — | — |
-| s6622 | Bfo | Bfo (BFO_7814748285_2022_ооо-нпк-герон.pdf) | — | — |
-| s6623 | Bfo | Bfo (BFO_7814748285_2023_ооо-нпк-герон.pdf) | — | — |
-| s6624 | Bfo | Bfo (BFO_7814748285_2024_ооо-нпк-герон.pdf) | — | — |
-| s6625 | Bfo | Bfo (BFO_7814748285_2025_ооо-нпк-герон.pdf) | — | — |
-| s6846 | EGRUL extract | EGRUL extract (EGRUL_7814748285_20260907_ooo-npk-geron.pdf) | 2026-09-07 | 2026-09-07 |
-| s6907 | Founding-Устав bundle | Founding-Устав bundle (UD_1187847365750_20260907_npk-geron.zip) | 2026-09-07 | 2018-01-16 |
+| [s6621] | Bfo | Bfo (BFO_7814748285_2021_ооо-нпк-герон.pdf) | — | — |
+| [s6622] | Bfo | Bfo (BFO_7814748285_2022_ооо-нпк-герон.pdf) | — | — |
+| [s6623] | Bfo | Bfo (BFO_7814748285_2023_ооо-нпк-герон.pdf) | — | — |
+| [s6624] | Bfo | Bfo (BFO_7814748285_2024_ооо-нпк-герон.pdf) | — | — |
+| [s6625] | Bfo | Bfo (BFO_7814748285_2025_ооо-нпк-герон.pdf) | — | — |
+| [s6846] | EGRUL extract | EGRUL extract (EGRUL_7814748285_20260907_ooo-npk-geron.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6907] | Founding-Устав bundle | Founding-Устав bundle (UD_1187847365750_20260907_npk-geron.zip) | 2026-09-07 | 2018-01-16 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

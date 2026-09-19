@@ -38,10 +38,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0228 | EGRUL extract | EGRUL extract (ul-1247700190430-20260815005804.pdf) | — | 2026-08-15 |
-| s0793 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_780158807980_20260824_nina-olegovna-yanykina.json) | 2026-08-24 | — |
-| s6919 | press coverage | press coverage (PRESS_20260907_investigator-org-ua-270974-rubinshteyn.txt) | 2026-09-07 | — |
-| s7519 | transcript | transcript (TRANSCRIPT_20250214_er-ru-yakushev-bezrukov-tsbst-nabsovet.txt) | 2025-02-14 | — |
+| [s0228] | EGRUL extract | EGRUL extract (ul-1247700190430-20260815005804.pdf) | — | 2026-08-15 |
+| [s0793] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_780158807980_20260824_nina-olegovna-yanykina.json) | 2026-08-24 | — |
+| [s6919] | press coverage | press coverage (PRESS_20260907_investigator-org-ua-270974-rubinshteyn.txt) | 2026-09-07 | — |
+| [s7519] | transcript | transcript (TRANSCRIPT_20250214_er-ru-yakushev-bezrukov-tsbst-nabsovet.txt) | 2025-02-14 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

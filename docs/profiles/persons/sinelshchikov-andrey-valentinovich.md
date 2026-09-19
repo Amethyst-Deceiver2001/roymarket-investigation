@@ -24,7 +24,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0115 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7729150663_20260822_ao-tsentr-telko.json) | 2026-08-22 | 2026-08-22 |
+| [s0115] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7729150663_20260822_ao-tsentr-telko.json) | 2026-08-22 | 2026-08-22 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

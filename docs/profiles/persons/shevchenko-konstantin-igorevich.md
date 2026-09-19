@@ -33,8 +33,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0467 | EGRUL extract | EGRUL extract (ul-1236100025633-20260823122756.pdf) | — | 2026-08-23 |
-| s0977 | Rospatent patent record | Rospatent patent record (PATENT_RU2859152C1_20260824_ooo-atlant-aero.xml) | 2026-08-24 | — |
+| [s0467] | EGRUL extract | EGRUL extract (ul-1236100025633-20260823122756.pdf) | — | 2026-08-23 |
+| [s0977] | Rospatent patent record | Rospatent patent record (PATENT_RU2859152C1_20260824_ooo-atlant-aero.xml) | 2026-08-24 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

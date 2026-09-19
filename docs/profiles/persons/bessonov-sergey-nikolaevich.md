@@ -40,12 +40,12 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0113 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7725347482_20260822_ooo-aeromaks.json) | 2026-08-22 | 2026-08-22 |
-| s0754 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_644914040799_20260824_bessonov-sergey-nikolaevich.json) | 2026-08-24 | — |
-| s4571 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7725347482_2771087800024000123_gk-4574-soglashe-27710878000240001230013_05bd651f.pdf) | — | — |
-| s4572 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7725347482_2771087800024000123_kontrakt-gk-6-27710878000240001230002_2266db7b.docx) | — | 2023-12-26 |
-| s7345 | EGRUL extract | EGRUL extract (EGRUL_7713133550_20260908_ao-rti-radio.pdf) | 2026-09-08 | 2026-09-08 |
-| s7441 | EGRUL extract | EGRUL extract (EGRUL_OPEN_9704149557_20260914_ooo-aeromaks-avia-tsentr-logistika-search.txt) | 2026-09-14 | — |
+| [s0113] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7725347482_20260822_ooo-aeromaks.json) | 2026-08-22 | 2026-08-22 |
+| [s0754] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_644914040799_20260824_bessonov-sergey-nikolaevich.json) | 2026-08-24 | — |
+| [s4571] | Zakupki | Zakupki (ZAKUPKI_ATTACH_7725347482_2771087800024000123_gk-4574-soglashe-27710878000240001230013_05bd651f.pdf) | — | — |
+| [s4572] | Zakupki | Zakupki (ZAKUPKI_ATTACH_7725347482_2771087800024000123_kontrakt-gk-6-27710878000240001230002_2266db7b.docx) | — | 2023-12-26 |
+| [s7345] | EGRUL extract | EGRUL extract (EGRUL_7713133550_20260908_ao-rti-radio.pdf) | 2026-09-08 | 2026-09-08 |
+| [s7441] | EGRUL extract | EGRUL extract (EGRUL_OPEN_9704149557_20260914_ooo-aeromaks-avia-tsentr-logistika-search.txt) | 2026-09-14 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

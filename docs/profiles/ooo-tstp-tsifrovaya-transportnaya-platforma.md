@@ -62,16 +62,16 @@ _No named principals linked to this entity yet._
 
 ## Open questions
 
-- The ЦТП-operates-налетай.рф attribution was established via the site's technical/domain footprint during initial 2026-08-26 exploration, not from a single archived document naming both together explicitly -- ГТЛК's own press release (s2851) confirms it built and launched the marketplace, and ЦТП's own EGRUL/rusprofile record (s2852) independently confirms the corporate entity, but no single source directly states "ЦТП operates налетай.рф" in one sentence. Worth a follow-up pull of налетай.рф's own Terms of Service/Privacy Policy page (typically names the operating legal entity directly) to close this gap with a document that says so explicitly.
+- The ЦТП-operates-налетай.рф attribution was established via the site's technical/domain footprint during initial 2026-08-26 exploration, not from a single archived document naming both together explicitly -- ГТЛК's own press release ([s2851]) confirms it built and launched the marketplace, and ЦТП's own EGRUL/rusprofile record ([s2852]) independently confirms the corporate entity, but no single source directly states "ЦТП operates налетай.рф" in one sentence. Worth a follow-up pull of налетай.рф's own Terms of Service/Privacy Policy page (typically names the operating legal entity directly) to close this gap with a document that says so explicitly.
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s2852 | Rusprofile | Rusprofile (RUSPROFILE_9714054618_20260828_tstp-ooo.html) | 2026-08-28 | — |
-| s6663 | Bfo | Bfo (BFO_9714054618_2024_ооо-цтп.pdf) | — | — |
-| s6664 | Bfo | Bfo (BFO_9714054618_2025_ооо-цтп.pdf) | — | — |
-| s6863 | EGRUL extract | EGRUL extract (EGRUL_9714054618_20260907_ooo-tstp-tsifrovaya-transportnaya-platforma.pdf) | 2026-09-07 | 2026-09-07 |
+| [s2852] | Rusprofile | Rusprofile (RUSPROFILE_9714054618_20260828_tstp-ooo.html) | 2026-08-28 | — |
+| [s6663] | Bfo | Bfo (BFO_9714054618_2024_ооо-цтп.pdf) | — | — |
+| [s6664] | Bfo | Bfo (BFO_9714054618_2025_ооо-цтп.pdf) | — | — |
+| [s6863] | EGRUL extract | EGRUL extract (EGRUL_9714054618_20260907_ooo-tstp-tsifrovaya-transportnaya-platforma.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

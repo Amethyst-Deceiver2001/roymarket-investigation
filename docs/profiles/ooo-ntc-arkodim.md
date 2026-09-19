@@ -50,13 +50,13 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7440 | EGRUL extract | EGRUL extract (EGRUL_OPEN_1659182805_20260914_ooo-ntc-arkodim-search.txt) | 2026-09-14 | — |
-| s7447 | EGRUL extract | EGRUL extract (EGRUL_1659182805_20260914_ooo-ntc-arkodim.pdf) | 2026-09-14 | 2026-09-14 |
-| s7481 | Bfo | Bfo (BFO_1659182805_2021_ooo-ntc-arkodim.pdf) | — | — |
-| s7482 | Bfo | Bfo (BFO_1659182805_2022_ooo-ntc-arkodim.pdf) | — | — |
-| s7483 | Bfo | Bfo (BFO_1659182805_2023_ooo-ntc-arkodim.pdf) | — | — |
-| s7484 | Bfo | Bfo (BFO_1659182805_2024_ooo-ntc-arkodim.pdf) | — | — |
-| s7485 | Bfo | Bfo (BFO_1659182805_2025_ooo-ntc-arkodim.pdf) | — | — |
+| [s7440] | EGRUL extract | EGRUL extract (EGRUL_OPEN_1659182805_20260914_ooo-ntc-arkodim-search.txt) | 2026-09-14 | — |
+| [s7447] | EGRUL extract | EGRUL extract (EGRUL_1659182805_20260914_ooo-ntc-arkodim.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7481] | Bfo | Bfo (BFO_1659182805_2021_ooo-ntc-arkodim.pdf) | — | — |
+| [s7482] | Bfo | Bfo (BFO_1659182805_2022_ooo-ntc-arkodim.pdf) | — | — |
+| [s7483] | Bfo | Bfo (BFO_1659182805_2023_ooo-ntc-arkodim.pdf) | — | — |
+| [s7484] | Bfo | Bfo (BFO_1659182805_2024_ooo-ntc-arkodim.pdf) | — | — |
+| [s7485] | Bfo | Bfo (BFO_1659182805_2025_ooo-ntc-arkodim.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

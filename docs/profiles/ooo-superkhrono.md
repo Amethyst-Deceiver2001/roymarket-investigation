@@ -62,13 +62,13 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0250 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2021_20260821.zip) | 2026-08-21 | 2021-12-31 |
-| s0251 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2022_20260821.zip) | 2026-08-21 | 2022-12-31 |
-| s0252 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2023_20260821.zip) | 2026-08-21 | 2023-12-31 |
-| s0253 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
-| s0254 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
-| s0477 | EGRUL extract | EGRUL extract (ul-1163525102619-20260823131946.pdf) | — | 2026-08-23 |
-| s6715 | EGRUL extract | EGRUL extract (EGRUL_3525389520_20260907_ooo-superkhrono.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0250] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2021_20260821.zip) | 2026-08-21 | 2021-12-31 |
+| [s0251] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2022_20260821.zip) | 2026-08-21 | 2022-12-31 |
+| [s0252] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2023_20260821.zip) | 2026-08-21 | 2023-12-31 |
+| [s0253] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
+| [s0254] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
+| [s0477] | EGRUL extract | EGRUL extract (ul-1163525102619-20260823131946.pdf) | — | 2026-08-23 |
+| [s6715] | EGRUL extract | EGRUL extract (EGRUL_3525389520_20260907_ooo-superkhrono.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

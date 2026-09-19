@@ -54,11 +54,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0052 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_1215226708_20260822_ooo-tsyus.json) | 2026-08-22 | 2026-08-22 |
-| s6460 | Bfo | Bfo (BFO_1215226708_2021_ооо-цюс.pdf) | — | — |
-| s6461 | Bfo | Bfo (BFO_1215226708_2022_ооо-цюс.pdf) | — | — |
-| s6462 | Bfo | Bfo (BFO_1215226708_2024_ооо-цюс.pdf) | — | — |
-| s6709 | EGRUL extract | EGRUL extract (EGRUL_1215226708_20260907_ooo-tsyus.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0052] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_1215226708_20260822_ooo-tsyus.json) | 2026-08-22 | 2026-08-22 |
+| [s6460] | Bfo | Bfo (BFO_1215226708_2021_ооо-цюс.pdf) | — | — |
+| [s6461] | Bfo | Bfo (BFO_1215226708_2022_ооо-цюс.pdf) | — | — |
+| [s6462] | Bfo | Bfo (BFO_1215226708_2024_ооо-цюс.pdf) | — | — |
+| [s6709] | EGRUL extract | EGRUL extract (EGRUL_1215226708_20260907_ooo-tsyus.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

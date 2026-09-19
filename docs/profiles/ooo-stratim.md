@@ -74,12 +74,12 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0513 | EGRUL extract | EGRUL extract (ul-1245200009075-20260823135114.pdf) | — | 2026-08-23 |
-| s0745 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5260494520_20260824_ooo-stratim.json) | 2026-08-24 | — |
-| s0958 | GUR war-sanctions record | GUR war-sanctions record (GUR_5260494520_20260824_ooo-stratim.html) | 2026-08-24 | — |
-| s6511 | Bfo | Bfo (BFO_5260494520_2024_ооо-стратим.pdf) | — | — |
-| s6512 | Bfo | Bfo (BFO_5260494520_2025_ооо-стратим.pdf) | — | — |
-| s6802 | EGRUL extract | EGRUL extract (EGRUL_5260494520_20260907_ooo-stratim.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0513] | EGRUL extract | EGRUL extract (ul-1245200009075-20260823135114.pdf) | — | 2026-08-23 |
+| [s0745] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5260494520_20260824_ooo-stratim.json) | 2026-08-24 | — |
+| [s0958] | GUR war-sanctions record | GUR war-sanctions record (GUR_5260494520_20260824_ooo-stratim.html) | 2026-08-24 | — |
+| [s6511] | Bfo | Bfo (BFO_5260494520_2024_ооо-стратим.pdf) | — | — |
+| [s6512] | Bfo | Bfo (BFO_5260494520_2025_ооо-стратим.pdf) | — | — |
+| [s6802] | EGRUL extract | EGRUL extract (EGRUL_5260494520_20260907_ooo-stratim.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

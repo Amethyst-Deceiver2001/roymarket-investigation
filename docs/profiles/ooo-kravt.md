@@ -127,15 +127,15 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0363 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7802693899_2022_20260816.zip) | 2026-08-16 | 2022-12-31 |
-| s0364 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7802693899_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
-| s0365 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7802693899_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0366 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7802693899_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s0452 | EGRUL extract | EGRUL extract (ul-1197847166560-20260823120900.pdf) | — | 2026-08-23 |
-| s0794 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7802693899_20260824_ooo-kravt.json) | 2026-08-24 | — |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6748 | EGRUL extract | EGRUL extract (EGRUL_7802693899_20260907_ooo-kravt.pdf) | 2026-09-07 | 2026-09-07 |
-| s7545 | site capture | site capture (SITE_7802693899_20260916_ooo-kravt-product-photo.png) | 2026-09-16 | — |
+| [s0363] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7802693899_2022_20260816.zip) | 2026-08-16 | 2022-12-31 |
+| [s0364] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7802693899_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
+| [s0365] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7802693899_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0366] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7802693899_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s0452] | EGRUL extract | EGRUL extract (ul-1197847166560-20260823120900.pdf) | — | 2026-08-23 |
+| [s0794] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7802693899_20260824_ooo-kravt.json) | 2026-08-24 | — |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6748] | EGRUL extract | EGRUL extract (EGRUL_7802693899_20260907_ooo-kravt.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7545] | site capture | site capture (SITE_7802693899_20260916_ooo-kravt-product-photo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

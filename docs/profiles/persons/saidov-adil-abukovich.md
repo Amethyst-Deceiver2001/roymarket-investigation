@@ -30,7 +30,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s3664 | Research | Research (RESEARCH_20260829_pep-network-names-osint.xlsx) | 2026-08-29 | — |
+| [s3664] | Research | Research (RESEARCH_20260829_pep-network-names-osint.xlsx) | 2026-08-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

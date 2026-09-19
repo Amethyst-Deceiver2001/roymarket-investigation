@@ -56,11 +56,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0147 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9705214590_20260822_ao-aurin.json) | 2026-08-22 | 2026-08-22 |
-| s0945 | Rospatent record | Rospatent record (ROSPATENT_20260824_full-roster-tm-sweep.json) | 2026-08-24 | — |
-| s6647 | Bfo | Bfo (BFO_9705214590_2024_ао-аурин.pdf) | — | — |
-| s6648 | Bfo | Bfo (BFO_9705214590_2025_ао-аурин.pdf) | — | — |
-| s6859 | EGRUL extract | EGRUL extract (EGRUL_9705214590_20260907_ao-aurin.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0147] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9705214590_20260822_ao-aurin.json) | 2026-08-22 | 2026-08-22 |
+| [s0945] | Rospatent record | Rospatent record (ROSPATENT_20260824_full-roster-tm-sweep.json) | 2026-08-24 | — |
+| [s6647] | Bfo | Bfo (BFO_9705214590_2024_ао-аурин.pdf) | — | — |
+| [s6648] | Bfo | Bfo (BFO_9705214590_2025_ао-аурин.pdf) | — | — |
+| [s6859] | EGRUL extract | EGRUL extract (EGRUL_9705214590_20260907_ao-aurin.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

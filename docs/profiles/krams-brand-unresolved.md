@@ -42,7 +42,7 @@
 
 ### Telegram
 
-- <None>
+- <https://t.me/krams_pro>
 
 ## Images
 
@@ -61,10 +61,10 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7530 | Tgpost | Tgpost (TGPOST_20240728_krams_pro_msg3-marketing-claim.txt) | 2024-07-28 | 2024-07-28 |
-| s7531 | Tgpost | Tgpost (TGPOST_20250720_krams_pro_msg108-marketing-claim.txt) | 2025-07-20 | 2025-07-20 |
-| s7532 | Tgpost | Tgpost (TGPOST_20251205_krams_pro_msg128-marketing-claim.txt) | 2025-12-05 | 2025-12-05 |
-| s7571 | site capture | site capture (SITE_UNKNOWN_20260916_krams-brand-logo.png) | 2026-09-16 | — |
+| [s7530] | Tgpost | Tgpost (TGPOST_20240728_krams_pro_msg3-marketing-claim.txt) | 2024-07-28 | 2024-07-28 |
+| [s7531] | Tgpost | Tgpost (TGPOST_20250720_krams_pro_msg108-marketing-claim.txt) | 2025-07-20 | 2025-07-20 |
+| [s7532] | Tgpost | Tgpost (TGPOST_20251205_krams_pro_msg128-marketing-claim.txt) | 2025-12-05 | 2025-12-05 |
+| [s7571] | site capture | site capture (SITE_UNKNOWN_20260916_krams-brand-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -64,7 +64,7 @@
 
 ### Website
 
-- <https://copterlab.ru/> — From rk.2035.university's БАС-industry company directory (ИНН-confirmed match), s1165.
+- <https://copterlab.ru/> — From rk.2035.university's БАС-industry company directory (ИНН-confirmed match), [s1165].
 
 ### Marketplace listings
 
@@ -85,14 +85,14 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0333 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7720925267_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0334 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7720925267_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s0473 | EGRUL extract | EGRUL extract (ul-1247700198734-20260823122742.pdf) | — | 2026-08-23 |
-| s1165 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
-| s2626 | Naletay | Naletay (NALETAY_7720925267_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
-| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6739 | EGRUL extract | EGRUL extract (EGRUL_7720925267_20260907_ooo-kopterlab.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0333] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7720925267_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0334] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7720925267_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s0473] | EGRUL extract | EGRUL extract (ul-1247700198734-20260823122742.pdf) | — | 2026-08-23 |
+| [s1165] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
+| [s2626] | Naletay | Naletay (NALETAY_7720925267_20260826_catalog-listing.json) | 2026-08-26 | 2026-08-26 |
+| [s5344] | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6739] | EGRUL extract | EGRUL extract (EGRUL_7720925267_20260907_ooo-kopterlab.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

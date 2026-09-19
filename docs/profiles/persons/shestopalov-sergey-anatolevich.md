@@ -35,9 +35,9 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0532 | EGRUL extract | EGRUL extract (ul-1244800001820-20260823151547.pdf) | — | 2026-08-23 |
-| s0537 | certificate/licence record | certificate/licence record (CERT_4800016776_20260823_kilovatt-official-dealer-2106-2024.pdf) | 2026-08-23 | — |
-| s6177 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_480601511636_20260906_shestopalov-sergey-anatolevich_entity-page.txt) | 2026-09-06 | — |
+| [s0532] | EGRUL extract | EGRUL extract (ul-1244800001820-20260823151547.pdf) | — | 2026-08-23 |
+| [s0537] | certificate/licence record | certificate/licence record (CERT_4800016776_20260823_kilovatt-official-dealer-2106-2024.pdf) | 2026-08-23 | — |
+| [s6177] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_480601511636_20260906_shestopalov-sergey-anatolevich_entity-page.txt) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

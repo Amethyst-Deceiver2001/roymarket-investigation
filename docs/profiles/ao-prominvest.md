@@ -62,13 +62,13 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0152 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9714004945_20260822_ao-prominvest.json) | 2026-08-22 | 2026-08-22 |
-| s0811 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9714004945_20260824_ao-prominvest.json) | 2026-08-24 | — |
-| s6660 | Bfo | Bfo (BFO_9714004945_2023_ао-проминвест.pdf) | — | — |
-| s6661 | Bfo | Bfo (BFO_9714004945_2024_ао-проминвест.pdf) | — | — |
-| s6662 | Bfo | Bfo (BFO_9714004945_2025_ао-проминвест.pdf) | — | — |
-| s6760 | EGRUL extract | EGRUL extract (EGRUL_9714004945_20260907_ao-prominvest.pdf) | 2026-09-07 | 2026-09-07 |
-| s7353 | Founding-Устав bundle | Founding-Устав bundle (UD_1237700148180_20260908_ao-prominvest.zip) | 2026-09-08 | — |
+| [s0152] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9714004945_20260822_ao-prominvest.json) | 2026-08-22 | 2026-08-22 |
+| [s0811] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9714004945_20260824_ao-prominvest.json) | 2026-08-24 | — |
+| [s6660] | Bfo | Bfo (BFO_9714004945_2023_ао-проминвест.pdf) | — | — |
+| [s6661] | Bfo | Bfo (BFO_9714004945_2024_ао-проминвест.pdf) | — | — |
+| [s6662] | Bfo | Bfo (BFO_9714004945_2025_ао-проминвест.pdf) | — | — |
+| [s6760] | EGRUL extract | EGRUL extract (EGRUL_9714004945_20260907_ao-prominvest.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7353] | Founding-Устав bundle | Founding-Устав bundle (UD_1237700148180_20260908_ao-prominvest.zip) | 2026-09-08 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

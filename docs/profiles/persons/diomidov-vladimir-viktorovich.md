@@ -25,7 +25,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0222 | EGRUL extract | EGRUL extract (ul-1237700483976-20260814212311.pdf) | — | 2026-08-14 |
+| [s0222] | EGRUL extract | EGRUL extract (ul-1237700483976-20260814212311.pdf) | — | 2026-08-14 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -147,17 +147,17 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0533 | EGRUL extract | EGRUL extract (ul-1244800005240-20260823151605.pdf) | — | 2026-08-23 |
-| s0536 | certificate/licence record | certificate/licence record (CERT_4800016776_20260823_kilovatt-eaes-declaration-conformity.jpg) | 2026-08-23 | — |
-| s0537 | certificate/licence record | certificate/licence record (CERT_4800016776_20260823_kilovatt-official-dealer-2106-2024.pdf) | 2026-08-23 | — |
-| s0540 | transcript | transcript (TRANSCRIPT_20260823_kilovatt-kapyushon-k12-test-report.pdf) | 2026-08-23 | — |
-| s0592 | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_4800016776_20260824_ooo-npo-kilovatt-shestopalov.json) | 2026-08-24 | — |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6503 | Bfo | Bfo (BFO_4800016776_2024_ооо-научно-производственное-объединение-киловатт.pdf) | — | — |
-| s6504 | Bfo | Bfo (BFO_4800016776_2025_ооо-научно-производственное-объединение-киловатт.pdf) | — | — |
-| s6790 | EGRUL extract | EGRUL extract (EGRUL_4800016776_20260907_ooo-npo-kilovatt-shestopalov.pdf) | 2026-09-07 | 2026-09-07 |
-| s7501 | product catalog | product catalog (CATALOG_4800016776_20260915_kilowatt48-shop-page3.html) | 2026-09-15 | — |
-| s7563 | site capture | site capture (SITE_4800016776_20260916_ooo-npo-kilovatt-product.jpg) | 2026-09-16 | — |
+| [s0533] | EGRUL extract | EGRUL extract (ul-1244800005240-20260823151605.pdf) | — | 2026-08-23 |
+| [s0536] | certificate/licence record | certificate/licence record (CERT_4800016776_20260823_kilovatt-eaes-declaration-conformity.jpg) | 2026-08-23 | — |
+| [s0537] | certificate/licence record | certificate/licence record (CERT_4800016776_20260823_kilovatt-official-dealer-2106-2024.pdf) | 2026-08-23 | — |
+| [s0540] | transcript | transcript (TRANSCRIPT_20260823_kilovatt-kapyushon-k12-test-report.pdf) | 2026-08-23 | — |
+| [s0592] | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_4800016776_20260824_ooo-npo-kilovatt-shestopalov.json) | 2026-08-24 | — |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6503] | Bfo | Bfo (BFO_4800016776_2024_ооо-научно-производственное-объединение-киловатт.pdf) | — | — |
+| [s6504] | Bfo | Bfo (BFO_4800016776_2025_ооо-научно-производственное-объединение-киловатт.pdf) | — | — |
+| [s6790] | EGRUL extract | EGRUL extract (EGRUL_4800016776_20260907_ooo-npo-kilovatt-shestopalov.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7501] | product catalog | product catalog (CATALOG_4800016776_20260915_kilowatt48-shop-page3.html) | 2026-09-15 | — |
+| [s7563] | site capture | site capture (SITE_4800016776_20260916_ooo-npo-kilovatt-product.jpg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

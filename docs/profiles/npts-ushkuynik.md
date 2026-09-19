@@ -44,7 +44,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 173003, Новгородская область, г. Великий Новгород, Большая Санкт-Петербургская ул., д. 64, офис 12 | 2026-09-02 | rusprofile.ru. Same street/building number as the 'закупочная комиссия' (procurement-commission) address the smolin.info article (s5288) separately gives for ano-npts-ushkuynik -- independent cross-corroboration of that address via a second, EGRUL-derived source. [s5289] |
+| 173003, Новгородская область, г. Великий Новгород, Большая Санкт-Петербургская ул., д. 64, офис 12 | 2026-09-02 | rusprofile.ru. Same street/building number as the 'закупочная комиссия' (procurement-commission) address the smolin.info article ([s5288]) separately gives for ano-npts-ushkuynik -- independent cross-corroboration of that address via a second, EGRUL-derived source. [s5289] |
 
 ## Products
 
@@ -94,10 +94,10 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0470 | EGRUL extract | EGRUL extract (ul-1245300001650-20260823122617.pdf) | — | 2026-08-23 |
-| s0969 | GUR war-sanctions record | GUR war-sanctions record (GUR_5300013923_20260824_npts-ushkuynik-components.html) | 2026-08-24 | — |
-| s5289 | Rusprofile | Rusprofile (RUSPROFILE_5300013923_20260902_ooo-ushkuynik.html) | 2026-09-02 | — |
-| s6722 | EGRUL extract | EGRUL extract (EGRUL_5300013923_20260907_npts-ushkuynik.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0470] | EGRUL extract | EGRUL extract (ul-1245300001650-20260823122617.pdf) | — | 2026-08-23 |
+| [s0969] | GUR war-sanctions record | GUR war-sanctions record (GUR_5300013923_20260824_npts-ushkuynik-components.html) | 2026-08-24 | — |
+| [s5289] | Rusprofile | Rusprofile (RUSPROFILE_5300013923_20260902_ooo-ushkuynik.html) | 2026-09-02 | — |
+| [s6722] | EGRUL extract | EGRUL extract (EGRUL_5300013923_20260907_npts-ushkuynik.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

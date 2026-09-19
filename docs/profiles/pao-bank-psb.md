@@ -77,12 +77,12 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0434 | EGRUL extract | EGRUL extract (ul-1027739019142-20260823014925.pdf) | — | 2026-08-23 |
-| s0792 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7744000912_20260824_pao-bank-psb.json) | 2026-08-24 | — |
-| s6441 | Rkn | Rkn (RKN_7744000912_20260906_comms-license-search-pao-bank-psb.html) | 2026-09-06 | — |
-| s6449 | Rkn | Rkn (RKN_7744000912_20260907_frequency-registry-pao-bank-psb.html) | 2026-09-07 | — |
-| s6747 | EGRUL extract | EGRUL extract (EGRUL_7744000912_20260907_pao-bank-psb.pdf) | 2026-09-07 | 2026-09-07 |
-| s7534 | site capture | site capture (SITE_7744000912_20260916_pao-bank-psb-logo.png) | 2026-09-16 | — |
+| [s0434] | EGRUL extract | EGRUL extract (ul-1027739019142-20260823014925.pdf) | — | 2026-08-23 |
+| [s0792] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7744000912_20260824_pao-bank-psb.json) | 2026-08-24 | — |
+| [s6441] | Rkn | Rkn (RKN_7744000912_20260906_comms-license-search-pao-bank-psb.html) | 2026-09-06 | — |
+| [s6449] | Rkn | Rkn (RKN_7744000912_20260907_frequency-registry-pao-bank-psb.html) | 2026-09-07 | — |
+| [s6747] | EGRUL extract | EGRUL extract (EGRUL_7744000912_20260907_pao-bank-psb.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7534] | site capture | site capture (SITE_7744000912_20260916_pao-bank-psb-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

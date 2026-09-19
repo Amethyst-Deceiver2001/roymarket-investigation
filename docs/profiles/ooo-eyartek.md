@@ -20,7 +20,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Капустин Павел Евгеньевич | 2024-02-12 | CORRECTED 2026-09-14: this entry previously read "Жуков Андрей Викторович" (personal ИНН 732703889628), attributed to source s0485 -- but a direct re-read of s0485 (data/sources/ul-1227300004282-20260823131727.pdf) itself shows Фамилия/Имя/Отчество КАПУСТИН/ПАВЕЛ/ЕВГЕНЬЕВИЧ, ИНН 732899377685, at GRN 1227300004282 (the entity's own registration record, dated 07.04.2022) -- the "Жуков" value was a mis-transcription of this same document, not a separate historical director. Independently confirmed by a second, later full EGRUL выписка (s6729, pulled 2026-09-07) showing the identical Капустин name/ИНН. This resolves the leader-id.ru-vs-EGRUL conflict flagged in this entity's own open_questions[] on 2026-08-24 in favor of Капустин -- leader-id.ru was right, the registry's own EGRUL transcription was wrong. [s0485] |
+| Капустин Павел Евгеньевич | 2024-02-12 | CORRECTED 2026-09-14: this entry previously read "Жуков Андрей Викторович" (personal ИНН 732703889628), attributed to source [s0485] -- but a direct re-read of [s0485] (data/sources/ul-1227300004282-20260823131727.pdf) itself shows Фамилия/Имя/Отчество КАПУСТИН/ПАВЕЛ/ЕВГЕНЬЕВИЧ, ИНН 732899377685, at GRN 1227300004282 (the entity's own registration record, dated 07.04.2022) -- the "Жуков" value was a mis-transcription of this same document, not a separate historical director. Independently confirmed by a second, later full EGRUL выписка ([s6729], pulled 2026-09-07) showing the identical Капустин name/ИНН. This resolves the leader-id.ru-vs-EGRUL conflict flagged in this entity's own open_questions[] on 2026-08-24 in favor of Капустин -- leader-id.ru was right, the registry's own EGRUL transcription was wrong. [s0485] |
 | Капустин Павел Евгеньевич | 2026-09-07 | personal ИНН 732899377685; also sole founder. Full EGRUL выписка re-pull independently reconfirms the corrected 2024-02-12 entry. [s6729] |
 
 ### Founders / ownership
@@ -87,12 +87,12 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0485 | EGRUL extract | EGRUL extract (ul-1227300004282-20260823131727.pdf) | — | 2026-08-23 |
-| s6538 | Bfo | Bfo (BFO_7300000540_2022_ооо-эиартэк.pdf) | — | — |
-| s6539 | Bfo | Bfo (BFO_7300000540_2023_ооо-эиартэк.pdf) | — | — |
-| s6540 | Bfo | Bfo (BFO_7300000540_2024_ооо-эиартэк.pdf) | — | — |
-| s6541 | Bfo | Bfo (BFO_7300000540_2025_ооо-эиартэк.pdf) | — | — |
-| s6729 | EGRUL extract | EGRUL extract (EGRUL_7300000540_20260907_ooo-eyartek.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0485] | EGRUL extract | EGRUL extract (ul-1227300004282-20260823131727.pdf) | — | 2026-08-23 |
+| [s6538] | Bfo | Bfo (BFO_7300000540_2022_ооо-эиартэк.pdf) | — | — |
+| [s6539] | Bfo | Bfo (BFO_7300000540_2023_ооо-эиартэк.pdf) | — | — |
+| [s6540] | Bfo | Bfo (BFO_7300000540_2024_ооо-эиартэк.pdf) | — | — |
+| [s6541] | Bfo | Bfo (BFO_7300000540_2025_ооо-эиартэк.pdf) | — | — |
+| [s6729] | EGRUL extract | EGRUL extract (EGRUL_7300000540_20260907_ooo-eyartek.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

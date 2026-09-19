@@ -55,13 +55,13 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0066 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_4611014597_20260822_ao-glavtekhkonstruktsiya.json) | 2026-08-22 | 2026-08-22 |
-| s6496 | Bfo | Bfo (BFO_4611014597_2021_ао-гтк.pdf) | — | — |
-| s6497 | Bfo | Bfo (BFO_4611014597_2022_ао-гтк.pdf) | — | — |
-| s6498 | Bfo | Bfo (BFO_4611014597_2023_ао-гтк.pdf) | — | — |
-| s6499 | Bfo | Bfo (BFO_4611014597_2024_ао-гтк.pdf) | — | — |
-| s6500 | Bfo | Bfo (BFO_4611014597_2025_ао-гтк.pdf) | — | — |
-| s6787 | EGRUL extract | EGRUL extract (EGRUL_4611014597_20260907_ao-glavtekhkonstruktsiya.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0066] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_4611014597_20260822_ao-glavtekhkonstruktsiya.json) | 2026-08-22 | 2026-08-22 |
+| [s6496] | Bfo | Bfo (BFO_4611014597_2021_ао-гтк.pdf) | — | — |
+| [s6497] | Bfo | Bfo (BFO_4611014597_2022_ао-гтк.pdf) | — | — |
+| [s6498] | Bfo | Bfo (BFO_4611014597_2023_ао-гтк.pdf) | — | — |
+| [s6499] | Bfo | Bfo (BFO_4611014597_2024_ао-гтк.pdf) | — | — |
+| [s6500] | Bfo | Bfo (BFO_4611014597_2025_ао-гтк.pdf) | — | — |
+| [s6787] | EGRUL extract | EGRUL extract (EGRUL_4611014597_20260907_ao-glavtekhkonstruktsiya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

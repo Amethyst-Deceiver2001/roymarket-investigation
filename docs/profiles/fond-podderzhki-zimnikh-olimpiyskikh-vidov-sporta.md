@@ -40,11 +40,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0098 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7706470191_20260822_fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta.json) | 2026-08-22 | 2026-08-22 |
-| s0301 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706470191_2023_20260815.zip) | 2026-08-15 | 2023-12-31 |
-| s0302 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706470191_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
-| s0303 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706470191_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
-| s6700 | EGRUL extract | EGRUL extract (EGRUL_7706470191_20260907_fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0098] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7706470191_20260822_fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta.json) | 2026-08-22 | 2026-08-22 |
+| [s0301] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706470191_2023_20260815.zip) | 2026-08-15 | 2023-12-31 |
+| [s0302] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706470191_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
+| [s0303] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706470191_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
+| [s6700] | EGRUL extract | EGRUL extract (EGRUL_7706470191_20260907_fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

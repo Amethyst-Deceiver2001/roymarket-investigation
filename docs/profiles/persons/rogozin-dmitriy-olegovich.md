@@ -29,8 +29,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s6912 | Tgpost | Tgpost (TGPOST_20241105_projectarchangel-5696-hab-svo-rogozin-flagship.txt) | 2024-11-05 | — |
-| s6913 | Tgpost | Tgpost (TGPOST_20251011_projectarchangel-8659-hab-svo-arkhangel-shchit-third-entity.txt) | 2025-10-11 | — |
+| [s6912] | Tgpost | Tgpost (TGPOST_20241105_projectarchangel-5696-hab-svo-rogozin-flagship.txt) | 2024-11-05 | — |
+| [s6913] | Tgpost | Tgpost (TGPOST_20251011_projectarchangel-8659-hab-svo-arkhangel-shchit-third-entity.txt) | 2025-10-11 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

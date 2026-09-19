@@ -66,15 +66,15 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
-| s6416 | bulk open-data extract | bulk open-data extract (DATASET_20260901_favt-aviation-works-operators-registry.txt) | 2026-09-01 | — |
-| s6422 | Bfo | Bfo (BFO_7811687549_2021_ооо-диам-аэро.pdf) | — | — |
-| s6423 | Bfo | Bfo (BFO_7811687549_2022_ооо-диам-аэро.pdf) | — | — |
-| s6424 | Bfo | Bfo (BFO_7811687549_2023_ооо-диам-аэро.pdf) | — | — |
-| s6425 | Bfo | Bfo (BFO_7811687549_2024_ооо-диам-аэро.pdf) | — | — |
-| s6426 | Bfo | Bfo (BFO_7811687549_2025_ооо-диам-аэро.pdf) | — | — |
-| s6428 | EGRUL extract | EGRUL extract (EGRUL_7811687549_20260906_inn-7811687549.pdf) | 2026-09-06 | 2026-09-06 |
-| s6842 | EGRUL extract | EGRUL extract (EGRUL_7811687549_20260907_ooo-diam-aero.pdf) | 2026-09-07 | 2026-09-07 |
+| [s1169] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
+| [s6416] | bulk open-data extract | bulk open-data extract (DATASET_20260901_favt-aviation-works-operators-registry.txt) | 2026-09-01 | — |
+| [s6422] | Bfo | Bfo (BFO_7811687549_2021_ооо-диам-аэро.pdf) | — | — |
+| [s6423] | Bfo | Bfo (BFO_7811687549_2022_ооо-диам-аэро.pdf) | — | — |
+| [s6424] | Bfo | Bfo (BFO_7811687549_2023_ооо-диам-аэро.pdf) | — | — |
+| [s6425] | Bfo | Bfo (BFO_7811687549_2024_ооо-диам-аэро.pdf) | — | — |
+| [s6426] | Bfo | Bfo (BFO_7811687549_2025_ооо-диам-аэро.pdf) | — | — |
+| [s6428] | EGRUL extract | EGRUL extract (EGRUL_7811687549_20260906_inn-7811687549.pdf) | 2026-09-06 | 2026-09-06 |
+| [s6842] | EGRUL extract | EGRUL extract (EGRUL_7811687549_20260907_ooo-diam-aero.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

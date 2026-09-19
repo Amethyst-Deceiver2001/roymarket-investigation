@@ -85,17 +85,17 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0084 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_6330037352_20260822_ooo-nova.json) | 2026-08-22 | 2026-08-22 |
-| s0753 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_6330037352_20260824_ooo-nova.json) | 2026-08-24 | — |
-| s6435 | Mchs | Mchs (MCHS_6330037352_20260906_fire-license-search-ooo-nova.html) | 2026-09-06 | — |
-| s6440 | Rkn | Rkn (RKN_6330037352_20260906_comms-license-search-ooo-nova.html) | 2026-09-06 | — |
-| s6446 | Rkn | Rkn (RKN_6330037352_20260907_frequency-registry-ooo-nova.html) | 2026-09-07 | — |
-| s6526 | Bfo | Bfo (BFO_6330037352_2021_ооо-нова.pdf) | — | — |
-| s6527 | Bfo | Bfo (BFO_6330037352_2022_ооо-нова.pdf) | — | — |
-| s6528 | Bfo | Bfo (BFO_6330037352_2023_ооо-нова.pdf) | — | — |
-| s6529 | Bfo | Bfo (BFO_6330037352_2024_ооо-нова.pdf) | — | — |
-| s6530 | Bfo | Bfo (BFO_6330037352_2025_ооо-нова.pdf) | — | — |
-| s6810 | EGRUL extract | EGRUL extract (EGRUL_6330037352_20260907_ooo-nova.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0084] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_6330037352_20260822_ooo-nova.json) | 2026-08-22 | 2026-08-22 |
+| [s0753] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_6330037352_20260824_ooo-nova.json) | 2026-08-24 | — |
+| [s6435] | Mchs | Mchs (MCHS_6330037352_20260906_fire-license-search-ooo-nova.html) | 2026-09-06 | — |
+| [s6440] | Rkn | Rkn (RKN_6330037352_20260906_comms-license-search-ooo-nova.html) | 2026-09-06 | — |
+| [s6446] | Rkn | Rkn (RKN_6330037352_20260907_frequency-registry-ooo-nova.html) | 2026-09-07 | — |
+| [s6526] | Bfo | Bfo (BFO_6330037352_2021_ооо-нова.pdf) | — | — |
+| [s6527] | Bfo | Bfo (BFO_6330037352_2022_ооо-нова.pdf) | — | — |
+| [s6528] | Bfo | Bfo (BFO_6330037352_2023_ооо-нова.pdf) | — | — |
+| [s6529] | Bfo | Bfo (BFO_6330037352_2024_ооо-нова.pdf) | — | — |
+| [s6530] | Bfo | Bfo (BFO_6330037352_2025_ооо-нова.pdf) | — | — |
+| [s6810] | EGRUL extract | EGRUL extract (EGRUL_6330037352_20260907_ooo-nova.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

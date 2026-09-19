@@ -32,6 +32,7 @@ import re
 from pathlib import Path
 
 import jinja2
+from profile_text import bracket_source_ids_html, bracket_source_ids_md
 
 REPO = Path(__file__).resolve().parent.parent
 REG = REPO / "data" / "registry"
@@ -328,8 +329,10 @@ class ProductProfileBuilder:
         )
         OUT_DIR.mkdir(parents=True, exist_ok=True)
         html = html_env.get_template("product_profile.html.jinja2").render(**ctx)
+        html = bracket_source_ids_html(html)
         (OUT_DIR / f"{cfg['slug']}.html").write_text(html, encoding="utf-8")
         md = md_env.get_template("product_profile.md.jinja2").render(**ctx)
+        md = bracket_source_ids_md(md)
         md = re.sub(r"\n{3,}", "\n\n", md)
         (OUT_DIR / f"{cfg['slug']}.md").write_text(md, encoding="utf-8")
         return OUT_DIR / f"{cfg['slug']}.html", OUT_DIR / f"{cfg['slug']}.md"

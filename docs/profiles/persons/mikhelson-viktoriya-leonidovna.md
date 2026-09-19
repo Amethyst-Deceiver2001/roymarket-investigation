@@ -29,8 +29,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0856 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_mikhelson-viktoriya-leonidovna_20260824_mikhelson-viktoriya-leonidovna.json) | 2026-08-24 | — |
-| s6822 | EGRUL extract | EGRUL extract (EGRUL_7706809928_20260907_ooo-ges-2.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0856] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_mikhelson-viktoriya-leonidovna_20260824_mikhelson-viktoriya-leonidovna.json) | 2026-08-24 | — |
+| [s6822] | EGRUL extract | EGRUL extract (EGRUL_7706809928_20260907_ooo-ges-2.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -100,10 +100,10 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0509 | EGRUL extract | EGRUL extract (ul-1241800012222-20260823135044.pdf) | — | 2026-08-23 |
-| s6473 | Bfo | Bfo (BFO_1800023369_2024_ооо-кравт-удмуртия.pdf) | — | — |
-| s6474 | Bfo | Bfo (BFO_1800023369_2025_ооо-кравт-удмуртия.pdf) | — | — |
-| s6773 | EGRUL extract | EGRUL extract (EGRUL_1800023369_20260907_ooo-kravt-udmurtiya.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0509] | EGRUL extract | EGRUL extract (ul-1241800012222-20260823135044.pdf) | — | 2026-08-23 |
+| [s6473] | Bfo | Bfo (BFO_1800023369_2024_ооо-кравт-удмуртия.pdf) | — | — |
+| [s6474] | Bfo | Bfo (BFO_1800023369_2025_ооо-кравт-удмуртия.pdf) | — | — |
+| [s6773] | EGRUL extract | EGRUL extract (EGRUL_1800023369_20260907_ooo-kravt-udmurtiya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

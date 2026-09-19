@@ -41,10 +41,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0865 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_sokolov-german-olegovich_20260824_sokolov-german-olegovich.json) | 2026-08-24 | — |
-| s0953 | Rospatent patent record | Rospatent patent record (PATENT_RU218475U1_20260824_ooo-npo-rustekhdron.txt) | 2026-08-24 | — |
-| s1161 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5003153526_20260824_ooo-rtd-zashchita.json) | 2026-08-24 | 2026-08-24 |
-| s1163 | press coverage | press coverage (PRESS_20240119_istories-dron-inferno-rustekhdron.html) | 2024-01-19 | — |
+| [s0865] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_sokolov-german-olegovich_20260824_sokolov-german-olegovich.json) | 2026-08-24 | — |
+| [s0953] | Rospatent patent record | Rospatent patent record (PATENT_RU218475U1_20260824_ooo-npo-rustekhdron.txt) | 2026-08-24 | — |
+| [s1161] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5003153526_20260824_ooo-rtd-zashchita.json) | 2026-08-24 | 2026-08-24 |
+| [s1163] | press coverage | press coverage (PRESS_20240119_istories-dron-inferno-rustekhdron.html) | 2024-01-19 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

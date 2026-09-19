@@ -31,8 +31,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0451 | EGRUL extract | EGRUL extract (ul-1184205024849-20260823120210.pdf) | — | 2026-08-23 |
-| s7354 | Founding-Устав bundle | Founding-Устав bundle (UD_1237700273744_20260908_ooo-gaskar.zip) | 2026-09-08 | — |
+| [s0451] | EGRUL extract | EGRUL extract (ul-1184205024849-20260823120210.pdf) | — | 2026-08-23 |
+| [s7354] | Founding-Устав bundle | Founding-Устав bundle (UD_1237700273744_20260908_ooo-gaskar.zip) | 2026-09-08 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

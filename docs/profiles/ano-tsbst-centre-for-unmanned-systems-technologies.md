@@ -145,18 +145,18 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0178 | transcript | transcript (TRANSCRIPT_20250421_peregovorka-cbst-er-sidyakin-bezrukov.txt) | 2025-04-21 | — |
-| s0228 | EGRUL extract | EGRUL extract (ul-1247700190430-20260815005804.pdf) | — | 2026-08-15 |
-| s0382 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
-| s0383 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2024_20260816 (1).zip) | — | 2024-12-31 |
-| s0384 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0385 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
-| s0386 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2025_20260816 (1).zip) | — | 2025-12-31 |
-| s0387 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s0572 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7100032961_20260824_ooo-tsentr-bespilotnykh-sistem-tula.json) | 2026-08-24 | 2026-08-24 |
-| s0574 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9702064851_20260824_ano-tsbst-centre-for-unmanned-systems-technologies.json) | 2026-08-24 | — |
-| s0970 | GUR war-sanctions record | GUR war-sanctions record (GUR_20260824_delta-cbts611000-sample1.html) | 2026-08-24 | — |
-| s7536 | site capture | site capture (SITE_9702064851_20260916_ano-tsbst-logo.png) | 2026-09-16 | — |
+| [s0178] | transcript | transcript (TRANSCRIPT_20250421_peregovorka-cbst-er-sidyakin-bezrukov.txt) | 2025-04-21 | — |
+| [s0228] | EGRUL extract | EGRUL extract (ul-1247700190430-20260815005804.pdf) | — | 2026-08-15 |
+| [s0382] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
+| [s0383] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2024_20260816 (1).zip) | — | 2024-12-31 |
+| [s0384] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0385] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
+| [s0386] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2025_20260816 (1).zip) | — | 2025-12-31 |
+| [s0387] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9702064851_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s0572] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7100032961_20260824_ooo-tsentr-bespilotnykh-sistem-tula.json) | 2026-08-24 | 2026-08-24 |
+| [s0574] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9702064851_20260824_ano-tsbst-centre-for-unmanned-systems-technologies.json) | 2026-08-24 | — |
+| [s0970] | GUR war-sanctions record | GUR war-sanctions record (GUR_20260824_delta-cbts611000-sample1.html) | 2026-08-24 | — |
+| [s7536] | site capture | site capture (SITE_9702064851_20260916_ano-tsbst-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

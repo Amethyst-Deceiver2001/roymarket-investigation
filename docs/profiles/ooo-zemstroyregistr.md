@@ -59,13 +59,13 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7438 | EGRUL extract | EGRUL extract (EGRUL_OPEN_1659145169_20260914_ooo-zemstroyregistr-search.txt) | 2026-09-14 | — |
-| s7445 | EGRUL extract | EGRUL extract (EGRUL_1659145169_20260914_ooo-zemstroyregistr.pdf) | 2026-09-14 | 2026-09-14 |
-| s7471 | Bfo | Bfo (BFO_1659145169_2021_ooo-zemstroyregistr.pdf) | — | — |
-| s7472 | Bfo | Bfo (BFO_1659145169_2022_ooo-zemstroyregistr.pdf) | — | — |
-| s7473 | Bfo | Bfo (BFO_1659145169_2023_ooo-zemstroyregistr.pdf) | — | — |
-| s7474 | Bfo | Bfo (BFO_1659145169_2024_ooo-zemstroyregistr.pdf) | — | — |
-| s7475 | Bfo | Bfo (BFO_1659145169_2025_ooo-zemstroyregistr.pdf) | — | — |
+| [s7438] | EGRUL extract | EGRUL extract (EGRUL_OPEN_1659145169_20260914_ooo-zemstroyregistr-search.txt) | 2026-09-14 | — |
+| [s7445] | EGRUL extract | EGRUL extract (EGRUL_1659145169_20260914_ooo-zemstroyregistr.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7471] | Bfo | Bfo (BFO_1659145169_2021_ooo-zemstroyregistr.pdf) | — | — |
+| [s7472] | Bfo | Bfo (BFO_1659145169_2022_ooo-zemstroyregistr.pdf) | — | — |
+| [s7473] | Bfo | Bfo (BFO_1659145169_2023_ooo-zemstroyregistr.pdf) | — | — |
+| [s7474] | Bfo | Bfo (BFO_1659145169_2024_ooo-zemstroyregistr.pdf) | — | — |
+| [s7475] | Bfo | Bfo (BFO_1659145169_2025_ooo-zemstroyregistr.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -30,7 +30,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s6406 | transcript | transcript (TRANSCRIPT_20240924_arkhangel-spetsnaza-istories-admins-investigation.txt) | 2024-09-24 | — |
+| [s6406] | transcript | transcript (TRANSCRIPT_20240924_arkhangel-spetsnaza-istories-admins-investigation.txt) | 2024-09-24 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

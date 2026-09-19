@@ -67,11 +67,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0123 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7743414861_20260822_ao-korporatsiya-sinergiya.json) | 2026-08-22 | 2026-08-22 |
-| s0347 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743414861_2023_20260817.zip) | 2026-08-17 | 2023-12-31 |
-| s0348 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743414861_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
-| s0349 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743414861_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
-| s6831 | EGRUL extract | EGRUL extract (EGRUL_7743414861_20260907_ao-korporatsiya-sinergiya.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0123] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7743414861_20260822_ao-korporatsiya-sinergiya.json) | 2026-08-22 | 2026-08-22 |
+| [s0347] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743414861_2023_20260817.zip) | 2026-08-17 | 2023-12-31 |
+| [s0348] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743414861_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
+| [s0349] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743414861_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
+| [s6831] | EGRUL extract | EGRUL extract (EGRUL_7743414861_20260907_ao-korporatsiya-sinergiya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

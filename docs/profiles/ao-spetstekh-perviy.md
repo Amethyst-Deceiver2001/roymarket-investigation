@@ -59,9 +59,9 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0437 | EGRUL extract | EGRUL extract (ul-1267700128376-20260823014943.pdf) | — | 2026-08-23 |
-| s0805 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9703244871_20260824_ao-spetstekh-perviy.json) | 2026-08-24 | — |
-| s6857 | EGRUL extract | EGRUL extract (EGRUL_9703244871_20260907_ao-spetstekh-perviy.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0437] | EGRUL extract | EGRUL extract (ul-1267700128376-20260823014943.pdf) | — | 2026-08-23 |
+| [s0805] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9703244871_20260824_ao-spetstekh-perviy.json) | 2026-08-24 | — |
+| [s6857] | EGRUL extract | EGRUL extract (EGRUL_9703244871_20260907_ao-spetstekh-perviy.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

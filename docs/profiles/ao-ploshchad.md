@@ -91,17 +91,17 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0197 | Founding-Устав bundle | Founding-Устав bundle (UD_1993912.zip) | — | — |
-| s0472 | EGRUL extract | EGRUL extract (ul-1237700463032-20260823122931.pdf) | — | 2026-08-23 |
-| s0815 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9723203841_20260824_ao-ploshchad.json) | 2026-08-24 | — |
-| s0967 | GUR war-sanctions record | GUR war-sanctions record (GUR_9723203841_20260824_ao-ploshchad.html) | 2026-08-24 | — |
-| s3389 | Zakupki | Zakupki (ZAKUPKI_contract_1780601211726000023_20260829.html) | 2026-08-29 | — |
-| s3748 | Zakupki | Zakupki (ZAKUPKI_ATTACH_1780601211726000023_1780601211726000023_elektronnyy-kon-17806012117260000230004_3d1078c2.xml) | — | — |
-| s6674 | Bfo | Bfo (BFO_9723203841_2023_ао-площадь.pdf) | — | — |
-| s6675 | Bfo | Bfo (BFO_9723203841_2024_ао-площадь.pdf) | — | — |
-| s6676 | Bfo | Bfo (BFO_9723203841_2025_ао-площадь.pdf) | — | — |
-| s6769 | EGRUL extract | EGRUL extract (EGRUL_9723203841_20260907_ao-ploshchad.pdf) | 2026-09-07 | 2026-09-07 |
-| s7557 | site capture | site capture (SITE_9723203841_20260916_ao-ploshchad-logo.webp) | 2026-09-16 | — |
+| [s0197] | Founding-Устав bundle | Founding-Устав bundle (UD_1993912.zip) | — | — |
+| [s0472] | EGRUL extract | EGRUL extract (ul-1237700463032-20260823122931.pdf) | — | 2026-08-23 |
+| [s0815] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9723203841_20260824_ao-ploshchad.json) | 2026-08-24 | — |
+| [s0967] | GUR war-sanctions record | GUR war-sanctions record (GUR_9723203841_20260824_ao-ploshchad.html) | 2026-08-24 | — |
+| [s3389] | Zakupki | Zakupki (ZAKUPKI_contract_1780601211726000023_20260829.html) | 2026-08-29 | — |
+| [s3748] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1780601211726000023_1780601211726000023_elektronnyy-kon-17806012117260000230004_3d1078c2.xml) | — | — |
+| [s6674] | Bfo | Bfo (BFO_9723203841_2023_ао-площадь.pdf) | — | — |
+| [s6675] | Bfo | Bfo (BFO_9723203841_2024_ао-площадь.pdf) | — | — |
+| [s6676] | Bfo | Bfo (BFO_9723203841_2025_ао-площадь.pdf) | — | — |
+| [s6769] | EGRUL extract | EGRUL extract (EGRUL_9723203841_20260907_ao-ploshchad.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7557] | site capture | site capture (SITE_9723203841_20260916_ao-ploshchad-logo.webp) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

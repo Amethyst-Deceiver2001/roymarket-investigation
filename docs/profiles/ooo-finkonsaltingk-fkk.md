@@ -53,12 +53,12 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0103 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7709869763_20260822_ooo-finkonsaltingk-fkk.json) | 2026-08-22 | 2026-08-22 |
-| s0307 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7709869763_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
-| s0308 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7709869763_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0309 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7709869763_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s6702 | EGRUL extract | EGRUL extract (EGRUL_7709869763_20260907_ooo-finkonsaltingk-fkk.pdf) | 2026-09-07 | 2026-09-07 |
-| s7407 | Founding-Устав bundle | Founding-Устав bundle (UD_1117746033052_20260914_ooo-finkonsaltingk-fkk.zip) | 2026-09-14 | 2024-08-05 |
+| [s0103] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7709869763_20260822_ooo-finkonsaltingk-fkk.json) | 2026-08-22 | 2026-08-22 |
+| [s0307] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7709869763_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
+| [s0308] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7709869763_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0309] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7709869763_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s6702] | EGRUL extract | EGRUL extract (EGRUL_7709869763_20260907_ooo-finkonsaltingk-fkk.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7407] | Founding-Устав bundle | Founding-Устав bundle (UD_1117746033052_20260914_ooo-finkonsaltingk-fkk.zip) | 2026-09-14 | 2024-08-05 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -61,10 +61,10 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0353 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743451768_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0354 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743451768_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s5390 | Gisp | Gisp (GISP_20260903_goods-catalog-product-details-7-new-items.json) | 2026-09-03 | 2026-09-03 |
-| s6746 | EGRUL extract | EGRUL extract (EGRUL_7743451768_20260907_ooo-aviron.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0353] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743451768_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0354] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743451768_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s5390] | Gisp | Gisp (GISP_20260903_goods-catalog-product-details-7-new-items.json) | 2026-09-03 | 2026-09-03 |
+| [s6746] | EGRUL extract | EGRUL extract (EGRUL_7743451768_20260907_ooo-aviron.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

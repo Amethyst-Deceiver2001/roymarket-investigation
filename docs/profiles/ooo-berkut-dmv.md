@@ -43,7 +43,7 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7400 | Bfo | Bfo (BFO_9709100837_2024_ooo-berkut-dmv.pdf) | — | — |
+| [s7400] | Bfo | Bfo (BFO_9709100837_2024_ooo-berkut-dmv.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

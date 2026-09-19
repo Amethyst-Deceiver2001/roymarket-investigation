@@ -30,8 +30,8 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0568 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_2224171246_20260824_bf-ktspn-barnaul.json) | 2026-08-24 | 2026-08-24 |
-| s6774 | EGRUL extract | EGRUL extract (EGRUL_2224171246_20260907_bf-ktspn-barnaul.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0568] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_2224171246_20260824_bf-ktspn-barnaul.json) | 2026-08-24 | 2026-08-24 |
+| [s6774] | EGRUL extract | EGRUL extract (EGRUL_2224171246_20260907_bf-ktspn-barnaul.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

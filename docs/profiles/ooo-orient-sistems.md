@@ -82,20 +82,20 @@ _No named principals linked to this entity yet._
 
 ## Open questions
 
-- Founding решение (08.09.2014) names a sole founder (единственный учредитель) but the устав text doesn't give that person's name. By 28.09.2015, Шелаев Денис Владимирович signs alone as the sole (100%) participant — plausibly the same original founder, but not confirmed. The transition to the current 50/50 Шелаев/Лебедев split (source s0461) is undated in any document on file. [s0200]
+- Founding решение (08.09.2014) names a sole founder (единственный учредитель) but the устав text doesn't give that person's name. By 28.09.2015, Шелаев Денис Владимирович signs alone as the sole (100%) participant — plausibly the same original founder, but not confirmed. The transition to the current 50/50 Шелаев/Лебедев split (source [s0461]) is undated in any document on file. [s0200]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0200 | Founding-Устав bundle | Founding-Устав bundle (UD_1996173.zip) | — | 2015-09-28 |
-| s0355 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2021_20260821.zip) | 2026-08-21 | 2021-12-31 |
-| s0356 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2022_20260821.zip) | 2026-08-21 | 2022-12-31 |
-| s0357 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2023_20260821.zip) | 2026-08-21 | 2023-12-31 |
-| s0358 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
-| s0359 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
-| s0461 | EGRUL extract | EGRUL extract (ul-5147746083491-20260823120436.pdf) | — | 2026-08-23 |
-| s6832 | EGRUL extract | EGRUL extract (EGRUL_7743939185_20260907_ooo-orient-sistems.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0200] | Founding-Устав bundle | Founding-Устав bundle (UD_1996173.zip) | — | 2015-09-28 |
+| [s0355] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2021_20260821.zip) | 2026-08-21 | 2021-12-31 |
+| [s0356] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2022_20260821.zip) | 2026-08-21 | 2022-12-31 |
+| [s0357] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2023_20260821.zip) | 2026-08-21 | 2023-12-31 |
+| [s0358] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2024_20260821.zip) | 2026-08-21 | 2024-12-31 |
+| [s0359] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7743939185_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
+| [s0461] | EGRUL extract | EGRUL extract (ul-5147746083491-20260823120436.pdf) | — | 2026-08-23 |
+| [s6832] | EGRUL extract | EGRUL extract (EGRUL_7743939185_20260907_ooo-orient-sistems.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -50,13 +50,13 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7436 | EGRUL extract | EGRUL extract (EGRUL_OPEN_1658146106_20260914_ooo-arkodim-pro-search.txt) | 2026-09-14 | — |
-| s7443 | EGRUL extract | EGRUL extract (EGRUL_1658146106_20260914_ooo-arkodim-pro.pdf) | 2026-09-14 | 2026-09-14 |
-| s7456 | Bfo | Bfo (BFO_1658146106_2021_ooo-arkodim-pro.pdf) | — | — |
-| s7457 | Bfo | Bfo (BFO_1658146106_2022_ooo-arkodim-pro.pdf) | — | — |
-| s7458 | Bfo | Bfo (BFO_1658146106_2023_ooo-arkodim-pro.pdf) | — | — |
-| s7459 | Bfo | Bfo (BFO_1658146106_2024_ooo-arkodim-pro.pdf) | — | — |
-| s7460 | Bfo | Bfo (BFO_1658146106_2025_ooo-arkodim-pro.pdf) | — | — |
+| [s7436] | EGRUL extract | EGRUL extract (EGRUL_OPEN_1658146106_20260914_ooo-arkodim-pro-search.txt) | 2026-09-14 | — |
+| [s7443] | EGRUL extract | EGRUL extract (EGRUL_1658146106_20260914_ooo-arkodim-pro.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7456] | Bfo | Bfo (BFO_1658146106_2021_ooo-arkodim-pro.pdf) | — | — |
+| [s7457] | Bfo | Bfo (BFO_1658146106_2022_ooo-arkodim-pro.pdf) | — | — |
+| [s7458] | Bfo | Bfo (BFO_1658146106_2023_ooo-arkodim-pro.pdf) | — | — |
+| [s7459] | Bfo | Bfo (BFO_1658146106_2024_ooo-arkodim-pro.pdf) | — | — |
+| [s7460] | Bfo | Bfo (BFO_1658146106_2025_ooo-arkodim-pro.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

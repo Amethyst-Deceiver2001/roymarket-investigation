@@ -49,8 +49,8 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7406 | Bfo | Bfo (BFO_9725186180_2025_ooo-tekhnomost.pdf) | — | — |
-| s7453 | EGRUL extract | EGRUL extract (EGRUL_9725186180_20260914_ooo-tekhnomost.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7406] | Bfo | Bfo (BFO_9725186180_2025_ooo-tekhnomost.pdf) | — | — |
+| [s7453] | EGRUL extract | EGRUL extract (EGRUL_9725186180_20260914_ooo-tekhnomost.pdf) | 2026-09-14 | 2026-09-14 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

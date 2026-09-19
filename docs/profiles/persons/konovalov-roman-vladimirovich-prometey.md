@@ -31,7 +31,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s6956 | EGRUL extract | EGRUL extract (EGRUL_6154171470_20260907_ooo-prometey.pdf) | 2026-09-07 | 2026-09-08 |
+| [s6956] | EGRUL extract | EGRUL extract (EGRUL_6154171470_20260907_ooo-prometey.pdf) | 2026-09-07 | 2026-09-08 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

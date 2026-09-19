@@ -31,8 +31,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0432 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9731094770_20260822_ooo-tsugam.json) | 2026-08-22 | 2026-08-22 |
-| s2710 | Rupep | Rupep (RUPEP_20260826_sokolova-olga-mikhaylovna.pdf) | 2026-08-26 | 2026-06-02 |
+| [s0432] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9731094770_20260822_ooo-tsugam.json) | 2026-08-22 | 2026-08-22 |
+| [s2710] | Rupep | Rupep (RUPEP_20260826_sokolova-olga-mikhaylovna.pdf) | 2026-08-26 | 2026-06-02 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

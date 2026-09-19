@@ -56,8 +56,8 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s6915 | Tgpost | Tgpost (TGPOST_20250422_rogozin_do-7047-arkhangel-cross-post.txt) | 2025-04-22 | — |
-| s7405 | Bfo | Bfo (BFO_9722102248_2025_ooo-hab-svo.pdf) | — | — |
+| [s6915] | Tgpost | Tgpost (TGPOST_20250422_rogozin_do-7047-arkhangel-cross-post.txt) | 2025-04-22 | — |
+| [s7405] | Bfo | Bfo (BFO_9722102248_2025_ooo-hab-svo.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

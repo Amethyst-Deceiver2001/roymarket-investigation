@@ -28,8 +28,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0482 | EGRUL extract | EGRUL extract (ul-1207700030493-20260823132102.pdf) | — | 2026-08-23 |
-| s0866 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_sokolov-nikita-dmitrievich_20260824_sokolov-nikita-dmitrievich.json) | 2026-08-24 | — |
+| [s0482] | EGRUL extract | EGRUL extract (ul-1207700030493-20260823132102.pdf) | — | 2026-08-23 |
+| [s0866] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_sokolov-nikita-dmitrievich_20260824_sokolov-nikita-dmitrievich.json) | 2026-08-24 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -57,11 +57,11 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0099 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7706664648_20260822_ooo-orion.json) | 2026-08-22 | 2026-08-22 |
-| s0304 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706664648_2023_20260815.zip) | 2026-08-15 | 2023-12-31 |
-| s0305 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706664648_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
-| s0306 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706664648_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
-| s6701 | EGRUL extract | EGRUL extract (EGRUL_7706664648_20260907_ooo-orion.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0099] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7706664648_20260822_ooo-orion.json) | 2026-08-22 | 2026-08-22 |
+| [s0304] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706664648_2023_20260815.zip) | 2026-08-15 | 2023-12-31 |
+| [s0305] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706664648_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
+| [s0306] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7706664648_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
+| [s6701] | EGRUL extract | EGRUL extract (EGRUL_7706664648_20260907_ooo-orion.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

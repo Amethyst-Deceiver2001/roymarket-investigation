@@ -78,20 +78,20 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0115 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7729150663_20260822_ao-tsentr-telko.json) | 2026-08-22 | 2026-08-22 |
-| s1441 | Zakupki | Zakupki (ZAKUPKI_7729150663_20260825_supplier-search.html) | 2026-08-25 | 2026-08-26 |
-| s1934 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7729150663_0173100012414000131_kontrakt-01731000124140001310002_078966d9.doc) | — | 2014-07-31 |
-| s1937 | Zakupki | Zakupki (ZAKUPKI_ATTACH_7729150663_0373200001914000222_zao-tsentr-telko_00559ba3.pdf) | — | 2014-06-02 |
-| s1965 | Zakupki | Zakupki (ZAKUPKI_contract_2771376023015000009_20260826.html) | 2026-08-26 | — |
-| s6437 | Mchs | Mchs (MCHS_7729150663_20260906_fire-license-search-ao-tsentr-telko.html) | 2026-09-06 | — |
-| s6444 | Rkn | Rkn (RKN_7729150663_20260906_comms-license-search-ao-tsentr-telko-full.html) | 2026-09-06 | — |
-| s6448 | Rkn | Rkn (RKN_7729150663_20260907_frequency-registry-ao-tsentr-telko.html) | 2026-09-07 | — |
-| s6583 | Bfo | Bfo (BFO_7729150663_2021_ао-центр-телко.pdf) | — | — |
-| s6584 | Bfo | Bfo (BFO_7729150663_2022_ао-центр-телко.pdf) | — | — |
-| s6585 | Bfo | Bfo (BFO_7729150663_2023_ао-центр-телко.pdf) | — | — |
-| s6586 | Bfo | Bfo (BFO_7729150663_2024_ао-центр-телко.pdf) | — | — |
-| s6587 | Bfo | Bfo (BFO_7729150663_2025_ао-центр-телко.pdf) | — | — |
-| s6743 | EGRUL extract | EGRUL extract (EGRUL_7729150663_20260907_ao-tsentr-telko.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0115] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7729150663_20260822_ao-tsentr-telko.json) | 2026-08-22 | 2026-08-22 |
+| [s1441] | Zakupki | Zakupki (ZAKUPKI_7729150663_20260825_supplier-search.html) | 2026-08-25 | 2026-08-26 |
+| [s1934] | Zakupki | Zakupki (ZAKUPKI_ATTACH_7729150663_0173100012414000131_kontrakt-01731000124140001310002_078966d9.doc) | — | 2014-07-31 |
+| [s1937] | Zakupki | Zakupki (ZAKUPKI_ATTACH_7729150663_0373200001914000222_zao-tsentr-telko_00559ba3.pdf) | — | 2014-06-02 |
+| [s1965] | Zakupki | Zakupki (ZAKUPKI_contract_2771376023015000009_20260826.html) | 2026-08-26 | — |
+| [s6437] | Mchs | Mchs (MCHS_7729150663_20260906_fire-license-search-ao-tsentr-telko.html) | 2026-09-06 | — |
+| [s6444] | Rkn | Rkn (RKN_7729150663_20260906_comms-license-search-ao-tsentr-telko-full.html) | 2026-09-06 | — |
+| [s6448] | Rkn | Rkn (RKN_7729150663_20260907_frequency-registry-ao-tsentr-telko.html) | 2026-09-07 | — |
+| [s6583] | Bfo | Bfo (BFO_7729150663_2021_ао-центр-телко.pdf) | — | — |
+| [s6584] | Bfo | Bfo (BFO_7729150663_2022_ао-центр-телко.pdf) | — | — |
+| [s6585] | Bfo | Bfo (BFO_7729150663_2023_ао-центр-телко.pdf) | — | — |
+| [s6586] | Bfo | Bfo (BFO_7729150663_2024_ао-центр-телко.pdf) | — | — |
+| [s6587] | Bfo | Bfo (BFO_7729150663_2025_ао-центр-телко.pdf) | — | — |
+| [s6743] | EGRUL extract | EGRUL extract (EGRUL_7729150663_20260907_ao-tsentr-telko.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

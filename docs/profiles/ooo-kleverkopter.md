@@ -100,22 +100,22 @@
 ## Open questions
 
 - Featured in rk.2035.university's curated БАС-industry showcase, describing the «Клевер» open educational drone platform -- corroborates significance; source carries no ИНН to cross-check. [s1168]
-- This entity's own rk.2035.university listing (s1169) describes «Курьер-30» with different specs than already on file here (up to 6kg payload / 0.055m³ / 18km range vs. the existing entry's 30kg MTOW / 6kg payload / 30km range) -- not reconciled; could be two product generations, a spec update, or one of the two sources being imprecise. [s1169]
+- This entity's own rk.2035.university listing ([s1169]) describes «Курьер-30» with different specs than already on file here (up to 6kg payload / 0.055m³ / 18km range vs. the existing entry's 30kg MTOW / 6kg payload / 30km range) -- not reconciled; could be two product generations, a spec update, or one of the two sources being imprecise. [s1169]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0464 | EGRUL extract | EGRUL extract (ul-1185275047176-20260823122917.pdf) | — | 2026-08-23 |
-| s0744 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5257183517_20260824_ooo-kleverkopter.json) | 2026-08-24 | — |
-| s1168 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
-| s1169 | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
-| s5545 | Bfo | Bfo (BFO_5257183517_2021_ооо-клеверкоптер.pdf) | — | — |
-| s5546 | Bfo | Bfo (BFO_5257183517_2022_ооо-клеверкоптер.pdf) | — | — |
-| s5547 | Bfo | Bfo (BFO_5257183517_2023_ооо-клеверкоптер.pdf) | — | — |
-| s5548 | Bfo | Bfo (BFO_5257183517_2024_ооо-клеверкоптер.pdf) | — | — |
-| s5549 | Bfo | Bfo (BFO_5257183517_2025_ооо-клеверкоптер.pdf) | — | — |
-| s6719 | EGRUL extract | EGRUL extract (EGRUL_5257183517_20260907_ooo-kleverkopter.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0464] | EGRUL extract | EGRUL extract (ul-1185275047176-20260823122917.pdf) | — | 2026-08-23 |
+| [s0744] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5257183517_20260824_ooo-kleverkopter.json) | 2026-08-24 | — |
+| [s1168] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-objects-catalog.json) | 2026-08-24 | — |
+| [s1169] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-bas-product-models.json) | 2026-08-24 | — |
+| [s5545] | Bfo | Bfo (BFO_5257183517_2021_ооо-клеверкоптер.pdf) | — | — |
+| [s5546] | Bfo | Bfo (BFO_5257183517_2022_ооо-клеверкоптер.pdf) | — | — |
+| [s5547] | Bfo | Bfo (BFO_5257183517_2023_ооо-клеверкоптер.pdf) | — | — |
+| [s5548] | Bfo | Bfo (BFO_5257183517_2024_ооо-клеверкоптер.pdf) | — | — |
+| [s5549] | Bfo | Bfo (BFO_5257183517_2025_ооо-клеверкоптер.pdf) | — | — |
+| [s6719] | EGRUL extract | EGRUL extract (EGRUL_5257183517_20260907_ooo-kleverkopter.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

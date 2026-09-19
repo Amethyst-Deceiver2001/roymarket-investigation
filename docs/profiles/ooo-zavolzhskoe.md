@@ -59,13 +59,13 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0061 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_3705066020_20260822_ooo-zavolzhskoe.json) | 2026-08-22 | 2026-08-22 |
-| s0255 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2022_20260815.zip) | 2026-08-15 | 2022-12-31 |
-| s0256 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2023_20260815.zip) | 2026-08-15 | 2023-12-31 |
-| s0257 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
-| s0258 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
-| s0295 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s6695 | EGRUL extract | EGRUL extract (EGRUL_3705066020_20260907_ooo-zavolzhskoe.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0061] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_3705066020_20260822_ooo-zavolzhskoe.json) | 2026-08-22 | 2026-08-22 |
+| [s0255] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2022_20260815.zip) | 2026-08-15 | 2022-12-31 |
+| [s0256] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2023_20260815.zip) | 2026-08-15 | 2023-12-31 |
+| [s0257] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
+| [s0258] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
+| [s0295] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s6695] | EGRUL extract | EGRUL extract (EGRUL_3705066020_20260907_ooo-zavolzhskoe.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

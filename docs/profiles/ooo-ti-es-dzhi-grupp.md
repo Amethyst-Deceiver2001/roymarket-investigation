@@ -82,7 +82,7 @@
 
 ### Telegram
 
-- <None>
+- <https://t.me/tsg_group71>
 
 ## Images
 
@@ -102,15 +102,15 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0244 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3257085996_2023_20260817.zip) | 2026-08-17 | 2023-12-31 |
-| s0245 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3257085996_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
-| s0246 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3257085996_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
-| s0456 | EGRUL extract | EGRUL extract (ul-1233200001066-20260823120457.pdf) | — | 2026-08-23 |
-| s3396 | Zakupki | Zakupki (ZAKUPKI_contract_2320000296325000067_20260829.html) | 2026-08-29 | — |
-| s3758 | Zakupki | Zakupki (ZAKUPKI_ATTACH_2320000296325000067_2320000296325000067_elektronnyy-kon-23200002963250000670004_a7747f0a.xml) | — | — |
-| s6781 | EGRUL extract | EGRUL extract (EGRUL_3257085996_20260907_ooo-ti-es-dzhi-grupp.pdf) | 2026-09-07 | 2026-09-07 |
-| s7502 | press coverage | press coverage (PRESS_20260520_kurskcity-tsg-yakim-bars-kursk-field-test.html) | 2026-05-20 | — |
-| s7561 | site capture | site capture (SITE_3257085996_20260916_ooo-ti-es-dzhi-grupp-logo.png) | 2026-09-16 | — |
+| [s0244] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3257085996_2023_20260817.zip) | 2026-08-17 | 2023-12-31 |
+| [s0245] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3257085996_2024_20260817.zip) | 2026-08-17 | 2024-12-31 |
+| [s0246] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3257085996_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
+| [s0456] | EGRUL extract | EGRUL extract (ul-1233200001066-20260823120457.pdf) | — | 2026-08-23 |
+| [s3396] | Zakupki | Zakupki (ZAKUPKI_contract_2320000296325000067_20260829.html) | 2026-08-29 | — |
+| [s3758] | Zakupki | Zakupki (ZAKUPKI_ATTACH_2320000296325000067_2320000296325000067_elektronnyy-kon-23200002963250000670004_a7747f0a.xml) | — | — |
+| [s6781] | EGRUL extract | EGRUL extract (EGRUL_3257085996_20260907_ooo-ti-es-dzhi-grupp.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7502] | press coverage | press coverage (PRESS_20260520_kurskcity-tsg-yakim-bars-kursk-field-test.html) | 2026-05-20 | — |
+| [s7561] | site capture | site capture (SITE_3257085996_20260916_ooo-ti-es-dzhi-grupp-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -78,15 +78,15 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0484 | EGRUL extract | EGRUL extract (ul-1217800070509-20260823131933.pdf) | — | 2026-08-23 |
-| s6614 | Bfo | Bfo (BFO_7810918592_2021_ооо-нпп-элво.pdf) | — | — |
-| s6615 | Bfo | Bfo (BFO_7810918592_2022_ооо-нпп-элво.pdf) | — | — |
-| s6616 | Bfo | Bfo (BFO_7810918592_2023_ооо-нпп-элво.pdf) | — | — |
-| s6617 | Bfo | Bfo (BFO_7810918592_2024_ооо-нпп-элво.pdf) | — | — |
-| s6618 | Bfo | Bfo (BFO_7810918592_2025_ооо-нпп-элво.pdf) | — | — |
-| s6750 | EGRUL extract | EGRUL extract (EGRUL_7810918592_20260907_npp-elvo-kolskaya-verf.pdf) | 2026-09-07 | 2026-09-07 |
-| s7417 | EGRUL extract | EGRUL extract (EGRUL_7810918592_20260914_npp-elvo-kolskaya-verf.pdf) | 2026-09-14 | 2026-09-14 |
-| s7549 | site capture | site capture (SITE_7810918592_20260916_npp-elvo-logo.png) | 2026-09-16 | — |
+| [s0484] | EGRUL extract | EGRUL extract (ul-1217800070509-20260823131933.pdf) | — | 2026-08-23 |
+| [s6614] | Bfo | Bfo (BFO_7810918592_2021_ооо-нпп-элво.pdf) | — | — |
+| [s6615] | Bfo | Bfo (BFO_7810918592_2022_ооо-нпп-элво.pdf) | — | — |
+| [s6616] | Bfo | Bfo (BFO_7810918592_2023_ооо-нпп-элво.pdf) | — | — |
+| [s6617] | Bfo | Bfo (BFO_7810918592_2024_ооо-нпп-элво.pdf) | — | — |
+| [s6618] | Bfo | Bfo (BFO_7810918592_2025_ооо-нпп-элво.pdf) | — | — |
+| [s6750] | EGRUL extract | EGRUL extract (EGRUL_7810918592_20260907_npp-elvo-kolskaya-verf.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7417] | EGRUL extract | EGRUL extract (EGRUL_7810918592_20260914_npp-elvo-kolskaya-verf.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7549] | site capture | site capture (SITE_7810918592_20260916_npp-elvo-logo.png) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

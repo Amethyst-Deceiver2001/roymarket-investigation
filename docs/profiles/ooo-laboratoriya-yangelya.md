@@ -43,7 +43,7 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7362 | EGRUL extract | EGRUL extract (EGRUL_2373028450_20260908_ooo-laboratoriya-yangelya.pdf) | 2026-09-08 | 2026-09-08 |
+| [s7362] | EGRUL extract | EGRUL extract (EGRUL_2373028450_20260908_ooo-laboratoriya-yangelya.pdf) | 2026-09-08 | 2026-09-08 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

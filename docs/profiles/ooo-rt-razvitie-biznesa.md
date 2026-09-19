@@ -68,9 +68,9 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0217 | EGRUL extract | EGRUL extract (ul-1147746392200-20260818193210.pdf) | — | 2026-08-18 |
-| s0768 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7704861136_20260824_ooo-rt-razvitie-biznesa.json) | 2026-08-24 | — |
-| s6820 | EGRUL extract | EGRUL extract (EGRUL_7704861136_20260907_ooo-rt-razvitie-biznesa.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0217] | EGRUL extract | EGRUL extract (ul-1147746392200-20260818193210.pdf) | — | 2026-08-18 |
+| [s0768] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7704861136_20260824_ooo-rt-razvitie-biznesa.json) | 2026-08-24 | — |
+| [s6820] | EGRUL extract | EGRUL extract (EGRUL_7704861136_20260907_ooo-rt-razvitie-biznesa.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

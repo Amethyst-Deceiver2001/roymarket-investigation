@@ -79,14 +79,14 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0481 | EGRUL extract | EGRUL extract (ul-1201600057097-20260823131757.pdf) | — | 2026-08-23 |
-| s6468 | Bfo | Bfo (BFO_1660349248_2021_ооо-метаскан.pdf) | — | — |
-| s6469 | Bfo | Bfo (BFO_1660349248_2022_ооо-метаскан.pdf) | — | — |
-| s6470 | Bfo | Bfo (BFO_1660349248_2023_ооо-метаскан.pdf) | — | — |
-| s6471 | Bfo | Bfo (BFO_1660349248_2024_ооо-метаскан.pdf) | — | — |
-| s6472 | Bfo | Bfo (BFO_1660349248_2025_ооо-метаскан.pdf) | — | — |
-| s6712 | EGRUL extract | EGRUL extract (EGRUL_1660349248_20260907_ooo-metaskan.pdf) | 2026-09-07 | 2026-09-07 |
-| s6937 | Proverki | Proverki (PROVERKI_1660349248_20260907_ooo-metaskan-inspection-history.txt) | 2026-09-07 | — |
+| [s0481] | EGRUL extract | EGRUL extract (ul-1201600057097-20260823131757.pdf) | — | 2026-08-23 |
+| [s6468] | Bfo | Bfo (BFO_1660349248_2021_ооо-метаскан.pdf) | — | — |
+| [s6469] | Bfo | Bfo (BFO_1660349248_2022_ооо-метаскан.pdf) | — | — |
+| [s6470] | Bfo | Bfo (BFO_1660349248_2023_ооо-метаскан.pdf) | — | — |
+| [s6471] | Bfo | Bfo (BFO_1660349248_2024_ооо-метаскан.pdf) | — | — |
+| [s6472] | Bfo | Bfo (BFO_1660349248_2025_ооо-метаскан.pdf) | — | — |
+| [s6712] | EGRUL extract | EGRUL extract (EGRUL_1660349248_20260907_ooo-metaskan.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6937] | Proverki | Proverki (PROVERKI_1660349248_20260907_ooo-metaskan-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

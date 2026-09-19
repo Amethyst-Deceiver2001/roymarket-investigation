@@ -44,11 +44,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7442 | EGRUL extract | EGRUL extract (EGRUL_OPEN_9726005220_20260914_associatsiya-tekhnologicheskogo-biznesa-search.txt) | 2026-09-14 | — |
-| s7495 | Bfo | Bfo (BFO_9726005220_2022_associatsiya-tekhnologicheskogo-biznesa.pdf) | — | — |
-| s7496 | Bfo | Bfo (BFO_9726005220_2023_associatsiya-tekhnologicheskogo-biznesa.pdf) | — | — |
-| s7497 | Bfo | Bfo (BFO_9726005220_2024_associatsiya-tekhnologicheskogo-biznesa.pdf) | — | — |
-| s7498 | Bfo | Bfo (BFO_9726005220_2025_associatsiya-tekhnologicheskogo-biznesa.pdf) | — | — |
+| [s7442] | EGRUL extract | EGRUL extract (EGRUL_OPEN_9726005220_20260914_associatsiya-tekhnologicheskogo-biznesa-search.txt) | 2026-09-14 | — |
+| [s7495] | Bfo | Bfo (BFO_9726005220_2022_associatsiya-tekhnologicheskogo-biznesa.pdf) | — | — |
+| [s7496] | Bfo | Bfo (BFO_9726005220_2023_associatsiya-tekhnologicheskogo-biznesa.pdf) | — | — |
+| [s7497] | Bfo | Bfo (BFO_9726005220_2024_associatsiya-tekhnologicheskogo-biznesa.pdf) | — | — |
+| [s7498] | Bfo | Bfo (BFO_9726005220_2025_associatsiya-tekhnologicheskogo-biznesa.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -120,16 +120,16 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0237 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1215235283_2022_20260816.zip) | 2026-08-16 | 2022-12-31 |
-| s0238 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1215235283_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
-| s0239 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1215235283_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
-| s0240 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1215235283_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
-| s0453 | EGRUL extract | EGRUL extract (ul-1211200001650-20260823120350.pdf) | — | 2026-08-23 |
-| s5351 | document | document (PP719_1215235283_20220425_zaklyuchenie-37390-11.pdf) | 2022-04-25 | 2022-04-25 |
-| s5352 | document | document (PP719_1215235283_20231128_zaklyuchenie-128052-11.pdf) | 2023-11-28 | 2023-11-28 |
-| s6710 | EGRUL extract | EGRUL extract (EGRUL_1215235283_20260907_ooo-opkb-eksplomet.pdf) | 2026-09-07 | 2026-09-07 |
-| s6954 | Proverki | Proverki (PROVERKI_1215235283_20260907_ooo-opkb-eksplomet-inspection-history.txt) | 2026-09-07 | — |
-| s7559 | site capture | site capture (SITE_1215235283_20260916_ooo-opkb-eksplomet-logo.svg) | 2026-09-16 | — |
+| [s0237] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1215235283_2022_20260816.zip) | 2026-08-16 | 2022-12-31 |
+| [s0238] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1215235283_2023_20260816.zip) | 2026-08-16 | 2023-12-31 |
+| [s0239] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1215235283_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
+| [s0240] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_1215235283_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s0453] | EGRUL extract | EGRUL extract (ul-1211200001650-20260823120350.pdf) | — | 2026-08-23 |
+| [s5351] | document | document (PP719_1215235283_20220425_zaklyuchenie-37390-11.pdf) | 2022-04-25 | 2022-04-25 |
+| [s5352] | document | document (PP719_1215235283_20231128_zaklyuchenie-128052-11.pdf) | 2023-11-28 | 2023-11-28 |
+| [s6710] | EGRUL extract | EGRUL extract (EGRUL_1215235283_20260907_ooo-opkb-eksplomet.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6954] | Proverki | Proverki (PROVERKI_1215235283_20260907_ooo-opkb-eksplomet-inspection-history.txt) | 2026-09-07 | — |
+| [s7559] | site capture | site capture (SITE_1215235283_20260916_ooo-opkb-eksplomet-logo.svg) | 2026-09-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -363,23 +363,23 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0495 | EGRUL extract | EGRUL extract (ul-1117847020400-20260823133710.pdf) | — | 2026-08-23 |
-| s0797 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7813491943_20260824_ao-nii-vektor.json) | 2026-08-24 | — |
-| s1026 | Rospatent patent record | Rospatent patent record (PATENT_RU2763583C2_2026-08-24_ao-nii-vektor.json) | — | — |
-| s1051 | Rospatent patent record | Rospatent patent record (PATENT_RU2861850C1_2026-08-24_ao-nii-vektor.json) | — | — |
-| s3144 | Zakupki | Zakupki (ZAKUPKI_contract_0173100004511002669_20260829.html) | 2026-08-29 | — |
-| s3146 | Zakupki | Zakupki (ZAKUPKI_contract_0173100004511002671_20260829.html) | 2026-08-29 | — |
-| s3214 | Zakupki | Zakupki (ZAKUPKI_contract_1770425226115000509_20260829.html) | 2026-08-29 | — |
-| s3217 | Zakupki | Zakupki (ZAKUPKI_contract_1770425226117000583_20260829.html) | 2026-08-29 | — |
-| s3218 | Zakupki | Zakupki (ZAKUPKI_contract_1772054420822000003_20260829.html) | 2026-08-29 | — |
-| s5346 | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5370 | document | document (PP719_7813491943_20200422_zaklyuchenie-28088-05.pdf) | 2020-04-22 | 2020-04-22 |
-| s5391 | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
-| s6414 | bulk open-data extract | bulk open-data extract (DATASET_20260906_roscosmos-licenses-registry-api-full-dump.json) | 2026-09-06 | — |
-| s6415 | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-communications-license-search-ao-nii-vektor.json) | 2026-09-06 | — |
-| s6442 | Rkn | Rkn (RKN_7813491943_20260906_comms-license-search-ao-nii-vektor.html) | 2026-09-06 | — |
-| s6843 | EGRUL extract | EGRUL extract (EGRUL_7813491943_20260907_ao-nii-vektor.pdf) | 2026-09-07 | 2026-09-07 |
-| s6922 | Proverki | Proverki (PROVERKI_7813491943_20260907_ao-nii-vektor-inspection-history.txt) | 2026-09-07 | — |
+| [s0495] | EGRUL extract | EGRUL extract (ul-1117847020400-20260823133710.pdf) | — | 2026-08-23 |
+| [s0797] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7813491943_20260824_ao-nii-vektor.json) | 2026-08-24 | — |
+| [s1026] | Rospatent patent record | Rospatent patent record (PATENT_RU2763583C2_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s1051] | Rospatent patent record | Rospatent patent record (PATENT_RU2861850C1_2026-08-24_ao-nii-vektor.json) | — | — |
+| [s3144] | Zakupki | Zakupki (ZAKUPKI_contract_0173100004511002669_20260829.html) | 2026-08-29 | — |
+| [s3146] | Zakupki | Zakupki (ZAKUPKI_contract_0173100004511002671_20260829.html) | 2026-08-29 | — |
+| [s3214] | Zakupki | Zakupki (ZAKUPKI_contract_1770425226115000509_20260829.html) | 2026-08-29 | — |
+| [s3217] | Zakupki | Zakupki (ZAKUPKI_contract_1770425226117000583_20260829.html) | 2026-08-29 | — |
+| [s3218] | Zakupki | Zakupki (ZAKUPKI_contract_1772054420822000003_20260829.html) | 2026-08-29 | — |
+| [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5370] | document | document (PP719_7813491943_20200422_zaklyuchenie-28088-05.pdf) | 2020-04-22 | 2020-04-22 |
+| [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
+| [s6414] | bulk open-data extract | bulk open-data extract (DATASET_20260906_roscosmos-licenses-registry-api-full-dump.json) | 2026-09-06 | — |
+| [s6415] | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-communications-license-search-ao-nii-vektor.json) | 2026-09-06 | — |
+| [s6442] | Rkn | Rkn (RKN_7813491943_20260906_comms-license-search-ao-nii-vektor.html) | 2026-09-06 | — |
+| [s6843] | EGRUL extract | EGRUL extract (EGRUL_7813491943_20260907_ao-nii-vektor.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6922] | Proverki | Proverki (PROVERKI_7813491943_20260907_ao-nii-vektor-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

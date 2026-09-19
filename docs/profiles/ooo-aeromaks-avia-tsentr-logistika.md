@@ -43,19 +43,19 @@
 
 ## Corporate links
 
-- **ООО «Аэромакс»** `sister-entity` — Same director (Бессонов Сергей Николаевич, EU-sanctioned per s0754) as ooo-aeromaks — confirms this is a sister/logistics-arm entity of the ГК «Аэромакс» group rather than an unrelated namesake (resolves the open question raised by the original brand-collision flag). OKVED 52.23.13 (aviation ground-handling logistics) is consistent with a group logistics subsidiary; not yet independently assessed for UAV-relevance beyond the shared director.
+- **ООО «Аэромакс»** `sister-entity` — Same director (Бессонов Сергей Николаевич, EU-sanctioned per [s0754]) as ooo-aeromaks — confirms this is a sister/logistics-arm entity of the ГК «Аэромакс» group rather than an unrelated namesake (resolves the open question raised by the original brand-collision flag). OKVED 52.23.13 (aviation ground-handling logistics) is consistent with a group logistics subsidiary; not yet independently assessed for UAV-relevance beyond the shared director.
 - **ООО «Аэромакс»** — Direct registered founder (1% + 99% treasury share held by the company itself). Confirms this is a genuine subsidiary/sister entity of the EU-sanctioned ooo-aeromaks, not merely a same-director namesake. (1%) [s7450]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7441 | EGRUL extract | EGRUL extract (EGRUL_OPEN_9704149557_20260914_ooo-aeromaks-avia-tsentr-logistika-search.txt) | 2026-09-14 | — |
-| s7450 | EGRUL extract | EGRUL extract (EGRUL_9704149557_20260914_ooo-aeromaks-avia-tsentr-logistika.pdf) | 2026-09-14 | 2026-09-14 |
-| s7491 | Bfo | Bfo (BFO_9704149557_2022_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
-| s7492 | Bfo | Bfo (BFO_9704149557_2023_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
-| s7493 | Bfo | Bfo (BFO_9704149557_2024_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
-| s7494 | Bfo | Bfo (BFO_9704149557_2025_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
+| [s7441] | EGRUL extract | EGRUL extract (EGRUL_OPEN_9704149557_20260914_ooo-aeromaks-avia-tsentr-logistika-search.txt) | 2026-09-14 | — |
+| [s7450] | EGRUL extract | EGRUL extract (EGRUL_9704149557_20260914_ooo-aeromaks-avia-tsentr-logistika.pdf) | 2026-09-14 | 2026-09-14 |
+| [s7491] | Bfo | Bfo (BFO_9704149557_2022_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
+| [s7492] | Bfo | Bfo (BFO_9704149557_2023_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
+| [s7493] | Bfo | Bfo (BFO_9704149557_2024_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
+| [s7494] | Bfo | Bfo (BFO_9704149557_2025_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -90,13 +90,13 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0274 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2021_20260820.zip) | 2026-08-20 | 2021-12-31 |
-| s0275 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2022_20260820.zip) | 2026-08-20 | 2022-12-31 |
-| s0276 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2023_20260820.zip) | 2026-08-20 | 2023-12-31 |
-| s0277 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2024_20260820.zip) | 2026-08-20 | 2024-12-31 |
-| s0278 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2025_20260820.zip) | 2026-08-20 | 2025-12-31 |
-| s0501 | EGRUL extract | EGRUL extract (ul-1215000018650-20260823135334.pdf) | — | 2026-08-23 |
-| s6796 | EGRUL extract | EGRUL extract (EGRUL_5027293811_20260907_ooo-aeroplatformy.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0274] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2021_20260820.zip) | 2026-08-20 | 2021-12-31 |
+| [s0275] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2022_20260820.zip) | 2026-08-20 | 2022-12-31 |
+| [s0276] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2023_20260820.zip) | 2026-08-20 | 2023-12-31 |
+| [s0277] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2024_20260820.zip) | 2026-08-20 | 2024-12-31 |
+| [s0278] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_5027293811_2025_20260820.zip) | 2026-08-20 | 2025-12-31 |
+| [s0501] | EGRUL extract | EGRUL extract (ul-1215000018650-20260823135334.pdf) | — | 2026-08-23 |
+| [s6796] | EGRUL extract | EGRUL extract (EGRUL_5027293811_20260907_ooo-aeroplatformy.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

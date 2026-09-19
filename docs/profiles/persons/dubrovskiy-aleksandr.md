@@ -45,10 +45,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5454 | Tgpost | Tgpost (TGPOST_20260626_projectArchangel-10381-arhangel-rocket-build-instructions.txt) | 2026-06-26 | — |
-| s5460 | Tgpost | Tgpost (TGPOST_multi_20230130-20260614_projectArchangel-fullmine-contacts-network.txt) | — | — |
-| s5461 | Tgusers | Tgusers (TGUSERS_20260904_academy-private-chat-1859964206-participant-scan.txt) | 2026-09-04 | — |
-| s5462 | Tgusers | Tgusers (TGUSERS_20260904_academy-private-chat-sender-crossref.txt) | 2026-09-04 | — |
+| [s5454] | Tgpost | Tgpost (TGPOST_20260626_projectArchangel-10381-arhangel-rocket-build-instructions.txt) | 2026-06-26 | — |
+| [s5460] | Tgpost | Tgpost (TGPOST_multi_20230130-20260614_projectArchangel-fullmine-contacts-network.txt) | — | — |
+| [s5461] | Tgusers | Tgusers (TGUSERS_20260904_academy-private-chat-1859964206-participant-scan.txt) | 2026-09-04 | — |
+| [s5462] | Tgusers | Tgusers (TGUSERS_20260904_academy-private-chat-sender-crossref.txt) | 2026-09-04 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

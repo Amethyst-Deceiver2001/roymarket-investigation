@@ -40,8 +40,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0111 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7720901379_20260822_ao-stratim.json) | 2026-08-22 | 2026-08-22 |
-| s0332 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7720901379_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
+| [s0111] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7720901379_20260822_ao-stratim.json) | 2026-08-22 | 2026-08-22 |
+| [s0332] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7720901379_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

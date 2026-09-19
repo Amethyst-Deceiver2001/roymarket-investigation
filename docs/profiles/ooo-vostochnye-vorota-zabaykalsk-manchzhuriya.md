@@ -66,13 +66,13 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0521 | EGRUL extract | EGRUL extract (ul-5167746405481-20260823133416.pdf) | — | 2026-08-23 |
-| s6545 | Bfo | Bfo (BFO_7703420474_2021_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
-| s6546 | Bfo | Bfo (BFO_7703420474_2022_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
-| s6547 | Bfo | Bfo (BFO_7703420474_2023_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
-| s6548 | Bfo | Bfo (BFO_7703420474_2024_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
-| s6549 | Bfo | Bfo (BFO_7703420474_2025_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
-| s6732 | EGRUL extract | EGRUL extract (EGRUL_7703420474_20260907_ooo-vostochnye-vorota-zabaykalsk-manchzhuriya.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0521] | EGRUL extract | EGRUL extract (ul-5167746405481-20260823133416.pdf) | — | 2026-08-23 |
+| [s6545] | Bfo | Bfo (BFO_7703420474_2021_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
+| [s6546] | Bfo | Bfo (BFO_7703420474_2022_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
+| [s6547] | Bfo | Bfo (BFO_7703420474_2023_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
+| [s6548] | Bfo | Bfo (BFO_7703420474_2024_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
+| [s6549] | Bfo | Bfo (BFO_7703420474_2025_ооо-восточные-ворота-забаикальск-маньчжурия.pdf) | — | — |
+| [s6732] | EGRUL extract | EGRUL extract (EGRUL_7703420474_20260907_ooo-vostochnye-vorota-zabaykalsk-manchzhuriya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

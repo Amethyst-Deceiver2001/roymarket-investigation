@@ -52,9 +52,9 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s6619 | Bfo | Bfo (BFO_7813680637_2024_ооо-бтр.pdf) | — | — |
-| s6620 | Bfo | Bfo (BFO_7813680637_2025_ооо-бтр.pdf) | — | — |
-| s6844 | EGRUL extract | EGRUL extract (EGRUL_7813680637_20260907_ooo-btr-bespilotnye-tekhnologicheskie-resheniya.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6619] | Bfo | Bfo (BFO_7813680637_2024_ооо-бтр.pdf) | — | — |
+| [s6620] | Bfo | Bfo (BFO_7813680637_2025_ооо-бтр.pdf) | — | — |
+| [s6844] | EGRUL extract | EGRUL extract (EGRUL_7813680637_20260907_ooo-btr-bespilotnye-tekhnologicheskie-resheniya.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -22,7 +22,7 @@
 |---|---|---|
 | Степаева Мария Ивановна | 2025-09-11 | personal ИНН 773507150348 [s0494] |
 | Баранова Ольга Владимировна | 2025-09-25 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 773578408917. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6828] |
-| Баранова Ольга Владимировна | 2026-08-22 | confirmed live via egrul.nalog.ru; re-confirmed again 2026-09-03 (s5416) — Степаева was director at s0494's snapshot date, replaced by Баранова by at least 2026-08-22 [s0120] |
+| Баранова Ольга Владимировна | 2026-08-22 | confirmed live via egrul.nalog.ru; re-confirmed again 2026-09-03 ([s5416]) — Степаева was director at [s0494]'s snapshot date, replaced by Баранова by at least 2026-08-22 [s0120] |
 
 ### Founders / ownership
 
@@ -61,9 +61,9 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0120 | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7735565264_20260822_ooo-praym.json) | 2026-08-22 | 2026-08-22 |
-| s0494 | EGRUL extract | EGRUL extract (ul-1097746825945-20260823135736.pdf) | — | 2026-08-23 |
-| s6828 | EGRUL extract | EGRUL extract (EGRUL_7735565264_20260907_ooo-praym.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0120] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7735565264_20260822_ooo-praym.json) | 2026-08-22 | 2026-08-22 |
+| [s0494] | EGRUL extract | EGRUL extract (ul-1097746825945-20260823135736.pdf) | — | 2026-08-23 |
+| [s6828] | EGRUL extract | EGRUL extract (EGRUL_7735565264_20260907_ooo-praym.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

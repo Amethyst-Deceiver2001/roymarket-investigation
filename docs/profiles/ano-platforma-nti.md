@@ -69,14 +69,14 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0443 | document | document (990fb105-2bfd-4bd4-b6e0-bfadc3a6a2e6.pdf) | — | 2025-12-31 |
-| s0765 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7703469180_20260824_ano-platforma-nti.json) | 2026-08-24 | — |
-| s6550 | Bfo | Bfo (BFO_7703469180_2021_ано-платформа-нти.pdf) | — | — |
-| s6551 | Bfo | Bfo (BFO_7703469180_2022_ано-платформа-нти.pdf) | — | — |
-| s6552 | Bfo | Bfo (BFO_7703469180_2023_ано-платформа-нти.pdf) | — | — |
-| s6553 | Bfo | Bfo (BFO_7703469180_2024_ано-платформа-нти.pdf) | — | — |
-| s6554 | Bfo | Bfo (BFO_7703469180_2025_ано-платформа-нти.pdf) | — | — |
-| s6817 | EGRUL extract | EGRUL extract (EGRUL_7703469180_20260907_ano-platforma-nti.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0443] | document | document (990fb105-2bfd-4bd4-b6e0-bfadc3a6a2e6.pdf) | — | 2025-12-31 |
+| [s0765] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7703469180_20260824_ano-platforma-nti.json) | 2026-08-24 | — |
+| [s6550] | Bfo | Bfo (BFO_7703469180_2021_ано-платформа-нти.pdf) | — | — |
+| [s6551] | Bfo | Bfo (BFO_7703469180_2022_ано-платформа-нти.pdf) | — | — |
+| [s6552] | Bfo | Bfo (BFO_7703469180_2023_ано-платформа-нти.pdf) | — | — |
+| [s6553] | Bfo | Bfo (BFO_7703469180_2024_ано-платформа-нти.pdf) | — | — |
+| [s6554] | Bfo | Bfo (BFO_7703469180_2025_ано-платформа-нти.pdf) | — | — |
+| [s6817] | EGRUL extract | EGRUL extract (EGRUL_7703469180_20260907_ano-platforma-nti.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

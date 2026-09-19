@@ -81,12 +81,12 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s7351 | EGRUL extract | EGRUL extract (EGRUL_5040176793_20260908_ooo-tskbr.pdf) | 2026-09-08 | 2026-09-08 |
-| s7382 | Bfo | Bfo (BFO_5040176793_2022_ooo-tskbr.pdf) | — | — |
-| s7383 | Bfo | Bfo (BFO_5040176793_2023_ooo-tskbr.pdf) | — | — |
-| s7384 | Bfo | Bfo (BFO_5040176793_2024_ooo-tskbr.pdf) | — | — |
-| s7385 | Bfo | Bfo (BFO_5040176793_2025_ooo-tskbr.pdf) | — | — |
-| s7503 | transcript | transcript (TRANSCRIPT_20260227_ano-cbst-dzhoker-fpv-first-combat-use.txt) | 2026-02-27 | — |
+| [s7351] | EGRUL extract | EGRUL extract (EGRUL_5040176793_20260908_ooo-tskbr.pdf) | 2026-09-08 | 2026-09-08 |
+| [s7382] | Bfo | Bfo (BFO_5040176793_2022_ooo-tskbr.pdf) | — | — |
+| [s7383] | Bfo | Bfo (BFO_5040176793_2023_ooo-tskbr.pdf) | — | — |
+| [s7384] | Bfo | Bfo (BFO_5040176793_2024_ooo-tskbr.pdf) | — | — |
+| [s7385] | Bfo | Bfo (BFO_5040176793_2025_ooo-tskbr.pdf) | — | — |
+| [s7503] | transcript | transcript (TRANSCRIPT_20260227_ano-cbst-dzhoker-fpv-first-combat-use.txt) | 2026-02-27 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

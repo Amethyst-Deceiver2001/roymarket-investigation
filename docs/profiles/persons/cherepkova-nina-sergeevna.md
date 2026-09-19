@@ -35,8 +35,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s1055 | Rospatent patent record | Rospatent patent record (PATENT_RU2025669326PREVM_20260824_npo-kaysant.json) | 2026-08-24 | — |
-| s2619 | Naletay | Naletay (NALETAY_773376903806_20260826_sellers-ip-cherepkova.html) | 2026-08-26 | 2026-08-26 |
+| [s1055] | Rospatent patent record | Rospatent patent record (PATENT_RU2025669326PREVM_20260824_npo-kaysant.json) | 2026-08-24 | — |
+| [s2619] | Naletay | Naletay (NALETAY_773376903806_20260826_sellers-ip-cherepkova.html) | 2026-08-26 | 2026-08-26 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

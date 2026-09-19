@@ -32,15 +32,15 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Disqualified-director registry:** No hits (checked 2026-09-08)
 - **Subsidiary-liability registry:** No hits (checked 2026-09-07)
 
-> **UA-NSDC** — Confirmed via OpenSanctions API, exact personal ИНН match (202902196209) — 2026-09-03 screening (s5413). Dataset: ua_nsdc_sanctions (Ukraine's National Security and Defense Council sanctions list), referent ua-nsdc-29644-kusumov-vahid-abdulovic. Sole founder (100%) of ooo-arkhangel-zaporizhzhie. [s5413]
+> **UA-NSDC** — Confirmed via OpenSanctions API, exact personal ИНН match (202902196209) — 2026-09-03 screening ([s5413]). Dataset: ua_nsdc_sanctions (Ukraine's National Security and Defense Council sanctions list), referent ua-nsdc-29644-kusumov-vahid-abdulovic. Sole founder (100%) of ooo-arkhangel-zaporizhzhie. [s5413]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0229 | EGRUL extract | EGRUL extract (ul-1249500004181-20260818024226.pdf) | — | 2026-08-18 |
-| s5413 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_archangel-family-batch_20260903.json) | 2026-09-03 | 2026-09-03 |
-| s6850 | EGRUL extract | EGRUL extract (EGRUL_9001027869_20260907_ooo-arkhangel-melitopol-2.pdf) | 2026-09-07 | 2026-09-07 |
+| [s0229] | EGRUL extract | EGRUL extract (ul-1249500004181-20260818024226.pdf) | — | 2026-08-18 |
+| [s5413] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_archangel-family-batch_20260903.json) | 2026-09-03 | 2026-09-03 |
+| [s6850] | EGRUL extract | EGRUL extract (EGRUL_9001027869_20260907_ooo-arkhangel-melitopol-2.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

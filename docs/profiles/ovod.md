@@ -131,7 +131,7 @@
 
 ### Telegram
 
-- <https://t.me/tulaovod> — Official brand channel for the umbrella "группа компаний «ОВОД»" (bio/posts speak in the company's own first-person voice), 831 posts scraped in this repo's own archive. Already used as the source for this entity's marketing_claims/battlefield_evidence/images (source s6456), but was missing from web.telegram itself until now.
+- <https://t.me/tulaovod> — Official brand channel for the umbrella "группа компаний «ОВОД»" (bio/posts speak in the company's own first-person voice), 831 posts scraped in this repo's own archive. Already used as the source for this entity's marketing_claims/battlefield_evidence/images (source [s6456]), but was missing from web.telegram itself until now.
 
 ## Images
 
@@ -155,24 +155,24 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0526 | EGRUL extract | EGRUL extract (ul-1227100012369-20260823143522.pdf) | — | 2026-08-23 |
-| s0759 | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7100027464_20260824_ovod.json) | 2026-08-24 | — |
-| s3372 | Zakupki | Zakupki (ZAKUPKI_contract_1312301779325000005_20260829.html) | 2026-08-29 | — |
-| s3374 | Zakupki | Zakupki (ZAKUPKI_contract_1366202088624000018_20260829.html) | 2026-08-29 | — |
-| s3375 | Zakupki | Zakupki (ZAKUPKI_contract_1366202088624000019_20260829.html) | 2026-08-29 | — |
-| s3376 | Zakupki | Zakupki (ZAKUPKI_contract_1366202088625000035_20260829.html) | 2026-08-29 | — |
-| s5344 | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
-| s5446 | Tgpost | Tgpost (TGPOST_multi_20260729-20260805_tulaovod-week-assassination-dovod-barsclaim.txt) | — | — |
-| s6451 | Telegram media | Telegram media (TGMEDIA_7100027464_20230817_tulaovod-post72-1.jpg) | 2023-08-17 | — |
-| s6454 | Telegram media | Telegram media (TGMEDIA_7100027464_20260306_tulaovod-post845-1.jpg) | 2026-03-06 | — |
-| s6455 | Telegram media | Telegram media (TGMEDIA_7100027464_20260526_tulaovod-post896-1.jpg) | 2026-05-26 | — |
-| s6456 | Tgpost | Tgpost (TGPOST_multi_20260907_tulaovod-marketing-battlefield-scan.txt) | 2026-09-07 | — |
-| s6531 | Bfo | Bfo (BFO_7100027464_2022_ооо-рлвт.pdf) | — | — |
-| s6532 | Bfo | Bfo (BFO_7100027464_2023_ооо-рлвт.pdf) | — | — |
-| s6533 | Bfo | Bfo (BFO_7100027464_2024_ооо-рлвт.pdf) | — | — |
-| s6534 | Bfo | Bfo (BFO_7100027464_2025_ооо-рлвт.pdf) | — | — |
-| s6727 | EGRUL extract | EGRUL extract (EGRUL_7100027464_20260907_ovod.pdf) | 2026-09-07 | 2026-09-07 |
-| s6960 | Proverki | Proverki (PROVERKI_7100027464_20260907_ovod-inspection-history.txt) | 2026-09-07 | — |
+| [s0526] | EGRUL extract | EGRUL extract (ul-1227100012369-20260823143522.pdf) | — | 2026-08-23 |
+| [s0759] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7100027464_20260824_ovod.json) | 2026-08-24 | — |
+| [s3372] | Zakupki | Zakupki (ZAKUPKI_contract_1312301779325000005_20260829.html) | 2026-08-29 | — |
+| [s3374] | Zakupki | Zakupki (ZAKUPKI_contract_1366202088624000018_20260829.html) | 2026-08-29 | — |
+| [s3375] | Zakupki | Zakupki (ZAKUPKI_contract_1366202088624000019_20260829.html) | 2026-08-29 | — |
+| [s3376] | Zakupki | Zakupki (ZAKUPKI_contract_1366202088625000035_20260829.html) | 2026-08-29 | — |
+| [s5344] | Gisp | Gisp (GISP_20260903_bas-manufacturer-catalog-155-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s5446] | Tgpost | Tgpost (TGPOST_multi_20260729-20260805_tulaovod-week-assassination-dovod-barsclaim.txt) | — | — |
+| [s6451] | Telegram media | Telegram media (TGMEDIA_7100027464_20230817_tulaovod-post72-1.jpg) | 2023-08-17 | — |
+| [s6454] | Telegram media | Telegram media (TGMEDIA_7100027464_20260306_tulaovod-post845-1.jpg) | 2026-03-06 | — |
+| [s6455] | Telegram media | Telegram media (TGMEDIA_7100027464_20260526_tulaovod-post896-1.jpg) | 2026-05-26 | — |
+| [s6456] | Tgpost | Tgpost (TGPOST_multi_20260907_tulaovod-marketing-battlefield-scan.txt) | 2026-09-07 | — |
+| [s6531] | Bfo | Bfo (BFO_7100027464_2022_ооо-рлвт.pdf) | — | — |
+| [s6532] | Bfo | Bfo (BFO_7100027464_2023_ооо-рлвт.pdf) | — | — |
+| [s6533] | Bfo | Bfo (BFO_7100027464_2024_ооо-рлвт.pdf) | — | — |
+| [s6534] | Bfo | Bfo (BFO_7100027464_2025_ооо-рлвт.pdf) | — | — |
+| [s6727] | EGRUL extract | EGRUL extract (EGRUL_7100027464_20260907_ovod.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6960] | Proverki | Proverki (PROVERKI_7100027464_20260907_ovod-inspection-history.txt) | 2026-09-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
