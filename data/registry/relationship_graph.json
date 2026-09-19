@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1099,
-  "edge_count": 1847,
-  "unresolved_count": 104,
+  "node_count": 1124,
+  "edge_count": 1884,
+  "unresolved_count": 107,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -78,6 +78,14 @@
       "degree": 2
     },
     {
+      "id": "alexandr-alex-bbggt",
+      "kind": "person",
+      "label": "Александр (фамилия не установлена)",
+      "name_latin": "Alexandr (surname not established)",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "alyaska",
       "kind": "entity",
       "label": "ООО «ИОНОС»",
@@ -98,6 +106,14 @@
       "degree": 1
     },
     {
+      "id": "andrew-first-pathfinder",
+      "kind": "person",
+      "label": "Andrew (фамилия не установлена)",
+      "name_latin": "Andrew (surname not established)",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "andrey-bezrukov",
       "kind": "person",
       "label": "Андрей Анатольевич Безруков",
@@ -110,6 +126,14 @@
       "kind": "person",
       "label": "Анкудинова Вероника Сергеевна",
       "name_latin": "Ankudinova Veronika Sergeevna",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
+      "id": "anlunegova-nastya-academy-admin",
+      "kind": "person",
+      "label": "Настя (фамилия не установлена)",
+      "name_latin": "Nastya (surname not established)",
       "sanctioned": false,
       "degree": 1
     },
@@ -776,6 +800,14 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 6
+    },
+    {
+      "id": "belissimo-bella-academy-admin",
+      "kind": "person",
+      "label": "Бэлла (фамилия не установлена)",
+      "name_latin": "Bella (surname not established)",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "beloglazova-lyudmila-aleksandrovna",
@@ -1456,6 +1488,14 @@
       "degree": 1
     },
     {
+      "id": "dubrovskiy-aleksandr",
+      "kind": "person",
+      "label": "Дубровский Александр",
+      "name_latin": "Aleksandr Dubrovskiy",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "dukal-marina-aleksandrovna",
       "kind": "person",
       "label": "Дукал Марина Александровна",
@@ -1500,6 +1540,14 @@
       "kind": "person",
       "label": "Елягин Сергей Владимирович",
       "name_latin": "Elyagin Sergey Vladimirovich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
+      "id": "evgeniy-sergeevich-ieto-yal",
+      "kind": "person",
+      "label": "Евгений Сергеевич (фамилия не установлена)",
+      "name_latin": "Evgeniy Sergeevich (surname not established)",
       "sanctioned": false,
       "degree": 1
     },
@@ -1574,6 +1622,14 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 3
+    },
+    {
+      "id": "filippov-mikhail-gennadevich",
+      "kind": "person",
+      "label": "Филиппов Михаил Геннадьевич",
+      "name_latin": "Mikhail Gennadevich Filippov",
+      "sanctioned": false,
+      "degree": 8
     },
     {
       "id": "fomin-aleksandr-nikolaevich",
@@ -1700,6 +1756,14 @@
       "degree": 2
     },
     {
+      "id": "gagarin-gagapih",
+      "kind": "person",
+      "label": "Гагарин (имя/фамилия не установлены, позывной/юзернейм)",
+      "name_latin": "\"Gagarin\" (handle, real name not established)",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "galaev-ilya-viktorovich",
       "kind": "person",
       "label": "Галаев Илья Викторович",
@@ -1760,6 +1824,14 @@
       "kind": "person",
       "label": "Гайлит Сергей Владимирович",
       "name_latin": "Gaylit Sergey Vladimirovich",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
+      "id": "geha-geha125ru",
+      "kind": "person",
+      "label": "Геха (фамилия не установлена, позывной/юзернейм)",
+      "name_latin": "\"Geha\" (handle, real name not established)",
       "sanctioned": false,
       "degree": 1
     },
@@ -1990,6 +2062,14 @@
       "name_latin": "Kazarinov Andrey Sergeevich",
       "sanctioned": false,
       "degree": 3
+    },
+    {
+      "id": "kaznova-tatyana-andreevna",
+      "kind": "person",
+      "label": "Казнова Татьяна Андреевна",
+      "name_latin": "Kaznova Tatyana Andreevna",
+      "sanctioned": false,
+      "degree": 4
     },
     {
       "id": "kelyan-andrey-khazarovich",
@@ -2250,6 +2330,14 @@
       "legal_form": null,
       "variant": null,
       "degree": 6
+    },
+    {
+      "id": "kryuchkov-dmitriy-aleksandrovich",
+      "kind": "person",
+      "label": "Крючков Дмитрий Александрович",
+      "name_latin": "Kryuchkov Dmitriy Aleksandrovich",
+      "sanctioned": false,
+      "degree": 5
     },
     {
       "id": "kulibin-klub",
@@ -2577,7 +2665,7 @@
       "sanctioned": true,
       "legal_form": "НПО",
       "variant": "defensive",
-      "degree": 21
+      "degree": 22
     },
     {
       "id": "npo-kilobatt",
@@ -2798,6 +2886,18 @@
       "legal_form": "ООО",
       "variant": null,
       "degree": 8
+    },
+    {
+      "id": "ooo-arkhangel-grupp",
+      "kind": "entity",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ ГРУПП\"",
+      "name_latin": "OOO \"Arkhangel Grupp\"",
+      "inn": "9702081286",
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": "ООО",
+      "variant": null,
+      "degree": 15
     },
     {
       "id": "ooo-arkodim",
@@ -3326,6 +3426,18 @@
       "legal_form": "ООО",
       "variant": null,
       "degree": 10
+    },
+    {
+      "id": "ooo-ml-konstrakshns",
+      "kind": "entity",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЛ КОНСТРАКШНС\"",
+      "name_latin": "OOO \"ML Konstrakshns\"",
+      "inn": "5026016117",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "ООО",
+      "variant": null,
+      "degree": 4
     },
     {
       "id": "ooo-momento-rubinshteyn",
@@ -4130,6 +4242,14 @@
       "name_latin": "Petrov Vladimir Alekseevich",
       "sanctioned": false,
       "degree": 4
+    },
+    {
+      "id": "petrovich-sapfpv",
+      "kind": "person",
+      "label": "Петрович (фамилия не установлена, позывной/юзернейм)",
+      "name_latin": "\"Petrovich\" (handle, real name not established)",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "petryaevskiy-mikhail-mikhaylovich",
@@ -9861,6 +9981,58 @@
       "degree": 1
     },
     {
+      "id": "product::proekt-kb-arkhangel::гермес-коллектив",
+      "kind": "product",
+      "label": "«Гермес коллектив»",
+      "owner_slug": "proekt-kb-arkhangel",
+      "source_id": "s5457",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::proekt-kb-arkhangel::дрон-ракета-перехватчик-архангел",
+      "kind": "product",
+      "label": "Дрон-ракета-перехватчик «Архангел»",
+      "owner_slug": "proekt-kb-arkhangel",
+      "source_id": "s5454",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::proekt-kb-arkhangel::ночник-пвн-прибор-наблюдения-с-экраном-7-и-5",
+      "kind": "product",
+      "label": "«Ночник ПВН» — прибор наблюдения (ПВН = пост воздушного наблюдения) с экраном 7\" и 5\"",
+      "owner_slug": "proekt-kb-arkhangel",
+      "source_id": "s7618",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::proekt-kb-arkhangel::слоненок",
+      "kind": "product",
+      "label": "«Слоненок»",
+      "owner_slug": "proekt-kb-arkhangel",
+      "source_id": "s5459",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::uraldronzavod::упырь",
       "kind": "product",
       "label": "Упырь",
@@ -9885,6 +10057,18 @@
         "ew_installation": "unknown"
       },
       "degree": 1
+    },
+    {
+      "id": "proekt-kb-arkhangel",
+      "kind": "entity",
+      "label": "Проект КБ «Архангел»",
+      "name_latin": "Project \"KB Arkhangel\"",
+      "inn": null,
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": "defensive",
+      "degree": 18
     },
     {
       "id": "protorguev-sergey-aleksandrovich",
@@ -9933,6 +10117,14 @@
       "name_latin": null,
       "sanctioned": true,
       "degree": 7
+    },
+    {
+      "id": "roman-academy-chat-79168352900",
+      "kind": "person",
+      "label": "Роман (фамилия не установлена)",
+      "name_latin": "Roman (surname not established)",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "rubtsov-leonid-viktorovich",
@@ -10229,6 +10421,14 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 2
+    },
+    {
+      "id": "skif-wozmezdiye",
+      "kind": "person",
+      "label": "СКИФ (фамилия не установлена, позывной/юзернейм)",
+      "name_latin": "\"SKIF\" (handle/callsign, real name not established)",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "skok-dmitriy-vladimirovich",
@@ -10604,6 +10804,24 @@
       "id": "stub::заяц светлана степановна",
       "kind": "unresolved",
       "label": "Заяц Светлана Степановна",
+      "degree": 1
+    },
+    {
+      "id": "stub::инн 502603133030 -",
+      "kind": "unresolved",
+      "label": "ИНН 502603133030 -",
+      "degree": 1
+    },
+    {
+      "id": "stub::инн 712900068586 -",
+      "kind": "unresolved",
+      "label": "ИНН 712900068586 -",
+      "degree": 1
+    },
+    {
+      "id": "stub::инн 771501583221 -",
+      "kind": "unresolved",
+      "label": "ИНН 771501583221 -",
       "degree": 1
     },
     {
@@ -11335,6 +11553,14 @@
       "degree": 1
     },
     {
+      "id": "zhukov-dmitriy",
+      "kind": "person",
+      "label": "Жуков Дмитрий",
+      "name_latin": "Dmitriy Zhukov",
+      "sanctioned": false,
+      "degree": 1
+    },
+    {
       "id": "ziganshin-ilshat-asgatovich",
       "kind": "person",
       "label": "Зиганшин Ильшат Асгатович",
@@ -11499,6 +11725,17 @@
       "confidence": null
     },
     {
+      "source": "alexandr-alex-bbggt",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Course participant (posted in the private chat, also member of Archangel_Forum)",
+      "source_id": "s5462",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "alyaska",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
@@ -11532,6 +11769,17 @@
       "confidence": null
     },
     {
+      "source": "andrew-first-pathfinder",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Course participant (posted in the private chat, also member of Archangel_Forum)",
+      "source_id": "s5462",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "andrey-bezrukov",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "role",
@@ -11548,6 +11796,17 @@
       "type": "role",
       "label": "co-inventor (patent RU2860540C1)",
       "source_id": "s1050",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "anlunegova-nastya-academy-admin",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Admin, «Академия Противодействия БПЛА» chat (3,256 members)",
+      "source_id": "s5461",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -14134,6 +14393,17 @@
       "label": "Генеральный директор",
       "source_id": "s6967",
       "as_of": "2021-12-22",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "belissimo-bella-academy-admin",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Admin, «Академия Противодействия БПЛА» chat (3,256 members)",
+      "source_id": "s5461",
+      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -17186,6 +17456,17 @@
       "confidence": null
     },
     {
+      "source": "dubrovskiy-aleksandr",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Course participant (posted in the private chat, also member of Archangel_Forum); self-stated external role below",
+      "source_id": "s5462",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "dukal-marina-aleksandrovna",
       "target": "fond-nasha-pravda",
       "type": "role",
@@ -17373,6 +17654,17 @@
       "confidence": null
     },
     {
+      "source": "evgeniy-sergeevich-ieto-yal",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Course participant (posted in the private chat, also member of Archangel_Forum)",
+      "source_id": "s5462",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "fedorov-andrey-viktorovich",
       "target": "ao-nii-vektor",
       "type": "role",
@@ -17533,6 +17825,94 @@
       "label": "Учредитель (25%)",
       "source_id": "s6962",
       "as_of": "2023-12-15",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "filippov-mikhail-gennadevich",
+      "target": "ooo-arkhangel-grupp",
+      "type": "founded",
+      "label": "80%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "filippov-mikhail-gennadevich",
+      "target": "ooo-arkhangel-grupp",
+      "type": "role",
+      "label": "founder",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "filippov-mikhail-gennadevich",
+      "target": "ooo-arkhangel-grupp",
+      "type": "role",
+      "label": "Учредитель, 80% доля (majority owner)",
+      "source_id": "s5474",
+      "as_of": "2026-03-12",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "filippov-mikhail-gennadevich",
+      "target": "ooo-ml-konstrakshns",
+      "type": "directs",
+      "label": null,
+      "source_id": "s6795",
+      "as_of": "2018-04-09",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "filippov-mikhail-gennadevich",
+      "target": "ooo-ml-konstrakshns",
+      "type": "directs",
+      "label": null,
+      "source_id": "s5450",
+      "as_of": "2026-09-04",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "filippov-mikhail-gennadevich",
+      "target": "ooo-ml-konstrakshns",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "filippov-mikhail-gennadevich",
+      "target": "ooo-ml-konstrakshns",
+      "type": "role",
+      "label": "Генеральный директор",
+      "source_id": "s5450",
+      "as_of": "2011-11-18",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "filippov-mikhail-gennadevich",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Head / lead figure",
+      "source_id": "s5454",
+      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -17791,6 +18171,17 @@
       "confidence": null
     },
     {
+      "source": "gagarin-gagapih",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Course participant (posted in the private chat, also member of Archangel_Forum)",
+      "source_id": "s5462",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "galaev-ilya-viktorovich",
       "target": "fgdr-federatsiya-gonok-dronov-rossii",
       "type": "directs",
@@ -18038,6 +18429,17 @@
       "type": "role",
       "label": "co-inventor (patent RU134783S)",
       "source_id": "s0982",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "geha-geha125ru",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Course participant (posted in the private chat, also member of Archangel_Forum)",
+      "source_id": "s5462",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -18710,6 +19112,50 @@
       "label": "co-inventor (patent RU2859188C1)",
       "source_id": "s1049",
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kaznova-tatyana-andreevna",
+      "target": "ooo-arkhangel-grupp",
+      "type": "founded",
+      "label": "5%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kaznova-tatyana-andreevna",
+      "target": "ooo-arkhangel-grupp",
+      "type": "role",
+      "label": "founder",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kaznova-tatyana-andreevna",
+      "target": "ooo-arkhangel-grupp",
+      "type": "role",
+      "label": "co-founder (5%)",
+      "source_id": "s5506",
+      "as_of": "2026-03-12",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kaznova-tatyana-andreevna",
+      "target": "ooo-arkhangel-grupp",
+      "type": "role",
+      "label": "Учредитель, 5% доля",
+      "source_id": "s5474",
+      "as_of": "2026-03-12",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -20008,6 +20454,61 @@
       "label": null,
       "source_id": null,
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kryuchkov-dmitriy-aleksandrovich",
+      "target": "ooo-arkhangel-grupp",
+      "type": "directs",
+      "label": null,
+      "source_id": "s5474",
+      "as_of": "2026-03-12",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "kryuchkov-dmitriy-aleksandrovich",
+      "target": "ooo-arkhangel-grupp",
+      "type": "founded",
+      "label": "15%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kryuchkov-dmitriy-aleksandrovich",
+      "target": "ooo-arkhangel-grupp",
+      "type": "role",
+      "label": "director",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kryuchkov-dmitriy-aleksandrovich",
+      "target": "ooo-arkhangel-grupp",
+      "type": "role",
+      "label": "founder",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kryuchkov-dmitriy-aleksandrovich",
+      "target": "ooo-arkhangel-grupp",
+      "type": "role",
+      "label": "генеральный директор and co-founder (15%)",
+      "source_id": "s5506",
+      "as_of": "2026-03-12",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -26371,6 +26872,17 @@
       "confidence": null
     },
     {
+      "source": "petrovich-sapfpv",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Course participant (posted in the private chat, also member of Archangel_Forum)",
+      "source_id": "s5462",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "petryaevskiy-mikhail-mikhaylovich",
       "target": "ao-nii-vektor",
       "type": "role",
@@ -26921,6 +27433,61 @@
       "confidence": null
     },
     {
+      "source": "proekt-kb-arkhangel",
+      "target": "npo-kaysant",
+      "type": "related",
+      "label": "component-supplier",
+      "source_id": "s5539",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "proekt-kb-arkhangel",
+      "target": "product::proekt-kb-arkhangel::гермес-коллектив",
+      "type": "produces",
+      "label": null,
+      "source_id": "s5457",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "proekt-kb-arkhangel",
+      "target": "product::proekt-kb-arkhangel::дрон-ракета-перехватчик-архангел",
+      "type": "produces",
+      "label": null,
+      "source_id": "s5454",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "proekt-kb-arkhangel",
+      "target": "product::proekt-kb-arkhangel::ночник-пвн-прибор-наблюдения-с-экраном-7-и-5",
+      "type": "produces",
+      "label": null,
+      "source_id": "s7618",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "proekt-kb-arkhangel",
+      "target": "product::proekt-kb-arkhangel::слоненок",
+      "type": "produces",
+      "label": null,
+      "source_id": "s5459",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "protorguev-sergey-aleksandrovich",
       "target": "ooo-kravt-udmurtiya",
       "type": "role",
@@ -27080,6 +27647,17 @@
       "type": "role",
       "label": "Член Совета директоров; также долгосрочный займодавец (₽302 тыс., 6.5%, погашение по предъявлении)",
       "source_id": "s0324",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "roman-academy-chat-79168352900",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Course participant (posted in the private chat, also member of Archangel_Forum)",
+      "source_id": "s5462",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -28313,6 +28891,17 @@
       "label": "Учредитель",
       "source_id": "s6777",
       "as_of": "2024-03-01",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "skif-wozmezdiye",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Course participant (posted in the private chat, also member of Archangel_Forum)",
+      "source_id": "s5462",
+      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -29558,6 +30147,39 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::инн 502603133030 -",
+      "target": "ooo-arkhangel-grupp",
+      "type": "founded",
+      "label": "80%",
+      "source_id": "s5474",
+      "as_of": "2026-03-12",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "stub::инн 712900068586 -",
+      "target": "ooo-arkhangel-grupp",
+      "type": "founded",
+      "label": "15%",
+      "source_id": "s5474",
+      "as_of": "2026-03-12",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "stub::инн 771501583221 -",
+      "target": "ooo-arkhangel-grupp",
+      "type": "founded",
+      "label": "5%",
+      "source_id": "s5474",
+      "as_of": "2026-03-12",
+      "weight": 1.0,
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -31607,6 +32229,17 @@
       "confidence": null
     },
     {
+      "source": "zhukov-dmitriy",
+      "target": "proekt-kb-arkhangel",
+      "type": "role",
+      "label": "Course participant (posted in the private chat, also member of Archangel_Forum)",
+      "source_id": "s5462",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ziganshin-ilshat-asgatovich",
       "target": "ooo-arkodim",
       "type": "role",
@@ -31978,6 +32611,27 @@
       "raw_name": "Заяц Светлана Степановна",
       "contexts": [
         "founder of ooo-uk-komaks"
+      ]
+    },
+    {
+      "id": "stub::инн 502603133030 -",
+      "raw_name": "ИНН 502603133030 -",
+      "contexts": [
+        "former founder of ooo-arkhangel-grupp"
+      ]
+    },
+    {
+      "id": "stub::инн 712900068586 -",
+      "raw_name": "ИНН 712900068586 -",
+      "contexts": [
+        "former founder of ooo-arkhangel-grupp"
+      ]
+    },
+    {
+      "id": "stub::инн 771501583221 -",
+      "raw_name": "ИНН 771501583221 -",
+      "contexts": [
+        "former founder of ooo-arkhangel-grupp"
       ]
     },
     {
@@ -32418,11 +33072,8 @@
     }
   ],
   "detached_ids": [
-    "alexandr-alex-bbggt",
     "aleynik-evgeniy",
-    "andrew-first-pathfinder",
     "andrey-turchak",
-    "anlunegova-nastya-academy-admin",
     "ao-fabrika-im-sovetskoy-armii",
     "ao-glavtekhkonstruktsiya",
     "ao-korporatsiya-sinergiya",
@@ -32433,7 +33084,6 @@
     "atlivanchik-sergey-nikolaevich",
     "barilo-denis-aleksandrovich",
     "baturin-vyacheslav-yurevich",
-    "belissimo-bella-academy-admin",
     "bf-ktspn-barnaul",
     "bulat-3mx",
     "chapurin-viktor-viktorovich",
@@ -32476,22 +33126,16 @@
     "dmitriy-medvedev",
     "dolgushevskiy-aleksey-mikhaylovich",
     "drobakha-inga-sergeevna",
-    "dubrovskiy-aleksandr",
     "efremov-anton-veniaminovich",
-    "evgeniy-sergeevich-ieto-yal",
     "fedorov-pavel-vyacheslavovich",
     "fedyaeva-anna-yurevna",
     "fedyukin-vladimir-anatolevich",
-    "filippov-mikhail-gennadevich",
-    "gagarin-gagapih",
-    "geha-geha125ru",
     "golovachev-vitaliy-yurevich",
     "goncharenko-anton-aleksandrovich",
     "ip-sidorov-andrey-sergeevich",
     "ivlev-artem-yurevich",
     "kalinovskiy-nikita-vladislavovich",
     "kashnikov-konstantin-nikolaevich",
-    "kaznova-tatyana-andreevna",
     "khabibulin-vladimir-igorevich",
     "khristyuk-ekaterina-valerevna",
     "khristyuk-vladimir-vladimirovich",
@@ -32500,7 +33144,6 @@
     "korolev-dmitriy-alekseevich",
     "kraskovskiy-vyacheslav-aleksandrovich",
     "krylov-andrey-olegovich",
-    "kryuchkov-dmitriy-aleksandrovich",
     "kulemin-igor-aleksandrovich",
     "kurteev-aleksandr-sergeevich",
     "kusumov-vakhid-abdulovich",
@@ -32517,7 +33160,6 @@
     "obrezanova-irina-vadimovna",
     "ooo-akatsiya-avia",
     "ooo-arkhangel-crimea",
-    "ooo-arkhangel-grupp",
     "ooo-arkhangel-istra",
     "ooo-arkhangel-melitopol-2",
     "ooo-arkhangel-shchit",
@@ -32536,7 +33178,6 @@
     "ooo-instekh",
     "ooo-intek-bespilotnye-sistemy",
     "ooo-krams",
-    "ooo-ml-konstrakshns",
     "ooo-mobil-grup",
     "ooo-npk-geron",
     "ooo-npo-nebo",
@@ -32550,7 +33191,6 @@
     "ooo-titan-severo-zapad",
     "ooo-tstp-tsifrovaya-transportnaya-platforma",
     "ooo-zetaks",
-    "petrovich-sapfpv",
     "porsev-andrey-valerevich",
     "product::ao-ross::мобильный-привязной-аэростатный-комплекс-акв-05",
     "product::ooo-arkhangel-shchit::дрон-перехватчик-архангел",
@@ -32602,19 +33242,12 @@
     "product::ooo-titan-severo-zapad::пзс-2000-т",
     "product::ooo-titan-severo-zapad::пзс-400-т",
     "product::ooo-titan-severo-zapad::пзс-800-т",
-    "product::proekt-kb-arkhangel::гермес-коллектив",
-    "product::proekt-kb-arkhangel::дрон-ракета-перехватчик-архангел",
-    "product::proekt-kb-arkhangel::ночник-пвн-прибор-наблюдения-с-экраном-7-и-5",
-    "product::proekt-kb-arkhangel::слоненок",
     "product::yarl::бпр-ярл",
     "product::yarl::бронежилет-для-собак-псы-войны",
-    "proekt-kb-arkhangel",
     "prokofev-mikhail-vasilevich",
     "protsenko-artem-vitalevich",
     "rogozin-dmitriy-olegovich",
-    "roman-academy-chat-79168352900",
     "shatskikh-aleksandr-vladimirovich",
-    "skif-wozmezdiye",
     "skoryatin-georgiy-andreevich",
     "stub::inn-5216017944",
     "stub::inn-5501278775",
@@ -32632,9 +33265,6 @@
     "stub::ермолов сергей юрьевич",
     "stub::замковой дмитрий сергеевич",
     "stub::иванов андрей георгиевич",
-    "stub::инн 502603133030 -",
-    "stub::инн 712900068586 -",
-    "stub::инн 771501583221 -",
     "stub::карцев максим владимирович",
     "stub::колосов артем иванович",
     "stub::костылин дмитрий евгеньевич",
@@ -32690,7 +33320,6 @@
     "zagorskiy-aleksandr-sergeevich",
     "zakelov-aleksandr-aleksandrovich",
     "zao-kurskpromteplitsa",
-    "zhukov-dmitriy",
     "zhulidov-evgeniy"
   ]
 }
