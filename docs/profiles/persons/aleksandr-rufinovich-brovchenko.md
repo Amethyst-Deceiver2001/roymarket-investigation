@@ -14,7 +14,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | Entity | Role | Since | Source |
 |---|---|---|---|
-| NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" | director — General Director, Фонд «Наша Правда», since 21.03.2023 | — |  |
+| NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" | director — General Director, Фонд «Наша Правда», since 21.03.2023 | — | [s0221] |
 
 ## Related persons
 

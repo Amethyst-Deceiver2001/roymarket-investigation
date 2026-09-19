@@ -19,7 +19,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Related persons
 
-- **Александр Руфинович Бровченко** — General Director, Фонд «Наша Правда», since 21.03.2023 — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH"
+- **Александр Руфинович Бровченко** — General Director, Фонд «Наша Правда», since 21.03.2023 — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0221]
 - **Виктор Ильич Давыдов** — Член Наблюдательного совета — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0389]
 - **Иван Игоревич Карабинский** — Член Наблюдательного совета — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0389]
 - **Устратов Дмитрий Владимирович** — Член Наблюдательного совета — shared entity: NON-PROFIT FOUNDATION FOR SUPPORTING OF PATRIOTIC INITIATIVES "OUR TRUTH" [s0389]

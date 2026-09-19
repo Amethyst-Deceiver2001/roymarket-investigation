@@ -15,7 +15,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | Entity | Role | Since | Source |
 |---|---|---|---|
-| ПАО «Банк ПСБ» | role — Chairman, ПАО «Банк ПСБ» | — |  |
+| ПАО «Банк ПСБ» | role — Chairman, ПАО «Банк ПСБ» | — | [s7600] |
 
 ## Sanctions & screening
 
@@ -30,6 +30,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | [s0860] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_petr-fradkov_20260824_petr-fradkov.json) | 2026-08-24 | — |
+| [s7600] | Tgpost | Tgpost (TGPOST_20250214_ano_cbst-453-cbst-supervisory-board-membership.txt) | 2025-02-14 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

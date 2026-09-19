@@ -29,12 +29,28 @@
           "degree": 1
         },
         {
+          "id": "aleksandr-osadchuk",
+          "kind": "person",
+          "label": "Александр Осадчук",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 1
+        },
+        {
           "id": "aleksandr-rufinovich-brovchenko",
           "kind": "person",
           "label": "Александр Руфинович Бровченко",
           "name_latin": null,
           "sanctioned": true,
           "degree": 3
+        },
+        {
+          "id": "aleksandr-sidyakin",
+          "kind": "person",
+          "label": "Александр Геннадьевич Сидякин",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 1
         },
         {
           "id": "alekseev-ilya-nikolaevich",
@@ -1691,6 +1707,14 @@
           "degree": 3
         },
         {
+          "id": "dmitriy-peskov",
+          "kind": "person",
+          "label": "Дмитрий Песков",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 2
+        },
+        {
           "id": "dmitriy-vladimirovich-rubinshteyn",
           "kind": "person",
           "label": "Дмитрий Владимирович Рубинштейн",
@@ -2335,6 +2359,14 @@
           "degree": 33
         },
         {
+          "id": "kirill-lysogorskiy",
+          "kind": "person",
+          "label": "Кирилл Лысогорский",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 1
+        },
+        {
           "id": "kirtok-aleksandr-sergeevich",
           "kind": "person",
           "label": "Кирток Александр Сергеевич",
@@ -2825,6 +2857,14 @@
           "name_latin": null,
           "sanctioned": true,
           "degree": 3
+        },
+        {
+          "id": "mikhail-kuznetsov",
+          "kind": "person",
+          "label": "Михаил Кузнецов",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
         },
         {
           "id": "mikhaylov-konstantin-denisovich",
@@ -4761,6 +4801,14 @@
           "name_latin": "Petkau Oleg Gergardovich",
           "sanctioned": false,
           "degree": 3
+        },
+        {
+          "id": "petr-fradkov",
+          "kind": "person",
+          "label": "Пётр Фрадков",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 1
         },
         {
           "id": "petrichkovich-yaroslav-yaroslavovich",
@@ -11134,6 +11182,17 @@
           "confidence": null
         },
         {
+          "source": "aleksandr-osadchuk",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Head of the Main Directorate for Innovative Development (ГУИР), Ministry of Defence",
+          "source_id": "s7600",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "aleksandr-rufinovich-brovchenko",
           "target": "fond-nasha-pravda",
           "type": "directs",
@@ -11142,6 +11201,28 @@
           "as_of": "2023-03-21",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "aleksandr-rufinovich-brovchenko",
+          "target": "fond-nasha-pravda",
+          "type": "role",
+          "label": "General Director, Фонд «Наша Правда», since 21.03.2023",
+          "source_id": "s0221",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "aleksandr-sidyakin",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Secretary of the Supervisory Board; Head of United Russia’s Central Executive Committee",
+          "source_id": "s7600",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -11187,6 +11268,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "alyaska",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly ((brand «Аляска»)) among ЦБСТ's own resident-company leadership in its 31.12.2025 New Year Telegram po...",
+          "source_id": "s7587",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "alyoshina-ekaterina-andreevna",
@@ -12166,6 +12258,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "ao-ploshchad",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ's own channel directly demonstrated «Площадь»'s targeting/navigation platform to troops, 09.06.2026, describing ...",
+          "source_id": "s7591",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "ao-ploshchad",
@@ -16106,6 +16209,17 @@
           "confidence": null
         },
         {
+          "source": "dmitriy-peskov",
+          "target": "ano-platforma-nti",
+          "type": "role",
+          "label": "Presidential special representative for digital and technological development; CEO, АНО «Платформа НТИ»",
+          "source_id": "s7600",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "dmitriy-vladimirovich-rubinshteyn",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "role",
@@ -16323,6 +16437,17 @@
           "as_of": "2020-07-20",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "dzema-vadim-vadimovich",
+          "target": "ooo-dron-reysing",
+          "type": "role",
+          "label": "sole founder / director",
+          "source_id": "s6742",
+          "as_of": "2018-06-18",
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -16654,6 +16779,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "fond-nasha-pravda",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Joint equipment deliveries to front-line units alongside ЦБСТ, at least twice.",
+          "source_id": "s7593",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "fond-nasha-pravda",
@@ -17778,6 +17914,17 @@
           "confidence": null
         },
         {
+          "source": "kirill-lysogorskiy",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Deputy Minister of Industry and Trade",
+          "source_id": "s7600",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "kirtok-aleksandr-sergeevich",
           "target": "ooo-trimiks-bulat-3mx",
           "type": "role",
@@ -17940,6 +18087,17 @@
           "as_of": "2026-08-04",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "koludarov-anton-valerevich",
+          "target": "ooo-mptm",
+          "type": "role",
+          "label": "Director, ООО «МПТМ» (as of 04.08.2026)",
+          "source_id": "s0230",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -18834,6 +18992,17 @@
           "confidence": null
         },
         {
+          "source": "mikhail-kuznetsov",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
+          "label": "Head of the Executive Committee, ОНФ (Popular Front)",
+          "source_id": "s7600",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "mikhaylov-konstantin-denisovich",
           "target": "ooo-trimiks-bulat-3mx",
           "type": "role",
@@ -19063,6 +19232,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "npo-kaysant",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly as \"резидент ЦБСТ\" by ЦБСТ's own channel, twice.",
+          "source_id": "s7597",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "npo-kaysant",
@@ -19869,6 +20049,17 @@
         },
         {
           "source": "npts-ushkuynik",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Indirect: parent АНО «НПЦ «Ушкуйник»» is a named ЦБСТ resident under a dated, primary-sourced cooperation agreement w...",
+          "source_id": "s7587",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "npts-ushkuynik",
           "target": "ooo-ushkuynik-sp",
           "type": "related",
           "label": "group-structure",
@@ -20031,6 +20222,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "ooo-aeromaks",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly by ЦБСТ's own channel as a sanctioned resident -- \"a tenth name\" in the same 24.04.2026 post (t.me/ANO...",
+          "source_id": "s7588",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "ooo-aeromaks",
@@ -20280,6 +20482,17 @@
           "type": "cbst_tie",
           "label": "Named directly by ЦБСТ's own channel as one of six EU-sanctioned ЦБСТ residents in the EU's 20th sanctions package (a...",
           "source_id": "s7588",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-aviron",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named among ЦБСТ's own resident-company leadership in ЦБСТ's own 31.12.2025 New Year Telegram post, alongside «Овод»,...",
+          "source_id": "s7587",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -20837,6 +21050,17 @@
         },
         {
           "source": "ooo-goudron",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Direct first-person confirmation of an ongoing ЦБСТ working relationship, from the company's own Telegram channel.",
+          "source_id": "s7598",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-goudron",
           "target": "product::ooo-goudron::набат-v3",
           "type": "produces",
           "label": null,
@@ -20845,6 +21069,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "ooo-kingpro",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named directly as a резидент ЦБСТ, alongside АО «Стратим», in a joint battlefield-delivery announcement (ЦБСТ/Единая ...",
+          "source_id": "s7592",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "ooo-kleverkopter",
@@ -21010,6 +21245,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "ooo-kravt",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ resident confirmed directly by the channel's own 11.04.2026 post: \"Резидент ЦБСТ запустил производство складного...",
+          "source_id": "s7599",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "ooo-kravt",
@@ -21182,6 +21428,17 @@
           "type": "cbst_tie",
           "label": "Named ЦБСТ resident; its tactical-footwear product was shown at the «Запад-2025» strategic exercises alongside other ...",
           "source_id": "s7586",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-metaskan",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ's own \"gift convoy\" delivery reporting: «Арена 5М» demining detonators handed over to Kursk-direction sappers, 1...",
+          "source_id": "s7594",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -21926,6 +22183,17 @@
         },
         {
           "source": "ooo-opkb-eksplomet",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ (АНО «Центр беспилотных систем и технологий») and ООО «ОПКБ ЭКСПЛОМЕТ» signed a formal strategic-cooperation agr...",
+          "source_id": "s7595",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-opkb-eksplomet",
           "target": "product::ooo-opkb-eksplomet::arena-5000pr",
           "type": "produces",
           "label": null,
@@ -22454,6 +22722,17 @@
         },
         {
           "source": "ooo-trimiks-bulat-3mx",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Product («Булат»/3mx) shown at ЦБСТ's Дронница 2025 showcase.",
+          "source_id": "s7596",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-trimiks-bulat-3mx",
           "target": "ooo-pokrov",
           "type": "related",
           "label": "dealer",
@@ -22689,6 +22968,17 @@
           "type": "role",
           "label": "co-inventor (patent RU2861850C1)",
           "source_id": "s1051",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "petr-fradkov",
+          "target": "pao-bank-psb",
+          "type": "role",
+          "label": "Chairman, ПАО «Банк ПСБ»",
+          "source_id": "s7600",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -23957,6 +24247,17 @@
           "as_of": "2026-08-24",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "sergey-rufinovich-brovchenko",
+          "target": "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta",
+          "type": "role",
+          "label": "General Director, Фонд поддержки зимних олимпийских видов спорта, since 11.11.2014",
+          "source_id": "s0098",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -33247,7 +33548,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "role",
           "label": "Head of the Main Directorate for Innovative Development (ГУИР), Ministry of Defence",
-          "source_id": null,
+          "source_id": "s7600",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33269,7 +33570,7 @@
           "target": "fond-nasha-pravda",
           "type": "role",
           "label": "General Director, Фонд «Наша Правда», since 21.03.2023",
-          "source_id": null,
+          "source_id": "s0221",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33291,7 +33592,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "role",
           "label": "Secretary of the Supervisory Board; Head of United Russia’s Central Executive Committee",
-          "source_id": null,
+          "source_id": "s7600",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33302,7 +33603,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Named directly ((brand «Аляска»)) among ЦБСТ's own resident-company leadership in its 31.12.2025 New Year Telegram po...",
-          "source_id": null,
+          "source_id": "s7587",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33445,7 +33746,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "ЦБСТ's own channel directly demonstrated «Площадь»'s targeting/navigation platform to troops, 09.06.2026, describing ...",
-          "source_id": null,
+          "source_id": "s7591",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33676,7 +33977,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Joint equipment deliveries to front-line units alongside ЦБСТ, at least twice.",
-          "source_id": null,
+          "source_id": "s7593",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33742,7 +34043,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "role",
           "label": "Deputy Minister of Industry and Trade",
-          "source_id": null,
+          "source_id": "s7600",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33764,7 +34065,7 @@
           "target": "ooo-mptm",
           "type": "role",
           "label": "Director, ООО «МПТМ» (as of 04.08.2026)",
-          "source_id": null,
+          "source_id": "s0230",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33808,7 +34109,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "role",
           "label": "Head of the Executive Committee, ОНФ (Popular Front)",
-          "source_id": null,
+          "source_id": "s7600",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33852,7 +34153,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Named directly as \"резидент ЦБСТ\" by ЦБСТ's own channel, twice.",
-          "source_id": null,
+          "source_id": "s7597",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33863,7 +34164,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Indirect: parent АНО «НПЦ «Ушкуйник»» is a named ЦБСТ resident under a dated, primary-sourced cooperation agreement w...",
-          "source_id": null,
+          "source_id": "s7587",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33885,7 +34186,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Named directly by ЦБСТ's own channel as a sanctioned resident -- \"a tenth name\" in the same 24.04.2026 post (t.me/ANO...",
-          "source_id": null,
+          "source_id": "s7588",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33951,7 +34252,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Named among ЦБСТ's own resident-company leadership in ЦБСТ's own 31.12.2025 New Year Telegram post, alongside «Овод»,...",
-          "source_id": null,
+          "source_id": "s7587",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -33995,7 +34296,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Direct first-person confirmation of an ongoing ЦБСТ working relationship, from the company's own Telegram channel.",
-          "source_id": null,
+          "source_id": "s7598",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -34006,7 +34307,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Named directly as a резидент ЦБСТ, alongside АО «Стратим», in a joint battlefield-delivery announcement (ЦБСТ/Единая ...",
-          "source_id": null,
+          "source_id": "s7592",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -34050,7 +34351,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "ЦБСТ resident confirmed directly by the channel's own 11.04.2026 post: \"Резидент ЦБСТ запустил производство складного...",
-          "source_id": null,
+          "source_id": "s7599",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -34072,7 +34373,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "ЦБСТ's own \"gift convoy\" delivery reporting: «Арена 5М» demining detonators handed over to Kursk-direction sappers, 1...",
-          "source_id": null,
+          "source_id": "s7594",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -34138,7 +34439,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "ЦБСТ (АНО «Центр беспилотных систем и технологий») and ООО «ОПКБ ЭКСПЛОМЕТ» signed a formal strategic-cooperation agr...",
-          "source_id": null,
+          "source_id": "s7595",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -34204,7 +34505,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Product («Булат»/3mx) shown at ЦБСТ's Дронница 2025 showcase.",
-          "source_id": null,
+          "source_id": "s7596",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -34292,7 +34593,7 @@
           "target": "pao-bank-psb",
           "type": "role",
           "label": "Chairman, ПАО «Банк ПСБ»",
-          "source_id": null,
+          "source_id": "s7600",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -34517,28 +34818,12 @@
           "degree": 1
         },
         {
-          "id": "aleksandr-osadchuk",
-          "kind": "person",
-          "label": "Александр Осадчук",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 1
-        },
-        {
           "id": "aleksandr-rufinovich-brovchenko",
           "kind": "person",
           "label": "Александр Руфинович Бровченко",
           "name_latin": null,
           "sanctioned": true,
           "degree": 3
-        },
-        {
-          "id": "aleksandr-sidyakin",
-          "kind": "person",
-          "label": "Александр Геннадьевич Сидякин",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 1
         },
         {
           "id": "aleksandrov-aleksey-vitalevich",
@@ -35445,14 +35730,6 @@
           "degree": 33
         },
         {
-          "id": "kirill-lysogorskiy",
-          "kind": "person",
-          "label": "Кирилл Лысогорский",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 1
-        },
-        {
           "id": "klimov-maksim-aleksandrovich",
           "kind": "person",
           "label": "Климов Максим Александрович",
@@ -35479,14 +35756,6 @@
           "legal_form": null,
           "variant": null,
           "degree": 3
-        },
-        {
-          "id": "koludarov-anton-valerevich",
-          "kind": "person",
-          "label": "Колударов Антон Валерьевич",
-          "name_latin": null,
-          "sanctioned": false,
-          "degree": 2
         },
         {
           "id": "konovalov-roman-vladimirovich-prometey",
@@ -35708,14 +35977,6 @@
           "id": "meshkova-nadezhda-filippovna",
           "kind": "person",
           "label": "Мешкова Надежда Филипповна",
-          "name_latin": null,
-          "sanctioned": false,
-          "degree": 1
-        },
-        {
-          "id": "mikhail-kuznetsov",
-          "kind": "person",
-          "label": "Михаил Кузнецов",
           "name_latin": null,
           "sanctioned": false,
           "degree": 1
@@ -36797,18 +37058,6 @@
           "degree": 5
         },
         {
-          "id": "ooo-mptm",
-          "kind": "entity",
-          "label": "ООО «МПТМ»",
-          "name_latin": null,
-          "inn": "9714068459",
-          "tier": "cbst-core",
-          "sanctioned": false,
-          "legal_form": "ООО",
-          "variant": null,
-          "degree": 4
-        },
-        {
           "id": "ooo-nova",
           "kind": "entity",
           "label": "ООО «НОВА»",
@@ -37591,14 +37840,6 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 3
-        },
-        {
-          "id": "petr-fradkov",
-          "kind": "person",
-          "label": "Пётр Фрадков",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 1
         },
         {
           "id": "petrov-aleksandr-vitalevich",
@@ -39590,14 +39831,6 @@
           "degree": 5
         },
         {
-          "id": "sergey-rufinovich-brovchenko",
-          "kind": "person",
-          "label": "Сергей Руфинович Бровченко",
-          "name_latin": null,
-          "sanctioned": false,
-          "degree": 3
-        },
-        {
           "id": "shagiakhmetov-ayrat-fatkhutdinovich",
           "kind": "person",
           "label": "Шагиахметов Айрат Фатхутдинович",
@@ -40649,43 +40882,10 @@
           "confidence": null
         },
         {
-          "source": "aleksandr-osadchuk",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "role",
-          "label": "Head of the Main Directorate for Innovative Development (ГУИР), Ministry of Defence",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "aleksandr-rufinovich-brovchenko",
-          "target": "fond-nasha-pravda",
-          "type": "role",
-          "label": "General Director, Фонд «Наша Правда», since 21.03.2023",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "aleksandr-rufinovich-brovchenko",
           "target": "fond-nasha-pravda",
           "type": "role",
           "label": "director",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "aleksandr-sidyakin",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "role",
-          "label": "Secretary of the Supervisory Board; Head of United Russia’s Central Executive Committee",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -40702,17 +40902,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
-        },
-        {
-          "source": "alyaska",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "Named directly ((brand «Аляска»)) among ЦБСТ's own resident-company leadership in its 31.12.2025 New Year Telegram po...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
         },
         {
           "source": "alyaska",
@@ -40922,17 +41111,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
-        },
-        {
-          "source": "ao-ploshchad",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "ЦБСТ's own channel directly demonstrated «Площадь»'s targeting/navigation platform to troops, 09.06.2026, describing ...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
         },
         {
           "source": "ao-ploshchad",
@@ -41818,17 +41996,6 @@
           "source": "dmitriy-peskov",
           "target": "ano-platforma-nti",
           "type": "role",
-          "label": "Presidential special representative for digital and technological development; CEO, АНО «Платформа НТИ»",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "dmitriy-peskov",
-          "target": "ano-platforma-nti",
-          "type": "role",
           "label": "director",
           "source_id": null,
           "as_of": null,
@@ -41909,17 +42076,6 @@
           "label": null,
           "source_id": null,
           "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "dzema-vadim-vadimovich",
-          "target": "ooo-dron-reysing",
-          "type": "role",
-          "label": "sole founder / director",
-          "source_id": null,
-          "as_of": "2018-06-18",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
@@ -42121,17 +42277,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
-        },
-        {
-          "source": "fond-nasha-pravda",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "Joint equipment deliveries to front-line units alongside ЦБСТ, at least twice.",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
         },
         {
           "source": "fond-nasha-pravda",
@@ -42739,17 +42884,6 @@
           "confidence": null
         },
         {
-          "source": "kirill-lysogorskiy",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "role",
-          "label": "Deputy Minister of Industry and Trade",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "klimov-maksim-aleksandrovich",
           "target": "ano-arrs-krasnodar",
           "type": "founded",
@@ -42798,17 +42932,6 @@
           "target": "ooo-selskohozyaystvennye-bespilotnye-sistemy-mira",
           "type": "role",
           "label": "founder",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "koludarov-anton-valerevich",
-          "target": "ooo-mptm",
-          "type": "role",
-          "label": "Director, ООО «МПТМ» (as of 04.08.2026)",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -43399,17 +43522,6 @@
           "confidence": "confirmed"
         },
         {
-          "source": "mikhail-kuznetsov",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "role",
-          "label": "Head of the Executive Committee, ОНФ (Popular Front)",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "mikhelson-leonid-viktorovich",
           "target": "ooo-levit",
           "type": "founded",
@@ -43551,17 +43663,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
-        },
-        {
-          "source": "npo-kaysant",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "Named directly as \"резидент ЦБСТ\" by ЦБСТ's own channel, twice.",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
         },
         {
           "source": "npo-kaysant",
@@ -43719,17 +43820,6 @@
         },
         {
           "source": "npts-ushkuynik",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "Indirect: parent АНО «НПЦ «Ушкуйник»» is a named ЦБСТ resident under a dated, primary-sourced cooperation agreement w...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
-        },
-        {
-          "source": "npts-ushkuynik",
           "target": "product::npts-ushkuynik::князь-вандал-новгородский",
           "type": "produces",
           "label": null,
@@ -43760,17 +43850,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
-        },
-        {
-          "source": "ooo-aeromaks",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "Named directly by ЦБСТ's own channel as a sanctioned resident -- \"a tenth name\" in the same 24.04.2026 post (t.me/ANO...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
         },
         {
           "source": "ooo-aeromaks",
@@ -44068,17 +44147,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
-        },
-        {
-          "source": "ooo-aviron",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "Named among ЦБСТ's own resident-company leadership in ЦБСТ's own 31.12.2025 New Year Telegram post, alongside «Овод»,...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
         },
         {
           "source": "ooo-aviron",
@@ -44488,17 +44556,6 @@
           "confidence": null
         },
         {
-          "source": "ooo-goudron",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "Direct first-person confirmation of an ongoing ЦБСТ working relationship, from the company's own Telegram channel.",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
-        },
-        {
           "source": "ooo-intek-bespilotnye-sistemy",
           "target": "product::ooo-intek-bespilotnye-sistemy::дрон-экспо",
           "type": "produces",
@@ -44554,17 +44611,6 @@
           "confidence": null
         },
         {
-          "source": "ooo-kingpro",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "Named directly as a резидент ЦБСТ, alongside АО «Стратим», in a joint battlefield-delivery announcement (ЦБСТ/Единая ...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
-        },
-        {
           "source": "ooo-kleverkopter",
           "target": "product::ooo-kleverkopter::аэромедик-680",
           "type": "produces",
@@ -44596,17 +44642,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
-        },
-        {
-          "source": "ooo-kravt",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "ЦБСТ resident confirmed directly by the channel's own 11.04.2026 post: \"Резидент ЦБСТ запустил производство складного...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
         },
         {
           "source": "ooo-kravt",
@@ -44742,17 +44777,6 @@
         },
         {
           "source": "ooo-metaskan",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "ЦБСТ's own \"gift convoy\" delivery reporting: «Арена 5М» demining detonators handed over to Kursk-direction sappers, 1...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
-        },
-        {
-          "source": "ooo-metaskan",
           "target": "product::ooo-metaskan::арена-5м",
           "type": "produces",
           "label": null,
@@ -44838,17 +44862,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
-        },
-        {
-          "source": "ooo-opkb-eksplomet",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "ЦБСТ (АНО «Центр беспилотных систем и технологий») and ООО «ОПКБ ЭКСПЛОМЕТ» signed a formal strategic-cooperation agr...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
         },
         {
           "source": "ooo-opkb-eksplomet",
@@ -45248,17 +45261,6 @@
         },
         {
           "source": "ooo-trimiks-bulat-3mx",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "Product («Булат»/3mx) shown at ЦБСТ's Дронница 2025 showcase.",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
-        },
-        {
-          "source": "ooo-trimiks-bulat-3mx",
           "target": "product::ooo-trimiks-bulat-3mx::азар",
           "type": "produces",
           "label": null,
@@ -45427,17 +45429,6 @@
           "target": "ao-ekolibri",
           "type": "founded",
           "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "petr-fradkov",
-          "target": "pao-bank-psb",
-          "type": "role",
-          "label": "Chairman, ПАО «Банк ПСБ»",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -45911,17 +45902,6 @@
           "target": "ao-npp-real",
           "type": "role",
           "label": "founder",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "sergey-rufinovich-brovchenko",
-          "target": "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta",
-          "type": "role",
-          "label": "General Director, Фонд поддержки зимних олимпийских видов спорта, since 11.11.2014",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,

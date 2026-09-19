@@ -14,7 +14,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | Entity | Role | Since | Source |
 |---|---|---|---|
-| ООО «ДРОН-РЕЙСИНГ» | director + founder — sole founder / director | 18.06.2018 |  |
+| ООО «ДРОН-РЕЙСИНГ» | director + founder — sole founder / director | 18.06.2018 | [s6742] |
 | ООО «НПО Рустехдрон» | role — co-inventor (patent RU218475U1, RU220486U1) | 20.04.2023 | [s0953] |
 
 ## Products linked via this person
@@ -41,6 +41,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|---|
 | [s0953] | Rospatent patent record | Rospatent patent record (PATENT_RU218475U1_20260824_ooo-npo-rustekhdron.txt) | 2026-08-24 | — |
 | [s1163] | press coverage | press coverage (PRESS_20240119_istories-dron-inferno-rustekhdron.html) | 2024-01-19 | — |
+| [s6742] | EGRUL extract | EGRUL extract (EGRUL_7728432295_20260907_ooo-dron-reysing.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._
