@@ -3,11 +3,10 @@
 This repo is a standalone spin-off of a ЦБСТ/РОЙ.МАРКЕТ (Russian "military
 marketplace" and its parent defence-tech body) OSINT investigation, migrated
 out of the `wb_watch` project on 2026-08-18 once it outgrew "annex to a WB
-tracker" scope. Read `notes/rebuild_plan.md` first in any new session — it
-has full context, current state, and pending work that this file doesn't
-repeat (each section ends with its own "Still open"/"Status" note; there
-is no separate `HANDOFF.md` — an earlier one was retired in favor of this
-single live file, see its own header note).
+tracker" scope. Read `notes/rebuild_plan.md` first in any new session — a lean live
+status doc (rewritten 2026-09-19) with current state, standing policy and
+pointers; the old 4,284-line session log is preserved verbatim at
+`notes/archive/rebuild_plan_archive_2026-09-19.md`.
 
 ## This repo has its own Telegram scraping pipeline — separate from wb_watch
 
