@@ -108,8 +108,20 @@ CASES = [
      }},
     {"slug": "piranya", "status": "planned", "title": "Пиранья", "line": "In preparation."},
     {"slug": "tsyganov", "status": "planned", "title": "Цыганов and «Булат»", "line": "In preparation."},
-    {"slug": "npts-basirtk", "status": "planned", "title": "НПЦ БАСиРТК",
-     "line": "In preparation. Currently a paragraph in the registry dossier."},
+    {"slug": "basirtk", "status": "published", "title": "НПЦ БАСиРТК",
+     "kicker": "Case study · ЦБСТ core",
+     "line": "A micro-enterprise with two employees reports ₽83.7m in its second year, hands cardboard drones to army units, and sits in ЦБСТ's accelerator.",
+     "graph": {
+         "hub": "ooo-npts-basirtk",
+         "extra_edges": ["produces"],
+         "nodes": {
+             "ooo-npts-basirtk": "ООО «НПЦ БАСиРТК»",
+             "baygutlina-irina-anatolevna": "Байгутлина И.А.",
+             "product::ooo-npts-basirtk::ковровец": "«Ковровец»",
+             "ano-tsbst-centre-for-unmanned-systems-technologies": "АНО «ЦБСТ»",
+         },
+         "caption": "Static excerpt of the registry graph: one owner, one product and one ЦБСТ tie. The tie rests on the company's own report of its accelerator selection.",
+     }},
 ]
 
 CHIPS = {"doc": ("t-doc", "Primary doc"), "press": ("t-press", "Press-reported"), "open": ("t-open", "Open")}

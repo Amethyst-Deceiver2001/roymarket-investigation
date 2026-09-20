@@ -54,7 +54,7 @@ before acting (see [[roymarket_tracking_discipline]]).
 Direction chosen by the user with the peer sessions' input: a case-led front door.
 
 - `docs/index.html`: generated landing page, five routes (Cases, Graph, Profiles, Guided read, Registry dossier).
-- `docs/cases/`: one page per case, from `notes/case_study_<slug>.md`, built by `scripts/build_case_pages.py`. Built, unpublished until pushed: Архангел, Гагаринг, ГОУДРОН, Овод. Planned (not started): Пиранья, Цыганов/Булат (the five excerpts in `~/.claude/plans/spicy-beaming-kite.md`) plus НПЦ БАСиРТК as a seventh, currently a paragraph in the dossier.
+- `docs/cases/`: one page per case, from `notes/case_study_<slug>.md`, built by `scripts/build_case_pages.py`. Published: Архангел, Гагаринг, ГОУДРОН, Овод. Built, unpublished until pushed: НПЦ БАСиРТК. Planned (not started): Пиранья, Цыганов/Булат. (The first five excerpts come from `~/.claude/plans/spicy-beaming-kite.md`; НПЦ БАСиРТК was the seventh, previously a paragraph in the dossier.)
 - `docs/dossier.html`: the former index.html, linked, not deleted.
 - The live network-graph Artifact split in `~/.claude/plans/spicy-beaming-kite.md` (overview-first default) is still unexecuted; its case-excerpt list overlaps the cases above and its graph tokens are reused by `build_case_pages.py`.
 - Open: Russian versions of the case pages (written, not translated); the other six case notes; `notes/public_subproject_plan.md` (open-sources-only public site) stays parked.
