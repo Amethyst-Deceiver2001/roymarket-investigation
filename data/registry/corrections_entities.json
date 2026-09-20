@@ -6394,6 +6394,10 @@
         ],
         "open_questions": [
           {
+            "source_id": "s7897",
+            "text": "Ten specimen diplomas/certificates for the «Школа внешних пилотов (операторов) БПЛА «Архангел»» (pilot, mechanic, UAS data processing, pilot-instructor, plus the «Архангел ЩИТ» air-defence instructor and АНТИБПЛА tracks) were posted 07.02.2026 (msgs 9498-9516, s7888-s7906). They carry the Omsk АНО's licence number 'Л035-01273-55/00207746 от 18.02.2022' while the ЕГРЮЛ выписка lists licence '55Л01 75-п' of 31.10.2017 (s7907): check the Рособрнадзор licence register for the 2022 number and for whether real graduates hold ФИС ФРДО entries. Which real students, if any, got these documents is not on file."
+          },
+          {
             "source_id": "s7682",
             "text": "Фонд «Сармат» (ИНН 6154168283, ОГРН 1246100025951): pull the full ЕГРЮЛ выписка to find its founders and director and to see whether they overlap with the unit's leadership or with Рогозин-linked entities (АО «Эколибри», АНО ЦРТТ)."
           },
@@ -6419,10 +6423,6 @@
         "slug": "fond-sarmat",
         "name_ru": "Общественно полезный фонд научно-технологического и социально-экономического развития «Сармат»",
         "name_en": "Public-benefit foundation for scientific-technological and socio-economic development \"Sarmat\"",
-          {
-            "source_id": "s7897",
-            "text": "Ten specimen diplomas/certificates for the «Школа внешних пилотов (операторов) БПЛА «Архангел»» (pilot, mechanic, UAS data processing, pilot-instructor, plus the «Архангел ЩИТ» air-defence instructor and АНТИБПЛА tracks) were posted 07.02.2026 (msgs 9498-9516, s7888-s7906). They carry the Omsk АНО's licence number 'Л035-01273-55/00207746 от 18.02.2022' while the ЕГРЮЛ выписка lists licence '55Л01 75-п' of 31.10.2017 (s7907): check the Рособрнадзор licence register for the 2022 number and for whether real graduates hold ФИС ФРДО entries. Which real students, if any, got these documents is not on file."
-          },
         "name_latin": "Fond \"Sarmat\"",
         "legal_form": "Фонд",
         "brand_ru": "Сармат",
@@ -6456,6 +6456,13 @@
         },
         "related_entities": [
           {
+            "slug": "ano-nii-dpo",
+            "name": "АНО «Научно-исследовательский институт дополнительного профессионального образования»",
+            "relationship_type": "training-partnership",
+            "relationship": "The accredited-education layer of Архангел's course funnel. Архангел's own channel presents the Кафедра общественной безопасности of this АНО, run through @course_bpla_bot 'в сотрудничестве с центром подготовки пилотов БПЛА', as its remote training arm (msg 7130/7188, April 2025), and thanks 'директора НИИ ДПО Николая' on 11.07.2026 (msg 10463). On 07.02.2026 the channel and the Archangel_Forum chat posted ten specimen diplomas and certificates (msgs 9507-9516, s7897-s7906) issued by the АНО's «Школа внешних пилотов (операторов) БПЛА «Архангел»» with the Архангел logo, signed by rector Еськов Н.Л. The holder on every one is a placeholder (Сталин И.В., Гагарин Ю.А.) with zeroed serials: templates, not real issues.",
+            "source_id": "s7897"
+          },
+          {
             "slug": "csn-bars-sarmat",
             "name": "ЦСН «Барс-Сармат»",
             "relationship_type": "group-structure",
@@ -6481,13 +6488,6 @@
         "name_latin": "ANO CPV \"ZOV-AA\"",
         "legal_form": "АНО",
         "brand_ru": "ЗОВ-АА",
-          {
-            "slug": "ano-nii-dpo",
-            "name": "АНО «Научно-исследовательский институт дополнительного профессионального образования»",
-            "relationship_type": "training-partnership",
-            "relationship": "The accredited-education layer of Архангел's course funnel. Архангел's own channel presents the Кафедра общественной безопасности of this АНО, run through @course_bpla_bot 'в сотрудничестве с центром подготовки пилотов БПЛА', as its remote training arm (msg 7130/7188, April 2025), and thanks 'директора НИИ ДПО Николая' on 11.07.2026 (msg 10463). On 07.02.2026 the channel and the Archangel_Forum chat posted ten specimen diplomas and certificates (msgs 9507-9516, s7897-s7906) issued by the АНО's «Школа внешних пилотов (операторов) БПЛА «Архангел»» with the Архангел logo, signed by rector Еськов Н.Л. The holder on every one is a placeholder (Сталин И.В., Гагарин Ю.А.) with zeroed serials: templates, not real issues.",
-            "source_id": "s7897"
-          },
         "inn": "1651092483",
         "ogrn": "1221600086180",
         "registered": "24.10.2022",
@@ -6553,6 +6553,20 @@
         "products": [],
         "marketing_claims": [
           {
+            "text_ru": "«Архангел» предлагает пройти дистанционное обучение и стать востребованным специалистом.",
+            "text_en": "\"Arkhangel\" offers remote training so you can become an in-demand specialist.",
+            "context": "@projectArchangel msg 7130 (05.04.2025, reposted 7188 and in Archangel_Forum 158698): introduces the Кафедра общественной безопасности of АНО «НИИ ДПО» as the route in; the same post says graduates 'ждут уже в «Архангеле», где к теории прибавится практика под руководством опытных инструкторов'.",
+            "source_id": "s7907",
+            "as_of": "2025-04-05"
+          },
+          {
+            "text_ru": "образование, полученное на кафедре общественной безопасности и в стенах «Архангела», конечно, пригодится и после окончания СВО",
+            "text_en": "the education received at the department of public safety and within Arkhangel's walls will of course be useful after the SVO ends",
+            "context": "@projectArchangel msg 7130 (05.04.2025): frames the accredited certificates as post-war civilian credentials for the 'сегодняшних военных птичников'.",
+            "source_id": "s7907",
+            "as_of": "2025-04-05"
+          },
+          {
             "text_ru": "Целью Организации является оказание всесторонней помощи военнослужащим, осуществляющих срочную службу или службу на СВО",
             "text_en": "The organisation's aim is to provide comprehensive assistance to servicemen serving conscript service or serving in the SVO.",
             "context": "Status line of the org's own VK page (vk.com/id463123770, captured 19.09.2026), which heads it «ЦПВ АНО «ZOV-AA»»; 93 posts, latest seen dated 07.2025.",
@@ -6578,20 +6592,6 @@
             "text_en": "A landmark UAV event was held in Kazan under the aegis of the Arkhangel project and the ZOV-AA project.",
             "context": "@projectArchangel msg 5807 (19.11.2024): the same post says the Гермес team helped run it and that 'Гермес рожден в России и производится в России'. Msg 5826 (20.11.2024, s7730) says the Архангел team and ЗОВ-АА are preparing further Tatarstan events, including a three-day February congress of volunteers, developers, producers, commanders and UAV operators.",
             "source_id": "s7729",
-          {
-            "text_ru": "«Архангел» предлагает пройти дистанционное обучение и стать востребованным специалистом.",
-            "text_en": "\"Arkhangel\" offers remote training so you can become an in-demand specialist.",
-            "context": "@projectArchangel msg 7130 (05.04.2025, reposted 7188 and in Archangel_Forum 158698): introduces the Кафедра общественной безопасности of АНО «НИИ ДПО» as the route in; the same post says graduates 'ждут уже в «Архангеле», где к теории прибавится практика под руководством опытных инструкторов'.",
-            "source_id": "s7907",
-            "as_of": "2025-04-05"
-          },
-          {
-            "text_ru": "образование, полученное на кафедре общественной безопасности и в стенах «Архангела», конечно, пригодится и после окончания СВО",
-            "text_en": "the education received at the department of public safety and within Arkhangel's walls will of course be useful after the SVO ends",
-            "context": "@projectArchangel msg 7130 (05.04.2025): frames the accredited certificates as post-war civilian credentials for the 'сегодняшних военных птичников'.",
-            "source_id": "s7907",
-            "as_of": "2025-04-05"
-          },
             "as_of": "2024-11-19"
           }
         ],
