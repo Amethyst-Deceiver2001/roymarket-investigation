@@ -10,7 +10,7 @@
 
 | Officially | Actually |
 |---|---|
-| ООО, ОКВЭД 26.11 «Производство элементов электронной аппаратуры», with 26.12, 26.30 and 26.51.2 [s5333] | An electronics maker that also sells UAV detectors, jammers and drones, trains drone operators through a co-founded АНО, and from 28.08.2026 recruits for an armed detachment, «отряд Гагаринг», for «МОГ» mobile fire groups [s5447] |
+| ООО, ОКВЭД 26.11 «Производство элементов электронной аппаратуры», with 26.12, 26.30 and 26.51.2 [s6776] | An electronics maker that also sells UAV detectors, jammers and drones, trains drone operators through a co-founded АНО, and from 28.08.2026 recruits for an armed detachment, «отряд Гагаринг», for «МОГ» mobile fire groups [s5447] |
 | Registered address: Краснодар, ул. им. Фадеева, 429/3, помещение 11 [s5333] | A residential apartment block, per a Rosreestr map lookup on 03.09.2026 that is not archived as a source {open}. A separate branch is registered on ул. Одесская, 48/3 [s5333] |
 | A «Лаборатория Гагаринг» or «КБ Гагаринг» | The same legal entity: ЦБСТ's channel writes «Инжиниринговая компания «Лаборатория Гагаринг»» [s5440]; Барашков writes «КБ Гагаринг» [s5401] |
 | A commercial supplier | On the company's own account, an owner who funded a training programme itself: «несмотря на влитые нами 120 млн рублей» [s5401] {open} |
@@ -32,13 +32,13 @@ The audit report lists the related parties. Гагаринг owns 36.8% of ОО�
 
 - **«Кузнечик»** is a control and comms system for FPV drones, «от схемотехники до программного обеспечения» made by Гагаринг, according to a TASS wire item citing the Народный фронт, and reported as in use in the war zone (08.04.2025) {press} [s5436].
 - **«Подхват»** is a relay mode for «Кузнечик». ЦБСТ's channel: «Резидент ЦБСТ разработал режим управления БпЛА с «запредельной дистанцией» полёта» (02.05.2026) {doc} [s5440]. The post says the mode «позволяет удвоить радиус боевой работы дронов и наземных роботизированных платформ» and requires two pilots, one launching and a second taking over near the line of contact.
-- **Others on the registry record:** ЮРКА detectors, «ГОРН» drone detector, «Звезда» jammers, «СОВА» video receiver, «СКАУТ» reconnaissance drones and the «Секира» FPV [s5437, s5444, s5445].
+- **Others on the channel:** the «ГОРН» drone detector [s5439], «Звезда» jammers, the «СОВА» video receiver and «Нить» [s5437], and «СКАУТ» reconnaissance drones and the «Секира» FPV [s5444, s5445].
 - **The army has not bought some of them, on Барашков's account.** He says the «ГОРН» detector passed testing but troops are used to other detectors [s5439] {open}.
 
 ## Training, and the Архангел link
 
 - **The training body.** АНО ДПО «Образовательный центр Гагаринг» (ИНН 2310240630) was registered on 26.05.2025, founded by Барашков and by ООО «Гагаринг» [s6775, s5333].
-- **Graduations.** The Архангел channel reports a graduation of 03.08.2026: «Дипломы вручал директор КБ - Александр Сергеевич Барашков.» [s5372]. The registry also links Архангел Легион (ИНН 2315233718) to the training body, but that link carries no source id and is not re-verified here {open}.
+- **Graduations.** On 03.08.2026 the Архангел channel reports that «Вчера в День 96-летия ВДВ в нашем учебном центре состоялся выпуск очередной команды дроноводов, прошедших курс по беспилотию Гагаринга», and that «Дипломы вручал директор КБ - Александр Сергеевич Барашков.» [s5372]. The channel calls the venue its own training centre. The registry also links Архангел Легион (ИНН 2315233718) to the training body, but that link carries no source id and is not re-verified here {open}.
 - **Joint project.** «Архангел Спецназа», a channel of 1.02m subscribers, announced on 10.08.2026: «Совместно с лабораторией БПЛА «Гагаринг» команда Архангела Спецназа запускает проект для военнослужащих, завершивших службу, в том числе уволенных по ранению.» [s5392]
 - **Cross-posting.** Гагаринг's own channel `@my_el_lab` reposts Проект «Архангел» recruitment calls at least five times and carries a B2B pitch for Архангел interceptors on 30.08.2026 [s5539]. See the Архангел case.
 - **Withdrawal.** On 12.08.2026 Барашков ended funding for the «Последний рубеж» instructor programme: ««Последний рубеж» оказался не нужен» [s5401] {open}.
@@ -47,7 +47,7 @@ The audit report lists the related parties. Гагаринг owns 36.8% of ОО�
 ## Who vouches for Барашков
 
 - Алексей Чадаев writes: «Саша Барашков из Гагаринга — друг, товарищ и умница» (11.08.2026) [s5407] {doc}.
-- Барашков appears on Соловьёв LIVE and describes the «Сова» video receiver as blocked from army adoption by procurement monopolies [s5438] {open}.
+- Гагаринг's channel announces Барашков's appearance on Соловьёв LIVE on 25.07.2025, with among its listed topics «Почему крайне востребованное на фронте изделие «Сова» в ближайшее время не попадёт в армию?» and «Монополии душат: когда в армии будет конкуренция, тогда в армии будут результаты.» {open} [s5438]. These are the channel's own topic lines, not a transcript.
 - The Архангел channel publicly endorses him as a candidate for a regional drone-defence coordinator role (proekt_arhangel msg 1084, 24.08.2026, local scrape) {open}.
 
 ## State money and procurement
@@ -64,7 +64,7 @@ The audit report lists the related parties. Гагаринг owns 36.8% of ОО�
 | 08.04.2025 | TASS wire: «Кузнечик» used in the war zone [s5436] |
 | 26.05.2025 | АНО ДПО «Образовательный центр Гагаринг» registered [s6775] |
 | 02.05.2026 | ЦБСТ's channel names the company a resident [s5440] |
-| 03.08.2026 | Diplomas handed out at a graduation reported by Архангел [s5372] |
+| 02.08.2026 | Graduation at Архангел's training centre, diplomas handed out by Барашков; reported on 03.08.2026 [s5372] |
 | 10.08.2026 | Joint project with «Архангел Спецназа» announced [s5392] |
 | 12.08.2026 | «Последний рубеж» funding ended [s5401] |
 | 28.08.2026 | Recruitment for «отряд Гагаринг» begins [s5447] |
