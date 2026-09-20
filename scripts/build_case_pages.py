@@ -74,7 +74,20 @@ CASES = [
          },
          "caption": "Static excerpt of the registry graph: Гагаринг, its owners, part-owned companies, training body and industry association. Гагаринг and Авирон carry a documented ЦБСТ resident tie. The Архангел ties described on this page rest on posts and are only partly in the graph.",
      }},
-    {"slug": "goudron", "status": "planned", "title": "ГОУДРОН", "line": "In preparation."},
+    {"slug": "goudron", "status": "published", "title": "ГОУДРОН",
+     "kicker": "Case study · ЦБСТ tie from the company's own channel",
+     "line": "A household-electrical wholesaler registered at an apartment sells «Набат» drone detectors with a price tier for soldiers.",
+     "graph": {
+         "hub": "ooo-goudron",
+         "extra_edges": ["produces"],
+         "nodes": {
+             "ooo-goudron": "ООО «ГОУДРОН»",
+             "kozlov-dmitriy-sergeevich": "Козлов Д.С.",
+             "product::ooo-goudron::набат-v3": "«Набат V.3»",
+             "ano-tsbst-centre-for-unmanned-systems-technologies": "АНО «ЦБСТ»",
+         },
+         "caption": "Static excerpt of the registry graph: the whole documented network is one owner, one product and one ЦБСТ tie, which rests on the company's own channel. The red outline is a sanctions flag from an aggregator match, not a primary listing.",
+     }},
     {"slug": "ovod-cherezov", "status": "planned", "title": "Овод and Черезов",
      "line": "In preparation."},
     {"slug": "piranya", "status": "planned", "title": "Пиранья", "line": "In preparation."},
@@ -180,14 +193,14 @@ def cited_sources(md, sources):
     return rows
 
 
-def graph_svg(cfg, g):
+def graph_svg(cfg, g, weak=frozenset()):
     ids = {n["id"]: n for n in g["nodes"]}
     want = [k for k in cfg["nodes"] if k in ids]
     prio = {"family_tie": 0, "cbst_tie": 1, "founded": 2, "owns": 2, "directs": 3, "related": 4, "role": 9, "produces": 9, "procures": 9}
     best = {}
     for e in g["edges"]:
         a, b = e["source"], e["target"]
-        if a in cfg["nodes"] and b in cfg["nodes"] and e["type"] in ("family_tie", "cbst_tie", "founded", "owns", "directs", "related", "role"):
+        if a in cfg["nodes"] and b in cfg["nodes"] and e["type"] in ("family_tie", "cbst_tie", "founded", "owns", "directs", "related", "role") + tuple(cfg.get("extra_edges", ())):
             k = tuple(sorted((a, b)))
             if k not in best or prio[e["type"]] < prio[best[k]["type"]]:
                 best[k] = e
@@ -218,13 +231,14 @@ def graph_svg(cfg, g):
         t = e["type"]
         style = {"cbst_tie": 'stroke="#eb6834" stroke-width="3"', "family_tie": 'stroke="var(--ink-3)" stroke-width="1.6" stroke-dasharray="2 4"',
                  "founded": 'stroke="var(--ink-2)" stroke-width="1.8"', "owns": 'stroke="var(--ink-2)" stroke-width="1.8"',
-                 "directs": 'stroke="var(--ink-3)" stroke-width="1.4"', "role": 'stroke="var(--ink-3)" stroke-width="1.2" stroke-dasharray="1 3"',
+                 "directs": 'stroke="var(--ink-3)" stroke-width="1.4"', "role": 'stroke="var(--ink-3)" stroke-width="1.2" stroke-dasharray="1 3"', "produces": 'stroke="var(--ink-3)" stroke-width="1.2"',
+                 
                  "related": 'stroke="var(--ink-3)" stroke-width="1.4" stroke-dasharray="6 4"'}[t]
         svg.append(f'<line x1="{pos[a][0]:.0f}" y1="{pos[a][1]:.0f}" x2="{pos[b][0]:.0f}" y2="{pos[b][1]:.0f}" {style}/>')
     for k in want:
         n, (x, y) = ids[k], pos[k]
         col = PERSON_COL if n["kind"] == "person" else TIER_COL.get(n.get("tier"), TIER_COL[None])
-        ring = ' stroke="#c0392b" stroke-width="2.5"' if n.get("sanctioned") else ""
+        ring = ' stroke="#c0392b" stroke-width="2.5"' if n.get("sanctioned") and k not in weak else ""
         r = 14 if k == cfg["hub"] else 9
         if n["kind"] == "person":
             svg.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="{col}"{ring}/>')
@@ -238,7 +252,7 @@ def graph_svg(cfg, g):
               '<span><span class="net-swatch" style="background:#1baf7a"></span> plumbing</span>'
               '<span><span class="net-swatch" style="background:#eb6834"></span> ЦБСТ core</span>'
               f'<span><span class="net-swatch" style="background:{PERSON_COL};border-radius:50%"></span> person</span>'
-              '<span>thick orange = ЦБСТ resident tie · solid = ownership/directs · fine dotted = role/family · dashed = related</span></div>')
+              '<span>thick orange = ЦБСТ resident tie · solid = ownership/directs/produces · fine dotted = role/family · dashed = related · red outline = sanctions flag in the registry (weak name-only matches are not outlined)</span></div>')
     return (f'<div class="net-panel"><div class="net-svg-wrap">{"".join(svg)}</div>{legend}</div>'
             f'<p class="footnote" style="margin-top:.75rem;border:none;padding:0">{esc(cfg["caption"])} '
             f'{len(want)} of {g["node_count"]:,} nodes.</p>')
@@ -270,10 +284,10 @@ def page(title, body, rel, kicker, standfirst=None, extra_head=""):
 """
 
 
-def build_case(case, g, sources):
+def build_case(case, g, sources, weak=frozenset()):
     md = (REPO / "notes" / f"case_study_{case['slug']}.md").read_text(encoding="utf-8")
     title, body = md_to_html(md)
-    graph = graph_svg(case["graph"], g)
+    graph = graph_svg(case["graph"], g, weak)
     body = body.replace("</section>", "</section>", 1)
     first = body.index("</section>") + len("</section>")
     body = body[:first] + f"<section><p class='eyebrow'>The network</p>{graph}</section>" + body[first:]
@@ -331,10 +345,12 @@ def main():
     sources = json.load(open(REG / "sources.json", encoding="utf-8"))
     ents = json.load(open(REG / "entities.json", encoding="utf-8"))
     ppl = json.load(open(REG / "people.json", encoding="utf-8"))
+    weak = {r["slug"] for r in list(ents) + list(ppl)
+            if r.get("sanctions") and all(str(s.get("note") or "").upper().startswith("PLAUSIBLE") for s in r["sanctions"])}
     (DOCS / "cases").mkdir(exist_ok=True)
     for c in CASES:
         if c["status"] == "published":
-            build_case(c, g, sources)
+            build_case(c, g, sources, weak)
     build_indexes({"nodes": g["node_count"], "edges": g["edge_count"], "entities": len(ents), "people": len(ppl), "sources": len(sources)})
     print("wrote docs/index.html, docs/cases/index.html and", sum(c["status"] == "published" for c in CASES), "case page(s)")
 
