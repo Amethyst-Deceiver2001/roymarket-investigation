@@ -80,6 +80,7 @@
 ## Images
 
 - ![Company logo ("ПОКРОВ — Система безопасности"), from the company's own official site.](../images/ooo-pokrov_logo_official-site.jpg) — Company logo ("ПОКРОВ — Система безопасности"), from the company's own official site. [s7540]
+- ![Product card for the «Булат» v.4 (3MX) handheld detector, with its case and antennas, as shown on the company's own site pokrovsystem.ru (captured 20.09.2026).](../images/ooo-pokrov_bulat-v4-preview-card.png) — Product card for the «Булат» v.4 (3MX) handheld detector, with its case and antennas, as shown on the company's own site pokrovsystem.ru (captured 20.09.2026). [s7943]
 
 ## Principals & persons of interest
 
@@ -104,6 +105,7 @@
 | [s6799] | EGRUL extract | EGRUL extract (EGRUL_5038189259_20260907_ooo-pokrov.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7540] | site capture | site capture (SITE_5038189259_20260916_ooo-pokrov-logo.jpg) | 2026-09-16 | — |
 | [s7873] | Nsdc | Nsdc (NSDC_5038189259_20260920_ooo-pokrov.pdf) | 2026-09-20 | — |
+| [s7943] | Web | Web (WEB_5038189259_20260920_pokrovsystem-bulat-v4-preview-card.png) | 2026-09-20 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
