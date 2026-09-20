@@ -259,6 +259,23 @@ class PersonProfileBuilder:
         add_meta("DOB", ru_date(p.get("dob")))
         add_meta("Birthplace", p.get("birthplace"))
         add_meta("Personal ИНН", p.get("inn_personal"))
+        # name_history entries can be a legal surname change or a public working
+        # name; the entry's own note says which, so show its first sentence.
+        other_names = []
+        for nh in p.get("name_history") or []:
+            if not nh.get("value"):
+                continue
+            first = (nh.get("note") or "").split(". ")[0].strip()
+            if len(first) > 160:
+                first = first[:157].rstrip() + "…"
+            bits = [nh["value"] + (f" ({nh['as_of']})" if nh.get("as_of") else "")]
+            if first:
+                bits.append(first)
+            src = self.source_label(nh.get("source_id"))
+            if src:
+                bits.append(f"[{src}]")
+            other_names.append(" — ".join(bits))
+        add_meta("Other names on record", "; ".join(other_names) if other_names else None)
         add_meta("Address", p.get("address"))
         add_meta("Entities linked", len(by_entity) if by_entity else None)
         primary = next((r for r in role_rows if r["kind"] == "director+founder"), role_rows[0] if role_rows else None)

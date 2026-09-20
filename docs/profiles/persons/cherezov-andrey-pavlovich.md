@@ -7,6 +7,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 ## At a glance
 
 - **Personal ИНН:** 712802968839
+- **Other names on record:** Андрей Иванов (2024) — Public working name, not a legal name change — [s7853]
 - **Entities linked:** 2
 - **Primary role:** Директор и учредитель (100%), ООО «Воздушный трактат»
 
@@ -34,6 +35,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|---|
 | [s6727] | EGRUL extract | EGRUL extract (EGRUL_7100027464_20260907_ovod.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6728] | EGRUL extract | EGRUL extract (EGRUL_7100046925_20260907_ooo-vozdushnyy-traktat.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7853] | press coverage | press coverage (PRESS_20260729_theins-cherezov-ovod-shooting.html) | 2026-07-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

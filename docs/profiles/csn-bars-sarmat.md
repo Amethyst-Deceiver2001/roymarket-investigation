@@ -99,6 +99,13 @@
 - <https://www.rustore.ru/catalog/app/ru.sarmat.bars> — RuStore app for volunteer applications
 - tel:88002221620 — 8-800-222-16-20
 
+## Images
+
+- ![Дронница-2025 (6–7 сентября 2025, Новгородская область): cast green housing embossed «БАРС САРМАТ», mounted among rows of green cylindrical enclosures. Photo from the unit's own Telegram post (8 сентября 2025), which lists the equipment shown (МГЛА-Сармат, «Сармат», navigation module, quadcopter, «Авианосец», «Коршун», «МикроТалон») without saying which item this is; the photo itself does not identify the product.](../images/csn-bars-sarmat_dronnitsa-2025_cast-housing.jpg) — Дронница-2025 (6–7 сентября 2025, Новгородская область): cast green housing embossed «БАРС САРМАТ», mounted among rows of green cylindrical enclosures. Photo from the unit's own Telegram post (8 сентября 2025), which lists the equipment shown (МГЛА-Сармат, «Сармат», navigation module, quadcopter, «Авианосец», «Коршун», «МикроТалон») without saying which item this is; the photo itself does not identify the product. [s7861]
+- ![Дронница-2025: winged UAV with underslung payload pods on an exhibition stand, with a specification placard whose text is not legible. From the unit's own Telegram post of 8 сентября 2025, which names among the exhibits the carrier aircraft «Авианосец»; the photo does not say which exhibit this is.](../images/csn-bars-sarmat_dronnitsa-2025_winged-uav.jpg) — Дронница-2025: winged UAV with underslung payload pods on an exhibition stand, with a specification placard whose text is not legible. From the unit's own Telegram post of 8 сентября 2025, which names among the exhibits the carrier aircraft «Авианосец»; the photo does not say which exhibit this is. [s7863]
+- ![Дронница-2025: fixed-wing airframe on a stand with a placard reading «МИКРОТАЛОН». The unit's own Telegram post of 8 сентября 2025 lists the interceptor «МикроТалон» among the items it presented.](../images/csn-bars-sarmat_dronnitsa-2025_mikrotalon.jpg) — Дронница-2025: fixed-wing airframe on a stand with a placard reading «МИКРОТАЛОН». The unit's own Telegram post of 8 сентября 2025 lists the interceptor «МикроТалон» among the items it presented. [s7864]
+- ![Дронница-2025: wooden-framed fixed-wing airframe on a stand with a placard reading «КОРШУН». The unit's own Telegram post of 8 сентября 2025 lists the interceptor «Коршун» among the items it presented.](../images/csn-bars-sarmat_dronnitsa-2025_korshun.jpg) — Дронница-2025: wooden-framed fixed-wing airframe on a stand with a placard reading «КОРШУН». The unit's own Telegram post of 8 сентября 2025 lists the interceptor «Коршун» among the items it presented. [s7865]
+
 ## Principals & persons of interest
 
 ### Dmitry Olegovich Rogozin — Рогозин Дмитрий Олегович
@@ -115,6 +122,7 @@
 
 ## Open questions
 
+- Ten specimen diplomas/certificates for the «Школа внешних пилотов (операторов) БПЛА «Архангел»» (pilot, mechanic, UAS data processing, pilot-instructor, plus the «Архангел ЩИТ» air-defence instructor and АНТИБПЛА tracks) were posted 07.02.2026 (msgs 9498-9516, [s7888]-s7906). They carry the Omsk АНО's licence number 'Л035-01273-55/00207746 от 18.02.2022' while the ЕГРЮЛ выписка lists licence '55Л01 75-п' of 31.10.2017 ([s7907]): check the Рособрнадзор licence register for the 2022 number and for whether real graduates hold ФИС ФРДО entries. Which real students, if any, got these documents is not on file. [s7897]
 - Фонд «Сармат» (ИНН 6154168283, ОГРН 1246100025951): pull the full ЕГРЮЛ выписка to find its founders and director and to see whether they overlap with the unit's leadership or with Рогозин-linked entities (АО «Эколибри», АНО ЦРТТ). [s7682]
 - @russian_shock_volunteer_brigade is scraped (2,453 posts) but only mined for components so far; a fuller read of the sub-units it names (отряды «Сталинград», «Устинов», «Днепр»; роты 10 и 11) and of products fielded 'с поддержкой специалистов ЦСН' (САУ РОН opto-radar, «Горыныч 2.0», «ЩИТ-И») is pending, including who makes them. [s7703]
 - The site's gallery, «Наши бойцы» and encyclopedia pages returned no media in a plain fetch; a browser pass is needed to see and archive the photos/videos. [s7686]
@@ -136,6 +144,11 @@
 | [s7700] | Tgpost | Tgpost (TGPOST_20250115_russian_shock_volunteer_brigade-1988-shchit-i-ew-joint-approbation.txt) | 2025-01-15 | — |
 | [s7701] | Tgpost | Tgpost (TGPOST_20250216_russian_shock_volunteer_brigade-2095-germes-training-sarmat-instructors.txt) | 2025-02-16 | — |
 | [s7703] | Tgpreview | Tgpreview (TGPREVIEW_20260919_russian_shock_volunteer_brigade.html) | 2026-09-19 | — |
+| [s7861] | Telegram media | Telegram media (TGMEDIA_csn-bars-sarmat_20250908_russian_shock_volunteer_brigade-post3113-1.jpg) | 2025-09-08 | — |
+| [s7863] | Telegram media | Telegram media (TGMEDIA_csn-bars-sarmat_20250908_russian_shock_volunteer_brigade-post3113-3.jpg) | 2025-09-08 | — |
+| [s7864] | Telegram media | Telegram media (TGMEDIA_csn-bars-sarmat_20250908_russian_shock_volunteer_brigade-post3113-4.jpg) | 2025-09-08 | — |
+| [s7865] | Telegram media | Telegram media (TGMEDIA_csn-bars-sarmat_20250908_russian_shock_volunteer_brigade-post3113-5.jpg) | 2025-09-08 | — |
+| [s7897] | Telegram media | Telegram media (TGMEDIA_20260207_projectArchangel-post9507-Свидетельство_рабочего_пилот.pdf) | 2026-02-07 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
