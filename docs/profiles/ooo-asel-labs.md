@@ -60,6 +60,11 @@
 
 - <https://asellabs.com/>
 
+### Telegram
+
+- <https://t.me/asel_labs>
+- <https://t.me/asellabs>
+
 ### Marketplace listings
 
 - <https://www.wildberries.ru/seller/250130605> — Official WB seller storefront, ИНН/ОГРН confirmed exact match (9718278129 / 1257700126958) via user-supplied browser HAR capture 2026-08-25 ([s1380]) -- self-declared trademark on WB is "ASEL LABS - Производитель". 65 items for sale, rating 4.7/9 reviews, WB-registered 2026-04-14.

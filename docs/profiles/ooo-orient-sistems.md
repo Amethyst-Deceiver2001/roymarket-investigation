@@ -65,13 +65,17 @@
 |---|---|---|---|---|
 | — | 1159506 | 20241003 | 23.10.2025 | 09 (UAV/defense terms present: антенн, военн, навигацион, оружи, робот, взрывчат) |
 
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 
 ### Website
 
 - <https://orsyst.ru/> — Very large catalog (~100+ SKUs) — also resells third-party GNSS/lidar/total-station lines (SinoGNSS, Septentrio, Unicore, Bynav, Harxon, RS-LiDAR/Hesai/Livox/Leishen, Leica, Lixel/OmniSLAM) alongside its own 4GNSS/Ориент brands.
+
+### Telegram
+
+- <https://t.me/orient4gnss>
 
 ## Principals & persons of interest
 

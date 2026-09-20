@@ -49,13 +49,17 @@
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), Canada (Special Economic Measures Act), Australia (Autonomous Sanctions, Russia), Ukraine (war-sanctions.gur.gov.ua, military-industry listing), Ukraine (Presidential sanctions decree/list)** [s0574]
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 3 OCCRP Aleph match(es) (screened 2026-09-07).
+- 3 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 
 ### Website
 
 - <https://cbst.ru/> — Confirmed via convergent third-party business registries (Kontur.Focus, RBC Companies) all citing ИНН 9702064851/ОГРН 1247700190430/GD Яныкина Нина Олеговна against this domain; cbst.ru's own /about page doesn't self-state ИНН (checked directly), so this rests on registry-aggregator corroboration rather than the site's own text.
+
+### Telegram
+
+- <https://t.me/ANO_CBST>
 
 ## Images
 

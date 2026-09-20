@@ -45,6 +45,12 @@
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 
+## Web & social presence
+
+### Telegram
+
+- <https://t.me/nponebo>
+
 ## Principals & persons of interest
 
 ### Загорский Александр Сергеевич

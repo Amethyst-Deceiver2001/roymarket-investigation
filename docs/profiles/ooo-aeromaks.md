@@ -100,13 +100,17 @@
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), EU (Ukraine-related restrictive measures), Ukraine (Presidential sanctions decree/list), Switzerland (SECO, Ukraine-related measures)** [s0780]
 
 - 5 OpenSanctions match(es) (screened 2026-09-06).
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 
 ### Website
 
 - <https://www.aeromax-group.ru/produkciya/> — ИНН 7725347482 entity — the EU-sanctioned Кронштадт/Аэромакс operating LLC.
+
+### Telegram
+
+- <https://t.me/aeromax_group>
 
 ## Images
 

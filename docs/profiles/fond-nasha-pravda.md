@@ -46,13 +46,17 @@
 **Ukraine (Presidential sanctions decree/list)** [s0575]
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 1 OCCRP Aleph match(es) (screened 2026-09-07).
+- 1 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 
 ### Website
 
 - <https://xn----7sbabalo0evak8f.xn--p1ai/>
+
+### Telegram
+
+- <https://t.me/nashapravdafond>
 
 ## Images
 
