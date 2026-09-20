@@ -1,10 +1,10 @@
 # ГОУДРОН: a household-electrical wholesaler registered at an apartment sells «Набат» drone detectors with a price tier for soldiers
 
-2026-09-20. Every claim carries a `[sNNNN]` source id, resolved in the table at the end. Russian is quoted verbatim from archived posts and pages; English is analysis. **Registry position: tier manufacturer; ЦБСТ tie {doc} from the company's own channel, not from ЦБСТ [s7598]. The Ukrainian sanctions listing rests on an aggregator match and is graded Open until the primary extract is on file.**
+2026-09-20. Every claim carries a `[sNNNN]` source id, resolved in the table at the end. Russian is quoted verbatim from archived posts and pages; English is analysis. **Registry position: tier manufacturer; ЦБСТ tie {doc} from the company's own channel, not from ЦБСТ [s7598]. Ukraine's State Register of Sanctions lists the company, shown by a signed extract [s7972] {doc}; no other regime is on file.**
 
 ## The finding
 
-ООО «ГОУДРОН» (ИНН 9721203814) was registered in Moscow on 07.04.2023. One man, Козлов Дмитрий Сергеевич, owns 100% and is general director [s6768]. Its main ОКВЭД code is 46.43, wholesale of household electrical goods [s6768], and its registered address is an apartment, кв. 131, on ул. Ухтомского ополчения in Некрасовка [s6768]. It sells the «Набат» line of drone detectors under the GoDrone brand. The product site's own tagline is «Защита техники и личного состава в условиях СВО», and its price table has a separate soldiers' tier: ₽100,000 by bank transfer «военным», against ₽115,000 standard [s6457]. Its channel says «Мы работаем с ЦБСТ не первый месяц» [s7598]. Revenue was ₽86.3m in 2023, ₽178.3m in 2024 and ₽55.9m in 2025 [s0413, s0414, s0415]. No procurement record exists.
+ООО «ГОУДРОН» (ИНН 9721203814) was registered in Moscow on 07.04.2023. One man, Козлов Дмитрий Сергеевич, owns 100% and is general director [s6768]. Its main ОКВЭД code is 46.43, wholesale of household electrical goods [s6768], and its registered address is an apartment, кв. 131, on ул. Ухтомского ополчения in Некрасовка [s6768]. It sells the «Набат» line of drone detectors under the GoDrone brand. The product site's own tagline is «Защита техники и личного состава в условиях СВО», and its price table has a separate soldiers' tier: ₽100,000 by bank transfer «военным», against ₽115,000 standard [s6457]. Its channel says «Мы работаем с ЦБСТ не первый месяц» [s7598]. Revenue was ₽86.3m in 2023, ₽178.3m in 2024 and ₽55.9m in 2025 [s0413, s0414, s0415]. No procurement record exists. Ukraine has listed the company under a presidential decree since 20.06.2025 [s7972].
 
 ## Officially X, actually Y
 
@@ -38,7 +38,7 @@ Source: the three annual filings [s0413, s0414, s0415]. Revenue fell 69% in 2025
 
 ## Sanctions and procurement
 
-- **Sanctions.** The registry lists the company in Ukraine's sanctions register on the strength of an OpenSanctions match by ИНН against the dataset `ua_nsdc_sanctions` {open} [s0814]. The primary extract from the Ukrainian State Register of Sanctions is not on file, and OpenSanctions cites no primary URL.
+- **Sanctions.** A signed extract from Ukraine's State Register of Sanctions of 20.09.2026 lists the company, ОГРН 1237700265846 and ИНН 9721203814, under presidential decree №415/2025 of 20.06.2025, annex 2. The status is «Чинно», and the term runs to 20.06.2035 {doc} [s7972]. An earlier OpenSanctions match agrees {open} [s0814]. No other regime is on file.
 - **Procurement.** A zakupki.gov.ru search for the company's ИНН on 05.09.2026 returned no hits (scan log). No government contract is recorded.
 
 ## Timeline
@@ -49,6 +49,7 @@ Source: the three annual filings [s0413, s0414, s0415]. Revenue fell 69% in 2025
 | 21.08.2024 | Earliest post in the local scrape of `@GoDrone` |
 | 12.02.2025 | First trademark registered [s1201] |
 | 20.02.2025 | Customer's Yandex Maps review [s1396] |
+| 20.06.2025 | Ukraine lists the company under decree №415/2025 [s7972] |
 | 23.07.2025 | «Архангел» operator-course post on the company's channel (msg 1347) |
 | 09.12.2025 | «Мы работаем с ЦБСТ не первый месяц» [s7598] |
 | 26.12.2025 | Company says «Набат V.3» is deployed at the Zaporizhzhia nuclear plant [s6458] |
@@ -58,11 +59,11 @@ Source: the three annual filings [s0413, s0414, s0415]. Revenue fell 69% in 2025
 
 - Who buys at scale. No customer other than one review is named, and no contract is on file.
 - Why revenue fell 69% in 2025.
-- Whether the Ukrainian listing is genuine. Only an aggregator match is on file.
+- Whether any regime other than Ukraine's lists the company.
 - Whether «Набат» is in service at the Zaporizhzhia plant or at any army unit. Every such claim comes from the company's channel.
 - Whether the smaller Ozon seller «GD» (seller 2520832) belongs to the company; its legal-information page was never captured [s1390].
 - What ГОУДРОН's ЦБСТ relationship consists of beyond the company's own words.
 
 ## Evidence base
 
-Registry record `ooo-goudron`; person `kozlov-dmitriy-sergeevich`. ЕГРЮЛ [s6768], annual filings [s0413–s0415], the product site [s6457, s1393], Yandex Maps listings [s1395, s1396, s1394], the company's own posts [s7598, s6458], Rospatent records [s1201, s1207, s1234], the OpenSanctions match [s0814]. The sanctions statement is upgraded only when the primary extract is on file.
+Registry record `ooo-goudron`; person `kozlov-dmitriy-sergeevich`. ЕГРЮЛ [s6768], annual filings [s0413–s0415], the product site [s6457, s1393], Yandex Maps listings [s1395, s1396, s1394], the company's own posts [s7598, s6458], Rospatent records [s1201, s1207, s1234], the Ukrainian register extract [s7972] and the OpenSanctions match [s0814].
