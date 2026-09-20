@@ -2,7 +2,7 @@
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1141,
-  "edge_count": 1930,
+  "edge_count": 1929,
   "unresolved_count": 108,
   "nodes": [
     {
@@ -2481,7 +2481,7 @@
       "label": "Кузякин Дмитрий Васильевич",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "lapin-igor-nikolaevich",
@@ -4125,7 +4125,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "offensive",
-      "degree": 12
+      "degree": 11
     },
     {
       "id": "ooo-tsugam",
@@ -21138,17 +21138,6 @@
     {
       "source": "kuzyakin-dmitriy-vasilevich",
       "target": "ooo-tskbr",
-      "type": "directs",
-      "label": null,
-      "source_id": "s7351",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "kuzyakin-dmitriy-vasilevich",
-      "target": "ooo-tskbr",
       "type": "founded",
       "label": "former founder",
       "source_id": "s7351",
@@ -26749,7 +26738,7 @@
       "source": "ooo-tskbr",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "Named among the ЦБСТ residents hit by the EU 20th sanctions package.",
+      "label": "ЦБСТ's own channel (msg 2095, 24.04.2026) reports that the EU's 20th package hit the general director of ЦКБР, a natu...",
       "source_id": "s7588",
       "as_of": null,
       "weight": 1.0,

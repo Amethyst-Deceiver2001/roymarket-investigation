@@ -30496,9 +30496,9 @@
     "ooo-tskbr": {
       "set": {
         "cbst_tie": {
-          "claim": "Named among the ЦБСТ residents hit by the EU 20th sanctions package.",
+          "claim": "ЦБСТ's own channel (msg 2095, 24.04.2026) reports that the EU's 20th package hit the general director of ЦКБР, a natural person, in a post about sanctions on ЦБСТ residents. The post does not name ЦКБР itself among the organisations it lists (Технодрон, Гаскар Групп, СКБ Пиранья, Аэро-Хит, Атлант Аэро, Архангел).",
           "confidence": "t-doc",
-          "evidence": "ЦБСТ channel msg 2095, 24.04.2026, headed «Евросоюз ввёл санкции против нескольких резидентов ЦБСТ»: «подпал гендиректор Центра комплексных беспилотных решений (ЦКБР)». Msg 1931 (27.02.2026) also credits its «Джокер» FPV drone to ЦКБР chief designer Дмитрий Кузякин.",
+          "evidence": "ЦБСТ channel msg 2095, 24.04.2026, headed «Евросоюз ввёл санкции против нескольких резидентов ЦБСТ»: «подпал гендиректор Центра комплексных беспилотных решений (ЦКБР)». Msg 1931 (27.02.2026, transcript s7503) also credits its «Джокер» FPV drone to «главного конструктора ЦКБР Дмитрия Кузякина». Corrected 2026-09-20 after an adversarial read: the earlier wording said the entity was named among the residents hit, which s7588 does not say.",
           "source_id": "s7588"
         },
         "_verified": true,
@@ -30511,16 +30511,10 @@
         "director": "Косолапов Олег Юрьевич",
         "director_history": [
           {
-            "value": "Кузякин Дмитрий Васильевич",
-            "as_of": "20.01.2022",
-            "source_id": "s7351",
-            "note": "Founding GD, per EGRUL. Also personal ИНН 501306766736 — same person as the individually EU/UA/CH-sanctioned chief designer already on file (kuzyakin-dmitriy-vasilevich)."
-          },
-          {
             "value": "Косолапов Олег Юрьевич",
             "as_of": "20.05.2025",
             "source_id": "s7351",
-            "note": "ИНН 645001842561. Succeeded Кузякин as GD; Кузякин remains a 25% co-founder."
+            "note": "ИНН 645001842561 (row 27 of the extract). The only director entry in the ЕГРЮЛ выписка: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (row 29). Кузякин Д.В. (ИНН 501306766736, rows 38-39, the same ИНН as the individually EU/UA/CH-sanctioned chief designer on file, kuzyakin-dmitriy-vasilevich) appears in the extract only as a 25% founder, entered 13.12.2023 (ГРН 2235002551111). The extract does not show who held the general-director office before 20.05.2025; an earlier entry here calling Кузякин the founding general director from 20.01.2022 was removed on 2026-09-20 because the extract does not state it."
           }
         ],
         "founders": "Кузякин Д.В. (25%), Мазалова Виктория Вячеславовна (26%), Фонд содействия развитию науки, инноваций и технологий (24%, ИНН 5040097774), ООО «Инвестпроектгрупп» (25%, ИНН 5040127965)",
@@ -30600,6 +30594,7 @@
         "s7351"
       ],
       "why": [
+        "2026-09-20: adversarial read (claim-verifier) of this record, each finding then checked by hand against the cited files. Confirmed and fixed: (1) the founding-GD entry for Кузякин is not in the ЕГРЮЛ выписка s7351 (only Косолапов is a director there; Кузякин is a 25% founder) and was removed; (2) the cbst_tie claim said the entity was named among the residents hit by the EU 20th package, but msg 2095 (s7588) lists six organisations without ЦКБР and says the package hit ЦКБР's general director, a natural person, so the claim and evidence were reworded; the confidence grade was not changed here and should be reviewed; (3) the msg 1931 clause is supported by s7503, not s7588, and now says so. Not a failure: the verifier could not read the date of the corrective ЕГРЮЛ entry 30.05.2022, ГРН 2225001209860; row 163 of s7351 gives exactly that GRN and date.",
         "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
         "2026-09-08: closed the _scaffold_leads.json unattributed-ИНН gap for 5040176793 — the entity already existed in the registry (table-scaffolded from docs/index.html prose) but had no inn/ogrn/founders/director. Pulled a full EGRUL выписка (s7351) directly to fill it in; confirms the founders list already on file for Кузякин (via audit-it.ru/checko.ru inference) and adds the GD succession (Кузякин -> Косолапов, 20.05.2025) not previously recorded.",
         "2026-09-14: БФО coverage sweep (bfo_pull.py --all-missing) found and parsed 4 filing years (FY2022-2025), previously had empty financials[]. Revenue grew sharply in FY2025 (₽551.0m vs ₽41.0m FY2024) while profit stayed thin (₽1.0m) across all four years -- a thin-margin profile worth noting if this entity gets deeper narrative treatment.",

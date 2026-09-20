@@ -61,7 +61,11 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Скорятин Георгий Андреевич
+
+- **ИНН:** 773272723527
+- Генеральный директор (2025-06-16–present)
+- `sanctions lead`
 
 ## Open questions
 

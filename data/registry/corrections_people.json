@@ -2156,7 +2156,7 @@
           {
             "entity_slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
             "title": "Deputy Minister of Industry and Trade",
-            "body": "ЦБСТ Supervisory Board",
+            "body": "Attended the first meeting of the ЦБСТ Supervisory Board (Наблюдательный совет), 14.02.2025",
             "from": null,
             "to": null,
             "source_id": "s7600"
@@ -2164,10 +2164,10 @@
         ],
         "sanctions": [
           {
-            "date": null,
-            "note": "OpenSanctions topics: role.pol. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Deputy Minister of Industry and Trade since October 2022. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
-            "regime": null,
-            "source_id": null
+            "date": "2023-02-25",
+            "note": "Listed by the Council of the EU: Annex I to Regulation (EU) No 269/2014 as amended by Council Implementing Regulation (EU) 2024/2455 of 12 September 2024 (OJ L, 13.9.2024), entry 1437, Kirill Alekseevich LYSOGORSKY (Кирилл Алексеевич ЛЫСОГОРСКИЙ), Deputy Minister of Industry and Trade (since 2022), DOB 19.4.1986, date of listing 25.2.2023. Read directly from the archived Official Journal PDF (s7909). This regulation replaces the entry, so the original listing date is the 25.2.2023 shown in its date-of-listing column. Identity rests on name, function and the DOB 19.4.1986, which matches this record (s2604); the EU text carries no ИНН. The GUR and French asset-register pages that OpenSanctions also cites for this person were not opened. An earlier note on this entry said the OpenSanctions topic was role.pol; the archived match file says poi and sanction.",
+            "regime": ["EU (Council Regulation (EU) No 269/2014, Annex I, entry 1437)"],
+            "source_id": "s7909"
           }
         ],
         "sources": [
@@ -2176,6 +2176,7 @@
       },
       "verified_against": null,
       "why": [
+        "2026-09-20: adversarial read (claim-verifier) flagged the sanctions entry as unconfirmed (no source, regime and date null) and the Supervisory Board \"member\" role as resting on a participant list. Follow-up by hand: (1) the EU Official Journal text of Implementing Regulation 2024/2455 was fetched from EUR-Lex and archived (s7909); entry 1437 names him with DOB 19.4.1986 and date of listing 25.2.2023, so the entry now carries regime EU (Reg. 269/2014) and that date, read from the primary text; (2) the role wording now says what s7600 states, that he attended the first meeting. The GUR and French register pages were not opened. The verifier also confirmed his ИНН checksum and that DOB, birthplace and ИНН match s2604.",
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
         "2026-08-26: rupep.org profile (s2604) confirms dob 19.04.1986 (already on file), adds birthplace Vanadzor/Armenia, personal ИНН 772705212594, headshot. RuPEP tags him 'Война с Украиной'. Family detail not wired per PII scope."
@@ -3694,17 +3695,30 @@
     },
     "skoryatin-georgiy-andreevich": {
       "set": {
+        "inn_personal": "773272723527",
+        "roles": [
+          {
+            "entity_name": "ООО «ДИАМ-Аэро»",
+            "entity_slug": "ooo-diam-aero",
+            "title": "Генеральный директор",
+            "from": "2025-06-16",
+            "to": null,
+            "source_id": "s6842"
+          }
+        ],
+        "sources": ["s6842"],
         "sanctions": [
           {
             "date": null,
-            "note": "OpenSanctions topics: sanction.linked. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: name matches this registry's already ИНН-confirmed ooo-gk-aeromaks/Kronshtadt director exactly — OpenSanctions record carries no DOB or notes, name-match only but low collision risk given the specific already-established corporate role. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions match ru-inn-773272723527 (caption «ГЕОРГИЙ АНДРЕЕВИЧ СКОРЯТИН», topics: sanction.linked, no source URL; archived as s6390). Identity is ID-confirmed: the match id embeds personal ИНН 773272723527, which is the ИНН the signed ЕГРЮЛ выписка of ООО «ДИАМ-Аэро» (s6842) gives for its ГЕНЕРАЛЬНЫЙ ДИРЕКТОР Скорятин Георгий Андреевич since 16.06.2025. The topic is sanction.linked, that is a link to a sanctioned party, not a designation of him: ДИАМ-Аэро itself is designated by Указ №415/2025 (register extract s7876). No designation of the person is on file, so regime and date stay null.",
             "regime": null,
-            "source_id": null
+            "source_id": "s6390"
           }
         ]
       },
       "verified_against": null,
       "why": [
+        "2026-09-20: adversarial read (claim-verifier) flagged the sanctions entry as unconfirmed and the record as having no roles or ИНН. Checked by hand: the OpenSanctions match id embeds ИНН 773272723527 (passes the checksum), and the same name and ИНН are on the ДИАМ-Аэро ЕГРЮЛ выписка (s6842) as its general director since 16.06.2025. So the match is ID-confirmed, but only as sanction.linked, a link to a sanctioned party; the ДИАМ-Аэро role and the ИНН are now recorded with that source. The earlier claim that he directs ГК «Аэромакс»/Кронштадт was not checked against that entity's director_history and is left as it was.",
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
       ]

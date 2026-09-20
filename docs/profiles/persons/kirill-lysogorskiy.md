@@ -34,7 +34,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Disqualified-director registry:** No hits (checked 2026-09-08)
 - **Subsidiary-liability registry:** No hits (checked 2026-09-07)
 
-> **Sanctioned** — OpenSanctions topics: role.pol. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Deputy Minister of Industry and Trade since October 2022. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.
+> **EU (Council Regulation (EU) No 269/2014, Annex I, entry 1437)** — Listed by the Council of the EU: Annex I to Regulation (EU) No 269/2014 as amended by Council Implementing Regulation (EU) 2024/2455 of 12 September 2024 (OJ L, 13.9.2024), entry 1437, Kirill Alekseevich LYSOGORSKY (Кирилл Алексеевич ЛЫСОГОРСКИЙ), Deputy Minister of Industry and Trade (since 2022), DOB 19.4.1986, date of listing 25.2.2023. Read directly from the archived Official Journal PDF ([s7909]). This regulation replaces the entry, so the original listing date is the 25.2.2023 shown in its date-of-listing column. Identity rests on name, function and the DOB 19.4.1986, which matches this record ([s2604]); the EU text carries no ИНН. The GUR and French asset-register pages that OpenSanctions also cites for this person were not opened. An earlier note on this entry said the OpenSanctions topic was role.pol; the archived match file says poi and sanction. [s7909]
 
 ## Sources cited in this profile
 
@@ -44,6 +44,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 | [s6919] | press coverage | press coverage (PRESS_20260907_investigator-org-ua-270974-rubinshteyn.txt) | 2026-09-07 | — |
 | [s7519] | transcript | transcript (TRANSCRIPT_20250214_er-ru-yakushev-bezrukov-tsbst-nabsovet.txt) | 2025-02-14 | — |
 | [s7600] | Tgpost | Tgpost (TGPOST_20250214_ano_cbst-453-cbst-supervisory-board-membership.txt) | 2025-02-14 | — |
+| [s7909] | Eu | Eu (EU_SANCTIONS_772705212594_20260920_kirill-lysogorskiy-implementing-regulation-2024-2455.pdf) | 2026-09-20 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

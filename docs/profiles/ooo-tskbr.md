@@ -12,7 +12,7 @@
 - **Director:** Косолапов Олег Юрьевич
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
-- **ЦБСТ tie:** Named among the ЦБСТ residents hit by the EU 20th sanctions package.
+- **ЦБСТ tie:** ЦБСТ's own channel (msg 2095, 24.04.2026) reports that the EU's 20th package hit the general director of ЦКБР, a natural person, in a post about sanctions on ЦБСТ residents. The post does not name ЦКБР itself among the organisations it lists (Технодрон, Гаскар Групп, СКБ Пиранья, Аэро-Хит, Атлант Аэро, Архангел).
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
@@ -21,8 +21,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Кузякин Дмитрий Васильевич | 20.01.2022 | Founding GD, per EGRUL. Also personal ИНН 501306766736 — same person as the individually EU/UA/CH-sanctioned chief designer already on file (kuzyakin-dmitriy-vasilevich). [s7351] |
-| Косолапов Олег Юрьевич | 20.05.2025 | ИНН 645001842561. Succeeded Кузякин as GD; Кузякин remains a 25% co-founder. [s7351] |
+| Косолапов Олег Юрьевич | 20.05.2025 | ИНН 645001842561 (row 27 of the extract). The only director entry in the ЕГРЮЛ выписка: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (row 29). Кузякин Д.В. (ИНН 501306766736, rows 38-39, the same ИНН as the individually EU/UA/CH-sanctioned chief designer on file, kuzyakin-dmitriy-vasilevich) appears in the extract only as a 25% founder, entered 13.12.2023 (ГРН 2235002551111). The extract does not show who held the general-director office before 20.05.2025; an earlier entry here calling Кузякин the founding general director from 20.01.2022 was removed on 2026-09-20 because the extract does not state it. [s7351] |
 
 ### Founders / ownership
 
@@ -55,7 +54,7 @@
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Registry flags
 
