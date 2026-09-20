@@ -5246,6 +5246,14 @@
       "director": "Донцов Василий Николаевич",
       "tier": "manufacturer",
       "tier_basis": "Operating company of the Кронштадт drone group (Dubna, Orion/Inokhodets/Sirius families), whose group «Группа компаний «Кронштадт»» was renamed ГК «Аэромакс» on 18.05.2026 and combined with the ЦБСТ-named resident «Аэромакс» and «ИКАР». Counterparty of АО «НИИ СТТ» in a ₽220.6m supply-debt case. Its own ЦБСТ tie is through that group, not stated directly.",
+      "sanctions": [
+        {
+          "date": null,
+          "note": "Directly designated on the US OFAC SDN List as \"JOINT STOCK COMPANY KRONSHTADT\" (aliases \"AKTSIONERNOE OBSHCHESTVO KRONSHTADT\", \"AO KRONSHTADT\"), program RUSSIA-EO14024; the OFAC page itself states Registration Number 1027809176141 and Tax ID No. 7808035536, identical to this entity's ОГРН and ИНН. Read directly from the archived page (page footer: SDN list last updated 18.09.2026). The page does not state the designation date, so date is left null. The Aleph/OpenSanctions record (ALEPH_7808035536_20260919) also cites EU Regulation 2023/2878 and a French asset-freeze register entry for this ИНН; those two were NOT opened and are not recorded as confirmed.",
+          "regime": ["US (OFAC, EO 14024)"],
+          "source_id": "s7869"
+        }
+      ],
       "related_entities": [
         {
           "slug": "ooo-gk-aeromaks",
@@ -5256,6 +5264,7 @@
         }
       ],
       "why": [
+        "2026-09-20: sanctions[] added from the Aleph sweep (ID-matched on both ИНН and ОГРН, Global Sanctions Database record) and then confirmed on the primary OFAC SDN page (s7869), which carries the same Registration Number and Tax ID. The entity had sanctions: [] before this.",
         "2026-09-19: added while investigating why АО «НИИ СТТ» had no path to ЦБСТ. Identifiers from the court filing s0022/s0023 and a fresh full ЕГРЮЛ выписка (s7608, pulled 19.09.2026, single-ИНН lookup). Shareholders are not listed in a JSC extract (register held by АО «Реестр»), so ownership of the group is not established here."
       ]
     },
@@ -31947,6 +31956,16 @@
             "caption": "Stylized CGI promotional render (not a real combat photograph) of an armed quadcopter in a cinematic urban scene, with the «ОВОД» logo — official promotional art, not footage.",
             "path": "images/ovod_promo_cgi-armed-drone-render.jpg",
             "source_id": "s6454"
+          },
+          {
+            "caption": "Video still from the «За работу» interview (Readovka/Ramzay reposts, Feb-Apr 2025): a workshop with shelved FPV airframes and stacked shipping boxes; on-screen caption «Андрей Иванов, главный инженер проекта по производству дронов». The Insider (s7853) identifies «Андрей Иванов» as the public alias of Черезов А.П.",
+            "path": "images/ovod_workshop_zarabotu-ivanov-2025.jpg",
+            "source_id": "s7855"
+          },
+          {
+            "caption": "Video still from «Фёдоров LIVE» (Соловьёв LIVE, 2024): on-screen caption «Андрей Иванов — разработчик, создатель дрона «ОВОД»». The Insider (s7853) identifies «Андрей Иванов» as the public alias of Черезов А.П.",
+            "path": "images/ovod_interview_fedorov-live-ivanov.jpg",
+            "source_id": "s7854"
           }
         ],
         "web": {

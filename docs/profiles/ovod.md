@@ -125,7 +125,7 @@
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 
@@ -138,11 +138,14 @@
 - ![Первая партия из 50 дронов-камикадзе «Овод», упакованных для отправки в зону СВО при поддержке проекта "Народный фронт" (Иркутская область), август 2023.](../images/ovod_shipment_50-drones-narodny-front-2023.jpg) — Первая партия из 50 дронов-камикадзе «Овод», упакованных для отправки в зону СВО при поддержке проекта "Народный фронт" (Иркутская область), август 2023. [s6451]
 - ![Product close-up: motor/propeller assembly of a fiber-optic-guided strike drone, with the «ОВОД» dragonfly logo — official product photo from the manufacturer's own channel.](../images/ovod_product_fiber-optic-spool-closeup.jpg) — Product close-up: motor/propeller assembly of a fiber-optic-guided strike drone, with the «ОВОД» dragonfly logo — official product photo from the manufacturer's own channel. [s6455]
 - ![Stylized CGI promotional render (not a real combat photograph) of an armed quadcopter in a cinematic urban scene, with the «ОВОД» logo — official promotional art, not footage.](../images/ovod_promo_cgi-armed-drone-render.jpg) — Stylized CGI promotional render (not a real combat photograph) of an armed quadcopter in a cinematic urban scene, with the «ОВОД» logo — official promotional art, not footage. [s6454]
+- ![Video still from the «За работу» interview (Readovka/Ramzay reposts, Feb-Apr 2025): a workshop with shelved FPV airframes and stacked shipping boxes; on-screen caption «Андрей Иванов, главный инженер проекта по производству дронов». The Insider ([s7853]) identifies «Андрей Иванов» as the public alias of Черезов А.П.](../images/ovod_workshop_zarabotu-ivanov-2025.jpg) — Video still from the «За работу» interview (Readovka/Ramzay reposts, Feb-Apr 2025): a workshop with shelved FPV airframes and stacked shipping boxes; on-screen caption «Андрей Иванов, главный инженер проекта по производству дронов». The Insider ([s7853]) identifies «Андрей Иванов» as the public alias of Черезов А.П. [s7855]
+- ![Video still from «Фёдоров LIVE» (Соловьёв LIVE, 2024): on-screen caption «Андрей Иванов — разработчик, создатель дрона «ОВОД»». The Insider ([s7853]) identifies «Андрей Иванов» as the public alias of Черезов А.П.](../images/ovod_interview_fedorov-live-ivanov.jpg) — Video still from «Фёдоров LIVE» (Соловьёв LIVE, 2024): on-screen caption «Андрей Иванов — разработчик, создатель дрона «ОВОД»». The Insider ([s7853]) identifies «Андрей Иванов» as the public alias of Черезов А.П. [s7854]
 
 ## Principals & persons of interest
 
 ### Черезов Андрей Павлович
 
+![Черезов Андрей Павлович](../images/cherezov-andrey-pavlovich_portrait_mash-patriot-2024.jpg)
 - **ИНН:** 712802968839
 - Директор и учредитель (100%) (2024-05-08–present)
 
@@ -173,6 +176,8 @@
 | [s6534] | Bfo | Bfo (BFO_7100027464_2025_ооо-рлвт.pdf) | — | — |
 | [s6727] | EGRUL extract | EGRUL extract (EGRUL_7100027464_20260907_ovod.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6960] | Proverki | Proverki (PROVERKI_7100027464_20260907_ovod-inspection-history.txt) | 2026-09-07 | — |
+| [s7854] | Screenshot | Screenshot (SCREENSHOT_7100027464_20260920_fedorov-live-ivanov-ovod-video-still.png) | 2026-09-20 | — |
+| [s7855] | Screenshot | Screenshot (SCREENSHOT_7100027464_20260920_ovod-workshop-ivanov-video-still.png) | 2026-09-20 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

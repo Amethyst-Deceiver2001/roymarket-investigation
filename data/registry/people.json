@@ -11517,7 +11517,7 @@
     "subsidiary_liability_hits": [],
     "subsidiary_liability_checked_at": null,
     "social": [],
-    "photo": null,
+    "photo": "images/cherezov-andrey-pavlovich_portrait_mash-patriot-2024.jpg",
     "notes": null,
     "sources": [],
     "mentions": 1,
@@ -11528,7 +11528,16 @@
         "ючая поставки на склады Министерства обороны\") and distribution to units handled by the military itself. Chief designer Андрей Иванов is quoted repeatedly; company founder and sole owner per EGRUL is Черезов Андрей Павлович (100%, also director since the company's 28.11.2023 registration). ЦБСТ's own 29.07.2026 post states plainly that Черезов \"после начала СВО... основал в Туле компанию по производству FPV-дронов, вошедшую впоследствии в контур ЦБСТ\" (fou"
       ]
     },
+    "name_history": [
+      {
+        "value": "Андрей Иванов",
+        "as_of": "2024",
+        "source_id": "s7853",
+        "note": "Public working name, not a legal name change. The Insider (29.07.2026) states that when giving public comments Черезов introduced himself as «Андрея Иванова», including in the 2024 «Соловьев LIVE» segment with Кирилл Фёдоров; press level, one outlet. Consistent with the on-screen caption «Андрей Иванов — разработчик, создатель дрона «ОВОД»» in that video (s7854) and with the Mash photo of Черезов А.П. receiving the «Патриот-2024» laureate diploma (s7851), in which he wears the same kind of tinted glasses. as_of is the year of the segment as stated by The Insider, not an exact date."
+      }
+    ],
     "_corrected": [
+      "2026-09-20: photo = Mash.ru press image (s7851/s7852, 29.07.2026) showing him at the «Патриот-2024» award; the diploma in it reads «Черезов Андрей Павлович». Alias «Андрей Иванов» added to name_history from The Insider (s7853), corroborated by the Фёдоров LIVE on-screen caption (s7854, user-supplied screenshot) and the «За работу» workshop interview (s7855 and Readovka/Ramzay reposts s7858/s7859). Identification is press-level; no second independent outlet states the alias. Mash's remark that the attacker may have confused him with a second co-founder named Андрей is NOT used: the ЕГРЮЛ выписка (s6727) has him as sole founder.",
       "2026-09-08: personal ИНН found in the already-pulled EGRUL выписка for ovod (ИНН 7100027464, s6727) — he's named there as director since 28.09.2022, ИНН 712802968839. Sitting unexploited since 2026-09-07; closing the gap now that this Гагаринг-adjacent 'Архангел'-family thread is being worked.",
       "2026-09-17: added roles[] entries for both ooo-vozdushnyy-traktat and ovod (director+100% founder of each, per each entity's own director/founders_history fields, sourced s6728/s6727) -- the entity-side records and relationship_graph.json already carried this tie, but people.json's own roles[] array was empty, so no person profile page existed for him. Found while wiring clickable profile links into the 'Five Residents' case-study exhibit."
     ],

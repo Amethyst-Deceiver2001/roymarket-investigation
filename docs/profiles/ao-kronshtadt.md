@@ -1,6 +1,6 @@
 # JSC Kronshtadt — АО «Кронштадт»
 
-`manufacturer` `WB: not_checked` 
+`sanctioned` `manufacturer` `WB: not_checked` 
 
 ИНН 7808035536 · ОГРН 1027809176141
 
@@ -19,6 +19,12 @@
 |---|---|---|
 | Донцов Василий Николаевич | — | from corrections:add_entities, unverified |
 
+## Sanctions & screening
+
+**US (OFAC, EO 14024)** [s7869]
+
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
@@ -32,6 +38,7 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | [s7610] | Tgpost | Tgpost (TGPOST_20260518_aeromax_group-864-kronshtadt-renamed-gk-aeromaks.txt) | 2026-05-18 | — |
+| [s7869] | Ofac | Ofac (OFAC_7808035536_20260920_ao-kronshtadt.html) | 2026-09-20 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
