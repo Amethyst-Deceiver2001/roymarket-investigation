@@ -105,10 +105,12 @@
 
 ## Sanctions & screening
 
+**UA-NSDC (Decree of the President of Ukraine №415/2025 of 20.06.2025, Annex 2, position 28)** [s7972]
+
 **Ukraine (Presidential sanctions decree/list)** [s0814]
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 2 OCCRP Aleph match(es) (screened 2026-09-05).
+- 2 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 
@@ -166,6 +168,7 @@
 | [s6457] | Nabat | Nabat (NABAT_9721203814_20260907_produkt-site-marketing-scan.html) | 2026-09-07 | — |
 | [s6458] | Tgpost | Tgpost (TGPOST_multi_20260907_godrone-battlefield-testimonial-series.txt) | 2026-09-07 | — |
 | [s6768] | EGRUL extract | EGRUL extract (EGRUL_9721203814_20260907_ooo-goudron.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7972] | document | document (extract-DRS-313b0188-3a83-40cc-b3af-ee6b977ef3af.zip) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

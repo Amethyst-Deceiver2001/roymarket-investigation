@@ -24566,8 +24566,16 @@
     "securing_measures_checked_at": "2026-09-06",
     "sanctions": [
       {
+        "date": "2025-06-20",
+        "note": "PRIMARY LISTING. Signed extract from the Ukrainian State Register of Sanctions (DRS), unique code DRS-313b0188-3a83-40cc-b3af-ee6b977ef3af, generated 20.09.2026 21:06, with detached .p7s signature: ТОВ «Гоудрон» / ООО «Гоудрон» (ИНН 9721203814, ОГРН 1237700265846) is «Під санкціями»; action code 25041512200028, status «Чинно», introduced by Decree of the President of Ukraine №415/2025 of 20.06.2025, Annex 2, position 28; term ten years to 20.06.2035. Measures listed: asset blocking, restriction of trade operations, restriction/suspension of transit, prevention of capital outflow, suspension of obligations, suspension of licences, among others (see extract).",
+        "regime": [
+          "UA-NSDC (Decree of the President of Ukraine №415/2025 of 20.06.2025, Annex 2, position 28)"
+        ],
+        "source_id": "s7972"
+      },
+      {
         "date": null,
-        "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9721203814 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Товариство з обмеженою відповідальністю \"Гоудрон\"\". Topics: sanction. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
+        "note": "AGGREGATOR LEVEL (superseded for the UA-NSDC listing by the primary extract above, s7972). Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9721203814 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Товариство з обмеженою відповідальністю \"Гоудрон\"\". Topics: sanction. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
         "regime": [
           "Ukraine (Presidential sanctions decree/list)"
         ],
