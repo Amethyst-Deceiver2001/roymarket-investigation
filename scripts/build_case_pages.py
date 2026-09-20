@@ -53,8 +53,27 @@ CASES = [
           },
          "caption": "Static excerpt of the registry graph: the Архангел cluster and its documented neighbours. The one link from the cluster to the core network runs through the ЦБСТ resident КАЙСАНТ, and it is a self-reported component supply, not a contract.",
      }},
-    {"slug": "gagaring", "status": "planned", "title": "Гагаринг",
-     "line": "In preparation."},
+    {"slug": "gagaring", "status": "published", "title": "Гагаринг",
+     "kicker": "Case study · ЦБСТ resident",
+     "line": "A company registered in September 2023 reports ₽2.16bn in 2025 revenue, is named a ЦБСТ resident by ЦБСТ itself, and appears in no public procurement record.",
+     "graph": {
+         "hub": "ooo-gagaring",
+         "nodes": {
+             "ooo-gagaring": "ООО «Гагаринг»",
+             "barashkov-aleksandr-sergeevich": "Барашков А.С.",
+             "aleksandrov-aleksey-vitalevich": "Александров А.В.",
+             "ano-dpo-obrazovatelny-tsentr-gagaring": "АНО ДПО «Образовательный центр»",
+             "ooo-aviron": "ООО «Авирон»",
+             "ooo-intel-dron": "ООО «Интел Дрон»",
+             "ooo-npo-eyler": "ООО «НПО Эйлер»",
+             "ano-arrs-krasnodar": "АРРС",
+             "ooo-akr-begak": "ООО «АКР «Бегак»",
+             "ooo-praym": "ООО «Прайм»",
+             "ano-arkhangel": "АНО «Архангел» (Легион)",
+             "ano-tsbst-centre-for-unmanned-systems-technologies": "АНО «ЦБСТ»",
+         },
+         "caption": "Static excerpt of the registry graph: Гагаринг, its owners, part-owned companies, training body and industry association. Гагаринг and Авирон carry a documented ЦБСТ resident tie. The Архангел ties described on this page rest on posts and are only partly in the graph.",
+     }},
     {"slug": "goudron", "status": "planned", "title": "ГОУДРОН", "line": "In preparation."},
     {"slug": "ovod-cherezov", "status": "planned", "title": "Овод and Черезов",
      "line": "In preparation."},
@@ -272,7 +291,7 @@ def build_case(case, g, sources):
               '<span><span class="tag t-press">Press-reported</span> named outlet, wording not verified</span>'
               '<span><span class="tag t-open">Open</span> unconfirmed, incl. own-channel claims</span></div>')
     html_out = page(title, f'<div class="case-body">{intro}{legend}{body}{src}</div>', "../",
-                    "Case study · no confirmed ЦБСТ tie")
+                    case.get("kicker", "Case study · no confirmed ЦБСТ tie"))
     (DOCS / "cases" / f"{case['slug']}.html").write_text(html_out, encoding="utf-8")
 
 
