@@ -47,7 +47,7 @@
 |---|---|---|
 | Михаил Филиппов | Head; callsign «Архангел», `@arhangel76`; 80% of ООО «Архангел Групп» since 12.03.2026 | {doc} [s0234, s5465, s5474] |
 | Еськов Н.Л. | Rector of both НИИ ДПО; signs every credential in the set | {doc} [s7907, s7908, s7897] |
-| Дмитрий Рогозин | Commander of ЦСН «Барс-Сармат» per the unit's own site [s7687]; Архангел's channel writes «Флагманом движения является Д.О. Рогозин» (05.11.2024); his own channel reposted an Архангел recruitment call on 22.04.2025 | {doc} [s6912, s6915] |
+| Дмитрий Рогозин | Commander of ЦСН «Барс-Сармат» per the unit's own site [s7687]; Архангел's channel writes «Флагманом движения является Д.О. Рогозин» (05.11.2024) [s6912]. On his own channel on 22.04.2025 he posts about Проект «Архангел»: «Теперь — в составе военно-учебного центра Центра специального назначения беспилотных систем "Барс-Сармат". Присоединяйтесь!» [s6915] | {doc} [s6912, s6915] |
 | ЦСН «Барс-Сармат» (Рогозин's unit) | Joint approbation and a mutual «объединяем ресурсы» agreement, 17.10.2024 | {doc} [s7693, s7694] |
 | Алексей Рогозин | Founder of Фонд «Сармат», the unit's donation fund; Гамируллин М.Д. directs it | {doc} [s7870] |
 | АНО ЦПВ «ЗОВ-АА» (Прибылова К.А.) | Co-organiser of joint events with Архангел, 2024–2026 | {doc} [s7727, s7728] |
@@ -74,6 +74,7 @@ Nine companies carry the «Архангел» name. Only one, Архангел �
 | 25.08.2023 | iStories investigation «Народный ВПК» [s5484] |
 | 17.10.2024 | Meeting with Дмитрий Рогозин; joint arrangement with «Барс-Сармат» [s7693, s7694] |
 | 05.04.2025 | Kafedra of НИИ ДПО pitched as the remote course [msg 7130] |
+| 22.04.2025 | Рогозин's channel says Проект «Архангел» is «в составе военно-учебного центра» of «Барс-Сармат» [s6915] |
 | 31.05.2025 | Interceptor drawings published free [s5475] |
 | 27.08.2025 | Kalashnikov memorandum [s5476–s5483] |
 | 16.09.2025 | Putin visits Мулино; Архангел claims the exhibit [s5479, s5480] |
@@ -84,6 +85,7 @@ Nine companies carry the «Архангел» name. Only one, Архангел �
 
 ## What is not established
 
+- Whether Проект «Архангел» is legally part of the «Барс-Сармат» training centre, as Рогозин's post of 22.04.2025 says [s6915]. No registration or agreement shows it; the tie may be a cooperation, not a corporate one.
 - Which legal entity invoices for the interceptor or the courses. The channel names «Архангел Групп» as the contact for its «группа компаний» [msg 10668], but no sales record is on file.
 - Whether the certificates were issued to real people, and whether ФИС ФРДО holds entries for them. The set on file is specimens only.
 - Which НИИ ДПО entity (АНО or ООО) issues Архангел credentials since 2025, and the licence number discrepancy.

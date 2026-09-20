@@ -88,8 +88,24 @@ CASES = [
          },
          "caption": "Static excerpt of the registry graph: the whole documented network is one owner, one product and one ЦБСТ tie, which rests on the company's own channel. The red outline is a sanctions flag from an aggregator match, not a primary listing.",
      }},
-    {"slug": "ovod-cherezov", "status": "planned", "title": "Овод and Черезов",
-     "line": "In preparation."},
+    {"slug": "ovod", "status": "published", "title": "Овод and Черезов",
+     "kicker": "Case study · ЦБСТ resident",
+     "line": "Two Tula companies with one owner, a ₽1.3bn FPV-drone maker that ЦБСТ calls its flagship resident, and a founder shot in July 2026.",
+     "graph": {
+         "hub": "ovod",
+         "extra_edges": ["produces", "procures"],
+         "nodes": {
+             "ovod": "ООО «РЛВТ» («Овод»)",
+             "ooo-vozdushnyy-traktat": "ООО «Воздушный трактат»",
+             "cherezov-andrey-pavlovich": "Черезов А.П.",
+             "ano-tsbst-centre-for-unmanned-systems-technologies": "АНО «ЦБСТ»",
+             "product::ovod::овод": "«Овод»",
+             "product::ovod::провод-15": "«Провод-15»",
+             "customer::фгбоу-во-воронежский-государственный-технический-университет": "Воронежский ГТУ",
+             "customer::фгбоу-во-белгородский-государственный-технологический-университет-им-в-г-шухова": "Белгородский ГТУ",
+         },
+         "caption": "Static excerpt of the registry graph: one owner, two companies, two products, two university customers and the ЦБСТ tie. The red outlines are sanctions flags from aggregator and press-level entries, not primary listings.",
+     }},
     {"slug": "piranya", "status": "planned", "title": "Пиранья", "line": "In preparation."},
     {"slug": "tsyganov", "status": "planned", "title": "Цыганов and «Булат»", "line": "In preparation."},
     {"slug": "npts-basirtk", "status": "planned", "title": "НПЦ БАСиРТК",
@@ -231,7 +247,7 @@ def graph_svg(cfg, g, weak=frozenset()):
         t = e["type"]
         style = {"cbst_tie": 'stroke="#eb6834" stroke-width="3"', "family_tie": 'stroke="var(--ink-3)" stroke-width="1.6" stroke-dasharray="2 4"',
                  "founded": 'stroke="var(--ink-2)" stroke-width="1.8"', "owns": 'stroke="var(--ink-2)" stroke-width="1.8"',
-                 "directs": 'stroke="var(--ink-3)" stroke-width="1.4"', "role": 'stroke="var(--ink-3)" stroke-width="1.2" stroke-dasharray="1 3"', "produces": 'stroke="var(--ink-3)" stroke-width="1.2"',
+                 "directs": 'stroke="var(--ink-3)" stroke-width="1.4"', "role": 'stroke="var(--ink-3)" stroke-width="1.2" stroke-dasharray="1 3"', "produces": 'stroke="var(--ink-3)" stroke-width="1.2"', "procures": 'stroke="var(--ink-3)" stroke-width="1.2" stroke-dasharray="8 3"',
                  
                  "related": 'stroke="var(--ink-3)" stroke-width="1.4" stroke-dasharray="6 4"'}[t]
         svg.append(f'<line x1="{pos[a][0]:.0f}" y1="{pos[a][1]:.0f}" x2="{pos[b][0]:.0f}" y2="{pos[b][1]:.0f}" {style}/>')
@@ -252,7 +268,7 @@ def graph_svg(cfg, g, weak=frozenset()):
               '<span><span class="net-swatch" style="background:#1baf7a"></span> plumbing</span>'
               '<span><span class="net-swatch" style="background:#eb6834"></span> ЦБСТ core</span>'
               f'<span><span class="net-swatch" style="background:{PERSON_COL};border-radius:50%"></span> person</span>'
-              '<span>thick orange = ЦБСТ resident tie · solid = ownership/directs/produces · fine dotted = role/family · dashed = related · red outline = sanctions flag in the registry (weak name-only matches are not outlined)</span></div>')
+              '<span>thick orange = ЦБСТ resident tie · solid = ownership/directs/produces · long dash = buys from · fine dotted = role/family · dashed = related · red outline = sanctions flag in the registry (weak name-only matches are not outlined)</span></div>')
     return (f'<div class="net-panel"><div class="net-svg-wrap">{"".join(svg)}</div>{legend}</div>'
             f'<p class="footnote" style="margin-top:.75rem;border:none;padding:0">{esc(cfg["caption"])} '
             f'{len(want)} of {g["node_count"]:,} nodes.</p>')
