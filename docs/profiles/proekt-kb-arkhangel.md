@@ -143,7 +143,7 @@
 - name: Betaflight Configurator (flight-controller setup software), shown on a laptop with the FC on USB; manufacturer: Betaflight open-source project (international); context: Seen, not stated: first ~2 minutes of the instruction video (msg 183433) show the configurator's orange-themed UI with a 3D drone model while the board is connected on a red USB cable (still [s7643]). Consistent with the Betaflight 4.4.3 config dump archived as [s5453]. [s7643]
 - name: 5" monitor, voltmeter, step-down converter and laser pointer for the «Ночник ПВН» device; manufacturer: not named (parts note lists Ozon marketplace short links only); context: Parts note «Запчасти.txt» inside the RAR published in post 10797 (19.09.2026); the links were not opened, so makes and origin are unknown. [s7619]
 
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 
@@ -184,6 +184,8 @@
 - ![«Ночник ПВН» observation device (screen, camera and green laser pointer on top) demonstrated in @projectArchangel msg 10796 (19.09.2026), released with its design files.](../images/TGMEDIA_20260919_projectarchangel-post10796-pvn-front-laser.png) — «Ночник ПВН» observation device (screen, camera and green laser pointer on top) demonstrated in @projectArchangel msg 10796 (19.09.2026), released with its design files. [s7646]
 - ![Inside the «Ночник ПВН»: FPV camera, foil-wrapped battery pack with XT60 lead and buck-converter boards (msg 10796).](../images/TGMEDIA_20260919_projectarchangel-post10796-pvn-internals.png) — Inside the «Ночник ПВН»: FPV camera, foil-wrapped battery pack with XT60 lead and buck-converter boards (msg 10796). [s7647]
 - ![Frame from the 57-second recruitment video (msg 10782, 13.09.2026): a uniformed speaker in front of a workshop with several 3D printers who, per a machine transcript (approximate), introduces herself by the callsign «Радистка», says she has been an operator of strike UAVs since 2023 and points viewers to the «Архангел» school. Identity beyond the callsign is not established here.](../images/TGMEDIA_20260913_projectarchangel-post10782-radistka-recruitment.png) — Frame from the 57-second recruitment video (msg 10782, 13.09.2026): a uniformed speaker in front of a workshop with several 3D printers who, per a machine transcript (approximate), introduces herself by the callsign «Радистка», says she has been an operator of strike UAVs since 2023 and points viewers to the «Архангел» school. Identity beyond the callsign is not established here. [s7645]
+- ![Bench in the 32-minute flight-instruction video (@Archangel_Forum msg 183433, 06.09.2026): black 3D-printed drone body with four fins and a cylinder on top, Betaflight Configurator open on the laptop behind. Single frame of an 848×464 video.](../images/TGMEDIA_20260906_archangelforum-post183433-printed-body-bench.png) — Bench in the 32-minute flight-instruction video (@Archangel_Forum msg 183433, 06.09.2026): black 3D-printed drone body with four fins and a cylinder on top, Betaflight Configurator open on the laptop behind. Single frame of an 848×464 video. [s7856]
+- ![Same video: a dark 3-blade prop and a grey 2-blade prop shown on a gaming laptop (Intel Core, NVIDIA GeForce, G-SYNC stickers). No prop or laptop make is legible at this resolution.](../images/TGMEDIA_20260906_archangelforum-post183433-prop-laptop-bench.png) — Same video: a dark 3-blade prop and a grey 2-blade prop shown on a gaming laptop (Intel Core, NVIDIA GeForce, G-SYNC stickers). No prop or laptop make is legible at this resolution. [s7857]
 
 ## Principals & persons of interest
 
@@ -334,6 +336,7 @@
 - Гермес: the «Архангел» channels repeatedly promote the «ГЕРМЕС» long-range/anti-jam comms line (59 video posts in the local scrape of @projectArchangel, Dec 2023 - Jul 2026, counted from data/roymarket.db rather than an archived file; e.g. msg 3881 «Производство связи ГЕРМЕС. t.me/germesfpv»), and both build bills of materials list «Связь: Гермес или аналоги» ([s5452], [s7653]). This registry holds «ГЕРМЕС связь» and «ГЕРМЕС мачты» as products of НПО «КАЙСАНТ» (npo-kaysant, ИНН 7733393203); the matching product names make it likely that entity is behind the channel, but no primary source yet says so or that it supplies Архангел. Deliberately NOT recorded as a related_entities edge: an edge would pull the whole Архангел cluster (Филиппов, ООО «Архангел Групп», ML Констракшнс) into the ЦБСТ-connected graph on an unconfirmed link. [s7653]
 - The unit's channel (msg 1746, 06.11.2024) credits the Tatarstan 'Академия пилотов: операторы будущего' to «Всероссийского фонда помощи военным «Архангел»» and the youth ministry. Is that фонд the АНО «Архангел» (ИНН 2315233718) on file, the ЗОВ-АА АНО, or another body? Unresolved. [s7706]
 - @NightVVit («Ночные ведьмы 2.0», the women's UAV squadron the ЦСН recruits for, msg 5529) no longer resolves; find who runs it and whether any name links back to Архангел or ЗОВ-АА. [s7705]
+- Spoken statements in the 32-minute instruction video (whisper transcript, approximate, not quotable; data/sources/TRANSCRIPT_20260906_archangel-forum-183433-flight-instruction-whisper.txt): the speaker says he flew about 36 km out into a headwind with video still working; that video used to reach that range on 1-2 analog links and that Гермес on 'the third group' allows flights beyond 50 km; a 7-inch pitch-13 prop; about 6.4-6.7 kg static thrust; turn-back at about 24 V. Listen to the audio to confirm the figures and to catch any named unit, customer or target; the Гермес statement matches the existing Гермес link ([s5539]) and the BOM line 'Гермес или аналоги' ([s5452]). [s7615]
 
 ## Sources cited in this profile
 
@@ -354,6 +357,7 @@
 | [s5486] | press coverage | press coverage (PRESS_20230903_readovkanews-arkhangel-zaporizhzhia-range-instructors.html) | 2023-09-03 | 2023-09-03 |
 | [s5487] | press coverage | press coverage (PRESS_20230912_readovkanews-arkhangel-school-drone-operators.html) | 2023-09-12 | 2023-09-12 |
 | [s5539] | Tgpost | Tgpost (TGPOST_multi_20240807-20260830_arhangel-crosschannel-mining.txt) | — | — |
+| [s7615] | Telegram media | Telegram media (TGMEDIA_20260906_archangelforum-post183433.mp4) | 2026-09-06 | — |
 | [s7618] | Telegram media | Telegram media (TGMEDIA_20260919_projectarchangel-post10796.mp4) | 2026-09-19 | — |
 | [s7619] | Telegram media | Telegram media (TGMEDIA_20260919_projectarchangel-post10797.rar) | 2026-09-19 | — |
 | [s7641] | Telegram media | Telegram media (TGMEDIA_20260804_projectarchangel-post10619-airframe-assembly-bench.png) | 2026-08-04 | — |
@@ -377,6 +381,8 @@
 | [s7705] | Tgpost | Tgpost (TGPOST_20241020_projectArchangel-5529-sarmat-nochnye-vedmy-recruitment.txt) | 2024-10-20 | — |
 | [s7706] | Tgpost | Tgpost (TGPOST_20241106_russian_shock_volunteer_brigade-1746-tatarstan-akademiya-pilotov-arkhangel-fund.txt) | 2024-11-06 | — |
 | [s7728] | Tgpost | Tgpost (TGPOST_20241103_projectArchangel-5657-zov-aa-arkhangel-sarmat-project.txt) | 2024-11-03 | — |
+| [s7856] | Telegram media | Telegram media (TGMEDIA_20260906_archangelforum-post183433-printed-body-bench.png) | 2026-09-06 | — |
+| [s7857] | Telegram media | Telegram media (TGMEDIA_20260906_archangelforum-post183433-prop-laptop-bench.png) | 2026-09-06 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
