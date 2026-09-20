@@ -106,7 +106,23 @@ CASES = [
          },
          "caption": "Static excerpt of the registry graph: one owner, two companies, two products, two university customers and the ЦБСТ tie. The red outlines are sanctions flags from aggregator and press-level entries, not primary listings.",
      }},
-    {"slug": "piranya", "status": "planned", "title": "Пиранья", "line": "In preparation."},
+    {"slug": "piranya", "status": "published", "title": "Пиранья",
+     "kicker": "Case study · ЦБСТ resident on the EU list",
+     "line": "A company registered as software development sells combat FPV drones from one unit on its website, and the EU says it makes up to 10,000 a month.",
+     "graph": {
+         "hub": "ooo-skb-piranya",
+         "extra_edges": ["produces"],
+         "nodes": {
+             "ooo-skb-piranya": "ООО «СКБ Пиранья»",
+             "chernyshov-pavel-alekseevich": "Чернышов П.А.",
+             "korchagina-olga-aleksandrovna": "Корчагина О.А.",
+             "ano-tsbst-centre-for-unmanned-systems-technologies": "АНО «ЦБСТ»",
+             "product::ooo-skb-piranya::бпла-пиранья-7": "«Пиранья-7»",
+             "product::ooo-skb-piranya::бпла-пиранья-10": "«Пиранья-10»",
+             "product::ooo-skb-piranya::бпла-пиранья-13": "«Пиранья-13»",
+         },
+         "caption": "Static excerpt of the registry graph: two owners, three drone models and the ЦБСТ tie. The red outline on the company is the EU listing; the 60% owner's outline is an aggregator match, and the director has no outline because his match is only plausible.",
+     }},
     {"slug": "bulat", "status": "published", "title": "Цыганов and «Булат»",
      "kicker": "Case study · ЦБСТ tie on the maker",
      "line": "A Petersburg detector maker with hidden owners, a sole trader in Khimki, and ₽28.2m of МЧС contracts awarded without a tender.",
@@ -392,7 +408,7 @@ def main():
     ents = json.load(open(REG / "entities.json", encoding="utf-8"))
     ppl = json.load(open(REG / "people.json", encoding="utf-8"))
     weak = {r["slug"] for r in list(ents) + list(ppl)
-            if r.get("sanctions") and all(str(s.get("note") or "").upper().startswith("PLAUSIBLE") for s in r["sanctions"])}
+            if r.get("sanctions") and all("PLAUSIBLE" in str(s.get("note") or "") and "ID-CONFIRMED" not in str(s.get("note") or "") for s in r["sanctions"])}
     (DOCS / "cases").mkdir(exist_ok=True)
     for c in CASES:
         if c["status"] == "published":
