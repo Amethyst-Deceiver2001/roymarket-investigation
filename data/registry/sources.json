@@ -46249,6 +46249,26 @@
     "_origin": "manifest"
   },
   {
+    "id": "s7907",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_5505057400_20260920_inn-5505057400.pdf",
+    "url": null,
+    "captured_date": "2026-09-20",
+    "fiscal_year": null,
+    "as_of": "2026-09-20",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "262607260913",
+      "5505216402"
+    ],
+    "entities": [],
+    "sha256": "a3d7a2c3ea2c162695d73c145964970526a7ad9d48978c38aa790cc1a6afa5f4",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s6723",
     "type": "egrul",
     "path": "data/sources/EGRUL_583713716580_20260907_npo-kilobatt.pdf",
@@ -47668,6 +47688,25 @@
     ],
     "entities": [],
     "sha256": "54b571a869a37d9ea0cd20a6a3c9dfeb3ccc3cecde3340e35e52f37c43b1fe3d",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s7908",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_7733462457_20260920_inn-7733462457.pdf",
+    "url": null,
+    "captured_date": "2026-09-20",
+    "fiscal_year": null,
+    "as_of": "2026-09-20",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "262607260913"
+    ],
+    "entities": [],
+    "sha256": "d1eaf92fb8a01dbc418adc3daf02a06cb34a5b8d3bf09250e42134e718d83c5c",
     "_verified": false,
     "_origin": "manifest"
   },

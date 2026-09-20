@@ -57124,6 +57124,233 @@
     "fssp_debt_checked_at": "2026-09-08"
   },
   {
+    "slug": "ano-nii-dpo",
+    "name_ru": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ\"",
+    "name_latin": "ANO \"NII DPO\"",
+    "legal_form": "АНО",
+    "brand_ru": "НИИ ДПО",
+    "brand_latin": null,
+    "inn": "5505057400",
+    "ogrn": "1175543029980",
+    "extra_ids": null,
+    "registered": null,
+    "address": null,
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "Еськов Николай Леонидович (ИНН 262607260913), ректор",
+    "director_history": [
+      {
+        "value": "Еськов Николай Леонидович",
+        "as_of": "2022-08-25",
+        "source_id": "s7907",
+        "note": "ректор; entry date 25.08.2022"
+      }
+    ],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [
+      {
+        "value": "644011, Омская обл., г. Омск, ул. Енисейская, д. 1, помещ. 13П, офис 32",
+        "as_of": "2026-09-20",
+        "source_id": "s7907",
+        "note": ""
+      }
+    ],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": "Issuer of the diplomas and certificates of Архангел's «Школа внешних пилотов (операторов) БПЛА «Архангел»» (Кафедра общественной безопасности), per ten specimen documents Архангел posted on 07.02.2026 (s7897-s7906) and its own posts (msg 7130, 7188, 10463). ЕГРЮЛ выписка of 20.09.2026 (s7907): registered 12.09.2017 in Omsk by transformation, rector Еськов Николай Леонидович, ОКВЭД 85.42.9. No ЦБСТ tie found.",
+    "cbst_tie": {
+      "claim": "None found.",
+      "confidence": "none",
+      "evidence": null,
+      "source_id": null
+    },
+    "wb_overlap": "none_found",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [
+        {
+          "url": "https://bpla.ru-dpo.ru/",
+          "note": "linked in an Archangel_Forum-era post, msg 107511 (05.02.2025); the certificates print www.ru-dpo.ru"
+        }
+      ]
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s7907",
+        "text": "ЕГРЮЛ lists licence 55Л01 75-п of 31.10.2017, the certificates print Л035-01273-55/00207746 of 18.02.2022: confirm in the Рособрнадзор register, and check whether the АНО or the ООО (registered 24.01.2025, ОКВЭД 85.42.9) is the one actually issuing the Архангел credentials from 2025."
+      },
+      {
+        "source_id": "s7897",
+        "text": "Archangel_Forum chat messages of March-April 2023 (23662, 36712) speak of 'диплом гос образца' through Архангел: check whether the same institute was behind the earlier courses."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "name_en": "Autonomous non-profit organisation \"Scientific Research Institute of Additional Professional Education\"",
+    "related_entities": [
+      {
+        "slug": "proekt-kb-arkhangel",
+        "name": "Проект КБ «Архангел»",
+        "relationship_type": "training-partnership",
+        "relationship": "Issuer of the credentials of Архангел's training school; see the Архангел record (s7897, msg 7130).",
+        "source_id": "s7897"
+      },
+      {
+        "slug": "ooo-nii-dpo",
+        "name": "ООО «НИИ ДПО»",
+        "relationship_type": "sister-entity",
+        "relationship": "Same name and the same rector and sole founder, Еськов Н.Л.; the ООО was registered in Moscow on 24.01.2025 (s7908).",
+        "source_id": "s7908"
+      }
+    ],
+    "_corrected": [
+      "2026-09-20: created from the certificate specimens posted by Архангел (s7897-s7906) and the ЕГРЮЛ выписка (s7907)."
+    ]
+  },
+  {
+    "slug": "ooo-nii-dpo",
+    "name_ru": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ\"",
+    "name_latin": "OOO \"NII DPO\"",
+    "legal_form": "ООО",
+    "brand_ru": "НИИ ДПО",
+    "brand_latin": null,
+    "inn": "7733462457",
+    "ogrn": "1257700027090",
+    "extra_ids": null,
+    "registered": null,
+    "address": null,
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": "Еськов Николай Леонидович (ИНН 262607260913), ректор",
+    "director_history": [
+      {
+        "value": "Еськов Николай Леонидович",
+        "as_of": "2025-01-24",
+        "source_id": "s7908",
+        "note": "ректор since registration"
+      }
+    ],
+    "founders": [],
+    "founders_history": [
+      {
+        "value": "Еськов Николай Леонидович (физлицо, ИНН 262607260913), 100%, ₽10 000",
+        "as_of": "2025-01-24",
+        "source_id": "s7908",
+        "note": "sole founder"
+      }
+    ],
+    "charter_capital": 10000,
+    "charter_capital_history": [
+      {
+        "value": 10000,
+        "as_of": null,
+        "source_id": null,
+        "note": "from corrections:add_entities, unverified"
+      }
+    ],
+    "address_history": [
+      {
+        "value": "125481, г. Москва, ул. Свободы, д. 103 стр. 13",
+        "as_of": "2026-09-20",
+        "source_id": "s7908",
+        "note": ""
+      }
+    ],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": "Second НИИ ДПО, registered in Moscow on 24.01.2025 with Еськов Н.Л. as rector and 100% founder (ЕГРЮЛ выписка of 20.09.2026, s7908). Its link to Архангел is that it shares name, rector and business with the АНО that issues Архангел's credentials; no document names the ООО itself in the Архангел material. No ЦБСТ tie found.",
+    "cbst_tie": {
+      "claim": "None found.",
+      "confidence": "none",
+      "evidence": null,
+      "source_id": null
+    },
+    "wb_overlap": "none_found",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s7908",
+        "text": "Does the ООО hold its own educational licence, and does it appear in Архангел's post-2025 credentials or payments? Read the ЕГРЮЛ ОКВЭД list and the licence register."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "name_en": "Limited liability company \"Scientific Research Institute of Additional Professional Education\"",
+    "related_entities": [
+      {
+        "slug": "ano-nii-dpo",
+        "name": "АНО «НИИ ДПО»",
+        "relationship_type": "sister-entity",
+        "relationship": "Same name, rector and founder.",
+        "source_id": "s7908"
+      }
+    ],
+    "_corrected": [
+      "2026-09-20: found by ЕГРЮЛ name search after the certificate specimens named Еськов Н.Л. as rector (s7897)."
+    ]
+  },
+  {
     "slug": "fgdr-federatsiya-gonok-dronov-rossii",
     "name_ru": "Общероссийская физкультурно-спортивная общественная организация «Федерация гонок дронов (беспилотных воздушных судов) России»",
     "name_latin": "Drone Racing Federation of Russia (DRFR)",
@@ -80882,6 +81109,10 @@
     "name_en": "Special Purpose Centre (volunteer, unmanned systems) \"Bars-Sarmat\"",
     "related_entities": [
       {
+      {
+        "source_id": "s7897",
+        "text": "Ten specimen diplomas/certificates for the «Школа внешних пилотов (операторов) БПЛА «Архангел»» (pilot, mechanic, UAS data processing, pilot-instructor, plus the «Архангел ЩИТ» air-defence instructor and АНТИБПЛА tracks) were posted 07.02.2026 (msgs 9498-9516, s7888-s7906). They carry the Omsk АНО's licence number 'Л035-01273-55/00207746 от 18.02.2022' while the ЕГРЮЛ выписка lists licence '55Л01 75-п' of 31.10.2017 (s7907): check the Рособрнадзор licence register for the 2022 number and for whether real graduates hold ФИС ФРДО entries. Which real students, if any, got these documents is not on file."
+      },
         "slug": "proekt-kb-arkhangel",
         "name": "Проект КБ «Архангел»",
         "relationship_type": "training-partnership",
@@ -81042,6 +81273,13 @@
     "ogrn": "1221600086180",
     "extra_ids": null,
     "registered": "24.10.2022",
+      {
+        "slug": "ano-nii-dpo",
+        "name": "АНО «Научно-исследовательский институт дополнительного профессионального образования»",
+        "relationship_type": "training-partnership",
+        "relationship": "The accredited-education layer of Архангел's course funnel. Архангел's own channel presents the Кафедра общественной безопасности of this АНО, run through @course_bpla_bot 'в сотрудничестве с центром подготовки пилотов БПЛА', as its remote training arm (msg 7130/7188, April 2025), and thanks 'директора НИИ ДПО Николая' on 11.07.2026 (msg 10463). On 07.02.2026 the channel and the Archangel_Forum chat posted ten specimen diplomas and certificates (msgs 9507-9516, s7897-s7906) issued by the АНО's «Школа внешних пилотов (операторов) БПЛА «Архангел»» with the Архангел logo, signed by rector Еськов Н.Л. The holder on every one is a placeholder (Сталин И.В., Гагарин Ю.А.) with zeroed serials: templates, not real issues.",
+        "source_id": "s7897"
+      },
     "address": "423575, Республика Татарстан, м.р-н Нижнекамский, г. Нижнекамск, пр-кт Строителей, д. 11А, кв. 39",
     "okved_code": "88.99",
     "okved_label": "Предоставление прочих социальных услуг без обеспечения проживания, не включенных в другие группировки",
@@ -81121,6 +81359,20 @@
         "text_ru": "В Казани прошло знаковое событие в области БПЛА под эгидой проекта Архангел и проекта ZOV-AA.",
         "text_en": "A landmark UAV event was held in Kazan under the aegis of the Arkhangel project and the ZOV-AA project.",
         "context": "@projectArchangel msg 5807 (19.11.2024): the same post says the Гермес team helped run it and that 'Гермес рожден в России и производится в России'. Msg 5826 (20.11.2024, s7730) says the Архангел team and ЗОВ-АА are preparing further Tatarstan events, including a three-day February congress of volunteers, developers, producers, commanders and UAV operators.",
+      {
+        "text_ru": "«Архангел» предлагает пройти дистанционное обучение и стать востребованным специалистом.",
+        "text_en": "\"Arkhangel\" offers remote training so you can become an in-demand specialist.",
+        "context": "@projectArchangel msg 7130 (05.04.2025, reposted 7188 and in Archangel_Forum 158698): introduces the Кафедра общественной безопасности of АНО «НИИ ДПО» as the route in; the same post says graduates 'ждут уже в «Архангеле», где к теории прибавится практика под руководством опытных инструкторов'.",
+        "source_id": "s7907",
+        "as_of": "2025-04-05"
+      },
+      {
+        "text_ru": "образование, полученное на кафедре общественной безопасности и в стенах «Архангела», конечно, пригодится и после окончания СВО",
+        "text_en": "the education received at the department of public safety and within Arkhangel's walls will of course be useful after the SVO ends",
+        "context": "@projectArchangel msg 7130 (05.04.2025): frames the accredited certificates as post-war civilian credentials for the 'сегодняшних военных птичников'.",
+        "source_id": "s7907",
+        "as_of": "2025-04-05"
+      },
         "source_id": "s7729",
         "as_of": "2024-11-19"
       }

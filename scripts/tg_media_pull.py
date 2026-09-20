@@ -24,6 +24,11 @@ into a repeatable two-step pipeline for any company's channel:
      doesn't turn into the kind of scripted-loop-at-scale that policy
      reserves for a user-run command (see egrul_batch_pull.py precedent).
 
+  3. `download` — authenticated Telethon download of ANY media (PDF/doc/video/
+     photo) for a msg_id list, for what the public preview cannot give (documents,
+     private chats). A live Telegram job: hand the exact command to the user, do
+     not run it. Files land as TGMEDIA_[<INN>_]<YYYYMMDD>_<channel>-post<id>-<name>.
+
 Does NOT do a live Telegram scrape itself — that's still tg_scan.py's job,
 handed to the user per the crawling-jobs policy. This script only re-fetches
 public preview HTML for posts already known to exist in the local DB.
@@ -192,6 +197,34 @@ def cmd_fetch(args) -> None:
         print(out_text)
 
 
+def cmd_download(args) -> None:
+    sys.path.insert(0, str(REPO))
+    from tg import client as tg_client
+    from tg import scraper
+
+    ids = [int(x) for x in args.msg_ids.split(",") if x.strip()]
+    SOURCES_DIR.mkdir(parents=True, exist_ok=True)
+    client = tg_client.make_client()
+    with client:
+        entity = scraper.resolve_channel(client, args.channel)
+        label = re.sub(r"[^A-Za-z0-9_]+", "", args.label or args.channel.lstrip("@").split("/")[-1]) or "chat"
+        for msg in client.get_messages(entity, ids=ids):
+            if msg is None or not msg.media:
+                print("skip (missing or no media):", msg.id if msg else "?")
+                continue
+            name = (getattr(msg.file, "name", None) or f"media{msg.file.ext or ''}") if msg.file else "media"
+            name = re.sub(r"[^\w.\-]+", "_", name, flags=re.U)
+            inn = f"{args.inn}_" if args.inn else ""
+            dest = SOURCES_DIR / f"TGMEDIA_{inn}{msg.date:%Y%m%d}_{label}-post{msg.id}-{name}"
+            if dest.exists():
+                print("have:", dest.name)
+                continue
+            client.download_media(msg, file=str(dest))
+            print("saved:", dest.name, dest.stat().st_size)
+            time.sleep(1)
+    print("\nnext: python3 scripts/inventory_sources.py && python3 scripts/scan_sources.py --out data/sources/MANIFEST.md && python3 scripts/extract_registry.py")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -210,6 +243,13 @@ def main() -> None:
     ap_f.add_argument("--msg-ids", required=True, help="comma-separated msg_id list")
     ap_f.add_argument("--out", type=Path, default=None, help="write JSON scaffold here instead of stdout")
     ap_f.set_defaults(func=cmd_fetch)
+
+    ap_d = sub.add_parser("download", help="Telethon download of any media (live job: user runs it)")
+    ap_d.add_argument("--channel", required=True, help="username, numeric id, or t.me link")
+    ap_d.add_argument("--msg-ids", required=True, help="comma-separated msg_id list")
+    ap_d.add_argument("--inn", default=None, help="optional ИНН for the filename; omitted when none")
+    ap_d.add_argument("--label", default=None, help="channel label for the filename (default: channel arg)")
+    ap_d.set_defaults(func=cmd_download)
 
     args = ap.parse_args()
     args.func(args)

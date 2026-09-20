@@ -1,8 +1,8 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1138,
-  "edge_count": 1921,
+  "node_count": 1141,
+  "edge_count": 1930,
   "unresolved_count": 108,
   "nodes": [
     {
@@ -172,6 +172,18 @@
       "legal_form": "АНО",
       "variant": null,
       "degree": 15
+    },
+    {
+      "id": "ano-nii-dpo",
+      "kind": "entity",
+      "label": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ\"",
+      "name_latin": "ANO \"NII DPO\"",
+      "inn": "5505057400",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "АНО",
+      "variant": null,
+      "degree": 6
     },
     {
       "id": "ano-npts-ushkuynik",
@@ -1580,6 +1592,14 @@
       "degree": 1
     },
     {
+      "id": "eskov-nikolay-leonidovich",
+      "kind": "person",
+      "label": "Еськов Николай Леонидович",
+      "name_latin": "Nikolay Leonidovich Eskov",
+      "sanctioned": false,
+      "degree": 5
+    },
+    {
       "id": "evgeniy-sergeevich-ieto-yal",
       "kind": "person",
       "label": "Евгений Сергеевич (фамилия не установлена)",
@@ -1789,7 +1809,7 @@
       "sanctioned": false,
       "legal_form": "Фонд",
       "variant": null,
-      "degree": 8
+      "degree": 9
     },
     {
       "id": "fond-sozidanie",
@@ -3566,6 +3586,18 @@
       "legal_form": "ООО",
       "variant": null,
       "degree": 4
+    },
+    {
+      "id": "ooo-nii-dpo",
+      "kind": "entity",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ\"",
+      "name_latin": "OOO \"NII DPO\"",
+      "inn": "7733462457",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "ООО",
+      "variant": null,
+      "degree": 5
     },
     {
       "id": "ooo-nova",
@@ -10193,7 +10225,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": "defensive",
-      "degree": 22
+      "degree": 23
     },
     {
       "id": "protorguev-sergey-aleksandrovich",
@@ -11957,6 +11989,28 @@
       "type": "related",
       "label": "training-partnership",
       "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ano-nii-dpo",
+      "target": "ooo-nii-dpo",
+      "type": "related",
+      "label": "sister-entity",
+      "source_id": "s7908",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ano-nii-dpo",
+      "target": "proekt-kb-arkhangel",
+      "type": "related",
+      "label": "training-partnership",
+      "source_id": "s7897",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -17870,6 +17924,61 @@
       "confidence": null
     },
     {
+      "source": "eskov-nikolay-leonidovich",
+      "target": "ano-nii-dpo",
+      "type": "directs",
+      "label": null,
+      "source_id": "s7907",
+      "as_of": "2022-08-25",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
+      "source": "eskov-nikolay-leonidovich",
+      "target": "ano-nii-dpo",
+      "type": "role",
+      "label": "Ректор (sole person acting without a power of attorney)",
+      "source_id": "s7907",
+      "as_of": "2022-08-25",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "eskov-nikolay-leonidovich",
+      "target": "ooo-nii-dpo",
+      "type": "directs",
+      "label": null,
+      "source_id": "s7908",
+      "as_of": "2025-01-24",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
+      "source": "eskov-nikolay-leonidovich",
+      "target": "ooo-nii-dpo",
+      "type": "founded",
+      "label": null,
+      "source_id": "s7908",
+      "as_of": "2025-01-24",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "eskov-nikolay-leonidovich",
+      "target": "ooo-nii-dpo",
+      "type": "role",
+      "label": "Ректор; единственный учредитель (100%)",
+      "source_id": "s7908",
+      "as_of": "2025-01-24",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "evgeniy-sergeevich-ieto-yal",
       "target": "proekt-kb-arkhangel",
       "type": "role",
@@ -18370,6 +18479,17 @@
       "type": "founded",
       "label": null,
       "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "fond-sarmat",
+      "target": "ano-nii-dpo",
+      "type": "related",
+      "label": "training-partnership",
+      "source_id": "s7897",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -24794,6 +24914,17 @@
       "type": "related",
       "label": "shared-address",
       "source_id": "s0230",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-nii-dpo",
+      "target": "ano-nii-dpo",
+      "type": "related",
+      "label": "sister-entity",
+      "source_id": "s7908",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
