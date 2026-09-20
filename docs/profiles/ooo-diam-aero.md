@@ -1,6 +1,6 @@
 # OOO "DIAM-AERO" — ООО «ДИАМ-АЭРО»
 
-`WB: not_checked` 
+`sanctioned` `WB: not_checked` 
 
 ИНН 7811687549 · ОГРН 1187847091079
 
@@ -53,6 +53,12 @@
 | 2024 | ₽283,300,000 | ₽-19,986,000 | [s6425] |
 | 2025 | ₽204,314,000 | ₽-39,584,000 | [s6426] |
 
+## Sanctions & screening
+
+**Ukraine (NSDC decision, Presidential Decree 415/2025, State Register of Sanctions)** [s7876]
+
+- 3 OCCRP Aleph match(es) (screened 2026-09-19).
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._
@@ -75,6 +81,7 @@ _No named principals linked to this entity yet._
 | [s6426] | Bfo | Bfo (BFO_7811687549_2025_ооо-диам-аэро.pdf) | — | — |
 | [s6428] | EGRUL extract | EGRUL extract (EGRUL_7811687549_20260906_inn-7811687549.pdf) | 2026-09-06 | 2026-09-06 |
 | [s6842] | EGRUL extract | EGRUL extract (EGRUL_7811687549_20260907_ooo-diam-aero.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7876] | Nsdc | Nsdc (NSDC_7811687549_20260920_ooo-diam-aero.pdf) | 2026-09-20 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

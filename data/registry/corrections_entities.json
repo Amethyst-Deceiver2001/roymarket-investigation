@@ -1225,6 +1225,16 @@
       "products": [],
       "registered": "2022-10-03",
       "slug": "ooo-rtd-zashchita",
+      "sanctions": [
+        {
+          "date": "2025-06-20",
+          "note": "Listed in the Ukrainian State Register of Sanctions (Державний реєстр санкцій): signed extract DRS-56beba0a-040a-4d0b-a484-7bfc66921d91, generated 20.09.2026 and read from the archived PDF. ТОВ «Науково-дослідне виробниче підприємство Рустехдрон»; ОГРН 1225000111313 and Податковий номер 5003153526 [Російська Федерація], identical to this record's identifiers. Status: Чинно. Введено в дію Указом №415/2025 від 20.06.2025 (рішення РНБОУ), Додаток 2, позиція 38; term: ten years to 20.06.2035; register action code 25041512200038. Submitted by the Security Service of Ukraine (СБУ). Measures include asset blocking, trade restrictions and a ban on public and defence procurement. The register name differs from the name on our record («РТД-ЗАЩИТА»); identity rests on the matching ОГРН and ИНН, not the name. Separate legal entity from ООО «НПО Рустехдрон» (ИНН 5003155499), which is sanctioned in its own right.",
+          "regime": [
+            "Ukraine (NSDC decision, Presidential Decree 415/2025, State Register of Sanctions)"
+          ],
+          "source_id": "s7871"
+        }
+      ],
       "sources": [
         "s1161"
       ],
@@ -26696,6 +26706,16 @@
     },
     "ooo-pokrov": {
       "set": {
+        "sanctions": [
+          {
+            "date": "2025-05-09",
+            "note": "Listed in the Ukrainian State Register of Sanctions (Державний реєстр санкцій): signed extract DRS-4c75b65b-1b06-4fff-ae9b-b972c371e323, generated 20.09.2026 and read from the archived PDF. ТОВ «Покров»; ОГРН 1245000068774 and Податковий номер 5038189259 [Російська Федерація], identical to this record's identifiers. Status: Чинно. Введено в дію Указом №301/2025 від 09.05.2025 (рішення РНБОУ), Додаток 2, позиція 50; term: ten years to 09.05.2035; register action code 25030112200050. Submitted by the Security Service of Ukraine (СБУ). Measures include asset blocking, trade restrictions and a ban on public and defence procurement.",
+            "regime": [
+              "Ukraine (NSDC decision, Presidential Decree 301/2025, State Register of Sanctions)"
+            ],
+            "source_id": "s7873"
+          }
+        ],
         "images": [
           {"caption": "Company logo (\"ПОКРОВ — Система безопасности\"), from the company's own official site.", "path": "images/ooo-pokrov_logo_official-site.jpg", "source_id": "s7540"}
         ],
@@ -26851,9 +26871,9 @@
           }
         ],
         "sanctions_review": {
-          "as_of": "2026-09-15",
-          "outcome": "closed",
-          "note": "OpenSanctions: single exact-score-1.0 \"sanction\"-topic match (Ukrainian-language caption \"Покров\") but with ZERO source_urls — no jurisdiction/listing text to verify, and \"Покров\" is a common Russian placename/word (multiple unrelated entities plausible). Aleph's two \"sanctions\"-category matches score only 5.3 and 5.1 (Global Sanctions Database) — low relevance, generic name, no additional identifying detail (no ИНН cross-check available in the raw record). GUR returned nothing. Cannot confirm same-entity correspondence for ИНН 5038189259. Not promoted. (Note: this entity has a documented commercial tie to ИП Цыганов В.Б.'s zakupki government-contract activity, per CLAUDE.md/zakupki_review history — unrelated to this sanctions determination.)"
+          "as_of": "2026-09-20",
+          "outcome": "wired",
+          "note": "Supersedes the 2026-09-15 closure (which declined to promote because the raw OpenSanctions/Aleph record carried no ИНН to cross-check). Aleph's archived Global Sanctions Database record (ALEPH_5038189259_20260919) carries innCode 5038189259 and ogrnCode 1245000068774, and the State Register of Sanctions extract itself (s7873) states the same ОГРН and Податковий номер. Wired in sanctions[]: Указ №301/2025 від 09.05.2025, Додаток 2, позиція 50."
         }
       },
       "verified_against": "egrul.nalog.ru open API, 2026-08-24",
@@ -34532,6 +34552,16 @@
     },
     "ooo-diam-aero": {
       "set": {
+        "sanctions": [
+          {
+            "date": "2025-06-20",
+            "note": "Listed in the Ukrainian State Register of Sanctions (Державний реєстр санкцій): signed extract DRS-832aaa9e-6cb9-45b5-8c7b-0a08aeb9cf54, generated 20.09.2026 and read from the archived PDF. ТОВ «ДІАМ-Аеро»; ОГРН 1187847091079 and Податковий номер 7811687549 [Російська Федерація], identical to this record's identifiers. Status: Чинно. Введено в дію Указом №415/2025 від 20.06.2025 (рішення РНБОУ), Додаток 2, позиція 30; term: ten years to 20.06.2035; register action code 25041512200030. Submitted by the Security Service of Ukraine (СБУ). Measures include asset blocking, trade restrictions and a ban on public and defence procurement.",
+            "regime": [
+              "Ukraine (NSDC decision, Presidential Decree 415/2025, State Register of Sanctions)"
+            ],
+            "source_id": "s7876"
+          }
+        ],
         "charter_capital_history": [
           {
             "value": 10000,
@@ -35140,6 +35170,16 @@
     },
     "ooo-aeromaks-avia-tsentr-logistika": {
       "set": {
+        "sanctions": [
+          {
+            "date": "2025-06-20",
+            "note": "Listed in the Ukrainian State Register of Sanctions (Державний реєстр санкцій): signed extract DRS-7fad0fc1-0093-4f59-ad8b-fa7cbb0e5c44, generated 20.09.2026 and read from the archived PDF. ТОВ «Аеромакс-Авіа (Центр-Логістика)»; ОГРН 1227700410387 and Податковий номер 9704149557 [Російська Федерація], identical to this record's identifiers. Status: Чинно. Введено в дію Указом №415/2025 від 20.06.2025 (рішення РНБОУ), Додаток 2, позиція 21; term: ten years to 20.06.2035; register action code 25041512200021. Submitted by the Security Service of Ukraine (СБУ). Measures include asset blocking, trade restrictions and a ban on public and defence procurement.",
+            "regime": [
+              "Ukraine (NSDC decision, Presidential Decree 415/2025, State Register of Sanctions)"
+            ],
+            "source_id": "s7877"
+          }
+        ],
         "related_entities": [
           {
             "slug": "ooo-aeromaks",

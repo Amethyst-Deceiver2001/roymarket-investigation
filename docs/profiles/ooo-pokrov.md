@@ -1,6 +1,6 @@
 # Pokrov LLC — ООО «ПОКРОВ»
 
-`manufacturer` 
+`sanctioned` `manufacturer` 
 
 ИНН 5038189259 · ОГРН 1245000068774 · Khimki, Moscow Oblast
 
@@ -60,8 +60,12 @@
 - customer: ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz); date: 2025; items: Поставка средств ПОДАВЛЕНИЯ беспилотных аппаратов (не обнаружения — corrected per the sole-supplier notice's own text, which the contract-card-only extraction had mis-parsed as detection). Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ, justified in the notice by reference to МЧС letters МЧС России от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного каталога средств противодействия», explicitly tied to equipping personnel deployed for «поиск, обезвреживание и уничтожение взрывоопасных предметов на территории Курской области» (ordnance-disposal operations in Kursk region) with counter-UAV detection equipment for their own force protection.; reg_number: 1500300810225000157; value_rub: 2314200; event_type: contract_award; actor_to: {'kind': 'government_customer', 'id': None, 'label': 'ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz)'} [s3680]
 - customer: Администрация Белгородского муниципального округа; date: 2026; items: Поставка мониторинговых устройств «Булат» — same «Булат» product line as the earlier ИП Цыганов contracts (see corrections entry for that person).; reg_number: 3310005025826000052; value_rub: 495000; event_type: contract_award; actor_to: {'kind': 'government_customer', 'id': None, 'label': 'Администрация Белгородского муниципального округа'} [s3424]
 
+## Sanctions & screening
+
+**Ukraine (NSDC decision, Presidential Decree 301/2025, State Register of Sanctions)** [s7873]
+
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 2 OCCRP Aleph match(es) (screened 2026-09-05).
+- 2 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 
@@ -99,6 +103,7 @@
 | [s6509] | Bfo | Bfo (BFO_5038189259_2025_ооо-покров.pdf) | — | — |
 | [s6799] | EGRUL extract | EGRUL extract (EGRUL_5038189259_20260907_ooo-pokrov.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7540] | site capture | site capture (SITE_5038189259_20260916_ooo-pokrov-logo.jpg) | 2026-09-16 | — |
+| [s7873] | Nsdc | Nsdc (NSDC_5038189259_20260920_ooo-pokrov.pdf) | 2026-09-20 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

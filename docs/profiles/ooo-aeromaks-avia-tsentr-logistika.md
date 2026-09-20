@@ -1,6 +1,6 @@
 # ООО «Аэромакс-Авиа (Центр-Логистика)»
 
-`WB: not_checked` 
+`sanctioned` `WB: not_checked` 
 
 ИНН 9704149557 · ОГРН 1227700410387
 
@@ -33,6 +33,12 @@
 | 2024 | ₽2,557,000 | ₽-42,754,000 | [s7493] |
 | 2025 | — | ₽-1,621,000 | [s7494] |
 
+## Sanctions & screening
+
+**Ukraine (NSDC decision, Presidential Decree 415/2025, State Register of Sanctions)** [s7877]
+
+- 2 OCCRP Aleph match(es) (screened 2026-09-19).
+
 ## Principals & persons of interest
 
 ### Бессонов Сергей Николаевич
@@ -56,6 +62,7 @@
 | [s7492] | Bfo | Bfo (BFO_9704149557_2023_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
 | [s7493] | Bfo | Bfo (BFO_9704149557_2024_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
 | [s7494] | Bfo | Bfo (BFO_9704149557_2025_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
+| [s7877] | Nsdc | Nsdc (NSDC_9704149557_20260920_ooo-aeromaks-avia-tsentr-logistika.pdf) | 2026-09-20 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
