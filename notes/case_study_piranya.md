@@ -1,6 +1,6 @@
 # Пиранья: a company registered as software development sells combat FPV drones from one unit on its website, and the EU says it makes up to 10,000 a month
 
-2026-09-20. Every claim carries a `[sNNNN]` source id or a channel and message number, resolved in the table at the end. Russian is quoted verbatim from archived posts and documents; English is analysis. **Registry position: tier manufacturer; ЦБСТ tie {doc} from ЦБСТ's own channel [s7588]. The EU listing is a primary document [s7941]. Sales claims, unit claims and every combat claim come from the company's own site and channel and are graded Open.**
+2026-09-20. Every claim carries a `[sNNNN]` source id, resolved in the table at the end. Russian is quoted verbatim from archived posts and documents; English is analysis. **Registry position: tier manufacturer; ЦБСТ tie {doc} from ЦБСТ's own channel [s7588]. The EU listing is a primary document [s7941]. Sales claims, unit claims and every combat claim come from the company's own site and channel and are graded Open.**
 
 ## The finding
 
@@ -32,9 +32,9 @@ The Official Journal text of Council Implementing Regulation (EU) 2026/509 of 23
 ## What the company says about itself
 
 - **Sales.** The site: «Самые эффективные fpv дроны в России», «Работаем с любой формой оплаты», «Поставляем дроны напрямую до адресатов в ЛНР и ДНР», and «Убийца Abrams» as a name for its drone {open} [s7950].
-- **Unit reports.** On 16.11.2024 the channel reports that a crew of the brigade “Бешеные псы” «точно уничтожил 85-мм дивизионную пушку Д-44 ВСУ с помощью дронов “Пиранья”» {open} (`@piranhafpv` msg 300). On 14.03.2025 it forwards a message from a soldier: «используя квадрокоптеры от санкционной компании “Пиранья” из Ульяновска. Санкции не помогли.» {open} (msg 355). These are the company's posts about what others say.
-- **A senior visitor.** On 01.04.2025: «Компания Пиранья представила свои беспилотники директору Службы внешней разведки Российской Федерации, Постоянному члену Совета Безопасности РФ Сергею Евгеньевичу Нарышкину», at the exhibition «Изобретения для Победы» {open} (msg 360).
-- **A fair.** On 29.10.2025 the channel says «СКБ «Пиранья» представляет на выставке полный спектр своих разработок» at «Интерполитех-2025», and lists «Пиранья-7», «Пиранья-10», «Пиранья-13» and «Пиранья-13 ОКТО» {open} (msg 432).
+- **Unit reports.** On 16.11.2024 the channel reports that a crew of the brigade “Бешеные псы” «точно уничтожил 85-мм дивизионную пушку Д-44 ВСУ с помощью дронов “Пиранья”» {open} [s7973]. On 14.03.2025 it forwards a message from a soldier: «используя квадрокоптеры от санкционной компании “Пиранья” из Ульяновска. Санкции не помогли.» {open} [s7974]. These are the company's posts about what others say.
+- **A senior visitor.** On 01.04.2025: «Компания Пиранья представила свои беспилотники директору Службы внешней разведки Российской Федерации, Постоянному члену Совета Безопасности РФ Сергею Евгеньевичу Нарышкину», at the exhibition «Изобретения для Победы» {open} [s7975].
+- **A fair.** On 29.10.2025 the channel says «СКБ «Пиранья» представляет на выставке полный спектр своих разработок» at «Интерполитех-2025», and lists «Пиранья-7», «Пиранья-10», «Пиранья-13» and «Пиранья-13 ОКТО» {open} [s7976].
 
 ## ЦБСТ
 
@@ -51,10 +51,10 @@ The Official Journal text of Council Implementing Regulation (EU) 2026/509 of 23
 | Date | Event |
 |---|---|
 | 19.09.2023 | Registered in Ульяновск [s6730] |
-| 16.11.2024 | Channel reports a brigade destroying a Д-44 gun with «Пиранья» drones (msg 300) |
-| 14.03.2025 | Channel forwards «Санкции не помогли» (msg 355) |
-| 01.04.2025 | Says it showed drones to Нарышкин (msg 360) |
-| 29.10.2025 | Exhibits at «Интерполитех-2025» (msg 432) |
+| 16.11.2024 | Channel reports a brigade destroying a Д-44 gun with «Пиранья» drones [s7973] |
+| 14.03.2025 | Channel forwards «Санкции не помогли» [s7974] |
+| 01.04.2025 | Says it showed drones to Нарышкин [s7975] |
+| 29.10.2025 | Exhibits at «Интерполитех-2025» [s7976] |
 | 23.04.2026 | Listed by the EU, entry 716 [s7941] |
 | 24.04.2026 | ЦБСТ names it among EU-listed residents [s7588] |
 
@@ -69,4 +69,4 @@ The Official Journal text of Council Implementing Regulation (EU) 2026/509 of 23
 
 ## Evidence base
 
-Registry record `ooo-skb-piranya`; people `chernyshov-pavel-alekseevich`, `korchagina-olga-aleksandrovna`; product profile for «Пиранья». ЕГРЮЛ [s6730], annual filings [s5550–s5552], the Official Journal text [s7941], the company's website [s7950], and ЦБСТ's post [s7588]. The company's channel posts are cited by message number in the local scrape of `@piranhafpv`.
+Registry record `ooo-skb-piranya`; people `chernyshov-pavel-alekseevich`, `korchagina-olga-aleksandrovna`; product profile for «Пиранья». ЕГРЮЛ [s6730], annual filings [s5550–s5552], the Official Journal text [s7941], the company's website [s7950], and ЦБСТ's post [s7588]. Four of the company's channel posts [s7973, s7974, s7975, s7976].
