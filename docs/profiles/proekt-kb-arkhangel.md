@@ -17,6 +17,16 @@
 
 ## Self-reported marketing claims
 
+> *«Архангел» предлагает пройти дистанционное обучение и стать востребованным специалистом.*
+> "Arkhangel" offers remote training so you can become an in-demand specialist.
+>
+> — @projectArchangel msg 7130 (05.04.2025, reposted 7188 and in Archangel_Forum 158698): introduces the Кафедра общественной безопасности of АНО «НИИ ДПО» as the route in; the same post says graduates 'ждут уже в «Архангеле», где к теории прибавится практика под руководством опытных инструкторов'. (2025-04-05) [s7907]
+
+> *образование, полученное на кафедре общественной безопасности и в стенах «Архангела», конечно, пригодится и после окончания СВО*
+> the education received at the department of public safety and within Arkhangel's walls will of course be useful after the SVO ends
+>
+> — @projectArchangel msg 7130 (05.04.2025): frames the accredited certificates as post-war civilian credentials for the 'сегодняшних военных птичников'. (2025-04-05) [s7907]
+
 > *В боевой версии «Архангела» используется цилиндр с боевой частью (поражающие элементы — шарики или контргайки). Вес этого цилиндра должен быть 500 гр для правильной балансировки и курсовой устойчивости дрона.*
 > The combat version of "Arkhangel" uses a cylinder with a warhead (fragmentation elements — ball bearings or lock nuts). This cylinder must weigh 500g for correct balance and directional stability.
 >
@@ -275,12 +285,14 @@
 
 ## Corporate links
 
+- **ANO "NII DPO"** `training-partnership` — The accredited-education layer of Архангел's course funnel. Архангел's own channel presents the Кафедра общественной безопасности of this АНО, run through @course_bpla_bot 'в сотрудничестве с центром подготовки пилотов БПЛА', as its remote training arm (msg 7130/7188, April 2025), and thanks 'директора НИИ ДПО Николая' on 11.07.2026 (msg 10463). On 07.02.2026 the channel and the Archangel_Forum chat posted ten specimen diplomas and certificates (msgs 9507-9516, [s7897]-s7906) issued by the АНО's «Школа внешних пилотов (операторов) БПЛА «Архангел»» with the Архангел logo, signed by rector Еськов Н.Л. The holder on every one is a placeholder (Сталин И.В., Гагарин Ю.А.) with zeroed serials: templates, not real issues. [s7897]
 - **НПО «КАЙСАНТ»** `component-supplier` — Both sides publicly name the tie: the ГЕРМЕС long-range comms line, whose own channel @germesfpv is НПО «КАЙСАНТ»'s (Telegram title and Академия chat msg 110720, [s5457]), is presented as fitted to Архангел's interceptors. (1) ГЕРМЕС's own post, forwarded into mil_hub as msg 130001 (14.05.2026, forward from @germesfpv): «Мы рады, что Михаил «Архангел» выбрал спецсвязь ГЕРМЕС для своих дронов-перехватчиков.» and «Дроны-перехватчики проекта «Архангел» оснащены дальнобойной связью ГЕРМЕС.» Only that post's opening line («Правильно обученный личный состав и правильные изделия») is attributed to Филиппов; the ГЕРМЕС sentences are the vendor's own claim, not his. (2) Архангел's own channel, @projectArchangel msg 3881 (03.04.2024): «Производство связи ГЕРМЕС.https://t.me/germesfpv», and 59 ГЕРМЕС video posts through July 2026 ([s7653]). (3) Архангел's bill of materials lists «Связь: Гермес или аналоги» ([s5452]). No supply contract or invoice is on file, so this is a self-reported product-use tie between the two, not a documented sale. НПО «КАЙСАНТ» is a ЦБСТ resident (t-doc), so this makes the Архангел cluster reachable from ЦБСТ through it. [s5539]
 - **CSN "Bars-Sarmat" (Rogozin)** `training-partnership` — Both sides publicly name the tie (see the ЦСН record): Архангел's own msg 5500 and 5502 (17.10.2024, [s7693]/s7694) announce a meeting with Рогозин as 'командир БАРС Сармат' and 'Полностью подключаемся к взаимодействию с Барс Сармат и объединяем ресурсы, возможности и наработки'; the unit's own channel answers with msg 1683 and 1744 and two joint approbations (Горыныч 2.0, ЩИТ-И, [s7699]/s7700). The unit's logo appears next to the word АРХАНГЕЛ in a Архангел video. A cooperation, recruitment and testing tie, not a corporate one: no contract or shared registration is on file. [s7694]
 - **ANO CPV "ZOV-AA"** `training-partnership` — Named co-organiser in Архангел's own posts (msg 5080, 5503, 5657, 5807, 5826; [s7704], [s7728]-s7730): the 27-29.08.2024 Leningrad-region FPV/EW test event, Kazan events of November 2024 (with Гермес support) and a joint infrastructure-protection project with the ЦСН. The organisation is the Tatarstan АНО ИНН 1651092483 (see its record). [s7728]
 
 ## Open questions
 
+- Ten specimen diplomas/certificates for the «Школа внешних пилотов (операторов) БПЛА «Архангел»» (pilot, mechanic, UAS data processing, pilot-instructor, plus the «Архангел ЩИТ» air-defence instructor and АНТИБПЛА tracks) were posted 07.02.2026 (msgs 9498-9516, [s7888]-s7906). They carry the Omsk АНО's licence number 'Л035-01273-55/00207746 от 18.02.2022' while the ЕГРЮЛ выписка lists licence '55Л01 75-п' of 31.10.2017 ([s7907]): check the Рособрнадзор licence register for the 2022 number and for whether real graduates hold ФИС ФРДО entries. Which real students, if any, got these documents is not on file. [s7897]
 - This post links two further, distinct, NOT-yet-scraped channels: t.me/proekt_arhangel (cited twice as a related/parent channel, distinct handle from @projectArchangel) and t.me/malyha_ww (video build instructions — "малыха" matches the BOM's "Малая ДР" naming for this small variant). Also confirms t.me/c/1859964206/110711 (the already-known private "Академия Противодействия БПЛА" chat) carries this project's own tuning content. [s5454]
 - BOM line item "Связь: Гермес или аналоги" ("Hermes comms, or equivalent") is a generic reference, not a specific vendor citation — plausibly, but NOT confirmed to be, the same «Гермес» tactical-comms brand sold commercially by `npo-kaysant` (ИНН 7733393203, see that entity's merged `kb-germes` alias). Left as an open lead, not merged. RESOLVED 2026-09-04 (via a web search, then confirmed against the private Академия chat's own msg 110720, [s5457]): the channel named in that chat, "ГЕРМЕС - ППРЧ связь, мачты, защита от дронов," is confirmed via its own Telegram title ("...НПО КАЙСАНТ") to be `npo-kaysant`'s (ИНН 7733393203) own commercial channel (@germesfpv). This IS the same «Гермес» brand referenced generically in the BOM. [s5454]
 - Self-description (23.10.2025, [s5456]): "Проект «Архангел» имеет: сеть своих учебных центров; профессиональные боевые расчеты; ... опыт подготовки дроноводов в зоне СВО, исчисляемый несколькими тысячами пилотов; производственные мощности; мощную партнерскую сеть предприятий" (a network of its own training centers, professional combat crews, experience training drone pilots in the SVO zone numbering several thousand, production capacity, and a strong partner network of enterprises) — the project's own claim of scale, not independently verified. [s5456]
@@ -383,6 +395,8 @@
 | [s7728] | Tgpost | Tgpost (TGPOST_20241103_projectArchangel-5657-zov-aa-arkhangel-sarmat-project.txt) | 2024-11-03 | — |
 | [s7856] | Telegram media | Telegram media (TGMEDIA_20260906_archangelforum-post183433-printed-body-bench.png) | 2026-09-06 | — |
 | [s7857] | Telegram media | Telegram media (TGMEDIA_20260906_archangelforum-post183433-prop-laptop-bench.png) | 2026-09-06 | — |
+| [s7897] | Telegram media | Telegram media (TGMEDIA_20260207_projectArchangel-post9507-Свидетельство_рабочего_пилот.pdf) | 2026-02-07 | — |
+| [s7907] | EGRUL extract | EGRUL extract (EGRUL_5505057400_20260920_inn-5505057400.pdf) | 2026-09-20 | 2026-09-20 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

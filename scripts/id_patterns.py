@@ -249,7 +249,7 @@ def load_known_text(repo_root=None) -> str:
             except OSError:
                 continue
 
-    brief = repo / "docs" / "index.html"
+    brief = repo / "docs" / "dossier.html"
     if brief.exists():
         chunks.append(brief.read_text(encoding="utf-8"))
 

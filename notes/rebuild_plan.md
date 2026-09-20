@@ -20,7 +20,7 @@ as a two-tier generated publication) changed shape:
 | Phase 2 screening (OpenSanctions, Aleph, GUR incl. components, Rospatent) | Scripts exist and have run full-roster; re-sweeps are user-run (CLAUDE.md crawling policy). |
 | Phase 3 imagery, "visual saturation" | Shipped as company profiles, person profiles and 10 flagship product profiles (`docs/profiles/`, 420 files incl. .md). |
 | Phase 3.5 registry hardening | Mostly shipped: collision guard, guarded-enum downgrade check, `_merged_into`, reverse source index, `check_registry.py` gate. Remaining items are in the archive, lines 1098-1297. |
-| Phase 4 Jinja site generator, "MVP publication", Phase 5 prose, sequencing note | **Retired 2026-09-08** at user direction; direct iteration on `docs/index.html` and generated profiles is the standing approach. |
+| Phase 4 Jinja site generator, "MVP publication", Phase 5 prose, sequencing note | **Retired 2026-09-08** at user direction. **Superseded 2026-09-20:** `docs/index.html` is no longer the narrative landing page. The old brief is now `docs/dossier.html`; the front door is a generated landing page plus case studies (see "Site structure" below). |
 | The wb_overlap regression on Тримикс (old "one real blocker") | **Fixed** (`b06d9f1`); registry now shows `confirmed_reseller`. |
 
 ## Current state (queried 2026-09-19)
@@ -42,12 +42,22 @@ Live open-work lists (these, not this file, are authoritative):
 Each was written as "still open" in the archive; check against the registry
 before acting (see [[roymarket_tracking_discipline]]).
 
-- **Artifact cutoff**: `docs/index.html` and the Registry Dossier stay unpublished until the user calls an explicit cutoff.
+- **Artifact cutoff**: `docs/dossier.html` (the former index.html) and the Registry Dossier stay unpublished until the user calls an explicit cutoff; the new landing and case pages are Pages-only and are not published as Artifacts before that call.
 - **Zakupki**: three large institutes unreviewed in `clusters_new.md` (`ao-nii-vektor`, `ao-pmts-avangard`, `ao-nii-stt`); a clean final housekeeping re-mine belongs in the user's own terminal (archive 2357-2378).
 - **Гагаринг/Архангел**: Кулемин/Хабибулин DOB/address; «Открытое небо» candidate resolution; «Ворон-оптоволокно» entity; `tg-arkhangel-spetsnaza` legal entity; Одесская 48/3, Курская/Севастополь, НПО Эйлер threads (archive 3028-3044, 2610-2616).
 - **ЦБСТ residents**: КРАМС and TSG Group identity resolution (archive ~3703); `ooo-npo-nebo` deliberately not wired as a ЦБСТ tie.
 - **Never-screened manufacturers, EGRUL pulls, ФНС cross-references**: archive ~3970 and ~3497. The screening backlog has moved since; query `*_screened_at` instead of trusting those lists.
 - **Pospekhov / «Системы Безопасности»**: one unwired lead from the bridge-figure triage (archive 4231-4286).
+
+## Site structure (agreed 2026-09-20)
+
+Direction chosen by the user with the peer sessions' input: a case-led front door.
+
+- `docs/index.html`: generated landing page, five routes (Cases, Graph, Profiles, Guided read, Registry dossier).
+- `docs/cases/`: one page per case, from `notes/case_study_<slug>.md`, built by `scripts/build_case_pages.py`. Built, unpublished until pushed: Архангел. Planned (not started): Гагаринг, ГОУДРОН, Овод/Черезов, Пиранья, Цыганов/Булат (the five excerpts in `~/.claude/plans/spicy-beaming-kite.md`) plus НПЦ БАСиРТК as a seventh, currently a paragraph in the dossier.
+- `docs/dossier.html`: the former index.html, linked, not deleted.
+- The live network-graph Artifact split in `~/.claude/plans/spicy-beaming-kite.md` (overview-first default) is still unexecuted; its case-excerpt list overlaps the cases above and its graph tokens are reused by `build_case_pages.py`.
+- Open: Russian versions of the case pages (written, not translated); the other six case notes; `notes/public_subproject_plan.md` (open-sources-only public site) stays parked.
 
 ## Section index of the archive
 

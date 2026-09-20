@@ -1809,7 +1809,7 @@
       "sanctioned": false,
       "legal_form": "Фонд",
       "variant": null,
-      "degree": 9
+      "degree": 8
     },
     {
       "id": "fond-sozidanie",
@@ -10225,7 +10225,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": "defensive",
-      "degree": 23
+      "degree": 24
     },
     {
       "id": "protorguev-sergey-aleksandrovich",
@@ -18479,17 +18479,6 @@
       "type": "founded",
       "label": null,
       "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "fond-sarmat",
-      "target": "ano-nii-dpo",
-      "type": "related",
-      "label": "training-partnership",
-      "source_id": "s7897",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -27984,6 +27973,17 @@
       "label": "Учредитель (5%)",
       "source_id": "s6962",
       "as_of": "2023-12-15",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "proekt-kb-arkhangel",
+      "target": "ano-nii-dpo",
+      "type": "related",
+      "label": "training-partnership",
+      "source_id": "s7897",
+      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null

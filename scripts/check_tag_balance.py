@@ -24,7 +24,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-DEFAULT_PATHS = [REPO / "docs" / "index.html"]
+DEFAULT_PATHS = [REPO / "docs" / "dossier.html"]
 
 TAGS = [
     "section", "table", "div", "blockquote", "tr", "td", "ul", "li", "ol",

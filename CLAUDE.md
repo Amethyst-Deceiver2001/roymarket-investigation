@@ -422,9 +422,7 @@ Ground/satellite views of a facility are just `images[]` entries distinguished
 by caption text (e.g. `_ground.jpg`/`_satellite.jpg` naming, already used at
 `ooo-aeromaks`) — there's no separate schema field for them.
 
-Not yet wired up: `docs/index.html` doesn't link to `docs/profiles/` pages
-yet (no nav, no cross-linking from the narrative). That's a separate task
-from generating the profiles themselves.
+The landing page (`docs/index.html`) links the profile index (`docs/profiles/index.html`) and every case page carries the same site nav; both are generated (see Publishing).
 
 ### Product profiles and `relationship_type`
 
@@ -433,19 +431,19 @@ Product profiles (`build_product_profile.py`, `FLAGSHIP_PRODUCTS`, flagship prod
 
 ## Publishing
 
-`docs/index.html` is the GitHub Pages source (repo Settings → Pages →
-`/docs`) and the standalone Artifact companion
-(https://claude.ai/code/artifact/5450bf7e-7f7b-4788-93c0-761503dd5ea4). Edit
-the local file freely; only republish the Artifact when the user calls an
-explicit investigation cutoff — see `roymarket_no_per_fold_publish` (seeded
-memory) for why (the Artifact intentionally lags the local file between
-cutoffs).
+**Changed 2026-09-20 at user direction: the old brief is no longer the landing page.** `docs/` (repo Settings → Pages → `/docs`) is now a small site:
+
+- `docs/index.html` — generated landing page (routes to cases, the graph explorer, the profile index, `story.html`, the dossier).
+- `docs/cases/index.html`, `docs/cases/<slug>.html` — case studies, generated from `notes/case_study_<slug>.md` plus a static graph excerpt and a resolved sources table. Case list and status live in `CASES` in `scripts/build_case_pages.py` (seven cases: Архангел published; Гагаринг, ГОУДРОН, Овод/Черезов, Пиранья, Цыганов/Булат and НПЦ БАСиРТК planned). Grades use the registry vocabulary (`{doc}` Primary doc, `{press}` Press-reported, `{open}` Open); a case note must state the entity's registry tier and ЦБСТ-tie position accurately.
+- `docs/dossier.html` — the former `docs/index.html` (the long written brief), kept and linked as the "Registry dossier"; it is also the source of the standalone Artifact companion (https://claude.ai/code/artifact/5450bf7e-7f7b-4788-93c0-761503dd5ea4). Edit it freely; only republish the Artifact when the user calls an explicit investigation cutoff — see `roymarket_no_per_fold_publish` (seeded memory) for why (the Artifact intentionally lags the local file between cutoffs). Nothing new here is published as an Artifact before that call.
+
+**Pushing `docs/` publishes it (Pages serves `/docs`): a Pages-only page is still public, so push new landing or case pages only on the user's explicit go-ahead.** Regenerate after a case note or registry change: `python3 scripts/build_case_pages.py`, then `python3 scripts/check_tag_balance.py docs/index.html docs/cases/*.html`.
 
 ## Tag-balance check before any publish
 
 Run `scripts/check_tag_balance.py` (see the seeded memory
-`html_brief_tag_balance_check`) after every `docs/index.html` edit, before
-publishing.
+`html_brief_tag_balance_check`) after every `docs/dossier.html` edit, before
+publishing; with no arguments it checks the dossier, and for generated pages pass them explicitly (`docs/index.html docs/cases/*.html`).
 
 ## PII handling
 

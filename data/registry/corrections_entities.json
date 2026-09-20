@@ -51,7 +51,7 @@
         ],
         "sources": [],
         "why": [
-          "2026-09-20: zakupki search (scan of 20.09.2026): 81 hits, first 50 read - small regional job-centre retraining contracts 2019-2022, none military or drone-related; remaining 31 unread. ООО «НИИ ДПО»: 0 hits.","2026-09-20: created from the certificate specimens posted by Архангел (s7897-s7906) and the ЕГРЮЛ выписка (s7907)."]
+          "2026-09-20: zakupki search (scan of 20.09.2026): 81 hits, 80 read - small regional job-centre retraining contracts 2017-2022, none military or drone-related; one card unread (see zakupki_review). ООО «НИИ ДПО»: 0 hits.","2026-09-20: created from the certificate specimens posted by Архангел (s7897-s7906) and the ЕГРЮЛ выписка (s7907)."]
       },
       {
         "slug": "ooo-nii-dpo",
@@ -2190,7 +2190,17 @@
     },
     {
       "slug": "proekt-kb-arkhangel",
+      "why": [
+        "2026-09-20: Архангел has an education arm besides its products: the «Школа внешних пилотов (операторов) БПЛА «Архангел»», run as the Кафедра общественной безопасности of АНО «НИИ ДПО» (ano-nii-dpo, sister ooo-nii-dpo), issues diplomas and certificates (s7897-s7906) and feeds graduates into Архангел's own practical training (msg 7130). Recorded as a service line alongside the interceptor drones; no procurement link found (80 of the АНО's 81 zakupki contracts read: unrelated job-centre retraining)."
+      ],
       "related_entities": [
+          {
+            "slug": "ano-nii-dpo",
+            "name": "АНО «Научно-исследовательский институт дополнительного профессионального образования»",
+            "relationship_type": "training-partnership",
+            "relationship": "The accredited-education layer of Архангел's course funnel. Архангел's own channel presents the Кафедра общественной безопасности of this АНО, run through @course_bpla_bot 'в сотрудничестве с центром подготовки пилотов БПЛА', as its remote training arm (msg 7130/7188, April 2025), and thanks 'директора НИИ ДПО Николая' on 11.07.2026 (msg 10463). On 07.02.2026 the channel and the Archangel_Forum chat posted ten specimen diplomas and certificates (msgs 9507-9516, s7897-s7906) issued by the АНО's «Школа внешних пилотов (операторов) БПЛА «Архангел»» with the Архангел logo, signed by rector Еськов Н.Л. The holder on every one is a placeholder (Сталин И.В., Гагарин Ю.А.) with zeroed serials: templates, not real issues.",
+            "source_id": "s7897"
+          },
         {
           "slug": "npo-kaysant",
           "name": "НПО «КАЙСАНТ»",
@@ -2360,6 +2370,20 @@
             }
       ],
       "marketing_claims": [
+          {
+            "text_ru": "«Архангел» предлагает пройти дистанционное обучение и стать востребованным специалистом.",
+            "text_en": "\"Arkhangel\" offers remote training so you can become an in-demand specialist.",
+            "context": "@projectArchangel msg 7130 (05.04.2025, reposted 7188 and in Archangel_Forum 158698): introduces the Кафедра общественной безопасности of АНО «НИИ ДПО» as the route in; the same post says graduates 'ждут уже в «Архангеле», где к теории прибавится практика под руководством опытных инструкторов'.",
+            "source_id": "s7907",
+            "as_of": "2025-04-05"
+          },
+          {
+            "text_ru": "образование, полученное на кафедре общественной безопасности и в стенах «Архангела», конечно, пригодится и после окончания СВО",
+            "text_en": "the education received at the department of public safety and within Arkhangel's walls will of course be useful after the SVO ends",
+            "context": "@projectArchangel msg 7130 (05.04.2025): frames the accredited certificates as post-war civilian credentials for the 'сегодняшних военных птичников'.",
+            "source_id": "s7907",
+            "as_of": "2025-04-05"
+          },
         {
           "text_ru": "В боевой версии «Архангела» используется цилиндр с боевой частью (поражающие элементы — шарики или контргайки). Вес этого цилиндра должен быть 500 гр для правильной балансировки и курсовой устойчивости дрона.",
           "text_en": "The combat version of \"Arkhangel\" uses a cylinder with a warhead (fragmentation elements — ball bearings or lock nuts). This cylinder must weigh 500g for correct balance and directional stability.",
@@ -2516,6 +2540,10 @@
           }
       ],
       "open_questions": [
+          {
+            "source_id": "s7897",
+            "text": "Ten specimen diplomas/certificates for the «Школа внешних пилотов (операторов) БПЛА «Архангел»» (pilot, mechanic, UAS data processing, pilot-instructor, plus the «Архангел ЩИТ» air-defence instructor and АНТИБПЛА tracks) were posted 07.02.2026 (msgs 9498-9516, s7888-s7906). They carry the Omsk АНО's licence number 'Л035-01273-55/00207746 от 18.02.2022' while the ЕГРЮЛ выписка lists licence '55Л01 75-п' of 31.10.2017 (s7907): check the Рособрнадзор licence register for the 2022 number and for whether real graduates hold ФИС ФРДО entries. Which real students, if any, got these documents is not on file."
+          },
         {
           "source_id": "s5454",
           "text": "This post links two further, distinct, NOT-yet-scraped channels: t.me/proekt_arhangel (cited twice as a related/parent channel, distinct handle from @projectArchangel) and t.me/malyha_ww (video build instructions — \"малыха\" matches the BOM's \"Малая ДР\" naming for this small variant). Also confirms t.me/c/1859964206/110711 (the already-known private \"Академия Противодействия БПЛА\" chat) carries this project's own tuning content."
@@ -2924,7 +2952,6 @@
       "okved_code": "30.30.6",
       "okved_label": "Производство беспилотных авиационных систем",
       "why": [
-          "2026-09-20: Архангел has an education arm besides its products: the «Школа внешних пилотов (операторов) БПЛА «Архангел»», run as the Кафедра общественной безопасности of АНО «НИИ ДПО» (ano-nii-dpo, sister ooo-nii-dpo), issues diplomas and certificates (s7897-s7906) and feeds graduates into Архангел's own practical training (msg 7130). Recorded as a service line alongside the interceptor drones; no procurement link found (АНО's 50 archived zakupki cards are unrelated job-centre retraining contracts, 31 further hits unread).",
         "EGRUL_5027339008_20260905_ooo-arkhangel-shchit (s5517) — full signed ЕГРЮЛ выписка pulled 05.09.2026: confirms ОГРН 1255000059533, registration 24.06.2025, the Лыткарино residential address, ₽10,000 charter capital, Хабибулин В.И. as генеральный директор, Кулемин И.А. as sole 100% founder, and main ОКВЭД 30.30.6 within a 51-code list."
       ]
     },
@@ -6427,10 +6454,6 @@
         ],
         "open_questions": [
           {
-            "source_id": "s7897",
-            "text": "Ten specimen diplomas/certificates for the «Школа внешних пилотов (операторов) БПЛА «Архангел»» (pilot, mechanic, UAS data processing, pilot-instructor, plus the «Архангел ЩИТ» air-defence instructor and АНТИБПЛА tracks) were posted 07.02.2026 (msgs 9498-9516, s7888-s7906). They carry the Omsk АНО's licence number 'Л035-01273-55/00207746 от 18.02.2022' while the ЕГРЮЛ выписка lists licence '55Л01 75-п' of 31.10.2017 (s7907): check the Рособрнадзор licence register for the 2022 number and for whether real graduates hold ФИС ФРДО entries. Which real students, if any, got these documents is not on file."
-          },
-          {
             "source_id": "s7682",
             "text": "Фонд «Сармат» (ИНН 6154168283, ОГРН 1246100025951): pull the full ЕГРЮЛ выписка to find its founders and director and to see whether they overlap with the unit's leadership or with Рогозин-linked entities (АО «Эколибри», АНО ЦРТТ)."
           },
@@ -6488,13 +6511,6 @@
           ]
         },
         "related_entities": [
-          {
-            "slug": "ano-nii-dpo",
-            "name": "АНО «Научно-исследовательский институт дополнительного профессионального образования»",
-            "relationship_type": "training-partnership",
-            "relationship": "The accredited-education layer of Архангел's course funnel. Архангел's own channel presents the Кафедра общественной безопасности of this АНО, run through @course_bpla_bot 'в сотрудничестве с центром подготовки пилотов БПЛА', as its remote training arm (msg 7130/7188, April 2025), and thanks 'директора НИИ ДПО Николая' on 11.07.2026 (msg 10463). On 07.02.2026 the channel and the Archangel_Forum chat posted ten specimen diplomas and certificates (msgs 9507-9516, s7897-s7906) issued by the АНО's «Школа внешних пилотов (операторов) БПЛА «Архангел»» with the Архангел logo, signed by rector Еськов Н.Л. The holder on every one is a placeholder (Сталин И.В., Гагарин Ю.А.) with zeroed serials: templates, not real issues.",
-            "source_id": "s7897"
-          },
           {
             "slug": "csn-bars-sarmat",
             "name": "ЦСН «Барс-Сармат»",
@@ -6585,20 +6601,6 @@
         "wb_overlap": "none_found",
         "products": [],
         "marketing_claims": [
-          {
-            "text_ru": "«Архангел» предлагает пройти дистанционное обучение и стать востребованным специалистом.",
-            "text_en": "\"Arkhangel\" offers remote training so you can become an in-demand specialist.",
-            "context": "@projectArchangel msg 7130 (05.04.2025, reposted 7188 and in Archangel_Forum 158698): introduces the Кафедра общественной безопасности of АНО «НИИ ДПО» as the route in; the same post says graduates 'ждут уже в «Архангеле», где к теории прибавится практика под руководством опытных инструкторов'.",
-            "source_id": "s7907",
-            "as_of": "2025-04-05"
-          },
-          {
-            "text_ru": "образование, полученное на кафедре общественной безопасности и в стенах «Архангела», конечно, пригодится и после окончания СВО",
-            "text_en": "the education received at the department of public safety and within Arkhangel's walls will of course be useful after the SVO ends",
-            "context": "@projectArchangel msg 7130 (05.04.2025): frames the accredited certificates as post-war civilian credentials for the 'сегодняшних военных птичников'.",
-            "source_id": "s7907",
-            "as_of": "2025-04-05"
-          },
           {
             "text_ru": "Целью Организации является оказание всесторонней помощи военнослужащим, осуществляющих срочную службу или службу на СВО",
             "text_en": "The organisation's aim is to provide comprehensive assistance to servicemen serving conscript service or serving in the SVO.",

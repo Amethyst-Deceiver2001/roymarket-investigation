@@ -1764,7 +1764,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 9
+          "degree": 8
         },
         {
           "id": "fond-sozidanie",
@@ -8728,7 +8728,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": "defensive",
-          "degree": 23
+          "degree": 24
         },
         {
           "id": "protorguev-sergey-aleksandrovich",
@@ -15476,17 +15476,6 @@
         },
         {
           "source": "fond-sarmat",
-          "target": "ano-nii-dpo",
-          "type": "related",
-          "label": "training-partnership",
-          "source_id": "s7897",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "fond-sarmat",
           "target": "csn-bars-sarmat",
           "type": "related",
           "label": "group-structure",
@@ -22120,6 +22109,17 @@
         },
         {
           "source": "proekt-kb-arkhangel",
+          "target": "ano-nii-dpo",
+          "type": "related",
+          "label": "training-partnership",
+          "source_id": "s7897",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "proekt-kb-arkhangel",
           "target": "ano-tsvp-zov-aa",
           "type": "related",
           "label": "training-partnership",
@@ -26524,7 +26524,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 9
+          "degree": 8
         },
         {
           "id": "fond-sozidanie",
