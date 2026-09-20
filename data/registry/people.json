@@ -18483,6 +18483,14 @@
     "inn_personal": "770301599800",
     "roles": [
       {
+        "entity_slug": "fond-sarmat",
+        "entity_name": "Фонд «Сармат»",
+        "title": "Учредитель (founder; participant since registration)",
+        "from": "2024-10-15",
+        "to": null,
+        "source_id": "s7870"
+      },
+      {
         "entity_slug": "ao-ekolibri",
         "source_id": "s0962",
         "title": "Председатель консультативного совета / Chairman of the Advisory Council (superseded by a Совет директоров seat per the entity's FY2025 filing, s0324 -- exact transition date not stated in either source, 'to' left null rather than guessed)"
@@ -48281,6 +48289,44 @@
     "_raw": {},
     "_corrected": [
       "2026-09-19: added as the registered head of ano-tsvp-zov-aa (affiliated-organisation principal under the PII policy)."
+    ]
+  },
+  {
+    "slug": "gamirullin-marat-dzhaudatovich",
+    "fio_ru": "Гамируллин Марат Джаудатович",
+    "name_latin": "Marat Dzhaudatovich Gamirullin",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "502717315675",
+    "roles": [
+      {
+        "title": "Директор (sole person acting without a power of attorney)",
+        "entity_name": "Фонд «Сармат»",
+        "entity_slug": "fond-sarmat",
+        "from": "2026-07-09",
+        "to": null,
+        "source_id": "s7870"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "Director of Фонд «Сармат» per the ЕГРЮЛ выписка of 20.09.2026 (s7870); the fund's registered e-mail is his. Entry dated 09.07.2026 (ГРН 2266100670328), so he replaced an earlier head; who that was is not on file. No DOB, address or photo; no other research done.",
+    "sources": [
+      "s7870"
+    ],
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "2026-09-20: added as registered head of fond-sarmat (affiliated-organisation principal under the PII policy)."
     ]
   }
 ]

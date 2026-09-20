@@ -6358,7 +6358,15 @@
         "inn": "6154168283",
         "ogrn": "1246100025951",
         "tier": "adjacent",
-        "tier_basis": "Foundation whose own page on bars-sarmat.ru is titled 'Помощь добровольцам Центра специального назначения «Барс-Сармат»' and gives its ИНН/ОГРН and a ПСБ account for donations (s7682). Identifiers are as printed on that page; no ЕГРЮЛ extract is on file yet, so founders, director, address and registration date are unknown. The ОГРН's first digits suggest a 2024 registration but that is not verified. Adjacent: no ЦБСТ tie found.",
+        "tier_basis": "Foundation whose own page on bars-sarmat.ru is titled 'Помощь добровольцам Центра специального назначения «Барс-Сармат»' and gives its ИНН/ОГРН and a ПСБ account for donations (s7682). ЕГРЮЛ выписка of 20.09.2026 (s7870): registered 15.10.2024 in Таганрог; founders are Алексей Рогозин (son of Дмитрий Рогозин), АНО ЦРТТ and АО «МИКЦ». Adjacent: no ЦБСТ tie found.",
+        "director": "Гамируллин Марат Джаудатович (ИНН 502717315675)",
+        "director_history": [{"value": "Гамируллин Марат Джаудатович", "as_of": "2026-07-09", "source_id": "s7870", "note": "ГРН 2266100670328; earlier head not on file"}],
+        "founders_history": [
+          {"value": "Рогозин Алексей Дмитриевич (физлицо, ИНН 770301599800)", "as_of": "2024-10-15", "source_id": "s7870", "note": "founder since registration"},
+          {"value": "АНО «Центр развития транспортных технологий» (ИНН 9724066980)", "as_of": "2024-10-15", "source_id": "s7870", "note": "founder since registration"},
+          {"value": "АО «Межотраслевой инженерно-конструкторский центр» (ИНН 7714486438)", "as_of": "2024-10-15", "source_id": "s7870", "note": "founder since registration"}
+        ],
+        "address_history": [{"value": "347900, Ростовская обл., г. Таганрог, ул. Лесная Биржа, д. 20-Б, этаж 2, ком. 9", "as_of": "2026-09-20", "source_id": "s7870", "note": ""}],
         "cbst_tie": {
           "claim": "None found.",
           "confidence": "none",
@@ -6380,19 +6388,19 @@
             "slug": "csn-bars-sarmat",
             "name": "ЦСН «Барс-Сармат»",
             "relationship_type": "group-structure",
-            "relationship": "The site presents the Фонд as help for the unit's volunteers and shows its bank details (s7682). Unconfirmed by ЕГРЮЛ.",
+            "relationship": "The site presents the Фонд as help for the unit's volunteers and shows its bank details (s7682). The fund's founders include Алексей Рогозин, so the unit's commander and the fund share a family, per ЕГРЮЛ (s7870).",
             "source_id": "s7682"
           }
         ],
         "open_questions": [
           {
-            "source_id": "s7682",
-            "text": "Pull the ЕГРЮЛ выписка for ИНН 6154168283 and read founders, director, address, registration date; check the ОГРН and ИНН control digits (check_registry.py) and look for personal ties to the unit's leadership."
+            "source_id": "s7870",
+            "text": "Two founders are Рогозин-linked (Алексей himself; АНО ЦРТТ, where he is director) and the third, АО «МИКЦ» (ИНН 7714486438), is on file: check what the ЕГРЮЛ says of its owners and whether it ties to Рогозин or ЦБСТ. Who directed the fund before Гамируллин (entry of 09.07.2026) is unknown; a first выписка for 2024-2026 or the history extract would show it."
           }
         ],
         "sources": [],
         "why": [
-          "2026-09-19: identifiers taken from the Фонд's own page on the unit's site (s7682), not from an official register."
+          "2026-09-20: ЕГРЮЛ выписка pulled (s7870). 2026-09-19: identifiers taken from the Фонд's own page on the unit's site (s7682), not from an official register."
         ]
       },
       {

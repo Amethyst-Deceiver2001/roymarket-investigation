@@ -234,7 +234,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ano-tsvp-zov-aa",
@@ -371,6 +371,18 @@
           "legal_form": null,
           "variant": null,
           "degree": 3
+        },
+        {
+          "id": "ao-mikts",
+          "kind": "entity",
+          "label": "АО «МИКЦ»",
+          "name_latin": null,
+          "inn": "7714486438",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": "АО",
+          "variant": null,
+          "degree": 2
         },
         {
           "id": "ao-nii-stt",
@@ -1732,7 +1744,7 @@
           "sanctioned": false,
           "legal_form": "Фонд",
           "variant": null,
-          "degree": 2
+          "degree": 8
         },
         {
           "id": "fond-sozidanie",
@@ -1785,6 +1797,14 @@
           "name_latin": "Aleksandr Galushko",
           "sanctioned": false,
           "degree": 1
+        },
+        {
+          "id": "gamirullin-marat-dzhaudatovich",
+          "kind": "person",
+          "label": "Гамируллин Марат Джаудатович",
+          "name_latin": "Marat Dzhaudatovich Gamirullin",
+          "sanctioned": false,
+          "degree": 2
         },
         {
           "id": "garkusha-vladimir-vladimirovich",
@@ -8724,7 +8744,7 @@
           "label": "Рогозин Алексей Дмитриевич",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 8
+          "degree": 10
         },
         {
           "id": "rogozin-dmitriy-olegovich",
@@ -9424,6 +9444,12 @@
           "id": "stub::михальчук сергей сергеевич",
           "kind": "unresolved",
           "label": "Михальчук Сергей Сергеевич",
+          "degree": 1
+        },
+        {
+          "id": "stub::панкратов андрей александрович",
+          "kind": "unresolved",
+          "label": "Панкратов Андрей Александрович",
           "degree": 1
         },
         {
@@ -10302,6 +10328,17 @@
           "confidence": null
         },
         {
+          "source": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
+          "target": "fond-sarmat",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7870",
+          "as_of": "2024-10-15",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
           "source": "ano-tsvp-zov-aa",
           "target": "csn-bars-sarmat",
           "type": "related",
@@ -10530,6 +10567,17 @@
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-mikts",
+          "target": "fond-sarmat",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7870",
+          "as_of": "2024-10-15",
+          "weight": 1.0,
+          "temporal_status": "current",
           "confidence": null
         },
         {
@@ -15434,6 +15482,28 @@
           "label": "Named recruitment contact for the UAV-systems training center's intake",
           "source_id": "s5378",
           "as_of": "2026-02-24",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "gamirullin-marat-dzhaudatovich",
+          "target": "fond-sarmat",
+          "type": "directs",
+          "label": null,
+          "source_id": "s7870",
+          "as_of": "2026-07-09",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "gamirullin-marat-dzhaudatovich",
+          "target": "fond-sarmat",
+          "type": "role",
+          "label": "Директор (sole person acting without a power of attorney)",
+          "source_id": "s7870",
+          "as_of": "2026-07-09",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
@@ -22128,6 +22198,28 @@
         },
         {
           "source": "rogozin-aleksey-dmitrievich",
+          "target": "fond-sarmat",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7870",
+          "as_of": "2024-10-15",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "rogozin-aleksey-dmitrievich",
+          "target": "fond-sarmat",
+          "type": "role",
+          "label": "Учредитель (founder; participant since registration)",
+          "source_id": "s7870",
+          "as_of": "2024-10-15",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "rogozin-aleksey-dmitrievich",
           "target": "rogozin-dmitriy-olegovich",
           "type": "family_tie",
           "label": "son",
@@ -24184,6 +24276,17 @@
           "confidence": null
         },
         {
+          "source": "stub::панкратов андрей александрович",
+          "target": "ao-mikts",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6825",
+          "as_of": "2025-08-28",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
           "source": "stub::парабучев алексей игоревич",
           "target": "fond-moskovskiy-innovatsionnyy-klaster",
           "type": "directs",
@@ -25649,7 +25752,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ano-tsvp-zov-aa",
@@ -25742,6 +25845,18 @@
           "legal_form": "АО",
           "variant": null,
           "degree": 5
+        },
+        {
+          "id": "ao-mikts",
+          "kind": "entity",
+          "label": "АО «МИКЦ»",
+          "name_latin": null,
+          "inn": "7714486438",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": "АО",
+          "variant": null,
+          "degree": 2
         },
         {
           "id": "ao-nii-stt",
@@ -26272,6 +26387,18 @@
           "degree": 2
         },
         {
+          "id": "fond-sarmat",
+          "kind": "entity",
+          "label": "Общественно полезный фонд научно-технологического и социально-экономического развития «Сармат»",
+          "name_latin": "Fond \"Sarmat\"",
+          "inn": "6154168283",
+          "tier": "adjacent",
+          "sanctioned": false,
+          "legal_form": "Фонд",
+          "variant": null,
+          "degree": 8
+        },
+        {
           "id": "fond-sozidanie",
           "kind": "entity",
           "label": "Фонд поддержки социальных инициатив «Созидание»",
@@ -26290,6 +26417,14 @@
           "name_latin": "Ilya Viktorovich Galaev",
           "sanctioned": false,
           "degree": 6
+        },
+        {
+          "id": "gamirullin-marat-dzhaudatovich",
+          "kind": "person",
+          "label": "Гамируллин Марат Джаудатович",
+          "name_latin": "Marat Dzhaudatovich Gamirullin",
+          "sanctioned": false,
+          "degree": 2
         },
         {
           "id": "garkusha-vladimir-vladimirovich",
@@ -27733,7 +27868,7 @@
           "label": "Рогозин Алексей Дмитриевич",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 8
+          "degree": 10
         },
         {
           "id": "rogozin-dmitriy-olegovich",
@@ -28290,6 +28425,17 @@
           "confidence": null
         },
         {
+          "source": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
+          "target": "fond-sarmat",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7870",
+          "as_of": "2024-10-15",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
           "source": "antsev-georgiy-vladimirovich",
           "target": "npp-radar-mms",
           "type": "directs",
@@ -28318,6 +28464,17 @@
           "label": "80%",
           "source_id": "s6739",
           "as_of": "2024-02-29",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "ao-mikts",
+          "target": "fond-sarmat",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7870",
+          "as_of": "2024-10-15",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -28824,6 +28981,17 @@
           "label": null,
           "source_id": "s5661",
           "as_of": "2022-06-03",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "gamirullin-marat-dzhaudatovich",
+          "target": "fond-sarmat",
+          "type": "directs",
+          "label": null,
+          "source_id": "s7870",
+          "as_of": "2026-07-09",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -29495,6 +29663,17 @@
           "label": null,
           "source_id": "s6867",
           "as_of": "2021-12-24",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "rogozin-aleksey-dmitrievich",
+          "target": "fond-sarmat",
+          "type": "founded",
+          "label": null,
+          "source_id": "s7870",
+          "as_of": "2024-10-15",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -33291,7 +33470,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ao-aeromaks",
@@ -37211,7 +37390,7 @@
           "label": "Рогозин Алексей Дмитриевич",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 8
+          "degree": 10
         },
         {
           "id": "rudenko-dmitriy-aleksandrovich",

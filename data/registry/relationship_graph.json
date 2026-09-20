@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1135,
-  "edge_count": 1914,
-  "unresolved_count": 107,
+  "node_count": 1138,
+  "edge_count": 1921,
+  "unresolved_count": 108,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -243,7 +243,7 @@
       "sanctioned": true,
       "legal_form": null,
       "variant": null,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "ano-tsvp-zov-aa",
@@ -404,6 +404,18 @@
       "legal_form": null,
       "variant": null,
       "degree": 3
+    },
+    {
+      "id": "ao-mikts",
+      "kind": "entity",
+      "label": "АО «МИКЦ»",
+      "name_latin": null,
+      "inn": "7714486438",
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": "АО",
+      "variant": null,
+      "degree": 2
     },
     {
       "id": "ao-nii-stt",
@@ -1777,7 +1789,7 @@
       "sanctioned": false,
       "legal_form": "Фонд",
       "variant": null,
-      "degree": 2
+      "degree": 8
     },
     {
       "id": "fond-sozidanie",
@@ -1830,6 +1842,14 @@
       "name_latin": "Aleksandr Galushko",
       "sanctioned": false,
       "degree": 1
+    },
+    {
+      "id": "gamirullin-marat-dzhaudatovich",
+      "kind": "person",
+      "label": "Гамируллин Марат Джаудатович",
+      "name_latin": "Marat Dzhaudatovich Gamirullin",
+      "sanctioned": false,
+      "degree": 2
     },
     {
       "id": "garkusha-vladimir-vladimirovich",
@@ -10221,7 +10241,7 @@
       "label": "Рогозин Алексей Дмитриевич",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 8
+      "degree": 10
     },
     {
       "id": "rogozin-dmitriy-olegovich",
@@ -11049,6 +11069,12 @@
       "id": "stub::нефедьев андрей матвеевич",
       "kind": "unresolved",
       "label": "Нефедьев Андрей Матвеевич",
+      "degree": 1
+    },
+    {
+      "id": "stub::панкратов андрей александрович",
+      "kind": "unresolved",
+      "label": "Панкратов Андрей Александрович",
       "degree": 1
     },
     {
@@ -12124,6 +12150,17 @@
       "confidence": null
     },
     {
+      "source": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
+      "target": "fond-sarmat",
+      "type": "founded",
+      "label": null,
+      "source_id": "s7870",
+      "as_of": "2024-10-15",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
       "source": "ano-tsvp-zov-aa",
       "target": "csn-bars-sarmat",
       "type": "related",
@@ -12418,6 +12455,17 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-mikts",
+      "target": "fond-sarmat",
+      "type": "founded",
+      "label": null,
+      "source_id": "s7870",
+      "as_of": "2024-10-15",
+      "weight": 1.0,
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -18477,6 +18525,28 @@
       "label": "Named recruitment contact for the UAV-systems training center's intake",
       "source_id": "s5378",
       "as_of": "2026-02-24",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "gamirullin-marat-dzhaudatovich",
+      "target": "fond-sarmat",
+      "type": "directs",
+      "label": null,
+      "source_id": "s7870",
+      "as_of": "2026-07-09",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "gamirullin-marat-dzhaudatovich",
+      "target": "fond-sarmat",
+      "type": "role",
+      "label": "Директор (sole person acting without a power of attorney)",
+      "source_id": "s7870",
+      "as_of": "2026-07-09",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -28042,6 +28112,28 @@
     },
     {
       "source": "rogozin-aleksey-dmitrievich",
+      "target": "fond-sarmat",
+      "type": "founded",
+      "label": null,
+      "source_id": "s7870",
+      "as_of": "2024-10-15",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "rogozin-aleksey-dmitrievich",
+      "target": "fond-sarmat",
+      "type": "role",
+      "label": "Учредитель (founder; participant since registration)",
+      "source_id": "s7870",
+      "as_of": "2024-10-15",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "rogozin-aleksey-dmitrievich",
       "target": "rogozin-dmitriy-olegovich",
       "type": "family_tie",
       "label": "son",
@@ -30945,6 +31037,17 @@
       "confidence": null
     },
     {
+      "source": "stub::панкратов андрей александрович",
+      "target": "ao-mikts",
+      "type": "directs",
+      "label": null,
+      "source_id": "s6825",
+      "as_of": "2025-08-28",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
       "source": "stub::парабучев алексей игоревич",
       "target": "fond-moskovskiy-innovatsionnyy-klaster",
       "type": "directs",
@@ -33217,6 +33320,13 @@
       ]
     },
     {
+      "id": "stub::панкратов андрей александрович",
+      "raw_name": "Панкратов Андрей Александрович",
+      "contexts": [
+        "director of ao-mikts"
+      ]
+    },
+    {
       "id": "stub::парабучев алексей игоревич",
       "raw_name": "Парабучев Алексей Игоревич",
       "contexts": [
@@ -33520,7 +33630,6 @@
     "ao-fabrika-im-sovetskoy-armii",
     "ao-glavtekhkonstruktsiya",
     "ao-korporatsiya-sinergiya",
-    "ao-mikts",
     "ao-ross",
     "ao-seym-agro",
     "aristarkhov-vladimir-vyacheslavovich",
@@ -33709,7 +33818,6 @@
     "stub::мушкевич павел",
     "stub::нахтигаль никита витальевич",
     "stub::николаев александр юрьевич",
-    "stub::панкратов андрей александрович",
     "stub::паутов андрей павлович",
     "stub::руднев артем николаевич",
     "stub::рябико ольга александровна",
