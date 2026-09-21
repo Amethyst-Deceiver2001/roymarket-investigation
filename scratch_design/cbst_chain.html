@@ -1,11 +1,10 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!doctype html>
 <title>From ЦБСТ to the Front</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
   :root {
     --bg: #efeee7; --panel: #ffffff; --panel-2: #f6f5ef; --line: #d4d2c4;
-    --ink: #17180f; --ink-2: #4b4c3f; --muted: #7a7c68; --accent: #4c5f2f;
+    --ink: #17180f; --ink-2: #4b4c3f; --muted: #6b6d5b; --accent: #4c5f2f;
     --mono: 'IBM Plex Mono', ui-monospace, monospace;
     --sans: 'IBM Plex Sans', system-ui, sans-serif;
     --display: 'Oswald', 'Arial Narrow', sans-serif;
@@ -20,22 +19,37 @@
     --sanctioned-ring: #d03b3b;
     --edge: #b9b8b1;
     --edge-solid: #52514e;
+
+    /* evidence-grade tokens — same hex values as docs/assets/profile.css's
+       ok/ok-bg, mid/mid-bg, low/low-bg (the {doc}/{press}/{open} chips every
+       case page and profile already uses). Reused verbatim, not reinvented,
+       so this exhibit's grade badges read as the same system, not a fourth
+       one -- see the fix log at the bottom of this file. */
+    --ok: #0a7a53; --ok-bg: #e3f0ea;
+    --mid: #96700a; --mid-bg: #faf5e8;
+    --low: #8a3030; --low-bg: #f2dedd;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #0d0e0a; --panel: #15160f; --panel-2: #191a12; --line: #34362450;
-      --ink: #dcdccc; --ink-2: #b3b39a; --muted: #7c7d64; --accent: #9db56e;
+      --ink: #dcdccc; --ink-2: #b3b39a; --muted: #808268; --accent: #9db56e;
       --t-manufacturer: #3987e5; --t-cbst-core: #d95926;
       --person-fill: #8fa3b3; --product-fill: #b3a480; --outcome-fill: #9db56e;
       --sanctioned-ring: #e66767; --edge: #3a3a37; --edge-solid: #c3c2b7;
+      --ok: #6fc9a3; --ok-bg: #12261f;
+      --mid: #e0b23f; --mid-bg: #2a2314;
+      --low: #ec7a95; --low-bg: #2d1918;
     }
   }
   :root[data-theme="dark"] {
     --bg: #0d0e0a; --panel: #15160f; --panel-2: #191a12; --line: #34362450;
-    --ink: #dcdccc; --ink-2: #b3b39a; --muted: #7c7d64; --accent: #9db56e;
+    --ink: #dcdccc; --ink-2: #b3b39a; --muted: #808268; --accent: #9db56e;
     --t-manufacturer: #3987e5; --t-cbst-core: #d95926;
     --person-fill: #8fa3b3; --product-fill: #b3a480; --outcome-fill: #9db56e;
     --sanctioned-ring: #e66767; --edge: #3a3a37; --edge-solid: #c3c2b7;
+    --ok: #6fc9a3; --ok-bg: #12261f;
+    --mid: #e0b23f; --mid-bg: #2a2314;
+    --low: #ec7a95; --low-bg: #2d1918;
   }
 
   * { box-sizing: border-box; }
@@ -56,10 +70,26 @@
   }
   .legend-item { display: flex; align-items: center; gap: 9px; font-size: 12px; color: var(--ink-2); }
   .legend-dot { width: 24px; height: 24px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; }
+  .legend-dot.product { border-radius: 6px; }
+  .legend-dot.person { border-radius: 0; transform: rotate(45deg); }
+  .legend-dot.person svg { transform: rotate(-45deg); }
   .legend-dot svg { width: 13px; height: 13px; stroke: #fff; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
   .legend-dot svg .pfill { fill: #fff; stroke: none; }
-  .legend-line { width: 28px; height: 0; border-top: 2px solid var(--edge-solid); flex: none; }
-  .legend-line.dashed { border-top-style: dashed; border-color: var(--muted); }
+
+  /* Evidence-grade badge — the same visual language as this project's own
+     {doc}/{press}/{open} chips (build_case_pages.py's CHIPS, profile.css's
+     .tag), not a bespoke solid/dashed line binary. Replaces the old
+     .legend-line / .chain-edge.dashed system, which had a real defect: it
+     promised "dashed = indirect" but zero dashed edges existed anywhere,
+     including self-reported claims drawn as if primary-sourced. Every grade
+     below is pulled from this case's own registry cbst_tie.confidence or
+     case-study {doc}/{press}/{open} chip, not asserted freehand. */
+  .grade { display: inline-block; font-family: var(--mono); font-size: 8px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; padding: 1.5px 4px; border-radius: 2px;
+    margin-right: 4px; vertical-align: middle; white-space: nowrap; }
+  .grade.t-doc { background: var(--ok-bg); color: var(--ok); }
+  .grade.t-press { background: var(--mid-bg); color: var(--mid); }
+  .grade.t-open { background: var(--low-bg); color: var(--low); }
 
   .chain-row { border-top: 1px solid var(--line); padding: 30px 0 34px; }
   .chain-row:last-of-type { border-bottom: 1px solid var(--line); }
@@ -69,33 +99,74 @@
   .chain-latin { font-family: var(--sans); font-style: italic; font-size: 12px; color: var(--muted); }
   .chain-meta { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin: 2px 0 18px 32px; }
 
-  .chain-flow { display: flex; align-items: stretch; gap: 0; overflow-x: auto; padding: 4px 0 10px; }
+  /* Scroll-shadow trick (CSS-only, no JS): a fade only renders where there
+     is actually more content to scroll to, via two local-attachment
+     gradients that scroll WITH the content covering the fixed-attachment
+     fade layers beneath, so the fade only shows at a true edge. Fixes a
+     chain (case 5, 5 nodes) silently clipping past the viewport at 1024px
+     with no visual cue that there was more to see. */
+  .chain-flow {
+    display: flex; align-items: stretch; gap: 0; overflow-x: auto; padding: 4px 0 10px;
+    background:
+      linear-gradient(to right, var(--panel) 0, var(--panel) 100%) left / 28px 100% no-repeat local,
+      linear-gradient(to left, var(--panel) 0, var(--panel) 100%) right / 28px 100% no-repeat local,
+      linear-gradient(to right, var(--line), transparent) left / 28px 100% no-repeat scroll,
+      linear-gradient(to left, var(--line), transparent) right / 28px 100% no-repeat scroll;
+    background-color: var(--panel);
+  }
   .chain-node { flex: 0 0 auto; width: 176px; display: flex; flex-direction: column; align-items: center;
-    text-align: center; gap: 8px; padding: 4px 8px; }
+    text-align: center; gap: 8px; padding: 14px 8px 4px; }
   .node-icon { width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
     border: 1px solid rgba(120,120,120,0.35); flex: none; }
+  /* Node shape marks kind, matching the live graph's own grammar exactly:
+     circle = organisation/hub/government-customer/military-unit (all drawn
+     as circles there too — build_relationship_graph.py's government_customer
+     and military_unit kinds are circles, not a third shape), diamond =
+     person, square (rounded) = product. Previously every node here was a
+     circle regardless of kind. */
+  .node-icon.product { border-radius: 10px; }
+  .node-icon.person { border-radius: 6px; transform: rotate(45deg); }
+  .node-icon.person svg, .node-icon.person .hub-txt { transform: rotate(-45deg); }
   .node-icon.sanctioned { box-shadow: 0 0 0 3px var(--panel), 0 0 0 5px var(--sanctioned-ring); }
   .node-icon svg { width: 30px; height: 30px; stroke: #fff; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
   .node-icon svg .pfill { fill: #fff; stroke: none; }
-  .node-icon .hub-txt { font-family: var(--sans); font-weight: 700; font-size: 11px; fill: #fff; }
+  .node-icon .hub-txt { font-family: var(--sans); font-weight: 800; font-size: 9.5px; fill: #fff; }
   .node-title { font-family: var(--display); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.015em; line-height: 1.25; }
-  .node-sub { font-family: var(--mono); font-size: 9.5px; color: var(--muted); line-height: 1.4; }
+  .node-sub { font-family: var(--mono); font-size: 10.5px; color: var(--muted); line-height: 1.45; }
 
-  .chain-edge { flex: 1 1 64px; min-width: 56px; display: flex; flex-direction: column; align-items: center;
-    justify-content: center; padding: 0 6px; margin-top: -20px; }
-  .edge-label { font-family: var(--mono); font-size: 9px; color: var(--ink-2); text-align: center; margin-bottom: 7px; line-height: 1.35; }
-  .edge-line { width: 100%; height: 2px; background: var(--edge-solid); position: relative; flex: none; }
+  /* .chain-flow now stretches every row to its tallest child (usually a
+     node), so .chain-edge has real height to work with instead of a fixed
+     33px box -- the earlier attempt relied on a multi-line label overflowing
+     visibly above a short box, which silently clipped: overflow-x: auto on
+     the flow forces overflow-y to auto too (per spec, one non-visible axis
+     forces the other out of "visible"), so anything drawn above a box's own
+     top edge was being clipped by the scroll container, not shown. Now both
+     .edge-label and .edge-line are positioned absolutely within the
+     stretched, positioned .chain-edge: the label anchors to the top (room
+     for up to ~3 lines before the line, thanks to chain-node's 14px top
+     padding), and the line sits at a FIXED y = 14px (chain-node's own top
+     padding) + 29px (half the 58px icon) = 43px, exactly matching
+     node-icon's centre regardless of how tall any given label renders.
+     Replaces a flat `margin-top: -20px` that assumed one label height and
+     was measured ~58px off in practice. */
+  .chain-edge { flex: 1 1 64px; min-width: 56px; position: relative; padding: 0 6px; }
+  .edge-label { position: absolute; top: 0; left: 6px; right: 6px; font-family: var(--mono); font-size: 10px;
+    color: var(--ink-2); text-align: center; line-height: 1.4; }
+  .edge-line { position: absolute; top: 43px; left: 6px; right: 6px; height: 2px; background: var(--edge-solid); }
   .edge-line::after { content: ''; position: absolute; right: -1px; top: 50%; transform: translateY(-50%);
     border: 5px solid transparent; border-left-color: var(--edge-solid); }
-  .chain-edge.dashed .edge-line { background: transparent; border-top: 2px dashed var(--muted); }
-  .chain-edge.dashed .edge-line::after { border-left-color: var(--muted); }
+  /* Supplementary weight cue for a weaker grade -- the badge text is the
+     real signal (never colour/weight alone), this just reduces the line's
+     visual insistence to match. */
+  .chain-edge.g-open .edge-line { opacity: .5; }
+  .chain-edge.g-press .edge-line { opacity: .75; }
 
   .chain-note { font-family: var(--mono); font-size: 11px; color: var(--ink-2); margin: 4px 0 0 32px; max-width: 900px; }
   .chain-profile { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin: 8px 0 0 32px; }
   .chain-profile code { background: var(--panel-2); padding: 1px 4px; border: 1px solid var(--line); }
 
   .indirect-flag { display: inline-block; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.05em; text-transform: uppercase;
-    padding: 2px 7px; border: 1px solid var(--sanctioned-ring); color: var(--sanctioned-ring); margin-left: 8px; }
+    padding: 2px 7px; border: 1px solid var(--muted); color: var(--muted); margin-left: 8px; }
 
   .context-panel {
     background: var(--panel); border: 1px solid var(--line); padding: 22px 26px; margin-top: 44px;
@@ -109,21 +180,47 @@
   footer a { color: var(--accent); }
 
   @media (max-width: 640px) {
-    .chain-flow { flex-direction: column; align-items: flex-start; }
-    .chain-edge { flex-direction: row; width: 100%; margin: 4px 0 4px 29px; justify-content: flex-start; }
-    .edge-label { text-align: left; margin: 0 0 0 10px; }
-    .edge-line { width: 24px; }
+    .chain-flow { flex-direction: column; align-items: flex-start; background: none; }
+    .chain-node { width: 100%; }
+    /* The connector becomes a short vertical bar with a downward arrowhead
+       (drawn explicitly, not a rotated copy of the horizontal one) so it
+       reads correctly now that the chain runs top-to-bottom, not left-to-
+       right. */
+    .chain-edge { display: flex; flex-direction: row; align-items: center; gap: 10px; width: 100%;
+      margin: 10px 0 10px 29px; padding: 0; position: static; }
+    .edge-label { position: static; text-align: left; }
+    .edge-line { position: static; width: 2px; height: 22px; flex: none; }
+    .edge-line::after { right: auto; top: auto; bottom: -1px; left: 50%; transform: translateX(-50%);
+      border: 5px solid transparent; border-left-color: transparent; border-top-color: var(--edge-solid); }
   }
 </style>
 
 <svg style="position:absolute;width:0;height:0" aria-hidden="true">
   <defs>
-    <symbol id="pi-fpv" viewBox="0 0 24 24"><path d="M12 3 L15 9 L9 9 Z" class="pfill"/><path d="M12 9 L5 5 M12 9 L19 5 M12 13 L5 19 M12 13 L19 19"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="9" x2="12" y2="13"/></symbol>
-    <symbol id="pi-detector" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 12 L18 6 A8 8 0 0 1 20 12 Z" class="pfill" style="opacity:.85"/><circle cx="15" cy="9" r="1.3" class="pfill"/></symbol>
+    <!-- fpv_kamikaze_strike — verbatim from PRODUCT_ICONS in
+         scripts/build_case_pages.py (crosshair/target), not the quadcopter
+         this exhibit drew before, which visually collided with
+         multirotor_cargo_utility's own real glyph instead. -->
+    <symbol id="pi-fpv" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><circle cx="12" cy="12" r="1.4" class="pfill"/></symbol>
+    <!-- multirotor_cargo_utility — verbatim from PRODUCT_ICONS (X-frame
+         quad, 4 corner circles, centre square). Not used by any node in
+         this exhibit's 5 chains today, kept defined for a future chain. -->
+    <symbol id="pi-multirotor" viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><rect x="10" y="10" width="4" height="4" rx="1"/></symbol>
+    <!-- detector_counter_uas — verbatim from PRODUCT_ICONS (concentric
+         radar-sweep arcs + dot), not the pie-wedge-cutout circle this
+         exhibit drew before. -->
+    <symbol id="pi-detector" viewBox="0 0 24 24"><circle cx="4" cy="20" r="1.6" class="pfill"/><path d="M4 14 A6 6 0 0 1 10 20"/><path d="M4 9 A11 11 0 0 1 15 20"/><path d="M4 4 A16 16 0 0 1 20 20"/></symbol>
+    <!-- video_control_link — this exhibit's own addition for Гагаринг's
+         «Кузнечик», a real classify_product_icon.py category with no glyph
+         yet in the live PRODUCT_ICONS dict (only 3 of 17 categories are
+         iconified there so far). Kept, flagged honestly in the footer. -->
     <symbol id="pi-video" viewBox="0 0 24 24"><circle cx="12" cy="19" r="1.4" class="pfill"/><path d="M9.5 15.5 A3.5 3.5 0 0 1 14.5 15.5"/><path d="M6.5 12.5 A7.5 7.5 0 0 1 17.5 12.5"/><path d="M3.5 9.5 A11.5 11.5 0 0 1 20.5 9.5"/></symbol>
     <symbol id="pi-shield" viewBox="0 0 24 24"><path d="M12 3 L19 6 L19 12 C19 17 15.5 20 12 21 C8.5 20 5 17 5 12 L5 6 Z"/><path d="M9 12 L11 14 L15 9"/></symbol>
     <symbol id="pi-shield-dashed" viewBox="0 0 24 24"><path d="M12 3 L19 6 L19 12 C19 17 15.5 20 12 21 C8.5 20 5 17 5 12 L5 6 Z" stroke-dasharray="2.4 2"/><circle cx="12" cy="12" r="1.4" class="pfill"/></symbol>
-    <symbol id="pi-pediment" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="9" rx="1"/><path d="M4 10 L12 4 L20 10"/><line x1="7" y1="10" x2="7" y2="19"/><line x1="12" y1="10" x2="12" y2="19"/><line x1="17" y1="10" x2="17" y2="19"/><path d="M9 4 L12 1 L15 4"/></symbol>
+    <!-- pediment — verbatim from CUSTOMER_ICON_PATHS. The earlier version
+         had one extra roofline path (a second small triangle above the
+         main one) that isn't in the source. -->
+    <symbol id="pi-pediment" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="9" rx="1"/><path d="M4 10 L12 4 L20 10"/><line x1="7" y1="10" x2="7" y2="19"/><line x1="12" y1="10" x2="12" y2="19"/><line x1="17" y1="10" x2="17" y2="19"/></symbol>
     <symbol id="pi-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 21 C6 16.5 8.7 14 12 14 C15.3 14 18 16.5 18 21"/></symbol>
   </defs>
 </svg>
@@ -139,22 +236,29 @@
       the resident make, and where is there real, sourced evidence it reached a battlefield or a
       government buyer?</b> Read each row left to right. A chain that runs out — no named unit, no
       contract — stops there rather than being padded to look complete.</p>
-    <p class="lede">Every node and label below is a real registry record. Icons mark what kind of
-      thing a node is (product category, from this project's own 17-category Product Icon Set;
-      military unit or government customer, from its Demand-Side Icon Set) — nothing here is
-      decorative. The full 29-entity institutional web this replaces is summarized, not deleted —
-      see "the rest of the network" at the bottom.</p>
+    <p class="lede">Every <b>company, product and person</b> node below is a real registry record;
+      "battlefield use" and "government customer" nodes represent a sourced
+      <code>battlefield_evidence[]</code> or <code>government_contracts[]</code> claim about that
+      record, not a registry entity in their own right. Icons mark what kind of thing a node is
+      (product category, from this project's own Product Icon Set; military unit or government
+      customer, from its Demand-Side Icon Set) — nothing here is decorative. Every edge carries its
+      own evidence grade — the same <code>{doc}</code>/<code>{press}</code>/<code>{open}</code>
+      vocabulary the case studies use, pulled from each claim's actual source, not assumed. The full
+      29-entity institutional web this replaces is summarized, not deleted — see "the rest of the
+      network" at the bottom.</p>
   </header>
 
   <section class="legend">
-    <div class="legend-item"><span class="legend-dot" style="background:var(--t-cbst-core)"><svg viewBox="0 0 20 12"><text x="10" y="9" text-anchor="middle" font-family="IBM Plex Sans" font-weight="700" font-size="7" fill="#fff">ЦБСТ</text></svg></span> ЦБСТ itself</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--t-cbst-core)"><svg viewBox="0 0 20 12"><rect x="1" y="1" width="18" height="10" rx="2" fill="rgba(0,0,0,.55)"/><text x="10" y="8.5" text-anchor="middle" font-family="IBM Plex Sans" font-weight="800" font-size="7.5" fill="#fff">ЦБСТ</text></svg></span> ЦБСТ itself</div>
     <div class="legend-item"><span class="legend-dot" style="background:var(--t-manufacturer)"><svg viewBox="0 0 24 24"><use href="#pi-fpv"/></svg></span> Manufacturer (icon = its real dominant product category)</div>
-    <div class="legend-item"><span class="legend-dot" style="background:var(--product-fill)"><svg viewBox="0 0 24 24"><use href="#pi-detector"/></svg></span> Named product</div>
+    <div class="legend-item"><span class="legend-dot product" style="background:var(--product-fill)"><svg viewBox="0 0 24 24"><use href="#pi-detector"/></svg></span> Named product (square — matches the live graph's product shape)</div>
+    <div class="legend-item"><span class="legend-dot person" style="background:var(--person-fill)"><svg viewBox="0 0 24 24"><use href="#pi-person"/></svg></span> Named individual (diamond — matches the live graph's person shape)</div>
     <div class="legend-item"><span class="legend-dot sanctioned" style="background:var(--outcome-fill)"><svg viewBox="0 0 24 24"><use href="#pi-shield"/></svg></span> Battlefield use — named unit</div>
     <div class="legend-item"><span class="legend-dot" style="background:var(--outcome-fill)"><svg viewBox="0 0 24 24"><use href="#pi-shield-dashed"/></svg></span> Battlefield use — unit not formally named</div>
     <div class="legend-item"><span class="legend-dot" style="background:var(--outcome-fill)"><svg viewBox="0 0 24 24"><use href="#pi-pediment"/></svg></span> Government customer / contract</div>
-    <div class="legend-item"><span class="legend-line"></span> Documentary (<code>t-doc</code>) source</div>
-    <div class="legend-item"><span class="legend-line dashed"></span> Indirect / no direct source for this step</div>
+    <div class="legend-item"><span class="grade t-doc">Doc</span> Documentary or platform-post evidence (proves it was said, not that it's true)</div>
+    <div class="legend-item"><span class="grade t-press">Press</span> Named press outlet, wording not independently verified</div>
+    <div class="legend-item"><span class="grade t-open">Open</span> Unconfirmed / self-reported, incl. own-channel claims</div>
     <div class="legend-item"><span class="legend-dot" style="background:none;border:2px solid var(--sanctioned-ring)"></span> Sanctioned (ring around node)</div>
   </section>
 
@@ -164,26 +268,26 @@
     <p class="chain-meta">ИНН 2312321660 · not currently sanctioned</p>
     <div class="chain-flow">
       <div class="chain-node">
-        <div class="node-icon" style="background:var(--t-cbst-core)"><svg viewBox="0 0 20 12"><text x="10" y="9" text-anchor="middle" font-family="IBM Plex Sans" font-weight="700" font-size="7" fill="#fff">ЦБСТ</text></svg></div>
+        <div class="node-icon" style="background:var(--t-cbst-core)"><svg viewBox="0 0 30 30" width="30" height="30"><rect x="2" y="11" width="26" height="10" rx="3" fill="rgba(0,0,0,.55)"/><text x="15" y="18.5" text-anchor="middle" font-family="IBM Plex Sans" font-weight="800" font-size="9.5" fill="#fff">ЦБСТ</text></svg></div>
         <div class="node-title">ЦБСТ</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">named "resident"<br>in ЦБСТ's own post<br>02.05.2026</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>named "resident"<br>in ЦБСТ's own post<br>02.05.2026</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon" style="background:var(--t-manufacturer)"><svg viewBox="0 0 24 24"><use href="#pi-video"/></svg></div>
         <div class="node-title">ООО «Гагаринг»</div>
         <div class="node-sub">24 products, ₽2.16bn 2025 revenue</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">produces</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>produces</div><div class="edge-line"></div></div>
       <div class="chain-node">
-        <div class="node-icon" style="background:var(--product-fill)"><svg viewBox="0 0 24 24"><use href="#pi-video"/></svg></div>
+        <div class="node-icon product" style="background:var(--product-fill)"><svg viewBox="0 0 24 24"><use href="#pi-video"/></svg></div>
         <div class="node-title">«Кузнечик»</div>
         <div class="node-sub">FPV comms/control module</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">fielded — 500 units,<br>thank-you post via<br>@RuFront, 30.08.2026</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>fielded — 500 units,<br>thank-you post via<br>@RuFront, 30.08.2026</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon" style="background:var(--outcome-fill)"><svg viewBox="0 0 24 24"><use href="#pi-shield-dashed"/></svg></div>
         <div class="node-title">Battlefield use</div>
-        <div class="node-sub">unit not formally named — "hundreds of vehicles struck" per Gagaring's own military contacts</div>
+        <div class="node-sub">unit not formally named — 500 «Кузнечик» units credited in a front-line channel's thank-you post</div>
       </div>
     </div>
     <p class="chain-profile">Full product line, financials, sources: <code>docs/profiles/ooo-gagaring.html</code></p>
@@ -195,22 +299,22 @@
     <p class="chain-meta">ИНН 9721203814 · sanctioned (already designated)</p>
     <div class="chain-flow">
       <div class="chain-node">
-        <div class="node-icon" style="background:var(--t-cbst-core)"><svg viewBox="0 0 20 12"><text x="10" y="9" text-anchor="middle" font-family="IBM Plex Sans" font-weight="700" font-size="7" fill="#fff">ЦБСТ</text></svg></div>
+        <div class="node-icon" style="background:var(--t-cbst-core)"><svg viewBox="0 0 30 30" width="30" height="30"><rect x="2" y="11" width="26" height="10" rx="3" fill="rgba(0,0,0,.55)"/><text x="15" y="18.5" text-anchor="middle" font-family="IBM Plex Sans" font-weight="800" font-size="9.5" fill="#fff">ЦБСТ</text></svg></div>
         <div class="node-title">ЦБСТ</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">"working with ЦБСТ,"<br>company's own words,<br>09.12.2025</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>"working with ЦБСТ,"<br>company's own words,<br>09.12.2025</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon sanctioned" style="background:var(--t-manufacturer)"><svg viewBox="0 0 24 24"><use href="#pi-detector"/></svg></div>
         <div class="node-title">ООО «ГОУДРОН»</div>
         <div class="node-sub">one founder-director</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">produces</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>produces</div><div class="edge-line"></div></div>
       <div class="chain-node">
-        <div class="node-icon" style="background:var(--product-fill)"><svg viewBox="0 0 24 24"><use href="#pi-detector"/></svg></div>
+        <div class="node-icon product" style="background:var(--product-fill)"><svg viewBox="0 0 24 24"><use href="#pi-detector"/></svg></div>
         <div class="node-title">«Набат V.2.C»</div>
         <div class="node-sub">drone detector</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">fielded — near Bakhmut,<br>company's own testimonial</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-open"><div class="edge-label"><span class="grade t-open">Open</span>fielded — near Bakhmut,<br>company's own testimonial</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon" style="background:var(--outcome-fill)"><svg viewBox="0 0 24 24"><use href="#pi-shield-dashed"/></svg></div>
         <div class="node-title">Battlefield use</div>
@@ -226,22 +330,22 @@
     <p class="chain-meta">ИНН 7100046925 / 7100027464 · one owner, two legal shells, both sanctioned (EU/US)</p>
     <div class="chain-flow">
       <div class="chain-node">
-        <div class="node-icon" style="background:var(--t-cbst-core)"><svg viewBox="0 0 20 12"><text x="10" y="9" text-anchor="middle" font-family="IBM Plex Sans" font-weight="700" font-size="7" fill="#fff">ЦБСТ</text></svg></div>
+        <div class="node-icon" style="background:var(--t-cbst-core)"><svg viewBox="0 0 30 30" width="30" height="30"><rect x="2" y="11" width="26" height="10" rx="3" fill="rgba(0,0,0,.55)"/><text x="15" y="18.5" text-anchor="middle" font-family="IBM Plex Sans" font-weight="800" font-size="9.5" fill="#fff">ЦБСТ</text></svg></div>
         <div class="node-title">ЦБСТ</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">"флагманский резидент" —<br>ЦБСТ's strongest phrasing<br>anywhere in the registry</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>"флагманский резидент" —<br>ЦБСТ's strongest phrasing<br>anywhere in the registry</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon sanctioned" style="background:var(--t-manufacturer)"><svg viewBox="0 0 24 24"><use href="#pi-fpv"/></svg></div>
         <div class="node-title">ООО «Воздушный трактат»</div>
         <div class="node-sub">owner: Черезов А.П.</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">produces «Овод»,<br>sold through sister shell</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>produces «Овод»,<br>sold through sister shell</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon sanctioned" style="background:var(--t-manufacturer)"><svg viewBox="0 0 24 24"><use href="#pi-fpv"/></svg></div>
         <div class="node-title">ООО «Овод»</div>
         <div class="node-sub">same owner, same product line</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">fielded — БАРС-8<br>operators, named unit</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>fielded — БАРС-8<br>operators, named unit</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon" style="background:var(--outcome-fill)"><svg viewBox="0 0 24 24"><use href="#pi-shield"/></svg></div>
         <div class="node-title">Battlefield use</div>
@@ -257,26 +361,26 @@
     <p class="chain-meta">ИНН 7300024069 · sanctioned (EU 20th package)</p>
     <div class="chain-flow">
       <div class="chain-node">
-        <div class="node-icon" style="background:var(--t-cbst-core)"><svg viewBox="0 0 20 12"><text x="10" y="9" text-anchor="middle" font-family="IBM Plex Sans" font-weight="700" font-size="7" fill="#fff">ЦБСТ</text></svg></div>
+        <div class="node-icon" style="background:var(--t-cbst-core)"><svg viewBox="0 0 30 30" width="30" height="30"><rect x="2" y="11" width="26" height="10" rx="3" fill="rgba(0,0,0,.55)"/><text x="15" y="18.5" text-anchor="middle" font-family="IBM Plex Sans" font-weight="800" font-size="9.5" fill="#fff">ЦБСТ</text></svg></div>
         <div class="node-title">ЦБСТ</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">named as one of six<br>EU-sanctioned ЦБСТ<br>residents, 24.04.2026</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>named as one of six<br>EU-sanctioned ЦБСТ<br>residents, 24.04.2026</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon sanctioned" style="background:var(--t-manufacturer)"><svg viewBox="0 0 24 24"><use href="#pi-fpv"/></svg></div>
         <div class="node-title">ООО «СКБ Пиранья»</div>
         <div class="node-sub">revenue ₽36.8m → ₽870.7m, 2023–2025</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">produces</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>produces</div><div class="edge-line"></div></div>
       <div class="chain-node">
-        <div class="node-icon" style="background:var(--product-fill)"><svg viewBox="0 0 24 24"><use href="#pi-fpv"/></svg></div>
+        <div class="node-icon product" style="background:var(--product-fill)"><svg viewBox="0 0 24 24"><use href="#pi-fpv"/></svg></div>
         <div class="node-title">«Пиранья»</div>
         <div class="node-sub">FPV strike drone family, 8 products</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">fielded — "Бешеные псы"<br>brigade, named unit,<br>16.11.2024</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-open"><div class="edge-label"><span class="grade t-open">Open</span>fielded — "Бешеные псы"<br>brigade, named unit,<br>16.11.2024</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon" style="background:var(--outcome-fill)"><svg viewBox="0 0 24 24"><use href="#pi-shield"/></svg></div>
         <div class="node-title">Battlefield use</div>
-        <div class="node-sub">Ukrainian D-44 gun destroyed, Pokrovsk axis</div>
+        <div class="node-sub">Ukrainian D-44 gun destroyed, Pokrovsk axis — the company's own post about what a named unit reportedly did</div>
       </div>
     </div>
     <p class="chain-profile">Full product line, financial history, sources: <code>docs/profiles/ooo-skb-piranya.html</code></p>
@@ -284,32 +388,32 @@
 
   <!-- 5. Цыганов — the indirect case -->
   <div class="chain-row">
-    <div class="chain-head"><span class="chain-pin">5</span><h3 class="chain-title">ИП Цыганов В.Б.</h3><span class="chain-latin">IP Tsyganov Vadim Borisovich</span><span class="indirect-flag">indirect chain</span></div>
-    <p class="chain-meta">ИНН 504405055721 (personal) · no direct cbst_tie — shown to contrast with cases 1–4</p>
+    <div class="chain-head"><span class="chain-pin">5</span><h3 class="chain-title">ИП Цыганов В.Б.</h3><span class="chain-latin">IP Tsyganov Vadim Borisovich</span><span class="indirect-flag">3-hop chain</span></div>
+    <p class="chain-meta">ИНН 504405055721 (personal) · no direct cbst_tie of his own — every step below is still {doc}-graded, the distance is organisational, not evidentiary</p>
     <div class="chain-flow">
       <div class="chain-node">
-        <div class="node-icon" style="background:var(--t-cbst-core)"><svg viewBox="0 0 20 12"><text x="10" y="9" text-anchor="middle" font-family="IBM Plex Sans" font-weight="700" font-size="7" fill="#fff">ЦБСТ</text></svg></div>
+        <div class="node-icon" style="background:var(--t-cbst-core)"><svg viewBox="0 0 30 30" width="30" height="30"><rect x="2" y="11" width="26" height="10" rx="3" fill="rgba(0,0,0,.55)"/><text x="15" y="18.5" text-anchor="middle" font-family="IBM Plex Sans" font-weight="800" font-size="9.5" fill="#fff">ЦБСТ</text></svg></div>
         <div class="node-title">ЦБСТ</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">shown at ЦБСТ's own<br>Дронница 2025 showcase</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>shown at ЦБСТ's own<br>Дронница 2025 showcase</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon" style="background:var(--t-manufacturer)"><svg viewBox="0 0 24 24"><use href="#pi-detector"/></svg></div>
         <div class="node-title">ООО «Тримикс»</div>
         <div class="node-sub">brand: 3MX / «Булат»</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">resold under a<br>second brand by</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>resold under a<br>second brand by</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon" style="background:var(--t-manufacturer)"><svg viewBox="0 0 24 24"><use href="#pi-detector"/></svg></div>
         <div class="node-title">ООО «ПОКРОВ»</div>
         <div class="node-sub">named 3MX dealer</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">100% owner &amp;<br>director</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>100% owner &amp;<br>director</div><div class="edge-line"></div></div>
       <div class="chain-node">
-        <div class="node-icon" style="background:var(--person-fill)"><svg viewBox="0 0 24 24"><use href="#pi-person"/></svg></div>
+        <div class="node-icon person" style="background:var(--person-fill)"><svg viewBox="0 0 24 24"><use href="#pi-person"/></svg></div>
         <div class="node-title">Цыганов В.Б.</div>
         <div class="node-sub">IP, personal ИНН</div>
       </div>
-      <div class="chain-edge"><div class="edge-label">₽28.2m sole-supplier<br>contracts, during active<br>Kursk incursion</div><div class="edge-line"></div></div>
+      <div class="chain-edge g-doc"><div class="edge-label"><span class="grade t-doc">Doc</span>₽28.2m sole-supplier<br>contracts, during active<br>Kursk incursion</div><div class="edge-line"></div></div>
       <div class="chain-node">
         <div class="node-icon" style="background:var(--outcome-fill)"><svg viewBox="0 0 24 24"><use href="#pi-pediment"/></svg></div>
         <div class="node-title">МЧС Курск</div>
@@ -327,19 +431,25 @@
       plus ЦБСТ's own 9-entity institutional core (funds, holding companies, a banking partner). That web is real
       and documented, but it answers a different question ("who is tied to ЦБСТ") than this page
       does ("what actually moved, and is there evidence it reached a battlefield or a government
-      buyer"). Explore the full 1,124-node registry, including every one of those 50 ties, in the
+      buyer"). Explore the full 1,141-node registry, including every one of those 50 ties, in the
       live interactive <a href="https://claude.ai/code/artifact/0e402553-a22e-4427-a3a9-c5b0251bdaa2">РОЙ.МАРКЕТ Network Graph</a>.</p>
   </div>
 
   <footer>
     Five documented chains, each independently sourced against <code>data/registry/entities.json</code>
     — <code>cbst_tie</code>, <code>battlefield_evidence[]</code>, and <code>government_contracts[]</code>.
-    Product-category icons from this project's 17-category Product Icon Set, computed per entity via
-    <code>scripts/classify_product_icon.py</code>; unit/customer icons from the Demand-Side Icon Set.
-    Supersedes an earlier single-diagram "orbit" version of this exhibit — a 30-node hub-and-spoke
-    view of the same registry data that showed the institutional web but not the underlying
-    evidentiary chain a reader actually needs to follow. 2026-09-15.
+    Every edge's <code>{doc}</code>/<code>{press}</code>/<code>{open}</code> grade is read from that
+    same registry data (<code>cbst_tie.confidence</code>, or the case study's own chip for that exact
+    claim), not asserted freehand. Product-category icons (crosshair = FPV/kamikaze strike, radar
+    sweep = detector/counter-UAS) are copied verbatim from <code>PRODUCT_ICONS</code> in
+    <code>scripts/build_case_pages.py</code>, computed per entity via
+    <code>scripts/classify_product_icon.py</code>; Гагаринг's video/control-link icon is this
+    exhibit's own addition for a real classifier category the live system hasn't iconified yet (3 of
+    17 categories are, as of this writing). Unit/customer icons are copied verbatim from the
+    Demand-Side Icon Set's <code>CUSTOMER_ICON_PATHS</code>. Node shape (circle/diamond/square) marks
+    kind, matching the live graph exactly. Supersedes an earlier single-diagram "orbit" version of
+    this exhibit — a 30-node hub-and-spoke view of the same registry data that showed the
+    institutional web but not the underlying evidentiary chain a reader actually needs to follow.
+    2026-09-21.
   </footer>
 </div>
-
-</body></html>
