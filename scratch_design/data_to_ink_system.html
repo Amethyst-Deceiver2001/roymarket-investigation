@@ -179,7 +179,15 @@
 
   <section>
     <p class="eyebrow">Node-kind glyphs — <code>relationship_graph.json[].kind</code></p>
-    <p>Two more shapes carry real classifier output, not artistic choice: the hub hex-badge (<code>classify_variant()</code> in <code>build_relationship_graph.py</code>, reading a product's own described capability) and the demand-side pediment/shield icons ported into <code>build_case_pages.py</code> this session, reading the node's <code>kind</code> field directly.</p>
+    <p>Three icon schemes now carry real classifier output, not artistic choice, at three different stages of reaching the published site — tracked here so this doesn't get re-explained from scratch next time:</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Scheme</th><th>Traces to</th><th>Where it lives</th></tr></thead>
+      <tbody>
+        <tr><td>Hub hex-badge (solid / ring / split = offensive / defensive / dual)</td><td><code>classify_variant()</code>, <code>build_relationship_graph.py</code></td><td><span class="verdict v-partial">live artifact only</span> — the interactive Network Graph, not the generated site</td></tr>
+        <tr><td>Demand-side glyphs (pediment = government customer, shield = military unit)</td><td><code>kind</code> field, <code>relationship_graph.json</code></td><td><span class="verdict v-traced">shipped</span> — <code>build_case_pages.py</code>'s <code>graph_svg()</code>, every case page</td></tr>
+        <tr><td>Product category glyphs (crosshair / quad / radar-sweep = FPV strike / multirotor / detector)</td><td><code>classify_product_icon.classify()</code></td><td><span class="verdict v-traced">shipped 2026-09-21</span> — same function, product nodes; 3 of 17 categories drawn so far (the ones that actually occur among the 7 cases' product nodes), the rest fall back to the plain tier-colored square</td></tr>
+      </tbody>
+    </table></div>
     <div class="hexrow">
       <figure>
         <svg width="52" height="52" viewBox="0 0 52 52"><polygon points="26,4 45,15 45,37 26,48 7,37 7,15" fill="none" stroke="#eb6834" stroke-width="2.5"/></svg>
