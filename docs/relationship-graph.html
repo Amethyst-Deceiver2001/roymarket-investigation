@@ -8,7 +8,12 @@
     --panel: #ffffff;
     --ink: #0b0b0b;
     --ink-2: #52514e;
-    --ink-muted: #898781;
+    /* #898781 measured ~3.4:1 on --page/--panel -- fails WCAG AA (4.5:1) for
+       the 10-11px legend/caption text this token is used at throughout the
+       rail. Darkened to #74726d (same hue, scaled 85%), 4.56-4.81:1 across
+       --page/--panel/white. Dark-theme value is untouched: #898781 already
+       clears 4.5:1 there (5.41:1 on --page, 4.58:1 on --panel). */
+    --ink-muted: #74726d;
     --hairline: #e1e0d9;
     --baseline: #c3c2b7;
     --border: rgba(11,11,11,0.10);
@@ -181,6 +186,17 @@
 
   .app { flex: 1; display: flex; min-height: 0; }
 
+  /* Below this, .app stacks (rail above canvas) instead of the fixed
+     300px side-by-side layout, which left the canvas a sliver on a phone
+     viewport. */
+  @media (max-width: 760px) {
+    .app { flex-direction: column; }
+    .side { width: 100%; max-height: 42vh; border-right: none; border-bottom: 1px solid var(--hairline); }
+    .canvas-wrap { flex: 1 1 auto; min-height: 45vh; }
+  }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
   .side {
     width: 300px;
     flex-shrink: 0;
@@ -259,7 +275,7 @@
   .swatch.person { border-radius: 3px; transform: rotate(45deg); }
   .swatch.product { border-radius: 2px; }
   .swatch.stub { border-style: dashed; background: transparent !important; }
-  .legend-row label {
+  .legend-row label, .legend-row .leg-text {
     flex: 1;
     font-size: 12.5px;
     color: var(--ink-2);
@@ -319,10 +335,20 @@
      solid = offensive, hollow ring = defensive, split fill = dual. Kept
      legible in grayscale (see the standalone Hub Icon Schema mockup this
      was approved from) since tier already owns the color channel. */
+  /* Neutral ink, not a colour, distinguishes offensive/defensive/dual --
+     shape alone (solid hex / hollow-ring hex / split hex) already carries
+     the read (this was the stated design goal -- "legible in grayscale",
+     see the comment below at the badge-render call site). The variant
+     brown/green previously used here sat as a second colour axis on top
+     of the tier legend's own palette and could collide with it (defensive
+     green vs. the plumbing tier's green, offensive brown vs. the ЦБСТ-core
+     tier's orange) -- dropped per design review. --variant-offensive/
+     --variant-defensive tokens are kept defined (harmless) in case a
+     future badge design wants them back. */
   .hub-badge .hex-backing { fill: var(--panel); stroke: none; }
-  .hub-badge.offensive .hex-solid { fill: var(--variant-offensive); stroke: var(--variant-offensive); stroke-width: 1px; }
-  .hub-badge.defensive .hex-outline { fill: none; stroke: var(--variant-defensive); stroke-width: 2px; }
-  .hub-badge.defensive .hex-ring { fill: none; stroke: var(--variant-defensive); stroke-width: 1.3px; }
+  .hub-badge.offensive .hex-solid { fill: var(--ink); stroke: var(--ink); stroke-width: 1px; }
+  .hub-badge.defensive .hex-outline { fill: none; stroke: var(--ink); stroke-width: 2px; }
+  .hub-badge.defensive .hex-ring { fill: none; stroke: var(--ink); stroke-width: 1.3px; }
   .hub-badge.dual .hex-outline { fill: none; stroke: var(--ink); stroke-width: 2px; }
   .hub-badge.dual .hex-half { fill: var(--ink); stroke: none; }
   .hub-badge { pointer-events: none; }
@@ -484,11 +510,11 @@
 </header>
 
 <div class="app">
-  <aside class="side">
+  <aside class="side" aria-label="Search, filters and legend">
     <div>
       <h2>Find a node</h2>
       <div class="field">
-        <input type="search" id="search" placeholder="Search entity or person…" autocomplete="off">
+        <input type="search" id="search" placeholder="Search entity or person…" autocomplete="off" aria-label="Search entity or person">
         <div class="search-results" id="search-results"></div>
       </div>
     </div>
@@ -503,7 +529,7 @@
       <div style="font-size:11px;color:var(--ink-muted);margin:2px 0 6px;line-height:1.4">Shape marks kind (circle · organization, diamond · person, square · product); colour marks tier.</div>
       <div class="legend-row">
         <span class="swatch" style="background:var(--t-manufacturer)"></span>
-        <label>Organization (see tier colours below)</label>
+        <span class="leg-text">Organization (see tier colours below)</span>
       </div>
       <div class="legend-row">
         <span class="swatch person" style="background:var(--person-fill)"></span>
@@ -562,7 +588,7 @@
     <div>
       <h2>Minimum connections</h2>
       <div class="slider-row">
-        <input type="range" id="min-degree" min="0" max="8" value="1" step="1">
+        <input type="range" id="min-degree" min="0" max="8" value="1" step="1" aria-label="Minimum connections">
         <span class="slider-val" id="min-degree-val">1</span>
       </div>
     </div>
@@ -571,11 +597,11 @@
   </aside>
 
   <div class="canvas-wrap">
-    <svg id="viz"></svg>
+    <svg id="viz" role="img" aria-label="Force-directed network graph of entities, people and products; use the search field to locate and select a node without a pointer."></svg>
     <div class="tooltip" id="tooltip"></div>
-    <div class="hint">Drag to reposition · scroll/pinch to zoom · click a node for detail · click background to deselect · shaded outline = one connected network</div>
+    <div class="hint">Drag to reposition · scroll/pinch to zoom · click a node for detail · click background to deselect · a shaded outline, when shown, marks one connected network apart from the rest (the unfiltered graph is a single network, so none shows until a filter splits it)</div>
     <div class="detail" id="detail">
-      <button class="close" id="detail-close">&times;</button>
+      <button class="close" id="detail-close" aria-label="Close detail panel">&times;</button>
       <div id="detail-body"></div>
     </div>
   </div>
@@ -33957,9 +33983,9 @@
     row.className = "legend-row";
     row.innerHTML = `
       <span class="swatch" style="background:${cssVar(t.varName)}"></span>
-      <label>${t.label}</label>
+      <label for="tier-toggle-${t.key}">${t.label}</label>
       <span class="count">${count}</span>
-      <input type="checkbox" checked data-tier="${t.key}">
+      <input type="checkbox" checked data-tier="${t.key}" id="tier-toggle-${t.key}">
     `;
     tierLegendEl.appendChild(row);
     row.querySelector("input").addEventListener("change", (e) => {
@@ -34304,8 +34330,17 @@
     // real connected component so membership reads at a glance instead of
     // being inferred from loose proximity in a force layout (which reads as
     // "grouped by an uncertain principle" once the canvas gets dense).
-    const hullComponents = components.filter((c) => c.length >= 3);
-    const pairComponents = components.filter((c) => c.length === 2);
+    // Skip entirely when there is exactly one component -- a halo drawn
+    // around 100% of the visible nodes carries no information (the whole
+    // registry now reaches ЦБСТ in one component: computeComponents()
+    // returns length 1 on the unfiltered graph as of 2026-09-21), it just
+    // reads as one big grey wash. Filtering (min-degree, tier/kind toggles,
+    // search-into-neighbourhood) still fragments the visible set routinely,
+    // so the machinery stays -- it only goes quiet when there's truly
+    // nothing to distinguish.
+    const showHalos = components.length > 1;
+    const hullComponents = showHalos ? components.filter((c) => c.length >= 3) : [];
+    const pairComponents = showHalos ? components.filter((c) => c.length === 2) : [];
     const hullKey = (c) => c.map((n) => n.id).sort().join(",");
     const hullSel = hullLayer.selectAll("path.hull").data(hullComponents, hullKey);
     hullSel.exit().remove();
@@ -34612,7 +34647,7 @@
     if (d.sanctioned) chips.push(`<span class="chip sanctioned">Sanctioned</span>`);
     if (d.variant) {
       const variantLabel = { offensive: "Offensive (strike/munition)", defensive: "Defensive (RW/EW)", dual: "Dual-use" }[d.variant] || d.variant;
-      const variantColor = d.variant === "dual" ? "var(--ink)" : `var(--variant-${d.variant})`;
+      const variantColor = "var(--ink)"; // badges are neutral ink now -- shape (solid/ring/split), not colour, marks offensive/defensive/dual
       chips.push(`<span class="chip" style="border-color:${variantColor};color:${variantColor}" title="Keyword read of products[] text — presentation aid, not a sourced field">${variantLabel}</span>`);
     }
 
