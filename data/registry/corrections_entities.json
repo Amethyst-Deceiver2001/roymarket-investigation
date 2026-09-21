@@ -19,6 +19,30 @@
   ],
   "add_entities": [
       {
+        "slug": "ip-gabitov-r-a",
+        "name_ru": "ИП Габитов Р.А.",
+        "name_en": "Individual entrepreneur Gabitov R.A.",
+        "name_latin": "IP Gabitov R.A.",
+        "legal_form": "ИП",
+        "brand_ru": "BeastFPV / BEASTCONTROL",
+        "inn": "024200325133",
+        "ogrn": "324508100570973",
+        "tier": "adjacent",
+        "tier_basis": "Not part of the ЦБСТ/РОЙ.МАРКЕТ network -- found while re-checking the Russian retail footprint of GAONENG (GNB) FPV-drone batteries (see ip-popov-aleksandr-sergeevich, the first entity found on that same thread). beastfpv.ru's site-wide footer names this ИП with a matching, checksum-valid ИНН/ОГРНИП. Only the initials 'Р.А.' are given on the site -- no full first/patronymic name is stated anywhere found, so none is guessed or filled in here. Recorded as a second documented GNB retail outlet, plus a distinct product line of its own (BEASTCONTROL, see products[]) -- not as the resolved supply chain for any specific transaction.",
+        "cbst_tie": {"claim": "None found.", "confidence": "none", "evidence": null, "source_id": null},
+        "wb_overlap": "not_checked",
+        "products": [
+          {"name_ru": "Аккумулятор для FPV дрона GNB 9000 mAh 6S 70C XT60 (реселлер, не производитель)", "note": "Product page: \"Аккумулятор для FPV дрона GNB 9000mAh HV 6S 70С XT60 для дальних полетов с грузом. Эта батарея произведена из высококачественных материалов на заводе GNB.\"", "source_id": "s7981"},
+          {"name_ru": "BEASTCONTROL -- система удалённого управления FPV-дроном через интернет на базе Orange Pi 3B", "note": "Own product, not a GNB/GAONENG item. \"Система удалённого управления FPV-дроном на базе Orange Pi 3B. Она позволяет управлять дроном через интернет или локальную сеть\"; \"оператор -> интернет или локальная сеть -> Orange Pi на борту -> UART -> полётный контроллер\". Framed in general/civilian language on this page -- \"Решение предназначено для задач, где важно организовать управление дроном без физического присутствия оператора\" (control without the operator's physical presence) -- no СВО/military-specific claim found on this page.", "source_id": "s7982"}
+        ],
+        "web": {"official_sites": [{"url": "https://beastfpv.ru/", "note": "BeastFPV storefront"}]},
+        "open_questions": [
+          {"text": "Full first/patronymic name for 'Р.А. Габитов' not found on the site or in a quick pass -- would need EGRUL/ЕГРИП lookup by ОГРНИП to resolve. As with ip-popov-aleksandr-sergeevich, no document ties this retailer to any specific GAONENG transaction on file (e.g. the ooo-npo-rustekhdron/ООО «ДСГ» 2023 court-documented delivery). BEASTCONTROL (remote FPV control over internet) is a real, independently notable capability for this space -- worth a closer look at whether it's marketed elsewhere (other pages, other channels) with more explicit combat/front-line framing than the one page captured here.", "source_id": null}
+        ],
+        "sources": [],
+        "why": ["2026-09-21: added after the user flagged beastfpv.ru directly -- confirms it as a real, checksum-valid legal entity selling GNB/GAONENG batteries (missed by an initial site-search check that only indexed by product page content, not brand name) and additionally makes its own remote FPV-control product, BEASTCONTROL."]
+      },
+      {
         "slug": "ip-popov-aleksandr-sergeevich",
         "name_ru": "ИП Попов Александр Сергеевич",
         "name_en": "Individual entrepreneur Popov Aleksandr Sergeyevich",
@@ -45,7 +69,7 @@
         ],
         "web": {"official_sites": [{"url": "https://fnsmart.ru/", "note": "FNSmart storefront"}]},
         "open_questions": [
-          {"text": "As with ooo-boevye-tekhnologii, no document ties this retailer to any specific GAONENG transaction on file (e.g. the ooo-npo-rustekhdron/ООО «ДСГ» 2023 court-documented delivery) -- found via a general market search for Russian GAONENG resellers, not via any reference in the underlying court filing. Other storefronts seen selling the same brand during this same search (MyDrone, iDrone, djirussia, beastfpv.ru, drones-russia.ru, FPVUA, copterparts.ru) were not promoted to registry entities: no quickly-verifiable legal identity or distinct self-incriminating marketing claim of their own was found for any of them in this pass -- logged here as leads, not entities, per this project's proportionality discipline.", "source_id": null}
+          {"text": "As with ooo-boevye-tekhnologii, no document ties this retailer to any specific GAONENG transaction on file (e.g. the ooo-npo-rustekhdron/ООО «ДСГ» 2023 court-documented delivery) -- found via a general market search for Russian GAONENG resellers, not via any reference in the underlying court filing. Update 2026-09-21: beastfpv.ru, initially logged below as an unpromoted lead (a site-search check found no GNB/GAONENG hit), was in fact a false negative -- the user pointed directly at a live GNB product page there, and it is now its own entity, ip-gabitov-r-a. Other storefronts seen selling the same brand during this same search (MyDrone, iDrone, djirussia, drones-russia.ru, FPVUA, copterparts.ru) remain unpromoted: no quickly-verifiable legal identity or distinct self-incriminating marketing claim of their own was found for any of them in this pass -- logged here as leads, not entities, per this project's proportionality discipline. Given the beastfpv.ru miss, treat that as a soft finding, not a confirmed absence.", "source_id": null}
         ],
         "sources": [],
         "why": ["2026-09-21: added while re-checking the GAONENG battery's Russian retail footprint at the user's request -- a real, checksum-valid legal entity (ИНН/ОГРНИП both pass check_registry.py's validators) behind a second documented brand outlet, distinct from ooo-boevye-tekhnologii."]

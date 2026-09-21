@@ -76327,6 +76327,42 @@
     "_origin": "manifest"
   },
   {
+    "id": "s7979",
+    "type": null,
+    "path": "data/sources/WEBCAPTURE_772377497922_20260921_fnsmart-gnb-brand-page.html",
+    "url": null,
+    "captured_date": "2026-09-21",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "d0ae3c49b7a4c8fab38b76f664f01a396d59e386d80cf8e06a194b724a95adf9",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s7980",
+    "type": null,
+    "path": "data/sources/WEBCAPTURE_772377497922_20260921_fnsmart-legal-info-page.html",
+    "url": null,
+    "captured_date": "2026-09-21",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "772377497922"
+    ],
+    "entities": [],
+    "sha256": "2a283463ac3b22eb48089754e9ffd4852f8097e5f8a2de05cd56bb8431bfd786",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s7942",
     "type": null,
     "path": "data/sources/WEB_5038189259_20260920_pokrovsystem-bulat-annonce-2.jpg",
@@ -146266,36 +146302,44 @@
     "_origin": "manifest"
   },
   {
-    "id": "s7979",
+    "id": "s7981",
     "type": "web",
-    "path": "data/sources/WEBCAPTURE_772377497922_20260921_fnsmart-gnb-brand-page.html",
-    "url": "https://fnsmart.ru/brand/gnb/",
+    "path": "data/sources/WEBCAPTURE_024200325133_20260921_beastfpv-gnb-battery-product.html",
+    "url": "https://beastfpv.ru/product/akkumulyator-dlya-fpv-drona-gnb-9000-mah-6s-70s-xt60/",
     "captured_date": "2026-09-21",
     "fiscal_year": null,
     "as_of": null,
     "as_of_method": null,
     "supersedes": null,
     "superseded_by": null,
-    "inns": ["772377497922"],
-    "entities": ["ip-popov-aleksandr-sergeevich"],
-    "sha256": "d0ae3c49b7a4c8fab38b76f664f01a396d59e386d80cf8e06a194b724a95adf9",
+    "inns": [
+      "024200325133"
+    ],
+    "entities": [
+      "ip-gabitov-r-a"
+    ],
+    "sha256": "70ca029602c369d1e47e32df55837fc7a79373a9de129a055ec1e611377694ea",
     "_verified": true,
     "_origin": "manual"
   },
   {
-    "id": "s7980",
+    "id": "s7982",
     "type": "web",
-    "path": "data/sources/WEBCAPTURE_772377497922_20260921_fnsmart-legal-info-page.html",
-    "url": "https://fnsmart.ru/info/",
+    "path": "data/sources/WEBCAPTURE_024200325133_20260921_beastfpv-remote-control-article.html",
+    "url": "https://beastfpv.ru/news/sistema-udalyonnogo-upravleniya-fpv-dronom-cherez-internet/",
     "captured_date": "2026-09-21",
     "fiscal_year": null,
     "as_of": "2026-09-21",
-    "as_of_method": "captured page's own printed legal-entity block",
+    "as_of_method": "captured page's own printed legal-entity footer block",
     "supersedes": null,
     "superseded_by": null,
-    "inns": ["772377497922"],
-    "entities": ["ip-popov-aleksandr-sergeevich"],
-    "sha256": "2a283463ac3b22eb48089754e9ffd4852f8097e5f8a2de05cd56bb8431bfd786",
+    "inns": [
+      "024200325133"
+    ],
+    "entities": [
+      "ip-gabitov-r-a"
+    ],
+    "sha256": "386bd6a02faf49572e9438468efab6e3c4fad87e77d529aed73c5fcbcd1ca948",
     "_verified": true,
     "_origin": "manual"
   }
