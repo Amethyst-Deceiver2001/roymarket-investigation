@@ -130,23 +130,23 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | Entity | ОГРН | ИНН | Tier |
 |---|---|---|---|
 | АНО «Платформа НТИ» (`ano-platforma-nti`) | 1197700000376 | 7703469180 | plumbing | - no docs 
-| АНО «ЦСАСД» (`ano-tsasd-demyansk`) | 1235300001947 | 5300008970 | plumbing |
+| АНО «ЦСАСД» (`ano-tsasd-demyansk`) | 1235300001947 | 5300008970 | plumbing | no docs
 | АНО «Центр развития транспортных технологий» (`ano-tsentr-razvitiya-transportnykh-tekhnologiy`) | 1217700636306 | 9724066980 | plumbing | - no docs
 | АО «Борей» | absorbed, no longer exists (`ao-borey-absorbed-no-longer-exists`) | 1247700237663 | 9701280698 | money-layer |
-| АО «Главтехконструкция» (`ao-glavtekhkonstruktsiya`) | 1174632000190 | 4611014597 | money-layer |
+| АО «Главтехконструкция» (`ao-glavtekhkonstruktsiya`) | 1174632000190 | 4611014597 | money-layer | docs found
 | АО «Корпорация «Синергия»» (`ao-korporatsiya-sinergiya`) | 1237700250182 | 7743414861 | plumbing | got docs
-| АО «НПП «Радар ММС»» (`npp-radar-mms`) | 1027807560186 | 7814027653 | manufacturer |
-| АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) (`npts-elvis`) | 1127746073510 | 7735582816 | manufacturer |
+| АО «НПП «Радар ММС»» (`npp-radar-mms`) | 1027807560186 | 7814027653 | manufacturer | no docs
+| АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС) (`npts-elvis`) | 1127746073510 | 7735582816 | manufacturer | no docs
 | АО «Научно-производственное предприятие Беспилотные авиационные технологии» (`ao-npp-bat`) | 1237700769701 | 9718238013 | manufacturer |
 | АО «ПМЦ «Авангард»» (`ao-pmts-avangard`) | 1047855051892 | 7804302798 | manufacturer | no docs
-| АО «РОСС» (`ao-ross`) | 1027700135957 | 7704097425 | manufacturer |
-| АО «Сейм-Агро» (`ao-seym-agro`) | 1114611000283 | 4611011596 | money-layer |
-| АО «Технодинамика» (`ao-tekhnodinamika`) | 1037719005873 | 7719265496 | plumbing |
-| АО «УК СМАРТ» (`ao-uk-smart`) | 1237700557050 | 7751264401 | plumbing |
-| АО «Фабрика им. Советской Армии» (`ao-fabrika-im-sovetskoy-armii`) | 1027739157401 | 7709278792 | money-layer |
+| АО «РОСС» (`ao-ross`) | 1027700135957 | 7704097425 | manufacturer | no docs
+| АО «Сейм-Агро» (`ao-seym-agro`) | 1114611000283 | 4611011596 | money-layer | got docs
+| АО «Технодинамика» (`ao-tekhnodinamika`) | 1037719005873 | 7719265496 | plumbing | no docs
+| АО «УК СМАРТ» (`ao-uk-smart`) | 1237700557050 | 7751264401 | plumbing | got docs
+| АО «Фабрика им. Советской Армии» (`ao-fabrika-im-sovetskoy-armii`) | 1027739157401 | 7709278792 | money-layer | got docs
 | АО «ХК Гумич» (`ao-khk-gumich`) | 1237700537788 | 9726051114 | money-layer | - no docs
-| АО «Центр-Телко» (`ao-tsentr-telko`) | 1027739038590 | 7729150663 | plumbing |
-| Ассоциация благотворительной помощи «Взаимопомощь» (`assotsiatsiya-vzaimopomoshch`) | 1164700050734 | 4707039070 | money-layer |
+| АО «Центр-Телко» (`ao-tsentr-telko`) | 1027739038590 | 7729150663 | plumbing | got docs
+| Ассоциация благотворительной помощи «Взаимопомощь» (`assotsiatsiya-vzaimopomoshch`) | 1164700050734 | 4707039070 | money-layer | no docs
 | Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи) (`ano-arrs-krasnodar`) | 1242300011469 | 2312325336 | plumbing |
 | Благотворительный фонд «КЦПН» (`bf-ktspn-barnaul`) | 1152225001114 | 2224171246 | plumbing |
 | ГК «Ростех» (`gk-rostekh`) | 1077799030847 | 7704274402 | plumbing |
@@ -155,13 +155,13 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ИП Цыганов Вадим Борисович (`ip-tsyganov-vadim-borisovich`) | 318500700040208 | 504405055721 | manufacturer |
 | ИП Шандобыло Сергей Сергеевич (`ip-shandobylo-sergey-sergeevich`) | 320784700272511 | 781154619843 | manufacturer |
 | НЕКОММЕРЧЕСКОЕ ПАРТНЕРСТВО «ДИСКРЕТНО-ИННОВАЦИОННЫЙ КЛАСТЕР МАЛОЙ АВИАЦИИ» (`np-diskretno-innovatsionny-klaster-maloy-aviatsii`) | 1142651011788 | 2632811832 | plumbing |
-| НПП «ЭЛВО» (`npp-elvo-kolskaya-verf`) | 1217800070509 | 7810918592 | manufacturer |
+| НПП «ЭЛВО» (`npp-elvo-kolskaya-verf`) | 1217800070509 | 7810918592 | manufacturer | типовой 23
 | ООО «АС-КАМ» (`ooo-as-kam`) | 1166196114083 | 6165205064 | — |
 | ООО «Аркодим» (`ooo-arkodim`) | 1101690020959 | 1659101884 | manufacturer |
 | ООО «Аэро-Хит» (`ooo-aero-khit`) | 1232700009398 | 2700012608 | manufacturer | no docs (reconfirmed)
 | ООО «Аэромакс» (`ooo-aeromaks`) | 1177746007900 | 7725347482 | manufacturer | no docs (reconfirmed)
-| ООО «Аэротехальянс» (`ooo-aerotekhalyans`) | 1237700640660 | 9714020721 | money-layer |
-| ООО «Беспилотные технологические решения» (БТР) (`ooo-btr-bespilotnye-tekhnologicheskie-resheniya`) | 1247800059980 | 7813680637 | manufacturer |
+| ООО «Аэротехальянс» (`ooo-aerotekhalyans`) | 1237700640660 | 9714020721 | money-layer | got docs
+| ООО «Беспилотные технологические решения» (БТР) (`ooo-btr-bespilotnye-tekhnologicheskie-resheniya`) | 1247800059980 | 7813680637 | manufacturer | got docs
 | ООО «Визионеро» (`ooo-vizionero`) | 1195958038902 | 5902056314 | manufacturer |
 | ООО «Восточные ворота Забайкальск-Маньчжурия» (`ooo-vostochnye-vorota-zabaykalsk-manchzhuriya`) | 5167746405481 | 7703420474 | manufacturer |
 | ООО «ГЭС-2» (`ooo-ges-2`) | 1147746575767 | 7706809928 | money-layer |
@@ -169,7 +169,7 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «Герон» (`ooo-geron`) | 1217800073545 | 7802893898 | manufacturer | distinct from the already-closed `ooo-npk-geron` (ИНН 7814748285). Only EGRUL/БФО/Aleph/Федресурс files on file as of 2026-09-13, no `UD_*` bundle — the one entity from that day's "got docs" batch that hasn't since turned up a real bundle.
 | ООО «Группа компаний «Аэромакс»» (`ooo-gk-aeromaks`) | 1147748024269 | 7710974353 | manufacturer |
 | ООО «ДИАМ-АЭРО» (`ooo-diam-aero`) | 1187847091079 | 7811687549 | — |
-| ООО «ДРОН-РЕЙСИНГ» (`ooo-dron-reysing`) | 1187746574696 | 7728432295 | manufacturer |
+| ООО «ДРОН-РЕЙСИНГ» (`ooo-dron-reysing`) | 1187746574696 | 7728432295 | manufacturer | got docs but Деятельность прекращена
 | ООО «ДСГ» (`ooo-dsg`) | 1207700030493 | 9724002908 | manufacturer |
 | ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ» (`ooo-intek-bespilotnye-sistemy`) | 1247000000488 | 7000013316 | manufacturer |
 | ООО «Клеверкоптер» (`ooo-kleverkopter`) | 1185275047176 | 5257183517 | manufacturer |
@@ -180,7 +180,7 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «Метаскан» (`ooo-metaskan`) | 1201600057097 | 1660349248 | manufacturer |
 | ООО «НОВА» (`ooo-nova`) | 1086330002549 | 6330037352 | money-layer |
 | ООО «НПК «Центр перспективных технологий»» (ЦПТ) (`ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy`) | 1265300000470 | 5300022741 | manufacturer |
-| ООО «НПО Рустехдрон» (`ooo-npo-rustekhdron`) | 1235000022179 | 5003155499 | manufacturer |
+| ООО «НПО Рустехдрон» (`ooo-npo-rustekhdron`) | 1235000022179 | 5003155499 | manufacturer | no docs
 | ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер») (`ooo-npo-eyler`) | 1257100008560 | 7100069249 | manufacturer |
 | ООО «Научно-производственное объединение «Киловатт»» (`ooo-npo-kilovatt`) | 1244800001820 | 4800013729 | manufacturer |
 | ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) (`ooo-npo-kilovatt-shestopalov`) | 1244800005240 | 4800016776 | manufacturer |
@@ -188,11 +188,11 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «Оржицкие артезианские воды» (`ooo-orzhitskie-artezianskie-vody`) | 1197746619950 | 9709055542 | money-layer |
 | ООО «Орион» (`ooo-orion`) | 1077758220451 | 7706664648 | money-layer |
 | ООО «Оупен Лоджистикс» (`ooo-oupen-lodzhistiks`) | 1237700483976 | 9714015016 | money-layer |
-| ООО «ПОКРОВ» (`ooo-pokrov`) | 1245000068774 | 5038189259 | manufacturer |
+| ООО «ПОКРОВ» (`ooo-pokrov`) | 1245000068774 | 5038189259 | manufacturer | got docs
 | ООО «Пехтра» (`ooo-pekhtra`) | 1245200032406 | 5261138034 | manufacturer |
 | ООО «Прайм» (`ooo-praym`) | 1097746825945 | 7735565264 | manufacturer |
 | ООО «Промсинтез» (`ooo-promsintez`) | 1073435002013 | 3435084957 | manufacturer |
-| ООО «РТ-Развитие бизнеса» (`ooo-rt-razvitie-biznesa`) | 1147746392200 | 7704861136 | money-layer |
+| ООО «РТ-Развитие бизнеса» (`ooo-rt-razvitie-biznesa`) | 1147746392200 | 7704861136 | money-layer | no docs
 | ООО «Рокот Тех» (`ooo-rokot-tekh`) | 1247600010954 | 7606140961 | manufacturer |
 | ООО «Русская лаборатория воздушного транспорта» (`ovod`) | 1227100012369 | 7100027464 | manufacturer |
 | ООО «СПДББК» (`ooo-spdbbk`) | 1157847359273 | 7838044584 | manufacturer |
@@ -234,7 +234,7 @@ gap, not yet a founding-doc gap as such.
 | НПО «КАЙСАНТ» (`npo-kaysant`) | 7733393203 | manufacturer |
 | ООО «Авирон» (`ooo-aviron`) | 7743451768 | manufacturer |
 | ООО «Боевые технологии» (Военторг «ИРПТОРГ») (`ooo-boevye-tekhnologii`) | 5262393781 | money-layer |
-| ООО «Радиофид Системы» (`ooo-radiofid-sistemy`) | 7802491148 | manufacturer |
+| ООО «Радиофид Системы» (`ooo-radiofid-sistemy`) | 7802491148 | manufacturer | - ogrn 1107847000084
 | ООО «Статус 53» (`ooo-status-53`) | 5300006098 | plumbing |
 | ООО «ЦКБР» (`ooo-tskbr`) | — | manufacturer |
 | ООО «Элиарс» (`ooo-eliars`) | 7735140825 | manufacturer |

@@ -57,7 +57,7 @@ def main():
   <div class="mast">
     <p class="kicker">РОЙ.МАРКЕТ investigation</p>
     <h1>Profile index</h1>
-    <p><a href="../index.html">Home</a> · <a href="../cases/index.html">Cases</a> · <a href="../dossier.html">Registry dossier</a> · <a href="../relationship-graph.html">Relationship graph</a></p>
+    <p><a href="../index.html">Home</a> · <a href="../cases/index.html">Cases</a> · <a href="../story.html">Guided read</a> · <a href="../relationship-graph.html">Relationship graph</a></p>
   </div>
 {body}
 </div>

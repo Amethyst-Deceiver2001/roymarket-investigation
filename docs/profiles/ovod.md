@@ -119,7 +119,9 @@
 
 **US (OFAC)** [s0526]
 
-**EU** [s0526]
+**EU (Council Regulation (EU) No 269/2014, Annex I, entry 963, by Council Implementing Regulation (EU) 2026/1843)** [s7977]
+
+**EU (Council Regulation (EU) No 833/2014, Annex IV, entry 929, by Council Regulation (EU) 2026/1848)** [s7978]
 
 **Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), US (OFAC, Russia Harmful Foreign Activities Sanctions), Ukraine (Presidential sanctions decree/list), EU (Ukraine-related restrictive measures)** [s0759]
 
@@ -178,6 +180,8 @@
 | [s6960] | Proverki | Proverki (PROVERKI_7100027464_20260907_ovod-inspection-history.txt) | 2026-09-07 | — |
 | [s7854] | Screenshot | Screenshot (SCREENSHOT_7100027464_20260920_fedorov-live-ivanov-ovod-video-still.png) | 2026-09-20 | — |
 | [s7855] | Screenshot | Screenshot (SCREENSHOT_7100027464_20260920_ovod-workshop-ivanov-video-still.png) | 2026-09-20 | — |
+| [s7977] | Eu | Eu (EU_SANCTIONS_7100027464_20260920_rlvt-implementing-regulation-2026-1843.html) | 2026-09-20 | — |
+| [s7978] | Eu | Eu (EU_SANCTIONS_7100027464_20260920_rlvt-regulation-2026-1848.html) | 2026-09-20 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

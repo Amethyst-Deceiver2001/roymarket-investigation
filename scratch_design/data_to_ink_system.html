@@ -1,0 +1,270 @@
+<title>Data-to-Ink Rules</title>
+<style>
+  :root{
+    --paper:#eceef1; --panel:#f6f7f9; --panel-2:#e3e6ea;
+    --ink:#12161b; --ink-2:#414a55; --ink-3:#6b7683;
+    --rule:#c8ced6; --rule-soft:#dbe0e6;
+    --accent:#17456b; --accent-soft:#e0e9f1;
+    --ok:#0a7a53; --ok-bg:#e3f0ea;
+    --mid:#96700a; --mid-bg:#faf5e8;
+    --low:#8a3030; --low-bg:#f2dedd;
+    --person:#6a3f9e; --person-bg:#ece2f6;
+    --serif:Georgia,'Iowan Old Style','Times New Roman',serif;
+    --sans:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace;
+    --shadow:0 1px 2px rgba(18,22,27,.06), 0 8px 24px rgba(18,22,27,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0e1216; --panel:#151b21; --panel-2:#1d242c;
+      --ink:#e6eaee; --ink-2:#b3bcc6; --ink-3:#838f9c;
+      --rule:#2c353f; --rule-soft:#222a33;
+      --accent:#7db4dd; --accent-soft:#16252f;
+      --ok:#6fc9a3; --ok-bg:#12261f;
+      --mid:#e0b23f; --mid-bg:#2a2314;
+      --low:#ec7a95; --low-bg:#2d1918;
+      --person:#c9a6ec; --person-bg:#241a2e;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0e1216; --panel:#151b21; --panel-2:#1d242c;
+    --ink:#e6eaee; --ink-2:#b3bcc6; --ink-3:#838f9c;
+    --rule:#2c353f; --rule-soft:#222a33;
+    --accent:#7db4dd; --accent-soft:#16252f;
+    --ok:#6fc9a3; --ok-bg:#12261f;
+    --mid:#e0b23f; --mid-bg:#2a2314;
+    --low:#ec7a95; --low-bg:#2d1918;
+    --person:#c9a6ec; --person-bg:#241a2e;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+  }
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);margin:0;
+       padding:0 1.25rem 6rem;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:56rem;margin:0 auto;}
+  .mast{border-bottom:3px double var(--rule);padding:3rem 0 1.5rem;margin-bottom:2.5rem;}
+  .kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+          color:var(--accent);margin:0 0 1rem;}
+  h1{font-family:var(--serif);font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.08;font-weight:400;
+     letter-spacing:-.015em;text-wrap:balance;margin:0 0 .4rem;}
+  .standfirst{font-family:var(--serif);font-size:1.14rem;line-height:1.55;color:var(--ink-2);
+              max-width:42rem;margin:0;}
+  section{margin:3.5rem 0 0;}
+  .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+           color:var(--ink-3);display:flex;align-items:center;gap:.75rem;margin:0 0 1rem;}
+  .eyebrow::after{content:"";flex:1;height:1px;background:var(--rule-soft);}
+  h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,3.2vw,1.85rem);
+     letter-spacing:-.01em;text-wrap:balance;margin:0 0 1rem;}
+  p{margin:0 0 1rem;}
+  a{color:var(--accent);}
+  strong{font-weight:640;}
+  code{font-family:var(--mono);font-size:.86em;background:var(--panel-2);padding:.1em .35em;border-radius:2px;}
+  .rule-box{background:var(--panel);border-left:3px solid var(--accent);padding:1.1rem 1.25rem;
+            margin:1.5rem 0;border-radius:0 3px 3px 0;box-shadow:var(--shadow);}
+  .rule-box .lbl{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+                 color:var(--accent);display:block;margin-bottom:.5rem;}
+  .rule-box p:last-child{margin:0;}
+
+  .swatch-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1px;
+              background:var(--rule-soft);border:1px solid var(--rule-soft);border-radius:3px;
+              overflow:hidden;margin:1.25rem 0;}
+  .swatch{background:var(--panel);padding:.9rem 1rem;display:flex;gap:.75rem;align-items:flex-start;}
+  .chip{width:1.6rem;height:1.6rem;border-radius:4px;flex-shrink:0;border:1px solid var(--rule-soft);margin-top:.1rem;}
+  .swatch code{background:none;padding:0;display:block;margin-bottom:.15rem;}
+  .swatch .meaning{font-size:.82rem;color:var(--ink-2);}
+  .swatch .governs{font-size:.72rem;color:var(--ink-3);margin-top:.25rem;}
+
+  .scroll{overflow-x:auto;margin:1.25rem 0;border:1px solid var(--rule-soft);border-radius:3px;}
+  table{border-collapse:collapse;width:100%;font-size:.86rem;min-width:34rem;}
+  th,td{text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--rule-soft);vertical-align:top;}
+  thead th{font-family:var(--mono);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;
+           color:var(--ink-3);background:var(--panel-2);border-bottom:1px solid var(--rule);font-weight:600;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:nth-child(even) td{background:color-mix(in srgb, var(--panel) 60%, transparent);}
+  td.num{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:.78rem;white-space:nowrap;}
+
+  .tag{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.09em;
+       text-transform:uppercase;padding:.18em .5em;border-radius:2px;white-space:nowrap;font-weight:600;}
+  .t-doc{background:var(--ok-bg);color:var(--ok);}
+  .t-press{background:var(--mid-bg);color:var(--mid);}
+  .t-open{background:var(--low-bg);color:var(--low);}
+  .verdict{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;
+           padding:.15em .5em;border-radius:2px;white-space:nowrap;}
+  .v-traced{background:var(--ok-bg);color:var(--ok);}
+  .v-partial{background:var(--mid-bg);color:var(--mid);}
+  .v-decorative{background:var(--low-bg);color:var(--low);}
+
+  /* case signal chip — the proposed fix */
+  .signal-demo{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1px;
+               background:var(--rule-soft);border:1px solid var(--rule-soft);border-radius:3px;
+               overflow:hidden;margin:1.25rem 0;}
+  .sig-card{background:var(--panel);padding:1rem 1.1rem;}
+  .sig-card .kick{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
+                  color:var(--ink-3);margin:0 0 .4rem;}
+  .sig-card h4{margin:0 0 .5rem;font-size:.94rem;font-weight:640;font-family:var(--sans);}
+  .sig-chip{display:inline-flex;align-items:baseline;gap:.4em;font-family:var(--mono);
+            font-size:.72rem;padding:.28em .6em;border-radius:2px;font-weight:600;
+            font-variant-numeric:tabular-nums;}
+  .sig-chip .n{font-size:1rem;}
+  .sig-sanction{background:var(--low-bg);color:var(--low);}
+  .sig-anomaly{background:var(--mid-bg);color:var(--mid);}
+  .sig-scale{background:var(--ok-bg);color:var(--ok);}
+  .sig-card p.src{margin:.6rem 0 0;font-size:.76rem;color:var(--ink-3);}
+
+  .hexrow{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;margin:1.25rem 0;}
+  .hexrow figure{margin:0;text-align:center;}
+  .hexrow figcaption{font-size:.72rem;color:var(--ink-3);margin-top:.4rem;max-width:8rem;}
+
+  .footnote{font-size:.84rem;color:var(--ink-3);border-top:1px solid var(--rule-soft);
+            padding-top:1.25rem;margin-top:3.5rem;}
+</style>
+
+<div class="wrap">
+  <div class="mast">
+    <p class="kicker">РОЙ.МАРКЕТ investigation — internal design reference</p>
+    <h1>Data-to-Ink Rules</h1>
+    <p class="standfirst">This project already has tokens and components. What it has not had, until this page, is a written rule for when a visual is allowed to exist. This document states that rule, audits the current site against it, and specs the one component the audit says is missing.</p>
+  </div>
+
+  <section>
+    <p class="eyebrow">The rule</p>
+    <div class="rule-box">
+      <span class="lbl">Data-to-ink</span>
+      <p><strong>Every mark on a published page must trace to a named field in <code>data/registry/*.json</code>.</strong> If you can't point at the field, the mark is decoration, and this registry doesn't carry decoration — everything on it has to survive a hostile lawyer's reading, including the pictures. A color, a shape, an icon, a line's thickness: each one is either encoding a fact a reader can look up, or it's noise competing with the facts that do.</p>
+      <p>This is not a ban on visual design — a hub-and-spoke motif, a hero image, a typographic flourish are all fine. It's a naming discipline: <em>say what each one encodes</em>, even if the honest answer is "nothing, it's structural chrome" (a rule, a margin, a heading face). The problem this rule exists to catch is a mark that <em>looks</em> like it's telling you something about the investigation — implying severity, connection, or scale — while actually being interchangeable with any other investigation's version of the same page.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Tokens already in service — <code>docs/assets/profile.css</code></p>
+    <p>The existing token set already does real semantic work; it just isn't written down as a contract anywhere. Naming it here is what lets the audit below say "this is broken" rather than "this looks off."</p>
+    <div class="swatch-row">
+      <div class="swatch"><div class="chip" style="background:var(--ok)"></div><div>
+        <code>--ok / --ok-bg</code><div class="meaning">Confidence: primary document</div>
+        <div class="governs">governs <code>.t-doc</code> — a claim sourced to a signed extract, filing, or Official Journal text</div></div></div>
+      <div class="swatch"><div class="chip" style="background:var(--mid)"></div><div>
+        <code>--mid / --mid-bg</code><div class="meaning">Confidence: press-reported</div>
+        <div class="governs">governs <code>.t-press</code> — sourced to reporting, not a primary document</div></div></div>
+      <div class="swatch"><div class="chip" style="background:var(--low)"></div><div>
+        <code>--low / --low-bg</code><div class="meaning">Confidence: open / aggregator</div>
+        <div class="governs">governs <code>.t-open</code> and every sanctions-flag red outline sourced to OpenSanctions rather than a primary listing</div></div></div>
+      <div class="swatch"><div class="chip" style="background:var(--person)"></div><div>
+        <code>--person / --person-bg</code><div class="meaning">Node kind: a named individual</div>
+        <div class="governs">governs person nodes/cards, distinct from entity nodes</div></div></div>
+      <div class="swatch"><div class="chip" style="background:var(--accent)"></div><div>
+        <code>--accent</code><div class="meaning">Structural, not evidentiary</div>
+        <div class="governs">kickers, links, callout rule — never used to imply a finding</div></div></div>
+      <div class="swatch"><div class="chip" style="background:var(--ink-3)"></div><div>
+        <code>--ink-3</code><div class="meaning">Structural, not evidentiary</div>
+        <div class="governs">captions, source lines, metadata — always the quietest ink on the page</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Tier color — <code>entities.json[].tier</code></p>
+    <p><code>scripts/build_case_pages.py</code>'s <code>TIER_COL</code> already maps one hex per registry tier. Current distribution across all 240 entities on file:</p>
+    <div class="scroll"><table>
+      <thead><tr><th>tier</th><th>color</th><th>entities</th><th>meaning</th></tr></thead>
+      <tbody>
+        <tr><td><code>cbst-core</code></td><td><span class="chip" style="display:inline-block;width:1rem;height:1rem;vertical-align:middle;background:#eb6834;border-radius:3px"></span> #eb6834</td><td class="num">9</td><td>ЦБСТ itself and its direct organs</td></tr>
+        <tr><td><code>manufacturer</code></td><td><span class="chip" style="display:inline-block;width:1rem;height:1rem;vertical-align:middle;background:#2a78d6;border-radius:3px"></span> #2a78d6</td><td class="num">119</td><td>a producer of a physical product</td></tr>
+        <tr><td><code>plumbing</code></td><td><span class="chip" style="display:inline-block;width:1rem;height:1rem;vertical-align:middle;background:#1baf7a;border-radius:3px"></span> #1baf7a</td><td class="num">36</td><td>logistics/finance/training infrastructure, no product of its own</td></tr>
+        <tr><td><code>money-layer</code></td><td><span class="chip" style="display:inline-block;width:1rem;height:1rem;vertical-align:middle;background:#eda100;border-radius:3px"></span> #eda100</td><td class="num">29</td><td>funding/grant/procurement conduits</td></tr>
+        <tr><td><code>adjacent</code></td><td><span class="chip" style="display:inline-block;width:1rem;height:1rem;vertical-align:middle;background:#e87ba4;border-radius:3px"></span> #e87ba4</td><td class="num">29</td><td>no confirmed ЦБСТ tie — same industry/proximity only</td></tr>
+        <tr><td><code>network</code></td><td><span class="chip" style="display:inline-block;width:1rem;height:1rem;vertical-align:middle;background:#008300;border-radius:3px"></span> #008300</td><td class="num">1</td><td>a demand-side node (government/military customer)</td></tr>
+        <tr><td><code>unverified</code></td><td><span class="chip" style="display:inline-block;width:1rem;height:1rem;vertical-align:middle;background:#4a3aa7;border-radius:3px"></span> #4a3aa7</td><td class="num">17</td><td>tier not yet assigned</td></tr>
+      </tbody>
+    </table></div>
+    <p style="font-size:.84rem;color:var(--ink-3)">This is the one palette on the site that already passes the rule outright: pick any node's fill and you can name the exact <code>tier</code> string that produced it.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Node-kind glyphs — <code>relationship_graph.json[].kind</code></p>
+    <p>Two more shapes carry real classifier output, not artistic choice: the hub hex-badge (<code>classify_variant()</code> in <code>build_relationship_graph.py</code>, reading a product's own described capability) and the demand-side pediment/shield icons ported into <code>build_case_pages.py</code> this session, reading the node's <code>kind</code> field directly.</p>
+    <div class="hexrow">
+      <figure>
+        <svg width="52" height="52" viewBox="0 0 52 52"><polygon points="26,4 45,15 45,37 26,48 7,37 7,15" fill="none" stroke="#eb6834" stroke-width="2.5"/></svg>
+        <figcaption>hollow ring — classified <strong>defensive</strong> (detection/interception only)</figcaption>
+      </figure>
+      <figure>
+        <svg width="52" height="52" viewBox="0 0 52 52"><polygon points="26,4 45,15 45,37 26,48 7,37 7,15" fill="#eb6834"/></svg>
+        <figcaption>solid — classified <strong>offensive</strong> (strike/attack capability described)</figcaption>
+      </figure>
+      <figure>
+        <svg width="52" height="52" viewBox="0 0 52 52"><defs><clipPath id="h"><polygon points="26,4 45,15 45,37 26,48 7,37 7,15"/></clipPath></defs><rect x="7" y="4" width="19" height="44" fill="#eb6834" clip-path="url(#h)"/><polygon points="26,4 45,15 45,37 26,48 7,37 7,15" fill="none" stroke="#eb6834" stroke-width="2.5"/></svg>
+        <figcaption>split fill — classified <strong>dual</strong>-use</figcaption>
+      </figure>
+      <figure>
+        <svg width="52" height="52" viewBox="0 0 52 52"><circle cx="26" cy="30" r="14" fill="#008300"/><polygon points="14,20 26,10 38,20 38,26 14,26" fill="#e9f7e9"/><rect x="17" y="20" width="18" height="12" fill="#e9f7e9"/></svg>
+        <figcaption>pediment glyph — <code>kind: government_customer</code></figcaption>
+      </figure>
+    </div>
+    <p style="font-size:.84rem;color:var(--ink-3)">Also passes the rule: swap the underlying <code>tier_basis</code>/<code>kind</code> value and the glyph changes with it — there's no case where the icon and the data can disagree.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Where the rule breaks — landing-page audit</p>
+    <p>The three elements below are the ones the redesign shipped this session. Read against the rule, one passes, one is half-credit, and one is pure chrome dressed as evidence — which is the thing the critique that prompted this document was actually pointing at.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Element</th><th>What it shows today</th><th>Verdict</th><th>What it should trace to</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Hero network motif (<code>network_motif()</code>)</td>
+          <td>Hub-and-spoke SVG, one spoke per <em>published</em> case slug, short Cyrillic label</td>
+          <td><span class="verdict v-decorative">decorative</span></td>
+          <td>Nothing per-spoke. Spoke count = <code>len(CASES)</code>, a Python list length, not a queried fact. Every spoke is drawn identically regardless of that case's tier, sanction status, or evidentiary weight — a reader can't learn anything from the picture that the case list below it doesn't already say in text.</td>
+        </tr>
+        <tr>
+          <td>Case-feed lines (<code>build_indexes()</code> · <code>case_feed</code>)</td>
+          <td>Kicker + title + one prose sentence per case, plain <code>--ink-2</code> text</td>
+          <td><span class="verdict v-partial">partial</span></td>
+          <td>The <em>sentence itself</em> already carries a real number for 6 of 7 cases (below) — <code>financials[]</code>, <code>government_contracts[]</code>, <code>sanctions[]</code>, <code>workforce_history[]</code>. But it's prose, not ink: the number gets the same visual weight as connective words around it, so nothing on the page lets a skimming reader rank the seven cases by what's actually most alarming about each.</td>
+        </tr>
+        <tr>
+          <td>Hero paragraph (<code>hero_note</code>)</td>
+          <td>Hand-written prose paragraph replacing the earlier stat-tile row</td>
+          <td><span class="verdict v-partial">partial</span></td>
+          <td>Text, correctly — this is analysis, and analysis is where hand-written prose belongs per <code>STYLE_GUIDE.md</code>. Flagged only so it's not mistaken for a data-bound element: it's not meant to trace to a field, and shouldn't.</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <p class="eyebrow">The fix — a signal chip, not a bigger motif</p>
+    <p>The stat-tile row was cut because tiles read as generic dashboard filler — that verdict stands, tiles as a <em>block</em> are exactly the AI-template look this project's own design guidance warns against. But the fix isn't to remove the number, it's to put it back at the point of use: one small chip per case-feed row, colored by which <code>sanctions[]</code>/<code>financials[]</code>/<code>government_contracts[]</code> pattern it reports, using tokens that already exist and already mean something (<code>--low</code> for a sanctions flag, <code>--mid</code> for a structural anomaly, <code>--ok</code> for a scale claim worth checking). No new palette, no new icon set — just stop leaving the existing semantic colors unused on the one page most readers see first.</p>
+    <div class="signal-demo">
+      <div class="sig-card">
+        <p class="kick">Гагаринг</p>
+        <h4>ЦБСТ resident, 2025 revenue reported</h4>
+        <span class="sig-chip sig-scale"><span class="n">₽2.16bn</span> revenue, 0 public contracts</span>
+        <p class="src">field: <code>financials[]</code> + empty <code>government_contracts[]</code></p>
+      </div>
+      <div class="sig-card">
+        <p class="kick">ГОУДРОН</p>
+        <h4>Household wholesaler, apartment registration</h4>
+        <span class="sig-chip sig-sanction">Ukraine register — primary listing</span>
+        <p class="src">field: <code>sanctions[]</code>, entry type <code>PRIMARY LISTING</code></p>
+      </div>
+      <div class="sig-card">
+        <p class="kick">Цыганов / «Булат»</p>
+        <h4>МЧС contracts, no tender</h4>
+        <span class="sig-chip sig-anomaly"><span class="n">₽28.2m</span> sole-supplier awards</span>
+        <p class="src">field: <code>government_contracts[]</code>, <code>procurement_method</code></p>
+      </div>
+      <div class="sig-card">
+        <p class="kick">НПЦ БАСиРТК</p>
+        <h4>2-employee micro-enterprise</h4>
+        <span class="sig-chip sig-anomaly"><span class="n">₽83.7m</span> / 2 staff</span>
+        <p class="src">fields: <code>financials[]</code> vs <code>workforce_history[]</code></p>
+      </div>
+    </div>
+    <p style="font-size:.84rem;color:var(--ink-3)">Every chip above quotes a number that's already sourced and already sitting in the case's own prose line — this is a formatting change to <code>build_indexes()</code>'s <code>case_feed</code> loop, not new research. Each case needs one added key in <code>CASES</code> — <code>signal: {"type": "sanction"|"anomaly"|"scale", "text": "..."}</code> — set by hand once per case the same way <code>kicker</code>/<code>line</code> already are, so the chip's color is a deliberate editorial call, not something a script infers.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">What this doesn't cover</p>
+    <p>This page is the rule and the audit, not a rebuild. It doesn't touch Part 2/3 of the open Network Graph plan (live-artifact default view, curated static excerpts) — those are a separate, larger piece of work already scoped in <code>notes/</code>/the current plan file. It also doesn't relitigate the stat-tile removal; it explains why that removal was right in isolation and where the number it deleted actually belonged instead.</p>
+  </section>
+
+  <div class="footnote">Written 2026-09-21. Reference: <code>docs/assets/profile.css</code> (tokens), <code>scripts/build_case_pages.py</code> (<code>TIER_COL</code>, <code>CASES</code>, <code>network_motif()</code>, <code>graph_svg()</code>), <code>data/registry/entities.json</code> (tier counts, run 2026-09-21).</div>
+</div>

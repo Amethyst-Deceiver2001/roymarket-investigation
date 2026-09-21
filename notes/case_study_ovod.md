@@ -1,10 +1,10 @@
 # Овод: two Tula companies with one owner, a ₽1.3bn FPV-drone maker that ЦБСТ calls its «флагманский резидент», and a founder shot in July 2026
 
-2026-09-20. Every claim carries a `[sNNNN]` source id, resolved in the table at the end. Russian is quoted verbatim from archived posts and documents; English is analysis. **Registry position: tier manufacturer; ЦБСТ tie {doc} from ЦБСТ's own channel [s7957, s7958]. Sanctions on the operating company rest on press reporting {press}; the primary EU and US texts are not on file.**
+2026-09-20. Every claim carries a `[sNNNN]` source id, resolved in the table at the end. Russian is quoted verbatim from archived posts and documents; English is analysis. **Registry position: tier manufacturer; ЦБСТ tie {doc} from ЦБСТ's own channel [s7957, s7958]. The EU listing of the operating company is a primary document [s7977, s7978]; the 2024 US listing rests on press reporting {press}.**
 
 ## The finding
 
-Андрей Черезов owns 100% of two companies registered in the same building in Tula, on ул. Рязанская, д. 3Д: ООО «Русская лаборатория воздушного транспорта» (РЛВТ, ИНН 7100027464), registered 28.09.2022, and ООО «Воздушный трактат» (ИНН 7100046925), registered 28.11.2023 [s6727, s6728]. РЛВТ reports revenue of ₽110m for 2023, ₽562m for 2024 and ₽1.31bn for 2025, and a balance sheet of ₽4.22bn at the end of 2025 [s6532, s6533, s6534]. It makes the «Овод» FPV strike drones and the fibre-optic «Провод» [s6456]. ЦБСТ's own channel called the drone «нашим флагманским резидентом» on 15.04.2025 [s7957]. On 29.07.2026 Черезов was shot in a stairwell in Tula [s7853]. The state contracts on file are four university purchases worth ₽72.6m, about 4% of the company's revenue for 2024 and 2025 [s3372, s3374, s3375, s3376].
+Андрей Черезов owns 100% of two companies registered in the same building in Tula, on ул. Рязанская, д. 3Д: ООО «Русская лаборатория воздушного транспорта» (РЛВТ, ИНН 7100027464), registered 28.09.2022, and ООО «Воздушный трактат» (ИНН 7100046925), registered 28.11.2023 [s6727, s6728]. РЛВТ reports revenue of ₽110m for 2023, ₽562m for 2024 and ₽1.31bn for 2025, and a balance sheet of ₽4.22bn at the end of 2025 [s6532, s6533, s6534]. It makes the «Овод» FPV strike drones and the fibre-optic «Провод» [s6456]. ЦБСТ's own channel called the drone «нашим флагманским резидентом» on 15.04.2025 [s7957]. On 29.07.2026 Черезов was shot in a stairwell in Tula [s7853]. The state contracts on file are four university purchases worth ₽72.65m, about 4% of the company's revenue for 2024 and 2025 [s3372, s3374, s3375, s3376].
 
 ## Officially X, actually Y
 
@@ -34,14 +34,15 @@ Source: the four annual filings [s6531, s6532, s6533, s6534]. Revenue grew 2.3 t
 | Белгородский государственный технологический университет им. В.Г. Шухова | 1312301779325000005 | 14.01.2025 | ₽12.99m |
 | Воронежский государственный технический университет | № 225 | 28.11.2025 | ₽29.88m |
 
-The subjects are «Конструктор беспилотного летательного аппарата мультироторного типа» (Воронеж) and «Рама», eleven items (Белгород) [s3374, s3375, s3376, s3372]. Total ₽72.64m.
+The subjects are «Конструктор беспилотного летательного аппарата мультироторного типа» (Воронеж) and «Рама», eleven items (Белгород) [s3374, s3375, s3376, s3372]. Total ₽72.65m.
 
-Contract 225 carries a detail from the customer's file: on 28.11.2025 Воронеж's university sent РЛВТ a claim (read by OCR) saying delivery was due by 10.12.2025 and made on 15.12.2025, and billing a penalty of ₽82,180.67 [s4478]. The card gives the contract term as 26.12.2025 [s3376].
+Contract 225 carries a detail from the customer's file: a claim letter from Воронеж's university to РЛВТ (read by OCR; its own date is illegible) says that under the contract of 28.11.2025 delivery was due by 10.12.2025 and was made on 15.12.2025, and bills a penalty of ₽82,180.67 [s4478]. The card gives the contract term as 26.12.2025 [s3376].
 
 ## Sanctions
 
-- **The Insider** reports that РЛВТ was sanctioned by the US in 2024 and by the EU in July 2026, «всего за несколько дней до покушения на Черезова» (29.07.2026) {press} [s7853].
-- **OpenSanctions** matches the ИНН of РЛВТ and lists EU Regulations 2026/1843 and 2026/1848 and the Ukrainian GUR company page among its sources {open} [s0759]. The primary Official Journal text is not yet on file.
+- **EU, primary.** Council Implementing Regulation (EU) 2026/1843 of 23 July 2026 lists, as entry 963 of the annex to Regulation 269/2014, «Russian Air Transport Laboratory» a.k.a. ООО «РЛВТ» (ИНН 7100027464, ОГРН 1227100012369). Its reasons: «a Russian developer and manufacturer of drones, including attack drones. Its products include first-person view (FPV) drones Ovod (Gadfly)», documented in combat «near Avdiivka on 4 July 2023» {doc} [s7977]. Council Regulation (EU) 2026/1848 of the same date adds «RLVT Tula», with the same ИНН and ОГРН and the address of the company, as entry 929 to Annex IV of Regulation 833/2014, dated 24.7.2026 {doc} [s7978]. The listing came six days before the shooting of 29.07.2026.
+- **US, press only.** The Insider reports that РЛВТ was sanctioned by the US in 2024, and by the EU in July 2026, «всего за несколько дней до покушения на Черезова» {press} [s7853]. No US primary text is on file.
+- **OpenSanctions** matches the ИНН of РЛВТ and agrees with the EU entries {open} [s0759].
 - **GUR's page** for Овод lists «FPV kamikaze» as the purpose [s6141].
 
 ## The founder and the shooting
@@ -73,14 +74,14 @@ Contract 225 carries a detail from the customer's file: on 28.11.2025 Ворон
 | 15.04.2025 | ЦБСТ calls «Овод» «нашим флагманским резидентом» [s7957] |
 | 28.11.2025 | Contract 225, ₽29.88m [s3376] |
 | 15.12.2025 | Delivery, five days after the contract's deadline [s4478] |
-| July 2026 | EU sanctions on РЛВТ, per The Insider {press} [s7853] |
+| 23.07.2026 | EU lists РЛВТ, entry 963 of Regulation 269/2014 [s7977] |
 | 29.07.2026 | Черезов shot in Tula [s7853, s7852] |
 
 ## What is not established
 
 - Who buys about ₽1.8bn of the 2024–2025 revenue that the four university contracts do not explain.
 - Why the balance sheet reached ₽4.22bn at the end of 2025.
-- The primary texts of the US and EU sanctions.
+- The US designation of 2024: only The Insider reports it.
 - How РЛВТ and «Воздушный трактат» divide the work. The registry's earlier ЦБСТ-tie record sits on «Воздушный трактат»; ЦБСТ's post names only the drone, so which company is the resident is not stated.
 - Who «Андрей Иванов» is. On 26.03.2025 ЦБСТ's channel credits him as «создатель ударного FPV-дрона «Овод»»; the registry treats him as a separate documented engineer, and the relation between the accounts is not resolved.
 - Who shot Черезов and why.
@@ -88,4 +89,4 @@ Contract 225 carries a detail from the customer's file: on 28.11.2025 Ворон
 
 ## Evidence base
 
-Registry records `ovod`, `ooo-vozdushnyy-traktat`; person `cherezov-andrey-pavlovich`. ЕГРЮЛ [s6727, s6728], annual filings [s6531–s6534, s0290, s0291], contract cards [s3372, s3374–s3376] and the customer's claim letter [s4478], press [s7852, s7853], the company's own posts [s6456, s5446], the GUR page [s6141]. The two ЦБСТ posts are archived [s7957, s7958].
+Registry records `ovod`, `ooo-vozdushnyy-traktat`; person `cherezov-andrey-pavlovich`. ЕГРЮЛ [s6727, s6728], annual filings [s6531–s6534, s0290, s0291], contract cards [s3372, s3374–s3376] and the customer's claim letter [s4478], press [s7852, s7853], the Official Journal texts [s7977, s7978], the company's own posts [s6456, s5446], the GUR page [s6141]. The two ЦБСТ posts are archived [s7957, s7958].

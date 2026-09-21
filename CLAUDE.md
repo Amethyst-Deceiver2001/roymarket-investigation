@@ -433,17 +433,23 @@ Product profiles (`build_product_profile.py`, `FLAGSHIP_PRODUCTS`, flagship prod
 
 **Changed 2026-09-20 at user direction: the old brief is no longer the landing page.** `docs/` (repo Settings → Pages → `/docs`) is now a small site:
 
-- `docs/index.html` — generated landing page (routes to cases, the graph explorer, the profile index, `story.html`, the dossier).
-- `docs/cases/index.html`, `docs/cases/<slug>.html` — case studies, generated from `notes/case_study_<slug>.md` plus a static graph excerpt and a resolved sources table. Case list and status live in `CASES` in `scripts/build_case_pages.py` (seven cases: Архангел, Гагаринг, ГОУДРОН, Овод, НПЦ БАСиРТК and Цыганов/Булат published, Пиранья built). Grades use the registry vocabulary (`{doc}` Primary doc, `{press}` Press-reported, `{open}` Open); a case note must state the entity's registry tier and ЦБСТ-tie position accurately.
-- `docs/dossier.html` — the former `docs/index.html` (the long written brief), kept and linked as the "Registry dossier"; it is also the source of the standalone Artifact companion (https://claude.ai/code/artifact/5450bf7e-7f7b-4788-93c0-761503dd5ea4). Edit it freely; only republish the Artifact when the user calls an explicit investigation cutoff — see `roymarket_no_per_fold_publish` (seeded memory) for why (the Artifact intentionally lags the local file between cutoffs). Nothing new here is published as an Artifact before that call.
+- `docs/index.html` — generated landing page (routes to cases, the graph explorer, the profile index, `story.html`).
+- `docs/cases/index.html`, `docs/cases/<slug>.html` — case studies, generated from `notes/case_study_<slug>.md` plus a static graph excerpt and a resolved sources table. Case list and status live in `CASES` in `scripts/build_case_pages.py` (seven cases: Архангел, Гагаринг, ГОУДРОН, Овод, Пиранья, Цыганов/Булат and НПЦ БАСиРТК, all published). Grades use the registry vocabulary (`{doc}` Primary doc, `{press}` Press-reported, `{open}` Open); a case note must state the entity's registry tier and ЦБСТ-tie position accurately.
+
+**Changed 2026-09-21 at user direction: the old written brief is no longer public at all.** `docs/dossier.html` (the former `docs/index.html`) is moved to `notes/dossier_draft.html` and is **not** linked from any published page — the user's stated reason: it's a first-draft prose document whose facts should have been migrated into `data/registry/*.json` rather than kept as free text, and it must not ship as a public file. Treat it as an internal working note:
+- Every nav/route link to `dossier.html` across `scripts/build_case_pages.py` (the shared `NAV`/route grid), `scripts/build_profile_index.py`, and `docs/story.html`'s CTA grid has been removed — don't re-add one.
+- `scripts/id_patterns.py`'s "already documented?" cross-check and `scripts/check_tag_balance.py`'s default target were repointed to the new path (the former, `docs/index.html` the latter) — keep them pointed at `notes/dossier_draft.html`, not a `docs/` path, if this file is touched again.
+- The standalone Artifact companion (https://claude.ai/code/artifact/5450bf7e-7f7b-4788-93c0-761503dd5ea4) predates this change and is a separate publish channel from `docs/` — it was not unpublished by this change; ask the user before touching it.
+- Real, still-unregistered facts in `notes/dossier_draft.html` are a backlog, not something to re-publish: migrate them into `corrections_entities.json`/`corrections_people.json` like any other correction, the same as the rest of this project's registry-is-truth discipline.
 
 **Pushing `docs/` publishes it (Pages serves `/docs`): a Pages-only page is still public, so push new landing or case pages only on the user's explicit go-ahead.** Regenerate after a case note or registry change: `python3 scripts/build_case_pages.py`, then `python3 scripts/check_tag_balance.py docs/index.html docs/cases/*.html`.
 
 ## Tag-balance check before any publish
 
 Run `scripts/check_tag_balance.py` (see the seeded memory
-`html_brief_tag_balance_check`) after every `docs/dossier.html` edit, before
-publishing; with no arguments it checks the dossier, and for generated pages pass them explicitly (`docs/index.html docs/cases/*.html`).
+`html_brief_tag_balance_check`) before publishing any generated page; with
+no arguments it checks `docs/index.html`, and for the rest pass them
+explicitly (`docs/cases/*.html docs/profiles/index.html`, etc.).
 
 ## PII handling
 

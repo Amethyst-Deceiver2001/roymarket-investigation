@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generates the site's front door and case studies from notes/ and the registry.
 
-  docs/index.html            landing page (routes: cases, graph, profiles, guided read, dossier)
+  docs/index.html            landing page (routes: cases, graph, profiles, guided read)
   docs/cases/index.html      case list
   docs/cases/<slug>.html     one page per published case: notes/case_study_<slug>.md
                              rendered + a static graph excerpt + a resolved sources table
@@ -21,6 +21,8 @@ import random
 import re
 from pathlib import Path
 
+from classify_product_icon import classify as classify_product, CATEGORY_LABELS
+
 REPO = Path(__file__).resolve().parent.parent
 DOCS = REPO / "docs"
 REG = REPO / "data" / "registry"
@@ -30,6 +32,71 @@ TIER_COL = {"manufacturer": "#2a78d6", "cbst-core": "#eb6834", "plumbing": "#1ba
             "money-layer": "#eda100", "adjacent": "#e87ba4", "network": "#008300",
             "unverified": "#4a3aa7", None: "#898781"}
 PERSON_COL = "#7a8a99"
+
+# Demand-side node glyphs (government_customer / military_unit), copied
+# verbatim from scratch_design/case_study_build_svgs.py / the Demand-Side
+# Icon Set mockup -- a pediment for a government/institutional customer, a
+# shield-with-checkmark for a named military unit -- instead of the plain
+# tier-colored rect every other non-person node gets. 24x24 viewBox source;
+# icon_glyph_svg() below rescales and repositions it per node.
+CUSTOMER_ICON_PATHS = (
+    '<rect x="4" y="10" width="16" height="9" rx="1"/>'
+    '<path d="M4 10 L12 4 L20 10"/>'
+    '<line x1="7" y1="10" x2="7" y2="19"/>'
+    '<line x1="12" y1="10" x2="12" y2="19"/>'
+    '<line x1="17" y1="10" x2="17" y2="19"/>'
+)
+CUSTOMER_ICON_CENTER = (12, 11.5)
+MILITARY_UNIT_ICON_PATHS = (
+    '<path d="M12 3 L19 6 L19 12 C19 17 15.5 20 12 21 C8.5 20 5 17 5 12 L5 6 Z"/>'
+    '<path d="M9 12 L11 14 L15 9"/>'
+)
+MILITARY_UNIT_ICON_CENTER = (12, 12)
+
+# Product-node glyphs, keyed by scripts/classify_product_icon.py's category
+# id -- only the categories that actually occur among CASES' listed product
+# nodes are drawn here (checked against classify_product_icon.classify()
+# output for every product in the 7 published cases, 2026-09-21); any other
+# category falls back to the plain tier-colored rect every other entity node
+# already gets, same as before this glyph set existed. Hand-authored in the
+# same 24x24 line-art style as the demand-side icons above, not lifted from
+# the standalone Product Icon Set artifact's own (differently-styled) glyphs.
+PRODUCT_ICONS = {
+    "fpv_kamikaze_strike": (
+        '<circle cx="12" cy="12" r="7"/>'
+        '<line x1="12" y1="2" x2="12" y2="6"/>'
+        '<line x1="12" y1="18" x2="12" y2="22"/>'
+        '<line x1="2" y1="12" x2="6" y2="12"/>'
+        '<line x1="18" y1="12" x2="22" y2="12"/>'
+        '<circle cx="12" cy="12" r="1.4" fill="var(--paper)"/>',
+        (12, 12)),
+    "multirotor_cargo_utility": (
+        '<line x1="6" y1="6" x2="18" y2="18"/>'
+        '<line x1="18" y1="6" x2="6" y2="18"/>'
+        '<circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/>'
+        '<circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/>'
+        '<rect x="10" y="10" width="4" height="4" rx="1"/>',
+        (12, 12)),
+    "detector_counter_uas": (
+        '<circle cx="4" cy="20" r="1.6" fill="var(--paper)"/>'
+        '<path d="M4 14 A6 6 0 0 1 10 20"/>'
+        '<path d="M4 9 A11 11 0 0 1 15 20"/>'
+        '<path d="M4 4 A16 16 0 0 1 20 20"/>',
+        (12, 12)),
+}
+
+
+def icon_glyph_svg(x, y, r, paths, center):
+    """Places a 24x24-viewBox icon centered at (x, y), scaled to roughly
+    2*r across -- same visual weight as the circle it's drawn over. Icon
+    ink is var(--paper) -- the page's own light/dark background token --
+    so it reads against any tier color in either theme without a new
+    token (same trick --product-icon-ink solves for in the live graph)."""
+    cx0, cy0 = center
+    s = (2.0 * r) / 20.0
+    transform = f'translate({x:.1f},{y:.1f}) scale({s:.3f}) translate({-cx0:.2f},{-cy0:.2f})'
+    return (f'<g transform="{transform}" fill="none" stroke="var(--paper)" stroke-width="1.6" '
+            f'stroke-linecap="round" stroke-linejoin="round">{paths}</g>')
 
 CASES = [
     {"slug": "arkhangel", "status": "published", "title": "Проект «Архангел»",
@@ -163,7 +230,7 @@ CHIPS = {"doc": ("t-doc", "Primary doc"), "press": ("t-press", "Press-reported")
 NAV = ('<nav class="topnav" aria-label="Site">'
        '<a href="{r}index.html">Home</a><a href="{r}cases/index.html">Cases</a>'
        '<a href="{r}relationship-graph.html">Graph</a><a href="{r}profiles/index.html">Profiles</a>'
-       '<a href="{r}story.html">Guided read</a><a href="{r}dossier.html">Registry dossier</a></nav>')
+       '<a href="{r}story.html">Guided read</a></nav>')
 
 EXTRA_CSS = """
 .topnav{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;padding:1rem 0;border-bottom:1px solid var(--rule-soft);font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
@@ -181,6 +248,27 @@ EXTRA_CSS = """
 .case-body h2{margin-top:3rem}.case-body ul,.case-body ol{padding-left:1.3rem;margin:0 0 1rem}.case-body li{margin-bottom:.4rem}
 .case-body{max-width:100%}.case-body p,.case-body ul,.case-body ol{max-width:46rem}
 details.srcs summary{cursor:pointer;font-family:var(--mono);font-size:.78rem;color:var(--ink-2);margin:.5rem 0}
+
+/* ---------- landing page ---------- */
+.hero-row{display:flex;gap:2.5rem;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;margin-top:.5rem}
+.hero-text{flex:1 1 22rem;min-width:0;font-size:.95rem;color:var(--ink-2);line-height:1.6;max-width:34rem;padding-top:.6rem}
+.net-motif{flex:0 0 15rem;width:15rem;max-width:100%}
+.net-motif svg{width:100%;height:auto;display:block}
+.net-motif text{font-family:var(--mono);font-size:8.5px;fill:var(--ink-3)}
+.net-motif text.hub{fill:var(--ink-2);font-weight:600}
+.net-motif .cap{font-family:var(--mono);font-size:.64rem;color:var(--ink-3);text-align:center;margin-top:.5rem;letter-spacing:.02em}
+
+.case-feed{display:flex;flex-direction:column;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);border-radius:3px;overflow:hidden;margin:1.25rem 0}
+.case-feed a{display:grid;grid-template-columns:6.5rem 1fr;gap:1.1rem;align-items:baseline;background:var(--panel);padding:1rem 1.1rem;text-decoration:none;color:inherit}
+.case-feed a:hover{background:var(--accent-soft)}
+.case-feed .kick{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.case-feed h3{font-family:var(--serif);font-size:1.08rem;font-weight:400;margin:0 0 .3rem}
+.case-feed p{margin:0;font-size:.88rem;color:var(--ink-2);line-height:1.5;max-width:42rem}
+@media (max-width:34rem){.case-feed a{grid-template-columns:1fr}.case-feed .kick{order:-1}}
+
+.route-grid.secondary{margin-top:.5rem}
+.route-grid.secondary .route{padding:.9rem 1rem}
+.route-grid.secondary .name{font-size:1rem}
 """.strip()
 
 
@@ -255,7 +343,7 @@ def cited_sources(md, sources):
     return rows
 
 
-def graph_svg(cfg, g, weak=frozenset()):
+def graph_svg(cfg, g, weak=frozenset(), products=None):
     ids = {n["id"]: n for n in g["nodes"]}
     want = [k for k in cfg["nodes"] if k in ids]
     prio = {"family_tie": 0, "cbst_tie": 1, "founded": 2, "owns": 2, "directs": 3, "related": 4, "role": 9, "produces": 9, "procures": 9}
@@ -299,11 +387,23 @@ def graph_svg(cfg, g, weak=frozenset()):
         svg.append(f'<line x1="{pos[a][0]:.0f}" y1="{pos[a][1]:.0f}" x2="{pos[b][0]:.0f}" y2="{pos[b][1]:.0f}" {style}/>')
     for k in want:
         n, (x, y) = ids[k], pos[k]
-        col = PERSON_COL if n["kind"] == "person" else TIER_COL.get(n.get("tier"), TIER_COL[None])
+        col = (PERSON_COL if n["kind"] == "person" else
+               TIER_COL["network"] if n["kind"] in ("government_customer", "military_unit") else
+               TIER_COL.get(n.get("tier"), TIER_COL[None]))
         ring = ' stroke="#c0392b" stroke-width="2.5"' if n.get("sanctioned") and k not in weak else ""
         r = 14 if k == cfg["hub"] else 9
         if n["kind"] == "person":
             svg.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="{col}"{ring}/>')
+        elif n["kind"] == "government_customer":
+            svg.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="{col}"{ring}/>')
+            svg.append(icon_glyph_svg(x, y, r, CUSTOMER_ICON_PATHS, CUSTOMER_ICON_CENTER))
+        elif n["kind"] == "military_unit":
+            svg.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="{col}"{ring}/>')
+            svg.append(icon_glyph_svg(x, y, r, MILITARY_UNIT_ICON_PATHS, MILITARY_UNIT_ICON_CENTER))
+        elif n["kind"] == "product" and products and products.get(k) in PRODUCT_ICONS:
+            svg.append(f'<rect x="{x - r:.0f}" y="{y - r * 0.75:.0f}" width="{2 * r}" height="{1.5 * r:.0f}" rx="3" fill="{col}"{ring}/>')
+            paths, center = PRODUCT_ICONS[products[k]]
+            svg.append(icon_glyph_svg(x, y, r * 0.85, paths, center))
         else:
             svg.append(f'<rect x="{x - r:.0f}" y="{y - r * 0.75:.0f}" width="{2 * r}" height="{1.5 * r:.0f}" rx="3" fill="{col}"{ring}/>')
         svg.append(f'<text x="{x:.0f}" y="{y + r + 13:.0f}" text-anchor="middle" font-size="11.5" fill="var(--ink)" stroke="var(--panel)" stroke-width="3.5" paint-order="stroke">{esc(cfg["nodes"][k])}</text>')
@@ -314,6 +414,8 @@ def graph_svg(cfg, g, weak=frozenset()):
               '<span><span class="net-swatch" style="background:#1baf7a"></span> plumbing</span>'
               '<span><span class="net-swatch" style="background:#eb6834"></span> ЦБСТ core</span>'
               f'<span><span class="net-swatch" style="background:{PERSON_COL};border-radius:50%"></span> person</span>'
+              f'<span><span class="net-swatch" style="background:{TIER_COL["network"]};border-radius:50%"></span> govt./military customer</span>'
+              '<span>product squares carry a category glyph (crosshair = FPV/kamikaze strike, quad = multirotor/cargo, radar sweep = detector/counter-UAS) from <code>classify_product_icon.py</code>; a plain square is any other/unclassified category</span>'
               '<span>thick orange = ЦБСТ resident tie · solid = ownership/directs/produces · long dash = buys from · fine dotted = role/family · dashed = related · red outline = sanctions flag in the registry (weak name-only matches are not outlined)</span></div>')
     return (f'<div class="net-panel"><div class="net-svg-wrap">{"".join(svg)}</div>{legend}</div>'
             f'<p class="footnote" style="margin-top:.75rem;border:none;padding:0">{esc(cfg["caption"])} '
@@ -346,10 +448,10 @@ def page(title, body, rel, kicker, standfirst=None, extra_head=""):
 """
 
 
-def build_case(case, g, sources, weak=frozenset()):
+def build_case(case, g, sources, weak=frozenset(), products=None):
     md = (REPO / "notes" / f"case_study_{case['slug']}.md").read_text(encoding="utf-8")
     title, body = md_to_html(md)
-    graph = graph_svg(case["graph"], g, weak)
+    graph = graph_svg(case["graph"], g, weak, products)
     body = body.replace("</section>", "</section>", 1)
     first = body.index("</section>") + len("</section>")
     body = body[:first] + f"<section><p class='eyebrow'>The network</p>{graph}</section>" + body[first:]
@@ -371,6 +473,29 @@ def build_case(case, g, sources, weak=frozenset()):
     (DOCS / "cases" / f"{case['slug']}.html").write_text(html_out, encoding="utf-8")
 
 
+def network_motif(cases):
+    """Static SVG: ЦБСТ at the centre, one spoke per published case hub. Real
+    slugs/titles, frozen positions -- a diagram of the actual site content,
+    not decoration (see the artifact-design 'structure is information' rule)."""
+    pub = [c for c in cases if c["status"] == "published"]
+    n = len(pub)
+    cx, cy, r = 100, 100, 62
+    parts = [f'<circle cx="{cx}" cy="{cy}" r="17" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.2"/>',
+              f'<text class="hub" x="{cx}" y="{cy+3}" text-anchor="middle">ЦБСТ</text>']
+    short = {"arkhangel": "Архангел", "gagaring": "Гагаринг", "goudron": "ГОУДРОН", "ovod": "Овод",
+             "piranya": "Пиранья", "bulat": "Булат", "basirtk": "БАСиРТК"}
+    for i, c in enumerate(pub):
+        a = -math.pi / 2 + i * 2 * math.pi / n
+        x, y = cx + r * math.cos(a), cy + r * math.sin(a)
+        lx, ly = cx + (r + 16) * math.cos(a), cy + (r + 16) * math.sin(a)
+        anchor = "middle" if abs(math.cos(a)) < 0.35 else ("start" if math.cos(a) > 0 else "end")
+        parts.append(f'<line x1="{cx}" y1="{cy}" x2="{x:.1f}" y2="{y:.1f}" stroke="var(--rule)" stroke-width="1"/>')
+        parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5.5" fill="var(--panel)" stroke="var(--ink-3)" stroke-width="1"/>')
+        parts.append(f'<text x="{lx:.1f}" y="{ly:.1f}" text-anchor="{anchor}" dominant-baseline="middle">{esc(short.get(c["slug"], c["title"]))}</text>')
+    svg = f'<svg viewBox="-38 -14 276 228" role="img" aria-label="ЦБСТ and its {n} documented case-study networks">{"".join(parts)}</svg>'
+    return f'<div class="net-motif">{svg}<p class="cap">{n} of the registry\'s networks, one link each to the ЦБСТ hub</p></div>'
+
+
 def build_indexes(stats):
     cards = []
     for c in CASES:
@@ -382,18 +507,35 @@ def build_indexes(stats):
         page("Case studies", f'<section><div class="case-list">{"".join(cards)}</div></section>', "../", "Cases",
              "Each case is one network told from the registry: a flat finding, a static graph excerpt, graded claims and every source."),
         encoding="utf-8")
+
+    hero_note = ('<p>Every entity, person and claim below sits in the registry with a source id and a grade. '
+                 'This page routes to the case studies, the full network graph, and the guided read.</p>')
+    hero = f'<div class="hero-row"><div class="hero-text">{hero_note}</div>{network_motif(CASES)}</div>'
+
+    feed_items = []
+    for c in CASES:
+        if c["status"] != "published":
+            continue
+        kick = esc(c.get("kicker", "Case study"))
+        feed_items.append(
+            f'<a href="cases/{c["slug"]}.html"><span class="kick">{kick}</span>'
+            f'<div><h3>{esc(c["title"])}</h3><p>{esc(c["line"])}</p></div></a>')
+    case_feed = (f'<section><p class="eyebrow">Start here — {len(feed_items)} case studies</p>'
+                 f'<div class="case-feed">{"".join(feed_items)}</div></section>')
+
     routes = [
-        ("Start here", "Case studies", "One network at a time, each with a flat finding, a graph excerpt and graded claims.", "cases/index.html"),
         ("Explore", "Network graph", f"{stats['nodes']:,} nodes and {stats['edges']:,} sourced ties. Search, filter, click into any node.", "relationship-graph.html"),
         ("Look up", "Profiles", f"{stats['entities']} entities, {stats['people']} people and the flagship products, one page each.", "profiles/index.html"),
         ("Guided read", "From ЦБСТ to the Front", "A short guide to the supply chains, for a first read.", "story.html"),
-        ("Full record", "Registry dossier", "The complete written brief the registry grew out of.", "dossier.html"),
+        ("All cases", "Case index", "The full case list, including any in preparation.", "cases/index.html"),
     ]
     rc = "".join(f'<a class="route" href="{h}"><span class="lbl">{esc(l)}</span><span class="name">{esc(n)}</span><span class="note">{esc(t)}</span></a>' for l, n, t, h in routes)
     legend = ('<div class="legend"><span><span class="tag t-doc">Primary doc</span> verified in an official extract, a platform document, or a post that exists (proves it was said, not that it is true)</span>'
               '<span><span class="tag t-press">Press-reported</span> attributed to a named outlet, wording not verified</span>'
               '<span><span class="tag t-open">Open</span> unresolved: not published as fact</span></div>')
-    body = (f'<section><div class="route-grid">{rc}</div></section>'
+    body = (f'<section>{hero}</section>'
+            f'{case_feed}'
+            f'<section><p class="eyebrow">More ways in</p><div class="route-grid secondary">{rc}</div></section>'
             f'<section><p class="eyebrow">How to read a claim</p><div class="prose"><p>Every claim on these pages carries a source id that resolves to a captured document, and a grade. '
             f'The registry holds {stats["entities"]} entities, {stats["people"]} people and {stats["sources"]:,} sources. Where a claim rests on the subject\'s own channel alone, it is graded Open.</p></div>{legend}</section>')
     (DOCS / "index.html").write_text(
@@ -409,10 +551,23 @@ def main():
     ppl = json.load(open(REG / "people.json", encoding="utf-8"))
     weak = {r["slug"] for r in list(ents) + list(ppl)
             if r.get("sanctions") and all("PLAUSIBLE" in str(s.get("note") or "") and "ID-CONFIRMED" not in str(s.get("note") or "") for s in r["sanctions"])}
+    # Product-node id -> classify_product_icon.py category, keyed the same
+    # way graph node ids are built (product::<owner_slug>::<slug-of-name>)
+    # so graph_svg() can look a node straight up without re-deriving the
+    # entity/product it came from.
+    products = {}
+    for e in ents:
+        for p in e.get("products") or []:
+            if not isinstance(p, dict):
+                continue  # a handful of entities carry bare product-name strings, not records
+            for n in g["nodes"]:
+                if n["kind"] == "product" and n.get("owner_slug") == e["slug"] and n["label"] == p.get("name_ru"):
+                    cat, _tier = classify_product(p)
+                    products[n["id"]] = cat
     (DOCS / "cases").mkdir(exist_ok=True)
     for c in CASES:
         if c["status"] == "published":
-            build_case(c, g, sources, weak)
+            build_case(c, g, sources, weak, products)
     build_indexes({"nodes": g["node_count"], "edges": g["edge_count"], "entities": len(ents), "people": len(ppl), "sources": len(sources)})
     print("wrote docs/index.html, docs/cases/index.html and", sum(c["status"] == "published" for c in CASES), "case page(s)")
 

@@ -13,10 +13,12 @@ of preference:
      that doesn't happen to use this project's specific convention.
 
 Accepts zero or more file paths/glob patterns; defaults to docs/index.html
-(the only page that has existed until Phase 4 adds more) when none are
-given. Every generated page from a future scripts/build_site.py should be
-checked the same way — pass a glob (e.g. "docs/companies/*.html") rather
-than hardcoding each filename.
+when none are given (docs/dossier.html moved to notes/dossier_draft.html
+2026-09-21 and is no longer published — see the Publishing section of
+CLAUDE.md — so it's no longer the default target here). Every generated
+page from build_case_pages.py/build_company_profile.py should be checked
+the same way — pass a glob (e.g. "docs/cases/*.html") rather than
+hardcoding each filename.
 """
 import glob
 import re
@@ -24,7 +26,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-DEFAULT_PATHS = [REPO / "docs" / "dossier.html"]
+DEFAULT_PATHS = [REPO / "docs" / "index.html"]
 
 TAGS = [
     "section", "table", "div", "blockquote", "tr", "td", "ul", "li", "ol",

@@ -249,13 +249,13 @@ def load_known_text(repo_root=None) -> str:
             except OSError:
                 continue
 
-    brief = repo / "docs" / "dossier.html"
+    # The former docs/dossier.html — moved to notes/dossier_draft.html
+    # 2026-09-21, it's an internal draft, not a published page, but it's
+    # still real prose worth checking "already documented?" against.
+    brief = repo / "notes" / "dossier_draft.html"
     if brief.exists():
         chunks.append(brief.read_text(encoding="utf-8"))
 
-    # Generated pages, once they exist.
-    for extra in sorted((repo / "docs").glob("dossier*.html")):
-        chunks.append(extra.read_text(encoding="utf-8"))
     for extra in sorted((repo / "docs" / "companies").glob("*.html")):
         chunks.append(extra.read_text(encoding="utf-8"))
 
