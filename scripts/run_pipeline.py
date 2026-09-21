@@ -36,7 +36,7 @@ LOCAL_STAGES = [
     ("check_registry.py", []),
     ("reverse_source_index.py", []),
     ("graph_quality_report.py", ["--out", "data/registry/relationship_graph_quality.md"]),
-    ("build_graph_explorer.py", []),
+    ("refresh_graph_page_data.py", []),
     ("coverage_report.py", []),
 ]
 
