@@ -146264,5 +146264,39 @@
     "sha256": "214b3264dc7e1f7145af8deefafadc21c5e96ef51817fa83b7358e70419e0e0d",
     "_verified": false,
     "_origin": "manifest"
+  },
+  {
+    "id": "s7979",
+    "type": "web",
+    "path": "data/sources/WEBCAPTURE_772377497922_20260921_fnsmart-gnb-brand-page.html",
+    "url": "https://fnsmart.ru/brand/gnb/",
+    "captured_date": "2026-09-21",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": ["772377497922"],
+    "entities": ["ip-popov-aleksandr-sergeevich"],
+    "sha256": "d0ae3c49b7a4c8fab38b76f664f01a396d59e386d80cf8e06a194b724a95adf9",
+    "_verified": true,
+    "_origin": "manual"
+  },
+  {
+    "id": "s7980",
+    "type": "web",
+    "path": "data/sources/WEBCAPTURE_772377497922_20260921_fnsmart-legal-info-page.html",
+    "url": "https://fnsmart.ru/info/",
+    "captured_date": "2026-09-21",
+    "fiscal_year": null,
+    "as_of": "2026-09-21",
+    "as_of_method": "captured page's own printed legal-entity block",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": ["772377497922"],
+    "entities": ["ip-popov-aleksandr-sergeevich"],
+    "sha256": "2a283463ac3b22eb48089754e9ffd4852f8097e5f8a2de05cd56bb8431bfd786",
+    "_verified": true,
+    "_origin": "manual"
   }
 ]
