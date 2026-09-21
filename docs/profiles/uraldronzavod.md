@@ -29,7 +29,7 @@
 **Sanctioned** [s0755]
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

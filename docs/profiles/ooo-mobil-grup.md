@@ -19,6 +19,8 @@
 |---|---|---|
 | Замковой Дмитрий Сергеевич | — | from corrections:add_entities, unverified |
 
+- 4 OCCRP Aleph match(es) (screened 2026-09-19).
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._

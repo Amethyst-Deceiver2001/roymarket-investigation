@@ -10,7 +10,7 @@
 - **Wildberries overlap:** not_checked
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
-- 1 OCCRP Aleph match(es) (screened 2026-09-05).
+- 1 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 
@@ -20,6 +20,7 @@
 - **Address:** г. Санкт-Петербург, пр-кт. Товарищеский, д. 16, корп. 1, кв. 253; также Ленинградская обл., Всеволожский р-н, п. Мурино, ул. Шувалова, д. 17, кв. 181
 - **ИНН:** 781154619843
 - Индивидуальный предприниматель
+- `sanctions lead`
 - <https://vk.ru/sergei_shandobilo>
 
 ---

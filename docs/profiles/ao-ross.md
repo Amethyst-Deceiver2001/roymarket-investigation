@@ -65,7 +65,7 @@
 - Разработка, производство, распространение шифровальных (криптографических) средств и защищённых с их использованием систем [s0009]
 
 - 3 OpenSanctions match(es) (screened 2026-09-06).
-- 3 OCCRP Aleph match(es) (screened 2026-09-05).
+- 3 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

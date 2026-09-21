@@ -61,7 +61,7 @@
 **Sanctioned** [s0734]
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 1 OCCRP Aleph match(es) (screened 2026-09-05).
+- 1 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

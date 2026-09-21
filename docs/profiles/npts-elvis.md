@@ -162,7 +162,7 @@
 **US (OFAC, Russia Harmful Foreign Activities Sanctions), Canada (Special Economic Measures Act), Switzerland (SECO, Ukraine-related measures), US-BIS-EL, Ukraine (Presidential sanctions decree/list)** [s0789]
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 

@@ -47,7 +47,7 @@
 **AU-UKRAINE, Canada (Special Economic Measures Act), Switzerland (SECO, Ukraine-related measures), SG-MAS, US (OFAC, Russia Harmful Foreign Activities Sanctions), GB-RUS, EU (Ukraine-related restrictive measures), NZ-RSA2022, Ukraine (Presidential sanctions decree/list)** [s0792]
 
 - 2 OpenSanctions match(es) (screened 2026-09-06).
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 

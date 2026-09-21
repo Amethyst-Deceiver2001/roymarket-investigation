@@ -88,7 +88,7 @@
 **Switzerland (SECO, Ukraine-related measures), EU (Ukraine-related restrictive measures), US (OFAC, Russia Harmful Foreign Activities Sanctions), Ukraine (Presidential sanctions decree/list)** [s0795]
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Registry flags
 
@@ -134,6 +134,7 @@
 - **Address:** г. Санкт-Петербург, пр-кт. Товарищеский, д. 16, корп. 1, кв. 253; также Ленинградская обл., Всеволожский р-н, п. Мурино, ул. Шувалова, д. 17, кв. 181
 - **ИНН:** 781154619843
 - Директор по развитию
+- `sanctions lead`
 - <https://vk.ru/sergei_shandobilo>
 
 ### Кузнецов Руслан Николаевич

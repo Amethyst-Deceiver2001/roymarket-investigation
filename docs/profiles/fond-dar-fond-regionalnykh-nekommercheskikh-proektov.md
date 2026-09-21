@@ -33,6 +33,12 @@
 |---|---|---|
 | 119049, Москва, пер. 2-й Спасоналивковский, д. 6 | 2016-01-01 | ГРН 2167700174178 — address record; current as of the 15.08.2026 extract [s0214] |
 
+### Legal name
+
+| Value | As of | Note |
+|---|---|---|
+| Фонд региональных некоммерческих проектов «ДАР» | 2026-09-07 | Full official name per the ЕГРЮЛ выписка (ОГРН 1067799028923), which prints it in capitals with straight quotes; quotes normalised here. name_ru carries a shortened alias, so a reference using the full name (fond-nasha-pravda's founders, [s7370]) could not match it. [s6699] |
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -43,7 +49,7 @@
 | 2024 | — | ₽197,422,000 | [s0299] |
 | 2025 | — | ₽747,707,000 | [s0300] |
 
-- 5 OCCRP Aleph match(es) (screened 2026-09-07).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 
@@ -61,6 +67,7 @@
 | [s0298] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7705517400_2023_20260815.zip) | 2026-08-15 | 2023-12-31 |
 | [s0299] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7705517400_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
 | [s0300] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7705517400_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
+| [s6699] | EGRUL extract | EGRUL extract (EGRUL_7705517400_20260907_fond-dar-fond-regionalnykh-nekommercheskikh-proektov.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

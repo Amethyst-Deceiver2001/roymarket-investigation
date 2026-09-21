@@ -66,13 +66,17 @@
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 2 OpenSanctions match(es) (screened 2026-09-06).
-- 4 OCCRP Aleph match(es) (screened 2026-09-05).
+- 4 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 
 ### Бежанов Иван Валериевич
 
 - Генеральный директор (former); shareholder 37.2% (5,580 of 15,000 shares) directly (?–2024-05-03)
+
+### Makhnev Aleksandr Igorevich — Махнёв Александр Игоревич
+
+- Технический директор; shareholder 4.5% (675 of 15,000 shares) (2024-08-01–present)
 
 ### Nazarov Oleg Ramilevich — Назаров Олег Рамилевич
 

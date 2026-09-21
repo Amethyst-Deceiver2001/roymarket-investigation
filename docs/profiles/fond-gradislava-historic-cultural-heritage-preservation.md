@@ -33,6 +33,12 @@
 |---|---|---|
 | 115172, Москва, наб. Котельническая, д. 25, стр. 1, офис 18 | 2013-09-05 | ГРН 2137799137815, 05.09.2013 — same suite Фонд «Наша Правда» was registered into (офис 18 комната 5) on 21.03.2023 [s0216] |
 
+### Legal name
+
+| Value | As of | Note |
+|---|---|---|
+| Некоммерческий фонд содействия сохранению историко-культурного наследия «Градислава» | 2026-09-07 | Full official name per the ЕГРЮЛ выписка (ОГРН 1117799007050), which prints it in capitals with straight quotes; quotes normalised here. name_ru carries a shortened alias, so a reference using the full name (fond-nasha-pravda's founders, [s7370]) could not match it. [s6698] |
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -46,7 +52,7 @@
 
 - Trivial routine administrative matter, not a commercial dispute: ОСФР (Пенсионный фонд) sought a court order for a ₽4,000 fine over a late СЗВ-М filing for Nov 2022. The fund objected and the court cancelled its own судебный приказ on 27.07.2023 — a standard outcome for any first objection under АПК РФ, not a substantive finding for either side. Recorded for completeness so this pair of files isn't re-read as an open question later. [s5265]
 
-- 5 OCCRP Aleph match(es) (screened 2026-09-07).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 
@@ -68,6 +74,7 @@
 | [s0294] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | [s0295] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | [s5265] | arbitration court filing | arbitration court filing (A40-106643-2023_20230728_Opredelenie.pdf) | 2023-07-28 | 2023-07-27 |
+| [s6698] | EGRUL extract | EGRUL extract (EGRUL_7704278421_20260907_fond-gradislava-historic-cultural-heritage-preservation.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7521] | press coverage | press coverage (PRESS_20230418_vedomosti-fond-nasha-pravda-rubtsov-gradislava.html) | 2023-04-18 | 2023-04-18 |
 
 ---

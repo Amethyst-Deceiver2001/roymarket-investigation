@@ -44,6 +44,8 @@
 
 ### Dmitry Olegovich Rogozin — Рогозин Дмитрий Олегович
 
+- **DOB:** 21.12.1963
+- **Birthplace:** Москва (Moscow)
 - Self-described "флагман движения" (movement flagship/figurehead) -- named backer, corroborated by his own channel (2024-11-05–present)
 - Personally cross-posted a Проект «Архангел» recruitment announcement on his own channel, with enthusiastic endorsement framing (2025-04-22–present)
 

@@ -45,7 +45,7 @@
 | 2024 | ₽26,595,000 | ₽-38,340,000 | [s6558] |
 | 2025 | ₽43,427,000 | ₽-14,175,000 | [s6559] |
 
-- 3 OCCRP Aleph match(es) (screened 2026-09-05).
+- 3 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

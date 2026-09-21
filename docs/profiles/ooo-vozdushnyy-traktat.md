@@ -52,12 +52,13 @@
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
-- 3 OCCRP Aleph match(es) (screened 2026-09-05).
+- 3 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 
 ### Черезов Андрей Павлович
 
+![Черезов Андрей Павлович](../images/cherezov-andrey-pavlovich_portrait_mash-patriot-2024.jpg)
 - **ИНН:** 712802968839
 - Директор и учредитель (100%) (2023-11-28–present)
 

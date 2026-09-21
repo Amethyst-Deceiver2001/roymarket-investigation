@@ -42,7 +42,7 @@
 | 2022 | ₽9,984,000 | ₽-331,000 | [s6461] |
 | 2024 | — | — | [s6462] |
 
-- 1 OCCRP Aleph match(es) (screened 2026-09-05).
+- 1 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

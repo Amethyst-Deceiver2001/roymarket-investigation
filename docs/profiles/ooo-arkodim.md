@@ -19,7 +19,7 @@
 |---|---|---|
 | Барахтин Артём Владимирович / Соловьёв Константин Юрьевич (50/50) | — | from brief:manufacturers-table:line-1004, unverified |
 
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

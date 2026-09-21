@@ -106,6 +106,24 @@ strong { font-weight: 640; }
 code, .id { font-family: var(--mono); font-size: .86em; }
 .id { color: var(--ink-2); white-space: nowrap; }
 
+/* ---------- citation popovers: a [sNNNN] mark is a button that opens the
+   source's own locator/dates inline, so a reader can check a claim without
+   losing their place in the paragraph. Plain-text [sNNNN] (id ranges,
+   multi-id lists) is left alone -- see profile_text.py / build_case_pages.py
+   inline(). Popover is Baseline "Newly available" (since 2025-01-27): where
+   unsupported the button just renders inert, still showing the bracketed id
+   as before -- no polyfill, per the no-fallback-for-a-read-only-page call. */
+.cite { font: inherit; font-family: var(--mono); font-size: .86em; color: var(--ink-2); background: none; border: none; padding: 0; margin: 0; cursor: pointer; white-space: nowrap; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; text-decoration-color: var(--ink-3); }
+.cite:hover, .cite:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
+.cite:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+[popover].cite-pop { margin: auto; max-width: 22rem; background: var(--panel); color: var(--ink); border: 1px solid var(--rule-soft); border-radius: 4px; padding: .9rem 1.05rem; box-shadow: var(--shadow); font-family: var(--sans); }
+.cite-pop::backdrop { background: rgba(18, 22, 27, .25); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cite-pop::backdrop { background: rgba(0, 0, 0, .5); } }
+:root[data-theme="dark"] .cite-pop::backdrop { background: rgba(0, 0, 0, .5); }
+.cite-pop .cite-pop-id { margin: 0 0 .4rem; font-family: var(--mono); font-size: .7rem; letter-spacing: .09em; text-transform: uppercase; color: var(--accent); }
+.cite-pop .cite-pop-loc { margin: 0 0 .35rem; font-size: .88rem; line-height: 1.4; word-break: break-word; }
+.cite-pop .cite-pop-meta { margin: 0; font-family: var(--mono); font-size: .72rem; color: var(--ink-3); }
+
 /* ---------- confidence tags ---------- */
 .tag { display: inline-block; font-family: var(--mono); font-size: .64rem; letter-spacing: .09em; text-transform: uppercase; padding: .18em .5em; border-radius: 2px; white-space: nowrap; vertical-align: middle; font-weight: 600; }
 .t-doc { background: var(--ok-bg); color: var(--ok); }

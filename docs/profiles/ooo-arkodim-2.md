@@ -42,6 +42,8 @@
 | 2024 | — | — | [s7479] |
 | 2025 | — | — | [s7480] |
 
+- 3 OCCRP Aleph match(es) (screened 2026-09-19).
+
 ## Principals & persons of interest
 
 ### Барахтин Артём Владимирович

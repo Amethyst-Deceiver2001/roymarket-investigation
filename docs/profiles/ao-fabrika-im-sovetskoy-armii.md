@@ -39,7 +39,7 @@
 | 2025 | ₽69,277,000 | ₽3,141,000 | [s6573] |
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
-- 3 OCCRP Aleph match(es) (screened 2026-09-05).
+- 3 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

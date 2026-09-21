@@ -34,6 +34,8 @@
 | 2024 | ₽5,912,000 | — | [s7459] |
 | 2025 | ₽3,618,000 | ₽176,000 | [s7460] |
 
+- 2 OCCRP Aleph match(es) (screened 2026-09-19).
+
 ## Principals & persons of interest
 
 ### Барахтин Артём Владимирович

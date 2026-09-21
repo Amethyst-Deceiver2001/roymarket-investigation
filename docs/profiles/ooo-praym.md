@@ -41,7 +41,7 @@
 - **ЕЖ-РМ** — Stationary counter-drone jamming/detection system — one master module (ЕЖ1-РМ) plus up to 4 slave modules; radio-monitors for drone signals and jams navigation/control/comms across multiple channels (basic config: 20 channels; enhanced ЕЖ-РМ-4ПМ: 5 modules, 53 combined channels). Networkable for area coverage. Control software from ₽225,000. [s0494]
 
 - 5 OpenSanctions match(es) (screened 2026-09-06).
-- 3 OCCRP Aleph match(es) (screened 2026-09-05).
+- 3 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

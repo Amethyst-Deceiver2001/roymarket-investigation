@@ -112,7 +112,7 @@
 **OCCRP Aleph 'Global Sanctions Database' aggregation — specific regime/list not yet identified** [s0592]
 
 - 2 OpenSanctions match(es) (screened 2026-09-06).
-- 1 OCCRP Aleph match(es) (screened 2026-09-05).
+- 1 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 

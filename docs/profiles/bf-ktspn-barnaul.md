@@ -20,7 +20,7 @@
 | Еремеев Владимир Евгеньевич | 2015-05-25 | Должность: ДИРЕКТОР, личный ИНН 220403285004. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6774] |
 | Еремеев Владимир Евгеньевич | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0568] |
 
-- 4 OCCRP Aleph match(es) (screened 2026-09-05).
+- 4 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

@@ -63,7 +63,7 @@
 **GB-RUS, NZ-RSA2022, Switzerland (SECO, Ukraine-related measures), Australia (Autonomous Sanctions, Russia), US-UKRRUS-REL, Canada (Special Economic Measures Act), Ukraine (Presidential sanctions decree/list), US-SSI, Ukraine (war-sanctions.gur.gov.ua, military-industry listing), US-BIS-EL, EU (Ukraine-related restrictive measures)** [s0778]
 
 - 3 OpenSanctions match(es) (screened 2026-09-06).
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

@@ -74,7 +74,7 @@
 
 - Приказ №217 от 27.04.2012. Статус: действующая. [s6439]
 
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

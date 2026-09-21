@@ -129,7 +129,7 @@
 **Canada (Special Economic Measures Act), Switzerland (SECO, Ukraine-related measures), US-BIS-EL, NZ-RSA2022, Ukraine (Presidential sanctions decree/list)** [s0763]
 
 - 3 OpenSanctions match(es) (screened 2026-09-06).
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

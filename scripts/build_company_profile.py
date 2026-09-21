@@ -555,7 +555,7 @@ class ProfileBuilder:
 
         OUT_DIR.mkdir(parents=True, exist_ok=True)
         html = html_env.get_template("company_profile.html.jinja2").render(**ctx)
-        html = bracket_source_ids_html(html)
+        html = bracket_source_ids_html(html, self.src_by_id)
         (OUT_DIR / f"{slug}.html").write_text(html, encoding="utf-8")
         md = md_env.get_template("company_profile.md.jinja2").render(**ctx)
         md = bracket_source_ids_md(md)

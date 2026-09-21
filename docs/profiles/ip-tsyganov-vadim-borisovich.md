@@ -30,7 +30,7 @@
 - customer: Главное управление МЧС России по Курской области; date: 2024-10-29; items: Оперативная закупка детекторов беспилотных летательных аппаратов (дальность обнаружения до 1,5 км) для оснащения личного состава пожарно-спасательной группировки Курской области. Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ — federal-level emergency status declared for Kursk region от 07.08.2024, justification citing МЧС Минстра Куренкова's directive and explicitly attributing the emergency to «неизбирательные террористические атаки ВСУ» (official-framing quote, verbatim from the justification document, not this investigation's own characterization).; reg_number: 1463204748024000101; value_rub: 16192000; event_type: contract_award; actor_to: {'kind': 'government_customer', 'id': None, 'label': 'Главное управление МЧС России по Курской области'} [s1460]
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

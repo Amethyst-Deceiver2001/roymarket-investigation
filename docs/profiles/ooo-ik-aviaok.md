@@ -32,6 +32,8 @@
 | 2024 | — | ₽-651,000 | [s6975] |
 | 2025 | ₽19,417,000 | ₽674,000 | [s6976] |
 
+- 3 OCCRP Aleph match(es) (screened 2026-09-19).
+
 ## Principals & persons of interest
 
 ### Степанов Валерий Юрьевич

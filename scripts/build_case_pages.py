@@ -22,6 +22,7 @@ import re
 from pathlib import Path
 
 from classify_product_icon import classify as classify_product, CATEGORY_LABELS
+from profile_text import popover_html
 
 REPO = Path(__file__).resolve().parent.parent
 DOCS = REPO / "docs"
@@ -227,6 +228,14 @@ CASES = [
 
 CHIPS = {"doc": ("t-doc", "Primary doc"), "press": ("t-press", "Press-reported"), "open": ("t-open", "Open")}
 
+# Set once per build_case() call: lets inline() turn a single-id [sNNNN]
+# citation into a native-popover button (see .cite/.cite-pop in profile.css
+# and profile_text.py, which this reuses). A multi-id/range bracket
+# ([s7973, s7975-s7980]) is left as plain text -- one popover per id would
+# be more machinery than the case-page prose actually needs.
+_CITE_SRC_BY_ID = {}
+_CITE_USED = set()
+
 NAV = ('<nav class="topnav" aria-label="Site">'
        '<a href="{r}index.html">Home</a><a href="{r}cases/index.html">Cases</a>'
        '<a href="{r}relationship-graph.html">Graph</a><a href="{r}profiles/index.html">Profiles</a>'
@@ -281,8 +290,14 @@ def inline(t):
     t = re.sub(r"\{(doc|press|open)\}", lambda m: f'<span class="tag {CHIPS[m[1]][0]}">{CHIPS[m[1]][1]}</span>', t)
     t = re.sub(r"`([^`]+)`", r"<code>\1</code>", t)
     t = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", t)
+    def cite(m):
+        sid = m[1]
+        if re.fullmatch(r"s\d{4}", sid) and sid in _CITE_SRC_BY_ID:
+            _CITE_USED.add(sid)
+            return f'<button type="button" class="cite" popovertarget="cite-{sid}">[{sid}]</button>'
+        return f'<span class="id">[{sid}]</span>'
     t = re.sub(r"\[((?:s\d{4}(?:[–-]s\d{4})?(?:, ?)?)+|[^\]]*(?:s\d{4}|msg|t\.me)[^\]]*)\]",
-              lambda m: f'<span class="id">[{m[1]}]</span>', t)
+              cite, t)
     return t
 
 
@@ -449,6 +464,9 @@ def page(title, body, rel, kicker, standfirst=None, extra_head=""):
 
 
 def build_case(case, g, sources, weak=frozenset(), products=None):
+    global _CITE_SRC_BY_ID, _CITE_USED
+    _CITE_SRC_BY_ID = {s["id"]: s for s in sources}
+    _CITE_USED = set()
     md = (REPO / "notes" / f"case_study_{case['slug']}.md").read_text(encoding="utf-8")
     title, body = md_to_html(md)
     graph = graph_svg(case["graph"], g, weak, products)
@@ -470,6 +488,9 @@ def build_case(case, g, sources, weak=frozenset(), products=None):
               '<span><span class="tag t-open">Open</span> unconfirmed, incl. own-channel claims</span></div>')
     html_out = page(title, f'<div class="case-body">{intro}{legend}{body}{src}</div>', "../",
                     case.get("kicker", "Case study · no confirmed ЦБСТ tie"))
+    if _CITE_USED:
+        pops = "".join(popover_html(sid, _CITE_SRC_BY_ID[sid]) for sid in sorted(_CITE_USED))
+        html_out = html_out.replace("</body>", pops + "</body>", 1)
     (DOCS / "cases" / f"{case['slug']}.html").write_text(html_out, encoding="utf-8")
 
 

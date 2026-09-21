@@ -49,7 +49,7 @@
 | 2024 | ₽5,973,000 | — | [s0556] |
 | 2025 | ₽36,505,000 | — | [s0557] |
 
-- 3 OCCRP Aleph match(es) (screened 2026-09-05).
+- 3 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Web & social presence
 

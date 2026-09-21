@@ -45,7 +45,7 @@
 | — | 1032326 | 20230912 | 01.07.2024 | 06 (UAV/defense terms present: военн) |
 | — | 1032339 | 20230928 | 01.07.2024 | 06 (UAV/defense terms present: военн) |
 
-- 2 OCCRP Aleph match(es) (screened 2026-09-05).
+- 2 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 

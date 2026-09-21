@@ -36,14 +36,21 @@
     <div class="scroll"><table>
       <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
       <tbody>
-        <tr><td>— (EGRUL-restricted)</td><td class="num">2026-09-07</td><td>Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. <span class="id">[s6869]</span></td></tr>
+        <tr><td>— (EGRUL-restricted)</td><td class="num">2026-09-07</td><td>Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. <button type="button" class="cite" popovertarget="cite-s6869">[s6869]</button></td></tr>
+      </tbody>
+    </table></div>
+    <h3>Founders / ownership</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>ООО «РТ-Развитие бизнеса» (ИНН 7704861136) — 74.9998750006% (300 001 из 400 002 акций) / Гаврилов Александр Валерьевич — 25.0001249994% (100 001 акция)</td><td class="num">2025-12-31</td><td>Пояснительная записка к БФО за 2025 год: «Акционерами общества являются». ЕГРЮЛ для АО акционеров не раскрывает (только держателя реестра, АО «РТ-Регистратор»), поэтому источник — БФО, а не выписка. <button type="button" class="cite" popovertarget="cite-s0423">[s0423]</button></td></tr>
       </tbody>
     </table></div>
     <h3>Charter capital</h3>
     <div class="scroll"><table>
       <thead><tr><th>Value</th><th>As of</th><th>Note</th></tr></thead>
       <tbody>
-        <tr><td>400002</td><td class="num">2024-01-24</td><td>Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). <span class="id">[s6869]</span></td></tr>
+        <tr><td>400002</td><td class="num">2024-01-24</td><td>Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). <button type="button" class="cite" popovertarget="cite-s6869">[s6869]</button></td></tr>
       </tbody>
     </table></div>
   </section>
@@ -54,9 +61,9 @@
     <div class="scroll"><table>
       <thead><tr><th>Year</th><th>Revenue</th><th>Profit</th><th>Source</th></tr></thead>
       <tbody>
-        <tr><td>2023</td><td class="num">—</td><td class="num">₽-2,532,000</td><td><span class="id">[s0421]</span></td></tr>
-        <tr><td>2024</td><td class="num">—</td><td class="num">₽-43,027,000</td><td><span class="id">[s0422]</span></td></tr>
-        <tr><td>2025</td><td class="num">₽60,712,000</td><td class="num">₽-3,953,000</td><td><span class="id">[s0423]</span></td></tr>
+        <tr><td>2023</td><td class="num">—</td><td class="num">₽-2,532,000</td><td><button type="button" class="cite" popovertarget="cite-s0421">[s0421]</button></td></tr>
+        <tr><td>2024</td><td class="num">—</td><td class="num">₽-43,027,000</td><td><button type="button" class="cite" popovertarget="cite-s0422">[s0422]</button></td></tr>
+        <tr><td>2025</td><td class="num">₽60,712,000</td><td class="num">₽-3,953,000</td><td><button type="button" class="cite" popovertarget="cite-s0423">[s0423]</button></td></tr>
       </tbody>
     </table></div>
   </section>
@@ -86,7 +93,7 @@
   <section id="open-questions">
     <p class="eyebrow">Open questions</p>
     <ul class="plain">
-<li>2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. Director/leadership not returned by the open-API quick-lookup for this ИНН (large АО, likely board-governed rather than a single listed GD in this lookup format) -- a full signed EGRUL extract would be needed to resolve founders/leadership structure. <span class="id">[s0165]</span></li><li>2026-09-14 re-pull (full signed ЕГРЮЛ выписка, egrul_vypiska_pull.py) CLOSES the prior open question about resolving shareholders via a full extract: this АО&#39;s shares are held via an independent registrar (АО «РТ-Регистратор», ИНН 5407175878, ОГРН 1025403189790) rather than listed directly in EGRUL -- standard for a JSC of this size, and means shareholder identity is genuinely not obtainable from EGRUL by any pull, full or partial. Director/representative access remains restricted (Федеральный закон №129-ФЗ, confirmed still in force as of this pull). Resolving ownership further would need a registrar-held reestr request, out of scope for this project&#39;s tooling. <span class="id">[s7455]</span></li>    </ul>
+<li>2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. Director/leadership not returned by the open-API quick-lookup for this ИНН (large АО, likely board-governed rather than a single listed GD in this lookup format) -- a full signed EGRUL extract would be needed to resolve founders/leadership structure. <button type="button" class="cite" popovertarget="cite-s0165">[s0165]</button></li><li>2026-09-14 re-pull (full signed ЕГРЮЛ выписка, egrul_vypiska_pull.py) CLOSES the prior open question about resolving shareholders via a full extract: this АО&#39;s shares are held via an independent registrar (АО «РТ-Регистратор», ИНН 5407175878, ОГРН 1025403189790) rather than listed directly in EGRUL -- standard for a JSC of this size, and means shareholder identity is genuinely not obtainable from EGRUL by any pull, full or partial. Director/representative access remains restricted (Федеральный закон №129-ФЗ, confirmed still in force as of this pull). Resolving ownership further would need a registrar-held reestr request, out of scope for this project&#39;s tooling. <button type="button" class="cite" popovertarget="cite-s7455">[s7455]</button></li>    </ul>
   </section>
 
   <section id="sources">
@@ -131,4 +138,4 @@
   }
 })();
 </script>
-</body></html>
+<div id="cite-s0165" popover class="cite-pop"><p class="cite-pop-id">s0165</p><p class="cite-pop-loc">EGRULAPI_9726051114_20260822_ao-khk-gumich.json</p><p class="cite-pop-meta">egrul_api · captured 2026-08-22 · as of 2026-08-22</p></div><div id="cite-s0421" popover class="cite-pop"><p class="cite-pop-id">s0421</p><p class="cite-pop-loc">РЕСУРС_БФО_9726051114_2023_20260818.zip</p><p class="cite-pop-meta">bfo · captured 2026-08-18 · as of 2023-12-31</p></div><div id="cite-s0422" popover class="cite-pop"><p class="cite-pop-id">s0422</p><p class="cite-pop-loc">РЕСУРС_БФО_9726051114_2024_20260818.zip</p><p class="cite-pop-meta">bfo · captured 2026-08-18 · as of 2024-12-31</p></div><div id="cite-s0423" popover class="cite-pop"><p class="cite-pop-id">s0423</p><p class="cite-pop-loc">РЕСУРС_БФО_9726051114_2025_20260818.zip</p><p class="cite-pop-meta">bfo · captured 2026-08-18 · as of 2025-12-31</p></div><div id="cite-s6869" popover class="cite-pop"><p class="cite-pop-id">s6869</p><p class="cite-pop-loc">EGRUL_9726051114_20260907_ao-khk-gumich.pdf</p><p class="cite-pop-meta">egrul · captured 2026-09-07 · as of 2026-09-07</p></div><div id="cite-s7455" popover class="cite-pop"><p class="cite-pop-id">s7455</p><p class="cite-pop-loc">EGRUL_9726051114_20260914_ao-khk-gumich.pdf</p><p class="cite-pop-meta">egrul · captured 2026-09-14 · as of 2026-09-14</p></div></body></html>
