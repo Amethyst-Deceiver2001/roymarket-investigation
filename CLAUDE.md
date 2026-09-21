@@ -337,6 +337,15 @@ traceable ЦБСТ edge" based on a 1-hop check, when a real 3-hop path
 the graph. Before asserting any entity/person is unconnected to the
 network, run an actual BFS over `relationship_graph.json` treating every
 edge type as undirected for reachability, not a single-hop scan.
+**`scripts/graph_query.py`** does exactly this BFS for you: a name/slug
+neighborhood (`python3 scripts/graph_query.py "Цыганов Вадим Борисович"`,
+fuzzy-resolved via `registry_lookup.py`'s `Registry.find()`) or a shortest
+path between two nodes (`--between "A" "B"`), printed as cited
+`(source) --[type: label]--> (target) [sNNNN]` triples with any
+source-less edge flagged in a trailing warning. Local, no network, no LLM
+call -- it prints grounded context to read and verify, it does not answer
+a question on its own; reach for it before ever asserting two things are
+(un)connected.
 
 `scripts/classify_product_icon.py` maps `products[]` entries to the
 17-category Product Icon Set (structured `type_bvs` first, keyword
