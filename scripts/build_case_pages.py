@@ -491,8 +491,16 @@ def graph_svg(cfg, g, weak=frozenset(), products=None):
                TIER_COL.get(n.get("tier"), TIER_COL[None]))
         ring = ' stroke="#c0392b" stroke-width="2.5"' if n.get("sanctioned") and k not in weak else ""
         r = 14 if k == cfg["hub"] else 9
+        # Shape grammar matches the live Network Graph artifact (2026-09-22 fix): circle =
+        # organization, diamond = person, square = product -- was inverted here (circle for
+        # person, rect for org) before this fix, so a reader moving from a case-page excerpt
+        # into the live interactive graph saw the same tier colours mean the same thing but
+        # the same shapes mean different things. government_customer/military_unit keep the
+        # live graph's own circle-with-glyph treatment (they're drawn as a distinct icon
+        # layer there too, not folded into either "organization" or "person").
         if n["kind"] == "person":
-            svg.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="{col}"{ring}/>')
+            pts = f"{x:.0f},{y - r:.0f} {x + r:.0f},{y:.0f} {x:.0f},{y + r:.0f} {x - r:.0f},{y:.0f}"
+            svg.append(f'<polygon points="{pts}" fill="{col}"{ring}/>')
         elif n["kind"] == "government_customer":
             svg.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="{col}"{ring}/>')
             svg.append(icon_glyph_svg(x, y, r, CUSTOMER_ICON_PATHS, CUSTOMER_ICON_CENTER))
@@ -500,19 +508,25 @@ def graph_svg(cfg, g, weak=frozenset(), products=None):
             svg.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="{col}"{ring}/>')
             svg.append(icon_glyph_svg(x, y, r, MILITARY_UNIT_ICON_PATHS, MILITARY_UNIT_ICON_CENTER))
         elif n["kind"] == "product" and products and products.get(k) in PRODUCT_ICONS:
-            svg.append(f'<rect x="{x - r:.0f}" y="{y - r * 0.75:.0f}" width="{2 * r}" height="{1.5 * r:.0f}" rx="3" fill="{col}"{ring}/>')
+            side = 1.7 * r
+            svg.append(f'<rect x="{x - side / 2:.0f}" y="{y - side / 2:.0f}" width="{side:.0f}" height="{side:.0f}" rx="3" fill="{col}"{ring}/>')
             paths, center = PRODUCT_ICONS[products[k]]
             svg.append(icon_glyph_svg(x, y, r * 0.85, paths, center))
+        elif n["kind"] == "product":
+            side = 1.7 * r
+            svg.append(f'<rect x="{x - side / 2:.0f}" y="{y - side / 2:.0f}" width="{side:.0f}" height="{side:.0f}" rx="3" fill="{col}"{ring}/>')
         else:
-            svg.append(f'<rect x="{x - r:.0f}" y="{y - r * 0.75:.0f}" width="{2 * r}" height="{1.5 * r:.0f}" rx="3" fill="{col}"{ring}/>')
+            svg.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="{col}"{ring}/>')
         svg.append(f'<text x="{x:.0f}" y="{y + r + 13:.0f}" text-anchor="middle" font-size="11.5" fill="var(--ink)" stroke="var(--panel)" stroke-width="3.5" paint-order="stroke">{esc(cfg["nodes"][k])}</text>')
     svg.append("</svg>")
     legend = ('<div class="net-legend">'
-              '<span><span class="net-swatch" style="background:#e87ba4"></span> adjacent</span>'
-              '<span><span class="net-swatch" style="background:#2a78d6"></span> manufacturer</span>'
-              '<span><span class="net-swatch" style="background:#1baf7a"></span> plumbing</span>'
-              '<span><span class="net-swatch" style="background:#eb6834"></span> ЦБСТ core</span>'
-              f'<span><span class="net-swatch" style="background:{PERSON_COL};border-radius:50%"></span> person</span>'
+              # Shapes match the live Network Graph artifact: circle = organization,
+              # diamond = person, square (below) = product -- see the graph_svg() shape fix.
+              '<span><span class="net-swatch" style="background:#e87ba4;border-radius:50%"></span> adjacent</span>'
+              '<span><span class="net-swatch" style="background:#2a78d6;border-radius:50%"></span> manufacturer</span>'
+              '<span><span class="net-swatch" style="background:#1baf7a;border-radius:50%"></span> plumbing</span>'
+              '<span><span class="net-swatch" style="background:#eb6834;border-radius:50%"></span> ЦБСТ core</span>'
+              f'<span><span class="net-swatch" style="background:{PERSON_COL};border-radius:2px;transform:rotate(45deg)"></span> person</span>'
               f'<span><span class="net-swatch" style="background:{TIER_COL["network"]};border-radius:50%"></span> govt./military customer</span>'
               '<span>product squares carry one of 17 category glyphs from <code>classify_product_icon.py</code> (full legend: the standalone "Product Icon Set" exhibit); a plain square is unclassified -- a gap, not a guess</span>'
               '<span>thick orange = ЦБСТ resident tie · solid = ownership/directs/produces · long dash = buys from · fine dotted = role/family · dashed = related · red outline = sanctions flag in the registry (weak name-only matches are not outlined)</span></div>')
