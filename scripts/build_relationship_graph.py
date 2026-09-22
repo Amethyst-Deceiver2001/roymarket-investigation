@@ -458,8 +458,27 @@ def build_graph(entities: list[dict], people: list[dict],
             if target == slug:
                 continue
             source = target or add_stub(raw_name, f"founder of {slug}", founder.get("inn"))
+            # source_id/as_of recovery (2026-09-22): this flat `founders[]` field never
+            # carries its own source_id (CLAUDE.md's dated-history rule -- the flat field is
+            # a display convenience, founders_history[] is the actual sourced record), so an
+            # edge added from it alone was permanently unsourced even when the SAME founder
+            # is separately documented, with a real source_id, in founders_history[] below.
+            # Worse: the founders_history loop's own dedup (`current_founders` skip) then
+            # discarded that sourced entry entirely rather than letting it win. Found running
+            # graph_query.py on the ao-aeromaks/ooo-aeromaks duplicate-name check -- 42 of
+            # 187 unsourced "founded" edges had a matching sourced founders_history entry
+            # being thrown away this way. Recover it here instead of dropping it.
+            hist_source_id, hist_as_of = None, None
+            for h in sorted((entity.get("founders_history") or []), key=lambda h: (h.get("as_of") or "") if isinstance(h, dict) else "", reverse=True):
+                if not isinstance(h, dict) or not h.get("source_id"):
+                    continue
+                if any(normalize(f["name"]) == normalize(raw_name) for f in parse_founder_entries(h.get("value"))):
+                    hist_source_id, hist_as_of = h["source_id"], h.get("as_of")
+                    break
             add_edge(source, slug, "founded",
-                     f"{str(founder['share']).rstrip('%')}%" if founder.get("share") else None)
+                     f"{str(founder['share']).rstrip('%')}%" if founder.get("share") else None,
+                     hist_source_id, hist_as_of,
+                     temporal_status="current" if hist_source_id and hist_as_of else "unknown")
         current_founders = {
             normalize(founder["name"])
             for founder in parse_founder_entries(entity.get("founders"))
