@@ -55,34 +55,118 @@ MILITARY_UNIT_ICON_PATHS = (
 MILITARY_UNIT_ICON_CENTER = (12, 12)
 
 # Product-node glyphs, keyed by scripts/classify_product_icon.py's category
-# id -- only the categories that actually occur among CASES' listed product
-# nodes are drawn here (checked against classify_product_icon.classify()
-# output for every product in the 7 published cases, 2026-09-21); any other
-# category falls back to the plain tier-colored rect every other entity node
-# already gets, same as before this glyph set existed. Hand-authored in the
-# same 24x24 line-art style as the demand-side icons above, not lifted from
-# the standalone Product Icon Set artifact's own (differently-styled) glyphs.
+# id -- all 17 real categories (everything but "unclassified", which keeps
+# the plain tier-colored rect every other entity node already gets -- that
+# fallback IS the point, per the Product Icon Set's own "a gap, not a
+# guess" rule, not a placeholder to fill in later).
+#
+# Transcribed directly from the canonical standalone "Product Icon Set"
+# artifact (https://claude.ai/artifact/XuPK3vgfj2L7St4kEzzLEW), confirmed
+# 2026-09-21 as the source of truth over this file's own earlier 3-icon
+# subset (which used differently-drawn glyphs for the 3 categories it did
+# cover) -- both existed and had drifted apart; re-sync here whenever that
+# artifact's icon paths change. `class="accent"/"accent-fill"` styling from
+# that artifact's swatch-on-white presentation has no equivalent token on
+# this page's colored node fills, so every path renders in the single
+# var(--paper) stroke/fill this file's icon_glyph_svg() already uses for
+# the demand-side icons above -- same simplification, not a redraw.
 PRODUCT_ICONS = {
     "fpv_kamikaze_strike": (
-        '<circle cx="12" cy="12" r="7"/>'
-        '<line x1="12" y1="2" x2="12" y2="6"/>'
-        '<line x1="12" y1="18" x2="12" y2="22"/>'
-        '<line x1="2" y1="12" x2="6" y2="12"/>'
-        '<line x1="18" y1="12" x2="22" y2="12"/>'
-        '<circle cx="12" cy="12" r="1.4" fill="var(--paper)"/>',
+        '<path d="M12 3 L15 9 L9 9 Z" fill="var(--paper)" stroke="none"/>'
+        '<path d="M12 9 L5 5 M12 9 L19 5 M12 13 L5 19 M12 13 L19 19"/>'
+        '<circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/>'
+        '<circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/>'
+        '<line x1="12" y1="9" x2="12" y2="13"/>',
         (12, 12)),
     "multirotor_cargo_utility": (
-        '<line x1="6" y1="6" x2="18" y2="18"/>'
-        '<line x1="18" y1="6" x2="6" y2="18"/>'
-        '<circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/>'
-        '<circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/>'
-        '<rect x="10" y="10" width="4" height="4" rx="1"/>',
+        '<path d="M12 8 L5 5 M12 8 L19 5 M12 14 L5 19 M12 14 L19 19"/>'
+        '<circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/>'
+        '<circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/>'
+        '<rect x="9" y="8" width="6" height="6" rx="1"/>',
+        (12, 12)),
+    "fixed_wing_vtol": (
+        '<line x1="12" y1="2" x2="12" y2="20"/>'
+        '<path d="M12 8 L3 13 M12 8 L21 13"/>'
+        '<path d="M12 16 L8 19 M12 16 L16 19"/>'
+        '<circle cx="12" cy="2" r="1.1" fill="var(--paper)"/>',
+        (12, 12)),
+    "helicopter_uas": (
+        '<ellipse cx="12" cy="5" rx="8" ry="1.6"/>'
+        '<line x1="12" y1="6.5" x2="12" y2="10"/>'
+        '<path d="M8 10 L16 10 L14 16 L10 16 Z"/>'
+        '<line x1="14" y1="13" x2="19" y2="13"/><circle cx="19" cy="13" r="1.4"/>',
+        (12, 12)),
+    "ew_jammer_vehicle": (
+        '<rect x="4" y="13" width="16" height="6" rx="1"/>'
+        '<circle cx="7" cy="19" r="1.4" fill="var(--paper)"/>'
+        '<circle cx="17" cy="19" r="1.4" fill="var(--paper)"/>'
+        '<path d="M12 13 L12 6 M12 6 L8 3 M12 6 L16 3 M12 6 L12 2"/>',
+        (12, 12)),
+    "ew_jammer_stationary": (
+        '<path d="M6 15 A6 6 0 0 1 18 15 Z"/>'
+        '<line x1="4" y1="15" x2="20" y2="15"/>'
+        '<line x1="12" y1="15" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/>'
+        '<path d="M12 9 L8 4 M12 9 L16 4 M12 9 L12 2"/>',
+        (12, 12)),
+    "ew_jammer_portable": (
+        '<line x1="4" y1="14" x2="16" y2="14"/>'
+        '<path d="M7 14 L7 19 L10 19 L10 15"/>'
+        '<path d="M16 14 L20 11 M16 14 L20 14 M16 14 L20 17"/>',
         (12, 12)),
     "detector_counter_uas": (
-        '<circle cx="4" cy="20" r="1.6" fill="var(--paper)"/>'
-        '<path d="M4 14 A6 6 0 0 1 10 20"/>'
-        '<path d="M4 9 A11 11 0 0 1 15 20"/>'
-        '<path d="M4 4 A16 16 0 0 1 20 20"/>',
+        '<circle cx="12" cy="12" r="8"/>'
+        '<path d="M12 12 L18 6 A8 8 0 0 1 20 12 Z" fill="var(--paper)" stroke="none" opacity="0.85"/>'
+        '<circle cx="15" cy="9" r="1.3" fill="var(--paper)"/>',
+        (12, 12)),
+    "antenna_mast": (
+        '<line x1="12" y1="2" x2="12" y2="21"/>'
+        '<line x1="7" y1="8" x2="17" y2="8"/><line x1="8.5" y1="12" x2="15.5" y2="12"/>'
+        '<line x1="9.5" y1="16" x2="14.5" y2="16"/><circle cx="12" cy="2" r="1.3" fill="var(--paper)"/>',
+        (12, 12)),
+    "battery_power": (
+        '<rect x="6" y="7" width="12" height="14" rx="1.5"/>'
+        '<rect x="10" y="4" width="4" height="3" rx="0.8"/>'
+        '<rect x="8" y="10" width="8" height="4" fill="var(--paper)" stroke="none"/>',
+        (12, 12)),
+    "motor_propeller_part": (
+        '<ellipse cx="12" cy="12" rx="9" ry="2.4" transform="rotate(45 12 12)"/>'
+        '<ellipse cx="12" cy="12" rx="9" ry="2.4" transform="rotate(-45 12 12)"/>'
+        '<circle cx="12" cy="12" r="1.7" fill="var(--paper)"/>',
+        (12, 12)),
+    "electronics_compute": (
+        '<rect x="7" y="7" width="10" height="10" rx="1"/>'
+        '<line x1="9" y1="4" x2="9" y2="7"/><line x1="15" y1="4" x2="15" y2="7"/>'
+        '<line x1="9" y1="17" x2="9" y2="20"/><line x1="15" y1="17" x2="15" y2="20"/>'
+        '<line x1="4" y1="9" x2="7" y2="9"/><line x1="4" y1="15" x2="7" y2="15"/>'
+        '<line x1="17" y1="9" x2="20" y2="9"/><line x1="17" y1="15" x2="20" y2="15"/>'
+        '<circle cx="12" cy="12" r="1.6" fill="var(--paper)"/>',
+        (12, 12)),
+    "nav_gnss": (
+        '<rect x="10" y="4" width="4" height="4" rx="0.6"/>'
+        '<path d="M10 6 L6 4 L6 8 L10 6"/><path d="M14 6 L18 4 L18 8 L14 6"/>'
+        '<path d="M9 10 A5 5 0 0 1 15 10"/><path d="M7 13 A8 8 0 0 1 17 13"/>'
+        '<circle cx="12" cy="20" r="1.4" fill="var(--paper)"/>',
+        (12, 12)),
+    "video_control_link": (
+        '<circle cx="12" cy="19" r="1.4" fill="var(--paper)"/>'
+        '<path d="M9.5 15.5 A3.5 3.5 0 0 1 14.5 15.5"/>'
+        '<path d="M6.5 12.5 A7.5 7.5 0 0 1 17.5 12.5"/>'
+        '<path d="M3.5 9.5 A11.5 11.5 0 0 1 20.5 9.5"/>',
+        (12, 12)),
+    "ground_control_station": (
+        '<rect x="4" y="6" width="16" height="10" rx="1"/>'
+        '<line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/>'
+        '<circle cx="9" cy="11" r="1.6"/>'
+        '<line x1="14" y1="9" x2="17" y2="9"/><line x1="14" y1="13" x2="17" y2="13"/>',
+        (12, 12)),
+    "munition_warhead": (
+        '<path d="M12 2 C15 2 16 6 16 10 L16 18 C16 20 14 21 12 21 C10 21 8 20 8 18 L8 10 C8 6 9 2 12 2 Z"/>'
+        '<line x1="8" y1="10" x2="16" y2="10"/><line x1="9" y1="6" x2="15" y2="6"/>',
+        (12, 12)),
+    "repeater_relay": (
+        '<path d="M12 3 L7 20 M12 3 L17 20"/>'
+        '<line x1="9.3" y1="12" x2="14.7" y2="12"/><line x1="8" y1="16" x2="16" y2="16"/>'
+        '<path d="M3 9 A9 9 0 0 1 6 4 M21 9 A9 9 0 0 0 18 4"/>',
         (12, 12)),
 }
 
@@ -430,7 +514,7 @@ def graph_svg(cfg, g, weak=frozenset(), products=None):
               '<span><span class="net-swatch" style="background:#eb6834"></span> ЦБСТ core</span>'
               f'<span><span class="net-swatch" style="background:{PERSON_COL};border-radius:50%"></span> person</span>'
               f'<span><span class="net-swatch" style="background:{TIER_COL["network"]};border-radius:50%"></span> govt./military customer</span>'
-              '<span>product squares carry a category glyph (crosshair = FPV/kamikaze strike, quad = multirotor/cargo, radar sweep = detector/counter-UAS) from <code>classify_product_icon.py</code>; a plain square is any other/unclassified category</span>'
+              '<span>product squares carry one of 17 category glyphs from <code>classify_product_icon.py</code> (full legend: the standalone "Product Icon Set" exhibit); a plain square is unclassified -- a gap, not a guess</span>'
               '<span>thick orange = ЦБСТ resident tie · solid = ownership/directs/produces · long dash = buys from · fine dotted = role/family · dashed = related · red outline = sanctions flag in the registry (weak name-only matches are not outlined)</span></div>')
     return (f'<div class="net-panel"><div class="net-svg-wrap">{"".join(svg)}</div>{legend}</div>'
             f'<p class="footnote" style="margin-top:.75rem;border:none;padding:0">{esc(cfg["caption"])} '
