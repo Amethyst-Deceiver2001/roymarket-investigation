@@ -36,16 +36,16 @@
 
 ## Products
 
-- **KRAVT.BMS** — Battery management system for intelligent power supply.
-- **Повербанк «Simple»** — Retail power bank.
-- **«Матрёшка»** — Foldable/modular UAV.
-- **«Саквояж»** — Field charging device.
-- **PAcmaCS** — Robot-management studio software.
-- **SAFSAF** — Robot management system for RoboCup SSL.
-- **ThermaPAD** — Terminal for autonomous temperature measurement.
-- **ТРЛЕ.Э60.01.00.0** — UAV battery, 13.1 Ah capacity.
-- **FootBot2** — Educational robotics/AI kit.
-- **Зарядная станция для электротранспорта** — EV charging station, 20-80% charge in 30 minutes.
+- **KRAVT.BMS** [s8000]
+- **Повербанк «Simple»** [s8003]
+- **«Матрёшка»** — Складной модульный БПЛА с донаведением (folding modular UAV with terminal guidance) -- KRAVT's own product page description. [s8001]
+- **«Саквояж»** [s8005]
+- **PAcmaCS** [s8002]
+- **SAFSAF** [s8004]
+- **ThermaPAD** — FLAGGED 2026-09-23: not found on the manufacturer's current site (kravt-studio.ru) -- checked its authoritative /sitemap.xml (lists only kravt-bms, matreshka, matreshka-old, pacmacs, perenoska-zu-bpla, powerbank-simple, safsaf), the homepage/catalog nav, and several subpages, none of which mention this name. Possibly a discontinued/renamed product or a stale entry -- not deleted, needs a human check.
+- **ТРЛЕ.Э60.01.00.0** — FLAGGED 2026-09-23: not found on the manufacturer's current site (kravt-studio.ru) -- checked its authoritative /sitemap.xml (lists only kravt-bms, matreshka, matreshka-old, pacmacs, perenoska-zu-bpla, powerbank-simple, safsaf), the homepage/catalog nav, and several subpages, none of which mention this name. Possibly a discontinued/renamed product or a stale entry -- not deleted, needs a human check.
+- **FootBot2** — FLAGGED 2026-09-23: not found on the manufacturer's current site (kravt-studio.ru) -- checked its authoritative /sitemap.xml (lists only kravt-bms, matreshka, matreshka-old, pacmacs, perenoska-zu-bpla, powerbank-simple, safsaf), the homepage/catalog nav, and several subpages, none of which mention this name. Possibly a discontinued/renamed product or a stale entry -- not deleted, needs a human check.
+- **Зарядная станция для электротранспорта** — FLAGGED 2026-09-23: not found on the manufacturer's current site (kravt-studio.ru) -- checked its authoritative /sitemap.xml (lists only kravt-bms, matreshka, matreshka-old, pacmacs, perenoska-zu-bpla, powerbank-simple, safsaf), the homepage/catalog nav, and several subpages, none of which mention this name. Possibly a discontinued/renamed product or a stale entry -- not deleted, needs a human check.
 - **Система электроснабжения ТРЛЕ.566111.001 СЭС БВС** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Устройства коммутационные и/или предохранительные для электрических цепей прочие, не включенные в другие группировки [s5391]
 - **Батарея аккумуляторная ТРЛЕ.563562.001 АИП 43-1550-NMC-HC** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Батареи аккумуляторные литий-ионные [s5391]
 - **Батарея аккумуляторная ТРЛЕ.563562.001-04 АИП 43-1550-NCA-LT-A** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Батареи аккумуляторные литий-ионные [s5391]
@@ -136,6 +136,12 @@
 | [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | [s6748] | EGRUL extract | EGRUL extract (EGRUL_7802693899_20260907_ooo-kravt.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7545] | site capture | site capture (SITE_7802693899_20260916_ooo-kravt-product-photo.png) | 2026-09-16 | — |
+| [s8000] | site capture | site capture (WEBCAPTURE_7802693899_20260923_kravt-kravt-bms.html) | 2026-09-23 | — |
+| [s8001] | site capture | site capture (WEBCAPTURE_7802693899_20260923_kravt-matreshka.html) | 2026-09-23 | — |
+| [s8002] | site capture | site capture (WEBCAPTURE_7802693899_20260923_kravt-pacmacs.html) | 2026-09-23 | — |
+| [s8003] | site capture | site capture (WEBCAPTURE_7802693899_20260923_kravt-powerbank-simple.html) | 2026-09-23 | — |
+| [s8004] | site capture | site capture (WEBCAPTURE_7802693899_20260923_kravt-safsaf.html) | 2026-09-23 | — |
+| [s8005] | site capture | site capture (WEBCAPTURE_7802693899_20260923_kravt-sakvoyage.html) | 2026-09-23 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

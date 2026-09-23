@@ -7456,6 +7456,45 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-kravt::kravt-bms",
+          "kind": "product",
+          "label": "KRAVT.BMS",
+          "owner_slug": "ooo-kravt",
+          "source_id": "s8000",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-kravt::pacmacs",
+          "kind": "product",
+          "label": "PAcmaCS",
+          "owner_slug": "ooo-kravt",
+          "source_id": "s8002",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-kravt::safsaf",
+          "kind": "product",
+          "label": "SAFSAF",
+          "owner_slug": "ooo-kravt",
+          "source_id": "s8004",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-kravt::батарея-аккумуляторная-аип-12-220-а-li-ion-трле-563561-003",
           "kind": "product",
           "label": "Батарея аккумуляторная АИП 12-220-А Li-ion ТРЛЕ.563561.003",
@@ -7547,6 +7586,19 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-kravt::матрешка",
+          "kind": "product",
+          "label": "«Матрёшка»",
+          "owner_slug": "ooo-kravt",
+          "source_id": "s8001",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-kravt::модуль-связи-ccs-combo-2",
           "kind": "product",
           "label": "Модуль связи CCS Combo 2",
@@ -7599,11 +7651,37 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-kravt::повербанк-simple",
+          "kind": "product",
+          "label": "Повербанк «Simple»",
+          "owner_slug": "ooo-kravt",
+          "source_id": "s8003",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-kravt::промышленный-3d-принтер-для-печати-инженерными-пластиками",
           "kind": "product",
           "label": "Промышленный 3D-принтер для печати инженерными пластиками",
           "owner_slug": "ooo-kravt",
           "source_id": "s5391",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-kravt::саквояж",
+          "kind": "product",
+          "label": "«Саквояж»",
+          "owner_slug": "ooo-kravt",
+          "source_id": "s8005",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -21111,6 +21189,39 @@
         },
         {
           "source": "ooo-kravt",
+          "target": "product::ooo-kravt::kravt-bms",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8000",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-kravt",
+          "target": "product::ooo-kravt::pacmacs",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8002",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-kravt",
+          "target": "product::ooo-kravt::safsaf",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8004",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-kravt",
           "target": "product::ooo-kravt::батарея-аккумуляторная-аип-12-220-а-li-ion-трле-563561-003",
           "type": "produces",
           "label": null,
@@ -21188,6 +21299,17 @@
         },
         {
           "source": "ooo-kravt",
+          "target": "product::ooo-kravt::матрешка",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8001",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-kravt",
           "target": "product::ooo-kravt::модуль-связи-ccs-combo-2",
           "type": "produces",
           "label": null,
@@ -21232,10 +21354,32 @@
         },
         {
           "source": "ooo-kravt",
+          "target": "product::ooo-kravt::повербанк-simple",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8003",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-kravt",
           "target": "product::ooo-kravt::промышленный-3d-принтер-для-печати-инженерными-пластиками",
           "type": "produces",
           "label": null,
           "source_id": "s5391",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-kravt",
+          "target": "product::ooo-kravt::саквояж",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8005",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -40574,45 +40718,6 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-kravt::kravt-bms",
-          "kind": "product",
-          "label": "KRAVT.BMS",
-          "owner_slug": "ooo-kravt",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-kravt::pacmacs",
-          "kind": "product",
-          "label": "PAcmaCS",
-          "owner_slug": "ooo-kravt",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-kravt::safsaf",
-          "kind": "product",
-          "label": "SAFSAF",
-          "owner_slug": "ooo-kravt",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-kravt::thermapad",
           "kind": "product",
           "label": "ThermaPAD",
@@ -40629,45 +40734,6 @@
           "id": "product::ooo-kravt::зарядная-станция-для-электротранспорта",
           "kind": "product",
           "label": "Зарядная станция для электротранспорта",
-          "owner_slug": "ooo-kravt",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-kravt::матрешка",
-          "kind": "product",
-          "label": "«Матрёшка»",
-          "owner_slug": "ooo-kravt",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-kravt::повербанк-simple",
-          "kind": "product",
-          "label": "Повербанк «Simple»",
-          "owner_slug": "ooo-kravt",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-kravt::саквояж",
-          "kind": "product",
-          "label": "«Саквояж»",
           "owner_slug": "ooo-kravt",
           "source_id": null,
           "classification": {
@@ -43567,39 +43633,6 @@
         },
         {
           "source": "ooo-kravt",
-          "target": "product::ooo-kravt::kravt-bms",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-kravt",
-          "target": "product::ooo-kravt::pacmacs",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-kravt",
-          "target": "product::ooo-kravt::safsaf",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-kravt",
           "target": "product::ooo-kravt::thermapad",
           "type": "produces",
           "label": null,
@@ -43612,39 +43645,6 @@
         {
           "source": "ooo-kravt",
           "target": "product::ooo-kravt::зарядная-станция-для-электротранспорта",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-kravt",
-          "target": "product::ooo-kravt::матрешка",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-kravt",
-          "target": "product::ooo-kravt::повербанк-simple",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-kravt",
-          "target": "product::ooo-kravt::саквояж",
           "type": "produces",
           "label": null,
           "source_id": null,
