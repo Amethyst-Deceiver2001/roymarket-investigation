@@ -7248,6 +7248,58 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-gaskar-integratsiya::hive",
+          "kind": "product",
+          "label": "HIVE",
+          "owner_slug": "ooo-gaskar-integratsiya",
+          "source_id": "s8011",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-gaskar-integratsiya::сибирячок",
+          "kind": "product",
+          "label": "«Сибирячок»",
+          "owner_slug": "ooo-gaskar-integratsiya",
+          "source_id": "s8013",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-gaskar-integratsiya::титан",
+          "kind": "product",
+          "label": "«Титан»",
+          "owner_slug": "ooo-gaskar-integratsiya",
+          "source_id": "s8014",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-gaskar-integratsiya::шерегеш-2",
+          "kind": "product",
+          "label": "«Шерегеш 2»",
+          "owner_slug": "ooo-gaskar-integratsiya",
+          "source_id": "s8012",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-gaskar::беспилотная-авиационная-система-втулка",
           "kind": "product",
           "label": "Беспилотная авиационная система \"Втулка\"",
@@ -20994,6 +21046,50 @@
           "type": "produces",
           "label": null,
           "source_id": "s1385",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-gaskar-integratsiya",
+          "target": "product::ooo-gaskar-integratsiya::hive",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8011",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-gaskar-integratsiya",
+          "target": "product::ooo-gaskar-integratsiya::сибирячок",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8013",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-gaskar-integratsiya",
+          "target": "product::ooo-gaskar-integratsiya::титан",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8014",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-gaskar-integratsiya",
+          "target": "product::ooo-gaskar-integratsiya::шерегеш-2",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8012",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -40604,61 +40700,9 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-gaskar-integratsiya::hive",
-          "kind": "product",
-          "label": "HIVE",
-          "owner_slug": "ooo-gaskar-integratsiya",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-gaskar-integratsiya::бас-шторм",
           "kind": "product",
           "label": "БАС «Шторм»",
-          "owner_slug": "ooo-gaskar-integratsiya",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-gaskar-integratsiya::сибирячок",
-          "kind": "product",
-          "label": "«Сибирячок»",
-          "owner_slug": "ooo-gaskar-integratsiya",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-gaskar-integratsiya::титан",
-          "kind": "product",
-          "label": "«Титан»",
-          "owner_slug": "ooo-gaskar-integratsiya",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-gaskar-integratsiya::шерегеш-2",
-          "kind": "product",
-          "label": "«Шерегеш 2»",
           "owner_slug": "ooo-gaskar-integratsiya",
           "source_id": null,
           "classification": {
@@ -43486,51 +43530,7 @@
         },
         {
           "source": "ooo-gaskar-integratsiya",
-          "target": "product::ooo-gaskar-integratsiya::hive",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-gaskar-integratsiya",
           "target": "product::ooo-gaskar-integratsiya::бас-шторм",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-gaskar-integratsiya",
-          "target": "product::ooo-gaskar-integratsiya::сибирячок",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-gaskar-integratsiya",
-          "target": "product::ooo-gaskar-integratsiya::титан",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-gaskar-integratsiya",
-          "target": "product::ooo-gaskar-integratsiya::шерегеш-2",
           "type": "produces",
           "label": null,
           "source_id": null,

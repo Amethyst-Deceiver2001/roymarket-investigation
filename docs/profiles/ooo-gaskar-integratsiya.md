@@ -47,11 +47,11 @@
 
 ## Products
 
-- **«Сибирячок»** — UAV, per gaskar.group group catalog.
-- **«Титан»** — UAV/robotics platform, per gaskar.group group catalog.
-- **«Шерегеш 2»** — UAV, per gaskar.group group catalog.
-- **HIVE** — Dronoport (автоматическая станция) system.
-- **БАС «Шторм»** — UAS, per gaskar.group group catalog.
+- **«Сибирячок»** — UAV, own-site product page (gaskar.group/sibiryachok), title-match confirmed. [s8013]
+- **«Титан»** — UAV/robotics platform, own-site product page (gaskar.group/titan), title-match confirmed. [s8014]
+- **«Шерегеш 2»** — UAV, own-site product page (gaskar.group/sheregesh-2), title-match confirmed. [s8012]
+- **HIVE** — Dronoport (автоматическая станция) system. Own-site news article confirming the product name and function (dronoport-hive-ot-gaskar-...). [s8011]
+- **БАС «Шторм»** — UAS -- FLAGGED unverifiable: no dedicated page found on gaskar.group's own catalog (bespilotnye-letatelnye-apparaty category, homepage, /novosti, or guessed URL slugs), despite third-party summaries describing a Gaskar «Шторм» construction-monitoring UAS. Note: «Шторм»/«Штурм» also names an unrelated military reconnaissance drone from other manufacturers (see ТАСС/АвиаПорт coverage) -- a name-collision risk on top of the missing own-site confirmation. Left unsourced pending a direct capture of wherever this claim originates.
 
 ## Financials
 
@@ -143,6 +143,10 @@
 | [s5559] | Bfo | Bfo (BFO_7733894200_2025_ооо-гаскар-интеграция.pdf) | — | — |
 | [s6745] | EGRUL extract | EGRUL extract (EGRUL_7733894200_20260907_ooo-gaskar-integratsiya.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7568] | site capture | site capture (SITE_7733894200_20260916_ooo-gaskar-integratsiya-brand.jpg) | 2026-09-16 | — |
+| [s8011] | site capture | site capture (WEBCAPTURE_7733894200_20260923_gaskar-hive-dronoport-news.html) | 2026-09-23 | — |
+| [s8012] | site capture | site capture (WEBCAPTURE_7733894200_20260923_gaskar-sheregesh-2.html) | 2026-09-23 | — |
+| [s8013] | site capture | site capture (WEBCAPTURE_7733894200_20260923_gaskar-sibiryachok.html) | 2026-09-23 | — |
+| [s8014] | site capture | site capture (WEBCAPTURE_7733894200_20260923_gaskar-titan.html) | 2026-09-23 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
