@@ -38,7 +38,6 @@
 ## Products
 
 - **Скворец**
-- **Скворец**
 - **Скворец ВМФ** — FPV kamikaze UAV, per GUR profile — likely the same as the existing «Скворец ВМФ» naval variant. Description backfilled 2026-09-15 from the «Скворец-З» sibling entry below, which already asserts this identity (duplicate-stub cleanup, no new source). [s0966]
 - **«Скворец-7»** — FPV kamikaze UAV, per GUR profile. [s0966]
 - **«Скворец-10»** — FPV kamikaze UAV, per GUR profile. [s0966]

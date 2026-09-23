@@ -582,7 +582,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": "offensive",
-          "degree": 22
+          "degree": 19
         },
         {
           "id": "ao-tekhnodinamika",
@@ -606,7 +606,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": "offensive",
-          "degree": 8
+          "degree": 7
         },
         {
           "id": "ao-tsentr-telko",
@@ -4052,7 +4052,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 9
         },
         {
           "id": "ooo-tekhnomost",
@@ -5418,19 +5418,6 @@
           "id": "product::ao-stratim::голубь",
           "kind": "product",
           "label": "Голубь",
-          "owner_slug": "ao-stratim",
-          "source_id": "s0963",
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ao-stratim::голубь--2",
-          "kind": "product",
-          "label": "«Голубь»",
           "owner_slug": "ao-stratim",
           "source_id": "s0963",
           "classification": {
@@ -11732,17 +11719,6 @@
         {
           "source": "ao-stratim",
           "target": "product::ao-stratim::голубь",
-          "type": "produces",
-          "label": null,
-          "source_id": "s0963",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-stratim",
-          "target": "product::ao-stratim::голубь--2",
           "type": "produces",
           "label": null,
           "source_id": "s0963",
@@ -28117,7 +28093,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": "offensive",
-          "degree": 22
+          "degree": 19
         },
         {
           "id": "ao-tekhnodinamika",
@@ -28141,7 +28117,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": "offensive",
-          "degree": 8
+          "degree": 7
         },
         {
           "id": "ao-tsentr-telko",
@@ -30029,7 +30005,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 9
         },
         {
           "id": "ooo-tekhnomost",
@@ -35426,7 +35402,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": "offensive",
-          "degree": 22
+          "degree": 19
         },
         {
           "id": "ao-tekhnodron",
@@ -35438,7 +35414,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": "offensive",
-          "degree": 8
+          "degree": 7
         },
         {
           "id": "assotsiatsiya-vzaimopomoshch",
@@ -36084,7 +36060,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 9
         },
         {
           "id": "ooo-ti-es-dzhi-grupp",
@@ -37926,7 +37902,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": "offensive",
-          "degree": 22
+          "degree": 19
         },
         {
           "id": "ao-tekhnodron",
@@ -37938,7 +37914,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": "offensive",
-          "degree": 8
+          "degree": 7
         },
         {
           "id": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
@@ -39430,7 +39406,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 10
+          "degree": 9
         },
         {
           "id": "ooo-tekhnomost",
@@ -39759,19 +39735,6 @@
         {
           "id": "product::ao-stratim::русак-с",
           "kind": "product",
-          "label": "Русак-С",
-          "owner_slug": "ao-stratim",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ao-stratim::русак-с--2",
-          "kind": "product",
           "label": "«Русак-С»",
           "owner_slug": "ao-stratim",
           "source_id": null,
@@ -39785,19 +39748,6 @@
         {
           "id": "product::ao-stratim::тювик",
           "kind": "product",
-          "label": "Тювик",
-          "owner_slug": "ao-stratim",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ao-stratim::тювик--2",
-          "kind": "product",
           "label": "«Тювик»",
           "owner_slug": "ao-stratim",
           "source_id": null,
@@ -39810,19 +39760,6 @@
         },
         {
           "id": "product::ao-tekhnodron::скворец",
-          "kind": "product",
-          "label": "Скворец",
-          "owner_slug": "ao-tekhnodron",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ao-tekhnodron::скворец--2",
           "kind": "product",
           "label": "Скворец",
           "owner_slug": "ao-tekhnodron",
@@ -40914,19 +40851,6 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-superkhrono::тень--2",
-          "kind": "product",
-          "label": "Тень",
-          "owner_slug": "ooo-superkhrono",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-trimiks-bulat-3mx::азар",
           "kind": "product",
           "label": "«Азар»",
@@ -41566,29 +41490,7 @@
         },
         {
           "source": "ao-stratim",
-          "target": "product::ao-stratim::русак-с--2",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-stratim",
           "target": "product::ao-stratim::тювик",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-stratim",
-          "target": "product::ao-stratim::тювик--2",
           "type": "produces",
           "label": null,
           "source_id": null,
@@ -41600,17 +41502,6 @@
         {
           "source": "ao-tekhnodron",
           "target": "product::ao-tekhnodron::скворец",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-tekhnodron",
-          "target": "product::ao-tekhnodron::скворец--2",
           "type": "produces",
           "label": null,
           "source_id": null,
@@ -44119,17 +44010,6 @@
         {
           "source": "ooo-superkhrono",
           "target": "product::ooo-superkhrono::тень",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-superkhrono",
-          "target": "product::ooo-superkhrono::тень--2",
           "type": "produces",
           "label": null,
           "source_id": null,
