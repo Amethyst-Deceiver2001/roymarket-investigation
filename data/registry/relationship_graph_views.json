@@ -6754,6 +6754,58 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-aeromaks::b-120",
+          "kind": "product",
+          "label": "B-120",
+          "owner_slug": "ooo-aeromaks",
+          "source_id": "s7997",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-aeromaks::b-200",
+          "kind": "product",
+          "label": "B-200",
+          "owner_slug": "ooo-aeromaks",
+          "source_id": "s7998",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-aeromaks::а-5",
+          "kind": "product",
+          "label": "А-5",
+          "owner_slug": "ooo-aeromaks",
+          "source_id": "s7996",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-aeromaks::а-5-м-л",
+          "kind": "product",
+          "label": "А-5 М/Л",
+          "owner_slug": "ooo-aeromaks",
+          "source_id": "s7995",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-aeromaks::бвс-ст-as-32-10",
           "kind": "product",
           "label": "БВС СТ AS-32-10",
@@ -6785,6 +6837,19 @@
           "label": "БВС СТ Д-12К",
           "owner_slug": "ooo-aeromaks",
           "source_id": "s1169",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-aeromaks::в-700",
+          "kind": "product",
+          "label": "В-700",
+          "owner_slug": "ooo-aeromaks",
+          "source_id": "s7994",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -19942,6 +20007,50 @@
         },
         {
           "source": "ooo-aeromaks",
+          "target": "product::ooo-aeromaks::b-120",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7997",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aeromaks",
+          "target": "product::ooo-aeromaks::b-200",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7998",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aeromaks",
+          "target": "product::ooo-aeromaks::а-5",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7996",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aeromaks",
+          "target": "product::ooo-aeromaks::а-5-м-л",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7995",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aeromaks",
           "target": "product::ooo-aeromaks::бвс-ст-as-32-10",
           "type": "produces",
           "label": null,
@@ -19968,6 +20077,17 @@
           "type": "produces",
           "label": null,
           "source_id": "s1169",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aeromaks",
+          "target": "product::ooo-aeromaks::в-700",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7994",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -40152,71 +40272,6 @@
           "owner_slug": "ooo-aeromaks",
           "source_id": null,
           "classification": {
-            "status": "classified",
-            "uav_platform": "multirotor",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-aeromaks::b-120",
-          "kind": "product",
-          "label": "B-120",
-          "owner_slug": "ooo-aeromaks",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-aeromaks::b-200",
-          "kind": "product",
-          "label": "B-200",
-          "owner_slug": "ooo-aeromaks",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-aeromaks::b-700",
-          "kind": "product",
-          "label": "B-700",
-          "owner_slug": "ooo-aeromaks",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-aeromaks::а-5",
-          "kind": "product",
-          "label": "А-5",
-          "owner_slug": "ooo-aeromaks",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-aeromaks::а-5-м-л",
-          "kind": "product",
-          "label": "А-5 М/Л",
-          "owner_slug": "ooo-aeromaks",
-          "source_id": null,
-          "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
             "ew_installation": "unknown"
@@ -43117,61 +43172,6 @@
         {
           "source": "ooo-aeromaks",
           "target": "product::ooo-aeromaks::a-50",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-aeromaks",
-          "target": "product::ooo-aeromaks::b-120",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-aeromaks",
-          "target": "product::ooo-aeromaks::b-200",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-aeromaks",
-          "target": "product::ooo-aeromaks::b-700",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-aeromaks",
-          "target": "product::ooo-aeromaks::а-5",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-aeromaks",
-          "target": "product::ooo-aeromaks::а-5-м-л",
           "type": "produces",
           "label": null,
           "source_id": null,

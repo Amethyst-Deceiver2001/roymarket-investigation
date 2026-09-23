@@ -48,12 +48,12 @@
 
 ## Products
 
-- **B-120** — Беспилотный вертолёт (helicopter-type БАС).
-- **B-200** — Беспилотный вертолёт В-200, autonomous logistics use.
-- **B-700** — Helicopter-type БАС, in development — no dedicated page yet.
-- **А-5** — Aircraft-type БАС.
-- **А-5 М/Л** — Aircraft-type БАС — "высокой скоростью, большой продолжительностью и высотой полета".
-- **A-50** — Multicopter-type БАС (VTOL) — no dedicated page yet.
+- **B-120** — Беспилотный вертолёт (helicopter-type БАС). [s7997]
+- **B-200** — Беспилотный вертолёт В-200, autonomous logistics use. [s7998]
+- **В-700** — Heavy-class unmanned cargo helicopter, 3600kg takeoff mass, 700kg payload, Russian ВК-650В turboshaft engine, for Arctic/Siberian cargo delivery. Per the manufacturer's own press release ([s7994]): prototype assembly targeted late 2026, factory/certification testing 2027-2028, type certification targeted April 2029 -- an announced, in-development product, not yet shipping. [s7994]
+- **А-5** — Aircraft-type БАС. [s7996]
+- **А-5 М/Л** — Aircraft-type БАС — "высокой скоростью, большой продолжительностью и высотой полета". [s7995]
+- **A-50** — FLAGGED 2026-09-23: no source supports this as a real Aeromax product. "A-50" collides with the well-known Soviet/Russian A-50 AWACS aircraft (unrelated manufacturer/programme); a WebSearch sweep of Aeromax's own site, press coverage, and third-party listings found zero connection between Aeromax and any "A-50". Likely a stray/garbled entry (possibly confused with А-5). Left in place rather than silently deleted -- needs a human decision on whether to remove.
 - **БВС СТ AS-32-10** — Fixed-wing UAS with extended flight time, for aerial survey over large areas. [s1169]
 - **БВС СТ AS-32-8** — Compact electric fixed-wing UAS for rapid deployment and high-precision imagery. [s1169]
 - **БВС СТ Д-12К** — Electric VTOL UAS. [s1169]
@@ -168,6 +168,11 @@
 | [s6741] | EGRUL extract | EGRUL extract (EGRUL_7725347482_20260907_ooo-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6927] | Proverki | Proverki (PROVERKI_7725347482_20260907_ooo-aeromaks-inspection-history.txt) | 2026-09-07 | — |
 | [s7567] | site capture | site capture (SITE_7725347482_20260916_ooo-aeromaks-logo.png) | 2026-09-16 | — |
+| [s7994] | press coverage | press coverage (PRESS_20260622_aeromax-own-press-v-700-announcement.html) | 2026-06-22 | — |
+| [s7995] | site capture | site capture (WEBCAPTURE_7725347482_20260923_aeromax-a-5-m-l.html) | 2026-09-23 | — |
+| [s7996] | site capture | site capture (WEBCAPTURE_7725347482_20260923_aeromax-a-5.html) | 2026-09-23 | — |
+| [s7997] | site capture | site capture (WEBCAPTURE_7725347482_20260923_aeromax-b-120.html) | 2026-09-23 | — |
+| [s7998] | site capture | site capture (WEBCAPTURE_7725347482_20260923_aeromax-b-200.html) | 2026-09-23 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
