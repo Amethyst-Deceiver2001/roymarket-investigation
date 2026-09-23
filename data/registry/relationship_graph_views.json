@@ -5688,6 +5688,32 @@
           "degree": 1
         },
         {
+          "id": "product::npo-kaysant::гермес-мачты",
+          "kind": "product",
+          "label": "«ГЕРМЕС мачты»",
+          "owner_slug": "npo-kaysant",
+          "source_id": "s8015",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::npo-kaysant::гермес-связь",
+          "kind": "product",
+          "label": "«ГЕРМЕС связь»",
+          "owner_slug": "npo-kaysant",
+          "source_id": "s8017",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::npo-kaysant::дрон-перехватчик",
           "kind": "product",
           "label": "Дрон-перехватчик",
@@ -5714,11 +5740,76 @@
           "degree": 1
         },
         {
+          "id": "product::npo-kaysant::передатчик",
+          "kind": "product",
+          "label": "Передатчик",
+          "owner_slug": "npo-kaysant",
+          "source_id": "s8017",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::npo-kaysant::по-гермес",
+          "kind": "product",
+          "label": "ПО «Гермес»",
+          "owner_slug": "npo-kaysant",
+          "source_id": "s8016",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::npo-kaysant::приемник",
+          "kind": "product",
+          "label": "Приемник",
+          "owner_slug": "npo-kaysant",
+          "source_id": "s8017",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::npo-kaysant::проводной-ретранслятор",
+          "kind": "product",
+          "label": "Проводной ретранслятор",
+          "owner_slug": "npo-kaysant",
+          "source_id": "s8017",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::npo-kaysant::радиоуправляемая-тележка-аргус",
           "kind": "product",
           "label": "Радиоуправляемая тележка «Аргус»",
           "owner_slug": "npo-kaysant",
           "source_id": "s5389",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::npo-kaysant::ретранслятор",
+          "kind": "product",
+          "label": "Ретранслятор",
+          "owner_slug": "npo-kaysant",
+          "source_id": "s8017",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -19150,6 +19241,28 @@
         },
         {
           "source": "npo-kaysant",
+          "target": "product::npo-kaysant::гермес-мачты",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8015",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npo-kaysant",
+          "target": "product::npo-kaysant::гермес-связь",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8017",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npo-kaysant",
           "target": "product::npo-kaysant::дрон-перехватчик",
           "type": "produces",
           "label": null,
@@ -19172,10 +19285,65 @@
         },
         {
           "source": "npo-kaysant",
+          "target": "product::npo-kaysant::передатчик",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8017",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npo-kaysant",
+          "target": "product::npo-kaysant::по-гермес",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8016",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npo-kaysant",
+          "target": "product::npo-kaysant::приемник",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8017",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npo-kaysant",
+          "target": "product::npo-kaysant::проводной-ретранслятор",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8017",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npo-kaysant",
           "target": "product::npo-kaysant::радиоуправляемая-тележка-аргус",
           "type": "produces",
           "label": null,
           "source_id": "s5389",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npo-kaysant",
+          "target": "product::npo-kaysant::ретранслятор",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8017",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -40492,97 +40660,6 @@
           "degree": 1
         },
         {
-          "id": "product::npo-kaysant::гермес-мачты",
-          "kind": "product",
-          "label": "«ГЕРМЕС мачты»",
-          "owner_slug": "npo-kaysant",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npo-kaysant::гермес-связь",
-          "kind": "product",
-          "label": "«ГЕРМЕС связь»",
-          "owner_slug": "npo-kaysant",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npo-kaysant::передатчик",
-          "kind": "product",
-          "label": "Передатчик",
-          "owner_slug": "npo-kaysant",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npo-kaysant::по-гермес",
-          "kind": "product",
-          "label": "ПО «Гермес»",
-          "owner_slug": "npo-kaysant",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npo-kaysant::приемник",
-          "kind": "product",
-          "label": "Приемник",
-          "owner_slug": "npo-kaysant",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npo-kaysant::проводной-ретранслятор",
-          "kind": "product",
-          "label": "Проводной ретранслятор",
-          "owner_slug": "npo-kaysant",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npo-kaysant::ретранслятор",
-          "kind": "product",
-          "label": "Ретранслятор",
-          "owner_slug": "npo-kaysant",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::npp-elvo-kolskaya-verf::iot-устройства-и-контроллеры-мощности",
           "kind": "product",
           "label": "IoT-устройства и контроллеры мощности",
@@ -43137,83 +43214,6 @@
           "target": "ano-npts-ushkuynik",
           "type": "related",
           "label": "co-speaker",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npo-kaysant",
-          "target": "product::npo-kaysant::гермес-мачты",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npo-kaysant",
-          "target": "product::npo-kaysant::гермес-связь",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npo-kaysant",
-          "target": "product::npo-kaysant::передатчик",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npo-kaysant",
-          "target": "product::npo-kaysant::по-гермес",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npo-kaysant",
-          "target": "product::npo-kaysant::приемник",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npo-kaysant",
-          "target": "product::npo-kaysant::проводной-ретранслятор",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npo-kaysant",
-          "target": "product::npo-kaysant::ретранслятор",
-          "type": "produces",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,

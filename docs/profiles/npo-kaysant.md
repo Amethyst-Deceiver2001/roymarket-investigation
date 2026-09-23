@@ -33,13 +33,13 @@
 
 ## Products
 
-- **«ГЕРМЕС связь»** — Multi-band tactical communication system, per germesfpv.ru.
-- **«ГЕРМЕС мачты»** — Antenna mast hardware (multiple lines: Сверхлёгкие, Облегчённые, Усиленные, Мачты на кунг, Фермные — category names only, no individual specs).
-- **ПО «Гермес»** — Companion software.
-- **Приемник** — 868/915 МГц configurable, SMA connector, 5g. 2,900 руб.
-- **Передатчик** — JR-connector powered, 1W. 11,350 руб.
-- **Ретранслятор** — Range-extending repeater. 16,000 руб.
-- **Проводной ретранслятор** — Wired repeater, 30-300m extension, directional antenna. 33,000 руб.
+- **«ГЕРМЕС связь»** — Multi-band tactical communication system -- product catalog page germesfpv.ru/svyazgermes (rendered capture; page is a Tilda store block, static fetch returns no product text). Covers the whole «Связь» line including the four component entries below (Приемник/Передатчик/Ретранслятор/Проводной ретранслятор), which are sub-categories of this same catalog page rather than separately-URLed products; current live SKU names/prices have drifted from this record's older figures (e.g. «Приемник IPEX» variants at 2 380/4 000р., «JR-передатчик» variants at 10 115/17 000р.) but the same product families are confirmed present. [s8017]
+- **«ГЕРМЕС мачты»** — Antenna mast hardware (multiple lines: Сверхлёгкие, Облегчённые, Усиленные, Мачты на кунг, Фермные — category names only, no individual specs). Confirmed via germesfpv.ru's own sitemap, one dedicated URL per line (/sverhlekiemachti, /oblegchenniemachti, /usilenniemachti, /machtinakung, /fermniemachti) plus the /machti category index page. [s8015]
+- **ПО «Гермес»** — Companion software. Own-site page germesfpv.ru/po («Программное обеспечение Гермес»), with download links and an install guide. [s8016]
+- **Приемник** — 868/915 МГц configurable, SMA connector, 5g. 2,900 руб. Sub-item of the «Связь» catalog page (germesfpv.ru/svyazgermes) -- see that entry's source note on current-SKU drift. [s8017]
+- **Передатчик** — JR-connector powered, 1W. 11,350 руб. Sub-item of the «Связь» catalog page (germesfpv.ru/svyazgermes) -- see that entry's source note on current-SKU drift. [s8017]
+- **Ретранслятор** — Range-extending repeater. 16,000 руб. Sub-item of the «Связь» catalog page (germesfpv.ru/svyazgermes), which lists a live «Ретрансляторы Гермес» category. [s8017]
+- **Проводной ретранслятор** — Wired repeater, 30-300m extension, directional antenna. 33,000 руб. Sub-item of the «Связь» catalog page (germesfpv.ru/svyazgermes), which lists a live «Универсальные проводные выносы» category. [s8017]
 - **Кинетический FPV дрон-перехватчик «ГУСЬ-7»** — Kinetic FPV interceptor drone (multirotor class), от ₽103,700. Sold on Налетай.рф via the ИП Черепкова storefront (see marketplace_listings note) alongside the ГЕРМЕС-7 comms line. Not previously documented in this registry under any name. [s2627]
 - **Дрон-перехватчик** — Interceptor drone (GISP nameEn: "Interceptor drone"), found via GISP goods-catalog exact company_ogrn search (ОГРН 1227700641805) under a generic (unbranded) listing — NOT confirmed to be the same product as the already-documented «ГУСЬ-7» above; GISP describes a passive/semi-active homing, platform/tube-launched interceptor (cruise 270 km/h, max 380 km/h, range 10 km, engages targets at 1000-3000m altitude up to 250 km/h target speed) versus «ГУСЬ-7»'s description as a kinetic multirotor FPV interceptor — the guidance/launch mechanism described differs enough that this may be a second, distinct interceptor model; flagged for verification rather than merged. GOST Р 59518-2021 cited. Production address per GISP: 125362, Москва, Строительный проезд, д.7А корп.28, помещ.224 — matches this entity's registered address. [s5390]
 - **FPV Дрон «Артемида 10»** — FPV combat/strike drone (GISP nameEn: "FPV Drone Artemis 10"). Operates on 4 frequency bands simultaneously, 25km range without a relay / 100km with relay, factory-fitted with the «Гермес» control channel, up to 4kg payload. GOST Р 59518-2021 cited. Found via GISP goods-catalog exact company_ogrn search. [s5390]
@@ -92,6 +92,9 @@
 | [s5390] | Gisp | Gisp (GISP_20260903_goods-catalog-product-details-7-new-items.json) | 2026-09-03 | 2026-09-03 |
 | [s6744] | EGRUL extract | EGRUL extract (EGRUL_7733393203_20260907_npo-kaysant.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7506] | transcript | transcript (TRANSCRIPT_20230809_dronnitsa-2023-npo-kaysant-argus.html) | 2023-08-09 | — |
+| [s8015] | site capture | site capture (WEBCAPTURE_7733393203_20260924_germes-machti-catalog.html) | 2026-09-24 | — |
+| [s8016] | site capture | site capture (WEBCAPTURE_7733393203_20260924_germes-po-software.html) | 2026-09-24 | — |
+| [s8017] | site capture | site capture (WEBCAPTURE_7733393203_20260924_germes-svyaz-catalog.html) | 2026-09-24 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
