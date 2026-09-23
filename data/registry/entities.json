@@ -51013,8 +51013,16 @@
     "cbst_tie": null,
     "wb_overlap": "none_found",
     "products": [
-      "Скарабей-БН (Skarabey-BN)",
-      "Merlin-VR"
+      {
+        "name_ru": "Скарабей-БН (Skarabey-BN)",
+        "source_id": "s7999",
+        "description": "UAV. Per Ukraine's GUR war-sanctions components register (own ИНН match confirmed, s7999), listed alongside Мерлин-ВР as a product this entity manufactures. Manufacturer's own site (niistt.ru) is unreachable to independently corroborate (noted in web.sites -- retry later)."
+      },
+      {
+        "name_ru": "Merlin-VR",
+        "source_id": "s7999",
+        "description": "UAV. Per Ukraine's GUR war-sanctions components register (own ИНН match confirmed, s7999): \"Производитель БПЛА «Мерлин-ВР» и «Скарабей-БН». БПЛА «Мерлин-ВР» поставляет непосредственно подразделениям ВС РФ\" -- GUR states this UAV is supplied directly to Russian military units, not just produced. Manufacturer's own site (niistt.ru) is unreachable to independently corroborate (noted in web.sites -- retry later)."
+      }
     ],
     "financials": [],
     "egrul_flags": [],

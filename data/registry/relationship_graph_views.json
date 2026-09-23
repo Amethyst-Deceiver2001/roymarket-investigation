@@ -4622,6 +4622,32 @@
           "degree": 1
         },
         {
+          "id": "product::ao-nii-stt::merlin-vr",
+          "kind": "product",
+          "label": "Merlin-VR",
+          "owner_slug": "ao-nii-stt",
+          "source_id": "s7999",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ao-nii-stt::скарабей-бн",
+          "kind": "product",
+          "label": "Скарабей-БН (Skarabey-BN)",
+          "owner_slug": "ao-nii-stt",
+          "source_id": "s7999",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ao-nii-vektor::modbus-коммутатор-мбк-01",
           "kind": "product",
           "label": "Modbus коммутатор \"МБК-01\"",
@@ -11112,6 +11138,28 @@
           "type": "related",
           "label": "counterparty",
           "source_id": "s0023",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-nii-stt",
+          "target": "product::ao-nii-stt::merlin-vr",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7999",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-nii-stt",
+          "target": "product::ao-nii-stt::скарабей-бн",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7999",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -39993,32 +40041,6 @@
           "degree": 1
         },
         {
-          "id": "product::ao-nii-stt::merlin-vr",
-          "kind": "product",
-          "label": "Merlin-VR",
-          "owner_slug": "ao-nii-stt",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ao-nii-stt::скарабей-бн",
-          "kind": "product",
-          "label": "Скарабей-БН (Skarabey-BN)",
-          "owner_slug": "ao-nii-stt",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ao-ploshchad::пак-площадь-к",
           "kind": "product",
           "label": "ПАК «Площадь.К»",
@@ -41500,28 +41522,6 @@
         {
           "source": "ao-ekolibri",
           "target": "product::ao-ekolibri::em-01",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-nii-stt",
-          "target": "product::ao-nii-stt::merlin-vr",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-nii-stt",
-          "target": "product::ao-nii-stt::скарабей-бн",
           "type": "produces",
           "label": null,
           "source_id": null,

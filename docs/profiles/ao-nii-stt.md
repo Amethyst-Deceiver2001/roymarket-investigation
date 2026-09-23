@@ -44,8 +44,8 @@
 
 ## Products
 
-- **Скарабей-БН (Skarabey-BN)**
-- **Merlin-VR**
+- **Скарабей-БН (Skarabey-BN)** — UAV. Per Ukraine's GUR war-sanctions components register (own ИНН match confirmed, [s7999]), listed alongside Мерлин-ВР as a product this entity manufactures. Manufacturer's own site (niistt.ru) is unreachable to independently corroborate (noted in web.sites -- retry later). [s7999]
+- **Merlin-VR** — UAV. Per Ukraine's GUR war-sanctions components register (own ИНН match confirmed, [s7999]): "Производитель БПЛА «Мерлин-ВР» и «Скарабей-БН». БПЛА «Мерлин-ВР» поставляет непосредственно подразделениям ВС РФ" -- GUR states this UAV is supplied directly to Russian military units, not just produced. Manufacturer's own site (niistt.ru) is unreachable to independently corroborate (noted in web.sites -- retry later). [s7999]
 
 ## Government contracts
 
@@ -282,6 +282,7 @@
 | [s6429] | bulk open-data extract | bulk open-data extract (DATASET_20260906_rkn-frequency-assignment-registry-search.json) | 2026-09-06 | — |
 | [s6447] | Rkn | Rkn (RKN_6730046954_20260907_frequency-registry-ao-nii-stt.html) | 2026-09-07 | — |
 | [s6916] | Proverki | Proverki (PROVERKI_6730046954_20260907_ao-nii-stt-inspection-history.txt) | 2026-09-07 | — |
+| [s7999] | GUR war-sanctions record | GUR war-sanctions record (GUR_6730046954_20260923_ao-nii-stt-components.html) | 2026-09-23 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
