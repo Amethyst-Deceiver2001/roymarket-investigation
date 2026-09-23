@@ -1,8 +1,8 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1136,
-  "edge_count": 1924,
+  "node_count": 1134,
+  "edge_count": 1922,
   "unresolved_count": 108,
   "nodes": [
     {
@@ -355,7 +355,7 @@
       "sanctioned": true,
       "legal_form": "АО",
       "variant": null,
-      "degree": 25
+      "degree": 23
     },
     {
       "id": "ao-kbp-shipunova",
@@ -4561,37 +4561,11 @@
       "degree": 1
     },
     {
-      "id": "product::ao-ekolibri::ecolibri-evtol",
-      "kind": "product",
-      "label": "ECOLIBRI eVTOL",
-      "owner_slug": "ao-ekolibri",
-      "source_id": null,
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ao-ekolibri::ecolibri-р-75",
-      "kind": "product",
-      "label": "ECOLIBRI Р-75",
-      "owner_slug": "ao-ekolibri",
-      "source_id": null,
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
       "id": "product::ao-ekolibri::em-01",
       "kind": "product",
       "label": "EM-01",
       "owner_slug": "ao-ekolibri",
-      "source_id": null,
+      "source_id": "s8006",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -12294,32 +12268,10 @@
     },
     {
       "source": "ao-ekolibri",
-      "target": "product::ao-ekolibri::ecolibri-evtol",
-      "type": "produces",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "ao-ekolibri",
-      "target": "product::ao-ekolibri::ecolibri-р-75",
-      "type": "produces",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "ao-ekolibri",
       "target": "product::ao-ekolibri::em-01",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8006",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",

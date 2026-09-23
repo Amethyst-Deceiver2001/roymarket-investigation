@@ -354,7 +354,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 25
+          "degree": 23
         },
         {
           "id": "ao-kbp-shipunova",
@@ -4529,6 +4529,19 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 3
+        },
+        {
+          "id": "product::ao-ekolibri::em-01",
+          "kind": "product",
+          "label": "EM-01",
+          "owner_slug": "ao-ekolibri",
+          "source_id": "s8006",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
         },
         {
           "id": "product::ao-ekolibri::эколибри-evtol",
@@ -11076,6 +11089,17 @@
           "as_of": "2023-11-30",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "ao-ekolibri",
+          "target": "product::ao-ekolibri::em-01",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8006",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -28429,7 +28453,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 25
+          "degree": 23
         },
         {
           "id": "ao-kbp-shipunova",
@@ -38298,7 +38322,7 @@
           "sanctioned": true,
           "legal_form": "АО",
           "variant": null,
-          "degree": 25
+          "degree": 23
         },
         {
           "id": "ao-kotlin-novator",
@@ -40146,45 +40170,6 @@
           "degree": 1
         },
         {
-          "id": "product::ao-ekolibri::ecolibri-evtol",
-          "kind": "product",
-          "label": "ECOLIBRI eVTOL",
-          "owner_slug": "ao-ekolibri",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ao-ekolibri::ecolibri-р-75",
-          "kind": "product",
-          "label": "ECOLIBRI Р-75",
-          "owner_slug": "ao-ekolibri",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ao-ekolibri::em-01",
-          "kind": "product",
-          "label": "EM-01",
-          "owner_slug": "ao-ekolibri",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ao-ploshchad::пак-площадь-к",
           "kind": "product",
           "label": "ПАК «Площадь.К»",
@@ -41557,39 +41542,6 @@
           "target": "ooo-trimiks-bulat-3mx",
           "type": "related",
           "label": "co-speaker",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-ekolibri",
-          "target": "product::ao-ekolibri::ecolibri-evtol",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-ekolibri",
-          "target": "product::ao-ekolibri::ecolibri-р-75",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-ekolibri",
-          "target": "product::ao-ekolibri::em-01",
-          "type": "produces",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,

@@ -37,9 +37,7 @@
 
 ## Products
 
-- **ECOLIBRI eVTOL** — Electric VTOL aircraft.
-- **ECOLIBRI Р-75** — eVTOL variant.
-- **EM-01** — Electric motor.
+- **EM-01** — Electric aircraft motor, gearless-drive prototype for a planned 10-200kW family, for electric VTOL/passenger aircraft and heavy UAVs. Announced by press quote from Алексей Рогозин, chairman of the company's scientific-technical council: «Создаваемый «Эколибри» электрический двигатель ЕМ-01 является прототипом первого из семейства авиационных двигателей нового поколения... планируется использовать как для создания электрических пассажирских самолётов... так и в беспилотной технике». [s8006]
 - **Эколибри Р-35** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном самолетного типа с максимальной взлетной массой свыше 30 кг, но не более 500 кг [s5391]
 - **Эколибри Р-30** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном самолетного типа с максимальной взлетной массой свыше 1 кг, но не более 30 кг [s5391]
 - **Эколибри Р-5** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном мультироторного типа с максимальной взлетной массой свыше 4 кг, но не более 30 кг [s5391]
@@ -148,6 +146,7 @@
 | [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | [s6824] | EGRUL extract | EGRUL extract (EGRUL_7714473012_20260907_ao-ekolibri.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6908] | Founding-Устав bundle | Founding-Устав bundle (UD_1217700279103_20260907_ekolibri.zip) | 2026-09-07 | 2024-09-09 |
+| [s8006] | press coverage | press coverage (PRESS_20230414_ekolibri-em01-electric-motor-announcement.html) | 2023-04-14 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
