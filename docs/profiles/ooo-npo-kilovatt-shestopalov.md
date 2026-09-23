@@ -79,9 +79,9 @@
 - **К-12 М** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03): listed as «Радиоэлектронное средство, станция подавления БПЛА, тип «Капюшон», модель К-12М» (ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки). [s5391]
 - **Сигнал** [s0536]
 - **«Капюшон К-12»** — Full technical test data on file: at 720-730/915/990-1000MHz ELRS control frequencies, achieves partial jamming at 100-155m and full loss-of-control at 40-100m against a test drone, per an internal test report ("Справка о тестировании") downloaded from kilowat48.ru. Informal/internal document, not a certified third-party test. [s0540]
-- **«Ребус»** — Stationary EW complex (also «Ребус-2»).
-- **«Штора»** — Stationary EW station (also «Штора К12-700»).
-- **Сигнал-М2** — Drone detector — possibly an updated variant of the already-recorded bare "Сигнал" model.
+- **«Ребус»** — Stationary EW complex (also «Ребус-2»). [s7991]
+- **«Штора»** — Stationary EW station (also «Штора К12-700»). [s7992]
+- **Сигнал-М2** — Drone detector — possibly an updated variant of the already-recorded bare "Сигнал" model. [s7993]
 - **Радиоэлектронное средство, станция подавления БПЛА, тип "Капюшон", модель рюкзак ТП4-28А** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки [s5391]
 - **Радиоэлектронное средство, станция подавления БПЛА, тип "Капюшон", модель рюкзак ТП4-28Б** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки [s5391]
 - **Радиоэлектронное средство, станция подавления БПЛА, тип "Капюшон", модель рюкзак ТП4-50Б** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Оборудование электрическое прочее, не включенное в другие группировки [s5391]
@@ -158,6 +158,9 @@
 | [s6790] | EGRUL extract | EGRUL extract (EGRUL_4800016776_20260907_ooo-npo-kilovatt-shestopalov.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7501] | product catalog | product catalog (CATALOG_4800016776_20260915_kilowatt48-shop-page3.html) | 2026-09-15 | — |
 | [s7563] | site capture | site capture (SITE_4800016776_20260916_ooo-npo-kilovatt-product.jpg) | 2026-09-16 | — |
+| [s7991] | site capture | site capture (WEBCAPTURE_4800016776_20260923_kilowatt48-rebus-2.html) | 2026-09-23 | — |
+| [s7992] | site capture | site capture (WEBCAPTURE_4800016776_20260923_kilowatt48-shtora-k10-500.html) | 2026-09-23 | — |
+| [s7993] | site capture | site capture (WEBCAPTURE_4800016776_20260923_kilowatt48-signal-m2.html) | 2026-09-23 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

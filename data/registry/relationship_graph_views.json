@@ -7794,11 +7794,37 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-npo-kilovatt-shestopalov::ребус",
+          "kind": "product",
+          "label": "«Ребус»",
+          "owner_slug": "ooo-npo-kilovatt-shestopalov",
+          "source_id": "s7991",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-npo-kilovatt-shestopalov::сигнал",
           "kind": "product",
           "label": "Сигнал",
           "owner_slug": "ooo-npo-kilovatt-shestopalov",
           "source_id": "s0536",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-npo-kilovatt-shestopalov::сигнал-м2",
+          "kind": "product",
+          "label": "Сигнал-М2",
+          "owner_slug": "ooo-npo-kilovatt-shestopalov",
+          "source_id": "s7993",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -8085,6 +8111,19 @@
           "label": "ФПВ-8М",
           "owner_slug": "ooo-npo-kilovatt-shestopalov",
           "source_id": "s5391",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-npo-kilovatt-shestopalov::штора",
+          "kind": "product",
+          "label": "«Штора»",
+          "owner_slug": "ooo-npo-kilovatt-shestopalov",
+          "source_id": "s7992",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -21366,10 +21405,32 @@
         },
         {
           "source": "ooo-npo-kilovatt-shestopalov",
+          "target": "product::ooo-npo-kilovatt-shestopalov::ребус",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7991",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-npo-kilovatt-shestopalov",
           "target": "product::ooo-npo-kilovatt-shestopalov::сигнал",
           "type": "produces",
           "label": null,
           "source_id": "s0536",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-npo-kilovatt-shestopalov",
+          "target": "product::ooo-npo-kilovatt-shestopalov::сигнал-м2",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7993",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -21612,6 +21673,17 @@
           "type": "produces",
           "label": null,
           "source_id": "s5391",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-npo-kilovatt-shestopalov",
+          "target": "product::ooo-npo-kilovatt-shestopalov::штора",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7992",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -40555,45 +40627,6 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-npo-kilovatt-shestopalov::ребус",
-          "kind": "product",
-          "label": "«Ребус»",
-          "owner_slug": "ooo-npo-kilovatt-shestopalov",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-npo-kilovatt-shestopalov::сигнал-м2",
-          "kind": "product",
-          "label": "Сигнал-М2",
-          "owner_slug": "ooo-npo-kilovatt-shestopalov",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-npo-kilovatt-shestopalov::штора",
-          "kind": "product",
-          "label": "«Штора»",
-          "owner_slug": "ooo-npo-kilovatt-shestopalov",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-npts-basirtk::ковровец",
           "kind": "product",
           "label": "«Ковровец»",
@@ -43663,39 +43696,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "t-doc"
-        },
-        {
-          "source": "ooo-npo-kilovatt-shestopalov",
-          "target": "product::ooo-npo-kilovatt-shestopalov::ребус",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-npo-kilovatt-shestopalov",
-          "target": "product::ooo-npo-kilovatt-shestopalov::сигнал-м2",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-npo-kilovatt-shestopalov",
-          "target": "product::ooo-npo-kilovatt-shestopalov::штора",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
         },
         {
           "source": "ooo-npts-basirtk",
