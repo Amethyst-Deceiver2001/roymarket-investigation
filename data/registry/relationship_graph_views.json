@@ -5909,6 +5909,32 @@
           "degree": 1
         },
         {
+          "id": "product::npp-radar-mms::метеосервер",
+          "kind": "product",
+          "label": "«Метеосервер»",
+          "owner_slug": "npp-radar-mms",
+          "source_id": "s7990",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::npp-radar-mms::радиолокационные-головки-самонаведения",
+          "kind": "product",
+          "label": "Радиолокационные головки самонаведения",
+          "owner_slug": "npp-radar-mms",
+          "source_id": "s7988",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::npp-radar-mms::регулятор-теплопотребления-аргос",
           "kind": "product",
           "label": "Регулятор теплопотребления АРГОС",
@@ -19001,6 +19027,28 @@
           "type": "produces",
           "label": null,
           "source_id": "s5391",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npp-radar-mms",
+          "target": "product::npp-radar-mms::метеосервер",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7990",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npp-radar-mms",
+          "target": "product::npp-radar-mms::радиолокационные-головки-самонаведения",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7988",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -38573,18 +38621,6 @@
           "degree": 10
         },
         {
-          "id": "npp-radar-mms",
-          "kind": "entity",
-          "label": "АО «НПП «Радар ММС»»",
-          "name_latin": null,
-          "inn": "7814027653",
-          "tier": "manufacturer",
-          "sanctioned": true,
-          "legal_form": "НПП",
-          "variant": null,
-          "degree": 113
-        },
-        {
           "id": "npts-ushkuynik",
           "kind": "entity",
           "label": "ООО «Ушкуйник»",
@@ -40016,32 +40052,6 @@
           "kind": "product",
           "label": "IoT-устройства и контроллеры мощности",
           "owner_slug": "npp-elvo-kolskaya-verf",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npp-radar-mms::метеосервер",
-          "kind": "product",
-          "label": "«Метеосервер»",
-          "owner_slug": "npp-radar-mms",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npp-radar-mms::радиолокационные-головки-самонаведения",
-          "kind": "product",
-          "label": "Радиолокационные головки самонаведения",
-          "owner_slug": "npp-radar-mms",
           "source_id": null,
           "classification": {
             "status": "unclassified",
@@ -43019,28 +43029,6 @@
         {
           "source": "npp-elvo-kolskaya-verf",
           "target": "product::npp-elvo-kolskaya-verf::iot-устройства-и-контроллеры-мощности",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npp-radar-mms",
-          "target": "product::npp-radar-mms::метеосервер",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npp-radar-mms",
-          "target": "product::npp-radar-mms::радиолокационные-головки-самонаведения",
           "type": "produces",
           "label": null,
           "source_id": null,

@@ -41,8 +41,8 @@
 - **БВС ВТ-30Е** — Multi-purpose single-rotor helicopter-type UAS with tail rotor. Manufacturer field on this listing: АО "НПП "Радар ммс" -- confirms this registry's “НПП” name over the separate rk.2035.university showcase blurb's “Концерн” wording (see open_questions). [s1169]
 - **БВС ВТ-45** — Universal helicopter-type UAS, up to 10kg payload capacity. [s1169]
 - **БВС ВТ-440** — First heavy civil helicopter-type UAS certified for operation in Russia (under an experimental legal regime, ЭПР), up to 100kg payload. [s1169]
-- **Радиолокационные головки самонаведения** — Radar homing heads for Kalibr/Kh-35/Kh-59 precision munitions.
-- **«Метеосервер»** — Hydrometeorological monitoring system.
+- **Радиолокационные головки самонаведения** — Radar homing heads (АРГС-14Э/АРГС-35Э/АРГС-54Э) for the Kalibr/Kh-35/Kh-59 precision-guided cruise missile family. Wikipedia's own article cites an iStories investigation (26.10.2023) as its source for this claim; corroborated independently against the EU sanctions listing language quoted in the same article ([s7989]). [s7988]
+- **«Метеосервер»** — Hydrometeorological monitoring system. [s7990]
 - **Автоматизированная док-станция (мобильный дронопорт)** — Mobile automated dronoport/dock station, от ₽26,000,000. Listed alongside БВС ВТ-440м and БВС ВТ-30Е on this entity's налетай.рф storefront; not previously in products[]. [s2630]
 - **«Характер-К»** — Корабельная гидрометеорологическая станция (naval shipboard hydrometeorological station), КОД 177166 — supplied to МО РФ under gov. contract № РК/1/04/3/0208/2014 (reg. 0173100004514000947, ₽96,393,305.55, 2014-2015). A военно-морской/naval-fit product line distinct from this entity's better-documented UAV/radar work — found only by reading the fetch-documents attachment in full. [s2712]
 - **Датчик метеорологической дальности видимости ДМДВ ИСАТ.416141.003** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: Инструменты и приборы прочие; active ПП719 certificate flag on GISP listing [s5391]
@@ -356,6 +356,8 @@
 | [s6845] | EGRUL extract | EGRUL extract (EGRUL_7814027653_20260907_npp-radar-mms.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6930] | Proverki | Proverki (PROVERKI_7814027653_20260907_npp-radar-mms-inspection-history.txt) | 2026-09-07 | — |
 | [s6944] | Nspd | Nspd (NSPD_khabolovo_212_20260907.json) | 2026-09-07 | — |
+| [s7988] | transcript | transcript (TRANSCRIPT_20231026_istories-radar-mms-kalibr-homing-heads.txt) | 2023-10-26 | — |
+| [s7990] | site capture | site capture (WEBCAPTURE_7814027653_20260923_radar-mms-meteoservices.html) | 2026-09-23 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
