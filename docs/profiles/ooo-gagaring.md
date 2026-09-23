@@ -48,10 +48,10 @@
 ## Products
 
 - **Система связи «Кузнечик»** ([full profile](products/kuznechik.html)) — ПО системы связи для БПЛА «Кузнечик» — учтено как нематериальный актив (капитальные вложения), оставшийся срок полезного использования 75–110 месяцев по состоянию на 31.12.2025. Explicitly a UAV (БПЛА) communications-system software product, per FY2025 audit report intangible-assets note. [s5333]
-- **Детектор портативный «ЮРКА 1.2»** — 21,960 руб.
-- **Детектор портативный «ЮРКА 1.2ВП»** — С видеоперехватом. 24,400 руб.
-- **Детектор портативный «ЮРКА 1.2СК»** — С сухим контактом для РЭБ-интеграции. 23,180 руб.
-- **Видеоприемник выносной «СОВА»** — NAME COLLISION: same brand name as va-technologies' («Конструкторское бюро СОВА») navigation module — a DIFFERENT product (video receiver, not navigation), different company. 45,964-51,240 руб.
+- **Детектор портативный «ЮРКА 1.2»** — 21,960 руб. Own-site product page, gagaring.ru, confirmed present in site's own sitemap. [s8007]
+- **Детектор портативный «ЮРКА 1.2ВП»** — С видеоперехватом. 24,400 руб. Own-site product page, gagaring.ru, confirmed present in site's own sitemap. [s8009]
+- **Детектор портативный «ЮРКА 1.2СК»** — С сухим контактом для РЭБ-интеграции. 23,180 руб. Own-site product page, gagaring.ru, confirmed present in site's own sitemap. [s8008]
+- **Видеоприемник выносной «СОВА»** — NAME COLLISION: same brand name as va-technologies' («Конструкторское бюро СОВА») navigation module — a DIFFERENT product (video receiver, not navigation), different company. 45,964-51,240 руб. Own-site product page (5.8/5.8 variant, representative of the full СОВА video-receiver line — dozens of frequency-pair variants confirmed in gagaring.ru's own sitemap). [s8010]
 - **РЭБ-глушитель «Звезда 1»** — Подавляет DJI Mavic-класс дронов (диапазоны 2.4/5.8 ГГц, дальность 200м) — «защищает от сброса» (боеприпаса). 30 тыс. руб. [s5437]
 - **РЭБ-глушитель «Звезда 2»** — Подавляет управление FPV-дронами (700-1000 МГц, дальность 300м). Само-описано как «средство последнего шанса». 52 тыс. руб. [s5437]
 - **Вынос FPV-передатчика «Нить»** — Выносной пульт управления, позволяет управлять дроном из укрытия; входит в комплект системы связи «Кузнечик» (per RT interview, [s5435]). 4,000 руб. [s5437]
@@ -238,6 +238,10 @@
 | [s7361] | Ооо | Ооо (ООО_ГАГАРИНГ-1232300051235-2026-09-08.pdf) | — | 2026-09-08 |
 | [s7362] | EGRUL extract | EGRUL extract (EGRUL_2373028450_20260908_ooo-laboratoriya-yangelya.pdf) | 2026-09-08 | 2026-09-08 |
 | [s7364] | arbitration court filing | arbitration court filing (A32-19338-2025_20250602_Reshenija_i_postanovlenija.pdf) | 2025-06-02 | 2025-06-02 |
+| [s8007] | site capture | site capture (WEBCAPTURE_2312321660_20260923_gagaring-detektor-yurka-1-2.html) | 2026-09-23 | — |
+| [s8008] | site capture | site capture (WEBCAPTURE_2312321660_20260923_gagaring-detektor-yurka-1-2sk.html) | 2026-09-23 | — |
+| [s8009] | site capture | site capture (WEBCAPTURE_2312321660_20260923_gagaring-detektor-yurka-1-2vp.html) | 2026-09-23 | — |
+| [s8010] | site capture | site capture (WEBCAPTURE_2312321660_20260923_gagaring-videopriemnik-sova.html) | 2026-09-23 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
