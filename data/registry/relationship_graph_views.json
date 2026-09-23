@@ -5417,7 +5417,7 @@
         {
           "id": "product::ao-stratim::голубь",
           "kind": "product",
-          "label": "Голубь",
+          "label": "«Голубь»",
           "owner_slug": "ao-stratim",
           "source_id": "s0963",
           "classification": {
@@ -5940,6 +5940,58 @@
           "label": "«Характер-К»",
           "owner_slug": "npp-radar-mms",
           "source_id": "s2712",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::npts-elvis::eliot-soc",
+          "kind": "product",
+          "label": "ELIoT SoC",
+          "owner_slug": "npts-elvis",
+          "source_id": "s7983",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::npts-elvis::psim-nest-senesys-m-sylph",
+          "kind": "product",
+          "label": "PSIM NEST / Senesys-M / Sylph",
+          "owner_slug": "npts-elvis",
+          "source_id": "s7985",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::npts-elvis::robodeus",
+          "kind": "product",
+          "label": "RoboDeus",
+          "owner_slug": "npts-elvis",
+          "source_id": "s7986",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::npts-elvis::scythian-soc",
+          "kind": "product",
+          "label": "Scythian SoC",
+          "owner_slug": "npts-elvis",
+          "source_id": "s7987",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -18982,6 +19034,50 @@
           "type": "produces",
           "label": null,
           "source_id": "s2712",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npts-elvis",
+          "target": "product::npts-elvis::eliot-soc",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7983",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npts-elvis",
+          "target": "product::npts-elvis::psim-nest-senesys-m-sylph",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7985",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npts-elvis",
+          "target": "product::npts-elvis::robodeus",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7986",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npts-elvis",
+          "target": "product::npts-elvis::scythian-soc",
+          "type": "produces",
+          "label": null,
+          "source_id": "s7987",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -38489,18 +38585,6 @@
           "degree": 113
         },
         {
-          "id": "npts-elvis",
-          "kind": "entity",
-          "label": "АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС)",
-          "name_latin": null,
-          "inn": "7735582816",
-          "tier": "manufacturer",
-          "sanctioned": true,
-          "legal_form": "НПЦ",
-          "variant": null,
-          "degree": 152
-        },
-        {
           "id": "npts-ushkuynik",
           "kind": "entity",
           "label": "ООО «Ушкуйник»",
@@ -39958,58 +40042,6 @@
           "kind": "product",
           "label": "Радиолокационные головки самонаведения",
           "owner_slug": "npp-radar-mms",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npts-elvis::eliot-soc",
-          "kind": "product",
-          "label": "ELIoT SoC",
-          "owner_slug": "npts-elvis",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npts-elvis::psim-nest-senesys-m-sylph",
-          "kind": "product",
-          "label": "PSIM NEST / Senesys-M / Sylph",
-          "owner_slug": "npts-elvis",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npts-elvis::robodeus",
-          "kind": "product",
-          "label": "RoboDeus",
-          "owner_slug": "npts-elvis",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::npts-elvis::scythian-soc",
-          "kind": "product",
-          "label": "Scythian SoC",
-          "owner_slug": "npts-elvis",
           "source_id": null,
           "classification": {
             "status": "unclassified",
@@ -43009,50 +43041,6 @@
         {
           "source": "npp-radar-mms",
           "target": "product::npp-radar-mms::радиолокационные-головки-самонаведения",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npts-elvis",
-          "target": "product::npts-elvis::eliot-soc",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npts-elvis",
-          "target": "product::npts-elvis::psim-nest-senesys-m-sylph",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npts-elvis",
-          "target": "product::npts-elvis::robodeus",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "npts-elvis",
-          "target": "product::npts-elvis::scythian-soc",
           "type": "produces",
           "label": null,
           "source_id": null,

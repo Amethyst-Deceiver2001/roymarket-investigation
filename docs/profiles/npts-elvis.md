@@ -35,10 +35,10 @@
 
 ## Products
 
-- **RoboDeus** — 50-core heterogeneous SoC for robotics/embedded AI, 16 Tflops NN performance.
-- **Scythian SoC** — Mobile/navigation/multimedia system-on-chip.
-- **ELIoT SoC** — IoT-oriented system-on-chip.
-- **PSIM NEST / Senesys-M / Sylph** — AI/computer-vision security systems.
+- **RoboDeus** — 50-core heterogeneous SoC for robotics/embedded AI, 16 Tflops NN performance. [s7986]
+- **Scythian SoC** — Mobile/navigation/multimedia system-on-chip. [s7987]
+- **ELIoT SoC** — IoT-oriented system-on-chip. [s7983]
+- **PSIM NEST / Senesys-M / Sylph** — AI/computer-vision security systems. [s7985]
 - **Микросхема интегральная 1657РУ1У** — Integrated circuit (memory), АЕЯР.431220.799ТУ. [s5356]
 - **Микросхема интегральная 1892ВМ12АТ / 1892ВМ206 / 1892ВМ15АФ / 1288ПЛ1У** — Мультикор-family DSP/processor integrated circuits, per Минпромторг заключение №67615/11. [s5357]
 - **Микросхема интегральная 1892ВМ10Я / 1892ВМ14Я** — Мультикор-family second-level integrated circuits, per Минпромторг заключение №82258/11. [s5358]
@@ -447,6 +447,10 @@
 | [s6829] | EGRUL extract | EGRUL extract (EGRUL_7735582816_20260907_npts-elvis.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6928] | Proverki | Proverki (PROVERKI_7735582816_20260907_npts-elvis-inspection-history.txt) | 2026-09-07 | — |
 | [s7544] | site capture | site capture (SITE_7735582816_20260916_npts-elvis-logo.svg) | 2026-09-16 | — |
+| [s7983] | site capture | site capture (WEBCAPTURE_7735582816_20260923_elvees-eliot.html) | 2026-09-23 | — |
+| [s7985] | site capture | site capture (WEBCAPTURE_7735582816_20260923_elvees-psim-nest.html) | 2026-09-23 | — |
+| [s7986] | site capture | site capture (WEBCAPTURE_7735582816_20260923_elvees-robodeus.html) | 2026-09-23 | — |
+| [s7987] | site capture | site capture (WEBCAPTURE_7735582816_20260923_elvees-scythian.html) | 2026-09-23 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

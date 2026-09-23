@@ -76293,6 +76293,44 @@
     "_origin": "manifest"
   },
   {
+    "id": "s7981",
+    "type": null,
+    "path": "data/sources/WEBCAPTURE_024200325133_20260921_beastfpv-gnb-battery-product.html",
+    "url": null,
+    "captured_date": "2026-09-21",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "024200325133"
+    ],
+    "entities": [],
+    "sha256": "70ca029602c369d1e47e32df55837fc7a79373a9de129a055ec1e611377694ea",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s7982",
+    "type": "court",
+    "path": "data/sources/WEBCAPTURE_024200325133_20260921_beastfpv-remote-control-article.html",
+    "url": null,
+    "captured_date": "2026-09-21",
+    "fiscal_year": null,
+    "as_of": "2026-05-27",
+    "as_of_method": "court:numeric-date",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "024200325133"
+    ],
+    "entities": [],
+    "sha256": "386bd6a02faf49572e9438468efab6e3c4fad87e77d529aed73c5fcbcd1ca948",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s7731",
     "type": null,
     "path": "data/sources/WEBCAPTURE_20260919_vk-id463123770-zov-aa-rossia-sila.html",
@@ -76359,6 +76397,91 @@
     ],
     "entities": [],
     "sha256": "2a283463ac3b22eb48089754e9ffd4852f8097e5f8a2de05cd56bb8431bfd786",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s7983",
+    "type": null,
+    "path": "data/sources/WEBCAPTURE_7735582816_20260923_elvees-eliot.html",
+    "url": null,
+    "captured_date": "2026-09-23",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "efaf3ef0f99d471a2e3ce0661e04a06560e34b9566fab23b9bdc8e276c8f925d",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s7984",
+    "type": null,
+    "path": "data/sources/WEBCAPTURE_7735582816_20260923_elvees-products-overview.html",
+    "url": null,
+    "captured_date": "2026-09-23",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "f21a1248fab7bcb7300b1dbc64c9de244303a83374cde4e230c78b434bac840f",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s7985",
+    "type": null,
+    "path": "data/sources/WEBCAPTURE_7735582816_20260923_elvees-psim-nest.html",
+    "url": null,
+    "captured_date": "2026-09-23",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "aa1ffb56f9a4472a0e8a7a5581a01424ae0748a5de63d05fe717c26acd864d5e",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s7986",
+    "type": null,
+    "path": "data/sources/WEBCAPTURE_7735582816_20260923_elvees-robodeus.html",
+    "url": null,
+    "captured_date": "2026-09-23",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "f6aa9a5b7f51ce1e6c8ee9d775470c2490d2aee473da4c88433eb590b061a365",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s7987",
+    "type": null,
+    "path": "data/sources/WEBCAPTURE_7735582816_20260923_elvees-scythian.html",
+    "url": null,
+    "captured_date": "2026-09-23",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "dd10b6eef98c8dfc7f26556e4264f8b5a2c85d50e6503658122b9f5c93773aa9",
     "_verified": false,
     "_origin": "manifest"
   },
@@ -146300,47 +146423,5 @@
     "sha256": "214b3264dc7e1f7145af8deefafadc21c5e96ef51817fa83b7358e70419e0e0d",
     "_verified": false,
     "_origin": "manifest"
-  },
-  {
-    "id": "s7981",
-    "type": "web",
-    "path": "data/sources/WEBCAPTURE_024200325133_20260921_beastfpv-gnb-battery-product.html",
-    "url": "https://beastfpv.ru/product/akkumulyator-dlya-fpv-drona-gnb-9000-mah-6s-70s-xt60/",
-    "captured_date": "2026-09-21",
-    "fiscal_year": null,
-    "as_of": null,
-    "as_of_method": null,
-    "supersedes": null,
-    "superseded_by": null,
-    "inns": [
-      "024200325133"
-    ],
-    "entities": [
-      "ip-gabitov-r-a"
-    ],
-    "sha256": "70ca029602c369d1e47e32df55837fc7a79373a9de129a055ec1e611377694ea",
-    "_verified": true,
-    "_origin": "manual"
-  },
-  {
-    "id": "s7982",
-    "type": "web",
-    "path": "data/sources/WEBCAPTURE_024200325133_20260921_beastfpv-remote-control-article.html",
-    "url": "https://beastfpv.ru/news/sistema-udalyonnogo-upravleniya-fpv-dronom-cherez-internet/",
-    "captured_date": "2026-09-21",
-    "fiscal_year": null,
-    "as_of": "2026-09-21",
-    "as_of_method": "captured page's own printed legal-entity footer block",
-    "supersedes": null,
-    "superseded_by": null,
-    "inns": [
-      "024200325133"
-    ],
-    "entities": [
-      "ip-gabitov-r-a"
-    ],
-    "sha256": "386bd6a02faf49572e9438468efab6e3c4fad87e77d529aed73c5fcbcd1ca948",
-    "_verified": true,
-    "_origin": "manual"
   }
 ]

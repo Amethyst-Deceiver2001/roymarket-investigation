@@ -44,10 +44,10 @@
 
 ## Products
 
-- **«Русак-С»** — Existing registry entry, name variant of «Русак» — GUR lists plain «Русак». Description backfilled 2026-09-15 from the identically-named enriched sibling entry below (duplicate-stub cleanup, no new source).
-- **Голубь** — Existing registry entry, corroborated by GUR profile. Description backfilled 2026-09-15 from the identically-named enriched sibling entry below (duplicate-stub cleanup, no new source). [s0963]
-- **«Тювик»** — Existing registry entry. Description backfilled 2026-09-15 from the identically-named enriched sibling entry below (duplicate-stub cleanup, no new source).
+- **«Русак-С»** — Existing registry entry, name variant of «Русак» — GUR lists plain «Русак».
 - **«Щегол»** — FPV kamikaze UAV, per GUR profile. [s0963]
+- **«Голубь»** — Existing registry entry, corroborated by GUR profile. [s0963]
+- **«Тювик»** — Existing registry entry.
 
 ## Financials
 
