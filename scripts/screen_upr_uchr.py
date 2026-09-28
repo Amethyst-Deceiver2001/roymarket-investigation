@@ -27,6 +27,20 @@ each item {inn, ogrn, name, role (director|founder), okved, registered,
 region}. This is fetched screening data (same category as sanctions[] on
 entities), not a hand correction.
 
+**2026-09-29: archives raw evidence.** Every hit this script finds used to
+sit unsourced (no raw file backed it, so `other_entities[]` claims had no
+`source_id` and fed unsourced `role` edges in the relationship graph — 108
+people affected as of this writing). Each person with any real hit this run
+now gets their raw upr/uchr card rows written to
+`data/sources/FNS_PB_UPR_UCHR_<inn_personal>_<YYYYMMDD>_<slug>-raw.json`
+(same convention as the two hand-captured files this convention was proven
+on: Барахтин А.В., Бессонов С.Н.). Run the usual pipeline
+(`inventory_sources.py` -> `scan_sources.py` -> `extract_registry.py`) to
+assign real `sNNNN` ids to the new files, then
+`scripts/wire_upr_uchr_sources.py` to match each archived file back to its
+person by filename and stamp `source_id` onto their `other_entities[]`
+entries.
+
 **Live network job against a third-party service — per CLAUDE.md's
 crawling-jobs policy, tested inline on one person first, full-roster sweep
 handed to the user to run themselves rather than executed in the
@@ -109,6 +123,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 PEOPLE = REPO / "data" / "registry" / "people.json"
+SOURCES_DIR = REPO / "data" / "sources"
 
 BASE_URL = "https://pb.nalog.ru/search-proc.json"
 CAPTCHA_DIALOG_URL = "https://pb.nalog.ru/captcha-dialog.html"
@@ -278,6 +293,7 @@ def main() -> None:
             continue
 
         found = []
+        raw_by_role = {"upr": [], "uchr": []}
         drilldown_failed = False
         for role_key, role_label in (("upr", "director"), ("uchr", "founder")):
             cards = (summary.get(role_key) or {}).get("data") or []
@@ -292,6 +308,7 @@ def main() -> None:
                     print(f"  {i}/{len(targets)}  {label}  ERROR at drill-down ({role_label}): {e}")
                     drilldown_failed = True
                     continue
+                raw_by_role[role_key].extend(rows)
                 for row in rows:
                     found.append({
                         "inn": row.get("inn"),
@@ -337,12 +354,27 @@ def main() -> None:
             print(f"  {i}/{len(targets)}  {label}  WARNING: partial result -- some card drill-downs "
                   f"failed, merged with prior other_entities so nothing already-found is lost")
 
+        # Archive the raw upr/uchr rows this run actually saw (source
+        # evidence, not just the flattened `found` summary) -- this used to
+        # be lost entirely: other_entities[] carried a fetched claim with no
+        # source_id, and no raw file backed it. inventory_sources.py ->
+        # scan_sources.py -> extract_registry.py assigns this a real sNNNN
+        # id on the next pipeline run; nothing here can know that id yet.
+        raw_path = None
+        if raw_by_role["upr"] or raw_by_role["uchr"]:
+            SOURCES_DIR.mkdir(parents=True, exist_ok=True)
+            raw_path = SOURCES_DIR / f"FNS_PB_UPR_UCHR_{inn}_{today.replace('-', '')}_{person['slug']}-raw.json"
+            raw_path.write_text(
+                json.dumps(raw_by_role, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+            )
+
         person["other_entities"] = found
         person["other_entities_checked_at"] = today
         PEOPLE.write_text(json.dumps(people, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
         new_inns = {f["inn"] for f in found}
-        print(f"  {i}/{len(targets)}  {label}  {len(found)} entit(y/ies) found: {', '.join(sorted(new_inns)) or '-'}")
+        archived_note = f", archived to {raw_path.name}" if raw_path else ""
+        print(f"  {i}/{len(targets)}  {label}  {len(found)} entit(y/ies) found: {', '.join(sorted(new_inns)) or '-'}{archived_note}")
         time.sleep(DELAY_BETWEEN_PEOPLE)
 
     print("\nDone. Cross-check each ИНН against data/registry/entities.json — anything new is a lead, "
