@@ -51,12 +51,12 @@
 - **АЛЬФАМАРИН 5000 М** — Вариант миноискателя (mine detector variant), per Минпромторг заключение №128052/11. [s5352]
 - **АЛЬФАМАРИН** — Базовый миноискатель (base mine detector model), per Минпромторг заключение №128052/11. [s5352]
 - **АЛЬФАМАРИН — миноискатель СИМ** — Вариант миноискателя (mine detector variant), per Минпромторг заключение №128052/11. [s5352]
-- **Киберскан 3000** — Высокочувствительный тактический магнитометр.
-- **АРЕНА-5** — Конденсаторная батарейная подрывная машинка (capacitor battery blasting machine), also «3-е поколение» and «АРЕНА-5м» compact variants.
-- **ARENA-8000ST** — Арочный металлодетектор (arch metal detector).
+- **Киберскан 3000** — Высокочувствительный тактический магнитометр. Own-brand product page (альфамарин.рф/cyberscan-3000), exact title match. [s8028]
+- **АРЕНА-5** — Конденсаторная батарейная подрывная машинка (capacitor battery blasting machine), also «3-е поколение» and «АРЕНА-5м» compact variants. Own-brand product pages: /arena-5 (КБПМ «Арена-5», [s8024]) and /arena-5m (малогабаритная батарейная «Арена-5м», [s8025]). [s8024]
+- **ARENA-8000ST** — Арочный металлодетектор (arch metal detector). Own-brand product page (альфамарин.рф/arena-8000st), exact title match. [s8026]
 - **ARENA 5000PR** — Стационарный арочный металлодетектор (stationary arch metal detector), also thermal (t), thermal-imaging (tv/tvi) and folding variants. Производится в г. Йошкар-Ола (ТУ 26.30.050-010-49608285-2021, ГОСТ Р 53705-2009). [s5351]
-- **ARENA-F400ST** — Компактный металлодетектор.
-- **Набор сапера** — Sapper/engineer toolkit.
+- **ARENA-F400ST** — Компактный металлодетектор. Own-brand product page (альфамарин.рф/arena-f400st), exact title match. [s8027]
+- **Набор сапера** — Sapper/engineer toolkit. Own-brand product page (альфамарин.рф/nabor-sapera-polni, «Набор сапера»), exact title match. [s8029]
 
 ## Financials
 
@@ -130,6 +130,11 @@
 | [s6710] | EGRUL extract | EGRUL extract (EGRUL_1215235283_20260907_ooo-opkb-eksplomet.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6954] | Proverki | Proverki (PROVERKI_1215235283_20260907_ooo-opkb-eksplomet-inspection-history.txt) | 2026-09-07 | — |
 | [s7559] | site capture | site capture (SITE_1215235283_20260916_ooo-opkb-eksplomet-logo.svg) | 2026-09-16 | — |
+| [s8024] | site capture | site capture (WEBCAPTURE_1215235283_20260928_alfamarin-arena-5.html) | 2026-09-28 | — |
+| [s8026] | site capture | site capture (WEBCAPTURE_1215235283_20260928_alfamarin-arena-8000st.html) | 2026-09-28 | — |
+| [s8027] | site capture | site capture (WEBCAPTURE_1215235283_20260928_alfamarin-arena-f400st.html) | 2026-09-28 | — |
+| [s8028] | site capture | site capture (WEBCAPTURE_1215235283_20260928_alfamarin-cyberscan-3000.html) | 2026-09-28 | — |
+| [s8029] | site capture | site capture (WEBCAPTURE_1215235283_20260928_alfamarin-nabor-sapera.html) | 2026-09-28 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

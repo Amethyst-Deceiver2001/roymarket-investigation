@@ -8769,6 +8769,32 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-opkb-eksplomet::arena-8000st",
+          "kind": "product",
+          "label": "ARENA-8000ST",
+          "owner_slug": "ooo-opkb-eksplomet",
+          "source_id": "s8026",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-opkb-eksplomet::arena-f400st",
+          "kind": "product",
+          "label": "ARENA-F400ST",
+          "owner_slug": "ooo-opkb-eksplomet",
+          "source_id": "s8027",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-opkb-eksplomet::альфамарин",
           "kind": "product",
           "label": "АЛЬФАМАРИН",
@@ -8852,6 +8878,45 @@
           "label": "АЛЬФАМАРИН — миноискатель СИМ",
           "owner_slug": "ooo-opkb-eksplomet",
           "source_id": "s5352",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-opkb-eksplomet::арена-5",
+          "kind": "product",
+          "label": "АРЕНА-5",
+          "owner_slug": "ooo-opkb-eksplomet",
+          "source_id": "s8024",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-opkb-eksplomet::киберскан-3000",
+          "kind": "product",
+          "label": "Киберскан 3000",
+          "owner_slug": "ooo-opkb-eksplomet",
+          "source_id": "s8028",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-opkb-eksplomet::набор-сапера",
+          "kind": "product",
+          "label": "Набор сапера",
+          "owner_slug": "ooo-opkb-eksplomet",
+          "source_id": "s8029",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -22753,6 +22818,28 @@
         },
         {
           "source": "ooo-opkb-eksplomet",
+          "target": "product::ooo-opkb-eksplomet::arena-8000st",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8026",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-opkb-eksplomet",
+          "target": "product::ooo-opkb-eksplomet::arena-f400st",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8027",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-opkb-eksplomet",
           "target": "product::ooo-opkb-eksplomet::альфамарин",
           "type": "produces",
           "label": null,
@@ -22823,6 +22910,39 @@
           "type": "produces",
           "label": null,
           "source_id": "s5352",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-opkb-eksplomet",
+          "target": "product::ooo-opkb-eksplomet::арена-5",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8024",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-opkb-eksplomet",
+          "target": "product::ooo-opkb-eksplomet::киберскан-3000",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8028",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-opkb-eksplomet",
+          "target": "product::ooo-opkb-eksplomet::набор-сапера",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8029",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -41075,71 +41195,6 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-opkb-eksplomet::arena-8000st",
-          "kind": "product",
-          "label": "ARENA-8000ST",
-          "owner_slug": "ooo-opkb-eksplomet",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-opkb-eksplomet::arena-f400st",
-          "kind": "product",
-          "label": "ARENA-F400ST",
-          "owner_slug": "ooo-opkb-eksplomet",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-opkb-eksplomet::арена-5",
-          "kind": "product",
-          "label": "АРЕНА-5",
-          "owner_slug": "ooo-opkb-eksplomet",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-opkb-eksplomet::киберскан-3000",
-          "kind": "product",
-          "label": "Киберскан 3000",
-          "owner_slug": "ooo-opkb-eksplomet",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-opkb-eksplomet::набор-сапера",
-          "kind": "product",
-          "label": "Набор сапера",
-          "owner_slug": "ooo-opkb-eksplomet",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-orient-sistems::4gnss-dekart-ag",
           "kind": "product",
           "label": "4GNSS DEKART-AG",
@@ -43720,61 +43775,6 @@
           "target": "ooo-arkodim",
           "type": "related",
           "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-opkb-eksplomet",
-          "target": "product::ooo-opkb-eksplomet::arena-8000st",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-opkb-eksplomet",
-          "target": "product::ooo-opkb-eksplomet::arena-f400st",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-opkb-eksplomet",
-          "target": "product::ooo-opkb-eksplomet::арена-5",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-opkb-eksplomet",
-          "target": "product::ooo-opkb-eksplomet::киберскан-3000",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-opkb-eksplomet",
-          "target": "product::ooo-opkb-eksplomet::набор-сапера",
-          "type": "produces",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
