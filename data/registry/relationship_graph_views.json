@@ -7690,6 +7690,19 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-kravt-udmurtiya::быстрозарядные-станции-для-электротранспорта",
+          "kind": "product",
+          "label": "Быстрозарядные станции для электротранспорта",
+          "owner_slug": "ooo-kravt-udmurtiya",
+          "source_id": "s8047",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-kravt::kravt-bms",
           "kind": "product",
           "label": "KRAVT.BMS",
@@ -22120,6 +22133,17 @@
           "type": "produces",
           "label": null,
           "source_id": "s5391",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-kravt-udmurtiya",
+          "target": "product::ooo-kravt-udmurtiya::быстрозарядные-станции-для-электротранспорта",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8047",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -41366,19 +41390,6 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-kravt-udmurtiya::быстрозарядные-станции-для-электротранспорта",
-          "kind": "product",
-          "label": "Быстрозарядные станции для электротранспорта",
-          "owner_slug": "ooo-kravt-udmurtiya",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-kravt::footbot2",
           "kind": "product",
           "label": "FootBot2",
@@ -43802,17 +43813,6 @@
         {
           "source": "ooo-kravt",
           "target": "product::ooo-kravt::трле-э60-01-00-0",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-kravt-udmurtiya",
-          "target": "product::ooo-kravt-udmurtiya::быстрозарядные-станции-для-электротранспорта",
           "type": "produces",
           "label": null,
           "source_id": null,

@@ -37,7 +37,7 @@
 
 ## Products
 
-- **Быстрозарядные станции для электротранспорта** — EV fast-charging systems (20-80% in 30 min), power-distribution feeders for charging infrastructure, battery production, electronics reverse-engineering. >70 staff.
+- **Быстрозарядные станции для электротранспорта** — EV fast-charging systems (20-80% in 30 min), power-distribution feeders for charging infrastructure, battery production, electronics reverse-engineering. >70 staff. Own-site page (kravt-studio.ru/udmurt), exact text match: «ЗАРЯДНАЯ СТАНЦИЯ ДЛЯ ЭЛЕКТРОМОБИЛЕЙ — Зарядка электромобиля с 20 до 80% до 30 минут» plus «Фидеры для автозарядных станций». [s8047]
 
 ## Financials
 
@@ -104,6 +104,7 @@
 | [s6473] | Bfo | Bfo (BFO_1800023369_2024_ооо-кравт-удмуртия.pdf) | — | — |
 | [s6474] | Bfo | Bfo (BFO_1800023369_2025_ооо-кравт-удмуртия.pdf) | — | — |
 | [s6773] | EGRUL extract | EGRUL extract (EGRUL_1800023369_20260907_ooo-kravt-udmurtiya.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8047] | site capture | site capture (WEBCAPTURE_1800023369_20260928_kravt-udmurt-representative-page.html) | 2026-09-28 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
