@@ -170,7 +170,7 @@
 
 ## Corporate links
 
-- **АО «Площадь»** `co-exhibited` — Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot "Народный ВПК" (14-16 June 2024, Nizhny Novgorod) lists ООО «Гагаринг» and АО «Площадь» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11). Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file.
+- **АО «Площадь»** `co-exhibited` — Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot "Народный ВПК" (14-16 June 2024, Nizhny Novgorod) lists ООО «Гагаринг» and АО «Площадь» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11) -- archived as data/sources/TGPOST_20240605_projectArchangel-4504.txt. Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file. [s8067]
 - **ООО «Авирон»** — доля участия 36,8% [s5333]
 - **ООО «Интел Дрон»** — доля участия 50% [s5333]
 - **ООО «НПО Эйлер»** — доля участия 50% [s5333]
@@ -242,6 +242,7 @@
 | [s8008] | site capture | site capture (WEBCAPTURE_2312321660_20260923_gagaring-detektor-yurka-1-2sk.html) | 2026-09-23 | — |
 | [s8009] | site capture | site capture (WEBCAPTURE_2312321660_20260923_gagaring-detektor-yurka-1-2vp.html) | 2026-09-23 | — |
 | [s8010] | site capture | site capture (WEBCAPTURE_2312321660_20260923_gagaring-videopriemnik-sova.html) | 2026-09-23 | — |
+| [s8067] | Tgpost | Tgpost (TGPOST_20240605_projectArchangel-4504.txt) | 2024-06-05 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

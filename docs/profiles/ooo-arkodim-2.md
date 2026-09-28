@@ -55,7 +55,7 @@
 
 ## Corporate links
 
-- **ООО «Аркодим»** `sister-entity` — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim — a sister/satellite entity in the same Kazan «Аркодим» family. Not yet EGRUL-выписка-verified for founder overlap or independently assessed for UAV-relevance; tier left unset pending that review.
+- **ООО «Аркодим»** `sister-entity` — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim — a sister/satellite entity in the same Kazan «Аркодим» family. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference (screen_upr_uchr.py, [s8064]): ООО «АРКОДИМ-2» (ИНН 1659173832) listed under Барахтин's own director role. [s8064]
 
 ## Sources cited in this profile
 
@@ -68,6 +68,7 @@
 | [s7478] | Bfo | Bfo (BFO_1659173832_2023_ooo-arkodim-2.pdf) | — | — |
 | [s7479] | Bfo | Bfo (BFO_1659173832_2024_ooo-arkodim-2.pdf) | — | — |
 | [s7480] | Bfo | Bfo (BFO_1659173832_2025_ooo-arkodim-2.pdf) | — | — |
+| [s8064] | Fns | Fns (FNS_PB_UPR_UCHR_165910378299_20260929_barakhtin-artem-vladimirovich-raw.json) | 2026-09-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -134,7 +134,7 @@
 
 ## Corporate links
 
-- **ООО «Аэромакс-Авиа (Центр-Логистика)»** `sister-entity` — Same director (Бессонов Сергей Николаевич) — confirms ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) is a sister/logistics-arm entity of the ГК «Аэромакс» group, not an unrelated namesake. Found via screen_upr_uchr.py's other_entities scan on bessonov-sergey-nikolaevich, 2026-09-14.
+- **ООО «Аэромакс-Авиа (Центр-Логистика)»** `sister-entity` — Same director (Бессонов Сергей Николаевич) — confirms ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) is a sister/logistics-arm entity of the ГК «Аэромакс» group, not an unrelated namesake. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference (screen_upr_uchr.py, [s8065]): both entities listed under Бессонов's own director role. [s8065]
 - **ООО «ГК «Аэромакс»»** — Parent entity (100%) [s0218]
 
 ## Open questions
@@ -173,6 +173,7 @@
 | [s7996] | site capture | site capture (WEBCAPTURE_7725347482_20260923_aeromax-a-5.html) | 2026-09-23 | — |
 | [s7997] | site capture | site capture (WEBCAPTURE_7725347482_20260923_aeromax-b-120.html) | 2026-09-23 | — |
 | [s7998] | site capture | site capture (WEBCAPTURE_7725347482_20260923_aeromax-b-200.html) | 2026-09-23 | — |
+| [s8065] | Fns | Fns (FNS_PB_UPR_UCHR_644914040799_20260929_bessonov-sergey-nikolaevich-raw.json) | 2026-09-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

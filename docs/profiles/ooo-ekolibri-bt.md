@@ -49,7 +49,7 @@ _No named principals linked to this entity yet._
 
 ## Corporate links
 
-- **АО «Эколибри»** `managed-by` — Managed by АО «Эколибри» per ЕГРЮЛ ("управляющая организация: АО Эколибри") -- subsidiary carrying the UAV-specific OKVED (production of unmanned aerial systems) matching the parent's eVTOL line, but no distinct product names found for this subsidiary specifically; plausibly folded into ecolibri.aero but not directly confirmed there.
+- **АО «Эколибри»** `managed-by` — Managed by АО «Эколибри» per ЕГРЮЛ ("управляющая организация: АО Эколибри") -- subsidiary carrying the UAV-specific OKVED (production of unmanned aerial systems) matching the parent's eVTOL line, but no distinct product names found for this subsidiary specifically; plausibly folded into ecolibri.aero but not directly confirmed there. Confirmed directly against this entity's own full signed ЕГРЮЛ extract ([s6862], read 2026-09-29): names "АКЦИОНЕРНОЕ ОБЩЕСТВО «ЭКОЛИБРИ»" (ИНН 7714473012) as управляющая организация. [s6862]
 
 ## Open questions
 

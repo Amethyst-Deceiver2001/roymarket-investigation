@@ -40,7 +40,7 @@
 
 ## Corporate links
 
-- **ООО «Аркодим»** `sister-entity` — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. A Moscow-registered trade association, not yet independently assessed for UAV-relevance or membership overlap with other network entities.
+- **ООО «Аркодим»** `sister-entity` — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. A Moscow-registered trade association. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference ([s8064]): АССОЦИАЦИЯ ТЕХНОЛОГИЧЕСКОГО БИЗНЕСА (ИНН 9726005220) listed under Барахтин's own director role. [s8064]
 
 ## Sources cited in this profile
 
@@ -51,6 +51,7 @@
 | [s7496] | Bfo | Bfo (BFO_9726005220_2023_associatsiya-tekhnologicheskogo-biznesa.pdf) | — | — |
 | [s7497] | Bfo | Bfo (BFO_9726005220_2024_associatsiya-tekhnologicheskogo-biznesa.pdf) | — | — |
 | [s7498] | Bfo | Bfo (BFO_9726005220_2025_associatsiya-tekhnologicheskogo-biznesa.pdf) | — | — |
+| [s8064] | Fns | Fns (FNS_PB_UPR_UCHR_165910378299_20260929_barakhtin-artem-vladimirovich-raw.json) | 2026-09-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

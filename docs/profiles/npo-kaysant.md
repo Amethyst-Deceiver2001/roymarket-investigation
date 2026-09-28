@@ -77,7 +77,7 @@
 
 ## Corporate links
 
-- **АНО «НПЦ «Ушкуйник»»** `co-speaker` — Shared exhibition appearance: a "Что показывали на Дроннице" press digest (2025-09-09) round-up describes both НПО «КАЙСАНТ»'s interceptor drone and АНО «НПЦ «Ушкуйник»»'s optical-fiber «Князь Вандал Новгородский» production figures in the same piece, both companies' products shown at Дронница-2025. Confirmed verbatim against the live DB, identical text cross-posted to channels tsg_group71 msg 168 and nponebo msg 95 (both 2025-09-09). Both entities already carry independent cbst_tie records -- this documents a direct physical/promotional co-appearance, not a new ЦБСТ link.
+- **АНО «НПЦ «Ушкуйник»»** `co-speaker` — Shared exhibition appearance: a "Что показывали на Дроннице" press digest (2025-09-09) round-up describes both НПО «КАЙСАНТ»'s interceptor drone and АНО «НПЦ «Ушкуйник»»'s optical-fiber «Князь Вандал Новгородский» production figures in the same piece, both companies' products shown at Дронница-2025. Confirmed verbatim against the live DB, identical text cross-posted to channels tsg_group71 msg 168 and nponebo msg 95 (both 2025-09-09). Both entities already carry independent cbst_tie records -- this documents a direct physical/promotional co-appearance, not a new ЦБСТ link. [s8068]
 
 ## Sources cited in this profile
 
@@ -95,6 +95,7 @@
 | [s8015] | site capture | site capture (WEBCAPTURE_7733393203_20260924_germes-machti-catalog.html) | 2026-09-24 | — |
 | [s8016] | site capture | site capture (WEBCAPTURE_7733393203_20260924_germes-po-software.html) | 2026-09-24 | — |
 | [s8017] | site capture | site capture (WEBCAPTURE_7733393203_20260924_germes-svyaz-catalog.html) | 2026-09-24 | — |
+| [s8068] | Tgpost | Tgpost (TGPOST_20250909_tsg_group71-168.txt) | 2025-09-09 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

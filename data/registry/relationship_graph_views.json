@@ -11642,6 +11642,17 @@
           "confidence": null
         },
         {
+          "source": "ano-arkhangel",
+          "target": "ano-dpo-obrazovatelny-tsentr-gagaring",
+          "type": "related",
+          "label": "training-partnership",
+          "source_id": "s5372",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "ano-nii-dpo",
           "target": "ooo-nii-dpo",
           "type": "related",
@@ -11673,6 +11684,28 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "t-doc"
+        },
+        {
+          "source": "ano-npts-ushkuynik",
+          "target": "npo-kaysant",
+          "type": "related",
+          "label": "co-speaker",
+          "source_id": "s8068",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ano-npts-ushkuynik",
+          "target": "ooo-trimiks-bulat-3mx",
+          "type": "related",
+          "label": "co-speaker",
+          "source_id": "s8066",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
         },
         {
           "source": "ano-platforma-nti",
@@ -12223,6 +12256,28 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "t-open"
+        },
+        {
+          "source": "ao-opticheskie-sistemy",
+          "target": "ooo-ametist",
+          "type": "related",
+          "label": "shared-address",
+          "source_id": "s7451",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-opticheskie-sistemy",
+          "target": "ooo-pk-stalnoy-kupol",
+          "type": "related",
+          "label": "shared-address",
+          "source_id": "s6965",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
         },
         {
           "source": "ao-pk-azimut",
@@ -12809,6 +12864,17 @@
         },
         {
           "source": "ao-ploshchad",
+          "target": "ooo-gagaring",
+          "type": "related",
+          "label": "co-exhibited",
+          "source_id": "s8067",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-ploshchad",
           "target": "product::ao-ploshchad::микроб-10с",
           "type": "produces",
           "label": null,
@@ -13198,6 +13264,17 @@
           "type": "role",
           "label": "директор по развитию",
           "source_id": "s0547",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "associatsiya-tekhnologicheskogo-biznesa",
+          "target": "ooo-arkodim",
+          "type": "related",
+          "label": "sister-entity",
+          "source_id": "s8064",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -19981,6 +20058,17 @@
         },
         {
           "source": "npo-kaysant",
+          "target": "ano-npts-ushkuynik",
+          "type": "related",
+          "label": "co-speaker",
+          "source_id": "s8068",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "npo-kaysant",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Named directly as \"резидент ЦБСТ\" by ЦБСТ's own channel, twice.",
@@ -21048,6 +21136,17 @@
         },
         {
           "source": "ooo-4gnss",
+          "target": "ooo-orient-sistems",
+          "type": "related",
+          "label": "group-structure",
+          "source_id": "s8032",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-4gnss",
           "target": "product::ooo-4gnss::гнсс-плата-4gnss-np1",
           "type": "produces",
           "label": null,
@@ -21224,6 +21323,17 @@
         },
         {
           "source": "ooo-aeromaks",
+          "target": "ooo-aeromaks-avia-tsentr-logistika",
+          "type": "related",
+          "label": "sister-entity",
+          "source_id": "s8065",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aeromaks",
           "target": "ooo-gk-aeromaks",
           "type": "founded",
           "label": "former founder (49.659%)",
@@ -21322,6 +21432,17 @@
           "confidence": null
         },
         {
+          "source": "ooo-aeromaks-avia-tsentr-logistika",
+          "target": "ooo-aeromaks",
+          "type": "related",
+          "label": "sister-entity",
+          "source_id": "s8065",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "ooo-aeroplatformy",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -21356,10 +21477,32 @@
         },
         {
           "source": "ooo-ametist",
+          "target": "ao-opticheskie-sistemy",
+          "type": "related",
+          "label": "shared-address",
+          "source_id": "s6966",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-ametist",
           "target": "ooo-everest",
           "type": "related",
           "label": "sister-entity",
           "source_id": "s7451",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-ametist",
+          "target": "ooo-pk-stalnoy-kupol",
+          "type": "related",
+          "label": "shared-address",
+          "source_id": "s6965",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -21399,6 +21542,28 @@
           "confidence": "t-doc"
         },
         {
+          "source": "ooo-arkodim-2",
+          "target": "ooo-arkodim",
+          "type": "related",
+          "label": "sister-entity",
+          "source_id": "s8064",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-arkodim-pro",
+          "target": "ooo-arkodim",
+          "type": "related",
+          "label": "sister-entity",
+          "source_id": "s8064",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "ooo-atlant-aero",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -21408,6 +21573,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-atlant-logistik",
+          "target": "ooo-everest",
+          "type": "related",
+          "label": "shared-address",
+          "source_id": "s7449",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
         },
         {
           "source": "ooo-aviron",
@@ -21520,11 +21696,44 @@
           "confidence": null
         },
         {
+          "source": "ooo-ekolibri-bt",
+          "target": "ao-ekolibri",
+          "type": "related",
+          "label": "managed-by",
+          "source_id": "s6862",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-ekspoket",
+          "target": "ooo-arkodim",
+          "type": "related",
+          "label": "sister-entity",
+          "source_id": "s8064",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "ooo-everest",
           "target": "ooo-ametist",
           "type": "related",
           "label": "sister-entity",
           "source_id": "s7449",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-everest",
+          "target": "ooo-atlant-logistik",
+          "type": "related",
+          "label": "shared-address",
+          "source_id": "s6970",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -21628,6 +21837,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-gagaring",
+          "target": "ao-ploshchad",
+          "type": "related",
+          "label": "co-exhibited",
+          "source_id": "s8067",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
         },
         {
           "source": "ooo-gagaring",
@@ -23522,6 +23742,17 @@
           "confidence": null
         },
         {
+          "source": "ooo-ntc-arkodim",
+          "target": "ooo-arkodim",
+          "type": "related",
+          "label": "sister-entity",
+          "source_id": "s8064",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "ooo-opkb-eksplomet",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -23850,6 +24081,28 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "press"
+        },
+        {
+          "source": "ooo-pk-stalnoy-kupol",
+          "target": "ao-opticheskie-sistemy",
+          "type": "related",
+          "label": "shared-address",
+          "source_id": "s6966",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-pk-stalnoy-kupol",
+          "target": "ooo-ametist",
+          "type": "related",
+          "label": "shared-address",
+          "source_id": "s7451",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
         },
         {
           "source": "ooo-pokrov",
@@ -24337,6 +24590,17 @@
         },
         {
           "source": "ooo-trimiks-bulat-3mx",
+          "target": "ano-npts-ushkuynik",
+          "type": "related",
+          "label": "co-speaker",
+          "source_id": "s8066",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-trimiks-bulat-3mx",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Product («Булат»/3mx) shown at ЦБСТ's Дронница 2025 showcase.",
@@ -24539,6 +24803,17 @@
           "type": "produces",
           "label": null,
           "source_id": "s8058",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-zemstroyregistr",
+          "target": "ooo-arkodim",
+          "type": "related",
+          "label": "sister-entity",
+          "source_id": "s8064",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -39849,18 +40124,6 @@
           "degree": 12
         },
         {
-          "id": "ano-dpo-obrazovatelny-tsentr-gagaring",
-          "kind": "entity",
-          "label": "АНО ДПО «Образовательный центр Гагаринг»",
-          "name_latin": "ANO DPO Obrazovatelny Tsentr Gagaring (Gagaring Educational Center, autonomous non-profit supplementary-professional-education org)",
-          "inn": "2310240630",
-          "tier": null,
-          "sanctioned": false,
-          "legal_form": "АНО",
-          "variant": null,
-          "degree": 15
-        },
-        {
           "id": "ano-npts-ushkuynik",
           "kind": "entity",
           "label": "АНО «НПЦ «Ушкуйник»»",
@@ -40633,18 +40896,6 @@
           "degree": 4
         },
         {
-          "id": "ooo-4gnss",
-          "kind": "entity",
-          "label": "ООО «4ГНСС»",
-          "name_latin": null,
-          "inn": "7743128980",
-          "tier": "manufacturer",
-          "sanctioned": false,
-          "legal_form": "ООО",
-          "variant": null,
-          "degree": 15
-        },
-        {
           "id": "ooo-aero-khit",
           "kind": "entity",
           "label": "ООО «Аэро-Хит»",
@@ -40931,18 +41182,6 @@
           "legal_form": "ООО",
           "variant": null,
           "degree": 8
-        },
-        {
-          "id": "ooo-ekolibri-bt",
-          "kind": "entity",
-          "label": "ООО «Эколибри-Беспилотные технологии»",
-          "name_latin": null,
-          "inn": "9713001941",
-          "tier": "manufacturer",
-          "sanctioned": false,
-          "legal_form": "ООО",
-          "variant": null,
-          "degree": 2
         },
         {
           "id": "ooo-ekspoket",
@@ -41293,18 +41532,6 @@
           "degree": 19
         },
         {
-          "id": "ooo-orient-sistems",
-          "kind": "entity",
-          "label": "ООО «ОРИЕНТ СИСТЕМС»",
-          "name_latin": null,
-          "inn": "7743939185",
-          "tier": "manufacturer",
-          "sanctioned": false,
-          "legal_form": "ООО",
-          "variant": null,
-          "degree": 18
-        },
-        {
           "id": "ooo-pekhtra",
           "kind": "entity",
           "label": "ООО «Пехтра»",
@@ -41495,18 +41722,6 @@
           "legal_form": null,
           "variant": null,
           "degree": 4
-        },
-        {
-          "id": "ooo-trimiks-bulat-3mx",
-          "kind": "entity",
-          "label": "ООО «Тримикс»",
-          "name_latin": "LIMITED LIABILITY COMPANY \"TRIMIX\"",
-          "inn": "7802942873",
-          "tier": "manufacturer",
-          "sanctioned": true,
-          "legal_form": "ООО",
-          "variant": "defensive",
-          "degree": 21
         },
         {
           "id": "ooo-tsentr-bespilotnykh-sistem-tula",
@@ -42095,28 +42310,6 @@
           "confidence": null
         },
         {
-          "source": "ano-arkhangel",
-          "target": "ano-dpo-obrazovatelny-tsentr-gagaring",
-          "type": "related",
-          "label": "training-partnership",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ano-npts-ushkuynik",
-          "target": "npo-kaysant",
-          "type": "related",
-          "label": "co-speaker",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "ano-npts-ushkuynik",
           "target": "npts-ushkuynik",
           "type": "owns",
@@ -42132,50 +42325,6 @@
           "target": "npts-ushkuynik",
           "type": "related",
           "label": "group-structure",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ano-npts-ushkuynik",
-          "target": "ooo-trimiks-bulat-3mx",
-          "type": "related",
-          "label": "co-speaker",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-opticheskie-sistemy",
-          "target": "ooo-ametist",
-          "type": "related",
-          "label": "shared-address",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-opticheskie-sistemy",
-          "target": "ooo-pk-stalnoy-kupol",
-          "type": "related",
-          "label": "shared-address",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-ploshchad",
-          "target": "ooo-gagaring",
-          "type": "related",
-          "label": "co-exhibited",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -42209,17 +42358,6 @@
           "target": "ano-arkhangel",
           "type": "role",
           "label": "director",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "associatsiya-tekhnologicheskogo-biznesa",
-          "target": "ooo-arkodim",
-          "type": "related",
-          "label": "sister-entity",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -43536,17 +43674,6 @@
           "confidence": null
         },
         {
-          "source": "npo-kaysant",
-          "target": "ano-npts-ushkuynik",
-          "type": "related",
-          "label": "co-speaker",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "olga-sokolova",
           "target": "ooo-tsugam",
           "type": "role",
@@ -43558,43 +43685,10 @@
           "confidence": null
         },
         {
-          "source": "ooo-4gnss",
-          "target": "ooo-orient-sistems",
-          "type": "related",
-          "label": "group-structure",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-aeromaks",
-          "target": "ooo-aeromaks-avia-tsentr-logistika",
-          "type": "related",
-          "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "ooo-aeromaks",
           "target": "product::ooo-aeromaks::a-50",
           "type": "produces",
           "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-aeromaks-avia-tsentr-logistika",
-          "target": "ooo-aeromaks",
-          "type": "related",
-          "label": "sister-entity",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -43617,61 +43711,6 @@
           "target": "ano-arrs-krasnodar",
           "type": "founded",
           "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-ametist",
-          "target": "ao-opticheskie-sistemy",
-          "type": "related",
-          "label": "shared-address",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-ametist",
-          "target": "ooo-pk-stalnoy-kupol",
-          "type": "related",
-          "label": "shared-address",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-arkodim-2",
-          "target": "ooo-arkodim",
-          "type": "related",
-          "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-arkodim-pro",
-          "target": "ooo-arkodim",
-          "type": "related",
-          "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-atlant-logistik",
-          "target": "ooo-everest",
-          "type": "related",
-          "label": "shared-address",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -43705,50 +43744,6 @@
           "target": "ooo-prometey",
           "type": "founded",
           "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-ekolibri-bt",
-          "target": "ao-ekolibri",
-          "type": "related",
-          "label": "managed-by",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-ekspoket",
-          "target": "ooo-arkodim",
-          "type": "related",
-          "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-everest",
-          "target": "ooo-atlant-logistik",
-          "type": "related",
-          "label": "shared-address",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-gagaring",
-          "target": "ao-ploshchad",
-          "type": "related",
-          "label": "co-exhibited",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -43822,54 +43817,10 @@
           "confidence": "t-doc"
         },
         {
-          "source": "ooo-ntc-arkodim",
-          "target": "ooo-arkodim",
-          "type": "related",
-          "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-pk-stalnoy-kupol",
-          "target": "ao-opticheskie-sistemy",
-          "type": "related",
-          "label": "shared-address",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-pk-stalnoy-kupol",
-          "target": "ooo-ametist",
-          "type": "related",
-          "label": "shared-address",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "ooo-startap-studiya-universiteta-lobachevskogo",
           "target": "ooo-pekhtra",
           "type": "founded",
           "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "ano-npts-ushkuynik",
-          "type": "related",
-          "label": "co-speaker",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -43903,17 +43854,6 @@
           "target": "product::ooo-vozdushnyy-traktat::провод-провод-15",
           "type": "produces",
           "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-zemstroyregistr",
-          "target": "ooo-arkodim",
-          "type": "related",
-          "label": "sister-entity",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,

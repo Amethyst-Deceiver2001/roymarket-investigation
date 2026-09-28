@@ -46,7 +46,7 @@
 
 ## Corporate links
 
-- **ООО «Аркодим»** `sister-entity` — Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different, unrelated-seeming person. OKVED (фотография) shows no defense-industry signal — low priority for further pursuit.
+- **ООО «Аркодим»** `sister-entity` — Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different, unrelated-seeming person. OKVED (фотография) shows no defense-industry signal. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference ([s8064]): ООО «ЭКСПОКЭТ» (ИНН 1659113230) listed under Барахтин's own founder role. [s8064]
 
 ## Sources cited in this profile
 
@@ -59,6 +59,7 @@
 | [s7468] | Bfo | Bfo (BFO_1659113230_2023_ooo-ekspoket.pdf) | — | — |
 | [s7469] | Bfo | Bfo (BFO_1659113230_2024_ooo-ekspoket.pdf) | — | — |
 | [s7470] | Bfo | Bfo (BFO_1659113230_2025_ooo-ekspoket.pdf) | — | — |
+| [s8064] | Fns | Fns (FNS_PB_UPR_UCHR_165910378299_20260929_barakhtin-artem-vladimirovich-raw.json) | 2026-09-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

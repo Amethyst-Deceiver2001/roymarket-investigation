@@ -62,7 +62,7 @@
 
 ## Corporate links
 
-- **ANO DPO Obrazovatelny Tsentr Gagaring (Gagaring Educational Center, autonomous non-profit supplementary-professional-education org)** `training-partnership` — «Архангел Легион» co-runs this entity's 51st Guards Combined Arms Army UAV-operator training-center relationship, per that entity's own tier_basis.
+- **ANO DPO Obrazovatelny Tsentr Gagaring (Gagaring Educational Center, autonomous non-profit supplementary-professional-education org)** `training-partnership` — «Архангел Легион» co-runs this entity's 51st Guards Combined Arms Army UAV-operator training-center relationship, per that entity's own tier_basis. Directly confirmed via projectArchangel's own channel (msg 10600, 03.08.2026, [s5372]): "Вчера в День 96-летия ВДВ в нашем учебном центре состоялся выпуск очередной команды дроноводов, прошедших курс по беспилотию Гагаринга. Дипломы вручал директор КБ - Александр Сергеевич Барашков" -- the Архангел training center's own post describing graduation of a Gagaring UAV course cohort, diplomas handed out by Gagaring's own director. [s5372]
 
 ## Open questions
 
@@ -76,6 +76,7 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| [s5372] | Tgpost | Tgpost (TGPOST_projectArchangel_10600_20260803.txt) | 2026-08-03 | 2026-08-03 |
 | [s5394] | Rusprofile | Rusprofile (RUSPROFILE_2315233718_20260903_ano-arkhangel.txt) | 2026-09-03 | 2026-09-03 |
 | [s5409] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_2315233718_20260903_ano-arkhangel.json) | 2026-09-03 | 2026-09-03 |
 | [s5502] | EGRUL extract | EGRUL extract (EGRUL_2315233718_20260905_ano-arkhangel.pdf) | 2026-09-05 | 2026-09-05 |

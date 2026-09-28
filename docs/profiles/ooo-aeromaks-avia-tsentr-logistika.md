@@ -49,7 +49,7 @@
 
 ## Corporate links
 
-- **ООО «Аэромакс»** `sister-entity` — Same director (Бессонов Сергей Николаевич, EU-sanctioned per [s0754]) as ooo-aeromaks — confirms this is a sister/logistics-arm entity of the ГК «Аэромакс» group rather than an unrelated namesake (resolves the open question raised by the original brand-collision flag). OKVED 52.23.13 (aviation ground-handling logistics) is consistent with a group logistics subsidiary; not yet independently assessed for UAV-relevance beyond the shared director.
+- **ООО «Аэромакс»** `sister-entity` — Same director (Бессонов Сергей Николаевич, EU-sanctioned per [s0754]) as ooo-aeromaks — confirms this is a sister/logistics-arm entity of the ГК «Аэромакс» group rather than an unrelated namesake (resolves the open question raised by the original brand-collision flag). OKVED 52.23.13 (aviation ground-handling logistics) is consistent with a group logistics subsidiary. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference (screen_upr_uchr.py, [s8065]): both ООО «АЭРОМАКС» (ИНН 7725347482) and ООО «АЭРОМАКС-АВИА (ЦЕНТР-ЛОГИСТИКА)» (ИНН 9704149557) listed under Бессонов's own director role. [s8065]
 - **ООО «Аэромакс»** — Direct registered founder (1% + 99% treasury share held by the company itself). Confirms this is a genuine subsidiary/sister entity of the EU-sanctioned ooo-aeromaks, not merely a same-director namesake. (1%) [s7450]
 
 ## Sources cited in this profile
@@ -63,6 +63,7 @@
 | [s7493] | Bfo | Bfo (BFO_9704149557_2024_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
 | [s7494] | Bfo | Bfo (BFO_9704149557_2025_ooo-aeromaks-avia-tsentr-logistika.pdf) | — | — |
 | [s7877] | Nsdc | Nsdc (NSDC_9704149557_20260920_ooo-aeromaks-avia-tsentr-logistika.pdf) | 2026-09-20 | — |
+| [s8065] | Fns | Fns (FNS_PB_UPR_UCHR_644914040799_20260929_bessonov-sergey-nikolaevich-raw.json) | 2026-09-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

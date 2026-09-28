@@ -129,8 +129,8 @@
 ## Corporate links
 
 - **Ushkuynik LLC** `group-structure` — R&D/nonprofit arm of the Ушкуйник group — АНО «НПЦ «Ушкуйник»» is founded by АНО «Платформа НТИ», director Чадаев А.В.; ООО «Ушкуйник» (npts-ushkuynik) is the commercial entity carrying the actual product, «Князь Вандал Новгородский». User-flagged as sibling/admin, not a separate manufacturer — 2026-08-23.
-- **НПО «КАЙСАНТ»** `co-speaker` — Shared exhibition appearance: a "Что показывали на Дроннице" press digest (2025-09-09) round-up describes both АНО «НПЦ «Ушкуйник»»'s optical-fiber «Князь Вандал Новгородский» production figures and НПО «КАЙСАНТ»'s interceptor drone in the same piece, both companies' products shown at Дронница-2025. Confirmed verbatim against the live DB, identical text cross-posted to channels tsg_group71 msg 168 and nponebo msg 95 (both 2025-09-09). Both entities already carry independent cbst_tie records -- this documents a direct physical/promotional co-appearance, not a new ЦБСТ link.
-- **LIMITED LIABILITY COMPANY "TRIMIX"** `co-speaker` — Joint conference attendance, upgraded from the leads file's 'plausible series, needs per-event confirmation' framing: channel chadayevru msg 2722 (2024-04-17, reporting the 12.04.2024 IV конференция по технологиям обнаружения и противодействия БПЛА, Saint Petersburg) directly names BOTH "Руководитель АНО «НПЦ «Ушкуйник» А.В. Чадаев" (speaker) AND "Директор по развитию ООО «Тримикс» С.С. Шандобыло" (speaker) at the SAME single documented event -- not merely a conference-series inference. Verified verbatim against data/roymarket.db 2026-09-15.
+- **НПО «КАЙСАНТ»** `co-speaker` — Shared exhibition appearance: a "Что показывали на Дроннице" press digest (2025-09-09) round-up describes both АНО «НПЦ «Ушкуйник»»'s optical-fiber «Князь Вандал Новгородский» production figures and НПО «КАЙСАНТ»'s interceptor drone in the same piece, both companies' products shown at Дронница-2025. Confirmed verbatim against the live DB, identical text cross-posted to channels tsg_group71 msg 168 and nponebo msg 95 (both 2025-09-09). Both entities already carry independent cbst_tie records -- this documents a direct physical/promotional co-appearance, not a new ЦБСТ link. [s8068]
+- **LIMITED LIABILITY COMPANY "TRIMIX"** `co-speaker` — Joint conference attendance, upgraded from the leads file's 'plausible series, needs per-event confirmation' framing: channel chadayevru msg 2722 (2024-04-17, reporting the 12.04.2024 IV конференция по технологиям обнаружения и противодействия БПЛА, Saint Petersburg) directly names BOTH "Руководитель АНО «НПЦ «Ушкуйник» А.В. Чадаев" (speaker) AND "Директор по развитию ООО «Тримикс» С.С. Шандобыло" (speaker) at the SAME single documented event -- not merely a conference-series inference. Verified verbatim against data/roymarket.db 2026-09-15. [s8066]
 - **Правительство Новгородской области** — Parent entity (25%) [s7369]
 - **АНО «Платформа Национальной Технологической Инициативы»** — Parent entity (25%) [s7369]
 - **АО «УК ИНТЦ «Интеллектуальная Электроника — Валдай»»** — Parent entity (25%) [s7369]
@@ -159,6 +159,8 @@
 | [s5313] | Zakupki | Zakupki (ZAKUPKI_5300010714_20260902_sberbank-ast-search-ushkuynik-11notices.json) | 2026-09-02 | — |
 | [s6806] | EGRUL extract | EGRUL extract (EGRUL_5300010714_20260907_ano-npts-ushkuynik.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7369] | Checko | Checko (CHECKO_5300010714_20260908_ano-npts-ushkuynik.pdf) | 2026-09-08 | 2026-09-08 |
+| [s8066] | Tgpost | Tgpost (TGPOST_20240417_chadayevru-2722.txt) | 2024-04-17 | — |
+| [s8068] | Tgpost | Tgpost (TGPOST_20250909_tsg_group71-168.txt) | 2025-09-09 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

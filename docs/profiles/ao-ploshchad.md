@@ -85,7 +85,7 @@
 
 ## Corporate links
 
-- **ООО «Гагаринг»** `co-exhibited` — Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot "Народный ВПК" (14-16 June 2024, Nizhny Novgorod) lists АО «Площадь» ("разработка бортовых решений для разведывательных и ударных БЛА на основе ИИ") and ООО «Гагаринг» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11). Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file.
+- **ООО «Гагаринг»** `co-exhibited` — Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot "Народный ВПК" (14-16 June 2024, Nizhny Novgorod) lists АО «Площадь» ("разработка бортовых решений для разведывательных и ударных БЛА на основе ИИ") and ООО «Гагаринг» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11) -- archived as data/sources/TGPOST_20240605_projectArchangel-4504.txt. Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file. [s8067]
 
 ## Sources cited in this profile
 
@@ -103,6 +103,7 @@
 | [s6769] | EGRUL extract | EGRUL extract (EGRUL_9723203841_20260907_ao-ploshchad.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7557] | site capture | site capture (SITE_9723203841_20260916_ao-ploshchad-logo.webp) | 2026-09-16 | — |
 | [s8054] | site capture | site capture (WEBCAPTURE_9723203841_20260928_ploshchad-resheniya-r-k.html) | 2026-09-28 | — |
+| [s8067] | Tgpost | Tgpost (TGPOST_20240605_projectArchangel-4504.txt) | 2024-06-05 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

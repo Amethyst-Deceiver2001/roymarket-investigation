@@ -55,7 +55,7 @@
 
 ## Corporate links
 
-- **ООО «Аркодим»** `sister-entity` — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. OKVED (юридическая деятельность) suggests an administrative/legal-services shell rather than a manufacturing entity — not yet independently assessed for UAV-relevance.
+- **ООО «Аркодим»** `sister-entity` — Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. OKVED (юридическая деятельность) suggests an administrative/legal-services shell rather than a manufacturing entity. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference ([s8064]): ООО «ЗЕМСТРОЙРЕГИСТР» (ИНН 1659145169) listed under Барахтин's own director role. [s8064]
 
 ## Sources cited in this profile
 
@@ -68,6 +68,7 @@
 | [s7473] | Bfo | Bfo (BFO_1659145169_2023_ooo-zemstroyregistr.pdf) | — | — |
 | [s7474] | Bfo | Bfo (BFO_1659145169_2024_ooo-zemstroyregistr.pdf) | — | — |
 | [s7475] | Bfo | Bfo (BFO_1659145169_2025_ooo-zemstroyregistr.pdf) | — | — |
+| [s8064] | Fns | Fns (FNS_PB_UPR_UCHR_165910378299_20260929_barakhtin-artem-vladimirovich-raw.json) | 2026-09-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

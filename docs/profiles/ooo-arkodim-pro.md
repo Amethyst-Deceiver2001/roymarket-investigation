@@ -46,7 +46,7 @@
 
 ## Corporate links
 
-- **ООО «Аркодим»** `sister-entity` — Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different person (Соловьев Константин Юрьевич). Sister entity in the same «Аркодим» family, not yet EGRUL-выписка-verified or independently assessed for UAV-relevance.
+- **ООО «Аркодим»** `sister-entity` — Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different person (Соловьев Константин Юрьевич). Sister entity in the same «Аркодим» family. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference ([s8064]): ООО «АРКОДИМ-ПРО» (ИНН 1658146106) listed under Барахтин's own founder role. [s8064]
 
 ## Sources cited in this profile
 
@@ -59,6 +59,7 @@
 | [s7458] | Bfo | Bfo (BFO_1658146106_2023_ooo-arkodim-pro.pdf) | — | — |
 | [s7459] | Bfo | Bfo (BFO_1658146106_2024_ooo-arkodim-pro.pdf) | — | — |
 | [s7460] | Bfo | Bfo (BFO_1658146106_2025_ooo-arkodim-pro.pdf) | — | — |
+| [s8064] | Fns | Fns (FNS_PB_UPR_UCHR_165910378299_20260929_barakhtin-artem-vladimirovich-raw.json) | 2026-09-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

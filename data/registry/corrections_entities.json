@@ -6930,14 +6930,16 @@
         "related_entities": [
           {
             "slug": "ooo-everest",
-            "relationship": "Identical registered address (109125, г. Москва, пр-кт Волгоградский, д.73, стр.1). No director or founder overlap found (this entity's director is Русецкий Алексей Сергеевич; ooo-everest's is Беленкова Анжелика Евгеньевна, sole founder Хутешен Алексей Александрович). Co-location only, likely a shared registered-agent/virtual-office suite.",
+            "relationship": "Identical registered address (109125, г. Москва, пр-кт Волгоградский, д.73, стр.1). No director or founder overlap found (this entity's director is Русецкий Алексей Сергеевич; ooo-everest's is Беленкова Анжелика Евгеньевна, sole founder Хутешен Алексей Александрович). Co-location only, likely a shared registered-agent/virtual-office suite. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6970, ooo-everest's s7449, both address blocks read 2026-09-29).",
             "relationship_type": "shared-address",
-            "confidence": "confirmed"
+            "confidence": "confirmed",
+            "source_id": "s7449"
           }
         ]
       },
       "why": [
-        "2026-09-15: found during a registry-wide precise-address co-location scan (no EGRUL needed, both entities' address/director/founders fields already in the registry) -- new shared-address relationship_type value added the same session."
+        "2026-09-15: found during a registry-wide precise-address co-location scan (no EGRUL needed, both entities' address/director/founders fields already in the registry) -- new shared-address relationship_type value added the same session.",
+        "2026-09-29: sourced the shared-address edge directly against each entity's own already-pulled full signed ЕГРЮЛ выписка (address blocks read and confirmed to match verbatim)."
       ]
     },
     "9714068459": {
@@ -7473,13 +7475,13 @@
           {
             "relationship": "Shared exhibition appearance: a \"Что показывали на Дроннице\" press digest (2025-09-09) round-up describes both АНО «НПЦ «Ушкуйник»»'s optical-fiber «Князь Вандал Новгородский» production figures and НПО «КАЙСАНТ»'s interceptor drone in the same piece, both companies' products shown at Дронница-2025. Confirmed verbatim against the live DB, identical text cross-posted to channels tsg_group71 msg 168 and nponebo msg 95 (both 2025-09-09). Both entities already carry independent cbst_tie records -- this documents a direct physical/promotional co-appearance, not a new ЦБСТ link.",
             "slug": "npo-kaysant",
-            "source_id": null,
+            "source_id": "s8068",
             "relationship_type": "co-speaker"
           },
           {
             "relationship": "Joint conference attendance, upgraded from the leads file's 'plausible series, needs per-event confirmation' framing: channel chadayevru msg 2722 (2024-04-17, reporting the 12.04.2024 IV конференция по технологиям обнаружения и противодействия БПЛА, Saint Petersburg) directly names BOTH \"Руководитель АНО «НПЦ «Ушкуйник» А.В. Чадаев\" (speaker) AND \"Директор по развитию ООО «Тримикс» С.С. Шандобыло\" (speaker) at the SAME single documented event -- not merely a conference-series inference. Verified verbatim against data/roymarket.db 2026-09-15.",
             "slug": "ooo-trimiks-bulat-3mx",
-            "source_id": null,
+            "source_id": "s8066",
             "relationship_type": "co-speaker"
           }
         ],
@@ -11518,9 +11520,9 @@
         "tier_basis": "Sanctioned by the US, EU, Switzerland and Ukraine (ID-confirmed via ИНН match); manufacturer of targeting/autopilot software (ПАК «Площадь.Р»/«Площадь.К», «Микроб» autopilot/machine-vision modules per GUR profile) and, per the same GUR profile, its own «Площадь-К» FPV kamikaze drone — developed within the Народный фронт's «Kulibin Club» initiative (see kulibin-klub). Holds a ₽12m zakupki-awarded R&D contract for swarm-UAV group-control technology.",
         "related_entities": [
           {
-            "relationship": "Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot \"Народный ВПК\" (14-16 June 2024, Nizhny Novgorod) lists АО «Площадь» (\"разработка бортовых решений для разведывательных и ударных БЛА на основе ИИ\") and ООО «Гагаринг» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11). Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file.",
+            "relationship": "Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot \"Народный ВПК\" (14-16 June 2024, Nizhny Novgorod) lists АО «Площадь» (\"разработка бортовых решений для разведывательных и ударных БЛА на основе ИИ\") and ООО «Гагаринг» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11) -- archived as data/sources/TGPOST_20240605_projectArchangel-4504.txt. Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file.",
             "slug": "ooo-gagaring",
-            "source_id": null,
+            "source_id": "s8067",
             "relationship_type": "co-exhibited"
           }
         ],
@@ -14969,7 +14971,7 @@
           {
             "relationship": "Shared exhibition appearance: a \"Что показывали на Дроннице\" press digest (2025-09-09) round-up describes both НПО «КАЙСАНТ»'s interceptor drone and АНО «НПЦ «Ушкуйник»»'s optical-fiber «Князь Вандал Новгородский» production figures in the same piece, both companies' products shown at Дронница-2025. Confirmed verbatim against the live DB, identical text cross-posted to channels tsg_group71 msg 168 and nponebo msg 95 (both 2025-09-09). Both entities already carry independent cbst_tie records -- this documents a direct physical/promotional co-appearance, not a new ЦБСТ link.",
             "slug": "ano-npts-ushkuynik",
-            "source_id": null,
+            "source_id": "s8068",
             "relationship_type": "co-speaker"
           }
         ]
@@ -17842,9 +17844,9 @@
         "registered": "23.11.2015",
         "related_entities": [
           {
-            "relationship": "orsyst.ru (already the registered site for ooo-orient-sistems, which carries the full 4GNSS catalog) footer explicitly states \"© ООО «4ГНСС»\" -- this entity appears to be the brand/legal vehicle for the 4GNSS product line within the Orient Systems group, not a separately operating manufacturer. Products live on ooo-orient-sistems's record; not duplicated here.",
+            "relationship": "orsyst.ru (already the registered site for ooo-orient-sistems, which carries the full 4GNSS catalog) footer explicitly states \"© 2025 ООО «4ГНСС»\" -- this entity appears to be the brand/legal vehicle for the 4GNSS product line within the Orient Systems group, not a separately operating manufacturer. Products live on ooo-orient-sistems's record; not duplicated here. Also independently confirmed via ooo-orient-sistems's own subsidiaries[] field, which names ООО «4ГНСС» (ИНН 7743128980, 100% owned, s0461).",
             "slug": "ooo-orient-sistems",
-            "source_id": null,
+            "source_id": "s8032",
             "relationship_type": "group-structure"
           }
         ],
@@ -18442,8 +18444,9 @@
         "related_entities": [
           {
             "slug": "ooo-aeromaks-avia-tsentr-logistika",
-            "relationship": "Same director (Бессонов Сергей Николаевич) — confirms ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) is a sister/logistics-arm entity of the ГК «Аэромакс» group, not an unrelated namesake. Found via screen_upr_uchr.py's other_entities scan on bessonov-sergey-nikolaevich, 2026-09-14.",
-            "relationship_type": "sister-entity"
+            "relationship": "Same director (Бессонов Сергей Николаевич) — confirms ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) is a sister/logistics-arm entity of the ГК «Аэромакс» group, not an unrelated namesake. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference (screen_upr_uchr.py, s8065): both entities listed under Бессонов's own director role.",
+            "relationship_type": "sister-entity",
+            "source_id": "s8065"
           }
         ],
         "cbst_tie": {
@@ -20064,9 +20067,9 @@
         ],
         "related_entities": [
           {
-            "relationship": "Managed by АО «Эколибри» per ЕГРЮЛ (\"управляющая организация: АО Эколибри\") -- subsidiary carrying the UAV-specific OKVED (production of unmanned aerial systems) matching the parent's eVTOL line, but no distinct product names found for this subsidiary specifically; plausibly folded into ecolibri.aero but not directly confirmed there.",
+            "relationship": "Managed by АО «Эколибри» per ЕГРЮЛ (\"управляющая организация: АО Эколибри\") -- subsidiary carrying the UAV-specific OKVED (production of unmanned aerial systems) matching the parent's eVTOL line, but no distinct product names found for this subsidiary specifically; plausibly folded into ecolibri.aero but not directly confirmed there. Confirmed directly against this entity's own full signed ЕГРЮЛ extract (s6862, read 2026-09-29): names \"АКЦИОНЕРНОЕ ОБЩЕСТВО «ЭКОЛИБРИ»\" (ИНН 7714473012) as управляющая организация.",
             "slug": "ao-ekolibri",
-            "source_id": null,
+            "source_id": "s6862",
             "relationship_type": "managed-by"
           }
         ],
@@ -21065,9 +21068,9 @@
         },
         "related_entities": [
           {
-            "relationship": "Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot \"Народный ВПК\" (14-16 June 2024, Nizhny Novgorod) lists ООО «Гагаринг» and АО «Площадь» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11). Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file.",
+            "relationship": "Joint exhibitor listing (not a corporate/ownership tie): the (Архангел-adjacent, non-ЦБСТ-core) forum-slyot \"Народный ВПК\" (14-16 June 2024, Nizhny Novgorod) lists ООО «Гагаринг» and АО «Площадь» as separate exhibitors in the same announcement. Confirmed verbatim against the live DB, channel projectArchangel msg 4504 (2024-06-05, cross-posted Archangel_Forum msg 95633, 2024-06-11) -- archived as data/sources/TGPOST_20240605_projectArchangel-4504.txt. Cross-network touchpoint (via the Архангел project's own event, not a ЦБСТ event) -- see the roymarket_archangel_adjacent_network memory file.",
             "slug": "ao-ploshchad",
-            "source_id": null,
+            "source_id": "s8067",
             "relationship_type": "co-exhibited"
           }
         ]
@@ -30516,7 +30519,7 @@
           {
             "relationship": "Joint conference attendance, upgraded from the leads file's 'plausible series, needs per-event confirmation' framing: channel chadayevru msg 2722 (2024-04-17, reporting the 12.04.2024 IV конференция по технологиям обнаружения и противодействия БПЛА, Saint Petersburg) directly names BOTH \"Директор по развитию ООО «Тримикс» С.С. Шандобыло\" (speaker) AND \"Руководитель АНО «НПЦ «Ушкуйник» А.В. Чадаев\" (speaker) at the SAME single documented event -- not merely a conference-series inference. Verified verbatim against data/roymarket.db 2026-09-15.",
             "slug": "ano-npts-ushkuynik",
-            "source_id": null,
+            "source_id": "s8066",
             "relationship_type": "co-speaker"
           }
         ],
@@ -33669,9 +33672,9 @@
         "related_entities": [
           {
             "inn": "2310240630",
-            "relationship": "«Архангел Легион» co-runs this entity's 51st Guards Combined Arms Army UAV-operator training-center relationship, per that entity's own tier_basis.",
+            "relationship": "«Архангел Легион» co-runs this entity's 51st Guards Combined Arms Army UAV-operator training-center relationship, per that entity's own tier_basis. Directly confirmed via projectArchangel's own channel (msg 10600, 03.08.2026, s5372): \"Вчера в День 96-летия ВДВ в нашем учебном центре состоялся выпуск очередной команды дроноводов, прошедших курс по беспилотию Гагаринга. Дипломы вручал директор КБ - Александр Сергеевич Барашков\" -- the Архангел training center's own post describing graduation of a Gagaring UAV course cohort, diplomas handed out by Gagaring's own director.",
             "slug": "ano-dpo-obrazovatelny-tsentr-gagaring",
-            "source_id": null,
+            "source_id": "s5372",
             "relationship_type": "training-partnership"
           }
         ]
@@ -34531,21 +34534,24 @@
         "related_entities": [
           {
             "slug": "ooo-ametist",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1 -- the residential mail-drop building this entity, ooo-ametist and ooo-pk-stalnoy-kupol all share). No director or founder overlap found with this entity's own record.",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1 -- the residential mail-drop building this entity, ooo-ametist and ooo-pk-stalnoy-kupol all share). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6966, ooo-ametist's s7451, both address blocks read 2026-09-29).",
             "relationship_type": "shared-address",
-            "confidence": "confirmed"
+            "confidence": "confirmed",
+            "source_id": "s7451"
           },
           {
             "slug": "ooo-pk-stalnoy-kupol",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record.",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6966, ooo-pk-stalnoy-kupol's s6965, both address blocks read 2026-09-29).",
             "relationship_type": "shared-address",
-            "confidence": "confirmed"
+            "confidence": "confirmed",
+            "source_id": "s6965"
           }
         ]
       },
       "why": [
         "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08",
-        "2026-09-15: wired shared-address related_entities[] edges to ooo-ametist and ooo-pk-stalnoy-kupol -- co-location only, no confirmed common principal with either. Found during a registry-wide address-co-location scan."
+        "2026-09-15: wired shared-address related_entities[] edges to ooo-ametist and ooo-pk-stalnoy-kupol -- co-location only, no confirmed common principal with either. Found during a registry-wide address-co-location scan.",
+        "2026-09-29: sourced both shared-address edges directly against each entity's own already-pulled full signed ЕГРЮЛ выписка (address blocks read and confirmed to match verbatim)."
       ],
       "verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
     },
@@ -34577,15 +34583,17 @@
           },
           {
             "slug": "ao-opticheskie-sistemy",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found (this entity's own director/founder is Хутешен/Беленкова).",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found (this entity's own director/founder is Хутешен/Беленкова). Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s7451, ao-opticheskie-sistemy's s6966, both address blocks read 2026-09-29).",
             "relationship_type": "shared-address",
-            "confidence": "confirmed"
+            "confidence": "confirmed",
+            "source_id": "s6966"
           },
           {
             "slug": "ooo-pk-stalnoy-kupol",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found (this entity's own director/founder is Хутешен/Беленкова).",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found (this entity's own director/founder is Хутешен/Беленкова). Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s7451, ooo-pk-stalnoy-kupol's s6965, both address blocks read 2026-09-29).",
             "relationship_type": "shared-address",
-            "confidence": "confirmed"
+            "confidence": "confirmed",
+            "source_id": "s6965"
           }
         ],
         "financials": [
@@ -34622,21 +34630,24 @@
         "related_entities": [
           {
             "slug": "ao-opticheskie-sistemy",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record.",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6965, ao-opticheskie-sistemy's s6966, both address blocks read 2026-09-29).",
             "relationship_type": "shared-address",
-            "confidence": "confirmed"
+            "confidence": "confirmed",
+            "source_id": "s6966"
           },
           {
             "slug": "ooo-ametist",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record.",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6965, ooo-ametist's s7451, both address blocks read 2026-09-29).",
             "relationship_type": "shared-address",
-            "confidence": "confirmed"
+            "confidence": "confirmed",
+            "source_id": "s7451"
           }
         ]
       },
       "why": [
         "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08",
-        "2026-09-15: wired shared-address related_entities[] edges to ao-opticheskie-sistemy and ooo-ametist -- co-location only, no confirmed common principal with either. Found during a registry-wide address-co-location scan."
+        "2026-09-15: wired shared-address related_entities[] edges to ao-opticheskie-sistemy and ooo-ametist -- co-location only, no confirmed common principal with either. Found during a registry-wide address-co-location scan.",
+        "2026-09-29: sourced both shared-address edges directly against each entity's own already-pulled full signed ЕГРЮЛ выписка (address blocks read and confirmed to match verbatim)."
       ],
       "verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
     },
@@ -35511,9 +35522,10 @@
           },
           {
             "slug": "ooo-atlant-logistik",
-            "relationship": "Identical registered address (109125, г. Москва, пр-кт Волгоградский, д.73, стр.1). No director or founder overlap found (this entity's own director/founder is Хутешен/Беленкова, per ooo-ametist's sister-entity tie above; ooo-atlant-logistik's director is Русецкий Алексей Сергеевич). Co-location only, likely a shared registered-agent/virtual-office suite.",
+            "relationship": "Identical registered address (109125, г. Москва, пр-кт Волгоградский, д.73, стр.1). No director or founder overlap found (this entity's own director/founder is Хутешен/Беленкова, per ooo-ametist's sister-entity tie above; ooo-atlant-logistik's director is Русецкий Алексей Сергеевич). Co-location only, likely a shared registered-agent/virtual-office suite. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s7449, ooo-atlant-logistik's s6970, both address blocks read 2026-09-29).",
             "relationship_type": "shared-address",
-            "confidence": "confirmed"
+            "confidence": "confirmed",
+            "source_id": "s6970"
           }
         ]
       },
@@ -35651,13 +35663,15 @@
         "related_entities": [
           {
             "slug": "ooo-arkodim",
-            "relationship": "Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim — a sister/satellite entity in the same Kazan «Аркодим» family. Not yet EGRUL-выписка-verified for founder overlap or independently assessed for UAV-relevance; tier left unset pending that review.",
-            "relationship_type": "sister-entity"
+            "relationship": "Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim — a sister/satellite entity in the same Kazan «Аркодим» family. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference (screen_upr_uchr.py, s8064): ООО «АРКОДИМ-2» (ИНН 1659173832) listed under Барахтин's own director role.",
+            "relationship_type": "sister-entity",
+            "source_id": "s8064"
           }
         ]
       },
       "why": [
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
       ]
     },
     "ooo-arkodim-pro": {
@@ -35665,13 +35679,15 @@
         "related_entities": [
           {
             "slug": "ooo-arkodim",
-            "relationship": "Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different person (Соловьев Константин Юрьевич). Sister entity in the same «Аркодим» family, not yet EGRUL-выписка-verified or independently assessed for UAV-relevance.",
-            "relationship_type": "sister-entity"
+            "relationship": "Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different person (Соловьев Константин Юрьевич). Sister entity in the same «Аркодим» family. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference (s8064): ООО «АРКОДИМ-ПРО» (ИНН 1658146106) listed under Барахтин's own founder role.",
+            "relationship_type": "sister-entity",
+            "source_id": "s8064"
           }
         ]
       },
       "why": [
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
       ]
     },
     "ooo-ntc-arkodim": {
@@ -35679,13 +35695,15 @@
         "related_entities": [
           {
             "slug": "ooo-arkodim",
-            "relationship": "Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different person (Соловьев Константин Юрьевич). Sister entity in the same «Аркодим» family, not yet EGRUL-выписка-verified or independently assessed for UAV-relevance.",
-            "relationship_type": "sister-entity"
+            "relationship": "Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different person (Соловьев Константин Юрьевич). Sister entity in the same «Аркодим» family. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference (s8064): ООО «НАУЧНО-ТЕХНИЧЕСКИЙ ЦЕНТР «АРКОДИМ»» (ИНН 1659182805) listed under Барахтин's own founder role.",
+            "relationship_type": "sister-entity",
+            "source_id": "s8064"
           }
         ]
       },
       "why": [
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
       ]
     },
     "ooo-zemstroyregistr": {
@@ -35693,13 +35711,15 @@
         "related_entities": [
           {
             "slug": "ooo-arkodim",
-            "relationship": "Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. OKVED (юридическая деятельность) suggests an administrative/legal-services shell rather than a manufacturing entity — not yet independently assessed for UAV-relevance.",
-            "relationship_type": "sister-entity"
+            "relationship": "Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. OKVED (юридическая деятельность) suggests an administrative/legal-services shell rather than a manufacturing entity. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference (s8064): ООО «ЗЕМСТРОЙРЕГИСТР» (ИНН 1659145169) listed under Барахтин's own director role.",
+            "relationship_type": "sister-entity",
+            "source_id": "s8064"
           }
         ]
       },
       "why": [
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
       ]
     },
     "ooo-ekspoket": {
@@ -35707,13 +35727,15 @@
         "related_entities": [
           {
             "slug": "ooo-arkodim",
-            "relationship": "Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different, unrelated-seeming person. OKVED (фотография) shows no defense-industry signal — low priority for further pursuit.",
-            "relationship_type": "sister-entity"
+            "relationship": "Барахтин Артём Владимирович (ooo-arkodim's director) recorded as a founder here per screen_upr_uchr.py's other_entities scan; current director is a different, unrelated-seeming person. OKVED (фотография) shows no defense-industry signal. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference (s8064): ООО «ЭКСПОКЭТ» (ИНН 1659113230) listed under Барахтин's own founder role.",
+            "relationship_type": "sister-entity",
+            "source_id": "s8064"
           }
         ]
       },
       "why": [
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
       ]
     },
     "associatsiya-tekhnologicheskogo-biznesa": {
@@ -35721,13 +35743,15 @@
         "related_entities": [
           {
             "slug": "ooo-arkodim",
-            "relationship": "Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. A Moscow-registered trade association, not yet independently assessed for UAV-relevance or membership overlap with other network entities.",
-            "relationship_type": "sister-entity"
+            "relationship": "Same director (Барахтин Артём Владимирович) as the already-documented ooo-arkodim. A Moscow-registered trade association. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference (s8064): АССОЦИАЦИЯ ТЕХНОЛОГИЧЕСКОГО БИЗНЕСА (ИНН 9726005220) listed under Барахтин's own director role.",
+            "relationship_type": "sister-entity",
+            "source_id": "s8064"
           }
         ]
       },
       "why": [
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
       ]
     },
     "ooo-aeromaks-avia-tsentr-logistika": {
@@ -35745,8 +35769,9 @@
         "related_entities": [
           {
             "slug": "ooo-aeromaks",
-            "relationship": "Same director (Бессонов Сергей Николаевич, EU-sanctioned per s0754) as ooo-aeromaks — confirms this is a sister/logistics-arm entity of the ГК «Аэромакс» group rather than an unrelated namesake (resolves the open question raised by the original brand-collision flag). OKVED 52.23.13 (aviation ground-handling logistics) is consistent with a group logistics subsidiary; not yet independently assessed for UAV-relevance beyond the shared director.",
-            "relationship_type": "sister-entity"
+            "relationship": "Same director (Бессонов Сергей Николаевич, EU-sanctioned per s0754) as ooo-aeromaks — confirms this is a sister/logistics-arm entity of the ГК «Аэромакс» group rather than an unrelated namesake (resolves the open question raised by the original brand-collision flag). OKVED 52.23.13 (aviation ground-handling logistics) is consistent with a group logistics subsidiary. Confirmed 2026-09-29 via a fresh ФНС «Прозрачный бизнес» director/founder cross-reference (screen_upr_uchr.py, s8065): both ООО «АЭРОМАКС» (ИНН 7725347482) and ООО «АЭРОМАКС-АВИА (ЦЕНТР-ЛОГИСТИКА)» (ИНН 9704149557) listed under Бессонов's own director role.",
+            "relationship_type": "sister-entity",
+            "source_id": "s8065"
           }
         ]
       },

@@ -73,7 +73,7 @@ _No named principals linked to this entity yet._
 
 ## Corporate links
 
-- **ООО «ОРИЕНТ СИСТЕМС»** `group-structure` — orsyst.ru (already the registered site for ooo-orient-sistems, which carries the full 4GNSS catalog) footer explicitly states "© ООО «4ГНСС»" -- this entity appears to be the brand/legal vehicle for the 4GNSS product line within the Orient Systems group, not a separately operating manufacturer. Products live on ooo-orient-sistems's record; not duplicated here.
+- **ООО «ОРИЕНТ СИСТЕМС»** `group-structure` — orsyst.ru (already the registered site for ooo-orient-sistems, which carries the full 4GNSS catalog) footer explicitly states "© 2025 ООО «4ГНСС»" -- this entity appears to be the brand/legal vehicle for the 4GNSS product line within the Orient Systems group, not a separately operating manufacturer. Products live on ooo-orient-sistems's record; not duplicated here. Also independently confirmed via ooo-orient-sistems's own subsidiaries[] field, which names ООО «4ГНСС» (ИНН 7743128980, 100% owned, [s0461]). [s8032]
 - **ООО «ОРИЕНТ СИСТЕМС»** — Parent entity (100%) [s0462]
 
 ## Sources cited in this profile
@@ -89,6 +89,7 @@ _No named principals linked to this entity yet._
 | [s0462] | EGRUL extract | EGRUL extract (ul-5157746074272-20260823120422.pdf) | — | 2026-08-23 |
 | [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | [s6830] | EGRUL extract | EGRUL extract (EGRUL_7743128980_20260907_ooo-4gnss.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8032] | site capture | site capture (WEBCAPTURE_7743939185_20260928_orsyst-4gnss-proseries.html) | 2026-09-28 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
