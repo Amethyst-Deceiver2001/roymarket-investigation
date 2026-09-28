@@ -1,8 +1,8 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1134,
-  "edge_count": 1922,
+  "node_count": 1132,
+  "edge_count": 1920,
   "unresolved_count": 108,
   "nodes": [
     {
@@ -3057,7 +3057,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 15
+      "degree": 13
     },
     {
       "id": "ooo-atlant-logistik",
@@ -7192,32 +7192,6 @@
       "label": "Дрон-перехватчик «Архангел»",
       "owner_slug": "ooo-arkhangel-shchit",
       "source_id": "s5456",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-atlant-aero::орион",
-      "kind": "product",
-      "label": "Орион",
-      "owner_slug": "ooo-atlant-aero",
-      "source_id": null,
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-atlant-aero::технодинамика",
-      "kind": "product",
-      "label": "Технодинамика",
-      "owner_slug": "ooo-atlant-aero",
-      "source_id": null,
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -23232,28 +23206,6 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
-    },
-    {
-      "source": "ooo-atlant-aero",
-      "target": "product::ooo-atlant-aero::орион",
-      "type": "produces",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "ooo-atlant-aero",
-      "target": "product::ooo-atlant-aero::технодинамика",
-      "type": "produces",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
     },
     {
       "source": "ooo-atlant-logistik",

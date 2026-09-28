@@ -3056,7 +3056,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 15
+          "degree": 13
         },
         {
           "id": "ooo-atlant-logistik",
@@ -30617,7 +30617,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 15
+          "degree": 13
         },
         {
           "id": "ooo-aviron",
@@ -37212,7 +37212,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 15
+          "degree": 13
         },
         {
           "id": "ooo-aviron",
@@ -40174,7 +40174,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 15
+          "degree": 13
         },
         {
           "id": "ooo-atlant-logistik",
@@ -41240,32 +41240,6 @@
           "kind": "product",
           "label": "A-50",
           "owner_slug": "ooo-aeromaks",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-atlant-aero::орион",
-          "kind": "product",
-          "label": "Орион",
-          "owner_slug": "ooo-atlant-aero",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-atlant-aero::технодинамика",
-          "kind": "product",
-          "label": "Технодинамика",
-          "owner_slug": "ooo-atlant-aero",
           "source_id": null,
           "classification": {
             "status": "unclassified",
@@ -43599,28 +43573,6 @@
           "target": "ooo-arkodim",
           "type": "related",
           "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-atlant-aero",
-          "target": "product::ooo-atlant-aero::орион",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-atlant-aero",
-          "target": "product::ooo-atlant-aero::технодинамика",
-          "type": "produces",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,

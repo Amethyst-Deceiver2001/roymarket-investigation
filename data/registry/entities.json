@@ -10627,10 +10627,7 @@
       "source_id": "s7588"
     },
     "wb_overlap": "none_found",
-    "products": [
-      "Орион",
-      "Технодинамика"
-    ],
+    "products": [],
     "financials": [],
     "egrul_flags": [],
     "securing_measures": [],
@@ -10736,7 +10733,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-07: merged dormant duplicate correction key '6154165878' into this slug-keyed entry (registry-hardening pass, no field conflict).",
       "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-      "2026-09-14: rk.2035.university product-models sweep (s1169) fuzzy-matched two DIFFERENT real companies to this entity's name (\"Атлант\") on \"аэро\" substring overlap -- НПФ «Атлас-Аэро» (4 models: АТЛАС S/M/L/180) and АО «ЗАЛА АЭРО» (9 models, Kalashnikov-group loitering-munition maker, well-documented separately) are both confirmed-distinct companies, not this entity. Logged so a future automated name-sweep doesn't re-flag either."
+      "2026-09-14: rk.2035.university product-models sweep (s1169) fuzzy-matched two DIFFERENT real companies to this entity's name (\"Атлант\") on \"аэро\" substring overlap -- НПФ «Атлас-Аэро» (4 models: АТЛАС S/M/L/180) and АО «ЗАЛА АЭРО» (9 models, Kalashnikov-group loitering-munition maker, well-documented separately) are both confirmed-distinct companies, not this entity. Logged so a future automated name-sweep doesn't re-flag either.",
+      "2026-09-28: cleared the raw-scaffold products[] array (bare strings «Орион»/«Технодинамика», no source_id) during a produces-edge sourcing spot-check -- neither is a real product of this entity. «Орион» is the already-documented GUR-components false positive referenced above (this entity does not make Orion-UAV parts); «Технодинамика» is the entity's own trust-management parent (see parents[]/tier_basis above), not a product, and was mis-scaffolded into products[] from the frozen archive text. Checked three fresh sources (Коммерсантъ, TAdviser, the GUR sanctions page) for any real product/component claim before clearing -- none confirmed either bare string, and a WebSearch summary asserting an Orion-component tie was not backed by any of the pages it cited."
     ],
     "_verified_against": "searchplatform.rospatent.gov.ru, PE_RU exact patentee-name query, archived as s0977 (WIPO ST.96 XML full text) + HAR capture",
     "_egrul_crosschecked": "2026-08-22",
