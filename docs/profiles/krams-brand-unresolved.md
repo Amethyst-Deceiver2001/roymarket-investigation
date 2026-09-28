@@ -11,11 +11,11 @@
 
 ## Products
 
-- **FPV-дрон «КРАМС 7»** — FPV quadcopter.
-- **FPV-дрон «КРАМС 9»** — FPV quadcopter.
-- **FPV-дрон «КРАМС 13»** — FPV quadcopter.
-- **«ДУПЛЕТ»** — Named on krams.pro homepage as a cargo-drop device — no dedicated product page found, description unconfirmed beyond the name.
-- **«КОЛУН»** — Named on krams.pro homepage — no dedicated product page found, description unconfirmed beyond the name.
+- **FPV-дрон «КРАМС 7»** — FPV quadcopter, 7-inch class. First own-design prototype, per the brand's own origin-story post ([s7530]): developed late 2022, combat-tested in the SVO zone. [s8063]
+- **FPV-дрон «КРАМС 9»** — FPV quadcopter, 9-inch class. [s8063]
+- **FPV-дрон «КРАМС 13»** — FPV quadcopter, 13-inch class. [s8063]
+- **«ДУПЛЕТ»** — Cargo/munitions-release device, one of the brand's first two products ("именно с разработки и производства этих изделий началась наша деятельность", [s7532]). Per the brand's own promotional post ([s7531]): over 14,000 units combined (with «Колун») delivered to the front line. [s8063]
+- **«КОЛУН»** — Cargo/munitions-release device, one of the brand's first two products ("именно с разработки и производства этих изделий началась наша деятельность", [s7532]). Per the brand's own promotional post ([s7531]): over 14,000 units combined (with «Дуплет») delivered to the front line. [s8063]
 
 ## Self-reported marketing claims
 
@@ -65,6 +65,7 @@ _No named principals linked to this entity yet._
 | [s7531] | Tgpost | Tgpost (TGPOST_20250720_krams_pro_msg108-marketing-claim.txt) | 2025-07-20 | 2025-07-20 |
 | [s7532] | Tgpost | Tgpost (TGPOST_20251205_krams_pro_msg128-marketing-claim.txt) | 2025-12-05 | 2025-12-05 |
 | [s7571] | site capture | site capture (SITE_UNKNOWN_20260916_krams-brand-logo.png) | 2026-09-16 | — |
+| [s8063] | site capture | site capture (WEBCAPTURE_UNKNOWN_20260928_krams-brand-homepage-full-catalog.html) | 2026-09-28 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

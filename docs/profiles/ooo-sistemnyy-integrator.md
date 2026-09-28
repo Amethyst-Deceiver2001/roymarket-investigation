@@ -35,6 +35,10 @@
 |---|---|---|
 | 30000 | 2025-07-16 | ГРН 1254600002920 [s0435] |
 
+## Products
+
+- **«Яким»** — Автоматизированная информационная система мониторинга воздушных угроз с применением БВС (automated air-threat monitoring system using UAVs), for integrating/coordinating detection, РЭР (radio-electronic reconnaissance), РЭБ (electronic warfare) and active counter-UAV means. Per the product's own dedicated site (яким.рф): "Разработчик программного обеспечения Яким – ООО «Системный интегратор», 100% дочерняя компания АНО «Центр беспилотных систем и технологий» (ЦБСТ)" -- directly names this entity as developer. Shown publicly at ПМЭФ-2026 (03.06.2026) on the exhibition stand of a different company, ООО «Конструкторское бюро «Синергия»» (see that entity's corrections why[] for the misattribution this corrects). [s8060]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -62,6 +66,7 @@ _No named principals linked to this entity yet._
 | [s0270] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_4632306583_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | [s0435] | EGRUL extract | EGRUL extract (ul-1254600002920-20260823014908.pdf) | — | 2026-08-23 |
 | [s0736] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_4632306583_20260824_ooo-sistemnyy-integrator.json) | 2026-08-24 | — |
+| [s8060] | site capture | site capture (WEBCAPTURE_4632306583_20260928_sistemnyy-integrator-yakim-homepage.html) | 2026-09-28 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

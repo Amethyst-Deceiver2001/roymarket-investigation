@@ -36,8 +36,8 @@
 
 ## Products
 
-- **«Овод»** ([full profile](products/ovod.html)) — FPV strike-drone family, developed by Андрей Иванов (technical founder/spokesperson) under owner/director Черезов А.П. First batch of 4,000 units delivered to SVO forces Oct 2024.
-- **«Провод» / «Провод-15»** ([full profile](products/ovod.html)) — Fiber-optic-guided heavy FPV strike drone, reported >40km range record in the SVO zone; press-reported destruction of a Ukrainian ammunition depot in Sumy region (Aug 2026 coverage). Brand appears more directly tied to sister entity РЛВТ but press confirms this entity's participation.
+- **«Овод»** ([full profile](products/ovod.html)) — FPV strike-drone family, developed by Андрей Иванов (technical founder/spokesperson) under owner/director Черезов А.П. First batch of 4,000 units delivered to SVO forces Oct 2024. Per TheIns (29.07.2026, [s8058]), reporting on the assassination attempt against Черезов, verbatim: "Черезов владеет и управляет двумя компаниями... — ООО «Русская лаборатория воздушного транспорта» (РЛВТ) и ООО «Воздушный трактат» — обе они участвовали в разработке БПЛА «Овод»" (both companies participated in developing the «Овод» drone). [s8058]
+- **«Провод» / «Провод-15»** ([full profile](products/ovod.html)) — Fiber-optic-guided heavy FPV strike drone, reported >40km range record in the SVO zone; press-reported destruction of a Ukrainian ammunition depot in Sumy region (Aug 2026 coverage). Brand appears more directly tied to sister entity РЛВТ (see ovod's own products[], sourced to [s8051]) -- TheIns's own article on this entity ([s8058]) covers «Овод» but does not separately name «Провод»/«Провод-15», so this entity's own participation in that specific variant remains unconfirmed beyond the general «Овод» family tie above. Left flagged, not force-sourced.
 
 ## Financials
 
@@ -77,6 +77,7 @@
 | [s0506] | EGRUL extract | EGRUL extract (ul-1237100015767-20260823133443.pdf) | — | 2026-08-23 |
 | [s0760] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7100046925_20260824_ooo-vozdushnyy-traktat.json) | 2026-08-24 | — |
 | [s6728] | EGRUL extract | EGRUL extract (EGRUL_7100046925_20260907_ooo-vozdushnyy-traktat.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8058] | press coverage | press coverage (PRESS_20260729_cherezov-assassination-vozdushnyy-traktat-rlvt-ovod-theins.html) | 2026-07-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

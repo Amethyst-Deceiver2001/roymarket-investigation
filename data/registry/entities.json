@@ -3747,7 +3747,13 @@
       "source_id": "s0435"
     },
     "wb_overlap": "not_checked",
-    "products": [],
+    "products": [
+      {
+        "description": "Автоматизированная информационная система мониторинга воздушных угроз с применением БВС (automated air-threat monitoring system using UAVs), for integrating/coordinating detection, РЭР (radio-electronic reconnaissance), РЭБ (electronic warfare) and active counter-UAV means. Per the product's own dedicated site (яким.рф): \"Разработчик программного обеспечения Яким – ООО «Системный интегратор», 100% дочерняя компания АНО «Центр беспилотных систем и технологий» (ЦБСТ)\" -- directly names this entity as developer. Shown publicly at ПМЭФ-2026 (03.06.2026) on the exhibition stand of a different company, ООО «Конструкторское бюро «Синергия»» (see that entity's corrections why[] for the misattribution this corrects).",
+        "name_ru": "«Яким»",
+        "source_id": "s8060"
+      }
+    ],
     "financials": [
       {
         "profit": 4812000.0,
@@ -6753,7 +6759,11 @@
     },
     "wb_overlap": "none_found",
     "products": [
-      "Упырь"
+      {
+        "description": "FPV kamikaze strike drone, first used in the SVO zone May 2023; destroyed boats/fortifications/bunkers/strongpoints on the Dnieper front. Uses rapid radio-channel frequency switching to defeat EW dome protection, per Vesti.ru (23.08.2024, s8055): \"Производители FPV-дрона «Упырь» основали «Уралдронзавод»\" -- serially supplied to Central Military District forces. Later variants «Упырь-18» (18-inch frame, 10kg mine payload) and «Упырь-К» (~50km range, 12kg payload incl. anti-tank mines) also documented in press (Kommersant, Life.ru), not separately archived this pass.",
+        "name_ru": "«Упырь»",
+        "source_id": "s8055"
+      }
     ],
     "financials": [],
     "egrul_flags": [],
@@ -6806,6 +6816,7 @@
     },
     "tier_basis": "Named a ЦБСТ resident repeatedly on ЦБСТ's own Telegram channel (incl. its director Ткачук personally credited, and the entity itself called \"одним из крупнейших предприятий — резидентов ЦБСТ\"), manufacturer of the «Упырь» kamikaze UAV. Sanctioned by OFAC, EU, France and GUR (OpenSanctions/Aleph, exact-name match, score 1.0), and listed in Минпромторг's GISP industrial-facility registry under an aircraft-manufacture ОКВЭД.",
     "_corrected": [
+      "2026-09-28: sourced «Упырь» directly via Vesti.ru (23.08.2024, s8055), which names Уралдронзавод as founded by the drone's own producers.",
       "User flagged (2026-09-07) that Ткачук/Уралдронзавод was wrongly dismissed as an unrelated adjacent lead; a direct DB search of ЦБСТ's own channel (ANO_CBST) confirms repeated, explicit, first-party ЦБСТ-resident framing — this is a confirmed core-network entity, not adjacent.",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
       "[2026-09-15] wb_overlap=none_found: Brand-name search for product «Упырь» on wildberries.ru (2026-09-15, WebSearch) returned no product listing — only unrelated toy-drone category pages."
@@ -10321,7 +10332,9 @@
     "wb_overlap": "none_found",
     "products": [
       {
-        "name_ru": "Скворец"
+        "description": "Heavy strike FPV drone family, first presented at «Армия-2024». Per status-arms.ru (captured 2026-09-28, s8059): base model «Скворец 10» is an \"ударный беспилотник с большой дальностью применения и высокой грузоподъемностью\", max payload 3.5kg, over 12km range with 2.5kg payload, all-weather/night camera; variants include «Скворец 10Т» (thermal imaging, 640x512), «Скворец Z - Захват» (target-capture), «Скворец ПРО» (reconnaissance-strike with автонаведение), «Скворец 10 Л» (Russian-component-localized). Used with the «Тень» closed comms/control system made by a different manufacturer, ooo-superkhrono (see that entity's own products[]).",
+        "name_ru": "Скворец",
+        "source_id": "s8059"
       },
       {
         "description": "FPV kamikaze UAV, per GUR profile — likely the same as the existing «Скворец ВМФ» naval variant. Description backfilled 2026-09-15 from the «Скворец-З» sibling entry below, which already asserts this identity (duplicate-stub cleanup, no new source).",
@@ -18875,7 +18888,11 @@
     },
     "wb_overlap": "none_found",
     "products": [
-      "Арена 5М"
+      {
+        "description": "Подрывная машинка (demining detonator device) for humanitarian/combat mine clearance -- NOT the same product line as ooo-opkb-eksplomet's «АРЕНА-5»/«АРЕНА-8000ST» metal-detector family, despite the shared \"Арена\" brand name (name collision, no established relationship between the two entities). Per ЦБСТ's own Telegram channel (t.me/ano_cbst, msg 706, 12.05.2025, s7594), verbatim: \"Подрывные машинки «Арена 5М» (ООО «Метаскан») — надёжные и удобные устройства для подрыва боеприпасов. Устойчивая к погодным условиям и механическим повреждениям, машинка считается одной из лучших по соотношению цена/качество.\" Delivered to Kursk-direction sappers/810th Naval Infantry/76th Guards Air Assault/11th Air Assault/«БАРС-Курск» in ЦБСТ's first dedicated humanitarian-demining convoy.",
+        "name_ru": "«Арена 5М»",
+        "source_id": "s7594"
+      }
     ],
     "financials": [
       {
@@ -18956,13 +18973,13 @@
     "_origin_extra": [
       "brief:prose"
     ],
+    "tier_basis": "«Арена 5М» demining-detonator product now directly sourced (2026-09-28) against ЦБСТ's own Telegram delivery post (s7594, verbatim text naming ООО «Метаскан» as the product's maker) -- confirmed distinct from, not the same product line as, ooo-opkb-eksplomet's «АРЕНА-5»/«АРЕНА-8000ST» metal-detector family (shared \"Арена\" brand name is a coincidence, not evidence of a corporate relationship). Revenue grew sharply from ₽15m (FY2023) to ₽765m (FY2025).",
     "notes": "2026-09-07 NSPD corroboration: ул. Николая Ершова, зд.31В, Казань confirmed as a real multi-unit nonresidential commercial building (units registered 2020, private ownership) (s6939).",
     "sanctions_review": {
       "as_of": "2026-09-15",
       "outcome": "closed",
       "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). OpenSanctions: 1 match(es), top='ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАСКАН\"' (score 1.0, topics=['sanction.linked', 'sanction.control']) Aleph: 1 match(es), dataset categories=['company'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
     },
-    "tier_basis": "Thin direct record — no sanctions, cbst_tie or named products beyond a single bare product entry (\"Арена 5М\", an unelaborated name shared in form with ooo-opkb-eksplomet's «АРЕНА-5»/«АРЕНА-8000ST» detector line, relationship not established). Revenue grew sharply from ₽15m (FY2023) to ₽765m (FY2025); classification rests on this financial signal plus the unverified product-name link, not independent sourced evidence — flagged for a closer look.",
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1201600057097-20260823131757.pdf). Sole founder = sole director. Kazan — Tatarstan is a significant Russian drone-manufacturing region (Alabuga SEZ) though not independently confirmed for this specific entity.",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (1660349248). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
@@ -20685,7 +20702,11 @@
     },
     "wb_overlap": "none_found",
     "products": [
-      "Алёша"
+      {
+        "description": "FPV kamikaze/strike/reconnaissance drone, produced via the undeclared \"Проект «Аляска»\" business line. Per the EU's own 15.6.2026 designation (Council Decision (CFSP) 2026/1364, entry 801), verbatim: \"the company, in particular through the project 'Alaska', produces the First Person View (FPV) drones 'Alyosha', which have been actively used by Russian forces in Ukraine for reconnaissance, strike, and kamikaze missions.\"",
+        "name_ru": "«Алёша»",
+        "source_id": "s7429"
+      }
     ],
     "financials": [
       {
@@ -20933,7 +20954,11 @@
     },
     "wb_overlap": "none_found",
     "products": [
-      "Метафора"
+      {
+        "description": "Individual encrypted-radio inter-network relay device, developed \"при поддержке «Центра беспилотных систем и технологий» (ЦБСТ)\". Per ВПК.name (25.02.2025, s8056): 240g total weight (150g battery), two mini XLR connectors plus USB/Ethernet/Wi-Fi, transmits encrypted voice/text between otherwise-incompatible systems (mobile phones, military and civilian radios, tablets, computers). Combat-tested in the SVO zone with positive soldier feedback.",
+        "name_ru": "«Метафора»",
+        "source_id": "s8056"
+      }
     ],
     "financials": [
       {
@@ -23716,9 +23741,9 @@
     "wb_overlap": "none_found",
     "products": [
       {
-        "description": "Power controllers/control panels, electrical-parameter monitoring instruments, oil & gas measurement systems, industrial automation hardware/software, battery charging/balancing devices, LED lighting drivers. \"Transport\" project line covers electronics for land/air/water vehicles.",
+        "description": "Power controllers/control panels, electrical-parameter monitoring instruments, oil & gas measurement systems, industrial automation hardware/software, battery charging/balancing devices, LED lighting drivers. \"Transport\" project line covers electronics for land/air/water vehicles. Per the manufacturer's own site (nppelvo.ru): \"Устройства интернета вещей и системы на их основе\", \"Силовые контроллеры и пульты управления\", \"Приборы контроля электрических параметров\", \"Измерительные системы для нефтегазовой отрасли\", \"Аппаратное и программное обеспечение промышленной автоматизации\", \"Устройства заряда и балансировки батарей\", \"Драйверы осветительных приборов\", \"Светодиодные лампы и модули\", and a dedicated project line \"Электроника для наземных, воздушных и водных транспортных средств\".",
         "name_ru": "IoT-устройства и контроллеры мощности",
-        "source_id": null
+        "source_id": "s8062"
       }
     ],
     "financials": [
@@ -24302,10 +24327,11 @@
     },
     "wb_overlap": "none_found",
     "products": [
-      "СХ",
-      "Тень",
-      "Скворец",
-      "СуперХроно"
+      {
+        "description": "Long-range closed special communications/UAV-control system. Per Известия (24.09.2025, s8057), quoting the developer directly: \"новая система дальней закрытой спецсвязи и управления беспилотниками «Тень», рассказали «Известиям» в компании-разработчике «СуперХроно»\" -- ground transmitting equipment at the control point, receivers on the UAV, external antennas/retransmitters that carry signal by wire to prevent RF-emission detection of the operator's position. Standard range 500m-25km. Used by «Скворец» FPV-drone operators (810th Naval Infantry Brigade) -- «Скворец» itself is a separate product of a different manufacturer, ao-tekhnodron, not this entity (see that entity's own products[]).",
+        "name_ru": "«Тень»",
+        "source_id": "s8057"
+      }
     ],
     "financials": [
       {
@@ -24380,6 +24406,7 @@
     },
     "tier_basis": "Named directly as \"резидент ЦБСТ\" by a primary Telegram source (mil_hub, 24.09.2025) for its «Тень» closed spec-comms system used aboard 810th Guards Naval Infantry Brigade «Скворец» FPV drones — independently corroborated by ЦБСТ's own channel listing «Тень» among examples of its ~300-company ecosystem's output. Small but consistently profitable revenue (₽0.9m-3.4m/year, 2022-2025).",
     "_corrected": [
+      "2026-09-28: cleared 3 of 4 products[] bare-string entries. \"СХ\" and \"СуперХроно\" are the entity's own name/abbreviation, not product names (same mis-scaffolded-self-reference pattern as ooo-gaskar's \"СИБНК\"/ooo-atlant-aero's \"Технодинамика\"). \"Скворец\" is a different manufacturer's product (ao-tekhnodron, confirmed via status-arms.ru, s8059) used ALONGSIDE «Тень» comms, not produced by СуперХроно -- Известия's own text explicitly frames «Скворец» only as equipment «Тень» is used with, not as this entity's product. Only «Тень» itself, this entity's own genuine product, is retained and now sourced directly.",
       "full EGRUL extract pulled directly 23.08.2026 (ul-1163525102619-20260823131946.pdf). Confirms and upgrades sourcing for the already-documented СуперХроно scale-mismatch finding (₽3.38m revenue against a 810th Naval Infantry Brigade deployment per the existing brief) — sole founder=director since 2016, ОКВЭД is electronic-component manufacture, a plausible fit for a small specialist supplier rather than contradicting the existing finding.",
       "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (3525389520). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
@@ -31782,14 +31809,7 @@
       "source_id": "s7589"
     },
     "wb_overlap": "none_found",
-    "products": [
-      {
-        "description": "Воздушно-угрозный мониторинг/координация перехвата (\"air-threat monitoring/interceptor-coordination system\"), shown at ПМЭФ-2026.",
-        "name_latin": null,
-        "name_ru": "«Яким»",
-        "source_id": null
-      }
-    ],
+    "products": [],
     "financials": [
       {
         "note": "declared income ₽227.7m per brief's manufacturers-table row; year not specified in that source",
@@ -31843,6 +31863,7 @@
       "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). GUR sanctions/UAV registry: 4 match(es) - LIMITED LIABILITY COMPANY VDNE (DESIGN BUREAU MIS) (own_tin=7707453664, inn_match=False, listing_confirmed=False); SIMBIRSK DESIGN BUREAU PIRANHA LIMITED LIABILITY COMPANY (own_tin=7300024069, inn_match=False, listing_confirmed=False) ... No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
     },
     "_corrected": [
+      "2026-09-28: REMOVED products[] entry \"«Яким»\" -- confirmed mis-scaffolded. The cbst_tie claim's own quoted source text says «Яким» was merely SHOWN at this company's exhibition stand at ПМЭФ-2026 (\"с возможностями изделия можно ознакомиться на стенде ООО «Конструкторское бюро «Синергия»»\"), not that Синергия developed it. Directly checked яким.рф (WEBCAPTURE_4632306583_20260928_sistemnyy-integrator-yakim-homepage.html): \"Разработчик программного обеспечения Яким – ООО «Системный интегратор», 100% дочерняя компания АНО «Центр беспилотных систем и технологий»\" -- the actual developer is a separate, already-registered entity (slug ooo-sistemnyy-integrator, ИНН 4632306583), a ЦБСТ subsidiary. Product moved to that entity's own products[] instead.",
       "full EGRUL extract pulled directly 23.08.2026 (ul-1237800134835-20260823133430.pdf).",
       "MERGED duplicate scaffold: this entity was ALSO separately scaffolded as slug \"ooo-kb-sinergiya\" from the brief's manufacturers-table (line 1007) — same company (КБ «Синергия», St. Petersburg), different source pass. Product/employee/revenue facts from that table row folded in here; the table-row slug is marked _merged_into below rather than left as a phantom duplicate unverified entity.",
       "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
@@ -32659,12 +32680,12 @@
     "wb_overlap": "none_found",
     "products": [
       {
-        "description": "FPV strike-drone family, developed by Андрей Иванов (technical founder/spokesperson) under owner/director Черезов А.П. First batch of 4,000 units delivered to SVO forces Oct 2024.",
+        "description": "FPV strike-drone family, developed by Андрей Иванов (technical founder/spokesperson) under owner/director Черезов А.П. First batch of 4,000 units delivered to SVO forces Oct 2024. Per TheIns (29.07.2026, s8058), reporting on the assassination attempt against Черезов, verbatim: \"Черезов владеет и управляет двумя компаниями... — ООО «Русская лаборатория воздушного транспорта» (РЛВТ) и ООО «Воздушный трактат» — обе они участвовали в разработке БПЛА «Овод»\" (both companies participated in developing the «Овод» drone).",
         "name_ru": "«Овод»",
-        "source_id": null
+        "source_id": "s8058"
       },
       {
-        "description": "Fiber-optic-guided heavy FPV strike drone, reported >40km range record in the SVO zone; press-reported destruction of a Ukrainian ammunition depot in Sumy region (Aug 2026 coverage). Brand appears more directly tied to sister entity РЛВТ but press confirms this entity's participation.",
+        "description": "Fiber-optic-guided heavy FPV strike drone, reported >40km range record in the SVO zone; press-reported destruction of a Ukrainian ammunition depot in Sumy region (Aug 2026 coverage). Brand appears more directly tied to sister entity РЛВТ (see ovod's own products[], sourced to s8051) -- TheIns's own article on this entity (s8058) covers «Овод» but does not separately name «Провод»/«Провод-15», so this entity's own participation in that specific variant remains unconfirmed beyond the general «Овод» family tie above. Left flagged, not force-sourced.",
         "name_ru": "«Провод» / «Провод-15»",
         "source_id": null
       }
@@ -52070,9 +52091,9 @@
     "wb_overlap": "none_found",
     "products": [
       {
-        "description": "Платформа для создания систем самоорганизующейся связи (self-organizing comms, MANET-based).",
+        "description": "Платформа для создания систем самоорганизующейся связи (self-organizing comms, MANET-based). Per the manufacturer's own site (dinarus.ru, s8061): \"(DINARUS) - платформа для создания систем самоорганизующейся связи\", using \"самоорганизующейся беспроводной мобильной связи\" (MANET). Applications listed: secured emergency communications for public safety, rapidly-deployable comms for emergencies/special missions, and control comms for unmanned devices.",
         "name_ru": "Платформа Динарус",
-        "source_id": null
+        "source_id": "s8061"
       }
     ],
     "financials": [
@@ -58846,10 +58867,10 @@
     "wb_overlap": "not_checked",
     "products": [
       {
-        "description": "Low-cost, largely field-assembled FPV drone (cardboard airframe, off-the-shelf motors), supplied directly to the 106th Guards Airborne Division (Tula) -- including handing over raw components for troops to self-manufacture in the field, with a stated local-production arrangement through the Tula Suvorov Military School.",
+        "description": "Low-cost, largely field-assembled cardboard-airframe FPV drone family, supplied directly to the 106th Guards Airborne Division (Tula). Per the entity's own Telegram channel: msg 223 (2024-09-01, s7959) \"Подготовлена партия трёх типов дронов «Ковровец» для 106-й гвардейской воздушно-десантной Тульской... дивизии\"; msg 226 (2024-09-11, s7960) troops moved from assembly to full independent field manufacture; msg 229 (2024-09-14, s7961) components (motors, ESCs, servos) handed over for troops' own self-manufacture; msg 230 (2024-09-15, quoted here) agreement reached with the 106th on producing \"Ковровец\"-type drones through the Tula Suvorov Military School, with parts to be produced at Tula defense-industry enterprises. A later channel post (2024-12-03, #269, not separately archived) confirms cardboard (гофрокартон) airframe, comparing to the Australian Corvo PPDS.",
         "name_latin": "Kovrovets",
         "name_ru": "«Ковровец»",
-        "source_id": null
+        "source_id": "s7962"
       }
     ],
     "financials": [
@@ -64009,29 +64030,29 @@
     "wb_overlap": "none_found",
     "products": [
       {
-        "description": "FPV quadcopter.",
+        "description": "FPV quadcopter, 7-inch class. First own-design prototype, per the brand's own origin-story post (s7530): developed late 2022, combat-tested in the SVO zone.",
         "name_ru": "FPV-дрон «КРАМС 7»",
-        "source_id": null
+        "source_id": "s8063"
       },
       {
-        "description": "FPV quadcopter.",
+        "description": "FPV quadcopter, 9-inch class.",
         "name_ru": "FPV-дрон «КРАМС 9»",
-        "source_id": null
+        "source_id": "s8063"
       },
       {
-        "description": "FPV quadcopter.",
+        "description": "FPV quadcopter, 13-inch class.",
         "name_ru": "FPV-дрон «КРАМС 13»",
-        "source_id": null
+        "source_id": "s8063"
       },
       {
-        "description": "Named on krams.pro homepage as a cargo-drop device — no dedicated product page found, description unconfirmed beyond the name.",
+        "description": "Cargo/munitions-release device, one of the brand's first two products (\"именно с разработки и производства этих изделий началась наша деятельность\", s7532). Per the brand's own promotional post (s7531): over 14,000 units combined (with «Колун») delivered to the front line.",
         "name_ru": "«ДУПЛЕТ»",
-        "source_id": null
+        "source_id": "s8063"
       },
       {
-        "description": "Named on krams.pro homepage — no dedicated product page found, description unconfirmed beyond the name.",
+        "description": "Cargo/munitions-release device, one of the brand's first two products (\"именно с разработки и производства этих изделий началась наша деятельность\", s7532). Per the brand's own promotional post (s7531): over 14,000 units combined (with «Дуплет») delivered to the front line.",
         "name_ru": "«КОЛУН»",
-        "source_id": null
+        "source_id": "s8063"
       }
     ],
     "financials": [],

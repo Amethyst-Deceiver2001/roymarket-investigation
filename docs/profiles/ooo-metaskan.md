@@ -44,7 +44,7 @@
 
 ## Products
 
-- **Арена 5М**
+- **«Арена 5М»** — Подрывная машинка (demining detonator device) for humanitarian/combat mine clearance -- NOT the same product line as ooo-opkb-eksplomet's «АРЕНА-5»/«АРЕНА-8000ST» metal-detector family, despite the shared "Арена" brand name (name collision, no established relationship between the two entities). Per ЦБСТ's own Telegram channel (t.me/ano_cbst, msg 706, 12.05.2025, [s7594]), verbatim: "Подрывные машинки «Арена 5М» (ООО «Метаскан») — надёжные и удобные устройства для подрыва боеприпасов. Устойчивая к погодным условиям и механическим повреждениям, машинка считается одной из лучших по соотношению цена/качество." Delivered to Kursk-direction sappers/810th Naval Infantry/76th Guards Air Assault/11th Air Assault/«БАРС-Курск» in ЦБСТ's first dedicated humanitarian-demining convoy. [s7594]
 
 ## Financials
 
@@ -87,6 +87,7 @@
 | [s6472] | Bfo | Bfo (BFO_1660349248_2025_ооо-метаскан.pdf) | — | — |
 | [s6712] | EGRUL extract | EGRUL extract (EGRUL_1660349248_20260907_ooo-metaskan.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6937] | Proverki | Proverki (PROVERKI_1660349248_20260907_ooo-metaskan-inspection-history.txt) | 2026-09-07 | — |
+| [s7594] | Tgpost | Tgpost (TGPOST_20250512_ano_cbst-706-cbst-tie-evidence.txt) | 2025-05-12 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

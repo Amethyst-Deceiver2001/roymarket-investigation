@@ -39,7 +39,7 @@
 
 ## Products
 
-- **IoT-устройства и контроллеры мощности** — Power controllers/control panels, electrical-parameter monitoring instruments, oil & gas measurement systems, industrial automation hardware/software, battery charging/balancing devices, LED lighting drivers. "Transport" project line covers electronics for land/air/water vehicles.
+- **IoT-устройства и контроллеры мощности** — Power controllers/control panels, electrical-parameter monitoring instruments, oil & gas measurement systems, industrial automation hardware/software, battery charging/balancing devices, LED lighting drivers. "Transport" project line covers electronics for land/air/water vehicles. Per the manufacturer's own site (nppelvo.ru): "Устройства интернета вещей и системы на их основе", "Силовые контроллеры и пульты управления", "Приборы контроля электрических параметров", "Измерительные системы для нефтегазовой отрасли", "Аппаратное и программное обеспечение промышленной автоматизации", "Устройства заряда и балансировки батарей", "Драйверы осветительных приборов", "Светодиодные лампы и модули", and a dedicated project line "Электроника для наземных, воздушных и водных транспортных средств". [s8062]
 
 ## Financials
 
@@ -88,6 +88,7 @@
 | [s6750] | EGRUL extract | EGRUL extract (EGRUL_7810918592_20260907_npp-elvo-kolskaya-verf.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7417] | EGRUL extract | EGRUL extract (EGRUL_7810918592_20260914_npp-elvo-kolskaya-verf.pdf) | 2026-09-14 | 2026-09-14 |
 | [s7549] | site capture | site capture (SITE_7810918592_20260916_npp-elvo-logo.png) | 2026-09-16 | — |
+| [s8062] | site capture | site capture (WEBCAPTURE_7810918592_20260928_nppelvo-homepage-product-lines.html) | 2026-09-28 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

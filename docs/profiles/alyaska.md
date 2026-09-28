@@ -27,7 +27,7 @@
 
 ## Products
 
-- **Алёша**
+- **«Алёша»** — FPV kamikaze/strike/reconnaissance drone, produced via the undeclared "Проект «Аляска»" business line. Per the EU's own 15.6.2026 designation (Council Decision (CFSP) 2026/1364, entry 801), verbatim: "the company, in particular through the project 'Alaska', produces the First Person View (FPV) drones 'Alyosha', which have been actively used by Russian forces in Ukraine for reconnaissance, strike, and kamikaze missions." [s7429]
 
 ## Financials
 

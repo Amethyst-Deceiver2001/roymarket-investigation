@@ -1,8 +1,8 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1131,
-  "edge_count": 1919,
+  "node_count": 1128,
+  "edge_count": 1916,
   "unresolved_count": 108,
   "nodes": [
     {
@@ -94,7 +94,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
+      "variant": "offensive",
       "degree": 7
     },
     {
@@ -3453,7 +3453,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 7
+      "degree": 6
     },
     {
       "id": "ooo-kopterlab",
@@ -3548,7 +3548,7 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
+      "variant": "offensive",
       "degree": 10
     },
     {
@@ -3932,8 +3932,8 @@
       "tier": "cbst-core",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
-      "degree": 4
+      "variant": "defensive",
+      "degree": 5
     },
     {
       "id": "ooo-skb-piranya",
@@ -4053,7 +4053,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 9
+      "degree": 6
     },
     {
       "id": "ooo-tekhnomost",
@@ -4550,9 +4550,9 @@
     {
       "id": "product::alyaska::алеша",
       "kind": "product",
-      "label": "Алёша",
+      "label": "«Алёша»",
       "owner_slug": "alyaska",
-      "source_id": null,
+      "source_id": "s7429",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -5592,7 +5592,7 @@
       "kind": "product",
       "label": "Скворец",
       "owner_slug": "ao-tekhnodron",
-      "source_id": null,
+      "source_id": "s8059",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -5735,7 +5735,7 @@
       "kind": "product",
       "label": "FPV-дрон «КРАМС 13»",
       "owner_slug": "krams-brand-unresolved",
-      "source_id": null,
+      "source_id": "s8063",
       "classification": {
         "status": "classified",
         "uav_platform": "multirotor",
@@ -5748,7 +5748,7 @@
       "kind": "product",
       "label": "FPV-дрон «КРАМС 7»",
       "owner_slug": "krams-brand-unresolved",
-      "source_id": null,
+      "source_id": "s8063",
       "classification": {
         "status": "classified",
         "uav_platform": "multirotor",
@@ -5761,7 +5761,7 @@
       "kind": "product",
       "label": "FPV-дрон «КРАМС 9»",
       "owner_slug": "krams-brand-unresolved",
-      "source_id": null,
+      "source_id": "s8063",
       "classification": {
         "status": "classified",
         "uav_platform": "multirotor",
@@ -5774,7 +5774,7 @@
       "kind": "product",
       "label": "«ДУПЛЕТ»",
       "owner_slug": "krams-brand-unresolved",
-      "source_id": null,
+      "source_id": "s8063",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -5787,7 +5787,7 @@
       "kind": "product",
       "label": "«КОЛУН»",
       "owner_slug": "krams-brand-unresolved",
-      "source_id": null,
+      "source_id": "s8063",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -5982,7 +5982,7 @@
       "kind": "product",
       "label": "IoT-устройства и контроллеры мощности",
       "owner_slug": "npp-elvo-kolskaya-verf",
-      "source_id": null,
+      "source_id": "s8062",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -7850,19 +7850,6 @@
       "degree": 1
     },
     {
-      "id": "product::ooo-konstruktorskoe-byuro-sinergiya::яким",
-      "kind": "product",
-      "label": "«Яким»",
-      "owner_slug": "ooo-konstruktorskoe-byuro-sinergiya",
-      "source_id": null,
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
       "id": "product::ooo-kopterlab::беспилотный-летательный-аппарат-матка",
       "kind": "product",
       "label": "Беспилотный летательный аппарат «Матка»",
@@ -8294,9 +8281,9 @@
     {
       "id": "product::ooo-metaskan::арена-5м",
       "kind": "product",
-      "label": "Арена 5М",
+      "label": "«Арена 5М»",
       "owner_slug": "ooo-metaskan",
-      "source_id": null,
+      "source_id": "s7594",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -9115,7 +9102,7 @@
       "kind": "product",
       "label": "«Ковровец»",
       "owner_slug": "ooo-npts-basirtk",
-      "source_id": null,
+      "source_id": "s7962",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -9514,6 +9501,19 @@
       "degree": 1
     },
     {
+      "id": "product::ooo-sistemnyy-integrator::яким",
+      "kind": "product",
+      "label": "«Яким»",
+      "owner_slug": "ooo-sistemnyy-integrator",
+      "source_id": "s8060",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::ooo-skb-piranya::бпла-пиранья-10",
       "kind": "product",
       "label": "БПЛА «Пиранья-10»",
@@ -9620,9 +9620,9 @@
     {
       "id": "product::ooo-smart-teknolodzhis::метафора",
       "kind": "product",
-      "label": "Метафора",
+      "label": "«Метафора»",
       "owner_slug": "ooo-smart-teknolodzhis",
-      "source_id": null,
+      "source_id": "s8056",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -9709,50 +9709,11 @@
       "degree": 1
     },
     {
-      "id": "product::ooo-superkhrono::скворец",
-      "kind": "product",
-      "label": "Скворец",
-      "owner_slug": "ooo-superkhrono",
-      "source_id": null,
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-superkhrono::суперхроно",
-      "kind": "product",
-      "label": "СуперХроно",
-      "owner_slug": "ooo-superkhrono",
-      "source_id": null,
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-superkhrono::сх",
-      "kind": "product",
-      "label": "СХ",
-      "owner_slug": "ooo-superkhrono",
-      "source_id": null,
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
       "id": "product::ooo-superkhrono::тень",
       "kind": "product",
-      "label": "Тень",
+      "label": "«Тень»",
       "owner_slug": "ooo-superkhrono",
-      "source_id": null,
+      "source_id": "s8057",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -9921,7 +9882,7 @@
       "kind": "product",
       "label": "Платформа Динарус",
       "owner_slug": "ooo-tsentr-dinarus",
-      "source_id": null,
+      "source_id": "s8061",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -9947,7 +9908,7 @@
       "kind": "product",
       "label": "«Овод»",
       "owner_slug": "ooo-vozdushnyy-traktat",
-      "source_id": null,
+      "source_id": "s8058",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -10062,9 +10023,9 @@
     {
       "id": "product::uraldronzavod::упырь",
       "kind": "product",
-      "label": "Упырь",
+      "label": "«Упырь»",
       "owner_slug": "uraldronzavod",
-      "source_id": null,
+      "source_id": "s8055",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -11378,7 +11339,7 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
+      "variant": "offensive",
       "degree": 3
     },
     {
@@ -11792,7 +11753,7 @@
       "target": "product::alyaska::алеша",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s7429",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -13354,7 +13315,7 @@
       "target": "product::ao-tekhnodron::скворец",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8059",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20658,7 +20619,7 @@
       "target": "product::krams-brand-unresolved::fpv-дрон-крамс-13",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8063",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20669,7 +20630,7 @@
       "target": "product::krams-brand-unresolved::fpv-дрон-крамс-7",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8063",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20680,7 +20641,7 @@
       "target": "product::krams-brand-unresolved::fpv-дрон-крамс-9",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8063",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20691,7 +20652,7 @@
       "target": "product::krams-brand-unresolved::дуплет",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8063",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20702,7 +20663,7 @@
       "target": "product::krams-brand-unresolved::колун",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8063",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21824,7 +21785,7 @@
       "target": "product::npp-elvo-kolskaya-verf::iot-устройства-и-контроллеры-мощности",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8062",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -24196,17 +24157,6 @@
       "confidence": "t-doc"
     },
     {
-      "source": "ooo-konstruktorskoe-byuro-sinergiya",
-      "target": "product::ooo-konstruktorskoe-byuro-sinergiya::яким",
-      "type": "produces",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
       "source": "ooo-kopterlab",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
@@ -24651,7 +24601,7 @@
       "target": "product::ooo-metaskan::арена-5м",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s7594",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -25465,7 +25415,7 @@
       "target": "product::ooo-npts-basirtk::ковровец",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s7962",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -25978,6 +25928,17 @@
       "confidence": "t-doc"
     },
     {
+      "source": "ooo-sistemnyy-integrator",
+      "target": "product::ooo-sistemnyy-integrator::яким",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8060",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-skb-piranya",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
@@ -26092,7 +26053,7 @@
       "target": "product::ooo-smart-teknolodzhis::метафора",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8056",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -26232,43 +26193,10 @@
     },
     {
       "source": "ooo-superkhrono",
-      "target": "product::ooo-superkhrono::скворец",
-      "type": "produces",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "ooo-superkhrono",
-      "target": "product::ooo-superkhrono::суперхроно",
-      "type": "produces",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "ooo-superkhrono",
-      "target": "product::ooo-superkhrono::сх",
-      "type": "produces",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "ooo-superkhrono",
       "target": "product::ooo-superkhrono::тень",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8057",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -26477,7 +26405,7 @@
       "target": "product::ooo-tsentr-dinarus::платформа-динарус",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8061",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -26587,7 +26515,7 @@
       "target": "product::ooo-vozdushnyy-traktat::овод",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8058",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -31966,7 +31894,7 @@
       "target": "product::uraldronzavod::упырь",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8055",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",

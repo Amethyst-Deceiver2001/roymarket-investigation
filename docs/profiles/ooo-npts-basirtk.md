@@ -50,7 +50,7 @@
 
 ## Products
 
-- **«Ковровец»** — Low-cost, largely field-assembled FPV drone (cardboard airframe, off-the-shelf motors), supplied directly to the 106th Guards Airborne Division (Tula) -- including handing over raw components for troops to self-manufacture in the field, with a stated local-production arrangement through the Tula Suvorov Military School.
+- **«Ковровец»** — Low-cost, largely field-assembled cardboard-airframe FPV drone family, supplied directly to the 106th Guards Airborne Division (Tula). Per the entity's own Telegram channel: msg 223 (2024-09-01, [s7959]) "Подготовлена партия трёх типов дронов «Ковровец» для 106-й гвардейской воздушно-десантной Тульской... дивизии"; msg 226 (2024-09-11, [s7960]) troops moved from assembly to full independent field manufacture; msg 229 (2024-09-14, [s7961]) components (motors, ESCs, servos) handed over for troops' own self-manufacture; msg 230 (2024-09-15, quoted here) agreement reached with the 106th on producing "Ковровец"-type drones through the Tula Suvorov Military School, with parts to be produced at Tula defense-industry enterprises. A later channel post (2024-12-03, #269, not separately archived) confirms cardboard (гофрокартон) airframe, comparing to the Australian Corvo PPDS. [s7962]
 
 ## Financials
 
@@ -127,6 +127,7 @@
 | [s0248] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3300009049_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
 | [s1165] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
 | [s6782] | EGRUL extract | EGRUL extract (EGRUL_3300009049_20260907_ooo-npts-basirtk.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7962] | Tgpost | Tgpost (TGPOST_20240915_UAS_development-230.txt) | 2024-09-15 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

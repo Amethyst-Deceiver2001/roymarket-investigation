@@ -18,7 +18,7 @@
 
 ## Products
 
-- **Упырь**
+- **«Упырь»** — FPV kamikaze strike drone, first used in the SVO zone May 2023; destroyed boats/fortifications/bunkers/strongpoints on the Dnieper front. Uses rapid radio-channel frequency switching to defeat EW dome protection, per Vesti.ru (23.08.2024, [s8055]): "Производители FPV-дрона «Упырь» основали «Уралдронзавод»" -- serially supplied to Central Military District forces. Later variants «Упырь-18» (18-inch frame, 10kg mine payload) and «Упырь-К» (~50km range, 12kg payload incl. anti-tank mines) also documented in press (Kommersant, Life.ru), not separately archived this pass. [s8055]
 
 ## State-program participation
 
@@ -41,6 +41,7 @@ _No named principals linked to this entity yet._
 |---|---|---|---|---|
 | [s0755] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_6671284030_20260824_uraldronzavod.json) | 2026-08-24 | — |
 | [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s8055] | press coverage | press coverage (PRESS_20240823_uraldronzavod-upyr-vesti.html) | 2024-08-23 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

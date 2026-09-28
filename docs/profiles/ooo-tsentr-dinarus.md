@@ -37,7 +37,7 @@
 
 ## Products
 
-- **Платформа Динарус** — Платформа для создания систем самоорганизующейся связи (self-organizing comms, MANET-based).
+- **Платформа Динарус** — Платформа для создания систем самоорганизующейся связи (self-organizing comms, MANET-based). Per the manufacturer's own site (dinarus.ru, [s8061]): "(DINARUS) - платформа для создания систем самоорганизующейся связи", using "самоорганизующейся беспроводной мобильной связи" (MANET). Applications listed: secured emergency communications for public safety, rapidly-deployable comms for emergencies/special missions, and control comms for unmanned devices. [s8061]
 
 ## Financials
 
@@ -83,6 +83,7 @@
 | [s6506] | Bfo | Bfo (BFO_5022077503_2024_ооо-центр-динарус.pdf) | — | — |
 | [s6507] | Bfo | Bfo (BFO_5022077503_2025_ооо-центр-динарус.pdf) | — | — |
 | [s6794] | EGRUL extract | EGRUL extract (EGRUL_5022077503_20260907_ooo-tsentr-dinarus.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8061] | site capture | site capture (WEBCAPTURE_5022077503_20260928_dinarus-platform-homepage.html) | 2026-09-28 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

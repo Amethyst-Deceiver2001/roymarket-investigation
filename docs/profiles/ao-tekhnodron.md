@@ -37,7 +37,7 @@
 
 ## Products
 
-- **Скворец**
+- **Скворец** — Heavy strike FPV drone family, first presented at «Армия-2024». Per status-arms.ru (captured 2026-09-28, [s8059]): base model «Скворец 10» is an "ударный беспилотник с большой дальностью применения и высокой грузоподъемностью", max payload 3.5kg, over 12km range with 2.5kg payload, all-weather/night camera; variants include «Скворец 10Т» (thermal imaging, 640x512), «Скворец Z - Захват» (target-capture), «Скворец ПРО» (reconnaissance-strike with автонаведение), «Скворец 10 Л» (Russian-component-localized). Used with the «Тень» closed comms/control system made by a different manufacturer, ooo-superkhrono (see that entity's own products[]). [s8059]
 - **Скворец ВМФ** — FPV kamikaze UAV, per GUR profile — likely the same as the existing «Скворец ВМФ» naval variant. Description backfilled 2026-09-15 from the «Скворец-З» sibling entry below, which already asserts this identity (duplicate-stub cleanup, no new source). [s0966]
 - **«Скворец-7»** — FPV kamikaze UAV, per GUR profile. [s0966]
 - **«Скворец-10»** — FPV kamikaze UAV, per GUR profile. [s0966]
@@ -67,6 +67,7 @@ _No named principals linked to this entity yet._
 | [s0806] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9704241986_20260824_ao-tekhnodron.json) | 2026-08-24 | — |
 | [s0966] | GUR war-sanctions record | GUR war-sanctions record (GUR_9704241986_20260824_ao-tekhnodron.html) | 2026-08-24 | — |
 | [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
+| [s8059] | press coverage | press coverage (PRESS_20260928_tekhnodron-skvorets-family-armiya2024-statusarms.html) | 2026-09-28 | 2024-08-20 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

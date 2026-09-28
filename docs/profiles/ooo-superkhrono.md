@@ -36,10 +36,7 @@
 
 ## Products
 
-- **СХ**
-- **Тень**
-- **Скворец**
-- **СуперХроно**
+- **«Тень»** — Long-range closed special communications/UAV-control system. Per Известия (24.09.2025, [s8057]), quoting the developer directly: "новая система дальней закрытой спецсвязи и управления беспилотниками «Тень», рассказали «Известиям» в компании-разработчике «СуперХроно»" -- ground transmitting equipment at the control point, receivers on the UAV, external antennas/retransmitters that carry signal by wire to prevent RF-emission detection of the operator's position. Standard range 500m-25km. Used by «Скворец» FPV-drone operators (810th Naval Infantry Brigade) -- «Скворец» itself is a separate product of a different manufacturer, ao-tekhnodron, not this entity (see that entity's own products[]). [s8057]
 
 ## Financials
 
@@ -68,6 +65,7 @@ _No named principals linked to this entity yet._
 | [s0254] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3525389520_2025_20260821.zip) | 2026-08-21 | 2025-12-31 |
 | [s0477] | EGRUL extract | EGRUL extract (ul-1163525102619-20260823131946.pdf) | — | 2026-08-23 |
 | [s6715] | EGRUL extract | EGRUL extract (EGRUL_3525389520_20260907_ooo-superkhrono.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8057] | press coverage | press coverage (PRESS_20250924_superkhrono-ten-iz.html) | 2025-09-24 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

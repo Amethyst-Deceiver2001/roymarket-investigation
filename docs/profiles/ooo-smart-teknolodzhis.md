@@ -38,7 +38,7 @@
 
 ## Products
 
-- **Метафора**
+- **«Метафора»** — Individual encrypted-radio inter-network relay device, developed "при поддержке «Центра беспилотных систем и технологий» (ЦБСТ)". Per ВПК.name (25.02.2025, [s8056]): 240g total weight (150g battery), two mini XLR connectors plus USB/Ethernet/Wi-Fi, transmits encrypted voice/text between otherwise-incompatible systems (mobile phones, military and civilian radios, tablets, computers). Combat-tested in the SVO zone with positive soldier feedback. [s8056]
 
 ## Financials
 
@@ -82,6 +82,7 @@
 | [s0329] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7715934509_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | [s0450] | EGRUL extract | EGRUL extract (ul-1127746712752-20260823120134.pdf) | — | 2026-08-23 |
 | [s6736] | EGRUL extract | EGRUL extract (EGRUL_7715934509_20260907_ooo-smart-teknolodzhis.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8056] | press coverage | press coverage (PRESS_20250225_smart-tekhnolodzhis-metafora-vpk-name.html) | 2025-02-25 | 2025-02-25 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

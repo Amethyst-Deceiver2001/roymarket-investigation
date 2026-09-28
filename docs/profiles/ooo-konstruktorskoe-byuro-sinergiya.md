@@ -34,10 +34,6 @@
 |---|---|---|
 | 10000 | 2023-11-24 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6755] |
 
-## Products
-
-- **«Яким»** — Воздушно-угрозный мониторинг/координация перехвата ("air-threat monitoring/interceptor-coordination system"), shown at ПМЭФ-2026.
-
 ## Financials
 
 | Year | Revenue | Profit | Source |
