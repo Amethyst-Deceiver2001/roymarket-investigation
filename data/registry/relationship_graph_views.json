@@ -8925,6 +8925,136 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-orient-sistems::4gnss-dekart-ag",
+          "kind": "product",
+          "label": "4GNSS DEKART-AG",
+          "owner_slug": "ooo-orient-sistems",
+          "source_id": "s8037",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-orient-sistems::4gnss-dekart-start-start-d-pro-pro-d",
+          "kind": "product",
+          "label": "4GNSS DEKART / START / START-D / PRO / PRO-D",
+          "owner_slug": "ooo-orient-sistems",
+          "source_id": "s8030",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-orient-sistems::4gnss-flybox-flybox-2",
+          "kind": "product",
+          "label": "4GNSS FLYBOX / FLYBOX 2",
+          "owner_slug": "ooo-orient-sistems",
+          "source_id": "s8038",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-orient-sistems::4gnss-ос-113-ос-213",
+          "kind": "product",
+          "label": "4GNSS ОС-113 / ОС-213",
+          "owner_slug": "ooo-orient-sistems",
+          "source_id": "s8031",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-orient-sistems::ant-120-ant-125-аnт-608",
+          "kind": "product",
+          "label": "ANT-120 / ANT-125 / АNТ-608",
+          "owner_slug": "ooo-orient-sistems",
+          "source_id": "s8034",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-orient-sistems::h1c",
+          "kind": "product",
+          "label": "H1C",
+          "owner_slug": "ooo-orient-sistems",
+          "source_id": "s8040",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-orient-sistems::modemos-рм-100",
+          "kind": "product",
+          "label": "ModemOS / РМ-100",
+          "owner_slug": "ooo-orient-sistems",
+          "source_id": "s8043",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-orient-sistems::web-survey",
+          "kind": "product",
+          "label": "Web Survey",
+          "owner_slug": "ooo-orient-sistems",
+          "source_id": "s8044",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-orient-sistems::ориент-коршун",
+          "kind": "product",
+          "label": "Ориент.Коршун",
+          "owner_slug": "ooo-orient-sistems",
+          "source_id": "s8041",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-orient-sistems::система-ориент-s-ориент-s-lite",
+          "kind": "product",
+          "label": "Система Ориент S / Ориент S Lite",
+          "owner_slug": "ooo-orient-sistems",
+          "source_id": "s8042",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-pokrov::детектор-булат-v-4",
           "kind": "product",
           "label": "Детектор «Булат» v.4 (3MX)",
@@ -22989,6 +23119,116 @@
           "source_id": "s0462",
           "as_of": null,
           "weight": 100,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-orient-sistems",
+          "target": "product::ooo-orient-sistems::4gnss-dekart-ag",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8037",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-orient-sistems",
+          "target": "product::ooo-orient-sistems::4gnss-dekart-start-start-d-pro-pro-d",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8030",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-orient-sistems",
+          "target": "product::ooo-orient-sistems::4gnss-flybox-flybox-2",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8038",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-orient-sistems",
+          "target": "product::ooo-orient-sistems::4gnss-ос-113-ос-213",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8031",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-orient-sistems",
+          "target": "product::ooo-orient-sistems::ant-120-ant-125-аnт-608",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8034",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-orient-sistems",
+          "target": "product::ooo-orient-sistems::h1c",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8040",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-orient-sistems",
+          "target": "product::ooo-orient-sistems::modemos-рм-100",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8043",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-orient-sistems",
+          "target": "product::ooo-orient-sistems::web-survey",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8044",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-orient-sistems",
+          "target": "product::ooo-orient-sistems::ориент-коршун",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8041",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-orient-sistems",
+          "target": "product::ooo-orient-sistems::система-ориент-s-ориент-s-lite",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8042",
+          "as_of": null,
+          "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -41195,136 +41435,6 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-orient-sistems::4gnss-dekart-ag",
-          "kind": "product",
-          "label": "4GNSS DEKART-AG",
-          "owner_slug": "ooo-orient-sistems",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-orient-sistems::4gnss-dekart-start-start-d-pro-pro-d",
-          "kind": "product",
-          "label": "4GNSS DEKART / START / START-D / PRO / PRO-D",
-          "owner_slug": "ooo-orient-sistems",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-orient-sistems::4gnss-flybox-flybox-2",
-          "kind": "product",
-          "label": "4GNSS FLYBOX / FLYBOX 2",
-          "owner_slug": "ooo-orient-sistems",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-orient-sistems::4gnss-ос-113-ос-213",
-          "kind": "product",
-          "label": "4GNSS ОС-113 / ОС-213",
-          "owner_slug": "ooo-orient-sistems",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-orient-sistems::ant-120-ant-125-аnт-608",
-          "kind": "product",
-          "label": "ANT-120 / ANT-125 / АNТ-608",
-          "owner_slug": "ooo-orient-sistems",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-orient-sistems::h1c",
-          "kind": "product",
-          "label": "H1C",
-          "owner_slug": "ooo-orient-sistems",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-orient-sistems::modemos-рм-100",
-          "kind": "product",
-          "label": "ModemOS / РМ-100",
-          "owner_slug": "ooo-orient-sistems",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-orient-sistems::web-survey",
-          "kind": "product",
-          "label": "Web Survey",
-          "owner_slug": "ooo-orient-sistems",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-orient-sistems::ориент-коршун",
-          "kind": "product",
-          "label": "Ориент.Коршун",
-          "owner_slug": "ooo-orient-sistems",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-orient-sistems::система-ориент-s-ориент-s-lite",
-          "kind": "product",
-          "label": "Система Ориент S / Ориент S Lite",
-          "owner_slug": "ooo-orient-sistems",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-skb-piranya::20",
           "kind": "product",
           "label": "20",
@@ -43775,116 +43885,6 @@
           "target": "ooo-arkodim",
           "type": "related",
           "label": "sister-entity",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-orient-sistems",
-          "target": "product::ooo-orient-sistems::4gnss-dekart-ag",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-orient-sistems",
-          "target": "product::ooo-orient-sistems::4gnss-dekart-start-start-d-pro-pro-d",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-orient-sistems",
-          "target": "product::ooo-orient-sistems::4gnss-flybox-flybox-2",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-orient-sistems",
-          "target": "product::ooo-orient-sistems::4gnss-ос-113-ос-213",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-orient-sistems",
-          "target": "product::ooo-orient-sistems::ant-120-ant-125-аnт-608",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-orient-sistems",
-          "target": "product::ooo-orient-sistems::h1c",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-orient-sistems",
-          "target": "product::ooo-orient-sistems::modemos-рм-100",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-orient-sistems",
-          "target": "product::ooo-orient-sistems::web-survey",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-orient-sistems",
-          "target": "product::ooo-orient-sistems::ориент-коршун",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-orient-sistems",
-          "target": "product::ooo-orient-sistems::система-ориент-s-ориент-s-lite",
-          "type": "produces",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
