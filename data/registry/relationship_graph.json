@@ -9553,19 +9553,6 @@
       "degree": 1
     },
     {
-      "id": "product::ooo-skb-piranya::20",
-      "kind": "product",
-      "label": "20",
-      "owner_slug": "ooo-skb-piranya",
-      "source_id": null,
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
       "id": "product::ooo-skb-piranya::бпла-пиранья-10",
       "kind": "product",
       "label": "БПЛА «Пиранья-10»",
@@ -9646,9 +9633,22 @@
     {
       "id": "product::ooo-skb-piranya::пиранья-15",
       "kind": "product",
-      "label": "Пиранья 15",
+      "label": "«Пиранья 15»",
       "owner_slug": "ooo-skb-piranya",
-      "source_id": null,
+      "source_id": "s8046",
+      "classification": {
+        "status": "classified",
+        "uav_platform": "multirotor",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-skb-piranya::пиранья-20",
+      "kind": "product",
+      "label": "«Пиранья 20»",
+      "owner_slug": "ooo-skb-piranya",
+      "source_id": "s8046",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -26062,17 +26062,6 @@
     },
     {
       "source": "ooo-skb-piranya",
-      "target": "product::ooo-skb-piranya::20",
-      "type": "produces",
-      "label": null,
-      "source_id": null,
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "ooo-skb-piranya",
       "target": "product::ooo-skb-piranya::бпла-пиранья-10",
       "type": "produces",
       "label": null,
@@ -26142,7 +26131,18 @@
       "target": "product::ooo-skb-piranya::пиранья-15",
       "type": "produces",
       "label": null,
-      "source_id": null,
+      "source_id": "s8046",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-skb-piranya",
+      "target": "product::ooo-skb-piranya::пиранья-20",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8046",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",

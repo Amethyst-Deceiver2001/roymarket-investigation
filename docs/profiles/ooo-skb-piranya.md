@@ -50,8 +50,8 @@
 - **Модули управления (200/300/500/700/915/2.4)** — Communication/control module line across six frequency bands: 185-215MHz, 285-315MHz, 490-520MHz, 685-715MHz, 900-930MHz, 2.3-2.4GHz. Various antenna types (Uda-Yagi, dipole, Moxon). [s1410]
 - **Волоконно-оптические линии связи (ВОЛС)** — Fiber-optic control cable spools, 10-50km lengths (0.905-4.5kg), marketed as EW-immune ("недоступны для средств РЭБ"). [s1410]
 - **Воздушные ретрансляторы** — Airborne signal-relay units, 148x92x35.5mm, 0.5-0.6kg, with mounts for both DJI and «Пиранья-13» platforms. [s1410]
-- **Пиранья 15** ([full profile](products/piranya.html))
-- **20**
+- **«Пиранья 15»** — Quadcopter-type UAV, presented alongside «Пиранья 20» at HeliRussia 2026 (per press photo caption and coverage); cargo/logistics-oriented addition to the Пиранья line beyond the 7/10/13 kamikaze series. No individual specs captured yet. [s8046]
+- **«Пиранья 20»** — Cargo-capacity UAV, max takeoff mass 20kg / payload 17kg per press coverage, cruise 80km/h / max 140km/h -- for cargo delivery to hard-to-reach areas and strikes on fortified positions/equipment. Presented at HeliRussia 2026 alongside «Пиранья 15»; separately reported (iz.ru) as launched into serial production with up to 30kg cargo capacity for frontline logistics. [s8046]
 
 ## Financials
 
@@ -190,6 +190,7 @@
 | [s7512] | Telegram media | Telegram media (TGMEDIA_7300024069_20250801_piranhafpv-post384-1.jpg) | 2025-08-01 | — |
 | [s7513] | Telegram media | Telegram media (TGMEDIA_7300024069_20251029_piranhafpv-post432-1.jpg) | 2025-10-29 | — |
 | [s7514] | Telegram media | Telegram media (TGMEDIA_7300024069_20251029_piranhafpv-post432-2.jpg) | 2025-10-29 | — |
+| [s8046] | press coverage | press coverage (PRESS_20260608_status-arms-piranha-15-20-helirussia.html) | 2026-06-08 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

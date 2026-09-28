@@ -9224,6 +9224,32 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-skb-piranya::пиранья-15",
+          "kind": "product",
+          "label": "«Пиранья 15»",
+          "owner_slug": "ooo-skb-piranya",
+          "source_id": "s8046",
+          "classification": {
+            "status": "classified",
+            "uav_platform": "multirotor",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-skb-piranya::пиранья-20",
+          "kind": "product",
+          "label": "«Пиранья 20»",
+          "owner_slug": "ooo-skb-piranya",
+          "source_id": "s8046",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-spdbbk::привет-120",
           "kind": "product",
           "label": "«Привет-120»",
@@ -23469,6 +23495,28 @@
           "type": "produces",
           "label": null,
           "source_id": "s1410",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-skb-piranya",
+          "target": "product::ooo-skb-piranya::пиранья-15",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8046",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-skb-piranya",
+          "target": "product::ooo-skb-piranya::пиранья-20",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8046",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -41435,32 +41483,6 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-skb-piranya::20",
-          "kind": "product",
-          "label": "20",
-          "owner_slug": "ooo-skb-piranya",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-skb-piranya::пиранья-15",
-          "kind": "product",
-          "label": "Пиранья 15",
-          "owner_slug": "ooo-skb-piranya",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-smart-teknolodzhis::метафора",
           "kind": "product",
           "label": "Метафора",
@@ -43907,28 +43929,6 @@
           "target": "ooo-ametist",
           "type": "related",
           "label": "shared-address",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-skb-piranya",
-          "target": "product::ooo-skb-piranya::20",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-skb-piranya",
-          "target": "product::ooo-skb-piranya::пиранья-15",
-          "type": "produces",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
