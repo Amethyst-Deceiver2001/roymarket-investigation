@@ -44,10 +44,10 @@
 
 ## Products
 
-- **«Русак-С»** — Existing registry entry, name variant of «Русак» — GUR lists plain «Русак».
+- **«Русак-С»** — Existing registry entry, name variant of «Русак» — GUR lists plain «Русак». Also press-confirmed by name: RT interview with the Стратим founder (2023-12-26) discusses an "updated FPV drone «Русак»" being sent for field trials. [s8023]
 - **«Щегол»** — FPV kamikaze UAV, per GUR profile. [s0963]
 - **«Голубь»** — Existing registry entry, corroborated by GUR profile. [s0963]
-- **«Тювик»** — Existing registry entry.
+- **«Тювик»** — Existing registry entry. Press-confirmed: RT interview with the Стратим founder (2023-12-26) describes «Тювик» in detail -- a rail-launched, EW-resistant strike drone for medium/long range, petrol and electric (40km range) variants, solid-fuel/powder launch booster. [s8023]
 
 ## Financials
 
@@ -128,6 +128,7 @@
 | [s0963] | GUR war-sanctions record | GUR war-sanctions record (GUR_7720901379_20260824_ao-stratim.html) | 2026-08-24 | — |
 | [s6738] | EGRUL extract | EGRUL extract (EGRUL_7720901379_20260907_ao-stratim.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6925] | Proverki | Proverki (PROVERKI_7720901379_20260907_ao-stratim-inspection-history.txt) | 2026-09-07 | — |
+| [s8023] | press coverage | press coverage (PRESS_20231226_stratim-founder-rt-interview-rusak-tyuvik.html) | 2023-12-26 | 2023-12-26 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -5467,6 +5467,32 @@
           "degree": 1
         },
         {
+          "id": "product::ao-stratim::русак-с",
+          "kind": "product",
+          "label": "«Русак-С»",
+          "owner_slug": "ao-stratim",
+          "source_id": "s8023",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ao-stratim::тювик",
+          "kind": "product",
+          "label": "«Тювик»",
+          "owner_slug": "ao-stratim",
+          "source_id": "s8023",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ao-stratim::щегол",
           "kind": "product",
           "label": "«Щегол»",
@@ -12314,6 +12340,28 @@
           "type": "produces",
           "label": null,
           "source_id": "s0963",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-stratim",
+          "target": "product::ao-stratim::русак-с",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8023",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-stratim",
+          "target": "product::ao-stratim::тювик",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8023",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -40676,32 +40724,6 @@
           "degree": 1
         },
         {
-          "id": "product::ao-stratim::русак-с",
-          "kind": "product",
-          "label": "«Русак-С»",
-          "owner_slug": "ao-stratim",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ao-stratim::тювик",
-          "kind": "product",
-          "label": "«Тювик»",
-          "owner_slug": "ao-stratim",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ao-tekhnodron::скворец",
           "kind": "product",
           "label": "Скворец",
@@ -41842,28 +41864,6 @@
           "source_id": null,
           "as_of": null,
           "weight": 51,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-stratim",
-          "target": "product::ao-stratim::русак-с",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-stratim",
-          "target": "product::ao-stratim::тювик",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
         },
