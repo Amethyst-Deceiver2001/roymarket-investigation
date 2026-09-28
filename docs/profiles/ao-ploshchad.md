@@ -38,8 +38,8 @@
 
 ## Products
 
-- **ПАК «Площадь.Р»** — Программно-аппаратный комплекс для автоматического поиска целей.
-- **ПАК «Площадь.К»** — Программно-аппаратный комплекс для автоматического наведения на цель.
+- **ПАК «Площадь.Р»** — Программно-аппаратный комплекс для автоматического поиска целей. Per the manufacturer's own site (areasystems.tech/решения), same page also confirms ПАК «Площадь.К». [s8054]
+- **ПАК «Площадь.К»** — Программно-аппаратный комплекс для автоматического наведения на цель. [s8054]
 - **«Микроб 10с»** — Autopilot / machine-vision system for the Микроб UAV, developed within the "Kulibin Club" of the Народный фронт movement, per GUR profile. [s0967]
 - **«Микроб 13с»** — Autopilot / machine-vision system, per GUR profile. [s0967]
 - **«Площадь-К»** — FPV kamikaze drone, per GUR profile — distinct from the existing ПАК «Площадь.Р»/«Площадь.К» software systems (this is the drone itself, not the targeting software). [s0967]
@@ -102,6 +102,7 @@
 | [s6676] | Bfo | Bfo (BFO_9723203841_2025_ао-площадь.pdf) | — | — |
 | [s6769] | EGRUL extract | EGRUL extract (EGRUL_9723203841_20260907_ao-ploshchad.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7557] | site capture | site capture (SITE_9723203841_20260916_ao-ploshchad-logo.webp) | 2026-09-16 | — |
+| [s8054] | site capture | site capture (WEBCAPTURE_9723203841_20260928_ploshchad-resheniya-r-k.html) | 2026-09-28 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

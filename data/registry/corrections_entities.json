@@ -11483,14 +11483,14 @@
         ],
         "products": [
           {
-            "description": "Программно-аппаратный комплекс для автоматического поиска целей.",
+            "description": "Программно-аппаратный комплекс для автоматического поиска целей. Per the manufacturer's own site (areasystems.tech/решения), same page also confirms ПАК «Площадь.К».",
             "name_ru": "ПАК «Площадь.Р»",
-            "source_id": null
+            "source_id": "s8054"
           },
           {
             "description": "Программно-аппаратный комплекс для автоматического наведения на цель.",
             "name_ru": "ПАК «Площадь.К»",
-            "source_id": null
+            "source_id": "s8054"
           },
           {
             "description": "Autopilot / machine-vision system for the Микроб UAV, developed within the \"Kulibin Club\" of the Народный фронт movement, per GUR profile.",
@@ -17646,10 +17646,18 @@
           "as_of": "2026-09-15",
           "outcome": "closed",
           "note": "OpenSanctions match (score 0.8947, topics=[poi, sanction]) is captioned \"Autonomous non-profit Organisation 'Scientific and Production Center ... Ushkuynik'\" — that caption and legal form (АНО) describe the SISTER entity ano-npts-ushkuynik (ИНН 5300010714), which already carries a populated sanctions[] entry, NOT this ООО/НПЦ entity (ИНН 5300013923, a distinct legal person). The match_id is not keyed to this entity's own ИНН. GUR returned nothing directly (gur_matches=[]); GUR components teardown separately found this entity's product (\"Князь Вандал Новгородский\") in a downed-UAV component list — battlefield-fielding evidence, not sanctions evidence. Given the confirmed sister-entity name/legal-form collision, not promoted to this entity's own sanctions[] without independent confirmation the designation names this ИНН specifically."
-        }
+        },
+        "products": [
+          {
+            "description": "Fiber-optic-guided FPV strike drone, first serially produced from January 2025. Per KP.RU (16.01.2025): fiber-optic cable control (immune to RF jamming/detection), up to 30km operator range, payload sufficient to destroy tank rear armor/disable IFVs, ~80,000 RUB unit cost, first combat use August 2024 during the Kursk incursion, attributed >$300m in cumulative NATO-equipment damage since. Also independently confirmed as fielded via GUR's teardown-component catalogue (witem-4751, s0969).",
+            "name_ru": "Князь Вандал Новгородский",
+            "source_id": "s8048"
+          }
+        ]
       },
       "verified_against": "war-sanctions.gur.gov.ua/en/components (filtered by weapon item witem-4751, \"Fiber-optic UAV 'Knyaz Vandal Novgorodsky'\"), archived as s0969",
       "why": [
+        "2026-09-28: sourced the \"Князь Вандал Новгородский\" products[] entry (previously a bare, unsourced string) via KP.RU (16.01.2025, s8048) -- names НПЦ «Ушкуйник» as manufacturer directly, gives fiber-optic control/range/payload/cost detail, corroborated by the pre-existing GUR teardown match.",
         "CORRECTED SCAFFOLD MISLABEL: this record (slug npts-ushkuynik, ИНН 5300013923) was previously named/described as \"НПЦ «Ушкуйник»\" — the same name as the separate АНО at ИНН 5300010714 (ano-npts-ushkuynik) — and carried that АНО's director (Чадаев А.В.) as if it were this entity's own. It is not: this is ООО «Ушкуйник» (LLC, commercial form, reg. 18.04.2024), a distinct legal entity already documented in the brief prose (docs/index.html:441) as a redacted commercial arm sharing only the brand name with the operating nonprofit. Confirmed by full 8-page EGRUL extract pulled directly 23.08.2026 (ul-1245300001650-20260823122617.pdf): director and founders are both access-restricted, matching the brief's already-noted 15.09.2025 redaction date exactly — no new institutional link found, this fixes a data-quality bug rather than adding a finding.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5300013923). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "GUR's teardown-component catalogue (distinct from its sanctions/companies sections, discovered 2026-08-24) directly names \"Fiber-optic UAV 'Knyaz Vandal Novgorodsky'\" — this entity's own flagship product — as the armament for 12 identified components, overwhelmingly Chinese-manufactured (Sigmastar, Purui Semiconductor, Hangzhou Zhongke, CapXon) with additional Taiwanese (Unisonic, Realtek, Winbond), US (Semtech) and Swiss (STMicroelectronics) parts. First populated foreign_components[] entries in the registry from a primary teardown source rather than press inference.",
@@ -19279,10 +19287,26 @@
     "ooo-aviron": {
       "set": {
         "products": [
-          "Чебурашка",
-          "Кощей 2.0",
-          "Сокол",
-          "Пеппа",
+          {
+            "description": "First single-board (одноплатный) drone constructor -- flight controller, speed controller and radio comms integrated on one board, textolite frame. Per InC Russia (incrussia.ru): 80 km/h cruise speed, 35km control range, 80% localized components; purpose includes cartography, wildlife monitoring, search-and-rescue, cargo delivery up to 5kg. GD Игорь Лапин quoted directly.",
+            "name_ru": "Чебурашка",
+            "source_id": "s8049"
+          },
+          {
+            "description": "Heavy multirotor UAV family for military/industrial cargo transport. Per ВПК.name interview with GD Игорь Лапин: designed payload 120kg with 40min flight time, powered by 45-49V onboard electrical system, controlled via the in-house «Пеппа» comms system, fail-safe controlled landing up to 35-40km from launch point.",
+            "name_ru": "Кощей 2.0",
+            "source_id": "s8050"
+          },
+          {
+            "description": "Heavy FPV strike/logistics drone. Per ВПК.name interview with GD Игорь Лапин, quoting him directly: \"мы можем уверенно заявлять, что он способен пролететь расстояние 25-30 км с боевой частью 12 кг\" (25-30km range, 12kg warhead, per recent testing).",
+            "name_ru": "Сокол",
+            "source_id": "s8050"
+          },
+          {
+            "description": "In-house UAV control/comms system operating on non-standard frequencies, used as the control system for the «Кощей» family (per ВПК.name interview, s8050). Also sold as a standalone product (\"Комплект связи для БПЛА Пеппа с антенной Moxon\") on налетай.рф, attributed there to \"производителю ООО «АВИРОН»\": up to 45km range from ground (100km with amplifier), 150-960MHz tunable, CRSF-compatible.",
+            "name_ru": "Пеппа",
+            "source_id": "s8053"
+          },
           {
             "description": "Two-item BПЛА control pair, found via GISP goods-catalog exact company_ogrn search (ОГРН 1247700414631). Production/facility address per GISP product record: 125212, Москва, Ленинградское ш., д.22, помещ.3/1 — distinct from this entity's legal address (125080, Волоколамское ш., д.1 стр.1, помещ.54/2) already on file.",
             "name_ru": "«Дори» (комплект: береговой пульт ДУ + бортовой блок управления/передачи информации)",
@@ -21162,11 +21186,10 @@
           },
           {
             "source_id": null,
-            "text": "products[] carries a single bare entry \"СИБНК\" -- this looks like it may actually be an abbreviation of the 100%-owning founder, ООО «Сибирская навигационная компания», mis-recorded as a product name rather than an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats \"ООО «СИБНК»\" as its own distinct entity name, adding to the confusion. Web search for \"СИБНК\" as a Wildberries product (2026-08-25) found nothing. RESOLVED (partially) 2026-08-25: wb_overlap=confirmed's actual basis is now independently corroborated on Ozon too -- the entity trades FPV components (motors, propellers) under the brand «ГАСКАР», not «СИБНК». \"СИБНК\" itself remains unexplained and is left as-is pending a human decision on whether to remove it as a mis-recorded entry."
+            "text": "products[] carried a single bare entry \"СИБНК\" -- suspected to be a mis-recorded reference to the 100%-owning founder, ООО «Сибирская навигационная компания» (ИНН 4205376019, ОГРН 1184205024849), not an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats \"ООО «СИБНК»\" as its own distinct entity name, adding to the confusion. Web search for \"СИБНК\" as a Wildberries product (2026-08-25) found nothing. RESOLVED 2026-08-25 (partial): wb_overlap=confirmed's actual basis is corroborated on Ozon too -- the entity trades FPV components (motors, propellers) under the brand «ГАСКАР», not «СИБНК». RESOLVED 2026-09-28: confirmed \"СИБНК\" is not a product -- it is the entity's own founder record (founders[0].inn 4205376019 matches exactly). Cleared from products[] via corrections; same mis-scaffolded-ownership-as-product pattern already found and cleared for ooo-atlant-aero's \"Технодинамика\"."
           }
         ],
         "products": [
-          "СИБНК",
           {
             "description": "Brushless FPV motor for heavy FPV drones/Long Range/cinelifters, 9-10 inch propeller class.",
             "name_ru": "Мотор PY3115 1300KV бесколлекторный FPV",
@@ -23342,14 +23365,14 @@
             }
           },
           {
-            "description": "Hybrid VTOL, 7kg payload, 300km range -- delivery/monitoring.",
+            "description": "Hybrid VTOL, 7kg payload, 300km range -- delivery/monitoring. Per the manufacturer's own site (clevercopter.ru): \"грузоподъёмностью до 7 кг, дальностью полёта до 300 км\".",
             "name_ru": "Патруль-30",
-            "source_id": null
+            "source_id": "s8052"
           },
           {
-            "description": "Heavy hybrid convertible VTOL, 130kg payload, 600km range -- casualty evacuation, inter-terminal cargo.",
+            "description": "Heavy hybrid convertible VTOL, 130kg payload, 600km range -- casualty evacuation, inter-terminal cargo. Per the manufacturer's own site (clevercopter.ru): \"массой до 130 кг на дальность до 600 км\".",
             "name_ru": "Аэромедик-680",
-            "source_id": null
+            "source_id": "s8052"
           },
           {
             "description": "Fixed-wing VTOL UAS for cargo transport and (planned) casualty evacuation -- per this entity's own rk.2035.university listing.",
@@ -32312,9 +32335,9 @@
             "source_id": "s0526"
           },
           {
-            "description": "Fiber-optic-guided heavy FPV strike drone variant. Press-reported (2026-08-23 web search) >40km range record in the SVO zone and destruction of a Ukrainian ammunition depot in Sumy region (Aug 2026 coverage) -- not yet cross-checked against a primary source.",
+            "description": "Fiber-optic-guided heavy FPV strike drone variant. Per АиФ Тула (18.08.2026), quoting Черезов directly: \"Мы с расчётом установили рекорд дальности боевого применения для дронов на оптоволокне. Работали в Сумской области. Была пройдена дистанция в 40 километров 400 метров и поражен склад с боеприпасами противника\" -- 40.4km range record and destruction of a Ukrainian ammunition depot in Sumy region, verified verbatim against the fetched article text.",
             "name_ru": "«Провод-15»",
-            "source_id": null
+            "source_id": "s8051"
           },
           {
             "name_ru": "Роботизированный комплекс «ДОВОД»",

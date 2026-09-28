@@ -2823,7 +2823,7 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "НПЦ",
-          "variant": null,
+          "variant": "defensive",
           "degree": 14
         },
         {
@@ -3091,7 +3091,7 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
+          "variant": "offensive",
           "degree": 12
         },
         {
@@ -3284,7 +3284,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 13
+          "degree": 12
         },
         {
           "id": "ooo-gaskar-integratsiya",
@@ -5441,6 +5441,32 @@
           "degree": 1
         },
         {
+          "id": "product::ao-ploshchad::пак-площадь-к",
+          "kind": "product",
+          "label": "ПАК «Площадь.К»",
+          "owner_slug": "ao-ploshchad",
+          "source_id": "s8054",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ao-ploshchad::пак-площадь-р",
+          "kind": "product",
+          "label": "ПАК «Площадь.Р»",
+          "owner_slug": "ao-ploshchad",
+          "source_id": "s8054",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ao-ploshchad::площадь-к",
           "kind": "product",
           "label": "«Площадь-К»",
@@ -6767,6 +6793,19 @@
           "degree": 1
         },
         {
+          "id": "product::npts-ushkuynik::князь-вандал-новгородский",
+          "kind": "product",
+          "label": "Князь Вандал Новгородский",
+          "owner_slug": "npts-ushkuynik",
+          "source_id": "s8048",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-4gnss::гнсс-плата-4gnss-np1",
           "kind": "product",
           "label": "ГНСС-плата 4GNSS NP1",
@@ -7032,6 +7071,58 @@
           "label": "«Дори» (комплект: береговой пульт ДУ + бортовой блок управления/передачи информации)",
           "owner_slug": "ooo-aviron",
           "source_id": "s5390",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-aviron::кощей-2-0",
+          "kind": "product",
+          "label": "Кощей 2.0",
+          "owner_slug": "ooo-aviron",
+          "source_id": "s8050",
+          "classification": {
+            "status": "classified",
+            "uav_platform": "multirotor",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-aviron::пеппа",
+          "kind": "product",
+          "label": "Пеппа",
+          "owner_slug": "ooo-aviron",
+          "source_id": "s8053",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-aviron::сокол",
+          "kind": "product",
+          "label": "Сокол",
+          "owner_slug": "ooo-aviron",
+          "source_id": "s8050",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-aviron::чебурашка",
+          "kind": "product",
+          "label": "Чебурашка",
+          "owner_slug": "ooo-aviron",
+          "source_id": "s8049",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -7560,6 +7651,19 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-kleverkopter::аэромедик-680",
+          "kind": "product",
+          "label": "Аэромедик-680",
+          "owner_slug": "ooo-kleverkopter",
+          "source_id": "s8052",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-kleverkopter::аэромедик-mini",
           "kind": "product",
           "label": "Аэромедик MINI",
@@ -7578,6 +7682,19 @@
           "label": "Курьер-30",
           "owner_slug": "ooo-kleverkopter",
           "source_id": "s1169",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-kleverkopter::патруль-30",
+          "kind": "product",
+          "label": "Патруль-30",
+          "owner_slug": "ooo-kleverkopter",
+          "source_id": "s8052",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -9515,6 +9632,19 @@
           "label": "«Овод»",
           "owner_slug": "ovod",
           "source_id": "s0526",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ovod::провод-15",
+          "kind": "product",
+          "label": "«Провод-15»",
+          "owner_slug": "ovod",
+          "source_id": "s8051",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -12475,6 +12605,28 @@
           "type": "produces",
           "label": null,
           "source_id": "s0967",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-ploshchad",
+          "target": "product::ao-ploshchad::пак-площадь-к",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8054",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-ploshchad",
+          "target": "product::ao-ploshchad::пак-площадь-р",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8054",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -20533,6 +20685,17 @@
           "confidence": null
         },
         {
+          "source": "npts-ushkuynik",
+          "target": "product::npts-ushkuynik::князь-вандал-новгородский",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8048",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "oksman-nikolas-nikolaevich",
           "target": "ooo-aeroplatformy",
           "type": "founded",
@@ -20967,6 +21130,50 @@
           "type": "produces",
           "label": null,
           "source_id": "s5390",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aviron",
+          "target": "product::ooo-aviron::кощей-2-0",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8050",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aviron",
+          "target": "product::ooo-aviron::пеппа",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8053",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aviron",
+          "target": "product::ooo-aviron::сокол",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8050",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-aviron",
+          "target": "product::ooo-aviron::чебурашка",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8049",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -21755,6 +21962,17 @@
         },
         {
           "source": "ooo-kleverkopter",
+          "target": "product::ooo-kleverkopter::аэромедик-680",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8052",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-kleverkopter",
           "target": "product::ooo-kleverkopter::аэромедик-mini",
           "type": "produces",
           "label": null,
@@ -21770,6 +21988,17 @@
           "type": "produces",
           "label": null,
           "source_id": "s1169",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-kleverkopter",
+          "target": "product::ooo-kleverkopter::патруль-30",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8052",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -24014,6 +24243,17 @@
           "type": "produces",
           "label": null,
           "source_id": "s0526",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ovod",
+          "target": "product::ovod::провод-15",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8051",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -30652,7 +30892,7 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
+          "variant": "offensive",
           "degree": 12
         },
         {
@@ -30821,7 +31061,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 13
+          "degree": 12
         },
         {
           "id": "ooo-gaskar-integratsiya",
@@ -37151,7 +37391,7 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "НПЦ",
-          "variant": null,
+          "variant": "defensive",
           "degree": 14
         },
         {
@@ -37247,7 +37487,7 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
+          "variant": "offensive",
           "degree": 12
         },
         {
@@ -37296,7 +37536,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 13
+          "degree": 12
         },
         {
           "id": "ooo-gk-logos",
@@ -39997,7 +40237,7 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "НПЦ",
-          "variant": null,
+          "variant": "defensive",
           "degree": 14
         },
         {
@@ -40233,7 +40473,7 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
+          "variant": "offensive",
           "degree": 12
         },
         {
@@ -40367,18 +40607,6 @@
           "legal_form": "ООО",
           "variant": "dual",
           "degree": 43
-        },
-        {
-          "id": "ooo-gaskar",
-          "kind": "entity",
-          "label": "ООО «Гаскар»",
-          "name_latin": null,
-          "inn": "9710112989",
-          "tier": "manufacturer",
-          "sanctioned": true,
-          "legal_form": "ООО",
-          "variant": null,
-          "degree": 13
         },
         {
           "id": "ooo-gaskar-integratsiya",
@@ -41130,32 +41358,6 @@
           "degree": 1
         },
         {
-          "id": "product::ao-ploshchad::пак-площадь-к",
-          "kind": "product",
-          "label": "ПАК «Площадь.К»",
-          "owner_slug": "ao-ploshchad",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ao-ploshchad::пак-площадь-р",
-          "kind": "product",
-          "label": "ПАК «Площадь.Р»",
-          "owner_slug": "ao-ploshchad",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ao-tekhnodron::скворец",
           "kind": "product",
           "label": "Скворец",
@@ -41247,19 +41449,6 @@
           "degree": 1
         },
         {
-          "id": "product::npts-ushkuynik::князь-вандал-новгородский",
-          "kind": "product",
-          "label": "Князь Вандал Новгородский",
-          "owner_slug": "npts-ushkuynik",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-aeromaks::a-50",
           "kind": "product",
           "label": "A-50",
@@ -41273,101 +41462,10 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-aviron::кощей-2-0",
-          "kind": "product",
-          "label": "Кощей 2.0",
-          "owner_slug": "ooo-aviron",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-aviron::пеппа",
-          "kind": "product",
-          "label": "Пеппа",
-          "owner_slug": "ooo-aviron",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-aviron::сокол",
-          "kind": "product",
-          "label": "Сокол",
-          "owner_slug": "ooo-aviron",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-aviron::чебурашка",
-          "kind": "product",
-          "label": "Чебурашка",
-          "owner_slug": "ooo-aviron",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-gaskar-integratsiya::бас-шторм",
           "kind": "product",
           "label": "БАС «Шторм»",
           "owner_slug": "ooo-gaskar-integratsiya",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-gaskar::сибнк",
-          "kind": "product",
-          "label": "СИБНК",
-          "owner_slug": "ooo-gaskar",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-kleverkopter::аэромедик-680",
-          "kind": "product",
-          "label": "Аэромедик-680",
-          "owner_slug": "ooo-kleverkopter",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-kleverkopter::патруль-30",
-          "kind": "product",
-          "label": "Патруль-30",
-          "owner_slug": "ooo-kleverkopter",
           "source_id": null,
           "classification": {
             "status": "unclassified",
@@ -41563,19 +41661,6 @@
           "kind": "product",
           "label": "«Провод» / «Провод-15»",
           "owner_slug": "ooo-vozdushnyy-traktat",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ovod::провод-15",
-          "kind": "product",
-          "label": "«Провод-15»",
-          "owner_slug": "ovod",
           "source_id": null,
           "classification": {
             "status": "unclassified",
@@ -41989,28 +42074,6 @@
           "target": "ooo-gagaring",
           "type": "related",
           "label": "co-exhibited",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-ploshchad",
-          "target": "product::ao-ploshchad::пак-площадь-к",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-ploshchad",
-          "target": "product::ao-ploshchad::пак-площадь-р",
-          "type": "produces",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -43459,17 +43522,6 @@
           "confidence": null
         },
         {
-          "source": "npts-ushkuynik",
-          "target": "product::npts-ushkuynik::князь-вандал-новгородский",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "olga-sokolova",
           "target": "ooo-tsugam",
           "type": "role",
@@ -43602,50 +43654,6 @@
           "confidence": null
         },
         {
-          "source": "ooo-aviron",
-          "target": "product::ooo-aviron::кощей-2-0",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-aviron",
-          "target": "product::ooo-aviron::пеппа",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-aviron",
-          "target": "product::ooo-aviron::сокол",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-aviron",
-          "target": "product::ooo-aviron::чебурашка",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
           "target": "ooo-btr-donetsk",
           "type": "founded",
@@ -43723,41 +43731,8 @@
           "confidence": null
         },
         {
-          "source": "ooo-gaskar",
-          "target": "product::ooo-gaskar::сибнк",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "ooo-gaskar-integratsiya",
           "target": "product::ooo-gaskar-integratsiya::бас-шторм",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-kleverkopter",
-          "target": "product::ooo-kleverkopter::аэромедик-680",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-kleverkopter",
-          "target": "product::ooo-kleverkopter::патруль-30",
           "type": "produces",
           "label": null,
           "source_id": null,
@@ -44034,17 +44009,6 @@
           "source": "ordzhonikidze-aleksey-grigorevich",
           "target": "ooo-npo-rustekhdron",
           "type": "founded",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ovod",
-          "target": "product::ovod::провод-15",
-          "type": "produces",
           "label": null,
           "source_id": null,
           "as_of": null,

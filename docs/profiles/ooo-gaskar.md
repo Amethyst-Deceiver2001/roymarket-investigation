@@ -49,7 +49,6 @@
 
 ## Products
 
-- **СИБНК**
 - **Мотор PY3115 1300KV бесколлекторный FPV** — Brushless FPV motor for heavy FPV drones/Long Range/cinelifters, 9-10 inch propeller class. [s1385]
 - **Пропеллеры 10 дюймов 3 лопасти FPV (совместимость 3115 900KV)** — 10-inch 3-blade FPV propellers, 889 руб, 2CW+2CCW set of 4. [s1385]
 - **Беспилотная авиационная система "Шторм"** — Found via GISP goods-catalog full-roster company_ogrn sweep (2026-09-03). ОКПД2: БАС в составе с беспилотным воздушным судном самолетного типа с максимальной взлетной массой свыше 1 кг, но не более 30 кг [s5391]
@@ -96,7 +95,7 @@
 ## Open questions
 
 - rk.2035.university lists 4 product models (БВС Сибиряк, Сибиряк мини, Сибирь-1, Сибирь-2) under manufacturer «ГК "Гаскар Групп"» ([s1169]) -- a group/trading name distinct from any of this registry's three separately-registered Гаскар entities (ooo-gaskar, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii). Not attributed to any one of the three pending a direct check of which entity actually holds this product line. [s1169]
-- products[] carries a single bare entry "СИБНК" -- this looks like it may actually be an abbreviation of the 100%-owning founder, ООО «Сибирская навигационная компания», mis-recorded as a product name rather than an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats "ООО «СИБНК»" as its own distinct entity name, adding to the confusion. Web search for "СИБНК" as a Wildberries product (2026-08-25) found nothing. RESOLVED (partially) 2026-08-25: wb_overlap=confirmed's actual basis is now independently corroborated on Ozon too -- the entity trades FPV components (motors, propellers) under the brand «ГАСКАР», not «СИБНК». "СИБНК" itself remains unexplained and is left as-is pending a human decision on whether to remove it as a mis-recorded entry.
+- products[] carried a single bare entry "СИБНК" -- suspected to be a mis-recorded reference to the 100%-owning founder, ООО «Сибирская навигационная компания» (ИНН 4205376019, ОГРН 1184205024849), not an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats "ООО «СИБНК»" as its own distinct entity name, adding to the confusion. Web search for "СИБНК" as a Wildberries product (2026-08-25) found nothing. RESOLVED 2026-08-25 (partial): wb_overlap=confirmed's actual basis is corroborated on Ozon too -- the entity trades FPV components (motors, propellers) under the brand «ГАСКАР», not «СИБНК». RESOLVED 2026-09-28: confirmed "СИБНК" is not a product -- it is the entity's own founder record (founders[0].inn 4205376019 matches exactly). Cleared from products[] via corrections; same mis-scaffolded-ownership-as-product pattern already found and cleared for ooo-atlant-aero's "Технодинамика".
 
 ## Sources cited in this profile
 

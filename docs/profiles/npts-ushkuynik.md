@@ -48,7 +48,7 @@
 
 ## Products
 
-- **Князь Вандал Новгородский**
+- **Князь Вандал Новгородский** — Fiber-optic-guided FPV strike drone, first serially produced from January 2025. Per KP.RU (16.01.2025): fiber-optic cable control (immune to RF jamming/detection), up to 30km operator range, payload sufficient to destroy tank rear armor/disable IFVs, ~80,000 RUB unit cost, first combat use August 2024 during the Kursk incursion, attributed >$300m in cumulative NATO-equipment damage since. Also independently confirmed as fielded via GUR's teardown-component catalogue (witem-4751, [s0969]). [s8048]
 
 ## Foreign components
 
@@ -98,6 +98,7 @@
 | [s0969] | GUR war-sanctions record | GUR war-sanctions record (GUR_5300013923_20260824_npts-ushkuynik-components.html) | 2026-08-24 | — |
 | [s5289] | Rusprofile | Rusprofile (RUSPROFILE_5300013923_20260902_ooo-ushkuynik.html) | 2026-09-02 | — |
 | [s6722] | EGRUL extract | EGRUL extract (EGRUL_5300013923_20260907_npts-ushkuynik.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8048] | press coverage | press coverage (PRESS_20250116_ushkuynik-knyaz-vandal-kpru.html) | 2025-01-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
