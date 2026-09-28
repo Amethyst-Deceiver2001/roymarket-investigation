@@ -9159,11 +9159,76 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-trimiks-bulat-3mx::азар",
+          "kind": "product",
+          "label": "«Азар»",
+          "owner_slug": "ooo-trimiks-bulat-3mx",
+          "source_id": "s8022",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-trimiks-bulat-3mx::булат-в-3",
+          "kind": "product",
+          "label": "«Булат» в.3",
+          "owner_slug": "ooo-trimiks-bulat-3mx",
+          "source_id": "s8018",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-trimiks-bulat-3mx::булат-в-4",
+          "kind": "product",
+          "label": "«Булат» в.4",
+          "owner_slug": "ooo-trimiks-bulat-3mx",
+          "source_id": "s8019",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-trimiks-bulat-3mx::булат-онлайн",
+          "kind": "product",
+          "label": "«Булат-Онлайн»",
+          "owner_slug": "ooo-trimiks-bulat-3mx",
+          "source_id": "s8020",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-trimiks-bulat-3mx::марс",
           "kind": "product",
           "label": "«Марс»",
           "owner_slug": "ooo-trimiks-bulat-3mx",
           "source_id": "s1383",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-trimiks-bulat-3mx::петр",
+          "kind": "product",
+          "label": "«Пётр»",
+          "owner_slug": "ooo-trimiks-bulat-3mx",
+          "source_id": "s8021",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -23234,10 +23299,65 @@
         },
         {
           "source": "ooo-trimiks-bulat-3mx",
+          "target": "product::ooo-trimiks-bulat-3mx::азар",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8022",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-trimiks-bulat-3mx",
+          "target": "product::ooo-trimiks-bulat-3mx::булат-в-3",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8018",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-trimiks-bulat-3mx",
+          "target": "product::ooo-trimiks-bulat-3mx::булат-в-4",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8019",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-trimiks-bulat-3mx",
+          "target": "product::ooo-trimiks-bulat-3mx::булат-онлайн",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8020",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-trimiks-bulat-3mx",
           "target": "product::ooo-trimiks-bulat-3mx::марс",
           "type": "produces",
           "label": null,
           "source_id": "s1383",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-trimiks-bulat-3mx",
+          "target": "product::ooo-trimiks-bulat-3mx::петр",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8021",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -41219,71 +41339,6 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-trimiks-bulat-3mx::азар",
-          "kind": "product",
-          "label": "«Азар»",
-          "owner_slug": "ooo-trimiks-bulat-3mx",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-trimiks-bulat-3mx::булат-в-3",
-          "kind": "product",
-          "label": "«Булат» в.3",
-          "owner_slug": "ooo-trimiks-bulat-3mx",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-trimiks-bulat-3mx::булат-в-4",
-          "kind": "product",
-          "label": "«Булат» в.4",
-          "owner_slug": "ooo-trimiks-bulat-3mx",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-trimiks-bulat-3mx::булат-онлайн",
-          "kind": "product",
-          "label": "«Булат-Онлайн»",
-          "owner_slug": "ooo-trimiks-bulat-3mx",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
-          "id": "product::ooo-trimiks-bulat-3mx::петр",
-          "kind": "product",
-          "label": "«Пётр»",
-          "owner_slug": "ooo-trimiks-bulat-3mx",
-          "source_id": null,
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-tsentr-dinarus::платформа-динарус",
           "kind": "product",
           "label": "Платформа Динарус",
@@ -43951,61 +44006,6 @@
           "target": "ano-npts-ushkuynik",
           "type": "related",
           "label": "co-speaker",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::азар",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::булат-в-3",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::булат-в-4",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::булат-онлайн",
-          "type": "produces",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::петр",
-          "type": "produces",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,

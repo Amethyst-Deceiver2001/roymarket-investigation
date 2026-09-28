@@ -57,11 +57,11 @@
 
 ## Products
 
-- **«Булат» в.4** ([full profile](products/bulat.html)) — Портативный всенаправленный детектор БПЛА, обнаружение до 1.5 км; firmware v1.71.
-- **«Булат» в.3** ([full profile](products/bulat.html)) — Портативный всенаправленный детектор БПЛА; firmware v4.13.
-- **«Булат-Онлайн»** — Automatic airspace monitoring complex.
-- **«Пётр»** — Tactical active headphones; firmware v0.91.12.
-- **«Азар»** — Analog video signal receiver; firmware v0.3.
+- **«Булат» в.4** ([full profile](products/bulat.html)) — Портативный всенаправленный детектор БПЛА, обнаружение до 1.5 км; firmware v1.71. Own-site product page (3mx.ru/products/detektor-bpla-bulat-v4/), exact title match. [s8019]
+- **«Булат» в.3** ([full profile](products/bulat.html)) — Портативный всенаправленный детектор БПЛА; firmware v4.13. Own-site product page (3mx.ru/products/detektor-bpla-bulat-v3/), exact title match. [s8018]
+- **«Булат-Онлайн»** — Automatic airspace monitoring complex. Own-site product page (3mx.ru/products/kompleks-obnaruzheniya-bpla-bulat-online/), exact title match. [s8020]
+- **«Пётр»** — Tactical active headphones; firmware v0.91.12. Own-site product page (3mx.ru/products/naushniki/, «Тактические активные наушники «Пётр»»), 19,900₽. [s8021]
+- **«Азар»** — Analog video signal receiver; firmware v0.3. Own-site product page (3mx.ru/products/priemnik-analogovogo-videosignala-azar/), exact title match. [s8022]
 - **«Марс»** — Digital video link and control detector; firmware v0.11. [s1383]
 
 ## Financials
@@ -219,6 +219,11 @@
 | [s1408] | third-party OSINT dossier | third-party OSINT dossier (DOSSIER_20260825_trimix-3mx-companies-and-people.xlsx) | 2026-08-25 | — |
 | [s6749] | EGRUL extract | EGRUL extract (EGRUL_7802942873_20260907_ooo-trimiks-bulat-3mx.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7547] | site capture | site capture (SITE_7802942873_20260916_ooo-trimiks-logo.svg) | 2026-09-16 | — |
+| [s8018] | site capture | site capture (WEBCAPTURE_7802942873_20260928_3mx-detektor-bulat-v3.html) | 2026-09-28 | — |
+| [s8019] | site capture | site capture (WEBCAPTURE_7802942873_20260928_3mx-detektor-bulat-v4.html) | 2026-09-28 | — |
+| [s8020] | site capture | site capture (WEBCAPTURE_7802942873_20260928_3mx-kompleks-bulat-online.html) | 2026-09-28 | — |
+| [s8021] | site capture | site capture (WEBCAPTURE_7802942873_20260928_3mx-naushniki-petr.html) | 2026-09-28 | — |
+| [s8022] | site capture | site capture (WEBCAPTURE_7802942873_20260928_3mx-priemnik-azar.html) | 2026-09-28 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._
