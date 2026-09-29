@@ -18114,17 +18114,6 @@
           "source": "galaev-ilya-viktorovich",
           "target": "fgdr-federatsiya-gonok-dronov-rossii",
           "type": "role",
-          "label": "director",
-          "source_id": "s5661",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "galaev-ilya-viktorovich",
-          "target": "fgdr-federatsiya-gonok-dronov-rossii",
-          "type": "role",
           "label": "Президент (EGRUL-confirmed, unchanged since the entity's own registration date)",
           "source_id": "s5661",
           "as_of": "2022-06-03",
@@ -29159,7 +29148,7 @@
           "target": "ao-nii-vektor",
           "type": "role",
           "label": "director",
-          "source_id": "s0495",
+          "source_id": "s8160",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -31592,28 +31581,6 @@
           "label": "Индивидуальный предприниматель",
           "source_id": "s1408",
           "as_of": "2018-10-01",
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "tsyganov-vadim-borisovich",
-          "target": "ooo-pokrov",
-          "type": "role",
-          "label": "director",
-          "source_id": "s6799",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "tsyganov-vadim-borisovich",
-          "target": "ooo-pokrov",
-          "type": "role",
-          "label": "founder",
-          "source_id": "s6799",
-          "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
@@ -41620,10 +41587,30 @@
           "degree": 15
         },
         {
+          "id": "fgdr-federatsiya-gonok-dronov-rossii",
+          "kind": "entity",
+          "label": "Общероссийская физкультурно-спортивная общественная организация «Федерация гонок дронов (беспилотных воздушных судов) России»",
+          "name_latin": "Drone Racing Federation of Russia (DRFR)",
+          "inn": "9709081670",
+          "tier": "adjacent",
+          "sanctioned": false,
+          "legal_form": "Общественная организация",
+          "variant": null,
+          "degree": 3
+        },
+        {
           "id": "fominykh-aleksey-mikhaylovich",
           "kind": "person",
           "label": "Фоминых Алексей Михайлович",
           "name_latin": null,
+          "sanctioned": false,
+          "degree": 6
+        },
+        {
+          "id": "galaev-ilya-viktorovich",
+          "kind": "person",
+          "label": "Галаев Илья Викторович",
+          "name_latin": "Ilya Viktorovich Galaev",
           "sanctioned": false,
           "degree": 6
         },
@@ -41770,6 +41757,18 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "degree": 29
+        },
+        {
+          "id": "ooo-pokrov",
+          "kind": "entity",
+          "label": "ООО «ПОКРОВ»",
+          "name_latin": "Pokrov LLC",
+          "inn": "5038189259",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": null,
+          "variant": null,
+          "degree": 15
         },
         {
           "id": "ooo-ushkuynik-sp",
@@ -41937,6 +41936,14 @@
           "degree": 1
         },
         {
+          "id": "tsyganov-vadim-borisovich",
+          "kind": "person",
+          "label": "Цыганов Вадим Борисович",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 4
+        },
+        {
           "id": "uraldronzavod",
           "kind": "entity",
           "label": "«Уралдронзавод»",
@@ -42021,6 +42028,17 @@
           "target": "ooo-metaskan",
           "type": "role",
           "label": "генеральный конструктор (per leader-id.ru self-report)",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "galaev-ilya-viktorovich",
+          "target": "fgdr-federatsiya-gonok-dronov-rossii",
+          "type": "role",
+          "label": "director",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -42197,6 +42215,28 @@
           "target": "ao-kronshtadt",
           "type": "directs",
           "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "tsyganov-vadim-borisovich",
+          "target": "ooo-pokrov",
+          "type": "role",
+          "label": "director",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "tsyganov-vadim-borisovich",
+          "target": "ooo-pokrov",
+          "type": "role",
+          "label": "founder",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
