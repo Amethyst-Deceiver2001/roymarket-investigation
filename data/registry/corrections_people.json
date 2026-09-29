@@ -3444,16 +3444,16 @@
           {
             "entity_name": "АО ПК «Азимут»",
             "entity_slug": "ao-pk-azimut",
-            "from": null,
-            "source_id": null,
+            "from": "2014-12-02",
+            "source_id": "s0212",
             "title": "Генеральный директор — sanctions designation attaches here (radar/radionavigation production activity description matches this entity, not the holding company)",
             "to": null
           },
           {
             "entity_name": "АО УК «Азимут»",
             "entity_slug": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
-            "from": null,
-            "source_id": null,
+            "from": "2016-09-26",
+            "source_id": "s6735",
             "title": "Генеральный директор; 44% shareholder (Ростех is a co-shareholder of this holding company)",
             "to": null
           }
@@ -3475,7 +3475,8 @@
         "2026-08-24 OpenSanctions screening returned match_id \"ru-inn-054403029570\" — this IS the exact personal ИНН (054403029570) already stated in this registry's own pre-existing note, itself sourced to Ukraine's NAZK \"War & Sanctions\" register profile 16429. An identifier match, not a name/score match — formalizing dob/birthplace/inn_personal fields from that same pre-existing, already-sourced note text. Which of the two same-named «Азимут» entities the Western designations attach to remains unresolved (see existing open question).",
         "2026-08-25: OSINT research pass resolves which Azimut entity the sanctions designation attaches to — АО ПК «Азимут» (production), distinct from his ownership stake in АО УК «Азимут» (holding).",
         "2026-08-25: photo/social-media OSINT research pass.",
-        "2026-09-07: verification backlog closure — identity already confirmed by АО ПК «Азимут»'s (ao-pk-azimut) own director_history entry (s0212), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+        "2026-09-07: verification backlog closure — identity already confirmed by АО ПК «Азимут»'s (ao-pk-azimut) own director_history entry (s0212), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+        "2026-09-29: both roles[] entries were still unsourced on the person record even though the entity-side citation already existed and this correction's own verified_against already names it -- wired source_id=s0212 (ao-pk-azimut's full signed ЕГРЮЛ выписка, as_of 2014-12-02) and source_id=s6735 (ao-uk-azimut's, as_of 2016-09-26). Closes two unsourced role edges in the relationship graph."
       ]
     },
     "semiletov-anton-dmitrievich": {
@@ -4738,10 +4739,22 @@
     },
     "zakharov-sergey-nikolaevich": {
       "set": {
-        "_verified": true
+        "_verified": true,
+        "inn_personal": "532122612279",
+        "roles": [
+          {
+            "entity_name": "ООО «Статус 53»",
+            "entity_slug": "ooo-status-53",
+            "title": "Генеральный директор",
+            "from": "2022-10-27",
+            "to": null,
+            "source_id": "s6804"
+          }
+        ]
       },
       "why": [
-        "2026-09-07: verification backlog closure — identity already confirmed by ООО «Статус 53»'s (ooo-status-53) own director_history entry (s6804), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+        "2026-09-07: verification backlog closure — identity already confirmed by ООО «Статус 53»'s (ooo-status-53) own director_history entry (s6804), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+        "2026-09-29: role/inn_personal were still unsourced on the person record even though the entity-side citation existed -- wired source_id=s6804 (the same full signed ЕГРЮЛ выписка, as_of 2022-10-27, that already backs ooo-status-53's director_history) and copied over the личный ИНН 532122612279 that document names him with. Closes an unsourced role edge in the relationship graph."
       ],
       "verified_against": "s6804 -- ООО «Статус 53»'s own primary-source founding/EGRUL document, naming Захаров Сергей Николаевич as director (cross-referenced from the entity's own director_history entry)."
     },
@@ -5874,7 +5887,7 @@
           "entity_name": "ИП Пинимасова Е.А. (kilowat48.ru)",
           "entity_slug": "npo-kilobatt",
           "from": "2015-08-03",
-          "source_id": null,
+          "source_id": "s8077",
           "title": "sole proprietor / dealer",
           "to": null
         }
@@ -5888,7 +5901,8 @@
         }
       ],
       "why": [
-        "VK profile (vk.ru/id831804224), read via VK API (users.get) 23.08.2026, using a freshly-obtained access token."
+        "VK profile (vk.ru/id831804224), read via VK API (users.get) 23.08.2026, using a freshly-obtained access token.",
+        "2026-09-29: kilowat48.ru's own /company/requisites/ page (WEBCAPTURE, s8077) names \"ИП Пинимасова Елена Александровна\" (ИНН 583713716580, ОГРН 315582600002725, matching this record's own inn_personal exactly) as the sole-proprietor legal entity behind the НПО Киловатт brand -- sources the role edge that was previously unsourced."
       ]
     },
     {

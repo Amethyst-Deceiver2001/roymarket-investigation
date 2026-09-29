@@ -17,8 +17,8 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | Entity | Role | Since | Source |
 |---|---|---|---|
-| АО ПК «Азимут» | director — Генеральный директор — sanctions designation attaches here (radar/radionavigation production activity description matches this entity, not the holding company) | — |  |
-| АО УК «Азимут» | formerly «Аэронавигационные и информационные системы» | director — Генеральный директор; 44% shareholder (Ростех is a co-shareholder of this holding company) | — |  |
+| АО ПК «Азимут» | director — Генеральный директор — sanctions designation attaches here (radar/radionavigation production activity description matches this entity, not the holding company) | 02.12.2014 | [s0212] |
+| АО УК «Азимут» | formerly «Аэронавигационные и информационные системы» | director — Генеральный директор; 44% shareholder (Ростех is a co-shareholder of this holding company) | 26.09.2016 | [s6735] |
 
 ## Products linked via this person
 
@@ -36,7 +36,9 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
+| [s0212] | EGRUL extract | EGRUL extract (ul-1057746261605-20260814234906.pdf) | — | 2026-08-14 |
 | [s0862] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_saidov-asker-kazbekovich_20260824_saidov-asker-kazbekovich.json) | 2026-08-24 | — |
+| [s6735] | EGRUL extract | EGRUL extract (EGRUL_7714390623_20260907_ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

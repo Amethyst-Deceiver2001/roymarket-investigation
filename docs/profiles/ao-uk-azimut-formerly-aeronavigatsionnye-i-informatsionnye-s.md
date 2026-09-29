@@ -66,7 +66,7 @@
 - **Birthplace:** Хасавюрт, Дагестан / Khasavyurt, Dagestan
 - **Address:** г. Москва, Петровско-Разумовский проезд, д. 16, кв. 125; г. Москва, ул. Минская, д. 1Г, корп. 2, кв. 217
 - **ИНН:** 054403029570
-- Генеральный директор; 44% shareholder (Ростех is a co-shareholder of this holding company)
+- Генеральный директор; 44% shareholder (Ростех is a co-shareholder of this holding company) (2016-09-26–present)
 - `sanctions lead`
 
 ### Saidov Adil Abukovich — Саидов Адиль Абукович

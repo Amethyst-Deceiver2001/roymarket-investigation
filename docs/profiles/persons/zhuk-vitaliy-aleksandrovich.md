@@ -19,7 +19,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Products linked via this person
 
-- **ECOLIBRI eVTOL** + 9 more — via АО «Эколибри» · director
+- **EM-01** + 7 more — via АО «Эколибри» · director
 
 ## Related persons
 

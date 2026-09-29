@@ -140,7 +140,7 @@
 - **Birthplace:** Хасавюрт, Дагестан / Khasavyurt, Dagestan
 - **Address:** г. Москва, Петровско-Разумовский проезд, д. 16, кв. 125; г. Москва, ул. Минская, д. 1Г, корп. 2, кв. 217
 - **ИНН:** 054403029570
-- Генеральный директор — sanctions designation attaches here (radar/radionavigation production activity description matches this entity, not the holding company)
+- Генеральный директор — sanctions designation attaches here (radar/radionavigation production activity description matches this entity, not the holding company) (2014-12-02–present)
 - `sanctions lead`
 
 ## Sources cited in this profile

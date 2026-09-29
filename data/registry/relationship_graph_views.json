@@ -1772,7 +1772,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta",
@@ -4407,6 +4407,14 @@
           "kind": "person",
           "label": "Пименов Глеб Андреевич",
           "name_latin": "Pimenov Gleb Andreevich",
+          "sanctioned": false,
+          "degree": 1
+        },
+        {
+          "id": "pinimasova-elena-aleksandrovna",
+          "kind": "person",
+          "label": "Пинимасова Елена Александровна",
+          "name_latin": "Pinimasova Elena Aleksandrovna",
           "sanctioned": false,
           "degree": 1
         },
@@ -11202,7 +11210,7 @@
           "label": "Устратов Дмитрий Владимирович",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "va-technologies",
@@ -11493,6 +11501,17 @@
           "type": "role",
           "label": "General Director, Фонд «Наша Правда», since 21.03.2023",
           "source_id": "s0221",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "aleksandr-rufinovich-brovchenko",
+          "target": "fond-nasha-pravda",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8072",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -16812,6 +16831,17 @@
           "confidence": null
         },
         {
+          "source": "dmitriy-peskov",
+          "target": "ano-platforma-nti",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8074",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "dmitriy-vladimirovich-rubinshteyn",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "role",
@@ -16879,6 +16909,17 @@
         },
         {
           "source": "dmitriy-vladimirovich-rubinshteyn",
+          "target": "ooo-berkut-dmv",
+          "type": "role",
+          "label": "founder",
+          "source_id": "s8073",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "dmitriy-vladimirovich-rubinshteyn",
           "target": "ooo-momento-rubinshteyn",
           "type": "founded",
           "label": "50%",
@@ -16886,6 +16927,17 @@
           "as_of": "2026-09-14",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "dmitriy-vladimirovich-rubinshteyn",
+          "target": "ooo-momento-rubinshteyn",
+          "type": "role",
+          "label": "founder",
+          "source_id": "s8073",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -16908,6 +16960,17 @@
           "as_of": "2026-09-14",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "dmitriy-vladimirovich-rubinshteyn",
+          "target": "ooo-tekhnomost",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8073",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -20214,6 +20277,17 @@
           "source": "nina-olegovna-yanykina",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "role",
+          "label": "director",
+          "source_id": "s8075",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "nina-olegovna-yanykina",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "role",
           "label": "General Director, АНО «ЦБСТ»",
           "source_id": "s0228",
           "as_of": "2025-12-16",
@@ -21297,6 +21371,17 @@
           "as_of": "2026-08-22",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "olga-sokolova",
+          "target": "ooo-tsugam",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8071",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -25546,6 +25631,17 @@
           "confidence": null
         },
         {
+          "source": "pinimasova-elena-aleksandrovna",
+          "target": "npo-kilobatt",
+          "type": "role",
+          "label": "sole proprietor / dealer",
+          "source_id": "s8077",
+          "as_of": "2015-08-03",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "plykina-ekaterina-viktorovna",
           "target": "ooo-npo-eyler",
           "type": "directs",
@@ -26449,6 +26545,28 @@
         },
         {
           "source": "saidov-asker-kazbekovich",
+          "target": "ao-pk-azimut",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8070",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "saidov-asker-kazbekovich",
+          "target": "ao-pk-azimut",
+          "type": "role",
+          "label": "Генеральный директор — sanctions designation attaches here (radar/radionavigation production activity description matches this entity, not the holding company)",
+          "source_id": "s0212",
+          "as_of": "2014-12-02",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "saidov-asker-kazbekovich",
           "target": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
           "type": "directs",
           "label": null,
@@ -26467,6 +26585,28 @@
           "as_of": "2026-08-24",
           "weight": 1.0,
           "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "saidov-asker-kazbekovich",
+          "target": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8070",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "saidov-asker-kazbekovich",
+          "target": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
+          "type": "role",
+          "label": "Генеральный директор; 44% shareholder (Ростех is a co-shareholder of this holding company)",
+          "source_id": "s6735",
+          "as_of": "2016-09-26",
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -30122,6 +30262,17 @@
           "confidence": null
         },
         {
+          "source": "zakharov-sergey-nikolaevich",
+          "target": "ooo-status-53",
+          "type": "role",
+          "label": "Генеральный директор",
+          "source_id": "s6804",
+          "as_of": "2022-10-27",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "zamyatin-aleksandr-yurevich",
           "target": "ooo-npts-basirtk",
           "type": "role",
@@ -31072,7 +31223,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "fond-podderzhki-zimnikh-olimpiyskikh-vidov-sporta",
@@ -33512,7 +33663,7 @@
           "label": "Устратов Дмитрий Владимирович",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "va-technologies",
@@ -38847,7 +38998,7 @@
           "label": "Устратов Дмитрий Владимирович",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "va-technologies",
@@ -38925,7 +39076,7 @@
           "target": "fond-nasha-pravda",
           "type": "role",
           "label": "director",
-          "source_id": null,
+          "source_id": "s8072",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -39552,7 +39703,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "role",
           "label": "director",
-          "source_id": null,
+          "source_id": "s8075",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -40256,14 +40407,6 @@
     "evidence_gaps": {
       "nodes": [
         {
-          "id": "aleksandr-rufinovich-brovchenko",
-          "kind": "person",
-          "label": "Александр Руфинович Бровченко",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 3
-        },
-        {
           "id": "alyaska",
           "kind": "entity",
           "label": "ООО «ИОНОС»",
@@ -40322,18 +40465,6 @@
           "legal_form": null,
           "variant": null,
           "degree": 4
-        },
-        {
-          "id": "ano-platforma-nti",
-          "kind": "entity",
-          "label": "АНО «Платформа НТИ»",
-          "name_latin": null,
-          "inn": "7703469180",
-          "tier": "plumbing",
-          "sanctioned": true,
-          "legal_form": "АНО",
-          "variant": null,
-          "degree": 6
         },
         {
           "id": "ano-tsbst-centre-for-unmanned-systems-technologies",
@@ -40442,18 +40573,6 @@
           "legal_form": "АО",
           "variant": null,
           "degree": 9
-        },
-        {
-          "id": "ao-pk-azimut",
-          "kind": "entity",
-          "label": "АО ПК «Азимут»",
-          "name_latin": null,
-          "inn": "7701583410",
-          "tier": "money-layer",
-          "sanctioned": true,
-          "legal_form": null,
-          "variant": null,
-          "degree": 56
         },
         {
           "id": "ao-ploshchad",
@@ -40612,14 +40731,6 @@
           "degree": 5
         },
         {
-          "id": "dmitriy-peskov",
-          "kind": "person",
-          "label": "Дмитрий Песков",
-          "name_latin": null,
-          "sanctioned": false,
-          "degree": 3
-        },
-        {
           "id": "dmitriy-vladimirovich-rubinshteyn",
           "kind": "person",
           "label": "Дмитрий Владимирович Рубинштейн",
@@ -40726,6 +40837,18 @@
           "legal_form": "Фонд",
           "variant": null,
           "degree": 19
+        },
+        {
+          "id": "fond-podderzhki-natsionalnykh-morskikh-programm",
+          "kind": "entity",
+          "label": "Фонд поддержки национальных морских программ",
+          "name_latin": null,
+          "inn": "7714389530",
+          "tier": "money-layer",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": null,
+          "degree": 4
         },
         {
           "id": "galaev-ilya-viktorovich",
@@ -40964,14 +41087,6 @@
           "degree": 2
         },
         {
-          "id": "nina-olegovna-yanykina",
-          "kind": "person",
-          "label": "Нина Олеговна Яныкина",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 3
-        },
-        {
           "id": "np-diskretno-innovatsionny-klaster-maloy-aviatsii",
           "kind": "entity",
           "label": "НЕКОММЕРЧЕСКОЕ ПАРТНЕРСТВО «ДИСКРЕТНО-ИННОВАЦИОННЫЙ КЛАСТЕР МАЛОЙ АВИАЦИИ»",
@@ -41030,14 +41145,6 @@
           "legal_form": "НПЦ",
           "variant": "defensive",
           "degree": 14
-        },
-        {
-          "id": "olga-sokolova",
-          "kind": "person",
-          "label": "Ольга Соколова",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 4
         },
         {
           "id": "ooo-aero-khit",
@@ -41784,18 +41891,6 @@
           "degree": 11
         },
         {
-          "id": "ooo-tekhnomost",
-          "kind": "entity",
-          "label": "ООО «Техномост»",
-          "name_latin": null,
-          "inn": "9725186180",
-          "tier": "unverified",
-          "sanctioned": false,
-          "legal_form": null,
-          "variant": null,
-          "degree": 4
-        },
-        {
           "id": "ooo-tsentr-bespilotnykh-sistem-tula",
           "kind": "entity",
           "label": "ООО «Центр беспилотных систем»",
@@ -41830,18 +41925,6 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "degree": 11
-        },
-        {
-          "id": "ooo-tsugam",
-          "kind": "entity",
-          "label": "ООО «Центр управления городской аэромобильностью»",
-          "name_latin": null,
-          "inn": "9731094770",
-          "tier": "manufacturer",
-          "sanctioned": true,
-          "legal_form": null,
-          "variant": null,
-          "degree": 6
         },
         {
           "id": "ooo-tsyus",
@@ -41944,14 +42027,6 @@
           "kind": "person",
           "label": "Пинимасов Александр",
           "name_latin": "Pinimasov Aleksandr",
-          "sanctioned": false,
-          "degree": 1
-        },
-        {
-          "id": "pinimasova-elena-aleksandrovna",
-          "kind": "person",
-          "label": "Пинимасова Елена Александровна",
-          "name_latin": "Pinimasova Elena Aleksandrovna",
           "sanctioned": false,
           "degree": 1
         },
@@ -42101,14 +42176,6 @@
           "name_latin": "Saidov Adil Abukovich",
           "sanctioned": false,
           "degree": 2
-        },
-        {
-          "id": "saidov-asker-kazbekovich",
-          "kind": "person",
-          "label": "Саидов Аскер Казбекович",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 7
         },
         {
           "id": "savchenko-vladimir-ivanovich",
@@ -42317,6 +42384,14 @@
           "degree": 3
         },
         {
+          "id": "ustratov-dmitriy-vladimirovich",
+          "kind": "person",
+          "label": "Устратов Дмитрий Владимирович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 5
+        },
+        {
           "id": "voronin-aleksandr-andreevich",
           "kind": "person",
           "label": "Воронин Александр Андреевич",
@@ -42358,17 +42433,6 @@
         }
       ],
       "edges": [
-        {
-          "source": "aleksandr-rufinovich-brovchenko",
-          "target": "fond-nasha-pravda",
-          "type": "role",
-          "label": "director",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
         {
           "source": "ano-npts-ushkuynik",
           "target": "npts-ushkuynik",
@@ -42623,17 +42687,6 @@
           "confidence": null
         },
         {
-          "source": "dmitriy-peskov",
-          "target": "ano-platforma-nti",
-          "type": "role",
-          "label": "director",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "dmitriy-vladimirovich-rubinshteyn",
           "target": "ooo-berkut-dmv",
           "type": "directs",
@@ -42646,42 +42699,9 @@
         },
         {
           "source": "dmitriy-vladimirovich-rubinshteyn",
-          "target": "ooo-berkut-dmv",
-          "type": "role",
-          "label": "founder",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "dmitriy-vladimirovich-rubinshteyn",
           "target": "ooo-momento-rubinshteyn",
           "type": "directs",
           "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "dmitriy-vladimirovich-rubinshteyn",
-          "target": "ooo-momento-rubinshteyn",
-          "type": "role",
-          "label": "founder",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "dmitriy-vladimirovich-rubinshteyn",
-          "target": "ooo-tekhnomost",
-          "type": "role",
-          "label": "director",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -43547,28 +43567,6 @@
           "confidence": null
         },
         {
-          "source": "nina-olegovna-yanykina",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "role",
-          "label": "director",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "olga-sokolova",
-          "target": "ooo-tsugam",
-          "type": "role",
-          "label": "director",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "ooo-aeromaks",
           "target": "product::ooo-aeromaks::a-50",
           "type": "produces",
@@ -43789,17 +43787,6 @@
           "confidence": null
         },
         {
-          "source": "pinimasova-elena-aleksandrovna",
-          "target": "npo-kilobatt",
-          "type": "role",
-          "label": "sole proprietor / dealer",
-          "source_id": null,
-          "as_of": "2015-08-03",
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "plykina-ekaterina-viktorovna",
           "target": "ooo-npo-eyler",
           "type": "directs",
@@ -43991,50 +43978,6 @@
           "target": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
           "type": "role",
           "label": "Член совета директоров (board member) — which Azimut entity not fully confirmed",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "saidov-asker-kazbekovich",
-          "target": "ao-pk-azimut",
-          "type": "role",
-          "label": "director",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "saidov-asker-kazbekovich",
-          "target": "ao-pk-azimut",
-          "type": "role",
-          "label": "Генеральный директор — sanctions designation attaches here (radar/radionavigation production activity description matches this entity, not the holding company)",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "saidov-asker-kazbekovich",
-          "target": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
-          "type": "role",
-          "label": "director",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "saidov-asker-kazbekovich",
-          "target": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
-          "type": "role",
-          "label": "Генеральный директор; 44% shareholder (Ростех is a co-shareholder of this holding company)",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -44460,6 +44403,17 @@
           "confidence": null
         },
         {
+          "source": "ustratov-dmitriy-vladimirovich",
+          "target": "fond-podderzhki-natsionalnykh-morskikh-programm",
+          "type": "role",
+          "label": "director",
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "voronin-aleksandr-andreevich",
           "target": "ooo-intel-dron",
           "type": "directs",
@@ -44508,17 +44462,6 @@
           "target": "ooo-status-53",
           "type": "directs",
           "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "zakharov-sergey-nikolaevich",
-          "target": "ooo-status-53",
-          "type": "role",
-          "label": "Генеральный директор",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
