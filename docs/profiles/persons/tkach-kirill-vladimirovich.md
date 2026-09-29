@@ -8,13 +8,13 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 - **Address:** 195269, Российская Федерация, г. Санкт-Петербург, ул. Брянцева д.7, корпус 1, кв.22
 - **Entities linked:** 1
-- **Primary role:** Единственный учредитель (100%), ООО НПК «Герон»
+- **Primary role:** Единственный учредитель (100%), 2018 — до 04.09.2026, ООО НПК «Герон»
 
 ## Roles & corporate affiliations
 
 | Entity | Role | Since | Source |
 |---|---|---|---|
-| ООО НПК «Герон» | founder — Единственный учредитель (100%) | 16.01.2018 | [s6907] |
+| ООО НПК «Герон» | founder — Единственный учредитель (100%), 2018 — до 04.09.2026 | 16.01.2018–04.09.2026 | [s8219] |
 
 ## Sanctions & screening
 
@@ -25,7 +25,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| [s6907] | Founding-Устав bundle | Founding-Устав bundle (UD_1187847365750_20260907_npk-geron.zip) | 2026-09-07 | 2018-01-16 |
+| [s8219] | EGRUL extract | EGRUL extract (EGRUL_7814748285_20260929_ooo-npk-geron.pdf) | 2026-09-29 | 2026-09-29 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -1777,8 +1777,23 @@
       "slug": "ooo-npk-geron",
       "tier": "manufacturer",
       "tier_basis": "Per smolin.info (s5291): a distinct, earlier-registered (2018) St. Petersburg entity sharing the «Герон» brand with ooo-geron (2021, Novgorod) but a different director (Мушкевич Павел) — relationship between the two 'Герон' entities not established by the source beyond shared branding; treat as a lead, not a confirmed affiliate.",
+      "founders_history": [
+        {
+          "value": "Ткач Кирилл Владимирович 100% (from incorporation)",
+          "as_of": "2018-01-16",
+          "source_id": "s6907",
+          "note": "Per the entity's own founding устав §6.2 -- sole founder from incorporation."
+        },
+        {
+          "value": "Мушкевич Павел (лицо без гражданства, personal ИНН 780219001781) 100%",
+          "as_of": "2026-09-04",
+          "source_id": "s8219",
+          "note": "Per a fresh full ЕГРЮЛ выписка pull (2026-09-29, EGRUL_7814748285_20260929): Мушкевич is now listed as the entity's sole участник/учредитель (ГРН 2267802423348, dated 04.09.2026), not merely its hired director as previously understood -- ownership appears to have transferred from Ткач to Мушкевич some time between the entity's 2018 founding устав and this September 2026 record. Exact transfer date/mechanism not established beyond this ГРН date; Ткач's own person record still needs a director_history-style 'to' date if one is ever pinned down."
+        }
+      ],
       "why": [
-        "2026-09-02: added from smolin.info (s5291). Director/ОГРН/registration date corroborated live via egrul.nalog.ru 2026-09-02 (exact match)."
+        "2026-09-02: added from smolin.info (s5291). Director/ОГРН/registration date corroborated live via egrul.nalog.ru 2026-09-02 (exact match).",
+        "2026-09-29: Tier-3 ИНН-holder sweep on Ткач Кирилл Владимирович (the entity's founder-of-record) turned up this ownership change as a side effect -- a fresh full ЕГРЮЛ выписка pull shows Мушкевич Павел now as sole founder, not just director. founders_history added to close the 2026-09-15 open note on Ткач's own record ('a full signed ЕГРЮЛ выписка ... would resolve whether he remains the owner today')."
       ]
     },
     {

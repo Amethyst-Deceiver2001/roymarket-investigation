@@ -6,6 +6,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **Personal ИНН:** 614337345700
 - **Entities linked:** 1
 - **Primary role:** Генеральный директор, ООО «Аэро-хит М»
 

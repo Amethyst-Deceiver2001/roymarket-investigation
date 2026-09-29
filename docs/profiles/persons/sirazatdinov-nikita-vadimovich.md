@@ -1,4 +1,4 @@
-# Сиразатдинов Никита Вадимович
+# Nikita Vadimovich Sirazetdinov — Сиразетдинов Никита Вадимович
 
 Person profile · РОЙ.МАРКЕТ investigation
 
@@ -6,6 +6,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **Personal ИНН:** 236802250787
 - **Entities linked:** 1
 - **Primary role:** Учредитель, Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS)
 

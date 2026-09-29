@@ -6,6 +6,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **Personal ИНН:** 780519323606
 - **Entities linked:** 2
 - **Primary role:** Генеральный директор, Фонд «ДАР», Фонд «ДАР» | Фонд региональных некоммерческих проектов
 

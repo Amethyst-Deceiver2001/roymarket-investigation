@@ -6,6 +6,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **Personal ИНН:** 236100309743
 - **Entities linked:** 1
 - **Primary role:** Директор, ANO DPO Obrazovatelny Tsentr Gagaring (Gagaring Educational Center, autonomous non-profit supplementary-professional-education org)
 

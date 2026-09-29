@@ -20,6 +20,13 @@
 |---|---|---|
 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Мушкевич Павел (confirmed live via egrul.nalog.ru 2026-09-02) | — | from corrections:add_entities, unverified |
 
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Ткач Кирилл Владимирович 100% (from incorporation) | 2018-01-16 | Per the entity's own founding устав §6.2 -- sole founder from incorporation. [s6907] |
+| Мушкевич Павел (лицо без гражданства, personal ИНН 780219001781) 100% | 2026-09-04 | Per a fresh full ЕГРЮЛ выписка pull (2026-09-29, EGRUL_7814748285_20260929): Мушкевич is now listed as the entity's sole участник/учредитель (ГРН 2267802423348, dated 04.09.2026), not merely its hired director as previously understood -- ownership appears to have transferred from Ткач to Мушкевич some time between the entity's 2018 founding устав and this September 2026 record. Exact transfer date/mechanism not established beyond this ГРН date; Ткач's own person record still needs a director_history-style 'to' date if one is ever pinned down. [s8219] |
+
 ### Charter capital
 
 | Value | As of | Note |
@@ -51,7 +58,7 @@
 ### Kirill Vladimirovich Tkach — Ткач Кирилл Владимирович
 
 - **Address:** 195269, Российская Федерация, г. Санкт-Петербург, ул. Брянцева д.7, корпус 1, кв.22
-- Единственный учредитель (100%) (2018-01-16–present)
+- Единственный учредитель (100%), 2018 — до 04.09.2026 (2018-01-16–2026-09-04)
 
 ## Sources cited in this profile
 
@@ -64,6 +71,7 @@
 | [s6625] | Bfo | Bfo (BFO_7814748285_2025_ооо-нпк-герон.pdf) | — | — |
 | [s6846] | EGRUL extract | EGRUL extract (EGRUL_7814748285_20260907_ooo-npk-geron.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6907] | Founding-Устав bundle | Founding-Устав bundle (UD_1187847365750_20260907_npk-geron.zip) | 2026-09-07 | 2018-01-16 |
+| [s8219] | EGRUL extract | EGRUL extract (EGRUL_7814748285_20260929_ooo-npk-geron.pdf) | 2026-09-29 | 2026-09-29 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

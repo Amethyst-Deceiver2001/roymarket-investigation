@@ -6,6 +6,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **Personal ИНН:** 410201675667
 - **Entities linked:** 1
 - **Primary role:** Учредитель, Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS)
 
@@ -18,7 +19,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 ## Related persons
 
 - **Барашков Александр Сергеевич** — Директор — shared entity: Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS) [s6777]
-- **Сиразатдинов Никита Вадимович** — Учредитель — shared entity: Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS) [s6777]
+- **Nikita Vadimovich Sirazetdinov** — Учредитель — shared entity: Association of Developers of Advanced Radio-Electronic Intelligence, EW and Communications Systems (ARRS) [s6777]
 
 ## Sanctions & screening
 

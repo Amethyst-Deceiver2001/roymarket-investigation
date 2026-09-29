@@ -2228,13 +2228,15 @@
           }
         ],
         "notes": "Individual co-founder of АРРС alongside ООО «Гагаринг», ООО «АКР «Бегак»» and ООО «Прайм» (per ano-arrs-krasnodar's own founders[] list). Separately confirmed via OpenSanctions exact-ИНН match (695004552407) to Ukraine's NSDC sanctions list (see sanctions[]) — the sanctioned Климов Максим Олександрович/Александрович and this АРРС founder are the same person (identifier match, not name-only).",
-        "_verified": true
+        "_verified": true,
+        "inn_personal": "410201675667"
       },
       "verified_against": "s6777 -- Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи)'s own primary-source founding/EGRUL document, naming Климов Максим Александрович as a founder (cross-referenced from the entity's own founders_history entry).",
       "why": [
         "2026-09-03: corrected during the Гагаринг-network wide-net push — his scaffolded record had no role at all despite being named as an АРРС founder in the entity's own founders[] list; added the missing role.",
         "2026-09-07: verification backlog closure (round 2, founders) -- identity confirmed by Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи)'s (ano-arrs-krasnodar) own founders_history entry (s6777), a primary-source document, but the person record had never been marked _verified.",
-        "2026-09-16 (docs->registry gap-list, section (b)): the role's own source_id had been left null this whole time despite verified_against already citing s6777 (a stronger primary source than the list-org.com aggregator the gap-list flagged as weak) -- filled it in. Merged two duplicate 'why' JSON keys that had accumulated (the second was silently shadowing the first on parse) into one array; no content lost."
+        "2026-09-16 (docs->registry gap-list, section (b)): the role's own source_id had been left null this whole time despite verified_against already citing s6777 (a stronger primary source than the list-org.com aggregator the gap-list flagged as weak) -- filled it in. Merged two duplicate 'why' JSON keys that had accumulated (the second was silently shadowing the first on parse) into one array; no content lost.",
+        "2026-09-29: Tier-3 ИНН-holder sweep -- fresh full ЕГРЮЛ выписка pull (s8212, EGRUL_2312325336_20260929) gives personal ИНН 410201675667 directly (checksum-valid), DIFFERENT from the 695004552407 the sanctions[] note separately cites via OpenSanctions -- flagged as an open discrepancy in notes above, not resolved: could be a stale OpenSanctions ИНН or a namesake collision with the Ukraine-sanctioned Климов. Wired the EGRUL-sourced ИНН (the stronger primary document) as inn_personal without touching the sanctions[] entry."
       ]
     },
     "kondratev-aleksey-dmitrievich": {
@@ -4289,11 +4291,15 @@
             "_candidate": false
           }
         ],
-        "notes": "Individual co-founder of АРРС alongside ООО «Гагаринг», ООО «АКР «Бегак»» and ООО «Прайм» (per ano-arrs-krasnodar's own founders[] list). The originally-scaffolded role incorrectly pointed at ООО «Прайм» itself as employer/entity — corrected 2026-09-03: he is a co-founder of the ASSOCIATION, not of Прайм."
+        "notes": "Individual co-founder of АРРС alongside ООО «Гагаринг», ООО «АКР «Бегак»» and ООО «Прайм» (per ano-arrs-krasnodar's own founders[] list). The originally-scaffolded role incorrectly pointed at ООО «Прайм» itself as employer/entity — corrected 2026-09-03: he is a co-founder of the ASSOCIATION, not of Прайм.\n\n2026-09-29: spelling corrected to Сиразетдинов (е) -- a fresh, independent full ЕГРЮЛ выписка pull (s8212, EGRUL_2312325336_20260929) spells the surname 'СИРАЗЕТДИНОВ' the same way as the 2026-09-16 pull did, confirming this is the entity's own consistent spelling across two separate document pulls, not a one-off OCR artifact. The 'Сиразатдинов' (а) spelling this record used is retired. Personal ИНН 236802250787 (checksum-valid) given directly on the same document.",
+        "fio_ru": "Сиразетдинов Никита Вадимович",
+        "name_latin": "Nikita Vadimovich Sirazetdinov",
+        "inn_personal": "236802250787"
       },
       "why": [
         "2026-09-03: corrected during the Гагаринг-network wide-net push — the scaffolded _candidate role misattributed this person's founder role to ООО «Прайм» rather than ano-arrs-krasnodar, the actual entity his name appears as a founder of.",
-        "2026-09-16 (docs->registry gap-list, section (b)): filled the role's source_id with s6777, ano-arrs-krasnodar's own full signed ЕГРЮЛ выписка, already the entity-side source for the identical founders_history fact -- stronger than the list-org.com aggregator lookup the gap-list flagged as weak. Note: the entity's own founders_history spells the surname 'Сиразетдинов' (е), not this record's 'Сиразатдинов' (а) -- a likely OCR/transliteration variant, not flagged as a separate open question since the ИНН/context otherwise line up, but worth a human eye if it ever matters for a citation."
+        "2026-09-16 (docs->registry gap-list, section (b)): filled the role's source_id with s6777, ano-arrs-krasnodar's own full signed ЕГРЮЛ выписка, already the entity-side source for the identical founders_history fact -- stronger than the list-org.com aggregator lookup the gap-list flagged as weak. Note: the entity's own founders_history spells the surname 'Сиразетдинов' (е), not this record's 'Сиразатдинов' (а) -- a likely OCR/transliteration variant, not flagged as a separate open question since the ИНН/context otherwise line up, but worth a human eye if it ever matters for a citation.",
+        "2026-09-29: Tier-3 ИНН-holder sweep -- re-pulled АРРС's full ЕГРЮЛ выписка fresh (s8212) rather than trusting the 2026-09-16 pull's spelling alone; it independently confirms 'Сиразетдинов', so this is now treated as the correct spelling (fio_ru/name_latin corrected) rather than a flagged-but-unresolved variant. Personal ИНН 236802250787 wired from the same document."
       ]
     },
     "kurteev-aleksandr-sergeevich": {
@@ -4472,11 +4478,13 @@
             "source_id": "s0389"
           }
         ],
-        "_verified": true
+        "_verified": true,
+        "inn_personal": "780519323606"
       },
       "why": [
         "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-dar-fond-regionalnykh-nekommercheskikh-proektov, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
         "2026-09-07: verification backlog closure — identity already confirmed by Фонд «ДАР» | Фонд региональных некоммерческих проектов's (fond-dar-fond-regionalnykh-nekommercheskikh-proektov) own director_history entry (s0214), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+        "2026-09-29: Tier-3 ИНН-holder sweep -- fresh full ЕГРЮЛ выписка pull (s8215, EGRUL_7705517400_20260929) confirms Давыдов as current ГД with personal ИНН 780519323606 (checksum-valid) directly on the document. Wired.",
         "2026-09-16 (docs->registry gap-list pass, item 4): filled source_id/from-date from s0214. Did NOT wire the separate docs/index.html claim that he's disclosed as ООО «Орион»'s sole «бенефициарный владелец» in that entity's own FY2023-25 filings -- pulled and OCR'd ооо-orion's FY2025 БФО notes (s0306) directly to verify before citing, and that specific document actually names a DIFFERENT, more recent director (Харитонова Наталья Евгеньевна, since 14.01.2026) with no бенефициарный владелец disclosure or Давыдов mention found anywhere in the OCR'd text -- the docs.html paraphrase may be citing an earlier filing year (FY2023/2024) or a section this OCR pass missed. Needs a closer read before wiring, not a guess; flagged, not forced through.",
         "2026-09-16: wired from Наша Правда's own FY2024 БФО пояснительная записка (s0389, OCR'd -- initial pass only OCR'd the audit-opinion attachment in this zip and missed the real pояснительная записка, which needed its own OCR pass; re-checked after docs/index.html's own citation named this exact document and section, §1.2 табл.3/4). Confirms docs/index.html's paraphrase exactly: 5 Наблюдательный совет seats + 3 Попечительский совет seats, each table also giving Место работы (home entity) which is recorded separately where a role there already exists."
       ],
@@ -4771,10 +4779,12 @@
     },
     "zhigulin-aleksey-mikhaylovich": {
       "set": {
-        "_verified": true
+        "_verified": true,
+        "inn_personal": "614337345700"
       },
       "why": [
-        "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аэро-хит М»'s (ooo-aero-khit-m) own director_history entry (s6865), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+        "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аэро-хит М»'s (ooo-aero-khit-m) own director_history entry (s6865), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+        "2026-09-29: Tier-3 ИНН-holder sweep -- fresh full ЕГРЮЛ выписка pull (s8220, EGRUL_9718293790_20260929) confirms Жигулин as the current 'лицо, имеющее право без доверенности действовать' with personal ИНН 614337345700 (checksum-valid) directly on the document. Wired."
       ],
       "verified_against": "s6865 -- ООО «Аэро-хит М»'s own primary-source founding/EGRUL document, naming Жигулин Алексей Михайлович as director (cross-referenced from the entity's own director_history entry)."
     },
@@ -4802,10 +4812,12 @@
     },
     "bezrodnova-anna-sergeevna": {
       "set": {
-        "_verified": true
+        "_verified": true,
+        "inn_personal": "236100309743"
       },
       "why": [
-        "2026-09-07: verification backlog closure — identity already confirmed by АНО ДПО «Образовательный центр Гагаринг»'s (ano-dpo-obrazovatelny-tsentr-gagaring) own director_history entry (s6775), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+        "2026-09-07: verification backlog closure — identity already confirmed by АНО ДПО «Образовательный центр Гагаринг»'s (ano-dpo-obrazovatelny-tsentr-gagaring) own director_history entry (s6775), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+        "2026-09-29: Tier-3 ИНН-holder sweep -- fresh full ЕГРЮЛ выписка pull (s8211, EGRUL_2310240630_20260929) confirms Безроднова as current director with personal ИНН 236100309743 (checksum-valid) directly on the document. Wired."
       ],
       "verified_against": "s6775 -- АНО ДПО «Образовательный центр Гагаринг»'s own primary-source founding/EGRUL document, naming Безроднова Анна Сергеевна as director (cross-referenced from the entity's own director_history entry)."
     },
@@ -4939,10 +4951,21 @@
     },
     "tkach-kirill-vladimirovich": {
       "set": {
-        "notes": "Sole founder (100%) of ООО НПК «Герон» from incorporation, per the entity's own founding устав §6.2 (s6907, 2018-01-16). REVIEWED 2026-09-15: the entity's current director on file, Мушкевич Павел, is NOT a namesake collision or a contradicting attribution — founder (owner) and generalny direktor (hired chief executive) are distinct offices under Russian corporate law, and a sole founder routinely appoints someone else as director without ceasing to be the owner. Live egrul.nalog.ru open-lookup query (2026-09-15, ОГРН 1187847365750) confirms Мушкевич Павел as current director but that endpoint does not return founder/participant data, so Ткач's current (as opposed to 2018-founding) ownership stake is not independently re-confirmed — founders_history on ooo-npk-geron is still empty. OPEN: a full signed ЕГРЮЛ выписка for ООО НПК «Герон» would resolve whether he remains the owner today; until then this is a founder-vs-director distinction, not an unresolved identity conflict."
+        "roles": [
+          {
+            "title": "Единственный учредитель (100%), 2018 — до 04.09.2026",
+            "entity_name": "ООО НПК «ГЕРОН»",
+            "entity_slug": "ooo-npk-geron",
+            "from": "2018-01-16",
+            "to": "2026-09-04",
+            "source_id": "s8219"
+          }
+        ],
+        "notes": "Sole founder (100%) of ООО НПК «Герон» from incorporation, per the entity's own founding устав §6.2 (s6907, 2018-01-16). REVIEWED 2026-09-15: the entity's current director on file, Мушкевич Павел, is NOT a namesake collision or a contradicting attribution — founder (owner) and generalny direktor (hired chief executive) are distinct offices under Russian corporate law, and a sole founder routinely appoints someone else as director without ceasing to be the owner. Live egrul.nalog.ru open-lookup query (2026-09-15, ОГРН 1187847365750) confirms Мушкевич Павел as current director but that endpoint does not return founder/participant data, so Ткач's current (as opposed to 2018-founding) ownership stake is not independently re-confirmed — founders_history on ooo-npk-geron is still empty. OPEN: a full signed ЕГРЮЛ выписка for ООО НПК «Герон» would resolve whether he remains the owner today; until then this is a founder-vs-director distinction, not an unresolved identity conflict.\n\nCLOSED 2026-09-15's open question 2026-09-29: a fresh full ЕГРЮЛ выписка pull (s8219, EGRUL_7814748285_20260929) shows Мушкевич Павел now listed as sole участник/учредитель too (ГРН 2267802423348, dated 04.09.2026), not just director -- ownership has transferred. Ткач is no longer the entity's owner as of that date. No personal ИНН was found for him on this document (he's not named anywhere in the current EGRUL text at all, consistent with having exited)."
       },
       "why": [
-        "2026-09-15: closes the 'five EGRUL name-mismatch cases' lead — director and founder are different offices, so Мушкевич-as-director does not contradict Ткач-as-founder. Left an explicit open note on the one genuinely unverified piece (current-day ownership) rather than guessing."
+        "2026-09-15: closes the 'five EGRUL name-mismatch cases' lead — director and founder are different offices, so Мушкевич-as-director does not contradict Ткач-as-founder. Left an explicit open note on the one genuinely unverified piece (current-day ownership) rather than guessing.",
+        "2026-09-29: Tier-3 ИНН-holder sweep -- pulled the full ЕГРЮЛ выписка the 2026-09-15 note asked for. Resolves the open question: ownership transferred to Мушкевич Павел (dated 04.09.2026 ГРН). Added a 'to' date on Ткач's own role and a matching founders_history entry on ooo-npk-geron (see corrections_entities.json). No personal ИНН recoverable for Ткач from this document since he's no longer a listed party to the entity."
       ]
     },
     "fedorova-polina-gennadevna": {
