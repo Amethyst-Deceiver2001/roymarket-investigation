@@ -2,7 +2,7 @@
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1130,
-  "edge_count": 1941,
+  "edge_count": 1945,
   "unresolved_count": 110,
   "nodes": [
     {
@@ -171,7 +171,7 @@
       "sanctioned": false,
       "legal_form": "АНО",
       "variant": null,
-      "degree": 15
+      "degree": 16
     },
     {
       "id": "ano-nii-dpo",
@@ -891,7 +891,7 @@
       "label": "Безроднова Анна Сергеевна",
       "name_latin": "Anna Sergeevna Bezrodnova",
       "sanctioned": false,
-      "degree": 3
+      "degree": 4
     },
     {
       "id": "bogatikov-sergey-anatolevich",
@@ -1713,7 +1713,7 @@
       "sanctioned": false,
       "legal_form": "Фонд",
       "variant": null,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "fond-gradislava-historic-cultural-heritage-preservation",
@@ -2877,7 +2877,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 3
+      "degree": 4
     },
     {
       "id": "ooo-aero-khit-servis",
@@ -4297,7 +4297,7 @@
       "sanctioned": true,
       "legal_form": "ПАО",
       "variant": null,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "parshikov-sergey-lynya",
@@ -4353,7 +4353,7 @@
       "label": "Пётр Фрадков",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "petrichkovich-yaroslav-yaroslavovich",
@@ -11396,7 +11396,7 @@
       "label": "Виктор Ильич Давыдов",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 3
+      "degree": 4
     },
     {
       "id": "vinogradov-yuriy-aleksandrovich",
@@ -11540,7 +11540,7 @@
       "label": "Жигулин Алексей Михайлович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "zhivova-elena-vyacheslavovna",
@@ -14618,6 +14618,17 @@
       "as_of": "2026-09-03",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "bezrodnova-anna-sergeevna",
+      "target": "ano-dpo-obrazovatelny-tsentr-gagaring",
+      "type": "role",
+      "label": "director",
+      "source_id": "s8221",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
       "confidence": null
     },
     {
@@ -27073,6 +27084,17 @@
       "confidence": null
     },
     {
+      "source": "petr-fradkov",
+      "target": "pao-bank-psb",
+      "type": "role",
+      "label": "director",
+      "source_id": "s8224",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "petrichkovich-yaroslav-yaroslavovich",
       "target": "npts-elvis",
       "type": "role",
@@ -32312,6 +32334,17 @@
       "source": "viktor-ilich-davydov",
       "target": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
       "type": "role",
+      "label": "director",
+      "source_id": "s8225",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "viktor-ilich-davydov",
+      "target": "fond-dar-fond-regionalnykh-nekommercheskikh-proektov",
+      "type": "role",
       "label": "Генеральный директор, Фонд «ДАР»",
       "source_id": "s0214",
       "as_of": "2008-05-27",
@@ -32779,6 +32812,17 @@
       "as_of": "2026-02-27",
       "weight": 1.0,
       "temporal_status": "historical",
+      "confidence": null
+    },
+    {
+      "source": "zhigulin-aleksey-mikhaylovich",
+      "target": "ooo-aero-khit-m",
+      "type": "role",
+      "label": "director",
+      "source_id": "s8223",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
       "confidence": null
     },
     {
