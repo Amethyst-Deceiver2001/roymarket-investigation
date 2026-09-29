@@ -25,9 +25,12 @@ ENTITIES = [
         "director": "Alice Example",
         "director_history": [{"value": "Alice Example", "as_of": "2026-01-02", "source_id": "s1"}],
         "founders": "Unknown Founder (100%)",
-        "founders_history": [{
-            "value": "Former Founder (25%)", "as_of": "2025-01-02", "source_id": "s1",
-        }],
+        # The newest dated entry is the current holder (builder rule since 2026-09-29),
+        # so a former founder needs a newer entry that no longer lists them.
+        "founders_history": [
+            {"value": "Former Founder (25%)", "as_of": "2025-01-02", "source_id": "s1"},
+            {"value": "Unknown Founder (100%)", "as_of": "2026-01-02", "source_id": "s1"},
+        ],
         "products": [
             {"name_ru": "Generic UAV jammer", "description": "UAV jammer", "source_id": "s2"},
             {"name_ru": "Explicit platform", "description": "multirotor vehicle-mounted jammer", "source_id": "s2"},

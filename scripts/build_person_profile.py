@@ -145,7 +145,7 @@ class PersonProfileBuilder:
         """Other people with a resolved role at the same entity."""
         out = []
         for other in self.people:
-            if other["slug"] == exclude_person_slug:
+            if other["slug"] == exclude_person_slug or other.get("_merged_into"):
                 continue
             for r in other.get("roles", []):
                 if isinstance(r, dict) and not r.get("_candidate") and r.get("entity_slug") == entity_slug:
@@ -322,10 +322,9 @@ class PersonProfileBuilder:
         for rp in related_persons:
             persons_by_entity.setdefault(rp.get("via_entity"), rp)
 
-        max_x = CX + SAT_R + 140
-        max_y = CY + SAT_R + 80
-        min_x = CX - SAT_R - 140
-        min_y = 20
+        # viewBox is fitted to what is actually drawn (every rect below records its
+        # box here) -- fixed bounds clipped satellites on the upper ring.
+        boxes = [(CX - 32, CY - 32, CX + 32, CY + 32)]
 
         for i, r in enumerate(shown):
             angle = (2 * math.pi * i / n) - math.pi / 2
@@ -334,6 +333,7 @@ class PersonProfileBuilder:
             kind_fill = "var(--accent-soft)" if r["kind"] == "director+founder" else "var(--panel-2)"
             kind_stroke = "var(--accent)" if r["kind"] == "director+founder" else "var(--rule)"
             edges_svg.append(f'<line x1="{CX}" y1="{CY}" x2="{ex:.0f}" y2="{ey:.0f}" stroke="var(--ink-3)" stroke-width="1.6"/>')
+            boxes.append((ex - 58, ey - 24, ex + 58, ey + 24))
             name = (r["entity_name"] or "?")[:26]
             nodes_svg.append(
                 f'<g><rect x="{ex-58:.0f}" y="{ey-24:.0f}" width="116" height="48" rx="6" '
@@ -358,6 +358,7 @@ class PersonProfileBuilder:
                 sx = CX + SAT_R * math.cos(sangle)
                 sy = CY + SAT_R * math.sin(sangle)
                 edges_svg.append(f'<line x1="{ex:.0f}" y1="{ey:.0f}" x2="{sx:.0f}" y2="{sy:.0f}" stroke="var(--ink-3)" stroke-width="1.2" stroke-dasharray="3 3"/>')
+                boxes.append((sx - 52, sy - 20, sx + 52, sy + 20))
                 if skind == "prod":
                     fill, stroke = "var(--ok-bg)", "var(--ok)"
                     sub = f"+{extra} more products" if extra else "product"
@@ -373,10 +374,16 @@ class PersonProfileBuilder:
                     f'font-size="7.5" fill="var(--ink-3)">{escape_xml(sub)}</text></g>'
                 )
 
+        pad = 16
+        min_x = int(min(b[0] for b in boxes)) - pad
+        min_y = int(min(b[1] for b in boxes)) - pad
+        max_x = int(max(b[2] for b in boxes)) + pad
+        max_y = int(max(b[3] for b in boxes)) + pad
         overflow_svg = ""
         if overflow > 0:
+            max_y += 30
             overflow_svg = (
-                f'<text x="{CX:.0f}" y="{max_y-30:.0f}" text-anchor="middle" font-family="var(--mono)" '
+                f'<text x="{CX:.0f}" y="{max_y-12:.0f}" text-anchor="middle" font-family="var(--mono)" '
                 f'font-size="10" fill="var(--ink-3)">+{overflow} more entities not shown</text>'
             )
 
@@ -438,8 +445,12 @@ def main():
     if args.all:
         # Only people with at least one resolved (non-candidate) role --
         # a bare name with nothing linked isn't a profilable person yet.
+        # _merged_into tombstones keep their old roles[] but are not people
+        # any more -- their facts live on the canonical record.
         slugs = []
         for p in builder.people:
+            if p.get("_merged_into"):
+                continue
             if any(isinstance(r, dict) and not r.get("_candidate") for r in p.get("roles", [])):
                 slugs.append(p["slug"])
     elif args.inn:

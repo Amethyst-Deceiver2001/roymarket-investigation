@@ -315,8 +315,8 @@ CHIPS = {"doc": ("t-doc", "Primary doc"), "press": ("t-press", "Press-reported")
 # Set once per build_case() call: lets inline() turn a single-id [sNNNN]
 # citation into a native-popover button (see .cite/.cite-pop in profile.css
 # and profile_text.py, which this reuses). A multi-id/range bracket
-# ([s7973, s7975-s7980]) is left as plain text -- one popover per id would
-# be more machinery than the case-page prose actually needs.
+# ([s7973, s7975-s7980]) is left as plain text; a plain comma list gets one
+# popover per id (see cite() in inline()).
 _CITE_SRC_BY_ID = {}
 _CITE_USED = set()
 
@@ -379,6 +379,14 @@ def inline(t):
         if re.fullmatch(r"s\d{4}", sid) and sid in _CITE_SRC_BY_ID:
             _CITE_USED.add(sid)
             return f'<button type="button" class="cite" popovertarget="cite-{sid}">[{sid}]</button>'
+        # A plain comma list of known ids gets one popover per id inside a single
+        # bracket; ranges and anything unresolved stay plain text.
+        parts = [p.strip() for p in sid.split(",")]
+        if len(parts) > 1 and all(p in _CITE_SRC_BY_ID for p in parts):
+            _CITE_USED.update(parts)
+            btns = ", ".join(f'<button type="button" class="cite" popovertarget="cite-{p}">{p}</button>'
+                             for p in parts)
+            return f'<span class="cite-group">[{btns}]</span>'
         return f'<span class="id">[{sid}]</span>'
     t = re.sub(r"\[((?:s\d{4}(?:[–-]s\d{4})?(?:, ?)?)+|[^\]]*(?:s\d{4}|msg|t\.me)[^\]]*)\]",
               cite, t)

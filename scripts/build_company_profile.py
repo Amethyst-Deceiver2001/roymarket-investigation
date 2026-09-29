@@ -414,6 +414,8 @@ class ProfileBuilder:
         principals = []
         seen_person_slugs = set()
         for p in self.people:
+            if p.get("_merged_into"):
+                continue  # tombstone: the canonical record carries these roles
             for r in p.get("roles", []):
                 if not isinstance(r, dict):
                     continue
