@@ -7,3 +7,6 @@ __pycache__/
 
 data/sources/
 data/.pub_fsa_token
+
+# regenerable local caches (rebuilt from data/sources/ by inventory_sources/scan_sources/mine_zakupki); not the product
+data/registry/_*_cache.json
