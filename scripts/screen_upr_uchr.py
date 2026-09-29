@@ -182,9 +182,13 @@ DELAY_BETWEEN_PEOPLE = 15.0  # bumped 2026-09-07 from 2.0 -- pb.nalog.ru's
 # it works.
 
 
-CONNECT_TIMEOUT = 10  # short on purpose — a hung/geoblocked connection should
-                       # surface fast, not sit silent for 30s per call with
-                       # up to 10 polls stacked on top of that.
+CONNECT_TIMEOUT = 25  # bumped 2026-09-29 from 10 -- a plain TLS handshake
+                       # timeout hit on the very first request of a run
+                       # (pb.nalog.ru's endpoint likely slow under today's
+                       # heavy traffic, not a hung/geoblocked connection).
+                       # Still short enough that a truly dead connection
+                       # surfaces well within a minute even with the poll
+                       # loop's up-to-10 stacked calls on top of it.
 
 
 def _raise_with_detail(e: urllib.error.HTTPError, where: str) -> None:
