@@ -2,7 +2,7 @@
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1130,
-  "edge_count": 1916,
+  "edge_count": 1919,
   "unresolved_count": 110,
   "nodes": [
     {
@@ -979,7 +979,7 @@
       "label": "Бурлака Павел Анатольевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 3
+      "degree": 4
     },
     {
       "id": "buslov-dmitriy-sergeevich",
@@ -1853,7 +1853,7 @@
       "label": "Галиев Руслан Раилович",
       "name_latin": "Galiev Ruslan Railovich",
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "galushko-aleksandr",
@@ -2985,7 +2985,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 8
+      "degree": 10
     },
     {
       "id": "ooo-arkhangel-grupp",
@@ -3333,7 +3333,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 7
+      "degree": 8
     },
     {
       "id": "ooo-goudron",
@@ -10312,7 +10312,7 @@
       "label": "Шатракова Анастасия Артёмовна",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "shchegolev-igor-nikolaevich",
@@ -14877,6 +14877,17 @@
       "source": "burlaka-pavel-anatolevich",
       "target": "ooo-gk-logos",
       "type": "role",
+      "label": "director",
+      "source_id": "s8095",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "burlaka-pavel-anatolevich",
+      "target": "ooo-gk-logos",
+      "type": "role",
       "label": "Генеральный директор",
       "source_id": "s6784",
       "as_of": "2025-10-29",
@@ -18364,6 +18375,17 @@
       "source": "galiev-ruslan-railovich",
       "target": "ooo-arkhangel",
       "type": "role",
+      "label": "founder",
+      "source_id": "s8094",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "galiev-ruslan-railovich",
+      "target": "ooo-arkhangel",
+      "type": "role",
       "label": "co-founder (50%)",
       "source_id": "s5507",
       "as_of": "2026-06-23",
@@ -18849,7 +18871,7 @@
       "target": "ooo-kleverkopter",
       "type": "role",
       "label": "founder",
-      "source_id": "s0464",
+      "source_id": "s8098",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19157,7 +19179,7 @@
       "target": "ooo-eyartek",
       "type": "role",
       "label": "director",
-      "source_id": "s0485",
+      "source_id": "s8099",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19168,7 +19190,7 @@
       "target": "ooo-eyartek",
       "type": "role",
       "label": "founder",
-      "source_id": "s6729",
+      "source_id": "s8099",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19399,7 +19421,7 @@
       "target": "ao-opticheskie-sistemy",
       "type": "role",
       "label": "founder",
-      "source_id": "s6966",
+      "source_id": "s8097",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19432,7 +19454,7 @@
       "target": "ooo-ametist",
       "type": "role",
       "label": "founder",
-      "source_id": "s7451",
+      "source_id": "s8097",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19520,7 +19542,7 @@
       "target": "ooo-atlant-logistik",
       "type": "role",
       "label": "founder",
-      "source_id": "s6970",
+      "source_id": "s8097",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19586,7 +19608,7 @@
       "target": "ooo-everest",
       "type": "role",
       "label": "founder",
-      "source_id": "s7449",
+      "source_id": "s8097",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19641,7 +19663,7 @@
       "target": "ooo-npk-atlant-aero",
       "type": "role",
       "label": "founder",
-      "source_id": "s6962",
+      "source_id": "s8097",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19674,7 +19696,7 @@
       "target": "ooo-npk-zevs",
       "type": "role",
       "label": "founder",
-      "source_id": "s6963",
+      "source_id": "s8097",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19707,7 +19729,7 @@
       "target": "ooo-pk-stalnoy-kupol",
       "type": "role",
       "label": "founder",
-      "source_id": "s6965",
+      "source_id": "s8097",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19762,7 +19784,7 @@
       "target": "ooo-prom-tekh",
       "type": "role",
       "label": "founder",
-      "source_id": "s6964",
+      "source_id": "s8097",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19795,7 +19817,7 @@
       "target": "ooo-prometey",
       "type": "role",
       "label": "founder",
-      "source_id": "s6956",
+      "source_id": "s8097",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -28771,7 +28793,18 @@
       "target": "ooo-arkhangel",
       "type": "role",
       "label": "director",
-      "source_id": "s5507",
+      "source_id": "s8100",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "shatrakova-anastasiya-artemovna",
+      "target": "ooo-arkhangel",
+      "type": "role",
+      "label": "founder",
+      "source_id": "s8100",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -29508,7 +29541,7 @@
       "target": "ooo-dsg",
       "type": "role",
       "label": "director",
-      "source_id": "s6770",
+      "source_id": "s8101",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
