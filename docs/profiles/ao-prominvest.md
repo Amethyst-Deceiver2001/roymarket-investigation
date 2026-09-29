@@ -56,13 +56,14 @@ _No named principals linked to this entity yet._
 
 ## Corporate links
 
-- **ООО «Атлант Аэро»** — Subsidiary (51%)
+- **ООО «Атлант Аэро»** — Subsidiary (51%) [s0467]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | [s0152] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9714004945_20260822_ao-prominvest.json) | 2026-08-22 | 2026-08-22 |
+| [s0467] | EGRUL extract | EGRUL extract (ul-1236100025633-20260823122756.pdf) | — | 2026-08-23 |
 | [s0811] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9714004945_20260824_ao-prominvest.json) | 2026-08-24 | — |
 | [s6660] | Bfo | Bfo (BFO_9714004945_2023_ао-проминвест.pdf) | — | — |
 | [s6661] | Bfo | Bfo (BFO_9714004945_2024_ао-проминвест.pdf) | — | — |

@@ -8359,8 +8359,8 @@
     "cbst_tie": {
       "claim": "Own site (рэб.рус) states the group are \"Резиденты научных центров НПЦ БАС и ЦБСТ\" (residents of the НПЦ БАС and ЦБСТ research centers) with proprietary counter-drone software.",
       "confidence": "t-open",
-      "evidence": "Self-declared on рэб.рус, checked directly 23.08.2026.",
-      "source_id": null
+      "evidence": "Self-declared on рэб.рус, checked directly 23.08.2026, archived 2026-09-29 (WEBCAPTURE, s8093): \"Резиденты НПЦ БАС, ЦБСТ — доступ к компетенциям и оборудованию\".",
+      "source_id": "s8093"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -10610,7 +10610,31 @@
       {
         "inn_personal": "615424668354",
         "name": "Шевченко Константин Игоревич",
-        "share_percent": null,
+        "nominal_value": 800,
+        "share_percent": 8.0,
+        "source_id": "s0467"
+      },
+      {
+        "inn_personal": "615428023893",
+        "name": "Пряников Владислав Сергеевич",
+        "nominal_value": 200,
+        "share_percent": 2.0,
+        "source_id": "s0467"
+      },
+      {
+        "inn_personal": "615404085178",
+        "name": "Хутешен Алексей Александрович",
+        "nominal_value": 3900,
+        "share_percent": 39.0,
+        "as_of": "2026-08-10",
+        "source_id": "s0467"
+      },
+      {
+        "name": "АО «Проминвест»",
+        "inn": "9714004945",
+        "ogrn": "1237700148180",
+        "nominal_value": 5100,
+        "share_percent": 51.0,
         "source_id": "s0467"
       }
     ],
@@ -10648,8 +10672,8 @@
         "slug": "ao-prominvest",
         "inn": "9714004945",
         "share_percent": 51,
-        "note": "Per EGRUL's own disclosure, АО «Проминвест» is itself under trust management (ДовУпрЮЛ) by АО «Технодинамика» (ИНН 7719265496, ao-tekhnodinamika) — a Ростех (Rostec) subsidiary specialising in aircraft components — meaning this EU-sanctioned, ЦБСТ-resident drone manufacturer is majority-controlled, via a documented trust-management arrangement, by Russia's state defense-industrial conglomerate. Remaining stake split between GD Хутешен Алексей Александрович (39%, increased 10.08.2026) and two smaller individual holders. Not yet independently re-pulled as a fresh EGRUL выписка in this pass -- prose already in docs/index.html, only now mirrored into structured fields.",
-        "source_id": null
+        "note": "Per EGRUL's own disclosure, АО «Проминвест» is itself under trust management (ДовУпрЮЛ) by АО «Технодинамика» (ИНН 7719265496, ao-tekhnodinamika) — a Ростех (Rostec) subsidiary specialising in aircraft components — meaning this EU-sanctioned, ЦБСТ-resident drone manufacturer is majority-controlled, via a documented trust-management arrangement, by Russia's state defense-industrial conglomerate. Remaining stake split between GD Хутешен Алексей Александрович (39%, increased 10.08.2026), Шевченко Константин Игоревич (8%) and Пряников Владислав Сергеевич (2%).",
+        "source_id": "s0467"
       }
     ],
     "subsidiaries": [],
@@ -10736,12 +10760,7 @@
       "other": []
     },
     "images": [],
-    "open_questions": [
-      {
-        "source_id": "s0467",
-        "text": "founders[] (source s0467) lists only Шевченко Константин Игоревич, no share%, while the cbst_tie/parents[] prose (docs/index.html) describes a 51/39/two-smaller-holder split (АО «Проминвест» / GD Хутешен / two individuals) with no Шевченко named. Not reconciled -- s0467 may predate the ownership described in the prose (dated 10.08.2026 for the Хутешен-stake increase), or Шевченко may be one of the unnamed \"two smaller individual holders.\" A fresh full EGRUL выписка would settle this."
-      }
-    ],
+    "open_questions": [],
     "sources": [],
     "confidence": null,
     "_verified": true,
@@ -26566,8 +26585,8 @@
         "slug": "ooo-atlant-aero",
         "inn": "6154165878",
         "share_percent": 51,
-        "note": "Mirrors ooo-atlant-aero's own parents[] entry (added 2026-09-14, backfilled from docs/index.html prose that had never been mirrored into structured fields). АО «Проминвест» is itself under trust management (ДовУпрЮЛ) by АО «Технодинамика»/Rostec (ao-tekhnodinamika) -- see that entity's own record.",
-        "source_id": null
+        "note": "Mirrors ooo-atlant-aero's own parents[] entry. АО «Проминвест» is itself under trust management (ДовУпрЮЛ) by АО «Технодинамика»/Rostec (ao-tekhnodinamika) -- see that entity's own record.",
+        "source_id": "s0467"
       }
     ],
     "tier": "plumbing",
@@ -32743,7 +32762,7 @@
       "claim": "ЦБСТ's own channel repeatedly calls this entity's «Овод» (\"Gadfly\") FPV strike-drone family its \"флагманский резидент\" (flagship resident) — the strongest ЦБСТ-tie phrasing found anywhere in the registry.",
       "confidence": "t-doc",
       "evidence": "Exact quote located: ЦБСТ's own channel, post 2159491523:623, 15.04.2025: \"Он [«Орбита»] уже интегрирован с тульским дроном «Овод» (нашим флагманским резидентом)...\" — verbatim \"флагманский резидент\" (flagship resident) confirmed directly. Independently corroborated this session: this entity's owner, Черезов А.П., also owns «Овод»-brand entity РЛВТ (theins.ru, 23.08.2026) — both EU/US-sanctioned. NOTE: the same channel (post 2159491523:574, 26.03.2025) separately credits \"Андрей Иванов\" as \"создатель ударного FPV-дрона «Овод»\" — a name that does NOT match Черезов А.П., the confirmed legal owner. Possible pseudonym, a different named spokesperson, or an unresolved discrepancy — flagged as an open question, not merged.",
-      "source_id": null
+      "source_id": "s8092"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -63577,7 +63596,7 @@
       "claim": "РЭБ «Капюшон» (this entity's product) is repeatedly shown as a ЦБСТ-supported/resident development — delivered to troops as \"техника, созданная при поддержке ЦБСТ\" and shown at Дронница 2025.",
       "confidence": "t-doc",
       "evidence": "ЦБСТ's own channel, post 2159491523:369, 13.01.2025: \"«Единая Россия» и фонд «Наша Правда» передали военнослужащим группировок «Центр» и «Днепр» инновационную технику, созданную при поддержке Центра беспилотных систем и технологий (ЦБСТ)... Бойцам доставили мобильные станции РЭБ «Капюшон»...\" Also shown at Дронница 2025 per post 2159491523:1193, 08.09.2025 (\"РЭБ «Капюшон»\" listed among resident products on display). Found by searching the PRODUCT brand name («Капюшон»), not the legal entity name — the legal-entity search (\"Киловатт\") returned zero hits, consistent with this project's pattern that ЦБСТ's public-facing coverage names brands/products, not legal entities.",
-      "source_id": null
+      "source_id": "s8091"
     },
     "wb_overlap": "none_found",
     "products": [

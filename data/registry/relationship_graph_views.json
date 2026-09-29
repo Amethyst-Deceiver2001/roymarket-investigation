@@ -12999,11 +12999,33 @@
           "source": "ao-prominvest",
           "target": "ooo-atlant-aero",
           "type": "founded",
-          "label": "51%",
-          "source_id": "s6725",
-          "as_of": "2026-08-10",
+          "label": null,
+          "source_id": "s0467",
+          "as_of": null,
           "weight": 1.0,
-          "temporal_status": "current",
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-prominvest",
+          "target": "ooo-atlant-aero",
+          "type": "owns",
+          "label": null,
+          "source_id": "s0467",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ao-prominvest",
+          "target": "ooo-atlant-aero",
+          "type": "owns",
+          "label": "51%",
+          "source_id": "s0467",
+          "as_of": null,
+          "weight": 51,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -14969,7 +14991,7 @@
           "target": "ooo-skb-piranya",
           "type": "role",
           "label": "director",
-          "source_id": "s0487",
+          "source_id": "s8085",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -14980,7 +15002,7 @@
           "target": "ooo-skb-piranya",
           "type": "role",
           "label": "founder",
-          "source_id": "s6730",
+          "source_id": "s8085",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -17829,7 +17851,7 @@
           "target": "ooo-opkb-eksplomet",
           "type": "role",
           "label": "director",
-          "source_id": "s0453",
+          "source_id": "s8078",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -17840,7 +17862,7 @@
           "target": "ooo-opkb-eksplomet",
           "type": "role",
           "label": "founder",
-          "source_id": "s0453",
+          "source_id": "s8078",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -18329,6 +18351,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "gk-logos",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Own site (рэб.рус) states the group are \"Резиденты научных центров НПЦ БАС и ЦБСТ\" (residents of the НПЦ БАС and ЦБСТ...",
+          "source_id": "s8093",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-open"
         },
         {
           "source": "gk-logos",
@@ -19236,8 +19269,8 @@
           "source": "khuteshen-aleksey-aleksandrovich",
           "target": "ooo-atlant-aero",
           "type": "founded",
-          "label": "39%",
-          "source_id": "s6725",
+          "label": null,
+          "source_id": "s0467",
           "as_of": "2026-08-10",
           "weight": 1.0,
           "temporal_status": "current",
@@ -19248,6 +19281,17 @@
           "target": "ooo-atlant-aero",
           "type": "role",
           "label": "director",
+          "source_id": "s0467",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "khuteshen-aleksey-aleksandrovich",
+          "target": "ooo-atlant-aero",
+          "type": "role",
+          "label": "founder",
           "source_id": "s0467",
           "as_of": null,
           "weight": 1.0,
@@ -20722,7 +20766,7 @@
           "target": "ooo-tskbr",
           "type": "role",
           "label": "founder",
-          "source_id": "s7351",
+          "source_id": "s8084",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -21327,7 +21371,7 @@
           "target": "ooo-konstruktorskoe-byuro-sinergiya",
           "type": "role",
           "label": "director",
-          "source_id": "s6755",
+          "source_id": "s8090",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -24404,6 +24448,17 @@
         },
         {
           "source": "ooo-npo-kilovatt-shestopalov",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "РЭБ «Капюшон» (this entity's product) is repeatedly shown as a ЦБСТ-supported/resident development — delivered to tro...",
+          "source_id": "s8091",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-npo-kilovatt-shestopalov",
           "target": "npo-kilobatt",
           "type": "related",
           "label": "dealer",
@@ -26230,6 +26285,17 @@
         },
         {
           "source": "ooo-vozdushnyy-traktat",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЦБСТ's own channel repeatedly calls this entity's «Овод» (\"Gadfly\") FPV strike-drone family its \"флагманский резидент...",
+          "source_id": "s8092",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ooo-vozdushnyy-traktat",
           "target": "product::ooo-vozdushnyy-traktat::овод",
           "type": "produces",
           "label": null,
@@ -27123,6 +27189,28 @@
           "source": "pospekhov-ivan-aleksandrovich",
           "target": "ooo-metaskan",
           "type": "role",
+          "label": "director",
+          "source_id": "s8079",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "pospekhov-ivan-aleksandrovich",
+          "target": "ooo-metaskan",
+          "type": "role",
+          "label": "founder",
+          "source_id": "s8079",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "pospekhov-ivan-aleksandrovich",
+          "target": "ooo-metaskan",
+          "type": "role",
           "label": "Генеральный директор",
           "source_id": "s7410",
           "as_of": null,
@@ -27169,6 +27257,28 @@
           "type": "role",
           "label": null,
           "source_id": "s0052",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "pospekhov-ivan-aleksandrovich",
+          "target": "ooo-tsyus",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8079",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "pospekhov-ivan-aleksandrovich",
+          "target": "ooo-tsyus",
+          "type": "role",
+          "label": "founder",
+          "source_id": "s8079",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -28994,7 +29104,7 @@
           "target": "ooo-rtd-zashchita",
           "type": "role",
           "label": "director",
-          "source_id": "s6792",
+          "source_id": "s8082",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -29005,7 +29115,7 @@
           "target": "ooo-rtd-zashchita",
           "type": "role",
           "label": "founder",
-          "source_id": "s6792",
+          "source_id": "s8082",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -30500,11 +30610,11 @@
           "source": "stub::пряников владислав сергеевич",
           "target": "ooo-atlant-aero",
           "type": "founded",
-          "label": "2%",
-          "source_id": "s6725",
-          "as_of": "2026-08-10",
+          "label": null,
+          "source_id": "s0467",
+          "as_of": null,
           "weight": 1.0,
-          "temporal_status": "current",
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -35080,12 +35190,6 @@
           "degree": 3
         },
         {
-          "id": "stub::пряников владислав сергеевич",
-          "kind": "unresolved",
-          "label": "Пряников Владислав Сергеевич",
-          "degree": 1
-        },
-        {
           "id": "stub::репнев станислав валерьевич",
           "kind": "unresolved",
           "label": "Репнев Станислав Валерьевич",
@@ -35448,17 +35552,6 @@
           "label": null,
           "source_id": "s7870",
           "as_of": "2024-10-15",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "ao-prominvest",
-          "target": "ooo-atlant-aero",
-          "type": "founded",
-          "label": "51%",
-          "source_id": "s6725",
-          "as_of": "2026-08-10",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -36413,8 +36506,8 @@
           "source": "khuteshen-aleksey-aleksandrovich",
           "target": "ooo-atlant-aero",
           "type": "founded",
-          "label": "39%",
-          "source_id": "s6725",
+          "label": null,
+          "source_id": "s0467",
           "as_of": "2026-08-10",
           "weight": 1.0,
           "temporal_status": "current",
@@ -38330,17 +38423,6 @@
           "label": "100%",
           "source_id": "s6721",
           "as_of": "2026-08-25",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::пряников владислав сергеевич",
-          "target": "ooo-atlant-aero",
-          "type": "founded",
-          "label": "2%",
-          "source_id": "s6725",
-          "as_of": "2026-08-10",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -40488,7 +40570,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Own site (рэб.рус) states the group are \"Резиденты научных центров НПЦ БАС и ЦБСТ\" (residents of the НПЦ БАС and ЦБСТ...",
-          "source_id": null,
+          "source_id": "s8093",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -40895,7 +40977,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "РЭБ «Капюшон» (this entity's product) is repeatedly shown as a ЦБСТ-supported/resident development — delivered to tro...",
-          "source_id": null,
+          "source_id": "s8091",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -41126,7 +41208,7 @@
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "ЦБСТ's own channel repeatedly calls this entity's «Овод» (\"Gadfly\") FPV strike-drone family its \"флагманский резидент...",
-          "source_id": null,
+          "source_id": "s8092",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -41314,18 +41396,6 @@
           "degree": 36
         },
         {
-          "id": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "kind": "entity",
-          "label": "АНО «ЦБСТ» | Centre for Unmanned Systems & Technologies",
-          "name_latin": "Autonomous Non-Profit Organization \"The Center for Uncrewed Vehicle Systems and Technology\" (ЦБСТ's own EGRUL-registered English name)",
-          "inn": "9702064851",
-          "tier": "cbst-core",
-          "sanctioned": true,
-          "legal_form": "АНО",
-          "variant": null,
-          "degree": 80
-        },
-        {
           "id": "ao-kronshtadt",
           "kind": "entity",
           "label": "АО «Кронштадт»",
@@ -41336,18 +41406,6 @@
           "legal_form": null,
           "variant": null,
           "degree": 3
-        },
-        {
-          "id": "ao-prominvest",
-          "kind": "entity",
-          "label": "АО «Проминвест»",
-          "name_latin": null,
-          "inn": "9714004945",
-          "tier": "plumbing",
-          "sanctioned": true,
-          "legal_form": "АО",
-          "variant": null,
-          "degree": 6
         },
         {
           "id": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
@@ -41392,26 +41450,6 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 6
-        },
-        {
-          "id": "gk-logos",
-          "kind": "entity",
-          "label": "ГК «Логос»",
-          "name_latin": null,
-          "inn": "7839303129",
-          "tier": "manufacturer",
-          "sanctioned": false,
-          "legal_form": null,
-          "variant": "defensive",
-          "degree": 11
-        },
-        {
-          "id": "khuteshen-aleksey-aleksandrovich",
-          "kind": "person",
-          "label": "Хутешен Алексей Александрович",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 39
         },
         {
           "id": "kulibin-klub",
@@ -41486,18 +41524,6 @@
           "degree": 24
         },
         {
-          "id": "ooo-atlant-aero",
-          "kind": "entity",
-          "label": "ООО «Атлант Аэро»",
-          "name_latin": null,
-          "inn": "6154165878",
-          "tier": "manufacturer",
-          "sanctioned": true,
-          "legal_form": "ООО",
-          "variant": null,
-          "degree": 13
-        },
-        {
           "id": "ooo-berkut-dmv",
           "kind": "entity",
           "label": "ООО «Беркут»",
@@ -41558,18 +41584,6 @@
           "degree": 5
         },
         {
-          "id": "ooo-npo-kilovatt-shestopalov",
-          "kind": "entity",
-          "label": "ООО «Научно-производственное объединение «Киловатт»» (Шестопалов)",
-          "name_latin": "NPO Kilowatt LLC (2nd registration)",
-          "inn": "4800016776",
-          "tier": "manufacturer",
-          "sanctioned": true,
-          "legal_form": null,
-          "variant": "dual",
-          "degree": 55
-        },
-        {
           "id": "ooo-npo-rustekhdron",
           "kind": "entity",
           "label": "ООО «НПО Рустехдрон»",
@@ -41580,18 +41594,6 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "degree": 29
-        },
-        {
-          "id": "ooo-tsyus",
-          "kind": "entity",
-          "label": "ООО «ЦЮС»",
-          "name_latin": null,
-          "inn": "1215226708",
-          "tier": "plumbing",
-          "sanctioned": false,
-          "legal_form": "ООО",
-          "variant": null,
-          "degree": 6
         },
         {
           "id": "ooo-ushkuynik-sp",
@@ -41624,14 +41626,6 @@
           "name_latin": "Pinimasov Aleksandr",
           "sanctioned": false,
           "degree": 1
-        },
-        {
-          "id": "pospekhov-ivan-aleksandrovich",
-          "kind": "person",
-          "label": "Поспехов Иван Александрович",
-          "name_latin": null,
-          "sanctioned": false,
-          "degree": 12
         },
         {
           "id": "product::ooo-aeromaks::a-50",
@@ -41803,28 +41797,6 @@
           "confidence": null
         },
         {
-          "source": "ao-prominvest",
-          "target": "ooo-atlant-aero",
-          "type": "owns",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ao-prominvest",
-          "target": "ooo-atlant-aero",
-          "type": "owns",
-          "label": "51%",
-          "source_id": null,
-          "as_of": null,
-          "weight": 51,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "barakhtin-artem-vladimirovich",
           "target": "ooo-arkodim",
           "type": "directs",
@@ -41873,28 +41845,6 @@
           "target": "ooo-metaskan",
           "type": "role",
           "label": "генеральный конструктор (per leader-id.ru self-report)",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "gk-logos",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "Own site (рэб.рус) states the group are \"Резиденты научных центров НПЦ БАС и ЦБСТ\" (residents of the НПЦ БАС and ЦБСТ...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-open"
-        },
-        {
-          "source": "khuteshen-aleksey-aleksandrovich",
-          "target": "ooo-atlant-aero",
-          "type": "role",
-          "label": "founder",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -41968,17 +41918,6 @@
           "confidence": null
         },
         {
-          "source": "ooo-npo-kilovatt-shestopalov",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "РЭБ «Капюшон» (this entity's product) is repeatedly shown as a ЦБСТ-supported/resident development — delivered to tro...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
-        },
-        {
           "source": "ooo-ushkuynik-sp",
           "target": "npts-ushkuynik",
           "type": "related",
@@ -41988,17 +41927,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
-        },
-        {
-          "source": "ooo-vozdushnyy-traktat",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "ЦБСТ's own channel repeatedly calls this entity's «Овод» (\"Gadfly\") FPV strike-drone family its \"флагманский резидент...",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc"
         },
         {
           "source": "ooo-vozdushnyy-traktat",
@@ -42016,50 +41944,6 @@
           "target": "npo-kilobatt",
           "type": "role",
           "label": "sole proprietor / official dealer",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "pospekhov-ivan-aleksandrovich",
-          "target": "ooo-metaskan",
-          "type": "role",
-          "label": "director",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "pospekhov-ivan-aleksandrovich",
-          "target": "ooo-metaskan",
-          "type": "role",
-          "label": "founder",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "pospekhov-ivan-aleksandrovich",
-          "target": "ooo-tsyus",
-          "type": "role",
-          "label": "director",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "pospekhov-ivan-aleksandrovich",
-          "target": "ooo-tsyus",
-          "type": "role",
-          "label": "founder",
           "source_id": null,
           "as_of": null,
           "weight": 1.0,

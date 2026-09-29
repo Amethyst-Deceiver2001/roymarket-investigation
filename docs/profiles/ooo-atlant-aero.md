@@ -79,11 +79,7 @@
 
 ## Corporate links
 
-- **АО «Проминвест»** — Parent entity (51%)
-
-## Open questions
-
-- founders[] (source [s0467]) lists only Шевченко Константин Игоревич, no share%, while the cbst_tie/parents[] prose (docs/index.html) describes a 51/39/two-smaller-holder split (АО «Проминвест» / GD Хутешен / two individuals) with no Шевченко named. Not reconciled -- [s0467] may predate the ownership described in the prose (dated 10.08.2026 for the Хутешен-stake increase), or Шевченко may be one of the unnamed "two smaller individual holders." A fresh full EGRUL выписка would settle this. [s0467]
+- **АО «Проминвест»** — Parent entity (51%) [s0467]
 
 ## Sources cited in this profile
 

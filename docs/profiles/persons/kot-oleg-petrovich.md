@@ -18,7 +18,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Products linked via this person
 
-- **Метафора** — via ООО «Смарт Текнолоджис» · director
+- **«Метафора»** — via ООО «Смарт Текнолоджис» · director
 
 ## Sanctions & screening
 
