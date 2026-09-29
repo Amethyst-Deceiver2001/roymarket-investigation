@@ -293,3 +293,73 @@ selfie with a name tag, or another source ties the handle to a ФИО).
 | `ustimov-r-s` | Член приемочной комиссии, капитан, ФГКУ «ЦСООР «Лидер»» |
 | `zaytsev-e-d` | Член приемочной комиссии, майор, ФГКУ «ЦСООР «Лидер»» |
 
+## 2026-09-29 update: ranked by investigation importance, not just by what identifier is missing
+
+The groups above are stale in places — several people listed as unverified in
+Group 1/2 have since closed (e.g. Живова Е.В., Тимофеев В.С. now have
+`screen_upr_uchr.py` hits absorbed; see commit history) — and the grouping
+itself (has ИНН / has DOB / has neither) doesn't answer the actual triage
+question: **which of the 245 people currently without a personal ИНН are
+worth chasing first?** A random chat participant and a company's technical
+director are not the same priority even though both lack an ИНН.
+
+Ranked by a simple weighted score — sanctioned/PEP status (+100), exec/
+founder role text (+40), technical/engineering role text (+35), each
+organization tie (+8), a tie to an entity with a confirmed (non-
+`not_established`) `cbst_tie` (+25), an OpenSanctions candidate match on file
+(+10, see the standing nuance below), `graph_tier: "reference"` (-30, a
+deliberate off-graph minor/staff/family marking), and a bare record with no
+roles/orgs/sanctions at all (-20) — over the 245 without `inn_personal`:
+
+**Tier 1 — sanctioned/PEP, an ИНН would upgrade a plausible OpenSanctions
+match to a confirmed one (3):**
+
+| Person | Role | Note |
+|---|---|---|
+| Пётр Фрадков (`petr-fradkov`) | Chairman, ПАО «Банк ПСБ» | OpenSanctions PLAUSIBLE match, not ИНН-confirmed |
+| Дмитрий Медведев (`dmitriy-medvedev`) | Chairman, United Russia; Deputy Chairman, Security Council | Sanctions CONFIRMED already (public-figure exception); ИНН still useful for cross-checks |
+| Гаврилов Александр Валерьевич (`gavrilov-aleksandr-valerevich`) | GD, ООО «Гумич» (Инвестментс/Борей chain); Gumich RTK makes "Импульс-М" robot platforms field-tested since 2024 | Sanctions note explicitly flags "worth a follow-up EGRUL check" |
+
+**Tier 2 — technical director + exec role together (3, incl. one ё/е dupe
+pair needing a `registry_lookup.py`/merge check):**
+
+| Person | Role |
+|---|---|
+| Замятин Александр Юрьевич (`zamyatin-aleksandr-yurevich`) | технический директор — главный конструктор |
+| Махнёв Александр Игоревич (`makhnev-aleksandr-igorevich` / `makhnyov-aleksandr-igorevich` — **likely duplicate slugs for the same person, ё/е split, not yet merged**) | технический директор; 4.5% shareholder, АО «Хоук Холдинг»/АО «АИН» |
+
+**Tier 3 — exec/founder role, no technical detail yet (10):**
+Саитов Р.Ф. (GD ООО «Гаскар Интеграция»), Бежанов И.В. (former GD + 37.2%
+shareholder), Любимов А.С. (председатель), Климов М.А. (учредитель),
+Жигулин А.М. (ГД), Сазанова А.А. (ГД), Давыдов В.И. (ГД Фонд «ДАР»),
+Сиразатдинов Н.В. (учредитель АРРС), Безроднова А.С. (директор), Никифоров
+А.С. (1-й замгендиректора «Аэромакс»), Ткач К.В. (100% учредитель НПК
+«ГЕРОН»).
+
+**Tier 4 — pure technical/instructor role, no exec title (5):**
+Смородин А., Бровченко С.Р.\*, Карабинский И.И.\*, Толстоусов А. /
+Толстоусова А. (Гагаринг counter-drone instructor pair), Иванкин С. — \*two
+of these (Бровченко, Карабинский) scored on an apparent false-positive
+keyword match (their listed roles are fund-director titles, not engineering
+ones) and should be re-read before treating as genuinely technical.
+
+**Tier 5 — OpenSanctions candidate match only, no confirmed role (~43):**
+Lower-priority leads; per the standing OpenSanctions nuance
+([[opensanctions_ru_inn_dataset_nuance]] in memory) a candidate `match_id`
+can be a same-name person, not the actual subject — check `topics` and
+corroborating role/context detail before treating any of these as a real
+hit, the same discipline already applied to Гаврилов above.
+
+**Deprioritized — no realistic near-term signal (179):**
+32 are explicitly `graph_tier: "reference"` (family/staff, deliberately kept
+off the relationship graph); the remainder have no roles, no organization
+ties, and no sanctions/OpenSanctions hits at all on the current record —
+this is the "random chat member" bucket, not worth screening ahead of
+anything above.
+
+**Practical order**: finish the Tier 1 PEPs (EGRUL/rupep.org name+DOB search,
+not a `pb.nalog.ru` screen — none of the three have a personal ИНН to feed
+the screener yet) → resolve the Замятин/Махнёв Tier 2 pair (and the
+Махнёв/Махнёв dupe) → work down Tier 3/4 as `screen_upr_uchr.py` or press
+searches turn up their ИНН → only chase Tier 5 if the higher tiers are dry.
+
