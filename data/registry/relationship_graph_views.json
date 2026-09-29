@@ -1572,7 +1572,7 @@
           "label": "Елисеев Дмитрий Николаевич",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 6
+          "degree": 8
         },
         {
           "id": "eliseev-ilya-vladimirovich",
@@ -3128,7 +3128,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 9
         },
         {
           "id": "ooo-btr-donetsk",
@@ -3632,7 +3632,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 6
+          "degree": 8
         },
         {
           "id": "ooo-npk-zevs",
@@ -4016,7 +4016,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-stratim",
@@ -11302,7 +11302,7 @@
           "label": "Владимирский Михаил Юрьевич",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 4
+          "degree": 6
         },
         {
           "id": "vlasenkova-alina-aleksandrovna",
@@ -11398,7 +11398,7 @@
           "label": "Захаров Сергей Николаевич",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "zamyatin-aleksandr-yurevich",
@@ -14584,7 +14584,7 @@
           "target": "ooo-tsentr-bespilotnykh-sistem-tula",
           "type": "role",
           "label": "founder",
-          "source_id": "s6813",
+          "source_id": "s8172",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -17452,6 +17452,17 @@
         },
         {
           "source": "eliseev-dmitriy-nikolaevich",
+          "target": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8174",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "eliseev-dmitriy-nikolaevich",
           "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
           "type": "directs",
           "label": null,
@@ -17476,8 +17487,19 @@
           "source": "eliseev-dmitriy-nikolaevich",
           "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
           "type": "role",
+          "label": "director",
+          "source_id": "s8174",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "eliseev-dmitriy-nikolaevich",
+          "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
+          "type": "role",
           "label": "founder",
-          "source_id": "s6808",
+          "source_id": "s8174",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -27047,7 +27069,7 @@
           "target": "ooo-npo-eyler",
           "type": "role",
           "label": "director",
-          "source_id": "s6814",
+          "source_id": "s8173",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -27058,7 +27080,7 @@
           "target": "ooo-npo-eyler",
           "type": "role",
           "label": "founder",
-          "source_id": "s6814",
+          "source_id": "s8173",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -27916,7 +27938,7 @@
           "target": "ano-ntsns-nevskiy-tsentr-nauchnogo-sotrudnichestva",
           "type": "role",
           "label": "director",
-          "source_id": "s6848",
+          "source_id": "s8177",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -27949,7 +27971,7 @@
           "target": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
           "type": "role",
           "label": "founder",
-          "source_id": "s6844",
+          "source_id": "s8177",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -27993,7 +28015,7 @@
           "target": "ooo-spetsmat-spetsialnye-materialy",
           "type": "role",
           "label": "founder",
-          "source_id": "s6834",
+          "source_id": "s8177",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -31928,10 +31950,32 @@
         },
         {
           "source": "vladimirskiy-mikhail-yurevich",
+          "target": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
+          "type": "role",
+          "label": "founder",
+          "source_id": "s8178",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "vladimirskiy-mikhail-yurevich",
           "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
           "type": "founded",
           "label": null,
           "source_id": "s6808",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "vladimirskiy-mikhail-yurevich",
+          "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
+          "type": "role",
+          "label": "founder",
+          "source_id": "s8178",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -32096,7 +32140,7 @@
           "target": "ooo-intel-dron",
           "type": "role",
           "label": "director",
-          "source_id": "s6815",
+          "source_id": "s8175",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -32107,7 +32151,7 @@
           "target": "ooo-intel-dron",
           "type": "role",
           "label": "founder",
-          "source_id": "s6815",
+          "source_id": "s8175",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -32228,7 +32272,7 @@
           "target": "ooo-aero-khit",
           "type": "role",
           "label": "director",
-          "source_id": "s0466",
+          "source_id": "s8166",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -32254,6 +32298,17 @@
           "as_of": "2022-10-27",
           "weight": 1.0,
           "temporal_status": "historical",
+          "confidence": null
+        },
+        {
+          "source": "zakharov-sergey-nikolaevich",
+          "target": "ooo-status-53",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8171",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
           "confidence": null
         },
         {
@@ -33884,7 +33939,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 7
+          "degree": 9
         },
         {
           "id": "ooo-btr-donetsk",
@@ -34628,7 +34683,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-stratim",
@@ -40537,7 +40592,7 @@
           "target": "ooo-tsentr-bespilotnykh-sistem-tula",
           "type": "role",
           "label": "founder",
-          "source_id": "s6813",
+          "source_id": "s8172",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
