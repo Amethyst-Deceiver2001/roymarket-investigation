@@ -2,7 +2,7 @@
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1130,
-  "edge_count": 1919,
+  "edge_count": 1924,
   "unresolved_count": 110,
   "nodes": [
     {
@@ -463,7 +463,7 @@
       "sanctioned": false,
       "legal_form": "АО",
       "variant": null,
-      "degree": 4
+      "degree": 6
     },
     {
       "id": "ao-npp-real",
@@ -803,7 +803,7 @@
       "label": "Байгутлина Ирина Анатольевна",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 4
+      "degree": 5
     },
     {
       "id": "baykov-valeriy-dmitrievich",
@@ -1957,7 +1957,7 @@
       "label": "Городничин Дмитрий Александрович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "gotsko-ivan-ivanovich",
@@ -3717,7 +3717,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 7
+      "degree": 8
     },
     {
       "id": "ooo-ntc-arkodim",
@@ -3921,7 +3921,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "ooo-sistemnyy-integrator",
@@ -4197,7 +4197,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 13
+      "degree": 14
     },
     {
       "id": "ooo-vostochnye-vorota-zabaykalsk-manchzhuriya",
@@ -4513,7 +4513,7 @@
       "label": "Потапов Игорь Владимирович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 3
+      "degree": 5
     },
     {
       "id": "potapov-vladimir-fedorovich",
@@ -11204,7 +11204,7 @@
       "label": "Ступников Андрей Генадьевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "sugak-mikhail-ivanovich",
@@ -14185,7 +14185,18 @@
       "target": "ooo-npts-basirtk",
       "type": "role",
       "label": "director",
-      "source_id": "s0003",
+      "source_id": "s8111",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "baygutlina-irina-anatolevna",
+      "target": "ooo-npts-basirtk",
+      "type": "role",
+      "label": "founder",
+      "source_id": "s8111",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -14999,7 +15010,7 @@
       "target": "npo-kaysant",
       "type": "role",
       "label": "director",
-      "source_id": "s6744",
+      "source_id": "s8123",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -15032,7 +15043,7 @@
       "target": "ooo-vozdushnyy-traktat",
       "type": "role",
       "label": "director",
-      "source_id": "s0506",
+      "source_id": "s8118",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -15043,7 +15054,7 @@
       "target": "ooo-vozdushnyy-traktat",
       "type": "role",
       "label": "founder",
-      "source_id": "s0506",
+      "source_id": "s8118",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -15098,7 +15109,7 @@
       "target": "ovod",
       "type": "role",
       "label": "director",
-      "source_id": "s6727",
+      "source_id": "s8118",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -15109,7 +15120,7 @@
       "target": "ovod",
       "type": "role",
       "label": "founder",
-      "source_id": "s0526",
+      "source_id": "s8118",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -17815,7 +17826,7 @@
       "target": "ooo-kopterlab",
       "type": "role",
       "label": "director",
-      "source_id": "s0473",
+      "source_id": "s8110",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -17826,7 +17837,7 @@
       "target": "ooo-kopterlab",
       "type": "role",
       "label": "founder",
-      "source_id": "s0473",
+      "source_id": "s8110",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -18707,6 +18718,17 @@
       "type": "role",
       "label": "co-inventor (ПрЭВМ RU2023613722)",
       "source_id": "s1054",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "gorodnichin-dmitriy-aleksandrovich",
+      "target": "ooo-vizionero",
+      "type": "role",
+      "label": "founder",
+      "source_id": "s8113",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20235,7 +20257,7 @@
       "target": "ooo-kravt",
       "type": "role",
       "label": "director",
-      "source_id": "s0452",
+      "source_id": "s8124",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20246,7 +20268,7 @@
       "target": "ooo-kravt",
       "type": "role",
       "label": "founder",
-      "source_id": "s0452",
+      "source_id": "s8124",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20312,7 +20334,7 @@
       "target": "ooo-kravt-udmurtiya",
       "type": "role",
       "label": "director",
-      "source_id": "s0509",
+      "source_id": "s8124",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20323,7 +20345,7 @@
       "target": "ooo-kravt-udmurtiya",
       "type": "role",
       "label": "founder",
-      "source_id": "s0509",
+      "source_id": "s8124",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20345,7 +20367,7 @@
       "target": "ooo-spdbbk",
       "type": "role",
       "label": "director",
-      "source_id": "s6847",
+      "source_id": "s8124",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20433,7 +20455,7 @@
       "target": "ao-stratim",
       "type": "role",
       "label": "director",
-      "source_id": "s0459",
+      "source_id": "s8114",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20477,7 +20499,7 @@
       "target": "ooo-stratim",
       "type": "role",
       "label": "director",
-      "source_id": "s6802",
+      "source_id": "s8114",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20488,7 +20510,7 @@
       "target": "ooo-stratim",
       "type": "role",
       "label": "founder",
-      "source_id": "s0513",
+      "source_id": "s8114",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21181,7 +21203,7 @@
       "target": "ooo-vizionero",
       "type": "role",
       "label": "director",
-      "source_id": "s6724",
+      "source_id": "s8116",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21192,7 +21214,7 @@
       "target": "ooo-vizionero",
       "type": "role",
       "label": "founder",
-      "source_id": "s6724",
+      "source_id": "s8116",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21379,7 +21401,7 @@
       "target": "ao-ploshchad",
       "type": "role",
       "label": "director",
-      "source_id": "s0472",
+      "source_id": "s8121",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -27634,6 +27656,28 @@
       "confidence": null
     },
     {
+      "source": "potapov-igor-vladimirovich",
+      "target": "ao-npp-bat",
+      "type": "role",
+      "label": "director",
+      "source_id": "s8122",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "potapov-igor-vladimirovich",
+      "target": "ao-npp-bat",
+      "type": "role",
+      "label": "founder",
+      "source_id": "s8122",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "potapov-vladimir-fedorovich",
       "target": "npp-radar-mms",
       "type": "role",
@@ -31587,7 +31631,18 @@
       "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
       "type": "role",
       "label": "director",
-      "source_id": "s0451",
+      "source_id": "s8112",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stupnikov-andrey-genadevich",
+      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
+      "type": "role",
+      "label": "founder",
+      "source_id": "s8112",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -31631,7 +31686,7 @@
       "target": "ooo-pekhtra",
       "type": "role",
       "label": "director",
-      "source_id": "s7412",
+      "source_id": "s8115",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -32005,7 +32060,7 @@
       "target": "ooo-konstruktorskoe-byuro-sinergiya",
       "type": "role",
       "label": "founder",
-      "source_id": "s0508",
+      "source_id": "s8119",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",

@@ -102,6 +102,35 @@ Without `--solve-captcha` (the default), behavior is unchanged from
 before: a captcha hit still raises and the loop skips to the next person,
 same as the original "cannot proceed unattended" design.
 
+**2026-09-29: retry loop widened.** A wrong digit guess (easy on pb's
+distorted images) comes back as a captcha-flavored 400 that doesn't
+literally contain "pbSearchCaptcha" — the original retry check missed
+this and gave up on that person instead of re-prompting. Now matches any
+case-insensitive "captcha" mention and retries up to `MAX_CAPTCHA_ATTEMPTS`
+(8, up from 3) before giving up; every non-retried failure body is also
+appended to `$TMPDIR/pb_nalog_debug.log` so a real "not actually captcha"
+failure can be diagnosed instead of guessed at from a possibly-truncated
+terminal print.
+
+**2026-09-29: request shape matched to a real HAR capture (user-captured
+browser session against pb.nalog.ru, not checked into `data/sources/`).**
+Two real findings from it, both fixed here:
+1. Every `search-proc.json` call in the real UI — including the `search-ul`
+   drill-down — submits the SAME ~40-field form (all its unused filters
+   included as empty strings), not just the fields actually in use. This
+   script was previously sending only the 4-6 fields it needed. A request
+   missing most of an expected form's fields is a textbook bot-detection
+   signal; this is a plausible real contributor to the wall reasserting so
+   aggressively, independent of the count/session-based gate above. Fixed
+   via `FULL_FORM_DEFAULTS`, merged into every call.
+2. The HAR showed the exact same (digits, captchaToken) pair rejected once
+   ("Цифры с картинки введены неверно") and accepted ~8s later on a plain
+   resubmission — nothing else changed. So a "wrong digits" response is not
+   always a real misread; `solve_captcha_interactively()` now retries the
+   identical submission once before concluding the read was wrong and
+   burning a fresh image on it. Missing browser headers (`Origin`, full
+   `Referer` chain, `Accept`) were also added to every request to match.
+
 Usage:
     python3 scripts/screen_upr_uchr.py                  # everyone with inn_personal
     python3 scripts/screen_upr_uchr.py --slug shatrakova-anastasiya-artemovna
@@ -134,7 +163,14 @@ USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
               "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
 SOLVE_CAPTCHA = False  # set from --solve-captcha in main()
-MAX_CAPTCHA_ATTEMPTS = 3  # per blocked call — a wrong guess retries, doesn't abort
+MAX_CAPTCHA_ATTEMPTS = 8  # per blocked call — a wrong guess retries, doesn't abort.
+# Bumped from 3 -> 8 2026-09-29: a misread digit on pb.nalog.ru's distorted
+# captcha image is common enough that 3 tries wasn't giving a real user a fair
+# shot at getting through the wall in one sitting.
+DEBUG_LOG = Path(tempfile.gettempdir()) / "pb_nalog_debug.log"  # raw failing
+# response bodies get appended here so a captcha-adjacent 400 that doesn't
+# match the retry pattern can actually be diagnosed instead of just printed
+# (and possibly truncated by the terminal) and given up on.
 
 POLL_DELAY = 2.0
 POLL_MAX_TRIES = 10
@@ -151,44 +187,112 @@ CONNECT_TIMEOUT = 10  # short on purpose — a hung/geoblocked connection should
                        # up to 10 polls stacked on top of that.
 
 
-def _http_get(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=CONNECT_TIMEOUT) as resp:
-        return resp.read()
+def _raise_with_detail(e: urllib.error.HTTPError, where: str) -> None:
+    """2026-09-29: the captcha-solving sub-requests (dialog page, image,
+    digit submission) had NO error handling at all -- a plain HTTPError from
+    any of the three crashed straight out of solve_captcha_interactively(),
+    skipping post()'s retry logic and its debug-log write entirely, and
+    printing as a bare 'HTTP Error 400: ' with nothing after it whenever
+    pb.nalog.ru sent an empty reason phrase (which it does under this same
+    anti-bot wall, apparently applied to the captcha subsystem itself when
+    hit repeatedly back-to-back). Always surface the real body and log it."""
+    try:
+        detail = e.read().decode("utf-8", errors="replace")
+    except Exception:
+        detail = ""
+    with DEBUG_LOG.open("a", encoding="utf-8") as f:
+        f.write(f"\n--- {time.strftime('%H:%M:%S')} {where} HTTP {e.code} ---\n{detail}\n")
+    raise RuntimeError(f"{where} failed: HTTP {e.code} -- {detail or '(empty body)'}") from None
 
 
-def solve_captcha_interactively() -> str:
+def _http_get(url: str, where: str, referer: str = "https://pb.nalog.ru/search.html") -> bytes:
+    # 2026-09-29: a real browser always sends Referer/Accept on these GETs
+    # (HAR-confirmed, see the FULL_FORM_DEFAULTS comment below) -- a bare
+    # User-Agent-only request is itself a plausible bot signal.
+    req = urllib.request.Request(url, headers={
+        "User-Agent": USER_AGENT,
+        "Referer": referer,
+        "Accept": "*/*",
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=CONNECT_TIMEOUT) as resp:
+            return resp.read()
+    except urllib.error.HTTPError as e:
+        _raise_with_detail(e, where)
+
+
+def solve_captcha_interactively(_attempt: int = 0) -> str:
     """Fetch a fresh pb.nalog.ru captcha, save it locally, prompt on stdin
     for the digits, submit them, and return the resulting pbCaptchaToken to
     attach to the retried request. See the module docstring for the
-    HAR-derived flow this drives."""
-    html = _http_get(CAPTCHA_DIALOG_URL).decode("utf-8", errors="replace")
-    m = re.search(r'name="captchaToken"\s+value="([0-9A-Fa-f]+)"', html)
-    if not m:
-        raise RuntimeError("could not find captchaToken in captcha-dialog.html — page shape may have changed")
-    token = m.group(1)
+    HAR-derived flow this drives.
 
-    img_bytes = _http_get(f"{CAPTCHA_IMG_URL}?a={token}&version=4")
-    CAPTCHA_IMG_PATH.write_bytes(img_bytes)
+    2026-09-29: the captcha subsystem itself (dialog page / image / digit
+    submission) can get rejected under the same anti-bot wall as the main
+    search endpoint, especially when solving several in a row -- retries
+    with a fresh token up to MAX_CAPTCHA_ATTEMPTS instead of crashing the
+    whole person on the first sub-request failure."""
+    try:
+        html = _http_get(CAPTCHA_DIALOG_URL, "captcha-dialog.html").decode("utf-8", errors="replace")
+        m = re.search(r'name="captchaToken"\s+value="([0-9A-Fa-f]+)"', html)
+        if not m:
+            raise RuntimeError("could not find captchaToken in captcha-dialog.html — page shape may have changed")
+        token = m.group(1)
 
-    print(f"\n  >>> CAPTCHA required. Image saved to: {CAPTCHA_IMG_PATH}")
-    print(f"      Open it (e.g. `open {CAPTCHA_IMG_PATH}`) and type the digits you see.")
-    digits = input("      Digits: ").strip()
+        img_bytes = _http_get(f"{CAPTCHA_IMG_URL}?a={token}&version=4", "captcha.bin",
+                               referer=CAPTCHA_DIALOG_URL)
+        CAPTCHA_IMG_PATH.write_bytes(img_bytes)
 
-    body = urllib.parse.urlencode({"captcha": digits, "captchaToken": token}).encode("ascii")
-    req = urllib.request.Request(
-        CAPTCHA_PROC_URL, data=body, method="POST",
-        headers={
-            "Content-Type": "application/x-www-form-urlencoded",
-            "X-Requested-With": "XMLHttpRequest",
-            "User-Agent": USER_AGENT,
-        },
-    )
-    with urllib.request.urlopen(req, timeout=CONNECT_TIMEOUT) as resp:
-        result = json.loads(resp.read().decode("utf-8"))
-    if not isinstance(result, str) or not result:
-        raise RuntimeError(f"unexpected captcha-proc.json response: {result!r}")
-    return result
+        print(f"\n  >>> CAPTCHA required. Image saved to: {CAPTCHA_IMG_PATH}")
+        print(f"      Open it (e.g. `open {CAPTCHA_IMG_PATH}`) and type the digits you see.")
+        digits = input("      Digits: ").strip()
+
+        # 2026-09-29: a real HAR capture showed the EXACT SAME (digits, token)
+        # pair rejected once ("Цифры с картинки введены неверно") and then
+        # accepted ~8s later on a plain resubmission -- no new image, no new
+        # token, nothing changed. So a "wrong digits" response isn't always a
+        # real misread; it can be transient. Retry the identical submission
+        # once before concluding the read was actually wrong and burning a
+        # fresh captcha image on it.
+        def _submit(d: str, t: str) -> str:
+            body = urllib.parse.urlencode({"captcha": d, "captchaToken": t}).encode("ascii")
+            req = urllib.request.Request(
+                CAPTCHA_PROC_URL, data=body, method="POST",
+                headers={
+                    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                    "X-Requested-With": "XMLHttpRequest",
+                    "User-Agent": USER_AGENT,
+                    "Origin": "https://pb.nalog.ru",
+                    "Referer": CAPTCHA_DIALOG_URL,
+                    "Accept": "application/json, text/javascript, */*; q=0.01",
+                },
+            )
+            try:
+                with urllib.request.urlopen(req, timeout=CONNECT_TIMEOUT) as resp:
+                    return json.loads(resp.read().decode("utf-8"))
+            except urllib.error.HTTPError as e:
+                _raise_with_detail(e, "captcha-proc.json")
+
+        try:
+            result = _submit(digits, token)
+        except RuntimeError as e:
+            if "captcha" in str(e).lower():
+                print(f"      ({e} -- retrying the identical submission once, same image/digits, "
+                      f"before assuming it was really misread)")
+                time.sleep(2.0)
+                result = _submit(digits, token)
+            else:
+                raise
+        if not isinstance(result, str) or not result:
+            raise RuntimeError(f"unexpected captcha-proc.json response: {result!r}")
+        return result
+    except (urllib.error.URLError, RuntimeError) as e:
+        if _attempt < MAX_CAPTCHA_ATTEMPTS:
+            print(f"      (captcha subsystem itself rejected this attempt: {e} -- fetching a fresh captcha, "
+                  f"attempt {_attempt + 2}/{MAX_CAPTCHA_ATTEMPTS + 1})")
+            time.sleep(3.0)
+            return solve_captcha_interactively(_attempt + 1)
+        raise
 
 
 def post(data: dict, _captcha_attempts: int = 0) -> dict:
@@ -196,9 +300,16 @@ def post(data: dict, _captcha_attempts: int = 0) -> dict:
     req = urllib.request.Request(
         BASE_URL, data=body, method="POST",
         headers={
-            "Content-Type": "application/x-www-form-urlencoded",
+            # 2026-09-29: matched to a real HAR-captured browser request
+            # (charset suffix, Origin, Referer, Accept) -- see the
+            # FULL_FORM_DEFAULTS comment for why this matters as much as the
+            # field-shape fix.
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
             "X-Requested-With": "XMLHttpRequest",
             "User-Agent": USER_AGENT,
+            "Origin": "https://pb.nalog.ru",
+            "Referer": "https://pb.nalog.ru/search.html",
+            "Accept": "application/json, text/javascript, */*; q=0.01",
         },
     )
     try:
@@ -213,12 +324,22 @@ def post(data: dict, _captcha_attempts: int = 0) -> dict:
             detail = e.read().decode("utf-8", errors="replace")
         except Exception:
             detail = ""
-        if SOLVE_CAPTCHA and "pbSearchCaptcha" in detail and _captcha_attempts < MAX_CAPTCHA_ATTEMPTS:
+        # 2026-09-29: matched literal "pbSearchCaptcha" only -- but a wrong
+        # digit guess on the captcha we just solved comes back as a 400 with
+        # a DIFFERENT-shaped body (still captcha-related, just not that exact
+        # string), so the old check let it fall straight through to the
+        # raise below instead of prompting again. Widened to any mention of
+        # "captcha" case-insensitively.
+        if SOLVE_CAPTCHA and "captcha" in detail.lower() and _captcha_attempts < MAX_CAPTCHA_ATTEMPTS:
+            print(f"      (captcha-related 400, attempt {_captcha_attempts + 1}/{MAX_CAPTCHA_ATTEMPTS} -- retrying)")
             pb_captcha_token = solve_captcha_interactively()
             return post({**data, "pbCaptchaToken": pb_captcha_token}, _captcha_attempts + 1)
+        with DEBUG_LOG.open("a", encoding="utf-8") as f:
+            f.write(f"\n--- {time.strftime('%H:%M:%S')} HTTP {e.code} ---\n{detail}\n")
         raise urllib.error.HTTPError(e.url, e.code, f"{e.reason} -- {detail}", e.headers, None) from None
 
     if isinstance(result, dict) and result.get("captchaRequired") and SOLVE_CAPTCHA and _captcha_attempts < MAX_CAPTCHA_ATTEMPTS:
+        print(f"      (captchaRequired in 200 response, attempt {_captcha_attempts + 1}/{MAX_CAPTCHA_ATTEMPTS} -- retrying)")
         pb_captcha_token = solve_captcha_interactively()
         return post({**data, "pbCaptchaToken": pb_captcha_token}, _captcha_attempts + 1)
 
@@ -236,17 +357,43 @@ def poll(request_id: str) -> dict:
     raise TimeoutError(f"search-proc.json never resolved id={request_id}")
 
 
+# 2026-09-29: HAR-captured from a real browser session against pb.nalog.ru
+# (data/sources not checked in -- captured to /Users/ak/Downloads/pb.nalog.ru1.har,
+# see notes/script_notes or ask -- for the raw entries). The real UI form always
+# submits this FULL ~40-field set, all its unused filters included as empty
+# strings, on every single search-proc.json call -- our script was sending only
+# the 4-6 fields it actually used. A request missing dozens of expected fields
+# is a textbook bot-detection signal; this is very likely a real contributor to
+# how aggressively the captcha wall was reasserting for scripted traffic
+# (independent of the count/session-based gate already documented above -- both
+# can be true at once). Every request now carries the identical field set the
+# browser does, with only the fields that vary actually overridden per call.
+FULL_FORM_DEFAULTS = {
+    "queryAll": "", "queryUl": "", "okvedUl": "", "okvedTypeUl": "", "regionUl": "",
+    "statusUl": "", "isMspUl": "", "mspUl1": "1", "mspUl2": "1", "mspUl3": "1",
+    "queryIp": "", "okvedIp": "", "okvedTypeIp": "", "regionIp": "", "statusIp": "",
+    "isMspIp": "", "mspIp1": "1", "mspIp2": "1", "mspIp3": "1", "taxIp": "",
+    "queryUpr": "", "uprType1": "1", "uprType0": "1", "queryRdl": "", "dateRdl": "",
+    "queryAddr": "", "regionAddr": "", "queryOgr": "", "ogrFl": "1", "ogrUl": "1",
+    "ogrnUlDoc": "", "ogrnIpDoc": "", "npTypeDoc": "1", "nameUlDoc": "", "nameIpDoc": "",
+    "formUlDoc": "", "formIpDoc": "", "ifnsDoc": "", "dateFromDoc": "", "dateToDoc": "",
+    "page": "1", "pageSize": "10", "pbCaptchaToken": "", "token": "",
+}
+
+
 def search_upr_uchr(inn: str) -> dict:
-    ack = post({"mode": "search-upr-uchr", "queryUpr": inn,
-                "uprType1": "1", "uprType0": "1", "page": "1", "pageSize": "50"})
+    ack = post({**FULL_FORM_DEFAULTS, "mode": "search-upr-uchr", "queryUpr": inn})
     if ack.get("captchaRequired"):
         raise RuntimeError("captcha required on search-upr-uchr — cannot proceed unattended")
     return poll(ack["id"])
 
 
-def search_ul_by_token(token: str, query_name: str) -> list[dict]:
-    ack = post({"mode": "search-ul", "token": token, "queryUl": query_name,
-                "page": "1", "pageSize": "50"})
+def search_ul_by_token(token: str, query_name: str, inn: str) -> list[dict]:
+    # The real form keeps queryUpr populated on the drill-down call too (the
+    # search box state persists across the two-stage flow in the browser) --
+    # matching that here, not just the card token + query name.
+    ack = post({**FULL_FORM_DEFAULTS, "mode": "search-ul", "token": token,
+                "queryUl": query_name, "queryUpr": inn})
     if ack.get("captchaRequired"):
         raise RuntimeError("captcha required on search-ul drill-down — cannot proceed unattended")
     result = poll(ack["id"])
@@ -303,7 +450,7 @@ def main() -> None:
                 if not token:
                     continue
                 try:
-                    rows = search_ul_by_token(token, query_name)
+                    rows = search_ul_by_token(token, query_name, inn)
                 except (urllib.error.URLError, RuntimeError, TimeoutError) as e:
                     print(f"  {i}/{len(targets)}  {label}  ERROR at drill-down ({role_label}): {e}")
                     drilldown_failed = True
