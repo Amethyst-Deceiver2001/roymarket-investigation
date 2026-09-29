@@ -6927,11 +6927,20 @@
   "entities": {
     "ooo-atlant-logistik": {
       "set": {
+        "founders": [
+          {
+            "name": "Хутешен Алексей Александрович",
+            "nominal_value": 10000,
+            "share": "100%",
+            "note": "Сведения об участниках/учредителях section, this entity's own full signed ЕГРЮЛ выписка. Director is a different person (Русецкий Алексей Сергеевич) -- Хутешен is owner, not manager, here.",
+            "source_id": "s6970"
+          }
+        ],
         "related_entities": [
           {
             "slug": "ooo-everest",
-            "relationship": "Identical registered address (109125, г. Москва, пр-кт Волгоградский, д.73, стр.1). No director or founder overlap found (this entity's director is Русецкий Алексей Сергеевич; ooo-everest's is Беленкова Анжелика Евгеньевна, sole founder Хутешен Алексей Александрович). Co-location only, likely a shared registered-agent/virtual-office suite. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6970, ooo-everest's s7449, both address blocks read 2026-09-29).",
-            "relationship_type": "shared-address",
+            "relationship": "Identical registered address (109125, г. Москва, пр-кт Волгоградский, д.73, стр.1). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity (see founders[] above) -- this entity's director, Русецкий Алексей Сергеевич, differs from ooo-everest's (Беленкова), but ownership is the same person. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6970, ooo-everest's s7449, both read 2026-09-29).",
+            "relationship_type": "sister-entity",
             "confidence": "confirmed",
             "source_id": "s7449"
           }
@@ -6939,8 +6948,46 @@
       },
       "why": [
         "2026-09-15: found during a registry-wide precise-address co-location scan (no EGRUL needed, both entities' address/director/founders fields already in the registry) -- new shared-address relationship_type value added the same session.",
-        "2026-09-29: sourced the shared-address edge directly against each entity's own already-pulled full signed ЕГРЮЛ выписка (address blocks read and confirmed to match verbatim)."
+        "2026-09-29: sourced the shared-address edge directly against each entity's own already-pulled full signed ЕГРЮЛ выписка (address blocks read and confirmed to match verbatim). Also read this entity's own founders section for the first time while closing an unsourced role-edge backlog -- names Хутешен Алексей Александрович as sole founder (100%), the same person as ooo-everest's sole founder despite the two entities having different directors. Upgraded the edge from shared-address to sister-entity and corrected the earlier \"no director or founder overlap found\" reading."
       ]
+    },
+    "ooo-npk-zevs": {
+      "set": {
+        "founders": [
+          {
+            "name": "Хутешен Алексей Александрович",
+            "nominal_value": 75000,
+            "share": "75%",
+            "note": "Сведения об участниках/учредителях section, this entity's own full signed ЕГРЮЛ выписка. Same person as this entity's own director.",
+            "source_id": "s6963"
+          },
+          {
+            "name": "Лымарь Артём Викторович",
+            "inn_personal": "234105701301",
+            "nominal_value": 15000,
+            "share": "15%",
+            "source_id": "s6963"
+          },
+          {
+            "name": "Андреев Александр Александрович",
+            "inn_personal": "601702847036",
+            "nominal_value": 5000,
+            "share": "5%",
+            "source_id": "s6963"
+          },
+          {
+            "name": "Романов Роман Валерьевич",
+            "inn_personal": "220601948302",
+            "nominal_value": 5000,
+            "share": "5%",
+            "source_id": "s6963"
+          }
+        ]
+      },
+      "why": [
+        "2026-09-29: read this entity's own full signed ЕГРЮЛ выписка's founders section (already pulled as s6963, 2026-09-07, for the director_history fact) for the first time while closing an unsourced role-edge backlog. Four participants: Хутешен 75% (also director), Лымарь 15% (also this entity's own registered co-signatory elsewhere in the network), Андреев 5%, Романов 5%."
+      ],
+      "verified_against": "data/sources/EGRUL_6161154122_20260907_ooo-npk-zevs.pdf, participants section read in full"
     },
     "9714068459": {
       "set": {
@@ -34531,18 +34578,27 @@
     "ao-opticheskie-sistemy": {
       "set": {
         "notes": "НСПД corroboration (2026-09-08): nspd.gov.ru geoportal search on \"Москва, б-р Яна Райниса, д.41\" returns an ordinary Southern Tushino residential apartment tower — individual flats (кв. 33, 83, 18-77 m²), small basement/technical-floor commercial units (Нежилое, тех.подполье/тех.этаж) — no industrial, office-park, or dedicated commercial facility on record at this address. Confirms the mass-registration mail-drop reading already in tier_basis: this is a residential building, not a place any of the three co-registered companies (this entity, АО «Оптические системы», ООО «Аметист», ООО ПК «Стальной купол») could plausibly conduct real operations from.",
+        "founders": [
+          {
+            "name": "Хутешен Алексей Александрович",
+            "nominal_value": 10000000,
+            "share": "100%",
+            "note": "Сведения о единственном акционере section, this entity's own full signed ЕГРЮЛ выписка.",
+            "source_id": "s6966"
+          }
+        ],
         "related_entities": [
           {
             "slug": "ooo-ametist",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1 -- the residential mail-drop building this entity, ooo-ametist and ooo-pk-stalnoy-kupol all share). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6966, ooo-ametist's s7451, both address blocks read 2026-09-29).",
-            "relationship_type": "shared-address",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1 -- the residential mail-drop building this entity, ooo-ametist and ooo-pk-stalnoy-kupol all share). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity (see founders[] above and ooo-ametist's own founders[]) -- a confirmed common-principal tie, not mere co-location. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6966, ooo-ametist's s7451, both read 2026-09-29).",
+            "relationship_type": "sister-entity",
             "confidence": "confirmed",
             "source_id": "s7451"
           },
           {
             "slug": "ooo-pk-stalnoy-kupol",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6966, ooo-pk-stalnoy-kupol's s6965, both address blocks read 2026-09-29).",
-            "relationship_type": "shared-address",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity (see founders[] above and ooo-pk-stalnoy-kupol's own founders[]) -- a confirmed common-principal tie, not mere co-location. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6966, ooo-pk-stalnoy-kupol's s6965, both read 2026-09-29).",
+            "relationship_type": "sister-entity",
             "confidence": "confirmed",
             "source_id": "s6965"
           }
@@ -34551,7 +34607,7 @@
       "why": [
         "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08",
         "2026-09-15: wired shared-address related_entities[] edges to ooo-ametist and ooo-pk-stalnoy-kupol -- co-location only, no confirmed common principal with either. Found during a registry-wide address-co-location scan.",
-        "2026-09-29: sourced both shared-address edges directly against each entity's own already-pulled full signed ЕГРЮЛ выписка (address blocks read and confirmed to match verbatim)."
+        "2026-09-29: sourced both shared-address edges directly against each entity's own already-pulled full signed ЕГРЮЛ выписка (address blocks read and confirmed to match verbatim). Also read this entity's own founders section for the first time while closing an unsourced role-edge backlog -- it names Хутешен Алексей Александрович as sole shareholder (100%), the SAME person who is ooo-ametist's and ooo-pk-stalnoy-kupol's sole founder too. Upgraded both related_entities[] edges from shared-address to sister-entity and corrected the earlier (2026-09-15) \"no director or founder overlap found\" reading, which had been written before this entity's own founders section was actually read."
       ],
       "verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
     },
@@ -34562,7 +34618,8 @@
           {
             "name": "Хутешен Алексей Александрович",
             "nominal_value": 50000,
-            "share": "100%"
+            "share": "100%",
+            "source_id": "s7451"
           }
         ],
         "founders_history": [
@@ -34583,15 +34640,15 @@
           },
           {
             "slug": "ao-opticheskie-sistemy",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found (this entity's own director/founder is Хутешен/Беленкова). Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s7451, ao-opticheskie-sistemy's s6966, both address blocks read 2026-09-29).",
-            "relationship_type": "shared-address",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity (this entity's director is Беленкова, but its 100% founder per founders_history above is Хутешен, the same person who is ao-opticheskie-sistemy's sole shareholder). Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s7451, ao-opticheskie-sistemy's s6966, both read 2026-09-29).",
+            "relationship_type": "sister-entity",
             "confidence": "confirmed",
             "source_id": "s6966"
           },
           {
             "slug": "ooo-pk-stalnoy-kupol",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found (this entity's own director/founder is Хутешен/Беленкова). Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s7451, ooo-pk-stalnoy-kupol's s6965, both address blocks read 2026-09-29).",
-            "relationship_type": "shared-address",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s7451, ooo-pk-stalnoy-kupol's s6965, both read 2026-09-29).",
+            "relationship_type": "sister-entity",
             "confidence": "confirmed",
             "source_id": "s6965"
           }
@@ -34620,25 +34677,35 @@
       "why": [
         "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08",
         "2026-09-14: full ЕГРЮЛ-выписка (s7451) confirms sole 100% founder is Хутешен Алексей Александрович (same person as ooo-everest's sole founder) -- resolves the standing person-side reciprocal-role gap with a sourced founders_history entry.",
-        "2026-09-15: wired the sister-entity related_entities[] edge to ooo-everest that the 2026-09-14 why-note already identified but never converted into a graph edge -- found during a registry-wide address-co-location scan (no EGRUL needed, both founders_history entries already sourced). Also added shared-address edges to ao-opticheskie-sistemy and ooo-pk-stalnoy-kupol, the two entities this entity co-registers with, distinguishing that from the stronger everest sister-entity tie."
+        "2026-09-15: wired the sister-entity related_entities[] edge to ooo-everest that the 2026-09-14 why-note already identified but never converted into a graph edge -- found during a registry-wide address-co-location scan (no EGRUL needed, both founders_history entries already sourced). Also added shared-address edges to ao-opticheskie-sistemy and ooo-pk-stalnoy-kupol, the two entities this entity co-registers with, distinguishing that from the stronger everest sister-entity tie.",
+        "2026-09-29: upgraded the ao-opticheskie-sistemy and ooo-pk-stalnoy-kupol edges from shared-address to sister-entity -- reading each entity's own founders section while closing an unsourced role-edge backlog showed Хутешен is the sole founder of all four (this entity, everest, ao-opticheskie-sistemy, ooo-pk-stalnoy-kupol), not just everest as previously recorded."
       ],
       "verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
     },
     "ooo-pk-stalnoy-kupol": {
       "set": {
         "notes": "НСПД corroboration (2026-09-08): nspd.gov.ru geoportal search on \"Москва, б-р Яна Райниса, д.41\" returns an ordinary Southern Tushino residential apartment tower — individual flats (кв. 33, 83, 18-77 m²), small basement/technical-floor commercial units (Нежилое, тех.подполье/тех.этаж) — no industrial, office-park, or dedicated commercial facility on record at this address. Confirms the mass-registration mail-drop reading already in tier_basis: this is a residential building, not a place any of the three co-registered companies (this entity, АО «Оптические системы», ООО «Аметист», ООО ПК «Стальной купол») could plausibly conduct real operations from.",
+        "founders": [
+          {
+            "name": "Хутешен Алексей Александрович",
+            "nominal_value": 100000,
+            "share": "100%",
+            "note": "Сведения об участниках/учредителях section, this entity's own full signed ЕГРЮЛ выписка.",
+            "source_id": "s6965"
+          }
+        ],
         "related_entities": [
           {
             "slug": "ao-opticheskie-sistemy",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6965, ao-opticheskie-sistemy's s6966, both address blocks read 2026-09-29).",
-            "relationship_type": "shared-address",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity (see founders[] above). Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6965, ao-opticheskie-sistemy's s6966, both read 2026-09-29).",
+            "relationship_type": "sister-entity",
             "confidence": "confirmed",
             "source_id": "s6966"
           },
           {
             "slug": "ooo-ametist",
-            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6965, ooo-ametist's s7451, both address blocks read 2026-09-29).",
-            "relationship_type": "shared-address",
+            "relationship": "Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity (see founders[] above). Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's s6965, ooo-ametist's s7451, both read 2026-09-29).",
+            "relationship_type": "sister-entity",
             "confidence": "confirmed",
             "source_id": "s7451"
           }
@@ -34647,13 +34714,22 @@
       "why": [
         "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08",
         "2026-09-15: wired shared-address related_entities[] edges to ao-opticheskie-sistemy and ooo-ametist -- co-location only, no confirmed common principal with either. Found during a registry-wide address-co-location scan.",
-        "2026-09-29: sourced both shared-address edges directly against each entity's own already-pulled full signed ЕГРЮЛ выписка (address blocks read and confirmed to match verbatim)."
+        "2026-09-29: sourced both shared-address edges directly against each entity's own already-pulled full signed ЕГРЮЛ выписка (address blocks read and confirmed to match verbatim). Also read this entity's own founders section for the first time while closing an unsourced role-edge backlog -- it names Хутешен Алексей Александрович as sole founder (100%), the SAME person as ao-opticheskie-sistemy's and ooo-ametist's sole founder. Upgraded both edges from shared-address to sister-entity and corrected the earlier \"no director or founder overlap found\" reading."
       ],
       "verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
     },
     "ooo-prom-tekh": {
       "set": {
         "notes": "недостоверность flag resolved (2026-09-08): the flagged field was the registered address, not the director/founder record. Full EGRUL history (s6964) shows the record immediately following the 05.06.2025 недостоверность entry is a 'Решение об изменении места нахождения ЮЛ' (decision to change legal address), filed 25.09.2025, with the new current address (ул. Петровская, д.6, кв.16, Таганрог) entered 27.11.2025. The pre-flag address itself isn't recoverable from a standard выписка (only current values + the change log survive), but the sequence is unambiguous: ФНС's own address-verification check found the declared address didn't check out, forcing a move — and the replacement address is itself just a residential apartment, not a business premises. Consistent with the rest of this cluster's mail-drop/no-real-premises pattern, not a one-off.",
+        "founders": [
+          {
+            "name": "Хутешен Алексей Александрович",
+            "nominal_value": 10000,
+            "share": "100%",
+            "note": "Сведения об участниках/учредителях section, this entity's own full signed ЕГРЮЛ выписка -- same person as this entity's own director.",
+            "source_id": "s6964"
+          }
+        ],
         "financials": [
           {
             "year": "2024",
@@ -34670,7 +34746,8 @@
         ]
       },
       "why": [
-        "Read full EGRUL change-log sequence around GRN 2256101588620 to identify the flagged field, 2026-09-08"
+        "Read full EGRUL change-log sequence around GRN 2256101588620 to identify the flagged field, 2026-09-08",
+        "2026-09-29: read this entity's own founders section for the first time while closing an unsourced role-edge backlog -- names Хутешен Алексей Александрович as sole founder (100%), same as director."
       ],
       "verified_against": "data/sources/EGRUL_6163233330_20260907_ooo-prom-tekh.pdf, re-read in full"
     },
@@ -35501,7 +35578,8 @@
           {
             "name": "Хутешен Алексей Александрович",
             "nominal_value": 50000,
-            "share": "100%"
+            "share": "100%",
+            "source_id": "s7449"
           }
         ],
         "founders_history": [

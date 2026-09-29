@@ -37,8 +37,8 @@
 
 ## Corporate links
 
-- **Limited Liability Company "Ametist"** `shared-address` — Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1 -- the residential mail-drop building this entity, ooo-ametist and ooo-pk-stalnoy-kupol all share). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's [s6966], ooo-ametist's [s7451], both address blocks read 2026-09-29). [s7451]
-- **Limited Liability Company Production Company "Steel Dome"** `shared-address` — Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's [s6966], ooo-pk-stalnoy-kupol's [s6965], both address blocks read 2026-09-29). [s6965]
+- **Limited Liability Company "Ametist"** `sister-entity` — Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1 -- the residential mail-drop building this entity, ooo-ametist and ooo-pk-stalnoy-kupol all share). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity (see founders[] above and ooo-ametist's own founders[]) -- a confirmed common-principal tie, not mere co-location. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's [s6966], ooo-ametist's [s7451], both read 2026-09-29). [s7451]
+- **Limited Liability Company Production Company "Steel Dome"** `sister-entity` — Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity (see founders[] above and ooo-pk-stalnoy-kupol's own founders[]) -- a confirmed common-principal tie, not mere co-location. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's [s6966], ooo-pk-stalnoy-kupol's [s6965], both read 2026-09-29). [s6965]
 
 ## Sources cited in this profile
 

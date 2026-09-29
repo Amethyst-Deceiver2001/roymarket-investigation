@@ -37,8 +37,8 @@
 
 ## Corporate links
 
-- **Joint-Stock Company "Optical Systems"** `shared-address` — Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's [s6965], ao-opticheskie-sistemy's [s6966], both address blocks read 2026-09-29). [s6966]
-- **Limited Liability Company "Ametist"** `shared-address` — Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). No director or founder overlap found with this entity's own record. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's [s6965], ooo-ametist's [s7451], both address blocks read 2026-09-29). [s7451]
+- **Joint-Stock Company "Optical Systems"** `sister-entity` — Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity (see founders[] above). Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's [s6965], ao-opticheskie-sistemy's [s6966], both read 2026-09-29). [s6966]
+- **Limited Liability Company "Ametist"** `sister-entity` — Identical registered address (125373, г. Москва, б-р Яна Райниса, д.41, помещ.1/1). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity (see founders[] above). Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's [s6965], ooo-ametist's [s7451], both read 2026-09-29). [s7451]
 
 ## Sources cited in this profile
 

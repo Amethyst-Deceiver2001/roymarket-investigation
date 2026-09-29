@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1128,
-  "edge_count": 1917,
-  "unresolved_count": 108,
+  "node_count": 1130,
+  "edge_count": 1925,
+  "unresolved_count": 110,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -487,7 +487,7 @@
       "sanctioned": false,
       "legal_form": "АО",
       "variant": null,
-      "degree": 9
+      "degree": 10
     },
     {
       "id": "ao-pk-azimut",
@@ -2177,7 +2177,7 @@
       "label": "Хутешен Алексей Александрович",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 34
+      "degree": 39
     },
     {
       "id": "kirill-lysogorskiy",
@@ -2545,7 +2545,7 @@
       "label": "Лымарь Артём Викторович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 4
+      "degree": 5
     },
     {
       "id": "lysenko-andrey-olegovich",
@@ -3069,7 +3069,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 7
+      "degree": 8
     },
     {
       "id": "ooo-atlant-servis",
@@ -3645,7 +3645,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 6
+      "degree": 10
     },
     {
       "id": "ooo-npo-eyler",
@@ -3801,7 +3801,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 9
+      "degree": 10
     },
     {
       "id": "ooo-pokrov",
@@ -3849,7 +3849,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 4
+      "degree": 5
     },
     {
       "id": "ooo-prometey",
@@ -10647,6 +10647,12 @@
       "degree": 1
     },
     {
+      "id": "stub::андреев александр александрович",
+      "kind": "unresolved",
+      "label": "Андреев Александр Александрович",
+      "degree": 1
+    },
+    {
       "id": "stub::андреева жанна евгеньевна",
       "kind": "unresolved",
       "label": "Андреева Жанна Евгеньевна",
@@ -10987,6 +10993,12 @@
       "kind": "unresolved",
       "label": "Репнев Станислав Валерьевич",
       "degree": 2
+    },
+    {
+      "id": "stub::романов роман валерьевич",
+      "kind": "unresolved",
+      "label": "Романов Роман Валерьевич",
+      "degree": 1
     },
     {
       "id": "stub::российская федерация",
@@ -12456,7 +12468,7 @@
       "source": "ao-opticheskie-sistemy",
       "target": "ooo-ametist",
       "type": "related",
-      "label": "shared-address",
+      "label": "sister-entity",
       "source_id": "s7451",
       "as_of": null,
       "weight": 1.0,
@@ -12467,7 +12479,7 @@
       "source": "ao-opticheskie-sistemy",
       "target": "ooo-pk-stalnoy-kupol",
       "type": "related",
-      "label": "shared-address",
+      "label": "sister-entity",
       "source_id": "s6965",
       "as_of": null,
       "weight": 1.0,
@@ -19407,9 +19419,20 @@
     {
       "source": "khuteshen-aleksey-aleksandrovich",
       "target": "ao-opticheskie-sistemy",
+      "type": "founded",
+      "label": "100%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "khuteshen-aleksey-aleksandrovich",
+      "target": "ao-opticheskie-sistemy",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6966",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19442,7 +19465,7 @@
       "target": "ooo-ametist",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s7451",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19517,9 +19540,20 @@
     {
       "source": "khuteshen-aleksey-aleksandrovich",
       "target": "ooo-atlant-logistik",
+      "type": "founded",
+      "label": "100%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "khuteshen-aleksey-aleksandrovich",
+      "target": "ooo-atlant-logistik",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6970",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19585,7 +19619,7 @@
       "target": "ooo-everest",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s7449",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19660,9 +19694,20 @@
     {
       "source": "khuteshen-aleksey-aleksandrovich",
       "target": "ooo-npk-zevs",
+      "type": "founded",
+      "label": "75%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "khuteshen-aleksey-aleksandrovich",
+      "target": "ooo-npk-zevs",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6963",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19682,9 +19727,20 @@
     {
       "source": "khuteshen-aleksey-aleksandrovich",
       "target": "ooo-pk-stalnoy-kupol",
+      "type": "founded",
+      "label": "100%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "khuteshen-aleksey-aleksandrovich",
+      "target": "ooo-pk-stalnoy-kupol",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6965",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19715,6 +19771,17 @@
     {
       "source": "khuteshen-aleksey-aleksandrovich",
       "target": "ooo-prom-tekh",
+      "type": "founded",
+      "label": "100%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "khuteshen-aleksey-aleksandrovich",
+      "target": "ooo-prom-tekh",
       "type": "role",
       "label": "director",
       "source_id": "s6964",
@@ -19728,7 +19795,7 @@
       "target": "ooo-prom-tekh",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6964",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21046,6 +21113,17 @@
     {
       "source": "lymar-artem-viktorovich",
       "target": "ooo-npk-zevs",
+      "type": "founded",
+      "label": "15%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "lymar-artem-viktorovich",
+      "target": "ooo-npk-zevs",
       "type": "role",
       "label": "director",
       "source_id": "s6963",
@@ -21059,7 +21137,7 @@
       "target": "ooo-npk-zevs",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6963",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -23060,7 +23138,7 @@
       "source": "ooo-ametist",
       "target": "ao-opticheskie-sistemy",
       "type": "related",
-      "label": "shared-address",
+      "label": "sister-entity",
       "source_id": "s6966",
       "as_of": null,
       "weight": 1.0,
@@ -23082,7 +23160,7 @@
       "source": "ooo-ametist",
       "target": "ooo-pk-stalnoy-kupol",
       "type": "related",
-      "label": "shared-address",
+      "label": "sister-entity",
       "source_id": "s6965",
       "as_of": null,
       "weight": 1.0,
@@ -23159,7 +23237,7 @@
       "source": "ooo-atlant-logistik",
       "target": "ooo-everest",
       "type": "related",
-      "label": "shared-address",
+      "label": "sister-entity",
       "source_id": "s7449",
       "as_of": null,
       "weight": 1.0,
@@ -25766,7 +25844,7 @@
       "source": "ooo-pk-stalnoy-kupol",
       "target": "ao-opticheskie-sistemy",
       "type": "related",
-      "label": "shared-address",
+      "label": "sister-entity",
       "source_id": "s6966",
       "as_of": null,
       "weight": 1.0,
@@ -25777,7 +25855,7 @@
       "source": "ooo-pk-stalnoy-kupol",
       "target": "ooo-ametist",
       "type": "related",
-      "label": "shared-address",
+      "label": "sister-entity",
       "source_id": "s7451",
       "as_of": null,
       "weight": 1.0,
@@ -30108,6 +30186,17 @@
       "confidence": null
     },
     {
+      "source": "stub::андреев александр александрович",
+      "target": "ooo-npk-zevs",
+      "type": "founded",
+      "label": "5%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "stub::андреева жанна евгеньевна",
       "target": "ooo-ekspoket",
       "type": "directs",
@@ -30985,6 +31074,17 @@
       "as_of": "2026-08-24",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "stub::романов роман валерьевич",
+      "target": "ooo-npk-zevs",
+      "type": "founded",
+      "label": "5%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
       "confidence": null
     },
     {
@@ -32791,6 +32891,13 @@
       ]
     },
     {
+      "id": "stub::андреев александр александрович",
+      "raw_name": "Андреев Александр Александрович",
+      "contexts": [
+        "founder of ooo-npk-zevs"
+      ]
+    },
+    {
       "id": "stub::андреева жанна евгеньевна",
       "raw_name": "Андреева Жанна Евгеньевна",
       "contexts": [
@@ -33201,6 +33308,13 @@
       "raw_name": "Репнев Станислав Валерьевич",
       "contexts": [
         "director of ooo-garant-klub"
+      ]
+    },
+    {
+      "id": "stub::романов роман валерьевич",
+      "raw_name": "Романов Роман Валерьевич",
+      "contexts": [
+        "founder of ooo-npk-zevs"
       ]
     },
     {

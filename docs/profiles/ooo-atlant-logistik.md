@@ -37,7 +37,7 @@
 
 ## Corporate links
 
-- **Limited Liability Company "Everest"** `shared-address` — Identical registered address (109125, г. Москва, пр-кт Волгоградский, д.73, стр.1). No director or founder overlap found (this entity's director is Русецкий Алексей Сергеевич; ooo-everest's is Беленкова Анжелика Евгеньевна, sole founder Хутешен Алексей Александрович). Co-location only, likely a shared registered-agent/virtual-office suite. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's [s6970], ooo-everest's [s7449], both address blocks read 2026-09-29). [s7449]
+- **Limited Liability Company "Everest"** `sister-entity` — Identical registered address (109125, г. Москва, пр-кт Волгоградский, д.73, стр.1). ALSO shares its sole founder, Хутешен Алексей Александрович, with this entity (see founders[] above) -- this entity's director, Русецкий Алексей Сергеевич, differs from ooo-everest's (Беленкова), but ownership is the same person. Confirmed directly against both entities' own full signed ЕГРЮЛ выписки (this entity's [s6970], ooo-everest's [s7449], both read 2026-09-29). [s7449]
 
 ## Sources cited in this profile
 
