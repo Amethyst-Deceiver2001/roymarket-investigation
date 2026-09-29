@@ -3185,9 +3185,31 @@
         }
       ],
       "founders": [
-        "Филиппов Михаил Геннадьевич (80%)",
-        "Крючков Дмитрий Александрович (15%)",
-        "Казнова Татьяна Андреевна (5%)"
+        {
+          "name": "Филиппов Михаил Геннадьевич",
+          "inn_personal": "502603133030",
+          "nominal_value": 8000,
+          "share_percent": 80.0,
+          "as_of": "2026-03-12",
+          "source_id": "s5474"
+        },
+        {
+          "name": "Крючков Дмитрий Александрович",
+          "inn_personal": "712900068586",
+          "nominal_value": 1500,
+          "share_percent": 15.0,
+          "as_of": "2026-03-12",
+          "source_id": "s5474",
+          "note": "Also this entity's general director."
+        },
+        {
+          "name": "Казнова Татьяна Андреевна",
+          "inn_personal": "771501583221",
+          "nominal_value": 500,
+          "share_percent": 5.0,
+          "as_of": "2026-03-12",
+          "source_id": "s5474"
+        }
       ],
       "founders_history": [
         {
@@ -4572,7 +4594,26 @@
           "note": "ИНН 229100587605."
         }
       ],
-      "founders": "Максимов Игорь Олегович (35%), Кобзев Виктор Викторович (35%), Курбанов Руслан Минтарович (30%)",
+      "founders": [
+        {
+          "name": "Максимов Игорь Олегович",
+          "inn_personal": "615419445810",
+          "share": "35%",
+          "source_id": "s7342"
+        },
+        {
+          "name": "Кобзев Виктор Викторович",
+          "inn_personal": "615407579591",
+          "share": "35%",
+          "source_id": "s7342"
+        },
+        {
+          "name": "Курбанов Руслан Минтарович",
+          "inn_personal": "229100587605",
+          "share": "30%",
+          "source_id": "s7342"
+        }
+      ],
       "founders_history": [
         {
           "value": "Максимов Игорь Олегович (35%, ИНН 615419445810); Кобзев Виктор Викторович (35%, ИНН 615407579591); Курбанов Руслан Минтарович (30%, ИНН 229100587605)",
@@ -22488,6 +22529,15 @@
           }
         ],
         "charter_capital": 100000,
+        "founders": [
+          {
+            "name": "Гарькуша Владимир Владимирович",
+            "nominal_value": 100000,
+            "share_percent": 100.0,
+            "as_of": "2025-06-16",
+            "source_id": "s6784"
+          }
+        ],
         "founders_history": [
           {
             "value": "Гарькуша Владимир Владимирович 100% (₽100 000)",
@@ -23633,6 +23683,12 @@
             "note": "Director appointment record present (ГРН 2257805131626, 27.05.2025) but name field not captured in this extraction pass; founder (Усачёв П.А.) may or may not be the same person — not confirmed.",
             "source_id": "s0508",
             "value": null
+          },
+          {
+            "as_of": "2025-05-27",
+            "note": "Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (ГРН 2257805131626, 27.05.2025), личный ИНН 781627958891. Full signed ЕГРЮЛ выписка (s6755) re-read 2026-09-29 to fill the name the earlier open-API pull (s0508) missed -- resolves the open_questions entry below: Некрасов IS the director, distinct from founder Усачёв.",
+            "source_id": "s6755",
+            "value": "Некрасов Александр Викторович"
           }
         ],
         "employees": 58,
@@ -23649,20 +23705,16 @@
           {
             "inn_personal": "730603977387",
             "name": "Усачёв Павел Александрович",
-            "share_percent": null,
-            "source_id": "s0508"
+            "nominal_value": 10000,
+            "share_percent": 100.0,
+            "as_of": "2025-04-10",
+            "source_id": "s6755"
           }
         ],
         "name_ru": "ООО «Конструкторское бюро «Синергия»»",
         "ogrn": "1237800134835",
         "okved_code": "72.19",
         "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
-        "open_questions": [
-          {
-            "source_id": null,
-            "text": "Brief manufacturers-table row names \"Некрасов Александр Викторович\" as this company's principal — the fresh EGRUL pull (23.08.2026) captured founder Усачёв Павел Александрович but the director's name did not extract cleanly from that PDF. Not a confirmed conflict: Некрасов may be the (uncaptured) director role rather than contradicting Усачёв's founder role. Needs the EGRUL PDF director page re-checked directly."
-          }
-        ],
         "wb_overlap": "none_found",
         "charter_capital_history": [
           {
@@ -23695,7 +23747,8 @@
         "cbst_tie backfilled 23.08.2026 from already-verified prose/notes (no new document pulled this pass) — see entity notes for the underlying citation.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7842219445). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-09-14: Founding-document bundle (data/sources/UD_1237800134835_20260914_ooo-konstruktorskoe-byuro-sinergiya.zip, s7426) read in full, OCR'd (scanned TIFF original + PDF restatement, Протокол №2, 22.04.2024). ₽10,000 charter capital confirmed directly. Generic boilerplate purpose clause despite the 'design bureau' name -- no UAV-specific language found. Corroborates existing record, no new fact."
+        "2026-09-14: Founding-document bundle (data/sources/UD_1237800134835_20260914_ooo-konstruktorskoe-byuro-sinergiya.zip, s7426) read in full, OCR'd (scanned TIFF original + PDF restatement, Протокол №2, 22.04.2024). ₽10,000 charter capital confirmed directly. Generic boilerplate purpose clause despite the 'design bureau' name -- no UAV-specific language found. Corroborates existing record, no new fact.",
+        "2026-09-29: re-read the already-pulled full ЕГРЮЛ выписка (s6755) directly -- resolves the open_questions entry: director is Некрасов Александр Викторович (ГРН 2257805131626), a different person from sole founder Усачёв. Removed the now-resolved open question and filled founders[]'s share_percent/nominal_value/source_id from founders_history, which already had them."
       ]
     },
     "ooo-kopterlab": {
@@ -25103,7 +25156,8 @@
             "inn_personal": "773600432474",
             "nominal_value": 615773246,
             "share_percent": 100.0,
-            "as_of": "2019-10-14"
+            "as_of": "2019-10-14",
+            "source_id": "s6810"
           }
         ]
       },
@@ -27175,6 +27229,12 @@
             "note": "Director appointment record present (ГРН 1245200032406) but name field not captured in this extraction pass.",
             "source_id": "s0488",
             "value": null
+          },
+          {
+            "as_of": "2024-12-10",
+            "note": "Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (ГРН 1245200032406), личный ИНН 526106960953. Full signed ЕГРЮЛ выписка (s7412, pulled 2026-09-14) re-read 2026-09-29 to fill the name the earlier open-API pull (s0488) missed.",
+            "source_id": "s7412",
+            "value": "Суховерхий Владимир Андреевич"
           }
         ],
         "founders": [
@@ -27417,7 +27477,8 @@
             "inn_personal": "504405055721",
             "nominal_value": 100000,
             "share_percent": 100.0,
-            "as_of": "2026-02-24"
+            "as_of": "2026-02-24",
+            "source_id": "s6799"
           }
         ],
         "sanctions_review": {
@@ -27897,7 +27958,8 @@
             "inn_personal": "344300633904",
             "nominal_value": 10000,
             "share_percent": 100.0,
-            "as_of": "2013-01-23"
+            "as_of": "2013-01-23",
+            "source_id": "s6783"
           }
         ],
         "notes": "2026-09-07: proverki.gov.ru screen (2 records, s6955) — same ИНН inspected within two months by two geographically unrelated Росприроднадзор regional units: Московская/Смоленская области AND Иркутская область/Байкальская природная территория. Neither record carries an address. Suggests multi-region operations or environmental-permit exposure, not a single fixed site — worth an EGRUL check for обособленные подразделения if this entity warrants a deeper look; no address recovered to wire yet.",
@@ -29003,8 +29065,17 @@
           {
             "inn_personal": "732508747179",
             "name": "Чернышов Павел Алексеевич",
-            "share_percent": null,
-            "source_id": "s0487"
+            "share_percent": 40.0,
+            "nominal_value": 6000,
+            "as_of": "2023-09-19",
+            "source_id": "s6730"
+          },
+          {
+            "name": "Корчагина Ольга Александровна",
+            "share_percent": 60.0,
+            "nominal_value": 9000,
+            "as_of": "2023-09-19",
+            "source_id": "s6730"
           }
         ],
         "marketing_claims": [
@@ -29228,6 +29299,7 @@
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
         "full EGRUL extract pulled directly 23.08.2026 (ul-1237300010430-20260823131643.pdf). Full registered name is ООО \"СИМБИРСКОЕ КОНСТРУКТОРСКОЕ БЮРО ПИРАНЬЯ\" (\"Simbirsk Design Bureau Piranha\" -- Simbirsk being Ulyanovsk historical/Soviet-era name) -- sole founder = sole director since 2023.",
+        "2026-09-29: the \"sole founder\" reading above is superseded -- the newer full signed ЕГРЮЛ выписка (s6730, pulled 2026-09-07) shows a 40/60 split between Чернышов Павел Алексеевич and Корчагина Ольга Александровна; the scalar founders[] array had stayed on the older single-founder s0487 reading even after founders_history was updated to the correct split. Corrected founders[] to match founders_history.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0761).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7300024069). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-08-25: full site + product-catalog scan (piranhafpv.ru, its wp-content/uploads/2026/07/web.pdf catalog [s1410], t.me/s/piranhafpv). SELF-INCRIMINATING MARKETING COPY, verbatim: site homepage — \"Поставляем дроны напрямую до адресатов в ЛНР и ДНР\" (we deliver drones directly to recipients in the LNR and DNR) and \"«Убийца Abrams» / Так окрестили наш FPV дрон\" (\"Abrams killer\" — that's what they nicknamed our FPV drone); catalog page 3 — \"Первый американский танк Abrams в зоне СВО уничтожен FPV-дроном «Пиранья-10»\" (the first American Abrams tank destroyed in the SVO zone was destroyed by a «Пиранья-10» FPV drone) [s1410]. Production-scale claims (self-reported, not independently verified): \"более 40 000 беспилотных систем выпущено с 2022 года\" (40,000+ UAS produced since 2022), \"от 1000 БВС в день\" (production capacity up to 1000 UAS/day), \"4 цеха по сборке БВС и систем связи\" (4 assembly shops), \"12 сборочных линий с непрерывным циклом\" (12 continuous-cycle assembly lines), plus in-house 3D-modeling/prototyping centers, a design bureau + IT unit for AI/control-systems development, and own chip/antenna/module development [s1410]. Full technical specs for «Пиранья-7»/«10»/«13» (added to products[] above) resolve the earlier open question about GUR's differing 7/10/13 numbering — these ARE the current official product line, not a numbering discrepancy. No team/leadership names found anywhere in the catalog or site (consistent with the company's low public profile for Чернышов).",
@@ -29669,14 +29741,30 @@
             "note": "The signing-authority role captured in this extract is \"ЛИКВИДАТОР\" (liquidator), not a normal director/GD — this entity is in the process of being wound down (ликвидация) as of this pull. Liquidator's own name not captured in this extraction pass.",
             "source_id": "s0513",
             "value": "[ЛИКВИДАТОР — company in liquidation]"
+          },
+          {
+            "as_of": "2026-03-02",
+            "note": "Должность: ЛИКВИДАТОР (ГРН 2265200138157, 02.03.2026), личный ИНН 510203980877 -- same person as the entity's 75% founder. Full signed ЕГРЮЛ выписка pulled 2026-09-07, re-read 2026-09-29 to fill the name the earlier open-API pull (s0513) missed.",
+            "source_id": "s6802",
+            "value": "Костюнин Павел Андреевич"
           }
         ],
         "founders": [
           {
             "inn_personal": "510203980877",
             "name": "Костюнин Павел Андреевич",
-            "share_percent": null,
-            "source_id": "s0513"
+            "nominal_value": 7500,
+            "share_percent": 75.0,
+            "as_of": "2024-04-01",
+            "source_id": "s6802"
+          },
+          {
+            "inn": "7720901379",
+            "name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СТРАТИМ\"",
+            "nominal_value": 2500,
+            "share_percent": 25.0,
+            "as_of": "2024-04-01",
+            "source_id": "s6802"
           }
         ],
         "name_ru": "ООО «Стратим»",
@@ -30794,7 +30882,8 @@
             "inn_personal": "561012075269",
             "nominal_value": 2000,
             "share_percent": 20.0,
-            "as_of": "2023-04-24"
+            "as_of": "2023-04-24",
+            "source_id": "s6813"
           },
           {
             "ogrn": "1107154016529",
@@ -30802,7 +30891,8 @@
             "inn": "7105509736",
             "nominal_value": 2000,
             "share_percent": 20.0,
-            "as_of": "2023-04-24"
+            "as_of": "2023-04-24",
+            "source_id": "s6813"
           },
           {
             "ogrn": "1167154075880",
@@ -30810,7 +30900,8 @@
             "inn": "7107116177",
             "nominal_value": 6000,
             "share_percent": 60.0,
-            "as_of": "2023-04-24"
+            "as_of": "2023-04-24",
+            "source_id": "s6813"
           }
         ],
         "director": "Борисов Александр Сергеевич",
@@ -30995,7 +31086,34 @@
             "note": "ИНН 645001842561 (row 27 of the extract). The only director entry in the ЕГРЮЛ выписка: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (row 29). Кузякин Д.В. (ИНН 501306766736, rows 38-39, the same ИНН as the individually EU/UA/CH-sanctioned chief designer on file, kuzyakin-dmitriy-vasilevich) appears in the extract only as a 25% founder, entered 13.12.2023 (ГРН 2235002551111). The extract does not show who held the general-director office before 20.05.2025; an earlier entry here calling Кузякин the founding general director from 20.01.2022 was removed on 2026-09-20 because the extract does not state it."
           }
         ],
-        "founders": "Кузякин Д.В. (25%), Мазалова Виктория Вячеславовна (26%), Фонд содействия развитию науки, инноваций и технологий (24%, ИНН 5040097774), ООО «Инвестпроектгрупп» (25%, ИНН 5040127965)",
+        "founders": [
+          {
+            "name": "Кузякин Дмитрий Васильевич",
+            "inn_personal": "501306766736",
+            "share": "25%",
+            "source_id": "s7351"
+          },
+          {
+            "name": "Мазалова Виктория Вячеславовна",
+            "inn_personal": "482412647610",
+            "share": "26%",
+            "source_id": "s7351"
+          },
+          {
+            "name": "Фонд содействия развитию науки, инноваций и технологий",
+            "inn": "5040097774",
+            "ogrn": "1105000000874",
+            "share": "24%",
+            "source_id": "s7351"
+          },
+          {
+            "name": "ООО «Инвестпроектгрупп»",
+            "inn": "5040127965",
+            "ogrn": "1135040012788",
+            "share": "25%",
+            "source_id": "s7351"
+          }
+        ],
         "founders_history": [
           {
             "value": "Кузякин Дмитрий Васильевич (ИНН 501306766736), 25%; Мазалова Виктория Вячеславовна (ИНН 482412647610), 26%; Фонд содействия развитию науки, инноваций и технологий (ИНН 5040097774, ОГРН 1105000000874), 24%; ООО «Инвестпроектгрупп» (ИНН 5040127965, ОГРН 1135040012788), 25%",
@@ -31282,7 +31400,8 @@
             "inn_personal": "121525518840",
             "nominal_value": 20000,
             "share_percent": 100.0,
-            "as_of": "2023-02-13"
+            "as_of": "2023-02-13",
+            "source_id": "s6709"
           }
         ],
         "tier": "plumbing",
@@ -31543,8 +31662,27 @@
           {
             "inn_personal": "771705581991",
             "name": "Коган Михаил Александрович",
-            "share_percent": null,
-            "source_id": "s0479"
+            "nominal_value": 3333,
+            "share_percent": 25.0,
+            "as_of": "2026-06-29",
+            "source_id": "s6724"
+          },
+          {
+            "inn_personal": "590416343256",
+            "name": "Лысенко Андрей Олегович",
+            "nominal_value": 5000,
+            "share_percent": 37.5,
+            "as_of": "2026-06-29",
+            "source_id": "s6724"
+          },
+          {
+            "inn_personal": "470314984657",
+            "name": "Городничин Дмитрий Александрович",
+            "nominal_value": 5000,
+            "share_percent": 37.5,
+            "as_of": "2026-06-29",
+            "source_id": "s6724",
+            "note": "His and Лысенко's shares each carry a separate share pledge (договор залога) to ФОНД СОДЕЙСТВИЮ РАЗВИТИЮ ВЕНЧУРНЫХ ИНВЕСТИЦИЙ... (ИНН 7715585216) as lienholder, per the same extract -- the fund is a pledge-holder on their shares, not itself an owner; do not double-count it as a fourth founder."
           }
         ],
         "ogrn": "1195958038902",
@@ -31663,10 +31801,10 @@
         "charter_capital": 13333.33,
         "founders_history": [
           {
-            "value": "Коган Михаил Александрович 25% (₽3 333) / Лысенко Андрей Олегович 37.5% (₽5 000) / ФОНД СОДЕЙСТВИЯ РАЗВИТИЮ ВЕНЧУРНЫХ ИНВЕСТИЦИЙ В МАЛЫЕ ПРЕДПРИЯТИЯ В НАУЧНО- ТЕХНИЧЕСКОЙ СФЕРЕ ГОРОДА МОСКВЫ / Городничин Дмитрий Александрович 37.5% (₽5 000) / ФОНД СОДЕЙСТВИЯ РАЗВИТИЮ ВЕНЧУРНЫХ ИНВЕСТИЦИЙ В МАЛЫЕ ПРЕДПРИЯТИЯ В НАУЧНО- ТЕХНИЧЕСКОЙ СФЕРЕ ГОРОДА МОСКВЫ",
+            "value": "Коган Михаил Александрович 25% (₽3 333) / Лысенко Андрей Олегович 37.5% (₽5 000) / Городничин Дмитрий Александрович 37.5% (₽5 000)",
             "as_of": "2026-06-29",
             "source_id": "s6724",
-            "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
+            "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). Corrected 2026-09-29: the extract's own value string had the Фонд содействия развитию венчурных инвестиций... (ИНН 7715585216) appearing twice with no percentage of its own -- re-reading the source PDF shows it's a pledge-holder (залогодержатель) on Лысенко's AND Городничин's shares (two separate share-pledge agreements, both dated 29.06.2026), not a fourth owner. The three named individuals' percentages already sum to 100%."
           }
         ],
         "address_history": [
@@ -34021,6 +34159,20 @@
             "note": "Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 711506978521. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
           }
         ],
+        "founders": [
+          {
+            "name": "Владимирский Михаил Юрьевич",
+            "nominal_value": 5000,
+            "share_percent": 50.0,
+            "source_id": "s6844"
+          },
+          {
+            "name": "Руденко Дмитрий Александрович",
+            "nominal_value": 5000,
+            "share_percent": 50.0,
+            "source_id": "s6844"
+          }
+        ],
         "founders_history": [
           {
             "value": "Владимирский Михаил Юрьевич 50% (₽5 000) / Руденко Дмитрий Александрович 50% (₽5 000)",
@@ -34039,6 +34191,7 @@
       "why": [
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-29: added a proper founders[] array -- same document (s6844) founders_history already cited.",
         "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread."
       ]
     },
@@ -34096,14 +34249,16 @@
             "inn_personal": "743400196100",
             "nominal_value": 3000,
             "share_percent": 30.0,
-            "as_of": "2025-07-02"
+            "as_of": "2025-07-02",
+            "source_id": "s6815"
           },
           {
             "name": "Февралев Александр Евгеньевич",
             "inn_personal": "772623233272",
             "nominal_value": 3000,
             "share_percent": 30.0,
-            "as_of": "2025-07-02"
+            "as_of": "2025-07-02",
+            "source_id": "s6815"
           },
           {
             "ogrn": "1232300051235",
@@ -34111,7 +34266,8 @@
             "inn": "2312321660",
             "nominal_value": 4000,
             "share_percent": 40.0,
-            "as_of": "2025-07-02"
+            "as_of": "2025-07-02",
+            "source_id": "s6815"
           }
         ],
         "sanctions_review": {
@@ -34246,6 +34402,20 @@
             "note": "Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 771870311075. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
           }
         ],
+        "founders": [
+          {
+            "name": "Руденко Дмитрий Александрович",
+            "nominal_value": 5000,
+            "share_percent": 50.0,
+            "source_id": "s6834"
+          },
+          {
+            "name": "Малевич Павел Владимирович",
+            "nominal_value": 5000,
+            "share_percent": 50.0,
+            "source_id": "s6834"
+          }
+        ],
         "founders_history": [
           {
             "value": "Руденко Дмитрий Александрович 50% (₽5 000) / Малевич Павел Владимирович 50% (₽5 000)",
@@ -34264,6 +34434,7 @@
       "why": [
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 1 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-29: added a proper founders[] array -- same document (s6834) founders_history already cited.",
         "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread."
       ]
     },
@@ -34567,7 +34738,8 @@
             "inn_personal": "500310216204",
             "nominal_value": 1000000,
             "share_percent": 100.0,
-            "as_of": "2026-02-13"
+            "as_of": "2026-02-13",
+            "source_id": "s6792"
           }
         ]
       },
@@ -34807,6 +34979,21 @@
     "ooo-hab-svo": {
       "set": {
         "_verified": true,
+        "director_history": [
+          {
+            "value": "Хабибулин Владимир Игоревич",
+            "as_of": "2026-09-14",
+            "source_id": "s7419",
+            "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-14 (egrul_vypiska_pull.py). Previously carried source_id: null despite this document already being on file."
+          }
+        ],
+        "founders": [
+          {
+            "name": "Кулемин Игорь Александрович",
+            "source_id": "s7419",
+            "note": "Сведения об участниках/учредителях section, full signed ЕГРЮЛ выписка (s7419)."
+          }
+        ],
         "financials": [
           {
             "year": "2025",
@@ -34823,7 +35010,8 @@
       "why": [
         "2026-09-14: БФО coverage sweep (bfo_pull.py --all-missing) found and parsed 1 filing(s) for this entity, previously had empty financials[].",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread."
+        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread.",
+        "2026-09-29: a full signed ЕГРЮЛ выписка (EGRUL_9722102248_20260914_ooo-hab-svo.pdf) was already pulled and sitting in data/sources/ but never wired as a source -- director_history's source_id had been left null and no founders[] array existed at all, even though the document confirms both Хабибулин (director) and Кулемин (founder). Read and wired directly while closing an unsourced role-edge backlog."
       ]
     },
     "ooo-berkut-dmv": {
@@ -34975,6 +35163,20 @@
             "note": "Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 711506978521. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
           }
         ],
+        "founders": [
+          {
+            "name": "Елисеев Дмитрий Николаевич",
+            "nominal_value": 5000,
+            "share_percent": 50.0,
+            "source_id": "s6808"
+          },
+          {
+            "name": "Владимирский Михаил Юрьевич",
+            "nominal_value": 5000,
+            "share_percent": 50.0,
+            "source_id": "s6808"
+          }
+        ],
         "founders_history": [
           {
             "value": "Елисеев Дмитрий Николаевич 50% (₽5 000) / Владимирский Михаил Юрьевич 50% (₽5 000)",
@@ -34993,6 +35195,7 @@
       "verified_against": null,
       "why": [
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "2026-09-29: added a proper founders[] array (the pre-existing add_entities scaffold had it as abbreviated free text, unsourced) -- same document (s6808) founders_history already cited.",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
         "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread."
       ]
@@ -35036,7 +35239,8 @@
             "inn_personal": "710516155388",
             "nominal_value": 5000,
             "share_percent": 50.0,
-            "as_of": "2025-10-28"
+            "as_of": "2025-10-28",
+            "source_id": "s6814"
           },
           {
             "ogrn": "1232300051235",
@@ -35044,7 +35248,8 @@
             "inn": "2312321660",
             "nominal_value": 5000,
             "share_percent": 50.0,
-            "as_of": "2025-10-28"
+            "as_of": "2025-10-28",
+            "source_id": "s6814"
           }
         ],
         "_verified": true,
@@ -35628,10 +35833,21 @@
     },
     "ooo-ik-aviaok": {
       "set": {
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "founders": [
+          {
+            "name": "Степанов Валерий Юрьевич",
+            "inn_personal": "615413027535",
+            "share_percent": 100.0,
+            "as_of": "2021-10-22",
+            "note": "Sole founder and director, per this entity's own director_history note.",
+            "source_id": "s6971"
+          }
+        ]
       },
       "why": [
-        "[2026-09-15] wb_overlap=none_found: Brand-name search for «АВИАОК» on wildberries.ru (2026-09-15) found no product listing — results were dominated by unrelated Wildberries-warehouse-drone-strike news, no genuine product hit."
+        "[2026-09-15] wb_overlap=none_found: Brand-name search for «АВИАОК» on wildberries.ru (2026-09-15) found no product listing — results were dominated by unrelated Wildberries-warehouse-drone-strike news, no genuine product hit.",
+        "2026-09-29: filled an empty founders[] array -- director_history already said he was sole founder and director (s6971), it just never got its own founders[] entry."
       ]
     },
     "ao-rti-radio": {

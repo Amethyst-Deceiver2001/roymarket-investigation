@@ -19,6 +19,7 @@
 | Value | As of | Note |
 |---|---|---|
 | [ЛИКВИДАТОР — company in liquidation] | 2026-03-02 | The signing-authority role captured in this extract is "ЛИКВИДАТОР" (liquidator), not a normal director/GD — this entity is in the process of being wound down (ликвидация) as of this pull. Liquidator's own name not captured in this extraction pass. [s0513] |
+| Костюнин Павел Андреевич | 2026-03-02 | Должность: ЛИКВИДАТОР (ГРН 2265200138157, 02.03.2026), личный ИНН 510203980877 -- same person as the entity's 75% founder. Full signed ЕГРЮЛ выписка pulled 2026-09-07, re-read 2026-09-29 to fill the name the earlier open-API pull ([s0513]) missed. [s6802] |
 
 ### Founders / ownership
 

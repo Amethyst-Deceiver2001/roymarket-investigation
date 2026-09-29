@@ -28,7 +28,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Коган Михаил Александрович 25% (₽3 333) / Лысенко Андрей Олегович 37.5% (₽5 000) / ФОНД СОДЕЙСТВИЯ РАЗВИТИЮ ВЕНЧУРНЫХ ИНВЕСТИЦИЙ В МАЛЫЕ ПРЕДПРИЯТИЯ В НАУЧНО- ТЕХНИЧЕСКОЙ СФЕРЕ ГОРОДА МОСКВЫ / Городничин Дмитрий Александрович 37.5% (₽5 000) / ФОНД СОДЕЙСТВИЯ РАЗВИТИЮ ВЕНЧУРНЫХ ИНВЕСТИЦИЙ В МАЛЫЕ ПРЕДПРИЯТИЯ В НАУЧНО- ТЕХНИЧЕСКОЙ СФЕРЕ ГОРОДА МОСКВЫ | 2026-06-29 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6724] |
+| Коган Михаил Александрович 25% (₽3 333) / Лысенко Андрей Олегович 37.5% (₽5 000) / Городничин Дмитрий Александрович 37.5% (₽5 000) | 2026-06-29 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). Corrected 2026-09-29: the extract's own value string had the Фонд содействия развитию венчурных инвестиций... (ИНН 7715585216) appearing twice with no percentage of its own -- re-reading the source PDF shows it's a pledge-holder (залогодержатель) on Лысенко's AND Городничин's shares (two separate share-pledge agreements, both dated 29.06.2026), not a fourth owner. The three named individuals' percentages already sum to 100%. [s6724] |
 
 ### Charter capital
 

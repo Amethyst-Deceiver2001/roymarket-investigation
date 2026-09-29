@@ -22,6 +22,7 @@
 | Value | As of | Note |
 |---|---|---|
 | None | 2024-12-10 | Director appointment record present (ГРН 1245200032406) but name field not captured in this extraction pass. [s0488] |
+| Суховерхий Владимир Андреевич | 2024-12-10 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (ГРН 1245200032406), личный ИНН 526106960953. Full signed ЕГРЮЛ выписка ([s7412], pulled 2026-09-14) re-read 2026-09-29 to fill the name the earlier open-API pull ([s0488]) missed. [s7412] |
 
 ### Founders / ownership
 
@@ -66,6 +67,7 @@
 | [s0746] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5261138034_20260824_ooo-pekhtra.json) | 2026-08-24 | — |
 | [s6513] | Bfo | Bfo (BFO_5261138034_2025_ооо-пехтра.pdf) | — | — |
 | [s6720] | EGRUL extract | EGRUL extract (EGRUL_5261138034_20260907_ooo-pekhtra.pdf) | 2026-09-07 | 2026-09-07 |
+| [s7412] | EGRUL extract | EGRUL extract (EGRUL_5261138034_20260914_ooo-pekhtra.pdf) | 2026-09-14 | 2026-09-14 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

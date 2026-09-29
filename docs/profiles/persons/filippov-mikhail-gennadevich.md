@@ -22,7 +22,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Products linked via this person
 
-- **Дрон-ракета-перехватчик «Архангел»** + 2 more — via Project "KB Arkhangel" · role
+- **Дрон-ракета-перехватчик «Архангел»** + 3 more — via Project "KB Arkhangel" · role
 
 ## Related persons
 

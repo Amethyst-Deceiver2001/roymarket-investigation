@@ -21,6 +21,7 @@
 | Value | As of | Note |
 |---|---|---|
 | None | 2025-05-27 | Director appointment record present (ГРН 2257805131626, 27.05.2025) but name field not captured in this extraction pass; founder (Усачёв П.А.) may or may not be the same person — not confirmed. [s0508] |
+| Некрасов Александр Викторович | 2025-05-27 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (ГРН 2257805131626, 27.05.2025), личный ИНН 781627958891. Full signed ЕГРЮЛ выписка ([s6755]) re-read 2026-09-29 to fill the name the earlier open-API pull ([s0508]) missed -- resolves the open_questions entry below: Некрасов IS the director, distinct from founder Усачёв. [s6755] |
 
 ### Founders / ownership
 
@@ -53,10 +54,6 @@
 
 - **ИНН:** 730603977387
 - founder
-
-## Open questions
-
-- Brief manufacturers-table row names "Некрасов Александр Викторович" as this company's principal — the fresh EGRUL pull (23.08.2026) captured founder Усачёв Павел Александрович but the director's name did not extract cleanly from that PDF. Not a confirmed conflict: Некрасов may be the (uncaptured) director role rather than contradicting Усачёв's founder role. Needs the EGRUL PDF director page re-checked directly.
 
 ## Sources cited in this profile
 

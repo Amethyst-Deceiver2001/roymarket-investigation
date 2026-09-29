@@ -16,10 +16,6 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Конструкторское бюро «Синергия»» | director — Генеральный директор | — | [s0138] |
 
-## Products linked via this person
-
-- **«Яким»** — via ООО «Конструкторское бюро «Синергия»» · director
-
 ## Related persons
 
 - **Усачёв Павел Александрович** — founder — shared entity: ООО «Конструкторское бюро «Синергия»» [s0508]

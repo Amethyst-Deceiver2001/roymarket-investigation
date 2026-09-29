@@ -2,7 +2,7 @@
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1130,
-  "edge_count": 1925,
+  "edge_count": 1929,
   "unresolved_count": 110,
   "nodes": [
     {
@@ -2353,7 +2353,7 @@
       "label": "Костюнин Павел Андреевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 7
+      "degree": 8
     },
     {
       "id": "kot-oleg-petrovich",
@@ -2709,7 +2709,7 @@
       "label": "Некрасов Александр Викторович",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "nikiforov-anton-sergeevich",
@@ -3381,7 +3381,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 4
+      "degree": 5
     },
     {
       "id": "ooo-intel-dron",
@@ -3453,7 +3453,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "ooo-kopterlab",
@@ -3789,7 +3789,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "ooo-pk-stalnoy-kupol",
@@ -4029,7 +4029,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "offensive",
-      "degree": 11
+      "degree": 12
     },
     {
       "id": "ooo-stroystandart",
@@ -4125,7 +4125,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "offensive",
-      "degree": 11
+      "degree": 12
     },
     {
       "id": "ooo-tsugam",
@@ -4197,7 +4197,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 14
+      "degree": 13
     },
     {
       "id": "ooo-vostochnye-vorota-zabaykalsk-manchzhuriya",
@@ -10528,7 +10528,7 @@
       "label": "Степанов Валерий Юрьевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 7
+      "degree": 8
     },
     {
       "id": "stroev-nikolay-nikolaevich",
@@ -10542,6 +10542,12 @@
       "id": "stub::inn-232204433988",
       "kind": "unresolved",
       "label": "Хатьянов Сергей Валерьевич",
+      "degree": 1
+    },
+    {
+      "id": "stub::inn-5040097774",
+      "kind": "unresolved",
+      "label": "Фонд содействия развитию науки, инноваций и технологий",
       "degree": 1
     },
     {
@@ -11013,12 +11019,6 @@
       "degree": 1
     },
     {
-      "id": "stub::содействия развитию венчурных инвестиций в малые предприятия в научно- технической сфере города москвы",
-      "kind": "unresolved",
-      "label": "ФОНД СОДЕЙСТВИЯ РАЗВИТИЮ ВЕНЧУРНЫХ ИНВЕСТИЦИЙ В МАЛЫЕ ПРЕДПРИЯТИЯ В НАУЧНО- ТЕХНИЧЕСКОЙ СФЕРЕ ГОРОДА МОСКВЫ",
-      "degree": 1
-    },
-    {
       "id": "stub::содействия развитию науки",
       "kind": "unresolved",
       "label": "Фонд содействия развитию науки",
@@ -11220,7 +11220,7 @@
       "label": "Суховерхий Владимир Андреевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "sulimskiy-evgeniy-sergeevich",
@@ -13216,7 +13216,7 @@
       "source": "ao-stratim",
       "target": "ooo-stratim",
       "type": "founded",
-      "label": "25%",
+      "label": null,
       "source_id": "s6802",
       "as_of": "2024-04-01",
       "weight": 1.0,
@@ -14724,7 +14724,7 @@
       "target": "ooo-tsentr-bespilotnykh-sistem-tula",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6813",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -17649,7 +17649,7 @@
       "source": "eliseev-dmitriy-nikolaevich",
       "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
       "type": "founded",
-      "label": "50%",
+      "label": null,
       "source_id": "s6808",
       "as_of": "2026-01-19",
       "weight": 1.0,
@@ -17661,7 +17661,7 @@
       "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6808",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -17935,7 +17935,7 @@
       "source": "filippov-mikhail-gennadevich",
       "target": "ooo-arkhangel-grupp",
       "type": "founded",
-      "label": "80%",
+      "label": null,
       "source_id": "s5474",
       "as_of": "2026-03-12",
       "weight": 1.0,
@@ -17947,7 +17947,7 @@
       "target": "ooo-arkhangel-grupp",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s5474",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -18441,7 +18441,7 @@
       "source": "garkusha-vladimir-vladimirovich",
       "target": "ooo-gk-logos",
       "type": "founded",
-      "label": "100%",
+      "label": null,
       "source_id": "s6784",
       "as_of": "2025-06-16",
       "weight": 1.0,
@@ -18453,7 +18453,7 @@
       "target": "ooo-gk-logos",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6784",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -18519,7 +18519,7 @@
       "target": "ooo-promsintez",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6783",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -18705,7 +18705,7 @@
       "source": "gorodnichin-dmitriy-aleksandrovich",
       "target": "ooo-vizionero",
       "type": "founded",
-      "label": "37.5%",
+      "label": null,
       "source_id": "s6724",
       "as_of": "2026-06-29",
       "weight": 1.0,
@@ -19255,7 +19255,7 @@
       "source": "kaznova-tatyana-andreevna",
       "target": "ooo-arkhangel-grupp",
       "type": "founded",
-      "label": "5%",
+      "label": null,
       "source_id": "s5474",
       "as_of": "2026-03-12",
       "weight": 1.0,
@@ -19267,7 +19267,7 @@
       "target": "ooo-arkhangel-grupp",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s5474",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19355,10 +19355,10 @@
       "target": "ooo-hab-svo",
       "type": "directs",
       "label": null,
-      "source_id": null,
-      "as_of": "2026-09-07",
+      "source_id": "s7419",
+      "as_of": "2026-09-14",
       "weight": 1.0,
-      "temporal_status": "unknown",
+      "temporal_status": "current",
       "confidence": null
     },
     {
@@ -19366,7 +19366,7 @@
       "target": "ooo-hab-svo",
       "type": "role",
       "label": "director",
-      "source_id": null,
+      "source_id": "s7419",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20048,7 +20048,7 @@
       "target": "ooo-selskohozyaystvennye-bespilotnye-sistemy-mira",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s7342",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20168,7 +20168,7 @@
       "source": "korchagina-olga-aleksandrovna",
       "target": "ooo-skb-piranya",
       "type": "founded",
-      "label": "60%",
+      "label": null,
       "source_id": "s6730",
       "as_of": "2023-09-19",
       "weight": 1.0,
@@ -20180,7 +20180,7 @@
       "target": "ooo-skb-piranya",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6730",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20464,6 +20464,17 @@
     {
       "source": "kostyunin-pavel-andreevich",
       "target": "ooo-stratim",
+      "type": "directs",
+      "label": null,
+      "source_id": "s6802",
+      "as_of": "2026-03-02",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
+      "source": "kostyunin-pavel-andreevich",
+      "target": "ooo-stratim",
       "type": "founded",
       "label": null,
       "source_id": "s6802",
@@ -20477,7 +20488,7 @@
       "target": "ooo-stratim",
       "type": "role",
       "label": "director",
-      "source_id": null,
+      "source_id": "s6802",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20751,7 +20762,7 @@
       "source": "kryuchkov-dmitriy-aleksandrovich",
       "target": "ooo-arkhangel-grupp",
       "type": "founded",
-      "label": "15%",
+      "label": null,
       "source_id": "s5474",
       "as_of": "2026-03-12",
       "weight": 1.0,
@@ -20774,7 +20785,7 @@
       "target": "ooo-arkhangel-grupp",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s5474",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20840,7 +20851,7 @@
       "target": "ooo-hab-svo",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s7419",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20960,7 +20971,7 @@
       "source": "kuzyakin-dmitriy-vasilevich",
       "target": "ooo-tskbr",
       "type": "founded",
-      "label": "former founder",
+      "label": "25%",
       "source_id": "s7351",
       "as_of": null,
       "weight": 1.0,
@@ -20983,7 +20994,7 @@
       "target": "ooo-tskbr",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s7351",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21169,7 +21180,7 @@
       "source": "lysenko-andrey-olegovich",
       "target": "ooo-vizionero",
       "type": "founded",
-      "label": "37.5%",
+      "label": null,
       "source_id": "s6724",
       "as_of": "2026-06-29",
       "weight": 1.0,
@@ -21203,7 +21214,7 @@
       "target": "ooo-vizionero",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6724",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21312,7 +21323,7 @@
       "source": "malevich-pavel-vladimirovich",
       "target": "ooo-spetsmat-spetsialnye-materialy",
       "type": "founded",
-      "label": "50%",
+      "label": null,
       "source_id": "s6834",
       "as_of": "2024-11-22",
       "weight": 1.0,
@@ -21467,7 +21478,7 @@
       "target": "ooo-nova",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6810",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21586,9 +21597,20 @@
     {
       "source": "nekrasov-aleksandr-viktorovich",
       "target": "ooo-konstruktorskoe-byuro-sinergiya",
+      "type": "directs",
+      "label": null,
+      "source_id": "s6755",
+      "as_of": "2025-05-27",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
+      "source": "nekrasov-aleksandr-viktorovich",
+      "target": "ooo-konstruktorskoe-byuro-sinergiya",
       "type": "role",
       "label": "director",
-      "source_id": null,
+      "source_id": "s6755",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -27275,7 +27297,7 @@
       "target": "ooo-npo-eyler",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6814",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -27605,7 +27627,7 @@
       "target": "ooo-tsyus",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6709",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -28154,7 +28176,7 @@
       "source": "rudenko-dmitriy-aleksandrovich",
       "target": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
       "type": "founded",
-      "label": "50%",
+      "label": null,
       "source_id": "s6844",
       "as_of": "2024-06-14",
       "weight": 1.0,
@@ -28166,7 +28188,7 @@
       "target": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6844",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -28209,7 +28231,7 @@
       "source": "rudenko-dmitriy-aleksandrovich",
       "target": "ooo-spetsmat-spetsialnye-materialy",
       "type": "founded",
-      "label": "50%",
+      "label": null,
       "source_id": "s6834",
       "as_of": "2024-11-22",
       "weight": 1.0,
@@ -28221,7 +28243,7 @@
       "target": "ooo-spetsmat-spetsialnye-materialy",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6834",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -29508,7 +29530,7 @@
       "target": "ooo-rtd-zashchita",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6792",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -29858,6 +29880,17 @@
     {
       "source": "stepanov-valeriy-yurevich",
       "target": "ooo-ik-aviaok",
+      "type": "founded",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stepanov-valeriy-yurevich",
+      "target": "ooo-ik-aviaok",
       "type": "role",
       "label": "director",
       "source_id": "s6971",
@@ -29871,7 +29904,7 @@
       "target": "ooo-ik-aviaok",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6971",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -29952,6 +29985,17 @@
       "as_of": "2026-07-27",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "stub::inn-5040097774",
+      "target": "ooo-tskbr",
+      "type": "founded",
+      "label": "24%",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
       "confidence": null
     },
     {
@@ -31110,21 +31154,10 @@
       "confidence": null
     },
     {
-      "source": "stub::содействия развитию венчурных инвестиций в малые предприятия в научно- технической сфере города москвы",
-      "target": "ooo-vizionero",
-      "type": "founded",
-      "label": null,
-      "source_id": "s6724",
-      "as_of": "2026-06-29",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
       "source": "stub::содействия развитию науки",
       "target": "ooo-tskbr",
       "type": "founded",
-      "label": null,
+      "label": "former founder",
       "source_id": "s7351",
       "as_of": null,
       "weight": 1.0,
@@ -31662,9 +31695,20 @@
     {
       "source": "sukhoverkhiy-vladimir-andreevich",
       "target": "ooo-pekhtra",
+      "type": "directs",
+      "label": null,
+      "source_id": "s7412",
+      "as_of": "2024-12-10",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "sukhoverkhiy-vladimir-andreevich",
+      "target": "ooo-pekhtra",
       "type": "role",
       "label": "director",
-      "source_id": null,
+      "source_id": "s7412",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -31895,7 +31939,7 @@
       "target": "ooo-pokrov",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6799",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -32191,7 +32235,7 @@
       "source": "vladimirskiy-mikhail-yurevich",
       "target": "ooo-btr-bespilotnye-tekhnologicheskie-resheniya",
       "type": "founded",
-      "label": "50%",
+      "label": null,
       "source_id": "s6844",
       "as_of": "2024-06-14",
       "weight": 1.0,
@@ -32202,7 +32246,7 @@
       "source": "vladimirskiy-mikhail-yurevich",
       "target": "ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy",
       "type": "founded",
-      "label": "50%",
+      "label": null,
       "source_id": "s6808",
       "as_of": "2026-01-19",
       "weight": 1.0,
@@ -32390,7 +32434,7 @@
       "target": "ooo-intel-dron",
       "type": "role",
       "label": "founder",
-      "source_id": null,
+      "source_id": "s6815",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -32766,6 +32810,13 @@
       "raw_name": "Хатьянов Сергей Валерьевич",
       "contexts": [
         "director of ooo-laboratoriya-yangelya"
+      ]
+    },
+    {
+      "id": "stub::inn-5040097774",
+      "raw_name": "Фонд содействия развитию науки, инноваций и технологий",
+      "contexts": [
+        "founder of ooo-tskbr"
       ]
     },
     {
@@ -33332,17 +33383,10 @@
       ]
     },
     {
-      "id": "stub::содействия развитию венчурных инвестиций в малые предприятия в научно- технической сфере города москвы",
-      "raw_name": "ФОНД СОДЕЙСТВИЯ РАЗВИТИЮ ВЕНЧУРНЫХ ИНВЕСТИЦИЙ В МАЛЫЕ ПРЕДПРИЯТИЯ В НАУЧНО- ТЕХНИЧЕСКОЙ СФЕРЕ ГОРОДА МОСКВЫ",
-      "contexts": [
-        "former founder of ooo-vizionero"
-      ]
-    },
-    {
       "id": "stub::содействия развитию науки",
       "raw_name": "Фонд содействия развитию науки",
       "contexts": [
-        "founder of ooo-tskbr"
+        "former founder of ooo-tskbr"
       ]
     },
     {
