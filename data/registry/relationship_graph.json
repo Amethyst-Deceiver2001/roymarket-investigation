@@ -2,7 +2,7 @@
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1130,
-  "edge_count": 1924,
+  "edge_count": 1928,
   "unresolved_count": 110,
   "nodes": [
     {
@@ -2409,7 +2409,7 @@
       "label": "Козлов Дмитрий Сергеевич",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 4
+      "degree": 5
     },
     {
       "id": "krams-brand-unresolved",
@@ -2489,7 +2489,7 @@
       "label": "Лапин Игорь Николаевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 3
+      "degree": 5
     },
     {
       "id": "lenskaya-evgeniya-vladimirovna",
@@ -3093,7 +3093,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": "offensive",
-      "degree": 11
+      "degree": 13
     },
     {
       "id": "ooo-berkut-dmv",
@@ -3345,7 +3345,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "defensive",
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "ooo-gruppa-promavto",
@@ -4113,7 +4113,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "ooo-tskbr",
@@ -11340,7 +11340,7 @@
       "label": "Тютина Ольга Анатольевна",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 3
+      "degree": 4
     },
     {
       "id": "uraldronzavod",
@@ -14680,7 +14680,7 @@
       "target": "ao-nii-stt",
       "type": "role",
       "label": "director",
-      "source_id": "s0211",
+      "source_id": "s8129",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20685,8 +20685,19 @@
       "source": "kozlov-dmitriy-sergeevich",
       "target": "ooo-goudron",
       "type": "role",
+      "label": "director",
+      "source_id": "s8127",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kozlov-dmitriy-sergeevich",
+      "target": "ooo-goudron",
+      "type": "role",
       "label": "founder",
-      "source_id": "s0458",
+      "source_id": "s8127",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21031,6 +21042,28 @@
       "as_of": "2026-06-30",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "lapin-igor-nikolaevich",
+      "target": "ooo-aviron",
+      "type": "role",
+      "label": "director",
+      "source_id": "s8126",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "lapin-igor-nikolaevich",
+      "target": "ooo-aviron",
+      "type": "role",
+      "label": "founder",
+      "source_id": "s8126",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
       "confidence": null
     },
     {
@@ -21445,7 +21478,7 @@
       "target": "ooo-levit",
       "type": "role",
       "label": "founder",
-      "source_id": "s6697",
+      "source_id": "s8132",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21478,7 +21511,7 @@
       "target": "ooo-nova",
       "type": "role",
       "label": "founder",
-      "source_id": "s6810",
+      "source_id": "s8132",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -31993,8 +32026,19 @@
       "source": "tyutina-olga-anatolevna",
       "target": "ooo-tsentr-dinarus",
       "type": "role",
+      "label": "director",
+      "source_id": "s8131",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "tyutina-olga-anatolevna",
+      "target": "ooo-tsentr-dinarus",
+      "type": "role",
       "label": "founder",
-      "source_id": "s0511",
+      "source_id": "s8131",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",

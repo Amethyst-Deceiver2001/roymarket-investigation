@@ -20,6 +20,7 @@
 | Value | As of | Note |
 |---|---|---|
 | None | 2024-01-24 | Director appointment record present (ГРН 1247000000488) but name field not captured in this extraction pass. [s0489] |
+| Калиновский Никита Владиславович | 2026-09-29 | Name confirmed via Калиновский Н.В.'s own FNS «Прозрачный бизнес» (pb.nalog.ru) director/founder self-screen — this entity appears in his own "upr" (director-of) card list, confirming the flat director field (previously unsourced in director_history despite already being on file). [s8128] |
 
 ### Founders / ownership
 
@@ -75,6 +76,7 @@
 | [s0489] | EGRUL extract | EGRUL extract (ul-1247000000488-20260823132000.pdf) | — | 2026-08-23 |
 | [s0758] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7000013316_20260824_ooo-intek-bespilotnye-sistemy.json) | 2026-08-24 | — |
 | [s6726] | EGRUL extract | EGRUL extract (EGRUL_7000013316_20260907_ooo-intek-bespilotnye-sistemy.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8128] | Fns | Fns (FNS_PB_UPR_UCHR_503411116191_20260929_kalinovskiy-nikita-vladislavovich-raw.json) | 2026-09-29 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

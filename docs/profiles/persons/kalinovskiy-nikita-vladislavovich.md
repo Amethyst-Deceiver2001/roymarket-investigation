@@ -18,7 +18,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Products linked via this person
 
-- **Метеор-2** + 4 more — via ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ» · director
+- **Метеор-2** + 3 more — via ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ» · director
 
 ## Sanctions & screening
 
