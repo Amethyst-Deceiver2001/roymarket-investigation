@@ -1206,7 +1206,8 @@
       "verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
       "why": [
         "2026-08-24 OpenSanctions screening: top match (score 1.0) is unambiguously the former Russian President — \"Former Russian Prime Minister, former Russian President, and head of the United Russia party\" — matches this registry's own role (Chairman United Russia; Deputy Chairman Security Council). A second, unrelated намесake (\"ДМИТРИЙ ВЛАДИМИРОВИЧ МЕДВЕДЕВ\", score 0.92) was returned and discarded.",
-        "2026-08-27: rupep.org profile (pending source_id) confirms dob 14.09.1965, birthplace Leningrad/Saint Petersburg, headshot. No personal ИНН published on the profile (a very high-profile PEP; RuPEP does not list one). Family/associate detail not wired per PII scope."
+        "2026-08-27: rupep.org profile (pending source_id) confirms dob 14.09.1965, birthplace Leningrad/Saint Petersburg, headshot. No personal ИНН published on the profile (a very high-profile PEP; RuPEP does not list one). Family/associate detail not wired per PII scope.",
+        "2026-09-29: re-checked per user prompt (sanctioned PEPs should have an ИНН in public docs somewhere) -- neither RuPEP nor OpenSanctions' raw record (s0831) carries an innCode/idNumber for the confirmed match (Q23530). The four ru-inn-* candidate matches OpenSanctions returned alongside it (scores 0.92) are namesakes with the WRONG patronymic (Владимирович/Евгеньевич/Александрович, not Анатольевич) -- confirmed not him, not wired. Genuinely absent from every source pulled so far, not an extraction gap like Фрадков/Гаврилов turned out to be."
       ]
     },
     "dmitriy-peskov": {
@@ -1703,19 +1704,21 @@
     "gavrilov-aleksandr-valerevich": {
       "set": {
         "dob": "1984-02-01",
+        "inn_personal": "165112438900",
         "sanctions": [
           {
             "date": null,
-            "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him GD of \"LLC Gumich\" (= this registry's АО «ХК Гумич», already tied to the Инвестментс/Борей chain) — and adds NEW information: Gumich owns \"LLC Gumich RTK,\" maker of \"Impulse-M\" robot platforms field-tested by Russian forces since summer 2024. Personal ИНН given in notes context but not directly labeled — worth a follow-up EGRUL check. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction. ИНН-CONFIRMED 2026-09-29: OpenSanctions' own raw record (s6343, OPENSANCTIONS_gavrilov-aleksandr-valerevich_20260906) carries an `innCode` field (165112438900, valid control-digit checksum) that had never been extracted into inn_personal -- this is EU/UA-sanctions-list-sourced (SECO-UKRAINE/UA-SA1644/EU-UKR designation, 2024-12-16), not a plausible name match. Also independently corroborated by role/context: OpenSanctions names him GD of \"LLC Gumich\" (= this registry's АО «ХК Гумич», already tied to the Инвестментс/Борей chain) — Gumich owns \"LLC Gumich RTK,\" maker of \"Impulse-M\" robot platforms field-tested by Russian forces since summer 2024. A follow-up АО «ХК Гумич» full ЕГРЮЛ выписка pull (EGRUL_9726051114_20260929) came back with its \"лицо, имеющее право без доверенности действовать\" (director) section access-restricted (\"Доступ к сведениям ограничен\", 129-ФЗ) -- consistent with the EGRUL UAV-data-closure trend, not a contradiction of this ИНН.",
             "regime": null,
-            "source_id": "s0837"
+            "source_id": "s6343"
           }
         ]
       },
       "verified_against": null,
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+        "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+        "2026-09-29: user prompted a check of whether sanctioned PEPs without inn_personal actually have a public ИНН on file already -- found OpenSanctions' own raw pull (s6343) carries innCode 165112438900, never previously extracted into the structured field. Checksum-valid. Backfilled."
       ]
     },
     "gorodnichin-dmitriy-aleksandrovich": {
@@ -3106,24 +3109,20 @@
       "set": {
         "birthplace": "Москва (Moscow)",
         "dob": "1978-02-07",
-        "notes": "PII source-linkage pass 2026-09-02: dob/birthplace/personal-ИНН confirmed against rupep.org profile (s2602), archived RUPEP_20260826_fradkov-petr-mikhaylovich.pdf.",
-        "open_questions": [
-          {
-            "source_id": "s2602",
-            "text": "rupep.org profile gives ИНН as '77020096763' -- only 11 digits, a checksum-invalid length for a personal ИНН (must be 12). Likely a transcription/OCR gap in RuPEP's own source data (confirmed the PDF's own text layer has only 11 digits, not a pdftotext extraction artifact). Not wired as inn_personal pending a second source or a corrected RuPEP profile."
-          }
-        ],
+        "inn_personal": "770200967631",
+        "notes": "PII source-linkage pass 2026-09-02: dob/birthplace/personal-ИНН confirmed against rupep.org profile (s2602), archived RUPEP_20260826_fradkov-petr-mikhaylovich.pdf. 2026-09-29: inn_personal wired -- OpenSanctions' own raw pull (s6376, OPENSANCTIONS_petr-fradkov_20260906) independently gives innCode/taxNumber 770200967631 (checksum-valid), which is exactly RuPEP's 11-digit '77020096763' with the trailing digit RuPEP's OCR/transcription had dropped -- two independent sources now agree on the same 12-digit value.",
         "photo": "images/fradkov-petr-mikhaylovich_portrait_rupep.jpg",
         "sanctions": [
           {
             "date": null,
-            "note": "OpenSanctions topics: sanction; debarment; role.pep; corp.disqual; export.control. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Chairman/CEO of Promsvyazbank (ПАО «Банк ПСБ»). Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+            "note": "OpenSanctions topics: sanction; debarment; role.pep; corp.disqual; export.control. ИНН-CONFIRMED 2026-09-29 (see inn_personal note): OpenSanctions' own raw record (s6376) carries innCode/taxNumber 770200967631, corroborated by RuPEP's independently-pulled (truncated) 77020096763 -- no longer merely a role-corroborated plausible match. Also corroborated by exact role match: Chairman/CEO of Promsvyazbank (ПАО «Банк ПСБ»).",
             "regime": null,
-            "source_id": "s0860"
+            "source_id": "s6376"
           }
         ],
         "sources": [
-          "s2602"
+          "s2602",
+          "s6376"
         ],
         "roles": [
           {
@@ -3143,7 +3142,8 @@
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
         "2026-08-26: rupep.org profile (s2602) confirms dob 07.02.1978 (already on file), adds birthplace Moscow and headshot. RuPEP's stated ИНН (77020096763) is only 11 digits -- checksum-invalid, logged as an open question instead of wired. Family/associate detail on the RuPEP page not wired per PII scope.",
         "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to pao-bank-psb, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
-        "2026-09-07: verification backlog closure — identity already confirmed by ПАО «Банк ПСБ»'s (pao-bank-psb) own director_history entry (s0434), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+        "2026-09-07: verification backlog closure — identity already confirmed by ПАО «Банк ПСБ»'s (pao-bank-psb) own director_history entry (s0434), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+        "2026-09-29: user prompted a check of whether sanctioned PEPs without inn_personal actually have a public ИНН already on file -- OpenSanctions' own raw pull (s6376) carries innCode/taxNumber 770200967631, which matches RuPEP's previously-unwired 11-digit '77020096763' as a truncation of the same 12-digit value. Two independent sources agreeing closes the open_question logged 2026-08-26 (now removed) and wires inn_personal."
       ]
     },
     "petrichkovich-yaroslav-yaroslavovich": {

@@ -2,7 +2,7 @@
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1130,
-  "edge_count": 1936,
+  "edge_count": 1941,
   "unresolved_count": 110,
   "nodes": [
     {
@@ -183,7 +183,7 @@
       "sanctioned": false,
       "legal_form": "АНО",
       "variant": null,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "ano-npts-ushkuynik",
@@ -267,7 +267,7 @@
       "sanctioned": false,
       "legal_form": "АНО",
       "variant": null,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "anokhin-dmitriy-vladimirovich",
@@ -1597,7 +1597,7 @@
       "label": "Еськов Николай Леонидович",
       "name_latin": "Nikolay Leonidovich Eskov",
       "sanctioned": false,
-      "degree": 5
+      "degree": 8
     },
     {
       "id": "evgeniy-sergeevich-ieto-yal",
@@ -1809,7 +1809,7 @@
       "sanctioned": false,
       "legal_form": "Фонд",
       "variant": null,
-      "degree": 8
+      "degree": 9
     },
     {
       "id": "fond-sozidanie",
@@ -1869,7 +1869,7 @@
       "label": "Гамируллин Марат Джаудатович",
       "name_latin": "Marat Dzhaudatovich Gamirullin",
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "garkusha-vladimir-vladimirovich",
@@ -3597,7 +3597,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 5
+      "degree": 7
     },
     {
       "id": "ooo-nova",
@@ -4537,7 +4537,7 @@
       "label": "Прибылова Кристина Анатольевна",
       "name_latin": "Kristina Anatolevna Pribylova",
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "prizov-aleksandr-ivanovich",
@@ -14372,7 +14372,7 @@
       "target": "ooo-ametist",
       "type": "role",
       "label": "director",
-      "source_id": "s6968",
+      "source_id": "s8206",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -14405,7 +14405,7 @@
       "target": "ooo-everest",
       "type": "role",
       "label": "director",
-      "source_id": "s6967",
+      "source_id": "s8206",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -17737,6 +17737,17 @@
       "source": "eskov-nikolay-leonidovich",
       "target": "ano-nii-dpo",
       "type": "role",
+      "label": "director",
+      "source_id": "s8203",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "eskov-nikolay-leonidovich",
+      "target": "ano-nii-dpo",
+      "type": "role",
       "label": "Ректор (sole person acting without a power of attorney)",
       "source_id": "s7907",
       "as_of": "2022-08-25",
@@ -17764,6 +17775,28 @@
       "as_of": "2025-01-24",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "eskov-nikolay-leonidovich",
+      "target": "ooo-nii-dpo",
+      "type": "role",
+      "label": "director",
+      "source_id": "s8203",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "eskov-nikolay-leonidovich",
+      "target": "ooo-nii-dpo",
+      "type": "role",
+      "label": "founder",
+      "source_id": "s8203",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
       "confidence": null
     },
     {
@@ -17936,7 +17969,7 @@
       "target": "ooo-npk-atlant-aero",
       "type": "role",
       "label": "founder",
-      "source_id": "s6962",
+      "source_id": "s8195",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -18457,6 +18490,17 @@
       "as_of": "2026-07-09",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "gamirullin-marat-dzhaudatovich",
+      "target": "fond-sarmat",
+      "type": "role",
+      "label": "director",
+      "source_id": "s8205",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
       "confidence": null
     },
     {
@@ -20081,7 +20125,7 @@
       "target": "ooo-prometey",
       "type": "role",
       "label": "founder",
-      "source_id": "s6956",
+      "source_id": "s8196",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20114,7 +20158,7 @@
       "target": "ooo-selskohozyaystvennye-bespilotnye-sistemy-mira",
       "type": "role",
       "label": "founder",
-      "source_id": "s7342",
+      "source_id": "s8196",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20191,7 +20235,7 @@
       "target": "ooo-prometey",
       "type": "role",
       "label": "director",
-      "source_id": "s6956",
+      "source_id": "s8197",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20642,7 +20686,7 @@
       "target": "ooo-pk-stalnoy-kupol",
       "type": "role",
       "label": "director",
-      "source_id": "s6965",
+      "source_id": "s8207",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21225,7 +21269,7 @@
       "target": "ooo-npk-zevs",
       "type": "role",
       "label": "director",
-      "source_id": "s6963",
+      "source_id": "s8202",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -21236,7 +21280,7 @@
       "target": "ooo-npk-zevs",
       "type": "role",
       "label": "founder",
-      "source_id": "s6963",
+      "source_id": "s8202",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -27824,6 +27868,17 @@
       "source": "pribylova-kristina-anatolevna",
       "target": "ano-tsvp-zov-aa",
       "type": "role",
+      "label": "director",
+      "source_id": "s8201",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "pribylova-kristina-anatolevna",
+      "target": "ano-tsvp-zov-aa",
+      "type": "role",
       "label": "Председатель (sole person acting without a power of attorney)",
       "source_id": "s7727",
       "as_of": "2022-10-24",
@@ -27847,7 +27902,7 @@
       "target": "ooo-npk-atlant-aero",
       "type": "role",
       "label": "founder",
-      "source_id": "s6962",
+      "source_id": "s8193",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -28353,7 +28408,7 @@
       "target": "ooo-atlant-logistik",
       "type": "role",
       "label": "director",
-      "source_id": "s6970",
+      "source_id": "s8200",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -28551,7 +28606,7 @@
       "target": "ao-opticheskie-sistemy",
       "type": "role",
       "label": "director",
-      "source_id": "s6966",
+      "source_id": "s8209",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -28980,7 +29035,7 @@
       "target": "ooo-npo-kilovatt",
       "type": "role",
       "label": "founder",
-      "source_id": "s0532",
+      "source_id": "s8194",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -29024,7 +29079,7 @@
       "target": "ooo-npo-kilovatt-shestopalov",
       "type": "role",
       "label": "director",
-      "source_id": "s0537",
+      "source_id": "s8194",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -29035,7 +29090,7 @@
       "target": "ooo-npo-kilovatt-shestopalov",
       "type": "role",
       "label": "founder",
-      "source_id": "s0533",
+      "source_id": "s8194",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -29343,7 +29398,7 @@
       "target": "ooo-levit",
       "type": "role",
       "label": "founder",
-      "source_id": "s6697",
+      "source_id": "s8198",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -29926,7 +29981,7 @@
       "target": "ooo-ds-bars-t",
       "type": "role",
       "label": "director",
-      "source_id": "s6961",
+      "source_id": "s8208",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -29970,7 +30025,7 @@
       "target": "ooo-ik-aviaok",
       "type": "role",
       "label": "director",
-      "source_id": "s6971",
+      "source_id": "s8208",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -29981,7 +30036,7 @@
       "target": "ooo-ik-aviaok",
       "type": "role",
       "label": "founder",
-      "source_id": "s6971",
+      "source_id": "s8208",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",

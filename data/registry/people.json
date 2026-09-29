@@ -499,7 +499,7 @@
     "dob": "1978-02-07",
     "birthplace": "Москва (Moscow)",
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "770200967631",
     "roles": [
       {
         "entity_slug": "pao-bank-psb",
@@ -513,9 +513,9 @@
     "sanctions": [
       {
         "date": null,
-        "note": "OpenSanctions topics: sanction; debarment; role.pep; corp.disqual; export.control. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Chairman/CEO of Promsvyazbank (ПАО «Банк ПСБ»). Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: sanction; debarment; role.pep; corp.disqual; export.control. ИНН-CONFIRMED 2026-09-29 (see inn_personal note): OpenSanctions' own raw record (s6376) carries innCode/taxNumber 770200967631, corroborated by RuPEP's independently-pulled (truncated) 77020096763 -- no longer merely a role-corroborated plausible match. Also corroborated by exact role match: Chairman/CEO of Promsvyazbank (ПАО «Банк ПСБ»).",
         "regime": null,
-        "source_id": "s0860"
+        "source_id": "s6376"
       }
     ],
     "other_entities": [],
@@ -526,9 +526,10 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": "images/fradkov-petr-mikhaylovich_portrait_rupep.jpg",
-    "notes": "PII source-linkage pass 2026-09-02: dob/birthplace/personal-ИНН confirmed against rupep.org profile (s2602), archived RUPEP_20260826_fradkov-petr-mikhaylovich.pdf.",
+    "notes": "PII source-linkage pass 2026-09-02: dob/birthplace/personal-ИНН confirmed against rupep.org profile (s2602), archived RUPEP_20260826_fradkov-petr-mikhaylovich.pdf. 2026-09-29: inn_personal wired -- OpenSanctions' own raw pull (s6376, OPENSANCTIONS_petr-fradkov_20260906) independently gives innCode/taxNumber 770200967631 (checksum-valid), which is exactly RuPEP's 11-digit '77020096763' with the trailing digit RuPEP's OCR/transcription had dropped -- two independent sources now agree on the same 12-digit value.",
     "sources": [
-      "s2602"
+      "s2602",
+      "s6376"
     ],
     "_verified": true,
     "_origin": "brief:supervisory_board-table",
@@ -537,18 +538,13 @@
       "position": "Chairman, ПАО «Банк ПСБ»",
       "note": "Named the ₽12bn fund and the ₽35bn-to-2030 financing plan. Primary doc"
     },
-    "open_questions": [
-      {
-        "source_id": "s2602",
-        "text": "rupep.org profile gives ИНН as '77020096763' -- only 11 digits, a checksum-invalid length for a personal ИНН (must be 12). Likely a transcription/OCR gap in RuPEP's own source data (confirmed the PDF's own text layer has only 11 digits, not a pdftotext extraction artifact). Not wired as inn_personal pending a second source or a corrected RuPEP profile."
-      }
-    ],
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
       "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
       "2026-08-26: rupep.org profile (s2602) confirms dob 07.02.1978 (already on file), adds birthplace Moscow and headshot. RuPEP's stated ИНН (77020096763) is only 11 digits -- checksum-invalid, logged as an open question instead of wired. Family/associate detail on the RuPEP page not wired per PII scope.",
       "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to pao-bank-psb, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
-      "2026-09-07: verification backlog closure — identity already confirmed by ПАО «Банк ПСБ»'s (pao-bank-psb) own director_history entry (s0434), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+      "2026-09-07: verification backlog closure — identity already confirmed by ПАО «Банк ПСБ»'s (pao-bank-psb) own director_history entry (s0434), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+      "2026-09-29: user prompted a check of whether sanctioned PEPs without inn_personal actually have a public ИНН already on file -- OpenSanctions' own raw pull (s6376) carries innCode/taxNumber 770200967631, which matches RuPEP's previously-unwired 11-digit '77020096763' as a truncation of the same 12-digit value. Two independent sources agreeing closes the open_question logged 2026-08-26 (now removed) and wires inn_personal."
     ],
     "_verified_against": "s0434 -- ПАО «Банк ПСБ»'s own primary-source founding/EGRUL document, naming Пётр Фрадков as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
@@ -2898,7 +2894,8 @@
     },
     "_corrected": [
       "2026-08-24 OpenSanctions screening: top match (score 1.0) is unambiguously the former Russian President — \"Former Russian Prime Minister, former Russian President, and head of the United Russia party\" — matches this registry's own role (Chairman United Russia; Deputy Chairman Security Council). A second, unrelated намесake (\"ДМИТРИЙ ВЛАДИМИРОВИЧ МЕДВЕДЕВ\", score 0.92) was returned and discarded.",
-      "2026-08-27: rupep.org profile (pending source_id) confirms dob 14.09.1965, birthplace Leningrad/Saint Petersburg, headshot. No personal ИНН published on the profile (a very high-profile PEP; RuPEP does not list one). Family/associate detail not wired per PII scope."
+      "2026-08-27: rupep.org profile (pending source_id) confirms dob 14.09.1965, birthplace Leningrad/Saint Petersburg, headshot. No personal ИНН published on the profile (a very high-profile PEP; RuPEP does not list one). Family/associate detail not wired per PII scope.",
+      "2026-09-29: re-checked per user prompt (sanctioned PEPs should have an ИНН in public docs somewhere) -- neither RuPEP nor OpenSanctions' raw record (s0831) carries an innCode/idNumber for the confirmed match (Q23530). The four ru-inn-* candidate matches OpenSanctions returned alongside it (scores 0.92) are namesakes with the WRONG patronymic (Владимирович/Евгеньевич/Александрович, not Анатольевич) -- confirmed not him, not wired. Genuinely absent from every source pulled so far, not an extraction gap like Фрадков/Гаврилов turned out to be."
     ],
     "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
     "opensanctions_matches": [
@@ -15438,14 +15435,14 @@
     "dob": "1984-02-01",
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "165112438900",
     "roles": [],
     "sanctions": [
       {
         "date": null,
-        "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him GD of \"LLC Gumich\" (= this registry's АО «ХК Гумич», already tied to the Инвестментс/Борей chain) — and adds NEW information: Gumich owns \"LLC Gumich RTK,\" maker of \"Impulse-M\" robot platforms field-tested by Russian forces since summer 2024. Personal ИНН given in notes context but not directly labeled — worth a follow-up EGRUL check. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
+        "note": "OpenSanctions topics: sanction. ИНН-CONFIRMED 2026-09-29: OpenSanctions' own raw record (s6343, OPENSANCTIONS_gavrilov-aleksandr-valerevich_20260906) carries an `innCode` field (165112438900, valid control-digit checksum) that had never been extracted into inn_personal -- this is EU/UA-sanctions-list-sourced (SECO-UKRAINE/UA-SA1644/EU-UKR designation, 2024-12-16), not a plausible name match. Also independently corroborated by role/context: OpenSanctions names him GD of \"LLC Gumich\" (= this registry's АО «ХК Гумич», already tied to the Инвестментс/Борей chain) — Gumich owns \"LLC Gumich RTK,\" maker of \"Impulse-M\" robot platforms field-tested by Russian forces since summer 2024. A follow-up АО «ХК Гумич» full ЕГРЮЛ выписка pull (EGRUL_9726051114_20260929) came back with its \"лицо, имеющее право без доверенности действовать\" (director) section access-restricted (\"Доступ к сведениям ограничен\", 129-ФЗ) -- consistent with the EGRUL UAV-data-closure trend, not a contradiction of this ИНН.",
         "regime": null,
-        "source_id": "s0837"
+        "source_id": "s6343"
       }
     ],
     "other_entities": [],
@@ -15468,7 +15465,8 @@
     },
     "_corrected": [
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-09-29: user prompted a check of whether sanctioned PEPs without inn_personal actually have a public ИНН on file already -- found OpenSanctions' own raw pull (s6343) carries innCode 165112438900, never previously extracted into the structured field. Checksum-valid. Backfilled."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -47826,7 +47824,7 @@
         "okved_label": "Производство антенн, антенных отражателей всех видов и их деталей",
         "registered": "22.07.2024",
         "region": "ЛИПЕЦКАЯ ОБЛ.",
-        "source_id": "s0537"
+        "source_id": "s8194"
       },
       {
         "inn": "4800016776",
@@ -47837,7 +47835,7 @@
         "okved_label": "Производство антенн, антенных отражателей всех видов и их деталей",
         "registered": "22.07.2024",
         "region": "ЛИПЕЦКАЯ ОБЛ.",
-        "source_id": "s0533"
+        "source_id": "s8194"
       },
       {
         "inn": "4800021416",
@@ -47847,7 +47845,8 @@
         "okved": "72.19",
         "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
         "registered": "30.01.2025",
-        "region": "ЛИПЕЦКАЯ ОБЛ."
+        "region": "ЛИПЕЦКАЯ ОБЛ.",
+        "source_id": "s8194"
       },
       {
         "inn": "4800013729",
@@ -47858,10 +47857,10 @@
         "okved_label": "Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями",
         "registered": "28.02.2024",
         "region": "ЛИПЕЦКАЯ ОБЛ.",
-        "source_id": "s0532"
+        "source_id": "s8194"
       }
     ],
-    "other_entities_checked_at": "2026-09-07",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -47950,7 +47949,7 @@
     ],
     "sanctions": [],
     "other_entities": [],
-    "other_entities_checked_at": "2026-09-07",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -48096,10 +48095,11 @@
         "okved": "28.99.9",
         "okved_label": "Производство оборудования специального назначения, не включенного в другие группировки",
         "registered": "14.02.2005",
-        "region": "МОСКОВСКАЯ ОБЛАСТЬ"
+        "region": "МОСКОВСКАЯ ОБЛАСТЬ",
+        "source_id": "s8199"
       }
     ],
-    "other_entities_checked_at": "2026-09-07",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -48301,10 +48301,10 @@
         "okved_label": "Предоставление прочих финансовых услуг, кроме услуг по страхованию и пенсионному обеспечению, не включенных в другие группировки",
         "registered": "23.05.2006",
         "region": "САМАРСКАЯ ОБЛ.",
-        "source_id": "s6697"
+        "source_id": "s8198"
       }
     ],
-    "other_entities_checked_at": "2026-09-07",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -48503,10 +48503,10 @@
         "okved_label": "Производство прочих летательных аппаратов",
         "registered": "05.06.2026",
         "region": "РОСТОВСКАЯ ОБЛ.",
-        "source_id": "s6956"
+        "source_id": "s8197"
       }
     ],
-    "other_entities_checked_at": "2026-09-08",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -48572,7 +48572,7 @@
         "okved_label": "Производство прочих летательных аппаратов",
         "registered": "05.06.2026",
         "region": "РОСТОВСКАЯ ОБЛ.",
-        "source_id": "s6956"
+        "source_id": "s8196"
       },
       {
         "inn": "6154063989",
@@ -48582,7 +48582,8 @@
         "okved": "55.10",
         "okved_label": "Деятельность гостиниц и прочих мест для временного проживания",
         "registered": "23.10.1996",
-        "region": "РОСТОВСКАЯ ОБЛАСТЬ"
+        "region": "РОСТОВСКАЯ ОБЛАСТЬ",
+        "source_id": "s8196"
       },
       {
         "inn": "6154093334",
@@ -48592,7 +48593,8 @@
         "okved": "55.10",
         "okved_label": "Деятельность гостиниц и прочих мест для временного проживания",
         "registered": "26.10.2004",
-        "region": "РОСТОВСКАЯ ОБЛАСТЬ"
+        "region": "РОСТОВСКАЯ ОБЛАСТЬ",
+        "source_id": "s8196"
       },
       {
         "inn": "7804712459",
@@ -48603,10 +48605,10 @@
         "okved_label": "Торговля оптовая машинами, оборудованием и инструментами для сельского хозяйства",
         "registered": "10.12.2024",
         "region": "МОСКВА Г.",
-        "source_id": "s7342"
+        "source_id": "s8196"
       }
     ],
-    "other_entities_checked_at": "2026-09-08",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -48708,10 +48710,10 @@
         "okved_label": "Ремонт металлоизделий",
         "registered": "15.12.2023",
         "region": "РОСТОВСКАЯ ОБЛ.",
-        "source_id": "s6962"
+        "source_id": "s8193"
       }
     ],
-    "other_entities_checked_at": "2026-09-07",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -48770,10 +48772,10 @@
         "okved_label": "Ремонт металлоизделий",
         "registered": "15.12.2023",
         "region": "РОСТОВСКАЯ ОБЛ.",
-        "source_id": "s6962"
+        "source_id": "s8195"
       }
     ],
-    "other_entities_checked_at": "2026-09-07",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -48839,10 +48841,10 @@
         "okved_label": "Деятельность автомобильного грузового транспорта",
         "registered": "21.07.2026",
         "region": "МОСКВА Г.",
-        "source_id": "s6970"
+        "source_id": "s8200"
       }
     ],
-    "other_entities_checked_at": "2026-09-07",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -48895,25 +48897,47 @@
         "ogrn": "1266100002387",
         "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"ЗЕВС\"",
         "role": "director",
-        "okved": "46.52",
-        "okved_label": "Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями",
+        "okved": "27.90",
+        "okved_label": "Производство прочего электрического оборудования",
         "registered": "10.02.2026",
         "region": "РОСТОВСКАЯ ОБЛ.",
-        "source_id": "s6963"
+        "source_id": "s8202"
+      },
+      {
+        "inn": "6165246423",
+        "ogrn": "1266100018238",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОСЕЙДОН\"",
+        "role": "director",
+        "okved": "30.30.5",
+        "okved_label": "Производство частей и принадлежностей летательных и космических аппаратов",
+        "registered": "21.09.2026",
+        "region": "РОСТОВСКАЯ ОБЛ.",
+        "source_id": "s8202"
       },
       {
         "inn": "6161154122",
         "ogrn": "1266100002387",
         "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"ЗЕВС\"",
         "role": "founder",
-        "okved": "46.52",
-        "okved_label": "Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями",
+        "okved": "27.90",
+        "okved_label": "Производство прочего электрического оборудования",
         "registered": "10.02.2026",
         "region": "РОСТОВСКАЯ ОБЛ.",
-        "source_id": "s6963"
+        "source_id": "s8202"
+      },
+      {
+        "inn": "6165246423",
+        "ogrn": "1266100018238",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОСЕЙДОН\"",
+        "role": "founder",
+        "okved": "30.30.5",
+        "okved_label": "Производство частей и принадлежностей летательных и космических аппаратов",
+        "registered": "21.09.2026",
+        "region": "РОСТОВСКАЯ ОБЛ.",
+        "source_id": "s8202"
       }
     ],
-    "other_entities_checked_at": "2026-09-07",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -48962,10 +48986,10 @@
         "okved_label": "Разработка компьютерного программного обеспечения",
         "registered": "16.07.2026",
         "region": "МОСКВА Г.",
-        "source_id": "s6966"
+        "source_id": "s8209"
       }
     ],
-    "other_entities_checked_at": "2026-09-08",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -49030,7 +49054,7 @@
         "okved_label": "Аренда и управление собственным или арендованным нежилым недвижимым имуществом",
         "registered": "30.08.2023",
         "region": "МОСКВА Г.",
-        "source_id": "s6968"
+        "source_id": "s8206"
       },
       {
         "inn": "9704109459",
@@ -49041,10 +49065,10 @@
         "okved_label": "Аренда и управление собственным или арендованным нежилым недвижимым имуществом",
         "registered": "22.12.2021",
         "region": "МОСКВА Г.",
-        "source_id": "s6967"
+        "source_id": "s8206"
       }
     ],
-    "other_entities_checked_at": "2026-09-08",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -49093,10 +49117,10 @@
         "okved_label": "Работы по сборке и монтажу сборных конструкций",
         "registered": "14.04.2026",
         "region": "МОСКВА Г.",
-        "source_id": "s6965"
+        "source_id": "s8207"
       }
     ],
-    "other_entities_checked_at": "2026-09-08",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -49153,7 +49177,7 @@
         "okved_label": "Разработка компьютерного программного обеспечения",
         "registered": "25.05.2007",
         "region": "РОСТОВСКАЯ ОБЛАСТЬ",
-        "source_id": "s6961"
+        "source_id": "s8208"
       },
       {
         "inn": "6154152244",
@@ -49163,7 +49187,8 @@
         "okved": "68.20.2",
         "okved_label": "Аренда и управление собственным или арендованным нежилым недвижимым имуществом",
         "registered": "17.04.2018",
-        "region": "РОСТОВСКАЯ ОБЛАСТЬ"
+        "region": "РОСТОВСКАЯ ОБЛАСТЬ",
+        "source_id": "s8208"
       },
       {
         "inn": "6154569246",
@@ -49174,7 +49199,7 @@
         "okved_label": "Разработка компьютерного программного обеспечения",
         "registered": "21.02.2011",
         "region": "РОСТОВСКАЯ ОБЛ.",
-        "source_id": "s6971"
+        "source_id": "s8208"
       },
       {
         "inn": "6154098653",
@@ -49184,7 +49209,8 @@
         "okved": "68.20",
         "okved_label": "Аренда и управление собственным или арендованным недвижимым имуществом",
         "registered": "23.12.2005",
-        "region": "РОСТОВСКАЯ ОБЛАСТЬ"
+        "region": "РОСТОВСКАЯ ОБЛАСТЬ",
+        "source_id": "s8208"
       },
       {
         "inn": "6154569246",
@@ -49195,10 +49221,10 @@
         "okved_label": "Разработка компьютерного программного обеспечения",
         "registered": "21.02.2011",
         "region": "РОСТОВСКАЯ ОБЛ.",
-        "source_id": "s6971"
+        "source_id": "s8208"
       }
     ],
-    "other_entities_checked_at": "2026-09-08",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-08",
     "subsidiary_liability_hits": [],
@@ -49279,7 +49305,8 @@
         "okved": "30.30",
         "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
         "registered": "07.11.2018",
-        "region": "КАЛУЖСКАЯ ОБЛАСТЬ"
+        "region": "КАЛУЖСКАЯ ОБЛАСТЬ",
+        "source_id": "s8210"
       },
       {
         "inn": "9718071565",
@@ -49289,7 +49316,8 @@
         "okved": "72.19",
         "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
         "registered": "03.07.2017",
-        "region": "КАЛУЖСКАЯ ОБЛ."
+        "region": "КАЛУЖСКАЯ ОБЛ.",
+        "source_id": "s8210"
       },
       {
         "inn": "3327148106",
@@ -49299,10 +49327,44 @@
         "okved": "26.11",
         "okved_label": "Производство элементов электронной аппаратуры",
         "registered": "06.09.2021",
-        "region": "КАЛУЖСКАЯ ОБЛ."
+        "region": "КАЛУЖСКАЯ ОБЛ.",
+        "source_id": "s8210"
+      },
+      {
+        "inn": "4029059580",
+        "ogrn": "1184027014753",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОТКРЫТОЕ НЕБО\"",
+        "role": "founder",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "07.11.2018",
+        "region": "КАЛУЖСКАЯ ОБЛАСТЬ",
+        "source_id": "s8210"
+      },
+      {
+        "inn": "9718071565",
+        "ogrn": "1177746649002",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РАЗРАБОТКА ИННОВАЦИОННЫХ ТЕХНОЛОГИЙ\"",
+        "role": "founder",
+        "okved": "72.19",
+        "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
+        "registered": "03.07.2017",
+        "region": "КАЛУЖСКАЯ ОБЛ.",
+        "source_id": "s8210"
+      },
+      {
+        "inn": "3327148106",
+        "ogrn": "1213300007227",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУСАЛАЙТ\"",
+        "role": "founder",
+        "okved": "26.11",
+        "okved_label": "Производство элементов электронной аппаратуры",
+        "registered": "06.09.2021",
+        "region": "КАЛУЖСКАЯ ОБЛ.",
+        "source_id": "s8210"
       }
     ],
-    "other_entities_checked_at": "2026-09-15",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": "2026-09-15",
     "subsidiary_liability_hits": [],
@@ -49353,7 +49415,8 @@
         "okved": "64.20",
         "okved_label": "Деятельность холдинговых компаний",
         "registered": "07.08.2020",
-        "region": "КАЛУЖСКАЯ ОБЛАСТЬ"
+        "region": "КАЛУЖСКАЯ ОБЛАСТЬ",
+        "source_id": "s8204"
       },
       {
         "inn": "2540255423",
@@ -49363,7 +49426,8 @@
         "okved": "42.91.5",
         "okved_label": "Производство подводных работ, включая водолазные",
         "registered": "05.03.2020",
-        "region": "ПРИМОРСКИЙ КРАЙ"
+        "region": "ПРИМОРСКИЙ КРАЙ",
+        "source_id": "s8204"
       },
       {
         "inn": "4027144945",
@@ -49373,10 +49437,88 @@
         "okved": "30.30",
         "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
         "registered": "23.11.2020",
-        "region": "КАЛУЖСКАЯ ОБЛАСТЬ"
+        "region": "КАЛУЖСКАЯ ОБЛАСТЬ",
+        "source_id": "s8204"
+      },
+      {
+        "inn": "2540255423",
+        "ogrn": "1202500005740",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВК ГОРИЗОНТ\"",
+        "role": "founder",
+        "okved": "42.91.5",
+        "okved_label": "Производство подводных работ, включая водолазные",
+        "registered": "05.03.2020",
+        "region": "ПРИМОРСКИЙ КРАЙ",
+        "source_id": "s8204"
+      },
+      {
+        "inn": "4027144945",
+        "ogrn": "1204000009795",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОСХОД\"",
+        "role": "founder",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "23.11.2020",
+        "region": "КАЛУЖСКАЯ ОБЛАСТЬ",
+        "source_id": "s8204"
+      },
+      {
+        "inn": "9704113367",
+        "ogrn": "1227700017632",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНФОРМАЦИОННО-АНАЛИТИЧЕСКАЯ КОМПАНИЯ\"",
+        "role": "founder",
+        "okved": "69.10",
+        "okved_label": "Деятельность в области права",
+        "registered": "20.01.2022",
+        "region": "МОСКВА Г.",
+        "source_id": "s8204"
+      },
+      {
+        "inn": "4029059580",
+        "ogrn": "1184027014753",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОТКРЫТОЕ НЕБО\"",
+        "role": "founder",
+        "okved": "30.30",
+        "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+        "registered": "07.11.2018",
+        "region": "КАЛУЖСКАЯ ОБЛАСТЬ",
+        "source_id": "s8204"
+      },
+      {
+        "inn": "4027119988",
+        "ogrn": "1144027002680",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УПРАВЛЯЮЩАЯ КОМПАНИЯ \"ЭНЕРГЕТИКА\"",
+        "role": "founder",
+        "okved": "70.10.2",
+        "okved_label": "Деятельность по управлению холдинг-компаниями",
+        "registered": "21.07.2014",
+        "region": "КАЛУЖСКАЯ ОБЛАСТЬ",
+        "source_id": "s8204"
+      },
+      {
+        "inn": "7713750143",
+        "ogrn": "1127746485085",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УПРАВЛЯЮЩАЯ КОМПАНИЯ ЦЕНТР ЭНЕРГЕТИЧЕСКИХ ТЕХНОЛОГИЙ\"",
+        "role": "founder",
+        "okved": "52.10",
+        "okved_label": "Деятельность по складированию и хранению",
+        "registered": "21.06.2012",
+        "region": "МОСКВА Г.",
+        "source_id": "s8204"
+      },
+      {
+        "inn": "4000030027",
+        "ogrn": "1254000009350",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФМВА\"",
+        "role": "founder",
+        "okved": "62.02",
+        "okved_label": "Деятельность консультативная и работы в области компьютерных технологий",
+        "registered": "17.10.2025",
+        "region": "КАЛУЖСКАЯ ОБЛ.",
+        "source_id": "s8204"
       }
     ],
-    "other_entities_checked_at": "2026-09-15",
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -49486,8 +49628,20 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "1651092483",
+        "ogrn": "1221600086180",
+        "name": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ЦЕНТР ПОМОЩИ ВОЕННОСЛУЖАЩИМ \"ЗА ОТВАЖНЫХ ВОИНОВ - АРМИИ АНГЕЛОВ\"",
+        "role": "director",
+        "okved": "88.99",
+        "okved_label": "Предоставление прочих социальных услуг без обеспечения проживания, не включенных в другие группировки",
+        "registered": "24.10.2022",
+        "region": "ТАТАРСТАН РЕСП.",
+        "source_id": "s8201"
+      }
+    ],
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -49524,8 +49678,20 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "6154168283",
+        "ogrn": "1246100025951",
+        "name": "ОБЩЕСТВЕННО ПОЛЕЗНЫЙ ФОНД НАУЧНО-ТЕХНОЛОГИЧЕСКОГО И СОЦИАЛЬНО-ЭКОНОМИЧЕСКОГО РАЗВИТИЯ \"САРМАТ\"",
+        "role": "director",
+        "okved": "64.99",
+        "okved_label": "Предоставление прочих финансовых услуг, кроме услуг по страхованию и пенсионному обеспечению, не включенных в другие группировки",
+        "registered": "15.10.2024",
+        "region": "РОСТОВСКАЯ ОБЛ.",
+        "source_id": "s8205"
+      }
+    ],
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
@@ -49570,8 +49736,86 @@
       }
     ],
     "sanctions": [],
-    "other_entities": [],
-    "other_entities_checked_at": null,
+    "other_entities": [
+      {
+        "inn": "5505057400",
+        "ogrn": "1175543029980",
+        "name": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ\"",
+        "role": "director",
+        "okved": "85.42.9",
+        "okved_label": "Деятельность по дополнительному профессиональному образованию прочая, не включенная в другие группировки",
+        "registered": "12.09.2017",
+        "region": "ОМСКАЯ ОБЛ.",
+        "source_id": "s8203"
+      },
+      {
+        "inn": "7733462457",
+        "ogrn": "1257700027090",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ\"",
+        "role": "director",
+        "okved": "85.42.9",
+        "okved_label": "Деятельность по дополнительному профессиональному образованию прочая, не включенная в другие группировки",
+        "registered": "24.01.2025",
+        "region": "МОСКВА Г",
+        "source_id": "s8203"
+      },
+      {
+        "inn": "9723219721",
+        "ogrn": "1237700943094",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ АВИАЦИОННЫЙ УЧЕБНЫЙ ЦЕНТР \"РУССКАЯ ШКОЛА ВНЕШНИХ ПИЛОТОВ\"",
+        "role": "director",
+        "okved": "85.42.9",
+        "okved_label": "Деятельность по дополнительному профессиональному образованию прочая, не включенная в другие группировки",
+        "registered": "27.12.2023",
+        "region": "МОСКВА Г.",
+        "source_id": "s8203"
+      },
+      {
+        "inn": "4632282597",
+        "ogrn": "1214600007577",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАЗАЧЬЕ ОХОТНИЧЬИ УГОДЬЯ \"ДРУЖБА НАРОДОВ\"",
+        "role": "director",
+        "okved": "01.11",
+        "okved_label": "Выращивание зерновых (кроме риса), зернобобовых культур и семян масличных культур",
+        "registered": "01.07.2021",
+        "region": "ЯМАЛО-НЕНЕЦКИЙ А.ОКР.",
+        "source_id": "s8203"
+      },
+      {
+        "inn": "7733462457",
+        "ogrn": "1257700027090",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ\"",
+        "role": "founder",
+        "okved": "85.42.9",
+        "okved_label": "Деятельность по дополнительному профессиональному образованию прочая, не включенная в другие группировки",
+        "registered": "24.01.2025",
+        "region": "МОСКВА Г",
+        "source_id": "s8203"
+      },
+      {
+        "inn": "9723219721",
+        "ogrn": "1237700943094",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ АВИАЦИОННЫЙ УЧЕБНЫЙ ЦЕНТР \"РУССКАЯ ШКОЛА ВНЕШНИХ ПИЛОТОВ\"",
+        "role": "founder",
+        "okved": "85.42.9",
+        "okved_label": "Деятельность по дополнительному профессиональному образованию прочая, не включенная в другие группировки",
+        "registered": "27.12.2023",
+        "region": "МОСКВА Г.",
+        "source_id": "s8203"
+      },
+      {
+        "inn": "4632282597",
+        "ogrn": "1214600007577",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАЗАЧЬЕ ОХОТНИЧЬИ УГОДЬЯ \"ДРУЖБА НАРОДОВ\"",
+        "role": "founder",
+        "okved": "01.11",
+        "okved_label": "Выращивание зерновых (кроме риса), зернобобовых культур и семян масличных культур",
+        "registered": "01.07.2021",
+        "region": "ЯМАЛО-НЕНЕЦКИЙ А.ОКР.",
+        "source_id": "s8203"
+      }
+    ],
+    "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
     "disqualification_checked_at": null,
     "subsidiary_liability_hits": [],
