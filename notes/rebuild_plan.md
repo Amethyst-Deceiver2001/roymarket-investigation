@@ -23,12 +23,13 @@ as a two-tier generated publication) changed shape:
 | Phase 4 Jinja site generator, "MVP publication", Phase 5 prose, sequencing note | **Retired 2026-09-08** at user direction. **Superseded 2026-09-20:** `docs/index.html` is no longer the narrative landing page. The old brief is now `docs/dossier.html`; the front door is a generated landing page plus case studies (see "Site structure" below). |
 | The wb_overlap regression on Тримикс (old "one real blocker") | **Fixed** (`b06d9f1`); registry now shows `confirmed_reseller`. |
 
-## Current state (queried 2026-09-19)
+## Current state (queried 2026-09-29)
 
-238 entities, 435 people, 7,699 sources, 23 quotes, 44 open questions.
-67 entities and 35 people carry `sanctions[]`. 162 people are still
-`_verified: false`. `facility_type` is set on 4 entities. `check_registry.py`:
-0 errors, 16 warnings.
+240 live entities (242 raw, 2 merged), 430 live people (437 raw, 7 merged),
+8,189 sources, 23 quotes, 44 open questions. 72 entities and 36 people carry
+`sanctions[]`. 162 people are still `_verified: false`. `facility_type` is set
+on 4 entities. `check_registry.py`: 0 errors, 18 warnings. All five test files
+pass (a stale `founders_history` fixture was fixed 2026-09-29).
 
 Live open-work lists (these, not this file, are authoritative):
 
@@ -53,10 +54,10 @@ before acting (see [[roymarket_tracking_discipline]]).
 
 Direction chosen by the user with the peer sessions' input: a case-led front door.
 
-- `docs/index.html`: generated landing page, five routes (Cases, Graph, Profiles, Guided read, Registry dossier).
-- `docs/cases/`: one page per case, from `notes/case_study_<slug>.md`, built by `scripts/build_case_pages.py`. Published: Архангел, Гагаринг, ГОУДРОН, Овод, НПЦ БАСиРТК, Цыганов/Булат. Built, unpublished until pushed: Пиранья. All seven planned cases are now written; further cases are open. (The first five excerpts come from `~/.claude/plans/spicy-beaming-kite.md`; НПЦ БАСиРТК was the seventh, previously a paragraph in the dossier.)
-- `docs/dossier.html`: the former index.html, linked, not deleted.
-- The live network-graph Artifact split in `~/.claude/plans/spicy-beaming-kite.md` (overview-first default) is still unexecuted; its case-excerpt list overlaps the cases above and its graph tokens are reused by `build_case_pages.py`.
+- `docs/index.html`: generated landing page, four routes (Cases, Graph, Profiles, Guided read). The registry-dossier route was removed 2026-09-21.
+- `docs/cases/`: one page per case, from `notes/case_study_<slug>.md`, built by `scripts/build_case_pages.py`. All seven are published: Архангел, Гагаринг, ГОУДРОН, Овод, Пиранья, Цыганов/Булат, НПЦ БАСиРТК. Further cases are open.
+- The old brief is `notes/dossier_draft.html`, internal only and not linked (CLAUDE.md, "Publishing").
+- `docs/relationship-graph.html` is the live graph explorer; `scripts/refresh_graph_page_data.py` re-embeds `relationship_graph.json` after every graph rebuild. From the network-graph split plan (`~/.claude/plans/spicy-beaming-kite.md`), the small-component filter with "show all" shipped, but the minimum-degree default is still 1, not 2.
 - Open: Russian versions of the case pages (written, not translated); the other six case notes; `notes/public_subproject_plan.md` (open-sources-only public site) stays parked.
 
 ## Section index of the archive
