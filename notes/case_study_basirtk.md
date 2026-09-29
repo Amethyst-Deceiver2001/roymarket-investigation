@@ -6,7 +6,7 @@
 
 ООО «НПЦ БАСИРТК» (ИНН 3300009049, Муром) was registered on 31.01.2024. Ирина Байгутлина owns 100% and is general director, with ₽500,000 of capital [s6782]. Its ЕГРЮЛ entry lists 39 activity codes, among them 72.19 (research), 25.40 «Производство оружия и боеприпасов», 30.30 (aircraft) and 84.22 «Деятельность, связанная с обеспечением военной безопасности» [s6782]. The small-business register lists it as a «Микропредприятие» with an average of two employees in the previous calendar year [s0209]. Its 2024 revenue was ₽11,000; its 2025 revenue was ₽83.7m [s0247, s0248]. Its own channel reports batches of cardboard drones «Ковровец» prepared for the 106th Guards Airborne Division from September 2024 [s7959], and on 18.06.2026 that all four of its projects entered the III stream of ЦБСТ's accelerator [s7522]. No public contract exists.
 
-## Officially X, actually Y
+## On paper and in practice
 
 | Officially | Actually |
 |---|---|

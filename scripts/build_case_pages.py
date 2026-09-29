@@ -606,6 +606,12 @@ def network_motif(cases):
     not decoration (see the artifact-design 'structure is information' rule)."""
     pub = [c for c in cases if c["status"] == "published"]
     n = len(pub)
+    # A spoke is solid only where the case hub has its own cbst_tie edge to ЦБСТ in the
+    # registry graph; a hub that reaches ЦБСТ through a neighbour is drawn dashed.
+    _g = json.loads((REG / "relationship_graph.json").read_text(encoding="utf-8"))
+    _centre = "ano-tsbst-centre-for-unmanned-systems-technologies"
+    _direct = {e["source"] if e["target"] == _centre else e["target"]
+               for e in _g["edges"] if e["type"] == "cbst_tie" and _centre in (e["source"], e["target"])}
     cx, cy, r = 100, 100, 62
     parts = [f'<circle cx="{cx}" cy="{cy}" r="17" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.2"/>',
               f'<text class="hub" x="{cx}" y="{cy+3}" text-anchor="middle">ЦБСТ</text>']
@@ -616,11 +622,12 @@ def network_motif(cases):
         x, y = cx + r * math.cos(a), cy + r * math.sin(a)
         lx, ly = cx + (r + 16) * math.cos(a), cy + (r + 16) * math.sin(a)
         anchor = "middle" if abs(math.cos(a)) < 0.35 else ("start" if math.cos(a) > 0 else "end")
-        parts.append(f'<line x1="{cx}" y1="{cy}" x2="{x:.1f}" y2="{y:.1f}" stroke="var(--rule)" stroke-width="1"/>')
+        dash = "" if c["graph"]["hub"] in _direct else ' stroke-dasharray="3 3"'
+        parts.append(f'<line x1="{cx}" y1="{cy}" x2="{x:.1f}" y2="{y:.1f}" stroke="var(--rule)" stroke-width="1"{dash}/>')
         parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5.5" fill="var(--panel)" stroke="var(--ink-3)" stroke-width="1"/>')
         parts.append(f'<text x="{lx:.1f}" y="{ly:.1f}" text-anchor="{anchor}" dominant-baseline="middle">{esc(short.get(c["slug"], c["title"]))}</text>')
     svg = f'<svg viewBox="-38 -14 276 228" role="img" aria-label="ЦБСТ and its {n} documented case-study networks">{"".join(parts)}</svg>'
-    return f'<div class="net-motif">{svg}<p class="cap">{n} of the registry\'s networks, one link each to the ЦБСТ hub</p></div>'
+    return f'<div class="net-motif">{svg}<p class="cap">{n} of the registry\'s networks around ЦБСТ: {sum(c["graph"]["hub"] in _direct for c in pub)} hold a direct tie (solid), the rest reach it through a neighbour (dashed)</p></div>'
 
 
 def build_indexes(stats):

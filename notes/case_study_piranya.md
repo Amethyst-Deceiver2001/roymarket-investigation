@@ -6,7 +6,7 @@
 
 ООО «Симбирское конструкторское бюро Пиранья» (ООО «СКБ Пиранья», ИНН 7300024069) was registered in Ульяновск on 19.09.2023. Павел Чернышов is director and owns 40%; Ольга Корчагина owns 60%; the capital is ₽15,000 [s6730]. Its main ОКВЭД code is 62.01, «Разработка компьютерного программного обеспечения»; 30.30, aircraft, is one of the additional codes [s6730]. Its filed revenue was ₽36.8m for 2023, ₽516.7m for 2024 and ₽870.7m for 2025 [s5550, s5551, s5552]. On 23.04.2026 the EU listed the company, and its statement of reasons says it makes FPV drones, models «Piranya-7», «Piranya-10» and «Piranya-13», «up to 10 000 drones per month» [s7941]. The company's website offers drones «От 1 штуки, отправим в день заказа» and «Поставляем дроны напрямую до адресатов в ЛНР и ДНР» [s7950]. ЦБСТ's own channel counts the company among its residents [s7588]. A search of zakupki.gov.ru finds no contract.
 
-## Officially X, actually Y
+## On paper and in practice
 
 | Officially | Actually |
 |---|---|

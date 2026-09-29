@@ -6,7 +6,7 @@
 
 Андрей Черезов owns 100% of two companies registered in the same building in Tula, on ул. Рязанская, д. 3Д: ООО «Русская лаборатория воздушного транспорта» (РЛВТ, ИНН 7100027464), registered 28.09.2022, and ООО «Воздушный трактат» (ИНН 7100046925), registered 28.11.2023 [s6727, s6728]. РЛВТ reports revenue of ₽110m for 2023, ₽562m for 2024 and ₽1.31bn for 2025, and a balance sheet of ₽4.22bn at the end of 2025 [s6532, s6533, s6534]. It makes the «Овод» FPV strike drones and the fibre-optic «Провод» [s6456]. ЦБСТ's own channel called the drone «нашим флагманским резидентом» on 15.04.2025 [s7957]. On 29.07.2026 Черезов was shot in a stairwell in Tula [s7853]. The state contracts on file are four university purchases worth ₽72.65m, about 4% of the company's revenue for 2024 and 2025 [s3372, s3374, s3375, s3376].
 
-## Officially X, actually Y
+## On paper and in practice
 
 | Officially | Actually |
 |---|---|

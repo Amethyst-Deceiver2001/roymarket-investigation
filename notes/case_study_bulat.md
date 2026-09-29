@@ -6,7 +6,7 @@
 
 «Булат» is a portable drone detector made by ООО «Тримикс» (ИНН 7802942873), registered in Санкт-Петербург on 21.07.2023. Its ЕГРЮЛ entry hides its director and its owners: «Доступ к сведениям ограничен» [s6749]. It is resold in Московская область by ООО «ПОКРОВ» (ИНН 5038189259, Пушкино), which 3mx.ru lists as a dealer [s0558]. Вадим Цыганов owns 100% of ООО «ПОКРОВ» and is its director [s6799]. He is also a registered sole trader, ИП Цыганов Вадим Борисович (ИНН 504405055721), in Химки [s6800]. Two МЧС buyers awarded the sole trader two contracts worth ₽28.176m without a tender, for «Булат» detectors and «Покров» jammers [s1416, s1417]. The company was listed in Ukraine's sanctions register by presidential decree on 09.05.2025 [s7873]; both МЧС contracts with the sole trader are later than the company's registration and one of them is later than its listing. ЦБСТ's own channel lists «детекторы «Булат»» among its residents' exhibits [s7596].
 
-## Officially X, actually Y
+## On paper and in practice
 
 | Officially | Actually |
 |---|---|

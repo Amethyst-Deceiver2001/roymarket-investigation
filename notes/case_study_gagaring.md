@@ -6,7 +6,7 @@
 
 ООО «Гагаринг» (ИНН 2312321660, Краснодар) was registered on 04.09.2023 [s6776]. Its filed accounts show revenue of ₽1.25m for 2023, ₽84.5m for 2024 and ₽2.16bn for 2025, with net profit of ₽664m in the last year [s0241, s0242, s0243]. Staff grew from 34 at the end of 2024 to 105 a year later [s5333]. Its comms system «Кузнечик» is reported as used at the front [s5436], and ЦБСТ's own channel calls the company a resident [s5440]. Two men own it: Александр Барашков (50.5%) and Алексей Александров (49.5%) [s0455]. Around it sit three part-owned drone and electronics companies, a co-founded training body that hands out diplomas, and an industry association whose director is Барашков (registry record `ano-arrs-krasnodar`). The related-party disclosures come from the audit report [s5333]. A search of zakupki.gov.ru for the company and seven of its network entities returns no hits.
 
-## Officially X, actually Y
+## On paper and in practice
 
 | Officially | Actually |
 |---|---|

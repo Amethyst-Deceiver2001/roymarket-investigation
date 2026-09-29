@@ -6,7 +6,7 @@
 
 ООО «ГОУДРОН» (ИНН 9721203814) was registered in Moscow on 07.04.2023. One man, Козлов Дмитрий Сергеевич, owns 100% and is general director [s6768]. Its main ОКВЭД code is 46.43, wholesale of household electrical goods [s6768], and its registered address is an apartment, кв. 131, on ул. Ухтомского ополчения in Некрасовка [s6768]. It sells the «Набат» line of drone detectors under the GoDrone brand. The product site's own tagline is «Защита техники и личного состава в условиях СВО», and its price table has a separate soldiers' tier: ₽100,000 by bank transfer «военным», against ₽115,000 standard [s6457]. Its channel says «Мы работаем с ЦБСТ не первый месяц» [s7598]. Revenue was ₽86.3m in 2023, ₽178.3m in 2024 and ₽55.9m in 2025 [s0413, s0414, s0415]. No procurement record exists. Ukraine has listed the company under a presidential decree since 20.06.2025 [s7972].
 
-## Officially X, actually Y
+## On paper and in practice
 
 | Officially | Actually |
 |---|---|

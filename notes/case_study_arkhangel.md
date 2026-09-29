@@ -6,7 +6,7 @@
 
 Проект «Архангел» sells three things through one set of Telegram channels: an interceptor drone it calls a rocket, training for combat-drone operators, and diplomas for the graduates. The project itself is not a registered legal entity. Its head, Михаил Филиппов, owns 80% of one Moscow company created in March 2026 [s5474]. Its training credentials come from an Omsk-registered education institute that has sold job-centre retraining to Russian regional governments since 2017 [s7907]. Its interceptor is announced as produced with the state arms concern «Калашников» [s5476–s5483], and its radio comms brand, ГЕРМЕС, is named a resident of the ЦБСТ network by ЦБСТ's own channel [s7597]. No procurement record links any of these to a state customer.
 
-## Officially X, actually Y
+## On paper and in practice
 
 | Officially | Actually |
 |---|---|
