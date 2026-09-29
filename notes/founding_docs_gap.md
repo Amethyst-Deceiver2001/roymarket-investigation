@@ -170,15 +170,15 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «Группа компаний «Аэромакс»» (`ooo-gk-aeromaks`) | 1147748024269 | 7710974353 | manufacturer |
 | ООО «ДИАМ-АЭРО» (`ooo-diam-aero`) | 1187847091079 | 7811687549 | — |
 | ООО «ДРОН-РЕЙСИНГ» (`ooo-dron-reysing`) | 1187746574696 | 7728432295 | manufacturer | got docs but Деятельность прекращена
-| ООО «ДСГ» (`ooo-dsg`) | 1207700030493 | 9724002908 | manufacturer |
-| ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ» (`ooo-intek-bespilotnye-sistemy`) | 1247000000488 | 7000013316 | manufacturer |
-| ООО «Клеверкоптер» (`ooo-kleverkopter`) | 1185275047176 | 5257183517 | manufacturer |
-| ООО «Кольская верфь» (`kolskaya-verf`) | 1245100006799 | 5190102381 | manufacturer |
-| ООО «Конструкторское бюро СОВА» (`va-technologies`) | 1252300058515 | 2378001237 | manufacturer |
-| ООО «Левит» (`ooo-levit`) | 1066330007798 | 6330030244 | money-layer |
-| ООО «Ментастеп» (`ooo-mentastep`) | 1247700255208 | 9715478320 | manufacturer |
-| ООО «Метаскан» (`ooo-metaskan`) | 1201600057097 | 1660349248 | manufacturer |
-| ООО «НОВА» (`ooo-nova`) | 1086330002549 | 6330037352 | money-layer |
+| ООО «ДСГ» (`ooo-dsg`) | 1207700030493 | 9724002908 | manufacturer | got docs
+| ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ» (`ooo-intek-bespilotnye-sistemy`) | 1247000000488 | 7000013316 | manufacturer | got docs
+| ООО «Клеверкоптер» (`ooo-kleverkopter`) | 1185275047176 | 5257183517 | manufacturer | got docs
+| ООО «Кольская верфь» (`kolskaya-verf`) | 1245100006799 | 5190102381 | manufacturer | got docs
+| ООО «Конструкторское бюро СОВА» (`va-technologies`) | 1252300058515 | 2378001237 | manufacturer | типовой устав № 24
+| ООО «Левит» (`ooo-levit`) | 1066330007798 | 6330030244 | money-layer |got docs 
+| ООО «Ментастеп» (`ooo-mentastep`) | 1247700255208 | 9715478320 | manufacturer | got docs
+| ООО «Метаскан» (`ooo-metaskan`) | 1201600057097 | 1660349248 | manufacturer | got docs
+| ООО «НОВА» (`ooo-nova`) | 1086330002549 | 6330037352 | money-layer | got docs
 | ООО «НПК «Центр перспективных технологий»» (ЦПТ) (`ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy`) | 1265300000470 | 5300022741 | manufacturer |
 | ООО «НПО Рустехдрон» (`ooo-npo-rustekhdron`) | 1235000022179 | 5003155499 | manufacturer | no docs
 | ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер») (`ooo-npo-eyler`) | 1257100008560 | 7100069249 | manufacturer |
@@ -309,3 +309,43 @@ shrinkages after fixing a self-inflicted overwrite bug (an in-place
 `state_programs[]` assignment on АО «Эколибри» initially clobbered its 2
 pre-existing entries — caught by the diff, fixed by merging instead of
 replacing); 182/182 profiles tag-balance clean.
+
+## 2026-09-29 pull batch: what was found
+
+8 bundles pulled and read in full for the 7 "money-layer"/"manufacturer"
+entities already flagged "got docs" in the table above — ООО «ДСГ», ООО
+«ИНТЭК беспилотные системы», ООО «Клеверкоптер», ООО «Кольская верфь», ООО
+«Левит», ООО «Ментастеп», and ООО «Метаскан» — plus ООО «НОВА» (source
+`s8109`, `UD_2103373.zip`; MANIFEST's auto-extracted ОГРН column came back
+blank for this one so it initially looked unmatched, resolved by reading
+the charter's own name/ОГРН block directly rather than trusting the
+column).
+
+**Every one of the 8 corroborates data already on file — no new founder,
+director, or charter-capital fact for any of them.** All 8 entities
+already had fully sourced `founders_history`/`director_history`/
+`charter_capital_history` from prior full ЕГРЮЛ выписка pulls (s6726,
+s6810, etc.) before this batch landed, and — consistent with the standard
+pattern already noted several times above — a Устав's own body text does
+not name founders or the sitting director (that's a separate Решение/
+Протокол document not included in these bundles), so even the newly-read
+text couldn't have closed the one real remaining gap on file (ИНТЭК
+беспилотные системы's director-history entry, `value: null`, name never
+captured — `Калиновский Никита Владиславович` does not appear anywhere in
+its charter text either). Capital figures cross-checked digit-for-digit
+against the registry: ДСГ ₽10,000, ИНТЭК ₽100,000, Метаскан ₽40,000 (its
+2020 original-filing OCR read "19 000" at one point — an OCR misread
+against its own written-out "десять тысяч"/ten-thousand, confirmed ₽10,000
+like the rest of that entity's own filing history), all others unchanged.
+
+One incidental historical fact, not wired as a structured field (the
+absorbed entity has no registry record of its own and no further
+ЦБСТ-relevant connection): ООО «Нова»'s 2017 charter amendment shows it
+absorbed ООО «Новафининвест» via a joint-meeting протокол о присоединении
+dated 01.03.2017 — same pattern as the earlier Инвестментс/АО «Борей»
+finding, just with no live registry entity on the absorbed side to wire it
+onto.
+
+Verification: `check_registry.py` 0 errors, 18 warnings (baseline
+unchanged) — no `corrections_entities.json` edits made this batch, since
+nothing surfaced that wasn't already sourced.
