@@ -27,10 +27,6 @@ Person profile · РОЙ.МАРКЕТ investigation
 | Limited Liability Company "Ametist" | founder — Учредитель (100%) | — | [s7451] |
 | Limited Liability Company "Everest" | founder — Учредитель (100%) | — | [s7449] |
 
-## Products linked via this person
-
-- **Орион** + 1 more — via ООО «Атлант Аэро» · director + founder
-
 ## Related persons
 
 - **Shevchenko Konstantin Igorevich** — co-inventor (patent RU2859152C1) — shared entity: ООО «Атлант Аэро» [s0977]

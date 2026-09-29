@@ -44,11 +44,11 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s0397 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9709081670_2022_20260820.zip) | 2026-08-20 | 2022-12-31 |
-| s0398 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9709081670_2023_20260820.zip) | 2026-08-20 | 2023-12-31 |
-| s0399 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9709081670_2024_20260820.zip) | 2026-08-20 | 2024-12-31 |
-| s0400 | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9709081670_2025_20260820.zip) | 2026-08-20 | 2025-12-31 |
-| s5661 | EGRUL extract | EGRUL extract (EGRUL_9709081670_20260905_inn-9709081670.pdf) | 2026-09-05 | 2026-09-05 |
+| [s0397] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9709081670_2022_20260820.zip) | 2026-08-20 | 2022-12-31 |
+| [s0398] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9709081670_2023_20260820.zip) | 2026-08-20 | 2023-12-31 |
+| [s0399] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9709081670_2024_20260820.zip) | 2026-08-20 | 2024-12-31 |
+| [s0400] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9709081670_2025_20260820.zip) | 2026-08-20 | 2025-12-31 |
+| [s5661] | EGRUL extract | EGRUL extract (EGRUL_9709081670_20260905_inn-9709081670.pdf) | 2026-09-05 | 2026-09-05 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

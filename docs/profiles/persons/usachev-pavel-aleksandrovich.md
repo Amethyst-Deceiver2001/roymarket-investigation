@@ -16,10 +16,6 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Конструкторское бюро «Синергия»» | founder — founder | — | [s0508] |
 
-## Products linked via this person
-
-- **«Яким»** — via ООО «Конструкторское бюро «Синергия»» · founder
-
 ## Related persons
 
 - **Некрасов Александр Викторович** — Генеральный директор — shared entity: ООО «Конструкторское бюро «Синергия»» [s0138]

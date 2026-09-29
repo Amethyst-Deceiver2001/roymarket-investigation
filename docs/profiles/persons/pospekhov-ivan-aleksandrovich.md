@@ -19,7 +19,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Products linked via this person
 
-- **Арена 5М** — via ООО «Метаскан» · director
+- **«Арена 5М»** — via ООО «Метаскан» · director
 
 ## Sanctions & screening
 

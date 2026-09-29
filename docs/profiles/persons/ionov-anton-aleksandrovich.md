@@ -18,7 +18,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Products linked via this person
 
-- **Алёша** — via LLC "IONOS" · director + founder
+- **«Алёша»** — via LLC "IONOS" · director + founder
 
 ## Sanctions & screening
 

@@ -19,12 +19,13 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Products linked via this person
 
-- **Русак-С** + 6 more — via АО «Стратим» · director
+- **«Русак-С»** + 3 more — via АО «Стратим» · director
 - **«Ястреб»** + 3 more — via ООО «Стратим» · role
 
 ## Related persons
 
 - **Бежанов Иван Валериевич** — Генеральный директор (former); shareholder 37.2% (5,580 of 15,000 shares) directly — shared entity: АО «Стратим» [s0332]
+- **Makhnev Aleksandr Igorevich** — Технический директор; shareholder 4.5% (675 of 15,000 shares) — shared entity: АО «Стратим» [s0332]
 - **Nazarov Oleg Ramilevich** — shareholder 1.3% (195 of 15,000 shares) — shared entity: АО «Стратим» [s0332]
 - **Данилин Виктор Сергеевич** — Сотрудник (Leader-ID org staff listing, role/title not specified) — shared entity: АО «Стратим»
 - **Царьков Даниил Дмитриевич** — Руководитель отдела (Department Head) — shared entity: АО «Стратим»

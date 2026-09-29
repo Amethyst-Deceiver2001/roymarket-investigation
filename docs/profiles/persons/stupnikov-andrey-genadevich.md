@@ -19,7 +19,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Products linked via this person
 
-- **СИБНК** + 8 more — via ООО «Гаскар» · role
+- **Мотор PY3115 1300KV бесколлекторный FPV** + 7 more — via ООО «Гаскар» · role
 
 ## Sanctions & screening
 
