@@ -18,7 +18,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Владимир Владимирович (confirmed live via egrul.nalog.ru 2026-09-02) | — | from corrections:add_entities, unverified |
 | Христюк Владимир Владимирович | 2021-05-06 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 472587795349. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6838] |
 
 ### Founders / ownership

@@ -9,6 +9,7 @@
 - **Registered:** 09.12.2002
 - **Address:** г. Санкт-Петербург
 - **Director:** ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Иванов Андрей Георгиевич (confirmed live via egrul.nalog.ru 2026-09-02)
+- **Charter capital:** ₽1,000,000
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -17,7 +18,19 @@
 
 | Value | As of | Note |
 |---|---|---|
-| ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Иванов Андрей Георгиевич (confirmed live via egrul.nalog.ru 2026-09-02) | — | from corrections:add_entities, unverified |
+| Иванов Андрей Георгиевич | 2020-08-10 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 780200288788. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6835] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Иванов Андрей Георгиевич 100% (₽1 000 000) | 2017-12-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6835] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 1000000 | 2010-01-20 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6835] |
 
 ## Financials
 
@@ -39,7 +52,7 @@
 - Лицензиат в реестре: «Общество с ограниченной ответственностью   "АКАЦИЯ-авиа"» (196084, г. Санкт-Петербург, ул. Заставская, д. 31, корп. 2). Дата внесения сведений в реестр: 17-11-2015. [s6408]
 
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
-- 5 OCCRP Aleph match(es) (screened 2026-09-05).
+- 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 
@@ -49,13 +62,14 @@ _No named principals linked to this entity yet._
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| s5654 | Zakupki | Zakupki (ZAKUPKI_contract_0348100081513000036_20260905.html) | 2026-09-05 | — |
-| s6408 | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
-| s6594 | Bfo | Bfo (BFO_7802145959_2021_ооо-акация-авиа.pdf) | — | — |
-| s6595 | Bfo | Bfo (BFO_7802145959_2022_ооо-акация-авиа.pdf) | — | — |
-| s6596 | Bfo | Bfo (BFO_7802145959_2023_ооо-акация-авиа.pdf) | — | — |
-| s6597 | Bfo | Bfo (BFO_7802145959_2024_ооо-акация-авиа.pdf) | — | — |
-| s6598 | Bfo | Bfo (BFO_7802145959_2025_ооо-акация-авиа.pdf) | — | — |
+| [s5654] | Zakupki | Zakupki (ZAKUPKI_contract_0348100081513000036_20260905.html) | 2026-09-05 | — |
+| [s6408] | bulk open-data extract | bulk open-data extract (DATASET_20181120_minpromtorg-aviation-tech-licenses-registry-data-gov-ru.csv) | 2018-11-20 | — |
+| [s6594] | Bfo | Bfo (BFO_7802145959_2021_ооо-акация-авиа.pdf) | — | — |
+| [s6595] | Bfo | Bfo (BFO_7802145959_2022_ооо-акация-авиа.pdf) | — | — |
+| [s6596] | Bfo | Bfo (BFO_7802145959_2023_ооо-акация-авиа.pdf) | — | — |
+| [s6597] | Bfo | Bfo (BFO_7802145959_2024_ооо-акация-авиа.pdf) | — | — |
+| [s6598] | Bfo | Bfo (BFO_7802145959_2025_ооо-акация-авиа.pdf) | — | — |
+| [s6835] | EGRUL extract | EGRUL extract (EGRUL_7802145959_20260907_ooo-akatsiya-avia.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

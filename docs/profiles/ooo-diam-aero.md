@@ -18,7 +18,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Скорятин Георгий Андреевич | — | from corrections:add_entities, unverified |
 | Скорятин Георгий Андреевич | 2025-06-16 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 773272723527. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6842] |
 
 ### Founders / ownership

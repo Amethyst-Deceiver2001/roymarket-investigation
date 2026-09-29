@@ -18,7 +18,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Барашков Александр Сергеевич | — | from corrections:add_entities, unverified |
 | Барашков Александр Сергеевич | 2024-03-01 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 252201766438. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6777] |
 
 ### Founders / ownership

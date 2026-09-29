@@ -16,7 +16,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Захаров Сергей Николаевич (confirmed live via egrul.nalog.ru 2026-09-02) | — | from corrections:add_entities, unverified |
 | Захаров Сергей Николаевич | 2022-10-27 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 532122612279. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6804] |
 
 ### Founders / ownership

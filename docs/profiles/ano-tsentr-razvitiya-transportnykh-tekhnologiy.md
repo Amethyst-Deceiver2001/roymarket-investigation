@@ -17,7 +17,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Рогозин Алексей Дмитриевич | — | from corrections:add_entities, unverified |
 | Рогозин Алексей Дмитриевич | 2021-12-24 | Должность: ДИРЕКТОР, личный ИНН 770301599800. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6867] |
 
 ### Founders / ownership

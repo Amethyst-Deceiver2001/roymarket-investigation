@@ -18,7 +18,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| ДИРЕКТОР: Плыкина Екатерина Викторовна (confirmed live via egrul.nalog.ru 2026-09-03) | — | from corrections:add_entities, unverified |
 | Плыкина Екатерина Викторовна | 2025-10-28 | Должность: ДИРЕКТОР, личный ИНН 710516155388. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6814] |
 
 ### Founders / ownership

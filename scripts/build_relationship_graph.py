@@ -104,6 +104,8 @@ def parse_founder_entries(raw) -> list[dict]:
                     "share": item.get("share", item.get("share_pct")),
                     "inn": item.get("inn"),
                     "ogrn": item.get("ogrn"),
+                    "source_id": item.get("source_id"),
+                    "as_of": item.get("as_of"),
                 })
             continue
         if not isinstance(item, str):
@@ -458,23 +460,30 @@ def build_graph(entities: list[dict], people: list[dict],
             if target == slug:
                 continue
             source = target or add_stub(raw_name, f"founder of {slug}", founder.get("inn"))
-            # source_id/as_of recovery (2026-09-22): this flat `founders[]` field never
-            # carries its own source_id (CLAUDE.md's dated-history rule -- the flat field is
-            # a display convenience, founders_history[] is the actual sourced record), so an
-            # edge added from it alone was permanently unsourced even when the SAME founder
-            # is separately documented, with a real source_id, in founders_history[] below.
-            # Worse: the founders_history loop's own dedup (`current_founders` skip) then
-            # discarded that sourced entry entirely rather than letting it win. Found running
-            # graph_query.py on the ao-aeromaks/ooo-aeromaks duplicate-name check -- 42 of
-            # 187 unsourced "founded" edges had a matching sourced founders_history entry
-            # being thrown away this way. Recover it here instead of dropping it.
-            hist_source_id, hist_as_of = None, None
-            for h in sorted((entity.get("founders_history") or []), key=lambda h: (h.get("as_of") or "") if isinstance(h, dict) else "", reverse=True):
-                if not isinstance(h, dict) or not h.get("source_id"):
-                    continue
-                if any(normalize(f["name"]) == normalize(raw_name) for f in parse_founder_entries(h.get("value"))):
-                    hist_source_id, hist_as_of = h["source_id"], h.get("as_of")
-                    break
+            # source_id/as_of recovery (2026-09-22): this flat `founders[]` field usually
+            # carries no source_id of its own (CLAUDE.md's dated-history rule -- the flat
+            # field is a display convenience, founders_history[] is the actual sourced
+            # record), so an edge added from it alone was permanently unsourced even when
+            # the SAME founder is separately documented, with a real source_id, in
+            # founders_history[] below. Worse: the founders_history loop's own dedup
+            # (`current_founders` skip) then discarded that sourced entry entirely rather
+            # than letting it win. Found running graph_query.py on the ao-aeromaks/
+            # ooo-aeromaks duplicate-name check -- 42 of 187 unsourced "founded" edges had
+            # a matching sourced founders_history entry being thrown away this way.
+            # Recover it here instead of dropping it.
+            #
+            # 2026-09-29: a founders[] entry CAN carry its own source_id directly (a human
+            # correction sourcing that specific entry, not just the history array) -- prefer
+            # that over the founders_history lookup when present, since it's the more
+            # specific citation.
+            hist_source_id, hist_as_of = founder.get("source_id"), founder.get("as_of")
+            if not hist_source_id:
+                for h in sorted((entity.get("founders_history") or []), key=lambda h: (h.get("as_of") or "") if isinstance(h, dict) else "", reverse=True):
+                    if not isinstance(h, dict) or not h.get("source_id"):
+                        continue
+                    if any(normalize(f["name"]) == normalize(raw_name) for f in parse_founder_entries(h.get("value"))):
+                        hist_source_id, hist_as_of = h["source_id"], h.get("as_of")
+                        break
             add_edge(source, slug, "founded",
                      f"{str(founder['share']).rstrip('%')}%" if founder.get("share") else None,
                      hist_source_id, hist_as_of,

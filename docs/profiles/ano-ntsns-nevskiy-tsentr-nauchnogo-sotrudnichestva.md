@@ -17,7 +17,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| ДИРЕКТОР: Руденко Дмитрий Александрович (с 20.03.2023, per source; confirmed live via egrul.nalog.ru 2026-09-02, title 'ДИРЕКТОР') | — | from corrections:add_entities, unverified |
 | Руденко Дмитрий Александрович | 2023-03-20 | Должность: ДИРЕКТОР, личный ИНН 780401121651. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6848] |
 
 ## Financials

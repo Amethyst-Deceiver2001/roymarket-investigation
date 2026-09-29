@@ -18,7 +18,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (per live EGRUL 2026-09-02): Малевич Елена Юрьевна — differs from source article's stated GD 'Елисеева Елена Юрьевна' (b.1972); plausible post-marriage name change given co-shareholder Малевич П.В., not resolved. | — | from corrections:add_entities, unverified |
 | Малевич Елена Юрьевна | 2024-11-22 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 771870311075. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6834] |
 
 ### Founders / ownership

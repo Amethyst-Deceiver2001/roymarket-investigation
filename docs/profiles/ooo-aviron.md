@@ -18,7 +18,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Лапин Игорь Николаевич | — | from brief:manufacturers-table:line-986, unverified |
 | Лапин Игорь Николаевич | 2024-09-04 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 432909192423. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6746] |
 
 ### Founders / ownership

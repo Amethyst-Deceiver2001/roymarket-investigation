@@ -18,7 +18,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Воронин Александр Андреевич (confirmed live via egrul.nalog.ru 2026-09-03) | — | from corrections:add_entities, unverified |
 | Воронин Александр Андреевич | 2024-09-13 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 743400196100. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6815] |
 
 ### Founders / ownership

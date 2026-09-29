@@ -564,8 +564,14 @@
       }
     ],
     "founders": [
-      "Фонд «ДАР»",
-      "Фонд «Градислава»"
+      {
+        "name": "Фонд «ДАР»",
+        "source_id": "s7370"
+      },
+      {
+        "name": "Фонд «Градислава»",
+        "source_id": "s7370"
+      }
     ],
     "founders_history": [
       {
@@ -7483,12 +7489,6 @@
     "okved_mismatch": null,
     "director": "Лапин Игорь Николаевич",
     "director_history": [
-      {
-        "value": "Лапин Игорь Николаевич",
-        "as_of": null,
-        "source_id": null,
-        "note": "from brief:manufacturers-table:line-986, unverified"
-      },
       {
         "value": "Лапин Игорь Николаевич",
         "as_of": "2024-09-04",
@@ -59391,12 +59391,6 @@
     "director_history": [
       {
         "value": "Атливанчик Сергей Николаевич",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
-      {
-        "value": "Атливанчик Сергей Николаевич",
         "as_of": "2016-12-12",
         "source_id": "s6827",
         "note": "Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 773514103490. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
@@ -59710,12 +59704,6 @@
     "okved_mismatch": null,
     "director": "Рогозин Алексей Дмитриевич",
     "director_history": [
-      {
-        "value": "Рогозин Алексей Дмитриевич",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
       {
         "value": "Рогозин Алексей Дмитриевич",
         "as_of": "2021-12-24",
@@ -61762,12 +61750,6 @@
     "director_history": [
       {
         "value": "Барашков Александр Сергеевич",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
-      {
-        "value": "Барашков Александр Сергеевич",
         "as_of": "2024-03-01",
         "source_id": "s6777",
         "note": "Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 252201766438. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
@@ -61776,21 +61758,27 @@
     "founders": [
       {
         "inn": "2312321660",
-        "name": "ООО «Гагаринг»"
+        "name": "ООО «Гагаринг»",
+        "source_id": "s6777"
       },
       {
         "inn": "2632116476",
-        "name": "ООО «АКР «Бегак»»"
+        "name": "ООО «АКР «Бегак»»",
+        "source_id": "s6777"
       },
       {
         "inn": "7735565264",
-        "name": "ООО «Прайм»"
+        "name": "ООО «Прайм»",
+        "source_id": "s6777"
       },
       {
-        "name": "Сиразатдинов Никита Вадимович"
+        "name": "Сиразатдинов Никита Вадимович",
+        "source_id": "s6777",
+        "note": "Full signed ЕГРЮЛ выписка (s6777) spells this \"Сиразетдинов\" -- kept the pre-existing spelling here rather than silently editing it, per this project's ё/spelling policy of not altering names without a dedicated check."
       },
       {
-        "name": "Климов Максим Александрович"
+        "name": "Климов Максим Александрович",
+        "source_id": "s6777"
       }
     ],
     "founders_history": [
@@ -66818,12 +66806,6 @@
     "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
     "director_history": [
       {
-        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
-      {
         "value": "Елисеев Дмитрий Николаевич",
         "as_of": "2024-09-20",
         "source_id": "s6844",
@@ -66992,12 +66974,6 @@
     "okved_mismatch": null,
     "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (per live EGRUL 2026-09-02): Малевич Елена Юрьевна — differs from source article's stated GD 'Елисеева Елена Юрьевна' (b.1972); plausible post-marriage name change given co-shareholder Малевич П.В., not resolved.",
     "director_history": [
-      {
-        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР (per live EGRUL 2026-09-02): Малевич Елена Юрьевна — differs from source article's stated GD 'Елисеева Елена Юрьевна' (b.1972); plausible post-marriage name change given co-shareholder Малевич П.В., not resolved.",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
       {
         "value": "Малевич Елена Юрьевна",
         "as_of": "2024-11-22",
@@ -67187,12 +67163,6 @@
     "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
     "director_history": [
       {
-        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
-      {
         "value": "Елисеев Дмитрий Николаевич",
         "as_of": "2026-01-19",
         "source_id": "s6808",
@@ -67353,12 +67323,6 @@
     "okved_mismatch": null,
     "director": "ДИРЕКТОР: Руденко Дмитрий Александрович (с 20.03.2023, per source; confirmed live via egrul.nalog.ru 2026-09-02, title 'ДИРЕКТОР')",
     "director_history": [
-      {
-        "value": "ДИРЕКТОР: Руденко Дмитрий Александрович (с 20.03.2023, per source; confirmed live via egrul.nalog.ru 2026-09-02, title 'ДИРЕКТОР')",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
       {
         "value": "Руденко Дмитрий Александрович",
         "as_of": "2023-03-20",
@@ -67526,12 +67490,6 @@
     "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Захаров Сергей Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
     "director_history": [
       {
-        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Захаров Сергей Николаевич (confirmed live via egrul.nalog.ru 2026-09-02)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
-      {
         "value": "Захаров Сергей Николаевич",
         "as_of": "2022-10-27",
         "source_id": "s6804",
@@ -67694,12 +67652,6 @@
     "okved_mismatch": null,
     "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Владимир Владимирович (confirmed live via egrul.nalog.ru 2026-09-02)",
     "director_history": [
-      {
-        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Владимир Владимирович (confirmed live via egrul.nalog.ru 2026-09-02)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
       {
         "value": "Христюк Владимир Владимирович",
         "as_of": "2021-05-06",
@@ -68180,12 +68132,6 @@
     "okved_mismatch": null,
     "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Екатерина Валерьевна (confirmed live via egrul.nalog.ru 2026-09-02, per source since 24.11.2023)",
     "director_history": [
-      {
-        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Екатерина Валерьевна (confirmed live via egrul.nalog.ru 2026-09-02, per source since 24.11.2023)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
       {
         "value": "Христюк Екатерина Валерьевна",
         "as_of": "2023-11-24",
@@ -68678,12 +68624,6 @@
     "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Иванов Андрей Георгиевич (confirmed live via egrul.nalog.ru 2026-09-02)",
     "director_history": [
       {
-        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Иванов Андрей Георгиевич (confirmed live via egrul.nalog.ru 2026-09-02)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
-      {
         "value": "Иванов Андрей Георгиевич",
         "as_of": "2020-08-10",
         "source_id": "s6835",
@@ -68958,12 +68898,6 @@
     "okved_mismatch": null,
     "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Истомин Лев Львович (confirmed live via egrul.nalog.ru 2026-09-02)",
     "director_history": [
-      {
-        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Истомин Лев Львович (confirmed live via egrul.nalog.ru 2026-09-02)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
       {
         "value": "Истомин Лев Львович",
         "as_of": "2023-09-14",
@@ -69248,12 +69182,6 @@
     "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Жигулин Алексей Михайлович (confirmed live via egrul.nalog.ru 2026-09-02)",
     "director_history": [
       {
-        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Жигулин Алексей Михайлович (confirmed live via egrul.nalog.ru 2026-09-02)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
-      {
         "value": "Жигулин Алексей Михайлович",
         "as_of": "2026-02-27",
         "source_id": "s6865",
@@ -69496,12 +69424,6 @@
     "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Руденко Дмитрий Александрович (ИНН 780401121651)",
     "director_history": [
       {
-        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Руденко Дмитрий Александрович (ИНН 780401121651)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
-      {
         "value": "Руденко Дмитрий Александрович",
         "as_of": "2024-11-02",
         "source_id": "s6852",
@@ -69512,7 +69434,8 @@
       {
         "inn": "7813680637",
         "name": "ООО «БТР»",
-        "share": "100%"
+        "share": "100%",
+        "source_id": "s6852"
       }
     ],
     "founders_history": [
@@ -69639,12 +69562,6 @@
     "okved_mismatch": null,
     "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Воронин Александр Андреевич (confirmed live via egrul.nalog.ru 2026-09-03)",
     "director_history": [
-      {
-        "value": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Воронин Александр Андреевич (confirmed live via egrul.nalog.ru 2026-09-03)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
       {
         "value": "Воронин Александр Андреевич",
         "as_of": "2024-09-13",
@@ -69878,12 +69795,6 @@
     "okved_mismatch": null,
     "director": "ДИРЕКТОР: Плыкина Екатерина Викторовна (confirmed live via egrul.nalog.ru 2026-09-03)",
     "director_history": [
-      {
-        "value": "ДИРЕКТОР: Плыкина Екатерина Викторовна (confirmed live via egrul.nalog.ru 2026-09-03)",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
       {
         "value": "Плыкина Екатерина Викторовна",
         "as_of": "2025-10-28",
@@ -74291,12 +74202,6 @@
     "director_history": [
       {
         "value": "Скорятин Георгий Андреевич",
-        "as_of": null,
-        "source_id": null,
-        "note": "from corrections:add_entities, unverified"
-      },
-      {
-        "value": "Скорятин Георгий Андреевич",
         "as_of": "2025-06-16",
         "source_id": "s6842",
         "note": "Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 773272723527. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
@@ -75595,7 +75500,14 @@
         "source_id": "s6970"
       }
     ],
-    "founders_history": [],
+    "founders_history": [
+      {
+        "value": "Хутешен Алексей Александрович 100%",
+        "as_of": "2026-07-21",
+        "source_id": "s6970",
+        "note": "Сведения об участниках/учредителях section, full signed ЕГРЮЛ выписка."
+      }
+    ],
     "charter_capital": null,
     "charter_capital_history": [],
     "address_history": [],
@@ -75704,7 +75616,14 @@
         "source_id": "s6964"
       }
     ],
-    "founders_history": [],
+    "founders_history": [
+      {
+        "value": "Хутешен Алексей Александрович 100%",
+        "as_of": "2024-08-02",
+        "source_id": "s6964",
+        "note": "Сведения об участниках/учредителях section, full signed ЕГРЮЛ выписка."
+      }
+    ],
     "charter_capital": null,
     "charter_capital_history": [],
     "address_history": [],
@@ -75839,7 +75758,14 @@
         "source_id": "s6963"
       }
     ],
-    "founders_history": [],
+    "founders_history": [
+      {
+        "value": "Хутешен Алексей Александрович 75% (₽75 000) / Лымарь Артём Викторович 15% (₽15 000) / Андреев Александр Александрович 5% (₽5 000) / Романов Роман Валерьевич 5% (₽5 000)",
+        "as_of": "2026-02-10",
+        "source_id": "s6963",
+        "note": "Сведения об участниках/учредителях section, full signed ЕГРЮЛ выписка."
+      }
+    ],
     "charter_capital": null,
     "charter_capital_history": [],
     "address_history": [],
@@ -76016,7 +75942,14 @@
         "source_id": "s6966"
       }
     ],
-    "founders_history": [],
+    "founders_history": [
+      {
+        "value": "Хутешен Алексей Александрович 100%",
+        "as_of": "2026-07-16",
+        "source_id": "s6966",
+        "note": "Сведения о единственном акционере section, full signed ЕГРЮЛ выписка."
+      }
+    ],
     "charter_capital": null,
     "charter_capital_history": [],
     "address_history": [],
@@ -76400,7 +76333,14 @@
         "source_id": "s6965"
       }
     ],
-    "founders_history": [],
+    "founders_history": [
+      {
+        "value": "Хутешен Алексей Александрович 100%",
+        "as_of": "2026-04-14",
+        "source_id": "s6965",
+        "note": "Сведения об участниках/учредителях section, full signed ЕГРЮЛ выписка."
+      }
+    ],
     "charter_capital": null,
     "charter_capital_history": [],
     "address_history": [],

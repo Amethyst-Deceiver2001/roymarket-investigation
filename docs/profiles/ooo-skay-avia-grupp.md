@@ -18,7 +18,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Христюк Екатерина Валерьевна (confirmed live via egrul.nalog.ru 2026-09-02, per source since 24.11.2023) | — | from corrections:add_entities, unverified |
 | Христюк Екатерина Валерьевна | 2023-11-24 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 434500103450. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6837] |
 
 ### Founders / ownership

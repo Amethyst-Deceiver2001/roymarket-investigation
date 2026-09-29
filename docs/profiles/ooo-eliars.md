@@ -17,7 +17,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Атливанчик Сергей Николаевич | — | from corrections:add_entities, unverified |
 | Атливанчик Сергей Николаевич | 2016-12-12 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 773514103490. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6827] |
 
 ### Founders / ownership

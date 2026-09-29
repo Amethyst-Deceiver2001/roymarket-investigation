@@ -18,7 +18,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Елисеев Дмитрий Николаевич (confirmed live via egrul.nalog.ru 2026-09-02) | — | from corrections:add_entities, unverified |
 | Елисеев Дмитрий Николаевич | 2024-09-20 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 711506978521. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6844] |
 
 ### Founders / ownership
