@@ -19,12 +19,54 @@ from the InformNapalm/OSINT Bees dossier below (same "doxxing-scale
 apparatus" discipline this project applies elsewhere — see
 `smolin_source_catalogue.md`).
 
+## Family map (rebuilt 2026-09-30; the registry is authoritative, this is the index)
+
+Eleven registry records carry the name. **Three have a ЦБСТ tie**, each on its
+own evidence; the shared brand is not evidence of a shared owner.
+
+| Record | ИНН | What it is | ЦБСТ tie | Evidence |
+|---|---|---|---|---|
+| `ooo-arkhangel` | 9714079108 | Moscow interceptor-drone maker, GD Шатракова | **t-doc** | ЦБСТ post 1976, II accelerator finalist [s8652]. Not the EU-listed entity |
+| `ooo-arkhangel-tsentr` | 5032379630 | Odintsovo combat school, "ветераны ЧВК Вагнер"; ЕГРЮЛ: pending exclusion | **t-doc** | ЦБСТ post 2095 → links Decision 2026/504, entry 702 [s7588, s0168]. **The only EU-listed «Архангел»**; also UA-NSDC |
+| `proekt-kb-arkhangel` | — | Филиппов's Telegram network, Туапсе school, interceptor, B2B | **t-open** | ЦБСТ post 1562 names the «учебный центр БПЛА «Архангел» в Туапсе» as a user of resident Квадросим's simulator [s8651]. A user, not a resident |
+| `ooo-arkhangel-grupp` | 9702081286 | Project's B2B vehicle; Филиппов founder; GD Крючков | none | — |
+| `ooo-arkhangel-shchit` | 5027339008 | Лыткарино; project's PVO-training entity; GD Хабибулин, founder Кулемин | none | — |
+| `ooo-hab-svo` | 9722102248 | Not named Архангел; shares director Хабибулин with Щит | none | Director match only |
+| `ooo-arkhangel-zaporizhzhie` | 9500026652 | Мелитополь/Запорожье, Kalashnikov link; GD Тимофеев, owner Кусумов | not established | — |
+| `ooo-arkhangel-crimea` | 9108131213 | Судак; director/50% Тимофеев (same as Запорожье) | not established | — |
+| `ooo-arkhangel-melitopol-2` | 9001027869 | Dormant sibling of Запорожье, owner Кусумов; UA-NSDC | not established | — |
+| `ano-arkhangel` | 2315233718 | «Архангел Легион», Новороссийск; Гагаринг-tied | none recorded | Гагаринг path, see `gagaring_network_map.md` |
+| `ooo-arkhangel-istra` | 5017140245 | Law/IT namesake, trademark collision | none | Resolved as unrelated |
+| `tg-arkhangel-spetsnaza` | — | @arx_spn, no legal entity | none | Гагаринг path |
+
+**Clusters.** (A) Drone project: `proekt-kb-arkhangel`, `-grupp`, `-shchit`, with
+`ooo-hab-svo` by shared director. (B) Запорожье/Крым: three entities tied by
+Тимофеев and Кусумов. (C) Two standalone ЦБСТ-named companies: `ooo-arkhangel` and
+`ooo-arkhangel-tsentr`, with no documented link to each other or to A/B. (D) Гагаринг
+side and namesakes: `ano-arkhangel`, `tg-arkhangel-spetsnaza`, `-istra`.
+
+**Every ЦБСТ post that contains «Архангел»** (5 of 2,308 in `data/roymarket.db`,
+channel_id 2159491523): 120 and 123 (2024-09, news digest repeating a third-party
+analysis that cites "проект «Архангел» 2023" as a volunteer example; not a tie,
+not wired), 1562, 1976, 2095 (wired as above). Query with a capital А or fold case in
+Python: SQLite `lower()`/`LIKE` do not fold Cyrillic.
+
+**Not established:** any link between cluster C's two companies and the Проект
+(same brand word only); whether the post-2095 «Архангел» is the school, the
+drone maker or both (the linked act names only the school); Квадросим's legal
+entity.
+
 ## Entity: ООО «Архангел» (Moscow), ИНН 9714079108
 
-`ooo-arkhangel` — already a confirmed, independently-verified EU-sanctioned
-ЦБСТ resident (20th sanctions package), director Шатракова Анастасия
-Артёмовна. Fully documented in its own registry record; genuinely unrelated
-to any of the other Архангел-branded orgs — pure brand-name collision.
+`ooo-arkhangel` — Moscow interceptor-drone maker, director Шатракова Анастасия
+Артёмовна. **ЦБСТ tie `t-doc`**: ЦБСТ's own channel (post 1976, 17.03.2026, s8652)
+lists «производитель дронов-перехватчиков «Архангел»» among the 11 finalists of the
+II accelerator stream and quotes its general director by name. **It is not the
+EU-listed «Архангел»**: the only «Архангел» entry in the EU acts is ООО «Архангел-Центр»
+(below). An earlier version of this note called this ООО "an EU-sanctioned ЦБСТ
+resident" — that conflated the two and was wrong. No ownership or director tie to
+the other Архангел records is on file, so "pure brand-name collision" stays
+the working reading of the other clusters, not a finding.
 
 ## Entity: ООО «Архангел» (Мелитополь/occupied Zaporizhzhia), ИНН 9500026652
 
@@ -74,13 +116,18 @@ this entity's incorporation.
 ## Entity: ООО «Архангел-Центр» (Odintsovo), ИНН 5032379630
 
 `ooo-arkhangel-tsentr` — registered 17.05.2024. Commercial paid combat-
-training school (archangel-center.ru), ₽28,000–48,000 courses (UAV
-operator, sniper, artillery, tactical medicine), self-branded "под
-руководством ветеранов ЧВК Вагнер." **Already sanctioned across six
-jurisdictions** — EU, Ukraine NSDC, France, Switzerland, Belgium, Monaco,
-designated 2026-04-23 (OpenSanctions exact-identifier match, full EU/UA
-designation narrative on file). No drone-manufacturing OKVED, no confirmed
-tie to any other Архангел entity or to Гагаринг.
+training school (archangel-center.ru, Wayback capture 18.11.2024, s8650, footer
+prints the ИНН/ОГРН), ₽28,000–48,000 courses (UAV operator, sniper, artillery,
+tactical medicine), self-branded "под руководством ветеранов ЧВК Вагнер." ЕГРЮЛ
+now shows a pending exclusion as a недействующее юридическое лицо. **Listed by the
+EU** (entry 702; Council Decision (CFSP) 2026/504 and Implementing Regulation
+2026/509, both 23.04.2026) and by UA-NSDC; FR/CH/BE/MC listings rest on an
+OpenSanctions match (Open grade). **ЦБСТ tie `t-doc`**: post 2095 (24.04.2026,
+s7588) calls «Архангел» a ЦБСТ resident in the EU's 20th package and links
+Decision 2026/504 — whose only «Архангел» entry is this company. The post itself
+prints the bare name; the identification rests on the act it links. No
+drone-manufacturing OKVED, no documented tie to any other Архангел entity or
+to Гагаринг.
 
 ## «Проект Архангел» / Филиппов Михаил Геннадьевич
 
@@ -118,8 +165,8 @@ entity's summary lives in `gagaring_network_map.md`, not here.
 
 ## Disambiguation discipline
 
-Six distinct "Архангел"-branded organizations are known across this
-investigation. All cross-checks were done by ИНН/ОГРН, never by name — see
+Eleven "Архангел"-branded records are on file (see the family map at the top);
+the count of six here predates them. All cross-checks were done by ИНН/ОГРН, never by name — see
 `roymarket_fuzzy_dedup` memory. Before treating any new "Архангел" mention
 as connected to Гагаринг (or to any other entity in this family), confirm
 via identifier first.

@@ -83,6 +83,17 @@ hand. Related: `scripts/check_egrul_flags.py` flags known EGRUL access-
 restriction/disavowal markers (ОгрДосСв, ПризнНедДанУчр, etc.) the same
 way, over the same kind of pasted extract text.
 
+## Searching Telegram text: use `scripts/tg_post_coverage.py`, never SQL `LIKE`/`lower()`
+
+Added 2026-10-01 after ЦБСТ posts 1562, 1976 and 2095 (all naming «Архангел») sat in `data/roymarket.db` while the registry said "no ЦБСТ tie". SQLite's `lower()` and `LIKE` do **not** fold Cyrillic (`lower(text) LIKE '%архангел%'` returned 0 where `LIKE '%Архангел%'` returned 5), and a hit list sliced to `[:3]` with no text printed hid the rest. Rules:
+
+- "Does the channel say X?" is answered by `python3 scripts/tg_post_coverage.py --term "X"` (every hit, folded for case and ё, case endings tolerated, each hit's `links` field shown, archived-or-not flagged; `--all-channels` for the whole scrape, ~1 minute, say so first). It runs a positive control first and aborts (exit 2) if the matcher cannot find known words.
+- Search the **bare brand word**, not the legal-name variant; then narrow.
+- Never slice an evidence list. A cap (`--max`) must say how many hits it hides.
+- Read a post's `links` field. A post can carry its primary document (an EU act, a patent) as a link.
+- Never write "not found in this search" into the registry without naming the exact query and its hit count.
+- `python3 scripts/tg_post_coverage.py` (no args) lists ЦБСТ posts that name a registry entity and are not archived, cited or reviewed. `check_registry.py` §6b turns the no-tie class into warnings. Close one by reading the posts and recording either a tie or a dated `cbst_channel_review` (`{as_of, outcome: namesake|named_no_tie|tie_wired|lead_open, posts_read: [msg ids actually read], note}`) via `corrections_entities.json`; never by deleting the warning. `tests/test_tg_post_coverage.py` holds the regression fixtures.
+
 ## Same crawling-jobs discipline as wb_watch
 
 Inline reconnaissance (single post lookups, one-off WebFetch/curl checks,

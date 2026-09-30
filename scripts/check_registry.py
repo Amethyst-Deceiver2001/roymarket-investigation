@@ -719,6 +719,19 @@ def main() -> int:
     for name in compound:
         warnings.append(f"compound record holds >1 entity, needs splitting: {name}")
 
+    # --- 6b. ЦБСТ's own channel names an entity the registry holds no tie for ---------
+    # Added 2026-10-01 after posts 1562/1976/2095 sat unread for weeks (see
+    # scripts/tg_post_coverage.py). A warning is a work queue, closed by reading the posts and
+    # recording `cbst_channel_review` or a tie, never by deleting the warning.
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import tg_post_coverage
+        cov_errors, cov_warnings = tg_post_coverage.registry_warnings(entities)
+        errors.extend(cov_errors)
+        warnings.extend(cov_warnings)
+    except Exception as exc:  # the check must never take the validator down with it
+        warnings.append(f"tg_post_coverage could not run: {exc!r}")
+
     # --- report ----------------------------------------------------------
     for err in errors:
         print(f"ERROR   {err}")

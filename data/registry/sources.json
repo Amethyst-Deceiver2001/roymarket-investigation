@@ -46351,6 +46351,25 @@
     "_origin": "manifest"
   },
   {
+    "id": "s8646",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_5403081107_20260930_inn-5403081107.pdf",
+    "url": null,
+    "captured_date": "2026-09-30",
+    "fiscal_year": null,
+    "as_of": "2026-09-30",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "541019846310"
+    ],
+    "entities": [],
+    "sha256": "c9ba0a374c71b907fdf8c3c47457c5490eb58a38879f3abb3637f6790af6136f",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s7907",
     "type": "egrul",
     "path": "data/sources/EGRUL_5505057400_20260920_inn-5505057400.pdf",
@@ -48498,6 +48517,25 @@
     "_origin": "manifest"
   },
   {
+    "id": "s8647",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_7807276480_20260930_inn-7807276480.pdf",
+    "url": null,
+    "captured_date": "2026-09-30",
+    "fiscal_year": null,
+    "as_of": "2026-09-30",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "782702064506"
+    ],
+    "entities": [],
+    "sha256": "ace1fa27b99dc748d0a0275c04a5733a27db032e38ec92f628e41b88fa96dfea",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s7608",
     "type": "egrul",
     "path": "data/sources/EGRUL_7808035536_20260919_ao-kronshtadt.pdf",
@@ -49588,7 +49626,7 @@
     "as_of": "2026-09-07",
     "as_of_method": "egrul:по состоянию на",
     "supersedes": "s0151",
-    "superseded_by": null,
+    "superseded_by": "s8648",
     "inns": [
       "645403994412",
       "7714473012",
@@ -49596,6 +49634,27 @@
     ],
     "entities": [],
     "sha256": "f6b1a307ae32a0bd5a872585711f44065adde346ed2c9c161de93aaea51768f3",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s8648",
+    "type": "egrul",
+    "path": "data/sources/EGRUL_9713001941_20260930_ooo-ekolibri-bt.pdf",
+    "url": null,
+    "captured_date": "2026-09-30",
+    "fiscal_year": null,
+    "as_of": "2026-09-30",
+    "as_of_method": "egrul:по состоянию на",
+    "supersedes": "s6862",
+    "superseded_by": null,
+    "inns": [
+      "645403994412",
+      "7714473012",
+      "7714497327"
+    ],
+    "entities": [],
+    "sha256": "7327f75846cfff3d86503cbb1520459a1e90a8729da3c7b2e8c2725190daff53",
     "_verified": false,
     "_origin": "manifest"
   },
@@ -72272,6 +72331,23 @@
     "_origin": "manifest"
   },
   {
+    "id": "s8651",
+    "type": "court",
+    "path": "data/sources/TGPOST_20251125_ano_cbst-1562-kvadrosim-anti-uav-mode-arkhangel-tuapse.txt",
+    "url": null,
+    "captured_date": "2025-11-25",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "ead891c01ecc9a5a2715b1d14f679526dd6324d5fa7b7b3cb7df479fce96739e",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
     "id": "s7532",
     "type": "press",
     "path": "data/sources/TGPOST_20251205_krams_pro_msg128-marketing-claim.txt",
@@ -72455,6 +72531,23 @@
     "inns": [],
     "entities": [],
     "sha256": "104f6b34ff413a9c6ff3263e174b06b8eed0196aad91e4d3c316735d7e817bc4",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s8652",
+    "type": null,
+    "path": "data/sources/TGPOST_20260317_ano_cbst-1976-accelerator-ii-finalists-arkhangel-interceptors.txt",
+    "url": null,
+    "captured_date": "2026-03-17",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "69c187f7b7f5abc7a3bd620a081c1715d525ccc8a1f1fe1de3dd3b8aec0b9e99",
     "_verified": false,
     "_origin": "manifest"
   },
@@ -73803,6 +73896,23 @@
     "inns": [],
     "entities": [],
     "sha256": "90e008bc43c2c174ffbe70b08c0f27f6b7b81490730cf5b0510d382810ec08d7",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s8649",
+    "type": null,
+    "path": "data/sources/TGWEB_20260930_archangel_center-s-channel.html",
+    "url": null,
+    "captured_date": "2026-09-30",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [],
+    "entities": [],
+    "sha256": "51899a80af3492cb8559031349968d0d13f87a7a613cb2fb687f57c4f6e9a2b9",
     "_verified": false,
     "_origin": "manifest"
   },
@@ -82376,6 +82486,25 @@
     ],
     "entities": [],
     "sha256": "d4e3421a320ea7e0216086d0f9b9733277c436ef7813ef71eaf3013b81c0f9ce",
+    "_verified": false,
+    "_origin": "manifest"
+  },
+  {
+    "id": "s8650",
+    "type": null,
+    "path": "data/sources/WEB_5032379630_20260930_archangel-center-wayback20241118-home.html",
+    "url": null,
+    "captured_date": "2026-09-30",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "5032379630"
+    ],
+    "entities": [],
+    "sha256": "3819c1c8ec68181aeefcc990166b9418ea864de2d0dd77a33485f98b28b3e071",
     "_verified": false,
     "_origin": "manifest"
   },

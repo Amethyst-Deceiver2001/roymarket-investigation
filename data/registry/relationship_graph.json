@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1191,
-  "edge_count": 2026,
-  "unresolved_count": 107,
+  "node_count": 1194,
+  "edge_count": 2039,
+  "unresolved_count": 106,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -243,7 +243,7 @@
       "sanctioned": true,
       "legal_form": "АНО",
       "variant": null,
-      "degree": 80
+      "degree": 82
     },
     {
       "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -986,6 +986,14 @@
       "kind": "person",
       "label": "Чадаев Алексей Викторович",
       "name_latin": null,
+      "sanctioned": false,
+      "degree": 3
+    },
+    {
+      "id": "chapurin-viktor-viktorovich",
+      "kind": "person",
+      "label": "Чапурин Виктор Викторович",
+      "name_latin": "Chapurin Viktor Viktorovich",
       "sanctioned": false,
       "degree": 3
     },
@@ -3052,6 +3060,18 @@
       "degree": 8
     },
     {
+      "id": "ooo-arkhangel-tsentr",
+      "kind": "entity",
+      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ-ЦЕНТР\"",
+      "name_latin": "OOO \"Arkhangel-Tsentr\" (Odintsovo)",
+      "inn": "5032379630",
+      "tier": "plumbing",
+      "sanctioned": true,
+      "legal_form": "ООО",
+      "variant": null,
+      "degree": 10
+    },
+    {
       "id": "ooo-arkodim",
       "kind": "entity",
       "label": "ООО «Аркодим»",
@@ -3241,7 +3261,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 2
+      "degree": 4
     },
     {
       "id": "ooo-ekspoket",
@@ -4314,6 +4334,14 @@
       "legal_form": null,
       "variant": "offensive",
       "degree": 14
+    },
+    {
+      "id": "pankratov-andrey-aleksandrovich",
+      "kind": "person",
+      "label": "Панкратов Андрей Александрович",
+      "name_latin": "Andrey Aleksandrovich Pankratov",
+      "sanctioned": false,
+      "degree": 3
     },
     {
       "id": "pao-bank-psb",
@@ -10812,7 +10840,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": "defensive",
-      "degree": 24
+      "degree": 25
     },
     {
       "id": "protorguev-sergey-aleksandrovich",
@@ -11691,12 +11719,6 @@
       "degree": 1
     },
     {
-      "id": "stub::панкратов андрей александрович",
-      "kind": "unresolved",
-      "label": "Панкратов Андрей Александрович",
-      "degree": 1
-    },
-    {
       "id": "stub::парабучев алексей игоревич",
       "kind": "unresolved",
       "label": "Парабучев Алексей Игоревич",
@@ -12255,6 +12277,14 @@
       "name_latin": null,
       "sanctioned": false,
       "degree": 3
+    },
+    {
+      "id": "zakelov-aleksandr-aleksandrovich",
+      "kind": "person",
+      "label": "Закелов Александр Александрович",
+      "name_latin": "Zakelov Aleksandr Aleksandrovich",
+      "sanctioned": false,
+      "degree": 6
     },
     {
       "id": "zakharov-sergey-nikolaevich",
@@ -15945,6 +15975,39 @@
       "label": null,
       "source_id": "s0947",
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "chapurin-viktor-viktorovich",
+      "target": "ooo-arkhangel-tsentr",
+      "type": "founded",
+      "label": "50%",
+      "source_id": "s5503",
+      "as_of": "2024-05-17",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "chapurin-viktor-viktorovich",
+      "target": "ooo-arkhangel-tsentr",
+      "type": "role",
+      "label": "founder",
+      "source_id": "s8191",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "chapurin-viktor-viktorovich",
+      "target": "ooo-arkhangel-tsentr",
+      "type": "role",
+      "label": "co-founder (50%)",
+      "source_id": "s5503",
+      "as_of": "2024-05-17",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -24698,8 +24761,8 @@
       "source": "ooo-arkhangel",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "ЦБСТ's own channel lists «Архангел» among organisations «входящие в контур» ЦБСТ that were included in the EU's 20th ...",
-      "source_id": "s7588",
+      "label": "Named by ЦБСТ's own channel as the interceptor-drone maker «Архангел» among the 11 finalist teams of the II stream of...",
+      "source_id": "s8652",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -24726,6 +24789,17 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
+    },
+    {
+      "source": "ooo-arkhangel-tsentr",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Listed by ЦБСТ's own channel among its «резиденты» in the EU's 20th package, by the bare name «Архангел»; the post's ...",
+      "source_id": "s7588",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc"
     },
     {
       "source": "ooo-arkodim",
@@ -28578,6 +28652,39 @@
       "confidence": null
     },
     {
+      "source": "pankratov-andrey-aleksandrovich",
+      "target": "ao-mikts",
+      "type": "directs",
+      "label": null,
+      "source_id": "s6825",
+      "as_of": "2025-08-28",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
+      "source": "pankratov-andrey-aleksandrovich",
+      "target": "ooo-ekolibri-bt",
+      "type": "directs",
+      "label": null,
+      "source_id": "s8648",
+      "as_of": "2026-07-13",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "pankratov-andrey-aleksandrovich",
+      "target": "ooo-ekolibri-bt",
+      "type": "role",
+      "label": "Генеральный директор",
+      "source_id": "s8648",
+      "as_of": "2026-07-13",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "pao-bank-psb",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
@@ -29632,6 +29739,17 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
+    },
+    {
+      "source": "proekt-kb-arkhangel",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "ЦБСТ's own channel names the project's Туапсе school as a site running a ЦБСТ resident's anti-UAV simulator mode (a d...",
+      "source_id": "s8651",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-open"
     },
     {
       "source": "proekt-kb-arkhangel",
@@ -32747,17 +32865,6 @@
       "confidence": null
     },
     {
-      "source": "stub::панкратов андрей александрович",
-      "target": "ao-mikts",
-      "type": "directs",
-      "label": null,
-      "source_id": "s6825",
-      "as_of": "2025-08-28",
-      "weight": 1.0,
-      "temporal_status": "historical",
-      "confidence": null
-    },
-    {
       "source": "stub::парабучев алексей игоревич",
       "target": "fond-moskovskiy-innovatsionnyy-klaster",
       "type": "directs",
@@ -34386,6 +34493,72 @@
       "confidence": null
     },
     {
+      "source": "zakelov-aleksandr-aleksandrovich",
+      "target": "ooo-arkhangel-tsentr",
+      "type": "directs",
+      "label": null,
+      "source_id": "s5503",
+      "as_of": "2024-05-17",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "zakelov-aleksandr-aleksandrovich",
+      "target": "ooo-arkhangel-tsentr",
+      "type": "directs",
+      "label": null,
+      "source_id": "s5410",
+      "as_of": "2026-09-03",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "zakelov-aleksandr-aleksandrovich",
+      "target": "ooo-arkhangel-tsentr",
+      "type": "founded",
+      "label": "50%",
+      "source_id": "s5503",
+      "as_of": "2024-05-17",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "zakelov-aleksandr-aleksandrovich",
+      "target": "ooo-arkhangel-tsentr",
+      "type": "role",
+      "label": "director",
+      "source_id": "s8179",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "zakelov-aleksandr-aleksandrovich",
+      "target": "ooo-arkhangel-tsentr",
+      "type": "role",
+      "label": "founder",
+      "source_id": "s8179",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "zakelov-aleksandr-aleksandrovich",
+      "target": "ooo-arkhangel-tsentr",
+      "type": "role",
+      "label": "генеральный директор and co-founder (50%)",
+      "source_id": "s5503",
+      "as_of": "2024-05-17",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "zakharov-sergey-nikolaevich",
       "target": "ooo-status-53",
       "type": "directs",
@@ -35095,13 +35268,6 @@
       ]
     },
     {
-      "id": "stub::панкратов андрей александрович",
-      "raw_name": "Панкратов Андрей Александрович",
-      "contexts": [
-        "director of ao-mikts"
-      ]
-    },
-    {
       "id": "stub::парабучев алексей игоревич",
       "raw_name": "Парабучев Алексей Игоревич",
       "contexts": [
@@ -35405,7 +35571,6 @@
     "barilo-denis-aleksandrovich",
     "bf-ktspn-barnaul",
     "borisov-aleksandr-sergeevich-tsbs-tula",
-    "chapurin-viktor-viktorovich",
     "chetvertkov-aleksey-vladimirovich",
     "chichkov-aleksandr-yurevich",
     "chumakov-pavel-andreevich",
@@ -35483,7 +35648,6 @@
     "ooo-arkhangel-crimea",
     "ooo-arkhangel-istra",
     "ooo-arkhangel-melitopol-2",
-    "ooo-arkhangel-tsentr",
     "ooo-arkhangel-zaporizhzhie",
     "ooo-as-kam",
     "ooo-asel-labs",
@@ -35650,7 +35814,6 @@
     "yarl",
     "yastrebov-sergey-vladimirovich",
     "zagorskiy-aleksandr-sergeevich",
-    "zakelov-aleksandr-aleksandrovich",
     "zao-kurskpromteplitsa",
     "zhulidov-evgeniy"
   ]

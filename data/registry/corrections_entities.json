@@ -14455,6 +14455,14 @@
           "as_of": "2026-09-14",
           "outcome": "closed",
           "note": "not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        },
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "namesake",
+          "posts_read": [
+            1778
+          ],
+          "note": "Post 1778 uses «азимуту» as the compass term in a piece about a game-style command interface. Post 716 («Аэро Азимут» platform) stays open."
         }
       },
       "verified_against": "s0212 — АО ПК «Азимут»'s own full signed ЕГРЮЛ extract, pulled 14.08.2026",
@@ -14468,7 +14476,8 @@
         "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6436.",
         "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 48 product(s) not previously documented.",
         "2026-09-07: merged duplicate correction key '7701583410' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class).",
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [1778] flagged by scripts/tg_post_coverage.py: namesake. Post 1778 uses «азимуту» as the compass term in a piece about a game-style command interface. Post 716 («Аэро Азимут» platform) stays open."
       ]
     },
     "ao-ploshchad": {
@@ -17572,7 +17581,8 @@
       },
       "verified_against": [],
       "why": [
-        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread."
+        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread.",
+        "[2026-09-30 ЕГРЮЛ/Rospatent pull] Checked 2026-09-30: the dossier's only identifier, +7 905 519-71-01, is ООО «ПОКРОВ»'s own contact number (supplier contact on zakupki contract 3310005025826000052, «Поставка мониторинговых устройств «Булат»» ₽495,000, s3424; also on pokrovsystem.ru). So the shared number ties this name to ПОКРОВ, not to a registered ИП. No ИНН/ОГРНИП or ЕГРИП record could be identified: the ЕГРИП name search for «Сидоров Андрей Сергеевич» returns many namesakes and the dossier gives no region. Still dossier-only."
       ]
     },
     "ip-tsyganov-vadim-borisovich": {
@@ -22010,10 +22020,10 @@
         "_verified": true,
         "address": "г. Москва",
         "cbst_tie": {
-          "claim": "ЦБСТ's own channel lists «Архангел» among organisations «входящие в контур» ЦБСТ that were included in the EU's 20th package. This ООО is NOT the listed entity: the EU instrument lists only ООО «Архангел-Центр» (ИНН 5032379630).",
+          "claim": "Named by ЦБСТ's own channel as the interceptor-drone maker «Архангел» among the 11 finalist teams of the II stream of the ЦБСТ accelerator, with its general director quoted.",
           "confidence": "t-doc",
-          "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026: \"В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел».\" Note: the earlier \"2026 accelerator finalist\" framing from the brief scaffold was NOT independently confirmed in this channel search — dropped from the claim rather than left unsupported; the EU-sanctions listing is the confirmed basis. CORRECTION 2026-09-30: Council Implementing Regulation (EU) 2026/509 of 23.04.2026 (s7941) has one «Архангел» entry, no. 702, Limited Liability Company \"Archangel Center\" (ООО «Архангел-Центр», Одинцово, ИНН 5032379630); neither 9714079108 nor this ОГРН appears. So ЦБСТ's «Архангел» most likely means Архангел-Центр or Проект «Архангел» as a whole, and the post is not evidence of an EU listing for this ООО.",
-          "source_id": "s7588"
+          "evidence": "ЦБСТ's own channel, post 2159491523:1976 (t.me/ANO_CBST/1976), 17.03.2026: «Финалистами стали 11 проектных команд … Среди них — производитель дронов-перехватчиков «Архангел». Гендиректор компании Анастасия Шатракова сообщила, что благодаря участию в программе команде удалось найти потенциальных партнёров в смежных областях, включая ИИ.» The general director named matches this ООО's director in ЕГРЮЛ (Шатракова Анастасия Артёмовна, since incorporation 05.08.2025). The post names no legal entity; the match is the director's name, stated by ЦБСТ, plus the interceptor-drone business (the entity filed a «дроны военного назначения» trademark application). Restores the tie withdrawn earlier the same day, now on the correct evidence; the EU-listing post 2095 does not apply to this ООО.",
+          "source_id": "s8652"
         },
         "director": "Шатракова Анастасия Артёмовна",
         "director_history": [
@@ -22086,7 +22096,7 @@
             "note": "БФО filing: zero revenue, zero profit — all P&L lines dash/blank (confirmed via direct PDF read, not a parser gap)."
           }
         ],
-        "tier_basis": "NEW 2026-09-04 (Rospatent trademark WebSocket search, s5472/s5473, cross-verified against the filing's own FIPS.ru record, s5471): this EU-sanctioned entity filed trademark application 2025824328 on 2025-11-12, status 'Заявка' (pending, not yet examined), directly in the applicant's own name at its confirmed registered address (123290, Москва, 1-й Магистральный туп., д. 11 стр. 1, помещ. 1п — matches director Шатракова Анастасия Артёмовна's own name in the correspondence field). Goods/services explicitly include Class 12 'аппараты летательные; вертолеты радиоуправляемые с камерой; дроны военного назначения; дроны гражданского назначения; дроны с камерой' (aircraft; radio-controlled helicopters with camera; MILITARY-PURPOSE drones; civilian drones; camera drones) plus Class 25 apparel (jackets, caps, uniforms, sportswear — a merch/uniform line) and Class 35 (product demonstration/retail). This is the FIRST direct documentary evidence that this sanctioned shell (previously on file only as a bare 'ЦБСТ resident, no products found' stub) is actively pursuing a drone-branded product line under its own name, filed 10 months after the sanctions listing — not yet corroborated by any actual product, zakupki contract, or press coverage (a zakupki --inn scan the same day returned zero hits for this ИНН).",
+        "tier_basis": "NEW 2026-09-04 (Rospatent trademark WebSocket search, s5472/s5473, cross-verified against the filing's own FIPS.ru record, s5471): this entity (not EU-listed — see the 2026-09-30 correction on its record) filed trademark application 2025824328 on 2025-11-12, status 'Заявка' (pending, not yet examined), directly in the applicant's own name at its confirmed registered address (123290, Москва, 1-й Магистральный туп., д. 11 стр. 1, помещ. 1п — matches director Шатракова Анастасия Артёмовна's own name in the correspondence field). Goods/services explicitly include Class 12 'аппараты летательные; вертолеты радиоуправляемые с камерой; дроны военного назначения; дроны гражданского назначения; дроны с камерой' (aircraft; radio-controlled helicopters with camera; MILITARY-PURPOSE drones; civilian drones; camera drones) plus Class 25 apparel (jackets, caps, uniforms, sportswear — a merch/uniform line) and Class 35 (product demonstration/retail). This is the FIRST direct documentary evidence that this sanctioned shell (previously on file only as a bare 'ЦБСТ resident, no products found' stub) is actively pursuing a drone-branded product line under its own name, filed 10 months after the sanctions listing — not yet corroborated by any actual product, zakupki contract, or press coverage (a zakupki --inn scan the same day returned zero hits for this ИНН).",
         "address_history": [
           {
             "value": "123290, г. Москва, вн.тер.г. муниципальный округ Хорошевский, туп. 1-й Магистральный, д. 11 стр. 1, помещ. 1П",
@@ -22135,7 +22145,9 @@
         "2026-08-24: corrected a misattribution -- the rk.2035.university vacancy-posting note (added 2026-08-24 from s1164) actually belongs to the separate, same-named, non-ЦБСТ «Архангел» (ИНН 9500026652, per roymarket_archangel_adjacent_network memory), confirmed by directly querying that org's rk.2035.university profile (org_id 019a493f-c674-7281-95e3-dd203c5f6c94) and finding ИНН 9500026652, not this entity's 9714079108. rk2035_matches[] on this entity already correctly carried inn_match:false/ogrn_match:false from the original screen -- only the prose open_questions note had drifted from that flag.",
         "EGRUL_9714079108_20260905_ooo-arkhangel (s5507) — full signed ЕГРЮЛ выписка pulled 05.09.2026: confirms ОГРН 1257700345407, registration 05.08.2025, Moscow Хорошевский address, ₽10,000 charter capital, the 16-code ОКВЭД list (85.30 main, incl. 28.99.9 and 30.30.6), and dates the 50/50 Шатракова/Галиев ownership split to ГРН 2267705286407 of 23.06.2026 while supplying Галиев's personal ИНН 020403177846.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 1 filing-year record(s).",
-        "[2026-09-30 product research] cbst_tie reworded: this ООО is not EU-listed (see s7941). Its own ЦБСТ tie now rests on the Проект «Архангел» cluster, not the sanctions post. No products: only a pending trademark application naming «дроны военного назначения»; БФО 2025 balance sheet 165 тыс. руб. (dormant)."
+        "[2026-09-30 product research] cbst_tie reworded: this ООО is not EU-listed (see s7941). Its own ЦБСТ tie now rests on the Проект «Архангел» cluster, not the sanctions post. No products: only a pending trademark application naming «дроны военного назначения»; БФО 2025 balance sheet 165 тыс. руб. (dormant).",
+        "[2026-09-30 ЦБСТ post 2095 link check] cbst_tie withdrawn. The only evidence was ЦБСТ post 2095 naming «Архангел» among EU-listed residents; the act that post links (Council Decision 2026/504, s0168) lists only ООО «Архангел-Центр» (5032379630), not 9714079108. The tie now sits on ooo-arkhangel-tsentr. This ООО keeps its own evidence: a pending trademark application and a dormant balance sheet; no ЦБСТ link on file.",
+        "[2026-09-30 ЦБСТ posts 1976/1562] cbst_tie RESTORED at t-doc on ЦБСТ post 1976 (accelerator II finalist, GD Шатракова) — the earlier withdrawal removed the wrong basis (post 2095, which concerns Архангел-Центр) but missed this one. Also confirms the brief scaffold's «accelerator finalist» framing, earlier marked unconfirmed."
       ]
     },
     "ooo-arkodim": {
@@ -23014,6 +23026,14 @@
           "as_of": "2026-09-15",
           "outcome": "closed",
           "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). OpenSanctions: 1 match(es), top='Товариство з обмеженою відповідальністю \"Російський Дрон Рейсинг - Груп\"' (score 0.8882, topics=['sanction']) GUR sanctions/UAV registry: 1 match(es) - LIMITED LIABILITY COMPANY SAHA DRONE (own_tin=1400019110, inn_match=False, listing_confirmed=False) Aleph: 1 match(es), dataset categories=['company'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
+        },
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "namesake",
+          "posts_read": [
+            637
+          ],
+          "note": "Post 637 uses «дрон-рейсинга» for the sport (professional leagues) in a story about an AI drone beating human pilots."
         }
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
@@ -23024,7 +23044,8 @@
         "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 5 candidates are patents already correctly attributed to the separate, unrelated ooo-npo-rustekhdron entity (a distinct registry manufacturer) -- a search-artifact collision, not a real match for this entity.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-        "[2026-09-30 product research] Product research (Russian web, Telegram, Rospatent, press): no product found for this ИНН."
+        "[2026-09-30 product research] Product research (Russian web, Telegram, Rospatent, press): no product found for this ИНН.",
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [637] flagged by scripts/tg_post_coverage.py: namesake. Post 637 uses «дрон-рейсинга» for the sport (professional leagues) in a story about an AI drone beating human pilots."
       ]
     },
     "ooo-dronomir": {
@@ -23297,10 +23318,10 @@
         "address": "г. Москва",
         "director_history": [
           {
+            "value": "Панкратов Андрей Александрович",
             "as_of": "2026-07-13",
-            "note": "Director appointment record present (ГРН 2267705989274, 13.07.2026 — very recent) but name field not captured in this extraction pass.",
-            "source_id": "s0507",
-            "value": null
+            "source_id": "s8648",
+            "note": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 645403994412 (ГРН 2267705989274). The earlier record of this appointment had no name captured."
           }
         ],
         "founders": [
@@ -23321,6 +23342,10 @@
           {
             "source_id": null,
             "text": "2026-08-24 OpenSanctions full-roster screening: OpenSanctions' name-similarity match for this entity was CHECKED and REJECTED — the designation record it returned (a different, unrelated \"JSC Unmanned Technologies\", ИНН/tax number 9724118500) does not match this entity's own ИНН. Recorded explicitly so this false lead is not mistaken for a real hit in a future pass."
+          },
+          {
+            "source_id": "s8648",
+            "text": "Convertible loan from ООО «СПУТНИК - УПРАВЛЕНИЕ АКТИВАМИ НТИ» (7714497327) entitles it to up to 49% of the charter capital; not yet exercised per the выписка of 30.09.2026. Worth a check of that lender's own record and of the corporate agreement's parties."
           }
         ],
         "related_entities": [
@@ -23374,7 +23399,8 @@
           "as_of": "2026-09-15",
           "outcome": "closed",
           "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). OpenSanctions: 3 match(es), top='LIMITED LIABILITY COMPANY JSC UNMANNED TECHNOLOGIES' (score 0.7186, topics=['debarment', 'sanction', 'export.control']) GUR sanctions/UAV registry: 3 match(es) - ECOLIBRI JOINT-STOCK COMPANY (own_tin=7714473012, inn_match=False, listing_confirmed=False); LIMITED LIABILITY COMPANY UNMANNED SYSTEMS (own_tin=1831156383, inn_match=False, listing_confirmed=False) ... No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
-        }
+        },
+        "director": "Панкратов Андрей Александрович"
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -23384,7 +23410,8 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-        "[2026-09-30 product research] Product research: every Эколибри product source names the parent АО «Эколибри» (7714473012), not this subsidiary. The EGRUL lists a second owner, ООО «Спутник - Управление активами НТИ», not yet recorded here."
+        "[2026-09-30 product research] Product research: every Эколибри product source names the parent АО «Эколибри» (7714473012), not this subsidiary. The EGRUL lists a second owner, ООО «Спутник - Управление активами НТИ», not yet recorded here.",
+        "[2026-09-30 ЕГРЮЛ/Rospatent pull] Director name filled from the выписка of 30.09.2026 (s8648). Owner is AO «Эколибри» at 100% (ГРН 2237711831663, 30.11.2023). ООО «СПУТНИК - УПРАВЛЕНИЕ АКТИВАМИ НТИ» (ИНН 7714497327) is NOT an owner: the выписка lists it as a convertible-loan lender (займодавец, registered 23.05.2024) with a right to acquire up to 49% (₽4,900), and records a corporate agreement restricting share transfers (ГРН 2247705803948, 14.06.2024). A first-pass report called it a second owner; that was wrong."
       ]
     },
     "ooo-eliars": {
@@ -26112,8 +26139,8 @@
             "text": "2026-08-24 OpenSanctions full-roster screening: OpenSanctions' name-similarity match for this entity was CHECKED and REJECTED — the designation record it returned (a different, unrelated ООО (different ИНН entirely), ИНН/tax number 4705042180) does not match this entity's own ИНН. Recorded explicitly so this false lead is not mistaken for a real hit in a future pass."
           },
           {
-            "source_id": "s8582",
-            "text": "ЦБСТ post of 13.03.2026 credits «Инстех» and Asel Labs with the «Антагонист» interceptor; not established whether this ИНН or ООО «Инстех» 7807276480 is meant. An EGRUL выписка for 7807276480 would show whether the two share founders/director."
+            "source_id": "s8647",
+            "text": "RESOLVED 2026-09-30: the other ООО «Информационные системы и технологии» («ИНСТЕХ», ИНН 7807276480, ОГРН 1247800025175, registered 12.03.2024, СПб, Южно-Приморский; director and 100% owner Григорьева Ирина Анатольевна, ИНН 782702064506; ОКВЭД incl. 43.21, 27.12, 62.02.1, 71.12) shares no director or founder with this entity (director Чумаков П.А.). It runs the drone-detector.ru shop. A same-name, unrelated company on the documents available. ЦБСТ's «Антагонист» post (13.03.2026, s8582) names only «Инстех»; which of the two is meant is still not established."
           }
         ],
         "wb_overlap": "none_found",
@@ -26345,7 +26372,8 @@
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
-        "[2026-09-30 product research] Resolves the open question on instechno.ru: its footer address (наб. Обводного канала 93А) matches this ИНН's EGRUL address, and zakupki contract text spells the short name out as «Общество с ограниченной ответственностью «Информационные системы и технологии» (ООО «ИНСТЕХ»)». The drone-detector.ru shop (s8624, s8625) is run by a different ООО «Инстех», ИНН 7807276480 — not this entity. The «Антагонист» interceptor shown with Asel Labs (ЦБСТ post, s8582) names only «Инстех»; which company is meant is not established, so it is not attached."
+        "[2026-09-30 product research] Resolves the open question on instechno.ru: its footer address (наб. Обводного канала 93А) matches this ИНН's EGRUL address, and zakupki contract text spells the short name out as «Общество с ограниченной ответственностью «Информационные системы и технологии» (ООО «ИНСТЕХ»)». The drone-detector.ru shop (s8624, s8625) is run by a different ООО «Инстех», ИНН 7807276480 — not this entity. The «Антагонист» interceptor shown with Asel Labs (ЦБСТ post, s8582) names only «Инстех»; which company is meant is not established, so it is not attached.",
+        "[2026-09-30 ЕГРЮЛ/Rospatent pull] ЕГРЮЛ выписка pulled for the same-name ООО «ИНСТЕХ» 7807276480 (s8647): different people throughout, no overlap with this entity."
       ]
     },
     "ooo-intek-bespilotnye-sistemy": {
@@ -30336,14 +30364,27 @@
             "share_percent": 100.0,
             "as_of": "2009-12-22"
           }
-        ]
+        ],
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "namesake",
+          "posts_read": [
+            171,
+            305,
+            727,
+            2281,
+            2360
+          ],
+          "note": "All five posts name the БПЛА «Орион» (drone, also called «Иноходец»), a product, not a company; the registry holds that product under АО «Кронштадт»."
+        }
       },
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0099)",
       "why": [
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
         "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=7706664648, file cited as source s0099). Director confirmed: Харитонова Наталья Евгеньевна.",
         "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [171, 305, 727, 2281, 2360] flagged by scripts/tg_post_coverage.py: namesake. All five posts name the БПЛА «Орион» (drone, also called «Иноходец»), a product, not a company; the registry holds that product under АО «Кронштадт»."
       ]
     },
     "ooo-orzhitskie-artezianskie-vody": {
@@ -30841,7 +30882,16 @@
             "source_id": "s8535",
             "as_of": "2026-09-30"
           }
-        ]
+        ],
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "namesake",
+          "posts_read": [
+            485,
+            562
+          ],
+          "note": "Both posts use «ледяной покров» (ice cover) as a common noun in foreign-news digests."
+        }
       },
       "verified_against": "egrul.nalog.ru open API, 2026-08-24",
       "why": [
@@ -30851,7 +30901,8 @@
         "2026-08-25: user asked to scan pokrovsystem.ru directly. WebFetch summary matched the existing record exactly (same ОГРН, address, product line, contacts) -- re-confirmed via a direct curl archive (s1386) rather than trusting the WebFetch summary alone, since this entity's products[] entries had never carried a source_id before. Also fixed a stale cross-link: ooo-trimiks's related_entities still described this dealer as \"legal entity unresolved\" even though it had already been resolved as this standalone entity on 2026-08-24 -- linked slug + source_id there.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "[2026-09-30] Added the company's own Telegram channel and four self-published claims (s8532, s8534, s8535) and a concert photo showing its logo (s8519). The owner Цыганов Вадим Борисович is the husband of the singer Вика Цыганова (s8537); see the people records. ПОКРОВ describes itself as 3mx's official dealer, not the manufacturer (s8535)."
+        "[2026-09-30] Added the company's own Telegram channel and four self-published claims (s8532, s8534, s8535) and a concert photo showing its logo (s8519). The owner Цыганов Вадим Борисович is the husband of the singer Вика Цыганова (s8537); see the people records. ПОКРОВ describes itself as 3mx's official dealer, not the manufacturer (s8535).",
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [485, 562] flagged by scripts/tg_post_coverage.py: namesake. Both posts use «ледяной покров» (ice cover) as a common noun in foreign-news digests."
       ]
     },
     "ooo-praym": {
@@ -30946,6 +30997,14 @@
           "as_of": "2026-09-15",
           "outcome": "closed",
           "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). OpenSanctions: 5 match(es), top='ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРАЙМ\"' (score 1.0, topics=['sanction.linked', 'sanction.control']) Aleph: 3 match(es), dataset categories=['company', 'procurement'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
+        },
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "namesake",
+          "posts_read": [
+            1157
+          ],
+          "note": "Post 1157 uses «прайма» as the generic term for a defence prime contractor, about a US software-led defence company."
         }
       },
       "verified_against": "prime-radar.ru/eg-rm (live WebFetch, 2026-08-22) — NOT YET archived to data/sources/, see open_questions; full EGRUL extract pulled directly 23.08.2026 (ul-1097746825945-20260823135736.pdf)",
@@ -30961,7 +31020,8 @@
         "in its own securing-measures hit was literally one of its own",
         "products under lien.",
         "full EGRUL extract pulled directly 23.08.2026 (ul-1097746825945-20260823135736.pdf) — adds director/address/ОКВЭД to the existing product/brand identification from prime-radar.ru. Wholesale-trade ОКВЭД (not manufacturing) is consistent with Prime Radar being a reseller/integrator of the ЕЖ-РМ counter-drone line rather than its manufacturer — worth checking who actually manufactures it if that distinction matters for a future claim.",
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [1157] flagged by scripts/tg_post_coverage.py: namesake. Post 1157 uses «прайма» as the generic term for a defence prime contractor, about a US software-led defence company."
       ]
     },
     "ooo-prommash": {
@@ -31952,6 +32012,10 @@
           {
             "source_id": null,
             "text": "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found. Real substantial operation (2023 revenue ₽1.49bn, profit ₽408.8m) despite no web presence. Significant open thread: project head Владислав Пыльский arrested Sept 2024 (Investigative Committee case, ₽164m damages) for supplying substandard military-designated products to Russian forces -- worth tracking as a legal/criminal-liability angle distinct from the corporate registry facts."
+          },
+          {
+            "source_id": "s8646",
+            "text": "Which same-name company holds patents RU2851338C1 and RU2856043C1 (radio-network gateway; satellite-comms kit)? Rospatent prints no ОГРН/ИНН; the Новосибирск ООО (5403081107, ОКВЭД 26.30) is at least as plausible as this entity. A fee/assignment record or the patent attorney's file would settle it."
           }
         ],
         "patents": [
@@ -31959,7 +32023,7 @@
             "filed": "2025.05.23",
             "holder": "Общество с ограниченной ответственностью \"Сибирская навигационная компания\" (RU)",
             "inventors": [],
-            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24; own-name patentee/holder match, archived and read in full.",
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24; own-name patentee/holder match, archived and read in full. ATTRIBUTION CAVEAT 2026-09-30: the patent document (s1043/s1045 and PDFs) prints only the patentee's name and the patent attorney's address (Москва, Зеленоград, ООО «Институт инноваций и права»); no ОГРН, ИНН or patentee address. A same-name ООО «Сибирская навигационная компания» exists in Новосибирск (ИНН 5403081107, short name «СИБНАВИКОМ», registered 31.10.2023, director and 100% owner Шамба А.Г., ОКВЭД incl. 26.30 communications equipment, s8646). This entity (Москва, registered 2018; ОКВЭД 30.30, 46.5x, 62.02) has no 26.30 code. Holder not resolved by the documents; patents kept here on the name match only.",
             "published": "2025.11.24",
             "reg_number": "RU2851338C1",
             "source_id": "s1043",
@@ -31970,7 +32034,7 @@
             "filed": "2025.07.30",
             "holder": "Общество с ограниченной ответственностью \"Сибирская навигационная компания\" (RU)",
             "inventors": [],
-            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24; own-name patentee/holder match, archived and read in full.",
+            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24; own-name patentee/holder match, archived and read in full. ATTRIBUTION CAVEAT 2026-09-30: the patent document (s1043/s1045 and PDFs) prints only the patentee's name and the patent attorney's address (Москва, Зеленоград, ООО «Институт инноваций и права»); no ОГРН, ИНН or patentee address. A same-name ООО «Сибирская навигационная компания» exists in Новосибирск (ИНН 5403081107, short name «СИБНАВИКОМ», registered 31.10.2023, director and 100% owner Шамба А.Г., ОКВЭД incl. 26.30 communications equipment, s8646). This entity (Москва, registered 2018; ОКВЭД 30.30, 46.5x, 62.02) has no 26.30 code. Holder not resolved by the documents; patents kept here on the name match only.",
             "published": "2026.02.10",
             "reg_number": "RU2856043C1",
             "source_id": "s1045",
@@ -32038,7 +32102,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-07: merged dormant duplicate correction key '4205376019' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
-        "[2026-09-30 product research] Short name ООО «СИБНК» per own выписка (s6716); absorbs the wrong-entity ooo-sibnk stub. The Insider (16.05.2025, s8573) names it as controlling owner of ООО «ЭВР» (now ООО «Гаскар»), maker of «Сибирячок». The two patents already on file name the patentee by name only; a second active ООО «Сибирская навигационная компания» exists (ИНН 5403081107, Новосибирск, s8562), so they are not listed as this ИНН's products until the Rospatent holder record with ОГРН is checked."
+        "[2026-09-30 product research] Short name ООО «СИБНК» per own выписка (s6716); absorbs the wrong-entity ooo-sibnk stub. The Insider (16.05.2025, s8573) names it as controlling owner of ООО «ЭВР» (now ООО «Гаскар»), maker of «Сибирячок». The two patents already on file name the patentee by name only; a second active ООО «Сибирская навигационная компания» exists (ИНН 5403081107, Новосибирск, s8562), so they are not listed as this ИНН's products until the Rospatent holder record with ОГРН is checked.",
+        "[2026-09-30 ЕГРЮЛ/Rospatent pull] Rospatent pull done: holder identity cannot be resolved from the patent documents; see the caveat on each patent."
       ]
     },
     "ooo-sibnk": {
@@ -38090,10 +38155,72 @@
             "source_id": "s6798",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
-        ]
+        ],
+        "web": {
+          "sites": [
+            {
+              "url": "https://archangel-center.ru/",
+              "source_id": "s8650",
+              "note": "Wayback capture of 18.11.2024. The page footer prints «Общество с ограниченной ответственностью «Архангел-Центр». ОГРН 1245000058489 от 17.05.2024 г. ИНН 5032379630», 143003, Одинцово, ул. Маршала Жукова, д.32, помещ.1 — identifiers and address match this record exactly. Site built on Tilda; 33 Wayback captures 01.09.2024–23.04.2026."
+            }
+          ],
+          "telegram": [
+            {
+              "handle": "@archangel_center",
+              "source_id": "s8649",
+              "note": "«Архангел-Центр», 303 subscribers on 30.09.2026; links the site; contact @arhangelcenter."
+            }
+          ],
+          "vk": [
+            {
+              "url": "https://vk.com/club222735878",
+              "note": "Linked from the site (s8650); not fetched."
+            }
+          ],
+          "youtube": [],
+          "marketplace_listings": [],
+          "other": [
+            {
+              "note": "archangel.center@yandex.ru, +7 901 183-39-08 (site footer, s8650)"
+            }
+          ]
+        },
+        "marketing_claims": [
+          {
+            "text_ru": "Военная подготовка под руководством ветеранов ЧВК Вагнер",
+            "text_en": "Military training under the leadership of veterans of the PMC Wagner",
+            "context": "Footer tagline of archangel-center.ru, Wayback 18.11.2024",
+            "source_id": "s8650",
+            "as_of": "2024-11-18"
+          },
+          {
+            "text_ru": "Бывшим и будущим участникам СВО скидка 30% на обучение любого тарифа",
+            "text_en": "Former and future СВО participants get a 30% discount on any tariff",
+            "context": "Offer banner, archangel-center.ru, Wayback 18.11.2024",
+            "source_id": "s8650",
+            "as_of": "2024-11-18"
+          },
+          {
+            "text_ru": "Центр военной подготовки в Москве и всей России, тактический клуб \"Архангел-Центр\"",
+            "text_en": "Military training centre in Moscow and across Russia, tactical club \"Архангел-Центр\"",
+            "context": "Page title, archangel-center.ru",
+            "source_id": "s8650",
+            "as_of": "2024-11-18"
+          }
+        ],
+        "cbst_tie": {
+          "claim": "Listed by ЦБСТ's own channel among its «резиденты» in the EU's 20th package, by the bare name «Архангел»; the post's own link resolves to the EU act whose only «Архангел» entry is this company.",
+          "confidence": "t-doc",
+          "evidence": "ЦБСТ's own channel, post 2159491523:2095 (t.me/ANO_CBST/2095), 24.04.2026, headline «Евросоюз ввёл санкции против нескольких резидентов ЦБСТ»: «В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел»». The post links https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600504, i.e. Council Decision (CFSP) 2026/504 of 23.04.2026 (s0168), which lists as entry 702 «Archangel Center» (ООО «Архангел-Центр», ИНН 5032379630, ОГРН 1245000058489) and no other «Архангел». Limits: the post names no legal entity, and the EU entry itself says nothing about ЦБСТ (unlike the entry for Технодрон, which cites ЦБСТ support); the identification rests on the post's own link, and ЦБСТ's «резидент» label is ЦБСТ's own claim.",
+          "source_id": "s7588"
+        },
+        "tier": "plumbing",
+        "tier_basis": "Sixth distinct \"Архангел\"-branded organization surfaced in this investigation. Legal name \"Архангел-ЦЕНТР\", corrected from the earlier parked memory's bare \"Архангел\" framing. A commercial Russian military-training organisation (general military training, tactical training, sniper instruction, UAV operation, artillery, reconnaissance) — see sanctions[] for the full designation narrative. CONFIRMED MULTI-JURISDICTION SANCTIONED (EU/UA/FR/CH/BE/MC, exact ИНН/ОГРН match, s5413) as of 2026-04-23, independent of this investigation and independent of any ЦБСТ tie — no drone-manufacturing OKVED, no ЦБСТ connection found, and no tie established to any of the other 5 \"Архангел\"-branded organizations in this investigation (including Гагаринг's own Архангел Легион/ano-arkhangel relationship). UPDATE 2026-09-30: the ЦБСТ post of 24.04.2026 (t.me/ANO_CBST/2095) names «Архангел» among ЦБСТ's EU-listed residents and links Council Decision 2026/504, whose only «Архангел» entry is this company (entry 702) — so a ЦБСТ tie now exists on ЦБСТ's own word, and the tier moves from adjacent to plumbing (a training body, like Гагаринг's training arm). The sentence above that no ЦБСТ connection was found is superseded. Still no documented tie to the Проект «Архангел» drone cluster or to the other «Архангел» entities."
       },
       "why": [
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "[2026-09-30] Identity check of archangel-center.ru: the Wayback capture of 18.11.2024 (s8650) prints this entity's full name, ОГРН 1245000058489 (dated 17.05.2024), ИНН 5032379630 and Одинцово address, so the site is this entity and not a namesake. Courses listed (price list on the page): special tactical and sniper training, tactical medicine, artillery, «Курс операторов БПЛА», young-soldier course. A search of the local Telegram archive (data/roymarket.db) finds no post mentioning «Архангел-Центр» or @archangel_center, and the site links no Проект «Архангел» channel, so a tie to the Проект «Архангел»/ЦБСТ cluster is still not established by anything on file; the shared brand word is not evidence. [Partly superseded the same day: ЦБСТ's own post 2095 links the EU act naming this company, so a ЦБСТ tie now exists on ЦБСТ's word; the tie to the Проект «Архангел» drone cluster remains unestablished.]",
+        "[2026-09-30 ЦБСТ post 2095 link check] cbst_tie set and tier changed adjacent → plumbing at user's observation that post 2095 links the EU act naming this company; checked against the act itself (s0168, entry 702). ЦБСТ may have meant a different «Архангел» and linked the act carelessly, but the act lists only this one."
       ]
     },
     "9309028512": {
@@ -38211,12 +38338,24 @@
             "confidence": "confirmed",
             "source_id": "s6965"
           }
-        ]
+        ],
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "namesake",
+          "posts_read": [
+            178,
+            723,
+            1659,
+            2157
+          ],
+          "note": "Each post uses «оптические системы» as a generic term for optics in foreign-technology digests."
+        }
       },
       "why": [
         "НСПД geoportal address lookup confirms shared registration address is a residential building, 2026-09-08",
         "2026-09-15: wired shared-address related_entities[] edges to ooo-ametist and ooo-pk-stalnoy-kupol -- co-location only, no confirmed common principal with either. Found during a registry-wide address-co-location scan.",
-        "2026-09-29: sourced both shared-address edges directly against each entity's own already-pulled full signed ЕГРЮЛ выписка (address blocks read and confirmed to match verbatim). Also read this entity's own founders section for the first time while closing an unsourced role-edge backlog -- it names Хутешен Алексей Александрович as sole shareholder (100%), the SAME person who is ooo-ametist's and ooo-pk-stalnoy-kupol's sole founder too. Upgraded both related_entities[] edges from shared-address to sister-entity and corrected the earlier (2026-09-15) \"no director or founder overlap found\" reading, which had been written before this entity's own founders section was actually read."
+        "2026-09-29: sourced both shared-address edges directly against each entity's own already-pulled full signed ЕГРЮЛ выписка (address blocks read and confirmed to match verbatim). Also read this entity's own founders section for the first time while closing an unsourced role-edge backlog -- it names Хутешен Алексей Александрович as sole shareholder (100%), the SAME person who is ooo-ametist's and ooo-pk-stalnoy-kupol's sole founder too. Upgraded both related_entities[] edges from shared-address to sister-entity and corrected the earlier (2026-09-15) \"no director or founder overlap found\" reading, which had been written before this entity's own founders section was actually read.",
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [178, 723, 1659, 2157] flagged by scripts/tg_post_coverage.py: namesake. Each post uses «оптические системы» as a generic term for optics in foreign-technology digests."
       ],
       "verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08"
     },
@@ -39412,10 +39551,262 @@
           "outcome": "closed",
           "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). Aleph: 5 match(es), dataset categories=['leak', 'library'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
         },
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "cbst_tie": {
+          "claim": "ЦБСТ's own channel names the project's Туапсе school as a site running a ЦБСТ resident's anti-UAV simulator mode (a deployment callout, not a residency claim).",
+          "confidence": "t-open",
+          "evidence": "ЦБСТ's own channel, post 2159491523:1562 (t.me/ANO_CBST/1562), 25.11.2025, on the resident «Квадросим»: «режим внедрён в Михайловской военной артиллерийской академии и в новом учебном центре БПЛА «Архангел» в Туапсе, который готовит операторов для объектов прибрежной инфраструктуры. Всего сценарий перехвата отработали 120 операторов и курсантов на трёх площадках». The project's own post 10400 (29.06.2026) advertises «Школа операторов БПЛА «Архангел» в Туапсе». Limits: the school is a user of a resident's product, not itself called a resident; the post names no legal entity; «Квадросим» is not yet on file (no matching company in an ЕГРЮЛ name search).",
+          "source_id": "s8651"
+        },
+        "open_questions": [
+          {
+            "source_id": "s7897",
+            "text": "Ten specimen diplomas/certificates for the «Школа внешних пилотов (операторов) БПЛА «Архангел»» (pilot, mechanic, UAS data processing, pilot-instructor, plus the «Архангел ЩИТ» air-defence instructor and АНТИБПЛА tracks) were posted 07.02.2026 (msgs 9498-9516, s7888-s7906). They carry the Omsk АНО's licence number 'Л035-01273-55/00207746 от 18.02.2022' while the ЕГРЮЛ выписка lists licence '55Л01 75-п' of 31.10.2017 (s7907): check the Рособрнадзор licence register for the 2022 number and for whether real graduates hold ФИС ФРДО entries. Which real students, if any, got these documents is not on file."
+          },
+          {
+            "source_id": "s5454",
+            "text": "This post links two further, distinct, NOT-yet-scraped channels: t.me/proekt_arhangel (cited twice as a related/parent channel, distinct handle from @projectArchangel) and t.me/malyha_ww (video build instructions — \"малыха\" matches the BOM's \"Малая ДР\" naming for this small variant). Also confirms t.me/c/1859964206/110711 (the already-known private \"Академия Противодействия БПЛА\" chat) carries this project's own tuning content."
+          },
+          {
+            "source_id": "s5454",
+            "text": "BOM line item \"Связь: Гермес или аналоги\" (\"Hermes comms, or equivalent\") is a generic reference, not a specific vendor citation — plausibly, but NOT confirmed to be, the same «Гермес» tactical-comms brand sold commercially by `npo-kaysant` (ИНН 7733393203, see that entity's merged `kb-germes` alias). Left as an open lead, not merged. RESOLVED 2026-09-04 (via a web search, then confirmed against the private Академия chat's own msg 110720, s5457): the channel named in that chat, \"ГЕРМЕС - ППРЧ связь, мачты, защита от дронов,\" is confirmed via its own Telegram title (\"...НПО КАЙСАНТ\") to be `npo-kaysant`'s (ИНН 7733393203) own commercial channel (@germesfpv). This IS the same «Гермес» brand referenced generically in the BOM."
+          },
+          {
+            "source_id": "s5456",
+            "text": "Self-description (23.10.2025, s5456): \"Проект «Архангел» имеет: сеть своих учебных центров; профессиональные боевые расчеты; ... опыт подготовки дроноводов в зоне СВО, исчисляемый несколькими тысячами пилотов; производственные мощности; мощную партнерскую сеть предприятий\" (a network of its own training centers, professional combat crews, experience training drone pilots in the SVO zone numbering several thousand, production capacity, and a strong partner network of enterprises) — the project's own claim of scale, not independently verified."
+          },
+          {
+            "source_id": "s5457",
+            "text": "The private \"Академия Противодействия БПЛА\" chat (channel_id 1859964206, already scraped, 5795 posts) carries 387 \"Архангел\" mentions and 147 warhead/fragmentation-term mentions — only one specific thread (msgs 110701-110720) has been close-read so far. A full close-read of this chat is a real next step, likely to surface further weapons-development detail beyond the polished public-channel framing."
+          },
+          {
+            "source_id": "s5457",
+            "text": "A build variant using \"судоплатовских комплектующих (ВТ 40)\" (components from \"Судоплатов\"/\"НСУ 2.0\") is offered alongside the standard kit — the same rival network Проект Архангел publicly denied supplying in 2024 (see the parked roymarket_archangel_adjacent_network memory's \"Гермес comms\" note). Suggests a more complex relationship than pure rivalry — at minimum component-level compatibility. Not investigated further."
+          },
+          {
+            "source_id": "s5457",
+            "text": "A Telegram channel named \"ГЕРМЕС - ППРЧ связь, мачты, защита от дронов\" is referenced by name (no handle) as the home channel for the «Гермес коллектив» system — not yet identified/scraped. May or may not be the same «Гермес» brand sold commercially by `npo-kaysant` (ИНН 7733393203)."
+          },
+          {
+            "source_id": "s5460",
+            "text": "Full-corpus scoped mining pass (2026-09-04) over all four Филиппов/Архангел-linked channels (Archangel_Forum 73,085 posts, projectArchangel 10,042, proekt_arhangel 1,073, the private Академия chat 5,795 — 65,454 non-empty posts scanned) confirms the project's own multi-platform contact roster from its own recurring signature block (msg projectArchangel#132, #9910): own training site bpla.archangel.school, VK (vk.com/id729012386 — appears 337-401x as the project's official VK link), MAX messenger (multiple join links, incl. a project-wide chat), plus named contact-handles for three distinct training-intake functions: @Coordinator_Archangel_Project (document intake — passport/military ID/СНИЛС/ИНН/bank details for enlistment), @VERA_consultant_Archangel (training program consultant), @Natalia_Archangel_Project (пункт: \"Набор добровольцев, оформление\" — volunteer recruitment processing). No full legal names attached to any of the three handles in the scanned text — not promoted to people.json pending a name. No Twitter/X, Instagram, Facebook, or Odnoklassniki presence found belonging to the project itself — the handful of Instagram/Facebook links in this 65k-post corpus are unrelated third-party equipment-sourcing references embedded in a single post (projectArchangel#3534), not the project's own accounts."
+          },
+          {
+            "source_id": "s5460",
+            "text": "«Малыха» (t.me/malyha_ww, referenced twice already as an unscraped build-video channel) is now fully resolved as a multi-platform training-video operation, per its own self-published contact block (projectArchangel#10301, 2026-06-14): Telegram t.me/malyha_ww + feedback bot @malyha_ww_bot, RuTube rutube.ru/channel/59281618, VK vk.com/malyha_ww. Still not scraped as a channel — a real next step if deeper build-instruction detail is wanted, since its Telegram content has never been pulled into this DB."
+          },
+          {
+            "source_id": "s5460",
+            "text": "t.me/sudoplatov_official identified (14 cross-posts in projectArchangel/Archangel_Forum, 2023-2024) as the rival \"Судоплатов\" network's own public channel — this is the network whose \"судоплатовских комплектующих (ВТ 40)\" component variant was offered alongside the standard «Архангел» build kit (see the still-open component-compatibility question logged 2026-09-04 from s5457). Not scraped yet — a future step for resolving that lead, not chased further this pass."
+          },
+          {
+            "source_id": "s5460",
+            "text": "«Ворон-оптоволокно» (t.me/voronoptovolokno) — per a direct self-published account (projectArchangel#9215, undated but positioned late Dec 2025/Jan 2026 in the feed), the founder of Проект «Архангел» personally visited the «Ворон» team, described as a field-repairable fiber-optic-cable manufacturer for FPV drones; the post states «Ворон» is relocating its fiber-optic production to Krasnodar Krai (the same region as Проект «Архангел»'s own Туапсе base) and the two projects plan joint operator training. No legal entity/ИНН resolved for «Ворон»/«Ворон-оптоволокно» yet — worth an EGRUL name search given the confirmed direct founder-to-founder relationship, distinct from a mere equipment mention."
+          },
+          {
+            "source_id": "s5460",
+            "text": "POSSIBLE cross-network overlap, NOT confirmed: projectArchangel#9534 (undated, positioned ~Feb 2026 in the feed) is signed \"Геннадий Архангельский\" and describes personally sourcing/mounting ten four-barrel ЯкБ-12.7mm aviation machine guns for a customer's mobile counter-UAV fire groups (МОГ), with his own MAX channel max.ru/arkhangelfront (also cross-posted as t.me/arkhangelfront, 11x). This surname is otherwise ONLY attached in this registry to Архангельский Геннадий Евгеньевич (`arkhangelskiy-gennadiy-evgenevich`), director/co-founder of the separate, Гагаринг-adjacent АНО «Архангел» / «Архангел Легион» (ИНН 2315233718) — also a Krasnodar Krai operation. The projectArchangel post gives no patronymic, so this CANNOT be treated as the same person without further verification (a namesake, or a shared surname/brand coincidence, is equally plausible). If confirmed, this would be the first direct personal link found between Филиппов's Проект «Архангел» and the Гагаринг-adjacent «Архангел Легион» network — flagged here specifically so it is not silently missed, but NOT merged or asserted as fact."
+          },
+          {
+            "source_id": "s5460",
+            "text": "КБ «Перит» (t.me/kbperit, 33 cross-posts) advertises an ОПУ (опорно-поворотное устройство, pan-tilt antenna mount) product \"Голова\" in the network's channels, with its own \"@kbperit_admin\" contact for \"Сотрудничество и реклама\" (cooperation and ADVERTISING) — reads as a paid cross-promotion, not a confirmed corporate partnership with Проект «Архангел». Noted, not investigated further; same treatment applies to ~50 other one-off legal-entity mentions (component/equipment vendors named in passing across the 65k-post scan) that were not individually triaged this pass — see the scoped mining report for the full list if a specific one becomes relevant later."
+          },
+          {
+            "source_id": "s5463",
+            "text": "First close-read pass (2026-09-04) over Archangel_Forum's substantive native posts (33 of 1,633 \"Архангел\"-mentioning posts exceed 400 characters — the rest, plus the remaining 71,452 non-\"Архангел\" posts in this 73,085-post forum, remain unread; top-viewed posts are confirmed generic war-news reposts, not project content). Confirms two additional training locations beyond Туапсе/Запорожье: a Ставропольская школа (announced June 2024, physically \"на территории Луганской народной республики\", recruiting instructors incl. combat-engineer/sapper and tactical-medicine roles, contact @bpla_2023) and a Moscow training cohort (\"третий поток в Москве\", referenced Nov 2024). A 2025-11-22 post narrows the MoD-cadet training location specifically to Запорожье/Крым, with a formal Yandex-Forms enrollment process and \"диплом государственного образца\" (state-standard diploma, verifiable via Госуслуги) on completion — a materially more institutionalized credentialing detail than previously documented."
+          },
+          {
+            "source_id": "s5463",
+            "text": "RESOLVED/UPGRADED (s5539, 2026-09-05) — see the new open_questions entry below. POSSIBLE institutional tie to `ooo-gagaring`/`ano-dpo-obrazovatelny-tsentr-gagaring` (Гагаринг), NOT confirmed: Archangel_Forum#98621 (2024-06-20) announces Проект Архангел's own \"Ассоциация Народный ВПК\" (membership application process, coordinated via @VERA_consultant_Archangel) and in the same post cites, consecutively: a TASS article (06.03.2024, archived via Wayback since tass.ru itself blocks scripted access) about a DIFFERENT, formally-registered \"Ассоциация разработчиков перспективных систем РЭР, РЭБ и связи\" — that article's own text never says \"Народный ВПК\", so it is NOT confirmed to be the same organization; and \"Компания Гагаринг\" (t.me/my_el_lab) directly by name. The post's own prose does not explicitly state Гагаринг is a joining member of whatever \"Народный ВПК\" is — it reads as citing Гагаринг as a comparable/reference example, not a confirmed formal tie. This is nonetheless the FIRST documented direct textual co-mention of Проект «Архангел» and Гагаринг anywhere in this investigation's corpus (the prior Гагаринг wide-net pass found no tie between the two networks) — worth a dedicated follow-up (check for a Гагаринг-side confirmation of \"Народный ВПК\" membership, or a reply/cross-post acknowledging the association) before treating it as more than a citation."
+          },
+          {
+            "source_id": "s5463",
+            "text": "Проект «Архангел» is also affiliated with a third named umbrella body: \"Конгресс руководителей Волонтёрских групп СВО\" (Congress of Heads of Volunteer Groups of the SVO), admission contact @MiroslavaVS — appears in the project's own recurring contact-roster block (Archangel_Forum#143591/#145758) alongside \"Ассоциация Народный ВПК\". Neither @MiroslavaVS nor the Congress itself has been independently researched yet."
+          },
+          {
+            "source_id": "s5475",
+            "text": "Full close-read (not keyword-scoped) of proekt_arhangel's entire native-post corpus (256 of 1,073 posts >50 chars, 23.01.2025-04.09.2026, 2026-09-04) surfaced a self-disclosed corporate structure NOT captured by the earlier scoped mining pass (see this record's other s5460-sourced open questions): proekt_arhangel#623 (2025-10-11) states the project created THREE new legal entities in mid-to-late 2025 — «Архангел-Щит» (civilian PVO/volunteer/security-staff training, Подмосковье/Запорожье/Крым/Краснодарский край — this appears to CONFIRM `ooo-arkhangel-shchit`, ИНН 5027339008, previously identified only via press photo-credit, s5456), «АНО ЦППО БПЛА \"Архангел\"» (Krasnodar krai, \"при поддержке губернатора и мэра Туапсе\" — free training for volunteers/PVO crews — NO ИНН yet resolved, not the same entity as `ano-arkhangel`/Архангел Легион which is a distinct Krasnodar-krai operation with no confirmed tie), and «Хаб СВО» (production entity, website habsvo.ru — NO ИНН yet resolved). The same post also states \"Две наших ООО Архангел (Херсон и Запорожье) функционируют в полном объеме в интересах и по задачам ГУБП ВС РФ и при поддержке Фонда НТИ и Института 2035\" — CONFIRMS a second, Kherson-oblast ООО «Архангел» distinct from `ooo-arkhangel-zaporizhzhie`, plausibly the same entity behind the still-unresolved withdrawn Геническ trademark application (see `ooo-arkhangel-zaporizhzhie`'s own open_questions, s5468) — NOT yet confirmed by ИНН, and \"ГУБП ВС РФ\" is an abbreviation not yet decoded (plausibly a UAV-systems directorate of the Russian MoD) — both worth a targeted EGRUL name search before promoting either to a full entity record."
+          },
+          {
+            "source_id": "s5475",
+            "text": "proekt_arhangel#631/#653 (2025-10-18/23) documents a signed \"взаимное партнерское соглашение\" between «Архангел» and Тульское ЦКБА (a major, well-established state defense contractor) to integrate the «Архангел» interceptor into ЦКБА's КББ-МД radar systems (which the post says complement «Панцирь»-class short-range air defense) — a concrete, named industrial-defense partnership, distinct from and more formal than the network's usual informal component-donor relationships. Not yet independently corroborated outside the project's own channel."
+          },
+          {
+            "source_id": "s5475",
+            "text": "proekt_arhangel#569 (2025-09-16) claims the «Архангел» interceptor was exhibited directly to President Putin at the «Мулино» polygon during the «Запад-2025» strategic exercises, as a ЦБСТ resident's product, alongside АНО «ЦБСТ» chairman Андрей Безруков and ЦИК «Единой России» head Александр Сидякин (both already-documented ЦБСТ principals in this registry) — cites a third-party Telegram repost (t.me/Yunashev_Live/106434) as its own source, not yet independently verified against a press account. If confirmed, this is the strongest institutional-legitimacy tie found to date between Проект «Архангел» and the ЦБСТ/state apparatus at the presidential level."
+          },
+          {
+            "source_id": "s5475",
+            "text": "proekt_arhangel#871 (2026-04-11) documents a new named subdivision, «Апшеронский центр беспилотных систем 'Рубеж'», created jointly with the youth-patriotic \"Казачий кордон\" center and the Apsheronsk-district veterans' organisation «Оплот», whose opening event doubled as a formal ЮНАРМИЯ (state youth military-patriotic movement) induction ceremony in Krasnodar krai, with minors reported handling drone-control simulators (\"Дети — пробуют, учатся, впервые берут в руки аппаратуру управления на симуляторе\") and Hero of Russia Артём Владимирович Чумаров as guest speaker. This is a distinct finding from the existing PII-policy \"affiliated participants\" category (course students/instructors) — it documents outreach to minors specifically, not yet assessed against any PII/child-protection-specific framing this project may want to apply."
+          },
+          {
+            "source_id": "s5475",
+            "text": "proekt_arhangel#697 (2025-11-19), the Tuapse training-center opening announcement, states graduates receive \"гарантированное трудоустройство... в элитное подразделение «Рубикон»\" — Рубикон being a publicly known, Genshtab-linked Russian UAV unit — a specific named-unit placement guarantee not previously on file for this network."
+          },
+          {
+            "source_id": "s5475",
+            "text": "proekt_arhangel#1084 (2026-08-24) is a direct public endorsement of Барашков (Гагаринг's founder, `barashkov-*` in people.json) as the ideal candidate for a proposed federally-empowered regional UAV-defense coordinator role in Krasnodar krai — the first documented instance of MUTUAL political endorsement between the Архангел and Гагаринг networks (the earlier-known tie, Archangel_Forum#98621, was a one-way citation only)."
+          },
+          {
+            "source_id": "s5475",
+            "text": "Соловьев Life's coverage, self-cited by the project (proekt_arhangel#1035, 2026-07-10) as \"Побывал на позициях батальона Судоплатова, чтобы ознакомиться с результатами работы новых дронов\" — an independent press visit to a named \"батальон Судоплатова\" — appears to CORROBORATE the existing GUR-sourced claim on `ooo-arkhangel-zaporizhzhie` that this network trains the BARS-32/\"Sudoplatov's battalion\" unit. Distinct from, and not yet cross-checked against, `t.me/sudoplatov_official` (the still-unscraped rival \"Судоплатов\" component-brand channel already flagged elsewhere in this record) or the \"судоплатовских комплектующих\" build-kit variant."
+          },
+          {
+            "source_id": "s5475",
+            "text": "New, not-yet-researched names surfaced in this close-read: «ZOV-AA» (proekt_arhangel#1035 — a joint Kazan event held \"под эгидой проекта Архангел и проекта ZOV-AA\", no further detail); «Рокот Воронеж» (proekt_arhangel#621 — a self-described peer \"гаражный\" collective, distinct from «Рокот тех» rokot_tech, a Voronezh propeller manufacturer thanked separately for СТ-1-certified components in proekt_arhangel#819). Neither yet cross-checked against any registry or EGRUL search."
+          },
+          {
+            "source_id": "s5475",
+            "text": "КБ «Перит» (t.me/kbperit) — previously logged (s5460) as \"reads as a paid cross-promotion, not a confirmed corporate partnership.\" This close-read finds stronger evidence: proekt_arhangel#858/#864 (2026-03-28, 2026-04-03) documents actual hardware (\"Голова\" pan-tilt antenna mounts) being delivered to and installed at the Tuapse training center, with a named contact (Харон, t.me/haron_fpv) — an actual supply relationship, not merely an ad. Upgrading this assessment; still not a documented ownership/equity tie."
+          },
+          {
+            "source_id": "s5475",
+            "text": "Private 'Академия Противодействия БПЛА' chat msg 109102 (2025-07-04): \"То, что ворон неровно дышит к Архангелам, в курсе все вменяемые люди... этот случай вверг меня в ступор\" — a chat participant references inter-network friction (\"межклановые разборки\") between «Ворон»/«Ворон-оптоволокно» and «Архангел», in apparent tension with the earlier-logged (s5460) friendly account of a founder-to-founder visit and planned joint operator training. Both readings left on file — not resolved which is the more current/accurate picture of the relationship."
+          },
+          {
+            "source_id": "s5475",
+            "text": "Private chat msg 109207 (2025-07-09) lists open vacancies including \"К нам в роту БПЛА (добробат ЦСН САРМАТ)\" — a named unit \"ЦСН Сармат\", plausibly tied to the already-known Telegram channel @russian_shock_volunteer_brigade (\"Сармат\", already thanked by name in the projectArchangel corpus) but not yet confirmed as the same organisation."
+          },
+          {
+            "source_id": "s5477",
+            "text": "CONFIRMED 2026-09-04 via independent mainstream press (s5476 aviation21.ru, s5477 CNews, s5478/s5483 vpk.name [TASS wire syndication], s5481/s5482 EADaily/www1.ru — TASS's own two originals, tass.ru/armiya-i-opk/24883027 and /25776813, are cited by name in multiple of these but TASS itself remains script-blocked, consistent with this project's known TASS access issue): the Kalashnikov MOU (proekt_arhangel#545, previously only project-self-reported) is real. Concern «Калашников» and «Архангел» signed a memorandum 27.08.2025 under which Архангел \"selects, verifies and combat-tests developments from independent engineers, small teams and enthusiasts\" and Kalashnikov provides industrial-scale production. Михаил Филиппов is named directly by press (not just self-identified on Telegram) as \"основатель и руководитель проекта «Архангел»\". Press-reported technical specs (aviation21.ru, s5476): speed \"nearly 280 km/h\", range 50km, payload 700g-7kg, hybrid VTOL-to-fixed-wing — NOTE this 280 km/h figure is materially LOWER than the 340-350 km/h repeatedly claimed on the project's own Telegram channels; not resolved which figure is accurate, or whether they describe different product variants. ESCALATION (s5481 EADaily, s5482 www1.ru, both 2025-12-01): Kalashnikov CEO Алан Лушников stated in Бердянск (Zaporizhzhia region) that Kalashnikov is now developing \"целую линейку\" (an entire product line) of combat UAVs based on Архангел's designs — quote: \"На базе их изделий разрабатывается целая линейка. Мы взяли то, что было, за основу, сейчас развиваем\" — confirming the partnership moved from MOU to actual serial industrial production within ~3 months, a major and independently-verified escalation of this network's tie to a top-tier Russian state defense manufacturer."
+          },
+          {
+            "source_id": "s5480",
+            "text": "PARTIALLY CONFIRMED 2026-09-04: independent press (s5479 Interfax, s5480 RIA Novosti) confirms Putin visited the «Мулино» training ground on 16.09.2025 during «Запад-2025», was shown \"средства обнаружения и поражения беспилотников, радиолокационные станции, все виды ПВО FPV\" among 400+ weapon exhibits (125 already combat-deployed), and was accompanied by Defense Minister Белоусов, Nizhny Novgorod governor Никитин, Госсекретарь Союзного государства Глазьев, and ЦИК «Единой России» head Сидякин (matching the projectArchangel claim). HOWEVER neither press account names Безруков, ЦБСТ, or «Архангел» specifically among the exhibits described — the event and Сидякин's presence are confirmed, but the specific claim that the «Архангел» interceptor itself was among the displayed items, or that Безруков personally attended, rests only on the project's own Telegram post and its cited third-party repost (t.me/Yunashev_Live/106434), not yet independently verified by name in mainstream press."
+          },
+          {
+            "source_id": "s5475",
+            "text": "2023 NATIONWIDE SCALE (2026-09-04, sampled from projectArchangel's early archive, msg 470-887, April-May 2023 — NOT yet separately archived to data/sources/, quotes taken from the local scratchpad dump only; re-pull as a proper TGPOST source before citing in any published brief): by May 2023 the project claims a considerably larger nationwide training-school network than currently documented in this registry (which centers on Krasnodar/Tuapse/Zaporizhzhia/Crimea/Moscow, 2025-26 vintage) — msg 773 (2023-05-14) lists partner schools in Moscow (x3), Sergiev-Posad, Tarusa, Yaroslavl, Orekhovo-Zuevo, Tver, Tula, Lyubertsy, St. Petersburg (x3), Syktyvkar (x2), Veliky Novgorod, Rostov-on-Don, Simferopol, Sevastopol, Stavropol, Kazan, Samara, Izhevsk, Yekaterinburg, Novosibirsk, Tomsk, Vladivostok, Chita, Yuzhno-Sakhalinsk, plus Zaporizhzhia/LDNR. @arhangel76 (Филиппов) is first directly named as the contact point in this archive at msg 752 (2023-05-12) — \"Написать Архангелу @arhangel76\". msg 851-853 (2023-05-26) announce a formal 'all-Russia launch' — a 60-person Podmoskovie flagship center, a dozen city training centers, an online education platform, and an explicit scheme to register volunteers in whichever region pays the highest one-time governor's bonus ('sotni tysyach rubley'). msg 868 (2023-05-27) describes an already-operational all-female battalion training at a Evpatoria (Crimea) hotel donated by a fighter with callsign \"БАРИН\", commanded locally by \"БОМЖ\" (@BOMONDOS); a separate Rostov school run by \"Percy_Jackson\". This 2023 scale (dozens of cities) is far larger than what any currently-documented source captures — worth a dedicated follow-up to assess how much of this network persisted vs. consolidated into the smaller current footprint."
+          },
+          {
+            "source_id": "s5475",
+            "text": "GOVERNOR-LEVEL PATRONAGE, 2023 (sampled from projectArchangel's early archive, msg 1252-1505, July-August 2023 — NOT yet separately archived to data/sources/, re-pull as a proper TGPOST source before citing in any published brief): confirms direct, named involvement of Евгений Витальевич Балицкий, the Russian-installed occupation governor of Zaporizhzhia oblast (an already-sanctioned figure in most Western sanctions regimes), personally presenting course-completion certificates to BARS-32/\"Sudoplatovtsy\" graduates of the project's UAV-operator course (msg 1358, 2023-07-19), and jointly organizing (with the MoD and 'Sudoplatovtsy') an engineering testing rally on the Zaporizhzhia polygon 8-9.08.2023 (msg 1483) where MoD personnel evaluated submitted drone/counter-drone hardware for a formal written assessment routed to a 'профильное ведомство Министерства обороны РФ'. Also names Валерия Петрусевич (@petrusV82), a Crimean volunteer coordinator tied to a separate named anti-drone complex 'Гроза' (msg 1505) — not yet cross-checked. This is roughly two years earlier than any other governor/state-official-level tie already documented for this network."
+          },
+          {
+            "source_id": "s5475",
+            "text": "GENERAL STAFF (Генштаб) PILOT-BATTALION CLAIM, 2023-08-25 (sampled from projectArchangel's early archive, msg 1780 — NOT yet separately archived to data/sources/, re-pull as a proper TGPOST source before citing in any published brief): \"Идёт укомплектование и обучение специального штатного батальона... Проект пилотный от Генштаба с соответствующим полноценным обеспечением\" — the project claims direct sponsorship of a 'pilot project from the General Staff' to staff a dedicated battalion, with military-specialty codes (ВУС) already secured for all cadets and full official logistics support ('без обеспечения не имело бы смысла'). This is the single strongest claimed institutional tie found in this archive to date — ENTIRELY SELF-REPORTED, not yet corroborated by any independent source; worth a dedicated press/OSINT search given its significance if true. Same period (msg 1747, 2023-08-22) records a Moscow school 'День открытых дверей' attended by ТК «Звезда» 'Военная приёмка', representatives of «Военный осведомитель» (a well-known Russian milblogger channel), and an armored vehicle donated by a named individual entrepreneur, ИП Хараборкина Раиса Ивановна (Ставрополь) — a new, not-yet-cross-checked donor name."
+          },
+          {
+            "source_id": "s5484",
+            "text": "Earliest independent press investigation of the project found to date: iStories (Роман Романовский), 'Народный ВПК. Кто стоит за «Упырем», «Владленом Татарским» и «Архангелом»', 2023-08-25 — published almost exactly two years before the project's own later institutional-tie claims (Kalashnikov MOU, Putin/Мулино). Filippov (callsign 'Архангел') is quoted describing himself as a ремонтник (repairman) who previously did commercial DJI filming, then organized a chat of hobbyist pilots into city-by-city teams (Иркутск, Калуга, Санкт-Петербург, Новосибирск named) starting Nov 2022 — matching this project's own early-history claims found independently in the projectArchangel channel's 2022-2023 archive. CRITICALLY, Filippov told the journalist the project was funded by a single unnamed patron ('меценат') and was producing 'крайне мало' (extremely few) drones as of Aug 2023 — a direct press-sourced contradiction of the scale later claimed by the project's own channel (dozens of cities, formal MoD ties, Kalashnikov industrial partnership). Filippov did not respond to iStories' calls; see also the 'Открытое небо' open_questions entry (same source) for the certificate-issuing company lead. Article also profiles two adjacent but textually-distinct volunteer-drone projects ('Упырь', 'Русский беспилотник'/'Владлен Татарский') — no confirmed tie found between those and «Архангел» in this article; a coincidental Туапсе mention in the unrelated 'Владлен Татарский' section (администратор Артём Лымарь's father-in-law's MVD career location) is NOT the same as this project's own Туапсе training center and should not be conflated with it."
+          },
+          {
+            "source_id": "s5484",
+            "text": "«Открытое небо» — a Lytkarino (Moscow region) company whose site was listed in the project's VK groups as the certificate-issuer for pilot-school graduates ('сайт подмосковной компании из Лыткарино «Открытое небо», сертификаты этой компании обещали выдавать выпускникам школы пилотов'), publicly describing itself as a professional photo/video-production company — i.e. a civilian-facing front company providing paperwork cover for the drone school, not itself a drone manufacturer. Per iStories, co-owners are Андрей Клименко and Наталья Голикова. Клименко was previously director of construction firm «Лан-Ком» when it was owned by Александр Удодов, husband of a sister of Prime Minister Михаил Мишустин — an indirect employment tie (Клименко worked FOR a Удодов-owned company), not an ownership or family link between «Открытое небо»/«Архангел» and Мишустин himself; do not overstate this as a direct PM connection. Голикова previously worked as a товаровед (merchandise inspector) in Lytkarino grocery retail — NOT yet confirmed as the same 'Наталья' who ran @Natalia_Archangel_Project's recruitment/paperwork channel in the Telegram archive; namesake only, unconfirmed, do not conflate. «Открытое небо»'s own ИНН/ОГРН not yet identified — needs an EGRUL name search ('Открытое небо' + Лыткарино) before it can be promoted to a full entities.json record; Клименко refused to comment, Филиппов did not respond to calls."
+          },
+          {
+            "source_id": "s5485",
+            "text": "Earliest-dated institutional press claim found for this project: TASS-sourced coverage (via aviaru.net/aviaru_uav repost, 2023-06-06 — predates the Aug 2023 iStories piece and the Генштаб pilot-battalion claim), citing an unnamed 'representative of the organization' of the 'всероссийский добровольческий проект «Архангел»': project developing a fixed-wing loitering munition ('барражирующий боеприпас самолетного типа'), ~25km range, explicitly described as a low-cost, easy-to-produce analog of the «Ланцет» kamikaze drone (ZALA Aero/Kalashnikov-family loitering munition), ~2m wingspan, paired with a mobile ground-control station for rapid deployment. Verbatim quote: 'Изделие имеет размах крыла около 2 м. Также мы придумали для него мобильную машину управления, такой пульт. Это позволяет ускорить процесс развертывания дрона для боевой работы, потому что долгое развертывание - большой риск.' Notable as an early (self-claimed, not independently verified at the time) attempt at a Lancet-class product TWO YEARS before the confirmed 2025 Kalashnikov industrial partnership (s5476-s5483) — suggests a possible throughline from an independent 2023 in-house loitering-munition attempt to the later formal Kalashnikov tie-up, though no document directly connects the two projects/products. TASS itself not independently re-pulled (site access blocked, per standing project note); this is the wire-service repost, attributed to TASS by the reposting channel."
+          },
+          {
+            "source_id": "s5486",
+            "text": "Major independent press corroboration of the project's 2023 scale, well before any other press coverage on file: Readovka (major Russian pro-war Telegram-native outlet, millions of followers) sent its own team to visit the project's Zaporizhzhia training range in person ('Команда Readovka побывала на полигоне в Запорожье, где обучаются действующие солдаты ВС РФ'), published 2023-09-03. States the school then had 12 branches nationwide training roughly 2,000 people total ('12 отделений в разных регионах, где суммарно готовят порядка двух тыс человек') — the first independently-reported (not self-reported) figure for the network's scale, and it corroborates the multi-city claims already found in the project's own channel archive. A named organizer with callsign «Патриот» (NOT yet cross-referenced against any other known handle — distinct from «Философ»/@frendefren and «Мажор»/@Wasp60 already on file) is quoted: 'Простой боец с дроном стоимостью 37 тыс рублей может уничтожить подарочный натовский \"Тигр\", который стоит не один млн долларов.' Specifically at the Zaporizhzhia site: 90 students, one of whom reportedly destroyed ~30 pieces of enemy equipment/bunkers/strongpoints within a single month of training — a battlefield-effectiveness claim, self-reported to the journalist by the school, not independently verified by Readovka. Also describes on-range weapon iteration based on field feedback (payload capacity, flight range) and use of a captured Mariupol Red Cross sign fragment (gifted by the Readovka team itself) as maneuver-training material — color detail, not registry-relevant. Direct link: https://t.me/readovkanews/65379"
+          },
+          {
+            "source_id": "s5487",
+            "text": "Companion Readovka piece (2023-09-12, republishing/citing the Telegram channel 'Главное в Мелитополе'), title '«Наша задача — обеспечить и научить»: как школа «Архангел» делает из военнослужащих операторов смертоносных дронов'. Directly quotes an instructor with callsign «Философ» — this matches the already-identified @frendefren/'Филосов' (school/admin contact) from the project's own recruitment posts, corroborating his on-the-ground instructor role via an independent outlet rather than only the project's own Telegram: 'Это — такая рабочая лошадка, на которой мы можем в любой момент спроектировать, смоделировать и использовать [элементы] в работе' (re: the school's 3D printer for making drone parts on-site). Confirms computer-simulator and terrain-orientation training methods, and states the school's core mission as teaching operators to work from cover/safe distance. Direct link: https://t.me/readovkanews/65883"
+          },
+          {
+            "source_id": null,
+            "text": "RESOLVED — namesake collision, not a tie: msg 2087 (2023-09-26) links to a Rossiyskaya Gazeta (state-owned official government newspaper) piece, 'Новый беспилотный конвертоплан «Архангел» сможет нести на борту несколько дронов', captioned sarcastically by the channel as 'Совпадение и не более того' (coincidence and nothing more). Confirmed via web search (rg.ru direct fetch blocked, 401 — same bot-challenge pattern as TASS; not independently re-pulled) that this is an UNRELATED product: an 'Архангел' convertiplane developed by a different design bureau ('Артямонов Технологии'), an 'air-mother' drone-swarm carrier aircraft, hybrid ICE engine, 6000m ceiling — a completely different class of hardware from Filippov's assembled FPV/loitering-munition products. Per the same search, this convertiplane has reportedly been used since 2025 by fighters of the «Барс-Сармат» unit — which IS a separately-confirmed entity in this registry (Алексей Рогозин's drone-testing detachment at Дронница) but has no established tie to Filippov's «Архангел»/«Проект Архангел» network. No source_id: this is a negative/disambiguation finding, not a claim requiring citation. Not pursued further here — a third-party product+design-bureau sharing only the brand name is out of scope for this entity's own record; parked as a lead in the roymarket_adjacent_networks memory for anyone tracing Барс-Сармат's own equipment supply."
+          },
+          {
+            "source_id": "s5475",
+            "text": "Early ideological throughline (msg 2266, 2023-10-08, from the unarchived early-history scratchpad — see the citation-precision caveat on this entity's other early-history notes): the channel reposts the full 14-point ЧВК «Вагнер» code of conduct approvingly ('Поддержим славные традиции настоящих воинов... руководство оркестра, и его бойцы придерживались именно этого свода правил'), explicitly framing the project's own recruits as heirs to that code — this predates the later formal «ЧВК Архангел» PMC-recruitment branding found in the 2025-26 proekt_arhangel archive (msg 1068/1035/1079, s5475 batch2) by roughly two years, suggesting the Wagner affinity is a long-standing identity marker, not a late rebrand. Separately (msg 2269/2273, 2023-10-08): confirms personnel continuity — coordinator handles @goydaq (Tuapse school), @SvetulyaAstra (Zaporizhzhia active-military training), and @Lisa_Bigler (remote learning) were already staffing those exact same roles in Oct 2023, years before the same three handles turn up staffing the same roles in the 2025-26 archive — i.e. a stable coordinator team, not high turnover. A person referred to only as 'Миша Туапсинский' (Misha 'the Tuapse guy') is named informally as a recurring in-house storyteller/instructor figure — no surname or identifier given, not promoted to people.json."
+          },
+          {
+            "source_id": "s5475",
+            "text": "Further Oct 2023 detail from the unarchived early-history scratchpad (same citation-precision caveat as this entity's other early-history notes, cited to s5475 loosely): (1) a NEW city branch, «Архангел Екатеринбург» (msg 2299, 2023-10-12), graduated its first cohort — curriculum: tactical medicine, engineering prep, artillery/aviation fire correction, soldering/maneuver practice, firmware/software config, radio comms/EW basics, range flight practice — contact @ArchangelEKB; (2) a physical street address for the Stavropol school (msg 2311): г. Ставрополь, ул. Юности, д. 3, contact 'Дмитрий'; (3) instructor vacancies specifically at Патриот Park (Kubinka, Moscow — the official Russian MoD military theme/training park) and a Mariupol training center (msg 2332); (4) a named partner org, «Ассоциация ФПВ» (@asfpv), supplying Ветерок 7/10 kamikaze drones via Денис 'ASFPV' (@PilotPiter, msg 2339); a second named partner, 'Алексей КБ 70' (@kb70ru), supplying plywood airframes described as fielded 'по всему фронту' (msg ~2340s); (5) a direct cooperation/joint-testing relationship with a second named BARS-system unit, 'Корпус Инструкторов БПЛА, БАРС-11 «Царские Волки»' (msg 2375-2380), distinct from BARS-32/Sudoplatov; (6) a multi-part self-authored history post about the Sudoplatov battalion (msg 2395) states its core came from fighters with Syria/Libya/'Novorossiya' experience 'входящие в состав весьма известной охранной структуры с большими возможностями' — a commonly-understood coded reference to Wagner PMC — and discloses casualties as of Oct 2023: 10 KIA, 67 WIA since the war's start. Sudoplatov battalion is an adjacent, closely-partnered unit, not this entity itself; flagged here as context for the partnership's depth, not as a claim about proekt-kb-arkhangel directly."
+          },
+          {
+            "source_id": null,
+            "text": "UNATTRIBUTED — private Академия chat (2026-08-19/20/27, this dump has no per-message sender/username field, so no identifier can be attached; a lead, not a citable claim against any specific person/entity). An anonymous participant, self-described as an independent R&D developer (not a manufacturer — sells design documentation/production licenses, not finished drones) working on AI-guidance modules for interceptor drones, describes testing at Crimean ranges (Феодосия) and states directly that Михаил ('архангел') personally determined training must happen only in Crimea, embedded with 'могов' (mobile fire groups) or interceptor-drone teams, not on an open range. Separately states doing contract work 'для минпромторга, для заводов (рф и китай), для международных компаний. Часто для заводов китая делаем работы, под видом арабов или казахов' — i.e. describes routinely disguising the customer relationship as Arab or Kazakh rather than Russian when placing work with Chinese factories, plausibly to evade Chinese suppliers' own export-control/compliance screening against Russian military-end-use orders. No named entity or person attached to this admission in the available data — flagged here as a general network-adjacent procurement-practice lead, not attributable to proekt-kb-arkhangel itself or any other specific record without further identification (would need a sender-aware re-scrape of this chat, a live network job)."
+          },
+          {
+            "source_id": null,
+            "text": "From the first close-read pass of Archangel_Forum (channel_id 1814184028, 73,085 posts, distinct from the main @projectArchangel channel — a member-facing FPV-build/marketplace/support space, not institutional announcements; overwhelmingly parts sales and firmware troubleshooting). msg 30750 (2024-01-08) distributes a roster of ~35 named local contacts (Telegram handles) across dozens of Russian cities plus occupied Crimea/southern Ukraine, offering free DJI Mavic firmware modification ('1001,' — a real, independently well-documented Russian-developed DJI jailbreak, per Forbes/dronexl.co/Fletcher Russia-Eurasia Program coverage, claimed to have modified 100,000+ drones by mid-2024) — this specific variant strips DRONE ID/geofencing and REPLACES the drone's self-identification string ('about,' command output changes from 'Slava Ukraini' to 'Russian Hackers'). New here: confirmation that Archangel_Forum itself served as ONE distribution channel into this broader firmware-modification ecosystem, not just a passive audience, with a specific city/handle roster as of Jan 2024. No source_id — the broader '1001' phenomenon is already externally documented, only the distribution-channel role is new to this investigation. Separately (msg 30851, 2024-01-09): a forum poster self-identifies with callsign «Ворон» — 'Инженер-конструктор 3 категории Научно-исследовательский институт МАИ РФ кафедра №602 Конструкторское бюро «Искатель»', serving since Sept 2023 in 'ДРБ «Родня»' on FPV work. Possible but UNCONFIRMED tie to the already-documented «Ворон»/«Ворон-оптоволокно» fiber-optic-cable manufacturing project this entity's own record already flags (Filippov personally visited that team; production relocating to Krasnodar Krai) — same callsign, plausible engineer-behind-the-team fit, but no document directly links this forum poster's MAI/КБ Искатель affiliation to that specific team; flagged as a lead, not merged."
+          },
+          {
+            "source_id": null,
+            "text": "Archangel_Forum msg 104088 (2024-07-05), part 8 of a self-run '#FPVtest «Народное тестирование»' (People's Testing) series comparing FPV/reconnaissance drones from 8 different producers on standardized range/payload/EW-resistance/kit-completeness criteria. Results: 1st place (86/100) — «ПВХ-1» by АО «Обуховский завод» (СПб) — a major state defense-industrial enterprise (Алмаз-Антей concern's own St. Petersburg plant), competing on the SAME informal testing ground as small volunteer producers, a notable institutional-scale signal; 6.8km max range, 10.8km/7.2km/8.1km at 1/1.5/2kg payload respectively, passed EW-resistance test. 2nd place — «Овод» by ООО «Воздушный тракт» (Tula) — new named entity, not yet in this registry. 3rd place — «Гортензия» by ИП Кудряшов, St. Petersburg — RESOLVES a recurring partner nickname ('Гортензия Питер') cited by name in dozens of the network's own early-2023 gratitude posts (already read in the projectArchangel early-history archive) without any legal identity previously attached — now identified as an individual entrepreneur, Кудряшов, based in St. Petersburg. None of the three (Обуховский завод, Воздушный тракт, ИП Кудряшов) yet promoted to full entities.json records — flagged as leads for a future EGRUL/ИНН pass, not yet independently verified beyond this forum post. Also worth noting: msg 104010 (same date) is a lengthy essay on drone-operator training philosophy signed '(с) Чадаев' — Алексей Чадаев, the political strategist already flagged elsewhere in this investigation's orbit for a personal-friendship framing with Гагаринг's Барашков (per the pending Гагаринг wide-net plan, msg 5013/chadayevru) — appearing here in the Архангел forum's own feed. Likely just general commentary reposted/read widely rather than an organizational tie between the two networks; noted as a possible cross-network contact point, not asserted as a link."
+          },
+          {
+            "source_id": null,
+            "text": "Follow-up on the ООО «Воздушный тракт» (Tula, brand «Овод», 2nd place in the Archangel_Forum's own 'Народное тестирование' series, see the Обуховский завод/Гортензия note above): Archangel_Forum msg 179660 (2026-07-30) reports an assassination attempt against the company's named founder/director, Андрей Павлович Черезов, framed as a rallying moment ('НАС НЕ ЗАПУГАЛИ — НАС РАЗОЗЛИЛИ') — he reportedly survived, no further detail given, and the company calls on allied units already fielding «Овод» drones to add a tribute marking in his honor. Self-reported by the company's own channel, not independently verified — same evidentiary caution already applied to Filippov's own self-reported assassination-attempt claims (proekt_arhangel#382/#739, s5475) — but taken together, a second named figure in this same producer network reporting a targeted-attack claim within the same investigation is a pattern worth tracking. ООО «Воздушный тракт» not yet promoted to a full entities.json record (no ИНН/ОГРН pulled yet) — a candidate for a future EGRUL search given it now has a named director and a documented incident, not just a product name."
+          },
+          {
+            "source_id": null,
+            "text": "PROCUREMENT-PLATFORM SWEEP, NEGATIVE RESULT (2026-09-04): checked zakupki.gov.ru's central EIS registry -- which aggregates every 44-ФЗ/223-ФЗ notice from all six accredited ЭТП (Сбербанк-АСТ, RTS-Tender, Roseltorg, Фабрикант, GZ Lot-Online, ТЭК-Торг) -- for every known Архангел-family legal entity, both as customer (заказчик) and as supplier (via scripts/zakupki_batch_pull.py's supplierTitle search): ooo-arkhangel (ИНН 9714079108), ano-arkhangel (ИНН 2315233718, Архангел Легион), ooo-arkhangel-zaporizhzhie (ИНН 9500026652), and ooo-arkhangel-tsentr (ИНН 5032379630). All four returned zero records across every procurement stage (Подача заявок/Работа комиссии/Закупка завершена). This is a genuine negative finding, not a coverage gap -- it confirms none of the Архангел-branded entities participate in formal state procurement in either direction, consistent with iStories' (s5484) reporting that Проект «Архангел» runs on direct patron financing/donation rather than government contracts -- a real structural contrast with гагаринг/Ушкуйник, both deeply embedded in госзакупки. Separately: this same sweep confirmed that individual 223-ФЗ procurement protocols (tested exhaustively on Ушкуйник's Центр коллективного пользования equipment-procurement notices) NEVER disclose winning-supplier identity in the public EIS record -- true even for single-bidder (несостоявшийся) lots, on both Sberbank-AST's own site and zakupki.gov.ru's protocol pages -- a structural disclosure gap in Russia's 223-ФЗ regime, not a login-wall to defeat. The one known supplier identity (Степанов Д.А., see people.json) was only recoverable because a human-readable free-text scanned protocol PDF happened to be archived separately."
+          },
+          {
+            "text": "CONFIRMED, not merely possible (s5539, cross-channel mining 2026-09-05): Гагаринг's own commercial channel t.me/my_el_lab (\"Компания Гагаринг\", linked from its own bio to gagaring.ru and @gagaring_bot — this is Гагаринг's storefront channel, not a third party) directly cross-posts Проект «Архангел» content on at least five occasions (msgs 634, 894, 896, 2531, 4544; 07.08.2024-30.08.2026): two are urgent recruiting calls for UAV pilots/producers signed with contact @arhangel76 (Филиппов's own handle); one (msg4544, 30.08.2026) is a full B2B sales pitch for «Архангел»-brand interceptor drones and facility-defense contracts, linking directly to t.me/projectArchangel and instructing interested businesses to contact 'руководителю проекта «Архангел» @arhangel76'. The IDENTICAL urgent-recruiting text (msg634/msg894) is also posted verbatim on t.me/rastratchikRadistka (msgs 965, 1995) — a separate, well-known FPV-operator personal channel already cross-referenced elsewhere in this registry — indicating one coordinated push distributed across multiple network-affiliated channels, not an isolated citation. Separately, rastratchikRadistka msg858 (27.06.2024) signs off with a stacked institutional list: 'проект Архангел / Форум Архангел / Гагаринг / Народны ВПК / Ассоциация / Основатель проекта - Архангел @arhangel76 / Координатор @VERA_consult' — Гагаринг named as one line in what reads as a single shared organizational signature block, not a citation of a separate entity. This upgrades the relationship from the earlier one-way-citation/mutual-endorsement findings (Archangel_Forum#98621, proekt_arhangel#1084) to active operational cross-promotion: Гагаринг's own storefront channel is directly selling/recruiting for Проект «Архангел»'s product line. Still NOT found: any corporate/ownership document (EGRUL founder overlap, a joint contract, a formal MOU) tying `ooo-gagaring` as a legal entity to any Архангел-family ИНН — this is a channel-level/marketing-level tie, strong and repeated, but not yet a documented corporate one.",
+            "source_id": "s5539"
+          },
+          {
+            "text": "New independent press quotations of Филиппов found in a cross-channel mining pass (s5539, 2026-09-05), all previously undocumented in this registry: (1) mil_hub#98395 (11.03.2025) quotes him on a mobile combat laser weapon test in Crimea ('Провели испытания боевой лазерной установки на расстоянии до цели - 35 м...') — a laser-weapon claim not previously on record for this project; (2) mil_hub#98498 (12.03.2025, TASS Simferopol dateline) quotes him as 'основатель и глава проекта' on a kamikaze-drone speed upgrade to ~280 km/h via a hybrid vertical-takeoff design; (3) mil_hub#117097 (07.11.2025, outlet 'Секунда') quotes him on new-generation interceptor-drone testing in the Kursk border region, again citing the Kalashnikov production tie; (4) mil_hub#130001 (14.05.2026) quotes him confirming the project's interceptor drones use 'спецсвязь ГЕРМЕС' comms — corroborates, from his own mouth, the Гермес-brand comms tie already flagged elsewhere in this registry as unconfirmed vendor identity. None of these four have been re-pulled in raw/verbatim form from their original outlets (mil_hub is a repost aggregator) — treat as paraphrase pending a raw re-pull, same caution already applied to the aviation21.ru/CNews citations.",
+            "source_id": "s5539"
+          },
+          {
+            "text": "GoDrone (t.me/GoDrone, \"НАБАТ | GoDrone\", counter-UAV/drone-supply company, godrone.ru, 12,199 subscribers) hosts its own training-recruitment post for \"ракета «Архангел»\" (msg1347, 23.07.2025) — phrased as GoDrone's own announcement ('Через месяц начинается обучение первого потока операторов НАШЕЙ новой ракеты «Архангел»'), suggesting GoDrone may be a training-delivery partner for this specific product line, distinct from the interceptor-drone product already documented — not yet resolved whether 'ракета' here is loose marketing language for the same interceptor or an actual separate missile-type product. Separately (msg1582, 18.09.2025) GoDrone names \"Архангел Спецназа\" as one of its own customers ('Наши легионеры берут дроны в GoDrone') — this is the distinct, still-unresolved-to-a-legal-entity «Архангел Спецназа» brand (@arx_spn, 1.02M subscribers, per the parked roymarket_archangel_adjacent_network memory), NOT confirmed as the same operation as Филиппов's Проект «Архангел» — recorded here only as GoDrone being a shared commercial touchpoint for multiple same-named-but-distinct «Архангел» brands, not as a merge of the two.",
+            "source_id": "s5539"
+          },
+          {
+            "source_id": "s7653",
+            "text": "Which flight controller is in the channel's drones? The 26.06.2026 BOM and config dump name the SpeedyBee F405 V4 60A stack (s5452, s5453); the 06.09.2026 post says that stack is no longer made and specifies a BeastFPV F722 BLS 65A stack. The board visible in videos s7617/s7615 (stills s7642, s7643) is an STM32-type LQFP-64 board with «Rev 2.2» and an «A» logo, unmatched to either. A sharper view of the chip side or the silkscreen, or the beastfpv.ru product page (linked in Archangel_Forum msg 122423, not opened), would settle it."
+          },
+          {
+            "source_id": "s7653",
+            "text": "Self-reported performance figures conflict: max 340 km/h / cruise 100-120 km/h (s5454) versus peak 315 km/h / economy 140 km/h and 50 km range (msg 183433, 06.09.2026). No independent test data on file."
+          },
+          {
+            "source_id": "s7648",
+            "text": "Units the channel says it supplies or places graduates with: 1-я Славянская бригада 51-й армии (10 drop systems, 19.06.2025), 11-й отдельный батальон беспилотных систем 51-й армии, 205-я бригада, «Рубикон», 78-й полк 51-й армии (\"две трети выпускников\", msg 10782). All are the channel's own statements. They are deliberately NOT in military_units.json, which stays scoped to the delivery-tracking channel network (see scripts/graph_contract.py); the 11th battalion and the 78th regiment are named inconsistently as the main destination and are not reconciled."
+          },
+          {
+            "source_id": "s7654",
+            "text": "Speaker of video msg 10782 introduces herself by the callsign «Радистка» (machine transcript, approximate). Whether she is the operator of the 1st Slavic Brigade who received drop systems (msg 7815), the channel @rastratchikRadistka, and the person already noted in notes/gagaring_network_map.md is inferred from the callsign only. No people.json record: no full name is sourced."
+          },
+          {
+            "source_id": "s7618",
+            "text": "«Ночник ПВН»: no sensor make/model, no statement whether it is thermal or low-light, and no evidence of who fields it. The channel's recruitment posts offer a 'малое ПВО' role, so a link to its air-defence crews is plausible but unshown."
+          },
+          {
+            "source_id": "s7653",
+            "text": "Гермес: the «Архангел» channels repeatedly promote the «ГЕРМЕС» long-range/anti-jam comms line (59 video posts in the local scrape of @projectArchangel, Dec 2023 - Jul 2026, counted from data/roymarket.db rather than an archived file; e.g. msg 3881 «Производство связи ГЕРМЕС. t.me/germesfpv»), and both build bills of materials list «Связь: Гермес или аналоги» (s5452, s7653). This registry holds «ГЕРМЕС связь» and «ГЕРМЕС мачты» as products of НПО «КАЙСАНТ» (npo-kaysant, ИНН 7733393203); the matching product names make it likely that entity is behind the channel, but no primary source yet says so or that it supplies Архангел. Deliberately NOT recorded as a related_entities edge: an edge would pull the whole Архангел cluster (Филиппов, ООО «Архангел Групп», ML Констракшнс) into the ЦБСТ-connected graph on an unconfirmed link."
+          },
+          {
+            "source_id": "s7706",
+            "text": "The unit's channel (msg 1746, 06.11.2024) credits the Tatarstan 'Академия пилотов: операторы будущего' to «Всероссийского фонда помощи военным «Архангел»» and the youth ministry. Is that фонд the АНО «Архангел» (ИНН 2315233718) on file, the ЗОВ-АА АНО, or another body? Unresolved."
+          },
+          {
+            "source_id": "s7705",
+            "text": "@NightVVit («Ночные ведьмы 2.0», the women's UAV squadron the ЦСН recruits for, msg 5529) no longer resolves; find who runs it and whether any name links back to Архангел or ЗОВ-АА."
+          },
+          {
+            "source_id": "s7615",
+            "text": "Spoken statements in the 32-minute instruction video (whisper transcript, approximate, not quotable; data/sources/TRANSCRIPT_20260906_archangel-forum-183433-flight-instruction-whisper.txt): the speaker says he flew about 36 km out into a headwind with video still working; that video used to reach that range on 1-2 analog links and that Гермес on 'the third group' allows flights beyond 50 km; a 7-inch pitch-13 prop; about 6.4-6.7 kg static thrust; turn-back at about 24 V. Listen to the audio to confirm the figures and to catch any named unit, customer or target; the Гермес statement matches the existing Гермес link (s5539) and the BOM line 'Гермес или аналоги' (s5452)."
+          },
+          {
+            "source_id": "s8651",
+            "text": "ЦБСТ post 1562 (25.11.2025) names resident «Квадросим» (project head Егор Сечинский; 500+ educational institutions, used in «Зарница 2.0», «Кибердром») — no matching company found in an ЕГРЮЛ name search; legal entity still to identify (the brand may sit under a different legal name or an АНО/ИП)."
+          }
+        ],
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "tie_wired",
+          "posts_read": [
+            120,
+            123,
+            1562
+          ],
+          "note": "Posts 120 and 123 (2024-09) repeat a third-party analysis citing «проекта «Архангел» 2023» as a volunteer example; not a ЦБСТ statement about a company, not wired. Post 1562 is wired as the t-open tie (s8651)."
+        }
       },
       "why": [
-        "[2026-09-15] wb_overlap=none_found: Brand-name search for дрон-перехватчик «Архангел» on wildberries.ru (2026-09-15) found no product listing (same finding as sibling Архангел-network entities) — only branded project merchandise found, not the drone."
+        "[2026-09-15] wb_overlap=none_found: Brand-name search for дрон-перехватчик «Архангел» on wildberries.ru (2026-09-15) found no product listing (same finding as sibling Архангел-network entities) — only branded project merchandise found, not the drone.",
+        "[2026-09-30 ЦБСТ posts 1976/1562] cbst_tie set none → t-open on ЦБСТ post 1562 (Tuapse school named as a Квадросим deployment site). This is a second, independent documentary path from the Проект «Архангел» cluster to ЦБСТ, besides the ГЕРМЕС radio link in the case note; it is weaker (user of a resident's product).",
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [120, 123, 1562] flagged by scripts/tg_post_coverage.py: tie_wired. Posts 120 and 123 (2024-09) repeat a third-party analysis citing «проекта «Архангел» 2023» as a volunteer example; not a ЦБСТ statement about a company, not wired. Post 1562 is wired as the t-open tie (s8651)."
       ]
     },
     "ooo-ik-aviaok": {
@@ -39685,12 +40076,24 @@
           }
         ],
         "tier": "adjacent",
-        "tier_basis": "Directed by Барахтин, who owns ООО «Аркодим» (a ЦБСТ resident); linked as sister-entity via the ФНС screen (s8064). No UAV or EW activity evidenced; no ЦБСТ tie of its own (investigator decision 2026-09-30)."
+        "tier_basis": "Directed by Барахтин, who owns ООО «Аркодим» (a ЦБСТ resident); linked as sister-entity via the ФНС screen (s8064). No UAV or EW activity evidenced; no ЦБСТ tie of its own (investigator decision 2026-09-30).",
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "namesake",
+          "posts_read": [
+            306,
+            1263,
+            1305,
+            1378
+          ],
+          "note": "Each post uses the phrase «технологического бизнеса» descriptively (US/European tech business, Сколково), not the association."
+        }
       },
       "why": [
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
         "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge.",
-        "[2026-09-30] tier set to adjacent (was unset), at investigator direction after review of the 14 tierless entities."
+        "[2026-09-30] tier set to adjacent (was unset), at investigator direction after review of the 14 tierless entities.",
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [306, 1263, 1305, 1378] flagged by scripts/tg_post_coverage.py: namesake. Each post uses the phrase «технологического бизнеса» descriptively (US/European tech business, Сколково), not the association."
       ]
     },
     "ooo-aeromaks-avia-tsentr-logistika": {
@@ -39927,11 +40330,27 @@
           "youtube": [],
           "marketplace_listings": [],
           "other": []
+        },
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "named_no_tie",
+          "posts_read": [
+            226,
+            651,
+            658,
+            666,
+            669,
+            685,
+            2209,
+            2210
+          ],
+          "note": "Posts 651, 658, 666, 669, 685, 2209, 2210 use Кронштадт the city as the venue (Технический совет ВМФ, салон «Флот-2026»). Post 226 repeats a foreign article that names the company «Кронштадт» as a Russian developer of military AI analytics; no ЦБСТ statement of a tie."
         }
       },
       "why": [
         "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. ",
-        "[2026-09-30 product research] Products from Wayback captures of kronshtadt.ru (the live site is bot-walled). Identity: the brochure footer and the press-centre contact block name АО «Кронштадт» at this ИНН's EGRUL address. The product pages themselves name no legal entity, and the site also gives ООО «Кронштадт Беспилотные Системы»'s Андропова 18к9 address as the group's «юридический адрес»; attribution to the АО rests on the brochure and patents."
+        "[2026-09-30 product research] Products from Wayback captures of kronshtadt.ru (the live site is bot-walled). Identity: the brochure footer and the press-centre contact block name АО «Кронштадт» at this ИНН's EGRUL address. The product pages themselves name no legal entity, and the site also gives ООО «Кронштадт Беспилотные Системы»'s Андропова 18к9 address as the group's «юридический адрес»; attribution to the АО rests on the brochure and patents.",
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [226, 651, 658, 666, 669, 685, 2209, 2210] flagged by scripts/tg_post_coverage.py: named_no_tie. Posts 651, 658, 666, 669, 685, 2209, 2210 use Кронштадт the city as the venue (Технический совет ВМФ, салон «Флот-2026»). Post 226 repeats a foreign article that names the company «Кронштадт» as a Russian developer of military AI analytics; no ЦБСТ statement of a tie."
       ]
     },
     "tg-arkhangel-spetsnaza": {
@@ -39940,6 +40359,36 @@
       },
       "why": [
         "[2026-09-30] tier set to adjacent (was unset), at investigator direction after review of the 14 tierless entities."
+      ]
+    },
+    "fond-sozidanie": {
+      "set": {
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "namesake",
+          "posts_read": [
+            1359
+          ],
+          "note": "Post 1359 lists the prize nomination «Служение и созидание» in an announcement for the «Россия — страна возможностей» award."
+        }
+      },
+      "why": [
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [1359] flagged by scripts/tg_post_coverage.py: namesake. Post 1359 lists the prize nomination «Служение и созидание» in an announcement for the «Россия — страна возможностей» award."
+      ]
+    },
+    "ao-kompaniya-molot": {
+      "set": {
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "namesake",
+          "posts_read": [
+            1987
+          ],
+          "note": "Post 1987 («Британский молот») is a pun about Cambridge Aerospace. Post 2124, which lists «Молот-ПВО» among interceptors, is NOT covered by this review and stays open."
+        }
+      },
+      "why": [
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [1987] flagged by scripts/tg_post_coverage.py: namesake. Post 1987 («Британский молот») is a pun about Cambridge Aerospace. Post 2124, which lists «Молот-ПВО» among interceptors, is NOT covered by this review and stays open."
       ]
     }
   }
