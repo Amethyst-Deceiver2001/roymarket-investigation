@@ -768,7 +768,9 @@
     },
     "beloglazova-lyudmila-aleksandrovna": {
       "set": {
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "address": "Самарская область, г. Самара, ул. Парижской Коммуны, д. 23, кв. 126; также Самарская область, Большечерниговский р-н, с. Большая Черниговка, ул. Чапаевская, д. 17, кв. 2",
         "dob": "1983-10-18",
         "inn_personal": "636501893256",
@@ -2170,7 +2172,9 @@
           {
             "date": "2023-02-25",
             "note": "Listed by the Council of the EU: Annex I to Regulation (EU) No 269/2014 as amended by Council Implementing Regulation (EU) 2024/2455 of 12 September 2024 (OJ L, 13.9.2024), entry 1437, Kirill Alekseevich LYSOGORSKY (Кирилл Алексеевич ЛЫСОГОРСКИЙ), Deputy Minister of Industry and Trade (since 2022), DOB 19.4.1986, date of listing 25.2.2023. Read directly from the archived Official Journal PDF (s7909). This regulation replaces the entry, so the original listing date is the 25.2.2023 shown in its date-of-listing column. Identity rests on name, function and the DOB 19.4.1986, which matches this record (s2604); the EU text carries no ИНН. The GUR and French asset-register pages that OpenSanctions also cites for this person were not opened. An earlier note on this entry said the OpenSanctions topic was role.pol; the archived match file says poi and sanction.",
-            "regime": ["EU (Council Regulation (EU) No 269/2014, Annex I, entry 1437)"],
+            "regime": [
+              "EU (Council Regulation (EU) No 269/2014, Annex I, entry 1437)"
+            ],
             "source_id": "s7909"
           }
         ],
@@ -3183,7 +3187,9 @@
     "petrova-darya-aleksandrovna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "inn_personal": "710680000353",
         "family_of": {
           "principal_slug": "petrov-aleksey-aleksandrovich",
@@ -3328,7 +3334,12 @@
     },
     "rogozin-aleksey-dmitrievich": {
       "set": {
-        "family_of": {"principal_slug": "rogozin-dmitriy-olegovich", "relation": "son", "confidence": "confirmed", "source_id": "s2607"},
+        "family_of": {
+          "principal_slug": "rogozin-dmitriy-olegovich",
+          "relation": "son",
+          "confidence": "confirmed",
+          "source_id": "s2607"
+        },
         "_verified": true,
         "dob": "1983-09-21",
         "inn_personal": "770301599800",
@@ -3621,7 +3632,9 @@
     },
     "shakhmatov-ivan-anatolevich": {
       "set": {
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "dob": "1986-05-06",
         "inn_personal": "471010513778",
         "notes": "Тел. +7 911 979-00-00. Email: vano0606@list.ru.",
@@ -3710,7 +3723,9 @@
             "source_id": "s6842"
           }
         ],
-        "sources": ["s6842"],
+        "sources": [
+          "s6842"
+        ],
         "sanctions": [
           {
             "date": null,
@@ -3947,7 +3962,9 @@
     },
     "tsyganov-vadim-borisovich": {
       "set": {
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "sanctions": [
           {
             "regime": [
@@ -4299,7 +4316,8 @@
       "why": [
         "2026-09-03: corrected during the Гагаринг-network wide-net push — the scaffolded _candidate role misattributed this person's founder role to ООО «Прайм» rather than ano-arrs-krasnodar, the actual entity his name appears as a founder of.",
         "2026-09-16 (docs->registry gap-list, section (b)): filled the role's source_id with s6777, ano-arrs-krasnodar's own full signed ЕГРЮЛ выписка, already the entity-side source for the identical founders_history fact -- stronger than the list-org.com aggregator lookup the gap-list flagged as weak. Note: the entity's own founders_history spells the surname 'Сиразетдинов' (е), not this record's 'Сиразатдинов' (а) -- a likely OCR/transliteration variant, not flagged as a separate open question since the ИНН/context otherwise line up, but worth a human eye if it ever matters for a citation.",
-        "2026-09-29: Tier-3 ИНН-holder sweep -- re-pulled АРРС's full ЕГРЮЛ выписка fresh (s8212) rather than trusting the 2026-09-16 pull's spelling alone; it independently confirms 'Сиразетдинов', so this is now treated as the correct spelling (fio_ru/name_latin corrected) rather than a flagged-but-unresolved variant. Personal ИНН 236802250787 wired from the same document."
+        "2026-09-29: Tier-3 ИНН-holder sweep -- re-pulled АРРС's full ЕГРЮЛ выписка fresh (s8212) rather than trusting the 2026-09-16 pull's spelling alone; it independently confirms 'Сиразетдинов', so this is now treated as the correct spelling (fio_ru/name_latin corrected) rather than a flagged-but-unresolved variant. Personal ИНН 236802250787 wired from the same document.",
+        "2026-09-30: zakupki supplier search on the personal ИНН 236802250787 (s8233) found 1 contract, 2231202640019000409 (s8244): customer ГБУ ДО Краснодарского края «Центр развития одарённости», ₽762.60, 23.10.2019, единственный поставщик. Trivial, civilian, 2019; not wired anywhere."
       ]
     },
     "kurteev-aleksandr-sergeevich": {
@@ -4893,7 +4911,9 @@
     },
     "fedorov-pavel-romanovich": {
       "set": {
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "inn_personal": "470206586144"
       },
       "why": [
@@ -4971,7 +4991,9 @@
     "fedorova-polina-gennadevna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "fedorov-pavel-romanovich",
           "relation": "mother",
@@ -4988,7 +5010,9 @@
     "meshkova-kristina-andreevna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "beloglazova-lyudmila-aleksandrovna",
           "relation": "possible relative (relation unconfirmed by dossier)",
@@ -5005,7 +5029,9 @@
     "meshkova-nadezhda-filippovna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "beloglazova-lyudmila-aleksandrovna",
           "relation": "mother",
@@ -5022,7 +5048,9 @@
     "neznamov-vasiliy-aleksandrovich": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "neznamov-aleksandr-vasilevich",
           "relation": "father",
@@ -5039,7 +5067,9 @@
     "neznamova-anastasiya-vasilevna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "neznamov-aleksandr-vasilevich",
           "relation": "sister",
@@ -5056,7 +5086,9 @@
     "neznamova-lyudmila-viktorovna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "neznamov-aleksandr-vasilevich",
           "relation": "mother",
@@ -5073,7 +5105,9 @@
     "petrov-viktor-vitalevich": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "petrov-aleksey-aleksandrovich",
           "relation": "uncle (probable)",
@@ -5090,7 +5124,9 @@
     "petrov-vitaliy-pavlinovich": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "petrov-aleksey-aleksandrovich",
           "relation": "grandfather (probable)",
@@ -5107,7 +5143,9 @@
     "petrova-marina-vladimirovna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "petrov-aleksey-aleksandrovich",
           "relation": "mother",
@@ -5124,7 +5162,9 @@
     "petrova-natalya-viktorovna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "petrov-aleksey-aleksandrovich",
           "relation": "relative (unconfirmed)",
@@ -5141,7 +5181,9 @@
     "shagiakhmetova-alisa-ayratovna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "shagiakhmetov-ayrat-fatkhutdinovich",
           "relation": "daughter",
@@ -5158,7 +5200,9 @@
     "shakhmatov-anatoliy-aleksandrovich": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "shakhmatov-ivan-anatolevich",
           "relation": "father",
@@ -5175,7 +5219,9 @@
     "shakhmatova-olga-petrovna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "shakhmatov-ivan-anatolevich",
           "relation": "mother",
@@ -5192,7 +5238,9 @@
     "shakhmatova-tatyana-anatolevna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "shakhmatov-ivan-anatolevich",
           "relation": "sister",
@@ -5239,7 +5287,9 @@
     "shandobylo-miloslava-igorevna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "shandobylo-sergey-sergeevich",
           "relation": "wife",
@@ -5286,7 +5336,9 @@
     "tsyganova-viktoriya-yurevna": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"],
+        "sources": [
+          "s1408"
+        ],
         "family_of": {
           "principal_slug": "tsyganov-vadim-borisovich",
           "relation": "wife",
@@ -5469,7 +5521,9 @@
     },
     "kuznetsov-ruslan-nikolaevich": {
       "set": {
-        "sources": ["s1408"]
+        "sources": [
+          "s1408"
+        ]
       },
       "why": [
         "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded)."
@@ -5478,7 +5532,9 @@
     "kirtok-aleksandr-sergeevich": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"]
+        "sources": [
+          "s1408"
+        ]
       },
       "why": [
         "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
@@ -5488,7 +5544,9 @@
     "shvetov-artemiy-andreevich": {
       "set": {
         "graph_tier": "reference",
-        "sources": ["s1408"]
+        "sources": [
+          "s1408"
+        ]
       },
       "why": [
         "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
@@ -5497,7 +5555,9 @@
     },
     "petrov-aleksey-aleksandrovich": {
       "set": {
-        "sources": ["s1408"]
+        "sources": [
+          "s1408"
+        ]
       },
       "why": [
         "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded)."
@@ -5505,7 +5565,9 @@
     },
     "mikhaylov-konstantin-denisovich": {
       "set": {
-        "sources": ["s1408"]
+        "sources": [
+          "s1408"
+        ]
       },
       "why": [
         "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded)."
@@ -6046,7 +6108,12 @@
         }
       ],
       "slug": "kiselev-gleb-dmitrievich",
-      "family_of": {"principal_slug": "kiselev-dmitriy-konstantinovich", "relation": "son", "confidence": "confirmed", "source_id": "s7344"},
+      "family_of": {
+        "principal_slug": "kiselev-dmitriy-konstantinovich",
+        "relation": "son",
+        "confidence": "confirmed",
+        "source_id": "s7344"
+      },
       "sources": [
         "s0562",
         "s0560",
@@ -14074,14 +14141,14 @@
           "to": null,
           "source_id": "s6915"
         },
-          {
-            "title": "Начальник Центра (commander) of ЦСН «Барс-Сармат»; the unit's own site gives him as 'Начальник Центра специального назначения отряда беспилотных систем «Барс-Сармат»' and, since September 2024, 'командир' of its first volunteer detachment. Archangel's own channel names him 'командир БАРС Сармат' (17.10.2024)",
-            "entity_name": "ЦСН «Барс-Сармат»",
-            "entity_slug": "csn-bars-sarmat",
-            "from": "2024-09",
-            "to": null,
-            "source_id": "s7687"
-          }
+        {
+          "title": "Начальник Центра (commander) of ЦСН «Барс-Сармат»; the unit's own site gives him as 'Начальник Центра специального назначения отряда беспилотных систем «Барс-Сармат»' and, since September 2024, 'командир' of its first volunteer detachment. Archangel's own channel names him 'командир БАРС Сармат' (17.10.2024)",
+          "entity_name": "ЦСН «Барс-Сармат»",
+          "entity_slug": "csn-bars-sarmat",
+          "from": "2024-09",
+          "to": null,
+          "source_id": "s7687"
+        }
       ],
       "notes": "Named by @projectArchangel's own channel (05.11.2024, s6912) as \"Флагман движения\" (the movement's flagship), with his own channel (@rogozin_do) linked directly and cross-posted. The post frames official government-department support for Архангел's \"боевая апробация\" (combat-testing) process as flowing through this relationship. Sitting Federation Council senator, former Deputy Prime Minister and Roscosmos director-general -- a significantly higher-profile PEP than any other individual currently on file for this network. NOT the same person as Рогозин Алексей Дмитриевич (rogozin-aleksey-dmitrievich, his son, already on file for ao-ekolibri) -- do not conflate. This is a self-description by Архангел's own channel, not yet independently corroborated by Рогозин's own channel content or a press source -- treat as an open lead, not an established fact of direct involvement, until that corroboration is checked.\n\nCORROBORATED 2026-09-07: fetched t.me/rogozin_do/7047 directly (user-supplied URL). His own channel (author line \"РОГОЗИН\") personally cross-posted a Проект «Архангел» recruitment announcement on 2025-04-22 (“ПРОЕКТ “АРХАНГЕЛ”... Присоединяйтесь! Летать так летать! Стрелять так стрелять!”), linking directly to @projectArchangel/7287, with enthusiastic personal-endorsement framing (fire emoji, exclamation points) rather than neutral mention or a forwarded post. This independently corroborates the “флагман движения” claim from Архангел's own side -- no longer resting solely on Архангел's self-description.",
       "sources": [
@@ -14472,87 +14539,111 @@
         "s0332 -- АО «Стратим»'s own audited FY2025 БФО пояснительная записка (0710099, §9), read directly: names Назаров as one of four disclosed ultimate beneficiaries."
       ]
     },
-      {
-        "slug": "kiselev-dmitriy-konstantinovich",
-        "fio_ru": "Киселёв Дмитрий Константинович",
-        "name_latin": "Dmitry Konstantinovich Kiselev",
-        "dob": null,
-        "birthplace": null,
-        "address": null,
-        "inn_personal": null,
-        "roles": [],
-        "notes": "Named as father of Киселёв Глеб Дмитриевич by RuPEP (s7344: 'Киселёв Дмитрий Константинович – отец, ФГУП ВГТРК, автор и ...') and, as head of МИА «Россия сегодня», by the pointmedia.io profile of his elder son (s0561). PEP-context only, NOT a stakeholder in this network: no tie of his own to any entity here is on file. Recorded 2026-09-19 as the principal end of the family tie because a high-profile loyalist media figure's son is active in the military-coded drone industry (his son's «Кулибин-клуб» role), which is itself the finding. Do not treat him as a network participant; add roles only if a sourced tie appears. Only the two sourced facts are recorded; no DOB, ИНН or address on file.",
-        "sources": [
-          "s7344",
-          "s0561"
-        ],
-        "why": [
-          "2026-09-19: created at user direction to monitor family ties of PEP-linked persons; father-son tie confirmed by RuPEP's own family list."
-        ]
-      },
-      {
-        "slug": "pribylova-kristina-anatolevna",
-        "fio_ru": "Прибылова Кристина Анатольевна",
-        "name_latin": "Kristina Anatolevna Pribylova",
-        "dob": null,
-        "birthplace": null,
-        "address": null,
-        "inn_personal": "165123632514",
-        "roles": [
-          {
-            "title": "Председатель (sole person acting without a power of attorney)",
-            "entity_name": "АНО ЦПВ «ЗОВ-АА»",
-            "entity_slug": "ano-tsvp-zov-aa",
-            "from": "2022-10-24",
-            "to": null,
-            "source_id": "s7727"
-          }
-        ],
-        "notes": "Head of the АНО behind ЗОВ-АА, a documented co-organiser of Архангел events (msg 5080, 5657, 5807). Identifier and role come from the ЕГРЮЛ выписка of 19.09.2026 (s7727) only; no DOB, address or photo on file, and no other research done yet.",
-        "sources": [
-          "s7727"
-        ],
-        "why": [
-          "2026-09-19: added as the registered head of ano-tsvp-zov-aa (affiliated-organisation principal under the PII policy)."
-        ]
-      },
-      {
-        "slug": "gamirullin-marat-dzhaudatovich",
-        "fio_ru": "Гамируллин Марат Джаудатович",
-        "name_latin": "Marat Dzhaudatovich Gamirullin",
-        "dob": null,
-        "birthplace": null,
-        "address": null,
-        "inn_personal": "502717315675",
-        "roles": [
-          {
-            "title": "Директор (sole person acting without a power of attorney)",
-            "entity_name": "Фонд «Сармат»",
-            "entity_slug": "fond-sarmat",
-            "from": "2026-07-09",
-            "to": null,
-            "source_id": "s7870"
-          }
-        ],
-        "notes": "Director of Фонд «Сармат» per the ЕГРЮЛ выписка of 20.09.2026 (s7870); the fund's registered e-mail is his. Entry dated 09.07.2026 (ГРН 2266100670328), so he replaced an earlier head; who that was is not on file. No DOB, address or photo; no other research done.",
-        "sources": ["s7870"],
-        "why": ["2026-09-20: added as registered head of fond-sarmat (affiliated-organisation principal under the PII policy)."]
-      },
-      {
-        "slug": "eskov-nikolay-leonidovich",
-        "fio_ru": "Еськов Николай Леонидович",
-        "name_latin": "Nikolay Leonidovich Eskov",
-        "dob": null,
-        "birthplace": null,
-        "address": null,
-        "inn_personal": "262607260913",
-        "roles": [
-          {"title": "Ректор (sole person acting without a power of attorney)", "entity_name": "АНО «НИИ ДПО»", "entity_slug": "ano-nii-dpo", "from": "2022-08-25", "to": null, "source_id": "s7907"},
-          {"title": "Ректор; единственный учредитель (100%)", "entity_name": "ООО «НИИ ДПО»", "entity_slug": "ooo-nii-dpo", "from": "2025-01-24", "to": null, "source_id": "s7908"}
-        ],
-        "notes": "Signs as rector and chair of the attestation commission every diploma and certificate of Архангел's training school in the specimen set posted 07.02.2026 (s7897-s7906). Identifiers and roles come from the ЕГРЮЛ выписки of 20.09.2026 (s7907, s7908); no DOB, address or photo on file. Not the writer Кирилл Еськов.",
-        "sources": ["s7907", "s7908", "s7897"],
-        "why": ["2026-09-20: added as head of the institute issuing Архангел's credentials (affiliated-organisation principal under the PII policy)."]
-      }
+    {
+      "slug": "kiselev-dmitriy-konstantinovich",
+      "fio_ru": "Киселёв Дмитрий Константинович",
+      "name_latin": "Dmitry Konstantinovich Kiselev",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": null,
+      "roles": [],
+      "notes": "Named as father of Киселёв Глеб Дмитриевич by RuPEP (s7344: 'Киселёв Дмитрий Константинович – отец, ФГУП ВГТРК, автор и ...') and, as head of МИА «Россия сегодня», by the pointmedia.io profile of his elder son (s0561). PEP-context only, NOT a stakeholder in this network: no tie of his own to any entity here is on file. Recorded 2026-09-19 as the principal end of the family tie because a high-profile loyalist media figure's son is active in the military-coded drone industry (his son's «Кулибин-клуб» role), which is itself the finding. Do not treat him as a network participant; add roles only if a sourced tie appears. Only the two sourced facts are recorded; no DOB, ИНН or address on file.",
+      "sources": [
+        "s7344",
+        "s0561"
+      ],
+      "why": [
+        "2026-09-19: created at user direction to monitor family ties of PEP-linked persons; father-son tie confirmed by RuPEP's own family list."
+      ]
+    },
+    {
+      "slug": "pribylova-kristina-anatolevna",
+      "fio_ru": "Прибылова Кристина Анатольевна",
+      "name_latin": "Kristina Anatolevna Pribylova",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": "165123632514",
+      "roles": [
+        {
+          "title": "Председатель (sole person acting without a power of attorney)",
+          "entity_name": "АНО ЦПВ «ЗОВ-АА»",
+          "entity_slug": "ano-tsvp-zov-aa",
+          "from": "2022-10-24",
+          "to": null,
+          "source_id": "s7727"
+        }
+      ],
+      "notes": "Head of the АНО behind ЗОВ-АА, a documented co-organiser of Архангел events (msg 5080, 5657, 5807). Identifier and role come from the ЕГРЮЛ выписка of 19.09.2026 (s7727) only; no DOB, address or photo on file, and no other research done yet.",
+      "sources": [
+        "s7727"
+      ],
+      "why": [
+        "2026-09-19: added as the registered head of ano-tsvp-zov-aa (affiliated-organisation principal under the PII policy)."
+      ]
+    },
+    {
+      "slug": "gamirullin-marat-dzhaudatovich",
+      "fio_ru": "Гамируллин Марат Джаудатович",
+      "name_latin": "Marat Dzhaudatovich Gamirullin",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": "502717315675",
+      "roles": [
+        {
+          "title": "Директор (sole person acting without a power of attorney)",
+          "entity_name": "Фонд «Сармат»",
+          "entity_slug": "fond-sarmat",
+          "from": "2026-07-09",
+          "to": null,
+          "source_id": "s7870"
+        }
+      ],
+      "notes": "Director of Фонд «Сармат» per the ЕГРЮЛ выписка of 20.09.2026 (s7870); the fund's registered e-mail is his. Entry dated 09.07.2026 (ГРН 2266100670328), so he replaced an earlier head; who that was is not on file. No DOB, address or photo; no other research done.",
+      "sources": [
+        "s7870"
+      ],
+      "why": [
+        "2026-09-20: added as registered head of fond-sarmat (affiliated-organisation principal under the PII policy)."
+      ]
+    },
+    {
+      "slug": "eskov-nikolay-leonidovich",
+      "fio_ru": "Еськов Николай Леонидович",
+      "name_latin": "Nikolay Leonidovich Eskov",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": "262607260913",
+      "roles": [
+        {
+          "title": "Ректор (sole person acting without a power of attorney)",
+          "entity_name": "АНО «НИИ ДПО»",
+          "entity_slug": "ano-nii-dpo",
+          "from": "2022-08-25",
+          "to": null,
+          "source_id": "s7907"
+        },
+        {
+          "title": "Ректор; единственный учредитель (100%)",
+          "entity_name": "ООО «НИИ ДПО»",
+          "entity_slug": "ooo-nii-dpo",
+          "from": "2025-01-24",
+          "to": null,
+          "source_id": "s7908"
+        }
+      ],
+      "notes": "Signs as rector and chair of the attestation commission every diploma and certificate of Архангел's training school in the specimen set posted 07.02.2026 (s7897-s7906). Identifiers and roles come from the ЕГРЮЛ выписки of 20.09.2026 (s7907, s7908); no DOB, address or photo on file. Not the writer Кирилл Еськов.",
+      "sources": [
+        "s7907",
+        "s7908",
+        "s7897"
+      ],
+      "why": [
+        "2026-09-20: added as head of the institute issuing Архангел's credentials (affiliated-organisation principal under the PII policy)."
+      ]
+    }
   ]
 }

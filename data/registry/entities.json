@@ -79979,9 +79979,15 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "zakupki_review": {
+      "as_of": "2026-09-30",
+      "outcome": "partial",
+      "note": "Supplier search 2026-09-30 (s8235) found 5 contracts, all fetched: 2530000911624000004 (s8245, ГОКУ «Центр информационных технологий», ₽84 000, 05.04.2024); 2532117569024000046 (s8246, ГОКУ «Центр занятости населения Новгородской области», ₽275 000, 29.03.2024); 2532117569025000028 (s8247, same customer, ₽330 000, 08.04.2025); 2532117569026000033 (s8248, same customer, ₽300 758, 10.04.2026); 3532105288126000003 (s8249, МБУДО «Новгородская детская художественная школа», ₽980 320, 01.01.2026). All единственный поставщик, all Novgorod regional/municipal civilian customers; subject lines not read, so not wired into government_contracts[]."
+    },
     "_corrected": [
       "2026-09-19 (local corpus scan of data/roymarket.db, prose provenance only, no archived file): the site this JSC manages, ИНТЦ «Интеллектуальная электроника – Валдай» (Великая ул., 18А, Великий Новгород, the same address as the JSC), is named as the accreditation and bus-departure point for Дронница 2025: @dronnitsa msgs 495 (23.08.2025), 533 and 534 (04.09.2025), repeated in @projectArchangel msg 8394 (24.08.2025), and mil_hub #114284 (06.10.2025) describes the registration zone as being at that site. The same site is described in @chadayevru msg 3916 (27.06.2025) as hosting a Новгородский университет engineering school and being visited by Денис Мантуров. This ties the JSC's property to the Дронница event; it is not evidence that the JSC took part in organising it.",
-      "2026-09-19: added from a full ЕГРЮЛ выписка (s7624) to resolve a graph stub, this company as founder of АНО «НПЦ «Ушкуйник». Not yet screened against sanctions lists. Capital ₽11 000; the extract's founder block names ФГБОУ ВО «Новгородский государственный университет имени Ярослава Мудрого» (ИНН 5321033744, ОГРН 1025300780075) as 100% holder from 18.02.2022, which is recorded in `founders`."
+      "2026-09-19: added from a full ЕГРЮЛ выписка (s7624) to resolve a graph stub, this company as founder of АНО «НПЦ «Ушкуйник». Not yet screened against sanctions lists. Capital ₽11 000; the extract's founder block names ФГБОУ ВО «Новгородский государственный университет имени Ярослава Мудрого» (ИНН 5321033744, ОГРН 1025300780075) as 100% holder from 18.02.2022, which is recorded in `founders`.",
+      "2026-09-30: zakupki supplier search found 5 Novgorod civilian sole-supplier contracts (₽84k-₽980k, 2024-2026, s8245-s8249); recorded in zakupki_review as partial, not wired."
     ],
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19"
@@ -80245,8 +80251,14 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "zakupki_review": {
+      "as_of": "2026-09-30",
+      "outcome": "partial",
+      "note": "Supplier search 2026-09-30 (s8236) found 1 contract: 0166300016311000002 (s8242), customer комитет имущественных и земельных отношений администрации МО Богородицкий район, ₽25 500.00, 14.06.2011, запрос котировок. Municipal, 2011, no UAV/defence link on the page; subject line not read, so not wired into government_contracts[]."
+    },
     "_corrected": [
-      "2026-09-19: added from a full ЕГРЮЛ выписка (s7626) to resolve a graph stub, this company as founder of ООО «Центр беспилотных систем — Тула». The 55% holder ИНН 9714004945 matches ao-prominvest on file. Not yet screened against sanctions lists."
+      "2026-09-19: added from a full ЕГРЮЛ выписка (s7626) to resolve a graph stub, this company as founder of ООО «Центр беспилотных систем — Тула». The 55% holder ИНН 9714004945 matches ao-prominvest on file. Not yet screened against sanctions lists.",
+      "2026-09-30: zakupki supplier search found 1 civilian municipal contract (2011, ₽25.5k, s8242); recorded in zakupki_review as partial, not wired."
     ],
     "aleph_matches": [
       {
@@ -81157,8 +81169,14 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "zakupki_review": {
+      "as_of": "2026-09-30",
+      "outcome": "partial",
+      "note": "Supplier search 2026-09-30 (s8240) found 1 contract: 0173100003712000058 (s8243), customer Министерство образования и науки РФ, ₽25 762 400.00, 30.08.2011, открытый конкурс. Federal education ministry, 2011, no UAV/defence link on the page; subject line not read, so not wired into government_contracts[]."
+    },
     "_corrected": [
-      "2026-09-19: added from a full ЕГРЮЛ выписка (s7638). The director field is access-restricted in the extract, so none is recorded. Its OpenSanctions entity page (s7680) carries no sanctions topic. Not yet screened against GUR or Aleph."
+      "2026-09-19: added from a full ЕГРЮЛ выписка (s7638). The director field is access-restricted in the extract, so none is recorded. Its OpenSanctions entity page (s7680) carries no sanctions topic. Not yet screened against GUR or Aleph.",
+      "2026-09-30: zakupki supplier search found 1 education-ministry contract (2011, ₽25.76m, s8243); recorded in zakupki_review as partial, not wired."
     ],
     "aleph_matches": [
       {
