@@ -70005,9 +70005,14 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
+    "tier": "plumbing",
     "tier_basis": "Separate legal entity co-founded by ООО «Гагаринг» (its GD Барашков А.С. personally hands diplomas at its graduations, per s5372) to run UAV-operator training. Physically operates as the training center of the 51-я Гвардейская Общевойсковая Армия (51st Guards Combined Arms Army), opened ~24.02.2026, run jointly with «Архангел Легион» fund and «проект Архангел» (see [[roymarket_archangel_adjacent_network]] memory) — a direct MoD-embedded military training relationship, not a civilian trade school. Legal registration is a Краснодар mailbox address (КПП 231001001); the actual training site is most likely Туапсе, Краснодарский край, per s5380 (\"школа «Архангел» в Туапсе\", visited by the same team in the same period) — NOT YET independently confirmed as the same physical facility as the 51st Army training center, flagged as an open question.",
-    "cbst_tie": "confirmed",
+    "cbst_tie": {
+      "claim": "Training arm co-founded by ООО «Гагаринг», itself a ЦБСТ resident; the tie to ЦБСТ runs through Гагаринг. Treated as confirmed at investigator direction.",
+      "confidence": "t-doc",
+      "evidence": "Гагаринг's general director Барашков А.С. personally hands out this АНО's diplomas at its graduations (s5372); the АНО is recorded as a Гагаринг co-founding (registry founders edge). The ЦБСТ tie of Гагаринг itself is documented on its own record.",
+      "source_id": "s5372"
+    },
     "wb_overlap": "not_checked",
     "products": [],
     "financials": [
@@ -70098,7 +70103,9 @@
     "_raw": {},
     "_corrected": [
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-      "2026-09-14: БФО coverage sweep (bfo_pull.py --all-missing) found and parsed 1 filing(s) for this entity, previously had empty financials[]."
+      "2026-09-14: БФО coverage sweep (bfo_pull.py --all-missing) found and parsed 1 filing(s) for this entity, previously had empty financials[].",
+      "[2026-09-30] tier set to plumbing (was unset), at investigator direction after review of the 14 tierless entities.",
+      "[2026-09-30] cbst_tie was the bare string 'confirmed', which is not the required object shape, so the graph dropped the edge. Rewritten as t-doc with the indirect route stated. Investigator decision: treat as confirmed."
     ],
     "_verified_against": "bo.nalog.gov.ru БФО pull (bfo_pull.py), parsed via parse_bfo_financials.py, 2026-09-14",
     "opensanctions_matches": [],
@@ -70188,7 +70195,7 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
+    "tier": "adjacent",
     "tier_basis": "Director Архангельский Геннадий Евгеньевич — surname overlap with 'Архангел' brand family flagged as unresolved elsewhere; not yet confirmed a real tie to Проект «Архангел»/Филиппов. ADDRESS/SITE CHECK 2026-09-04: nspd.gov.ru (Rosreestr cadastral map) is unreachable from this project's sandbox for a scripted OR in-page-fetch browser approach (net::ERR_TIMED_OUT on a real chrome-devtools browser tab, not just curl) — the 2026-09-03 'untested lead' that a real browser session might bypass its block did NOT pan out; treat nspd.gov.ru as blocked the same as kad.arbitr.ru going forward, not worth re-trying without a genuine user-driven session. Fell back to Yandex Maps (reachable, no block) for the registered address instead: this is a generic mixed commercial/residential building — 'Businesses inside' lists unrelated tenants (household-chemicals wholesale, electrical goods, a housing complex) with no drone/UAV/production signature visible from the exterior or tenant list. Consistent with a registered-office address, not a manufacturing site. SCREENING 2026-09-04: zakupki.gov.ru supplier-search (scoped --inn scan) returned zero contract hits. Rospatent patent-holder search (searchplatform.rospatent.gov.ru /search, patent_holders filter) returned zero hits for the entity name.",
     "cbst_tie": null,
     "wb_overlap": "none_found",
@@ -70281,7 +70288,8 @@
       "2026-09-06: follow-up pass on the still-unresolved «Архангел Спецназа» (@arx_spn) legal-entity ID — egrul name-search re-tried and still empty, but the channel's own bio yielded an RKN registration number and a landing-site lead (archangelspetsnaza.ru), archived as s6405. Queued @arx_spn on config/channels.txt for a full scrape, since a live scan of its own posts is the only avenue left untried.",
       "EGRUL_2315233718_20260905_ano-arkhangel (s5502) — full signed ЕГРЮЛ выписка pulled 05.09.2026: confirms ОГРН 1242300005640, registration 01.02.2024, the Новороссийск ул. Кутузовская address, Архангельский Г.Е. as director, Архангельский + Ташматов as the two учредители, and the three-code ОКВЭД list (88.99 / 63.11 / 64.99).",
       "2026-09-07: merged duplicate correction key '2315233718' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class).",
-      "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+      "[2026-09-30] tier set to adjacent (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -73785,7 +73793,7 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
+    "tier": "adjacent",
     "tier_basis": "Provocative pro-war Telegram channel (@arx_spn, ~1.2M subscribers per iStories' 2024-09-24 count, later grown to 1.02M+ per this investigation's own 2026-09-03 check — see ano-arkhangel's tier_basis), publishing combat snuff footage from Ukraine since September 2021. NO legal entity found under this or any close name variant — confirmed twice: (1) 2026-09-06 egrul.nalog.ru fuzzy name search (multiple phrase variants, only generic unrelated \"Архангел\"/\"Спецназ\"-named orgs returned), (2) 2026-09-06 exact-name-match mode on the same site's own web UI, which returned \"По заданным критериям поиска данных не найдено\" — a clean negative, not just noise (s6405). This record exists to hold the channel's own operational/financial profile (monetization, admins, its confirmed training-project tie to Гагаринг) as a project, not a registered company. CONFIRMED TIE TO THIS INVESTIGATION'S CORE NETWORK: ran an active joint veteran drone-retraining project with ooo-npo-kilovatt's «Гагаринг» БПЛА lab, announced by @arx_spn itself 2026-08-10 (s5392) — Гагаринг is a manufacturer-tier ЦБСТ resident, making this channel a confirmed training/ recruitment partner of a core network entity, not merely a same-brand collision like the other \"Архангел\"-named orgs in this registry. MASK-BRANDING TIE: the circular «УДАРНАЯ СПЕЦНАЗ...»/«АРХАНГЕЛ» emblem seen on Гагаринг graduates' face-buffs in its 2026-08-04 graduation video is this channel's own branding (resolved 2026-09-03, see ano-arkhangel's images[] caption). NOT the same organization as «Архангел Легион» (ano-arkhangel, ИНН 2315233718) or «проект Архангел»/Филиппов (proekt-kb-arkhangel) — three separately-confirmed, unrelated \"Архангел\"-branded operations now on record; no institutional link found between any pair of them beyond the shared generic patriotic brand name. ADMIN IDENTITIES (iStories investigation, 24.09.2024, s6406 — reporters Ирина Долинина/Егор Феоктистов, conducted jointly with the UA Drone Forces volunteer-verification project, using leaked-database cross-referencing, Tinder-photo matching and Amazon Rekognition facial-comparison, both matches independently >88%): creator/main admin (callsign «Атлет») identified as Евгений Жулидов, a 45th VDV Spetsnaz Brigade officer (military unit 28337) — see people.json zhulidov-evgeniy. Co-admin (callsign «Внук») identified as Евгений Алейник, son of Станислав Алейник (rector of Belgorod State Agrarian University, former Deputy Minister of Agriculture) — see people.json aleynik-evgeniy. A third contributor, Николай Чебров (metadata-credited author of a tactical manual), shares a full name with an officer of military unit 31659 (Eighth Directorate of the General Staff, responsible for state-secret protection) — the article frames this as a possible but unconfirmed namesake match, NOT independently verified, so not promoted to a person record. MONETIZATION (per s6406, all self-reported/press-estimated, not independently audited): crypto-donation addresses received >$58,000 (~₽5.4m) since August 2023; a single ad post costs ₽54,000; a paid subscription tier «Архангел+» (₽500-1,000/month, ~800 subscribers as of 2024, up to ~₽800k/month potential); merch was sold via a Wildberries marketplace store, «Земля воинов» — a direct wb_overlap-relevant fact for this investigation's own WB-tracker origin, not yet cross-checked against wb_watch's product database. The channel reported spending ~₽30m on drones over two months (as of Sept 2024). Жулидов told iStories (via his personal Telegram) that he and Алейник stopped administering the channel in late 2022 under orders from his unit, with VDV command allegedly running it since — this claim is the subject's own denial, not independently verified, and does not square with the channel's continued self-reported first-person combat-content framing seen in this investigation's own 2026-08-10/2026-09-03 checks nearly two years later. KND.GOV.RU BLOGGER-REGISTRY CONFIRMATION (2026-09-06, s6407): queried Roskomnadzor's public 'Реестр лицензий' portal (knd.gov.ru/licenses-registry -> bloggersRegistrationLicenses API) directly by blogLink. Confirms @arx_spn is on the federal blogger-registration list, status ACTIVE, registry entry created 2024-11-18 (postdating iStories' 24.09.2024 investigation, s6406, by about two months — the channel was not yet formally registered when that investigation ran), last modified 2026-08-26. This public endpoint discloses NO owner identity (only status/dates/blogLink/blogTitle/socialNetworkName) — does not resolve to an ИНН/ОГРН or a name, and is a different number from the 'РКН - № 7829855991' the channel discloses in its own bio (s6405, still unresolved). Corroborates the channel's registration timeline only, not its legal-entity status.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
@@ -73822,9 +73830,9 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-09-06: iStories' 2024-09-24 investigation (s6406) named this channel's admins for the first time in this registry — previously only a brand reference inside ano-arkhangel's tier_basis with no dedicated record. Created as a project-level entity stub (no legal entity exists, confirmed twice) to hold its own operational profile distinctly from the three other, unrelated «Архангел»-branded organizations already on file.",
-      "2026-09-06: added a knd.gov.ru blogger-registry API confirmation (s6407) — registration date/status only, no owner identity."
+      "[2026-09-30] tier set to adjacent (was unset), at investigator direction after review of the 14 tierless entities."
     ],
+    "_verified_against": null,
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19"
   },
@@ -73904,7 +73912,7 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
+    "tier": "manufacturer",
     "tier_basis": "Найдена 2026-09-06 как производитель БПЛА «АС-МК-6», эксплуатируемого сертифицированными операторами ООО «Аэромакс»/АО «Аэромакс» (реестр Росавиации, favt.gov.ru, s6416) — то есть выявлена не как самостоятельная находка, а через операторский реестр. Полная выписка ЕГРЮЛ (s6427) подтверждает основной ОКВЭД 30.30.6 «Производство беспилотных авиационных систем» — прямое подтверждение профиля БПЛА-производителя. 80%-й учредитель — АО «ИТЦ «Система-САРОВ»» (ИНН 5216017944), технологический центр, исторически связанный с ЗАТО Саров (ядерный оружейный комплекс РФ) — связь не подтверждена независимо, требует отдельной проверки характера аффилиации. Директор — управляющая организация АО «МТУ Сатурн» (ИНН 7718047248), а не физлицо; название совпадает по бренду с известным двигателестроителем ПАО «ОДК-Сатурн» (Рыбинск), но прямая связь НЕ подтверждена и требует отдельной проверки — не принимать совпадение имени за факт. Финансовая динамика резко тревожная: выручка обвалилась с ₽61.5м (2023) до ₽2.3м (2024) и фактически до нуля (₽2 тыс., 2025) при убытке ₽22.02м в 2025 — открытый вопрос, не объяснённый доступными источниками (сворачивание деятельности? реструктуризация? перенос производства на другое юрлицо группы?). Пока без ЦБСТ-привязки — отношения к сети требуют дальнейшей проверки, не является confirmed tier без неё.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
@@ -74079,7 +74087,8 @@
       "2026-09-07: zakupki scan (never-scanned gap closure) — Scanned by ИНН: 5 hits (regNumbers 1165400311421000018, 1246300226320000157, 2673200542420000002, 2673200542419000007, 1231001860419000033), all pulled and read. All 5 are civilian UAV service/equipment contracts from 2019-2021 (crop-monitoring drone survey for Смоленская область x2, water-body remote sensing for Кубанское БВУ, a UAV research lab-equipment supply to Kazan's КНИТУ-КАИ, and a research UAV+sensor kit contract for Красноярский научный центр СО РАН), total ~₽13.24m. Pre-dates this entity's 2026-09-06 discovery as an АС-МК-6 manufacturer and its financial-collapse period (2023-2025); no ЦБСТ-network customer, no state-defense customer — a generic small civilian-supplier footprint per the standing zakupki triage guidance, not wired into government_contracts[].",
       "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 6 products total after this pass.",
       "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
-      "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. "
+      "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. ",
+      "[2026-09-30] tier set to manufacturer (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "zakupki_review": {
       "as_of": "2026-09-07",
@@ -74239,7 +74248,7 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
+    "tier": "manufacturer",
     "tier_basis": "Найдена 2026-09-06 как производитель БПЛА «ДИАМ-20», эксплуатируемого сертифицированными операторами ООО «Аэромакс»/АО «Аэромакс» (реестр Росавиации, favt.gov.ru, s6416). Полная выписка ЕГРЮЛ (s6428) подтверждает основной ОКВЭД 30.30.6 «Производство беспилотных авиационных систем». КЛЮЧЕВАЯ СВЯЗЬ: учредители — АО «ИКАР-ТЕХ» (95%, ИНН 9704154772) и АО ГК «ИКАР» (5%, ИНН 9713015990); директор — Скорятин Георгий Андреевич. Оба факта ТОЧНО совпадают с уже задокументированной в этом реестре записью ooo-gk-aeromaks: пресса (Коммерсантъ) называет «ИКАР» управляющей компанией группы «Кронштадт»→«Аэромакс» (переименование апрель 2026 после перехода от АФК «Система» к ЗПИФ «Технофонд»), а Скорятин Г.А. — директором, совпадающим с прессой по переименованию Кронштадт→Аэромакс. Это делает ДИАМ-АЭРО не самостоятельной находкой, а дочерней/сестринской компанией внутри группы «Кронштадт»/«Аэромакс» — того же холдинга, которому принадлежит уже описанный в реестре гражданский БПЛА-производитель ooo-aeromaks (линейка B-120/B-200/B-700/A-5/A-50). Финансовый профиль резко контрастирует с ooo-as-kam: выручка выросла с ₽139м (2023) до ₽283м (2024) и до ₽2.04 МЛРД (2025) — 15-кратный рост за 2 года при неизменных убытках все 5 лет (₽6-55м в год) — паттерн, типичный для убыточного, но быстро масштабируемого производства БПЛА, финансируемого группой (ср. с ooo-gk-aeromaks's already-documented ₽4.5bn 2025 group-wide losses amid the civilian pivot).",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
@@ -74391,7 +74400,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-07: zakupki scan (never-scanned gap closure) — Scanned by ИНН, zero hits in zakupki.gov.ru contract registry.",
       "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 4 products total after this pass.",
-      "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
+      "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
+      "[2026-09-30] tier set to manufacturer (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "zakupki_review": {
       "as_of": "2026-09-07",
@@ -77636,7 +77646,12 @@
     "subsidiaries": [],
     "tier": "network",
     "tier_basis": "50%-owned subsidiary of ООО «Гагаринг» (Барашков А.С.'s core СВО-drone-training entity), founded 2026-01-27 — Гагаринг's 7th recorded subsidiary/investment, alongside Ассоциация АРРС, АНО ДПО «Образовательный Центр Гагаринг», ООО «Интел Дрон», ООО «НПО Эйлер», ООО «Авирон». Software-development OKVED (62.01) matches the pattern of Гагаринг spinning up small specialised satellites rather than a standalone manufacturer.",
-    "cbst_tie": "not_established",
+    "cbst_tie": {
+      "claim": "No ЦБСТ tie established.",
+      "confidence": "not_established",
+      "evidence": "50%-owned subsidiary of ООО «Гагаринг»; no document ties the company itself to ЦБСТ.",
+      "source_id": null
+    },
     "wb_overlap": "not_checked",
     "products": [],
     "financials": [],
@@ -77673,7 +77688,8 @@
     "name_en": "LLC \"Yangel Lab\"",
     "okved_secondary": [],
     "_corrected": [
-      "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+      "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+      "[2026-09-30] cbst_tie was the bare string 'not_established'; rewritten in the required object shape. No edge is drawn for this value."
     ],
     "bfo_review": {
       "as_of": "2026-09-14",
@@ -77756,8 +77772,8 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
-    "tier_basis": null,
+    "tier": "adjacent",
+    "tier_basis": "Co-owned or directed by Барахтин Артём Владимирович and Соловьёв Константин Юрьевич, who own ООО «Аркодим» (a ЦБСТ resident). No UAV or EW activity is evidenced for this company, and it has no ЦБСТ tie of its own; kept as an ownership satellite, off the ЦБСТ network proper (investigator decision 2026-09-30).",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -77835,7 +77851,8 @@
     ],
     "_corrected": [
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
+      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge.",
+      "[2026-09-30] tier set to adjacent (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "_verified_against": null,
     "aleph_matches": [
@@ -77932,8 +77949,8 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
-    "tier_basis": null,
+    "tier": "adjacent",
+    "tier_basis": "Co-owned or directed by Барахтин and Соловьёв, who own ООО «Аркодим» (a ЦБСТ resident). No UAV or EW activity evidenced; no ЦБСТ tie of its own (investigator decision 2026-09-30).",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -78009,7 +78026,8 @@
     ],
     "_corrected": [
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
+      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge.",
+      "[2026-09-30] tier set to adjacent (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "_verified_against": null,
     "aleph_matches": [
@@ -78098,8 +78116,8 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
-    "tier_basis": null,
+    "tier": "adjacent",
+    "tier_basis": "Co-owned or directed by Барахтин and Соловьёв, who own ООО «Аркодим» (a ЦБСТ resident). No UAV or EW activity evidenced; no ЦБСТ tie of its own (investigator decision 2026-09-30).",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -78175,7 +78193,8 @@
     ],
     "_corrected": [
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
+      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge.",
+      "[2026-09-30] tier set to adjacent (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "_verified_against": null,
     "aleph_matches": [
@@ -78263,8 +78282,8 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
-    "tier_basis": null,
+    "tier": "adjacent",
+    "tier_basis": "Directed by Барахтин, who owns ООО «Аркодим» (a ЦБСТ resident); he holds 34%. No UAV or EW activity evidenced; no ЦБСТ tie of its own (investigator decision 2026-09-30).",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -78350,7 +78369,8 @@
     },
     "_corrected": [
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
+      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge.",
+      "[2026-09-30] tier set to adjacent (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "_verified_against": null,
     "aleph_matches": [
@@ -78439,8 +78459,8 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
-    "tier_basis": null,
+    "tier": "adjacent",
+    "tier_basis": "Half-owned by Барахтин, who owns ООО «Аркодим» (a ЦБСТ resident); the other half is held by Андреева Жанна Евгеньевна. No UAV or EW activity evidenced; no ЦБСТ tie of its own (investigator decision 2026-09-30).",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -78526,7 +78546,8 @@
     },
     "_corrected": [
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
+      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge.",
+      "[2026-09-30] tier set to adjacent (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "_verified_against": null,
     "aleph_matches": [
@@ -78613,8 +78634,8 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
-    "tier_basis": null,
+    "tier": "adjacent",
+    "tier_basis": "Directed by Барахтин, who owns ООО «Аркодим» (a ЦБСТ resident); linked as sister-entity via the ФНС screen (s8064). No UAV or EW activity evidenced; no ЦБСТ tie of its own (investigator decision 2026-09-30).",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -78693,7 +78714,8 @@
     },
     "_corrected": [
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge."
+      "2026-09-29: re-ran the underlying ФНС screen live and archived the raw response (s8064) to source this edge.",
+      "[2026-09-30] tier set to adjacent (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "_verified_against": null,
     "aleph_matches": [
@@ -78772,8 +78794,8 @@
       }
     ],
     "subsidiaries": [],
-    "tier": null,
-    "tier_basis": null,
+    "tier": "plumbing",
+    "tier_basis": "Holds 1% of ООО «Аэромакс» (treasury-share detail in the ЕГРЮЛ выписка, s7450); directed by Бессонов Сергей Николаевич, Аэромакс's EU-sanctioned director. Near-zero revenue against large losses (БФО s7491-s7494). Ownership plumbing of the Аэромакс structure.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -78850,7 +78872,8 @@
       }
     ],
     "_corrected": [
-      "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+      "[2026-09-30] tier set to plumbing (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "_verified_against": null,
     "aleph_matches": [
@@ -78950,8 +78973,8 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
-    "tier_basis": null,
+    "tier": "unverified",
+    "tier_basis": "Identified from dronnitsa.ru's 2023 exhibitor series as an anti-drone RF detection and jamming collective working with силовые структуры in the Черноземье; ЕГРЮЛ выписка on file (s8539). UAV or EW relevance beyond that description is not assessed, so the tier stays unverified.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -78987,7 +79010,8 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. Founders and capital added from the same выписка (s8539)."
+      "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. Founders and capital added from the same выписка (s8539).",
+      "[2026-09-30] tier set to unverified (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "_verified_against": null,
     "aleph_matches": [],
@@ -79060,8 +79084,8 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": null,
-    "tier_basis": null,
+    "tier": "unverified",
+    "tier_basis": "Listed among Дронница exhibitors; a St Petersburg radio-infrastructure company (2G-5G, DSRC/C-V2X), ЕГРЮЛ выписка on file (s8540). UAV or EW relevance is not assessed, so the tier stays unverified.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -79097,7 +79121,8 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. Founders and capital added from the same выписка (s8540)."
+      "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. Founders and capital added from the same выписка (s8540).",
+      "[2026-09-30] tier set to unverified (was unset), at investigator direction after review of the 14 tierless entities."
     ],
     "_verified_against": null,
     "aleph_matches": [

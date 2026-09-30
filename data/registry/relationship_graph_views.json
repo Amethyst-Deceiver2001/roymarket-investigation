@@ -142,7 +142,7 @@
           "label": "АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел»",
           "name_latin": "ANO Voenno-tekhnicheskoy Podderzhki Zashchitnikov Otechestva i Patrioticheskogo Vospitaniya Naseleniya \"Arkhangel\" (also known as Фонд Архангел «Легион» / Archangel Legion Fund)",
           "inn": "2315233718",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "АНО",
           "variant": null,
@@ -166,11 +166,11 @@
           "label": "АНО ДПО «Образовательный центр Гагаринг»",
           "name_latin": "ANO DPO Obrazovatelny Tsentr Gagaring (Gagaring Educational Center, autonomous non-profit supplementary-professional-education org)",
           "inn": "2310240630",
-          "tier": null,
+          "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 16
+          "degree": 17
         },
         {
           "id": "ano-nii-dpo",
@@ -242,7 +242,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 78
+          "degree": 79
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -698,7 +698,7 @@
           "label": "Ассоциация технологического бизнеса",
           "name_latin": null,
           "inn": "9726005220",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -2948,7 +2948,7 @@
           "label": "ООО «Аэромакс-Авиа (Центр-Логистика)»",
           "name_latin": null,
           "inn": "9704149557",
-          "tier": null,
+          "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
           "variant": null,
@@ -3068,7 +3068,7 @@
           "label": "ООО «Аркодим-2»",
           "name_latin": null,
           "inn": "1659173832",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -3080,7 +3080,7 @@
           "label": "ООО «Аркодим-Про»",
           "name_latin": null,
           "inn": "1658146106",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -3248,7 +3248,7 @@
           "label": "ООО «Экспокэт»",
           "name_latin": null,
           "inn": "1659113230",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -3764,7 +3764,7 @@
           "label": "ООО «Научно-технический центр «Аркодим»»",
           "name_latin": null,
           "inn": "1659182805",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -4268,7 +4268,7 @@
           "label": "ООО «Земстройрегистр»",
           "name_latin": null,
           "inn": "1659145169",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -11754,6 +11754,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "ano-dpo-obrazovatelny-tsentr-gagaring",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Training arm co-founded by ООО «Гагаринг», itself a ЦБСТ resident; the tie to ЦБСТ runs through Гагаринг. Treated as ...",
+          "source_id": "s5372",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "ano-nii-dpo",
@@ -33001,7 +33012,7 @@
           "label": "АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел»",
           "name_latin": "ANO Voenno-tekhnicheskoy Podderzhki Zashchitnikov Otechestva i Patrioticheskogo Vospitaniya Naseleniya \"Arkhangel\" (also known as Фонд Архангел «Легион» / Archangel Legion Fund)",
           "inn": "2315233718",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "АНО",
           "variant": null,
@@ -33025,11 +33036,11 @@
           "label": "АНО ДПО «Образовательный центр Гагаринг»",
           "name_latin": "ANO DPO Obrazovatelny Tsentr Gagaring (Gagaring Educational Center, autonomous non-profit supplementary-professional-education org)",
           "inn": "2310240630",
-          "tier": null,
+          "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 16
+          "degree": 17
         },
         {
           "id": "ano-npts-ushkuynik",
@@ -33077,7 +33088,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 78
+          "degree": 79
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -33461,7 +33472,7 @@
           "label": "Ассоциация технологического бизнеса",
           "name_latin": null,
           "inn": "9726005220",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -34213,7 +34224,7 @@
           "label": "ООО «Аэромакс-Авиа (Центр-Логистика)»",
           "name_latin": null,
           "inn": "9704149557",
-          "tier": null,
+          "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
           "variant": null,
@@ -34321,7 +34332,7 @@
           "label": "ООО «Аркодим-2»",
           "name_latin": null,
           "inn": "1659173832",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -34333,7 +34344,7 @@
           "label": "ООО «Аркодим-Про»",
           "name_latin": null,
           "inn": "1658146106",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -34453,7 +34464,7 @@
           "label": "ООО «Экспокэт»",
           "name_latin": null,
           "inn": "1659113230",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -34933,7 +34944,7 @@
           "label": "ООО «Научно-технический центр «Аркодим»»",
           "name_latin": null,
           "inn": "1659182805",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -35317,7 +35328,7 @@
           "label": "ООО «Земстройрегистр»",
           "name_latin": null,
           "inn": "1659145169",
-          "tier": null,
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
@@ -39719,6 +39730,18 @@
           "degree": 1
         },
         {
+          "id": "ano-dpo-obrazovatelny-tsentr-gagaring",
+          "kind": "entity",
+          "label": "АНО ДПО «Образовательный центр Гагаринг»",
+          "name_latin": "ANO DPO Obrazovatelny Tsentr Gagaring (Gagaring Educational Center, autonomous non-profit supplementary-professional-education org)",
+          "inn": "2310240630",
+          "tier": "plumbing",
+          "sanctioned": false,
+          "legal_form": "АНО",
+          "variant": null,
+          "degree": 17
+        },
+        {
           "id": "ano-npts-ushkuynik",
           "kind": "entity",
           "label": "АНО «НПЦ «Ушкуйник»»",
@@ -39740,7 +39763,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 78
+          "degree": 79
         },
         {
           "id": "antonova-tatyana-sergeevna",
@@ -40750,6 +40773,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "ano-dpo-obrazovatelny-tsentr-gagaring",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Training arm co-founded by ООО «Гагаринг», itself a ЦБСТ resident; the tie to ЦБСТ runs through Гагаринг. Treated as ...",
+          "source_id": "s5372",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
         },
         {
           "source": "ano-npts-ushkuynik",
