@@ -314,6 +314,14 @@ registered as an entity's founder) the builder surfaces them automatically. Thei
 profile pages are unaffected. Set it deliberately per person with a `why` note; it is
 not inferred.
 
+**`graph_tier: "held-off"`** (entities.json, set via `corrections_entities.json`) keeps an
+entity fully on file (record, profile page, `sanctions[]`) but off the relationship graph
+outright. Unlike a `reference` person it is NOT surfaced by `owns`/`founded`/`directs` edges:
+it exists for an entity that ownership chains connect to the network but whose *own* tie to
+ЦБСТ is unproven (the Tula ООО «Центр беспилотных систем», 2026-09-30, was linked only by an
+OpenSanctions merge with the Moscow АНО). Held slugs are listed in `detached_ids`, so the omission
+is visible. Set it deliberately with a `why` note and remove it when a solid link is found.
+
 **ё policy (STYLE_GUIDE.md §2.5):** names are *spelled* with ё wherever a source for that
 person gives it, and *matched* with ё folded to е on both sides -- never let one depend on
 the other. Do not add a ё without a source for that person, and never edit verbatim

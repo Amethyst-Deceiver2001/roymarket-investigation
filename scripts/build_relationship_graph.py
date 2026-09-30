@@ -730,6 +730,19 @@ def build_graph(entities: list[dict], people: list[dict],
         for slug in hidden:
             nodes.pop(slug, None)
 
+    # Entities marked graph_tier == "held-off" (set via corrections_entities.json,
+    # with a why[] note) are kept off the graph outright, whatever edges they have,
+    # until a solid link to ЦБСТ is found. Unlike a reference person they are NOT
+    # surfaced by owns/founded/directs edges: the hold-off exists precisely because
+    # an ownership chain can connect an entity to the network without its own tie
+    # being established. Held slugs are listed in detached_ids so the omission shows.
+    held_off = {e["slug"] for e in entities
+                if e.get("graph_tier") == "held-off" and not e.get("_merged_into")} & set(nodes)
+    if held_off:
+        edges = [e for e in edges if e["source"] not in held_off and e["target"] not in held_off]
+        for slug in held_off:
+            nodes.pop(slug, None)
+
     # Every node on the graph must connect, directly or through any chain of
     # edges of any type, to the central hub (ЦБСТ). Anything that doesn't -- an
     # adjacent-not-ЦБСТ network, an entity kept on file from a brief table, a
@@ -755,6 +768,7 @@ def build_graph(entities: list[dict], people: list[dict],
                 nodes.pop(node_id, None)
                 unresolved.pop(node_id, None)
 
+    detached_ids = sorted(set(detached_ids) | held_off)
     node_list = sorted(nodes.values(), key=lambda node: node["id"])
     edges.sort(key=lambda edge: (
         edge["source"], edge["target"], edge["type"], edge["as_of"] or "",

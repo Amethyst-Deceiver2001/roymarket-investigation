@@ -97,6 +97,16 @@ class RelationshipGraphTests(unittest.TestCase):
             build_graph(copy.deepcopy(ENTITIES), copy.deepcopy(PEOPLE)),
         )
 
+    def test_held_off_entity_is_omitted_even_with_ownership_edges(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["graph_tier"] = "held-off"  # "ordinary", owned 100% by the hub-connected "core"
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        ids = {node["id"] for node in graph["nodes"]}
+        self.assertNotIn("ordinary", ids)
+        self.assertIn("ordinary", graph["detached_ids"])
+        self.assertTrue(all("ordinary" not in (e["source"], e["target"]) for e in graph["edges"]))
+        self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
+
     def test_historical_founder_share_suffix_does_not_create_false_stub(self):
         entities = [{
             "slug": "company",

@@ -406,14 +406,7 @@
       "ids": "9702064851 | 1247700190430",
       "role": "Sole owner of МПТМ. Registered 27.02.2024 at 129110, Москва, Банный пер., д. 3, помещ. 208 — not the Нарышкинская building. Co-founded by Фонд «Наша Правда» (from inception) and ПАО «Банк ПСБ» (registered 01.04.2025). Registered contact is a Yandex mailbox. OKVEDs are publishing, software, R&D, market research and conference organising — nothing defence-coded. Sanctioned by Ukraine, Australia, Canada."
     },
-    "related_entities": [
-      {
-        "relationship": "OpenSanctions merges this Tula ООО (ИНН 7100032961, reg. 08.02.2023, directly OFAC/EO14024- designated) into the same deduped profile as this Moscow АНО, sharing \"ЦБСТ\"/\"TSBS\" branding and aliases. Relationship not established as of 2026-08-24 — see the Tula entity's own open_questions for what would resolve it.",
-        "slug": "ooo-tsentr-bespilotnykh-sistem-tula",
-        "source_id": "s0572",
-        "relationship_type": "external-registry-cross-listed"
-      }
-    ],
+    "related_entities": [],
     "why": [
       {
         "text": "2026-09-05: this entity had an EMPTY financials[] while six of its own БФО filings sat in data/sources/. Cause was a parser gap, not a missing document — scripts/parse_bfo_financials.py read only the P&L sheet, which is blank on every non-profit filing. With the ОЦИС sheet now read: ₽269,835,000 of targeted funding received in FY2024 against ₽98,047,000 spent, and ₽137,105,000 received in FY2025 against ₽275,587,000 spent — i.e. FY2025 spending ran at roughly twice that year's inflow, drawing the fund balance down from ₽171,788,000 to ₽33,306,000. First documented figures for the investigation's core entity.",
@@ -434,7 +427,8 @@
       "Source-ID stability bug found and fixed 2026-08-22, same session: the source_id values above were originally written against an OLD, unstable positional ID scheme (scripts/extract_registry.py assigned sN = MANIFEST.md line index, which shifts whenever a file is added anywhere earlier in alphabetical sort order). Re-verified and corrected against the NEW stable, path-keyed ID scheme (data/registry/_source_ids.json) after the fix — every source_id in this file now points at the document it was actually verified against.",
       "2026-09-07: merged dormant duplicate correction key '9702064851' into this slug-keyed entry (registry-hardening pass, no field conflict).",
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-      "2026-09-30: Corrected sanctions[]: the earlier entry (s0574) listed OFAC, Canada and Australia as regimes on this АНО because OpenSanctions merges it with the Tula ООО. Read OFAC SDN 50778 directly (Tax ID 7100032961 only) and the two GUR pages (separate listings, 15947 for this АНО and 11711 for the Tula ООО, s8250/s8251). What remains is Ukraine's own listing of this АНО. GUR's US/EU/UK jurisdiction panel for the АНО is unverified and not recorded as a regime. The corporate relationship between the two entities remains unproven."
+      "2026-09-30: Corrected sanctions[]: the earlier entry (s0574) listed OFAC, Canada and Australia as regimes on this АНО because OpenSanctions merges it with the Tula ООО. Read OFAC SDN 50778 directly (Tax ID 7100032961 only) and the two GUR pages (separate listings, 15947 for this АНО and 11711 for the Tula ООО, s8250/s8251). What remains is Ukraine's own listing of this АНО. GUR's US/EU/UK jurisdiction panel for the АНО is unverified and not recorded as a regime. The corporate relationship between the two entities remains unproven.",
+      "2026-09-30: Removed the external-registry-cross-listed related_entities entry for the Tula ООО (relationship not established); see that record's why[] for the removed text."
     ],
     "_verified_against": "war-sanctions.gur.gov.ua/en/components (weapon items witem-4835, witem-4800), archived as s0970/s0971",
     "opensanctions_matches": [
@@ -64689,8 +64683,8 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": "cbst-core",
-    "tier_basis": "Directly designated by OFAC (SDN 50778, Tax ID 7100032961, read 2026-09-30) and listed by GUR (11711, s8250). Its ЦБСТ tie is NOT established: it rests on OpenSanctions merging this Tula ООО with the Moscow АНО «ЦБСТ» (shared branding and aliases), while GUR and Ukraine's NSDC list the two as separate entities, the ООО was registered a year earlier (08.02.2023 vs 27.02.2024) under a different legal form, and a text search of the local Telegram archive (2026-09-30) found no post containing its ИНН or the strings «Центр беспилотных систем — Тула» or «ЦБС Тула». Owned 60% by Фонд развития промышленности Тульской области.",
+    "tier": "adjacent",
+    "tier_basis": "Demoted from cbst-core to adjacent at the user's direction until a solid link to ЦБСТ is found. Directly designated by OFAC (SDN 50778, Tax ID 7100032961, read 2026-09-30) and listed by GUR (11711, s8250). Its ЦБСТ tie is NOT established: it rests on OpenSanctions merging this Tula ООО with the Moscow АНО «ЦБСТ» (shared branding and aliases), while GUR and Ukraine's NSDC list the two as separate entities, the ООО was registered a year earlier (08.02.2023 vs 27.02.2024) under a different legal form, and a text search of the local Telegram archive (2026-09-30) found no post containing its ИНН or the strings «Центр беспилотных систем — Тула» or «ЦБС Тула». Owned 60% by Фонд развития промышленности Тульской области.",
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
@@ -64801,15 +64795,9 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "related_entities": [
-      {
-        "relationship": "Shares the \"ЦБСТ\"/\"TSBS\" brand family and is merged into one deduped profile by OpenSanctions (shared aliases, shared branding) — but registered over a year EARLIER (08.02.2023, Tula) than АНО «ЦБСТ»'s own Moscow registration (27.02.2024), under a DIFFERENT legal form (ООО vs АНО) and a different ИНН. The exact corporate relationship (predecessor, founding vehicle, regional subsidiary, or independently-operating same-branded entity) is NOT established — flagged as the single highest-priority open question this discovery raises.",
-        "slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
-        "source_id": "s0572",
-        "relationship_type": "external-registry-cross-listed"
-      }
-    ],
+    "related_entities": [],
     "verified_against": "sanctionssearch.ofac.treas.gov/Details.aspx?id=50778 (read directly 2026-08-24, s0573); egrul.nalog.ru open-API pull, 2026-08-24 (s0572)",
+    "graph_tier": "held-off",
     "_corrected": [
       "2026-08-24 Rospatent full-roster trademark sweep (own ИНН 7100032961, s0945): trademark №1074859 (filed 2024-03-27) is held under the name \"ООО «Конструкторское бюро «Центр беспилотных систем»»\" — a FULLER name than this registry's current name_ru (\"ООО «Центр беспилотных систем»\"), which itself matches both the OFAC SDN listing text and a direct egrul.nalog.ru pull exactly. Flagging as an open question rather than editing name_ru: unclear whether this is (a) a former/alternate legal name that was later shortened, (b) a self-reporting variation on this one Rospatent filing, or (c) evidence of a DIFFERENT-but-related entity under the same ИНН at filing time. Do not conflate with the OFAC designation's own name until resolved.",
       "Web search for this OFAC-designated entity's website (2026-08-25) found no confirmed site of its own, but re-surfaced and strengthened the existing КБ ЦБС name-collision flag with a confirmed ИНН for the other entity.",

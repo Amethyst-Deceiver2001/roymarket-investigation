@@ -242,7 +242,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 80
+          "degree": 78
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -917,14 +917,6 @@
           "degree": 1
         },
         {
-          "id": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "kind": "person",
-          "label": "Борисов Александр Сергеевич",
-          "name_latin": "Aleksandr Sergeevich Borisov",
-          "sanctioned": false,
-          "degree": 4
-        },
-        {
           "id": "borisov-evgeniy-gennadevich",
           "kind": "person",
           "label": "Борисов Евгений Геннадьевич",
@@ -1152,12 +1144,6 @@
           "id": "customer::государственное-областное-казенное-учреждение-по-управлению-автомобильными-дорогами-мурманской-области",
           "kind": "government_customer",
           "label": "ГОСУДАРСТВЕННОЕ ОБЛАСТНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ ПО УПРАВЛЕНИЮ АВТОМОБИЛЬНЫМИ ДОРОГАМИ МУРМАНСКОЙ ОБЛАСТИ",
-          "degree": 1
-        },
-        {
-          "id": "customer::гоу-то-яснополянский-образовательный-комплекс-им-л-н-толстого",
-          "kind": "government_customer",
-          "label": "ГОУ ТО «Яснополянский образовательный комплекс им. Л.Н. Толстого» (Тульская обл., Щёкинский р-он)",
           "degree": 1
         },
         {
@@ -1785,18 +1771,6 @@
           "legal_form": null,
           "variant": null,
           "degree": 4
-        },
-        {
-          "id": "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
-          "kind": "entity",
-          "label": "Фонд развития промышленности Тульской области",
-          "name_latin": null,
-          "inn": "7107116177",
-          "tier": "adjacent",
-          "sanctioned": false,
-          "legal_form": null,
-          "variant": null,
-          "degree": 2
         },
         {
           "id": "fond-sarmat",
@@ -3692,7 +3666,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": null,
-          "degree": 4
+          "degree": 3
         },
         {
           "id": "ooo-npo-rustekhdron",
@@ -4089,18 +4063,6 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "degree": 21
-        },
-        {
-          "id": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "kind": "entity",
-          "label": "ООО «Центр беспилотных систем»",
-          "name_latin": "Center for Unmanned Systems LLC (Tula)",
-          "inn": "7100032961",
-          "tier": "cbst-core",
-          "sanctioned": true,
-          "legal_form": null,
-          "variant": null,
-          "degree": 10
         },
         {
           "id": "ooo-tsentr-dinarus",
@@ -10667,12 +10629,6 @@
           "degree": 4
         },
         {
-          "id": "stub::груданова нина олеговна",
-          "kind": "unresolved",
-          "label": "Груданова Нина Олеговна",
-          "degree": 1
-        },
-        {
           "id": "stub::дмитриев геннадий витальевич",
           "kind": "unresolved",
           "label": "Дмитриев Геннадий Витальевич",
@@ -11066,12 +11022,6 @@
           "id": "stub::шаповалов с.м.",
           "kind": "unresolved",
           "label": "Шаповалов С.М.",
-          "degree": 1
-        },
-        {
-          "id": "stub::шпак максим викторович",
-          "kind": "unresolved",
-          "label": "Шпак Максим Викторович",
           "degree": 1
         },
         {
@@ -11892,17 +11842,6 @@
           "source_id": "s0435",
           "as_of": null,
           "weight": 100,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "related",
-          "label": "external-registry-cross-listed",
-          "source_id": "s0572",
-          "as_of": null,
-          "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -14569,50 +14508,6 @@
           "confidence": null
         },
         {
-          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "directs",
-          "label": null,
-          "source_id": "s1914",
-          "as_of": "2023-12-25",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6813",
-          "as_of": "2023-04-24",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "role",
-          "label": "founder",
-          "source_id": "s8172",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "role",
-          "label": "Генеральный директор, ООО «Центр беспилотных систем» (Тула, ИНН 7100032961)",
-          "source_id": "s1914",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "borisov-evgeniy-gennadevich",
           "target": "ao-nii-vektor",
           "type": "role",
@@ -15390,17 +15285,6 @@
           "source_id": "s5230",
           "as_of": "2025-01-27",
           "weight": 30195465.48,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::гоу-то-яснополянский-образовательный-комплекс-им-л-н-толстого",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "procures",
-          "label": "03662000356230077920001",
-          "source_id": "s1914",
-          "as_of": "2023-12-25",
-          "weight": 3072000,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -18117,17 +18001,6 @@
           "label": null,
           "source_id": "s6702",
           "as_of": "2026-03-16",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6813",
-          "as_of": "2023-04-24",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -25173,17 +25046,6 @@
           "confidence": null
         },
         {
-          "source": "ooo-npo-programmnye-kompleksy-realnogo-vremeni",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6813",
-          "as_of": "2023-04-24",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "ooo-npo-rustekhdron",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -26355,17 +26217,6 @@
           "type": "produces",
           "label": null,
           "source_id": "s8021",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "related",
-          "label": "external-registry-cross-listed",
-          "source_id": "s0572",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -30354,17 +30205,6 @@
           "confidence": null
         },
         {
-          "source": "stub::груданова нина олеговна",
-          "target": "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
-          "type": "directs",
-          "label": null,
-          "source_id": "s7627",
-          "as_of": "2025-06-26",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "stub::дмитриев геннадий витальевич",
           "target": "kulibin-klub",
           "type": "founded",
@@ -31352,17 +31192,6 @@
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::шпак максим викторович",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "directs",
-          "label": null,
-          "source_id": "s6813",
-          "as_of": "2024-06-10",
-          "weight": 1.0,
-          "temporal_status": "historical",
           "confidence": null
         },
         {
@@ -32722,7 +32551,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 80
+          "degree": 78
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -33185,14 +33014,6 @@
           "degree": 4
         },
         {
-          "id": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "kind": "person",
-          "label": "Борисов Александр Сергеевич",
-          "name_latin": "Aleksandr Sergeevich Borisov",
-          "sanctioned": false,
-          "degree": 4
-        },
-        {
           "id": "burlaka-pavel-anatolevich",
           "kind": "person",
           "label": "Бурлака Павел Анатольевич",
@@ -33399,18 +33220,6 @@
           "legal_form": null,
           "variant": null,
           "degree": 4
-        },
-        {
-          "id": "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
-          "kind": "entity",
-          "label": "Фонд развития промышленности Тульской области",
-          "name_latin": null,
-          "inn": "7107116177",
-          "tier": "adjacent",
-          "sanctioned": false,
-          "legal_form": null,
-          "variant": null,
-          "degree": 2
         },
         {
           "id": "fond-sarmat",
@@ -34542,7 +34351,7 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": null,
-          "degree": 4
+          "degree": 3
         },
         {
           "id": "ooo-npts-basirtk",
@@ -34843,18 +34652,6 @@
           "legal_form": null,
           "variant": "dual",
           "degree": 13
-        },
-        {
-          "id": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "kind": "entity",
-          "label": "ООО «Центр беспилотных систем»",
-          "name_latin": "Center for Unmanned Systems LLC (Tula)",
-          "inn": "7100032961",
-          "tier": "cbst-core",
-          "sanctioned": true,
-          "legal_form": null,
-          "variant": null,
-          "degree": 10
         },
         {
           "id": "ooo-tsugam",
@@ -35371,12 +35168,6 @@
           "kind": "unresolved",
           "label": "Григорьев Дмитрий Евгеньевич",
           "degree": 4
-        },
-        {
-          "id": "stub::груданова нина олеговна",
-          "kind": "unresolved",
-          "label": "Груданова Нина Олеговна",
-          "degree": 1
         },
         {
           "id": "stub::дмитриев геннадий витальевич",
@@ -36203,28 +35994,6 @@
           "confidence": null
         },
         {
-          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "directs",
-          "label": null,
-          "source_id": "s1914",
-          "as_of": "2023-12-25",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6813",
-          "as_of": "2023-04-24",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "burlaka-pavel-anatolevich",
           "target": "ooo-gk-logos",
           "type": "directs",
@@ -36561,17 +36330,6 @@
           "label": null,
           "source_id": "s6702",
           "as_of": "2026-03-16",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6813",
-          "as_of": "2023-04-24",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -37353,17 +37111,6 @@
           "label": "90%",
           "source_id": "s6773",
           "as_of": "2024-09-09",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "ooo-npo-programmnye-kompleksy-realnogo-vremeni",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6813",
-          "as_of": "2023-04-24",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -38436,17 +38183,6 @@
           "confidence": null
         },
         {
-          "source": "stub::груданова нина олеговна",
-          "target": "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
-          "type": "directs",
-          "label": null,
-          "source_id": "s7627",
-          "as_of": "2025-06-26",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "stub::дмитриев геннадий витальевич",
           "target": "kulibin-klub",
           "type": "founded",
@@ -39363,7 +39099,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 80
+          "degree": 78
         },
         {
           "id": "antonova-tatyana-sergeevna",
@@ -39490,20 +39226,6 @@
           "degree": 5
         },
         {
-          "id": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "kind": "person",
-          "label": "Борисов Александр Сергеевич",
-          "name_latin": "Aleksandr Sergeevich Borisov",
-          "sanctioned": false,
-          "degree": 4
-        },
-        {
-          "id": "customer::гоу-то-яснополянский-образовательный-комплекс-им-л-н-толстого",
-          "kind": "government_customer",
-          "label": "ГОУ ТО «Яснополянский образовательный комплекс им. Л.Н. Толстого» (Тульская обл., Щёкинский р-он)",
-          "degree": 1
-        },
-        {
           "id": "dmitriy-vladimirovich-rubinshteyn",
           "kind": "person",
           "label": "Дмитрий Владимирович Рубинштейн",
@@ -39562,18 +39284,6 @@
           "legal_form": "Фонд",
           "variant": null,
           "degree": 19
-        },
-        {
-          "id": "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
-          "kind": "entity",
-          "label": "Фонд развития промышленности Тульской области",
-          "name_latin": null,
-          "inn": "7107116177",
-          "tier": "adjacent",
-          "sanctioned": false,
-          "legal_form": null,
-          "variant": null,
-          "degree": 2
         },
         {
           "id": "gk-logos",
@@ -39984,18 +39694,6 @@
           "degree": 55
         },
         {
-          "id": "ooo-npo-programmnye-kompleksy-realnogo-vremeni",
-          "kind": "entity",
-          "label": "ООО «Научно-производственное объединение Программные комплексы реального времени»",
-          "name_latin": null,
-          "inn": "7105509736",
-          "tier": "plumbing",
-          "sanctioned": true,
-          "legal_form": null,
-          "variant": null,
-          "degree": 4
-        },
-        {
           "id": "ooo-npo-rustekhdron",
           "kind": "entity",
           "label": "ООО «НПО Рустехдрон»",
@@ -40140,18 +39838,6 @@
           "degree": 21
         },
         {
-          "id": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "kind": "entity",
-          "label": "ООО «Центр беспилотных систем»",
-          "name_latin": "Center for Unmanned Systems LLC (Tula)",
-          "inn": "7100032961",
-          "tier": "cbst-core",
-          "sanctioned": true,
-          "legal_form": null,
-          "variant": null,
-          "degree": 10
-        },
-        {
           "id": "ooo-tsentr-dinarus",
           "kind": "entity",
           "label": "ООО «Центр Динарус»",
@@ -40279,12 +39965,6 @@
           "id": "stub::российская федерация",
           "kind": "unresolved",
           "label": "Российская Федерация",
-          "degree": 1
-        },
-        {
-          "id": "stub::шпак максим викторович",
-          "kind": "unresolved",
-          "label": "Шпак Максим Викторович",
           "degree": 1
         },
         {
@@ -40508,17 +40188,6 @@
           "confidence": null
         },
         {
-          "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "related",
-          "label": "external-registry-cross-listed",
-          "source_id": "s0572",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "antonova-tatyana-sergeevna",
           "target": "fond-nasha-pravda",
           "type": "role",
@@ -40680,61 +40349,6 @@
           "source_id": "s0003",
           "as_of": "2024-01-31",
           "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "directs",
-          "label": null,
-          "source_id": "s1914",
-          "as_of": "2023-12-25",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6813",
-          "as_of": "2023-04-24",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "role",
-          "label": "founder",
-          "source_id": "s8172",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "borisov-aleksandr-sergeevich-tsbs-tula",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "role",
-          "label": "Генеральный директор, ООО «Центр беспилотных систем» (Тула, ИНН 7100032961)",
-          "source_id": "s1914",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "customer::гоу-то-яснополянский-образовательный-комплекс-им-л-н-толстого",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "procures",
-          "label": "03662000356230077920001",
-          "source_id": "s1914",
-          "as_of": "2023-12-25",
-          "weight": 3072000,
           "temporal_status": "unknown",
           "confidence": null
         },
@@ -40901,17 +40515,6 @@
           "as_of": null,
           "weight": 90.91,
           "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6813",
-          "as_of": "2023-04-24",
-          "weight": 1.0,
-          "temporal_status": "current",
           "confidence": null
         },
         {
@@ -41333,17 +40936,6 @@
           "confidence": "t-doc"
         },
         {
-          "source": "ooo-npo-programmnye-kompleksy-realnogo-vremeni",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6813",
-          "as_of": "2023-04-24",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "ooo-npo-rustekhdron",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -41498,17 +41090,6 @@
           "confidence": "t-doc"
         },
         {
-          "source": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "related",
-          "label": "external-registry-cross-listed",
-          "source_id": "s0572",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "ooo-tsentr-dinarus",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -41649,17 +41230,6 @@
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::шпак максим викторович",
-          "target": "ooo-tsentr-bespilotnykh-sistem-tula",
-          "type": "directs",
-          "label": null,
-          "source_id": "s6813",
-          "as_of": "2024-06-10",
-          "weight": 1.0,
-          "temporal_status": "historical",
           "confidence": null
         },
         {
