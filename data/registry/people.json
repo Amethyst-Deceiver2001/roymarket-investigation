@@ -1761,7 +1761,7 @@
     "slug": "nina-olegovna-yanykina",
     "fio_ru": "Нина Олеговна Яныкина",
     "name_latin": null,
-    "dob": null,
+    "dob": "1985-07-23",
     "birthplace": null,
     "address": null,
     "inn_personal": "780158807980",
@@ -1845,7 +1845,8 @@
       "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0793).",
       "2026-08-24: leader-id.ru self-reports employer \"АНО «Центр беспилотных систем и технологий»\" (ЦБСТ's own full legal name), position \"Генеральный директор\" -- exact match on both employer and title to the already-EGRUL-confirmed role above. Independent corroboration, not new information.",
       "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
-      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-30) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks."
+      "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-30) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
+      "2026-09-30: dob 1985-07-23 supplied by the investigator (s8518, verbatim message archived; the original primary source was not stated). Matched by the assistant from the surname given as 'яныкина' to this record (personal ИНН on file); the only sanctioned person with that surname and initials on record."
     ],
     "_verified_against": "s0231 — ЦБСТ's own full signed ЕГРЮЛ extract, pulled 15.08.2026",
     "opensanctions_matches": [
@@ -2207,7 +2208,7 @@
     "slug": "aleksandr-rufinovich-brovchenko",
     "fio_ru": "Александр Руфинович Бровченко",
     "name_latin": null,
-    "dob": null,
+    "dob": "1969-11-20",
     "birthplace": null,
     "address": null,
     "inn_personal": "501105677892",
@@ -2271,7 +2272,8 @@
       "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0739).",
       "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
       "2026-09-07: registry-hardening pass -- resolved orphan role link (entity_slug was null on a non-candidate role) to fond-nasha-pravda, unambiguous guillemet-quoted-name match after fixing normalise_name()'s legal-prefix case bug.",
-      "2026-09-07: verification backlog closure — identity already confirmed by Фонд «Наша Правда»'s (fond-nasha-pravda) own director_history entry (s0221), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+      "2026-09-07: verification backlog closure — identity already confirmed by Фонд «Наша Правда»'s (fond-nasha-pravda) own director_history entry (s0221), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+      "2026-09-30: dob 1969-11-20 supplied by the investigator (s8518, verbatim message archived; the original primary source was not stated). The message gave only the surname «бровченко», with no initials. Matched to Александр Руфинович (this record, sanctioned, General Director of Фонд «Наша Правда») because the message answered a list of sanctioned people in which only he appeared. A second live person, Сергей Руфинович Бровченко (sergey-rufinovich-brovchenko, not sanctioned), is a different record and has NO date of birth assigned. If the date belongs to Сергей, correct this entry."
     ],
     "_verified_against": "s0221 -- Фонд «Наша Правда»'s own primary-source founding/EGRUL document, naming Александр Руфинович Бровченко as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
@@ -3944,7 +3946,7 @@
     "slug": "bessonov-sergey-nikolaevich",
     "fio_ru": "Бессонов Сергей Николаевич",
     "name_latin": null,
-    "dob": null,
+    "dob": "1977-04-29",
     "birthplace": null,
     "address": null,
     "inn_personal": "644914040799",
@@ -4066,7 +4068,8 @@
       "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. ООО «Аэромакс» -> ooo-aeromaks, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0113).",
       "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аэромакс»'s (ooo-aeromaks) own director_history entry (s6741), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
       "2026-09-14: screen_upr_uchr.py (manual-captcha run) other_entities scan found this director link via egrul.nalog.ru open API; the entity's own director_history already carries s7345 naming this person, but roles[] had no reciprocal entry — added it, same source already on file.",
-      "2026-09-14: reciprocal director-role backfill — ooo-aeromaks-avia-tsentr-logistika's own director field (this exact person, sourced s7441 via egrul.nalog.ru open-API lookup) had no matching roles[] entry on the person side."
+      "2026-09-14: reciprocal director-role backfill — ooo-aeromaks-avia-tsentr-logistika's own director field (this exact person, sourced s7441 via egrul.nalog.ru open-API lookup) had no matching roles[] entry on the person side.",
+      "2026-09-30: dob 1977-04-29 supplied by the investigator (s8518, verbatim message archived; the original primary source was not stated). Matched by the assistant from the surname given as 'bessonov' to this record (personal ИНН on file); the only sanctioned person with that surname and initials on record."
     ],
     "_verified_against": "s6741 -- ООО «Аэромакс»'s own primary-source founding/EGRUL document, naming Бессонов Сергей Николаевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
@@ -5124,7 +5127,7 @@
     "slug": "zhuk-vitaliy-aleksandrovich",
     "fio_ru": "Жук Виталий Александрович",
     "name_latin": null,
-    "dob": null,
+    "dob": "1983-05-26",
     "birthplace": null,
     "address": null,
     "inn_personal": "781422806104",
@@ -5201,7 +5204,8 @@
       "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
       "2026-08-24: resolved this person's `_candidate` role at АО «Котлин-Новатор» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ao-kotlin-novator, source s0463) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
       "2026-09-07: verification backlog closure — identity already confirmed by АО «Котлин-Новатор»'s (ao-kotlin-novator) own director_history entry (s0463), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
-      "[2026-09-16] Added sourced Эколибри shareholder (12.5%) + board-seat role per s0324 (personal ИНН 781422806104, matches the entity's existing person record exactly). NOT resolving the separate docs.html-flagged question of whether this is the same Жук as Котлин-Новатор's -- both existing roles (Котлин-Новатор, Клеверкоптер) left untouched, this is purely additive."
+      "[2026-09-16] Added sourced Эколибри shareholder (12.5%) + board-seat role per s0324 (personal ИНН 781422806104, matches the entity's existing person record exactly). NOT resolving the separate docs.html-flagged question of whether this is the same Жук as Котлин-Новатор's -- both existing roles (Котлин-Новатор, Клеверкоптер) left untouched, this is purely additive.",
+      "2026-09-30: dob 1983-05-26 supplied by the investigator (s8518, verbatim message archived; the original primary source was not stated). Matched by the assistant from the surname given as 'zhuk (given as 26.05.1983)' to this record (personal ИНН on file); the only sanctioned person with that surname and initials on record."
     ],
     "_verified_against": "s0463 -- АО «Котлин-Новатор»'s own primary-source founding/EGRUL document, naming Жук Виталий Александрович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
@@ -5379,7 +5383,7 @@
     "slug": "sokolov-german-olegovich",
     "fio_ru": "Соколов Герман Олегович",
     "name_latin": null,
-    "dob": null,
+    "dob": "1991-08-13",
     "birthplace": null,
     "address": null,
     "inn_personal": "500310216204",
@@ -5475,7 +5479,8 @@
       "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
       "2026-08-24: added director roles at both ooo-npo-rustekhdron and the newly-added ooo-rtd-zashchita, alongside the existing verified co-inventor role. The ООО «ДСГ» candidate role remains unresolved and unrelated (per this record's own existing _corrected note: ДСГ's director carries a different patronymic, Никита Дмитриевич, treated as a same-surname coincidence, not this Соколов).",
       "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
-      "2026-09-07: verification backlog closure — identity already confirmed by ООО «РТД-Защита»'s (ooo-rtd-zashchita) own director_history entry (s6792), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «РТД-Защита»'s (ooo-rtd-zashchita) own director_history entry (s6792), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+      "2026-09-30: dob 1991-08-13 supplied by the investigator (s8518, verbatim message archived; the original primary source was not stated). Matched by the assistant from the surname given as 'sokolov g (given as 13.08.1991)' to this record (personal ИНН on file); the only sanctioned person with that surname and initials on record."
     ],
     "_verified_against": "s6792 -- ООО «РТД-Защита»'s own primary-source founding/EGRUL document, naming Соколов Герман Олегович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
@@ -9328,7 +9333,7 @@
     "slug": "sokolov-nikita-dmitrievich",
     "fio_ru": "Соколов Никита Дмитриевич",
     "name_latin": null,
-    "dob": null,
+    "dob": "1994-04-11",
     "birthplace": null,
     "address": null,
     "inn_personal": "780633823516",
@@ -9426,7 +9431,8 @@
       "2026-08-24 opensanctions people cross-reference pass: single unambiguous score-1.0 ru-inn candidate, sanction.linked.",
       "2026-08-24: resolved this person's `_candidate` role at ООО «ДСГ» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-dsg, source s0482) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
       "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
-      "2026-09-07: verification backlog closure — identity already confirmed by ООО «ДСГ»'s (ooo-dsg) own director_history entry (s6770), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+      "2026-09-07: verification backlog closure — identity already confirmed by ООО «ДСГ»'s (ooo-dsg) own director_history entry (s6770), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+      "2026-09-30: dob 1994-04-11 supplied by the investigator (s8518, verbatim message archived; the original primary source was not stated). Matched by the assistant from the surname given as 'sokolov nikita (given as 11.04.1994)' to this record (personal ИНН on file); the only sanctioned person with that surname and initials on record."
     ],
     "_verified_against": "s6770 -- ООО «ДСГ»'s own primary-source founding/EGRUL document, naming Соколов Никита Дмитриевич as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
@@ -16630,7 +16636,7 @@
     "slug": "bogomolov-andrey-vladimirovich",
     "fio_ru": "Богомолов Андрей Владимирович",
     "name_latin": null,
-    "dob": null,
+    "dob": "1977-07-02",
     "birthplace": null,
     "address": null,
     "inn_personal": "673103142483",
@@ -16694,7 +16700,8 @@
       "2026-08-24: OpenSanctions screening, ID-confirmed exact personal ИНН match (source s0757).",
       "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2637799C1, RU2663193C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
       "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
-      "2026-09-07: verification backlog closure — identity already confirmed by АО «НИИ СТТ»'s (ao-nii-stt) own director_history entry (s0211), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+      "2026-09-07: verification backlog closure — identity already confirmed by АО «НИИ СТТ»'s (ao-nii-stt) own director_history entry (s0211), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+      "2026-09-30: dob 1977-07-02 supplied by the investigator (s8518, verbatim message archived; the original primary source was not stated). Matched by the assistant from the surname given as 'bogomolov (given as 02.07.1977)' to this record (personal ИНН on file); the only sanctioned person with that surname and initials on record."
     ],
     "_verified_against": "s0211 -- АО «НИИ СТТ»'s own primary-source founding/EGRUL document, naming Богомолов Андрей Владимирович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [
@@ -19052,7 +19059,7 @@
     "slug": "skoryatin-georgiy-andreevich",
     "fio_ru": "Скорятин Георгий Андреевич",
     "name_latin": null,
-    "dob": null,
+    "dob": "1988-07-05",
     "birthplace": null,
     "address": null,
     "inn_personal": "773272723527",
@@ -19120,7 +19127,8 @@
     "_corrected": [
       "2026-09-20: adversarial read (claim-verifier) flagged the sanctions entry as unconfirmed and the record as having no roles or ИНН. Checked by hand: the OpenSanctions match id embeds ИНН 773272723527 (passes the checksum), and the same name and ИНН are on the ДИАМ-Аэро ЕГРЮЛ выписка (s6842) as its general director since 16.06.2025. So the match is ID-confirmed, but only as sanction.linked, a link to a sanctioned party; the ДИАМ-Аэро role and the ИНН are now recorded with that source. The earlier claim that he directs ГК «Аэромакс»/Кронштадт was not checked against that entity's director_history and is left as it was.",
       "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
-      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there."
+      "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
+      "2026-09-30: dob 1988-07-05 supplied by the investigator (s8518, verbatim message archived; the original primary source was not stated). Matched by the assistant from the surname given as 'скорятин (given as 05.07.1988)' to this record (personal ИНН on file); the only sanctioned person with that surname and initials on record."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
