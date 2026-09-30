@@ -28,6 +28,12 @@ Person profile · РОЙ.МАРКЕТ investigation
 {% for rp in related_persons %}- **{{ rp.name_latin or rp.fio_ru }}**{% if rp.title %} — {{ rp.title }}{% endif %} — shared entity: {{ rp.via_entity }}{% if rp.source %} [{{ rp.source }}]{% endif %}
 {% endfor %}
 {% endif %}
+{% if family %}
+## Family ties
+
+{% for f in family %}- **{{ f.name }}** — {{ f.text }}{% if f.confidence %} ({{ f.confidence }}){% endif %}{% if f.source %} [{{ f.source }}]{% endif %}
+{% endfor %}
+{% endif %}
 {% if screening %}
 ## Sanctions & screening
 

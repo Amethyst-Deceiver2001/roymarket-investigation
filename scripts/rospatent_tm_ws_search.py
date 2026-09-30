@@ -66,7 +66,7 @@ After running this:
 Usage:
     python3 scripts/rospatent_tm_ws_search.py                 # full manufacturer-tier roster
     python3 scripts/rospatent_tm_ws_search.py --limit 5        # first 5 entities only
-    python3 scripts/rospatent_tm_ws_search.py --slug ooo-trimiks-bulat-3mx  # one entity
+    python3 scripts/rospatent_tm_ws_search.py --slug ooo-trimiks  # one entity
 """
 from __future__ import annotations
 

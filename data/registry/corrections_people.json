@@ -3610,7 +3610,7 @@
         "roles": [
           {
             "entity_name": "ООО «Тримикс»",
-            "entity_slug": "ooo-trimiks-bulat-3mx",
+            "entity_slug": "ooo-trimiks",
             "from": null,
             "source_id": "s1039",
             "title": "co-inventor (patent RU2826668C1)",
@@ -3635,7 +3635,7 @@
         "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text.",
         "2026-08-25: photo + corroborating public appearance from @vimaivivs (ВИМАИВиВС, St. Petersburg Military Artillery Museum) post 3195, 17.12.2025 (t.me/vimaivivs/3195, s1409) — ceremony where ООО «Тримикс» handed the museum a «Булат» v.4 detector and a «Таир» individual-warning device, and signed a cooperation agreement with the Михайловская военная артиллерийская академия, with Шагиахметов personally awarding certificates (благодарственные письма) to cadets — same genre as other roster entities' cadet/unit recognition events. Confirms his GD role and personal public-facing promotion of the product line in a military-institutional setting.",
         "2026-08-25: OSINT research pass — adds prior (unrelated-industry, now-liquidated) ИП registration.",
-        "2026-09-07: verification backlog closure — identity already confirmed by ООО «Тримикс»'s (ooo-trimiks-bulat-3mx) own director_history entry (s1408), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+        "2026-09-07: verification backlog closure — identity already confirmed by ООО «Тримикс»'s (ooo-trimiks) own director_history entry (s1408), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
       ]
     },
     "shakhmatov-ivan-anatolevich": {
@@ -3977,7 +3977,15 @@
     "tsyganov-vadim-borisovich": {
       "set": {
         "sources": [
-          "s1408"
+          "s1408",
+          "s8521",
+          "s8527",
+          "s8528",
+          "s8529",
+          "s8530",
+          "s8531",
+          "s8532",
+          "s8537"
         ],
         "sanctions": [
           {
@@ -3989,13 +3997,16 @@
             "source_id": "s5718"
           }
         ],
-        "_verified": true
+        "_verified": true,
+        "photo": "images/tsyganov-vadim-borisovich_portrait_wikimedia.jpg",
+        "birthplace": "Стерлитамак, Башкирская АССР, РСФСР, СССР"
       },
       "verified_against": "s6799 -- ООО «ПОКРОВ»'s own primary-source founding/EGRUL document, naming Цыганов Вадим Борисович as director (cross-referenced from the entity's own director_history entry).",
       "why": [
         "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
         "2026-09-05 aleph_screen.py hit under 'Global Sanctions Database' dataset scored the query (this person's own personal ИНН) against an entry carrying the identical ИНН (innCode 504405055721 -> matches inn_personal exactly) and identical birthDate (1963-05-30, already on file, sourced separately) — this is the same government-contractor ИП Цыганов already tracked for the «Булат»/«Покров» zakupki contracts, now confirmed as a sanctioned individual under Ukraine's NSDC register.",
-        "2026-09-07: verification backlog closure — identity already confirmed by ООО «ПОКРОВ»'s (ooo-pokrov) own director_history entry (s6799), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+        "2026-09-07: verification backlog closure — identity already confirmed by ООО «ПОКРОВ»'s (ooo-pokrov) own director_history entry (s6799), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+        "[2026-09-30] Identified as the husband and producer of the singer Вика Цыганова (Wikipedia infobox «Супруга: Вика Цыганова» and DOB 30.05.1963 / Стерлитамак, s8537; Meduza 27.10.2023, s8527). DOB matches the registry DOB. Birthplace added from s8537. Photo: Wikimedia Commons, Dmitry Rozhkov, CC BY-SA 3.0, 18.10.2011 (s8521); attribution required on publication. Related public statements: 08.11.2023 he told Газета.Ru he bought a «Сания» dome anti-drone complex for his wife's press conference (s8528, s8529), a different product from «Покров»; 14.11.2023 The Insider reports the couple gave a drone detector, anti-drones, a thermal imager and an FPV jammer to the front (s8531, no brand named); 16.09.2024 ПОКРОВ's channel says the couple handed over a «Покров» ВЦ4 (s8532); 01.04.2025 Брянская Губерния reports they gave the Bryansk border detachment a «Покров» РЭБ complex (s8530)."
       ]
     },
     "tyutina-olga-anatolevna": {
@@ -5351,21 +5362,63 @@
     },
     "tsyganova-viktoriya-yurevna": {
       "set": {
-        "graph_tier": "reference",
         "sources": [
-          "s1408"
+          "s1408",
+          "s8523",
+          "s8524",
+          "s8527",
+          "s8531",
+          "s8532",
+          "s8533",
+          "s8536",
+          "s8538"
         ],
         "family_of": {
           "principal_slug": "tsyganov-vadim-borisovich",
           "relation": "wife",
           "confidence": "confirmed",
-          "source_id": null
-        }
+          "source_id": "s8537"
+        },
+        "name_latin": "Tsyganova (Zhukova) Viktoriya Yuryevna",
+        "birthplace": "Хабаровск, РСФСР, СССР",
+        "photo": "images/tsyganova-viktoriya-yurevna_portrait_wikimedia.jpg",
+        "social": [
+          {
+            "platform": "Telegram",
+            "url": "https://t.me/vika_tsyganova63",
+            "source_id": "s8533"
+          },
+          {
+            "platform": "Website",
+            "url": "http://www.tsiganova.ru/",
+            "source_id": "s8536"
+          }
+        ],
+        "sanctions": [
+          {
+            "regime": [
+              "Ukraine (NSDC decision 726/2022; NABC sanctions tracker)"
+            ],
+            "date": "2022-10-19",
+            "note": "Ukrainian listing 19.10.2022, in force to 19.10.2027 per the OpenSanctions record (s8524); grounds per the NABC «Война и санкции» portal (s8523): «Поддержала военное вторжение россии в Украину в публичных заявлениях». DOB 28.10.1963 and Хабаровск match the other sources. The primary NSDC decree text is not on file; this rests on two secondary mirrors, so treat it as unverified until it is opened.",
+            "source_id": "s8524"
+          },
+          {
+            "regime": [
+              "Latvia (entry ban, March 2022)"
+            ],
+            "date": "2022-03",
+            "note": "Per the Russian Wikipedia article (s8538), which cites Радио Свобода; the Latvian primary list is not on file.",
+            "source_id": "s8538"
+          }
+        ],
+        "notes": "2026-09-30: new record at investigator direction. Singer, wife of Цыганов Вадим Борисович, who owns ООО «ПОКРОВ» (the listed 3mx dealer). Born Жукова (s8538). Not a director or founder of any registered entity found so far (other_entities not yet screened). Public appearances in the network's orbit, not corporate ties: НПО «Небо» channel announces her concert 26.04.2026 in Lipetsk; Проект «Архангел» channel posts her music 19.04.2024 and 16.10.2025. Her own channel forwarded a «Система ПОКРОВ» radar advert on 29.09.2026 (s8533). Photo: Wikimedia Commons, Dmitry Rozhkov, CC BY-SA 3.0, 18.10.2011 (s8522); attribution required on publication."
       },
       "why": [
         "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
         "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
-        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag)."
+        "2026-09-16: added family_of (new people.json field, graph_contract schema v6 family_tie edge) from this record's own already-sourced dossier notes -- the person's family tie to the network principal was already fully documented in prose but never converted into a structured field/graph edge, leaving this person as a false degree-0 gap. No new research performed; confidence mirrors the dossier's own hedging language (plain statement vs вероятно/предположительно vs an explicit unresolved flag).",
+        "[2026-09-30] Record found already on file (from the s1408 dossier, 2026-08-25, with DOB 1963-10-28 and family_of wife) after I first created a duplicate; the duplicate is removed and its content merged here. graph_tier: reference is dropped: she is a sanctioned public figure whose channel promotes ПОКРОВ, so she is a POI in her own right and belongs on the graph. The dossier DOB agrees with the NABC portal (s8523), OpenSanctions (s8524) and Wikipedia (s8538), which is independent corroboration of the dossier row. family_of.source_id set to s8537 (Wikipedia: «Супруга: Вика Цыганова» on Вадим's article; Meduza s8527 says «ее мужа, продюсера Вадима Цыганова»). Sanctions: Ukraine (NSDC 726/2022, from s8524) and Latvia entry ban (s8538 citing Радио Свобода); no primary text on file for either. Photo: Wikimedia Commons, Dmitry Rozhkov, CC BY-SA 3.0, 18.10.2011 (s8522), attribution required on publication."
       ]
     },
     "oksman-nikolas-nikolaevich": {
@@ -11285,7 +11338,7 @@
       "roles": [
         {
           "entity_name": "ООО «Тримикс»",
-          "entity_slug": "ooo-trimiks-bulat-3mx",
+          "entity_slug": "ooo-trimiks",
           "from": null,
           "source_id": "s1408",
           "title": "Директор по развитию",
@@ -11331,7 +11384,7 @@
       "roles": [
         {
           "entity_name": "ООО «Тримикс»",
-          "entity_slug": "ooo-trimiks-bulat-3mx",
+          "entity_slug": "ooo-trimiks",
           "from": null,
           "source_id": "s1408",
           "title": "Сотрудник",
@@ -11374,7 +11427,7 @@
       "roles": [
         {
           "entity_name": "ООО «Тримикс»",
-          "entity_slug": "ooo-trimiks-bulat-3mx",
+          "entity_slug": "ooo-trimiks",
           "from": null,
           "source_id": "s1408",
           "title": "Сотрудник",
@@ -11394,7 +11447,7 @@
       "roles": [
         {
           "entity_name": "ООО «Тримикс»",
-          "entity_slug": "ooo-trimiks-bulat-3mx",
+          "entity_slug": "ooo-trimiks",
           "from": null,
           "source_id": "s1408",
           "title": "Сотрудник",
@@ -11427,7 +11480,7 @@
       "roles": [
         {
           "entity_name": "ООО «Тримикс»",
-          "entity_slug": "ooo-trimiks-bulat-3mx",
+          "entity_slug": "ooo-trimiks",
           "from": null,
           "source_id": "s1408",
           "title": "Сотрудник",
@@ -11448,7 +11501,7 @@
       "roles": [
         {
           "entity_name": "ООО «Тримикс»",
-          "entity_slug": "ooo-trimiks-bulat-3mx",
+          "entity_slug": "ooo-trimiks",
           "from": null,
           "source_id": "s1408",
           "title": "Сотрудник",
@@ -11482,7 +11535,7 @@
         {
           "_candidate": true,
           "entity_name": "ООО «Тримикс»",
-          "entity_slug": "ooo-trimiks-bulat-3mx",
+          "entity_slug": "ooo-trimiks",
           "from": null,
           "source_id": "s1408",
           "title": "Сотрудник (не окончательно подтверждено)",
@@ -11520,7 +11573,7 @@
       "roles": [
         {
           "entity_name": "ООО «Тримикс»",
-          "entity_slug": "ooo-trimiks-bulat-3mx",
+          "entity_slug": "ooo-trimiks",
           "from": null,
           "source_id": "s1408",
           "title": "Дилер (Москва, Мариуполь)",

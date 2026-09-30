@@ -226,6 +226,30 @@ class PersonProfileBuilder:
                     "via_profile_url": self.entity_profile_url(group["slug"]),
                 })
 
+        # --- family ties (people.json family_of, in either direction) ---
+        family = []
+
+        def _family_row(other, text, fam):
+            page = OUT_DIR / f"{other['slug']}.html"
+            family.append({
+                "name": other.get("name_latin") or other.get("fio_ru"),
+                "fio_ru": other.get("fio_ru"),
+                "url": f"{other['slug']}.html" if page.exists() else None,
+                "text": text,
+                "confidence": fam.get("confidence"),
+                "source": self.source_label(fam.get("source_id")),
+            })
+
+        own = p.get("family_of")
+        if isinstance(own, dict) and own.get("principal_slug") in self.by_person_slug:
+            _family_row(self.by_person_slug[own["principal_slug"]],
+                        f"{own.get('relation')} of", own)
+        for other in self.people:
+            fam = other.get("family_of")
+            if (isinstance(fam, dict) and fam.get("principal_slug") == slug
+                    and not other.get("_merged_into")):
+                _family_row(other, fam.get("relation"), fam)
+
         # --- sanctions / screening ---
         screening = []
         if p.get("opensanctions_matches"):
@@ -298,7 +322,7 @@ class PersonProfileBuilder:
         return {
             "slug": slug, "display_name": display_name, "fio_ru": p.get("fio_ru"),
             "photo_url": photo_url, "chips": chips, "meta_grid": meta_grid,
-            "role_rows": role_rows, "products": products, "related_persons": related_persons,
+            "role_rows": role_rows, "products": products, "related_persons": related_persons, "family": family,
             "screening": screening, "sanctions": sanctions,
             "network_svg": network_svg,
             "sources_table": sources_table,

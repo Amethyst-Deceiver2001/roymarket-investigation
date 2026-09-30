@@ -4119,7 +4119,7 @@
           "degree": 13
         },
         {
-          "id": "ooo-trimiks-bulat-3mx",
+          "id": "ooo-trimiks",
           "kind": "entity",
           "label": "ООО «Тримикс»",
           "name_latin": "LIMITED LIABILITY COMPANY \"TRIMIX\"",
@@ -9741,10 +9741,10 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-trimiks-bulat-3mx::азар",
+          "id": "product::ooo-trimiks::азар",
           "kind": "product",
           "label": "«Азар»",
-          "owner_slug": "ooo-trimiks-bulat-3mx",
+          "owner_slug": "ooo-trimiks",
           "source_id": "s8022",
           "classification": {
             "status": "unclassified",
@@ -9754,10 +9754,10 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-trimiks-bulat-3mx::булат-в-3",
+          "id": "product::ooo-trimiks::булат-в-3",
           "kind": "product",
           "label": "«Булат» в.3",
-          "owner_slug": "ooo-trimiks-bulat-3mx",
+          "owner_slug": "ooo-trimiks",
           "source_id": "s8018",
           "classification": {
             "status": "unclassified",
@@ -9767,10 +9767,10 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-trimiks-bulat-3mx::булат-в-4",
+          "id": "product::ooo-trimiks::булат-в-4",
           "kind": "product",
           "label": "«Булат» в.4",
-          "owner_slug": "ooo-trimiks-bulat-3mx",
+          "owner_slug": "ooo-trimiks",
           "source_id": "s8019",
           "classification": {
             "status": "unclassified",
@@ -9780,10 +9780,10 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-trimiks-bulat-3mx::булат-онлайн",
+          "id": "product::ooo-trimiks::булат-онлайн",
           "kind": "product",
           "label": "«Булат-Онлайн»",
-          "owner_slug": "ooo-trimiks-bulat-3mx",
+          "owner_slug": "ooo-trimiks",
           "source_id": "s8020",
           "classification": {
             "status": "unclassified",
@@ -9793,10 +9793,10 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-trimiks-bulat-3mx::марс",
+          "id": "product::ooo-trimiks::марс",
           "kind": "product",
           "label": "«Марс»",
-          "owner_slug": "ooo-trimiks-bulat-3mx",
+          "owner_slug": "ooo-trimiks",
           "source_id": "s1383",
           "classification": {
             "status": "unclassified",
@@ -9806,10 +9806,10 @@
           "degree": 1
         },
         {
-          "id": "product::ooo-trimiks-bulat-3mx::петр",
+          "id": "product::ooo-trimiks::петр",
           "kind": "product",
           "label": "«Пётр»",
-          "owner_slug": "ooo-trimiks-bulat-3mx",
+          "owner_slug": "ooo-trimiks",
           "source_id": "s8021",
           "classification": {
             "status": "unclassified",
@@ -11206,7 +11206,15 @@
           "label": "Цыганов Вадим Борисович",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 4
+          "degree": 5
+        },
+        {
+          "id": "tsyganova-viktoriya-yurevna",
+          "kind": "person",
+          "label": "Цыганова Виктория Юрьевна",
+          "name_latin": "Tsyganova (Zhukova) Viktoriya Yuryevna",
+          "sanctioned": true,
+          "degree": 1
         },
         {
           "id": "tychinskiy-aleksandr-yulevich",
@@ -11781,7 +11789,7 @@
         },
         {
           "source": "ano-npts-ushkuynik",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "related",
           "label": "co-speaker",
           "source_id": "s8066",
@@ -14289,7 +14297,7 @@
         },
         {
           "source": "beloglazova-lyudmila-aleksandrovna",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "directs",
           "label": null,
           "source_id": "s1408",
@@ -17985,7 +17993,7 @@
         },
         {
           "source": "fedorov-pavel-romanovich",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "role",
           "label": "Сотрудник",
           "source_id": "s1408",
@@ -21164,7 +21172,7 @@
         },
         {
           "source": "kuznetsov-ruslan-nikolaevich",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "role",
           "label": "Сотрудник",
           "source_id": "s1408",
@@ -21681,7 +21689,7 @@
         },
         {
           "source": "mikhaylov-konstantin-denisovich",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "role",
           "label": "Дилер (Москва, Мариуполь)",
           "source_id": "s1408",
@@ -26564,7 +26572,7 @@
           "confidence": null
         },
         {
-          "source": "ooo-trimiks-bulat-3mx",
+          "source": "ooo-trimiks",
           "target": "ano-npts-ushkuynik",
           "type": "related",
           "label": "co-speaker",
@@ -26575,7 +26583,7 @@
           "confidence": null
         },
         {
-          "source": "ooo-trimiks-bulat-3mx",
+          "source": "ooo-trimiks",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Product («Булат»/3mx) shown at ЦБСТ's Дронница 2025 showcase.",
@@ -26586,7 +26594,7 @@
           "confidence": "t-doc"
         },
         {
-          "source": "ooo-trimiks-bulat-3mx",
+          "source": "ooo-trimiks",
           "target": "ooo-pokrov",
           "type": "related",
           "label": "dealer",
@@ -26597,8 +26605,8 @@
           "confidence": null
         },
         {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::азар",
+          "source": "ooo-trimiks",
+          "target": "product::ooo-trimiks::азар",
           "type": "produces",
           "label": null,
           "source_id": "s8022",
@@ -26608,8 +26616,8 @@
           "confidence": null
         },
         {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::булат-в-3",
+          "source": "ooo-trimiks",
+          "target": "product::ooo-trimiks::булат-в-3",
           "type": "produces",
           "label": null,
           "source_id": "s8018",
@@ -26619,8 +26627,8 @@
           "confidence": null
         },
         {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::булат-в-4",
+          "source": "ooo-trimiks",
+          "target": "product::ooo-trimiks::булат-в-4",
           "type": "produces",
           "label": null,
           "source_id": "s8019",
@@ -26630,8 +26638,8 @@
           "confidence": null
         },
         {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::булат-онлайн",
+          "source": "ooo-trimiks",
+          "target": "product::ooo-trimiks::булат-онлайн",
           "type": "produces",
           "label": null,
           "source_id": "s8020",
@@ -26641,8 +26649,8 @@
           "confidence": null
         },
         {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::марс",
+          "source": "ooo-trimiks",
+          "target": "product::ooo-trimiks::марс",
           "type": "produces",
           "label": null,
           "source_id": "s1383",
@@ -26652,8 +26660,8 @@
           "confidence": null
         },
         {
-          "source": "ooo-trimiks-bulat-3mx",
-          "target": "product::ooo-trimiks-bulat-3mx::петр",
+          "source": "ooo-trimiks",
+          "target": "product::ooo-trimiks::петр",
           "type": "produces",
           "label": null,
           "source_id": "s8021",
@@ -27291,7 +27299,7 @@
         },
         {
           "source": "petrov-aleksey-aleksandrovich",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "role",
           "label": "Сотрудник (не окончательно подтверждено)",
           "source_id": "s1408",
@@ -28875,7 +28883,7 @@
         },
         {
           "source": "shagiakhmetov-ayrat-fatkhutdinovich",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "directs",
           "label": null,
           "source_id": "s1408",
@@ -28886,7 +28894,7 @@
         },
         {
           "source": "shagiakhmetov-ayrat-fatkhutdinovich",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "founded",
           "label": "former founder (15%)",
           "source_id": "s1408",
@@ -28897,7 +28905,7 @@
         },
         {
           "source": "shagiakhmetov-ayrat-fatkhutdinovich",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "role",
           "label": "co-inventor (patent RU2826668C1)",
           "source_id": "s1039",
@@ -28908,7 +28916,7 @@
         },
         {
           "source": "shakhmatov-ivan-anatolevich",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "founded",
           "label": "former founder (15%)",
           "source_id": "s1408",
@@ -28930,7 +28938,7 @@
         },
         {
           "source": "shandobylo-sergey-sergeevich",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "role",
           "label": "Директор по развитию",
           "source_id": "s1408",
@@ -30470,7 +30478,7 @@
         },
         {
           "source": "stub::белоглазова",
-          "target": "ooo-trimiks-bulat-3mx",
+          "target": "ooo-trimiks",
           "type": "founded",
           "label": "former founder (100%)",
           "source_id": "s1408",
@@ -31996,6 +32004,17 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
+        },
+        {
+          "source": "tsyganova-viktoriya-yurevna",
+          "target": "tsyganov-vadim-borisovich",
+          "type": "family_tie",
+          "label": "wife",
+          "source_id": "s8537",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "confirmed"
         },
         {
           "source": "tychinskiy-aleksandr-yulevich",
@@ -40266,7 +40285,7 @@
           "degree": 13
         },
         {
-          "id": "ooo-trimiks-bulat-3mx",
+          "id": "ooo-trimiks",
           "kind": "entity",
           "label": "ООО «Тримикс»",
           "name_latin": "LIMITED LIABILITY COMPANY \"TRIMIX\"",
@@ -41519,7 +41538,7 @@
           "confidence": "t-doc"
         },
         {
-          "source": "ooo-trimiks-bulat-3mx",
+          "source": "ooo-trimiks",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
           "label": "Product («Булат»/3mx) shown at ЦБСТ's Дронница 2025 showcase.",

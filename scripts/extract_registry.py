@@ -1305,6 +1305,27 @@ def main() -> int:
     people = parse_people(lines)
     prose_people = parse_people_from_prose(text)
 
+    # Slug renames (corrections_entities.json "slug_renames": {old: new}).
+    # A scaffold slug is derived from the brief's table row, so a slug that
+    # embeds a brand or a truncated name can only be fixed here, before any
+    # correction or cross-reference is applied. Only whole-string values equal
+    # to the old slug are rewritten, so archived source filenames that happen to
+    # contain it are left alone.
+    renames = (load_corrections("slug_renames").get("slug_renames") or {})
+    if renames:
+        def _rename(node):
+            if isinstance(node, dict):
+                for k, v in node.items():
+                    node[k] = _rename(v)
+            elif isinstance(node, list):
+                for i, v in enumerate(node):
+                    node[i] = _rename(v)
+            elif isinstance(node, str):
+                return renames.get(node, node)
+            return node
+        for group in (ents, mans, catchalls, people, prose_people):
+            _rename(group)
+
     # Table people win — their role and position are stated, not inferred.
     # Prose records fill in everyone the two tables never covered, and top up
     # a table person's identifiers where the table had none.

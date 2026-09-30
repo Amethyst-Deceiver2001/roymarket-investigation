@@ -76,7 +76,7 @@ FLAGSHIP_PRODUCTS = [
     },
     {
         "slug": "bulat",
-        "maker_slug": "ooo-trimiks-bulat-3mx",
+        "maker_slug": "ooo-trimiks",
         "reseller_slug": "ooo-pokrov",
         "distributor_slug": "ip-tsyganov-vadim-borisovich",
         "product_names": ["«Булат» в.4", "«Булат» в.3", "Детектор «Булат» v.4 (3MX)",

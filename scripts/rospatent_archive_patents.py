@@ -108,7 +108,7 @@ PATENTS: list[tuple[str, str]] = [
     ("npts-elvis", "RU231126U1_20250113"),
     ("npts-elvis", "RU117356S_20191031"),
 
-    ("ooo-trimiks-bulat-3mx", "RU2826668C1_20240916"),
+    ("ooo-trimiks", "RU2826668C1_20240916"),
     ("ooo-kravt-udmurtiya", "RU2858174C1_20260313"),
     ("npp-radar-mms", "RU2705387C1_20191107"),
     ("npp-radar-mms", "RU2722633C1_20200602"),

@@ -19953,7 +19953,7 @@
     "fssp_debt_checked_at": "2026-09-08"
   },
   {
-    "slug": "ooo-trimiks-bulat-3mx",
+    "slug": "ooo-trimiks",
     "name_ru": "ООО «Тримикс»",
     "name_latin": "LIMITED LIABILITY COMPANY \"TRIMIX\"",
     "legal_form": "ООО",
@@ -24830,7 +24830,7 @@
           "url": "https://godrone.ru/"
         },
         {
-          "note": "набат.рф -- dedicated single-product site for «Набат v3» (punycode Cyrillic domain), user-supplied 2026-08-25, archived s1393. Lists address \"Большой Симоновский переулок, 2\", Москва -- a physical retail/showroom location, DIFFERENT from the entity's EGRUL registered office (111677, Некрасовка). CONFIRMED REAL 2026-08-25 via a user-supplied Street View screenshot (s1394): a genuine storefront at this address, signage reading \"GODRONE\"/\"Gd Home\", with a militarized soldier-silhouette decal on the storefront door. Includes a third-party comparison: the site paraphrases (not a direct quote) a comparison by Кирилл Фёдоров -- self-described \"российский блогер и военный эксперт\", host on «Соловьёв LIVE» -- of «Набат» against «Булат» (ooo-trimiks-bulat-3mx's own detector), concluding «Набат» is more compact/waterproof/impact-resistant and tracks more drones simultaneously. Marketing copy, not verified against Фёдоров's own original content -- treat as the manufacturer's own claim about a third party's opinion, not a confirmed independent endorsement.",
+          "note": "набат.рф -- dedicated single-product site for «Набат v3» (punycode Cyrillic domain), user-supplied 2026-08-25, archived s1393. Lists address \"Большой Симоновский переулок, 2\", Москва -- a physical retail/showroom location, DIFFERENT from the entity's EGRUL registered office (111677, Некрасовка). CONFIRMED REAL 2026-08-25 via a user-supplied Street View screenshot (s1394): a genuine storefront at this address, signage reading \"GODRONE\"/\"Gd Home\", with a militarized soldier-silhouette decal on the storefront door. Includes a third-party comparison: the site paraphrases (not a direct quote) a comparison by Кирилл Фёдоров -- self-described \"российский блогер и военный эксперт\", host on «Соловьёв LIVE» -- of «Набат» against «Булат» (ooo-trimiks's own detector), concluding «Набат» is more compact/waterproof/impact-resistant and tracks more drones simultaneously. Marketing copy, not verified against Фёдоров's own original content -- treat as the manufacturer's own claim about a third party's opinion, not a confirmed independent endorsement.",
           "url": "https://xn--80aac0c2a.xn--p1ai/"
         }
       ],
@@ -24893,7 +24893,7 @@
       "User-supplied browser HAR captures 2026-08-25 (Ozon search/seller page for \"GD\", Wildberries search for \"набат детектор\") answered the standing wb_overlap question with much more specific evidence than the earlier ИНН-only check. WB: all 4 search results independently ID-checked via wbbasket.ru's own supplier-by-id endpoint -- every one is an unrelated Chinese cross-border seller (Fujian/Henan/Tianjin trading companies), none is this entity. Confirms wb_overlap=none_found rather than just leaving it unexplained. Ozon: a seller display-named \"GD\" sells a directly GoDrone-branded item plus a Nabat-compatible battery -- plausible but not ID-confirmed (legal-info modal not captured, direct curl blocked by antibot) -- logged as an open_question rather than promoted as confirmed.",
       "User pointed to a second, much larger Ozon seller (2026-08-25, s1391): \"GoDrone\" (seller_id 3980614, distinct from \"GD\" above), 4.8 rating, 3,358 reviews -- genuine commercial scale, consistent with \"godrone is a big seller on Ozon.\" Same identity gap as the smaller account: no sellerLegalInformation content captured for either across two separate HAR sessions. Recorded as a second brand-match marketplace_listings lead, not promoted to confirmed.",
       "User then supplied the seller's own \"О магазине\" legal text directly (2026-08-25, s1392): ООО «ИНВИЖН ТРЕЙД», ОГРН 1237700616614. Cross-checked via egrul.nalog.ru open API: ИНН 7720907532, GD Курдий Людмила, registered 18.09.2023 -- a COMPLETELY DIFFERENT legal entity from ооо-goudron (ИНН 9721203814). Corrected the marketplace_listings note to make clear this large seller's scale/reviews belong to a third-party reseller, not this entity -- avoids a sanctions-relevant misattribution.",
-      "User pointed to a dedicated product site, набат.рф (punycode, 2026-08-25, s1393, direct curl archive). Added full pricing/spec detail to products[] -- notably an explicit discounted 'military buyer' price tier (100,000-106,000₽ vs 115,000-120,000₽ standard/legal-entity pricing), a stronger and more concrete signal than the general ЦБСТ-working-relationship quote already on file. Also surfaced a marketing comparison against ooo-trimiks-bulat-3mx's «Булат» detector by a self-described military-affairs blogger/«Соловьёв LIVE» host -- recorded as the site's own paraphrase, not verified against the blogger's original content, per this project's verbatim-quote discipline.",
+      "User pointed to a dedicated product site, набат.рф (punycode, 2026-08-25, s1393, direct curl archive). Added full pricing/spec detail to products[] -- notably an explicit discounted 'military buyer' price tier (100,000-106,000₽ vs 115,000-120,000₽ standard/legal-entity pricing), a stronger and more concrete signal than the general ЦБСТ-working-relationship quote already on file. Also surfaced a marketing comparison against ooo-trimiks's «Булат» detector by a self-described military-affairs blogger/«Соловьёв LIVE» host -- recorded as the site's own paraphrase, not verified against the blogger's original content, per this project's verbatim-quote discipline.",
       "User reminded to also capture self-incriminating marketing copy verbatim, not just paraphrase around it. Re-checked набат.рф's raw HTML for СВО/воен mentions beyond the pricing table already recorded: the site's own hero-section tagline reads verbatim \"Защита техники и личного состава в условиях СВО\" -- added to products[] as a direct quote, since it explicitly markets the detector for combat use in the war rather than as generic security equipment.",
       "User supplied a Street View screenshot (2026-08-25, s1394) confirming the набат.рф site's Большой Симоновский переулок, 2 address is a genuine physical storefront, not a fake/placeholder address -- signage \"GODRONE\"/\"Gd Home\", with a militarized soldier-silhouette decal on the door. Not added to address_history (that field tracks the EGRUL-registered office over time, not an additional retail/showroom location) -- documented in the web.sites note instead.",
       "User pointed to GoDrone's Yandex Maps business listing (2026-08-25, s1395, direct curl archive). Independent (non-manufacturer-controlled) third-party corroboration: same Большой Симоновский переулок, 2 address, Yandex's own \"Drones and quadrocopters\" category classification, 5.0 rating/120 reviews/48-photo gallery, plus two more phone numbers not seen on either godrone.ru or набат.рф.",
@@ -33430,7 +33430,7 @@
       },
       {
         "relationship": "Joint conference attendance, upgraded from the leads file's 'plausible series, needs per-event confirmation' framing: channel chadayevru msg 2722 (2024-04-17, reporting the 12.04.2024 IV конференция по технологиям обнаружения и противодействия БПЛА, Saint Petersburg) directly names BOTH \"Руководитель АНО «НПЦ «Ушкуйник» А.В. Чадаев\" (speaker) AND \"Директор по развитию ООО «Тримикс» С.С. Шандобыло\" (speaker) at the SAME single documented event -- not merely a conference-series inference. Verified verbatim against data/roymarket.db 2026-09-15.",
-        "slug": "ooo-trimiks-bulat-3mx",
+        "slug": "ooo-trimiks",
         "source_id": "s8066",
         "relationship_type": "co-speaker"
       }
@@ -58543,16 +58543,18 @@
     "_raw": {},
     "is_brand_of": "7802942873",
     "_corrected": [
-      "«Булат»/3mx is not a separate legal entity — it is ООО «Тримикс»'s (ИНН 7802942873, slug ooo-trimiks-bulat-3mx) Wildberries trading brand. That entity is already fully _verified (full EGRUL pull, ul-1237800084235-*.pdf, БФО 2023 filing). Nothing further to verify on this brand stub beyond the is_brand_of pointer already set.",
+      "[2026-09-30] Merged into ooo-trimiks at user direction: «Булат» is a product (and 3mx the company's own trade name and original registered name, ООО «3мх», s1408), not a separate entity. The products, brand_ru and confirmed_reseller wb_overlap already sit on the Тримикс record; the history below is kept for provenance.",
+      "«Булат»/3mx is not a separate legal entity — it is ООО «Тримикс»'s (ИНН 7802942873, slug ooo-trimiks) Wildberries trading brand. That entity is already fully _verified (full EGRUL pull, ul-1237800084235-*.pdf, БФО 2023 filing). Nothing further to verify on this brand stub beyond the is_brand_of pointer already set.",
       "[2026-09-15] wb_overlap review: No ИНН on this record (screen_wb.py could not screen it) and no brand/product field populated on this specific record to search independently. See the note on sibling record ip-tsyganov-vadim-borisovich: a 'Булат'/'3mx'-branded detector genuinely exists on wildberries.ru and may be linked to this entity, but that needs a human identity/seller check this task did not attempt.",
-      "[2026-09-15] wb_overlap resolved via local wb_watch.db (not live wildberries.ru, which 498s scripted access): queried items/sellers tables directly for '3mx'/'Булат' brand matches. Found 15+ active WB listings under the '3mx'/'БУЛАТ' brand, sold by at least 6 distinct, unrelated ИП/ООО sellers (none matching ООО «Тримикс»'s own ИНН 7802942873) -- a textbook multi-reseller pattern, not a manufacturer storefront. Mirrors sibling record ooo-trimiks-bulat-3mx's own confirmed_reseller conclusion."
+      "[2026-09-15] wb_overlap resolved via local wb_watch.db (not live wildberries.ru, which 498s scripted access): queried items/sellers tables directly for '3mx'/'Булат' brand matches. Found 15+ active WB listings under the '3mx'/'БУЛАТ' brand, sold by at least 6 distinct, unrelated ИП/ООО sellers (none matching ООО «Тримикс»'s own ИНН 7802942873) -- a textbook multi-reseller pattern, not a manufacturer storefront. Mirrors sibling record ooo-trimiks's own confirmed_reseller conclusion."
     ],
+    "_merged_into": "ooo-trimiks",
     "sanctions_review": {
       "as_of": "2026-09-15",
       "outcome": "closed",
       "note": "Screened OpenSanctions, GUR (sanctions + UAV-industry registries), GUR components teardown, and Aleph/OCCRP (as_of 2026-09-05/06) — zero matches returned across all four sources. No designation evidence found."
     },
-    "_verified_against": "See ooo-trimiks-bulat-3mx entity record — same underlying company, already primary-source verified.",
+    "_verified_against": "See ooo-trimiks entity record — same underlying company, already primary-source verified.",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "gur_matches": [],
@@ -64427,7 +64429,36 @@
     ],
     "workforce_history": [],
     "state_programs": [],
-    "marketing_claims": [],
+    "marketing_claims": [
+      {
+        "text_ru": "В реестре – рекомендованных средств противодействия бпла. По вопросам приобретения Булат и РЭБ Покров обращайтесь sales@pokrovsystem.ru и чат  @pokrov_sales",
+        "text_en": "In the register of recommended counter-UAV means. For purchasing Булат and the Покров jammers, contact sales@pokrovsystem.ru and chat @pokrov_sales.",
+        "context": "Channel description of «Система ПОКРОВ» (@pokrovZOV). The register is not named and not verified.",
+        "source_id": "s8534",
+        "as_of": "2026-09-30"
+      },
+      {
+        "text_ru": "Сегодня тепловизоры ушли группе «Пресса» — в спецназ «Ахмат». И это лишь звено в длинной цепи поддержки: до тепловизоров были детекторы дронов «Булат», до них — мощные системы РЭБ. В том числе мобильные комплексы РЭБ \"Покров\" ВЦА \"Алёша\".",
+        "text_en": "Today thermal imagers went to the group «Пресса», to the Akhmat spetsnaz. This is only one link in a long chain of support: before the thermal imagers there were «Булат» drone detectors, and before them powerful jammer systems, including the mobile «Покров» ВЦА «Алёша» jammers.",
+        "context": "Post pokrovZOV/742, 31.07.2026. Company's own claim of deliveries to Akhmat; the recipient and quantities are not documented.",
+        "source_id": "s8534",
+        "as_of": "2026-07-31"
+      },
+      {
+        "text_ru": "На праздновании дня города Реутов Вадим и Вика Цыгановы передали «Покров» ВЦ4. Маленький вклад в общее большое дело.",
+        "text_en": "At the Reutov city-day celebration Vadim and Vika Tsyganov handed over a «Покров» ВЦ4. A small contribution to the big common cause.",
+        "context": "Post pokrovZOV/77, 16.09.2024; the post names a jammer officer of a Kursk/Belgorod regiment as the requester and thanks the Moscow Oblast government for supporting the development of the «Покров» system. The owner of the company and his wife are the donors named.",
+        "source_id": "s8532",
+        "as_of": "2024-09-16"
+      },
+      {
+        "text_ru": "Булат V4 от 88000 рублей. Доставка по России. Детектор Булат от производителя. Официальный дилер \"Покров\".",
+        "text_en": "Булат V4 from ₽88,000. Delivery across Russia. The Булат detector from the manufacturer. Official dealer \"Покров\".",
+        "context": "Meta description of pokrovsystem.ru/bulat. ПОКРОВ presents itself as the official dealer, not the manufacturer, consistent with the dealer page on 3mx.ru (s0558).",
+        "source_id": "s8535",
+        "as_of": "2026-09-30"
+      }
+    ],
     "battlefield_evidence": [],
     "domain_history": [],
     "web": {
@@ -64443,6 +64474,11 @@
         {
           "handle": "@pokrov_sales",
           "source_id": "s1386"
+        },
+        {
+          "handle": "@pokrovZOV",
+          "source_id": "s8534",
+          "note": "«Система ПОКРОВ» channel, 1.07K subscribers on 30.09.2026; its post of 16.09.2024 links the couple's channel @vika_tsyganova63 (s8532)."
         }
       ],
       "vk": [],
@@ -64458,6 +64494,11 @@
         "caption": "Product card for the «Булат» v.4 (3MX) handheld detector, with its case and antennas, as shown on the company's own site pokrovsystem.ru (captured 20.09.2026).",
         "path": "images/ooo-pokrov_bulat-v4-preview-card.png",
         "source_id": "s7943"
+      },
+      {
+        "caption": "Concert in Реутов for the city day, 16.09.2024: the «ПОКРОВ» logo is on the stage screen behind the singer. Photo from the company's own channel post (low resolution).",
+        "path": "images/ooo-pokrov_reutov-concert-2024-09-16.jpg",
+        "source_id": "s8519"
       }
     ],
     "open_questions": [],
@@ -64472,9 +64513,10 @@
       "2026-08-24 direct egrul.nalog.ru lookup by ОГРН (1245000068774): ИНН resolved as 5038189259, GD Цыганов Вадим Борисович, registered 13.06.2024. Closes the previously-open \"ИНН not yet pulled\" gap.",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (5038189259). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, all 4 candidates belong to distinct, differently-named legal entities that merely contain \"Покров\" as part of a longer name (АОЗТ «Покров» -- different legal form, agricultural chemicals, German co-patentee; ООО «Фарма-Покров»; ООО Инвестиционная Группа «Покров») -- none is this entity, ООО «Покров» (ИНН 5038189259).",
-      "2026-08-25: user asked to scan pokrovsystem.ru directly. WebFetch summary matched the existing record exactly (same ОГРН, address, product line, contacts) -- re-confirmed via a direct curl archive (s1386) rather than trusting the WebFetch summary alone, since this entity's products[] entries had never carried a source_id before. Also fixed a stale cross-link: ooo-trimiks-bulat-3mx's related_entities still described this dealer as \"legal entity unresolved\" even though it had already been resolved as this standalone entity on 2026-08-24 -- linked slug + source_id there.",
+      "2026-08-25: user asked to scan pokrovsystem.ru directly. WebFetch summary matched the existing record exactly (same ОГРН, address, product line, contacts) -- re-confirmed via a direct curl archive (s1386) rather than trusting the WebFetch summary alone, since this entity's products[] entries had never carried a source_id before. Also fixed a stale cross-link: ooo-trimiks's related_entities still described this dealer as \"legal entity unresolved\" even though it had already been resolved as this standalone entity on 2026-08-24 -- linked slug + source_id there.",
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "[2026-09-30] Added the company's own Telegram channel and four self-published claims (s8532, s8534, s8535) and a concert photo showing its logo (s8519). The owner Цыганов Вадим Борисович is the husband of the singer Вика Цыганова (s8537); see the people records. ПОКРОВ describes itself as 3mx's official dealer, not the manufacturer (s8535)."
     ],
     "sanctions_review": {
       "as_of": "2026-09-20",

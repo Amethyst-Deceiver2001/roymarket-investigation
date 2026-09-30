@@ -51,6 +51,17 @@ Source: annual filings [s0367, s6508, s6509]. «Тримикс» balance sheet f
 - **ЦБСТ.** On 08.09.2025 ЦБСТ's channel reports residents' exhibits at «Дронница 2025», naming «дроны «Гортензия», «Пиранья», «Буревестник», детекторы «Булат»» {doc} [s7596].
 - **Dealers.** 3mx.ru's dealer page lists «Покров», «Мэдро» and «Макс 911» [s0558]. The registry resolves «Покров» as ООО «ПОКРОВ».
 
+## The owner's public face
+
+Вадим Цыганов, the owner of the dealer ООО «ПОКРОВ», is the husband and producer of the singer Вика Цыганова (born Жукова; 28.10.1963, Хабаровск). His Wikipedia article gives his birth date as 30.05.1963, matching the registry date of birth, and lists her as spouse {press} [s8537]; Meduza's 27.10.2023 headline calls him «ее мужа, продюсера Вадима Цыганова» {press} [s8527]. She is in Ukraine's State Register of Sanctions since 19.10.2022 (NSDC decision 726/2022, in force to 19.10.2027) {open} [s8524, s8523]; the primary decree is not on file.
+
+- **Donations by the couple.** On 16.09.2024 ПОКРОВ's own channel wrote: «На праздновании дня города Реутов Вадим и Вика Цыгановы передали «Покров» ВЦ4», linking her channel, and thanked «правительству Московской области которое поддерживает нас и содействует развитию системы «Покров»» {doc} [s8532]. On 01.04.2025 Брянская Губерния reported that the couple gave the Bryansk border detachment a «Покров» РЭБ complex bought with collected donations {press} [s8530]. The photograph of the 16.09.2024 concert shows the «ПОКРОВ» logo on the stage screen [s8519]. On 14.11.2023 The Insider reported that the couple gave the front a drone detector, anti-drones, a thermal imager and an FPV jammer, without naming a brand {press} [s8531]; that is before ПОКРОВ was registered (13.06.2024), and the note does not say who supplied the equipment.
+- **A different product.** On 08.11.2023 the husband said he had bought a «Сания» dome anti-drone complex for his wife's press conference, and kept it {press} [s8528, s8529]. «Сания» is not a «Покров» or «Булат» product.
+- **Promotion.** Her channel forwarded a «Система ПОКРОВ» radar advert on 29.09.2026 {doc} [s8533]. ПОКРОВ's own channel says «до тепловизоров были детекторы дронов «Булат»» when reporting thermal imagers sent to the Akhmat unit on 31.07.2026 {doc} [s8534]; the recipients and quantities are its own claim.
+- **Dealer, not maker.** ПОКРОВ describes itself as «Официальный дилер "Покров"» selling «Детектор Булат от производителя» {doc} [s8535], consistent with 3mx.ru's dealer page [s0558].
+
+The couple's link to «Булат» therefore runs through the dealer ПОКРОВ, which he owns. No source on file ties either of them to ownership of ООО «Тримикс».
+
 ## Timeline
 
 | Date | Event |
@@ -72,10 +83,11 @@ Source: annual filings [s0367, s6508, s6509]. «Тримикс» balance sheet f
 - Who owns ООО «Тримикс» today. The register is restricted and the dossier is partial and undated in its provenance.
 - Whether the sole trader's contracts were routed to him instead of the company because of the company's listing. The dates are on file; no document states a reason.
 - What the ₽110.4m of ООО «ПОКРОВ» revenue for 2025 consists of. The company's contracts on file for 2025 total ₽2.3m.
+- Whether Вика Цыганова or her husband holds any interest in ООО «Тримикс». Nothing on file says so; the maker's owners are restricted in ЕГРЮЛ.
 - Whether the sanctions listed by OpenSanctions against «Тримикс» and Цыганов exist in the primary registers.
 - Trimix's revenue for 2024 and 2025. No filing is on file.
 - Whether the sole-supplier ground, meant for emergencies, fits a jammer bought in September 2025.
 
 ## Evidence base
 
-Registry records `ooo-trimiks-bulat-3mx`, `ooo-pokrov`, `ip-tsyganov-vadim-borisovich`; person `tsyganov-vadim-borisovich`; product profile for «Булат». ЕГРЮЛ and ЕГРИП [s6749, s6799, s6800], contract records and attachments [s1416, s1417, s1464, s3672, s3424], the Ukrainian register extract [s7873], annual filings [s0367, s6508, s6509], the patent [s1039], the dealer page [s0558], ЦБСТ's post [s7596], and the OSINT dossier [s1408].
+Registry records `ooo-trimiks`, `ooo-pokrov`, `ip-tsyganov-vadim-borisovich`; persons `tsyganov-vadim-borisovich`, `tsyganova-viktoriya-yurevna`; product profile for «Булат». ЕГРЮЛ and ЕГРИП [s6749, s6799, s6800], contract records and attachments [s1416, s1417, s1464, s3672, s3424], the Ukrainian register extract [s7873], annual filings [s0367, s6508, s6509], the patent [s1039], the dealer page [s0558], ЦБСТ's post [s7596], the OSINT dossier [s1408], and, for the public face, [s8519, s8523, s8524, s8527, s8528, s8529, s8530, s8531, s8532, s8533, s8534, s8535, s8537].

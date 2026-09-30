@@ -148,6 +148,17 @@
   </section>
 {% endif %}
 
+{% if family %}
+  <section>
+    <p class="eyebrow">Family ties</p>
+    <ul>
+{% for f in family %}
+      <li><strong>{% if f.url %}<a href="{{ f.url }}">{{ f.name }}</a>{% else %}{{ f.name }}{% endif %}</strong>{% if f.fio_ru and f.fio_ru != f.name %} ({{ f.fio_ru }}){% endif %} — {{ f.text }}{% if f.confidence %} ({{ f.confidence }}){% endif %}{% if f.source %} [{{ f.source }}]{% endif %}</li>
+{% endfor %}
+    </ul>
+  </section>
+{% endif %}
+
 {% if screening %}
   <section>
     <p class="eyebrow">Sanctions &amp; screening</p>

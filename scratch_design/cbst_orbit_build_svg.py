@@ -17,7 +17,7 @@ OTHER_OUTER = ['ano-npts-ushkuynik','ao-npp-bat','ao-stratim','ao-tekhnodron','g
          'ooo-atlant-aero','ooo-gaskar','ooo-gk-logos',
          'ooo-konstruktorskoe-byuro-sinergiya','ooo-kopterlab','ooo-mentastep',
          'ooo-npo-kilovatt-shestopalov','ooo-npo-rustekhdron','ooo-rtd-zashchita',
-         'ooo-smart-teknolodzhis','ooo-superkhrono','ooo-trimiks-bulat-3mx',
+         'ooo-smart-teknolodzhis','ooo-superkhrono','ooo-trimiks',
          'ooo-tsentr-dinarus','ooo-vizionero','uraldronzavod']
 # place the 4 flagship entities at N / E / S / W (index 0, 7, 14, 22 of 29 slots)
 N_OUTER = 29
@@ -183,10 +183,10 @@ svg.append(label_text(*pt(CX, CY, R_SAT2 + ov_r + 16, tangle), tangle, "«Ово
 # its own tier_basis names it a "named 3mx dealer") -> ООО «Тримикс»/3MX (already
 # outer-ring, real cbst_tie edge to ЦБСТ). Confirmed by a live BFS over
 # relationship_graph.json before this edit: ip-tsyganov-vadim-borisovich
-# -[directs]-> ooo-pokrov -[related]-> ooo-trimiks-bulat-3mx -[cbst_tie]-> ЦБСТ.
+# -[directs]-> ooo-pokrov -[related]-> ooo-trimiks -[cbst_tie]-> ЦБСТ.
 # The prior build's "no traceable ЦБСТ edge" claim on this node was wrong — the
 # path was already sitting in the graph, just never walked past 1 hop.
-trx, try_, trangle, tr_r = outer_pos['ooo-trimiks-bulat-3mx']
+trx, try_, trangle, tr_r = outer_pos['ooo-trimiks']
 pkx, pky = pt(CX, CY, R_SAT1, trangle)
 tsx, tsy = pt(CX, CY, R_SAT2, trangle)
 svg.append(f'<line x1="{trx:.1f}" y1="{try_:.1f}" x2="{pkx:.1f}" y2="{pky:.1f}" class="edge edge-founded"/>')

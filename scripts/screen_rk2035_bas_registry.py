@@ -45,7 +45,7 @@ Usage:
     python3 scripts/screen_rk2035_bas_registry.py                # everyone, skip already-screened today
     python3 scripts/screen_rk2035_bas_registry.py --limit 5       # first 5 only
     python3 scripts/screen_rk2035_bas_registry.py --force         # re-screen even if already done today
-    python3 scripts/screen_rk2035_bas_registry.py --slug ooo-trimiks-bulat-3mx
+    python3 scripts/screen_rk2035_bas_registry.py --slug ooo-trimiks
 """
 from __future__ import annotations
 

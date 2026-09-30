@@ -116,7 +116,7 @@ whenever a fresh prioritization is needed:
 
 ## Pattern noticed: sanctions-shielded vehicle-lease lessors (2026-09-03)
 
-Checking `ooo-trimiks-bulat-3mx` and `ooo-gagaring` against fedresurs.ru's
+Checking `ooo-trimiks` and `ooo-gagaring` against fedresurs.ru's
 company-lookup API (see above) found Тримикс clean, but Гагаринг has **4
 vehicle-leasing fact-messages (2024-2025)**, and in every single one the
 lessor's identity is redacted citing Постановление Правительства РФ №5 от

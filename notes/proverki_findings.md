@@ -36,7 +36,7 @@ ooo-pekhtra, ooo-rokot-tekh, ooo-orient-sistems, ooo-prommash,
 ooo-pokrov, ooo-radiofid-sistemy, ooo-sibnk, ooo-skay-avia-grupp,
 ooo-skb-piranya, ooo-smart-teknolodzhis, ooo-spetsialnye-poleznye-tekhnologii,
 ooo-spetsmat-spetsialnye-materialy, ooo-stratim, ooo-superkhrono,
-ooo-ti-es-dzhi-grupp, ooo-titan-severo-zapad, ooo-trimiks-bulat-3mx,
+ooo-ti-es-dzhi-grupp, ooo-titan-severo-zapad, ooo-trimiks,
 ooo-tsentr-dinarus, ooo-ushkuynik-sp,
 ooo-vostochnye-vorota-zabaykalsk-manchzhuriya, ooo-vozdushnyy-traktat,
 ooo-zetaks, va-technologies, yarl.

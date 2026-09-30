@@ -122,7 +122,7 @@
 ## ООО «БПР ЯРЛ» (ИНН 9721200789, yarl)
 - (no web presence recorded)
 
-## ООО «Тримикс» (ИНН 7802942873, ooo-trimiks-bulat-3mx)
+## ООО «Тримикс» (ИНН 7802942873, ooo-trimiks)
 - other: https://3mx.ru/dilery/
 - sites: https://3mx.ru/
 - dzen: https://dzen.ru/3mx?utm_referrer=dzen.ru  [from archived site capture, not in registry web{}]
