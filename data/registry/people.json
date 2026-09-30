@@ -1980,11 +1980,11 @@
       {
         "entity_slug": "ooo-berkut-dmv",
         "entity_name": "«Беркут» (Berkut, drone production company)",
-        "title": "Co-founder; manages Беркут simultaneously with ЦБСТ per investigator.org.ua -- ИНН 9709100837/ОГРН 1237700726636 since resolved via ФНС founder cross-check (other_entities, 2026-09-07)",
+        "title": "Учредитель (49%)",
         "body": null,
-        "from": null,
+        "from": "2024-12-19",
         "to": null,
-        "source_id": "s6919"
+        "source_id": "s8541"
       },
       {
         "entity_slug": null,
@@ -2080,7 +2080,8 @@
       "2026-09-07: wired personal ИНН from a user-supplied primary ЕГРИП выписка (s6918) plus investigator.org.ua corroboration (s6919, user-supplied URL) -- personal ИНН exactly matches the OpenSanctions Ukraine-NSDC match's own innCode, upgrading that match to ID-confirmed; added his two Спецтех subsidiary directorships (already on file for those entities but missing from his own roles[]), his prior Rudnevo technopark role, and the «Беркут» co-founder lead (entity not yet identified).",
       "2026-09-14: reciprocal director-role backfill -- full ЕГРЮЛ-выписка (s7453) confirms current director.",
       "2026-09-14: reciprocal founder-role backfill -- full ЕГРЮЛ-выписка (s7452) confirms 50/50 founder split.",
-      "2026-09-15: the «Беркут» role's note called its ИНН/ОГРН \"not yet identified\" -- stale text; the 2026-09-07 ФНС founder cross-check (other_entities[]) had already resolved it (ИНН 9709100837, ОГРН 1237700726636, matching the already-registered ooo-berkut-dmv entity_slug this role already pointed at). Found during a political-intermediary/bridge-figure triage pass (data/registry/_political_intermediary_leads.md, Part 2)."
+      "2026-09-15: the «Беркут» role's note called its ИНН/ОГРН \"not yet identified\" -- stale text; the 2026-09-07 ФНС founder cross-check (other_entities[]) had already resolved it (ИНН 9709100837, ОГРН 1237700726636, matching the already-registered ooo-berkut-dmv entity_slug this role already pointed at). Found during a political-intermediary/bridge-figure triage pass (data/registry/_political_intermediary_leads.md, Part 2).",
+      "[2026-09-30] ЕГРЮЛ выписка of ООО «Беркут» (s8541, 30.09.2026): Рубинштейн is a 49% founder (share entered 19.12.2024); the генеральный директор is Майоров Константин Юрьевич since 25.12.2024. The earlier role text «manages Беркут simultaneously with ЦБСТ» (investigator.org.ua, s6919) is not supported by the register and is replaced with the documented founder role."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -5399,10 +5400,10 @@
       {
         "entity_name": "ООО «НПО Рустехдрон»",
         "entity_slug": "ooo-npo-rustekhdron",
-        "from": null,
-        "source_id": null,
-        "title": "Генеральный директор (per checko.ru/rusprofile/spark-interfax aggregators, not yet confirmed against a full EGRUL PDF extract)",
-        "to": null
+        "from": "2023-02-27",
+        "source_id": "s8543",
+        "title": "Генеральный директор (27.02.2023–11.03.2025, per ЕГРЮЛ open data via OpenSanctions; ЕГРЮЛ restricts the section since 12.03.2025)",
+        "to": "2025-03-11"
       },
       {
         "entity_name": "ООО «РТД-Защита» (ex-«НИПП Рустехдрон»)",
@@ -5480,7 +5481,8 @@
       "2026-08-24: added director roles at both ooo-npo-rustekhdron and the newly-added ooo-rtd-zashchita, alongside the existing verified co-inventor role. The ООО «ДСГ» candidate role remains unresolved and unrelated (per this record's own existing _corrected note: ДСГ's director carries a different patronymic, Никита Дмитриевич, treated as a same-surname coincidence, not this Соколов).",
       "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
       "2026-09-07: verification backlog closure — identity already confirmed by ООО «РТД-Защита»'s (ooo-rtd-zashchita) own director_history entry (s6792), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
-      "2026-09-30: dob 1991-08-13 supplied by the investigator (s8518, verbatim message archived; the original primary source was not stated). Matched by the assistant from the surname given as 'sokolov g (given as 13.08.1991)' to this record (personal ИНН on file); the only sanctioned person with that surname and initials on record."
+      "2026-09-30: dob 1991-08-13 supplied by the investigator (s8518, verbatim message archived; the original primary source was not stated). Matched by the assistant from the surname given as 'sokolov g (given as 13.08.1991)' to this record (personal ИНН on file); the only sanctioned person with that surname and initials on record.",
+      "[2026-09-30] Rustekhdron role now sourced to the ЕГРЮЛ open-data record on OpenSanctions (s8543): генеральный директор 2023-02-27 – 2025-03-11 and a 14.75% holder to the same date. Replaces the unsourced aggregator title. Later status is not documented (register restricted since 12.03.2025)."
     ],
     "_verified_against": "s6792 -- ООО «РТД-Защита»'s own primary-source founding/EGRUL document, naming Соколов Герман Олегович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [

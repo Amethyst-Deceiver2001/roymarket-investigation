@@ -14735,12 +14735,6 @@
         "charter_capital_history": [
           {
             "value": 5400000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from brief:prose, unverified"
-          },
-          {
-            "value": 5400000,
             "as_of": "2004-08-02",
             "source_id": "s6839",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -14768,7 +14762,8 @@
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7804302798). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-09-05: backfilled the structured `zakupki_review` field (partial, as of 2026-09-01) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate.",
         "МЧС fire-safety license registry cross-check (digital.mchs.gov.ru/fgpn/license, scripts/screen_mchs_fire_licenses.py, 2026-09-06 full 176-entity sweep) — confirmed new fire-safety equipment installation/maintenance license not previously on file. See s6439.",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "ao-prominvest": {
@@ -15398,12 +15393,6 @@
         "charter_capital_history": [
           {
             "value": 15000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from brief:manufacturers-table:line-989, unverified"
-          },
-          {
-            "value": 15000,
             "as_of": "2023-07-03",
             "source_id": "s6738",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -15495,7 +15484,8 @@
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13729) ID-confirmed via ИНН 7720901379 — exact match, screen_gur.py sweep, 2026-08-24. GUR's own page cross-lists ООО «Стратим» (ИНН 5260494520) as a \"related company\" — see related_entities.",
         "2026-09-07: merged dormant duplicate correction key '7720901379' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "ao-tekhnodinamika": {
@@ -17732,13 +17722,17 @@
           "evidence": "ONF.ru roundtable coverage, checked directly 23.08.2026.",
           "source_id": "s0560"
         },
-        "inn": "7725229200",
+        "inn": null,
         "name_ru": "«Кулибин-клуб»",
         "okved_mismatch": null,
         "open_questions": [
           {
             "source_id": "s0561",
             "text": "PEP FAMILY LEAD: «Кулибин-клуб»'s own Народный фронт spokesperson at the 13-14.08.2026 roundtable is Глеб Дмитриевич Киселёв — per an independent profile (pointmedia.io, checked 23.08.2026) he is the elder son (age ~38) of Дмитрий Киселёв, head of МИА «Россия сегодня» and a leading state propagandist — a Western-sanctioned figure. Visually confirmed via a nametag photo at the roundtable (\"КИСЕЛЁВ Глеб\", Народный фронт branding — data/sources/TRANSCRIPT_20260813_gleb-kiselev-onf-nametag-photo.png). Per pointmedia.io: worked at his father's МИА «Россия сегодня»/РИА Новости (director of design communications and advertising by summer 2022), also received income from his father's wine company «Киммерия» and from АНО «Московская дирекция транспортного обслуживания» (Moscow transport authority) — a professional designer/media-agency background, not a defense-industry one, consistent with a spokesperson/liaison role rather than a technical founder."
+          },
+          {
+            "source_id": "s6740",
+            "text": "The legal operator of the «Кулибин-клуб» programme is not identified. ИНН 7725229200, which this record carried, belongs to ООО «АВТОЦЕНТР КУЛИБИН КЛУБ» (ЕГРЮЛ выписка s6740; founders Черленок, Климаков, Дмитриев; capital ₽10 000), a namesake, so the ИНН, founders, capital and the 2003 director entry were removed. The brief names Александр Паничев (b. 1995) as head of the programme; that is unverified and is not recorded as a director."
           }
         ],
         "products": [
@@ -17748,57 +17742,11 @@
             "source_id": "s0560"
           }
         ],
-        "charter_capital_history": [
-          {
-            "value": 10000,
-            "as_of": "2003-04-23",
-            "source_id": "s6740",
-            "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
-          }
-        ],
-        "charter_capital": 10000,
-        "director_history": [
-          {
-            "value": "Александр Паничев (b. 1995)",
-            "as_of": null,
-            "source_id": null,
-            "note": "from brief:manufacturers-table:line-1018, unverified"
-          },
-          {
-            "value": "Климаков Сергей Васильевич",
-            "as_of": "2003-04-23",
-            "source_id": "s6740",
-            "note": "Должность: Руководитель юридического лица, личный ИНН 774321508686. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
-          }
-        ],
-        "founders_history": [
-          {
-            "value": "Черленок Игорь Эдуардович (₽3 400) / Климаков Сергей Васильевич (₽3 300) / Дмитриев Геннадий Витальевич (₽3 300)",
-            "as_of": "2003-04-23",
-            "source_id": "s6740",
-            "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
-          }
-        ],
-        "founders": [
-          {
-            "name": "Черленок Игорь Эдуардович",
-            "inn_personal": "772607144843",
-            "nominal_value": 3400,
-            "as_of": "2003-04-23"
-          },
-          {
-            "name": "Климаков Сергей Васильевич",
-            "inn_personal": "774321508686",
-            "nominal_value": 3300,
-            "as_of": "2003-04-23"
-          },
-          {
-            "name": "Дмитриев Геннадий Витальевич",
-            "inn_personal": "772801859761",
-            "nominal_value": 3300,
-            "as_of": "2003-04-23"
-          }
-        ],
+        "charter_capital_history": [],
+        "charter_capital": null,
+        "director_history": [],
+        "founders_history": [],
+        "founders": [],
         "bfo_review": {
           "as_of": "2026-09-14",
           "outcome": "closed",
@@ -17810,7 +17758,9 @@
           "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). GUR sanctions/UAV registry: 2 match(es) - KOLBIN Petro Viktorovych (own_tin=None, inn_match=False, listing_confirmed=False); KOLBIN Vladimir Petrovich (own_tin=780518161631, inn_match=False, listing_confirmed=False) Aleph: 1 match(es), dataset categories=['company'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
         },
         "tier_basis": "Operates the «Кулибин-клуб» programme under the «Народный ВПК» framework explicitly run jointly with ANO «ЦБСТ» — ЦБСТ's own deputy director, Дмитрий Рубинштейн, presented alongside this entity's spokesperson at a 13-14.08.2026 Народный фронт roundtable, per direct ONF.ru coverage. The programme itself (not a single hardware product) is the \"manufacturer-adjacent\" activity: identifying, testing and scaling garage-engineering prototypes into production for the front, self-reporting 220,000+ items delivered and 525 enterprises integrated into ЦБСТ as of mid-2026.",
-        "wb_overlap": "not_checked"
+        "wb_overlap": "not_checked",
+        "ogrn": null,
+        "director": null
       },
       "verified_against": "s0560; s0561; s0559 (visual nametag confirmation).",
       "why": [
@@ -17820,7 +17770,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread."
+        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread.",
+        "[2026-09-30] CORRECTION (wrong-entity attribution): ИНН 7725229200 had been attached to this Народный фронт programme by an Aleph name match (s2478). The ЕГРЮЛ выписка pulled for it (s6740) is for ООО «АВТОЦЕНТР КУЛИБИН КЛУБ» and the Aleph match caption says the same. Removed the ИНН, founders, charter capital and director history that belong to that company. The programme's ЦБСТ tie (ONF roundtable, s0560) is unaffected."
       ]
     },
     "npo-kaysant": {
@@ -20842,12 +20793,6 @@
         "charter_capital_history": [
           {
             "value": 10000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from brief:prose, unverified"
-          },
-          {
-            "value": 10000,
             "as_of": "2015-11-23",
             "source_id": "s6830",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -20877,7 +20822,8 @@
         "2026-08-25: appears on the Agency for Technological Development's (АТР, atr.gov.ru) federal grant program \"Комплектующие для БАС\" (208.atr.gov.ru/bas) -- «Реестр потенциальных производителей», exact ИНН match. These are dated snapshot PDFs (производители 30.06.2026, исполнители 14.07.2026, per the page's own labels) pulled 2026-08-25 and archived at data/sources/. This is a state-recognized potential-supplier listing for the national UAV-components grant program, not itself a ЦБСТ/РОЙ.МАРКЕТ link -- corroborates the entity's UAV/components industry footprint, does not establish any relationship to the ЦБСТ network specifically.",
         "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 10 product(s) not previously documented.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "ooo-aero-khit": {
@@ -22039,11 +21985,21 @@
           "as_of": "2026-09-30",
           "outcome": "wired",
           "note": "Five signed БФО filings (FY2021-FY2025) were on disk and parsed (_bfo_financials.json) but never wired into financials[]. Units confirmed in the FY2025 PDF itself (Единица измерения: Тыс. руб.); FY2025 revenue 45 886 and net profit 218, FY2024 37 009 and 1 023 (тыс. руб.), balance total 84 882 / 65 631 тыс. руб. Converted to rubles. Two byte-identical copies of each year exist under an ASCII and a Cyrillic filename (s7461-s7465 and s6463-s6467); the ASCII-named set is cited."
-        }
+        },
+        "director": "Барахтин Артём Владимирович",
+        "director_history": [
+          {
+            "value": "Барахтин Артём Владимирович (генеральный директор; ИНН 165910378299)",
+            "as_of": "2020-06-29",
+            "source_id": "s7409",
+            "note": "ЕГРЮЛ выписка от 14.09.2026: должность записана ГРН 2201600785956 от 29.06.2020; сведения о лице обновлены ГРН 2221601408081 от 13.10.2022."
+          }
+        ]
       },
       "why": [
         "2026-09-16 (coverage-gap follow-up pass): docs/index.html's own paraphrase (\"which ЦБСТ credits with... algorithms\") understated the actual post -- the post's own headline states directly \"Резидент ЦБСТ разработал...\", a residency statement, not just a technology credit. Read the actual post text before wiring rather than trusting the brief's paraphrase alone.",
-        "2026-09-30: financials[] wired from the five БФО filings already on file (FY2021-FY2025, s7461-s7465): revenue ₽15.4m, ₽26.7m, ₽38.3m, ₽37.0m, ₽45.9m; net profit ₽0.2m, ₽2.1m, ₽0.3m, ₽1.0m, ₽0.2m. The gap was an unwired parse result, not a missing filing. Surfaced when a 'no financials' count was re-checked against bfo_review."
+        "2026-09-30: financials[] wired from the five БФО filings already on file (FY2021-FY2025, s7461-s7465): revenue ₽15.4m, ₽26.7m, ₽38.3m, ₽37.0m, ₽45.9m; net profit ₽0.2m, ₽2.1m, ₽0.3m, ₽1.0m, ₽0.2m. The gap was an unwired parse result, not a missing filing. Surfaced when a 'no financials' count was re-checked against bfo_review.",
+        "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. The previous flat value «Барахтин / Соловьёв (50/50)» mixed the director with an owner split; the выписка names Барахтин as sole генеральный директор (s7409)."
       ]
     },
     "ooo-asel-labs": {
@@ -23996,12 +23952,6 @@
         "charter_capital_history": [
           {
             "value": 10000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from brief:prose, unverified"
-          },
-          {
-            "value": 10000,
             "as_of": "2023-09-04",
             "source_id": "s6776",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -24118,7 +24068,8 @@
         "2026-09-08: a fresh checko.ru-style extract (s7361) surfaced a litigation record (А32-19338/2025, won against ООО «ДАР») not previously captured, plus a workforce figure (74 employees, среднесписочная численность за 2025) that conflicts with the FY2025 audit report's stated 105 (s5333, среднегодовая численность/численность на 31.12.2025). Not reconciled — flagged in workforce_history rather than overwritten; the audit-report figure is treated as more authoritative (primary financial filing vs. third-party aggregator) but the discrepancy is worth resolving against a fresh EGRUL/Rosstat pull.",
         "2026-09-15: new battlefield_evidence found via a local DB mine (channel my_el_lab, id 1614515134, post 4546, 30.08.2026) — a military thank-you letter naming Gagaring's own staff and a specific 500-unit «Кузнечик» quantity, distinct from the existing evidence already on file. This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document -- no s#### id applies; the channel/post/date is the citation.",
         "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the projectArchangel/Archangel_Forum joint-exhibitor listing verbatim against data/roymarket.db. Recorded as related_entities per CLAUDE.md's existing mechanism, not a new cbst_tie (it's the Архангел project's own event, not ЦБСТ's).",
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "ooo-garant-klub": {
@@ -25732,12 +25683,6 @@
         "charter_capital_history": [
           {
             "value": 10000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from brief:manufacturers-table:line-1022, unverified"
-          },
-          {
-            "value": 10000,
             "as_of": "2023-04-07",
             "source_id": "s6768",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -25774,7 +25719,8 @@
         "Website marketing scan of набот.рф (2026-09-07, source s6457) plus promotion of an already-archived showroom-photo slogan (s1396, previously only an images[] caption) into structured marketing_claims[] — closes the marketing_claims gap flagged in the 2026-09-05 coverage audit for this case-study entity. Military-discount pricing tier and explicit SVO use-case framing are both the manufacturer's own words, not third-party characterization.",
         "Telegram battlefield-evidence scan of @GoDrone (2026-09-07, source s6458): the entity's own official brand channel (previously missing from web.telegram) runs a long-running recurring soldier/unit-testimonial series (\"#набатвделе\") documenting field use of the «Набат» detector line across many named directions/units, including a deployment at the Zaporizhzhia NPP. Closes the battlefield_evidence gap flagged in the 2026-09-05 coverage audit for this case-study entity; only 4 of ~80+ available testimonial posts were selected as representative, not an exhaustive pull.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "ooo-instekh": {
@@ -28575,13 +28521,13 @@
           "evidence": "ЦБСТ's own channel, post 2159491523:1074, 14.08.2025: \"...генеральный директор НПЦ «Ушкуйник» Алексей Чадаев и представители компаний-резидентов ЦБСТ «Стратим», «Скворец» и «Рустехдрон» получили почётные грамоты...\" — awarded by Минпромторг deputy minister Василий Шпак at the \"Беспилотные системы: технологии будущего\" forum.",
           "source_id": "s6924"
         },
-        "director": "Соколов Герман Олегович",
+        "director": "Соколов Герман Олегович (генеральный директор 27.02.2023–11.03.2025; сведения ЕГРЮЛ ограничены с 12.03.2025)",
         "director_history": [
           {
-            "as_of": "2026-08-24",
-            "note": "Aggregator-sourced (checko.ru, via WebSearch result summary, page itself Cloudflare-blocked to direct fetch) -- corroborated independently by Соколов's own listing as co-inventor on this entity's patents RU218475U1/RU220486U1 (source s0953) and by his directorship of the related ООО «РТД-Защита» (ex-«НИПП Рустехдрон», ИНН 5003153526, s1161), which shares this entity's director and \"РТД\" product-naming convention. Not yet confirmed against a full EGRUL PDF extract.",
-            "source_id": null,
-            "value": "Соколов Герман Олегович"
+            "value": "Соколов Герман Олегович (генеральный директор; период 27.02.2023–11.03.2025)",
+            "as_of": "2023-02-27",
+            "source_id": "s8543",
+            "note": "ЕГРЮЛ open data as published on the OpenSanctions entity page for ИНН 5003155499 (captured 30.09.2026): «Directors: ГЕРМАН ОЛЕГОВИЧ СОКОЛОВ, ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, 2023-02-27 – 2025-03-11». The record ends the day before the director section became restricted (12.03.2025, s6718); no source says he left, and none names a successor."
           },
           {
             "value": "— (EGRUL-restricted)",
@@ -29017,7 +28963,8 @@
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
         "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 15 products total after this pass.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "2026-09-15: added counterparty related_entities[] edges to ooo-dsg and ooo-spetsialnye-poleznye-tekhnologii (new relationship_type value, same session) -- both already fully documented in this record's own litigation[] but never converted into a graph edge. No new lookups; cited to the same litigation source_ids already on file."
+        "2026-09-15: added counterparty related_entities[] edges to ooo-dsg and ooo-spetsialnye-poleznye-tekhnologii (new relationship_type value, same session) -- both already fully documented in this record's own litigation[] but never converted into a graph edge. No new lookups; cited to the same litigation source_ids already on file.",
+        "[2026-09-30] director_history: the sourceless checko.ru entry is replaced by the ЕГРЮЛ open-data record shown on the company's OpenSanctions page (s8543): Соколов Герман Олегович, генеральный директор, 27.02.2023–11.03.2025. The registry records that period only. It does not record him as the current director, because the ЕГРЮЛ director section has been restricted since 12.03.2025 (s6718) and no document states who holds the post now. Same page lists his 14.75% stake (to 11.03.2025) among a partial owner list that includes АО «ТР КОРП» 29.5% and АО «Спорт и образование» 21%; not wired as founders_history because the list is incomplete on the page."
       ]
     },
     "ooo-npts-basirtk": {
@@ -29528,12 +29475,6 @@
         "charter_capital_history": [
           {
             "value": 250000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from brief:manufacturers-table:line-1017, unverified"
-          },
-          {
-            "value": 250000,
             "as_of": "2023-07-25",
             "source_id": "s6710",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -29662,7 +29603,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-07: merged dormant duplicate correction key '1215235283' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "[2026-09-15] Resolved the standing ЦБСТ-scope question for this entity (flagged 2026-09-15 as a well-documented mine/metal-detector manufacturer with zero UAV/ЦБСТ tie on record): found a direct hit via TG corpus grep for 'Экспломет' against data/roymarket.db -- NOT multihop, a first-degree institutional cooperation agreement announced on ЦБСТ's own channel (@ANO_CBST post 1033, 12.08.2025), signed by both organizations' own directors. This resolves the scope question: eksplomet belongs in the registry as a confirmed ЦБСТ-network entity, tier=manufacturer stands. No change needed to tier/wb_overlap/other fields."
+        "[2026-09-15] Resolved the standing ЦБСТ-scope question for this entity (flagged 2026-09-15 as a well-documented mine/metal-detector manufacturer with zero UAV/ЦБСТ tie on record): found a direct hit via TG corpus grep for 'Экспломет' against data/roymarket.db -- NOT multihop, a first-degree institutional cooperation agreement announced on ЦБСТ's own channel (@ANO_CBST post 1033, 12.08.2025), signed by both organizations' own directors. This resolves the scope question: eksplomet belongs in the registry as a confirmed ЦБСТ-network entity, tier=manufacturer stands. No change needed to tier/wb_overlap/other fields.",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "ooo-orient-sistems": {
@@ -31658,12 +31600,6 @@
         "charter_capital_history": [
           {
             "value": 10000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from brief:prose, unverified"
-          },
-          {
-            "value": 10000,
             "as_of": "2018-12-17",
             "source_id": "s6716",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -31699,7 +31635,8 @@
         "2026-08-24 promotion from the searchplatform.rospatent.gov.ru full-roster sweep: every entry here is an exact patentee-name (or, for a handful of director-found records, exact patentee-name-via-inventor-search) match to this entity's own legal name, archived in full and read (title/abstract/claims/description) before promotion -- not just a search-hit title. Common-word/common-surname collisions from the same sweep (Гермес, Логос, Площадь, Росс, Прайм, Проммаш, Покров, an ИНФОТЕКС word-order collision, and oil-industry/space patents matching directors' surnames by coincidence) were reviewed and rejected, not included here.",
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-09-07: merged dormant duplicate correction key '4205376019' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+        "2026-09-07: merged dormant duplicate correction key '4205376019' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "ooo-sibnk": {
@@ -32384,12 +32321,6 @@
         "charter_capital_history": [
           {
             "value": 5500000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from brief:manufacturers-table:line-1015, unverified"
-          },
-          {
-            "value": 5500000,
             "as_of": "2019-11-22",
             "source_id": "s6736",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -32426,7 +32357,8 @@
         "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-30) from this record's existing prose note. zakupki_coverage.py's zero-wired heuristic could not distinguish 'never read' from 'read and deliberately closed', and was re-flagging 10 already-triaged records as high-value candidates needing a first read; the structured field is now the authoritative signal it checks.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-14: found via ЦБСТ-resident cross-reference research pass. Already documented in docs/index.html prose but never mirrored into the structured cbst_tie field until now.",
-        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "ooo-spdbbk": {
@@ -33225,12 +33157,6 @@
         "charter_capital_history": [
           {
             "value": 10000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from corrections:add_entities, unverified"
-          },
-          {
-            "value": 10000,
             "as_of": "2023-03-22",
             "source_id": "s6781",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -33250,7 +33176,8 @@
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1233200001066-20260823120457.pdf, 17pp, pulled 23.08.2026) — NOT marked _verified: only 84% of founder shares (49% Бойко Антонина Юрьевна + 35% Абрамов Юрий Александрович) were captured in this pass; the remaining 16% wasn't reached in the read and needs a follow-up pass through the document's remaining pages before calling ownership complete. GD Абрамова Татьяна Александровна (личный ИНН 321400558603) confirms the brief's existing lead naming her as GD. Address confirms the «Брянск-1» product-name consistency already noted in the brief.",
         "Completed the founder-share read: the missing 16% is GD Абрамова Т.А. herself, added as a founder 29.10.2024 (GRN 2243200118753) — all three founders now account for 100%. ОКВЭД mismatch confirmed: declared R&D (72.19) but secondary codes are concrete radio/hardware manufacture (26.30.5/26.30.17 radio-TV transmitting equipment, 26.51 measurement/navigation instruments).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (3257085996). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "ooo-titan-severo-zapad": {
@@ -33384,12 +33311,6 @@
         "charter_capital_history": [
           {
             "value": 1500000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from brief:manufacturers-table:line-1025, unverified"
-          },
-          {
-            "value": 1500000,
             "as_of": "2009-11-03",
             "source_id": "s6753",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -33416,7 +33337,8 @@
         "2026-08-24: promoted 1 patent(s) from the searchplatform.rospatent.gov.ru second-triage pass (s1170) -- exact patentee-name match against this entity's own registered name. Note: subject matter (tire sealant) is unrelated to any established UAV/military-industry tie for this entity -- included for IP-profile completeness, not as UAV-relevant evidence.",
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "ooo-trimiks": {
@@ -35977,13 +35899,62 @@
             "source_id": "s8055"
           }
         ],
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "inn": "6671284030",
+        "ogrn": "1236600057011",
+        "name_ru": "ООО «Уралдронзавод»",
+        "legal_form": "ООО",
+        "registered": "19.09.2023",
+        "address": "Свердловская область, г. Екатеринбург, тракт Полевской, стр. 16/7Г",
+        "address_history": [
+          {
+            "value": "Свердловская область, г.о. город Екатеринбург, г. Екатеринбург, тракт Полевской, стр. 16/7Г",
+            "as_of": "2025-11-20",
+            "source_id": "s8542",
+            "note": "ЕГРЮЛ выписка от 30.09.2026, ГРН 2256603880443 от 20.11.2025 (адрес зарегистрирован в ЕГРЮЛ на момент выписки)."
+          }
+        ],
+        "charter_capital": 500000,
+        "charter_capital_history": [
+          {
+            "value": 500000,
+            "as_of": "2023-09-19",
+            "source_id": "s8542",
+            "note": "Уставный капитал per the ЕГРЮЛ выписка, запись при регистрации (ГРН 1236600057011 от 19.09.2023)."
+          }
+        ],
+        "director": "Владимир Ткачук",
+        "director_history": [
+          {
+            "value": "Владимир Ткачук (генеральный директор)",
+            "as_of": "2026-02-20",
+            "source_id": "s6911",
+            "note": "Named «генеральный директор «Уралдронзавода»» in ЦБСТ's own channel (posts of 20-22.02.2026). Press-tier; the ЕГРЮЛ director section is restricted."
+          },
+          {
+            "value": "— (ЕГРЮЛ-restricted)",
+            "as_of": "2026-06-16",
+            "source_id": "s8542",
+            "note": "Федеральный закон 129-ФЗ: «Доступ к сведениям ограничен» on the director section, ГРН 2269600747590 от 16.06.2026; the owners' section is restricted by the same record."
+          }
+        ],
+        "founders_history": [
+          {
+            "value": "— (ЕГРЮЛ-restricted)",
+            "as_of": "2026-06-16",
+            "source_id": "s8542",
+            "note": "Участники / учредители: «Доступ к сведениям ограничен», ГРН 2269600747590 от 16.06.2026. The выписка also records a корпоративный договор restricting share transfers (ГРН 2269601259695 от 28.09.2026)."
+          }
+        ],
+        "_verified": true,
+        "_verified_against": "s8542 -- ЕГРЮЛ выписка of 30.09.2026 for ИНН 6671284030: full name ООО «УРАЛДРОНЗАВОД» (short ООО «УДЗ»), ОГРН 1236600057011; matches the earlier OpenSanctions/Aleph/GUR screening by ИНН (s0755, s0606, s2011)."
       },
       "why": [
         "2026-09-28: sourced «Упырь» directly via Vesti.ru (23.08.2024, s8055), which names Уралдронзавод as founded by the drone's own producers.",
         "User flagged (2026-09-07) that Ткачук/Уралдронзавод was wrongly dismissed as an unrelated adjacent lead; a direct DB search of ЦБСТ's own channel (ANO_CBST) confirms repeated, explicit, first-party ЦБСТ-resident framing — this is a confirmed core-network entity, not adjacent.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "[2026-09-15] wb_overlap=none_found: Brand-name search for product «Упырь» on wildberries.ru (2026-09-15, WebSearch) returned no product listing — only unrelated toy-drone category pages."
+        "[2026-09-15] wb_overlap=none_found: Brand-name search for product «Упырь» on wildberries.ru (2026-09-15, WebSearch) returned no product listing — only unrelated toy-drone category pages.",
+        "[2026-09-30] ИНН 6671284030 supplied by the investigator and checked: valid control digit, and a ЕГРЮЛ выписка pulled for it (s8542) is for ООО «УРАЛДРОНЗАВОД», ОГРН 1236600057011, registered 19.09.2023 in Екатеринбург, ОКВЭД 30.30.39 (other aircraft) as primary. The registry had carried no ИНН although the sanctions screening (s0755) had been run on this exact ИНН. The sourceless director entry from the brief is replaced by the ЦБСТ channel attribution (s6911) and the restriction record; the register itself does not name the director."
       ],
       "verified_against": "t.me/ANO_CBST posts #313, #1882, #1891, #2383 (archived as data/sources/TGPOST_20260805_ano_cbst-2383-uraldronzavod-tkachuk-cbst-resident.txt, s6911)"
     },
@@ -36077,12 +36048,6 @@
         "charter_capital_history": [
           {
             "value": 10000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from brief:manufacturers-table:line-1023, unverified"
-          },
-          {
-            "value": 10000,
             "as_of": "2025-11-25",
             "source_id": "s6713",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -36116,7 +36081,8 @@
         "IMPORTANT CAVEAT: the pitch deck names two already-verified ЦБСТ-network entities (СКБ Пиранья, ООО «Боевые технологии») as prospective CUSTOMERS, not confirmed clients or ЦБСТ residents itself — no ЦБСТ tie established for va-technologies/КБ СОВА; recorded honestly as an open question, not inflated into a network finding.",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (2378001237). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "yarl": {
@@ -37275,13 +37241,23 @@
           "outcome": "closed",
           "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). GUR sanctions/UAV registry: 1 match(es) - LIMITED LIABILITY COMPANY NPK AEROKON (own_tin=1683010356, inn_match=False, listing_confirmed=False) Aleph: 1 match(es), dataset categories=['company'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
         },
-        "wb_overlap": "not_checked"
+        "wb_overlap": "not_checked",
+        "director": "Мушкевич Павел",
+        "director_history": [
+          {
+            "value": "Мушкевич Павел (генеральный директор; ИНН 780219001781; лицо без гражданства; отчество в выписке не указано)",
+            "as_of": "2026-09-04",
+            "source_id": "s8219",
+            "note": "ЕГРЮЛ выписка от 29.09.2026: должность записана ГРН 2267802423348 от 04.09.2026; сведения о лице внесены ГРН 2237800101086 от 17.01.2023."
+          }
+        ]
       },
       "why": [
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-07: founding-document bundle (s6907) OCR'd and read in full -- recovered the sole founder's full identity (name + passport + personal address, per PII policy since sourced), the ЗАО->ООО reorganization history, and pinned the exact founding-decision date.",
-        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread."
+        "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread.",
+        "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. Dropped the note text «confirmed live via egrul.nalog.ru 2026-09-02» from the value; the выписка of 29.09.2026 (s8219) is the source."
       ]
     },
     "7801738089": {
@@ -37432,12 +37408,6 @@
         "charter_capital_history": [
           {
             "value": 100000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from corrections:add_entities, unverified"
-          },
-          {
-            "value": 100000,
             "as_of": "2024-07-17",
             "source_id": "s6863",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
@@ -37446,7 +37416,8 @@
       },
       "why": [
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "9709081670": {
@@ -37941,11 +37912,55 @@
             "source_id": "s7400",
             "note": "БФО pull via bo.nalog.gov.ru, parsed 2026-09-14. «Отчет о финансовых результатах» carries no Выручка line for this filing (revenue genuinely absent from the P&L as filed, not unread)."
           }
+        ],
+        "director": "Майоров Константин Юрьевич",
+        "director_history": [
+          {
+            "value": "Майоров Константин Юрьевич (генеральный директор; ИНН 504003610284)",
+            "as_of": "2024-12-25",
+            "source_id": "s8541",
+            "note": "ЕГРЮЛ выписка от 30.09.2026: сведения о лице и должность внесены ГРН 2247713496270 от 25.12.2024."
+          }
+        ],
+        "founders": [
+          {
+            "name": "Рапота Максим Григорьевич",
+            "inn_personal": "771600558949",
+            "nominal_value": 5100,
+            "share_percent": 51,
+            "as_of": "2023-10-26",
+            "source_id": "s8541"
+          },
+          {
+            "name": "Рубинштейн Дмитрий Владимирович",
+            "inn_personal": "771537069549",
+            "nominal_value": 4900,
+            "share_percent": 49,
+            "as_of": "2024-12-19",
+            "source_id": "s8541"
+          }
+        ],
+        "founders_history": [
+          {
+            "value": "Рапота Максим Григорьевич (51%, ₽5 100) / Рубинштейн Дмитрий Владимирович (49%, ₽4 900)",
+            "as_of": "2024-12-19",
+            "source_id": "s8541",
+            "note": "ЕГРЮЛ выписка от 30.09.2026: доля Рапоты внесена ГРН 1237700726636 от 26.10.2023; доля Рубинштейна ГРН 2247713245261 от 19.12.2024."
+          }
+        ],
+        "charter_capital_history": [
+          {
+            "value": 10000,
+            "as_of": "2023-10-26",
+            "source_id": "s8541",
+            "note": "Уставный капитал per the ЕГРЮЛ выписка (ГРН 1237700726636, 26.10.2023)."
+          }
         ]
       },
       "verified_against": "bo.nalog.gov.ru БФО pull (bfo_pull.py), parsed via parse_bfo_financials.py, 2026-09-14",
       "why": [
-        "2026-09-14: БФО coverage sweep (bfo_pull.py --all-missing) found and parsed 1 filing(s) for this entity, previously had empty financials[]."
+        "2026-09-14: БФО coverage sweep (bfo_pull.py --all-missing) found and parsed 1 filing(s) for this entity, previously had empty financials[].",
+        "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. CORRECTION: the registry showed Рубинштейн Дмитрий Владимирович as director; the выписка of 30.09.2026 names Майоров Константин Юрьевич as генеральный директор since 25.12.2024 and Рубинштейн as a 49% founder (Рапота Максим Григорьевич holds 51%). The investigator.org.ua claim that he «manages» Беркут is not supported by the register at that date."
       ]
     },
     "ooo-selskohozyaystvennye-bespilotnye-sistemy-mira": {
@@ -38270,12 +38285,22 @@
             "source_id": "s7452",
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-14 (egrul_vypiska_pull.py, ГРН 1267700182298, 27.05.2026)."
           }
+        ],
+        "director": "Дусаев Марат Марсович",
+        "director_history": [
+          {
+            "value": "Дусаев Марат Марсович (генеральный директор; ИНН 165122119645)",
+            "as_of": "2026-05-27",
+            "source_id": "s7452",
+            "note": "ЕГРЮЛ выписка от 14.09.2026: сведения о лице и должность внесены ГРН 1267700182298 от 27.05.2026 (при регистрации)."
+          }
         ]
       },
       "verified_against": null,
       "why": [
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-        "2026-09-14: full ЕГРЮЛ-выписка (s7452) confirms Рубинштейн Дмитрий Владимирович as a 50% co-founder alongside Бочарова Светлана Владимировна -- resolves the standing person-side reciprocal-role gap with a sourced founders_history entry."
+        "2026-09-14: full ЕГРЮЛ-выписка (s7452) confirms Рубинштейн Дмитрий Владимирович as a 50% co-founder alongside Бочарова Светлана Владимировна -- resolves the standing person-side reciprocal-role gap with a sourced founders_history entry.",
+        "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. CORRECTION: the flat director field named Рубинштейн (from the ФНС founder cross-reference); the выписка (s7452) names Дусаев Марат Марсович as генеральный директор, and Рубинштейн is a 50% founder only."
       ]
     },
     "ooo-prometey": {
@@ -38286,13 +38311,22 @@
           "outcome": "closed",
           "note": "not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
         },
-        "wb_overlap": "not_checked"
+        "wb_overlap": "not_checked",
+        "charter_capital_history": [
+          {
+            "value": 100000,
+            "as_of": "2026-06-05",
+            "source_id": "s6956",
+            "note": "Уставный капитал per the ЕГРЮЛ выписка (ГРН 1266100011418, entered 05.06.2026 with the registration); no later change in the extract."
+          }
+        ]
       },
       "verified_against": null,
       "why": [
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
         "[2026-09-15] wb_overlap review: A same-named product ('FPV-квадрокоптер «Прометей» 15\" с тепловизором') appears to be sold on wildberries.ru per search snippet, but 'Прометей' is a common enough product name that this could be an unrelated seller's coincidentally-named product, not this Ставрополь entity's own line. Seller identity could not be verified — wildberries.ru returns HTTP 498 (anti-scraping block) to both WebFetch and direct curl. Needs a human manual-browser check before concluding either way.",
-        "[2026-09-15] wb_overlap reviewed via local wb_watch.db, left not_checked (not force-resolved): WB carries a 'Прометей'-branded FPV quadcopter line, but sold under ООО «КБ АТЛ» (ИНН 7743459220) -- an entity with no ИНН/name match anywhere in this registry (checked against ooo-atlant-aero 6154165878 and ooo-npk-atlant-aero 6154166381, the only 'Атлант'-family entities on file; 'КБ АТЛ' does not match either). ooo-prometey's own products[] is still empty (per its tier_basis note, no product evidence pulled yet), so there is no basis to call this the same product line -- \"Прометей\" is also a common Russian name/mythological reference, plausible coincidence. Left open rather than guessed."
+        "[2026-09-15] wb_overlap reviewed via local wb_watch.db, left not_checked (not force-resolved): WB carries a 'Прометей'-branded FPV quadcopter line, but sold under ООО «КБ АТЛ» (ИНН 7743459220) -- an entity with no ИНН/name match anywhere in this registry (checked against ooo-atlant-aero 6154165878 and ooo-npk-atlant-aero 6154166381, the only 'Атлант'-family entities on file; 'КБ АТЛ' does not match either). ooo-prometey's own products[] is still empty (per its tier_basis note, no product evidence pulled yet), so there is no basis to call this the same product line -- \"Прометей\" is also a common Russian name/mythological reference, plausible coincidence. Left open rather than guessed.",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified); replaced it with the value read directly from the ЕГРЮЛ выписка (s6956)."
       ]
     },
     "ooo-laboratoriya-yangelya": {
@@ -38322,12 +38356,6 @@
           }
         ],
         "charter_capital_history": [
-          {
-            "value": 10000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from corrections:add_entities, unverified"
-          },
           {
             "value": 10000,
             "as_of": "2018-04-02",
@@ -38484,18 +38512,13 @@
       "why": [
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-07: zakupki scan (never-scanned gap closure) — Scanned by ИНН, zero hits in zakupki.gov.ru contract registry.",
-        "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 4 products total after this pass."
+        "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 4 products total after this pass.",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
       ]
     },
     "ooo-as-kam": {
       "set": {
         "charter_capital_history": [
-          {
-            "value": 10000,
-            "as_of": null,
-            "source_id": null,
-            "note": "from corrections:add_entities, unverified"
-          },
           {
             "value": 10000,
             "as_of": "2016-12-08",
@@ -38665,12 +38688,22 @@
             "source_id": "s6421",
             "note": "Correction 2026-09-15: earlier record showed revenue=2000 for FY2025; direct PDF read (BFO_6165205064_2025_ооо-ас-кам.pdf, line 2110) confirms revenue is actually 0 (dash), not ₽2,000 -- prior figure was a parser/transcription slip."
           }
+        ],
+        "director_history": [
+          {
+            "value": "АО «МТУ Сатурн» (управляющая организация, ИНН 7718047248, ОГРН 1027739168478)",
+            "as_of": "2026-01-27",
+            "source_id": "s6809",
+            "note": "ЕГРЮЛ выписка: сведения об управляющей организации внесены ГРН 2267700525046 от 27.01.2026."
+          }
         ]
       },
       "why": [
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-07: zakupki scan (never-scanned gap closure) — Scanned by ИНН: 5 hits (regNumbers 1165400311421000018, 1246300226320000157, 2673200542420000002, 2673200542419000007, 1231001860419000033), all pulled and read. All 5 are civilian UAV service/equipment contracts from 2019-2021 (crop-monitoring drone survey for Смоленская область x2, water-body remote sensing for Кубанское БВУ, a UAV research lab-equipment supply to Kazan's КНИТУ-КАИ, and a research UAV+sensor kit contract for Красноярский научный центр СО РАН), total ~₽13.24m. Pre-dates this entity's 2026-09-06 discovery as an АС-МК-6 manufacturer and its financial-collapse period (2023-2025); no ЦБСТ-network customer, no state-defense customer — a generic small civilian-supplier footprint per the standing zakupki triage guidance, not wired into government_contracts[].",
-        "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 6 products total after this pass."
+        "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 6 products total after this pass.",
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
+        "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. "
       ]
     },
     "ooo-everest": {
@@ -38994,6 +39027,134 @@
       },
       "why": [
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+      ]
+    },
+    "ooo-nii-dpo": {
+      "set": {
+        "charter_capital_history": [
+          {
+            "value": 10000,
+            "as_of": "2025-01-24",
+            "source_id": "s7908",
+            "note": "Уставный капитал per the ЕГРЮЛ выписка (ГРН 1257700027090, entered 24.01.2025 with the registration); no later change in the extract."
+          }
+        ]
+      },
+      "why": [
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified); replaced it with the value read directly from the ЕГРЮЛ выписка (s7908)."
+      ]
+    },
+    "ooo-dronnet": {
+      "set": {
+        "director_history": [
+          {
+            "value": "Цихончик Сергей Павлович (директор; ИНН 366300454669)",
+            "as_of": "2023-07-25",
+            "source_id": "s8539",
+            "note": "ЕГРЮЛ выписка от 30.09.2026: сведения о лице и должность внесены ГРН 1233600012865 от 25.07.2023 (при регистрации)."
+          }
+        ],
+        "founders": [
+          {
+            "name": "Цихончик Сергей Павлович",
+            "inn_personal": "366300454669",
+            "nominal_value": 10000,
+            "share_percent": 50,
+            "as_of": "2024-03-26",
+            "source_id": "s8539"
+          },
+          {
+            "name": "Мануковский Игорь Владимирович",
+            "inn_personal": "366218736646",
+            "nominal_value": 10000,
+            "share_percent": 50,
+            "as_of": "2024-03-26",
+            "source_id": "s8539"
+          }
+        ],
+        "founders_history": [
+          {
+            "value": "Цихончик Сергей Павлович (50%, ₽10 000) / Мануковский Игорь Владимирович (50%, ₽10 000)",
+            "as_of": "2024-03-26",
+            "source_id": "s8539",
+            "note": "ЕГРЮЛ выписка от 30.09.2026, ГРН 2243600124800 от 26.03.2024."
+          }
+        ],
+        "charter_capital_history": [
+          {
+            "value": 20000,
+            "as_of": "2024-03-26",
+            "source_id": "s8539",
+            "note": "Уставный капитал per the ЕГРЮЛ выписка, ГРН 2243600124800 от 26.03.2024."
+          }
+        ]
+      },
+      "why": [
+        "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. Founders and capital added from the same выписка (s8539)."
+      ]
+    },
+    "ooo-mobil-grup": {
+      "set": {
+        "director_history": [
+          {
+            "value": "Замковой Дмитрий Сергеевич (генеральный директор; ИНН 784290341977)",
+            "as_of": "2018-07-16",
+            "source_id": "s8540",
+            "note": "ЕГРЮЛ выписка от 30.09.2026: должность записана ГРН 8187847716488 от 16.07.2018."
+          }
+        ],
+        "founders": [
+          {
+            "name": "Замковой Дмитрий Сергеевич",
+            "inn_personal": "784290341977",
+            "nominal_value": 104000,
+            "share_percent": 65,
+            "as_of": "2023-08-16",
+            "source_id": "s8540"
+          },
+          {
+            "name": "Щанович Инга Сергеевна",
+            "inn_personal": "290129485298",
+            "nominal_value": 56000,
+            "share_percent": 35,
+            "as_of": "2023-08-16",
+            "source_id": "s8540"
+          }
+        ],
+        "founders_history": [
+          {
+            "value": "Замковой Дмитрий Сергеевич (65%, ₽104 000) / Щанович Инга Сергеевна (35%, ₽56 000)",
+            "as_of": "2023-08-16",
+            "source_id": "s8540",
+            "note": "ЕГРЮЛ выписка от 30.09.2026, ГРН 2237802215627 от 16.08.2023."
+          }
+        ],
+        "charter_capital_history": [
+          {
+            "value": 160000,
+            "as_of": "2006-07-05",
+            "source_id": "s8540",
+            "note": "Уставный капитал per the ЕГРЮЛ выписка, ГРН 7067847964573 от 05.07.2006."
+          }
+        ]
+      },
+      "why": [
+        "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. Founders and capital added from the same выписка (s8540)."
+      ]
+    },
+    "ao-kronshtadt": {
+      "set": {
+        "director_history": [
+          {
+            "value": "Донцов Василий Николаевич (генеральный директор; ИНН 381004363944)",
+            "as_of": "2025-07-09",
+            "source_id": "s7608",
+            "note": "ЕГРЮЛ выписка от 19.09.2026: сведения о лице и должность внесены ГРН 2257719195512 от 09.07.2025."
+          }
+        ]
+      },
+      "why": [
+        "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. "
       ]
     }
   }

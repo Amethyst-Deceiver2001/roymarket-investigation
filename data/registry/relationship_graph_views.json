@@ -1552,7 +1552,7 @@
           "label": "Дмитрий Владимирович Рубинштейн",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 15
+          "degree": 14
         },
         {
           "id": "domozhakov-denis-aleksandrovich",
@@ -2483,12 +2483,12 @@
           "kind": "entity",
           "label": "«Кулибин-клуб»",
           "name_latin": null,
-          "inn": "7725229200",
+          "inn": null,
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 8
+          "degree": 3
         },
         {
           "id": "kuznetsov-denis-aleksandrovich",
@@ -3060,7 +3060,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 24
+          "degree": 23
         },
         {
           "id": "ooo-arkodim-2",
@@ -3144,7 +3144,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 3
+          "degree": 5
         },
         {
           "id": "ooo-boevye-tekhnologii",
@@ -10424,7 +10424,7 @@
           "label": "Соловьев Константин Юрьевич",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 7
+          "degree": 6
         },
         {
           "id": "starostenko-anton-valentinovich",
@@ -10653,6 +10653,12 @@
           "degree": 1
         },
         {
+          "id": "stub::владимир ткачук",
+          "kind": "unresolved",
+          "label": "Владимир Ткачук (генеральный директор)",
+          "degree": 1
+        },
+        {
           "id": "stub::воронцов александр анатольевич",
           "kind": "unresolved",
           "label": "Воронцов Александр Анатольевич",
@@ -10695,9 +10701,15 @@
           "degree": 4
         },
         {
-          "id": "stub::дмитриев геннадий витальевич",
+          "id": "stub::донцов василий николаевич",
           "kind": "unresolved",
-          "label": "Дмитриев Геннадий Витальевич",
+          "label": "Донцов Василий Николаевич (генеральный директор; ИНН 381004363944)",
+          "degree": 1
+        },
+        {
+          "id": "stub::дусаев марат марсович",
+          "kind": "unresolved",
+          "label": "Дусаев Марат Марсович (генеральный директор; ИНН 165122119645)",
           "degree": 1
         },
         {
@@ -10755,12 +10767,6 @@
           "degree": 2
         },
         {
-          "id": "stub::климаков сергей васильевич",
-          "kind": "unresolved",
-          "label": "Климаков Сергей Васильевич",
-          "degree": 2
-        },
-        {
           "id": "stub::коган михаил александрович",
           "kind": "unresolved",
           "label": "Коган Михаил Александрович",
@@ -10800,6 +10806,12 @@
           "id": "stub::мазалова виктория вячеславовна",
           "kind": "unresolved",
           "label": "Мазалова Виктория Вячеславовна",
+          "degree": 1
+        },
+        {
+          "id": "stub::майоров константин юрьевич",
+          "kind": "unresolved",
+          "label": "Майоров Константин Юрьевич (генеральный директор; ИНН 504003610284)",
           "degree": 1
         },
         {
@@ -10896,6 +10908,12 @@
           "id": "stub::пряников владислав сергеевич",
           "kind": "unresolved",
           "label": "Пряников Владислав Сергеевич",
+          "degree": 1
+        },
+        {
+          "id": "stub::рапота максим григорьевич",
+          "kind": "unresolved",
+          "label": "Рапота Максим Григорьевич",
           "degree": 1
         },
         {
@@ -11065,12 +11083,6 @@
           "kind": "unresolved",
           "label": "Чемезов Сергей Викторович",
           "degree": 2
-        },
-        {
-          "id": "stub::черленок игорь эдуардович",
-          "kind": "unresolved",
-          "label": "Черленок Игорь Эдуардович",
-          "degree": 1
         },
         {
           "id": "stub::чижов максим сергеевич",
@@ -11251,12 +11263,12 @@
         {
           "id": "uraldronzavod",
           "kind": "entity",
-          "label": "«Уралдронзавод»",
+          "label": "ООО «Уралдронзавод»",
           "name_latin": null,
-          "inn": null,
+          "inn": "6671284030",
           "tier": "manufacturer",
           "sanctioned": true,
-          "legal_form": null,
+          "legal_form": "ООО",
           "variant": "offensive",
           "degree": 3
         },
@@ -13534,6 +13546,17 @@
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "barakhtin-artem-vladimirovich",
+          "target": "ooo-arkodim",
+          "type": "directs",
+          "label": null,
+          "source_id": "s7409",
+          "as_of": "2020-06-29",
+          "weight": 1.0,
+          "temporal_status": "current",
           "confidence": null
         },
         {
@@ -17521,12 +17544,12 @@
         {
           "source": "dmitriy-vladimirovich-rubinshteyn",
           "target": "ooo-berkut-dmv",
-          "type": "role",
-          "label": "Co-founder; manages Беркут simultaneously with ЦБСТ per investigator.org.ua -- ИНН 9709100837/ОГРН 1237700726636 since resolved via ФНС founder cross-check (other_entities, 2026-09-07)",
-          "source_id": "s6919",
-          "as_of": null,
+          "type": "founded",
+          "label": null,
+          "source_id": "s8541",
+          "as_of": "2024-12-19",
           "weight": 1.0,
-          "temporal_status": "unknown",
+          "temporal_status": "current",
           "confidence": null
         },
         {
@@ -17536,6 +17559,17 @@
           "label": "founder",
           "source_id": "s8073",
           "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "dmitriy-vladimirovich-rubinshteyn",
+          "target": "ooo-berkut-dmv",
+          "type": "role",
+          "label": "Учредитель (49%)",
+          "source_id": "s8541",
+          "as_of": "2024-12-19",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
@@ -29599,6 +29633,28 @@
         {
           "source": "sokolov-german-olegovich",
           "target": "ooo-npo-rustekhdron",
+          "type": "directs",
+          "label": null,
+          "source_id": "s8543",
+          "as_of": "2023-02-27",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "sokolov-german-olegovich",
+          "target": "ooo-npo-rustekhdron",
+          "type": "role",
+          "label": "Генеральный директор (27.02.2023–11.03.2025, per ЕГРЮЛ open data via OpenSanctions; ЕГРЮЛ restricts the section since 12.03.2025)",
+          "source_id": "s8543",
+          "as_of": "2023-02-27",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "sokolov-german-olegovich",
+          "target": "ooo-npo-rustekhdron",
           "type": "role",
           "label": "co-inventor (patent RU218475U1, RU220486U1)",
           "source_id": "s0953",
@@ -30532,6 +30588,17 @@
           "confidence": null
         },
         {
+          "source": "stub::владимир ткачук",
+          "target": "uraldronzavod",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6911",
+          "as_of": "2026-02-20",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
           "source": "stub::воронцов александр анатольевич",
           "target": "ooo-investproektgrupp",
           "type": "directs",
@@ -30653,12 +30720,23 @@
           "confidence": null
         },
         {
-          "source": "stub::дмитриев геннадий витальевич",
-          "target": "kulibin-klub",
-          "type": "founded",
+          "source": "stub::донцов василий николаевич",
+          "target": "ao-kronshtadt",
+          "type": "directs",
           "label": null,
-          "source_id": "s6740",
-          "as_of": "2003-04-23",
+          "source_id": "s7608",
+          "as_of": "2025-07-09",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "stub::дусаев марат марсович",
+          "target": "ooo-momento-rubinshteyn",
+          "type": "directs",
+          "label": null,
+          "source_id": "s7452",
+          "as_of": "2026-05-27",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -30785,28 +30863,6 @@
           "confidence": null
         },
         {
-          "source": "stub::климаков сергей васильевич",
-          "target": "kulibin-klub",
-          "type": "directs",
-          "label": null,
-          "source_id": "s6740",
-          "as_of": "2003-04-23",
-          "weight": 1.0,
-          "temporal_status": "historical",
-          "confidence": null
-        },
-        {
-          "source": "stub::климаков сергей васильевич",
-          "target": "kulibin-klub",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6740",
-          "as_of": "2003-04-23",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "stub::коган михаил александрович",
           "target": "ooo-vizionero",
           "type": "directs",
@@ -30925,6 +30981,17 @@
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::майоров константин юрьевич",
+          "target": "ooo-berkut-dmv",
+          "type": "directs",
+          "label": null,
+          "source_id": "s8541",
+          "as_of": "2024-12-25",
+          "weight": 1.0,
+          "temporal_status": "current",
           "confidence": null
         },
         {
@@ -31145,6 +31212,17 @@
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "stub::рапота максим григорьевич",
+          "target": "ooo-berkut-dmv",
+          "type": "founded",
+          "label": null,
+          "source_id": "s8541",
+          "as_of": "2023-10-26",
+          "weight": 1.0,
+          "temporal_status": "current",
           "confidence": null
         },
         {
@@ -31583,17 +31661,6 @@
           "label": null,
           "source_id": "s0094",
           "as_of": "2026-08-24",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::черленок игорь эдуардович",
-          "target": "kulibin-klub",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6740",
-          "as_of": "2003-04-23",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -33141,6 +33208,18 @@
           "degree": 5
         },
         {
+          "id": "ao-kronshtadt",
+          "kind": "entity",
+          "label": "АО «Кронштадт»",
+          "name_latin": "JSC Kronshtadt",
+          "inn": "7808035536",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": null,
+          "variant": null,
+          "degree": 37
+        },
+        {
           "id": "ao-mikts",
           "kind": "entity",
           "label": "АО «МИКЦ»",
@@ -33522,7 +33601,7 @@
           "label": "Дмитрий Владимирович Рубинштейн",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 15
+          "degree": 14
         },
         {
           "id": "dzema-vadim-vadimovich",
@@ -33933,18 +34012,6 @@
           "degree": 5
         },
         {
-          "id": "kulibin-klub",
-          "kind": "entity",
-          "label": "«Кулибин-клуб»",
-          "name_latin": null,
-          "inn": "7725229200",
-          "tier": "manufacturer",
-          "sanctioned": false,
-          "legal_form": null,
-          "variant": null,
-          "degree": 8
-        },
-        {
           "id": "lapin-igor-nikolaevich",
           "kind": "person",
           "label": "Лапин Игорь Николаевич",
@@ -34237,6 +34304,18 @@
           "degree": 8
         },
         {
+          "id": "ooo-arkodim",
+          "kind": "entity",
+          "label": "ООО «Аркодим»",
+          "name_latin": null,
+          "inn": "1659101884",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "variant": null,
+          "degree": 23
+        },
+        {
           "id": "ooo-arkodim-2",
           "kind": "entity",
           "label": "ООО «Аркодим-2»",
@@ -34283,6 +34362,18 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "degree": 13
+        },
+        {
+          "id": "ooo-berkut-dmv",
+          "kind": "entity",
+          "label": "ООО «Беркут»",
+          "name_latin": null,
+          "inn": "9709100837",
+          "tier": "unverified",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": null,
+          "degree": 5
         },
         {
           "id": "ooo-boevye-tekhnologii",
@@ -34811,6 +34902,18 @@
           "legal_form": null,
           "variant": null,
           "degree": 3
+        },
+        {
+          "id": "ooo-npo-rustekhdron",
+          "kind": "entity",
+          "label": "ООО «НПО Рустехдрон»",
+          "name_latin": null,
+          "inn": "5003155499",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": "ООО",
+          "variant": "offensive",
+          "degree": 29
         },
         {
           "id": "ooo-npts-basirtk",
@@ -35462,7 +35565,7 @@
           "label": "Соловьев Константин Юрьевич",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 7
+          "degree": 6
         },
         {
           "id": "stepanov-valeriy-yurevich",
@@ -35605,6 +35708,12 @@
           "degree": 1
         },
         {
+          "id": "stub::владимир ткачук",
+          "kind": "unresolved",
+          "label": "Владимир Ткачук (генеральный директор)",
+          "degree": 1
+        },
+        {
           "id": "stub::воронцов александр анатольевич",
           "kind": "unresolved",
           "label": "Воронцов Александр Анатольевич",
@@ -35629,9 +35738,15 @@
           "degree": 4
         },
         {
-          "id": "stub::дмитриев геннадий витальевич",
+          "id": "stub::донцов василий николаевич",
           "kind": "unresolved",
-          "label": "Дмитриев Геннадий Витальевич",
+          "label": "Донцов Василий Николаевич (генеральный директор; ИНН 381004363944)",
+          "degree": 1
+        },
+        {
+          "id": "stub::дусаев марат марсович",
+          "kind": "unresolved",
+          "label": "Дусаев Марат Марсович (генеральный директор; ИНН 165122119645)",
           "degree": 1
         },
         {
@@ -35671,12 +35786,6 @@
           "degree": 2
         },
         {
-          "id": "stub::климаков сергей васильевич",
-          "kind": "unresolved",
-          "label": "Климаков Сергей Васильевич",
-          "degree": 2
-        },
-        {
           "id": "stub::коган михаил александрович",
           "kind": "unresolved",
           "label": "Коган Михаил Александрович",
@@ -35704,6 +35813,12 @@
           "id": "stub::ломтев алексей иванович",
           "kind": "unresolved",
           "label": "Ломтев Алексей Иванович",
+          "degree": 1
+        },
+        {
+          "id": "stub::майоров константин юрьевич",
+          "kind": "unresolved",
+          "label": "Майоров Константин Юрьевич (генеральный директор; ИНН 504003610284)",
           "degree": 1
         },
         {
@@ -35765,6 +35880,12 @@
           "kind": "unresolved",
           "label": "Потехин Владимир Александрович",
           "degree": 3
+        },
+        {
+          "id": "stub::рапота максим григорьевич",
+          "kind": "unresolved",
+          "label": "Рапота Максим Григорьевич",
+          "degree": 1
         },
         {
           "id": "stub::репнев станислав валерьевич",
@@ -35899,12 +36020,6 @@
           "degree": 2
         },
         {
-          "id": "stub::черленок игорь эдуардович",
-          "kind": "unresolved",
-          "label": "Черленок Игорь Эдуардович",
-          "degree": 1
-        },
-        {
           "id": "stub::яковенко ирина геннадьевна",
           "kind": "unresolved",
           "label": "Яковенко Ирина Геннадьевна",
@@ -35924,6 +36039,18 @@
           "label": "Суховерхий Владимир Андреевич",
           "name_latin": null,
           "sanctioned": false,
+          "degree": 3
+        },
+        {
+          "id": "uraldronzavod",
+          "kind": "entity",
+          "label": "ООО «Уралдронзавод»",
+          "name_latin": null,
+          "inn": "6671284030",
+          "tier": "manufacturer",
+          "sanctioned": true,
+          "legal_form": "ООО",
+          "variant": "offensive",
           "degree": 3
         },
         {
@@ -36217,6 +36344,17 @@
           "label": null,
           "source_id": "s7442",
           "as_of": "2026-09-14",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "barakhtin-artem-vladimirovich",
+          "target": "ooo-arkodim",
+          "type": "directs",
+          "label": null,
+          "source_id": "s7409",
+          "as_of": "2020-06-29",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -36569,6 +36707,17 @@
           "label": null,
           "source_id": "s0437",
           "as_of": "2026-04-10",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "dmitriy-vladimirovich-rubinshteyn",
+          "target": "ooo-berkut-dmv",
+          "type": "founded",
+          "label": null,
+          "source_id": "s8541",
+          "as_of": "2024-12-19",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -38148,6 +38297,17 @@
         },
         {
           "source": "sokolov-german-olegovich",
+          "target": "ooo-npo-rustekhdron",
+          "type": "directs",
+          "label": null,
+          "source_id": "s8543",
+          "as_of": "2023-02-27",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "sokolov-german-olegovich",
           "target": "ooo-rtd-zashchita",
           "type": "directs",
           "label": null,
@@ -38576,6 +38736,17 @@
           "confidence": null
         },
         {
+          "source": "stub::владимир ткачук",
+          "target": "uraldronzavod",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6911",
+          "as_of": "2026-02-20",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
           "source": "stub::воронцов александр анатольевич",
           "target": "ooo-investproektgrupp",
           "type": "directs",
@@ -38642,12 +38813,23 @@
           "confidence": null
         },
         {
-          "source": "stub::дмитриев геннадий витальевич",
-          "target": "kulibin-klub",
-          "type": "founded",
+          "source": "stub::донцов василий николаевич",
+          "target": "ao-kronshtadt",
+          "type": "directs",
           "label": null,
-          "source_id": "s6740",
-          "as_of": "2003-04-23",
+          "source_id": "s7608",
+          "as_of": "2025-07-09",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "stub::дусаев марат марсович",
+          "target": "ooo-momento-rubinshteyn",
+          "type": "directs",
+          "label": null,
+          "source_id": "s7452",
+          "as_of": "2026-05-27",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -38730,17 +38912,6 @@
           "confidence": null
         },
         {
-          "source": "stub::климаков сергей васильевич",
-          "target": "kulibin-klub",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6740",
-          "as_of": "2003-04-23",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
           "source": "stub::коган михаил александрович",
           "target": "ooo-vizionero",
           "type": "directs",
@@ -38813,6 +38984,17 @@
           "label": "49%",
           "source_id": "s6750",
           "as_of": "2021-06-25",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "stub::майоров константин юрьевич",
+          "target": "ooo-berkut-dmv",
+          "type": "directs",
+          "label": null,
+          "source_id": "s8541",
+          "as_of": "2024-12-25",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -38956,6 +39138,17 @@
           "label": "100%",
           "source_id": "s6721",
           "as_of": "2026-08-25",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "stub::рапота максим григорьевич",
+          "target": "ooo-berkut-dmv",
+          "type": "founded",
+          "label": null,
+          "source_id": "s8541",
+          "as_of": "2023-10-26",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -39286,17 +39479,6 @@
           "label": null,
           "source_id": "s0094",
           "as_of": "2026-08-24",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null
-        },
-        {
-          "source": "stub::черленок игорь эдуардович",
-          "target": "kulibin-klub",
-          "type": "founded",
-          "label": null,
-          "source_id": "s6740",
-          "as_of": "2003-04-23",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -39690,7 +39872,7 @@
           "label": "Дмитрий Владимирович Рубинштейн",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 15
+          "degree": 14
         },
         {
           "id": "dukal-marina-aleksandrovna",
@@ -39797,12 +39979,12 @@
           "kind": "entity",
           "label": "«Кулибин-клуб»",
           "name_latin": null,
-          "inn": "7725229200",
+          "inn": null,
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 8
+          "degree": 3
         },
         {
           "id": "manetskiy-roman-kallistratovich",
@@ -39934,7 +40116,7 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "variant": null,
-          "degree": 24
+          "degree": 23
         },
         {
           "id": "ooo-atlant-aero",
@@ -40437,12 +40619,12 @@
         {
           "id": "uraldronzavod",
           "kind": "entity",
-          "label": "«Уралдронзавод»",
+          "label": "ООО «Уралдронзавод»",
           "name_latin": null,
-          "inn": null,
+          "inn": "6671284030",
           "tier": "manufacturer",
           "sanctioned": true,
-          "legal_form": null,
+          "legal_form": "ООО",
           "variant": "offensive",
           "degree": 3
         },
@@ -41785,18 +41967,6 @@
           "degree": 36
         },
         {
-          "id": "ao-kronshtadt",
-          "kind": "entity",
-          "label": "АО «Кронштадт»",
-          "name_latin": "JSC Kronshtadt",
-          "inn": "7808035536",
-          "tier": "manufacturer",
-          "sanctioned": true,
-          "legal_form": null,
-          "variant": null,
-          "degree": 37
-        },
-        {
           "id": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
           "kind": "entity",
           "label": "АО УК «Азимут» | formerly «Аэронавигационные и информационные системы»",
@@ -41809,14 +41979,6 @@
           "degree": 7
         },
         {
-          "id": "barakhtin-artem-vladimirovich",
-          "kind": "person",
-          "label": "Барахтин Артём Владимирович",
-          "name_latin": null,
-          "sanctioned": false,
-          "degree": 33
-        },
-        {
           "id": "cherepkov-aleksandr-aleksandrovich",
           "kind": "person",
           "label": "Черепков Александр Александрович",
@@ -41825,32 +41987,12 @@
           "degree": 2
         },
         {
-          "id": "dmitriy-vladimirovich-rubinshteyn",
-          "kind": "person",
-          "label": "Дмитрий Владимирович Рубинштейн",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 15
-        },
-        {
           "id": "fominykh-aleksey-mikhaylovich",
           "kind": "person",
           "label": "Фоминых Алексей Михайлович",
           "name_latin": null,
           "sanctioned": false,
           "degree": 6
-        },
-        {
-          "id": "kulibin-klub",
-          "kind": "entity",
-          "label": "«Кулибин-клуб»",
-          "name_latin": null,
-          "inn": "7725229200",
-          "tier": "manufacturer",
-          "sanctioned": false,
-          "legal_form": null,
-          "variant": null,
-          "degree": 8
         },
         {
           "id": "npo-kaysant",
@@ -41901,30 +42043,6 @@
           "degree": 38
         },
         {
-          "id": "ooo-arkodim",
-          "kind": "entity",
-          "label": "ООО «Аркодим»",
-          "name_latin": null,
-          "inn": "1659101884",
-          "tier": "manufacturer",
-          "sanctioned": false,
-          "legal_form": "ООО",
-          "variant": null,
-          "degree": 24
-        },
-        {
-          "id": "ooo-berkut-dmv",
-          "kind": "entity",
-          "label": "ООО «Беркут»",
-          "name_latin": null,
-          "inn": "9709100837",
-          "tier": "unverified",
-          "sanctioned": false,
-          "legal_form": null,
-          "variant": null,
-          "degree": 3
-        },
-        {
           "id": "ooo-gaskar-integratsiya",
           "kind": "entity",
           "label": "ООО «Гаскар Интеграция»",
@@ -41959,30 +42077,6 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "degree": 10
-        },
-        {
-          "id": "ooo-momento-rubinshteyn",
-          "kind": "entity",
-          "label": "ООО «Моменто»",
-          "name_latin": null,
-          "inn": "9717192768",
-          "tier": "unverified",
-          "sanctioned": false,
-          "legal_form": null,
-          "variant": null,
-          "degree": 5
-        },
-        {
-          "id": "ooo-npo-rustekhdron",
-          "kind": "entity",
-          "label": "ООО «НПО Рустехдрон»",
-          "name_latin": null,
-          "inn": "5003155499",
-          "tier": "manufacturer",
-          "sanctioned": true,
-          "legal_form": "ООО",
-          "variant": "offensive",
-          "degree": 29
         },
         {
           "id": "ooo-ushkuynik-sp",
@@ -42114,52 +42208,6 @@
           "name_latin": "Saidov Adil Abukovich",
           "sanctioned": false,
           "degree": 2
-        },
-        {
-          "id": "sokolov-german-olegovich",
-          "kind": "person",
-          "label": "Соколов Герман Олегович",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 9
-        },
-        {
-          "id": "solovev-konstantin-yurevich",
-          "kind": "person",
-          "label": "Соловьев Константин Юрьевич",
-          "name_latin": null,
-          "sanctioned": false,
-          "degree": 7
-        },
-        {
-          "id": "stub::александр паничев",
-          "kind": "unresolved",
-          "label": "Александр Паничев",
-          "degree": 1
-        },
-        {
-          "id": "stub::владимир ткачук",
-          "kind": "unresolved",
-          "label": "Владимир Ткачук",
-          "degree": 1
-        },
-        {
-          "id": "stub::донцов василий николаевич",
-          "kind": "unresolved",
-          "label": "Донцов Василий Николаевич",
-          "degree": 1
-        },
-        {
-          "id": "uraldronzavod",
-          "kind": "entity",
-          "label": "«Уралдронзавод»",
-          "name_latin": null,
-          "inn": null,
-          "tier": "manufacturer",
-          "sanctioned": true,
-          "legal_form": null,
-          "variant": "offensive",
-          "degree": 3
         }
       ],
       "edges": [
@@ -42186,43 +42234,10 @@
           "confidence": null
         },
         {
-          "source": "barakhtin-artem-vladimirovich",
-          "target": "ooo-arkodim",
-          "type": "directs",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
           "source": "cherepkov-aleksandr-aleksandrovich",
           "target": "npo-kaysant",
           "type": "role",
           "label": "93.3% owner (per rusprofile/companium/spark-interfax aggregators, 2026-08-24 -- not yet EGRUL-confirmed)",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "dmitriy-vladimirovich-rubinshteyn",
-          "target": "ooo-berkut-dmv",
-          "type": "directs",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "dmitriy-vladimirovich-rubinshteyn",
-          "target": "ooo-momento-rubinshteyn",
-          "type": "directs",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
@@ -42344,72 +42359,6 @@
           "target": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
           "type": "role",
           "label": "Член совета директоров (board member) — which Azimut entity not fully confirmed",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "sokolov-german-olegovich",
-          "target": "ooo-npo-rustekhdron",
-          "type": "directs",
-          "label": null,
-          "source_id": null,
-          "as_of": "2026-08-24",
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "sokolov-german-olegovich",
-          "target": "ooo-npo-rustekhdron",
-          "type": "role",
-          "label": "Генеральный директор (per checko.ru/rusprofile/spark-interfax aggregators, not yet confirmed against a full EGRUL PDF extract)",
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "solovev-konstantin-yurevich",
-          "target": "ooo-arkodim",
-          "type": "directs",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::александр паничев",
-          "target": "kulibin-klub",
-          "type": "directs",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::владимир ткачук",
-          "target": "uraldronzavod",
-          "type": "directs",
-          "label": null,
-          "source_id": null,
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null
-        },
-        {
-          "source": "stub::донцов василий николаевич",
-          "target": "ao-kronshtadt",
-          "type": "directs",
-          "label": null,
           "source_id": null,
           "as_of": null,
           "weight": 1.0,
