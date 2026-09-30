@@ -20703,16 +20703,7 @@
     "birthplace": null,
     "address": null,
     "inn_personal": "781434774182",
-    "roles": [
-      {
-        "entity_name": "ООО «СИБНК»",
-        "entity_slug": "ooo-sibnk",
-        "from": "2010-08-17",
-        "source_id": "s6752",
-        "title": "Генеральный директор / sole founder (100%, ₽10,000)",
-        "to": null
-      }
-    ],
+    "roles": [],
     "sanctions": [],
     "other_entities": [
       {
@@ -20751,8 +20742,10 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "s6752 -- ООО «СИБНК»'s own full signed ЕГРЮЛ выписка, pulled directly 2026-09-07."
+      "[2026-09-30 product research] His only role was at ООО «СИБНК-ЦЕНТР» (ИНН 7814475694, struck off 04.06.2012, s6752), which had been attached to the network by mistake in place of ООО «Сибирская навигационная компания» (short name «СИБНК»). No tie to the network; kept on file as reference only."
     ],
+    "graph_tier": "reference",
+    "_verified_against": null,
     "egrip_hits": [
       {
         "ogrnip": "312784723400403",

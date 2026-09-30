@@ -1,8 +1,8 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1135,
-  "edge_count": 1966,
+  "node_count": 1191,
+  "edge_count": 2026,
   "unresolved_count": 107,
   "nodes": [
     {
@@ -194,8 +194,8 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "АНО",
-      "variant": null,
-      "degree": 36
+      "variant": "dual",
+      "degree": 44
     },
     {
       "id": "ano-ntsns-nevskiy-tsentr-nauchnogo-sotrudnichestva",
@@ -243,7 +243,7 @@
       "sanctioned": true,
       "legal_form": "АНО",
       "variant": null,
-      "degree": 79
+      "degree": 80
     },
     {
       "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -403,7 +403,7 @@
       "sanctioned": true,
       "legal_form": "АО",
       "variant": null,
-      "degree": 5
+      "degree": 7
     },
     {
       "id": "ao-kronshtadt",
@@ -414,8 +414,8 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
-      "degree": 37
+      "variant": "offensive",
+      "degree": 45
     },
     {
       "id": "ao-mikts",
@@ -474,8 +474,8 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": null,
-      "degree": 6
+      "variant": "defensive",
+      "degree": 11
     },
     {
       "id": "ao-opticheskie-sistemy",
@@ -522,8 +522,8 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": null,
-      "degree": 15
+      "variant": "defensive",
+      "degree": 17
     },
     {
       "id": "ao-prominvest",
@@ -2073,7 +2073,7 @@
       "sanctioned": false,
       "legal_form": "ИП",
       "variant": null,
-      "degree": 1
+      "degree": 4
     },
     {
       "id": "ip-shandobylo-sergey-sergeevich",
@@ -2965,7 +2965,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 12
+      "degree": 14
     },
     {
       "id": "ooo-aerotekhalyans",
@@ -3036,8 +3036,8 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
-      "degree": 15
+      "variant": "defensive",
+      "degree": 16
     },
     {
       "id": "ooo-arkhangel-shchit",
@@ -3060,8 +3060,8 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
-      "degree": 23
+      "variant": "defensive",
+      "degree": 26
     },
     {
       "id": "ooo-arkodim-2",
@@ -3085,7 +3085,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 6
+      "degree": 9
     },
     {
       "id": "ooo-atlant-aero",
@@ -3096,8 +3096,8 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
-      "degree": 13
+      "variant": "offensive",
+      "degree": 15
     },
     {
       "id": "ooo-atlant-logistik",
@@ -3277,7 +3277,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 15
+      "degree": 17
     },
     {
       "id": "ooo-finkonsaltingk-fkk",
@@ -3325,7 +3325,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 12
+      "degree": 13
     },
     {
       "id": "ooo-gaskar-integratsiya",
@@ -3408,8 +3408,8 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
-      "degree": 8
+      "variant": "defensive",
+      "degree": 9
     },
     {
       "id": "ooo-ik-aviaok",
@@ -3421,7 +3421,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "ooo-intel-dron",
@@ -3433,7 +3433,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 8
+      "degree": 10
     },
     {
       "id": "ooo-investments",
@@ -3469,7 +3469,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 3
+      "degree": 5
     },
     {
       "id": "ooo-kleverkopter",
@@ -3492,8 +3492,8 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
-      "degree": 7
+      "variant": "defensive",
+      "degree": 9
     },
     {
       "id": "ooo-kopterlab",
@@ -3576,8 +3576,8 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
-      "degree": 4
+      "variant": "defensive",
+      "degree": 6
     },
     {
       "id": "ooo-metaskan",
@@ -3829,7 +3829,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "ooo-pk-stalnoy-kupol",
@@ -3961,7 +3961,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 7
+      "degree": 8
     },
     {
       "id": "ooo-sistemnyy-integrator",
@@ -4129,7 +4129,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "defensive",
-      "degree": 21
+      "degree": 23
     },
     {
       "id": "ooo-tsentr-dinarus",
@@ -4164,8 +4164,8 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
-      "degree": 6
+      "variant": "offensive",
+      "degree": 10
     },
     {
       "id": "ooo-tsyus",
@@ -4225,7 +4225,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 14
+      "degree": 17
     },
     {
       "id": "ooo-vostochnye-vorota-zabaykalsk-manchzhuriya",
@@ -4589,6 +4589,110 @@
       "degree": 1
     },
     {
+      "id": "product::ano-npts-ushkuynik::барражирующий-боеприпас-князь-владимир-святославович",
+      "kind": "product",
+      "label": "Барражирующий боеприпас «Князь Владимир Святославович» (КВС)",
+      "owner_slug": "ano-npts-ushkuynik",
+      "source_id": "s8602",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ano-npts-ushkuynik::безэкипажный-катер-скорлупа",
+      "kind": "product",
+      "label": "Безэкипажный катер «Скорлупа»",
+      "owner_slug": "ano-npts-ushkuynik",
+      "source_id": "s8601",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ano-npts-ushkuynik::комплекты-fpv-дронов-князь-вандал-новгородский-и-наземная-станция-управления",
+      "kind": "product",
+      "label": "Комплекты FPV-дронов «Князь Вандал Новгородский» (15 км / 23 км) и наземная станция управления",
+      "owner_slug": "ano-npts-ushkuynik",
+      "source_id": "s3788",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ano-npts-ushkuynik::мобильный-контейнерный-комплекс-сборки-бпла",
+      "kind": "product",
+      "label": "Мобильный контейнерный комплекс сборки БПЛА",
+      "owner_slug": "ano-npts-ushkuynik",
+      "source_id": "s8602",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ano-npts-ushkuynik::перехватчик-самолетного-типа-кречет",
+      "kind": "product",
+      "label": "Перехватчик самолётного типа «Кречет»",
+      "owner_slug": "ano-npts-ushkuynik",
+      "source_id": "s8602",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ano-npts-ushkuynik::разведывательный-бпла-князь-вещий-олег",
+      "kind": "product",
+      "label": "Разведывательный БПЛА «Князь Вещий Олег» (КВО)",
+      "owner_slug": "ano-npts-ushkuynik",
+      "source_id": "s8602",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ano-npts-ushkuynik::сау-рон-система-автоматизированного-управления-ресурсами-объективного-наблюдения",
+      "kind": "product",
+      "label": "«САУ РОН» — система автоматизированного управления ресурсами объективного наблюдения",
+      "owner_slug": "ano-npts-ushkuynik",
+      "source_id": "s8602",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ano-npts-ushkuynik::ударный-fpv-дрон-князь-вандал-новгородский",
+      "kind": "product",
+      "label": "Ударный FPV-дрон «Князь Вандал Новгородский» (КВН)",
+      "owner_slug": "ano-npts-ushkuynik",
+      "source_id": "s3781",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::ao-ekolibri::em-01",
       "kind": "product",
       "label": "EM-01",
@@ -4693,6 +4797,136 @@
       "degree": 1
     },
     {
+      "id": "product::ao-kotlin-novator::буран",
+      "kind": "product",
+      "label": "«Буран»",
+      "owner_slug": "ao-kotlin-novator",
+      "source_id": "s8545",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-kotlin-novator::х-89",
+      "kind": "product",
+      "label": "«Х-89»",
+      "owner_slug": "ao-kotlin-novator",
+      "source_id": "s8544",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-kronshtadt::бла-гелиос-рлд",
+      "kind": "product",
+      "label": "БЛА ГЕЛИОС-РЛД",
+      "owner_slug": "ao-kronshtadt",
+      "source_id": "s8627",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-kronshtadt::бортовой-терминал-радиосвязи-бла",
+      "kind": "product",
+      "label": "Бортовой терминал радиосвязи БЛА (патент RU191165U1)",
+      "owner_slug": "ao-kronshtadt",
+      "source_id": "s8565",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-kronshtadt::прочая-линейка-бвс-вт450-фрегат-демонстратор-сверхзвукового-самолета-бортовое-оборудование-и-по",
+      "kind": "product",
+      "label": "Прочая линейка: БВС-ВТ450, «Фрегат», демонстратор сверхзвукового самолёта; бортовое оборудование и ПО (БИУС-2, БАНО, ЛИДАР K8, УФ пеленгатор и др.)",
+      "owner_slug": "ao-kronshtadt",
+      "source_id": "s8628",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-kronshtadt::разведывательно-ударный-бла-орион",
+      "kind": "product",
+      "label": "Разведывательно-ударный БЛА «Орион» (в ВС РФ — «Иноходец»)",
+      "owner_slug": "ao-kronshtadt",
+      "source_id": "s8626",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-kronshtadt::разведывательно-ударный-бла-сириус",
+      "kind": "product",
+      "label": "Разведывательно-ударный БЛА «Сириус»",
+      "owner_slug": "ao-kronshtadt",
+      "source_id": "s8634",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-kronshtadt::скоростной-ударный-бла-гром",
+      "kind": "product",
+      "label": "Скоростной ударный БЛА «Гром»",
+      "owner_slug": "ao-kronshtadt",
+      "source_id": "s8633",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-kronshtadt::центр-машинного-обучения-для-бла-военного-назначения-муштра-э",
+      "kind": "product",
+      "label": "Центр машинного обучения для БЛА военного назначения «Муштра-Э»",
+      "owner_slug": "ao-kronshtadt",
+      "source_id": "s8635",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-kronshtadt::экспортный-комплекс-орион-э",
+      "kind": "product",
+      "label": "Экспортный комплекс «Орион-Э»",
+      "owner_slug": "ao-kronshtadt",
+      "source_id": "s8630",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::ao-nii-stt::merlin-vr",
       "kind": "product",
       "label": "Merlin-VR",
@@ -4789,6 +5023,71 @@
       "label": "Универсальный преобразователь интерфейсов \"УПИ-01\"",
       "owner_slug": "ao-nii-vektor",
       "source_id": "s5391",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-npp-real::комплекс-перехват-перехват-2-0",
+      "kind": "product",
+      "label": "Комплекс «Перехват» / «Перехват 2.0»",
+      "owner_slug": "ao-npp-real",
+      "source_id": "s8604",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-npp-real::многопульный-патрон-5-45",
+      "kind": "product",
+      "label": "Многопульный патрон 5,45 (патент RU233454U1)",
+      "owner_slug": "ao-npp-real",
+      "source_id": "s8569",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-npp-real::окопная-сигнализация-сигнал-2-0",
+      "kind": "product",
+      "label": "Окопная сигнализация «Сигнал 2.0»",
+      "owner_slug": "ao-npp-real",
+      "source_id": "s8608",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-npp-real::ручной-рэб-утюг",
+      "kind": "product",
+      "label": "Ручной РЭБ «Утюг» («Сковородка»)",
+      "owner_slug": "ao-npp-real",
+      "source_id": "s8606",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-npp-real::рэб-барьер",
+      "kind": "product",
+      "label": "РЭБ «Барьер»",
+      "owner_slug": "ao-npp-real",
+      "source_id": "s8583",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -5538,6 +5837,32 @@
       "degree": 1
     },
     {
+      "id": "product::ao-pmts-avangard::обустройство-пунктов-пропуска-через-госграницу-системы-безопасности-связь",
+      "kind": "product",
+      "label": "Обустройство пунктов пропуска через госграницу; системы безопасности, связь (интегратор)",
+      "owner_slug": "ao-pmts-avangard",
+      "source_id": "s8622",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-pmts-avangard::пак-арьергард",
+      "kind": "product",
+      "label": "ПАК «Арьергард» (обнаружение и противодействие БПЛА)",
+      "owner_slug": "ao-pmts-avangard",
+      "source_id": "s8621",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::ao-stratim::голубь",
       "kind": "product",
       "label": "«Голубь»",
@@ -5738,6 +6063,19 @@
       "label": "«Логос С8»",
       "owner_slug": "gk-logos",
       "source_id": "s0546",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ip-kuznetsov-ruslan-nikolaevich::дрон-детектор-булат-перепродажа",
+      "kind": "product",
+      "label": "Дрон-детектор «Булат» (3mx / ООО «Тримикс») — перепродажа",
+      "owner_slug": "ip-kuznetsov-ruslan-nikolaevich",
+      "source_id": "s8613",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -7215,11 +7553,154 @@
       "degree": 1
     },
     {
+      "id": "product::ooo-aeroplatformy::высотные-свободные-аэростаты",
+      "kind": "product",
+      "label": "Высотные свободные аэростаты",
+      "owner_slug": "ooo-aeroplatformy",
+      "source_id": "s7590",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-aeroplatformy::привязные-малообъемные-аэростаты-ретрансляторы",
+      "kind": "product",
+      "label": "Привязные малообъёмные аэростаты-ретрансляторы",
+      "owner_slug": "ooo-aeroplatformy",
+      "source_id": "s7590",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-arkhangel-grupp::дроны-перехватчики-и-мобильные-расчеты-защиты-объектов-от-бпла",
+      "kind": "product",
+      "label": "Дроны-перехватчики и мобильные расчёты защиты объектов от БПЛА (предложение группы «Архангел»)",
+      "owner_slug": "ooo-arkhangel-grupp",
+      "source_id": "s8610",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::ooo-arkhangel-shchit::дрон-перехватчик-архангел",
       "kind": "product",
       "label": "Дрон-перехватчик «Архангел»",
       "owner_slug": "ooo-arkhangel-shchit",
       "source_id": "s5456",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-arkodim-pro::гибкий-кабельный-канал-arkodim",
+      "kind": "product",
+      "label": "Гибкий кабельный канал ARKODIM",
+      "owner_slug": "ooo-arkodim-pro",
+      "source_id": "s8555",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-arkodim-pro::промышленный-робот-arkodim",
+      "kind": "product",
+      "label": "Промышленный робот ARKODIM",
+      "owner_slug": "ooo-arkodim-pro",
+      "source_id": "s8555",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-arkodim-pro::станки-с-чпу",
+      "kind": "product",
+      "label": "Станки с ЧПУ (по заказу)",
+      "owner_slug": "ooo-arkodim-pro",
+      "source_id": "s8555",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-arkodim::нейросетевые-алгоритмы-трекинга-для-антидроновой-системы-малой-пво",
+      "kind": "product",
+      "label": "Нейросетевые алгоритмы трекинга для антидроновой системы малой ПВО",
+      "owner_slug": "ooo-arkodim",
+      "source_id": "s7524",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-arkodim::промышленный-робот-манипулятор-с-двойными-энкодерами",
+      "kind": "product",
+      "label": "Промышленный робот-манипулятор с двойными энкодерами (патент RU2696508C1)",
+      "owner_slug": "ooo-arkodim",
+      "source_id": "s1008",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-arkodim::экструдер-и-смеситель-строительного-3d-принтера",
+      "kind": "product",
+      "label": "Экструдер и смеситель строительного 3D-принтера (патенты RU2782021C1 и др.)",
+      "owner_slug": "ooo-arkodim",
+      "source_id": "s1065",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-atlant-aero::комплектующие-для-беспилотника-орион",
+      "kind": "product",
+      "label": "Комплектующие для беспилотника «Орион»",
+      "owner_slug": "ooo-atlant-aero",
+      "source_id": "s8554",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-atlant-aero::ударно-разведывательные-дроны-типа-молния",
+      "kind": "product",
+      "label": "Ударно-разведывательные дроны типа «Молния»",
+      "owner_slug": "ooo-atlant-aero",
+      "source_id": "s8554",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -7298,6 +7779,32 @@
       "label": "Аккумулятор GAONENG GNB 6S 22.2В 6500мАч 50C LiPo XT90 (реселлер, не производитель)",
       "owner_slug": "ooo-boevye-tekhnologii",
       "source_id": "s5660",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-eyartek::манс",
+      "kind": "product",
+      "label": "МАНС (модельная альтернативная навигационная система)",
+      "owner_slug": "ooo-eyartek",
+      "source_id": "s8551",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-eyartek::тренажер-оператора-бас",
+      "kind": "product",
+      "label": "Тренажёр оператора БАС",
+      "owner_slug": "ooo-eyartek",
+      "source_id": "s8551",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -7800,6 +8307,71 @@
       "degree": 1
     },
     {
+      "id": "product::ooo-hab-svo::дрон-перехватчик-архангел",
+      "kind": "product",
+      "label": "Дрон-перехватчик «Архангел» (серийное производство)",
+      "owner_slug": "ooo-hab-svo",
+      "source_id": "s8611",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-ik-aviaok::электронная-пушка-для-послойного-электронно-лучевого-наплавления",
+      "kind": "product",
+      "label": "Электронная пушка для послойного электронно-лучевого наплавления (патент RU225510U1)",
+      "owner_slug": "ooo-ik-aviaok",
+      "source_id": "s8567",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-intel-dron::ромашка-комплекс-ии-анализа-видео-с-бпла",
+      "kind": "product",
+      "label": "«Ромашка» — комплекс ИИ-анализа видео с БПЛА",
+      "owner_slug": "ooo-intel-dron",
+      "source_id": "s8598",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-kingpro::fpv-дрон-секира-7",
+      "kind": "product",
+      "label": "FPV дрон «Секира 7»",
+      "owner_slug": "ooo-kingpro",
+      "source_id": "s8546",
+      "classification": {
+        "status": "classified",
+        "uav_platform": "multirotor",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-kingpro::секира-призрак",
+      "kind": "product",
+      "label": "«Секира Призрак»",
+      "owner_slug": "ooo-kingpro",
+      "source_id": "s8550",
+      "classification": {
+        "status": "classified",
+        "uav_platform": "multirotor",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::ooo-kleverkopter::aэромедик-mini",
       "kind": "product",
       "label": "Aэромедик MINI",
@@ -7870,6 +8442,32 @@
       "label": "Патруль-30",
       "owner_slug": "ooo-kleverkopter",
       "source_id": "s8052",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-konstruktorskoe-byuro-sinergiya::автомобильный-рэб-странник",
+      "kind": "product",
+      "label": "Автомобильный РЭБ «Странник»",
+      "owner_slug": "ooo-konstruktorskoe-byuro-sinergiya",
+      "source_id": "s8595",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-konstruktorskoe-byuro-sinergiya::стационарный-всенаправленный-комплекс-рэб-медуза-2м",
+      "kind": "product",
+      "label": "Стационарный всенаправленный комплекс РЭБ «Медуза 2М»",
+      "owner_slug": "ooo-konstruktorskoe-byuro-sinergiya",
+      "source_id": "s8578",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -8299,6 +8897,32 @@
       "label": "ТРЛЕ.Э60.01.00.0",
       "owner_slug": "ooo-kravt",
       "source_id": null,
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-mentastep::комплексная-защита-ног",
+      "kind": "product",
+      "label": "Комплексная защита ног",
+      "owner_slug": "ooo-mentastep",
+      "source_id": "s8548",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-mentastep::униформа-с-защитой-от-грибка-и-плесени",
+      "kind": "product",
+      "label": "Униформа с защитой от грибка и плесени",
+      "owner_slug": "ooo-mentastep",
+      "source_id": "s8547",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -9438,6 +10062,19 @@
       "degree": 1
     },
     {
+      "id": "product::ooo-pekhtra::периферийное-устройство-управления-компьютером-через-мышечные-сигналы",
+      "kind": "product",
+      "label": "Периферийное устройство управления компьютером через мышечные сигналы",
+      "owner_slug": "ooo-pekhtra",
+      "source_id": "s8547",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::ooo-pokrov::детектор-булат-v-4",
       "kind": "product",
       "label": "Детектор «Булат» v.4 (3MX)",
@@ -9924,6 +10561,97 @@
       "label": "«Джокер»",
       "owner_slug": "ooo-tskbr",
       "source_id": "s7503",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-tsugam::fpv-дрон-брус-1",
+      "kind": "product",
+      "label": "FPV-дрон «Брус-1»",
+      "owner_slug": "ooo-tsugam",
+      "source_id": "s8564",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-tsugam::fpv-дрон-корт",
+      "kind": "product",
+      "label": "FPV-дрон «Корт»",
+      "owner_slug": "ooo-tsugam",
+      "source_id": "s8564",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-tsugam::fpv-дрон-оса",
+      "kind": "product",
+      "label": "FPV-дрон «Оса»",
+      "owner_slug": "ooo-tsugam",
+      "source_id": "s8564",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-tsugam::испытательный-полигон-бас-в-сколково",
+      "kind": "product",
+      "label": "Испытательный полигон БАС в Сколково",
+      "owner_slug": "ooo-tsugam",
+      "source_id": "s8573",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-vizionero::vispace",
+      "kind": "product",
+      "label": "ViSpace",
+      "owner_slug": "ooo-vizionero",
+      "source_id": "s8558",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-vizionero::vitracker",
+      "kind": "product",
+      "label": "ViTracker",
+      "owner_slug": "ooo-vizionero",
+      "source_id": "s8559",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-vizionero::пак-визионеро",
+      "kind": "product",
+      "label": "ПАК «Визионеро»",
+      "owner_slug": "ooo-vizionero",
+      "source_id": "s8556",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -11944,6 +12672,94 @@
       "confidence": null
     },
     {
+      "source": "ano-npts-ushkuynik",
+      "target": "product::ano-npts-ushkuynik::барражирующий-боеприпас-князь-владимир-святославович",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8602",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ano-npts-ushkuynik",
+      "target": "product::ano-npts-ushkuynik::безэкипажный-катер-скорлупа",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8601",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ano-npts-ushkuynik",
+      "target": "product::ano-npts-ushkuynik::комплекты-fpv-дронов-князь-вандал-новгородский-и-наземная-станция-управления",
+      "type": "produces",
+      "label": null,
+      "source_id": "s3788",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ano-npts-ushkuynik",
+      "target": "product::ano-npts-ushkuynik::мобильный-контейнерный-комплекс-сборки-бпла",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8602",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ano-npts-ushkuynik",
+      "target": "product::ano-npts-ushkuynik::перехватчик-самолетного-типа-кречет",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8602",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ano-npts-ushkuynik",
+      "target": "product::ano-npts-ushkuynik::разведывательный-бпла-князь-вещий-олег",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8602",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ano-npts-ushkuynik",
+      "target": "product::ano-npts-ushkuynik::сау-рон-система-автоматизированного-управления-ресурсами-объективного-наблюдения",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8602",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ano-npts-ushkuynik",
+      "target": "product::ano-npts-ushkuynik::ударный-fpv-дрон-князь-вандал-новгородский",
+      "type": "produces",
+      "label": null,
+      "source_id": "s3781",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ano-platforma-nti",
       "target": "ano-npts-ushkuynik",
       "type": "founded",
@@ -12351,11 +13167,121 @@
       "confidence": "t-doc"
     },
     {
+      "source": "ao-kotlin-novator",
+      "target": "product::ao-kotlin-novator::буран",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8545",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-kotlin-novator",
+      "target": "product::ao-kotlin-novator::х-89",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8544",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ao-kronshtadt",
       "target": "ooo-gk-aeromaks",
       "type": "related",
       "label": "group-structure",
       "source_id": "s7610",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-kronshtadt",
+      "target": "product::ao-kronshtadt::бла-гелиос-рлд",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8627",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-kronshtadt",
+      "target": "product::ao-kronshtadt::бортовой-терминал-радиосвязи-бла",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8565",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-kronshtadt",
+      "target": "product::ao-kronshtadt::прочая-линейка-бвс-вт450-фрегат-демонстратор-сверхзвукового-самолета-бортовое-оборудование-и-по",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8628",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-kronshtadt",
+      "target": "product::ao-kronshtadt::разведывательно-ударный-бла-орион",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8626",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-kronshtadt",
+      "target": "product::ao-kronshtadt::разведывательно-ударный-бла-сириус",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8634",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-kronshtadt",
+      "target": "product::ao-kronshtadt::скоростной-ударный-бла-гром",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8633",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-kronshtadt",
+      "target": "product::ao-kronshtadt::центр-машинного-обучения-для-бла-военного-назначения-муштра-э",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8635",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-kronshtadt",
+      "target": "product::ao-kronshtadt::экспортный-комплекс-орион-э",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8630",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -12492,6 +13418,61 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-open"
+    },
+    {
+      "source": "ao-npp-real",
+      "target": "product::ao-npp-real::комплекс-перехват-перехват-2-0",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8604",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-npp-real",
+      "target": "product::ao-npp-real::многопульный-патрон-5-45",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8569",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-npp-real",
+      "target": "product::ao-npp-real::окопная-сигнализация-сигнал-2-0",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8608",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-npp-real",
+      "target": "product::ao-npp-real::ручной-рэб-утюг",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8606",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-npp-real",
+      "target": "product::ao-npp-real::рэб-барьер",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8583",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
     },
     {
       "source": "ao-opticheskie-sistemy",
@@ -13159,6 +14140,28 @@
       "type": "produces",
       "label": null,
       "source_id": "s0967",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-pmts-avangard",
+      "target": "product::ao-pmts-avangard::обустройство-пунктов-пропуска-через-госграницу-системы-безопасности-связь",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8622",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-pmts-avangard",
+      "target": "product::ao-pmts-avangard::пак-арьергард",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8621",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -19391,6 +20394,28 @@
       "confidence": null
     },
     {
+      "source": "ip-kuznetsov-ruslan-nikolaevich",
+      "target": "ooo-trimiks",
+      "type": "related",
+      "label": "dealer",
+      "source_id": "s8613",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ip-kuznetsov-ruslan-nikolaevich",
+      "target": "product::ip-kuznetsov-ruslan-nikolaevich::дрон-детектор-булат-перепродажа",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8613",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ip-tsyganov-vadim-borisovich",
       "target": "ooo-pokrov",
       "type": "directs",
@@ -23571,6 +24596,28 @@
       "confidence": "t-doc"
     },
     {
+      "source": "ooo-aeroplatformy",
+      "target": "product::ooo-aeroplatformy::высотные-свободные-аэростаты",
+      "type": "produces",
+      "label": null,
+      "source_id": "s7590",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-aeroplatformy",
+      "target": "product::ooo-aeroplatformy::привязные-малообъемные-аэростаты-ретрансляторы",
+      "type": "produces",
+      "label": null,
+      "source_id": "s7590",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-aerotekhalyans",
       "target": "ooo-mptm",
       "type": "related",
@@ -23651,12 +24698,23 @@
       "source": "ooo-arkhangel",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "EU-sanctioned as one of six named ЦБСТ residents in the EU's 20th sanctions package, per ЦБСТ's own coverage of the l...",
+      "label": "ЦБСТ's own channel lists «Архангел» among organisations «входящие в контур» ЦБСТ that were included in the EU's 20th ...",
       "source_id": "s7588",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-arkhangel-grupp",
+      "target": "product::ooo-arkhangel-grupp::дроны-перехватчики-и-мобильные-расчеты-защиты-объектов-от-бпла",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8610",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
     },
     {
       "source": "ooo-arkhangel-shchit",
@@ -23681,6 +24739,39 @@
       "confidence": "t-doc"
     },
     {
+      "source": "ooo-arkodim",
+      "target": "product::ooo-arkodim::нейросетевые-алгоритмы-трекинга-для-антидроновой-системы-малой-пво",
+      "type": "produces",
+      "label": null,
+      "source_id": "s7524",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-arkodim",
+      "target": "product::ooo-arkodim::промышленный-робот-манипулятор-с-двойными-энкодерами",
+      "type": "produces",
+      "label": null,
+      "source_id": "s1008",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-arkodim",
+      "target": "product::ooo-arkodim::экструдер-и-смеситель-строительного-3d-принтера",
+      "type": "produces",
+      "label": null,
+      "source_id": "s1065",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-arkodim-2",
       "target": "ooo-arkodim",
       "type": "related",
@@ -23703,6 +24794,39 @@
       "confidence": null
     },
     {
+      "source": "ooo-arkodim-pro",
+      "target": "product::ooo-arkodim-pro::гибкий-кабельный-канал-arkodim",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8555",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-arkodim-pro",
+      "target": "product::ooo-arkodim-pro::промышленный-робот-arkodim",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8555",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-arkodim-pro",
+      "target": "product::ooo-arkodim-pro::станки-с-чпу",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8555",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-atlant-aero",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
@@ -23712,6 +24836,28 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-atlant-aero",
+      "target": "product::ooo-atlant-aero::комплектующие-для-беспилотника-орион",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8554",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-atlant-aero",
+      "target": "product::ooo-atlant-aero::ударно-разведывательные-дроны-типа-молния",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8554",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
     },
     {
       "source": "ooo-atlant-logistik",
@@ -23921,6 +25067,28 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-open"
+    },
+    {
+      "source": "ooo-eyartek",
+      "target": "product::ooo-eyartek::манс",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8551",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-eyartek",
+      "target": "product::ooo-eyartek::тренажер-оператора-бас",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8551",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
     },
     {
       "source": "ooo-finkonsaltingk-fkk",
@@ -24605,6 +25773,50 @@
       "confidence": null
     },
     {
+      "source": "ooo-hab-svo",
+      "target": "product::ooo-hab-svo::дрон-перехватчик-архангел",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8611",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-ik-aviaok",
+      "target": "product::ooo-ik-aviaok::электронная-пушка-для-послойного-электронно-лучевого-наплавления",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8567",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-intel-dron",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Named by ЦБСТ's own channel as a first-stream winner of the ЦБСТ accelerator, with ЦБСТ arranging a fast track to Ско...",
+      "source_id": "s8581",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-intel-dron",
+      "target": "product::ooo-intel-dron::ромашка-комплекс-ии-анализа-видео-с-бпла",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8598",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-investproektgrupp",
       "target": "ooo-tskbr",
       "type": "founded",
@@ -24625,6 +25837,28 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-kingpro",
+      "target": "product::ooo-kingpro::fpv-дрон-секира-7",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8546",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-kingpro",
+      "target": "product::ooo-kingpro::секира-призрак",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8550",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
     },
     {
       "source": "ooo-kleverkopter",
@@ -24713,6 +25947,28 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-konstruktorskoe-byuro-sinergiya",
+      "target": "product::ooo-konstruktorskoe-byuro-sinergiya::автомобильный-рэб-странник",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8595",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-konstruktorskoe-byuro-sinergiya",
+      "target": "product::ooo-konstruktorskoe-byuro-sinergiya::стационарный-всенаправленный-комплекс-рэб-медуза-2м",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8578",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
     },
     {
       "source": "ooo-kopterlab",
@@ -25142,6 +26398,28 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-mentastep",
+      "target": "product::ooo-mentastep::комплексная-защита-ног",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8548",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-mentastep",
+      "target": "product::ooo-mentastep::униформа-с-защитой-от-грибка-и-плесени",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8547",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
     },
     {
       "source": "ooo-metaskan",
@@ -26310,6 +27588,17 @@
       "confidence": "press"
     },
     {
+      "source": "ooo-pekhtra",
+      "target": "product::ooo-pekhtra::периферийное-устройство-управления-компьютером-через-мышечные-сигналы",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8547",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-pk-stalnoy-kupol",
       "target": "ao-opticheskie-sistemy",
       "type": "related",
@@ -26458,6 +27747,17 @@
       "type": "founded",
       "label": null,
       "source_id": "s0468",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-sibirskaya-navigatsionnaya-kompaniya",
+      "target": "ooo-gaskar",
+      "type": "owns",
+      "label": null,
+      "source_id": "s6759",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -26850,6 +28150,17 @@
     },
     {
       "source": "ooo-trimiks",
+      "target": "ip-kuznetsov-ruslan-nikolaevich",
+      "type": "related",
+      "label": "dealer",
+      "source_id": "s8613",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-trimiks",
       "target": "ooo-pokrov",
       "type": "related",
       "label": "dealer",
@@ -26981,6 +28292,50 @@
       "confidence": "t-doc"
     },
     {
+      "source": "ooo-tsugam",
+      "target": "product::ooo-tsugam::fpv-дрон-брус-1",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8564",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-tsugam",
+      "target": "product::ooo-tsugam::fpv-дрон-корт",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8564",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-tsugam",
+      "target": "product::ooo-tsugam::fpv-дрон-оса",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8564",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-tsugam",
+      "target": "product::ooo-tsugam::испытательный-полигон-бас-в-сколково",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8573",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-uk-komaks",
       "target": "ooo-aero-khit",
       "type": "founded",
@@ -27034,6 +28389,39 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-vizionero",
+      "target": "product::ooo-vizionero::vispace",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8558",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-vizionero",
+      "target": "product::ooo-vizionero::vitracker",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8559",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-vizionero",
+      "target": "product::ooo-vizionero::пак-визионеро",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8556",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
     },
     {
       "source": "ooo-vozdushnyy-traktat",
@@ -34015,7 +35403,6 @@
     "aristarkhov-vladimir-vyacheslavovich",
     "atlivanchik-sergey-nikolaevich",
     "barilo-denis-aleksandrovich",
-    "baturin-vyacheslav-yurevich",
     "bf-ktspn-barnaul",
     "borisov-aleksandr-sergeevich-tsbs-tula",
     "chapurin-viktor-viktorovich",
@@ -34118,7 +35505,6 @@
     "ooo-prommash",
     "ooo-radiofid-sistemy",
     "ooo-rokot-tekh",
-    "ooo-sibnk",
     "ooo-skay-avia-grupp",
     "ooo-titan-severo-zapad",
     "ooo-tsentr-bespilotnykh-sistem-tula",
@@ -34129,6 +35515,7 @@
     "product::ip-gabitov-r-a::beastcontrol-система-удаленного-управления-fpv-дроном-через-интернет-на-базе-orange-pi-3b",
     "product::ip-gabitov-r-a::аккумулятор-для-fpv-дрона-gnb-9000-mah-6s-70c-xt60",
     "product::ip-popov-aleksandr-sergeevich::аккумуляторы-gaoneng-для-fpv-дронов-различные-емкости",
+    "product::kolskaya-verf::безэкипажный-катер-на-подводных-крыльях",
     "product::ooo-arkhangel-zaporizhzhie::вынос-пульта-управления-бпла",
     "product::ooo-arkhangel-zaporizhzhie::дрон-перехватчик-архангел",
     "product::ooo-arkhangel-zaporizhzhie::полевой-обнаружитель-подавитель-радиоканалов-управления-бпла-дозор-1п",
@@ -34161,21 +35548,30 @@
     "product::ooo-eliars::парс-4",
     "product::ooo-eliars::прибор-активации-режимов-самоспасения",
     "product::ooo-eliars::сектор",
+    "product::ooo-geron::бпла-удар",
+    "product::ooo-geron::курсы-подготовки-операторов-fpv",
+    "product::ooo-geron::стратосферная-беспилотная-платформа-хищник",
+    "product::ooo-instekh::антидрон-система-aura",
+    "product::ooo-instekh::система-оповещения-нежеголь-оборудование-орало-150",
     "product::ooo-intek-bespilotnye-sistemy::дрон-экспо",
     "product::ooo-intek-bespilotnye-sistemy::интэк-инжиниринг",
     "product::ooo-intek-bespilotnye-sistemy::интэк-промышленные-системы",
     "product::ooo-intek-bespilotnye-sistemy::метеор-2",
     "product::ooo-npo-nebo::скарабей-sd-138",
+    "product::ooo-prommash::дуплет-duplet",
+    "product::ooo-radiofid-sistemy::промышленные-4g-lte-роутеры-и-модемы-irz-терминалы-gps-маяки",
     "product::ooo-rokot-tekh::пластиковые-пропеллеры-для-fpv-дронов",
     "product::ooo-rokot-tekh::пропеллер-для-беспилотных-авиационных-систем-rt1050",
     "product::ooo-rokot-tekh::пропеллер-для-беспилотных-авиационных-систем-rt9045",
     "product::ooo-rokot-tekh::пропеллеры-10-дюймов-для-fpv-дрона",
     "product::ooo-rokot-tekh::пропеллеры-9-дюймов-для-fpv-дрона",
+    "product::ooo-skay-avia-grupp::сборка-боевых-беспилотников",
     "product::ooo-titan-severo-zapad::логгер-полилог",
     "product::ooo-titan-severo-zapad::логгеры-cube",
     "product::ooo-titan-severo-zapad::пзс-2000-т",
     "product::ooo-titan-severo-zapad::пзс-400-т",
     "product::ooo-titan-severo-zapad::пзс-800-т",
+    "product::ooo-zetaks::образовательные-коптеры",
     "product::yarl::бпр-ярл",
     "product::yarl::бронежилет-для-собак-псы-войны",
     "prokofev-mikhail-vasilevich",
