@@ -1913,11 +1913,6 @@
         "revenue": 425000.0,
         "source_id": "s0258",
         "year": "2025"
-      },
-      {
-        "profit": 139654000.0,
-        "source_id": "s0295",
-        "year": "2025"
       }
     ],
     "egrul_flags": [],
@@ -1962,7 +1957,8 @@
     "_corrected": [
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 5 fiscal year(s) with revenue/profit data.",
       "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=3705066020, file cited as source s0061). Director confirmed: Волков Михаил Вадимович.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "2026-09-30: Removed the second 2025 financials row (s0295, profit +₽139.654m): that filing is БФО for ИНН 7704278421, Некоммерческий фонд «Градислава» (cover sheet read 2026-09-30), and already sits on fond-gradislava-historic-cultural-heritage-preservation. Заволжское's own FY2025 row (s0258, ИНН 3705066020) stays. Found by checking every financials row's source filename ИНН against the entity ИНН."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0061)",
     "_egrul_crosschecked": "2026-08-22",
@@ -3360,18 +3356,7 @@
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
-    "financials": [
-      {
-        "profit": 22000.0,
-        "source_id": "s0393",
-        "year": "2024"
-      },
-      {
-        "profit": 22000.0,
-        "source_id": "s0394",
-        "year": "2024"
-      }
-    ],
+    "financials": [],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": "2026-09-06",
@@ -3415,7 +3400,8 @@
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
       "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=9701280698, file cited as source s0141). Director confirmed: Григорьев Дмитрий Евгеньевич.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-      "2026-09-13: founding-document bundle for ООО «Инвестментс» (UD_1237700523895_20260913_ooo-investments.zip, s7378) read in full — its 2026 charter restatement states this entity was absorbed via присоединение, resolving what its own slug's \"absorbed, no longer exists\" note previously left unsourced."
+      "2026-09-13: founding-document bundle for ООО «Инвестментс» (UD_1237700523895_20260913_ooo-investments.zip, s7378) read in full — its 2026 charter restatement states this entity was absorbed via присоединение, resolving what its own slug's \"absorbed, no longer exists\" note previously left unsourced.",
+      "2026-09-30: Removed the two FY2024 financials rows (s0393, s0394, profit ₽22 000): both are БФО for ИНН 9707004743, ООО «Инвестментс» (cover sheet read 2026-09-30), the entity that absorbed this АО by присоединение (s7378); they already sit on ooo-investments. This АО has no filing of its own on file. The rows had been attached by the automated БФО parse (2026-08-22)."
     ],
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0141)",
     "_egrul_crosschecked": "2026-08-22",
@@ -8371,27 +8357,32 @@
       {
         "revenue": 1883000.0,
         "source_id": "s0553",
-        "year": "2021"
+        "year": "2021",
+        "note": "Filed by ООО «РЕШЕНИЕ» (ИНН 1001294845, Петрозаводск, ОКВЭД 62.01), not by ИНН 7839303129. Used as the group's figures because the group's own presentation (s0546) calls ООО «Решение» its parent company; that parent link is an open question, so treat these as the parent entity's accounts, not consolidated group results."
       },
       {
         "revenue": 2155000.0,
         "source_id": "s0554",
-        "year": "2022"
+        "year": "2022",
+        "note": "Filed by ООО «РЕШЕНИЕ» (ИНН 1001294845, Петрозаводск, ОКВЭД 62.01), not by ИНН 7839303129. Used as the group's figures because the group's own presentation (s0546) calls ООО «Решение» its parent company; that parent link is an open question, so treat these as the parent entity's accounts, not consolidated group results."
       },
       {
         "revenue": 1754000.0,
         "source_id": "s0555",
-        "year": "2023"
+        "year": "2023",
+        "note": "Filed by ООО «РЕШЕНИЕ» (ИНН 1001294845, Петрозаводск, ОКВЭД 62.01), not by ИНН 7839303129. Used as the group's figures because the group's own presentation (s0546) calls ООО «Решение» its parent company; that parent link is an open question, so treat these as the parent entity's accounts, not consolidated group results."
       },
       {
         "revenue": 5973000.0,
         "source_id": "s0556",
-        "year": "2024"
+        "year": "2024",
+        "note": "Filed by ООО «РЕШЕНИЕ» (ИНН 1001294845, Петрозаводск, ОКВЭД 62.01), not by ИНН 7839303129. Used as the group's figures because the group's own presentation (s0546) calls ООО «Решение» its parent company; that parent link is an open question, so treat these as the parent entity's accounts, not consolidated group results."
       },
       {
         "revenue": 36505000.0,
         "source_id": "s0557",
-        "year": "2025"
+        "year": "2025",
+        "note": "Filed by ООО «РЕШЕНИЕ» (ИНН 1001294845, Петрозаводск, ОКВЭД 62.01), not by ИНН 7839303129. Used as the group's figures because the group's own presentation (s0546) calls ООО «Решение» its parent company; that parent link is an open question, so treat these as the parent entity's accounts, not consolidated group results."
       }
     ],
     "egrul_flags": [],
@@ -8512,7 +8503,8 @@
       "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact name match, Aleph EGRUL/OGRN record gives ИНН directly. (source s2510).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-      "[2026-09-15] wb_overlap=none_found: Brand-name search for «Дикобраз-М6»/«Дикобраз-М8»/«Логос С8» on wildberries.ru (2026-09-15) found no product listing — sold only via the entity's own site (рэб.рус)."
+      "[2026-09-15] wb_overlap=none_found: Brand-name search for «Дикобраз-М6»/«Дикобраз-М8»/«Логос С8» on wildberries.ru (2026-09-15) found no product listing — sold only via the entity's own site (рэб.рус).",
+      "2026-09-30: Labelled the five financials rows (s0553-s0557) as ООО «Решение»'s filings: the БФО zips are filed under ИНН 1001294845 (cover sheet read 2026-09-30, ООО «РЕШЕНИЕ», Петрозаводск), not this record's ИНН. The proxy is deliberate (parent per the group's own presentation, s0546, still an open question) but was unlabelled."
     ],
     "_verified_against": "TRANSCRIPT_20260401_gk-logos-spp-spb-rebrus-pvo-presentation.pdf (s0546); рэб.рус read directly 23.08.2026; b95.ru press coverage read via WebSearch 23.08.2026. Also: s0547 (srro.ru Rostov round table, 26.05.2026). Also: full EGRUL extract s0552; founding docs s0550; БФО FY2021-2025 (s0553, s0554, s0555, s0556, s0557).",
     "opensanctions_matches": [],
@@ -12103,13 +12095,19 @@
       "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). OpenSanctions: 1 match(es), top='ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИБ-ДЕВЕЛОПМЕНТ\"' (score 0.7684, topics=[]) Aleph: 3 match(es), dataset categories=['company'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
     },
     "tier_basis": "Thin record — no sanctions, products, cbst_tie or financials found on file beyond the director/founder identity (Батурин В.Ю.). Classified manufacturer-tier on the strength of appearing as a bare product-name entry (\"СИБНК\") inside sister entity ooo-gaskar's own products[] list, suggesting a group/brand relationship not yet independently substantiated for THIS legal entity — flagged for a follow-up check rather than a confident tier justification.",
+    "bfo_review": {
+      "as_of": "2026-09-30",
+      "outcome": "closed",
+      "note": "bo.nalog.gov.ru search by ИНН 7814475694 returned 0 results on 2026-09-30 (control ИНН 2312321660 found in the same session), so the endpoint is working: no filing under this ИНН is in the public index. Reason not stated by the source."
+    },
     "_corrected": [
       "«СИБНК» is the abbreviation for ООО «Сибирская навигационная компания» (already fully EGRUL-verified this session, ИНН 4205376019) — same director Ступников Андрей Генадьевич confirmed in both records, and the brief's own prose scaffold explicitly states this: \"100% owned by ООО «СИБНК» — full name ООО «Сибирская навигационная компания»\". Merging the duplicate scaffold into the richer, already-verified record.",
       "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact name match, Aleph EGRUL/OGRN record gives ИНН directly. (source s2487).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-14: UN-MERGED — the merge above rested entirely on \"same director Ступников\" in both records, but that value on THIS record (ИНН 7814475694) was itself sourced only to an unverified brief-table row, never to a primary document. This record's own 2026-09-07 full EGRUL выписка (s6752, the same document already on file when the merge was made but apparently not cross-checked against it at the time) names a different person, Батурин Вячеслав Юрьевич (ИНН 781434774182), as director/sole founder since incorporation (2010-08-17) — no director-change history at all, so this isn't a case of Ступников having since been replaced. ИНН 7814475694 and ИНН 4205376019 are two distinct legal entities under Russian law regardless of any name/abbreviation overlap; nothing found ties this ИНН 7814475694 shell (₽10,000 charter capital, Батурин as 100% owner) to ooo-sibirskaya-navigatsionnaya-kompaniya (ИНН 4205376019, the entity actually documented in docs/index.html as «Гаскар»'s 100% owner). Restored as its own live record. Found while prepping the 2026-09-14 connectivity-audit EGRUL batch pull (notes/rebuild_plan.md) — this ИНН had appeared to already have a pull on file, which is what surfaced the conflict.",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-      "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread."
+      "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread.",
+      "2026-09-30: БФО re-checked via bfo_pull.py; not in the public index (control ИНН 2312321660 found in the same session)."
     ],
     "_verified_against": "s6752 -- ООО «СИБНК»'s own full signed ЕГРЮЛ выписка (ИНН 7814475694), pulled directly 2026-09-07.",
     "opensanctions_matches": [
@@ -17155,7 +17153,38 @@
     },
     "wb_overlap": "not_checked",
     "products": [],
-    "financials": [],
+    "financials": [
+      {
+        "year": "2021",
+        "revenue": 15401000.0,
+        "profit": 198000.0,
+        "source_id": "s7461"
+      },
+      {
+        "year": "2022",
+        "revenue": 26713000.0,
+        "profit": 2100000.0,
+        "source_id": "s7462"
+      },
+      {
+        "year": "2023",
+        "revenue": 38307000.0,
+        "profit": 342000.0,
+        "source_id": "s7463"
+      },
+      {
+        "year": "2024",
+        "revenue": 37009000.0,
+        "profit": 1023000.0,
+        "source_id": "s7464"
+      },
+      {
+        "year": "2025",
+        "revenue": 45886000.0,
+        "profit": 218000.0,
+        "source_id": "s7465"
+      }
+    ],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": "2026-09-06",
@@ -17190,8 +17219,14 @@
       "principal": "Барахтин Артём Владимирович / Соловьёв Константин Юрьевич (50/50)",
       "notes": "ИНН 1659101884. Neural-network target-tracking/ballistics prediction for a small-scale anti-drone air-defence system, pitched at the Russian Venture Forum. Pre-war robotics firm (est. 2010), 8 employees. OKVED \"Производство промышленных роботов и робототехнических устройств.\""
     },
+    "bfo_review": {
+      "as_of": "2026-09-30",
+      "outcome": "wired",
+      "note": "Five signed БФО filings (FY2021-FY2025) were on disk and parsed (_bfo_financials.json) but never wired into financials[]. Units confirmed in the FY2025 PDF itself (Единица измерения: Тыс. руб.); FY2025 revenue 45 886 and net profit 218, FY2024 37 009 and 1 023 (тыс. руб.), balance total 84 882 / 65 631 тыс. руб. Converted to rubles. Two byte-identical copies of each year exist under an ASCII and a Cyrillic filename (s7461-s7465 and s6463-s6467); the ASCII-named set is cited."
+    },
     "_corrected": [
-      "2026-09-16 (coverage-gap follow-up pass): docs/index.html's own paraphrase (\"which ЦБСТ credits with... algorithms\") understated the actual post -- the post's own headline states directly \"Резидент ЦБСТ разработал...\", a residency statement, not just a technology credit. Read the actual post text before wiring rather than trusting the brief's paraphrase alone."
+      "2026-09-16 (coverage-gap follow-up pass): docs/index.html's own paraphrase (\"which ЦБСТ credits with... algorithms\") understated the actual post -- the post's own headline states directly \"Резидент ЦБСТ разработал...\", a residency statement, not just a technology credit. Read the actual post text before wiring rather than trusting the brief's paraphrase alone.",
+      "2026-09-30: financials[] wired from the five БФО filings already on file (FY2021-FY2025, s7461-s7465): revenue ₽15.4m, ₽26.7m, ₽38.3m, ₽37.0m, ₽45.9m; net profit ₽0.2m, ₽2.1m, ₽0.3m, ₽1.0m, ₽0.2m. The gap was an unwired parse result, not a missing filing. Surfaced when a 'no financials' count was re-checked against bfo_review."
     ],
     "_verified_against": null,
     "_egrul_crosschecked": "2026-08-22",
@@ -76306,7 +76341,32 @@
     "cbst_tie": null,
     "wb_overlap": "not_checked",
     "products": [],
-    "financials": [],
+    "financials": [
+      {
+        "year": "2022",
+        "revenue": null,
+        "profit": -15000.0,
+        "source_id": "s7396"
+      },
+      {
+        "year": "2023",
+        "revenue": 125000.0,
+        "profit": 59000.0,
+        "source_id": "s7397"
+      },
+      {
+        "year": "2024",
+        "revenue": 38952000.0,
+        "profit": 445000.0,
+        "source_id": "s7398"
+      },
+      {
+        "year": "2025",
+        "revenue": 115678000.0,
+        "profit": 20335000.0,
+        "source_id": "s7399"
+      }
+    ],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": null,
@@ -76341,7 +76401,8 @@
     "_corrected": [
       "2026-09-14: full ЕГРЮЛ-выписка (s7449) confirms sole 100% founder is Хутешен Алексей Александрович -- resolves the standing person-side reciprocal-role gap with a sourced founders_history entry.",
       "2026-09-15: wired the reciprocal sister-entity related_entities[] edge to ooo-ametist that the 2026-09-14 why-note already identified but never converted into a graph edge -- found during a registry-wide address-co-location scan (no EGRUL needed, both founders_history entries already sourced).",
-      "2026-09-15: added a shared-address tie to ooo-atlant-logistik (new relationship_type value, added the same scan) -- co-location only, no confirmed common principal."
+      "2026-09-15: added a shared-address tie to ooo-atlant-logistik (new relationship_type value, added the same scan) -- co-location only, no confirmed common principal.",
+      "2026-09-30: financials[] wired from the four БФО filings already on file and parsed (FY2022-FY2025, s7396-s7399), filed under this ИНН 9704109459. Units confirmed in the FY2025 PDF (Тыс. руб.): revenue 115 678, net profit 20 335, balance 361 264 тыс. руб. FY2022 revenue is blank in the filing's parse (profit -15 only); left null, not zero."
     ],
     "related_entities": [
       {
@@ -79147,10 +79208,16 @@
         "source_id": "s7610"
       }
     ],
+    "bfo_review": {
+      "as_of": "2026-09-30",
+      "outcome": "closed",
+      "note": "bo.nalog.gov.ru search by ИНН 7808035536 returned 0 results on 2026-09-30 (control ИНН 2312321660 found in the same session): no filing in the public index for an OFAC-designated JSC. Reason not stated by the source; the reason is not asserted here."
+    },
     "_corrected": [
       "2026-09-20: sanctions[] added from the Aleph sweep (ID-matched on both ИНН and ОГРН, Global Sanctions Database record) and then confirmed on the primary OFAC SDN page (s7869), which carries the same Registration Number and Tax ID. The entity had sanctions: [] before this.",
       "2026-09-19: added while investigating why АО «НИИ СТТ» had no path to ЦБСТ. Identifiers from the court filing s0022/s0023 and a fresh full ЕГРЮЛ выписка (s7608, pulled 19.09.2026, single-ИНН lookup). Shareholders are not listed in a JSC extract (register held by АО «Реестр»), so ownership of the group is not established here.",
-      "2026-09-30: Screened via the public OpenSanctions entity page (captured as s8232). Adds the multi-jurisdiction listings to sanctions[] as aggregator-level, retiring the earlier note that the EU and French entries were unopened: they are still unopened at primary level but now appear on an archived page."
+      "2026-09-30: Screened via the public OpenSanctions entity page (captured as s8232). Adds the multi-jurisdiction listings to sanctions[] as aggregator-level, retiring the earlier note that the EU and French entries were unopened: they are still unopened at primary level but now appear on an archived page.",
+      "2026-09-30: БФО re-checked via bfo_pull.py; not in the public index (control ИНН 2312321660 found in the same session)."
     ],
     "opensanctions_matches": [
       {

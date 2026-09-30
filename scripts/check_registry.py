@@ -530,6 +530,25 @@ def main() -> int:
                         f"source_id — placeholders awaiting verification, "
                         f"not evidence yet")
 
+    # --- 6b. financials row must come from the entity's own БФО filing -----
+    # Found 2026-09-30: three entities (Заволжское, Борей, ГК «Логос») carried
+    # rows from a DIFFERENT company's filing -- the filer ИНН is in the БФО
+    # filename, and an automated attach by year had ignored it. A mismatch is
+    # allowed only when the row's own note names the filer ИНН (a deliberate,
+    # labelled proxy such as a parent company's accounts).
+    src_path = {s_["id"]: s_.get("path") or "" for s_ in sources or []}
+    for e in entities:
+        own = e.get("inn")
+        if not own or e.get("_merged_into"):
+            continue
+        for f in e.get("financials") or []:
+            m = re.search(r"(?:БФО|BFO)_(\d{10,12})_", src_path.get(f.get("source_id"), "").rsplit("/", 1)[-1])
+            if m and m.group(1) != own and m.group(1) not in (f.get("note") or ""):
+                errors.append(
+                    f"{e['name_ru']}: financials {f.get('year')} cites {f.get('source_id')}, a "
+                    f"БФО filed under ИНН {m.group(1)}, not this entity's ИНН {own}, and the row's "
+                    f"note does not name that filer -- wrong-entity row, or an unlabelled proxy")
+
     # --- source date sanity --------------------------------------------
     for s in sources or []:
         if s.get("captured_date") and not re.match(
