@@ -5669,7 +5669,8 @@
         "2026-09-19: added while investigating why АО «НИИ СТТ» had no path to ЦБСТ. Identifiers from the court filing s0022/s0023 and a fresh full ЕГРЮЛ выписка (s7608, pulled 19.09.2026, single-ИНН lookup). Shareholders are not listed in a JSC extract (register held by АО «Реестр»), so ownership of the group is not established here.",
         "2026-09-30: Screened via the public OpenSanctions entity page (captured as s8232). Adds the multi-jurisdiction listings to sanctions[] as aggregator-level, retiring the earlier note that the EU and French entries were unopened: they are still unopened at primary level but now appear on an archived page.",
         "2026-09-30: БФО re-checked via bfo_pull.py; not in the public index (control ИНН 2312321660 found in the same session).",
-        "2026-09-30: zakupki contracts wired after the user ran the fetch and housekeeping: 176 of 180 contract cards (s8253-s8428), 2010-2018, ₽7.85bn of contract prices (not revenue), no drone subjects. Key finding: the same ИНН 7808035536 appears on 156 of the cards as ЗАО «Транзас» (cards show КПП 783450001; subjects are ship-navigation, vehicle and equipment simulators, electronic chart systems and Defence Ministry cartography R&D), so this record's B2G history is the Транзас business, not the drone business, and predates the drone group described in tier_basis. Added name_history from the cards and the ЕГРЮЛ name record (ГРН 7157848012799, 26.06.2015; previous name not stated in the extract). The four unfetched cards are listed in zakupki_review."
+        "2026-09-30: zakupki contracts wired after the user ran the fetch and housekeeping: 176 of 180 contract cards (s8253-s8428), 2010-2018, ₽7.85bn of contract prices (not revenue), no drone subjects. Key finding: the same ИНН 7808035536 appears on 156 of the cards as ЗАО «Транзас» (cards show КПП 783450001; subjects are ship-navigation, vehicle and equipment simulators, electronic chart systems and Defence Ministry cartography R&D), so this record's B2G history is the Транзас business, not the drone business, and predates the drone group described in tier_basis. Added name_history from the cards and the ЕГРЮЛ name record (ГРН 7157848012799, 26.06.2015; previous name not stated in the extract). The four unfetched cards are listed in zakupki_review.",
+        "2026-09-30: graph drawing limited at the user's direction (cap what the graph draws, keep the full list in the registry). 34 contracts whose customer name matches «Министерство обороны», войсков-, внутренних войск, внутренних дел, пограничн- or военн- (Defence Ministry, MVD and Internal Troops, military units, border service, military schools) stay drawn; the other 142 carry graph: false and remain in government_contracts[] but produce no procures edge. Civil-emergency (МЧС, «гражданской обороны») customers are deliberately in the omitted group. Reason: 176 procures edges from one entity, all pre-2018 simulator, navigation and cartography contracts, would have dominated its neighbourhood. Change the rule by editing the graph flags, not by deleting contracts."
       ],
       "bfo_review": {
         "as_of": "2026-09-30",
@@ -5685,7 +5686,8 @@
           "subject_ru": "ОКР шифр \"Притяжение\"",
           "basis": "Открытый конкурс",
           "source_id": "s8344",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009511001089",
@@ -5695,7 +5697,8 @@
           "subject_ru": "ОКР \"Разработка базовых технологий производства унифицированного комплекта программно-аппаратных модулей систем управления радиоэлектронным оборудованием объектов морской техники\" шифр \"Трал\"",
           "basis": "Открытый конкурс",
           "source_id": "s8345",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100005011000009",
@@ -5705,7 +5708,8 @@
           "subject_ru": "Выполнение НИОКР по теме: \"Разработка системы контроля и надзора за пожарной безопасностью при эксплуатации воздушных,морских судов,судов внутреннего водного и смешанного(река-море) плавания, иных плавучих объектов, железнодорожного подвижного состава\".",
           "basis": "Открытый конкурс",
           "source_id": "s8342",
-          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100002911000027",
@@ -5715,7 +5719,8 @@
           "subject_ru": "Комплексный тренажер экипажа самолета Ту-204/Ту-214",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8327",
-          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100003511000273",
@@ -5725,7 +5730,8 @@
           "subject_ru": "предоставление аэронавигационной информации для СРППЗ ТТА-12S",
           "basis": "Открытый конкурс",
           "source_id": "s8297",
-          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0618100000213000059",
@@ -5735,7 +5741,8 @@
           "subject_ru": "поставку и установку комплектов программного обеспечения Автоматизированных Рабочих Мест Удаленного Терминала РСУДС",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8427",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372200161311000008",
@@ -5745,7 +5752,8 @@
           "subject_ru": "Поставка тренажерного комплекса маломерного судна",
           "basis": "Запрос котировок",
           "source_id": "s8406",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100004511002696",
@@ -5785,7 +5793,8 @@
           "subject_ru": "Интеллектуальная и материальная продукция, услуги по исследованиям и разработкам, нефинансовые нематериальные активы в области естественных и технических наук",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8271",
-          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009511000319",
@@ -5795,7 +5804,8 @@
           "subject_ru": "Интеллектуальная и материальная продукция, услуги по исследованиям и разработкам, нефинансовые нематериальные активы в области естественных и технических наук",
           "basis": "Открытый конкурс",
           "source_id": "s8343",
-          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009511001118",
@@ -5805,7 +5815,8 @@
           "subject_ru": "7310032: Результаты опытно - конструкторских работ по созданию материальной продукции",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8346",
-          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100004511002503",
@@ -5835,7 +5846,8 @@
           "subject_ru": "Консультативные услуги по компьютерным техническим средствам, связанные с их приобретением, установкой и эксплуатацией",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8374",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100002911000092",
@@ -5845,7 +5857,8 @@
           "subject_ru": "поставка комплексного тренажера вертолета Ми-8Т для нужд ФГОУ ВПО \"Ульяновское высшее авиационное училище гражданской авиации (институт)\"",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8328",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100002911000093",
@@ -5855,7 +5868,8 @@
           "subject_ru": "Поставка комплексного тренажера вертолета Ми-8МТВ для нужд СКА УТЦ ГА",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8329",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100002911000094",
@@ -5865,7 +5879,8 @@
           "subject_ru": "Тренажеры для подготовки транспортных профессий",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8330",
-          "note": "Supplier shown on the ЕИС card as Закрытое Акционерное Общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое Акционерное Общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100002911000095",
@@ -5875,7 +5890,8 @@
           "subject_ru": "поставка комплексного тренажера экипажа самолета Ан-148 для нужд ФГОУ ВПО \"Санкт-Петербургский государственный университет гражданской авиации\"",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8331",
-          "note": "Supplier shown on the ЕИС card as Закрытое Акционерное Общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое Акционерное Общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100002911000096",
@@ -5885,7 +5901,8 @@
           "subject_ru": "поставка комплексного тренажера вертолета Ми-8МТВ для нужд ФГОУ ДПО ПКС ААУЦ",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8332",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0324100009011000012",
@@ -5895,7 +5912,8 @@
           "subject_ru": "Консультативные услуги по компьютерным техническим средствам, связанные с их приобретением, установкой и эксплуатацией",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8373",
-          "note": "Supplier shown on the ЕИС card as \"ТРАНЗАС\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"ТРАНЗАС\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0573100002012000002",
@@ -5905,7 +5923,8 @@
           "subject_ru": "4560201: Архитектурно - строительные решения",
           "basis": "Открытый конкурс",
           "source_id": "s8418",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0145200001211000031",
@@ -5915,7 +5934,8 @@
           "subject_ru": "Поставка, установка и подключение статического тренажёра автомобиля \"КамАЗ\" \"ТРАНЗАС учебный автосимулятор\"",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8325",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100002912000061",
@@ -5925,7 +5945,8 @@
           "subject_ru": "поставка комплексного тренажера вертолета Ка-32 для нужд ФГУП «ДВ ЦПАП»",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8333",
-          "note": "Supplier shown on the ЕИС card as Закрытое Акционерное Общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое Акционерное Общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0618100000213000057",
@@ -5935,7 +5956,8 @@
           "subject_ru": "Поставка и установку комплекта программного обеспечения Автоматизированное Рабочее Место Удаленного Терминала РСУДС",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8426",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0573100002012000004",
@@ -5945,7 +5967,8 @@
           "subject_ru": "4510120: Архитектурно - планировочные работы на местности",
           "basis": "Открытый конкурс",
           "source_id": "s8419",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0172200005211000379",
@@ -5955,7 +5978,8 @@
           "subject_ru": "Автоматизированные информационные системы на основе компьютерных баз данных (документальные, документографические, реферативные, полнотекстовые, документально - фактографические, объектографические, базы данных показателей, лексикографические, гипертекстов",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8326",
-          "note": "Supplier shown on the ЕИС card as ЗАО \"Трансзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО \"Трансзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013911000042",
@@ -5965,7 +5989,8 @@
           "subject_ru": "Создание электронных карт и баз данных для картографического обеспечения внутренних водных путей с использованием глобальных навигационных спутниковых систем и их функциональных дополнений",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8353",
-          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0334100025611000319",
@@ -5975,7 +6000,8 @@
           "subject_ru": "оказание услуг по приобретению неисключительных пользовательских прав на использование программного обеспечения для моделирования процессов, систем и оборудования, переводящие лабораторные практикумы и практические занятия на новые технологии обучения ГОУ ВПО ИрГТУ",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8382",
-          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100096711000041",
@@ -5985,7 +6011,8 @@
           "subject_ru": "НИР по теме: «Научные исследования и выработка предложений по комплексу мер в области охраны морской среды от загрязнения в российских морских портах»",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8416",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0345100003711000357",
@@ -5995,7 +6022,8 @@
           "subject_ru": "Вибратор к эхалоту",
           "basis": "Закупка у единственного поставщика (подрядчика, исполнителя)",
           "source_id": "s8387",
-          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173200022711000211",
@@ -6005,7 +6033,8 @@
           "subject_ru": "Телепередача данных в запрограммированном режиме",
           "basis": "Открытый конкурс",
           "source_id": "s8360",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"ТРАНЗАС\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"ТРАНЗАС\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173200022711000212",
@@ -6015,7 +6044,8 @@
           "subject_ru": "Телепередача данных в запрограммированном режиме",
           "basis": "Открытый конкурс",
           "source_id": "s8361",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"ТРАНЗАС\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"ТРАНЗАС\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0318100021011000133",
@@ -6025,7 +6055,8 @@
           "subject_ru": "7260000: Системы и прикладные программные средства",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8365",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0319200029711000015",
@@ -6035,7 +6066,8 @@
           "subject_ru": "Тренажер – имитатор бурения «Transas Shelf 6000 Drilling simulator» для обучения студентов по специальностям: машинист на буровых установках.",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8371",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013911000105",
@@ -6045,7 +6077,8 @@
           "subject_ru": "Поставка оборудования контрольно-корректирующей станции глобальной навигационной спутниковой системы ГЛОНАСС, GPS (на мысе Елизавета о-в Сахалин)",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8273",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013911000106",
@@ -6055,7 +6088,8 @@
           "subject_ru": "Поставка оборудования контрольно-корректирующих станций глобальной навигационной спутниковой системы ГЛОНАСС, GPS (на Курилах: контрольно-корректирующая станция в пос. Северо-Курильск и контрольно-корректирующая станция на острове Ван-дер-Линда)",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8274",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013911000107",
@@ -6065,7 +6099,8 @@
           "subject_ru": "Поставка оборудования контрольно-корректирующей станции глобальной навигационной спутниковой системы ГЛОНАСС, GPS (на подходах к порту Магадан)",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8275",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013911000108",
@@ -6075,7 +6110,8 @@
           "subject_ru": "Поставка оборудования контрольно-корректирующей станцией глобальной навигационной спутниковой системы ГЛОНАСС, GPS (на подходах к порту Анадырь)",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8276",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013911000109",
@@ -6085,7 +6121,8 @@
           "subject_ru": "Поставка оборудования контрольно-корректирующей станции глобальной навигационной спутниковой системы ГЛОНАСС, GPS (в Арктике на острове Каменка)",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8277",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013911000110",
@@ -6095,7 +6132,8 @@
           "subject_ru": "Поставка носимых транспондеров автоматической идентификационной системы лоцманов",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8278",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0348100047611000127",
@@ -6105,7 +6143,8 @@
           "subject_ru": "приобретение лицензионного программного обеспечения для автоматического создания фотопланов из отдельных фотографий, снятых с лета",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8388",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009511002008",
@@ -6115,7 +6154,8 @@
           "subject_ru": "7310000: Интеллектуальная и материальная продукция, услуги по исследованиям и разработкам, нефинансовые нематериальные активы в области естественных и технических наук",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8264",
-          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100000711000144",
@@ -6125,7 +6165,8 @@
           "subject_ru": "7220035: Консультационные услуги по прикладным программам для обучения",
           "basis": "Запрос котировок",
           "source_id": "s8396",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009511002231",
@@ -6135,7 +6176,8 @@
           "subject_ru": "7310000: Интеллектуальная и материальная продукция, услуги по исследованиям и разработкам, нефинансовые нематериальные активы в области естественных и технических наук",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8347",
-          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100000711000157",
@@ -6145,7 +6187,8 @@
           "subject_ru": "3222332: Консоли",
           "basis": "Запрос котировок",
           "source_id": "s8397",
-          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100027311000100",
@@ -6155,7 +6198,8 @@
           "subject_ru": "Поставка комплекта программного обеспечения для расширения береговой сети АИС ГБУ «Волго-Балт»",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8401",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100027311000102",
@@ -6165,7 +6209,8 @@
           "subject_ru": "7240000: Автоматизированные информационные системы, системы для научных исследований, системы проектирования и управления на основе компьютерных баз данных",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8402",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100004512000059",
@@ -6205,7 +6250,8 @@
           "subject_ru": "7421029: Инженерные услуги в области проектно - строительных работ прочие",
           "basis": "Открытый конкурс",
           "source_id": "s8410",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100038212000007",
@@ -6215,7 +6261,8 @@
           "subject_ru": "7421029: Инженерные услуги в области проектно - строительных работ прочие",
           "basis": "Открытый конкурс",
           "source_id": "s8411",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0573100002012000031",
@@ -6225,7 +6272,8 @@
           "subject_ru": "Услуги по подготовке строительного участка, предшествующие строительству",
           "basis": "Открытый конкурс",
           "source_id": "s8420",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0573100002012000034",
@@ -6235,7 +6283,8 @@
           "subject_ru": "Строительно-монтажные работы",
           "basis": "Открытый конкурс",
           "source_id": "s8421",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0349100012312000052",
@@ -6245,7 +6294,8 @@
           "subject_ru": "Модернизация навигационного тренажера",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8389",
-          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100003412000224",
@@ -6255,7 +6305,8 @@
           "subject_ru": "Разработка технического проекта и рабочей конструкторской документации (РКД) для создания программно-аппаратного тренажерного комплекса (ПАТК) Навигационный тренажер маломерно судна с трехмерной визуализацией обстановки на 180 градусов обзора, подвижной платформой и реальными органами управления маломерного судна",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8334",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\" (ЗАО \"Транзас\"), under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\" (ЗАО \"Транзас\"), under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100000712000028",
@@ -6265,7 +6316,8 @@
           "subject_ru": "Тренажеры для обучения",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8398",
-          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0573100002012000037",
@@ -6275,7 +6327,8 @@
           "subject_ru": "Здания и сооружения предприятий водного транспорта (здания и сооружения речного и морского транспорта, порты и связанные с ними гидротехнические сооружения, сооружения для ремонта судов, погрузочно - разгрузочные комплексы, речные и морские вокзалы",
           "basis": "Открытый конкурс",
           "source_id": "s8422",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009512000357",
@@ -6285,7 +6338,8 @@
           "subject_ru": "Выполнение ОКР «Разработка базовой технологии создания аппаратно-программного комплекса для испытаний сложных информационно-управляющих систем с большим количеством распределенных и сосредоточенных параметров» Шифр «Испытание-ИУС»",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8348",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100038712000241",
@@ -6295,7 +6349,8 @@
           "subject_ru": "интерактивный тренажер\"ТРАНЗАС.Автолестница пожарная\"",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8412",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0338200003712000006",
@@ -6305,7 +6360,8 @@
           "subject_ru": "Заключение контракта",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8385",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373200114412000033",
@@ -6315,7 +6371,8 @@
           "subject_ru": "Тренажеры для подготовки транспортных профессий",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8417",
-          "note": "Supplier shown on the ЕИС card as Закрытое Акционерное Общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое Акционерное Общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100043912000380",
@@ -6325,7 +6382,8 @@
           "subject_ru": "Выполнение работ по строительству комплекса сооружений",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8405",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009512000655",
@@ -6335,7 +6393,8 @@
           "subject_ru": "Опытно-конструкторская работа «Разработка системы мониторинга и информационной поддержки судоводителя, обеспечивающей управление мобильными силами и средствами, контроль промышленного рыболовства, охрану водных биоресурсов, управление рациональным использованием биоресурсов на базе научно-исследовательского судна Росрыболовства», шифр «НИС-Центр»",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8265",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100038712000270",
@@ -6345,7 +6404,8 @@
           "subject_ru": "тренажер пожарной автоцистерны \"ТРАНЗАС.пожарная автоцистерна\"",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8413",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100000112000050",
@@ -6365,7 +6425,8 @@
           "subject_ru": "Выполнение ОКР \"Модернизация Комплекса информационной поддержки и мониторинга для ОСМ Росрыболовства\"",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8352",
-          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100009412000073",
@@ -6375,7 +6436,8 @@
           "subject_ru": "Заключение контракта",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8399",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100004612001165",
@@ -6385,7 +6447,8 @@
           "subject_ru": "тренажер-имитатор бурения\"Transas Shore 6000 Drilling simulator",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8407",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009512000826",
@@ -6395,7 +6458,8 @@
           "subject_ru": "Опытно-конструкторская работа «Разработка технологии создания системы мониторинга, оценки параметров разлива нефти и степени угроз окружающей среде с целью поддержки управленческих решений по ликвидации разливов нефти и минимизации экологического ущерба», шифр «Разлив»",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8349",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100038712000320",
@@ -6405,7 +6469,8 @@
           "subject_ru": "Тренажер инспектора государственного пожарного надзора",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8414",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0618100000212000012",
@@ -6415,7 +6480,8 @@
           "subject_ru": "Поставка комплекса «Удаленный Терминал СУДС» из одного автоматизированного рабочего места для контроля надводной обстановки акватории порта Тамань",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8424",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0573100002012000043",
@@ -6425,7 +6491,8 @@
           "subject_ru": "Здания и сооружения предприятий водного транспорта (здания и сооружения речного и морского транспорта, порты и связанные с ними гидротехнические сооружения, сооружения для ремонта судов, погрузочно - разгрузочные комплексы, речные и морские вокзалы",
           "basis": "Открытый конкурс",
           "source_id": "s8423",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013912000040",
@@ -6434,7 +6501,8 @@
           "value_rub": 325000000.0,
           "subject_ru": "Проведение комплекса работ по созданию и обновлению баз данных навигационной информации для картографического обеспечения внутренних водных путей с использованием сигналов навигационной спутниковой системы ГЛОНАСС, перспективных глобальных навигационных спутниковых систем и их функциональных дополнений",
           "basis": "Открытый конкурс",
-          "source_id": "s8354"
+          "source_id": "s8354",
+          "graph": false
         },
         {
           "reg_number": "0573100002012000047",
@@ -6444,7 +6512,8 @@
           "subject_ru": "Здания и сооружения предприятий водного транспорта (здания и сооружения речного и морского транспорта, порты и связанные с ними гидротехнические сооружения, сооружения для ремонта судов, погрузочно - разгрузочные комплексы, речные и морские вокзалы",
           "basis": "Открытый конкурс",
           "source_id": "s8307",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0325100005112000439",
@@ -6454,7 +6523,8 @@
           "subject_ru": "Тренажер управления судовой энергетической установкой ERS 5000 TechSim производства компании ЗАО ТРАНЗАС (Россия) в составе полномасштабного машинного отделения и компьютерного класса на 8 мест.",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8375",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0332200041312000076",
@@ -6464,7 +6534,8 @@
           "subject_ru": "Комплексы технических средств обучения",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8381",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013912000058",
@@ -6474,7 +6545,8 @@
           "subject_ru": "Выполнение НИР по теме \"Разработка предложений и научно-техническое обеспечение работ по созданию на базе технологий навигационных спутниковых систем ГЛОНАСС/GPS комплексной автоматизированной системы сбора и оперативной передачи актуализированных электронных навигационных карт на суда подведомственных Росморречфлоту организаций в речных бассейнах Сибири и Дальнего Востока России\"",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8355",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0330100009912000049",
@@ -6484,7 +6556,8 @@
           "subject_ru": "Поставка программного обеспечения (приобретение неисключительных(пользовательских) прав",
           "basis": "Запрос котировок",
           "source_id": "s8377",
-          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0316200014612000022",
@@ -6494,7 +6567,8 @@
           "subject_ru": "Контракт на поставку тренажера",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8364",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0314200017112000002",
@@ -6504,7 +6578,8 @@
           "subject_ru": "Заключение контракта",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8363",
-          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100004512001256",
@@ -6534,7 +6609,8 @@
           "subject_ru": "Поставка судовых технологических комплексов (СТК), работающих с использованием сигналов системы ГЛОНАСС и других глобальных навигационных спутниковых систем для создания и корректуры электронных навигационных карт на внутренних водных путях, морских судоходных путях, трассах Северного морского пути, в акваториях морских и речных портов",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8356",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0351200018112000006",
@@ -6544,7 +6620,8 @@
           "subject_ru": "Дополнительные модули Тренажера судовой энергетической установки",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8392",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100003412000281",
@@ -6554,7 +6631,8 @@
           "subject_ru": "Разработка опытного образца программно-аппаратного тренажерного комплекса \"Навигационный тренажер маломерного судна с трехмерной визуализацией обстановки на 180 градусов обзора, подвижной платформой и реальными органами управления маломерного судна\"",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8335",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\" (ЗАО \"Транзас\"), under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\" (ЗАО \"Транзас\"), under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0332100017512000963",
@@ -6564,7 +6642,8 @@
           "subject_ru": "тренажер глобальной морской системы связи при бедствии для нужд Пермского филиала ФБОУ ВПО \"ВГАВТ\"",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8380",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0318100021012000106",
@@ -6574,7 +6653,8 @@
           "subject_ru": "модельная станция навигационного тренажера",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8366",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0325100013012000190",
@@ -6604,7 +6684,8 @@
           "subject_ru": "Навигационный тренажерный комплекс.",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8384",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009512001144",
@@ -6614,7 +6695,8 @@
           "subject_ru": "Опытно-конструкторская работа «Разработка информационно-аналитического комплекса поддержки решений по управлению обеспечением безопасности мореплавания судов рыбопромыслового флота и проведением аварийно-спасательных работ в районах промысла при осуществлении рыболовства», шифр «Аларм»",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8350",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0318100021012000143",
@@ -6624,7 +6706,8 @@
           "subject_ru": "тренажер комплекса имитаторов навигационного оборудования",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8367",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100004612002044",
@@ -6634,7 +6717,8 @@
           "subject_ru": "дополнительное место обучаемого тренажера-имитатора бурения Transas Shelf 6000Drilling Simulator@",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8408",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0351200018112000011",
@@ -6644,7 +6728,8 @@
           "subject_ru": "приобретение неисключительных прав на программное обеспечение для дооборудования навигационного тренажера",
           "basis": "Запрос котировок",
           "source_id": "s8393",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100030412000009",
@@ -6664,7 +6749,8 @@
           "subject_ru": "поставку комплекса «Удаленный Терминал СУДС»",
           "basis": "Запрос котировок",
           "source_id": "s8425",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0672100000113000001",
@@ -6674,7 +6760,8 @@
           "subject_ru": "Поставка и монтаж УКВ радиостанции морского диапазона",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8428",
-          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100004513000120",
@@ -6704,7 +6791,8 @@
           "subject_ru": "Опытно-конструкторская работа «Разработка моделей и экспериментально-отладочного комплекса систем автоматизированного управления движением судна при выполнении грузовых операций у морских выносных причалов, терминалов и платформ», шифр «Ордер-ТМ»",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8351",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009513000116",
@@ -6714,7 +6802,8 @@
           "subject_ru": "Опытно-конструкторская работа «Разработка технологии и создание опытного образца комплексного тренажера рыбопромыслового судна для проектируемых типов добывающих судов», шифр «Рыболов»",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8266",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009513000176",
@@ -6724,7 +6813,8 @@
           "subject_ru": "Выполнение ОКР \"Разработка технологии моделирования сложных информационно-управляющих систем транспортной инфраструктуры\"",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8267",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100064613000334",
@@ -6774,7 +6864,8 @@
           "subject_ru": "Поставка морской Радиомаячной Установки, далее РМУ, для НЭС «Академик Фёдоров»",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8290",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013913000042",
@@ -6784,7 +6875,8 @@
           "subject_ru": "Поставка судовых технологических комплексов (СТК), работающих с использованием сигналов системы ГЛОНАСС и других глобальных навигационных спутниковых систем для создания и корректуры электронных навигационных карт на внутренних водных путях, морских судоходных путях, трассах Северного морского пути, в акваториях морских и речных портов",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8357",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100004513000607",
@@ -6804,7 +6896,8 @@
           "subject_ru": "Специализированный класс для подготовки судовых механиков для танкеров-газовозов",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8400",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0349100012313000068",
@@ -6814,7 +6907,8 @@
           "subject_ru": "Модернизация тренажера.",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8390",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013913000049",
@@ -6824,7 +6918,8 @@
           "subject_ru": "Поставка комплексов оборудования контрольно-корректирующей",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8358",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100013913000050",
@@ -6834,7 +6929,8 @@
           "subject_ru": "Выполнение работы по теме: «Проведение комплекса работ по созданию и обновлению баз данных навигационной информации для картографического обеспечения внутренних водных nyтeй с использованием cигнaлов навигационной спутниковой системы ГЛОНАСС, перспективных глобальных навигационных спутниковых систем и их функциональных дополнений». Шифр «Карта-",
           "basis": "Открытый конкурс",
           "source_id": "s8359",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0338200003713000006",
@@ -6844,7 +6940,8 @@
           "subject_ru": "Прикладные программы для обучения",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8386",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0318100021013000355",
@@ -6854,7 +6951,8 @@
           "subject_ru": "Модернизация многофункционального тренажерного комплекса «Виртуальное судно»",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8368",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0318100021013000356",
@@ -6864,7 +6962,8 @@
           "subject_ru": "модернизация комплекса имитаторов навигационного оборудования тренажера",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8369",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0318100021013000357",
@@ -6874,7 +6973,8 @@
           "subject_ru": "программное обеспечение тренажера полупогружной плавучей буровой установки",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8370",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0320100018713001072",
@@ -6884,7 +6984,8 @@
           "subject_ru": "неисключительные права на программное обеспечение",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8372",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0339100005813000597",
@@ -6894,7 +6995,8 @@
           "subject_ru": "Программное обеспечение Тренажера холодильных установок в составе:",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8287",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100004613000917",
@@ -6904,7 +7006,8 @@
           "subject_ru": "программно-аппаратного комплекса поддержки принятия решений при борьбе с чрезвычайными ситуациями нефтедобычи на шельфе",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8409",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100022313001220",
@@ -6914,7 +7017,8 @@
           "subject_ru": "Тренажер глобальной морской системы связи при бедствии ГМССБ TGS 5000",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8292",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0303100020113000139",
@@ -6934,7 +7038,8 @@
           "subject_ru": "Модернизация тренажёрного комплекса подготовки членов экипажа морского судна",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8383",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100000113000182",
@@ -6954,7 +7059,8 @@
           "subject_ru": "Автоматизированные системы на основе компьютерных баз данные прочие, не включенные в другие группировки",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8379",
-          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0365100010413006158",
@@ -6964,7 +7070,8 @@
           "subject_ru": "Поставка и монтаж тренажера по эксплуатации скважин, для ИПР ТПУ",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8394",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0573100002013000022",
@@ -6973,7 +7080,8 @@
           "value_rub": 204272.2,
           "subject_ru": "Осуществление авторского надзора за выполнением работ по строительству объекта \"Строительство систем управления движением судов на подходах к морским портам Российской Федерации. Система управления движением судов Кандалакшского залива\"",
           "basis": "Закупка у единственного поставщика (подрядчика, исполнителя)",
-          "source_id": "s8309"
+          "source_id": "s8309",
+          "graph": false
         },
         {
           "reg_number": "0573100002013000020",
@@ -6983,7 +7091,8 @@
           "subject_ru": "Работы общестроительные по строительству прочих береговых и портовых сооружений",
           "basis": "Открытый конкурс",
           "source_id": "s8308",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\" (Закрытое акционерное общество), under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\" (Закрытое акционерное общество), under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0349200000813000067",
@@ -6993,7 +7102,8 @@
           "subject_ru": "услуги по созданию и внедрению геоинформационной системы «Моделирование, прогнозирование и анализ разливов нефти и нефтепродуктов в прибрежной зоне территории Мурманской области» (далее ГИС ЧС (Н) Мурманская область)",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8391",
-          "note": "Supplier shown on the ЕИС card as Закрытое Акционерное Общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое Акционерное Общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0331100001913000193",
@@ -7003,7 +7113,8 @@
           "subject_ru": "Программное обеспечение холодильных установок RPS4000",
           "basis": "Закупка у единственного поставщика (подрядчика, исполнителя)",
           "source_id": "s8378",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0335100005613000042",
@@ -7013,7 +7124,8 @@
           "subject_ru": "приобретение интерактивного оборудования «Тренажер маломерного судна»",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8285",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0672100000113000081",
@@ -7023,7 +7135,8 @@
           "subject_ru": "Выполнение работ по оснащению инженерно-техническими средствами обеспечения транспортной безопасности акватории морского порта Большой порт Санкт-Петербург",
           "basis": "Открытый конкурс",
           "source_id": "s8311",
-          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0335100005613000047",
@@ -7033,7 +7146,8 @@
           "subject_ru": "приобретение интерактивного оборудования «Интерактивная кабина путешествий»",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8286",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100064614000403",
@@ -7053,7 +7167,8 @@
           "subject_ru": "Обслуживание системы автоматической идентификации судов",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8291",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100088713000105",
@@ -7073,7 +7188,8 @@
           "subject_ru": "Комплекс информационной поддержки мониторинга (Master), в составе:",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8306",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100022313001843",
@@ -7083,7 +7199,8 @@
           "subject_ru": "Навигационный тренажер",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8293",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100022313001851",
@@ -7093,7 +7210,8 @@
           "subject_ru": "Работы по модернизации программно-аппаратного комплекса модуля Динамического позиционирования для решения задач поиска и спасания",
           "basis": "Закупка у единственного поставщика (подрядчика, исполнителя)",
           "source_id": "s8294",
-          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as ЗАО \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0618100000214000015",
@@ -7103,7 +7221,8 @@
           "subject_ru": "Техническое обслуживание (ТО) оборудования инженерно-технических средств обеспечения транспортной безопасности (ИТСОТБ) в морском порту Кавказ на 2014 год",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8310",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0318100021014000006",
@@ -7113,7 +7232,8 @@
           "subject_ru": "Модернизация навигационного тренажера NTPro3000 до NTPro5000",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8282",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0373100058514000037",
@@ -7132,7 +7252,8 @@
           "subject_ru": "Выполнение НИР «Исследование и обоснование направлений и тенденций развития тренажерных систем и комплексов приоритетных образцов вооружения, военной и специальной техники, в целях выработки методических рекомендаций по дальнейшему развитию промышленных технологий отечественного тренажеростроения», шифр «Плес»",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8268",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100012514000112",
@@ -7152,7 +7273,8 @@
           "subject_ru": "Учебный тренажер безрельсового общественного транспорта с электрическим приводом -троллейбус",
           "basis": "Открытый аукцион в электронной форме",
           "source_id": "s8254",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009514000372",
@@ -7162,7 +7284,8 @@
           "subject_ru": "Выполнение ОКР «Разработка базовой технологии создания ряда унифицированных электронных модулей для создания программно-аппаратных комплексов удаленного управления и мониторинга объектами автоматизации», шифр «Карьер-Б»",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
           "source_id": "s8269",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество «Транзас», under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0318100000814000035",
@@ -7172,7 +7295,8 @@
           "subject_ru": "Установка тренажера ГМССБ TGS-500",
           "basis": "Электронный аукцион",
           "source_id": "s8281",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0372100047314000069",
@@ -7201,7 +7325,8 @@
           "subject_ru": "Поставка навигационного тренажера РЛС/САРП/ЭКНИС",
           "basis": "Закупка у единственного поставщика (подрядчика, исполнителя)",
           "source_id": "s8284",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100004514000928",
@@ -7221,7 +7346,8 @@
           "subject_ru": "Выполнение работы по теме: «Проведение комплекса работ по созданию и обновлению баз данных навигационной информации для картографического обеспечения внутренних водных путей с использованием сигналов навигационной спутниковой системы ГЛОНАСС, перспективных глобальных навигационных спутниковых систем и их функциональных дополнений. Шифр «Карта-Река»",
           "basis": "Открытый конкурс",
           "source_id": "s8279",
-          "note": "Supplier shown on the ЕИС card as \"ТРАНЗАС\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"ТРАНЗАС\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100009514000524",
@@ -7230,7 +7356,8 @@
           "value_rub": 49850000.0,
           "subject_ru": "Выполнение ОКР «Разработка технологии повышения достоверности имитационного моделирования и обеспечения максимальной сходимости результатов моделирования с результатами натурных испытаний для радиоэлектронных комплексов сложных информационно-управляющих систем работающих в режиме реального времени (СИУС-РВ)», шифр «Поток»",
           "basis": "Открытый конкурс (научно-исследовательская, опытно-конструкторская или технологическая работа)",
-          "source_id": "s8270"
+          "source_id": "s8270",
+          "graph": false
         },
         {
           "reg_number": "0372100000114000140",
@@ -7250,7 +7377,8 @@
           "subject_ru": "поставка автоматизированного гидрологического комплекса VAISALA для проведения гидрологических исследований",
           "basis": "Электронный аукцион",
           "source_id": "s8323",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0173100004514001036",
@@ -7288,7 +7416,8 @@
           "value_rub": 184060000.0,
           "subject_ru": "Выполнение опытно-конструкторской работы по теме «Создание на базе спутниковых навигационных технологий систем ГЛОНАСС/GPS комплексной автоматизированной системы сбора и оперативной передачи актуализированных электронных навигационных карт на суда подведомственных Росморречфлоту организаций в речных бассейнах Сибири и Дальнего Востока России. Шифр: ОКР «Мониторинг-передача-ЭНК»",
           "basis": "Открытый конкурс",
-          "source_id": "s8280"
+          "source_id": "s8280",
+          "graph": false
         },
         {
           "reg_number": "0318100021014000038",
@@ -7298,7 +7427,8 @@
           "subject_ru": "Модернизация многофункционального тренажерного комплекса «Виртуальное судно», в соответствии с требованиями Заказчика",
           "basis": "Электронный аукцион",
           "source_id": "s8283",
-          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "0172100008014000010",
@@ -7308,7 +7438,8 @@
           "subject_ru": "Аренда нежилого помещения под офис",
           "basis": "Закупка у единственного поставщика (подрядчика, исполнителя)",
           "source_id": "s8255",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "1784139302415000003",
@@ -7317,7 +7448,8 @@
           "value_rub": 5827200.0,
           "subject_ru": "Аренда нежилого помещения",
           "basis": "Закупка у единственного поставщика (подрядчика, исполнителя)",
-          "source_id": "s8324"
+          "source_id": "s8324",
+          "graph": false
         },
         {
           "reg_number": "1773253799915000037",
@@ -7327,7 +7459,8 @@
           "subject_ru": "Предоставление аэронавигационной информации для системы раннего предупреждения приближения земли TTA-12S, TTA-12H, систем спутниковой навигации TSS, TDS-84, блока формирования картографического изображения TMG-17 и вычислительной системы самолетовождения ВСС-100.",
           "basis": "Открытый конкурс",
           "source_id": "s8322",
-          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас Авиация\", under ИНН 7808035536."
+          "note": "Supplier shown on the ЕИС card as Закрытое акционерное общество \"Транзас Авиация\", under ИНН 7808035536.",
+          "graph": false
         },
         {
           "reg_number": "1770236142715000030",
@@ -7336,7 +7469,8 @@
           "value_rub": 487550000.0,
           "subject_ru": "Выполнение работы по теме «Проведение комплекса работ по созданию и обновлению баз данных навигационной информации для картографического обеспечения внутренних водных путей с использованием сигналов навигационной спутниковой системы ГЛОНАСС, перспективных глобальных навигационных спутниковых систем и их функциональных дополнений». Шифр «Карта-Река»",
           "basis": "Открытый конкурс",
-          "source_id": "s8312"
+          "source_id": "s8312",
+          "graph": false
         },
         {
           "reg_number": "1770751698815000073",
@@ -7345,7 +7479,8 @@
           "value_rub": 5300000.0,
           "subject_ru": "Научно-исследовательская работа по теме «Разработка проекта Речной информационной службы (РИС) администрации бассейна внутренних водных путей»",
           "basis": "Открытый конкурс",
-          "source_id": "s8319"
+          "source_id": "s8319",
+          "graph": false
         },
         {
           "reg_number": "1770751698816000034",
@@ -7354,7 +7489,8 @@
           "value_rub": 5000000.0,
           "subject_ru": "\"Разработка проекта типовой службы Речной информационной службы (РИС) \"Служба информации о фарватере (СИФ) Администрации бассейна внутренних водных путей\"",
           "basis": "Открытый конкурс",
-          "source_id": "s8320"
+          "source_id": "s8320",
+          "graph": false
         },
         {
           "reg_number": "1770236142716000064",
@@ -7363,7 +7499,8 @@
           "value_rub": 366000000.0,
           "subject_ru": "Проведение комплекса работ по созданию и обновлению баз данных навигационной информации для картографического обеспечения внутренних водных путей с использованием сигналов навигационной спутниковой системы ГЛОНАСС, перспективных глобальных навигационных спутниковых систем и их функциональных дополнений, шифр «Карта-Река»",
           "basis": "Открытый конкурс",
-          "source_id": "s8313"
+          "source_id": "s8313",
+          "graph": false
         },
         {
           "reg_number": "1770236142716000097",
@@ -7372,7 +7509,8 @@
           "value_rub": 85100000.0,
           "subject_ru": "Выполнение опытно-конструкторской работы по теме «Создание тестовой акватории, обеспечивающей всестороннюю проверку и отработку разрабатываемых навигационных, связных, информационных систем и комплексов судовой и береговой иерархической инфраструктуры в рамках глобальной концепции е-Навигации. Шифр ОКР «е-Море»",
           "basis": "Открытый конкурс",
-          "source_id": "s8314"
+          "source_id": "s8314",
+          "graph": false
         },
         {
           "reg_number": "1770751698817000021",
@@ -7381,7 +7519,8 @@
           "value_rub": 5950000.0,
           "subject_ru": "«Разработка проекта",
           "basis": "Открытый конкурс",
-          "source_id": "s8321"
+          "source_id": "s8321",
+          "graph": false
         },
         {
           "reg_number": "1770236142717000056",
@@ -7390,7 +7529,8 @@
           "value_rub": 366000000.0,
           "subject_ru": "Выполнение работы по теме: «Проведение комплекса работ по созданию и обновлению баз данных навигационной информации для картографического обеспечения внутренних водных путей с использованием сигналов навигационной спутниковой системы ГЛОНАСС, перспективных глобальных навигационных спутниковых систем и их функциональных дополнений». Шифр «Карта-Река»",
           "basis": "Открытый конкурс",
-          "source_id": "s8315"
+          "source_id": "s8315",
+          "graph": false
         },
         {
           "reg_number": "1770236142717000100",
@@ -7399,7 +7539,8 @@
           "value_rub": 245000000.0,
           "subject_ru": "Выполнение опытно-конструкторской работы по теме «Создание тестовой акватории, обеспечивающей всестороннюю проверку и отработку разрабатываемых навигационных, связных, информационных систем и комплексов судовой и береговой иерархической инфраструктуры в рамках глобальной концепции е-Навигации», шифр: ОКР «е-Море»",
           "basis": "Открытый конкурс",
-          "source_id": "s8316"
+          "source_id": "s8316",
+          "graph": false
         },
         {
           "reg_number": "1770559633917000507",
@@ -7408,7 +7549,8 @@
           "value_rub": 143550000.0,
           "subject_ru": "ОКР \"Разработка единой технологической платформы судовых интегрированных навигационных систем нового поколения\" Шифр \"Муссон\"",
           "basis": "Открытый конкурс",
-          "source_id": "s8318"
+          "source_id": "s8318",
+          "graph": false
         },
         {
           "reg_number": "1770236142718000014",
@@ -7417,7 +7559,8 @@
           "value_rub": 368000000.0,
           "subject_ru": "Выполнение работы по теме: «Проведение комплекса работ по созданию и обновлению баз данных навигационной информации для картографического обеспечения внутренних водных путей с использованием сигналов навигационной спутниковой системы ГЛОНАСС, перспективных глобальных навигационных спутниковых систем и их функциональных дополнений» Шифр: «Карта-Река»",
           "basis": "Открытый конкурс",
-          "source_id": "s8317"
+          "source_id": "s8317",
+          "graph": false
         }
       ],
       "name_history": [

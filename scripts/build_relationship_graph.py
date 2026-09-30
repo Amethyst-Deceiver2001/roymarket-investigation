@@ -564,6 +564,11 @@ def build_graph(entities: list[dict], people: list[dict],
             customer_name = contract.get("customer")
             if not customer_name:
                 continue
+            if contract.get("graph") is False:
+                # Kept in the registry, deliberately not drawn (added 2026-09-30:
+                # 176 pre-2018 simulator contracts on one entity would have
+                # dominated its neighbourhood). Set per contract, with a why note.
+                continue
             customer_name = _CUSTOMER_NAME_ALIASES_NORM.get(normalize(customer_name), customer_name)
             cust_id = customer_id(customer_name)
             add_node(cust_id, kind="government_customer", label=customer_name)

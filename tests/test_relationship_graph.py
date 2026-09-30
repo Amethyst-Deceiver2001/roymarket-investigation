@@ -107,6 +107,19 @@ class RelationshipGraphTests(unittest.TestCase):
         self.assertTrue(all("ordinary" not in (e["source"], e["target"]) for e in graph["edges"]))
         self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
 
+    def test_contract_with_graph_false_is_not_drawn(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[0]["government_contracts"] = [
+            {"customer": "Министерство обороны Российской Федерации", "date": "2014-06-09",
+             "value_rub": 10.0, "source_id": "s1"},
+            {"customer": "Федеральное агентство воздушного транспорта", "date": "2014-06-10",
+             "value_rub": 20.0, "source_id": "s1", "graph": False},
+        ]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        labels = {n["label"] for n in graph["nodes"] if n["kind"] == "government_customer"}
+        self.assertEqual({"Министерство обороны Российской Федерации"}, labels)
+        self.assertEqual(1, sum(1 for e in graph["edges"] if e["type"] == "procures"))
+
     def test_historical_founder_share_suffix_does_not_create_false_stub(self):
         entities = [{
             "slug": "company",

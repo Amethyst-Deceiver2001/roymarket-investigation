@@ -322,6 +322,11 @@ it exists for an entity that ownership chains connect to the network but whose *
 OpenSanctions merge with the Moscow АНО). Held slugs are listed in `detached_ids`, so the omission
 is visible. Set it deliberately with a `why` note and remove it when a solid link is found.
 
+**`government_contracts[].graph: false`** keeps one contract fully on file but produces no `procures`
+edge or customer node. It exists so a long, old or unrelated B2G history (АО «Кронштадт», 2026-09-30: 176
+pre-2018 simulator contracts under the former ЗАО «Транзас» ИНН) doesn't swamp the entity's neighbourhood.
+Set it per contract with a `why` note stating the rule used; never delete the contract to thin the graph.
+
 **ё policy (STYLE_GUIDE.md §2.5):** names are *spelled* with ё wherever a source for that
 person gives it, and *matched* with ё folded to е on both sides -- never let one depend on
 the other. Do not add a ё without a source for that person, and never edit verbatim
