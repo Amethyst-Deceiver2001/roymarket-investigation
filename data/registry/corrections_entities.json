@@ -1444,8 +1444,10 @@
       "tier": "cbst-core",
       "verified_against": "sanctionssearch.ofac.treas.gov/Details.aspx?id=50778 (read directly 2026-08-24, s0573); egrul.nalog.ru open-API pull, 2026-08-24 (s0572)",
       "why": [
-        "2026-08-24: surfaced via screen_opensanctions.py inline test (screening АНО «ЦБСТ» by ИНН) — OpenSanctions returned a merged profile whose explicit OFAC designation ID numbers pointed to this previously-untracked Tula entity, not ЦБСТ's own Moscow ИНН. Independently confirmed via direct WebFetch of the OFAC listing page and a direct egrul.nalog.ru pull — both match exactly on ИНН/ОГРН/address."
-      ]
+        "2026-08-24: surfaced via screen_opensanctions.py inline test (screening АНО «ЦБСТ» by ИНН) — OpenSanctions returned a merged profile whose explicit OFAC designation ID numbers pointed to this previously-untracked Tula entity, not ЦБСТ's own Moscow ИНН. Independently confirmed via direct WebFetch of the OFAC listing page and a direct egrul.nalog.ru pull — both match exactly on ИНН/ОГРН/address.",
+        "2026-09-30: tier_basis added (the field was empty, so cbst-core had no written basis). The cbst-core tier is now unsupported by any recorded tie and needs a decision; left unchanged in this edit."
+      ],
+      "tier_basis": "Directly designated by OFAC (SDN 50778, Tax ID 7100032961, read 2026-09-30) and listed by GUR (11711, s8250). Its ЦБСТ tie is NOT established: it rests on OpenSanctions merging this Tula ООО with the Moscow АНО «ЦБСТ» (shared branding and aliases), while GUR and Ukraine's NSDC list the two as separate entities, the ООО was registered a year earlier (08.02.2023 vs 27.02.2024) under a different legal form, and a text search of the local Telegram archive (2026-09-30) found no post containing its ИНН or the strings «Центр беспилотных систем — Тула» or «ЦБС Тула». Owned 60% by Фонд развития промышленности Тульской области."
     },
     {
       "_verified": false,
@@ -6133,8 +6135,8 @@
       "registered": "30.09.2016",
       "address": "300025, Тульская обл., г. Тула, ул. 9 Мая, д. 1, помещ. 13, 14, 26-31, 30-А",
       "director": "Груданова Нина Олеговна",
-      "tier": "plumbing",
-      "tier_basis": "Regional industrial-development fund named as a founder of ООО «Центр беспилотных систем — Тула». The extract lists no founders.",
+      "tier": "adjacent",
+      "tier_basis": "Regional industrial-development fund holding 60% of ООО «Центр беспилотных систем» (Tula, s6813). Its relevance depends entirely on that company's ЦБСТ tie, which is unproven (see that record). Demoted to adjacent 2026-09-30 after checking its chain to ЦБСТ: no first-party or document evidence ties it to the network. Kept on file as an ownership node; not chased for zakupki.",
       "_verified": true,
       "name_history": [
         {
@@ -6155,8 +6157,14 @@
       "founders": [],
       "sanctions": [],
       "why": [
-        "2026-09-19: added from a full ЕГРЮЛ выписка (s7627) to resolve a graph stub. Not yet screened against sanctions lists."
-      ]
+        "2026-09-19: added from a full ЕГРЮЛ выписка (s7627) to resolve a graph stub. Not yet screened against sanctions lists.",
+        "2026-09-30: tier plumbing -> adjacent: relevance derives only from the unproven Tula ЦБСТ tie."
+      ],
+      "zakupki_review": {
+        "as_of": "2026-09-30",
+        "outcome": "closed",
+        "note": "Supplier search found contracts (archived as supplier-search pages) but the entity was judged not to be an entity of interest, so the contracts were deliberately not fetched."
+      }
     },
     {
       "slug": "fgup-zashchitainfotrans",
@@ -6166,8 +6174,8 @@
       "registered": "08.07.1996",
       "address": "117105, г. Москва, Варшавское ш., д. 9, стр. 1",
       "director": "Перевалов Илья Владимирович",
-      "tier": "plumbing",
-      "tier_basis": "Federal state unitary enterprise named as a founder of ООО «ЗИТ.ЦИ». Charter capital ₽32 000 000; the extract names Минтранс России and Росимущество among its founders.",
+      "tier": "adjacent",
+      "tier_basis": "Federal state unitary enterprise (Минтранс России), 100% parent of ООО «ЗИТ.ЦИ» (s0219). No ЦБСТ tie recorded on it or on ЗИТ.ЦИ, Аэротехальянс or Азимут. Demoted to adjacent 2026-09-30 after checking its chain to ЦБСТ: no first-party or document evidence ties it to the network. Kept on file as an ownership node; not chased for zakupki.",
       "_verified": true,
       "name_history": [
         {
@@ -6203,8 +6211,14 @@
       ],
       "sanctions": [],
       "why": [
-        "2026-09-19: added from a full ЕГРЮЛ выписка (s7629) to resolve a graph stub. The stub's spelling carried a Latin «o» inside «ЗащитаИнфoТранс»; the extract spells it in Cyrillic. Not yet screened against sanctions lists."
-      ]
+        "2026-09-19: added from a full ЕГРЮЛ выписка (s7629) to resolve a graph stub. The stub's spelling carried a Latin «o» inside «ЗащитаИнфoТранс»; the extract spells it in Cyrillic. Not yet screened against sanctions lists.",
+        "2026-09-30: tier plumbing -> adjacent: ownership parent of ЗИТ.ЦИ with no ЦБСТ tie; 497 contracts as a state enterprise would be noise."
+      ],
+      "zakupki_review": {
+        "as_of": "2026-09-30",
+        "outcome": "closed",
+        "note": "Supplier search found contracts (archived as supplier-search pages) but the entity was judged not to be an entity of interest, so the contracts were deliberately not fetched."
+      }
     },
     {
       "slug": "ooo-proizvodstvo-obuchayushchikh-sistem-i-tekhnologiy",
@@ -6428,8 +6442,8 @@
       "registered": "03.07.2012",
       "address": "603107, Нижегородская обл., г. Нижний Новгород, ул. Заовражная, д. 7А",
       "director": "Амбаров Михаил Андреевич",
-      "tier": "plumbing",
-      "tier_basis": "Holds 27% of ООО «Стартап-студия университета Лобачевского» (s7623). Capital ₽4 000 000, held by four individuals; sanctioned per its OpenSanctions entity page.",
+      "tier": "adjacent",
+      "tier_basis": "Holds 27% of ООО «Стартап-студия университета Лобачевского» (s7623), whose subsidiary «Пехтра» won a special prize in ЦБСТ's 2025 accelerator without becoming a resident (press-level). Held by four individuals; listed on its OpenSanctions entity page (s7672), not confirmed against primary lists. Demoted to adjacent 2026-09-30 after checking its chain to ЦБСТ: no first-party or document evidence ties it to the network. Kept on file as an ownership node; not chased for zakupki.",
       "_verified": true,
       "name_history": [
         {
@@ -6488,7 +6502,8 @@
         }
       ],
       "why": [
-        "2026-09-19: added from a full ЕГРЮЛ выписка (s7636) as a 27% holder of the Lobachevsky startup studio. Its sanctions listing is from the OpenSanctions entity page (s7672) and still needs confirming against the primary lists. Not yet screened against GUR or Aleph."
+        "2026-09-19: added from a full ЕГРЮЛ выписка (s7636) as a 27% holder of the Lobachevsky startup studio. Its sanctions listing is from the OpenSanctions entity page (s7672) and still needs confirming against the primary lists. Not yet screened against GUR or Aleph.",
+        "2026-09-30: tier plumbing -> adjacent: minority stake two hops from a press-level accelerator prize."
       ],
       "director_history": [
         {
@@ -6505,7 +6520,12 @@
           "source_id": "s7636",
           "note": "ЕГРЮЛ выписка pulled 19.09.2026, single-ИНН lookup; per-holder dates are in the выписка."
         }
-      ]
+      ],
+      "zakupki_review": {
+        "as_of": "2026-09-30",
+        "outcome": "closed",
+        "note": "Supplier search found contracts (archived as supplier-search pages) but the entity was judged not to be an entity of interest, so the contracts were deliberately not fetched."
+      }
     },
     {
       "slug": "ao-kbp-shipunova",
@@ -6516,7 +6536,7 @@
       "address": "300004, Тульская обл., г. Тула, ул. Щегловская засека, д. 59",
       "director": null,
       "tier": "plumbing",
-      "tier_basis": "Holds 45% of ООО «НПО ПКРВ» (s7626), the co-founder of ООО «Центр беспилотных систем — Тула». Sole shareholder and the person entitled to act for it is АО «НПО «Высокоточные комплексы»; sanctioned per its OpenSanctions entity page.",
+      "tier_basis": "Holds 45% of ООО «НПО ПКРВ» (s7626), a 20% co-founder of ООО «Центр беспилотных систем» (Tula); the ЦБСТ tie of that company is unproven, so none is claimed here. Sole shareholder and the person entitled to act for it is АО «НПО «Высокоточные комплексы»; listed on its OpenSanctions entity page (s7676), not confirmed against primary lists. Personal link on file: Рогозин states the КБП was named after Шипунов at his proposal (his channel, msg 5032, 13.11.2023).",
       "_verified": true,
       "name_history": [
         {
@@ -6555,7 +6575,8 @@
         }
       ],
       "why": [
-        "2026-09-19: added from a full ЕГРЮЛ выписка (s7637). The extract names АО «НПО «Высокоточные комплексы» as both sole shareholder and the entity acting on its behalf; no individual director is given, so none is recorded. Its sanctions listing is from the OpenSanctions entity page (s7676) and still needs confirming against the primary lists. Not yet screened against GUR or Aleph. The holder ИНН 7704721192 is not itself on file."
+        "2026-09-19: added from a full ЕГРЮЛ выписка (s7637). The extract names АО «НПО «Высокоточные комплексы» as both sole shareholder and the entity acting on its behalf; no individual director is given, so none is recorded. Its sanctions listing is from the OpenSanctions entity page (s7676) and still needs confirming against the primary lists. Not yet screened against GUR or Aleph. The holder ИНН 7704721192 is not itself on file.",
+        "2026-09-30: Kept as plumbing; tier_basis reworded to state the ЦБСТ chain is unproven and to record the first-party Рогозин naming link. Zakupki contracts not pursued."
       ],
       "founders_history": [
         {
@@ -6564,7 +6585,12 @@
           "source_id": "s7637",
           "note": "ЕГРЮЛ выписка pulled 19.09.2026, single-ИНН lookup; per-holder dates are in the выписка."
         }
-      ]
+      ],
+      "zakupki_review": {
+        "as_of": "2026-09-30",
+        "outcome": "closed",
+        "note": "Supplier search found contracts (archived as supplier-search pages) but the entity was judged not to be an entity of interest, so the contracts were deliberately not fetched."
+      }
     },
     {
       "slug": "csn-bars-sarmat",
@@ -8127,15 +8153,12 @@
         "sanctions": [
           {
             "date": null,
-            "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9702064851 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"CENTER FOR UNMANNED SYSTEMS OF THE TULA REGION\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/rostec/11711; https://permid.org/1-5086926362; https://war-sanctions.gur.gov.ua/en/sanctions/companies/11711; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=50778; https://war-sanctions.gur.gov.ua/en/sanctions/companies/15947. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "regime": [
-              "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
-              "Canada (Special Economic Measures Act)",
-              "Australia (Autonomous Sanctions, Russia)",
-              "Ukraine (war-sanctions.gur.gov.ua, military-industry listing)",
-              "Ukraine (Presidential sanctions decree/list)"
+              "Ukraine (GUR war-sanctions portal, own listing)",
+              "Ukraine (NSDC State Register, own entry per OpenSanctions merged profile)"
             ],
-            "source_id": "s0574"
+            "source_id": "s8251",
+            "note": "Listed by Ukraine under this entity's OWN identifiers. The GUR portal page (companies/15947, read directly and archived 2026-09-30) is captioned \"AUTONOMOUS NON-PROFIT ORGANIZATION THE CENTER FOR UNCREWED VEHICLE SYSTEMS AND TECHNOLOGY\" and states TIN 9702064851 and registration number 1247700190430, which match this record. The OpenSanctions merged profile (s8252) shows a separate Ukraine NSDC entry for an автономная некоммерческая организация (ua-nsdc-33222), distinct from the NSDC entry for the Tula ООО (ua-nsdc-27077); the NSDC primary register was not opened. The GUR page's jurisdiction panel also lists USA, Canada, Switzerland, EU, UK, Australia, New Zealand and Japan, and reads \"The country has not yet applied sanctions\" under its date field; those are GUR's own claims and are NOT corroborated here. The OFAC SDN entry cited earlier (id 50778, read 2026-09-30) names the Tula ООО only, with Tax ID 7100032961 and registration number 1237100001467, so the US, and by extension the Canadian and Australian entries in the merged OpenSanctions profile, are not attributed to this АНО. No designation date is stated on the GUR page, so date is left null."
           }
         ],
         "web": {
@@ -8290,7 +8313,8 @@
         "Phase 1 verification pass, 2026-08-22: cross-checked against ЦБСТ's own full signed EGRUL extract (s0231, pulled 15.08.2026) — every field the extract carries (name incl. EGRUL-registered English name, address, director, founders and their join dates, OKVED list, e-mail an0.cbst@yandex.ru) confirms the brief's prose exactly, including the two founders and their distinct join dates. Promoted to _verified: true — the first cbst-core entity to clear full primary-document verification.",
         "Source-ID stability bug found and fixed 2026-08-22, same session: the source_id values above were originally written against an OLD, unstable positional ID scheme (scripts/extract_registry.py assigned sN = MANIFEST.md line index, which shifts whenever a file is added anywhere earlier in alphabetical sort order). Re-verified and corrected against the NEW stable, path-keyed ID scheme (data/registry/_source_ids.json) after the fix — every source_id in this file now points at the document it was actually verified against.",
         "2026-09-07: merged dormant duplicate correction key '9702064851' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "2026-09-30: Corrected sanctions[]: the earlier entry (s0574) listed OFAC, Canada and Australia as regimes on this АНО because OpenSanctions merges it with the Tula ООО. Read OFAC SDN 50778 directly (Tax ID 7100032961 only) and the two GUR pages (separate listings, 15947 for this АНО and 11711 for the Tula ООО, s8250/s8251). What remains is Ukraine's own listing of this АНО. GUR's US/EU/UK jurisdiction panel for the АНО is unverified and not recorded as a regime. The corporate relationship between the two entities remains unproven."
       ]
     },
     "ano-tsentr-razvitiya-transportnykh-tekhnologiy": {
