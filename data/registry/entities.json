@@ -411,6 +411,10 @@
       {
         "source_id": "s8672",
         "text": "Residents named by ЦБСТ but NOT resolved to a legal entity (2026-10-01 sweep): «SR Space» (post 473; the ЕГРЮЛ holds АО «СР СПЕЙС» ИНН 9724017598, in bankruptcy proceedings since 2025, name match only, not wired); «Витрес» (post 597; several ООО «ВИТРЕС», none tied); «Основательные технологии» (post 2150, president Вячеслав Нечаев per Известия; no ЕГРЮЛ match by name); «GoDrone» («Набат», post 2382); «Квадросим»; «ИнПоинт» (accelerator II finalist, post 1976); makers of «Талисман»/«Зеркальце» (post 369) and «Койот»."
+      },
+      {
+        "source_id": null,
+        "text": "2026-10-01 lead review of the seven open ЦБСТ post warnings: (1) НПП «ЭЛВО», St Petersburg, named in ЦБСТ post 2209 as a participant of Accelerator stream II and partner of Кольская верфь on a hydrofoil unmanned boat; not in the registry, identity unresolved (a web search for a company of this name found no confirmed legal entity; do not match by name alone). (2) The maker of the interceptor «Молот-ПВО» named in post 2124 is unresolved; a press item about a different interceptor called «Молот» credits the Moscow company Nova Labs, which is unverified as the same product."
       }
     ],
     "sources": [],
@@ -5361,6 +5365,14 @@
       "ids": "7714390623 | 1167746513967",
       "role": "25% owner of Аэротехальянс. Charter capital ₽12.8bn (confirmed via its own FY2021–25 filings, pulled directly). Same building. Director Saidov A.K. Non-public JSC, privately owned (ОКФС 16); primary OKVED is holding-company management (70.10.2), with stated activities spanning transport-management-system R&D, \"information and economic security,\" and \"external economic activity.\" Financially a stable holding: total balance grew ₽13.2bn → ₽17.1bn (2019–2025), almost entirely parked in securities/equity stakes (Финансовые вложения, steady ~₽13.9–14.5bn), with retained earnings climbing ₽300m → ₽3.5bn over the same period — real, growing profitability, not a shell. Its own FY2025 notes state explicitly: \"Бенефициаром Общества является гражданин России\" (the beneficiary is a Russian citizen) but withhold the name outright, citing \"исключение санкционных рисков\" (avoidance of sanctions risk) — the identical disclosure-exemption language already documented elsewhere in this brief for ДАР/ФКК's own board and related-party non-disclosures. Clean, unmodified FY2025 audit opinion (ООО «Аудит.Оценка.Консалтинг»). FY2025 filing signed not by GD Saidov but by Токарь С.В. under a power of attorney (№31, 29.12.2025)."
     },
+    "cbst_channel_review": {
+      "as_of": "2026-10-01",
+      "outcome": "namesake",
+      "posts_read": [
+        716
+      ],
+      "note": "Post 716 (14.05.2025) is about the Ukrainian «Аэро Азимут» aerostat platform, unrelated to this entity."
+    },
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 2 trademark filing(s) matched by ИНН.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 3 fiscal year(s) with revenue/profit data.",
@@ -5995,9 +6007,10 @@
       "as_of": "2026-10-01",
       "outcome": "namesake",
       "posts_read": [
+        716,
         1778
       ],
-      "note": "Post 1778 uses «азимуту» as the compass term in a piece about a game-style command interface. Post 716 («Аэро Азимут» platform) stays open."
+      "note": "Post 1778 uses «азимуту» as the compass term. Post 716 (14.05.2025) is about the Ukrainian «Аэро Азимут» aerostat platform (Aerobavovna/Квертус), unrelated to this entity."
     },
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 5 trademark filing(s) matched by ИНН.",
@@ -33735,6 +33748,16 @@
           "handle": "@knz_vandal_official",
           "source_id": "s8591",
           "note": "КВН developers' channel; tie via announcement/forwarding only"
+        },
+        {
+          "handle": "@dronnitsa",
+          "source_id": "s8700",
+          "note": "Channel of the «Дронница» operators' rally. Its post of 08.09.2025 says the 2025 exhibition «была организована Координационным центром помощи Новороссии и НПЦ «Ушкуйник»» (s8700); its post of 14.07.2026 calls Любимов (КЦПН) and Чадаев (head of НПЦ «Ушкуйник») «организаторы Дронницы» (s8701); the 2022 organising committee was Любимов and Чадаев, «идеолог и автор идеи мероприятия» (s8693)."
+        },
+        {
+          "handle": "@chadayevru",
+          "source_id": "s8703",
+          "note": "Channel «ЧАДАЕВ», first-person posts by the head of the НПЦ about setting up НПЦ «Ушкуйник» (s8702, 29.09.2023; s8703, 10.10.2023). Personal channel, not the company's."
         }
       ],
       "vk": [],
@@ -34163,6 +34186,14 @@
     "_origin": "brief:prose",
     "_raw": {
       "context": "link found in this brief between the Ushkuynik cluster and ЦБСТ's own governance: co-founders are the Novgorod Region Ministry of Industry and Trade (a regional government body), АНО «Платформа НТИ» (ИНН 7703469180) — the same organisation whose CEO, Dmitry Peskov, sits on ЦБСТ's own supervisory board (see executives table above) — АО «УК ИНТЦ «Интеллектуальная электроника — Валдай»» (a state-linked innovation-"
+    },
+    "cbst_channel_review": {
+      "as_of": "2026-10-01",
+      "outcome": "named_no_tie",
+      "posts_read": [
+        815
+      ],
+      "note": "Post 815 (18.06.2025) announces a ЦБСТ session at ПМЭФ on dual-use technology with Дмитрий Песков, head of АНО «Платформа НТИ», among the speakers. That is a speaker appearance at a ЦБСТ event; no institutional tie between the organisations is stated."
     },
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 2 trademark filing(s) matched by ИНН.",
@@ -58198,7 +58229,13 @@
     "domain_history": [],
     "web": {
       "sites": [],
-      "telegram": [],
+      "telegram": [
+        {
+          "handle": "@droneracingfederation",
+          "source_id": "s8708",
+          "note": "Channel whose bio reads «Официальный канал ФГДР» (Telegram bio, not separately archived); posts s8708–s8710 name its vice-president."
+        }
+      ],
       "vk": [],
       "youtube": [],
       "marketplace_listings": [],
@@ -58772,6 +58809,14 @@
       "as_of": "2026-09-15",
       "outcome": "closed",
       "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). OpenSanctions: 1 match(es), top='Товариство з обмеженою відповідальністю \"Керченська морська верф \"Фрегат\"' (score 0.7601, topics=['sanction']) No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
+    },
+    "cbst_channel_review": {
+      "as_of": "2026-10-01",
+      "outcome": "named_no_tie",
+      "posts_read": [
+        2209
+      ],
+      "note": "Post 2209 (14.06.2026) says Кольская верфь and the St Petersburg НПП «ЭЛВО» are building an 11-metre hydrofoil unmanned boat shown at «Флот-2026», and calls ЭЛВО a participant of ЦБСТ Accelerator stream II. The tie stated is to ЭЛВО, not to Кольская верфь. ЭЛВО is not in the registry; see the open question on the ЦБСТ record."
     },
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026 (ul-1245100006799-20260823141101.pdf)",
     "_egrul_crosschecked": "2026-08-22",
@@ -59992,6 +60037,14 @@
       "as_of": "2026-09-14",
       "outcome": "closed",
       "note": "not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+    },
+    "cbst_channel_review": {
+      "as_of": "2026-10-01",
+      "outcome": "named_no_tie",
+      "posts_read": [
+        38
+      ],
+      "note": "Post 38 (06.08.2024) reports the «Лори» radar from Элиарс as news, with no statement of a ЦБСТ relationship. Query: tg_post_coverage --slug ooo-eliars, 1 hit."
     },
     "_verified_against": "egrul.nalog.ru open-API name search \"ЭЛИАРС\" and direct ИНН search \"7735140825\", both 23.08.2026 (single unambiguous match); eliars.ru read directly 23.08.2026.",
     "opensanctions_matches": [
@@ -63526,7 +63579,7 @@
     "open_questions": [
       {
         "source_id": "s0945",
-        "text": "Trademark №1086620 «Капюшон» is Rospatent-registered to ooo-npo-kilovatt (this entity, ИНН 4800013729) but a certificate for the same mark was independently downloaded from the SISTER entity's own site (ooo-npo-kilovatt-shestopalov, kilowat48.ru). Both entities share founder Шестопалов С.А. — most likely an intra-group licensing/holding arrangement, not a conflict, but not independently confirmed which way the license runs."
+        "text": "Trademark №1086620 «Капюшон» is Rospatent-registered to ooo-npo-kilovatt (this entity, ИНН 4800013729) but a certificate for the same mark was independently downloaded from the SISTER entity's own site (ooo-npo-kilovatt-shestopalov, kilowat48.ru). Шестопалов С.А. is the founder of this entity and, since 22.04.2026, holds 60% of the sister entity (Хальзев С.Ю. 40%; s8685) — most likely an intra-group licensing/holding arrangement, not a conflict, but not independently confirmed which way the license runs."
       }
     ],
     "sources": [],
@@ -63543,8 +63596,8 @@
         "relationship_type": "name-collision-distinct"
       },
       {
-        "relationship": "Same sole founder (Шестопалов С.А.) as the second Kilovatt LLC (ИНН 4800016776) -- see that record. Common ownership confirmed via both entities' own EGRUL extracts.",
-        "source_id": "s0532",
+        "relationship": "Shared founder: Шестопалов С.А. founded this entity (100%) and founded the second Kilovatt LLC (ИНН 4800016776), where he has held 60% since 22.04.2026 alongside Хальзев С.Ю. 40% (s8685, s6790). Until that date both entities had the same sole founder, confirmed via both entities' own EGRUL extracts.",
+        "source_id": "s8685",
         "relationship_type": "sister-entity"
       }
     ],
@@ -64348,8 +64401,16 @@
     ],
     "open_questions": [
       {
+        "source_id": null,
+        "text": "Former occupant ООО «Регион-Агро Липецк» itself not yet checked against this registry or independently researched -- worth a quick check for any residual connection (shared ownership, lease continuity) versus a clean change of use."
+      },
+      {
+        "source_id": "s0533",
+        "text": "RESOLVED: relationship to the sister entity (ИНН 4800013729) is common ownership -- same sole founder Шестопалов С.А. on both, per full EGRUL extracts. He directs this one personally; the other has a hired director (Гаврилов А.Г.). UPDATE 2026-10-01 (s8685, s6790): this holds for the period to 22 April 2026. Since then ООО НПО «Киловатт» (ИНН 4800016776) has a second participant, Хальзев Сергей Юрьевич 40% (Шестопалов 60%), so the two entities are no longer under identical ownership; Шестопалов remains a founder of both."
+      },
+      {
         "source_id": "s8685",
-        "text": "2026-10-01 founding-document read: since 22 April 2026 the company has TWO participants, Шестопалов Сергей Анатольевич 60% and Хальзев Сергей Юрьевич 40% (charter amendment and the ЕГРЮЛ extract s6790 agree). Earlier text on this record calling Шестопалов the sole founder, and the resolved note on common ownership with the sister entity ИНН 4800013729 (\"same sole founder\"), describe the position before that date. Not yet done: a lookup of Хальзев (other entities, ЦБСТ channel search for «Хальзев» returns 0 hits on 2026-10-01) and whether he also holds a stake in the sister entity. The 2024 charter (§10.4, §12.8) contains state-secret clauses worded identically to the РЛВТ charter, so they read as template text; no допуск to state secrets is evidenced."
+        "text": "2026-10-01 founding-document read: since 22 April 2026 the company has TWO participants, Шестопалов Сергей Анатольевич 60% and Хальзев Сергей Юрьевич 40% (charter amendment and the ЕГРЮЛ extract s6790 agree). Earlier text on this record calling Шестопалов the sole founder, and the resolved note on common ownership with the sister entity ИНН 4800013729 (\"same sole founder\"), describe the position before that date. Lookups done 2026-10-01: Хальзев's ИНН 482300070325 appears only in this entity's ЕГРЮЛ extracts in our archive; the sister entity ИНН 4800013729 shows Шестопалов 100% and director Гаврилов Алексей Георгиевич (ИНН 235209926630), no Хальзев; ЦБСТ channel search for «Хальзев» returns 0 hits; a web search found nothing. Not done: a ФНС cross-reference of his ИНН for other holdings. The 2024 charter (§10.4, §12.8) contains state-secret clauses worded identically to the РЛВТ charter, so they read as template text; no допуск to state secrets is evidenced."
       }
     ],
     "sources": [],
@@ -70523,6 +70584,10 @@
     "images": [],
     "open_questions": [
       {
+        "source_id": "s5411",
+        "text": "Deeper pull attempted 2026-09-03 (per the Гагаринг wide-net push): a fresh egrul.nalog.ru open-API lookup independently confirms director Плыкина Е.В. (second, government-sourced corroboration) but the open API does not return founder/participant info. No zakupki.gov.ru contracts found (single-ИНН scan, zero hits — expected for a firm registered only 28.10.2025). No БФО filing exists yet on bo.nalog.gov.ru (zero results — first fiscal year not yet closed/filed as of this check). Genuinely thin beyond the director name and Гагаринг's own audit-disclosed ₽10M loan — still worth revisiting once a first БФО filing or zakupki activity appears."
+      },
+      {
         "source_id": "s8684",
         "text": "2026-10-01 founding-document read: the charter approved by protocol №1 of 14 October 2025 (ЕГРЮЛ ГРН 1257100008560 of 28.10.2025) lists R&D, \"производство летательных аппаратов, включая космические, и соответствующего оборудования\" and software development, and states the aim of \"участие в реализации государственных программ\" (§3.1). It also contains state-secret clauses (§6.3, §6.4 допуск of participants and director, director's duties on state-secret access, §21.6). These are charter provisions, not evidence that the company holds a допуск or a state-secret contract. The charter does not name the participants (registry: Плыкина Е.В. 50%, ООО «Гагаринг» 50%)."
       }
@@ -72395,6 +72460,11 @@
         {
           "url": "https://t.me/Vasya_consultant_Arhangel",
           "note": "\"консультант\" contact, confirmed genuine in an anti-fraud post (s5463)"
+        },
+        {
+          "handle": "@rastratchikRadistka",
+          "source_id": "s8705",
+          "note": "Channel «Будни Радистки»: the operator describes herself as the first graduate of the school «Архангел» (s8705, 28.11.2023) and her post of 18.01.2024 invites developers and links @projectArchangel (s8706). Which Архангел entity runs the school she attended is not established. Callsign only; no person record."
         }
       ],
       "vk": [
@@ -84106,11 +84176,12 @@
     ],
     "cbst_channel_review": {
       "as_of": "2026-10-01",
-      "outcome": "namesake",
+      "outcome": "lead_open",
       "posts_read": [
-        1987
+        1987,
+        2124
       ],
-      "note": "Post 1987 («Британский молот») is a pun about Cambridge Aerospace. Post 2124, which lists «Молот-ПВО» among interceptors, is NOT covered by this review and stays open."
+      "note": "Post 1987 («Британский молот») is a pun. Post 2124 (10.05.2026) lists the interceptor «Молот-ПВО» among promising drones but does not say who makes it or that it is from the ЦБСТ contour (the FPV sentence does, the interceptor sentence does not). The maker of «Молот-ПВО» is unresolved, so this entity is neither tied nor excluded."
     },
     "_verified_against": null,
     "aleph_matches": [],
@@ -85767,6 +85838,15 @@
     "_corrected": [
       "2026-09-19: created from the user's screenshot of the logo «ЦСН Сармат / Подразделение БПЛА / АРХАНГЕЛ» behind a speaker in a Архангел video, then a read of bars-sarmat.ru (s7682-s7690), a scrape of @russian_shock_volunteer_brigade, and Архангел's own posts naming the unit."
     ],
+    "cbst_channel_review": {
+      "as_of": "2026-10-01",
+      "outcome": "named_no_tie",
+      "posts_read": [
+        2342
+      ],
+      "note": "Post 2342 (21.07.2026) reports the volunteer crew «БАРС-Сармат» using a Yak-52 as an interceptor-drone carrier, citing a Telegram channel and Коммерсантъ; it states no ЦБСТ relationship. It also links ЦБСТ post 2037, which was not read in this pass."
+    },
+    "_verified_against": null,
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19"
   },
@@ -85889,6 +85969,15 @@
     "_corrected": [
       "2026-09-20: ЕГРЮЛ выписка pulled (s7870). 2026-09-19: identifiers taken from the Фонд's own page on the unit's site (s7682), not from an official register."
     ],
+    "cbst_channel_review": {
+      "as_of": "2026-10-01",
+      "outcome": "namesake",
+      "posts_read": [
+        2342
+      ],
+      "note": "Post 2342 names the volunteer crew «БАРС-Сармат», not this foundation (ИНН 6154168283); no link to the foundation is stated."
+    },
+    "_verified_against": null,
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19"
   },

@@ -23,13 +23,22 @@ as a two-tier generated publication) changed shape:
 | Phase 4 Jinja site generator, "MVP publication", Phase 5 prose, sequencing note | **Retired 2026-09-08** at user direction. **Superseded 2026-09-20:** `docs/index.html` is no longer the narrative landing page. The old brief is now `docs/dossier.html`; the front door is a generated landing page plus case studies (see "Site structure" below). |
 | The wb_overlap regression on Тримикс (old "one real blocker") | **Fixed** (`b06d9f1`); registry now shows `confirmed_reseller`. |
 
-## Current state (queried 2026-09-29)
+## Current state (queried 2026-10-01)
 
-240 live entities (242 raw, 2 merged), 430 live people (437 raw, 7 merged),
-8,189 sources, 23 quotes, 44 open questions. 72 entities and 36 people carry
-`sanctions[]`. 162 people are still `_verified: false`. `facility_type` is set
-on 4 entities. `check_registry.py`: 0 errors, 18 warnings. All five test files
-pass (a stale `founders_history` fixture was fixed 2026-09-29).
+247 entities (72 with a ЦБСТ tie), 8,653 source ids, 23 quotes, 44 open
+questions. `check_registry.py`: 0 errors, 25 warnings (the rise from 18 is the
+§6b ЦБСТ-post coverage check: 7 open resident leads, each a warning to close
+with a read and a dated `cbst_channel_review`). Both new test files
+(`tests/test_tg_post_coverage.py`, `tests/test_cbst_resident_sweep.py`) pass.
+Tooling added 2026-10-01: `tg_post_coverage.py`, `cbst_resident_sweep.py`,
+`tg_forward_diff.py` (CLAUDE.md, "Searching Telegram text"). Founding documents:
+ten more UD bundles read and wired (s8683-s8692); 15 entities still have none
+(`notes/founding_docs_gap.md`). Exhibit drafts and their builders now live in
+`exhibits/` (was `scratch_design/`); `docs/` is publish-only.
+
+Held until the user calls publish time: the regenerated `docs/` pages,
+`.claude/agents/product-researcher.md` and `scripts/verify_findings.py`
+(field-test first).
 
 Live open-work lists (these, not this file, are authoritative):
 
@@ -45,9 +54,10 @@ before acting (see [[roymarket_tracking_discipline]]).
 
 - **Artifact cutoff**: `docs/dossier.html` (the former index.html) and the Registry Dossier stay unpublished until the user calls an explicit cutoff; the new landing and case pages are Pages-only and are not published as Artifacts before that call.
 - **Zakupki**: three large institutes unreviewed in `clusters_new.md` (`ao-nii-vektor`, `ao-pmts-avangard`, `ao-nii-stt`); a clean final housekeeping re-mine belongs in the user's own terminal (archive 2357-2378).
-- **Гагаринг/Архангел**: Кулемин/Хабибулин DOB/address; «Открытое небо» candidate resolution; «Ворон-оптоволокно» entity; `tg-arkhangel-spetsnaza` legal entity; Одесская 48/3, Курская/Севастополь, НПО Эйлер threads (archive 3028-3044, 2610-2616).
-- **ЦБСТ residents**: КРАМС and TSG Group identity resolution (archive ~3703); `ooo-npo-nebo` deliberately not wired as a ЦБСТ tie.
+- **Гагаринг/Архангел**: Кулемин/Хабибулин DOB/address; «Открытое небо» candidate resolution; «Ворон-оптоволокно» entity; `tg-arkhangel-spetsnaza` legal entity; Одесская 48/3, Курская/Севастополь, НПО Эйлер threads (archive 3028-3044, 2610-2616; Эйлер charter read 2026-10-01, participants are not named in it).
+- **ЦБСТ residents**: unresolved leads from the 2026-10-01 sweep are logged as open questions on the ЦБСТ record (SR Space, Витрес, Основательные технологии, GoDrone, Квадросим, ИнПоинт, makers of Талисман/Зеркальце and Койот); КРАМС and TSG Group identity resolution (archive ~3703); `ooo-npo-nebo` deliberately not wired as a ЦБСТ tie.
 - **Never-screened manufacturers, EGRUL pulls, ФНС cross-references**: archive ~3970 and ~3497. The screening backlog has moved since; query `*_screened_at` instead of trusting those lists.
+- **Киловатт**: new 40% participant Хальзев С.Ю. (ИНН 482300070325) has no lookup yet; check the sister entity ИНН 4800013729.
 - **Pospekhov / «Системы Безопасности»**: one unwired lead from the bridge-figure triage (archive 4231-4286).
 
 ## Site structure (agreed 2026-09-20)

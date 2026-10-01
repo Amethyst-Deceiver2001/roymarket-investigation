@@ -125,6 +125,10 @@ case this policy exists for, even against an unauthenticated open API.
 - An all-null result for one entity or one field across the corpus is a parser bug until proven otherwise. Non-profit `funds_*` figures are never revenue.
 
 
+## Hard rule: facts come from the original document, read in full, in its own language
+
+Added 2026-10-01 at user direction. A fact enters the registry only from the original-language (normally Russian) document, read in full: the charter, the ЕГРЮЛ extract, the Telegram post and its `links`, the court filing, the press article. English summaries, search-result snippets, machine translations and a subagent's paraphrase are **leads only**. A lead from one of them is recorded as an `open_questions` entry naming what is unverified, never as a fact, a tie or an identity match. Scanned documents are OCR'd and the OCR is checked against the image where it matters (a one-page amendment can be an image the text layer misses). Say in the record which document and passage a fact rests on.
+
 ## Primary-source documents: check `data/sources/` before re-downloading
 
 `data/sources/` (gitignored — local working copy, ~424MB) holds the EGRUL
