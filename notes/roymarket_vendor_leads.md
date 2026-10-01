@@ -112,3 +112,30 @@ Fetched from roimarket.ru (Russian originals, captures `data/sources/WEBCAPTURE_
   - The offer's counterparties are «Поставщики» (юрлица and ИП) selling through the platform; the platform is their agent, not the seller of record. That is the structure the registry's `sells_for` edges should point at.
   - `sell-with-roy` (same day): «РОЙ.МАРКЕТ - защищённый канал продаж товаров двойного назначения»; «Ваши товары могут продаваться не только на Wildberries и Ozon». ЦБСТ's own phrase, used by the operator's seller page.
 - Still not established: the ЦБСТ share in МПТМ (s0207 gives participation since 22.01.2025, no percentage; ЕГРЮЛ participants restricted since 15.07.2026).
+
+## Self-report sweep over the rescanned archive (2026-10-01)
+
+Archive: 503,714 posts, 56 channels, after the full rescan (`tg_scan.py --full --days 1680`, aborted once and finished with `--only kb_spektr`). Matcher: `tg_post_coverage.py --all-channels --include-archived --term …` (folded for case and ё, positive control 8/8 passed on every run). Every hit was read; none is sliced.
+
+| Query | Hits |
+|---|---|
+| «роймаркет» | 3: asidyakin/618; kb_spektr/321, /322 |
+| «рой.маркет» | 13, all ЦБСТ's own posts or reposts of them (2386, 2392, 2398, 2413, 2414, 2415, 2420, 2433, 2440; mil_hub and asidyakin copies) |
+| «рой маркет» | 3: my_el_lab/2076 (12.06.2025, a question list: «Почему не взлетел маркет дронов? (Рой маркет - что с ним не так)»); two customer messages in the 3mx chat (below) |
+| «стать селлером» | 1: ЦБСТ 2413 (a heading) |
+| «онлайн-маркетплейс» | 6, one of them a vendor channel: UAS_development/695 |
+| «#маркетплейс» | 1: UAS_development/695 |
+| «защищённый канал продаж» | 4, all ЦБСТ (2413, 2415, 2420, 2433) |
+| «поставщиком рой» | 1: ЦБСТ 2433 |
+| «двойного назначения маркетплейс», «селлер роймаркет», «маркетплейс двойного» | 0 |
+
+**Result.** Two vendor channels name the platform or its generic description: `@kb_spektr` (posts 321–322, names «Роймаркет», `doc`) and `@UAS_development` (post 695, generic phrase, inference). No third vendor self-report is in the archive. The sweep reads post text only; captions on media and channels not on the watchlist are outside it. The deterministic route works: the phrase «онлайн-маркетплейс» plus «двойного назначения» finds post 695 by itself, so it is a usable codeword for the next rescan.
+
+**New findings, each from a post read in full (archived s8847–s8864):**
+1. **3mx is not documented as a РОЙ.МАРКЕТ seller.** In 3mx's customer chat on 02.09.2026 a customer asks (msg 42145) «Новая версия булата будет выставлена к продаже на рой маркет?» and the next message from the maker's side (msg 42146, 13 minutes later) says «Всю нашу продукцию можно приобрести только у нас на сайте 3mx.ru или у наших дилеров.» Another customer (msg 42151): «Очень нужно что бы Вашим дилером стал рой маркет». Limits: the DB does not store reply-to links, so the pairing is by adjacency; the responder is unnamed. This is the maker of a ЦБСТ-resident product (shown at Дронница 2025, s8842) saying it is not selling through the platform, while a non-resident (КБ «СПЕКТР») is.
+2. **Launch attribution.** Сидякин (head of the Центральный исполком «Единой России»), 15.12.2025: «Вместе с партией и ПСБ запустили военный маркетплейс «Роймаркет». Платформа протестирована.» (s8847). The post does not name МПТМ. Recorded on `ooo-mptm` as a claim.
+3. **Pilot to open platform.** ЦБСТ 2386 (05.08.2026): «Ранее площадка функционировала в рамках пилота»; 2413–2433 (13–20.08): opening to «сторонних» sellers, including «юрлица, которые уже работают на Wildberries, Ozon», and «Небольшая команда или независимый разработчик». КБ «СПЕКТР»'s post (06.07.2026) falls in the pilot period. Whether Спектр was invited under the pilot is not stated anywhere.
+4. **Scale claims, self-reported.** «десятки потребителей», «каталог … до нескольких сотен позиций» (asidyakin 1230, 05.08.2026); goal 10,000+ items by 2027 (2414); all ТЭЧ of Минобороны to be connected by 1 September (ЦБСТ 2392, a plan). Whether the ТЭЧ were connected is not recorded.
+5. **Size of the ЦБСТ contour.** «Сегодня в нашем контуре 525 компаний», «более 850 разработчиков» supported (asidyakin 1230): the brief's 525 now has a source; the wording is «в контуре», not «резидентов».
+
+**Still open:** the Kommersant article (doc/8878535) and cbst.ru's «Стать селлером» page unread; the registered Поставщик behind Спектр; whether any ЦБСТ resident lists on the platform (the 3mx statement is one data point); post 700 of UAS_development («Антидрон-предложение от наших китайских партнеров», 23.09.2026) names no partner.

@@ -136,7 +136,17 @@
         "as_of": "2025-09-08"
       }
     ],
-    "notes": "ЦБСТ's own channel names «резиденты ЦБСТ» throughout (post 1193, s8842: «резиденты ЦБСТ представили свои разработки на выставке»). The roster is held as per-entity cbst_tie records and cbst_resident_sweep.py output; memberships[] are added here as each is wired. No size claim is recorded: the earlier brief figure of 525 has no source in the registry."
+    "notes": "ЦБСТ's own channel names «резиденты ЦБСТ» throughout (post 1193, s8842: «резиденты ЦБСТ представили свои разработки на выставке»). The roster is held as per-entity cbst_tie records and cbst_resident_sweep.py output; memberships[] are added here as each is wired. The figure «525 компаний в нашем контуре» is now sourced to s8851 (Сидякин, 05.08.2026); the wording is «в контуре», not «резидентов», and the roster is not published.",
+    "claims": [
+      {
+        "text_ru": "За 2,5 года ЦБСТ поддержал более 850 разработчиков и технологических предприятий. Сегодня в нашем контуре 525 компаний, а к концу 2026 года их число превысит 600.",
+        "metric": "companies in the ЦБСТ contour",
+        "value": "525 now; 850+ supported over 2.5 years; 600+ by end-2026 (target)",
+        "as_of": "2026-08-05",
+        "source_id": "s8851",
+        "asserted_by": "Сидякин, @asidyakin post 1230 (ЦБСТ board summary); self-reported"
+      }
+    ]
   },
   {
     "slug": "cbst-accelerator",
