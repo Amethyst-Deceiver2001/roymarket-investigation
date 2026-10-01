@@ -1,8 +1,8 @@
 {
   "schema_version": 7,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1221,
-  "edge_count": 2075,
+  "node_count": 1223,
+  "edge_count": 2077,
   "unresolved_count": 113,
   "nodes": [
     {
@@ -4237,7 +4237,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "defensive",
-      "degree": 22
+      "degree": 24
     },
     {
       "id": "ooo-tsentr-dinarus",
@@ -10775,6 +10775,19 @@
       "degree": 1
     },
     {
+      "id": "product::ooo-trimiks::дополнительный-модуль-к-детектору-булат",
+      "kind": "product",
+      "label": "Дополнительный модуль к детектору «Булат»",
+      "owner_slug": "ooo-trimiks",
+      "source_id": "s8770",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::ooo-trimiks::марс",
       "kind": "product",
       "label": "«Марс»",
@@ -10793,6 +10806,19 @@
       "label": "«Пётр»",
       "owner_slug": "ooo-trimiks",
       "source_id": "s8021",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-trimiks::таир",
+      "kind": "product",
+      "label": "«Таир»",
+      "owner_slug": "ooo-trimiks",
+      "source_id": "s8773",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -28872,6 +28898,17 @@
     },
     {
       "source": "ooo-trimiks",
+      "target": "product::ooo-trimiks::дополнительный-модуль-к-детектору-булат",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8770",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-trimiks",
       "target": "product::ooo-trimiks::марс",
       "type": "produces",
       "label": null,
@@ -28887,6 +28924,17 @@
       "type": "produces",
       "label": null,
       "source_id": "s8021",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-trimiks",
+      "target": "product::ooo-trimiks::таир",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8773",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",

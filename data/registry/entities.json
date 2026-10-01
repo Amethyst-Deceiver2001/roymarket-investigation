@@ -20394,6 +20394,16 @@
         "description": "Digital video link and control detector; firmware v0.11.",
         "name_ru": "«Марс»",
         "source_id": "s1383"
+      },
+      {
+        "name_ru": "«Таир»",
+        "description": "Individual Bluetooth-paired BPLA alert sensor, pairs with «Булат» v.4 (one detector feeds multiple «Таир» units within 50m radius). Confirmed in official user manual (docs.3mx.ru/detektor-bpla-bulat-v4/user-manual, document v1.16, 06.12.2024), s. 2.",
+        "source_id": "s8773"
+      },
+      {
+        "name_ru": "Дополнительный модуль к детектору «Булат»",
+        "description": "Stand-alone FPV-only relay/extension unit, 1.5km detection range, 1200mAh battery, USB-C, 77x54x35mm/105g; extends Булат detection or works independently (FPV-only, LED+vibration alert only). Official user manual.",
+        "source_id": "s8770"
       }
     ],
     "financials": [
@@ -20473,7 +20483,22 @@
     "government_contracts": [],
     "workforce_history": [],
     "state_programs": [],
-    "marketing_claims": [],
+    "marketing_claims": [
+      {
+        "text_ru": "Булат не предназначен для использования внутри железобетонных конструкций, вблизи с работающей радиоэлектронной аппаратурой (включая Рации, Телевизоры, СВЧ печи, мониторы)",
+        "text_en": "[3mx support rep, replying to a customer false-positive report] Булат is not designed for use inside reinforced-concrete structures, near operating radio-electronic equipment (including radios, TVs, microwave ovens, monitors)",
+        "context": "ru3mx customer chat (channel_id 1651823792, msg 28831, 2025-07-04), 3mx support thread responding to a customer asking why the detector now alarms inside a dugout (\"блиндаж\"); subsequent replies (msgs 28832-28850) are customers confirming repeated false alarms after a firmware update and a rep (sender 1414586597) acknowledging the issue should be reported to developers for a correction.",
+        "source_id": "s8815",
+        "as_of": "2025-07-04"
+      },
+      {
+        "text_ru": "Новые антенны запускаем в производство, будут доступны в конце октября.",
+        "text_en": "[3mx rep, replying to a mass customer complaint that Булат 4 antennas are \"тупо одноразовые\" / effectively disposable] New antennas are going into production, will be available by end of October.",
+        "context": "ru3mx customer chat (channel_id 1651823792, msg 15203, 2024-10-05), reply to msg 15202: a customer complaint of widespread dissatisfaction with Булат 4 antenna quality (\"массовое недовольство по качеству антенн\", \"сильный проёб со стороны производителя\") -- a 3mx rep (sender 1414586597) confirms the defect and states new antennas are in production.",
+        "source_id": "s8815",
+        "as_of": "2024-10-05"
+      }
+    ],
     "battlefield_evidence": [],
     "domain_history": [],
     "web": {
@@ -20567,6 +20592,26 @@
       {
         "source_id": "s0558",
         "text": "3mx's dealer page (s0558, 23.08.2026) originally flagged all 3 named dealers as unmatched to a legal entity. ALL THREE now resolved: Мэдро (2026-08-25, via WB seller HAR capture) -- ИП Артемьева Виктория Михайловна, ИНН 350102453754, ОГРНИП 325784700034333. Покров (2026-08-25, cross-link fix -- was already resolved 2026-08-24, just not linked from this record) -- ООО «ПОКРОВ», ИНН 5038189259/ОГРН 1245000068774. Макс 911 (2026-08-25, dji911.com/contacts + egrul.nalog.ru) -- ИП Коровкин Александр Анатольевич, ИНН 780223272953, ОГРНИП 323784700072451. No further open leads on this dealer roster."
+      },
+      {
+        "source_id": "s8760",
+        "status": "open",
+        "text": "Chinese-made competing/clone portable drone detector manual (QD-HD-003, \"UAV DAC 2.0\", 2023) posted 2024-10-05 by a customer in 3mx's own ru3mx chat (msg 15194), replying to msg 15190 which names the device class explicitly: \"SKYDROID и его многочисленные клоны (Соколы и пр)\" -- a ~50k+ RUB simplified spectrum-analyzer-with-threshold-alarm category distinct from Булат. NOT a 3mx/Тримикс product -- a competing device a customer owns. Market-context lead only, not wired to any claim."
+      },
+      {
+        "source_id": "s8761",
+        "status": "open",
+        "text": "Machine-translated manual (onlinedoctranslator.com) for an unbranded compact \"дрон-сигнализатор\" (drone-alarm device, filename \"сокол.pdf\"), posted 2024-10-05 in the same ru3mx chat thread as the QD-HD-003 manual (msg 15198, 6 min later), matching the \"Соколы\" SKYDROID-clone category named in msg 15190. 300MHz-6GHz range, 1.5in screen, 63x42.7x103mm, 3000mAh, Type-C, four fixed frequency bands (800-830/1420-1460/2370-2510/5600-6000MHz). No brand/manufacturer name in the extracted text. NOT a 3mx/Тримикс product -- same competing-hardware lead as s8760, logged together."
+      },
+      {
+        "source_id": "s8771",
+        "status": "open",
+        "text": "\"Каталог_спектров.pdf\" circulated twice in 3mx's own ru3mx customer chat (2024-10-13 and 2025-03-12, identical content) is NOT a 3mx product catalog -- it is a radio-signal-identification reference guide titled \"КАТАЛОГ СПЕКТРОВ. Для специалистов РЭБ, РЭР и подразделений противодействия БПЛА\", branded \"Пифагор МДВ\"/\"МЕСТЬ ДОБРОЙ ВОЛИ\" (a distinct, unidentified group -- \"Администрация МДВ\" signs the foreword), cataloguing RF spectra for named Ukrainian military UAV platforms (А1-СМ Фурія, Байрактар ТБ2, SPECTATOR-M, PD-2, ScanEagle, Валькирия, RQ-20 Puma, Посейдон/Poseidon Mk II, Лелека-100, SPARROW, FLY EYE) and Ukrainian EW/jamming stations under the heading \"ХохлоРЭБ\" (Анклав, Буковель). Shows 3mx's dealer chat is a channel where Ukrainian-signal identification references circulate among Булат operators -- real usage-context evidence, independent of 3mx's own marketing claims. \"МЕСТЬ ДОБРОЙ ВОЛИ\"/МДВ group name is an unresolved lead, not yet cross-checked against the registry."
+      },
+      {
+        "source_id": "s8805",
+        "status": "open",
+        "text": "Desktop.rar (posted 2025-07-04, msg 28839, ru3mx chat) contains 2 .stl files -- a community member's self-made 3D-printable repair/replacement part. Same sender (id 1190254443) wrote earlier in the chat (msg 21167, 2025-02-07) about a broken, hard-to-source antenna connector on Булат v.4 (\"Столкнулся с такой проблемой как сломанный разъём антенны на Булат в4...в продаже таких нет\"), and msg 21403 (2025-02-12) describes his workaround: \"ремонт у производителя, я уже обращался...вышел из ситуации так, разъём от баофенга и 3д печать\" (official repair impractical; fixed it himself with a Baofeng radio connector + 3D printing). Posted the .rar 5 days after his own msg 28486 (\"3д печать\"). Reading: a user-made STL replacement part for the Булат v.4 antenna connector, documenting a known hardware failure point -- not an official 3mx/Тримикс engineering file. Not yet opened (no unrar/7z in the working environment); content inferred from filename + chat context only."
       }
     ],
     "sources": [],
