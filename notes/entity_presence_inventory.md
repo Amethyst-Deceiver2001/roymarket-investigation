@@ -1,33 +1,30 @@
 # Entity web and Telegram presence inventory
 
-247 entities. Records what the registry holds; a dead link or a moved channel is not detected here.
+243 entities. Records what the registry holds; a dead link or a moved channel is not detected here.
 
 | Gap | Entities |
 |---|---|
-| NO-PRESENCE | 186 |
-| TG-NOT-SCRAPED | 16 |
+| NO-PRESENCE | 174 |
+| TG-NOT-SCRAPED | 26 |
 | TG-NOT-ON-LIST | 1 |
 | TG-EMPTY | 4 |
 | TG-BAD-URL | 0 |
-| TG-BOT | 4 |
+| TG-BOT | 5 |
 | SITE-NOT-ARCHIVED | 8 |
 
-With a site: 53; with Telegram: 28; with VK: 4; with YouTube: 1.
+With a site: 57; with Telegram: 37; with VK: 8; with YouTube: 1.
 
-## No site, Telegram, VK or YouTube on file (186)
+## No site, Telegram, VK or YouTube on file (174)
 
 Entities with a ЦБСТ tie are listed first.
 
 - **ЦБСТ-tied** `ao-spetstekh-investitsii-ao-spetstekh-pervyy` (cbst-core, ИНН 9703232234)
 - **ЦБСТ-tied** `ao-spetstekh-perviy` (cbst-core, ИНН 9703244871)
 - **ЦБСТ-tied** `ooo-sistemnyy-integrator` (cbst-core, ИНН 4632306583)
-- **ЦБСТ-tied** `alyaska` (manufacturer, ИНН 6168719068)
 - **ЦБСТ-tied** `ao-npp-bat` (manufacturer, ИНН 9718238013)
-- **ЦБСТ-tied** `ao-stratim` (manufacturer, ИНН 7720901379)
 - **ЦБСТ-tied** `ao-tekhnodron` (manufacturer, ИНН 9704241986)
 - **ЦБСТ-tied** `kulibin-klub` (manufacturer, ИНН None)
-- **ЦБСТ-tied** `npo-kaysant` (manufacturer, ИНН 7733393203)
-- **ЦБСТ-tied** `npts-ushkuynik` (manufacturer, ИНН 5300013923)
+- **ЦБСТ-tied** `npts-ushkuynik` (manufacturer, ИНН 5300013923) - sibling has presence, not attributed: ano-npts-ushkuynik (same-name-different-entity: https://nvgushkuynik.ru/, @nvgushkuynik)
 - **ЦБСТ-tied** `ooo-aero-khit` (manufacturer, ИНН 2700012608)
 - **ЦБСТ-tied** `ooo-aeroplatformy` (manufacturer, ИНН 5027293811)
 - **ЦБСТ-tied** `ooo-arkhangel` (manufacturer, ИНН 9714079108)
@@ -35,9 +32,7 @@ Entities with a ЦБСТ tie are listed first.
 - **ЦБСТ-tied** `ooo-atlant-aero` (manufacturer, ИНН 6154165878)
 - **ЦБСТ-tied** `ooo-aviron` (manufacturer, ИНН 7743451768)
 - **ЦБСТ-tied** `ooo-eyartek` (manufacturer, ИНН 7300000540)
-- **ЦБСТ-tied** `ooo-gaskar` (manufacturer, ИНН 9710112989)
 - **ЦБСТ-tied** `ooo-intek-bespilotnye-sistemy` (manufacturer, ИНН 7000013316)
-- **ЦБСТ-tied** `ooo-intel-dron` (manufacturer, ИНН 7448259249)
 - **ЦБСТ-tied** `ooo-kingpro` (manufacturer, ИНН 9725168367)
 - **ЦБСТ-tied** `ooo-konstruktorskoe-byuro-sinergiya` (manufacturer, ИНН 7842219445)
 - **ЦБСТ-tied** `ooo-mentastep` (manufacturer, ИНН 9715478320)
@@ -50,10 +45,8 @@ Entities with a ЦБСТ tie are listed first.
 - **ЦБСТ-tied** `ooo-tskbr` (manufacturer, ИНН 5040176793)
 - **ЦБСТ-tied** `ooo-tsugam` (manufacturer, ИНН 9731094770)
 - **ЦБСТ-tied** `ooo-vozdushnyy-traktat` (manufacturer, ИНН 7100046925)
-- **ЦБСТ-tied** `uraldronzavod` (manufacturer, ИНН 6671284030)
 - **ЦБСТ-tied** `assotsiatsiya-vzaimopomoshch` (money-layer, ИНН 4707039070)
 - **ЦБСТ-tied** `ano-dpo-obrazovatelny-tsentr-gagaring` (plumbing, ИНН 2310240630)
-- **ЦБСТ-tied** `gk-rostekh` (plumbing, ИНН 7704274402)
 - **ЦБСТ-tied** `ooo-gk-logos` (plumbing, ИНН 3435149330)
 - **ЦБСТ-tied** `ooo-rtd-zashchita` (plumbing, ИНН 5003153526)
 - `ooo-laboratoriya-yangelya` (network, ИНН 2373028450)
@@ -62,13 +55,11 @@ Entities with a ЦБСТ tie are listed first.
 - `ao-nii-vektor` (manufacturer, ИНН 7813491943)
 - `ao-ross` (manufacturer, ИНН 7704097425)
 - `ao-rti-radio` (manufacturer, ИНН 7713133550)
-- `bulat-3mx` (manufacturer, ИНН None)
 - `ip-shandobylo-sergey-sergeevich` (manufacturer, ИНН 781154619843)
 - `ip-sidorov-andrey-sergeevich` (manufacturer, ИНН None)
 - `ip-tsyganov-vadim-borisovich` (manufacturer, ИНН 504405055721)
-- `kb-germes` (manufacturer, ИНН None)
 - `kolskaya-verf` (manufacturer, ИНН 5190102381)
-- `ooo-4gnss` (manufacturer, ИНН 7743128980)
+- `ooo-4gnss` (manufacturer, ИНН 7743128980) - sibling has presence, not attributed: ooo-orient-sistems (group-structure: https://orsyst.ru/, @orient4gnss)
 - `ooo-akr-begak` (manufacturer, ИНН 2632116476)
 - `ooo-arkhangel-grupp` (manufacturer, ИНН 9702081286)
 - `ooo-arkhangel-melitopol-2` (manufacturer, ИНН 9001027869)
@@ -85,7 +76,6 @@ Entities with a ЦБСТ tie are listed first.
 - `ooo-gaskar-tekhnologii` (manufacturer, ИНН 9731070264)
 - `ooo-hab-svo` (manufacturer, ИНН 9722102248)
 - `ooo-ik-aviaok` (manufacturer, ИНН 6154569246)
-- `ooo-kb-sinergiya` (manufacturer, ИНН None)
 - `ooo-kravt-udmurtiya` (manufacturer, ИНН 1800023369)
 - `ooo-kronshtadt-bespilotnye-sistemy` (manufacturer, ИНН 7801320277)
 - `ooo-npk-atlant-aero` (manufacturer, ИНН 6154166381)
@@ -99,7 +89,6 @@ Entities with a ЦБСТ tie are listed first.
 - `ooo-promsintez` (manufacturer, ИНН 3435084957)
 - `ooo-selskohozyaystvennye-bespilotnye-sistemy-mira` (manufacturer, ИНН 7804712459)
 - `ooo-sibirskaya-navigatsionnaya-kompaniya` (manufacturer, ИНН 4205376019)
-- `ooo-sibnk` (manufacturer, ИНН 7814475694)
 - `ooo-skay-avia-grupp` (manufacturer, ИНН 7802865058)
 - `ooo-spdbbk` (manufacturer, ИНН 7838044584)
 - `ooo-spetsialnye-poleznye-tekhnologii` (manufacturer, ИНН 9715478264)
@@ -108,7 +97,6 @@ Entities with a ЦБСТ tie are listed first.
 - `ooo-ushkuynik-sp` (manufacturer, ИНН 5300015906)
 - `ooo-vostochnye-vorota-zabaykalsk-manchzhuriya` (manufacturer, ИНН 7703420474)
 - `ooo-zetaks` (manufacturer, ИНН 5300006066)
-- `yarl` (manufacturer, ИНН 9721200789)
 - `ao-borey-absorbed-no-longer-exists` (money-layer, ИНН 9701280698)
 - `ao-fabrika-im-sovetskoy-armii` (money-layer, ИНН 7709278792)
 - `ao-glavtekhkonstruktsiya` (money-layer, ИНН 4611014597)
@@ -156,7 +144,7 @@ Entities with a ЦБСТ tie are listed first.
 - `fond-sozidanie` (plumbing, ИНН 5040181970)
 - `ministerstvo-promyshlennosti-i-torgovli-novgorodskoy-oblasti` (plumbing, ИНН 5321178877)
 - `np-diskretno-innovatsionny-klaster-maloy-aviatsii` (plumbing, ИНН 2632811832)
-- `ooo-aeromaks-avia-tsentr-logistika` (plumbing, ИНН 9704149557)
+- `ooo-aeromaks-avia-tsentr-logistika` (plumbing, ИНН 9704149557) - sibling has presence, not attributed: ooo-aeromaks (sister-entity: https://www.aeromax-group.ru/produkciya/, @aeromax_group)
 - `ooo-aitk` (plumbing, ИНН 3663143016)
 - `ooo-dedal` (plumbing, ИНН 9721137992)
 - `ooo-investproektgrupp` (plumbing, ИНН 5040127965)
@@ -190,7 +178,7 @@ Entities with a ЦБСТ tie are listed first.
 - `ooo-gruppa-promavto` (adjacent, ИНН 5263093100)
 - `ooo-krams` (adjacent, ИНН 9701247080)
 - `ooo-ml-konstrakshns` (adjacent, ИНН 5026016117)
-- `ooo-nii-dpo` (adjacent, ИНН 7733462457)
+- `ooo-nii-dpo` (adjacent, ИНН 7733462457) - sibling has presence, not attributed: ano-nii-dpo (sister-entity: https://bpla.ru-dpo.ru/)
 - `ooo-npk-zevs` (adjacent, ИНН 6161154122)
 - `ooo-ntc-arkodim` (adjacent, ИНН 1659182805)
 - `ooo-otkrytoe-nebo-kaluga` (adjacent, ИНН 4029059580)
@@ -205,23 +193,33 @@ Entities with a ЦБСТ tie are listed first.
 - `ooo-momento-rubinshteyn` (unverified, ИНН 9717192768)
 - `ooo-tekhnomost` (unverified, ИНН 9725186180)
 
-## Telegram on file, never scraped (hand to user: add to config/channels.txt, run tg_scan.py) (16)
+## Telegram on file, never scraped (hand to user: add to config/channels.txt, run tg_scan.py) (26)
 
 Entities with a ЦБСТ tie are listed first.
 
+- **ЦБСТ-tied** `alyaska` (manufacturer, ИНН 6168719068) `alaskadron`
 - **ЦБСТ-tied** `ano-npts-ushkuynik` (manufacturer, ИНН 5300010714) `nvgushkuynik`
 - **ЦБСТ-tied** `ano-npts-ushkuynik` (manufacturer, ИНН 5300010714) `knz_vandal_official`
+- **ЦБСТ-tied** `ao-kotlin-novator` (manufacturer, ИНН 7811075899) `kotlin_novator`
 - **ЦБСТ-tied** `ao-npp-real` (manufacturer, ИНН 9722048270) `ao_npp`
+- **ЦБСТ-tied** `ao-stratim` (manufacturer, ИНН 7720901379) `stratim_drones`
+- **ЦБСТ-tied** `npo-kaysant` (manufacturer, ИНН 7733393203) `germesfpv`
+- **ЦБСТ-tied** `npo-kaysant` (manufacturer, ИНН 7733393203) `argusm_ru`
+- **ЦБСТ-tied** `ooo-gaskar` (manufacturer, ИНН 9710112989) `gaskargroup`
 - **ЦБСТ-tied** `ooo-intek-promyshlennye-sistemy` (manufacturer, ИНН 7017396681) `uavintec`
+- **ЦБСТ-tied** `ooo-intel-dron` (manufacturer, ИНН 7448259249) `kbinteldron`
+- **ЦБСТ-tied** `ooo-trimiks` (manufacturer, ИНН 7802942873) `ru3mx`
 - **ЦБСТ-tied** `proekt-kb-arkhangel` (manufacturer, ИНН None) `coordinator_archangel_project`
 - **ЦБСТ-tied** `proekt-kb-arkhangel` (manufacturer, ИНН None) `vera_consultant_archangel`
 - **ЦБСТ-tied** `proekt-kb-arkhangel` (manufacturer, ИНН None) `natalia_archangel_project`
 - **ЦБСТ-tied** `proekt-kb-arkhangel` (manufacturer, ИНН None) `vasya_consultant_arhangel`
+- **ЦБСТ-tied** `gk-rostekh` (plumbing, ИНН 7704274402) `rostecru`
 - **ЦБСТ-tied** `ooo-arkhangel-tsentr` (plumbing, ИНН 5032379630) `archangel_center`
 - `ooo-geron` (manufacturer, ИНН 7802893898) `geron_news`
 - `ooo-pokrov` (manufacturer, ИНН 5038189259) `pokrov_sales`
 - `ooo-pokrov` (manufacturer, ИНН 5038189259) `pokrovzov`
 - `ooo-rokot-tekh` (manufacturer, ИНН 7606140961) `rokot_teh_manager`
+- `yarl` (manufacturer, ИНН 9721200789) `bpryarl`
 - `ano-tsvp-zov-aa` (adjacent, ИНН 1651092483) `zov_aa_official`
 - `ano-tsvp-zov-aa` (adjacent, ИНН 1651092483) `zov_aa_spb`
 - `ip-gabitov-r-a` (adjacent, ИНН 024200325133) `beastfpvru`
@@ -246,10 +244,11 @@ Entities with a ЦБСТ tie are listed first.
 Entities with a ЦБСТ tie are listed first.
 
 
-## Bot accounts on file (not scrapeable) (4)
+## Bot accounts on file (not scrapeable) (5)
 
 Entities with a ЦБСТ tie are listed first.
 
+- **ЦБСТ-tied** `npo-kaysant` (manufacturer, ИНН 7733393203) `spetsvyaz_bot`
 - **ЦБСТ-tied** `proekt-kb-arkhangel` (manufacturer, ИНН None) `arhangel_channel_bot`
 - **ЦБСТ-tied** `proekt-kb-arkhangel` (manufacturer, ИНН None) `arhangel_study_bot`
 - `csn-bars-sarmat` (adjacent, ИНН None) `sarmat_approbation_bot`

@@ -6882,7 +6882,13 @@
     "battlefield_evidence": [],
     "domain_history": [],
     "web": {
-      "sites": [],
+      "sites": [
+        {
+          "url": "https://www.urfpv.com/ru",
+          "source_id": "s8725",
+          "note": "Identified as this entity's site by the user 2026-10-01. The captured page (title «URfpv — Производство FPV дронов и БПЛА») prints no legal name, ИНН or ОГРН, so the link rests on that identification. Its own links https://t.me/urfpv (resolves to a non-existent account, «Contact @urfpv») and https://vk.com/urfpv (HTTP 404) are dead as of 2026-10-01; neither is recorded as a channel."
+        }
+      ],
       "telegram": [],
       "vk": [],
       "youtube": [],
@@ -9213,7 +9219,13 @@
     "domain_history": [],
     "web": {
       "sites": [],
-      "telegram": [],
+      "telegram": [
+        {
+          "handle": "@stratim_drones",
+          "source_id": "s8715",
+          "note": "Linked from ЦБСТ/mil_hub post 114589 (09.10.2025), an interview with the head of «Стратим», «компании-резидента ЦБСТ», and from Лисицын post 15629 (11.04.2025) about «компании Stratim» (s8714). The channel itself has not been scraped or read: ownership rests on the post links and the matching handle."
+        }
+      ],
       "vk": [],
       "youtube": [],
       "marketplace_listings": [],
@@ -11470,26 +11482,18 @@
     "battlefield_evidence": [],
     "domain_history": [],
     "web": {
-      "marketplace_listings": [
+      "sites": [],
+      "telegram": [
         {
-          "note": "Manufacturer's own Ozon storefront -- ОГРН exact match (1237700273744) confirmed via user-supplied browser HAR capture 2026-08-25 (s1385), independently repeated on the seller page's sellerLegalInformation widget AND the motor product page's own about-seller tooltip. Seller_id 4848816, 5/5 rating, 29 reviews, 94 orders, Premium-shop badge, registered on Ozon ~3 months as of capture.",
-          "url": "https://www.ozon.ru/seller/gaskargroup/"
-        },
-        {
-          "note": "PY3115 1300KV brushless FPV motor -- confirmed as this entity's own product via JSON-LD brand field (\"ГАСКАР\") on the product page itself, not just a listing on the storefront.",
-          "url": "https://www.ozon.ru/product/motor-py3115-1300kv-beskollektornyy-fpv-5183531962/"
-        },
-        {
-          "note": "Official partner/seller profile on Налетай.рф (налетай.рф), the state-backed civilian UAV marketplace created by АО «ГТЛК» (Государственная транспортная лизинговая компания), operated by ООО «ЦТП» (ИНН 9714054618). Legal-info block on the page gives Название ООО «ГАСКАР», ИНН 9710112989, КПП 772001001, address г. Москва, ул. Пехорская, д.1Д стр.1 -- exact ИНН match to this record. 57 products listed as of 2026-08-26 (flight controllers, motors, propellers, cameras/thermal, batteries, receivers, antennas, modems, frames, cables/mounts) -- same FPV/UAV-components line already documented via this entity's Ozon storefront. Captured via a user-supplied browser HAR (buyer account, s2610); catalog listing API response archived separately (s2609, totalCount=57). Notable: this Canada-sanctioned ЦБСТ-resident entity sells openly through a marketplace built and backed by a Russian state-owned company (ГТЛК), distinct from and in addition to its Ozon presence.",
-          "source_id": "s2610",
-          "url": "https://xn--80aaorhk2b.xn--p1ai/sellers/gackar"
+          "handle": "@gaskargroup",
+          "source_id": "s8724",
+          "note": "Supplied by the user 2026-10-01; public page captured the same day: title «ГАСКАР Online», «ГАСКАР – разработчик и производитель широкий линейки БПЛА и комплектующих к ним». It is the group channel: the registry holds three Гаскар entities (ooo-gaskar, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii) and the page names no legal entity, so it is recorded here as the group channel, not as proof which entity runs it. The channel itself has not been scraped."
         }
       ],
-      "other": [],
-      "sites": [],
-      "telegram": [],
       "vk": [],
-      "youtube": []
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
     },
     "images": [],
     "open_questions": [
@@ -11500,6 +11504,10 @@
       {
         "source_id": null,
         "text": "products[] carried a single bare entry \"СИБНК\" -- suspected to be a mis-recorded reference to the 100%-owning founder, ООО «Сибирская навигационная компания» (ИНН 4205376019, ОГРН 1184205024849), not an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats \"ООО «СИБНК»\" as its own distinct entity name, adding to the confusion. Web search for \"СИБНК\" as a Wildberries product (2026-08-25) found nothing. RESOLVED 2026-08-25 (partial): wb_overlap=confirmed's actual basis is corroborated on Ozon too -- the entity trades FPV components (motors, propellers) under the brand «ГАСКАР», not «СИБНК». RESOLVED 2026-09-28: confirmed \"СИБНК\" is not a product -- it is the entity's own founder record (founders[0].inn 4205376019 matches exactly). Cleared from products[] via corrections; same mis-scaffolded-ownership-as-product pattern already found and cleared for ooo-atlant-aero's \"Технодинамика\"."
+      },
+      {
+        "source_id": "s8721",
+        "text": "rk.2035.university BAS-company directory (pull of 2026-10-01, s8721) carries this ИНН with site https://gaskar.group/ (self-declared). That same site is already recorded for the sister entity ooo-gaskar-integratsiya (ИНН 7733894200; capture s7569, home page titled «Группа компаний Гаскар. Беспилотные и роботизированные системы, инфраструктура управления и связи», no ИНН printed). It is a group site; the registry holds three Гаскар entities, so it is not attributed to this one pending a printed ИНН or requisites page (/contacts returned 403 on 2026-10-01)."
       }
     ],
     "sources": [],
@@ -14098,8 +14106,20 @@
           "url": "http://kotlin-novator.ru"
         }
       ],
-      "telegram": [],
-      "vk": [],
+      "telegram": [
+        {
+          "handle": "@kotlin_novator",
+          "source_id": "s8727",
+          "note": "Channel «Котлин-Новатор» (453 subscribers on 2026-10-01); bio «Разработка и производство радиоэлектронного оборудования» with link https://kotlin-novator.ru/, the company site on file. Supplied by the user 2026-10-01. The channel has not been scraped."
+        }
+      ],
+      "vk": [
+        {
+          "url": "https://vk.com/kotlin_novator",
+          "source_id": "s7550",
+          "note": "Linked from the home page of kotlin-novator.ru (captured 2026-10-01); not opened."
+        }
+      ],
       "youtube": []
     },
     "images": [
@@ -17413,7 +17433,12 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "source_id": "s8722",
+        "text": "rk.2035.university BAS-company directory (pull of 2026-10-01, s8721) carries this ИНН with site https://www.arkodimpro.ru/ (self-declared). The captured home page (s8722) names «ООО «АРКОДИМ-Про»», a company that says it «входит в группу компаний «АРКОДИМ»», and prints no ИНН or ОГРН. So the site belongs at least to a group member and may not be this legal entity's own; not recorded as this entity's site. Needs a requisites page, the site's ИНН or a matching named person."
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": false,
@@ -20109,9 +20134,27 @@
     "battlefield_evidence": [],
     "domain_history": [],
     "web": {
-      "sites": [],
-      "telegram": [],
-      "vk": [],
+      "sites": [
+        {
+          "url": "https://bpryarl.ru/",
+          "source_id": "s8731",
+          "note": "Own site; footer prints «ОГРН 1237700170311 ИНН 9721200789 / КПП 772501001», matching this record. Captured 2026-10-01."
+        }
+      ],
+      "telegram": [
+        {
+          "handle": "@bpryarl",
+          "source_id": "s8726",
+          "note": "«ЯРЛ | Производитель бронезащиты» (3 571 subscribers on 2026-10-01); bio gives bpryarl.ru, which prints this entity's ИНН; bpryarl.ru links t.me/bpryarl back (s8731). Supplied by the user 2026-10-01. The channel has not been scraped."
+        }
+      ],
+      "vk": [
+        {
+          "url": "https://vk.com/bpryarl1",
+          "source_id": "s8731",
+          "note": "Linked from bpryarl.ru; not opened."
+        }
+      ],
       "youtube": [],
       "marketplace_listings": [],
       "other": []
@@ -20464,6 +20507,26 @@
         {
           "note": "Manufacturer's own dealer-network page, 2026-08-25 (originally archived 23.08.2026 as s0558, not re-archived here -- identical content confirmed by check_registry.py's duplicate-file warning): lists 3 official dealers -- Мэдро/madro.ru (confirmed WB presence, see marketplace_listings), Макс 911/dji911.com (Moscow), Покров/pokrovsystem.ru (Moscow). The latter two not yet checked for a WB presence of their own -- open lead.",
           "url": "https://3mx.ru/dilery/"
+        },
+        {
+          "url": "https://dzen.ru/3mx",
+          "source_id": "s8728",
+          "note": "Listed in the @ru3mx bio; not opened."
+        },
+        {
+          "url": "https://max.ru/ru3mx",
+          "source_id": "s8728",
+          "note": "Listed in the @ru3mx bio; not opened."
+        },
+        {
+          "url": "https://teletype.in/@team3mx",
+          "source_id": "s8728",
+          "note": "Listed in the @ru3mx bio; not opened."
+        },
+        {
+          "url": "https://rutube.ru/channel/30344656/",
+          "source_id": "s8728",
+          "note": "Listed in the @ru3mx bio; not opened."
         }
       ],
       "sites": [
@@ -20472,8 +20535,25 @@
           "url": "https://3mx.ru/"
         }
       ],
-      "telegram": [],
-      "vk": [],
+      "telegram": [
+        {
+          "handle": "@ru3mx",
+          "source_id": "s8728",
+          "note": "«Официальный канал команды 3mx. Главное о борьбе с БПЛА.» (24 203 subscribers on 2026-10-01). Bio lists 3mx.ru, vk.com/3mx.products, dzen.ru/3mx, max.ru/ru3mx, teletype.in/@team3mx and rutube.ru/channel/30344656; 3mx.ru links back to t.me/ru3mx. «3mx» is the brand of the «Булат» detectors on this record. Supplied by the user 2026-10-01. The channel has not been scraped."
+        },
+        {
+          "url": "https://t.me/+BlOqwGbeNGk3OTVi",
+          "source_id": "s8729",
+          "note": "Users' chat «3mx.ru🛡- ЧАТ» (2 873 members on 2026-10-01), named in the @ru3mx bio. Private invite link: a chat, not a channel, so the scraper does not take it."
+        }
+      ],
+      "vk": [
+        {
+          "url": "https://vk.com/3mx.products",
+          "source_id": "s8728",
+          "note": "Listed in the @ru3mx bio and linked from 3mx.ru; not opened."
+        }
+      ],
       "youtube": []
     },
     "images": [
@@ -21126,7 +21206,13 @@
     "domain_history": [],
     "web": {
       "sites": [],
-      "telegram": [],
+      "telegram": [
+        {
+          "handle": "@alaskadron",
+          "source_id": "s8716",
+          "note": "Архангел post 10095 (16.05.2026): «компании «Аляска» https://t.me/alaskadron которые производят знаменитые дроны «Алеша»». The channel itself has not been scraped or read."
+        }
+      ],
       "vk": [],
       "youtube": [],
       "marketplace_listings": [],
@@ -32687,8 +32773,30 @@
     "battlefield_evidence": [],
     "domain_history": [],
     "web": {
-      "sites": [],
-      "telegram": [],
+      "sites": [
+        {
+          "url": "https://kaysant.ru/",
+          "source_id": "s8720",
+          "note": "Own site; footer prints «Научно-производственное объединение «КАЙСАНТ» ОГРН 1227700641805, ИНН 7733393203», matching this record. Captured 2026-10-01. Presents the Аргус counter-drone systems and the «Гермес» link."
+        }
+      ],
+      "telegram": [
+        {
+          "handle": "@germesfpv",
+          "source_id": "s8720",
+          "note": "Company channel: kaysant.ru footer (s8720) reads «Подпишитесь на наш канал в Телеграм: t.me/germesfpv». Earlier link from mil_hub post 97548 (s8713). The channel itself has not been scraped or read."
+        },
+        {
+          "handle": "@Spetsvyaz_bot",
+          "source_id": "s8720",
+          "note": "Order bot: kaysant.ru footer, «Telegram - для заказов»."
+        },
+        {
+          "handle": "@argusm_ru",
+          "source_id": "s8720",
+          "note": "Contact account behind the «Написать в Telegram» buttons on the Аргус product pages of kaysant.ru."
+        }
+      ],
       "vk": [],
       "youtube": [],
       "marketplace_listings": [],
@@ -50664,12 +50772,41 @@
     "battlefield_evidence": [],
     "domain_history": [],
     "web": {
-      "sites": [],
-      "telegram": [],
-      "vk": [],
+      "sites": [
+        {
+          "url": "https://rostec.ru/",
+          "source_id": "s8719",
+          "note": "Own site; /about prints «ОГРН 1077799030847 … ИНН/КПП: 7704274402/770401001» (s8718), matching this record. Captured 2026-10-01."
+        }
+      ],
+      "telegram": [
+        {
+          "handle": "@rostecru",
+          "source_id": "s8656",
+          "note": "Public channel page captured 2026-10-01: title «Ростех», «Новости военного и гражданского производства Госкорпорации Ростех»; carries the post on the ЦБСТ/Ростех/Корпорация МСП/АСИ agreement. rostec.ru does not itself print a Telegram link (it lists VK, Rutube and Max), so the tie is the channel's own description."
+        }
+      ],
+      "vk": [
+        {
+          "url": "https://vk.com/rostec_ru",
+          "source_id": "s8719",
+          "note": "Linked from the rostec.ru home page."
+        }
+      ],
       "youtube": [],
       "marketplace_listings": [],
-      "other": []
+      "other": [
+        {
+          "url": "https://rutube.ru/channel/23614912/",
+          "source_id": "s8719",
+          "note": "Rutube channel linked from rostec.ru."
+        },
+        {
+          "url": "https://max.ru/rostecru",
+          "source_id": "s8719",
+          "note": "Max channel linked from rostec.ru."
+        }
+      ]
     },
     "images": [],
     "open_questions": [
@@ -70363,7 +70500,13 @@
     "domain_history": [],
     "web": {
       "sites": [],
-      "telegram": [],
+      "telegram": [
+        {
+          "handle": "@KBinteldron",
+          "source_id": "s8717",
+          "note": "my_el_lab post 4115 (26.07.2026): «Наша совместная разработка с компанией ИНТЕЛ ДРОН», linking this channel. The channel itself has not been scraped or read: ownership rests on the post link and the handle name."
+        }
+      ],
       "vk": [],
       "youtube": [],
       "marketplace_listings": [],
@@ -79797,7 +79940,12 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "source_id": "s8721",
+        "text": "rk.2035.university BAS-company directory (pull of 2026-10-01, s8721) carries this ИНН with contact email psm@aeromax-group.ru and no site field. aeromax-group.ru is the domain already recorded for the sister entity ooo-aeromaks; the email shows a shared domain, not a site of this entity."
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": false,

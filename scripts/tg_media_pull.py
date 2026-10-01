@@ -225,6 +225,92 @@ def cmd_download(args) -> None:
     print("\nnext: python3 scripts/inventory_sources.py && python3 scripts/scan_sources.py --out data/sources/MANIFEST.md && python3 scripts/extract_registry.py")
 
 
+def _safe_name(name: str) -> str:
+    return re.sub(r"[^\w.\-]+", "_", name, flags=re.U)
+
+
+def cmd_download_all(args) -> None:
+    """Bulk-download the media/files of every scraped post in one channel or chat.
+
+    Works from the catalog tg_scan.py already stored (`media_type`/`media_json` in data/roymarket.db), so
+    the plan - how many files, how many MB, which kinds - is computed locally with --dry-run (no network).
+    The real run is a live authenticated Telegram job: hand the command to the user. Resumable: a file
+    already in data/sources/ is skipped. Videos are off by default (--kinds document,photo,video,audio).
+    """
+    kinds = {k.strip() for k in args.kinds.split(",") if k.strip()}
+    cap = int(args.max_mb * 1024 * 1024)
+    con = sqlite3.connect(f"file:{REPO / 'data' / 'roymarket.db'}?mode=ro", uri=True)
+    chan_id = args.channel_id
+    entity = client = None
+    if not args.dry_run:
+        sys.path.insert(0, str(REPO))
+        from tg import client as tg_client
+        from tg import scraper
+        client = tg_client.make_client()
+        client.__enter__()
+        entity = scraper.resolve_channel(client, args.channel)
+        chan_id = entity.id
+    if chan_id is None:
+        sys.exit("--channel-id is required with --dry-run (the DB id printed by tg_scan.py)")
+    row = con.execute("select username,title from tg_channels where id=?", (chan_id,)).fetchone()
+    if not row:
+        sys.exit(f"channel id {chan_id} is not in tg_channels - run tg_scan.py for it first")
+    label = re.sub(r"[^A-Za-z0-9_]+", "", args.label or row[0] or "chat") or "chat"
+    plan, skipped_big, no_meta = [], [], 0
+    for mid, mtype, mjson, date in con.execute(
+            "select msg_id,media_type,media_json,date from tg_posts where channel_id=? and media_type is not null order by msg_id",
+            (chan_id,)):
+        if mtype not in kinds:
+            continue
+        info = json.loads(mjson) if mjson else {}
+        size = info.get("size")
+        if size is None:
+            no_meta += 1
+        if size and size > cap:
+            skipped_big.append((mid, mtype, size, info.get("filename")))
+            continue
+        plan.append((mid, mtype, size or 0, info.get("filename"), date))
+    total = sum(x[2] for x in plan)
+    by = {}
+    for _, t, sz, _, _ in plan:
+        c, b = by.get(t, (0, 0)); by[t] = (c + 1, b + sz)
+    print(f"{row[1] or row[0]} (id {chan_id}): {len(plan)} files, {total / 1048576:.0f} MB to fetch "
+          f"(kinds {sorted(kinds)}, cap {args.max_mb:g} MB each)")
+    for t, (c, b) in sorted(by.items()):
+        print(f"  {t}: {c} files, {b / 1048576:.0f} MB")
+    print(f"  over the cap, skipped: {len(skipped_big)}; size unknown: {no_meta}")
+    for mid, t, sz, fn in skipped_big[:20]:
+        print(f"    skipped big: post {mid} {t} {sz / 1048576:.0f} MB {fn or ''}")
+    if args.dry_run:
+        print("dry run - nothing downloaded")
+        return
+    SOURCES_DIR.mkdir(parents=True, exist_ok=True)
+    done = have = 0
+    ids = [x[0] for x in plan]
+    try:
+        for i in range(0, len(ids), 100):
+            for msg in client.get_messages(entity, ids=ids[i:i + 100]):
+                if msg is None or not msg.media:
+                    continue
+                name = (getattr(msg.file, "name", None) or f"media{msg.file.ext or ''}") if msg.file else "media"
+                dest = SOURCES_DIR / f"TGMEDIA_{msg.date:%Y%m%d}_{label}-post{msg.id}-{_safe_name(name)}"
+                if dest.exists():
+                    have += 1
+                    continue
+                try:
+                    client.download_media(msg, file=str(dest))
+                except Exception as exc:  # noqa: BLE001 - keep going; the rerun resumes
+                    print(f"failed post {msg.id}: {exc}")
+                    continue
+                done += 1
+                print(f"saved {done}/{len(ids)}: {dest.name} {dest.stat().st_size}", flush=True)
+                time.sleep(1)
+    finally:
+        client.__exit__(None, None, None)
+    print(f"\n{done} downloaded, {have} already present. Rerun the same command to resume.")
+    print("next: python3 scripts/inventory_sources.py && python3 scripts/scan_sources.py --out data/sources/MANIFEST.md && python3 scripts/extract_registry.py")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -244,6 +330,14 @@ def main() -> None:
     ap_f.add_argument("--out", type=Path, default=None, help="write JSON scaffold here instead of stdout")
     ap_f.set_defaults(func=cmd_fetch)
 
+    ap_a = sub.add_parser("download-all", help="bulk-download media/files of every scraped post in a channel or chat (live job)")
+    ap_a.add_argument("--channel", default=None, help="username, numeric id or t.me link (required unless --dry-run)")
+    ap_a.add_argument("--channel-id", type=int, default=None, help="DB channel id printed by tg_scan.py (for --dry-run)")
+    ap_a.add_argument("--label", default=None, help="name used in saved filenames (default: channel username)")
+    ap_a.add_argument("--kinds", default="document,photo", help="comma list of photo,document,video,audio (default document,photo)")
+    ap_a.add_argument("--max-mb", type=float, default=100, help="skip single files above this size (default 100)")
+    ap_a.add_argument("--dry-run", action="store_true", help="local only: count files and MB from the scraped catalog")
+    ap_a.set_defaults(func=cmd_download_all)
     ap_d = sub.add_parser("download", help="Telethon download of any media (live job: user runs it)")
     ap_d.add_argument("--channel", required=True, help="username, numeric id, or t.me link")
     ap_d.add_argument("--msg-ids", required=True, help="comma-separated msg_id list")

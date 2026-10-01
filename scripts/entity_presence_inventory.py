@@ -13,6 +13,9 @@ Gaps flagged (per entity):
   TG-BAD-URL       a Telegram entry with no usable handle (private invite, numeric id, or missing url)
   TG-BOT           a bot account (not scrapeable as a channel; listed so it is not mistaken for a gap)
   SITE-NOT-ARCHIVED site on file, no WEB_/SITE_/WEBCAPTURE_/CATALOG_/TGWEB_ capture keyed by the entity's ИНН in data/sources/
+  (sibling note) a NO-PRESENCE entity whose `related_entities` names a same-brand or group sibling that has a site or Telegram is
+                   annotated with that sibling. Added 2026-10-01 after ООО «Ушкуйник» was searched as a gap while the brand's site and
+                   channel sit on the АНО. The note is a pointer, not an attribution: a sibling's site is never recorded as this entity's.
 And one global list: channels in the DB that no entity links to.
 
 Usage:
@@ -34,6 +37,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parent.parent
 ARCHIVE_PREFIXES = ("WEB_", "SITE_", "WEBCAPTURE_", "CATALOG_", "TGWEB_")
 TIE = {"t-doc", "t-open", "press"}
+SIBLING_TYPES = {"same-name-different-entity", "group-structure", "sister-entity", "parent", "subsidiary", "successor", "predecessor"}
 
 
 def handle(url) -> str | None:
@@ -114,15 +118,20 @@ def inventory():
     wl, dbc, arch = watchlist(), db_channels(), archived_inns()
     rows, linked = [], set()
     for e in entity_list():
+        if e.get("_merged_into"):
+            continue   # tombstone of a merged duplicate (e.g. bulat-3mx -> ooo-trimiks): the canonical record carries the presence
         w = e.get("web") or {}
         sites = [u for k in ("sites", "official_sites") for u in urls(w, k) if u]
         tgs = urls(w, "telegram")
+        chat_urls = {(x.get("url") or x.get("handle")) for x in w.get("telegram") or []
+                     if isinstance(x, dict) and "chat" in (x.get("note") or "").lower()[:40]}
         vk, yt = [u for u in urls(w, "vk") if u], [u for u in urls(w, "youtube") if u]
         flags, handles = [], []
         for u in tgs:
             h = handle(u)
             if not h:
-                flags.append("TG-BAD-URL")
+                if u not in chat_urls:        # a private users' chat is recorded on purpose, not a defect
+                    flags.append("TG-BAD-URL")
                 continue
             if h.endswith("_bot") or h.endswith("bot"):
                 flags.append(f"TG-BOT:{h}")
@@ -144,6 +153,17 @@ def inventory():
                      "tie": (e.get("cbst_tie") or {}).get("confidence") in TIE,
                      "sites": sites, "tg": handles, "vk": vk, "yt": yt, "flags": flags})
     linked |= people_handles()
+    by_slug = {r["slug"]: r for r in rows}
+    ents = {e["slug"]: e for e in entity_list()}
+    for r in rows:
+        if "NO-PRESENCE" not in r["flags"]:
+            continue
+        sib = []
+        for rel in ents[r["slug"]].get("related_entities") or []:
+            o = by_slug.get(rel.get("slug"))
+            if o and (o["sites"] or o["tg"]) and rel.get("relationship_type") in SIBLING_TYPES:
+                sib.append(f"{o['slug']} ({rel['relationship_type']}: {', '.join(o['sites'][:1] + ['@' + h for h in o['tg'][:1]])})")
+        r["siblings"] = sib
     unlinked = sorted(((h, dbc[h][1], dbc[h][2]) for h in dbc if h and h not in linked), key=lambda x: -x[2])
     return rows, unlinked
 
@@ -173,7 +193,8 @@ def render(rows, unlinked):
         L += [f"## {titles[k]} ({len(items)})", "", "Entities with a ЦБСТ tie are listed first.", ""]
         for r, f in items:
             extra = f" `{f.split(':', 1)[1]}`" if ":" in f else ""
-            L.append(f"- {'**ЦБСТ-tied** ' if r['tie'] else ''}`{r['slug']}` ({r['tier']}, ИНН {r['inn']}){extra}")
+            sib = f" - sibling has presence, not attributed: {'; '.join(r['siblings'])}" if k == "NO-PRESENCE" and r.get("siblings") else ""
+            L.append(f"- {'**ЦБСТ-tied** ' if r['tie'] else ''}`{r['slug']}` ({r['tier']}, ИНН {r['inn']}){extra}{sib}")
         L.append("")
     L += [f"## Channels in the DB that no entity or person links to ({len(unlinked)})", "",
           "Channels linked from an entity or from a person record are excluded. Each remaining one is a registry gap or a blog channel; read before linking.", ""]
