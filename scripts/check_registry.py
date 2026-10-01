@@ -582,7 +582,9 @@ def main() -> int:
     event_slugs = {r.get("slug") for r in programs if r.get("kind") == "event"}
     sells_pairs = {(e["slug"], x.get("slug")) for e in entities for x in e.get("sells_for") or []}
     seen_products = set()
-    DELIVERY_KEYS = ("date", "version", "donor", "carrier", "recipient", "source_channel", "post_id",
+    # `version` must be present but may be null (a post that says only «Булат» names no version);
+    # the donor must be a live registry entity, so a volunteer or an individual is never recorded by accident
+    DELIVERY_KEYS = ("date", "donor", "carrier", "recipient", "source_channel", "post_id",
                      "asserted_by", "credibility", "source_id")
     date_re = re.compile(r"\d{4}-\d{2}-\d{2}")
     for i, pr in enumerate(products):
@@ -649,8 +651,13 @@ def main() -> int:
             if missing:
                 errors.append(f"{w} is missing {missing}")
                 continue
-            if not date_re.fullmatch(str(d["date"])) or d["version"] not in versions:
-                errors.append(f"{w}: date must be YYYY-MM-DD and version one of the versions")
+            if not date_re.fullmatch(str(d["date"])) or "version" not in d or (d["version"] is not None and d["version"] not in versions):
+                errors.append(f"{w}: date must be YYYY-MM-DD and version present (null, or one of the versions)")
+            if d["donor"] not in live_slugs:
+                errors.append(f"{w}.donor {d['donor']!r} is not a live entity (volunteers and individuals are not recorded as donors)")
+            for sid2 in d.get("other_source_ids") or []:
+                if sid2 not in source_ids:
+                    errors.append(f"{w}.other_source_ids has unknown source {sid2!r}")
             if d["asserted_by"] not in ASSERTED_BY or d["credibility"] not in CREDIBILITY:
                 errors.append(f"{w}: asserted_by / credibility outside the vocabulary")
             if d["source_id"] not in source_ids:

@@ -28,8 +28,10 @@ def chain_lines(pr: dict, names: dict) -> list:
     deliveries = pr.get("deliveries") or []
     out.append(f"deliveries ({len(deliveries)}):" + ("  none recorded" if not deliveries else ""))
     for d in deliveries:
-        out.append(f"  {d['date']} {d['version']} x{d.get('qty', '?')} {d['donor']} -> {d['carrier']} -> {d['recipient']} "
-                   f"| {d['asserted_by']}/{d['credibility']} | {d['source_channel']} {d['post_id']} [{d['source_id']}]")
+        donors = "+".join([d["donor"]] + list(d.get("co_donors") or []))
+        also = "".join(f",{x}" for x in d.get("other_source_ids") or [])
+        out.append(f"  {d['date']} {d.get('version') or 'version not stated'} x{d.get('qty', '?')} {donors} -> {d['carrier']} -> "
+                   f"{d['recipient']} | {d['asserted_by']}/{d['credibility']} | {d['source_channel']} {d['post_id']} [{d['source_id']}{also}]")
     for q in pr.get("open_questions") or []:
         out.append(f"open: {q}")
     return out

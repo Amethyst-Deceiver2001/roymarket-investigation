@@ -24,10 +24,13 @@ assert "version not recorded" in text and "no registry entity" in text
 dpr = dict(pr, deliveries=[{"date": "2026-02-02", "version": "x1", "qty": 3, "donor": "A", "carrier": "B", "recipient": "C",
                             "asserted_by": "self", "credibility": "single", "source_channel": "ch", "post_id": 7, "source_id": "s2"}])
 assert "2026-02-02 x1 x3 A -> B -> C" in "\n".join(P.chain_lines(dpr, {}))
+nver = dict(dpr, deliveries=[dict(dpr["deliveries"][0], version=None, co_donors=["E"], other_source_ids=["s3"])])
+assert "version not stated x3 A+E" in "\n".join(P.chain_lines(nver, {})) and "[s2,s3]" in "\n".join(P.chain_lines(nver, {}))
 
 # the real record: every listing without a source is one of the two WB brand-store listings
 real = json.loads((ROOT / "data/registry/products.json").read_text(encoding="utf-8"))
 bulat = next(p for p in real if p["slug"] == "bulat")
 assert [l["id"] for l in bulat["listings"] if l["source_id"] is None] == ["bulat-wb-brand-v3", "bulat-wb-brand-v4"]
-assert bulat["deliveries"] == []
+assert len(bulat["deliveries"]) == 16 and all(d["donor"] == "fond-nasha-pravda" for d in bulat["deliveries"])
+assert all(d["credibility"] == "single" and d["version"] is None for d in bulat["deliveries"])
 print("product_chain: all checks passed")
