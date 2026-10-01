@@ -1,0 +1,193 @@
+[
+  {
+    "slug": "bulat",
+    "kind": "product",
+    "name_ru": "«Булат»",
+    "name_latin": "Bulat",
+    "category": "portable UAV detector",
+    "maker": "ooo-trimiks",
+    "brand": "3mx",
+    "versions": [
+      {
+        "slug": "bulat-v3",
+        "name_ru": "«Булат» в.3",
+        "firmware": "v4.13",
+        "description": "Портативный всенаправленный детектор БПЛА (own-site page 3mx.ru/products/detektor-bpla-bulat-v3/).",
+        "source_id": "s8018"
+      },
+      {
+        "slug": "bulat-v4",
+        "name_ru": "«Булат» в.4",
+        "firmware": "v1.71",
+        "description": "Портативный всенаправленный детектор БПЛА, обнаружение до 1.5 км (own-site page 3mx.ru/products/detektor-bpla-bulat-v4/).",
+        "source_id": "s8019"
+      },
+      {
+        "slug": "bulat-online",
+        "name_ru": "«Булат-Онлайн»",
+        "firmware": null,
+        "description": "Automatic airspace monitoring complex (own-site page 3mx.ru/products/kompleks-obnaruzheniya-bpla-bulat-online/).",
+        "source_id": "s8020"
+      }
+    ],
+    "accessories": [
+      {
+        "name_ru": "«Таир»",
+        "pairs_with": "bulat-v4",
+        "description": "Individual Bluetooth-paired UAV alert sensor; one detector feeds several «Таир» units within 50 m (user manual v1.16, 06.12.2024, s. 2).",
+        "source_id": "s8773"
+      },
+      {
+        "name_ru": "Дополнительный модуль к детектору «Булат»",
+        "pairs_with": "bulat-v4",
+        "description": "Stand-alone FPV-only extension unit, 1.5 km detection range; extends the detector or works alone (official user manual).",
+        "source_id": "s8770"
+      }
+    ],
+    "shown_at": [
+      {
+        "event": "dronnitsa-2025",
+        "as_of": "2025-09-08",
+        "source_id": "s8842",
+        "note": "«детекторы «Булат»» named in ЦБСТ's list of what its residents showed (post 1193); ЦБСТ's tie to the maker is on the entity record."
+      }
+    ],
+    "listings": [
+      {
+        "id": "bulat-wb-brand-v3",
+        "version": "bulat-v3",
+        "channel": "Wildberries (brand store 3mx)",
+        "url": "https://www.wildberries.ru/catalog/241450767/detail.aspx",
+        "seller": {
+          "entity": "ooo-trimiks",
+          "storefront": "3mx (brand page wildberries.ru/brands/311445014-3mx)",
+          "identity": "resolved"
+        },
+        "status": "listed",
+        "as_of": "2026-08-25",
+        "source_id": null,
+        "basis": "doc",
+        "asserted_by": "platform",
+        "note": "Recorded from the maker's entity record («confirmed live listing 2026-08-25»); no archived capture of the page is on file."
+      },
+      {
+        "id": "bulat-wb-brand-v4",
+        "version": "bulat-v4",
+        "channel": "Wildberries (brand store 3mx)",
+        "url": "https://www.wildberries.ru/catalog/418185835/detail.aspx",
+        "seller": {
+          "entity": "ooo-trimiks",
+          "storefront": "3mx (brand page wildberries.ru/brands/311445014-3mx)",
+          "identity": "resolved"
+        },
+        "status": "listed",
+        "as_of": "2026-08-25",
+        "source_id": null,
+        "basis": "doc",
+        "asserted_by": "platform",
+        "note": "Same as the в.3 listing: no archived capture of the page is on file."
+      },
+      {
+        "id": "bulat-wb-madro",
+        "version": null,
+        "channel": "Wildberries (dealer storefront «Мэдро»)",
+        "url": "https://www.wildberries.ru/seller/250074680",
+        "seller": {
+          "entity": null,
+          "storefront": "Мэдро (WB seller 250074680)",
+          "identity": "unresolved as a registry entity; the HAR capture shows ИНН 350102453754 (ИП), s1381"
+        },
+        "status": "listed",
+        "as_of": "2026-08-25",
+        "source_id": "s1381",
+        "basis": "doc",
+        "asserted_by": "platform",
+        "note": "Storefront trademark field «madro - официальный дилер 3mx»; named official dealer on 3mx.ru/dilery (s0558). The capture covers the dealer's storefront (34 SKUs); which Булат versions it lists is not recorded here."
+      },
+      {
+        "id": "bulat-ozon-maks911",
+        "version": null,
+        "channel": "Ozon (dealer storefront «МАКС 911»)",
+        "url": "https://www.ozon.ru/seller/maks-911-4233382/",
+        "seller": {
+          "entity": null,
+          "storefront": "МАКС 911 (Ozon seller 4233382)",
+          "identity": "unresolved as a registry entity; ИП Коровкин А.А. ИНН 780223272953 from dji911.com/contacts (s1388), not confirmed against the Ozon widget"
+        },
+        "status": "listed",
+        "as_of": "2026-08-25",
+        "source_id": "s1384",
+        "basis": "doc",
+        "asserted_by": "platform",
+        "note": "Page title «МАКС 911- офиц. дилер 3mx»; lists 3mx/«Булат»-branded detectors. The dealer's own site sells «Булат V.4» (s1388)."
+      },
+      {
+        "id": "bulat-pokrov",
+        "version": null,
+        "channel": "dealer site pokrovsystem.ru",
+        "url": "https://pokrovsystem.ru/",
+        "seller": {
+          "entity": "ooo-pokrov",
+          "storefront": "Покров",
+          "identity": "resolved"
+        },
+        "status": "listed",
+        "as_of": "2026-08-25",
+        "source_id": "s1386",
+        "basis": "doc",
+        "asserted_by": "self",
+        "note": "Named dealer on 3mx.ru/dilery; the sells_for edge ooo-pokrov -> ooo-trimiks carries the same relation."
+      },
+      {
+        "id": "bulat-921921",
+        "version": null,
+        "channel": "own site 921921.ru",
+        "url": "https://921921.ru/",
+        "seller": {
+          "entity": "ip-kuznetsov-ruslan-nikolaevich",
+          "storefront": "921921.ru",
+          "identity": "resolved"
+        },
+        "status": "listed",
+        "as_of": "2026-09-30",
+        "source_id": "s8613",
+        "basis": "doc",
+        "asserted_by": "self",
+        "note": "Sells «Булат» at 88 000 ₽; not a named dealer on 3mx.ru."
+      }
+    ],
+    "deliveries": [],
+    "claims": [
+      {
+        "text_ru": "Всю нашу продукцию можно приобрести только у нас на сайте 3mx.ru или у наших дилеров.",
+        "metric": "distribution",
+        "value": "own site and dealers only",
+        "as_of": "2026-09-02",
+        "source_id": "s8860",
+        "asserted_by": "3mx rep in the company's customer chat"
+      },
+      {
+        "text_ru": "Новые антенны запускаем в производство, будут доступны в конце октября.",
+        "metric": "antenna",
+        "value": "new antennas announced for end of October 2024",
+        "as_of": "2024-10-05",
+        "source_id": "s8815",
+        "asserted_by": "3mx rep, replying to a complaint that в.4 antennas were disposable"
+      },
+      {
+        "text_ru": "Булат не предназначен для использования внутри железобетонных конструкций, вблизи с работающей радиоэлектронной аппаратурой (включая Рации, Телевизоры, СВЧ печи, мониторы)",
+        "metric": "limits",
+        "value": "false positives indoors and near electronics",
+        "as_of": "2025-07-04",
+        "source_id": "s8815",
+        "asserted_by": "3mx support rep"
+      }
+    ],
+    "open_questions": [
+      "No delivery event is recorded. A delivery needs {date, version, qty, donor, carrier, recipient, source channel, post id, asserted_by, credibility}; the registry's battlefield_evidence[] for the maker is empty.",
+      "РОЙ.МАРКЕТ: the maker's rep says the product is sold only on 3mx.ru and through dealers (s8860, 02.09.2026). No РОЙ.МАРКЕТ listing of «Булат» is documented; the 2026-10-01 self-report sweep found 3mx saying it does not sell there.",
+      "The two WB brand-store listings and the product versions' dates have no archived capture of the marketplace page (source_id null above); capture them before relying on them.",
+      "Mapping a dealer's listing to a version needs the dealer's own product page; only the maker's own pages (s8018-s8020) and the user manuals are read."
+    ]
+  }
+]

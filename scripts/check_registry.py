@@ -574,6 +574,91 @@ def main() -> int:
                           f"and person_slug set — should be attributed to "
                           f"exactly one, or neither")
 
+    # --- products (data/registry/products.json, added 2026-10-02) ----------
+    # One record per product with stable ids; versions, accessories, listings and deliveries hang off it.
+    # Listings and deliveries are dated events, not edges. A listing with no source_id is a placeholder.
+    products_path = REG / "products.json"
+    products = json.loads(products_path.read_text(encoding="utf-8")) if products_path.exists() else []
+    event_slugs = {r.get("slug") for r in programs if r.get("kind") == "event"}
+    sells_pairs = {(e["slug"], x.get("slug")) for e in entities for x in e.get("sells_for") or []}
+    seen_products = set()
+    DELIVERY_KEYS = ("date", "version", "donor", "carrier", "recipient", "source_channel", "post_id",
+                     "asserted_by", "credibility", "source_id")
+    date_re = re.compile(r"\d{4}-\d{2}-\d{2}")
+    for i, pr in enumerate(products):
+        where = f"products[{i}]"
+        slug = pr.get("slug")
+        if not slug or not re.fullmatch(r"[a-z0-9][a-z0-9-]*", str(slug)) or slug in seen_products:
+            errors.append(f"{where}.slug must be a unique lowercase slug (got {slug!r})")
+        seen_products.add(slug)
+        where = f"products[{slug}]"
+        if pr.get("kind") != "product":
+            errors.append(f"{where}.kind must be 'product'")
+        if pr.get("maker") not in live_slugs:
+            errors.append(f"{where}.maker {pr.get('maker')!r} is not a live entity")
+        versions = set()
+        for j, v in enumerate(pr.get("versions") or []):
+            if not v.get("slug") or v["slug"] in versions:
+                errors.append(f"{where}.versions[{j}].slug must be unique")
+            versions.add(v.get("slug"))
+            if not v.get("source_id") or v["source_id"] not in source_ids:
+                errors.append(f"{where}.versions[{j}].source_id is required and must be a known source")
+        for j, a_ in enumerate(pr.get("accessories") or []):
+            if a_.get("pairs_with") not in versions:
+                errors.append(f"{where}.accessories[{j}].pairs_with must name one of the versions")
+            if not a_.get("source_id") or a_["source_id"] not in source_ids:
+                errors.append(f"{where}.accessories[{j}].source_id is required and must be a known source")
+        for j, s_ in enumerate(pr.get("shown_at") or []):
+            if s_.get("event") not in event_slugs:
+                errors.append(f"{where}.shown_at[{j}].event {s_.get('event')!r} is not an event in programs.json")
+            if s_.get("source_id") not in source_ids:
+                errors.append(f"{where}.shown_at[{j}].source_id must be a known source")
+        listing_ids = set()
+        for j, l_ in enumerate(pr.get("listings") or []):
+            w = f"{where}.listings[{j}]"
+            if not l_.get("id") or l_["id"] in listing_ids:
+                errors.append(f"{w}.id must be unique")
+            listing_ids.add(l_.get("id"))
+            if l_.get("version") is not None and l_["version"] not in versions:
+                errors.append(f"{w}.version must be null or one of the versions")
+            seller = l_.get("seller") or {}
+            if not seller.get("storefront") or not seller.get("identity"):
+                errors.append(f"{w}.seller needs a storefront name and an identity statement")
+            ent = seller.get("entity")
+            if ent is not None:
+                if ent not in live_slugs:
+                    errors.append(f"{w}.seller.entity {ent!r} is not a live entity")
+                elif ent != pr.get("maker") and (ent, pr.get("maker")) not in sells_pairs:
+                    warnings.append(f"{w}: seller {ent} has no sells_for edge to the maker {pr.get('maker')}")
+            if l_.get("status") not in SALE_STATUSES:
+                errors.append(f"{w}.status must be one of {list(SALE_STATUSES)}")
+            if not date_re.fullmatch(str(l_.get("as_of") or "")):
+                errors.append(f"{w}.as_of must be YYYY-MM-DD")
+            if l_.get("basis") not in SELLS_FOR_BASIS:
+                errors.append(f"{w}.basis must be one of {sorted(SELLS_FOR_BASIS)}")
+            if l_.get("asserted_by") not in ASSERTED_BY:
+                errors.append(f"{w}.asserted_by must be one of {sorted(ASSERTED_BY)}")
+            sid = l_.get("source_id")
+            if sid is None:
+                warnings.append(f"{w} has no source_id: a placeholder awaiting an archived capture, not evidence")
+            elif sid not in source_ids:
+                errors.append(f"{w}.source_id {sid!r} is not a known source")
+        for j, d in enumerate(pr.get("deliveries") or []):
+            w = f"{where}.deliveries[{j}]"
+            missing = [k for k in DELIVERY_KEYS if not d.get(k)]
+            if missing:
+                errors.append(f"{w} is missing {missing}")
+                continue
+            if not date_re.fullmatch(str(d["date"])) or d["version"] not in versions:
+                errors.append(f"{w}: date must be YYYY-MM-DD and version one of the versions")
+            if d["asserted_by"] not in ASSERTED_BY or d["credibility"] not in CREDIBILITY:
+                errors.append(f"{w}: asserted_by / credibility outside the vocabulary")
+            if d["source_id"] not in source_ids:
+                errors.append(f"{w}.source_id must be a known source")
+        for j, c_ in enumerate(pr.get("claims") or []):
+            if not c_.get("text_ru") or c_.get("source_id") not in source_ids or not date_re.fullmatch(str(c_.get("as_of") or "")):
+                errors.append(f"{where}.claims[{j}] needs text_ru, a known source_id and an as_of date")
+
     # --- 6. history arrays -------------------------------------------------
     HISTORY_KEYS = ["director_history", "charter_capital_history",
                     "address_history", "name_history", "founders_history",

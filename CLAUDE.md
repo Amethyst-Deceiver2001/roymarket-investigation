@@ -398,6 +398,15 @@ A maker's goods reach buyers through legal entities that are not the maker: the 
 - A seller's cluster is drawn only if a path reaches the ЦБСТ hub; otherwise it is listed in `detached_ids`. The РОЙ.МАРКЕТ operator is `ooo-mptm` (role `platform_operator`, `cbst_tie` t-doc from ЦБСТ's 2025 Минюст report s0207 and the supplier offer s8817); non-resident vendors point at it with `sells_for`, so they join the graph through it.
 - **PII scope, third category:** a seller (usually a sole trader) gets an entity record, and its owner a person record only on user direction, when it has a **documented link to a registry manufacturer or to РОЙ.МАРКЕТ**. A marketplace listing alone is not enough. Same sourcing rule as every identifying field: the ИП's ИНН comes from its ЕГРИП extract, never from a plausible namesake, and no date of birth or address is filled without a source. Individuals recorded under this category so far: Братеньков, Маврин (person of interest, user, 2026-10-01). ИП Карпушин has an entity record but no person record.
 
+## Products (`data/registry/products.json`, added 2026-10-02 at user direction)
+
+One record per product with a stable slug, so a product sold by several dealers is one record and does not crowd its maker's node. Pilot: «Булат» (`bulat`, maker `ooo-trimiks`). Fields: `versions[]` (each with firmware and the maker's own page as source), `accessories[]` (`pairs_with` a version), `shown_at[]` (events in `programs.json`), `listings[]`, `deliveries[]`, `claims[]`, `open_questions[]`.
+
+- **Listings and deliveries are dated events on the product, not graph edges.** A listing is `{id, version|null, channel, url, seller{entity|null, storefront, identity}, status, as_of, source_id, basis, asserted_by}`; `status` uses the sale vocabulary of the relation envelope. A storefront whose seller is not a registry entity says so in `seller.identity` and keeps `entity: null`; no entity is created for a dealer without a documented link (PII scope, third category). A seller entity other than the maker needs a `sells_for` edge to the maker, or `check_registry.py` warns.
+- **A listing with no `source_id` is a placeholder** and warns. The two WB brand-store listings of «Булат» are in that state: capture the pages.
+- **A delivery** needs `{date, version, donor, carrier, recipient, source_channel, post_id, asserted_by, credibility, source_id}`; `qty` when known. Several channels reporting one handover are one event with several sources. None is recorded yet; whether precise units, locations and named volunteers may be recorded is the user's decision, still open.
+- `python3 scripts/product_chain.py bulat` prints the chain (maker, versions, listings with their basis and source, deliveries, open questions). The graph does not draw product records yet; the existing `produces` leaves are unchanged.
+
 ## Programs, events and groups (schema v8, added 2026-10-01 at user direction)
 
 Residencies, accelerators, the national БАС project, recurring events and same-brand clusters are modelled as records in `data/registry/programs.json` (hand-maintained, like `military_units.json`), not as entity-to-entity edges.
