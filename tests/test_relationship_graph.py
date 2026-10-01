@@ -232,6 +232,37 @@ class RelationshipGraphTests(unittest.TestCase):
         edge["target"] = "alice"
         self.assertTrue(any("invalid entity->person endpoints" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
 
+    def test_sells_for_envelope_rides_in_edge_detail_and_is_validated(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["sells_for"] = [{
+            "slug": "core", "channel": "Ozon", "basis": "doc", "source_id": "s1", "products": ["propellers 8 in"],
+            "status_history": [{"status": "listed", "as_of": "2026-07-06", "source_id": "s1"},
+                               {"status": "announced", "as_of": "2026-06-01", "source_id": "s1"}],
+            "asserted_by": "self", "credibility": "doc", "authorised": "n/a", "open": "Поставщик not established"}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        edge = next(e for e in graph["edges"] if e["type"] == "sells_for")
+        # status is the latest dated state, whatever the order of the list
+        self.assertEqual({"products": ["propellers 8 in"], "status": "listed", "asserted_by": "self",
+                          "credibility": "doc", "authorised": "n/a", "open": "Поставщик not established"},
+                         edge["detail"])
+        self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
+        # an edge with no envelope field carries no detail, and every other edge type never does
+        self.assertTrue(all(e["detail"] is None for e in graph["edges"] if e is not edge))
+        for key, value in (("status", "teleported"), ("asserted_by", "rumour"), ("authorised", "maybe"),
+                           ("products", "propellers")):
+            bad = copy.deepcopy(graph)
+            next(e for e in bad["edges"] if e["type"] == "sells_for")["detail"][key] = value
+            self.assertTrue(any("detail" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)), key)
+        # the finer credibility may not contradict the coarse basis
+        bad = copy.deepcopy(graph)
+        next(e for e in bad["edges"] if e["type"] == "sells_for")["detail"]["credibility"] = "inferred"
+        self.assertTrue(any("contradicts basis" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+        # detail on a non-sells_for edge is rejected
+        bad = copy.deepcopy(graph)
+        other = next(e for e in bad["edges"] if e["type"] != "sells_for")
+        other["detail"] = {"status": "listed"}
+        self.assertTrue(any("detail must be null" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+
     def test_unlinked_sells_for_target_is_dropped_not_crashing(self):
         entities = copy.deepcopy(ENTITIES)
         entities[1]["sells_for"] = [{"slug": "does-not-exist", "channel": "Ozon", "basis": "doc"}]

@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-GRAPH_SCHEMA_VERSION = 8
+GRAPH_SCHEMA_VERSION = 9
 NODE_KINDS = {"entity", "person", "product", "unresolved",
               "government_customer", "military_unit", "program", "event", "group"}
 EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
@@ -40,7 +40,7 @@ NODE_FIELDS = {
 }
 EDGE_FIELDS = {
     "source", "target", "type", "label", "source_id", "as_of", "weight",
-    "temporal_status", "confidence",
+    "temporal_status", "confidence", "detail",
 }
 # Confidence vocabulary carried over verbatim from entities.json's own
 # cbst_tie.confidence field (t-doc/t-open/press are positive-tie values;
@@ -62,6 +62,42 @@ FAMILY_TIE_CONFIDENCE = {"confirmed", "probable", "unconfirmed"}
 #   press    a press or third-party report says so
 #   inferred the investigator's reading, not stated by any document (recorded so it is visible and gradable)
 SELLS_FOR_BASIS = {"doc", "press", "inferred"}
+
+# Relation envelope (added 2026-10-02, schema v9; piloted on sells_for). Every field is optional and
+# rides in the edge's `detail` object (null when the record carries none). `basis`/`confidence` stays the
+# coarse grade the graph draws; the envelope adds who said it and how sure we are, kept apart
+# (Admiralty principle: source and information are graded separately).
+#   products       what moves on this edge (strings, as the document names them)
+#   status         latest of the record's dated status_history[] (announced -> onboarding -> listed ->
+#                  shipping -> delisted); every history entry needs a date and a source
+#   asserted_by    who makes the claim: self (the seller or maker), counterparty (the other party, e.g. a
+#                  maker naming its dealer), platform (a marketplace panel), regulator, press, investigator
+#   credibility    doc (a primary document states it), corroborated (two or more independent sources),
+#                  single (one non-document source), inferred (the investigator's reading)
+#   authorised     did the maker authorise the sale: yes / no / unknown / n/a (the seller is the maker)
+#   open           what the edge does not prove (free text)
+SALE_STATUSES = ("announced", "onboarding", "listed", "shipping", "delisted")
+ASSERTED_BY = {"self", "counterparty", "platform", "regulator", "press", "investigator"}
+CREDIBILITY = {"doc", "corroborated", "single", "inferred"}
+AUTHORISED = {"yes", "no", "unknown", "n/a"}
+DETAIL_KEYS = {"products", "status", "asserted_by", "credibility", "authorised", "open"}
+# the coarse basis must not contradict the finer credibility
+BASIS_CREDIBILITY = {"doc": {"doc", "corroborated", "single"}, "press": {"corroborated", "single"},
+                     "inferred": {"inferred"}}
+
+
+def sale_detail(sale: dict):
+    """The edge `detail` object for one sells_for[] record, or None when it carries no envelope field."""
+    d = {}
+    if sale.get("products"):
+        d["products"] = list(sale["products"])
+    hist = [h for h in sale.get("status_history") or [] if isinstance(h, dict) and h.get("status")]
+    if hist:
+        d["status"] = sorted(hist, key=lambda h: h.get("as_of") or "")[-1]["status"]
+    for k in ("asserted_by", "credibility", "authorised", "open"):
+        if sale.get(k):
+            d[k] = sale[k]
+    return d or None
 
 # Programs, events and groups (added 2026-10-01, schema v8), kept in data/registry/programs.json.
 #   program  a body of support or membership with many members and attributes of its own: a residency
@@ -394,6 +430,20 @@ def validate_graph(
                 _error(errors, f"{where}.confidence has invalid value {confidence!r} for {etype}")
         elif confidence is not None:
             _error(errors, f"{where}.confidence must be null for edge type {etype!r}")
+        detail = edge.get("detail")
+        if detail is not None:
+            if etype != "sells_for" or not isinstance(detail, dict) or not detail or set(detail) - DETAIL_KEYS:
+                _error(errors, f"{where}.detail must be null, or a non-empty object of {sorted(DETAIL_KEYS)} on a sells_for edge")
+            else:
+                if "products" in detail and not (isinstance(detail["products"], list) and all(isinstance(x, str) for x in detail["products"])):
+                    _error(errors, f"{where}.detail.products must be a list of strings")
+                for key, vocab in (("status", set(SALE_STATUSES)), ("asserted_by", ASSERTED_BY),
+                                   ("credibility", CREDIBILITY), ("authorised", AUTHORISED)):
+                    if key in detail and detail[key] not in vocab:
+                        _error(errors, f"{where}.detail.{key} has invalid value {detail[key]!r}")
+                if detail.get("credibility") and confidence in BASIS_CREDIBILITY \
+                        and detail["credibility"] not in BASIS_CREDIBILITY[confidence]:
+                    _error(errors, f"{where}.detail.credibility {detail['credibility']!r} contradicts basis {confidence!r}")
         status = edge.get("temporal_status")
         if status not in TEMPORAL_STATUSES:
             _error(errors, f"{where}.temporal_status has invalid value {status!r}")

@@ -45,7 +45,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from reverse_source_index import build_index  # noqa: E402
-from graph_contract import (validate_graph, validate_views, SELLS_FOR_BASIS,  # noqa: E402
+from graph_contract import (validate_graph, validate_views, SELLS_FOR_BASIS, SALE_STATUSES, ASSERTED_BY,
+                            CREDIBILITY, AUTHORISED, BASIS_CREDIBILITY,  # noqa: E402
                             ECOSYSTEM_ROLES, LEGAL_ENTITY_STATUS, PROGRAM_KINDS, PROGRAM_SUBTYPES,
                             MEMBERSHIP_ROLES)
 from build_relationship_graph import build_graph, build_views  # noqa: E402
@@ -383,6 +384,26 @@ def main() -> int:
                 warnings.append(f"{where} basis {sale.get('basis')!r} has no source_id")
             if sale.get("source_id") and sale["source_id"] not in source_ids:
                 errors.append(f"{where}.source_id {sale['source_id']!r} is not a known source")
+            # relation envelope (schema v9): all optional, each validated when present
+            if "products" in sale and not (isinstance(sale["products"], list) and sale["products"]
+                                           and all(isinstance(p, str) and p for p in sale["products"])):
+                errors.append(f"{where}.products must be a non-empty list of strings")
+            for key, vocab in (("asserted_by", ASSERTED_BY), ("credibility", CREDIBILITY), ("authorised", AUTHORISED)):
+                if key in sale and sale[key] not in vocab:
+                    errors.append(f"{where}.{key} must be one of {sorted(vocab)} (got {sale[key]!r})")
+            if sale.get("credibility") and sale.get("basis") in BASIS_CREDIBILITY \
+                    and sale["credibility"] not in BASIS_CREDIBILITY[sale["basis"]]:
+                errors.append(f"{where}.credibility {sale['credibility']!r} contradicts basis {sale['basis']!r}")
+            if "open" in sale and not (isinstance(sale["open"], str) and sale["open"].strip()):
+                errors.append(f"{where}.open must be a non-empty string")
+            for j, h in enumerate(sale.get("status_history") or []):
+                w = f"{where}.status_history[{j}]"
+                if not isinstance(h, dict) or h.get("status") not in SALE_STATUSES:
+                    errors.append(f"{w}.status must be one of {list(SALE_STATUSES)}"); continue
+                if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(h.get("as_of") or "")):
+                    errors.append(f"{w}.as_of must be YYYY-MM-DD (an undated state is not recorded)")
+                if not h.get("source_id") or h["source_id"] not in source_ids:
+                    errors.append(f"{w}.source_id is required and must be a known source")
 
     # --- programs, events, groups and memberships (schema v8, 2026-10-01) ----
     programs_path = REG / "programs.json"

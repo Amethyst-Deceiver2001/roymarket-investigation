@@ -21,7 +21,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-from graph_contract import GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, build_view_projections
+from graph_contract import GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, build_view_projections, sale_detail
 
 REPO = Path(__file__).resolve().parent.parent
 REG = REPO / "data" / "registry"
@@ -415,7 +415,7 @@ def build_graph(entities: list[dict], people: list[dict],
         return None
 
     def add_edge(source, target, edge_type, label=None, source_id=None, as_of=None,
-                 weight=1.0, temporal_status="unknown", confidence=None) -> None:
+                 weight=1.0, temporal_status="unknown", confidence=None, detail=None) -> None:
         if source in nodes and target in nodes:
             as_of = as_of if isinstance(as_of, str) and _DATE_RE.fullmatch(as_of) else None
             if temporal_status in {"current", "historical"} and (not as_of or not source_id):
@@ -424,7 +424,7 @@ def build_graph(entities: list[dict], people: list[dict],
                 "source": source, "target": target, "type": edge_type,
                 "label": label, "source_id": source_id, "as_of": as_of,
                 "weight": weight, "temporal_status": temporal_status,
-                "confidence": confidence,
+                "confidence": confidence, "detail": detail,
             })
 
     # every (seller, maker) pair declared in a sells_for[] field, so an older prose "dealer" related
@@ -476,7 +476,8 @@ def build_graph(entities: list[dict], people: list[dict],
             # sells_for[] (schema v7): {slug, channel, basis, source_id, as_of, note}. The edge label is the
             # channel; the basis grade rides in `confidence` (doc / press / inferred).
             add_edge(slug, sale.get("slug"), "sells_for", sale.get("channel"),
-                     sale.get("source_id"), sale.get("as_of"), confidence=sale.get("basis"))
+                     sale.get("source_id"), sale.get("as_of"), confidence=sale.get("basis"),
+                     detail=sale_detail(sale))
         for m in entity.get("memberships") or []:
             # memberships[] (schema v8): {program, role, basis, source_id, as_of, note}
             add_edge(slug, f"program::{m.get('program')}", "resident_of", m.get("role"),

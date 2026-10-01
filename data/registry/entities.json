@@ -59965,7 +59965,19 @@
         "basis": "inferred",
         "source_id": "s8735",
         "as_of": "2026-09-17",
-        "note": "Post 695 says «Начинаем работу через онлайн-маркетплейс для продукции двойного назначения» and does not name РОЙ.МАРКЕТ. Read as РОЙ.МАРКЕТ by the user (2026-10-01); supported by ЦБСТ's own wording (posts 2413-2415, 2433, not yet archived). Inference, not a document."
+        "note": "Post 695 says «Начинаем работу через онлайн-маркетплейс для продукции двойного назначения» and does not name РОЙ.МАРКЕТ. Read as РОЙ.МАРКЕТ by the user (2026-10-01); supported by ЦБСТ's own wording (posts 2413-2415, 2433, not yet archived). Inference, not a document.",
+        "status_history": [
+          {
+            "status": "onboarding",
+            "as_of": "2026-09-17",
+            "source_id": "s8735",
+            "note": "«Начинаем работу через онлайн-маркетплейс для продукции двойного назначения»."
+          }
+        ],
+        "asserted_by": "self",
+        "credibility": "inferred",
+        "authorised": "n/a",
+        "open": "The post does not name the platform; read as РОЙ.МАРКЕТ by the investigator."
       }
     ],
     "memberships": [
@@ -65469,7 +65481,11 @@
         "basis": "doc",
         "source_id": "s1386",
         "as_of": null,
-        "note": "Named dealer of «3mx» per the maker's own dealer page; also sells its own EW line. Converted 2026-10-01 from the prose related_entities 'dealer' entry on ooo-trimiks, which stays on file."
+        "note": "Named dealer of «3mx» per the maker's own dealer page; also sells its own EW line. Converted 2026-10-01 from the prose related_entities 'dealer' entry on ooo-trimiks, which stays on file.",
+        "asserted_by": "counterparty",
+        "credibility": "doc",
+        "authorised": "yes",
+        "open": "Named by the maker on its dealer page. The products it sells are not recorded on this edge."
       }
     ],
     "_verified_against": "egrul.nalog.ru open API, 2026-08-24",
@@ -66955,7 +66971,14 @@
         "basis": "doc",
         "source_id": "s8613",
         "as_of": null,
-        "note": "Sells the «Булат» detector at 88 000 ₽ on 921921.ru, whose contacts block prints his ИНН and ОГРНИП (s8613); not a named dealer on 3mx.ru. Converted 2026-10-01 from the prose 'dealer' entries, which stay on file."
+        "note": "Sells the «Булат» detector at 88 000 ₽ on 921921.ru, whose contacts block prints his ИНН and ОГРНИП (s8613); not a named dealer on 3mx.ru. Converted 2026-10-01 from the prose 'dealer' entries, which stay on file.",
+        "products": [
+          "Булат"
+        ],
+        "asserted_by": "self",
+        "credibility": "doc",
+        "authorised": "unknown",
+        "open": "Not named on the maker's dealer page (3mx.ru/dilery); authorisation is neither shown nor denied."
       }
     ],
     "_verified_against": [],
@@ -87303,7 +87326,22 @@
         "basis": "doc",
         "source_id": "s8737",
         "as_of": "2026-07-06",
-        "note": "@kb_spektr post 321 (06.07.2026) names the platform: «По заявкам трудящихся масс осваиваем Роймаркет. Теперь ТЭЧ могут сами закупать наши пропеллеры напрямую в Роймаркет.» The photo shows a carton with the platform's «РОЙ» label, article A0-13805373 and КБ «СПЕКТР» tape (full-resolution copy s8809). Doc: the brand's own post and photo state the sale. Not established: which legal entity is the registered Поставщик under the agent offer (s8817 §3); post 322 (batteries) is an announcement only."
+        "note": "@kb_spektr post 321 (06.07.2026) names the platform: «По заявкам трудящихся масс осваиваем Роймаркет. Теперь ТЭЧ могут сами закупать наши пропеллеры напрямую в Роймаркет.» The photo shows a carton with the platform's «РОЙ» label, article A0-13805373 and КБ «СПЕКТР» tape (full-resolution copy s8809). Doc: the brand's own post and photo state the sale. Not established: which legal entity is the registered Поставщик under the agent offer (s8817 §3); post 322 (batteries) is an announcement only.",
+        "products": [
+          "Лопасти для дрона 8 дюймов, 100 шт (carton A0-13805373)"
+        ],
+        "status_history": [
+          {
+            "status": "listed",
+            "as_of": "2026-07-06",
+            "source_id": "s8737",
+            "note": "Self-reported availability («Теперь ТЭЧ могут сами закупать наши пропеллеры напрямую в Роймаркет»); the carton photo shows РОЙ-labelled packing; no listing page seen."
+          }
+        ],
+        "asserted_by": "self",
+        "credibility": "doc",
+        "authorised": "n/a",
+        "open": "The registered Поставщик on the platform is not established. Batteries 6S 10000 mAh 15C were announced as coming (post 322, 07.07.2026), not listed."
       }
     ],
     "_corrected": null
@@ -87401,7 +87439,19 @@
         "basis": "doc",
         "source_id": "s8813",
         "as_of": null,
-        "note": "Ozon seller panel «О магазине» of the storefront «СПЕКТР конструкторское бюро» (1.7K orders), user screenshot 2026-10-01 (s8813): «ИП Маврин Олег Владимирович 320547600022326». The panel prints the seller of record next to the bureau's logo; it does not say the bureau authorised the sale."
+        "note": "Ozon seller panel «О магазине» of the storefront «СПЕКТР конструкторское бюро» (1.7K orders), user screenshot 2026-10-01 (s8813): «ИП Маврин Олег Владимирович 320547600022326». The panel prints the seller of record next to the bureau's logo; it does not say the bureau authorised the sale.",
+        "status_history": [
+          {
+            "status": "shipping",
+            "as_of": "2026-10-01",
+            "source_id": "s8813",
+            "note": "The panel shows 1.7K orders."
+          }
+        ],
+        "asserted_by": "platform",
+        "credibility": "doc",
+        "authorised": "unknown",
+        "open": "The panel prints the seller of record next to the bureau's logo; it does not say the bureau authorised the sale. Products are not itemised on this edge."
       }
     ],
     "_corrected": null
@@ -87499,7 +87549,23 @@
         "basis": "doc",
         "source_id": "s8814",
         "as_of": null,
-        "note": "Ozon seller panel «О магазине» of the storefront «Звезда Спектр» (Premium, «Работает с Ozon 18 дней»), user screenshot 2026-10-01 (s8814): «ИП Карпушин Александр Александрович 326547600152216»; listings carry the bureau's «СПЕКТР конструкторское бюро» logo, «10\" пропеллеры», «Армамид». The panel prints the seller of record; it does not say the bureau authorised the sale."
+        "note": "Ozon seller panel «О магазине» of the storefront «Звезда Спектр» (Premium, «Работает с Ozon 18 дней»), user screenshot 2026-10-01 (s8814): «ИП Карпушин Александр Александрович 326547600152216»; listings carry the bureau's «СПЕКТР конструкторское бюро» logo, «10\" пропеллеры», «Армамид». The panel prints the seller of record; it does not say the bureau authorised the sale.",
+        "products": [
+          "10\" пропеллеры",
+          "Армамид"
+        ],
+        "status_history": [
+          {
+            "status": "listed",
+            "as_of": "2026-10-01",
+            "source_id": "s8814",
+            "note": "«Работает с Ozon 18 дней»; Premium."
+          }
+        ],
+        "asserted_by": "platform",
+        "credibility": "doc",
+        "authorised": "unknown",
+        "open": "The panel prints the seller of record; it does not say the bureau authorised the sale."
       }
     ],
     "_corrected": null
