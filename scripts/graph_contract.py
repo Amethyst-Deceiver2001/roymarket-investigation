@@ -10,12 +10,13 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-GRAPH_SCHEMA_VERSION = 7
+GRAPH_SCHEMA_VERSION = 8
 NODE_KINDS = {"entity", "person", "product", "unresolved",
-              "government_customer", "military_unit"}
+              "government_customer", "military_unit", "program", "event", "group"}
 EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
               "procures", "confirmed_field_use", "cbst_tie", "family_tie",
-              "sells_for"}
+              "sells_for", "operates", "organises", "resident_of",
+              "participated_in", "part_of", "member_of"}
 TEMPORAL_STATUSES = {"current", "historical", "unknown"}
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 UNIT_TYPES = {"army", "brigade", "regiment", "battalion", "detachment",
@@ -33,6 +34,9 @@ NODE_FIELDS = {
     "government_customer": {"id", "kind", "label", "degree"},
     "military_unit": {"id", "kind", "label", "unit_type", "parent_grouping",
                        "designation_confidence", "degree"},
+    "program": {"id", "kind", "label", "subtype", "degree"},
+    "event": {"id", "kind", "label", "subtype", "degree"},
+    "group": {"id", "kind", "label", "subtype", "degree"},
 }
 EDGE_FIELDS = {
     "source", "target", "type", "label", "source_id", "as_of", "weight",
@@ -58,6 +62,29 @@ FAMILY_TIE_CONFIDENCE = {"confirmed", "probable", "unconfirmed"}
 #   press    a press or third-party report says so
 #   inferred the investigator's reading, not stated by any document (recorded so it is visible and gradable)
 SELLS_FOR_BASIS = {"doc", "press", "inferred"}
+
+# Programs, events and groups (added 2026-10-01, schema v8), kept in data/registry/programs.json.
+#   program  a body of support or membership with many members and attributes of its own: a residency
+#            (НПЦ «Ушкуйник»), an accelerator, a centre network, the national project «БАС»
+#   event    a recurring series or one edition of a gathering (Дронница, ПМЭФ)
+#   group    a cluster of separate legal entities that share a brand or a founder network; it has no
+#            legal identity and never replaces its members
+# Edges: operates / organises (entity -> program / event), resident_of (entity -> program),
+# participated_in (entity -> event), part_of (program -> program, event -> event), member_of
+# (entity -> group). `confidence` carries the same basis grade as sells_for; part_of is structural
+# and carries none. Counts such as "30+ residents" stay claims on the record, never edges.
+PROGRAM_KINDS = {"program", "event", "group"}
+PROGRAM_SUBTYPES = {
+    "program": {"national_project", "federal_project", "centre_network", "residency", "accelerator",
+                "grant_scheme", "legal_regime"},
+    "event": {"event_series", "event_edition"},
+    "group": {"brand_cluster", "founder_network"},
+}
+MEMBERSHIP_ROLES = {"resident", "accelerator_participant", "graduate", "applicant",
+                    "exhibitor", "speaker", "organiser", "co-organiser", "signatory", "participant",
+                    "sponsor", "attendee"}
+STRUCTURAL_NO_BASIS = {"part_of"}
+BASIS_EDGE_TYPES = {"sells_for", "operates", "organises", "resident_of", "participated_in", "member_of"}
 
 # entities[].ecosystem_roles (added 2026-10-01): what an entity does in the product chain, orthogonal to
 # `tier` (tier measures closeness to ЦБСТ). Absent means "not yet classified", NOT "manufacturer".
@@ -269,6 +296,11 @@ def validate_graph(
         elif kind == "government_customer":
             if not node_id.startswith("customer::"):
                 _error(errors, f"{where} government_customer node id must start with 'customer::'")
+        elif kind in PROGRAM_KINDS:
+            if not node_id.startswith(f"{kind}::"):
+                _error(errors, f"{where} {kind} node id must start with '{kind}::'")
+            if node.get("subtype") not in PROGRAM_SUBTYPES[kind]:
+                _error(errors, f"{where}.subtype {node.get('subtype')!r} is not valid for kind {kind}")
         elif kind == "military_unit":
             if not node_id.startswith("unit::"):
                 _error(errors, f"{where} military_unit node id must start with 'unit::'")
@@ -334,6 +366,12 @@ def validate_graph(
                 # only; direction is relative -> principal.
                 "family_tie": ({"person"}, {"person"}),
                 "sells_for": ({"entity"}, {"entity"}),
+                "operates": ({"entity"}, {"program"}),
+                "organises": ({"entity"}, {"event"}),
+                "resident_of": ({"entity"}, {"program"}),
+                "participated_in": ({"entity"}, {"event"}),
+                "part_of": ({"program", "event"}, {"program", "event"}),
+                "member_of": ({"entity"}, {"group"}),
             }[etype]
             if src_kind not in permitted[0] or dst_kind not in permitted[1]:
                 _error(errors, f"{where} has invalid {src_kind}->{dst_kind} endpoints for {etype}")
@@ -351,9 +389,9 @@ def validate_graph(
         elif etype == "family_tie":
             if confidence not in FAMILY_TIE_CONFIDENCE:
                 _error(errors, f"{where}.confidence has invalid value {confidence!r} for family_tie")
-        elif etype == "sells_for":
+        elif etype in BASIS_EDGE_TYPES:
             if confidence not in SELLS_FOR_BASIS:
-                _error(errors, f"{where}.confidence has invalid value {confidence!r} for sells_for")
+                _error(errors, f"{where}.confidence has invalid value {confidence!r} for {etype}")
         elif confidence is not None:
             _error(errors, f"{where}.confidence must be null for edge type {etype!r}")
         status = edge.get("temporal_status")

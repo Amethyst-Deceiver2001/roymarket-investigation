@@ -1,8 +1,8 @@
 {
-  "schema_version": 7,
-  "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1233,
-  "edge_count": 2094,
+  "schema_version": 8,
+  "generated_from": "data/registry/entities.json + people.json + programs.json",
+  "node_count": 1242,
+  "edge_count": 2114,
   "unresolved_count": 113,
   "nodes": [
     {
@@ -195,7 +195,7 @@
       "sanctioned": true,
       "legal_form": "АНО",
       "variant": "dual",
-      "degree": 44
+      "degree": 50
     },
     {
       "id": "ano-ntsns-nevskiy-tsentr-nauchnogo-sotrudnichestva",
@@ -219,7 +219,7 @@
       "sanctioned": true,
       "legal_form": "АНО",
       "variant": null,
-      "degree": 8
+      "degree": 9
     },
     {
       "id": "ano-tsasd-demyansk",
@@ -243,7 +243,7 @@
       "sanctioned": true,
       "legal_form": "АНО",
       "variant": null,
-      "degree": 95
+      "degree": 99
     },
     {
       "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -1704,6 +1704,27 @@
       "degree": 8
     },
     {
+      "id": "event::dronnitsa",
+      "kind": "event",
+      "label": "«Дронница» — Всероссийский слёт операторов боевых беспилотных систем",
+      "subtype": "event_series",
+      "degree": 3
+    },
+    {
+      "id": "event::dronnitsa-2024",
+      "kind": "event",
+      "label": "Дронница 2024",
+      "subtype": "event_edition",
+      "degree": 4
+    },
+    {
+      "id": "event::dronnitsa-2025",
+      "kind": "event",
+      "label": "Дронница 2025 (IV)",
+      "subtype": "event_edition",
+      "degree": 5
+    },
+    {
       "id": "evgeniy-sergeevich-ieto-yal",
       "kind": "person",
       "label": "Евгений Сергеевич (фамилия не установлена)",
@@ -2082,6 +2103,13 @@
       "name_latin": "Gromov Aleksandr Vladimirovich",
       "sanctioned": false,
       "degree": 1
+    },
+    {
+      "id": "group::ushkuynik-group",
+      "kind": "group",
+      "label": "Группа «Ушкуйник»",
+      "subtype": "brand_cluster",
+      "degree": 3
     },
     {
       "id": "gulidov-aleksey-anatolevich",
@@ -2989,7 +3017,7 @@
       "sanctioned": false,
       "legal_form": "НПЦ",
       "variant": "defensive",
-      "degree": 14
+      "degree": 15
     },
     {
       "id": "oksman-nikolas-nikolaevich",
@@ -3917,7 +3945,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 9
+      "degree": 10
     },
     {
       "id": "ooo-ntc-arkodim",
@@ -4145,7 +4173,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "dual",
-      "degree": 17
+      "degree": 18
     },
     {
       "id": "ooo-smart-teknolodzhis",
@@ -4301,7 +4329,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "defensive",
-      "degree": 24
+      "degree": 25
     },
     {
       "id": "ooo-tsentr-dinarus",
@@ -4373,7 +4401,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "ooo-villis-wheelies",
@@ -11228,6 +11256,41 @@
       "degree": 25
     },
     {
+      "id": "program::cbst-accelerator",
+      "kind": "program",
+      "label": "Акселератор ЦБСТ для специальных проектов и проектов двойного назначения",
+      "subtype": "accelerator",
+      "degree": 2
+    },
+    {
+      "id": "program::cbst-residency",
+      "kind": "program",
+      "label": "Резидентство ЦБСТ",
+      "subtype": "residency",
+      "degree": 2
+    },
+    {
+      "id": "program::natsproekt-bas",
+      "kind": "program",
+      "label": "Национальный проект «Беспилотные авиационные системы»",
+      "subtype": "national_project",
+      "degree": 1
+    },
+    {
+      "id": "program::npc-bas-network",
+      "kind": "program",
+      "label": "Сеть научно-производственных центров БАС (НПЦ БАС)",
+      "subtype": "centre_network",
+      "degree": 2
+    },
+    {
+      "id": "program::ushkuynik-residency",
+      "kind": "program",
+      "label": "Резидентство НПЦ «Ушкуйник»",
+      "subtype": "residency",
+      "degree": 2
+    },
+    {
       "id": "protorguev-sergey-aleksandrovich",
       "kind": "person",
       "label": "Проторгуев Сергей Александрович",
@@ -13108,6 +13171,50 @@
     },
     {
       "source": "ano-npts-ushkuynik",
+      "target": "event::dronnitsa",
+      "type": "organises",
+      "label": "co-organiser",
+      "source_id": "s8841",
+      "as_of": "2025-09-03",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
+      "source": "ano-npts-ushkuynik",
+      "target": "event::dronnitsa-2024",
+      "type": "participated_in",
+      "label": "signatory",
+      "source_id": "s8836",
+      "as_of": "2024-09-06",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
+      "source": "ano-npts-ushkuynik",
+      "target": "event::dronnitsa-2025",
+      "type": "organises",
+      "label": "co-organiser",
+      "source_id": "s8841",
+      "as_of": "2025-09-03",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
+      "source": "ano-npts-ushkuynik",
+      "target": "group::ushkuynik-group",
+      "type": "member_of",
+      "label": "nonprofit centre (residency, test ground)",
+      "source_id": "s8612",
+      "as_of": "2026-09-30",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
+      "source": "ano-npts-ushkuynik",
       "target": "npo-kaysant",
       "type": "related",
       "label": "co-speaker",
@@ -13239,6 +13346,28 @@
       "confidence": null
     },
     {
+      "source": "ano-npts-ushkuynik",
+      "target": "program::cbst-residency",
+      "type": "resident_of",
+      "label": "resident",
+      "source_id": "s7587",
+      "as_of": "2025-12-31",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
+      "source": "ano-npts-ushkuynik",
+      "target": "program::ushkuynik-residency",
+      "type": "operates",
+      "label": "residency programme",
+      "source_id": "s8612",
+      "as_of": "2026-09-30",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
       "source": "ano-platforma-nti",
       "target": "ano-npts-ushkuynik",
       "type": "founded",
@@ -13283,6 +13412,17 @@
       "confidence": "t-doc"
     },
     {
+      "source": "ano-platforma-nti",
+      "target": "event::dronnitsa-2024",
+      "type": "participated_in",
+      "label": "signatory",
+      "source_id": "s8836",
+      "as_of": "2024-09-06",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
       "source": "ano-tsasd-demyansk",
       "target": "ano-npts-ushkuynik",
       "type": "founded",
@@ -13350,6 +13490,28 @@
     },
     {
       "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "target": "event::dronnitsa-2024",
+      "type": "participated_in",
+      "label": "signatory",
+      "source_id": "s8836",
+      "as_of": "2024-09-06",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
+      "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "target": "event::dronnitsa-2025",
+      "type": "participated_in",
+      "label": "speaker",
+      "source_id": "s8842",
+      "as_of": "2025-09-08",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
+      "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "target": "ooo-mptm",
       "type": "owns",
       "label": "участник (доля не указана)",
@@ -13380,6 +13542,28 @@
       "weight": 100,
       "temporal_status": "unknown",
       "confidence": null
+    },
+    {
+      "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "target": "program::cbst-accelerator",
+      "type": "operates",
+      "label": "accelerator",
+      "source_id": "s7522",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
+      "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "target": "program::cbst-residency",
+      "type": "operates",
+      "label": "residency programme",
+      "source_id": "s8842",
+      "as_of": "2025-09-08",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
     },
     {
       "source": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -19795,6 +19979,28 @@
       "confidence": null
     },
     {
+      "source": "event::dronnitsa-2024",
+      "target": "event::dronnitsa",
+      "type": "part_of",
+      "label": "event_edition",
+      "source_id": "s8835",
+      "as_of": "2024-08-21",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "event::dronnitsa-2025",
+      "target": "event::dronnitsa",
+      "type": "part_of",
+      "label": "event_edition",
+      "source_id": "s8841",
+      "as_of": "2025-09-03",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "evgeniy-sergeevich-ieto-yal",
       "target": "proekt-kb-arkhangel",
       "type": "role",
@@ -25010,6 +25216,17 @@
     },
     {
       "source": "npts-ushkuynik",
+      "target": "group::ushkuynik-group",
+      "type": "member_of",
+      "label": "commercial entity carrying the «Князь Вандал Новгородский» product",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "inferred"
+    },
+    {
+      "source": "npts-ushkuynik",
       "target": "ooo-ushkuynik-sp",
       "type": "related",
       "label": "group-structure",
@@ -28166,6 +28383,17 @@
       "confidence": null
     },
     {
+      "source": "ooo-npts-basirtk",
+      "target": "program::cbst-accelerator",
+      "type": "resident_of",
+      "label": "accelerator_participant",
+      "source_id": "s7522",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
       "source": "ooo-ntc-arkodim",
       "target": "ooo-arkodim",
       "type": "related",
@@ -28728,6 +28956,17 @@
     },
     {
       "source": "ooo-skb-piranya",
+      "target": "event::dronnitsa-2025",
+      "type": "participated_in",
+      "label": "exhibitor",
+      "source_id": "s8843",
+      "as_of": "2025-09-09",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
+      "source": "ooo-skb-piranya",
       "target": "product::ooo-skb-piranya::бпла-пиранья-10",
       "type": "produces",
       "label": null,
@@ -29148,12 +29387,23 @@
       "source": "ooo-trimiks",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "Product («Булат»/3mx) shown at ЦБСТ's Дронница 2025 showcase.",
+      "label": "«Булат» detectors named in ЦБСТ's list of its residents' exhibits at the Слёт «Дронница 2025» (organiser КЦПН and НПЦ...",
       "source_id": "s7596",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-trimiks",
+      "target": "event::dronnitsa-2025",
+      "type": "participated_in",
+      "label": "exhibitor",
+      "source_id": "s8842",
+      "as_of": "2025-09-08",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
     },
     {
       "source": "ooo-trimiks",
@@ -29374,6 +29624,17 @@
       "weight": 1.0,
       "temporal_status": "current",
       "confidence": null
+    },
+    {
+      "source": "ooo-ushkuynik-sp",
+      "target": "group::ushkuynik-group",
+      "type": "member_of",
+      "label": "«-СП» group vehicle",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "inferred"
     },
     {
       "source": "ooo-ushkuynik-sp",
@@ -30779,6 +31040,28 @@
       "label": null,
       "source_id": "s5459",
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "program::npc-bas-network",
+      "target": "program::natsproekt-bas",
+      "type": "part_of",
+      "label": "centre_network",
+      "source_id": "s8829",
+      "as_of": "2026-09-16",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "program::ushkuynik-residency",
+      "target": "program::npc-bas-network",
+      "type": "part_of",
+      "label": "residency",
+      "source_id": "s8612",
+      "as_of": "2026-09-30",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null

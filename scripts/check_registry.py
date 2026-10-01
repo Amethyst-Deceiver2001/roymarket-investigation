@@ -46,7 +46,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from reverse_source_index import build_index  # noqa: E402
 from graph_contract import (validate_graph, validate_views, SELLS_FOR_BASIS,  # noqa: E402
-                            ECOSYSTEM_ROLES, LEGAL_ENTITY_STATUS)
+                            ECOSYSTEM_ROLES, LEGAL_ENTITY_STATUS, PROGRAM_KINDS, PROGRAM_SUBTYPES,
+                            MEMBERSHIP_ROLES)
 from build_relationship_graph import build_graph, build_views  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
@@ -135,6 +136,7 @@ def validate_generated_graph(
     people: list[dict],
     sources: list[dict],
     military_units: list[dict] | None = None,
+    programs: list[dict] | None = None,
 ) -> list[str]:
     """Check artifacts against an independent deterministic registry rebuild."""
     graph_errors = validate_graph(graph, entities, people, sources)
@@ -145,7 +147,7 @@ def validate_generated_graph(
     elif not graph_errors:
         errors.extend(validate_views(graph, graph_views))
 
-    expected_graph = build_graph(entities, people, military_units)
+    expected_graph = build_graph(entities, people, military_units, programs)
     if graph != expected_graph:
         errors.append(
             "relationship_graph.json does not exactly match the deterministic "
@@ -381,6 +383,64 @@ def main() -> int:
                 warnings.append(f"{where} basis {sale.get('basis')!r} has no source_id")
             if sale.get("source_id") and sale["source_id"] not in source_ids:
                 errors.append(f"{where}.source_id {sale['source_id']!r} is not a known source")
+
+    # --- programs, events, groups and memberships (schema v8, 2026-10-01) ----
+    programs_path = REG / "programs.json"
+    programs = json.loads(programs_path.read_text(encoding="utf-8")) if programs_path.exists() else []
+    prog_by_key = {}
+    for i, rec in enumerate(programs):
+        where = f"programs[{i}]"
+        kind, slug = rec.get("kind"), rec.get("slug")
+        if kind not in PROGRAM_KINDS:
+            errors.append(f"{where}.kind {kind!r} not in {sorted(PROGRAM_KINDS)}"); continue
+        if not slug or (kind, slug) in prog_by_key:
+            errors.append(f"{where}.slug missing or duplicated for kind {kind}"); continue
+        prog_by_key[(kind, slug)] = rec
+        if rec.get("subtype") not in PROGRAM_SUBTYPES[kind]:
+            errors.append(f"{where}.subtype {rec.get('subtype')!r} not valid for kind {kind}")
+        if not rec.get("name_ru"):
+            errors.append(f"{where}.name_ru is required")
+    def _ref(where, slug, ok):
+        if slug not in ok:
+            errors.append(f"{where} {slug!r} does not resolve")
+    for (kind, slug), rec in prog_by_key.items():
+        where = f"programs[{kind}:{slug}]"
+        for key in ("operators", "organisers", "members"):
+            for j, x in enumerate(rec.get(key) or []):
+                w = f"{where}.{key}[{j}]"
+                _ref(w + ".slug", x.get("slug"), live_slugs)
+                if x.get("basis") not in SELLS_FOR_BASIS:
+                    errors.append(f"{w}.basis must be one of {sorted(SELLS_FOR_BASIS)}")
+                if x.get("basis") in ("doc", "press") and not x.get("source_id"):
+                    warnings.append(f"{w} basis {x.get('basis')!r} has no source_id")
+                if x.get("source_id") and x["source_id"] not in source_ids:
+                    errors.append(f"{w}.source_id {x['source_id']!r} is not a known source")
+        parent = rec.get("parent")
+        if parent:
+            pk = "event" if kind == "event" else "program"
+            if (pk, parent) not in prog_by_key:
+                errors.append(f"{where}.parent {parent!r} is not a {pk} record")
+        for j, c in enumerate(rec.get("claims") or []):
+            if c.get("source_id") and c["source_id"] not in source_ids:
+                errors.append(f"{where}.claims[{j}].source_id {c['source_id']!r} is not a known source")
+            if not c.get("as_of"):
+                warnings.append(f"{where}.claims[{j}] has no as_of")
+    for e in entities:
+        if e.get("_merged_into"):
+            continue
+        for fld, key, kind in (("memberships", "program", "program"), ("participations", "event", "event")):
+            for j, m in enumerate(e.get(fld) or []):
+                w = f"{e['slug']}.{fld}[{j}]"
+                if (kind, m.get(key)) not in prog_by_key:
+                    errors.append(f"{w}.{key} {m.get(key)!r} is not a {kind} record in programs.json")
+                if m.get("role") not in MEMBERSHIP_ROLES:
+                    errors.append(f"{w}.role {m.get('role')!r} not in {sorted(MEMBERSHIP_ROLES)}")
+                if m.get("basis") not in SELLS_FOR_BASIS:
+                    errors.append(f"{w}.basis must be one of {sorted(SELLS_FOR_BASIS)}")
+                if m.get("basis") in ("doc", "press") and not m.get("source_id"):
+                    warnings.append(f"{w} basis {m.get('basis')!r} has no source_id")
+                if m.get("source_id") and m["source_id"] not in source_ids:
+                    errors.append(f"{w}.source_id {m['source_id']!r} is not a known source")
 
     tombstone_people_slugs = {p.get("slug") for p in (people or []) if p.get("_merged_into")}
 
@@ -681,7 +741,9 @@ def main() -> int:
             military_units = json.loads(military_units_path.read_text(encoding="utf-8")) \
                 if military_units_path.exists() else []
             errors.extend(validate_generated_graph(
-                graph, graph_views, entities, people or [], sources or [], military_units))
+                graph, graph_views, entities, people or [], sources or [], military_units,
+                json.loads((REG / "programs.json").read_text(encoding="utf-8"))
+                if (REG / "programs.json").exists() else []))
     else:
         errors.append("relationship_graph.json missing — run "
                       "scripts/build_relationship_graph.py")

@@ -11133,7 +11133,27 @@
           "youtube": [],
           "marketplace_listings": [],
           "other": []
-        }
+        },
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7587",
+            "as_of": "2025-12-31",
+            "note": "Named among ЦБСТ's «resident-company leadership» in its New Year post (cbst_tie)."
+          }
+        ],
+        "participations": [
+          {
+            "event": "dronnitsa-2024",
+            "role": "signatory",
+            "basis": "doc",
+            "source_id": "s8836",
+            "as_of": "2024-09-06",
+            "note": "Agreement with АНО «ЦБСТ» signed by Чадаев and Рубинштейн at Дронница 2024; confirmed by ЦБСТ post 109 (s8837). The agreement text is not yet found."
+          }
+        ]
       },
       "verified_against": "egrul.nalog.ru open API, 2026-08-24",
       "why": [
@@ -11334,7 +11354,17 @@
           "confidence": "t-doc",
           "evidence": "ЦБСТ's own channel, post 2159491523:453, 14.02.2025, read in full (s7600): participants include «председатель совета Фонда национальной технологической инициативы (НТИ), специальный представитель Президента РФ по вопросам цифрового и технологического развития, гендиректор АНО «Платформа НТИ» Дмитрий Песков». The same title heads item 1 of the commission order of the Фонд НТИ (Приказ 111/25, s8824). Platform НТИ is also the founder of АНО «НПЦ «Ушкуйник»» and six other НПЦ БАС bodies (s0443); Ушкуйник has its own ЦБСТ tie.",
           "source_id": "s7600"
-        }
+        },
+        "participations": [
+          {
+            "event": "dronnitsa-2024",
+            "role": "signatory",
+            "basis": "doc",
+            "source_id": "s8836",
+            "as_of": "2024-09-06",
+            "note": "Agreement with the Правительство Новгородской области (Богданов, Силинг), including support for НПЦ «Ушкуйник»."
+          }
+        ]
       },
       "verified_against": "АНО «Платформа НТИ»'s own «Отчет о деятельности НКО за 2025 г.», filed with Минюст, pulled 23.08.2026",
       "why": [
@@ -11645,6 +11675,24 @@
             "role": "участник (доля не указана)",
             "as_of": "2025-01-22",
             "source_id": "s0207"
+          }
+        ],
+        "participations": [
+          {
+            "event": "dronnitsa-2024",
+            "role": "signatory",
+            "basis": "doc",
+            "source_id": "s8836",
+            "as_of": "2024-09-06",
+            "note": "Agreement with АНО «НПЦ «Ушкуйник»»; ЦБСТ's own confirmation: post 109, s8837."
+          },
+          {
+            "event": "dronnitsa-2025",
+            "role": "speaker",
+            "basis": "doc",
+            "source_id": "s8842",
+            "as_of": "2025-09-08",
+            "note": "Two lectures by the general director; residents exhibited. ЦБСТ participated; the organiser was КЦПН with НПЦ «Ушкуйник» (s8841)."
           }
         ]
       },
@@ -30301,6 +30349,16 @@
             "as_of": "2026-09-17",
             "note": "Post 695 says «Начинаем работу через онлайн-маркетплейс для продукции двойного назначения» and does not name РОЙ.МАРКЕТ. Read as РОЙ.МАРКЕТ by the user (2026-10-01); supported by ЦБСТ's own wording (posts 2413-2415, 2433, not yet archived). Inference, not a document."
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-accelerator",
+            "role": "accelerator_participant",
+            "basis": "doc",
+            "source_id": "s7522",
+            "as_of": null,
+            "note": "Four projects selected into the III stream; first two modules completed (cbst_tie)."
+          }
         ]
       },
       "verified_against": "s0009 — this entity's own full signed ЕГРЮЛ extract, pulled 17.08.2026",
@@ -33460,6 +33518,16 @@
             "source_id": "s7514",
             "as_of": "2025-10-29"
           }
+        ],
+        "participations": [
+          {
+            "event": "dronnitsa-2025",
+            "role": "exhibitor",
+            "basis": "doc",
+            "source_id": "s8843",
+            "as_of": "2025-09-09",
+            "note": "ЦБСТ post 1202: the company's representative shared impressions and pilots demonstrated its UAV in the test zone."
+          }
         ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
@@ -34641,7 +34709,7 @@
           }
         ],
         "cbst_tie": {
-          "claim": "Product («Булат»/3mx) shown at ЦБСТ's Дронница 2025 showcase.",
+          "claim": "«Булат» detectors named in ЦБСТ's list of its residents' exhibits at the Слёт «Дронница 2025» (organiser КЦПН and НПЦ «Ушкуйник»; ЦБСТ participated), post 1193 (s8842).",
           "confidence": "t-doc",
           "evidence": "Found by searching the BRAND name «Булат», not the legal entity name «Тримикс» (which returns zero hits) — confirms the brands-not-legal-names search pattern. ЦБСТ's own channel, post 2159491523:1193, 08.09.2025: \"детекторы «Булат»\" listed among resident products shown at Дронница 2025, alongside «Пиранья», «Капюшон» and others.",
           "source_id": "s7596"
@@ -34985,7 +35053,7 @@
         "name_ru": "ООО «Тримикс»",
         "tier": "manufacturer",
         "wb_overlap": "confirmed_reseller",
-        "tier_basis": "Product («Булат»/«3mx» drone-detector line) shown at ЦБСТ's Дронница 2025 showcase per ЦБСТ's own channel — found via the BRAND name, since the legal-entity name returns zero hits (consistent with this project's established brands-not-legal-names search pattern). Sanctioned by the US, EU, Switzerland and Ukraine (ID-confirmed via ИНН match); holds an own-name UAV-detector invention patent (RU2826668C1) and word-mark trademarks explicitly covering \"дрон-детекторы\" by name.",
+        "tier_basis": "Product («Булат»/«3mx» drone-detector line) named in ЦБСТ's list of residents' exhibits at the Слёт «Дронница 2025» per ЦБСТ's own channel — found via the BRAND name, since the legal-entity name returns zero hits (consistent with this project's established brands-not-legal-names search pattern). Sanctioned by the US, EU, Switzerland and Ukraine (ID-confirmed via ИНН match); holds an own-name UAV-detector invention patent (RU2826668C1) and word-mark trademarks explicitly covering \"дрон-детекторы\" by name.",
         "ecosystem_roles": [
           "manufacturer"
         ],
@@ -35003,6 +35071,16 @@
             "context": "ru3mx customer chat (channel_id 1651823792, msg 15203, 2024-10-05), reply to msg 15202: a customer complaint of widespread dissatisfaction with Булат 4 antenna quality (\"массовое недовольство по качеству антенн\", \"сильный проёб со стороны производителя\") -- a 3mx rep (sender 1414586597) confirms the defect and states new antennas are in production.",
             "source_id": "s8815",
             "as_of": "2024-10-05"
+          }
+        ],
+        "participations": [
+          {
+            "event": "dronnitsa-2025",
+            "role": "exhibitor",
+            "basis": "doc",
+            "source_id": "s8842",
+            "as_of": "2025-09-08",
+            "note": "«детекторы «Булат»» named in ЦБСТ's list of what its residents showed (post 1193)."
           }
         ]
       },

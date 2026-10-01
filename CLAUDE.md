@@ -397,6 +397,16 @@ A maker's goods reach buyers through legal entities that are not the maker: the 
 - A seller's cluster is drawn only if a path reaches the ЦБСТ hub; otherwise it is listed in `detached_ids`. The РОЙ.МАРКЕТ operator is `ooo-mptm` (role `platform_operator`, `cbst_tie` t-doc from ЦБСТ's 2025 Минюст report s0207 and the supplier offer s8817); non-resident vendors point at it with `sells_for`, so they join the graph through it.
 - **PII scope, third category:** a seller (usually a sole trader) gets an entity record, and its owner a person record only on user direction, when it has a **documented link to a registry manufacturer or to РОЙ.МАРКЕТ**. A marketplace listing alone is not enough. Same sourcing rule as every identifying field: the ИП's ИНН comes from its ЕГРИП extract, never from a plausible namesake, and no date of birth or address is filled without a source. Individuals recorded under this category so far: Братеньков, Маврин (person of interest, user, 2026-10-01). ИП Карпушин has an entity record but no person record.
 
+## Programs, events and groups (schema v8, added 2026-10-01 at user direction)
+
+Residencies, accelerators, the national БАС project, recurring events and same-brand clusters are modelled as records in `data/registry/programs.json` (hand-maintained, like `military_units.json`), not as entity-to-entity edges.
+
+- **Kinds** (`graph_contract.PROGRAM_KINDS`, subtypes in `PROGRAM_SUBTYPES`): `program` (a residency, accelerator, centre network, the national project), `event` (a series and its editions, `part_of` the series), `group` (separate legal entities sharing a brand or founder network; no legal identity, never replaces its members).
+- **Who belongs lives on the entity**: `memberships[]` (`{program, role, basis, source_id, as_of, note}`) and `participations[]` (`{event, role, basis, source_id, as_of, note}`), set via `corrections_entities.json`. The builder draws `resident_of` / `participated_in`; the record's own `operators[]`, `organisers[]`, `parent`, `members[]` draw `operates`, `organises`, `part_of`, `member_of`. Grade is `doc` / `press` / `inferred` in `confidence`, as for `sells_for`; `part_of` carries none. `check_registry.py` validates all of it.
+- **Counts are claims, not edges.** "30+ residents" is a `claims[]` entry with `as_of`, `source_id` and `asserted_by`. No stub entity for an unnamed resident; named residents attach one at a time.
+- **An organiser with no identifier gets no entity.** КЦПН (organiser of Дронница) is named in the record's `organisers` text only until an ИНН is read from a primary document.
+- **Participation is not residency.** Exhibiting at an event does not make an entity a ЦБСТ resident; the role and the source say what was shown or signed. Check who organised an event before writing "ЦБСТ's event": Дронница is run by КЦПН and НПЦ «Ушкуйник», and ЦБСТ participates.
+
 ## Writing: read `STYLE_GUIDE.md` before drafting any prose
 
 `STYLE_GUIDE.md` (repo root, added 2026-08-22) is authoritative for everything

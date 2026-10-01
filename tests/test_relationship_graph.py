@@ -238,6 +238,46 @@ class RelationshipGraphTests(unittest.TestCase):
         graph = build_graph(entities, copy.deepcopy(PEOPLE))
         self.assertFalse(any(e["type"] == "sells_for" for e in graph["edges"]))
 
+    def test_programs_events_groups_become_nodes_and_graded_edges(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["memberships"] = [{"program": "res", "role": "resident", "basis": "doc", "source_id": "s1", "as_of": "2026-01-02"}]
+        entities[1]["participations"] = [{"event": "ev-1", "role": "exhibitor", "basis": "doc", "source_id": "s1", "as_of": "2026-01-02"}]
+        programs = [
+            {"slug": "res", "kind": "program", "subtype": "residency", "name_ru": "Residency",
+             "operators": [{"slug": "core", "basis": "doc", "source_id": "s1"}]},
+            {"slug": "ev", "kind": "event", "subtype": "event_series", "name_ru": "Series",
+             "organisers": [{"slug": "core", "role": "co-organiser", "basis": "doc", "source_id": "s1"}]},
+            {"slug": "ev-1", "kind": "event", "subtype": "event_edition", "name_ru": "Edition", "parent": "ev"},
+            {"slug": "grp", "kind": "group", "subtype": "brand_cluster", "name_ru": "Group",
+             "members": [{"slug": "ordinary", "role": "member", "basis": "inferred"}]},
+        ]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE), None, programs)
+        got = sorted((e["type"], e["source"], e["target"], e["confidence"]) for e in graph["edges"]
+                     if e["type"] in {"operates", "organises", "resident_of", "participated_in", "part_of", "member_of"})
+        self.assertEqual([("member_of", "ordinary", "group::grp", "inferred"),
+                          ("operates", "core", "program::res", "doc"),
+                          ("organises", "core", "event::ev", "doc"),
+                          ("part_of", "event::ev-1", "event::ev", None),
+                          ("participated_in", "ordinary", "event::ev-1", "doc"),
+                          ("resident_of", "ordinary", "program::res", "doc")], got)
+        self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
+
+    def test_program_edges_reject_wrong_endpoints_and_missing_basis(self):
+        entities = copy.deepcopy(ENTITIES)
+        programs = [{"slug": "res", "kind": "program", "subtype": "residency", "name_ru": "Residency",
+                     "operators": [{"slug": "core", "basis": "doc", "source_id": "s1"}]}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE), None, programs)
+        bad = copy.deepcopy(graph)
+        edge = next(e for e in bad["edges"] if e["type"] == "operates")
+        edge["source"], edge["target"] = edge["target"], edge["source"]
+        self.assertTrue(any("invalid" in m and "operates" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+        bad = copy.deepcopy(graph)
+        next(e for e in bad["edges"] if e["type"] == "operates")["confidence"] = None
+        self.assertTrue(any("confidence" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+        bad = copy.deepcopy(graph)
+        next(n for n in bad["nodes"] if n["kind"] == "program")["subtype"] = "event_series"
+        self.assertTrue(any("subtype" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+
     def test_quality_report_is_deterministic(self):
         first = report(self.graph, self.views, ENTITIES, PEOPLE)
         second = report(self.graph, self.views, ENTITIES, PEOPLE)

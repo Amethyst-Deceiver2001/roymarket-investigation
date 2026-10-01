@@ -1,0 +1,305 @@
+[
+  {
+    "slug": "natsproekt-bas",
+    "kind": "program",
+    "subtype": "national_project",
+    "name_ru": "Национальный проект «Беспилотные авиационные системы»",
+    "name_en": "National project «Unmanned Aircraft Systems»",
+    "operators": [],
+    "claims": [
+      {
+        "text_ru": "к 2030 г. на долю российских беспилотников будет приходиться 70% рынка; сейчас этот показатель на уровне 42%",
+        "metric": "target share of Russian-made drones in the Russian market",
+        "value": "70% by 2030; 42% now",
+        "as_of": "2026-09-16",
+        "source_id": "s8829",
+        "asserted_by": "portal (АНО «Национальные приоритеты»)"
+      }
+    ],
+    "notes": "Five federal projects (портал): разработка, стандартизация и серийное производство БАС и комплектующих; стимулирование спроса; перспективные технологии; инфраструктура, безопасность и сертификация; кадры. Portal text is a summary for a general audience: every figure is a lead until read in the decision behind it. See notes/bas_program_leads.md."
+  },
+  {
+    "slug": "npc-bas-network",
+    "kind": "program",
+    "subtype": "centre_network",
+    "parent": "natsproekt-bas",
+    "parent_source_id": "s8829",
+    "parent_as_of": "2026-09-16",
+    "name_ru": "Сеть научно-производственных центров БАС (НПЦ БАС)",
+    "claims": [
+      {
+        "text_ru": "к 2030 году в регионах сформируют сеть из 48 научно-производственных центров",
+        "metric": "planned centres",
+        "value": "48 by 2030",
+        "as_of": "2026-09-16",
+        "source_id": "s8829",
+        "asserted_by": "portal"
+      },
+      {
+        "text_ru": "18 центров, аккредитованных Росавиацией, уже работают",
+        "metric": "accredited centres",
+        "value": "18",
+        "as_of": "2026-09-16",
+        "source_id": "s8829",
+        "asserted_by": "portal"
+      },
+      {
+        "text_ru": "В 2024-2025 годах Фонд НТИ… определил 148 победителей",
+        "metric": "Фонд НТИ grant winners among НПЦ residents",
+        "value": "148",
+        "as_of": "2026-09-16",
+        "source_id": "s8829",
+        "asserted_by": "portal"
+      }
+    ],
+    "open_questions": [
+      "The accredited-centre list (18) and the grant winners (148, named only by application number in the Фонд НТИ protocols s8825-s8826) are not yet named from a primary list; the НПЦ sites list their residents."
+    ]
+  },
+  {
+    "slug": "ushkuynik-residency",
+    "kind": "program",
+    "subtype": "residency",
+    "parent": "npc-bas-network",
+    "parent_source_id": "s8612",
+    "parent_as_of": "2026-09-30",
+    "name_ru": "Резидентство НПЦ «Ушкуйник»",
+    "operators": [
+      {
+        "slug": "ano-npts-ushkuynik",
+        "role": "residency programme",
+        "basis": "doc",
+        "source_id": "s8612",
+        "as_of": "2026-09-30"
+      }
+    ],
+    "claims": [
+      {
+        "text_ru": "30+ резидентов из 10 регионов России",
+        "metric": "residents",
+        "value": "30+ in 10 regions",
+        "as_of": "2026-09-30",
+        "source_id": "s8612",
+        "asserted_by": "self (nvgushkuynik.ru)"
+      },
+      {
+        "text_ru": "2500 м² производственных площадей",
+        "metric": "production area",
+        "value": "2,500 m2",
+        "as_of": "2026-09-30",
+        "source_id": "s8612",
+        "asserted_by": "self (nvgushkuynik.ru)"
+      },
+      {
+        "text_ru": "140000 м² площадь лётно-испытательного полигона",
+        "metric": "flight-test ground",
+        "value": "140,000 m2",
+        "as_of": "2026-09-30",
+        "source_id": "s8612",
+        "asserted_by": "self (nvgushkuynik.ru)"
+      },
+      {
+        "text_ru": "10+ стартапов выходят на серийное производство ежегодно",
+        "metric": "startups to serial production per year",
+        "value": "10+",
+        "as_of": "2026-09-30",
+        "source_id": "s8612",
+        "asserted_by": "self (nvgushkuynik.ru)"
+      },
+      {
+        "text_ru": "АНО «НПЦ «Ушкуйник» создан по инициативе Правительства Новгородской области и аккредитован Минпромторгом России",
+        "metric": "accreditation",
+        "value": "Минпромторг (per site)",
+        "as_of": "2026-09-30",
+        "source_id": "s8612",
+        "asserted_by": "self (nvgushkuynik.ru)"
+      }
+    ],
+    "terms": "Application (заявление, анкета, описание проекта) with charter, ЕГРЮЛ extract and bank details to the centre's e-mail; Экспертный совет decides, «обычно… не более 10 дней»; then «Соглашение о реализации проекта на базе НПЦ» and «Договор субаренды помещений». Address on the site: Великий Новгород, ул. Лазаревская, 11. Grants listed for residents include Фонд НТИ «Гранты по БАС» ₽30-300m, conditional on «резидентство в аккредитованных Росавиацией НПЦ».",
+    "open_questions": [
+      "The site says the centre is accredited by Минпромторг; the national-project portal (s8829) and the Фонд НТИ page (s8833) say НПЦ are accredited by Росавиация. Which body accredited it, and when, is not established.",
+      "The site gives the «опытные образцы» grant ceiling as ₽70m; the portal gives ₽60m (s8829). Read the Фонд НТИ rules (ПП 1780/1781) before using either.",
+      "No resident is named on the site. The 30+ figure is a claim; named residents attach one by one as they surface."
+    ]
+  },
+  {
+    "slug": "cbst-residency",
+    "kind": "program",
+    "subtype": "residency",
+    "name_ru": "Резидентство ЦБСТ",
+    "operators": [
+      {
+        "slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
+        "role": "residency programme",
+        "basis": "doc",
+        "source_id": "s8842",
+        "as_of": "2025-09-08"
+      }
+    ],
+    "notes": "ЦБСТ's own channel names «резиденты ЦБСТ» throughout (post 1193, s8842: «резиденты ЦБСТ представили свои разработки на выставке»). The roster is held as per-entity cbst_tie records and cbst_resident_sweep.py output; memberships[] are added here as each is wired. No size claim is recorded: the earlier brief figure of 525 has no source in the registry."
+  },
+  {
+    "slug": "cbst-accelerator",
+    "kind": "program",
+    "subtype": "accelerator",
+    "name_ru": "Акселератор ЦБСТ для специальных проектов и проектов двойного назначения",
+    "operators": [
+      {
+        "slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
+        "role": "accelerator",
+        "basis": "doc",
+        "source_id": "s7522",
+        "as_of": null
+      }
+    ],
+    "notes": "Streams (потоки) with modules; НПЦ БАСиРТК's four projects were selected into the III stream (s7522)."
+  },
+  {
+    "slug": "ushkuynik-group",
+    "kind": "group",
+    "subtype": "brand_cluster",
+    "name_ru": "Группа «Ушкуйник»",
+    "members": [
+      {
+        "slug": "ano-npts-ushkuynik",
+        "role": "nonprofit centre (residency, test ground)",
+        "basis": "doc",
+        "source_id": "s8612",
+        "as_of": "2026-09-30"
+      },
+      {
+        "slug": "npts-ushkuynik",
+        "role": "commercial entity carrying the «Князь Вандал Новгородский» product",
+        "basis": "inferred",
+        "source_id": null,
+        "as_of": null,
+        "note": "Shared name and street; no documented ownership link (see the entity's related_entities)."
+      },
+      {
+        "slug": "ooo-ushkuynik-sp",
+        "role": "«-СП» group vehicle",
+        "basis": "inferred",
+        "source_id": null,
+        "as_of": null,
+        "note": "Shared name and street; founders redacted in ЕГРЮЛ."
+      }
+    ],
+    "notes": "Three separate legal entities: identity is the ИНН, so they are not merged. The АНО's ЕГРЮЛ founders (Платформа НТИ, АНО ЦСАСД «Демянск», АО УК ИНТЦ «Валдай», Минпромторг Новгородской области) are on its entity record, not group members."
+  },
+  {
+    "slug": "dronnitsa",
+    "kind": "event",
+    "subtype": "event_series",
+    "name_ru": "«Дронница» — Всероссийский слёт операторов боевых беспилотных систем",
+    "organisers": [
+      {
+        "slug": "ano-npts-ushkuynik",
+        "role": "co-organiser",
+        "basis": "doc",
+        "source_id": "s8841",
+        "as_of": "2025-09-03"
+      }
+    ],
+    "claims": [
+      {
+        "text_ru": "Первая «Дронница», прошедшая в августе 2022",
+        "metric": "first edition",
+        "value": "August 2022",
+        "as_of": "2025-09-03",
+        "source_id": "s8841",
+        "asserted_by": "organisers (@dronnitsa)"
+      },
+      {
+        "text_ru": "Организаторы мероприятия: Координационный центр помощи Новороссии (КЦПН), АНО «НПЦ Ушкуйник», при поддержке правительства Новгородской области",
+        "metric": "organisers",
+        "value": "КЦПН; АНО «НПЦ Ушкуйник»; supported by the Novgorod government",
+        "as_of": "2025-09-03",
+        "source_id": "s8841",
+        "asserted_by": "organisers (@dronnitsa)"
+      },
+      {
+        "text_ru": "Администратор — Алексей Чадаев",
+        "metric": "channel administrator (19.07.2022)",
+        "value": "Алексей Чадаев",
+        "as_of": "2022-07-19",
+        "source_id": "s8834",
+        "asserted_by": "self (@dronnitsa msg 2)"
+      }
+    ],
+    "open_questions": [
+      "КЦПН (Координационный Центр Помощи Новороссии, @kcpn2014), the co-organiser and event owner (head: Александр Любимов), has no registry entity: legal form and ИНН not resolved from a primary document. Not created until they are.",
+      "Editions 2022 and 2023 are not yet recorded (dates, place, participants)."
+    ]
+  },
+  {
+    "slug": "dronnitsa-2024",
+    "kind": "event",
+    "subtype": "event_edition",
+    "parent": "dronnitsa",
+    "parent_source_id": "s8835",
+    "parent_as_of": "2024-08-21",
+    "name_ru": "Дронница 2024",
+    "claims": [
+      {
+        "text_ru": "Слёт пройдет с 6 по 8 сентября в Великом Новгороде … Место проведения – Новгородская техническая школа … 8 сентября – закрытая демонстрация и испытания изделий на полигоне",
+        "metric": "dates and place",
+        "value": "6-8 Sep 2024, Великий Новгород",
+        "as_of": "2024-08-21",
+        "source_id": "s8835",
+        "asserted_by": "organisers (@dronnitsa)"
+      },
+      {
+        "text_ru": "Сегодня на «Дроннице 2024» подписан ряд важных соглашений",
+        "metric": "agreements signed 06.09.2024",
+        "value": "Правительство Новгородской области - АНО «Платформа НТИ» (Богданов, Силинг); АНО «НПЦ «Ушкуйник» - АНО «ЦБСТ» (Чадаев, Рубинштейн)",
+        "as_of": "2024-09-06",
+        "source_id": "s8836",
+        "asserted_by": "organisers (@dronnitsa)"
+      }
+    ]
+  },
+  {
+    "slug": "dronnitsa-2025",
+    "kind": "event",
+    "subtype": "event_edition",
+    "parent": "dronnitsa",
+    "parent_source_id": "s8841",
+    "parent_as_of": "2025-09-03",
+    "name_ru": "Дронница 2025 (IV)",
+    "organisers": [
+      {
+        "slug": "ano-npts-ushkuynik",
+        "role": "co-organiser",
+        "basis": "doc",
+        "source_id": "s8841",
+        "as_of": "2025-09-03"
+      }
+    ],
+    "claims": [
+      {
+        "text_ru": "6-7 сентября в Новгородской области пройдёт IV всероссийский слёт операторов боевых беспилотных систем «Дронница 2025»",
+        "metric": "dates and place",
+        "value": "6-7 Sep 2025, Новгородская область",
+        "as_of": "2025-09-03",
+        "source_id": "s8841",
+        "asserted_by": "organisers (@dronnitsa)"
+      },
+      {
+        "text_ru": "В выставке примут участие представители свыше 100 российских предприятий",
+        "metric": "announced exhibitors",
+        "value": "100+ enterprises (announced, before the event)",
+        "as_of": "2025-09-03",
+        "source_id": "s8841",
+        "asserted_by": "organisers (@dronnitsa)"
+      },
+      {
+        "text_ru": "участие в Дроннице всегда бесплатное",
+        "metric": "participation fee",
+        "value": "free",
+        "as_of": "2025-09-03",
+        "source_id": "s8841",
+        "asserted_by": "organisers (@dronnitsa)"
+      }
+    ]
+  }
+]

@@ -458,6 +458,24 @@
         "source_id": "s0384"
       }
     ],
+    "participations": [
+      {
+        "event": "dronnitsa-2024",
+        "role": "signatory",
+        "basis": "doc",
+        "source_id": "s8836",
+        "as_of": "2024-09-06",
+        "note": "Agreement with АНО «НПЦ «Ушкуйник»»; ЦБСТ's own confirmation: post 109, s8837."
+      },
+      {
+        "event": "dronnitsa-2025",
+        "role": "speaker",
+        "basis": "doc",
+        "source_id": "s8842",
+        "as_of": "2025-09-08",
+        "note": "Two lectures by the general director; residents exhibited. ЦБСТ participated; the organiser was КЦПН with НПЦ «Ушкуйник» (s8841)."
+      }
+    ],
     "_corrected": [
       "2026-08-24: OpenSanctions screening surfaced a sanctions-adjacent lead requiring careful disambiguation — see open_questions and the new ooo-tsentr-bespilotnykh-sistem-tula record.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0574).",
@@ -12698,6 +12716,16 @@
       "brief:prose"
     ],
     "tier_basis": "EU-sanctioned ЦБСТ resident, named directly by ЦБСТ's own channel (20th-package coverage, 24.04.2026); see cbst_tie.",
+    "participations": [
+      {
+        "event": "dronnitsa-2025",
+        "role": "exhibitor",
+        "basis": "doc",
+        "source_id": "s8843",
+        "as_of": "2025-09-09",
+        "note": "ЦБСТ post 1202: the company's representative shared impressions and pilots demonstrated its UAV in the test zone."
+      }
+    ],
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1237300010430-20260823131643.pdf). Full registered name is ООО \"СИМБИРСКОЕ КОНСТРУКТОРСКОЕ БЮРО ПИРАНЬЯ\" (\"Simbirsk Design Bureau Piranha\" -- Simbirsk being Ulyanovsk historical/Soviet-era name) -- sole founder = sole director since 2023.",
       "2026-09-29: the \"sole founder\" reading above is superseded -- the newer full signed ЕГРЮЛ выписка (s6730, pulled 2026-09-07) shows a 40/60 split between Чернышов Павел Алексеевич and Корчагина Ольга Александровна; the scalar founders[] array had stayed on the older single-founder s0487 reading even after founders_history was updated to the correct split. Corrected founders[] to match founders_history.",
@@ -20383,7 +20411,7 @@
     "subsidiaries": [],
     "tier": "manufacturer",
     "cbst_tie": {
-      "claim": "Product («Булат»/3mx) shown at ЦБСТ's Дронница 2025 showcase.",
+      "claim": "«Булат» detectors named in ЦБСТ's list of its residents' exhibits at the Слёт «Дронница 2025» (organiser КЦПН and НПЦ «Ушкуйник»; ЦБСТ participated), post 1193 (s8842).",
       "confidence": "t-doc",
       "evidence": "Found by searching the BRAND name «Булат», not the legal entity name «Тримикс» (which returns zero hits) — confirms the brands-not-legal-names search pattern. ЦБСТ's own channel, post 2159491523:1193, 08.09.2025: \"детекторы «Булат»\" listed among resident products shown at Дронница 2025, alongside «Пиранья», «Капюшон» and others.",
       "source_id": "s7596"
@@ -20685,9 +20713,19 @@
         "relationship_type": "dealer"
       }
     ],
-    "tier_basis": "Product («Булат»/«3mx» drone-detector line) shown at ЦБСТ's Дронница 2025 showcase per ЦБСТ's own channel — found via the BRAND name, since the legal-entity name returns zero hits (consistent with this project's established brands-not-legal-names search pattern). Sanctioned by the US, EU, Switzerland and Ukraine (ID-confirmed via ИНН match); holds an own-name UAV-detector invention patent (RU2826668C1) and word-mark trademarks explicitly covering \"дрон-детекторы\" by name.",
+    "tier_basis": "Product («Булат»/«3mx» drone-detector line) named in ЦБСТ's list of residents' exhibits at the Слёт «Дронница 2025» per ЦБСТ's own channel — found via the BRAND name, since the legal-entity name returns zero hits (consistent with this project's established brands-not-legal-names search pattern). Sanctioned by the US, EU, Switzerland and Ukraine (ID-confirmed via ИНН match); holds an own-name UAV-detector invention patent (RU2826668C1) and word-mark trademarks explicitly covering \"дрон-детекторы\" by name.",
     "ecosystem_roles": [
       "manufacturer"
+    ],
+    "participations": [
+      {
+        "event": "dronnitsa-2025",
+        "role": "exhibitor",
+        "basis": "doc",
+        "source_id": "s8842",
+        "as_of": "2025-09-08",
+        "note": "«детекторы «Булат»» named in ЦБСТ's list of what its residents showed (post 1193)."
+      }
     ],
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 2 trademark filing(s) matched by ИНН.",
@@ -33993,6 +34031,26 @@
       "2026-09-08: the extract's FY2024/2025 ЦФУ (targeted-funding) figures — \"Взносы и иные целевые поступления\" 26,401 т.р. (2024) / 532,070 т.р. (2025) — do not match this registry's existing financials[] funds_received figures for the same years (33,218,000 / 1,046,383,000, sourced s0282/s0283, presumably fuller БФО filings read directly). Not reconciled; the primary БФО-sourced figures are treated as more authoritative than this aggregator's summary and left unchanged, but the scale of the gap (roughly 2x) is large enough to flag for a closer read of both documents side by side.",
       "2026-09-08: the same extract lists 34 \"Госзакупки — Заказчик\" records (Ушкуйник as PURCHASER, mostly 223-ФЗ sole-supplier equipment buys for its \"Центр коллективного пользования\" production facility, individually ranging ~₽0.9M to ₽229.7M) plus 2 \"Госзакупки — Участник\" records (Ушкуйник as SUPPLIER, the already-wired FPV-drone-kit contracts to the Novgorod civil-defense customer). Only a subset of the 34 purchaser-side records appear to be individually wired in government_contracts[] so far (the ones enriched via the RTS-Tender organizer-list cross-check, source s5325) -- a full line-by-line reconciliation against all 34 was not attempted in this pass (would need the same EIS-number cross-verification discipline as the existing entries, not a mechanical copy from the aggregator's summary) and is flagged here as a real, sizeable open item for a dedicated future pass, not silently treated as already complete."
     ],
+    "memberships": [
+      {
+        "program": "cbst-residency",
+        "role": "resident",
+        "basis": "doc",
+        "source_id": "s7587",
+        "as_of": "2025-12-31",
+        "note": "Named among ЦБСТ's «resident-company leadership» in its New Year post (cbst_tie)."
+      }
+    ],
+    "participations": [
+      {
+        "event": "dronnitsa-2024",
+        "role": "signatory",
+        "basis": "doc",
+        "source_id": "s8836",
+        "as_of": "2024-09-06",
+        "note": "Agreement with АНО «ЦБСТ» signed by Чадаев and Рубинштейн at Дронница 2024; confirmed by ЦБСТ post 109 (s8837). The agreement text is not yet found."
+      }
+    ],
     "_corrected": [
       "User-flagged 2026-08-23: sibling/admin company to main npts-ushkuynik, not a separate product line.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0748).",
@@ -34381,6 +34439,16 @@
       ],
       "note": "Post 815 (18.06.2025) announces a ЦБСТ session at ПМЭФ on dual-use technology with Дмитрий Песков, head of АНО «Платформа НТИ», among the speakers. That is a speaker appearance at a ЦБСТ event; no institutional tie between the organisations is stated."
     },
+    "participations": [
+      {
+        "event": "dronnitsa-2024",
+        "role": "signatory",
+        "basis": "doc",
+        "source_id": "s8836",
+        "as_of": "2024-09-06",
+        "note": "Agreement with the Правительство Новгородской области (Богданов, Силинг), including support for НПЦ «Ушкуйник»."
+      }
+    ],
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 2 trademark filing(s) matched by ИНН.",
       "Full text read of the organization's own «Отчет о деятельности некоммерческой организации за 2025 г.», filed with Минюст (form УН000Х, pulled 23.08.2026). MAJOR CROSS-LINK FINDING: АНО «Платформа НТИ» self-declares as учредитель (founder) of SEVEN entities — including АНО «НПЦ «Ушкуйник»» (ОГРН 1235300003685), which is ALREADY a registry entity (manufacturer tier). This is a confirmed, primary-source parent-subsidiary edge between two entities already in this registry, previously unconnected. The other six named — АНО «НПЦ Колыбель БАС Калужской области», АНО «НПЦ БАС «Белгород»», АНО «НПЦ БАС Нижегородской области», АНО «НПЦ БАС Самара», АНО «ФЦ БАС», and a «Фонд поддержки проектов НТИ» — map directly onto the regional АНО «НПЦ БАС» network already parked as adjacent-not-core in the npc_bas_technopark_network memory. This is now a THIRD independent primary document tying that program to a confirmed roster entity (Ушкуйник), via the founder relationship itself rather than mere co-occurrence — worth reconsidering whether the whole НПЦ БАС cluster stays 'adjacent' or needs re-examination as directly connected through Ушкуйник. Governance is via a Наблюдательный совет (11 members) appointed per an АСИ (Агентство стратегических инициатив) protocol dated 12.12.2018 — i.e. Платформа НТИ answers structurally to АСИ. No licences; IT-accreditation on file (Минцифры, 14.05.2025).",
@@ -59789,6 +59857,16 @@
         "source_id": "s8735",
         "as_of": "2026-09-17",
         "note": "Post 695 says «Начинаем работу через онлайн-маркетплейс для продукции двойного назначения» and does not name РОЙ.МАРКЕТ. Read as РОЙ.МАРКЕТ by the user (2026-10-01); supported by ЦБСТ's own wording (posts 2413-2415, 2433, not yet archived). Inference, not a document."
+      }
+    ],
+    "memberships": [
+      {
+        "program": "cbst-accelerator",
+        "role": "accelerator_participant",
+        "basis": "doc",
+        "source_id": "s7522",
+        "as_of": null,
+        "note": "Four projects selected into the III stream; first two modules completed (cbst_tie)."
       }
     ],
     "_verified_against": "s0009 — this entity's own full signed ЕГРЮЛ extract, pulled 17.08.2026",

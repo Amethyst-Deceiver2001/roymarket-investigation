@@ -24,8 +24,10 @@ def main():
     ap.add_argument("--channel-id", type=int, required=True)
     ap.add_argument("--msg-ids", required=True)
     ap.add_argument("--slug", default="cbst-tie-evidence", help="descriptive filename suffix")
+    ap.add_argument("--db", default="data/roymarket.db",
+                    help="DB to read, relative to the repo; use a backup copy while a scan holds the live DB locked")
     args = ap.parse_args()
-    db = sqlite3.connect(REPO / "data" / "roymarket.db")
+    db = sqlite3.connect(f"file:{REPO / args.db}?mode=ro", uri=True)
     ch = db.execute("select username, title from tg_channels where id=?", (args.channel_id,)).fetchone()
     if not ch:
         raise SystemExit(f"channel {args.channel_id} not in tg_channels")
@@ -42,7 +44,7 @@ def main():
             continue
         out.write_text(
             f"t.me/{ch[0].lower()} ({ch[1]} own Telegram channel), channel_id {args.channel_id}, "
-            f"msg_id {mid}, {date}.\n\nFull text (Russian, verbatim from local DB, data/roymarket.db):\n\n{text}\n",
+            f"msg_id {mid}, {date}.\n\nFull text (Russian, verbatim from local DB, {args.db}):\n\n{text}\n",
             encoding="utf-8")
         print(f"wrote {out.name}")
 
