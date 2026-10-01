@@ -218,7 +218,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 6
+          "degree": 8
         },
         {
           "id": "ano-tsasd-demyansk",
@@ -242,7 +242,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 94
+          "degree": 95
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -1596,7 +1596,7 @@
           "label": "Дмитрий Песков",
           "name_latin": null,
           "sanctioned": false,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "dmitriy-vladimirovich-rubinshteyn",
@@ -13007,6 +13007,17 @@
           "confidence": null
         },
         {
+          "source": "ano-platforma-nti",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Its CEO Дмитрий Песков sits on ЦБСТ's Наблюдательный совет (first meeting 14.02.2025). The tie runs through the perso...",
+          "source_id": "s7600",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
           "source": "ano-tsasd-demyansk",
           "target": "ano-npts-ushkuynik",
           "type": "founded",
@@ -18942,6 +18953,17 @@
           "label": "director",
           "source_id": "s8074",
           "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "dmitriy-peskov",
+          "target": "ano-platforma-nti",
+          "type": "role",
+          "label": "Co-chair (сопредседатель) of the Комиссия по отбору получателей поддержки за счёт субсидии Фонду НТИ on serial production of БАС, their components and subsystems; also named as chairman of the Фонд НТИ council",
+          "source_id": "s8824",
+          "as_of": "2025-09-22",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
@@ -35371,7 +35393,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 6
+          "degree": 8
         },
         {
           "id": "ano-tsasd-demyansk",
@@ -35395,7 +35417,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 94
+          "degree": 95
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -42202,6 +42224,18 @@
           "degree": 44
         },
         {
+          "id": "ano-platforma-nti",
+          "kind": "entity",
+          "label": "АНО «Платформа НТИ»",
+          "name_latin": null,
+          "inn": "7703469180",
+          "tier": "plumbing",
+          "sanctioned": true,
+          "legal_form": "АНО",
+          "variant": null,
+          "degree": 8
+        },
+        {
           "id": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "kind": "entity",
           "label": "АНО «ЦБСТ» | Centre for Unmanned Systems & Technologies",
@@ -42211,7 +42245,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "variant": null,
-          "degree": 94
+          "degree": 95
         },
         {
           "id": "antonova-tatyana-sergeevna",
@@ -43405,6 +43439,17 @@
           "type": "cbst_tie",
           "label": "Named among ЦБСТ's \"resident-company leadership\" in a New Year channel post, alongside Авирон, Овод, АО «НПП», Аляска...",
           "source_id": "s7587",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc"
+        },
+        {
+          "source": "ano-platforma-nti",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Its CEO Дмитрий Песков sits on ЦБСТ's Наблюдательный совет (first meeting 14.02.2025). The tie runs through the perso...",
+          "source_id": "s7600",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
