@@ -67,6 +67,7 @@ ECOSYSTEM_ROLES = {
     "seller_of_record",   # the legal entity that appears as seller on a marketplace or invoice
     "licensed_dealer",    # named or certified by the manufacturer as an official dealer/supplier
     "distributor",        # wholesale or regional distribution
+    "platform_operator",  # operates the marketplace/agent contract through which sellers sell (ООО «МПТМ», РОЙ.МАРКЕТ)
 }
 LEGAL_ENTITY_STATUS = {"established", "unresolved"}
 

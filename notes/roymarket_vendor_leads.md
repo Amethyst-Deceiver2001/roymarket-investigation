@@ -96,3 +96,19 @@ This entity is already a ЦБСТ accelerator participant (s7522), so even if po
 
 - `@kb_spektr` added to `config/channels.txt`. Command: `python3 scripts/tg_scan.py --full --only kb_spektr`.
 - `@UAS_development` is on the list but the scrape ends at message 672: `python3 scripts/tg_scan.py --only UAS_development`.
+
+## РОЙ.МАРКЕТ operator: what the public site shows (read 2026-10-01)
+
+Fetched from roimarket.ru (Russian originals, captures `data/sources/WEBCAPTURE_20261001_roimarket-ru-*.html`; not yet registered with source ids, held while another session edits `sources.json`). Pages: /legal, /legal/supplier-offer, /legal/buyer-offer, /legal/platform-rules, /contacts. The роймаркет.рф host did not answer from here; roimarket.ru did.
+
+- /legal, last updated «29 июля 2026 года»: «Оферты для Покупателей и Поставщиков защищены: обезличенные редакции открыты всем, а полный текст с реквизитами доступен после входа». Supplier offer is «Редакция 3.0, вступает в силу 01.08.2026».
+- The public texts print the operator's requisites masked: buyer offer §13 «Наименование: ООО «****» ИНН: **********»; supplier offer «Наименование Агента: ООО «****»»; platform rules §23 likewise. /contacts: «Оператор платформы», e-mail only.
+- So the current public site does **not** name ООО «МПТМ». The brief's statement that МПТМ's address and its Банк ПСБ account are printed in the supplier offer rests on an earlier, unmasked view, with no archived copy; it is unverified here.
+- Independent document: ЦБСТ's 2025 report to Минюст (s0207, section 2.2) lists ООО «МПТМ» ОГРН 1257700021468 as an LLC in which ЦБСТ participates since 22.01.2025. No share stated; the report does not say МПТМ runs the marketplace.
+- **Resolved by the Wayback capture of 22.08.2026** (`data/sources/WAYBACK_20260822_roimarket-supplier-offer.html`, captured 22.08.2026 09:13:40 UTC, original read in Russian; plus the `sell-with-roy` page, `WAYBACK_20260822_roimarket-sell-with-roy.html`, from the user-supplied roимаркет.рф capture). The unmasked supplier offer, «Агентский договор-оферта для Поставщиков», редакция 3.0:
+  - §1.1.1: «Агент / Оператор платформы / владелец агрегатора — Общество с ограниченной ответственностью «МПТМ», ИНН 9714068459, КПП 771401001, ОГРН 1257700021468», address 125167, Москва, … ал. Нарышкинская, д. 5, стр. 2, помещ. 1/1; it acts «от имени и за счёт Поставщика».
+  - §17 «Реквизиты Агента»: «Платформа: роймаркет.рф»; account at ПАО «БАНК ПСБ», БИК 044525555.
+  - The site header in that capture reads «ООО «МПТМ» · ИНН 9714068459». By 01.10.2026 the live pages show «ООО «****»» instead: the operator's name was masked between those dates.
+  - The offer's counterparties are «Поставщики» (юрлица and ИП) selling through the platform; the platform is their agent, not the seller of record. That is the structure the registry's `sells_for` edges should point at.
+  - `sell-with-roy` (same day): «РОЙ.МАРКЕТ - защищённый канал продаж товаров двойного назначения»; «Ваши товары могут продаваться не только на Wildberries и Ozon». ЦБСТ's own phrase, used by the operator's seller page.
+- Still not established: the ЦБСТ share in МПТМ (s0207 gives participation since 22.01.2025, no percentage; ЕГРЮЛ participants restricted since 15.07.2026).

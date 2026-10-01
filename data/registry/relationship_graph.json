@@ -1,8 +1,8 @@
 {
   "schema_version": 7,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1223,
-  "edge_count": 2077,
+  "node_count": 1233,
+  "edge_count": 2092,
   "unresolved_count": 113,
   "nodes": [
     {
@@ -243,7 +243,7 @@
       "sanctioned": true,
       "legal_form": "АНО",
       "variant": null,
-      "degree": 92
+      "degree": 94
     },
     {
       "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -976,6 +976,14 @@
       "name_latin": "Borsyakov Nikita Vyacheslavovich",
       "sanctioned": false,
       "degree": 1
+    },
+    {
+      "id": "bratenkov-andrey-alekseevich",
+      "kind": "person",
+      "label": "Братеньков Андрей Алексеевич",
+      "name_latin": "Bratenkov Andrey Alekseevich",
+      "sanctioned": false,
+      "degree": 2
     },
     {
       "id": "bryukov-sergey-borisovich",
@@ -2108,6 +2116,30 @@
       "degree": 5
     },
     {
+      "id": "ip-bratenkov-andrey-alekseevich",
+      "kind": "entity",
+      "label": "ИП Братеньков Андрей Алексеевич (прекратил деятельность 23.04.2020)",
+      "name_latin": "IP Bratenkov Andrey Alekseevich (ceased 2020)",
+      "inn": "540787849136",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "ИП",
+      "variant": null,
+      "degree": 3
+    },
+    {
+      "id": "ip-karpushin-aleksandr-aleksandrovich",
+      "kind": "entity",
+      "label": "ИП Карпушин Александр Александрович",
+      "name_latin": "IP Karpushin Aleksandr Aleksandrovich",
+      "inn": "540863046567",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "ИП",
+      "variant": null,
+      "degree": 1
+    },
+    {
       "id": "ip-kuznetsov-ruslan-nikolaevich",
       "kind": "entity",
       "label": "ИП Кузнецов Руслан Николаевич",
@@ -2118,6 +2150,18 @@
       "legal_form": "ИП",
       "variant": null,
       "degree": 3
+    },
+    {
+      "id": "ip-mavrin-oleg-vladimirovich",
+      "kind": "entity",
+      "label": "ИП Маврин Олег Владимирович",
+      "name_latin": "IP Mavrin Oleg Vladimirovich",
+      "inn": "540316596357",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "ИП",
+      "variant": null,
+      "degree": 2
     },
     {
       "id": "ip-shandobylo-sergey-sergeevich",
@@ -2238,6 +2282,18 @@
       "name_latin": "Kaznova Tatyana Andreevna",
       "sanctioned": false,
       "degree": 4
+    },
+    {
+      "id": "kb-spektr-novosibirsk",
+      "kind": "entity",
+      "label": "КБ «СПЕКТР» (Новосибирск; юридическое лицо не установлено)",
+      "name_latin": "KB Spektr (Novosibirsk)",
+      "inn": null,
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 10
     },
     {
       "id": "kelyan-andrey-khazarovich",
@@ -2734,6 +2790,14 @@
       "name_latin": null,
       "sanctioned": true,
       "degree": 3
+    },
+    {
+      "id": "mavrin-oleg-vladimirovich",
+      "kind": "person",
+      "label": "Маврин Олег Владимирович",
+      "name_latin": "Mavrin Oleg Vladimirovich",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "mikhail-kuznetsov",
@@ -3721,7 +3785,7 @@
       "sanctioned": false,
       "legal_form": "ООО",
       "variant": null,
-      "degree": 4
+      "degree": 8
     },
     {
       "id": "ooo-nii-dpo",
@@ -3853,7 +3917,7 @@
       "sanctioned": false,
       "legal_form": null,
       "variant": null,
-      "degree": 8
+      "degree": 9
     },
     {
       "id": "ooo-ntc-arkodim",
@@ -6243,6 +6307,58 @@
       "label": "Детектор беспилотных летательных аппаратов «Булат» v.4",
       "owner_slug": "ip-tsyganov-vadim-borisovich",
       "source_id": "s1459",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::kb-spektr-novosibirsk::пропеллеры-8-9-10-дюймов-и-15-7-3-дюйма",
+      "kind": "product",
+      "label": "Пропеллеры 8, 9, 10 дюймов (Армамид / Волгамид) и 15×7×3 дюйма",
+      "owner_slug": "kb-spektr-novosibirsk",
+      "source_id": "s8737",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::kb-spektr-novosibirsk::пропеллеры-для-бпла-в-том-числе-складной-18-5-15-дюйма",
+      "kind": "product",
+      "label": "Пропеллеры для БПЛА, в том числе складной 18,5×15 дюйма (серийное производство, до 20 тыс. изделий в месяц по словам исполнительного директора)",
+      "owner_slug": "kb-spektr-novosibirsk",
+      "source_id": "s8733",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::kb-spektr-novosibirsk::пропеллеры-для-трофейных-тяжелых-бпла-баба-яга",
+      "kind": "product",
+      "label": "Пропеллеры для трофейных тяжелых БПЛА «Баба-Яга» (1 000 комплектов в месяц)",
+      "owner_slug": "kb-spektr-novosibirsk",
+      "source_id": "s8732",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::kb-spektr-novosibirsk::хоккейные-лезвия-red-star-инженерные-услуги",
+      "kind": "product",
+      "label": "Хоккейные лезвия «RED STAR»; инженерные услуги (3D-сканирование, реверс-инжиниринг)",
+      "owner_slug": "kb-spektr-novosibirsk",
+      "source_id": "s8811",
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -13223,6 +13339,17 @@
     },
     {
       "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "target": "ooo-mptm",
+      "type": "owns",
+      "label": "участник (доля не указана)",
+      "source_id": "s0207",
+      "as_of": "2025-01-22",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
+      "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "target": "ooo-sistemnyy-integrator",
       "type": "founded",
       "label": null,
@@ -16242,6 +16369,28 @@
       "label": "co-inventor (patent RU2766442C1)",
       "source_id": "s1029",
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "bratenkov-andrey-alekseevich",
+      "target": "ip-bratenkov-andrey-alekseevich",
+      "type": "role",
+      "label": "Индивидуальный предприниматель",
+      "source_id": "s8741",
+      "as_of": "2007-08-02",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "bratenkov-andrey-alekseevich",
+      "target": "kb-spektr-novosibirsk",
+      "type": "role",
+      "label": "Исполнительный директор (named by TASS)",
+      "source_id": "s8732",
+      "as_of": "2025-01-06",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -20878,6 +21027,28 @@
       "confidence": null
     },
     {
+      "source": "ip-bratenkov-andrey-alekseevich",
+      "target": "kb-spektr-novosibirsk",
+      "type": "related",
+      "label": "operated-brand",
+      "source_id": "s8743",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ip-karpushin-aleksandr-aleksandrovich",
+      "target": "kb-spektr-novosibirsk",
+      "type": "sells_for",
+      "label": "Ozon (store «Звезда Спектр»)",
+      "source_id": "s8814",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
       "source": "ip-kuznetsov-ruslan-nikolaevich",
       "target": "ooo-trimiks",
       "type": "sells_for",
@@ -20898,6 +21069,17 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
+    },
+    {
+      "source": "ip-mavrin-oleg-vladimirovich",
+      "target": "kb-spektr-novosibirsk",
+      "type": "sells_for",
+      "label": "Ozon (store «СПЕКТР конструкторское бюро»)",
+      "source_id": "s8813",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
     },
     {
       "source": "ip-tsyganov-vadim-borisovich",
@@ -21269,6 +21451,72 @@
       "label": "Учредитель, 5% доля",
       "source_id": "s5474",
       "as_of": "2026-03-12",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kb-spektr-novosibirsk",
+      "target": "ip-bratenkov-andrey-alekseevich",
+      "type": "related",
+      "label": "operated-brand",
+      "source_id": "s8743",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kb-spektr-novosibirsk",
+      "target": "ooo-mptm",
+      "type": "sells_for",
+      "label": "РОЙ.МАРКЕТ (Поставщик under the agent offer)",
+      "source_id": "s8737",
+      "as_of": "2026-07-06",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
+      "source": "kb-spektr-novosibirsk",
+      "target": "product::kb-spektr-novosibirsk::пропеллеры-8-9-10-дюймов-и-15-7-3-дюйма",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8737",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kb-spektr-novosibirsk",
+      "target": "product::kb-spektr-novosibirsk::пропеллеры-для-бпла-в-том-числе-складной-18-5-15-дюйма",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8733",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kb-spektr-novosibirsk",
+      "target": "product::kb-spektr-novosibirsk::пропеллеры-для-трофейных-тяжелых-бпла-баба-яга",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8732",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kb-spektr-novosibirsk",
+      "target": "product::kb-spektr-novosibirsk::хоккейные-лезвия-red-star-инженерные-услуги",
+      "type": "produces",
+      "label": null,
+      "source_id": "s8811",
+      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -23436,6 +23684,17 @@
       "label": "director",
       "source_id": "s8121",
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "mavrin-oleg-vladimirovich",
+      "target": "ip-mavrin-oleg-vladimirovich",
+      "type": "role",
+      "label": "Индивидуальный предприниматель; seller of record of the Ozon storefront «СПЕКТР конструкторское бюро»",
+      "source_id": "s8744",
+      "as_of": "2020-02-18",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null
@@ -27061,6 +27320,17 @@
     },
     {
       "source": "ooo-mptm",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "ЦБСТ's own 2025 report to the Минюст lists ООО «МПТМ» (ОГРН 1257700021468) as an ООО in which ЦБСТ participates, from...",
+      "source_id": "s0207",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-mptm",
       "target": "ooo-aerotekhalyans",
       "type": "related",
       "label": "shared-address",
@@ -27850,6 +28120,17 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-npts-basirtk",
+      "target": "ooo-mptm",
+      "type": "sells_for",
+      "label": "РОЙ.МАРКЕТ (reading of @UAS_development post 695)",
+      "source_id": "s8735",
+      "as_of": "2026-09-17",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "inferred"
     },
     {
       "source": "ooo-npts-basirtk",
@@ -36349,7 +36630,6 @@
     "barilo-denis-aleksandrovich",
     "bf-ktspn-barnaul",
     "borisov-aleksandr-sergeevich-tsbs-tula",
-    "bratenkov-andrey-alekseevich",
     "chetvertkov-aleksey-vladimirovich",
     "chichkov-aleksandr-yurevich",
     "chumakov-pavel-andreevich",
@@ -36397,15 +36677,11 @@
     "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
     "golovachev-vitaliy-yurevich",
     "goncharenko-anton-aleksandrovich",
-    "ip-bratenkov-andrey-alekseevich",
     "ip-gabitov-r-a",
-    "ip-karpushin-aleksandr-aleksandrovich",
-    "ip-mavrin-oleg-vladimirovich",
     "ip-popov-aleksandr-sergeevich",
     "ip-sidorov-andrey-sergeevich",
     "ivlev-artem-yurevich",
     "kashnikov-konstantin-nikolaevich",
-    "kb-spektr-novosibirsk",
     "khristyuk-ekaterina-valerevna",
     "khristyuk-vladimir-vladimirovich",
     "kindyakov-andrey-andreevich",
@@ -36419,7 +36695,6 @@
     "lobov-vadim-georgievich",
     "lunev-ivan-ivanovich",
     "maksimov-yuriy-alekseevich",
-    "mavrin-oleg-vladimirovich",
     "medisova-tatyana-nikolaevna",
     "mikhaylova-irina-valerievna",
     "mikhelson-viktoriya-leonidovna",
@@ -36459,10 +36734,6 @@
     "product::ip-gabitov-r-a::beastcontrol-система-удаленного-управления-fpv-дроном-через-интернет-на-базе-orange-pi-3b",
     "product::ip-gabitov-r-a::аккумулятор-для-fpv-дрона-gnb-9000-mah-6s-70c-xt60",
     "product::ip-popov-aleksandr-sergeevich::аккумуляторы-gaoneng-для-fpv-дронов-различные-емкости",
-    "product::kb-spektr-novosibirsk::пропеллеры-8-9-10-дюймов-и-15-7-3-дюйма",
-    "product::kb-spektr-novosibirsk::пропеллеры-для-бпла-в-том-числе-складной-18-5-15-дюйма",
-    "product::kb-spektr-novosibirsk::пропеллеры-для-трофейных-тяжелых-бпла-баба-яга",
-    "product::kb-spektr-novosibirsk::хоккейные-лезвия-red-star-инженерные-услуги",
     "product::kolskaya-verf::безэкипажный-катер-на-подводных-крыльях",
     "product::ooo-arkhangel-zaporizhzhie::вынос-пульта-управления-бпла",
     "product::ooo-arkhangel-zaporizhzhie::дрон-перехватчик-архангел",
