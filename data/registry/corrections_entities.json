@@ -9991,6 +9991,34 @@
           "context": "@kb_spektr post 322, 07.07.2026; a video whose thumbnail shows a box on a pallet. Batteries are announced as upcoming, not listed.",
           "source_id": "s8737",
           "as_of": "2026-07-07"
+        },
+        {
+          "text_ru": "Первая деталь сделанная для КБ Спектр в Томском НПЦ",
+          "text_en": "The first part made for КБ Спектр at the Tomsk НПЦ.",
+          "context": "@kb_spektr post 123, 22.01.2025 (photo post, caption: «ТЕПЕРЬ ВСЕ ВОЗМОЖНО !!!»). The НПЦ is not named further; the Tomsk НПЦ БАС is the only Tomsk НПЦ the channel names later (post 229).",
+          "source_id": "s8887",
+          "as_of": "2025-01-22"
+        },
+        {
+          "text_ru": "Пусть долго и тяжело, но мы всем коллективом (в том числе «Горный ЦОТ», НПЦ БАС Томск и НПП «Исток») ДВИГАЕМСЯ К СВОЕЙ ЦЕЛИ.",
+          "text_en": "However long and hard it is, we, the whole team (including «Горный ЦОТ», the Tomsk НПЦ БАС and НПП «Исток»), are moving toward our goal.",
+          "context": "@kb_spektr post 229, 20.12.2025. The bureau's own channel names the Tomsk НПЦ БАС as part of its working group.",
+          "source_id": "s8880",
+          "as_of": "2025-12-20"
+        },
+        {
+          "text_ru": "КБ «Спектр» выступает головным разработчиком двигателя.",
+          "text_en": "КБ «Спектр» acts as lead developer of the engine.",
+          "context": "Release of «Горный-ЦОТ» (channel @gorniytsot), forwarded in mil_hub 123433, 05.02.2026: serial production of the 45 kW motor ЭД 9060 for the heavy octocopter «Илья Муромец» by a partnership of КБ «Спектр», НПП «Исток» (Sm-Co magnets) and «Горный-ЦОТ» (production under the Kuzbass project «Небо Кузбасса»). The release does not name a НПЦ БАС; the bes_pilot summary of it (mil_hub 123437) adds «НПЦ БАС ТО» (secondary, not read in the original).",
+          "source_id": "s8882",
+          "as_of": "2026-02-05"
+        },
+        {
+          "text_ru": "С нашими пропеллерами 10х5х3 это лучшая ВМГ, занявшая призовое место в Архипелаге-2025.",
+          "text_en": "With our 10x5x3 propellers this is the best propulsion unit, which took a prize place at Архипелаг-2025.",
+          "context": "@kb_spektr post 258, 10.03.2026 (motors 3115 «Горный ЦОТ»). Post 193 (14.08.2025, s8888) says the bureau did not travel to Архипелаг and that its drone «Воробей-10» on its own frame and propellers 10х5х3 «ПОКАЗАЛ ВЕСЬМА ДОСТОЙНЫЙ РЕЗУЛЬТАТ»; who entered it and what the prize was are not stated.",
+          "source_id": "s8885",
+          "as_of": "2026-03-10"
         }
       ],
       "web": {
@@ -10043,7 +10071,15 @@
         },
         {
           "source_id": "s8737",
-          "text": "The ЦБСТ tie is 'not found in what was searched': posts 1-179 of @kb_spektr are unread and the channel is not in the local DB. See notes/roymarket_vendor_leads.md."
+          "text": "2026-10-02 UPDATE of the 2026-10-01 note (which said posts 1-179 were unread and the channel was not in the local DB): the DB now holds @kb_spektr posts 100-348 (238 posts, 2024-10-10 to 2026-10-01); posts 1-99 are not in it. A case-folded regex over all 238 for ЦБСТ|ЦСБТ|центр беспилотных систем|резидент|НПЦ|НТИ|нацпроект|Росавиац|Единая Россия|Архипелаг|Ушкуйник|Дронниц|Минпромторг|грант|субсид|Эра|технополис matched 5 posts (123, 193, 229, 236, 258) and none of the ЦБСТ terms. 'No ЦБСТ tie found' therefore stands for those 238 posts only. See notes/roymarket_vendor_leads.md."
+        },
+        {
+          "source_id": "s8880",
+          "text": "The bureau's own posts 123 (22.01.2025) and 229 (20.12.2025) place it in a working relationship with a Tomsk НПЦ / «НПЦ БАС Томск», and the Горный-ЦОТ release (s8882) names it with НПП «Исток» as co-developer of the ЭД 9060 motor. This is the first documented link between a РОЙ.МАРКЕТ seller and the national БАС network (the Tomsk НПЦ is not in the registry). Not recorded as a tie: what the НПЦ did (post 123 shows a part made there) and whether the bureau is an НПЦ resident are not stated. Next: the Tomsk НПЦ БАС roster and its legal entity."
+        },
+        {
+          "source_id": "s8888",
+          "text": "«Воробей»: the bureau posts a drone and frame «Воробей-10» / «Воробей-10М» (posts 116, 132, 193). ЦБСТ post 1557 (s8889) names a «Воробей» among drones of resident companies, and an unrelated serial FPV drone «Воробей» was in the press in 2023 and 2024 (mil_hub 21966, 56643). A name match only: not recorded as a ЦБСТ tie."
         }
       ],
       "sells_for": [
@@ -11564,7 +11600,11 @@
           },
           {
             "source_id": null,
-            "text": "2026-10-01 lead review of the seven open ЦБСТ post warnings: (1) НПП «ЭЛВО», St Petersburg, named in ЦБСТ post 2209 as a participant of Accelerator stream II and partner of Кольская верфь on a hydrofoil unmanned boat; not in the registry, identity unresolved (a web search for a company of this name found no confirmed legal entity; do not match by name alone). (2) The maker of the interceptor «Молот-ПВО» named in post 2124 is unresolved; a press item about a different interceptor called «Молот» credits the Moscow company Nova Labs, which is unverified as the same product."
+            "text": "2026-10-01 lead review of the seven open ЦБСТ post warnings: (1) НПП «ЭЛВО», St Petersburg, named in ЦБСТ post 2209 as a participant of Accelerator stream II and partner of Кольская верфь on a hydrofoil unmanned boat; CORRECTION 2026-10-02: it IS in the registry as npp-elvo-kolskaya-verf (ИНН 7810918592, t-doc tie s7604); the first version of this note called it unrecorded because a lookup of the bare word «ЭЛВО» missed it (scripts/registry_lookup.py fixed 2026-10-02). (2) The maker of the interceptor «Молот-ПВО» named in post 2124 is unresolved; a press item about a different interceptor called «Молот» credits the Moscow company Nova Labs, which is unverified as the same product."
+          },
+          {
+            "source_id": "s8872",
+            "text": "2026-10-02 triage of the resident sweep (503,714 posts) and ЦБСТ posts 457, 1102, 1557, 2463, 2538, 2541. (a) Named by ЦБСТ as residents or accelerator members, not in the registry, legal entity unresolved: «Антелекон» (post 2538, s8872: «Резидент ЦБСТ проведёт в Донбассе испытания нового антенного комплекса», antenna series АН5200-5800Ш17, tested at «полигоне ЦСН «БАРС-Сармат»»; antelecon.ru redirects to антелекон.рф, which did not answer on 2026-10-02, and the Wayback availability API listed no copy; a guessed domain is not an identifier, so no entity); «Аква-Волга» (Volgograd team, accelerator stream III, co-developer with ЭЛВО and Кольская верфь of the unmanned boat «Вектор», posts 2463 s8870 and 2541 s8873); «Арьергард» (post 457, s8868: «резиденты АНО ЦБСТ, к примеру, компания Арьергард», exhibitor at NAIS 2025). (b) ООО «Прикладная робототехника Авиа» is a party to a cooperation agreement signed with ЦБСТ at the forum of 15.08.2025 (post 1102, s8869); ЦБСТ does not call it a resident. The channel the post links, @appliedrobotics, is the official channel of ООО «Прикладная робототехника» and its site prints ИНН 7730697556, ОГРН 5137746149680 (s8874); whether «…Авиа» is that company or a related one is not established, so no record is created. (c) Posts 1246 and 1557 (s8889) list drone names of resident companies without naming the company: «Русак» (a product of ООО «Стратим» 5260494520 per the GUR profile on file; that company is 25% owned by АО «Стратим», which has a ЦБСТ tie) and «Сибирячок» (ООО «Гаскар Интеграция» lists a «Сибирячок» on its own site, s8013). Product-name matches only, not ties. (d) The sweep listed АО «НПП» as NEW; it is on file as ao-npp-real (t-open tie): the posts shorten the name."
           }
         ],
         "related_entities": [],
@@ -18491,9 +18531,11 @@
           "as_of": "2026-10-01",
           "outcome": "named_no_tie",
           "posts_read": [
-            2209
+            2209,
+            2463,
+            2541
           ],
-          "note": "Post 2209 (14.06.2026) says Кольская верфь and the St Petersburg НПП «ЭЛВО» are building an 11-metre hydrofoil unmanned boat shown at «Флот-2026», and calls ЭЛВО a participant of ЦБСТ Accelerator stream II. The tie stated is to ЭЛВО, not to Кольская верфь. ЭЛВО is not in the registry; see the open question on the ЦБСТ record."
+          "note": "Post 2209 (14.06.2026) says Кольская верфь and the St Petersburg НПП «ЭЛВО» are building an 11-metre hydrofoil unmanned boat shown at «Флот-2026», and calls ЭЛВО a participant of ЦБСТ Accelerator stream II. Posts 2463 (29.08.2026, s8870) and 2541 (17.09.2026, s8873) call the boat «Вектор» a joint development of НПП «ЭЛВО» (резидент ЦБСТ), the Volgograd team «Аква-Волга» (accelerator stream III) and «Кольской верфи» (резидент Арктической зоны); ЦБСТ gives Кольская верфь no ЦБСТ status. The tie stated is to ЭЛВО, which is on file as npp-elvo-kolskaya-verf (t-doc, s7604); corrected 2026-10-02: this note first said ЭЛВО was not in the registry."
         }
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026 (ul-1245100006799-20260823141101.pdf)",
@@ -19057,7 +19099,25 @@
           "outcome": "closed",
           "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). GUR sanctions/UAV registry: 1 match(es) - SCIENTIFIC AND PRODUCTION ENTERPRISE STRELA JOINT-STOCK COMPANY (own_tin=7714213078, inn_match=False, listing_confirmed=False) Aleph: 4 match(es), dataset categories=['company'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
         },
-        "tier_basis": "Thin direct record — no sanctions or cbst_tie found. Products described only in general terms (IoT devices, power controllers, battery chargers) with an explicit \"Transport\" line covering \"land/air/water vehicle electronics\" (no named UAV product, no source_id on the description) — classification rests on this general defense-electronics-adjacent description and ₽113m FY2025 revenue rather than a confirmed UAV-specific product; flagged for a closer look."
+        "tier_basis": "Thin direct record — no sanctions or cbst_tie found. Products described only in general terms (IoT devices, power controllers, battery chargers) with an explicit \"Transport\" line covering \"land/air/water vehicle electronics\" (no named UAV product, no source_id on the description) — classification rests on this general defense-electronics-adjacent description and ₽113m FY2025 revenue rather than a confirmed UAV-specific product; flagged for a closer look.",
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7604",
+            "as_of": "2026-07-17",
+            "note": "ЦБСТ post 2325: «Петербургское НПП «ЭЛВО» (участник II потока Акселератора и резидент ЦБСТ)»; post 2463 (s8870, 29.08.2026) repeats «НПП «ЭЛВО» (резидент ЦБСТ)»."
+          },
+          {
+            "program": "cbst-accelerator",
+            "role": "accelerator_participant",
+            "basis": "doc",
+            "source_id": "s7604",
+            "as_of": "2026-07-17",
+            "note": "Stream II, per ЦБСТ post 2325 (same post)."
+          }
+        ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -25757,7 +25817,15 @@
             "note": "GUR UAV-industry registry: caption \"LIMITED LIABILITY COMPANY GASCAR INTEGRATION\" (war-sanctions.gur.gov.ua/en/uav/companies/15561) carries own_tin=7733894200 and own_reg_number=5147746074196 — an EXACT match to this entity's own ИНН/ОГРН (inn_match=true, ogrn_match=true), confirming same-entity identity even though has_confirmed_listing_language=false. OpenSanctions mirrors the same GUR record at score 1.0 (topics=[poi]).",
             "source_id": "s0964"
           }
-        ]
+        ],
+        "cbst_channel_review": {
+          "as_of": "2026-10-02",
+          "outcome": "lead_open",
+          "posts_read": [
+            1557
+          ],
+          "note": "Post 1557 (24.11.2025) lists «Сибирячок» among drones of ЦБСТ resident companies without naming the company. This record lists a «Сибирячок» on its own site (s8013). A product-name match only: no ЦБСТ statement names ООО «Гаскар Интеграция»."
+        }
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -26164,7 +26232,17 @@
           "youtube": [],
           "marketplace_listings": [],
           "other": []
-        }
+        },
+        "memberships": [
+          {
+            "program": "ushkuynik-residency",
+            "role": "resident",
+            "basis": "press",
+            "source_id": "s8881",
+            "as_of": "2026-01-12",
+            "note": "Third-party channel «Беспилот» (forwarded by mil_hub 121529): «зато есть резидент НПЦ \"Ушкуйник\" с таким названием, но гендиректором у него значится Владимир Христюк». Matched to this record on the named director (Христюк В.В., ЕГРЮЛ 2026-09-02) and region (Новгородская область); the НПЦ's own roster was not read."
+          }
+        ]
       },
       "why": [
         "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread.",
@@ -34143,7 +34221,15 @@
             "source_id": "s0958",
             "relationship_type": "external-registry-cross-listed"
           }
-        ]
+        ],
+        "cbst_channel_review": {
+          "as_of": "2026-10-02",
+          "outcome": "lead_open",
+          "posts_read": [
+            1246
+          ],
+          "note": "Post 1246 (17.09.2025) thanks resident companies for their drones at «Запад-2025», among them «Русак», without naming a company; the post links t.me/stratim_drones. «Русак» is a product of this ООО in the GUR profile on file (s0958). A product-name match only; the ЦБСТ tie sits with АО «Стратим»."
+        }
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -41566,9 +41652,10 @@
             669,
             685,
             2209,
-            2210
+            2210,
+            2474
           ],
-          "note": "Posts 651, 658, 666, 669, 685, 2209, 2210 use Кронштадт the city as the venue (Технический совет ВМФ, салон «Флот-2026»). Post 226 repeats a foreign article that names the company «Кронштадт» as a Russian developer of military AI analytics; no ЦБСТ statement of a tie."
+          "note": "Posts 651, 658, 666, 669, 685, 2209, 2210, 2474 use Кронштадт the city as the venue (Технический совет ВМФ, салон «Флот-2026»; post 2474 of 31.08.2026 reports sea trials of the ТНПА «Сахалин» of «Русская морская команда» «в Кронштадте»). Post 226 repeats a foreign article that names the company «Кронштадт» as a Russian developer of military AI analytics; no ЦБСТ statement of a tie."
         }
       },
       "why": [
@@ -41832,9 +41919,11 @@
           "as_of": "2026-10-01",
           "outcome": "named_no_tie",
           "posts_read": [
-            2342
+            2037,
+            2342,
+            2538
           ],
-          "note": "Post 2342 (21.07.2026) reports the volunteer crew «БАРС-Сармат» using a Yak-52 as an interceptor-drone carrier, citing a Telegram channel and Коммерсантъ; it states no ЦБСТ relationship. It also links ЦБСТ post 2037, which was not read in this pass."
+          "note": "Post 2342 (21.07.2026) reports the volunteer crew «БАРС-Сармат» using a Yak-52 as an interceptor-drone carrier, citing a Telegram channel and Коммерсантъ; it states no ЦБСТ relationship. Post 2037, linked from it, was read on 2026-10-01: it is an Airbus Bird of Prey article and does not name the crew. Post 2538 (17.09.2026) says the «Антелекон» project, described as a ЦБСТ resident, tested an antenna complex «на полигоне ЦСН «БАРС-Сармат»»: ЦБСТ names the range as a test site of a resident; it states no relationship between ЦБСТ and the centre. The resident is not in the registry (see the open question on the ЦБСТ record)."
         }
       }
     },
@@ -41844,10 +41933,25 @@
           "as_of": "2026-10-01",
           "outcome": "namesake",
           "posts_read": [
-            2342
+            2342,
+            2538
           ],
-          "note": "Post 2342 names the volunteer crew «БАРС-Сармат», not this foundation (ИНН 6154168283); no link to the foundation is stated."
+          "note": "Posts 2342 and 2538 name the volunteer centre «БАРС-Сармат» (ЦСН), not this foundation (ИНН 6154168283); no link to the foundation is stated."
         }
+      }
+    },
+    "fgup-zashchitainfotrans": {
+      "set": {
+        "memberships": [
+          {
+            "program": "ushkuynik-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s8877",
+            "as_of": "2025-02-25",
+            "note": "НПЦ «Ушкуйник» own channel (nvgushkuynik post 70, 25.02.2025): «ФГУП «ЗащитаИнфоТранс» подтвердило статус резидента НПЦ «Ушкуйник»»; the post says the ФГУП began cooperation with the НПЦ in 2024 and received resident status, for an LTE-based UAV-detection complex. Asserted by the НПЦ itself; the resident agreement is not seen."
+          }
+        ]
       }
     }
   }

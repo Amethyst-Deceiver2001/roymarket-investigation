@@ -19,6 +19,10 @@ Match tiers, strongest first (a lower tier is a lead to read, never an automatic
             and after splitting a " | " alias -- what the graph builder already does
   translit  same name once Cyrillic is transliterated to Latin, or vice versa
   contains  every word of the shorter name occurs in the longer one (2+ words)
+  word      a one-word query (4+ letters) equals one whole word of a longer registry name
+            («ЭЛВО» in «НПП «ЭЛВО»»). Weak: common words match many records, so read the hit
+            list; added 2026-10-02 after «ЭЛВО» and «ЗащитаИнфоТранс» were called unrecorded
+            while both were on file
   fuzzy     character similarity >= 0.86
   initials  surname + initials ("Руденко Д.А.") matches a person's surname and BOTH
             initials -- always ambiguous evidence, since common surnames collide
@@ -71,6 +75,12 @@ def _same_but_surname(a: str, b: str) -> bool:
         return False
     diff = [(x, y) for x, y in zip(ta, tb) if x != y]
     return len(diff) == 1 and difflib.SequenceMatcher(None, *diff[0]).ratio() >= 0.9
+
+
+def _subset(a, b):
+    """Every word of the shorter token set occurs in the longer (2+ words, 8+ letters)."""
+    short, long_ = (a, b) if len(a) <= len(b) else (b, a)
+    return len(short) >= 2 and short <= long_ and sum(map(len, short)) >= 8
 
 
 class Registry:
@@ -134,16 +144,20 @@ class Registry:
                 exact = k == cyr_key and not field.endswith("alias") or k == cyr_key
                 add("exact" if exact else "translit", 1.0, slug, kind, label, field)
         exact_slugs = {h[2] for h in hits}
-        qtok = set(cyr_key.split()) | set(key_latin(translit(cyr_key)).split())
+        # the Cyrillic and the Latin spelling of the query are tested separately: mixed into one
+        # set, the extra Latin tokens made «Алексей Чадаев» miss «Чадаев Алексей Викторович»
+        qsets = [set(cyr_key.split()), set(key_latin(translit(cyr_key)).split())]
+        qword = cyr_key if len(cyr_key.split()) == 1 and len(cyr_key) >= 4 else None
         for k, refs in self.by_key.items():
             ktok = set(k.split())
             for slug, kind, label, field in refs:
                 if slug in exact_slugs:
                     continue
-                short, long_ = (qtok, ktok) if len(qtok) <= len(ktok) else (ktok, qtok)
-                if len(short) >= 2 and short <= long_ and sum(map(len, short)) >= 8:
+                if any(_subset(qs, ktok) for qs in qsets):
                     add("contains", 0.9, slug, kind, label, field)
                     continue
+                if qword and qword in k.split():
+                    add("word", 0.8, slug, kind, label, field)
                 if min(len(k), len(cyr_key)) >= 6:
                     r = difflib.SequenceMatcher(None, cyr_key, k).ratio()
                     if r >= 0.86 and (kind != "person" or _same_but_surname(cyr_key, k)):
@@ -160,7 +174,7 @@ class Registry:
                     given, patr = (rest[0], rest[1]) if toks[0] == sur else (rest[0], rest[1])
                     if len(rest) == 2 and given[0] == i1 and patr[0] == i2:
                         add("initials", 0.6, slug, kind, label, "fio_ru")
-        order = {"exact": 0, "translit": 1, "contains": 2, "fuzzy": 3, "initials": 4}
+        order = {"exact": 0, "translit": 1, "contains": 2, "word": 3, "fuzzy": 4, "initials": 5}
         best = {}
         for h in sorted(hits, key=lambda h: (order[h[0]], -h[1])):
             best.setdefault(h[2], h)  # one row per record, strongest tier
@@ -182,6 +196,7 @@ def _null_refs():
     return out
 
 
+MAX_HITS = 8
 _FORMS = ("ооо", "оао", "зао", "пао", "ао", "ано", "фгуп", "ип", "llc", "ooo", "jsc")
 
 
@@ -193,7 +208,8 @@ def _form(s):
 def report(items, reg, show_none=False):
     n_hit = 0
     for where, name in items:
-        hits = [h for h in reg.find(name)][:4]
+        all_hits = list(reg.find(name))
+        hits = all_hits[:MAX_HITS]
         if hits:
             n_hit += 1
             print(f"{name}   [{where}]")
@@ -201,6 +217,8 @@ def report(items, reg, show_none=False):
                 fq, fc = _form(name), _form(label)
                 warn = "  !legal form differs" if kind == "entity" and fq and fc and fq != fc else ""
                 print(f"    {tier:8} {score:.2f}  {kind:6} {slug}  <- {label[:60]}  ({field}){warn}")
+            if len(all_hits) > len(hits):
+                print(f"    ... {len(all_hits) - len(hits)} more weaker hit(s) not shown (cap {MAX_HITS})")
         elif show_none:
             print(f"{name}   [{where}]\n    no candidate")
     print(f"\n{n_hit} of {len(items)} have at least one candidate")

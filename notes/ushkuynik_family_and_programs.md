@@ -50,3 +50,23 @@ See `scripts/graph_contract.py` and `data/registry/programs.json`.
 `data/registry/programs.json`: programs `natsproekt-bas`, `npc-bas-network` (part of it), `ushkuynik-residency` (part of the network), `cbst-residency`, `cbst-accelerator`; group `ushkuynik-group` (the three same-brand entities); event series `dronnitsa` with editions `dronnitsa-2024` and `dronnitsa-2025`. Entity fields `memberships[]` and `participations[]` carry the claims. In the graph: 9 new nodes and 20 new edges (6 participated_in, 4 part_of, 3 member_of, 3 operates, 2 organises, 2 resident_of). `check_registry.py` validates the file and the entity fields.
 
 Not yet done (next): named residents of Ушкуйник and of the other НПЦ (from the НПЦ sites); the Дронница 2022, 2023 editions and the participant list (a `tg_post_coverage` sweep after the rescan); the ЦБСТ residency roster as `memberships[]` (today it is per-entity `cbst_tie`); КЦПН as an entity once an identifier is read from a primary document; the text of the 06.09.2024 ЦБСТ–Ушкуйник agreement; profile and graph-explorer rendering of the new kinds.
+
+## 6. Named residents of НПЦ «Ушкуйник» (archive scan 2026-10-02)
+
+The site names no resident (§1). The НПЦ's own channel, its director's channel and the Дронница channel do. Each row is the post read in full; «asserted by» is who says it. None is the НПЦ's resident roster or an agreement.
+
+| Resident | Said in | Asserted by | Registry |
+|---|---|---|---|
+| ФГУП «ЗащитаИнфоТранс» (Минтранс) | `@nvgushkuynik` 70, 25.02.2025 (s8877): «подтвердило статус резидента НПЦ «Ушкуйник»»; cooperation began in 2024; LTE-based UAV detection | the НПЦ itself | on file (`fgup-zashchitainfotrans`, ИНН 7708083600); membership wired, basis doc |
+| ООО «Герон» (Боровичи) | mil_hub 121529, 12.01.2026 (s8881): «есть резидент НПЦ "Ушкуйник" с таким названием», director Христюк | third-party channel «Беспилот» | on file (`ooo-geron`, 7802893898, director Христюк В.В.); membership wired, basis press, matched on the named director |
+| АО «ГЛОНАСС» | `@chadayevru` 3701, 12.04.2025 (s8878): «в ближайшее время станет» a resident, paperwork under way | the director | pending; a claim on the programme, no edge |
+| НТЦ «Корней» | `@dronnitsa` 637, 12.02.2026 (s8883): shown at Дронница 2025, «резидент НПЦ «Ушкуйник»», ground robots incl. the carrier «Князь-Вандал Новгородский» | the event channel | no record: no identifier read |
+| «Аэродроммаш» | `@chadayevru` 4503, 15.02.2026 (s8884) | the director | no record |
+| DRONTECH.PRO (online drone school) | `@chadayevru` 3240, 09.09.2024 (s8876): states a Минобразования licence number | the director | no record |
+| makers of the interceptor «Осоед» | `@chadayevru` 3190, 23.08.2024 (s8875): serial production being launched, military orders | the director | no record; maker unnamed |
+
+The «Князь Вандал Новгородский» product on file belongs to ООО «Ушкуйник» (the commercial family member); the НТЦ «Корней» post presents the carrier of the same name as its own. Whether «Корней» is a resident-maker of that product or the same business under another name is not established.
+
+What the director says about the НПЦ (`@chadayevru` 4636, 29.03.2026, s8886; self-report, recorded as programme claims): founded by the Новгород regional government and the federal Платформа НТИ; created on a presidential instruction (Пр-1907 of 21.09.2023); «первым… получил официальную аккредитацию Минпромторга РФ»; one of the winners of the subsidy for equipment of a centre of collective use; residents supplying the Ministry of Defence work with military acceptance. He also writes that sanctions exist against him «в частности, 19-й пакет санкций ЕС» «или против НПЦ». The registry holds none; recorded as an open question on his person record, not as a sanction.
+
+Two reading notes. (1) The post is an answer to «сетевые писатели»; its claims are the НПЦ's own defence. (2) Resident status in the national network is a weak signal in the press: Коммерсантъ 18.08.2025 (s8890) quotes market participants that residents are often «мелкие компании для галочки» and that membership gives most of them almost nothing (`bas_program_leads.md` §6).

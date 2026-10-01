@@ -146,3 +146,11 @@ Archive: 503,714 posts, 56 channels, after the full rescan (`tg_scan.py --full -
 - Resident count: Коммерсантъ «число предприятий-резидентов достигло 525», 625+ by end-2026 (quoting Сидякин); Сидякин's own post says 600+. Recorded as a discrepancy on `cbst-residency`.
 
 **Still open:** the registered Поставщик behind Спектр; whether any ЦБСТ resident lists on the platform (the 3mx statement is one data point); post 700 of UAS_development («Антидрон-предложение от наших китайских партнеров», 23.09.2026) names no partner.
+
+## КБ «СПЕКТР» and the national БАС network (2026-10-02)
+
+Searching all 238 posts now in the local DB for `@kb_spektr` (msg 100–348; 1–99 are not in it) with a case-folded regex over ЦБСТ|ЦСБТ|центр беспилотных систем|резидент|НПЦ|НТИ|нацпроект|Росавиац|Единая Россия|Архипелаг|Ушкуйник|Дронниц|Минпромторг|грант|субсид|Эра|технополис matched five posts (123, 193, 229, 236, 258) and no ЦБСТ term. The bureau's own channel places it in a working group with the Tomsk НПЦ БАС (229) and records a part made for it «в Томском НПЦ» (123); «Горный-ЦОТ»'s own release names it lead developer of the ЭД 9060 motor (s8882). Other posts name a supply chain (props by the bureau, motors «Горный ЦОТ», ESC «Велесова Топь», controller «Икар» «БСТРЕЙД», cell «WATTEX», link «Камчатка» «ПРОМ КОМПОЗИТ», s8879): products, no entities recorded.
+
+Two product-name matches are open questions, not ties: the bureau's «Воробей-10» and ЦБСТ's resident drone «Воробей» (post 1557); the bureau's claim of a prize at «Архипелаг-2025» (258) against its own post 193 saying it did not go.
+
+So the first confirmed РОЙ.МАРКЕТ seller sits in the БАС orbit and not in the ЦБСТ one, on the evidence read so far, which fits the three-way hypothesis (ЦБСТ residents / БАС participants / neither). It does not yet establish residency in the НПЦ.

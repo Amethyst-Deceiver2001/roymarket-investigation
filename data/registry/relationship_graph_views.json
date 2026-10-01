@@ -1785,7 +1785,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "filatov-maksim-alekseevich",
@@ -2345,6 +2345,22 @@
           "name_latin": "Khamukhin Anatoliy Vladimirovich",
           "sanctioned": false,
           "degree": 3
+        },
+        {
+          "id": "khristyuk-ekaterina-valerevna",
+          "kind": "person",
+          "label": "Христюк Екатерина Валерьевна",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 3
+        },
+        {
+          "id": "khristyuk-vladimir-vladimirovich",
+          "kind": "person",
+          "label": "Христюк Владимир Владимирович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 8
         },
         {
           "id": "khuteshen-aleksey-aleksandrovich",
@@ -2980,7 +2996,7 @@
           "sanctioned": false,
           "legal_form": "НПП",
           "variant": null,
-          "degree": 10
+          "degree": 12
         },
         {
           "id": "npp-radar-mms",
@@ -3513,6 +3529,18 @@
           "legal_form": "ООО",
           "variant": null,
           "degree": 7
+        },
+        {
+          "id": "ooo-geron",
+          "kind": "entity",
+          "label": "ООО «Герон»",
+          "name_latin": null,
+          "inn": "7802893898",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": "offensive",
+          "degree": 9
         },
         {
           "id": "ooo-gk-aeromaks",
@@ -4161,6 +4189,18 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "degree": 5
+        },
+        {
+          "id": "ooo-skay-avia-grupp",
+          "kind": "entity",
+          "label": "ООО «Скай авиа групп»",
+          "name_latin": null,
+          "inn": "7802865058",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": null,
+          "degree": 8
         },
         {
           "id": "ooo-skb-piranya",
@@ -8531,6 +8571,45 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-geron::бпла-удар",
+          "kind": "product",
+          "label": "БПЛА «Удар»",
+          "owner_slug": "ooo-geron",
+          "source_id": "s8619",
+          "classification": {
+            "status": "classified",
+            "uav_platform": "multirotor",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-geron::курсы-подготовки-операторов-fpv",
+          "kind": "product",
+          "label": "Курсы подготовки операторов FPV",
+          "owner_slug": "ooo-geron",
+          "source_id": "s8618",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::ooo-geron::стратосферная-беспилотная-платформа-хищник",
+          "kind": "product",
+          "label": "Стратосферная беспилотная платформа «Хищник» (в разработке)",
+          "owner_slug": "ooo-geron",
+          "source_id": "s8574",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-goudron::набат-v3",
           "kind": "product",
           "label": "«Набат v3»",
@@ -10364,6 +10443,19 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-skay-avia-grupp::сборка-боевых-беспилотников",
+          "kind": "product",
+          "label": "Сборка боевых беспилотников (модель не названа)",
+          "owner_slug": "ooo-skay-avia-grupp",
+          "source_id": "s8575",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-skb-piranya::бпла-пиранья-10",
           "kind": "product",
           "label": "БПЛА «Пиранья-10»",
@@ -11017,14 +11109,14 @@
           "kind": "program",
           "label": "Акселератор ЦБСТ для специальных проектов и проектов двойного назначения",
           "subtype": "accelerator",
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "program::cbst-residency",
           "kind": "program",
           "label": "Резидентство ЦБСТ",
           "subtype": "residency",
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "program::natsproekt-bas",
@@ -11045,7 +11137,15 @@
           "kind": "program",
           "label": "Резидентство НПЦ «Ушкуйник»",
           "subtype": "residency",
-          "degree": 2
+          "degree": 4
+        },
+        {
+          "id": "prokofev-mikhail-vasilevich",
+          "kind": "person",
+          "label": "Прокофьев Михаил Васильевич",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 1
         },
         {
           "id": "protorguev-sergey-aleksandrovich",
@@ -19835,6 +19935,17 @@
           "confidence": null
         },
         {
+          "source": "fgup-zashchitainfotrans",
+          "target": "program::ushkuynik-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8877",
+          "as_of": "2025-02-25",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc"
+        },
+        {
           "source": "filatov-maksim-alekseevich",
           "target": "ao-nii-stt",
           "type": "role",
@@ -21556,6 +21667,127 @@
           "type": "role",
           "label": "co-inventor (patent RU2746394C1)",
           "source_id": "s1019",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-ekaterina-valerevna",
+          "target": "ooo-skay-avia-grupp",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6837",
+          "as_of": "2023-11-24",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-ekaterina-valerevna",
+          "target": "ooo-skay-avia-grupp",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8168",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-ekaterina-valerevna",
+          "target": "ooo-skay-avia-grupp",
+          "type": "role",
+          "label": "Генеральный директор",
+          "source_id": "s5291",
+          "as_of": "2023-11-24",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-vladimir-vladimirovich",
+          "target": "ooo-geron",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6838",
+          "as_of": "2021-05-06",
+          "weight": 1.0,
+          "temporal_status": "historical",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-vladimir-vladimirovich",
+          "target": "ooo-geron",
+          "type": "founded",
+          "label": null,
+          "source_id": "s6838",
+          "as_of": "2021-05-06",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-vladimir-vladimirovich",
+          "target": "ooo-geron",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8169",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-vladimir-vladimirovich",
+          "target": "ooo-geron",
+          "type": "role",
+          "label": "founder",
+          "source_id": "s8169",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-vladimir-vladimirovich",
+          "target": "ooo-geron",
+          "type": "role",
+          "label": "Генеральный директор / учредитель",
+          "source_id": "s5291",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-vladimir-vladimirovich",
+          "target": "ooo-skay-avia-grupp",
+          "type": "founded",
+          "label": null,
+          "source_id": "s6837",
+          "as_of": "2023-09-28",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-vladimir-vladimirovich",
+          "target": "ooo-skay-avia-grupp",
+          "type": "role",
+          "label": "founder",
+          "source_id": "s8169",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-vladimir-vladimirovich",
+          "target": "ooo-skay-avia-grupp",
+          "type": "role",
+          "label": "учредитель (former)",
+          "source_id": "s5291",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -24103,6 +24335,28 @@
           "confidence": null
         },
         {
+          "source": "npp-elvo-kolskaya-verf",
+          "target": "program::cbst-accelerator",
+          "type": "resident_of",
+          "label": "accelerator_participant",
+          "source_id": "s7604",
+          "as_of": "2026-07-17",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc"
+        },
+        {
+          "source": "npp-elvo-kolskaya-verf",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7604",
+          "as_of": "2026-07-17",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc"
+        },
+        {
           "source": "npp-radar-mms",
           "target": "product::npp-radar-mms::автоматизированная-док-станция",
           "type": "produces",
@@ -26413,6 +26667,50 @@
           "confidence": null
         },
         {
+          "source": "ooo-geron",
+          "target": "product::ooo-geron::бпла-удар",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8619",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-geron",
+          "target": "product::ooo-geron::курсы-подготовки-операторов-fpv",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8618",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-geron",
+          "target": "product::ooo-geron::стратосферная-беспилотная-платформа-хищник",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8574",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "ooo-geron",
+          "target": "program::ushkuynik-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8881",
+          "as_of": "2026-01-12",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "press"
+        },
+        {
           "source": "ooo-gk-aeromaks",
           "target": "ao-rti-radio",
           "type": "founded",
@@ -28536,6 +28834,17 @@
           "confidence": null
         },
         {
+          "source": "ooo-skay-avia-grupp",
+          "target": "product::ooo-skay-avia-grupp::сборка-боевых-беспилотников",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8575",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
           "source": "ooo-skb-piranya",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -30533,6 +30842,17 @@
           "label": "residency",
           "source_id": "s8612",
           "as_of": "2026-09-30",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null
+        },
+        {
+          "source": "prokofev-mikhail-vasilevich",
+          "target": "ooo-skay-avia-grupp",
+          "type": "role",
+          "label": "сборщик (assembler)",
+          "source_id": "s5291",
+          "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null
@@ -36262,7 +36582,7 @@
           "sanctioned": false,
           "legal_form": null,
           "variant": null,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "filippov-mikhail-gennadevich",
@@ -36537,6 +36857,14 @@
           "degree": 7
         },
         {
+          "id": "khristyuk-vladimir-vladimirovich",
+          "kind": "person",
+          "label": "Христюк Владимир Владимирович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 8
+        },
+        {
           "id": "khuteshen-aleksey-aleksandrovich",
           "kind": "person",
           "label": "Хутешен Алексей Александрович",
@@ -36746,7 +37074,7 @@
           "sanctioned": false,
           "legal_form": "НПП",
           "variant": null,
-          "degree": 10
+          "degree": 12
         },
         {
           "id": "npp-radar-mms",
@@ -37195,6 +37523,18 @@
           "legal_form": "ООО",
           "variant": null,
           "degree": 7
+        },
+        {
+          "id": "ooo-geron",
+          "kind": "entity",
+          "label": "ООО «Герон»",
+          "name_latin": null,
+          "inn": "7802893898",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": "offensive",
+          "degree": 9
         },
         {
           "id": "ooo-gk-aeromaks",
@@ -37771,6 +38111,18 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "degree": 5
+        },
+        {
+          "id": "ooo-skay-avia-grupp",
+          "kind": "entity",
+          "label": "ООО «Скай авиа групп»",
+          "name_latin": null,
+          "inn": "7802865058",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": null,
+          "degree": 8
         },
         {
           "id": "ooo-skb-piranya",
@@ -39889,6 +40241,28 @@
           "label": null,
           "source_id": "s7419",
           "as_of": "2026-09-14",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-vladimir-vladimirovich",
+          "target": "ooo-geron",
+          "type": "founded",
+          "label": null,
+          "source_id": "s6838",
+          "as_of": "2021-05-06",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null
+        },
+        {
+          "source": "khristyuk-vladimir-vladimirovich",
+          "target": "ooo-skay-avia-grupp",
+          "type": "founded",
+          "label": null,
+          "source_id": "s6837",
+          "as_of": "2023-09-28",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null
@@ -42872,7 +43246,7 @@
           "sanctioned": false,
           "legal_form": "НПП",
           "variant": null,
-          "degree": 10
+          "degree": 12
         },
         {
           "id": "npts-ushkuynik",
@@ -43525,14 +43899,14 @@
           "kind": "program",
           "label": "Акселератор ЦБСТ для специальных проектов и проектов двойного назначения",
           "subtype": "accelerator",
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "program::cbst-residency",
           "kind": "program",
           "label": "Резидентство ЦБСТ",
           "subtype": "residency",
-          "degree": 2
+          "degree": 3
         },
         {
           "id": "stub::михайлов юрий геннадьевич",
