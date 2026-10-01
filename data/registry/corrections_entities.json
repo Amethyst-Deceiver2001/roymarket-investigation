@@ -9870,6 +9870,66 @@
       "why": [
         "2026-09-19: identified from the VK page vk.com/id463123770 (user-supplied) whose status line names «ЦПВ АНО «ZOV-AA»», then matched by name in the open ЕГРЮЛ search and confirmed with a full выписка (s7727)."
       ]
+    },
+    {
+      "slug": "ao-neyrorevolyutsiya",
+      "name_ru": "АО «Нейрореволюция»",
+      "inn": "9701255148",
+      "ogrn": "1237700501268",
+      "registered": "26.07.2023",
+      "address": "105082, г. Москва, ул. Бакунинская, д. 73, стр. 2",
+      "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Панов Александр Александрович (ЕГРЮЛ выписка 01.10.2026, s8660)",
+      "tier": "manufacturer",
+      "tier_basis": "Brand «Neiry» («Нейри»). ЦБСТ's own channel names Neiry a resident and says it completed tests of the first flock of «биодронов-голубей» (living pigeons with implants, flown on a route by an implanted controller) [s8672]; Ведомости of 25.11.2025 reports the same product as a monitoring system [s8663]. Identity: the company's own site footer prints «АО «Нейрореволюция»… ИНН 9701255148 ОГРН 1237700501268» under «© Нейри» [s8680], and the ЕГРЮЛ extract matches (registered 26.07.2023, main ОКВЭД 62.01 software) [s8660]. The UAV relevance is ЦБСТ's framing: «способных выполнять полётное задание по алгоритму, подобно лёгким беспилотникам». No military customer or sanctions listing on file.",
+      "why": "[2026-10-01 ЦБСТ resident sweep] Found by scripts/cbst_resident_sweep.py: ЦБСТ post 1572 (26.11.2025) calls Neiry «один из резидентов» and no registry record existed. Legal entity established from the company's own site footer, not by name search (the ЕГРЮЛ name search for «Нейри» returns five unrelated ООО «НЕЙРИ» and does not contain this company)."
+    },
+    {
+      "slug": "ooo-villis-wheelies",
+      "name_ru": "ООО «ВИЛЛИС»",
+      "inn": "9200026034",
+      "ogrn": "1259200000410",
+      "registered": "05.02.2025",
+      "address": "299053, г. Севастополь, ул. Руднева, зд. 41, офис Н-40",
+      "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Кузьма Дмитрий Валерьевич (ЕГРЮЛ выписка 01.10.2026, s8659)",
+      "tier": "manufacturer",
+      "tier_basis": "Brand «Wheelies». ЦБСТ's own channel calls Wheelies «компания-резидент ЦБСТ» [s8671] and, in its HeliRussia report, says the company showed «программную платформу для управления беспилотными системами… автономное выполнение полётных заданий, навигацию без GPS и компьютерное зрение» and «высокую точность выполнения боевых сценариев» [s7603]. Identity: the site wheelies.ru prints «ООО \"ВИЛЛИС\" ИНН / ОГРН 9200026034 / 1259200000410» [s8679]; the ЕГРЮЛ extract matches (registered 05.02.2025, Севастополь, main ОКВЭД 72.19, sole founder ООО «ИТ ГАРАЖ» ИНН 9200013941) [s8659]. The hackathon final was announced for Севастополь, the company's registered city.",
+      "why": "[2026-10-01 ЦБСТ resident sweep] Found by scripts/cbst_resident_sweep.py (ЦБСТ posts 1519 and 2186). Legal entity from the site footer; ЕГРЮЛ name search for «Wheelies» finds nothing because the company registered as «ВИЛЛИС»."
+    },
+    {
+      "slug": "ao-shkola-bpla-oktagon",
+      "name_ru": "АО «Школа БПЛА Октагон»",
+      "inn": "7806616655",
+      "ogrn": "1237800150125",
+      "registered": "29.12.2023",
+      "address": "195112, г. Санкт-Петербург, пл. Карла Фаберже, д. 8, литера А, помещ. 10-Н, ком. 35",
+      "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Харламов Алексей Геннадьевич (ЕГРЮЛ выписка 01.10.2026, s8658)",
+      "tier": "plumbing",
+      "tier_basis": "UAV-operator training school (octagon-bpla.ru). ЦБСТ's own channel names its general director a resident: «Резидент ЦБСТ, гендиректор «Школы БПЛА Октагон» Алексей Харламов» (02.09.2025) [s8668]. Identity: the legal name and the director's name in the post match the ЕГРЮЛ extract exactly [s8658], the company's own site prints ИНН 7806616655 / ОГРН 1237800150125 [s8678]. Main ОКВЭД on the extract is 46.51 (wholesale of computers), not training. Not a manufacturer, so tiered plumbing like the other training entities.",
+      "why": "[2026-10-01 ЦБСТ resident sweep] Found by scripts/cbst_resident_sweep.py (ЦБСТ post 1173). Registry had no record of the school."
+    },
+    {
+      "slug": "ao-stratolink",
+      "name_ru": "АО «СТРАТОЛИНК»",
+      "inn": "9715507772",
+      "ogrn": "1257700131424",
+      "registered": "19.03.2025",
+      "address": "127282, г. Москва, ул. Полярная, д. 31, стр. 1, помещ. 12/2",
+      "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Оксман Николас Николаевич (ЕГРЮЛ выписка 01.10.2026, s8661)",
+      "tier": "manufacturer",
+      "tier_basis": "Brand «Стратолинк» / Stratolink. ЦБСТ's own channel: «компания Stratolink (резидент ЦБСТ) поднимет в небо прототип стратосферного БпЛА «Аргус»» [s8673]. The company site describes «Аргус» as a solar-powered atmospheric satellite: wingspan 40 m, mass 315 kg, payload 40 kg, ceiling 25 km, up to 40 days, services including «ДРЛО» and «Осуществление других видов мониторинга» [s8681]. IDENTITY IS BY NAME ONLY: neither the site nor the ЦБСТ post prints an ИНН, so АО «СТРАТОЛИНК» is attributed because it is the only ЕГРЮЛ company of that name and its main ОКВЭД is 30.30.6 «Производство беспилотных авиационных систем» [s8661]; the site has an «Инвесторам и акционерам» page consistent with an АО [s8682]. Registered 19.03.2025, charter capital ₽10 000. No military customer, contract or sanctions listing on file.",
+      "why": "[2026-10-01 ЦБСТ resident sweep] Found by scripts/cbst_resident_sweep.py (ЦБСТ post 1956). Identity basis name_only plus ОКВЭД: re-check if the company ever prints its ИНН."
+    },
+    {
+      "slug": "ooo-intek-promyshlennye-sistemy",
+      "name_ru": "ООО «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ»",
+      "inn": "7017396681",
+      "ogrn": "1167031054057",
+      "registered": "02.03.2016",
+      "address": "634003, Томская область, г. Томск, пер. Кустарный, д. 1, помещ. МА018",
+      "director": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Калиновская Елена Евгеньевна (ЕГРЮЛ выписка 01.10.2026, s8657)",
+      "tier": "manufacturer",
+      "tier_basis": "«ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ (INTEC)», Томск; the channel @uavintec describes it as «разработчик и производитель беспилотных систем для промышленных задач» [s8677]. ЦБСТ's own channel names it a resident and says it presented the quadcopter DGF-R4X300, already used by ПАО «Россети Томск» for power-line inspection and, in ЦБСТ's words, with «потенциалом двойного назначения… В военной области квадрокоптер может использоваться для аэроразведки, наблюдения и доставки небольших грузов» [s8666]. Founders per the ЕГРЮЛ: Бивол Иван Александрович 25%, Масалов Виктор Викторович 25%, ООО «ИНТЭК» 50% [s8657]. Distinct from ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ» (ИНН 7000013316, `ooo-intek-bespilotnye-sistemy`): different ИНН, director and founders; both are in Томск and both trade as INTEC, and which one makes the UAVintec drones is unresolved.",
+      "why": "[2026-10-01 ЦБСТ resident sweep] Found by scripts/cbst_resident_sweep.py (ЦБСТ post 447). The registry held only the sister ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ»; the company ЦБСТ names in post 447 is this one, by legal name. Identity basis legal_name_printed (no ИНН in the post or on the channel page)."
     }
   ],
   "entities": {
@@ -11046,6 +11106,14 @@
           {
             "source_id": "s0178",
             "text": "The «Переговорка» transcript's ₽14bn Единая Россия 'front aid' figure (since 2024) is party-wide across all humanitarian/military aid categories, not a ЦБСТ-specific or drone-only figure -- do not cite it as ЦБСТ's own budget or as UAV-specific spending without re-reading the exact wording. Worth drafting into docs/index.html as a properly scoped quote once the narrative section is next revised."
+          },
+          {
+            "source_id": "s8664",
+            "text": "Post-publication edits that remove or shorten resident names, found by comparing ЦБСТ posts with forwards of them (scripts/tg_forward_diff.py, 2026-10-01; 251 of 2308 posts have a forward, so this is a floor): post 410 (01.02.2025) lost «Площадь», «Стратим» [s8664 vs s8665]; post 1270 (24.09.2025) «СуперХроно» became «СХ» [s8669 vs s8670]; post 2080 (17.04.2026) lost «Титан Северо-Запад» [s8674 vs s8675]. Three of 251 comparable posts; motive unknown."
+          },
+          {
+            "source_id": "s8672",
+            "text": "Residents named by ЦБСТ but NOT resolved to a legal entity (2026-10-01 sweep): «SR Space» (post 473; the ЕГРЮЛ holds АО «СР СПЕЙС» ИНН 9724017598, in bankruptcy proceedings since 2025, name match only, not wired); «Витрес» (post 597; several ООО «ВИТРЕС», none tied); «Основательные технологии» (post 2150, president Вячеслав Нечаев per Известия; no ЕГРЮЛ match by name); «GoDrone» («Набат», post 2382); «Квадросим»; «ИнПоинт» (accelerator II finalist, post 1976); makers of «Талисман»/«Зеркальце» (post 369) and «Койот»."
           }
         ],
         "related_entities": [],
@@ -11196,7 +11264,16 @@
         "okved_code": "73.20.1",
         "okved_label": "Исследование конъюнктуры рынка (market research) — main code as of 02.04.2026; secondary codes cover publishing (58.11/13/14/19), software development (62.01), R&D (72.19) and conference organising (82.30). Nothing defence-coded.",
         "tier": "cbst-core",
-        "tier_basis": "sole owner of МПТМ"
+        "tier_basis": "sole owner of МПТМ",
+        "state_programs": [
+          {
+            "as_of": "2026-07-21",
+            "name_en": "«СВОё дело с Ростех» (Rostec technology-initiatives programme for demobilised SVO participants)",
+            "name_ru": "«СВОё дело с Ростех»",
+            "role": "Named partner of Ростех's programme: signed the 10.12.2025 cooperation agreement, runs expert review and accelerator places for selected projects («Наша организация отвечает за экспертизу и поддержку развития отобранных проектов»).",
+            "source_id": "s8655"
+          }
+        ]
       },
       "verified_against": "war-sanctions.gur.gov.ua/en/components (weapon items witem-4835, witem-4800), archived as s0970/s0971",
       "why": [
@@ -11214,7 +11291,9 @@
         "2026-09-07: merged dormant duplicate correction key '9702064851' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
         "2026-09-30: Corrected sanctions[]: the earlier entry (s0574) listed OFAC, Canada and Australia as regimes on this АНО because OpenSanctions merges it with the Tula ООО. Read OFAC SDN 50778 directly (Tax ID 7100032961 only) and the two GUR pages (separate listings, 15947 for this АНО and 11711 for the Tula ООО, s8250/s8251). What remains is Ukraine's own listing of this АНО. GUR's US/EU/UK jurisdiction panel for the АНО is unverified and not recorded as a regime. The corporate relationship between the two entities remains unproven.",
-        "2026-09-30: Removed the external-registry-cross-listed related_entities entry for the Tula ООО (relationship not established); see that record's why[] for the removed text."
+        "2026-09-30: Removed the external-registry-cross-listed related_entities entry for the Tula ООО (relationship not established); see that record's why[] for the removed text.",
+        "[2026-10-01 Ростех–ЦБСТ follow-up] state_programs: partner of «СВОё дело с Ростех», signed agreement 10.12.2025 [s8653, s8656].",
+        "[2026-10-01 ЦБСТ resident sweep] open_questions extended: name-edit finding and unresolved resident leads from the 2026-10-01 sweep."
       ]
     },
     "ano-tsentr-razvitiya-transportnykh-tekhnologiy": {
@@ -17471,15 +17550,52 @@
           {
             "source_id": null,
             "text": "zakupki scan for ИНН 7704274402 is truncated: the scan log records hit_count=45 but only 10 reg_numbers were collected — a page-1 truncation predating zakupki_batch_pull.py's pagination fix. The 35 uncollected hits have never been seen. The 2026-09-05 closure (all 10 archived cards are Минздрав РФ COVID-era medical procurement) therefore rests on a partial sample. Re-run `zakupki_batch_pull.py scan --inn 7704274402 --force` before treating this entity's procurement footprint as characterised."
+          },
+          {
+            "source_id": "s8656",
+            "text": "Who signed, and for what money: the agreement text is not on file. ЦБСТ says it includes the programme's ЦБСТ-run accelerator track and «предложения по мерам господдержки»; the prize fund is stated as ₽30m, grants of ₽3–5m (s8653). Whether ЦБСТ receives any funding or data from Ростех under it is not stated in either channel."
+          },
+          {
+            "source_id": "s8656",
+            "text": "Co-signatories and partners not yet on file as entities: Агентство стратегических инициатив (АСИ), Корпорация МСП (signatories), and, per Ростех post 12363, фонд «Защитники Отечества», ОДД «Народный фронт «За Россию» and Академия Ростеха (operator). Чемезов Сергей Викторович signs for Ростех and has no person record: no source on file gives his date of birth, so none was entered."
           }
         ],
         "tier": "plumbing",
-        "tier_basis": "state corporation; parent/owner, not a maker",
+        "tier_basis": "state corporation; parent/owner, not a maker UPDATE 2026-10-01: documented ЦБСТ tie. Rostec and ЦБСТ signed a cooperation agreement on 10.12.2025 (programme «СВОё дело с Ростех»), confirmed by both parties' own channels [s8653, s8656]. The tie is a programme partnership in which ЦБСТ supplies expert review and accelerator places; no funding flow between the two is documented. Rostec stays tiered plumbing: state-corporation parent of manufacturers, not itself a maker in this network.",
         "bfo_review": {
           "as_of": "2026-09-14",
           "outcome": "closed",
           "note": "not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
-        }
+        },
+        "cbst_tie": {
+          "claim": "Госкорпорация Ростех signed a cooperation agreement with АНО «ЦБСТ», Агентство стратегических инициатив and Корпорация МСП on 10.12.2025 to support participants of Rostec's programme «СВОё дело с Ростех» (demobilised SVO participants' technology initiatives); ЦБСТ is a named programme partner and its expert/accelerator arm. Both parties say so on their own channels.",
+          "evidence": "ЦБСТ's own channel, post 1615, 10.12.2025: «Госкорпорация Ростех, Агентство стратегических инициатив, Корпорация МСП и Центр беспилотных систем и технологий заключили соглашение о сотрудничестве, направленное на развитие и внедрение технологических проектов участников программы «СВОё дело с Ростех»» (signed, per the post, by Чемезов for Ростех and Безруков for ЦБСТ) [s8653]. Independently, Ростех's own channel, post rostecru/10851, same day: «Ростех, Корпорация МСП, Агентство стратегических инициатив (АСИ) и Центр беспилотных систем и технологий (ЦБСТ) подписали соглашение о совместной поддержке участников программы «СВОе дело с Ростех»» [s8656]. Later: ЦБСТ post 2074 (14.04.2026, online application platform launched jointly; «Центр беспилотных систем и технологий является партнёром спецпрограммы Ростеха») [s8654]; ЦБСТ post 2343 (21.07.2026, «Наша организация отвечает за экспертизу и поддержку развития отобранных проектов») [s8655]; Ростех post rostecru/12363 (21.07.2026, «Среди партнёров проекта - ЦБСТ…», operator Академия Ростеха) [s8656].",
+          "source_id": "s8653",
+          "confidence": "t-doc"
+        },
+        "cbst_channel_review": {
+          "as_of": "2026-10-01",
+          "outcome": "tie_wired",
+          "posts_read": [
+            1458,
+            1615,
+            2074,
+            2209,
+            2343,
+            2350,
+            2381
+          ],
+          "note": "1615, 2074, 2343 are the agreement and programme posts, wired as the t-doc tie [s8653-s8655]. 2350 is a news digest repeating 2343. 1458 (laser anti-drone system by «Швабе» at Ростех), 2209 (Ростех R-Saver-1 at «Флот-2026») and 2381 (Ростех engine controllers for interceptors) are news items about Rostec products, not ties."
+        },
+        "state_programs": [
+          {
+            "as_of": "2026-07-21",
+            "name_en": "«СВОё дело с Ростех» (Rostec technology-initiatives programme for demobilised SVO participants)",
+            "name_ru": "«СВОё дело с Ростех»",
+            "role": "Programme operator: Академия Ростеха; partners ЦБСТ, АСИ, Корпорация МСП, фонд «Защитники Отечества», ОДД «Народный фронт «За Россию». Grants up to ₽5m, prize fund ₽30m; over 100 applications by 21.07.2026.",
+            "source_id": "s8656"
+          }
+        ]
       },
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0094)",
       "why": [
@@ -17490,7 +17606,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "Swept into the manufacturer tier by section position — Ростех is named in the residents roll-call as an owner of other entities, not as a resident.",
         "2026-09-07: merged dormant duplicate correction key '7704274402' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "[2026-10-01 Ростех–ЦБСТ follow-up] cbst_tie set from a documented two-sided agreement; found by scripts/tg_post_coverage.py (7 ЦБСТ posts name Ростех, registry had tie none). Independent confirmation read on Ростех's own channel [s8656]."
       ]
     },
     "ip-kuznetsov-ruslan-nikolaevich": {
@@ -26436,6 +26553,10 @@
           {
             "source_id": null,
             "text": "wb_overlap check (2026-08-24): a WB seller \"ООО «ИНТЭК»\" (ИНН 6455006938, Saratov, registered 2002) sells one military-flagged item under brand «Интэк» — same brand word as this entity's own name, but a direct egrul.nalog.ru lookup confirms a DIFFERENT, much older, differently-regioned company. Name collision, not the same entity — do not conflate."
+          },
+          {
+            "source_id": "s8677",
+            "text": "Which of the two ИНТЭК entities makes the INTEC/UAVintec drones («Вихрь-1М», «Вихрь-1МП», «Метеор-2», DGF-R4X300): the @uavintec profile names ООО «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ» (7017396681), while the general director quoted by ЦБСТ (Калиновский Н.В.) matches the director of this entity. A purchase contract, a Rospatent entry or a site footer printing an ИНН would settle it."
           }
         ],
         "sanctions": [
@@ -26466,11 +26587,14 @@
         ],
         "tier_basis": "Sanctioned per OpenSanctions (ID-confirmed via exact ИНН match; regime/primary source URL not returned by the aggregator, treat as PLAUSIBLE pending a primary-list read). Legal name itself declares UAV manufacture (\"ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ\"), with a named product (\"Метеор-2\") on file, jointly founded 50/50 by ООО «ИНТЭК» and an affiliated IT-services vehicle.",
         "products": [
-          "Метеор-2",
-          "Дрон Экспо",
-          "ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ",
-          "ИНТЭК-ИНЖИНИРИНГ"
-        ]
+          "Метеор-2"
+        ],
+        "cbst_tie": {
+          "claim": "ЦБСТ's channel names the UAVintec brand's general director, whose initials match this entity's director; which ИНТЭК entity is the resident is unresolved.",
+          "evidence": "ЦБСТ post 953, 24.07.2025: «Резиденты ЦБСТ продолжают развивать ключевые направления в области тяжёлых беспилотных систем… Разработанный компанией UAVintec дрон на гибкой мачте «Вихрь-1МП»… Генеральный директор UAVintec Калиновский Н.В уточнил» [s8667]; ЦБСТ post 2301, 09.07.2026: «Резидент ЦБСТ представил новые БпЛА на «Дрон Экспо» в Казани. Компания Intec… «Метеор-2»» [s8676]. The director of this entity is Калиновский Никита Владиславович (ЕГРЮЛ), but the @uavintec channel names the other entity, ООО «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ» [s8677]. Identity basis: name_only (initials + brand).",
+          "source_id": "s8667",
+          "confidence": "t-open"
+        }
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -26482,7 +26606,8 @@
         "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, the sole candidate belongs to an unrelated company, \"ООО «ИННОДРАЙВ»\".",
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+        "[2026-10-01 ЦБСТ resident sweep] Products corrected: removed «Дрон Экспо» (an exhibition in Kazan, not a product), «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ» (a separate company, now its own record `ooo-intek-promyshlennye-sistemy`) and «ИНТЭК-ИНЖИНИРИНГ» (appears in no archived post or page among 328k posts, so no source). «Метеор-2» is kept: ЦБСТ post 2301 presents it for Intec [s8676]. cbst_tie set t-open, not t-doc, because two ИНТЭК entities fit the brand."
       ]
     },
     "ooo-investments": {
@@ -33760,7 +33885,8 @@
             "description": "Temperature/humidity trackers for sensitive cargo in transport/storage.",
             "name_ru": "Логгеры CUBE",
             "source_id": null
-          }
+          },
+          "ПЗС «Эгеон» (384/768/1152/2304 Вт·ч, кейсы)"
         ],
         "registered": "25.04.2007",
         "sanctions": [
@@ -33802,7 +33928,19 @@
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
         ],
-        "tier_basis": "Sanctioned per OpenSanctions (ID-confirmed via exact ИНН match; regime/primary source URL not returned by the aggregator, treat as PLAUSIBLE pending a primary-list read). Product line (portable power stations up to 2304 Wh, environmental/shock data loggers) is dual-use field equipment rather than a UAV airframe itself; its own trademark filing (reg. 1105074) explicitly lists UAV/military/weapons-related goods-class terms (антенн, военн, оружи, дрон), which is the strongest direct manufacturer-tier signal on this record. ОКВЭД (management consulting) is flagged as a declared/actual-activity mismatch."
+        "tier_basis": "Sanctioned per OpenSanctions (ID-confirmed via exact ИНН match; regime/primary source URL not returned by the aggregator, treat as PLAUSIBLE pending a primary-list read). Product line (portable power stations up to 2304 Wh, environmental/shock data loggers) is dual-use field equipment rather than a UAV airframe itself; its own trademark filing (reg. 1105074) explicitly lists UAV/military/weapons-related goods-class terms (антенн, военн, оружи, дрон), which is the strongest direct manufacturer-tier signal on this record. ОКВЭД (management consulting) is flagged as a declared/actual-activity mismatch.",
+        "cbst_tie": {
+          "claim": "ЦБСТ's post of 17.04.2026 about portable charging stations «Эгеон» is headed «Резидент ЦБСТ…»; a forward of it in mil_hub names «Титан Северо-Запад» as the company, while ЦБСТ's current text of the same post does not.",
+          "evidence": "mil_hub/128337, copied 17.04.2026 10:46 UTC as a forward of ANO_CBST/2080: «Резидент ЦБСТ наладил производство портативных зарядных станций в виде кейсов. Петербургская компания «Титан Северо-Запад» развернула выпуск портативных зарядных станций (ПЗС) «Эгеон»» [s8675]. ЦБСТ's post 2080 as now stored reads «Компания из Санкт-Петербурга развернула выпуск…» and was edited 20.04.2026 [s8674]. The forward was itself edited on mil_hub at 15:27 UTC the same day, so the archive cannot show whether the name came from ЦБСТ's original text or from mil_hub. Graded press for that reason. Identity basis: press_named.",
+          "source_id": "s8675",
+          "confidence": "press"
+        },
+        "open_questions": [
+          {
+            "source_id": "s8675",
+            "text": "Name removed from ЦБСТ's post after publication: compare [s8674] (current text, no name, edited 20.04.2026) with the mil_hub forward [s8675] (names «Титан Северо-Запад»). This company is OpenSanctions-matched as sanctioned (see sanctions[]). A third-party channel, KARABAS_RAZOBRAS, posts about «ПЗС ЭГЕОН 800» in Feb–Mar 2025 and is not yet tied to this ИНН. Whether ЦБСТ removed the name deliberately is not established; it edited many posts and the archive holds only 10% of them as forwards (see scripts/tg_forward_diff.py)."
+          }
+        ]
       },
       "verified_against": null,
       "why": [
@@ -33816,7 +33954,8 @@
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
+        "[2026-10-01 ЦБСТ resident sweep] cbst_tie set press from the mil_hub forward [s8675]; found by scripts/cbst_resident_sweep.py, which matched «Титан Северо-Запад» despite the spaced hyphen in the registry name."
       ]
     },
     "ooo-trimiks": {
@@ -40390,6 +40529,216 @@
       "why": [
         "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [1987] flagged by scripts/tg_post_coverage.py: namesake. Post 1987 («Британский молот») is a pun about Cambridge Aerospace. Post 2124, which lists «Молот-ПВО» among interceptors, is NOT covered by this review and stays open."
       ]
+    },
+    "ao-neyrorevolyutsiya": {
+      "set": {
+        "brand_ru": "Neiry",
+        "products": [
+          "Биодроны-голуби Neiry (живые птицы с нейроимплантами)"
+        ],
+        "cbst_tie": {
+          "claim": "Named a ЦБСТ resident by ЦБСТ's own channel.",
+          "evidence": "ЦБСТ post 1572, 26.11.2025: «Один из резидентов Центра беспилотных систем и технологий (ЦБСТ), компания Neiry, завершила испытания первой стаи биодронов-голубей — живых птиц с интегрированными имплантами, способных выполнять полётное задание по алгоритму, подобно лёгким беспилотникам.» [s8672]. Identity basis: inn_printed on the company site [s8680]; brand «Neiry» in the post and the linked Ведомости article [s8663].",
+          "source_id": "s8672",
+          "confidence": "t-doc"
+        },
+        "web": {
+          "sites": [
+            {
+              "url": "https://neiry.ru/",
+              "source_id": "s8680",
+              "note": "Footer prints АО «Нейрореволюция», ИНН 9701255148, ОГРН 1237700501268, Москва, ул. Бакунинская, д. 73, стр. 2."
+            }
+          ],
+          "telegram": [],
+          "vk": [],
+          "youtube": [],
+          "marketplace_listings": [],
+          "other": []
+        },
+        "director_history": [
+          {
+            "value": "Панов Александр Александрович",
+            "as_of": "2026-10-01",
+            "source_id": "s8660",
+            "note": "ЕГРЮЛ выписка pulled 01.10.2026: генеральный директор."
+          }
+        ]
+      }
+    },
+    "ooo-villis-wheelies": {
+      "set": {
+        "brand_ru": "Wheelies",
+        "products": [
+          "Программная платформа Wheelies для управления беспилотными системами"
+        ],
+        "cbst_tie": {
+          "claim": "Named a ЦБСТ resident by ЦБСТ's own channel, twice.",
+          "evidence": "ЦБСТ post 1519, 17.11.2025: «Wheelies Hackathon 2025 – компания-резидент ЦБСТ проведёт первый в России хакатон по автономному экологическому мониторингу с применением дронов и нейросетей» [s8671]; ЦБСТ post 2186, 05.06.2026: «Ещё один резидент ЦБСТ — компания Wheelies — представил на HeliRussia программную платформу для управления беспилотными системами.» [s7603]. Identity basis: inn_printed on wheelies.ru [s8679].",
+          "source_id": "s8671",
+          "confidence": "t-doc"
+        },
+        "web": {
+          "sites": [
+            {
+              "url": "https://wheelies.ru/",
+              "source_id": "s8679",
+              "note": "Footer prints ООО \"ВИЛЛИС\", ИНН / ОГРН 9200026034 / 1259200000410, Севастополь."
+            }
+          ],
+          "telegram": [],
+          "vk": [],
+          "youtube": [],
+          "marketplace_listings": [],
+          "other": []
+        },
+        "director_history": [
+          {
+            "value": "Кузьма Дмитрий Валерьевич",
+            "as_of": "2026-10-01",
+            "source_id": "s8659",
+            "note": "ЕГРЮЛ выписка pulled 01.10.2026: генеральный директор."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s8659",
+            "text": "Sole founder is ООО «ИТ ГАРАЖ» (ИНН 9200013941), not yet on file as an entity; its own ownership and any tie to ЦБСТ are not checked."
+          }
+        ]
+      }
+    },
+    "ao-shkola-bpla-oktagon": {
+      "set": {
+        "cbst_tie": {
+          "claim": "Its general director is named a ЦБСТ resident by ЦБСТ's own channel.",
+          "evidence": "ЦБСТ post 1173, 02.09.2025: «Резидент ЦБСТ, гендиректор «Школы БПЛА Октагон» Алексей Харламов отметил, что увлечение компьютерными играми помогает молодежи быстрее осваивать современные военные технологии.» [s8668]. Identity basis: legal_name_printed plus director match [s8658]; inn_printed on the company site [s8678].",
+          "source_id": "s8668",
+          "confidence": "t-doc"
+        },
+        "web": {
+          "sites": [
+            {
+              "url": "https://octagon-bpla.ru/",
+              "source_id": "s8678",
+              "note": "Prints АО «Школа БПЛА Октагон», ИНН 7806616655, ОГРН 1237800150125."
+            }
+          ],
+          "telegram": [],
+          "vk": [],
+          "youtube": [],
+          "marketplace_listings": [],
+          "other": []
+        },
+        "director_history": [
+          {
+            "value": "Харламов Алексей Геннадьевич",
+            "as_of": "2026-10-01",
+            "source_id": "s8658",
+            "note": "ЕГРЮЛ выписка pulled 01.10.2026: генеральный директор."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s8668",
+            "text": "Who its students are and whether it trains for units at the front is not stated in any source on file; the tie is the director's resident status as ЦБСТ states it."
+          }
+        ]
+      }
+    },
+    "ao-stratolink": {
+      "set": {
+        "brand_ru": "Stratolink",
+        "products": [
+          "«Аргус» — стратосферный БпЛА / атмосферный спутник (прототип)"
+        ],
+        "cbst_tie": {
+          "claim": "Named a ЦБСТ resident by ЦБСТ's own channel.",
+          "evidence": "ЦБСТ post 1956, 10.03.2026: «Этой весной компания Stratolink (резидент ЦБСТ) поднимет в небо прототип стратосферного БпЛА «Аргус».» [s8673]. Identity basis: name_only (unique ЕГРЮЛ legal-name match, ОКВЭД 30.30.6) [s8661].",
+          "source_id": "s8673",
+          "confidence": "t-doc"
+        },
+        "web": {
+          "sites": [
+            {
+              "url": "https://stratolink.ru/",
+              "source_id": "s8681",
+              "note": "Product page «Аргус» and «Инвесторам и акционерам» [s8682]; no legal identifiers printed."
+            }
+          ],
+          "telegram": [],
+          "vk": [],
+          "youtube": [],
+          "marketplace_listings": [],
+          "other": []
+        },
+        "director_history": [
+          {
+            "value": "Оксман Николас Николаевич",
+            "as_of": "2026-10-01",
+            "source_id": "s8661",
+            "note": "ЕГРЮЛ выписка pulled 01.10.2026: генеральный директор."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s8661",
+            "text": "Identity by name only (see tier_basis). The director is foreign-named and the company is 18 months old; owners are held by a registrar and not shown."
+          }
+        ]
+      }
+    },
+    "ooo-intek-promyshlennye-sistemy": {
+      "set": {
+        "brand_ru": "INTEC",
+        "products": [
+          "DGF-R4X300 — квадрокоптер для мониторинга ВЛЭП"
+        ],
+        "cbst_tie": {
+          "claim": "Named a ЦБСТ resident, by legal name, in ЦБСТ's own channel.",
+          "evidence": "ЦБСТ post 447, 14.02.2025: «Компания «ИНТЭК промышленные системы», являясь резидентом Центра беспилотных систем и технологий, представила новый беспилотный летательный аппарат DGF-R4X300.» [s8666]. Identity basis: legal_name_printed; the post links t.me/uavintec whose profile reads «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ (INTEC) – разработчик и производитель беспилотных систем» [s8677].",
+          "source_id": "s8666",
+          "confidence": "t-doc"
+        },
+        "web": {
+          "sites": [
+            {
+              "url": "https://uav.intecgroup.ru/",
+              "source_id": "s8677",
+              "note": "Named on the @uavintec channel profile."
+            }
+          ],
+          "telegram": [
+            {
+              "url": "https://t.me/uavintec",
+              "source_id": "s8677",
+              "note": "«ИНТЭК: беспилотные системы», 246 subscribers at capture."
+            }
+          ],
+          "vk": [],
+          "youtube": [],
+          "marketplace_listings": [],
+          "other": []
+        },
+        "director_history": [
+          {
+            "value": "Калиновская Елена Евгеньевна",
+            "as_of": "2026-10-01",
+            "source_id": "s8657",
+            "note": "ЕГРЮЛ выписка pulled 01.10.2026: генеральный директор."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s8657",
+            "text": "Relationship to ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ» (ИНН 7000013316): surnames Калиновская/Калиновский, same city and brand, but no shared director or founder in either ЕГРЮЛ extract. Not recorded as sister-entity until one is shown."
+          },
+          {
+            "source_id": "s8657",
+            "text": "ООО «ИНТЭК» (50% founder) has not been looked up; the registry holds an unrelated Saratov ООО «ИНТЭК» (ИНН 6455006938) and the two must not be assumed the same."
+          }
+        ]
+      }
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1194,
-  "edge_count": 2039,
-  "unresolved_count": 106,
+  "node_count": 1220,
+  "edge_count": 2072,
+  "unresolved_count": 112,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -243,7 +243,7 @@
       "sanctioned": true,
       "legal_form": "АНО",
       "variant": null,
-      "degree": 82
+      "degree": 90
     },
     {
       "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -430,6 +430,18 @@
       "degree": 2
     },
     {
+      "id": "ao-neyrorevolyutsiya",
+      "kind": "entity",
+      "label": "АО «Нейрореволюция»",
+      "name_latin": null,
+      "inn": "9701255148",
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 3
+    },
+    {
       "id": "ao-nii-stt",
       "kind": "entity",
       "label": "АО «НИИ СТТ»",
@@ -550,6 +562,18 @@
       "degree": 4
     },
     {
+      "id": "ao-shkola-bpla-oktagon",
+      "kind": "entity",
+      "label": "АО «Школа БПЛА Октагон»",
+      "name_latin": null,
+      "inn": "7806616655",
+      "tier": "plumbing",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 2
+    },
+    {
       "id": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
       "kind": "entity",
       "label": "АО «Спецтех Инвестиции»",
@@ -584,6 +608,18 @@
       "legal_form": "АО",
       "variant": "offensive",
       "degree": 19
+    },
+    {
+      "id": "ao-stratolink",
+      "kind": "entity",
+      "label": "АО «СТРАТОЛИНК»",
+      "name_latin": null,
+      "inn": "9715507772",
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 4
     },
     {
       "id": "ao-tekhnodinamika",
@@ -1981,7 +2017,7 @@
       "sanctioned": true,
       "legal_form": "ГК",
       "variant": null,
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "glushkov-aleksandr-valentinovich",
@@ -2162,6 +2198,14 @@
       "name_latin": "Kalinin Dmitriy Andreevich",
       "sanctioned": false,
       "degree": 1
+    },
+    {
+      "id": "kalinovskiy-nikita-vladislavovich",
+      "kind": "person",
+      "label": "Калиновский Никита Владиславович",
+      "name_latin": null,
+      "sanctioned": false,
+      "degree": 3
     },
     {
       "id": "kapustin-dmitriy-aleksandrovich",
@@ -2470,6 +2514,14 @@
       "legal_form": null,
       "variant": null,
       "degree": 6
+    },
+    {
+      "id": "kraskovskiy-vyacheslav-aleksandrovich",
+      "kind": "person",
+      "label": "Красковский Вячеслав Александрович",
+      "name_latin": null,
+      "sanctioned": false,
+      "degree": 3
     },
     {
       "id": "kryuchkov-dmitriy-aleksandrovich",
@@ -2881,7 +2933,7 @@
       "label": "Оксман Николас Николаевич",
       "name_latin": null,
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "olga-sokolova",
@@ -3442,6 +3494,30 @@
       "legal_form": "ООО",
       "variant": null,
       "degree": 6
+    },
+    {
+      "id": "ooo-intek-bespilotnye-sistemy",
+      "kind": "entity",
+      "label": "ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ»",
+      "name_latin": null,
+      "inn": "7000013316",
+      "tier": "manufacturer",
+      "sanctioned": true,
+      "legal_form": "ООО",
+      "variant": null,
+      "degree": 7
+    },
+    {
+      "id": "ooo-intek-promyshlennye-sistemy",
+      "kind": "entity",
+      "label": "ООО «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ»",
+      "name_latin": null,
+      "inn": "7017396681",
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 3
     },
     {
       "id": "ooo-intel-dron",
@@ -4140,6 +4216,18 @@
       "degree": 13
     },
     {
+      "id": "ooo-titan-severo-zapad",
+      "kind": "entity",
+      "label": "ООО «ТИТАН - СЕВЕРО-ЗАПАД»",
+      "name_latin": null,
+      "inn": "7838380755",
+      "tier": "manufacturer",
+      "sanctioned": true,
+      "legal_form": "ООО",
+      "variant": null,
+      "degree": 11
+    },
+    {
       "id": "ooo-trimiks",
       "kind": "entity",
       "label": "ООО «Тримикс»",
@@ -4222,6 +4310,18 @@
       "legal_form": "ООО",
       "variant": null,
       "degree": 5
+    },
+    {
+      "id": "ooo-villis-wheelies",
+      "kind": "entity",
+      "label": "ООО «ВИЛЛИС»",
+      "name_latin": null,
+      "inn": "9200026034",
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": null,
+      "variant": null,
+      "degree": 3
     },
     {
       "id": "ooo-vingrad",
@@ -4947,6 +5047,19 @@
       "label": "Экспортный комплекс «Орион-Э»",
       "owner_slug": "ao-kronshtadt",
       "source_id": "s8630",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-neyrorevolyutsiya::биодроны-голуби-neiry",
+      "kind": "product",
+      "label": "Биодроны-голуби Neiry (живые птицы с нейроимплантами)",
+      "owner_slug": "ao-neyrorevolyutsiya",
+      "source_id": null,
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -5935,6 +6048,19 @@
       "label": "«Щегол»",
       "owner_slug": "ao-stratim",
       "source_id": "s0963",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ao-stratolink::аргус-стратосферный-бпла-атмосферный-спутник",
+      "kind": "product",
+      "label": "«Аргус» — стратосферный БпЛА / атмосферный спутник (прототип)",
+      "owner_slug": "ao-stratolink",
+      "source_id": null,
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -8361,6 +8487,32 @@
       "degree": 1
     },
     {
+      "id": "product::ooo-intek-bespilotnye-sistemy::метеор-2",
+      "kind": "product",
+      "label": "Метеор-2",
+      "owner_slug": "ooo-intek-bespilotnye-sistemy",
+      "source_id": null,
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-intek-promyshlennye-sistemy::dgf-r4x300-квадрокоптер-для-мониторинга-влэп",
+      "kind": "product",
+      "label": "DGF-R4X300 — квадрокоптер для мониторинга ВЛЭП",
+      "owner_slug": "ooo-intek-promyshlennye-sistemy",
+      "source_id": null,
+      "classification": {
+        "status": "classified",
+        "uav_platform": "multirotor",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::ooo-intel-dron::ромашка-комплекс-ии-анализа-видео-с-бпла",
       "kind": "product",
       "label": "«Ромашка» — комплекс ИИ-анализа видео с БПЛА",
@@ -10493,6 +10645,84 @@
       "degree": 1
     },
     {
+      "id": "product::ooo-titan-severo-zapad::логгер-полилог",
+      "kind": "product",
+      "label": "Логгер «ПОЛИЛОГ»",
+      "owner_slug": "ooo-titan-severo-zapad",
+      "source_id": null,
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-titan-severo-zapad::логгеры-cube",
+      "kind": "product",
+      "label": "Логгеры CUBE",
+      "owner_slug": "ooo-titan-severo-zapad",
+      "source_id": null,
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-titan-severo-zapad::пзс-2000-т",
+      "kind": "product",
+      "label": "ПЗС 2000-Т",
+      "owner_slug": "ooo-titan-severo-zapad",
+      "source_id": null,
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-titan-severo-zapad::пзс-400-т",
+      "kind": "product",
+      "label": "ПЗС 400-Т",
+      "owner_slug": "ooo-titan-severo-zapad",
+      "source_id": null,
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-titan-severo-zapad::пзс-800-т",
+      "kind": "product",
+      "label": "ПЗС 800-Т",
+      "owner_slug": "ooo-titan-severo-zapad",
+      "source_id": null,
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-titan-severo-zapad::пзс-эгеон",
+      "kind": "product",
+      "label": "ПЗС «Эгеон» (384/768/1152/2304 Вт·ч, кейсы)",
+      "owner_slug": "ooo-titan-severo-zapad",
+      "source_id": null,
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "product::ooo-trimiks::азар",
       "kind": "product",
       "label": "«Азар»",
@@ -10641,6 +10871,19 @@
       "label": "Испытательный полигон БАС в Сколково",
       "owner_slug": "ooo-tsugam",
       "source_id": "s8573",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::ooo-villis-wheelies::программная-платформа-wheelies-для-управления-беспилотными-системами",
+      "kind": "product",
+      "label": "Программная платформа Wheelies для управления беспилотными системами",
+      "owner_slug": "ooo-villis-wheelies",
+      "source_id": null,
       "classification": {
         "status": "unclassified",
         "uav_platform": "unknown",
@@ -11353,6 +11596,18 @@
       "degree": 1
     },
     {
+      "id": "stub::inn-5501278775",
+      "kind": "unresolved",
+      "label": "ООО «Информационные технологии»",
+      "degree": 1
+    },
+    {
+      "id": "stub::inn-7017236286",
+      "kind": "unresolved",
+      "label": "ООО «ИНТЭК»",
+      "degree": 1
+    },
+    {
       "id": "stub::inn-7702361427",
       "kind": "unresolved",
       "label": "Министерство транспорта Российской Федерации",
@@ -11557,6 +11812,12 @@
       "degree": 4
     },
     {
+      "id": "stub::группа компаний титан",
+      "kind": "unresolved",
+      "label": "ЗАО «Группа компаний «Титан»»",
+      "degree": 1
+    },
+    {
       "id": "stub::донцов василий николаевич",
       "kind": "unresolved",
       "label": "Донцов Василий Николаевич (генеральный директор; ИНН 381004363944)",
@@ -11617,6 +11878,12 @@
       "degree": 2
     },
     {
+      "id": "stub::калиновская елена евгеньевна",
+      "kind": "unresolved",
+      "label": "Калиновская Елена Евгеньевна",
+      "degree": 1
+    },
+    {
       "id": "stub::карамов эльдар рафикович",
       "kind": "unresolved",
       "label": "Карамов Эльдар Рафикович",
@@ -11632,6 +11899,12 @@
       "id": "stub::кронштадт-техник",
       "kind": "unresolved",
       "label": "ООО «Кронштадт-Техник»",
+      "degree": 1
+    },
+    {
+      "id": "stub::кузьма дмитрий валерьевич",
+      "kind": "unresolved",
+      "label": "Кузьма Дмитрий Валерьевич",
       "degree": 1
     },
     {
@@ -11716,6 +11989,12 @@
       "id": "stub::нефедьев андрей матвеевич",
       "kind": "unresolved",
       "label": "Нефедьев Андрей Матвеевич",
+      "degree": 1
+    },
+    {
+      "id": "stub::панов александр александрович",
+      "kind": "unresolved",
+      "label": "Панов Александр Александрович",
       "degree": 1
     },
     {
@@ -11827,12 +12106,6 @@
       "degree": 1
     },
     {
-      "id": "stub::стратолинк",
-      "kind": "unresolved",
-      "label": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СТРАТОЛИНК\"",
-      "degree": 1
-    },
-    {
       "id": "stub::струлев игорь леонидович",
       "kind": "unresolved",
       "label": "Струлев Игорь Леонидович",
@@ -11897,6 +12170,12 @@
       "kind": "unresolved",
       "label": "Харитонова Наталья Евгеньевна",
       "degree": 2
+    },
+    {
+      "id": "stub::харламов алексей геннадьевич",
+      "kind": "unresolved",
+      "label": "Харламов Алексей Геннадьевич",
+      "degree": 1
     },
     {
       "id": "stub::хасиятуллин станислав николаевич",
@@ -13329,6 +13608,28 @@
       "confidence": null
     },
     {
+      "source": "ao-neyrorevolyutsiya",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Named a ЦБСТ resident by ЦБСТ's own channel.",
+      "source_id": "s8672",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc"
+    },
+    {
+      "source": "ao-neyrorevolyutsiya",
+      "target": "product::ao-neyrorevolyutsiya::биодроны-голуби-neiry",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ao-nii-stt",
       "target": "ao-kronshtadt",
       "type": "related",
@@ -14242,6 +14543,17 @@
       "confidence": null
     },
     {
+      "source": "ao-shkola-bpla-oktagon",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Its general director is named a ЦБСТ resident by ЦБСТ's own channel.",
+      "source_id": "s8668",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc"
+    },
+    {
       "source": "ao-spetstekh-investitsii-ao-spetstekh-pervyy",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
@@ -14335,6 +14647,39 @@
       "type": "produces",
       "label": null,
       "source_id": "s0963",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ao-stratolink",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Named a ЦБСТ resident by ЦБСТ's own channel.",
+      "source_id": "s8673",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc"
+    },
+    {
+      "source": "ao-stratolink",
+      "target": "ooo-aeroplatformy",
+      "type": "founded",
+      "label": "35%",
+      "source_id": "s6796",
+      "as_of": "2025-10-21",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "ao-stratolink",
+      "target": "product::ao-stratolink::аргус-стратосферный-бпла-атмосферный-спутник",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -20117,6 +20462,17 @@
     },
     {
       "source": "gk-rostekh",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Госкорпорация Ростех signed a cooperation agreement with АНО «ЦБСТ», Агентство стратегических инициатив and Корпораци...",
+      "source_id": "s8653",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc"
+    },
+    {
+      "source": "gk-rostekh",
       "target": "ooo-rt-razvitie-biznesa",
       "type": "founded",
       "label": null,
@@ -20660,6 +21016,39 @@
       "type": "role",
       "label": "co-inventor (patent RU2845089C1)",
       "source_id": "s1041",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kalinovskiy-nikita-vladislavovich",
+      "target": "ooo-intek-bespilotnye-sistemy",
+      "type": "directs",
+      "label": null,
+      "source_id": "s8128",
+      "as_of": "2026-09-29",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "kalinovskiy-nikita-vladislavovich",
+      "target": "ooo-intek-bespilotnye-sistemy",
+      "type": "role",
+      "label": "director",
+      "source_id": "s8128",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kalinovskiy-nikita-vladislavovich",
+      "target": "ooo-intek-bespilotnye-sistemy",
+      "type": "role",
+      "label": "Генеральный директор",
+      "source_id": "s7414",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -22277,6 +22666,39 @@
       "type": "produces",
       "label": null,
       "source_id": "s8063",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kraskovskiy-vyacheslav-aleksandrovich",
+      "target": "ooo-titan-severo-zapad",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0449",
+      "as_of": "2018-12-06",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "kraskovskiy-vyacheslav-aleksandrovich",
+      "target": "ooo-titan-severo-zapad",
+      "type": "role",
+      "label": null,
+      "source_id": "s0449",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "kraskovskiy-vyacheslav-aleksandrovich",
+      "target": "ooo-titan-severo-zapad",
+      "type": "role",
+      "label": "director",
+      "source_id": "s8133",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -24264,6 +24686,17 @@
     },
     {
       "source": "oksman-nikolas-nikolaevich",
+      "target": "ao-stratolink",
+      "type": "directs",
+      "label": null,
+      "source_id": "s8661",
+      "as_of": "2026-10-01",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
+      "source": "oksman-nikolas-nikolaevich",
       "target": "ooo-aeroplatformy",
       "type": "founded",
       "label": "14%",
@@ -25863,6 +26296,50 @@
       "type": "produces",
       "label": null,
       "source_id": "s8567",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-intek-bespilotnye-sistemy",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "ЦБСТ's channel names the UAVintec brand's general director, whose initials match this entity's director; which ИНТЭК ...",
+      "source_id": "s8667",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-open"
+    },
+    {
+      "source": "ooo-intek-bespilotnye-sistemy",
+      "target": "product::ooo-intek-bespilotnye-sistemy::метеор-2",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-intek-promyshlennye-sistemy",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Named a ЦБСТ resident, by legal name, in ЦБСТ's own channel.",
+      "source_id": "s8666",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-intek-promyshlennye-sistemy",
+      "target": "product::ooo-intek-promyshlennye-sistemy::dgf-r4x300-квадрокоптер-для-мониторинга-влэп",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -28201,6 +28678,83 @@
       "confidence": null
     },
     {
+      "source": "ooo-titan-severo-zapad",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "ЦБСТ's post of 17.04.2026 about portable charging stations «Эгеон» is headed «Резидент ЦБСТ…»; a forward of it in mil...",
+      "source_id": "s8675",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "press"
+    },
+    {
+      "source": "ooo-titan-severo-zapad",
+      "target": "product::ooo-titan-severo-zapad::логгер-полилог",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-titan-severo-zapad",
+      "target": "product::ooo-titan-severo-zapad::логгеры-cube",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-titan-severo-zapad",
+      "target": "product::ooo-titan-severo-zapad::пзс-2000-т",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-titan-severo-zapad",
+      "target": "product::ooo-titan-severo-zapad::пзс-400-т",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-titan-severo-zapad",
+      "target": "product::ooo-titan-severo-zapad::пзс-800-т",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-titan-severo-zapad",
+      "target": "product::ooo-titan-severo-zapad::пзс-эгеон",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "ooo-trimiks",
       "target": "ano-npts-ushkuynik",
       "type": "related",
@@ -28447,6 +29001,28 @@
       "target": "npts-ushkuynik",
       "type": "related",
       "label": "group-structure",
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "ooo-villis-wheelies",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Named a ЦБСТ resident by ЦБСТ's own channel, twice.",
+      "source_id": "s8671",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc"
+    },
+    {
+      "source": "ooo-villis-wheelies",
+      "target": "product::ooo-villis-wheelies::программная-платформа-wheelies-для-управления-беспилотными-системами",
+      "type": "produces",
+      "label": null,
       "source_id": null,
       "as_of": null,
       "weight": 1.0,
@@ -31974,6 +32550,28 @@
       "confidence": null
     },
     {
+      "source": "stub::inn-5501278775",
+      "target": "ooo-intek-bespilotnye-sistemy",
+      "type": "founded",
+      "label": null,
+      "source_id": "s0489",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::inn-7017236286",
+      "target": "ooo-intek-bespilotnye-sistemy",
+      "type": "founded",
+      "label": null,
+      "source_id": "s0489",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "stub::inn-7702361427",
       "target": "fgup-zashchitainfotrans",
       "type": "founded",
@@ -32491,6 +33089,17 @@
       "confidence": null
     },
     {
+      "source": "stub::группа компаний титан",
+      "target": "ooo-titan-severo-zapad",
+      "type": "founded",
+      "label": null,
+      "source_id": "s0449",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "stub::донцов василий николаевич",
       "target": "ao-kronshtadt",
       "type": "directs",
@@ -32612,6 +33221,17 @@
       "confidence": null
     },
     {
+      "source": "stub::калиновская елена евгеньевна",
+      "target": "ooo-intek-promyshlennye-sistemy",
+      "type": "directs",
+      "label": null,
+      "source_id": "s8657",
+      "as_of": "2026-10-01",
+      "weight": 1.0,
+      "temporal_status": "historical",
+      "confidence": null
+    },
+    {
       "source": "stub::карамов эльдар рафикович",
       "target": "ooo-vostochnye-vorota-zabaykalsk-manchzhuriya",
       "type": "directs",
@@ -32664,6 +33284,17 @@
       "as_of": "2026-08-24",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "stub::кузьма дмитрий валерьевич",
+      "target": "ooo-villis-wheelies",
+      "type": "directs",
+      "label": null,
+      "source_id": "s8659",
+      "as_of": "2026-10-01",
+      "weight": 1.0,
+      "temporal_status": "historical",
       "confidence": null
     },
     {
@@ -32862,6 +33493,17 @@
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
+      "source": "stub::панов александр александрович",
+      "target": "ao-neyrorevolyutsiya",
+      "type": "directs",
+      "label": null,
+      "source_id": "s8660",
+      "as_of": "2026-10-01",
+      "weight": 1.0,
+      "temporal_status": "historical",
       "confidence": null
     },
     {
@@ -33140,17 +33782,6 @@
       "confidence": null
     },
     {
-      "source": "stub::стратолинк",
-      "target": "ooo-aeroplatformy",
-      "type": "founded",
-      "label": "35%",
-      "source_id": "s6796",
-      "as_of": "2025-10-21",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null
-    },
-    {
       "source": "stub::струлев игорь леонидович",
       "target": "ooo-superkhrono",
       "type": "directs",
@@ -33313,6 +33944,17 @@
       "as_of": "2026-08-24",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null
+    },
+    {
+      "source": "stub::харламов алексей геннадьевич",
+      "target": "ao-shkola-bpla-oktagon",
+      "type": "directs",
+      "label": null,
+      "source_id": "s8658",
+      "as_of": "2026-10-01",
+      "weight": 1.0,
+      "temporal_status": "historical",
       "confidence": null
     },
     {
@@ -34827,6 +35469,20 @@
       ]
     },
     {
+      "id": "stub::inn-5501278775",
+      "raw_name": "ООО «Информационные технологии»",
+      "contexts": [
+        "founder of ooo-intek-bespilotnye-sistemy"
+      ]
+    },
+    {
+      "id": "stub::inn-7017236286",
+      "raw_name": "ООО «ИНТЭК»",
+      "contexts": [
+        "founder of ooo-intek-bespilotnye-sistemy"
+      ]
+    },
+    {
       "id": "stub::inn-7702361427",
       "raw_name": "Министерство транспорта Российской Федерации",
       "contexts": [
@@ -35074,6 +35730,13 @@
       ]
     },
     {
+      "id": "stub::группа компаний титан",
+      "raw_name": "ЗАО «Группа компаний «Титан»»",
+      "contexts": [
+        "founder of ooo-titan-severo-zapad"
+      ]
+    },
+    {
       "id": "stub::донцов василий николаевич",
       "raw_name": "Донцов Василий Николаевич (генеральный директор; ИНН 381004363944)",
       "contexts": [
@@ -35144,6 +35807,13 @@
       ]
     },
     {
+      "id": "stub::калиновская елена евгеньевна",
+      "raw_name": "Калиновская Елена Евгеньевна",
+      "contexts": [
+        "director of ooo-intek-promyshlennye-sistemy"
+      ]
+    },
+    {
       "id": "stub::карамов эльдар рафикович",
       "raw_name": "Карамов Эльдар Рафикович",
       "contexts": [
@@ -35164,6 +35834,13 @@
       "raw_name": "ООО «Кронштадт-Техник»",
       "contexts": [
         "director of ao-aeromaks"
+      ]
+    },
+    {
+      "id": "stub::кузьма дмитрий валерьевич",
+      "raw_name": "Кузьма Дмитрий Валерьевич",
+      "contexts": [
+        "director of ooo-villis-wheelies"
       ]
     },
     {
@@ -35265,6 +35942,13 @@
       "raw_name": "Нефедьев Андрей Матвеевич",
       "contexts": [
         "founder of ao-pmts-avangard"
+      ]
+    },
+    {
+      "id": "stub::панов александр александрович",
+      "raw_name": "Панов Александр Александрович",
+      "contexts": [
+        "director of ao-neyrorevolyutsiya"
       ]
     },
     {
@@ -35398,13 +36082,6 @@
       ]
     },
     {
-      "id": "stub::стратолинк",
-      "raw_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СТРАТОЛИНК\"",
-      "contexts": [
-        "former founder of ooo-aeroplatformy"
-      ]
-    },
-    {
       "id": "stub::струлев игорь леонидович",
       "raw_name": "Струлев Игорь Леонидович",
       "contexts": [
@@ -35481,6 +36158,13 @@
       "raw_name": "Харитонова Наталья Евгеньевна",
       "contexts": [
         "director of ooo-orion"
+      ]
+    },
+    {
+      "id": "stub::харламов алексей геннадьевич",
+      "raw_name": "Харламов Алексей Геннадьевич",
+      "contexts": [
+        "director of ao-shkola-bpla-oktagon"
       ]
     },
     {
@@ -35622,14 +36306,12 @@
     "ip-popov-aleksandr-sergeevich",
     "ip-sidorov-andrey-sergeevich",
     "ivlev-artem-yurevich",
-    "kalinovskiy-nikita-vladislavovich",
     "kashnikov-konstantin-nikolaevich",
     "khristyuk-ekaterina-valerevna",
     "khristyuk-vladimir-vladimirovich",
     "kindyakov-andrey-andreevich",
     "kolskaya-verf",
     "korolev-dmitriy-alekseevich",
-    "kraskovskiy-vyacheslav-aleksandrovich",
     "krylov-andrey-olegovich",
     "kurteev-aleksandr-sergeevich",
     "kusumov-vakhid-abdulovich",
@@ -35659,7 +36341,6 @@
     "ooo-geron",
     "ooo-ges-2",
     "ooo-instekh",
-    "ooo-intek-bespilotnye-sistemy",
     "ooo-krams",
     "ooo-mobil-grup",
     "ooo-npk-geron",
@@ -35670,7 +36351,6 @@
     "ooo-radiofid-sistemy",
     "ooo-rokot-tekh",
     "ooo-skay-avia-grupp",
-    "ooo-titan-severo-zapad",
     "ooo-tsentr-bespilotnykh-sistem-tula",
     "ooo-tstp-tsifrovaya-transportnaya-platforma",
     "ooo-zetaks",
@@ -35717,10 +36397,6 @@
     "product::ooo-geron::стратосферная-беспилотная-платформа-хищник",
     "product::ooo-instekh::антидрон-система-aura",
     "product::ooo-instekh::система-оповещения-нежеголь-оборудование-орало-150",
-    "product::ooo-intek-bespilotnye-sistemy::дрон-экспо",
-    "product::ooo-intek-bespilotnye-sistemy::интэк-инжиниринг",
-    "product::ooo-intek-bespilotnye-sistemy::интэк-промышленные-системы",
-    "product::ooo-intek-bespilotnye-sistemy::метеор-2",
     "product::ooo-npo-nebo::скарабей-sd-138",
     "product::ooo-prommash::дуплет-duplet",
     "product::ooo-radiofid-sistemy::промышленные-4g-lte-роутеры-и-модемы-irz-терминалы-gps-маяки",
@@ -35730,11 +36406,6 @@
     "product::ooo-rokot-tekh::пропеллеры-10-дюймов-для-fpv-дрона",
     "product::ooo-rokot-tekh::пропеллеры-9-дюймов-для-fpv-дрона",
     "product::ooo-skay-avia-grupp::сборка-боевых-беспилотников",
-    "product::ooo-titan-severo-zapad::логгер-полилог",
-    "product::ooo-titan-severo-zapad::логгеры-cube",
-    "product::ooo-titan-severo-zapad::пзс-2000-т",
-    "product::ooo-titan-severo-zapad::пзс-400-т",
-    "product::ooo-titan-severo-zapad::пзс-800-т",
     "product::ooo-zetaks::образовательные-коптеры",
     "product::yarl::бпр-ярл",
     "product::yarl::бронежилет-для-собак-псы-войны",
@@ -35743,8 +36414,6 @@
     "shatskikh-aleksandr-vladimirovich",
     "skoryatin-georgiy-andreevich",
     "stub::inn-5216017944",
-    "stub::inn-5501278775",
-    "stub::inn-7017236286",
     "stub::inn-7729487530",
     "stub::inn-7802858614",
     "stub::inn-9704154772",
@@ -35753,7 +36422,6 @@
     "stub::голоунин олег борисович",
     "stub::григорьев григорий валерьевич",
     "stub::груданова нина олеговна",
-    "stub::группа компаний титан",
     "stub::дороничев юрий валерьевич",
     "stub::еремеев владимир евгеньевич",
     "stub::ермолов сергей юрьевич",
