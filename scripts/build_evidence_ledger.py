@@ -14,7 +14,7 @@ FLAGSHIP_PRODUCTS in build_product_profile.py) -- this script does not
 invent event_type for entries that don't have it.
 
 Local file processing over data/registry/*.json -- no network calls, safe
-to run directly/repeatedly. Output: scratch_design/evidence_ledger.html (a
+to run directly/repeatedly. Output: exhibits/evidence_ledger.html (a
 curated exhibit, same publishing path as affiliation_matrix.html/
 cbst_chain.html -- not part of the docs/profiles/ generated-page family,
 since it draws rows from across many entities rather than rendering one).
@@ -238,7 +238,7 @@ h1 {{ font-family: var(--serif); font-size: clamp(1.9rem, 5vw, 2.6rem); line-hei
 def main():
     by_slug = load()
     rows = collect_rows(by_slug)
-    out_path = os.path.join(REPO, "scratch_design/evidence_ledger.html")
+    out_path = os.path.join(REPO, "exhibits/evidence_ledger.html")
     with open(out_path, "w") as f:
         f.write(render(rows))
     print(f"wrote {out_path} — {len(rows)} typed transaction rows")

@@ -377,8 +377,10 @@ a question on its own; reach for it before ever asserting two things are
 fallback second) — presentation-layer classification only, same
 discipline as the hub-badge offensive/defensive/dual read: not a new
 sourced registry field, a deterministic, reviewable rule set. Used by
-exhibit build scripts under `scratch_design/`, not by the generated
+exhibit build scripts under `exhibits/`, not by the generated
 company profiles.
+
+**Where exhibit assets live (consolidated 2026-10-01).** `exhibits/` (renamed from `scratch_design/`) holds every standalone exhibit, mockup, icon set and their builder scripts, plus `exhibits/images/` for their pictures. `docs/` holds only what is published: generated pages and `docs/images/` (profile media). A finished exhibit that is published is generated into `docs/` by a build script; do not hand-copy it there, and do not leave drafts in `docs/` or `notes/`.
 
 ## Writing: read `STYLE_GUIDE.md` before drafting any prose
 

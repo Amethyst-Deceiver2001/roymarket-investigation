@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generates scratch_design/case_study_excerpts.html.
+"""Generates exhibits/case_study_excerpts.html.
 
 Five small, fixed, non-interactive sub-graph exhibits (Part 3 of the
 Network Graph split plan in notes/rebuild_plan.md) -- one per flagship
@@ -751,5 +751,5 @@ footer.note {{
 </body></html>'''
 
 if __name__ == "__main__":
-    open("scratch_design/case_study_excerpts.html", "w", encoding="utf-8").write(HTML)
-    print("wrote scratch_design/case_study_excerpts.html", len(HTML), "chars")
+    open("exhibits/case_study_excerpts.html", "w", encoding="utf-8").write(HTML)
+    print("wrote exhibits/case_study_excerpts.html", len(HTML), "chars")

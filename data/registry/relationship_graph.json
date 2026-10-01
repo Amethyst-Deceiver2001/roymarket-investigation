@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
   "generated_from": "data/registry/entities.json + people.json",
-  "node_count": 1220,
-  "edge_count": 2072,
-  "unresolved_count": 112,
+  "node_count": 1221,
+  "edge_count": 2073,
+  "unresolved_count": 113,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -3817,7 +3817,7 @@
       "sanctioned": true,
       "legal_form": null,
       "variant": "dual",
-      "degree": 55
+      "degree": 56
     },
     {
       "id": "ooo-npo-programmnye-kompleksy-realnogo-vremeni",
@@ -12163,6 +12163,12 @@
       "id": "stub::фомин дмитрий вадимович",
       "kind": "unresolved",
       "label": "Фомин Дмитрий Вадимович",
+      "degree": 1
+    },
+    {
+      "id": "stub::хальзев сергей юрьевич",
+      "kind": "unresolved",
+      "label": "Хальзев Сергей Юрьевич",
       "degree": 1
     },
     {
@@ -31465,7 +31471,7 @@
       "target": "ooo-npo-kilovatt-shestopalov",
       "type": "founded",
       "label": null,
-      "source_id": "s0533",
+      "source_id": "s6790",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -33925,6 +33931,17 @@
       "confidence": null
     },
     {
+      "source": "stub::хальзев сергей юрьевич",
+      "target": "ooo-npo-kilovatt-shestopalov",
+      "type": "founded",
+      "label": null,
+      "source_id": "s6790",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null
+    },
+    {
       "source": "stub::харитонова наталья евгеньевна",
       "target": "ooo-orion",
       "type": "directs",
@@ -36151,6 +36168,13 @@
       "raw_name": "Фомин Дмитрий Вадимович",
       "contexts": [
         "founder of ooo-zemstroyregistr"
+      ]
+    },
+    {
+      "id": "stub::хальзев сергей юрьевич",
+      "raw_name": "Хальзев Сергей Юрьевич",
+      "contexts": [
+        "founder of ooo-npo-kilovatt-shestopalov"
       ]
     },
     {

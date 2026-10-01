@@ -1645,8 +1645,40 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
-    "name_history": [],
+    "address_history": [
+      {
+        "value": "109028, Москва, Подколокольный переулок, д. 8, стр. 1",
+        "as_of": "2012-11-28",
+        "source_id": "s8688",
+        "note": "Same address in charter editions 7-T (2009), 8-T (2010) and 9-T (2012). The 2012 edition (§1.8) also records a branch at 155550, Ивановская область, г. Приволжск."
+      },
+      {
+        "value": "115035, г. Москва, Космодамианская наб., д. 4/22, стр. 8, пом. 212",
+        "as_of": "2014-07-30",
+        "source_id": "s8688",
+        "note": "Edition 10-T, approved 30 July 2014; ЕГРЮЛ ГРН 7147747387100 of 11.08.2014."
+      },
+      {
+        "value": "Ивановская область, Приволжский р-н, г. Приволжск",
+        "as_of": "2018-12-10",
+        "source_id": "s8688",
+        "note": "Edition 11-T, approved by the sole participant on 10 December 2018; ЕГРЮЛ ГРН 2193702041135 of 18.01.2019. The charter gives the town only, not a street address."
+      }
+    ],
+    "name_history": [
+      {
+        "value": "ООО «Управляющая компания Фонда «ДАР»",
+        "as_of": "2010-03-05",
+        "source_id": "s8688",
+        "note": "Name on charter editions 7-T (Москва, 2009) and 8-T (approved by decision of the sole participant of 5 March 2010). Both texts state the company was created by the sole founder's decision №1 of 18 July 2007. The name before edition 7-T was not read."
+      },
+      {
+        "value": "ООО «Орион»",
+        "as_of": "2012-11-28",
+        "source_id": "s8688",
+        "note": "First edition in the bundle under the name «Орион» (9-T, approved by decision of the sole participant of 28 November 2012; ЕГРЮЛ ГРН 9127747258487 of 06.12.2012 per the bundle inventory). The date of the rename itself is not stated in the charters read; it falls between 5 March 2010 and 28 November 2012. The 100% participant on file since 2009 is Фонд «ДАР» (s6701), so «Орион» is the former management company of that foundation."
+      }
+    ],
     "facility_type": null,
     "facility_type_history": [],
     "parents": [],
@@ -1704,6 +1736,10 @@
       {
         "source_id": null,
         "text": "2026-08-24 OpenSanctions full-roster screening: OpenSanctions' name-similarity match for this entity was CHECKED and REJECTED — the designation record it returned (a different ООО «Орион» (unrelated ИНН, likely Krasnodar-region prefix), ИНН/tax number 2308299972) does not match this entity's own ИНН. Recorded explicitly so this false lead is not mistaken for a real hit in a future pass."
+      },
+      {
+        "source_id": "s8688",
+        "text": "2026-10-01 founding-document read: the charter chain (editions 7-T 2009 to 11-T 2018) shows the company was founded as ООО «Управляющая компания Фонда «ДАР»» and renamed «Орион» between March 2010 and November 2012. Not yet done: ЕГРЮЛ name history (the 2007 registration name) and the rename's ЕГРЮЛ entry date, which would tie the rename to a dated record; and whether Фонд «ДАР» used the Подколокольный пер. 8 address for itself."
       }
     ],
     "sources": [],
@@ -7005,6 +7041,12 @@
     "charter_capital": 20000,
     "charter_capital_history": [
       {
+        "value": 10000,
+        "as_of": "2022-09-28",
+        "source_id": "s8692",
+        "note": "Charter approved by decision №1 of the single founder of 23.09.2022, company registered 28.09.2022 (ГРН 1227100012369); §: «Уставный капитал Общества равен 10000 руб». Registered address then: с. Осиновая Гора, Тула."
+      },
+      {
         "value": 20000,
         "as_of": "2024-04-25",
         "source_id": "s6727",
@@ -7167,6 +7209,13 @@
         "name_ru": "Каталог продукции ГИСП — отрасль БАС",
         "role": "Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.",
         "source_id": "s5344"
+      },
+      {
+        "as_of": "2023-12-12",
+        "name_en": "ИНТЦ «Aerospace Innovation Valley» (Аэрокосмическая инновационная долина) — charter purpose clause",
+        "name_ru": "ИНТЦ «Аэрокосмическая инновационная долина» — пункт 2.1 устава",
+        "role": "Amendment to §2.1 of the charter approved by decision №2 of the sole founder of 12.12.2023 (ЕГРЮЛ ГРН 2237100393913 of 20.12.2023) makes scientific-technological activity under federal law №216-ФЗ and the project rules of the ИНТЦ «Аэрокосмическая инновационная долина» (Government decree №735 of 22.04.2022) the company's main purpose; the charter of 07.02.2024 repeats it. This is a charter declaration; participant status in the ИНТЦ register itself is not checked here.",
+        "source_id": "s8692"
       }
     ],
     "marketing_claims": [
@@ -7278,6 +7327,10 @@
       {
         "source_id": "s5446",
         "text": "PEP-adjacency lead, NOT independently confirmed: a 30.07.2026 forward on Овод's own channel, originally from war correspondent Анастасия Кашеварова's (@akashevarova) personal channel, claims Алексей Дюмин — while governor of Tula oblast — personally helped Черезов with his early drone development, before the enemy had comparable technology. This is a named, identifiable journalist's secondhand account, forwarded (not authored) by Овод itself — not corroborated by any Дюмин-side or Овод-official primary source in this pass. If confirmed, this would tie Овод's founding story directly to a now-senior federal security/defense-adjacent official; treat as an open lead requiring independent verification before use, not as an established fact."
+      },
+      {
+        "source_id": "s8692",
+        "text": "2026-10-01 founding-document read (three documents, 2022, 2023, 2024): both charter texts (2022 §10.4–10.6, 2024) carry state-secret clauses (executive body responsible for protecting state-secret information; participants may see such documents only with a допуск). The wording is identical to the Киловатт charter (ИНН 4800016776), so it is template text; no допуск is evidenced by it."
       }
     ],
     "sources": [],
@@ -22586,6 +22639,12 @@
     "charter_capital": 250000,
     "charter_capital_history": [
       {
+        "value": 20000,
+        "as_of": "2022-08-01",
+        "source_id": "s8686",
+        "note": "Charter edition registered 01.08.2022 (ГРН 2221200082882): «составляет 20 000 (двадцать тысяч) рублей 00 копеек». The original charter of 01.04.2021 (ГРН 1211200001650) is a poor scan and its capital figure was not read."
+      },
+      {
         "value": 250000,
         "as_of": "2023-07-25",
         "source_id": "s6710",
@@ -22973,7 +23032,15 @@
     "foreign_components": [],
     "government_contracts": [],
     "workforce_history": [],
-    "state_programs": [],
+    "state_programs": [
+      {
+        "as_of": "2023-07-18",
+        "name_en": "Skolkovo Innovation Center — charter purpose clause",
+        "name_ru": "Инновационный центр «Сколково» — пункт 2.1 устава",
+        "role": "Charter approved by decision №5 of the sole founder of 18.07.2023 (ЕГРЮЛ ГРН 2231200063939 of 25.07.2023), §2.1: the company carries out \"исключительно исследовательскую деятельность и коммерциализацию её результатов\" under federal law №244-ФЗ «Об инновационном центре «Сколково»» and the project rules of the managing company. The same edition raised capital to ₽250 000. This is a charter declaration; participant status in the Сколково register is not checked here.",
+        "source_id": "s8686"
+      }
+    ],
     "marketing_claims": [],
     "battlefield_evidence": [],
     "domain_history": [],
@@ -45452,8 +45519,28 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
-    "name_history": [],
+    "address_history": [
+      {
+        "value": "404106, Волгоградская область, г. Волжский, ул. Александрова, д. 67",
+        "as_of": "2016-05-25",
+        "source_id": "s8690",
+        "note": "Address on all three readable charter editions (2007, 2009, 2016). It is the charter address, not a current ЕГРЮЛ address."
+      }
+    ],
+    "name_history": [
+      {
+        "value": "ООО «Россинтез»",
+        "as_of": "2009-10-15",
+        "source_id": "s8690",
+        "note": "Charter of 26 February 2007 (original, Волжский; signed «Гарькуша Владимир Владимирович») and edition №2 of 15 October 2009 (ЕГРЮЛ ГРН 2093435107710 of 09.12.2009) both use the name «Россинтез»; edition №2 gives ОГРН 1073435002013 and ИНН 3435084957."
+      },
+      {
+        "value": "ООО «ПРОМСИНТЕЗ»",
+        "as_of": "2016-05-25",
+        "source_id": "s8690",
+        "note": "Edition approved by decision №5 of the sole participant of 25 May 2016; ЕГРЮЛ ГРН 2163443412669 of 03.06.2016 per the bundle inventory. Participant signature: «Гарькуша В.В.»."
+      }
+    ],
     "facility_type": null,
     "facility_type_history": [],
     "parents": [],
@@ -45576,6 +45663,10 @@
       {
         "source_id": null,
         "text": "2026-08-24 OpenSanctions full-roster screening: OpenSanctions' name-similarity match for this entity was CHECKED and REJECTED — the designation record it returned (Товариство з обмеженою відповідальністю \"Промсинтез\" (Ukraine), ИНН/tax number 5249135125) does not match this entity's own ИНН. Recorded explicitly so this false lead is not mistaken for a real hit in a future pass."
+      },
+      {
+        "source_id": "s8690",
+        "text": "2026-10-01 founding-document read: the company was «Россинтез» until the edition of 25 May 2016, then «ПРОМСИНТЕЗ». The 2020-02-27 amendment (ЕГРЮЛ ГРН 2203400067825) is in the bundle only as the ФНС stamp page, without the amendment text, so what changed in 2020 is unread. The earlier open question that mentions similarly named «Промсинтез» companies elsewhere is unaffected: the Волжский company's own earlier name was «Россинтез»."
       }
     ],
     "sources": [],
@@ -63897,20 +63988,40 @@
       {
         "inn_personal": "480601511636",
         "name": "Шестопалов Сергей Анатольевич",
-        "share_percent": null,
-        "source_id": "s0533"
+        "share_percent": 60.0,
+        "nominal_value": 600000,
+        "source_id": "s6790"
+      },
+      {
+        "inn_personal": "482300070325",
+        "name": "Хальзев Сергей Юрьевич",
+        "share_percent": 40.0,
+        "nominal_value": 400000,
+        "source_id": "s6790"
       }
     ],
     "founders_history": [
       {
-        "as_of": "2026-05-13",
-        "note": "personal ИНН 480601511636; sole founder -- appointment record dated 13.05.2026 in this extract (may reflect a re-entry/confirmation of an existing founding stake rather than a change, original registration is 22.07.2024)",
-        "source_id": "s0533",
-        "value": "Шестопалов Сергей Анатольевич"
+        "value": "Шестопалов Сергей Анатольевич (sole founder)",
+        "as_of": "2024-07-15",
+        "source_id": "s8685",
+        "note": "Charter approved by decision №1 of the single founder of 15.07.2024, company created in ЕГРЮЛ 22.07.2024 (ГРН 1244800005240). Charter capital ₽10 000. The charter itself does not name the founder; the name comes from the ЕГРЮЛ extract (s0533, s6790)."
+      },
+      {
+        "value": "Шестопалов Сергей Анатольевич 60% (₽600 000) / Хальзев Сергей Юрьевич 40% (₽400 000)",
+        "as_of": "2026-04-22",
+        "source_id": "s8685",
+        "note": "Amendment to §5.2 of the charter approved by protocol №3 of the extraordinary general meeting of participants of 22 April 2026 (ЕГРЮЛ ГРН 2264800241418 of 13.05.2026): capital ₽1 000 000, split 60/40. Matches the ЕГРЮЛ extract (s6790). Хальзев Сергей Юрьевич, личный ИНН 482300070325 per s6790."
       }
     ],
     "charter_capital": 1000000,
     "charter_capital_history": [
+      {
+        "value": 10000,
+        "as_of": "2024-07-15",
+        "source_id": "s8685",
+        "note": "Charter of 15.07.2024 §5: «Уставный капитал Общества равен 10000 руб». Raised to ₽1 000 000 by the amendment of 22.04.2026."
+      },
       {
         "value": 1000000,
         "as_of": "2026-05-13",
@@ -64237,12 +64348,8 @@
     ],
     "open_questions": [
       {
-        "source_id": null,
-        "text": "Former occupant ООО «Регион-Агро Липецк» itself not yet checked against this registry or independently researched -- worth a quick check for any residual connection (shared ownership, lease continuity) versus a clean change of use."
-      },
-      {
-        "source_id": "s0533",
-        "text": "RESOLVED: relationship to the sister entity (ИНН 4800013729) is common ownership -- same sole founder Шестопалов С.А. on both, per full EGRUL extracts. He directs this one personally; the other has a hired director (Гаврилов А.Г.)."
+        "source_id": "s8685",
+        "text": "2026-10-01 founding-document read: since 22 April 2026 the company has TWO participants, Шестопалов Сергей Анатольевич 60% and Хальзев Сергей Юрьевич 40% (charter amendment and the ЕГРЮЛ extract s6790 agree). Earlier text on this record calling Шестопалов the sole founder, and the resolved note on common ownership with the sister entity ИНН 4800013729 (\"same sole founder\"), describe the position before that date. Not yet done: a lookup of Хальзев (other entities, ЦБСТ channel search for «Хальзев» returns 0 hits on 2026-10-01) and whether he also holds a stake in the sister entity. The 2024 charter (§10.4, §12.8) contains state-secret clauses worded identically to the РЛВТ charter, so they read as template text; no допуск to state secrets is evidenced."
       }
     ],
     "sources": [],
@@ -67679,7 +67786,12 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "source_id": "s8683",
+        "text": "2026-10-01 founding-document read: the charter approved by protocol №1 of 14 January 2026 (ЕГРЮЛ ГРН 1265300000470 of 19.01.2026) names as the main activity ОКВЭД 30.30.6 «Производство беспилотных авиационных систем», with metalworking, electronics and computer manufacturing as additional activities; executive body elected for an unlimited term (§17.1). The company's own charter therefore declares UAS manufacture from day one, so there is no declared-vs-actual ОКВЭД mismatch to record. The charter does not name the participants."
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": true,
@@ -70411,8 +70523,8 @@
     "images": [],
     "open_questions": [
       {
-        "source_id": "s5411",
-        "text": "Deeper pull attempted 2026-09-03 (per the Гагаринг wide-net push): a fresh egrul.nalog.ru open-API lookup independently confirms director Плыкина Е.В. (second, government-sourced corroboration) but the open API does not return founder/participant info. No zakupki.gov.ru contracts found (single-ИНН scan, zero hits — expected for a firm registered only 28.10.2025). No БФО filing exists yet on bo.nalog.gov.ru (zero results — first fiscal year not yet closed/filed as of this check). Genuinely thin beyond the director name and Гагаринг's own audit-disclosed ₽10M loan — still worth revisiting once a first БФО filing or zakupki activity appears."
+        "source_id": "s8684",
+        "text": "2026-10-01 founding-document read: the charter approved by protocol №1 of 14 October 2025 (ЕГРЮЛ ГРН 1257100008560 of 28.10.2025) lists R&D, \"производство летательных аппаратов, включая космические, и соответствующего оборудования\" and software development, and states the aim of \"участие в реализации государственных программ\" (§3.1). It also contains state-secret clauses (§6.3, §6.4 допуск of participants and director, director's duties on state-secret access, §21.6). These are charter provisions, not evidence that the company holds a допуск or a state-secret contract. The charter does not name the participants (registry: Плыкина Е.В. 50%, ООО «Гагаринг» 50%)."
       }
     ],
     "sources": [],

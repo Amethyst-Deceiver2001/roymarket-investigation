@@ -35,7 +35,7 @@ TIER_COL = {"manufacturer": "#2a78d6", "cbst-core": "#eb6834", "plumbing": "#1ba
 PERSON_COL = "#7a8a99"
 
 # Demand-side node glyphs (government_customer / military_unit), copied
-# verbatim from scratch_design/case_study_build_svgs.py / the Demand-Side
+# verbatim from exhibits/case_study_build_svgs.py / the Demand-Side
 # Icon Set mockup -- a pediment for a government/institutional customer, a
 # shield-with-checkmark for a named military unit -- instead of the plain
 # tier-colored rect every other non-person node gets. 24x24 viewBox source;

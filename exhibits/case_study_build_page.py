@@ -75,7 +75,7 @@ LEGEND_TIERS = [
 ]
 
 # --- Product Icon Set: inner <svg viewBox="0 0 24 24"> markup, copied
-# verbatim from scratch_design/product_icon_set.html §02 (only the
+# verbatim from exhibits/product_icon_set.html §02 (only the
 # categories that actually turn up in these five panels' top-3 picks, plus
 # the unclassified fallback for robustness against a future registry
 # change). var(--icon-accent) in the source mockup is swapped for this
@@ -198,7 +198,7 @@ page = f'''<!doctype html>
 <style>
   :root {{
     /* page chrome — this project's established institutional voice
-       (scratch_design/product_icon_set.html), reused verbatim */
+       (exhibits/product_icon_set.html), reused verbatim */
     --bg: #efeee7; --panel: #ffffff; --panel-2: #f6f5ef; --line: #d4d2c4;
     --ink: #17180f; --ink-2: #4b4c3f; --muted: #7a7c68; --accent: #4c5f2f;
     --mono: 'IBM Plex Mono', ui-monospace, monospace;
@@ -323,7 +323,7 @@ page = f'''<!doctype html>
   .node-label.small {{ font-size: 9.3px; }}
 
   /* demand-side node icons (government_customer / military_unit), copied
-     verbatim from scratch_design/demand_side_icon_set.html §02/§03 in
+     verbatim from exhibits/demand_side_icon_set.html §02/§03 in
      place of a plain circle for those two node kinds */
   .node-icon {{ fill: none; stroke: var(--t-none); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }}
   .node-icon-unit {{ stroke: var(--t-cbst-core); }}
@@ -339,7 +339,7 @@ page = f'''<!doctype html>
   .edge-procures {{ stroke: var(--edge); stroke-width: 1.2; opacity: 0.8; }}
 
   /* product icon summary — this project's own Product Icon Set glyphs,
-     copied verbatim from scratch_design/product_icon_set.html §02, shown
+     copied verbatim from exhibits/product_icon_set.html §02, shown
      as a compact 3-icon summary instead of one spoke per product */
   .product-summary {{ margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--line); }}
   .product-summary-kicker {{ font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }}
@@ -441,5 +441,5 @@ page = f'''<!doctype html>
 </div>
 '''
 
-open('/Users/ak/Downloads/roymarket-investigation/scratch_design/case_study_excerpts.html', 'w').write(page)
+open('/Users/ak/Downloads/roymarket-investigation/exhibits/case_study_excerpts.html', 'w').write(page)
 print(len(page), 'bytes written')

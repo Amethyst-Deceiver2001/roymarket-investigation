@@ -265,7 +265,7 @@ def kind_sort_key(n):
 
 
 # --- demand-side icon glyphs, copied verbatim from
-# scratch_design/demand_side_icon_set.html §02/§03 (pediment for
+# exhibits/demand_side_icon_set.html §02/§03 (pediment for
 # government_customer, shield for military_unit) instead of a plain circle.
 CUSTOMER_ICON_PATHS = (
     '<rect x="4" y="10" width="16" height="9" rx="1"/>'
