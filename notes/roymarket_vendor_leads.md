@@ -138,4 +138,11 @@ Archive: 503,714 posts, 56 channels, after the full rescan (`tg_scan.py --full -
 4. **Scale claims, self-reported.** «десятки потребителей», «каталог … до нескольких сотен позиций» (asidyakin 1230, 05.08.2026); goal 10,000+ items by 2027 (2414); all ТЭЧ of Минобороны to be connected by 1 September (ЦБСТ 2392, a plan). Whether the ТЭЧ were connected is not recorded.
 5. **Size of the ЦБСТ contour.** «Сегодня в нашем контуре 525 компаний», «более 850 разработчиков» supported (asidyakin 1230): the brief's 525 now has a source; the wording is «в контуре», not «резидентов».
 
-**Still open:** the Kommersant article (doc/8878535) and cbst.ru's «Стать селлером» page unread; the registered Поставщик behind Спектр; whether any ЦБСТ resident lists on the platform (the 3mx statement is one data point); post 700 of UAS_development («Антидрон-предложение от наших китайских партнеров», 23.09.2026) names no partner.
+**Read afterwards (s8865–s8867):** Коммерсантъ 13.08.2026 (doc/8878535), Коммерсантъ 06.08.2026 (doc/8863477) and ЦБСТ's own press release on cbst.ru (13.08.2026), each in full.
+- «Рой.Маркет» «был запущен в начале 2025 года»; pilot catalogue already held «3D-принтеры, катушки с оптоволокном, антенны, зарядные устройства». Since 1 Aug 2026 sellers list and manage goods themselves through a personal account; ЦБСТ says commission will be «существенно ниже» than the mass marketplaces (Wildberries 21.3%, Ozon 22.9% cited from an industry association), the seller bears logistics, delivery is a distributed 4PL model, buyers stay a closed authorised audience.
+- Sellers join under «единая оферта»: «достаточно предоставить информацию о компании и ассортименте». After a product check and «допуск» developers may supply units directly (06.08). The criteria are unpublished.
+- Коммерсантъ states Wildberries bans finished army gear, which is ЦБСТ's stated reason for a separate channel.
+- ЦБСТ's release: «Учредители ЦБСТ – партия «Единая Россия», ПАО «Банк ПСБ» и … фонд «Наша Правда»». The release does not name МПТМ; the operator's name comes from the supplier offer (s8817).
+- Resident count: Коммерсантъ «число предприятий-резидентов достигло 525», 625+ by end-2026 (quoting Сидякин); Сидякин's own post says 600+. Recorded as a discrepancy on `cbst-residency`.
+
+**Still open:** the registered Поставщик behind Спектр; whether any ЦБСТ resident lists on the platform (the 3mx statement is one data point); post 700 of UAS_development («Антидрон-предложение от наших китайских партнеров», 23.09.2026) names no partner.

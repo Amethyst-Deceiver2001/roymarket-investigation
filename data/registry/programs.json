@@ -136,7 +136,7 @@
         "as_of": "2025-09-08"
       }
     ],
-    "notes": "ЦБСТ's own channel names «резиденты ЦБСТ» throughout (post 1193, s8842: «резиденты ЦБСТ представили свои разработки на выставке»). The roster is held as per-entity cbst_tie records and cbst_resident_sweep.py output; memberships[] are added here as each is wired. The figure «525 компаний в нашем контуре» is now sourced to s8851 (Сидякин, 05.08.2026); the wording is «в контуре», not «резидентов», and the roster is not published.",
+    "notes": "ЦБСТ's own channel names «резиденты ЦБСТ» throughout (post 1193, s8842: «резиденты ЦБСТ представили свои разработки на выставке»). The roster is held as per-entity cbst_tie records and cbst_resident_sweep.py output; memberships[] are added here as each is wired. The figure «525 компаний в нашем контуре» is now sourced to s8851 (Сидякин, 05.08.2026); Sidyakin writes «в контуре», Коммерсантъ «предприятий-резидентов»; the roster is not published.",
     "claims": [
       {
         "text_ru": "За 2,5 года ЦБСТ поддержал более 850 разработчиков и технологических предприятий. Сегодня в нашем контуре 525 компаний, а к концу 2026 года их число превысит 600.",
@@ -145,7 +145,18 @@
         "as_of": "2026-08-05",
         "source_id": "s8851",
         "asserted_by": "Сидякин, @asidyakin post 1230 (ЦБСТ board summary); self-reported"
+      },
+      {
+        "text_ru": "число предприятий-резидентов достигло 525 … К концу 2026 года, как заявил секретарь наблюдательного совета ЦБСТ, руководитель центрального исполкома «Единой России» Александр Сидякин, число компаний-резидентов превысит 625.",
+        "metric": "ЦБСТ resident companies",
+        "value": "525 (Aug 2026); 625+ by end-2026 per Коммерсантъ",
+        "as_of": "2026-08-06",
+        "source_id": "s8865",
+        "asserted_by": "Коммерсантъ reporting ЦБСТ and Сидякин; self-reported by ЦБСТ"
       }
+    ],
+    "open_questions": [
+      "Sidyakin's own post says the figure will exceed 600 by end-2026 (s8851); Коммерсантъ quotes him as saying 625 (s8865). Коммерсантъ calls 525 «предприятий-резидентов»; Sidyakin writes «в нашем контуре 525 компаний». Neither roster is published."
     ]
   },
   {
