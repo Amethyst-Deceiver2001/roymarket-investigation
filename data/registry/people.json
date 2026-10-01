@@ -50074,5 +50074,97 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": null
+  },
+  {
+    "slug": "bratenkov-andrey-alekseevich",
+    "fio_ru": "Братеньков Андрей Алексеевич",
+    "name_latin": "Bratenkov Andrey Alekseevich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "540787849136",
+    "roles": [
+      {
+        "entity_slug": "ip-bratenkov-andrey-alekseevich",
+        "entity_name": "ИП Братеньков Андрей Алексеевич",
+        "title": "Индивидуальный предприниматель",
+        "body": "ЕГРИП",
+        "from": "2007-08-02",
+        "to": "2020-04-23",
+        "source_id": "s8741"
+      },
+      {
+        "entity_slug": "kb-spektr-novosibirsk",
+        "entity_name": "КБ «СПЕКТР» (Новосибирск)",
+        "title": "Исполнительный директор (named by TASS)",
+        "body": "press",
+        "from": "2025-01-06",
+        "to": null,
+        "source_id": "s8732"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [
+      {
+        "platform": "telegram",
+        "url": "https://t.me/andrey_bratenkov",
+        "source_id": "s8811",
+        "note": "Listed on the 2023 kbspektr.ru as the first-person voice of the business; not opened."
+      },
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/andrey_bratenkov/",
+        "source_id": "s8811",
+        "note": "Listed on the 2023 kbspektr.ru; not opened."
+      }
+    ],
+    "photo": null,
+    "notes": "2026-10-01, at user direction (person of interest, publicly associated with КБ «Спектр» in the media). ИНН is the ИП's, printed in the ЕГРИП extract s8741 (ОГРНИП 307540721400012, registered 02.08.2007, ceased 23.04.2020 on a court bankruptcy decision). Named by TASS (via www1.ru) as executive director of the Novosibirsk КБ «Спектр» on 06.01.2025 (s8732) and 12.07.2025 (s8733); spelling in the originals «Братеньков». The 2023 site speaks in his first person («Я @andrey_bratenkov сам играю в хоккей … я и моя творческая команда @kb_spektr», s8811). The user's ФНС «Прозрачный бизнес» check on 2026-10-01 found him in no юрлицо (reported, not archived), so other_entities is left empty rather than marked checked. No date of birth, birthplace or address is on file: none is sourced.",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": null
+  },
+  {
+    "slug": "mavrin-oleg-vladimirovich",
+    "fio_ru": "Маврин Олег Владимирович",
+    "name_latin": "Mavrin Oleg Vladimirovich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "540316596357",
+    "roles": [
+      {
+        "entity_slug": "ip-mavrin-oleg-vladimirovich",
+        "entity_name": "ИП Маврин Олег Владимирович",
+        "title": "Индивидуальный предприниматель; seller of record of the Ozon storefront «СПЕКТР конструкторское бюро»",
+        "body": "ЕГРИП / Ozon",
+        "from": "2020-02-18",
+        "to": null,
+        "source_id": "s8744"
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "2026-10-01, at user direction (person of interest). ИНН is the ИП's, printed in the ЕГРИП extract s8744 (ОГРНИП 320547600022326, registered 18.02.2020, active). Named as seller of record on the Ozon storefront «СПЕКТР конструкторское бюро» (1.7K orders) in a user screenshot (s8813); the link between him and the bureau beyond that panel is not documented. His e-mail domain arm-pnt.ru is his own scale-modelling paints brand (Wayback capture 28.06.2022, s8810). No date of birth, birthplace or address is on file: none is sourced.",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": null
   }
 ]

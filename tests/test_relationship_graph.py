@@ -207,6 +207,37 @@ class RelationshipGraphTests(unittest.TestCase):
         self.assertTrue(any("nodes[0].kind" in message for message in messages))
         self.assertTrue(any("edges[0] endpoint" in message for message in messages))
 
+    def test_sells_for_edge_carries_channel_and_basis_and_replaces_dealer_link(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["sells_for"] = [{"slug": "core", "channel": "Ozon (test store)", "basis": "doc", "source_id": "s1"}]
+        entities[0]["related_entities"] = [{"slug": "ordinary", "relationship_type": "dealer", "source_id": "s1"}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        sells = [e for e in graph["edges"] if e["type"] == "sells_for"]
+        self.assertEqual([("ordinary", "core", "Ozon (test store)", "doc")],
+                         [(e["source"], e["target"], e["label"], e["confidence"]) for e in sells])
+        # the prose dealer link for the same pair (either direction) is not drawn a second time
+        self.assertFalse(any(e["type"] == "related" and e["label"] == "dealer" for e in graph["edges"]))
+        self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
+
+    def test_sells_for_rejects_unknown_basis_and_person_endpoint(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["sells_for"] = [{"slug": "core", "channel": "Ozon", "basis": "doc", "source_id": "s1"}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        bad = copy.deepcopy(graph)
+        edge = next(e for e in bad["edges"] if e["type"] == "sells_for")
+        edge["confidence"] = "rumour"
+        self.assertTrue(any("sells_for" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+        bad = copy.deepcopy(graph)
+        edge = next(e for e in bad["edges"] if e["type"] == "sells_for")
+        edge["target"] = "alice"
+        self.assertTrue(any("invalid entity->person endpoints" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+
+    def test_unlinked_sells_for_target_is_dropped_not_crashing(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["sells_for"] = [{"slug": "does-not-exist", "channel": "Ozon", "basis": "doc"}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        self.assertFalse(any(e["type"] == "sells_for" for e in graph["edges"]))
+
     def test_quality_report_is_deterministic(self):
         first = report(self.graph, self.views, ENTITIES, PEOPLE)
         second = report(self.graph, self.views, ENTITIES, PEOPLE)

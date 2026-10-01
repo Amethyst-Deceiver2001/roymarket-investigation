@@ -20616,6 +20616,9 @@
       }
     ],
     "tier_basis": "Product («Булат»/«3mx» drone-detector line) shown at ЦБСТ's Дронница 2025 showcase per ЦБСТ's own channel — found via the BRAND name, since the legal-entity name returns zero hits (consistent with this project's established brands-not-legal-names search pattern). Sanctioned by the US, EU, Switzerland and Ukraine (ID-confirmed via ИНН match); holds an own-name UAV-detector invention patent (RU2826668C1) and word-mark trademarks explicitly covering \"дрон-детекторы\" by name.",
+    "ecosystem_roles": [
+      "manufacturer"
+    ],
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 2 trademark filing(s) matched by ИНН.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 1 fiscal year(s) with revenue/profit data.",
@@ -59676,6 +59679,10 @@
       {
         "source_id": null,
         "text": "«Ступор» counter-drone RF system participation (16.10.2024 post) and the second Благодарственное письмо (to Сухоненкова, 05.04.2026) have no archived primary-source file yet -- only the first letter (Замятину, s0232) has been pulled and archived. Worth an archival pass on the entity's own channel (t.me/UAS_development) for these specific posts."
+      },
+      {
+        "source_id": "s8735",
+        "text": "@UAS_development post 695 (17.09.2026): «Начинаем работу через онлайн-маркетплейс для продукции двойного назначения. Специалисты были подготовлены заранее. #маркетплейс». The post and its image do not name Роймаркет; the image is a certificate (Wild Manager school, 29.01.2026) that Ирина Байгутлина completed a 6-week «Менеджер маркетплейсов» course, with Ozon, Яндекс Маркет and Wildberries logos. INVESTIGATOR'S READING (user, 2026-10-01): treated as a РОЙ.МАРКЕТ onboarding, because the phrase is taken to be a euphemism for it and no other online marketplace of that description is known. This is an inference, not a statement in the post: it must not be graded as the company's own report of joining РОЙ.МАРКЕТ, and any text built on it says «understood by us to be». Page capture s8738. The local scrape of the channel ends at message 672, so later posts are unread. See notes/roymarket_vendor_leads.md."
       }
     ],
     "sources": [],
@@ -65179,6 +65186,20 @@
       ],
       "note": "Both posts use «ледяной покров» (ice cover) as a common noun in foreign-news digests."
     },
+    "ecosystem_roles": [
+      "manufacturer",
+      "licensed_dealer"
+    ],
+    "sells_for": [
+      {
+        "slug": "ooo-trimiks",
+        "channel": "dealer (named on 3mx.ru/dilery/; pokrovsystem.ru)",
+        "basis": "doc",
+        "source_id": "s1386",
+        "as_of": null,
+        "note": "Named dealer of «3mx» per the maker's own dealer page; also sells its own EW line. Converted 2026-10-01 from the prose related_entities 'dealer' entry on ooo-trimiks, which stays on file."
+      }
+    ],
     "_verified_against": "egrul.nalog.ru open API, 2026-08-24",
     "opensanctions_matches": [
       {
@@ -66650,6 +66671,19 @@
         "slug": "ooo-trimiks",
         "source_id": "s8613",
         "relationship_type": "dealer"
+      }
+    ],
+    "ecosystem_roles": [
+      "seller_of_record"
+    ],
+    "sells_for": [
+      {
+        "slug": "ooo-trimiks",
+        "channel": "own site 921921.ru",
+        "basis": "doc",
+        "source_id": "s8613",
+        "as_of": null,
+        "note": "Sells the «Булат» detector at 88 000 ₽ on 921921.ru, whose contacts block prints his ИНН and ОГРНИП (s8613); not a named dealer on 3mx.ru. Converted 2026-10-01 from the prose 'dealer' entries, which stay on file."
       }
     ],
     "_verified_against": [],
@@ -86774,5 +86808,451 @@
     "_raw": {},
     "_corrected": "[2026-10-01 ЦБСТ resident sweep] Found by scripts/cbst_resident_sweep.py (ЦБСТ post 447). The registry held only the sister ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ»; the company ЦБСТ names in post 447 is this one, by legal name. Identity basis legal_name_printed (no ИНН in the post or on the channel page).",
     "_verified_against": null
+  },
+  {
+    "slug": "kb-spektr-novosibirsk",
+    "name_ru": "КБ «СПЕКТР» (Новосибирск; юридическое лицо не установлено)",
+    "name_latin": "KB Spektr (Novosibirsk)",
+    "legal_form": null,
+    "brand_ru": "КБ «СПЕКТР» / Конструкторское бюро «СПЕКТР»",
+    "brand_latin": "KB Spektr",
+    "inn": null,
+    "ogrn": null,
+    "extra_ids": null,
+    "registered": null,
+    "address": null,
+    "okved_code": null,
+    "okved_label": null,
+    "okved_mismatch": null,
+    "director": null,
+    "director_history": [],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "manufacturer",
+    "tier_basis": "A Novosibirsk design bureau that reports (own channel @kb_spektr, post 321 of 06.07.2026, s8737) taking its propellers onto РОЙ.МАРКЕТ, and whose РОЙ-labelled cartons it photographed. No ЦБСТ tie found: 0 hits for «КБ Спектр» and for the handle in 2 308 @ANO_CBST posts, none in the 148 channel posts read (not the first 179). Recorded as a BRAND, not as a legal entity: no document names the entity that makes the goods today (see open_questions). First РОЙ.МАРКЕТ vendor on file that is documented as not being a ЦБСТ resident.",
+    "cbst_tie": {
+      "claim": "None found in the searched material.",
+      "confidence": "none",
+      "evidence": "tg_post_coverage.py over @ANO_CBST (2 308 posts), terms «КБ Спектр» and «kb_spektr»: 0 hits each, matcher control passing, 2026-10-01; 148 posts of @kb_spektr read (posts 180-346): none names ЦБСТ. Absence of a tie is not shown.",
+      "source_id": null
+    },
+    "wb_overlap": "not_checked",
+    "products": [
+      {
+        "name_ru": "Пропеллеры для БПЛА, в том числе складной 18,5×15 дюйма (серийное производство, до 20 тыс. изделий в месяц по словам исполнительного директора)",
+        "note": "TASS via www1.ru, 12.07.2025: «Новосибирское конструкторское бюро (КБ) «Спектр» начало серийное производство складных пропеллеров для БПЛА самолетного и мультироторного типа»; «Комплектующие для БПЛА производят из российского пластика» (Андрей Братеньков).",
+        "source_id": "s8733"
+      },
+      {
+        "name_ru": "Пропеллеры для трофейных тяжелых БПЛА «Баба-Яга» (1 000 комплектов в месяц)",
+        "note": "TASS via www1.ru, 06.01.2025: «На финишной прямой процесс локализации производства пропеллеров для дрона «Баба-Яга»».",
+        "source_id": "s8732"
+      },
+      {
+        "name_ru": "Пропеллеры 8, 9, 10 дюймов (Армамид / Волгамид) и 15×7×3 дюйма",
+        "note": "Own channel posts 262 (11.03.2026) and 263 (13.03.2026); sold on Ozon and from a retail warehouse in Донецк (post 262). Preview read, posts not archived one by one.",
+        "source_id": "s8737"
+      },
+      {
+        "name_ru": "Хоккейные лезвия «RED STAR»; инженерные услуги (3D-сканирование, реверс-инжиниринг)",
+        "note": "Own site, Wayback capture of 06.12.2023: «Технология разработана Конструкторским бюро «СПЕКТР»»; made with the support of «ОПОРА РОССИИ» НСО and Минпромторг НСО.",
+        "source_id": "s8811"
+      }
+    ],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [
+      {
+        "text_ru": "По заявкам трудящихся масс осваиваем Роймаркет. Теперь ТЭЧ могут сами закупать наши пропеллеры напрямую в Роймаркет.",
+        "text_en": "At the request of the working masses we are taking on Roymarket. Now the ТЭЧ (aircraft technical-maintenance units) can buy our propellers directly on Roymarket.",
+        "context": "@kb_spektr post 321, 06.07.2026. The photo shows a carton labelled «РОЙ», article A0-13805373, «Лопасти для дрона 8 дюймов, 100 шт (25 комплектов по 4 шт (2Л+2П)), КБ Спектр», sealed with tape printed «КБ «СПЕКТР»» (full-resolution copy s8809). The QR code decodes to the article number only.",
+        "source_id": "s8737",
+        "as_of": "2026-07-06"
+      },
+      {
+        "text_ru": "Скоро на Роймаркет можно будет приобрести лучшие новосибирские АКБ 6S 10000 mah 15C",
+        "text_en": "Soon the best Novosibirsk 6S 10000 mAh 15C batteries will be on sale on Roymarket.",
+        "context": "@kb_spektr post 322, 07.07.2026; a video whose thumbnail shows a box on a pallet. Batteries are announced as upcoming, not listed.",
+        "source_id": "s8737",
+        "as_of": "2026-07-07"
+      }
+    ],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [
+        {
+          "url": "https://kbspektr.ru/",
+          "source_id": "s8811",
+          "note": "Own site in 2023 (Wayback capture of 06.12.2023, run in the name of Андрей Братеньков, phone +7 913 912-55-01). The domain now shows a reg.ru page offering it for sale (s8742, 2026-10-01): lapsed."
+        }
+      ],
+      "telegram": [
+        {
+          "handle": "@kb_spektr",
+          "source_id": "s8736",
+          "note": "«КБ «СПЕКТР»» (1 161 subscribers on 2026-10-01); bio «Все виды НИОКР, реверсинжиниринг, аддитивные технологии … вакуумная формовка … металлообработка». The channel has not been scraped; posts 180-346 read in the public preview."
+        },
+        {
+          "handle": "@andrey_bratenkov",
+          "source_id": "s8811",
+          "note": "Братеньков's personal Telegram, listed on the 2023 site as the first-person voice of the business; not opened."
+        }
+      ],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [
+        {
+          "url": "https://www.ozon.ru/seller/4015246",
+          "note": "Linked from @kb_spektr post 240 (09.02.2026) as the bureau's Ozon seller page. It predates ИП Карпушин (registered 14.08.2026). Which ИП holds this seller id was not read from Ozon (HTTP 307 to a plain request).",
+          "source_id": "s8737"
+        }
+      ],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s8739",
+        "text": "Which legal entity makes the goods today is not established. The name and region match three ООО «КБ «СПЕКТР»…» registered 02.07.2019 by Детинов Максим Борисович: «СПЕКТР» (ИНН 5445029638, struck off 30.06.2022, s8739), «СПЕКТР-ВМ» (5445029652, struck off 27.05.2022) and «СПЕКТР-ИНЖИНИРИНГ» (5445029645, active, Бердск, s8740). No archived document names Братеньков or the bureau's goods in any of them. ИНН 5445029638 was supplied by the user on 2026-10-01 and is a closed entity."
+      },
+      {
+        "source_id": "s8813",
+        "text": "Seller of record on Ozon is ИП Маврин (since 2020, paint/toy ОКВЭД, s8744) and, since a store opened about September 2026, ИП Карпушин (registered 14.08.2026, UAV-manufacturing ОКВЭД, s8812). Who the manufacturer of record is, and whether either ИП produces anything, is not documented. The РОЙ-labelled carton shows packing by the bureau (its own tape) and a label applied afterwards; the РОЙ seller of record is not shown."
+      },
+      {
+        "source_id": "s8737",
+        "text": "The ЦБСТ tie is 'not found in what was searched': posts 1-179 of @kb_spektr are unread and the channel is not in the local DB. See notes/roymarket_vendor_leads.md."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "city": "Новосибирск",
+    "legal_entity_status": "unresolved",
+    "ecosystem_roles": [
+      "manufacturer",
+      "brand"
+    ],
+    "related_entities": [
+      {
+        "slug": "ip-bratenkov-andrey-alekseevich",
+        "relationship": "Братеньков Андрей Алексеевич's sole-trader registration traded as «КОНСТРУКТОРСКОЕ БЮРО «СПЕКТР»» on the Новосибирск partner portal (listing dated 09.06.2022, s8743; same description as the channel bio) and the 2023 site is in his name. His ИП ceased on 23.04.2020 (s8741), so it is not the seller of 2026.",
+        "relationship_type": "operated-brand",
+        "source_id": "s8743"
+      }
+    ],
+    "_corrected": null
+  },
+  {
+    "slug": "ip-mavrin-oleg-vladimirovich",
+    "name_ru": "ИП Маврин Олег Владимирович",
+    "name_latin": "IP Mavrin Oleg Vladimirovich",
+    "legal_form": "ИП",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "540316596357",
+    "ogrn": "320547600022326",
+    "extra_ids": null,
+    "registered": "18.02.2020",
+    "address": null,
+    "okved_code": "20.30.2",
+    "okved_label": "Производство прочих красок, лаков, эмалей и аналогичных материалов для нанесения покрытий, художественных и полиграфических красок",
+    "okved_mismatch": {
+      "mismatch": true,
+      "note": "Registered ОКВЭД covers paints, lacquers, toys (32.40), demonstration models (32.99.7) and wholesale paint and hardware; none covers plastic parts or aircraft components, yet the Ozon store sells КБ СПЕКТР drone propellers. Sole traders often register broadly: an observation, not a finding."
+    },
+    "director": null,
+    "director_history": [],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": "Seller of record on Ozon for the КБ «СПЕКТР» storefront (s8813). Not a ЦБСТ resident; no ЦБСТ tie found. Recorded as the downstream seller of a РОЙ.МАРКЕТ vendor that is not a resident. ЕГРИП extract 01.10.2026 (s8744): registered by МИФНС № 16 по Новосибирской области, active, e-mail INFO@ARM-PNT.RU (arm-pnt.ru: his scale-modelling paints brand, Wayback capture 28.06.2022, s8810).",
+    "cbst_tie": {
+      "claim": "None found.",
+      "confidence": "none",
+      "evidence": null,
+      "source_id": null
+    },
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [
+        {
+          "url": null,
+          "note": "Ozon storefront «СПЕКТР конструкторское бюро», 1.7K orders (user screenshot 2026-10-01, s8813); the Ozon URL was not captured.",
+          "source_id": "s8813"
+        }
+      ],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s8744",
+        "text": "Registered 18.02.2020, two months before Братеньков's ИП ended in bankruptcy (23.04.2020, s8741). The dates are on file; no document links the two. Whether he sells goods made by the bureau under a contract is not documented."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "city": "Новосибирск",
+    "ecosystem_roles": [
+      "seller_of_record"
+    ],
+    "sells_for": [
+      {
+        "slug": "kb-spektr-novosibirsk",
+        "channel": "Ozon (store «СПЕКТР конструкторское бюро»)",
+        "basis": "doc",
+        "source_id": "s8813",
+        "as_of": null,
+        "note": "Ozon seller panel «О магазине» of the storefront «СПЕКТР конструкторское бюро» (1.7K orders), user screenshot 2026-10-01 (s8813): «ИП Маврин Олег Владимирович 320547600022326». The panel prints the seller of record next to the bureau's logo; it does not say the bureau authorised the sale."
+      }
+    ],
+    "_corrected": null
+  },
+  {
+    "slug": "ip-karpushin-aleksandr-aleksandrovich",
+    "name_ru": "ИП Карпушин Александр Александрович",
+    "name_latin": "IP Karpushin Aleksandr Aleksandrovich",
+    "legal_form": "ИП",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "540863046567",
+    "ogrn": "326547600152216",
+    "extra_ids": null,
+    "registered": "14.08.2026",
+    "address": null,
+    "okved_code": "30.30",
+    "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
+    "okved_mismatch": {
+      "mismatch": false,
+      "note": "Main ОКВЭД 30.30 and 30.30.6 (unmanned aircraft systems) are consistent with drone parts; a broad list proves nothing about actual activity."
+    },
+    "director": null,
+    "director_history": [],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": "Seller of record on Ozon for the «Звезда Спектр» storefront (s8814), selling КБ СПЕКТР propellers; the store reports 18 days on Ozon on the screenshot. Not a ЦБСТ resident; no ЦБСТ tie found. ЕГРИП extract 01.10.2026 (s8812): registered 14.08.2026 by МИФНС № 16 по Новосибирской области, active, e-mail 13KAMEN@MAIL.RU. Main ОКВЭД 30.30 with 25.40 (weapons and ammunition), 28.99.3, 30.30.1, 30.30.3, 30.30.5, 30.30.6 (unmanned aircraft systems), 26.51.2, 52.23.13 and others: a UAV-manufacturing list. A broad list proves nothing about activity.",
+    "cbst_tie": {
+      "claim": "None found.",
+      "confidence": "none",
+      "evidence": null,
+      "source_id": null
+    },
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [
+        {
+          "url": null,
+          "note": "Ozon storefront «Звезда Спектр» (user screenshot 2026-10-01, s8814); the Ozon URL was not captured.",
+          "source_id": "s8814"
+        }
+      ],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s8812",
+        "text": "The ИП was registered five weeks after the 06.07.2026 post about joining РОЙ.МАРКЕТ and opened its Ozon store about a month later; the sequence is on file, no connection is documented. Whether he makes or only resells the goods is not documented. No person record: scope for this individual has not been decided."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "city": "Новосибирск",
+    "ecosystem_roles": [
+      "seller_of_record"
+    ],
+    "sells_for": [
+      {
+        "slug": "kb-spektr-novosibirsk",
+        "channel": "Ozon (store «Звезда Спектр»)",
+        "basis": "doc",
+        "source_id": "s8814",
+        "as_of": null,
+        "note": "Ozon seller panel «О магазине» of the storefront «Звезда Спектр» (Premium, «Работает с Ozon 18 дней»), user screenshot 2026-10-01 (s8814): «ИП Карпушин Александр Александрович 326547600152216»; listings carry the bureau's «СПЕКТР конструкторское бюро» logo, «10\" пропеллеры», «Армамид». The panel prints the seller of record; it does not say the bureau authorised the sale."
+      }
+    ],
+    "_corrected": null
+  },
+  {
+    "slug": "ip-bratenkov-andrey-alekseevich",
+    "name_ru": "ИП Братеньков Андрей Алексеевич (прекратил деятельность 23.04.2020)",
+    "name_latin": "IP Bratenkov Andrey Alekseevich (ceased 2020)",
+    "legal_form": "ИП",
+    "brand_ru": "КОНСТРУКТОРСКОЕ БЮРО «СПЕКТР»",
+    "brand_latin": null,
+    "inn": "540787849136",
+    "ogrn": "307540721400012",
+    "extra_ids": null,
+    "registered": "02.08.2007",
+    "address": null,
+    "okved_code": "47.19",
+    "okved_label": "Торговля розничная прочая в неспециализированных магазинах",
+    "okved_mismatch": null,
+    "director": null,
+    "director_history": [],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": "The sole-trader registration under which the «КОНСТРУКТОРСКОЕ БЮРО «СПЕКТР»» business was listed on the Новосибирск partner portal (partner.nso.ru, listing dated 09.06.2022, s8743; same description as the @kb_spektr bio). Closed on 23.04.2020, so it is the predecessor registration, not the seller of 2026. Not a ЦБСТ resident.",
+    "cbst_tie": {
+      "claim": "None found.",
+      "confidence": "none",
+      "evidence": null,
+      "source_id": null
+    },
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [
+        {
+          "url": "https://partner.nso.ru/company/33/view/84",
+          "source_id": "s8743",
+          "note": "Portal listing of «ИП Братеньков Андрей Алексеевич» (site field kbspektr.ru, phone +7 913 912-55-01), dated 09.06.2022: stale, the registration had ended in 2020."
+        }
+      ],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s8741",
+        "text": "The ЕГРИП search by this ИНН returns this one registration only: no later ИП. The user's ФНС «Прозрачный бизнес» check (2026-10-01, reported, not archived) found him in no юрлицо. Who makes the goods today is not established."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "city": "Новосибирск",
+    "ecosystem_roles": [
+      "manufacturer"
+    ],
+    "status": "Ceased 2020-04-23: the court declared the sole trader bankrupt (ЕГРИП extract 01.10.2026, s8741, ГРН 420547600422151).",
+    "related_entities": [
+      {
+        "slug": "kb-spektr-novosibirsk",
+        "relationship": "Traded as the КБ «СПЕКТР» brand until the registration ended 23.04.2020; the portal listing (s8743) and the 2023 site (s8811) kept presenting the business in his name afterwards.",
+        "relationship_type": "operated-brand",
+        "source_id": "s8743"
+      }
+    ],
+    "_corrected": null
   }
 ]

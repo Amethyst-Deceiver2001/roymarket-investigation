@@ -45,7 +45,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from reverse_source_index import build_index  # noqa: E402
-from graph_contract import validate_graph, validate_views  # noqa: E402
+from graph_contract import (validate_graph, validate_views, SELLS_FOR_BASIS,  # noqa: E402
+                            ECOSYSTEM_ROLES, LEGAL_ENTITY_STATUS)
 from build_relationship_graph import build_graph, build_views  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
@@ -346,6 +347,41 @@ def main() -> int:
     people_slugs = {p.get("slug") for p in (people or [])}
 
     tombstone_entity_slugs = {e["slug"] for e in entities if e.get("_merged_into")}
+
+    # --- ecosystem roles and sells_for[] (schema v7, 2026-10-01) -----------
+    # A seller edge that points at a misspelled slug is dropped by the graph builder without a word,
+    # so the shape is checked here, not left to the builder.
+    live_slugs = {e["slug"] for e in entities if not e.get("_merged_into")}
+    for e in entities:
+        if e.get("_merged_into"):
+            continue
+        roles = e.get("ecosystem_roles")
+        if roles is not None:
+            bad = [r for r in (roles if isinstance(roles, list) else [roles]) if r not in ECOSYSTEM_ROLES]
+            if not isinstance(roles, list) or bad:
+                errors.append(f"{e['slug']}: ecosystem_roles must be a list drawn from {sorted(ECOSYSTEM_ROLES)} (got {roles!r})")
+        status = e.get("legal_entity_status")
+        if status is not None and status not in LEGAL_ENTITY_STATUS:
+            errors.append(f"{e['slug']}: legal_entity_status {status!r} not in {sorted(LEGAL_ENTITY_STATUS)}")
+        if "brand" in (roles or []) and status != "unresolved" and not e.get("inn"):
+            warnings.append(f"{e['slug']}: role 'brand' with no ИНН should say legal_entity_status: 'unresolved'")
+        for i, sale in enumerate(e.get("sells_for") or []):
+            where = f"{e['slug']}.sells_for[{i}]"
+            if not isinstance(sale, dict):
+                errors.append(f"{where} must be an object"); continue
+            if sale.get("slug") not in live_slugs:
+                errors.append(f"{where}.slug {sale.get('slug')!r} is not a live entity")
+            if sale.get("slug") == e["slug"]:
+                errors.append(f"{where} points at the entity itself")
+            if not sale.get("channel"):
+                errors.append(f"{where}.channel is required (the edge label, e.g. 'Ozon', 'own site', 'dealer network')")
+            if sale.get("basis") not in SELLS_FOR_BASIS:
+                errors.append(f"{where}.basis must be one of {sorted(SELLS_FOR_BASIS)} (got {sale.get('basis')!r})")
+            if sale.get("basis") in ("doc", "press") and not sale.get("source_id"):
+                warnings.append(f"{where} basis {sale.get('basis')!r} has no source_id")
+            if sale.get("source_id") and sale["source_id"] not in source_ids:
+                errors.append(f"{where}.source_id {sale['source_id']!r} is not a known source")
+
     tombstone_people_slugs = {p.get("slug") for p in (people or []) if p.get("_merged_into")}
 
     # build_company_profile.py now refuses to render a tombstone (2026-09-07

@@ -1,8 +1,8 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "generated_from": "data/registry/entities.json + people.json",
   "node_count": 1221,
-  "edge_count": 2076,
+  "edge_count": 2075,
   "unresolved_count": 113,
   "nodes": [
     {
@@ -2117,7 +2117,7 @@
       "sanctioned": false,
       "legal_form": "ИП",
       "variant": null,
-      "degree": 4
+      "degree": 3
     },
     {
       "id": "ip-shandobylo-sergey-sergeevich",
@@ -4237,7 +4237,7 @@
       "sanctioned": true,
       "legal_form": "ООО",
       "variant": "defensive",
-      "degree": 23
+      "degree": 22
     },
     {
       "id": "ooo-tsentr-dinarus",
@@ -20854,13 +20854,13 @@
     {
       "source": "ip-kuznetsov-ruslan-nikolaevich",
       "target": "ooo-trimiks",
-      "type": "related",
-      "label": "dealer",
+      "type": "sells_for",
+      "label": "own site 921921.ru",
       "source_id": "s8613",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
-      "confidence": null
+      "confidence": "doc"
     },
     {
       "source": "ip-kuznetsov-ruslan-nikolaevich",
@@ -28212,6 +28212,17 @@
     },
     {
       "source": "ooo-pokrov",
+      "target": "ooo-trimiks",
+      "type": "sells_for",
+      "label": "dealer (named on 3mx.ru/dilery/; pokrovsystem.ru)",
+      "source_id": "s1386",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc"
+    },
+    {
+      "source": "ooo-pokrov",
       "target": "product::ooo-pokrov::детектор-булат-v-4",
       "type": "produces",
       "label": null,
@@ -28814,28 +28825,6 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc"
-    },
-    {
-      "source": "ooo-trimiks",
-      "target": "ip-kuznetsov-ruslan-nikolaevich",
-      "type": "related",
-      "label": "dealer",
-      "source_id": "s8613",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
-    },
-    {
-      "source": "ooo-trimiks",
-      "target": "ooo-pokrov",
-      "type": "related",
-      "label": "dealer",
-      "source_id": "s1386",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null
     },
     {
       "source": "ooo-trimiks",
@@ -36312,6 +36301,7 @@
     "barilo-denis-aleksandrovich",
     "bf-ktspn-barnaul",
     "borisov-aleksandr-sergeevich-tsbs-tula",
+    "bratenkov-andrey-alekseevich",
     "chetvertkov-aleksey-vladimirovich",
     "chichkov-aleksandr-yurevich",
     "chumakov-pavel-andreevich",
@@ -36359,11 +36349,15 @@
     "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
     "golovachev-vitaliy-yurevich",
     "goncharenko-anton-aleksandrovich",
+    "ip-bratenkov-andrey-alekseevich",
     "ip-gabitov-r-a",
+    "ip-karpushin-aleksandr-aleksandrovich",
+    "ip-mavrin-oleg-vladimirovich",
     "ip-popov-aleksandr-sergeevich",
     "ip-sidorov-andrey-sergeevich",
     "ivlev-artem-yurevich",
     "kashnikov-konstantin-nikolaevich",
+    "kb-spektr-novosibirsk",
     "khristyuk-ekaterina-valerevna",
     "khristyuk-vladimir-vladimirovich",
     "kindyakov-andrey-andreevich",
@@ -36377,6 +36371,7 @@
     "lobov-vadim-georgievich",
     "lunev-ivan-ivanovich",
     "maksimov-yuriy-alekseevich",
+    "mavrin-oleg-vladimirovich",
     "medisova-tatyana-nikolaevna",
     "mikhaylova-irina-valerievna",
     "mikhelson-viktoriya-leonidovna",
@@ -36416,6 +36411,10 @@
     "product::ip-gabitov-r-a::beastcontrol-система-удаленного-управления-fpv-дроном-через-интернет-на-базе-orange-pi-3b",
     "product::ip-gabitov-r-a::аккумулятор-для-fpv-дрона-gnb-9000-mah-6s-70c-xt60",
     "product::ip-popov-aleksandr-sergeevich::аккумуляторы-gaoneng-для-fpv-дронов-различные-емкости",
+    "product::kb-spektr-novosibirsk::пропеллеры-8-9-10-дюймов-и-15-7-3-дюйма",
+    "product::kb-spektr-novosibirsk::пропеллеры-для-бпла-в-том-числе-складной-18-5-15-дюйма",
+    "product::kb-spektr-novosibirsk::пропеллеры-для-трофейных-тяжелых-бпла-баба-яга",
+    "product::kb-spektr-novosibirsk::хоккейные-лезвия-red-star-инженерные-услуги",
     "product::kolskaya-verf::безэкипажный-катер-на-подводных-крыльях",
     "product::ooo-arkhangel-zaporizhzhie::вынос-пульта-управления-бпла",
     "product::ooo-arkhangel-zaporizhzhie::дрон-перехватчик-архангел",

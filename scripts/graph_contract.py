@@ -10,11 +10,12 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-GRAPH_SCHEMA_VERSION = 6
+GRAPH_SCHEMA_VERSION = 7
 NODE_KINDS = {"entity", "person", "product", "unresolved",
               "government_customer", "military_unit"}
 EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
-              "procures", "confirmed_field_use", "cbst_tie", "family_tie"}
+              "procures", "confirmed_field_use", "cbst_tie", "family_tie",
+              "sells_for"}
 TEMPORAL_STATUSES = {"current", "historical", "unknown"}
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 UNIT_TYPES = {"army", "brigade", "regiment", "battalion", "detachment",
@@ -47,6 +48,28 @@ CBST_TIE_CONFIDENCE = {"t-doc", "t-open", "press"}
 # vocabulary -- see people.json's family_of.confidence.
 FAMILY_TIE_CONFIDENCE = {"confirmed", "probable", "unconfirmed"}
 
+# sells_for (added 2026-10-01, schema v7): seller -> manufacturer or brand whose goods it sells, from the
+# seller's own entity record (`sells_for[]`). It exists because a manufacturer's product reaches buyers
+# through legal entities that are not the manufacturer: the Ozon sole traders selling КБ «СПЕКТР»
+# propellers, the named dealers of «3mx». An edge says "this seller of record sells that maker's goods";
+# it never says the maker authorised it unless the basis does. The edge label is the sales channel.
+#   doc      a primary document (marketplace seller panel, dealer certificate, the maker's own dealer
+#            page, the seller's own site) states that this seller sells that maker's goods
+#   press    a press or third-party report says so
+#   inferred the investigator's reading, not stated by any document (recorded so it is visible and gradable)
+SELLS_FOR_BASIS = {"doc", "press", "inferred"}
+
+# entities[].ecosystem_roles (added 2026-10-01): what an entity does in the product chain, orthogonal to
+# `tier` (tier measures closeness to ЦБСТ). Absent means "not yet classified", NOT "manufacturer".
+ECOSYSTEM_ROLES = {
+    "manufacturer",       # makes the product
+    "brand",              # a product brand whose legal entity is not established (use legal_entity_status)
+    "seller_of_record",   # the legal entity that appears as seller on a marketplace or invoice
+    "licensed_dealer",    # named or certified by the manufacturer as an official dealer/supplier
+    "distributor",        # wholesale or regional distribution
+}
+LEGAL_ENTITY_STATUS = {"established", "unresolved"}
+
 # related_entities[].relationship_type (added 2026-09-15, schema v5) — a
 # controlled vocabulary replacing the previous hardcoded "related
 # (ambiguous)" edge label with the real category each of the registry's 42
@@ -68,6 +91,7 @@ RELATED_ENTITY_RELATIONSHIP_TYPES = {
     "competitor",                    # rival products/entities in the same market segment (unpopulated as of schema v5 -- no sourced claim exists yet)
     "shared-address",                # registered at the identical street address per EGRUL, with NO confirmed director/founder overlap -- a co-location signal only, distinct from sister-entity (which requires a confirmed common principal)
     "counterparty",                  # buyer/seller or lender/borrower tie established by a litigation record (arbitration court filing) -- an ordinary commercial transaction confirmed by a court's own findings of fact, not a marketing claim or a corporate-family assertion
+    "operated-brand",                # a sole trader or company that traded under the other record's brand during the dated period, per a document; says nothing about who runs the brand now
     "component-supplier",            # one entity publicly names another's product as a component of its own product, and/or the other publicly names it as a customer (BOM line, own-channel statement) -- a self-reported supply tie, not a contract or corporate link
 }
 PRODUCT_CLASSIFICATION_FIELDS = {
@@ -308,6 +332,7 @@ def validate_graph(
                 # relatives" case from the degree-0 audit. person->person
                 # only; direction is relative -> principal.
                 "family_tie": ({"person"}, {"person"}),
+                "sells_for": ({"entity"}, {"entity"}),
             }[etype]
             if src_kind not in permitted[0] or dst_kind not in permitted[1]:
                 _error(errors, f"{where} has invalid {src_kind}->{dst_kind} endpoints for {etype}")
@@ -325,6 +350,9 @@ def validate_graph(
         elif etype == "family_tie":
             if confidence not in FAMILY_TIE_CONFIDENCE:
                 _error(errors, f"{where}.confidence has invalid value {confidence!r} for family_tie")
+        elif etype == "sells_for":
+            if confidence not in SELLS_FOR_BASIS:
+                _error(errors, f"{where}.confidence has invalid value {confidence!r} for sells_for")
         elif confidence is not None:
             _error(errors, f"{where}.confidence must be null for edge type {etype!r}")
         status = edge.get("temporal_status")

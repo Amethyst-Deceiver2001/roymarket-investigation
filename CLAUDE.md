@@ -386,6 +386,17 @@ company profiles.
 
 **Where exhibit assets live (consolidated 2026-10-01).** `exhibits/` (renamed from `scratch_design/`) holds every standalone exhibit, mockup, icon set and their builder scripts, plus `exhibits/images/` for their pictures. `docs/` holds only what is published: generated pages and `docs/images/` (profile media). A finished exhibit that is published is generated into `docs/` by a build script; do not hand-copy it there, and do not leave drafts in `docs/` or `notes/`.
 
+## Ecosystem roles and sellers (added 2026-10-01 at user direction)
+
+A maker's goods reach buyers through legal entities that are not the maker: the Ozon sole traders that sell КБ «СПЕКТР» propellers, the named dealers of «3mx». The registry models them without a new tier.
+
+- **`ecosystem_roles`** (list on an entity, vocabulary `graph_contract.ECOSYSTEM_ROLES`: `manufacturer`, `brand`, `seller_of_record`, `licensed_dealer`, `distributor`). It is orthogonal to `tier`, which measures closeness to ЦБСТ: a seller can sit at any tier. Absent means unclassified, not manufacturer.
+- **`sells_for[]`** (on the seller): `{slug, channel, basis, source_id, as_of, note}`. The builder draws a `sells_for` edge (schema v7) labelled with the channel and graded `doc` / `press` / `inferred` in `confidence`. `doc` means a primary document (a marketplace seller panel, a dealer certificate, the maker's dealer page, the seller's own site) states the sale. It never says the maker authorised it unless the document does. `check_registry.py` validates the shape; an edge to a mistyped slug is otherwise dropped silently by the builder.
+- **Brand without a legal entity:** an entity may be a brand stub with `legal_entity_status: "unresolved"` and no ИНН (КБ «СПЕКТР», `kb-spektr-novosibirsk`), so sellers can point at it without a guessed identity. Never fill the ИНН from a name match; the three same-name Новосибирск ООО of 2019 are in `notes/roymarket_vendor_leads.md`, not in the registry.
+- **`related_entities[].relationship_type: "operated-brand"`:** a company or sole trader that traded under the other record's brand during a dated period, per a document. The older prose `dealer` entries stay on file (the case-study builder reads them); where a seller also carries `sells_for` for the same pair, the graph draws only the structured edge.
+- A seller's cluster is drawn only if a path reaches the ЦБСТ hub; otherwise it is listed in `detached_ids`. The registry has no РОЙ.МАРКЕТ operator entity yet, so non-resident РОЙ.МАРКЕТ vendors (КБ «СПЕКТР») are detached today.
+- **PII scope, third category:** a seller (usually a sole trader) gets an entity record, and its owner a person record only on user direction, when it has a **documented link to a registry manufacturer or to РОЙ.МАРКЕТ**. A marketplace listing alone is not enough. Same sourcing rule as every identifying field: the ИП's ИНН comes from its ЕГРИП extract, never from a plausible namesake, and no date of birth or address is filled without a source. Individuals recorded under this category so far: Братеньков, Маврин (person of interest, user, 2026-10-01). ИП Карпушин has an entity record but no person record.
+
 ## Writing: read `STYLE_GUIDE.md` before drafting any prose
 
 `STYLE_GUIDE.md` (repo root, added 2026-08-22) is authoritative for everything

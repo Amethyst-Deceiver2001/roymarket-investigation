@@ -420,6 +420,10 @@ def build_graph(entities: list[dict], people: list[dict],
                 "confidence": confidence,
             })
 
+    # every (seller, maker) pair declared in a sells_for[] field, so an older prose "dealer" related
+    # entry for the same pair (either direction) is not drawn twice
+    sells_pairs_all = {(e["slug"], x.get("slug")) for e in entities for x in e.get("sells_for") or []}
+
     for entity in entities:
         slug = entity["slug"]
         for parent in entity.get("parents") or []:
@@ -434,6 +438,10 @@ def build_graph(entities: list[dict], people: list[dict],
             add_edge(slug, target, "owns", subsidiary.get("role"), source_id, as_of,
                      temporal_status=temporal_status)
         for related in entity.get("related_entities") or []:
+            if (related.get("relationship_type") == "dealer"
+                    and ((slug, related.get("slug")) in sells_pairs_all
+                         or (related.get("slug"), slug) in sells_pairs_all)):
+                continue   # the structured sells_for[] edge replaces the old prose "dealer" link
             # relationship_type (schema v5, graph_contract.RELATED_ENTITY_
             # RELATIONSHIP_TYPES) is a structured category added 2026-09-15
             # to replace the old hardcoded "related (ambiguous)" label --
@@ -442,6 +450,11 @@ def build_graph(entities: list[dict], people: list[dict],
             add_edge(slug, related.get("slug"), "related",
                      related.get("relationship_type") or "related (ambiguous)",
                      related.get("source_id"))
+        for sale in entity.get("sells_for") or []:
+            # sells_for[] (schema v7): {slug, channel, basis, source_id, as_of, note}. The edge label is the
+            # channel; the basis grade rides in `confidence` (doc / press / inferred).
+            add_edge(slug, sale.get("slug"), "sells_for", sale.get("channel"),
+                     sale.get("source_id"), sale.get("as_of"), confidence=sale.get("basis"))
         for founder in parse_founder_entries(entity.get("founders")):
             raw_name = founder["name"]
             # ИНН/ОГРН resolution first, before the name-normalization
