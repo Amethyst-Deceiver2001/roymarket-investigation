@@ -28,7 +28,7 @@ US = b"""<?xml version="1.0"?>
 EU = b"""<?xml version="1.0"?>
 <export xmlns="http://eu.europa.ec/fpi/fsd/export" generationDate="2026-09-30T10:00:00">
  <sanctionEntity logicalId="1" euReferenceNumber="EU.1.1">
-  <regulation numberTitle="2026/509 (OJ L)" programme="UKR"/>
+  <regulation numberTitle="2026/509 (OJ L)" programme="UKR" publicationDate="2026-04-23" publicationUrl="https://eur-lex.europa.eu/eli/reg_impl/2026/509/oj"/>
   <nameAlias wholeName="Limited Liability Company Trimiks"/>
   <identification identificationTypeCode="tin" number="7802942873"/>
  </sanctionEntity>
@@ -63,6 +63,9 @@ def main():
     assert eu["entries"] == 2 and len(eu["hits"]) == 1, eu
     assert eu["hits"][0]["entry_id"] == "EU.1.1"
     assert "2026/509 (OJ L)" in eu["hits"][0]["programs"]
+    # The entry's own date and legal-act link travel with the hit, for the citation.
+    assert "publicationDate=2026-04-23" in eu["hits"][0]["dates"], eu["hits"][0]
+    assert "https://eur-lex.europa.eu/eli/reg_impl/2026/509/oj" in eu["hits"][0]["urls"]
 
     # A name alone is never a hit: the SECO entry has no identifier.
     ch = sw.scan("ch", CH, reg)
