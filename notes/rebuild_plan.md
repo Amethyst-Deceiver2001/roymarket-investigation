@@ -184,13 +184,22 @@ Decisions (user, 2026-10-02):
    355 rep, 34 open. A party's own posts, site and listings are rep. The
    landing legend and its rows use the same table. The public graph explorer
    still embeds the v11 data: refresh it with B6.
-2. **B2 contracts to products.** `government_contracts[].products[]` (record,
-   version, quantity, unit price from the specification); 0 of 479 contracts
-   have one. `check_registry.py` warns when a supplier delivers another maker's
-   product without a `sells_for` edge. First cases: the three «Булат»
-   contracts, then the ИП Цыганов → Тримикс `sells_for` gap (184 «Булат» v.4,
-   ₽16.2m, МЧС Курск, 29.10.2024). Fold in B8: `date_precision` for the 16
-   year-only contract dates.
+2. **B2 contracts to products** (started 02.10.2026, «Булат» done).
+   `government_contracts[].products[]` holds `{product, version|null, item_ru,
+   qty|null, unit, unit_price_rub|null, source_id, note}`, read from the
+   printed contract or its specification. `check_registry.py` validates it.
+   It warns when a supplier delivers another maker's product without a
+   `sells_for` edge, and lists contracts dated by year only (B8; 14 left).
+   - Done for the three «Булат» contracts:
+     - ПОКРОВ ЕП 2-25 (26.09.2025): 7 × v4 at ₽99,000 and 12 × v4 with remote
+       antennas at ₽105,100.
+     - ПОКРОВ Белгород (30.06.2026): ₽495,000, quantity not stated.
+     - ИП Цыганов no. 130 (29.10.2024): 184 × v4 at ₽88,000.
+   - ИП Цыганов now carries `sells_for` → Тримикс (basis doc, the contract;
+     authorised unknown; not on the dealer page).
+   - The chain view selects contracts by `products[]` (a text match only for
+     unlinked contracts) and prints the lines.
+   - Next: link other makers' contracts as their chain views are built (B7).
 3. **B3 donor's supplier.** Read «Наша Правда»'s audited accounts on file
    first (brief lead: НПО «Милитех», unverified), then an optional
    `acquired_from` on deliveries.

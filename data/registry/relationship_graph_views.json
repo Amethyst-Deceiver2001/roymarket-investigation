@@ -2293,7 +2293,7 @@
           "legal_form": "ИП",
           "variant": "defensive",
           "product_count": 1,
-          "degree": 8
+          "degree": 9
         },
         {
           "id": "isaenko-sergey-vasilevich",
@@ -4596,7 +4596,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 4,
-          "degree": 22
+          "degree": 23
         },
         {
           "id": "ooo-tsentr-dinarus",
@@ -17979,7 +17979,7 @@
           "type": "procures",
           "label": null,
           "source_id": "s3424",
-          "as_of": null,
+          "as_of": "2026-06-30",
           "weight": 495000,
           "temporal_status": "unknown",
           "confidence": null,
@@ -20111,7 +20111,7 @@
           "type": "procures",
           "label": null,
           "source_id": "s3680",
-          "as_of": null,
+          "as_of": "2025-09-26",
           "weight": 2314200,
           "temporal_status": "unknown",
           "confidence": null,
@@ -23081,6 +23081,29 @@
           "temporal_status": "current",
           "confidence": null,
           "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "ip-tsyganov-vadim-borisovich",
+          "target": "ooo-trimiks",
+          "type": "sells_for",
+          "label": "state contract (supplier of record)",
+          "source_id": "s1416",
+          "as_of": "2024-10-29",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": {
+            "products": [
+              "«Булат» v.4"
+            ],
+            "status": "shipping",
+            "role": "seller_of_record",
+            "asserted_by": "regulator",
+            "credibility": "doc",
+            "authorised": "unknown",
+            "open": "The contract shows he supplied the maker's product to a state buyer. It does not show where he obtained the units or whether 3mx authorised the sale; he is not on the maker's dealer page."
+          },
           "grade": "doc"
         },
         {
@@ -41907,7 +41930,7 @@
           "legal_form": "ИП",
           "variant": "defensive",
           "product_count": 1,
-          "degree": 8
+          "degree": 9
         },
         {
           "id": "isaenko-sergey-vasilevich",
@@ -49792,7 +49815,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 4,
-          "degree": 22
+          "degree": 23
         },
         {
           "id": "ooo-tsentr-dinarus",
@@ -52103,7 +52126,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 4,
-          "degree": 22
+          "degree": 23
         },
         {
           "id": "ooo-ushkuynik-sp",

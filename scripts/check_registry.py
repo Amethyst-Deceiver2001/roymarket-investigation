@@ -736,6 +736,36 @@ def main() -> int:
             if not c_.get("text_ru") or c_.get("source_id") not in source_ids or not date_re.fullmatch(str(c_.get("as_of") or "")):
                 errors.append(f"{where}.claims[{j}] needs text_ru, a known source_id and an as_of date")
 
+    # --- products on state contracts (B2, added 2026-10-02) ------------------------
+    # government_contracts[].products[]: {product, version|null, item_ru, qty|null, unit, unit_price_rub|null,
+    # source_id, note}. item_ru is the line as the contract or its specification prints it. A supplier that
+    # delivers another maker's product needs a sells_for edge to that maker, or the chain loses the seller.
+    prod_by_slug = {pr.get("slug"): pr for pr in products}
+    for e in entities:
+        for k, gc in enumerate(e.get("government_contracts") or []):
+            for j, cp in enumerate(gc.get("products") or []):
+                w = f"{e['slug']}.government_contracts[{k}].products[{j}]"
+                pr = prod_by_slug.get(cp.get("product"))
+                if not pr:
+                    errors.append(f"{w}.product {cp.get('product')!r} is not in products.json")
+                    continue
+                if cp.get("version") is not None and cp["version"] not in {v.get("slug") or v.get("id") for v in pr.get("versions") or []}:
+                    errors.append(f"{w}.version {cp['version']!r} is not a version of {pr['slug']}")
+                if not cp.get("item_ru") or cp.get("source_id") not in source_ids:
+                    errors.append(f"{w} needs item_ru and a known source_id")
+                for f in ("qty", "unit_price_rub"):
+                    if cp.get(f) is not None and not isinstance(cp[f], (int, float)):
+                        errors.append(f"{w}.{f} must be a number or null")
+                maker = pr.get("maker")
+                if maker and maker != e["slug"] and (e["slug"], maker) not in sells_pairs:
+                    warnings.append(f"{w}: {e['slug']} supplies {pr['slug']} (made by {maker}) with no sells_for edge to "
+                                    f"{maker}; record how the supplier sells it (B2)")
+    year_only = [f"{e['slug']}[{k}]" for e in entities for k, gc in enumerate(e.get("government_contracts") or [])
+                 if re.fullmatch(r"\d{4}", str(gc.get("date") or ""))]
+    if year_only:
+        warnings.append(f"{len(year_only)} state contract(s) dated by year only; give the day where the contract "
+                        f"states it (B8): {', '.join(year_only[:8])}{' …' if len(year_only) > 8 else ''}")
+
     # --- brands (entities[].brands, B5, added 2026-10-02) -----------------------
     # The name a reader recognises. At most one primary; every brand sourced; a trademark brand names its
     # registration, which must be in the entity's own trademarks[].

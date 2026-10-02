@@ -65846,7 +65846,7 @@
     "government_contracts": [
       {
         "customer": "ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz)",
-        "date": "2025",
+        "date": "2025-09-26",
         "items": "Contract ЕП 2-25 of 26.09.2025 (ООО «ПОКРОВ», signed by Цыганов as general director). The sole-supplier notice's subject line reads «поставка средств подавления беспилотных аппаратов», but the goods itemised in the notice body («закупка средств обнаружения беспилотных летательных аппаратов») and in the printed contract form (s3672; contract file title «ГК ЕП 2-25 (Булат, Марс)») are DETECTION devices, ОКПД2 26.51.20.110: 7 × «Мониторинговое устройство БУЛАТ v4» at ₽99,000; 12 × «Булат v4 с выносными антеннами» at ₽105,100; 3 × портативный всенаправленный детектор цифровых видеолинков и пульты ELRS «Марс» at ₽120,000 (total ₽2,314,200). The suppression complex «Покров» ВЦ5 АЛЬФА is a different contract (ЕП 3-25, ИП Цыганов, s1417). Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ, justified in the notice by reference to МЧС letters от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного каталога средств противодействия», tied to equipping personnel deployed for «поиск, обезвреживание и уничтожение взрывоопасных предметов на территории Курской области» (OCR of the scanned notice, s3680, read 2026-09-20. The notice's purchase table repeats the contract's 7 / 12 / 3 units and total ₽2,314,200; its separate list of the customer's overall requirement, including РЭБ kit such as a «Покров» ВЦ5 АЛЬФА complex and «АСК», is larger than what was bought under this contract). Earlier wording of this field described the whole contract as «средства ПОДАВЛЕНИЯ»; that was the notice's subject line, not the goods purchased.",
         "reg_number": "1500300810225000157",
         "source_id": "s3680",
@@ -65856,11 +65856,31 @@
           "kind": "government_customer",
           "id": null,
           "label": "ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz)"
-        }
+        },
+        "products": [
+          {
+            "product": "bulat",
+            "version": "bulat-v4",
+            "item_ru": "Мониторинговое устройство БУЛАТ v4",
+            "qty": 7,
+            "unit": "компл",
+            "unit_price_rub": 99000,
+            "source_id": "s3672"
+          },
+          {
+            "product": "bulat",
+            "version": "bulat-v4",
+            "item_ru": "Мониторинговое устройство Булат v4 с выносными антеннами",
+            "qty": 12,
+            "unit": "компл",
+            "unit_price_rub": 105100,
+            "source_id": "s3672"
+          }
+        ]
       },
       {
         "customer": "Администрация Белгородского муниципального округа",
-        "date": "2026",
+        "date": "2026-06-30",
         "items": "Поставка мониторинговых устройств «Булат» — same «Булат» product line as the earlier ИП Цыганов contracts (see corrections entry for that person).",
         "reg_number": "3310005025826000052",
         "source_id": "s3424",
@@ -65870,7 +65890,19 @@
           "kind": "government_customer",
           "id": null,
           "label": "Администрация Белгородского муниципального округа"
-        }
+        },
+        "products": [
+          {
+            "product": "bulat",
+            "version": null,
+            "item_ru": "Мониторинговое устройство \"Булат\"",
+            "qty": null,
+            "unit": null,
+            "unit_price_rub": null,
+            "source_id": "s3424",
+            "note": "The contract record names the object and the price (₽495,000), not the quantity or the version."
+          }
+        ]
       }
     ],
     "workforce_history": [],
@@ -65963,7 +65995,8 @@
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "[2026-09-30] Added the company's own Telegram channel and four self-published claims (s8532, s8534, s8535) and a concert photo showing its logo (s8519). The owner Цыганов Вадим Борисович is the husband of the singer Вика Цыганова (s8537); see the people records. ПОКРОВ describes itself as 3mx's official dealer, not the manufacturer (s8535).",
-      "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [485, 562] flagged by scripts/tg_post_coverage.py: namesake. Both posts use «ледяной покров» (ice cover) as a common noun in foreign-news digests."
+      "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [485, 562] flagged by scripts/tg_post_coverage.py: namesake. Both posts use «ледяной покров» (ice cover) as a common noun in foreign-news digests.",
+      "2026-10-02 B2: products[] on state contracts from the contract documents (printed form / specification), read in full."
     ],
     "sanctions_review": {
       "as_of": "2026-09-20",
@@ -67903,7 +67936,19 @@
           "as_of": "2024-11-18",
           "note": "УПД confirms all 184 contracted units delivered, same file family as s1416.",
           "source_id": "s1416"
-        }
+        },
+        "products": [
+          {
+            "product": "bulat",
+            "version": "bulat-v4",
+            "item_ru": "Детектор беспилотных летательных аппаратов Булат v.4",
+            "qty": 184,
+            "unit": "шт",
+            "unit_price_rub": 88000,
+            "source_id": "s1459",
+            "note": "Quantity and unit price from the contract's specification (Приложение к Контракту); the contract record names the object (s1416)."
+          }
+        ]
       },
       {
         "contract_number": "ЕП 3-25 (реестровый № 1500300810225000152)",
@@ -67983,7 +68028,8 @@
       "2026-09-05: backfilled the structured `zakupki_review` field (partial, as of 2026-08-31) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate.",
       "2026-09-14: BFO coverage sweep -- confirmed N/A (ИП, no БФО obligation), not a scan gap.",
       "[2026-09-15] wb_overlap review: Genuine wildberries.ru listings exist for a «Булат v.4» drone detector (multiple SKUs, one under a '3mx' sub-brand) matching this ИП's own product name, but the seller's legal identity (name/ИНН shown on the product page) could not be verified from this environment — wildberries.ru returns HTTP 498 (anti-scraping block) to both WebFetch and direct curl, the same class of block already documented for kad.arbitr.ru. Needs a human manual-browser check of the seller info panel on e.g. wildberries.ru/catalog/303756599/detail.aspx or /264621265/detail.aspx before a confirmed_direct/confirmed_reseller conclusion can be written. Also worth checking against sibling record 'bulat-3mx' (same 'Булат'/'3mx' branding, no ИНН of its own) for a possible identity link — not attempted here, out of this task's scope.",
-      "[2026-09-15] wb_overlap resolved via local wb_watch.db: his own government-contract product (\"Детектор беспилотных летательных аппаратов «Булат» v.4\", Госконтракт №130, s1459) shares its exact name with WB's '3mx'/'БУЛАТ v.4' detector listings. His own ИНН (504405055721) does not appear as a WB seller (sellers table queried directly, zero rows) -- the product is being sold on WB by third-party ИП/ООО sellers unconnected to him, same reseller pattern as the sibling Тримикс/bulat-3mx brand. Not claiming Цыганов and Тримикс are the same manufacturer -- only that neither sells this product line under their own WB storefront."
+      "[2026-09-15] wb_overlap resolved via local wb_watch.db: his own government-contract product (\"Детектор беспилотных летательных аппаратов «Булат» v.4\", Госконтракт №130, s1459) shares its exact name with WB's '3mx'/'БУЛАТ v.4' detector listings. His own ИНН (504405055721) does not appear as a WB seller (sellers table queried directly, zero rows) -- the product is being sold on WB by third-party ИП/ООО sellers unconnected to him, same reseller pattern as the sibling Тримикс/bulat-3mx brand. Not claiming Цыганов and Тримикс are the same manufacturer -- only that neither sells this product line under their own WB storefront.",
+      "2026-10-02 B2: products[] on state contracts from the contract documents (printed form / specification), read in full."
     ],
     "notes": "zakupki cluster review 2026-08-31: 1 remaining unwired archived card beyond the already-wired Булат/Покров contracts, non-recurring, no new signal. Not wired. Closed.",
     "zakupki_review": {
@@ -68001,6 +68047,35 @@
       "outcome": "closed",
       "note": "GUR: all 5 raw matches are clear namesakes — different first names/patronymics entirely (Белоусов Вадим Владимирович, Денисенко Вадим Иванович, Шадура Вадим Евгеньевич, Булавинов Вадим Евгеньевич, Лукашевич Вадим Анатольевич), none with inn_match/ogrn_match true or has_confirmed_listing_language true. Aleph: two \"sanctions\"-category matches (\"Tsyganov Vadim\" score 14.05, \"Tsyhanov Vadym Borysovych\" score 8.83, both Global Sanctions Database) at moderate-to-low relevance with no jurisdiction/date detail in the raw record to confirm same-person correspondence against this ИНН (504405055721); three further Aleph matches are procurement/EGRUL records confirming only the mundane (already-known) ИНН/identity, not a sanction. Given this individual's documented zakupki government-contract activity (₽28.176m, per CLAUDE.md), a real designation would be a significant finding — but the evidence here does not clear the confirmation bar. Not promoted; flagged as worth a follow-up direct read of the two Aleph Global Sanctions Database entries."
     },
+    "ecosystem_roles": [
+      "seller_of_record"
+    ],
+    "sells_for": [
+      {
+        "slug": "ooo-trimiks",
+        "channel": "state contract (supplier of record)",
+        "basis": "doc",
+        "source_id": "s1416",
+        "as_of": "2024-10-29",
+        "note": "State contract no. 130 with ГУ МЧС России по Курской области, 29.10.2024: 184 «Булат» v.4 at ₽88,000 (₽16,192,000). Added 2026-10-02 under B2, which warns when a supplier delivers another maker's product without a sells_for edge.",
+        "products": [
+          "«Булат» v.4"
+        ],
+        "status_history": [
+          {
+            "status": "shipping",
+            "as_of": "2024-11-18",
+            "source_id": "s1463",
+            "note": "Universal transfer document (УПД): 184 units delivered."
+          }
+        ],
+        "asserted_by": "regulator",
+        "credibility": "doc",
+        "authorised": "unknown",
+        "role": "seller_of_record",
+        "open": "The contract shows he supplied the maker's product to a state buyer. It does not show where he obtained the units or whether 3mx authorised the sale; he is not on the maker's dealer page."
+      }
+    ],
     "_verified_against": null,
     "name_display": "IP Tsyganov Vadim Borisovich",
     "opensanctions_matches": [],

@@ -178,6 +178,23 @@ class Chain:
         dark = " on-dark" if m and m.get("logo_ground") == "dark" else ""
         return f'<img class="rm-logo{dark}" src="{esc(src)}" alt="Logo of {esc(split_name(self.ents[slug])[0])}">' if src else ""
 
+    def contract_lines(self, gc):
+        """The contract's lines for this product (B2): quantity × version at the unit price, as the contract prints them."""
+        vname = {v.get("slug"): v.get("name_ru") for v in self.p.get("versions") or []}
+        out = []
+        for cp in gc.get("products") or []:
+            if cp.get("product") != self.p["slug"]:
+                continue
+            what = esc(vname.get(cp.get("version")) or self.pq)
+            if cp.get("item_ru") and "антенн" in cp["item_ru"]:
+                what += " with remote antennas"
+            qty = f'{cp["qty"]} × ' if cp.get("qty") else ""
+            price = f' at {money(cp["unit_price_rub"])}' if cp.get("unit_price_rub") else ""
+            if not qty and not price:
+                what += ", quantity not stated"
+            out.append(f'<li>{qty}{what}{price}{self.ref(cp.get("source_id"))}</li>')
+        return f'<ul class="rec">{"".join(out)}</ul>' if out else ""
+
     def edge(self, a, b, grade, label, bus=False):
         self.edges.append({"from": a, "to": b, "grade": grade, "label": label, "bus": bus})
 
@@ -300,7 +317,11 @@ class Chain:
         contracts = []
         for e in self.ents.values():
             for gc in e.get("government_contracts") or []:
-                if fold(self.pname) in fold((gc.get("subject_ru") or "") + " " + (gc.get("items") or "")):
+                # B2: a contract's own products[] decides; the text match only covers contracts not yet linked.
+                if gc.get("products") is not None:
+                    if any(cp.get("product") == self.p["slug"] for cp in gc["products"]):
+                        contracts.append((e, gc))
+                elif fold(self.pname) in fold((gc.get("subject_ru") or "") + " " + (gc.get("items") or "")):
                     contracts.append((e, gc))
         for e, gc in contracts:
             if e["slug"] not in row_of:
@@ -328,6 +349,7 @@ class Chain:
                 cid, "buyer", "State buyer", esc(customer),
                 f'<p class="row"><b>{money(gc.get("value_rub"))}</b>, '
                 f'{esc(ru_date(gc.get("date")) if gc.get("date") else "")}{self.ref(gc.get("source_id"))}</p>'
+                + self.contract_lines(gc)
                 + (f'<p class="note" lang="ru">«{esc(subj)}»</p>' if subj else "")))
             self.edge(self.rows[row_of[e["slug"]]]["id"], cid, "doc", "State contract")
 
