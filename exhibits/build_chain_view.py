@@ -47,6 +47,8 @@ KIND_MARK = {"hub": ("company", " hub"), "programme": ("program", ""), "event": 
              "maker": ("company", ""), "product": ("product", ""), "channel": ("company", ""),
              "storefront": ("storefront", ""), "donor": ("company", ""), "buyer": ("buyer", ""),
              "field": ("unit", ""), "absent": ("storefront", " absent")}
+PROV_GROUP = {"self": "Published by the company", "platform": "From a marketplace listing",
+              "third_party": "Posted by buyers and others", "press": "Press", "counterparty": "From the counterparty"}
 ROLE_EN = {"exhibitor": "Showed «{p}» at the event", "resident": "Resident", "finalist": "Finalist",
            "co-organiser": "Co-organised by", "organiser": "Organised by"}
 
@@ -167,6 +169,7 @@ class Chain:
         self.media = load_media()
         self.media_files = []    # (published name, local path) for the artifact publish
         self.img_dir = None      # set by render(): where publish copies go
+        self.templates = {}      # media id -> full evidence figure, opened from a thumbnail
 
     # -- notation ------------------------------------------------------------------------
     def ref(self, *sids):
@@ -257,6 +260,10 @@ class Chain:
                         f'since {ru_date(restricted[0]["as_of"])}{self.ref(restricted[0].get("source_id"))}</p>')
         if g:
             rows.append(f'<p class="row">Linked to ЦБСТ{self.ref(tie.get("source_id"))}</p>')
+        prod_refs = self.media_refs()
+        own = [x for x in media_about(self.media, {("entity", m["slug"])}) if x.get("genre") != "logo"
+               and not any((a_["type"], a_["id"]) in prod_refs for a_ in x.get("about") or [])]
+        rows.append(self.strip(own, label=f"Published by {maker_left}"))
         self.top["B"].append(self.card("maker", "maker", "Maker", self.name(m), "".join(rows)))
 
         # C: product
@@ -300,7 +307,8 @@ class Chain:
             when = ", ".join(sorted({ru_date(li["as_of"]) for li in lis}))
             body = (f'<p class="row">{esc(lis[0]["channel"])}</p>'
                     f'<p class="row">Listed {when}{self.ref(*[li["source_id"] for li in lis])}</p>'
-                    + (self.sanctions(e) if e and ent != m["slug"] else ""))
+                    + (self.sanctions(e) if e and ent != m["slug"] else "")
+                    + self.strip(media_about(self.media, {("listing", li["id"]) for li in lis}), label="Pictures of this listing"))
             add_row(f"ch-{i}", ent, self.card(f"ch-{i}", "channel" if e else "storefront", "Sells", title, body),
                     "doc" if all(li.get("basis") == "doc" for li in lis) else "rep", "Listed")
 
@@ -384,7 +392,9 @@ class Chain:
             items = "".join(
                 f'<li><time>{ru_date(d["date"])}</time> <span lang="ru">{esc(d.get("recipient"))}</span>'
                 + (f' <span class="co">with {esc(", ".join(d["co_donors"]))}</span>' if d.get("co_donors") else "")
-                + f'{self.ref(d.get("source_id"), *(d.get("other_source_ids") or []))}</li>' for d in ds)
+                + f'{self.ref(d.get("source_id"), *(d.get("other_source_ids") or []))}'
+                + (self.strip(media_about(self.media, {("delivery", d["id"])}), label="") if d.get("id") else "")
+                + '</li>' for d in ds)
             self.rows[-1]["buyers"].append(self.card(
                 rid, "field", "Front-line recipients",
                 f'{len(ds)} handovers <small>{ru_date(ds[0]["date"])} – {ru_date(ds[-1]["date"])}</small>',
@@ -433,36 +443,54 @@ class Chain:
         return split_name(self.maker)[0]
 
     def thumb(self):
-        """The product card's picture: a self-published photo or screenshot of the product."""
-        cands = [m for m in media_about(self.media, self.media_refs())
-                 if m.get("asserted_by") == "self" and m.get("kind") in ("photo", "screenshot") and m.get("genre") == "marketing"]
-        for m in cands:
-            src = self.img(m)
-            if src:
-                return (f'<img class="rm-thumb" src="{esc(src)}" alt="{esc(m["shows"])}">'
-                        f'<p class="note">Picture: {esc(self.who(m))}{self.ref(m.get("source_id"))}</p>')
-        return ""
+        """The product card's picture (a self-published photo or screenshot of the product) and the
+        strip of its other pictures that are not tied to one listing or one handover."""
+        p = self.p
+        own = {("product", p["slug"])} | {("version", v["slug"]) for v in p.get("versions") or []}
+        ms = [m for m in media_about(self.media, own) if m.get("genre") != "logo"
+              and not any(a_["type"] in ("listing", "delivery") for a_ in m.get("about") or [])]
+        main = next((m for m in ms if m.get("asserted_by") == "self" and m.get("kind") in ("photo", "screenshot")
+                     and m.get("genre") == "marketing" and self.img(m)), None)
+        if main is None:   # fall back to a dealer's own product picture tied to a listing
+            main = next((m for m in media_about(self.media, own) if m.get("asserted_by") == "self"
+                         and m.get("genre") == "marketing" and m.get("kind") in ("photo", "screenshot") and self.img(m)), None)
+        out = ""
+        if main:
+            self.template(main)
+            out += (f'<button class="rm-thumb-main" type="button" data-fig="fig-{main["id"]}" aria-label="{esc(main["shows"])}">'
+                    f'<img class="rm-thumb" src="{esc(self.img(main))}" alt=""></button>'
+                    f'<p class="note">Picture: {esc(self.who(main))}{self.ref(main.get("source_id"))}</p>')
+        return out + self.strip([m for m in ms if m is not main], by_provenance=True)
 
-    def gallery(self):
-        ms = [m for m in media_about(self.media, self.media_refs()) if m.get("genre") != "logo"]
-        groups = [("Handovers, as published by the donor", lambda m: m.get("genre") == "handover"),
-                  ("Published by the maker and its dealers",
-                   lambda m: m["asserted_by"] in ("self", "platform") and m.get("genre") != "handover"),
-                  ("Posted by buyers and other third parties", lambda m: m["asserted_by"] in ("third_party", "counterparty")),
-                  ("Press", lambda m: m["asserted_by"] == "press")]
+    def template(self, m):
+        if m["id"] not in self.templates:
+            v = m.get("video")
+            note = (f"Video. Original on {v['original']}." + ("" if v.get("archived") else " Not archived.")) if v else ""
+            self.templates[m["id"]] = figure_html(m, self.img(m), self.who(m), self.ref(m.get("source_id")), note)
+
+    def strip(self, ms, label=None, by_provenance=False):
+        """Thumbnails for the pictures that support one card or one line; each opens its full figure."""
+        ms = [m for m in sorted(ms, key=lambda m: (m.get("published") or "", m["id"])) if self.img(m)]
+        if not ms:
+            return ""
+        groups = {}
+        for m in ms:
+            if label is not None:
+                key = label
+            elif by_provenance:
+                key = f"Published by {self.who(m)}" if m["asserted_by"] == "self" else PROV_GROUP.get(m["asserted_by"], "Pictures")
+            else:
+                key = "Pictures"
+            groups.setdefault(key, []).append(m)
         out = []
-        for title, keep in groups:
-            figs = []
-            for m in sorted((m for m in ms if keep(m)), key=lambda m: (m.get("published") or "", m["id"])):
-                src = self.img(m)
-                if not src:
-                    continue
-                v = m.get("video")
-                note = (f"Video. Original on {v['original']}." + ("" if v.get("archived") else " Not archived.")) if v else ""
-                figs.append(figure_html(m, src, self.who(m), self.ref(m.get("source_id")), note))
-            if figs:
-                dense = " dense" if title.startswith("Handovers") else ""
-                out.append(f'<h3 class="rm-label gal-h">{esc(title)}</h3><div class="rm-gallery{dense}">{"".join(figs)}</div>')
+        for key, grp in groups.items():
+            btns = []
+            for m in grp:
+                self.template(m)
+                btns.append(f'<button class="rm-thumb-btn" type="button" data-fig="fig-{m["id"]}" '
+                            f'aria-label="{esc(m["shows"])}"><img src="{esc(self.img(m))}" alt=""></button>')
+            lbl = f'<span class="lbl">{esc(key)} ({len(grp)})</span>' if key else ""
+            out.append(f'<div class="rm-thumbs">{lbl}{"".join(btns)}</div>')
         return "".join(out)
 
     def timeline(self, ds):
@@ -510,7 +538,6 @@ def render(ch, out):
                   for c, t in (("A", "ЦБСТ and its events"), ("B", "Maker"), ("C", "Product")))
     rows = "".join(f'<div class="crow"><div class="cell">{r["card"]}</div><div class="cell buyers">{"".join(r["buyers"])}</div></div>'
                    for r in ch.rows)
-    gal = ch.gallery()
     limits = "".join(f"<li>{x}</li>" for x in dict.fromkeys(ch.limits))
     doc = f"""<!doctype html>
 <!-- Generated by exhibits/build_chain_view.py {esc(p['slug'])} from data/registry on {dt.date.today().isoformat()}. Do not edit by hand. -->
@@ -529,6 +556,7 @@ def render(ch, out):
     <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="rm-ln rep"/></svg> Reported: the party's own word or the press</li>
     <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="rm-ln open"/></svg> Not documented</li>
     <li>Numbers refer to the sources at the end.</li>
+    <li>Select a picture to see it full size with its source.</li>
   </ul>
 </header>
 <main class="rm-page">
@@ -540,12 +568,13 @@ def render(ch, out):
       {rows}
     </section>
   </div>
-  {f'<section class="pics"><h2 class="rm-h2">Pictures on file</h2><p class="method">Each picture is evidence only for what its caption says is visible. Faces of people not named in this investigation are blurred.</p>{gal}</section>' if gal else ''}
   <section class="prose rm-prose"><h2 class="rm-h2">What this does not show</h2><ul>{limits}</ul>
   <p class="method">Every company, listing, contract and handover here comes from an archived document. Listings
   and handovers are as of the dates shown; {n_list} listings and {n_del} handovers are on file.</p></section>
   <section class="prose rm-prose rm-sources"><h2 class="rm-h2">Sources</h2><ol>{ch.notes_list()}</ol></section>
 </main>
+{''.join(f'<template id="fig-{k}">{v}</template>' for k, v in ch.templates.items())}
+<dialog class="rm-lightbox" id="lightbox" aria-label="Picture"><div class="bar"><button type="button" data-close>Close</button></div><div class="body"></div></dialog>
 <script>const EDGES={json.dumps(ch.edges, ensure_ascii=False)};
 {(REPO / 'exhibits' / 'chain_view.js').read_text()}</script>
 </body></html>

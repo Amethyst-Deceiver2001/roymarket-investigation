@@ -99,7 +99,7 @@ media files mostly not linked to a record, and no video file at all.
    (ok, excerpt-only, internal) and `redact`. `check_registry.py` validates
    the record.
 2. **Backfill** (partly done 2026-10-02): 58 media records written, each image
-   looked at before its blur flag was set, and three faces blurred in
+   looked at before its blur flag was set; three faces were blurred in
    `docs/images/`. Not migrated: 7 images with no archived original (see
    `notes/media_backfill_20261002.md`). Still open: linking the 76 orphaned
    Telegram media files, and frame timestamps for 13 stills.
@@ -118,8 +118,8 @@ media files mostly not linked to a record, and no video file at all.
    «Таир» wrist unit). The 20 Наша Правда handover photos
    from 14 of the 16 delivery posts were pulled 02.10.2026 (posts 397 and 454
    have none in their public preview) and added as their own group. Every
-   clear face is blurred in the publish copies under `exhibits/images/media/`,
-   because no one in frame can be matched to a person record without guessing.
+   face of someone involved is shown (corrected rule); no one is named from a
+   face.
    Still missing: a view of Тримикс's facility, which needs a documented
    address first. The «Крылья
    Победы» seller lead is recorded in the product's open questions.
@@ -128,7 +128,11 @@ Decisions (user, 2026-10-02):
 - **Video:** key frames plus a link to the original now, with full originals
   archived privately. Self-hosted short clips come later. No embedded platform
   players.
-- **Faces:** blurred by default in handover, training and recruitment imagery.
+- **Faces (corrected 02.10.2026):** everyone involved is a person of interest
+  and is shown, record or not: soldiers receiving equipment, donors, staff,
+  course participants. Only clearly uninvolved bystanders are blurred. Nobody
+  is named from a face. (The first reading, blur everyone without a person
+  record, was wrong and has been reversed in the images.)
   A face is shown only for a person with a person record (a person of
   interest).
 - **Facility imagery:** Google Earth and Yandex Maps screenshots for now, each

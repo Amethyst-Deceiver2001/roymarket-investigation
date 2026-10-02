@@ -818,8 +818,9 @@ def main() -> int:
     if no_frame:
         warnings.append(f"media: {len(no_frame)} still(s) without frame.t, their timestamp in the video: {', '.join(no_frame)}")
     if blur_pending:
-        warnings.append(f"media: {len(blur_pending)} record(s) show faces of people without a record and are not yet "
-                        f"blurred (redact: blurred or none_needed before publishing): {', '.join(blur_pending)}")
+        warnings.append(f"media: {len(blur_pending)} record(s) where people may be visible have not been checked by eye "
+                        f"(set redact: none_needed if everyone is involved, blurred once an uninvolved bystander is "
+                        f"blurred): {', '.join(blur_pending)}")
 
     # --- 6. history arrays -------------------------------------------------
     HISTORY_KEYS = ["director_history", "charter_capital_history",

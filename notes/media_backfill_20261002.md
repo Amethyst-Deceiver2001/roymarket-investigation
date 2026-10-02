@@ -47,3 +47,16 @@ These images were not migrated, because a media record needs the source the pict
 Faces: in 9 photos every clear face was blurred in the publish copy (`exhibits/images/media/<id>.jpg`, recorded as the record's `file`); the originals in `data/sources/` are untouched. In the other 11, faces are covered, turned away or already blurred by the foundation, checked by eye. The foundation has 17 people on file but none with a photo, so nobody in frame was identified. Matching a face to a record is not done without a reference image or a caption naming the person.
 
 Aside: people.json holds both `brovchenko-sergey-rufinovich` and `sergey-rufinovich-brovchenko`, both `brovchenko-aleksandr-rufinovich` and `aleksandr-rufinovich-brovchenko`, and both `karabinskiy-ivan-igorevich` and `ivan-igorevich-karabinskiy`. These look like duplicate pairs to merge (not done here).
+
+## Correction: faces of the involved are shown (user, 02.10.2026)
+
+The first face rule (blur everyone without a person record) misread the 2026-10-02 PII amendment: everyone involved is a person of interest, record or not. Reversed the same day:
+- the 9 handover photos use their untouched originals again;
+- the three `docs/images/` files (Барашков, the Гагаринг graduate, «Радистка») were restored from the archived originals, after checking that each matches the pre-blur file by hash;
+- all 12 records are now `redact: none_needed`, with a note.
+
+Only a clearly uninvolved bystander is blurred. Nobody is named from a face.
+
+## Layout: pictures sit on the card they support
+
+The chain view no longer has a gallery below the chain. The product card holds its main picture and a strip of its other pictures, grouped by publisher. A seller card holds its own listing's pictures. Each handover line on the recipients card holds that handover's photos, and the maker card holds the maker's own media. A thumbnail opens the full evidence figure with its caption, provenance, date and footnote.

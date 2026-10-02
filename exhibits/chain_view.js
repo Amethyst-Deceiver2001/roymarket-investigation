@@ -102,3 +102,22 @@
   document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', draw));
   draw();
 })();
+
+// Picture viewer: a thumbnail opens its full evidence figure (caption, provenance, date, footnote).
+(() => {
+  const box = document.getElementById('lightbox');
+  if (!box) return;
+  const body = box.querySelector('.body');
+  document.addEventListener('click', ev => {
+    const btn = ev.target.closest('[data-fig]');
+    if (btn) {
+      const tpl = document.getElementById(btn.dataset.fig);
+      if (!tpl) return;
+      body.replaceChildren(tpl.content.cloneNode(true));
+      box.showModal();
+      return;
+    }
+    if (ev.target.closest('[data-close]') || ev.target === box) box.close();
+    else if (box.open && ev.target.closest('.rm-lightbox a[href^="#"]')) box.close();
+  });
+})();

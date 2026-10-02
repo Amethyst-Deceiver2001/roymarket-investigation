@@ -424,10 +424,10 @@ One record per photo, video, still, satellite or street-level view, screenshot, 
 Rules (user, 2026-10-02):
 - **No source, no record.** A picture enters only with the `source_id` of where the picture itself came from, not the document that gives an address.
 - **Video:** key frames plus a link to the original, with the original archived and hashed. A still records `frame.t`, its timestamp in the video. Self-hosted clips come later; there are no embedded platform players.
-- **Faces:** a face of anyone without a person record is blurred in the publish copy (`redact: blurred`), and the unblurred original stays in `data/sources/`. Look at the picture before setting `redact`; never set `none_needed` from a caption.
+- **Faces (corrected by the user 02.10.2026):** everyone involved is a person of interest, with or without a record: recipients (soldiers receiving equipment), donors, carriers, staff, course participants and recruiters. Their faces are shown. Blur only someone clearly uninvolved: a passer-by, a child, a person who happens to be in frame (`redact: blurred` in the publish copy; the original stays in `data/sources/`). A face is never used to name anyone: captions describe ("servicemen receiving…") unless a source names the person. Faces the publisher blurred stay blurred. Look at the picture before setting `redact`; never set it from a caption.
 - **Facility views:** Google Earth or Yandex Maps screenshots for now. Record `imagery.provider` and `imagery.date`, and a `geo` whose `method` names how the place was found (`register_address` or `source_stated` needs the document's `source_id`).
 - **Graphic content (proposed default):** stills only, a content warning, nothing showing casualties. Combat imagery needs `graphic` set.
-- **`docs/images/` is public.** Pages serves it, so blur before a file lands there. An image with no archived original must not be added there.
+- **`docs/images/` is public.** Pages serves it, so blur any uninvolved bystander before a file lands there. An image with no archived original must not be added there.
 
 Deliveries now carry stable ids (`bulat-d01`…) so media can point at them. `check_registry.py` validates the record. Backfill state and gaps: `notes/media_backfill_20261002.md`.
 

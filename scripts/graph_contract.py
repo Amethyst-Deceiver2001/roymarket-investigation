@@ -98,7 +98,7 @@ MEDIA_PUBLISH = {"ok", "excerpt", "internal"}        # excerpt: a maker's market
 MEDIA_ABOUT_TYPES = {"entity", "person", "product", "version", "delivery", "listing", "unit", "program"}
 MEDIA_GEO_PRECISION = {"exact", "building", "street", "town"}
 MEDIA_GEO_METHOD = {"register_address", "source_stated", "geolocated"}   # register_address: ЕГРЮЛ/ЕГРИП, geocoded
-MEDIA_REDACT = {"none_needed", "blur_pending", "blurred"}               # faces/plates of people without a record
+MEDIA_REDACT = {"none_needed", "blur_pending", "blurred"}   # blur only clearly uninvolved bystanders; the involved are shown
 MEDIA_REDACT_GENRES = {"handover", "training", "recruitment", "production", "event", "combat", "portrait"}
 DETAIL_KEYS = {"products", "status", "asserted_by", "credibility", "authorised", "open", "role"}
 # the coarse basis must not contradict the finer credibility
