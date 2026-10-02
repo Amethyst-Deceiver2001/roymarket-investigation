@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Refresh the embedded graph data in docs/relationship-graph.html in place.
+"""RETIRED 02.10.2026 with the public graph explorer (user); kept for reference, do not run.
+
+Refresh the embedded graph data in docs/relationship-graph.html in place.
 
 docs/relationship-graph.html (the live, hand-built D3 force-graph explorer)
 is NOT otherwise generated -- every prior "refresh graph exhibit data"

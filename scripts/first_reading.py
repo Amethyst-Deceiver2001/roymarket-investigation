@@ -251,8 +251,12 @@ def read_egrul(text: str, e: dict | None) -> tuple[list[str], list[str]]:
         s = section_text(text, start, ends)
         if s:
             secs.append(f"**{label}** (verbatim):\n```\n{s}\n```")
-    if "Сведения о прекращении" in text or re.search(r"ликвидац|исключени|недействующ", text, re.I):
-        hits = lines_with(text, "ликвидац", "исключени", "недействующ", "прекращ")[:6]
+    # «за исключением» ("except for") is boilerplate in licence and activity text, not a status:
+    # only exclusion *from the register*, liquidation, termination or "недействующ" count.
+    status_re = re.compile(r"ликвидац|исключени\w*\s+(?:юридического лица\s+|индивидуального\s+"
+                           r"предпринимателя\s+)?из\s+ЕГР|недействующ|Сведения о прекращении", re.I)
+    hits = [ln.strip() for ln in text.splitlines() if status_re.search(ln)][:6]
+    if hits:
         diffs.append("Status: the extract mentions liquidation, exclusion or termination: " + " | ".join(hits))
     return diffs, secs
 
@@ -277,7 +281,14 @@ def read_bfo(text: str, e: dict | None, year: str) -> tuple[list[str], list[str]
                 diffs.append(f"{year} {rk}: filing {v:,.0f} ₽, registry {r:,.0f} ₽ (a correction filing?)")
     if got.get("funds_identity_check"):
         diffs.append("Non-profit funds identity: " + got["funds_identity_check"])
-    if any(k.startswith("funds_") for k in fig):
+    funds = {k: v for k, v in fig.items() if k.startswith("funds_") and isinstance(v, (int, float)) and v}
+    trading = any(isinstance(fig.get(k), (int, float)) and fig[k] for k in ("revenue", "net_profit"))
+    if funds and trading:
+        # A commercial filing with a targeted-funds report (ОКУД 0710003): earmarked money such as a grant or
+        # subsidy, booked apart from revenue. Who paid it is the lead.
+        diffs.append("Targeted funds in a commercial filing (earmarked money, e.g. a grant or subsidy; not revenue): "
+                     + ", ".join(f"{k} {v:,.0f} ₽" for k, v in funds.items()) + ". Find out who paid it.")
+    elif funds:
         diffs.append("Non-profit filing: funds_* are not revenue")
     m = re.search(r"[Сс]реднесписочная численность[^\n]*?(\d[\d\s]*)\s*(?:чел|$)", text)
     if m:

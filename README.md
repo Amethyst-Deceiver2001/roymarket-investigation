@@ -21,8 +21,8 @@ sanctions-lobbying reference document.
 ## Layout
 
 ```
-docs/                      GitHub Pages: holding landing page, relationship-graph.html, images/ (2026-10-02: old case
-                           and profile pages withdrawn to exhibits/archive/site_2026-10-02/ pending the redesign)
+docs/                      GitHub Pages: landing page and images/ (2026-10-02: old case and profile pages and the
+                           graph explorer withdrawn to exhibits/archive/site_2026-10-02/ pending the redesign)
 notes/archive/brief_snapshot_2026-08-21.html   frozen snapshot of the old brief (internal; extract_registry.py reads it)
 scripts/archive/           retired generators (case pages, company/person/product profiles, profile index) and templates
 data/sources/              primary-source EGRUL/БФО/press/court docs (gitignored, ~566MB)

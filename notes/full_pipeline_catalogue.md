@@ -171,7 +171,7 @@ what looks new instead, the same discipline as `_scaffold_leads.json`.
 | `check_tag_balance.py` | HTML tag-balance check before publish | local |
 | `build_relationship_graph.py` | Nodes/edges from ownership/directorship/founding/role/product fields; excludes tombstones and writes cited/current/core/evidence-gap derived views | local |
 | `graph_quality_report.py` | Deterministic relationship-graph baseline (schema, parity, citation, temporal, stub, and view counts) | local |
-| `refresh_graph_page_data.py` | Re-embeds current `relationship_graph.json` into `docs/relationship-graph.html`'s `graph-data` script block (the live D3 force-graph page; replaces the superseded `build_graph_explorer.py`, removed 2026-09-21) | local |
+| `archive/refresh_graph_page_data.py` | **Retired 02.10.2026 with the explorer.** Re-embedded current `relationship_graph.json` into `docs/relationship-graph.html`'s `graph-data` script block (the live D3 force-graph page; replaces the superseded `build_graph_explorer.py`, removed 2026-09-21) | local |
 
 **Blocked/parked, for completeness**: `kad.arbitr.ru` (DDoS-Guard, no
 scripting route — manual browser search only), `leader-id.ru` (session
