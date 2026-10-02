@@ -54,6 +54,18 @@ ROLE_EN = {"exhibitor": "Showed «{p}» at the event", "resident": "Resident", "
            "co-organiser": "Co-organised by", "organiser": "Organised by"}
 
 
+
+def recipient_html(text: str | None) -> str:
+    """The donor's wording in guillemets (STYLE_GUIDE §5.1: never let «спецоперация» and the like
+    read as our own words); our English note after it, outside the quote."""
+    text = (text or "").strip()
+    m = re.match(r"^(.*?)(\s*[(;]\s*[A-Za-z].*)?$", text)
+    words, note = (m.group(1).strip(), (m.group(2) or "").strip()) if m else (text, "")
+    if not words:
+        return esc(text)
+    words = re.sub(r"«([^«»]*)»", "„\\1“", words)  # inner quotes: Russian „…“ inside «…»
+    return f'<span lang="ru">«{esc(words)}»</span>' + (f" {esc(note)}" if note else "")
+
 def load(name):
     d = json.loads((REG / name).read_text())
     if isinstance(d, dict):
@@ -392,7 +404,7 @@ class Chain:
                 self.edge("product", cid, "open", "How the donor obtained it is not documented", bus=True)
             rid = f"rec-{len(self.rows)}"
             items = "".join(
-                f'<li><time>{ru_date(d["date"])}</time> <span lang="ru">{esc(d.get("recipient"))}</span>'
+                f'<li><time>{ru_date(d["date"])}</time> {recipient_html(d.get("recipient"))}'
                 + (f' <span class="co">with {esc(", ".join(d["co_donors"]))}</span>' if d.get("co_donors") else "")
                 + f'{self.ref(d.get("source_id"), *(d.get("other_source_ids") or []))}'
                 + (self.strip(media_about(self.media, {("delivery", d["id"])}), label="") if d.get("id") else "")
@@ -400,7 +412,7 @@ class Chain:
             self.rows[-1]["buyers"].append(self.card(
                 rid, "field", "Recipients",
                 f'{len(ds)} handovers <small>{ru_date(ds[0]["date"])} – {ru_date(ds[-1]["date"])}</small>',
-                f'<p class="note">As reported by the donor on its own Telegram channel.</p>'
+                f'<p class="note">As reported by the donor on its own Telegram channel; recipients in «» are the donor\'s own words.</p>'
                 + self.timeline(ds) + f'<ul class="rec">{items}</ul>'))
             self.edge(cid, rid, "rep", "Reported by the donor")
             dname = split_name(e)[0] if e else slug
@@ -519,7 +531,7 @@ class Chain:
         for d, dd in zip(ds, dates):
             hub = "ЦБСТ" in (d.get("co_donors") or [])
             out.append(f'<circle cx="{x(dd):.1f}" cy="18" r="{6 if hub else 4.5}" class="dot{" hub" if hub else ""}">'
-                       f'<title>{ru_date(d["date"])}: {esc(d.get("recipient"))}</title></circle>')
+                       f'<title>{ru_date(d["date"])}: {re.sub("<[^>]+>", "", recipient_html(d.get("recipient")))}</title></circle>')
         out.append("</svg>")
         if any("ЦБСТ" in (d.get("co_donors") or []) for d in ds):
             out.append('<p class="note"><span class="dot-key"></span>ЦБСТ named as a co-donor</p>')

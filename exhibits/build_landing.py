@@ -224,7 +224,7 @@ def render(preview: bool, out: Path):
     <ul class="rm-legend">
       <li>{ln("doc", 34)} <span class="rm-grade doc">Documented</span> <span>A primary document shows it: a register extract, a state contract, an annual filing, a trademark or patent record.</span></li>
       <li>{ln("rep", 34)} <span class="rm-grade rep">Reported</span> <span>One party's own word (its posts, its website, its listings), or the press. Donors' handover posts are graded here until a second source confirms them.</span></li>
-      <li>{ln("open", 34)} <span class="rm-grade open">Not documented</span> <span>The link must exist, but no document on file shows it.</span></li>
+      <li>{ln("open", 34)} <span class="rm-grade open">Not documented</span> <span>Drawn to complete the picture, but no document on file shows it. The line's own note says what is missing.</span></li>
     </ul>
     <p>Red marks only a sanctions listing, and always names the regimes. Names appear as registered, in Russian; a
     company known by its brand is shown by the brand, with the registered name beneath it.</p>
