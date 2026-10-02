@@ -413,6 +413,24 @@ One record per product with a stable slug, so a product sold by several dealers 
 - **In the graph (schema v11):** a product record is one `product` node (`product::<maker>::<slug>`), and the maker's own per-version `products[]` leaves that it covers are not drawn separately. Each distinct storefront in `listings[]` is a `storefront` node (no legal identity), linked `lists` to the product (the latest listing per storefront, label = channel) and `operated_by` to its seller entity only when the listing names one; a dealer with no registry entity stays a storefront. Entity nodes carry `product_count` for a count badge and expand-on-click in a viewer (the viewer is outside the repo). `clone_of` (`{product, status: alleged|shown|denied, asserted_by, source_id}`) is validated but unused: a product is a clone only where a cited source says so, never because it competes in the same class (the «QD-HD-003» and «Сокол» manuals in the 3mx chat are competing devices per the registry's own read, not clones of «Булат»).
 - `python3 scripts/product_chain.py bulat` prints the chain (maker, versions, listings with their basis and source, deliveries, open questions). 
 
+## Media (`data/registry/media.json`, track V, added 2026-10-02 at user direction)
+
+One record per photo, video, still, satellite or street-level view, screenshot, scan or graphic. It is hand-maintained like `programs.json` and not drawn on the graph. Its fields:
+- `about[]` lists every record the picture shows (entity, person, product, version, delivery, listing, unit, program). One handover photo is one record, not three copies.
+- `shows` says what is visible, written by someone who looked at it.
+- `asserted_by` says who published it. It is shown on pages as provenance ("the maker's own video"). `third_party` covers customer uploads.
+- `publish` is `ok`, `excerpt` (a maker's marketing, used in part for reporting) or `internal`.
+
+Rules (user, 2026-10-02):
+- **No source, no record.** A picture enters only with the `source_id` of where the picture itself came from, not the document that gives an address.
+- **Video:** key frames plus a link to the original, with the original archived and hashed. A still records `frame.t`, its timestamp in the video. Self-hosted clips come later; there are no embedded platform players.
+- **Faces:** a face of anyone without a person record is blurred in the publish copy (`redact: blurred`), and the unblurred original stays in `data/sources/`. Look at the picture before setting `redact`; never set `none_needed` from a caption.
+- **Facility views:** Google Earth or Yandex Maps screenshots for now. Record `imagery.provider` and `imagery.date`, and a `geo` whose `method` names how the place was found (`register_address` or `source_stated` needs the document's `source_id`).
+- **Graphic content (proposed default):** stills only, a content warning, nothing showing casualties. Combat imagery needs `graphic` set.
+- **`docs/images/` is public.** Pages serves it, so blur before a file lands there. An image with no archived original must not be added there.
+
+Deliveries now carry stable ids (`bulat-d01`…) so media can point at them. `check_registry.py` validates the record. Backfill state and gaps: `notes/media_backfill_20261002.md`.
+
 ## Programs, events and groups (schema v8, added 2026-10-01 at user direction)
 
 Residencies, accelerators, the national БАС project, recurring events and same-brand clusters are modelled as records in `data/registry/programs.json` (hand-maintained, like `military_units.json`), not as entity-to-entity edges.

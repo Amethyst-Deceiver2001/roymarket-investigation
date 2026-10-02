@@ -48,7 +48,8 @@ from reverse_source_index import build_index  # noqa: E402
 from graph_contract import (validate_graph, validate_views, SELLS_FOR_BASIS, SALE_STATUSES, ASSERTED_BY,
                             CREDIBILITY, AUTHORISED, BASIS_CREDIBILITY, RELATION_ROLES, PARTNER_KIND_EDGE,  # noqa: E402
                             ECOSYSTEM_ROLES, LEGAL_ENTITY_STATUS, PROGRAM_KINDS, PROGRAM_SUBTYPES,
-                            MEMBERSHIP_ROLES)
+                            MEMBERSHIP_ROLES, MEDIA_KINDS, MEDIA_GENRES, MEDIA_PUBLISH, MEDIA_ABOUT_TYPES,
+                            MEDIA_GEO_PRECISION, MEDIA_GEO_METHOD, MEDIA_REDACT, MEDIA_REDACT_GENRES, MEDIA_ASSERTED_BY)
 from build_relationship_graph import build_graph, build_views  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
@@ -733,6 +734,88 @@ def main() -> int:
         for j, c_ in enumerate(pr.get("claims") or []):
             if not c_.get("text_ru") or c_.get("source_id") not in source_ids or not date_re.fullmatch(str(c_.get("as_of") or "")):
                 errors.append(f"{where}.claims[{j}] needs text_ru, a known source_id and an as_of date")
+
+    # --- media (data/registry/media.json, track V, added 2026-10-02) -----------
+    # One record per picture, video, still or imagery view; `about` lists every record it shows, so one
+    # handover photo is not copied onto the donor, the product and the unit. Not drawn on the graph.
+    delivery_ids, all_listing_ids, version_slugs = set(), set(), set()
+    for pr in products:
+        version_slugs |= {v.get("slug") for v in pr.get("versions") or []}
+        all_listing_ids |= {l_.get("id") for l_ in pr.get("listings") or []}
+        for j, d in enumerate(pr.get("deliveries") or []):
+            did = d.get("id")
+            if did is not None and (did in delivery_ids or not re.fullmatch(r"[a-z0-9-]+-d\d{2,3}", str(did))):
+                errors.append(f"products[{pr.get('slug')}].deliveries[{j}].id {did!r} must be unique, like 'bulat-d01'")
+            delivery_ids.add(did)
+    media_path = REG / "media.json"
+    media = json.loads(media_path.read_text(encoding="utf-8")) if media_path.exists() else []
+    units_path = REG / "military_units.json"
+    unit_slugs = {u.get("slug") for u in (json.loads(units_path.read_text(encoding="utf-8")) if units_path.exists() else [])}
+    about_ids = {"entity": live_slugs, "person": people_slugs, "product": seen_products, "version": version_slugs,
+                 "delivery": delivery_ids - {None}, "listing": all_listing_ids - {None}, "unit": unit_slugs,
+                 "program": {r.get("slug") for r in programs}}
+    seen_media, no_frame, blur_pending = set(), [], []
+    for i, m in enumerate(media):
+        mid = m.get("id")
+        where = f"media[{mid or i}]"
+        if not re.fullmatch(r"m\d{4}", str(mid)) or mid in seen_media:
+            errors.append(f"{where}.id must be unique, like 'm0001'")
+        seen_media.add(mid)
+        for key, vocab in (("kind", MEDIA_KINDS), ("genre", MEDIA_GENRES), ("publish", MEDIA_PUBLISH),
+                           ("asserted_by", MEDIA_ASSERTED_BY)):
+            if m.get(key) not in vocab:
+                errors.append(f"{where}.{key} {m.get(key)!r} must be one of {sorted(vocab)}")
+        if not (m.get("shows") or "").strip():
+            errors.append(f"{where}.shows is required: what is visible, written by someone who looked")
+        if m.get("source_id") not in source_ids:
+            errors.append(f"{where}.source_id {m.get('source_id')!r} must be a known source")
+        about = m.get("about") or []
+        if not about:
+            errors.append(f"{where}.about must name at least one record the picture shows")
+        for a_ in about:
+            if a_.get("type") not in MEDIA_ABOUT_TYPES or a_.get("id") not in about_ids.get(a_.get("type"), ()):
+                errors.append(f"{where}.about {a_!r} does not resolve to a registry record")
+        for key in ("published", "captured"):
+            if m.get(key) is not None and not date_re.fullmatch(str(m[key])):
+                errors.append(f"{where}.{key} must be YYYY-MM-DD or null")
+        f = m.get("file")
+        if f and not (REPO / f).exists():
+            errors.append(f"{where}.file {f!r} does not exist")
+        if m.get("publish") in ("ok", "excerpt") and not (f or "").startswith(("docs/images/", "exhibits/images/")):
+            warnings.append(f"{where}: publishable but no publish-ready copy under docs/images/ or exhibits/images/")
+        if m.get("kind") == "still":
+            fr = m.get("frame") or {}
+            if not re.fullmatch(r"\d{1,2}:\d{2}(:\d{2})?", str(fr.get("t") or "")):
+                no_frame.append(mid)
+        if m.get("kind") in ("satellite", "street-level"):
+            im = m.get("imagery") or {}
+            if not im.get("provider") or not re.fullmatch(r"\d{4}(-\d{2}(-\d{2})?)?", str(im.get("date") or "")):
+                errors.append(f"{where}.imagery needs provider and date (YYYY, YYYY-MM or YYYY-MM-DD)")
+            if not m.get("geo"):
+                errors.append(f"{where}: a {m['kind']} view needs geo")
+        g = m.get("geo")
+        if g is not None:
+            try:
+                ok_ll = -90 <= float(g.get("lat")) <= 90 and -180 <= float(g.get("lon")) <= 180
+            except (TypeError, ValueError):
+                ok_ll = False
+            if not ok_ll or g.get("precision") not in MEDIA_GEO_PRECISION or g.get("method") not in MEDIA_GEO_METHOD:
+                errors.append(f"{where}.geo needs lat, lon, precision {sorted(MEDIA_GEO_PRECISION)} "
+                              f"and method {sorted(MEDIA_GEO_METHOD)}")
+            elif g["method"] in ("register_address", "source_stated") and g.get("source_id") not in source_ids:
+                errors.append(f"{where}.geo.source_id must name the document that gives the address or place")
+        if m.get("redact") is not None and m["redact"] not in MEDIA_REDACT:
+            errors.append(f"{where}.redact must be one of {sorted(MEDIA_REDACT)}")
+        if m.get("genre") in MEDIA_REDACT_GENRES and m.get("publish") != "internal" \
+                and m.get("redact") not in ("none_needed", "blurred"):
+            blur_pending.append(mid)
+        if m.get("genre") == "combat" and m.get("publish") != "internal" and m.get("graphic") is None:
+            warnings.append(f"{where}: combat imagery needs graphic: true/false before it is published")
+    if no_frame:
+        warnings.append(f"media: {len(no_frame)} still(s) without frame.t, their timestamp in the video: {', '.join(no_frame)}")
+    if blur_pending:
+        warnings.append(f"media: {len(blur_pending)} record(s) show faces of people without a record and are not yet "
+                        f"blurred (redact: blurred or none_needed before publishing): {', '.join(blur_pending)}")
 
     # --- 6. history arrays -------------------------------------------------
     HISTORY_KEYS = ["director_history", "charter_capital_history",

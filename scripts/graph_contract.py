@@ -86,6 +86,19 @@ ASSERTED_BY = {"self", "counterparty", "platform", "regulator", "press", "invest
 CREDIBILITY = {"doc", "corroborated", "single", "inferred"}
 AUTHORISED = {"yes", "no", "unknown", "n/a"}
 RELATION_ROLES = {"manufacturer", "seller_of_record", "licensed_dealer", "distributor"}
+
+# Media records (data/registry/media.json, track V, 2026-10-02). Not drawn on the graph; validated by
+# check_registry.py. A picture is evidence only for what `shows` says someone saw in it.
+MEDIA_KINDS = {"photo", "video", "still", "satellite", "street-level", "screenshot", "scan", "graphic"}
+MEDIA_GENRES = {"marketing", "field_test", "combat", "facility", "production", "training", "recruitment",
+                "event", "handover", "interview", "portrait", "logo", "document"}
+MEDIA_ASSERTED_BY = ASSERTED_BY | {"third_party"}   # third_party: e.g. a customer's upload on a map service
+MEDIA_PUBLISH = {"ok", "excerpt", "internal"}        # excerpt: a maker's marketing, used in part for reporting
+MEDIA_ABOUT_TYPES = {"entity", "person", "product", "version", "delivery", "listing", "unit", "program"}
+MEDIA_GEO_PRECISION = {"exact", "building", "street", "town"}
+MEDIA_GEO_METHOD = {"register_address", "source_stated", "geolocated"}   # register_address: ЕГРЮЛ/ЕГРИП, geocoded
+MEDIA_REDACT = {"none_needed", "blur_pending", "blurred"}               # faces/plates of people without a record
+MEDIA_REDACT_GENRES = {"handover", "training", "recruitment", "production", "event", "combat", "portrait"}
 DETAIL_KEYS = {"products", "status", "asserted_by", "credibility", "authorised", "open", "role"}
 # the coarse basis must not contradict the finer credibility
 BASIS_CREDIBILITY = {"doc": {"doc", "corroborated", "single"}, "press": {"corroborated", "single"},

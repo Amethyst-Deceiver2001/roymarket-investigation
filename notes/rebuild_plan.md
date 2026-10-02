@@ -88,7 +88,9 @@ supports or whether it may be published. On file: 63 entity images (25 of them
 logos), 17 battlefield entries (2 with an image), 28 person photos, 76 Telegram
 media files mostly not linked to a record, and no video file at all.
 
-1. **Model.** A `media[]` record on entities, products, deliveries and units:
+1. **Model** (done 2026-10-02, as a central `data/registry/media.json` with an
+   `about[]` list rather than an array per record, because one picture shows
+   several records). Fields:
    `kind` (photo, video, still, satellite, street-level, screenshot, scan),
    `genre` (marketing, field_test, combat, facility, training, event,
    handover, portrait, logo), `shows`, `supports`, `asserted_by`, `published`
@@ -96,8 +98,11 @@ media files mostly not linked to a record, and no video file at all.
    timestamp in the video), `geo` (`{lat, lon, precision, method}`), `publish`
    (ok, excerpt-only, internal) and `redact`. `check_registry.py` validates
    the record.
-2. **Backfill.** Classify the 63 images and 17 battlefield entries, and link the
-   orphaned Telegram media.
+2. **Backfill** (partly done 2026-10-02): 58 media records written, each image
+   looked at before its blur flag was set, and three faces blurred in
+   `docs/images/`. Not migrated: 7 images with no archived original (see
+   `notes/media_backfill_20261002.md`). Still open: linking the 76 orphaned
+   Telegram media files, and frame timestamps for 13 stills.
 3. **Capture.** `tg_media_pull` already covers Telegram. A downloader for
    YouTube, Rutube and VK is a live job the user runs. Originals are archived
    in `data/sources/` and hashed (Berkeley Protocol chain of custody).
