@@ -25,7 +25,8 @@ from graph_contract import source_grade  # noqa: E402
 
 MPTM, NP, PSB, SIDYAKIN = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb", "aleksandr-sidyakin"
 # One entry per published chain view: product slug -> private preview Artifact (until the public cutoff).
-CHAINS = {"bulat": "https://claude.ai/artifact/6UaTv2jSwdNdfNUCibCwrf"}
+CHAINS = {"bulat": "https://claude.ai/artifact/6UaTv2jSwdNdfNUCibCwrf",
+          "kapyushon": "https://claude.ai/artifact/5iYx5RsGmTRrAeooi8wdPd"}
 
 
 def ln(grade, w=56):

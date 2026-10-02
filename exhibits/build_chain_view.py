@@ -87,9 +87,9 @@ def cap(s):
 
 
 def split_name(e):
-    """'АНО «ЦБСТ» | Centre for …' -> ('АНО «ЦБСТ»', 'Centre for …')."""
-    parts = (e.get("name_ru") or "").split(" | ", 1)
-    return parts[0], (parts[1] if len(parts) > 1 else "")
+    """'АНО «ЦБСТ» | Centre for …' -> ('АНО «ЦБСТ»', 'Centre for …'). Our own bracketed notes are dropped."""
+    n = display_name(e)
+    return n["legal"] or n["head"] if not n["legal"] else n["legal"], n["gloss"]
 
 
 def describe_source(s):
@@ -246,16 +246,20 @@ class Chain:
                         f'since {ru_date(restricted[0]["as_of"])}{self.ref(restricted[0].get("source_id"))}</p>')
         if g:
             rows.append(f'<p class="row">Linked to ЦБСТ{self.ref(tie.get("source_id"))}</p>')
+        if m.get("inn"):   # the identifier tells namesakes apart (two Липецк ООО НПО «Киловатт»)
+            rows.append(f'<p class="row"><span class="rm-id">ИНН {esc(m["inn"])}</span></p>')
         self.top["B"].append(self.card("maker", "maker", "Maker", self.name(m), "".join(rows), slug=m["slug"]))
 
         # C: product
-        vers = ", ".join(esc(v["name_ru"]) for v in p.get("versions") or [])
+        # model names without the repeated product name: «Капюшон» К-8М -> К-8М
+        vlist = [re.sub(r"^" + re.escape(self.pq) + r"\s*", "", v["name_ru"]) or v["name_ru"] for v in p.get("versions") or []]
+        vers = (f"{len(vlist)} models: " if len(vlist) > 5 else "Versions: ") + ", ".join(esc(v) for v in vlist)
         acc = len(p.get("accessories") or [])
         vsrc = [v.get("source_id") for v in p.get("versions") or []]
         self.top["C"].append(self.card(
             "product", "product", "Product", esc(self.pq),
             self.thumb() + f'<p class="row">{esc(cap(p.get("category")))}</p>'
-            f'<p class="row">Versions: {vers}{self.ref(*vsrc)}'
+            f'<p class="row">{vers}{self.ref(*vsrc)}'
             + (f'; {acc} add-on module{"s" if acc > 1 else ""}' if acc else "") + "</p>"))
         self.edge("maker", "product", "doc" if any(vsrc) else "open", "Makes")
 
@@ -366,7 +370,7 @@ class Chain:
             co = sorted({c for d in ds for c in d.get("co_donors") or []})
             ffin = next((f for f in sorted((e or {}).get("financials") or [], key=lambda f: str(f.get("year")), reverse=True)
                          if f.get("funds_received")), None)
-            body = (f'<p class="row">Donated {esc(self.pq)} to front-line units</p>'
+            body = (f'<p class="row">Reports handing over {esc(self.pq)}</p>'
                     + (f'<p class="row">Named alongside it: {esc(", ".join(co))}</p>' if co else "")
                     + (f'<p class="row">Linked to ЦБСТ{self.ref(dtie.get("source_id"))}</p>' if dtie.get("confidence") in ("t-doc", "t-open", "press") else "")
                     + (f'<p class="row">Donations received in {ffin["year"]}: {money(ffin["funds_received"])}'
@@ -394,7 +398,7 @@ class Chain:
                 + (self.strip(media_about(self.media, {("delivery", d["id"])}), label="") if d.get("id") else "")
                 + '</li>' for d in ds)
             self.rows[-1]["buyers"].append(self.card(
-                rid, "field", "Front-line recipients",
+                rid, "field", "Recipients",
                 f'{len(ds)} handovers <small>{ru_date(ds[0]["date"])} – {ru_date(ds[-1]["date"])}</small>',
                 f'<p class="note">As reported by the donor on its own Telegram channel.</p>'
                 + self.timeline(ds) + f'<ul class="rec">{items}</ul>'))
@@ -409,14 +413,14 @@ class Chain:
             self.limits.append(f"The {len(ds)} handovers are {esc(dname)}'s own reports. None is confirmed by the "
                                "receiving unit or an independent source, and the post date is not always the handover date.")
 
-        # РОЙ.МАРКЕТ: shown as absent when no listing names it
-        if not any("рой" in fold(li["channel"]) or "roimarket" in fold(li.get("url")) for li in p.get("listings") or []):
-            claim = next((cl for cl in p.get("claims") or [] if cl.get("metric") == "distribution"), None)
-            body = '<p class="row">No listing found.</p>'
-            if claim:
-                body += (f'<blockquote lang="ru">«{esc(claim["text_ru"])}»</blockquote>'
-                         f'<p class="note">{esc(maker_left)} customer chat, {ru_date(claim.get("as_of"))}'
-                         f'{self.ref(claim.get("source_id"))}</p>')
+        # РОЙ.МАРКЕТ: shown as absent only when a document speaks to it (the maker's own distribution statement).
+        # Without one, nobody has checked, and an "absent" card would assert what was never looked for.
+        claim = next((cl for cl in p.get("claims") or [] if cl.get("metric") == "distribution"), None)
+        if claim and not any("рой" in fold(li["channel"]) or "roimarket" in fold(li.get("url")) for li in p.get("listings") or []):
+            body = ('<p class="row">No listing found.</p>'
+                    f'<blockquote lang="ru">«{esc(claim["text_ru"])}»</blockquote>'
+                    f'<p class="note">{esc(cap(claim.get("asserted_by") or maker_left))}, {ru_date(claim.get("as_of"))}'
+                    f'{self.ref(claim.get("source_id"))}</p>')
             self.rows.append({"id": "roymarket", "card": self.card("roymarket", "absent", "Not sold here", "РОЙ.МАРКЕТ", body),
                               "buyers": []})
 
@@ -531,6 +535,27 @@ class Chain:
         return "".join(out)
 
 
+def dek(ch, n_buy):
+    """The page's one-sentence summary, built only from what the record holds (no product-specific text)."""
+    p, m = ch.p, ch.maker
+    n = display_name(m)
+    who = esc(n["head"]) + (f" ({esc(n['legal'])})" if n["legal"] else "")
+    sanctioned = ", a company under sanctions" if ch.sanctions(m) else ""
+    ways = []
+    if any(li.get("source_id") for li in p.get("listings") or []):
+        ways.append("sold online and through dealers")
+    if n_buy:
+        ways.append(f"bought by state agencies under {n_buy} contract{'s' if n_buy != 1 else ''}")
+    donors = {d.get("donor") for d in p.get("deliveries") or []}
+    if donors:
+        tied = any((ch.ents.get(x) or {}).get("cbst_tie", {}) and (ch.ents[x]["cbst_tie"].get("confidence") in ("t-doc", "t-open", "press"))
+                   for x in donors if x in ch.ents)
+        ways.append("handed to military units by " + ("a foundation that works with ЦБСТ" if tied and len(donors) == 1 else
+                                                      "donors" if len(donors) > 1 else "a donor"))
+    tail = (" It is " + ", ".join(ways[:-1]) + (" and " if len(ways) > 1 else "") + ways[-1] + ".") if ways else ""
+    return f"{esc(cap(p.get('category')))} made by {who}{sanctioned}.{tail}"
+
+
 def render(ch, out):
     p = ch.p
     n_list = sum(1 for li in p.get("listings") or [] if li.get("source_id"))
@@ -549,10 +574,8 @@ def render(ch, out):
 <body>
 <header class="rm-page top">
   <p class="rm-eyebrow">Draft · {ru_date(dt.date.today().isoformat())}</p>
-  <h1 class="rm-h1">{esc(ch.pq)} <span class="rm-muted">from ЦБСТ to the front line</span></h1>
-  <p class="rm-dek">{esc(cap(p.get('category')))} made by {esc(display_name(ch.maker)['head'])}{(' (' + esc(display_name(ch.maker)['legal']) + ')') if display_name(ch.maker)['legal'] else ''}, a company
-  under sanctions. It is sold on marketplaces and through dealers, bought by state agencies under
-  {n_buy} contract{'s' if n_buy != 1 else ''}, and handed to front-line units by a foundation that works with ЦБСТ.</p>
+  <h1 class="rm-h1">{esc(ch.pq)} <span class="rm-muted">{'from ЦБСТ to the front line' if ch.top['A'] else 'from the maker to the front line'}</span></h1>
+  <p class="rm-dek">{dek(ch, n_buy)}</p>
   <ul class="rm-legend" aria-label="How to read the lines">
     <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="rm-ln doc"/></svg> A document shows it</li>
     <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="rm-ln rep"/></svg> Reported: the party's own word or the press</li>

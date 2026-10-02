@@ -676,8 +676,12 @@ def main() -> int:
             if not v.get("source_id") or v["source_id"] not in source_ids:
                 errors.append(f"{where}.versions[{j}].source_id is required and must be a known source")
         for j, a_ in enumerate(pr.get("accessories") or []):
-            if a_.get("pairs_with") not in versions:
-                errors.append(f"{where}.accessories[{j}].pairs_with must name one of the versions")
+            # null = fits the whole product family (the source names no single version, e.g. a ГИСП "модуль для
+            # станции … тип «Капюшон»"); a named value must be a real version
+            if a_.get("pairs_with") is not None and a_["pairs_with"] not in versions:
+                errors.append(f"{where}.accessories[{j}].pairs_with must name one of the versions, or be null for the whole family")
+            if not a_.get("source_id"):
+                errors.append(f"{where}.accessories[{j}].source_id is required")
             if not a_.get("source_id") or a_["source_id"] not in source_ids:
                 errors.append(f"{where}.accessories[{j}].source_id is required and must be a known source")
         for j, s_ in enumerate(pr.get("shown_at") or []):

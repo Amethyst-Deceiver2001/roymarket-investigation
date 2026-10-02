@@ -435,6 +435,22 @@
         "credibility": "single",
         "source_id": "s8907",
         "note": "Shipment over ₽2m, on the fighters' own request."
+      },
+      {
+        "id": "bulat-d17",
+        "date": "2025-01-15",
+        "version": null,
+        "item": "«детекторы дронов «Булат»», with «Капюшон» stations; ₽10.5m in total, count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "not stated",
+        "recipient": "главы муниципальных округов Херсонской области, для бригад, восстанавливающих электроснабжение",
+        "source_channel": "@nashapravdafond",
+        "post_id": 382,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8994",
+        "note": "Found while building the «Капюшон» record (02.10.2026); the first «Булат» pass started at post 393. Civilian recipients, at the governor's request."
       }
     ],
     "claims": [
@@ -480,6 +496,364 @@
       "Mapping a dealer's listing to a version needs the dealer's own product page; only the maker's own pages (s8018-s8020) and the user manuals are read.",
       "Recorded 2026-10-02 (lead, not read in full): post 15100 in the maker's customer chat (s8749, 03.10.2024) is a buyer's screenshot of a message from «Крылья Победы | Магазин» offering «Булат» V4 from stock. The seller has no record and no identity; seen only at thumbnail size. Read the screenshot at full size and look for the shop's channel before any listing or seller record.",
       "B3 (02.10.2026): where Фонд «Наша Правда» bought its «Булат» is not documented. Its 2024 accounts show 50 units in stock for transfer to units (claim above) but name no supplier; the only supplier named in its creditor breakdown at 31.12.2024 is АО «Технодрон» (₽982.6 thousand), with nothing tying it to «Булат». The brief's НПО «Милитех» lead is the maker of headsets in the same list, not of «Булат». Next: the fund's procurement or a supplier's own post naming the fund."
+    ]
+  },
+  {
+    "slug": "kapyushon",
+    "kind": "product",
+    "name_ru": "«Капюшон»",
+    "name_latin": "Kapyushon",
+    "category": "UAV radio-suppression (EW) station family",
+    "maker": "ooo-npo-kilovatt-shestopalov",
+    "brand": "«Капюшон»",
+    "trademark": {
+      "registration": "RU1086620",
+      "holder": "ooo-npo-kilovatt",
+      "source_id": "s1204",
+      "note": "Word mark «Капюшон», priority 19.04.2024, registered 14.02.2025, held by the sister ООО НПО «Киловатт» ИНН 4800013729 (same founder, Шестопалов С.А.); the registered address matches that company's ЕГРЮЛ address."
+    },
+    "versions": [
+      {
+        "slug": "kapyushon-k-8m",
+        "name_ru": "«Капюшон» К-8М",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917911: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель К-8М», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-k-12m",
+        "name_ru": "«Капюшон» К-12М",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917833: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель К-12М», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-k-12m-bagazhny-boks",
+        "name_ru": "«Капюшон» К-12М Багажный Бокс",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917751: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель К-12М Багажный Бокс», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-k-15m",
+        "name_ru": "«Капюшон» К-15М",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917319: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель К-15М», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-k-15m-vip",
+        "name_ru": "«Капюшон» К-15М ВИП",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917708: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель К-15М ВИП», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp4-28a",
+        "name_ru": "«Капюшон» рюкзак ТП4-28А",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918067: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель рюкзак ТП4-28А», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp4-28b",
+        "name_ru": "«Капюшон» рюкзак ТП4-28Б",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918158: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель рюкзак ТП4-28Б», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp4-50a",
+        "name_ru": "«Капюшон» рюкзак ТП4-50А",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918192: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель рюкзак ТП4-50А», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp4-50b",
+        "name_ru": "«Капюшон» рюкзак ТП4-50Б",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918230: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель рюкзак ТП4-50Б», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp7-100",
+        "name_ru": "«Капюшон» рюкзак ТП 7-100",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918262: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель рюкзак ТП 7-100», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp10-100",
+        "name_ru": "«Капюшон» ТП 10-100",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918338: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель ТП 10-100», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-fpv-7-moto",
+        "name_ru": "«Капюшон» ФПВ-7 мото",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918038: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель ФПВ-7 мото», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-fpv-8m",
+        "name_ru": "«Капюшон» ФПВ-8М",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918309: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель ФПВ-8М», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-fpv-12",
+        "name_ru": "«Капюшон» ФПВ-12",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917973: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель ФПВ-12», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      }
+    ],
+    "accessories": [
+      {
+        "name_ru": "Модуль ФПВ-1/140",
+        "pairs_with": null,
+        "description": "ГИСП product card 5918364: «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип \"Капюшон\", модель ФПВ-1/140».",
+        "source_id": "s5391"
+      },
+      {
+        "name_ru": "Модуль ФПВ-1/200",
+        "pairs_with": null,
+        "description": "ГИСП product card 5918413: «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип \"Капюшон\", модель ФПВ-1/200».",
+        "source_id": "s5391"
+      },
+      {
+        "name_ru": "Модуль ФПВ-1/300",
+        "pairs_with": null,
+        "description": "ГИСП product card 5918427: «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип \"Капюшон\", модель ФПВ-1/300».",
+        "source_id": "s5391"
+      },
+      {
+        "name_ru": "Модуль ФПВ-2/300",
+        "pairs_with": null,
+        "description": "ГИСП product card 5918916: «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип \"Капюшон\", модель ФПВ-2/300».",
+        "source_id": "s5391"
+      },
+      {
+        "name_ru": "Модуль ФПВ-2128",
+        "pairs_with": null,
+        "description": "ГИСП product card 5918889: «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип \"Капюшон\", модель ФПВ-2128».",
+        "source_id": "s5391"
+      }
+    ],
+    "shown_at": [
+      {
+        "event": "dronnitsa-2024",
+        "as_of": "2024-11-01",
+        "source_id": "s8993",
+        "note": "The organiser's channel quotes a representative of «Киловатт», maker of «установки РЭБ «Капюшон»»: «сейчас мы уже привезли свою разработку». The post does not name the model."
+      },
+      {
+        "event": "dronnitsa-2025",
+        "as_of": "2025-09-08",
+        "source_id": "s8842",
+        "note": "«РЭБ «Капюшон»» named in ЦБСТ's list of what its residents showed (post 1193)."
+      }
+    ],
+    "listings": [
+      {
+        "id": "kapyushon-own-shop",
+        "version": null,
+        "channel": "online shop kilowatt48.ru",
+        "url": "https://kilowatt48.ru/shop/",
+        "seller": {
+          "entity": null,
+          "storefront": "kilowatt48.ru (signed «© НПО «КИЛОВАТТ», Липецк»)",
+          "identity": "unresolved: the site gives no ИНН, and two Липецк ООО share the name НПО «Киловатт» (ИНН 4800016776 and 4800013729)"
+        },
+        "status": "listed",
+        "as_of": "2026-09-15",
+        "source_id": "s7499",
+        "basis": "doc",
+        "asserted_by": "self",
+        "note": "Pages 1–3 of the shop (s7499–s7501) list «Станция РЭБ Капюшон» К-8М, К-12М, К-15М, ТП 4-50Б, ТП 7-100, ТП 8-100, ФПВ-7 мото, ФПВ-8М, ФПВ-12 and others; the shown price is a placeholder, so no price is recorded."
+      },
+      {
+        "id": "kapyushon-dealer-kilowat48",
+        "version": null,
+        "channel": "dealer shop kilowat48.ru (Москва, ул. Коптевская, 22)",
+        "url": "https://kilowat48.ru/",
+        "seller": {
+          "entity": null,
+          "storefront": "kilowat48.ru («Дилерский магазин НПО «КИЛОВАТТ»»)",
+          "identity": "ИП Пинимасов Александр Вячеславович, official dealer by certificate №2106/2024 issued by ООО НПО «Киловатт» (s0537); no registry entity, the ИНН is from the certificate only"
+        },
+        "status": "listed",
+        "as_of": "2026-09-16",
+        "source_id": "s7562",
+        "basis": "doc",
+        "asserted_by": "self",
+        "note": "The homepage calls itself the dealer shop of НПО «КИЛОВАТТ» and lists «Капюшон» stations with prices; the prices are not matched to models here."
+      }
+    ],
+    "deliveries": [
+      {
+        "id": "kapyushon-d01",
+        "date": "2024-07-08",
+        "version": null,
+        "item": "«новые станции «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия",
+          "Молодая Гвардия"
+        ],
+        "carrier": "not stated",
+        "recipient": "бойцы на Херсонском и Запорожском направлениях",
+        "source_channel": "@nashapravdafond",
+        "post_id": 302,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8990",
+        "note": ""
+      },
+      {
+        "id": "kapyushon-d02",
+        "date": "2024-08-08",
+        "version": null,
+        "item": "«РЭБы «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "not stated",
+        "recipient": "423-й Ямпольский полк",
+        "source_channel": "@nashapravdafond",
+        "post_id": 310,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8991",
+        "note": "The post relays the regiment's thanks «за поставленные РЭБы «Капюшон»»; the handover date is not stated, so the date is the post's."
+      },
+      {
+        "id": "kapyushon-d03",
+        "date": "2024-08-08",
+        "version": null,
+        "item": "«средства радиоэлектронной борьбы «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия",
+          "МГЕР"
+        ],
+        "carrier": "not stated",
+        "recipient": "Курская областная клиническая больница и станция скорой помощи",
+        "source_channel": "@nashapravdafond",
+        "post_id": 311,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8992",
+        "note": "Civilian recipient: to be fitted to ambulances."
+      },
+      {
+        "id": "kapyushon-d04",
+        "date": "2025-01-13",
+        "version": null,
+        "item": "«мобильные станции РЭБ «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "военнослужащие группировок «Центр» и «Днепр»",
+        "source_channel": "@ANO_CBST",
+        "post_id": 369,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8091",
+        "note": "Reported on ЦБСТ's own channel as equipment «созданную при поддержке ЦБСТ», delivered by «Единая Россия» and the fund."
+      },
+      {
+        "id": "kapyushon-d05",
+        "date": "2025-01-15",
+        "version": null,
+        "item": "«станции РЭБ «Капюшон»», with «Булат» detectors; ₽10.5m in total, count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "not stated",
+        "recipient": "главы муниципальных округов Херсонской области, для бригад, восстанавливающих электроснабжение",
+        "source_channel": "@nashapravdafond",
+        "post_id": 382,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8994",
+        "note": "Civilian recipients, at the governor's request."
+      },
+      {
+        "id": "kapyushon-d06",
+        "date": "2025-02-17",
+        "version": null,
+        "item": "«Проверенные средства РЭБ «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "военнослужащие группировки «ЮГ»",
+        "source_channel": "@nashapravdafond",
+        "post_id": 397,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8892",
+        "note": ""
+      },
+      {
+        "id": "kapyushon-d07",
+        "date": "2025-02-19",
+        "version": null,
+        "item": "«средства РЭБ «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "«Боевое Братство»"
+        ],
+        "carrier": "not stated",
+        "recipient": "участники спецоперации (конвой из Егорьевска)",
+        "source_channel": "@nashapravdafond",
+        "post_id": 398,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8893",
+        "note": ""
+      },
+      {
+        "id": "kapyushon-d08",
+        "date": "2025-06-09",
+        "version": null,
+        "item": "«средство РЭБ «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "1-я мотострелковая рота, Запорожская область",
+        "source_channel": "@nashapravdafond",
+        "post_id": 448,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8898",
+        "note": ""
+      }
+    ],
+    "claims": [
+      {
+        "text_ru": "Капюшон ТП 7-100 подавитель дронов -купол — БУ 858,00 — Кол. 2,000",
+        "metric": "donor_stock",
+        "value": "2 units, ₽858 thousand at book value, held on 31.12.2024",
+        "as_of": "2024-12-31",
+        "source_id": "s0389",
+        "entity": "fond-nasha-pravda",
+        "asserted_by": "Фонд «Наша Правда», its audited annual accounts for 2024",
+        "note": "Notes to the 2024 accounts, Table 7 breakdown, account 41 (goods «закуплены для безвозмездной передачи войсковым частям в зону СВО»). OCR text s8987, checked against the page image (page 16 of the PDF) 02.10.2026. The supplier is not named."
+      }
+    ],
+    "open_questions": [
+      "B7 (02.10.2026): which of the two ООО НПО «Киловатт» makes and sells «Капюшон» is split by document: ГИСП lists the models under ИНН 4800016776 (ЦБСТ-tied, maker on this record), the trademark is held by ИНН 4800013729, and the maker's own shop names neither ИНН.",
+      "Handovers recorded are the fund's own posts (and ЦБСТ's post 369) only. Not recorded: a handover of 12 «волнорезы и капюшоны» in @evgeniy_lisitsyn post 10100 (12.05.2024, donor not clear), Сидякин's posts of 19–20.05.2025 (reposts of older trips), the fund's announcement of 3 stations «в подразделения доставят» (post 332, future tense), and the tank crew's feedback video (post 528, s8995; no handover date).",
+      "No state contract for «Капюшон» is on file; the 4800016776 and 4800013729 supplier searches on zakupki were not reread for this record."
     ]
   }
 ]

@@ -4127,8 +4127,8 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": "dual",
-          "product_count": 46,
-          "degree": 56
+          "product_count": 47,
+          "degree": 57
         },
         {
           "id": "ooo-npo-programmnye-kompleksy-realnogo-vremeni",
@@ -9452,6 +9452,19 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-npo-kilovatt-shestopalov::kapyushon",
+          "kind": "product",
+          "label": "«Капюшон»",
+          "owner_slug": "ooo-npo-kilovatt-shestopalov",
+          "source_id": "s5391",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 3
+        },
+        {
           "id": "product::ooo-npo-kilovatt-shestopalov::к-12",
           "kind": "product",
           "label": "К-12",
@@ -11813,11 +11826,25 @@
           "degree": 8
         },
         {
+          "id": "storefront::dealer-shop-kilowat48-ru-kilowat48-ru",
+          "kind": "storefront",
+          "label": "kilowat48.ru («Дилерский магазин НПО «КИЛОВАТТ»»)",
+          "platform": "dealer shop kilowat48.ru (Москва, ул. Коптевская, 22)",
+          "degree": 1
+        },
+        {
           "id": "storefront::dealer-site-pokrovsystem-ru-покров",
           "kind": "storefront",
           "label": "Покров",
           "platform": "dealer site pokrovsystem.ru",
           "degree": 2
+        },
+        {
+          "id": "storefront::online-shop-kilowatt48-ru-kilowatt48-ru",
+          "kind": "storefront",
+          "label": "kilowatt48.ru (signed «© НПО «КИЛОВАТТ», Липецк»)",
+          "platform": "online shop kilowatt48.ru",
+          "degree": 1
         },
         {
           "id": "storefront::own-site-921921-ru-921921-ru",
@@ -30879,6 +30906,19 @@
         },
         {
           "source": "ooo-npo-kilovatt-shestopalov",
+          "target": "product::ooo-npo-kilovatt-shestopalov::kapyushon",
+          "type": "produces",
+          "label": null,
+          "source_id": "s5391",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "ooo-npo-kilovatt-shestopalov",
           "target": "product::ooo-npo-kilovatt-shestopalov::к-12",
           "type": "produces",
           "label": null,
@@ -37248,6 +37288,19 @@
           "grade": "doc"
         },
         {
+          "source": "storefront::dealer-shop-kilowat48-ru-kilowat48-ru",
+          "target": "product::ooo-npo-kilovatt-shestopalov::kapyushon",
+          "type": "lists",
+          "label": "dealer shop kilowat48.ru (Москва, ул. Коптевская, 22)",
+          "source_id": "s7562",
+          "as_of": "2026-09-16",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null,
+          "grade": "doc"
+        },
+        {
           "source": "storefront::dealer-site-pokrovsystem-ru-покров",
           "target": "ooo-pokrov",
           "type": "operated_by",
@@ -37267,6 +37320,19 @@
           "label": "dealer site pokrovsystem.ru",
           "source_id": "s1386",
           "as_of": "2026-08-25",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "storefront::online-shop-kilowatt48-ru-kilowatt48-ru",
+          "target": "product::ooo-npo-kilovatt-shestopalov::kapyushon",
+          "type": "lists",
+          "label": "online shop kilowatt48.ru",
+          "source_id": "s7499",
+          "as_of": "2026-09-15",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "doc",
@@ -43113,8 +43179,8 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": "dual",
-          "product_count": 46,
-          "degree": 56
+          "product_count": 47,
+          "degree": 57
         },
         {
           "id": "ooo-npo-programmnye-kompleksy-realnogo-vremeni",
@@ -49645,8 +49711,8 @@
           "sanctioned": true,
           "legal_form": null,
           "variant": "dual",
-          "product_count": 46,
-          "degree": 56
+          "product_count": 47,
+          "degree": 57
         },
         {
           "id": "ooo-npo-rustekhdron",

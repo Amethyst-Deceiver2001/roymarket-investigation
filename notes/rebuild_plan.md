@@ -216,8 +216,24 @@ Decisions (user, 2026-10-02):
      thousand), with nothing tying it to «Булат». The brief's НПО «Милитех» is
      the maker of headsets in the same list. `acquired_from` on deliveries
      waits until a document names a seller.
-4. **B7 a second product record** and its chain view, to test that the
-   builder generalises. One product per published case, one at a time.
+4. **B7 a second product record** (done 02.10.2026: «Капюшон», chain
+   preview artifact 5iYx5RsGmTRrAeooi8wdPd).
+   - **The record:** 14 station models and 5 modules from ГИСП, all under
+     ООО НПО «Киловатт» ИНН 4800016776 (ЦБСТ-tied). The trademark RU1086620 is
+     held by the sister company ИНН 4800013729 (same founder, matching register
+     address). There are two shop listings: the maker's kilowatt48.ru, whose
+     operator is unresolved between the two namesakes, and the dealer shop
+     kilowat48.ru (ИП Пинимасов, by certificate). Eight handovers come from the
+     fund's posts and ЦБСТ post 369 (2024-07-08 to 2025-06-09), including a
+     hospital and Херсон power-repair crews. It was shown at Дронница 2024 and
+     2025. The fund held 2 ТП 7-100 on 31.12.2024 (₽858k).
+   - **What the builder needed to generalise:** a page summary built from the
+     record; the РОЙ.МАРКЕТ "not sold here" card only where a document speaks
+     to it; a "Recipients" label; the maker's ИНН on its card; our own
+     disambiguation notes dropped from names; family-wide accessories. Post 382
+     also added a 17th «Булат» handover.
+   - **Open:** no state contract checked for «Капюшон»; handovers by
+     Лисицын, Сидякин reposts and the tank crew's feedback are not recorded.
 
 ### C. Evidence backlog (read before acting; each item may have moved)
 

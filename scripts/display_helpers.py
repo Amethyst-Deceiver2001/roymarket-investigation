@@ -189,7 +189,7 @@ def display_name(e: dict) -> dict:
     """The names a card shows (B5). `head` is the documented primary brand when there is one, else the legal
     name; `legal` is the registered name, always shown when it differs from head; `gloss` the English line."""
     parts = (e.get("name_ru") or "").split(" | ", 1)
-    legal, gloss = parts[0], (parts[1] if len(parts) > 1 else "")
+    legal, gloss = _strip_note(parts[0]), (parts[1] if len(parts) > 1 else "")
     brand = next((b["name"] for b in e.get("brands") or [] if b.get("primary") and b.get("name")), None)
     return {"head": brand or legal, "legal": legal if brand and brand != legal else "", "gloss": gloss,
             "latin": e.get("name_display") or latin_display(legal)}
@@ -228,11 +228,18 @@ def _lat_word(w: str) -> str:
     return "".join(out)
 
 
+def _strip_note(name: str) -> str:
+    """Drop our own trailing bracketed note from a registered name: "(прекратил деятельность …)", or a founder's
+    surname used to tell two namesakes apart ("(Шестопалов)"). An all-caps alias like "(ФКК)" is kept. Readers tell
+    namesakes apart by the ИНН on the card, never by our note."""
+    return re.sub(r"\s*\((?![А-ЯЁA-Z0-9.\-]+\))[^)]*\)\s*$", "", name)
+
+
 def latin_display(legal: str) -> str:
     """'ООО «Тримикс»' -> 'OOO «Trimiks»'; 'НПЦ «Ушкуйник»' -> 'NPTs «Ushkuynik»'. Latin letters pass unchanged."""
     # A trailing note in brackets is ours, not part of the registered name ("(прекратил деятельность …)",
     # a founder's surname used to tell two namesakes apart); an all-caps alias like "(ФКК)" is kept.
-    s = re.sub(r"\s*\((?![А-ЯЁA-Z0-9.\-]+\))[^)]*\)\s*$", "", legal)
+    s = _strip_note(legal)
     for pat, abbr in _LONG_FORMS:
         s = re.sub(pat, abbr, s, flags=re.I)
     return re.sub(r"[А-Яа-яЁё]+", lambda m: _lat_word(m.group(0)), s)
