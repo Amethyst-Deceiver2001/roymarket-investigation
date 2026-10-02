@@ -11980,6 +11980,22 @@
             "as_of": "2025-09-08",
             "note": "Two lectures by the general director; residents exhibited. ЦБСТ participated; the organiser was КЦПН with НПЦ «Ушкуйник» (s8841)."
           }
+        ],
+        "marketing_claims": [
+          {
+            "text_ru": "Учредители ЦБСТ – партия «Единая Россия», ПАО «Банк ПСБ» и некоммерческий фонд поддержки патриотических инициатив «Наша Правда».",
+            "text_en": "ЦБСТ's founders are the party United Russia, ПАО «Банк ПСБ» and the non-profit foundation for patriotic initiatives «Наша Правда».",
+            "context": "ЦБСТ's own press release on cbst.ru, 13.08.2026 (РОЙ.МАРКЕТ scaling up). ЦБСТ names United Russia as a founder; the company register (ЕГРЮЛ extract of 15.08.2026, s0228) lists only ПСБ and Наша Правда. The party's founder role is ЦБСТ's own statement, not a registered stake.",
+            "source_id": "s8867",
+            "as_of": "2026-08-13"
+          },
+          {
+            "text_ru": "ЦБСТ вместе с Единой Россией и фондом «Наша правда» поставили на фронт тысячи изделий для уничтожения врага.",
+            "text_en": "ЦБСТ together with United Russia and the «Наша правда» foundation delivered thousands of items to the front for destroying the enemy.",
+            "context": "Александр Сидякин (secretary of ЦБСТ's supervisory board, head of United Russia's central executive committee), @asidyakin post 618, 15.12.2025, on ЦБСТ's board meeting. Self-reported, no count given beyond «тысячи».",
+            "source_id": "s8847",
+            "as_of": "2025-12-15"
+          }
         ]
       },
       "verified_against": "war-sanctions.gur.gov.ua/en/components (weapon items witem-4835, witem-4800), archived as s0970/s0971",
@@ -12000,7 +12016,8 @@
         "2026-09-30: Corrected sanctions[]: the earlier entry (s0574) listed OFAC, Canada and Australia as regimes on this АНО because OpenSanctions merges it with the Tula ООО. Read OFAC SDN 50778 directly (Tax ID 7100032961 only) and the two GUR pages (separate listings, 15947 for this АНО and 11711 for the Tula ООО, s8250/s8251). What remains is Ukraine's own listing of this АНО. GUR's US/EU/UK jurisdiction panel for the АНО is unverified and not recorded as a regime. The corporate relationship between the two entities remains unproven.",
         "2026-09-30: Removed the external-registry-cross-listed related_entities entry for the Tula ООО (relationship not established); see that record's why[] for the removed text.",
         "[2026-10-01 Ростех–ЦБСТ follow-up] state_programs: partner of «СВОё дело с Ростех», signed agreement 10.12.2025 [s8653, s8656].",
-        "[2026-10-01 ЦБСТ resident sweep] open_questions extended: name-edit finding and unresolved resident leads from the 2026-10-01 sweep."
+        "[2026-10-01 ЦБСТ resident sweep] open_questions extended: name-edit finding and unresolved resident leads from the 2026-10-01 sweep.",
+        "2026-10-02: marketing_claims added: ЦБСТ's own release names United Russia as a founder (s8867, read in full); Сидякин post 618 (s8847, read in full). User: United Russia is effectively a founder whatever the register shows."
       ]
     },
     "ano-tsentr-razvitiya-transportnykh-tekhnologiy": {

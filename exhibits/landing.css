@@ -27,6 +27,7 @@ main section > .rm-h2 { margin-top: 0; }
 .chain-card .counts dd { margin: 0; font: 500 24px/1 var(--font-serif); font-variant-numeric: tabular-nums; color: var(--ink); }
 .chain-card .go { margin: 8px 0 0; font-size: var(--t-note); }
 .chain-card .go a { color: var(--accent); }
+.chain-card .go.wait { color: var(--ink-3); }
 .chains .absent p { margin: 4px 0 0; font-size: var(--t-note); color: var(--ink-3); }
 
 .read .rm-legend { flex-direction: column; align-items: flex-start; gap: 10px; }

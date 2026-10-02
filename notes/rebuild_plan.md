@@ -72,9 +72,14 @@ after the design system redo and a new landing page.
    handovers. Next are one card per chain view, the network count (computed:
    ties by grade, number sanctioned), the evidence key, method and limits.
    Citations reuse the chain view's `describe_source()`, which gained rules for
-   Wayback captures and Минюст reports. Not yet published to `docs/`: that
-   replaces the holding page and needs the user's go-ahead, with self-hosted
-   fonts first.
+   Wayback captures and Минюст reports. **Live on Pages since 02.10.2026** (user:
+   "replace front page"), replacing the holding page. The «Булат» card there
+   says the chain view is not yet public. Sharing of the preview artifacts
+   is the user's to decide. Fonts still load from Google Fonts: self-host
+   them before wider sharing. ЦБСТ's own statement that «Единая Россия» is a
+   founder (release of 13.08.2026) is shown beside the two registered
+   founders. The user's view is that the party is effectively a founder,
+   since ЦБСТ could not exist without its approval.
 4. **B4 citation layer.** `inventory_sources.py` derives `title` and
    `public_url` once per source (Telegram header → t.me link, page canonical
    URL, zakupki registry number). 8,881 sources have neither today. The chain
@@ -268,7 +273,7 @@ and `notes/SOURCE_REGISTER.md`; `notes/unverified_people_gap.md`,
 
 ## Where things are published
 
-- **Pages (`docs/`, public on push):** a holding page, `relationship-graph.html`
+- **Pages (`docs/`, public on push):** the generated landing page, `relationship-graph.html`
   (schema v11) and `images/`. The seven case pages, profiles and `story.html`
   are archived (track A). Pushing `docs/` needs the user's go-ahead.
 - **Artifacts (private unless shared):** Ecosystem Model (working model),

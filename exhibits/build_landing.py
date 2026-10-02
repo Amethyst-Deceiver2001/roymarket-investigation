@@ -21,7 +21,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, Chain, cap, esc, load, money  # noqa: E402
 from display_helpers import design_head, display_name, reader_grade, ru_date  # noqa: E402
 
-MPTM, NP, PSB = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb"
+MPTM, NP, PSB, SIDYAKIN = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb", "aleksandr-sidyakin"
 # One entry per published chain view: product slug -> private preview Artifact (until the public cutoff).
 CHAINS = {"bulat": "https://claude.ai/artifact/6UaTv2jSwdNdfNUCibCwrf"}
 
@@ -32,7 +32,7 @@ def ln(grade, w=56):
 
 
 def short(e):
-    return display_name(e)["head"]
+    return e if isinstance(e, str) else display_name(e)["head"]
 
 
 class Landing(Chain):
@@ -42,6 +42,17 @@ class Landing(Chain):
         super().__init__("bulat")
         self.graph = json.loads((REPO / "data" / "registry" / "relationship_graph.json").read_text())
         self.img_dir = REPO / "exhibits" / "images" / "media"
+        people = json.loads((REPO / "data" / "registry" / "people.json").read_text())
+        self.people = {x["slug"]: x for x in (people if isinstance(people, list) else people.get("people", []))}
+
+    def claim(self, slug, needle):
+        return next(m for m in self.ents[slug].get("marketing_claims") or [] if needle in m["text_ru"])
+
+    def board_role(self, person):
+        """A person's role on ЦБСТ's supervisory board: (title, from, source_id)."""
+        r = next(r for r in self.people[person].get("roles") or []
+                 if r.get("entity_slug") == CBST and "Secretary" in (r.get("title") or ""))
+        return r
 
     def hist(self, slug, field, value_part):
         return next((h for h in self.ents[slug].get(field) or [] if value_part in (h.get("value") or "")), {})
@@ -52,6 +63,14 @@ class Landing(Chain):
         np_f = self.hist(CBST, "founders_history", "Наша Правда")
         psb_f = self.hist(CBST, "founders_history", "ПСБ")
         reg = min((h["as_of"] for h in c.get("founders_history") or [] if h.get("as_of")), default=None)
+        ur = self.claim(CBST, "Учредители ЦБСТ")
+        rows.append(("Партия «Единая Россия»", "doc",
+                     "named by ЦБСТ itself as one of its three founders, with ПСБ and Наша Правда; "
+                     "the company register lists only those two", self.ref(ur["source_id"]), None))
+        sid = self.board_role(SIDYAKIN)
+        rows.append((self.people[SIDYAKIN]["fio_ru"].split()[0] + " " + self.people[SIDYAKIN]["fio_ru"].split()[2], "doc",
+                     f"secretary of ЦБСТ's supervisory board since {ru_date(sid['from'])}, while head of United Russia's "
+                     "central executive committee", self.ref(sid.get("source_id")), None))
         rows.append((self.ents[NP], "doc", f"co-founder of ЦБСТ since its registration on {ru_date(reg)}",
                      self.ref(np_f.get("source_id")), self.ents[CBST]))
         rows.append((self.ents[PSB], "doc", f"co-founder of ЦБСТ since {ru_date(psb_f.get('as_of'))}",
@@ -86,9 +105,9 @@ class Landing(Chain):
         return (ru_date(h["as_of"]), self.ref(h.get("source_id"))) if h else (None, "")
 
     def quote(self):
-        """Сидякин on ЦБСТ's year, from the marketing claim recorded on МПТМ (verbatim, post 618)."""
-        c = next(m for m in self.ents[MPTM].get("marketing_claims") or [] if "военный маркетплейс" in m["text_ru"])
-        return c, self.ref(c["source_id"])
+        """Two sentences from Сидякин's post 618, in the post's order, recorded verbatim as claims on ЦБСТ and МПТМ."""
+        a, b = self.claim(CBST, "поставили на фронт"), self.claim(MPTM, "военный маркетплейс")
+        return a, b, self.ref(a["source_id"], b["source_id"])
 
     def money_line(self):
         fy = {}
@@ -107,8 +126,9 @@ class Landing(Chain):
         return len(slugs), by, sanc
 
     def chain_card(self, slug, href):
+        """href None: the chain view is not public yet, so the card states that instead of linking."""
         ch = Chain(slug)
-        ch.img_dir = self.img_dir
+        ch.img_dir = REPO / "exhibits" / "images" / "media"   # the chain's own pictures never go to this page's folder
         ch.build()
         p, m = ch.p, ch.maker
         n_buy = sum(len([b for b in r["buyers"] if "k-buyer" in b]) for r in ch.rows)
@@ -117,24 +137,27 @@ class Landing(Chain):
         logo = self.logo(p["maker"])   # only the logo is published with this page
         regimes = self.sanctions(m)
         return (f'<article class="rm-card chain-card"><header><span class="rm-kind">Chain view</span>{logo}</header>'
-                f'<h3 class="rm-name"><a href="{esc(href)}">{esc(ch.pq)}</a><small>{esc(cap(p.get("category")))} made by '
+                f'<h3 class="rm-name">{f"<a href={chr(34)}{esc(href)}{chr(34)}>{esc(ch.pq)}</a>" if href else esc(ch.pq)}<small>{esc(cap(p.get("category")))} made by '
                 f'{esc(short(m))}{(" (" + esc(display_name(m)["legal"]) + ")") if display_name(m)["legal"] else ""}</small></h3>'
                 f'{regimes}<dl class="counts"><div><dt>Sale channels</dt><dd>{len(ch.rows)}</dd></div>'
                 f'<div><dt>Listings</dt><dd>{n_list}</dd></div><div><dt>State contracts</dt><dd>{n_buy}</dd></div>'
                 f'<div><dt>Handovers to units</dt><dd>{n_del}</dd></div></dl>'
-                f'<p class="go"><a href="{esc(href)}">Follow «{esc(ch.pname)}» from ЦБСТ to the front line →</a></p></article>')
+                + (f'<p class="go"><a href="{esc(href)}">Follow «{esc(ch.pname)}» from ЦБСТ to the front line →</a></p>' if href
+                   else '<p class="go wait">The chain view is in review and not yet public.</p>') + '</article>')
 
 
 def render(preview: bool, out: Path):
     L = Landing()
+    L.img_dir = out.parent / "images" / "media"
     c = L.ents[CBST]
     today = dt.date.today().isoformat()
     # Called in page order, so footnotes number from the top.
-    q, qref = L.quote()
+    qa, qb, qref = L.quote()
     cbst_name, cbst_sanc, funds = L.name(c), L.sanctions(c), L.money_line()
     ledger = L.ledger()
     n, by, sanc = L.network()
-    chains = "".join(L.chain_card(s, url if preview else f"chain_{s}.html") for s, url in CHAINS.items())
+    chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
+                     for s, url in CHAINS.items())
     restr_date, restr_ref = L.restricted()
     doc = f"""<!doctype html>
 <!-- Generated by exhibits/build_landing.py from data/registry on {today}. Do not edit by hand. -->
@@ -150,9 +173,9 @@ def render(preview: bool, out: Path):
   document and is graded by how well that document shows it.</p>
 </header>
 <main class="rm-page">
-  <blockquote class="rm-quote lead-quote"><span class="rm-label">Original Russian</span>«{esc(q['text_ru'])}»
-    <cite>Александр Сидякин, head of United Russia's central executive committee, on ЦБСТ's year, Telegram, {ru_date(q['as_of'])}{qref}</cite>
-    <span class="gloss">"{esc(q['text_en'].replace('«Roymarket»', 'Roymarket'))}"</span></blockquote>
+  <blockquote class="rm-quote lead-quote"><span class="rm-label">Original Russian</span>«{esc(qa['text_ru'])} […] {esc(qb['text_ru'])}»
+    <cite>Александр Сидякин, secretary of ЦБСТ's supervisory board and head of United Russia's central executive committee, on ЦБСТ's year, Telegram, {ru_date(qb['as_of'])}{qref}</cite>
+    <span class="gloss">"{esc(qa['text_en'])} […] {esc(qb['text_en'].replace('«Roymarket»', 'Roymarket'))}"</span></blockquote>
 
   <section class="hub" aria-labelledby="h-hub">
     <h2 class="rm-h2" id="h-hub">Who stands behind ЦБСТ</h2>
@@ -233,7 +256,7 @@ def main():
     ap.add_argument("--preview", action="store_true", help="link chain views to their preview Artifacts")
     ap.add_argument("--out")
     a = ap.parse_args()
-    render(a.preview, Path(a.out) if a.out else REPO / "exhibits" / "landing.html")
+    render(a.preview, Path(a.out).resolve() if a.out else REPO / "exhibits" / "landing.html")
 
 
 if __name__ == "__main__":
