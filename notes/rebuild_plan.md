@@ -200,9 +200,22 @@ Decisions (user, 2026-10-02):
    - The chain view selects contracts by `products[]` (a text match only for
      unlinked contracts) and prints the lines.
    - Next: link other makers' contracts as their chain views are built (B7).
-3. **B3 donor's supplier.** Read «Наша Правда»'s audited accounts on file
-   first (brief lead: НПО «Милитех», unverified), then an optional
-   `acquired_from` on deliveries.
+3. **B3 donor's supplier** (read 02.10.2026; supplier not documented).
+   - **What the accounts show:** «Наша Правда»'s 2024 and 2025 filings are
+     scans; they were OCR'd (`data/sources/OCR_9705196180_*`) and the key line
+     checked against the page image. The notes to the 2024 accounts (Table 7,
+     account 41) list «Мониторинговое устройство "Булат"», 50 units, ₽2,750
+     thousand at book value, held on 31.12.2024. That account holds goods
+     «закуплены для безвозмездной передачи войсковым частям в зону СВО», at
+     warehouses in Балашиха and Москва.
+   - **Recorded:** a `donor_stock` claim on the product. The chain view's
+     product→donor line is now Documented ("bought by the donor; the seller is
+     not named"), and the landing page has a matching row.
+   - **Seller still open:** no line names who sold the «Булат». The only
+     supplier in the 31.12.2024 creditor breakdown is АО «Технодрон» (₽982.6
+     thousand), with nothing tying it to «Булат». The brief's НПО «Милитех» is
+     the maker of headsets in the same list. `acquired_from` on deliveries
+     waits until a document names a seller.
 4. **B7 a second product record** and its chain view, to test that the
    builder generalises. One product per published case, one at a time.
 

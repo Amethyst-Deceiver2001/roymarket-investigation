@@ -63,7 +63,7 @@ SOURCE_PREFIX_GRADE = {
     "ZAKUPKI": "doc", "PATENT": "doc", "TRADEMARK": "doc", "ROSPATENT": "doc", "GISP": "doc", "FNS": "doc",
     "PBNALOG": "doc", "FEDRESURS": "doc", "COURT": "doc", "NSPD": "doc", "RKN": "doc", "MCHS": "doc",
     "FSA": "doc", "PP719": "doc", "CERT": "doc", "PROVERKI": "doc", "ROM": "doc", "DATASET": "doc",
-    "AERONEXT": "doc", "EU": "doc", "NSDC": "doc", "GUR": "doc", "FUNDNTI": "doc", "MINPROMTORG": "doc",
+    "AERONEXT": "doc", "OCR": "doc", "EU": "doc", "NSDC": "doc", "GUR": "doc", "FUNDNTI": "doc", "MINPROMTORG": "doc",
     # the press, aggregators and third-party compilations: reported
     "PRESS": "rep", "TRANSCRIPT": "rep", "DOSSIER": "rep", "RUSPROFILE": "rep", "CHECKO": "rep",
     "ALEPH": "rep", "OPENSANCTIONS": "rep", "RUPEP": "rep", "PEP": "rep",

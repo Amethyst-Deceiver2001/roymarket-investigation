@@ -461,14 +461,25 @@
         "as_of": "2025-07-04",
         "source_id": "s8815",
         "asserted_by": "3mx support rep"
+      },
+      {
+        "text_ru": "Мониторинговое устройство \"Булат\" — БУ 2 750,00 — Кол. 50,000",
+        "metric": "donor_stock",
+        "value": "50 units, ₽2,750 thousand at book value, held on 31.12.2024",
+        "as_of": "2024-12-31",
+        "source_id": "s0389",
+        "asserted_by": "Фонд «Наша Правда», its audited annual accounts for 2024",
+        "note": "Notes to the 2024 accounts (пояснения), breakdown of Table 7 «Запасы», account 41: goods «закуплены для безвозмездной передачи войсковым частям в зону СВО», held at the fund's warehouses in Балашиха (ул. Чехова, 3) and Москва (Котельническая наб., 25, стр. 1). Scanned filing (OCR text s8987), OCR checked against the page image (page 18 of the PDF) 02.10.2026. Amounts in the table are in thousand roubles (account 41 total 109 585,95 against Table 7's 109 871). About ₽55,000 a unit at book value. The supplier is not named. Audit opinion unqualified (ООО «Машаудит», 26.06.2025). The fund's 2025 notes carry no «Булат» line.",
+        "entity": "fond-nasha-pravda"
       }
     ],
     "open_questions": [
-      "Recorded 2026-10-02 from a scan of the archive (scripts/delivery_signal_scan.py): 16 deliveries reported by Фонд «Наша Правда» (an institutional donor) between 2025-02-11 and 2026-05-19. Each is the donor's own report, so credibility is single; the post date is the report date, not the handover date; the version is never stated; recipients are recorded at the level of unit, region or direction the donor names, never a town or a person. NOT recorded: handovers by volunteer groups and individuals (about 20 more texts in the scan, e.g. Архангел Спецназа, «Судоплатов», «Тыл-22»), and 3mx's own handovers (to the Kursk fighters with Покров, 28.04.2025; to Э. Запашный, 30.10.2025), pending the user's decisions on named volunteers and the grade of volunteer reports.",
+      "Recorded 2026-10-02 from a scan of the archive (scripts/delivery_signal_scan.py): 16 deliveries reported by Фонд «Наша Правда» (an institutional donor) between 2025-02-11 and 2026-05-19. Each is the donor's own report, so credibility is single; the post date is the report date, not the handover date; the version is never stated; recipients are recorded at the level of unit, region or direction the donor names, never a town or a person. NOT recorded: handovers by volunteer groups and individuals (about 20 more texts in the scan, e.g. Архангел Спецназа, «Судоплатов», «Тыл-22»), and 3mx's own handovers (to the Kursk fighters with Покров, 28.04.2025; to Э. Запашный, 30.10.2025), The user decided on 02.10.2026: towns are allowed as recipients, everyone involved is a person of interest, and volunteer reports default to self-report. These handovers can now be recorded; they are not recorded yet.",
       "РОЙ.МАРКЕТ: the maker's rep says the product is sold only on 3mx.ru and through dealers (s8860, 02.09.2026). No РОЙ.МАРКЕТ listing of «Булат» is documented; the 2026-10-01 self-report sweep found 3mx saying it does not sell there.",
       "The two WB brand-store listings and the product versions' dates have no archived capture of the marketplace page (source_id null above); capture them before relying on them.",
       "Mapping a dealer's listing to a version needs the dealer's own product page; only the maker's own pages (s8018-s8020) and the user manuals are read.",
-      "Recorded 2026-10-02 (lead, not read in full): post 15100 in the maker's customer chat (s8749, 03.10.2024) is a buyer's screenshot of a message from «Крылья Победы | Магазин» offering «Булат» V4 from stock. The seller has no record and no identity; seen only at thumbnail size. Read the screenshot at full size and look for the shop's channel before any listing or seller record."
+      "Recorded 2026-10-02 (lead, not read in full): post 15100 in the maker's customer chat (s8749, 03.10.2024) is a buyer's screenshot of a message from «Крылья Победы | Магазин» offering «Булат» V4 from stock. The seller has no record and no identity; seen only at thumbnail size. Read the screenshot at full size and look for the shop's channel before any listing or seller record.",
+      "B3 (02.10.2026): where Фонд «Наша Правда» bought its «Булат» is not documented. Its 2024 accounts show 50 units in stock for transfer to units (claim above) but name no supplier; the only supplier named in its creditor breakdown at 31.12.2024 is АО «Технодрон» (₽982.6 thousand), with nothing tying it to «Булат». The brief's НПО «Милитех» lead is the maker of headsets in the same list, not of «Булат». Next: the fund's procurement or a supplier's own post naming the fund."
     ]
   }
 ]

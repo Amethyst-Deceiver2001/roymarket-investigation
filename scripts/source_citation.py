@@ -208,6 +208,12 @@ def _cite(s: dict, f: dict | None) -> tuple[str, str | None]:
             return (f"Trademark registration no. {m.group(1)}, Rospatent (FIPS)",
                     f"https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber={m.group(1)}")
         return "Trademark record, Rospatent (FIPS)", None
+    if prefix == "OCR":
+        m = re.match(r"OCR_(\d{10,12})_(\d{4})_\d{8}_.*?(bfo-notes|audit-report)", name)
+        if m:
+            kind = "notes to the annual accounts" if m.group(3) == "bfo-notes" else "auditor's report on the annual accounts"
+            return f"Text recognised (OCR) from the scanned {kind}, ИНН {m.group(1)}, FY {m.group(2)}", None
+        return f"Text recognised (OCR) from a scanned document{dated}", None
     if prefix == "PATENT":
         m = re.match(r"PATENT_(RU\w+?)_", name)
         return f"Patent record{' ' + m.group(1) if m else ''}, Rospatent{dated}", None

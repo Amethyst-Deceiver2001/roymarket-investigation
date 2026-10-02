@@ -12,6 +12,7 @@ Local file processing only.
 import argparse
 import datetime as dt
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -91,6 +92,13 @@ class Landing(Chain):
                      self.ref(sub.get("source_id")), self.ents[MPTM]))
         rows.append((self.ents[MPTM], self.g(offer), "the operator of the РОЙ.МАРКЕТ marketplace, by the platform's own supplier offer",
                      self.ref(offer), None))
+        stock = next((c for c in self.p.get("claims") or [] if c.get("metric") == "donor_stock" and c.get("entity") == NP), None)
+        if stock:
+            n = re.search(r"Кол\. (\d+)", stock["text_ru"])
+            rows.append((self.ents[NP], self.g(stock["source_id"]),
+                         f"held {n.group(1) if n else 'a stock of'} «Булат» on {ru_date(stock['as_of'])}, bought for transfer "
+                         "to military units, by its audited accounts; the seller is not named",
+                         self.ref(stock["source_id"]), None))
         ds = [d for d in self.p.get("deliveries") or [] if d.get("donor") == NP]
         if ds:
             dates = sorted(d["date"] for d in ds if d.get("date"))

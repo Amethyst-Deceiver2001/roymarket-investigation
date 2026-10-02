@@ -35,6 +35,7 @@ REG = REPO / "data" / "registry"
 SRC_DIR = REPO / "data" / "sources"
 PAGES = "https://amethyst-deceiver2001.github.io/roymarket-investigation/"
 sys.path.insert(0, str(REPO / "scripts"))
+from graph_contract import source_grade  # noqa: E402
 from display_helpers import (design_head, display_name, figure_html, kind_icon, load_media, media_about, publish_copy,  # noqa: E402
                              reader_grade, ru_date)
 
@@ -371,10 +372,20 @@ class Chain:
                     + (f'<p class="row">Donations received in {ffin["year"]}: {money(ffin["funds_received"])}'
                        f'{self.ref(ffin.get("source_id"))}</p>' if ffin else "")
                     + (self.sanctions(e) if e else ""))
+            # B3: the donor's own accounts may show it bought the product; the seller can still be unknown.
+            stock = next((c for c in p.get("claims") or [] if c.get("metric") == "donor_stock" and c.get("entity") == slug), None)
+            if stock:
+                n = re.search(r"Кол\. (\d+)", stock["text_ru"])
+                body = (f'<p class="row">Held {n.group(1) if n else "a stock of"} {esc(self.pq)} on {ru_date(stock["as_of"])}, '
+                        f'bought for transfer to units, by its audited accounts{self.ref(stock["source_id"])}</p>') + body
             self.rows.append({"id": cid, "card": self.card(cid, "donor", "Donates", self.name(e) if e else esc(slug), body,
                                                            slug=slug if e else None),
                               "buyers": []})
-            self.edge("product", cid, "open", "How the donor obtained it is not documented", bus=True)
+            if stock:
+                self.edge("product", cid, source_grade(self.src.get(stock["source_id"])),
+                          "Bought by the donor (its accounts); the seller is not named", bus=True)
+            else:
+                self.edge("product", cid, "open", "How the donor obtained it is not documented", bus=True)
             rid = f"rec-{len(self.rows)}"
             items = "".join(
                 f'<li><time>{ru_date(d["date"])}</time> <span lang="ru">{esc(d.get("recipient"))}</span>'
@@ -389,8 +400,12 @@ class Chain:
                 + self.timeline(ds) + f'<ul class="rec">{items}</ul>'))
             self.edge(cid, rid, "rep", "Reported by the donor")
             dname = split_name(e)[0] if e else slug
-            self.limits.append(f"No document shows where {esc(dname)} obtained {esc(self.pq)}. "
-                               "The line from the product to the donor is dotted for that reason.")
+            if stock:
+                self.limits.append(f"{esc(dname)}'s accounts show it bought {esc(self.pq)} for transfer to units, "
+                                   "but name no seller. Who sold them to it is not documented.")
+            else:
+                self.limits.append(f"No document shows where {esc(dname)} obtained {esc(self.pq)}. "
+                                   "The line from the product to the donor is dotted for that reason.")
             self.limits.append(f"The {len(ds)} handovers are {esc(dname)}'s own reports. None is confirmed by the "
                                "receiving unit or an independent source, and the post date is not always the handover date.")
 
