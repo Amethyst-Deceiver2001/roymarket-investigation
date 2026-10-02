@@ -35,7 +35,7 @@ REG = REPO / "data" / "registry"
 SRC_DIR = REPO / "data" / "sources"
 PAGES = "https://amethyst-deceiver2001.github.io/roymarket-investigation/"
 sys.path.insert(0, str(REPO / "scripts"))
-from build_company_profile import ru_date  # noqa: E402
+from display_helpers import ru_date  # noqa: E402
 
 CBST = "ano-tsbst-centre-for-unmanned-systems-technologies"
 TIE_GRADE = {"t-doc": "doc", "t-open": "single", "press": "single"}
@@ -464,7 +464,7 @@ def render(ch, out):
     <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="e g-doc"/></svg> A document shows it</li>
     <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="e g-single"/></svg> Only the party's own word</li>
     <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="e g-open"/></svg> Not documented</li>
-    <li>Numbers refer to the sources at the end. Names link to full profiles.</li>
+    <li>Numbers refer to the sources at the end.</li>
   </ul>
 </header>
 <main>

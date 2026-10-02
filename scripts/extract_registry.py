@@ -40,7 +40,7 @@ from datetime import date
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-SNAPSHOT = REPO / "docs" / "_archive" / "index-2026-08-21.html"
+SNAPSHOT = REPO / "notes" / "archive" / "brief_snapshot_2026-08-21.html"  # moved out of docs/ 2026-10-02: never public
 OUT_DIR = REPO / "data" / "registry"
 
 

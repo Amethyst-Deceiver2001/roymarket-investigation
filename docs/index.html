@@ -2,56 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>РОЙ.МАРКЕТ / ЦБСТ — РОЙ.МАРКЕТ investigation</title>
-<link rel="stylesheet" href="assets/profile.css">
-<style>.topnav{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;padding:1rem 0;border-bottom:1px solid var(--rule-soft);font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
-.topnav a{color:var(--ink-2);text-decoration:none}.topnav a:hover{color:var(--accent)}
-.case-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);border-radius:3px;overflow:hidden;margin:1.25rem 0}
-.case-list .card{display:block;text-decoration:none;color:inherit}
-.case-list a.card:hover{background:var(--accent-soft)}
-.case-list .planned{opacity:.6}
-.route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.25rem;margin:1.5rem 0}
-.route{background:var(--panel);border:1px solid var(--rule-soft);border-radius:4px;padding:1.1rem;text-decoration:none;color:inherit;display:block}
-.route:hover{border-color:var(--accent)}
-.route .lbl{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.4rem}
-.route .name{font-family:var(--serif);font-size:1.15rem;display:block;margin-bottom:.35rem}
-.route .note{font-size:.85rem;color:var(--ink-2)}
-.case-body h2{margin-top:3rem}.case-body ul,.case-body ol{padding-left:1.3rem;margin:0 0 1rem}.case-body li{margin-bottom:.4rem}
-.case-body{max-width:100%}.case-body p,.case-body ul,.case-body ol{max-width:46rem}
-details.srcs summary{cursor:pointer;font-family:var(--mono);font-size:.78rem;color:var(--ink-2);margin:.5rem 0}
-
-/* ---------- landing page ---------- */
-.hero-row{display:flex;gap:2.5rem;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;margin-top:.5rem}
-.hero-text{flex:1 1 22rem;min-width:0;font-size:.95rem;color:var(--ink-2);line-height:1.6;max-width:34rem;padding-top:.6rem}
-.net-motif{flex:0 0 15rem;width:15rem;max-width:100%}
-.net-motif svg{width:100%;height:auto;display:block}
-.net-motif text{font-family:var(--mono);font-size:8.5px;fill:var(--ink-3)}
-.net-motif text.hub{fill:var(--ink-2);font-weight:600}
-.net-motif .cap{font-family:var(--mono);font-size:.64rem;color:var(--ink-3);text-align:center;margin-top:.5rem;letter-spacing:.02em}
-
-.case-feed{display:flex;flex-direction:column;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);border-radius:3px;overflow:hidden;margin:1.25rem 0}
-.case-feed a{display:grid;grid-template-columns:6.5rem 1fr;gap:1.1rem;align-items:baseline;background:var(--panel);padding:1rem 1.1rem;text-decoration:none;color:inherit}
-.case-feed a:hover{background:var(--accent-soft)}
-.case-feed .kick{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
-.case-feed h3{font-family:var(--serif);font-size:1.08rem;font-weight:400;margin:0 0 .3rem}
-.case-feed p{margin:0;font-size:.88rem;color:var(--ink-2);line-height:1.5;max-width:42rem}
-@media (max-width:34rem){.case-feed a{grid-template-columns:1fr}.case-feed .kick{order:-1}}
-
-.route-grid.secondary{margin-top:.5rem}
-.route-grid.secondary .route{padding:.9rem 1rem}
-.route-grid.secondary .name{font-size:1rem}</style>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>РОЙ.МАРКЕТ Investigation</title>
+<style>
+:root { --paper: #eceef1; --ink: #12161b; --ink-2: #414a55; --rule: #c8ced6;
+  --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --paper: #0e1216; --ink: #e6eaee; --ink-2: #b3bcc6; --rule: #2c353f; }
+}
+:root[data-theme="dark"] { --paper: #0e1216; --ink: #e6eaee; --ink-2: #b3bcc6; --rule: #2c353f; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.55 var(--sans); }
+main { max-width: 62ch; margin: 0 auto; padding: 12vh 16px 40px; }
+h1 { font: 600 32px/1.2 var(--serif); margin: 0 0 16px; text-wrap: balance; }
+p { color: var(--ink-2); margin: 0 0 14px; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 28px 0; }
+</style>
 </head>
 <body>
-<div class="wrap">
-<nav class="topnav" aria-label="Site"><a href="index.html">Home</a><a href="cases/index.html">Cases</a><a href="relationship-graph.html">Graph</a><a href="profiles/index.html">Profiles</a><a href="story.html">Guided read</a></nav>
-<div class="mast">
-  <p class="kicker">Open-source investigation</p>
-  <h1>РОЙ.МАРКЕТ / ЦБСТ</h1>
-  <p class="standfirst">ЦБСТ, the defence-tech body behind the РОЙ.МАРКЕТ military marketplace, and the network of manufacturers, training bodies and intermediaries around it.</p>
-</div>
-<section><div class="hero-row"><div class="hero-text"><p>Every entity, person and claim below sits in the registry with a source id and a grade. This page routes to the case studies, the full network graph, and the guided read.</p></div><div class="net-motif"><svg viewBox="-38 -14 276 228" role="img" aria-label="ЦБСТ and its 7 documented case-study networks"><circle cx="100" cy="100" r="17" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.2"/><text class="hub" x="100" y="103" text-anchor="middle">ЦБСТ</text><line x1="100" y1="100" x2="100.0" y2="38.0" stroke="var(--rule)" stroke-width="1"/><circle cx="100.0" cy="38.0" r="5.5" fill="var(--panel)" stroke="var(--ink-3)" stroke-width="1"/><text x="100.0" y="22.0" text-anchor="middle" dominant-baseline="middle">Архангел</text><line x1="100" y1="100" x2="148.5" y2="61.3" stroke="var(--rule)" stroke-width="1"/><circle cx="148.5" cy="61.3" r="5.5" fill="var(--panel)" stroke="var(--ink-3)" stroke-width="1"/><text x="161.0" y="51.4" text-anchor="start" dominant-baseline="middle">Гагаринг</text><line x1="100" y1="100" x2="160.4" y2="113.8" stroke="var(--rule)" stroke-width="1"/><circle cx="160.4" cy="113.8" r="5.5" fill="var(--panel)" stroke="var(--ink-3)" stroke-width="1"/><text x="176.0" y="117.4" text-anchor="start" dominant-baseline="middle">ГОУДРОН</text><line x1="100" y1="100" x2="126.9" y2="155.9" stroke="var(--rule)" stroke-width="1"/><circle cx="126.9" cy="155.9" r="5.5" fill="var(--panel)" stroke="var(--ink-3)" stroke-width="1"/><text x="133.8" y="170.3" text-anchor="start" dominant-baseline="middle">Овод</text><line x1="100" y1="100" x2="73.1" y2="155.9" stroke="var(--rule)" stroke-width="1"/><circle cx="73.1" cy="155.9" r="5.5" fill="var(--panel)" stroke="var(--ink-3)" stroke-width="1"/><text x="66.2" y="170.3" text-anchor="end" dominant-baseline="middle">Пиранья</text><line x1="100" y1="100" x2="39.6" y2="113.8" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 3"/><circle cx="39.6" cy="113.8" r="5.5" fill="var(--panel)" stroke="var(--ink-3)" stroke-width="1"/><text x="24.0" y="117.4" text-anchor="end" dominant-baseline="middle">Булат</text><line x1="100" y1="100" x2="51.5" y2="61.3" stroke="var(--rule)" stroke-width="1"/><circle cx="51.5" cy="61.3" r="5.5" fill="var(--panel)" stroke="var(--ink-3)" stroke-width="1"/><text x="39.0" y="51.4" text-anchor="end" dominant-baseline="middle">БАСиРТК</text></svg><p class="cap">7 of the registry's networks around ЦБСТ: 6 hold a direct tie (solid), the rest reach it through a neighbour (dashed)</p></div></div></section><section><p class="eyebrow">Start here — 7 case studies</p><div class="case-feed"><a href="cases/arkhangel.html"><span class="kick">Case study</span><div><h3>Проект «Архангел»</h3><p>An interceptor drone, combat-drone training and state-format diplomas from one Telegram network, with no public contract behind any of it.</p></div></a><a href="cases/gagaring.html"><span class="kick">Case study · ЦБСТ resident</span><div><h3>Гагаринг</h3><p>A company registered in September 2023 reports ₽2.16bn in 2025 revenue, is named a ЦБСТ resident by ЦБСТ itself, and appears in no public procurement record.</p></div></a><a href="cases/goudron.html"><span class="kick">Case study · ЦБСТ tie from the company's own channel</span><div><h3>ГОУДРОН</h3><p>A household-electrical wholesaler registered at an apartment sells «Набат» drone detectors with a price tier for soldiers.</p></div></a><a href="cases/ovod.html"><span class="kick">Case study · ЦБСТ resident</span><div><h3>Овод and Черезов</h3><p>Two Tula companies with one owner, a ₽1.3bn FPV-drone maker that ЦБСТ calls its flagship resident, and a founder shot in July 2026.</p></div></a><a href="cases/piranya.html"><span class="kick">Case study · ЦБСТ resident on the EU list</span><div><h3>Пиранья</h3><p>A company registered as software development sells combat FPV drones from one unit on its website, and the EU says it makes up to 10,000 a month.</p></div></a><a href="cases/bulat.html"><span class="kick">Case study · ЦБСТ tie on the maker</span><div><h3>Цыганов and «Булат»</h3><p>A Petersburg detector maker with hidden owners, a sole trader in Khimki, and ₽28.2m of МЧС contracts awarded without a tender.</p></div></a><a href="cases/basirtk.html"><span class="kick">Case study · ЦБСТ core</span><div><h3>НПЦ БАСиРТК</h3><p>A micro-enterprise with two employees reports ₽83.7m in its second year, hands cardboard drones to army units, and sits in ЦБСТ's accelerator.</p></div></a></div></section><section><p class="eyebrow">More ways in</p><div class="route-grid secondary"><a class="route" href="relationship-graph.html"><span class="lbl">Explore</span><span class="name">Network graph</span><span class="note">1,258 nodes and 2,178 sourced ties. Search, filter, click into any node.</span></a><a class="route" href="profiles/index.html"><span class="lbl">Look up</span><span class="name">Profiles</span><span class="note">252 entities, 440 people and the flagship products, one page each.</span></a><a class="route" href="story.html"><span class="lbl">Guided read</span><span class="name">From ЦБСТ to the Front</span><span class="note">A short guide to the supply chains, for a first read.</span></a><a class="route" href="cases/index.html"><span class="lbl">All cases</span><span class="name">Case index</span><span class="note">The full case list, including any in preparation.</span></a></div></section><section><p class="eyebrow">How to read a claim</p><div class="prose"><p>Every claim on these pages carries a source id that resolves to a captured document, and a grade. The registry holds 252 entities, 440 people and 8,881 sources. Where a claim rests on the subject's own channel alone, it is graded Open.</p></div><div class="legend"><span><span class="tag t-doc">Primary doc</span> verified in an official extract, a platform document, or a post that exists (proves it was said, not that it is true)</span><span><span class="tag t-press">Press-reported</span> attributed to a named outlet, wording not verified</span><span><span class="tag t-open">Open</span> unresolved: not published as fact</span></div></section>
-<p class="footnote">Generated from the registry by <code>scripts/build_case_pages.py</code>. Source ids resolve in the sources table; no claim is asserted without one.</p>
-</div>
+<main>
+  <h1>РОЙ.МАРКЕТ investigation</h1>
+  <p>An open-source investigation of ЦБСТ, the Russian drone-industry body behind the РОЙ.МАРКЕТ
+  marketplace, and of the companies, products and deliveries around it.</p>
+  <p>The site is being rebuilt. The earlier case studies and company profiles have been withdrawn
+  while the presentation is redesigned around the evidence for each supply chain.</p>
+  <hr>
+  <p>Updated 02.10.2026.</p>
+</main>
 </body>
 </html>

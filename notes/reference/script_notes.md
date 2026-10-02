@@ -322,6 +322,18 @@ this vocabulary at the same time — don't leave it for a later backfill
 pass, or the entry silently falls back to the generic label again.
 
 
+## Product research: `product-researcher` agent + `verify_findings.py` (added 2026-09-30)
+
+`.claude/agents/product-researcher.md` researches what listed entities make from Russian
+primary sources and returns a findings JSON; it may write only raw captures into
+`data/sources/` and that file. **`scripts/verify_findings.py <findings.json>`** (local, no
+network) checks every `verbatim_ru`/`text_ru` fragment against the cited raw file (case, ё,
+quote style and punctuation folded; `\uXXXX` page state decoded; fails on a missing file or
+a quote not in it) and warns on `name_only` identity. The 2026-09-30 tranche needed it: 15
+quotes cited the wrong capture, one spliced two patent sentences, two came from articles
+that were only linked. The agent never wires the registry; the main session does, and
+`claim-verifier` is the independent second pass on the wired slug.
+
 ## Telegram post coverage: `tg_post_coverage.py` (added 2026-10-01)
 
 Local, no network. Modes: no args (ЦБСТ posts naming a registry entity, unarchived/uncited/unreviewed, grouped by term, no-tie-on-file first), `--slug`, `--term` (every hit plus `links`), `--all-channels`, `--include-archived`, `--max N`, `--check` (exit 1 on an unreviewed no-tie hit), `--out`. Terms come from `name_ru`, `brand_ru` and `name_history` with legal forms and quotes stripped; terms under 5 letters and a small stop list are dropped; a term hitting >=25 posts and >=1.5% of the channel is reported as generic (counts only). A hit is ARCHIVED (a TGPOST/TGWEB file for that exact channel+msg in `sources.json`), CITED (named in registry prose, no file), REVIEWED (msg id in the entity's `cbst_channel_review.posts_read`) or UNSEEN. One review on any candidate slug closes the post for that term, so keep `posts_read` to posts actually read and say in `note` what stays open. Lessons: SQLite does not fold Cyrillic; fold in Python. Ended at 3 seconds for the ЦБСТ channel after a substring prefilter (21 s without it, identical output). First run (2026-10-01) produced 42 no-tie hits across 16 terms; reading them closed 8 terms as namesakes and left 8 real leads (Ростех, Молот-ПВО, Элиарс, Сармат, Кольская верфь, Платформа НТИ, Азимут 716).

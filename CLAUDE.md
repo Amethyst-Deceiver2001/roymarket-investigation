@@ -3,9 +3,9 @@
 This repo is a standalone spin-off of a ЦБСТ/РОЙ.МАРКЕТ (Russian "military
 marketplace" and its parent defence-tech body) OSINT investigation, migrated
 out of the `wb_watch` project on 2026-08-18 once it outgrew "annex to a WB
-tracker" scope. Read `notes/rebuild_plan.md` first in any new session — a lean live
-status doc (rewritten 2026-09-19) with current state, standing policy and
-pointers; the old 4,284-line session log is preserved verbatim at
+tracker" scope. Read `notes/rebuild_plan.md` first in any new session — the live
+plan (rewritten 2026-10-02 around chain views and the B1-B8 model breaks): direction,
+ordered work, decisions waiting on the user, standing policy; the old 4,284-line session log is preserved verbatim at
 `notes/archive/rebuild_plan_archive_2026-09-19.md`.
 
 ## This repo has its own Telegram scraping pipeline — separate from wb_watch
@@ -281,7 +281,7 @@ if a real malformed-data incident calls for it, not preemptively.
 date to `data/registry/_source_content_cache.json`; only processes files not
 already cached, so re-run it after adding new sources rather than every
 session) → `python3 scripts/extract_registry.py` (one-time scaffold from the
-frozen `docs/_archive/` snapshot, consuming that cache; re-runnable while
+frozen brief snapshot `notes/archive/brief_snapshot_2026-08-21.html` (moved out of `docs/` 2026-10-02), consuming that cache; re-runnable while
 Phase 1 continues) → `python3 scripts/check_registry.py` before trusting or
 building from anything. All three are local file processing — no network,
 safe to run repeatedly.
@@ -398,7 +398,7 @@ A maker's goods reach buyers through legal entities that are not the maker: the 
 - **Brand without a legal entity:** an entity may be a brand stub with `legal_entity_status: "unresolved"` and no ИНН (КБ «СПЕКТР», `kb-spektr-novosibirsk`), so sellers can point at it without a guessed identity. Never fill the ИНН from a name match; the three same-name Новосибирск ООО of 2019 are in `notes/roymarket_vendor_leads.md`, not in the registry.
 - **`related_entities[].relationship_type: "operated-brand"`:** a company or sole trader that traded under the other record's brand during a dated period, per a document. The older prose `dealer` entries stay on file (the case-study builder reads them); where a seller also carries `sells_for` for the same pair, the graph draws only the structured edge.
 - A seller's cluster is drawn only if a path reaches the ЦБСТ hub; otherwise it is listed in `detached_ids`. The РОЙ.МАРКЕТ operator is `ooo-mptm` (role `platform_operator`, `cbst_tie` t-doc from ЦБСТ's 2025 Минюст report s0207 and the supplier offer s8817); non-resident vendors point at it with `sells_for`, so they join the graph through it.
-- **PII scope, third category:** a seller (usually a sole trader) gets an entity record, and its owner a person record only on user direction, when it has a **documented link to a registry manufacturer or to РОЙ.МАРКЕТ**. A marketplace listing alone is not enough. Same sourcing rule as every identifying field: the ИП's ИНН comes from its ЕГРИП extract, never from a plausible namesake, and no date of birth or address is filled without a source. Individuals recorded under this category so far: Братеньков, Маврин (person of interest, user, 2026-10-01). ИП Карпушин has an entity record but no person record.
+- **PII scope, third category:** a seller (usually a sole trader) gets an entity record, and its owner a person record only on user direction, when it has a **documented link to a registry manufacturer or to РОЙ.МАРКЕТ**. A marketplace listing alone is not enough. (2026-10-02: an owner who is involved in the trade is a person of interest under the PII section's amended rule.) Same sourcing rule as every identifying field: the ИП's ИНН comes from its ЕГРИП extract, never from a plausible namesake, and no date of birth or address is filled without a source. Individuals recorded under this category so far: Братеньков, Маврин (person of interest, user, 2026-10-01). ИП Карпушин has an entity record but no person record.
 
 ## Products (`data/registry/products.json`, added 2026-10-02 at user direction)
 
@@ -406,8 +406,10 @@ One record per product with a stable slug, so a product sold by several dealers 
 
 - **Listings and deliveries are dated events on the product, not graph edges.** A listing is `{id, version|null, channel, url, seller{entity|null, storefront, identity}, status, as_of, source_id, basis, asserted_by}`; `status` uses the sale vocabulary of the relation envelope. A storefront whose seller is not a registry entity says so in `seller.identity` and keeps `entity: null`; no entity is created for a dealer without a documented link (PII scope, third category). A seller entity other than the maker needs a `sells_for` edge to the maker, or `check_registry.py` warns.
 - **A listing with no `source_id` is a placeholder** and warns. The two WB brand-store listings of «Булат» are in that state: capture the pages.
-- **A delivery** needs `{date, version, donor, carrier, recipient, source_channel, post_id, asserted_by, credibility, source_id}`; `qty` when known. Several channels reporting one handover are one event with several sources. None is recorded yet; whether precise units, locations and named volunteers may be recorded is the user's decision, still open.
-- **Deliveries come from `python3 scripts/delivery_signal_scan.py`** (delivery verb near a recipient near a product; local, 22 s; class A names a registry product, class B only a category). A hit is read in full before it becomes a delivery. The donor of a recorded delivery must be a live registry entity, so volunteer groups and individuals are not recorded until the user decides; recipients are recorded at unit, region or direction level, never a town or a person; `version` may be null when the post names only the product. `notes/delivery_signal_scan_20261002.md` has the method, limits and first result («Булат»: 16 donor deliveries).
+- **A delivery** needs `{date, version, donor, carrier, recipient, source_channel, post_id, asserted_by, credibility, source_id}`; `qty` when known. Several channels reporting one handover are one event with several sources. Recorded so far: 16 («Булат», all from Фонд «Наша Правда»).
+- **Deliveries come from `python3 scripts/delivery_signal_scan.py`** (delivery verb near a recipient near a product; local, 22 s; class A names a registry product, class B only a category). A hit is read in full before it becomes a delivery. `version` may be null when the post names only the product.
+- **Delivery rules (user, 2026-10-02).** The fact of a delivery matters more than the exact recipient. Record the recipient as the post names it: a unit, a town (allowed), or only a direction (enough). A recipient unit may sit in the rear (a «Булат» guarding a base inside Russia or in occupied Donetsk), so a delivery never implies combat use and no field-use claim is drawn from it. Donors and carriers may be volunteer groups and individuals: anyone involved in a delivery is a person of interest (PII section). Every donor or volunteer report defaults to `asserted_by: self`, `credibility: single`; it is upgraded only by an independent second source, such as the receiving unit's thank-you letter. Units named only in a manufacturer's marketing still do not enter `military_units.json` (peer audit 15.09.2026); units named in a recorded delivery do.
+- **Unit names (user, 2026-10-02).** A unit can appear as `в/ч XXXXX`, a full official name with honorifics («123-я отдельная гвардейская мотострелковая … бригада имени …»), a short military abbreviation («123 омсбр») or an informal name («Пятнашка»). Keep every form the sources give on the unit record, each with its source. A bare `в/ч` number is resolved to the formation's name only through a source that states the pairing (a sanctions entry, a court or procurement record), never from a lookup site alone. The English form and the display rule are in `notes/rebuild_plan.md` until settled. `notes/delivery_signal_scan_20261002.md` has the method, limits and first result («Булат»: 16 donor deliveries).
 - **In the graph (schema v11):** a product record is one `product` node (`product::<maker>::<slug>`), and the maker's own per-version `products[]` leaves that it covers are not drawn separately. Each distinct storefront in `listings[]` is a `storefront` node (no legal identity), linked `lists` to the product (the latest listing per storefront, label = channel) and `operated_by` to its seller entity only when the listing names one; a dealer with no registry entity stays a storefront. Entity nodes carry `product_count` for a count badge and expand-on-click in a viewer (the viewer is outside the repo). `clone_of` (`{product, status: alleged|shown|denied, asserted_by, source_id}`) is validated but unused: a product is a clone only where a cited source says so, never because it competes in the same class (the «QD-HD-003» and «Сокол» manuals in the 3mx chat are competing devices per the registry's own read, not clones of «Булат»).
 - `python3 scripts/product_chain.py bulat` prints the chain (maker, versions, listings with their basis and source, deliveries, open questions). 
 
@@ -441,7 +443,11 @@ verified against a primary source, don't use it. Full quote-handling rules
 (drafting from the original Russian, `[так в оригинале]`, italic-vs-guillemets)
 are in `STYLE_GUIDE.md` §3.1.
 
-## Company profiles: generated, not hand-written
+## Company profiles and case pages: archived 2026-10-02
+
+**Withdrawn at user direction, not retrofitted.** The case pages, the company/person/product profiles, the profile index, the old landing page and `story.html` moved from `docs/` to `exhibits/archive/site_2026-10-02/`; their generators (`build_case_pages.py`, `build_company_profile.py`, `build_person_profile.py`, `build_product_profile.py`, `build_profile_index.py`) and `templates/` moved to `scripts/archive/`. Do not run or extend them. New reader pages are built after the design system redo and a new landing page (`notes/rebuild_plan.md`, track A), and carry no internal notation: no source ids, slugs, field names or file names; sources are cited in plain words with a public link. Shared display helpers (`ru_date`, `source_type_label`) are in `scripts/display_helpers.py`. The text below describes the archived generator and is kept for its rules on images and PII fields, which still apply to new pages.
+
+### Archived: how the profile generator worked
 
 `docs/profiles/<slug>.{html,md}` are per-entity profile pages, generated from
 `data/registry/` by `scripts/build_company_profile.py` — not edited by hand
@@ -497,34 +503,30 @@ Ground/satellite views of a facility are just `images[]` entries distinguished
 by caption text (e.g. `_ground.jpg`/`_satellite.jpg` naming, already used at
 `ooo-aeromaks`) — there's no separate schema field for them.
 
-The landing page (`docs/index.html`) links the profile index (`docs/profiles/index.html`) and every case page carries the same site nav; both are generated (see Publishing).
 
 ### Product profiles and `relationship_type`
 
-Product profiles (`build_product_profile.py`, `FLAGSHIP_PRODUCTS`, flagship products only) and the `related_entities[].relationship_type` vocabulary are documented in `notes/reference/script_notes.md`. Standing rules: extend `FLAGSHIP_PRODUCTS` one real product at a time; set `relationship_type` from `graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES` whenever adding a `related_entities[]` entry; never populate `competitor` without a sourced claim.
+Product profiles (`build_product_profile.py`, `FLAGSHIP_PRODUCTS`; archived 2026-10-02) and the `related_entities[].relationship_type` vocabulary are documented in `notes/reference/script_notes.md`. Standing rules: extend `FLAGSHIP_PRODUCTS` one real product at a time; set `relationship_type` from `graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES` whenever adding a `related_entities[]` entry; never populate `competitor` without a sourced claim.
 
 
 ## Publishing
 
-**Changed 2026-09-20 at user direction: the old brief is no longer the landing page.** `docs/` (repo Settings → Pages → `/docs`) is now a small site:
-
-- `docs/index.html` — generated landing page (routes to cases, the graph explorer, the profile index, `story.html`).
-- `docs/cases/index.html`, `docs/cases/<slug>.html` — case studies, generated from `notes/case_study_<slug>.md` plus a static graph excerpt and a resolved sources table. Case list and status live in `CASES` in `scripts/build_case_pages.py` (seven cases: Архангел, Гагаринг, ГОУДРОН, Овод, Пиранья, Цыганов/Булат and НПЦ БАСиРТК, all published). Grades use the registry vocabulary (`{doc}` Primary doc, `{press}` Press-reported, `{open}` Open); a case note must state the entity's registry tier and ЦБСТ-tie position accurately.
+**Changed 2026-10-02 at user direction: the site is withdrawn pending a redesign.** `docs/` (repo Settings → Pages → `/docs`) now holds a hand-written holding page (`docs/index.html`), the graph explorer (`relationship-graph.html`, re-embedded by `scripts/refresh_graph_page_data.py`) and `docs/images/`. The seven case studies (case notes still in `notes/case_study_<slug>.md`) and all profiles are archived (see "Company profiles and case pages"). Order of work: design system redo, new landing page, then new pages. Until the public cutoff, new reader pages (chain views first) go out as **private Artifacts for preview** only.
 
 **Changed 2026-09-21 at user direction: the old written brief is no longer public at all.** `docs/dossier.html` (the former `docs/index.html`) is moved to `notes/dossier_draft.html` and is **not** linked from any published page — the user's stated reason: it's a first-draft prose document whose facts should have been migrated into `data/registry/*.json` rather than kept as free text, and it must not ship as a public file. Treat it as an internal working note:
-- Every nav/route link to `dossier.html` across `scripts/build_case_pages.py` (the shared `NAV`/route grid), `scripts/build_profile_index.py`, and `docs/story.html`'s CTA grid has been removed — don't re-add one.
+- No page links `dossier.html` or the draft; don't add one. Its frozen 2026-08-21 snapshot (which `extract_registry.py` reads) moved from `docs/_archive/` to `notes/archive/` on 2026-10-02, because `docs/` is public.
 - `scripts/id_patterns.py`'s "already documented?" cross-check and `scripts/check_tag_balance.py`'s default target were repointed to the new path (the former, `docs/index.html` the latter) — keep them pointed at `notes/dossier_draft.html`, not a `docs/` path, if this file is touched again.
 - The standalone Artifact companion to the old brief (5450bf7e) was retired on 2026-10-02 at user direction after an audit (`notes/brief_leftovers_20261002.md`); a local copy is `data/sources/ARTIFACT_20260826_infrastructure-entity-brief.html`. Other Artifact pages are a separate publish channel from `docs/`; ask before deleting one.
 - Real, still-unregistered facts in `notes/dossier_draft.html` are a backlog, not something to re-publish: migrate them into `corrections_entities.json`/`corrections_people.json` like any other correction, the same as the rest of this project's registry-is-truth discipline.
 
-**Pushing `docs/` publishes it (Pages serves `/docs`): a Pages-only page is still public, so push new landing or case pages only on the user's explicit go-ahead.** Regenerate after a case note or registry change: `python3 scripts/build_case_pages.py`, then `python3 scripts/check_tag_balance.py docs/index.html docs/cases/*.html`.
+**Pushing `docs/` publishes it (Pages serves `/docs`): a Pages-only page is still public, so push a new or changed page only on the user's explicit go-ahead.**
 
 ## Tag-balance check before any publish
 
 Run `scripts/check_tag_balance.py` (see the seeded memory
 `html_brief_tag_balance_check`) before publishing any generated page; with
-no arguments it checks `docs/index.html`, and for the rest pass them
-explicitly (`docs/cases/*.html docs/profiles/index.html`, etc.).
+no arguments it checks its default target; pass every other page
+explicitly (`docs/index.html`, `exhibits/chain_*.html`, etc.).
 
 ## PII handling
 
@@ -580,6 +582,8 @@ imagery, even though it isn't press-sourced. The existing rule (own
 channel/company site/press/official event) still governs PEPs and
 principals; this paragraph only widens what counts as "public presence"
 for confirmed affiliated participants.
+
+**Policy amended 2026-10-02 at explicit user direction: everyone involved is a person of interest.** Anyone who takes part in the network's activity (a donor or volunteer who hands over equipment, a carrier, a seller, a signatory, a course participant) is in scope, with the same sourcing rule for every identifying field. A person who is merely connected (a family member with no stake or role in a company) is not; record such a person only as `graph_tier: "reference"` where a record is needed at all.
 
 **Proportionality still applies.** Finding 500+ names in a single chat scan
 does not mean 500+ full person records — triage for a real signal (exposed
