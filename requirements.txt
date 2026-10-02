@@ -1,7 +1,7 @@
-# What tests/, check_registry.py and the page builders need.
-# The live scrapers and pull scripts need more (telethon, python-dotenv, requests);
-# install those on the machine that runs them.
+telethon>=1.36
+python-dotenv>=1.0
 openpyxl>=3.1
 beautifulsoup4>=4.12
+# added 2026-10-02 for tests/ and CI: display_helpers (logo trimming), test runner
 pillow>=10
 pytest>=8
