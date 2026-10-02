@@ -84,6 +84,13 @@ def main():
     assert {"slug": "ooo-trimiks", "list": "ch", "name": reg["7802942873"]["name"]} \
         in first["registry_claims_not_matched"]
 
+    # A note that names a list (ЦБСТ: "a US entry under a similar name belongs to a
+    # different company") is not a claim; only the regime field counts.
+    cbst = next(r for r in reg.values() if r["slug"].startswith("ano-tsbst"))
+    assert not any(r["slug"] == cbst["slug"] and r["list"] == "us"
+                   for r in sw.compare({"lists": {"us": {}}, "hits": []}, None, reg)
+                   ["registry_claims_not_matched"]), "note text must not count as a US claim"
+
     later = sw.compare({"lists": result["lists"], "hits": eu["hits"]}, result, reg)
     assert len(later["removed"]) == 1 and later["removed"][0]["list"] == "us", later["removed"]
     # A list that failed this run (not in lists) reports no removals.

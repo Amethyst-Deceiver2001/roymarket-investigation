@@ -236,19 +236,27 @@ def compare(result: dict, previous: dict | None, registry: dict[str, dict]) -> d
     removed = [prev[k] for k in sorted(prev.keys() - cur.keys())
                if prev[k]["list"] in scanned and prev[k]["list"] in prev_scanned]
 
+    def regimes(rec) -> str:
+        # Only the regime field: a note may name a list to say the record is NOT on it.
+        out = []
+        for s in rec["sanctions"]:
+            r = s.get("regime")
+            out.extend(r if isinstance(r, list) else [r] if r else [])
+        return " | ".join(map(str, out))
+
     by_slug: dict[str, set] = {}
     for h in result["hits"]:
         by_slug.setdefault(h["slug"], set()).add(h["list"])
     records = {r["slug"]: r for r in registry.values()}
     not_in_registry, not_on_list = [], []
     for slug, lists in sorted(by_slug.items()):
-        text = json.dumps(records[slug]["sanctions"], ensure_ascii=False)
+        text = regimes(records[slug])
         for lst in sorted(lists):
             if not REGIME_KEYS[lst].search(text):
                 not_in_registry.append({"slug": slug, "list": lst,
                                         "name": records[slug]["name"]})
     for slug, rec in sorted(records.items()):
-        text = json.dumps(rec["sanctions"], ensure_ascii=False)
+        text = regimes(rec)
         for lst in sorted(scanned):
             if rec["kind"] == "entity" and rec["sanctions"] and REGIME_KEYS[lst].search(text) \
                     and lst not in by_slug.get(slug, set()):

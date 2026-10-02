@@ -43,6 +43,37 @@ jobs:
             echo "no previous run: this run is the baseline"
           fi
 
+      - name: "TEMPORARY: probe the Ukrainian State Register of Sanctions API (PR runs only)"
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import json, re, urllib.request
+          base = "https://api-drs.nsdc.gov.ua"
+          def get(path):
+              req = urllib.request.Request(base + path, headers={"User-Agent": "roymarket-investigation probe"})
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as r:
+                      return r.status, r.headers.get("content-type"), r.read()
+              except Exception as ex:
+                  return None, None, str(ex).encode()
+          for path in ["/swagger/", "/swagger/doc.json", "/swagger/swagger.json", "/swagger/v1/swagger.json",
+                       "/swagger-json", "/api-json", "/openapi.json", "/swagger/swagger-initializer.js"]:
+              st, ct, body = get(path)
+              print(f"== {path}: {st} {ct} {len(body)} bytes")
+              txt = body.decode("utf-8", "replace")
+              if path.endswith("/") or path.endswith(".js"):
+                  print("   urls:", sorted(set(re.findall(r'url["\']?\s*[:=]\s*["\']([^"\']+)', txt)))[:10])
+              try:
+                  spec = json.loads(txt)
+              except Exception:
+                  continue
+              for p, ops in (spec.get("paths") or {}).items():
+                  for m, op in ops.items():
+                      params = [x.get("name") for x in op.get("parameters", []) if isinstance(x, dict)]
+                      print(f"   {m.upper():6} {p}  params={params}  {op.get('summary', '')[:80]}")
+          PY
+
       - name: Download lists and match
         run: |
           python3 scripts/sanctions_watch.py --raw-dir raw --out sanctions_watch.json \
