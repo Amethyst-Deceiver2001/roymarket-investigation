@@ -252,3 +252,85 @@ underneath a submission.
   Empirical Studies on Graph Visualisation*: https://arxiv.org/pdf/1809.00270
 - B4Ukraine, sanctions submissions and document intake:
   https://b4ukraine.org/what-we-do/whistleblower
+
+---
+
+## Addendum 2026-10-02: after the reader-layer rebuild (main at `cb248c3`)
+
+The 09-30 review above is partly overtaken. The case pages, profiles and
+`story.html` it critiqued are archived. §4 defects 1–3 and 5 went with them.
+The direction now in `notes/rebuild_plan.md` (chain views as the main exhibit,
+one design system, B4 citations with no internal notation, a graph explorer
+for neighbourhoods only) answers §5 B, C and E. What follows is only what is
+still open or new.
+
+### Checked and sound
+
+- The landing page counts match the registry: 73 ЦБСТ ties (60 doc, 13 rep),
+  35 of them sanctioned.
+- The Сидякин post-618 opening is the best self-incrimination open the project
+  has had.
+- The «Булат» chain view prices contracts per unit and puts the donor's
+  audited stock (50 units) beside 17 handover posts. Specialists can use this
+  as it stands.
+- `check_registry.py` raises 29 errors in a cloud checkout. All are `media[]`
+  files missing because `data/sources/` is not in the clone. Two test files
+  fail only on missing packages (openpyxl, bs4). Neither is a data defect.
+
+### Still open, in priority order
+
+1. **The hero product's sanctions rest on an aggregator.** On the landing page
+   and in both chain views, Тримикс's "Switzerland, EU, US, Ukraine" is
+   sourced to "Sanctions-list entries compiled by OpenSanctions". The work
+   exists to support sanctions lobbying, so each regime should cite its own
+   primary entry: OJ regulation and entry number, OFAC SDN entry, SECO
+   annex, GUR page. Coverage Audit task 1 already covers this. Do it for
+   every entity on a reader page before chain views go public.
+2. **The public graph explorer contradicts the new reader rules.**
+   `docs/relationship-graph.html` is still public at its URL, although the
+   landing page no longer links it. It embeds schema v11, the old
+   `t-doc`/`tier` vocabulary and raw `sNNNN` ids, and weighs 1.9 MB. Either
+   take it off Pages until B6, or regenerate it from v12 with
+   `reader_grade()`.
+3. **The sanctions gap still has no page.** Of the 73 ЦБСТ-tied
+   organisations, **38 carry no sanctions entry; 31 of those ties are
+   doc-graded.** The largest by latest revenue are Смарт Текнолоджис
+   ₽3.93bn, Гагаринг ₽2.16bn, ОПКБ Экспломет ₽0.78bn, Метаскан ₽0.77bn and
+   Авирон ₽0.27bn. (Each needs re-screening against current lists before
+   being called unlisted.) That is the lobbying deliverable. It belongs in
+   A6 entity pages as a regime-by-regime table that includes "not listed,
+   checked DD.MM.YYYY", plus one gap list.
+4. **The definition of "Not documented" reads badly.** "The link must exist,
+   but no document on file shows it" asserts what it admits it cannot show.
+   Suggested: "Not documented: inferred from [what], with no document on file
+   that shows it."
+5. **Recipients are printed with unmarked euphemisms.** The chain view's
+   handover list prints «участники спецоперации» and similar strings with no
+   guillemets. They read as the page's own words (STYLE_GUIDE §5.1). Quote
+   them and gloss them, or attribute the line ("as the donor puts it").
+6. **"Reported" merges self-report and press.** That is fine for lay
+   readers. Specialists need the distinction, so state the publisher type in
+   each source note ("the company's own post", "press: Kommersant"). Most
+   notes already do; make it a rule in `describe_source()`.
+7. **Choose the next chain views by lobbying value.** The best candidates are
+   products of unlisted, doc-tied makers that have contracts or handovers:
+   Гагаринг «Кузнечик» (case note already written), then a Смарт Текнолоджис
+   or Экспломет product once its record is read. «Пиранья» is already
+   EU-listed, so it is lower priority for lobbying but strong for lay readers.
+8. **Machine-readable output** (§5.2 H) and **a methodology page** (§5.2 I)
+   are still absent. The landing page's "How this is made" paragraph is a
+   start; the provenance and hash catalogue is not yet public.
+9. **Russian edition.** It is still listed as "later". The landing page is
+   generated and short, so a written RU landing page is the cheapest first
+   step.
+
+### Housekeeping
+
+- Add a flag to `check_registry.py` that skips file-existence checks, and add a
+  `requirements.txt` (pytest, openpyxl, bs4, jinja2), so cloud sessions can
+  validate.
+- The `claude/project-thread-v1pj0k` branch (status board, `--diff`,
+  `--pull-queue`) is unmerged.
+- Decisions waiting on the user: unit naming (the proposal in
+  `rebuild_plan.md` is sound) and the graphic-content default (stills only,
+  content warning).
