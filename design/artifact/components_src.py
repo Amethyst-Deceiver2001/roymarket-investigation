@@ -31,6 +31,11 @@ def fig(mid, who, ref="1", note=""):
     return figure_html(MEDIA[mid], data_uri(mid), who, f'<sup class="rm-ref"><a href="#">{ref}</a></sup>', note)
 
 
+def svg_uri(mid):
+    """An SVG media file inline, for a logo card."""
+    return "data:image/svg+xml;base64," + base64.b64encode((HERE.parent.parent / MEDIA[mid]["file"]).read_bytes()).decode()
+
+
 def frame(mid, ref):
     m = MEDIA[mid]
     t = (m.get("frame") or {}).get("t") or "time not recorded"
@@ -49,7 +54,7 @@ CARDS = {
     "Masthead": ("Page head", 190, """<header style="max-width:760px">
 <p class="rm-eyebrow">Draft · 02.10.2026</p>
 <h1 class="rm-h1">«Булат» <span class="rm-muted">from ЦБСТ to the front line</span></h1>
-<p class="rm-dek">Portable UAV detector made by ООО «Тримикс», a company under sanctions. It is sold on marketplaces and through dealers, and bought by state agencies under 3 contracts.</p>
+<p class="rm-dek">Portable UAV detector made by 3mx (ООО «Тримикс»), a company under sanctions. It is sold on marketplaces and through dealers, and bought by state agencies under 3 contracts.</p>
 </header>""", """# Masthead
 
 The page head: an eyebrow, the finding as a flat headline, and a dek. Use one per page.
@@ -94,15 +99,16 @@ The only red on a page. It marks an entity under sanctions and always names the 
     "ChainCard": ("Chain", 260, f"""<article class="rm-card hub" style="width:240px"><header><span class="rm-kind">{kind_icon("company")}Hub</span></header>
 <h3 class="rm-name">АНО «ЦБСТ»<small>Centre for Unmanned Systems &amp; Technologies</small></h3>
 <p><span class="rm-sanction">Sanctioned <b>Ukraine</b></span><sup class="rm-ref"><a href="#">1</a></sup></p></article>
-<article class="rm-card" style="width:240px"><header><span class="rm-kind">{kind_icon("company")}Maker</span></header>
-<h3 class="rm-name">ООО «Тримикс»</h3><p>Revenue 2023: ₽45.6m<sup class="rm-ref"><a href="#">5</a></sup></p>
+<article class="rm-card" style="width:240px"><header><span class="rm-kind">{kind_icon("company")}Maker</span><img class="rm-logo on-dark" src="{svg_uri("m0019")}" alt="Logo of ООО «Тримикс»"></header>
+<h3 class="rm-name">3mx<small>ООО «Тримикс»<sup class="rm-ref"><a href="#">4</a></sup></small></h3><p>Revenue 2023: ₽45.6m<sup class="rm-ref"><a href="#">5</a></sup></p>
 <p><span class="rm-id">ИНН 7802942873</span></p></article>
 <article class="rm-card absent" style="width:240px"><header><span class="rm-kind">{kind_icon("storefront")}Not sold here</span></header>
 <h3 class="rm-name">РОЙ.МАРКЕТ</h3><p>No listing found.</p></article>""", """# ChainCard
 
 One object in a chain: a company, product, storefront, buyer or recipient list.
 
-- The header holds the kind mark and kind label ("Maker", "Sells", "State buyer"). The name in Spectral follows: Cyrillic as registered, with an English gloss in `<small>`.
+- The header holds the kind mark and kind label ("Maker", "Sells", "State buyer"), and the company's logo at the right when a media record of genre `logo` exists. A logo drawn for a dark ground (`logo_ground: dark`) sits on the dark plate. Never a product photo in its place.
+- The name in Spectral follows. With a documented primary brand (`display_name()`), the brand leads and the registered legal name sits directly beneath it in `<small>`, footnoted to the brand's source (here trademark RU1125967). Without one, the legal name leads with its English gloss. The legal name is never hidden: sanctions lists name the company, not the brand.
 - `.hub` is for ЦБСТ only: a 2px ink border. There is no hub colour.
 - `.absent` is a dashed card with no shadow, for something a reader would expect that is not there.
 - Rows are `p` elements at the note size; each claim ends in a `rm-ref` footnote.
@@ -133,7 +139,7 @@ A military unit's mark: a monochrome APP-6 hostile frame (diamond) with an echel
 - A recipient that is a town or a direction gets no unit mark."""),
 
     "Quote": ("Text", 190, """<blockquote class="rm-quote" style="max-width:560px"><span class="rm-label">Original Russian</span>«Всю нашу продукцию можно приобрести только у нас на сайте 3mx.ru или у наших дилеров.»
-<cite>ООО «Тримикс» customer chat, 02.09.2026<sup class="rm-ref"><a href="#">9</a></sup></cite>
+<cite>3mx customer chat, 02.09.2026<sup class="rm-ref"><a href="#">9</a></sup></cite>
 <span class="gloss">"All our products can be bought only from us on our site 3mx.ru or from our dealers."</span></blockquote>""", """# Quote
 
 A verbatim quote in the original Russian, with its source and a separate English gloss.
@@ -177,7 +183,7 @@ One picture as evidence: the image, who published it, what is visible, its date 
 - Records marked `internal` or still awaiting a blur (`blur_pending`) are never rendered (`media_about()`).
 - Example: the «Булат» v.4 card on the dealer's own site."""),
 
-    "VideoCard": ("Media", 400, f'<div style="width:260px">{fig("m0063", "ООО «Тримикс»", "3", "Video. Original on VK Clips and YouTube; the post gives no link. Not archived.")}</div>', """# VideoCard
+    "VideoCard": ("Media", 400, f'<div style="width:260px">{fig("m0063", "3mx", "3", "Video. Original on VK Clips and YouTube; the post gives no link. Not archived.")}</div>', """# VideoCard
 
 A video shown as its poster still plus a line saying where the original is and whether we hold a copy.
 

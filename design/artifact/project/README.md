@@ -8,6 +8,7 @@ Source of truth: `design/roymarket.css` in the investigation repository. This ar
 
 - **The headline is the finding, stated flat.** "«Булат» from ЦБСТ to the front line". No hedge in the head; the evidence earns it below.
 - **English is analysis, Russian is evidence.** Names appear as registered, in Cyrillic: ООО «Тримикс», АНО «ЦБСТ». An English gloss sits beneath in smaller sans. Verbatim quotes stay in the original Russian, punctuation and typos kept, with a gloss apart.
+- **Brand first, legal name beneath.** A reader knows 3mx before ООО «Тримикс». A card leads with a company's documented primary brand and sets the registered name directly under it, footnoted to the brand's source (a trademark record, the company's own site). The legal name is never dropped: sanctions lists name the company. A product name («Булат») is never a company brand, and a company without a documented brand leads with its legal name.
 - **No internal notation.** Never print source ids, slugs, field names or file names. A footnote resolves to plain words ("State procurement record no. 1463204748024000101, zakupki.gov.ru") and a public link where one exists.
 - **Identifiers are bare digits in mono**: ИНН 7802942873, ОГРН, в/ч numbers.
 - **Dates in the Russian convention**: 08.09.2025.
