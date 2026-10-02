@@ -5,17 +5,15 @@ Corporate-genealogy OSINT investigation into ЦБСТ (Центр беспило
 — a companion piece to Alexey Kovalev's Foreign Policy article, and a
 sanctions-lobbying reference document.
 
-- **Read the brief**: `docs/index.html`, or the published Artifact
-  (https://claude.ai/code/artifact/5450bf7e-7f7b-4788-93c0-761503dd5ea4 —
-  only republished at an explicit investigation cutoff, so it lags the
-  local file; see `CLAUDE.md`'s "Publishing" section).
+- **Published landing page**: `docs/index.html`. The former brief is internal
+  only at `notes/dossier_draft.html`; it is not the current reader-facing
+  overview. See `CLAUDE.md`'s "Publishing" section before changing published
+  files.
 - **New Claude Code session on this repo**: read `CLAUDE.md` for working
   rules and pipeline discipline, then `notes/rebuild_plan.md` for current
-  workstream status (each section ends with its own "Still open"/"Status"
-  note — that's the up-to-date pending-work list, not a separate handoff
-  doc). `data/registry/*.json` is the source of truth for facts, not
-  `docs/index.html` — see CLAUDE.md's "`data/registry/` is the source of
-  truth" section.
+  direction, ordered work, and open decisions. `data/registry/*.json` is the
+  source of truth for facts, not `docs/index.html` — see CLAUDE.md's
+  "`data/registry/` is the source of truth" section.
 - **Migrated from** the `wb_watch` project on 2026-08-18.
 
 ## Layout
@@ -49,7 +47,7 @@ scripts/extract_registry.py    one-time scaffold of data/registry/ from the froz
 scripts/check_registry.py      schema + ИНН/ОГРН checksums + duplicates; run before any build
 scripts/check_tag_balance.py   run after every docs/index.html edit
 scripts/export_from_wb_watch.py   historical bootstrap only, not the ongoing method
-scripts/build_company_profile.py  generates docs/profiles/<slug>.{html,md} from data/registry/ (local, safe to rerun)
+scripts/archive/build_company_profile.py  retired profile generator; archived with the former reader pages
 scripts/egrul_batch_pull.py    scripted EGRUL open-API pull across every registry ИНН (live network job — see CLAUDE.md)
 scripts/screen_aleph.py        full-roster Aleph/OCCRP free-text screening, writes aleph_matches[] directly (live)
 scripts/aleph_followup.py      triages screen_aleph.py's noisy matches, fetches full detail for picked ids (live)
