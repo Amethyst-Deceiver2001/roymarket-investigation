@@ -92,81 +92,9 @@ def split_name(e):
 
 
 def describe_source(s):
-    """A reader-facing description and public link for one sources.json record."""
-    path = Path(s["path"])
-    name = path.name
-    prefix = name.split("_", 1)[0]
-    date = ru_date(s.get("as_of") or s.get("captured_date")) or ""
-    url = s.get("url")
-    if prefix == "TGPOST":
-        head = ""
-        try:
-            head = (REPO / s["path"]).read_text(errors="ignore")[:400]
-        except OSError:
-            pass
-        m = re.search(r"t\.me/(\w+).*?msg_id (\d+)", head, re.S)
-        if m:
-            return f"Telegram, @{m.group(1)}, post {m.group(2)}, {date}", f"https://t.me/{m.group(1)}/{m.group(2)}"
-        m = re.search(r"private Telegram chat «([^»]+)».*?msg_id (\d+)", head, re.S)
-        if m:
-            return f"Telegram, closed chat «{m.group(1).strip()}», message {m.group(2)}, {date}", None
-        return f"Telegram post, {date}", None
-    if prefix == "TGMEDIA":
-        m = re.search(r"post(\d+)", name)
-        return f"File posted in the maker's Telegram customer chat{', message ' + m.group(1) if m else ''}, {date}", None
-    if prefix.startswith("ZAKUPKI"):
-        m = re.search(r"(\d{19})", name)
-        if m:
-            return (f"State procurement record no. {m.group(1)}, zakupki.gov.ru",
-                    f"https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber={m.group(1)}")
-        return "State procurement record, zakupki.gov.ru", None
-    if prefix in ("EGRUL",) or name.startswith("ul-"):
-        return f"Company register extract (ЕГРЮЛ, Federal Tax Service), {date}", None
-    if prefix == "РЕСУРС" or "БФО" in name:
-        fy = s.get("fiscal_year") or (s.get("as_of") or "")[:4]
-        return f"Annual accounts filed with the Federal Tax Service, FY {fy}", None
-    if prefix == "TRADEMARK":
-        m = re.search(r"RU(\d+)", name)
-        if m:
-            return (f"Trademark registration no. {m.group(1)}, Rospatent (FIPS)",
-                    f"https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber={m.group(1)}")
-        return "Trademark record, Rospatent (FIPS)", None
-    if s.get("type") == "minjust":
-        return f"Activity report of the non-profit to the Ministry of Justice, for {(s.get('as_of') or '')[:4]}", None
-    if prefix == "WAYBACK":
-        try:
-            head = (REPO / s["path"]).read_text(errors="ignore")[:400000]
-        except OSError:
-            head = ""
-        m = re.search(r'__wm\.wombat\("([^"]+)","(\d{14})"', head)
-        t = re.search(r"<title>([^<]+)", head)
-        title = f"«{t.group(1).strip()}», " if t else ""
-        if m:
-            return (f"{title}web page archived by the Internet Archive, {ru_date(f'{m.group(2)[:4]}-{m.group(2)[4:6]}-{m.group(2)[6:8]}')}",
-                    f"https://web.archive.org/web/{m.group(2)}/{m.group(1)}")
-        return f"{title}web page archived by the Internet Archive, {date}", None
-    if prefix == "OPENSANCTIONS":
-        return f"Sanctions-list entries compiled by OpenSanctions, checked {date}", None
-    if prefix == "GUR":
-        return f"Ukraine's defence intelligence (ГУР) War & Sanctions portal, {date}", url
-    if prefix == "NSDC":
-        return f"Extract from Ukraine's State Register of Sanctions, {date}", None
-    if prefix == "WILDBERRIES":
-        return f"Wildberries seller page, archived {date}", url
-    if prefix == "OZON":
-        return f"Ozon seller page, archived {date}", url
-    if prefix in ("WEBCAPTURE", "SITE", "WEB"):
-        if not url and path.suffix in (".html", ".htm"):
-            try:
-                head = (REPO / s["path"]).read_text(errors="ignore")[:200000]
-                m = (re.search(r'rel="canonical"[^>]*href="([^"]+)"', head)
-                     or re.search(r'og:url"[^>]*content="([^"]+)"', head))
-                url = m.group(1) if m else None
-            except OSError:
-                pass
-        site = re.sub(r"^https?://(www\.)?", "", url).split("/")[0] if url else ""
-        return (f"Web page{' on ' + site if site else ''}, archived {date}", url)
-    return f"Archived document, {date}", url
+    """A reader-facing description and public link for one sources.json record. Both are derived once per
+    source by scripts/source_citation.py (B4) and stored on the record; a page never builds its own."""
+    return s.get("title") or "Archived document", s.get("public_url")
 
 
 class Chain:
@@ -197,6 +125,7 @@ class Chain:
         for s in sids:
             if not s or s not in self.src:
                 continue
+            s = self.src[s].get("duplicate_of") or s
             desc = describe_source(self.src[s])
             if desc not in self.notes:
                 self.notes.append(desc)

@@ -336,6 +336,19 @@ def main() -> int:
         CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + "\n",
                          encoding="utf-8")
 
+    # Citation facts (B4): a header read per file, redone for every file when
+    # source_citation.CITE_VERSION changes. Cheap compared with text extraction.
+    from source_citation import CITE_VERSION, facts as cite_facts
+    by_key = {cache_key(p): p for p in files}
+    cited = 0
+    for name, entry in cache.items():
+        if (entry.get("cite") or {}).get("v") == CITE_VERSION or name not in by_key:
+            continue
+        entry["cite"] = cite_facts(by_key[name])
+        cited += 1
+    if cited:
+        print(f"read citation facts for {cited} files")
+
     # sha256 was added after most entries were first cached — backfill it
     # for anything already cached (a plain hash, not a re-extraction, so
     # this is cheap even across hundreds of PDFs/zips).

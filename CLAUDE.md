@@ -292,6 +292,8 @@ been sitting in the brief, and two personal ИНН that had been mis-attributed
 to organisations. A wrong identifier in a sanctions submission is a serious
 defect, not a typo.
 
+**Reader citations (B4, 2026-10-02).** Every `sources.json` record carries a generated `title` (plain words: what the document is, its publisher, number and date) and `public_url` (only where the file or a registry number gives one), plus `tg_post` (`channel/msg`) and `duplicate_of` for a Telegram post captured twice. All rules are in `scripts/source_citation.py`; never write a citation rule in a page builder, and never hand-edit these fields. A new kind of source file gets a rule there and a fixture in `tests/test_source_citation.py`; bump `CITE_VERSION` so `inventory_sources.py` re-reads the files. `check_registry.py` errors on a missing title or one that leaks a file name or source id.
+
 ## `relationship_graph.json` — generated, schema-versioned, rebuild after any registry change
 
 `scripts/build_relationship_graph.py` derives `data/registry/

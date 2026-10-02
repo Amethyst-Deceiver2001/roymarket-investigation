@@ -958,6 +958,9 @@ def save_stable_source_ids(mapping: dict[str, str]) -> None:
         encoding="utf-8")
 
 
+from source_citation import cite as cite_source  # noqa: E402
+
+
 def parse_sources(ogrn_to_inn: dict[str, str] | None = None) -> list[dict]:
     """Seed sources.json from the generated MANIFEST.md.
 
@@ -1060,6 +1063,21 @@ def parse_sources(ogrn_to_inn: dict[str, str] | None = None) -> list[dict]:
             "_verified": False,
             "_origin": "manifest",
         })
+        # B4: reader-facing title and public link, from the facts inventory_sources.py read off the file.
+        cf = (cached or {}).get("cite") or {}
+        out[-1]["title"], out[-1]["public_url"] = cite_source(out[-1], cf)
+        if cf.get("tg_channel") and cf.get("tg_msg"):
+            out[-1]["tg_post"] = f"{cf['tg_channel'].lower()}/{cf['tg_msg']}"
+    # One Telegram post captured twice (a TGPOST text and a TGWEB page, say) is one source for a reader:
+    # later captures point at the first, and builders cite the first.
+    first = {}
+    for rec in out:
+        k = rec.get("tg_post")
+        if k:
+            if k in first:
+                rec["duplicate_of"] = first[k]
+            else:
+                first[k] = rec["id"]
     link_source_versions(out, ogrn_to_inn or {})
     save_stable_source_ids(id_map)
     return out

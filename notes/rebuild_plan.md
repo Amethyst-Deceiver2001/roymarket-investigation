@@ -80,11 +80,16 @@ after the design system redo and a new landing page.
    founder (release of 13.08.2026) is shown beside the two registered
    founders. The user's view is that the party is effectively a founder,
    since ЦБСТ could not exist without its approval.
-4. **B4 citation layer.** `inventory_sources.py` derives `title` and
-   `public_url` once per source (Telegram header → t.me link, page canonical
-   URL, zakupki registry number). 8,881 sources have neither today. The chain
-   builder's `describe_source()` rules move there; duplicate Telegram captures
-   are flagged by channel and message (post 1193 is s7596 and s8842).
+4. **B4 citation layer** (done 02.10.2026). `scripts/source_citation.py` holds
+   every citation rule. `inventory_sources.py` caches what each file says about
+   its origin (Telegram header, canonical URL, page title, Wayback original;
+   `CITE_VERSION` forces a re-read). `extract_registry.py` writes `title`,
+   `public_url`, `tg_post` and `duplicate_of` onto each source. Builders print
+   these fields and cite the first capture of a twice-captured post. Coverage:
+   all 8,902 sources have a title, 4,470 have a public link, and 14 duplicate
+   Telegram captures are flagged (post 1193 is s7596 and s8842). Remaining:
+   80 sources still cite only as "Archived document" (a `check_registry`
+   warning); the rules live in `tests/test_source_citation.py`.
 5. **B5 display names.** A generated `name_display` per STYLE_GUIDE §2.3
    (OOO «Trimiks»), overridable in corrections; `name_latin` stays the
    screening string. 185 of 252 entities have no `name_latin`, 29 hold an
