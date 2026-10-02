@@ -252,7 +252,7 @@
           "legal_form": "АНО",
           "variant": null,
           "product_count": 0,
-          "degree": 99
+          "degree": 98
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -4739,7 +4739,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 2,
-          "degree": 8
+          "degree": 7
         },
         {
           "id": "ooo-zavolzhskoe",
@@ -4807,7 +4807,7 @@
           "legal_form": null,
           "variant": "offensive",
           "product_count": 3,
-          "degree": 14
+          "degree": 15
         },
         {
           "id": "pankratov-andrey-aleksandrovich",
@@ -11309,7 +11309,7 @@
           "kind": "program",
           "label": "Резидентство ЦБСТ",
           "subtype": "residency",
-          "degree": 28
+          "degree": 29
         },
         {
           "id": "program::natsproekt-bas",
@@ -31690,18 +31690,6 @@
         },
         {
           "source": "ooo-vozdushnyy-traktat",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "ЦБСТ's own channel repeatedly calls this entity's «Овод» (\"Gadfly\") FPV strike-drone family its \"флагманский резидент...",
-          "source_id": "s8092",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc",
-          "detail": null
-        },
-        {
-          "source": "ooo-vozdushnyy-traktat",
           "target": "product::ooo-vozdushnyy-traktat::овод",
           "type": "produces",
           "label": null,
@@ -31842,6 +31830,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ovod",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7957",
+          "as_of": "2025-04-15",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -38902,7 +38902,7 @@
           "legal_form": "АНО",
           "variant": null,
           "product_count": 0,
-          "degree": 99
+          "degree": 98
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -41410,7 +41410,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 2,
-          "degree": 8
+          "degree": 7
         },
         {
           "id": "ooo-zavolzhskoe",
@@ -41462,7 +41462,7 @@
           "legal_form": null,
           "variant": "offensive",
           "product_count": 3,
-          "degree": 14
+          "degree": 15
         },
         {
           "id": "pankratov-andrey-aleksandrovich",
@@ -46376,7 +46376,7 @@
           "legal_form": "АНО",
           "variant": null,
           "product_count": 0,
-          "degree": 99
+          "degree": 98
         },
         {
           "id": "antonova-tatyana-sergeevna",
@@ -47378,19 +47378,6 @@
           "degree": 18
         },
         {
-          "id": "ooo-vozdushnyy-traktat",
-          "kind": "entity",
-          "label": "ООО «Воздушный трактат»",
-          "name_latin": null,
-          "inn": "7100046925",
-          "tier": "manufacturer",
-          "sanctioned": true,
-          "legal_form": "ООО",
-          "variant": null,
-          "product_count": 2,
-          "degree": 8
-        },
-        {
           "id": "ovod",
           "kind": "entity",
           "label": "ООО «Русская лаборатория воздушного транспорта»",
@@ -47401,7 +47388,7 @@
           "legal_form": null,
           "variant": "offensive",
           "product_count": 3,
-          "degree": 14
+          "degree": 15
         },
         {
           "id": "pao-bank-psb",
@@ -47475,7 +47462,7 @@
           "kind": "program",
           "label": "Резидентство ЦБСТ",
           "subtype": "residency",
-          "degree": 28
+          "degree": 29
         },
         {
           "id": "program::ushkuynik-residency",
@@ -49082,18 +49069,6 @@
           "detail": null
         },
         {
-          "source": "ooo-vozdushnyy-traktat",
-          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-          "type": "cbst_tie",
-          "label": "ЦБСТ's own channel repeatedly calls this entity's «Овод» (\"Gadfly\") FPV strike-drone family its \"флагманский резидент...",
-          "source_id": "s8092",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "t-doc",
-          "detail": null
-        },
-        {
           "source": "ovod",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -49544,7 +49519,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 2,
-          "degree": 8
+          "degree": 7
         },
         {
           "id": "pinimasov-aleksandr",

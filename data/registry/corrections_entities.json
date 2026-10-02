@@ -36932,10 +36932,10 @@
         "_verified": true,
         "address": "Тульская область, г.о. город Тула, с. Осиновая Гора",
         "cbst_tie": {
-          "claim": "ЦБСТ's own channel repeatedly calls this entity's «Овод» (\"Gadfly\") FPV strike-drone family its \"флагманский резидент\" (flagship resident) — the strongest ЦБСТ-tie phrasing found anywhere in the registry.",
-          "confidence": "t-doc",
-          "evidence": "Exact quote located: ЦБСТ's own channel, post 2159491523:623, 15.04.2025: \"Он [«Орбита»] уже интегрирован с тульским дроном «Овод» (нашим флагманским резидентом)...\" — verbatim \"флагманский резидент\" (flagship resident) confirmed directly. Independently corroborated this session: this entity's owner, Черезов А.П., also owns «Овод»-brand entity РЛВТ (theins.ru, 23.08.2026) — both EU/US-sanctioned. NOTE: the same channel (post 2159491523:574, 26.03.2025) separately credits \"Андрей Иванов\" as \"создатель ударного FPV-дрона «Овод»\" — a name that does NOT match Черезов А.П., the confirmed legal owner. Possible pseudonym, a different named spokesperson, or an unresolved discrepancy — flagged as an open question, not merged.",
-          "source_id": "s8092"
+          "claim": null,
+          "evidence": null,
+          "source_id": null,
+          "confidence": "not_established"
         },
         "director": "Черезов Андрей Павлович",
         "director_history": [
@@ -36968,6 +36968,10 @@
           },
           {
             "text": "A rich Telegram marketing/battlefield-evidence scan of @tulaovod (2026-09-07, source s6456) found extensive self-incriminating marketing copy, a third-party military combat-use report, and product photos for the umbrella «Овод» brand — but the channel speaks for the brand as a whole and does not distinguish this entity from its sister company РЛВТ (slug ovod, ИНН 7100027464). All wired claims were attributed to `ovod` since its existing product record (s0526) already ties it concretely to the «Овод» brand; this entity's own marketing_claims/battlefield_evidence/images gaps remain genuinely open pending a way to confirm which specific products/claims belong to ООО «Воздушный трактат» itself rather than РЛВТ."
+          },
+          {
+            "source_id": "s7957",
+            "text": "ЦБСТ TIE WITHDRAWN (2026-10-02): the earlier t-doc tie rested on ЦБСТ post 623 calling the «Овод» drone its «флагманский резидент». The post names the brand, not this company. Reading post 623 and post 2366 (s7958) with the EU act (s7977), the registry places the residency on ООО «Русская лаборатория воздушного транспорта» (slug ovod, ИНН 7100027464): it existed in 2022, is named by the EU as developer and manufacturer of «Ovod», is the contract supplier and carries the revenue (₽1.31bn FY2025). This entity shares the 100% owner Черезов А.П. (ownership edges stay), reported ₽4.6m for 2024 and nothing for 2025, and was named by КЦПН on 13.06.2024 as the producer it bought «Овод» from, as «ООО Воздушный тракт (г. Тула)» (s8963, s8964; the origin post t.me/kcpn2014/2275 was not read). That 2024 statement is the one document pointing here; it may mean this company acted as seller of record in 2024. Trademark check: Rospatent owner-name search 2026-10-02 for «Русская лаборатория воздушного транспорта» returned 0 marks (s8962), and for «Воздушный трактат» 0 (inline, no file); owner «Черезов» returned 5 marks held by other persons. A search by mark text is not available through that API, so who holds the «Овод» mark is unknown. Kommersant (s8961, 29.07.2026) states only that Черезов owns both companies."
           }
         ],
         "sanctions": [
@@ -37039,7 +37043,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14072) ID-confirmed via ИНН 7100046925 — exact match, screen_gur.py sweep, 2026-08-24. GUR profile text is near-identical to the sister Ovod LLC (7100027464) profile — same product, same address city (Tula, Ryazanskaya street 3D, different office number), corroborating the existing registry note that this entity's «Овод»/«Провод» participation runs alongside РЛВТ (ovod) rather than independently.",
         "2026-09-07: merged dormant duplicate correction key '7100046925' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-        "2026-09-14: Founding-document bundle (data/sources/UD_1237100015767_20260914_ooo-vozdushnyy-traktat.zip, s7425) read in full -- original 2023 founding decision plus a 2024 устав restatement, both sole-founder (Черезов А.П., matches existing record). Generic 'any lawful activity' purpose clause, no UAV-specific self-declaration despite the entity's aviation-suggestive name. Corroborates existing record, no new fact."
+        "2026-09-14: Founding-document bundle (data/sources/UD_1237100015767_20260914_ooo-vozdushnyy-traktat.zip, s7425) read in full -- original 2023 founding decision plus a 2024 устав restatement, both sole-founder (Черезов А.П., matches existing record). Generic 'any lawful activity' purpose clause, no UAV-specific self-declaration despite the entity's aviation-suggestive name. Corroborates existing record, no new fact.",
+        "[2026-10-02 Овод residency decision] cbst_tie set to not_established: no ЦБСТ document names this company; see the new open question."
       ]
     },
     "ooo-zavolzhskoe": {
@@ -37787,7 +37792,17 @@
           "confidence": "t-doc",
           "evidence": "ЦБСТ's own Telegram channel, multiple posts. NOTE: docs/index.html's own narrative prose names the legal entity as ООО «Воздушный трактат» ИНН 7100046925 -- a DIFFERENT ИНН from this record's 7100027464. OpenSanctions' exact-ИНН match (s0759) supports 7100027464 as the real maker and this source (s5446) is already used elsewhere on this exact record, so the docs.html-stated ИНН looks stale/wrong rather than a different company -- but this discrepancy is NOT independently resolved here and should be checked before citing this tie in published prose.",
           "source_id": "s5446"
-        }
+        },
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7957",
+            "as_of": "2025-04-15",
+            "note": "ЦБСТ's own channel names the brand, not a legal entity: post 623 (15.04.2025), «Он уже интегрирован с тульским дроном «Овод» (нашим флагманским резидентом)»; post 2366 (29.07.2026, s7958), «После начала СВО Андрей основал в Туле компанию по производству FPV-дронов, вошедшую впоследствии в контур ЦБСТ… С 2022 года Андрей принимает личное участие в испытаниях «Оводов»». Placed on РЛВТ (not on ООО «Воздушный трактат») because: only РЛВТ existed in 2022 (registered 28.09.2022; «Воздушный трактат» 28.11.2023); Council Implementing Regulation (EU) 2026/1843 (s7977) names РЛВТ as the developer and manufacturer of the «Ovod» FPV drones; РЛВТ is the supplier in the four university contracts and reports ₽1.31bn for FY2025, against ₽4.6m for 2024 and nothing for 2025 at «Воздушный трактат». Against: КЦПН's post of 13.06.2024 (s8963) lists «Овод – ООО Воздушный тракт (г. Тула)» as the producer it bought from, and its test-results post (s8964) repeats it; the origin t.me/kcpn2014/2275 was not read. No ЦБСТ document names either company."
+          }
+        ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026; TheInsider (theins.ru/news/295478), read directly 23.08.2026",
       "why": [
@@ -37804,7 +37819,8 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 4 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s5446 verified (data/sources/TGPOST_multi_20260729-20260805_tulaovod-week-assassination-dovod-barsclaim.txt). ИНН discrepancy flagged, not resolved -- see evidence field."
+        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s5446 verified (data/sources/TGPOST_multi_20260729-20260805_tulaovod-week-assassination-dovod-barsclaim.txt). ИНН discrepancy flagged, not resolved -- see evidence field.",
+        "[2026-10-02 Овод residency decision] cbst-residency membership placed on this entity, not on ooo-vozdushnyy-traktat; reasoning in the membership note. cbst_tie itself unchanged."
       ]
     },
     "pao-bank-psb": {

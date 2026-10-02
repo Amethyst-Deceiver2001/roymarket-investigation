@@ -82,7 +82,7 @@ Contract 225 carries a detail from the customer's file: a claim letter from Во
 - Who buys about ₽1.8bn of the 2024–2025 revenue that the four university contracts do not explain.
 - Why the balance sheet reached ₽4.22bn at the end of 2025.
 - The US designation of 2024: only The Insider reports it.
-- How РЛВТ and «Воздушный трактат» divide the work. The registry's earlier ЦБСТ-tie record sits on «Воздушный трактат»; ЦБСТ's post names only the drone, so which company is the resident is not stated.
+- How РЛВТ and «Воздушный трактат» divide the work. ЦБСТ's posts name only the drone and the founder, never a company. The registry places the residency on РЛВТ: it is the company that existed in 2022, the one the EU names as maker of «Овод», the contract supplier and the one with the revenue. «Воздушный трактат» carries no ЦБСТ tie of its own; it shares the owner, and КЦПН named it in June 2024 as the producer it bought «Овод» from {press} [s8963]. Who holds the «Овод» trademark is not known: Rospatent's owner-name search finds no mark for either company [s8962].
 - Who «Андрей Иванов» is. On 26.03.2025 ЦБСТ's channel credits him as «создатель ударного FPV-дрона «Овод»»; the registry treats him as a separate documented engineer, and the relation between the accounts is not resolved.
 - Who shot Черезов and why.
 - Whether any of the combat claims on the company's channel are true. No purchase record connects the drones to a unit.
