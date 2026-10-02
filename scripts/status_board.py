@@ -612,6 +612,11 @@ def pull_queue(board, cap=PULL_CAP):
               "python3 scripts/extract_registry.py",
               "python3 scripts/build_relationship_graph.py",
               "python3 scripts/check_registry.py"]
+    if egrul or bfo:
+        # Text of each new pull to the pull-inbox side branch, for the cloud's
+        # first reading the same morning (user, 02.10.2026: "push"). PDFs stay local.
+        lines += ["# Send the text of today's pulls for first reading (pull-inbox branch, never merged).",
+                  "python3 scripts/first_reading.py export --push --local-dir data/sources/_inbox"]
     return "\n".join(l for l in lines if l)
 
 

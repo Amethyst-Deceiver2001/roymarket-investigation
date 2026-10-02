@@ -65,7 +65,9 @@ def main():
     q = sb.pull_queue(board, cap=3)
     bfo_line = [l for l in q.splitlines() if l.startswith("python3 scripts/bfo_pull.py")]
     assert len(bfo_line) == 1 and bfo_line[0].count("--inn") <= 3, q
-    assert q.rstrip().endswith("check_registry.py"), q
+    assert "python3 scripts/check_registry.py" in q.splitlines(), q
+    # After pulls, their text goes to the pull-inbox branch for first reading.
+    assert q.rstrip().endswith("first_reading.py export --push --local-dir data/sources/_inbox"), q
     # Re-screens are queued per screen, capped, by slug; OpenSanctions within its quota cap.
     for key, cap in sb.SCREEN_CAPS.items():
         line = [l for l in sb.pull_queue(board).splitlines() if l.startswith(sb.SCREEN_COMMANDS[key].split(" --")[0])]
