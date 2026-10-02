@@ -35,7 +35,7 @@ REG = REPO / "data" / "registry"
 SRC_DIR = REPO / "data" / "sources"
 PAGES = "https://amethyst-deceiver2001.github.io/roymarket-investigation/"
 sys.path.insert(0, str(REPO / "scripts"))
-from display_helpers import (design_head, figure_html, kind_icon, load_media, media_about, publish_copy,  # noqa: E402
+from display_helpers import (design_head, display_name, figure_html, kind_icon, load_media, media_about, publish_copy,  # noqa: E402
                              reader_grade, ru_date)
 
 CBST = "ano-tsbst-centre-for-unmanned-systems-technologies"
@@ -125,6 +125,12 @@ def describe_source(s):
     if prefix == "РЕСУРС" or "БФО" in name:
         fy = s.get("fiscal_year") or (s.get("as_of") or "")[:4]
         return f"Annual accounts filed with the Federal Tax Service, FY {fy}", None
+    if prefix == "TRADEMARK":
+        m = re.search(r"RU(\d+)", name)
+        if m:
+            return (f"Trademark registration no. {m.group(1)}, Rospatent (FIPS)",
+                    f"https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber={m.group(1)}")
+        return "Trademark record, Rospatent (FIPS)", None
     if prefix == "OPENSANCTIONS":
         return f"Sanctions-list entries compiled by OpenSanctions, checked {date}", None
     if prefix == "GUR":
@@ -186,8 +192,14 @@ class Chain:
         return "<sup class=\"rm-ref\">" + ",".join(f'<a href="#n{n}">{n}</a>' for n in sorted(set(nums))) + "</sup>"
 
     def name(self, e, sub=True):
-        left, right = split_name(e)
-        return esc(left) + (f"<small>{esc(right)}</small>" if sub and right else "")
+        """Brand first when documented, legal name directly beneath it (B5); else legal name and English gloss."""
+        n = display_name(e)
+        lines = [n["legal"]] if n["legal"] else []
+        if sub and n["gloss"] and not n["legal"]:
+            lines.append(n["gloss"])
+        brand = next((b for b in e.get("brands") or [] if b.get("primary")), None)
+        cite = self.ref(brand.get("source_id")) if brand and n["legal"] else ""
+        return esc(n["head"]) + "".join(f"<small>{esc(x)}{cite if x == n['legal'] else ''}</small>" for x in lines)
 
     def sanctions(self, e):
         seen, sids = [], []
@@ -445,8 +457,8 @@ class Chain:
     def who(self, m):
         for a_ in m.get("about") or []:
             if a_["type"] == "entity" and a_["id"] in self.ents:
-                return split_name(self.ents[a_["id"]])[0]
-        return split_name(self.maker)[0]
+                return display_name(self.ents[a_["id"]])["head"]
+        return display_name(self.maker)["head"]
 
     def thumb(self):
         """The product card's picture (a self-published photo or screenshot of the product) and the
@@ -554,7 +566,7 @@ def render(ch, out):
 <header class="rm-page top">
   <p class="rm-eyebrow">Draft · {ru_date(dt.date.today().isoformat())}</p>
   <h1 class="rm-h1">{esc(ch.pq)} <span class="rm-muted">from ЦБСТ to the front line</span></h1>
-  <p class="rm-dek">{esc(cap(p.get('category')))} made by {esc(split_name(ch.maker)[0])}, a company
+  <p class="rm-dek">{esc(cap(p.get('category')))} made by {esc(display_name(ch.maker)['head'])}{(' (' + esc(display_name(ch.maker)['legal']) + ')') if display_name(ch.maker)['legal'] else ''}, a company
   under sanctions. It is sold on marketplaces and through dealers, bought by state agencies under
   {n_buy} contract{'s' if n_buy != 1 else ''}, and handed to front-line units by a foundation that works with ЦБСТ.</p>
   <ul class="rm-legend" aria-label="How to read the lines">

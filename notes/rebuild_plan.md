@@ -73,8 +73,9 @@ after the design system redo and a new landing page.
    (OOO «Trimiks»), overridable in corrections; `name_latin` stays the
    screening string. 185 of 252 entities have no `name_latin`, 29 hold an
    OpenSanctions caption.
-   **Brand first (user's suggestion 02.10.2026; proposal, awaiting
-   confirmation).** Readers meet the brand (3mx, GoDrone, Пиранья) on boxes,
+   **Brand first (decided by the user 02.10.2026; model and display done for
+   3mx, the other 38 free-text brand values to review in
+   `notes/brand_review_20261002.md`).** Readers meet the brand (3mx, GoDrone, Пиранья) on boxes,
    marketplaces and Telegram, not the legal name (ООО «Тримикс»). A card
    leads with a documented brand. The legal name sits directly beneath it,
    never hidden, and the Sanctioned flag stays with the legal name, because

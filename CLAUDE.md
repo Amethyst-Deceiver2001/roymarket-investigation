@@ -431,6 +431,15 @@ Rules (user, 2026-10-02):
 
 A company card shows the entity's logo from a media record of genre `logo` (set `logo_ground: dark` when the mark is drawn for a dark ground; logo publish copies are trimmed to their content). Deliveries now carry stable ids (`bulat-d01`…) so media can point at them. `check_registry.py` validates the record. Backfill state and gaps: `notes/media_backfill_20261002.md`.
 
+## Brands (`entities[].brands[]`, B5, added 2026-10-02 at user direction)
+
+Readers recognise a brand (3mx, GoDrone, Пиранья) before a legal name (ООО «Тримикс»), so a reader card leads with a documented primary brand. The legal name sits directly beneath it, never hidden, with the Sanctioned flag, because lists name the company, not the trademark. Use `display_helpers.display_name(e)`, which returns the brand as `head`, the legal name and the English gloss.
+
+- **Shape:** `{name, kind: trade_name|trademark, registration, primary, source_id, as_of, note}`, set via `corrections_entities.json`. At most one brand is primary. A `trademark` brand names a registration that is in the entity's own `trademarks[]`. `check_registry.py` validates all of this.
+- **A product name is never a company brand** («Булат» is a product of 3mx). One brand can span several legal entities (КБ «СПЕКТР»), so a brand is never used to merge or identify entities.
+- **No guessing.** The old free-text `brand_ru` / `brand_latin` are not display sources. Promote a value only after reading its source (`notes/brand_review_20261002.md` lists the 38 to review).
+- A card cites the brand: the legal-name line carries the footnote to the brand's source.
+
 ## Programs, events and groups (schema v8, added 2026-10-01 at user direction)
 
 Residencies, accelerators, the national БАС project, recurring events and same-brand clusters are modelled as records in `data/registry/programs.json` (hand-maintained, like `military_units.json`), not as entity-to-entity edges.

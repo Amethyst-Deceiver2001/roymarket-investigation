@@ -188,6 +188,15 @@ def figure_html(m: dict, img_src: str, who: str, ref_html: str, video_note: str 
             + (f'<span class="when">{when}</span>' if when else "") + "</figcaption></figure>")
 
 
+def display_name(e: dict) -> dict:
+    """The names a card shows (B5). `head` is the documented primary brand when there is one, else the legal
+    name; `legal` is the registered name, always shown when it differs from head; `gloss` the English line."""
+    parts = (e.get("name_ru") or "").split(" | ", 1)
+    legal, gloss = parts[0], (parts[1] if len(parts) > 1 else "")
+    brand = next((b["name"] for b in e.get("brands") or [] if b.get("primary") and b.get("name")), None)
+    return {"head": brand or legal, "legal": legal if brand and brand != legal else "", "gloss": gloss}
+
+
 def source_type_label(path: str) -> str:
     stem = Path(path).name
     if stem.startswith("ul-") or stem.startswith("ip-"):

@@ -166,6 +166,9 @@ ECOSYSTEM_ROLES = {
     "distributor",        # wholesale or regional distribution
     "platform_operator",  # operates the marketplace/agent contract through which sellers sell (ООО «МПТМ», РОЙ.МАРКЕТ)
 }
+# Brands (B5, 2026-10-02): the names readers meet on boxes, marketplaces and channels. A card leads with a
+# documented primary brand and shows the legal name directly beneath it. A product name is never a company brand.
+BRAND_KINDS = {"trade_name", "trademark"}   # trademark: a registration in the entity's own trademarks[]
 LEGAL_ENTITY_STATUS = {"established", "unresolved"}
 
 # related_entities[].relationship_type (added 2026-09-15, schema v5) — a

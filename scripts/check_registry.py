@@ -49,7 +49,8 @@ from graph_contract import (validate_graph, validate_views, SELLS_FOR_BASIS, SAL
                             CREDIBILITY, AUTHORISED, BASIS_CREDIBILITY, RELATION_ROLES, PARTNER_KIND_EDGE,  # noqa: E402
                             ECOSYSTEM_ROLES, LEGAL_ENTITY_STATUS, PROGRAM_KINDS, PROGRAM_SUBTYPES,
                             MEMBERSHIP_ROLES, MEDIA_KINDS, MEDIA_GENRES, MEDIA_PUBLISH, MEDIA_ABOUT_TYPES,
-                            MEDIA_GEO_PRECISION, MEDIA_GEO_METHOD, MEDIA_REDACT, MEDIA_REDACT_GENRES, MEDIA_ASSERTED_BY)
+                            MEDIA_GEO_PRECISION, MEDIA_GEO_METHOD, MEDIA_REDACT, MEDIA_REDACT_GENRES, MEDIA_ASSERTED_BY,
+                            BRAND_KINDS)
 from build_relationship_graph import build_graph, build_views  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
@@ -734,6 +735,27 @@ def main() -> int:
         for j, c_ in enumerate(pr.get("claims") or []):
             if not c_.get("text_ru") or c_.get("source_id") not in source_ids or not date_re.fullmatch(str(c_.get("as_of") or "")):
                 errors.append(f"{where}.claims[{j}] needs text_ru, a known source_id and an as_of date")
+
+    # --- brands (entities[].brands, B5, added 2026-10-02) -----------------------
+    # The name a reader recognises. At most one primary; every brand sourced; a trademark brand names its
+    # registration, which must be in the entity's own trademarks[].
+    for e in entities:
+        bs = e.get("brands") or []
+        if not bs:
+            continue
+        w = f"entities[{e['slug']}].brands"
+        if sum(1 for x in bs if x.get("primary")) > 1:
+            errors.append(f"{w}: more than one primary brand")
+        regs = {str(tm.get("reg_number") or tm.get("registration") or tm.get("number") or "") for tm in e.get("trademarks") or []}
+        for j, x in enumerate(bs):
+            if not (x.get("name") or "").strip() or x.get("kind") not in BRAND_KINDS:
+                errors.append(f"{w}[{j}] needs a name and kind in {sorted(BRAND_KINDS)}")
+            if x.get("source_id") not in source_ids:
+                errors.append(f"{w}[{j}].source_id must be a known source")
+            if x.get("kind") == "trademark":
+                reg = str(x.get("registration") or "").removeprefix("RU")
+                if not reg or not any(reg in r for r in regs):
+                    errors.append(f"{w}[{j}]: a trademark brand needs a registration found in the entity's trademarks[]")
 
     # --- media (data/registry/media.json, track V, added 2026-10-02) -----------
     # One record per picture, video, still or imagery view; `about` lists every record it shows, so one
