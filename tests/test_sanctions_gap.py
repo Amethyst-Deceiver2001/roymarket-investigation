@@ -46,6 +46,15 @@ def main():
     assert order == sorted(order, key=lambda s: {"no ID match on any": 0,
                                                  "registry claims, no ID match": 1,
                                                  "not checked": 2, "listed": 3}[s])
+    # Week-on-week: a list newly matching Тримикс shows as a change, unchanged rows do not.
+    import csv, tempfile
+    before, _ = sg.build({**WATCH, "hits": []}, False)
+    with tempfile.NamedTemporaryFile("w", suffix=".csv", delete=False, newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=sg.COLUMNS, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(before)
+    changes = sg.status_changes(rows, Path(f.name))
+    assert len(changes) == 1 and "ooo-trimiks" in changes[0] and "US: no ID match" in changes[0], changes
     print("ok: sanctions_gap fixtures pass")
 
 

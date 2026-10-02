@@ -38,6 +38,7 @@ jobs:
         run: |
           if git fetch -q origin watch/sanctions; then
             git show FETCH_HEAD:sanctions_watch.json > prev.json
+            git show FETCH_HEAD:sanctions_gap.csv > prev_gap.csv 2>/dev/null || rm -f prev_gap.csv
             echo "previous run found"
           else
             echo "no previous run: this run is the baseline"
@@ -49,6 +50,15 @@ jobs:
             --report report.md $( [ -f prev.json ] && echo --previous prev.json )
           cat report.md >> "$GITHUB_STEP_SUMMARY"
           cat report.md
+
+      - name: Gap table and citations worksheet
+        run: |
+          python3 scripts/sanctions_gap.py --watch sanctions_watch.json \
+            --csv sanctions_gap.csv --md sanctions_gap.md \
+            $( [ -f prev_gap.csv ] && echo --previous-csv prev_gap.csv --changes-out gap_changes.md )
+          python3 scripts/sanctions_citations.py --watch sanctions_watch.json --md sanctions_citations.md
+          if [ -f gap_changes.md ]; then printf '\n' >> report.md; cat gap_changes.md >> report.md; fi
+          printf '\nFull tables on the `watch/sanctions` branch: `sanctions_gap.md`, `sanctions_citations.md`.\n' >> report.md
 
       - name: Keep the downloaded lists (14 days)
         uses: actions/upload-artifact@v4
@@ -71,9 +81,9 @@ jobs:
             git worktree add -q --detach state
             (cd state && git checkout -q --orphan tmp && git rm -rqf .)
           fi
-          cp sanctions_watch.json report.md state/
+          cp sanctions_watch.json report.md sanctions_gap.csv sanctions_gap.md sanctions_citations.md state/
           cd state
-          git add sanctions_watch.json report.md
+          git add sanctions_watch.json report.md sanctions_gap.csv sanctions_gap.md sanctions_citations.md
           git commit -qm "Sanctions watch $(date -u +%F)" || exit 0
           git push -q origin HEAD:refs/heads/watch/sanctions
 
@@ -83,6 +93,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           changes=$(python3 -c "import json;d=json.load(open('sanctions_watch.json'))['diff'];print(len(d['new'])+len(d['removed']))")
+          if [ -f gap_changes.md ] && ! grep -q '^None\.' gap_changes.md; then
+            changes=$((changes + $(grep -c '^- ' gap_changes.md)))
+          fi
           if [ ! -f prev.json ] || [ "$changes" != "0" ]; then
             label=$([ -f prev.json ] && echo "$changes change(s)" || echo "baseline")
             gh issue create --title "Sanctions watch $(date -u +%d.%m.%Y): $label" --body-file report.md

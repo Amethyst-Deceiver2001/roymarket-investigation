@@ -194,12 +194,33 @@ def write_md(rows: list[dict], meta: dict, path: Path) -> None:
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def status_changes(rows: list[dict], previous_csv: Path) -> list[str]:
+    """Markdown lines for rows whose overall or per-list status changed since the previous table."""
+    with open(previous_csv, newline="", encoding="utf-8") as f:
+        prev = {r["slug"]: r for r in csv.DictReader(f)}
+    out = []
+    for r in rows:
+        p = prev.get(r["slug"])
+        if p is None:
+            out.append(f"- {r['name_ru']} (`{r['slug']}`): new in the table, {r['western_status']}")
+            continue
+        moved = [f"{k.upper()}: {p.get(k) or '—'} → {r[k] or '—'}" for k in WATCHED
+                 if (p.get(k) or "") != (r[k] or "")]
+        if moved:
+            out.append(f"- {r['name_ru']} (`{r['slug']}`): " + "; ".join(moved))
+    for slug in sorted(prev.keys() - {r["slug"] for r in rows}):
+        out.append(f"- {prev[slug]['name_ru']} (`{slug}`): no longer in the table (ЦБСТ tie removed or record merged)")
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--watch", help="sanctions_watch.json from the watch/sanctions branch")
     ap.add_argument("--csv", help="write the table as CSV")
     ap.add_argument("--md", help="write the table as Markdown")
     ap.add_argument("--all", action="store_true", help="every non-adjacent entity, not only ЦБСТ-tied")
+    ap.add_argument("--previous-csv", help="last run's table: print what changed, as Markdown")
+    ap.add_argument("--changes-out", help="write the change lines here (Markdown), for the weekly issue")
     args = ap.parse_args()
     watch = json.loads(Path(args.watch).read_text(encoding="utf-8")) if args.watch else None
     rows, meta = build(watch, args.all)
@@ -214,6 +235,13 @@ def main() -> int:
     for r in rows:
         counts[r["western_status"]] = counts.get(r["western_status"], 0) + 1
     print(f"{meta['rows']} rows; " + ", ".join(f"{k}: {n}" for k, n in counts.items()))
+    if args.previous_csv and Path(args.previous_csv).exists():
+        changes = status_changes(rows, Path(args.previous_csv))
+        text = (f"## Gap table: status changes since the last run ({len(changes)})\n\n"
+                + ("\n".join(changes) if changes else "None.") + "\n")
+        if args.changes_out:
+            Path(args.changes_out).write_text(text, encoding="utf-8")
+        print(text)
     return 0
 
 
