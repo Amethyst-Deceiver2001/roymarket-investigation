@@ -110,6 +110,8 @@ which are the user's own manual downloads due to daily rate limits.
 `scripts/mine_leads.py` is NOT covered by this — it's local processing over
 already-scraped data, no live network call, fine to run directly/repeatedly.
 
+**Sanctions watch (added 2026-10-02 at user direction).** `scripts/sanctions_watch.py` downloads the official US (OFAC SDN), EU (FSF consolidated), Swiss (SECO) and UK (FCDO) lists, one request each, and reports every entry that carries a registry ИНН or ОГРН: new and gone since the last run, listed but missing from the record's `sanctions[]`, and claimed in `sanctions[]` with no identifier match. Names alone never count as a hit. It runs weekly in GitHub Actions (`.github/workflows/sanctions-watch.yml`), because the cloud sessions' network policy blocks those hosts. State lives on the `watch/sanctions` branch, never on main, and an issue opens when something changes. A hit is a work item: read the entry on the official list and record it in `sanctions[]` by hand, citing the list entry. Fixtures: `tests/test_sanctions_watch.py`.
+
 **`scripts/egrul_batch_pull.py`** (added 2026-08-22) is the same discipline
 applied to a *scripted* EGRUL job, not just the manual PDF-download case:
 it hits egrul.nalog.ru's open (no-captcha) lookup API in a loop across every
