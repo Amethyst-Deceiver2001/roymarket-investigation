@@ -10107,6 +10107,32 @@
           "open": "The registered Поставщик on the platform is not established. Batteries 6S 10000 mAh 15C were announced as coming (post 322, 07.07.2026), not listed.",
           "role": "manufacturer"
         }
+      ],
+      "candidate_identities": [
+        {
+          "name_ru": "ООО «КБ «СПЕКТР»» (Бердск/Новосибирск)",
+          "inn": "5445029638",
+          "status": "unverified",
+          "as_of": "2026-10-01",
+          "source_id": "s8739",
+          "note": "Struck off 30.06.2022 per the extract. Registered 02.07.2019 by Детинов Максим Борисович. ИНН supplied by the user on 2026-10-01. Same name and region as the brand; no document links it to the bureau's goods, to Братеньков or to the РОЙ.МАРКЕТ sale."
+        },
+        {
+          "name_ru": "ООО «КБ «СПЕКТР-ВМ»",
+          "inn": "5445029652",
+          "status": "unverified",
+          "as_of": "2026-10-01",
+          "source_id": null,
+          "note": "Struck off 27.05.2022 (from the 2026-10-01 note; no extract of its own is archived). Same registration date and registrant as the other two."
+        },
+        {
+          "name_ru": "ООО «КБ «СПЕКТР-ИНЖИНИРИНГ»",
+          "inn": "5445029645",
+          "status": "unverified",
+          "as_of": "2026-10-01",
+          "source_id": "s8740",
+          "note": "Active at Бердск per the extract. Same registration date and registrant. No archived document names Братеньков or the bureau's goods in it."
+        }
       ]
     },
     {
@@ -10404,6 +10430,10 @@
             "source_id": "s8820",
             "status": "open",
             "text": "The operator's name is masked on the live site: between the Wayback capture of 22.08.2026 (s8817, «ООО «МПТМ» · ИНН 9714068459» in the header, requisites printed in the offer) and 01.10.2026 (s8822, s8818, s8821) the public offer texts read «ООО «****»» and the requisites are shown only after login (s8820, «Обезличенные редакции открыты всем… реквизитами доступен после входа»). Why and when it was masked is not documented."
+          },
+          {
+            "source_id": "s8817",
+            "text": "Acquirer and logistics partner are not named in the operator's own texts read (the supplier offer s8817, the platform rules s8821, the buyer offer s8818): they speak of «платёжные системы и эквайеры» and «Логистический партнёр» in general. An older note (the held notes/dossier_draft.html and a registry open question) names «MetaShip» as the logistics integrator and a 3DS payment gateway; no archived primary document for either is on file, so no acquiring_via or ships_via edge is recorded. Capture and read the source before recording one."
           }
         ],
         "address": "125167, Москва, вн.тер.г. муниципальный округ Аэропорт, ал. Нарышкинская, д. 5, стр. 2, помещ. 1/1",
@@ -10554,6 +10584,16 @@
             "context": "Коммерсантъ, 06.08.2026 (s8865), «Воентеху подготовят площадки», reporting Безруков. A vetting step (проверка продукции, допуск) stands between a seller and military buyers; its criteria are not published.",
             "source_id": "s8865",
             "as_of": "2026-08-06"
+          }
+        ],
+        "platform_partners": [
+          {
+            "slug": "pao-bank-psb",
+            "kind": "bank",
+            "basis": "doc",
+            "source_id": "s8817",
+            "as_of": "2026-08-22",
+            "note": "The supplier offer (ред. 3.0, effective 01.08.2026; Wayback copy of 22.08.2026) prints the operator's requisites: ООО «МПТМ», ИНН 9714068459, settlement account (номер счёта) at ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО «БАНК ПСБ», БИК 044525555. The document names the bank for the operator's account; it does not name acquirers or logistics partners (§1.1.14-1.1.15 speak only of «платёжные системы и эквайеры» and «логистические партнёры» in general)."
           }
         ]
       },

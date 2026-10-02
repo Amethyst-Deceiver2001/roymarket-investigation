@@ -263,6 +263,30 @@ class RelationshipGraphTests(unittest.TestCase):
         other["detail"] = {"status": "listed"}
         self.assertTrue(any("detail must be null" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
 
+    def test_platform_partners_draw_graded_edges_by_kind(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["platform_partners"] = [
+            {"slug": "core", "kind": "bank", "basis": "doc", "source_id": "s1", "as_of": "2026-08-22"},
+            {"slug": "core", "kind": "logistics", "basis": "press", "source_id": "s1", "as_of": "2026-08-22"},
+            {"slug": "core", "kind": "wizard", "basis": "doc", "source_id": "s1", "as_of": "2026-08-22"}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        got = sorted((e["type"], e["label"], e["confidence"]) for e in graph["edges"] if e["type"] in ("banks_with", "ships_via", "acquiring_via"))
+        # a malformed kind is dropped by the builder (check_registry reports it), never guessed into an edge
+        self.assertEqual([("banks_with", "bank", "doc"), ("ships_via", "logistics", "press")], got)
+        self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
+        bad = copy.deepcopy(graph)
+        next(e for e in bad["edges"] if e["type"] == "banks_with")["confidence"] = "rumour"
+        self.assertTrue(any("banks_with" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+
+    def test_candidate_identities_never_become_edges_or_nodes(self):
+        entities = copy.deepcopy(ENTITIES)
+        before = build_graph(copy.deepcopy(ENTITIES), copy.deepcopy(PEOPLE))
+        entities[1]["candidate_identities"] = [{"name_ru": "ООО «Тезка»", "inn": "5445029638", "status": "unverified",
+                                                "as_of": "2026-10-01", "source_id": "s1"}]
+        after = build_graph(entities, copy.deepcopy(PEOPLE))
+        self.assertEqual(before["edges"], after["edges"])
+        self.assertEqual(len(before["nodes"]), len(after["nodes"]))
+
     def test_unlinked_sells_for_target_is_dropped_not_crashing(self):
         entities = copy.deepcopy(ENTITIES)
         entities[1]["sells_for"] = [{"slug": "does-not-exist", "channel": "Ozon", "basis": "doc"}]

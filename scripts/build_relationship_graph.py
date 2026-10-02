@@ -21,7 +21,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-from graph_contract import GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, build_view_projections, sale_detail
+from graph_contract import GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, build_view_projections, sale_detail, PARTNER_KIND_EDGE
 
 REPO = Path(__file__).resolve().parent.parent
 REG = REPO / "data" / "registry"
@@ -478,6 +478,11 @@ def build_graph(entities: list[dict], people: list[dict],
             add_edge(slug, sale.get("slug"), "sells_for", sale.get("channel"),
                      sale.get("source_id"), sale.get("as_of"), confidence=sale.get("basis"),
                      detail=sale_detail(sale))
+        for pt in entity.get("platform_partners") or []:
+            # platform_partners[] (schema v10): {slug, kind, basis, source_id, as_of, note}; kind picks the edge type
+            if pt.get("kind") in PARTNER_KIND_EDGE:  # a malformed kind is reported by check_registry, not guessed here
+                add_edge(slug, pt.get("slug"), PARTNER_KIND_EDGE[pt["kind"]], pt["kind"],
+                         pt.get("source_id"), pt.get("as_of"), confidence=pt.get("basis"))
         for m in entity.get("memberships") or []:
             # memberships[] (schema v8): {program, role, basis, source_id, as_of, note}
             add_edge(slug, f"program::{m.get('program')}", "resident_of", m.get("role"),

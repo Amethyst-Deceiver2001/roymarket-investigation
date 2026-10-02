@@ -46,7 +46,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from reverse_source_index import build_index  # noqa: E402
 from graph_contract import (validate_graph, validate_views, SELLS_FOR_BASIS, SALE_STATUSES, ASSERTED_BY,
-                            CREDIBILITY, AUTHORISED, BASIS_CREDIBILITY, RELATION_ROLES,  # noqa: E402
+                            CREDIBILITY, AUTHORISED, BASIS_CREDIBILITY, RELATION_ROLES, PARTNER_KIND_EDGE,  # noqa: E402
                             ECOSYSTEM_ROLES, LEGAL_ENTITY_STATUS, PROGRAM_KINDS, PROGRAM_SUBTYPES,
                             MEMBERSHIP_ROLES)
 from build_relationship_graph import build_graph, build_views  # noqa: E402
@@ -406,6 +406,54 @@ def main() -> int:
                     errors.append(f"{w}.as_of must be YYYY-MM-DD (an undated state is not recorded)")
                 if not h.get("source_id") or h["source_id"] not in source_ids:
                     errors.append(f"{w}.source_id is required and must be a known source")
+
+    # --- platform_partners[] (schema v10, 2026-10-02): bank / acquirer / logistics partner of a platform ----
+    for e in entities:
+        if e.get("_merged_into"):
+            continue
+        for i, pt in enumerate(e.get("platform_partners") or []):
+            w = f"{e['slug']}.platform_partners[{i}]"
+            if not isinstance(pt, dict):
+                errors.append(f"{w} must be an object"); continue
+            if pt.get("slug") not in live_slugs or pt.get("slug") == e["slug"]:
+                errors.append(f"{w}.slug {pt.get('slug')!r} must be another live entity")
+            if pt.get("kind") not in PARTNER_KIND_EDGE:
+                errors.append(f"{w}.kind must be one of {sorted(PARTNER_KIND_EDGE)}")
+            if pt.get("basis") not in SELLS_FOR_BASIS:
+                errors.append(f"{w}.basis must be one of {sorted(SELLS_FOR_BASIS)}")
+            if not pt.get("source_id") or pt["source_id"] not in source_ids:
+                errors.append(f"{w}.source_id is required and must be a known source (a partner is recorded only from a document that names it)")
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(pt.get("as_of") or "")):
+                errors.append(f"{w}.as_of must be YYYY-MM-DD")
+
+    # --- candidate_identities[] (2026-10-02): unverified same-name legal entities, never drawn, never a tie ----
+    # They exist so a name match is recorded without becoming an identity: an ИНН here is a lead and is never
+    # copied into the entity's own `inn`. No graph edge is built from this field.
+    inn_owner = {e.get("inn"): e["slug"] for e in entities if e.get("inn") and not e.get("_merged_into")}
+    for e in entities:
+        cands = e.get("candidate_identities")
+        if cands is None or e.get("_merged_into"):
+            continue
+        if not isinstance(cands, list):
+            errors.append(f"{e['slug']}.candidate_identities must be a list"); continue
+        for i, cd in enumerate(cands):
+            w = f"{e['slug']}.candidate_identities[{i}]"
+            if not isinstance(cd, dict) or not cd.get("name_ru"):
+                errors.append(f"{w} needs name_ru"); continue
+            if cd.get("status") not in ("unverified", "rejected"):
+                errors.append(f"{w}.status must be 'unverified' or 'rejected'")
+            if cd.get("inn") and not inn_valid(str(cd["inn"])):
+                errors.append(f"{w}.inn {cd['inn']!r} fails the checksum")
+            if cd.get("inn") and cd["inn"] == e.get("inn"):
+                errors.append(f"{w}.inn equals the entity's own inn: a candidate is not the record")
+            if cd.get("inn") in inn_owner and inn_owner[cd["inn"]] != e["slug"]:
+                warnings.append(f"{w}.inn belongs to the live entity {inn_owner[cd['inn']]}: link it as a related entity, not a candidate")
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(cd.get("as_of") or "")):
+                errors.append(f"{w}.as_of must be YYYY-MM-DD")
+            if cd.get("source_id") is None:
+                warnings.append(f"{w} has no source_id (a lead from prose, not an archived extract)")
+            elif cd["source_id"] not in source_ids:
+                errors.append(f"{w}.source_id {cd['source_id']!r} is not a known source")
 
     # --- programs, events, groups and memberships (schema v8, 2026-10-01) ----
     programs_path = REG / "programs.json"

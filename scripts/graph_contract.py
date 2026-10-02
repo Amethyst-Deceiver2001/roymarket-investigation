@@ -10,13 +10,14 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-GRAPH_SCHEMA_VERSION = 9
+GRAPH_SCHEMA_VERSION = 10
 NODE_KINDS = {"entity", "person", "product", "unresolved",
               "government_customer", "military_unit", "program", "event", "group"}
 EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
               "procures", "confirmed_field_use", "cbst_tie", "family_tie",
               "sells_for", "operates", "organises", "resident_of",
-              "participated_in", "part_of", "member_of"}
+              "participated_in", "part_of", "member_of",
+              "banks_with", "acquiring_via", "ships_via"}
 TEMPORAL_STATUSES = {"current", "historical", "unknown"}
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 UNIT_TYPES = {"army", "brigade", "regiment", "battalion", "detachment",
@@ -124,7 +125,14 @@ MEMBERSHIP_ROLES = {"resident", "accelerator_participant", "graduate", "applican
                     "exhibitor", "speaker", "organiser", "co-organiser", "signatory", "participant",
                     "sponsor", "attendee"}
 STRUCTURAL_NO_BASIS = {"part_of"}
-BASIS_EDGE_TYPES = {"sells_for", "operates", "organises", "resident_of", "participated_in", "member_of"}
+BASIS_EDGE_TYPES = {"sells_for", "operates", "organises", "resident_of", "participated_in", "member_of",
+                    "banks_with", "acquiring_via", "ships_via"}
+# Platform partners (added 2026-10-02, schema v10): an entity's `platform_partners[]` (usually the platform operator)
+# names the bank, the card acquirer and the logistics partner it works through, each as an edge to that partner's
+# entity: kind bank -> banks_with, acquirer -> acquiring_via, logistics -> ships_via. Graded like sells_for. A
+# partner is recorded only from a document that names it; a role named only generically («платёжные системы и
+# эквайеры», «логистические партнёры») is not a partner.
+PARTNER_KIND_EDGE = {"bank": "banks_with", "acquirer": "acquiring_via", "logistics": "ships_via"}
 
 # entities[].ecosystem_roles (added 2026-10-01): what an entity does in the product chain, orthogonal to
 # `tier` (tier measures closeness to ЦБСТ). Absent means "not yet classified", NOT "manufacturer".
@@ -412,6 +420,9 @@ def validate_graph(
                 "participated_in": ({"entity"}, {"event"}),
                 "part_of": ({"program", "event"}, {"program", "event"}),
                 "member_of": ({"entity"}, {"group"}),
+                "banks_with": ({"entity"}, {"entity"}),
+                "acquiring_via": ({"entity"}, {"entity"}),
+                "ships_via": ({"entity"}, {"entity"}),
             }[etype]
             if src_kind not in permitted[0] or dst_kind not in permitted[1]:
                 _error(errors, f"{where} has invalid {src_kind}->{dst_kind} endpoints for {etype}")
