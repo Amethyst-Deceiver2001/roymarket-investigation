@@ -46,6 +46,7 @@ Usage:
     python3 scripts/screen_gur.py                  # everyone, skip already-screened today
     python3 scripts/screen_gur.py --limit 5         # first 5 only
     python3 scripts/screen_gur.py --force           # re-screen even if already done today
+    python3 scripts/screen_gur.py --only slug-a,slug-b   # just these entities
 """
 from __future__ import annotations
 
@@ -126,10 +127,14 @@ def parse_profile(html: str) -> dict:
     }
 
 
-def process(entities: list[dict], today: str, force: bool, limit: int | None) -> int:
+def process(entities: list[dict], today: str, force: bool, limit: int | None,
+            only: set | None = None) -> int:
     targets = []
     for e in entities:
-        if not force and e.get("gur_screened_at") == today:
+        if only is not None:
+            if e.get("slug") not in only:
+                continue
+        elif not force and e.get("gur_screened_at") == today:
             continue
         name = e.get("name_ru")
         if not name:
@@ -203,11 +208,14 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--only", help="comma-separated entity slugs to screen, whatever their screen date "
+                                   "(the status board's daily queue uses this)")
     args = ap.parse_args()
 
     today = date.today().isoformat()
     entities = json.loads(ENTITIES.read_text(encoding="utf-8"))
-    total_hits = process(entities, today, args.force, args.limit)
+    only = set(args.only.split(",")) if args.only else None
+    total_hits = process(entities, today, args.force, args.limit, only)
     ENTITIES.write_text(json.dumps(entities, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print(f"\nDone. {total_hits} entit(ies) with an ID-confirmed GUR match archived to data/sources/.")

@@ -42,6 +42,7 @@ Usage:
     python3 scripts/screen_aleph.py --kind people
     python3 scripts/screen_aleph.py --kind entities
     python3 scripts/screen_aleph.py --force
+    python3 scripts/screen_aleph.py --only slug-a,slug-b   # just these records
 """
 from __future__ import annotations
 
@@ -104,13 +105,17 @@ def query_for(r: dict, kind: str) -> str | None:
     return r.get("inn_personal") or r.get("fio_ru")
 
 
-def process(records: list, kind: str, api_key: str, today: str, force: bool) -> int:
+def process(records: list, kind: str, api_key: str, today: str, force: bool,
+            only: set | None = None) -> int:
     field_screened = "aleph_screened_at"
     field_matches = "aleph_matches"
 
     targets = []
     for r in records:
-        if not force and r.get(field_screened) == today:
+        if only is not None:
+            if r.get("slug") not in only:
+                continue
+        elif not force and r.get(field_screened) == today:
             continue
         q = query_for(r, kind)
         if not q:
@@ -169,23 +174,26 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--kind", choices=["entities", "people", "both"], default="both")
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--only", help="comma-separated slugs (entities or people) to screen, whatever their "
+                                   "screen date (the status board's daily queue uses this)")
     args = ap.parse_args()
 
     api_key = load_api_key()
     today = date.today().isoformat()
+    only = set(args.only.split(",")) if args.only else None
 
     total_hits = 0
 
     if args.kind in ("entities", "both"):
         entities = json.loads(ENTITIES.read_text(encoding="utf-8"))
         targets = entities if args.limit is None else entities[:args.limit]
-        total_hits += process(targets, "entities", api_key, today, args.force)
+        total_hits += process(targets, "entities", api_key, today, args.force, only)
         ENTITIES.write_text(json.dumps(entities, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     if args.kind in ("people", "both"):
         people = json.loads(PEOPLE.read_text(encoding="utf-8"))
         targets = people if args.limit is None else people[:args.limit]
-        total_hits += process(targets, "people", api_key, today, args.force)
+        total_hits += process(targets, "people", api_key, today, args.force, only)
         PEOPLE.write_text(json.dumps(people, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print(f"\nDone. {total_hits} record(s) with >=1 Aleph result archived to data/sources/.")
