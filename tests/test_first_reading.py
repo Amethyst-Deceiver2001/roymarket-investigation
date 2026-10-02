@@ -20,4 +20,24 @@ absent = ["Main ОКВЭД", "Founders: the extract now withholds"]  # unchanged
 bad = [s for s in expect if s not in out] + [s for s in absent if s in out]
 if bad:
     print("FAIL:", bad); print(out); sys.exit(1)
+
+# Unit checks on the two labels a real inbox (02.10.2026) got wrong.
+sys.path.insert(0, str(REPO / "scripts"))
+import first_reading as fr  # noqa: E402
+egrul_text = ("Сведения о лицензиях\n  деятельность по техническому обслуживанию шифровальных средств "
+              "(за исключением случая, если ...)\n")
+diffs, _ = fr.read_egrul(egrul_text, {})
+assert not any(d.startswith("Status:") for d in diffs), diffs        # boilerplate is not a status
+diffs, _ = fr.read_egrul(egrul_text + "Сведения о прекращении\n  Способ прекращения  Исключение юридического "
+                         "лица из ЕГРЮЛ\n", {})
+assert any(d.startswith("Status:") for d in diffs), diffs
+commercial = ("Единица измерения  Тыс. руб.\nВыручка  2110  256 862  231 712\n"
+              "Чистая прибыль (убыток)  2400  2 851 156  (493 725)\n"
+              "Всего поступило средств  6200  500 000  -\nВсего использовано средств  6300  (-)  (-)\n")
+diffs, _ = fr.read_bfo(commercial, {}, "2022")
+assert any(d.startswith("Targeted funds in a commercial filing") for d in diffs), diffs
+assert not any(d.startswith("Non-profit filing") for d in diffs), diffs
+dashes = commercial.replace("500 000", "-")                            # an empty targeted-funds page says nothing
+diffs, _ = fr.read_bfo(dashes, {}, "2022")
+assert not any("funds" in d.lower() for d in diffs if not d.startswith("Accounts")), diffs
 print("first_reading fixtures pass")
