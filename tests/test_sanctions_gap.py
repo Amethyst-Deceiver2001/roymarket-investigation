@@ -38,6 +38,9 @@ def main():
     # Revenue carries its basis: Атлант Аэро's figure is relayed by the press, not filed.
     if "ooo-atlant-aero" in by:
         assert by["ooo-atlant-aero"]["revenue_basis"] == "press-relayed", by["ooo-atlant-aero"]
+    # A non-profit's funds are never shown as revenue.
+    if "assotsiatsiya-vzaimopomoshch" in by:
+        assert by["assotsiatsiya-vzaimopomoshch"]["revenue_basis"] == "non-profit funds, not revenue"
     # Gaps sort first.
     order = [r["western_status"] for r in rows]
     assert order == sorted(order, key=lambda s: {"no ID match on any": 0,

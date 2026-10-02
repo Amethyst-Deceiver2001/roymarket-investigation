@@ -72,6 +72,10 @@ def latest_revenue(e: dict, src_type: dict):
         return None, None, ""
     f = max(rows, key=lambda x: str(x.get("year")))
     kind = src_type.get(f.get("source_id")) or ""
+    nonprofit = kind == "minjust" or re.match(r"^(АНО|Фонд|Ассоциация|НКО|Союз)\b", e.get("name_ru") or "")
+    if nonprofit:
+        # CLAUDE.md: a non-profit's funds are never presented as revenue.
+        return float(f["revenue"]), str(f.get("year")), "non-profit funds, not revenue"
     basis = ("filed" if kind == "bfo" else
              "press-relayed" if "press" in (f.get("note") or "").lower() or kind == "press" else
              kind or "unknown")
@@ -169,6 +173,11 @@ def write_md(rows: list[dict], meta: dict, path: Path) -> None:
     lines += ["", "`no ID match` means no entry on that list carries the company's ИНН/ОГРН. A list can "
               "name a company without them, so read the list before calling it unlisted. UA, CA, AU, JP, NZ "
               "are the registry's own claims, with their source ids.", ""]
+    lines += ["Known limit: the watcher matches only identifiers already in the registry. A listed "
+              "group company held under another ИНН shows here as `no ID match` for its sibling. Example "
+              "lead (02.10.2026): ЦБСТ's channel says the EU's 20th package named «Гаскар Групп», while "
+              "ООО «Гаскар» (ИНН 9710112989) has no ID match on the EU list; check the EU entry's name "
+              "and identifiers before treating Гаскар as unlisted.", ""]
     counts: dict[str, int] = {}
     for r in rows:
         counts[r["western_status"]] = counts.get(r["western_status"], 0) + 1
