@@ -1,0 +1,287 @@
+#!/usr/bin/env python3
+"""Build the internal status board page from scripts/status_board.py's output.
+
+Internal working page, not a reader page: it shows slugs and field names on
+purpose, and is published only as a private Artifact (never into docs/).
+
+  python3 exhibits/build_status_board.py --out exhibits/status_board.html
+  python3 exhibits/build_status_board.py --board board.json --out ...
+
+Without --board it runs the board itself (same defaults as status_board.py,
+including the shared weekly-scan files when /mnt/project-files/watch exists).
+Local file processing only.
+"""
+from __future__ import annotations
+
+import argparse
+import html
+import json
+import sys
+from datetime import date
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+from display_helpers import design_head  # noqa: E402
+import status_board as sb  # noqa: E402
+
+PAGE_CSS = r"""
+/* Layout: one working column; summary strip, then developments, then the filterable record list. */
+.sb { padding-block: var(--space-6); display: grid; gap: var(--space-6); max-width: 1180px; }
+.sb section { display: grid; gap: var(--space-3); min-width: 0; }
+.sb-meta { font: 400 var(--t-note)/1.5 var(--font-mono); color: var(--ink-3); margin: 0; }
+.sb-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--space-2); }
+.sb-tile { display: grid; gap: 4px; text-align: left; background: var(--panel); border: 1px solid var(--rule);
+  border-radius: var(--radius); padding: 10px 12px; cursor: pointer; color: var(--ink); font: inherit; }
+.sb-tile:hover { border-color: var(--ink-3); }
+.sb-tile[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.sb-tile .n { font: 500 28px/1 var(--font-serif); font-variant-numeric: tabular-nums; }
+.sb-tile .l { font-size: var(--t-note); color: var(--ink-2); }
+.sb-tile .m { font: 400 11px/1.3 var(--font-mono); color: var(--ink-3); }
+
+.mk { display: inline-block; width: 1.1em; text-align: center; font-family: var(--font-mono); }
+.chip { display: inline-flex; gap: 6px; align-items: baseline; font: 400 12.5px/1.35 var(--font-sans);
+  border: 1px solid var(--rule); border-radius: 3px; padding: 3px 7px; background: var(--panel); color: var(--ink); }
+.chip .k { font: 600 10px/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; }
+.chip.behind { border-color: var(--ink); }
+.chip.gap { border-style: dashed; color: var(--ink-2); }
+.chip a { white-space: nowrap; }
+
+.dev { display: grid; gap: 6px; padding: 12px 14px; background: var(--panel); border: 1px solid var(--rule);
+  border-left: 3px solid var(--ink); border-radius: var(--radius); }
+.dev p { margin: 0; max-width: var(--measure); }
+.dev .meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font: 400 12px/1.4 var(--font-mono); color: var(--ink-3); }
+.dev.lead { border-left-style: dashed; }
+.devs { display: grid; gap: var(--space-2); }
+
+.controls { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); align-items: center; }
+.controls input[type=search], .controls select { font: inherit; font-size: var(--t-note); padding: 6px 8px;
+  border: 1px solid var(--rule); border-radius: 3px; background: var(--panel); color: var(--ink); }
+.controls input[type=search] { min-width: 0; flex: 1 1 220px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; flex-wrap: wrap; }
+.seg button { font: 600 11px/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; padding: 8px 10px;
+  border: 0; background: var(--panel); color: var(--ink-2); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.controls label { font-size: var(--t-note); color: var(--ink-2); display: inline-flex; gap: 6px; align-items: center; }
+
+.rows { display: grid; border-top: 1px solid var(--rule); }
+.row { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr) minmax(0, 3.4fr); gap: 6px 18px;
+  padding: 10px 0; border-bottom: 1px solid var(--rule-soft); align-items: start; }
+.row .nm { font: 500 16px/1.3 var(--font-serif); overflow-wrap: anywhere; }
+.row .sub { font: 400 11.5px/1.4 var(--font-mono); color: var(--ink-3); overflow-wrap: anywhere; }
+.row .facts { font: 400 12px/1.5 var(--font-mono); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.row .fl { display: flex; flex-wrap: wrap; gap: 5px; min-width: 0; }
+.row .ok { font-size: var(--t-note); color: var(--ink-3); }
+.hdr { font: 600 var(--t-label)/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding-block: 8px; }
+.more { justify-self: start; font: 600 11px/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase;
+  padding: 9px 12px; border: 1px solid var(--ink); background: var(--panel); color: var(--ink); border-radius: 3px; cursor: pointer; }
+.count { font-size: var(--t-note); color: var(--ink-3); margin: 0; }
+.how { font-size: var(--t-note); color: var(--ink-2); max-width: var(--measure); }
+.how code { font: 400 12px/1.4 var(--font-mono); background: var(--panel-2); padding: 1px 4px; border-radius: 2px; overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .row { grid-template-columns: minmax(0, 1fr); }
+  .hdr { display: none; }
+}
+"""
+
+MARK = {"behind": "●", "stale": "◐", "pull": "○", "review": "◆", "gap": "┄"}
+
+PAGE_JS = r"""
+const B = JSON.parse(document.getElementById('board').textContent);
+const MARK = %MARK%;
+const TIERS = ["cbst-core","money-layer","network","manufacturer","plumbing","unverified","adjacent","person","reference","product","channel"];
+const KLABEL = {entity:"Company", person:"Person", product:"Product", channel:"Channel"};
+const st = {q:"", kind:"all", flag:null, flaggedOnly:true, tier:"", shown:80};
+try { const s = JSON.parse(localStorage.getItem('sb-state')||'{}'); Object.assign(st, s, {shown:80}); } catch(e) {}
+const save = () => { try { localStorage.setItem('sb-state', JSON.stringify({kind:st.kind, flaggedOnly:st.flaggedOnly, tier:st.tier})); } catch(e) {} };
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ru = d => d ? d.slice(8,10)+"."+d.slice(5,7)+"."+d.slice(0,4) : "";
+const age = d => d ? Math.round((new Date(B.generated) - new Date(d))/86400000) : null;
+
+function chip(f) {
+  let t = esc(f.text);
+  if (f.url) t += ` <a href="${esc(f.url)}" target="_blank" rel="noopener">post</a>`;
+  if (f.code === "development" && f.archived) t += ` <span class="k">archived, not closed</span>`;
+  return `<span class="chip ${f.kind}"><span class="k"><span class="mk" aria-hidden="true">${MARK[f.kind]}</span>${f.kind}</span><span>${t}</span></span>`;
+}
+function facts(r) {
+  const out = [];
+  if (r.kind === "entity") {
+    if (r.inn) out.push("ИНН " + r.inn);
+    out.push(r.last_register_pull ? `register ${ru(r.last_register_pull)} (${age(r.last_register_pull)}d)` : "register: none");
+  }
+  if (r.kind === "entity" || r.kind === "person") out.push(r.screened ? `screened ${ru(r.screened)} (${age(r.screened)}d)` : "screened: never");
+  if (r.kind === "product") out.push(`${r.versions} versions · ${r.deliveries} deliveries` + (r.last_delivery ? ` · last ${ru(r.last_delivery)}` : ""));
+  if (r.kind === "channel") {
+    out.push(r.high_water ? "scan at post " + r.high_water : (r.in_weekly_scan ? "scan: not read" : "scan: not watched"));
+    out.push(r.last_archived ? "archived to " + r.last_archived : "archived: none");
+    if (r.owners.length) out.push("of " + r.owners.join(", "));
+  }
+  if (r.channels && r.channels.length) out.push(r.channels.map(h => "@"+h).join(" "));
+  return out.join("<br>");
+}
+function rowHTML(r) {
+  const sub = [KLABEL[r.kind], r.kind === "entity" || r.kind === "person" && r.tier === "reference" ? r.tier : null, r.slug !== r.name ? r.slug : null].filter(Boolean).join(" · ");
+  const lat = r.latin && r.latin !== r.name ? `<div class="sub">${esc(r.latin)}</div>` : "";
+  const role = r.role ? `<div class="sub">${esc(r.role)}</div>` : "";
+  const sanc = r.sanctioned ? ` <span class="rm-sanction">Sanctioned</span>` : "";
+  const fl = r.flags.length ? r.flags.map(chip).join("") : `<span class="ok">No flags</span>`;
+  return `<div class="row"><div><div class="nm">${esc(r.name || r.slug)}${sanc}</div>${lat}${role}<div class="sub">${esc(sub)}</div></div><div class="facts">${facts(r)}</div><div class="fl">${fl}</div></div>`;
+}
+function match(r) {
+  if (st.kind !== "all" && r.kind !== st.kind) return false;
+  if (st.tier && r.tier !== st.tier) return false;
+  if (st.flag && !r.flags.some(f => f.kind === st.flag)) return false;
+  if (st.flaggedOnly && !r.flags.length) return false;
+  if (st.q) {
+    const q = st.q.toLowerCase().replace(/ё/g,"е");
+    const hay = [r.name, r.latin, r.slug, r.inn, (r.channels||[]).join(" "), r.flags.map(f=>f.text).join(" ")].join(" ").toLowerCase().replace(/ё/g,"е");
+    if (!hay.includes(q)) return false;
+  }
+  return true;
+}
+const W = {behind:5, stale:3, pull:3, review:2, gap:1};
+const score = r => r.flags.reduce((s,f) => s + W[f.kind], 0);
+function render() {
+  const rows = B.rows.filter(match).sort((a,b) => score(b)-score(a) || TIERS.indexOf(a.tier)-TIERS.indexOf(b.tier) || String(a.name).localeCompare(String(b.name),"ru"));
+  const shown = rows.slice(0, st.shown);
+  document.getElementById('rows').innerHTML = `<div class="row hdr"><div>Record</div><div>Last pulls</div><div>Flags</div></div>` + shown.map(rowHTML).join("");
+  document.getElementById('count').textContent = `${rows.length} record${rows.length===1?"":"s"} match` + (rows.length > shown.length ? `, showing ${shown.length}` : "");
+  const m = document.getElementById('more'); m.hidden = rows.length <= shown.length;
+  document.querySelectorAll('#kinds button').forEach(b => b.setAttribute('aria-pressed', b.dataset.k === st.kind));
+  document.querySelectorAll('.sb-tile').forEach(b => b.setAttribute('aria-pressed', b.dataset.f === st.flag));
+  document.getElementById('flagged').checked = st.flaggedOnly;
+  document.getElementById('tier').value = st.tier;
+}
+// Summary tiles: records carrying at least one flag of each kind.
+const strip = document.getElementById('strip');
+strip.innerHTML = Object.entries(B.kinds).map(([k,l]) => {
+  const recs = B.rows.filter(r => r.flags.some(f => f.kind === k));
+  const by = {}; recs.forEach(r => by[r.kind] = (by[r.kind]||0)+1);
+  const PL = {entity:["company","companies"], person:["person","people"], product:["product","products"], channel:["channel","channels"]};
+  const m = Object.entries(by).map(([kk,n]) => `${n} ${PL[kk][n===1?0:1]}`).join(" · ");
+  return `<button class="sb-tile" data-f="${k}" type="button"><span class="n">${recs.length}</span><span class="l"><span class="mk" aria-hidden="true">${MARK[k]}</span> ${esc(l)}</span><span class="m">${esc(m)}</span></button>`;
+}).join("");
+strip.addEventListener('click', e => { const b = e.target.closest('.sb-tile'); if (!b) return; st.flag = st.flag === b.dataset.f ? null : b.dataset.f; st.shown = 80; render(); document.getElementById('records').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); });
+document.getElementById('kinds').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; st.kind = b.dataset.k; st.shown = 80; save(); render(); });
+document.getElementById('q').addEventListener('input', e => { st.q = e.target.value.trim(); st.shown = 80; render(); });
+document.getElementById('flagged').addEventListener('change', e => { st.flaggedOnly = e.target.checked; save(); render(); });
+document.getElementById('tier').addEventListener('change', e => { st.tier = e.target.value; save(); render(); });
+document.getElementById('more').addEventListener('click', () => { st.shown += 120; render(); });
+const tsel = document.getElementById('tier');
+TIERS.filter(t => B.rows.some(r => r.tier === t)).forEach(t => tsel.insertAdjacentHTML('beforeend', `<option value="${t}">${t}</option>`));
+render();
+"""
+
+
+def dev_html(board):
+    """Open weekly-scan developments, newest first, with the records they touch."""
+    names = {r["slug"]: r.get("name") or r["slug"] for r in board["rows"]}
+    seen, items = set(), []
+    for r in board["rows"]:
+        for f in r["flags"]:
+            if f["code"] == "development" and f.get("dev_id") not in seen:
+                seen.add(f.get("dev_id"))
+                items.append(f)
+    about = {}
+    for r in board["rows"]:
+        for f in r["flags"]:
+            if f["code"] == "development":
+                about.setdefault(f.get("dev_id"), []).append(r["slug"])
+    out = []
+    for f in sorted(items, key=lambda f: (f.get("found") or "", f.get("dev_id") or ""), reverse=True):
+        recs = ", ".join(html.escape(names.get(s, s)) for s in about.get(f.get("dev_id"), []))
+        arch = " · archived, not closed" if f.get("archived") else ""
+        out.append(
+            f'<article class="dev"><p>{html.escape(f["text"])}</p>'
+            f'<div class="meta"><span>{html.escape(f.get("dev_kind") or "")}</span>'
+            f'<span>found {html.escape(sb_ru(f.get("found")))}{arch}</span>'
+            f'<a href="{html.escape(f.get("url") or "#")}" target="_blank" rel="noopener">{html.escape((f.get("url") or "").replace("https://", ""))}</a>'
+            f'<span>touches: {recs}</span></div></article>')
+    for it in board.get("unattached_developments", []):
+        out.append(
+            f'<article class="dev lead"><p>{html.escape(it.get("summary") or "")}</p>'
+            f'<div class="meta"><span>{html.escape(it.get("kind") or "lead")}, no registry record</span>'
+            f'<span>found {html.escape(sb_ru(it.get("found")))}</span>'
+            f'<a href="{html.escape(it.get("url") or "#")}" target="_blank" rel="noopener">{html.escape((it.get("url") or "").replace("https://", ""))}</a></div></article>')
+    if not out:
+        msg = ("No open findings from the weekly scan." if board.get("unattached_developments") is not None
+               and not any("developments.json" in n for n in board["notes"])
+               else "The weekly scan's findings file was not available when this page was built.")
+        out.append(f'<p class="count">{msg}</p>')
+    return "\n".join(out)
+
+
+def sb_ru(d):
+    return f"{d[8:10]}.{d[5:7]}.{d[:4]}" if d and len(d) >= 10 else (d or "")
+
+
+def build(board):
+    th = board["thresholds"]
+    notes = "".join(f"<br>{html.escape(n)}" for n in board["notes"])
+    data = json.dumps(board, ensure_ascii=False).replace("</", "<\\/")
+    js = PAGE_JS.replace("%MARK%", json.dumps(MARK, ensure_ascii=False))
+    return f"""<title>Investigation Status Board</title>
+<meta name="robots" content="noindex">
+{design_head(PAGE_CSS)}
+<main class="rm-page sb">
+<header>
+  <p class="rm-eyebrow">Internal · РОЙ.МАРКЕТ investigation</p>
+  <h1 class="rm-h1">Status board</h1>
+  <p class="rm-dek">Every company, person, product and channel on file, with what its record is missing, what is out of date, and what the network has said since the record was last touched.</p>
+  <p class="sb-meta">Built {sb_ru(board['generated'])} from the registry and the weekly scan. A register extract counts as stale after {th['egrul_stale_days']} days, a sanctions screen after {th['screen_stale_days']} days.{notes}</p>
+</header>
+<section aria-labelledby="h-sum">
+  <h2 class="rm-h2" id="h-sum">Records needing work</h2>
+  <div class="sb-strip" id="strip"></div>
+</section>
+<section aria-labelledby="h-dev">
+  <h2 class="rm-h2" id="h-dev">Behind on developments</h2>
+  <p class="count">Open findings from the weekly Telegram and news scan that are not yet in the record. Close one in <code>watch/developments.json</code> once its fact is wired in or dismissed.</p>
+  <div class="devs">{dev_html(board)}</div>
+</section>
+<section aria-labelledby="h-rec" id="records">
+  <h2 class="rm-h2" id="h-rec">All records</h2>
+  <div class="controls">
+    <input type="search" id="q" placeholder="Name, ИНН, slug, channel or flag text" aria-label="Search records">
+    <div class="seg" id="kinds" role="group" aria-label="Record kind">
+      <button type="button" data-k="all">All</button><button type="button" data-k="entity">Companies</button><button type="button" data-k="person">People</button><button type="button" data-k="product">Products</button><button type="button" data-k="channel">Channels</button>
+    </div>
+    <select id="tier" aria-label="Tier"><option value="">Any tier</option></select>
+    <label><input type="checkbox" id="flagged"> Only records with flags</label>
+  </div>
+  <p class="count" id="count"></p>
+  <div class="rows" id="rows"></div>
+  <button class="more" id="more" type="button">Show more</button>
+</section>
+<section class="how" aria-labelledby="h-how">
+  <h2 class="rm-h2" id="h-how">How this is made</h2>
+  <p>Every flag is a mechanical test in <code>scripts/status_board.py</code>, run over <code>data/registry/</code>, <code>config/channels.txt</code> and the weekly scan's files. A flag is a work item, not a finding: read the record before acting on it. Refresh with <code>python3 exhibits/build_status_board.py --out exhibits/status_board.html</code> and republish.</p>
+  <p><span class="mk">●</span> behind: the network said something the record lacks, or an own channel is unread. <span class="mk">◐</span> stale: a pull or screen past its threshold. <span class="mk">○</span> pull: a register extract, accounts or screen never done. <span class="mk">◆</span> review: open questions or unreviewed screening hits. <span class="mk">┄</span> gap: a field with no identifier or no source.</p>
+</section>
+</main>
+<script type="application/json" id="board">{data}</script>
+<script>{js}</script>
+"""
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--board", help="board JSON from status_board.py --json")
+    ap.add_argument("--out", default=str(ROOT / "exhibits" / "status_board.html"))
+    ap.add_argument("--today", help="YYYY-MM-DD")
+    a = ap.parse_args()
+    if a.board:
+        board = json.loads(Path(a.board).read_text(encoding="utf-8"))
+    else:
+        today = sb.parse_date(a.today) if a.today else date.today()
+        ss, dv = sb.default_path("weekly_scan_state.json"), sb.default_path("developments.json")
+        board = sb.Board(today,
+                         json.loads(ss.read_text(encoding="utf-8")) if ss else None,
+                         json.loads(dv.read_text(encoding="utf-8")) if dv else None).build()
+    Path(a.out).write_text(build(board), encoding="utf-8")
+    print(f"wrote {a.out} ({len(board['rows'])} records)")
+
+
+if __name__ == "__main__":
+    main()
