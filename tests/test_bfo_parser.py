@@ -24,6 +24,7 @@ Run after any change to parse_one() or the TARGET_CODES/SIGN_NORMALISED
 handling.
 """
 import sys
+import tempfile
 from pathlib import Path
 
 from openpyxl import Workbook
@@ -31,8 +32,9 @@ from openpyxl import Workbook
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from parse_bfo_financials import parse_one  # noqa: E402
 
-FIXTURES_DIR = Path(__file__).resolve().parent / "fixtures"
-FIXTURES_DIR.mkdir(exist_ok=True)
+# Built fresh on every run, in a temporary folder: writing them into tests/fixtures/ left the
+# checkout dirty after each run (openpyxl stamps the save time into the file).
+FIXTURES_DIR = Path(tempfile.mkdtemp(prefix="bfo_fixtures_"))
 
 
 def build(path, rows_pl, rows_target, units="Тыс. руб."):
