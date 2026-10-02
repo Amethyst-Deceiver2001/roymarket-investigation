@@ -63,7 +63,7 @@ after the design system redo and a new landing page.
    provisional until the unit-naming decision, and `docs/` should self-host the
    fonts before the public cutoff. The old system is archived in
    `data/sources/ARTIFACT_20260921_roymarket-design-system/`.
-3. **New landing page** on the new design system.
+3. **New landing page** on the new design system, after track V's model and components (below).
 4. **B4 citation layer.** `inventory_sources.py` derives `title` and
    `public_url` once per source (Telegram header → t.me link, page canonical
    URL, zakupki registry number). 8,881 sources have neither today. The chain
@@ -78,6 +78,50 @@ after the design system redo and a new landing page.
 7. **B6 explorer** narrowed to neighbourhood-on-demand once two chain views
    exist.
 8. Later: Russian versions (written, not translated).
+
+### V. Visuals (decided 2026-10-02; between the design system and the landing page)
+
+Images, video stills, facility views and product marketing become evidence
+records rather than loose pictures. Today an image has only `caption`, `path`
+and `source_id`, so a page cannot say what it shows, who published it, what it
+supports or whether it may be published. On file: 63 entity images (25 of them
+logos), 17 battlefield entries (2 with an image), 28 person photos, 76 Telegram
+media files mostly not linked to a record, and no video file at all.
+
+1. **Model.** A `media[]` record on entities, products, deliveries and units:
+   `kind` (photo, video, still, satellite, street-level, screenshot, scan),
+   `genre` (marketing, field_test, combat, facility, training, event,
+   handover, portrait, logo), `shows`, `supports`, `asserted_by`, `published`
+   and `captured`, `original_url`, `source_id`, `frame` (for a still, its
+   timestamp in the video), `geo` (`{lat, lon, precision, method}`), `publish`
+   (ok, excerpt-only, internal) and `redact`. `check_registry.py` validates
+   the record.
+2. **Backfill.** Classify the 63 images and 17 battlefield entries, and link the
+   orphaned Telegram media.
+3. **Capture.** `tg_media_pull` already covers Telegram. A downloader for
+   YouTube, Rutube and VK is a live job the user runs. Originals are archived
+   in `data/sources/` and hashed (Berkeley Protocol chain of custody).
+4. **Components** in the design system: EvidenceFigure, FrameStrip (timestamped
+   stills from one video), FacilityPair (satellite and ground views with
+   coordinates, imagery date and credit), VideoCard (poster still, duration,
+   link to the original), and thumbnail slots on chain cards.
+5. **Pilot on «Булат»:** product shots and the Наша Правда handover photos.
+   Тримикс's facility only if its address is documented.
+
+Decisions (user, 2026-10-02):
+- **Video:** key frames plus a link to the original now, with full originals
+  archived privately. Self-hosted short clips come later. No embedded platform
+  players.
+- **Faces:** blurred by default in handover, training and recruitment imagery.
+  A face is shown only for a person with a person record (a person of
+  interest).
+- **Facility imagery:** Google Earth and Yandex Maps screenshots for now, each
+  credited with its provider and imagery date. The terms-of-use risk is
+  accepted for the preview stage and re-checked before the public cutoff.
+- **Copyright:** a maker's marketing is used as excerpts for reporting. Full
+  galleries stay internal.
+- **Graphic content (default proposed, not yet confirmed by the user):** stills
+  only, a content warning, no casualties shown.
 
 ### B. Model (makes chain views possible beyond «Булат»)
 
