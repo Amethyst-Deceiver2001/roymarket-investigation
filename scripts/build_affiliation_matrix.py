@@ -9,7 +9,7 @@ over a dense bipartite plot).
 
 Local file processing over data/registry/*.json -- no network calls, safe
 to run directly/repeatedly. Re-run after any relationship_graph.json
-rebuild. Output: scratch_design/affiliation_matrix.html (a curated static
+rebuild. Output: exhibits/affiliation_matrix.html (a curated static
 exhibit, same publishing path as cbst_chain.html -- not part of the
 docs/profiles/ generated-page family).
 """
@@ -279,7 +279,7 @@ h1 {{ font-family: var(--serif); font-size: clamp(1.9rem, 5vw, 2.8rem); line-hei
 def main():
     graph, entities, people = load()
     rows = build_rows(graph, entities, people)
-    out_path = os.path.join(ROOT, "scratch_design/affiliation_matrix.html")
+    out_path = os.path.join(ROOT, "exhibits/affiliation_matrix.html")
     with open(out_path, "w") as f:
         f.write(render(rows))
     print(f"wrote {out_path} — {len(rows)} people with >=2 entity ties")

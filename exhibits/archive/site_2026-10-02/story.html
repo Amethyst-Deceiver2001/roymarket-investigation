@@ -1,0 +1,205 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#efeee7;color:#17180f}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<title>From ЦБСТ to the Front — a short guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #efeee7; --panel: #ffffff; --panel-2: #f6f5ef; --line: #d4d2c4;
+    --ink: #17180f; --ink-2: #4b4c3f; --muted: #7a7c68; --accent: #4c5f2f;
+    --doc: #2f6b46; --doc-bg: #e3ece4;
+    --press: #966a1f; --press-bg: #f3ead6;
+    --open: #8a3d3d; --open-bg: #f2e0df;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --display: 'Oswald', 'Arial Narrow', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d0e0a; --panel: #15160f; --panel-2: #191a12; --line: #34362450;
+      --ink: #dcdccc; --ink-2: #b3b39a; --muted: #7c7d64; --accent: #9db56e;
+      --doc: #7fbf98; --doc-bg: #16261c;
+      --press: #d9b060; --press-bg: #2a2314;
+      --open: #e08787; --open-bg: #2c1a1a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d0e0a; --panel: #15160f; --panel-2: #191a12; --line: #34362450;
+    --ink: #dcdccc; --ink-2: #b3b39a; --muted: #7c7d64; --accent: #9db56e;
+    --doc: #7fbf98; --doc-bg: #16261c;
+    --press: #d9b060; --press-bg: #2a2314;
+    --open: #e08787; --open-bg: #2c1a1a;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.6; }
+  a { color: var(--accent); }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 3.25rem 1.25rem 6rem; }
+
+  header.hero { border-bottom: 1px solid var(--line); padding-bottom: 2rem; margin-bottom: 2.5rem; }
+  .kicker { font-family: var(--mono); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 1rem; }
+  h1 { font-family: var(--display); font-weight: 600; font-size: clamp(1.9rem, 5.5vw, 2.9rem); text-transform: uppercase; letter-spacing: .005em; line-height: 1.08; margin: 0 0 1rem; text-wrap: balance; }
+  .lede { max-width: 38rem; color: var(--ink-2); font-size: 1.02rem; margin: 0 0 .8rem; }
+  .lede b { color: var(--ink); font-weight: 600; }
+
+  h2 { font-family: var(--display); font-weight: 600; font-size: 1.35rem; text-transform: uppercase; letter-spacing: .01em; margin: 0 0 .8rem; }
+  .step-eyebrow { font-family: var(--mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: .7rem; margin: 3rem 0 .8rem; }
+  .step-eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  p { margin: 0 0 1rem; }
+
+  .tag { display: inline-block; font-family: var(--mono); font-size: .62rem; letter-spacing: .07em; text-transform: uppercase; padding: .18em .55em; border-radius: 2px; white-space: nowrap; vertical-align: middle; font-weight: 600; }
+  .t-doc { background: var(--doc-bg); color: var(--doc); }
+  .t-press { background: var(--press-bg); color: var(--press); }
+  .t-open { background: var(--open-bg); color: var(--open); }
+
+  .legend-strip { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: .9rem 1.1rem; margin: 0 0 2.5rem; font-size: .82rem; color: var(--ink-2); display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; align-items: center; }
+  .legend-strip strong { color: var(--ink); }
+
+  .case { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 1.5rem 1.6rem; margin: 0 0 1.5rem; }
+  .case h3 { font-family: var(--display); font-weight: 600; font-size: 1.15rem; text-transform: uppercase; margin: 0 0 .3rem; }
+  .case .chain { font-family: var(--mono); font-size: .76rem; color: var(--muted); margin: 0 0 .9rem; }
+  .case .chain b { color: var(--ink-2); font-weight: 600; }
+  .evt { border-left: 2px solid var(--line); padding-left: .9rem; margin: 1rem 0; }
+  .evt .when { font-family: var(--mono); font-size: .7rem; color: var(--muted); display: flex; gap: .6rem; align-items: center; margin-bottom: .3rem; flex-wrap: wrap; }
+  .evt .claim { font-size: .92rem; }
+  .evt .src { font-family: var(--mono); font-size: .68rem; color: var(--muted); }
+  .case .more { font-size: .84rem; margin-top: 1rem; }
+
+  .reveal { background: var(--panel-2); border: 1px solid var(--line); border-radius: 4px; padding: 1.6rem 1.7rem; margin: 0 0 1.5rem; }
+  .reveal .stat { font-family: var(--display); font-size: 2.4rem; color: var(--accent); line-height: 1; margin-bottom: .3rem; }
+  .roster { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-direction: column; gap: .5rem; }
+  .roster li { font-size: .9rem; display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line); padding-bottom: .5rem; }
+  .roster .n { font-family: var(--mono); color: var(--muted); font-size: .78rem; }
+
+  .cta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; margin: 1.5rem 0 0; }
+  .cta { display: block; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); }
+  .cta:hover { border-color: var(--accent); }
+  .cta .lbl { font-family: var(--mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: .4rem; }
+  .cta .name { font-family: var(--display); font-size: 1.05rem; text-transform: uppercase; }
+  .cta .note { font-size: .8rem; color: var(--ink-2); margin-top: .3rem; }
+
+  footer.credit { font-size: .8rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1.25rem; margin-top: 3.5rem; }
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">РОЙ.МАРКЕТ investigation · start here</p>
+    <h1>From ЦБСТ to the Front, in three stories</h1>
+    <p class="lede">РОЙ.МАРКЕТ / ЦБСТ isn't one company — it's a network: a state-linked non-profit at the center, a cluster of manufacturers and distributors around it, and a handful of people who sit on several of those companies at once. Below are three of that network's best-documented chains, told as dated, individually-sourced claims — the same underlying evidence that backs this investigation's full technical record, just read in order instead of as a database.</p>
+  </header>
+
+  <div class="legend-strip">
+    <strong>How to read the tags:</strong>
+    <span><span class="tag t-doc">Primary doc</span> confirmed by a primary document</span>
+    <span><span class="tag t-press">Press-reported</span> reported by a named outlet</span>
+    <span><span class="tag t-open">Open</span> open-source / social-media sourced, not yet document-confirmed</span>
+  </div>
+
+  <p class="step-eyebrow">Story one</p>
+  <div class="case">
+    <h3>«Кузнечик» — a comms system, from workshop to front line</h3>
+    <p class="chain"><b>ООО «Гагаринг»</b> (Краснодар, maker) <b>→</b> Russian units (field use, self-reported quantity 500 units)</p>
+    <p>Гагаринг makes the «Кузнечик» encrypted comms/control system for FPV drones, alongside 23 other UAV/EW products. Three separate, independently dated claims chart its path from an on-record press interview to a named front-line acknowledgment:</p>
+    <div class="evt">
+      <div class="when">02.11.2024 <span class="tag t-press">Press-reported</span> press self-report</div>
+      <p class="claim">Founder Александр Барашков, on record to RT: FPV drones fitted with «Кузнечик» have struck "hundreds" of military-equipment targets, including armored Western-made examples.</p>
+      <p class="src">Source [s5435]</p>
+    </div>
+    <div class="evt">
+      <div class="when">08.04.2025 <span class="tag t-press">Press-reported</span> field confirmation</div>
+      <p class="claim">Independent republication via a state-linked movement and ТАСС confirms active battlefield use — while Барашков declines to give verifiable deployment-scale figures, calling them classified.</p>
+      <p class="src">Source [s5436]</p>
+    </div>
+    <div class="evt">
+      <div class="when">30.08.2026 <span class="tag t-open">Open</span> thank-you letter</div>
+      <p class="claim">A front-line-adjacent Telegram channel (@RuFront) posts a «благодарственное письмо» — the recognizable military thank-you-letter genre — thanking Гагаринг by name for 500 «Кузнечик» units.</p>
+      <p class="src">Source [s5447]</p>
+    </div>
+    <p class="more">Full record: <a href="profiles/ooo-gagaring.html">Гагаринг company profile</a> · <a href="profiles/persons/barashkov-aleksandr-sergeevich.html">Барашков person profile</a></p>
+  </div>
+
+  <p class="step-eyebrow">Story two</p>
+  <div class="case">
+    <h3>«Булат» — one detector, sold twice, to two different kinds of buyer</h3>
+    <p class="chain"><b>ООО «Тримикс» → ООО «ПОКРОВ» → ИП Цыганов В.Б.</b> (supply chain) <b>→</b> a federal МЧС spetsnaz unit, then a regional civilian administration</p>
+    <p>The «Булат» drone-detector line shows something the other chains don't: a full contract-to-delivery cycle, twice over, to two structurally different apex customers — a federal emergency-response spetsnaz unit, then an ordinary regional government.</p>
+    <div class="evt">
+      <div class="when">29.10.2024 <span class="tag t-doc">Primary doc</span> contract award</div>
+      <p class="claim">ИП Цыганов wins a sole-supplier contract with ГУ МЧС России по Курской области for 184 «Булат v.4» detector units, signed during the active Kursk-oblast incursion response.</p>
+      <p class="src">₽16,192,000 · Source [s1416]</p>
+    </div>
+    <div class="evt">
+      <div class="when">18.11.2024 <span class="tag t-doc">Primary doc</span> delivery confirmation</div>
+      <p class="claim">A УПД transfer document confirms all 184 units actually delivered — closing the contract above with primary-document proof, not just a signed agreement.</p>
+      <p class="src">Source [s1416]</p>
+    </div>
+    <div class="evt">
+      <div class="when">18.09.2025 → 25.12.2025 <span class="tag t-doc">Primary doc</span> contract → delivery</div>
+      <p class="claim">A second sole-supplier contract, this time with ФГКУ «ЦСООР «Лидер»» (МЧС spetsnaz), closes with an Акт signed by the unit's own commanding general — who names Цыганов explicitly as "Производитель" (manufacturer), not merely a reseller.</p>
+      <p class="src">₽11,984,000 · Source [s1417, s1464]</p>
+    </div>
+    <div class="evt">
+      <div class="when">2026 <span class="tag t-doc">Primary doc</span> contract award</div>
+      <p class="claim">The same «Булат» product line sells again — this time to a regional civilian government, the Администрация Белгородского муниципального округа, not a military or emergency-response body.</p>
+      <p class="src">₽495,000 · Source [s3424]</p>
+    </div>
+    <p class="more">Full record: <a href="profiles/products/bulat.html">«Булат» product profile</a> · <a href="https://claude.ai/artifact/2Rkz7M8S4ub4TAPRiVKT3n">the full evidence ledger</a></p>
+  </div>
+
+  <p class="step-eyebrow">Story three</p>
+  <div class="case">
+    <h3>«Пиранья» — named by name, on two fronts</h3>
+    <p class="chain"><b>ООО «СКБ Пиранья»</b> (Ulyanovsk, maker) <b>→</b> EU sanctions list · a named Russian brigade</p>
+    <p>Пиранья's «Пиранья 15/20» cargo-capable strike drones show a different kind of evidence: ЦБСТ's own channel naming Пиранья as one of six ЦБСТ-network residents added to the EU's 20th sanctions package, and a battlefield claim naming the actual receiving unit rather than an anonymous "front-line" recipient.</p>
+    <div class="evt">
+      <div class="when">24.04.2026 <span class="tag t-doc">Primary doc</span> sanctions designation, self-disclosed</div>
+      <p class="claim">ЦБСТ's own channel confirms Пиранья's inclusion in the EU's 20th sanctions package as an entity "входящее в контур Центра беспилотных систем и технологий" — a rare case where the network names its own sanctioned members.</p>
+      <p class="src">ЦБСТ channel post 2159491523:2095</p>
+    </div>
+    <div class="evt">
+      <div class="when">16.11.2024 <span class="tag t-open">Open</span> battlefield sighting</div>
+      <p class="claim">A ground-attack claim names a specific unit — «Бешеные псы» — and a specific target, a D-44 85mm gun, on the Pokrovsk axis, with a photo showing drones fitted with munitions.</p>
+      <p class="src">Not yet typed as a document-confirmed transaction — recorded as open-source battlefield evidence</p>
+    </div>
+    <p class="more">Full record: <a href="profiles/ooo-skb-piranya.html">СКБ «Пиранья» company profile</a></p>
+  </div>
+
+  <p class="step-eyebrow">The pattern behind the stories</p>
+  <div class="reveal">
+    <div class="stat">47</div>
+    <p>individuals in this registry hold a director, founder, or ownership role at <b>two or more</b> of the network's companies — not a coincidence of a small industry, but a structural feature of it. Александр Барашков, from Story One, sits on 3; others sit on far more:</p>
+    <ul class="roster">
+      <li><span>Хутешен Алексей Александрович</span><span class="n">11 entities</span></li>
+      <li><span>Барахтин Артём Владимирович</span><span class="n">7 entities</span></li>
+      <li><span>Рубинштейн Дмитрий Владимирович <span class="tag t-doc" style="margin-left:.4rem">sanctioned</span></span><span class="n">6 entities</span></li>
+    </ul>
+    <p style="margin-top:1rem">Рубинштейн is a particular case: he directed АНО «ЦБСТ» itself (2024–2025) while simultaneously co-founding and managing a separate drone-production company, «Беркут» — the network's center and one of its satellites, run by the same person at the same time.</p>
+    <p class="more">Full record: <a href="https://claude.ai/artifact/MEiCg6h7VpbKhsassoCi4r">Multi-Role Individuals — the full list</a> · <a href="profiles/persons/dmitriy-vladimirovich-rubinshteyn.html">Рубинштейн person profile</a></p>
+  </div>
+
+  <p class="step-eyebrow">Go deeper</p>
+  <p>The three stories above are a way in, not the whole investigation. Every claim on this page — and hundreds more like it — is cited, cross-referenced, and independently explorable in the full record:</p>
+  <div class="cta-grid">
+    <a class="cta" href="https://claude.ai/code/artifact/0e402553-a22e-4427-a3a9-c5b0251bdaa2">
+      <span class="lbl">Specialist tool</span>
+      <span class="name">The full network graph</span>
+      <span class="note">Search, filter, and trace any of the network's ~1,250 nodes and their sourced ties.</span>
+    </a>
+    <a class="cta" href="cases/index.html">
+      <span class="lbl">More cases</span>
+      <span class="name">Two more chains: ГОУДРОН and Овод</span>
+      <span class="note">Case studies for two more flagship manufacturers beyond the three told here, each sourced to the registry.</span>
+    </a>
+    <a class="cta" href="profiles/ooo-gagaring.html">
+      <span class="lbl">Primary evidence</span>
+      <span class="name">Company &amp; person profiles</span>
+      <span class="note">Forensic-register pages for every profiled entity, product, and person, sources cited — start with Гагаринг.</span>
+    </a>
+  </div>
+
+  <footer class="credit">
+    <p>Every figure and quotation on this page is drawn directly from this investigation's sourced registry (<code>data/registry/</code>) — nothing here is paraphrased beyond translation, and every claim traces to a primary document, press report, or open-source post cited inline. This page is a guided entry point; it does not replace or simplify away the underlying evidence, which remains fully available through the links above.</p>
+  </footer>
+
+</div>
+</body>
+</html>

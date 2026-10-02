@@ -1,0 +1,229 @@
+/* Shared stylesheet for docs/profiles/*.html — same design tokens and
+   classes as docs/index.html (kept in sync by hand; this file exists so a
+   generated profile page doesn't have to carry its own copy of the ~220
+   lines index.html embeds directly), plus profile-page-specific additions
+   at the bottom. */
+
+:root {
+  --paper: #eceef1;
+  --panel: #f6f7f9;
+  --panel-2: #e3e6ea;
+  --ink: #12161b;
+  --ink-2: #414a55;
+  --ink-3: #6b7683;
+  --rule: #c8ced6;
+  --rule-soft: #dbe0e6;
+  --accent: #17456b;
+  --accent-soft: #e0e9f1;
+  --ok: #0a7a53;
+  --ok-bg: #e3f0ea;
+  --mid: #96700a;
+  --mid-bg: #faf5e8;
+  --low: #8a3030;
+  --low-bg: #f2dedd;
+  --person: #6a3f9e;
+  --person-bg: #ece2f6;
+  --shadow: 0 1px 2px rgba(18,22,27,.06), 0 8px 24px rgba(18,22,27,.05);
+  --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1216;
+    --panel: #151b21;
+    --panel-2: #1d242c;
+    --ink: #e6eaee;
+    --ink-2: #b3bcc6;
+    --ink-3: #838f9c;
+    --rule: #2c353f;
+    --rule-soft: #222a33;
+    --accent: #7db4dd;
+    --accent-soft: #16252f;
+    --ok: #6fc9a3;
+    --ok-bg: #12261f;
+    --mid: #e0b23f;
+    --mid-bg: #2a2314;
+    --low: #ec7a95;
+    --low-bg: #2d1918;
+    --person: #c9a6ec;
+    --person-bg: #241a2e;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1216;
+  --panel: #151b21;
+  --panel-2: #1d242c;
+  --ink: #e6eaee;
+  --ink-2: #b3bcc6;
+  --ink-3: #838f9c;
+  --rule: #2c353f;
+  --rule-soft: #222a33;
+  --accent: #7db4dd;
+  --accent-soft: #16252f;
+  --ok: #6fc9a3;
+  --ok-bg: #12261f;
+  --mid: #e0b23f;
+  --mid-bg: #2a2314;
+  --low: #ec7a95;
+  --low-bg: #2d1918;
+  --person: #c9a6ec;
+  --person-bg: #241a2e;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 1.25rem 6rem;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 60rem; margin: 0 auto; }
+.prose { max-width: 44rem; }
+
+/* ---------- masthead ---------- */
+.mast { border-bottom: 3px double var(--rule); padding: 3rem 0 1.5rem; margin-bottom: 2.5rem; }
+.kicker { font-family: var(--mono); font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin: 0 0 1rem; }
+h1 { font-family: var(--serif); font-size: clamp(2rem, 5.5vw, 3.1rem); line-height: 1.08; font-weight: 400; letter-spacing: -.015em; text-wrap: balance; margin: 0 0 .3rem; }
+.standfirst { font-family: var(--serif); font-size: 1.12rem; line-height: 1.55; color: var(--ink-2); max-width: 42rem; margin: 0 0 1.5rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; font-family: var(--mono); font-size: .74rem; color: var(--ink-3); letter-spacing: .03em; }
+
+/* ---------- sections ---------- */
+section { margin: 3.5rem 0 0; }
+.eyebrow { font-family: var(--mono); font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; gap: .75rem; margin: 0 0 1rem; }
+.eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--rule-soft); }
+h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.5rem, 3.4vw, 2rem); line-height: 1.2; letter-spacing: -.01em; text-wrap: balance; margin: 0 0 1rem; }
+h3 { font-family: var(--sans); font-weight: 640; font-size: 1.02rem; letter-spacing: -.005em; margin: 2rem 0 .6rem; }
+p { margin: 0 0 1rem; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+strong { font-weight: 640; }
+code, .id { font-family: var(--mono); font-size: .86em; }
+.id { color: var(--ink-2); white-space: nowrap; }
+
+/* ---------- citation popovers: a [sNNNN] mark is a button that opens the
+   source's own locator/dates inline, so a reader can check a claim without
+   losing their place in the paragraph. Plain-text [sNNNN] (id ranges,
+   multi-id lists) is left alone -- see profile_text.py / build_case_pages.py
+   inline(). Popover is Baseline "Newly available" (since 2025-01-27): where
+   unsupported the button just renders inert, still showing the bracketed id
+   as before -- no polyfill, per the no-fallback-for-a-read-only-page call. */
+.cite { font: inherit; font-family: var(--mono); font-size: .86em; color: var(--ink-2); background: none; border: none; padding: 0; margin: 0; cursor: pointer; white-space: nowrap; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; text-decoration-color: var(--ink-3); }
+.cite:hover, .cite:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
+.cite:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+[popover].cite-pop { margin: auto; max-width: 22rem; background: var(--panel); color: var(--ink); border: 1px solid var(--rule-soft); border-radius: 4px; padding: .9rem 1.05rem; box-shadow: var(--shadow); font-family: var(--sans); }
+.cite-pop::backdrop { background: rgba(18, 22, 27, .25); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cite-pop::backdrop { background: rgba(0, 0, 0, .5); } }
+:root[data-theme="dark"] .cite-pop::backdrop { background: rgba(0, 0, 0, .5); }
+.cite-pop .cite-pop-id { margin: 0 0 .4rem; font-family: var(--mono); font-size: .7rem; letter-spacing: .09em; text-transform: uppercase; color: var(--accent); }
+.cite-pop .cite-pop-loc { margin: 0 0 .35rem; font-size: .88rem; line-height: 1.4; word-break: break-word; }
+.cite-pop .cite-pop-meta { margin: 0; font-family: var(--mono); font-size: .72rem; color: var(--ink-3); }
+
+/* ---------- confidence tags ---------- */
+.tag { display: inline-block; font-family: var(--mono); font-size: .64rem; letter-spacing: .09em; text-transform: uppercase; padding: .18em .5em; border-radius: 2px; white-space: nowrap; vertical-align: middle; font-weight: 600; }
+.t-doc { background: var(--ok-bg); color: var(--ok); }
+.t-press { background: var(--mid-bg); color: var(--mid); }
+.t-open { background: var(--low-bg); color: var(--low); }
+.t-clean { background: var(--ok-bg); color: var(--ok); }
+.t-low { background: var(--low-bg); color: var(--low); }
+
+.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 1.25rem 0 0; font-size: .82rem; color: var(--ink-2); }
+.legend > span { display: flex; align-items: center; gap: .45rem; }
+
+/* ---------- callout ---------- */
+.callout { background: var(--panel); border-left: 3px solid var(--accent); padding: 1.1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 3px 3px 0; box-shadow: var(--shadow); }
+.callout p:last-child { margin-bottom: 0; }
+.callout .lbl { font-family: var(--mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: .5rem; }
+
+/* ---------- verbatim quote ---------- */
+blockquote { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--panel-2); border-radius: 3px; font-family: var(--mono); font-size: .82rem; line-height: 1.65; color: var(--ink); white-space: pre-wrap; overflow-x: auto; }
+blockquote cite { display: block; margin-top: .75rem; font-family: var(--sans); font-style: normal; font-size: .78rem; color: var(--ink-3); }
+blockquote em { font-style: normal; }
+blockquote .en-gloss { display: block; margin-top: .6rem; font-family: var(--sans); color: var(--ink-2); white-space: normal; }
+
+/* ---------- tables ---------- */
+.scroll { overflow-x: auto; margin: 1.25rem 0; border: 1px solid var(--rule-soft); border-radius: 3px; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; min-width: 40rem; }
+th, td { text-align: left; padding: .65rem .8rem; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+thead th { font-family: var(--mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); background: var(--panel-2); border-bottom: 1px solid var(--rule); font-weight: 600; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--panel) 60%, transparent); }
+td.num { font-variant-numeric: tabular-nums; font-family: var(--mono); font-size: .78rem; white-space: nowrap; }
+
+/* ---------- source cards ---------- */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1px; background: var(--rule-soft); border: 1px solid var(--rule-soft); border-radius: 3px; overflow: hidden; margin: 1.25rem 0; }
+.card { background: var(--panel); padding: 1rem 1.1rem; }
+.card h4 { margin: 0 0 .35rem; font-size: .92rem; font-weight: 640; }
+.card p { margin: 0; font-size: .84rem; color: var(--ink-2); line-height: 1.5; }
+.card .q { font-family: var(--mono); font-size: .72rem; color: var(--ink-3); display: block; margin-top: .5rem; word-break: break-word; }
+
+ul.plain { padding-left: 1.1rem; margin: 0 0 1rem; }
+ul.plain li { margin-bottom: .45rem; }
+
+.footnote { font-size: .84rem; color: var(--ink-3); border-top: 1px solid var(--rule-soft); padding-top: 1.25rem; margin-top: 3.5rem; }
+
+/* ---------- image evidence ---------- */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+.gallery figure { margin: 0; }
+.gallery img { display: block; width: 100%; height: auto; border-radius: 3px; border: 1px solid var(--rule-soft); box-shadow: var(--shadow); }
+.gallery figcaption { font-size: .82rem; color: var(--ink-2); line-height: 1.5; margin-top: .6rem; }
+.gallery figcaption .src { display: block; margin-top: .4rem; font-family: var(--mono); font-size: .68rem; color: var(--ink-3); }
+
+@media (max-width: 34rem) {
+  .findings li { grid-template-columns: 1fr; }
+  .findings .n { padding-top: 0; }
+}
+
+/* ================= profile-page-specific ================= */
+
+.profile-head { display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; }
+.entity-logo { width: 4.5rem; height: 4.5rem; object-fit: contain; border-radius: 6px; border: 1px solid var(--rule-soft); background: var(--panel); padding: .4rem; flex-shrink: 0; }
+.profile-head-text { flex: 1; min-width: 14rem; }
+.fio-ru, .name-ru { display: block; font-family: var(--serif); font-size: 1.1rem; color: var(--ink-2); margin: 0 0 .6rem; }
+.chip-row { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 .9rem; }
+
+.meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1px; background: var(--rule-soft); border: 1px solid var(--rule-soft); border-radius: 3px; overflow: hidden; margin: 1.25rem 0; }
+.meta-grid > div { background: var(--panel); padding: .85rem 1rem; }
+.meta-grid dt { font-family: var(--mono); font-size: .64rem; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 .3rem; }
+.meta-grid dd { margin: 0; font-size: .92rem; }
+
+.principal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+.person-card { background: var(--panel); border: 1px solid var(--rule-soft); border-radius: 4px; padding: 1.1rem; display: flex; gap: 1rem; }
+.person-photo { width: 4.5rem; height: 4.5rem; object-fit: cover; border-radius: 4px; border: 1px solid var(--rule-soft); flex-shrink: 0; background: var(--panel-2); }
+.person-photo.placeholder { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: .62rem; color: var(--ink-3); text-align: center; }
+.person-body h4 { margin: 0 0 .1rem; font-size: .98rem; }
+.person-body .person-fio { display: block; font-family: var(--serif); font-size: .88rem; color: var(--ink-2); margin: 0 0 .5rem; }
+.person-body dl { margin: 0; font-size: .82rem; }
+.person-body dt { display: inline; font-family: var(--mono); color: var(--ink-3); }
+.person-body dd { display: inline; margin: 0 .8em 0 .3em; }
+.person-body dd::after { content: ""; display: block; }
+
+.empty-note { color: var(--ink-3); font-style: italic; font-size: .88rem; }
+
+.link-list { list-style: none; padding: 0; margin: 0 0 1rem; display: flex; flex-direction: column; gap: .35rem; }
+.link-list li { font-size: .88rem; }
+.link-list .note { color: var(--ink-3); font-size: .82rem; }
+
+/* ---------- person-profile-specific: ego network + role cards ---------- */
+
+.net-panel { background: var(--panel); border: 1px solid var(--rule-soft); border-radius: 4px; padding: 1.25rem; box-shadow: var(--shadow); }
+.net-svg-wrap { overflow-x: auto; display: flex; justify-content: center; }
+.net-svg-wrap > svg { flex-shrink: 0; max-width: 100%; height: auto; }
+.net-legend { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; margin: 1.1rem 0 0; font-size: .8rem; color: var(--ink-2); padding-top: 1rem; border-top: 1px solid var(--rule-soft); }
+.net-legend > span { display: flex; align-items: center; gap: .5rem; }
+.net-swatch { width: .85rem; height: .85rem; border-radius: 3px; display: inline-block; flex-shrink: 0; }
+.net-swatch.circle { border-radius: 50%; }
+
+.role-kind { font-family: var(--mono); font-size: .62rem; letter-spacing: .06em; text-transform: uppercase; padding: .16em .5em; border-radius: 2px; white-space: nowrap; }
+.role-kind.rk-both { background: var(--accent-soft); color: var(--accent); }
+.role-kind.rk-director { background: var(--ok-bg); color: var(--ok); }
+.role-kind.rk-founder { background: var(--mid-bg); color: var(--mid); }
+.role-kind.rk-other { background: var(--panel-2); color: var(--ink-3); }
+
+.prod-card { background: var(--panel); border: 1px solid var(--rule-soft); border-radius: 4px; padding: 1.1rem; }
+.prod-card .via { display: block; margin-top: .5rem; font-family: var(--mono); font-size: .68rem; color: var(--ink-3); }

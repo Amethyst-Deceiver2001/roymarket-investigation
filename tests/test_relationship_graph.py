@@ -207,11 +207,185 @@ class RelationshipGraphTests(unittest.TestCase):
         self.assertTrue(any("nodes[0].kind" in message for message in messages))
         self.assertTrue(any("edges[0] endpoint" in message for message in messages))
 
+    def test_sells_for_edge_carries_channel_and_basis_and_replaces_dealer_link(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["sells_for"] = [{"slug": "core", "channel": "Ozon (test store)", "basis": "doc", "source_id": "s1"}]
+        entities[0]["related_entities"] = [{"slug": "ordinary", "relationship_type": "dealer", "source_id": "s1"}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        sells = [e for e in graph["edges"] if e["type"] == "sells_for"]
+        self.assertEqual([("ordinary", "core", "Ozon (test store)", "doc")],
+                         [(e["source"], e["target"], e["label"], e["confidence"]) for e in sells])
+        # the prose dealer link for the same pair (either direction) is not drawn a second time
+        self.assertFalse(any(e["type"] == "related" and e["label"] == "dealer" for e in graph["edges"]))
+        self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
+
+    def test_sells_for_rejects_unknown_basis_and_person_endpoint(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["sells_for"] = [{"slug": "core", "channel": "Ozon", "basis": "doc", "source_id": "s1"}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        bad = copy.deepcopy(graph)
+        edge = next(e for e in bad["edges"] if e["type"] == "sells_for")
+        edge["confidence"] = "rumour"
+        self.assertTrue(any("sells_for" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+        bad = copy.deepcopy(graph)
+        edge = next(e for e in bad["edges"] if e["type"] == "sells_for")
+        edge["target"] = "alice"
+        self.assertTrue(any("invalid entity->person endpoints" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+
+    def test_sells_for_envelope_rides_in_edge_detail_and_is_validated(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["sells_for"] = [{
+            "slug": "core", "channel": "Ozon", "basis": "doc", "source_id": "s1", "products": ["propellers 8 in"],
+            "status_history": [{"status": "listed", "as_of": "2026-07-06", "source_id": "s1"},
+                               {"status": "announced", "as_of": "2026-06-01", "source_id": "s1"}],
+            "role": "licensed_dealer", "asserted_by": "self", "credibility": "doc", "authorised": "n/a", "open": "Поставщик not established"}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        edge = next(e for e in graph["edges"] if e["type"] == "sells_for")
+        # status is the latest dated state, whatever the order of the list
+        self.assertEqual({"products": ["propellers 8 in"], "status": "listed", "role": "licensed_dealer", "asserted_by": "self",
+                          "credibility": "doc", "authorised": "n/a", "open": "Поставщик not established"},
+                         edge["detail"])
+        self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
+        # an edge with no envelope field carries no detail, and every other edge type never does
+        self.assertTrue(all(e["detail"] is None for e in graph["edges"] if e is not edge))
+        for key, value in (("status", "teleported"), ("role", "wizard"), ("asserted_by", "rumour"), ("authorised", "maybe"),
+                           ("products", "propellers")):
+            bad = copy.deepcopy(graph)
+            next(e for e in bad["edges"] if e["type"] == "sells_for")["detail"][key] = value
+            self.assertTrue(any("detail" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)), key)
+        # the finer credibility may not contradict the coarse basis
+        bad = copy.deepcopy(graph)
+        next(e for e in bad["edges"] if e["type"] == "sells_for")["detail"]["credibility"] = "inferred"
+        self.assertTrue(any("contradicts basis" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+        # detail on a non-sells_for edge is rejected
+        bad = copy.deepcopy(graph)
+        other = next(e for e in bad["edges"] if e["type"] != "sells_for")
+        other["detail"] = {"status": "listed"}
+        self.assertTrue(any("detail must be null" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+
+    def test_platform_partners_draw_graded_edges_by_kind(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["platform_partners"] = [
+            {"slug": "core", "kind": "bank", "basis": "doc", "source_id": "s1", "as_of": "2026-08-22"},
+            {"slug": "core", "kind": "logistics", "basis": "press", "source_id": "s1", "as_of": "2026-08-22"},
+            {"slug": "core", "kind": "wizard", "basis": "doc", "source_id": "s1", "as_of": "2026-08-22"}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        got = sorted((e["type"], e["label"], e["confidence"]) for e in graph["edges"] if e["type"] in ("banks_with", "ships_via", "acquiring_via"))
+        # a malformed kind is dropped by the builder (check_registry reports it), never guessed into an edge
+        self.assertEqual([("banks_with", "bank", "doc"), ("ships_via", "logistics", "press")], got)
+        self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
+        bad = copy.deepcopy(graph)
+        next(e for e in bad["edges"] if e["type"] == "banks_with")["confidence"] = "rumour"
+        self.assertTrue(any("banks_with" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+
+    def test_product_record_replaces_version_leaves_and_draws_storefronts(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[0]["products"] = [{"name_ru": "«Х» в.1", "source_id": "s1"}, {"name_ru": "«Х» в.2", "source_id": "s1"},
+                                   {"name_ru": "«Другой»", "source_id": "s1"}]
+        products = [{"slug": "x", "name_ru": "«Х»", "category": "detector", "maker": "core",
+                     "versions": [{"slug": "x1", "name_ru": "«Х» в.1", "source_id": "s1"},
+                                  {"slug": "x2", "name_ru": "«Х» в.2", "source_id": "s1"}],
+                     "listings": [
+                         {"channel": "WB", "seller": {"entity": "ordinary", "storefront": "Shop A"}, "basis": "doc",
+                          "source_id": "s1", "as_of": "2026-01-01"},
+                         {"channel": "WB", "seller": {"entity": "ordinary", "storefront": "Shop A"}, "basis": "doc",
+                          "source_id": "s1", "as_of": "2026-03-01"},
+                         {"channel": "Ozon", "seller": {"entity": None, "storefront": "Dealer B"}, "basis": "doc",
+                          "source_id": "s1", "as_of": "2026-02-01"}]}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE), None, None, products)
+        labels = sorted(n["label"] for n in graph["nodes"] if n["kind"] == "product")
+        # the two covered version leaves are gone; the record and the uncovered product remain
+        self.assertEqual(["«Другой»", "«Х»"], labels)
+        self.assertEqual(2, next(n["product_count"] for n in graph["nodes"] if n["id"] == "core"))
+        store = {n["label"] for n in graph["nodes"] if n["kind"] == "storefront"}
+        self.assertEqual({"Shop A", "Dealer B"}, store)
+        lists = [e for e in graph["edges"] if e["type"] == "lists"]
+        operated = [e for e in graph["edges"] if e["type"] == "operated_by"]
+        # one lists edge per storefront and product (the latest listing), one operated_by only for a named entity
+        self.assertEqual(2, len(lists))
+        self.assertEqual(["2026-03-01"], sorted(e["as_of"] for e in lists if e["label"] == "WB"))
+        self.assertEqual([("ordinary", "doc")], [(e["target"], e["confidence"]) for e in operated])
+        self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
+        bad = copy.deepcopy(graph)
+        next(n for n in bad["nodes"] if n["id"] == "core")["product_count"] = 9
+        self.assertTrue(any("product_count" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+
+    def test_candidate_identities_never_become_edges_or_nodes(self):
+        entities = copy.deepcopy(ENTITIES)
+        before = build_graph(copy.deepcopy(ENTITIES), copy.deepcopy(PEOPLE))
+        entities[1]["candidate_identities"] = [{"name_ru": "ООО «Тезка»", "inn": "5445029638", "status": "unverified",
+                                                "as_of": "2026-10-01", "source_id": "s1"}]
+        after = build_graph(entities, copy.deepcopy(PEOPLE))
+        self.assertEqual(before["edges"], after["edges"])
+        self.assertEqual(len(before["nodes"]), len(after["nodes"]))
+
+    def test_unlinked_sells_for_target_is_dropped_not_crashing(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["sells_for"] = [{"slug": "does-not-exist", "channel": "Ozon", "basis": "doc"}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE))
+        self.assertFalse(any(e["type"] == "sells_for" for e in graph["edges"]))
+
+    def test_programs_events_groups_become_nodes_and_graded_edges(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[1]["memberships"] = [{"program": "res", "role": "resident", "basis": "doc", "source_id": "s1", "as_of": "2026-01-02"}]
+        entities[1]["participations"] = [{"event": "ev-1", "role": "exhibitor", "basis": "doc", "source_id": "s1", "as_of": "2026-01-02"}]
+        programs = [
+            {"slug": "res", "kind": "program", "subtype": "residency", "name_ru": "Residency",
+             "operators": [{"slug": "core", "basis": "doc", "source_id": "s1"}]},
+            {"slug": "ev", "kind": "event", "subtype": "event_series", "name_ru": "Series",
+             "organisers": [{"slug": "core", "role": "co-organiser", "basis": "doc", "source_id": "s1"}]},
+            {"slug": "ev-1", "kind": "event", "subtype": "event_edition", "name_ru": "Edition", "parent": "ev"},
+            {"slug": "grp", "kind": "group", "subtype": "brand_cluster", "name_ru": "Group",
+             "members": [{"slug": "ordinary", "role": "member", "basis": "inferred"}]},
+        ]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE), None, programs)
+        got = sorted((e["type"], e["source"], e["target"], e["confidence"]) for e in graph["edges"]
+                     if e["type"] in {"operates", "organises", "resident_of", "participated_in", "part_of", "member_of"})
+        self.assertEqual([("member_of", "ordinary", "group::grp", "inferred"),
+                          ("operates", "core", "program::res", "doc"),
+                          ("organises", "core", "event::ev", "doc"),
+                          ("part_of", "event::ev-1", "event::ev", None),
+                          ("participated_in", "ordinary", "event::ev-1", "doc"),
+                          ("resident_of", "ordinary", "program::res", "doc")], got)
+        self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
+
+    def test_program_edges_reject_wrong_endpoints_and_missing_basis(self):
+        entities = copy.deepcopy(ENTITIES)
+        programs = [{"slug": "res", "kind": "program", "subtype": "residency", "name_ru": "Residency",
+                     "operators": [{"slug": "core", "basis": "doc", "source_id": "s1"}]}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE), None, programs)
+        bad = copy.deepcopy(graph)
+        edge = next(e for e in bad["edges"] if e["type"] == "operates")
+        edge["source"], edge["target"] = edge["target"], edge["source"]
+        self.assertTrue(any("invalid" in m and "operates" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+        bad = copy.deepcopy(graph)
+        next(e for e in bad["edges"] if e["type"] == "operates")["confidence"] = None
+        self.assertTrue(any("confidence" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+        bad = copy.deepcopy(graph)
+        next(n for n in bad["nodes"] if n["kind"] == "program")["subtype"] = "event_series"
+        self.assertTrue(any("subtype" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+
     def test_quality_report_is_deterministic(self):
         first = report(self.graph, self.views, ENTITIES, PEOPLE)
         second = report(self.graph, self.views, ENTITIES, PEOPLE)
         self.assertEqual(first, second)
         self.assertIn("Live-registry parity: 2/2 entities; 1/1 people", first)
+
+
+    def test_every_edge_is_graded_from_its_document(self):
+        """B1: a register extract grades doc, a company's own post rep, no source open; a confidence wins."""
+        from graph_contract import source_grade
+        self.assertEqual(source_grade({"path": "data/sources/EGRUL_7802942873_20260907_x.pdf"}), "doc")
+        self.assertEqual(source_grade({"path": "data/sources/ul-1247700190430-20260815.pdf"}), "doc")
+        self.assertEqual(source_grade({"path": "data/sources/A40-211563-2022_20221109_Opredelenie.pdf"}), "doc")
+        # a Telegram post the content scan typed "court" is still the party's own word
+        self.assertEqual(source_grade({"path": "data/sources/TGPOST_20250101_x-1.txt", "type": "court"}), "rep")
+        self.assertEqual(source_grade({"path": "data/sources/PRESS_20250101_x.html"}), "rep")
+        self.assertEqual(source_grade(None), "open")
+        for edge in self.graph["edges"]:
+            self.assertIn(edge["grade"], {"doc", "rep", "open"})
+            if not edge["source_id"] and not edge["confidence"]:
+                self.assertEqual(edge["grade"], "open")
 
 
 if __name__ == "__main__":

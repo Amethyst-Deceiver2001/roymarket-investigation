@@ -139,3 +139,33 @@ https://t.me/+7GbNlS1SJI83ZmQy
 # msg 183433, s7653) specifies a BEASTFPV F722 BLS 65A stack as part of the
 # recommended parts list. Never scraped. Added 2026-09-21.
 @beastfpvru
+
+# Official channel of АНО «НПЦ «Ушкуйник» (Великий Новгород; site nvgushkuynik.ru, entity ano-npts-ushkuynik,
+# s8602/s8612). Recorded in the registry but never scraped. Added 2026-10-01.
+@nvgushkuynik
+
+# Channels wired to registry entities 2026-10-01 from posts that link them (s8713-s8717); never scraped, so
+# ownership rests on the post links until the channel bios are read.
+@alaskadron
+@stratim_drones
+@germesfpv
+@KBinteldron
+
+# Ростех public channel, wired to gk-rostekh 2026-10-01 (s8656); posted the ЦБСТ/Ростех/Корпорация МСП/АСИ agreement.
+@rostecru
+
+# Group channel «ГАСКАР Online», user-supplied 2026-10-01 (s8724), wired to ooo-gaskar as the group channel.
+@gaskargroup
+
+# Wired 2026-10-01 from user-supplied handles, bios read (s8726-s8729): Котлин-Новатор, 3mx (ООО «Тримикс»), БПР ЯРЛ. The 3mx users chat is a private invite and is not scrapeable.
+@kotlin_novator
+@ru3mx
+@bpryarl
+
+# 3mx users' chat «3mx.ru🛡- ЧАТ» (invite-link only; user is a member), named in the @ru3mx bio (s8728, s8729).
+# Added 2026-10-01. Scan the history, then bulk-download its media/files with
+# `python3 scripts/tg_media_pull.py download-all` (see its --dry-run).
+https://t.me/+BlOqwGbeNGk3OTVi
+
+# КБ «СПЕКТР» (Новосибирск): self-reports onboarding to Роймаркет, post 321, 06.07.2026 (s8737); see notes/roymarket_vendor_leads.md. Added 2026-10-01.
+@kb_spektr

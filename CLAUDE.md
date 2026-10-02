@@ -3,9 +3,9 @@
 This repo is a standalone spin-off of a ЦБСТ/РОЙ.МАРКЕТ (Russian "military
 marketplace" and its parent defence-tech body) OSINT investigation, migrated
 out of the `wb_watch` project on 2026-08-18 once it outgrew "annex to a WB
-tracker" scope. Read `notes/rebuild_plan.md` first in any new session — a lean live
-status doc (rewritten 2026-09-19) with current state, standing policy and
-pointers; the old 4,284-line session log is preserved verbatim at
+tracker" scope. Read `notes/rebuild_plan.md` first in any new session — the live
+plan (rewritten 2026-10-02 around chain views and the B1-B8 model breaks): direction,
+ordered work, decisions waiting on the user, standing policy; the old 4,284-line session log is preserved verbatim at
 `notes/archive/rebuild_plan_archive_2026-09-19.md`.
 
 ## This repo has its own Telegram scraping pipeline — separate from wb_watch
@@ -83,6 +83,18 @@ hand. Related: `scripts/check_egrul_flags.py` flags known EGRUL access-
 restriction/disavowal markers (ОгрДосСв, ПризнНедДанУчр, etc.) the same
 way, over the same kind of pasted extract text.
 
+## Searching Telegram text: use `scripts/tg_post_coverage.py`, never SQL `LIKE`/`lower()`
+
+Added 2026-10-01 after ЦБСТ posts 1562, 1976 and 2095 (all naming «Архангел») sat in `data/roymarket.db` while the registry said "no ЦБСТ tie". SQLite's `lower()` and `LIKE` do **not** fold Cyrillic (`lower(text) LIKE '%архангел%'` returned 0 where `LIKE '%Архангел%'` returned 5), and a hit list sliced to `[:3]` with no text printed hid the rest. Rules:
+
+- "Does the channel say X?" is answered by `python3 scripts/tg_post_coverage.py --term "X"` (every hit, folded for case and ё, case endings tolerated, each hit's `links` field shown, archived-or-not flagged; `--all-channels` for the whole scrape, ~1 minute, say so first). It runs a positive control first and aborts (exit 2) if the matcher cannot find known words.
+- Search the **bare brand word**, not the legal-name variant; then narrow.
+- Never slice an evidence list. A cap (`--max`) must say how many hits it hides.
+- Read a post's `links` field. A post can carry its primary document (an EU act, a patent) as a link.
+- Never write "not found in this search" into the registry without naming the exact query and its hit count.
+- `python3 scripts/tg_post_coverage.py` (no args) lists ЦБСТ posts that name a registry entity and are not archived, cited or reviewed. `check_registry.py` §6b turns the no-tie class into warnings. Close one by reading the posts and recording either a tie or a dated `cbst_channel_review` (`{as_of, outcome: namesake|named_no_tie|tie_wired|lead_open, posts_read: [msg ids actually read], note}`) via `corrections_entities.json`; never by deleting the warning. `tests/test_tg_post_coverage.py` holds the regression fixtures.
+- **Residents and edits (added 2026-10-01).** `python3 scripts/cbst_resident_sweep.py` finds companies the archive calls «резидент ЦБСТ» that the registry lacks (NEW), holds without a tie (TIE-GAP), or mentions only in prose (MENTIONED); `--kind accelerator` does the same for accelerator finalists; `--watchlist` lists forwarding source channels not on `config/channels.txt`. ЦБСТ misspells itself in its own channel («резидент ЦСБТ», post 2041), so never search for «ЦБСТ» alone. A company name is resolved to a legal entity only by an identifier printed on the company's own site or a matching named person, never by an ЕГРЮЛ name search alone (Neiry is АО «Нейрореволюция», Wheelies is ООО «ВИЛЛИС»). `python3 scripts/tg_forward_diff.py` compares a channel's posts with forwards of them: DB text is the latest scrape, ЦБСТ edits posts after publication (10% of posts have a forward to compare against; three name removals found, e.g. «Титан Северо-Запад» in post 2080), so archive a forward when it names a company the origin no longer does.
+
 ## Same crawling-jobs discipline as wb_watch
 
 Inline reconnaissance (single post lookups, one-off WebFetch/curl checks,
@@ -112,6 +124,10 @@ case this policy exists for, even against an unauthenticated open API.
 - Any local job over ~100 files or ~2 minutes: say so up front and either give the user the command or announce the background task. Run `tests/test_zakupki_parser.py` / `tests/test_bfo_parser.py` after touching those parsers.
 - An all-null result for one entity or one field across the corpus is a parser bug until proven otherwise. Non-profit `funds_*` figures are never revenue.
 
+
+## Hard rule: facts come from the original document, read in full, in its own language
+
+Added 2026-10-01 at user direction. A fact enters the registry only from the original-language (normally Russian) document, read in full: the charter, the ЕГРЮЛ extract, the Telegram post and its `links`, the court filing, the press article. English summaries, search-result snippets, machine translations and a subagent's paraphrase are **leads only**. A lead from one of them is recorded as an `open_questions` entry naming what is unverified, never as a fact, a tie or an identity match. Scanned documents are OCR'd and the OCR is checked against the image where it matters (a one-page amendment can be an image the text layer misses). Say in the record which document and passage a fact rests on.
 
 ## Primary-source documents: check `data/sources/` before re-downloading
 
@@ -265,7 +281,7 @@ if a real malformed-data incident calls for it, not preemptively.
 date to `data/registry/_source_content_cache.json`; only processes files not
 already cached, so re-run it after adding new sources rather than every
 session) → `python3 scripts/extract_registry.py` (one-time scaffold from the
-frozen `docs/_archive/` snapshot, consuming that cache; re-runnable while
+frozen brief snapshot `notes/archive/brief_snapshot_2026-08-21.html` (moved out of `docs/` 2026-10-02), consuming that cache; re-runnable while
 Phase 1 continues) → `python3 scripts/check_registry.py` before trusting or
 building from anything. All three are local file processing — no network,
 safe to run repeatedly.
@@ -275,6 +291,8 @@ failure seriously**: it caught a transposed ОГРН for АО «Стратим»
 been sitting in the brief, and two personal ИНН that had been mis-attributed
 to organisations. A wrong identifier in a sanctions submission is a serious
 defect, not a typo.
+
+**Reader citations (B4, 2026-10-02).** Every `sources.json` record carries a generated `title` (plain words: what the document is, its publisher, number and date) and `public_url` (only where the file or a registry number gives one), plus `tg_post` (`channel/msg`) and `duplicate_of` for a Telegram post captured twice. All rules are in `scripts/source_citation.py`; never write a citation rule in a page builder, and never hand-edit these fields. A new kind of source file gets a rule there and a fixture in `tests/test_source_citation.py`; bump `CITE_VERSION` so `inventory_sources.py` re-reads the files. `check_registry.py` errors on a missing title or one that leaks a file name or source id.
 
 ## `relationship_graph.json` — generated, schema-versioned, rebuild after any registry change
 
@@ -293,6 +311,8 @@ controlled vocabularies (e.g. `CBST_TIE_CONFIDENCE`). Bump the version and
 extend the contract there first when adding a genuinely new edge type or
 field, the same way `entities.json`'s own field additions get documented
 above.
+
+**`grade` on every edge** (schema v12, B1, 2026-10-02): doc / rep / open, the reader's three grades. It is derived, never hand-set: from the edge's `confidence` via `CONFIDENCE_GRADE`, else from its source's filename prefix via `SOURCE_PREFIX_GRADE` in `graph_contract.py`, else open. A party's own posts, site and listings grade rep. A new kind of source file needs a row in that table. `build_graph(..., sources)` takes `sources.json` for this.
 
 **`cbst_tie`** (added 2026-09-15, schema v4) is an entity→ЦБСТ edge, one
 per entity whose own `cbst_tie` field (a normal `entities.json` field, set
@@ -365,8 +385,80 @@ a question on its own; reach for it before ever asserting two things are
 fallback second) — presentation-layer classification only, same
 discipline as the hub-badge offensive/defensive/dual read: not a new
 sourced registry field, a deterministic, reviewable rule set. Used by
-exhibit build scripts under `scratch_design/`, not by the generated
+exhibit build scripts under `exhibits/`, not by the generated
 company profiles.
+
+**Where exhibit assets live (consolidated 2026-10-01).** `exhibits/` (renamed from `scratch_design/`) holds every standalone exhibit, mockup, icon set and their builder scripts, plus `exhibits/images/` for their pictures. `docs/` holds only what is published: generated pages and `docs/images/` (profile media). A finished exhibit that is published is generated into `docs/` by a build script; do not hand-copy it there, and do not leave drafts in `docs/` or `notes/`.
+
+## Ecosystem roles and sellers (added 2026-10-01 at user direction)
+
+A maker's goods reach buyers through legal entities that are not the maker: the Ozon sole traders that sell КБ «СПЕКТР» propellers, the named dealers of «3mx». The registry models them without a new tier.
+
+- **`ecosystem_roles`** (list on an entity, vocabulary `graph_contract.ECOSYSTEM_ROLES`: `manufacturer`, `brand`, `seller_of_record`, `licensed_dealer`, `distributor`). It is orthogonal to `tier`, which measures closeness to ЦБСТ: a seller can sit at any tier. Absent means unclassified, not manufacturer.
+- **`sells_for[]`** (on the seller): `{slug, channel, basis, source_id, as_of, note}`. The builder draws a `sells_for` edge (schema v7) labelled with the channel and graded `doc` / `press` / `inferred` in `confidence`. `doc` means a primary document (a marketplace seller panel, a dealer certificate, the maker's dealer page, the seller's own site) states the sale. It never says the maker authorised it unless the document does. `check_registry.py` validates the shape; an edge to a mistyped slug is otherwise dropped silently by the builder.
+- **Relation envelope (schema v9, 2026-10-02, piloted on `sells_for`).** Optional fields on a `sells_for[]` record, drawn into the edge's `detail` object (null on every other edge): `products[]` (strings as the document names them), `status_history[]` (`{status, as_of, source_id, note}`, status in `announced`/`onboarding`/`listed`/`shipping`/`delisted`; an undated or unsourced state is not recorded, and the edge shows the latest), `asserted_by` (`self`/`counterparty`/`platform`/`regulator`/`press`/`investigator`), `credibility` (`doc`/`corroborated`/`single`/`inferred`; may not contradict `basis`), `authorised` (`yes`/`no`/`unknown`/`n/a`), `role` (what the seller is on this edge: `manufacturer`/`seller_of_record`/`licensed_dealer`/`distributor`; the entity's `ecosystem_roles` is only a summary and `check_registry.py` warns when it misses a role used on an edge) and `open` (what the edge does not prove). `basis` stays the coarse grade the graph draws; the envelope separates who said it from how sure we are. All six current edges carry it (КБ «СПЕКТР», the 3mx dealers, НПЦ БАСиРТК). Extend to other edge types only if a real case needs it; `check_registry.py` validates the fields, `tests/test_relationship_graph.py` holds the fixtures.
+- **`platform_partners[]` (schema v10, 2026-10-02)**: on a platform operator, `{slug, kind: bank|acquirer|logistics, basis, source_id, as_of, note}` draws `banks_with` / `acquiring_via` / `ships_via` edges to the partner's entity, graded like `sells_for`. A partner is recorded only from a document that names it: a generic «эквайеры» or «логистический партнёр» is not a partner. First use: `ooo-mptm` banks with `pao-bank-psb` (offer s8817). Acquirer and logistics partner stay open questions until a primary document is archived.
+- **`candidate_identities[]` (2026-10-02)**: unverified same-name legal entities for a brand stub or an unresolved identity: `{name_ru, inn, status: unverified|rejected, as_of, source_id, note}`. It is **not an edge and not a node**: nothing is drawn or counted as a tie, the ИНН is never copied into the record's own `inn`, and no entity record is made for a namesake (a record needs a documented link). `check_registry.py` validates the checksum, the date and the source, and errors if a candidate ИНН equals the entity's own. The three same-name ООО «КБ «СПЕКТР»…» of 2019 are the first use (`kb-spektr-novosibirsk`).
+- **Brand without a legal entity:** an entity may be a brand stub with `legal_entity_status: "unresolved"` and no ИНН (КБ «СПЕКТР», `kb-spektr-novosibirsk`), so sellers can point at it without a guessed identity. Never fill the ИНН from a name match; the three same-name Новосибирск ООО of 2019 are in `notes/roymarket_vendor_leads.md`, not in the registry.
+- **`related_entities[].relationship_type: "operated-brand"`:** a company or sole trader that traded under the other record's brand during a dated period, per a document. The older prose `dealer` entries stay on file (the case-study builder reads them); where a seller also carries `sells_for` for the same pair, the graph draws only the structured edge.
+- A seller's cluster is drawn only if a path reaches the ЦБСТ hub; otherwise it is listed in `detached_ids`. The РОЙ.МАРКЕТ operator is `ooo-mptm` (role `platform_operator`, `cbst_tie` t-doc from ЦБСТ's 2025 Минюст report s0207 and the supplier offer s8817); non-resident vendors point at it with `sells_for`, so they join the graph through it.
+- **PII scope, third category:** a seller (usually a sole trader) gets an entity record, and its owner a person record only on user direction, when it has a **documented link to a registry manufacturer or to РОЙ.МАРКЕТ**. A marketplace listing alone is not enough. (2026-10-02: an owner who is involved in the trade is a person of interest under the PII section's amended rule.) Same sourcing rule as every identifying field: the ИП's ИНН comes from its ЕГРИП extract, never from a plausible namesake, and no date of birth or address is filled without a source. Individuals recorded under this category so far: Братеньков, Маврин (person of interest, user, 2026-10-01). ИП Карпушин has an entity record but no person record.
+
+## Products (`data/registry/products.json`, added 2026-10-02 at user direction)
+
+One record per product with a stable slug, so a product sold by several dealers is one record and does not crowd its maker's node. Records: «Булат» (`bulat`, maker `ooo-trimiks`) and «Капюшон» (`kapyushon`, maker `ooo-npo-kilovatt-shestopalov`, trademark held by the sister `ooo-npo-kilovatt`; B7, 02.10.2026). Fields: `versions[]` (each with firmware and the maker's own page as source), `accessories[]` (`pairs_with` a version), `shown_at[]` (events in `programs.json`), `listings[]`, `deliveries[]`, `claims[]`, `open_questions[]`.
+
+- **Listings and deliveries are dated events on the product, not graph edges.** A listing is `{id, version|null, channel, url, seller{entity|null, storefront, identity}, status, as_of, source_id, basis, asserted_by}`; `status` uses the sale vocabulary of the relation envelope. A storefront whose seller is not a registry entity says so in `seller.identity` and keeps `entity: null`; no entity is created for a dealer without a documented link (PII scope, third category). A seller entity other than the maker needs a `sells_for` edge to the maker, or `check_registry.py` warns.
+- **A listing with no `source_id` is a placeholder** and warns. The two WB brand-store listings of «Булат» are in that state: capture the pages.
+- **A delivery** needs `{date, version, donor, carrier, recipient, source_channel, post_id, asserted_by, credibility, source_id}`; `qty` when known. Several channels reporting one handover are one event with several sources. Recorded so far: 25, all from Фонд «Наша Правда»'s own posts or ЦБСТ's (17 «Булат», 8 «Капюшон»). Recipients include civilian services (a hospital, power-repair crews), recorded as the post names them. An accessory's `pairs_with` may be null when the source fits it to the whole product family. A product shows a «not sold on РОЙ.МАРКЕТ» card only when a document speaks to it.
+- **Deliveries come from `python3 scripts/delivery_signal_scan.py`** (delivery verb near a recipient near a product; local, 22 s; class A names a registry product, class B only a category). A hit is read in full before it becomes a delivery. `version` may be null when the post names only the product.
+- **Delivery rules (user, 2026-10-02).** The fact of a delivery matters more than the exact recipient. Record the recipient as the post names it: a unit, a town (allowed), or only a direction (enough). A recipient unit may sit in the rear (a «Булат» guarding a base inside Russia or in occupied Donetsk), so a delivery never implies combat use and no field-use claim is drawn from it. Donors and carriers may be volunteer groups and individuals: anyone involved in a delivery is a person of interest (PII section). Every donor or volunteer report defaults to `asserted_by: self`, `credibility: single`; it is upgraded only by an independent second source, such as the receiving unit's thank-you letter. Units named only in a manufacturer's marketing still do not enter `military_units.json` (peer audit 15.09.2026); units named in a recorded delivery do.
+- **Unit names (user, 2026-10-02).** A unit can appear as `в/ч XXXXX`, a full official name with honorifics («123-я отдельная гвардейская мотострелковая … бригада имени …»), a short military abbreviation («123 омсбр») or an informal name («Пятнашка»). Keep every form the sources give on the unit record, each with its source. A bare `в/ч` number is resolved to the formation's name only through a source that states the pairing (a sanctions entry, a court or procurement record), never from a lookup site alone. The English form and the display rule are in `notes/rebuild_plan.md` until settled. `notes/delivery_signal_scan_20261002.md` has the method, limits and first result («Булат»: 16 donor deliveries).
+- **In the graph (schema v11):** a product record is one `product` node (`product::<maker>::<slug>`), and the maker's own per-version `products[]` leaves that it covers are not drawn separately. Each distinct storefront in `listings[]` is a `storefront` node (no legal identity), linked `lists` to the product (the latest listing per storefront, label = channel) and `operated_by` to its seller entity only when the listing names one; a dealer with no registry entity stays a storefront. Entity nodes carry `product_count` for a count badge and expand-on-click in a viewer (the viewer is outside the repo). `clone_of` (`{product, status: alleged|shown|denied, asserted_by, source_id}`) is validated but unused: a product is a clone only where a cited source says so, never because it competes in the same class (the «QD-HD-003» and «Сокол» manuals in the 3mx chat are competing devices per the registry's own read, not clones of «Булат»).
+- **State contracts name their products (B2, 2026-10-02):** `government_contracts[].products[]` = `{product, version|null, item_ru, qty|null, unit, unit_price_rub|null, source_id, note}`, read from the printed contract or its specification, never from the subject line alone. `item_ru` is the line as printed. A supplier delivering another maker's product needs a `sells_for` edge to that maker (`check_registry.py` warns). Give a contract's `date` to the day where the document states it.
+- `python3 scripts/product_chain.py bulat` prints the chain (maker, versions, listings with their basis and source, deliveries, open questions). 
+
+## Media (`data/registry/media.json`, track V, added 2026-10-02 at user direction)
+
+One record per photo, video, still, satellite or street-level view, screenshot, scan or graphic. It is hand-maintained like `programs.json` and not drawn on the graph. Its fields:
+- `about[]` lists every record the picture shows (entity, person, product, version, delivery, listing, unit, program). One handover photo is one record, not three copies.
+- `shows` says what is visible, written by someone who looked at it.
+- `asserted_by` says who published it. It is shown on pages as provenance ("the maker's own video"). `third_party` covers customer uploads.
+- `publish` is `ok`, `excerpt` (a maker's marketing, used in part for reporting) or `internal`.
+
+Rules (user, 2026-10-02):
+- **No source, no record.** A picture enters only with the `source_id` of where the picture itself came from, not the document that gives an address.
+- **Video:** key frames plus a link to the original, with the original archived and hashed. A still records `frame.t`, its timestamp in the video. Self-hosted clips come later; there are no embedded platform players.
+- **Faces (corrected by the user 02.10.2026):** everyone involved is a person of interest, with or without a record: recipients (soldiers receiving equipment), donors, carriers, staff, course participants and recruiters. Their faces are shown. Blur only someone clearly uninvolved: a passer-by, a child, a person who happens to be in frame (`redact: blurred` in the publish copy; the original stays in `data/sources/`). A face is never used to name anyone: captions describe ("servicemen receiving…") unless a source names the person. Faces the publisher blurred stay blurred. Look at the picture before setting `redact`; never set it from a caption.
+- **Facility views:** Google Earth or Yandex Maps screenshots for now. Record `imagery.provider` and `imagery.date`, and a `geo` whose `method` names how the place was found (`register_address` or `source_stated` needs the document's `source_id`).
+- **Graphic content (proposed default):** stills only, a content warning, nothing showing casualties. Combat imagery needs `graphic` set.
+- **`docs/images/` is public.** Pages serves it, so blur any uninvolved bystander before a file lands there. An image with no archived original must not be added there.
+
+A company card shows the entity's logo from a media record of genre `logo` (set `logo_ground: dark` when the mark is drawn for a dark ground; logo publish copies are trimmed to their content). Deliveries now carry stable ids (`bulat-d01`…) so media can point at them. `check_registry.py` validates the record. Backfill state and gaps: `notes/media_backfill_20261002.md`.
+
+## Brands (`entities[].brands[]`, B5, added 2026-10-02 at user direction)
+
+Readers recognise a brand (3mx, GoDrone, Пиранья) before a legal name (ООО «Тримикс»), so a reader card leads with a documented primary brand. The legal name sits directly beneath it, never hidden, with the Sanctioned flag, because lists name the company, not the trademark. Use `display_helpers.display_name(e)`, which returns the brand as `head`, the legal name and the English gloss.
+
+- **Shape:** `{name, kind: trade_name|trademark, registration, primary, source_id, as_of, note}`, set via `corrections_entities.json`. At most one brand is primary. A `trademark` brand names a registration that is in the entity's own `trademarks[]`. `check_registry.py` validates all of this.
+- **A product name is never a company brand** («Булат» is a product of 3mx). One brand can span several legal entities (КБ «СПЕКТР»), so a brand is never used to merge or identify entities.
+- **No guessing.** The old free-text `brand_ru` / `brand_latin` are not display sources. Promote a value only after reading its source (`notes/brand_review_20261002.md` records the review of all 38: six promoted, the rest the legal name, a product, or held for a source).
+- A card cites the brand: the legal-name line carries the footnote to the brand's source.
+- **Latin name (`name_display`).** Generated by `display_helpers.latin_display()` per STYLE_GUIDE §2.3: the legal form is transliterated, never translated, and our own bracketed notes are dropped. It is overridable via corrections (`set.name_display`). `display_name(e)['latin']` returns it, and cards print it under the registered name. It is not the screening string (`name_latin`). Fixtures: `tests/test_display_name.py`.
+
+## Programs, events and groups (schema v8, added 2026-10-01 at user direction)
+
+Residencies, accelerators, the national БАС project, recurring events and same-brand clusters are modelled as records in `data/registry/programs.json` (hand-maintained, like `military_units.json`), not as entity-to-entity edges.
+
+- **Kinds** (`graph_contract.PROGRAM_KINDS`, subtypes in `PROGRAM_SUBTYPES`): `program` (a residency, accelerator, centre network, the national project), `event` (a series and its editions, `part_of` the series), `group` (separate legal entities sharing a brand or founder network; no legal identity, never replaces its members).
+- **Who belongs lives on the entity**: `memberships[]` (`{program, role, basis, source_id, as_of, note}`) and `participations[]` (`{event, role, basis, source_id, as_of, note}`), set via `corrections_entities.json`. The builder draws `resident_of` / `participated_in`; the record's own `operators[]`, `organisers[]`, `parent`, `members[]` draw `operates`, `organises`, `part_of`, `member_of`. Grade is `doc` / `press` / `inferred` in `confidence`, as for `sells_for`; `part_of` carries none. `check_registry.py` validates all of it.
+- **Counts are claims, not edges.** "30+ residents" is a `claims[]` entry with `as_of`, `source_id` and `asserted_by`. No stub entity for an unnamed resident; named residents attach one at a time.
+- **An organiser with no identifier gets no entity.** КЦПН (organiser of Дронница) is named in the record's `organisers` text only until an ИНН is read from a primary document.
+- **Participation is not residency.** Exhibiting at an event does not make an entity a ЦБСТ resident; the role and the source say what was shown or signed. Check who organised an event before writing "ЦБСТ's event": Дронница is run by КЦПН and НПЦ «Ушкуйник», and ЦБСТ participates.
+
+## Reader design system (`design/`, v2 2026-10-02)
+
+Every new reader page takes its colours, type and components from `design/roymarket.css`, inlined by `display_helpers.design_head()`. Page CSS holds layout only and never redefines a token. Grades come from `display_helpers.reader_grade()`, never from a page's own rule. Red is only the Sanctioned flag. Rules, the grade mapping and the validation record are in `design/README.md`. After changing the CSS, run `python3 design/build_ds_artifact.py && python3 design/artifact/components_src.py` and republish the РОЙ.МАРКЕТ Reader System artifact. Example values in that artifact come from the registry, never from memory.
 
 ## Writing: read `STYLE_GUIDE.md` before drafting any prose
 
@@ -388,7 +480,11 @@ verified against a primary source, don't use it. Full quote-handling rules
 (drafting from the original Russian, `[так в оригинале]`, italic-vs-guillemets)
 are in `STYLE_GUIDE.md` §3.1.
 
-## Company profiles: generated, not hand-written
+## Company profiles and case pages: archived 2026-10-02
+
+**Withdrawn at user direction, not retrofitted.** The case pages, the company/person/product profiles, the profile index, the old landing page and `story.html` moved from `docs/` to `exhibits/archive/site_2026-10-02/`; their generators (`build_case_pages.py`, `build_company_profile.py`, `build_person_profile.py`, `build_product_profile.py`, `build_profile_index.py`) and `templates/` moved to `scripts/archive/`. Do not run or extend them. New reader pages are built after the design system redo and a new landing page (`notes/rebuild_plan.md`, track A), and carry no internal notation: no source ids, slugs, field names or file names; sources are cited in plain words with a public link. Shared display helpers (`ru_date`, `source_type_label`) are in `scripts/display_helpers.py`. The text below describes the archived generator and is kept for its rules on images and PII fields, which still apply to new pages.
+
+### Archived: how the profile generator worked
 
 `docs/profiles/<slug>.{html,md}` are per-entity profile pages, generated from
 `data/registry/` by `scripts/build_company_profile.py` — not edited by hand
@@ -444,34 +540,30 @@ Ground/satellite views of a facility are just `images[]` entries distinguished
 by caption text (e.g. `_ground.jpg`/`_satellite.jpg` naming, already used at
 `ooo-aeromaks`) — there's no separate schema field for them.
 
-The landing page (`docs/index.html`) links the profile index (`docs/profiles/index.html`) and every case page carries the same site nav; both are generated (see Publishing).
 
 ### Product profiles and `relationship_type`
 
-Product profiles (`build_product_profile.py`, `FLAGSHIP_PRODUCTS`, flagship products only) and the `related_entities[].relationship_type` vocabulary are documented in `notes/reference/script_notes.md`. Standing rules: extend `FLAGSHIP_PRODUCTS` one real product at a time; set `relationship_type` from `graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES` whenever adding a `related_entities[]` entry; never populate `competitor` without a sourced claim.
+Product profiles (`build_product_profile.py`, `FLAGSHIP_PRODUCTS`; archived 2026-10-02) and the `related_entities[].relationship_type` vocabulary are documented in `notes/reference/script_notes.md`. Standing rules: extend `FLAGSHIP_PRODUCTS` one real product at a time; set `relationship_type` from `graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES` whenever adding a `related_entities[]` entry; never populate `competitor` without a sourced claim.
 
 
 ## Publishing
 
-**Changed 2026-09-20 at user direction: the old brief is no longer the landing page.** `docs/` (repo Settings → Pages → `/docs`) is now a small site:
-
-- `docs/index.html` — generated landing page (routes to cases, the graph explorer, the profile index, `story.html`).
-- `docs/cases/index.html`, `docs/cases/<slug>.html` — case studies, generated from `notes/case_study_<slug>.md` plus a static graph excerpt and a resolved sources table. Case list and status live in `CASES` in `scripts/build_case_pages.py` (seven cases: Архангел, Гагаринг, ГОУДРОН, Овод, Пиранья, Цыганов/Булат and НПЦ БАСиРТК, all published). Grades use the registry vocabulary (`{doc}` Primary doc, `{press}` Press-reported, `{open}` Open); a case note must state the entity's registry tier and ЦБСТ-tie position accurately.
+**Changed 2026-10-02 at user direction: the site is withdrawn pending a redesign.** `docs/` (repo Settings → Pages → `/docs`) now holds the generated landing page (`docs/index.html`, from `python3 exhibits/build_landing.py --out docs/index.html`, live since 02.10.2026 at user direction; it replaced the holding page), the graph explorer (`relationship-graph.html`, re-embedded by `scripts/refresh_graph_page_data.py`) and `docs/images/`. The seven case studies (case notes still in `notes/case_study_<slug>.md`) and all profiles are archived (see "Company profiles and case pages"). Order of work: design system redo, new landing page, then new pages. Until the public cutoff, new reader pages (chain views first) go out as **private Artifacts for preview** only. The landing page is generated by `exhibits/build_landing.py` (`--preview` for the artifact, which links chain views to their preview artifacts); add a product to its `CHAINS` table when its chain view is published. Every number on it is computed from the registry. The public build links a chain view only once `docs/chain_<slug>.html` exists, and copies only the logos it shows into `docs/images/media/`; a chain's own pictures (faces included) never reach `docs/` through it.
 
 **Changed 2026-09-21 at user direction: the old written brief is no longer public at all.** `docs/dossier.html` (the former `docs/index.html`) is moved to `notes/dossier_draft.html` and is **not** linked from any published page — the user's stated reason: it's a first-draft prose document whose facts should have been migrated into `data/registry/*.json` rather than kept as free text, and it must not ship as a public file. Treat it as an internal working note:
-- Every nav/route link to `dossier.html` across `scripts/build_case_pages.py` (the shared `NAV`/route grid), `scripts/build_profile_index.py`, and `docs/story.html`'s CTA grid has been removed — don't re-add one.
+- No page links `dossier.html` or the draft; don't add one. Its frozen 2026-08-21 snapshot (which `extract_registry.py` reads) moved from `docs/_archive/` to `notes/archive/` on 2026-10-02, because `docs/` is public.
 - `scripts/id_patterns.py`'s "already documented?" cross-check and `scripts/check_tag_balance.py`'s default target were repointed to the new path (the former, `docs/index.html` the latter) — keep them pointed at `notes/dossier_draft.html`, not a `docs/` path, if this file is touched again.
-- The standalone Artifact companion (https://claude.ai/code/artifact/5450bf7e-7f7b-4788-93c0-761503dd5ea4) predates this change and is a separate publish channel from `docs/` — it was not unpublished by this change; ask the user before touching it.
+- The standalone Artifact companion to the old brief (5450bf7e) was retired on 2026-10-02 at user direction after an audit (`notes/brief_leftovers_20261002.md`); a local copy is `data/sources/ARTIFACT_20260826_infrastructure-entity-brief.html`. Other Artifact pages are a separate publish channel from `docs/`; ask before deleting one.
 - Real, still-unregistered facts in `notes/dossier_draft.html` are a backlog, not something to re-publish: migrate them into `corrections_entities.json`/`corrections_people.json` like any other correction, the same as the rest of this project's registry-is-truth discipline.
 
-**Pushing `docs/` publishes it (Pages serves `/docs`): a Pages-only page is still public, so push new landing or case pages only on the user's explicit go-ahead.** Regenerate after a case note or registry change: `python3 scripts/build_case_pages.py`, then `python3 scripts/check_tag_balance.py docs/index.html docs/cases/*.html`.
+**Pushing `docs/` publishes it (Pages serves `/docs`): a Pages-only page is still public, so push a new or changed page only on the user's explicit go-ahead.**
 
 ## Tag-balance check before any publish
 
 Run `scripts/check_tag_balance.py` (see the seeded memory
 `html_brief_tag_balance_check`) before publishing any generated page; with
-no arguments it checks `docs/index.html`, and for the rest pass them
-explicitly (`docs/cases/*.html docs/profiles/index.html`, etc.).
+no arguments it checks its default target; pass every other page
+explicitly (`docs/index.html`, `exhibits/chain_*.html`, etc.).
 
 ## PII handling
 
@@ -527,6 +619,8 @@ imagery, even though it isn't press-sourced. The existing rule (own
 channel/company site/press/official event) still governs PEPs and
 principals; this paragraph only widens what counts as "public presence"
 for confirmed affiliated participants.
+
+**Policy amended 2026-10-02 at explicit user direction: everyone involved is a person of interest.** Anyone who takes part in the network's activity (a donor or volunteer who hands over equipment, a carrier, a seller, a signatory, a course participant) is in scope, with the same sourcing rule for every identifying field. A person who is merely connected (a family member with no stake or role in a company) is not; record such a person only as `graph_tier: "reference"` where a record is needed at all.
 
 **Proportionality still applies.** Finding 500+ names in a single chat scan
 does not mean 500+ full person records — triage for a real signal (exposed

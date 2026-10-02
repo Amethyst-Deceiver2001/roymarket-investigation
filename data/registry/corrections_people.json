@@ -138,6 +138,10 @@
           {
             "source_id": "s2535",
             "text": "RuPEP's dossier panel flags him under \"Команда Алексея Навального. Батальон «Дубай»\" (Navalny team's Dubai-property investigation series) with a link to ufa1.ru — NOT independently opened/verified. If accurate this would be an undisclosed-foreign-property lead distinct from anything already on file; needs a direct read of the ufa1.ru piece before treating as fact. Also carries a listed alias \"Утырбаев Искандер\" / \"Utyrbaev Iskander\" (RuPEP alias field, unexplained — not yet cross-checked against any other source)."
+          },
+          {
+            "source_id": "s8696",
+            "text": "2026-10-01: ЦБСТ's own posts give Сидякин three different titles: «член наблюдательного совета ЦБСТ» (s8695, 19.06.2025), «член правления ЦБСТ» (s8696 24.06.2025; also posts 866 and 894 on 30.06 and 08.07.2025, archived as s8697, s8698) and «секретарь наблюдательного совета ЦБСТ» (s8699, 18.07.2025). The supervisory board (chair Якушев) and the правление are different bodies. Not resolved whether he sits on both or the channel mislabels; check ЦБСТ's governance page or charter."
           }
         ],
         "passport": "Russian passport 4510 747365; travel passport 530004691 / 100113962 / 531064240",
@@ -147,9 +151,25 @@
             "entity_slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
             "title": "Secretary of the Supervisory Board; Head of United Russia’s Central Executive Committee",
             "body": "ЦБСТ Supervisory Board",
-            "from": null,
+            "from": "2025-07-18",
             "to": null,
-            "source_id": "s7600"
+            "source_id": "s8699"
+          },
+          {
+            "entity_slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
+            "title": "Member of the Supervisory Board",
+            "body": "ЦБСТ Supervisory Board",
+            "from": "2025-06-19",
+            "to": null,
+            "source_id": "s8695"
+          },
+          {
+            "entity_slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
+            "title": "Member of the Board (правление)",
+            "body": "ЦБСТ Board",
+            "from": "2025-06-24",
+            "to": null,
+            "source_id": "s8696"
           }
         ],
         "sanctions": [
@@ -165,7 +185,7 @@
         "social": [
           {
             "platform": "Telegram",
-            "source_id": null,
+            "source_id": "s8695",
             "url": "https://t.me/asidyakin"
           },
           {
@@ -1015,11 +1035,31 @@
             "entity_slug": "ano-npts-ushkuynik",
             "from": null,
             "source_id": "s0947",
-            "title": null,
+            "title": "Генеральный директор; co-organiser of the «Дронница» rally (with Любимов, КЦПН)",
             "to": null
           }
         ],
-        "_verified": true
+        "_verified": true,
+        "social": [
+          {
+            "platform": "Telegram",
+            "url": "https://t.me/chadayevru",
+            "source_id": "s8703",
+            "note": "Public channel «ЧАДАЕВ»."
+          },
+          {
+            "platform": "Telegram",
+            "url": "https://t.me/chadayev",
+            "source_id": "s8704",
+            "note": "Private contact. The Дронница channel's first post (19.07.2022) names it as the administrator contact: «Администратор — Алексей Чадаев @chadayev»."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s8886",
+            "text": "His own channel (t.me/chadayevru 4636, 29.03.2026) says sanctions of unfriendly states exist «персональные против меня (в частности, 19-й пакет санкций ЕС) или против НПЦ». The registry holds no sanction for him or for the НПЦ. Not verified against the EU Official Journal: a web search on 2026-10-02 («Алексей Чадаев санкции ЕС 19-й пакет Ушкуйник…») returned only general 19th-package coverage, and the listing itself was not read. The sentence does not say whether the НПЦ is listed."
+          }
+        ]
       },
       "why": [
         "2026-08-24: the pre-existing `_candidate` role on this person pointed at the wrong entity -- \"ООО «Ушкуйник»\" (npts-ushkuynik, the flagship UAV maker itself, whose own `director` field is null) rather than \"АНО «НПЦ «Ушкуйник»»\" (ano-npts-ushkuynik, a separate registry entity whose `director` field already reads \"Чадаев Алексей Викторович\", sourced to an EGRUL pull s0947). Corrected the entity_slug/entity_name to the АНО and attached that same s0947 source, dropping `_candidate` since it now matches an independently EGRUL-sourced field exactly. Corroborated further by leader-id.ru, which self-reports the same employer (full legal name match) and position \"Генеральный директор\", Москва. NOT the same person as «Чадаев Ю.А.» (leader of АНО «НПЦ БАС «ТулаДрон»», per the parked npc_bas_technopark_network memory) -- different patronymic, different organization.",
@@ -1247,6 +1287,14 @@
             "from": null,
             "to": null,
             "source_id": "s7600"
+          },
+          {
+            "entity_slug": "ano-platforma-nti",
+            "title": "Co-chair (сопредседатель) of the Комиссия по отбору получателей поддержки за счёт субсидии Фонду НТИ on serial production of БАС, their components and subsystems; also named as chairman of the Фонд НТИ council",
+            "body": "Комиссия Фонда НТИ по отбору получателей поддержки (national project «Беспилотные авиационные системы»), Приказ Фонда НТИ № 111/25 of 22.09.2025, Приложение 1, item 1",
+            "from": "2025-09-22",
+            "to": null,
+            "source_id": "s8824"
           }
         ],
         "_verified": true
@@ -1390,6 +1438,21 @@
             "source_id": "s6742",
             "title": "sole founder / director",
             "to": null
+          },
+          {
+            "entity_slug": "fgdr-federatsiya-gonok-dronov-rossii",
+            "title": "Вице-президент",
+            "from": "2024-10-20",
+            "to": null,
+            "source_id": "s8708"
+          }
+        ],
+        "social": [
+          {
+            "platform": "Telegram",
+            "url": "https://t.me/Vadim_Dzema_FPV",
+            "source_id": "s8711",
+            "note": "Channel «Вадим Дзёма / Вид от первого лица»; posts in the first person on federation business (s8711) and relays the opening speech by Галаев, founder of ФГДР (s8707)."
           }
         ]
       },
@@ -5911,6 +5974,32 @@
       "why": [
         "2026-09-19: roles and notes carried over from makhnyov-aleksandr-igorevich when that duplicate was retired; name_latin set to the romanisation the user confirmed as accepted (е for ё), replacing the duplicate's \"Makhnyov\"."
       ]
+    },
+    "baturin-vyacheslav-yurevich": {
+      "set": {
+        "graph_tier": "reference",
+        "roles": []
+      },
+      "why": [
+        "[2026-09-30 product research] His only role was at ООО «СИБНК-ЦЕНТР» (ИНН 7814475694, struck off 04.06.2012, s6752), which had been attached to the network by mistake in place of ООО «Сибирская навигационная компания» (short name «СИБНК»). No tie to the network; kept on file as reference only."
+      ]
+    },
+    "tolstousova-anna-saiga": {
+      "set": {
+        "social": [
+          {
+            "platform": "Telegram",
+            "url": "https://t.me/saiganarus",
+            "source_id": "s8712",
+            "note": "Channel bio: «Анна Толстоусова - Старший инструктор Учебного центра ГАГАРИНГ»; links the Гагаринг channel t.me/my_el_lab."
+          },
+          {
+            "platform": "VK",
+            "url": "https://vk.ru/saiganarus",
+            "source_id": "s8712"
+          }
+        ]
+      }
     }
   },
   "people_add_entities": [
@@ -14706,6 +14795,101 @@
       "why": [
         "2026-09-20: added as head of the institute issuing Архангел's credentials (affiliated-organisation principal under the PII policy)."
       ]
+    },
+    {
+      "slug": "pankratov-andrey-aleksandrovich",
+      "fio_ru": "Панкратов Андрей Александрович",
+      "name_latin": "Andrey Aleksandrovich Pankratov",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": "645403994412",
+      "roles": [
+        {
+          "title": "Генеральный директор",
+          "entity_name": "ООО «Эколибри-Беспилотные технологии»",
+          "entity_slug": "ooo-ekolibri-bt",
+          "from": "2026-07-13",
+          "to": null,
+          "source_id": "s8648"
+        }
+      ],
+      "notes": "Director of ООО «Эколибри-БТ» (ИНН 9713001941) per the ЕГРЮЛ выписка of 30.09.2026 (s8648, ГРН 2267705989274); no DOB, address or photo on file. Looked up by full ФИО and ИНН first: no existing record.",
+      "sources": [
+        "s8648"
+      ]
+    },
+    {
+      "slug": "bratenkov-andrey-alekseevich",
+      "fio_ru": "Братеньков Андрей Алексеевич",
+      "name_latin": "Bratenkov Andrey Alekseevich",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": "540787849136",
+      "_verified": true,
+      "roles": [
+        {
+          "entity_slug": "ip-bratenkov-andrey-alekseevich",
+          "entity_name": "ИП Братеньков Андрей Алексеевич",
+          "title": "Индивидуальный предприниматель",
+          "body": "ЕГРИП",
+          "from": "2007-08-02",
+          "to": "2020-04-23",
+          "source_id": "s8741"
+        },
+        {
+          "entity_slug": "kb-spektr-novosibirsk",
+          "entity_name": "КБ «СПЕКТР» (Новосибирск)",
+          "title": "Исполнительный директор (named by TASS)",
+          "body": "press",
+          "from": "2025-01-06",
+          "to": null,
+          "source_id": "s8732"
+        }
+      ],
+      "social": [
+        {
+          "platform": "telegram",
+          "url": "https://t.me/andrey_bratenkov",
+          "source_id": "s8811",
+          "note": "Listed on the 2023 kbspektr.ru as the first-person voice of the business; not opened."
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/andrey_bratenkov/",
+          "source_id": "s8811",
+          "note": "Listed on the 2023 kbspektr.ru; not opened."
+        }
+      ],
+      "sanctions": [],
+      "other_entities": [],
+      "notes": "2026-10-01, at user direction (person of interest, publicly associated with КБ «Спектр» in the media). ИНН is the ИП's, printed in the ЕГРИП extract s8741 (ОГРНИП 307540721400012, registered 02.08.2007, ceased 23.04.2020 on a court bankruptcy decision). Named by TASS (via www1.ru) as executive director of the Novosibirsk КБ «Спектр» on 06.01.2025 (s8732) and 12.07.2025 (s8733); spelling in the originals «Братеньков». The 2023 site speaks in his first person («Я @andrey_bratenkov сам играю в хоккей … я и моя творческая команда @kb_spektr», s8811). The user's ФНС «Прозрачный бизнес» check on 2026-10-01 found him in no юрлицо (reported, not archived), so other_entities is left empty rather than marked checked. No date of birth, birthplace or address is on file: none is sourced."
+    },
+    {
+      "slug": "mavrin-oleg-vladimirovich",
+      "fio_ru": "Маврин Олег Владимирович",
+      "name_latin": "Mavrin Oleg Vladimirovich",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": "540316596357",
+      "_verified": true,
+      "roles": [
+        {
+          "entity_slug": "ip-mavrin-oleg-vladimirovich",
+          "entity_name": "ИП Маврин Олег Владимирович",
+          "title": "Индивидуальный предприниматель; seller of record of the Ozon storefront «СПЕКТР конструкторское бюро»",
+          "body": "ЕГРИП / Ozon",
+          "from": "2020-02-18",
+          "to": null,
+          "source_id": "s8744"
+        }
+      ],
+      "social": [],
+      "sanctions": [],
+      "other_entities": [],
+      "notes": "2026-10-01, at user direction (person of interest). ИНН is the ИП's, printed in the ЕГРИП extract s8744 (ОГРНИП 320547600022326, registered 18.02.2020, active). Named as seller of record on the Ozon storefront «СПЕКТР конструкторское бюро» (1.7K orders) in a user screenshot (s8813); the link between him and the bureau beyond that panel is not documented. His e-mail domain arm-pnt.ru is his own scale-modelling paints brand (Wayback capture 28.06.2022, s8810). No date of birth, birthplace or address is on file: none is sourced."
     }
   ]
 }

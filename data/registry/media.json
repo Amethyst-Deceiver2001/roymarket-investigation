@@ -1,0 +1,1995 @@
+[
+  {
+    "id": "m0001",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo, from the organization's own official site (cbst.ru).",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ano-tsbst-centre-for-unmanned-systems-technologies"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7536",
+    "original_url": null,
+    "file": "docs/images/ano-tsbst_logo_cbst-ru.png",
+    "publish": "ok",
+    "migrated_from": "entities.ano-tsbst-centre-for-unmanned-systems-technologies.images"
+  },
+  {
+    "id": "m0002",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Foundation logo, from the organization's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7538",
+    "original_url": null,
+    "file": "docs/images/fond-nasha-pravda_logo_official-site.jpg",
+    "publish": "ok",
+    "migrated_from": "entities.fond-nasha-pravda.images"
+  },
+  {
+    "id": "m0003",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Bank logo mark, from the bank's own official site (psbank.ru).",
+    "about": [
+      {
+        "type": "entity",
+        "id": "pao-bank-psb"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7534",
+    "original_url": null,
+    "file": "docs/images/pao-bank-psb_logo_psbank-ru.png",
+    "publish": "ok",
+    "migrated_from": "entities.pao-bank-psb.images"
+  },
+  {
+    "id": "m0004",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Первая партия из 50 дронов-камикадзе «Овод», упакованных для отправки в зону СВО при поддержке проекта \"Народный фронт\" (Иркутская область), август 2023. Логотип-стрекоза на коробках опознан расследователем как фирменный знак «ОВОД» (совпадает с логотипом на фото изделия, s6455); это опознание аналитика, в самом посте оно не названо.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ovod"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s6451",
+    "original_url": null,
+    "file": "docs/images/ovod_shipment_50-drones-narodny-front-2023.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Carries a «Народный фронт» watermark and the caption «Иркутская область»; posted on the maker's own channel. No people in frame.",
+    "migrated_from": "entities.ovod.images"
+  },
+  {
+    "id": "m0005",
+    "kind": "photo",
+    "genre": "marketing",
+    "shows": "Product close-up: motor/propeller assembly of a fiber-optic-guided strike drone, with the «ОВОД» dragonfly logo — official product photo from the manufacturer's own channel.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ovod"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s6455",
+    "original_url": null,
+    "file": "docs/images/ovod_product_fiber-optic-spool-closeup.jpg",
+    "publish": "excerpt",
+    "migrated_from": "entities.ovod.images"
+  },
+  {
+    "id": "m0006",
+    "kind": "graphic",
+    "genre": "marketing",
+    "shows": "Stylized CGI promotional render (not a real combat photograph) of an armed quadcopter in a cinematic urban scene, with the «ОВОД» logo — official promotional art, not footage.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ovod"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s6454",
+    "original_url": null,
+    "file": "docs/images/ovod_promo_cgi-armed-drone-render.jpg",
+    "publish": "excerpt",
+    "note": "CGI render, not a photograph.",
+    "migrated_from": "entities.ovod.images"
+  },
+  {
+    "id": "m0007",
+    "kind": "still",
+    "genre": "interview",
+    "shows": "Video still from the «За работу» interview (Readovka/Ramzay reposts, Feb-Apr 2025): a workshop with shelved FPV airframes and stacked shipping boxes; on-screen caption «Андрей Иванов, главный инженер проекта по производству дронов». The Insider (s7853) identifies «Андрей Иванов» as the public alias of Черезов А.П.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ovod"
+      },
+      {
+        "type": "person",
+        "id": "cherezov-andrey-pavlovich"
+      }
+    ],
+    "asserted_by": "press",
+    "published": null,
+    "captured": null,
+    "source_id": "s7855",
+    "original_url": null,
+    "file": "docs/images/ovod_workshop_zarabotu-ivanov-2025.jpg",
+    "publish": "excerpt",
+    "note": "Frame timestamp not recorded.",
+    "migrated_from": "entities.ovod.images"
+  },
+  {
+    "id": "m0008",
+    "kind": "still",
+    "genre": "interview",
+    "shows": "Video still from «Фёдоров LIVE» (Соловьёв LIVE, 2024): on-screen caption «Андрей Иванов — разработчик, создатель дрона «ОВОД»». The Insider (s7853) identifies «Андрей Иванов» as the public alias of Черезов А.П.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ovod"
+      },
+      {
+        "type": "person",
+        "id": "cherezov-andrey-pavlovich"
+      }
+    ],
+    "asserted_by": "press",
+    "published": null,
+    "captured": null,
+    "source_id": "s7854",
+    "original_url": null,
+    "file": "docs/images/ovod_interview_fedorov-live-ivanov.jpg",
+    "publish": "excerpt",
+    "note": "Frame timestamp not recorded.",
+    "migrated_from": "entities.ovod.images"
+  },
+  {
+    "id": "m0009",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo, from the group's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "gk-logos"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7553",
+    "original_url": null,
+    "file": "docs/images/gk-logos_logo_official-site.svg",
+    "publish": "ok",
+    "migrated_from": "entities.gk-logos.images"
+  },
+  {
+    "id": "m0010",
+    "kind": "photo",
+    "genre": "marketing",
+    "shows": "Программно-аппаратный комплекс «Форпост» -- ruggedized counter-drone control console, product photo from its Налетай.рф listing.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-kopterlab"
+      }
+    ],
+    "asserted_by": "platform",
+    "published": null,
+    "captured": null,
+    "source_id": "s2626",
+    "original_url": null,
+    "file": "docs/images/ooo-kopterlab_forpost-naletay.jpg",
+    "publish": "excerpt",
+    "migrated_from": "entities.ooo-kopterlab.images"
+  },
+  {
+    "id": "m0011",
+    "kind": "still",
+    "genre": "event",
+    "shows": "NTV news footage: SKB Piranha's product line (kamikaze drone Piranha-10, cargo drone Piranha-13) at the \"Inventions for Victory\" exhibition, presented to SVR director Sergey Naryshkin.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-skb-piranya"
+      }
+    ],
+    "asserted_by": "press",
+    "published": "2025-04-01",
+    "captured": null,
+    "source_id": "s7509",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_7300024069_20250401_piranhafpv-post360-1.jpg",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "NTV news frame reposted on the maker's channel; this frame shows exhibits only, no people. Frame timestamp not recorded.",
+    "migrated_from": "entities.ooo-skb-piranya.images"
+  },
+  {
+    "id": "m0012",
+    "kind": "photo",
+    "genre": "combat",
+    "shows": "An FPV drone operator at a field position (\"Sever\" grouping, Kursk border area) — the company claims to manufacture the fiber-optic control cable used in this engagement.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-skb-piranya"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-08-01",
+    "captured": null,
+    "source_id": "s7512",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_7300024069_20250801_piranhafpv-post384-1.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "graphic": false,
+    "note": "Operator's face covered by goggles and balaclava; nothing graphic.",
+    "migrated_from": "entities.ooo-skb-piranya.images"
+  },
+  {
+    "id": "m0013",
+    "kind": "photo",
+    "genre": "event",
+    "shows": "SKB Piranha's booth at the \"Interpolitex-2025\" exhibition (Moscow, VDNKh, pavilion 57): full product line, including two newly-unveiled platforms (a heavy 20\" drone and an interceptor drone).",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-skb-piranya"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-10-29",
+    "captured": null,
+    "source_id": "s7513",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_7300024069_20251029_piranhafpv-post432-1.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "migrated_from": "entities.ooo-skb-piranya.images"
+  },
+  {
+    "id": "m0014",
+    "kind": "photo",
+    "genre": "event",
+    "shows": "SKB Piranha's booth at \"Interpolitex-2025\" — branded banner with products on the exhibition table.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-skb-piranya"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-10-29",
+    "captured": null,
+    "source_id": "s7514",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_7300024069_20251029_piranhafpv-post432-2.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "migrated_from": "entities.ooo-skb-piranya.images"
+  },
+  {
+    "id": "m0015",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo, from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ao-kotlin-novator"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7551",
+    "original_url": null,
+    "file": "docs/images/ao-kotlin-novator_logo_official-site.png",
+    "publish": "ok",
+    "migrated_from": "entities.ao-kotlin-novator.images"
+  },
+  {
+    "id": "m0016",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo, as self-listed in rk.2035.university's curated БАС-industry showcase",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-kleverkopter"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s1168",
+    "original_url": null,
+    "file": "docs/images/kleverkopter_logo_rk2035.jpg",
+    "publish": "ok",
+    "migrated_from": "entities.ooo-kleverkopter.images"
+  },
+  {
+    "id": "m0017",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo (\"AREA Systems\" brand), from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ao-ploshchad"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7557",
+    "original_url": null,
+    "file": "docs/images/ao-ploshchad_logo_official-site.webp",
+    "publish": "ok",
+    "migrated_from": "entities.ao-ploshchad.images"
+  },
+  {
+    "id": "m0018",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo, from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-vizionero"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7542",
+    "original_url": null,
+    "file": "docs/images/ooo-vizionero_logo_official-site.png",
+    "publish": "ok",
+    "migrated_from": "entities.ooo-vizionero.images"
+  },
+  {
+    "id": "m0019",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo (\"3mx\" brand), from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-trimiks"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7547",
+    "original_url": null,
+    "file": "docs/images/ooo-trimiks_logo_official-site.svg",
+    "publish": "ok",
+    "migrated_from": "entities.ooo-trimiks.images",
+    "logo_ground": "dark"
+  },
+  {
+    "id": "m0020",
+    "kind": "photo",
+    "genre": "marketing",
+    "shows": "Product photo of an electronic control unit (БРП-3), from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-kravt"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7545",
+    "original_url": null,
+    "file": "docs/images/ooo-kravt_product_official-site.png",
+    "publish": "excerpt",
+    "migrated_from": "entities.ooo-kravt.images"
+  },
+  {
+    "id": "m0021",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company emblem, from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-opkb-eksplomet"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7559",
+    "original_url": null,
+    "file": "docs/images/ooo-opkb-eksplomet_logo_official-site.svg",
+    "publish": "ok",
+    "migrated_from": "entities.ooo-opkb-eksplomet.images"
+  },
+  {
+    "id": "m0022",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo, from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "npp-elvo-kolskaya-verf"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7549",
+    "original_url": null,
+    "file": "docs/images/npp-elvo_logo_official-site.png",
+    "publish": "ok",
+    "migrated_from": "entities.npp-elvo-kolskaya-verf.images"
+  },
+  {
+    "id": "m0023",
+    "kind": "photo",
+    "genre": "facility",
+    "shows": "GoDrone showroom interior, official \"Marketing GoDrone\" Yandex Maps upload. Wall signage reads \"СВОих не бросаем\" -- a wordplay embedding \"СВО\" (Russia's official euphemism for its war on Ukraine) inside \"своих\" (\"our own/ours\"), roughly \"We don't abandon our own [in the SVO]\". Self-incriminating physical-showroom marketing from the store's own official account, not a customer upload.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-goudron"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s1396",
+    "original_url": null,
+    "file": "docs/images/ooo-goudron_showroom_svoih-ne-brosaem-slogan.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "migrated_from": "entities.ooo-goudron.images"
+  },
+  {
+    "id": "m0024",
+    "kind": "photo",
+    "genre": "facility",
+    "shows": "Storefront exterior, Большой Симоновский переулок, 2 -- customer photo, matches the independently-confirmed Street View location.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-goudron"
+      }
+    ],
+    "asserted_by": "third_party",
+    "published": null,
+    "captured": null,
+    "source_id": "s1396",
+    "original_url": null,
+    "file": "docs/images/ooo-goudron_storefront_exterior.jpg",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "Customer upload on Yandex Maps.",
+    "migrated_from": "entities.ooo-goudron.images"
+  },
+  {
+    "id": "m0025",
+    "kind": "photo",
+    "genre": "facility",
+    "shows": "General showroom interior, official \"Marketing GoDrone\" upload -- professional retail buildout.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-goudron"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s1396",
+    "original_url": null,
+    "file": "docs/images/ooo-goudron_showroom_overview.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "migrated_from": "entities.ooo-goudron.images"
+  },
+  {
+    "id": "m0026",
+    "kind": "photo",
+    "genre": "facility",
+    "shows": "Product display wall, customer photo -- mostly DJI consumer drone stock, confirming the broader consumer-electronics retail operation alongside the Nabat/counter-drone line.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-goudron"
+      }
+    ],
+    "asserted_by": "third_party",
+    "published": null,
+    "captured": null,
+    "source_id": "s1396",
+    "original_url": null,
+    "file": "docs/images/ooo-goudron_product_display_wall.jpg",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "Customer upload on Yandex Maps.",
+    "migrated_from": "entities.ooo-goudron.images"
+  },
+  {
+    "id": "m0027",
+    "kind": "graphic",
+    "genre": "marketing",
+    "shows": "Promotional banner with the \"VA Technologies\" logo and self-published marketing claim of GPS-denied hybrid optical navigation, from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "va-technologies"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7539",
+    "original_url": null,
+    "file": "docs/images/va-technologies_banner_official-site.png",
+    "publish": "excerpt",
+    "migrated_from": "entities.va-technologies.images"
+  },
+  {
+    "id": "m0028",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo (\"M.A.X\"), from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-aeromaks"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7567",
+    "original_url": null,
+    "file": "docs/images/ooo-aeromaks_logo_official-site.png",
+    "publish": "ok",
+    "migrated_from": "entities.ooo-aeromaks.images"
+  },
+  {
+    "id": "m0029",
+    "kind": "graphic",
+    "genre": "marketing",
+    "shows": "Brand banner with product UAV and \"ГАСКАР\" wordmark, from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-gaskar-integratsiya"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7568",
+    "original_url": null,
+    "file": "docs/images/ooo-gaskar-integratsiya_brand_official-site.jpg",
+    "publish": "excerpt",
+    "migrated_from": "entities.ooo-gaskar-integratsiya.images"
+  },
+  {
+    "id": "m0030",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo, as self-listed in rk.2035.university's curated БАС-industry showcase",
+    "about": [
+      {
+        "type": "entity",
+        "id": "npp-radar-mms"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s1168",
+    "original_url": null,
+    "file": "docs/images/radar-mms_logo_rk2035.jpg",
+    "publish": "ok",
+    "migrated_from": "entities.npp-radar-mms.images"
+  },
+  {
+    "id": "m0031",
+    "kind": "photo",
+    "genre": "marketing",
+    "shows": "БВС ВТ-440М helicopter-type UAV -- product photo from its Налетай.рф listing, branded with the manufacturer's own radar-mms.com site and callsign «ДРАКОН».",
+    "about": [
+      {
+        "type": "entity",
+        "id": "npp-radar-mms"
+      }
+    ],
+    "asserted_by": "platform",
+    "published": null,
+    "captured": null,
+    "source_id": "s2630",
+    "original_url": null,
+    "file": "docs/images/npp-radar-mms_vt440m-naletay.jpg",
+    "publish": "excerpt",
+    "migrated_from": "entities.npp-radar-mms.images"
+  },
+  {
+    "id": "m0032",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo, from the company's own official site (elvees.ru).",
+    "about": [
+      {
+        "type": "entity",
+        "id": "npts-elvis"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7544",
+    "original_url": null,
+    "file": "docs/images/npts-elvis_logo_official-site.svg",
+    "publish": "ok",
+    "migrated_from": "entities.npts-elvis.images"
+  },
+  {
+    "id": "m0033",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo, as self-listed in rk.2035.university's curated БАС-industry showcase",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ao-ekolibri"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s1168",
+    "original_url": null,
+    "file": "docs/images/ekolibri_logo_rk2035.png",
+    "publish": "ok",
+    "migrated_from": "entities.ao-ekolibri.images"
+  },
+  {
+    "id": "m0034",
+    "kind": "photo",
+    "genre": "marketing",
+    "shows": "Р-75 VTOL fixed-wing UAV -- product photo from its Налетай.рф listing.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ao-ekolibri"
+      }
+    ],
+    "asserted_by": "platform",
+    "published": null,
+    "captured": null,
+    "source_id": "s2625",
+    "original_url": null,
+    "file": "docs/images/ao-ekolibri_r75-naletay.jpg",
+    "publish": "excerpt",
+    "migrated_from": "entities.ao-ekolibri.images"
+  },
+  {
+    "id": "m0035",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo (\"POKOT-TEX\"), from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-rokot-tekh"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7565",
+    "original_url": null,
+    "file": "docs/images/ooo-rokot-tekh_logo_official-site.jpg",
+    "publish": "ok",
+    "migrated_from": "entities.ooo-rokot-tekh.images"
+  },
+  {
+    "id": "m0036",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo, from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-asel-labs"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7555",
+    "original_url": null,
+    "file": "docs/images/ooo-asel-labs_logo_official-site.svg",
+    "publish": "ok",
+    "migrated_from": "entities.ooo-asel-labs.images"
+  },
+  {
+    "id": "m0037",
+    "kind": "photo",
+    "genre": "portrait",
+    "shows": "Барашков Александр Сергеевич, GD/co-founder of ООО «Гагаринг», at what appears to be one of the «Гагаринг» training-centre's field courses (t.me/my_el_lab/4210, one of six images in the post's gallery).",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-gagaring"
+      },
+      {
+        "type": "person",
+        "id": "barashkov-aleksandr-sergeevich"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s5387",
+    "original_url": null,
+    "file": "docs/images/gagaring_barashkov_portrait.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face. The publish copy in docs/images/ was restored from the original.",
+    "migrated_from": "entities.ooo-gagaring.images"
+  },
+  {
+    "id": "m0038",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo (\"TSG Group\"), from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-ti-es-dzhi-grupp"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7561",
+    "original_url": null,
+    "file": "docs/images/ooo-ti-es-dzhi-grupp_logo_official-site.png",
+    "publish": "ok",
+    "migrated_from": "entities.ooo-ti-es-dzhi-grupp.images"
+  },
+  {
+    "id": "m0039",
+    "kind": "scan",
+    "genre": "document",
+    "shows": "First of two thank-you letters, 16 months apart, from the same unit and commander -- confirms a sustained, not one-off, supply relationship. MoD-stamped thank-you letter addressed to Zamyatin A.Yu. (technical director / chief designer), signed by Major-General D. Barilo, commander of the Volunteer Corps, military unit — field post 71474.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-npts-basirtk"
+      },
+      {
+        "type": "person",
+        "id": "zamyatin-aleksandr-yurevich"
+      },
+      {
+        "type": "person",
+        "id": "barilo-denis-aleksandrovich"
+      }
+    ],
+    "asserted_by": "counterparty",
+    "published": "2024-12-01",
+    "captured": null,
+    "source_id": "s0232",
+    "original_url": null,
+    "file": "docs/images/uas_barilo_letter_zamyatin.jpg",
+    "publish": "ok",
+    "migrated_from": "entities.ooo-npts-basirtk.battlefield_evidence"
+  },
+  {
+    "id": "m0040",
+    "kind": "photo",
+    "genre": "marketing",
+    "shows": "Product photo of a counter-drone unit bearing the \"НПО КИЛОВАТТ\" marking, from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-npo-kilovatt-shestopalov"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7563",
+    "original_url": null,
+    "file": "docs/images/ooo-npo-kilovatt_product_official-site.jpg",
+    "publish": "excerpt",
+    "migrated_from": "entities.ooo-npo-kilovatt-shestopalov.images"
+  },
+  {
+    "id": "m0041",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Brand logo (\"КРАМС\"), from the site's own official page.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "krams-brand-unresolved"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7571",
+    "original_url": null,
+    "file": "docs/images/krams-brand_logo_official-site.png",
+    "publish": "ok",
+    "migrated_from": "entities.krams-brand-unresolved.images"
+  },
+  {
+    "id": "m0042",
+    "kind": "graphic",
+    "genre": "logo",
+    "shows": "Company logo (\"ПОКРОВ — Система безопасности\"), from the company's own official site.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-pokrov"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7540",
+    "original_url": null,
+    "file": "docs/images/ooo-pokrov_logo_official-site.jpg",
+    "publish": "ok",
+    "migrated_from": "entities.ooo-pokrov.images"
+  },
+  {
+    "id": "m0043",
+    "kind": "screenshot",
+    "genre": "marketing",
+    "shows": "Product card for the «Булат» v.4 (3MX) handheld detector, with its case and antennas, as shown on the company's own site pokrovsystem.ru (captured 20.09.2026).",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-pokrov"
+      },
+      {
+        "type": "product",
+        "id": "bulat"
+      },
+      {
+        "type": "version",
+        "id": "bulat-v4"
+      },
+      {
+        "type": "listing",
+        "id": "bulat-pokrov"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7943",
+    "original_url": null,
+    "file": "docs/images/ooo-pokrov_bulat-v4-preview-card.png",
+    "publish": "excerpt",
+    "note": "The dealer's own site.",
+    "migrated_from": "entities.ooo-pokrov.images"
+  },
+  {
+    "id": "m0044",
+    "kind": "photo",
+    "genre": "event",
+    "shows": "Concert in Реутов for the city day, 16.09.2024: the «ПОКРОВ» logo is on the stage screen behind the singer. Photo from the company's own channel post (low resolution).",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-pokrov"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s8519",
+    "original_url": null,
+    "file": "docs/images/ooo-pokrov_reutov-concert-2024-09-16.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Performer on stage at low resolution; not identifiable.",
+    "migrated_from": "entities.ooo-pokrov.images"
+  },
+  {
+    "id": "m0045",
+    "kind": "still",
+    "genre": "training",
+    "shows": "Cropped frame from Гагаринг's own 2026-08-04 graduation video, showing graduates' face-buffs with a circular emblem reading «УДАРНАЯ СПЕЦНАЗ...» and «АРХАНГЕЛ». RESOLVED (2026-09-03): this is the branding of «Архангел Спецназа» (@arx_spn, a 1.02M-subscriber VDV servicemembers' Telegram channel), which announced an active joint veteran drone-retraining project with Гагаринг's own БПЛА lab on 2026-08-10 (s5392) — confirms the mask branding directly, not a visual guess. NOT yet confirmed as the same brand as the «Архангел Легион»/«проект Архангел» already tied to this entity's own 51st Army training-center relationship (see this entity's tier_basis) — flagged separately below.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ano-dpo-obrazovatelny-tsentr-gagaring"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s5392",
+    "original_url": null,
+    "file": "docs/images/gagaring-training-graduation-mask-crop.png",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face. The publish copy in docs/images/ was restored from the original.",
+    "migrated_from": "entities.ano-dpo-obrazovatelny-tsentr-gagaring.images"
+  },
+  {
+    "id": "m0046",
+    "kind": "still",
+    "genre": "production",
+    "shows": "Flight-controller board shown in the «Архангел» lab video (@projectArchangel msg 10619, 04.08.2026): ~30×30 mm, STM32-type LQFP-64 MCU, USB-C, silkscreen «Rev 2.2» and an «A» logo, hand-soldered leads. 4× enlarged crop of one frame of an 848×464 video; chip markings not legible, make not confirmed (see open questions).",
+    "about": [
+      {
+        "type": "entity",
+        "id": "proekt-kb-arkhangel"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7642",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_20260804_projectarchangel-post10619-fc-board-crop.png",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Frame timestamp not recorded.",
+    "migrated_from": "entities.proekt-kb-arkhangel.images"
+  },
+  {
+    "id": "m0047",
+    "kind": "still",
+    "genre": "production",
+    "shows": "Assembly bench in the «Архангел» lab (msg 10619, 04.08.2026): a black tube-and-arm airframe on a silicone soldering mat, with staff in «АРХАНГЕЛ»-branded shirts. The channel captions the clip as assembly of «дронов-перехватчиков второго поколения».",
+    "about": [
+      {
+        "type": "entity",
+        "id": "proekt-kb-arkhangel"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7641",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_20260804_projectarchangel-post10619-airframe-assembly-bench.png",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Staff member seen from behind. Frame timestamp not recorded.",
+    "migrated_from": "entities.proekt-kb-arkhangel.images"
+  },
+  {
+    "id": "m0048",
+    "kind": "still",
+    "genre": "training",
+    "shows": "Flight controller on a USB cable in front of Betaflight Configurator, first minutes of the 32-minute instruction video (Archangel_Forum msg 183433, 06.09.2026); this frame shows the connector side (white JST sockets), yellow silicone standoffs as in the 10619 board.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "proekt-kb-arkhangel"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7643",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_20260906_archangelforum-post183433-fc-betaflight-usb.png",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Within the first minutes of the 32-minute video; exact timestamp not recorded.",
+    "migrated_from": "entities.proekt-kb-arkhangel.images"
+  },
+  {
+    "id": "m0049",
+    "kind": "still",
+    "genre": "training",
+    "shows": "CAD model of the tube body lettered «АРХАНГЕЛ» in SolidWorks (toolbar reads SOLIDWORKS / SOLIDWORKS CAM / MBD), from the same instruction video (msg 183433).",
+    "about": [
+      {
+        "type": "entity",
+        "id": "proekt-kb-arkhangel"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7644",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_20260906_archangelforum-post183433-solidworks-body-cad.png",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Frame timestamp not recorded.",
+    "migrated_from": "entities.proekt-kb-arkhangel.images"
+  },
+  {
+    "id": "m0050",
+    "kind": "still",
+    "genre": "production",
+    "shows": "«Ночник ПВН» observation device (screen, camera and green laser pointer on top) demonstrated in @projectArchangel msg 10796 (19.09.2026), released with its design files.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "proekt-kb-arkhangel"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7646",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_20260919_projectarchangel-post10796-pvn-front-laser.png",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Frame timestamp not recorded.",
+    "migrated_from": "entities.proekt-kb-arkhangel.images"
+  },
+  {
+    "id": "m0051",
+    "kind": "still",
+    "genre": "production",
+    "shows": "Inside the «Ночник ПВН»: FPV camera, foil-wrapped battery pack with XT60 lead and buck-converter boards (msg 10796).",
+    "about": [
+      {
+        "type": "entity",
+        "id": "proekt-kb-arkhangel"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7647",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_20260919_projectarchangel-post10796-pvn-internals.png",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Frame timestamp not recorded.",
+    "migrated_from": "entities.proekt-kb-arkhangel.images"
+  },
+  {
+    "id": "m0052",
+    "kind": "still",
+    "genre": "recruitment",
+    "shows": "Frame from the 57-second recruitment video (msg 10782, 13.09.2026): a uniformed speaker in front of a workshop with several 3D printers who, per a machine transcript (approximate), introduces herself by the callsign «Радистка», says she has been an operator of strike UAVs since 2023 and points viewers to the «Архангел» school. Identity beyond the callsign is not established here.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "proekt-kb-arkhangel"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7645",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_20260913_projectarchangel-post10782-radistka-recruitment.png",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face. The publish copy in docs/images/ was restored from the original.",
+    "migrated_from": "entities.proekt-kb-arkhangel.images"
+  },
+  {
+    "id": "m0053",
+    "kind": "still",
+    "genre": "training",
+    "shows": "Bench in the 32-minute flight-instruction video (@Archangel_Forum msg 183433, 06.09.2026): black 3D-printed drone body with four fins and a cylinder on top, Betaflight Configurator open on the laptop behind. Single frame of an 848×464 video.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "proekt-kb-arkhangel"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7856",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_20260906_archangelforum-post183433-printed-body-bench.png",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Frame timestamp not recorded.",
+    "migrated_from": "entities.proekt-kb-arkhangel.images"
+  },
+  {
+    "id": "m0054",
+    "kind": "still",
+    "genre": "training",
+    "shows": "Same video: a dark 3-blade prop and a grey 2-blade prop shown on a gaming laptop (Intel Core, NVIDIA GeForce, G-SYNC stickers). No prop or laptop make is legible at this resolution.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "proekt-kb-arkhangel"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": null,
+    "source_id": "s7857",
+    "original_url": null,
+    "file": "docs/images/TGMEDIA_20260906_archangelforum-post183433-prop-laptop-bench.png",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "Frame timestamp not recorded.",
+    "migrated_from": "entities.proekt-kb-arkhangel.images"
+  },
+  {
+    "id": "m0055",
+    "kind": "photo",
+    "genre": "event",
+    "shows": "Дронница-2025 (6–7 сентября 2025, Новгородская область): cast green housing embossed «БАРС САРМАТ», mounted among rows of green cylindrical enclosures. Photo from the unit's own Telegram post (8 сентября 2025), which lists the equipment shown (МГЛА-Сармат, «Сармат», navigation module, quadcopter, «Авианосец», «Коршун», «МикроТалон») without saying which item this is; the photo itself does not identify the product.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "csn-bars-sarmat"
+      },
+      {
+        "type": "program",
+        "id": "dronnitsa-2025"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-09-08",
+    "captured": null,
+    "source_id": "s7861",
+    "original_url": null,
+    "file": "docs/images/csn-bars-sarmat_dronnitsa-2025_cast-housing.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "migrated_from": "entities.csn-bars-sarmat.images"
+  },
+  {
+    "id": "m0056",
+    "kind": "photo",
+    "genre": "event",
+    "shows": "Дронница-2025: winged UAV with underslung payload pods on an exhibition stand, with a specification placard whose text is not legible. From the unit's own Telegram post of 8 сентября 2025, which names among the exhibits the carrier aircraft «Авианосец»; the photo does not say which exhibit this is.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "csn-bars-sarmat"
+      },
+      {
+        "type": "program",
+        "id": "dronnitsa-2025"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-09-08",
+    "captured": null,
+    "source_id": "s7863",
+    "original_url": null,
+    "file": "docs/images/csn-bars-sarmat_dronnitsa-2025_winged-uav.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "migrated_from": "entities.csn-bars-sarmat.images"
+  },
+  {
+    "id": "m0057",
+    "kind": "photo",
+    "genre": "event",
+    "shows": "Дронница-2025: fixed-wing airframe on a stand with a placard reading «МИКРОТАЛОН». The unit's own Telegram post of 8 сентября 2025 lists the interceptor «МикроТалон» among the items it presented.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "csn-bars-sarmat"
+      },
+      {
+        "type": "program",
+        "id": "dronnitsa-2025"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-09-08",
+    "captured": null,
+    "source_id": "s7864",
+    "original_url": null,
+    "file": "docs/images/csn-bars-sarmat_dronnitsa-2025_mikrotalon.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "migrated_from": "entities.csn-bars-sarmat.images"
+  },
+  {
+    "id": "m0058",
+    "kind": "photo",
+    "genre": "event",
+    "shows": "Дронница-2025: wooden-framed fixed-wing airframe on a stand with a placard reading «КОРШУН». The unit's own Telegram post of 8 сентября 2025 lists the interceptor «Коршун» among the items it presented.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "csn-bars-sarmat"
+      },
+      {
+        "type": "program",
+        "id": "dronnitsa-2025"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-09-08",
+    "captured": null,
+    "source_id": "s7865",
+    "original_url": null,
+    "file": "docs/images/csn-bars-sarmat_dronnitsa-2025_korshun.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "migrated_from": "entities.csn-bars-sarmat.images"
+  },
+  {
+    "id": "m0059",
+    "kind": "screenshot",
+    "genre": "marketing",
+    "shows": "A marketplace app's product page for «Портативный всенаправленный детектор БПЛА 3MX Булат v.4» at 144 279 ₽ (234 600 ₽ crossed out), with a smartwatch-style unit beside the detector.",
+    "about": [
+      {
+        "type": "product",
+        "id": "bulat"
+      },
+      {
+        "type": "version",
+        "id": "bulat-v4"
+      }
+    ],
+    "asserted_by": "third_party",
+    "published": "2024-10-01",
+    "captured": null,
+    "source_id": "s8745",
+    "original_url": null,
+    "file": "data/sources/TGMEDIA_20241001_ru3mxchat-post15020-media.jpg",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "Posted in the maker's customer chat «3mx.ru🛡- ЧАТ» by a buyer complaining that resellers have it in stock while «на лбс ждешь черти сколько, официально от вас». The marketplace is not named in the screenshot."
+  },
+  {
+    "id": "m0060",
+    "kind": "photo",
+    "genre": "marketing",
+    "shows": "Product shot of a handheld detector with two whip antennas and a keypad, on a white ground with a faint repeated watermark.",
+    "about": [
+      {
+        "type": "product",
+        "id": "bulat"
+      },
+      {
+        "type": "version",
+        "id": "bulat-v4"
+      }
+    ],
+    "asserted_by": "third_party",
+    "published": "2024-10-02",
+    "captured": null,
+    "source_id": "s8746",
+    "original_url": null,
+    "file": "data/sources/TGMEDIA_20241002_ru3mxchat-post15034-media.jpg",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "Posted in the maker's customer chat «3mx.ru🛡- ЧАТ»: «Вот как выглядит Булат 4 от производителя 3mx, а не тот, что указан в ссылке на Wildberries». Poster's identity not established."
+  },
+  {
+    "id": "m0061",
+    "kind": "photo",
+    "genre": "user_photo",
+    "shows": "Home-made antenna mount: coiled cable and a metal bracket with a mounted antenna on a table.",
+    "about": [
+      {
+        "type": "product",
+        "id": "bulat"
+      }
+    ],
+    "asserted_by": "third_party",
+    "published": "2024-10-02",
+    "captured": null,
+    "source_id": "s8747",
+    "original_url": null,
+    "file": "data/sources/TGMEDIA_20241002_ru3mxchat-post15074-media.jpg",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "Posted in the maker's customer chat «3mx.ru🛡- ЧАТ»: a buyer waiting for a «Булат» made an antenna extension («вынос») in the meantime."
+  },
+  {
+    "id": "m0062",
+    "kind": "photo",
+    "genre": "user_photo",
+    "shows": "A handheld detector with a lit screen and long antennas, photographed in the dark.",
+    "about": [
+      {
+        "type": "product",
+        "id": "bulat"
+      }
+    ],
+    "asserted_by": "third_party",
+    "published": "2024-10-03",
+    "captured": null,
+    "source_id": "s8750",
+    "original_url": null,
+    "file": "data/sources/TGMEDIA_20241003_ru3mxchat-post15124-media.jpg",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "Posted in the maker's customer chat «3mx.ru🛡- ЧАТ»: a buyer asks where to buy these antennas."
+  },
+  {
+    "id": "m0063",
+    "kind": "graphic",
+    "genre": "marketing",
+    "shows": "Video thumbnail «ОТВЕТЫ НА ВОПРОСЫ» with a «СМОТРЕТЬ ВИДЕО» button; a man in a balaclava and tactical gloves, 3mx logo on his cap. Face covered.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-trimiks"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2024-10-03",
+    "captured": null,
+    "source_id": "s8751",
+    "original_url": null,
+    "file": "data/sources/TGMEDIA_20241003_ru3mxchat-post15131-media.jpg",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "Posted in the maker's customer chat «3mx.ru🛡- ЧАТ» with the maker's announcement of a new Q&A video on VK Clips and YouTube (#видео3mx). The video itself is not archived.",
+    "video": {
+      "original": "VK Clips and YouTube; the post gives no link",
+      "archived": false
+    }
+  },
+  {
+    "id": "m0064",
+    "kind": "photo",
+    "genre": "field_test",
+    "shows": "A handheld detector with an antenna, lying in a vehicle tyre next to a small monitor and camouflage gear outdoors. No people in frame.",
+    "about": [
+      {
+        "type": "product",
+        "id": "bulat"
+      }
+    ],
+    "asserted_by": "third_party",
+    "published": "2024-10-04",
+    "captured": null,
+    "source_id": "s8753",
+    "original_url": null,
+    "file": "data/sources/TGMEDIA_20241004_ru3mxchat-post15155-media.jpg",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "Posted in the maker's customer chat «3mx.ru🛡- ЧАТ»: a buyer reports an alternative antenna works about as well as the «Булат» with its own antenna."
+  },
+  {
+    "id": "m0065",
+    "kind": "photo",
+    "genre": "user_photo",
+    "shows": "Close-up of an antenna whose end cap is missing, circled in red.",
+    "about": [
+      {
+        "type": "product",
+        "id": "bulat"
+      }
+    ],
+    "asserted_by": "third_party",
+    "published": "2024-10-04",
+    "captured": null,
+    "source_id": "s8754",
+    "original_url": null,
+    "file": "data/sources/TGMEDIA_20241004_ru3mxchat-post15161-media.jpg",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "Posted in the maker's customer chat «3mx.ru🛡- ЧАТ»: a buyer reports the antenna cap came off and asks what can replace it."
+  },
+  {
+    "id": "m0066",
+    "kind": "photo",
+    "genre": "user_photo",
+    "shows": "A boxed wrist unit held in a hand; the box reads «ТАИР» and «Устройство оповещения», and the pictured screen reads «БУЛАТ 4» and «ПОИСК БПЛА».",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-trimiks"
+      },
+      {
+        "type": "product",
+        "id": "bulat"
+      },
+      {
+        "type": "version",
+        "id": "bulat-v4"
+      }
+    ],
+    "asserted_by": "third_party",
+    "published": "2024-10-05",
+    "captured": null,
+    "source_id": "s8762",
+    "original_url": null,
+    "file": "data/sources/TGMEDIA_20241005_ru3mxchat-post15214-media.jpg",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "Posted in the maker's customer chat «3mx.ru🛡- ЧАТ»: «Спасибо компании 3mx, свои часы получил». The «Таир» is recorded as an accessory of «Булат» v.4."
+  },
+  {
+    "id": "m0067",
+    "kind": "screenshot",
+    "genre": "document",
+    "shows": "Manual page §3.10.3 «Проверка»: how to check the detector's authenticity at 3mx.ru/proverka with a serial number and PIN code.",
+    "about": [
+      {
+        "type": "product",
+        "id": "bulat"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2024-12-18",
+    "captured": null,
+    "source_id": "s8776",
+    "original_url": null,
+    "file": "data/sources/TGMEDIA_20241218_ru3mxchat-post18611-image_2024-12-18_16-06-39.png",
+    "publish": "excerpt",
+    "redact": "none_needed",
+    "note": "Posted in the maker's customer chat «3mx.ru🛡- ЧАТ» in reply to a buyer: «Чтобы получить пин-код необходимо сделать проверку Булата в настройках». The page is the maker's manual."
+  },
+  {
+    "id": "m0068",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Two servicemen in multicam with rifles in a snowy wood; their faces are covered.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d01"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-02-11",
+    "captured": null,
+    "source_id": "s8966",
+    "original_url": "https://t.me/nashapravdafond/393",
+    "file": "data/sources/TGMEDIA_9705196180_20250211_nashapravdafond-post393-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Faces covered, turned away or blurred by the publisher; everyone else in frame is involved."
+  },
+  {
+    "id": "m0069",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Three servicemen with rifles standing in snow behind two black hard cases; faces covered.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d01"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-02-11",
+    "captured": null,
+    "source_id": "s8967",
+    "original_url": "https://t.me/nashapravdafond/393",
+    "file": "data/sources/TGMEDIA_9705196180_20250211_nashapravdafond-post393-2.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Faces covered, turned away or blurred by the publisher; everyone else in frame is involved."
+  },
+  {
+    "id": "m0070",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Stacked cardboard boxes and a white crate beside a van, several with printed labels.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d03"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-02-19",
+    "captured": null,
+    "source_id": "s8968",
+    "original_url": "https://t.me/nashapravdafond/398",
+    "file": "data/sources/TGMEDIA_9705196180_20250219_nashapravdafond-post398-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Faces covered, turned away or blurred by the publisher; everyone else in frame is involved."
+  },
+  {
+    "id": "m0071",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "A man in camouflage in front of a truck loaded with boxes; his face is blurred by the publisher.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d03"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-02-19",
+    "captured": null,
+    "source_id": "s8969",
+    "original_url": "https://t.me/nashapravdafond/398",
+    "file": "data/sources/TGMEDIA_9705196180_20250219_nashapravdafond-post398-2.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Faces covered, turned away or blurred by the publisher; everyone else in frame is involved."
+  },
+  {
+    "id": "m0072",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "A soldier with a rifle in a dim wooden storeroom stacked with boxes; face covered.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d03"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-02-19",
+    "captured": null,
+    "source_id": "s8970",
+    "original_url": "https://t.me/nashapravdafond/398",
+    "file": "data/sources/TGMEDIA_9705196180_20250219_nashapravdafond-post398-3.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Faces covered, turned away or blurred by the publisher; everyone else in frame is involved."
+  },
+  {
+    "id": "m0073",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Four men, three in camouflage and one in olive clothing, in front of a covered truck; a yellow minibus behind.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d04"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-03-03",
+    "captured": null,
+    "source_id": "s8971",
+    "original_url": "https://t.me/nashapravdafond/408",
+    "file": "data/sources/TGMEDIA_9705196180_20250303_nashapravdafond-post408-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face."
+  },
+  {
+    "id": "m0074",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Several people loading a green crate into a vehicle at night.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d04"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-03-03",
+    "captured": null,
+    "source_id": "s8972",
+    "original_url": "https://t.me/nashapravdafond/408",
+    "file": "data/sources/TGMEDIA_9705196180_20250303_nashapravdafond-post408-2.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face."
+  },
+  {
+    "id": "m0075",
+    "kind": "still",
+    "genre": "handover",
+    "shows": "A quad bike with men working around it and gear on the ground.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d05"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-04-10",
+    "captured": null,
+    "source_id": "s8973",
+    "original_url": "https://t.me/nashapravdafond/422",
+    "file": "data/sources/TGMEDIA_9705196180_20250410_nashapravdafond-post422-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "video": {
+      "original": "t.me/nashapravdafond/422",
+      "archived": false
+    },
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face."
+  },
+  {
+    "id": "m0076",
+    "kind": "still",
+    "genre": "handover",
+    "shows": "A row of men in camouflage and one man in a blue jacket, standing among trees.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d06"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-06-06",
+    "captured": null,
+    "source_id": "s8974",
+    "original_url": "https://t.me/nashapravdafond/444",
+    "file": "data/sources/TGMEDIA_9705196180_20250606_nashapravdafond-post444-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "video": {
+      "original": "t.me/nashapravdafond/444",
+      "archived": false
+    },
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face."
+  },
+  {
+    "id": "m0077",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Three armed men in camouflage beside cardboard boxes and a green hard case.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d07"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-06-09",
+    "captured": null,
+    "source_id": "s8975",
+    "original_url": "https://t.me/nashapravdafond/448",
+    "file": "data/sources/TGMEDIA_9705196180_20250609_nashapravdafond-post448-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face."
+  },
+  {
+    "id": "m0078",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Three men beside the open boot of a car loaded with equipment.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d09"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-07-29",
+    "captured": null,
+    "source_id": "s8976",
+    "original_url": "https://t.me/nashapravdafond/473",
+    "file": "data/sources/TGMEDIA_9705196180_20250729_nashapravdafond-post473-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face."
+  },
+  {
+    "id": "m0079",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Three men in camouflage at night under camouflage netting; faces blurred by the publisher.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d10"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-08-08",
+    "captured": null,
+    "source_id": "s8977",
+    "original_url": "https://t.me/nashapravdafond/487",
+    "file": "data/sources/TGMEDIA_9705196180_20250808_nashapravdafond-post487-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Faces covered, turned away or blurred by the publisher; everyone else in frame is involved."
+  },
+  {
+    "id": "m0080",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Two men in body armour beside unpacked boxes and equipment on the ground; faces blurred by the publisher.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d11"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-08-13",
+    "captured": null,
+    "source_id": "s8978",
+    "original_url": "https://t.me/nashapravdafond/493",
+    "file": "data/sources/TGMEDIA_9705196180_20250813_nashapravdafond-post493-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Faces covered, turned away or blurred by the publisher; everyone else in frame is involved."
+  },
+  {
+    "id": "m0081",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Two men in camouflage in front of a military truck, each holding a box or case; faces blurred by the publisher.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d12"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-08-13",
+    "captured": null,
+    "source_id": "s8979",
+    "original_url": "https://t.me/nashapravdafond/494",
+    "file": "data/sources/TGMEDIA_9705196180_20250813_nashapravdafond-post494-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Faces covered, turned away or blurred by the publisher; everyone else in frame is involved."
+  },
+  {
+    "id": "m0082",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Three armed men in helmets and face coverings in front of a log dugout wall.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d13"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2025-10-24",
+    "captured": null,
+    "source_id": "s8980",
+    "original_url": "https://t.me/nashapravdafond/519",
+    "file": "data/sources/TGMEDIA_9705196180_20251024_nashapravdafond-post519-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Faces covered, turned away or blurred by the publisher; everyone else in frame is involved."
+  },
+  {
+    "id": "m0083",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Seven men in olive and camouflage clothing posing in front of a quad bike and boxes at dusk.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d14"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2026-04-01",
+    "captured": null,
+    "source_id": "s8981",
+    "original_url": "https://t.me/nashapravdafond/593",
+    "file": "data/sources/TGMEDIA_9705196180_20260401_nashapravdafond-post593-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face."
+  },
+  {
+    "id": "m0084",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Seven men posing beside a black off-road motorcycle and a pickup truck.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d14"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2026-04-01",
+    "captured": null,
+    "source_id": "s8982",
+    "original_url": "https://t.me/nashapravdafond/593",
+    "file": "data/sources/TGMEDIA_9705196180_20260401_nashapravdafond-post593-2.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face."
+  },
+  {
+    "id": "m0085",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Cardboard boxes and black hard cases stacked in and beside a truck.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d15"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2026-04-24",
+    "captured": null,
+    "source_id": "s8983",
+    "original_url": "https://t.me/nashapravdafond/608",
+    "file": "data/sources/TGMEDIA_9705196180_20260424_nashapravdafond-post608-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Faces covered, turned away or blurred by the publisher; everyone else in frame is involved."
+  },
+  {
+    "id": "m0086",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Two men in face coverings in front of a trailer loaded with boxes.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d15"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2026-04-24",
+    "captured": null,
+    "source_id": "s8984",
+    "original_url": "https://t.me/nashapravdafond/608",
+    "file": "data/sources/TGMEDIA_9705196180_20260424_nashapravdafond-post608-2.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Faces covered, turned away or blurred by the publisher; everyone else in frame is involved."
+  },
+  {
+    "id": "m0087",
+    "kind": "photo",
+    "genre": "handover",
+    "shows": "Three men in a walled yard with motorcycles, a quad bike, a trailer and boxes.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "fond-nasha-pravda"
+      },
+      {
+        "type": "delivery",
+        "id": "bulat-d16"
+      }
+    ],
+    "asserted_by": "self",
+    "published": "2026-05-19",
+    "captured": null,
+    "source_id": "s8985",
+    "original_url": "https://t.me/nashapravdafond/615",
+    "file": "data/sources/TGMEDIA_9705196180_20260519_nashapravdafond-post615-1.jpg",
+    "publish": "ok",
+    "graphic": false,
+    "redact": "none_needed",
+    "note": "Everyone in frame is involved (recipients, donors, staff or course participants), so faces are shown (rule corrected 02.10.2026). Nobody is identified from a face."
+  }
+]

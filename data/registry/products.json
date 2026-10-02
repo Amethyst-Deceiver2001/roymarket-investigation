@@ -1,0 +1,859 @@
+[
+  {
+    "slug": "bulat",
+    "kind": "product",
+    "name_ru": "«Булат»",
+    "name_latin": "Bulat",
+    "category": "portable UAV detector",
+    "maker": "ooo-trimiks",
+    "brand": "3mx",
+    "versions": [
+      {
+        "slug": "bulat-v3",
+        "name_ru": "«Булат» в.3",
+        "firmware": "v4.13",
+        "description": "Портативный всенаправленный детектор БПЛА (own-site page 3mx.ru/products/detektor-bpla-bulat-v3/).",
+        "source_id": "s8018"
+      },
+      {
+        "slug": "bulat-v4",
+        "name_ru": "«Булат» в.4",
+        "firmware": "v1.71",
+        "description": "Портативный всенаправленный детектор БПЛА, обнаружение до 1.5 км (own-site page 3mx.ru/products/detektor-bpla-bulat-v4/).",
+        "source_id": "s8019"
+      },
+      {
+        "slug": "bulat-online",
+        "name_ru": "«Булат-Онлайн»",
+        "firmware": null,
+        "description": "Automatic airspace monitoring complex (own-site page 3mx.ru/products/kompleks-obnaruzheniya-bpla-bulat-online/).",
+        "source_id": "s8020"
+      }
+    ],
+    "accessories": [
+      {
+        "name_ru": "«Таир»",
+        "pairs_with": "bulat-v4",
+        "description": "Individual Bluetooth-paired UAV alert sensor; one detector feeds several «Таир» units within 50 m (user manual v1.16, 06.12.2024, s. 2).",
+        "source_id": "s8773"
+      },
+      {
+        "name_ru": "Дополнительный модуль к детектору «Булат»",
+        "pairs_with": "bulat-v4",
+        "description": "Stand-alone FPV-only extension unit, 1.5 km detection range; extends the detector or works alone (official user manual).",
+        "source_id": "s8770"
+      }
+    ],
+    "shown_at": [
+      {
+        "event": "dronnitsa-2025",
+        "as_of": "2025-09-08",
+        "source_id": "s8842",
+        "note": "«детекторы «Булат»» named in ЦБСТ's list of what its residents showed (post 1193); ЦБСТ's tie to the maker is on the entity record."
+      }
+    ],
+    "listings": [
+      {
+        "id": "bulat-wb-brand-v3",
+        "version": "bulat-v3",
+        "channel": "Wildberries (brand store 3mx)",
+        "url": "https://www.wildberries.ru/catalog/241450767/detail.aspx",
+        "seller": {
+          "entity": "ooo-trimiks",
+          "storefront": "3mx (brand page wildberries.ru/brands/311445014-3mx)",
+          "identity": "resolved"
+        },
+        "status": "listed",
+        "as_of": "2026-08-25",
+        "source_id": null,
+        "basis": "doc",
+        "asserted_by": "platform",
+        "note": "Recorded from the maker's entity record («confirmed live listing 2026-08-25»); no archived capture of the page is on file."
+      },
+      {
+        "id": "bulat-wb-brand-v4",
+        "version": "bulat-v4",
+        "channel": "Wildberries (brand store 3mx)",
+        "url": "https://www.wildberries.ru/catalog/418185835/detail.aspx",
+        "seller": {
+          "entity": "ooo-trimiks",
+          "storefront": "3mx (brand page wildberries.ru/brands/311445014-3mx)",
+          "identity": "resolved"
+        },
+        "status": "listed",
+        "as_of": "2026-08-25",
+        "source_id": null,
+        "basis": "doc",
+        "asserted_by": "platform",
+        "note": "Same as the в.3 listing: no archived capture of the page is on file."
+      },
+      {
+        "id": "bulat-wb-madro",
+        "version": null,
+        "channel": "Wildberries (dealer storefront «Мэдро»)",
+        "url": "https://www.wildberries.ru/seller/250074680",
+        "seller": {
+          "entity": null,
+          "storefront": "Мэдро (WB seller 250074680)",
+          "identity": "unresolved as a registry entity; the HAR capture shows ИНН 350102453754 (ИП), s1381"
+        },
+        "status": "listed",
+        "as_of": "2026-08-25",
+        "source_id": "s1381",
+        "basis": "doc",
+        "asserted_by": "platform",
+        "note": "Storefront trademark field «madro - официальный дилер 3mx»; named official dealer on 3mx.ru/dilery (s0558). The capture covers the dealer's storefront (34 SKUs); which Булат versions it lists is not recorded here."
+      },
+      {
+        "id": "bulat-ozon-maks911",
+        "version": null,
+        "channel": "Ozon (dealer storefront «МАКС 911»)",
+        "url": "https://www.ozon.ru/seller/maks-911-4233382/",
+        "seller": {
+          "entity": null,
+          "storefront": "МАКС 911 (Ozon seller 4233382)",
+          "identity": "unresolved as a registry entity; ИП Коровкин А.А. ИНН 780223272953 from dji911.com/contacts (s1388), not confirmed against the Ozon widget"
+        },
+        "status": "listed",
+        "as_of": "2026-08-25",
+        "source_id": "s1384",
+        "basis": "doc",
+        "asserted_by": "platform",
+        "note": "Page title «МАКС 911- офиц. дилер 3mx»; lists 3mx/«Булат»-branded detectors. The dealer's own site sells «Булат V.4» (s1388)."
+      },
+      {
+        "id": "bulat-pokrov",
+        "version": null,
+        "channel": "dealer site pokrovsystem.ru",
+        "url": "https://pokrovsystem.ru/",
+        "seller": {
+          "entity": "ooo-pokrov",
+          "storefront": "Покров",
+          "identity": "resolved"
+        },
+        "status": "listed",
+        "as_of": "2026-08-25",
+        "source_id": "s1386",
+        "basis": "doc",
+        "asserted_by": "self",
+        "note": "Named dealer on 3mx.ru/dilery; the sells_for edge ooo-pokrov -> ooo-trimiks carries the same relation."
+      },
+      {
+        "id": "bulat-921921",
+        "version": null,
+        "channel": "own site 921921.ru",
+        "url": "https://921921.ru/",
+        "seller": {
+          "entity": "ip-kuznetsov-ruslan-nikolaevich",
+          "storefront": "921921.ru",
+          "identity": "resolved"
+        },
+        "status": "listed",
+        "as_of": "2026-09-30",
+        "source_id": "s8613",
+        "basis": "doc",
+        "asserted_by": "self",
+        "note": "Sells «Булат» at 88 000 ₽; not a named dealer on 3mx.ru."
+      }
+    ],
+    "deliveries": [
+      {
+        "id": "bulat-d01",
+        "date": "2025-02-11",
+        "version": null,
+        "item": "«Булат» detector(s), count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "not stated",
+        "recipient": "бойцы, Красноармейское направление",
+        "source_channel": "@nashapravdafond",
+        "post_id": 393,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8891",
+        "note": "«всенаправленные детекторы дронов «Булат»»; range stated 1.5 km."
+      },
+      {
+        "id": "bulat-d02",
+        "date": "2025-02-17",
+        "version": null,
+        "item": "«Булат» detector(s), count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "fund representatives with Сидякин (ЦИК «Единой России») and a party project lead",
+        "recipient": "военнослужащие группировки «ЮГ»",
+        "source_channel": "@nashapravdafond",
+        "post_id": 397,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8892",
+        "note": "Part of a shipment worth over ₽14m; Булат named among many items."
+      },
+      {
+        "id": "bulat-d03",
+        "date": "2025-02-19",
+        "version": null,
+        "item": "«Булат» detector(s), count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "convoy from Егорьевск with the regional branch «Боевое Братство»; fund supplied the vehicle",
+        "recipient": "участники спецоперации (no unit named)",
+        "source_channel": "@nashapravdafond",
+        "post_id": 398,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8893",
+        "note": "Fund items worth about ₽1m: РЭБ «Капюшон», «Булат» detectors and thermal sights."
+      },
+      {
+        "id": "bulat-d04",
+        "date": "2025-03-03",
+        "version": null,
+        "item": "«Булат» detector(s), count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "военнослужащие с Алтая, Курское направление",
+        "source_channel": "@nashapravdafond",
+        "post_id": 408,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8894",
+        "note": "Delivered at the request of the head of the Altai Republic (Турчак); «уже проверенные на фронте мониторинговые устройства «Булат»»; shipment ₽8.6m."
+      },
+      {
+        "id": "bulat-d05",
+        "date": "2025-04-09",
+        "version": null,
+        "item": "«Булат» detector(s), count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия",
+          "ЦБСТ"
+        ],
+        "carrier": "Сидякин and Якушев (ЕР) with the fund; ЦБСТ named as a co-donor, its representatives not named",
+        "recipient": "132-я Горловская бригада, Донецкое направление",
+        "source_channel": "@nashapravdafond",
+        "post_id": 422,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8896",
+        "other_source_ids": [
+          "s8895"
+        ],
+        "note": "Same trip reported by the fund (s8896, 10.04.2025) and by the correspondent channel @evgeniy_lisitsyn (s8895, 09.04.2025). The latter quotes Сидякин: «оборудование резидентов ЦБСТ – средства радиоэлектронной разведки “Перехват” и “Булат”». Shipment ₽18.2m. Same donor network, not independent confirmation."
+      },
+      {
+        "id": "bulat-d06",
+        "date": "2025-06-06",
+        "version": null,
+        "item": "«Булат» detector(s), count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "подразделения РЭБ и БПЛА группировки войск «Центр»",
+        "source_channel": "@nashapravdafond",
+        "post_id": 444,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8897",
+        "note": "Shipment about ₽7.5m."
+      },
+      {
+        "id": "bulat-d07",
+        "date": "2025-06-09",
+        "version": null,
+        "item": "«Булат» detector(s), count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "1-я мотострелковая рота, Запорожская область",
+        "source_channel": "@nashapravdafond",
+        "post_id": 448,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8898",
+        "note": "«мониторинговые устройства «Булат»»; shipment ₽4.6m."
+      },
+      {
+        "id": "bulat-d08",
+        "date": "2025-06-10",
+        "version": null,
+        "item": "«Булат» detector(s), count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "Сидякин and Якушев (ЕР) with the fund",
+        "recipient": "казачьи бригады, ЛНР",
+        "source_channel": "@nashapravdafond",
+        "post_id": 454,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8899"
+      },
+      {
+        "id": "bulat-d09",
+        "date": "2025-07-29",
+        "version": null,
+        "item": "выносные антенны for the «Булат» monitoring device (accessory, not the detector)",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "not stated",
+        "recipient": "военнослужащие, Покровское направление",
+        "source_channel": "@nashapravdafond",
+        "post_id": 473,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8900",
+        "note": "Shipment ₽1.5m of control equipment."
+      },
+      {
+        "id": "bulat-d10",
+        "date": "2025-08-08",
+        "version": null,
+        "item": "«Булат» with an external antenna (one device), delivered with a УАЗ 3909",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "not stated",
+        "recipient": "военнослужащие мотострелкового полка",
+        "source_channel": "@nashapravdafond",
+        "post_id": 487,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8901",
+        "note": "The post adds that the fighters sent feedback and a video."
+      },
+      {
+        "id": "bulat-d11",
+        "date": "2025-08-13",
+        "version": null,
+        "item": "«Булат» detector(s), count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "бойцы мотострелкового полка",
+        "source_channel": "@nashapravdafond",
+        "post_id": 493,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8902",
+        "note": "«всенаправленный детектор дронов… до 1,5 км»; shipment about ₽1.3m, delivered on request."
+      },
+      {
+        "id": "bulat-d12",
+        "date": "2025-08-13",
+        "version": null,
+        "item": "«Булат» detectors with antennas",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "not stated",
+        "recipient": "военнослужащие танкового полка, по запросу",
+        "source_channel": "@nashapravdafond",
+        "post_id": 494,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8903",
+        "note": "Delivered with prototypes of РЭБ «Талисман»."
+      },
+      {
+        "id": "bulat-d13",
+        "date": "2025-10-24",
+        "version": null,
+        "item": "«Булат» detectors with an external antenna",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "воинская часть (unit not named); thanks received",
+        "source_channel": "@nashapravdafond",
+        "post_id": 519,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8904",
+        "note": "Shipment about ₽1.3m together with a ЛОГОС С7 complex."
+      },
+      {
+        "id": "bulat-d14",
+        "date": "2026-04-01",
+        "version": null,
+        "item": "«Булат» detector(s), count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "военнослужащие, Курская область",
+        "source_channel": "@nashapravdafond",
+        "post_id": 593,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8905",
+        "note": "Shipment over ₽2.8m. The post names a town; recorded at region level."
+      },
+      {
+        "id": "bulat-d15",
+        "date": "2026-04-24",
+        "version": null,
+        "item": "«Булат» detector(s), count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "бойцы, Курская область",
+        "source_channel": "@nashapravdafond",
+        "post_id": 608,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8906",
+        "note": "Shipment over ₽10m."
+      },
+      {
+        "id": "bulat-d16",
+        "date": "2026-05-19",
+        "version": null,
+        "item": "«Булат» detectors, count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "not stated",
+        "recipient": "штурмовики, Сватовское направление",
+        "source_channel": "@nashapravdafond",
+        "post_id": 615,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8907",
+        "note": "Shipment over ₽2m, on the fighters' own request."
+      },
+      {
+        "id": "bulat-d17",
+        "date": "2025-01-15",
+        "version": null,
+        "item": "«детекторы дронов «Булат»», with «Капюшон» stations; ₽10.5m in total, count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "not stated",
+        "recipient": "главы муниципальных округов Херсонской области, для бригад, восстанавливающих электроснабжение",
+        "source_channel": "@nashapravdafond",
+        "post_id": 382,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8994",
+        "note": "Found while building the «Капюшон» record (02.10.2026); the first «Булат» pass started at post 393. Civilian recipients, at the governor's request."
+      }
+    ],
+    "claims": [
+      {
+        "text_ru": "Всю нашу продукцию можно приобрести только у нас на сайте 3mx.ru или у наших дилеров.",
+        "metric": "distribution",
+        "value": "own site and dealers only",
+        "as_of": "2026-09-02",
+        "source_id": "s8860",
+        "asserted_by": "3mx rep in the company's customer chat"
+      },
+      {
+        "text_ru": "Новые антенны запускаем в производство, будут доступны в конце октября.",
+        "metric": "antenna",
+        "value": "new antennas announced for end of October 2024",
+        "as_of": "2024-10-05",
+        "source_id": "s8815",
+        "asserted_by": "3mx rep, replying to a complaint that в.4 antennas were disposable"
+      },
+      {
+        "text_ru": "Булат не предназначен для использования внутри железобетонных конструкций, вблизи с работающей радиоэлектронной аппаратурой (включая Рации, Телевизоры, СВЧ печи, мониторы)",
+        "metric": "limits",
+        "value": "false positives indoors and near electronics",
+        "as_of": "2025-07-04",
+        "source_id": "s8815",
+        "asserted_by": "3mx support rep"
+      },
+      {
+        "text_ru": "Мониторинговое устройство \"Булат\" — БУ 2 750,00 — Кол. 50,000",
+        "metric": "donor_stock",
+        "value": "50 units, ₽2,750 thousand at book value, held on 31.12.2024",
+        "as_of": "2024-12-31",
+        "source_id": "s0389",
+        "asserted_by": "Фонд «Наша Правда», its audited annual accounts for 2024",
+        "note": "Notes to the 2024 accounts (пояснения), breakdown of Table 7 «Запасы», account 41: goods «закуплены для безвозмездной передачи войсковым частям в зону СВО», held at the fund's warehouses in Балашиха (ул. Чехова, 3) and Москва (Котельническая наб., 25, стр. 1). Scanned filing (OCR text s8987), OCR checked against the page image (page 18 of the PDF) 02.10.2026. Amounts in the table are in thousand roubles (account 41 total 109 585,95 against Table 7's 109 871). About ₽55,000 a unit at book value. The supplier is not named. Audit opinion unqualified (ООО «Машаудит», 26.06.2025). The fund's 2025 notes carry no «Булат» line.",
+        "entity": "fond-nasha-pravda"
+      }
+    ],
+    "open_questions": [
+      "Recorded 2026-10-02 from a scan of the archive (scripts/delivery_signal_scan.py): 16 deliveries reported by Фонд «Наша Правда» (an institutional donor) between 2025-02-11 and 2026-05-19. Each is the donor's own report, so credibility is single; the post date is the report date, not the handover date; the version is never stated; recipients are recorded at the level of unit, region or direction the donor names, never a town or a person. NOT recorded: handovers by volunteer groups and individuals (about 20 more texts in the scan, e.g. Архангел Спецназа, «Судоплатов», «Тыл-22»), and 3mx's own handovers (to the Kursk fighters with Покров, 28.04.2025; to Э. Запашный, 30.10.2025), The user decided on 02.10.2026: towns are allowed as recipients, everyone involved is a person of interest, and volunteer reports default to self-report. These handovers can now be recorded; they are not recorded yet.",
+      "РОЙ.МАРКЕТ: the maker's rep says the product is sold only on 3mx.ru and through dealers (s8860, 02.09.2026). No РОЙ.МАРКЕТ listing of «Булат» is documented; the 2026-10-01 self-report sweep found 3mx saying it does not sell there.",
+      "The two WB brand-store listings and the product versions' dates have no archived capture of the marketplace page (source_id null above); capture them before relying on them.",
+      "Mapping a dealer's listing to a version needs the dealer's own product page; only the maker's own pages (s8018-s8020) and the user manuals are read.",
+      "Recorded 2026-10-02 (lead, not read in full): post 15100 in the maker's customer chat (s8749, 03.10.2024) is a buyer's screenshot of a message from «Крылья Победы | Магазин» offering «Булат» V4 from stock. The seller has no record and no identity; seen only at thumbnail size. Read the screenshot at full size and look for the shop's channel before any listing or seller record.",
+      "B3 (02.10.2026): where Фонд «Наша Правда» bought its «Булат» is not documented. Its 2024 accounts show 50 units in stock for transfer to units (claim above) but name no supplier; the only supplier named in its creditor breakdown at 31.12.2024 is АО «Технодрон» (₽982.6 thousand), with nothing tying it to «Булат». The brief's НПО «Милитех» lead is the maker of headsets in the same list, not of «Булат». Next: the fund's procurement or a supplier's own post naming the fund."
+    ]
+  },
+  {
+    "slug": "kapyushon",
+    "kind": "product",
+    "name_ru": "«Капюшон»",
+    "name_latin": "Kapyushon",
+    "category": "UAV radio-suppression (EW) station family",
+    "maker": "ooo-npo-kilovatt-shestopalov",
+    "brand": "«Капюшон»",
+    "trademark": {
+      "registration": "RU1086620",
+      "holder": "ooo-npo-kilovatt",
+      "source_id": "s1204",
+      "note": "Word mark «Капюшон», priority 19.04.2024, registered 14.02.2025, held by the sister ООО НПО «Киловатт» ИНН 4800013729 (same founder, Шестопалов С.А.); the registered address matches that company's ЕГРЮЛ address."
+    },
+    "versions": [
+      {
+        "slug": "kapyushon-k-8m",
+        "name_ru": "«Капюшон» К-8М",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917911: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель К-8М», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-k-12m",
+        "name_ru": "«Капюшон» К-12М",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917833: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель К-12М», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-k-12m-bagazhny-boks",
+        "name_ru": "«Капюшон» К-12М Багажный Бокс",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917751: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель К-12М Багажный Бокс», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-k-15m",
+        "name_ru": "«Капюшон» К-15М",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917319: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель К-15М», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-k-15m-vip",
+        "name_ru": "«Капюшон» К-15М ВИП",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917708: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель К-15М ВИП», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp4-28a",
+        "name_ru": "«Капюшон» рюкзак ТП4-28А",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918067: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель рюкзак ТП4-28А», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp4-28b",
+        "name_ru": "«Капюшон» рюкзак ТП4-28Б",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918158: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель рюкзак ТП4-28Б», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp4-50a",
+        "name_ru": "«Капюшон» рюкзак ТП4-50А",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918192: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель рюкзак ТП4-50А», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp4-50b",
+        "name_ru": "«Капюшон» рюкзак ТП4-50Б",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918230: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель рюкзак ТП4-50Б», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp7-100",
+        "name_ru": "«Капюшон» рюкзак ТП 7-100",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918262: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель рюкзак ТП 7-100», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-tp10-100",
+        "name_ru": "«Капюшон» ТП 10-100",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918338: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель ТП 10-100», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-fpv-7-moto",
+        "name_ru": "«Капюшон» ФПВ-7 мото",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918038: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель ФПВ-7 мото», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-fpv-8m",
+        "name_ru": "«Капюшон» ФПВ-8М",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5918309: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель ФПВ-8М», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      },
+      {
+        "slug": "kapyushon-fpv-12",
+        "name_ru": "«Капюшон» ФПВ-12",
+        "firmware": null,
+        "description": "ГИСП goods catalogue, product card 5917973: «Радиоэлектронное средство, станция подавления БПЛА, тип \"Капюшон\", модель ФПВ-12», listed under ООО НПО «Киловатт» (ИНН 4800016776).",
+        "source_id": "s5391"
+      }
+    ],
+    "accessories": [
+      {
+        "name_ru": "Модуль ФПВ-1/140",
+        "pairs_with": null,
+        "description": "ГИСП product card 5918364: «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип \"Капюшон\", модель ФПВ-1/140».",
+        "source_id": "s5391"
+      },
+      {
+        "name_ru": "Модуль ФПВ-1/200",
+        "pairs_with": null,
+        "description": "ГИСП product card 5918413: «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип \"Капюшон\", модель ФПВ-1/200».",
+        "source_id": "s5391"
+      },
+      {
+        "name_ru": "Модуль ФПВ-1/300",
+        "pairs_with": null,
+        "description": "ГИСП product card 5918427: «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип \"Капюшон\", модель ФПВ-1/300».",
+        "source_id": "s5391"
+      },
+      {
+        "name_ru": "Модуль ФПВ-2/300",
+        "pairs_with": null,
+        "description": "ГИСП product card 5918916: «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип \"Капюшон\", модель ФПВ-2/300».",
+        "source_id": "s5391"
+      },
+      {
+        "name_ru": "Модуль ФПВ-2128",
+        "pairs_with": null,
+        "description": "ГИСП product card 5918889: «Радиоэлектронное средство, модуль для станции подавления БПЛА, тип \"Капюшон\", модель ФПВ-2128».",
+        "source_id": "s5391"
+      }
+    ],
+    "shown_at": [
+      {
+        "event": "dronnitsa-2024",
+        "as_of": "2024-11-01",
+        "source_id": "s8993",
+        "note": "The organiser's channel quotes a representative of «Киловатт», maker of «установки РЭБ «Капюшон»»: «сейчас мы уже привезли свою разработку». The post does not name the model."
+      },
+      {
+        "event": "dronnitsa-2025",
+        "as_of": "2025-09-08",
+        "source_id": "s8842",
+        "note": "«РЭБ «Капюшон»» named in ЦБСТ's list of what its residents showed (post 1193)."
+      }
+    ],
+    "listings": [
+      {
+        "id": "kapyushon-own-shop",
+        "version": null,
+        "channel": "online shop kilowatt48.ru",
+        "url": "https://kilowatt48.ru/shop/",
+        "seller": {
+          "entity": null,
+          "storefront": "kilowatt48.ru (signed «© НПО «КИЛОВАТТ», Липецк»)",
+          "identity": "unresolved: the site gives no ИНН, and two Липецк ООО share the name НПО «Киловатт» (ИНН 4800016776 and 4800013729)"
+        },
+        "status": "listed",
+        "as_of": "2026-09-15",
+        "source_id": "s7499",
+        "basis": "doc",
+        "asserted_by": "self",
+        "note": "Pages 1–3 of the shop (s7499–s7501) list «Станция РЭБ Капюшон» К-8М, К-12М, К-15М, ТП 4-50Б, ТП 7-100, ТП 8-100, ФПВ-7 мото, ФПВ-8М, ФПВ-12 and others; the shown price is a placeholder, so no price is recorded."
+      },
+      {
+        "id": "kapyushon-dealer-kilowat48",
+        "version": null,
+        "channel": "dealer shop kilowat48.ru (Москва, ул. Коптевская, 22)",
+        "url": "https://kilowat48.ru/",
+        "seller": {
+          "entity": null,
+          "storefront": "kilowat48.ru («Дилерский магазин НПО «КИЛОВАТТ»»)",
+          "identity": "ИП Пинимасов Александр Вячеславович, official dealer by certificate №2106/2024 issued by ООО НПО «Киловатт» (s0537); no registry entity, the ИНН is from the certificate only"
+        },
+        "status": "listed",
+        "as_of": "2026-09-16",
+        "source_id": "s7562",
+        "basis": "doc",
+        "asserted_by": "self",
+        "note": "The homepage calls itself the dealer shop of НПО «КИЛОВАТТ» and lists «Капюшон» stations with prices; the prices are not matched to models here."
+      }
+    ],
+    "deliveries": [
+      {
+        "id": "kapyushon-d01",
+        "date": "2024-07-08",
+        "version": null,
+        "item": "«новые станции «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия",
+          "Молодая Гвардия"
+        ],
+        "carrier": "not stated",
+        "recipient": "бойцы на Херсонском и Запорожском направлениях",
+        "source_channel": "@nashapravdafond",
+        "post_id": 302,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8990",
+        "note": ""
+      },
+      {
+        "id": "kapyushon-d02",
+        "date": "2024-08-08",
+        "version": null,
+        "item": "«РЭБы «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "not stated",
+        "recipient": "423-й Ямпольский полк",
+        "source_channel": "@nashapravdafond",
+        "post_id": 310,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8991",
+        "note": "The post relays the regiment's thanks «за поставленные РЭБы «Капюшон»»; the handover date is not stated, so the date is the post's."
+      },
+      {
+        "id": "kapyushon-d03",
+        "date": "2024-08-08",
+        "version": null,
+        "item": "«средства радиоэлектронной борьбы «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия",
+          "МГЕР"
+        ],
+        "carrier": "not stated",
+        "recipient": "Курская областная клиническая больница и станция скорой помощи",
+        "source_channel": "@nashapravdafond",
+        "post_id": 311,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8992",
+        "note": "Civilian recipient: to be fitted to ambulances."
+      },
+      {
+        "id": "kapyushon-d04",
+        "date": "2025-01-13",
+        "version": null,
+        "item": "«мобильные станции РЭБ «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "военнослужащие группировок «Центр» и «Днепр»",
+        "source_channel": "@ANO_CBST",
+        "post_id": 369,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8091",
+        "note": "Reported on ЦБСТ's own channel as equipment «созданную при поддержке ЦБСТ», delivered by «Единая Россия» and the fund."
+      },
+      {
+        "id": "kapyushon-d05",
+        "date": "2025-01-15",
+        "version": null,
+        "item": "«станции РЭБ «Капюшон»», with «Булат» detectors; ₽10.5m in total, count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [],
+        "carrier": "not stated",
+        "recipient": "главы муниципальных округов Херсонской области, для бригад, восстанавливающих электроснабжение",
+        "source_channel": "@nashapravdafond",
+        "post_id": 382,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8994",
+        "note": "Civilian recipients, at the governor's request."
+      },
+      {
+        "id": "kapyushon-d06",
+        "date": "2025-02-17",
+        "version": null,
+        "item": "«Проверенные средства РЭБ «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "военнослужащие группировки «ЮГ»",
+        "source_channel": "@nashapravdafond",
+        "post_id": 397,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8892",
+        "note": ""
+      },
+      {
+        "id": "kapyushon-d07",
+        "date": "2025-02-19",
+        "version": null,
+        "item": "«средства РЭБ «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "«Боевое Братство»"
+        ],
+        "carrier": "not stated",
+        "recipient": "участники спецоперации (конвой из Егорьевска)",
+        "source_channel": "@nashapravdafond",
+        "post_id": 398,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8893",
+        "note": ""
+      },
+      {
+        "id": "kapyushon-d08",
+        "date": "2025-06-09",
+        "version": null,
+        "item": "«средство РЭБ «Капюшон»», count not stated",
+        "donor": "fond-nasha-pravda",
+        "co_donors": [
+          "Единая Россия"
+        ],
+        "carrier": "not stated",
+        "recipient": "1-я мотострелковая рота, Запорожская область",
+        "source_channel": "@nashapravdafond",
+        "post_id": 448,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s8898",
+        "note": ""
+      }
+    ],
+    "claims": [
+      {
+        "text_ru": "Капюшон ТП 7-100 подавитель дронов -купол — БУ 858,00 — Кол. 2,000",
+        "metric": "donor_stock",
+        "value": "2 units, ₽858 thousand at book value, held on 31.12.2024",
+        "as_of": "2024-12-31",
+        "source_id": "s0389",
+        "entity": "fond-nasha-pravda",
+        "asserted_by": "Фонд «Наша Правда», its audited annual accounts for 2024",
+        "note": "Notes to the 2024 accounts, Table 7 breakdown, account 41 (goods «закуплены для безвозмездной передачи войсковым частям в зону СВО»). OCR text s8987, checked against the page image (page 16 of the PDF) 02.10.2026. The supplier is not named."
+      }
+    ],
+    "open_questions": [
+      "B7 (02.10.2026): which of the two ООО НПО «Киловатт» makes and sells «Капюшон» is split by document: ГИСП lists the models under ИНН 4800016776 (ЦБСТ-tied, maker on this record), the trademark is held by ИНН 4800013729, and the maker's own shop names neither ИНН.",
+      "Handovers recorded are the fund's own posts (and ЦБСТ's post 369) only. Not recorded: a handover of 12 «волнорезы и капюшоны» in @evgeniy_lisitsyn post 10100 (12.05.2024, donor not clear), Сидякин's posts of 19–20.05.2025 (reposts of older trips), the fund's announcement of 3 stations «в подразделения доставят» (post 332, future tense), and the tank crew's feedback video (post 528, s8995; no handover date).",
+      "No state contract for «Капюшон» is on file; the 4800016776 and 4800013729 supplier searches on zakupki were not reread for this record."
+    ]
+  }
+]

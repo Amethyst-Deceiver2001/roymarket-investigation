@@ -413,6 +413,16 @@ page, link to the RU version of the target.
 
 ---
 
+### 5.6 Data-to-ink: every mark traces to a registry field
+
+Every colour, shape, icon and line weight on a published page must name the `data/registry/*.json` field that produces it. A mark that cannot is decoration, and decoration must not imply severity, connection or scale. Structural chrome (a rule, a margin, a heading face) is allowed; say that it is chrome.
+
+- Evidence-grade colours (`ok` / `mid` / `low`, the `{doc}` / `{press}` / `{open}` tags) are used for grades only and always carry the uppercase label. `accent` and `ink-3` are structural, never a finding.
+- Node colour is the registry `tier`; node shape is the graph `kind`; a product glyph is the output of `classify_product_icon.py`; a hub badge is `classify_variant()`. If the underlying value changes, the mark changes with it.
+- A number on a landing page is shown at its point of use (a chip on the case line, coloured by the sanction / anomaly / scale pattern it reports), not as a block of stat tiles.
+- Hand-written prose is analysis and need not trace to a field. Do not present it as data.
+- Retired 2026-10-02 from the Artifact «Data-to-Ink Rules» (local copy `data/sources/ARTIFACT_20260921_data-to-ink-rules.html`, s8953); its tier counts and glyph audit were out of date.
+
 ## Checklist before publishing
 
 - [ ] Every section is in the mode Part I assigns it — no forensic prose in the

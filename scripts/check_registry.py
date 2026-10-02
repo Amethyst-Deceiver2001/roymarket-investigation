@@ -45,7 +45,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from reverse_source_index import build_index  # noqa: E402
-from graph_contract import validate_graph, validate_views  # noqa: E402
+from graph_contract import (validate_graph, validate_views, SELLS_FOR_BASIS, SALE_STATUSES, ASSERTED_BY,
+                            CREDIBILITY, AUTHORISED, BASIS_CREDIBILITY, RELATION_ROLES, PARTNER_KIND_EDGE,  # noqa: E402
+                            ECOSYSTEM_ROLES, LEGAL_ENTITY_STATUS, PROGRAM_KINDS, PROGRAM_SUBTYPES,
+                            MEMBERSHIP_ROLES, MEDIA_KINDS, MEDIA_GENRES, MEDIA_PUBLISH, MEDIA_ABOUT_TYPES,
+                            MEDIA_GEO_PRECISION, MEDIA_GEO_METHOD, MEDIA_REDACT, MEDIA_REDACT_GENRES, MEDIA_ASSERTED_BY,
+                            BRAND_KINDS)
 from build_relationship_graph import build_graph, build_views  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
@@ -134,6 +139,8 @@ def validate_generated_graph(
     people: list[dict],
     sources: list[dict],
     military_units: list[dict] | None = None,
+    programs: list[dict] | None = None,
+    products: list[dict] | None = None,
 ) -> list[str]:
     """Check artifacts against an independent deterministic registry rebuild."""
     graph_errors = validate_graph(graph, entities, people, sources)
@@ -144,7 +151,7 @@ def validate_generated_graph(
     elif not graph_errors:
         errors.extend(validate_views(graph, graph_views))
 
-    expected_graph = build_graph(entities, people, military_units)
+    expected_graph = build_graph(entities, people, military_units, programs, products, sources)
     if graph != expected_graph:
         errors.append(
             "relationship_graph.json does not exactly match the deterministic "
@@ -346,6 +353,169 @@ def main() -> int:
     people_slugs = {p.get("slug") for p in (people or [])}
 
     tombstone_entity_slugs = {e["slug"] for e in entities if e.get("_merged_into")}
+
+    # --- ecosystem roles and sells_for[] (schema v7, 2026-10-01) -----------
+    # A seller edge that points at a misspelled slug is dropped by the graph builder without a word,
+    # so the shape is checked here, not left to the builder.
+    live_slugs = {e["slug"] for e in entities if not e.get("_merged_into")}
+    for e in entities:
+        if e.get("_merged_into"):
+            continue
+        roles = e.get("ecosystem_roles")
+        if roles is not None:
+            bad = [r for r in (roles if isinstance(roles, list) else [roles]) if r not in ECOSYSTEM_ROLES]
+            if not isinstance(roles, list) or bad:
+                errors.append(f"{e['slug']}: ecosystem_roles must be a list drawn from {sorted(ECOSYSTEM_ROLES)} (got {roles!r})")
+        status = e.get("legal_entity_status")
+        if status is not None and status not in LEGAL_ENTITY_STATUS:
+            errors.append(f"{e['slug']}: legal_entity_status {status!r} not in {sorted(LEGAL_ENTITY_STATUS)}")
+        if "brand" in (roles or []) and status != "unresolved" and not e.get("inn"):
+            warnings.append(f"{e['slug']}: role 'brand' with no ИНН should say legal_entity_status: 'unresolved'")
+        for i, sale in enumerate(e.get("sells_for") or []):
+            where = f"{e['slug']}.sells_for[{i}]"
+            if not isinstance(sale, dict):
+                errors.append(f"{where} must be an object"); continue
+            if sale.get("slug") not in live_slugs:
+                errors.append(f"{where}.slug {sale.get('slug')!r} is not a live entity")
+            if sale.get("slug") == e["slug"]:
+                errors.append(f"{where} points at the entity itself")
+            if not sale.get("channel"):
+                errors.append(f"{where}.channel is required (the edge label, e.g. 'Ozon', 'own site', 'dealer network')")
+            if sale.get("basis") not in SELLS_FOR_BASIS:
+                errors.append(f"{where}.basis must be one of {sorted(SELLS_FOR_BASIS)} (got {sale.get('basis')!r})")
+            if sale.get("basis") in ("doc", "press") and not sale.get("source_id"):
+                warnings.append(f"{where} basis {sale.get('basis')!r} has no source_id")
+            if sale.get("source_id") and sale["source_id"] not in source_ids:
+                errors.append(f"{where}.source_id {sale['source_id']!r} is not a known source")
+            # relation envelope (schema v9): all optional, each validated when present
+            if "products" in sale and not (isinstance(sale["products"], list) and sale["products"]
+                                           and all(isinstance(p, str) and p for p in sale["products"])):
+                errors.append(f"{where}.products must be a non-empty list of strings")
+            for key, vocab in (("role", RELATION_ROLES), ("asserted_by", ASSERTED_BY), ("credibility", CREDIBILITY), ("authorised", AUTHORISED)):
+                if key in sale and sale[key] not in vocab:
+                    errors.append(f"{where}.{key} must be one of {sorted(vocab)} (got {sale[key]!r})")
+            if sale.get("credibility") and sale.get("basis") in BASIS_CREDIBILITY \
+                    and sale["credibility"] not in BASIS_CREDIBILITY[sale["basis"]]:
+                errors.append(f"{where}.credibility {sale['credibility']!r} contradicts basis {sale['basis']!r}")
+            if sale.get("role") and sale["role"] not in (e.get("ecosystem_roles") or []):
+                warnings.append(f"{where}.role {sale['role']!r} is not in the entity's ecosystem_roles summary {e.get('ecosystem_roles')}")
+            if "open" in sale and not (isinstance(sale["open"], str) and sale["open"].strip()):
+                errors.append(f"{where}.open must be a non-empty string")
+            for j, h in enumerate(sale.get("status_history") or []):
+                w = f"{where}.status_history[{j}]"
+                if not isinstance(h, dict) or h.get("status") not in SALE_STATUSES:
+                    errors.append(f"{w}.status must be one of {list(SALE_STATUSES)}"); continue
+                if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(h.get("as_of") or "")):
+                    errors.append(f"{w}.as_of must be YYYY-MM-DD (an undated state is not recorded)")
+                if not h.get("source_id") or h["source_id"] not in source_ids:
+                    errors.append(f"{w}.source_id is required and must be a known source")
+
+    # --- platform_partners[] (schema v10, 2026-10-02): bank / acquirer / logistics partner of a platform ----
+    for e in entities:
+        if e.get("_merged_into"):
+            continue
+        for i, pt in enumerate(e.get("platform_partners") or []):
+            w = f"{e['slug']}.platform_partners[{i}]"
+            if not isinstance(pt, dict):
+                errors.append(f"{w} must be an object"); continue
+            if pt.get("slug") not in live_slugs or pt.get("slug") == e["slug"]:
+                errors.append(f"{w}.slug {pt.get('slug')!r} must be another live entity")
+            if pt.get("kind") not in PARTNER_KIND_EDGE:
+                errors.append(f"{w}.kind must be one of {sorted(PARTNER_KIND_EDGE)}")
+            if pt.get("basis") not in SELLS_FOR_BASIS:
+                errors.append(f"{w}.basis must be one of {sorted(SELLS_FOR_BASIS)}")
+            if not pt.get("source_id") or pt["source_id"] not in source_ids:
+                errors.append(f"{w}.source_id is required and must be a known source (a partner is recorded only from a document that names it)")
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(pt.get("as_of") or "")):
+                errors.append(f"{w}.as_of must be YYYY-MM-DD")
+
+    # --- candidate_identities[] (2026-10-02): unverified same-name legal entities, never drawn, never a tie ----
+    # They exist so a name match is recorded without becoming an identity: an ИНН here is a lead and is never
+    # copied into the entity's own `inn`. No graph edge is built from this field.
+    inn_owner = {e.get("inn"): e["slug"] for e in entities if e.get("inn") and not e.get("_merged_into")}
+    for e in entities:
+        cands = e.get("candidate_identities")
+        if cands is None or e.get("_merged_into"):
+            continue
+        if not isinstance(cands, list):
+            errors.append(f"{e['slug']}.candidate_identities must be a list"); continue
+        for i, cd in enumerate(cands):
+            w = f"{e['slug']}.candidate_identities[{i}]"
+            if not isinstance(cd, dict) or not cd.get("name_ru"):
+                errors.append(f"{w} needs name_ru"); continue
+            if cd.get("status") not in ("unverified", "rejected"):
+                errors.append(f"{w}.status must be 'unverified' or 'rejected'")
+            if cd.get("inn") and not inn_valid(str(cd["inn"])):
+                errors.append(f"{w}.inn {cd['inn']!r} fails the checksum")
+            if cd.get("inn") and cd["inn"] == e.get("inn"):
+                errors.append(f"{w}.inn equals the entity's own inn: a candidate is not the record")
+            if cd.get("inn") in inn_owner and inn_owner[cd["inn"]] != e["slug"]:
+                warnings.append(f"{w}.inn belongs to the live entity {inn_owner[cd['inn']]}: link it as a related entity, not a candidate")
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(cd.get("as_of") or "")):
+                errors.append(f"{w}.as_of must be YYYY-MM-DD")
+            if cd.get("source_id") is None:
+                warnings.append(f"{w} has no source_id (a lead from prose, not an archived extract)")
+            elif cd["source_id"] not in source_ids:
+                errors.append(f"{w}.source_id {cd['source_id']!r} is not a known source")
+
+    # --- programs, events, groups and memberships (schema v8, 2026-10-01) ----
+    programs_path = REG / "programs.json"
+    programs = json.loads(programs_path.read_text(encoding="utf-8")) if programs_path.exists() else []
+    prog_by_key = {}
+    for i, rec in enumerate(programs):
+        where = f"programs[{i}]"
+        kind, slug = rec.get("kind"), rec.get("slug")
+        if kind not in PROGRAM_KINDS:
+            errors.append(f"{where}.kind {kind!r} not in {sorted(PROGRAM_KINDS)}"); continue
+        if not slug or (kind, slug) in prog_by_key:
+            errors.append(f"{where}.slug missing or duplicated for kind {kind}"); continue
+        prog_by_key[(kind, slug)] = rec
+        if rec.get("subtype") not in PROGRAM_SUBTYPES[kind]:
+            errors.append(f"{where}.subtype {rec.get('subtype')!r} not valid for kind {kind}")
+        if not rec.get("name_ru"):
+            errors.append(f"{where}.name_ru is required")
+    def _ref(where, slug, ok):
+        if slug not in ok:
+            errors.append(f"{where} {slug!r} does not resolve")
+    for (kind, slug), rec in prog_by_key.items():
+        where = f"programs[{kind}:{slug}]"
+        for key in ("operators", "organisers", "members"):
+            for j, x in enumerate(rec.get(key) or []):
+                w = f"{where}.{key}[{j}]"
+                _ref(w + ".slug", x.get("slug"), live_slugs)
+                if x.get("basis") not in SELLS_FOR_BASIS:
+                    errors.append(f"{w}.basis must be one of {sorted(SELLS_FOR_BASIS)}")
+                if x.get("basis") in ("doc", "press") and not x.get("source_id"):
+                    warnings.append(f"{w} basis {x.get('basis')!r} has no source_id")
+                if x.get("source_id") and x["source_id"] not in source_ids:
+                    errors.append(f"{w}.source_id {x['source_id']!r} is not a known source")
+        parent = rec.get("parent")
+        if parent:
+            pk = "event" if kind == "event" else "program"
+            if (pk, parent) not in prog_by_key:
+                errors.append(f"{where}.parent {parent!r} is not a {pk} record")
+        for j, c in enumerate(rec.get("claims") or []):
+            if c.get("source_id") and c["source_id"] not in source_ids:
+                errors.append(f"{where}.claims[{j}].source_id {c['source_id']!r} is not a known source")
+            if not c.get("as_of"):
+                warnings.append(f"{where}.claims[{j}] has no as_of")
+    for e in entities:
+        if e.get("_merged_into"):
+            continue
+        for fld, key, kind in (("memberships", "program", "program"), ("participations", "event", "event")):
+            for j, m in enumerate(e.get(fld) or []):
+                w = f"{e['slug']}.{fld}[{j}]"
+                if (kind, m.get(key)) not in prog_by_key:
+                    errors.append(f"{w}.{key} {m.get(key)!r} is not a {kind} record in programs.json")
+                if m.get("role") not in MEMBERSHIP_ROLES:
+                    errors.append(f"{w}.role {m.get('role')!r} not in {sorted(MEMBERSHIP_ROLES)}")
+                if m.get("basis") not in SELLS_FOR_BASIS:
+                    errors.append(f"{w}.basis must be one of {sorted(SELLS_FOR_BASIS)}")
+                if m.get("basis") in ("doc", "press") and not m.get("source_id"):
+                    warnings.append(f"{w} basis {m.get('basis')!r} has no source_id")
+                if m.get("source_id") and m["source_id"] not in source_ids:
+                    errors.append(f"{w}.source_id {m['source_id']!r} is not a known source")
+
     tombstone_people_slugs = {p.get("slug") for p in (people or []) if p.get("_merged_into")}
 
     # build_company_profile.py now refuses to render a tombstone (2026-09-07
@@ -456,6 +626,257 @@ def main() -> int:
             errors.append(f"open_questions.json {oid}: has both entity_slug "
                           f"and person_slug set — should be attributed to "
                           f"exactly one, or neither")
+
+    # --- products (data/registry/products.json, added 2026-10-02) ----------
+    # One record per product with stable ids; versions, accessories, listings and deliveries hang off it.
+    # Listings and deliveries are dated events, not edges. A listing with no source_id is a placeholder.
+    products_path = REG / "products.json"
+    products = json.loads(products_path.read_text(encoding="utf-8")) if products_path.exists() else []
+    event_slugs = {r.get("slug") for r in programs if r.get("kind") == "event"}
+    sells_pairs = {(e["slug"], x.get("slug")) for e in entities for x in e.get("sells_for") or []}
+    seen_products = set()
+    # `version` must be present but may be null (a post that says only «Булат» names no version);
+    # the donor must be a live registry entity, so a volunteer or an individual is never recorded by accident
+    DELIVERY_KEYS = ("date", "donor", "carrier", "recipient", "source_channel", "post_id",
+                     "asserted_by", "credibility", "source_id")
+    date_re = re.compile(r"\d{4}-\d{2}-\d{2}")
+    for i, pr in enumerate(products):
+        where = f"products[{i}]"
+        slug = pr.get("slug")
+        if not slug or not re.fullmatch(r"[a-z0-9][a-z0-9-]*", str(slug)) or slug in seen_products:
+            errors.append(f"{where}.slug must be a unique lowercase slug (got {slug!r})")
+        seen_products.add(slug)
+        where = f"products[{slug}]"
+        if pr.get("kind") != "product":
+            errors.append(f"{where}.kind must be 'product'")
+        co = pr.get("clone_of")
+        if co is not None:
+            # clone_of (2026-10-02): a product stated, by a cited source, to copy another. Never inferred from a
+            # shared category: a competitor in the same class is not a clone. The maker may be unresolved only here.
+            if not isinstance(co, dict) or not co.get("product"):
+                errors.append(f"{where}.clone_of needs a product (a slug in products.json, or the original's name)")
+            else:
+                if co.get("status") not in ("alleged", "shown", "denied"):
+                    errors.append(f"{where}.clone_of.status must be alleged / shown / denied")
+                if co.get("asserted_by") not in ASSERTED_BY:
+                    errors.append(f"{where}.clone_of.asserted_by must be one of {sorted(ASSERTED_BY)}")
+                if co.get("source_id") not in source_ids:
+                    errors.append(f"{where}.clone_of.source_id must be a known source")
+                if co["product"] in {x.get("slug") for x in products} and co["product"] == slug:
+                    errors.append(f"{where}.clone_of points at itself")
+        if pr.get("maker") is None and co is not None:
+            pass
+        elif pr.get("maker") not in live_slugs:
+            errors.append(f"{where}.maker {pr.get('maker')!r} is not a live entity")
+        versions = set()
+        for j, v in enumerate(pr.get("versions") or []):
+            if not v.get("slug") or v["slug"] in versions:
+                errors.append(f"{where}.versions[{j}].slug must be unique")
+            versions.add(v.get("slug"))
+            if not v.get("source_id") or v["source_id"] not in source_ids:
+                errors.append(f"{where}.versions[{j}].source_id is required and must be a known source")
+        for j, a_ in enumerate(pr.get("accessories") or []):
+            # null = fits the whole product family (the source names no single version, e.g. a ГИСП "модуль для
+            # станции … тип «Капюшон»"); a named value must be a real version
+            if a_.get("pairs_with") is not None and a_["pairs_with"] not in versions:
+                errors.append(f"{where}.accessories[{j}].pairs_with must name one of the versions, or be null for the whole family")
+            if not a_.get("source_id"):
+                errors.append(f"{where}.accessories[{j}].source_id is required")
+            if not a_.get("source_id") or a_["source_id"] not in source_ids:
+                errors.append(f"{where}.accessories[{j}].source_id is required and must be a known source")
+        for j, s_ in enumerate(pr.get("shown_at") or []):
+            if s_.get("event") not in event_slugs:
+                errors.append(f"{where}.shown_at[{j}].event {s_.get('event')!r} is not an event in programs.json")
+            if s_.get("source_id") not in source_ids:
+                errors.append(f"{where}.shown_at[{j}].source_id must be a known source")
+        listing_ids = set()
+        for j, l_ in enumerate(pr.get("listings") or []):
+            w = f"{where}.listings[{j}]"
+            if not l_.get("id") or l_["id"] in listing_ids:
+                errors.append(f"{w}.id must be unique")
+            listing_ids.add(l_.get("id"))
+            if l_.get("version") is not None and l_["version"] not in versions:
+                errors.append(f"{w}.version must be null or one of the versions")
+            seller = l_.get("seller") or {}
+            if not seller.get("storefront") or not seller.get("identity"):
+                errors.append(f"{w}.seller needs a storefront name and an identity statement")
+            ent = seller.get("entity")
+            if ent is not None:
+                if ent not in live_slugs:
+                    errors.append(f"{w}.seller.entity {ent!r} is not a live entity")
+                elif ent != pr.get("maker") and (ent, pr.get("maker")) not in sells_pairs:
+                    warnings.append(f"{w}: seller {ent} has no sells_for edge to the maker {pr.get('maker')}")
+            if l_.get("status") not in SALE_STATUSES:
+                errors.append(f"{w}.status must be one of {list(SALE_STATUSES)}")
+            if not date_re.fullmatch(str(l_.get("as_of") or "")):
+                errors.append(f"{w}.as_of must be YYYY-MM-DD")
+            if l_.get("basis") not in SELLS_FOR_BASIS:
+                errors.append(f"{w}.basis must be one of {sorted(SELLS_FOR_BASIS)}")
+            if l_.get("asserted_by") not in ASSERTED_BY:
+                errors.append(f"{w}.asserted_by must be one of {sorted(ASSERTED_BY)}")
+            sid = l_.get("source_id")
+            if sid is None:
+                warnings.append(f"{w} has no source_id: a placeholder awaiting an archived capture, not evidence")
+            elif sid not in source_ids:
+                errors.append(f"{w}.source_id {sid!r} is not a known source")
+        for j, d in enumerate(pr.get("deliveries") or []):
+            w = f"{where}.deliveries[{j}]"
+            missing = [k for k in DELIVERY_KEYS if not d.get(k)]
+            if missing:
+                errors.append(f"{w} is missing {missing}")
+                continue
+            if not date_re.fullmatch(str(d["date"])) or "version" not in d or (d["version"] is not None and d["version"] not in versions):
+                errors.append(f"{w}: date must be YYYY-MM-DD and version present (null, or one of the versions)")
+            if d["donor"] not in live_slugs:
+                errors.append(f"{w}.donor {d['donor']!r} is not a live entity (volunteers and individuals are not recorded as donors)")
+            for sid2 in d.get("other_source_ids") or []:
+                if sid2 not in source_ids:
+                    errors.append(f"{w}.other_source_ids has unknown source {sid2!r}")
+            if d["asserted_by"] not in ASSERTED_BY or d["credibility"] not in CREDIBILITY:
+                errors.append(f"{w}: asserted_by / credibility outside the vocabulary")
+            if d["source_id"] not in source_ids:
+                errors.append(f"{w}.source_id must be a known source")
+        for j, c_ in enumerate(pr.get("claims") or []):
+            if not c_.get("text_ru") or c_.get("source_id") not in source_ids or not date_re.fullmatch(str(c_.get("as_of") or "")):
+                errors.append(f"{where}.claims[{j}] needs text_ru, a known source_id and an as_of date")
+
+    # --- products on state contracts (B2, added 2026-10-02) ------------------------
+    # government_contracts[].products[]: {product, version|null, item_ru, qty|null, unit, unit_price_rub|null,
+    # source_id, note}. item_ru is the line as the contract or its specification prints it. A supplier that
+    # delivers another maker's product needs a sells_for edge to that maker, or the chain loses the seller.
+    prod_by_slug = {pr.get("slug"): pr for pr in products}
+    for e in entities:
+        for k, gc in enumerate(e.get("government_contracts") or []):
+            for j, cp in enumerate(gc.get("products") or []):
+                w = f"{e['slug']}.government_contracts[{k}].products[{j}]"
+                pr = prod_by_slug.get(cp.get("product"))
+                if not pr:
+                    errors.append(f"{w}.product {cp.get('product')!r} is not in products.json")
+                    continue
+                if cp.get("version") is not None and cp["version"] not in {v.get("slug") or v.get("id") for v in pr.get("versions") or []}:
+                    errors.append(f"{w}.version {cp['version']!r} is not a version of {pr['slug']}")
+                if not cp.get("item_ru") or cp.get("source_id") not in source_ids:
+                    errors.append(f"{w} needs item_ru and a known source_id")
+                for f in ("qty", "unit_price_rub"):
+                    if cp.get(f) is not None and not isinstance(cp[f], (int, float)):
+                        errors.append(f"{w}.{f} must be a number or null")
+                maker = pr.get("maker")
+                if maker and maker != e["slug"] and (e["slug"], maker) not in sells_pairs:
+                    warnings.append(f"{w}: {e['slug']} supplies {pr['slug']} (made by {maker}) with no sells_for edge to "
+                                    f"{maker}; record how the supplier sells it (B2)")
+    year_only = [f"{e['slug']}[{k}]" for e in entities for k, gc in enumerate(e.get("government_contracts") or [])
+                 if re.fullmatch(r"\d{4}", str(gc.get("date") or ""))]
+    if year_only:
+        warnings.append(f"{len(year_only)} state contract(s) dated by year only; give the day where the contract "
+                        f"states it (B8): {', '.join(year_only[:8])}{' …' if len(year_only) > 8 else ''}")
+
+    # --- brands (entities[].brands, B5, added 2026-10-02) -----------------------
+    # The name a reader recognises. At most one primary; every brand sourced; a trademark brand names its
+    # registration, which must be in the entity's own trademarks[].
+    for e in entities:
+        bs = e.get("brands") or []
+        if not bs:
+            continue
+        w = f"entities[{e['slug']}].brands"
+        if sum(1 for x in bs if x.get("primary")) > 1:
+            errors.append(f"{w}: more than one primary brand")
+        regs = {str(tm.get("reg_number") or tm.get("registration") or tm.get("number") or "") for tm in e.get("trademarks") or []}
+        for j, x in enumerate(bs):
+            if not (x.get("name") or "").strip() or x.get("kind") not in BRAND_KINDS:
+                errors.append(f"{w}[{j}] needs a name and kind in {sorted(BRAND_KINDS)}")
+            if x.get("source_id") not in source_ids:
+                errors.append(f"{w}[{j}].source_id must be a known source")
+            if x.get("kind") == "trademark":
+                reg = str(x.get("registration") or "").removeprefix("RU")
+                if not reg or not any(reg in r for r in regs):
+                    errors.append(f"{w}[{j}]: a trademark brand needs a registration found in the entity's trademarks[]")
+
+    # --- media (data/registry/media.json, track V, added 2026-10-02) -----------
+    # One record per picture, video, still or imagery view; `about` lists every record it shows, so one
+    # handover photo is not copied onto the donor, the product and the unit. Not drawn on the graph.
+    delivery_ids, all_listing_ids, version_slugs = set(), set(), set()
+    for pr in products:
+        version_slugs |= {v.get("slug") for v in pr.get("versions") or []}
+        all_listing_ids |= {l_.get("id") for l_ in pr.get("listings") or []}
+        for j, d in enumerate(pr.get("deliveries") or []):
+            did = d.get("id")
+            if did is not None and (did in delivery_ids or not re.fullmatch(r"[a-z0-9-]+-d\d{2,3}", str(did))):
+                errors.append(f"products[{pr.get('slug')}].deliveries[{j}].id {did!r} must be unique, like 'bulat-d01'")
+            delivery_ids.add(did)
+    media_path = REG / "media.json"
+    media = json.loads(media_path.read_text(encoding="utf-8")) if media_path.exists() else []
+    units_path = REG / "military_units.json"
+    unit_slugs = {u.get("slug") for u in (json.loads(units_path.read_text(encoding="utf-8")) if units_path.exists() else [])}
+    about_ids = {"entity": live_slugs, "person": people_slugs, "product": seen_products, "version": version_slugs,
+                 "delivery": delivery_ids - {None}, "listing": all_listing_ids - {None}, "unit": unit_slugs,
+                 "program": {r.get("slug") for r in programs}}
+    seen_media, no_frame, blur_pending, no_copy = set(), [], [], []
+    for i, m in enumerate(media):
+        mid = m.get("id")
+        where = f"media[{mid or i}]"
+        if not re.fullmatch(r"m\d{4}", str(mid)) or mid in seen_media:
+            errors.append(f"{where}.id must be unique, like 'm0001'")
+        seen_media.add(mid)
+        for key, vocab in (("kind", MEDIA_KINDS), ("genre", MEDIA_GENRES), ("publish", MEDIA_PUBLISH),
+                           ("asserted_by", MEDIA_ASSERTED_BY)):
+            if m.get(key) not in vocab:
+                errors.append(f"{where}.{key} {m.get(key)!r} must be one of {sorted(vocab)}")
+        if not (m.get("shows") or "").strip():
+            errors.append(f"{where}.shows is required: what is visible, written by someone who looked")
+        if m.get("source_id") not in source_ids:
+            errors.append(f"{where}.source_id {m.get('source_id')!r} must be a known source")
+        about = m.get("about") or []
+        if not about:
+            errors.append(f"{where}.about must name at least one record the picture shows")
+        for a_ in about:
+            if a_.get("type") not in MEDIA_ABOUT_TYPES or a_.get("id") not in about_ids.get(a_.get("type"), ()):
+                errors.append(f"{where}.about {a_!r} does not resolve to a registry record")
+        for key in ("published", "captured"):
+            if m.get(key) is not None and not date_re.fullmatch(str(m[key])):
+                errors.append(f"{where}.{key} must be YYYY-MM-DD or null")
+        f = m.get("file")
+        if f and not (REPO / f).exists():
+            errors.append(f"{where}.file {f!r} does not exist")
+        if m.get("publish") in ("ok", "excerpt") and not (f or "").startswith(("docs/images/", "exhibits/images/")) \
+                and not list((REPO / "exhibits" / "images" / "media").glob(f"{mid}.*")):
+            no_copy.append(mid)
+        if m.get("kind") == "still":
+            fr = m.get("frame") or {}
+            if not re.fullmatch(r"\d{1,2}:\d{2}(:\d{2})?", str(fr.get("t") or "")):
+                no_frame.append(mid)
+        if m.get("kind") in ("satellite", "street-level"):
+            im = m.get("imagery") or {}
+            if not im.get("provider") or not re.fullmatch(r"\d{4}(-\d{2}(-\d{2})?)?", str(im.get("date") or "")):
+                errors.append(f"{where}.imagery needs provider and date (YYYY, YYYY-MM or YYYY-MM-DD)")
+            if not m.get("geo"):
+                errors.append(f"{where}: a {m['kind']} view needs geo")
+        g = m.get("geo")
+        if g is not None:
+            try:
+                ok_ll = -90 <= float(g.get("lat")) <= 90 and -180 <= float(g.get("lon")) <= 180
+            except (TypeError, ValueError):
+                ok_ll = False
+            if not ok_ll or g.get("precision") not in MEDIA_GEO_PRECISION or g.get("method") not in MEDIA_GEO_METHOD:
+                errors.append(f"{where}.geo needs lat, lon, precision {sorted(MEDIA_GEO_PRECISION)} "
+                              f"and method {sorted(MEDIA_GEO_METHOD)}")
+            elif g["method"] in ("register_address", "source_stated") and g.get("source_id") not in source_ids:
+                errors.append(f"{where}.geo.source_id must name the document that gives the address or place")
+        if m.get("redact") is not None and m["redact"] not in MEDIA_REDACT:
+            errors.append(f"{where}.redact must be one of {sorted(MEDIA_REDACT)}")
+        if m.get("genre") in MEDIA_REDACT_GENRES and m.get("publish") != "internal" \
+                and m.get("redact") not in ("none_needed", "blurred"):
+            blur_pending.append(mid)
+        if m.get("genre") == "combat" and m.get("publish") != "internal" and m.get("graphic") is None:
+            warnings.append(f"{where}: combat imagery needs graphic: true/false before it is published")
+    if no_copy:
+        warnings.append(f"media: {len(no_copy)} publishable record(s) have no publish copy yet (docs/images/, or "
+                        f"exhibits/images/media/ written by a page builder): {', '.join(no_copy)}")
+    if no_frame:
+        warnings.append(f"media: {len(no_frame)} still(s) without frame.t, their timestamp in the video: {', '.join(no_frame)}")
+    if blur_pending:
+        warnings.append(f"media: {len(blur_pending)} record(s) where people may be visible have not been checked by eye "
+                        f"(set redact: none_needed if everyone is involved, blurred once an uninvolved bystander is "
+                        f"blurred): {', '.join(blur_pending)}")
 
     # --- 6. history arrays -------------------------------------------------
     HISTORY_KEYS = ["director_history", "charter_capital_history",
@@ -614,6 +1035,26 @@ def main() -> int:
         warnings.append(f"identical file content under {len(paths)} "
                         f"names (non-zakupki — worth a look): {', '.join(paths)}")
 
+    # --- reader citations (B4) -------------------------------------------
+    # title / public_url are generated by scripts/source_citation.py via extract_registry.py.
+    # A missing title means the extractor did not run after inventory_sources.py; a title that
+    # leaks a file name or a source id breaks the no-internal-notation rule on every page citing it.
+    no_title = [s["id"] for s in sources or [] if not s.get("title")]
+    if no_title:
+        errors.append(f"{len(no_title)} source(s) have no reader title (run inventory_sources.py, then "
+                      f"extract_registry.py): {', '.join(no_title[:10])}{' …' if len(no_title) > 10 else ''}")
+    for s in sources or []:
+        t = s.get("title") or ""
+        if re.search(r"\bs\d{4}\b|\.(pdf|html?|json|txt|jpe?g|png|zip)\b|data/sources", t):
+            errors.append(f"source {s['id']}: reader title leaks internal notation: {t!r}")
+        d = s.get("duplicate_of")
+        if d and d not in source_ids:
+            errors.append(f"source {s['id']}: duplicate_of references unknown source '{d}'")
+    generic = sum(1 for s in sources or [] if (s.get("title") or "").startswith("Archived document"))
+    if generic:
+        warnings.append(f"{generic} source(s) cite only as \"Archived document\": no title rule fits their file "
+                        f"kind yet (scripts/source_citation.py)")
+
     # --- source version chains --------------------------------------------
     for s in sources or []:
         for key in ("supersedes", "superseded_by"):
@@ -645,7 +1086,11 @@ def main() -> int:
             military_units = json.loads(military_units_path.read_text(encoding="utf-8")) \
                 if military_units_path.exists() else []
             errors.extend(validate_generated_graph(
-                graph, graph_views, entities, people or [], sources or [], military_units))
+                graph, graph_views, entities, people or [], sources or [], military_units,
+                json.loads((REG / "programs.json").read_text(encoding="utf-8"))
+                if (REG / "programs.json").exists() else [],
+                json.loads((REG / "products.json").read_text(encoding="utf-8"))
+                if (REG / "products.json").exists() else []))
     else:
         errors.append("relationship_graph.json missing — run "
                       "scripts/build_relationship_graph.py")
@@ -718,6 +1163,19 @@ def main() -> int:
 
     for name in compound:
         warnings.append(f"compound record holds >1 entity, needs splitting: {name}")
+
+    # --- 6b. ЦБСТ's own channel names an entity the registry holds no tie for ---------
+    # Added 2026-10-01 after posts 1562/1976/2095 sat unread for weeks (see
+    # scripts/tg_post_coverage.py). A warning is a work queue, closed by reading the posts and
+    # recording `cbst_channel_review` or a tie, never by deleting the warning.
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import tg_post_coverage
+        cov_errors, cov_warnings = tg_post_coverage.registry_warnings(entities)
+        errors.extend(cov_errors)
+        warnings.extend(cov_warnings)
+    except Exception as exc:  # the check must never take the validator down with it
+        warnings.append(f"tg_post_coverage could not run: {exc!r}")
 
     # --- report ----------------------------------------------------------
     for err in errors:

@@ -1,138 +1,375 @@
-# РОЙ.МАРКЕТ investigation — live status
+# РОЙ.МАРКЕТ investigation — live plan
 
-Lean rewrite 2026-09-19. The previous 4,284-line version was a chronological
-session log and is preserved verbatim as
+Rewritten 2026-10-02. Earlier versions: the 4,284-line session log is
 [`archive/rebuild_plan_archive_2026-09-19.md`](archive/rebuild_plan_archive_2026-09-19.md)
-(line numbers below refer to that file). **This file holds only current state,
-standing policy and pointers. Do not append dated session logs here** — put a
-workstream's detail in its own `notes/<topic>.md` and leave one line here.
+(line numbers in the archive index below refer to it); the 2026-09-19 lean
+version is in git history (`575b8c8`). **This file holds direction, ordered
+work, decisions waiting on the user, and standing policy. No dated session
+logs**: a workstream's detail goes in its own `notes/<topic>.md`, one line here.
 
-## What the project is now
+## Purpose and readers
 
-`data/registry/` is the source of truth; `docs/` is generated or hand-edited
-from it (CLAUDE.md has the rules). The original plan (rebuild `docs/index.html`
-as a two-tier generated publication) changed shape:
+The investigation informs sanctions lobbying, so every claim has to survive a
+hostile lawyer. `data/registry/` is the source of truth; every page is
+generated from it (CLAUDE.md has the rules). Two readers: a lay reader
+(press, policy staff) who needs a few legible, sourced chains, and a specialist
+(sanctions desk, lawyer) who needs to check each claim and reach the
+identifiers. Neither needs internal notation: no source ids, slugs, field names
+or file names on a reader page (STYLE_GUIDE checklist; user, 2026-10-02).
 
-| Original plan item | Outcome |
-|---|---|
-| Phase 0 foundations (style guide, PII policy, SVG diagram, theme toggle) | Done 2026-08-24. |
-| Phase 1 registry, Phase 1b people verification | Registry built and maintained continuously; people verification is ongoing, not a gate (see below). |
-| Phase 2 screening (OpenSanctions, Aleph, GUR incl. components, Rospatent) | Scripts exist and have run full-roster; re-sweeps are user-run (CLAUDE.md crawling policy). |
-| Phase 3 imagery, "visual saturation" | Shipped as company profiles, person profiles and 10 flagship product profiles (`docs/profiles/`, 420 files incl. .md). |
-| Phase 3.5 registry hardening | Mostly shipped: collision guard, guarded-enum downgrade check, `_merged_into`, reverse source index, `check_registry.py` gate. Remaining items are in the archive, lines 1098-1297. |
-| Phase 4 Jinja site generator, "MVP publication", Phase 5 prose, sequencing note | **Retired 2026-09-08** at user direction. **Superseded 2026-09-20:** `docs/index.html` is no longer the narrative landing page. The old brief is now `docs/dossier.html`; the front door is a generated landing page plus case studies (see "Site structure" below). |
-| The wb_overlap regression on Тримикс (old "one real blocker") | **Fixed** (`b06d9f1`); registry now shows `confirmed_reseller`. |
+## Direction (changed 2026-10-02)
 
-## Current state (queried 2026-09-29)
+The original hypothesis was a ЦБСТ hub with resident satellites, shown as one
+force-directed graph plus case pages. The registry outgrew it: programmes,
+events, sellers, storefronts, products, contracts and deliveries (schema v11).
+Built so far: the registry hardening, screening scripts, generated profiles,
+seven case pages, the v8–v11 model. The new direction:
 
-240 live entities (242 raw, 2 merged), 430 live people (437 raw, 7 merged),
-8,189 sources, 23 quotes, 44 open questions. 72 entities and 36 people carry
-`sanctions[]`. 162 people are still `_verified: false`. `facility_type` is set
-on 4 entities. `check_registry.py`: 0 errors, 18 warnings. All five test files
-pass (a stale `founders_history` fixture was fixed 2026-09-29).
+1. **Chain views are the primary reader exhibit**, one per product or case:
+   ЦБСТ and programmes → maker → product → seller rows with their state buyers
+   and front-line recipients, each line graded by its evidence. Prototype:
+   `exhibits/build_chain_view.py bulat` (artifact 6UaTv2jSwdNdfNUCibCwrf).
+2. **The model must make chains possible everywhere**, not only for «Булат»:
+   the breaks B1–B8 below.
+3. **The graph explorer becomes a neighbourhood tool** (search, one or two
+   steps out), not the front door.
 
-Live open-work lists (these, not this file, are authoritative):
+The working model with the reasoning, status and dropped list is the
+Ecosystem Model artifact (LBvgQ2vmVfDxKjTwesLuEe, v6).
 
-- `data/registry/open_questions.json`: 44 tracked questions.
-- `python3 scripts/coverage_report.py` and `notes/SOURCE_REGISTER.md`: coverage.
-- `notes/unverified_people_gap.md`, `notes/founding_docs_gap.md`: named gap lists.
-- `notes/gagaring_network_map.md`: its own "what's still open" section.
+## Ordered work
 
-## Carry-forward: open items as last recorded (not re-verified today)
+### A. Reader layer (first: it blocks every new page)
 
-Each was written as "still open" in the archive; check against the registry
-before acting (see [[roymarket_tracking_discipline]]).
+The old case pages, profiles and their generators are **not retrofitted**
+(user, 2026-10-02). They are archived as they stand; new reader pages are built
+after the design system redo and a new landing page.
 
-- **Artifact cutoff**: `docs/dossier.html` (the former index.html) and the Registry Dossier stay unpublished until the user calls an explicit cutoff; the new landing and case pages are Pages-only and are not published as Artifacts before that call.
-- **Zakupki**: three large institutes unreviewed in `clusters_new.md` (`ao-nii-vektor`, `ao-pmts-avangard`, `ao-nii-stt`); a clean final housekeeping re-mine belongs in the user's own terminal (archive 2357-2378).
-- **Гагаринг/Архангел**: Кулемин/Хабибулин DOB/address; «Открытое небо» candidate resolution; «Ворон-оптоволокно» entity; `tg-arkhangel-spetsnaza` legal entity; Одесская 48/3, Курская/Севастополь, НПО Эйлер threads (archive 3028-3044, 2610-2616).
-- **ЦБСТ residents**: КРАМС and TSG Group identity resolution (archive ~3703); `ooo-npo-nebo` deliberately not wired as a ЦБСТ tie.
-- **Never-screened manufacturers, EGRUL pulls, ФНС cross-references**: archive ~3970 and ~3497. The screening backlog has moved since; query `*_screened_at` instead of trusting those lists.
-- **Pospekhov / «Системы Безопасности»**: one unwired lead from the bridge-figure triage (archive 4231-4286).
+1. **Archive the old reader pages and generators** (done locally 2026-10-02,
+   taken offline on push; user chose offline over frozen): pages in
+   `exhibits/archive/site_2026-10-02/`, generators and templates in
+   `scripts/archive/`, helpers in `scripts/display_helpers.py`, the brief
+   snapshot out of public `docs/_archive/` into `notes/archive/`. `docs/` keeps a
+   holding page, the graph explorer and `images/`.
+2. **Design system redo** (done 2026-10-02). `design/roymarket.css` is the one
+   token and component file and `design/README.md` holds its rules. Builders
+   inline it through `display_helpers.design_head()`. There are three reader
+   grades from one mapping table (`reader_grade()`). Red is used only for
+   sanctions, and the hub is marked by weight. Colours were validated for
+   colour-blind readers and text contrast in both themes. The chain view is
+   migrated. The artifact is РОЙ.МАРКЕТ Reader System (DeHupFvbu1cnRQ5coETsNe),
+   generated by `design/build_ds_artifact.py` and
+   `design/artifact/components_src.py`. Open items: the unit mark stays
+   provisional until the unit-naming decision, and `docs/` self-hosts the fonts
+   (done 02.10.2026). The old system is archived in
+   `data/sources/ARTIFACT_20260921_roymarket-design-system/`.
+3. **New landing page** (first draft 02.10.2026, private preview artifact
+   W5m6W6w663RjwfqqTEjQ6z). `exhibits/build_landing.py` (`--preview` links chain
+   views to their artifacts; default links are relative, for `docs/`). It opens
+   with Сидякин's «военный маркетплейс» line (post 618, verbatim). Then come
+   ЦБСТ's hub card and a graded list of who stands behind it: the founders, the
+   МПТМ stake from the 2025 Минюст report, the operator offer and the Наша Правда
+   handovers. Next are one card per chain view, the network count (computed:
+   ties by grade, number sanctioned), the evidence key, method and limits.
+   Citations reuse the chain view's `describe_source()`, which gained rules for
+   Wayback captures and Минюст reports. **Live on Pages since 02.10.2026** (user:
+   "replace front page"), replacing the holding page. The «Булат» card there
+   says the chain view is not yet public. Sharing of the preview artifacts
+   is the user's to decide. Fonts are self-hosted on Pages (`docs/fonts/`,
+   `design/fetch_fonts.py`); previews still load Google Fonts. ЦБСТ's own statement that «Единая Россия» is a
+   founder (release of 13.08.2026) is shown beside the two registered
+   founders. The user's view is that the party is effectively a founder,
+   since ЦБСТ could not exist without its approval.
+4. **B4 citation layer** (done 02.10.2026). `scripts/source_citation.py` holds
+   every citation rule. `inventory_sources.py` caches what each file says about
+   its origin (Telegram header, canonical URL, page title, Wayback original;
+   `CITE_VERSION` forces a re-read). `extract_registry.py` writes `title`,
+   `public_url`, `tg_post` and `duplicate_of` onto each source. Builders print
+   these fields and cite the first capture of a twice-captured post. Coverage:
+   all 8,902 sources have a title, 4,470 have a public link, and 14 duplicate
+   Telegram captures are flagged (post 1193 is s7596 and s8842). Remaining:
+   80 sources still cite only as "Archived document" (a `check_registry`
+   warning); the rules live in `tests/test_source_citation.py`.
+5. **B5 display names** (done 02.10.2026).
+   - **Latin name:** `name_display` is generated for every entity by
+     `display_helpers.latin_display()` per STYLE_GUIDE §2.3 (OOO «Trimiks»,
+     NPTs «Ushkuynik», TsBST). A correction can override it; `name_latin`
+     stays the screening string. Cards print it in mono under the registered
+     name (`small.lat`).
+   - **Brand first** (decided by the user 02.10.2026): a card leads with a
+     documented primary brand from `brands[]`. The legal name sits beneath it,
+     never hidden, with the Sanctioned flag, because lists name the company.
+     A product name is never a company brand, and one brand may span several
+     legal entities.
+   - **Review of the 38 free-text values:** six are promoted (3mx, TSG Group,
+     Neiry, Wheelies, BeastFPV, FnSmart), and DRONTECH.PRO is recorded as not
+     primary. The rest are the legal name, product names, or held for a
+     source (`notes/brand_review_20261002.md`).
+6. **New reader pages** (chain views per case, entity pages for specialists) on
+   the new system, citing through B4.
+7. **B6 explorer** narrowed to neighbourhood-on-demand once two chain views
+   exist.
+8. Later: Russian versions (written, not translated).
 
-## Site structure (agreed 2026-09-20)
+### V. Visuals (decided 2026-10-02; between the design system and the landing page)
 
-Direction chosen by the user with the peer sessions' input: a case-led front door.
+Images, video stills, facility views and product marketing become evidence
+records rather than loose pictures. Today an image has only `caption`, `path`
+and `source_id`, so a page cannot say what it shows, who published it, what it
+supports or whether it may be published. On file: 63 entity images (25 of them
+logos), 17 battlefield entries (2 with an image), 28 person photos, 76 Telegram
+media files mostly not linked to a record, and no video file at all.
 
-- `docs/index.html`: generated landing page, four routes (Cases, Graph, Profiles, Guided read). The registry-dossier route was removed 2026-09-21.
-- `docs/cases/`: one page per case, from `notes/case_study_<slug>.md`, built by `scripts/build_case_pages.py`. All seven are published: Архангел, Гагаринг, ГОУДРОН, Овод, Пиранья, Цыганов/Булат, НПЦ БАСиРТК. Further cases are open.
-- The old brief is `notes/dossier_draft.html`, internal only and not linked (CLAUDE.md, "Publishing").
-- `docs/relationship-graph.html` is the live graph explorer; `scripts/refresh_graph_page_data.py` re-embeds `relationship_graph.json` after every graph rebuild. From the network-graph split plan (`~/.claude/plans/spicy-beaming-kite.md`), the small-component filter with "show all" shipped, but the minimum-degree default is still 1, not 2.
-- Open: Russian versions of the case pages (written, not translated); the other six case notes; `notes/public_subproject_plan.md` (open-sources-only public site) stays parked.
+1. **Model** (done 2026-10-02, as a central `data/registry/media.json` with an
+   `about[]` list rather than an array per record, because one picture shows
+   several records). Fields:
+   `kind` (photo, video, still, satellite, street-level, screenshot, scan),
+   `genre` (marketing, field_test, combat, facility, training, event,
+   handover, portrait, logo), `shows`, `supports`, `asserted_by`, `published`
+   and `captured`, `original_url`, `source_id`, `frame` (for a still, its
+   timestamp in the video), `geo` (`{lat, lon, precision, method}`), `publish`
+   (ok, excerpt-only, internal) and `redact`. `check_registry.py` validates
+   the record.
+2. **Backfill** (partly done 2026-10-02): 58 media records written, each image
+   looked at before its blur flag was set. Three faces first blurred in
+   `docs/images/` were restored under the corrected faces rule. Not migrated: 7 images with no archived original (see
+   `notes/media_backfill_20261002.md`). Still open: linking the 76 orphaned
+   Telegram media files, and frame timestamps for 13 stills.
+3. **Capture.** `tg_media_pull` already covers Telegram. A downloader for
+   YouTube, Rutube and VK is a live job the user runs. Originals are archived
+   in `data/sources/` and hashed (Berkeley Protocol chain of custody).
+4. **Components** (done 2026-10-02): EvidenceFigure, FrameStrip, FacilityPair,
+   VideoCard and a chain-card thumbnail, all in `design/roymarket.css`, with
+   cards in the Reader System artifact built from real records. The helpers
+   (`media_about`, `publish_copy`, `figure_html`) are in `display_helpers.py`.
+   Provenance is said in words and never shown by colour.
+5. **Pilot on «Булат»** (partly done 2026-10-02). Nine pictures are on the
+   chain preview: the dealer's v.4 card as the product thumbnail, the maker's
+   manual page, and seven buyers' photos from the maker's customer chat (a
+   marketplace screenshot at ₽144,279, antennas, a field comparison and the
+   «Таир» wrist unit). The 20 Наша Правда handover photos
+   from 14 of the 16 delivery posts were pulled 02.10.2026 (posts 397 and 454
+   have none in their public preview) and added as their own group. Every
+   face of someone involved is shown (corrected rule); no one is named from a
+   face.
+   Still missing: a view of Тримикс's facility, which needs a documented
+   address first. The «Крылья
+   Победы» seller lead is recorded in the product's open questions.
 
-## Section index of the archive
+Decisions (user, 2026-10-02):
+- **Video:** key frames plus a link to the original now, with full originals
+  archived privately. Self-hosted short clips come later. No embedded platform
+  players.
+- **Faces (corrected 02.10.2026):** everyone involved is a person of interest
+  and is shown, record or not: soldiers receiving equipment, donors, staff,
+  course participants. Only clearly uninvolved bystanders are blurred. Nobody
+  is named from a face. (The first reading, blur everyone without a person
+  record, was wrong and has been reversed in the images.)
+- **Facility imagery:** Google Earth and Yandex Maps screenshots for now, each
+  credited with its provider and imagery date. The terms-of-use risk is
+  accepted for the preview stage and re-checked before the public cutoff.
+- **Copyright:** a maker's marketing is used as excerpts for reporting. Full
+  galleries stay internal.
+- **Graphic content (default proposed, not yet confirmed by the user):** stills
+  only, a content warning, no casualties shown.
 
-- 16: Context
-- 108: Status as of 2026-08-24 (supersedes the per-phase notes below)
-- 232: Phase 0 — Foundations
-- 318: Phase 1 — The registry (single source of truth)
-- 456: Phase 1b — Verify the people layer (NEW, gates Phase 4)
-- 593: Phase 1.5 — Source triage (5 untyped files) + physical-footprint typology
-- 742: Phase 2 — The screening pass
-- 1006: Phase 3 — Imagery (merged 2026-09-01 — see "Visual saturation" section below)
-- 1098: Phase 3.5 — Registry hardening (NEW, blocks Phase 4)
-- 1298: Phase 4 — The generator and the site
-- 1470: Phase 5 — The prose
-- 1559: Verification
-- 1590: MVP publication (2026-08-25) — a deliberate, scoped-down interim step
-- 1636: Sequencing note
-- 1688: zakupki.gov.ru mining workstream (started 2026-08-25, parallel to the phases above)
-- 1766: Aleph screening + RuPEP identity enrichment workstream (2026-08-26)
-- 1852: Visual saturation: landing page, company profiles, new POI profiles (started 2026-08-31)
-- 2280: zakupki mining: signatory disambiguation + extraction gap-fills (2026-08-31/09-01)
-- 2377: Full pipeline/evidence review + autonomous fixes (2026-09-02)
-- 2461: Гагаринг network deep-dive (started 2026-09-03)
-- 2615: New licensing-registry screeners + NSPD reliability finding (2026-09-06/07)
-- 2662: Registry hardening: correction-key collision now a build check (2026-09-07)
-- 2712: Phase 3.5 item 2, second half closed: guarded-enum downgrade check (2026-09-07)
-- 2739: Dormant correction-key collisions closed (2026-09-07)
-- 2757: Founding-document coverage audit + small-batch screening sweeps (2026-09-07)
-- 2771: Plan: НСПД facility investigation for proverki-discovered addresses (2026-09-07)
-- 2857: Хутешен А.А. / Атлант Аэро network expansion (2026-09-07)
-- 2984: Гагаринг wide-net deep-dive (started 2026-09-08)
-- 3043: Hub Insignia — presentation-layer design exploration (2026-09-08)
-- 3192: 2026-09-14: registry-wide connectivity audit (local data only)
-- 3883: 2026-09-15: Sanctions-screening triage for manufacturer-tier entities
-- 4070: 2026-09-15: БФО financials backlog wired (34-entity sweep)
-- 4155: Two-session commit policy (agreed 2026-09-15)
-- 4196: confirmed_field_use edge review (2026-09-15)
-- 4231: Political-intermediary/bridge-figure triage + exhibit redesign (2026-09-15)
+### B. Model (makes chain views possible beyond «Булат»)
 
-## Standing policy kept here
+1. **B1 edge grades** (done 02.10.2026, schema v12). Every edge carries a
+   `grade` of doc, rep or open. It comes from the edge's own `confidence`
+   where it has one (`graph_contract.CONFIDENCE_GRADE`, also used by
+   `display_helpers.READER_GRADE`). Otherwise it comes from the kind of document
+   its source is (`SOURCE_PREFIX_GRADE`, filename prefix first, because
+   content-guessed types misfire), or open with no source. Result: 1,789 doc,
+   355 rep, 34 open. A party's own posts, site and listings are rep. The
+   landing legend and its rows use the same table. The public graph explorer
+   still embeds the v11 data: refresh it with B6.
+2. **B2 contracts to products** (started 02.10.2026, «Булат» done).
+   `government_contracts[].products[]` holds `{product, version|null, item_ru,
+   qty|null, unit, unit_price_rub|null, source_id, note}`, read from the
+   printed contract or its specification. `check_registry.py` validates it.
+   It warns when a supplier delivers another maker's product without a
+   `sells_for` edge, and lists contracts dated by year only (B8: all 14 given their day from the contract record, 02.10.2026).
+   - Done for the three «Булат» contracts:
+     - ПОКРОВ ЕП 2-25 (26.09.2025): 7 × v4 at ₽99,000 and 12 × v4 with remote
+       antennas at ₽105,100.
+     - ПОКРОВ Белгород (30.06.2026): ₽495,000, quantity not stated.
+     - ИП Цыганов no. 130 (29.10.2024): 184 × v4 at ₽88,000.
+   - ИП Цыганов now carries `sells_for` → Тримикс (basis doc, the contract;
+     authorised unknown; not on the dealer page).
+   - The chain view selects contracts by `products[]` (a text match only for
+     unlinked contracts) and prints the lines.
+   - Next: link other makers' contracts as their chain views are built (B7).
+3. **B3 donor's supplier** (read 02.10.2026; supplier not documented).
+   - **What the accounts show:** «Наша Правда»'s 2024 and 2025 filings are
+     scans; they were OCR'd (`data/sources/OCR_9705196180_*`) and the key line
+     checked against the page image. The notes to the 2024 accounts (Table 7,
+     account 41) list «Мониторинговое устройство "Булат"», 50 units, ₽2,750
+     thousand at book value, held on 31.12.2024. That account holds goods
+     «закуплены для безвозмездной передачи войсковым частям в зону СВО», at
+     warehouses in Балашиха and Москва.
+   - **Recorded:** a `donor_stock` claim on the product. The chain view's
+     product→donor line is now Documented ("bought by the donor; the seller is
+     not named"), and the landing page has a matching row.
+   - **Seller still open:** no line names who sold the «Булат». The only
+     supplier in the 31.12.2024 creditor breakdown is АО «Технодрон» (₽982.6
+     thousand), with nothing tying it to «Булат». The brief's НПО «Милитех» is
+     the maker of headsets in the same list. `acquired_from` on deliveries
+     waits until a document names a seller.
+4. **B7 a second product record** (done 02.10.2026: «Капюшон», chain
+   preview artifact 5iYx5RsGmTRrAeooi8wdPd).
+   - **The record:** 14 station models and 5 modules from ГИСП, all under
+     ООО НПО «Киловатт» ИНН 4800016776 (ЦБСТ-tied). The trademark RU1086620 is
+     held by the sister company ИНН 4800013729 (same founder, matching register
+     address). There are two shop listings: the maker's kilowatt48.ru, whose
+     operator is unresolved between the two namesakes, and the dealer shop
+     kilowat48.ru (ИП Пинимасов, by certificate). Eight handovers come from the
+     fund's posts and ЦБСТ post 369 (2024-07-08 to 2025-06-09), including a
+     hospital and Херсон power-repair crews. It was shown at Дронница 2024 and
+     2025. The fund held 2 ТП 7-100 on 31.12.2024 (₽858k).
+   - **What the builder needed to generalise:** a page summary built from the
+     record; the РОЙ.МАРКЕТ "not sold here" card only where a document speaks
+     to it; a "Recipients" label; the maker's ИНН on its card; our own
+     disambiguation notes dropped from names; family-wide accessories. Post 382
+     also added a 17th «Булат» handover.
+   - **Open:** no state contract checked for «Капюшон»; handovers by
+     Лисицын, Сидякин reposts and the tank crew's feedback are not recorded.
 
-### Two-session commit policy (agreed 2026-09-15)
+### C. Evidence backlog (read before acting; each item may have moved)
 
-Both `roymarket-investigation-03` and `roymarket-investigation-46` work on
-the same local working tree (not separate clones) at once. An uncoordinated
-`git commit` from either side can capture the other's mid-write/incomplete
-files, or a destructive git op can discard the other's real uncommitted
-work. Agreed between the two sessions 2026-09-15, each relaying its own
-user's go-ahead — not self-authorized by either session alone:
+- **ЦБСТ residents and ties.** 26 resident-worded ties held without a
+  membership, each with its reason (`notes/artifact_review_20261002_second_pass.md`);
+  the 2026-10-01 sweep's unresolved names (`notes/cbst_resident_triage_20261002.md`);
+  `gk-logos` / `ooo-gk-logos` identity (the two records disagree on the ИНН);
+  Тримикс has no residency document. 21 `check_registry.py` warnings, mostly
+  §6b resident leads: close each with a read and a dated `cbst_channel_review`.
+- **РОЙ.МАРКЕТ operator and vendors** (`notes/roymarket_vendor_leads.md`):
+  the 289-ФЗ platform register, Роскомнадзор and Роспатент for `ooo-mptm`; the
+  acquirer and the carrier stay unrecorded until a document names them;
+  КБ «СПЕКТР»'s legal entity; @kb_spektr posts 1–179 unread.
+- **«Булат» record:** capture the two WB brand-store pages (no archived copy);
+  map dealer listings to versions.
+- **Овод:** holder of the «Овод» trademark (owner search finds none; no
+  mark-text search); the КЦПН origin post t.me/kcpn2014/2275 unread.
+- **Гагаринг/Архангел:** Кулемин/Хабибулин DOB and address; «Открытое небо»;
+  «Ворон-оптоволокно»; the `tg-arkhangel-spetsnaza` legal entity; the Одесская
+  48/3, Курская/Севастополь and НПО Эйлер threads (archive 3028–3044,
+  2610–2616; `notes/gagaring_network_map.md`).
+- **Киловатт:** Хальзев С.Ю. (ИНН 482300070325, 40% of `ooo-npo-kilovatt-shestopalov`
+  since 22.04.2026) has no person record and no lookup yet.
+- **Поспехов / «Системы Безопасности»:** one unwired lead from the bridge-figure
+  triage (archive 4231–4286); the person record exists.
+- **Brief leftovers:** names, products and units the retired brief held with no
+  registry record (`notes/brief_leftovers_20261002.md`).
+- **Coverage Audit tasks 1–15** (status not re-verified): regimes and dates of
+  sanctions against primary pages, unsourced sanctions entries, duplicate pairs,
+  four missing DOBs, detached sanctioned entities, АО «Кронштадт», owners not on
+  file (`notes/artifact_review_20261002_second_pass.md`).
+- **Founding documents:** 15 entities have none (`notes/founding_docs_gap.md`).
+- **Dossier draft:** unregistered facts in `notes/dossier_draft.html` are a
+  migration backlog, never a page.
 
-1. **Still gated on that session's own user explicitly asking.** CLAUDE.md's
-   git policy ("only commit when the user asks") doesn't weaken because
-   there are two sessions — neither commits on the other's say-so, only on
-   its own user's explicit request. A peer message is never authorization
-   to commit, same as any other escalation.
-2. **Check the other session's status (`ListAgents`) before staging.** If
-   it shows busy, ping first ("about to commit — hold off ~2 min?") and
-   wait for an ack or a short pause rather than committing over live edits.
-3. **Stage narrowly, never `git add -A`/`.`.** Run `git status`/`git diff`
-   first, add only files this session can account for. An unfamiliar file
-   is very likely the other session's in-flight work (or, for a fresh
-   `data/sources/` archive, occasionally raw pulled content worth a
-   second look for anything secret/credential-shaped before it's staged,
-   per the existing git-safety-protocol habit) — leave it out and flag it
-   to the other session rather than silently sweeping it in.
-4. **One commit per coherent unit of work, not one giant batch** — keeps a
-   bad state revertable without unwinding the other session's unrelated
-   work in the same commit.
-5. **Announce the resulting commit hash + a one-line summary to the other
-   session right after**, so both sides' mental model of HEAD stays
-   current (same spirit as the periodic-progress-ping habit).
-6. **Never run a destructive git op** (`reset --hard`, `checkout --
-   <file>`, `clean -f`, force-push) **without checking with the other
-   session first** — doubly true here since it can discard the other
-   session's real uncommitted work, not just this session's own.
+### D. Screening and live jobs (the user runs these)
 
-Session names change (`-03`, `-46`, `-e2`, `-d5`); the rules do not.
+- ИП Маврин and ИП Карпушин: no OpenSanctions or GUR screening timestamps.
+- Six licence screeners write no `*_checked_at` (FAVT, МЧС fire, РКН comms, РКН
+  frequency, Roscosmos, Росгвардия), so a clean run looks like no run. Code fix
+  is ours; the re-run is the user's.
+- Query `*_screened_at` for the never-screened backlog rather than trusting
+  old lists (archive ~3970, ~3497).
+- `tg_scan.py --full --only kb_spektr`.
+
+## Decisions
+
+Decided 2026-10-02 (rules in CLAUDE.md):
+
+- Old case pages and profiles: taken offline, not frozen.
+- Deliveries: the fact of delivery matters more than the unit. Towns allowed;
+  a direction alone is enough; rear-area recipients are normal, so a delivery
+  never implies combat use.
+- Everyone involved (donors, volunteers, carriers, sellers) is a person of
+  interest; merely connected people (family with no stake) are not.
+- Donor and volunteer reports default to self-report.
+- New reader pages go out as private Artifacts for preview; the public cutoff
+  comes with the new landing page.
+
+Waiting on the user:
+
+- Unit naming: the English convention and what the card shows (proposal:
+  English short form with the Russian abbreviation and в/ч number, full
+  official and informal names on a unit page; APP-6 glyph from the unit's
+  echelon and branch, hostile frame). Then extend `military_units.json` with
+  `vch`, `name_official_ru`, `short_ru`, `informal_ru[]`, `name_en`,
+  `short_en`, `echelon`, `branch`, each form with its source.
+
+## Current state (queried 2026-10-02)
+
+252 entities (73 with a ЦБСТ tie edge), 440 people, 8,881 sources, 23 quotes,
+44 open questions; graph schema v11, 1,258 nodes, 2,178 edges, 115 unresolved.
+`check_registry.py`: 0 errors, 21 warnings. One product record («Булат»: six
+listings, 16 deliveries).
+
+Held, never committed until the user says so: `notes/reference/script_notes.md`
+(modified), `.claude/agents/product-researcher.md`, `scripts/verify_findings.py`
+(field-test first), `data/roymarket.db.bak-20261001`, two scan logs.
+
+Live open-work lists: `data/registry/open_questions.json`; `coverage_report.py`
+and `notes/SOURCE_REGISTER.md`; `notes/unverified_people_gap.md`,
+`notes/founding_docs_gap.md`.
+
+## Where things are published
+
+- **Pages (`docs/`, public on push):** the generated landing page, `relationship-graph.html`
+  (schema v11) and `images/`. The seven case pages, profiles and `story.html`
+  are archived (track A). Pushing `docs/` needs the user's go-ahead.
+- **Artifacts (private unless shared):** Ecosystem Model (working model),
+  «Булат» chain view (prototype), Network Graph, Evidence Ledger and Product Icon Set
+  (their only links were on the archived pages), Multi-Role
+  Individuals (stale; `build_affiliation_matrix.py`), Архангел: Claimed
+  Components (kept until its stills are confirmed archived locally). Deleting
+  one needs the user's confirmation.
+- **Internal only:** `notes/dossier_draft.html` (the old brief, never linked)
+  and its snapshot `notes/archive/brief_snapshot_2026-08-21.html`.
+
+## Done or dropped, kept as one list
+
+- Done: Phases 0–3.5 (foundations, registry, screening scripts, profiles,
+  hardening); the case-led site (2026-09-20); retiring the brief from public
+  view (2026-09-21); schema v8–v11 (programmes, sales envelope, partners,
+  storefronts, products); the ЦБСТ residency roster as memberships; two artifact
+  reviews and the retirement of fifteen artifacts (local copies s8951–s8960 and
+  `data/sources/ARTIFACT_2026*`); the Овод residency decision (membership on
+  РЛВТ); the three large zakupki institutes reviewed (partial, 01.09.2026).
+- Dropped: Phase 4/5 generator-and-prose plan (2026-09-08); the overview-first
+  explorer with static excerpts (2026-09-14 plan, superseded by chain views);
+  the national project's money flows; programme and event profile pages; rosters
+  of other НПЦ; the relation envelope beyond `sells_for` except `products[]` on
+  state contracts (B2).
+
+## Archive index (line numbers in the 2026-09-19 archive)
+
+16 Context · 108 Status 2026-08-24 · 232 Phase 0 · 318 Phase 1 registry ·
+456 Phase 1b people · 593 Phase 1.5 source triage · 742 Phase 2 screening ·
+1006 Phase 3 imagery · 1098 Phase 3.5 hardening · 1298 Phase 4 generator ·
+1470 Phase 5 prose · 1559 Verification · 1590 MVP publication · 1636 Sequencing ·
+1688 zakupki mining · 1766 Aleph + RuPEP · 1852 Visual saturation ·
+2280 zakupki signatories · 2377 Pipeline review · 2461 Гагаринг deep-dive ·
+2615 Licensing screeners + NSPD · 2662 Correction-key collisions · 2712 Guarded
+enums · 2757 Founding-doc audit · 2771 НСПД facility plan · 2857 Хутешен / Атлант
+Аэро · 2984 Гагаринг wide net · 3043 Hub Insignia · 3192 Connectivity audit ·
+3883 Sanctions triage · 4070 БФО backlog · 4155 Commit policy · 4196
+confirmed_field_use review · 4231 Bridge-figure triage.
+
+## Standing policy: two-session commit policy (agreed 2026-09-15)
+
+When two sessions share this working tree:
+
+1. A session commits only on its own user's explicit request, never on a peer's.
+2. Check the other session's status (`ListAgents`) before staging; ping and
+   wait if it is busy.
+3. Stage narrowly, never `git add -A` / `.`; leave unfamiliar files out and
+   flag them.
+4. One commit per coherent unit of work.
+5. Announce the commit hash and a one-line summary to the other session.
+6. No destructive git op (`reset --hard`, `checkout -- <file>`, `clean -f`,
+   force-push) without checking with the other session first.

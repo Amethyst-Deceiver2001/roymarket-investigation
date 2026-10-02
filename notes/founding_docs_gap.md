@@ -179,22 +179,22 @@ Sorted alphabetically by name. `tier` shown for prioritization.
 | ООО «Ментастеп» (`ooo-mentastep`) | 1247700255208 | 9715478320 | manufacturer | got docs
 | ООО «Метаскан» (`ooo-metaskan`) | 1201600057097 | 1660349248 | manufacturer | got docs
 | ООО «НОВА» (`ooo-nova`) | 1086330002549 | 6330037352 | money-layer | got docs
-| ООО «НПК «Центр перспективных технологий»» (ЦПТ) (`ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy`) | 1265300000470 | 5300022741 | manufacturer |
+| ООО «НПК «Центр перспективных технологий»» (ЦПТ) (`ooo-npk-tspt-tsentr-perspektivnykh-tekhnologiy`) | 1265300000470 | 5300022741 | manufacturer | got docs
 | ООО «НПО Рустехдрон» (`ooo-npo-rustekhdron`) | 1235000022179 | 5003155499 | manufacturer | no docs
-| ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер») (`ooo-npo-eyler`) | 1257100008560 | 7100069249 | manufacturer |
+| ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер») (`ooo-npo-eyler`) | 1257100008560 | 7100069249 | manufacturer | got docs
 | ООО «Научно-производственное объединение «Киловатт»» (`ooo-npo-kilovatt`) | 1244800001820 | 4800013729 | manufacturer |
-| ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) (`ooo-npo-kilovatt-shestopalov`) | 1244800005240 | 4800016776 | manufacturer |
-| ООО «ОПКБ Экспломет» (`ooo-opkb-eksplomet`) | 1211200001650 | 1215235283 | manufacturer |
-| ООО «Оржицкие артезианские воды» (`ooo-orzhitskie-artezianskie-vody`) | 1197746619950 | 9709055542 | money-layer |
-| ООО «Орион» (`ooo-orion`) | 1077758220451 | 7706664648 | money-layer |
+| ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) (`ooo-npo-kilovatt-shestopalov`) | 1244800005240 | 4800016776 | manufacturer | got docs
+| ООО «ОПКБ Экспломет» (`ooo-opkb-eksplomet`) | 1211200001650 | 1215235283 | manufacturer | got docs
+| ООО «Оржицкие артезианские воды» (`ooo-orzhitskie-artezianskie-vody`) | 1197746619950 | 9709055542 | money-layer | got docs
+| ООО «Орион» (`ooo-orion`) | 1077758220451 | 7706664648 | money-layer | got docs
 | ООО «Оупен Лоджистикс» (`ooo-oupen-lodzhistiks`) | 1237700483976 | 9714015016 | money-layer |
 | ООО «ПОКРОВ» (`ooo-pokrov`) | 1245000068774 | 5038189259 | manufacturer | got docs
-| ООО «Пехтра» (`ooo-pekhtra`) | 1245200032406 | 5261138034 | manufacturer |
-| ООО «Прайм» (`ooo-praym`) | 1097746825945 | 7735565264 | manufacturer |
-| ООО «Промсинтез» (`ooo-promsintez`) | 1073435002013 | 3435084957 | manufacturer |
+| ООО «Пехтра» (`ooo-pekhtra`) | 1245200032406 | 5261138034 | manufacturer | got docs
+| ООО «Прайм» (`ooo-praym`) | 1097746825945 | 7735565264 | manufacturer | no docs
+| ООО «Промсинтез» (`ooo-promsintez`) | 1073435002013 | 3435084957 | manufacturer | got docs
 | ООО «РТ-Развитие бизнеса» (`ooo-rt-razvitie-biznesa`) | 1147746392200 | 7704861136 | money-layer | no docs
-| ООО «Рокот Тех» (`ooo-rokot-tekh`) | 1247600010954 | 7606140961 | manufacturer |
-| ООО «Русская лаборатория воздушного транспорта» (`ovod`) | 1227100012369 | 7100027464 | manufacturer |
+| ООО «Рокот Тех» (`ooo-rokot-tekh`) | 1247600010954 | 7606140961 | manufacturer | got docs
+| ООО «Русская лаборатория воздушного транспорта» (`ovod`) | 1227100012369 | 7100027464 | manufacturer | got docs
 | ООО «СПДББК» (`ooo-spdbbk`) | 1157847359273 | 7838044584 | manufacturer |
 | ООО «СУПЕРХРОНО» (`ooo-superkhrono`) | 1163525102619 | 3525389520 | manufacturer |
 | ООО «Сибирская навигационная компания» (`ooo-sibirskaya-navigatsionnaya-kompaniya`) | 1184205024849 | 4205376019 | manufacturer |

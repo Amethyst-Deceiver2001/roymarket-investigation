@@ -18,16 +18,19 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 
-from graph_contract import GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, build_view_projections
+from graph_contract import CONFIDENCE_GRADE, GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, source_grade, build_view_projections, sale_detail, PARTNER_KIND_EDGE
 
 REPO = Path(__file__).resolve().parent.parent
 REG = REPO / "data" / "registry"
 ENTITIES = REG / "entities.json"
 PEOPLE = REG / "people.json"
 MILITARY_UNITS = REG / "military_units.json"
+PROGRAMS = REG / "programs.json"
+PRODUCTS = REG / "products.json"
+SOURCES = REG / "sources.json"
 OUT = REG / "relationship_graph.json"
 VIEWS_OUT = REG / "relationship_graph_views.json"
 
@@ -291,11 +294,27 @@ def _director_temporal_status(entry: dict, current_name: str | None) -> str:
 
 
 def build_graph(entities: list[dict], people: list[dict],
-                 military_units: list[dict] | None = None) -> dict:
-    """Return a deterministic full graph and evidence-first derived views."""
+                 military_units: list[dict] | None = None,
+                 programs: list[dict] | None = None,
+                 products: list[dict] | None = None,
+                 sources: list[dict] | None = None) -> dict:
+    """Return a deterministic full graph and evidence-first derived views.
+    sources (sources.json) lets every edge be graded from its document's kind (B1); without it an edge
+    with a source and no confidence is graded "rep"."""
+    src_by_id = {s["id"]: s for s in sources or []}
     entities = [e for e in entities if not e.get("_merged_into")]
     people = [p for p in people if not p.get("_merged_into")]
     military_units = military_units or []
+    programs = programs or []
+    products = products or []
+    # names a products.json record covers (its versions and accessories): the maker's own products[] leaves for them
+    # are replaced by the one record node
+    record_names: dict[str, set] = defaultdict(set)
+    for rec in products:
+        for nm in [rec.get("name_ru")] + [v.get("name_ru") for v in rec.get("versions") or []] \
+                + [a.get("name_ru") for a in rec.get("accessories") or []]:
+            if nm:
+                record_names[rec["maker"]].add(normalize(re.sub(r"[«»\"]", "", nm)))
     entity_by_ogrn = {e.get("ogrn"): e["slug"] for e in entities if e.get("ogrn")}
     inn_to_entity_slug = {e.get("inn"): e["slug"] for e in entities if e.get("inn")}
     # Every distinct government_contracts[].customer name, longest first so
@@ -380,6 +399,10 @@ def build_graph(entities: list[dict], people: list[dict],
             designation_confidence=unit.get("designation_confidence"),
         )
 
+    for rec in programs:
+        add_node(f"{rec['kind']}::{rec['slug']}", kind=rec["kind"],
+                 label=rec.get("name_ru") or rec["slug"], subtype=rec.get("subtype"))
+
     def add_stub(raw_name: str, context: str, inn: str | None = None) -> str | None:
         if is_noise_name(raw_name):
             return None
@@ -408,7 +431,7 @@ def build_graph(entities: list[dict], people: list[dict],
         return None
 
     def add_edge(source, target, edge_type, label=None, source_id=None, as_of=None,
-                 weight=1.0, temporal_status="unknown", confidence=None) -> None:
+                 weight=1.0, temporal_status="unknown", confidence=None, detail=None) -> None:
         if source in nodes and target in nodes:
             as_of = as_of if isinstance(as_of, str) and _DATE_RE.fullmatch(as_of) else None
             if temporal_status in {"current", "historical"} and (not as_of or not source_id):
@@ -417,8 +440,30 @@ def build_graph(entities: list[dict], people: list[dict],
                 "source": source, "target": target, "type": edge_type,
                 "label": label, "source_id": source_id, "as_of": as_of,
                 "weight": weight, "temporal_status": temporal_status,
-                "confidence": confidence,
+                "confidence": confidence, "detail": detail,
+                "grade": (CONFIDENCE_GRADE.get(confidence, "open") if confidence
+                          else source_grade(src_by_id.get(source_id)) if src_by_id and source_id
+                          else "rep" if source_id else "open"),
             })
+
+    # every (seller, maker) pair declared in a sells_for[] field, so an older prose "dealer" related
+    # entry for the same pair (either direction) is not drawn twice
+    sells_pairs_all = {(e["slug"], x.get("slug")) for e in entities for x in e.get("sells_for") or []}
+
+    # programs.json records (schema v8): operators, organisers, parents and group members become edges here;
+    # an entity's own memberships[] / participations[] are drawn in the entity loop below.
+    for rec in programs:
+        node = f"{rec['kind']}::{rec['slug']}"
+        for key, etype in (("operators", "operates"), ("organisers", "organises")):
+            for x in rec.get(key) or []:
+                add_edge(x.get("slug"), node, etype, x.get("role") or rec.get("subtype"),
+                         x.get("source_id"), x.get("as_of"), confidence=x.get("basis"))
+        if rec.get("parent"):
+            add_edge(node, f"{rec['kind'] if rec['kind'] == 'event' else 'program'}::{rec['parent']}", "part_of",
+                     rec.get("subtype"), rec.get("parent_source_id"), rec.get("parent_as_of"))
+        for x in rec.get("members") or []:
+            add_edge(x.get("slug"), node, "member_of", x.get("role"),
+                     x.get("source_id"), x.get("as_of"), confidence=x.get("basis"))
 
     for entity in entities:
         slug = entity["slug"]
@@ -434,6 +479,10 @@ def build_graph(entities: list[dict], people: list[dict],
             add_edge(slug, target, "owns", subsidiary.get("role"), source_id, as_of,
                      temporal_status=temporal_status)
         for related in entity.get("related_entities") or []:
+            if (related.get("relationship_type") == "dealer"
+                    and ((slug, related.get("slug")) in sells_pairs_all
+                         or (related.get("slug"), slug) in sells_pairs_all)):
+                continue   # the structured sells_for[] edge replaces the old prose "dealer" link
             # relationship_type (schema v5, graph_contract.RELATED_ENTITY_
             # RELATIONSHIP_TYPES) is a structured category added 2026-09-15
             # to replace the old hardcoded "related (ambiguous)" label --
@@ -442,6 +491,25 @@ def build_graph(entities: list[dict], people: list[dict],
             add_edge(slug, related.get("slug"), "related",
                      related.get("relationship_type") or "related (ambiguous)",
                      related.get("source_id"))
+        for sale in entity.get("sells_for") or []:
+            # sells_for[] (schema v7): {slug, channel, basis, source_id, as_of, note}. The edge label is the
+            # channel; the basis grade rides in `confidence` (doc / press / inferred).
+            add_edge(slug, sale.get("slug"), "sells_for", sale.get("channel"),
+                     sale.get("source_id"), sale.get("as_of"), confidence=sale.get("basis"),
+                     detail=sale_detail(sale))
+        for pt in entity.get("platform_partners") or []:
+            # platform_partners[] (schema v10): {slug, kind, basis, source_id, as_of, note}; kind picks the edge type
+            if pt.get("kind") in PARTNER_KIND_EDGE:  # a malformed kind is reported by check_registry, not guessed here
+                add_edge(slug, pt.get("slug"), PARTNER_KIND_EDGE[pt["kind"]], pt["kind"],
+                         pt.get("source_id"), pt.get("as_of"), confidence=pt.get("basis"))
+        for m in entity.get("memberships") or []:
+            # memberships[] (schema v8): {program, role, basis, source_id, as_of, note}
+            add_edge(slug, f"program::{m.get('program')}", "resident_of", m.get("role"),
+                     m.get("source_id"), m.get("as_of"), confidence=m.get("basis"))
+        for m in entity.get("participations") or []:
+            # participations[] (schema v8): {event, role, basis, source_id, as_of, note}
+            add_edge(slug, f"event::{m.get('event')}", "participated_in", m.get("role"),
+                     m.get("source_id"), m.get("as_of"), confidence=m.get("basis"))
         for founder in parse_founder_entries(entity.get("founders")):
             raw_name = founder["name"]
             # ИНН/ОГРН resolution first, before the name-normalization
@@ -552,6 +620,8 @@ def build_graph(entities: list[dict], people: list[dict],
             else:
                 continue
             if not name:
+                continue
+            if normalize(re.sub(r"[«»\"]", "", name)) in record_names.get(slug, ()):
                 continue
             base_id = product_id(slug, name)
             seen_product_ids[base_id] += 1
@@ -774,6 +844,41 @@ def build_graph(entities: list[dict], people: list[dict],
                 unresolved.pop(node_id, None)
 
     detached_ids = sorted(set(detached_ids) | held_off)
+    # products.json records (schema v11): one product node per record, storefront nodes and their edges
+    storefront_edges: dict = {}
+    operated: dict = {}
+    for rec in products:
+        maker = rec.get("maker")
+        if maker not in nodes:
+            continue
+        first = (rec.get("versions") or [{}])[0].get("source_id")
+        pid = f"product::{maker}::{rec['slug']}"
+        add_node(pid, kind="product", label=rec.get("name_ru") or rec["slug"], owner_slug=maker, source_id=first,
+                 classification=classify_product(rec.get("name_ru") or "", rec.get("category")))
+        add_edge(maker, pid, "produces", source_id=first)
+        for lst in rec.get("listings") or []:
+            sel = lst.get("seller") or {}
+            sf_label = sel.get("storefront") or lst.get("channel") or "storefront"
+            sf_id = "storefront::" + (re.sub(r"[^a-z0-9а-я]+", "-", normalize(f"{lst.get('channel')} {sf_label}")).strip("-") or "unnamed")
+            add_node(sf_id, kind="storefront", label=sf_label, platform=lst.get("channel"))
+            key = (sf_id, pid)
+            prev = storefront_edges.get(key)
+            if prev is None or (lst.get("as_of") or "") >= (prev.get("as_of") or ""):
+                storefront_edges[key] = lst
+            if sel.get("entity") in nodes:
+                okey = (sf_id, sel["entity"])
+                if okey not in operated or (lst.get("as_of") or "") >= (operated[okey].get("as_of") or ""):
+                    operated[okey] = lst
+    for (sf_id, ent), lst in sorted(operated.items()):
+        add_edge(sf_id, ent, "operated_by", "seller", lst.get("source_id"), lst.get("as_of"), confidence=lst.get("basis"))
+    for (sf_id, pid), lst in sorted(storefront_edges.items()):
+        add_edge(sf_id, pid, "lists", lst.get("channel"), lst.get("source_id"), lst.get("as_of"),
+                 confidence=lst.get("basis"))
+    # entity nodes carry the number of products drawn for them, for a count badge in a viewer
+    produced = Counter(e["source"] for e in edges if e["type"] == "produces")
+    for nid, node in nodes.items():
+        if node["kind"] == "entity":
+            node["product_count"] = produced.get(nid, 0)
     node_list = sorted(nodes.values(), key=lambda node: node["id"])
     edges.sort(key=lambda edge: (
         edge["source"], edge["target"], edge["type"], edge["as_of"] or "",
@@ -789,7 +894,7 @@ def build_graph(entities: list[dict], people: list[dict],
 
     graph = {
         "schema_version": GRAPH_SCHEMA_VERSION,
-        "generated_from": "data/registry/entities.json + people.json",
+        "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
         "node_count": len(node_list),
         "edge_count": len(edges),
         "unresolved_count": len(unresolved_list),
@@ -817,7 +922,10 @@ def main() -> None:
     entities = json.loads(ENTITIES.read_text(encoding="utf-8"))
     people = json.loads(PEOPLE.read_text(encoding="utf-8"))
     military_units = json.loads(MILITARY_UNITS.read_text(encoding="utf-8")) if MILITARY_UNITS.exists() else []
-    graph = build_graph(entities, people, military_units)
+    programs = json.loads(PROGRAMS.read_text(encoding="utf-8")) if PROGRAMS.exists() else []
+    products = json.loads(PRODUCTS.read_text(encoding="utf-8")) if PRODUCTS.exists() else []
+    sources = json.loads(SOURCES.read_text(encoding="utf-8")) if SOURCES.exists() else []
+    graph = build_graph(entities, people, military_units, programs, products, sources)
     views = build_views(graph)
     OUT.write_text(json.dumps(graph, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     VIEWS_OUT.write_text(json.dumps(views, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

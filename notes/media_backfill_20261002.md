@@ -1,0 +1,62 @@
+# Media backfill, 02.10.2026 (track V, steps 1–2)
+
+`data/registry/media.json` now holds 58 records. They came from 63 `entities.images[]` entries and the 2 `battlefield_evidence[]` entries that have an image; each record keeps its origin in `migrated_from`. Every picture whose genre can contain people was opened and looked at before `redact` was set. `shows` is the existing caption, which was written by whoever captured the image.
+
+## Classification
+
+| Genre | Records | Notes |
+|---|---|---|
+| logo | 20 | `graphic`, self, publishable |
+| marketing | 11 | product photos, banners, one CGI render, the Покров «Булат» v.4 card; publishable as excerpts only |
+| event | 10 | exhibition booths (Пиранья, Дронница-2025), the Покров concert, an NTV frame |
+| training / production / recruitment | 10 | «Архангел» and Гагаринг video stills |
+| facility | 4 | GoDrone showroom and storefront (two of them customer uploads, `third_party`) |
+| interview | 2 | the «Андрей Иванов» stills; also linked to Черезов |
+| other | 1 each | handover (Овод shipment), combat (Пиранья operator, `graphic: false`), portrait (Барашков), document (Барило letter to Замятин) |
+
+## Faces
+
+Three records showed the face of someone without a person record: m0037 (a bystander behind Барашков), m0045 (a Гагаринг graduate's eyes above the buff) and m0052 («Радистка»). The `docs/images/` copies were blurred on 02.10.2026, and the unblurred originals stay in `data/sources/`. The Барашков original had no archived copy, so it was saved first as `TGMEDIA_20260803_my-el-lab-post4210-barashkov-portrait.jpg`; it still needs `inventory_sources.py`.
+
+## Gaps: images in `docs/images/` with no archived original
+
+These images were not migrated, because a media record needs the source the picture came from:
+
+| Image | Entity | Missing |
+|---|---|---|
+| `gagaring_hq_krasnodar_residential.jpg` | ooo-gagaring | Any source. Probably a street-level view of ул. Фадеева 429/3; provider and date unknown. |
+| `gagaring_school_kunikova_annex.jpg` | ooo-gagaring | The picture's own source (s5385 is the licence that gives the address, not the image). |
+| `uas_murommash_satellite.jpg` | ooo-npts-basirtk | Any source, the imagery provider and date, and the basis for the coordinates. |
+| `uas_kovrovets_106_division.jpg` | ooo-npts-basirtk | The channel post it came from. |
+| `uas_stupor_antidrone.jpg` | ooo-npts-basirtk | The post of 16.10.2024. |
+| `uas_kindyakov_speech.jpg` | ooo-npts-basirtk | Any source (the caption says an unrelated public event). |
+| `uas_barilo_letter_sukhonenkova.jpg` | ooo-npts-basirtk | The post or document; the first letter is s0232. |
+
+**Decision (user, 02.10.2026):** these images come from the original manual discovery. Keep them in `docs/images/` as they are, and source them later. Re-capturing them is the fix. For the two facility views, use the screenshot rule decided 02.10.2026: Google Earth or Yandex Maps, with the provider and imagery date recorded.
+
+## Open
+
+- 13 stills have no frame timestamp. Record `frame.t` when the source video is next opened.
+- 76 Telegram media files in `data/sources/` are not linked to any record (step 2, part 2).
+- `entities.images[]` and `battlefield_evidence[].image_path` are still in place. New builders read `media.json`, and the old fields are retired once nothing reads them.
+
+## Handover photos (added 02.10.2026)
+
+`tg_media_pull.py fetch` on @nashapravdafond (posts 393–615, the 16 «Булат» deliveries) saved 20 images, now s8966–s8985 and media m0068–m0087. Posts 397 and 454 have no picture in their public preview. Each record points at its delivery (`bulat-dNN`) and at the foundation, not at the product: no photo shows a recognisable «Булат», so the handover of a «Булат» rests on the post text, as before.
+
+Faces: in 9 photos every clear face was blurred in the publish copy (`exhibits/images/media/<id>.jpg`, recorded as the record's `file`); the originals in `data/sources/` are untouched. In the other 11, faces are covered, turned away or already blurred by the foundation, checked by eye. The foundation has 17 people on file but none with a photo, so nobody in frame was identified. Matching a face to a record is not done without a reference image or a caption naming the person.
+
+Aside: people.json holds both `brovchenko-sergey-rufinovich` and `sergey-rufinovich-brovchenko`, both `brovchenko-aleksandr-rufinovich` and `aleksandr-rufinovich-brovchenko`, and both `karabinskiy-ivan-igorevich` and `ivan-igorevich-karabinskiy`. These look like duplicate pairs to merge (not done here).
+
+## Correction: faces of the involved are shown (user, 02.10.2026)
+
+The first face rule (blur everyone without a person record) misread the 2026-10-02 PII amendment: everyone involved is a person of interest, record or not. Reversed the same day:
+- the 9 handover photos use their untouched originals again;
+- the three `docs/images/` files (Барашков, the Гагаринг graduate, «Радистка») were restored from the archived originals, after checking that each matches the pre-blur file by hash;
+- all 12 records are now `redact: none_needed`, with a note.
+
+Only a clearly uninvolved bystander is blurred. Nobody is named from a face.
+
+## Layout: pictures sit on the card they support
+
+The chain view no longer has a gallery below the chain. The product card holds its main picture and a strip of its other pictures, grouped by publisher. A seller card holds its own listing's pictures. Each handover line on the recipients card holds that handover's photos, and the maker card holds the maker's own media. A thumbnail opens the full evidence figure with its caption, provenance, date and footnote.
