@@ -205,10 +205,19 @@ class Chain:
         return (f'<p class="row sanc"><span class="rm-sanction">Sanctioned <b>{esc(", ".join(seen))}</b></span>'
                 f'{self.ref(*sids)}</p>')
 
-    def card(self, cid, kind, label, title, body):
+    def card(self, cid, kind, label, title, body, slug=None):
         icon, extra = KIND_MARK.get(kind, ("", ""))
         return (f'<article class="rm-card k-{kind}{extra}" id="{cid}"><header><span class="rm-kind">'
-                f'{kind_icon(icon)}{esc(label)}</span></header><h3 class="rm-name">{title}</h3>{body}</article>')
+                f'{kind_icon(icon)}{esc(label)}</span>{self.logo(slug)}</header><h3 class="rm-name">{title}</h3>{body}</article>')
+
+    def logo(self, slug):
+        """The entity's own logo, from a media record of genre logo; nothing when none is on file."""
+        if not slug:
+            return ""
+        m = next((x for x in media_about(self.media, {("entity", slug)}) if x.get("genre") == "logo"), None)
+        src = self.img(m) if m else None
+        dark = " on-dark" if m and m.get("logo_ground") == "dark" else ""
+        return f'<img class="rm-logo{dark}" src="{esc(src)}" alt="Logo of {esc(split_name(self.ents[slug])[0])}">' if src else ""
 
     def edge(self, a, b, grade, label, bus=False):
         self.edges.append({"from": a, "to": b, "grade": grade, "label": label, "bus": bus})
@@ -220,7 +229,7 @@ class Chain:
 
         # A: ЦБСТ, programmes, events
         c = self.ents[CBST]
-        self.top["A"].append(self.card("hub", "hub", "Hub", self.name(c), self.sanctions(c)))
+        self.top["A"].append(self.card("hub", "hub", "Hub", self.name(c), self.sanctions(c), slug=CBST))
         tie = m.get("cbst_tie") or {}
         g = reader_grade(tie.get("confidence")) if tie.get("confidence") in ("t-doc", "t-open", "press") else None
         if g:
@@ -260,11 +269,7 @@ class Chain:
                         f'since {ru_date(restricted[0]["as_of"])}{self.ref(restricted[0].get("source_id"))}</p>')
         if g:
             rows.append(f'<p class="row">Linked to ЦБСТ{self.ref(tie.get("source_id"))}</p>')
-        prod_refs = self.media_refs()
-        own = [x for x in media_about(self.media, {("entity", m["slug"])}) if x.get("genre") != "logo"
-               and not any((a_["type"], a_["id"]) in prod_refs for a_ in x.get("about") or [])]
-        rows.append(self.strip(own, label=f"Published by {maker_left}"))
-        self.top["B"].append(self.card("maker", "maker", "Maker", self.name(m), "".join(rows)))
+        self.top["B"].append(self.card("maker", "maker", "Maker", self.name(m), "".join(rows), slug=m["slug"]))
 
         # C: product
         vers = ", ".join(esc(v["name_ru"]) for v in p.get("versions") or [])
@@ -309,7 +314,7 @@ class Chain:
                     f'<p class="row">Listed {when}{self.ref(*[li["source_id"] for li in lis])}</p>'
                     + (self.sanctions(e) if e and ent != m["slug"] else "")
                     + self.strip(media_about(self.media, {("listing", li["id"]) for li in lis}), label="Pictures of this listing"))
-            add_row(f"ch-{i}", ent, self.card(f"ch-{i}", "channel" if e else "storefront", "Sells", title, body),
+            add_row(f"ch-{i}", ent, self.card(f"ch-{i}", "channel" if e else "storefront", "Sells", title, body, slug=ent),
                     "doc" if all(li.get("basis") == "doc" for li in lis) else "rep", "Listed")
 
         for e in self.ents.values():
@@ -330,7 +335,7 @@ class Chain:
                     extra(e["slug"], line)
                 else:
                     cid = f"sf-{len(self.rows)}"
-                    add_row(cid, e["slug"], self.card(cid, "channel", "Sells", self.name(e), line + self.sanctions(e)),
+                    add_row(cid, e["slug"], self.card(cid, "channel", "Sells", self.name(e), line + self.sanctions(e), slug=e["slug"]),
                             reader_grade(sf.get("basis")), "Sells")
 
         contracts = []
@@ -342,7 +347,7 @@ class Chain:
             if e["slug"] not in row_of:
                 cid = f"gc-{len(self.rows)}"
                 add_row(cid, e["slug"], self.card(cid, "channel", "Supplies the state", self.name(e),
-                                                  f'<p class="row">State supplier of {esc(self.pq)}</p>' + self.sanctions(e)),
+                                                  f'<p class="row">State supplier of {esc(self.pq)}</p>' + self.sanctions(e), slug=e["slug"]),
                         "doc", "Supplies")
         for slug, i in list(row_of.items()):
             e = self.ents[slug]
@@ -385,7 +390,8 @@ class Chain:
                     + (f'<p class="row">Donations received in {ffin["year"]}: {money(ffin["funds_received"])}'
                        f'{self.ref(ffin.get("source_id"))}</p>' if ffin else "")
                     + (self.sanctions(e) if e else ""))
-            self.rows.append({"id": cid, "card": self.card(cid, "donor", "Donates", self.name(e) if e else esc(slug), body),
+            self.rows.append({"id": cid, "card": self.card(cid, "donor", "Donates", self.name(e) if e else esc(slug), body,
+                                                           slug=slug if e else None),
                               "buyers": []})
             self.edge("product", cid, "open", "How the donor obtained it is not documented", bus=True)
             rid = f"rec-{len(self.rows)}"

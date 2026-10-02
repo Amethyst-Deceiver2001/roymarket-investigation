@@ -73,6 +73,19 @@ after the design system redo and a new landing page.
    (OOO «Trimiks»), overridable in corrections; `name_latin` stays the
    screening string. 185 of 252 entities have no `name_latin`, 29 hold an
    OpenSanctions caption.
+   **Brand first (user's suggestion 02.10.2026; proposal, awaiting
+   confirmation).** Readers meet the brand (3mx, GoDrone, Пиранья) on boxes,
+   marketplaces and Telegram, not the legal name (ООО «Тримикс»). A card
+   leads with a documented brand. The legal name sits directly beneath it,
+   never hidden, and the Sanctioned flag stays with the legal name, because
+   lists name the company, not the trademark. This needs structured
+   `brands[]` (`{name, kind: trade_name|trademark, source_id, as_of}`) in
+   place of the free-text `brand_ru`: Тримикс's reads «Булат» / 3mx, mixing
+   product and brand, and only 39 of 252 entities have one. One brand can
+   span several legal entities (КБ «СПЕКТР»), and a product name is never a
+   company brand. Company cards already carry the entity's logo
+   (media genre `logo`, with `logo_ground: dark` for a mark drawn for a dark
+   ground).
 6. **New reader pages** (chain views per case, entity pages for specialists) on
    the new system, citing through B4.
 7. **B6 explorer** narrowed to neighbourhood-on-demand once two chain views

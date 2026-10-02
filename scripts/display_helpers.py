@@ -153,11 +153,24 @@ def publish_copy(m: dict, dest_dir: Path, max_px: int = 1200) -> str | None:
     if not m.get("file") or not src.exists():
         return None
     dest_dir.mkdir(parents=True, exist_ok=True)
+    if src.suffix.lower() == ".svg":
+        out = dest_dir / f"{m['id']}.svg"
+        if not out.exists() or out.stat().st_mtime < src.stat().st_mtime:
+            out.write_bytes(src.read_bytes())
+        return out.name
     ext = src.suffix.lower() if src.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp") else ".jpg"
     out = dest_dir / f"{m['id']}{ext}"
     if not out.exists() or out.stat().st_mtime < src.stat().st_mtime:
         from PIL import Image
         im = Image.open(src)
+        if m.get("genre") == "logo":   # trim the empty margin so the mark fills its slot
+            from PIL import ImageChops
+            rgb = im.convert("RGB")
+            bg = Image.new("RGB", rgb.size, rgb.getpixel((0, 0)))
+            box = ImageChops.difference(rgb, bg).convert("L").point(lambda v: 255 if v > 24 else 0).getbbox()
+            if box:
+                pad = 6
+                im = im.crop((max(0, box[0] - pad), max(0, box[1] - pad), min(im.width, box[2] + pad), min(im.height, box[3] + pad)))
         im.thumbnail((max_px, max_px))
         im.save(out)
     return out.name

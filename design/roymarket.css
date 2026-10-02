@@ -27,6 +27,8 @@
 
   /* Hub (ЦБСТ): marked by weight, not hue. */
   --hub-edge: var(--ink);
+  --logo-plate: #ffffff;   /* brand marks keep their own ground in both themes */
+  --logo-plate-dark: #14181d;   /* for a mark drawn for a dark ground (logo_ground: dark) */
 
   --shadow: 0 1px 2px rgba(20, 24, 29, .06), 0 6px 18px rgba(20, 24, 29, .05);
 
@@ -123,6 +125,9 @@ h1, h2, h3 { text-wrap: balance; }
 .rm-name a:hover { border-bottom-color: var(--accent); color: var(--accent); }
 .rm-name small { display: block; font: 400 12.5px/1.35 var(--font-sans); color: var(--ink-3); margin-top: 2px; }
 .rm-card p { margin: 4px 0; font-size: var(--t-note); color: var(--ink-2); }
+.rm-card > header .rm-logo { margin-left: auto; height: 26px; max-width: 110px; object-fit: contain; background: var(--logo-plate);
+  border: 1px solid var(--rule-soft); border-radius: 3px; padding: 2px 4px; }
+.rm-card > header .rm-logo.on-dark { background: var(--logo-plate-dark); }
 .rm-card.hub { border: 2px solid var(--hub-edge); }
 .rm-card.hub .rm-kind { color: var(--ink); }
 .rm-card.absent { background: transparent; border-style: dashed; box-shadow: none; }

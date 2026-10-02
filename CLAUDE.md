@@ -429,7 +429,7 @@ Rules (user, 2026-10-02):
 - **Graphic content (proposed default):** stills only, a content warning, nothing showing casualties. Combat imagery needs `graphic` set.
 - **`docs/images/` is public.** Pages serves it, so blur any uninvolved bystander before a file lands there. An image with no archived original must not be added there.
 
-Deliveries now carry stable ids (`bulat-d01`…) so media can point at them. `check_registry.py` validates the record. Backfill state and gaps: `notes/media_backfill_20261002.md`.
+A company card shows the entity's logo from a media record of genre `logo` (set `logo_ground: dark` when the mark is drawn for a dark ground; logo publish copies are trimmed to their content). Deliveries now carry stable ids (`bulat-d01`…) so media can point at them. `check_registry.py` validates the record. Backfill state and gaps: `notes/media_backfill_20261002.md`.
 
 ## Programs, events and groups (schema v8, added 2026-10-01 at user direction)
 
