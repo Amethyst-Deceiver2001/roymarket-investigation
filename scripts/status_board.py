@@ -494,11 +494,27 @@ def summary(board):
     return "\n".join(lines)
 
 
+def diff(prev, cur):
+    """Flags that appeared or cleared since a previous board, keyed by (slug, code, text)."""
+    def keyed(b):
+        return {(r["slug"], f["code"], f["text"]): (r, f) for r in b["rows"] for f in r["flags"]}
+    p, c = keyed(prev), keyed(cur)
+    lines = [f"Changes since {prev.get('generated')}:"]
+    new = [c[k] for k in c.keys() - p.keys()]
+    gone = [p[k] for k in p.keys() - c.keys()]
+    for label, items in (("new", new), ("cleared", gone)):
+        lines.append(f"  {len(items)} {label} flag(s)")
+        for r, f in sorted(items, key=lambda x: (x[1]["kind"], x[0]["slug"])):
+            lines.append(f"    {f['kind']:7} {r['slug']}: {f['text'][:110]}")
+    return "\n".join(lines)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--json", help="write the full board as JSON here")
     ap.add_argument("--slug", help="print one record's flags")
     ap.add_argument("--today", help="YYYY-MM-DD (default: today)")
+    ap.add_argument("--diff", help="a previous --json board: print flags new or cleared since it")
     ap.add_argument("--scan-state", help="weekly_scan_state.json (default: shared watch folder)")
     ap.add_argument("--developments", help="developments.json (default: shared watch folder)")
     a = ap.parse_args()
@@ -518,6 +534,8 @@ def main():
         print(f"no record {a.slug}", file=sys.stderr)
         return 1
     print(summary(board))
+    if a.diff:
+        print(diff(json.loads(Path(a.diff).read_text(encoding="utf-8")), board))
     return 0
 
 
