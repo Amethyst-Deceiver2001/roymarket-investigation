@@ -9,14 +9,21 @@ against Osadchuk — returned an exact, high-confidence match reproducing this
 project's own already-cited DOB/sourceUrl data).
 
 **Quota (2026-08-25): the key is a non-commercial `journalist` grant, 150
-requests/month, no expiration.** Each /match/default call below — one batch
-of up to 20 records — counts as ONE request against that cap regardless of
-batch size, so batching large is what makes the quota workable at all
-(a full 149-entity + ~300-person sweep is ~23 requests at BATCH=20, not
-450). Still, this script now refuses to run past `--budget` (default 100,
-leaving headroom for the month's other usage) without `--force-budget` —
-see `estimate_requests()` below. Don't raise BATCH past 20 without checking
-OpenSanctions' own current limit for /match/default.
+requests/month, no expiration.** **Corrected 2026-10-02:** this docstring used
+to say one /match/default call of up to 20 records costs ONE request. The
+user's first run used up the whole month's 150 in one go, so the quota is
+evidently counted per record (per query in the batch), not per HTTP call. The
+script now budgets per record: `--budget` (default 25) is the number of
+records a run may screen. Records are picked never-screened first, then oldest
+screen first, and anything screened within `--max-age` days (default 90) is
+skipped. `--dry-run` prints the plan without the key or the network.
+Batching (BATCH=20) still saves round trips, not quota.
+
+What to spend it on: since 2026-10-02 `sanctions_watch.py` checks the official
+EU/US/UK/Swiss lists by identifier for free every week, so this quota is best
+kept for what that cannot do: people (lists rarely print a personal ИНН, and
+OpenSanctions matches on name + date of birth), regimes the watcher does not
+read (Canada, Australia, Japan, Ukraine's NSDC), and new records.
 
 **Licensing (CC BY-NC, per OpenSanctions' 2026-08-25 reply):** quoting a
 match in the published brief with attribution is fine under this key;
@@ -56,13 +63,14 @@ After running this, refresh the pipeline:
     python3 scripts/check_registry.py
 
 Usage:
-    python3 scripts/screen_opensanctions.py                  # everyone, skip already-screened today
+    python3 scripts/screen_opensanctions.py --dry-run         # the plan: which records, how much quota
+    python3 scripts/screen_opensanctions.py                   # up to 25 records, never-screened first
+    python3 scripts/screen_opensanctions.py --only slug-a,slug-b   # just these records
     python3 scripts/screen_opensanctions.py --limit 5         # first 5 only
     python3 scripts/screen_opensanctions.py --kind people      # people only (default: both)
     python3 scripts/screen_opensanctions.py --kind entities
-    python3 scripts/screen_opensanctions.py --force            # re-screen even if already done today
-    python3 scripts/screen_opensanctions.py --budget 30         # cap this run's spend below the default 100
-    python3 scripts/screen_opensanctions.py --force-budget      # run past --budget anyway (explicit override)
+    python3 scripts/screen_opensanctions.py --force            # ignore --max-age (still within --budget)
+    python3 scripts/screen_opensanctions.py --budget 10         # screen at most 10 records this run
 """
 from __future__ import annotations
 
@@ -75,7 +83,7 @@ import time
 import unicodedata
 import urllib.error
 import urllib.request
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -87,8 +95,9 @@ ENV_FILE = REPO / ".env"
 API_URL = "https://api.opensanctions.org/match/default?algorithm=best"
 MATCH_THRESHOLD_ARCHIVE = 0.7  # OpenSanctions' own "likely match" cutoff
 DELAY_SECONDS = 0.5  # batch endpoint is generous, but still a shared service
-BATCH = 20  # one /match/default call, however many records it holds, is 1 request against the monthly quota
-DEFAULT_BUDGET = 100  # requests this run may spend; the key's monthly cap is 150 total
+BATCH = 20  # records per /match/default call: saves round trips, NOT quota (quota is per record)
+DEFAULT_BUDGET = 25  # records this run may screen; the key's monthly cap is 150 records in all
+DEFAULT_MAX_AGE = 90  # days: a record screened more recently than this is skipped
 
 
 def load_api_key() -> str:
@@ -148,34 +157,42 @@ def build_person_query(p: dict) -> dict:
     return {"schema": "Person", "properties": props}
 
 
-def pending_targets(records: list, kind: str, today: str, force: bool) -> list:
+def pending_targets(records: list, kind: str, today: str, force: bool,
+                    max_age: int = DEFAULT_MAX_AGE, only: set | None = None) -> list:
+    """(record, query) pairs due for screening, never-screened first, then oldest first."""
+    cutoff = (date.fromisoformat(today) - timedelta(days=max_age)).isoformat()
     targets = []
     for r in records:
-        field_screened = "opensanctions_screened_at"
-        if not force and r.get(field_screened) == today:
+        if r.get("_merged_into"):
+            continue
+        if only is not None and r.get("slug") not in only:
+            continue
+        last = (r.get("opensanctions_screened_at") or "")[:10]
+        if not force and only is None and last and last > cutoff:
             continue
         q = build_entity_query(r) if kind == "entities" else build_person_query(r)
         if q is None:
             continue
         targets.append((r, q))
+    targets.sort(key=lambda rq: (rq[0].get("opensanctions_screened_at") or "")[:10])
     return targets
 
 
 def requests_needed(n_targets: int) -> int:
-    return (n_targets + BATCH - 1) // BATCH if n_targets else 0
+    """Quota cost of screening n records: one per record (see the docstring)."""
+    return n_targets
 
 
-def process(records: list, kind: str, api_key: str, today: str, force: bool) -> int:
+def process(targets: list, kind: str, api_key: str, today: str) -> int:
     field_screened = "opensanctions_screened_at"
     field_matches = "opensanctions_matches"
 
-    targets = pending_targets(records, kind, today, force)
-
     if not targets:
-        print(f"  [{kind}] nothing to do (all already screened today, use --force to re-screen)")
+        print(f"  [{kind}] nothing to do")
         return 0
 
-    print(f"  [{kind}] screening {len(targets)} record(s) in {requests_needed(len(targets))} request(s) ...")
+    print(f"  [{kind}] screening {len(targets)} record(s) in "
+          f"{(len(targets) + BATCH - 1) // BATCH} call(s), costing {requests_needed(len(targets))} of the quota ...")
     hit_count = 0
     for start in range(0, len(targets), BATCH):
         chunk = targets[start:start + BATCH]
@@ -237,16 +254,20 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--kind", choices=["entities", "people", "both"], default="both")
-    ap.add_argument("--force", action="store_true")
+    ap.add_argument("--force", action="store_true",
+                    help="ignore --max-age (still capped by --budget)")
+    ap.add_argument("--only", help="comma-separated slugs to screen, whatever their screen date")
+    ap.add_argument("--max-age", type=int, default=DEFAULT_MAX_AGE,
+                    help=f"skip records screened within this many days (default {DEFAULT_MAX_AGE})")
     ap.add_argument("--budget", type=int, default=DEFAULT_BUDGET,
-                     help=f"max /match/default requests this run may spend (default {DEFAULT_BUDGET}; "
-                          "the key's monthly cap is 150 total, shared with any other use of it)")
-    ap.add_argument("--force-budget", action="store_true",
-                     help="run even if the estimated request count exceeds --budget")
+                    help=f"max records this run may screen (default {DEFAULT_BUDGET}; the key's "
+                         "monthly cap is 150 records, shared with any other use of it)")
+    ap.add_argument("--dry-run", action="store_true",
+                    help="print which records would be screened and the quota cost; no key, no network")
     args = ap.parse_args()
 
-    api_key = load_api_key()
     today = date.today().isoformat()
+    only = set(args.only.split(",")) if args.only else None
 
     entities = json.loads(ENTITIES.read_text(encoding="utf-8")) if args.kind in ("entities", "both") else []
     people = json.loads(PEOPLE.read_text(encoding="utf-8")) if args.kind in ("people", "both") else []
@@ -254,26 +275,28 @@ def main() -> None:
     entity_targets = (entities if args.limit is None else entities[:args.limit]) if entities else []
     people_targets = (people if args.limit is None else people[:args.limit]) if people else []
 
-    n_entity_req = requests_needed(len(pending_targets(entity_targets, "entities", today, args.force))) if entity_targets else 0
-    n_people_req = requests_needed(len(pending_targets(people_targets, "people", today, args.force))) if people_targets else 0
-    estimated = n_entity_req + n_people_req
+    due = ([("entities", rq) for rq in pending_targets(entity_targets, "entities", today, args.force,
+                                                       args.max_age, only)] +
+           [("people", rq) for rq in pending_targets(people_targets, "people", today, args.force,
+                                                     args.max_age, only)])
+    # One queue across both kinds, never-screened first, then oldest screen first.
+    due.sort(key=lambda kr: (kr[1][0].get("opensanctions_screened_at") or "")[:10])
+    chosen, deferred = due[:args.budget], due[args.budget:]
+    print(f"Due for screening: {len(due)} record(s). This run: {len(chosen)} "
+          f"(budget {args.budget}; quota is per record, monthly cap 150). Deferred: {len(deferred)}.")
+    for kind, (r, _) in chosen:
+        print(f"  {'entity' if kind == 'entities' else 'person'}: {r.get('slug')} "
+              f"(last screened {r.get('opensanctions_screened_at') or 'never'})")
+    if args.dry_run or not chosen:
+        return
 
-    print(f"Estimated requests this run: {estimated} (entities {n_entity_req} + people {n_people_req}), "
-          f"budget {args.budget}, monthly cap 150.")
-    if estimated > args.budget and not args.force_budget:
-        sys.exit(f"Refusing to run: estimated {estimated} requests exceeds --budget {args.budget}. "
-                  f"Re-run with a higher --budget or --force-budget if this is intentional, "
-                  f"or narrow scope with --limit/--kind.")
-
+    api_key = load_api_key()
     total_hits = 0
-
-    if entity_targets:
-        total_hits += process(entity_targets, "entities", api_key, today, args.force)
-        ENTITIES.write_text(json.dumps(entities, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-    if people_targets:
-        total_hits += process(people_targets, "people", api_key, today, args.force)
-        PEOPLE.write_text(json.dumps(people, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for kind, path, data in (("entities", ENTITIES, entities), ("people", PEOPLE, people)):
+        targets = [rq for k, rq in chosen if k == kind]
+        if targets:
+            total_hits += process(targets, kind, api_key, today)
+            path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print(f"\nDone. {total_hits} record(s) with a likely match (score >= {MATCH_THRESHOLD_ARCHIVE}) archived to data/sources/.")
     print("Every screened record (hit or not) now carries opensanctions_matches[] + opensanctions_screened_at.")
