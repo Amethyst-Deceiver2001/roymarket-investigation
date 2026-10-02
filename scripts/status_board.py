@@ -206,6 +206,14 @@ class Board:
             for slug in it.get("about") or []:
                 self.dev_by_slug[slug].append({**it, "archived": archived})
 
+        # Pre-sorted sanctions hits (the "Pre-sort sanctions hits" thread), newest file wins.
+        # A proposed verdict only labels the flag; the flag stays until a sanctions_review lands.
+        self.presort = {}
+        pre = sorted(SHARED_WATCH.glob("sanctions/presort_*.json")) if SHARED_WATCH.exists() else []
+        if pre:
+            for rec in json.loads(pre[-1].read_text(encoding="utf-8")).get("records", []):
+                self.presort[rec.get("slug")] = rec
+
         self.oq_by_slug = Counter()
         for q in self.global_oq:
             for k in ("entity_slug", "person_slug"):
@@ -300,8 +308,10 @@ class Board:
         # Screening hits nobody has reviewed.
         n_risk = risky_matches(e)
         if n_risk and not e.get("sanctions_review") and not e.get("sanctions"):
+            ps = presort_note(self.presort.get(e["slug"]))
             fl.append(flag("review", "screen_hits_unreviewed",
-                           f"{n_risk} sanctions-type screening hit(s), no sanctions review recorded", count=n_risk))
+                           f"{n_risk} sanctions-type screening hit(s), no sanctions review recorded" + ps.pop("text_suffix", ""),
+                           count=n_risk, **ps))
         n_oq = open_items(e.get("open_questions")) + self.oq_by_slug.get(e["slug"], 0)
         if n_oq:
             fl.append(flag("review", "open_questions", f"{n_oq} open question(s)", count=n_oq))
@@ -373,8 +383,10 @@ class Board:
                 fl.append(flag("gap", "no_inn", "Holds a company role but no personal ИНН on file"))
         n_risk = risky_matches(p)
         if n_risk and not p.get("sanctions") and not p.get("sanctions_review"):
+            ps = presort_note(self.presort.get(p["slug"]))
             fl.append(flag("review", "screen_hits_unreviewed",
-                           f"{n_risk} sanctions-type screening hit(s), no sanctions entry recorded", count=n_risk))
+                           f"{n_risk} sanctions-type screening hit(s), no sanctions entry recorded" + ps.pop("text_suffix", ""),
+                           count=n_risk, **ps))
         unsourced_roles = sum(1 for r in p.get("roles") or [] if isinstance(r, dict) and not r.get("source_id"))
         if unsourced_roles:
             fl.append(flag("gap", "unsourced_roles", f"{unsourced_roles} role(s) with no source", count=unsourced_roles))
@@ -479,6 +491,19 @@ class Board:
             "thresholds": {"egrul_stale_days": EGRUL_STALE_DAYS, "screen_stale_days": SCREEN_STALE_DAYS},
             "kinds": KINDS, "notes": self.notes, "rows": rows, "unattached_developments": orphans,
         }
+
+
+PRESORT_LABEL = {"likely_match": "likely match", "needs_checking": "needs checking",
+                 "likely_false_positive": "likely false positive"}
+
+
+def presort_note(rec):
+    if not rec:
+        return {}
+    v = rec.get("user_verdict") or rec.get("verdict")
+    who = "confirmed" if rec.get("user_verdict") else "awaiting your confirmation"
+    return {"presort": v, "presort_why": rec.get("why"),
+            "text_suffix": f" (pre-sorted: {PRESORT_LABEL.get(v, v)}, {who})"}
 
 
 def default_path(name):
