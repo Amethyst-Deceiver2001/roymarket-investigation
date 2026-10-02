@@ -35,13 +35,17 @@ REG = REPO / "data" / "registry"
 SRC_DIR = REPO / "data" / "sources"
 PAGES = "https://amethyst-deceiver2001.github.io/roymarket-investigation/"
 sys.path.insert(0, str(REPO / "scripts"))
-from display_helpers import ru_date  # noqa: E402
+from display_helpers import design_head, kind_icon, reader_grade, ru_date  # noqa: E402
 
 CBST = "ano-tsbst-centre-for-unmanned-systems-technologies"
-TIE_GRADE = {"t-doc": "doc", "t-open": "single", "press": "single"}
 REGIMES = [("Switzerland", "Switzerland"), ("EU", "EU"), ("OFAC", "US"), ("US ", "US"),
            ("United Kingdom", "UK"), ("UK ", "UK"), ("Japan", "Japan"), ("Canada", "Canada"),
            ("Australia", "Australia"), ("New Zealand", "New Zealand"), ("Ukraine", "Ukraine")]
+# card kind -> (icon, extra class)
+KIND_MARK = {"hub": ("company", " hub"), "programme": ("program", ""), "event": ("event", ""),
+             "maker": ("company", ""), "product": ("product", ""), "channel": ("company", ""),
+             "storefront": ("storefront", ""), "donor": ("company", ""), "buyer": ("buyer", ""),
+             "field": ("unit", ""), "absent": ("storefront", " absent")}
 ROLE_EN = {"exhibitor": "Showed «{p}» at the event", "resident": "Resident", "finalist": "Finalist",
            "co-organiser": "Co-organised by", "organiser": "Organised by"}
 
@@ -172,14 +176,11 @@ class Chain:
             nums.append(self.notes.index(desc) + 1)
         if not nums:
             return ""
-        return "<sup class=\"ref\">" + ",".join(f'<a href="#n{n}">{n}</a>' for n in sorted(set(nums))) + "</sup>"
+        return "<sup class=\"rm-ref\">" + ",".join(f'<a href="#n{n}">{n}</a>' for n in sorted(set(nums))) + "</sup>"
 
     def name(self, e, sub=True):
         left, right = split_name(e)
-        prof = REPO / "docs" / "profiles" / f"{e['slug']}.html"
-        title = (f'<a class="nm" href="{PAGES}profiles/{e["slug"]}.html" target="_blank" rel="noopener">{esc(left)}</a>'
-                 if prof.exists() else esc(left))
-        return title + (f"<small>{esc(right)}</small>" if sub and right else "")
+        return esc(left) + (f"<small>{esc(right)}</small>" if sub and right else "")
 
     def sanctions(self, e):
         seen, sids = [], []
@@ -194,12 +195,13 @@ class Chain:
                         break
         if not seen:
             return ""
-        return (f'<p class="row sanc"><span class="flag">Sanctioned</span> {esc(", ".join(seen))}'
+        return (f'<p class="row sanc"><span class="rm-sanction">Sanctioned <b>{esc(", ".join(seen))}</b></span>'
                 f'{self.ref(*sids)}</p>')
 
     def card(self, cid, kind, label, title, body):
-        return (f'<article class="card k-{kind}" id="{cid}"><header><span class="kind">{esc(label)}</span>'
-                f'<h3>{title}</h3></header>{body}</article>')
+        icon, extra = KIND_MARK.get(kind, ("", ""))
+        return (f'<article class="rm-card k-{kind}{extra}" id="{cid}"><header><span class="rm-kind">'
+                f'{kind_icon(icon)}{esc(label)}</span></header><h3 class="rm-name">{title}</h3>{body}</article>')
 
     def edge(self, a, b, grade, label, bus=False):
         self.edges.append({"from": a, "to": b, "grade": grade, "label": label, "bus": bus})
@@ -213,7 +215,7 @@ class Chain:
         c = self.ents[CBST]
         self.top["A"].append(self.card("hub", "hub", "Hub", self.name(c), self.sanctions(c)))
         tie = m.get("cbst_tie") or {}
-        g = TIE_GRADE.get(tie.get("confidence"))
+        g = reader_grade(tie.get("confidence")) if tie.get("confidence") in ("t-doc", "t-open", "press") else None
         if g:
             self.edge("hub", "maker", g, "Link to ЦБСТ")
         for mem in m.get("memberships") or []:
@@ -222,7 +224,7 @@ class Chain:
             self.top["A"].append(self.card(cid, "programme", "Programme", esc(prog.get("name_ru")),
                                            f'<p class="row">{esc(ROLE_EN.get(mem.get("role"), mem.get("role")))}, '
                                            f'{ru_date(mem.get("as_of"))}{self.ref(mem.get("source_id"))}</p>'))
-            self.edge(cid, "maker", "doc" if mem.get("basis") == "doc" else "single", "Member")
+            self.edge(cid, "maker", reader_grade(mem.get("basis")), "Member")
         if not m.get("memberships"):
             self.limits.append(f"No document records {esc(maker_left)} as a formal member of a ЦБСТ programme. "
                                "Its link to ЦБСТ rests on the posts and statements cited on its card.")
@@ -238,7 +240,7 @@ class Chain:
             self.top["A"].append(self.card(cid, "event", "Event", esc(ev.get("name_ru")),
                                            f'<p class="row">{esc(role)}, {ru_date(part.get("as_of"))}'
                                            f'{self.ref(part.get("source_id"))}</p>{orgs}'))
-            self.edge(cid, "maker", "doc" if part.get("basis") == "doc" else "single", "Exhibitor")
+            self.edge(cid, "maker", reader_grade(part.get("basis")), "Exhibitor")
 
         # B: maker
         rows = [self.sanctions(m)]
@@ -295,8 +297,8 @@ class Chain:
             body = (f'<p class="row">{esc(lis[0]["channel"])}</p>'
                     f'<p class="row">Listed {when}{self.ref(*[li["source_id"] for li in lis])}</p>'
                     + (self.sanctions(e) if e and ent != m["slug"] else ""))
-            add_row(f"ch-{i}", ent, self.card(f"ch-{i}", "channel", "Sells", title, body),
-                    "doc" if all(li.get("basis") == "doc" for li in lis) else "single", "Listed")
+            add_row(f"ch-{i}", ent, self.card(f"ch-{i}", "channel" if e else "storefront", "Sells", title, body),
+                    "doc" if all(li.get("basis") == "doc" for li in lis) else "rep", "Listed")
 
         for e in self.ents.values():
             for sf in e.get("sells_for") or []:
@@ -317,7 +319,7 @@ class Chain:
                 else:
                     cid = f"sf-{len(self.rows)}"
                     add_row(cid, e["slug"], self.card(cid, "channel", "Sells", self.name(e), line + self.sanctions(e)),
-                            "doc" if sf.get("basis") == "doc" else "single", "Sells")
+                            reader_grade(sf.get("basis")), "Sells")
 
         contracts = []
         for e in self.ents.values():
@@ -367,7 +369,7 @@ class Chain:
                          if f.get("funds_received")), None)
             body = (f'<p class="row">Donated {esc(self.pq)} to front-line units</p>'
                     + (f'<p class="row">Named alongside it: {esc(", ".join(co))}</p>' if co else "")
-                    + (f'<p class="row">Linked to ЦБСТ{self.ref(dtie.get("source_id"))}</p>' if TIE_GRADE.get(dtie.get("confidence")) else "")
+                    + (f'<p class="row">Linked to ЦБСТ{self.ref(dtie.get("source_id"))}</p>' if dtie.get("confidence") in ("t-doc", "t-open", "press") else "")
                     + (f'<p class="row">Donations received in {ffin["year"]}: {money(ffin["funds_received"])}'
                        f'{self.ref(ffin.get("source_id"))}</p>' if ffin else "")
                     + (self.sanctions(e) if e else ""))
@@ -384,7 +386,7 @@ class Chain:
                 f'{len(ds)} handovers <small>{ru_date(ds[0]["date"])} – {ru_date(ds[-1]["date"])}</small>',
                 f'<p class="note">As reported by the donor on its own Telegram channel.</p>'
                 + self.timeline(ds) + f'<ul class="rec">{items}</ul>'))
-            self.edge(cid, rid, "single", "Reported by the donor")
+            self.edge(cid, rid, "rep", "Reported by the donor")
             dname = split_name(e)[0] if e else slug
             self.limits.append(f"No document shows where {esc(dname)} obtained {esc(self.pq)}. "
                                "The line from the product to the donor is dotted for that reason.")
@@ -452,22 +454,22 @@ def render(ch, out):
 <!-- Generated by exhibits/build_chain_view.py {esc(p['slug'])} from data/registry on {dt.date.today().isoformat()}. Do not edit by hand. -->
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(ch.pname)}: Maker to Front</title>
-<style>{(REPO / 'exhibits' / 'chain_view.css').read_text()}</style></head>
+{design_head((REPO / 'exhibits' / 'chain_view.css').read_text())}</head>
 <body>
-<header class="top">
-  <p class="eyebrow">Draft · {ru_date(dt.date.today().isoformat())}</p>
-  <h1>{esc(ch.pq)} <span class="muted">from ЦБСТ to the front line</span></h1>
-  <p class="dek">{esc(cap(p.get('category')))} made by {esc(split_name(ch.maker)[0])}, a company
+<header class="rm-page top">
+  <p class="rm-eyebrow">Draft · {ru_date(dt.date.today().isoformat())}</p>
+  <h1 class="rm-h1">{esc(ch.pq)} <span class="rm-muted">from ЦБСТ to the front line</span></h1>
+  <p class="rm-dek">{esc(cap(p.get('category')))} made by {esc(split_name(ch.maker)[0])}, a company
   under sanctions. It is sold on marketplaces and through dealers, bought by state agencies under
   {n_buy} contract{'s' if n_buy != 1 else ''}, and handed to front-line units by a foundation that works with ЦБСТ.</p>
-  <ul class="legend" aria-label="How to read the lines">
-    <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="e g-doc"/></svg> A document shows it</li>
-    <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="e g-single"/></svg> Only the party's own word</li>
-    <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="e g-open"/></svg> Not documented</li>
+  <ul class="rm-legend" aria-label="How to read the lines">
+    <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="rm-ln doc"/></svg> A document shows it</li>
+    <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="rm-ln rep"/></svg> Reported: the party's own word or the press</li>
+    <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="rm-ln open"/></svg> Not documented</li>
     <li>Numbers refer to the sources at the end.</li>
   </ul>
 </header>
-<main>
+<main class="rm-page">
   <div class="chain" id="chain">
     <svg class="wires" id="wires" aria-hidden="true"></svg>
     {top}
@@ -476,10 +478,10 @@ def render(ch, out):
       {rows}
     </section>
   </div>
-  <section class="prose"><h2>What this does not show</h2><ul>{limits}</ul>
+  <section class="prose rm-prose"><h2 class="rm-h2">What this does not show</h2><ul>{limits}</ul>
   <p class="method">Every company, listing, contract and handover here comes from an archived document. Listings
   and handovers are as of the dates shown; {n_list} listings and {n_del} handovers are on file.</p></section>
-  <section class="prose notes"><h2>Sources</h2><ol>{ch.notes_list()}</ol></section>
+  <section class="prose rm-prose rm-sources"><h2 class="rm-h2">Sources</h2><ol>{ch.notes_list()}</ol></section>
 </main>
 <script>const EDGES={json.dumps(ch.edges, ensure_ascii=False)};
 {(REPO / 'exhibits' / 'chain_view.js').read_text()}</script>

@@ -32,7 +32,7 @@
       });
       const trunk = document.createElementNS(NS, 'path');
       trunk.setAttribute('d', `M${pr.right - box.left},${py} H${sx} M${sx},${Math.min(py, ...ys)} V${Math.max(py, ...ys)}`);
-      trunk.setAttribute('class', 'trunk');
+      trunk.setAttribute('class', 'rm-ln trunk');
       svg.appendChild(trunk);
       bus.forEach(([e], k) => {
         const r = document.getElementById(e.to).getBoundingClientRect();
@@ -53,7 +53,7 @@
     function add(e, d) {
       const p = document.createElementNS(NS, 'path');
       p.setAttribute('d', d);
-      p.setAttribute('class', 'e g-' + e.grade);
+      p.setAttribute('class', 'rm-ln e ' + e.grade);
       const t = document.createElementNS(NS, 'title');
       t.textContent = e.label;
       p.appendChild(t);
@@ -83,15 +83,15 @@
   function focus(id) {
     const keep = linked(id);
     chain.classList.add('focus');
-    document.querySelectorAll('.card').forEach(c => c.classList.toggle('on', keep.has(c.id)));
+    document.querySelectorAll('.rm-card').forEach(c => c.classList.toggle('on', keep.has(c.id)));
     paths.forEach(({ el, e }) => el.classList.toggle('on', keep.has(e.from) && keep.has(e.to)));
   }
   function clear() {
     chain.classList.remove('focus');
-    document.querySelectorAll('.card.on, .e.on').forEach(n => n.classList.remove('on'));
+    document.querySelectorAll('.rm-card.on, .e.on').forEach(n => n.classList.remove('on'));
   }
 
-  document.querySelectorAll('.card').forEach(c => {
+  document.querySelectorAll('.rm-card').forEach(c => {
     c.tabIndex = 0;
     c.addEventListener('mouseenter', () => focus(c.id));
     c.addEventListener('mouseleave', clear);

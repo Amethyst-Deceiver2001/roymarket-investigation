@@ -423,6 +423,10 @@ Residencies, accelerators, the national БАС project, recurring events and sam
 - **An organiser with no identifier gets no entity.** КЦПН (organiser of Дронница) is named in the record's `organisers` text only until an ИНН is read from a primary document.
 - **Participation is not residency.** Exhibiting at an event does not make an entity a ЦБСТ resident; the role and the source say what was shown or signed. Check who organised an event before writing "ЦБСТ's event": Дронница is run by КЦПН and НПЦ «Ушкуйник», and ЦБСТ participates.
 
+## Reader design system (`design/`, v2 2026-10-02)
+
+Every new reader page takes its colours, type and components from `design/roymarket.css`, inlined by `display_helpers.design_head()`. Page CSS holds layout only and never redefines a token. Grades come from `display_helpers.reader_grade()`, never from a page's own rule. Red is only the Sanctioned flag. Rules, the grade mapping and the validation record are in `design/README.md`. After changing the CSS, run `python3 design/build_ds_artifact.py && python3 design/artifact/components_src.py` and republish the РОЙ.МАРКЕТ Reader System artifact. Example values in that artifact come from the registry, never from memory.
+
 ## Writing: read `STYLE_GUIDE.md` before drafting any prose
 
 `STYLE_GUIDE.md` (repo root, added 2026-08-22) is authoritative for everything

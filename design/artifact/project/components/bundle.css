@@ -1,0 +1,92 @@
+/* Generated from design/roymarket.css by design/build_ds_artifact.py. */
+/* Base */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 var(--t-body)/1.5 var(--font-sans); }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1, h2, h3 { text-wrap: balance; }
+.rm-page { max-width: 1680px; margin: 0 auto; padding-inline: var(--space-5); }
+.rm-prose { max-width: var(--measure); }
+
+/* Masthead: eyebrow, the finding as a flat headline, a dek. */
+.rm-eyebrow { font: 600 var(--t-label)/1 var(--font-mono); letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 var(--space-3); }
+.rm-h1 { font: 500 var(--t-h1)/1.12 var(--font-serif); margin: 0 0 var(--space-3); }
+.rm-h1 .rm-muted { font-weight: 400; color: var(--ink-2); }
+.rm-h2 { font: 500 var(--t-h2)/1.2 var(--font-serif); margin: 0 0 var(--space-3); }
+.rm-dek { font-size: var(--t-lead); line-height: 1.5; color: var(--ink-2); max-width: var(--measure); margin: 0 0 var(--space-4); }
+.rm-muted { color: var(--ink-3); }
+.rm-label { font: 600 var(--t-label)/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+
+/* Grade chip: text always present, colour repeats it. */
+.rm-grade { display: inline-flex; align-items: center; gap: 5px; font: 600 10.5px/1 var(--font-mono); letter-spacing: .05em;
+  text-transform: uppercase; padding: 3px 6px; border-radius: 3px; white-space: nowrap; vertical-align: 1px; }
+.rm-grade.doc { color: var(--g-doc); background: var(--g-doc-bg); }
+.rm-grade.rep { color: var(--g-rep-ink); background: var(--g-rep-bg); }
+.rm-grade.open { color: var(--g-open); background: var(--g-open-bg); }
+
+/* Line grammar (SVG strokes): style carries the grade, colour repeats it. */
+.rm-ln { fill: none; stroke-width: 1.75; }
+.rm-ln.doc { stroke: var(--g-doc); }
+.rm-ln.rep { stroke: var(--g-rep); stroke-dasharray: 7 4; }
+.rm-ln.open { stroke: var(--g-open); stroke-dasharray: 0.5 4.5; stroke-linecap: round; stroke-width: 2.25; }
+.rm-ln.trunk { stroke: var(--ink-3); stroke-width: 1.2; opacity: .55; }
+
+/* Legend */
+.rm-legend { display: flex; flex-wrap: wrap; gap: var(--space-2) 22px; list-style: none; padding: 0; margin: 0 0 var(--space-5);
+  font-size: var(--t-note); color: var(--ink-2); }
+.rm-legend li { display: flex; align-items: center; gap: var(--space-2); }
+
+/* Sanction flag: the only red. Names the regimes. */
+.rm-sanction { display: inline-flex; align-items: center; gap: 6px; font: 700 10px/1 var(--font-mono); letter-spacing: .06em;
+  text-transform: uppercase; color: var(--sanction); background: var(--sanction-bg); border: 1px solid var(--sanction);
+  padding: 3px 6px; border-radius: 3px; flex-wrap: wrap; max-width: 100%; line-height: 1.3; vertical-align: 1px; }
+.rm-sanction b { font-weight: 500; letter-spacing: .02em; text-transform: none; }
+
+/* Identifier: bare digits, mono, never wrapped mid-number. */
+.rm-id { font: 400 12.5px/1.3 var(--font-mono); font-variant-numeric: tabular-nums; color: var(--ink-3); white-space: nowrap; }
+
+/* Card: one object in a chain. Kind label on top; name in serif; Cyrillic original beneath. */
+.rm-card { background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 12px; box-shadow: var(--shadow); min-width: 0; }
+.rm-card > header { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+.rm-kind { font: 600 10px/1 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); }
+.rm-kind svg { width: 14px; height: 14px; vertical-align: -3px; margin-right: 4px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.rm-name { font: 500 16px/1.25 var(--font-serif); margin: 0; overflow-wrap: anywhere; }
+.rm-name a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
+.rm-name a:hover { border-bottom-color: var(--accent); color: var(--accent); }
+.rm-name small { display: block; font: 400 12.5px/1.35 var(--font-sans); color: var(--ink-3); margin-top: 2px; }
+.rm-card p { margin: 4px 0; font-size: var(--t-note); color: var(--ink-2); }
+.rm-card.hub { border: 2px solid var(--hub-edge); }
+.rm-card.hub .rm-kind { color: var(--ink); }
+.rm-card.absent { background: transparent; border-style: dashed; box-shadow: none; }
+
+/* Unit mark (APP-6 hostile frame, monochrome so red stays reserved for sanctions). */
+.rm-unit { width: 34px; height: 40px; flex: none; }
+.rm-unit .frame { fill: none; stroke: var(--ink); stroke-width: 1.6; }
+.rm-unit .glyph, .rm-unit .ech { fill: none; stroke: var(--ink); stroke-width: 1.4; }
+.rm-unit .ech-fill { fill: var(--ink); }
+
+/* Verbatim quote: original Russian, never paraphrased; gloss separate. */
+.rm-quote { margin: 0; padding: 12px 16px; background: var(--panel-2); border-radius: var(--radius); font: 400 15px/1.55 var(--font-serif); color: var(--ink); }
+.rm-quote .rm-label { display: block; margin-bottom: 6px; }
+.rm-quote cite { display: block; margin-top: 8px; font: normal 400 12.5px/1.4 var(--font-sans); color: var(--ink-3); }
+.rm-quote .gloss { display: block; margin-top: 8px; font: 400 13.5px/1.5 var(--font-sans); color: var(--ink-2); }
+
+/* Finding callout: one per section at most. */
+.rm-callout { background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); padding: 16px 18px; max-width: var(--measure); }
+.rm-callout .rm-label { display: block; margin-bottom: 6px; color: var(--accent); }
+.rm-callout p { margin: 0; font-size: var(--t-lead); line-height: 1.5; }
+
+/* Footnote reference and source list: plain words and a public link, never an internal id. */
+sup.rm-ref { font: 600 10px/0 var(--font-mono); margin-left: 1px; }
+sup.rm-ref a { color: var(--accent); text-decoration: none; }
+sup.rm-ref a:hover { text-decoration: underline; }
+.rm-sources ol { font-size: var(--t-note); color: var(--ink-2); padding-left: 22px; }
+.rm-sources li { margin: 6px 0; }
+.rm-sources li:target { background: var(--accent-soft); }
+.rm-sources a { overflow-wrap: anywhere; }
+
+@media (max-width: 700px) {
+  .rm-page { padding-inline: var(--space-4); }
+  :root { --t-h1: 26px; --t-h2: 19px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }

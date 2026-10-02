@@ -1,0 +1,35 @@
+<!-- @dsCard height=300 -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&family=Spectral:wght@500&subset=cyrillic&display=swap">
+<style>
+  .cv { position: relative; width: 960px; height: 300px; background: var(--paper); overflow: hidden; }
+  .cv svg { position: absolute; left: 0; top: 0; }
+  .ink { fill: var(--ink); } .doc { fill: var(--g-doc); } .rep { fill: var(--g-rep); }
+  .san { fill: var(--sanction); } .tint { fill: var(--panel-2); }
+  .blk { rx: var(--radius); }
+  .w { fill: none; stroke-width: 2.5; }
+  .w.d { stroke: var(--g-doc); } .w.r { stroke: var(--g-rep); stroke-dasharray: 10 6; }
+  .w.o { stroke: var(--g-open); stroke-dasharray: 0.5 7; stroke-linecap: round; stroke-width: 3.5; }
+  .txt { position: absolute; left: 40px; top: 160px; max-width: 900px; }
+  .nm { margin: 0; font: 500 64px/.95 var(--font-serif); color: var(--ink); white-space: nowrap; }
+  .tg { margin: 16px 0 0; font: 400 14px/1.4 var(--font-sans); color: var(--ink-3); }
+</style>
+<div class="cv">
+  <svg width="960" height="120" viewBox="0 0 960 120" aria-hidden="true">
+    <!-- blocks: ink 240x80, g-doc 160x80, g-rep 120x56, panel-2 tint 200x80, sanction 40x40 (spacing multiples, radius token)
+         arrangement: a strip of unequal blocks across the top band, read left to right like a chain, sanction small
+         pattern: the line grammar itself (solid, dashed 10/6, dotted) linking blocks, the system's one motif: a chain graded by evidence
+         steps: space-5 (24) gaps, space-6 (40) inset; radius 4 -->
+    <rect class="ink blk" x="40" y="20" width="240" height="80"/>
+    <rect class="doc blk" x="344" y="20" width="160" height="80"/>
+    <rect class="tint blk" x="568" y="20" width="200" height="80"/>
+    <rect class="rep blk" x="832" y="32" width="88" height="56"/>
+    <rect class="san blk" x="736" y="40" width="40" height="40"/>
+    <path class="w d" d="M280 60H344"/>
+    <path class="w r" d="M504 60H568"/>
+    <path class="w o" d="M776 60H832"/>
+  </svg>
+  <div class="txt">
+    <p class="nm">РОЙ.МАРКЕТ Reader System</p>
+    <p class="tg">Every line says how well it is documented. Nothing on a page claims more than its source.</p>
+  </div>
+</div>
