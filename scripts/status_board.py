@@ -572,6 +572,7 @@ def pull_queue(board, cap=PULL_CAP):
               "python3 scripts/parse_egrul_vypiska.py" if egrul else None,
               "python3 scripts/parse_bfo_financials.py" if bfo else None,
               "python3 scripts/extract_registry.py",
+              "python3 scripts/build_relationship_graph.py",
               "python3 scripts/check_registry.py"]
     return "\n".join(l for l in lines if l)
 

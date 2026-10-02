@@ -344,3 +344,14 @@ Local, no network. Modes: no args (ЦБСТ posts naming a registry entity, unar
 
 `tg_forward_diff.py`: compares the «…» and Latin names in a channel's posts with those in forwards of them. The DB holds the text as last scraped; a forward keeps the wording at forward time. Flags names present in the forward and absent now (removed) and the reverse (added or shortened). Only 10% of ЦБСТ posts have a forward, so a clean result covers only those. Tests: `tests/test_cbst_resident_sweep.py`.
 
+
+## Automated upkeep: status board, pull queue, first reading, sanctions watch, Wayback (added 2026-10-02)
+
+Merged from cloud sessions (PRs #3–#6). The rules are in CLAUDE.md; the who-runs-what table is in `notes/rebuild_plan.md` §D. Practical notes:
+
+- **`status_board.py`** reads only the repo plus, when present, the weekly scan's `weekly_scan_state.json` / `developments.json` in `/mnt/project-files/watch/` (cloud only; on the Mac those flags are skipped and the output says so). `--slug X` for one record, `--json` + `--diff old.json` for what changed. `screen_never` / `screen_hits_unreviewed` are listed but not queued: the screeners have no per-record selector.
+- **`--pull-queue`** ranks by tier, caps 8 per registry, and prints the ingest chain after the pulls: `inventory_sources` → `scan_sources` → the matching parser → `extract_registry` → `build_relationship_graph` (added 02.10.2026; without it `check_registry` fails on a stale graph whenever a parser adds data) → `check_registry`. Run the lines as printed, then commit only after reading.
+- **`first_reading.py`**: `export` picks files named `EGRUL|EGRULAPI|EGRIP|BFO_<ИНН>_<date>_…` pulled on or after `--since` (БФО by file mtime, since its name carries the fiscal year). `--push` writes text to the private `pull-inbox` branch with git plumbing (the checkout is untouched); `--local-dir data/sources/_inbox` also writes the day's texts locally so `read --inbox data/sources/_inbox/<date>` runs on the Mac without the round trip. Exported hashes are remembered only after a push. A scanned PDF with no text layer is flagged, not read.
+- **`sanctions_watch.py`** counts identifier matches only (ИНН/ОГРН in the list entry); names are context. Person listings rarely carry an ИНН, so a clean person result proves nothing. Offline test mode: `--from-file us=sdn.xml`.
+- **`archive_sources.py`**: `plan`/`local`/`report` are local; `lookup` (read-only CDX) and `save` are network jobs for the Mac in batches. Captures are public but anonymous. Set `WAYBACK_S3_ACCESS`/`WAYBACK_S3_SECRET` in `.env` for SPN2.
+- **CI** (`checks.yml`) runs on main pushes and PRs without `data/sources/`; locally run `check_registry.py` without `--no-local-files`.

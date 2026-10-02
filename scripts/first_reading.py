@@ -151,6 +151,12 @@ def cmd_export(a) -> int:
     files[f"inbox/{day}/manifest.json"] = json.dumps(
         {"exported": datetime.now().isoformat(timespec="seconds"), "since": since.isoformat(),
          "documents": manifest}, ensure_ascii=False, indent=2) + "\n"
+    if a.local_dir and not a.dry_run:  # Mac: read the same day without the branch round-trip
+        for rel, text in files.items():
+            out = Path(a.local_dir) / Path(rel).relative_to("inbox")
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(text, encoding="utf-8")
+        print(f"wrote {len(files)} file(s) under {Path(a.local_dir) / day}")
     if a.dry_run or not a.push:
         print("dry run: nothing committed" if a.dry_run else "not pushed (add --push)")
         return 0
@@ -318,6 +324,7 @@ def main() -> int:
     ex.add_argument("--push", action="store_true", help="commit to origin/pull-inbox")
     ex.add_argument("--dry-run", action="store_true")
     ex.add_argument("--force", action="store_true", help="re-export documents already exported")
+    ex.add_argument("--local-dir", help="also write <dir>/<date>/ locally, for `read` on the Mac")
     rd = sub.add_parser("read", help="cloud: worksheet of differences for one inbox day")
     rd.add_argument("--inbox", required=True, help="an inbox/<date> directory from the pull-inbox branch")
     rd.add_argument("--out")
