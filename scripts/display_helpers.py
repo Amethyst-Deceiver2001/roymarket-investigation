@@ -123,6 +123,58 @@ def unit_mark(echelon: str | None = None) -> str:
             '<path class="frame" d="M17 10l14 14-14 14L3 24z"/></svg>')
 
 
+# Media (track V). Provenance is said in words, from asserted_by; never shown by colour.
+PROVENANCE = {"self": "Published by {who}", "third_party": "Posted by a third party", "platform": "From a marketplace listing",
+              "press": "From press coverage", "counterparty": "From the counterparty", "regulator": "From a regulator",
+              "investigator": "Our capture"}
+
+
+def load_media() -> list[dict]:
+    p = REPO / "data" / "registry" / "media.json"
+    import json
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else []
+
+
+def media_about(media: list[dict], refs: set[tuple[str, str]], publishable=True) -> list[dict]:
+    """Media whose about[] names any (type, id) in refs. Publishable only: publish ok/excerpt and no face pending."""
+    out = []
+    for m in media:
+        if not any((a.get("type"), a.get("id")) in refs for a in m.get("about") or []):
+            continue
+        if publishable and (m.get("publish") == "internal" or m.get("redact") == "blur_pending"):
+            continue
+        out.append(m)
+    return out
+
+
+def publish_copy(m: dict, dest_dir: Path, max_px: int = 1200) -> str | None:
+    """Copy a media file into dest_dir as <id>.<ext>, downscaled to max_px; returns the file name."""
+    src = REPO / (m.get("file") or "")
+    if not m.get("file") or not src.exists():
+        return None
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    ext = src.suffix.lower() if src.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp") else ".jpg"
+    out = dest_dir / f"{m['id']}{ext}"
+    if not out.exists() or out.stat().st_mtime < src.stat().st_mtime:
+        from PIL import Image
+        im = Image.open(src)
+        im.thumbnail((max_px, max_px))
+        im.save(out)
+    return out.name
+
+
+def figure_html(m: dict, img_src: str, who: str, ref_html: str, video_note: str = "") -> str:
+    """One evidence figure. `who` names the publisher for self-published media."""
+    import html as _h
+    prov = PROVENANCE.get(m.get("asserted_by"), "Source").format(who=who)
+    when = ru_date(m.get("published")) or ""
+    cls = "rm-fig rm-video" if video_note else "rm-fig"
+    return (f'<figure class="{cls}"><div class="frame"><img src="{_h.escape(img_src)}" alt="{_h.escape(m["shows"])}"></div>'
+            f'<figcaption><span class="rm-prov">{_h.escape(prov)}</span><span>{_h.escape(m["shows"])}{ref_html}</span>'
+            + (f'<span class="orig">{_h.escape(video_note)}</span>' if video_note else "")
+            + (f'<span class="when">{when}</span>' if when else "") + "</figcaption></figure>")
+
+
 def source_type_label(path: str) -> str:
     stem = Path(path).name
     if stem.startswith("ul-") or stem.startswith("ip-"):

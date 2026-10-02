@@ -35,7 +35,8 @@ REG = REPO / "data" / "registry"
 SRC_DIR = REPO / "data" / "sources"
 PAGES = "https://amethyst-deceiver2001.github.io/roymarket-investigation/"
 sys.path.insert(0, str(REPO / "scripts"))
-from display_helpers import design_head, kind_icon, reader_grade, ru_date  # noqa: E402
+from display_helpers import (design_head, figure_html, kind_icon, load_media, media_about, publish_copy,  # noqa: E402
+                             reader_grade, ru_date)
 
 CBST = "ano-tsbst-centre-for-unmanned-systems-technologies"
 REGIMES = [("Switzerland", "Switzerland"), ("EU", "EU"), ("OFAC", "US"), ("US ", "US"),
@@ -163,6 +164,9 @@ class Chain:
         self.rows = []           # (seller card html, [buyer card html])
         self.edges = []
         self.limits = []
+        self.media = load_media()
+        self.media_files = []    # (published name, local path) for the artifact publish
+        self.img_dir = None      # set by render(): where publish copies go
 
     # -- notation ------------------------------------------------------------------------
     def ref(self, *sids):
@@ -261,7 +265,7 @@ class Chain:
         vsrc = [v.get("source_id") for v in p.get("versions") or []]
         self.top["C"].append(self.card(
             "product", "product", "Product", esc(self.pq),
-            f'<p class="row">{esc(cap(p.get("category")))}</p>'
+            self.thumb() + f'<p class="row">{esc(cap(p.get("category")))}</p>'
             f'<p class="row">Versions: {vers}{self.ref(*vsrc)}'
             + (f'; {acc} add-on module{"s" if acc > 1 else ""}' if acc else "") + "</p>"))
         self.edge("maker", "product", "doc" if any(vsrc) else "open", "Makes")
@@ -404,6 +408,60 @@ class Chain:
             self.rows.append({"id": "roymarket", "card": self.card("roymarket", "absent", "Not sold here", "РОЙ.МАРКЕТ", body),
                               "buyers": []})
 
+    # -- media (track V) -------------------------------------------------------------------
+    def media_refs(self):
+        p = self.p
+        refs = {("product", p["slug"])}
+        refs |= {("version", v["slug"]) for v in p.get("versions") or []}
+        refs |= {("listing", l_["id"]) for l_ in p.get("listings") or []}
+        refs |= {("delivery", d["id"]) for d in p.get("deliveries") or [] if d.get("id")}
+        return refs
+
+    def img(self, m):
+        name = publish_copy(m, self.img_dir)
+        if not name:
+            return None
+        rel = f"images/media/{name}"
+        if (rel, self.img_dir / name) not in self.media_files:
+            self.media_files.append((rel, self.img_dir / name))
+        return rel
+
+    def who(self, m):
+        for a_ in m.get("about") or []:
+            if a_["type"] == "entity" and a_["id"] in self.ents:
+                return split_name(self.ents[a_["id"]])[0]
+        return split_name(self.maker)[0]
+
+    def thumb(self):
+        """The product card's picture: a self-published photo or screenshot of the product."""
+        cands = [m for m in media_about(self.media, self.media_refs())
+                 if m.get("asserted_by") == "self" and m.get("kind") in ("photo", "screenshot") and m.get("genre") == "marketing"]
+        for m in cands:
+            src = self.img(m)
+            if src:
+                return (f'<img class="rm-thumb" src="{esc(src)}" alt="{esc(m["shows"])}">'
+                        f'<p class="note">Picture: {esc(self.who(m))}{self.ref(m.get("source_id"))}</p>')
+        return ""
+
+    def gallery(self):
+        ms = [m for m in media_about(self.media, self.media_refs()) if m.get("genre") != "logo"]
+        groups = [("Published by the maker and its dealers", lambda m: m["asserted_by"] in ("self", "platform")),
+                  ("Posted by buyers and other third parties", lambda m: m["asserted_by"] in ("third_party", "counterparty")),
+                  ("Press", lambda m: m["asserted_by"] == "press")]
+        out = []
+        for title, keep in groups:
+            figs = []
+            for m in sorted((m for m in ms if keep(m)), key=lambda m: (m.get("published") or "", m["id"])):
+                src = self.img(m)
+                if not src:
+                    continue
+                v = m.get("video")
+                note = (f"Video. Original on {v['original']}." + ("" if v.get("archived") else " Not archived.")) if v else ""
+                figs.append(figure_html(m, src, self.who(m), self.ref(m.get("source_id")), note))
+            if figs:
+                out.append(f'<h3 class="rm-label gal-h">{esc(title)}</h3><div class="rm-gallery">{"".join(figs)}</div>')
+        return "".join(out)
+
     def timeline(self, ds):
         dates = [dt.date.fromisoformat(d["date"]) for d in ds]
         lo = dt.date(dates[0].year, dates[0].month, 1)
@@ -449,6 +507,7 @@ def render(ch, out):
                   for c, t in (("A", "ЦБСТ and its events"), ("B", "Maker"), ("C", "Product")))
     rows = "".join(f'<div class="crow"><div class="cell">{r["card"]}</div><div class="cell buyers">{"".join(r["buyers"])}</div></div>'
                    for r in ch.rows)
+    gal = ch.gallery()
     limits = "".join(f"<li>{x}</li>" for x in dict.fromkeys(ch.limits))
     doc = f"""<!doctype html>
 <!-- Generated by exhibits/build_chain_view.py {esc(p['slug'])} from data/registry on {dt.date.today().isoformat()}. Do not edit by hand. -->
@@ -478,6 +537,7 @@ def render(ch, out):
       {rows}
     </section>
   </div>
+  {f'<section class="pics"><h2 class="rm-h2">Pictures on file</h2><p class="method">Each picture is evidence only for what its caption says is visible. Faces of people not named in this investigation are blurred.</p>{gal}</section>' if gal else ''}
   <section class="prose rm-prose"><h2 class="rm-h2">What this does not show</h2><ul>{limits}</ul>
   <p class="method">Every company, listing, contract and handover here comes from an archived document. Listings
   and handovers are as of the dates shown; {n_list} listings and {n_del} handovers are on file.</p></section>
@@ -488,7 +548,10 @@ def render(ch, out):
 </body></html>
 """
     out.write_text(doc)
-    print(f"wrote {out.relative_to(REPO)}: {len(ch.rows)} rows, {len(ch.edges)} lines, {len(ch.notes)} sources")
+    print(f"wrote {out.relative_to(REPO)}: {len(ch.rows)} rows, {len(ch.edges)} lines, {len(ch.notes)} sources, "
+          f"{len(ch.media_files)} pictures")
+    for rel, _ in ch.media_files:
+        print("  picture", rel)
 
 
 def main():
@@ -496,9 +559,11 @@ def main():
     ap.add_argument("product")
     ap.add_argument("--out")
     a = ap.parse_args()
+    out = Path(a.out) if a.out else REPO / "exhibits" / f"chain_{a.product}.html"
     ch = Chain(a.product)
+    ch.img_dir = out.parent / "images" / "media"
     ch.build()
-    render(ch, Path(a.out) if a.out else REPO / "exhibits" / f"chain_{a.product}.html")
+    render(ch, out)
 
 
 if __name__ == "__main__":

@@ -91,7 +91,8 @@ RELATION_ROLES = {"manufacturer", "seller_of_record", "licensed_dealer", "distri
 # check_registry.py. A picture is evidence only for what `shows` says someone saw in it.
 MEDIA_KINDS = {"photo", "video", "still", "satellite", "street-level", "screenshot", "scan", "graphic"}
 MEDIA_GENRES = {"marketing", "field_test", "combat", "facility", "production", "training", "recruitment",
-                "event", "handover", "interview", "portrait", "logo", "document"}
+                "event", "handover", "interview", "portrait", "logo", "document",
+                "user_photo"}   # user_photo: a buyer's or user's own picture of a product
 MEDIA_ASSERTED_BY = ASSERTED_BY | {"third_party"}   # third_party: e.g. a customer's upload on a map service
 MEDIA_PUBLISH = {"ok", "excerpt", "internal"}        # excerpt: a maker's marketing, used in part for reporting
 MEDIA_ABOUT_TYPES = {"entity", "person", "product", "version", "delivery", "listing", "unit", "program"}

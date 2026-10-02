@@ -153,6 +153,40 @@ sup.rm-ref a:hover { text-decoration: underline; }
 .rm-sources li:target { background: var(--accent-soft); }
 .rm-sources a { overflow-wrap: anywhere; }
 
+/* Evidence figure (track V): a picture is evidence only for what its caption says is visible.
+   Provenance (who published it) is a mono label above the caption, never a colour. */
+.rm-fig { margin: 0; display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+.rm-fig .frame { position: relative; background: var(--panel-2); border: 1px solid var(--rule); border-radius: var(--radius);
+  overflow: hidden; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; }
+.rm-fig .frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.rm-fig figcaption { display: flex; flex-direction: column; gap: 4px; font-size: var(--t-note); color: var(--ink-2); }
+.rm-prov { font: 600 10px/1.3 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.rm-fig .when { font: 400 12px/1.3 var(--font-mono); color: var(--ink-3); }
+.rm-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-5) var(--space-4); }
+
+/* Video card: a poster still and where the original is. No embedded player (decision 02.10.2026). */
+.rm-video .frame::after { content: ""; position: absolute; width: 44px; height: 44px; border-radius: 50%;
+  background: rgba(20, 24, 29, .62); box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .85); }
+.rm-video .frame::before { content: ""; position: absolute; z-index: 1; margin-left: 4px; border-style: solid;
+  border-width: 8px 0 8px 13px; border-color: transparent transparent transparent #fff; }
+.rm-video .orig { font-size: 12.5px; color: var(--ink-3); }
+
+/* Frame strip: timestamped stills from one video. */
+.rm-frames { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(160px, 1fr); gap: var(--space-2); overflow-x: auto; }
+.rm-frames .rm-fig .frame { aspect-ratio: 16 / 9; }
+.rm-frames .t { position: absolute; left: 6px; bottom: 6px; font: 600 11px/1 var(--font-mono); color: #fff;
+  background: rgba(20, 24, 29, .7); padding: 3px 5px; border-radius: 3px; }
+
+/* Facility pair: satellite and ground views of one place, with coordinates, provider and imagery date. */
+.rm-facility { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-4); }
+.rm-facility .empty .frame { background: transparent; border-style: dashed; color: var(--ink-3); font-size: var(--t-note);
+  text-align: center; padding: var(--space-4); }
+.rm-geo { font: 400 12px/1.3 var(--font-mono); font-variant-numeric: tabular-nums; color: var(--ink-3); }
+
+/* Thumbnail slot on a chain card. */
+.rm-card .rm-thumb { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: var(--panel-2);
+  border-radius: 3px; margin: 6px 0 4px; }
+
 @media (max-width: 700px) {
   .rm-page { padding-inline: var(--space-4); }
   :root { --t-h1: 26px; --t-h2: 19px; }

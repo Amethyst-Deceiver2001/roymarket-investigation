@@ -11,7 +11,31 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent.parent / "scripts"))
-from display_helpers import FONT_LINK, KIND_ICONS, kind_icon, unit_mark  # noqa: E402
+from display_helpers import FONT_LINK, KIND_ICONS, figure_html, kind_icon, load_media, unit_mark  # noqa: E402
+import base64, io  # noqa: E402
+from PIL import Image  # noqa: E402
+
+MEDIA = {m["id"]: m for m in load_media()}
+
+
+def data_uri(mid, px=360):
+    """A small inline copy of a media record's file, so a card needs no upload."""
+    im = Image.open(HERE.parent.parent / MEDIA[mid]["file"]).convert("RGB")
+    im.thumbnail((px, px))
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=72)
+    return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
+
+
+def fig(mid, who, ref="1", note=""):
+    return figure_html(MEDIA[mid], data_uri(mid), who, f'<sup class="rm-ref"><a href="#">{ref}</a></sup>', note)
+
+
+def frame(mid, ref):
+    m = MEDIA[mid]
+    t = (m.get("frame") or {}).get("t") or "time not recorded"
+    return (f'<figure class="rm-fig"><div class="frame"><img src="{data_uri(mid, 320)}" alt=""><span class="t">{t}</span></div>'
+            f'<figcaption><span>{m["shows"].split(":")[0].split(";")[0][:90]}<sup class="rm-ref"><a href="#">{ref}</a></sup></span></figcaption></figure>')
 
 OUT = HERE / "project" / "components"
 WRAP = '<div style="padding:20px;background:var(--paper);color:var(--ink);font-family:var(--font-sans);display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start">'
@@ -141,6 +165,48 @@ One finding lifted out of the running text. Use at most one per section.
 - It has no accent rail and no shadow; it is set off by its surface and border.
 - The example is a limit stated on the «Булат» chain."""),
 }
+
+CARDS.update({
+    "EvidenceFigure": ("Media", 420, f'<div style="width:260px">{fig("m0043", "ООО «ПОКРОВ»", "7")}</div>', """# EvidenceFigure
+
+One picture as evidence: the image, who published it, what is visible, its date and a footnote.
+
+- The provenance label comes from the media record's `asserted_by`: "Published by ООО «ПОКРОВ»", "Posted by a third party", "From press coverage". It is said in words, never with colour.
+- The caption is the record's `shows`: what someone who looked at the picture saw. A picture is evidence only for that.
+- The image sits in a 4:3 frame with `object-fit: contain`, so it is never cropped in a way that changes what it shows.
+- Records marked `internal` or still awaiting a blur (`blur_pending`) are never rendered (`media_about()`).
+- Example: the «Булат» v.4 card on the dealer's own site."""),
+
+    "VideoCard": ("Media", 400, f'<div style="width:260px">{fig("m0063", "ООО «Тримикс»", "3", "Video. Original on VK Clips and YouTube; the post gives no link. Not archived.")}</div>', """# VideoCard
+
+A video shown as its poster still plus a line saying where the original is and whether we hold a copy.
+
+- No platform player is embedded (decision 02.10.2026): players track readers, break when a post is deleted, and do not run in Artifacts.
+- The play mark is drawn over the poster to say "this is a video", not to play it.
+- The line under the caption is the record's `video.original`, followed by "Not archived" when `video.archived` is false.
+- Example: the maker's Q&A video thumbnail from its customer chat."""),
+
+    "FrameStrip": ("Media", 260, f'<div class="rm-frames" style="width:100%">{frame("m0048", "4")}{frame("m0049", "4")}{frame("m0053", "4")}{frame("m0054", "4")}</div>', """# FrameStrip
+
+Timestamped stills from one video, in order, so a reader can see what the video shows without a player.
+
+- Each still carries its timestamp in the video (`frame.t`) in the corner. Where it was not recorded, the strip says "time not recorded" rather than guessing.
+- All stills in a strip come from one video and share one footnote.
+- The strip scrolls sideways inside its own container at narrow widths.
+- Example: four stills from a 32-minute «Архангел» instruction video; their timestamps are still to be recorded."""),
+
+    "FacilityPair": ("Media", 440, f'''<div class="rm-facility" style="width:100%">
+<figure class="rm-fig empty"><div class="frame">Satellite view not yet captured</div><figcaption><span class="rm-prov">Satellite</span><span class="rm-geo">Coordinates from the company register address · provider and imagery date shown here</span></figcaption></figure>
+{fig("m0024", "ООО «ГОУДРОН»", "8")}
+</div>''', """# FacilityPair
+
+The satellite view and a ground view of one place, side by side.
+
+- The satellite slot names its provider and imagery date (Google Earth or Yandex Maps for now, decision 02.10.2026) and gives the coordinates with how they were found: a register address, a place the source states, or our own geolocation.
+- A view not yet captured is shown as an empty dashed slot that says so. It is never filled with a nearby or generic image.
+- The ground view is any media record of genre `facility`: the company's own photo, a customer upload, or a street-level screenshot.
+- Example: the GoDrone storefront, a customer's upload on Yandex Maps; its satellite view is not yet captured."""),
+})
 
 
 def main():

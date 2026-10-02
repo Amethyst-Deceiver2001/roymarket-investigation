@@ -754,7 +754,7 @@ def main() -> int:
     about_ids = {"entity": live_slugs, "person": people_slugs, "product": seen_products, "version": version_slugs,
                  "delivery": delivery_ids - {None}, "listing": all_listing_ids - {None}, "unit": unit_slugs,
                  "program": {r.get("slug") for r in programs}}
-    seen_media, no_frame, blur_pending = set(), [], []
+    seen_media, no_frame, blur_pending, no_copy = set(), [], [], []
     for i, m in enumerate(media):
         mid = m.get("id")
         where = f"media[{mid or i}]"
@@ -781,8 +781,9 @@ def main() -> int:
         f = m.get("file")
         if f and not (REPO / f).exists():
             errors.append(f"{where}.file {f!r} does not exist")
-        if m.get("publish") in ("ok", "excerpt") and not (f or "").startswith(("docs/images/", "exhibits/images/")):
-            warnings.append(f"{where}: publishable but no publish-ready copy under docs/images/ or exhibits/images/")
+        if m.get("publish") in ("ok", "excerpt") and not (f or "").startswith(("docs/images/", "exhibits/images/")) \
+                and not list((REPO / "exhibits" / "images" / "media").glob(f"{mid}.*")):
+            no_copy.append(mid)
         if m.get("kind") == "still":
             fr = m.get("frame") or {}
             if not re.fullmatch(r"\d{1,2}:\d{2}(:\d{2})?", str(fr.get("t") or "")):
@@ -811,6 +812,9 @@ def main() -> int:
             blur_pending.append(mid)
         if m.get("genre") == "combat" and m.get("publish") != "internal" and m.get("graphic") is None:
             warnings.append(f"{where}: combat imagery needs graphic: true/false before it is published")
+    if no_copy:
+        warnings.append(f"media: {len(no_copy)} publishable record(s) have no publish copy yet (docs/images/, or "
+                        f"exhibits/images/media/ written by a page builder): {', '.join(no_copy)}")
     if no_frame:
         warnings.append(f"media: {len(no_frame)} still(s) without frame.t, their timestamp in the video: {', '.join(no_frame)}")
     if blur_pending:

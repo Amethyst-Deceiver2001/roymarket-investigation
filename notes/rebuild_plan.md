@@ -106,12 +106,19 @@ media files mostly not linked to a record, and no video file at all.
 3. **Capture.** `tg_media_pull` already covers Telegram. A downloader for
    YouTube, Rutube and VK is a live job the user runs. Originals are archived
    in `data/sources/` and hashed (Berkeley Protocol chain of custody).
-4. **Components** in the design system: EvidenceFigure, FrameStrip (timestamped
-   stills from one video), FacilityPair (satellite and ground views with
-   coordinates, imagery date and credit), VideoCard (poster still, duration,
-   link to the original), and thumbnail slots on chain cards.
-5. **Pilot on «Булат»:** product shots and the Наша Правда handover photos.
-   Тримикс's facility only if its address is documented.
+4. **Components** (done 2026-10-02): EvidenceFigure, FrameStrip, FacilityPair,
+   VideoCard and a chain-card thumbnail, all in `design/roymarket.css`, with
+   cards in the Reader System artifact built from real records. The helpers
+   (`media_about`, `publish_copy`, `figure_html`) are in `display_helpers.py`.
+   Provenance is said in words and never shown by colour.
+5. **Pilot on «Булат»** (partly done 2026-10-02). Nine pictures are on the
+   chain preview: the dealer's v.4 card as the product thumbnail, the maker's
+   manual page, and seven buyers' photos from the maker's customer chat (a
+   marketplace screenshot at ₽144,279, antennas, a field comparison and the
+   «Таир» wrist unit). Still missing: the Наша Правда handover photos, which
+   need `tg_media_pull` on @nashapravdafond (a user-run job), and a view of
+   Тримикс's facility, which needs a documented address first. The «Крылья
+   Победы» seller lead is recorded in the product's open questions.
 
 Decisions (user, 2026-10-02):
 - **Video:** key frames plus a link to the original now, with full originals

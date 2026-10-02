@@ -32,7 +32,7 @@ These images were not migrated, because a media record needs the source the pict
 | `uas_kindyakov_speech.jpg` | ooo-npts-basirtk | Any source (the caption says an unrelated public event). |
 | `uas_barilo_letter_sukhonenkova.jpg` | ooo-npts-basirtk | The post or document; the first letter is s0232. |
 
-Re-capturing them is the fix. For the two facility views, use the screenshot rule decided 02.10.2026: Google Earth or Yandex Maps, with the provider and imagery date recorded.
+**Decision (user, 02.10.2026):** these images come from the original manual discovery. Keep them in `docs/images/` as they are, and source them later. Re-capturing them is the fix. For the two facility views, use the screenshot rule decided 02.10.2026: Google Earth or Yandex Maps, with the provider and imagery date recorded.
 
 ## Open
 

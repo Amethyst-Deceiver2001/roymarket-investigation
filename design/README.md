@@ -53,6 +53,16 @@ A dashed card with no shadow (`.rm-card.absent`) is something the reader would e
 
 **Unit mark (provisional until the unit-naming decision).** `unit_mark(echelon)` draws a monochrome APP-6 hostile frame (diamond) with the echelon mark from the unit record's own `echelon` field. It draws no branch glyph and no echelon unless the record has a sourced value. It is monochrome so red stays reserved for sanctions.
 
+## Media
+
+Pictures are evidence records (`data/registry/media.json`), not decoration. Four components show them: EvidenceFigure, VideoCard, FrameStrip and FacilityPair. There is also a thumbnail slot on chain cards.
+
+- **Provenance is said in words.** A mono label over each caption reads "Published by …", "Posted by a third party" or "From press coverage". It is never shown by colour or by a grade chip: who published a picture is a different question from how well a link is documented.
+- **The caption is what is visible.** A picture supports only what someone who looked at it wrote down.
+- **No embedded players.** A video is a poster or a strip of timestamped stills, plus a line saying where the original is and whether we hold a copy.
+- **Faces** of people not named in the investigation are blurred in the publish copy. A record still awaiting a blur is never rendered.
+- **Facility views** name their provider, imagery date and how the coordinates were found. A view not yet captured is an empty dashed slot that says so.
+
 ## Type
 
 - **Spectral** (serif, 400/500): headlines, names on cards, verbatim quotes. A finding's voice.

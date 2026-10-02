@@ -36,6 +36,16 @@ Text is at least 4.5:1 in both themes. The Reported chip's text uses `g-rep-ink`
 
 **Motion.** None, apart from the hover focus on a chain: other cards fade to 35% so one card's path stands out.
 
+## Media
+
+Pictures are evidence records (`data/registry/media.json`), not decoration. Four components show them: EvidenceFigure, VideoCard, FrameStrip and FacilityPair. There is also a thumbnail slot on chain cards.
+
+- **Provenance is said in words.** A mono label over each caption reads "Published by …", "Posted by a third party" or "From press coverage". It is never shown by colour or by a grade chip: who published a picture is a different question from how well a link is documented.
+- **The caption is what is visible.** A picture supports only what someone who looked at it wrote down.
+- **No embedded players.** A video is a poster or a strip of timestamped stills, plus a line saying where the original is and whether we hold a copy.
+- **Faces** of people not named in the investigation are blurred in the publish copy. A record still awaiting a blur is never rendered.
+- **Facility views** name their provider, imagery date and how the coordinates were found. A view not yet captured is an empty dashed slot that says so.
+
 ## Evidence grades
 
 Three grades, from one table that maps every registry confidence value. A page never chooses a grade by itself.
