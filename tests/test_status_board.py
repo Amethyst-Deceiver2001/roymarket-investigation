@@ -66,6 +66,23 @@ def main():
     bfo_line = [l for l in q.splitlines() if l.startswith("python3 scripts/bfo_pull.py")]
     assert len(bfo_line) == 1 and bfo_line[0].count("--inn") <= 3, q
     assert q.rstrip().endswith("check_registry.py"), q
+    # Re-screens are queued per screen, capped, by slug; OpenSanctions within its quota cap.
+    for key, cap in sb.SCREEN_CAPS.items():
+        line = [l for l in sb.pull_queue(board).splitlines() if l.startswith(sb.SCREEN_COMMANDS[key].split(" --")[0])]
+        assert len(line) <= 1, line
+        if line:
+            slugs = line[0].split("--only ")[1].split(",")
+            assert 0 < len(slugs) <= cap and all(s in r for s in slugs), line
+    assert sb.SCREEN_CAPS["opensanctions"] * 31 <= 150
+    # A never-screened record is due for every screen it lacks.
+    never = [f for f in r["ooo-trimiks"]["flags"] if f["code"] == "screen_never"]
+    assert all(f.get("due") for f in never), never
+    # OpenSanctions goes stale after 90 days (its quota), ГУР after 30.
+    rec = {"inn": "1", "opensanctions_screened_at": "2026-08-01", "gur_screened_at": "2026-08-01",
+           "aleph_screened_at": "2026-09-30"}
+    st = [f for f in sb.Board(TODAY).screen_flags(rec) if f["code"] == "screen_stale"]
+    assert len(st) == 1 and st[0]["due"] == ["gur"], st
+
     # A company whose record says it no longer exists is not asked for new accounts.
     assert not any(f["code"].startswith("bfo") for f in r["ao-borey-absorbed-no-longer-exists"]["flags"])
 

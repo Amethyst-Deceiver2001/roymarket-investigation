@@ -229,7 +229,7 @@ def build(board):
   <p class="rm-eyebrow">Internal · РОЙ.МАРКЕТ investigation</p>
   <h1 class="rm-h1">Status board</h1>
   <p class="rm-dek">Every company, person, product and channel on file, with what its record is missing, what is out of date, and what the network has said since the record was last touched.</p>
-  <p class="sb-meta">Built {sb_ru(board['generated'])} from the registry and the weekly scan. A register extract counts as stale after {th['egrul_stale_days']} days, a sanctions screen after {th['screen_stale_days']} days.{notes}</p>
+  <p class="sb-meta">Built {sb_ru(board['generated'])} from the registry and the weekly scan. A register extract counts as stale after {th['egrul_stale_days']} days, a ГУР or Aleph screen after {th.get('gur_stale_days', th['screen_stale_days'])} days, an OpenSanctions screen after {th.get('opensanctions_stale_days', th['screen_stale_days'])} days (its monthly quota).{notes}</p>
 </header>
 <section aria-labelledby="h-sum">
   <h2 class="rm-h2" id="h-sum">Records needing work</h2>

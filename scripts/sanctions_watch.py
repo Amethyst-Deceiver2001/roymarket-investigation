@@ -207,6 +207,7 @@ def scan(key: str, data: bytes, registry: dict[str, dict]) -> dict:
         if not found:
             continue
         names = all_of(el, cfg.get("name_tags", ()), cfg.get("name_attrs", ()))
+        details = entry_details(el)
         for ident in sorted(found):
             rec = registry[ident]
             hits.append({
@@ -220,11 +221,46 @@ def scan(key: str, data: bytes, registry: dict[str, dict]) -> dict:
                 "list_names": names[:6],
                 "programs": all_of(el, cfg.get("program_tags", ()),
                                    cfg.get("program_attrs", ()))[:6],
+                **details,
             })
     if entries == 0:
         raise ValueError(f"{key}: 0 entries parsed; treat as a parser bug")
     return {"entries": entries, "with_ru_id": with_ru_id, "entry_tag": entry_tag,
             "publish_date": publish, "hits": hits}
+
+
+DATE_RE = re.compile(r"date", re.I)
+REF_RE = re.compile(r"(numberTitle|regulation|RegimeName|regime|program|legal|basis|decree)", re.I)
+
+
+def entry_details(el) -> dict:
+    """What a citation needs from the entry itself: its dates, legal references and links.
+
+    Format-agnostic on purpose (each list names these differently): any attribute or
+    element whose name contains "date", any attribute/element naming a regulation,
+    regime or programme, and any http(s) value. Read the entry before citing it.
+    """
+    dates, refs, urls = set(), set(), set()
+    for n in el.iter():
+        name = local(n.tag)
+        text = (n.text or "").strip()
+        if text and DATE_RE.search(name):
+            dates.add(f"{name}={text}")
+        if text and REF_RE.search(name):
+            refs.add(text)
+        if text.startswith("http"):
+            urls.add(text)
+        for a, v in n.attrib.items():
+            v = v.strip()
+            if not v:
+                continue
+            if DATE_RE.search(a):
+                dates.add(f"{a}={v}")
+            if REF_RE.search(a):
+                refs.add(v)
+            if v.startswith("http"):
+                urls.add(v)
+    return {"dates": sorted(dates)[:12], "refs": sorted(refs)[:8], "urls": sorted(urls)[:6]}
 
 
 def hit_key(h: dict) -> str:

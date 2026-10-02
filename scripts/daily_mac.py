@@ -5,7 +5,9 @@ Chains tools that already exist, in the order CLAUDE.md gives them:
 
   1. status_board.py      board before; the capped pull queue (8 ЕГРЮЛ/ЕГРИП
                           + 8 БФО per day, top tiers first)
-  2. the pull queue       egrul_vypiska_pull.py / bfo_pull.py, then the ingest
+  2. the pull queue       egrul_vypiska_pull.py / bfo_pull.py and the capped
+                          sanctions re-screens (screen_opensanctions/gur/aleph
+                          --only), then the ingest
                           steps the queue prints (inventory, manifest, parsers,
                           extract_registry, build_relationship_graph,
                           check_registry)
@@ -74,7 +76,7 @@ def main():
     day = today.isoformat()
     before = board_now(today)
     queue = [l for l in sb.pull_queue(before, a.cap).splitlines() if l.startswith("python3 ")]
-    has_pulls = any("_pull.py" in l for l in queue)
+    has_pulls = any("_pull.py" in l or "/screen_" in l for l in queue)  # pulls or capped re-screens
     steps = queue if has_pulls and not a.skip_pulls else []
     steps.append(f"python3 scripts/first_reading.py export --since {day} --local-dir data/sources/_inbox"
                  + ("" if a.no_push else " --push"))
