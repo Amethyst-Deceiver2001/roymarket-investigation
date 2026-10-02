@@ -59977,7 +59977,8 @@
         "asserted_by": "self",
         "credibility": "inferred",
         "authorised": "n/a",
-        "open": "The post does not name the platform; read as РОЙ.МАРКЕТ by the investigator."
+        "open": "The post does not name the platform; read as РОЙ.МАРКЕТ by the investigator.",
+        "role": "manufacturer"
       }
     ],
     "memberships": [
@@ -59989,6 +59990,9 @@
         "as_of": null,
         "note": "Four projects selected into the III stream; first two modules completed (cbst_tie)."
       }
+    ],
+    "ecosystem_roles": [
+      "manufacturer"
     ],
     "_verified_against": "s0009 — this entity's own full signed ЕГРЮЛ extract, pulled 17.08.2026",
     "opensanctions_matches": [
@@ -65485,7 +65489,8 @@
         "asserted_by": "counterparty",
         "credibility": "doc",
         "authorised": "yes",
-        "open": "Named by the maker on its dealer page. The products it sells are not recorded on this edge."
+        "open": "Named by the maker on its dealer page. The products it sells are not recorded on this edge.",
+        "role": "licensed_dealer"
       }
     ],
     "_verified_against": "egrul.nalog.ru open API, 2026-08-24",
@@ -66978,7 +66983,8 @@
         "asserted_by": "self",
         "credibility": "doc",
         "authorised": "unknown",
-        "open": "Not named on the maker's dealer page (3mx.ru/dilery); authorisation is neither shown nor denied."
+        "open": "Not named on the maker's dealer page (3mx.ru/dilery); authorisation is neither shown nor denied.",
+        "role": "seller_of_record"
       }
     ],
     "_verified_against": [],
@@ -87157,7 +87163,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "manufacturer",
-    "tier_basis": "A Novosibirsk design bureau that reports (own channel @kb_spektr, post 321 of 06.07.2026, s8737) taking its propellers onto РОЙ.МАРКЕТ, and whose РОЙ-labelled cartons it photographed. No ЦБСТ tie found: 0 hits for «КБ Спектр» and for the handle in 2 308 @ANO_CBST posts, none in the 148 channel posts read (not the first 179). Recorded as a BRAND, not as a legal entity: no document names the entity that makes the goods today (see open_questions). First РОЙ.МАРКЕТ vendor on file that is documented as not being a ЦБСТ resident.",
+    "tier_basis": "A Novosibirsk design bureau that reports (own channel @kb_spektr, post 321 of 06.07.2026, s8737) taking its propellers onto РОЙ.МАРКЕТ, and whose РОЙ-labelled cartons it photographed. No ЦБСТ tie found: 0 hits for «КБ Спектр» and for the handle in 2 308 @ANO_CBST posts, none in the 238 posts of its own channel now in the local DB (msg 100-348, case-folded regex of 2026-10-02; posts 1-99 are not in it). Recorded as a BRAND, not as a legal entity: no document names the entity that makes the goods today (see open_questions). First РОЙ.МАРКЕТ vendor on file with no ЦБСТ tie found in the material searched (238 posts of its own channel, 2026-10-02; the ЦБСТ archive; see the open questions). Absence of a found tie is not a document that it is not a resident.",
     "cbst_tie": {
       "claim": "None found in the searched material.",
       "confidence": "none",
@@ -87341,7 +87347,8 @@
         "asserted_by": "self",
         "credibility": "doc",
         "authorised": "n/a",
-        "open": "The registered Поставщик on the platform is not established. Batteries 6S 10000 mAh 15C were announced as coming (post 322, 07.07.2026), not listed."
+        "open": "The registered Поставщик on the platform is not established. Batteries 6S 10000 mAh 15C were announced as coming (post 322, 07.07.2026), not listed.",
+        "role": "manufacturer"
       }
     ],
     "_corrected": null
@@ -87377,7 +87384,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "adjacent",
-    "tier_basis": "Seller of record on Ozon for the КБ «СПЕКТР» storefront (s8813). Not a ЦБСТ resident; no ЦБСТ tie found. Recorded as the downstream seller of a РОЙ.МАРКЕТ vendor that is not a resident. ЕГРИП extract 01.10.2026 (s8744): registered by МИФНС № 16 по Новосибирской области, active, e-mail INFO@ARM-PNT.RU (arm-pnt.ru: his scale-modelling paints brand, Wayback capture 28.06.2022, s8810).",
+    "tier_basis": "Seller of record on Ozon for the КБ «СПЕКТР» storefront (s8813). No ЦБСТ tie found for this sole trader or for the brand it sells. Recorded as the downstream seller of a РОЙ.МАРКЕТ vendor that has no ЦБСТ tie found. ЕГРИП extract 01.10.2026 (s8744): registered by МИФНС № 16 по Новосибирской области, active, e-mail INFO@ARM-PNT.RU (arm-pnt.ru: his scale-modelling paints brand, Wayback capture 28.06.2022, s8810).",
     "cbst_tie": {
       "claim": "None found.",
       "confidence": "none",
@@ -87451,7 +87458,8 @@
         "asserted_by": "platform",
         "credibility": "doc",
         "authorised": "unknown",
-        "open": "The panel prints the seller of record next to the bureau's logo; it does not say the bureau authorised the sale. Products are not itemised on this edge."
+        "open": "The panel prints the seller of record next to the bureau's logo; it does not say the bureau authorised the sale. Products are not itemised on this edge.",
+        "role": "seller_of_record"
       }
     ],
     "_corrected": null
@@ -87487,7 +87495,7 @@
     "parents": [],
     "subsidiaries": [],
     "tier": "adjacent",
-    "tier_basis": "Seller of record on Ozon for the «Звезда Спектр» storefront (s8814), selling КБ СПЕКТР propellers; the store reports 18 days on Ozon on the screenshot. Not a ЦБСТ resident; no ЦБСТ tie found. ЕГРИП extract 01.10.2026 (s8812): registered 14.08.2026 by МИФНС № 16 по Новосибирской области, active, e-mail 13KAMEN@MAIL.RU. Main ОКВЭД 30.30 with 25.40 (weapons and ammunition), 28.99.3, 30.30.1, 30.30.3, 30.30.5, 30.30.6 (unmanned aircraft systems), 26.51.2, 52.23.13 and others: a UAV-manufacturing list. A broad list proves nothing about activity.",
+    "tier_basis": "Seller of record on Ozon for the «Звезда Спектр» storefront (s8814), selling КБ СПЕКТР propellers; the store reports 18 days on Ozon on the screenshot. No ЦБСТ tie found for this sole trader or for the brand it sells. ЕГРИП extract 01.10.2026 (s8812): registered 14.08.2026 by МИФНС № 16 по Новосибирской области, active, e-mail 13KAMEN@MAIL.RU. Main ОКВЭД 30.30 with 25.40 (weapons and ammunition), 28.99.3, 30.30.1, 30.30.3, 30.30.5, 30.30.6 (unmanned aircraft systems), 26.51.2, 52.23.13 and others: a UAV-manufacturing list. A broad list proves nothing about activity.",
     "cbst_tie": {
       "claim": "None found.",
       "confidence": "none",
@@ -87565,7 +87573,8 @@
         "asserted_by": "platform",
         "credibility": "doc",
         "authorised": "unknown",
-        "open": "The panel prints the seller of record; it does not say the bureau authorised the sale."
+        "open": "The panel prints the seller of record; it does not say the bureau authorised the sale.",
+        "role": "seller_of_record"
       }
     ],
     "_corrected": null

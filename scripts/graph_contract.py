@@ -75,12 +75,16 @@ SELLS_FOR_BASIS = {"doc", "press", "inferred"}
 #   credibility    doc (a primary document states it), corroborated (two or more independent sources),
 #                  single (one non-document source), inferred (the investigator's reading)
 #   authorised     did the maker authorise the sale: yes / no / unknown / n/a (the seller is the maker)
+#   role           what the seller is on THIS edge (manufacturer, seller_of_record, licensed_dealer, distributor):
+#                  one company can be maker of one product and dealer of another, so the role belongs to the
+#                  relation; the entity's `ecosystem_roles` is only a summary and must cover every role used
 #   open           what the edge does not prove (free text)
 SALE_STATUSES = ("announced", "onboarding", "listed", "shipping", "delisted")
 ASSERTED_BY = {"self", "counterparty", "platform", "regulator", "press", "investigator"}
 CREDIBILITY = {"doc", "corroborated", "single", "inferred"}
 AUTHORISED = {"yes", "no", "unknown", "n/a"}
-DETAIL_KEYS = {"products", "status", "asserted_by", "credibility", "authorised", "open"}
+RELATION_ROLES = {"manufacturer", "seller_of_record", "licensed_dealer", "distributor"}
+DETAIL_KEYS = {"products", "status", "asserted_by", "credibility", "authorised", "open", "role"}
 # the coarse basis must not contradict the finer credibility
 BASIS_CREDIBILITY = {"doc": {"doc", "corroborated", "single"}, "press": {"corroborated", "single"},
                      "inferred": {"inferred"}}
@@ -94,7 +98,7 @@ def sale_detail(sale: dict):
     hist = [h for h in sale.get("status_history") or [] if isinstance(h, dict) and h.get("status")]
     if hist:
         d["status"] = sorted(hist, key=lambda h: h.get("as_of") or "")[-1]["status"]
-    for k in ("asserted_by", "credibility", "authorised", "open"):
+    for k in ("role", "asserted_by", "credibility", "authorised", "open"):
         if sale.get(k):
             d[k] = sale[k]
     return d or None
@@ -437,7 +441,7 @@ def validate_graph(
             else:
                 if "products" in detail and not (isinstance(detail["products"], list) and all(isinstance(x, str) for x in detail["products"])):
                     _error(errors, f"{where}.detail.products must be a list of strings")
-                for key, vocab in (("status", set(SALE_STATUSES)), ("asserted_by", ASSERTED_BY),
+                for key, vocab in (("status", set(SALE_STATUSES)), ("role", RELATION_ROLES), ("asserted_by", ASSERTED_BY),
                                    ("credibility", CREDIBILITY), ("authorised", AUTHORISED)):
                     if key in detail and detail[key] not in vocab:
                         _error(errors, f"{where}.detail.{key} has invalid value {detail[key]!r}")

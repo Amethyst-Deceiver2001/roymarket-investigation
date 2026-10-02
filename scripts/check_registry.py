@@ -46,7 +46,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from reverse_source_index import build_index  # noqa: E402
 from graph_contract import (validate_graph, validate_views, SELLS_FOR_BASIS, SALE_STATUSES, ASSERTED_BY,
-                            CREDIBILITY, AUTHORISED, BASIS_CREDIBILITY,  # noqa: E402
+                            CREDIBILITY, AUTHORISED, BASIS_CREDIBILITY, RELATION_ROLES,  # noqa: E402
                             ECOSYSTEM_ROLES, LEGAL_ENTITY_STATUS, PROGRAM_KINDS, PROGRAM_SUBTYPES,
                             MEMBERSHIP_ROLES)
 from build_relationship_graph import build_graph, build_views  # noqa: E402
@@ -388,12 +388,14 @@ def main() -> int:
             if "products" in sale and not (isinstance(sale["products"], list) and sale["products"]
                                            and all(isinstance(p, str) and p for p in sale["products"])):
                 errors.append(f"{where}.products must be a non-empty list of strings")
-            for key, vocab in (("asserted_by", ASSERTED_BY), ("credibility", CREDIBILITY), ("authorised", AUTHORISED)):
+            for key, vocab in (("role", RELATION_ROLES), ("asserted_by", ASSERTED_BY), ("credibility", CREDIBILITY), ("authorised", AUTHORISED)):
                 if key in sale and sale[key] not in vocab:
                     errors.append(f"{where}.{key} must be one of {sorted(vocab)} (got {sale[key]!r})")
             if sale.get("credibility") and sale.get("basis") in BASIS_CREDIBILITY \
                     and sale["credibility"] not in BASIS_CREDIBILITY[sale["basis"]]:
                 errors.append(f"{where}.credibility {sale['credibility']!r} contradicts basis {sale['basis']!r}")
+            if sale.get("role") and sale["role"] not in (e.get("ecosystem_roles") or []):
+                warnings.append(f"{where}.role {sale['role']!r} is not in the entity's ecosystem_roles summary {e.get('ecosystem_roles')}")
             if "open" in sale and not (isinstance(sale["open"], str) and sale["open"].strip()):
                 errors.append(f"{where}.open must be a non-empty string")
             for j, h in enumerate(sale.get("status_history") or []):

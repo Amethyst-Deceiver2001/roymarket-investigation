@@ -238,17 +238,17 @@ class RelationshipGraphTests(unittest.TestCase):
             "slug": "core", "channel": "Ozon", "basis": "doc", "source_id": "s1", "products": ["propellers 8 in"],
             "status_history": [{"status": "listed", "as_of": "2026-07-06", "source_id": "s1"},
                                {"status": "announced", "as_of": "2026-06-01", "source_id": "s1"}],
-            "asserted_by": "self", "credibility": "doc", "authorised": "n/a", "open": "Поставщик not established"}]
+            "role": "licensed_dealer", "asserted_by": "self", "credibility": "doc", "authorised": "n/a", "open": "Поставщик not established"}]
         graph = build_graph(entities, copy.deepcopy(PEOPLE))
         edge = next(e for e in graph["edges"] if e["type"] == "sells_for")
         # status is the latest dated state, whatever the order of the list
-        self.assertEqual({"products": ["propellers 8 in"], "status": "listed", "asserted_by": "self",
+        self.assertEqual({"products": ["propellers 8 in"], "status": "listed", "role": "licensed_dealer", "asserted_by": "self",
                           "credibility": "doc", "authorised": "n/a", "open": "Поставщик not established"},
                          edge["detail"])
         self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
         # an edge with no envelope field carries no detail, and every other edge type never does
         self.assertTrue(all(e["detail"] is None for e in graph["edges"] if e is not edge))
-        for key, value in (("status", "teleported"), ("asserted_by", "rumour"), ("authorised", "maybe"),
+        for key, value in (("status", "teleported"), ("role", "wizard"), ("asserted_by", "rumour"), ("authorised", "maybe"),
                            ("products", "propellers")):
             bad = copy.deepcopy(graph)
             next(e for e in bad["edges"] if e["type"] == "sells_for")["detail"][key] = value
