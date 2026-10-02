@@ -278,6 +278,7 @@ a registry fact.
 | Job | Tool | Where and who |
 |---|---|---|
 | What a record lacks or has let go stale | `status_board.py` (+ `exhibits/build_status_board.py`, private artifact AU3y9UL5M4i48UJ4BzrXSj) | anywhere, local |
+| The whole daily round in one command | `daily_mac.py` (`--dry-run`, `--archive N`) | the user's Mac; report in `data/sources/_daily/` |
 | Missing/stale ЕГРЮЛ, ЕГРИП, БФО | `status_board.py --pull-queue` (8 + 8 a day, top tiers first; ingest steps incl. the graph rebuild printed after) | the user's Mac; the queue is the user's standing go-ahead, run as printed |
 | First reading of what arrived | `first_reading.py export --push` (Mac; `--local-dir data/sources/_inbox` also writes the texts locally so `read` runs the same day), then `read` | worksheet for a human; never merged, never applied |
 | Sanctions lists by ИНН/ОГРН | `sanctions_watch.py` | GitHub Actions, Mondays; an issue opens on change; state on `watch/sanctions` |
@@ -287,8 +288,12 @@ a registry fact.
 Still by hand (no tool selects per record):
 
 - 78 records never screened (`screen_never`) and 53 unreviewed screening hits
-  (`screen_hits_unreviewed`): the `screen_*.py` scripts have no per-record
-  selector, so the board lists them and the user runs the screens.
+  (`screen_hits_unreviewed`, now labelled with the pre-sort verdict from
+  `watch/sanctions/presort_*.json`). `screen_opensanctions.py` picks its own
+  records since 02.10.2026 (never-screened first, `--budget` 25 per run against
+  the 150/month quota counted per record, `--only`, `--dry-run`); keep that
+  quota for people and regimes the weekly watcher does not read. The other
+  `screen_*.py` have no selector; the user runs them.
 - Six licence screeners write no `*_checked_at` (FAVT, МЧС fire, РКН comms, РКН
   frequency, Roscosmos, Росгвардия), so a clean run looks like no run. Code fix
   is ours; the re-run is the user's.
@@ -318,8 +323,7 @@ Waiting on the user:
   echelon and branch, hostile frame). Then extend `military_units.json` with
   `vch`, `name_official_ru`, `short_ru`, `informal_ru[]`, `name_en`,
   `short_en`, `echelon`, `branch`, each form with its source.
-- Wayback archiving (`archive_sources.py`): start the daily batches, and whether
-  to set up archive.org S3 keys (faster, less rate-limited).
+- archive.org S3 keys for Wayback (faster, less rate-limited); batches started 02.10.2026 on the anonymous endpoint.
 - Graphic-content default; when to share the chain previews.
 
 ## Current state (queried 2026-10-02, after the merge of PRs #3–#6)

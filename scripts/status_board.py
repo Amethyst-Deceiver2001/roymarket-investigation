@@ -197,6 +197,15 @@ class Board:
                 for ident in re.findall(r"\d{10,15}", name):
                     self.register_pulls[ident].append((d, s["id"]))
 
+        # БФО filings on file, by ИНН -> fiscal years, from the archiving convention
+        # (BFO_<ИНН>_<year>_...). A filing on disk but not yet in financials[] is a
+        # reading task, not a pull: re-queuing it would download it again every day.
+        self.bfo_files = defaultdict(set)
+        for s in self.sources:
+            m = re.match(r"BFO_(\d{10,12})_(\d{4})_", (s.get("path") or "").rsplit("/", 1)[-1])
+            if m:
+                self.bfo_files[m.group(1)].add(int(m.group(2)))
+
         self.dev_by_slug = defaultdict(list)
         for it in (developments or {}).get("items", []):
             if it.get("status", "open") != "open":
@@ -345,14 +354,20 @@ class Board:
         expected = self.today.year - 1 if self.today.month >= 5 else self.today.year - 2
         if reg and reg.year >= expected:
             return []
+        on_disk = self.bfo_files.get(e.get("inn"), set())
+        unread = sorted(y for y in on_disk if y > max(years, default=0))
+        if unread and max(unread) >= (max(years) if years else 0) and (not years or max(years) < expected):
+            return [flag("review", "bfo_unread",
+                         f"БФО for {', '.join(map(str, unread))} pulled but not yet read into financials[]",
+                         years_on_disk=unread)]
         if not years:
-            return [flag("pull", "bfo_missing", "No annual accounts (БФО) on file")]
+            return [flag("pull", "bfo_missing", "No annual accounts (БФО) on file", on_disk=bool(on_disk))]
         if max(years) < expected:
             rv = parse_date(review.get("as_of"))
             if rv and rv >= date(expected + 1, 5, 1):
                 return []
             return [flag("behind", "bfo_behind", f"Latest accounts on file are for {max(years)}; {expected} should be filed",
-                         latest_year=max(years))]
+                         latest_year=max(years), on_disk=bool(on_disk))]
         return []
 
     @staticmethod
@@ -552,7 +567,12 @@ def pull_queue(board, cap=PULL_CAP):
     ents = sorted((r for r in board["rows"] if r["kind"] == "entity" and r.get("inn")),
                   key=lambda r: (rank.get(r["tier"], 99), r["slug"]))
     def pick(codes):
-        return [r for r in ents if any(f["code"] in codes for f in r["flags"])][:cap]
+        # Records whose register was already asked (a filing on disk, just not the
+        # latest year) go after those never pulled, so a company that has not filed
+        # yet cannot hold the day's slots; the tier order holds within each group.
+        hits = [r for r in ents if any(f["code"] in codes for f in r["flags"])]
+        asked = lambda r: any(f.get("on_disk") for f in r["flags"] if f["code"] in codes)
+        return sorted(hits, key=asked)[:cap]
     egrul = pick({"egrul_missing", "egrul_stale"})
     bfo = pick({"bfo_missing", "bfo_behind"})
     lines = [f"# Pull queue for {board['generated']} from scripts/status_board.py (cap {cap} per registry).",

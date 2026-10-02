@@ -69,6 +69,23 @@ def main():
     # A company whose record says it no longer exists is not asked for new accounts.
     assert not any(f["code"].startswith("bfo") for f in r["ao-borey-absorbed-no-longer-exists"]["flags"])
 
+    # A БФО filing already on disk but not read into financials[] is a reading
+    # task, not a pull; one with only older years on disk is still a pull,
+    # queued after records never pulled.
+    b = sb.Board(TODAY)
+    b.bfo_files["7700000001"] = {2024, 2025}
+    b.bfo_files["7700000002"] = {2022}
+    unread = b.bfo_flags({"inn": "7700000001", "financials": []})
+    assert [f["code"] for f in unread] == ["bfo_unread"] and unread[0]["years_on_disk"] == [2024, 2025], unread
+    old = b.bfo_flags({"inn": "7700000002", "financials": [{"year": 2022}]})
+    assert [f["code"] for f in old] == ["bfo_behind"] and old[0]["on_disk"], old
+    never = b.bfo_flags({"inn": "7700000003", "financials": []})
+    assert [f["code"] for f in never] == ["bfo_missing"] and not never[0]["on_disk"], never
+    rows = {"generated": "2026-10-02", "rows": [
+        {"kind": "entity", "slug": s, "inn": i, "tier": "manufacturer", "flags": fl}
+        for s, i, fl in (("a-old", "7700000002", old), ("b-never", "7700000003", never))]}
+    assert "b-never" in sb.pull_queue(rows, cap=1) and "a-old" not in sb.pull_queue(rows, cap=1)
+
     # Every flag kind is a declared one.
     assert {f["kind"] for row in board["rows"] for f in row["flags"]} <= set(sb.KINDS)
     print("ok: status_board fixtures pass")

@@ -303,8 +303,13 @@ def main() -> int:
     # cache_key matches the bare filename for top-level files (preserves
     # every existing cache hit) and only falls back to "subdir/filename" for
     # nested files, which were never cached under any key before.
+    # Working files are not documents: anything under a "_" or "." name
+    # (daily_mac.py's _daily/ and _inbox/ text copies, first_reading's export
+    # state, run logs) is skipped, or its text copies register as duplicate
+    # sources (s9019-s9045, 02.10.2026).
     files = sorted(p for p in SOURCES.rglob("*")
-                   if p.is_file() and p.name not in ("MANIFEST.md", ".DS_Store"))
+                   if p.is_file() and p.name not in ("MANIFEST.md", ".DS_Store")
+                   and not any(part[0] in "._" for part in p.relative_to(SOURCES).parts))
 
     def cache_key(p: Path) -> str:
         rel = p.relative_to(SOURCES)
