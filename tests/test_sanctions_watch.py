@@ -51,6 +51,9 @@ def main():
 
     us = sw.scan("us", US, reg)
     assert us["entries"] == 2 and us["publish_date"] == "09/30/2026", us
+    # Control digits: Тримикс's real ИНН and ОГРН pass, a one-digit change fails.
+    assert sw.ru_id_valid("7802942873") and sw.ru_id_valid("1237800084235")
+    assert not sw.ru_id_valid("7802942874")
     # Both identifiers of one entry produce two hits for the same record.
     assert {h["identifier"] for h in us["hits"]} == {"7802942873", "1237800084235"}, us["hits"]
     assert all(h["entry_id"] == "99001" and h["slug"] == "ooo-trimiks" for h in us["hits"])

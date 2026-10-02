@@ -95,6 +95,24 @@ ID_RE = re.compile(r"(?<!\d)(\d{15}|\d{13}|\d{12}|\d{10})(?!\d)")
 UA = "roymarket-investigation sanctions watcher (weekly, one request per list)"
 
 
+def ru_id_valid(s: str) -> bool:
+    """Control-digit check for a Russian ИНН (10/12) or ОГРН/ОГРНИП (13/15)."""
+    d = [int(c) for c in s]
+    if len(s) == 10:
+        w = [2, 4, 10, 3, 5, 9, 4, 6, 8]
+        return sum(a * b for a, b in zip(w, d)) % 11 % 10 == d[9]
+    if len(s) == 12:
+        w1 = [7, 2, 4, 10, 3, 5, 9, 4, 6, 8]
+        w2 = [3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8]
+        return (sum(a * b for a, b in zip(w1, d)) % 11 % 10 == d[10]
+                and sum(a * b for a, b in zip(w2, d)) % 11 % 10 == d[11])
+    if len(s) == 13:
+        return int(s[:12]) % 11 % 10 == d[12]
+    if len(s) == 15:
+        return int(s[:14]) % 13 % 10 == d[14]
+    return False
+
+
 def local(tag: str) -> str:
     return tag.rsplit("}", 1)[-1]
 
@@ -169,6 +187,7 @@ def scan(key: str, data: bytes, registry: dict[str, dict]) -> dict:
         publish = root.get("generationDate") or root.get("date")
 
     entries = 0
+    with_ru_id = 0  # entries carrying any valid ИНН/ОГРН: how far identifier matching can reach
     hits = []
     for el in root.iter():
         if local(el.tag) != entry_tag:
@@ -176,7 +195,10 @@ def scan(key: str, data: bytes, registry: dict[str, dict]) -> dict:
         entries += 1
         blob = " ".join([*(v for n in el.iter() for v in n.attrib.values()),
                          *((n.text or "") for n in el.iter())])
-        found = {m for m in ID_RE.findall(blob) if m in registry}
+        ids_here = ID_RE.findall(blob)
+        if any(ru_id_valid(m) for m in ids_here):
+            with_ru_id += 1
+        found = {m for m in ids_here if m in registry}
         if not found:
             continue
         names = all_of(el, cfg.get("name_tags", ()), cfg.get("name_attrs", ()))
@@ -196,7 +218,8 @@ def scan(key: str, data: bytes, registry: dict[str, dict]) -> dict:
             })
     if entries == 0:
         raise ValueError(f"{key}: 0 entries parsed; treat as a parser bug")
-    return {"entries": entries, "entry_tag": entry_tag, "publish_date": publish, "hits": hits}
+    return {"entries": entries, "with_ru_id": with_ru_id, "entry_tag": entry_tag,
+            "publish_date": publish, "hits": hits}
 
 
 def hit_key(h: dict) -> str:
@@ -237,15 +260,15 @@ def compare(result: dict, previous: dict | None, registry: dict[str, dict]) -> d
 
 def report(result: dict, diff: dict) -> str:
     lines = [f"# Sanctions watch, {result['as_of']}", ""]
-    lines.append("| List | Published | Entries | Registry hits | SHA-256 |")
-    lines.append("|---|---|---|---|---|")
+    lines.append("| List | Published | Entries | With a Russian ИНН/ОГРН | Registry hits | SHA-256 |")
+    lines.append("|---|---|---|---|---|---|")
     for k, v in result["lists"].items():
         if v.get("error"):
-            lines.append(f"| {LISTS[k]['label']} | - | - | **failed: {v['error']}** | - |")
+            lines.append(f"| {LISTS[k]['label']} | - | - | - | **failed: {v['error']}** | - |")
             continue
         n = sum(1 for h in result["hits"] if h["list"] == k)
         lines.append(f"| {LISTS[k]['label']} | {v.get('publish_date') or '?'} | "
-                     f"{v['entries']} | {n} | `{v['sha256'][:16]}…` |")
+                     f"{v['entries']} | {v.get('with_ru_id', '?')} | {n} | `{v['sha256'][:16]}…` |")
 
     def block(title, rows, fmt):
         lines.extend(["", f"## {title} ({len(rows)})", ""])
@@ -298,15 +321,16 @@ def main() -> int:
                 d.mkdir(parents=True, exist_ok=True)
                 (d / f"SANCTIONS_{k.upper()}_{now:%Y%m%d}.xml").write_bytes(data)
             s = scan(k, data, registry)
-            info.update(entries=s["entries"], entry_tag=s["entry_tag"],
-                        publish_date=s["publish_date"])
+            info.update(entries=s["entries"], with_ru_id=s["with_ru_id"],
+                        entry_tag=s["entry_tag"], publish_date=s["publish_date"])
             result["hits"].extend(s["hits"])
         except Exception as ex:  # one list failing must not hide the others
             failed += 1
             info = {"url": cfg["url"], "error": f"{type(ex).__name__}: {ex}"[:300]}
             print(f"{k}: {info['error']}", file=sys.stderr)
         result["lists"][k] = info
-        print(f"{k}: {info.get('entries', 0)} entries, "
+        print(f"{k}: {info.get('entries', 0)} entries "
+              f"({info.get('with_ru_id', 0)} with a valid ИНН/ОГРН), "
               f"{sum(1 for h in result['hits'] if h['list'] == k)} registry hits",
               file=sys.stderr)
 
