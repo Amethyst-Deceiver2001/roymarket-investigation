@@ -107,7 +107,7 @@ after the design system redo and a new landing page.
      source (`notes/brand_review_20261002.md`).
 6. **New reader pages** (chain views per case, entity pages for specialists) on
    the new system, citing through B4.
-7. **B6 explorer** narrowed to neighbourhood-on-demand once two chain views
+7. **B6 explorer** (the old public explorer was retired and archived 02.10.2026, user) narrowed to neighbourhood-on-demand once two chain views
    exist.
 8. Later: Russian versions (written, not translated).
 
@@ -345,8 +345,8 @@ and `notes/SOURCE_REGISTER.md`; `notes/unverified_people_gap.md`,
 
 ## Where things are published
 
-- **Pages (`docs/`, public on push):** the generated landing page, `relationship-graph.html`
-  (still schema v11 data until B6) and `images/`. The seven case pages, profiles and `story.html`
+- **Pages (`docs/`, public on push):** the generated landing page and `images/`. The graph
+  explorer was retired in its current form on 02.10.2026 (user) and archived; B6 builds its replacement. The seven case pages, profiles and `story.html`
   are archived (track A). Pushing `docs/` needs the user's go-ahead.
 - **Artifacts (private unless shared):** Ecosystem Model (working model),
   «Булат» and «Капюшон» chain views (previews), landing preview, Investigation
