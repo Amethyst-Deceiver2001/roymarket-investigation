@@ -57,11 +57,23 @@ SHARED_WATCH = Path("/mnt/project-files/watch")
 EGRUL_STALE_DAYS = 45
 SCREEN_STALE_DAYS = 30
 # The screens a sanctions submission leans on; the rest are reported as gaps only.
+# (date field, label, key, stale after N days). OpenSanctions is 90 days because
+# its key allows 150 records a month (screen_opensanctions.py --max-age default),
+# and sanctions_watch.py already checks the EU/US/UK/Swiss lists by identifier
+# every week.
 KEY_SCREENS = [
-    ("opensanctions_screened_at", "OpenSanctions"),
-    ("gur_screened_at", "ГУР war-sanctions"),
-    ("aleph_screened_at", "Aleph"),
+    ("opensanctions_screened_at", "OpenSanctions", "opensanctions", 90),
+    ("gur_screened_at", "ГУР war-sanctions", "gur", SCREEN_STALE_DAYS),
+    ("aleph_screened_at", "Aleph", "aleph", SCREEN_STALE_DAYS),
 ]
+# Daily re-screen caps for the pull queue. OpenSanctions: 4 a day is ~120 of
+# the 150-record monthly quota, leaving room for hand-run --only screens.
+SCREEN_CAPS = {"opensanctions": 4, "gur": 8, "aleph": 8}
+SCREEN_COMMANDS = {
+    "opensanctions": "python3 scripts/screen_opensanctions.py --budget {n} --only {slugs}",
+    "gur": "python3 scripts/screen_gur.py --only {slugs}",
+    "aleph": "python3 scripts/screen_aleph.py --only {slugs}",
+}
 TIER_ORDER = ["cbst-core", "money-layer", "network", "manufacturer", "plumbing",
               "unverified", "adjacent"]
 REGISTER_PREFIXES = ("EGRUL", "EGRULAPI", "EGRIP", "ul-", "fl-")
@@ -261,23 +273,27 @@ class Board:
                                 channel=h, high_water=hw))
         return out
 
-    def screen_flags(self, rec):
+    def screen_flags(self, rec, screens=KEY_SCREENS):
+        """screen_never / screen_stale; `due` names the screens (keys of SCREEN_COMMANDS)."""
         out, never, stale = [], [], []
-        for field, label in KEY_SCREENS:
+        for field, label, key, days in screens:
             if field not in rec and field == "gur_screened_at" and "inn" not in rec:
                 continue
             d = parse_date(rec.get(field))
             if d is None:
-                never.append(label)
-            elif self.age(d) > SCREEN_STALE_DAYS:
-                stale.append((label, d))
+                never.append((label, key))
+            elif self.age(d) > days:
+                stale.append((label, key, d, days))
         if never:
-            out.append(flag("pull", "screen_never", "Never screened: " + ", ".join(never)))
+            out.append(flag("pull", "screen_never", "Never screened: " + ", ".join(l for l, _ in never),
+                            due=[k for _, k in never]))
         if stale:
-            oldest = min(d for _, d in stale)
+            oldest = min(s[2] for s in stale)
             out.append(flag("stale", "screen_stale",
-                            "Screen older than %d days: %s" % (SCREEN_STALE_DAYS, ", ".join(l for l, _ in stale)),
-                            as_of=oldest.isoformat(), age_days=self.age(oldest)))
+                            "Screen out of date: " + ", ".join(
+                                "%s (%d days, limit %d)" % (l, self.age(d), n) for l, _, d, n in stale),
+                            as_of=oldest.isoformat(), age_days=self.age(oldest),
+                            due=[k for _, k, _, _ in stale]))
         return out
 
     # --- entities -----------------------------------------------------------
@@ -366,13 +382,7 @@ class Board:
     # --- people -------------------------------------------------------------
 
     def person_row(self, p):
-        fl = []
-        d = parse_date(p.get("opensanctions_screened_at"))
-        if d is None:
-            fl.append(flag("pull", "screen_never", "Never screened: OpenSanctions"))
-        elif self.age(d) > SCREEN_STALE_DAYS:
-            fl.append(flag("stale", "screen_stale", f"OpenSanctions screen is {self.age(d)} days old",
-                           as_of=d.isoformat(), age_days=self.age(d)))
+        fl = self.screen_flags(p, KEY_SCREENS[:1])
         reference = p.get("graph_tier") == "reference"
         if not reference:
             if p.get("inn_personal") and not p.get("other_entities_checked_at"):
@@ -488,7 +498,8 @@ class Board:
                    if it.get("status", "open") == "open" and not (set(it.get("about") or []) & known)]
         return {
             "generated": self.today.isoformat(),
-            "thresholds": {"egrul_stale_days": EGRUL_STALE_DAYS, "screen_stale_days": SCREEN_STALE_DAYS},
+            "thresholds": {"egrul_stale_days": EGRUL_STALE_DAYS, "screen_stale_days": SCREEN_STALE_DAYS,
+                           **{f"{k}_stale_days": n for _, _, k, n in KEY_SCREENS}},
             "kinds": KINDS, "notes": self.notes, "rows": rows, "unattached_developments": orphans,
         }
 
@@ -544,7 +555,10 @@ def pull_queue(board, cap=PULL_CAP):
     user's machine (the daily digest hands it to the main coding session, at
     user direction 02.10.2026). Capped per registry so each day stays a
     handful of lookups; the rest wait for the next day, most important tier
-    first. Screens are left out: screen_*.py have no per-record selector.
+    first. Sanctions re-screens follow, capped per screen (SCREEN_CAPS):
+    never-screened first, then oldest; people first for OpenSanctions, whose
+    quota is best spent where the identifier-based sanctions_watch.py cannot
+    match. A screen hit is a lead to read, like any other screening output.
     A pulled file is a document to read, not a fact: wiring into the registry
     still goes through corrections_*.json after reading it (CLAUDE.md hard rule).
     """
@@ -555,6 +569,7 @@ def pull_queue(board, cap=PULL_CAP):
         return [r for r in ents if any(f["code"] in codes for f in r["flags"])][:cap]
     egrul = pick({"egrul_missing", "egrul_stale"})
     bfo = pick({"bfo_missing", "bfo_behind"})
+    screens = screen_queue(board, rank)
     lines = [f"# Pull queue for {board['generated']} from scripts/status_board.py (cap {cap} per registry).",
              "# Live lookups against egrul.nalog.ru / bo.nalog.gov.ru: run from the repo root on a machine that reaches them."]
     if egrul:
@@ -563,7 +578,10 @@ def pull_queue(board, cap=PULL_CAP):
     if bfo:
         lines.append("# Annual accounts missing or behind: " + ", ".join(r["slug"] for r in bfo))
         lines.append("python3 scripts/bfo_pull.py " + " ".join(f"--inn {r['inn']}" for r in bfo))
-    if not (egrul or bfo):
+    for key, slugs in screens.items():
+        lines.append(f"# {key} screen missing or out of date (cap {SCREEN_CAPS[key]} a day): " + ", ".join(slugs))
+        lines.append(SCREEN_COMMANDS[key].format(n=len(slugs), slugs=",".join(slugs)))
+    if not (egrul or bfo or screens):
         lines.append("# Nothing to pull today.")
         return "\n".join(lines)
     lines += ["# Index and parse what arrived, then check the registry.",
@@ -575,6 +593,25 @@ def pull_queue(board, cap=PULL_CAP):
               "python3 scripts/build_relationship_graph.py",
               "python3 scripts/check_registry.py"]
     return "\n".join(l for l in lines if l)
+
+
+def screen_queue(board, rank):
+    """{screen key: [slugs]} due today, capped by SCREEN_CAPS."""
+    out = {}
+    for key, cap in SCREEN_CAPS.items():
+        due = []
+        for r in board["rows"]:
+            if r["kind"] not in ("entity", "person"):
+                continue
+            for f in r["flags"]:
+                if f["code"] in ("screen_never", "screen_stale") and key in f.get("due", ()):
+                    due.append((f["code"] != "screen_never",
+                                key == "opensanctions" and r["kind"] != "person",
+                                -(f.get("age_days") or 0),
+                                rank.get(r.get("tier"), 99), r["slug"]))
+        if due:
+            out[key] = [d[-1] for d in sorted(due)[:cap]]
+    return out
 
 
 def diff(prev, cur):
