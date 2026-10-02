@@ -126,6 +126,12 @@ def parse_pdf_filing(path: Path) -> dict | None:
         return {"error": f"pdftotext: {e}"}
     if not text.strip():
         return {"error": "pdftotext produced no text (scanned/image-only PDF?)"}
+    return parse_pdf_text(text)
+
+
+def parse_pdf_text(text: str) -> dict:
+    """The text half of parse_pdf_filing(), for `pdftotext -layout` output
+    already on hand (scripts/first_reading.py reads exported text, not PDFs)."""
     # NOTE: the caller normalises the profit key to `profit` to match the xlsx
     # path's output shape. Keep both paths emitting the same keys -- they were
     # briefly divergent (`net_profit` here vs `profit` there) on 2026-09-05 and

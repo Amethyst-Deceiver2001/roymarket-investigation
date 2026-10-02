@@ -127,6 +127,7 @@ case this policy exists for, even against an unauthenticated open API.
 - Record a closed zakupki triage in the structured `zakupki_review` field (`{as_of, outcome: wired|partial|closed, note}`), not only in prose; trust `zakupki_coverage.py --gaps-only` over your own file counts.
 - Any local job over ~100 files or ~2 minutes: say so up front and either give the user the command or announce the background task. Run `tests/test_zakupki_parser.py` / `tests/test_bfo_parser.py` after touching those parsers.
 - An all-null result for one entity or one field across the corpus is a parser bug until proven otherwise. Non-profit `funds_*` figures are never revenue.
+- **First reading of daily pulls (added 2026-10-02 at user direction).** After the pull queue, the Mac runs `python3 scripts/first_reading.py export --push`: the text of each new ЕГРЮЛ/ЕГРИП/БФО file (not the PDF) goes to the side branch `pull-inbox` under `inbox/<date>/`, without touching the checkout. In the cloud, `first_reading.py read --inbox inbox/<date>` sets the registry's values beside the document's own lines. The result is a note for the user; nothing enters the registry until a human has read the document. `pull-inbox` is never merged.
 
 
 ## Hard rule: facts come from the original document, read in full, in its own language
