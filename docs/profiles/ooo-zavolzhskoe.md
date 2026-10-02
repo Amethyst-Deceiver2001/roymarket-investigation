@@ -42,7 +42,6 @@
 | 2023 | — | ₽-27,348,000 | [s0256] |
 | 2024 | ₽59,000 | ₽-31,854,000 | [s0257] |
 | 2025 | ₽425,000 | ₽-39,419,000 | [s0258] |
-| 2025 | — | ₽139,654,000 | [s0295] |
 
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 2 OCCRP Aleph match(es) (screened 2026-09-19).
@@ -64,7 +63,6 @@
 | [s0256] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2023_20260815.zip) | 2026-08-15 | 2023-12-31 |
 | [s0257] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
 | [s0258] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_3705066020_2025_20260815.zip) | 2026-08-15 | 2025-12-31 |
-| [s0295] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7704278421_2025_20260816.zip) | 2026-08-16 | 2025-12-31 |
 | [s6695] | EGRUL extract | EGRUL extract (EGRUL_3705066020_20260907_ooo-zavolzhskoe.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---

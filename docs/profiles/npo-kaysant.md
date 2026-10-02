@@ -63,6 +63,18 @@
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 3 OCCRP Aleph match(es) (screened 2026-09-19).
 
+## Web & social presence
+
+### Website
+
+- <https://kaysant.ru/> — Own site; footer prints «Научно-производственное объединение «КАЙСАНТ» ОГРН 1227700641805, ИНН 7733393203», matching this record. Captured 2026-10-01. Presents the Аргус counter-drone systems and the «Гермес» link.
+
+### Telegram
+
+- <https://t.me/germesfpv> — Company channel: kaysant.ru footer ([s8720]) reads «Подпишитесь на наш канал в Телеграм: t.me/germesfpv». Earlier link from mil_hub post 97548 ([s8713]). The channel itself has not been scraped or read.
+- <https://t.me/Spetsvyaz_bot> — Order bot: kaysant.ru footer, «Telegram - для заказов».
+- <https://t.me/argusm_ru> — Contact account behind the «Написать в Telegram» buttons on the Аргус product pages of kaysant.ru.
+
 ## Principals & persons of interest
 
 ### Черепкова Нина Сергеевна

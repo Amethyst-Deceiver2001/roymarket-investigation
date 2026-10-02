@@ -12,7 +12,7 @@
 - **Director:** Шатракова Анастасия Артёмовна
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 85.30 — Обучение профессиональное
-- **ЦБСТ tie:** EU-sanctioned as one of six named ЦБСТ residents in the EU's 20th sanctions package, per ЦБСТ's own coverage of the listing.
+- **ЦБСТ tie:** Named by ЦБСТ's own channel as the interceptor-drone maker «Архангел» among the 11 finalist teams of the II stream of the ЦБСТ accelerator, with its general director quoted.
 - **Wildberries overlap:** none_found
 
 > **Declared vs. actual activity.** Registered as professional training (85.30) — this is the ЦБСТ-network «Архангел» already discussed in the brief text quoted at docs/index.html:412 in relation to Рустехдрон's address proximity; a training-services registration for an entity in that cluster is consistent with the brief's general pattern of declared-vs-actual ОКВЭД mismatches, not yet independently explained here.

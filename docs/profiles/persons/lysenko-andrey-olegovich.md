@@ -16,11 +16,13 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Визионеро» | director — Генеральный директор; co-inventor (ПрЭВМ RU2023613722) | — | [s7413] |
 
+## Products linked via this person
+
+- **ПАК «Визионеро»** + 2 more — via ООО «Визионеро» · director
+
 ## Related persons
 
 - **Городничин Дмитрий Александрович** — co-inventor (ПрЭВМ RU2023613722) — shared entity: ООО «Визионеро» [s1054]
-- **Gorodnichin Dmitriy Aleksandrovich** — co-inventor (ПрЭВМ RU2023613722) — shared entity: ООО «Визионеро» [s1054]
-- **Lysenko Andrey Olegovich** — co-inventor (ПрЭВМ RU2023613722) — shared entity: ООО «Визионеро» [s1054]
 - **Abdulov Aleksandr Alekseevich** — co-inventor (ПрЭВМ RU2023613722) — shared entity: ООО «Визионеро» [s1054]
 - **Pyankov Ilya Sergeevich** — co-inventor (ПрЭВМ RU2023613722) — shared entity: ООО «Визионеро» [s1054]
 

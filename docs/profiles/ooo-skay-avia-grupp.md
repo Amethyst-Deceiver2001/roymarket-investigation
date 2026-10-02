@@ -38,6 +38,10 @@
 |---|---|---|
 | 198510, г. Санкт-Петербург, вн.тер.г. город Петергоф, ул. Константиновская, д. 8, литера А, помещ. 1-Н | 2026-03-29 | 2026-09-02: precise address from EGRUL extract [s5307] (embedded in smolin.info article 2, [s5291], independently re-downloaded), upgrading from coarse "г. Санкт-Петербург". ГРН 2267800128253 dated 28.01.2026. [s5307] |
 
+## Products
+
+- **Сборка боевых беспилотников (модель не названа)** — SOTAvision court report (17.02.2026): a defendant earns ₽80,000/month at «ООО «Скай Авиа групп»» in Великий Новгород assembling combat drones. Press; matched by legal name only, no ИНН in the article. [s8575]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -88,6 +92,7 @@
 | [s6607] | Bfo | Bfo (BFO_7802865058_2024_ооо-скаи-авиа-групп.pdf) | — | — |
 | [s6608] | Bfo | Bfo (BFO_7802865058_2025_ооо-скаи-авиа-групп.pdf) | — | — |
 | [s6837] | EGRUL extract | EGRUL extract (EGRUL_7802865058_20260907_ooo-skay-avia-grupp.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8575] | press coverage | press coverage (PRESS_20260217_sotavision-56127-skay-avia-grupp-sborka-bespilotnikov.html) | 2026-02-17 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

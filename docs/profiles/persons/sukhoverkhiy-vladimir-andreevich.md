@@ -16,6 +16,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Пехтра» | director — Генеральный директор | — | [s7412] |
 
+## Products linked via this person
+
+- **Периферийное устройство управления компьютером через мышечные сигналы** — via ООО «Пехтра» · director
+
 ## Sanctions & screening
 
 - **Disqualified-director registry:** No hits (checked None)

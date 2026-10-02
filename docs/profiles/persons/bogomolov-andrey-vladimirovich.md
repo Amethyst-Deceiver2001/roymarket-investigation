@@ -6,6 +6,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **DOB:** 02.07.1977
 - **Personal ИНН:** 673103142483
 - **Entities linked:** 1
 - **Primary role:** co-inventor (patent RU2637799C1); co-inventor (patent RU2663193C1), АО «НИИ СТТ»

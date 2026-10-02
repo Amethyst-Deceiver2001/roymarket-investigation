@@ -16,6 +16,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Аэроплатформы» | role — co-inventor (patent RU2779484C1) | — | [s1031] |
 
+## Products linked via this person
+
+- **Высотные свободные аэростаты** + 1 more — via ООО «Аэроплатформы» · role
+
 ## Related persons
 
 - **Оксман Николас Николаевич** — 14% founder — shared entity: ООО «Аэроплатформы» [s6796]

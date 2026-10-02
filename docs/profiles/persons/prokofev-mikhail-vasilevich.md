@@ -17,6 +17,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Скай авиа групп» | role — сборщик (assembler) | — | [s5291] |
 
+## Products linked via this person
+
+- **Сборка боевых беспилотников (модель не названа)** — via ООО «Скай авиа групп» · role
+
 ## Related persons
 
 - **Христюк Владимир Владимирович** — учредитель (former) — shared entity: ООО «Скай авиа групп» [s5291]

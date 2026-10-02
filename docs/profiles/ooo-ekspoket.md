@@ -1,6 +1,6 @@
 # ООО «Экспокэт»
 
-`WB: not_checked` 
+`adjacent` `WB: not_checked` 
 
 ИНН 1659113230 · ОГРН 1111690057698
 

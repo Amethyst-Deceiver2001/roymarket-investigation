@@ -17,6 +17,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 | ООО «ДРОНОМИР» | director — Генеральный директор | — | [s0063] |
 | ООО «ПРОММАШ» | director — Директор | 26.01.2026 | [s6786] |
 
+## Products linked via this person
+
+- **«ДУПЛЕТ / DUPLET» (товарный знак RU 1220054)** — via ООО «ПРОММАШ» · director
+
 ## Sanctions & screening
 
 - **Disqualified-director registry:** No hits (checked 2026-09-08)

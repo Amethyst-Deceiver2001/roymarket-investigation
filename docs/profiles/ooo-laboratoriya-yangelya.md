@@ -11,7 +11,7 @@
 - **Director:** Хатьянов Сергей Валерьевич
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 62.01 — None
-- **ЦБСТ tie:** not_established
+- **ЦБСТ tie:** No ЦБСТ tie established.
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history

@@ -19,6 +19,16 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Радиофид Системы» | director + founder — Учредитель и генеральный директор; Генеральный директор (signatory of record on госзакупки contracts) | 22.01.2010–01.11.2022 | [s1408] |
 
+## Products linked via this person
+
+- **Промышленные 4G/LTE-роутеры и модемы iRZ, терминалы, GPS-маяки** — via ООО «Радиофид Системы» · director + founder
+
+## Family ties
+
+- **Незнамова Анастасия Васильевна** — sister (confirmed)
+- **Незнамов Василий Александрович** — father (confirmed)
+- **Незнамова Людмила Викторовна** — mother (confirmed)
+
 ## Sanctions & screening
 
 - **OpenSanctions:** 1 candidate(s), best score 1.0 — rejected — different identity

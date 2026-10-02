@@ -18,7 +18,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 | Autonomous Non-Profit Organization "The Center for Uncrewed Vehicle Systems and Technology" (ЦБСТ's own EGRUL-registered English name) | director — General Director, АНО «ЦБСТ», appointed July 2024, until late 2025 | 2024-07 | [s6919] |
 | АО «Спецтех Инвестиции» | director — Генеральный директор, sole-shareholder subsidiary of ЦБСТ (100% owned) | 27.11.2025 | [s0436] |
 | АО «Спецтех Первый» | director — Генеральный директор, sole-shareholder subsidiary of ЦБСТ (100% owned) | 10.04.2026 | [s0437] |
-| ООО «Беркут» | founder — Co-founder; manages Беркут simultaneously with ЦБСТ per investigator.org.ua -- ИНН 9709100837/ОГРН 1237700726636 since resolved via ФНС founder cross-check (other_entities, 2026-09-07) | — | [s6919] |
+| ООО «Беркут» | founder — Учредитель (49%) | 19.12.2024 | [s8541] |
 | ООО «Техномост» | director — Генеральный директор | — | [s7453] |
 | ООО «Моменто» | founder — Учредитель (50%) | — | [s7452] |
 | «Федеральный центр беспилотных систем» (Rudnevo technopark cluster, Moscow) | director — Headed the Rudnevo UAV-industry technopark cluster ("unites 12 manufacturers of drones"), Mar-Oct 2023 -- predates his ЦБСТ directorship | 2023-03–2023-10 | [s6919] |
@@ -56,6 +56,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 | [s7453] | EGRUL extract | EGRUL extract (EGRUL_9725186180_20260914_ooo-tekhnomost.pdf) | 2026-09-14 | 2026-09-14 |
 | [s7519] | transcript | transcript (TRANSCRIPT_20250214_er-ru-yakushev-bezrukov-tsbst-nabsovet.txt) | 2025-02-14 | — |
 | [s7600] | Tgpost | Tgpost (TGPOST_20250214_ano_cbst-453-cbst-supervisory-board-membership.txt) | 2025-02-14 | — |
+| [s8541] | EGRUL extract | EGRUL extract (EGRUL_9709100837_20260930_ooo-berkut-dmv.pdf) | 2026-09-30 | 2026-09-30 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -34,6 +34,13 @@
 |---|---|---|
 | 10000 | 2022-06-28 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6870] |
 
+## Products
+
+- **FPV-дрон «Брус-1»** — FPV kamikaze drone listed under this ИНН by Ukraine's ГУР «War&Sanctions» UAV-companies register (register attribution, not the company's own). [s8564]
+- **FPV-дрон «Оса»** — Same ГУР register entry. [s8564]
+- **FPV-дрон «Корт»** — Same ГУР register entry. [s8564]
+- **Испытательный полигон БАС в Сколково** — Operator of the UAS test zone in Сколково (ГУР register); The Insider (16.05.2025) reports stakes in the makers of «Гарпия», «Сибирячок» and «Бумеранг» and a production site at the Луганск aircraft-repair plant. [s8573]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -70,7 +77,7 @@
 
 ## Open questions
 
-- GUR states this entity "produces FPV drones used in the war against Ukraine" but names no specific model — worth a follow-up check against the entity's own site/filings for product names. [s0968]
+- ГУР now lists three FPV models (Брус-1, Оса, Корт) under this ИНН; no Russian primary source for them yet. [s8564]
 
 ## Sources cited in this profile
 
@@ -78,12 +85,13 @@
 |---|---|---|---|---|
 | [s0432] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9731094770_20260822_ooo-tsugam.json) | 2026-08-22 | 2026-08-22 |
 | [s0820] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_9731094770_20260824_ooo-tsugam.json) | 2026-08-24 | — |
-| [s0968] | GUR war-sanctions record | GUR war-sanctions record (GUR_9731094770_20260824_ooo-tsugam.html) | 2026-08-24 | — |
 | [s6691] | Bfo | Bfo (BFO_9731094770_2022_ооо-цугам.pdf) | — | — |
 | [s6692] | Bfo | Bfo (BFO_9731094770_2023_ооо-цугам.pdf) | — | — |
 | [s6693] | Bfo | Bfo (BFO_9731094770_2024_ооо-цугам.pdf) | — | — |
 | [s6694] | Bfo | Bfo (BFO_9731094770_2025_ооо-цугам.pdf) | — | — |
 | [s6870] | EGRUL extract | EGRUL extract (EGRUL_9731094770_20260907_ooo-tsugam.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8564] | GUR war-sanctions record | GUR war-sanctions record (GUR_9731094770_20260930_ooo-tsugam-ru.html) | 2026-09-30 | — |
+| [s8573] | press coverage | press coverage (PRESS_20250516_theins-281223-letatelnoe-oruzhie-tsugam-sibnk.html) | 2025-05-16 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

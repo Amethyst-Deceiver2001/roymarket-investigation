@@ -42,6 +42,22 @@
 |---|---|---|
 | 107031, г. Москва, ул. Рождественка, д. 5/7 стр. 2, помещ. 4А/5 | 2026-03-12 | Per full signed EGRUL extract (ЮЭ9965-26-173557981, generated 04.09.2026 by ФНС) - resolves the address gap the open search-index API left (region-level 'Г.Москва' only). [s5474] |
 
+## Products
+
+- **Дроны-перехватчики и мобильные расчёты защиты объектов от БПЛА (предложение группы «Архангел»)** — B2B letter on @projectArchangel (msg 10668, 17.08.2026): «Группа компаний «Архангел» обеспечивает: разработку и производство дронов-перехватчиков, имеющих успешный опыт применения в зоне СВО», with ООО «Архангел Групп» as the named contact. The letter does not say which company makes them. [s8610]
+
+## Self-reported marketing claims
+
+> *разработку и производство дронов-перехватчиков, имеющих успешный опыт применения в зоне СВО*
+> development and production of interceptor drones with successful experience of use in the СВО zone
+>
+> — B2B offer letter on @projectArchangel naming ООО «Архангел Групп» as contact (2026-08-17) [s8610]
+
+> *В зависимости от потребностей предприятия возможна организация регионального производства перехватчиков с передачей технологий*
+> Depending on the enterprise's needs, regional production of interceptors with technology transfer can be organised
+>
+> — same letter (2026-08-17) [s8610]
+
 ## Principals & persons of interest
 
 ### Mikhail Gennadevich Filippov — Филиппов Михаил Геннадьевич
@@ -76,6 +92,7 @@
 |---|---|---|---|---|
 | [s5465] | Fns | Fns (FNS_PB_UPR_UCHR_502603133030_20260904_filippov-raw.json) | 2026-09-04 | — |
 | [s5474] | EGRUL extract | EGRUL extract (EGRUL_9702081286_20260904_arkhangel-grupp.pdf) | 2026-09-04 | 2026-09-04 |
+| [s8610] | Tgweb | Tgweb (TGWEB_20260930_projectArchangel-10668-arkhangel-grupp-b2b-interceptors.html) | 2026-09-30 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

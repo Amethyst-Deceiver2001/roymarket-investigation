@@ -27,7 +27,9 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 100000 | — | from corrections:add_entities, unverified |
+| 100000 | 2026-06-05 | Уставный капитал per the ЕГРЮЛ выписка (ГРН 1266100011418, entered 05.06.2026 with the registration); no later change in the extract. [s6956] |
+
+- 1 OpenSanctions match(es) (screened 2026-09-30).
 
 ## Principals & persons of interest
 

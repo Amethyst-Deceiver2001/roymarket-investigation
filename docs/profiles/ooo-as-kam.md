@@ -1,6 +1,6 @@
 # OOO "AS-KAM" — ООО «АС-КАМ»
 
-`WB: not_checked` 
+`manufacturer` `WB: not_checked` 
 
 ИНН 6165205064 · ОГРН 1166196114083
 
@@ -18,7 +18,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| АО «МТУ Сатурн» (управляющая организация, ИНН 7718047248, ОГРН 1027739168478) | — | from corrections:add_entities, unverified |
+| АО «МТУ Сатурн» (управляющая организация, ИНН 7718047248, ОГРН 1027739168478) | 2026-01-27 | ЕГРЮЛ выписка: сведения об управляющей организации внесены ГРН 2267700525046 от 27.01.2026. [s6809] |
 
 ### Founders / ownership
 
@@ -32,7 +32,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 10000 | — | from corrections:add_entities, unverified |
 | 10000 | 2016-12-08 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6809] |
 
 ## Products

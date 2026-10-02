@@ -16835,7 +16835,17 @@
           "outcome": "closed",
           "note": "not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
         },
-        "tier_basis": "The «Скворец»/«Скворец ВМФ» FPV strike-drone family is developed \"при поддержке\" (with the support of) ЦБСТ per two separate posts on ЦБСТ's own channel, one of them specifically reconfirming the tie in the context of the entity's own EU sanctions listing. Sanctioned by the EU, Switzerland and Ukraine (ID-confirmed via ИНН match); registered ОКВЭД is UAV manufacture itself (30.30.6), with GUR profiling further named variants («Скворец-7/10/-З»)."
+        "tier_basis": "The «Скворец»/«Скворец ВМФ» FPV strike-drone family is developed \"при поддержке\" (with the support of) ЦБСТ per two separate posts on ЦБСТ's own channel, one of them specifically reconfirming the tie in the context of the entity's own EU sanctions listing. Sanctioned by the EU, Switzerland and Ukraine (ID-confirmed via ИНН match); registered ОКВЭД is UAV manufacture itself (30.30.6), with GUR profiling further named variants («Скворец-7/10/-З»).",
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7588",
+            "as_of": "2026-04-24",
+            "note": "Headline «Евросоюз ввёл санкции против нескольких резидентов ЦБСТ»; body: «В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел»». Limit: the post names no legal entity, and the six are called «входящие в контур» in the body and «резиденты» only in the headline and the closing paragraph («Резиденты ЦБСТ и сам Центр неоднократно включались в иностранные санкционные реестры»); the entity is ИНН 9704241986, matched by exact ИНН to the EU listing in the OpenSanctions record of 2026-08-24; the EU explanation, as the post reports it, says the company develops the «Скворец» family «при поддержке» ЦБСТ."
+          }
+        ]
       },
       "verified_against": "s0013 — АО «Технодрон»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
       "why": [
@@ -16847,7 +16857,8 @@
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14303) ID-confirmed via ИНН 9704241986 — exact match, screen_gur.py sweep, 2026-08-24. Existing registry «Скворец» entries were duplicated (listed twice) — corrected in this same batch.",
         "2026-09-07: merged dormant duplicate correction key '9704241986' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+        "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged."
       ]
     },
     "ao-tsentr-telko": {
@@ -17999,6 +18010,10 @@
           {
             "source_id": null,
             "text": "A ПрЭВМ (registered computer program) search for «Дикобраз» (2026-08-24, searchplatform.rospatent.gov.ru) found RU2024619301ПрЭВМ, \"Программное обеспечение управления боем «Дикобраз»\" (combat-control software), registered 2024.04.22 to ООО «Монолит» -- a company NOT currently in this registry, and NOT this entity's own name. Given «Дикобраз» is ГК «Логос»'s own branded product line, this is either a name collision or a genuine undisclosed subcontractor/software-supplier relationship -- worth checking ООО «Монолит»'s own filings/ИНН before drawing any conclusion."
+          },
+          {
+            "source_id": "s7585",
+            "text": "IDENTITY OF THE «ЛОГОС» RESIDENT (2026-10-02): ЦБСТ post 878 (04.07.2025) says «группой компаний «Логос» — резидентом ЦБСТ» and names no legal form or ИНН. The cbst-residency membership on this record rests on the post plus this entity's own site (рэб.рус), which self-declares residency and sells «Дикобраз»-line jammers. The record of ooo-gk-logos (ИНН 3435149330, Волжский) reads the same post as naming it, and its legal name is literally «Группа компаний «Логос»». Neither reading is documented by an identifier. Also unreconciled: ooo-gk-logos's tier note gives ИНН 1001294845 for gk-logos, while this record carries 7839303129."
           }
         ],
         "parents": [
@@ -19112,6 +19127,16 @@
             "as_of": "2023-08-09",
             "note": "Announced exhibitor (radio-electronic warfare and anti-drone equipment). The organisers' post of 09.08.2023 names «НПО КАЙСАНТ» among the participants and lists what it planned to show («Аргус-Антидрон», «Аргус-Купол», «Аргус-Антифурия», FPV-дрон «Аргус», communication kits, telescopic masts). A pre-event announcement, not a record of attendance; the legal-form name matches the entity's own site (s8720). Not a residency."
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7597",
+            "as_of": "2025-11-14",
+            "note": "ЦБСТ's own channel, post 1509: «КБ «Гермес», резидент ЦБСТ, представило новый высокоскоростной перехватчик для борьбы с тяжёлыми украинскими БПЛА типа «Баба-яга»». «Гермес» is the brand НПО «КАЙСАНТ» trades under (kaysant.ru / germesfpv.ru, per this record's web entries)."
+          }
         ]
       },
       "verified_against": " Also: germesfpv.ru read directly 23.08.2026.",
@@ -19122,7 +19147,8 @@
         "2026-09-15: new corroborating detail found via a dronnitsa.ru research pass -- «Участники «Дронницы 2023»: НПО КАЙСАНТ» (dronnitsa.ru/n/10/, 09.08.2023, archived as s7506) confirms this entity exhibited at Дронница 2023 (not previously documented on this record) and lists two counter-drone product names not yet in products[]: radio-gun «Аргус-Антидрон» and mobile REB station «Аргус-Антифурия», alongside the already-documented «Аргус-Купол» dome jammer and FPV drone «Аргус» (verbatim quote: «радиоружья «Аргус-Антидрон» купольные системы подавления БПЛА «Аргус-Купол» мобильная станция РЭБ «Аргус-Антифурия»... FPV-дрон «Аргус» с полезной нагрузкой до 1,5 кг»).",
         "[2026-09-15] wb_overlap=none_found: Brand-name search for «ГЕРМЕС связь»/«ГЕРМЕС мачты» on wildberries.ru (2026-09-15) found no product listing.",
         "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the tsg_group71/nponebo shared-Дронница-digest text verbatim against data/roymarket.db. Recorded as related_entities; both entities already independently carry cbst_tie so this is not a new ЦБСТ-link finding, just a documented co-appearance.",
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7597; the earlier cbst_tie record is unchanged."
       ]
     },
     "npo-kilobatt": {
@@ -22600,9 +22626,9 @@
           }
         ],
         "cbst_tie": {
-          "claim": "Named directly by ЦБСТ's own channel as a sanctioned resident -- \"a tenth name\" in the same 24.04.2026 post (t.me/ANO_CBST/2095) discussed at length elsewhere in the same post beyond its six-name contour sentence, corroborated by the EU's own Council Decision (CFSP) 2026/504 (entry 759) naming LLC \"AEROMAKS\" (ИНН 7725347482) directly.",
-          "confidence": "t-doc",
-          "evidence": "docs/index.html's own extended Аэромакс paragraph quotes the EU decision verbatim and states \"The ЦБСТ tie is now directly confirmed by ЦБСТ's own channel: its 24.04.2026 post... explicitly names «Аэромакс» among the sanctioned residents, alongside «Котлин-Новатор», «Клеверкоптер» and МФТИ\" -- this is a distinct clause of the same long post from the six-name contour sentence, not a separate/conflicting post. Applies specifically to ООО «Аэромакс» (ИНН 7725347482), NOT the discarded АО «Аэромакс» (ИНН 7708407413, zero employees, wrong candidate per the same paragraph) and NOT the parent holding ООО «ГК «Аэромакс»» (ИНН 7710974353, which the brief explicitly says this resident \"sits inside\", not itself named).",
+          "claim": "Named in ЦБСТ's own post of 24.04.2026 (t.me/ANO_CBST/2095) among «ряд других отечественных разработчиков дронов» added to the EU's 20th package (««Аэромакс», «Котлин-Новатор», «Клеверкоптер», а также МФТИ — за партнёрство с разработчиками БпЛА»). The post does not call the company a resident; the EU's Council Decision (CFSP) 2026/504 (entry 759) names LLC \"AEROMAKS\" (ИНН 7725347482) directly.",
+          "confidence": "t-open",
+          "evidence": "ЦБСТ's own channel, post 2095, read in full (s7588): the six-name sentence («Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел») is followed by «В юбилейный санкционный реестр Брюсселя попали ряд других отечественных разработчиков дронов: «Аэромакс», «Котлин-Новатор», «Клеверкоптер», а также МФТИ». The earlier wording (\"named directly as a sanctioned resident\", t-doc) rested on a paraphrase in the retired dossier draft, not on the post. Applies to ООО «Аэромакс» (ИНН 7725347482) through the EU entry, not to АО «Аэромакс» (ИНН 7708407413) or to ООО «ГК «Аэромакс»» (ИНН 7710974353).",
           "source_id": "s7588"
         }
       },
@@ -22623,7 +22649,8 @@
         "2026-09-14: screen_upr_uchr.py (manual-captcha run) found bessonov-sergey-nikolaevich as director of a second entity, ООО «Аэромакс-Авиа (Центр-Логистика)» (ИНН 9704149557) — confirmed via egrul.nalog.ru open API (s7441) and wired as a related_entities back-link, plus the reciprocal thin add_entities record.",
         "2026-09-14: received 3 products (БВС СТ AS-32-10, AS-32-8, Д-12К) reassigned from ao-aeromaks -- both entities' rk.2035.university catalog entry (catalog_id 019c662d-...) is internally inconsistent: the showcase editorial description names \"АО «Аэромакс»\" but every individual product listing's own manufacturer field says \"ООО «Аэромакс»\" (source s1169). Resolved in favour of ooo-aeromaks (this entity, ИНН 7725347482) using independent corroboration: this entity is a formally active АЭРОНЕКСТ association member with UavCount:6 on its own membership record (s1405) -- ao-aeromaks (ИНН 7708407413, a 2022-founded Кронштадт-Техник-managed entity) has no comparable independent UAV-product corroboration on file. Not a certainty (no OKVED/primary EGRUL activity-code text was extractable from either entity's scanned EGRUL PDF to settle it definitively), but the weight of evidence favours this entity.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): verified directly against the full docs/index.html paragraph (not just a fragment) before wiring -- an agent flagged this as a possible footnote error based on only the six-name contour sentence, but the fuller paragraph (already read in full this session) confirms Аэромакс is named in a separate clause of the same post, not fabricated."
+        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): verified directly against the full docs/index.html paragraph (not just a fragment) before wiring -- an agent flagged this as a possible footnote error based on only the six-name contour sentence, but the fuller paragraph (already read in full this session) confirms Аэромакс is named in a separate clause of the same post, not fabricated.",
+        "[2026-10-02 claim corrected] cbst_tie rewritten and downgraded t-doc to t-open: post 2095, read in full, lists Аэромакс among «других отечественных разработчиков», not among the residents. Whether another document ties it to ЦБСТ is open."
       ]
     },
     "ooo-aeroplatformy": {
@@ -23614,6 +23641,16 @@
             "source_id": "s8553",
             "note": "Среднесписочная численность per «Ъ-Ростов» citing СПАРК-Интерфакс accounts."
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7588",
+            "as_of": "2026-04-24",
+            "note": "Headline «Евросоюз ввёл санкции против нескольких резидентов ЦБСТ»; body: «В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел»». Limit: the post names no legal entity, and the six are called «входящие в контур» in the body and «резиденты» only in the headline and the closing paragraph («Резиденты ЦБСТ и сам Центр неоднократно включались в иностранные санкционные реестры»); the entity is ИНН 6154165878, matched by exact ИНН to the EU listing in the OpenSanctions record of 2026-08-24 (see sanctions[])."
+          }
         ]
       },
       "verified_against": "searchplatform.rospatent.gov.ru, PE_RU exact patentee-name query, archived as s0977 (WIPO ST.96 XML full text) + HAR capture",
@@ -23624,7 +23661,8 @@
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
         "2026-09-14: rk.2035.university product-models sweep (s1169) fuzzy-matched two DIFFERENT real companies to this entity's name (\"Атлант\") on \"аэро\" substring overlap -- НПФ «Атлас-Аэро» (4 models: АТЛАС S/M/L/180) and АО «ЗАЛА АЭРО» (9 models, Kalashnikov-group loitering-munition maker, well-documented separately) are both confirmed-distinct companies, not this entity. Logged so a future automated name-sweep doesn't re-flag either.",
         "2026-09-28: cleared the raw-scaffold products[] array (bare strings «Орион»/«Технодинамика», no source_id) during a produces-edge sourcing spot-check -- neither is a real product of this entity. «Орион» is the already-documented GUR-components false positive referenced above (this entity does not make Orion-UAV parts); «Технодинамика» is the entity's own trust-management parent (see parents[]/tier_basis above), not a product, and was mis-scaffolded into products[] from the frozen archive text. Checked three fresh sources (Коммерсантъ, TAdviser, the GUR sanctions page) for any real product/component claim before clearing -- none confirmed either bare string, and a WebSearch summary asserting an Orion-component tie was not backed by any of the pages it cited.",
-        "[2026-09-30] Products and press-relayed financials added from two archived press pages (s8553 Коммерсантъ, s8554 The Insider). A direct БФО pull found nothing (the ИНН is absent from the bo.nalog.gov.ru index, no reason asserted), so the figures are labelled as press-relayed СПАРК data, and units are rubles as the article states them."
+        "[2026-09-30] Products and press-relayed financials added from two archived press pages (s8553 Коммерсантъ, s8554 The Insider). A direct БФО pull found nothing (the ИНН is absent from the bo.nalog.gov.ru index, no reason asserted), so the figures are labelled as press-relayed СПАРК data, and units are rubles as the article states them.",
+        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged."
       ]
     },
     "ooo-aviron": {
@@ -25416,6 +25454,16 @@
             "source_id": "s8067",
             "relationship_type": "co-exhibited"
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s5440",
+            "as_of": "2026-05-02",
+            "note": "ЦБСТ's own channel, post 2109, headline «Резидент ЦБСТ разработал режим управления БпЛА с «запредельной дистанцией» полёта»; lede: «Инжиниринговая компания «Лаборатория Гагаринг» интегрировала в модуль связи «Кузнечик» режим «Подхват»». The post links the company's channel t.me/my_el_lab/3396; the legal entity is the registry's identification of «Лаборатория Гагаринг» as ООО «Гагаринг»."
+          }
         ]
       },
       "verified_against": null,
@@ -25436,7 +25484,8 @@
         "2026-09-15: new battlefield_evidence found via a local DB mine (channel my_el_lab, id 1614515134, post 4546, 30.08.2026) — a military thank-you letter naming Gagaring's own staff and a specific 500-unit «Кузнечик» quantity, distinct from the existing evidence already on file. This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document -- no s#### id applies; the channel/post/date is the citation.",
         "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the projectArchangel/Archangel_Forum joint-exhibitor listing verbatim against data/roymarket.db. Recorded as related_entities per CLAUDE.md's existing mechanism, not a new cbst_tie (it's the Архангел project's own event, not ЦБСТ's).",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
+        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s5440; the earlier cbst_tie record is unchanged."
       ]
     },
     "ooo-garant-klub": {
@@ -34007,6 +34056,16 @@
             "as_of": "2025-09-09",
             "note": "ЦБСТ post 1202: the company's representative shared impressions and pilots demonstrated its UAV in the test zone."
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7588",
+            "as_of": "2026-04-24",
+            "note": "Headline «Евросоюз ввёл санкции против нескольких резидентов ЦБСТ»; body: «В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел»». Limit: the post names no legal entity, and the six are called «входящие в контур» in the body and «резиденты» only in the headline and the closing paragraph («Резиденты ЦБСТ и сам Центр неоднократно включались в иностранные санкционные реестры»); the entity is the registry's identification of «СКБ «Пиранья»» as ООО «СКБ Пиранья» (ИНН 7300024069), EU-listed."
+          }
         ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
@@ -34023,7 +34082,8 @@
         "2026-09-07: merged dormant duplicate correction key '7300024069' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "2026-09-07: founding-document bundle (s6909, both the original устав 13.09.2023 and its новая редакция 03.10.2024) OCR'd and read in full -- confirms Ульяновск address and ₽15,000 capital already on file (EGRUL-выписка-sourced), and surfaces that the original устав was approved by a founders' MEETING (plural), not a sole founder, as an open question against the single-founder founders[] currently on file. The новая редакция (03.10.2024) itself OCR'd poorly (cover-page/stamp text only legible) -- no further content extracted from it.",
         "2026-09-15: 4 images added following a local Telegram-DB media pull (tg_media_pull.py, @piranhafpv channel) surfaced by a case-study evidence-depth research pass — this entity had 0 images despite 3 marketing_claims/4 battlefield_evidence already on file. Files copied to docs/images/, archived+indexed as s7509/s7512/s7513/s7514. Source posts also carry additional marketing copy not yet in marketing_claims[] (verbatim self-incriminating claims: \"Первый танк «ABRAMS» был подбит БПЛА «Пиранья 10»\", \"Производство более 4 000 аппаратов ежемесячно\" [post 360, 01.04.2025]; \"Наша компания Пиранья гордится тем, что производит высококачественное оптоволокно для управления дронами с дальностью до 30 км\" [post 384, 01.08.2025] — a direct claim of supplying the fiber-optic cable used in a MoD-press-service-reported tank-destruction near Kursk) -- flagged here for a follow-up pass to also populate marketing_claims[]/battlefield_evidence[], not done in this edit to keep this change scoped to images.",
-        "2026-09-15: fixed a field-shape bug in the images[] entries added above — they used 'file'/'caption_ru'/'caption_en' keys, but the registry's own images[] schema (see every other entity's images[]) is 'path' (relative to docs/, e.g. 'images/<file>')/'caption' (single field). The mismatch was silent until build_company_profile.py's --all run crashed on it (KeyError: 'path') during unrelated product-profile work. Fixed to 'path'/'caption' (using the English caption text to match this project's EN-is-analysis convention for profile pages); the Russian caption text is not lost, just no longer duplicated in a second field this schema has no display path for — recoverable from git history if needed."
+        "2026-09-15: fixed a field-shape bug in the images[] entries added above — they used 'file'/'caption_ru'/'caption_en' keys, but the registry's own images[] schema (see every other entity's images[]) is 'path' (relative to docs/, e.g. 'images/<file>')/'caption' (single field). The mismatch was silent until build_company_profile.py's --all run crashed on it (KeyError: 'path') during unrelated product-profile work. Fixed to 'path'/'caption' (using the English caption text to match this project's EN-is-analysis convention for profile pages); the Russian caption text is not lost, just no longer duplicated in a second field this schema has no display path for — recoverable from git history if needed.",
+        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged."
       ]
     },
     "ooo-smart-teknolodzhis": {
@@ -39825,12 +39885,23 @@
           "source_id": "s7588"
         },
         "tier": "plumbing",
-        "tier_basis": "Sixth distinct \"Архангел\"-branded organization surfaced in this investigation. Legal name \"Архангел-ЦЕНТР\", corrected from the earlier parked memory's bare \"Архангел\" framing. A commercial Russian military-training organisation (general military training, tactical training, sniper instruction, UAV operation, artillery, reconnaissance) — see sanctions[] for the full designation narrative. CONFIRMED MULTI-JURISDICTION SANCTIONED (EU/UA/FR/CH/BE/MC, exact ИНН/ОГРН match, s5413) as of 2026-04-23, independent of this investigation and independent of any ЦБСТ tie — no drone-manufacturing OKVED, no ЦБСТ connection found, and no tie established to any of the other 5 \"Архангел\"-branded organizations in this investigation (including Гагаринг's own Архангел Легион/ano-arkhangel relationship). UPDATE 2026-09-30: the ЦБСТ post of 24.04.2026 (t.me/ANO_CBST/2095) names «Архангел» among ЦБСТ's EU-listed residents and links Council Decision 2026/504, whose only «Архангел» entry is this company (entry 702) — so a ЦБСТ tie now exists on ЦБСТ's own word, and the tier moves from adjacent to plumbing (a training body, like Гагаринг's training arm). The sentence above that no ЦБСТ connection was found is superseded. Still no documented tie to the Проект «Архангел» drone cluster or to the other «Архангел» entities."
+        "tier_basis": "Sixth distinct \"Архангел\"-branded organization surfaced in this investigation. Legal name \"Архангел-ЦЕНТР\", corrected from the earlier parked memory's bare \"Архангел\" framing. A commercial Russian military-training organisation (general military training, tactical training, sniper instruction, UAV operation, artillery, reconnaissance) — see sanctions[] for the full designation narrative. CONFIRMED MULTI-JURISDICTION SANCTIONED (EU/UA/FR/CH/BE/MC, exact ИНН/ОГРН match, s5413) as of 2026-04-23, independent of this investigation and independent of any ЦБСТ tie — no drone-manufacturing OKVED, no ЦБСТ connection found, and no tie established to any of the other 5 \"Архангел\"-branded organizations in this investigation (including Гагаринг's own Архангел Легион/ano-arkhangel relationship). UPDATE 2026-09-30: the ЦБСТ post of 24.04.2026 (t.me/ANO_CBST/2095) names «Архангел» among ЦБСТ's EU-listed residents and links Council Decision 2026/504, whose only «Архангел» entry is this company (entry 702) — so a ЦБСТ tie now exists on ЦБСТ's own word, and the tier moves from adjacent to plumbing (a training body, like Гагаринг's training arm). The sentence above that no ЦБСТ connection was found is superseded. Still no documented tie to the Проект «Архангел» drone cluster or to the other «Архангел» entities.",
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7588",
+            "as_of": "2026-04-24",
+            "note": "Headline «Евросоюз ввёл санкции против нескольких резидентов ЦБСТ»; body: «В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел»». Limit: the post names no legal entity, and the six are called «входящие в контур» in the body and «резиденты» only in the headline and the closing paragraph («Резиденты ЦБСТ и сам Центр неоднократно включались в иностранные санкционные реестры»); the post's own link is Council Decision (CFSP) 2026/504 (s0168), whose only «Архангел» entry is entry 702, «Archangel Center» (ИНН 5032379630); ЦБСТ may have linked a different company, see this record's tier note."
+          }
+        ]
       },
       "why": [
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "[2026-09-30] Identity check of archangel-center.ru: the Wayback capture of 18.11.2024 (s8650) prints this entity's full name, ОГРН 1245000058489 (dated 17.05.2024), ИНН 5032379630 and Одинцово address, so the site is this entity and not a namesake. Courses listed (price list on the page): special tactical and sniper training, tactical medicine, artillery, «Курс операторов БПЛА», young-soldier course. A search of the local Telegram archive (data/roymarket.db) finds no post mentioning «Архангел-Центр» or @archangel_center, and the site links no Проект «Архангел» channel, so a tie to the Проект «Архангел»/ЦБСТ cluster is still not established by anything on file; the shared brand word is not evidence. [Partly superseded the same day: ЦБСТ's own post 2095 links the EU act naming this company, so a ЦБСТ tie now exists on ЦБСТ's word; the tie to the Проект «Архангел» drone cluster remains unestablished.]",
-        "[2026-09-30 ЦБСТ post 2095 link check] cbst_tie set and tier changed adjacent → plumbing at user's observation that post 2095 links the EU act naming this company; checked against the act itself (s0168, entry 702). ЦБСТ may have meant a different «Архангел» and linked the act carelessly, but the act lists only this one."
+        "[2026-09-30 ЦБСТ post 2095 link check] cbst_tie set and tier changed adjacent → plumbing at user's observation that post 2095 links the EU act naming this company; checked against the act itself (s0168, entry 702). ЦБСТ may have meant a different «Архангел» and linked the act carelessly, but the act lists only this one.",
+        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged."
       ]
     },
     "9309028512": {

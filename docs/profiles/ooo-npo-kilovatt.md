@@ -64,11 +64,11 @@
 ## Corporate links
 
 - **IE Pinimasova Elena Aleksandrovna** `name-collision-distinct` — The reseller/storefront ИП (Пинимасова Е.А., kilowat48.ru) already in this registry lists "ООО НПО Киловатт" as the legal operating entity on its /company/docs/ page -- this record is that entity. Two separate legal persons: one manufactures/holds IP (this LLC, Lipetsk), the other appears to run the Moscow-facing retail storefront (the ИП). [s0532]
-- **Unresolved entity** `sister-entity` — Same sole founder (Шестопалов С.А.) as the second Kilovatt LLC (ИНН 4800016776) -- see that record. Common ownership confirmed via both entities' own EGRUL extracts. [s0532]
+- **Unresolved entity** `sister-entity` — Shared founder: Шестопалов С.А. founded this entity (100%) and founded the second Kilovatt LLC (ИНН 4800016776), where he has held 60% since 22.04.2026 alongside Хальзев С.Ю. 40% ([s8685], [s6790]). Until that date both entities had the same sole founder, confirmed via both entities' own EGRUL extracts. [s8685]
 
 ## Open questions
 
-- Trademark №1086620 «Капюшон» is Rospatent-registered to ooo-npo-kilovatt (this entity, ИНН 4800013729) but a certificate for the same mark was independently downloaded from the SISTER entity's own site (ooo-npo-kilovatt-shestopalov, kilowat48.ru). Both entities share founder Шестопалов С.А. — most likely an intra-group licensing/holding arrangement, not a conflict, but not independently confirmed which way the license runs. [s0945]
+- Trademark №1086620 «Капюшон» is Rospatent-registered to ooo-npo-kilovatt (this entity, ИНН 4800013729) but a certificate for the same mark was independently downloaded from the SISTER entity's own site (ooo-npo-kilovatt-shestopalov, kilowat48.ru). Шестопалов С.А. is the founder of this entity and, since 22.04.2026, holds 60% of the sister entity (Хальзев С.Ю. 40%; [s8685]) — most likely an intra-group licensing/holding arrangement, not a conflict, but not independently confirmed which way the license runs. [s0945]
 
 ## Sources cited in this profile
 
@@ -79,6 +79,7 @@
 | [s6501] | Bfo | Bfo (BFO_4800013729_2024_ооо-нпо-киловатт.pdf) | — | — |
 | [s6502] | Bfo | Bfo (BFO_4800013729_2025_ооо-нпо-киловатт.pdf) | — | — |
 | [s6789] | EGRUL extract | EGRUL extract (EGRUL_4800013729_20260907_ooo-npo-kilovatt.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8685] | Founding-Устав bundle | Founding-Устав bundle (UD_2108798.zip) | — | 2026-04-22 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -1,6 +1,6 @@
 # ООО «Аркодим-2»
 
-`WB: not_checked` 
+`adjacent` `WB: not_checked` 
 
 ИНН 1659173832 · ОГРН 1161690131833
 

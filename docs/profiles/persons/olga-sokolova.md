@@ -19,6 +19,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 | ООО «Центр управления городской аэромобильностью» | director — Генеральный директор | — | [s0432] |
 | None | director — Генеральный директор; Генеральный директор / Президент; Генеральный директор; Генеральный директор; Генеральный директор | 06.04.2017–10.11.2021 | [s2710] |
 
+## Products linked via this person
+
+- **FPV-дрон «Брус-1»** + 3 more — via ООО «Центр управления городской аэромобильностью» · director
+
 ## Sanctions & screening
 
 - **OpenSanctions:** 4 candidate(s), best score 0.95 — confirmed

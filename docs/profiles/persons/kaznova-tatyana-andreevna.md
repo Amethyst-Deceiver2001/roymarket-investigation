@@ -16,6 +16,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | OOO "Arkhangel Grupp" | founder — Учредитель, 5% доля; co-founder (5%) | 12.03.2026 | [s5474] |
 
+## Products linked via this person
+
+- **Дроны-перехватчики и мобильные расчёты защиты объектов от БПЛА (предложение группы «Архангел»)** — via OOO "Arkhangel Grupp" · founder
+
 ## Related persons
 
 - **Mikhail Gennadevich Filippov** — Учредитель, 80% доля (majority owner) — shared entity: OOO "Arkhangel Grupp" [s5474]

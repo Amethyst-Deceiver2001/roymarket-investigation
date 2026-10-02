@@ -33,7 +33,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 100000 | — | from corrections:add_entities, unverified |
 | 100000 | 2024-07-17 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6863] |
 
 ## Financials

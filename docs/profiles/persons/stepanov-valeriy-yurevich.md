@@ -17,6 +17,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 | OOO IK Aviaok | director + founder — Генеральный директор, единственный учредитель | 21.02.2011 | [s6971] |
 | Limited Liability Company "DS-Bars-T" | director — Генеральный директор | — | [s6961] |
 
+## Products linked via this person
+
+- **Электронная пушка для послойного электронно-лучевого наплавления (патент RU225510U1)** — via OOO IK Aviaok · director + founder
+
 ## Sanctions & screening
 
 - **OpenSanctions:** 1 candidate(s), best score None — rejected — different identity

@@ -30,6 +30,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Басов Алексей Николаевич** — Член Совета директоров — shared entity: АО «Эколибри» [s0324]
 - **Исаенко Сергей Васильевич** — Член Совета директоров — shared entity: АО «Эколибри» [s0324]
 
+## Family ties
+
+- **Dmitry Olegovich Rogozin** — son of (confirmed) [s2607]
+
 ## Sanctions & screening
 
 - **OpenSanctions:** 1 candidate(s), best score 1.0 — confirmed
@@ -45,6 +49,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 | [s0324] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_7714473012_2025_20260817.zip) | 2026-08-17 | 2025-12-31 |
 | [s0861] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_rogozin-aleksey-dmitrievich_20260824_rogozin-aleksey-dmitrievich.json) | 2026-08-24 | — |
 | [s0962] | GUR war-sanctions record | GUR war-sanctions record (GUR_7714473012_20260824_ao-ekolibri.html) | 2026-08-24 | — |
+| [s2607] | Rupep | Rupep (RUPEP_20260826_rogozin-aleksey-dmitrievich.pdf) | 2026-08-26 | 2026-05-19 |
 | [s6867] | EGRUL extract | EGRUL extract (EGRUL_9724066980_20260907_ano-tsentr-razvitiya-transportnykh-tekhnologiy.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7870] | EGRUL extract | EGRUL extract (EGRUL_6154168283_20260920_fond-sarmat.pdf) | 2026-09-20 | 2026-09-20 |
 

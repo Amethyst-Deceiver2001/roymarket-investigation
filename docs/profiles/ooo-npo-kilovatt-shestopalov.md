@@ -25,12 +25,14 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Шестопалов Сергей Анатольевич | 2026-05-13 | personal ИНН 480601511636; sole founder -- appointment record dated 13.05.2026 in this extract (may reflect a re-entry/confirmation of an existing founding stake rather than a change, original registration is 22.07.2024) [s0533] |
+| Шестопалов Сергей Анатольевич (sole founder) | 2024-07-15 | Charter approved by decision №1 of the single founder of 15.07.2024, company created in ЕГРЮЛ 22.07.2024 (ГРН 1244800005240). Charter capital ₽10 000. The charter itself does not name the founder; the name comes from the ЕГРЮЛ extract ([s0533], [s6790]). [s8685] |
+| Шестопалов Сергей Анатольевич 60% (₽600 000) / Хальзев Сергей Юрьевич 40% (₽400 000) | 2026-04-22 | Amendment to §5.2 of the charter approved by protocol №3 of the extraordinary general meeting of participants of 22 April 2026 (ЕГРЮЛ ГРН 2264800241418 of 13.05.2026): capital ₽1 000 000, split 60/40. Matches the ЕГРЮЛ extract ([s6790]). Хальзев Сергей Юрьевич, личный ИНН 482300070325 per [s6790]. [s8685] |
 
 ### Charter capital
 
 | Value | As of | Note |
 |---|---|---|
+| 10000 | 2024-07-15 | Charter of 15.07.2024 §5: «Уставный капитал Общества равен 10000 руб». Raised to ₽1 000 000 by the amendment of 22.04.2026. [s8685] |
 | 1000000 | 2026-05-13 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6790] |
 
 ### Facility type
@@ -141,7 +143,8 @@
 ## Open questions
 
 - Former occupant ООО «Регион-Агро Липецк» itself not yet checked against this registry or independently researched -- worth a quick check for any residual connection (shared ownership, lease continuity) versus a clean change of use.
-- RESOLVED: relationship to the sister entity (ИНН 4800013729) is common ownership -- same sole founder Шестопалов С.А. on both, per full EGRUL extracts. He directs this one personally; the other has a hired director (Гаврилов А.Г.). [s0533]
+- RESOLVED: relationship to the sister entity (ИНН 4800013729) is common ownership -- same sole founder Шестопалов С.А. on both, per full EGRUL extracts. He directs this one personally; the other has a hired director (Гаврилов А.Г.). UPDATE 2026-10-01 ([s8685], [s6790]): this holds for the period to 22 April 2026. Since then ООО НПО «Киловатт» (ИНН 4800016776) has a second participant, Хальзев Сергей Юрьевич 40% (Шестопалов 60%), so the two entities are no longer under identical ownership; Шестопалов remains a founder of both. [s0533]
+- 2026-10-01 founding-document read: since 22 April 2026 the company has TWO participants, Шестопалов Сергей Анатольевич 60% and Хальзев Сергей Юрьевич 40% (charter amendment and the ЕГРЮЛ extract [s6790] agree). Earlier text on this record calling Шестопалов the sole founder, and the resolved note on common ownership with the sister entity ИНН 4800013729 ("same sole founder"), describe the position before that date. Lookups done 2026-10-01: Хальзев's ИНН 482300070325 appears only in this entity's ЕГРЮЛ extracts in our archive; the sister entity ИНН 4800013729 shows Шестопалов 100% and director Гаврилов Алексей Георгиевич (ИНН 235209926630), no Хальзев; ЦБСТ channel search for «Хальзев» returns 0 hits; a web search found nothing. Not done: a ФНС cross-reference of his ИНН for other holdings. The 2024 charter (§10.4, §12.8) contains state-secret clauses worded identically to the РЛВТ charter, so they read as template text; no допуск to state secrets is evidenced. [s8685]
 
 ## Sources cited in this profile
 
@@ -161,6 +164,7 @@
 | [s7991] | site capture | site capture (WEBCAPTURE_4800016776_20260923_kilowatt48-rebus-2.html) | 2026-09-23 | — |
 | [s7992] | site capture | site capture (WEBCAPTURE_4800016776_20260923_kilowatt48-shtora-k10-500.html) | 2026-09-23 | — |
 | [s7993] | site capture | site capture (WEBCAPTURE_4800016776_20260923_kilowatt48-signal-m2.html) | 2026-09-23 | — |
+| [s8685] | Founding-Устав bundle | Founding-Устав bundle (UD_2108798.zip) | — | 2026-04-22 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

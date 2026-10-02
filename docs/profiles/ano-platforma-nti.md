@@ -10,6 +10,7 @@
 - **Registered:** 14.01.2019
 - **Address:** 123424, Москва, пер. Малый Конюшковский, д. 2, помещ. 1/6
 - **Director:** (Наблюдательный совет — коллегиальный высший орган, состав 11 чел.)
+- **ЦБСТ tie:** Its CEO Дмитрий Песков sits on ЦБСТ's Наблюдательный совет (first meeting 14.02.2025). The tie runs through the person, not a stake or a funding line.
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -54,6 +55,7 @@
 - **Birthplace:** Воронеж (Voronezh)
 - **ИНН:** 772919018611
 - Presidential special representative for digital and technological development; CEO, АНО «Платформа НТИ»
+- Co-chair (сопредседатель) of the Комиссия по отбору получателей поддержки за счёт субсидии Фонду НТИ on serial production of БАС, their components and subsystems; also named as chairman of the Фонд НТИ council (2025-09-22–present)
 
 ## Corporate links
 

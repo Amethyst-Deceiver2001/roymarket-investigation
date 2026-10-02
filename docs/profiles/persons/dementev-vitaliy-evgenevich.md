@@ -16,6 +16,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «ЭйАрТэк» | role — co-inventor (patent RU2857656C1) | — | [s1046] |
 
+## Products linked via this person
+
+- **МАНС (модельная альтернативная навигационная система)** + 1 more — via ООО «ЭйАрТэк» · role
+
 ## Related persons
 
 - **Фомин Александр Николаевич** — 25% co-founder — shared entity: ООО «ЭйАрТэк» [s6729]

@@ -16,11 +16,13 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Визионеро» | role — co-inventor (ПрЭВМ RU2023613722) | — | [s1054] |
 
+## Products linked via this person
+
+- **ПАК «Визионеро»** + 2 more — via ООО «Визионеро» · role
+
 ## Related persons
 
 - **Лысенко Андрей Олегович** — Генеральный директор — shared entity: ООО «Визионеро» [s7413]
-- **Gorodnichin Dmitriy Aleksandrovich** — co-inventor (ПрЭВМ RU2023613722) — shared entity: ООО «Визионеро» [s1054]
-- **Lysenko Andrey Olegovich** — co-inventor (ПрЭВМ RU2023613722) — shared entity: ООО «Визионеро» [s1054]
 - **Abdulov Aleksandr Alekseevich** — co-inventor (ПрЭВМ RU2023613722) — shared entity: ООО «Визионеро» [s1054]
 - **Pyankov Ilya Sergeevich** — co-inventor (ПрЭВМ RU2023613722) — shared entity: ООО «Визионеро» [s1054]
 

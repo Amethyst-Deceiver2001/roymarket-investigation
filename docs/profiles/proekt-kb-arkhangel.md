@@ -5,7 +5,7 @@
 
 ## At a glance
 
-- **ЦБСТ tie:** None found.
+- **ЦБСТ tie:** ЦБСТ's own channel names the project's Туапсе school as a site running a ЦБСТ resident's anti-UAV simulator mode (a deployment callout, not a residency claim).
 - **Wildberries overlap:** none_found
 
 ## Products
@@ -174,6 +174,7 @@
 - <https://t.me/Natalia_Archangel_Project> — "Набор добровольцев, оформление" — volunteer recruitment processing
 - <https://t.me/arhangel_study_bot> — training bot
 - <https://t.me/Vasya_consultant_Arhangel> — "консультант" contact, confirmed genuine in an anti-fraud post ([s5463])
+- <https://t.me/rastratchikRadistka> — Channel «Будни Радистки»: the operator describes herself as the first graduate of the school «Архангел» ([s8705], 28.11.2023) and her post of 18.01.2024 invites developers and links @projectArchangel ([s8706]). Which Архангел entity runs the school she attended is not established. Callsign only; no person record.
 
 ### VK
 
@@ -349,6 +350,7 @@
 - The unit's channel (msg 1746, 06.11.2024) credits the Tatarstan 'Академия пилотов: операторы будущего' to «Всероссийского фонда помощи военным «Архангел»» and the youth ministry. Is that фонд the АНО «Архангел» (ИНН 2315233718) on file, the ЗОВ-АА АНО, or another body? Unresolved. [s7706]
 - @NightVVit («Ночные ведьмы 2.0», the women's UAV squadron the ЦСН recruits for, msg 5529) no longer resolves; find who runs it and whether any name links back to Архангел or ЗОВ-АА. [s7705]
 - Spoken statements in the 32-minute instruction video (whisper transcript, approximate, not quotable; data/sources/TRANSCRIPT_20260906_archangel-forum-183433-flight-instruction-whisper.txt): the speaker says he flew about 36 km out into a headwind with video still working; that video used to reach that range on 1-2 analog links and that Гермес on 'the third group' allows flights beyond 50 km; a 7-inch pitch-13 prop; about 6.4-6.7 kg static thrust; turn-back at about 24 V. Listen to the audio to confirm the figures and to catch any named unit, customer or target; the Гермес statement matches the existing Гермес link ([s5539]) and the BOM line 'Гермес или аналоги' ([s5452]). [s7615]
+- ЦБСТ post 1562 (25.11.2025) names resident «Квадросим» (project head Егор Сечинский; 500+ educational institutions, used in «Зарница 2.0», «Кибердром») — no matching company found in an ЕГРЮЛ name search; legal entity still to identify (the brand may sit under a different legal name or an АНО/ИП). [s8651]
 
 ## Sources cited in this profile
 
@@ -397,6 +399,7 @@
 | [s7857] | Telegram media | Telegram media (TGMEDIA_20260906_archangelforum-post183433-prop-laptop-bench.png) | 2026-09-06 | — |
 | [s7897] | Telegram media | Telegram media (TGMEDIA_20260207_projectArchangel-post9507-Свидетельство_рабочего_пилот.pdf) | 2026-02-07 | — |
 | [s7907] | EGRUL extract | EGRUL extract (EGRUL_5505057400_20260920_inn-5505057400.pdf) | 2026-09-20 | 2026-09-20 |
+| [s8651] | Tgpost | Tgpost (TGPOST_20251125_ano_cbst-1562-kvadrosim-anti-uav-mode-arkhangel-tuapse.txt) | 2025-11-25 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

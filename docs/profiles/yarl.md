@@ -52,6 +52,20 @@
 
 - Sole-supplier award from the Government of Khabarovsk Krai. Itemisation, unit prices and the supplier's own bank/contact details are read off the archived счёт на оплату № 105 от 12.12.2024 (Альфа-Банк account, tel. +7 905 539-55-77), signed «Руководитель Ивлев А. Ю., Бухгалтер Скотникова Н. В.» — corroborating the director already on record. This is a direct supply of personal body armour and ballistic helmets to a Russian regional government. Статус по карточке контракта на момент захвата: Исполнение завершено. [s3392]
 
+## Web & social presence
+
+### Website
+
+- <https://bpryarl.ru/> — Own site; footer prints «ОГРН 1237700170311 ИНН 9721200789 / КПП 772501001», matching this record. Captured 2026-10-01.
+
+### Telegram
+
+- <https://t.me/bpryarl> — «ЯРЛ | Производитель бронезащиты» (3 571 subscribers on 2026-10-01); bio gives bpryarl.ru, which prints this entity's ИНН; bpryarl.ru links t.me/bpryarl back ([s8731]). Supplied by the user 2026-10-01. The channel has not been scraped.
+
+### VK
+
+- <https://vk.com/bpryarl1> — Linked from bpryarl.ru; not opened.
+
 ## Principals & persons of interest
 
 _No named principals linked to this entity yet._

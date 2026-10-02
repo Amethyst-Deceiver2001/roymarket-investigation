@@ -15,6 +15,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | АО «Котлин-Новатор» | role — co-inventor (patent RU2851746C1) | — | [s1044] |
 
+## Products linked via this person
+
+- **«Буран»** + 1 more — via АО «Котлин-Новатор» · role
+
 ## Related persons
 
 - **Жук Виталий Александрович** — shared entity: АО «Котлин-Новатор» [s0463]

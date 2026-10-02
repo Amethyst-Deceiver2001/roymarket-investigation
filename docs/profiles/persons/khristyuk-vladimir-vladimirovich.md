@@ -18,6 +18,11 @@ Person profile · РОЙ.МАРКЕТ investigation
 | ООО «Герон» | director + founder — Генеральный директор / учредитель | — | [s5291] |
 | ООО «Скай авиа групп» | founder — учредитель (former) | — | [s5291] |
 
+## Products linked via this person
+
+- **БПЛА «Удар»** + 2 more — via ООО «Герон» · director + founder
+- **Сборка боевых беспилотников (модель не названа)** — via ООО «Скай авиа групп» · founder
+
 ## Related persons
 
 - **Прокофьев Михаил Васильевич** — сборщик (assembler) — shared entity: ООО «Скай авиа групп» [s5291]

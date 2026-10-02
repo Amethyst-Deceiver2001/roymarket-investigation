@@ -15,9 +15,13 @@ Product profile · РОЙ.МАРКЕТ investigation
 
 ## Description
 
-**«Булат» в.4:** Портативный всенаправленный детектор БПЛА, обнаружение до 1.5 км; firmware v1.71.
+**«Булат» в.4:** Портативный всенаправленный детектор БПЛА, обнаружение до 1.5 км; firmware v1.71. Own-site product page (3mx.ru/products/detektor-bpla-bulat-v4/), exact title match. [s8019]
 
-**«Булат» в.3:** Портативный всенаправленный детектор БПЛА; firmware v4.13.
+**«Булат» в.3:** Портативный всенаправленный детектор БПЛА; firmware v4.13. Own-site product page (3mx.ru/products/detektor-bpla-bulat-v3/), exact title match. [s8018]
+
+## Visuals
+
+- Product card for the «Булат» v.4 (3MX) handheld detector, with its case and antennas, as shown on the company's own site pokrovsystem.ru (captured 20.09.2026). [s7943] — `../../images/ooo-pokrov_bulat-v4-preview-card.png`
 
 ## Network context
 
@@ -27,13 +31,13 @@ Product profile · РОЙ.МАРКЕТ investigation
 
 - **Pokrov LLC** `dealer` — via LIMITED LIABILITY COMPANY "TRIMIX": Named dealer, per 3mx.ru/dilery/: «Покров» (Pokrov) — pokrovsystem.ru, Khimki (Moscow Oblast). Telegram @pokrov_sales. Legal entity RESOLVED 2026-08-24 (cross-link fixed 2026-08-25 -- was already a standalone registry entity, `ooo-pokrov`, ИНН 5038189259/ОГРН 1245000068774, just not linked from here): NOT a pure reseller like Мэдро -- sells its own branded EW jammer line (Покров ВЦА «Алёша», ВЦ4/ВЦ5 «Альфа») alongside resold 3mx detector products (Булат v.4, Марс). [s1386]
 
-- **АНО «НПЦ «Ушкуйник»»** `co-speaker` — via LIMITED LIABILITY COMPANY "TRIMIX": Joint conference attendance, upgraded from the leads file's 'plausible series, needs per-event confirmation' framing: channel chadayevru msg 2722 (2024-04-17, reporting the 12.04.2024 IV конференция по технологиям обнаружения и противодействия БПЛА, Saint Petersburg) directly names BOTH "Директор по развитию ООО «Тримикс» С.С. Шандобыло" (speaker) AND "Руководитель АНО «НПЦ «Ушкуйник» А.В. Чадаев" (speaker) at the SAME single documented event -- not merely a conference-series inference. Verified verbatim against data/roymarket.db 2026-09-15.
+- **АНО «НПЦ «Ушкуйник»»** `co-speaker` — via LIMITED LIABILITY COMPANY "TRIMIX": Joint conference attendance, upgraded from the leads file's 'plausible series, needs per-event confirmation' framing: channel chadayevru msg 2722 (2024-04-17, reporting the 12.04.2024 IV конференция по технологиям обнаружения и противодействия БПЛА, Saint Petersburg) directly names BOTH "Директор по развитию ООО «Тримикс» С.С. Шандобыло" (speaker) AND "Руководитель АНО «НПЦ «Ушкуйник» А.В. Чадаев" (speaker) at the SAME single documented event -- not merely a conference-series inference. Verified verbatim against data/roymarket.db 2026-09-15. [s8066]
 
 ## Handovers to government customers / units
 
 | Customer | Date | Note | Source |
 |---|---|---|---|
-| ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz) | 2025 | Поставка средств ПОДАВЛЕНИЯ беспилотных аппаратов (не обнаружения — corrected per the sole-supplier notice's own text, which the contract-card-only extraction had mis-parsed as detection). Sole-supplier basis п.9 ч.1 ст.93 44-ФЗ, justified in the notice by reference to МЧС letters МЧС России от 20.05.2025 № М-17-1180 ДСП «О доведении ЛБО» и от 10.06.2025 № М-17-1363 ДСП «О направлении обновленного… | [s3680] |
+| ФГКУ «Центр по проведению спасательных операций особого риска «Лидер»» (МЧС spetsnaz) | 2025 | Contract ЕП 2-25 of 26.09.2025 (ООО «ПОКРОВ», signed by Цыганов as general director). The sole-supplier notice's subject line reads «поставка средств подавления беспилотных аппаратов», but the goods itemised in the notice body («закупка средств обнаружения беспилотных летательных аппаратов») and in the printed contract form ([s3672]; contract file title «ГК ЕП 2-25 (Булат, Марс)») are DETECTION devi… | [s3680] |
 | Администрация Белгородского муниципального округа | 2026 | Поставка мониторинговых устройств «Булат» — same «Булат» product line as the earlier ИП Цыганов contracts (see corrections entry for that person). | [s3424] |
 | ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ ПО КУРСКОЙ ОБЛАСТИ (ИНН 4632047480) | 2024-10-29 | Sole-supplier procurement (44-ФЗ ст. 93 ч.1 п.9 — emergency/disaster-response grounds), concluded 29.10.2024 — during the active Kursk-oblast incursion. Delivery: г. Курск, ул. Можаевская, 6. Спецификация (Приложение к Контракту, source [s1459] — an 11-page scanned PDF; pages 6-11 with the actual spec table exceed this project's standard 5-page OCR cap and needed a manual full-document OCR pass) spe… | [s1416] |
 | ФГКУ «ЦСООР «ЛИДЕР»» (ИНН 5003008102) | 2025-09-18 | Sole-supplier procurement (44-ФЗ ст. 93 ч.1 п.9), 30% advance (₽3,595,200). Delivery to ФГКУ «ЦСООР «Лидер»»'s own address, Москва, Мосрентген. Contract card also lists supplier contact +7 926 215-30-15 / vipochka@bk.ru. «Уведомление ФАС о заключении контракта с единственным поставщиком» (source [s1474], 19.09.2025, signed by Начальник отдела организации контрактной работы капитан К.Ю. Гребенькова)… | [s1417] |
@@ -42,8 +46,6 @@ Product profile · РОЙ.МАРКЕТ investigation
 ## Not yet sourced
 
 - No structured specifications on file — description text above is the only sourced technical detail.
-
-- No product-specific image confirmed on file yet.
 
 ## Sources cited
 
@@ -57,6 +59,10 @@ Product profile · РОЙ.МАРКЕТ investigation
 | [s1460] | zakupki.gov.ru contract record | zakupki.gov.ru contract record (ZAKUPKI_ATTACH_504405055721_1463204748024000101_obosnovanie-14632047480240001010002_982bd367.pdf) | — | 2024-10-28 |
 | [s3424] | zakupki.gov.ru contract record | zakupki.gov.ru contract record (ZAKUPKI_contract_3310005025826000052_20260829.html) | 2026-08-29 | — |
 | [s3680] | zakupki.gov.ru contract record | zakupki.gov.ru contract record (ZAKUPKI_ATTACH_1500300810225000157_1500300810225000157_uvedomlenie-fas-15003008102250001570006_4d2c94b3.zip) | — | — |
+| [s7943] | Web | Web (WEB_5038189259_20260920_pokrovsystem-bulat-v4-preview-card.png) | 2026-09-20 | — |
+| [s8018] | site capture | site capture (WEBCAPTURE_7802942873_20260928_3mx-detektor-bulat-v3.html) | 2026-09-28 | — |
+| [s8019] | site capture | site capture (WEBCAPTURE_7802942873_20260928_3mx-detektor-bulat-v4.html) | 2026-09-28 | — |
+| [s8066] | Tgpost | Tgpost (TGPOST_20240417_chadayevru-2722.txt) | 2024-04-17 | — |
 
 Generated by `scripts/build_product_profile.py` from `data/registry/entities.json`.
 Not hand-edited — corrections go through `corrections_entities.json`.

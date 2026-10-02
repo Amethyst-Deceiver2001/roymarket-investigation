@@ -20,6 +20,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 ## Products linked via this person
 
 - **Дрон-перехватчик «Архангел»** — via OOO "Arkhangel Shchit" ("Arkhangel Shield") · director
+- **Дрон-перехватчик «Архангел» (серийное производство)** — via ООО «Хаб СВО» · director
 
 ## Related persons
 

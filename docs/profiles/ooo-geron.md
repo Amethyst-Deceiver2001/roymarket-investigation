@@ -44,6 +44,12 @@
 |---|---|---|
 | ООО «Герон-Авиа» | 2024-10-17 | same ИНН/ОГРН as ООО «Герон» -- appears as the lessee name on a 2024 vehicle-leasing fact-message on Fedresurs. Ties directly to the geronavia.ru site already linked to this entity. [s5314] |
 
+## Products
+
+- **БПЛА «Удар»** — 10-inch FPV-class quadcopter on the company's own site: 5/15 km radio range without/with relay, up to 60 min flight, 5–7 kg payload, modules including a thermal camera and a «платформа для БЗ» (warhead platform). [s8619]
+- **Стратосферная беспилотная платформа «Хищник» (в разработке)** — Multi-purpose stratospheric UAV under development; KP.RU (11.01.2026) quotes the developer «Герон» and gives VTOL, up to 550 km/h and 15,000 m ceiling, «для коммерческого, научного и оборонного применения». The company's channel links the article as «обзор нашей разработки» ([s8589]). [s8574]
+- **Курсы подготовки операторов FPV** — 80/120/160-hour FPV pilot courses held at a military range (ССК «Русское Оружие», Ленинградская обл.); the course page lists military personnel among the audience. [s8618]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -53,6 +59,18 @@
 | 2023 | ₽5,567,000 | ₽10,000 | [s6611] |
 | 2024 | ₽28,732,000 | ₽151,000 | [s6612] |
 | 2025 | ₽51,420,000 | ₽-512,000 | [s6613] |
+
+## Self-reported marketing claims
+
+> *Уверен, у компании получится реализовать все намерения, а их продукция скоро начнет выполнять боевые задачи*
+> I am sure the company will realise all its intentions and its products will soon be carrying out combat missions
+>
+> — Own channel @geron_news, quoting an official [s8589]
+
+> *Компания «Герон» стала резидентом Научно-производственного центра «Ушкуйник»*
+> The company «Герон» has become a resident of the НПЦ «Ушкуйник»
+>
+> — Own channel @geron_news [s8588]
 
 ## Litigation
 
@@ -69,6 +87,16 @@
 
 - 2 OpenSanctions match(es) (screened 2026-09-06).
 - 1 OCCRP Aleph match(es) (screened 2026-09-19).
+
+## Web & social presence
+
+### Website
+
+- <https://geronavia.ru/>
+
+### Telegram
+
+- <https://t.me/geron_news>
 
 ## Principals & persons of interest
 
@@ -94,6 +122,11 @@
 | [s6612] | Bfo | Bfo (BFO_7802893898_2024_ооо-герон.pdf) | — | — |
 | [s6613] | Bfo | Bfo (BFO_7802893898_2025_ооо-герон.pdf) | — | — |
 | [s6838] | EGRUL extract | EGRUL extract (EGRUL_7802893898_20260907_ooo-geron.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8574] | press coverage | press coverage (PRESS_20260112_kpru-6759421-geron-hishchnik-stratosfernyy-bpla.html) | 2026-01-12 | — |
+| [s8588] | Tgweb | Tgweb (TGWEB_20260930_geron_news-s-before24-channel-page.html) | 2026-09-30 | — |
+| [s8589] | Tgweb | Tgweb (TGWEB_20260930_geron_news-s-latest-channel-page.html) | 2026-09-30 | — |
+| [s8618] | Web | Web (WEB_7802893898_20260930_geronavia-ru-courses.html) | 2026-09-30 | — |
+| [s8619] | Web | Web (WEB_7802893898_20260930_geronavia-ru-home-products.html) | 2026-09-30 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

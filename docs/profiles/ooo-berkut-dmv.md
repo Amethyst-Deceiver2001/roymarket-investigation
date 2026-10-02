@@ -8,7 +8,7 @@
 
 - **Registered:** 26.10.2023
 - **Address:** Москва
-- **Director:** Рубинштейн Дмитрий Владимирович (founder, per ФНС учредитель/директор cross-reference; not yet confirmed as sitting director)
+- **Director:** Майоров Константин Юрьевич
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования (aircraft/spacecraft manufacturing)
 - **Wildberries overlap:** not_checked
 
@@ -18,7 +18,19 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Рубинштейн Дмитрий Владимирович (founder, per ФНС учредитель/директор cross-reference; not yet confirmed as sitting director) | — | from corrections:add_entities, unverified |
+| Майоров Константин Юрьевич (генеральный директор; ИНН 504003610284) | 2024-12-25 | ЕГРЮЛ выписка от 30.09.2026: сведения о лице и должность внесены ГРН 2247713496270 от 25.12.2024. [s8541] |
+
+### Founders / ownership
+
+| Value | As of | Note |
+|---|---|---|
+| Рапота Максим Григорьевич (51%, ₽5 100) / Рубинштейн Дмитрий Владимирович (49%, ₽4 900) | 2024-12-19 | ЕГРЮЛ выписка от 30.09.2026: доля Рапоты внесена ГРН 1237700726636 от 26.10.2023; доля Рубинштейна ГРН 2247713245261 от 19.12.2024. [s8541] |
+
+### Charter capital
+
+| Value | As of | Note |
+|---|---|---|
+| 10000 | 2023-10-26 | Уставный капитал per the ЕГРЮЛ выписка (ГРН 1237700726636, 26.10.2023). [s8541] |
 
 ## Financials
 
@@ -32,7 +44,7 @@
 
 - **DOB:** 13.04.1975
 - **ИНН:** 771537069549
-- Co-founder; manages Беркут simultaneously with ЦБСТ per investigator.org.ua -- ИНН 9709100837/ОГРН 1237700726636 since resolved via ФНС founder cross-check (other_entities, 2026-09-07)
+- Учредитель (49%) (2024-12-19–present)
 - `sanctions lead`
 
 ## Open questions
@@ -44,6 +56,7 @@
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | [s7400] | Bfo | Bfo (BFO_9709100837_2024_ooo-berkut-dmv.pdf) | — | — |
+| [s8541] | EGRUL extract | EGRUL extract (EGRUL_9709100837_20260930_ooo-berkut-dmv.pdf) | 2026-09-30 | 2026-09-30 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

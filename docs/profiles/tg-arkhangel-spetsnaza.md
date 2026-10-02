@@ -1,7 +1,7 @@
 # "Arkhangel Spetsnaza" (Telegram channel) — «Архангел спецназа» (Telegram-канал)
 
 **Brand:** Архангел спецназа
-`WB: not_checked` 
+`adjacent` `WB: not_checked` 
 
 ## At a glance
 

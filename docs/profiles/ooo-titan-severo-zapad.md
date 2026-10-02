@@ -12,6 +12,7 @@
 - **Director:** Красковский Вячеслав Александрович
 - **Charter capital:** ₽1,500,000
 - **ОКВЭД:** 70.22 — Консультирование по вопросам коммерческой деятельности и управления
+- **ЦБСТ tie:** ЦБСТ's post of 17.04.2026 about portable charging stations «Эгеон» is headed «Резидент ЦБСТ…»; a forward of it in mil_hub names «Титан Северо-Запад» as the company, while ЦБСТ's current text of the same post does not.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
@@ -32,7 +33,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 1500000 | — | from brief:manufacturers-table:line-1025, unverified |
 | 1500000 | 2009-11-03 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6753] |
 
 ## Products
@@ -42,6 +42,7 @@
 - **ПЗС 2000-Т** — For autonomous sites/industrial/security use, up to 2304 Wh.
 - **Логгер «ПОЛИЛОГ»** — Monitors shocks/vibration/temperature/humidity/pressure, aluminum housing, -40 to +85°C.
 - **Логгеры CUBE** — Temperature/humidity trackers for sensitive cargo in transport/storage.
+- **ПЗС «Эгеон» (384/768/1152/2304 Вт·ч, кейсы)**
 
 ## Financials
 
@@ -78,6 +79,10 @@
 
 - **ИНН:** 781416519422
 
+## Open questions
+
+- Name removed from ЦБСТ's post after publication: compare [s8674] (current text, no name, edited 20.04.2026) with the mil_hub forward [s8675] (names «Титан Северо-Запад»). This company is OpenSanctions-matched as sanctioned (see sanctions[]). A third-party channel, KARABAS_RAZOBRAS, posts about «ПЗС ЭГЕОН 800» in Feb–Mar 2025 and is not yet tied to this ИНН. Whether ЦБСТ removed the name deliberately is not established; it edited many posts and the archive holds only 10% of them as forwards (see scripts/tg_forward_diff.py). [s8675]
+
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
@@ -90,6 +95,7 @@
 | [s0449] | EGRUL extract | EGRUL extract (ul-1077847345179-20260823120701.pdf) | — | 2026-08-23 |
 | [s0800] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7838380755_20260824_ooo-titan-severo-zapad.json) | 2026-08-24 | — |
 | [s6753] | EGRUL extract | EGRUL extract (EGRUL_7838380755_20260907_ooo-titan-severo-zapad.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8675] | Tgpost | Tgpost (TGPOST_20260417_mil_hub-128337-fwd-ano-cbst-2080-egeon-titan-severo-zapad-named.txt) | 2026-04-17 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

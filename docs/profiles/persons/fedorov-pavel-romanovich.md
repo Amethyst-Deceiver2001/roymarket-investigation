@@ -31,6 +31,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Шветов Артемий Андреевич** — Сотрудник — shared entity: LIMITED LIABILITY COMPANY "TRIMIX" [s1408]
 - **Михайлов Константин Денисович** — Дилер (Москва, Мариуполь) — shared entity: LIMITED LIABILITY COMPANY "TRIMIX" [s1408]
 
+## Family ties
+
+- **Федорова Полина Геннадьевна** — mother (confirmed)
+
 ## Sanctions & screening
 
 - **Disqualified-director registry:** No hits (checked 2026-09-08)

@@ -35,7 +35,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 10000 | — | from brief:prose, unverified |
 | 10000 | 2023-09-04 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6776] |
 
 ### Address

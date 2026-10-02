@@ -1,6 +1,8 @@
 # ANO Voenno-tekhnicheskoy Podderzhki Zashchitnikov Otechestva i Patrioticheskogo Vospitaniya Naseleniya "Arkhangel" (also known as Фонд Архангел «Легион» / Archangel Legion Fund) — АНО Военно-технической поддержки защитников Отечества и патриотического воспитания населения «Архангел»
 
 **Brand:** Архангел Легион
+`adjacent` 
+
 ИНН 2315233718 · ОГРН 1242300005640
 
 ## At a glance

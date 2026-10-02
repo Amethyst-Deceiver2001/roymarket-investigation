@@ -15,11 +15,14 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Аркодим» | role — co-inventor (patent RU114291S); co-inventor (patent RU214746U1); co-inventor (patent RU216464U1); co-inventor (patent RU2696508C1); co-inventor (patent RU2813430C1) | — | [s0980] |
 
+## Products linked via this person
+
+- **Нейросетевые алгоритмы трекинга для антидроновой системы малой ПВО** + 2 more — via ООО «Аркодим» · role
+
 ## Related persons
 
 - **Барахтин Артём Владимирович** — Генеральный директор — shared entity: ООО «Аркодим» [s7409]
 - **Соловьев Константин Юрьевич** — shared entity: ООО «Аркодим» [s0475]
-- **Barakhtin Artem Vladimirovich** — co-inventor (patent RU208483U1) — shared entity: ООО «Аркодим» [s0991]
 - **Klimchik Aleksandr Sergeevich** — co-inventor (patent RU2696508C1) — shared entity: ООО «Аркодим» [s1008]
 
 ## Sanctions & screening
@@ -33,7 +36,6 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|---|
 | [s0475] | EGRUL extract | EGRUL extract (ul-1101690020959-20260823131713.pdf) | — | 2026-08-23 |
 | [s0980] | Rospatent patent record | Rospatent patent record (PATENT_RU114291S_2026-08-24_ooo-arkodim.json) | — | — |
-| [s0991] | Rospatent patent record | Rospatent patent record (PATENT_RU208483U1_2026-08-24_ooo-arkodim.json) | — | — |
 | [s1008] | Rospatent patent record | Rospatent patent record (PATENT_RU2696508C1_2026-08-24_ooo-arkodim.json) | — | — |
 | [s7409] | EGRUL extract | EGRUL extract (EGRUL_1659101884_20260914_ooo-arkodim.pdf) | 2026-09-14 | 2026-09-14 |
 

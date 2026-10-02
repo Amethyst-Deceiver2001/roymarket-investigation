@@ -6,6 +6,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **DOB:** 29.04.1977
 - **Personal ИНН:** 644914040799
 - **Entities linked:** 3
 - **Primary role:** Генеральный директор, ООО «Аэромакс»

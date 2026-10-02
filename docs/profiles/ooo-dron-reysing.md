@@ -46,6 +46,7 @@
 
 - **ИНН:** 771877750402
 - sole founder / director (2018-06-18–present)
+- <https://t.me/Vadim_Dzema_FPV>
 
 ## Open questions
 

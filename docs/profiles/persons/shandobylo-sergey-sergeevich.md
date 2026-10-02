@@ -33,6 +33,14 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Шветов Артемий Андреевич** — Сотрудник — shared entity: LIMITED LIABILITY COMPANY "TRIMIX" [s1408]
 - **Михайлов Константин Денисович** — Дилер (Москва, Мариуполь) — shared entity: LIMITED LIABILITY COMPANY "TRIMIX" [s1408]
 
+## Family ties
+
+- **Шандобыло Милослава Игоревна** — wife (confirmed)
+- **Шандобыло Людмила Александровна** — mother (confirmed)
+- **Шандобыло Александр** — father (probable) (probable)
+- **Шандобыло Татьяна** — relative (unconfirmed) (unconfirmed)
+- **Шандобыло Юлия** — relative (unconfirmed) (unconfirmed)
+
 ## Sanctions & screening
 
 - **OpenSanctions:** 1 candidate(s), best score 1.0 — confirmed

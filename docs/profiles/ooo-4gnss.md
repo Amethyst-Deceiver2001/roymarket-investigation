@@ -32,7 +32,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 10000 | — | from brief:prose, unverified |
 | 10000 | 2015-11-23 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6830] |
 
 ### Legal name

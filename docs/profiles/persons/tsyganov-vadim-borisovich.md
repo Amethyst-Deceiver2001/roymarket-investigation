@@ -7,6 +7,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 ## At a glance
 
 - **DOB:** 30.05.1963
+- **Birthplace:** Стерлитамак, Башкирская АССР, РСФСР, СССР
 - **Personal ИНН:** 504405055721
 - **Entities linked:** 2
 - **Primary role:** Генеральный директор / основной участник (80-100%), Pokrov LLC
@@ -23,6 +24,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Покров ВЦА «Алёша»** + 5 more — via Pokrov LLC · director
 - **Детектор беспилотных летательных аппаратов «Булат» v.4** — via ИП Цыганов Вадим Борисович · role
 
+## Family ties
+
+- **Tsyganova (Zhukova) Viktoriya Yuryevna** — wife (confirmed) [s8537]
+
 ## Sanctions & screening
 
 - **OpenSanctions:** 1 candidate(s), best score 1.0 — confirmed
@@ -38,6 +43,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|---|
 | [s1408] | third-party OSINT dossier | third-party OSINT dossier (DOSSIER_20260825_trimix-3mx-companies-and-people.xlsx) | 2026-08-25 | — |
 | [s5718] | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_504405055721_20260905_ip-tsyganov-vadim-borisovich.json) | 2026-09-05 | — |
+| [s8537] | Wiki | Wiki (WIKI_20260930_tsyganov-vadim-borisovich.html) | 2026-09-30 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_person_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -115,6 +115,7 @@
 
 - Сухоненкова Надежда Андреевна (Административный директор) is named as a commendation-letter recipient in this entity's own channel but has no person record yet -- not yet wired per the PII-scope rule (principal/officer-level role, should qualify once a DOB/ИНН lead surfaces).
 - «Ступор» counter-drone RF system participation (16.10.2024 post) and the second Благодарственное письмо (to Сухоненкова, 05.04.2026) have no archived primary-source file yet -- only the first letter (Замятину, [s0232]) has been pulled and archived. Worth an archival pass on the entity's own channel (t.me/UAS_development) for these specific posts.
+- @UAS_development post 695 (17.09.2026): «Начинаем работу через онлайн-маркетплейс для продукции двойного назначения. Специалисты были подготовлены заранее. #маркетплейс». The post and its image do not name Роймаркет; the image is a certificate (Wild Manager school, 29.01.2026) that Ирина Байгутлина completed a 6-week «Менеджер маркетплейсов» course, with Ozon, Яндекс Маркет and Wildberries logos. INVESTIGATOR'S READING (user, 2026-10-01): treated as a РОЙ.МАРКЕТ onboarding, because the phrase is taken to be a euphemism for it and no other online marketplace of that description is known. This is an inference, not a statement in the post: it must not be graded as the company's own report of joining РОЙ.МАРКЕТ, and any text built on it says «understood by us to be». Page capture [s8738]. The local scrape of the channel ends at message 672, so later posts are unread. See notes/roymarket_vendor_leads.md. SWEEP 2026-10-01: the exact phrases «онлайн-маркетплейс» (6 hits, all shown), «#маркетплейс» (1) and «маркетплейс двойного» (0) over all 503,714 archived posts return post 695 as the only vendor-channel hit; the supporting wording is ЦБСТ's own: «Онлайн-маркетплейс РОЙ.МАРКЕТ открыл защищённый канал продаж для … товаров двойного назначения» (post 2413, [s8854]) and «маркетплейс товаров двойного назначения «Рой.Маркет»» (post 2414, [s8855]). Still an inference: post 695 ([s8863]) does not name Роймаркет. Post 700 (23.09.2026, [s8864]): «Антидрон-предложение от наших китайских партнеров» — the Chinese partners are unnamed (lead). [s8735]
 
 ## Sources cited in this profile
 
@@ -128,6 +129,7 @@
 | [s1165] | bulk open-data extract | bulk open-data extract (DATASET_20260824_rk2035-university-companies.zip) | 2026-08-24 | — |
 | [s6782] | EGRUL extract | EGRUL extract (EGRUL_3300009049_20260907_ooo-npts-basirtk.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7962] | Tgpost | Tgpost (TGPOST_20240915_UAS_development-230.txt) | 2024-09-15 | — |
+| [s8735] | Telegram media | Telegram media (TGMEDIA_20260917_UAS_development-post695-1.jpg) | 2026-09-17 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

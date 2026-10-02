@@ -36,6 +36,10 @@
 |---|---|---|
 | 10000 | 2024-12-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6801] |
 
+## Products
+
+- **Безэкипажный катер (БЭК) на подводных крыльях** — 11 m unmanned boat with hydrofoils, developed with НПП «ЭЛВО»: aluminium-alloy hull, foil-borne from 16 knots (30 km/h), up to 48 knots (89 km/h), payload up to 1.3 t, wave height up to 2 m; for cargo delivery, research, monitoring and patrol. Shown at the «Флот-2026» naval show in Kronstadt (ЦБСТ channel, 17.07.2026, citing Известия). [s8552]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -59,6 +63,7 @@ _No named principals linked to this entity yet._
 | [s0512] | EGRUL extract | EGRUL extract (ul-1245100006799-20260823141101.pdf) | — | 2026-08-23 |
 | [s6510] | Bfo | Bfo (BFO_5190102381_2025_ооо-кольская-верфь.pdf) | — | — |
 | [s6801] | EGRUL extract | EGRUL extract (EGRUL_5190102381_20260907_kolskaya-verf.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8552] | Tgpost | Tgpost (TGPOST_20260717_ANO_CBST-2325-kolskaya-verf-elvo-bek.txt) | 2026-07-17 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

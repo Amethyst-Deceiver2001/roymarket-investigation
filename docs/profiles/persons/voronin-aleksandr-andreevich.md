@@ -16,6 +16,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Интел Дрон» | director — Генеральный директор | 13.09.2024 | [s5333] |
 
+## Products linked via this person
+
+- **«Ромашка» — комплекс ИИ-анализа видео с БПЛА** — via ООО «Интел Дрон» · director
+
 ## Sanctions & screening
 
 - **Disqualified-director registry:** No hits (checked 2026-09-15)

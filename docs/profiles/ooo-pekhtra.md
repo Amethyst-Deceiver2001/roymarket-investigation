@@ -36,6 +36,10 @@
 |---|---|---|
 | 10000 | 2024-12-10 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6720] |
 
+## Products
+
+- **Периферийное устройство управления компьютером через мышечные сигналы** — Computer-control peripheral driven by muscle signals, for people who have undergone amputation; «Пехтра» is a ЦБСТ contest finalist that received a special prize from фонд «Наша Правда» (priority of purchase at the next request from participants of the СВО) (Наша Правда channel, 04.06.2025, text attributed to Коммерсантъ). [s8547]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -68,6 +72,7 @@
 | [s6513] | Bfo | Bfo (BFO_5261138034_2025_ооо-пехтра.pdf) | — | — |
 | [s6720] | EGRUL extract | EGRUL extract (EGRUL_5261138034_20260907_ooo-pekhtra.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7412] | EGRUL extract | EGRUL extract (EGRUL_5261138034_20260914_ooo-pekhtra.pdf) | 2026-09-14 | 2026-09-14 |
+| [s8547] | Tgpost | Tgpost (TGPOST_20250604_nashapravdafond-443-mentastep-pekhtra-finalists.txt) | 2025-06-04 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -17,6 +17,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | АНО «НПЦ «Ушкуйник»» | director — Заместитель генерального директора | — | [s5288] |
 
+## Products linked via this person
+
+- **Ударный FPV-дрон «Князь Вандал Новгородский» (КВН)** + 7 more — via АНО «НПЦ «Ушкуйник»» · director
+
 ## Related persons
 
 - **Чадаев Алексей Викторович** — shared entity: АНО «НПЦ «Ушкуйник»» [s0947]

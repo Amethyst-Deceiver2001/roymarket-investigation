@@ -17,7 +17,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Products linked via this person
 
-- **Орион** + 1 more — via ООО «Атлант Аэро» · role
+- **Ударно-разведывательные дроны типа «Молния»** + 1 more — via ООО «Атлант Аэро» · role
 
 ## Related persons
 

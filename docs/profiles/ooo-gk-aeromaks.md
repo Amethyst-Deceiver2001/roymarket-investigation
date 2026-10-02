@@ -43,6 +43,7 @@
 | ООО «РТИ Аэрокосмические системы» | 2015-09-18 | Registered under this name (ОГРН 1147748024269 — matches this entity's current ОГРН exactly) when granted aviation-tech license 13587-AT-Р on 18.09.2015. "РТИ" is a known AFK Sistema defense-electronics holding brand — this predecessor name suggests an RTI ownership/founding tie not yet otherwise documented on this record; flagged as an open question, not yet independently confirmed via EGRUL founder history. [s6408] |
 | ООО «Группа Кронштадт» | — | Prior name on ИНН 7710974353 per Aleph's cached EGRUL mirror (no date attached to the name change itself in this source). [s6886] |
 | ООО «Интеллектуальные технические решения» | — | Earlier prior name on the same ИНН per the same source; chronology relative to «Группа Кронштадт» not stated by this source. [s6886] |
+| ГК «Кронштадт» → ГК «Аэромакс» | 2026-05-18 | Group's own channel: «Группа компаний «Кронштадт» объявляет о переименовании: новое имя – ГК «Аэромакс»»; the post links the MAX business account id7710974353_biz, carrying this ИНН. [s8586] |
 
 ## Financials
 
@@ -65,6 +66,12 @@
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 5 OCCRP Aleph match(es) (screened 2026-09-19).
+
+## Web & social presence
+
+### Telegram
+
+- <https://t.me/aeromax_group>
 
 ## Principals & persons of interest
 
@@ -94,6 +101,7 @@
 | [s6734] | EGRUL extract | EGRUL extract (EGRUL_7710974353_20260907_ooo-gk-aeromaks.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6885] | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_DETAIL_770304117100_20260907_bogatikov-director-gk-aeromaks.json) | 2026-09-07 | — |
 | [s6886] | OCCRP Aleph screening record | OCCRP Aleph screening record (ALEPH_DETAIL_7710974353_20260907_gk-aeromaks-ownership-expand.json) | 2026-09-07 | — |
+| [s8586] | Tgweb | Tgweb (TGWEB_20260930_aeromax_group-864-gk-aeromaks-rename.html) | 2026-09-30 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

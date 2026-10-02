@@ -6,7 +6,7 @@ answers *"which entities have we checked?"*; this file answers *"checked against
 
 The 2026-09-05 coverage audit that produced both — including case-study
 candidates, the manual-task queue and a staged cutoff plan — is published at
-https://claude.ai/code/artifact/8957e376-c07c-4c06-bddf-13bead303b99
+(retired 2026-10-02; local copy data/sources/ARTIFACT_20260919_coverage-audit-cutoff-plan.html)
 (a working document, not the `docs/index.html` brief companion, which still
 republishes only at an explicit investigation cutoff).
 

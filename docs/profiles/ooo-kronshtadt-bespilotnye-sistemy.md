@@ -26,6 +26,8 @@
 |---|---|---|
 | 100000 | 2016-10-04 | Original Устав (редакция №1), утвержден Решением №01 единственного учредителя от 04.10.2016; unchanged in редакция №2 (Решение №30-05/1/2017 от 30.05.2017, ГРН 8177747805470 от 07.07.2017, still единственный участник). [s6906] |
 
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-30).
+- 1 OpenSanctions match(es) (screened 2026-09-30).
 - 3 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest

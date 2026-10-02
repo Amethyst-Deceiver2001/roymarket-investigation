@@ -1,6 +1,6 @@
 # OOO "DIAM-AERO" — ООО «ДИАМ-АЭРО»
 
-`sanctioned` `WB: not_checked` 
+`sanctioned` `manufacturer` `WB: not_checked` 
 
 ИНН 7811687549 · ОГРН 1187847091079
 
@@ -32,7 +32,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 10000 | — | from corrections:add_entities, unverified |
 | 10000 | 2018-04-02 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6842] |
 
 ## Products
@@ -62,6 +61,7 @@
 
 ### Скорятин Георгий Андреевич
 
+- **DOB:** 05.07.1988
 - **ИНН:** 773272723527
 - Генеральный директор (2025-06-16–present)
 - `sanctions lead`

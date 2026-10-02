@@ -33,7 +33,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 15000 | — | from brief:manufacturers-table:line-989, unverified |
 | 15000 | 2023-07-03 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6738] |
 
 ### Address
@@ -64,6 +63,12 @@
 - Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-05).
 - 2 OpenSanctions match(es) (screened 2026-09-06).
 - 4 OCCRP Aleph match(es) (screened 2026-09-19).
+
+## Web & social presence
+
+### Telegram
+
+- <https://t.me/stratim_drones> — Linked from ЦБСТ/mil_hub post 114589 (09.10.2025), an interview with the head of «Стратим», «компании-резидента ЦБСТ», and from Лисицын post 15629 (11.04.2025) about «компании Stratim» ([s8714]). The channel itself has not been scraped or read: ownership rests on the post links and the matching handle.
 
 ## Principals & persons of interest
 
@@ -103,10 +108,6 @@
 ### Попов Григорий Сергеевич
 
 - CV-инженер (computer-vision engineer)
-
-### Makhnyov Aleksandr Igorevich — Махнёв Александр Игоревич
-
-- Технический директор; shareholder 4.5% (675 of 15,000 shares) (2024-08-01–present)
 
 ## Corporate links
 

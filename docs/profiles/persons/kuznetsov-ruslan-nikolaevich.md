@@ -22,6 +22,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 ## Products linked via this person
 
 - **«Булат» в.4** + 5 more — via LIMITED LIABILITY COMPANY "TRIMIX" · role
+- **Дрон-детектор «Булат» (3mx / ООО «Тримикс») — перепродажа** — via ИП Кузнецов Руслан Николаевич · role
 
 ## Related persons
 

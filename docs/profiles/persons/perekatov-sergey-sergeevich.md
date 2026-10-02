@@ -15,6 +15,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «ЭйАрТэк» | founder — 25% co-founder | 12.02.2024 | [s6729] |
 
+## Products linked via this person
+
+- **МАНС (модельная альтернативная навигационная система)** + 1 more — via ООО «ЭйАрТэк» · founder
+
 ## Related persons
 
 - **Фомин Александр Николаевич** — 25% co-founder — shared entity: ООО «ЭйАрТэк» [s6729]

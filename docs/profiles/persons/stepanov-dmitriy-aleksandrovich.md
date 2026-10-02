@@ -17,6 +17,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | АНО «НПЦ «Ушкуйник»» | role — equipment supplier (sole proprietor / ИП) — SMD assembly-line equipment | 17.12.2025 | [s5303] |
 
+## Products linked via this person
+
+- **Ударный FPV-дрон «Князь Вандал Новгородский» (КВН)** + 7 more — via АНО «НПЦ «Ушкуйник»» · role
+
 ## Related persons
 
 - **Чадаев Алексей Викторович** — shared entity: АНО «НПЦ «Ушкуйник»» [s0947]

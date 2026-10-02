@@ -31,7 +31,6 @@ Person profile · РОЙ.МАРКЕТ investigation
 - **Царьков Даниил Дмитриевич** — Руководитель отдела (Department Head) — shared entity: АО «Стратим»
 - **Штрек Игорь Александрович** — Инженер (Engineer), с 2021 — shared entity: АО «Стратим»
 - **Попов Григорий Сергеевич** — CV-инженер (computer-vision engineer) — shared entity: АО «Стратим»
-- **Makhnyov Aleksandr Igorevich** — Технический директор; shareholder 4.5% (675 of 15,000 shares) — shared entity: АО «Стратим» [s0332]
 
 ## Sanctions & screening
 

@@ -33,7 +33,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 250000 | — | from brief:manufacturers-table:line-1017, unverified |
+| 20000 | 2022-08-01 | Charter edition registered 01.08.2022 (ГРН 2221200082882): «составляет 20 000 (двадцать тысяч) рублей 00 копеек». The original charter of 01.04.2021 (ГРН 1211200001650) is a poor scan and its capital figure was not read. [s8686] |
 | 250000 | 2023-07-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6710] |
 
 ### Address
@@ -66,6 +66,10 @@
 | 2023 | ₽716,827,000 | ₽54,360,000 | [s0238] |
 | 2024 | ₽210,507,000 | ₽-114,620,000 | [s0239] |
 | 2025 | ₽782,378,000 | ₽63,945,000 | [s0240] |
+
+## State-program participation
+
+- as_of: 2023-07-18; name_en: Skolkovo Innovation Center — charter purpose clause; name_ru: Инновационный центр «Сколково» — пункт 2.1 устава; role: Charter approved by decision №5 of the sole founder of 18.07.2023 (ЕГРЮЛ ГРН 2231200063939 of 25.07.2023), §2.1: the company carries out "исключительно исследовательскую деятельность и коммерциализацию её результатов" under federal law №244-ФЗ «Об инновационном центре «Сколково»» and the project rules of the managing company. The same edition raised capital to ₽250 000. This is a charter declaration; participant status in the Сколково register is not checked here. [s8686]
 
 ## Patents
 
@@ -135,6 +139,7 @@
 | [s8027] | site capture | site capture (WEBCAPTURE_1215235283_20260928_alfamarin-arena-f400st.html) | 2026-09-28 | — |
 | [s8028] | site capture | site capture (WEBCAPTURE_1215235283_20260928_alfamarin-cyberscan-3000.html) | 2026-09-28 | — |
 | [s8029] | site capture | site capture (WEBCAPTURE_1215235283_20260928_alfamarin-nabor-sapera.html) | 2026-09-28 | — |
+| [s8686] | Founding-Устав bundle | Founding-Устав bundle (UD_2108799.zip) | — | 2021-04-01 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

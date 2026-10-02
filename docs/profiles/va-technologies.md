@@ -33,7 +33,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 10000 | — | from brief:manufacturers-table:line-1023, unverified |
 | 10000 | 2025-11-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6713] |
 
 ### Facility type

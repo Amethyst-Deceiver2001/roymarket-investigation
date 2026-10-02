@@ -29,6 +29,9 @@
 | 2024 | — | — | [s7391] |
 | 2025 | — | — | [s7392] |
 
+- Listed on Ukraine's GUR war-sanctions UAV-industry registry (screened 2026-09-30).
+- 1 OpenSanctions match(es) (screened 2026-09-30).
+
 ## Principals & persons of interest
 
 ### Хутешен Алексей Александрович

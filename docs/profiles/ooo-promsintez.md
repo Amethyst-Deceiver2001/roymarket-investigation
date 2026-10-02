@@ -34,6 +34,19 @@
 |---|---|---|
 | 10000 | 2007-03-20 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6783] |
 
+### Address
+
+| Value | As of | Note |
+|---|---|---|
+| 404106, Волгоградская область, г. Волжский, ул. Александрова, д. 67 | 2016-05-25 | Address on all three readable charter editions (2007, 2009, 2016). It is the charter address, not a current ЕГРЮЛ address. [s8690] |
+
+### Legal name
+
+| Value | As of | Note |
+|---|---|---|
+| ООО «Россинтез» | 2009-10-15 | Charter of 26 February 2007 (original, Волжский; signed «Гарькуша Владимир Владимирович») and edition №2 of 15 October 2009 (ЕГРЮЛ ГРН 2093435107710 of 09.12.2009) both use the name «Россинтез»; edition №2 gives ОГРН 1073435002013 and ИНН 3435084957. [s8690] |
+| ООО «ПРОМСИНТЕЗ» | 2016-05-25 | Edition approved by decision №5 of the sole participant of 25 May 2016; ЕГРЮЛ ГРН 2163443412669 of 03.06.2016 per the bundle inventory. Participant signature: «Гарькуша В.В.». [s8690] |
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -54,14 +67,8 @@
 
 | Title | Reg. no. | Filed | Inventors |
 |---|---|---|---|
-| ГРАНУЛИРОВАННЫЙ ВЗРЫВЧАТЫЙ СОСТАВ | RU2263653C1 | — | Колганов Е.В. (RU), Любаков П.Н. (RU), Тарасов В.А. (RU), Илюхин В.С. (RU), Уткин С.А. (RU), Батрин Ю.Д. (RU), Страхов А.Г. (RU), Соснин В.А. (RU) |
 | УСТРОЙСТВО ДЛЯ ЗАГРУЗКИ СЫПУЧЕГО МАТЕРИАЛА (ВАРИАНТЫ) | RU2661519C2 | — | Пискайкин Сергей Петрович (RU), Пимерзин Андрей Алексеевич (RU), Никульшин Павел Анатольевич (RU), Шутова Анастасия Андреевна (RU) |
-| Шашка-детонатор | RU36506U1 | — | Бойцов В.И., Любаков П.Н., Гороховцев А.Г., Ильин В.П., Шамсутдинова Г.Х., Авдеев В.И., Уткин С.А., Батрин Ю.Д., Тарасов В.А., Печенев Ю.Г. |
-| ШАШКА-ДЕТОНАТОР | RU41514U1 | — | Шамсутдинова Г.Х. (RU), Гороховцев А.Г. (RU), Любаков П.Н. (RU), Ильин В.П. (RU), Батрин Ю.Д. (RU), Уткин С.А. (RU), Печенев Ю.Г. (RU), Бойцов В.И. (RU), Авдеев В.И. (RU), Тарасов В.А. (RU) |
-| ЭМУЛЬСИОННЫЙ ВЗРЫВЧАТЫЙ СОСТАВ И СПОСОБ ЕГО ПОЛУЧЕНИЯ | RU2277523C2 | — | Колганов Евгений Васильевич (RU), Батрин Юрий Дмитриевич (RU), Любаков Петр Николаевич (RU), Соснин Вячеслав Александрович (RU), Уткин Сергей Анатольевич (RU), Илюхин Виктор Сергеевич (RU), Тарасов Владимир Андреевич (RU) |
 | УСТРОЙСТВО ДЛЯ ЗАГРУЗКИ СЫПУЧЕГО МАТЕРИАЛА | RU165927U1 | — | Пискайкин Сергей Петрович (RU), Никульшин Павел Анатольевич (RU), Пимерзин Андрей Алексеевич (RU), Шутова Анастасия Андреевна (RU) |
-| УСТАНОВКА ДЛЯ РЕГЕНЕРАЦИИ КАТАЛИЗАТОРА ГИДРООБРАБОТКИ И СПОСОБ С ЕЕ ПРИМЕНЕНИЕМ | RU2658850C2 | — | Пимерзин Андрей Алексеевич (RU), Никульшин Павел Анатольевич (RU), Пискайкин Сергей Петрович (RU), Шутова Анастасия Андреевна (RU) |
-| ШАШКА-ДЕТОНАТОР | RU19320U1 | — | Гороховцев А.Г., Ильин В.П., Бойцов В.И. |
 
 - 2 OpenSanctions match(es) (screened 2026-09-06).
 - 3 OCCRP Aleph match(es) (screened 2026-09-19).
@@ -76,6 +83,7 @@
 
 - 2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found for the target ИНН (two similarly-named but confirmed-DIFFERENT companies exist: a Rostov-on-Don "Промсинтез"/promsyntez.ru, and an unrelated Volgodonsk "НПП Промсинтез" cosmetics-ingredient maker -- neither is this entity). Registry-declared activity is wholesale chemical products trading (Volzhsky, Volgograd oblast, director/owner Гарькуша В.В., ~16-19 employees). CLEAR MISMATCH -- no drone/UAV/defense signal found; this entity's registry inclusion likely rests on grounds other than a product/catalog match (e.g. a supply-chain/financial link) not surfaced by this search.
 - 2026-08-24 OpenSanctions full-roster screening: OpenSanctions' name-similarity match for this entity was CHECKED and REJECTED — the designation record it returned (Товариство з обмеженою відповідальністю "Промсинтез" (Ukraine), ИНН/tax number 5249135125) does not match this entity's own ИНН. Recorded explicitly so this false lead is not mistaken for a real hit in a future pass.
+- 2026-10-01 founding-document read: the company was «Россинтез» until the edition of 25 May 2016, then «ПРОМСИНТЕЗ». The 2020-02-27 amendment (ЕГРЮЛ ГРН 2203400067825) is in the bundle only as the ФНС stamp page, without the amendment text, so what changed in 2020 is unread. The earlier open question that mentions similarly named «Промсинтез» companies elsewhere is unaffected: the Волжский company's own earlier name was «Россинтез». [s8690]
 
 ## Sources cited in this profile
 
@@ -88,6 +96,7 @@
 | [s6494] | Bfo | Bfo (BFO_3435084957_2024_ооо-промсинтез.pdf) | — | — |
 | [s6495] | Bfo | Bfo (BFO_3435084957_2025_ооо-промсинтез.pdf) | — | — |
 | [s6783] | EGRUL extract | EGRUL extract (EGRUL_3435084957_20260907_ooo-promsintez.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8690] | Founding-Устав bundle | Founding-Устав bundle (UD_2109705.zip) | — | 2007-02-26 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -6,6 +6,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **DOB:** 26.05.1983
 - **Personal ИНН:** 781422806104
 - **Entities linked:** 2
 - **Primary role:** role, АО «Котлин-Новатор»
@@ -19,6 +20,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Products linked via this person
 
+- **«Буран»** + 1 more — via АО «Котлин-Новатор» · role
 - **EM-01** + 7 more — via АО «Эколибри» · director
 
 ## Related persons

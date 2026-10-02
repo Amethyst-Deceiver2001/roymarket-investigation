@@ -49,6 +49,12 @@
 
 - 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
+## Web & social presence
+
+### Telegram
+
+- <https://t.me/alaskadron> — Архангел post 10095 (16.05.2026): «компании «Аляска» https://t.me/alaskadron которые производят знаменитые дроны «Алеша»». The channel itself has not been scraped or read.
+
 ## Principals & persons of interest
 
 ### Ionov Anton Aleksandrovich — Ионов Антон Александрович

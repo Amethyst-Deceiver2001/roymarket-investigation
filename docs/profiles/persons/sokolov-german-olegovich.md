@@ -6,15 +6,16 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **DOB:** 13.08.1991
 - **Personal ИНН:** 500310216204
 - **Entities linked:** 2
-- **Primary role:** co-inventor (patent RU218475U1, RU220486U1); Генеральный директор (per checko.ru/rusprofile/spark-interfax aggregators, not yet confirmed against a full EGRUL PDF extract), ООО «НПО Рустехдрон»
+- **Primary role:** co-inventor (patent RU218475U1, RU220486U1); Генеральный директор (27.02.2023–11.03.2025, per ЕГРЮЛ open data via OpenSanctions; ЕГРЮЛ restricts the section since 12.03.2025), ООО «НПО Рустехдрон»
 
 ## Roles & corporate affiliations
 
 | Entity | Role | Since | Source |
 |---|---|---|---|
-| ООО «НПО Рустехдрон» | director — co-inventor (patent RU218475U1, RU220486U1); Генеральный директор (per checko.ru/rusprofile/spark-interfax aggregators, not yet confirmed against a full EGRUL PDF extract) | 20.04.2023 | [s0953] |
+| ООО «НПО Рустехдрон» | director — co-inventor (patent RU218475U1, RU220486U1); Генеральный директор (27.02.2023–11.03.2025, per ЕГРЮЛ open data via OpenSanctions; ЕГРЮЛ restricts the section since 12.03.2025) | 20.04.2023–11.03.2025 | [s0953] |
 | OOO RTD-Zashchita | director — Генеральный директор | 03.10.2022 | [s1161] |
 
 ## Products linked via this person

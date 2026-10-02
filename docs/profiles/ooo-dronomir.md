@@ -9,7 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Registered:** 05.06.2026
 - **Address:** Кемеровская область - Кузбасс, г.о. Калтанский, п. Малиновка
-- **Director:** Тимофеев Даниил Андреевич
+- **Director:** Чичков Александр Юрьевич
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30.6 — Производство беспилотных авиационных систем
 - **Wildberries overlap:** none_found
@@ -20,7 +20,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Тимофеев Даниил Андреевич | 2026-06-05 | personal ИНН 422203526491; also sole founder; very recently registered (2026) [s0519] |
+| Чичков Александр Юрьевич | 2026-06-05 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 421715843237, from registration (ГРН 1264200005530). [s6785] |
 
 ### Founders / ownership
 
@@ -41,6 +41,10 @@
 - **ИНН:** 421715843237
 - Генеральный директор
 
+## Corporate links
+
+- **ООО «ПРОММАШ»** `sister-entity` — Same director (Чичков А.Ю.) and founder (Тимофеев Д.А.) as ООО «ПРОММАШ» (ЕГРЮЛ выписки 07.09.2026). [s6786]
+
 ## Open questions
 
 - 2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found (ЕГРЮЛ lists no phone/email/site either), and no КРАМС brand link found in any paired search -- does not resolve the krams-brand-unresolved open question. Appears to be a thin/shell registration with no independent web footprint.
@@ -49,8 +53,8 @@
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| [s0519] | EGRUL extract | EGRUL extract (ul-1264200005530-20260823135636.pdf) | — | 2026-08-23 |
 | [s6785] | EGRUL extract | EGRUL extract (EGRUL_4214047363_20260907_ooo-dronomir.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6786] | EGRUL extract | EGRUL extract (EGRUL_4217210280_20260907_ooo-prommash.pdf) | 2026-09-07 | 2026-09-07 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

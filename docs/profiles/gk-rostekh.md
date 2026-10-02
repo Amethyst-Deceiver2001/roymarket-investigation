@@ -10,6 +10,7 @@
 - **Registered:** 03.12.2007
 - **Address:** Г.Москва
 - **Director:** Чемезов Сергей Викторович
+- **ЦБСТ tie:** Госкорпорация Ростех signed a cooperation agreement with АНО «ЦБСТ», Агентство стратегических инициатив and Корпорация МСП on 10.12.2025 to support participants of Rostec's programme «СВОё дело с Ростех» (demobilised SVO participants' technology initiatives); ЦБСТ is a named programme partner and its expert/accelerator arm. Both parties say so on their own channels.
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -20,6 +21,10 @@
 |---|---|---|
 | Чемезов Сергей Викторович | 2007-12-03 | Должность: ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 770202363089. Full signed ЕГРЮЛ выписка pulled 2026-09-07. [s6819] |
 | Чемезов Сергей Викторович | 2026-08-24 | per egrul.nalog.ru open-API lookup (name+ОГРН+director quick-match, not a full signed extract). [s0094] |
+
+## State-program participation
+
+- as_of: 2026-07-21; name_en: «СВОё дело с Ростех» (Rostec technology-initiatives programme for demobilised SVO participants); name_ru: «СВОё дело с Ростех»; role: Programme operator: Академия Ростеха; partners ЦБСТ, АСИ, Корпорация МСП, фонд «Защитники Отечества», ОДД «Народный фронт «За Россию». Grants up to ₽5m, prize fund ₽30m; over 100 applications by 21.07.2026. [s8656]
 
 ## Trademarks
 
@@ -45,6 +50,25 @@
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 5 OCCRP Aleph match(es) (screened 2026-09-19).
 
+## Web & social presence
+
+### Website
+
+- <https://rostec.ru/> — Own site; /about prints «ОГРН 1077799030847 … ИНН/КПП: 7704274402/770401001» ([s8718]), matching this record. Captured 2026-10-01.
+
+### Telegram
+
+- <https://t.me/rostecru> — Public channel page captured 2026-10-01: title «Ростех», «Новости военного и гражданского производства Госкорпорации Ростех»; carries the post on the ЦБСТ/Ростех/Корпорация МСП/АСИ agreement. rostec.ru does not itself print a Telegram link (it lists VK, Rutube and Max), so the tie is the channel's own description.
+
+### VK
+
+- <https://vk.com/rostec_ru> — Linked from the rostec.ru home page.
+
+### Other
+
+- <https://rutube.ru/channel/23614912/> — Rutube channel linked from rostec.ru.
+- <https://max.ru/rostecru> — Max channel linked from rostec.ru.
+
 ## Principals & persons of interest
 
 ### Saidov Adil Abukovich — Саидов Адиль Абукович
@@ -58,6 +82,8 @@
 ## Open questions
 
 - zakupki scan for ИНН 7704274402 is truncated: the scan log records hit_count=45 but only 10 reg_numbers were collected — a page-1 truncation predating zakupki_batch_pull.py's pagination fix. The 35 uncollected hits have never been seen. The 2026-09-05 closure (all 10 archived cards are Минздрав РФ COVID-era medical procurement) therefore rests on a partial sample. Re-run `zakupki_batch_pull.py scan --inn 7704274402 --force` before treating this entity's procurement footprint as characterised.
+- Who signed, and for what money: the agreement text is not on file. ЦБСТ says it includes the programme's ЦБСТ-run accelerator track and «предложения по мерам господдержки»; the prize fund is stated as ₽30m, grants of ₽3–5m ([s8653]). Whether ЦБСТ receives any funding or data from Ростех under it is not stated in either channel. [s8656]
+- Co-signatories and partners not yet on file as entities: Агентство стратегических инициатив (АСИ), Корпорация МСП (signatories), and, per Ростех post 12363, фонд «Защитники Отечества», ОДД «Народный фронт «За Россию» and Академия Ростеха (operator). Чемезов Сергей Викторович signs for Ростех and has no person record: no source on file gives his date of birth, so none was entered. [s8656]
 
 ## Sources cited in this profile
 
@@ -66,6 +92,7 @@
 | [s0094] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_7704274402_20260822_gk-rostekh.json) | 2026-08-22 | 2026-08-22 |
 | [s0767] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_7704274402_20260824_gk-rostekh.json) | 2026-08-24 | — |
 | [s6819] | EGRUL extract | EGRUL extract (EGRUL_7704274402_20260907_gk-rostekh.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8656] | Tgweb | Tgweb (TGWEB_20261001_rostecru-s-cbst-search-10851-12363-svoe-delo-agreement.html) | 2026-10-01 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

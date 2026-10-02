@@ -15,6 +15,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Ментастеп» | role | — | [s0491] |
 
+## Products linked via this person
+
+- **Комплексная защита ног** + 1 more — via ООО «Ментастеп» · role
+
 ## Sanctions & screening
 
 - **OpenSanctions:** 1 candidate(s), best score 0.8593 — rejected — different identity

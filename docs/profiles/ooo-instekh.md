@@ -36,6 +36,11 @@
 |---|---|---|
 | 10000 | 2020-03-10 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6849] |
 
+## Products
+
+- **Система оповещения «Нежеголь» / оборудование «ОРАЛО-150»** — Loud-speaker public-warning system triggered over the РТРС digital-TV broadcast network; the product page states «Проверено в реальных боевых действиях СВО» (instechno.ru). [s8639]
+- **Антидрон-система AURA** — Anti-drone system presented on instechno.ru as the ИНСТЕХ system: detection, identification, suppression of control/navigation links and physical destruction. [s8637]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -56,6 +61,13 @@
 - Only oblast-level (rather than district-level) ИНСТЕХ customer on file: ОГКУ «Управление по делам гражданской обороны и чрезвычайным ситуациям Белгородской области». Subject taken verbatim from the contract title; the specific radio-electronic goods are not identified in the readable portion of the archived copy. Status per the contract card as of the 2026-08-31 capture: Исполнение завершено. [s5229]
 - Earlier of two Shebekino awards. The signed contract (source [s4836]) states price, parties and that monтаж/пусконаладка are included, but the item specification sits in an annex not legible in the archived copy — the specific product is therefore not asserted here. Customer signed by начальник Попова Н.А. Funded from the institution's own budget («средства бюджетного учреждения»). Status per the contract card as of the 2026-08-31 capture: Исполнение завершено. [s5251]
 
+## Self-reported marketing claims
+
+> *Проверено в реальных боевых действиях СВО*
+> Tested in real combat in the СВО
+>
+> — instechno.ru product page for the «Нежеголь» warning system [s8639]
+
 ## Litigation
 
 - Исполнительное производство (ФССП), не судебное дело — включено в litigation[] за неимением отдельного поля; источник: открытые данные ФССП (bulk CSV), не captcha-защищённый интерфейсный поиск. [s6459]
@@ -66,6 +78,12 @@
 - 5 OpenSanctions match(es) (screened 2026-09-06).
 - 3 OCCRP Aleph match(es) (screened 2026-09-19).
 
+## Web & social presence
+
+### Website
+
+- <https://instechno.ru/> — Tied by the footer address «наб. Обводного канала д.93А», which matches this ИНН's EGRUL address; the site prints no ИНН.
+
 ## Principals & persons of interest
 
 ### Chumakov Pavel Andreevich — Чумаков Павел Андреевич
@@ -75,8 +93,8 @@
 
 ## Open questions
 
-- UNCONFIRMED (not attached as fact): instechno.ru (ООО «ИНСТЕХ» per its own branding, aSel Labs' OEM partner, sells the AURA anti-drone system) MAY be this entity — but its registered ОКВЭД (43.21, electrical installation, no manufacturing/UAV signal) and its broader legal name ("Информационные системы и технологии" vs the "Инстех" shorthand used elsewhere) leave this unconfirmed. Do NOT attach instechno.ru's AURA product to this entity's products[] until the legal-entity match is independently verified (e.g. instechno.ru's own "реквизиты"/contacts page, if one exists, or a name+address cross-check against the EGRUL extract already on file). RE-CHECKED 23.08.2026: instechno.ru's homepage HTML was searched directly for "ИНН", "ОГРН", "Информационные системы", and "реквизиты" -- zero matches; no footer legal-entity line, no Контакты/Реквизиты page found or linked in the nav. Site self-identifies only as "ИНСТЕХ"/"Группа компаний ИНСТЕХ", contact address is Saint Petersburg (city-level match only, not a legal-name/ИНН confirmation). Still explicitly UNCONFIRMED -- do not restore the AURA attribution.
 - 2026-08-24 OpenSanctions full-roster screening: OpenSanctions' name-similarity match for this entity was CHECKED and REJECTED — the designation record it returned (a different, unrelated ООО (different ИНН entirely), ИНН/tax number 4705042180) does not match this entity's own ИНН. Recorded explicitly so this false lead is not mistaken for a real hit in a future pass.
+- RESOLVED 2026-09-30: the other ООО «Информационные системы и технологии» («ИНСТЕХ», ИНН 7807276480, ОГРН 1247800025175, registered 12.03.2024, СПб, Южно-Приморский; director and 100% owner Григорьева Ирина Анатольевна, ИНН 782702064506; ОКВЭД incl. 43.21, 27.12, 62.02.1, 71.12) shares no director or founder with this entity (director Чумаков П.А.). It runs the drone-detector.ru shop. A same-name, unrelated company on the documents available. ЦБСТ's «Антагонист» post (13.03.2026, [s8582]) names only «Инстех»; which of the two is meant is still not established. [s8647]
 
 ## Sources cited in this profile
 
@@ -97,6 +115,9 @@
 | [s6637] | Bfo | Bfo (BFO_7842179810_2024_ооо-инстех.pdf) | — | — |
 | [s6638] | Bfo | Bfo (BFO_7842179810_2025_ооо-инстех.pdf) | — | — |
 | [s6849] | EGRUL extract | EGRUL extract (EGRUL_7842179810_20260907_ooo-instekh.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8637] | Web | Web (WEB_7842179810_20260930_instechno-ru-aura-antidrone.html) | 2026-09-30 | — |
+| [s8639] | Web | Web (WEB_7842179810_20260930_instechno-ru-oralo-nezhegol.html) | 2026-09-30 | — |
+| [s8647] | EGRUL extract | EGRUL extract (EGRUL_7807276480_20260930_inn-7807276480.pdf) | 2026-09-30 | 2026-09-30 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

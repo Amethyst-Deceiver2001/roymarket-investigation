@@ -27,6 +27,15 @@
 |---|---|---|
 | Хутешен Алексей Александрович 100% | 2026-09-14 | Full signed ЕГРЮЛ выписка pulled 2026-09-14 (egrul_vypiska_pull.py, ГРН 2257709403170, 06.02.2025). [s7449] |
 
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2022 | — | ₽-15,000 | [s7396] |
+| 2023 | ₽125,000 | ₽59,000 | [s7397] |
+| 2024 | ₽38,952,000 | ₽445,000 | [s7398] |
+| 2025 | ₽115,678,000 | ₽20,335,000 | [s7399] |
+
 - 1 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
@@ -54,6 +63,10 @@
 |---|---|---|---|---|
 | [s6967] | EGRUL extract | EGRUL extract (EGRUL_9704109459_20260907_ooo-everest.pdf) | 2026-09-07 | 2026-09-08 |
 | [s6970] | EGRUL extract | EGRUL extract (EGRUL_9722117815_20260907_ooo-atlant-logistik.pdf) | 2026-09-07 | 2026-09-08 |
+| [s7396] | Bfo | Bfo (BFO_9704109459_2022_ooo-everest.pdf) | — | — |
+| [s7397] | Bfo | Bfo (BFO_9704109459_2023_ooo-everest.pdf) | — | — |
+| [s7398] | Bfo | Bfo (BFO_9704109459_2024_ooo-everest.pdf) | — | — |
+| [s7399] | Bfo | Bfo (BFO_9704109459_2025_ooo-everest.pdf) | — | — |
 | [s7449] | EGRUL extract | EGRUL extract (EGRUL_9704109459_20260914_ooo-everest.pdf) | 2026-09-14 | 2026-09-14 |
 
 ---

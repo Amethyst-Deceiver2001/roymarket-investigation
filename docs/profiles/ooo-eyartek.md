@@ -36,6 +36,11 @@
 |---|---|---|
 | 16000 | 2024-02-12 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6729] |
 
+## Products
+
+- **МАНС (модельная альтернативная навигационная система)** — Model alternative navigation system shown by «ЭйАрТэк» at HeliRussia (ЦБСТ channel, 05.06.2026; the post calls the company an «IT-компания»). [s8551]
+- **Тренажёр оператора БАС** — UAS-operator trainer shown by «ЭйАрТэк» at HeliRussia (ЦБСТ channel, 05.06.2026). [s8551]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -94,6 +99,7 @@
 | [s6540] | Bfo | Bfo (BFO_7300000540_2024_ооо-эиартэк.pdf) | — | — |
 | [s6541] | Bfo | Bfo (BFO_7300000540_2025_ооо-эиартэк.pdf) | — | — |
 | [s6729] | EGRUL extract | EGRUL extract (EGRUL_7300000540_20260907_ooo-eyartek.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8551] | Tgpost | Tgpost (TGPOST_20260605_ANO_CBST-2186-eyartek-mans-simulator-helirussia.txt) | 2026-06-05 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

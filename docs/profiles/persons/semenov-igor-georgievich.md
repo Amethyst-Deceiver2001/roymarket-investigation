@@ -16,6 +16,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | Joint Stock Company "Scientific and Production Enterprise" | director — Генеральный директор, единственный акционер | 14.06.2023 | [s5543] |
 
+## Products linked via this person
+
+- **РЭБ «Барьер»** + 4 more — via Joint Stock Company "Scientific and Production Enterprise" · director
+
 ## Sanctions & screening
 
 - **Disqualified-director registry:** No hits (checked 2026-09-08)

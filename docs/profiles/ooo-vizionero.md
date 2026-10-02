@@ -42,6 +42,12 @@
 |---|---|---|
 | 614015, Пермский край, г. Пермь, ул. Луначарского, д.87 | 2024-03-01 | First non-Moscow address on file — a real, geographically distant branch/facility, inspected by the Perm regional labor inspectorate (not a Moscow body), from a proverki.gov.ru 'профилактический визит' record (Mar 2024). [s6959] |
 
+## Products
+
+- **ПАК «Визионеро»** — «Интерактивный программно-аппаратный комплекс реабилитации, диагностики и аналитики состояния пациента»: therapeutic exercises, cognitive diagnostics and a specialist's personal account; presented as a Russian development on Russian software for medical organisations and social-medical institutions. Claims up to 80% of users showed progress (own site). [s8556]
+- **ViSpace** — Software for creating and playing multimedia and interactive presentations, «интуитивная модульная среда управления и демонстрации мультимедийного контента»; patent №2023613722, Russian software registry entry №244895 of 18.10.2024; supported by the Фонд содействия инновациям (own site). [s8558]
+- **ViTracker** — Real-time motion-capture system using infrared cameras; patent №2021660804, Russian software registry entry №23135 of 28.06.2024; supported by the Фонд содействия инновациям (own site). [s8559]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -91,14 +97,6 @@
 - **ИНН:** 470314984657
 - co-inventor (ПрЭВМ RU2023613722)
 
-### Gorodnichin Dmitriy Aleksandrovich — Городничин Дмитрий Александрович
-
-- co-inventor (ПрЭВМ RU2023613722)
-
-### Lysenko Andrey Olegovich — Лысенко Андрей Олегович
-
-- co-inventor (ПрЭВМ RU2023613722)
-
 ### Abdulov Aleksandr Alekseevich — Абдулов Александр Алексеевич
 
 - co-inventor (ПрЭВМ RU2023613722)
@@ -124,6 +122,9 @@
 | [s6724] | EGRUL extract | EGRUL extract (EGRUL_5902056314_20260907_ooo-vizionero.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6959] | Proverki | Proverki (PROVERKI_5902056314_20260907_ooo-vizionero-inspection-history.txt) | 2026-09-07 | — |
 | [s7542] | site capture | site capture (SITE_5902056314_20260916_ooo-vizionero-logo.png) | 2026-09-16 | — |
+| [s8556] | Web | Web (WEB_20260930_visionero-ru-cognitive.html) | 2026-09-30 | — |
+| [s8558] | Web | Web (WEB_20260930_visionero-ru-vispace.html) | 2026-09-30 | — |
+| [s8559] | Web | Web (WEB_20260930_visionero-ru-vitracker.html) | 2026-09-30 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

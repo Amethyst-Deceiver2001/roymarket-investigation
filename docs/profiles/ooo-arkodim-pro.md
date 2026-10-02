@@ -1,6 +1,6 @@
 # ООО «Аркодим-Про»
 
-`WB: not_checked` 
+`adjacent` `WB: not_checked` 
 
 ИНН 1658146106 · ОГРН 1131690026005
 
@@ -24,6 +24,12 @@
 |---|---|---|
 | Барахтин Артём Владимирович (50%) / Соловьев Константин Юрьевич (50%) | 2026-09-14 | Full signed ЕГРЮЛ выписка pulled 2026-09-14 (egrul_vypiska_pull.py). [s7443] |
 
+## Products
+
+- **Промышленный робот ARKODIM** — «Универсальный линейный промышленный робот-манипулятор собственной разработки выпускаемый в России» (own site, «Группа компаний АРКОДИМ»). [s8555]
+- **Гибкий кабельный канал ARKODIM** — Flexible cable channel of glass-filled polyamide, own production; the site also lists plastic and steel variants (own site). [s8555]
+- **Станки с ЧПУ (по заказу)** — CNC machines developed and built to the customer's specification (own site). The site also offers laser and electro-erosion cutting, turning, milling, sheet bending and plastic injection moulding as services. [s8555]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -35,6 +41,12 @@
 | 2025 | ₽3,618,000 | ₽176,000 | [s7460] |
 
 - 2 OCCRP Aleph match(es) (screened 2026-09-19).
+
+## Web & social presence
+
+### Website
+
+- <https://www.arkodimpro.ru/> — «Группа компаний АРКОДИМ»; the page text names ООО «АРКОДИМ-Про» (archived 30.09.2026, [s8555]). The rk2035 registry lists the same site and info@arkodimpro.ru for ООО «Аркодим» (ИНН 1659101884), so it is a group site; the products are recorded on the entity the page names.
 
 ## Principals & persons of interest
 
@@ -60,6 +72,7 @@
 | [s7459] | Bfo | Bfo (BFO_1658146106_2024_ooo-arkodim-pro.pdf) | — | — |
 | [s7460] | Bfo | Bfo (BFO_1658146106_2025_ooo-arkodim-pro.pdf) | — | — |
 | [s8064] | Fns | Fns (FNS_PB_UPR_UCHR_165910378299_20260929_barakhtin-artem-vladimirovich-raw.json) | 2026-09-29 | — |
+| [s8555] | Web | Web (WEB_20260930_arkodimpro-ru-home.html) | 2026-09-30 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

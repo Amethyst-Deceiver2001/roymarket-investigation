@@ -28,13 +28,6 @@
 |---|---|---|
 | 100000 | 2024-03-14 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6756] |
 
-## Financials
-
-| Year | Revenue | Profit | Source |
-|---|---|---|---|
-| 2024 | — | ₽22,000 | [s0393] |
-| 2024 | — | ₽22,000 | [s0394] |
-
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 
 ## Principals & persons of interest
@@ -50,8 +43,6 @@ _No named principals linked to this entity yet._
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
 | [s0141] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_9701280698_20260822_ao-borey-absorbed-no-longer-exists.json) | 2026-08-22 | 2026-08-22 |
-| [s0393] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2024_20260815.zip) | 2026-08-15 | 2024-12-31 |
-| [s0394] | БФО annual-accounts filing | БФО annual-accounts filing (РЕСУРС_БФО_9707004743_2024_20260816.zip) | 2026-08-16 | 2024-12-31 |
 | [s6756] | EGRUL extract | EGRUL extract (EGRUL_9701280698_20260907_ao-borey-absorbed-no-longer-exists.pdf) | 2026-09-07 | 2026-09-07 |
 | [s7378] | Founding-Устав bundle | Founding-Устав bundle (UD_1237700523895_20260913_ooo-investments.zip) | 2026-09-13 | 2023-08-01 |
 

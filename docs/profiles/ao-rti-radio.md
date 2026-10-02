@@ -37,12 +37,14 @@
 | 2024 | — | ₽-5,534 | [s7349] |
 | 2025 | — | ₽-8,039 | [s7350] |
 
+- 1 OpenSanctions match(es) (screened 2026-09-30).
 - 2 OCCRP Aleph match(es) (screened 2026-09-19).
 
 ## Principals & persons of interest
 
 ### Бессонов Сергей Николаевич
 
+- **DOB:** 29.04.1977
 - **ИНН:** 644914040799
 - Генеральный директор
 - `sanctions lead`

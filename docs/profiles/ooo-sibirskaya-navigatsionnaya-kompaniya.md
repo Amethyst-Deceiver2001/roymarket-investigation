@@ -32,7 +32,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 10000 | — | from brief:prose, unverified |
 | 10000 | 2018-12-17 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6716] |
 
 ## Financials
@@ -70,9 +69,14 @@
 - **ИНН:** 165043571104
 - Генеральный директор
 
+## Corporate links
+
+- **ООО «Гаскар»** — Subsidiary (100.0%) [s6759]
+
 ## Open questions
 
 - 2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found. Real substantial operation (2023 revenue ₽1.49bn, profit ₽408.8m) despite no web presence. Significant open thread: project head Владислав Пыльский arrested Sept 2024 (Investigative Committee case, ₽164m damages) for supplying substandard military-designated products to Russian forces -- worth tracking as a legal/criminal-liability angle distinct from the corporate registry facts.
+- Which same-name company holds patents RU2851338C1 and RU2856043C1 (radio-network gateway; satellite-comms kit)? Rospatent prints no ОГРН/ИНН; the Новосибирск ООО (5403081107, ОКВЭД 26.30) is at least as plausible as this entity. A fee/assignment record or the patent attorney's file would settle it. [s8646]
 
 ## Sources cited in this profile
 
@@ -87,6 +91,8 @@
 | [s0734] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_4205376019_20260824_ooo-sibirskaya-navigatsionnaya-kompaniya.json) | 2026-08-24 | — |
 | [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 | [s6716] | EGRUL extract | EGRUL extract (EGRUL_4205376019_20260907_ooo-sibirskaya-navigatsionnaya-kompaniya.pdf) | 2026-09-07 | 2026-09-07 |
+| [s6759] | EGRUL extract | EGRUL extract (EGRUL_9710112989_20260907_ooo-gaskar.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8646] | EGRUL extract | EGRUL extract (EGRUL_5403081107_20260930_inn-5403081107.pdf) | 2026-09-30 | 2026-09-30 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

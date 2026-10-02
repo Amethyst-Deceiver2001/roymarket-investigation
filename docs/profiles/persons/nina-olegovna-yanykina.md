@@ -6,6 +6,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **DOB:** 23.07.1985
 - **Personal ИНН:** 780158807980
 - **Entities linked:** 1
 - **Primary role:** General Director, АНО «ЦБСТ», Autonomous Non-Profit Organization "The Center for Uncrewed Vehicle Systems and Technology" (ЦБСТ's own EGRUL-registered English name)

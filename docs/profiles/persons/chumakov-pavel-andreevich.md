@@ -16,6 +16,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Информационные системы и технологии» | director — Генеральный директор | — | [s4818] |
 
+## Products linked via this person
+
+- **Система оповещения «Нежеголь» / оборудование «ОРАЛО-150»** + 1 more — via ООО «Информационные системы и технологии» · director
+
 ## Sanctions & screening
 
 - **Disqualified-director registry:** No hits (checked 2026-09-15)

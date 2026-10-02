@@ -33,7 +33,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 10000 | — | from brief:manufacturers-table:line-1022, unverified |
 | 10000 | 2023-04-07 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6768] |
 
 ## Products
@@ -117,7 +116,7 @@
 ### Website
 
 - <https://godrone.ru/> — GoDrone -- confirmed via exact director-name match (Козлов Дмитрий Сергеевич) and product match (site describes СТМ детектор дронов «НАБАТ», entity's own products[] lists «Набат v3»).
-- <https://xn--80aac0c2a.xn--p1ai/> — набат.рф -- dedicated single-product site for «Набат v3» (punycode Cyrillic domain), user-supplied 2026-08-25, archived [s1393]. Lists address "Большой Симоновский переулок, 2", Москва -- a physical retail/showroom location, DIFFERENT from the entity's EGRUL registered office (111677, Некрасовка). CONFIRMED REAL 2026-08-25 via a user-supplied Street View screenshot ([s1394]): a genuine storefront at this address, signage reading "GODRONE"/"Gd Home", with a militarized soldier-silhouette decal on the storefront door. Includes a third-party comparison: the site paraphrases (not a direct quote) a comparison by Кирилл Фёдоров -- self-described "российский блогер и военный эксперт", host on «Соловьёв LIVE» -- of «Набат» against «Булат» (ooo-trimiks-bulat-3mx's own detector), concluding «Набат» is more compact/waterproof/impact-resistant and tracks more drones simultaneously. Marketing copy, not verified against Фёдоров's own original content -- treat as the manufacturer's own claim about a third party's opinion, not a confirmed independent endorsement.
+- <https://xn--80aac0c2a.xn--p1ai/> — набат.рф -- dedicated single-product site for «Набат v3» (punycode Cyrillic domain), user-supplied 2026-08-25, archived [s1393]. Lists address "Большой Симоновский переулок, 2", Москва -- a physical retail/showroom location, DIFFERENT from the entity's EGRUL registered office (111677, Некрасовка). CONFIRMED REAL 2026-08-25 via a user-supplied Street View screenshot ([s1394]): a genuine storefront at this address, signage reading "GODRONE"/"Gd Home", with a militarized soldier-silhouette decal on the storefront door. Includes a third-party comparison: the site paraphrases (not a direct quote) a comparison by Кирилл Фёдоров -- self-described "российский блогер и военный эксперт", host on «Соловьёв LIVE» -- of «Набат» against «Булат» (ooo-trimiks's own detector), concluding «Набат» is more compact/waterproof/impact-resistant and tracks more drones simultaneously. Marketing copy, not verified against Фёдоров's own original content -- treat as the manufacturer's own claim about a third party's opinion, not a confirmed independent endorsement.
 
 ### Telegram
 

@@ -18,6 +18,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Скай авиа групп» | director — Генеральный директор | 24.11.2023 | [s5291] |
 
+## Products linked via this person
+
+- **Сборка боевых беспилотников (модель не названа)** — via ООО «Скай авиа групп» · director
+
 ## Related persons
 
 - **Прокофьев Михаил Васильевич** — сборщик (assembler) — shared entity: ООО «Скай авиа групп» [s5291]

@@ -9,7 +9,7 @@
 - **Legal form:** OOO (limited liability company)
 - **Registered:** 27.02.2023
 - **Address:** 111675, г. Москва, ул. Пехорская, д. 1/3, стр. 4
-- **Director:** Соколов Герман Олегович
+- **Director:** Соколов Герман Олегович (генеральный директор 27.02.2023–11.03.2025; сведения ЕГРЮЛ ограничены с 12.03.2025)
 - **Charter capital:** ₽121,410,256
 - **ОКВЭД:** 30.30 — Производство летательных аппаратов, включая космические, и соответствующего оборудования
 - **ЦБСТ tie:** Named ЦБСТ resident receiving a Минпромторг РФ honorary award, 14.08.2025.
@@ -21,7 +21,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| Соколов Герман Олегович | 2026-08-24 | Aggregator-sourced (checko.ru, via WebSearch result summary, page itself Cloudflare-blocked to direct fetch) -- corroborated independently by Соколов's own listing as co-inventor on this entity's patents RU218475U1/RU220486U1 (source [s0953]) and by his directorship of the related ООО «РТД-Защита» (ex-«НИПП Рустехдрон», ИНН 5003153526, [s1161]), which shares this entity's director and "РТД" product-naming convention. Not yet confirmed against a full EGRUL PDF extract. |
+| Соколов Герман Олегович (генеральный директор; период 27.02.2023–11.03.2025) | 2023-02-27 | ЕГРЮЛ open data as published on the OpenSanctions entity page for ИНН 5003155499 (captured 30.09.2026): «Directors: ГЕРМАН ОЛЕГОВИЧ СОКОЛОВ, ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, 2023-02-27 – 2025-03-11». The record ends the day before the director section became restricted (12.03.2025, [s6718]); no source says he left, and none names a successor. [s8543] |
 | — (EGRUL-restricted) | 2026-09-07 | Federal Law 129-FZ restriction (Доступ к сведениям ограничен) on the director/представитель section, confirmed via full выписка pulled 2026-09-07. [s6718] |
 
 ### Founders / ownership
@@ -109,15 +109,17 @@
 
 ### Соколов Герман Олегович
 
+- **DOB:** 13.08.1991
 - **ИНН:** 500310216204
 - co-inventor (patent RU218475U1, RU220486U1) (2023-04-20–present)
-- Генеральный директор (per checko.ru/rusprofile/spark-interfax aggregators, not yet confirmed against a full EGRUL PDF extract)
+- Генеральный директор (27.02.2023–11.03.2025, per ЕГРЮЛ open data via OpenSanctions; ЕГРЮЛ restricts the section since 12.03.2025) (2023-02-27–2025-03-11)
 - `sanctions lead`
 
 ### Дзема Вадим Вадимович
 
 - **ИНН:** 771877750402
 - co-inventor (patent RU218475U1, RU220486U1) (2023-04-20–present)
+- <https://t.me/Vadim_Dzema_FPV>
 
 ### Свистунов Максим Валентинович
 
@@ -163,6 +165,7 @@
 | [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 | [s5391] | Gisp | Gisp (GISP_20260903_goods-catalog-full-roster-sweep-20-hits.json) | 2026-09-03 | 2026-09-03 |
 | [s6718] | EGRUL extract | EGRUL extract (EGRUL_5003155499_20260907_ooo-npo-rustekhdron.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8543] | OpenSanctions screening record | OpenSanctions screening record (OPENSANCTIONS_5003155499_20260930_ru-inn-entity-page-rustekhdron.html) | 2026-09-30 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

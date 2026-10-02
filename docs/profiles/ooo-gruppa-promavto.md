@@ -1,6 +1,6 @@
 # ООО «Группа ПРОМАВТО»
 
-`sanctioned` `plumbing` `WB: not_checked` 
+`sanctioned` `adjacent` `WB: not_checked` 
 
 ИНН 5263093100 · ОГРН 1125263004162
 

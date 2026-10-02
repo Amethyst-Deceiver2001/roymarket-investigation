@@ -682,7 +682,7 @@
           "legal_form": "АО",
           "variant": "offensive",
           "product_count": 5,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ao-tsentr-telko",
@@ -3059,7 +3059,7 @@
           "legal_form": "НПО",
           "variant": "defensive",
           "product_count": 13,
-          "degree": 23
+          "degree": 24
         },
         {
           "id": "npo-kilobatt",
@@ -3335,7 +3335,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 0,
-          "degree": 10
+          "degree": 11
         },
         {
           "id": "ooo-arkodim",
@@ -3387,7 +3387,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 2,
-          "degree": 15
+          "degree": 16
         },
         {
           "id": "ooo-atlant-logistik",
@@ -3608,7 +3608,7 @@
           "legal_form": "ООО",
           "variant": "dual",
           "product_count": 24,
-          "degree": 43
+          "degree": 44
         },
         {
           "id": "ooo-garant-klub",
@@ -4427,7 +4427,7 @@
           "legal_form": "ООО",
           "variant": "dual",
           "product_count": 8,
-          "degree": 18
+          "degree": 19
         },
         {
           "id": "ooo-smart-teknolodzhis",
@@ -11309,7 +11309,7 @@
           "kind": "program",
           "label": "Резидентство ЦБСТ",
           "subtype": "residency",
-          "degree": 22
+          "degree": 28
         },
         {
           "id": "program::natsproekt-bas",
@@ -15484,6 +15484,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ao-tekhnodron",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7588",
+          "as_of": "2026-04-24",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -25760,6 +25772,18 @@
           "detail": null
         },
         {
+          "source": "npo-kaysant",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7597",
+          "as_of": "2025-11-14",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "npo-kilobatt",
           "target": "ooo-npo-kilovatt-shestopalov",
           "type": "related",
@@ -26963,12 +26987,12 @@
           "source": "ooo-aeromaks",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
-          "label": "Named directly by ЦБСТ's own channel as a sanctioned resident -- \"a tenth name\" in the same 24.04.2026 post (t.me/ANO...",
+          "label": "Named in ЦБСТ's own post of 24.04.2026 (t.me/ANO_CBST/2095) among «ряд других отечественных разработчиков дронов» add...",
           "source_id": "s7588",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
-          "confidence": "t-doc",
+          "confidence": "t-open",
           "detail": null
         },
         {
@@ -27308,6 +27332,18 @@
           "detail": null
         },
         {
+          "source": "ooo-arkhangel-tsentr",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7588",
+          "as_of": "2026-04-24",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ooo-arkodim",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -27461,6 +27497,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ooo-atlant-aero",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7588",
+          "as_of": "2026-04-24",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -28205,6 +28253,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ooo-gagaring",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s5440",
+          "as_of": "2026-05-02",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -30990,6 +31050,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ooo-skb-piranya",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7588",
+          "as_of": "2026-04-24",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -39176,7 +39248,7 @@
           "legal_form": "АО",
           "variant": "offensive",
           "product_count": 5,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ao-tsentr-telko",
@@ -40168,7 +40240,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 0,
-          "degree": 10
+          "degree": 11
         },
         {
           "id": "ooo-arkodim",
@@ -40220,7 +40292,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 2,
-          "degree": 15
+          "degree": 16
         },
         {
           "id": "ooo-aviron",
@@ -40389,7 +40461,7 @@
           "legal_form": "ООО",
           "variant": "dual",
           "product_count": 24,
-          "degree": 43
+          "degree": 44
         },
         {
           "id": "ooo-garant-klub",
@@ -41130,7 +41202,7 @@
           "legal_form": "ООО",
           "variant": "dual",
           "product_count": 8,
-          "degree": 18
+          "degree": 19
         },
         {
           "id": "ooo-smart-teknolodzhis",
@@ -46455,7 +46527,7 @@
           "legal_form": "АО",
           "variant": "offensive",
           "product_count": 5,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "assotsiatsiya-vzaimopomoshch",
@@ -46679,7 +46751,7 @@
           "legal_form": "НПО",
           "variant": "defensive",
           "product_count": 13,
-          "degree": 23
+          "degree": 24
         },
         {
           "id": "npp-elvo-kolskaya-verf",
@@ -46783,7 +46855,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 0,
-          "degree": 10
+          "degree": 11
         },
         {
           "id": "ooo-arkodim",
@@ -46809,7 +46881,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 2,
-          "degree": 15
+          "degree": 16
         },
         {
           "id": "ooo-aviron",
@@ -46861,7 +46933,7 @@
           "legal_form": "ООО",
           "variant": "dual",
           "product_count": 24,
-          "degree": 43
+          "degree": 44
         },
         {
           "id": "ooo-gaskar",
@@ -47173,7 +47245,7 @@
           "legal_form": "ООО",
           "variant": "dual",
           "product_count": 8,
-          "degree": 18
+          "degree": 19
         },
         {
           "id": "ooo-smart-teknolodzhis",
@@ -47403,7 +47475,7 @@
           "kind": "program",
           "label": "Резидентство ЦБСТ",
           "subtype": "residency",
-          "degree": 22
+          "degree": 28
         },
         {
           "id": "program::ushkuynik-residency",
@@ -48394,12 +48466,12 @@
           "source": "ooo-aeromaks",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
-          "label": "Named directly by ЦБСТ's own channel as a sanctioned resident -- \"a tenth name\" in the same 24.04.2026 post (t.me/ANO...",
+          "label": "Named in ЦБСТ's own post of 24.04.2026 (t.me/ANO_CBST/2095) among «ряд других отечественных разработчиков дронов» add...",
           "source_id": "s7588",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
-          "confidence": "t-doc",
+          "confidence": "t-open",
           "detail": null
         },
         {
@@ -49303,7 +49375,7 @@
           "legal_form": "НПО",
           "variant": "defensive",
           "product_count": 13,
-          "degree": 23
+          "degree": 24
         },
         {
           "id": "npo-kilobatt",

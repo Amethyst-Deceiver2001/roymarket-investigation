@@ -13,7 +13,7 @@
 - **Director:** — (EGRUL-restricted)
 - **Charter capital:** ₽200,000
 - **ОКВЭД:** 46.52 — Торговля оптовая электронным и телекоммуникационным оборудованием и его запасными частями
-- **ЦБСТ tie:** Product («Булат»/3mx) shown at ЦБСТ's Дронница 2025 showcase.
+- **ЦБСТ tie:** «Булат» detectors named in ЦБСТ's list of its residents' exhibits at the Слёт «Дронница 2025» (organiser КЦПН and НПЦ «Ушкуйник»; ЦБСТ participated), post 1193 ([s8842]). Also: ЦИК «Единой России» head Сидякин, delivering to the 132nd brigade on 09.04.2025, calls «Перехват» and «Булат» «оборудование резидентов ЦБСТ» (@evgeniy_lisitsyn 15603, [s8895]); ЦБСТ is named as a co-donor of that shipment by Фонд «Наша Правда» (post 422, [s8896]).
 - **Wildberries overlap:** confirmed_reseller
 
 ## Ownership & corporate history
@@ -63,12 +63,31 @@
 - **«Пётр»** — Tactical active headphones; firmware v0.91.12. Own-site product page (3mx.ru/products/naushniki/, «Тактические активные наушники «Пётр»»), 19,900₽. [s8021]
 - **«Азар»** — Analog video signal receiver; firmware v0.3. Own-site product page (3mx.ru/products/priemnik-analogovogo-videosignala-azar/), exact title match. [s8022]
 - **«Марс»** — Digital video link and control detector; firmware v0.11. [s1383]
+- **«Таир»** — Individual Bluetooth-paired BPLA alert sensor, pairs with «Булат» v.4 (one detector feeds multiple «Таир» units within 50m radius). Confirmed in official user manual (docs.3mx.ru/detektor-bpla-bulat-v4/user-manual, document v1.16, 06.12.2024), s. 2. [s8773]
+- **Дополнительный модуль к детектору «Булат»** — Stand-alone FPV-only relay/extension unit, 1.5km detection range, 1200mAh battery, USB-C, 77x54x35mm/105g; extends Булат detection or works independently (FPV-only, LED+vibration alert only). Official user manual. [s8770]
 
 ## Financials
 
 | Year | Revenue | Profit | Source |
 |---|---|---|---|
 | 2023 | ₽45,621,000 | ₽13,151,000 | [s0367] |
+
+## Self-reported marketing claims
+
+> *Булат не предназначен для использования внутри железобетонных конструкций, вблизи с работающей радиоэлектронной аппаратурой (включая Рации, Телевизоры, СВЧ печи, мониторы)*
+> [3mx support rep, replying to a customer false-positive report] Булат is not designed for use inside reinforced-concrete structures, near operating radio-electronic equipment (including radios, TVs, microwave ovens, monitors)
+>
+> — ru3mx customer chat (channel_id 1651823792, msg 28831, 2025-07-04), 3mx support thread responding to a customer asking why the detector now alarms inside a dugout ("блиндаж"); subsequent replies (msgs 28832-28850) are customers confirming repeated false alarms after a firmware update and a rep (sender 1414586597) acknowledging the issue should be reported to developers for a correction. (2025-07-04) [s8815]
+
+> *Новые антенны запускаем в производство, будут доступны в конце октября.*
+> [3mx rep, replying to a mass customer complaint that Булат 4 antennas are "тупо одноразовые" / effectively disposable] New antennas are going into production, will be available by end of October.
+>
+> — ru3mx customer chat (channel_id 1651823792, msg 15203, 2024-10-05), reply to msg 15202: a customer complaint of widespread dissatisfaction with Булат 4 antenna quality ("массовое недовольство по качеству антенн", "сильный проёб со стороны производителя") -- a 3mx rep (sender 1414586597) confirms the defect and states new antennas are in production. (2024-10-05) [s8815]
+
+> *Всю нашу продукцию можно приобрести только у нас на сайте 3mx.ru или у наших дилеров.*
+> All our products can be bought only from us on the site 3mx.ru or from our dealers.
+>
+> — 3mx rep in the company's customer chat (+BlOqwGbeNGk3OTVi), msg 42146, 02.09.2026, directly after a customer's question (msg 42145): «Новая версия булата будет выставлена к продаже на рой маркет?». The reply-to link is not stored in the DB; the pairing rests on adjacency (13 minutes later, no other message between). Msg 42151, another customer: «Очень нужно что бы Вашим дилером стал рой маркет». The responder is not named in the archive. (2026-09-02) [s8860]
 
 ## Trademarks
 
@@ -100,6 +119,15 @@
 
 - <https://3mx.ru/> — Full catalog nav: /products/detektory-dronov/, /products/podaviteli-dronov/, /products/kompleksy-reb/, /products/komponenty-dlya-sredstv-reb/, /products/aksessuary/
 
+### Telegram
+
+- <https://t.me/ru3mx> — «Официальный канал команды 3mx. Главное о борьбе с БПЛА.» (24 203 subscribers on 2026-10-01). Bio lists 3mx.ru, vk.com/3mx.products, dzen.ru/3mx, max.ru/ru3mx, teletype.in/@team3mx and rutube.ru/channel/30344656; 3mx.ru links back to t.me/ru3mx. «3mx» is the brand of the «Булат» detectors on this record. Supplied by the user 2026-10-01. The channel has not been scraped.
+- <https://t.me/+BlOqwGbeNGk3OTVi> — Users' chat «3mx.ru🛡- ЧАТ» (2 873 members on 2026-10-01), named in the @ru3mx bio. Private invite link: a chat, not a channel, so the scraper does not take it.
+
+### VK
+
+- <https://vk.com/3mx.products> — Listed in the @ru3mx bio and linked from 3mx.ru; not opened.
+
 ### Marketplace listings
 
 - <https://www.wildberries.ru/catalog/241450767/detail.aspx> — «Булат» v.3 portable drone detector, confirmed live listing 2026-08-25.
@@ -112,6 +140,10 @@
 ### Other
 
 - <https://3mx.ru/dilery/> — Manufacturer's own dealer-network page, 2026-08-25 (originally archived 23.08.2026 as [s0558], not re-archived here -- identical content confirmed by check_registry.py's duplicate-file warning): lists 3 official dealers -- Мэдро/madro.ru (confirmed WB presence, see marketplace_listings), Макс 911/dji911.com (Moscow), Покров/pokrovsystem.ru (Moscow). The latter two not yet checked for a WB presence of their own -- open lead.
+- <https://dzen.ru/3mx> — Listed in the @ru3mx bio; not opened.
+- <https://max.ru/ru3mx> — Listed in the @ru3mx bio; not opened.
+- <https://teletype.in/@team3mx> — Listed in the @ru3mx bio; not opened.
+- <https://rutube.ru/channel/30344656/> — Listed in the @ru3mx bio; not opened.
 
 ## Images
 
@@ -200,10 +232,16 @@
 - **Unresolved entity** `dealer` — Named dealer, per 3mx.ru/dilery/: «Макс 911» (Max 911) — dji911.com. Telegram @dji911_operator. CONFIRMED via dji911.com itself (23.08.2026): explicitly states "официальный дилер" for 3mx and sells «Булат V.4» ("Булат-4"), «Марс», «Инкубатор» (remote antenna) and its own «Neobooster» DJI signal-amplifier accessory. LEGAL ENTITY RESOLVED 2026-08-25 (dji911.com/contacts, [s1388], direct curl archive): "Продажу оборудования 3MX на маркетплейсах осуществляет ИП Коровкин А.А. ИНН 780223272953" -- full name confirmed via egrul.nalog.ru open API ([s1387]): ИП Коровкин Александр Анатольевич, ОГРНИП 323784700072451 (active, registered 07.03.2023; a prior ОГРНИП 319784700120061 under the same ИНН was terminated 29.12.2022). Checksum-valid ИНН. Incidental retail dealer, not a network principal -- not otherwise PII-profiled per project policy (same treatment as Мэдро's ИП). Also has an Ozon storefront (2026-08-25, user-supplied browser HAR capture, [s1384]): https://www.ozon.ru/seller/maks-911-4233382/, self-declared page title "МАКС 911- офиц. дилер 3mx" -- not independently ИНН-confirmed to Коровкин on that marketplace (sellerTransparency widget not captured there), but consistent given the matching branding. [s1388]
 - **Pokrov LLC** `dealer` — Named dealer, per 3mx.ru/dilery/: «Покров» (Pokrov) — pokrovsystem.ru, Khimki (Moscow Oblast). Telegram @pokrov_sales. Legal entity RESOLVED 2026-08-24 (cross-link fixed 2026-08-25 -- was already a standalone registry entity, `ooo-pokrov`, ИНН 5038189259/ОГРН 1245000068774, just not linked from here): NOT a pure reseller like Мэдро -- sells its own branded EW jammer line (Покров ВЦА «Алёша», ВЦ4/ВЦ5 «Альфа») alongside resold 3mx detector products (Булат v.4, Марс). [s1386]
 - **АНО «НПЦ «Ушкуйник»»** `co-speaker` — Joint conference attendance, upgraded from the leads file's 'plausible series, needs per-event confirmation' framing: channel chadayevru msg 2722 (2024-04-17, reporting the 12.04.2024 IV конференция по технологиям обнаружения и противодействия БПЛА, Saint Petersburg) directly names BOTH "Директор по развитию ООО «Тримикс» С.С. Шандобыло" (speaker) AND "Руководитель АНО «НПЦ «Ушкуйник» А.В. Чадаев" (speaker) at the SAME single documented event -- not merely a conference-series inference. Verified verbatim against data/roymarket.db 2026-09-15. [s8066]
+- **ИП Кузнецов Руслан Николаевич** `dealer` — Reseller (sole trader), not a named dealer on 3mx.ru: ИП Кузнецов Руслан Николаевич sells the «Булат» detector at 88,000 ₽ on 921921.ru, whose contacts block prints his ИНН 637592279701 and ОГРНИП 320631300042842; his ЕГРИП main ОКВЭД is 47.99.1 (direct/agent sales). Same 3mx product channel as ООО «ПОКРОВ». [s8613]
 
 ## Open questions
 
 - 3mx's dealer page ([s0558], 23.08.2026) originally flagged all 3 named dealers as unmatched to a legal entity. ALL THREE now resolved: Мэдро (2026-08-25, via WB seller HAR capture) -- ИП Артемьева Виктория Михайловна, ИНН 350102453754, ОГРНИП 325784700034333. Покров (2026-08-25, cross-link fix -- was already resolved 2026-08-24, just not linked from this record) -- ООО «ПОКРОВ», ИНН 5038189259/ОГРН 1245000068774. Макс 911 (2026-08-25, dji911.com/contacts + egrul.nalog.ru) -- ИП Коровкин Александр Анатольевич, ИНН 780223272953, ОГРНИП 323784700072451. No further open leads on this dealer roster. [s0558]
+- Chinese-made competing/clone portable drone detector manual (QD-HD-003, "UAV DAC 2.0", 2023) posted 2024-10-05 by a customer in 3mx's own ru3mx chat (msg 15194), replying to msg 15190 which names the device class explicitly: "SKYDROID и его многочисленные клоны (Соколы и пр)" -- a ~50k+ RUB simplified spectrum-analyzer-with-threshold-alarm category distinct from Булат. NOT a 3mx/Тримикс product -- a competing device a customer owns. Market-context lead only, not wired to any claim. [s8760]
+- Machine-translated manual (onlinedoctranslator.com) for an unbranded compact "дрон-сигнализатор" (drone-alarm device, filename "сокол.pdf"), posted 2024-10-05 in the same ru3mx chat thread as the QD-HD-003 manual (msg 15198, 6 min later), matching the "Соколы" SKYDROID-clone category named in msg 15190. 300MHz-6GHz range, 1.5in screen, 63x42.7x103mm, 3000mAh, Type-C, four fixed frequency bands (800-830/1420-1460/2370-2510/5600-6000MHz). No brand/manufacturer name in the extracted text. NOT a 3mx/Тримикс product -- same competing-hardware lead as [s8760], logged together. [s8761]
+- "Каталог_спектров.pdf" circulated twice in 3mx's own ru3mx customer chat (2024-10-13 and 2025-03-12, identical content) is NOT a 3mx product catalog -- it is a radio-signal-identification reference guide titled "КАТАЛОГ СПЕКТРОВ. Для специалистов РЭБ, РЭР и подразделений противодействия БПЛА", branded "Пифагор МДВ"/"МЕСТЬ ДОБРОЙ ВОЛИ" (a distinct, unidentified group -- "Администрация МДВ" signs the foreword), cataloguing RF spectra for named Ukrainian military UAV platforms (А1-СМ Фурія, Байрактар ТБ2, SPECTATOR-M, PD-2, ScanEagle, Валькирия, RQ-20 Puma, Посейдон/Poseidon Mk II, Лелека-100, SPARROW, FLY EYE) and Ukrainian EW/jamming stations under the heading "ХохлоРЭБ" (Анклав, Буковель). Shows 3mx's dealer chat is a channel where Ukrainian-signal identification references circulate among Булат operators -- real usage-context evidence, independent of 3mx's own marketing claims. "МЕСТЬ ДОБРОЙ ВОЛИ"/МДВ group name is an unresolved lead, not yet cross-checked against the registry. [s8771]
+- Desktop.rar (posted 2025-07-04, msg 28839, ru3mx chat) contains 2 .stl files -- a community member's self-made 3D-printable repair/replacement part. Same sender (id 1190254443) wrote earlier in the chat (msg 21167, 2025-02-07) about a broken, hard-to-source antenna connector on Булат v.4 ("Столкнулся с такой проблемой как сломанный разъём антенны на Булат в4...в продаже таких нет"), and msg 21403 (2025-02-12) describes his workaround: "ремонт у производителя, я уже обращался...вышел из ситуации так, разъём от баофенга и 3д печать" (official repair impractical; fixed it himself with a Baofeng radio connector + 3D printing). Posted the .rar 5 days after his own msg 28486 ("3д печать"). Reading: a user-made STL replacement part for the Булат v.4 antenna connector, documenting a known hardware failure point -- not an official 3mx/Тримикс engineering file. Not yet opened (no unrar/7z in the working environment); content inferred from filename + chat context only. [s8805]
+- As of 02.09.2026 3mx's rep tells a customer its products are sold only on 3mx.ru or through its dealers (chat msg 42146, reply to 42145 asking about РОЙ.МАРКЕТ; [s8859], [s8860]). A customer says in msg 42151 that РОЙ.МАРКЕТ is not yet a dealer ([s8862]). So «Булат» is not documented as sold on РОЙ.МАРКЕТ although ЦБСТ lists «детекторы «Булат»» among its residents' exhibits ([s8842]). Open: whether the statement means no РОЙ.МАРКЕТ listing at all; how it fits the WB listings recorded on this entity (the maker's own brand store, 25.08.2026); any later change. [s8860]
 
 ## Sources cited in this profile
 
@@ -225,6 +263,15 @@
 | [s8021] | site capture | site capture (WEBCAPTURE_7802942873_20260928_3mx-naushniki-petr.html) | 2026-09-28 | — |
 | [s8022] | site capture | site capture (WEBCAPTURE_7802942873_20260928_3mx-priemnik-azar.html) | 2026-09-28 | — |
 | [s8066] | Tgpost | Tgpost (TGPOST_20240417_chadayevru-2722.txt) | 2024-04-17 | — |
+| [s8613] | Web | Web (WEB_637592279701_20260930_921921-bulat-detector.html) | 2026-09-30 | — |
+| [s8760] | Telegram media | Telegram media (TGMEDIA_20241005_ru3mxchat-post15194-QDHD003.pdf) | 2024-10-05 | — |
+| [s8761] | Telegram media | Telegram media (TGMEDIA_20241005_ru3mxchat-post15198-сокол.pdf) | 2024-10-05 | — |
+| [s8770] | Telegram media | Telegram media (TGMEDIA_20241112_ru3mxchat-post16663-dopolnitelnyy-modul-kdetektoru-bulat_user_manual_main.pdf) | 2024-11-12 | — |
+| [s8771] | Telegram media | Telegram media (TGMEDIA_20241113_ru3mxchat-post16680-Каталог_спектров.pdf) | 2024-11-13 | — |
+| [s8773] | Telegram media | Telegram media (TGMEDIA_20241206_ru3mxchat-post18088-user-manual.pdf) | 2024-12-06 | — |
+| [s8805] | Telegram media | Telegram media (TGMEDIA_20250704_ru3mxchat-post28839-Desktop.rar) | 2025-07-04 | — |
+| [s8815] | Tgpost | Tgpost (TGPOST_multi_20261001_ru3mxchat-antenna-defect-false-positives.txt) | 2026-10-01 | — |
+| [s8860] | Tgpost | Tgpost (TGPOST_20260902_chat1651823792-42146-roymarket-not-a-dealer.txt) | 2026-09-02 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

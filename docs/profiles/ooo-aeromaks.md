@@ -12,7 +12,7 @@
 - **Director:** Бессонов Сергей Николаевич
 - **Charter capital:** ₽3,177,522,000
 - **ОКВЭД:** 71.12.44 — Деятельность по созданию топографических карт и планов
-- **ЦБСТ tie:** Named directly by ЦБСТ's own channel as a sanctioned resident -- "a tenth name" in the same 24.04.2026 post (t.me/ANO_CBST/2095) discussed at length elsewhere in the same post beyond its six-name contour sentence, corroborated by the EU's own Council Decision (CFSP) 2026/504 (entry 759) naming LLC "AEROMAKS" (ИНН 7725347482) directly.
+- **ЦБСТ tie:** Named in ЦБСТ's own post of 24.04.2026 (t.me/ANO_CBST/2095) among «ряд других отечественных разработчиков дронов» added to the EU's 20th package (««Аэромакс», «Котлин-Новатор», «Клеверкоптер», а также МФТИ — за партнёрство с разработчиками БпЛА»). The post does not call the company a resident; the EU's Council Decision (CFSP) 2026/504 (entry 759) names LLC "AEROMAKS" (ИНН 7725347482) directly.
 - **Wildberries overlap:** none_found
 
 ## Ownership & corporate history
@@ -120,6 +120,7 @@
 
 ### Бессонов Сергей Николаевич
 
+- **DOB:** 29.04.1977
 - **ИНН:** 644914040799
 - Генеральный директор
 - `sanctions lead`

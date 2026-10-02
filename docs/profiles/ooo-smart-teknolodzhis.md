@@ -33,7 +33,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 5500000 | — | from brief:manufacturers-table:line-1015, unverified |
 | 5500000 | 2019-11-22 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6736] |
 
 ## Products

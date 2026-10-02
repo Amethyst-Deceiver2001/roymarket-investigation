@@ -24,11 +24,22 @@
 |---|---|---|
 | Кулемин Игорь Александрович | 2026-09-07 | From screen_upr_uchr.py ФНС founder/director cross-reference -- share % not given by that source; needs a full ЕГРЮЛ выписка to confirm ownership split. |
 
+## Products
+
+- **Дрон-перехватчик «Архангел» (серийное производство)** — Проект «Архангел»'s channel (11.10.2025) names «Хаб СВО» as its production vehicle for wide-scale output of the «Архангел» interceptor; a project post of 26.06.2026 ([s8609]) describes the interceptor as effectively a guided missile with vertical take-off. Tie by name, consistent with main ОКВЭД 30.30.6. [s8611]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
 |---|---|---|---|
 | 2025 | ₽16,000,000 | ₽811,000 | [s7405] |
+
+## Self-reported marketing claims
+
+> *«Архангел»— это, по сути, управляемая ракета с вертикальным взлётом или возможностью размещения на самолёте-матке.*
+> «Архангел» is in essence a guided missile with vertical take-off or the option of carriage on a mother aircraft.
+>
+> — Проект «Архангел» channel [s8609]
 
 ## Principals & persons of interest
 
@@ -61,6 +72,8 @@
 | [s6915] | Tgpost | Tgpost (TGPOST_20250422_rogozin_do-7047-arkhangel-cross-post.txt) | 2025-04-22 | — |
 | [s7405] | Bfo | Bfo (BFO_9722102248_2025_ooo-hab-svo.pdf) | — | — |
 | [s7419] | EGRUL extract | EGRUL extract (EGRUL_9722102248_20260914_ooo-hab-svo.pdf) | 2026-09-14 | 2026-09-14 |
+| [s8609] | Tgweb | Tgweb (TGWEB_20260930_projectArchangel-10381-arkhangel-interceptor-specs.html) | 2026-09-30 | — |
+| [s8611] | Tgweb | Tgweb (TGWEB_20260930_projectArchangel-8659-hab-svo-production-entity.html) | 2026-09-30 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

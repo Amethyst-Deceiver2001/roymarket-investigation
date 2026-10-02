@@ -6,6 +6,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **DOB:** 11.04.1994
 - **Personal ИНН:** 780633823516
 - **Entities linked:** 1
 - **Primary role:** role, ООО «ДСГ»

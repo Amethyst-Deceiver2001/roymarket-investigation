@@ -40,9 +40,28 @@
 |---|---|---|
 | Ростовская область, г. Таганрог, ул. Инструментальная, земельный участок 2в/7 | 2026 | First street-level address on file for this entity (previously only city-level). Named in a proverki.gov.ru construction-oversight inspection (РЕГИОНАЛЬНАЯ СЛУЖБА ГОСУДАРСТВЕННОГО СТРОИТЕЛЬНОГО НАДЗОРА РОСТОВСКОЙ ОБЛАСТИ, Июль 2026) -- other records in the same set cite slightly different building numbers on the same street (2-7 стр.1, 4-54), consistent with an active construction/expansion at this site. [s6931] |
 
+## Products
+
+- **Ударно-разведывательные дроны типа «Молния»** — Strike-reconnaissance drones of the «Молния» type, said to be produced at the Таганрог plant; per Astra's OSINT analysis as reported by The Insider on 19.04.2026 (press; the company's own product page is not on file). [s8554]
+- **Комплектующие для беспилотника «Орион»** — Components for the «Орион» UAV, said to be produced at the same plant; same attribution (The Insider, 19.04.2026, citing Astra). The «Орион» itself is the Kronshtadt system, and the plant's role is component supply, not the airframe. [s8554]
+
+## Financials
+
+| Year | Revenue | Profit | Source |
+|---|---|---|---|
+| 2024 | ₽6,900,000,000 | ₽2,220,000,000 | [s8553] |
+| 2025 | ₽57,800,000,000 | ₽9,750,000,000 | [s8553] |
+
 ## State-program participation
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer; name_ru: Атлас промышленности ГИСП (Государственная информационная система промышленности); role: Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase, classified under industry '(unclassified)' with primary ОКВЭД 30.30 — independently corroborates the entity's ИНН/ОГРН/address/ОКВЭД via a second, unrelated federal data source (matches EGRUL exactly). [s5346]
+
+## Workforce & production scale
+
+| Headcount | As of | Note |
+|---|---|---|
+| 153 | 2024-12-31 | Среднесписочная численность per «Ъ-Ростов» citing СПАРК-Интерфакс accounts. [s8553] |
+| 662 | 2025-12-31 | Среднесписочная численность per «Ъ-Ростов» citing СПАРК-Интерфакс accounts. [s8553] |
 
 ## Trademarks
 
@@ -90,6 +109,8 @@
 | [s5346] | Gisp | Gisp (GISP_20260903_atlas-promyshlennosti-full-dump-40281-companies.json) | 2026-09-03 | 2026-09-03 |
 | [s6725] | EGRUL extract | EGRUL extract (EGRUL_6154165878_20260907_ooo-atlant-aero.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6931] | Proverki | Proverki (PROVERKI_6154165878_20260907_ooo-atlant-aero-inspection-history.txt) | 2026-09-07 | — |
+| [s8553] | press coverage | press coverage (PRESS_20260930_kommersant-8605427-atlant-aero-revenue.html) | 2026-09-30 | — |
+| [s8554] | press coverage | press coverage (PRESS_20260930_theins-291704-atlant-aero-taganrog.html) | 2026-09-30 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

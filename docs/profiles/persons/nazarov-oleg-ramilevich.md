@@ -17,17 +17,17 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## Products linked via this person
 
-- **Русак-С** + 6 more — via АО «Стратим» · role
+- **«Русак-С»** + 3 more — via АО «Стратим» · role
 
 ## Related persons
 
 - **Бежанов Иван Валериевич** — Генеральный директор (former); shareholder 37.2% (5,580 of 15,000 shares) directly — shared entity: АО «Стратим» [s0332]
+- **Makhnev Aleksandr Igorevich** — Технический директор; shareholder 4.5% (675 of 15,000 shares) — shared entity: АО «Стратим» [s0332]
 - **Костюнин Павел Андреевич** — Генеральный директор — shared entity: АО «Стратим» [s0111]
 - **Данилин Виктор Сергеевич** — Сотрудник (Leader-ID org staff listing, role/title not specified) — shared entity: АО «Стратим»
 - **Царьков Даниил Дмитриевич** — Руководитель отдела (Department Head) — shared entity: АО «Стратим»
 - **Штрек Игорь Александрович** — Инженер (Engineer), с 2021 — shared entity: АО «Стратим»
 - **Попов Григорий Сергеевич** — CV-инженер (computer-vision engineer) — shared entity: АО «Стратим»
-- **Makhnyov Aleksandr Igorevich** — Технический директор; shareholder 4.5% (675 of 15,000 shares) — shared entity: АО «Стратим» [s0332]
 
 ## Sanctions & screening
 

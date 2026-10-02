@@ -79,11 +79,9 @@
 
 ## Web & social presence
 
-### Marketplace listings
+### Telegram
 
-- <https://www.ozon.ru/seller/gaskargroup/> — Manufacturer's own Ozon storefront -- ОГРН exact match (1237700273744) confirmed via user-supplied browser HAR capture 2026-08-25 ([s1385]), independently repeated on the seller page's sellerLegalInformation widget AND the motor product page's own about-seller tooltip. Seller_id 4848816, 5/5 rating, 29 reviews, 94 orders, Premium-shop badge, registered on Ozon ~3 months as of capture.
-- <https://www.ozon.ru/product/motor-py3115-1300kv-beskollektornyy-fpv-5183531962/> — PY3115 1300KV brushless FPV motor -- confirmed as this entity's own product via JSON-LD brand field ("ГАСКАР") on the product page itself, not just a listing on the storefront.
-- <https://xn--80aaorhk2b.xn--p1ai/sellers/gackar> — Official partner/seller profile on Налетай.рф (налетай.рф), the state-backed civilian UAV marketplace created by АО «ГТЛК» (Государственная транспортная лизинговая компания), operated by ООО «ЦТП» (ИНН 9714054618). Legal-info block on the page gives Название ООО «ГАСКАР», ИНН 9710112989, КПП 772001001, address г. Москва, ул. Пехорская, д.1Д стр.1 -- exact ИНН match to this record. 57 products listed as of 2026-08-26 (flight controllers, motors, propellers, cameras/thermal, batteries, receivers, antennas, modems, frames, cables/mounts) -- same FPV/UAV-components line already documented via this entity's Ozon storefront. Captured via a user-supplied browser HAR (buyer account, [s2610]); catalog listing API response archived separately ([s2609], totalCount=57). Notable: this Canada-sanctioned ЦБСТ-resident entity sells openly through a marketplace built and backed by a Russian state-owned company (ГТЛК), distinct from and in addition to its Ozon presence.
+- <https://t.me/gaskargroup> — Supplied by the user 2026-10-01; public page captured the same day: title «ГАСКАР Online», «ГАСКАР – разработчик и производитель широкий линейки БПЛА и комплектующих к ним». It is the group channel: the registry holds three Гаскар entities (ooo-gaskar, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii) and the page names no legal entity, so it is recorded here as the group channel, not as proof which entity runs it. The channel itself has not been scraped.
 
 ## Principals & persons of interest
 
@@ -96,6 +94,7 @@
 
 - rk.2035.university lists 4 product models (БВС Сибиряк, Сибиряк мини, Сибирь-1, Сибирь-2) under manufacturer «ГК "Гаскар Групп"» ([s1169]) -- a group/trading name distinct from any of this registry's three separately-registered Гаскар entities (ooo-gaskar, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii). Not attributed to any one of the three pending a direct check of which entity actually holds this product line. [s1169]
 - products[] carried a single bare entry "СИБНК" -- suspected to be a mis-recorded reference to the 100%-owning founder, ООО «Сибирская навигационная компания» (ИНН 4205376019, ОГРН 1184205024849), not an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats "ООО «СИБНК»" as its own distinct entity name, adding to the confusion. Web search for "СИБНК" as a Wildberries product (2026-08-25) found nothing. RESOLVED 2026-08-25 (partial): wb_overlap=confirmed's actual basis is corroborated on Ozon too -- the entity trades FPV components (motors, propellers) under the brand «ГАСКАР», not «СИБНК». RESOLVED 2026-09-28: confirmed "СИБНК" is not a product -- it is the entity's own founder record (founders[0].inn 4205376019 matches exactly). Cleared from products[] via corrections; same mis-scaffolded-ownership-as-product pattern already found and cleared for ooo-atlant-aero's "Технодинамика".
+- rk.2035.university BAS-company directory (pull of 2026-10-01, [s8721]) carries this ИНН with site https://gaskar.group/ (self-declared). That same site is already recorded for the sister entity ooo-gaskar-integratsiya (ИНН 7733894200; capture [s7569], home page titled «Группа компаний Гаскар. Беспилотные и роботизированные системы, инфраструктура управления и связи», no ИНН printed). It is a group site; the registry holds three Гаскар entities, so it is not attributed to this one pending a printed ИНН or requisites page (/contacts returned 403 on 2026-10-01). [s8721]
 
 ## Sources cited in this profile
 
@@ -113,6 +112,7 @@
 | [s6759] | EGRUL extract | EGRUL extract (EGRUL_9710112989_20260907_ooo-gaskar.pdf) | 2026-09-07 | 2026-09-07 |
 | [s6934] | Proverki | Proverki (PROVERKI_9710112989_20260907_ooo-gaskar-inspection-history.txt) | 2026-09-07 | — |
 | [s7354] | Founding-Устав bundle | Founding-Устав bundle (UD_1237700273744_20260908_ooo-gaskar.zip) | 2026-09-08 | — |
+| [s8721] | bulk open-data extract | bulk open-data extract (DATASET_20261001_rk2035-bas-companies-full-pull.json) | 2026-10-01 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

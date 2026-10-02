@@ -32,7 +32,6 @@
 
 | Value | As of | Note |
 |---|---|---|
-| 5400000 | — | from brief:prose, unverified |
 | 5400000 | 2004-08-02 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6839] |
 
 ### Address
@@ -40,6 +39,11 @@
 | Value | As of | Note |
 |---|---|---|
 | 195277, Санкт-Петербург, вн.тер.г. муниципальный округ Финляндский округ, ул. Чугунная, д. 14, литера П, помещ. 2-Н | 2025-12-29 | factAddress per contract XML (regNumber 1770982726625001602) matches the registered address on file exactly — corroborates, no new facility. [s3719] |
+
+## Products
+
+- **ПАК «Арьергард» (обнаружение и противодействие БПЛА)** — Counter-UAV integration system merging radar, thermal, jamming, visual and direction-finding sensors into one control chain for 24/7 detection and neutralisation of UAVs at 0–1,000 m; components «проходят тестирование нашей организацией совместно с МО РФ на специализированных полигонах». Shown at «Армия-2024» ([s8623]). [s8621]
+- **Обустройство пунктов пропуска через госграницу; системы безопасности, связь (интегратор)** — Core business per own site: design and installation of security systems for state-border checkpoints, transport security and fuel-energy facilities. [s8622]
 
 ## Financials
 
@@ -64,6 +68,13 @@
 - customer: ФГУП «Росморпорт»; date: 2017-08-02; items: Выполнение работ по оснащению и обустройству морского пункта пропуска через государственную границу Российской Федерации -- outfitting/equipping a sea border checkpoint. A fifth distinct border-crossing-type contract for this entity (after Хасан, Ивангород, Храброво and, via ЗИТ.ЦИ, Верхний Ларс), and a fifth distinct federal customer for border-security work (Росморпорт, not Росгранстрой) -- confirms the border-security specialisation extends beyond the single Росгранстрой relationship already documented. Found 2026-09-01 via zakupki_customer_clusters.py non-recurring-tail review.; reg_number: 1770235245417000408; value_rub: 129524912.4 [s3041]
 - customer: Пограничное управление Федеральной службы безопасности Российской Федерации по городу Санкт-Петербургу и Ленинградской области; date: 2011-2014 (3 contracts, 18.07.2011-08.07.2014); items: AGGREGATE -- 3 contracts (0372100000111000108 ₽30,252,500, КТРУ 7522000 "Услуги в области обороны"; 0372100000111000110 ₽2,587,000, КТРУ 7523070 "Услуги, связанные с охраной государственных границ"; 0372100000114000109 ₽3,239,418) with an FSB regional border-guard directorate directly, distinct from the civil-infrastructure Росгранстрой contracts documented elsewhere -- this is FSB Пограничные войска (border troops) procurement, explicitly coded as "services related to protecting state borders" on one of the three cards. Found 2026-09-01 via zakupki_customer_clusters.py non-recurring-tail review, not individually wired.; value_rub: 36078918 [s2997]
 
+## Self-reported marketing claims
+
+> *проходят тестирование нашей организацией совместно с МО РФ на специализированных полигонах*
+> are being tested by our organisation jointly with the Russian Ministry of Defence at specialised ranges
+>
+> — avangard-pmc.ru counter-UAV page, on the «Арьергард» components [s8621]
+
 ## Trademarks
 
 | Mark | Reg. no. | Filed | Registered | Classes |
@@ -75,6 +86,12 @@
 - Приказ №217 от 27.04.2012. Статус: действующая. [s6439]
 
 - 5 OCCRP Aleph match(es) (screened 2026-09-19).
+
+## Web & social presence
+
+### Website
+
+- <https://avangard-pmc.ru/> — Contacts page prints ИНН 7804302798 and ОГРН 1047855051892.
 
 ## Principals & persons of interest
 
@@ -109,6 +126,8 @@ _No named principals linked to this entity yet._
 | [s3720] | Zakupki | Zakupki (ZAKUPKI_ATTACH_1770982726625001602_1770982726625001602_kontrakt-rgs0-17709827266250016020002_8290bf1d.docx) | — | — |
 | [s6439] | Mchs | Mchs (MCHS_7804302798_20260906_fire-license-search-ao-pmts-avangard.html) | 2026-09-06 | — |
 | [s6839] | EGRUL extract | EGRUL extract (EGRUL_7804302798_20260907_ao-pmts-avangard.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8621] | Web | Web (WEB_7804302798_20260930_avangard-pmc-counter-uav-arergard.html) | 2026-09-30 | — |
+| [s8622] | Web | Web (WEB_7804302798_20260930_avangard-pmc-home.html) | 2026-09-30 | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

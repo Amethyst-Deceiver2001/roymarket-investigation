@@ -8,6 +8,7 @@
 
 - **Legal form:** OOO (limited liability company)
 - **Address:** г. Москва
+- **Director:** Панкратов Андрей Александрович
 - **Charter capital:** ₽10,000
 - **ОКВЭД:** 30.30.6 — Производство беспилотных авиационных систем
 - **Wildberries overlap:** none_found
@@ -18,7 +19,7 @@
 
 | Value | As of | Note |
 |---|---|---|
-| None | 2026-07-13 | Director appointment record present (ГРН 2267705989274, 13.07.2026 — very recent) but name field not captured in this extraction pass. [s0507] |
+| Панкратов Андрей Александрович | 2026-07-13 | ГЕНЕРАЛЬНЫЙ ДИРЕКТОР, личный ИНН 645403994412 (ГРН 2267705989274). The earlier record of this appointment had no name captured. [s8648] |
 
 ### Founders / ownership
 
@@ -45,7 +46,10 @@
 
 ## Principals & persons of interest
 
-_No named principals linked to this entity yet._
+### Andrey Aleksandrovich Pankratov — Панкратов Андрей Александрович
+
+- **ИНН:** 645403994412
+- Генеральный директор (2026-07-13–present)
 
 ## Corporate links
 
@@ -54,16 +58,17 @@ _No named principals linked to this entity yet._
 ## Open questions
 
 - 2026-08-24 OpenSanctions full-roster screening: OpenSanctions' name-similarity match for this entity was CHECKED and REJECTED — the designation record it returned (a different, unrelated "JSC Unmanned Technologies", ИНН/tax number 9724118500) does not match this entity's own ИНН. Recorded explicitly so this false lead is not mistaken for a real hit in a future pass.
+- Convertible loan from ООО «СПУТНИК - УПРАВЛЕНИЕ АКТИВАМИ НТИ» (7714497327) entitles it to up to 49% of the charter capital; not yet exercised per the выписка of 30.09.2026. Worth a check of that lender's own record and of the corporate agreement's parties. [s8648]
 
 ## Sources cited in this profile
 
 | ID | Type | Locator | Captured | As of |
 |---|---|---|---|---|
-| [s0507] | EGRUL extract | EGRUL extract (ul-1237700545191-20260823133810.pdf) | — | 2026-08-23 |
 | [s6657] | Bfo | Bfo (BFO_9713001941_2023_ооо-эколибри-бт.pdf) | — | — |
 | [s6658] | Bfo | Bfo (BFO_9713001941_2024_ооо-эколибри-бт.pdf) | — | — |
 | [s6659] | Bfo | Bfo (BFO_9713001941_2025_ооо-эколибри-бт.pdf) | — | — |
 | [s6862] | EGRUL extract | EGRUL extract (EGRUL_9713001941_20260907_ooo-ekolibri-bt.pdf) | 2026-09-07 | 2026-09-07 |
+| [s8648] | EGRUL extract | EGRUL extract (EGRUL_9713001941_20260930_ooo-ekolibri-bt.pdf) | 2026-09-30 | 2026-09-30 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

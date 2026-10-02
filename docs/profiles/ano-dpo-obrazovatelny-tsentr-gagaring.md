@@ -1,6 +1,6 @@
 # ANO DPO Obrazovatelny Tsentr Gagaring (Gagaring Educational Center, autonomous non-profit supplementary-professional-education org) — АНО ДПО «Образовательный центр Гагаринг»
 
-`WB: not_checked` 
+`plumbing` `WB: not_checked` 
 
 ИНН 2310240630 · ОГРН 1252300026208
 
@@ -10,7 +10,7 @@
 - **Registered:** 26.05.2025
 - **Address:** 350020, Краснодарский край, г. Краснодар, ул. Коммунаров, д. 268, помещ. 54
 - **Director:** Безроднова Анна Сергеевна
-- **ЦБСТ tie:** confirmed
+- **ЦБСТ tie:** Training arm co-founded by ООО «Гагаринг», itself a ЦБСТ resident; the tie to ЦБСТ runs through Гагаринг. Treated as confirmed at investigator direction.
 - **Wildberries overlap:** not_checked
 
 ## Ownership & corporate history
@@ -56,6 +56,8 @@
 ### Anna Tolstousova (Taranosova) — Анна Толстоусова (Тараносова)
 
 - Старший инструктор (senior instructor), callsign «Сайга»; champion of Russia and Мастер спорта (Master of Sport) in practical shooting; trains soldiers in counter-drone aerial-target shooting under the «Последний рубеж» project (2025-12-29–present)
+- <https://t.me/saiganarus>
+- <https://vk.ru/saiganarus>
 
 ### Aleksandr Smorodin — Александр Смородин
 
@@ -81,6 +83,7 @@
 
 ### Anna Sergeevna Bezrodnova — Безроднова Анна Сергеевна
 
+- **ИНН:** 236100309743
 - Директор (2025-05-26–present)
 
 ## Open questions

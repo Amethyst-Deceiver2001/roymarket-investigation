@@ -15,6 +15,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «Аэроплатформы» | founder — 14% founder | 21.10.2025 | [s6796] |
 
+## Products linked via this person
+
+- **Высотные свободные аэростаты** + 1 more — via ООО «Аэроплатформы» · founder
+
 ## Related persons
 
 - **Batozhargalov Buyanto Batorovich** — co-inventor (patent RU2779484C1) — shared entity: ООО «Аэроплатформы» [s1031]

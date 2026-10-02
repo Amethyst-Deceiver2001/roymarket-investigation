@@ -33,6 +33,7 @@
 
 | Value | As of | Note |
 |---|---|---|
+| 10000 | 2022-09-28 | Charter approved by decision №1 of the single founder of 23.09.2022, company registered 28.09.2022 (ГРН 1227100012369); §: «Уставный капитал Общества равен 10000 руб». Registered address then: с. Осиновая Гора, Тула. [s8692] |
 | 20000 | 2024-04-25 | Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py). [s6727] |
 
 ### Address
@@ -66,6 +67,7 @@
 ## State-program participation
 
 - as_of: 2026-09-03; name_en: GISP (State Industrial Information System) product catalog — БАС industry listing; name_ru: Каталог продукции ГИСП — отрасль БАС; role: Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly. [s5344]
+- as_of: 2023-12-12; name_en: ИНТЦ «Aerospace Innovation Valley» (Аэрокосмическая инновационная долина) — charter purpose clause; name_ru: ИНТЦ «Аэрокосмическая инновационная долина» — пункт 2.1 устава; role: Amendment to §2.1 of the charter approved by decision №2 of the sole founder of 12.12.2023 (ЕГРЮЛ ГРН 2237100393913 of 20.12.2023) makes scientific-technological activity under federal law №216-ФЗ and the project rules of the ИНТЦ «Аэрокосмическая инновационная долина» (Government decree №735 of 22.04.2022) the company's main purpose; the charter of 07.02.2024 repeats it. This is a charter declaration; participant status in the ИНТЦ register itself is not checked here. [s8692]
 
 ## Self-reported marketing claims
 
@@ -155,6 +157,7 @@
 
 - On 29.07.2026 founder Андрей Черезов was shot three times in Tula by an unidentified attacker who fled; a criminal case was opened. Овод's own channel frames this as one of a pattern of attacks targeting leading Russian drone developers, alongside a car-bomb attack the same week (05.08.2026) that seriously injured Владимир Ткачук, described as developer of «Упырь» ("Ghoul") combat drones — «Упырь»/Ткачук is NOT currently in this registry, a genuinely new adjacent-network lead not yet investigated. [s5446]
 - PEP-adjacency lead, NOT independently confirmed: a 30.07.2026 forward on Овод's own channel, originally from war correspondent Анастасия Кашеварова's (@akashevarova) personal channel, claims Алексей Дюмин — while governor of Tula oblast — personally helped Черезов with his early drone development, before the enemy had comparable technology. This is a named, identifiable journalist's secondhand account, forwarded (not authored) by Овод itself — not corroborated by any Дюмин-side or Овод-official primary source in this pass. If confirmed, this would tie Овод's founding story directly to a now-senior federal security/defense-adjacent official; treat as an open lead requiring independent verification before use, not as an established fact. [s5446]
+- 2026-10-01 founding-document read (three documents, 2022, 2023, 2024): both charter texts (2022 §10.4–10.6, 2024) carry state-secret clauses (executive body responsible for protecting state-secret information; participants may see such documents only with a допуск). The wording is identical to the Киловатт charter (ИНН 4800016776), so it is template text; no допуск is evidenced by it. [s8692]
 
 ## Sources cited in this profile
 
@@ -183,6 +186,7 @@
 | [s7977] | Eu | Eu (EU_SANCTIONS_7100027464_20260920_rlvt-implementing-regulation-2026-1843.html) | 2026-09-20 | — |
 | [s7978] | Eu | Eu (EU_SANCTIONS_7100027464_20260920_rlvt-regulation-2026-1848.html) | 2026-09-20 | — |
 | [s8051] | press coverage | press coverage (PRESS_20260818_ovod-provod-15-rekord-dalnosti-aif-tula.html) | 2026-08-18 | — |
+| [s8692] | Founding-Устав bundle | Founding-Устав bundle (UD_2109707.zip) | — | — |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

@@ -40,6 +40,17 @@
 | Новгородская обл., г. Старая Русса, ул. Минеральная, д. 24 — производственная площадка на территории бывшего Старорусского приборостроительного завода ('центр коллективного доступа') | 2026-06-08 | Per smolin.info investigation ([s5288]), NOT independently corroborated against ЕГРН/satellite imagery yet. Distinct from the registered ул. Лазаревская, 11 address — a genuine second production site if confirmed. [s5288] |
 | Новгородская обл., г. Великий Новгород, ул. Большая Санкт-Петербургская, д. 64 — адрес закупочной комиссии | 2026-06-08 | Per smolin.info investigation ([s5288]), procurement-commission address, distinct from registered address. Not independently corroborated. [s5288] |
 
+## Products
+
+- **Ударный FPV-дрон «Князь Вандал Новгородский» (КВН)** — Fibre-optic-controlled FPV strike drone. The АНО itself (ИНН 5300010714 printed as supplier) delivered 50 units under state contract №56 of 21.11.2024 with ГОКУ «Управление ЗНЧС и ПБ Новгородской области», ₽4,250,000 (₽85,000 per unit), subject stated as «для нужд проведения СВО» (contract documents on zakupki). The brand also sits on ООО «Ушкуйник» (5300013923); the contract shows the АНО as a seller in its own right. [s3781]
+- **Комплекты FPV-дронов «Князь Вандал Новгородский» (15 км / 23 км) и наземная станция управления** — State contract №68 of 18.12.2025, same customer, ₽3,110,000, supplier АНО «НПЦ «Ушкуйник»»: kits of FPV drones with fibre-optic spools for 15 km or 23 km range, plus a ground control station kit (contract document). [s3788]
+- **Разведывательный БПЛА «Князь Вещий Олег» (КВО)** — Low-cost mass reconnaissance UAV, «разработанный в НПЦ «Ушкуйник» для оснащения каждого подразделения»; anti-jam navigation and integration with strike drones (own channel @nvgushkuynik, tagged #ушкуйник_разработки). [s8602]
+- **Барражирующий боеприпас «Князь Владимир Святославович» (КВС)** — Loitering munition: a copter with an oval ring wing for vertical take-off then wing-borne flight. Own channel: «Барражирующий боеприпас «Князь Владимир Святославович» апробировали в зоне СВО … закончены боевые испытания». [s8602]
+- **Безэкипажный катер «Скорлупа»** — Fibre-optic-controlled uncrewed surface vessel; own channel calls it «первый в России массовый безэкипажный катер на оптоволоконном канале управления» and reports КВН drones launched from it in trials. [s8601]
+- **«САУ РОН» — система автоматизированного управления ресурсами объективного наблюдения** — AI-assisted optical observation system detecting and tracking objects beyond 30 km, including UAVs in radio silence, and cueing counter-drone means; own channel: «разработанная в НПЦ «Ушкуйник»». The word mark «САУ РОН» (RU 1009062) is registered to АО «МИКЦ» (ao-mikts); the relation between the two holders is not established. [s8602]
+- **Перехватчик самолётного типа «Кречет»** — Catapult-launched fixed-wing interceptor of aircraft-type drones shown at МТК-2026 (own channel, citing РИА Новости). [s8602]
+- **Мобильный контейнерный комплекс сборки БПЛА** — A 40-ft container housing a UAV assembly line, shown at МТК-2026 (own channel). [s8602]
+
 ## Financials
 
 | Year | Revenue | Profit | Source |
@@ -80,6 +91,26 @@
 >
 > — Site 'Цифры и факты' (numbers/facts) block, nvgushkuynik.ru homepage — same figures already cited in prose in docs/index.html, now captured structurally. (2026-09-02)
 
+> *Наш ударный fpv-дрон «Князь Вандал Новгородский» отметил первую годовщину применений на фронте, преодолев рубеж в $2,7 млрд нанесенного противнику ущерба (по данным на август).*
+> Our FPV strike drone «Князь Вандал Новгородский» marked the first anniversary of its use at the front, passing $2.7bn of damage inflicted on the enemy (as of August).
+>
+> — Own Telegram channel @nvgushkuynik, year-review post [s8601]
+
+> *Работа «Ушкуйника» получила и международное признание: попали в санкционные списки ЕС.*
+> Ушкуйник's work also received international recognition: we got onto the EU sanctions lists.
+>
+> — Own Telegram channel @nvgushkuynik, same post [s8601]
+
+> *А мы год назад отправили туда целиком всю первую опытную партию КВН — всего 250 штук*
+> A year ago we sent the entire first pilot batch of КВН there — 250 units in all
+>
+> — Own Telegram channel @nvgushkuynik [s8600]
+
+> *подписано стратегическое соглашение между АНО «НПЦ «Ушкуйник» и АО «Концерн Калашников» о создании совместного предприятия*
+> a strategic agreement was signed between АНО «НПЦ «Ушкуйник» and АО «Концерн Калашников» to create a joint venture
+>
+> — Own Telegram channel @nvgushkuynik [s8600]
+
 ## Litigation
 
 - Единственное известное судебное дело Ушкуйника — здесь Ушкуйник выступает истцом (в отличие от типичного паттерна ответчика по неустойкам у АО «НИИ СТТ»/АО «НПП Радар ммс»), взыскивая относительно небольшую сумму (~100.6 тыс. руб.) с контрагента в Иннополисе. Не установлена связь предмета договора №13-а с профильной (БАС/оборонной) деятельностью Ушкуйника — сумма и упрощённый порядок производства указывают на рутинный хозяйственный спор (возможно, аренда офиса/имущества в Иннополисе), не на профильный контракт. Три акта архивированы: [s5285] (принятие иска, 01.09.2025), [s5286] (уточнение исковых требований, 22.09.2025), [s5287] (решение, 27.10.2025). [s5285]
@@ -92,9 +123,26 @@
 - 1 OpenSanctions match(es) (screened 2026-09-06).
 - 3 OCCRP Aleph match(es) (screened 2026-09-19).
 
+## Web & social presence
+
+### Website
+
+- <https://nvgushkuynik.ru/>
+
+### Telegram
+
+- <https://t.me/nvgushkuynik>
+- <https://t.me/knz_vandal_official> — КВН developers' channel; tie via announcement/forwarding only
+- <https://t.me/dronnitsa> — Channel of the «Дронница» operators' rally. Its post of 08.09.2025 says the 2025 exhibition «была организована Координационным центром помощи Новороссии и НПЦ «Ушкуйник»» ([s8700]); its post of 14.07.2026 calls Любимов (КЦПН) and Чадаев (head of НПЦ «Ушкуйник») «организаторы Дронницы» ([s8701]); the 2022 organising committee was Любимов and Чадаев, «идеолог и автор идеи мероприятия» ([s8693]).
+- <https://t.me/chadayevru> — Channel «ЧАДАЕВ», first-person posts by the head of the НПЦ about setting up НПЦ «Ушкуйник» ([s8702], 29.09.2023; [s8703], 10.10.2023). Personal channel, not the company's.
+
 ## Principals & persons of interest
 
 ### Чадаев Алексей Викторович
+
+- Генеральный директор; co-organiser of the «Дронница» rally (with Любимов, КЦПН)
+- <https://t.me/chadayevru>
+- <https://t.me/chadayev>
 
 ### Владимирский Михаил Юрьевич
 
@@ -151,7 +199,9 @@
 | [s0947] | EGRUL open-API record | EGRUL open-API record (EGRULAPI_5300010714_20260824_ano-npts-ushkuynik.json) | 2026-08-24 | 2026-08-24 |
 | [s3402] | Zakupki | Zakupki (ZAKUPKI_contract_2532103798924000157_20260829.html) | 2026-08-29 | — |
 | [s3403] | Zakupki | Zakupki (ZAKUPKI_contract_2532103798925000183_20260829.html) | 2026-08-29 | — |
+| [s3781] | Zakupki | Zakupki (ZAKUPKI_ATTACH_2532103798924000157_2532103798924000157_upd-docx-25321037989240001570012_f16a66c5.docx) | — | — |
 | [s3786] | Zakupki | Zakupki (ZAKUPKI_ATTACH_2532103798925000183_2532103798925000183_elektronnyy-kon-25321037989250001830005_ff7b5d4c.xml) | — | — |
+| [s3788] | Zakupki | Zakupki (ZAKUPKI_ATTACH_2532103798925000183_2532103798925000183_kontrakt-68-o-25321037989250001830003_65aa8e2b.docx) | — | — |
 | [s5285] | arbitration court filing | arbitration court filing (A65-30723-2025_20250901_Opredelenie.pdf) | 2025-09-01 | 2025-09-01 |
 | [s5288] | transcript | transcript (TRANSCRIPT_20260608_smolin-info-ushkuynik-investigation.html) | 2026-06-08 | — |
 | [s5301] | transcript | transcript (TRANSCRIPT_20250407_programma-razvitiya-bas-novgorod-oblast-minpromtorg.pdf) | 2025-04-07 | — |
@@ -161,6 +211,9 @@
 | [s7369] | Checko | Checko (CHECKO_5300010714_20260908_ano-npts-ushkuynik.pdf) | 2026-09-08 | 2026-09-08 |
 | [s8066] | Tgpost | Tgpost (TGPOST_20240417_chadayevru-2722.txt) | 2024-04-17 | — |
 | [s8068] | Tgpost | Tgpost (TGPOST_20250909_tsg_group71-168.txt) | 2025-09-09 | — |
+| [s8600] | Tgweb | Tgweb (TGWEB_20260930_nvgushkuynik-s-before120-channel-page.html) | 2026-09-30 | — |
+| [s8601] | Tgweb | Tgweb (TGWEB_20260930_nvgushkuynik-s-before141-channel-page.html) | 2026-09-30 | — |
+| [s8602] | Tgweb | Tgweb (TGWEB_20260930_nvgushkuynik-s-latest-channel-page.html) | 2026-09-30 | 2026-02-05 |
 
 ---
 _Generated from this investigation's registry (`data/registry/`) by `scripts/build_company_profile.py`. Not a substitute for reading the underlying primary sources listed above._

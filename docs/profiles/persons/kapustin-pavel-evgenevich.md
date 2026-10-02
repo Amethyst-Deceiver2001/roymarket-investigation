@@ -16,6 +16,10 @@ Person profile · РОЙ.МАРКЕТ investigation
 |---|---|---|---|
 | ООО «ЭйАрТэк» | director — Генеральный директор | — | [s6729] |
 
+## Products linked via this person
+
+- **МАНС (модельная альтернативная навигационная система)** + 1 more — via ООО «ЭйАрТэк» · director
+
 ## Related persons
 
 - **Фомин Александр Николаевич** — 25% co-founder — shared entity: ООО «ЭйАрТэк» [s6729]

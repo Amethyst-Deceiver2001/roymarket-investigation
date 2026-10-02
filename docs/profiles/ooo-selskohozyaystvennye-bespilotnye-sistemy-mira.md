@@ -33,6 +33,8 @@
 |---|---|---|---|
 | 2025 | — | ₽-209,000 | [s7395] |
 
+- 1 OpenSanctions match(es) (screened 2026-09-30).
+
 ## Principals & persons of interest
 
 ### Кобзев Виктор Викторович

@@ -6,6 +6,7 @@ Person profile · РОЙ.МАРКЕТ investigation
 
 ## At a glance
 
+- **DOB:** 05.07.1988
 - **Personal ИНН:** 773272723527
 - **Entities linked:** 1
 - **Primary role:** Генеральный директор, OOO "DIAM-AERO"
