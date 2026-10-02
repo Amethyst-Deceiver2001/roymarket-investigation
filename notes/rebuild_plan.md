@@ -269,15 +269,32 @@ Decisions (user, 2026-10-02):
 - **Dossier draft:** unregistered facts in `notes/dossier_draft.html` are a
   migration backlog, never a page.
 
-### D. Screening and live jobs (the user runs these)
+### D. Screening and live jobs: who runs what (rewritten 2026-10-02)
 
-- ИП Маврин and ИП Карпушин: no OpenSanctions or GUR screening timestamps.
+Mechanical upkeep now goes through the tools merged on 02.10.2026 (PRs #3–#6);
+rules in CLAUDE.md. A tool's output is a work item or a document to read, never
+a registry fact.
+
+| Job | Tool | Where and who |
+|---|---|---|
+| What a record lacks or has let go stale | `status_board.py` (+ `exhibits/build_status_board.py`, private artifact AU3y9UL5M4i48UJ4BzrXSj) | anywhere, local |
+| Missing/stale ЕГРЮЛ, ЕГРИП, БФО | `status_board.py --pull-queue` (8 + 8 a day, top tiers first; ingest steps incl. the graph rebuild printed after) | the user's Mac; the queue is the user's standing go-ahead, run as printed |
+| First reading of what arrived | `first_reading.py export --push` (Mac; `--local-dir data/sources/_inbox` also writes the texts locally so `read` runs the same day), then `read` | worksheet for a human; never merged, never applied |
+| Sanctions lists by ИНН/ОГРН | `sanctions_watch.py` | GitHub Actions, Mondays; an issue opens on change; state on `watch/sanctions` |
+| Public copies of cited pages | `archive_sources.py run --limit 150` | the user's Mac, a batch at a time; tier 1 not started (476 posts, 156 pages) |
+| Tests, registry check, tag balance | `.github/workflows/checks.yml` | every push to main and every PR |
+
+Still by hand (no tool selects per record):
+
+- 78 records never screened (`screen_never`) and 53 unreviewed screening hits
+  (`screen_hits_unreviewed`): the `screen_*.py` scripts have no per-record
+  selector, so the board lists them and the user runs the screens.
 - Six licence screeners write no `*_checked_at` (FAVT, МЧС fire, РКН comms, РКН
   frequency, Roscosmos, Росгвардия), so a clean run looks like no run. Code fix
   is ours; the re-run is the user's.
-- Query `*_screened_at` for the never-screened backlog rather than trusting
-  old lists (archive ~3970, ~3497).
-- `tg_scan.py --full --only kb_spektr`.
+- `tg_scan.py --full --only kb_spektr`; the board's 8 `not_in_local_scrape`
+  channels.
+- Ukraine's sanctions register API needs a key; not applied for.
 
 ## Decisions
 
@@ -301,13 +318,18 @@ Waiting on the user:
   echelon and branch, hostile frame). Then extend `military_units.json` with
   `vch`, `name_official_ru`, `short_ru`, `informal_ru[]`, `name_en`,
   `short_en`, `echelon`, `branch`, each form with its source.
+- Wayback archiving (`archive_sources.py`): start the daily batches, and whether
+  to set up archive.org S3 keys (faster, less rate-limited).
+- Graphic-content default; when to share the chain previews.
 
-## Current state (queried 2026-10-02)
+## Current state (queried 2026-10-02, after the merge of PRs #3–#6)
 
-252 entities (73 with a ЦБСТ tie edge), 440 people, 8,881 sources, 23 quotes,
-44 open questions; graph schema v11, 1,258 nodes, 2,178 edges, 115 unresolved.
-`check_registry.py`: 0 errors, 21 warnings. One product record («Булат»: six
-listings, 16 deliveries).
+252 entities (73 with a ЦБСТ tie edge), 440 people, 8,912 sources, 23 quotes,
+44 open questions; graph schema v12, 1,261 nodes, 2,182 edges, 115 unresolved.
+`check_registry.py`: 0 errors, 24 warnings; all tests pass. Two product records
+(«Булат»: 6 listings, 17 deliveries; «Капюшон»: 2 listings, 8 deliveries).
+Status board: 188 of 248 entities and 227 of 433 people carry a flag; today's
+pull queue is 2 ЕГРИП extracts and 8 БФО filings (33 БФО missing in all).
 
 Held, never committed until the user says so: `notes/reference/script_notes.md`
 (modified), `.claude/agents/product-researcher.md`, `scripts/verify_findings.py`
@@ -320,10 +342,11 @@ and `notes/SOURCE_REGISTER.md`; `notes/unverified_people_gap.md`,
 ## Where things are published
 
 - **Pages (`docs/`, public on push):** the generated landing page, `relationship-graph.html`
-  (schema v11) and `images/`. The seven case pages, profiles and `story.html`
+  (still schema v11 data until B6) and `images/`. The seven case pages, profiles and `story.html`
   are archived (track A). Pushing `docs/` needs the user's go-ahead.
 - **Artifacts (private unless shared):** Ecosystem Model (working model),
-  «Булат» chain view (prototype), Network Graph, Evidence Ledger and Product Icon Set
+  «Булат» and «Капюшон» chain views (previews), landing preview, Investigation
+  Status Board (internal, slugs on purpose), Network Graph, Evidence Ledger and Product Icon Set
   (their only links were on the archived pages), Multi-Role
   Individuals (stale; `build_affiliation_matrix.py`), Архангел: Claimed
   Components (kept until its stills are confirmed archived locally). Deleting
