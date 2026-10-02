@@ -1,0 +1,484 @@
+#!/usr/bin/env python3
+"""Public snapshots of every Telegram post and web page the registry cites.
+
+Each `sources.json` record with a `public_url` already has a local copy in
+`data/sources/` (its `path` and `sha256`). That copy proves what we saw, but a
+reader cannot open it. If a channel deletes a post or a company pulls a page, a
+claim that cites it can only be checked against an independent public copy. This
+script gives every cited URL one: a Wayback Machine capture, recorded with its
+date and the SHA-256 of the archived bytes, in `data/registry/source_archives.json`.
+
+**`lookup` and `save` are live network jobs against a third-party service.** Per
+CLAUDE.md's crawling-jobs policy they run on the user's Mac, in batches, never
+in the background from a cloud session (the cloud network blocks both
+web.archive.org and most of the cited sites anyway). `plan`, `local` and
+`report` are local file processing and safe to run anywhere.
+
+A Wayback capture is public: anyone can see that the URL was archived and when.
+The capture does not record who asked for it.
+
+Subcommands:
+    plan     Rebuild the URL list from sources.json (no network). New citations
+             appear as pending; captures already recorded are kept.
+    local    Check each cited URL's local copy in data/sources/ against the
+             sha256 in sources.json (no network; needs data/sources/).
+    lookup   Ask the Wayback CDX index whether a capture already exists; record
+             the newest one. Read-only: creates nothing public.
+    save     Ask the Wayback Machine to capture pending URLs, then hash the
+             archived bytes. Uses SPN2 with keys when WAYBACK_S3_ACCESS and
+             WAYBACK_S3_SECRET are set (free archive.org account, Settings ->
+             S3 API keys; put them in .env), otherwise the anonymous endpoint,
+             which is slower and rate-limited harder.
+    run      plan, then lookup, then save, for one daily batch.
+    report   Coverage by tier and kind (no network).
+
+Tiers (what gets archived first):
+    1  Telegram posts and web pages cited by a registry record
+    2  procurement (zakupki.gov.ru) and trademark (fips.ru) registry pages cited
+       by a registry record; official records, less likely to vanish
+    3  everything with a public URL that no registry record cites yet
+`save` and `lookup` take tiers 1-2 unless --tier says otherwise.
+
+Usage (on the Mac):
+    python3 scripts/archive_sources.py run --limit 150
+    python3 scripts/archive_sources.py report
+"""
+from __future__ import annotations
+
+import argparse
+import base64
+import glob
+import hashlib
+import json
+import os
+import re
+import ssl
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+from datetime import date, datetime, timedelta, timezone
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parent.parent
+REGISTRY = REPO / "data" / "registry"
+SOURCES_JSON = REGISTRY / "sources.json"
+ARCHIVES_JSON = REGISTRY / "source_archives.json"
+SCHEMA_VERSION = 1
+
+USER_AGENT = "roymarket-investigation source archiver (journalism; contact via repo owner)"
+WAYBACK = "https://web.archive.org"
+# SPN asks anonymous clients for no more than a few captures a minute; keyed
+# clients can go faster, but this is a daily batch, not a race.
+DELAY_ANON = 20.0
+DELAY_KEYED = 8.0
+DELAY_LOOKUP = 1.5
+# A capture younger than this counts as current; no new capture is requested.
+FRESH_DAYS = 365
+
+SKIP_FILES = ("sources.json", "_source_ids.json", "source_archives.json")
+
+
+# ---------------------------------------------------------------- planning --
+
+def classify(url: str) -> str | None:
+    """Kind of a public URL, or None when it cannot be archived as given."""
+    p = urllib.parse.urlparse(url)
+    if p.scheme not in ("http", "https") or not p.netloc:
+        return None
+    host = p.netloc.lower()
+    if host in ("t.me", "telegram.me"):
+        return "telegram"
+    if host.endswith("web.archive.org") or host in ("archive.ph", "archive.today", "archive.is"):
+        return "archived"
+    if host.endswith("zakupki.gov.ru"):
+        return "procurement"
+    if host.endswith("fips.ru"):
+        return "trademark"
+    return "web"
+
+
+def tier_of(kind: str, cited: bool) -> int:
+    if not cited:
+        return 3
+    return 2 if kind in ("procurement", "trademark") else 1
+
+
+def telegram_variants(url: str) -> list[str]:
+    """The post page plus its embed view, which renders the full text and media."""
+    m = re.match(r"https?://(?:t|telegram)\.me/(?:s/)?([A-Za-z0-9_]+)/(\d+)", url)
+    if not m:
+        return [url]
+    base = f"https://t.me/{m.group(1)}/{m.group(2)}"
+    return [base, base + "?embed=1&mode=tme"]
+
+
+def cited_source_ids() -> set[str]:
+    """Source ids referenced by any registry file other than the catalogue itself."""
+    ids: set[str] = set()
+    for f in glob.glob(str(REGISTRY / "*.json")):
+        name = os.path.basename(f)
+        if name in SKIP_FILES or (name.startswith("_") and name.endswith("_cache.json")):
+            continue
+        ids |= set(re.findall(r'"(s\d{4,5})"', Path(f).read_text(encoding="utf-8")))
+    return ids
+
+
+def load_archives() -> dict:
+    if ARCHIVES_JSON.exists():
+        return json.loads(ARCHIVES_JSON.read_text(encoding="utf-8"))
+    return {"schema_version": SCHEMA_VERSION, "urls": {}}
+
+
+def save_archives(data: dict) -> None:
+    data["urls"] = dict(sorted(data["urls"].items()))
+    tmp = ARCHIVES_JSON.with_suffix(".json.tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    tmp.replace(ARCHIVES_JSON)
+
+
+def build_plan(sources: list[dict], cited: set[str], prev: dict) -> tuple[dict, list[dict]]:
+    """Merge the current citations into the archive file. Returns (data, unusable)."""
+    urls: dict[str, dict] = {}
+    unusable = []
+    for r in sources:
+        pu = r.get("public_url")
+        if not pu:
+            continue
+        kind = classify(pu)
+        if kind is None:
+            unusable.append({"source_id": r["id"], "public_url": pu})
+            continue
+        targets = telegram_variants(pu) if kind == "telegram" else [pu]
+        for i, u in enumerate(targets):
+            e = urls.setdefault(u, {"kind": kind, "source_ids": [], "cited": False})
+            if i:
+                e["variant_of"] = targets[0]
+            if r["id"] not in e["source_ids"]:
+                e["source_ids"].append(r["id"])
+            e["cited"] = e["cited"] or r["id"] in cited
+    old = prev.get("urls", {})
+    for u, e in urls.items():
+        e["source_ids"].sort()
+        e["tier"] = tier_of(e["kind"], e["cited"])
+        o = old.get(u, {})
+        e["captures"] = o.get("captures", [])
+        if e["kind"] == "archived" and not e["captures"]:
+            # The citation already is an archive copy; record it as such.
+            m = re.search(r"/web/(\d{14})", u)
+            e["captures"] = [{"service": "wayback" if "archive.org" in u else "archive_today",
+                              "archive_url": u, "timestamp": m.group(1) if m else None,
+                              "method": "cited", "checked": None, "sha256": None}]
+        for k in ("last_attempt", "last_error"):
+            if k in o:
+                e[k] = o[k]
+    # A URL nobody cites any more keeps its captures, flagged, so history is not lost.
+    for u, o in old.items():
+        if u not in urls and o.get("captures"):
+            o = dict(o)
+            o["dropped"] = True
+            urls[u] = o
+    return {"schema_version": SCHEMA_VERSION, "urls": urls}, unusable
+
+
+def is_current(e: dict, today: date) -> bool:
+    for c in e.get("captures", []):
+        ts = c.get("timestamp")
+        if c.get("method") == "cited":
+            return True
+        if ts and datetime.strptime(ts[:8], "%Y%m%d").date() >= today - timedelta(days=FRESH_DAYS):
+            return True
+    return False
+
+
+def pending(data: dict, tiers: set[int], today: date, *, skip_looked_up: bool = False) -> list[str]:
+    out = []
+    for u, e in data["urls"].items():
+        if e.get("dropped") or e.get("tier") not in tiers or is_current(e, today):
+            continue
+        if skip_looked_up and e.get("looked_up") == today.isoformat():
+            continue
+        out.append(u)
+    out.sort(key=lambda u: (data["urls"][u]["tier"], data["urls"][u]["kind"] != "telegram", u))
+    return out
+
+
+# ----------------------------------------------------------------- network --
+
+def _ssl_context() -> ssl.SSLContext:
+    try:
+        import certifi  # python.org builds on macOS ship without a CA bundle
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return ssl.create_default_context()
+
+
+CTX = _ssl_context()
+
+
+def http(url: str, *, data: bytes | None = None, headers: dict | None = None,
+         timeout: int = 90) -> tuple[int, dict, bytes, str]:
+    h = {"User-Agent": USER_AGENT, **(headers or {})}
+    req = urllib.request.Request(url, data=data, headers=h)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout, context=CTX) as resp:
+            return resp.status, dict(resp.headers), resp.read(), resp.geturl()
+    except urllib.error.HTTPError as err:
+        return err.code, dict(err.headers or {}), err.read() or b"", url
+
+
+def cdx_latest(url: str) -> dict | None:
+    q = urllib.parse.urlencode({"url": url, "output": "json", "limit": "-1",
+                                "fl": "timestamp,original,statuscode,digest",
+                                "filter": "statuscode:200"})
+    status, _, body, _ = http(f"{WAYBACK}/cdx/search/cdx?{q}", timeout=60)
+    if status != 200:
+        raise RuntimeError(f"CDX HTTP {status}")
+    rows = json.loads(body or b"[]")
+    if len(rows) < 2:
+        return None
+    ts, orig, code, digest = rows[-1]
+    return {"timestamp": ts, "original": orig, "wayback_sha1": digest}
+
+
+def raw_sha256(ts: str, url: str) -> tuple[str | None, int | None]:
+    """SHA-256 of the archived bytes as Wayback serves them unmodified (id_)."""
+    status, _, body, _ = http(f"{WAYBACK}/web/{ts}id_/{url}", timeout=120)
+    if status != 200:
+        return None, status
+    return hashlib.sha256(body).hexdigest(), len(body)
+
+
+def spn_keyed(url: str, access: str, secret: str) -> str:
+    auth = {"Authorization": f"LOW {access}:{secret}", "Accept": "application/json"}
+    form = urllib.parse.urlencode({"url": url, "skip_first_archive": "1",
+                                   "if_not_archived_within": f"{FRESH_DAYS}d"}).encode()
+    status, _, body, _ = http(f"{WAYBACK}/save", data=form, headers=auth)
+    if status == 429:
+        raise RateLimited()
+    j = json.loads(body or b"{}")
+    if "job_id" not in j:
+        raise RuntimeError(j.get("message") or f"SPN HTTP {status}")
+    for _ in range(40):
+        time.sleep(6)
+        _, _, sb, _ = http(f"{WAYBACK}/save/status/{j['job_id']}", headers=auth)
+        st = json.loads(sb or b"{}")
+        if st.get("status") == "success":
+            return st["timestamp"]
+        if st.get("status") == "error":
+            raise RuntimeError(st.get("message") or st.get("status_ext") or "SPN error")
+    raise RuntimeError("SPN job still pending after 4 minutes")
+
+
+def spn_anon(url: str) -> str:
+    status, headers, _, final = http(f"{WAYBACK}/save/{url}", timeout=180)
+    if status == 429:
+        raise RateLimited()
+    for cand in (headers.get("Content-Location", ""), final):
+        m = re.search(r"/web/(\d{14})", cand or "")
+        if m:
+            return m.group(1)
+    if status >= 400:
+        raise RuntimeError(f"SPN HTTP {status}")
+    # Some anonymous saves return 200 without naming the snapshot; ask the index.
+    time.sleep(5)
+    hit = cdx_latest(url)
+    if hit and hit["timestamp"][:8] == datetime.now(timezone.utc).strftime("%Y%m%d"):
+        return hit["timestamp"]
+    raise RuntimeError("capture requested but no snapshot found yet")
+
+
+class RateLimited(Exception):
+    pass
+
+
+def record_capture(e: dict, ts: str, url: str, method: str, sha1: str | None = None) -> None:
+    sha256, size = raw_sha256(ts, url)
+    e["captures"] = [c for c in e.get("captures", []) if c.get("timestamp") != ts]
+    e["captures"].append({
+        "service": "wayback",
+        "archive_url": f"{WAYBACK}/web/{ts}/{url}",
+        "timestamp": ts,
+        "method": method,          # existing (found in the index) | saved (requested by us) | cited
+        "checked": date.today().isoformat(),
+        "sha256": sha256,          # of the raw archived bytes (id_ view)
+        "bytes": size if sha256 else None,
+        "wayback_sha1": sha1,
+    })
+    e["captures"].sort(key=lambda c: c.get("timestamp") or "")
+    e.pop("last_error", None)
+
+
+# ---------------------------------------------------------------- commands --
+
+def cmd_plan(args) -> dict:
+    sources = json.loads(SOURCES_JSON.read_text(encoding="utf-8"))
+    data, unusable = build_plan(sources, cited_source_ids(), load_archives())
+    save_archives(data)
+    print(f"{len(data['urls'])} URLs on file; {len(unusable)} public_url values cannot be archived as given")
+    for u in unusable[:20]:
+        print(f"  unusable: {u['source_id']} {u['public_url']}")
+    if len(unusable) > 20:
+        print(f"  ... and {len(unusable) - 20} more")
+    return data
+
+
+def cmd_local(args) -> int:
+    sources = {r["id"]: r for r in json.loads(SOURCES_JSON.read_text(encoding="utf-8"))}
+    data = load_archives()
+    missing, mismatch, ok = [], [], 0
+    seen = set()
+    for e in data["urls"].values():
+        for sid in e.get("source_ids", []):
+            if sid in seen or sid not in sources:
+                continue
+            seen.add(sid)
+            r = sources[sid]
+            p = REPO / r["path"]
+            if not p.exists():
+                missing.append(sid)
+                continue
+            if r.get("sha256") and hashlib.sha256(p.read_bytes()).hexdigest() != r["sha256"]:
+                mismatch.append(sid)
+            else:
+                ok += 1
+    print(f"local copies: {ok} match sources.json, {len(mismatch)} differ, {len(missing)} missing")
+    for sid in mismatch:
+        print(f"  differs: {sid} {sources[sid]['path']}")
+    for sid in missing[:30]:
+        print(f"  missing: {sid} {sources[sid]['path']}")
+    if len(missing) > 30:
+        print(f"  ... and {len(missing) - 30} more missing")
+    return 1 if mismatch else 0
+
+
+def parse_tiers(s: str) -> set[int]:
+    return {int(x) for x in s.split(",") if x.strip()}
+
+
+def cmd_lookup(args, data: dict | None = None) -> dict:
+    data = data or load_archives()
+    today = date.today()
+    todo = pending(data, parse_tiers(args.tier), today, skip_looked_up=True)[: args.limit]
+    print(f"lookup: {len(todo)} URLs")
+    found = 0
+    for i, u in enumerate(todo, 1):
+        e = data["urls"][u]
+        try:
+            hit = cdx_latest(u)
+            e["looked_up"] = today.isoformat()
+            if hit:
+                record_capture(e, hit["timestamp"], u, "existing", hit["wayback_sha1"])
+                found += 1
+        except Exception as err:  # keep going; the error is recorded on the URL
+            e["last_error"] = f"lookup {today}: {err}"
+        if i % 25 == 0:
+            save_archives(data)
+        time.sleep(DELAY_LOOKUP)
+    save_archives(data)
+    print(f"lookup: existing capture found for {found} of {len(todo)}")
+    return data
+
+
+def cmd_save(args, data: dict | None = None) -> int:
+    data = data or load_archives()
+    today = date.today()
+    access, secret = os.environ.get("WAYBACK_S3_ACCESS"), os.environ.get("WAYBACK_S3_SECRET")
+    if not access:
+        _load_dotenv()
+        access, secret = os.environ.get("WAYBACK_S3_ACCESS"), os.environ.get("WAYBACK_S3_SECRET")
+    delay = DELAY_KEYED if access and secret else DELAY_ANON
+    todo = pending(data, parse_tiers(args.tier), today)[: args.limit]
+    print(f"save: {len(todo)} URLs ({'keyed SPN2' if access else 'anonymous SPN'}, {delay:.0f}s apart)")
+    saved = failed = 0
+    for i, u in enumerate(todo, 1):
+        e = data["urls"][u]
+        e["last_attempt"] = today.isoformat()
+        try:
+            ts = spn_keyed(u, access, secret) if access and secret else spn_anon(u)
+            record_capture(e, ts, u, "saved")
+            saved += 1
+            print(f"  [{i}/{len(todo)}] ok {ts} {u}")
+        except RateLimited:
+            print("  rate-limited by the Wayback Machine; stopping this batch")
+            break
+        except Exception as err:
+            e["last_error"] = f"save {today}: {err}"
+            failed += 1
+            print(f"  [{i}/{len(todo)}] failed {u}: {err}")
+        save_archives(data)
+        time.sleep(delay)
+    left = len(pending(data, parse_tiers(args.tier), today))
+    print(f"save: {saved} captured, {failed} failed, {left} still pending in tiers {args.tier}")
+    return 0
+
+
+def _load_dotenv() -> None:
+    env = REPO / ".env"
+    if not env.exists():
+        return
+    for line in env.read_text(encoding="utf-8").splitlines():
+        m = re.match(r"\s*(WAYBACK_S3_ACCESS|WAYBACK_S3_SECRET)\s*=\s*(.+?)\s*$", line)
+        if m:
+            os.environ.setdefault(m.group(1), m.group(2).strip("'\""))
+
+
+def coverage(data: dict, today: date) -> dict:
+    out: dict = {}
+    for e in data["urls"].values():
+        if e.get("dropped"):
+            continue
+        k = (e["tier"], e["kind"])
+        c = out.setdefault(k, {"urls": 0, "archived": 0, "hashed": 0, "errors": 0})
+        c["urls"] += 1
+        if is_current(e, today) or e.get("captures"):
+            c["archived"] += 1
+        if any(x.get("sha256") for x in e.get("captures", [])):
+            c["hashed"] += 1
+        if e.get("last_error"):
+            c["errors"] += 1
+    return out
+
+
+def cmd_report(args) -> int:
+    data = load_archives()
+    cov = coverage(data, date.today())
+    print(f"{'tier':>4}  {'kind':<12} {'urls':>6} {'archived':>9} {'hashed':>7} {'errors':>7}")
+    for (t, k), c in sorted(cov.items()):
+        print(f"{t:>4}  {k:<12} {c['urls']:>6} {c['archived']:>9} {c['hashed']:>7} {c['errors']:>7}")
+    return 0
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    sub.add_parser("plan")
+    sub.add_parser("local")
+    sub.add_parser("report")
+    for name in ("lookup", "save", "run"):
+        p = sub.add_parser(name)
+        p.add_argument("--limit", type=int, default=150, help="URLs per batch (default 150)")
+        p.add_argument("--tier", default="1,2", help="comma-separated tiers (default 1,2)")
+    args = ap.parse_args(argv)
+    if args.cmd == "plan":
+        cmd_plan(args)
+        return 0
+    if args.cmd == "local":
+        return cmd_local(args)
+    if args.cmd == "report":
+        return cmd_report(args)
+    if args.cmd == "lookup":
+        cmd_lookup(args)
+        return 0
+    if args.cmd == "save":
+        return cmd_save(args)
+    data = cmd_plan(args)
+    data = cmd_lookup(args, data)
+    rc = cmd_save(args, data)
+    cmd_report(args)
+    return rc
+
+
+if __name__ == "__main__":
+    sys.exit(main())

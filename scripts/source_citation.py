@@ -17,7 +17,7 @@ import html
 import re
 from pathlib import Path
 
-CITE_VERSION = 4
+CITE_VERSION = 5
 REPO = Path(__file__).resolve().parent.parent
 
 
@@ -40,13 +40,38 @@ def _page_facts(head: str) -> dict:
          or re.search(r'<link[^>]*href="([^"]+)"[^>]*rel="canonical"', head)
          or re.search(r'property="og:url"[^>]*content="([^"]+)"', head))
     if m:
-        out["url"] = html.unescape(m.group(1)).replace("http://", "https://", 1)
+        url = _absolute(html.unescape(m.group(1)), head)
+        if url:
+            out["url"] = url.replace("http://", "https://", 1)
     t = re.search(r"<title>([^<]+)", head) or re.search(r'property="og:title"[^>]*content="([^"]+)"', head)
     if t:
         title = re.sub(r"\s+", " ", html.unescape(t.group(1))).strip()
         if title and not re.search(r"\.(xml|html?)$|^Telegram Widget$", title):
             out["page_title"] = title[:160]
     return out
+
+
+def _absolute(url: str, head: str) -> str | None:
+    """A canonical link as an absolute URL, or None when the page does not say which site it is on.
+
+    Some captures carry a relative canonical: Telegram's web preview writes "/s/<channel>?before=N", and
+    WordPress sites can write "/page/". It is resolved only against the page's own host, read from an
+    absolute og:url, <base href> or a rel=shortlink/alternate/EditURI/api.w.org link; never guessed.
+    """
+    if re.match(r"https?://", url):
+        return url
+    if not url.startswith("/") or url.startswith("//"):
+        return ("https:" + url) if url.startswith("//") else None
+    if url.startswith("/s/") and re.search(r"https?://(t\.me|telegram\.org)/", head):
+        return "https://t.me" + url
+    for pat in (r'property="og:url"[^>]*content="(https?://[^/"]+)',
+                r'<base[^>]*href="(https?://[^/"]+)',
+                r'<link[^>]*rel="(?:shortlink|alternate|EditURI|https://api\.w\.org/)"[^>]*href="(https?://[^/"]+)',
+                r'<link[^>]*href="(https?://[^/"]+)[^"]*"[^>]*rel="(?:shortlink|alternate|EditURI|https://api\.w\.org/)"'):
+        m = re.search(pat, head)
+        if m:
+            return m.group(1) + url
+    return None
 
 
 _WATCH = None
