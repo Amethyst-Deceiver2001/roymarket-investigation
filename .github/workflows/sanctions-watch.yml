@@ -1,0 +1,89 @@
+# Weekly sanctions-list watcher (scripts/sanctions_watch.py).
+# Runs on GitHub's runners because the cloud sessions' network policy blocks the
+# official list hosts. One request per list per run (user go-ahead 02.10.2026).
+#
+# Scheduled and manual runs keep their state on the `watch/sanctions` branch
+# (never main) and open an issue when a hit appears or disappears, or on the
+# first run. Pull-request runs only test the script and write nothing.
+name: sanctions-watch
+
+on:
+  schedule:
+    - cron: "47 4 * * 1"   # Mondays 04:47 UTC
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - scripts/sanctions_watch.py
+      - .github/workflows/sanctions-watch.yml
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: sanctions-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Previous state
+        run: |
+          if git fetch -q origin watch/sanctions; then
+            git show FETCH_HEAD:sanctions_watch.json > prev.json
+            echo "previous run found"
+          else
+            echo "no previous run: this run is the baseline"
+          fi
+
+      - name: Download lists and match
+        run: |
+          python3 scripts/sanctions_watch.py --raw-dir raw --out sanctions_watch.json \
+            --report report.md $( [ -f prev.json ] && echo --previous prev.json )
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+          cat report.md
+
+      - name: Keep the downloaded lists (14 days)
+        uses: actions/upload-artifact@v4
+        with:
+          name: sanctions-lists-${{ github.run_id }}
+          path: |
+            raw/
+            sanctions_watch.json
+            report.md
+          retention-days: 14
+
+      - name: Save state to watch/sanctions
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git fetch -q origin watch/sanctions; then
+            git worktree add -q state FETCH_HEAD
+          else
+            git worktree add -q --detach state
+            (cd state && git checkout -q --orphan tmp && git rm -rqf .)
+          fi
+          cp sanctions_watch.json report.md state/
+          cd state
+          git add sanctions_watch.json report.md
+          git commit -qm "Sanctions watch $(date -u +%F)" || exit 0
+          git push -q origin HEAD:refs/heads/watch/sanctions
+
+      - name: Open an issue on changes
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          changes=$(python3 -c "import json;d=json.load(open('sanctions_watch.json'))['diff'];print(len(d['new'])+len(d['removed']))")
+          if [ ! -f prev.json ] || [ "$changes" != "0" ]; then
+            label=$([ -f prev.json ] && echo "$changes change(s)" || echo "baseline")
+            gh issue create --title "Sanctions watch $(date -u +%d.%m.%Y): $label" --body-file report.md
+          fi
