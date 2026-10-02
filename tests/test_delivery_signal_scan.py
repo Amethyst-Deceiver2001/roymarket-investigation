@@ -30,4 +30,11 @@ r = D.classify("ПЕРЕДАЛИ БОЙЦАМ ДРОНЫ", M)
 assert r and r["class"] == "B" and "ПЕРЕДАЛИ" in r["window"], r
 # 7. Reposts of one text share a key.
 assert D.norm_key("Передали,  бойцам «Булат»!") == D.norm_key("передали бойцам булат")
+# 8. Strength: a handover verb plus a dative recipient is strong; a verbal noun or a nominative recipient is weak.
+assert D.classify("Передали бойцам бригады три квадрокоптера.", M)["strength"] == "strong"
+assert D.classify("Доставка квадрокоптеров бойцам задерживается, поставки продолжатся.", M)["strength"] == "weak"
+assert D.classify("Расчёты отправили FPV-дрон в квадрат, бойцы вышли на позиции.", M)["strength"] == "weak"
+# 9. A registry product kept with a version suffix is found by its base name («Набат v3» -> «Набат»).
+names = {n.lower() for n, _, _ in D.product_matchers()}
+assert "набат" in names and "набат v3" in names, "version-suffixed registry names must also match by base name"
 print("delivery_signal_scan: all checks passed")

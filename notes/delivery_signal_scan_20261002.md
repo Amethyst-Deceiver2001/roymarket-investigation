@@ -5,8 +5,8 @@
 ## Coverage and limits
 
 - 302,614 of the 503,714 posts were scanned: the rest have no text or 40 characters or fewer (photo-only posts and captions). A handover shown only in a picture is invisible to this scan.
-- 5,877 posts carry a signal; 5,192 distinct texts after grouping reposts by normalised text.
-- **Class A (200 texts):** the post also names a registry product (`products[]`, `products.json` or an accessory) or a maker brand. **Class B (4,992):** only a category word (дрон, детектор, РЭБ, антенна...). Class B is the long tail; it was not read.
+- 5,879 posts carry a signal; 5,194 distinct texts after grouping reposts by normalised text (figures as of the final run, after the base-name matching below).
+- **Class A (236 texts):** the post also names a registry product (`products[]`, `products.json` or an accessory) or a maker brand. **Class B (4,958):** only a category word (дрон, детектор, РЭБ, антенна...). Class B is the long tail; a random sample of 60 was read (below).
 - Donor brands are reported separately from products and generic nouns («Ретранслятор», «Передатчик», «Приемник») are not treated as products. Before that filter, «Архангел» alone made 1,225 of 1,682 class A texts.
 - Precision is unmeasured. Of the class A texts read, the main false-positive types are a product name that is also a word («Сокол», «Титан», «Буран», «Прометей»), a verb that is not a handover (an award ceremony, a transfer of a command) and a product named in an unrelated sentence of a long digest.
 - Recall is also unmeasured: a handover phrased without one of the verbs, or naming the unit before the item in a long post, can miss.
@@ -30,3 +30,13 @@ Volunteer-group and individual handovers (about 20 more «Булат» texts), t
 - Read a sample of class B (it holds the volunteer chains).
 - Find the donor purchase route: invoices or tenders for «Булат» bought by Фонд «Наша Правда» (not in the posts).
 - Capture the two WB brand-store listings.
+
+## Follow-up the same day
+
+- **Class B precision, measured on a seeded random sample of 60** (`random.seed(20261002)`): 23 clear handover reports, 5 borderline, 32 not. The misses are verbal nouns (передача опыта, доставка, поставки), combat narrative («отправили FPV в квадрат»), adverts, commentary on state supply and foreign news. Real handovers in class B are mostly small volunteer deliveries (Mavics, radios, a «Буханка»).
+- **`strength` flag** (strong = a past-tense handover verb plus a recipient in the dative): 1,472 of 5,194 texts are strong (102 of 236 in class A). On the 60-text sample it has precision about 0.85 and recall about 0.74, a small sample, so it is a triage flag and nothing is filtered out.
+- **Base-name matching.** A registry product kept with a version suffix («Набат v3») now also matches by its bare name. That moved class A from 200 to 236 texts and brought in two flagship products: «Пиранья» (20 texts, 5 strong) and «Набат» (13, 6 strong).
+  - «Пиранья»: handovers reported by the maker's own channel and, on 30.09.2025, by the Ulyanovsk governor with the bureau («направили нашим ребятам на СВО беспилотники и системы связи»); the maker also reports 8,000+ sent to the front (27.02.2024, its own count).
+  - «Набат» (ООО «ГОУДРОН»): the maker's channel reports volunteers and foundations carrying the detectors to units (Ступино group, «Два майора», a TV channel head, an air-defence helicopter unit); a fighter's thanks video on 29.09.2026. None is recorded yet.
+- **Discovery leads, not in the registry as products** (quoted names recurring in strong texts; makers unresolved, nothing recorded): «Бекас» (13), «Огонёк» (9, a portable jammer), «Пила» (7), «Ромашка» (5, an РЭБ complex), «Волнорез» (4, РЭБ), «Кречет» (4), «Гарпия» (3, РЭБ, bought by the fund with «Булат»), «Валькирия» (3), «Каскад» (3), «Пероед» (2). Candidates for the product-researcher agent, after the deterministic checks.
+- **Not done:** recording «Пиранья» and «Набат» deliveries (needs the posts read and the same privacy handling); repeating the «Булат» recording for «Перехват», «Капюшон», «Скворец».

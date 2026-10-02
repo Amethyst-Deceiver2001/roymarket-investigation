@@ -49,6 +49,14 @@ CATEGORY = re.compile(
 
 NOISE = re.compile(r"привет\w*|поздравлен\w*|соболезнован\w*|гуманитарн\w+\s+помощь\s+(?:детям|школ)")
 
+# strength: "strong" = a past-tense handover verb plus a recipient in the dative («передали бойцам бригады»);
+# "weak" = verbal nouns (передача, доставка, поставки), nominative recipients (бойцы, расчёты) or other verbs, which
+# in the class B sample were mostly combat narrative, ads, commentary and foreign news. A triage flag, not a filter.
+STRONG_VERB = re.compile(r"^(переда(?:ли|л|ем|н[оаы]?)|привез(?:ли|ла)?|привёз|вручил[иа]?|достав(?:или|ил|лен[оаы]?)|"
+                         r"отправил[иа]?|направил[иа]?|выдал[иа]?|отгрузил[иа]?)$")
+DATIVE_RECIPIENT = re.compile(r"(?:бойцам|ребятам|парням|ребята|парни|военнослужащим|подразделен(?:ию|иям)|бригаде|полку|"
+                              r"батальону|роте|взводу|расчет(?:у|ам)|группировке|дивизии|корпусу|отряду|спецназу|армии|вдв|"
+                              r"на\s+фронт\w*|на\s+передов\w*)")
 GENERIC_PRODUCT_WORDS = {"система", "комплекс", "модуль", "антенна", "дрон", "детектор", "станция", "изделие",
                          # ordinary nouns that are also registry product names: a match proves nothing
                          "ретранслятор", "передатчик", "приемник", "приёмник", "сигнал", "зонт", "тень", "огонек", "огонёк"}
@@ -79,6 +87,12 @@ def product_matchers():
             names.setdefault(re.sub(r"[«»\"]", "", pr["name_ru"]).strip(), pr["maker"])
             for acc in pr.get("accessories") or []:
                 names.setdefault(re.sub(r"[«»\"]", "", acc["name_ru"]).strip(), pr["maker"])
+    # a product listed as «Набат v3» is also reported as «Набат»: add the base name without a version suffix
+    ver = re.compile(r"\s+(?:v|ver\.?|в\.?|версия)\s*[\d.]+\w*$|\s+\d+\w*$|\s+v\.?\d+(?:\.\w+)*$", re.I)
+    for n, slug in list(names.items()):
+        base = ver.sub("", n).strip()
+        if base != n:
+            names.setdefault(base, slug)
     out = []
     for n, slug in names.items():
         if len(n) < 3 or n.lower() in GENERIC_PRODUCT_WORDS or len(n) > 60:
@@ -119,7 +133,9 @@ def classify(text: str, matchers=None):
         return None
     donors = sorted({d for d in ("Архангел", "ЦБСТ", "Наша Правда", "Народный фронт", "Единая Россия", "Единой России")
                      if d.lower() in text.lower()})
-    return {"donors": donors, "class": "A" if prods else "B", "verbs": sorted({v.group(0) for v in VERB.finditer(f[lo:hi])}),
+    verbs = sorted({v.group(0) for v in VERB.finditer(f[lo:hi])})
+    strength = "strong" if any(STRONG_VERB.match(v) for v in verbs) and any(DATIVE_RECIPIENT.fullmatch(x) for x in rec) else "weak"
+    return {"strength": strength, "donors": donors, "class": "A" if prods else "B", "verbs": verbs,
             "recipients": sorted(set(rec))[:8], "products": prods[:8], "categories": cats[:6],
             "window": text[lo:hi]}
 
@@ -162,11 +178,12 @@ def main():
         items.sort(key=lambda x: x[0] or "")
         date, ch, mid, links, r = items[0]
         rows.append({"class": r["class"], "first_date": date, "first_post": f"{ch}/{mid}", "channels": sorted({i[1] for i in items}),
-                     "posts": [f"{i[1]}/{i[2]}" for i in items], "links": links, **{k: r[k] for k in ("donors", "verbs", "recipients", "products", "categories", "window")}})
+                     "posts": [f"{i[1]}/{i[2]}" for i in items], "links": links, **{k: r[k] for k in ("strength", "donors", "verbs", "recipients", "products", "categories", "window")}})
     rows.sort(key=lambda x: (x["class"], x["first_date"] or ""))
     cA = sum(1 for r in rows if r["class"] == "A")
+    strong = sum(1 for r in rows if r["strength"] == "strong")
     print(f"{n} posts scanned; {sum(len(g) for g in groups.values())} posts carry a delivery signal; "
-          f"{len(rows)} distinct texts (class A {cA}, class B {len(rows) - cA}); control passed.")
+          f"{len(rows)} distinct texts (class A {cA}, class B {len(rows) - cA}); {strong} strong; control passed.")
     if a.out:
         Path(a.out).write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n", encoding="utf-8")
         print(f"wrote {len(rows)} rows to {a.out}")
