@@ -10334,6 +10334,84 @@
         "marketplace_listings": [],
         "other": []
       }
+    },
+    {
+      "slug": "ooo-mo-pniei-kraskript",
+      "name_ru": "ООО «МО ПНИЭИ - КРАСКРИПТ»",
+      "name_latin": null,
+      "legal_form": "ООО",
+      "brand_ru": "DRONTECH.PRO",
+      "inn": "2466077563",
+      "ogrn": "1022402646298",
+      "registered": "22.08.2002",
+      "city": "Красноярск",
+      "address": "660077, Красноярский край, г. Красноярск, ул. 78 Добровольческой бригады, д. 2, офис 242",
+      "director": "Холкин Олег Валерьевич",
+      "director_history": [
+        {
+          "value": "Холкин Олег Валерьевич",
+          "as_of": "2023-05-19",
+          "source_id": "s8933",
+          "note": "ДИРЕКТОР; ГРН 2232400270298 of 19.05.2023."
+        }
+      ],
+      "founders_history": [
+        {
+          "value": "Холкин Олег Валерьевич, 100% (₽617,454.53)",
+          "as_of": "2025-11-12",
+          "source_id": "s8933",
+          "note": "Sole participant; ГРН 2252401725596 of 12.11.2025."
+        }
+      ],
+      "charter_capital": 617454.53,
+      "okved_code": "62.09",
+      "okved_label": "Деятельность, связанная с использованием вычислительной техники и информационных технологий, прочая",
+      "tier": "adjacent",
+      "tier_basis": "Operator of the DRONTECH.PRO drone school, which НПЦ «Ушкуйник»'s director calls a resident of the centre (s8876). An НПЦ БАС resident, not shown to be tied to ЦБСТ.",
+      "ecosystem_roles": [],
+      "cbst_tie": {
+        "claim": "None found.",
+        "confidence": "none",
+        "evidence": null,
+        "source_id": null
+      },
+      "wb_overlap": "not_checked",
+      "memberships": [
+        {
+          "program": "ushkuynik-residency",
+          "role": "resident",
+          "basis": "doc",
+          "source_id": "s8876",
+          "as_of": "2024-09-09",
+          "note": "Чадаев's channel post 3240: «резидентом НПЦ Ушкуйник и его онлайн-школой дронов DRONTECH.PRO»; the post prints licence Л035-01211-24/01303047, which the school's site (s8941) prints beside the operator's requisites. Repeated by НПЦ «Ушкуйник» on 15.01.2026 («Образовательный проект резидентов «Ушкуйника» … DRONTECH.PRO»)."
+        }
+      ],
+      "open_questions": [
+        {
+          "source_id": "s8933",
+          "text": "The ЕГРЮЛ name is «Московское отделение Пензенского научно-исследовательского электротехнического института-Краскрипт», a Красноярск company registered 1999/2002 with a primary ОКВЭД of IT services; why a school sits under that name, and who else runs DRONTECH.PRO, is not established. The sole owner and director is Холкин Олег Валерьевич; no person record is made (not a PEP, principal or confirmed course participant)."
+        }
+      ],
+      "web": {
+        "sites": [
+          {
+            "url": "https://drontech.pro/",
+            "source_id": "s8941",
+            "note": "Footer prints ООО \"МОПНИЭИ-Краскрипт\", ОГРН 1022402646298, ИНН 2466077563 and licence Л035-01211-24/01303047."
+          }
+        ],
+        "telegram": [
+          {
+            "handle": "@drontech_pro",
+            "source_id": "s8876",
+            "note": "Linked from Чадаев's post 3240."
+          }
+        ],
+        "vk": [],
+        "youtube": [],
+        "marketplace_listings": [],
+        "other": []
+      }
     }
   ],
   "entities": {
@@ -10584,6 +10662,20 @@
             "context": "Коммерсантъ, 06.08.2026 (s8865), «Воентеху подготовят площадки», reporting Безруков. A vetting step (проверка продукции, допуск) stands between a seller and military buyers; its criteria are not published.",
             "source_id": "s8865",
             "as_of": "2026-08-06"
+          },
+          {
+            "text_ru": "Следующий этап развития РОЙ.МАРКЕТ — превращение в полноценную ИТ-платформу с моделью распределённой логистики, самостоятельной работой поставщиков, сквозной обработкой заказов, интеграциями и контролем доступа.",
+            "text_en": "The next stage of РОЙ.МАРКЕТ's development is its transformation into a full IT platform with a distributed-logistics model, suppliers working independently, end-to-end order processing, integrations and access control.",
+            "context": "ЦБСТ's own channel, post 2386, 05.08.2026 (s8850), on Безруков's statement at the Наблюдательный совет; the post says the platform «ранее функционировала в рамках пилота». The post names no logistics operator, bank or acquirer, so it does not close the open question on МПТМ's logistics and acquiring partners.",
+            "source_id": "s8850",
+            "as_of": "2026-08-05"
+          },
+          {
+            "text_ru": "Кроме того, подключённые к РОЙ.МАРКЕТ подразделения могут рекомендовать нужных производителей и товары, которых пока нет в каталоге платформы.",
+            "text_en": "In addition, units connected to РОЙ.МАРКЕТ can recommend the manufacturers and goods that are not yet in the platform's catalogue.",
+            "context": "ЦБСТ's own channel, post 2433, 20.08.2026 (s8857), summarising Безруков's comment to ТАСС (the TASS original, tass.ru/ekonomika/28027659, returned 403 from this machine and is unread). The same post quotes him: РОЙ.МАРКЕТ «создавался под российские условия и конкретные потребности наших подразделений». Which units are connected is not stated.",
+            "source_id": "s8857",
+            "as_of": "2026-08-20"
           }
         ],
         "platform_partners": [
@@ -10730,7 +10822,17 @@
           "youtube": [],
           "marketplace_listings": [],
           "other": []
-        }
+        },
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7587",
+            "as_of": "2025-12-31",
+            "note": "ЦБСТ's own channel, post 1701 (same list). Also post 1238 of 16.09.2025 (s8926): «проект резидентов ЦБСТ «Аляска»». Brand-level."
+          }
+        ]
       },
       "why": [
         "2026-09-14: identity resolved via a live-fetched EU primary source, Council Decision (CFSP) 2026/1364 (15.6.2026), entry 801 -- see sanctions[] for the verbatim reasons text and source_id s7429 for the archived capture. Site (eur-lex.europa.eu) blocks scripted/curl access via an AWS WAF challenge; fetched through the claude-in-chrome browser extension instead, same workaround class as other WAF/DDoS-Guard-blocked sites in this project.",
@@ -15325,7 +15427,25 @@
           "confidence": "t-doc",
           "evidence": "ЦБСТ's own Telegram channel, 09.06.2026 post (per docs/index.html prose, quoted directly). Post not archived as a discrete file; no sNNNN id applies yet.",
           "source_id": "s7591"
-        }
+        },
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s8924",
+            "as_of": "2024-12-13",
+            "note": "ЦБСТ's own channel, post 305: «резидент АНО ЦБСТ, генеральный директор АО \"Площадь\" Никита Маслак»."
+          },
+          {
+            "program": "ushkuynik-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s8937",
+            "as_of": "2024-10-01",
+            "note": "НПЦ «Ушкуйник»'s own channel, post 63: «В первом наборе успешно прошли защиту 2 резидента АНО «НПЦ «Ушкуйник»: АО «Площадь» и ООО «ЕМЕ-АЭРО»» (Фонд НТИ subsidy round). The same company is also a ЦБСТ resident (cbst-residency)."
+          }
+        ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -16333,7 +16453,17 @@
           "youtube": [],
           "marketplace_listings": [],
           "other": []
-        }
+        },
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s6924",
+            "as_of": "2025-08-14",
+            "note": "ЦБСТ's own channel, post 1074: «представители компаний-резидентов ЦБСТ «Стратим», «Скворец» и «Рустехдрон»» (brand-level; the post does not say whether АО or ООО «Стратим»). Post 611 (s8925) names «АО «Стратим»» as supplier of «технологических решений резидентов». The brand is attached to the АО record, which already holds the registry's t-doc tie."
+          }
+        ]
       },
       "verified_against": null,
       "why": [
@@ -17974,7 +18104,17 @@
           "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). Aleph: 3 match(es), dataset categories=['company'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
         },
         "tier_basis": "Vehicle-mounted and stationary counter-drone EW jammer manufacturer (product line «Дикобраз-М6/М8», «Логос С8», portable «ИКАР» anti-UAV system, «Дрон-Таран» interceptor drone) per the group's own site (рэб.рус), which self-declares residency in both НПЦ БАС and ЦБСТ. Revenue grew from ₽1.9m (2021) to ₽36.5m (2025).",
-        "wb_overlap": "none_found"
+        "wb_overlap": "none_found",
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7585",
+            "as_of": "2025-07-04",
+            "note": "ЦБСТ's own channel, post 878: «группой компаний «Логос» — резидентом ЦБСТ»."
+          }
+        ]
       },
       "verified_against": "TRANSCRIPT_20260401_gk-logos-spp-spb-rebrus-pvo-presentation.pdf (s0546); рэб.рус read directly 23.08.2026; b95.ru press coverage read via WebSearch 23.08.2026. Also: s0547 (srro.ru Rostov round table, 26.05.2026). Also: full EGRUL extract s0552; founding docs s0550; БФО FY2021-2025 (s0553, s0554, s0555, s0556, s0557).",
       "why": [
@@ -18962,7 +19102,17 @@
           "youtube": [],
           "marketplace_listings": [],
           "other": []
-        }
+        },
+        "participations": [
+          {
+            "event": "dronnitsa-2023",
+            "role": "exhibitor",
+            "basis": "doc",
+            "source_id": "s8915",
+            "as_of": "2023-08-09",
+            "note": "Announced exhibitor (radio-electronic warfare and anti-drone equipment). The organisers' post of 09.08.2023 names «НПО КАЙСАНТ» among the participants and lists what it planned to show («Аргус-Антидрон», «Аргус-Купол», «Аргус-Антифурия», FPV-дрон «Аргус», communication kits, telescopic masts). A pre-event announcement, not a record of attendance; the legal-form name matches the entity's own site (s8720). Not a residency."
+          }
+        ]
       },
       "verified_against": " Also: germesfpv.ru read directly 23.08.2026.",
       "why": [
@@ -23099,6 +23249,16 @@
             "source_id": "s8722",
             "text": "rk.2035.university BAS-company directory (pull of 2026-10-01, s8721) carries this ИНН with site https://www.arkodimpro.ru/ (self-declared). The captured home page (s8722) names «ООО «АРКОДИМ-Про»», a company that says it «входит в группу компаний «АРКОДИМ»», and prints no ИНН or ОГРН. So the site belongs at least to a group member and may not be this legal entity's own; not recorded as this entity's site. Needs a requisites page, the site's ИНН or a matching named person."
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7524",
+            "as_of": "2026-05-12",
+            "note": "ЦБСТ's own channel, post 2134, headline «Резидент ЦБСТ разработал нейросетевые алгоритмы…», next sentence «Компания «Аркодим» (Казань)»."
+          }
         ]
       },
       "why": [
@@ -23566,7 +23726,17 @@
           "confidence": "t-doc",
           "evidence": "ЦБСТ's own Telegram channel, 31.12.2025 New Year post (per docs/index.html prose, quoted directly). Post not yet archived as a discrete data/sources/ file -- this project's own scraped Telegram DB (data/roymarket.db) is the underlying record; no sNNNN id applies yet.",
           "source_id": "s7587"
-        }
+        },
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7587",
+            "as_of": "2025-12-31",
+            "note": "ЦБСТ's own channel, post 1701 (New Year greeting): «руководители наших компаний-резидентов: «Авирон», «Овод», АО «НПП», НПЦ «Ушкуйник», «Аляска» и «Визионеро»». Brand-level."
+          }
+        ]
       },
       "verified_against": null,
       "why": [
@@ -27633,6 +27803,16 @@
             "description": "Air-launch system: a multirotor lifts a fixed-wing UAV to altitude and it starts in the air, saving up to 20% of battery charge otherwise spent on take-off; after launch the carrier can act as a relay. ЦБСТ calls it a development of «КИНГПРО» «которая первой в мире готова ввести такую технологию в массовую эксплуатацию» (ЦБСТ channel, 25.09.2025).",
             "source_id": "s8550"
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "press",
+            "source_id": "s7592",
+            "as_of": "2025-04-09",
+            "note": "evgeniy_lisitsyn post 15599: «Беспилотники резидентов ЦБСТ «Стратим» и «КингПро» поступили в 58-ю армию…». Repost of the handover news; not found in ЦБСТ's own channel in this pass."
+          }
         ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
@@ -28149,7 +28329,17 @@
           "outcome": "closed",
           "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05).  No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]. (Separately, GUR components teardown lists 1 product cross-ref(s) e.g. 'Беспилотный летательный аппарат «Матка»' — battlefield-fielding evidence, not sanctions evidence, unaffected by this review.)"
         },
-        "tier_basis": "Named directly as \"резидент ЦБСТ\" on ЦБСТ's own channel for its ПАК «Форпост» counter-drone system. GISP goods-catalogue listing confirms a broader UAV product line (cargo/multi-rotor platforms «Матка», «Синица», КЛ-МТП-30/100), independently corroborated by an ID-matched rk.2035.university БАС-industry directory entry. ОКВЭД is software development, not manufacture — a declared/undeclared-activity split consistent with a flight-control-software specialist rather than a mismatch."
+        "tier_basis": "Named directly as \"резидент ЦБСТ\" on ЦБСТ's own channel for its ПАК «Форпост» counter-drone system. GISP goods-catalogue listing confirms a broader UAV product line (cargo/multi-rotor platforms «Матка», «Синица», КЛ-МТП-30/100), independently corroborated by an ID-matched rk.2035.university БАС-industry directory entry. ОКВЭД is software development, not manufacture — a declared/undeclared-activity split consistent with a flight-control-software specialist rather than a mismatch.",
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7591",
+            "as_of": "2026-06-09",
+            "note": "ЦБСТ's own channel, post 2198: «от резидента ЦБСТ «КоптерЛаб»»."
+          }
+        ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -28247,7 +28437,17 @@
           }
         ],
         "tier": "adjacent",
-        "tier_basis": "Moscow construction shell; name collision with the Kemerovo КРАМС brand"
+        "tier_basis": "Moscow construction shell; name collision with the Kemerovo КРАМС brand",
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7523",
+            "as_of": "2025-12-10",
+            "note": "The company's own channel krams_pro post 133: «Компания «КРАМС» является резидентом АНО «Центр беспилотных систем и технологий»». Self-declared by the company; ЦБСТ's own channel was not found to confirm it."
+          }
+        ]
       },
       "verified_against": "egrul.nalog.ru open API, 2026-08-24",
       "why": [
@@ -28758,7 +28958,17 @@
           "confidence": "t-doc",
           "evidence": "ЦБСТ's own Telegram channel, 11.04.2026 post, quoted verbatim in docs/index.html.",
           "source_id": "s7599"
-        }
+        },
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7599",
+            "as_of": "2026-04-11",
+            "note": "ЦБСТ's own channel, post 2067, headline «Резидент ЦБСТ запустил производство складного FPV-дрона с донаведением», next sentence «Петербургская компания «Кравт»»."
+          }
+        ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
@@ -29067,6 +29277,16 @@
             "name_ru": "Униформа с защитой от грибка и плесени",
             "description": "«Ментастеп» is described as «производящей униформу с защитой от грибка и плесени», a finalist of the ЦБСТ contest that received a special prize from фонд «Наша Правда» (priority of purchase at the next request from participants of the СВО); source text attributed to Коммерсантъ (Наша Правда channel, 04.06.2025).",
             "source_id": "s8547"
+          }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-accelerator",
+            "role": "accelerator_participant",
+            "basis": "doc",
+            "source_id": "s8581",
+            "as_of": "2025-09-23",
+            "note": "Finalist of the first stream: ЦБСТ's own post 1269 speaks of «деятельность финалистов. К примеру, проект «Ментастеп»» (invited to show products at «Запад-2025»); the final list is in s8547 («14 финалистов из 8 регионов»). Finalist, not winner; residency is not stated."
           }
         ]
       },
@@ -30601,6 +30821,14 @@
             "source_id": "s7522",
             "as_of": null,
             "note": "Four projects selected into the III stream; first two modules completed (cbst_tie)."
+          },
+          {
+            "program": "ushkuynik-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s8940",
+            "as_of": "2025-10-15",
+            "note": "НПЦ «Ушкуйник»'s own channel, post 130, headline «Резидент «Ушкуйника» получил статус малой технологической компании», body names ООО «НПЦ БАСиРТК». The company's channel (UAS_development/354, 22.07.2025) says it applied for resident status on that date."
           }
         ],
         "ecosystem_roles": [
@@ -33929,7 +34157,17 @@
           "outcome": "closed",
           "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). OpenSanctions: 5 match(es), top='Smart Kit Technology Limited' (score 0.8201, topics=['debarment', 'sanction', 'export.control']) Aleph: 5 match(es), dataset categories=['company', 'procurement'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
         },
-        "tier_basis": "Named directly as \"резидент ЦБСТ\" on ЦБСТ's own channel for its «Метафора» inter-network relay device. Revenue in the ₽2.8-5.3bn/year range (2021-2025) with consistent profitability; no sanctions or defense-specific trademark classes on file, so the classification rests on the direct residency citation plus the named product rather than independent sanctions/GUR evidence."
+        "tier_basis": "Named directly as \"резидент ЦБСТ\" on ЦБСТ's own channel for its «Метафора» inter-network relay device. Revenue in the ₽2.8-5.3bn/year range (2021-2025) with consistent profitability; no sanctions or defense-specific trademark classes on file, so the classification rests on the direct residency citation plus the named product rather than independent sanctions/GUR evidence.",
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7581",
+            "as_of": "2025-02-25",
+            "note": "ЦБСТ's own channel, post 487: «Резидент Центра беспилотных систем и технологий (ЦБСТ), компания ООО «Смарт Текнолоджис» из Пензы»."
+          }
+        ]
       },
       "verified_against": null,
       "why": [
@@ -34559,6 +34797,16 @@
             "name_ru": "«Тень»",
             "source_id": "s8057"
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "press",
+            "source_id": "s8670",
+            "as_of": "2025-09-24",
+            "note": "mil_hub post 113344 (aggregator repost): «компании «СуперХроно» (резидент ЦБСТ)». Not found in ЦБСТ's own channel in this pass."
+          }
         ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
@@ -34929,6 +35177,16 @@
           {
             "source_id": "s8675",
             "text": "Name removed from ЦБСТ's post after publication: compare [s8674] (current text, no name, edited 20.04.2026) with the mil_hub forward [s8675] (names «Титан Северо-Запад»). This company is OpenSanctions-matched as sanctioned (see sanctions[]). A third-party channel, KARABAS_RAZOBRAS, posts about «ПЗС ЭГЕОН 800» in Feb–Mar 2025 and is not yet tied to this ИНН. Whether ЦБСТ removed the name deliberately is not established; it edited many posts and the archive holds only 10% of them as forwards (see scripts/tg_forward_diff.py)."
+          }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "press",
+            "source_id": "s8675",
+            "as_of": "2026-04-17",
+            "note": "mil_hub post 128337 (aggregator repost): «Резидент ЦБСТ наладил производство портативных зарядных станций…», «Петербургская компания «Титан Северо-Запад»». ЦБСТ edits posts after publication and a name was removed from its own post 2080; the original is not confirmed."
           }
         ]
       },
@@ -36464,6 +36722,16 @@
             "description": "Real-time motion-capture system using infrared cameras; patent №2021660804, Russian software registry entry №23135 of 28.06.2024; supported by the Фонд содействия инновациям (own site).",
             "source_id": "s8559"
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7587",
+            "as_of": "2025-12-31",
+            "note": "ЦБСТ's own channel, post 1701 (same list as above). Brand-level."
+          }
         ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
@@ -37749,7 +38017,17 @@
           "youtube": [],
           "marketplace_listings": [],
           "other": []
-        }
+        },
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s8927",
+            "as_of": "2026-05-06",
+            "note": "ЦБСТ's own channel, post 2116, summarising a War on the Rocks article: «авторы статьи назвали резидентов ЦБСТ: «Ушкуйник» Алексея Чадаева и «Уралдронзавод» Владимира Ткачука». ЦБСТ's own wording, brand-level."
+          }
+        ]
       },
       "why": [
         "2026-09-28: sourced «Упырь» directly via Vesti.ru (23.08.2024, s8055), which names Уралдронзавод as founded by the drone's own producers.",
@@ -39093,7 +39371,17 @@
           "youtube": [],
           "marketplace_listings": [],
           "other": []
-        }
+        },
+        "memberships": [
+          {
+            "program": "cbst-accelerator",
+            "role": "accelerator_participant",
+            "basis": "doc",
+            "source_id": "s8581",
+            "as_of": "2025-09-23",
+            "note": "ЦБСТ's own channel, post 1269 (read in full): «ИНТЕЛ ДРОН» is among «победителями первого потока»; ЦБСТ gave a fast-track to Сколково status, flight tests and grant advice. Residency is not stated."
+          }
+        ]
       },
       "why": [
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
@@ -41851,6 +42139,16 @@
             "source_id": "s8660",
             "note": "ЕГРЮЛ выписка pulled 01.10.2026: генеральный директор."
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s8672",
+            "as_of": "2025-11-26",
+            "note": "ЦБСТ's own channel, post 1572: «Один из резидентов Центра беспилотных систем и технологий (ЦБСТ), компания Neiry». Brand Neiry is the legal entity АО «Нейрореволюция» per the registry's identity record."
+          }
         ]
       }
     },
@@ -41892,6 +42190,16 @@
           {
             "source_id": "s8659",
             "text": "Sole founder is ООО «ИТ ГАРАЖ» (ИНН 9200013941), not yet on file as an entity; its own ownership and any tie to ЦБСТ are not checked."
+          }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s7603",
+            "as_of": "2026-06-05",
+            "note": "ЦБСТ's own channel, post 2186: «Ещё один резидент ЦБСТ — компания Wheelies». Brand Wheelies is ООО «ВИЛЛИС» per the registry's identity record."
           }
         ]
       }
@@ -41973,6 +42281,16 @@
             "source_id": "s8661",
             "text": "Identity by name only (see tier_basis). The director is foreign-named and the company is 18 months old; owners are held by a registrar and not shown."
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s8673",
+            "as_of": "2026-03-10",
+            "note": "ЦБСТ's own channel, post 1956: «компания Stratolink (резидент ЦБСТ)»."
+          }
         ]
       }
     },
@@ -42025,6 +42343,16 @@
             "source_id": "s8657",
             "text": "ООО «ИНТЭК» (50% founder) has not been looked up; the registry holds an unrelated Saratov ООО «ИНТЭК» (ИНН 6455006938) and the two must not be assumed the same."
           }
+        ],
+        "memberships": [
+          {
+            "program": "cbst-residency",
+            "role": "resident",
+            "basis": "doc",
+            "source_id": "s8666",
+            "as_of": "2025-02-14",
+            "note": "ЦБСТ's own channel, post 447: «Компания «ИНТЭК промышленные системы», являясь резидентом Центра беспилотных систем и технологий»."
+          }
         ]
       }
     },
@@ -42068,6 +42396,12 @@
           }
         ]
       }
+    },
+    "ooo-mo-pniei-kraskript": {
+      "set": {},
+      "why": [
+        "Operator of the school DRONTECH.PRO, named by Чадаев as a resident of НПЦ «Ушкуйник» (s8876); identity from the school's own site footer (ИНН 2466077563, ОГРН 1022402646298, licence Л035-01211-24/01303047, s8941), the same licence number as in Чадаев's post, and the ЕГРЮЛ extract of 02.10.2026 (s8933)."
+      ]
     }
   }
 }

@@ -95,7 +95,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 1,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "alyoshina-ekaterina-andreevna",
@@ -461,7 +461,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ao-nii-stt",
@@ -552,7 +552,7 @@
           "legal_form": "АО",
           "variant": "offensive",
           "product_count": 5,
-          "degree": 12
+          "degree": 14
         },
         {
           "id": "ao-pmts-avangard",
@@ -643,7 +643,7 @@
           "legal_form": "АО",
           "variant": "offensive",
           "product_count": 4,
-          "degree": 19
+          "degree": 20
         },
         {
           "id": "ao-stratolink",
@@ -656,7 +656,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "ao-tekhnodinamika",
@@ -797,7 +797,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 0,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "astakhov-sergey-petrovich",
@@ -1755,14 +1755,28 @@
           "kind": "event",
           "label": "«Дронница» — Всероссийский слёт операторов боевых беспилотных систем",
           "subtype": "event_series",
-          "degree": 3
+          "degree": 5
+        },
+        {
+          "id": "event::dronnitsa-2022",
+          "kind": "event",
+          "label": "Дронница 2022 (I)",
+          "subtype": "event_edition",
+          "degree": 1
+        },
+        {
+          "id": "event::dronnitsa-2023",
+          "kind": "event",
+          "label": "Дронница 2023 (II)",
+          "subtype": "event_edition",
+          "degree": 2
         },
         {
           "id": "event::dronnitsa-2024",
           "kind": "event",
           "label": "Дронница 2024",
           "subtype": "event_edition",
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "event::dronnitsa-2025",
@@ -2093,7 +2107,7 @@
           "legal_form": null,
           "variant": "defensive",
           "product_count": 5,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "gk-rostekh",
@@ -3045,7 +3059,7 @@
           "legal_form": "НПО",
           "variant": "defensive",
           "product_count": 13,
-          "degree": 22
+          "degree": 23
         },
         {
           "id": "npo-kilobatt",
@@ -3334,7 +3348,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 3,
-          "degree": 26
+          "degree": 27
         },
         {
           "id": "ooo-arkodim-2",
@@ -3412,7 +3426,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 5,
-          "degree": 13
+          "degree": 14
         },
         {
           "id": "ooo-berkut-dmv",
@@ -3763,7 +3777,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-intel-dron",
@@ -3776,7 +3790,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 10
+          "degree": 11
         },
         {
           "id": "ooo-investments",
@@ -3815,7 +3829,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 2,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-kleverkopter",
@@ -3854,7 +3868,20 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 8,
-          "degree": 15
+          "degree": 16
+        },
+        {
+          "id": "ooo-krams",
+          "kind": "entity",
+          "label": "ООО «КРАМС»",
+          "name_latin": null,
+          "inn": "9701247080",
+          "tier": "adjacent",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "variant": null,
+          "product_count": 0,
+          "degree": 4
         },
         {
           "id": "ooo-kravt",
@@ -3867,7 +3894,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 24,
-          "degree": 32
+          "degree": 33
         },
         {
           "id": "ooo-kravt-udmurtiya",
@@ -3932,7 +3959,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 2,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-metaskan",
@@ -3959,6 +3986,19 @@
           "variant": null,
           "product_count": 0,
           "degree": 4
+        },
+        {
+          "id": "ooo-mo-pniei-kraskript",
+          "kind": "entity",
+          "label": "ООО «МО ПНИЭИ - КРАСКРИПТ»",
+          "name_latin": null,
+          "inn": "2466077563",
+          "tier": "adjacent",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "variant": null,
+          "product_count": 0,
+          "degree": 3
         },
         {
           "id": "ooo-momento-rubinshteyn",
@@ -4127,7 +4167,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 10
+          "degree": 11
         },
         {
           "id": "ooo-ntc-arkodim",
@@ -4400,7 +4440,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 1,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-spdbbk",
@@ -4504,7 +4544,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 1,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-tekhnomost",
@@ -4543,7 +4583,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 6,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ooo-trimiks",
@@ -4647,7 +4687,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-vingrad",
@@ -4673,7 +4713,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 3,
-          "degree": 17
+          "degree": 18
         },
         {
           "id": "ooo-vostochnye-vorota-zabaykalsk-manchzhuriya",
@@ -11262,14 +11302,14 @@
           "kind": "program",
           "label": "Акселератор ЦБСТ для специальных проектов и проектов двойного назначения",
           "subtype": "accelerator",
-          "degree": 3
+          "degree": 5
         },
         {
           "id": "program::cbst-residency",
           "kind": "program",
           "label": "Резидентство ЦБСТ",
           "subtype": "residency",
-          "degree": 3
+          "degree": 22
         },
         {
           "id": "program::natsproekt-bas",
@@ -11290,7 +11330,7 @@
           "kind": "program",
           "label": "Резидентство НПЦ «Ушкуйник»",
           "subtype": "residency",
-          "degree": 4
+          "degree": 7
         },
         {
           "id": "prokofev-mikhail-vasilevich",
@@ -12235,6 +12275,12 @@
           "degree": 1
         },
         {
+          "id": "stub::николаев александр юрьевич",
+          "kind": "unresolved",
+          "label": "Николаев Александр Юрьевич",
+          "degree": 3
+        },
+        {
           "id": "stub::панов александр александрович",
           "kind": "unresolved",
           "label": "Панов Александр Александрович",
@@ -12437,6 +12483,12 @@
           "kind": "unresolved",
           "label": "Хафизов Марат Миннерасыхович",
           "degree": 3
+        },
+        {
+          "id": "stub::холкин олег валерьевич",
+          "kind": "unresolved",
+          "label": "Холкин Олег Валерьевич",
+          "degree": 2
         },
         {
           "id": "stub::хоук холдинг",
@@ -12649,7 +12701,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "urmanov-valeriy-maratovich",
@@ -13116,6 +13168,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "alyaska",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7587",
+          "as_of": "2025-12-31",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -14115,6 +14179,18 @@
           "detail": null
         },
         {
+          "source": "ao-neyrorevolyutsiya",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8672",
+          "as_of": "2025-11-26",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ao-nii-stt",
           "target": "ao-kronshtadt",
           "type": "related",
@@ -15039,6 +15115,30 @@
           "detail": null
         },
         {
+          "source": "ao-ploshchad",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8924",
+          "as_of": "2024-12-13",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
+          "source": "ao-ploshchad",
+          "target": "program::ushkuynik-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8937",
+          "as_of": "2024-10-01",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ao-pmts-avangard",
           "target": "product::ao-pmts-avangard::обустройство-пунктов-пропуска-через-госграницу-системы-безопасности-связь",
           "type": "produces",
@@ -15231,6 +15331,18 @@
           "detail": null
         },
         {
+          "source": "ao-stratim",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s6924",
+          "as_of": "2025-08-14",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ao-stratolink",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -15252,6 +15364,18 @@
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ao-stratolink",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8673",
+          "as_of": "2026-03-10",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -15528,6 +15652,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "t-open",
+          "detail": null
+        },
+        {
+          "source": "assotsiatsiya-vzaimopomoshch",
+          "target": "event::dronnitsa-2024",
+          "type": "organises",
+          "label": "organiser",
+          "source_id": "s0445",
+          "as_of": "2025-04-14",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -20607,6 +20743,30 @@
           "detail": null
         },
         {
+          "source": "event::dronnitsa-2022",
+          "target": "event::dronnitsa",
+          "type": "part_of",
+          "label": "event_edition",
+          "source_id": "s8911",
+          "as_of": "2022-08-01",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "event::dronnitsa-2023",
+          "target": "event::dronnitsa",
+          "type": "part_of",
+          "label": "event_edition",
+          "source_id": "s8913",
+          "as_of": "2023-06-30",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null
+        },
+        {
           "source": "event::dronnitsa-2024",
           "target": "event::dronnitsa",
           "type": "part_of",
@@ -21612,6 +21772,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "gk-logos",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7585",
+          "as_of": "2025-07-04",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -25421,6 +25593,18 @@
         },
         {
           "source": "npo-kaysant",
+          "target": "event::dronnitsa-2023",
+          "type": "participated_in",
+          "label": "exhibitor",
+          "source_id": "s8915",
+          "as_of": "2023-08-09",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
+          "source": "npo-kaysant",
           "target": "product::npo-kaysant::fpv-дрон-артемида-10",
           "type": "produces",
           "label": null,
@@ -27172,6 +27356,18 @@
           "detail": null
         },
         {
+          "source": "ooo-arkodim",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7524",
+          "as_of": "2026-05-12",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ooo-arkodim-2",
           "target": "ooo-arkodim",
           "type": "related",
@@ -27349,6 +27545,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ooo-aviron",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7587",
+          "as_of": "2025-12-31",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -28348,6 +28556,18 @@
           "detail": null
         },
         {
+          "source": "ooo-intek-promyshlennye-sistemy",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8666",
+          "as_of": "2025-02-14",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ooo-intel-dron",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -28369,6 +28589,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ooo-intel-dron",
+          "target": "program::cbst-accelerator",
+          "type": "resident_of",
+          "label": "accelerator_participant",
+          "source_id": "s8581",
+          "as_of": "2025-09-23",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -28417,6 +28649,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ooo-kingpro",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7592",
+          "as_of": "2025-04-09",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "press",
           "detail": null
         },
         {
@@ -28645,6 +28889,30 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ooo-kopterlab",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7591",
+          "as_of": "2026-06-09",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
+          "source": "ooo-krams",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7523",
+          "as_of": "2025-12-10",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -28924,6 +29192,18 @@
           "detail": null
         },
         {
+          "source": "ooo-kravt",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7599",
+          "as_of": "2026-04-11",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ooo-kravt-udmurtiya",
           "target": "product::ooo-kravt-udmurtiya::быстрозарядные-станции-для-электротранспорта",
           "type": "produces",
@@ -28984,6 +29264,18 @@
           "detail": null
         },
         {
+          "source": "ooo-mentastep",
+          "target": "program::cbst-accelerator",
+          "type": "resident_of",
+          "label": "accelerator_participant",
+          "source_id": "s8581",
+          "as_of": "2025-09-23",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ooo-metaskan",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -29005,6 +29297,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ooo-mo-pniei-kraskript",
+          "target": "program::ushkuynik-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8876",
+          "as_of": "2024-09-09",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -29939,6 +30243,18 @@
           "detail": null
         },
         {
+          "source": "ooo-npts-basirtk",
+          "target": "program::ushkuynik-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8940",
+          "as_of": "2025-10-15",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ooo-ntc-arkodim",
           "target": "ooo-arkodim",
           "type": "related",
@@ -30701,6 +31017,18 @@
           "detail": null
         },
         {
+          "source": "ooo-smart-teknolodzhis",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7581",
+          "as_of": "2025-02-25",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ooo-spdbbk",
           "target": "product::ooo-spdbbk::привет-120",
           "type": "produces",
@@ -30857,6 +31185,18 @@
           "detail": null
         },
         {
+          "source": "ooo-superkhrono",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8670",
+          "as_of": "2025-09-24",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "press",
+          "detail": null
+        },
+        {
           "source": "ooo-ti-es-dzhi-grupp",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -30947,6 +31287,18 @@
           "label": "ЦБСТ's post of 17.04.2026 about portable charging stations «Эгеон» is headed «Резидент ЦБСТ…»; a forward of it in mil...",
           "source_id": "s8675",
           "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "press",
+          "detail": null
+        },
+        {
+          "source": "ooo-titan-severo-zapad",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8675",
+          "as_of": "2026-04-17",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "press",
@@ -31193,6 +31545,18 @@
           "detail": null
         },
         {
+          "source": "ooo-villis-wheelies",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7603",
+          "as_of": "2026-06-05",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ooo-vizionero",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -31238,6 +31602,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "ooo-vizionero",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s7587",
+          "as_of": "2025-12-31",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -36137,6 +36513,42 @@
           "detail": null
         },
         {
+          "source": "stub::николаев александр юрьевич",
+          "target": "ooo-krams",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6855",
+          "as_of": "2023-04-18",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "stub::николаев александр юрьевич",
+          "target": "ooo-krams",
+          "type": "directs",
+          "label": null,
+          "source_id": "s0951",
+          "as_of": "2026-08-24",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "stub::николаев александр юрьевич",
+          "target": "ooo-krams",
+          "type": "founded",
+          "label": null,
+          "source_id": "s6855",
+          "as_of": "2023-04-18",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null
+        },
+        {
           "source": "stub::панов александр александрович",
           "target": "ao-neyrorevolyutsiya",
           "type": "directs",
@@ -36695,6 +37107,30 @@
           "label": "90%",
           "source_id": "s6732",
           "as_of": "2024-10-02",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "stub::холкин олег валерьевич",
+          "target": "ooo-mo-pniei-kraskript",
+          "type": "directs",
+          "label": null,
+          "source_id": "s8933",
+          "as_of": "2023-05-19",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "stub::холкин олег валерьевич",
+          "target": "ooo-mo-pniei-kraskript",
+          "type": "founded",
+          "label": null,
+          "source_id": "s8933",
+          "as_of": "2025-11-12",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null,
@@ -37334,6 +37770,18 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "uraldronzavod",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8927",
+          "as_of": "2026-05-06",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
           "detail": null
         },
         {
@@ -38291,7 +38739,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 1,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ano-arkhangel",
@@ -38624,7 +39072,7 @@
           "legal_form": "АО",
           "variant": "offensive",
           "product_count": 5,
-          "degree": 12
+          "degree": 14
         },
         {
           "id": "ao-pmts-avangard",
@@ -38689,7 +39137,7 @@
           "legal_form": "АО",
           "variant": "offensive",
           "product_count": 4,
-          "degree": 19
+          "degree": 20
         },
         {
           "id": "ao-stratolink",
@@ -38702,7 +39150,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "ao-tekhnodinamika",
@@ -38827,7 +39275,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 0,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "barakhtin-artem-vladimirovich",
@@ -39188,7 +39636,7 @@
           "legal_form": null,
           "variant": "defensive",
           "product_count": 5,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "gk-rostekh",
@@ -39733,7 +40181,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 3,
-          "degree": 26
+          "degree": 27
         },
         {
           "id": "ooo-arkodim-2",
@@ -39785,7 +40233,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 5,
-          "degree": 13
+          "degree": 14
         },
         {
           "id": "ooo-berkut-dmv",
@@ -40110,7 +40558,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 10
+          "degree": 11
         },
         {
           "id": "ooo-investments",
@@ -40149,7 +40597,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 2,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-kleverkopter",
@@ -40188,7 +40636,20 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 8,
-          "degree": 15
+          "degree": 16
+        },
+        {
+          "id": "ooo-krams",
+          "kind": "entity",
+          "label": "ООО «КРАМС»",
+          "name_latin": null,
+          "inn": "9701247080",
+          "tier": "adjacent",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "variant": null,
+          "product_count": 0,
+          "degree": 4
         },
         {
           "id": "ooo-kravt",
@@ -40201,7 +40662,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 24,
-          "degree": 32
+          "degree": 33
         },
         {
           "id": "ooo-kravt-udmurtiya",
@@ -40266,7 +40727,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 2,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-metaskan",
@@ -40293,6 +40754,19 @@
           "variant": null,
           "product_count": 0,
           "degree": 4
+        },
+        {
+          "id": "ooo-mo-pniei-kraskript",
+          "kind": "entity",
+          "label": "ООО «МО ПНИЭИ - КРАСКРИПТ»",
+          "name_latin": null,
+          "inn": "2466077563",
+          "tier": "adjacent",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "variant": null,
+          "product_count": 0,
+          "degree": 3
         },
         {
           "id": "ooo-momento-rubinshteyn",
@@ -40435,7 +40909,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 10
+          "degree": 11
         },
         {
           "id": "ooo-ntc-arkodim",
@@ -40669,7 +41143,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 1,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-startap-studiya-universiteta-lobachevskogo",
@@ -40734,7 +41208,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 1,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-tekhnomost",
@@ -40773,7 +41247,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 6,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ooo-tsugam",
@@ -40838,7 +41312,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 3,
-          "degree": 17
+          "degree": 18
         },
         {
           "id": "ooo-vostochnye-vorota-zabaykalsk-manchzhuriya",
@@ -41432,6 +41906,12 @@
           "degree": 1
         },
         {
+          "id": "stub::николаев александр юрьевич",
+          "kind": "unresolved",
+          "label": "Николаев Александр Юрьевич",
+          "degree": 3
+        },
+        {
           "id": "stub::парабучев алексей игоревич",
           "kind": "unresolved",
           "label": "Парабучев Алексей Игоревич",
@@ -41570,6 +42050,12 @@
           "degree": 3
         },
         {
+          "id": "stub::холкин олег валерьевич",
+          "kind": "unresolved",
+          "label": "Холкин Олег Валерьевич",
+          "degree": 2
+        },
+        {
           "id": "stub::хоук холдинг",
           "kind": "unresolved",
           "label": "Акционерное общество \"Хоук Холдинг\"",
@@ -41626,7 +42112,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "usachev-pavel-aleksandrovich",
@@ -44988,6 +45474,42 @@
           "detail": null
         },
         {
+          "source": "stub::николаев александр юрьевич",
+          "target": "ooo-krams",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6855",
+          "as_of": "2023-04-18",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "stub::николаев александр юрьевич",
+          "target": "ooo-krams",
+          "type": "directs",
+          "label": null,
+          "source_id": "s0951",
+          "as_of": "2026-08-24",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "stub::николаев александр юрьевич",
+          "target": "ooo-krams",
+          "type": "founded",
+          "label": null,
+          "source_id": "s6855",
+          "as_of": "2023-04-18",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null
+        },
+        {
           "source": "stub::парабучев алексей игоревич",
           "target": "fond-moskovskiy-innovatsionnyy-klaster",
           "type": "directs",
@@ -45360,6 +45882,30 @@
           "detail": null
         },
         {
+          "source": "stub::холкин олег валерьевич",
+          "target": "ooo-mo-pniei-kraskript",
+          "type": "directs",
+          "label": null,
+          "source_id": "s8933",
+          "as_of": "2023-05-19",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null
+        },
+        {
+          "source": "stub::холкин олег валерьевич",
+          "target": "ooo-mo-pniei-kraskript",
+          "type": "founded",
+          "label": null,
+          "source_id": "s8933",
+          "as_of": "2025-11-12",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null
+        },
+        {
           "source": "stub::хоук холдинг",
           "target": "ao-stratim",
           "type": "founded",
@@ -45698,7 +46244,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 1,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "andrey-bezrukov",
@@ -45792,7 +46338,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ao-npp-bat",
@@ -45831,7 +46377,7 @@
           "legal_form": "АО",
           "variant": "offensive",
           "product_count": 5,
-          "degree": 12
+          "degree": 14
         },
         {
           "id": "ao-shkola-bpla-oktagon",
@@ -45883,7 +46429,7 @@
           "legal_form": "АО",
           "variant": "offensive",
           "product_count": 4,
-          "degree": 19
+          "degree": 20
         },
         {
           "id": "ao-stratolink",
@@ -45896,7 +46442,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "ao-tekhnodron",
@@ -45922,7 +46468,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 0,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "baygutlina-irina-anatolevna",
@@ -45961,7 +46507,7 @@
           "kind": "event",
           "label": "Дронница 2024",
           "subtype": "event_edition",
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "event::dronnitsa-2025",
@@ -46020,7 +46566,7 @@
           "legal_form": null,
           "variant": "defensive",
           "product_count": 5,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "gk-rostekh",
@@ -46133,7 +46679,7 @@
           "legal_form": "НПО",
           "variant": "defensive",
           "product_count": 13,
-          "degree": 22
+          "degree": 23
         },
         {
           "id": "npp-elvo-kolskaya-verf",
@@ -46250,7 +46796,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 3,
-          "degree": 26
+          "degree": 27
         },
         {
           "id": "ooo-atlant-aero",
@@ -46276,7 +46822,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 5,
-          "degree": 13
+          "degree": 14
         },
         {
           "id": "ooo-boevye-tekhnologii",
@@ -46380,7 +46926,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-intel-dron",
@@ -46393,7 +46939,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 10
+          "degree": 11
         },
         {
           "id": "ooo-investments",
@@ -46419,7 +46965,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 2,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-kleverkopter",
@@ -46458,7 +47004,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 8,
-          "degree": 15
+          "degree": 16
         },
         {
           "id": "ooo-kravt",
@@ -46471,7 +47017,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 24,
-          "degree": 32
+          "degree": 33
         },
         {
           "id": "ooo-mentastep",
@@ -46484,7 +47030,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 2,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-metaskan",
@@ -46549,7 +47095,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 10
+          "degree": 11
         },
         {
           "id": "ooo-opkb-eksplomet",
@@ -46640,7 +47186,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 1,
-          "degree": 5
+          "degree": 6
         },
         {
           "id": "ooo-superkhrono",
@@ -46653,7 +47199,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 1,
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "ooo-ti-es-dzhi-grupp",
@@ -46679,7 +47225,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 6,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ooo-trimiks",
@@ -46744,7 +47290,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-vizionero",
@@ -46757,7 +47303,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 3,
-          "degree": 17
+          "degree": 18
         },
         {
           "id": "ooo-vozdushnyy-traktat",
@@ -46850,14 +47396,21 @@
           "kind": "program",
           "label": "Акселератор ЦБСТ для специальных проектов и проектов двойного назначения",
           "subtype": "accelerator",
-          "degree": 3
+          "degree": 5
         },
         {
           "id": "program::cbst-residency",
           "kind": "program",
           "label": "Резидентство ЦБСТ",
           "subtype": "residency",
-          "degree": 3
+          "degree": 22
+        },
+        {
+          "id": "program::ushkuynik-residency",
+          "kind": "program",
+          "label": "Резидентство НПЦ «Ушкуйник»",
+          "subtype": "residency",
+          "degree": 7
         },
         {
           "id": "stub::михайлов юрий геннадьевич",
@@ -46890,7 +47443,7 @@
           "legal_form": "ООО",
           "variant": "offensive",
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ustratov-dmitriy-vladimirovich",
@@ -48241,6 +48794,18 @@
           "detail": null
         },
         {
+          "source": "ooo-npts-basirtk",
+          "target": "program::ushkuynik-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8940",
+          "as_of": "2025-10-15",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null
+        },
+        {
           "source": "ooo-opkb-eksplomet",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -48676,7 +49241,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ao-stratolink",
@@ -48689,7 +49254,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 4
+          "degree": 5
         },
         {
           "id": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
@@ -48738,7 +49303,7 @@
           "legal_form": "НПО",
           "variant": "defensive",
           "product_count": 13,
-          "degree": 22
+          "degree": 23
         },
         {
           "id": "npo-kilobatt",
@@ -48816,7 +49381,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-kravt",
@@ -48829,7 +49394,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 24,
-          "degree": 32
+          "degree": 33
         },
         {
           "id": "ooo-metaskan",
@@ -48855,7 +49420,7 @@
           "legal_form": "ООО",
           "variant": null,
           "product_count": 6,
-          "degree": 11
+          "degree": 12
         },
         {
           "id": "ooo-trimiks",
@@ -48894,7 +49459,7 @@
           "legal_form": null,
           "variant": null,
           "product_count": 1,
-          "degree": 3
+          "degree": 4
         },
         {
           "id": "ooo-vozdushnyy-traktat",

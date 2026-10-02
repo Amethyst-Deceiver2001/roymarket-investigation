@@ -148,3 +148,4 @@ user's go-ahead — not self-authorized by either session alone:
    session's real uncommitted work, not just this session's own.
 
 Session names change (`-03`, `-46`, `-e2`, `-d5`); the rules do not.
+- 2026-10-02: `docs/relationship-graph.html` renderer now draws schema v11 (programme/event/group, storefront nodes; sales, partner, membership and storefront edges with the relation envelope in the detail panel; `product_count`); data re-embedded and the live artifact (2m4hhbSUG9XqNRvU5K1Ha9, v26) republished. Дронница 2022/2023 editions and the КЦПН legal chain recorded (КЦПН does have entities: `bf-ktspn-barnaul`, `assotsiatsiya-vzaimopomoshch`). Still open: ЦБСТ residency roster as `memberships[]`, НПЦ БАС rosters, 289-ФЗ / Роспатент checks for МПТМ, the ecosystem-model artifact refresh.
