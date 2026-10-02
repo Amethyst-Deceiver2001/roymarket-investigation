@@ -196,7 +196,51 @@ def display_name(e: dict) -> dict:
     parts = (e.get("name_ru") or "").split(" | ", 1)
     legal, gloss = parts[0], (parts[1] if len(parts) > 1 else "")
     brand = next((b["name"] for b in e.get("brands") or [] if b.get("primary") and b.get("name")), None)
-    return {"head": brand or legal, "legal": legal if brand and brand != legal else "", "gloss": gloss}
+    return {"head": brand or legal, "legal": legal if brand and brand != legal else "", "gloss": gloss,
+            "latin": e.get("name_display") or latin_display(legal)}
+
+
+# Latin display names (B5, STYLE_GUIDE §2.3): the legal form transliterated, never translated (OOO, AO, ANO), and
+# the name in «» transliterated letter by letter, never translated. A simplified BGN/PCGN scheme without
+# diacritics, matching the guide's own examples (OOO «Tekhnodron», NPTs); ё is written e, as sanctions lists do.
+_LAT = dict(zip("абвгдеёжзийклмнопрстуфхцчшщъыьэюя",
+                ["a", "b", "v", "g", "d", "e", "e", "zh", "z", "i", "y", "k", "l", "m", "n", "o", "p", "r", "s",
+                 "t", "u", "f", "kh", "ts", "ch", "sh", "shch", "", "y", "", "e", "yu", "ya"]))
+# Spelled-out legal forms in a registered name -> the abbreviation they stand for, so the Latin form is the
+# string a screening analyst searches (OOO, not "Obshchestvo s ogranichennoy otvetstvennostyu").
+_LONG_FORMS = [
+    (r"общество с ограниченной ответственностью", "ООО"), (r"публичное акционерное общество", "ПАО"),
+    (r"закрытое акционерное общество", "ЗАО"), (r"акционерное общество", "АО"),
+    (r"автономная некоммерческая организация", "АНО"), (r"индивидуальный предприниматель", "ИП"),
+]
+
+
+def _lat_word(w: str) -> str:
+    # An all-caps abbreviation (no vowel) keeps one capital per Cyrillic letter (НПЦ -> NPTs, ЦБСТ -> TsBST);
+    # an all-caps word is set wholly in capitals (НАУЧНО -> NAUCHNO, ДЖИ -> DZHI), as sanctions lists write it.
+    if len(w) > 1 and w.isupper() and re.search(r"[АЕЁИОУЫЭЮЯ]", w):
+        return "".join(_LAT.get(ch.lower(), ch) for ch in w).upper()
+    caps = len(w) > 1 and w.isupper()
+    out = []
+    for ch in w:
+        t = _LAT.get(ch.lower())
+        if t is None:
+            out.append(ch)
+        elif ch.isupper():
+            out.append(t.upper() if caps and len(t) == 1 else t[:1].upper() + t[1:])
+        else:
+            out.append(t)
+    return "".join(out)
+
+
+def latin_display(legal: str) -> str:
+    """'ООО «Тримикс»' -> 'OOO «Trimiks»'; 'НПЦ «Ушкуйник»' -> 'NPTs «Ushkuynik»'. Latin letters pass unchanged."""
+    # A trailing note in brackets is ours, not part of the registered name ("(прекратил деятельность …)",
+    # a founder's surname used to tell two namesakes apart); an all-caps alias like "(ФКК)" is kept.
+    s = re.sub(r"\s*\((?![А-ЯЁA-Z0-9.\-]+\))[^)]*\)\s*$", "", legal)
+    for pat, abbr in _LONG_FORMS:
+        s = re.sub(pat, abbr, s, flags=re.I)
+    return re.sub(r"[А-Яа-яЁё]+", lambda m: _lat_word(m.group(0)), s)
 
 
 def source_type_label(path: str) -> str:

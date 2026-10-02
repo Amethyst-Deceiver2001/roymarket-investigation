@@ -35084,7 +35084,18 @@
           "as_of": "2026-09-15",
           "outcome": "closed",
           "note": "OpenSanctions: single low-relevance match (score 0.71, different name order \"ЭС ДЖИ ТИ ЭС ГРУП\" vs this entity's \"ТИ ЭС ДЖИ ГРУПП\", different ИНН) with topics=[] — noise. GUR and Aleph returned nothing."
-        }
+        },
+        "brands": [
+          {
+            "name": "TSG Group",
+            "kind": "trademark",
+            "registration": "RU1190273",
+            "primary": true,
+            "source_id": "s1228",
+            "as_of": "2026-02-27",
+            "note": "Combined mark «TSG GROUP» (image read 02.10.2026), holder ООО «ТИ ЭС ДЖИ ГРУПП», registered 27.02.2026; a second registration RU1190349 (s1231) is held for other classes."
+          }
+        ]
       },
       "verified_against": "Full EGRUL extract read end-to-end (ul-1233200001066-20260823120457.pdf, s0456, 17pp).",
       "why": [
@@ -35095,7 +35106,8 @@
         "Completed the founder-share read: the missing 16% is GD Абрамова Т.А. herself, added as a founder 29.10.2024 (GRN 2243200118753) — all three founders now account for 100%. ОКВЭД mismatch confirmed: declared R&D (72.19) but secondary codes are concrete radio/hardware manufacture (26.30.5/26.30.17 radio-TV transmitting equipment, 26.51 measurement/navigation instruments).",
         "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (3257085996). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
+        "2026-10-02 B5 brand review: brands[] set from the company's own site / trademark record, read in full."
       ]
     },
     "ooo-titan-severo-zapad": {
@@ -42264,8 +42276,22 @@
             "as_of": "2025-11-26",
             "note": "ЦБСТ's own channel, post 1572: «Один из резидентов Центра беспилотных систем и технологий (ЦБСТ), компания Neiry». Brand Neiry is the legal entity АО «Нейрореволюция» per the registry's identity record."
           }
+        ],
+        "brands": [
+          {
+            "name": "Neiry",
+            "kind": "trade_name",
+            "registration": null,
+            "primary": true,
+            "source_id": "s8680",
+            "as_of": "2026-10-01",
+            "note": "neiry.ru presents itself as «Группа компаний Neiry»; its footer prints «© Нейри АО «Нейрореволюция»» with ИНН 9701255148 and ОГРН 1237700501268 (page read 02.10.2026)."
+          }
         ]
-      }
+      },
+      "why": [
+        "2026-10-02 B5 brand review: brands[] set from the company's own site / trademark record, read in full."
+      ]
     },
     "ooo-villis-wheelies": {
       "set": {
@@ -42316,8 +42342,22 @@
             "as_of": "2026-06-05",
             "note": "ЦБСТ's own channel, post 2186: «Ещё один резидент ЦБСТ — компания Wheelies». Brand Wheelies is ООО «ВИЛЛИС» per the registry's identity record."
           }
+        ],
+        "brands": [
+          {
+            "name": "Wheelies",
+            "kind": "trade_name",
+            "registration": null,
+            "primary": true,
+            "source_id": "s8679",
+            "as_of": "2026-10-01",
+            "note": "wheelies.ru («Wheelies — Автономное управление роботизированными системами») prints ИНН / ОГРН 9200026034 / 1259200000410 in its footer (page read 02.10.2026)."
+          }
         ]
-      }
+      },
+      "why": [
+        "2026-10-02 B5 brand review: brands[] set from the company's own site / trademark record, read in full."
+      ]
     },
     "ao-shkola-bpla-oktagon": {
       "set": {
@@ -42513,9 +42553,58 @@
       }
     },
     "ooo-mo-pniei-kraskript": {
-      "set": {},
+      "set": {
+        "brands": [
+          {
+            "name": "DRONTECH.PRO",
+            "kind": "trade_name",
+            "registration": null,
+            "primary": false,
+            "source_id": "s8941",
+            "as_of": "2026-10-02",
+            "note": "drontech.pro («Школа дронов DRONTECH.PRO») prints ООО «МОПНИЭИ-Краскрипт», ОГРН 1022402646298, ИНН 2466077563 in its footer. It names one line of the company's business (a drone school and shop), not the company, so it is not the primary brand."
+          }
+        ]
+      },
       "why": [
-        "Operator of the school DRONTECH.PRO, named by Чадаев as a resident of НПЦ «Ушкуйник» (s8876); identity from the school's own site footer (ИНН 2466077563, ОГРН 1022402646298, licence Л035-01211-24/01303047, s8941), the same licence number as in Чадаев's post, and the ЕГРЮЛ extract of 02.10.2026 (s8933)."
+        "Operator of the school DRONTECH.PRO, named by Чадаев as a resident of НПЦ «Ушкуйник» (s8876); identity from the school's own site footer (ИНН 2466077563, ОГРН 1022402646298, licence Л035-01211-24/01303047, s8941), the same licence number as in Чадаев's post, and the ЕГРЮЛ extract of 02.10.2026 (s8933).",
+        "2026-10-02 B5 brand review: brands[] set from the company's own site / trademark record, read in full."
+      ]
+    },
+    "ip-gabitov-r-a": {
+      "set": {
+        "brands": [
+          {
+            "name": "BeastFPV",
+            "kind": "trade_name",
+            "registration": null,
+            "primary": true,
+            "source_id": "s7982",
+            "as_of": "2026-09-21",
+            "note": "The BeastFPV shop's footer prints «Свидетельство на товарный знак BEASTFPV ИП Габитов Р.А. ИНН 024200325133 ОГРНИП 324508100570973» (page read 02.10.2026). The trademark certificate it names is not on file, so the brand is recorded as a trade name until the FIPS record is pulled."
+          }
+        ]
+      },
+      "why": [
+        "2026-10-02 B5 brand review: brands[] set from the seller's own site footer, read in full."
+      ]
+    },
+    "ip-popov-aleksandr-sergeevich": {
+      "set": {
+        "brands": [
+          {
+            "name": "FnSmart",
+            "kind": "trade_name",
+            "registration": null,
+            "primary": true,
+            "source_id": "s7980",
+            "as_of": "2026-09-21",
+            "note": "fnsmart.ru «О нас» signs «Ваш FnSmart ИП ПОПОВ АЛЕКСАНДР СЕРГЕЕВИЧ ИНН 772377497922 ОГРНИП 321774600317322» (page read 02.10.2026). Spelled FnSmart as the site spells it."
+          }
+        ]
+      },
+      "why": [
+        "2026-10-02 B5 brand review: brands[] set from the seller's own site footer, read in full."
       ]
     }
   }

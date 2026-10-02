@@ -959,6 +959,7 @@ def save_stable_source_ids(mapping: dict[str, str]) -> None:
 
 
 from source_citation import cite as cite_source  # noqa: E402
+from display_helpers import latin_display  # noqa: E402
 
 
 def parse_sources(ogrn_to_inn: dict[str, str] | None = None) -> list[dict]:
@@ -1623,6 +1624,10 @@ def main() -> int:
 
     for e in entities:
         seed_history(e)
+        # B5: generated Latin display name per STYLE_GUIDE §2.3, unless a correction set one by hand.
+        # name_latin stays the screening string; this is what a reader page prints.
+        if not e.get("name_display"):
+            e["name_display"] = latin_display((e.get("name_ru") or "").split(" | ", 1)[0])
 
     # Filter prose_leads against the FINAL entities/people lists (post-
     # corrections) — otherwise this list rots exactly the way

@@ -90,24 +90,21 @@ after the design system redo and a new landing page.
    Telegram captures are flagged (post 1193 is s7596 and s8842). Remaining:
    80 sources still cite only as "Archived document" (a `check_registry`
    warning); the rules live in `tests/test_source_citation.py`.
-5. **B5 display names.** A generated `name_display` per STYLE_GUIDE §2.3
-   (OOO «Trimiks»), overridable in corrections; `name_latin` stays the
-   screening string. 185 of 252 entities have no `name_latin`, 29 hold an
-   OpenSanctions caption.
-   **Brand first (decided by the user 02.10.2026; model and display done for
-   3mx, the other 38 free-text brand values to review in
-   `notes/brand_review_20261002.md`).** Readers meet the brand (3mx, GoDrone, Пиранья) on boxes,
-   marketplaces and Telegram, not the legal name (ООО «Тримикс»). A card
-   leads with a documented brand. The legal name sits directly beneath it,
-   never hidden, and the Sanctioned flag stays with the legal name, because
-   lists name the company, not the trademark. This needs structured
-   `brands[]` (`{name, kind: trade_name|trademark, source_id, as_of}`) in
-   place of the free-text `brand_ru`: Тримикс's reads «Булат» / 3mx, mixing
-   product and brand, and only 39 of 252 entities have one. One brand can
-   span several legal entities (КБ «СПЕКТР»), and a product name is never a
-   company brand. Company cards already carry the entity's logo
-   (media genre `logo`, with `logo_ground: dark` for a mark drawn for a dark
-   ground).
+5. **B5 display names** (done 02.10.2026).
+   - **Latin name:** `name_display` is generated for every entity by
+     `display_helpers.latin_display()` per STYLE_GUIDE §2.3 (OOO «Trimiks»,
+     NPTs «Ushkuynik», TsBST). A correction can override it; `name_latin`
+     stays the screening string. Cards print it in mono under the registered
+     name (`small.lat`).
+   - **Brand first** (decided by the user 02.10.2026): a card leads with a
+     documented primary brand from `brands[]`. The legal name sits beneath it,
+     never hidden, with the Sanctioned flag, because lists name the company.
+     A product name is never a company brand, and one brand may span several
+     legal entities.
+   - **Review of the 38 free-text values:** six are promoted (3mx, TSG Group,
+     Neiry, Wheelies, BeastFPV, FnSmart), and DRONTECH.PRO is recorded as not
+     primary. The rest are the legal name, product names, or held for a
+     source (`notes/brand_review_20261002.md`).
 6. **New reader pages** (chain views per case, entity pages for specialists) on
    the new system, citing through B4.
 7. **B6 explorer** narrowed to neighbourhood-on-demand once two chain views

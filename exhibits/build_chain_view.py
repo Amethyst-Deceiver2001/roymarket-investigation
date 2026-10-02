@@ -137,12 +137,16 @@ class Chain:
     def name(self, e, sub=True):
         """Brand first when documented, legal name directly beneath it (B5); else legal name and English gloss."""
         n = display_name(e)
-        lines = [n["legal"]] if n["legal"] else []
-        if sub and n["gloss"] and not n["legal"]:
-            lines.append(n["gloss"])
         brand = next((b for b in e.get("brands") or [] if b.get("primary")), None)
         cite = self.ref(brand.get("source_id")) if brand and n["legal"] else ""
-        return esc(n["head"]) + "".join(f"<small>{esc(x)}{cite if x == n['legal'] else ''}</small>" for x in lines)
+        out = esc(n["head"])
+        if n["legal"]:
+            out += f"<small>{esc(n['legal'])}{cite}</small>"
+        if n["latin"] and n["latin"] != (n["legal"] or n["head"]):
+            out += f'<small class="lat" lang="ru-Latn">{esc(n["latin"])}</small>'   # the string sanctions lists use
+        if sub and n["gloss"] and not n["legal"]:
+            out += f"<small>{esc(n['gloss'])}</small>"
+        return out
 
     def sanctions(self, e):
         seen, sids = [], []

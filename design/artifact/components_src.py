@@ -97,10 +97,10 @@ The only red on a page. It marks an entity under sanctions and always names the 
 - It wraps inside a narrow card rather than overflowing."""),
 
     "ChainCard": ("Chain", 260, f"""<article class="rm-card hub" style="width:240px"><header><span class="rm-kind">{kind_icon("company")}Hub</span></header>
-<h3 class="rm-name">АНО «ЦБСТ»<small>Centre for Unmanned Systems &amp; Technologies</small></h3>
+<h3 class="rm-name">АНО «ЦБСТ»<small class="lat">ANO «TsBST»</small><small>Centre for Unmanned Systems &amp; Technologies</small></h3>
 <p><span class="rm-sanction">Sanctioned <b>Ukraine</b></span><sup class="rm-ref"><a href="#">1</a></sup></p></article>
 <article class="rm-card" style="width:240px"><header><span class="rm-kind">{kind_icon("company")}Maker</span><img class="rm-logo on-dark" src="{svg_uri("m0019")}" alt="Logo of ООО «Тримикс»"></header>
-<h3 class="rm-name">3mx<small>ООО «Тримикс»<sup class="rm-ref"><a href="#">4</a></sup></small></h3><p>Revenue 2023: ₽45.6m<sup class="rm-ref"><a href="#">5</a></sup></p>
+<h3 class="rm-name">3mx<small>ООО «Тримикс»<sup class="rm-ref"><a href="#">4</a></sup></small><small class="lat">OOO «Trimiks»</small></h3><p>Revenue 2023: ₽45.6m<sup class="rm-ref"><a href="#">5</a></sup></p>
 <p><span class="rm-id">ИНН 7802942873</span></p></article>
 <article class="rm-card absent" style="width:240px"><header><span class="rm-kind">{kind_icon("storefront")}Not sold here</span></header>
 <h3 class="rm-name">РОЙ.МАРКЕТ</h3><p>No listing found.</p></article>""", """# ChainCard
@@ -109,6 +109,7 @@ One object in a chain: a company, product, storefront, buyer or recipient list.
 
 - The header holds the kind mark and kind label ("Maker", "Sells", "State buyer"), and the company's logo at the right when a media record of genre `logo` exists. A logo drawn for a dark ground (`logo_ground: dark`) sits on the dark plate. Never a product photo in its place.
 - The name in Spectral follows. With a documented primary brand (`display_name()`), the brand leads and the registered legal name sits directly beneath it in `<small>`, footnoted to the brand's source (here trademark RU1125967). Without one, the legal name leads with its English gloss. The legal name is never hidden: sanctions lists name the company, not the brand.
+- Under the registered name sits its Latin form in mono (`small.lat`, `display_name()['latin']`): the legal form transliterated, never translated (OOO, AO, ANO, NPTs), per STYLE_GUIDE §2.3. It is the string a screening analyst searches in a sanctions list. A hand correction (`name_display`) overrides the generated form.
 - `.hub` is for ЦБСТ only: a 2px ink border. There is no hub colour.
 - `.absent` is a dashed card with no shadow, for something a reader would expect that is not there.
 - Rows are `p` elements at the note size; each claim ends in a `rm-ref` footnote.
