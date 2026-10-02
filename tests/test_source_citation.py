@@ -74,6 +74,20 @@ def test_no_internal_notation():
         assert t[:1].isupper(), t
 
 
+
+def test_relative_canonical_is_resolved_or_dropped():
+    tg = ('<link rel="canonical" href="/s/readovkanews?before=65390">'
+          '<a href="https://t.me/readovkanews/65389">')
+    assert facts_of("PRESS_20230903_x.html", tg)["url"] == "https://t.me/s/readovkanews?before=65390"
+    wp = ('<link rel="canonical" href="/fond-sarmat/">'
+          '<link rel="https://api.w.org/" href="https://barssarmat.ru/wp-json/">')
+    assert facts_of("SITE_6154168283_20260919_x.html", wp)["url"] == "https://barssarmat.ru/fond-sarmat/"
+    og = '<link rel="canonical" href="/"><meta property="og:url" content="https://wheelies.ru/">'
+    assert facts_of("WEB_9200026034_20261001_x.html", og)["url"] == "https://wheelies.ru/"
+    # No host on the page: no public link rather than a broken one.
+    assert "url" not in facts_of("SITE_x_20260919_y.html", '<link rel="canonical" href="/nashi/">')
+    assert facts_of("WEB_x_20261001_y.html", '<link rel="canonical" href="https://a.ru/b">')["url"] == "https://a.ru/b"
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):
