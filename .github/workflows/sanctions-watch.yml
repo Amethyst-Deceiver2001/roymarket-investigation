@@ -43,32 +43,6 @@ jobs:
             echo "no previous run: this run is the baseline"
           fi
 
-      - name: "TEMPORARY: probe the Ukrainian State Register of Sanctions API (PR runs only)"
-        if: github.event_name == 'pull_request'
-        continue-on-error: true
-        run: |
-          python3 - <<'PY'
-          import json, urllib.request
-          base = "https://api-drs.nsdc.gov.ua"
-          def get(path):
-              req = urllib.request.Request(base + path, headers={"User-Agent": "roymarket-investigation probe",
-                                                                 "Accept": "application/json"})
-              with urllib.request.urlopen(req, timeout=120) as r:
-                  return r.read()
-          spec = json.loads(get("/swagger-json"))
-          for p in ("/v2/subjects", "/actions/export/{subjectType}/{exportFormat}"):
-              for m, op in spec["paths"][p].items():
-                  print("==", m.upper(), p)
-                  for prm in op.get("parameters", []):
-                      print("   param", json.dumps(prm, ensure_ascii=False)[:400])
-                  print("   200:", json.dumps(op.get("responses", {}).get("200"), ensure_ascii=False)[:600])
-          print("== schemas:", list((spec.get("components") or {}).get("schemas", {}))[:60])
-          for name, sch in (spec.get("components") or {}).get("schemas", {}).items():
-              if "ubject" in name or "dentif" in name:
-                  print("   schema", name, json.dumps(sch, ensure_ascii=False)[:1500])
-          print("== identifiers dictionary:", get("/dictionaries/identifiers").decode()[:1500])
-          PY
-
       - name: Download lists and match
         run: |
           python3 scripts/sanctions_watch.py --raw-dir raw --out sanctions_watch.json \

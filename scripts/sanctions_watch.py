@@ -18,7 +18,12 @@ official list and recorded in `sanctions[]` by hand.
 
 **What it does not cover.** Persons rarely carry an ИНН on a list, so most
 person listings will not match; their absence here proves nothing. Ukraine's
-NSDC register and the GUR portal have no bulk download in this script. Lists
+State Register of Sanctions has an official API (api-drs.nsdc.gov.ua, schema at
+/swagger-json: /v2/subjects?subjectType=legal|individual, and
+/actions/export/{legal|individual}/csv), but its data endpoints answered 401
+Unauthorized to an anonymous request on 02.10.2026: it needs an access key,
+which the user has not decided to apply for. The GUR portal has no bulk
+download. Lists
 are downloaded once per run (one request each), so the weekly schedule stays
 within the live-jobs policy (user go-ahead, 02.10.2026).
 
