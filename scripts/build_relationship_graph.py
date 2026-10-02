@@ -18,7 +18,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 
 from graph_contract import GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, build_view_projections, sale_detail, PARTNER_KIND_EDGE
@@ -29,6 +29,7 @@ ENTITIES = REG / "entities.json"
 PEOPLE = REG / "people.json"
 MILITARY_UNITS = REG / "military_units.json"
 PROGRAMS = REG / "programs.json"
+PRODUCTS = REG / "products.json"
 OUT = REG / "relationship_graph.json"
 VIEWS_OUT = REG / "relationship_graph_views.json"
 
@@ -293,12 +294,22 @@ def _director_temporal_status(entry: dict, current_name: str | None) -> str:
 
 def build_graph(entities: list[dict], people: list[dict],
                  military_units: list[dict] | None = None,
-                 programs: list[dict] | None = None) -> dict:
+                 programs: list[dict] | None = None,
+                 products: list[dict] | None = None) -> dict:
     """Return a deterministic full graph and evidence-first derived views."""
     entities = [e for e in entities if not e.get("_merged_into")]
     people = [p for p in people if not p.get("_merged_into")]
     military_units = military_units or []
     programs = programs or []
+    products = products or []
+    # names a products.json record covers (its versions and accessories): the maker's own products[] leaves for them
+    # are replaced by the one record node
+    record_names: dict[str, set] = defaultdict(set)
+    for rec in products:
+        for nm in [rec.get("name_ru")] + [v.get("name_ru") for v in rec.get("versions") or []] \
+                + [a.get("name_ru") for a in rec.get("accessories") or []]:
+            if nm:
+                record_names[rec["maker"]].add(normalize(re.sub(r"[«»\"]", "", nm)))
     entity_by_ogrn = {e.get("ogrn"): e["slug"] for e in entities if e.get("ogrn")}
     inn_to_entity_slug = {e.get("inn"): e["slug"] for e in entities if e.get("inn")}
     # Every distinct government_contracts[].customer name, longest first so
@@ -602,6 +613,8 @@ def build_graph(entities: list[dict], people: list[dict],
                 continue
             if not name:
                 continue
+            if normalize(re.sub(r"[«»\"]", "", name)) in record_names.get(slug, ()):
+                continue
             base_id = product_id(slug, name)
             seen_product_ids[base_id] += 1
             node_id = product_id(slug, name, seen_product_ids[base_id])
@@ -823,6 +836,41 @@ def build_graph(entities: list[dict], people: list[dict],
                 unresolved.pop(node_id, None)
 
     detached_ids = sorted(set(detached_ids) | held_off)
+    # products.json records (schema v11): one product node per record, storefront nodes and their edges
+    storefront_edges: dict = {}
+    operated: dict = {}
+    for rec in products:
+        maker = rec.get("maker")
+        if maker not in nodes:
+            continue
+        first = (rec.get("versions") or [{}])[0].get("source_id")
+        pid = f"product::{maker}::{rec['slug']}"
+        add_node(pid, kind="product", label=rec.get("name_ru") or rec["slug"], owner_slug=maker, source_id=first,
+                 classification=classify_product(rec.get("name_ru") or "", rec.get("category")))
+        add_edge(maker, pid, "produces", source_id=first)
+        for lst in rec.get("listings") or []:
+            sel = lst.get("seller") or {}
+            sf_label = sel.get("storefront") or lst.get("channel") or "storefront"
+            sf_id = "storefront::" + (re.sub(r"[^a-z0-9а-я]+", "-", normalize(f"{lst.get('channel')} {sf_label}")).strip("-") or "unnamed")
+            add_node(sf_id, kind="storefront", label=sf_label, platform=lst.get("channel"))
+            key = (sf_id, pid)
+            prev = storefront_edges.get(key)
+            if prev is None or (lst.get("as_of") or "") >= (prev.get("as_of") or ""):
+                storefront_edges[key] = lst
+            if sel.get("entity") in nodes:
+                okey = (sf_id, sel["entity"])
+                if okey not in operated or (lst.get("as_of") or "") >= (operated[okey].get("as_of") or ""):
+                    operated[okey] = lst
+    for (sf_id, ent), lst in sorted(operated.items()):
+        add_edge(sf_id, ent, "operated_by", "seller", lst.get("source_id"), lst.get("as_of"), confidence=lst.get("basis"))
+    for (sf_id, pid), lst in sorted(storefront_edges.items()):
+        add_edge(sf_id, pid, "lists", lst.get("channel"), lst.get("source_id"), lst.get("as_of"),
+                 confidence=lst.get("basis"))
+    # entity nodes carry the number of products drawn for them, for a count badge in a viewer
+    produced = Counter(e["source"] for e in edges if e["type"] == "produces")
+    for nid, node in nodes.items():
+        if node["kind"] == "entity":
+            node["product_count"] = produced.get(nid, 0)
     node_list = sorted(nodes.values(), key=lambda node: node["id"])
     edges.sort(key=lambda edge: (
         edge["source"], edge["target"], edge["type"], edge["as_of"] or "",
@@ -838,7 +886,7 @@ def build_graph(entities: list[dict], people: list[dict],
 
     graph = {
         "schema_version": GRAPH_SCHEMA_VERSION,
-        "generated_from": "data/registry/entities.json + people.json + programs.json",
+        "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
         "node_count": len(node_list),
         "edge_count": len(edges),
         "unresolved_count": len(unresolved_list),
@@ -867,7 +915,8 @@ def main() -> None:
     people = json.loads(PEOPLE.read_text(encoding="utf-8"))
     military_units = json.loads(MILITARY_UNITS.read_text(encoding="utf-8")) if MILITARY_UNITS.exists() else []
     programs = json.loads(PROGRAMS.read_text(encoding="utf-8")) if PROGRAMS.exists() else []
-    graph = build_graph(entities, people, military_units, programs)
+    products = json.loads(PRODUCTS.read_text(encoding="utf-8")) if PRODUCTS.exists() else []
+    graph = build_graph(entities, people, military_units, programs, products)
     views = build_views(graph)
     OUT.write_text(json.dumps(graph, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     VIEWS_OUT.write_text(json.dumps(views, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

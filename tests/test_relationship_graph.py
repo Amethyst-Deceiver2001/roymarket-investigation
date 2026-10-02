@@ -278,6 +278,38 @@ class RelationshipGraphTests(unittest.TestCase):
         next(e for e in bad["edges"] if e["type"] == "banks_with")["confidence"] = "rumour"
         self.assertTrue(any("banks_with" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
 
+    def test_product_record_replaces_version_leaves_and_draws_storefronts(self):
+        entities = copy.deepcopy(ENTITIES)
+        entities[0]["products"] = [{"name_ru": "«Х» в.1", "source_id": "s1"}, {"name_ru": "«Х» в.2", "source_id": "s1"},
+                                   {"name_ru": "«Другой»", "source_id": "s1"}]
+        products = [{"slug": "x", "name_ru": "«Х»", "category": "detector", "maker": "core",
+                     "versions": [{"slug": "x1", "name_ru": "«Х» в.1", "source_id": "s1"},
+                                  {"slug": "x2", "name_ru": "«Х» в.2", "source_id": "s1"}],
+                     "listings": [
+                         {"channel": "WB", "seller": {"entity": "ordinary", "storefront": "Shop A"}, "basis": "doc",
+                          "source_id": "s1", "as_of": "2026-01-01"},
+                         {"channel": "WB", "seller": {"entity": "ordinary", "storefront": "Shop A"}, "basis": "doc",
+                          "source_id": "s1", "as_of": "2026-03-01"},
+                         {"channel": "Ozon", "seller": {"entity": None, "storefront": "Dealer B"}, "basis": "doc",
+                          "source_id": "s1", "as_of": "2026-02-01"}]}]
+        graph = build_graph(entities, copy.deepcopy(PEOPLE), None, None, products)
+        labels = sorted(n["label"] for n in graph["nodes"] if n["kind"] == "product")
+        # the two covered version leaves are gone; the record and the uncovered product remain
+        self.assertEqual(["«Другой»", "«Х»"], labels)
+        self.assertEqual(2, next(n["product_count"] for n in graph["nodes"] if n["id"] == "core"))
+        store = {n["label"] for n in graph["nodes"] if n["kind"] == "storefront"}
+        self.assertEqual({"Shop A", "Dealer B"}, store)
+        lists = [e for e in graph["edges"] if e["type"] == "lists"]
+        operated = [e for e in graph["edges"] if e["type"] == "operated_by"]
+        # one lists edge per storefront and product (the latest listing), one operated_by only for a named entity
+        self.assertEqual(2, len(lists))
+        self.assertEqual(["2026-03-01"], sorted(e["as_of"] for e in lists if e["label"] == "WB"))
+        self.assertEqual([("ordinary", "doc")], [(e["target"], e["confidence"]) for e in operated])
+        self.assertEqual([], validate_graph(graph, entities, PEOPLE, SOURCES))
+        bad = copy.deepcopy(graph)
+        next(n for n in bad["nodes"] if n["id"] == "core")["product_count"] = 9
+        self.assertTrue(any("product_count" in m for m in validate_graph(bad, entities, PEOPLE, SOURCES)))
+
     def test_candidate_identities_never_become_edges_or_nodes(self):
         entities = copy.deepcopy(ENTITIES)
         before = build_graph(copy.deepcopy(ENTITIES), copy.deepcopy(PEOPLE))

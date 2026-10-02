@@ -138,6 +138,7 @@ def validate_generated_graph(
     sources: list[dict],
     military_units: list[dict] | None = None,
     programs: list[dict] | None = None,
+    products: list[dict] | None = None,
 ) -> list[str]:
     """Check artifacts against an independent deterministic registry rebuild."""
     graph_errors = validate_graph(graph, entities, people, sources)
@@ -148,7 +149,7 @@ def validate_generated_graph(
     elif not graph_errors:
         errors.extend(validate_views(graph, graph_views))
 
-    expected_graph = build_graph(entities, people, military_units, programs)
+    expected_graph = build_graph(entities, people, military_units, programs, products)
     if graph != expected_graph:
         errors.append(
             "relationship_graph.json does not exactly match the deterministic "
@@ -646,7 +647,24 @@ def main() -> int:
         where = f"products[{slug}]"
         if pr.get("kind") != "product":
             errors.append(f"{where}.kind must be 'product'")
-        if pr.get("maker") not in live_slugs:
+        co = pr.get("clone_of")
+        if co is not None:
+            # clone_of (2026-10-02): a product stated, by a cited source, to copy another. Never inferred from a
+            # shared category: a competitor in the same class is not a clone. The maker may be unresolved only here.
+            if not isinstance(co, dict) or not co.get("product"):
+                errors.append(f"{where}.clone_of needs a product (a slug in products.json, or the original's name)")
+            else:
+                if co.get("status") not in ("alleged", "shown", "denied"):
+                    errors.append(f"{where}.clone_of.status must be alleged / shown / denied")
+                if co.get("asserted_by") not in ASSERTED_BY:
+                    errors.append(f"{where}.clone_of.asserted_by must be one of {sorted(ASSERTED_BY)}")
+                if co.get("source_id") not in source_ids:
+                    errors.append(f"{where}.clone_of.source_id must be a known source")
+                if co["product"] in {x.get("slug") for x in products} and co["product"] == slug:
+                    errors.append(f"{where}.clone_of points at itself")
+        if pr.get("maker") is None and co is not None:
+            pass
+        elif pr.get("maker") not in live_slugs:
             errors.append(f"{where}.maker {pr.get('maker')!r} is not a live entity")
         versions = set()
         for j, v in enumerate(pr.get("versions") or []):
@@ -906,7 +924,9 @@ def main() -> int:
             errors.extend(validate_generated_graph(
                 graph, graph_views, entities, people or [], sources or [], military_units,
                 json.loads((REG / "programs.json").read_text(encoding="utf-8"))
-                if (REG / "programs.json").exists() else []))
+                if (REG / "programs.json").exists() else [],
+                json.loads((REG / "products.json").read_text(encoding="utf-8"))
+                if (REG / "products.json").exists() else []))
     else:
         errors.append("relationship_graph.json missing — run "
                       "scripts/build_relationship_graph.py")

@@ -10,14 +10,14 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-GRAPH_SCHEMA_VERSION = 10
+GRAPH_SCHEMA_VERSION = 11
 NODE_KINDS = {"entity", "person", "product", "unresolved",
-              "government_customer", "military_unit", "program", "event", "group"}
+              "government_customer", "military_unit", "program", "event", "group", "storefront"}
 EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
               "procures", "confirmed_field_use", "cbst_tie", "family_tie",
               "sells_for", "operates", "organises", "resident_of",
               "participated_in", "part_of", "member_of",
-              "banks_with", "acquiring_via", "ships_via"}
+              "banks_with", "acquiring_via", "ships_via", "lists", "operated_by"}
 TEMPORAL_STATUSES = {"current", "historical", "unknown"}
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 UNIT_TYPES = {"army", "brigade", "regiment", "battalion", "detachment",
@@ -27,7 +27,7 @@ UNIT_DESIGNATION_CONFIDENCE = {"named", "descriptive", "grouping"}
 
 NODE_FIELDS = {
     "entity": {"id", "kind", "label", "name_latin", "inn", "tier",
-               "sanctioned", "legal_form", "degree", "variant"},
+               "sanctioned", "legal_form", "degree", "variant", "product_count"},
     "person": {"id", "kind", "label", "name_latin", "sanctioned", "degree"},
     "product": {"id", "kind", "label", "owner_slug", "source_id",
                 "classification", "degree"},
@@ -38,6 +38,7 @@ NODE_FIELDS = {
     "program": {"id", "kind", "label", "subtype", "degree"},
     "event": {"id", "kind", "label", "subtype", "degree"},
     "group": {"id", "kind", "label", "subtype", "degree"},
+    "storefront": {"id", "kind", "label", "platform", "degree"},
 }
 EDGE_FIELDS = {
     "source", "target", "type", "label", "source_id", "as_of", "weight",
@@ -126,7 +127,14 @@ MEMBERSHIP_ROLES = {"resident", "accelerator_participant", "graduate", "applican
                     "sponsor", "attendee"}
 STRUCTURAL_NO_BASIS = {"part_of"}
 BASIS_EDGE_TYPES = {"sells_for", "operates", "organises", "resident_of", "participated_in", "member_of",
-                    "banks_with", "acquiring_via", "ships_via"}
+                    "banks_with", "acquiring_via", "ships_via", "lists", "operated_by"}
+# Product records and storefronts (added 2026-10-02, schema v11), from data/registry/products.json. A product record
+# is ONE product node however many dealers sell it; the per-version leaves of the maker's products[] that the record
+# covers are not drawn separately. A storefront node is a store account on a platform or a seller's own site, with
+# no legal identity of its own: `lists` (storefront -> product, label = channel) says it offers the product, and
+# `operated_by` (storefront -> entity) is drawn only when the listing names a registry entity as the seller. A dealer
+# with no registry entity stays a storefront. Both are graded like sells_for. Entity nodes carry `product_count`
+# (the products drawn for them) so a viewer can show a count badge and expand on demand instead of a leaf cloud.
 # Platform partners (added 2026-10-02, schema v10): an entity's `platform_partners[]` (usually the platform operator)
 # names the bank, the card acquirer and the logistics partner it works through, each as an edge to that partner's
 # entity: kind bank -> banks_with, acquirer -> acquiring_via, logistics -> ships_via. Graded like sells_for. A
@@ -349,6 +357,11 @@ def validate_graph(
                 _error(errors, f"{where} {kind} node id must start with '{kind}::'")
             if node.get("subtype") not in PROGRAM_SUBTYPES[kind]:
                 _error(errors, f"{where}.subtype {node.get('subtype')!r} is not valid for kind {kind}")
+        elif kind == "storefront":
+            if not node_id.startswith("storefront::"):
+                _error(errors, f"{where} storefront node id must start with 'storefront::'")
+            if not node.get("platform"):
+                _error(errors, f"{where}.platform is required on a storefront")
         elif kind == "military_unit":
             if not node_id.startswith("unit::"):
                 _error(errors, f"{where} military_unit node id must start with 'unit::'")
@@ -423,6 +436,8 @@ def validate_graph(
                 "banks_with": ({"entity"}, {"entity"}),
                 "acquiring_via": ({"entity"}, {"entity"}),
                 "ships_via": ({"entity"}, {"entity"}),
+                "lists": ({"storefront"}, {"product"}),
+                "operated_by": ({"storefront"}, {"entity"}),
             }[etype]
             if src_kind not in permitted[0] or dst_kind not in permitted[1]:
                 _error(errors, f"{where} has invalid {src_kind}->{dst_kind} endpoints for {etype}")
@@ -466,7 +481,10 @@ def validate_graph(
             if sid is None or not _is_date(edge.get("as_of")):
                 _error(errors, f"{where} {status} status requires a cited YYYY-MM-DD as_of")
 
+    produced = Counter(e.get("source") for e in edges if isinstance(e, dict) and e.get("type") == "produces")
     for node_id, node in node_by_id.items():
+        if node.get("kind") == "entity" and node.get("product_count") != produced.get(node_id, 0):
+            _error(errors, f"node {node_id!r} product_count does not match its produces edges")
         if node.get("degree") != observed_degree[node_id]:
             _error(errors, f"node {node_id!r} degree does not match its incident edges")
 
