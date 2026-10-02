@@ -63,7 +63,18 @@ after the design system redo and a new landing page.
    provisional until the unit-naming decision, and `docs/` should self-host the
    fonts before the public cutoff. The old system is archived in
    `data/sources/ARTIFACT_20260921_roymarket-design-system/`.
-3. **New landing page** on the new design system, after track V's model and components (below).
+3. **New landing page** (first draft 02.10.2026, private preview artifact
+   W5m6W6w663RjwfqqTEjQ6z). `exhibits/build_landing.py` (`--preview` links chain
+   views to their artifacts; default links are relative, for `docs/`). It opens
+   with Сидякин's «военный маркетплейс» line (post 618, verbatim). Then come
+   ЦБСТ's hub card and a graded list of who stands behind it: the founders, the
+   МПТМ stake from the 2025 Минюст report, the operator offer and the Наша Правда
+   handovers. Next are one card per chain view, the network count (computed:
+   ties by grade, number sanctioned), the evidence key, method and limits.
+   Citations reuse the chain view's `describe_source()`, which gained rules for
+   Wayback captures and Минюст reports. Not yet published to `docs/`: that
+   replaces the holding page and needs the user's go-ahead, with self-hosted
+   fonts first.
 4. **B4 citation layer.** `inventory_sources.py` derives `title` and
    `public_url` once per source (Telegram header → t.me link, page canonical
    URL, zakupki registry number). 8,881 sources have neither today. The chain
@@ -113,8 +124,8 @@ media files mostly not linked to a record, and no video file at all.
    (ok, excerpt-only, internal) and `redact`. `check_registry.py` validates
    the record.
 2. **Backfill** (partly done 2026-10-02): 58 media records written, each image
-   looked at before its blur flag was set; three faces were blurred in
-   `docs/images/`. Not migrated: 7 images with no archived original (see
+   looked at before its blur flag was set. Three faces first blurred in
+   `docs/images/` were restored under the corrected faces rule. Not migrated: 7 images with no archived original (see
    `notes/media_backfill_20261002.md`). Still open: linking the 76 orphaned
    Telegram media files, and frame timestamps for 13 stills.
 3. **Capture.** `tg_media_pull` already covers Telegram. A downloader for
@@ -147,8 +158,6 @@ Decisions (user, 2026-10-02):
   course participants. Only clearly uninvolved bystanders are blurred. Nobody
   is named from a face. (The first reading, blur everyone without a person
   record, was wrong and has been reversed in the images.)
-  A face is shown only for a person with a person record (a person of
-  interest).
 - **Facility imagery:** Google Earth and Yandex Maps screenshots for now, each
   credited with its provider and imagery date. The terms-of-use risk is
   accepted for the preview stage and re-checked before the public cutoff.

@@ -131,6 +131,20 @@ def describe_source(s):
             return (f"Trademark registration no. {m.group(1)}, Rospatent (FIPS)",
                     f"https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber={m.group(1)}")
         return "Trademark record, Rospatent (FIPS)", None
+    if s.get("type") == "minjust":
+        return f"Activity report of the non-profit to the Ministry of Justice, for {(s.get('as_of') or '')[:4]}", None
+    if prefix == "WAYBACK":
+        try:
+            head = (REPO / s["path"]).read_text(errors="ignore")[:400000]
+        except OSError:
+            head = ""
+        m = re.search(r'__wm\.wombat\("([^"]+)","(\d{14})"', head)
+        t = re.search(r"<title>([^<]+)", head)
+        title = f"«{t.group(1).strip()}», " if t else ""
+        if m:
+            return (f"{title}web page archived by the Internet Archive, {ru_date(f'{m.group(2)[:4]}-{m.group(2)[4:6]}-{m.group(2)[6:8]}')}",
+                    f"https://web.archive.org/web/{m.group(2)}/{m.group(1)}")
+        return f"{title}web page archived by the Internet Archive, {date}", None
     if prefix == "OPENSANCTIONS":
         return f"Sanctions-list entries compiled by OpenSanctions, checked {date}", None
     if prefix == "GUR":

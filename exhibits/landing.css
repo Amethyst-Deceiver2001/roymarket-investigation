@@ -1,0 +1,46 @@
+/* Landing page layout. Tokens and shared components come from design/roymarket.css, inlined before this file. */
+.top { padding-top: 40px; }
+main.rm-page { display: flex; flex-direction: column; gap: var(--space-6); padding-bottom: 64px; }
+main section > .rm-h2 { margin-top: 0; }
+.lede { max-width: var(--measure); color: var(--ink-2); margin: 0 0 var(--space-4); }
+
+.lead-quote { max-width: 720px; margin: 0; }
+
+.hub-grid { display: grid; grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: var(--space-5) var(--space-6); align-items: start; }
+.hub-grid .rm-card .row { margin: 6px 0; font-size: var(--t-note); color: var(--ink-2); }
+
+.ledger { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.ledger li { display: grid; grid-template-columns: minmax(120px, 11rem) 56px minmax(0, 1fr) auto; gap: 4px 14px;
+  align-items: baseline; padding: 12px 0; border-top: 1px solid var(--rule-soft); font-size: var(--t-body); }
+.ledger li:first-child { border-top: 0; padding-top: 2px; }
+.ledger .from { font: 500 16px/1.3 var(--font-serif); color: var(--ink); }
+.ledger .ln { align-self: center; }
+.ledger .what { color: var(--ink-2); }
+.ledger .rm-grade { grid-column: 4; grid-row: 1; justify-self: end; }
+
+.chains { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--space-4); align-items: start; }
+.chain-card .rm-name a { color: inherit; text-decoration: none; }
+.chain-card .rm-name a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+.chain-card .counts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 12px 0 8px; }
+.chain-card .counts div { display: flex; flex-direction: column-reverse; gap: 2px; }
+.chain-card .counts dt { font: 600 10px/1.25 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.chain-card .counts dd { margin: 0; font: 500 24px/1 var(--font-serif); font-variant-numeric: tabular-nums; color: var(--ink); }
+.chain-card .go { margin: 8px 0 0; font-size: var(--t-note); }
+.chain-card .go a { color: var(--accent); }
+.chains .absent p { margin: 4px 0 0; font-size: var(--t-note); color: var(--ink-3); }
+
+.read .rm-legend { flex-direction: column; align-items: flex-start; gap: 10px; }
+.read .rm-legend li { display: grid; grid-template-columns: 34px 9.5rem minmax(0, 1fr); gap: 12px; align-items: center; max-width: 90ch; }
+.read .rm-legend .rm-grade { justify-self: start; }
+.read p { max-width: var(--measure); color: var(--ink-2); }
+
+@media (max-width: 760px) {
+  .hub-grid { grid-template-columns: minmax(0, 1fr); }
+  .ledger li { grid-template-columns: minmax(0, 1fr) auto; }
+  .ledger .ln { display: none; }
+  .ledger .what { grid-column: 1 / -1; }
+  .ledger .rm-grade { grid-column: 2; grid-row: 1; }
+  .chain-card .counts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .read .rm-legend li { grid-template-columns: 34px minmax(0, 1fr); }
+  .read .rm-legend li > :last-child { grid-column: 1 / -1; }
+}
