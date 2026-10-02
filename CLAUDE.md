@@ -312,6 +312,8 @@ extend the contract there first when adding a genuinely new edge type or
 field, the same way `entities.json`'s own field additions get documented
 above.
 
+**`grade` on every edge** (schema v12, B1, 2026-10-02): doc / rep / open, the reader's three grades. It is derived, never hand-set: from the edge's `confidence` via `CONFIDENCE_GRADE`, else from its source's filename prefix via `SOURCE_PREFIX_GRADE` in `graph_contract.py`, else open. A party's own posts, site and listings grade rep. A new kind of source file needs a row in that table. `build_graph(..., sources)` takes `sources.json` for this.
+
 **`cbst_tie`** (added 2026-09-15, schema v4) is an entity→ЦБСТ edge, one
 per entity whose own `cbst_tie` field (a normal `entities.json` field, set
 via `corrections_entities.json` like any other human-conclusion field) has

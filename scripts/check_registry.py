@@ -151,7 +151,7 @@ def validate_generated_graph(
     elif not graph_errors:
         errors.extend(validate_views(graph, graph_views))
 
-    expected_graph = build_graph(entities, people, military_units, programs, products)
+    expected_graph = build_graph(entities, people, military_units, programs, products, sources)
     if graph != expected_graph:
         errors.append(
             "relationship_graph.json does not exactly match the deterministic "

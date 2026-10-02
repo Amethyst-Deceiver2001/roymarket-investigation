@@ -5,7 +5,11 @@ generators were archived (scripts/archive/); the chain view and any new builder 
 them from here.
 """
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from graph_contract import CONFIDENCE_GRADE  # noqa: E402
 
 TYPE_LABELS = {
     "EGRUL": "EGRUL extract",
@@ -68,16 +72,7 @@ def design_head(page_css: str = "", fonts_href: str | None = None) -> str:
 # Reader grades (design/README.md). Every registry confidence vocabulary maps here, in one table,
 # so a page never decides a grade on its own. Values do not collide across vocabularies.
 READER_GRADE_LABELS = {"doc": "Documented", "rep": "Reported", "open": "Not documented"}
-READER_GRADE = {
-    # basis on sells_for / memberships / participations / platform_partners; listings
-    "doc": "doc", "press": "rep", "inferred": "open",
-    # cbst_tie.confidence
-    "t-doc": "doc", "t-open": "rep",
-    # relation-envelope and delivery credibility
-    "corroborated": "rep", "single": "rep",
-    # family_of confidence
-    "confirmed": "doc", "probable": "rep", "unconfirmed": "open",
-}
+READER_GRADE = CONFIDENCE_GRADE   # one table, in graph_contract.py (B1)
 
 
 def reader_grade(value) -> str:

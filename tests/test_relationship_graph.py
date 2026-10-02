@@ -372,5 +372,21 @@ class RelationshipGraphTests(unittest.TestCase):
         self.assertIn("Live-registry parity: 2/2 entities; 1/1 people", first)
 
 
+    def test_every_edge_is_graded_from_its_document(self):
+        """B1: a register extract grades doc, a company's own post rep, no source open; a confidence wins."""
+        from graph_contract import source_grade
+        self.assertEqual(source_grade({"path": "data/sources/EGRUL_7802942873_20260907_x.pdf"}), "doc")
+        self.assertEqual(source_grade({"path": "data/sources/ul-1247700190430-20260815.pdf"}), "doc")
+        self.assertEqual(source_grade({"path": "data/sources/A40-211563-2022_20221109_Opredelenie.pdf"}), "doc")
+        # a Telegram post the content scan typed "court" is still the party's own word
+        self.assertEqual(source_grade({"path": "data/sources/TGPOST_20250101_x-1.txt", "type": "court"}), "rep")
+        self.assertEqual(source_grade({"path": "data/sources/PRESS_20250101_x.html"}), "rep")
+        self.assertEqual(source_grade(None), "open")
+        for edge in self.graph["edges"]:
+            self.assertIn(edge["grade"], {"doc", "rep", "open"})
+            if not edge["source_id"] and not edge["confidence"]:
+                self.assertEqual(edge["grade"], "open")
+
+
 if __name__ == "__main__":
     unittest.main()

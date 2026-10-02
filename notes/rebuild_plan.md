@@ -35,7 +35,7 @@ seven case pages, the v8–v11 model. The new direction:
    steps out), not the front door.
 
 The working model with the reasoning, status and dropped list is the
-Ecosystem Model artifact (LBvgQ2vmVfDxKjTwesLuEe, v5).
+Ecosystem Model artifact (LBvgQ2vmVfDxKjTwesLuEe, v6).
 
 ## Ordered work
 
@@ -175,9 +175,15 @@ Decisions (user, 2026-10-02):
 
 ### B. Model (makes chain views possible beyond «Булат»)
 
-1. **B1 edge grades.** Derive the grade from the source type in one table in
-   `graph_contract.py`; 2,034 of 2,178 edges are ungraded, 2,009 of them have a
-   source.
+1. **B1 edge grades** (done 02.10.2026, schema v12). Every edge carries a
+   `grade` of doc, rep or open. It comes from the edge's own `confidence`
+   where it has one (`graph_contract.CONFIDENCE_GRADE`, also used by
+   `display_helpers.READER_GRADE`). Otherwise it comes from the kind of document
+   its source is (`SOURCE_PREFIX_GRADE`, filename prefix first, because
+   content-guessed types misfire), or open with no source. Result: 1,789 doc,
+   355 rep, 34 open. A party's own posts, site and listings are rep. The
+   landing legend and its rows use the same table. The public graph explorer
+   still embeds the v11 data: refresh it with B6.
 2. **B2 contracts to products.** `government_contracts[].products[]` (record,
    version, quantity, unit price from the specification); 0 of 479 contracts
    have one. `check_registry.py` warns when a supplier delivers another maker's

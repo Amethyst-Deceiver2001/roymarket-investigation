@@ -21,7 +21,7 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from graph_contract import GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, build_view_projections, sale_detail, PARTNER_KIND_EDGE
+from graph_contract import CONFIDENCE_GRADE, GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, source_grade, build_view_projections, sale_detail, PARTNER_KIND_EDGE
 
 REPO = Path(__file__).resolve().parent.parent
 REG = REPO / "data" / "registry"
@@ -30,6 +30,7 @@ PEOPLE = REG / "people.json"
 MILITARY_UNITS = REG / "military_units.json"
 PROGRAMS = REG / "programs.json"
 PRODUCTS = REG / "products.json"
+SOURCES = REG / "sources.json"
 OUT = REG / "relationship_graph.json"
 VIEWS_OUT = REG / "relationship_graph_views.json"
 
@@ -295,8 +296,12 @@ def _director_temporal_status(entry: dict, current_name: str | None) -> str:
 def build_graph(entities: list[dict], people: list[dict],
                  military_units: list[dict] | None = None,
                  programs: list[dict] | None = None,
-                 products: list[dict] | None = None) -> dict:
-    """Return a deterministic full graph and evidence-first derived views."""
+                 products: list[dict] | None = None,
+                 sources: list[dict] | None = None) -> dict:
+    """Return a deterministic full graph and evidence-first derived views.
+    sources (sources.json) lets every edge be graded from its document's kind (B1); without it an edge
+    with a source and no confidence is graded "rep"."""
+    src_by_id = {s["id"]: s for s in sources or []}
     entities = [e for e in entities if not e.get("_merged_into")]
     people = [p for p in people if not p.get("_merged_into")]
     military_units = military_units or []
@@ -436,6 +441,9 @@ def build_graph(entities: list[dict], people: list[dict],
                 "label": label, "source_id": source_id, "as_of": as_of,
                 "weight": weight, "temporal_status": temporal_status,
                 "confidence": confidence, "detail": detail,
+                "grade": (CONFIDENCE_GRADE.get(confidence, "open") if confidence
+                          else source_grade(src_by_id.get(source_id)) if src_by_id and source_id
+                          else "rep" if source_id else "open"),
             })
 
     # every (seller, maker) pair declared in a sells_for[] field, so an older prose "dealer" related
@@ -916,7 +924,8 @@ def main() -> None:
     military_units = json.loads(MILITARY_UNITS.read_text(encoding="utf-8")) if MILITARY_UNITS.exists() else []
     programs = json.loads(PROGRAMS.read_text(encoding="utf-8")) if PROGRAMS.exists() else []
     products = json.loads(PRODUCTS.read_text(encoding="utf-8")) if PRODUCTS.exists() else []
-    graph = build_graph(entities, people, military_units, programs, products)
+    sources = json.loads(SOURCES.read_text(encoding="utf-8")) if SOURCES.exists() else []
+    graph = build_graph(entities, people, military_units, programs, products, sources)
     views = build_views(graph)
     OUT.write_text(json.dumps(graph, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     VIEWS_OUT.write_text(json.dumps(views, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

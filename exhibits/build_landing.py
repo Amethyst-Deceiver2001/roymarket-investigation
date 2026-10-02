@@ -20,6 +20,7 @@ sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, Chain, cap, esc, load, money  # noqa: E402
 from display_helpers import design_head, display_name, reader_grade, ru_date  # noqa: E402
+from graph_contract import source_grade  # noqa: E402
 
 MPTM, NP, PSB, SIDYAKIN = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb", "aleksandr-sidyakin"
 # One entry per published chain view: product slug -> private preview Artifact (until the public cutoff).
@@ -54,6 +55,10 @@ class Landing(Chain):
                  if r.get("entity_slug") == CBST and "Secretary" in (r.get("title") or ""))
         return r
 
+    def g(self, sid):
+        """A row's grade from its document's kind: the same table that grades every graph edge (B1)."""
+        return source_grade(self.src.get(sid))
+
     def hist(self, slug, field, value_part):
         return next((h for h in self.ents[slug].get(field) or [] if value_part in (h.get("value") or "")), {})
 
@@ -64,16 +69,16 @@ class Landing(Chain):
         psb_f = self.hist(CBST, "founders_history", "ПСБ")
         reg = min((h["as_of"] for h in c.get("founders_history") or [] if h.get("as_of")), default=None)
         ur = self.claim(CBST, "Учредители ЦБСТ")
-        rows.append(("Партия «Единая Россия»", "doc",
+        rows.append(("Партия «Единая Россия»", self.g(ur["source_id"]),
                      "named by ЦБСТ itself as one of its three founders, with ПСБ and Наша Правда; "
                      "the company register lists only those two", self.ref(ur["source_id"]), None))
         sid = self.board_role(SIDYAKIN)
-        rows.append((self.people[SIDYAKIN]["fio_ru"].split()[0] + " " + self.people[SIDYAKIN]["fio_ru"].split()[2], "doc",
+        rows.append((self.people[SIDYAKIN]["fio_ru"].split()[0] + " " + self.people[SIDYAKIN]["fio_ru"].split()[2], self.g(sid.get("source_id")),
                      f"secretary of ЦБСТ's supervisory board since {ru_date(sid['from'])}, while head of United Russia's "
                      "central executive committee", self.ref(sid.get("source_id")), None))
-        rows.append((self.ents[NP], "doc", f"co-founder of ЦБСТ since its registration on {ru_date(reg)}",
+        rows.append((self.ents[NP], self.g(np_f.get("source_id")), f"co-founder of ЦБСТ since its registration on {ru_date(reg)}",
                      self.ref(np_f.get("source_id")), self.ents[CBST]))
-        rows.append((self.ents[PSB], "doc", f"co-founder of ЦБСТ since {ru_date(psb_f.get('as_of'))}",
+        rows.append((self.ents[PSB], self.g(psb_f.get("source_id")), f"co-founder of ЦБСТ since {ru_date(psb_f.get('as_of'))}",
                      self.ref(psb_f.get("source_id")), self.ents[CBST]))
         sub = next(s for s in c.get("subsidiaries") or [] if s["slug"] == MPTM)
         tie = self.ents[MPTM].get("cbst_tie") or {}
@@ -84,7 +89,7 @@ class Landing(Chain):
                      f"lists ООО «МПТМ», in its report for 2025, as a company it has taken part in since {ru_date(sub['as_of'])}; "
                      "the size of its share is not stated",
                      self.ref(sub.get("source_id")), self.ents[MPTM]))
-        rows.append((self.ents[MPTM], "doc", "the operator of the РОЙ.МАРКЕТ marketplace, by the platform's own supplier offer",
+        rows.append((self.ents[MPTM], self.g(offer), "the operator of the РОЙ.МАРКЕТ marketplace, by the platform's own supplier offer",
                      self.ref(offer), None))
         ds = [d for d in self.p.get("deliveries") or [] if d.get("donor") == NP]
         if ds:
@@ -208,8 +213,8 @@ def render(preview: bool, out: Path):
   <section class="read" aria-labelledby="h-read">
     <h2 class="rm-h2" id="h-read">How to read the evidence</h2>
     <ul class="rm-legend">
-      <li>{ln("doc", 34)} <span class="rm-grade doc">Documented</span> <span>A primary document shows it: a register extract, a contract, an annual filing, a post by the party itself.</span></li>
-      <li>{ln("rep", 34)} <span class="rm-grade rep">Reported</span> <span>One party's own word, or the press. Donors' handover posts are graded here until a second source confirms them.</span></li>
+      <li>{ln("doc", 34)} <span class="rm-grade doc">Documented</span> <span>A primary document shows it: a register extract, a state contract, an annual filing, a trademark or patent record.</span></li>
+      <li>{ln("rep", 34)} <span class="rm-grade rep">Reported</span> <span>One party's own word (its posts, its website, its listings), or the press. Donors' handover posts are graded here until a second source confirms them.</span></li>
       <li>{ln("open", 34)} <span class="rm-grade open">Not documented</span> <span>The link must exist, but no document on file shows it.</span></li>
     </ul>
     <p>Red marks only a sanctions listing, and always names the regimes. Names appear as registered, in Russian; a

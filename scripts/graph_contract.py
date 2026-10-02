@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-GRAPH_SCHEMA_VERSION = 11
+GRAPH_SCHEMA_VERSION = 12
 NODE_KINDS = {"entity", "person", "product", "unresolved",
               "government_customer", "military_unit", "program", "event", "group", "storefront"}
 EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
@@ -42,8 +42,51 @@ NODE_FIELDS = {
 }
 EDGE_FIELDS = {
     "source", "target", "type", "label", "source_id", "as_of", "weight",
-    "temporal_status", "confidence", "detail",
+    "temporal_status", "confidence", "detail", "grade",
 }
+# B1 (schema v12): every edge carries a reader grade, doc / rep / open, the same three a page shows.
+# An edge with its own confidence is graded from it (display_helpers.READER_GRADE). Every other edge
+# is graded from the kind of document its source_id points at, through this one table; an edge with
+# no source is "open". The filename prefix decides first, because a content-guessed source type can be
+# wrong (Telegram posts typed "court"); the type is the fallback. Nobody grades an edge by hand.
+EDGE_GRADES = {"doc", "rep", "open"}
+# Every registry confidence value -> reader grade, in one table (display_helpers.READER_GRADE reads it).
+CONFIDENCE_GRADE = {
+    "doc": "doc", "press": "rep", "inferred": "open",          # basis (sells_for, memberships, partners)
+    "t-doc": "doc", "t-open": "rep",                            # cbst_tie
+    "corroborated": "rep", "single": "rep",                     # relation-envelope and delivery credibility
+    "confirmed": "doc", "probable": "rep", "unconfirmed": "open",   # family_of
+}
+SOURCE_PREFIX_GRADE = {
+    # registers, filings, official records: a document shows it
+    "EGRUL": "doc", "EGRULAPI": "doc", "EGRIP": "doc", "UD": "doc", "BFO": "doc", "РЕСУРС": "doc",
+    "ZAKUPKI": "doc", "PATENT": "doc", "TRADEMARK": "doc", "ROSPATENT": "doc", "GISP": "doc", "FNS": "doc",
+    "PBNALOG": "doc", "FEDRESURS": "doc", "COURT": "doc", "NSPD": "doc", "RKN": "doc", "MCHS": "doc",
+    "FSA": "doc", "PP719": "doc", "CERT": "doc", "PROVERKI": "doc", "ROM": "doc", "DATASET": "doc",
+    "AERONEXT": "doc", "EU": "doc", "NSDC": "doc", "GUR": "doc", "FUNDNTI": "doc", "MINPROMTORG": "doc",
+    # the press, aggregators and third-party compilations: reported
+    "PRESS": "rep", "TRANSCRIPT": "rep", "DOSSIER": "rep", "RUSPROFILE": "rep", "CHECKO": "rep",
+    "ALEPH": "rep", "OPENSANCTIONS": "rep", "RUPEP": "rep", "PEP": "rep",
+    # a party's own posts, pages and listings: its own word, reported
+    "TGPOST": "rep", "TGWEB": "rep", "TG": "rep", "TGMEDIA": "rep", "TGFILE": "rep", "TGUSERS": "rep",
+    "WEB": "rep", "SITE": "rep", "WEBCAPTURE": "rep", "WAYBACK": "rep", "CATALOG": "rep", "OZON": "rep",
+    "WILDBERRIES": "rep", "NALETAY": "rep", "YOUTUBE": "rep", "IMG": "rep",
+}
+SOURCE_TYPE_GRADE = {"egrul": "doc", "egrul_api": "doc", "bfo": "doc", "ustav": "doc", "minjust": "doc",
+                     "court": "doc", "government_contract": "doc", "press": "rep", "transcript": "rep"}
+
+
+def source_grade(src: dict | None) -> str:
+    """doc / rep / open for one sources.json record (None: no source -> open)."""
+    if not src:
+        return "open"
+    name = (src.get("path") or "").rsplit("/", 1)[-1]
+    if name.startswith("ul-") or name.startswith("ip-"):
+        return "doc"
+    if name[:1] in "AА" and name[1:2].isdigit():
+        return "doc"                      # arbitration court filings, A40-…
+    g = SOURCE_PREFIX_GRADE.get(name.split("_", 1)[0])
+    return g or SOURCE_TYPE_GRADE.get(src.get("type") or "", "rep")
 # Confidence vocabulary carried over verbatim from entities.json's own
 # cbst_tie.confidence field (t-doc/t-open/press are positive-tie values;
 # "none"/"not_established" mean no tie and are never emitted as edges).
@@ -408,6 +451,8 @@ def validate_graph(
             continue
         if set(edge) != EDGE_FIELDS:
             _error(errors, f"{where} has invalid field set")
+        if edge.get("grade") not in EDGE_GRADES:
+            _error(errors, f"{where}.grade must be one of {sorted(EDGE_GRADES)}, got {edge.get('grade')!r}")
         src, dst = edge.get("source"), edge.get("target")
         if src not in node_by_id or dst not in node_by_id:
             _error(errors, f"{where} endpoint must reference a graph node")
