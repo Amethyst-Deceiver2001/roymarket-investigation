@@ -61,6 +61,14 @@ def main():
     assert not any(f["code"].startswith("channel_") or f["code"] == "development"
                    for row in bare["rows"] for f in row["flags"] if row["kind"] != "channel")
 
+    # The pull queue is capped per registry and ends with the local ingest steps.
+    q = sb.pull_queue(board, cap=3)
+    bfo_line = [l for l in q.splitlines() if l.startswith("python3 scripts/bfo_pull.py")]
+    assert len(bfo_line) == 1 and bfo_line[0].count("--inn") <= 3, q
+    assert q.rstrip().endswith("check_registry.py"), q
+    # A company whose record says it no longer exists is not asked for new accounts.
+    assert not any(f["code"].startswith("bfo") for f in r["ao-borey-absorbed-no-longer-exists"]["flags"])
+
     # Every flag kind is a declared one.
     assert {f["kind"] for row in board["rows"] for f in row["flags"]} <= set(sb.KINDS)
     print("ok: status_board fixtures pass")

@@ -85,12 +85,27 @@ def parse_date(v):
     if not v or not isinstance(v, str):
         return None
     m = re.match(r"(\d{4})-(\d{2})-(\d{2})", v)
-    if not m:
-        return None
+    if m:
+        y, mo, d = m[1], m[2], m[3]
+    else:
+        m = re.match(r"(\d{2})\.(\d{2})\.(\d{4})", v)
+        if not m:
+            return None
+        d, mo, y = m[1], m[2], m[3]
     try:
-        return date(int(m[1]), int(m[2]), int(m[3]))
+        return date(int(y), int(mo), int(d))
     except ValueError:
         return None
+
+
+DEFUNCT_WORDS = ("no longer exists", "absorbed", "liquidated", "ceased", "прекрат", "ликвидир", "исключ")
+
+
+def is_defunct(e):
+    """A record that says in its own name or status that the company is gone:
+    no new accounts or register changes are expected, so those flags are skipped."""
+    hay = " ".join(str(e.get(k) or "") for k in ("name_ru", "status")).lower()
+    return any(w in hay for w in DEFUNCT_WORDS)
 
 
 def flag(kind, code, text, **extra):
@@ -276,11 +291,11 @@ class Board:
                 fl.append(flag("pull", "egrul_missing", f"No {reg} extract on file"))
             else:
                 last = max(dated) if dated else None
-                if last and self.age(last) > EGRUL_STALE_DAYS:
+                if last and self.age(last) > EGRUL_STALE_DAYS and not is_defunct(e):
                     fl.append(flag("stale", "egrul_stale", f"Latest {reg} extract is {self.age(last)} days old",
                                    as_of=last.isoformat(), age_days=self.age(last)))
             fl += self.screen_flags(e)
-            if form != "ИП":
+            if form != "ИП" and not is_defunct(e):
                 fl += self.bfo_flags(e)
         # Screening hits nobody has reviewed.
         n_risk = risky_matches(e)
@@ -494,6 +509,48 @@ def summary(board):
     return "\n".join(lines)
 
 
+PULL_CAP = 8  # per registry per day: "a handful" in the pull scripts' own policy wording
+
+
+def pull_queue(board, cap=PULL_CAP):
+    """Shell commands that pull what the board flags as missing or stale.
+
+    Registry sites are unreachable from the cloud, so this is run on the
+    user's machine (the daily digest hands it to the main coding session, at
+    user direction 02.10.2026). Capped per registry so each day stays a
+    handful of lookups; the rest wait for the next day, most important tier
+    first. Screens are left out: screen_*.py have no per-record selector.
+    A pulled file is a document to read, not a fact: wiring into the registry
+    still goes through corrections_*.json after reading it (CLAUDE.md hard rule).
+    """
+    rank = {t: i for i, t in enumerate(TIER_ORDER)}
+    ents = sorted((r for r in board["rows"] if r["kind"] == "entity" and r.get("inn")),
+                  key=lambda r: (rank.get(r["tier"], 99), r["slug"]))
+    def pick(codes):
+        return [r for r in ents if any(f["code"] in codes for f in r["flags"])][:cap]
+    egrul = pick({"egrul_missing", "egrul_stale"})
+    bfo = pick({"bfo_missing", "bfo_behind"})
+    lines = [f"# Pull queue for {board['generated']} from scripts/status_board.py (cap {cap} per registry).",
+             "# Live lookups against egrul.nalog.ru / bo.nalog.gov.ru: run from the repo root on a machine that reaches them."]
+    if egrul:
+        lines.append("# ЕГРЮЛ/ЕГРИП extract missing or stale: " + ", ".join(r["slug"] for r in egrul))
+        lines.append("python3 scripts/egrul_vypiska_pull.py " + " ".join(f"--inn {r['inn']}" for r in egrul))
+    if bfo:
+        lines.append("# Annual accounts missing or behind: " + ", ".join(r["slug"] for r in bfo))
+        lines.append("python3 scripts/bfo_pull.py " + " ".join(f"--inn {r['inn']}" for r in bfo))
+    if not (egrul or bfo):
+        lines.append("# Nothing to pull today.")
+        return "\n".join(lines)
+    lines += ["# Index and parse what arrived, then check the registry.",
+              "python3 scripts/inventory_sources.py",
+              "python3 scripts/scan_sources.py --out data/sources/MANIFEST.md",
+              "python3 scripts/parse_egrul_vypiska.py" if egrul else None,
+              "python3 scripts/parse_bfo_financials.py" if bfo else None,
+              "python3 scripts/extract_registry.py",
+              "python3 scripts/check_registry.py"]
+    return "\n".join(l for l in lines if l)
+
+
 def diff(prev, cur):
     """Flags that appeared or cleared since a previous board, keyed by (slug, code, text)."""
     def keyed(b):
@@ -514,6 +571,8 @@ def main():
     ap.add_argument("--json", help="write the full board as JSON here")
     ap.add_argument("--slug", help="print one record's flags")
     ap.add_argument("--today", help="YYYY-MM-DD (default: today)")
+    ap.add_argument("--pull-queue", nargs="?", const=PULL_CAP, type=int, metavar="CAP",
+                    help="print shell commands pulling flagged registry gaps (default cap %d per registry)" % PULL_CAP)
     ap.add_argument("--diff", help="a previous --json board: print flags new or cleared since it")
     ap.add_argument("--scan-state", help="weekly_scan_state.json (default: shared watch folder)")
     ap.add_argument("--developments", help="developments.json (default: shared watch folder)")
@@ -533,6 +592,9 @@ def main():
                 return 0
         print(f"no record {a.slug}", file=sys.stderr)
         return 1
+    if a.pull_queue is not None:
+        print(pull_queue(board, a.pull_queue))
+        return 0
     print(summary(board))
     if a.diff:
         print(diff(json.loads(Path(a.diff).read_text(encoding="utf-8")), board))
