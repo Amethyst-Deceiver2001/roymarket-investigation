@@ -189,7 +189,7 @@ Decisions (user, 2026-10-02):
    qty|null, unit, unit_price_rub|null, source_id, note}`, read from the
    printed contract or its specification. `check_registry.py` validates it.
    It warns when a supplier delivers another maker's product without a
-   `sells_for` edge, and lists contracts dated by year only (B8; 14 left).
+   `sells_for` edge, and lists contracts dated by year only (B8: all 14 given their day from the contract record, 02.10.2026).
    - Done for the three «Булат» contracts:
      - ПОКРОВ ЕП 2-25 (26.09.2025): 7 × v4 at ₽99,000 and 12 × v4 with remote
        antennas at ₽105,100.
