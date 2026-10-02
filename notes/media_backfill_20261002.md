@@ -39,3 +39,11 @@ These images were not migrated, because a media record needs the source the pict
 - 13 stills have no frame timestamp. Record `frame.t` when the source video is next opened.
 - 76 Telegram media files in `data/sources/` are not linked to any record (step 2, part 2).
 - `entities.images[]` and `battlefield_evidence[].image_path` are still in place. New builders read `media.json`, and the old fields are retired once nothing reads them.
+
+## Handover photos (added 02.10.2026)
+
+`tg_media_pull.py fetch` on @nashapravdafond (posts 393–615, the 16 «Булат» deliveries) saved 20 images, now s8966–s8985 and media m0068–m0087. Posts 397 and 454 have no picture in their public preview. Each record points at its delivery (`bulat-dNN`) and at the foundation, not at the product: no photo shows a recognisable «Булат», so the handover of a «Булат» rests on the post text, as before.
+
+Faces: in 9 photos every clear face was blurred in the publish copy (`exhibits/images/media/<id>.jpg`, recorded as the record's `file`); the originals in `data/sources/` are untouched. In the other 11, faces are covered, turned away or already blurred by the foundation, checked by eye. The foundation has 17 people on file but none with a photo, so nobody in frame was identified. Matching a face to a record is not done without a reference image or a caption naming the person.
+
+Aside: people.json holds both `brovchenko-sergey-rufinovich` and `sergey-rufinovich-brovchenko`, both `brovchenko-aleksandr-rufinovich` and `aleksandr-rufinovich-brovchenko`, and both `karabinskiy-ivan-igorevich` and `ivan-igorevich-karabinskiy`. These look like duplicate pairs to merge (not done here).

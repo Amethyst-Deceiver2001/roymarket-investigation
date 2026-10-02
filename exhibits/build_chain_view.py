@@ -445,7 +445,9 @@ class Chain:
 
     def gallery(self):
         ms = [m for m in media_about(self.media, self.media_refs()) if m.get("genre") != "logo"]
-        groups = [("Published by the maker and its dealers", lambda m: m["asserted_by"] in ("self", "platform")),
+        groups = [("Handovers, as published by the donor", lambda m: m.get("genre") == "handover"),
+                  ("Published by the maker and its dealers",
+                   lambda m: m["asserted_by"] in ("self", "platform") and m.get("genre") != "handover"),
                   ("Posted by buyers and other third parties", lambda m: m["asserted_by"] in ("third_party", "counterparty")),
                   ("Press", lambda m: m["asserted_by"] == "press")]
         out = []
@@ -459,7 +461,8 @@ class Chain:
                 note = (f"Video. Original on {v['original']}." + ("" if v.get("archived") else " Not archived.")) if v else ""
                 figs.append(figure_html(m, src, self.who(m), self.ref(m.get("source_id")), note))
             if figs:
-                out.append(f'<h3 class="rm-label gal-h">{esc(title)}</h3><div class="rm-gallery">{"".join(figs)}</div>')
+                dense = " dense" if title.startswith("Handovers") else ""
+                out.append(f'<h3 class="rm-label gal-h">{esc(title)}</h3><div class="rm-gallery{dense}">{"".join(figs)}</div>')
         return "".join(out)
 
     def timeline(self, ds):

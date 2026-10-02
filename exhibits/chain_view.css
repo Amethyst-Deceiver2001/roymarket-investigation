@@ -40,6 +40,7 @@
 .prose { margin-top: 40px; }
 .pics { margin-top: 48px; }
 .pics .method { color: var(--ink-3); font-size: 13.5px; max-width: 80ch; margin: 0 0 8px; }
+.rm-gallery.dense { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
 .gal-h { margin: 28px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
 .prose ul, .prose ol { padding-left: 20px; color: var(--ink-2); font-size: 14px; }
 .prose li { margin: 6px 0; }

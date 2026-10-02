@@ -115,9 +115,13 @@ media files mostly not linked to a record, and no video file at all.
    chain preview: the dealer's v.4 card as the product thumbnail, the maker's
    manual page, and seven buyers' photos from the maker's customer chat (a
    marketplace screenshot at ₽144,279, antennas, a field comparison and the
-   «Таир» wrist unit). Still missing: the Наша Правда handover photos, which
-   need `tg_media_pull` on @nashapravdafond (a user-run job), and a view of
-   Тримикс's facility, which needs a documented address first. The «Крылья
+   «Таир» wrist unit). The 20 Наша Правда handover photos
+   from 14 of the 16 delivery posts were pulled 02.10.2026 (posts 397 and 454
+   have none in their public preview) and added as their own group. Every
+   clear face is blurred in the publish copies under `exhibits/images/media/`,
+   because no one in frame can be matched to a person record without guessing.
+   Still missing: a view of Тримикс's facility, which needs a documented
+   address first. The «Крылья
    Победы» seller lead is recorded in the product's open questions.
 
 Decisions (user, 2026-10-02):
