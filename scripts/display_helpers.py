@@ -58,9 +58,11 @@ FONT_LINK = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
              '&family=IBM+Plex+Sans:wght@400;600&family=Spectral:wght@400;500&subset=cyrillic&display=swap">')
 
 
-def design_head(page_css: str = "") -> str:
-    """Font link plus the design system CSS and a page's own CSS, inlined in that order."""
-    return f"{FONT_LINK}\n<style>{DESIGN_CSS.read_text()}\n{page_css}</style>"
+def design_head(page_css: str = "", fonts_href: str | None = None) -> str:
+    """Font link plus the design system CSS and a page's own CSS, inlined in that order.
+    fonts_href: a self-hosted fonts.css (public pages, from design/fetch_fonts.py) in place of Google Fonts."""
+    link = f'<link rel="stylesheet" href="{fonts_href}">' if fonts_href else FONT_LINK
+    return f"{link}\n<style>{DESIGN_CSS.read_text()}\n{page_css}</style>"
 
 
 # Reader grades (design/README.md). Every registry confidence vocabulary maps here, in one table,
