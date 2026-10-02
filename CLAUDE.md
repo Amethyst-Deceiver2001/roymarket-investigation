@@ -290,6 +290,8 @@ Phase 1 continues) → `python3 scripts/check_registry.py` before trusting or
 building from anything. All three are local file processing — no network,
 safe to run repeatedly.
 
+**Cloud sessions and CI (added 2026-10-02).** `data/sources/` and `data/roymarket.db` exist only on the user's machine. Where they are absent, run `python3 scripts/check_registry.py --no-local-files`: it skips existence checks for `data/sources/` paths only, says how many it skipped, and still checks everything committed. `pip install -r requirements.txt` covers the tests, the checker and the page builders. `.github/workflows/checks.yml` runs every `tests/test_*.py`, the checker with that flag, and `check_tag_balance.py docs/index.html` on each push to main and each pull request. A red run there is a real failure, not an environment gap.
+
 `check_registry.py` validates ИНН and ОГРН control digits. **Take a checksum
 failure seriously**: it caught a transposed ОГРН for АО «Стратим» that had
 been sitting in the brief, and two personal ИНН that had been mis-attributed

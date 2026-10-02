@@ -171,7 +171,12 @@ def main() -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--quiet", action="store_true",
                     help="suppress the coverage report, show problems only")
+    ap.add_argument("--no-local-files", action="store_true",
+                    help="skip existence checks for files under data/sources/, the "
+                         "gitignored archive that exists only on the user's machine "
+                         "(for cloud sessions and CI); committed paths are still checked")
     args = ap.parse_args()
+    skipped_local: list[str] = []
 
     entities = load("entities.json")
     people = load("people.json")
@@ -836,7 +841,10 @@ def main() -> int:
                 errors.append(f"{where}.{key} must be YYYY-MM-DD or null")
         f = m.get("file")
         if f and not (REPO / f).exists():
-            errors.append(f"{where}.file {f!r} does not exist")
+            if args.no_local_files and f.startswith("data/sources/"):
+                skipped_local.append(f)
+            else:
+                errors.append(f"{where}.file {f!r} does not exist")
         if m.get("publish") in ("ok", "excerpt") and not (f or "").startswith(("docs/images/", "exhibits/images/")) \
                 and not list((REPO / "exhibits" / "images" / "media").glob(f"{mid}.*")):
             no_copy.append(mid)
@@ -1217,6 +1225,9 @@ def main() -> int:
               f"({oq_attributed} attributed to a specific entity/person)")
 
     print()
+    if skipped_local:
+        print(f"--no-local-files: {len(skipped_local)} data/sources/ file(s) not on this "
+              f"machine were not checked; run without the flag where the archive exists")
     print(f"{len(errors)} error(s), {len(warnings)} warning(s)")
     return 1 if errors else 0
 
