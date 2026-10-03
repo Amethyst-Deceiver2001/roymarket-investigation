@@ -22,6 +22,8 @@ This Mac session ("main") orchestrates; the others run on schedules and talk thr
 | Weekly news and channel scan | cloud routine, Mondays | `data/watch/developments.json`, `data/watch/reports/` |
 | Reading documents, writing corrections, closing developments | main session, on the user's go-ahead | `corrections_*.json` and hand-held registry files |
 
+**Infrastructure freeze (user, 04.10.2026, on issue #20):** for two to three weeks, only bug fixes and fixes to communication between jobs. No new tooling, schemas or redesigns. Work goes to the checked sanctions-gap report: registry corrections from `notes/packet_verification_20261003.md`, then regenerate the six packets. The media-law and PII review is not started yet (user: "not yet").
+
 Only the main session writes facts into the registry. Something that needs the user goes in a GitHub issue. A registry "not found" is remembered in `data/registry/_pull_misses.json` and not queued again for 30 days.
 
 ## This repo has its own Telegram scraping pipeline — separate from wb_watch
