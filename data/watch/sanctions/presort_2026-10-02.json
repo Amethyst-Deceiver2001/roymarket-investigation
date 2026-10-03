@@ -1,0 +1,1369 @@
+{
+ "generated": "2026-10-02",
+ "basis": "opensanctions_matches / gur_matches as stored in data/registry at commit cb248c3, plus 27 OpenSanctions entity pages read 2026-10-02 and the official-list watcher run 37060959901 (EU/US/UK/CH by ИНН/ОГРН)",
+ "proposed_field": "sanctions_review: {as_of, outcome: designated|linked_not_designated|false_positive|open, note, checked: [ids]}",
+ "records": [
+  {
+   "slug": "ooo-orion",
+   "kind": "entity",
+   "name": "ООО «Орион»",
+   "verdict": "likely_false_positive",
+   "why": "The only risky hit is ООО «Орион», ИНН 2308299972 (Rostov-on-Don, registered 04.02.2025). Ours is ИНН 7706664648. Already rejected in the record on 24.08.2026.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-2308299972",
+     "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОРИОН\"",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked",
+      "sanction.control"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-2308299972/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s",
+   "kind": "entity",
+   "name": "АО УК «Азимут» | formerly «Аэронавигационные и информационные системы»",
+   "verdict": "likely_false_positive",
+   "why": "Both ГУР hits are other companies: «Unmanned Systems» LLC (ИНН 1831156383) and «BVS Systems» LLC (ИНН 7820061973). Ours is 7714390623. ГУР's own identifier check returned no match for either.",
+   "hits": [
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY UNMANNED SYSTEMS",
+     "inn": "1831156383",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/13221"
+    },
+    {
+     "list": "GUR",
+     "caption": "BVS SYSTEMS LIMITED LIABILITY COMPANY",
+     "inn": "7820061973",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14289"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "npo-kilobatt",
+   "kind": "entity",
+   "name": "ИП Пинимасова Елена Александровна",
+   "verdict": "likely_false_positive",
+   "why": "This record is ИП Пинимасова Елена Александровна. The five ГУР hits are women with other surnames who share only the patronymic Александровна (Kulikova, Pereselyak, Topchi, Rubtsova, Tyurina).",
+   "hits": [
+    {
+     "list": "GUR",
+     "caption": "KULIKOVA Elena Aleksandrovna",
+     "inn": "781425184469",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/28809"
+    },
+    {
+     "list": "GUR",
+     "caption": "PERESELYAK Elena Aleksandrovna",
+     "inn": null,
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/28770"
+    },
+    {
+     "list": "GUR",
+     "caption": "TOPCHI Tamara Aleksandrovna",
+     "inn": "771701788561",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/1870"
+    },
+    {
+     "list": "GUR",
+     "caption": "RUBTSOVA Natalya Aleksandrovna",
+     "inn": null,
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/27751"
+    },
+    {
+     "list": "GUR",
+     "caption": "TYURINA Natalya Aleksandrovna",
+     "inn": "772908211099",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/5918"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "ooo-ayaks-tekhnologii",
+   "kind": "entity",
+   "name": "ООО «Аякс-Технологии»",
+   "verdict": "likely_false_positive",
+   "why": "The ГУР hit is a different company, ИНН 7804317900. Ours is 7805728050.",
+   "hits": [
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY &quot;AUTOMATION TECHNOLOGY AND PROGRAMMING&quot;",
+     "inn": "7804317900",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/10210"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "ao-fabrika-im-sovetskoy-armii",
+   "kind": "entity",
+   "name": "АО «Фабрика им. Советской Армии»",
+   "verdict": "likely_false_positive",
+   "why": "The ГУР hit is a person, Savitskaya Svetlana Evgenievna. The record does not name her anywhere; its director is Рябико Ольга Александровна.",
+   "hits": [
+    {
+     "list": "GUR",
+     "caption": "SAVITSKAYA Svetlana Evgenievna",
+     "inn": null,
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/25578"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "ooo-gk-logos",
+   "kind": "entity",
+   "name": "ООО «Группа компаний «Логос»»",
+   "verdict": "likely_false_positive",
+   "why": "Both ГУР hits are other companies (ИНН 5263093100 and 7802703755). Ours is 3435149330.",
+   "hits": [
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY PROMAVTO GROUP",
+     "inn": "5263093100",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/13126"
+    },
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY &quot;TIKHIYE KRYLIA GROUP OF COMPANIES&quot;",
+     "inn": "7802703755",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14311"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "ooo-akatsiya-avia",
+   "kind": "entity",
+   "name": "ООО «Акация-авиа»",
+   "verdict": "likely_false_positive",
+   "why": "The ГУР hit is a different company, ИНН 7726700284. Ours is 7802145959.",
+   "hits": [
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY &quot;UVS AVIA&quot;",
+     "inn": "7726700284",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/7020"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "ooo-kronshtadt-bespilotnye-sistemy",
+   "kind": "entity",
+   "name": "Общество с ограниченной ответственностью «Кронштадт Беспилотные Системы»",
+   "verdict": "likely_false_positive",
+   "why": "Both ГУР hits are other companies (ИНН 1831117433 and 1831156383). Ours is 7801320277. The sanctioned АО «Кронштадт» (ИНН 7808035536) is a separate legal entity, noted in the record as a lead.",
+   "hits": [
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY &quot;RESEARCH AND PRODUCTION ASSOCIATION &quot;IZHEVSK UNMANNED SYSTEMS&quot;",
+     "inn": "1831117433",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/258"
+    },
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY UNMANNED SYSTEMS",
+     "inn": "1831156383",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/13221"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "ooo-npk-atlant-aero",
+   "kind": "entity",
+   "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"АТЛАНТ АЭРО\"",
+   "verdict": "likely_false_positive",
+   "why": "The ГУР hit is a different company, «NPK …» ИНН 1683010356. Ours is 6154166381.",
+   "hits": [
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY NPK AEROKON",
+     "inn": "1683010356",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14273"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "ooo-arkhangel-istra",
+   "kind": "entity",
+   "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"",
+   "verdict": "likely_false_positive",
+   "why": "All three hits are other «Архангел» companies: the Melitopol ООО «Архангел» (ИНН 9001027869, NSDC-listed), the Melitopol ООО «Архангел» (ИНН 9500026652, linked only) and ООО «Архангел-Центр» (ИНН 5032379630, EU-listed). Ours is 5017140245. The record already calls these name-only false positives (05.09.2026).",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-AeHbFuxDQJGPaCNKycGUdz",
+     "caption": "Товариство з обмеженою відповідальністю \"Архангел\"",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-AeHbFuxDQJGPaCNKycGUdz/"
+    },
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-9500026652",
+     "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked",
+      "sanction.control"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-9500026652/"
+    },
+    {
+     "list": "OpenSanctions",
+     "id": "NK-Gmfrw9dvwnyXtXUsjwdvYa",
+     "caption": "Archangel Military Tactical Center",
+     "score": 0.9239,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-Gmfrw9dvwnyXtXUsjwdvYa/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "ooo-arkhangel-crimea",
+   "kind": "entity",
+   "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"",
+   "verdict": "likely_false_positive",
+   "why": "Same three other «Архангел» companies; ours is ИНН 9108131213. Not the same entity, but the record has a real link: its director Тимофеев В.С. was appointed director of the Melitopol ООО «Архангел» (ИНН 9500026652) three days before this company was registered. That is a relationship to record, not a listing of this company.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-9500026652",
+     "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ\"",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked",
+      "sanction.control"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-9500026652/"
+    },
+    {
+     "list": "OpenSanctions",
+     "id": "NK-AeHbFuxDQJGPaCNKycGUdz",
+     "caption": "Товариство з обмеженою відповідальністю \"Архангел\"",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-AeHbFuxDQJGPaCNKycGUdz/"
+    },
+    {
+     "list": "OpenSanctions",
+     "id": "NK-Gmfrw9dvwnyXtXUsjwdvYa",
+     "caption": "Archangel Military Tactical Center",
+     "score": 0.9239,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-Gmfrw9dvwnyXtXUsjwdvYa/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "ooo-aero-khit-servis",
+   "kind": "entity",
+   "name": "ООО «Аэро-хит сервис»",
+   "verdict": "likely_match",
+   "why": "Identity confirmed by ИНН 9704220859 on two hits: the ГУР UAV-companies entry (ГУР's own ИНН check says match) and OpenSanctions' record from ГУР's database. OpenSanctions says it is not on any international sanctions list; it is a ГУР 'person of interest' and is owned by ООО «УК КОМАКС» (ИНН 7704790277), which the registry already records as NSDC-listed. Proposed: record a ГУР database listing, not a designation.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-mmsCDsJFUzwE8SnFEq4DtY",
+     "caption": "LIMITED LIABILITY COMPANY AERO-HIT SERVICE",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked",
+      "poi",
+      "sanction.control"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-mmsCDsJFUzwE8SnFEq4DtY/"
+    },
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY AERO-HIT SERVICE",
+     "inn": "9704220859",
+     "inn_match": true,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/15560"
+    },
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY AERO-HIT",
+     "inn": "2700012608",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/13164"
+    },
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY AERO-HIT KHERSON",
+     "inn": "9500028530",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/15559"
+    },
+    {
+     "list": "GUR",
+     "caption": "HORIZONT-AERO LIMITED LIABILITY COMPANY",
+     "inn": "7604394537",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14032"
+    },
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY ASTRON AERO",
+     "inn": "5027238514",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14011"
+    }
+   ],
+   "primary_lists": [
+    "https://war-sanctions.gur.gov.ua/en/uav/companies/13164"
+   ],
+   "user_verdict": null
+  },
+  {
+   "slug": "ooo-aero-khit-m",
+   "kind": "entity",
+   "name": "ООО «Аэро-хит М»",
+   "verdict": "likely_match",
+   "why": "Identity confirmed: the OpenSanctions hit is ru-inn-9718293790, our own ИНН. It is flagged only because its 100% owner is ООО «УК КОМАКС» (NSDC-listed, per the registry). OpenSanctions says the company itself is on no sanctions list. The five ГУР hits are other Аэро-Хит/aviation companies with other ИНН. Proposed: no designation; record the owner link.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-9718293790",
+     "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЭРО-ХИТ М\"",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked",
+      "sanction.control"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-9718293790/"
+    },
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY AERO-HIT SERVICE",
+     "inn": "9704220859",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/15560"
+    },
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY AERO-HIT",
+     "inn": "2700012608",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/13164"
+    },
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY AERO-HIT KHERSON",
+     "inn": "9500028530",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/15559"
+    },
+    {
+     "list": "GUR",
+     "caption": "HORIZONT-AERO LIMITED LIABILITY COMPANY",
+     "inn": "7604394537",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14032"
+    },
+    {
+     "list": "GUR",
+     "caption": "LIMITED LIABILITY COMPANY ASTRON AERO",
+     "inn": "5027238514",
+     "inn_match": false,
+     "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14011"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "vladimir-vadimovich-yakushev",
+   "kind": "person",
+   "name": "Владимир Владимирович Якушев",
+   "verdict": "likely_match",
+   "why": "Date of birth 14.06.1968, birthplace Neftekamsk and ИНН 890304549930 on the OpenSanctions record all match ours. Listed by the US (OFAC SDN), UK, Canada, Australia, New Zealand and Ukraine's NSDC, plus US and Taiwan export-control lists. The registry has no sanctions entry for him. Confirm against the OFAC entry before recording.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q4537299",
+     "caption": "Vladimir Vladimirovich Yakushev",
+     "score": 1.0,
+     "topics": [
+      "corp.disqual",
+      "role.pep",
+      "debarment",
+      "export.control",
+      "sanction",
+      "poi"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q4537299/"
+    }
+   ],
+   "primary_lists": [
+    "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=35224",
+    "https://war-sanctions.gur.gov.ua/en/sanctions/persons/882"
+   ],
+   "user_verdict": null
+  },
+  {
+   "slug": "dmitriy-peskov",
+   "kind": "person",
+   "name": "Дмитрий Песков",
+   "verdict": "likely_match",
+   "why": "Two hits. NK-XU3ivbw (PESKOV Dmitry Nikolaevich): date of birth 26.12.1975, birthplace Voronezh and ИНН 772919018611 all match ours, but it is a ГУР-database 'person of interest' only; OpenSanctions says he is on no sanctions list. The other hit, Q111263326, is Nikolay Dmitrievich Peskov (b. 03.02.1990, son of the press secretary): a false positive. Its alternate birth date happens to be our Peskov's, which looks like a data merge error at OpenSanctions. Proposed: no designation; note the ГУР database entry.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q111263326",
+     "caption": "Nikolay Peskov",
+     "score": 0.9565,
+     "topics": [
+      "corp.disqual",
+      "debarment",
+      "export.control",
+      "sanction",
+      "role.rca",
+      "poi"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q111263326/"
+    },
+    {
+     "list": "OpenSanctions",
+     "id": "NK-XU3ivbwGAjKXn5GcteCVhW",
+     "caption": "PESKOV Dmitry Nikolaevich",
+     "score": 0.95,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-XU3ivbwGAjKXn5GcteCVhW/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "gusev-sergey-vladimirovich",
+   "kind": "person",
+   "name": "Гусев Сергей Владимирович",
+   "verdict": "likely_match",
+   "why": "Identity confirmed: the hit is ru-inn-732102513469, the ИНН read from ООО «Клеверкоптер»'s ЕГРЮЛ extract. Flagged 'sanction-linked' only, not designated; the link is explained by «Клеверкоптер», which the registry already records as sanctioned. Proposed: no personal designation.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-732102513469",
+     "caption": "СЕРГЕЙ ВЛАДИМИРОВИЧ ГУСЕВ",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-732102513469/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "stupnikov-andrey-genadevich",
+   "kind": "person",
+   "name": "Ступников Андрей Генадьевич",
+   "verdict": "likely_match",
+   "why": "Identity confirmed by own ИНН 165043571104. 'Sanction-linked' only; explained by ООО «СибНК», where he is director and which the registry records as sanctioned. Proposed: no personal designation.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-165043571104",
+     "caption": "АНДРЕЙ ГЕНАДЬЕВИЧ СТУПНИКОВ",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-165043571104/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "korolev-dmitriy-mikhaylovich",
+   "kind": "person",
+   "name": "Королев Дмитрий Михайлович",
+   "verdict": "likely_match",
+   "why": "Identity confirmed by own ИНН 784804037752. 'Sanction-linked' only; explained by ООО «КРАВТ» (director), recorded as sanctioned. Proposed: no personal designation.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-784804037752",
+     "caption": "ДМИТРИЙ МИХАЙЛОВИЧ КОРОЛЕВ",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-784804037752/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "kostyunin-pavel-andreevich",
+   "kind": "person",
+   "name": "Костюнин Павел Андреевич",
+   "verdict": "likely_match",
+   "why": "Identity confirmed by own ИНН 510203980877. 'Sanction-linked' only; explained by АО «Стратим» (director), recorded as sanctioned. Proposed: no personal designation.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-510203980877",
+     "caption": "ПАВЕЛ АНДРЕЕВИЧ КОСТЮНИН",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-510203980877/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "basov-aleksey-nikolaevich",
+   "kind": "person",
+   "name": "Басов Алексей Николаевич",
+   "verdict": "likely_match",
+   "why": "Identity confirmed by own ИНН 774305253744 (read from АО «Эколибри»'s FY2025 accounts, related-parties list). 'Sanction-linked' only; explained by «Эколибри» (board member), recorded on the ГУР list. The record's open question from 24.08 about two namesakes is now answered by that ИНН and can be closed. Proposed: no personal designation.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-774305253744",
+     "caption": "АЛЕКСЕЙ НИКОЛАЕВИЧ БАСОВ",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-774305253744/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "chapurin-viktor-viktorovich",
+   "kind": "person",
+   "name": "Чапурин Виктор Викторович",
+   "verdict": "likely_match",
+   "why": "Identity confirmed by own ИНН 910520449851. 'Sanction-linked' only. OpenSanctions' page for ООО «Архангел-Центр» names him as 50% owner and says neither owner is separately designated. Proposed: no personal designation; the record already says this.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-910520449851",
+     "caption": "ВИКТОР ВИКТОРОВИЧ ЧАПУРИН",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-910520449851/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "zakelov-aleksandr-aleksandrovich",
+   "kind": "person",
+   "name": "Закелов Александр Александрович",
+   "verdict": "likely_match",
+   "why": "Identity confirmed by own ИНН 026105732534. Same as Чапурин: director and 50% owner of the EU-listed ООО «Архангел-Центр», not separately designated. Proposed: no personal designation.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-026105732534",
+     "caption": "АЛЕКСАНДР АЛЕКСАНДРОВИЧ ЗАКЕЛОВ",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-026105732534/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "chadaev-aleksey-viktorovich",
+   "kind": "person",
+   "name": "Чадаев Алексей Викторович",
+   "verdict": "likely_match",
+   "why": "Name, patronymic and public role fit: OpenSanctions cites an EU listing (OJ L 2025/933, CELEX 32025D0936) and ГУР's propaganda section, and his own channel (post 4636, 29.03.2026) says he is under personal EU sanctions. The record has no birth date or ИНН to compare, so read the EU Official Journal entry for his birth date before recording.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q4506685",
+     "caption": "Alexey Viktorovich CHADAYEV",
+     "score": 1.0,
+     "topics": [
+      "sanction",
+      "poi"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q4506685/"
+    }
+   ],
+   "primary_lists": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933",
+    "https://war-sanctions.gur.gov.ua/en/sanctions/persons/21781"
+   ],
+   "user_verdict": null
+  },
+  {
+   "slug": "yatsenko-viktor-vyacheslavovich",
+   "kind": "person",
+   "name": "Яценко Виктор Вячеславович",
+   "verdict": "needs_checking",
+   "why": "The listed Yatsenko (Q108060327) is a former DNR 'minister of communications', b. 22.04.1985 in Kherson, passport 0311 988150, no ИНН printed. Our Яценко is general director of ООО «Аэро-Хит» (ИНН 231907430700). The Аэро-Хит group has a Kherson company, but nothing on file ties the two. Needs his birth date from an ЕГРЮЛ-adjacent source or a passport match.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q108060327",
+     "caption": "Viktor Vyacheslavovich Yatsenko",
+     "score": 1.0,
+     "topics": [
+      "role.pol",
+      "sanction",
+      "corp.disqual"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q108060327/"
+    },
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-231907430700",
+     "caption": "ВИКТОР ВЯЧЕСЛАВОВИЧ ЯЦЕНКО",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-231907430700/"
+    }
+   ],
+   "primary_lists": [
+    "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=20138",
+    "https://war-sanctions.gur.gov.ua/en/sanctions/persons/4600"
+   ],
+   "user_verdict": null
+  },
+  {
+   "slug": "zhigulin-aleksey-mikhaylovich",
+   "kind": "person",
+   "name": "Жигулин Алексей Михайлович",
+   "verdict": "needs_checking",
+   "why": "The listed Zhigulin is a DNR People's Council member since 2014, b. 29.01.1979 in Semey; EU, UK, Switzerland, Canada, Japan, NSDC. Our record (director of ООО «Аэро-Хит М») already notes a press allegation of DNR-linked membership, so a match is plausible, but no ИНН is printed on the list and we hold no birth date.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q55104803",
+     "caption": "Alexey Zhigulin",
+     "score": 1.0,
+     "topics": [
+      "role.pol",
+      "corp.disqual",
+      "role.pep",
+      "sanction",
+      "poi"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q55104803/"
+    }
+   ],
+   "primary_lists": [
+    "https://war-sanctions.gur.gov.ua/en/sanctions/persons/4467"
+   ],
+   "user_verdict": null
+  },
+  {
+   "slug": "antsev-georgiy-vladimirovich",
+   "kind": "person",
+   "name": "Анцев Георгий Владимирович",
+   "verdict": "likely_match",
+   "why": "Strongest case in the set. The weekly official-list watcher (draft PR #4, run of 02.10.2026) found our ИНН 780105167705 printed in his entries on the EU consolidated list and the Swiss SECO list. OpenSanctions also cites EU acts 2024/753 and 2025/1895, France and ГУР. Our Анцев is a co-inventor on НПП «Радар ммс» patents. Read the EU entry and record it.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q4067778",
+     "caption": "Antsev Georgy Vladimirovich",
+     "score": 1.0,
+     "topics": [
+      "poi",
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q4067778/"
+    }
+   ],
+   "primary_lists": [
+    "https://war-sanctions.gur.gov.ua/en/sanctions/persons/29698"
+   ],
+   "user_verdict": null
+  },
+  {
+   "slug": "antsev-ivan-georgievich",
+   "kind": "person",
+   "name": "Анцев Иван Георгиевич",
+   "verdict": "likely_match",
+   "why": "Official entry read: Council Implementing Regulation (EU) 2025/389 of 24.02.2025, Annex entry 1884: 'Executive Director of JSC NPP Radar MMS; DOB: 4.8.1985; POB: Leningrad, USSR (now St. Petersburg)'; date of listing 24.2.2025. The EU entry prints no ИНН; ИНН 780156016060 (ours) comes from the NSDC entry via OpenSanctions. Also Switzerland, France, Belgium, Monaco, NSDC.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-iunpACf2LxhHqQifi49rda",
+     "caption": "Ivan Georgyevich ANTSEV",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-iunpACf2LxhHqQifi49rda/"
+    }
+   ],
+   "primary_lists": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500389"
+   ],
+   "user_verdict": null
+  },
+  {
+   "slug": "atlivanchik-sergey-nikolaevich",
+   "kind": "person",
+   "name": "Атливанчик Сергей Николаевич",
+   "verdict": "likely_match",
+   "why": "Official entry read: Council Implementing Regulation (EU) 2025/389 of 24.02.2025, Annex entry 1904: 'General Director of LLC Eliars; DOB: 11.1.1980; Tax Identification Number: 773514103490'; listed for Элиарс's «Зонт» anti-drone system used by Russian forces; date of listing 24.2.2025. Our registry has him as Элиарс's director; the record has no ИНН yet, so this EU entry is the citable source for it. Also Switzerland, France, Belgium, Monaco, NSDC.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-anLsQeZ3pxMVcbrtK3Uh2K",
+     "caption": "Sergey Nikolaevich ATLIVANCHIK",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-anLsQeZ3pxMVcbrtK3Uh2K/"
+    }
+   ],
+   "primary_lists": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500389"
+   ],
+   "user_verdict": null
+  },
+  {
+   "slug": "doronin-viktor-valentinovich",
+   "kind": "person",
+   "name": "Доронин Виктор Валентинович",
+   "verdict": "likely_match",
+   "why": "Settled by ИНН: the NSDC entry prints ИНН 695001185808, ours. b. 27.01.1960; listed as general director of АО «МКБ «Факел» им. Грушина» since 21.10.2014, a role our record lacks (lead). NSDC since 20.04.2023.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-DrRpRdkrHs39zeBNZh8pwv",
+     "caption": "Доронін Віктор Валентинович",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-DrRpRdkrHs39zeBNZh8pwv/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "skorykh-sergey-valerevich",
+   "kind": "person",
+   "name": "Скорых Сергей Валерьевич",
+   "verdict": "likely_match",
+   "why": "Settled by ИНН: the entry prints ИНН 780212544531, ours. b. 14 or 15.08.1978; director at АО «Завод «Энергия»». Listed by Ukraine's NSDC (13.12.2023) and Canada (06.08.2024), plus the ГУР database.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-jZ9f2pZx3cRxuz7eiBHRPi",
+     "caption": "Скорих Сергій Валерійович",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-jZ9f2pZx3cRxuz7eiBHRPi/"
+    }
+   ],
+   "primary_lists": [
+    "https://war-sanctions.gur.gov.ua/en/sanctions/persons/26860"
+   ],
+   "user_verdict": null
+  },
+  {
+   "slug": "kozlov-aleksandr-sergeevich",
+   "kind": "person",
+   "name": "Козлов Александр Сергеевич",
+   "verdict": "needs_checking",
+   "why": "The listed Kozlov (OFAC 15.01.2025, NSDC) is b. 07.08.1969 in St Petersburg, ИНН 782023355772, Pushkin address. Our Козлов is a co-inventor at АО «НИИ «Вектор»» (St Petersburg) with no ИНН on file. Same city, common name: compare the ИНН from any Вектор document that names him.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-46AmkVANgMUSF5xbTJKCrL",
+     "caption": "Aleksandr Sergeyevich Kozlov",
+     "score": 1.0,
+     "topics": [
+      "debarment",
+      "export.control",
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-46AmkVANgMUSF5xbTJKCrL/"
+    }
+   ],
+   "primary_lists": [
+    "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=52196",
+    "https://war-sanctions.gur.gov.ua/en/sanctions/persons/29581"
+   ],
+   "user_verdict": null
+  },
+  {
+   "slug": "beloglazova-lyudmila-aleksandrovna",
+   "kind": "person",
+   "name": "Белоглазова Людмила Александровна",
+   "verdict": "likely_match",
+   "why": "Settled: birth date 18.10.1983 and ИНН 636501893256 both match ours. NSDC-listed (first seen 09.05.2025); the entry ties her to ООО «Тримикс» (100% owner 21.07.2023–26.02.2024).",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-UomhRfxSVqMJucgrmq3CbN",
+     "caption": "Бєлоглазова Людмила Олександрівна",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-UomhRfxSVqMJucgrmq3CbN/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "shakhmatov-ivan-anatolevich",
+   "kind": "person",
+   "name": "Шахматов Иван Анатольевич",
+   "verdict": "likely_match",
+   "why": "Settled: birth date 06.05.1986 and ИНН 471010513778 both match ours. NSDC-listed (09.05.2025); 15% of ООО «Тримикс» 27.02–31.10.2024.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-Qh4hmtGE3acsN6AbtKyuGH",
+     "caption": "Шахматов Іван Анатолійович",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-Qh4hmtGE3acsN6AbtKyuGH/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "cherepkova-nina-sergeevna",
+   "kind": "person",
+   "name": "Черепкова Нина Сергеевна",
+   "verdict": "likely_match",
+   "why": "Settled by ИНН: the NSDC entry prints ИНН 773376903806, ours. It gives b. 20.04.1990 (a lead for the record) and ties her to ООО «Аргус-М» and НПП «Аргата». NSDC since 08.02.2026.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-idCvA8GTbpW2QSPcdXvVfq",
+     "caption": "Черепкова Ніна Сергіївна",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-idCvA8GTbpW2QSPcdXvVfq/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "cherepkov-aleksandr-aleksandrovich",
+   "kind": "person",
+   "name": "Черепков Александр Александрович",
+   "verdict": "likely_match",
+   "why": "Match by ownership: the NSDC entry records a 93.33% stake in НПО «Кайсант», the same stake our record holds from aggregators. It prints ИНН 504508740969 and b. 15.03.1984; confirm the ИНН from Кайсант's ЕГРЮЛ extract before recording. NSDC since 08.02.2026.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-WwXd9Cg4JVctLZcxW22S4a",
+     "caption": "Черепков Олександр Олександрович",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-WwXd9Cg4JVctLZcxW22S4a/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "cherezov-andrey-pavlovich",
+   "kind": "person",
+   "name": "Черезов Андрей Павлович",
+   "verdict": "likely_match",
+   "why": "Settled by ИНН: the NSDC entry prints ИНН 712802968839, ours. b. 04.07.1984; 100% owner of ООО «Русская лаборатория воздушного транспорта». NSDC since 02.12.2024.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-36ebhz33sX5Mw3edEbaxgt",
+     "caption": "Черезов Андрій Павлович",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-36ebhz33sX5Mw3edEbaxgt/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "komarov-aleksandr-evgenevich",
+   "kind": "person",
+   "name": "Комаров Александр Евгеньевич",
+   "verdict": "needs_checking",
+   "why": "The listed Комаров (NSDC, 09.05.2025) is b. 06.07.1968, ИНН 500908329403, 34% of ООО «Интермаш». Our Комаров is a co-inventor at ООО «КРАВТ-Удмуртия» with no ИНН; nothing links him to Интермаш. Leaning false positive, but unproven.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-9VfkoGcTGg7tVDc2fynT6U",
+     "caption": "Комаров Олександр Євгенович",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-9VfkoGcTGg7tVDc2fynT6U/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "borisov-aleksandr-sergeevich-tsbs-tula",
+   "kind": "person",
+   "name": "Борисов Александр Сергеевич",
+   "verdict": "likely_match",
+   "why": "Settled by ИНН: the NSDC entry prints ИНН 561012075269, ours. b. 03.05.1980; general director of the Tula ООО «Центр беспилотных систем» 2023–2024, later of АНО «НПЦ БАС «Туладрон»». NSDC since 13.12.2023.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-YXhP83yLWpyhnJPz2QUyPX",
+     "caption": "Борисов Олександр Сергійович",
+     "score": 0.9697,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-YXhP83yLWpyhnJPz2QUyPX/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "sazanova-alisa-alekseevna",
+   "kind": "person",
+   "name": "Сазанова Алиса Алексеевна",
+   "verdict": "likely_match",
+   "why": "Match by directorship: the NSDC entry lists her at ООО «Аэромакс», where our record has her as general director, and at ООО «Кронштадт Инновации» (since 14.03.2025, new to us). It prints ИНН 525630892605 and b. 11.12.1996; confirm the ИНН from Аэромакс's ЕГРЮЛ extract. NSDC since 02.12.2024.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-L7d29iRkT5WE6jzpoa4f3e",
+     "caption": "Сазанова Аліса Олексіївна",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-L7d29iRkT5WE6jzpoa4f3e/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "mikhail-kuznetsov",
+   "kind": "person",
+   "name": "Михаил Кузнецов",
+   "verdict": "likely_match",
+   "why": "Resolved: candidate Q124215058, Кузнецов Михаил Михайлович, is described as head of the ОНФ executive committee since 09.03.2022, our record's role. b. 18.08.1979, Moscow; ИНН 773714338411. Listed by the EU, Switzerland, France, Belgium, Monaco, NSDC. The other two candidates are different people (a Sovcomflot director b. 1979-06-20; a former LDPR Duma deputy b. 1968). Our record's patronymic is missing; confirm the EU entry.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "NK-BxdfrmWUHNQUUCj5FE6tQt",
+     "caption": "Kuznetsov Mikhail Evgenievich",
+     "score": 0.92,
+     "topics": [
+      "poi",
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/NK-BxdfrmWUHNQUUCj5FE6tQt/"
+    },
+    {
+     "list": "OpenSanctions",
+     "id": "Q124215058",
+     "caption": "Kuznetsov Mikhail Mikhailovich",
+     "score": 0.92,
+     "topics": [
+      "role.pol",
+      "poi",
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q124215058/"
+    },
+    {
+     "list": "OpenSanctions",
+     "id": "Q4245010",
+     "caption": "Mikhail Kuznetsov",
+     "score": 0.92,
+     "topics": [
+      "role.pol",
+      "sanction",
+      "role.pep"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q4245010/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "konstantinov-evgeniy-aleksandrovich",
+   "kind": "person",
+   "name": "Константинов Евгений Александрович",
+   "verdict": "needs_checking",
+   "why": "Hit ru-inn-263114465785 ('sanction-linked'): a namesake in the Russian company register. The record has no ИНН of its own, so this is name-only. Settle it by reading his ИНН from an ЕГРЮЛ extract.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-263114465785",
+     "caption": "ЕВГЕНИЙ АЛЕКСАНДРОВИЧ КОНСТАНТИНОВ",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-263114465785/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "lyubimov-aleksandr-sergeevich",
+   "kind": "person",
+   "name": "Любимов Александр Сергеевич",
+   "verdict": "needs_checking",
+   "why": "Hit ru-inn-780158682795 ('sanction-linked'). Name-only; our Любимов (chair of Ассоциация «Взаимопомощь», co-organiser of «Дронница») has no ИНН on file. The association's ЕГРЮЛ extract would give it.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-780158682795",
+     "caption": "АЛЕКСАНДР СЕРГЕЕВИЧ ЛЮБИМОВ",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-780158682795/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "shevchenko-konstantin-igorevich",
+   "kind": "person",
+   "name": "Шевченко Константин Игоревич",
+   "verdict": "needs_checking",
+   "why": "Hit ru-inn-615424668354 ('sanction-linked'). Name-only; co-inventor at ООО «Атлант Аэро», no ИНН on file.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-615424668354",
+     "caption": "КОНСТАНТИН ИГОРЕВИЧ ШЕВЧЕНКО",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-615424668354/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "kuznetsov-denis-aleksandrovich",
+   "kind": "person",
+   "name": "Кузнецов Денис Александрович",
+   "verdict": "needs_checking",
+   "why": "Hit ru-inn-471203835475 ('sanction-linked'). Name-only; co-inventor at НПЦ «Элвис», no ИНН on file.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-471203835475",
+     "caption": "ДЕНИС АЛЕКСАНДРОВИЧ КУЗНЕЦОВ",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-471203835475/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "saitov-renat-faritovich",
+   "kind": "person",
+   "name": "Саитов Ренат Фаритович",
+   "verdict": "needs_checking",
+   "why": "Hit ru-inn-027503961630 ('sanction-linked', score 0.97). Name-only; former director of ООО «Гаскар Интеграция», no ИНН on file. The company's ЕГРЮЛ extract would give it.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-027503961630",
+     "caption": "РЕНАТ ФАРИТОВИЧ САИТОВ",
+     "score": 0.9697,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-027503961630/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "pavlov-sergey-vladimirovich",
+   "kind": "person",
+   "name": "Павлов Сергей Владимирович",
+   "verdict": "needs_checking",
+   "why": "The Q120852989 entry is a Wagner member on Myrotvorets only, not on any sanctions list: ignore it. What remains is ru-inn-532001062101 ('sanction-linked'), name-only because we hold no ИНН for our НПЦ «Элвис» co-inventor.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q120852989",
+     "caption": "Pavlov Sergej Vladimirovich",
+     "score": 1.0,
+     "topics": [
+      "crime.war"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q120852989/"
+    },
+    {
+     "list": "OpenSanctions",
+     "id": "ru-inn-532001062101",
+     "caption": "СЕРГЕЙ ВЛАДИМИРОВИЧ ПАВЛОВ",
+     "score": 1.0,
+     "topics": [
+      "sanction.linked"
+     ],
+     "url": "https://www.opensanctions.org/entities/ru-inn-532001062101/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "klimov-maksim-aleksandrovich",
+   "kind": "person",
+   "name": "Климов Максим Александрович",
+   "verdict": "likely_false_positive",
+   "why": "The NSDC-listed Климов Максим Олександрович carries ИНН 695004552407 per the earlier OpenSanctions read noted in the record; our АРРС founder's ИНН from the 29.09.2026 ЕГРЮЛ extract is 410201675667. A personal ИНН does not change, so these look like two people. Note: the record's notes still say 'confirmed … see sanctions[]', but sanctions[] is empty; the notes need correcting either way.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "ua-nsdc-34189-klimov-maksim-oleksandrovic",
+     "caption": "Климов Максим Олександрович",
+     "score": 1.0,
+     "topics": [
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/ua-nsdc-34189-klimov-maksim-oleksandrovic/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "lukiyanov-aleksandr-sergeevich",
+   "kind": "person",
+   "name": "Лукиянов Александр Сергеевич",
+   "verdict": "likely_false_positive",
+   "why": "Hit Q133295749 (score 0.96) is Aliaksandr Lukjanaŭ, a Belarusian listed by the EU under its Belarus regime (OJ L 2024/1746). Our record is Лукиянов, a co-inventor at АО «НИИ «Вектор»».",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q133295749",
+     "caption": "Aliaksandr Lukjanaŭ",
+     "score": 0.9562,
+     "topics": [
+      "sanction",
+      "role.pep"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q133295749/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "nikolaev-oleg-alekseevich",
+   "kind": "person",
+   "name": "Николаев Олег Алексеевич",
+   "verdict": "likely_false_positive",
+   "why": "Hit Q62841889 is Oleg Nikolaev, head of the Chuvash Republic (OFAC, UK, ГУР). Our record is a co-inventor on a «Вектор» patent; nothing ties him to the governor. Name-only.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q62841889",
+     "caption": "Oleg Nikolaev",
+     "score": 1.0,
+     "topics": [
+      "role.pol",
+      "debarment",
+      "poi",
+      "role.pep",
+      "corp.disqual",
+      "sanction"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q62841889/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "sakharov-aleksey-yurevich",
+   "kind": "person",
+   "name": "Сахаров Алексей Юрьевич",
+   "verdict": "likely_false_positive",
+   "why": "Hit Q15066899 (score 0.91) is Aleksey Zakharov, a different surname (Захаров, not Сахаров), flagged only as a relative of a listed person.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q15066899",
+     "caption": "Aleksey Zakharov",
+     "score": 0.9116,
+     "topics": [
+      "sanction.linked",
+      "poi",
+      "role.pep"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q15066899/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "zhukov-dmitriy",
+   "kind": "person",
+   "name": "Жуков Дмитрий",
+   "verdict": "likely_false_positive",
+   "why": "Hit Q4181368, Dmitry Zhukov, flagged only as a relative or close associate of a listed person. Our record is an «Архангел» course participant with no patronymic, known by a Telegram handle. Name-only on one of the commonest Russian names.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q4181368",
+     "caption": "Dmitry Zhukov",
+     "score": 0.95,
+     "topics": [
+      "sanction.linked",
+      "role.rca"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q4181368/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "korolev-aleksey-aleksandrovich",
+   "kind": "person",
+   "name": "Королев Алексей Александрович",
+   "verdict": "likely_false_positive",
+   "why": "The only risky hit (Q120853992) is a Myrotvorets entry, which OpenSanctions tags 'war crimes' but is not a sanctions list. Name-only; no designation.",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q120853992",
+     "caption": "Aleksej Aleksandrovich Korolev",
+     "score": 1.0,
+     "topics": [
+      "crime.war"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q120853992/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  },
+  {
+   "slug": "kotelnikov-denis-nikolaevich",
+   "kind": "person",
+   "name": "Котельников Денис Николаевич",
+   "verdict": "likely_false_positive",
+   "why": "The only risky hit (Q120853949) is a Myrotvorets entry, not a sanctions list. Name-only. Worth a glance only because he was a director of ООО «Ушкуйник».",
+   "hits": [
+    {
+     "list": "OpenSanctions",
+     "id": "Q120853949",
+     "caption": "Denis Nikolaevich Kotelnikov",
+     "score": 1.0,
+     "topics": [
+      "crime.war"
+     ],
+     "url": "https://www.opensanctions.org/entities/Q120853949/"
+    }
+   ],
+   "primary_lists": [],
+   "user_verdict": null
+  }
+ ]
+}
