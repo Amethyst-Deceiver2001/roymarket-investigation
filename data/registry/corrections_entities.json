@@ -10543,6 +10543,73 @@
         "marketplace_listings": [],
         "other": []
       }
+    },
+    {
+      "slug": "ip-pinimasov-aleksandr-vyacheslavovich",
+      "name_ru": "ИП Пинимасов Александр Вячеславович",
+      "name_latin": null,
+      "legal_form": "ИП",
+      "brand_ru": null,
+      "inn": "583680188519",
+      "ogrn": "323583500041697",
+      "registered": "2023-08-02",
+      "city": null,
+      "address": null,
+      "director": null,
+      "charter_capital": null,
+      "okved_code": "47.91.2",
+      "okved_label": "Торговля розничная, осуществляемая непосредственно при помощи информационно-коммуникационной сети Интернет",
+      "tier": "adjacent",
+      "tier_basis": "Named as official dealer by the maker's own certificate №2106/2024 (s0537). A sole trader whose primary registered activity is internet retail; no other tie to ЦБСТ or to the maker is on file.",
+      "ecosystem_roles": [
+        "licensed_dealer"
+      ],
+      "sells_for": [
+        {
+          "slug": "ooo-npo-kilovatt-shestopalov",
+          "channel": "official dealer (certificate №2106/2024)",
+          "basis": "doc",
+          "source_id": "s0537",
+          "as_of": null,
+          "note": "Certificate №2106/2024, read from the page (image-only PDF): «ООО НПО «КИЛОВАТТ» ИНН 4800016776 настоящим сертификатом подтверждает, что ИП Пинимасов Александр Вячеславович ИНН 583680188519 является официальным дилером по продвижению и продаже продукции торговой марки ООО НПО «КИЛОВАТТ»», signed «Генеральный директор Шестопалов С.А.», with the maker's round seal (ИНН 4800016776, ОГРН 1244800005240). The certificate carries no date; the number ends «/2024». A badge at its lower left reads «РАБОТАЕМ, БРАТЬЯ» and a web address ending EKIPIROVKA.EXPERT.",
+          "asserted_by": "counterparty",
+          "credibility": "doc",
+          "authorised": "yes",
+          "role": "licensed_dealer",
+          "open": "The certificate is undated and names no product; where and when the dealer sells is not shown. The ИНН printed on it matches this ЕГРИП record."
+        }
+      ],
+      "cbst_tie": {
+        "claim": "None found.",
+        "confidence": "none",
+        "evidence": null,
+        "source_id": null
+      },
+      "wb_overlap": "not_checked",
+      "open_questions": [
+        {
+          "source_id": "s9119",
+          "text": "ЕГРИП extract of 04.10.2026: ОГРНИП 323583500041697, registered 02.08.2023, primary activity 47.91.2 (internet retail), citizen of the Russian Federation; the extract prints the ИНН 583680188519 that the dealer certificate prints, so the certificate names a real sole trader. It does not say where he sells or whether he trades under the maker's brand."
+        },
+        {
+          "source_id": "s0530",
+          "text": "The registry also holds ИП Пинимасова Елена Александровна (npo-kilobatt, ИНН 583713716580) as a documented false lead: a Penza furniture retailer registered 2015, not the dealer. The shared surname and Penza region are a coincidence of names so far; no family or business link is established and none is drawn."
+        },
+        {
+          "source_id": null,
+          "text": "No person record is made for the sole trader: the PII policy admits a seller's owner only on user direction. The extract prints no residence address."
+        }
+      ],
+      "web": {
+        "sites": [],
+        "telegram": [],
+        "vk": [],
+        "youtube": [],
+        "marketplace_listings": [],
+        "other": []
+      },
+      "why": "Packet check of 03.10.2026 (issue #20): the dealer named on the maker's certificate is ИП Пинимасов Александр Вячеславович; the packet had attached the dealer role to ИП Пинимасова Елена Александровна. ЕГРИП extract pulled 04.10.2026 (single lookup) and the certificate read from the page.",
+      "verified_against": "s9119 (ЕГРИП extract of 04.10.2026), s0537 (dealer certificate №2106/2024)."
     }
   ],
   "entities": {
@@ -25168,7 +25235,8 @@
             "profit": 20945000.0,
             "revenue": 84503000.0,
             "source_id": "s0242",
-            "year": "2024"
+            "year": "2024",
+            "note": "As filed in the FY2024 accounts (s0242). The FY2025 filing (s0243) restates 2024 net profit as ₽15 361 тыс. (₽15,361,000); revenue ₽84 503 тыс. is unchanged. Read from the signed filing, which reports in тыс. руб."
           },
           {
             "profit": 664188000.0,
@@ -25349,6 +25417,10 @@
           {
             "source_id": "s5447",
             "text": "A new development, first appearing 2026-08-28 (16 days after defunding the earlier «Последний рубеж» training program, already on file): Гагаринг launched an active recruitment campaign for its own armed detachment, «отряд Гагаринг», via @gagaring_recruit_bot, for МОГ (Мобильные огневые группы/Mobile Fire Groups) work. Explicitly structured as a sub-unit of БАРС (Боевой армейский резерв страны — a real Russian Armed Forces reservist framework), legally scoped to territorial counter-UAV defense of Краснодарский край specifically (\"Служба на территории Краснодарского края\" per the contract wording), not frontline deployment — recruiting via Cossack-structure channels as well. Барашков/Гагаринг explicitly denies PMC/Wagner-comparison framing (\"Мы не создаем ЧВК\") while acknowledging others draw that comparison, and claims state approval (\"нам это одобрили\"). Over 1,000 applications received within the first week. Recruits women too, with a stated need for medics. This is a materially new development — Гагаринг standing up its own formal, legally-structured reservist detachment, not merely selling equipment to existing units — worth its own dedicated follow-up (confirm the БАРС sub-unit's formal registration/legal basis, track its actual deployment)."
+          },
+          {
+            "source_id": "s5333",
+            "text": "The auditor's report on FY2025 prints other holdings (Авирон 36.8%, Эйлер 50%, Лаборатория Янгеля 50% from s7362) that have not been checked against those companies' own ЕГРЮЛ extracts; the Интел Дрон share (50% in the report) is 40% in the register, so the others may differ as well."
           }
         ],
         "patents": [
@@ -25646,12 +25718,13 @@
             "source_id": "s5333"
           },
           {
-            "as_of": "2025-12-31",
+            "as_of": "2025-07-02",
             "inn": "7448259249",
             "name": "ООО «Интел Дрон»",
-            "role": "доля участия 50%",
+            "role": "доля участия 40% (₽4 000)",
             "slug": "ooo-intel-dron",
-            "source_id": "s5333"
+            "source_id": "s6815",
+            "note": "Per the ЕГРЮЛ extract of Интел Дрон of 07.09.2026 (ГРН 2257402274083 of 02.07.2025): Воронин 30%, Февралев 30%, Гагаринг 40%. The auditor's report on Гагаринг's FY2025 accounts (s5333) prints «доля участия 50%»; not reconciled, the register is the primary record."
           },
           {
             "as_of": "2025-12-31",
@@ -25744,7 +25817,8 @@
         "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
         "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s5440; the earlier cbst_tie record is unchanged.",
         "04.10.2026 (packet check of 03.10.2026, issue #20): read the ЕГРЮЛ extract s6776 against the packet. CORRECTED the date of the 50.5/49.5 row: Александров's participant entry is 22.12.2023, the split is the record of 15.04.2026; the audit-report conflict stays open.",
-        "04.10.2026: registered address and its entry date read from the ЕГРЮЛ extract (s6776)."
+        "04.10.2026: registered address and its entry date read from the ЕГРЮЛ extract (s6776).",
+        "04.10.2026 (packet check of 03.10.2026): Интел Дрон share corrected to the register's 40% (the audit report's 50% kept as a note); the 2024 profit restatement in the FY2025 filing noted."
       ]
     },
     "ooo-garant-klub": {
@@ -30372,8 +30446,8 @@
             "relationship_type": "name-collision-distinct"
           },
           {
-            "relationship": "kilowat48.ru's official-dealer certificate (№2106/2024) is issued BY this entity TO \"ИП Пинимасов Александр Вячеславович\" (ИНН 583680188519) -- a DIFFERENT person from the ИП already in this registry under npo-kilobatt (Пинимасова Елена Александровна, ИНН 583713716580). See that record's open_questions for the name discrepancy this surfaced.",
-            "slug": "npo-kilobatt",
+            "relationship": "kilowat48.ru's official-dealer certificate №2106/2024 is issued BY this entity TO «ИП Пинимасов Александр Вячеславович» (ИНН 583680188519, ЕГРИП extract of 04.10.2026). He is a different person from ИП Пинимасова Елена Александровна (ИНН 583713716580, npo-kilobatt), who is a documented false lead and not a dealer.",
+            "slug": "ip-pinimasov-aleksandr-vyacheslavovich",
             "source_id": "s0537",
             "relationship_type": "dealer"
           }
@@ -30473,7 +30547,8 @@
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
         "04.10.2026 (packet check of 03.10.2026, issue #20): read the ЕГРЮЛ extract s6790, the FIPS record s1204 and the sister's extract. CORRECTED: Хальзев is a participant from 31.03.2026 (ГРН 2264800194668), not a founder and not 'since 22.04.2026'; the 60/40 split is recorded 13.05.2026. Trademark 1086620 belongs to the sister (FIPS holder address = the sister's seat); the dealer on the certificate is ИП Пинимасов Александр Вячеславович (ИНН 583680188519), a different person from the ИП Пинимасова Е.А. on file.",
-        "04.10.2026: registered address and its entry date read from the ЕГРЮЛ extract (s6790)."
+        "04.10.2026: registered address and its entry date read from the ЕГРЮЛ extract (s6790).",
+        "04.10.2026: the dealer relation now points at the dealer named on the certificate (ip-pinimasov-aleksandr-vyacheslavovich), not at ИП Пинимасова Е.А."
       ]
     },
     "ooo-npo-nebo": {
@@ -31285,7 +31360,8 @@
             "profit": 54360000.0,
             "revenue": 716827000.0,
             "source_id": "s0238",
-            "year": "2023"
+            "year": "2023",
+            "note": "As filed in the FY2023 accounts (s0238). The FY2024 filing (s0239) restates 2023 revenue as ₽716 762 тыс. and net profit as ₽55 705 тыс. Read from the signed filings, which report in тыс. руб."
           },
           {
             "profit": -114620000.0,
@@ -31695,9 +31771,9 @@
         },
         "tier_basis": "No sanctions, cbst_tie or UAV-specific product found on this record — its confirmed product line is mine/metal detection and demining equipment (АЛЬФАМАРИН/ARENA detector series, sapper toolkits), a defense-adjacent but non-UAV manufacturing activity, backed by a large own-name patent portfolio under founder/director Фоминых А.М. and ₽782m FY2025 revenue. Manufacturer tier itself is well-grounded (a real, sizeable industrial producer), but its fit within THIS investigation's UAV/ЦБСТ scope is not established by anything on file — flagged for a scope review rather than treated as a confirmed ЦБСТ-network manufacturer.",
         "cbst_tie": {
-          "claim": "ЦБСТ (АНО «Центр беспилотных систем и технологий») and ООО «ОПКБ ЭКСПЛОМЕТ» signed a formal strategic-cooperation agreement (соглашение о стратегическом сотрудничестве) on joint development of remote demining systems, minefield mapping, and integrating UAVs with mine-detection — a direct, first-degree institutional tie, not merely an adjacent industry connection.",
+          "claim": "ЦБСТ's own post of 12.08.2025 says it and ООО «ОПКБ ЭКСПЛОМЕТ» signed a strategic-cooperation agreement («соглашение о стратегическом сотрудничестве»), and that the next stage «предполагает» (envisages) joint development of remote demining systems and minefield mapping.",
           "confidence": "t-doc",
-          "evidence": "ЦБСТ's own channel, t.me/ANO_CBST/1033, 12.08.2025 (Международный форум «Беспилотные системы: технологии будущего»): agreement signed by ЦБСТ generalny director Дмитрий Рубинштейн and ОПКБ «Экспломет» generalny director Алексей Фоминых. Post text: 'На полях Международного форума... Центр беспилотных систем и технологий (ЦБСТ) и ООО «ОПКБ ЭКСПЛОМЕТ» подписали соглашение о стратегическом сотрудничестве... Новый этап сотрудничества предполагает совместную разработку систем дистанционного разминирования, построения карт и границ минных полей, интеграцию беспилотников и программных решений для точного определения мест залегания мин.' This project's own scraped Telegram DB (channel_id 2159491523, msg_id 1033) -- DB-only citation, no separate archived file yet.",
+          "evidence": "ЦБСТ's own channel, t.me/ANO_CBST/1033, 12.08.2025 (Международный форум «Беспилотные системы: технологии будущего»): agreement signed by ЦБСТ generalny director Дмитрий Рубинштейн and ОПКБ «Экспломет» generalny director Алексей Фоминых. Post text: 'На полях Международного форума... Центр беспилотных систем и технологий (ЦБСТ) и ООО «ОПКБ ЭКСПЛОМЕТ» подписали соглашение о стратегическом сотрудничестве... Новый этап сотрудничества предполагает совместную разработку систем дистанционного разминирования, построения карт и границ минных полей, интеграцию беспилотников и программных решений для точного определения мест залегания мин.' On file as a transcript of the database text (s7595), not a capture of the page. The post is ЦБСТ's own account; it does not say what was agreed beyond the sentence quoted, and the joint development is described as planned, not done.",
           "source_id": "s7595"
         },
         "state_programs": [
@@ -31729,7 +31805,8 @@
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "[2026-09-15] Resolved the standing ЦБСТ-scope question for this entity (flagged 2026-09-15 as a well-documented mine/metal-detector manufacturer with zero UAV/ЦБСТ tie on record): found a direct hit via TG corpus grep for 'Экспломет' against data/roymarket.db -- NOT multihop, a first-degree institutional cooperation agreement announced on ЦБСТ's own channel (@ANO_CBST post 1033, 12.08.2025), signed by both organizations' own directors. This resolves the scope question: eksplomet belongs in the registry as a confirmed ЦБСТ-network entity, tier=manufacturer stands. No change needed to tier/wb_overlap/other fields.",
         "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
-        "04.10.2026: registered address, street and entry date read from the ЕГРЮЛ extract (s7408); the packet dropped the street and called the address undated."
+        "04.10.2026: registered address, street and entry date read from the ЕГРЮЛ extract (s7408); the packet dropped the street and called the address undated.",
+        "04.10.2026 (packet check of 03.10.2026): the tie claim reworded to what post 1033 says (agreement signed; joint development «предполагает»), the words «direct, first-degree institutional tie» removed; the 2023 restatement in the FY2024 filing noted."
       ]
     },
     "ooo-orient-sistems": {

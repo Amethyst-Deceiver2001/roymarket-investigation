@@ -60,9 +60,9 @@ Other links in the record:
 
 | Link | Grade | Source |
 |---|---|---|
-| ИП Пинимасова Елена Александровна related to ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) (name-collision-distinct) | Documented | [E4] |
-| ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) related to ИП Пинимасова Елена Александровна (dealer) | Documented | [E4] |
-| ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) related to ООО «Научно-производственное объединение «Киловатт»» (name-collision-distinct) | Documented | [E8] |
+| ИП Пинимасов Александр Вячеславович sells for ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) (official dealer (certificate №2106/2024)) | Documented | [E4] |
+| ИП Пинимасова Елена Александровна and ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) are different parties with similar names; recorded so the collision is not mistaken for a link | Namesake, not a link | [E4] |
+| ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) and ООО «Научно-производственное объединение «Киловатт»» are different parties with similar names; recorded so the collision is not mistaken for a link | Namesake, not a link | [E8] |
 | Хальзев Сергей Юрьевич founded ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) | Documented | [E1] |
 
 ## 6. Products and what is said about their use

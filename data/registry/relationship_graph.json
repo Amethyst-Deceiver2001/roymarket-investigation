@@ -1,7 +1,7 @@
 {
   "schema_version": 12,
   "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
-  "node_count": 1250,
+  "node_count": 1251,
   "edge_count": 2168,
   "unresolved_count": 115,
   "nodes": [
@@ -2271,6 +2271,19 @@
       "degree": 2
     },
     {
+      "id": "ip-pinimasov-aleksandr-vyacheslavovich",
+      "kind": "entity",
+      "label": "ИП Пинимасов Александр Вячеславович",
+      "name_latin": null,
+      "inn": "583680188519",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "ИП",
+      "variant": null,
+      "product_count": 0,
+      "degree": 1
+    },
+    {
       "id": "ip-shandobylo-sergey-sergeevich",
       "kind": "entity",
       "label": "ИП Шандобыло Сергей Сергеевич",
@@ -3065,7 +3078,7 @@
       "legal_form": "ИП",
       "variant": null,
       "product_count": 0,
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "npp-elvo-kolskaya-verf",
@@ -23267,6 +23280,25 @@
       "grade": "doc"
     },
     {
+      "source": "ip-pinimasov-aleksandr-vyacheslavovich",
+      "target": "ooo-npo-kilovatt-shestopalov",
+      "type": "sells_for",
+      "label": "official dealer (certificate №2106/2024)",
+      "source_id": "s0537",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": {
+        "role": "licensed_dealer",
+        "asserted_by": "counterparty",
+        "credibility": "doc",
+        "authorised": "yes",
+        "open": "The certificate is undated and names no product; where and when the dealer sells is not shown. The ИНН printed on it matches this ЕГРИП record."
+      },
+      "grade": "doc"
+    },
+    {
       "source": "ip-tsyganov-vadim-borisovich",
       "target": "ooo-pokrov",
       "type": "directs",
@@ -29400,9 +29432,9 @@
       "source": "ooo-gagaring",
       "target": "ooo-intel-dron",
       "type": "owns",
-      "label": "доля участия 50%",
-      "source_id": "s5333",
-      "as_of": "2025-12-31",
+      "label": "доля участия 40% (₽4 000)",
+      "source_id": "s6815",
+      "as_of": "2025-07-02",
       "weight": 1.0,
       "temporal_status": "historical",
       "confidence": null,
@@ -31049,19 +31081,6 @@
     },
     {
       "source": "ooo-npo-kilovatt-shestopalov",
-      "target": "npo-kilobatt",
-      "type": "related",
-      "label": "dealer",
-      "source_id": "s0537",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-npo-kilovatt-shestopalov",
       "target": "ooo-npo-kilovatt",
       "type": "related",
       "label": "name-collision-distinct",
@@ -32007,7 +32026,7 @@
       "source": "ooo-opkb-eksplomet",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "ЦБСТ (АНО «Центр беспилотных систем и технологий») and ООО «ОПКБ ЭКСПЛОМЕТ» signed a formal strategic-cooperation agr...",
+      "label": "ЦБСТ's own post of 12.08.2025 says it and ООО «ОПКБ ЭКСПЛОМЕТ» signed a strategic-cooperation agreement («соглашение ...",
       "source_id": "s7595",
       "as_of": null,
       "weight": 1.0,

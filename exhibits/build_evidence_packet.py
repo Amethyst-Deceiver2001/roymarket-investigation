@@ -276,6 +276,10 @@ def build(slug: str, external: bool, gap_path: Path, gap_as_of: str) -> str:
             if key in seen:
                 continue
             seen.add(key)
+            if x.get("label") == "name-collision-distinct":  # a namesake kept on file as a false lead is not a link
+                L.append(f"| {label(x['source'])} and {label(x['target'])} are different parties with similar names; "
+                         f"recorded so the collision is not mistaken for a link | Namesake, not a link | {X.ref(x.get('source_id'))} |")
+                continue
             text = f"{label(x['source'])} {EDGE_WORDS.get(x['type'], x['type'])} {label(x['target'])}"
             if x.get("label"):
                 text += f" ({x['label']})"
