@@ -230,6 +230,11 @@ def channel_hits(rows: list[list[str]]) -> dict[tuple[str, str, bool], dict]:
 # Telegram cuts the text in a post page's og:description at about 1,000 characters (seen
 # 03.10.2026, e.g. t.me/vadim_dzema_fpv/378). Only the embed view and the channel preview
 # carry a long post whole, so a post that long keeps its embed view in the queue.
+# user, 03.10.2026: Telegram posts are not archived on the Wayback Machine ("we're not web archiving telegram posts");
+# their preservation is our own record, the RFC 3161 stamps and a per-post evidence bundle. The code stays behind
+# --include-telegram; every Telegram URL enters a batch through pending(), so this one switch covers lookup, preview
+# pages and per-post saves.
+INCLUDE_TELEGRAM = False
 LONG_POST_BYTES = 800
 
 
@@ -256,6 +261,8 @@ def pending(data: dict, tiers: set[int], today: date, *, skip_looked_up: bool = 
     out = []
     for u, e in data["urls"].items():
         if e.get("dropped") or e.get("tier") not in tiers or is_current(e, today):
+            continue
+        if e.get("kind") == "telegram" and not INCLUDE_TELEGRAM:
             continue
         base = data["urls"].get(e.get("variant_of") or "")
         if base and is_current(base, today) and not needs_embed(data, e):
@@ -674,7 +681,11 @@ def main(argv=None) -> int:
         p = sub.add_parser(name)
         p.add_argument("--limit", type=int, default=150, help="URLs per batch (default 150)")
         p.add_argument("--tier", default="1,2", help="comma-separated tiers (default 1,2)")
+        p.add_argument("--include-telegram", action="store_true",
+                       help="also archive Telegram posts (off by default, user decision 03.10.2026)")
     args = ap.parse_args(argv)
+    global INCLUDE_TELEGRAM
+    INCLUDE_TELEGRAM = bool(getattr(args, "include_telegram", False))
     sys.stdout.reconfigure(line_buffering=True)  # a batch killed midway still leaves its log
     if args.cmd == "plan":
         cmd_plan(args)
