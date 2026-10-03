@@ -38323,6 +38323,22 @@
             "as_of": "2026-05-06",
             "note": "ЦБСТ's own channel, post 2116, summarising a War on the Rocks article: «авторы статьи назвали резидентов ЦБСТ: «Ушкуйник» Алексея Чадаева и «Уралдронзавод» Владимира Ткачука». ЦБСТ's own wording, brand-level."
           }
+        ],
+        "financials": [
+          {
+            "year": "2023",
+            "revenue": 3633000,
+            "profit": 108000,
+            "source_id": "s9058",
+            "note": "Simplified form (КНД 0710096). Lines 2110 / 2400; expenses 2120 (3,146), other income 1, other expenses (353), tax (27); total assets 16,065 тыс., equity 608 тыс., short-term borrowings 14,482 тыс. The prior-year column is blank. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2024",
+            "revenue": 438530000,
+            "profit": 86313000,
+            "source_id": "s9059",
+            "note": "Simplified form (КНД 0710096). Lines 2110 / 2400; the lines add up: 438,530 − 331,809 (2120) + 5,417 − 10,918 − 14,907 (tax) = 86,313. At 31.12.2024: total assets 1,363,276 тыс. (stocks 502,551; cash 682,919; other current assets incl. receivables 165,732), equity 33,026 тыс., payables 1,330,250 тыс., borrowings 0. Revenue is 120 times the 2023 figure; the filing gives no breakdown of the payables or the revenue. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          }
         ]
       },
       "why": [
@@ -38330,7 +38346,8 @@
         "User flagged (2026-09-07) that Ткачук/Уралдронзавод was wrongly dismissed as an unrelated adjacent lead; a direct DB search of ЦБСТ's own channel (ANO_CBST) confirms repeated, explicit, first-party ЦБСТ-resident framing — this is a confirmed core-network entity, not adjacent.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "[2026-09-15] wb_overlap=none_found: Brand-name search for product «Упырь» on wildberries.ru (2026-09-15, WebSearch) returned no product listing — only unrelated toy-drone category pages.",
-        "[2026-09-30] ИНН 6671284030 supplied by the investigator and checked: valid control digit, and a ЕГРЮЛ выписка pulled for it (s8542) is for ООО «УРАЛДРОНЗАВОД», ОГРН 1236600057011, registered 19.09.2023 in Екатеринбург, ОКВЭД 30.30.39 (other aircraft) as primary. The registry had carried no ИНН although the sanctions screening (s0755) had been run on this exact ИНН. The sourceless director entry from the brief is replaced by the ЦБСТ channel attribution (s6911) and the restriction record; the register itself does not name the director."
+        "[2026-09-30] ИНН 6671284030 supplied by the investigator and checked: valid control digit, and a ЕГРЮЛ выписка pulled for it (s8542) is for ООО «УРАЛДРОНЗАВОД», ОГРН 1236600057011, registered 19.09.2023 in Екатеринбург, ОКВЭД 30.30.39 (other aircraft) as primary. The registry had carried no ИНН although the sanctions screening (s0755) had been run on this exact ИНН. The sourceless director entry from the brief is replaced by the ЦБСТ channel attribution (s6911) and the restriction record; the register itself does not name the director.",
+        "2026-10-03: БФО for 2023 and 2024 read in full (s9058, s9059); figures added to financials[]."
       ],
       "verified_against": "t.me/ANO_CBST posts #313, #1882, #1891, #2383 (archived as data/sources/TGPOST_20260805_ano_cbst-2383-uraldronzavod-tkachuk-cbst-resident.txt, s6911)"
     },
@@ -42407,10 +42424,34 @@
             2124
           ],
           "note": "Post 1987 («Британский молот») is a pun. Post 2124 (10.05.2026) lists the interceptor «Молот-ПВО» among promising drones but does not say who makes it or that it is from the ЦБСТ contour (the FPV sentence does, the interceptor sentence does not). The maker of «Молот-ПВО» is unresolved, so this entity is neither tied nor excluded."
-        }
+        },
+        "financials": [
+          {
+            "year": "2024",
+            "revenue": 0,
+            "profit": 0,
+            "source_id": "s9064",
+            "note": "Every line of the income statement (2110–2400) is a dash; balance: other current assets 15 тыс. = total assets 15 тыс., charter capital 15 тыс. (matches the ЕГРЮЛ charter capital of ₽15,000, s7639). Signed «руководитель Хогоев Шагдар Львович». Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2025",
+            "revenue": 0,
+            "profit": 0,
+            "source_id": "s9065",
+            "note": "The income-statement page has no rows; balance: total assets 15 тыс. (other current assets), equity 15 тыс.; targeted-funds report all zero. Signed «руководитель Хогоев Шагдар Львович». Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s9065",
+            "status": "open",
+            "text": "2026-10-03: the FY2024 and FY2025 БФО filings (s9064, s9065) are each signed «руководитель Хогоев Шагдар Львович», while the ЕГРЮЛ extract of 19.09.2026 (s7639) names Головин Денис Владимирович as генеральный директор from 18.08.2026 (ГРН 2267707068770). The БФО export prints no signing date, so who headed the company before 18.08.2026 and for how long is not established; read the extract's history or pull the earlier record. No person record for Хогоев: a signatory with no stated role in the network."
+          }
+        ]
       },
       "why": [
-        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [1987] flagged by scripts/tg_post_coverage.py: namesake. Post 1987 («Британский молот») is a pun about Cambridge Aerospace. Post 2124, which lists «Молот-ПВО» among interceptors, is NOT covered by this review and stays open."
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [1987] flagged by scripts/tg_post_coverage.py: namesake. Post 1987 («Британский молот») is a pun about Cambridge Aerospace. Post 2124, which lists «Молот-ПВО» among interceptors, is NOT covered by this review and stays open.",
+        "2026-10-03: БФО for 2024 and 2025 read in full (s9064, s9065): a dormant-looking balance (₽15 тыс.), no income-statement figures."
       ]
     },
     "ao-neyrorevolyutsiya": {
@@ -42605,8 +42646,27 @@
             "source_id": "s8668",
             "text": "Who its students are and whether it trains for units at the front is not stated in any source on file; the tie is the director's resident status as ЦБСТ states it."
           }
+        ],
+        "financials": [
+          {
+            "year": "2024",
+            "revenue": 4816000,
+            "profit": 8000,
+            "source_id": "s9062",
+            "note": "Simplified form (КНД 0710096). The lines add up: 4,816 − 4,762 (2120) − 2 (interest) − 42 − 2 (tax) = 8. Total assets 1,905 тыс., equity 18 тыс., short-term borrowings 1,336 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2025",
+            "revenue": 27186000,
+            "profit": 2657000,
+            "source_id": "s9063",
+            "note": "Simplified form (КНД 0710096). The lines add up: 27,186 − 24,042 (2120) − 16 (interest) + 455 − 654 − 272 (simplified-system tax) = 2,657. Total assets 3,025 тыс., equity 2,674 тыс., cash 1,599 тыс. Signed «руководитель Харламов Алексей Геннадьевич», the director on file. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          }
         ]
-      }
+      },
+      "why": [
+        "2026-10-03: БФО for 2024 and 2025 read in full (s9062, s9063); revenue ₽4.8m then ₽27.2m."
+      ]
     },
     "ao-stratolink": {
       "set": {
@@ -43039,6 +43099,100 @@
       "why": [
         "2026-10-02 B5 brand review: brands[] set from the seller's own site footer, read in full.",
         "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] registered, okved_code and okved_additional from the ЕГРИП extract of 03.10.2026 (s9018): «Дата регистрации 28.05.2021», main ОКВЭД «47.91.2 Торговля розничная, осуществляемая непосредственно при помощи информационно-коммуникационной сети Интернет», 46.90 added 30.04.2025; no termination."
+      ]
+    },
+    "ao-vezhlivyy-kontsern": {
+      "set": {
+        "financials": [
+          {
+            "year": "2024",
+            "revenue": 0,
+            "profit": 0,
+            "source_id": "s9066",
+            "note": "Correction filing no. 3 for 2024 (№ 0710099_9715482630_2024_003). Every line of the income statement is a dash. Balance at 31.12.2024: total assets 1,224 тыс. (financial investments 100, receivables 42, cash 462, other current assets 620), equity 10 тыс., long-term borrowings 1,150 тыс., short-term 27 тыс., payables 37 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2025",
+            "revenue": 0,
+            "profit": 0,
+            "source_id": "s9067",
+            "note": "Simplified form (КНД 0710096). The income-statement page has no rows. Balance at 31.12.2025: total assets 2,192 тыс. (financial investments 100, cash 429, other current assets 1,664), capital 10 тыс., long-term borrowings 1,970 тыс., short-term 169 тыс., payables 44 тыс. Signed «руководитель Рыжкина Ирина Васильевна», the director on file. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          }
+        ]
+      },
+      "verified_against": "signed БФО filing read in full, 03.10.2026",
+      "why": [
+        "2026-10-03: БФО for 2024 and 2025 read in full (s9066, s9067): no income-statement figures; the company is funded by borrowings (₽1.97m long-term at end 2025)."
+      ]
+    },
+    "ao-uk-inntts-intellektualnaya-elektronika-valday": {
+      "set": {
+        "financials": [
+          {
+            "year": "2023",
+            "revenue": 17548000,
+            "profit": -5819000,
+            "source_id": "s9055",
+            "note": "Original filing (№ …_2023_000). Sales cost (50,555), other income 26,054, other expenses (320), tax +1,454; equity (6,818) тыс. at 31.12.2023. The 2024 filing restates the 2023 column: cost of sales (25,414), management expenses (3,157), other expenses (22,304), net loss (5,818) (s9056). Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2024",
+            "revenue": 77989000,
+            "profit": -7917000,
+            "source_id": "s9056",
+            "note": "Correction filing no. 2 for 2024 (№ …_2024_002); earlier versions exist. Loss from sales (5,320), interest received 117, other income 15,126, other expenses (20,763), tax +2,923; equity (14,773) тыс. at 31.12.2024. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2025",
+            "revenue": 139919000,
+            "profit": -7797000,
+            "source_id": "s9057",
+            "note": "Correction filing no. 1 for 2025 (№ …_2025_001). Loss from sales (5,091), interest received 982, other income 225, other expenses (6,443), tax +2,530; equity (22,571) тыс. at 31.12.2025 (negative); charter capital 11 тыс. Signed «руководитель Петрова Мария Андреевна», the director on file. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          }
+        ]
+      },
+      "verified_against": "signed БФО filing read in full, 03.10.2026",
+      "why": [
+        "2026-10-03: БФО for 2023, 2024 and 2025 read in full (s9055–s9057); revenue ₽17.5m, ₽78.0m, ₽139.9m with a loss every year and negative equity. The 2024 filing restates the 2023 comparative column."
+      ]
+    },
+    "fond-infrastrukturnykh-i-obrazovatelnykh-programm": {
+      "set": {
+        "financials": [
+          {
+            "year": "2021",
+            "revenue": 6590000,
+            "profit": 838178000,
+            "funds_balance_start": 3283472000,
+            "funds_received": 3572267000,
+            "funds_used": 2573714000,
+            "funds_balance_end": 4282025000,
+            "source_id": "s9060",
+            "note": "Taken from the prior-year column of the 2022 filing; the 2021 filing itself is not pulled. Non-profit общественный фонд (ОКОПФ 70403): line 2110 «Выручка» is as printed, the net profit comes mainly from interest received (572,392 тыс., line 2320) and the funds_* figures are the «Отчет о целевом использовании средств» (lines 6100–6400), which are funds, not revenue. The 2021 cash-flow column shows a «субсидия» of 897,459 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2022",
+            "revenue": 3644000,
+            "profit": 692575000,
+            "funds_balance_start": 4282025000,
+            "funds_received": 4377655000,
+            "funds_used": 3782095000,
+            "funds_balance_end": 4877585000,
+            "source_id": "s9060",
+            "note": "Non-profit общественный фонд (ОКОПФ 70403), no auditor named in the export. Line 2110 «Выручка» is as printed; pre-tax profit 795,738 тыс. is mostly interest received 772,802 тыс. (line 2320) plus 19,281 тыс. income from participation in other organisations (2310). Funds received 4,377,655 тыс. = profit from income-generating activity 692,575 + «Прочие» 3,685,080 (line 6250); spent: targeted measures 3,261,438, administration 485,707, fixed assets 34,950. These funds are not revenue. Balance sheet total 25,477,470 тыс., of which financial investments 17,251,512 + 5,365,000. The 2022 cash-flow statement shows «субсидия» 0. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s9060",
+            "status": "open",
+            "text": "2026-10-03: FY2022 «Отчет о целевом использовании средств» shows «Прочие» receipts of ₽3,685,080 тыс. in 2022 (₽1,834,090 тыс. in 2021) and, for 2021, ₽900,000 тыс. of «Целевые взносы» and a cash-flow «субсидия» of ₽897,459 тыс. The БФО export carries no notes, so who paid these sums is not stated; the fund's own annual report or the notes to the accounts are needed. Only the FY2022 filing is pulled."
+          }
+        ]
+      },
+      "verified_against": "signed БФО filing read in full, 03.10.2026",
+      "why": [
+        "2026-10-03: БФО for 2022 read in full (s9060). A non-profit with a commercial-style income statement and a targeted-funds report; funds recorded as funds, not revenue."
       ]
     }
   }
