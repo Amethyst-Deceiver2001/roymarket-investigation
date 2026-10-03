@@ -44,6 +44,29 @@ def test_telegram_key_and_channel_hits():
     assert ("ano_cbst", "6", False) not in h, "a comment view is not the post"
 
 
+def test_preview_pages():
+    assert A.preview_url("ano_cbst", 2041) == "https://t.me/s/ano_cbst?before=2042"
+    html = b'<div data-post="ANO_CBST/2041"></div><div data-post="ano_cbst/2039"></div><div data-post="other/7">'
+    assert A.posts_on_page(html, "ano_cbst") == {2041, 2039}
+    import gzip
+    assert A.posts_on_page(gzip.compress(html), "ano_cbst") == {2041, 2039}, "id_ bytes may be gzipped"
+
+
+def test_telegram_capture_never_stale_and_variant_follows_base():
+    today = date(2026, 10, 3)
+    old = [{"timestamp": "20200101000000", "method": "existing"}]
+    assert A.is_current({"kind": "telegram", "captures": old}, today)
+    assert not A.is_current({"kind": "web", "captures": old}, today)
+    data = {"urls": {
+        "https://t.me/a/1": {"tier": 1, "kind": "telegram", "captures": old},
+        "https://t.me/a/1?embed=1&mode=tme": {"tier": 1, "kind": "telegram", "captures": [],
+                                              "variant_of": "https://t.me/a/1"},
+        "https://t.me/a/2?embed=1&mode=tme": {"tier": 1, "kind": "telegram", "captures": [],
+                                              "variant_of": "https://t.me/a/2"},
+        "https://t.me/a/2": {"tier": 1, "kind": "telegram", "captures": []}}}
+    assert A.pending(data, {1}, today) == ["https://t.me/a/2", "https://t.me/a/2?embed=1&mode=tme"]
+
+
 def test_tiers():
     assert A.tier_of("telegram", True) == 1
     assert A.tier_of("web", True) == 1

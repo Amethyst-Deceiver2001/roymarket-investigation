@@ -50,6 +50,7 @@ from __future__ import annotations
 import argparse
 import base64
 import glob
+import gzip
 import hashlib
 import json
 import os
@@ -185,9 +186,12 @@ def build_plan(sources: list[dict], cited: set[str], prev: dict) -> tuple[dict, 
 
 
 def is_current(e: dict, today: date) -> bool:
+    """A web page goes stale after FRESH_DAYS. A Telegram post does not: any
+    capture shows it as published, and an early one predates later edits
+    (user, 03.10.2026). Our own copy is fixed by timestamp_sources.py."""
     for c in e.get("captures", []):
         ts = c.get("timestamp")
-        if c.get("method") == "cited":
+        if c.get("method") == "cited" or (ts and e.get("kind") == "telegram"):
             return True
         if ts and datetime.strptime(ts[:8], "%Y%m%d").date() >= today - timedelta(days=FRESH_DAYS):
             return True
@@ -228,6 +232,9 @@ def pending(data: dict, tiers: set[int], today: date, *, skip_looked_up: bool = 
     for u, e in data["urls"].items():
         if e.get("dropped") or e.get("tier") not in tiers or is_current(e, today):
             continue
+        base = data["urls"].get(e.get("variant_of") or "")
+        if base and is_current(base, today):
+            continue  # the post itself is captured; its embed view adds nothing
         if skip_looked_up and e.get("looked_up") == today.isoformat():
             continue
         out.append(u)
@@ -274,11 +281,11 @@ def cdx_latest(url: str) -> dict | None:
     return {"timestamp": ts, "original": orig, "wayback_sha1": digest}
 
 
-def cdx_channel(channel: str, since: date) -> list[list[str]]:
-    """Every 200 capture under t.me/<channel>/ since `since`, one row per URL."""
+def cdx_channel(channel: str) -> list[list[str]]:
+    """The earliest 200 capture of every URL under t.me/<channel>/, one row each."""
     q = urllib.parse.urlencode({"url": f"t.me/{channel}/", "matchType": "prefix", "output": "json",
                                 "fl": "timestamp,original,digest", "filter": "statuscode:200",
-                                "collapse": "urlkey", "from": since.strftime("%Y%m%d")})
+                                "collapse": "urlkey"})
     status, _, body, _ = http(f"{WAYBACK}/cdx/search/cdx?{q}", timeout=300)
     if status != 200:
         raise RuntimeError(f"CDX HTTP {status}")
@@ -286,12 +293,48 @@ def cdx_channel(channel: str, since: date) -> list[list[str]]:
     return rows[1:]
 
 
-def raw_sha256(ts: str, url: str) -> tuple[str | None, int | None]:
-    """SHA-256 of the archived bytes as Wayback serves them unmodified (id_)."""
+def raw_body(ts: str, url: str) -> bytes | None:
+    """The archived bytes as Wayback serves them unmodified (id_ view)."""
     status, _, body, _ = http(f"{WAYBACK}/web/{ts}id_/{url}", timeout=120)
-    if status != 200:
-        return None, status
+    return body if status == 200 else None
+
+
+def raw_sha256(ts: str, url: str) -> tuple[str | None, int | None]:
+    body = raw_body(ts, url)
+    if body is None:
+        return None, None
     return hashlib.sha256(body).hexdigest(), len(body)
+
+
+def preview_url(channel: str, post: int) -> str:
+    """The channel's public web preview ending at `post` (about 20 posts per page)."""
+    return f"https://t.me/s/{channel}?before={post + 1}"
+
+
+def decoded(body: bytes) -> bytes:
+    """The id_ view returns bytes as the site sent them, often gzip-compressed."""
+    if body[:2] == b"\x1f\x8b":
+        try:
+            return gzip.decompress(body)
+        except OSError:
+            return body
+    return body
+
+
+def existing_preview(page: str) -> tuple[str, bytes] | None:
+    """The newest archived copy of a preview page, if one exists (ours or anyone's)."""
+    status, _, body, final = http(f"{WAYBACK}/web/2id_/{page}", timeout=120)
+    m = re.search(r"/web/(\d{14})id_/", final or "")
+    if status != 200 or not m:
+        return None
+    return m.group(1), body
+
+
+def posts_on_page(html: bytes, channel: str) -> set[int]:
+    """Post ids the preview page actually shows (its data-post attributes)."""
+    html = decoded(html)
+    pat = rf'data-post="{re.escape(channel)}/(\d+)"'.encode()
+    return {int(m) for m in re.findall(pat, html, flags=re.I)}
 
 
 def spn_keyed(url: str, access: str, secret: str) -> str:
@@ -346,6 +389,7 @@ def record_capture(e: dict, ts: str, url: str, method: str, sha1: str | None = N
         "archive_url": f"{WAYBACK}/web/{ts}/{url}",
         "timestamp": ts,
         "method": method,          # existing (found in the index) | saved (requested by us) | cited
+                                   # (preview_page: a channel page that shows the post, see save_previews)
         "checked": date.today().isoformat(),
         "sha256": sha256,          # of the raw archived bytes (id_ view)
         "bytes": size if sha256 else None,
@@ -415,7 +459,7 @@ def lookup_channels(data: dict, todo: list[str], today: date) -> int:
     found = 0
     for ch, urls in sorted(by_channel.items()):
         try:
-            hits = channel_hits(cdx_channel(ch, today - timedelta(days=FRESH_DAYS)))
+            hits = channel_hits(cdx_channel(ch))
         except Exception as err:  # leave these to the per-URL lookup
             print(f"  channel {ch}: {err}", flush=True)
             time.sleep(DELAY_LOOKUP)
@@ -443,7 +487,7 @@ def lookup_channels(data: dict, todo: list[str], today: date) -> int:
 def cmd_lookup(args, data: dict | None = None) -> dict:
     data = data or load_archives()
     today = date.today()
-    tg = [u for u in pending(data, parse_tiers(args.tier), today, skip_looked_up=True)
+    tg = [u for u in pending(data, parse_tiers(args.tier), today)  # cheap: re-ask every run
           if data["urls"][u]["kind"] == "telegram"]
     if tg:
         print(f"lookup: {len(tg)} Telegram posts, one index query per channel", flush=True)
@@ -469,6 +513,60 @@ def cmd_lookup(args, data: dict | None = None) -> dict:
     return data
 
 
+def save_previews(data: dict, tiers: set[int], today: date, capture, delay: float, budget: int) -> int:
+    """Capture pending Telegram posts through channel preview pages; returns captures used.
+
+    One preview page shows about 20 posts, so one capture can cover several
+    cited posts. A post counts as captured only if the archived page's own
+    markup shows it (data-post); anything a page misses is left for the
+    per-post save. A channel with its preview switched off costs one capture."""
+    by_channel: dict[str, dict[int, str]] = {}
+    for u in pending(data, tiers, today):
+        k = telegram_key(u)
+        if k and not k[2]:
+            by_channel.setdefault(k[0], {})[int(k[1])] = u
+    used = 0
+    for ch, posts in sorted(by_channel.items(), key=lambda kv: -len(kv[1])):
+        if len(posts) < 2:
+            continue  # a single post is cheaper to save directly
+        left = dict(posts)
+        while left and used < budget:
+            top = max(left)
+            page = preview_url(ch, top)
+            used += 1
+            try:
+                hit = existing_preview(page)
+                if hit and posts_on_page(hit[1], ch) & set(left):
+                    ts, body, how = hit[0], hit[1], "existing"
+                    used -= 1  # no capture requested
+                else:
+                    ts = capture(page)
+                    body, how = raw_body(ts, page), "saved"
+                shown = posts_on_page(body or b"", ch)
+            except RateLimited:
+                print("  rate-limited by the Wayback Machine; stopping this batch", flush=True)
+                return budget
+            except Exception as err:
+                print(f"  failed {page}: {err}", flush=True)
+                break
+            covered = [p for p in left if p in shown]
+            sha = hashlib.sha256(body).hexdigest() if body else None
+            for p in covered:
+                e = data["urls"][left.pop(p)]
+                e["captures"] = e.get("captures", []) + [{
+                    "service": "wayback", "archive_url": f"{WAYBACK}/web/{ts}/{page}",
+                    "timestamp": ts, "method": "preview_page", "checked": today.isoformat(),
+                    "sha256": sha, "bytes": len(body) if body else None, "wayback_sha1": None,
+                    "shows_post": True}]
+                e.pop("last_error", None)
+            print(f"  {ch}: page before {top + 1} ({how}) shows {len(covered)} cited posts", flush=True)
+            save_archives(data)
+            time.sleep(delay if how == "saved" else DELAY_LOOKUP)
+            if top not in shown:
+                break  # preview off, or the page skips this post: leave the rest to per-post saves
+    return used
+
+
 def cmd_save(args, data: dict | None = None) -> int:
     data = data or load_archives()
     today = date.today()
@@ -477,14 +575,17 @@ def cmd_save(args, data: dict | None = None) -> int:
         _load_dotenv()
         access, secret = os.environ.get("WAYBACK_S3_ACCESS"), os.environ.get("WAYBACK_S3_SECRET")
     delay = DELAY_KEYED if access and secret else DELAY_ANON
-    todo = pending(data, parse_tiers(args.tier), today)[: args.limit]
+    capture = (lambda u: spn_keyed(u, access, secret)) if access and secret else spn_anon
+    budget = args.limit
+    budget -= save_previews(data, parse_tiers(args.tier), today, capture, delay, budget)
+    todo = pending(data, parse_tiers(args.tier), today)[: max(budget, 0)]
     print(f"save: {len(todo)} URLs ({'keyed SPN2' if access else 'anonymous SPN'}, {delay:.0f}s apart)")
     saved = failed = 0
     for i, u in enumerate(todo, 1):
         e = data["urls"][u]
         e["last_attempt"] = today.isoformat()
         try:
-            ts = spn_keyed(u, access, secret) if access and secret else spn_anon(u)
+            ts = capture(u)
             record_capture(e, ts, u, "saved")
             saved += 1
             print(f"  [{i}/{len(todo)}] ok {ts} {u}")

@@ -282,7 +282,8 @@ a registry fact.
 | Missing/stale ЕГРЮЛ, ЕГРИП, БФО; missing/stale OpenSanctions, ГУР, Aleph screens | `status_board.py --pull-queue` (8 + 8 a day, top tiers first; re-screens 4 OpenSanctions + 8 ГУР + 8 Aleph a day; ingest steps incl. the graph rebuild printed after) | the user's Mac; the queue is the user's standing go-ahead, run as printed |
 | First reading of what arrived | `first_reading.py export --push` (Mac; `--local-dir data/sources/_inbox` also writes the texts locally so `read` runs the same day), then `read` | worksheet for a human; never merged, never applied |
 | Sanctions lists by ИНН/ОГРН | `sanctions_watch.py` | GitHub Actions, Mondays; an issue opens on change; state on `watch/sanctions` |
-| Public copies of cited pages | `archive_sources.py run --limit 150` | the user's Mac, a batch at a time; tier 1 not started (476 posts, 156 pages) |
+| Public copies of cited pages | `archive_sources.py run --limit 150` | the user's Mac, a batch at a time; Telegram via per-channel lookup and preview pages (03.10.2026) |
+| Timestamped fingerprints of every source file | `timestamp_sources.py build && … stamp` | the Mac, after new sources; first run 03.10.2026 (8,935 files, FreeTSA + DigiCert; 121 files differ from their catalogued hash, listed) |
 | Tests, registry check, tag balance | `.github/workflows/checks.yml` | every push to main and every PR |
 
 Still by hand (no tool selects per record):
