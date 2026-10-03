@@ -74,7 +74,7 @@ Other links in the record:
 
 *Facts only, in the order an EU listing puts them. The submitter chooses the legal route (for example the asset-freeze criteria of Council Decision 2014/145/CFSP, or the military end-user list in Annex IV to Council Regulation (EU) No 833/2014) and writes the conclusion.*
 
-OOO «Smart Teknolodzhis» (ООО «Смарт Текнолоджис»; ИНН 7715934509; ОГРН 1127746712752) is a company registered in Russia on 07.09.2012, in Penza. Its general director is Кот Олег Петрович [E2]. Its owners are АКЦИОНЕРНОЕ ОБЩЕСТВО "УК СМАРТ" 100% (₽5 500 000) [E1]. Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): Named by ЦБСТ's own channel as «Резидент Центра беспилотных систем и технологий (ЦБСТ)». [E8]. Its products include «Метафора» [E9]. Its filed revenue for 2025 was ₽3,929.6m [E7].
+OOO «Smart Teknolodzhis» (ООО «Смарт Текнолоджис»; ИНН 7715934509; ОГРН 1127746712752) is a company registered in Russia on 07.09.2012, in Penza. Its general director is Кот Олег Петрович [E2]. Its owners, as of 29.12.2023, are АКЦИОНЕРНОЕ ОБЩЕСТВО "УК СМАРТ" 100% (₽5 500 000) [E1]. Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): Named by ЦБСТ's own channel as «Резидент Центра беспилотных систем и технологий (ЦБСТ)». [E8]. Its products include «Метафора» [E9]. Its filed revenue for 2025 was ₽3,929.6m [E7].
 
 [Conclusion and criterion: for the submitter.]
 

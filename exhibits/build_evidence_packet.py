@@ -335,7 +335,16 @@ def build(slug: str, external: bool, gap_path: Path, gap_as_of: str) -> str:
         last = fh[-1]["value"] if isinstance(fh[-1]["value"], list) else [fh[-1]["value"]]
         own = ", ".join(f"{v.get('name')} ({v['share_percent']}%)" if isinstance(v, dict) and v.get("share_percent") is not None
                         else (v.get("name") if isinstance(v, dict) else str(v)) for v in last)
-        sor.append(f"Its owners are {own} {X.ref(fh[-1].get('source_id'))}.")
+        dmy = lambda d: '.'.join(reversed(str(d).split('-'))) if d and str(d)[:4].isdigit() and str(d).count('-') == 2 else str(d)
+        def shares(row):
+            v = row["value"] if isinstance(row["value"], list) else []
+            return sorted((x.get("name"), x.get("share_percent")) for x in v if isinstance(x, dict) and x.get("share_percent") is not None)
+        sor.append(f"Its owners, as of {dmy(fh[-1].get('as_of'))}, are {own} {X.ref(fh[-1].get('source_id'))}.")
+        other = [r for r in fh[:-1] if shares(r) and shares(r) != shares(fh[-1])]
+        if other and any(e2.get("text", "").startswith("Ownership conflict") for e2 in (e.get("open_questions") or [])):
+            o = other[-1]
+            sor.append(f"Another document gives different shares as of {dmy(o.get('as_of'))} {X.ref(o.get('source_id'))}; "
+                       "the two are not reconciled (see the open questions).")
     if tie:
         t = tie[0]
         sor.append(f"Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): {tie_text(e, t)} "

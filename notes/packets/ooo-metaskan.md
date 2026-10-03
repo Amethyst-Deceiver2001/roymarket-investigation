@@ -72,7 +72,7 @@ Other links in the record:
 
 *Facts only, in the order an EU listing puts them. The submitter chooses the legal route (for example the asset-freeze criteria of Council Decision 2014/145/CFSP, or the military end-user list in Annex IV to Council Regulation (EU) No 833/2014) and writes the conclusion.*
 
-OOO «Metaskan» (ООО «Метаскан»; ИНН 1660349248; ОГРН 1201600057097) is a company registered in Russia on 19.08.2020, in Kazan. Its general director is Поспехов Иван Александрович [E1]. Its owners are Поспехов Иван Александрович 50% (₽20 000) / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЦЕНТРАЛИЗОВАННАЯ ЮРИДИЧЕСКАЯ СЛУЖБА" 50% (₽20 000) [E1]. Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): ЦБСТ's own post of 12.05.2025 lists «Арена 5М» demining firing devices (ООО «Метаскан») among the goods it handed over to Kursk-direction sappers and units. [E8]. Its products include «Арена 5М» [E8]. Its filed revenue for 2025 was ₽764.7m [E7].
+OOO «Metaskan» (ООО «Метаскан»; ИНН 1660349248; ОГРН 1201600057097) is a company registered in Russia on 19.08.2020, in Kazan. Its general director is Поспехов Иван Александрович [E1]. Its owners, as of 09.07.2025, are Поспехов Иван Александрович 50% (₽20 000) / ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЦЕНТРАЛИЗОВАННАЯ ЮРИДИЧЕСКАЯ СЛУЖБА" 50% (₽20 000) [E1]. Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): ЦБСТ's own post of 12.05.2025 lists «Арена 5М» demining firing devices (ООО «Метаскан») among the goods it handed over to Kursk-direction sappers and units. [E8]. Its products include «Арена 5М» [E8]. Its filed revenue for 2025 was ₽764.7m [E7].
 
 [Conclusion and criterion: for the submitter.]
 

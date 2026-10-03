@@ -69,7 +69,7 @@ No ЦБСТ edge in the graph.
 
 *Facts only, in the order an EU listing puts them. The submitter chooses the legal route (for example the asset-freeze criteria of Council Decision 2014/145/CFSP, or the military end-user list in Annex IV to Council Regulation (EU) No 833/2014) and writes the conclusion.*
 
-OOO «Gaskar» (ООО «Гаскар»; ИНН 9710112989; ОГРН 1237700273744) is a company registered in Russia, in Moscow. Its general director is Константинов Евгений Александрович [E4]. Its owners are ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СИБИРСКАЯ НАВИГАЦИОННАЯ КОМПАНИЯ" 100% (₽10 000) [E1]. Its products include Мотор PY3115 1300KV бесколлекторный FPV, Пропеллеры 10 дюймов 3 лопасти FPV (совместимость 3115 900KV), Беспилотная авиационная система "Шторм", Беспилотная авиационная система "Сибирячок-5", Беспилотная авиационная система "Втулка", Беспилотная авиационная система «Сибирь-2» [E8]. Its filed revenue for 2025 was ₽9,824.7m [E7].
+OOO «Gaskar» (ООО «Гаскар»; ИНН 9710112989; ОГРН 1237700273744) is a company registered in Russia, in Moscow. Its general director is Константинов Евгений Александрович [E4]. Its owners, as of 03.04.2026, are ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СИБИРСКАЯ НАВИГАЦИОННАЯ КОМПАНИЯ" 100% (₽10 000) [E1]. Its products include Мотор PY3115 1300KV бесколлекторный FPV, Пропеллеры 10 дюймов 3 лопасти FPV (совместимость 3115 900KV), Беспилотная авиационная система "Шторм", Беспилотная авиационная система "Сибирячок-5", Беспилотная авиационная система "Втулка", Беспилотная авиационная система «Сибирь-2» [E8]. Its filed revenue for 2025 was ₽9,824.7m [E7].
 
 [Conclusion and criterion: for the submitter.]
 

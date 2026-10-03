@@ -54,7 +54,7 @@ Other links in the record:
 
 *Facts only, in the order an EU listing puts them. The submitter chooses the legal route (for example the asset-freeze criteria of Council Decision 2014/145/CFSP, or the military end-user list in Annex IV to Council Regulation (EU) No 833/2014) and writes the conclusion.*
 
-OOO «STIMS» (ООО «СТИМС»; ИНН 7734436058; ОГРН 1207700279797) is a company registered in Russia on 07.08.2020, in Москва. Its general director is Мингалимов Ленар Нуриахметович [E1]. Its owners are ООО «Аметист Кэпитал» (ИНН 9704078560, ОГРН 1217700336480) 60% (₽6,000) / Мингалимов Ленар Нуриахметович (ИНН 165020722607) 20% (₽2,000) / Саитов Ренат Фаритович (ИНН 027503961630) 20% (₽2,000) [E1]. Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): Named by ЦБСТ's own channel, as «Гаскар Групп», among the organisations in its contour that the EU listed in its 20th package. [E4].
+OOO «STIMS» (ООО «СТИМС»; ИНН 7734436058; ОГРН 1207700279797) is a company registered in Russia on 07.08.2020, in Москва. Its general director is Мингалимов Ленар Нуриахметович [E1]. Its owners, as of 07.07.2026, are ООО «Аметист Кэпитал» (ИНН 9704078560, ОГРН 1217700336480) 60% (₽6,000) / Мингалимов Ленар Нуриахметович (ИНН 165020722607) 20% (₽2,000) / Саитов Ренат Фаритович (ИНН 027503961630) 20% (₽2,000) [E1]. Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): Named by ЦБСТ's own channel, as «Гаскар Групп», among the organisations in its contour that the EU listed in its 20th package. [E4].
 
 [Conclusion and criterion: for the submitter.]
 
