@@ -57321,6 +57321,25 @@
         "as_of": "2026-04-15",
         "source_id": "s6776",
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
+      },
+      {
+        "as_of": "2026-10-04",
+        "source_id": "s9126",
+        "note": "Fresh ЕГРЮЛ extract of 04.10.2026 (pulled to test the conflict with the audit report): unchanged. Александров Алексей Витальевич 49.5% (₽4,950, foreign citizen, Belarus), Барашков Александр Сергеевич 50.5% (₽5,050); both share records still carry ГРН 2262300538091 of 15.04.2026, no later record. The extract shows current records only, so it cannot show what the split was before 15.04.2026.",
+        "value": [
+          {
+            "inn_personal": "252201766438",
+            "name": "Барашков Александр Сергеевич",
+            "nominal_value": 5050,
+            "share_percent": 50.5
+          },
+          {
+            "inn_personal": "231015713057",
+            "name": "Александров Алексей Витальевич",
+            "nominal_value": 4950,
+            "share_percent": 49.5
+          }
+        ]
       }
     ],
     "charter_capital": 10000,
@@ -57823,6 +57842,10 @@
       {
         "source_id": "s5333",
         "text": "The auditor's report on FY2025 prints other holdings (Авирон 36.8%, Эйлер 50%, Лаборатория Янгеля 50% from s7362) that have not been checked against those companies' own ЕГРЮЛ extracts; the Интел Дрон share (50% in the report) is 40% in the register, so the others may differ as well."
+      },
+      {
+        "source_id": "s9126",
+        "text": "Ownership conflict, status 04.10.2026: the register (re-read 04.10.2026) gives 49.5/50.5 since the entry of 15.04.2026; the FY2025 audit report gives 50/50 as of 31.12.2025. These may describe different dates: a 0.5% transfer entered on 15.04.2026 would produce exactly this register picture, and the audit report (signed 04.06.2026) would then be stating the year-end split without noting the later change. This reading is NOT confirmed: no document on file records a transfer or the pre-April split. A ЕГРЮЛ extract shows current records only; the earlier split would need a register entry history (ГРН 2262300538091 and its predecessor record, via a request to the inspectorate) or the 31.03.2026 version of the audit report."
       }
     ],
     "sources": [],
@@ -57883,7 +57906,8 @@
       "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s5440; the earlier cbst_tie record is unchanged.",
       "04.10.2026 (packet check of 03.10.2026, issue #20): read the ЕГРЮЛ extract s6776 against the packet. CORRECTED the date of the 50.5/49.5 row: Александров's participant entry is 22.12.2023, the split is the record of 15.04.2026; the audit-report conflict stays open.",
       "04.10.2026: registered address and its entry date read from the ЕГРЮЛ extract (s6776).",
-      "04.10.2026 (packet check of 03.10.2026): Интел Дрон share corrected to the register's 40% (the audit report's 50% kept as a note); the 2024 profit restatement in the FY2025 filing noted."
+      "04.10.2026 (packet check of 03.10.2026): Интел Дрон share corrected to the register's 40% (the audit report's 50% kept as a note); the 2024 profit restatement in the FY2025 filing noted.",
+      "04.10.2026: fresh extract (s9126) re-read; ownership unchanged, conflict with the audit report recorded as a date difference that is plausible but unproven."
     ],
     "_verified_against": null,
     "name_display": "OOO «Gagaring»",
