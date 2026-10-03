@@ -20820,6 +20820,8 @@
     ],
     "graph_tier": "reference",
     "_verified_against": null,
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-03",
     "egrip_hits": [
       {
         "ogrnip": "312784723400403",
@@ -48243,6 +48245,22 @@
     "_raw": {},
     "fio_latin": "Evgeny Aleinik",
     "_corrected": null,
+    "opensanctions_matches": [
+      {
+        "match_id": "NK-Jhy8WseBPaa7ojvLquybfX",
+        "caption": "ALEJNIK Evgeny Stanislavovich",
+        "schema": "Person",
+        "score": 0.9091,
+        "topics": [
+          "poi",
+          "sanction"
+        ],
+        "source_urls": [
+          "https://war-sanctions.gur.gov.ua/en/propaganda/persons/35810"
+        ]
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-03",
     "aleph_matches": [
       {
         "entity_id": "14b3a000639cc14105db2ee443e789978d521d6c.73ea8a5ea6baf18778abc3554ce9a337627a650c",
@@ -48350,6 +48368,32 @@
       "note": "Scanned by personal ИНН, zero hits in zakupki.gov.ru contract registry."
     },
     "_verified_against": null,
+    "opensanctions_matches": [
+      {
+        "match_id": "NK-6tH8GgrHoTBgBxMRojnTxL",
+        "caption": "BOGATIKOV Sergey Anatolyevich",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [
+          "poi",
+          "sanction"
+        ],
+        "source_urls": [
+          "https://war-sanctions.gur.gov.ua/en/scientists/persons/22964"
+        ]
+      },
+      {
+        "match_id": "Q4079561",
+        "caption": "Batchikov Sergei Anatolievich",
+        "schema": "Person",
+        "score": 0.8935,
+        "topics": [
+          "poi"
+        ],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-03",
     "aleph_matches": [
       {
         "entity_id": "ru-inn-770304117100.ddf0c0d36ed0a77d5b1a71354771a3854abe7ccd",
@@ -50157,7 +50201,9 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_corrected": null
+    "_corrected": null,
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-03"
   },
   {
     "slug": "mavrin-oleg-vladimirovich",

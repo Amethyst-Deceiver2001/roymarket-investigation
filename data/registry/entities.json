@@ -7478,6 +7478,20 @@
         "context": "Named military unit's (88th Brigade, callsign \"Испанец\"/Espanyola) own combat-application account with video footage, reposted on Овод's own channel — third-party framed, not the manufacturer's own marketing copy.",
         "source_id": "s6456",
         "as_of": "2025-06-10"
+      },
+      {
+        "text_ru": "Уничтожение украинской боевой машины в зоне СВО 15-й отдельной ротой специального назначения на дронах ОВОД.",
+        "text_en": "Destruction of a Ukrainian combat vehicle in the SMO zone by the 15th separate special-purpose company with OVOD drones.",
+        "context": "The maker's own channel @tulaovod, post 956 (18.09.2026), with video: the maker's framing (asserted_by self). The unit is named only in the maker's post, so it does not enter military_units.json (peer audit 15.09.2026).",
+        "source_id": "s9074",
+        "as_of": "2026-09-18"
+      },
+      {
+        "text_ru": "Минобороны России опубликовало видео, на котором запечатлено боевое применение FPV-дрона «Овод». На кадрах камикадзе поражает технику ВСУ.",
+        "text_en": "Russia's Defence Ministry published a video showing combat use of the «Ovod» FPV drone; the footage shows the kamikaze drone striking Ukrainian armed forces equipment.",
+        "context": "ЦБСТ post 2557 (22.09.2026, with video) relaying a Defence Ministry publication; the Ministry's own post is not archived, so this rests on ЦБСТ's report. The same post names the line as «команды Андрея Черезова» and lists the НРТК «Довод» for delivering FPV drones to the launch line.",
+        "source_id": "s9076",
+        "as_of": "2026-09-22"
       }
     ],
     "domain_history": [],
@@ -7533,6 +7547,10 @@
       {
         "source_id": "s8692",
         "text": "2026-10-01 founding-document read (three documents, 2022, 2023, 2024): both charter texts (2022 §10.4–10.6, 2024) carry state-secret clauses (executive body responsible for protecting state-secret information; participants may see such documents only with a допуск). The wording is identical to the Киловатт charter (ИНН 4800016776), so it is template text; no допуск is evidenced by it."
+      },
+      {
+        "source_id": "s9076",
+        "text": "2026-10-03: ЦБСТ post 2557 says the Defence Ministry published «Овод» combat footage; archive the Ministry's own post (Telegram @mod_russia or mil.ru) as the primary source. The same post names an НРТК «Довод» (ground robot delivering FPV drones to the launch line) in the Черезов team's line: not in products[] until the maker's own page or post is archived."
       }
     ],
     "sources": [],
@@ -58694,7 +58712,9 @@
       }
     ],
     "_verified_against": null,
-    "name_display": "IP Gabitov Radik Alferdovich"
+    "name_display": "IP Gabitov Radik Alferdovich",
+    "aleph_matches": [],
+    "aleph_screened_at": "2026-10-03"
   },
   {
     "slug": "ip-popov-aleksandr-sergeevich",
@@ -58945,7 +58965,44 @@
       "2026-09-20: zakupki search (scan of 20.09.2026): 81 hits, 80 read - small regional job-centre retraining contracts 2017-2022, none military or drone-related; one card unread (see zakupki_review). ООО «НИИ ДПО»: 0 hits.",
       "2026-09-20: created from the certificate specimens posted by Архангел (s7897-s7906) and the ЕГРЮЛ выписка (s7907)."
     ],
-    "name_display": "ANO \"NAUCHNO-ISSLEDOVATELSKIY INSTITUT DOPOLNITELNOGO PROFESSIONALNOGO OBRAZOVANIYA\""
+    "name_display": "ANO \"NAUCHNO-ISSLEDOVATELSKIY INSTITUT DOPOLNITELNOGO PROFESSIONALNOGO OBRAZOVANIYA\"",
+    "aleph_matches": [
+      {
+        "entity_id": "e3f03ca6eabb78c1e513d57fd5d59147d850c50a.953d49906a582b4ef09aba9ec69f393cd667493f",
+        "caption": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ \"УЧЕБНЫЙ ЦЕНТР \"АЛЛЮР\"",
+        "schema": "Company",
+        "score": 23.8769,
+        "dataset_label": "Russian Public Procurement Awards, Authorities, and Suppliers (April 2022)",
+        "dataset_category": "procurement",
+        "countries": [],
+        "ui_link": "https://aleph.occrp.org/entities/e3f03ca6eabb78c1e513d57fd5d59147d850c50a.953d49906a582b4ef09aba9ec69f393cd667493f"
+      },
+      {
+        "entity_id": "ru-inn-5505057400.7557be30a894d529efc5099611a2a9bbaf2b69d4",
+        "caption": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ \"УЧЕБНЫЙ ЦЕНТР \"АЛЛЮР\"",
+        "schema": "Company",
+        "score": 21.9656,
+        "dataset_label": "Russian Unified State Register of Legal Entities (EGRUL)",
+        "dataset_category": "company",
+        "countries": [
+          "ru"
+        ],
+        "ui_link": "https://aleph.occrp.org/entities/ru-inn-5505057400.7557be30a894d529efc5099611a2a9bbaf2b69d4"
+      },
+      {
+        "entity_id": "1eaabce08042f53802dc3eeed48f6ac431f5a85e.35ca7a0d074a8e2699c8290a2102097a2c1cdffe",
+        "caption": "АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ \"УЧЕБНЫЙ ЦЕНТР \"АЛЛЮР\"",
+        "schema": "Organization",
+        "score": 7.5697,
+        "dataset_label": "OpenNGO / Открытые НКО — Register of russian NGO",
+        "dataset_category": "procurement",
+        "countries": [
+          "ru"
+        ],
+        "ui_link": "https://aleph.occrp.org/entities/1eaabce08042f53802dc3eeed48f6ac431f5a85e.35ca7a0d074a8e2699c8290a2102097a2c1cdffe"
+      }
+    ],
+    "aleph_screened_at": "2026-10-03"
   },
   {
     "slug": "ooo-nii-dpo",
@@ -76261,6 +76318,8 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-03",
     "gur_components_matches": [],
     "gur_components_screened_at": "2026-09-15",
     "wb_matches": [],
@@ -76561,6 +76620,8 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-03",
     "gur_components_matches": [],
     "gur_components_screened_at": "2026-09-15",
     "wb_matches": [],
@@ -79870,6 +79931,19 @@
     "name_display": "OOO «Laboratoriya Yangelya»",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14059",
+        "caption": "RUSSIAN AIR TRANSPORT LABORATORY LIMITED LIABILITY COMPANY",
+        "own_tin": "7100027464",
+        "own_reg_number": "1227100012369",
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan Ukraine",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-03",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -86883,7 +86957,9 @@
         "ui_link": "https://aleph.occrp.org/entities/78c4ee7d13a7177b6adaab8a5b2477f1bcb4629e.9f27f8f51bda69b861bb34677e317f619d36b3fe"
       }
     ],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-03"
   },
   {
     "slug": "csn-bars-sarmat",
@@ -87622,7 +87698,11 @@
       }
     ],
     "_verified_against": null,
-    "name_display": "AO «Neyrorevolyutsiya»"
+    "name_display": "AO «Neyrorevolyutsiya»",
+    "aleph_matches": [],
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-03"
   },
   {
     "slug": "ooo-villis-wheelies",
@@ -87737,7 +87817,36 @@
       }
     ],
     "_verified_against": null,
-    "name_display": "OOO «VILLIS»"
+    "name_display": "OOO «VILLIS»",
+    "aleph_matches": [
+      {
+        "entity_id": "46225d6ca667c4f965f6da87355c86d7be0a7977.f260543461296a7492d1cd423d568733bafb7d81",
+        "caption": "Tovarystvo z obmezhenoiu vidpovidalnistiu \"Villis\"",
+        "schema": "Organization",
+        "score": 5.0194,
+        "dataset_label": "Global Sanctions Database",
+        "dataset_category": "sanctions",
+        "countries": [
+          "ru"
+        ],
+        "ui_link": "https://aleph.occrp.org/entities/46225d6ca667c4f965f6da87355c86d7be0a7977.f260543461296a7492d1cd423d568733bafb7d81"
+      },
+      {
+        "entity_id": "050296d02e733c6c3b21ecc737049cc76bff28e9.fd9feb1a094c4af5aaa97c58addb14496f568f2e",
+        "caption": "Tovarystvo z obmezhenoiu vidpovidalnistiu \"Villis\"",
+        "schema": "Organization",
+        "score": 5.0194,
+        "dataset_label": "Global Sanctions Database",
+        "dataset_category": "sanctions",
+        "countries": [
+          "ru"
+        ],
+        "ui_link": "https://aleph.occrp.org/entities/050296d02e733c6c3b21ecc737049cc76bff28e9.fd9feb1a094c4af5aaa97c58addb14496f568f2e"
+      }
+    ],
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-03"
   },
   {
     "slug": "ao-shkola-bpla-oktagon",
@@ -87827,7 +87936,9 @@
     "_raw": {},
     "_corrected": "[2026-10-01 ЦБСТ resident sweep] Found by scripts/cbst_resident_sweep.py (ЦБСТ post 1173). Registry had no record of the school.",
     "_verified_against": null,
-    "name_display": "AO «Shkola BPLA Oktagon»"
+    "name_display": "AO «Shkola BPLA Oktagon»",
+    "aleph_matches": [],
+    "aleph_screened_at": "2026-10-03"
   },
   {
     "slug": "ao-stratolink",
@@ -87929,7 +88040,11 @@
       }
     ],
     "_verified_against": null,
-    "name_display": "AO «STRATOLINK»"
+    "name_display": "AO «STRATOLINK»",
+    "aleph_matches": [],
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-03"
   },
   {
     "slug": "ooo-intek-promyshlennye-sistemy",
@@ -88079,7 +88194,55 @@
       }
     ],
     "_verified_against": null,
-    "name_display": "OOO «INTEK PROMYSHLENNYE SISTEMY»"
+    "name_display": "OOO «INTEK PROMYSHLENNYE SISTEMY»",
+    "aleph_matches": [
+      {
+        "entity_id": "ru-inn-7017396681.24d66def9ad767fc05a0804fcc66da60d67cf776",
+        "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ\"",
+        "schema": "Company",
+        "score": 22.6949,
+        "dataset_label": "Russian Unified State Register of Legal Entities (EGRUL)",
+        "dataset_category": "company",
+        "countries": [
+          "ru"
+        ],
+        "ui_link": "https://aleph.occrp.org/entities/ru-inn-7017396681.24d66def9ad767fc05a0804fcc66da60d67cf776"
+      }
+    ],
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14289",
+        "caption": "BVS SYSTEMS LIMITED LIABILITY COMPANY",
+        "own_tin": "7820061973",
+        "own_reg_number": "1187847069178",
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan Ukraine",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/13221",
+        "caption": "LIMITED LIABILITY COMPANY UNMANNED SYSTEMS",
+        "own_tin": "1831156383",
+        "own_reg_number": "1121831007759",
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan Ukraine",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/258",
+        "caption": "LIMITED LIABILITY COMPANY &quot;RESEARCH AND PRODUCTION ASSOCIATION &quot;IZHEVSK UNMANNED SYSTEMS&quot;",
+        "own_tin": "1831117433",
+        "own_reg_number": "1061831040688",
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan Ukraine",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-03"
   },
   {
     "slug": "kb-spektr-novosibirsk",
@@ -88647,7 +88810,60 @@
       }
     ],
     "_corrected": null,
-    "name_display": "IP Bratenkov Andrey Alekseevich"
+    "name_display": "IP Bratenkov Andrey Alekseevich",
+    "aleph_matches": [
+      {
+        "entity_id": "ru-eb67b0b85ec8082f93ae4521accef58d33eec7cd.a759406ebeb5fbe001ec88f323fda4bce4308f16",
+        "caption": null,
+        "schema": "Ownership",
+        "score": 25.6405,
+        "dataset_label": "Russian Unified State Register of Legal Entities (EGRUL)",
+        "dataset_category": "company",
+        "countries": [],
+        "ui_link": "https://aleph.occrp.org/entities/ru-eb67b0b85ec8082f93ae4521accef58d33eec7cd.a759406ebeb5fbe001ec88f323fda4bce4308f16"
+      },
+      {
+        "entity_id": "ru-737ce136e480396074261873759afe7b02d672fa.90426a903397e5563ec125c28bdc11bf7ae8c712",
+        "caption": null,
+        "schema": "Ownership",
+        "score": 25.6389,
+        "dataset_label": "Russian Unified State Register of Legal Entities (EGRUL)",
+        "dataset_category": "company",
+        "countries": [],
+        "ui_link": "https://aleph.occrp.org/entities/ru-737ce136e480396074261873759afe7b02d672fa.90426a903397e5563ec125c28bdc11bf7ae8c712"
+      },
+      {
+        "entity_id": "ru-b8525938867296aaa8a444b6d3cfe43df9050997.f287c0973b5f4ac41ff84264c023197c6a5a0361",
+        "caption": null,
+        "schema": "Ownership",
+        "score": 25.6042,
+        "dataset_label": "Russian Unified State Register of Legal Entities (EGRUL)",
+        "dataset_category": "company",
+        "countries": [],
+        "ui_link": "https://aleph.occrp.org/entities/ru-b8525938867296aaa8a444b6d3cfe43df9050997.f287c0973b5f4ac41ff84264c023197c6a5a0361"
+      },
+      {
+        "entity_id": "ru-6a8dfc852753fb9f20f3c868c029e3296fbcbd5b.5fe0f827fc0cf039d1c26a8b823b460c80ffb177",
+        "caption": null,
+        "schema": "Ownership",
+        "score": 25.379,
+        "dataset_label": "Russian Unified State Register of Legal Entities (EGRUL)",
+        "dataset_category": "company",
+        "countries": [],
+        "ui_link": "https://aleph.occrp.org/entities/ru-6a8dfc852753fb9f20f3c868c029e3296fbcbd5b.5fe0f827fc0cf039d1c26a8b823b460c80ffb177"
+      },
+      {
+        "entity_id": "ru-59549040039d9fd60199c5b9bb33f69eb43dde02.b172d38018deed8e998454d1c39fe2d00a305c72",
+        "caption": null,
+        "schema": "Ownership",
+        "score": 25.2656,
+        "dataset_label": "Russian Unified State Register of Legal Entities (EGRUL)",
+        "dataset_category": "company",
+        "countries": [],
+        "ui_link": "https://aleph.occrp.org/entities/ru-59549040039d9fd60199c5b9bb33f69eb43dde02.b172d38018deed8e998454d1c39fe2d00a305c72"
+      }
+    ],
+    "aleph_screened_at": "2026-10-03"
   },
   {
     "slug": "ooo-mo-pniei-kraskript",

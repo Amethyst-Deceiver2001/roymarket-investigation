@@ -37827,6 +37827,20 @@
             "context": "Named military unit's (88th Brigade, callsign \"Испанец\"/Espanyola) own combat-application account with video footage, reposted on Овод's own channel — third-party framed, not the manufacturer's own marketing copy.",
             "source_id": "s6456",
             "as_of": "2025-06-10"
+          },
+          {
+            "text_ru": "Уничтожение украинской боевой машины в зоне СВО 15-й отдельной ротой специального назначения на дронах ОВОД.",
+            "text_en": "Destruction of a Ukrainian combat vehicle in the SMO zone by the 15th separate special-purpose company with OVOD drones.",
+            "context": "The maker's own channel @tulaovod, post 956 (18.09.2026), with video: the maker's framing (asserted_by self). The unit is named only in the maker's post, so it does not enter military_units.json (peer audit 15.09.2026).",
+            "source_id": "s9074",
+            "as_of": "2026-09-18"
+          },
+          {
+            "text_ru": "Минобороны России опубликовало видео, на котором запечатлено боевое применение FPV-дрона «Овод». На кадрах камикадзе поражает технику ВСУ.",
+            "text_en": "Russia's Defence Ministry published a video showing combat use of the «Ovod» FPV drone; the footage shows the kamikaze drone striking Ukrainian armed forces equipment.",
+            "context": "ЦБСТ post 2557 (22.09.2026, with video) relaying a Defence Ministry publication; the Ministry's own post is not archived, so this rests on ЦБСТ's report. The same post names the line as «команды Андрея Черезова» and lists the НРТК «Довод» for delivering FPV drones to the launch line.",
+            "source_id": "s9076",
+            "as_of": "2026-09-22"
           }
         ],
         "open_questions": [
@@ -37841,6 +37855,10 @@
           {
             "source_id": "s8692",
             "text": "2026-10-01 founding-document read (three documents, 2022, 2023, 2024): both charter texts (2022 §10.4–10.6, 2024) carry state-secret clauses (executive body responsible for protecting state-secret information; participants may see such documents only with a допуск). The wording is identical to the Киловатт charter (ИНН 4800016776), so it is template text; no допуск is evidenced by it."
+          },
+          {
+            "source_id": "s9076",
+            "text": "2026-10-03: ЦБСТ post 2557 says the Defence Ministry published «Овод» combat footage; archive the Ministry's own post (Telegram @mod_russia or mil.ru) as the primary source. The same post names an НРТК «Довод» (ground robot delivering FPV drones to the launch line) in the Черезов team's line: not in products[] until the maker's own page or post is archived."
           }
         ],
         "marketing_claims": [

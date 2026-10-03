@@ -1162,5 +1162,33 @@
     "channel": "ANO_CBST",
     "msg_id": 2428,
     "source_id": "s7435"
+  },
+  {
+    "id": "h0040",
+    "date": "2026-09-24",
+    "donor_orgs": [
+      "fond-nasha-pravda"
+    ],
+    "donor_people": [],
+    "named_deliverer": null,
+    "recipient_unit_slug": null,
+    "recipient_raw": "Связисты 91-й бригады управления",
+    "location_direction": null,
+    "items": [
+      {
+        "product_name_ru": null,
+        "product_entity_slug": null,
+        "item_type": "signals and UAV control/repair equipment",
+        "note": "«аппаратуру стоимостью 1,2 млн руб. для развертывания пунктов управления и ремонта БПЛА, а также средств связи»; no product or maker named"
+      }
+    ],
+    "cost_rub_raw": "1,2 млн руб.",
+    "evidence_register": "institutional_announcement",
+    "text_ru": "Связисты 91-й бригады управления получили от фонда «Наша Правда» аппаратуру стоимостью 1,2 млн руб. для развертывания пунктов управления и ремонта БПЛА, а также средств связи.",
+    "context_en": "The donor's own post (24.09.2026, with video): asserted_by self, credibility single. The post date is the report date, not the handover date. The post closes «Фонд и Единая Россия продолжают оказывать всестороннюю поддержку нашим защитникам на линии фронта». The unit has no military_units.json record; it is left as the post names it until the unit-naming convention is settled (notes/rebuild_plan.md).",
+    "media": [],
+    "channel": "nashapravdafond",
+    "msg_id": 678,
+    "source_id": "s9077"
   }
 ]

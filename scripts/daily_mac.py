@@ -78,8 +78,11 @@ def main():
     queue = [l for l in sb.pull_queue(before, a.cap).splitlines() if l.startswith("python3 ")]
     has_pulls = any("_pull.py" in l or "/screen_" in l for l in queue)  # pulls or capped re-screens
     steps = queue if has_pulls and not a.skip_pulls else []
-    steps.append(f"python3 scripts/first_reading.py export --since {day} --local-dir data/sources/_inbox"
-                 + ("" if a.no_push else " --push"))
+    if not any("first_reading.py export" in l for l in steps):  # the queue ends with one when it pulled
+        steps.append(f"python3 scripts/first_reading.py export --since {day} --local-dir data/sources/_inbox"
+                     + ("" if a.no_push else " --push"))
+    elif a.no_push:
+        steps = [l.replace(" --push", "") if "first_reading.py export" in l else l for l in steps]
     if a.archive:
         steps.append(f"python3 scripts/archive_sources.py run --limit {a.archive}")
 
