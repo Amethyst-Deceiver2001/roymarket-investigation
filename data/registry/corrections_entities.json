@@ -10940,8 +10940,16 @@
               "EU"
             ],
             "date": "2026-06-15",
-            "note": "EU listing entry 801, Council Decision (CFSP) 2026/1364 of 15 June 2026 (amending Decision 2014/145/CFSP), OJ L, 2026/1364, 15.6.2026. Verbatim reason: \"LLC 'IONOS' is a Russian company specialising in the manufacture of electric lamps and lighting equipment, as well as in the manufacture of aircraft equipment. The company, in particular through the project 'Alaska', produces the First Person View (FPV) drones 'Alyosha', which have been actively used by Russian forces in Ukraine for reconnaissance, strike, and kamikaze missions. The company plays a growing role in Russia's expanding drone warfare capabilities.\" This EU document is the FIRST primary source found by this investigation to directly confirm ООО «ИОНОС» as the legal entity behind «Проект «Аляска»»/«Алёша» — resolving an open question this same session had otherwise concluded was unresolved after an extensive negative-findings pass (GISP dump, EGRUL name search, press).",
+            "note": "EU listing entry 801, Council Decision (CFSP) 2026/1364 of 15 June 2026 (amending Decision 2014/145/CFSP), OJ L, 2026/1364, 15.6.2026. Verbatim reason: \"LLC 'IONOS' is a Russian company specialising in the manufacture of electric lamps and lighting equipment, as well as in the manufacture of aircraft equipment. The company, in particular through the project 'Alaska', produces the First Person View (FPV) drones 'Alyosha', which have been actively used by Russian forces in Ukraine for reconnaissance, strike, and kamikaze missions. The company plays a growing role in Russia's expanding drone warfare capabilities.\" This EU document is the FIRST primary source found by this investigation to directly confirm ООО «ИОНОС» as the legal entity behind «Проект «Аляска»»/«Алёша» — resolving an open question this same session had otherwise concluded was unresolved after an extensive negative-findings pass (GISP dump, EGRUL name search, press). Checked 04.10.2026 against the Decision's own text (s9122): entry 801 prints INN 6168719068 and ОГРН 1146196001621, matching this record. The EU consolidated list file of 22.09.2026 (s9107) carries none of the 44 entries of this Decision, so the weekly check reports it as 'no identifier match' although it is listed.",
             "source_id": "s7429"
+          },
+          {
+            "date": "2026-08-10",
+            "regime": [
+              "Switzerland (SECO, Ukraine-related measures)"
+            ],
+            "source_id": "s9106",
+            "note": "Swiss entry SSID 107260, «LLC “IONOS” / ООО “ИОНОС”», enactment 10.8.2026, Registration number 1146196001621, INN 6168719068, KPP 610101001, address st. Lenina 68B, 346741. The justification repeats the EU's (drones «Alyosha», project «Alaska»). Read in the Swiss list file of 02.10.2026 (s9106)."
           }
         ],
         "state_programs": [
@@ -11037,8 +11045,10 @@
         "2026-09-14: director/founder/registration facts from a directly-pulled full EGRUL выписка (s7428, egrul_vypiska_pull.py) -- sole founder and director both Ионов Антон Александрович (ИНН 616899150213) since incorporation, no ownership-change history on file.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "[2026-09-15] wb_overlap=none_found: Brand-name search for «Алёша» (Проект «Аляска») on wildberries.ru (2026-09-15) found no product listing — a military kamikaze drone, not sold on a consumer marketplace.",
-        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post/precedent as ooo-aviron."
-      ]
+        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post/precedent as ooo-aviron.",
+        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record."
+      ],
+      "verified_against": "04.10.2026: s9106 (official list file of 02.10.2026)"
     },
     "ano-arrs-krasnodar": {
       "set": {
@@ -11405,6 +11415,14 @@
               "EU (Ukraine-related restrictive measures)"
             ],
             "source_id": "s0748"
+          },
+          {
+            "date": "2026-06-12",
+            "regime": [
+              "Canada (Special Economic Measures Act, Schedule 1 Part 2, item 838; name only)"
+            ],
+            "source_id": "s9117",
+            "note": "Read in Canada's consolidated list of 04.10.2026 (s9117): item 838, «ANO NPC Ushkuynik», with aliases that include the full Russian-language name of the autonomous non-profit and «ООО НПЦ Ушкуйник», listed 2026-06-12. No ИНН, ОГРН or address. The alias «ООО НПЦ Ушкуйник» uses the legal form of the separate company ООО «Ушкуйник» (npts-ushkuynik, ИНН 5300013923); which of the two the entry designates is not shown."
           }
         ],
         "state_programs": [
@@ -11635,7 +11653,7 @@
           }
         ]
       },
-      "verified_against": "egrul.nalog.ru open API, 2026-08-24",
+      "verified_against": "egrul.nalog.ru open API, 2026-08-24 | 04.10.2026: s9117 (official list file of 02.10.2026)",
       "why": [
         "User-flagged 2026-08-23: sibling/admin company to main npts-ushkuynik, not a separate product line.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0748).",
@@ -11651,7 +11669,8 @@
         "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the tsg_group71/nponebo shared-Дронница-digest text verbatim against data/roymarket.db. Recorded as related_entities; both entities already independently carry cbst_tie so this is not a new ЦБСТ-link finding, just a documented co-appearance.",
         "2026-09-15: informal-cooperation triage (LEAD 3) -- re-read chadayevru msg 2722 in full (the leads file only quoted a snippet) and found it directly names both organizations' representatives as speakers at the same 12.04.2024 conference, a stronger single-document confirmation than the leads file's 'series inference' framing. Recorded as related_entities.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-        "[2026-09-30 product research] Products wired from the two zakupki contracts where the АНО is itself the supplier (s3781, s3788) and from its own Telegram channel (raw t.me/s captures s8599–s8602). Some channel posts describe residents' work; only items the channel states were «разработан(ы) в НПЦ «Ушкуйник»» or that the АНО sold are listed. Flame suppressors (order bot in channel description) left out: no post shows the АНО producing them."
+        "[2026-09-30 product research] Products wired from the two zakupki contracts where the АНО is itself the supplier (s3781, s3788) and from its own Telegram channel (raw t.me/s captures s8599–s8602). Some channel posts describe residents' work; only items the channel states were «разработан(ы) в НПЦ «Ушкуйник»» or that the АНО sold are listed. Flame suppressors (order bot in channel description) left out: no post shows the АНО producing them.",
+        "04.10.2026: Canada's entry read as a primary (name only)."
       ]
     },
     "ano-platforma-nti": {
@@ -14078,7 +14097,7 @@
               "Switzerland (SECO, Ukraine-related measures)",
               "Ukraine (Presidential sanctions decree/list)",
               "Ukraine (war-sanctions.gur.gov.ua, military-industry listing)",
-              "US-BIS-EL",
+              "US (Commerce Entity List, export control: not an OFAC sanction)",
               "EU (Ukraine-related restrictive measures)"
             ],
             "source_id": "s0756"
@@ -14193,7 +14212,8 @@
         "2026-09-06: wired 2 radio-frequency assignment record(s) from RKN's live Единый реестр частотных присвоений (s6429) — a new license/permit category for this entity, distinct from its existing Минпромторг/Roscosmos records. Swept against the same 22-entity UAV/comms-relevant shortlist checked against the comms-license registry; only this entity and ao-nii-stt/npp-radar-mms had any frequency assignments.",
         "RKN Единый реестр частотных присвоений screen (2026-09-07, source s6447): 2 frequency-assignment records, consistent with the entity's existing telecommunications-research profile.",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-        "2026-09-15: relationship-coverage audit (subagent pass, verified individually, not a raw count) found АО «НИИ СТТ» had zero related_entities[] despite four already-researched litigation counterparties the entity's own litigation[] notes explicitly flag as notable institutional/commercial ties (Кронштадт, МВД НПО СТС, 18 ЦНИИ, в/ч 68240). Wired all four as `counterparty` (schema addition from earlier today) -- none get a registry slug since none of the four named parties exist as their own entity record yet; each cites its own litigation source_id."
+        "2026-09-15: relationship-coverage audit (subagent pass, verified individually, not a raw count) found АО «НИИ СТТ» had zero related_entities[] despite four already-researched litigation counterparties the entity's own litigation[] notes explicitly flag as notable institutional/commercial ties (Кронштадт, МВД НПО СТС, 18 ЦНИИ, в/ч 68240). Wired all four as `counterparty` (schema addition from earlier today) -- none get a registry slug since none of the four named parties exist as their own entity record yet; each cites its own litigation source_id.",
+        "04.10.2026: «US-BIS-EL» is the US Commerce Department's Entity List (export control), not an OFAC listing; relabelled. No OFAC SDN entry carries this ИНН or a matching name."
       ]
     },
     "ao-nii-vektor": {
@@ -15048,7 +15068,7 @@
             "regime": [
               "Canada (Special Economic Measures Act)",
               "Switzerland (SECO, Ukraine-related measures)",
-              "US-BIS-EL",
+              "US (Commerce Entity List, export control: not an OFAC sanction)",
               "NZ-RSA2022",
               "Ukraine (Presidential sanctions decree/list)"
             ],
@@ -15491,7 +15511,8 @@
         "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 48 product(s) not previously documented.",
         "2026-09-07: merged duplicate correction key '7701583410' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class).",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [1778] flagged by scripts/tg_post_coverage.py: namesake. Post 1778 uses «азимуту» as the compass term in a piece about a game-style command interface. Post 716 («Аэро Азимут» platform) stays open."
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [1778] flagged by scripts/tg_post_coverage.py: namesake. Post 1778 uses «азимуту» as the compass term in a piece about a game-style command interface. Post 716 («Аэро Азимут» platform) stays open.",
+        "04.10.2026: «US-BIS-EL» is the US Commerce Department's Entity List (export control), not an OFAC listing; relabelled. No OFAC SDN entry carries this ИНН or a matching name."
       ]
     },
     "ao-ploshchad": {
@@ -19384,6 +19405,14 @@
             "date": null,
             "note": "OpenSanctions: \"LIMITED LIABILITY COMPANY NAUCHNO PROIZVODSTVENNOE OBYEDINENIE KAISANT\" (match_id NK-B8atCCX9rDFNSu5nxQfzQ7, score 0.95), topics=[sanction, export.control, debarment], sourced to GUR's sanctioned-companies list (companies/14048) and OFAC (sanctionssearch.ofac.treas.gov id=50741) — a direct name transliteration of this entity (НПО «КАЙСАНТ»/Nauchno-Proizvodstvennoe Obyedinenie Kaisant), no INN corroboration available but no plausible namesake found either. Aleph's Global Sanctions Database independently carries the identical caption under 3 records. (Note: the entity's own gur_matches field separately picked up an unrelated \"NPO AVIABAS\" record, own_tin 7802943980 != this entity's own ИНН — that GUR hit is namesake noise from the NPO-prefix, not evidence against this designation.)",
             "source_id": "s0784"
+          },
+          {
+            "date": null,
+            "regime": [
+              "US (OFAC, EO 14024)"
+            ],
+            "source_id": "s9109",
+            "note": "SDN entry uid 50741, «LIMITED LIABILITY COMPANY NAUCHNO PROIZVODSTVENNOE OBYEDINENIE KAISANT» (a.k.a. NPO KAYSANT), program RUSSIA-EO14024: Registration Number 1227700641805, Tax ID No. 7733393203, established 07 Oct 2022, address Proezd Stroitelnyi D. 7A K. 28, Pomeshch 224, Moscow 125632. Read in the OFAC SDN file of 02.10.2026 (s9109); the file prints no designation date."
           }
         ],
         "wb_overlap": "none_found",
@@ -19446,7 +19475,7 @@
           }
         ]
       },
-      "verified_against": " Also: germesfpv.ru read directly 23.08.2026.",
+      "verified_against": " Also: germesfpv.ru read directly 23.08.2026. | 04.10.2026: s9109 (official list file of 02.10.2026)",
       "why": [
         "GISP goods-catalog exact company_ogrn search (2026-09-03) surfaced two new weapon-adjacent products (a possibly-distinct second drone-interceptor, and FPV strike drone «Артемида 10») plus a ground cart «Аргус», beyond the previously-documented «Гермес» comms line and «ГУСЬ-7» interceptor. 2026-09-04: surfaced via a routine close-read of the Архангел private chat backlog — a member reposted the satellite-launch announcement verbatim; independently verified against TAdviser and general press (prokosmos.ru, ixbt.com) confirming the real Roscosmos launch, rather than trusting the repost at face value.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
@@ -19455,7 +19484,8 @@
         "[2026-09-15] wb_overlap=none_found: Brand-name search for «ГЕРМЕС связь»/«ГЕРМЕС мачты» on wildberries.ru (2026-09-15) found no product listing.",
         "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the tsg_group71/nponebo shared-Дронница-digest text verbatim against data/roymarket.db. Recorded as related_entities; both entities already independently carry cbst_tie so this is not a new ЦБСТ-link finding, just a documented co-appearance.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7597; the earlier cbst_tie record is unchanged."
+        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7597; the earlier cbst_tie record is unchanged.",
+        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record."
       ]
     },
     "npo-kilobatt": {
@@ -22132,7 +22162,12 @@
           "mismatch": true,
           "note": "Secondary code 26.51.6 (Производство прочих приборов, датчиков, аппаратуры и инструментов для измерения, контроля и испытаний) sits oddly against a wholesale-trade primary registration — consistent with the brief's existing read of this and Ушкуйник-СП as commercial/holding shells adjacent to the operating АНО, not the actual manufacturing site."
         },
-        "open_questions": [],
+        "open_questions": [
+          {
+            "source_id": "s9117",
+            "text": "Canada's list (item 838, listed 2026-06-12) names «ANO NPC Ushkuynik» and, among its aliases, «ООО НПЦ Ушкуйник»: the legal form of this company, not of the autonomous non-profit (ano-npts-ushkuynik, ИНН 5300010714, which the EU and Swiss lists identify by ИНН). The entry prints no identifier, so it is not shown whether it designates this company too. No list carries this company's ИНН 5300013923."
+          }
+        ],
         "related_entities": [
           {
             "inn": "5300010714",
@@ -23879,6 +23914,14 @@
               "Ukraine (Presidential sanctions decree/list)"
             ],
             "source_id": "s0750"
+          },
+          {
+            "date": "2026-06-12",
+            "regime": [
+              "Canada (Special Economic Measures Act, Schedule 1 Part 2, item 837; name only)"
+            ],
+            "source_id": "s9117",
+            "note": "Read in Canada's consolidated list of 04.10.2026 (s9117): item 837, «Atlant Aero LLC», alias «ООО \"АТЛАНТ АЭРО\"», listed 2026-06-12. The entry prints no ИНН, ОГРН or address; it is linked to this company by name."
           }
         ],
         "trademarks": [
@@ -23977,7 +24020,7 @@
           }
         ]
       },
-      "verified_against": "searchplatform.rospatent.gov.ru, PE_RU exact patentee-name query, archived as s0977 (WIPO ST.96 XML full text) + HAR capture",
+      "verified_against": "searchplatform.rospatent.gov.ru, PE_RU exact patentee-name query, archived as s0977 (WIPO ST.96 XML full text) + HAR capture | 04.10.2026: s9117 (official list file of 02.10.2026)",
       "why": [
         "User-supplied HAR capture of their own live search (PE_RU=\"...Атлант Аэро...\") found this entity's first-ever IP record — the earlier bulk trademark/patent sweeps and GUR screens found nothing for this entity. Filed 2025-08-25 (roughly a year after the earlier-known name-collision 'Орион' product reference), published 2026-03-30 — recent enough that it likely postdates both bulk CSV dump snapshots this project already used, explaining why the earlier sweeps missed it entirely.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
@@ -23986,7 +24029,8 @@
         "2026-09-14: rk.2035.university product-models sweep (s1169) fuzzy-matched two DIFFERENT real companies to this entity's name (\"Атлант\") on \"аэро\" substring overlap -- НПФ «Атлас-Аэро» (4 models: АТЛАС S/M/L/180) and АО «ЗАЛА АЭРО» (9 models, Kalashnikov-group loitering-munition maker, well-documented separately) are both confirmed-distinct companies, not this entity. Logged so a future automated name-sweep doesn't re-flag either.",
         "2026-09-28: cleared the raw-scaffold products[] array (bare strings «Орион»/«Технодинамика», no source_id) during a produces-edge sourcing spot-check -- neither is a real product of this entity. «Орион» is the already-documented GUR-components false positive referenced above (this entity does not make Orion-UAV parts); «Технодинамика» is the entity's own trust-management parent (see parents[]/tier_basis above), not a product, and was mis-scaffolded into products[] from the frozen archive text. Checked three fresh sources (Коммерсантъ, TAdviser, the GUR sanctions page) for any real product/component claim before clearing -- none confirmed either bare string, and a WebSearch summary asserting an Orion-component tie was not backed by any of the pages it cited.",
         "[2026-09-30] Products and press-relayed financials added from two archived press pages (s8553 Коммерсантъ, s8554 The Insider). A direct БФО pull found nothing (the ИНН is absent from the bo.nalog.gov.ru index, no reason asserted), so the figures are labelled as press-relayed СПАРК data, and units are rubles as the article states them.",
-        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged."
+        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged.",
+        "04.10.2026: Canada's entry read as a primary (name only)."
       ]
     },
     "ooo-aviron": {
@@ -24954,6 +24998,30 @@
             "date": null,
             "note": "OpenSanctions: \"Limited Liability Company Eliars\" (match_id NK-DMVf7HbcS5X8Pfx6XRNh2X, score 1.0), topics=[sanction, debarment, export.control], corroborated by OFAC (sanctionssearch.ofac.treas.gov id=48496), GUR sanctioned-companies list (companies/8970), EU regulation (OJ L_202500389), France's gels-avoirs registry (idRegistre=7884), and permid.org. Aleph independently confirms the same ИНН (7735140825) directly against EGRUL (score 23.9) plus 3 separate 'sanctions'-category Global Sanctions Database records with the matching caption \"ЭЛИАРС\"/\"Eliars\". Distinctive name, exact ИНН correspondence via Aleph EGRUL cross-check.",
             "source_id": "s0787"
+          },
+          {
+            "date": "2025-02-24",
+            "regime": [
+              "EU (Ukraine-related restrictive measures, reference EU.12773.47)"
+            ],
+            "source_id": "s9107",
+            "note": "EU entry EU.12773.47 designated 24.2.2025 by Regulation 2025/389 (OJ L, 24.2.2025) for «LLC Eliars»; the entry names the general director Sergey Nikolaevich Atlivanchik. Read in the EU consolidated list file of 02.10.2026 (s9107). The Swiss entry (below) prints the identifiers and the reason."
+          },
+          {
+            "date": "2025-03-03",
+            "regime": [
+              "Switzerland (SECO, Ukraine-related measures)"
+            ],
+            "source_id": "s9106",
+            "note": "Swiss entry SSID 88998, «Limited Liability Company “Eliars” / ООО «Элиарс»», enactment 3.3.2025: Registration number 1157746097629 (registered 12.2.2015), Tax Identification number 7735140825, address Konstruktora Guskova 8. Reason: develops and produces microwave equipment, including the «Zont» anti-drone signal-suppression system used by Russian forces. Associated individual: Sergey Nikolaevich Atlivanchik. Read in the Swiss list file of 02.10.2026 (s9106)."
+          },
+          {
+            "date": null,
+            "regime": [
+              "US (OFAC, EO 14024)"
+            ],
+            "source_id": "s9109",
+            "note": "SDN entry uid 48496, «LIMITED LIABILITY COMPANY ELIARS», program RUSSIA-EO14024: Registration Number 1157746097629, Tax ID No. 7735140825, address Konstruktora Guskova st. 8, bldg. 1, Zelenograd, Moscow 124460. Read in the OFAC SDN file of 02.10.2026 (s9109); the file prints no designation date."
           }
         ],
         "wb_overlap": "none_found",
@@ -24966,13 +25034,16 @@
           "note": "Post 38 (06.08.2024) reports the «Лори» radar from Элиарс as news, with no statement of a ЦБСТ relationship. Query: tg_post_coverage --slug ooo-eliars, 1 hit."
         }
       },
-      "verified_against": "egrul.nalog.ru open-API name search \"ЭЛИАРС\" and direct ИНН search \"7735140825\", both 23.08.2026 (single unambiguous match); eliars.ru read directly 23.08.2026.",
+      "verified_against": "egrul.nalog.ru open-API name search \"ЭЛИАРС\" and direct ИНН search \"7735140825\", both 23.08.2026 (single unambiguous match); eliars.ru read directly 23.08.2026. | 04.10.2026: s9107 (official list file of 02.10.2026) | 04.10.2026: s9106 (official list file of 02.10.2026) | 04.10.2026: s9109 (official list file of 02.10.2026)",
       "why": [
         "GISP goods-catalog exact company_ogrn search (2026-09-03) sourced the previously-unsourced «Лори» entry and added a new ПАРС-5 model distinct from the already-documented МВД-contract ПАРС-4.",
         "2026-09-06: wired 1 aviation-technology development/production/testing/repair license record(s) from Минпромторг's aviation-tech license registry (data.gov.ru dataset 7705596339-drones, s6408) — ИНН-matched, exact ОГРН cross-check confirmed.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-        "[2026-09-15] wb_overlap=none_found: Brand-name search for дрон-детектор «МОПС»/«МОПС-Б»/«Зонт» on wildberries.ru (2026-09-15) found no WB listing — the МОПС detector is sold via other specialty security-equipment retailers (техключи.рф, t-ss.ru, uralsistems.ru, gunsparts.ru), not Wildberries."
+        "[2026-09-15] wb_overlap=none_found: Brand-name search for дрон-детектор «МОПС»/«МОПС-Б»/«Зонт» on wildberries.ru (2026-09-15) found no WB listing — the МОПС detector is sold via other specialty security-equipment retailers (техключи.рф, t-ss.ru, uralsistems.ru, gunsparts.ru), not Wildberries.",
+        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record.",
+        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record.",
+        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record."
       ]
     },
     "ooo-eyartek": {
@@ -33424,10 +33495,10 @@
         "sanctions": [
           {
             "date": null,
-            "note": "Per dossier: US-sanctioned since 23.08.2024, EU-sanctioned since 24.10.2025. INDEPENDENTLY CONFIRMED 2026-09-05 via Aleph/OCCRP screening: an entry in the Global Sanctions Database collection carries registrationNumber [\"1107847000084\", \"7802491148\"] — the second value is an exact match to this entity own ИНН — with sourceUrl citing both the OFAC SDN search page (sanctionssearch.ofac.treas.gov/Details.aspx?id=50359) and the EU regulation CELEX:32025R2033. Topics on the Aleph record: sanction, export.control.",
+            "note": "Per dossier: US-sanctioned since 23.08.2024, EU-sanctioned since 24.10.2025. INDEPENDENTLY CONFIRMED 2026-09-05 via Aleph/OCCRP screening: an entry in the Global Sanctions Database collection carries registrationNumber [\"1107847000084\", \"7802491148\"] — the second value is an exact match to this entity own ИНН — with sourceUrl citing both the OFAC SDN search page (sanctionssearch.ofac.treas.gov/Details.aspx?id=50359) and the EU regulation CELEX:32025R2033. Topics on the Aleph record: sanction, export.control. Checked 04.10.2026 in the Official Journal text (s9123): entry 832 of Annex IV (Regulation 2025/2033 of 23.10.2025, listed 24.10.2025) is «Radiofid Systems LLC / ООО Радиофид Системы», registration number 7802491148, matching this record. It is an Annex IV trade-restriction listing, not an asset freeze.",
             "regime": [
               "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
-              "EU (Ukraine-related restrictive measures, Reg. 2025/2033)"
+              "EU (Regulation (EU) No 833/2014, Annex IV: export restrictions, not an asset freeze)"
             ],
             "source_id": "s1408"
           },
@@ -33443,9 +33514,17 @@
             "date": null,
             "note": "EU sanctions listing, independently confirmed via Aleph/OCCRP mirror (screen_aleph.py, 2026-09-05) — ИНН-exact match, sourceUrl citing EU regulation CELEX:32025R2033.",
             "regime": [
-              "EU (Reg. 2025/2033)"
+              "EU (Regulation (EU) No 833/2014, Annex IV: export restrictions, not an asset freeze)"
             ],
             "source_id": "s5831"
+          },
+          {
+            "date": "2025-12-12",
+            "regime": [
+              "Switzerland (SECO, Ukraine-related measures)"
+            ],
+            "source_id": "s9106",
+            "note": "Swiss entry SSID 99495, «Radiofid Systems LLC / ООО Радиофид Системы», enactment 12.12.2025: Registration number 7802491148, address Room 66-N, Building 1 A, 17 shosse Vyborgskoe, 194355. The EU lists the company only in Annex IV of Regulation (EU) No 833/2014 (trade restrictions, entry 832 of Regulation 2025/2033, s9123), not in the EU asset-freeze list. Read in the Swiss list file of 02.10.2026 (s9106)."
           }
         ],
         "financials": [
@@ -33553,8 +33632,11 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread.",
-        "[2026-09-30 product research] Own site ties by ИНН on the contacts page (s8616). Civil M2M/IoT line only."
-      ]
+        "[2026-09-30 product research] Own site ties by ИНН on the contacts page (s8616). Civil M2M/IoT line only.",
+        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record.",
+        "04.10.2026: the EU entry is Annex IV of Regulation 833/2014 (export restrictions), checked in the Official Journal text (s9123); relabelled so it is not read as an asset freeze."
+      ],
+      "verified_against": "04.10.2026: s9106 (official list file of 02.10.2026)"
     },
     "ooo-rokot-tekh": {
       "set": {
@@ -34756,11 +34838,11 @@
         "sanctions": [
           {
             "date": null,
-            "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7838044584 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Товариство з обмеженою відповідальністю \"СПДББК\"\". Topics: poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/uav/companies/14308; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024D3187; https://war-sanctions.gur.gov.ua/en/sanctions/companies/14308; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0931. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
+            "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7838044584 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Товариство з обмеженою відповідальністю \"СПДББК\"\". Topics: poi, sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/uav/companies/14308; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024D3187; https://war-sanctions.gur.gov.ua/en/sanctions/companies/14308; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0931. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text. Checked 04.10.2026 in the Official Journal text (s9120): entry 699 of Annex IV (Decision 2024/3187 of 16.12.2024, listed 17.12.2024) is «LLC SPDBBK / ООО “СПДББК”», registration number 7838044584, matching this record. It is an Annex IV trade-restriction listing, not an asset freeze; the company is not in the EU consolidated asset-freeze file.",
             "regime": [
               "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
               "Ukraine (Presidential sanctions decree/list)",
-              "EU-RUS",
+              "EU (Regulation (EU) No 833/2014, Annex IV: export restrictions, not an asset freeze)",
               "Switzerland (SECO, Ukraine-related measures)"
             ],
             "source_id": "s0799"
@@ -34877,7 +34959,10 @@
           "ФССП (2026-09-08): ~₽10.16M remaining, mostly a ₽9.55M unpaid-tax enforcement (ЕНС отрицательное сальдо) plus ₽603K insurance contributions — material financial-distress signal."
         ]
       },
-      "verified_against": "full EGRUL extract pulled directly 23.08.2026"
+      "verified_against": "full EGRUL extract pulled directly 23.08.2026",
+      "why": [
+        "04.10.2026: the EU entry is Annex IV of Regulation 833/2014 (export restrictions), checked in the Official Journal text (s9120); relabelled so it is not read as an asset freeze."
+      ]
     },
     "ooo-spetsialnye-poleznye-tekhnologii": {
       "set": {
@@ -35043,10 +35128,10 @@
         "sanctions": [
           {
             "date": null,
-            "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 5260494520 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"STRATIM LIMITED LIABILITY COMPANY\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0931; https://war-sanctions.gur.gov.ua/en/uav/companies/13560; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=50274; https://war-sanctions.gur.gov.ua/en/sanctions/companies/13560; https://permid.org/1-5090595168. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
+            "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 5260494520 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"STRATIM LIMITED LIABILITY COMPANY\". Topics: debarment, export.control, poi, sanction. Primary source URLs cited by OpenSanctions: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025D0931; https://war-sanctions.gur.gov.ua/en/uav/companies/13560; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=50274; https://war-sanctions.gur.gov.ua/en/sanctions/companies/13560; https://permid.org/1-5090595168. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text. Checked 04.10.2026 in the Official Journal text (s9121): entry 765 of Annex IV (Decision 2025/931 of 20.5.2025, listed 21.5.2025) is «LLC “STRATIM”», Tax ID/INN 5260494520, matching this record. It is an Annex IV trade-restriction listing, not an asset freeze.",
             "regime": [
               "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
-              "EU-RUS",
+              "EU (Regulation (EU) No 833/2014, Annex IV: export restrictions, not an asset freeze)",
               "Switzerland (SECO, Ukraine-related measures)",
               "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)",
               "Ukraine (Presidential sanctions decree/list)"
@@ -35140,7 +35225,8 @@
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/13560) ID-confirmed via ИНН 5260494520 — exact match, screen_gur.py sweep, 2026-08-24. GUR's own page cross-lists АО «Стратим» (ИНН 7720901379) as a \"related company\" sharing the same product line — see related_entities.",
         "2026-09-07: merged dormant duplicate correction key '5260494520' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "2026-09-14: Founding-document bundle (data/sources/UD_1245200009075_20260914_ooo-stratim.zip, s7427) read in full, OCR'd (scanned TIFF, 17 pages, Протокол №1 общего собрания учредителей, 27.03.2024). Generic 'any lawful activity' purpose clause. Note: this is ООО «Стратим» (ИНН 5260494520), distinct from the already-deprioritized АО «Стратим» (ИНН 7720901379, 'документ формируется' at ФНС per founding_docs_gap.md) -- same brand name, confirmed different legal entity by ИНН, no relationship established. Corroborates existing record, no new fact.",
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "04.10.2026: the EU entry is Annex IV of Regulation 833/2014 (export restrictions), checked in the Official Journal text (s9121); relabelled so it is not read as an asset freeze."
       ]
     },
     "ooo-stroystandart": {
@@ -36566,6 +36652,30 @@
             "regime": null,
             "note": "The company itself (not only chief-designer/co-founder Кузякин, already on file as individually sanctioned) was named sanctioned per Chadaev's channel corroboration of an Interfax (20.05.2025) report on Ushkuynik-network sanctions — see docs/index.html's ExpoUAV section. Regime/date not yet independently confirmed against a primary sanctions-list text; treat as PLAUSIBLE pending that check.",
             "source_id": null
+          },
+          {
+            "date": "2025-05-20",
+            "regime": [
+              "EU (Ukraine-related restrictive measures, reference EU.13077.65)"
+            ],
+            "source_id": "s9107",
+            "note": "EU entry EU.13077.65 designated 20.5.2025 by Regulation 2025/933 (OJ L, 20.5.2025). Read in the EU consolidated list file of 02.10.2026 (s9107). The Swiss entry (below) prints the identifiers and the reason."
+          },
+          {
+            "date": "2025-06-02",
+            "regime": [
+              "Switzerland (SECO, Ukraine-related measures)"
+            ],
+            "source_id": "s9106",
+            "note": "Swiss entry SSID 92761, «Limited Liability Company “Center for Integrated Unmanned Solutions” / ООО “Центр Комплексных Беспилотных Решений”» (ООО “ЦКБР”), enactment 2.6.2025, address 24/1 Luch Str., app. 112, Zhukovsky. Reason: the full cycle of FPV systems for combat use, from pilot training to production of UAVs supplied to the Russian Armed Forces. A second Swiss entry, SSID 96063 (enactment 11.8.2025, «Unmanned Solutions Center Ltd.»), prints Registration number 5040176793 (INN). Read in the Swiss list file of 02.10.2026 (s9106)."
+          },
+          {
+            "date": null,
+            "regime": [
+              "US (OFAC, EO 14024)"
+            ],
+            "source_id": "s9109",
+            "note": "SDN entry uid 48441, «COMPLEX UNMANNED SOLUTIONS CENTER LTD» (a.k.a. USC LTD), program RUSSIA-EO14024: Registration Number 1225000003458, Tax ID No. 5040176793, addresses Spasateley St. 7 and Ul. Luch D. 24/1a, floor 2, pomeshch. 112, Zhukovsky 140184. Read in the OFAC SDN file of 02.10.2026 (s9109); the file prints no designation date."
           }
         ],
         "products": [
@@ -36610,7 +36720,10 @@
         "wb_overlap": "none_found"
       },
       "verified_against": [
-        "s7351"
+        "s7351",
+        "04.10.2026: s9107 (official list file of 02.10.2026)",
+        "04.10.2026: s9106 (official list file of 02.10.2026)",
+        "04.10.2026: s9109 (official list file of 02.10.2026)"
       ],
       "why": [
         "2026-09-20: adversarial read (claim-verifier) of this record, each finding then checked by hand against the cited files. Confirmed and fixed: (1) the founding-GD entry for Кузякин is not in the ЕГРЮЛ выписка s7351 (only Косолапов is a director there; Кузякин is a 25% founder) and was removed; (2) the cbst_tie claim said the entity was named among the residents hit by the EU 20th package, but msg 2095 (s7588) lists six organisations without ЦКБР and says the package hit ЦКБР's general director, a natural person, so the claim and evidence were reworded; the confidence grade was not changed here and should be reviewed; (3) the msg 1931 clause is supported by s7503, not s7588, and now says so. Not a failure: the verifier could not read the date of the corrective ЕГРЮЛ entry 30.05.2022, ГРН 2225001209860; row 163 of s7351 gives exactly that GRN and date.",
@@ -36618,7 +36731,10 @@
         "2026-09-08: closed the _scaffold_leads.json unattributed-ИНН gap for 5040176793 — the entity already existed in the registry (table-scaffolded from docs/index.html prose) but had no inn/ogrn/founders/director. Pulled a full EGRUL выписка (s7351) directly to fill it in; confirms the founders list already on file for Кузякин (via audit-it.ru/checko.ru inference) and adds the GD succession (Кузякин -> Косолапов, 20.05.2025) not previously recorded.",
         "2026-09-14: БФО coverage sweep (bfo_pull.py --all-missing) found and parsed 4 filing years (FY2022-2025), previously had empty financials[]. Revenue grew sharply in FY2025 (₽551.0m vs ₽41.0m FY2024) while profit stayed thin (₽1.0m) across all four years -- a thin-margin profile worth noting if this entity gets deeper narrative treatment.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "[2026-09-15] wb_overlap=none_found: Brand-name search for FPV strike drone «Джокер-10» on wildberries.ru (2026-09-15) found no product listing — a military FPV munition, not a consumer marketplace item."
+        "[2026-09-15] wb_overlap=none_found: Brand-name search for FPV strike drone «Джокер-10» on wildberries.ru (2026-09-15) found no product listing — a military FPV munition, not a consumer marketplace item.",
+        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record.",
+        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record.",
+        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record."
       ]
     },
     "ooo-tsugam": {
@@ -38433,6 +38549,14 @@
               "Ukraine (Presidential sanctions decree/list)"
             ],
             "source_id": "s0792"
+          },
+          {
+            "date": "2022-02-22",
+            "regime": [
+              "UK (Russia regulations, asset freeze; name only)"
+            ],
+            "source_id": "s9108",
+            "note": "UK entry RUS0237 (OFSI group 14184), designated 22/02/2022: «Public Joint Stock Company Promsvyazbank» / «PJSC Promsvyazbank» / «ПAO \"Промсвязьбанк\"»; asset freeze, trust-services sanctions, director-disqualification sanction and, from 15/12/2023, a prohibition on correspondent banking relationships and processing payments. The UK file prints no ИНН or ОГРН, so the weekly identifier check cannot see it; the name is the bank's. Read in the UK list file of 02.10.2026 (s9108)."
           }
         ],
         "tier": "cbst-core",
@@ -38518,10 +38642,11 @@
           "source_id": "s6705"
         }
       },
-      "verified_against": "egrul.nalog.ru open-API lookup, 22.08.2026 (one-off, ordinary reconnaissance) + cross-confirmed via s0231",
+      "verified_against": "egrul.nalog.ru open-API lookup, 22.08.2026 (one-off, ordinary reconnaissance) + cross-confirmed via s0231 | 04.10.2026: s9108 (official list file of 02.10.2026)",
       "why": [
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s6705 verified (data/sources/EGRUL_9702064851_20260907_ano-tsbst-centre-for-unmanned-systems-technologies.pdf, ЦБСТ's own full EGRUL extract)."
+        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s6705 verified (data/sources/EGRUL_9702064851_20260907_ano-tsbst-centre-for-unmanned-systems-technologies.pdf, ЦБСТ's own full EGRUL extract).",
+        "04.10.2026 (issue #9 / name-only check): the official list entry read; it carries no identifier, so the link is by name and address."
       ]
     },
     "uraldronzavod": {
@@ -38546,6 +38671,30 @@
             "date": null,
             "note": "OpenSanctions/GUR: exact-name match \"Limited Liability Company Uraldronzavod\" (match_id NK-A8hwErVGFYrk2opV6o86eA, score 1.0), topics=[debarment, export.control, sanction], corroborated by OFAC (sanctionssearch.ofac.treas.gov id=49954), EU (OJ L_202403183), France's gels-avoirs asset-freeze registry (idRegistre=7810), and GUR's own sanctioned-companies list (war-sanctions.gur.gov.ua companies/13813). Aleph's Global Sanctions Database independently carries the same entity under 3 separate records (scores 17.1/11.9/10.1). Distinctive single-word legal name, no plausible namesake collision found in the raw match set.",
             "source_id": "s0755"
+          },
+          {
+            "date": null,
+            "regime": [
+              "US (OFAC, EO 14024)"
+            ],
+            "source_id": "s9109",
+            "note": "SDN entry uid 49954, «LIMITED LIABILITY COMPANY URALDRONZAVOD», program RUSSIA-EO14024: Registration Number 1236600057011, Tax ID No. 6671284030, address PR-KT Akademika Sakharova D. 41, KV. 118, Yekaterinburg 620105. Read in the OFAC SDN file of 02.10.2026 (s9109); the file prints no designation date."
+          },
+          {
+            "date": "2024-12-16",
+            "regime": [
+              "EU (Ukraine-related restrictive measures, reference EU.12595.62)"
+            ],
+            "source_id": "s9107",
+            "note": "EU entry EU.12595.62 designated 16.12.2024 by Regulation 2024/3183 (corrigendum of 7.2.2025), «ООО “УРАЛДРОНЗАВОД”» / UralDronZavod, maker of the FPV drone «Upyr» (Ghoul). The entry prints no ИНН or ОГРН. Its address, Academician Sakharov ave. 41, apt. 118, Yekaterinburg 620105, is the address on the OFAC entry that carries this company's identifiers; the link rests on the name and that address, not on an identifier. (The number 9089124735 in the entry is the local part of an e-mail address, not an ИНН.) Read in the EU consolidated list file of 02.10.2026 (s9107)."
+          },
+          {
+            "date": null,
+            "regime": [
+              "Switzerland (SECO, Ukraine-related measures)"
+            ],
+            "source_id": "s9106",
+            "note": "Swiss entry SSID 86586, «UralDronZavod» / «ООО “УРАЛДРОНЗАВОД”», no identifiers; address Academician Sakharov ave., 41, apt. 118, Yekaterinburg, 620105; the justification repeats the EU's. Linked to this record by name and the same address as the OFAC entry, not by an identifier. Read in the Swiss list file of 02.10.2026 (s9106). Enactment date not read."
           }
         ],
         "tier_basis": "Named a ЦБСТ resident repeatedly on ЦБСТ's own Telegram channel (incl. its director Ткачук personally credited, and the entity itself called \"одним из крупнейших предприятий — резидентов ЦБСТ\"), manufacturer of the «Упырь» kamikaze UAV. Sanctioned by OFAC, EU, France and GUR (OpenSanctions/Aleph, exact-name match, score 1.0), and listed in Минпромторг's GISP industrial-facility registry under an aircraft-manufacture ОКВЭД.",
@@ -38652,9 +38801,12 @@
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "[2026-09-15] wb_overlap=none_found: Brand-name search for product «Упырь» on wildberries.ru (2026-09-15, WebSearch) returned no product listing — only unrelated toy-drone category pages.",
         "[2026-09-30] ИНН 6671284030 supplied by the investigator and checked: valid control digit, and a ЕГРЮЛ выписка pulled for it (s8542) is for ООО «УРАЛДРОНЗАВОД», ОГРН 1236600057011, registered 19.09.2023 in Екатеринбург, ОКВЭД 30.30.39 (other aircraft) as primary. The registry had carried no ИНН although the sanctions screening (s0755) had been run on this exact ИНН. The sourceless director entry from the brief is replaced by the ЦБСТ channel attribution (s6911) and the restriction record; the register itself does not name the director.",
-        "2026-10-03: БФО for 2023 and 2024 read in full (s9058, s9059); figures added to financials[]."
+        "2026-10-03: БФО for 2023 and 2024 read in full (s9058, s9059); figures added to financials[].",
+        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record.",
+        "04.10.2026: EU entry read; name and address match, no identifier.",
+        "04.10.2026: Swiss entry read; name and address match, no identifier."
       ],
-      "verified_against": "t.me/ANO_CBST posts #313, #1882, #1891, #2383 (archived as data/sources/TGPOST_20260805_ano_cbst-2383-uraldronzavod-tkachuk-cbst-resident.txt, s6911)"
+      "verified_against": "t.me/ANO_CBST posts #313, #1882, #1891, #2383 (archived as data/sources/TGPOST_20260805_ano_cbst-2383-uraldronzavod-tkachuk-cbst-resident.txt, s6911) | 04.10.2026: s9109 (official list file of 02.10.2026) | 04.10.2026: s9107 (official list file of 02.10.2026) | 04.10.2026: s9106 (official list file of 02.10.2026)"
     },
     "va-technologies": {
       "set": {
@@ -42688,13 +42840,61 @@
             2474
           ],
           "note": "Posts 651, 658, 666, 669, 685, 2209, 2210, 2474 use Кронштадт the city as the venue (Технический совет ВМФ, салон «Флот-2026»; post 2474 of 31.08.2026 reports sea trials of the ТНПА «Сахалин» of «Русская морская команда» «в Кронштадте»). Post 226 repeats a foreign article that names the company «Кронштадт» as a Russian developer of military AI analytics; no ЦБСТ statement of a tie."
-        }
+        },
+        "sanctions": [
+          {
+            "date": null,
+            "note": "Directly designated on the US OFAC SDN List as \"JOINT STOCK COMPANY KRONSHTADT\" (aliases \"AKTSIONERNOE OBSHCHESTVO KRONSHTADT\", \"AO KRONSHTADT\"), program RUSSIA-EO14024; the OFAC page itself states Registration Number 1027809176141 and Tax ID No. 7808035536, identical to this entity's ОГРН and ИНН. Read directly from the archived page (page footer: SDN list last updated 18.09.2026). The page does not state the designation date, so date is left null. The Aleph/OpenSanctions record (ALEPH_7808035536_20260919) also cites EU Regulation 2023/2878 and a French asset-freeze register entry for this ИНН; those two were NOT opened and are not recorded as confirmed.",
+            "regime": [
+              "US (OFAC, EO 14024)"
+            ],
+            "source_id": "s7869"
+          },
+          {
+            "date": null,
+            "note": "OpenSanctions aggregator page for this ИНН (captured 2026-09-30, source s8232; the page shows ИНН 7808035536) lists the entity as sanctioned by 17 dataset entries: Japan (METI Russian List, Ministry of Finance list), EU (Council Official Journal, Sanctions Map, Financial Sanctions Files), Australia, Switzerland (SECO, two entries), UK FCDO, Ukraine NSDC, Belgium, New Zealand, Monaco, Canada, France, and US (OFAC SDN, Consolidated Screening List). It also lists three export-control entries (US CSL, Taiwan, Japan METI), a UK Companies House disqualified-directors entry and US SAM procurement-exclusion entries. This is an aggregator, not the primary registers: none of the non-US primary listings was opened, and no designation date is stated on the page, so date is left null. Grade: aggregator-level corroboration of the OFAC designation recorded above. Read 04.10.2026: the EU and UK entries on the official lists carry no identifiers and name the company only by name and address (see the entries dated 04.10.2026).",
+            "regime": [
+              "EU",
+              "UK",
+              "Japan",
+              "Australia",
+              "Switzerland",
+              "Canada",
+              "New Zealand",
+              "Ukraine (NSDC)",
+              "Belgium",
+              "Monaco",
+              "France",
+              "US (CSL, OFAC)"
+            ],
+            "source_id": "s8232"
+          },
+          {
+            "date": "2022-06-03",
+            "regime": [
+              "EU (Ukraine-related restrictive measures, reference EU.8300.17; name only)"
+            ],
+            "source_id": "s9107",
+            "note": "EU entry EU.8300.17, designated 3.6.2022 (last amended by Regulation 2023/571): «JSC KRONSHTADT TEKHNOLOGII» (Russian: Кронштадт-технологии группа компаний АО), described by the list as a group of companies, address Andropov Ave., 18, bldg. 9, Descartes Business Center, Moscow 115432. The entry prints no ИНН or ОГРН. The OFAC entry that carries this company's identifiers (ИНН 7808035536) prints the same Descartes Business Center address, so the EU entry is linked by name and address, and the list names a «group», not a registered entity: which legal entity it designates is not established. Read in the EU consolidated list file of 02.10.2026 (s9107)."
+          },
+          {
+            "date": "2022-03-24",
+            "regime": [
+              "UK (Russia regulations, asset freeze; name only)"
+            ],
+            "source_id": "s9108",
+            "note": "UK entry RUS1078 (OFSI group 15021), designated 24/03/2022: «KRONSTADT» / «Kronshtadt», an entity manufacturing unmanned aviation vehicles for military use; asset freeze, trust-services sanctions (21/03/2023) and director-disqualification sanction (09/04/2025). Address Andropov Ave, 18k9 Descartes Business Center, Moscow 115432. The entry prints no ИНН or ОГРН; it is linked to this company by name and by the address on the OFAC entry, not by an identifier. Read in the UK list file of 02.10.2026 (s9108)."
+          }
+        ]
       },
       "why": [
         "[2026-09-30] director_history: sourceless scaffold entry replaced with the value read from the ЕГРЮЛ выписка. ",
         "[2026-09-30 product research] Products from Wayback captures of kronshtadt.ru (the live site is bot-walled). Identity: the brochure footer and the press-centre contact block name АО «Кронштадт» at this ИНН's EGRUL address. The product pages themselves name no legal entity, and the site also gives ООО «Кронштадт Беспилотные Системы»'s Андропова 18к9 address as the group's «юридический адрес»; attribution to the АО rests on the brochure and patents.",
-        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [226, 651, 658, 666, 669, 685, 2209, 2210] flagged by scripts/tg_post_coverage.py: named_no_tie. Posts 651, 658, 666, 669, 685, 2209, 2210 use Кронштадт the city as the venue (Технический совет ВМФ, салон «Флот-2026»). Post 226 repeats a foreign article that names the company «Кронштадт» as a Russian developer of military AI analytics; no ЦБСТ statement of a tie."
-      ]
+        "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [226, 651, 658, 666, 669, 685, 2209, 2210] flagged by scripts/tg_post_coverage.py: named_no_tie. Posts 651, 658, 666, 669, 685, 2209, 2210 use Кронштадт the city as the venue (Технический совет ВМФ, салон «Флот-2026»). Post 226 repeats a foreign article that names the company «Кронштадт» as a Russian developer of military AI analytics; no ЦБСТ statement of a tie.",
+        "04.10.2026 (issue #9 / name-only check): the official list entry read; it carries no identifier, so the link is by name and address.",
+        "04.10.2026 (issue #9 / name-only check): the official list entry read; it carries no identifier, so the link is by name and address."
+      ],
+      "verified_against": "04.10.2026: s9107 (official list file of 02.10.2026) | 04.10.2026: s9108 (official list file of 02.10.2026)"
     },
     "tg-arkhangel-spetsnaza": {
       "set": {
