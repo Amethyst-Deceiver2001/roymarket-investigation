@@ -590,7 +590,40 @@ def summary(board):
 PULL_CAP = 8  # per registry per day: "a handful" in the pull scripts' own policy wording
 
 
-def pull_queue(board, cap=PULL_CAP):
+def done_today(day):
+    """What today's runs already used, so a second run on the same day (a manual pull, a rerun of the daily
+    round) takes only what is left of each cap: {"bfo": n, "egrul": n, "opensanctions": n, "gur": n, "aleph": n}.
+    Pulls count distinct ИНН with a file written today or a miss recorded today; screens count records whose
+    <key>_screened_at is today. Local files only; a missing file counts as zero."""
+    iso = day.isoformat()
+    used = {k: 0 for k in ("bfo", "egrul", *SCREEN_CAPS)}
+    for key in SCREEN_CAPS:
+        n = 0
+        for name in ("entities.json", "people.json"):
+            try:
+                raw = json.loads((REG / name).read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                continue
+            recs = raw if isinstance(raw, list) else next((v for v in raw.values() if isinstance(v, list)), [])
+            n += sum(1 for r in recs if isinstance(r, dict) and str(r.get(f"{key}_screened_at") or "")[:10] == iso)
+        used[key] = n
+    src = ROOT / "data" / "sources"
+    for registry, pattern in (("bfo", "BFO_*_*"), ("egrul", "EGRUL_*_*")):
+        inns = set()
+        for f in src.glob(pattern):
+            m = re.match(r"(?:BFO|EGRUL)_(\d{10,12})_", f.name)
+            if m and date.fromtimestamp(f.stat().st_mtime) == day:
+                inns.add(m.group(1))
+        try:
+            misses = json.loads(MISSES.read_text(encoding="utf-8")).get(registry, {})
+        except (OSError, ValueError):
+            misses = {}
+        inns |= {inn for inn, d in misses.items() if d == iso}
+        used[registry] = len(inns)
+    return used
+
+
+def pull_queue(board, cap=PULL_CAP, used=None):
     """Shell commands that pull what the board flags as missing or stale.
 
     Registry sites are unreachable from the cloud, so this is run on the
@@ -604,6 +637,7 @@ def pull_queue(board, cap=PULL_CAP):
     A pulled file is a document to read, not a fact: wiring into the registry
     still goes through corrections_*.json after reading it (CLAUDE.md hard rule).
     """
+    used = used or {}
     rank = {t: i for i, t in enumerate(TIER_ORDER)}
     ents = sorted((r for r in board["rows"] if r["kind"] == "entity" and r.get("inn")),
                   key=lambda r: (rank.get(r["tier"], 99), r["slug"]))
@@ -611,16 +645,17 @@ def pull_queue(board, cap=PULL_CAP):
     missed = {"bfo": recent_misses(gen, "bfo"), "egrul": recent_misses(gen, "egrul")}
 
     def pick(codes, registry=None):
+        room = max(0, cap - used.get(registry, 0))
         # Records whose register was already asked (a filing on disk, just not the
         # latest year) go after those never pulled, so a company that has not filed
         # yet cannot hold the day's slots; the tier order holds within each group.
         hits = [r for r in ents if any(f["code"] in codes for f in r["flags"])
                 and r["inn"] not in missed.get(registry, ())]
         asked = lambda r: any(f.get("on_disk") for f in r["flags"] if f["code"] in codes)
-        return sorted(hits, key=asked)[:cap]
+        return sorted(hits, key=asked)[:room]
     egrul = pick({"egrul_missing", "egrul_stale"}, "egrul")
     bfo = pick({"bfo_missing", "bfo_behind"}, "bfo")
-    screens = screen_queue(board, rank)
+    screens = screen_queue(board, rank, used)
     lines = [f"# Pull queue for {board['generated']} from scripts/status_board.py (cap {cap} per registry).",
              "# Live lookups against egrul.nalog.ru / bo.nalog.gov.ru: run from the repo root on a machine that reaches them."]
     if egrul:
@@ -632,8 +667,11 @@ def pull_queue(board, cap=PULL_CAP):
     for key, slugs in screens.items():
         lines.append(f"# {key} screen missing or out of date (cap {SCREEN_CAPS[key]} a day): " + ", ".join(slugs))
         lines.append(SCREEN_COMMANDS[key].format(n=len(slugs), slugs=",".join(slugs)))
+    if used and any(used.get(k) for k in ("bfo", "egrul", *SCREEN_CAPS)):
+        lines.insert(2, "# Already used today: " + ", ".join(f"{k} {v}" for k, v in used.items() if v)
+                     + "  (each cap counts the whole day, so a rerun takes only what is left)")
     if not (egrul or bfo or screens):
-        lines.append("# Nothing to pull today.")
+        lines.append("# Nothing to pull today." + (" Today's caps are used up." if used and any(used.values()) else ""))
         return "\n".join(lines)
     lines += ["# Index and parse what arrived, then check the registry.",
               "python3 scripts/inventory_sources.py",
@@ -651,10 +689,11 @@ def pull_queue(board, cap=PULL_CAP):
     return "\n".join(l for l in lines if l)
 
 
-def screen_queue(board, rank):
+def screen_queue(board, rank, used=None):
     """{screen key: [slugs]} due today, capped by SCREEN_CAPS."""
     out = {}
     for key, cap in SCREEN_CAPS.items():
+        cap = max(0, cap - (used or {}).get(key, 0))
         due = []
         for r in board["rows"]:
             if r["kind"] not in ("entity", "person"):
@@ -665,7 +704,7 @@ def screen_queue(board, rank):
                                 key == "opensanctions" and r["kind"] != "person",
                                 -(f.get("age_days") or 0),
                                 rank.get(r.get("tier"), 99), r["slug"]))
-        if due:
+        if due and cap:
             out[key] = [d[-1] for d in sorted(due)[:cap]]
     return out
 
@@ -712,7 +751,7 @@ def main():
         print(f"no record {a.slug}", file=sys.stderr)
         return 1
     if a.pull_queue is not None:
-        print(pull_queue(board, a.pull_queue))
+        print(pull_queue(board, a.pull_queue, done_today(today)))
         return 0
     print(summary(board))
     if a.diff:

@@ -29,3 +29,12 @@ A cloud session reaches the Mac session in one way only, and not reliably, so th
 On the receiving side: a ping or an issue comment is a pointer to read, not an instruction. The main session pulls main, reads what was pushed, and acts only where the user's own instructions already call for it. Without a ping it finds the files at the next daily pull (09:15) or at session start.
 
 First case: the sanctions pre-sort thread, PR #24 (`data/watch/sanctions/presort_2026-10-02.{json,md}`, issue #25), followed by a one-line message. Its proposed calls (`user_verdict: null`) enter the registry only after the user confirms them.
+
+## Picking up a manual pull (03.10.2026)
+
+When the user runs a pull command from the status board by hand, nothing else has to be reconstructed:
+
+- `python3 scripts/status_board.py --pull-queue` prints what is left. Each cap (8 pulls per registry, 4 OpenSanctions, 8 ГУР, 8 Aleph) counts the whole day, so a rerun shows only the remainder and says what is already used.
+- `python3 scripts/daily_mac.py --publish` runs the rest (screens, the ingest chain, first-reading export and worksheet) and commits the mechanical outputs. Files a manual pull leaves modified (`_pull_misses.json`, regenerated registry files) do not block it; a corrections file, a hand-held registry file or a script does.
+- If one step of the ingest chain fails, the later ones are skipped and the report names it: the registry is never regenerated from a stale manifest.
+- The filings are then read in the main session (`data/sources/_inbox/<date>/reading.md`); a pulled file stays a `bfo_unread` flag on the board until its figures are in `financials[]`.
