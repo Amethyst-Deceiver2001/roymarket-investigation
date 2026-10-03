@@ -202,10 +202,35 @@ def section_text(text: str, start: str, ends: list[str], cap: int = 900) -> str 
     return sec[:cap] + (" …" if len(sec) > cap else "")
 
 
+def read_egrip(text: str, reg: dict) -> tuple[list[str], list[str]]:
+    """A sole trader's ЕГРИП extract: no director or founders; name, ОГРНИП, dates, status."""
+    diffs = []
+    m = re.search(r"Фамилия\s+(\S.*)\n\s*Имя\s+(\S.*)\n\s*Отчество\s+(\S.*)\n", text)
+    if m:
+        full = " ".join(g.strip().title() for g in m.groups())
+        diffs.append(f"Full name stated: {full} (registry name {reg.get('name_ru')!r})")
+    m = re.search(r"Дата регистрации\s+(\d\d\.\d\d\.\d{4})", text)
+    if m and not (reg.get("registered") or reg.get("reg_date")):
+        diffs.append(f"Registration date: {m.group(1)}; registry has none")
+    m = re.search(r"ОГРНИП\s+(\d{15})", text)
+    if m and reg.get("ogrn") and m.group(1) != reg.get("ogrn"):
+        diffs.append(f"ОГРНИП: extract {m.group(1)}; registry {reg.get('ogrn')}")
+    m = re.search(r"Сведения об основном виде деятельности[\s\S]{0,300}?Код и наименование вида деятельности\s+(\d{2}(?:\.\d{1,2}){0,2})\s", text)
+    if m and not (reg.get("okved_code") or reg.get("okved_main")):
+        diffs.append(f"Main ОКВЭД: extract {m.group(1)}; registry has none")
+    if re.search(r"Сведения о прекращении|прекратил|банкрот", text):
+        diffs.append("Status: " + " | ".join(lines_with(text, "прекращении", "прекратил", "банкрот")[:4]))
+    else:
+        diffs.append("Status: active (no termination section in the extract)")
+    return diffs, []
+
+
 def read_egrul(text: str, e: dict | None) -> tuple[list[str], list[str]]:
     """(differences, verbatim sections)."""
     diffs = []
     reg = e or {}
+    if "индивидуальных предпринимателей" in text[:600]:
+        return read_egrip(text, reg)
     d = egrul.parse_director(text)
     if d and d.get("restricted"):
         if not str(reg.get("director") or "").startswith("—"):
@@ -223,6 +248,11 @@ def read_egrul(text: str, e: dict | None) -> tuple[list[str], list[str]]:
         diffs.append(f"Charter capital: extract {cap['value']:,} ₽ (record dated {cap.get('as_of')}); registry has none")
     fr = egrul.parse_founders(text)
     reg_f = {fold(f.get("name")): f for f in (reg.get("founders") or []) if isinstance(f, dict)}
+    hist = [h for h in (reg.get("founders_history") or []) if isinstance(h, dict)]
+    if not reg_f and hist:  # the scalar is empty but the dated history names them
+        last = max(hist, key=lambda h: h.get("as_of") or "")
+        if not str(last.get("value")).startswith("—"):  # "— (EGRUL-restricted)" is not a name
+            reg_f = {fold(re.split(r",", str(last.get("value")))[0]): {"name": last.get("value")}}
     if fr["restricted"]:
         if reg_f:
             diffs.append("Founders: the extract now withholds them («Доступ к сведениям ограничен»); registry lists "
@@ -246,6 +276,21 @@ def read_egrul(text: str, e: dict | None) -> tuple[list[str], list[str]]:
         diffs.append(f"Main ОКВЭД: extract {m.group(1)}; registry {reg_ok[0]}")
     elif m and not reg_ok:
         diffs.append(f"Main ОКВЭД: extract {m.group(1)}; registry has none")
+    extra = egrul.section(text, "Сведения о дополнительных видах деятельности",
+                          ["Сведения о лицензиях", "Сведения о записях", "Сведения о филиалах"]) or ""
+    codes = re.findall(r"Код и наименование вида деятельности\s+(\d{2}(?:\.\d{1,2}){0,2})\s+(.+)", extra)
+    known = {str(c).split()[0] for c in (reg.get("okved_secondary") or reg.get("okved_additional") or [])
+             if c} if isinstance(reg.get("okved_secondary") or reg.get("okved_additional"), list) else set()
+    new = [f"{c} {n.strip()}" for c, n in codes if c not in known]
+    if new:
+        diffs.append(f"Additional ОКВЭД not in the registry ({len(new)}): " + "; ".join(new))
+    lic = egrul.section(text, "Сведения о лицензиях", ["Сведения о записях", "Сведения о филиалах"]) or ""
+    n_lic = len(re.findall(r"Дата лицензии", lic))
+    if n_lic > len(reg.get("licences") or []):
+        kinds = [re.sub(r"\s+", " ", k).strip()[:90] for k in
+                 re.findall(r"Наименование лицензирующего органа\s+(.+)", lic)]
+        diffs.append(f"Licences: the extract lists {n_lic}, the registry {len(reg.get('licences') or [])}; "
+                     "issuers: " + "; ".join(kinds))
     secs = []
     for label, (start, ends) in SECTIONS.items():
         s = section_text(text, start, ends)
@@ -270,7 +315,8 @@ def read_bfo(text: str, e: dict | None, year: str) -> tuple[list[str], list[str]
     diffs = []
     fig = {k: (v * scale if isinstance(v, (int, float)) else v) for k, v in got.items()
            if k in ("revenue", "net_profit") or k.startswith("funds_")}
-    shown = ", ".join(f"{k} {v:,.0f} ₽" for k, v in fig.items() if isinstance(v, (int, float)))
+    shown = ", ".join(f"{k} {v:,.0f} ₽" for k, v in fig.items() if isinstance(v, (int, float))
+                      and (v or not k.startswith("funds_")))
     if year not in have:
         diffs.append(f"Accounts for {year} are new to the registry: {shown or 'no figures parsed: read the text'} (units: {units})")
     else:
@@ -285,11 +331,16 @@ def read_bfo(text: str, e: dict | None, year: str) -> tuple[list[str], list[str]
     trading = any(isinstance(fig.get(k), (int, float)) and fig[k] for k in ("revenue", "net_profit"))
     if funds and trading:
         # A commercial filing with a targeted-funds report (ОКУД 0710003): earmarked money such as a grant or
-        # subsidy, booked apart from revenue. Who paid it is the lead.
+        # subsidy, booked apart from revenue. Who paid it is the lead; quote the page if it names the kind.
+        g = lines_with(text, "Грант", "Субсид", "субсид", width=1)
         diffs.append("Targeted funds in a commercial filing (earmarked money, e.g. a grant or subsidy; not revenue): "
-                     + ", ".join(f"{k} {v:,.0f} ₽" for k, v in funds.items()) + ". Find out who paid it.")
+                     + ", ".join(f"{k} {v:,.0f} ₽" for k, v in funds.items()) + ". Find out who paid it."
+                     + (f" The page says: {' | '.join(g[:3])}" if g else ""))
     elif funds:
         diffs.append("Non-profit filing: funds_* are not revenue")
+    m = re.search(r"№ 0710099_\d+_\d{4}_(\d{3})_", text)
+    if m and m.group(1) != "000":
+        diffs.append(f"This is correction filing no. {int(m.group(1))} for {year}, not the original")
     m = re.search(r"[Сс]реднесписочная численность[^\n]*?(\d[\d\s]*)\s*(?:чел|$)", text)
     if m:
         n = re.sub(r"\s", "", m.group(1))
